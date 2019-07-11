@@ -66,4 +66,4 @@ All database access (reads, writes, updates, etc) should be wrapped with the sam
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS Data Recipes](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms data access](~/xamarin-forms/data-cloud/data/databases.md)

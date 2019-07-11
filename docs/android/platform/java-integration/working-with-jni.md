@@ -2188,7 +2188,7 @@ IntPtr CreateMapActivity()
 
 Once you have a Java Object instance held in an IntPtr, you'll probably
 want to do something with it. You can use JNIEnv methods such as
-[ <span class="external">JNIEnv.CallVoidMethod()</span>](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallVoidMethod/p/System.IntPtr/System.IntPtr/Android.Runtime.JValue[]/)
+[<span class="external">JNIEnv.CallVoidMethod()</span>](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallVoidMethod/p/System.IntPtr/System.IntPtr/Android.Runtime.JValue[]/)
 to do so, but if there is already an analogue C# wrapper then you'll
 want to construct a wrapper over the JNI reference. You can do so
 through the

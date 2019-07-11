@@ -91,14 +91,6 @@
         "xamarin-forms/**/**.md": ["Xamarin","Xamarin.Forms"],
         "xamarin-forms/**/**.yml": ["Xamarin","Xamarin.Forms"],
         "xamarin-forms/user-interface/graphics/skiasharp/**/**.md": ["Xamarin","SkiaSharp"]
-      },
-      "hideScope": {
-        "android/**/**.md": "true",
-        "android/**/**.yml": "true",
-        "mac/**/**.md": "true",
-        "mac/**/**.yml": "true",
-        "xamarin-forms/**/**.md": "true",
-        "xamarin-forms/**/**.yml": "true"
       }
     },
     "template": [],

@@ -47,7 +47,7 @@ Sometimes, testing doesn’t go quite as smoothly as planned.  The following ste
 
 - Users that belong to or own a another iTunes Connect account cannot be internal testers. They only can be added as external testers.
 
-- Internal and External users are added, selected, and invited separately. Each list must be seperately managed.
+- Internal and External users are added, selected, and invited separately. Each list must be separately managed.
 
 - Apple must approve each build that will be distributed to external testers. If the version of a build changes, a new beta review by Apple is required. If the build number changes, then the review is optional.
 

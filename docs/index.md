@@ -94,7 +94,7 @@ featureFlags:
                                                     <li><a class="barLink" href="~/android/index.yml"><img  src="https://docs.microsoft.com/media/logos/logo_android.svg" alt="" />Xamarin.Android</a></li>
                                                     <li><a class="barLink" href="~/ios/index.yml"><img  src="https://docs.microsoft.com/media/common/i_web-apps.svg" alt=" icon" />Xamarin.iOS</a></li>
                                                     <li><a class="barLink" href="~/mac/index.yml"><img  src="https://docs.microsoft.com/media/common/i_xplat-code.svg" alt=" icon" />Xamarin.Mac</a></li>
-                                                    <li><a class="barLink" href="~/xamarin-forms/data-cloud/index.md"><img  src="https://docs.microsoft.com/media/logos/logo_azure.svg" alt="" />Azure with Xamarin</a></li>
+                                                    <li><a class="barLink" href="~/xamarin-forms/data-cloud/index.yml"><img  src="https://docs.microsoft.com/media/logos/logo_azure.svg" alt="" />Azure with Xamarin</a></li>
                                                 </ul>
                                             </div>
                                         </div>
@@ -419,7 +419,7 @@ featureFlags:
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/data-cloud/index.md">
+                                <a href="~/xamarin-forms/data-cloud/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -429,8 +429,8 @@ featureFlags:
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
-                                                    <h3>Data & Cloud Services</h3>
-                                                    <p>Data storage and accessing cloud services.</p>
+                                                    <h3>Data & Azure Cloud Services</h3>
+                                                    <p>Data storage and accessing Azure cloud services.</p>
                                                 </div>
                                             </div>
                                         </div>
@@ -482,7 +482,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter x-hidden-focus">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img alt="Samples" src="https://docs.microsoft.com/en-us/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
+                                                        <img alt="Samples" src="https://docs.microsoft.com/media/illustrations/team-services-dev-ops-test.svg" data-linktype="external">
                                                     </div>
                                                 </div>
                                                 <div class="cardText">
@@ -682,7 +682,7 @@ featureFlags:
                                             <div class="card">
                                                 <div class="cardImageOuter">
                                                     <div class="cardImage bgdAccent1">
-                                                        <img src="https://docs.microsoft.com/en-us/media/illustrations/teams-fast-track.svg" alt="Continuous Integration" />
+                                                        <img src="https://docs.microsoft.com/media/illustrations/teams-fast-track.svg" alt="Continuous Integration" />
                                                     </div>
                                                 </div>
                                                 <div class="cardText">

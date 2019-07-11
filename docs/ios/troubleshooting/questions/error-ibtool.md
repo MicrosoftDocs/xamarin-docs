@@ -43,7 +43,7 @@ For example, say your original `.csproj` file contains the following entry:
 
 `<BundleResource Include="Resources\Images\image.png" />`
 
-You can change this element and add a `LogicalName` so that the image will instead be copied to the top level of the `.app `bundle:
+You can change this element and add a `LogicalName` so that the image will instead be copied to the top level of the `.app` bundle:
 
 ```xml
 <BundleResource Include="Resources\Images\image.png">

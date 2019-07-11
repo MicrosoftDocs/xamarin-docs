@@ -55,7 +55,7 @@ okayButton.TouchUpInside += (sender, e) => {
 
 Displaying an alert with multiple options, is done in a similar fashion but add two actions. For example, the following screenshot shows an alert with two buttons:
 
- ![ Alert with two Buttons](alerts-images/alert2.png)
+ ![Alert with two Buttons](alerts-images/alert2.png)
 
 ```csharp
 okayCancelButton.TouchUpInside += ((sender, e) => {

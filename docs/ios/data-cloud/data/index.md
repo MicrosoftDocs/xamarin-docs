@@ -27,7 +27,7 @@ The majority of the code in this document is completely cross-platform and will 
 
 Both sample solutions contain iOS and Android sample application projects.
 
-For Xamarin.Forms applications, read [working with databases](~/xamarin-forms/app-fundamentals/databases.md)
+For Xamarin.Forms applications, read [working with databases](~/xamarin-forms/data-cloud/data/databases.md)
 which explains how to work with SQLite in a PCL library with Xamarin.Forms.
 
 ## Sections
@@ -51,4 +51,4 @@ For additional examples of cross-platform data access see our [Tasky Pro](~/cros
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS Data Recipes](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms data access](~/xamarin-forms/data-cloud/data/databases.md)

@@ -111,7 +111,7 @@ This method may be called before *or after* `ViewDidLoad()`.
 
 ### Handling Peek and Pop
 
-On an iOS device that can handle 3D Touch, we can use an instance of the  `UIViewControllerPreviewingDelegate` class to handle the display of **Peek** and **Pop** item details. For example, if we had a Table View Controller called `MasterViewController ` we could use the following code to support **Peek** and **Pop**:
+On an iOS device that can handle 3D Touch, we can use an instance of the  `UIViewControllerPreviewingDelegate` class to handle the display of **Peek** and **Pop** item details. For example, if we had a Table View Controller called `MasterViewController` we could use the following code to support **Peek** and **Pop**:
 
 ```csharp
 using System;

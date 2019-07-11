@@ -95,6 +95,10 @@ The `Stepper` allows a user to select a numeric value from a range of values. It
 
 Font, color, and other attributes can be grouped into styles which can be shared across controls, layouts, or the entire application using ResourceDictionaries.
 
+## [Switch](switch.md)
+
+The `Switch` is a type of button that can be toggled between on and off states.
+
 ## [TableView](tableview.md)
 
 The table view is similar to a list view, but rather than being designed for long lists of data it is intended for data-entry-style screens of scrolling controls or simple  scrolling menus.

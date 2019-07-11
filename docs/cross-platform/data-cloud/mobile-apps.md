@@ -14,7 +14,7 @@ _Samples and code downloads for the Azure portal documentation._
 
 <!--
 NOTE TO AUTHORS: this page is referenced from
-http://azure.microsoft.com/develop/mobile/xamarin/
+https://azure.microsoft.com/develop/mobile/xamarin/
 as https://developer.xamarin.com/guides/cross-platform/data-cloud/mobile-services/
 A redirect has been put in place to /mobile-apps/ HOWEVER the /Resources/ .ZIP files are still located in /mobile-services/ so that the following permalinks don't break
 

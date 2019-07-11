@@ -58,7 +58,7 @@ To correctly configure an application to access iCloud:
 
 - **Add the Container Identifier to Entitlements.plist** - the container identifier format is `TeamID.BundleID`. For more information refer to the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
-- **Configure the project properties** - In the Info.plist file ensure the **Bundle Identifier** matches the **Bundle ID** set when [creating an App ID ](~/ios/deploy-test/provisioning/capabilities/index.md); The iOS Bundle
+- **Configure the project properties** - In the Info.plist file ensure the **Bundle Identifier** matches the **Bundle ID** set when [creating an App ID](~/ios/deploy-test/provisioning/capabilities/index.md); The iOS Bundle
 Signing uses a **Provisioning Profile** that contain an App ID with the iCloud App Service, and the **Custom Entitlements** file selected. This can all be done in Visual Studio under the project Properties pane.
 
 - **Enable iCloud on your device** - go to **Settings > iCloud** and ensure that the device is logged in.

@@ -183,7 +183,7 @@ In this exercise you will create a user interface to consume `RestService` class
 
     In addition, the [`Entry`](xref:Xamarin.Forms.Entry) has a name specified with the `x:Name` attribute. This enables the code-behind file to access the object using the assigned name.
 
-    For more information about consuming REST-based web services in Xamarin.Forms, see [Consuming a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/consuming/rest.md).
+    For more information about consuming REST-based web services in Xamarin.Forms, see [Consume a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/web-services/rest.md).
 
 1. In **Solution Pad**, in the **WebServiceTutorial** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it. Then, in **MainPage.xaml.cs**, remove all of the template code and replace it with the following code:
 
@@ -242,4 +242,4 @@ In this exercise you will create a user interface to consume `RestService` class
     > [!IMPORTANT]
     > Your personal OpenWeatherMap API key must be set as the value of the `OpenWeatherMapAPIKey` constant in the `Constants` class.
 
-    For more information about consuming REST-based web services in Xamarin.Forms, see [Consuming a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/consuming/rest.md).
+    For more information about consuming REST-based web services in Xamarin.Forms, see [Consume a RESTful Web Service (guide)](~/xamarin-forms/data-cloud/web-services/rest.md).

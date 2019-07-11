@@ -122,7 +122,7 @@ The platform-specific projects should implement:
 
 The application architecture is illustrated in this diagram:
 
- [ ![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "The application architecture is illustrated in this diagram")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
+ [![](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png "The application architecture is illustrated in this diagram")](setting-up-a-xamarin-cross-platform-solution-images/conceptualarchitecture.png#lightbox)
 
 This screenshot shows a solution setup with the shared Core project, iOS, and
 Android application projects. The Shared Project contains code relating to each of the architectural layers (Business, Service, Data and Data Access code):

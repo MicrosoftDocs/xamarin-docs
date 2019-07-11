@@ -160,7 +160,7 @@ Fix: Change the return value and parameter types to `nint`. This commonly occurs
 public override nint RowsInSection (UITableView tableview, nint section) {
 ```
 
-**Error CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)': return type must be 'System.nint' to match overridden member `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)'**
+**Error CS0508: `WordsTableSource.NumberOfSections(UIKit.UITableView)`: return type must be 'System.nint' to match overridden member `UIKit.UITableViewSource.NumberOfSections(UIKit.UITableView)`**
 
 Fix: When the return type is changed to `nint`, cast the return value to `nint`.
 

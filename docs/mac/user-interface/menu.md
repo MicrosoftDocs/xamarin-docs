@@ -857,7 +857,7 @@ FormattingCommands.Add (Headings);
 FormattingCommands.Add(new LanguageFormatCommand ());
 FormattingCommands.Add(new LanguageFormatCommand("Link","[","]()"));
 FormattingCommands.Add(new LanguageFormatCommand("Image","![](",")"));
-FormattingCommands.Add(new LanguageFormatCommand("Image Link","[ ![](",")](LinkImageHere)"));
+FormattingCommands.Add(new LanguageFormatCommand("Image Link","[![](",")](LinkImageHere)"));
 ```
 
 And that collection passed to the `AssembleMenu` function (with the **Format** Menu set as the base), the following dynamic menus and menu items would be created:

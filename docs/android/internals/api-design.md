@@ -394,7 +394,7 @@ types are currently not bound due to limitations in our generics
 support; if they were supported, they would be present as the
 *Android.OS.IParcelableClassLoaderCreator* and
 *Android.OS.IParcelableCreator* interfaces. For example, the nested
-[android.os.IBinder.DeathRecpient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html)
+[android.os.IBinder.DeathRecipient](https://developer.android.com/reference/android/os/IBinder.DeathRecipient.html)
 interface is bound as the
 [Android.OS.IBinderDeathRecipient](https://developer.xamarin.com/api/type/Android.OS.IBinderDeathRecipient/)
 interface.
@@ -428,7 +428,7 @@ now be an
 contain the constants. For example, the
 [Parcelable.CONTENTS_FILE_DESCRIPTOR](https://developer.android.com/reference/android/os/Parcelable.html#CONTENTS_FILE_DESCRIPTOR)
 constant will be bound as the
-[ *Parcelable.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/)
+[*Parcelable.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Parcelable.ContentsFileDescriptor/)
 constant, instead of as the *ParcelableConsts.ContentsFileDescriptor*
 constant.
 
@@ -447,7 +447,7 @@ needs to be bound to the C# expression
 *MediaStore.Video.MediaColumnsConsts.Title* which is hard to discover
 without reading lots of Java documentation. In 1.9, the equivalent C#
 expression will be
-[ *MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
+[*MediaStore.Video.VideoColumns.Title*](https://developer.xamarin.com/api/field/Android.Provider.MediaStore+Video+VideoColumns.Title/).
 
 Furthermore, consider the
 [android.os.Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/)
@@ -462,7 +462,7 @@ the *CONTENTS_FILE_DESCRIPTOR* came from. Starting in Xamarin.Android
 have a nested *InterfaceConsts* type, which will contain all the
 inherited interface constants. This will allow translating
 *Bundle.CONTENTS_FILE_DESCRIPTOR* to
-[ *Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).
+[*Bundle.InterfaceConsts.ContentsFileDescriptor*](https://developer.xamarin.com/api/field/Android.OS.Bundle+InterfaceConsts.ContentsFileDescriptor/).
 
 Finally, types with a *Consts* suffix such as
 *Android.OS.ParcelableConsts* are now Obsolete, other than the newly

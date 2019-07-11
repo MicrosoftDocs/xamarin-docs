@@ -226,7 +226,7 @@ The `OnServiceDisconnected` method is only invoked when the connection between a
 
 ## Starting and Binding to a Service with an Explicit Intent
 
-To use a bound service, a client (such as an Activity) must instantiate an object that implements `Android.Content.IServiceConnection` and invoke the `BindService` method.` BindService` will return `true` if the service is bound to, `false` if it is not. The `BindService` method takes three parameters:
+To use a bound service, a client (such as an Activity) must instantiate an object that implements `Android.Content.IServiceConnection` and invoke the `BindService` method. `BindService` will return `true` if the service is bound to, `false` if it is not. The `BindService` method takes three parameters:
 
 * **An `Intent`** &ndash; The Intent should explicitly identify which service to connect to.
 * **An `IServiceConnection` Object** &ndash; This object is an intermediary that provides callback methods to notify the client when the bound service is started  and stopped.

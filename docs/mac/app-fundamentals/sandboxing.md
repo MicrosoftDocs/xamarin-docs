@@ -457,7 +457,7 @@ To allow the Apple signed version of the Xamarin.Mac app to run, do the followin
 
 1. Open the Terminal app (in `/Applications/Utilities`).
 2. Open a Finder window to the Apple signed version of the Xamarin.Mac app.
-3. Type `asctl container acl add -file ` in the Terminal window.
+3. Type `asctl container acl add -file` in the Terminal window.
 4. Drag the Xamarin.Mac app's icon from the Finder window and drop it on the Terminal window.
 5. The full path to the file will be added to the command in Terminal.
 6. Press **Enter** to execute the command.

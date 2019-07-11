@@ -179,7 +179,7 @@ When trying to include a Portable Class Library (PCL) into a Xamarin.tvOS projec
 
 _Incompatible target framework: .NetPortable, Version=v4.5, Profile=Profile78_
 
-To solve this issue, add an XML file called ` Xamarin.TVOS.xml` with the following content:
+To solve this issue, add an XML file called `Xamarin.TVOS.xml` with the following content:
 
 ```xml
 <Framework Identifier="Xamarin.TVOS" MinimumVersion="1.0" Profile="*" DisplayName="Xamarin.TVOS"/>
