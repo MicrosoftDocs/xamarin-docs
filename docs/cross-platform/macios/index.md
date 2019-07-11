@@ -24,7 +24,7 @@ For code that has to do some user interface work and yet,
 	single project and have it compiled with both Mac and iOS when
 	referenced.
 
-##  [Unified API](unified/index.md)
+## [Unified API](unified/index.md)
 
 The Unified API for iOS and Mac projects uses the same namespaces
 	for frameworks so that the same code file can be used across both
@@ -64,13 +64,13 @@ section explains:
 
 ## [Native References](native-references.md)
 
-##  [Mac/iOS Native Types](nativetypes.md)
+## [Mac/iOS Native Types](nativetypes.md)
 
 To support 32 and 64 bit code transparently from C# and F#,
 	we are introducing new data types.   Learn about them
 	here.
 
-##  [Building 32 and 64 bit apps](32-and-64/index.md)
+## [Building 32 and 64 bit apps](32-and-64/index.md)
 
 What you need to know to support 32 and 64 bit
 	applications.

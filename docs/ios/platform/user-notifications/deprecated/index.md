@@ -23,7 +23,7 @@ This section shows how to implement local and push notifications
 
 <a name="Local Notifications In iOS" />
 
-##  [Local Notifications in iOS](local-notifications-in-ios.md)
+## [Local Notifications in iOS](local-notifications-in-ios.md)
 
 This section will discuss how to implement local notifications in Xamarin.iOS. It will
     explain the various
@@ -31,7 +31,7 @@ This section will discuss how to implement local notifications in Xamarin.iOS. I
 
 <a name="Local Notifications Walkthrough" />
 
-##  [Walkthrough - Using Local Notifications in Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
+## [Walkthrough - Using Local Notifications in Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
 
 In this section we'll walk through how to use local notifications in a
     Xamarin.iOS application. It will
@@ -40,7 +40,7 @@ In this section we'll walk through how to use local notifications in a
 
 <a name="Remote Notifications In iOS" />
 
-##  [Remote Notifications in iOS](remote-notifications-in-ios.md)
+## [Remote Notifications in iOS](remote-notifications-in-ios.md)
 
 This section will cover push notifications in iOS. It introduces the Apple Push
     Notifications Gateway Service (APNS) and the role it plays in publishing notifications to iOS applications. It will explain how to create the security certificates

@@ -29,7 +29,7 @@ How to configure an Android device so that Xamarin.Android Wear
 applications can be deployed to it directly from either Visual Studio
 or Visual Studio for Mac.
 
-##  [Packaging Wear Apps](~/android/wear/deploy-test/packaging.md)
+## [Packaging Wear Apps](~/android/wear/deploy-test/packaging.md)
 
 How to package Xamarin.Android Wear apps for distribution on Google
 Play.
