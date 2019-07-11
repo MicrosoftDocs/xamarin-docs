@@ -274,16 +274,16 @@ Or more accurately, don’t reuse strings just because they are similar when the
 
 For example: imagine you have an on/off switch in your app and the switch control needs the text for ‘on’ and ‘off’ to be localized. You also display the value of that setting elsewhere in the app in a text label. You should use different strings for the switch display versus the switch’s status (even if they are the same string in your default language) – for example:
 
--	"On" – displayed on the switch itself
--	"Off" – displayed on the switch itself
--	"On" – displayed in a label
--	"Off" – displayed in a label
+- "On" – displayed on the switch itself
+- "Off" – displayed on the switch itself
+- "On" – displayed in a label
+- "Off" – displayed in a label
 
 This provides maximum flexibility for the translator:
 
--	For design reasons, perhaps the switch itself uses lowercase "on" and "off" but the display label uses upper case "On" and "Off".
--	Some languages might need the switch value to be abbreviated to fit in the user interface control, while the complete (translated) word can appear in the label.
--	Alternatively, for some languages the rendering of your switch might be use "I" and "O" for cultural familiarity, but you might still want the label to read "On" or "Off".
+- For design reasons, perhaps the switch itself uses lowercase "on" and "off" but the display label uses upper case "On" and "Off".
+- Some languages might need the switch value to be abbreviated to fit in the user interface control, while the complete (translated) word can appear in the label.
+- Alternatively, for some languages the rendering of your switch might be use "I" and "O" for cultural familiarity, but you might still want the label to read "On" or "Off".
 
 ### Translation Services
 
