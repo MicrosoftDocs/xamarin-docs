@@ -51,7 +51,7 @@ It is important to note that **.mlpd** contain a lot of information, and the fil
 The list below shows common gotchas, workarounds, and tips and tricks for using the Profiler.
 
 > [!NOTE]
-> **NOTE**: You need to be a Visual Studio **Enterprise** subscriber to unlock this feature in either Visual Studio Enterprise on Windows or Visual Studio for Mac.
+> You need to be a Visual Studio **Enterprise** subscriber to unlock this feature in either Visual Studio Enterprise on Windows or Visual Studio for Mac.
 
 #### I can't see the iOS profiler option, or it is greyed out [Visual Studio and Visual Studio for Mac]
 

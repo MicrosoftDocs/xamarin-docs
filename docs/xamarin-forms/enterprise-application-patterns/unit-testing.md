@@ -165,7 +165,8 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 
 This unit test will throw an exception, because the [`ListView`](xref:Xamarin.Forms.ListView) control does not have an event named `OnItemTapped`. The `Assert.Throws<T>` method is a generic method where `T` is the type of the expected exception. The argument passed to the `Assert.Throws<T>` method is a lambda expression that will throw the exception. Therefore, the unit test will pass provided that the lambda expression throws an `ArgumentException`.
 
->💡 **Tip**: Avoid writing unit tests that examine exception message strings. Exception message strings might change over time, and so unit tests that rely on their presence are regarded as brittle.
+> [!TIP]
+> Avoid writing unit tests that examine exception message strings. Exception message strings might change over time, and so unit tests that rely on their presence are regarded as brittle.
 
 ### Testing Validation
 

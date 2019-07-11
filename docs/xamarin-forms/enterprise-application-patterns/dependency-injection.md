@@ -134,7 +134,8 @@ _container = builder.Build();
 
 Invoking the `Build` method on the `ContainerBuilder` instance builds a new dependency injection container that contains the registrations that have been made.
 
->💡 **Tip**: Consider an `IContainer` as being immutable. While Autofac provides an `Update` method to update registrations in an existing container, calling this method should be avoided where possible. There are risks to modifying a container after it's been built, particularly if the container has been used. For more information, see [Consider a Container as Immutable](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) on readthedocs.io.
+> [!TIP]
+> Consider an `IContainer` as being immutable. While Autofac provides an `Update` method to update registrations in an existing container, calling this method should be avoided where possible. There are risks to modifying a container after it's been built, particularly if the container has been used. For more information, see [Consider a Container as Immutable](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) on readthedocs.io.
 
 <a name="resolution" />
 

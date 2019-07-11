@@ -22,7 +22,7 @@ Once a Xamarin.iOS app has been developed, the next step in the software develop
 Distributing an application – just as with developing an application – requires that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. They also contain information about what devices the app can be deployed to for the non-App Store distribution.
 
 > [!IMPORTANT]
-> It is **important** to note that to use iTunes Connect, and therefore publish an app to the App Store, you **must** be part of either an individual or organizational Apple Developer Program. You will not be able to follow the steps on this page if you are a member of an Apple Developer **Enterprise** Program.
+> To use iTunes Connect, and therefore publish an app to the App Store, you **must** be part of either an individual or organizational Apple Developer Program. You will not be able to follow the steps on this page if you are a member of an Apple Developer **Enterprise** Program.
 
 <a name="provisioning" />
 

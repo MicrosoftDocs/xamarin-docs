@@ -24,7 +24,7 @@ MonoGame can be added as an add-in to Visual Studio for Mac. On Mac, select **Vi
 ![Visual Studio for Mac extensions gallery selecting MonoGame](part1-images/image2.png)
 
 > [!IMPORTANT]
-> **Note**: If the **Game Development** section does not appear in the Add-in Manager, you can manually download and install the latest version from here: http://www.monogame.net/downloads/. You may need to restart Visual Studio for Mac for the templates to appear.
+> If the **Game Development** section does not appear in the Add-in Manager, you can manually download and install the latest version from here: http://www.monogame.net/downloads/. You may need to restart Visual Studio for Mac for the templates to appear.
 
 Once installed, MonoGame templates will appear in Visual Studio for Mac, as we will see in the next section.
 
