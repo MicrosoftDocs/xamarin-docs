@@ -276,6 +276,11 @@ files.
 
 ## User Interface
 
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
+
 ::: zone pivot="windows"
 
 **activity_main.axml** is the user interface layout file for the first screen in
