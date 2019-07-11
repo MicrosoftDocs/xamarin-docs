@@ -67,7 +67,7 @@ The sample application ships with three client apps:
 -   A Single Page Application (SPA) developed with Angular 2 and Typescript. This approach for web applications avoids performing a round-trip to the server with each operation.
 -   A mobile app developed with Xamarin.Forms, which supports iOS, Android, and the Universal Windows Platform (UWP).
 
-For information about the web applications, see [Architecting and Developing Modern Web Applications with ASP.NET Core and Microsoft Azure](http://aka.ms/WebAppEbook).
+For information about the web applications, see [Architecting and Developing Modern Web Applications with ASP.NET Core and Microsoft Azure](https://aka.ms/WebAppEbook).
 
 The sample application includes the following backend services:
 
