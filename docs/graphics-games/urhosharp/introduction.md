@@ -1,5 +1,5 @@
 ---
-title: "An Introduction to UrhoSharp"
+title: "Introduction to UrhoSharp"
 description: "This document describes the basic structure of an UrhoSharp application and links to various guides and sample applications that demonstrate how to use UrhoSharp."
 ms.prod: xamarin
 ms.assetid: 18041443-5093-4AF7-8B20-03E00478EF35
@@ -7,8 +7,7 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ---
-
-# An Introduction to UrhoSharp
+# Introduction to UrhoSharp
 
 ![UrhoSharp logo](introduction-images/urhosharp-icon.png)
 
@@ -25,19 +24,19 @@ both OpenGL and Direct3D systems.
 UrhoSharp is a game engine with a lot of functionality out of the box:
 
 - Powerful 3D graphic rendering
-- [Physics simulation](https://developer.xamarin.com/api/namespace/Urho.Physics/) (using the Bullet library)
-- [Scene handling](https://developer.xamarin.com/api/type/Urho.Scene/)
+- Physics simulation (using the Bullet library)
+- Scene handling
 - Await/Async support
-- [Friendly Actions API](https://developer.xamarin.com/api/namespace/Urho.Actions/)
-- [2D integration into 3D scenes](https://developer.xamarin.com/api/namespace/Urho.Urho2D/)
-- [Font rendering with FreeType](https://developer.xamarin.com/api/type/Urho.Gui.FontFaceFreeType/)
-- [Client and server networking capabilities](https://developer.xamarin.com/api/namespace/Urho.Network/)
-- [Import a wide range of assets](https://developer.xamarin.com/api/namespace/Urho.Resources/) (with Open Assets Library)
-- [Navigation mesh and pathfinding](https://developer.xamarin.com/api/namespace/Urho.Navigation/) (using Recast/Detour)
-- [Convex hull generation for collision detection](https://developer.xamarin.com/api/type/Urho.Physics.CollisionShape/) (using StanHull)
-- [Audio playback](https://developer.xamarin.com/api/namespace/Urho.Audio/) (with **libvorbis**)
+- Friendly Actions API
+- 2D integration into 3D scenes
+- Font rendering with FreeType
+- Client and server networking capabilities
+- Import a wide range of assets (with Open Assets Library)
+- Navigation mesh and pathfinding (using Recast/Detour)
+- Convex hull generation for collision detection (using StanHull)
+- Audio playback (with **libvorbis**)
 
-## Getting Started
+## Get started
 
 UrhoSharp is conveniently distributed as a [NuGet package](https://www.nuget.org/) and it can be added to
 your C# or F# projects that target Windows, Mac, Android or iOS.  The
@@ -85,12 +84,11 @@ The following sample shows what the engine is capable of doing:
 
 While the other samples show individual properties of each sample.
 
-## Basic Structure
+## Basic structure
 
-Your game should subclass the
-[`Application`](https://developer.xamarin.com/api/type/Urho.Application/)
-class, this is where you will setup your game (on the [`Setup`](https://developer.xamarin.com/api/member/Urho.Application.Setup/) method)
-and start your game (in the [`Start`](https://developer.xamarin.com/api/member/Urho.Application.Start) method).  Then you construct your
+Your game should subclass the `Application` class, this is where you will setup your game
+(on the `Setup` method)
+and start your game (in the `Start` method).  Then you construct your
 main user interface.  We are going to walk through a small sample that
 shows the APIs to setup a 3D scene, some UI elements and attaching a
 simple behavior to it.
@@ -197,7 +195,7 @@ UI.Root.AddChild(helloText);
 ```
 
 The UI framework is there to provide a very simple in-game user
-interface, and it works by adding new nodes to the [`UI.Root`](https://developer.xamarin.com/api/property/Urho.Gui.UI.Root/) node.
+interface, and it works by adding new nodes to the `UI.Root` node.
 
 The second part of our sample setups the main scene.  This involves a
 number of steps, creating a 3D Scene, creating a 3D box in the screen,
@@ -206,7 +204,7 @@ detail in the section [Scene, Nodes, Components and Cameras](~/graphics-games/ur
 
 The third part of our sample triggers a couple of actions.  Actions
 are recipes that describe a particular effect, and once created they
-can be executed by a node on demand by calling the [`RunActionAsync`](https://developer.xamarin.com/api/member/Urho.Node.RunActionsAsync)
+can be executed by a node on demand by calling the `RunActionAsync`
 method on a `Node`.
 
 The first action scales the box with a bouncing effect and the second
@@ -217,10 +215,10 @@ await boxNode.RunActionsAsync(
     new EaseBounceOut(new ScaleTo(duration: 1f, scale: 1)));
 ```
 
-The above shows how the first action that we create is a [`ScaleTo`](https://developer.xamarin.com/api/type/Urho.Actions.ScaleTo/)
+The above shows how the first action that we create is a `ScaleTo`
 action, this is merely a recipe that indicates that you want to scale
 for a second towards the value one the scale property of a node.  This
-action in turn is wrapped around an easing action, the [`EaseBounceOut`](https://developer.xamarin.com/api/type/Urho.Actions.EaseBounceInOut/)
+action in turn is wrapped around an easing action, the `EaseBounceOut`
 action.  The easing actions distort the linear execution of an action
 and apply an effect, in this case it provides the bouncing-out effect.
 So our recipe could be written as:
@@ -248,4 +246,3 @@ your code to build a game.
 This documentation contains original content from Xamarin Inc, but
 draws extensively from the open source documentation for the Urho3D
 project and contains screenshots from the Cocos2D project.
-

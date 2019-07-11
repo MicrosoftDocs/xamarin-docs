@@ -5,7 +5,7 @@ metadata:
   description: Cross-platform graphics, 2D, and 3D gaming for mobile and desktop platforms.
   author: conceptdev
   ms.author: crdun
-  ms.date: 02/17/2018
+  ms.date: 07/10/2018
   ms.topic: landing-page
 abstract:
   description: Cross-platform graphics, 2D, and 3D gaming for mobile and desktop platforms.
@@ -13,8 +13,6 @@ abstract:
     items:
     - href: https://developer.xamarin.com/samples/
       text: Samples
-    - href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
-      text: Release Notes
 sections:
 - title:
   items:
@@ -34,12 +32,6 @@ sections:
         href: ~/graphics-games/urhosharp/index.md
       title: UrhoSharp
       html: Cross-platform 3D graphics and games.
-    - href: ~/graphics-games/cocossharp/index.md
-      image:
-        src: ~/media/index/xamarin-graphics-cocos.svg
-        href: ~/graphics-games/cocossharp/index.md
-      title: CocosSharp
-      html: Build cross-platform 2D games for mobile devices.
     - href: ~/graphics-games/monogame/index.md
       image:
         src: ~/media/index/xamarin-graphics-monogame.svg
@@ -47,7 +39,7 @@ sections:
       title: MonoGame
       html: Build desktop, mobile, and console games with C#.
 
-- title: Platforms
+- title: Xamarin Mobile Application Development with .NET
   items:
   - type: list
     style: cards
