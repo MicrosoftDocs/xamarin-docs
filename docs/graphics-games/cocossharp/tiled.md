@@ -14,10 +14,10 @@ _Tiled is a powerful, flexible, and mature application for creating orthogonal a
 
 The *Tiled* application is a standard for creating *tile maps* for use in game development. This guide will walk through how to take an existing .tmx file (file created by Tiled) and use it in a CocosSharp game. Specifically this guide will cover:
 
- - The purpose of tile maps
- - Working with .tmx files
- - Considerations for rendering pixel art
- - Using Tile properties at runtime
+- The purpose of tile maps
+- Working with .tmx files
+- Considerations for rendering pixel art
+- Using Tile properties at runtime
 
 When finished we will have the following demo:
 

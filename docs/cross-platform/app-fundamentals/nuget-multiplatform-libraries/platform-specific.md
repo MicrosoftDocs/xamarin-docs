@@ -26,39 +26,39 @@ Xamarin.iOS and Android projects.
 
 2. Choose **Multiplatform Library** from the **Multiplatform > Library** section:
 
-  [![](platform-specific-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](platform-specific-images/multiplatform-library.png#lightbox)
+    [![](platform-specific-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](platform-specific-images/multiplatform-library.png#lightbox)
 
 3. Enter a **Name** and **Description**, and choose **Platform specific**:
 
-  [![](platform-specific-images/specific-configure-sml.png "Configure platform-specific library for iOS and Android")](platform-specific-images/specific-configure.png#lightbox)
+    [![](platform-specific-images/specific-configure-sml.png "Configure platform-specific library for iOS and Android")](platform-specific-images/specific-configure.png#lightbox)
 
 4. Complete the wizard. The following projects are added to the solution:
 
-  - **Android Project** – Android-specific code can optionally be added to this project.
-  - **iOS Project** – iOS-specific code can optionally be added to this project.
-  - **NuGet Project** – No code is added to this project. It references the other projects, and contains the metadata configuration for the NuGet package output.
-  - **Shared Project** – Common code should be added to this project, including platform-specific code inside `#if` compiler directives.
+    - **Android Project** – Android-specific code can optionally be added to this project.
+    - **iOS Project** – iOS-specific code can optionally be added to this project.
+    - **NuGet Project** – No code is added to this project. It references the other projects, and contains the metadata configuration for the NuGet package output.
+    - **Shared Project** – Common code should be added to this project, including platform-specific code inside `#if` compiler directives.
 
 5. Right-click on the NuGet project and choose **Options**, then open the **NuGet Package > Metadata** section and enter the [required metadata](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
-  (as well as any optional metadata):
+    (as well as any optional metadata):
 
-  [![](platform-specific-images/specific-metadata-sml.png "Enter required metadata")](platform-specific-images/specific-metadata.png#lightbox)
+    [![](platform-specific-images/specific-metadata-sml.png "Enter required metadata")](platform-specific-images/specific-metadata.png#lightbox)
 
 6. Also in the **Project Options** window, open the **Reference Assemblies** section and choose
-  which PCL profiles the shared library will support via "bait and switch":
+    which PCL profiles the shared library will support via "bait and switch":
 
-  ![](platform-specific-images/specific-reference-assemblies.png "Also in the Project Options window, open the Reference Assemblies section and choose   which PCL profiles the shared library will support via bait and switch")
+    ![](platform-specific-images/specific-reference-assemblies.png "Also in the Project Options window, open the Reference Assemblies section and choose   which PCL profiles the shared library will support via bait and switch")
 
-  > [!NOTE]
-> "Bait and switch" means that the PCL assemblies will only contain the API exposed by the library
-  > (it cannot contain the platform-specific code). When the NuGet is added to a Xamarin
-  > project, shared libraries will be compiled against the PCL, but the platform-specific
-  > assemblies contain the code that is actually used by the iOS or Android project.
+    > [!NOTE]
+    > "Bait and switch" means that the PCL assemblies will only contain the API exposed by the library
+    > (it cannot contain the platform-specific code). When the NuGet is added to a Xamarin
+    > project, shared libraries will be compiled against the PCL, but the platform-specific
+    > assemblies contain the code that is actually used by the iOS or Android project.
 
 7. Right-click on the project and choose **Create NuGet Package** (or build or deploy the solution) and
   the **.nupkg** NuGet package file will be saved in the **/bin/** folder (either Debug or Release, depending on configuration).
 
-  ![](platform-specific-images/create-nuget-package.png "NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
+    ![](platform-specific-images/create-nuget-package.png "NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
 
 
 ## Verifying the Output

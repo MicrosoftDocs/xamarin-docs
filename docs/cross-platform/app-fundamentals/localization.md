@@ -86,9 +86,9 @@ Write your validation rules with internationalization in mind – either choose 
 Not every image needs to change based on a user’s language choice. Many icons or photos will be suitable for all users, not matter what language they speak.
 Some resources make sense to localize though, such as:
 
- - Images depicting people or specific locations – your app may feel more relevant to users if it shows local people/locations.
- - Icons – Some iconography can be culture-specific and you can make your app easier to use by localizing the imagery to reflect local understanding.
- - Colors – Some cultures understand colors differently – red might mean warning in one region, but good luck in another. Check with native speakers when designing your app to determine whether you should be building a mechanism to localize colors.
+- Images depicting people or specific locations – your app may feel more relevant to users if it shows local people/locations.
+- Icons – Some iconography can be culture-specific and you can make your app easier to use by localizing the imagery to reflect local understanding.
+- Colors – Some cultures understand colors differently – red might mean warning in one region, but good luck in another. Check with native speakers when designing your app to determine whether you should be building a mechanism to localize colors.
 
 
 ### Videos and Sound
@@ -126,10 +126,10 @@ Some languages, such as Arabic, Hebrew, and Urdu (for example), are read from ri
 Applications that support these languages should use screen designs that adapt for
 right-to-left readers, for example:
 
- - Text should be right-aligned.
- - Labels should appear to the right of input fields.
- - Default button placement is generally reversed.
- - Hierarchical navigation swiping and animation (and other navigation metaphors and animations)
+- Text should be right-aligned.
+- Labels should appear to the right of input fields.
+- Default button placement is generally reversed.
+- Hierarchical navigation swiping and animation (and other navigation metaphors and animations)
   that use direction for context should also be reversed.
 
 Both iOS and Android support right-to-left layouts and font rendering, with
@@ -148,10 +148,10 @@ It’s unlikely the built-in database capabilities on the mobile platforms will 
 
 Ensure you write and test your search algorithm with multiple languages in mind. Things to consider include:
 
- - Auto-complete – if you have built an auto-complete function ensure it sources suggestions relevant to the user’s language.
- - Matching query to data – will search queries entered in a specific language be executed against just content written in that language, or against all content in your app?
- - Stemming – if your search is built to search for similar words, word roots and other search optimizations, are those optimizations built for all the languages you support?
- - Sorting – make sure the results are sorted correctly (see above).
+- Auto-complete – if you have built an auto-complete function ensure it sources suggestions relevant to the user’s language.
+- Matching query to data – will search queries entered in a specific language be executed against just content written in that language, or against all content in your app?
+- Stemming – if your search is built to search for similar words, word roots and other search optimizations, are those optimizations built for all the languages you support?
+- Sorting – make sure the results are sorted correctly (see above).
 
 
 ### Data from external sources
@@ -160,9 +160,9 @@ Many applications download data from external sources, from Twitter and RSS feed
 
 There are few strategies you can use to try and ensure your app displays data relevant to the user:
 
- - Different sources – your application might download the data from a different source depending on the user’s language or locale. Locale news, weather and stock prices might make more sense than something downloaded from a North American feed.
- - Localized display – if you are displaying a Twitter or photo feed, you should display the metadata (such as the time taken) in his or her own language, even if the content itself remains in the original language.
- - Translation – you could build a translation option into your app to do a machine translation of incoming data. This could be automatic or at the user’s discretion – just be sure to notify the user if this is taking place, since machine translations are never perfect!
+- Different sources – your application might download the data from a different source depending on the user’s language or locale. Locale news, weather and stock prices might make more sense than something downloaded from a North American feed.
+- Localized display – if you are displaying a Twitter or photo feed, you should display the metadata (such as the time taken) in his or her own language, even if the content itself remains in the original language.
+- Translation – you could build a translation option into your app to do a machine translation of incoming data. This could be automatic or at the user’s discretion – just be sure to notify the user if this is taking place, since machine translations are never perfect!
 
 This could also affect external links to audio tracks or videos – when designing your application be sure to plan ahead for sourcing translated content or ensuring that users are adequately informed by the user interface when content will not be presented in their language.
 
@@ -171,10 +171,10 @@ This could also affect external links to audio tracks or videos – when designi
 
 Some strings in your app might not need translating, or at the very least need special attention by the translator. Examples might include:
 
- - URLs – if you list a URL, it may or may not need to be adjusted by language. For example, facebook.com doesn’t require translation it auto-detects language at the main site. Other sites have locale-specific content and you might want to offer a different URL, such as yahoo.com versus yahoo.fr or yahoo.it.
- - Telephone numbers – especially those with different country-codes or numbers for callers that speak a particular language.
- - Contact details – addresses and other information might vary by language or locale.
- - Trademarks & product names – some strings don’t need translating because they’re always written in same language.
+- URLs – if you list a URL, it may or may not need to be adjusted by language. For example, facebook.com doesn’t require translation it auto-detects language at the main site. Other sites have locale-specific content and you might want to offer a different URL, such as yahoo.com versus yahoo.fr or yahoo.it.
+- Telephone numbers – especially those with different country-codes or numbers for callers that speak a particular language.
+- Contact details – addresses and other information might vary by language or locale.
+- Trademarks & product names – some strings don’t need translating because they’re always written in same language.
 
 Finally, be sure to include detailed instructions for the translator if certain strings require special treatment.
 

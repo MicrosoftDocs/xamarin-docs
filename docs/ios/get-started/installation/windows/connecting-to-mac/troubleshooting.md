@@ -30,8 +30,8 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
 
 > [!IMPORTANT]
 > These troubleshooting steps are primarily intended for problems that happen during the initial setup on a new system.  If you had previously been using the connection successfully in a particular environment and then the connection suddenly or intermittently stops working, you can (in most cases) skip straight to checking if any of the following helps: 
->	* Kill the leftover processes as described below under [Errors due to existing Build Host Processes](#errors). 
->	* Clear the agents as described under [Clearing the Broker, IDB, Build, and Designer Agents](#clearing), and then use a wired internet connection and connect directly via the IP address as described under [Couldn't connect to MacBuildHost.local. Please try again.](#tryagain).  
+> * Kill the leftover processes as described below under [Errors due to existing Build Host Processes](#errors). 
+> * Clear the agents as described under [Clearing the Broker, IDB, Build, and Designer Agents](#clearing), and then use a wired internet connection and connect directly via the IP address as described under [Couldn't connect to MacBuildHost.local. Please try again.](#tryagain).  
 > If none of those options fix the issue, then please follow the instructions in [step 9](#stepnine) to file a new bug report.
 
 1. Check that you have compatible Xamarin.iOS versions installed on your Mac. To do this with Visual Studio 2017 ensure that you are on the **Stable** distribution channel in Visual Studio for Mac. In Visual Studio 2015 and earlier make sure that you are on the same distribution channel on both IDEs.

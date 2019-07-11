@@ -41,10 +41,10 @@ This article covers including and managing an image asset in a Xamarin.iOS app t
 
 Apple has added several enhancements to iOS 10.3 that allow an app to manage its icon:
 
- - `ApplicationIconBadgeNumber` - Gets or sets the badge of the app icon in the Springboard.
- - `SupportsAlternateIcons` - If `true` the app has an alternate set of icons.
- - `AlternateIconName` - Returns the name of the alternate icon currently selected or `null` if using the primary icon.
- - `SetAlternameIconName` - Use this method to switch the app's icon to the given alternate icon.
+- `ApplicationIconBadgeNumber` - Gets or sets the badge of the app icon in the Springboard.
+- `SupportsAlternateIcons` - If `true` the app has an alternate set of icons.
+- `AlternateIconName` - Returns the name of the alternate icon currently selected or `null` if using the primary icon.
+- `SetAlternameIconName` - Use this method to switch the app's icon to the given alternate icon.
 
 
 ## [Launch Screens](~/ios/app-fundamentals/images-icons/launch-screens.md)

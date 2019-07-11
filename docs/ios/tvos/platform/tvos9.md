@@ -27,28 +27,28 @@ This guide will give an introduction to all of the new and modified APIs and fea
 
 tvOS apps running on the Apple TV have the following supported capabilities and features:
 
- - App Groups
- - Background Modes
- - Data Protection
- - Game Center
- - Game Controllers
- - iCloud
- - In-App Purchases
- - Keychain Sharing
+- App Groups
+- Background Modes
+- Data Protection
+- Game Center
+- Game Controllers
+- iCloud
+- In-App Purchases
+- Keychain Sharing
 
 The following features and capabilities are not supported:
 
- - Apple Pay
- - App Sandbox
- - Associated Domains
- - HealthKit
- - HomeKit
- - Inter-App Audio
- - Maps
- - Personal VPN
- - Push Notifications
- - Wallet
- - Wireless Accessory Configuration
+- Apple Pay
+- App Sandbox
+- Associated Domains
+- HealthKit
+- HomeKit
+- Inter-App Audio
+- Maps
+- Personal VPN
+- Push Notifications
+- Wallet
+- Wireless Accessory Configuration
 
 Please see our [Supported Assemblies](~/ios/tvos/internals/assemblies.md) and [Supported Frameworks](~/ios/tvos/internals/frameworks.md) documentation for more information.
 
@@ -58,15 +58,15 @@ Please see our [Supported Assemblies](~/ios/tvos/internals/assemblies.md) and [S
 
 The new Apple TV has the following hardware specifications:
 
- - 64-bit A8 processor
- - 32GB or 64GB of storage
- - 2GB of RAM
- - 10/100Mbps Ethernet
- - WiFi 802.11a/b/g/n/ac
- - 1080p resolution
- - HDMI
- - USB C Port (for developer and diagnostic use only)
- - New Siri Remote or Apple TV Remote (based on region)
+- 64-bit A8 processor
+- 32GB or 64GB of storage
+- 2GB of RAM
+- 10/100Mbps Ethernet
+- WiFi 802.11a/b/g/n/ac
+- 1080p resolution
+- HDMI
+- USB C Port (for developer and diagnostic use only)
+- New Siri Remote or Apple TV Remote (based on region)
 
 ### Siri Remote
 
@@ -74,14 +74,14 @@ Based on the region, the supplied Apple TV Remote will come in either one config
 
 The Siri Remote is currently available in the following countries:
 
- - Australia
- - Canada
- - France
- - Germany
- - Japan
- - Spain
- - United Kingdom
- - United States
+- Australia
+- Canada
+- France
+- Germany
+- Japan
+- Spain
+- United Kingdom
+- United States
 
 All other countries will receive the Apple TV Remote that replaces the Siri button with a Search button that brings up the default Search screen with text input for searching:
 

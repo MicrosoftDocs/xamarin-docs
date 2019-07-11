@@ -19,10 +19,10 @@ ms.date: 03/29/2018
 This walkthrough shows how to implement a simple bouncing ball game using
 CocosSharp. 
 
- - Unzipping game content
- - Common CocosSharp visual elements
- - Adding visual elements to `GameLayer`
- - Implementing every-frame logic
+- Unzipping game content
+- Common CocosSharp visual elements
+- Adding visual elements to `GameLayer`
+- Implementing every-frame logic
 
 Our finished game will look like this:
 
@@ -32,8 +32,8 @@ Our finished game will look like this:
 
 Game developers often use the term *content* to refer to non-code files which are usually created by visual artists, game designers, or audio designers. Common types of content include files used to display visuals, play sound, or control artificial intelligence (AI) behavior. From a game development team’s perspective, content is usually created by non-programmers. Our game includes two types of content:
 
- - png files to define how the ball and paddle appear.
- - A single xnb file to define the font used by the score display (discussed in more detail when we add the score display below)
+- png files to define how the ball and paddle appear.
+- A single xnb file to define the font used by the score display (discussed in more detail when we add the score display below)
 
 This content used here can be found in [content zip](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/Content.zip?raw=true). We’ll need these files downloaded and unzipped to a location that we will access later in this walkthrough.
 
@@ -41,11 +41,11 @@ This content used here can be found in [content zip](https://github.com/xamarin/
 
 CocosSharp provides a number of classes used to display visuals. Some elements are directly visible, while others are used for organization. We’ll use the following in the game:
 
- - `CCNode` – Base class for all visual objects in CocosSharp. The `CCNode` class contains an `AddChild` function which can be used to construct a parent/child hierarchy, also referred to as a *visual tree* or *scene graph*. All classes mentioned below inherit from `CCNode`.
- - `CCScene` – Root of the visual tree for all CocosSharp games. All visual elements must be part of a visual tree with a `CCScene` at the root, or they won’t be visible.
- - `CCLayer` – Container for visual objects, such as `CCSprite`. As the name implies, the `CCLayer` class is used to control how visual elements layer on top of each other.
- - `CCSprite` – Displays an image or a portion of an image. `CCSprite` instances can be positioned, resized, and provide a number of visual effects.
- - `CCLabel` – Displays a string on screen. The font used by `CCLabel` is defined in an xnb file. We’ll discuss xnbs in more detail below.
+- `CCNode` – Base class for all visual objects in CocosSharp. The `CCNode` class contains an `AddChild` function which can be used to construct a parent/child hierarchy, also referred to as a *visual tree* or *scene graph*. All classes mentioned below inherit from `CCNode`.
+- `CCScene` – Root of the visual tree for all CocosSharp games. All visual elements must be part of a visual tree with a `CCScene` at the root, or they won’t be visible.
+- `CCLayer` – Container for visual objects, such as `CCSprite`. As the name implies, the `CCLayer` class is used to control how visual elements layer on top of each other.
+- `CCSprite` – Displays an image or a portion of an image. `CCSprite` instances can be positioned, resized, and provide a number of visual effects.
+- `CCLabel` – Displays a string on screen. The font used by `CCLabel` is defined in an xnb file. We’ll discuss xnbs in more detail below.
 
 To understand how the different types are used we’ll consider a single `CCSprite`. Visual elements must be added to a `CCLayer`, and the visual tree must have a `CCScene` at its root. Therefore, the parent/child relationship for a single `CCSprite` would be `CCScene` > `CCLayer` > `CCSprite`.
 
