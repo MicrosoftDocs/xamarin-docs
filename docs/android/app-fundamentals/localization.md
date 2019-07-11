@@ -311,8 +311,9 @@ adb shell setprop persist.sys.locale fr-CA;stop;sleep 5;start
 ### Device Testing
 
 To test on a device, change the language in the **Settings** app.
-**Tip:** Make a note of the icons and location of the menu items so
-that you can revert the language to the original setting.
+> [!TIP]
+> Make a note of the icons and location of the menu items so
+> that you can revert the language to the original setting.
 
 
 ## Summary

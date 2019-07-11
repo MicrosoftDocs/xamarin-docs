@@ -65,14 +65,15 @@ which it is.
 Run the application.
 
 
-**Tip:** If you need to change the state yourself (such as
-when loading a saved
-[`CheckBoxPreference`](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)),
-use the
-[`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-property setter or
-[`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
-method.
+> [!TIP]
+> If you need to change the state yourself (such as
+> when loading a saved
+> [`CheckBoxPreference`](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)),
+> use the
+> [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+> property setter or
+> [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> method.
 
 
 ## Related Links

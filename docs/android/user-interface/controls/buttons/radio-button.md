@@ -86,13 +86,14 @@ from the layout and adds the newly-created event handlerto each.
 
 Run the application.
 
-**Tip:** If you need to change the state yourself (such as when loading a saved
-[`CheckBoxPreference`](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)),
-use the
-[`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-property setter or
-[`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
-method.
+> [!TIP]
+> If you need to change the state yourself (such as when loading a saved
+> [`CheckBoxPreference`](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)),
+> use the
+> [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+> property setter or
+> [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> method.
 
 *Portions of this page are modifications based on work created and
 shared by the Android Open Source Project and used according to
