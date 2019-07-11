@@ -111,10 +111,11 @@ Finally, refer to the [Classic v Unified API differences](https://developer.xama
  	to look up changes to APIs in your code. Searching [this page](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
  	will help find Classic APIs and what they've been updated to.
 
-**Note:** the `MonoTouch.Dialog` namespace remains the same
-	after migration. If your code uses **MonoTouch.Dialog**
-	you should continue to use that namespace - do *not*
-	change `MonoTouch.Dialog` to `Dialog`!
+> [!NOTE]
+> The `MonoTouch.Dialog` namespace remains the same
+> after migration. If your code uses **MonoTouch.Dialog**
+> you should continue to use that namespace - do *not*
+> change `MonoTouch.Dialog` to `Dialog`!
 
 ## Common Compiler Errors
 

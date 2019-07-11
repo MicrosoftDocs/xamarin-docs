@@ -522,10 +522,11 @@ adds and updates files but never deletes them. If this happens then the easiest
 solution is to select "Reset and Content and Settings..." from the simulator
 menu.   
 
-**Warning:**  this will remove all files, applications
-and data from the simulator.   Next time you execute your application,
-Visual Studio for Mac will deploy it into the simulator and there will be no old, stale
-assembly to cause the crash.
+> [!WARNING]
+> This will remove all files, applications
+> and data from the simulator.   Next time you execute your application,
+> Visual Studio for Mac will deploy it into the simulator and there will be no old, stale
+> assembly to cause the crash.
 
 ## Simulator hangs during application installation
 

@@ -82,12 +82,11 @@ The lack of System.Reflection. **Emit** means that no code that
 -  Remoting's TransparentProxy or anything else that would cause the runtime to generate code dynamically. 
 
 
- **Important:** Do not
-	confuse **Reflection.Emit**
-	with **Reflection**. Reflection.Emit is about
-	generating code dynamically and have that code JITed and
-	compiled to native code. Due to the limitations on iOS
-	(no JIT compilation) this is not supported.
+  > [!IMPORTANT]
+  > Do not confuse **Reflection.Emit** with **Reflection**. Reflection.Emit is about
+  > generating code dynamically and have that code JITed and
+  > compiled to native code. Due to the limitations on iOS
+  > (no JIT compilation) this is not supported.
 
 But the entire Reflection API, including Type.GetType
 	("someClass"), listing methods, listing properties, fetching

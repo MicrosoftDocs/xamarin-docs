@@ -634,8 +634,8 @@ namespace UsingResxLocalization.Android
 Once this code has been added to the Android application project, it will be able
 to automatically display translated strings.
 
-> [!NOTE]
->️ **WARNING:** If the translated strings are working in your
+> [!WARNING]
+> If the translated strings are working in your
 > RELEASE Android builds but not while debugging, right-click on the **Android Project**
 > and select **Options > Build > Android Build** and ensure that the
 > **Fast assembly deployment** is NOT ticked. This option causes problems
