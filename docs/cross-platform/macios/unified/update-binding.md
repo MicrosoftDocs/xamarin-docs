@@ -22,8 +22,8 @@ Additionally, any Xamarin Binding Project must also support the new Unified APIs
 
 The following is required to complete the steps presented in this article:
 
- -  **Visual Studio for Mac** - The latest version of Visual Studio for Mac installed and configured on the development computer.
- -  **Apple Mac** - An Apple mac is required to build Binding Projects for iOS and Mac.
+- **Visual Studio for Mac** - The latest version of Visual Studio for Mac installed and configured on the development computer.
+- **Apple Mac** - An Apple mac is required to build Binding Projects for iOS and Mac.
 
 Binding projects are not supported in Visual studio on a Windows machine.
 

@@ -75,12 +75,12 @@ public override void ApplicationDidFinishLaunching (CCApplication application, C
 
 `SetDesignResolutionSize` allows us to specify how the game window adjusts to the desired resolution. The following sections demonstrate how a 500x500 image is displayed with different `CCSceneResolutonPolicy` values passed to the `SetDesignResolutionSize` method. The following values are provided by the `CCSceneResolutionPolicy` enum:
 
- - `ShowAll` – Displays the entire requested resolution, maintaining aspect ratio.
- - `ExactFit` – Displays the entire requested resolution, but does not maintain aspect ratio.
- - `FixedWidth` – Displays the entire requested width, maintaining aspect ratio.
- - `FixedHeight` – Displays the entire requested height, maintaining aspect ratio.
- - `NoBorder` – Displays either the entire height or entire width, maintaining the aspect ratio. If the aspect ratio of the device is greater than the aspect ratio of the desired resolution, then the entire width is shown. If the aspect ratio of the device is less than the aspect ratio of the desired resolution, then the entire height is shown.
- - `Custom` – The display depends on the `Viewport` property of the current `CCScene`.
+- `ShowAll` – Displays the entire requested resolution, maintaining aspect ratio.
+- `ExactFit` – Displays the entire requested resolution, but does not maintain aspect ratio.
+- `FixedWidth` – Displays the entire requested width, maintaining aspect ratio.
+- `FixedHeight` – Displays the entire requested height, maintaining aspect ratio.
+- `NoBorder` – Displays either the entire height or entire width, maintaining the aspect ratio. If the aspect ratio of the device is greater than the aspect ratio of the desired resolution, then the entire width is shown. If the aspect ratio of the device is less than the aspect ratio of the desired resolution, then the entire height is shown.
+- `Custom` – The display depends on the `Viewport` property of the current `CCScene`.
 
 All screenshots are produced at iPhone 4s resolution (960x640) in landscape orientation and use this image:
 
@@ -173,10 +173,10 @@ The following screen shot displays the top and bottom parts of the display clipp
 
 Scenes define their `Viewport` property by constructing a `CCViewport`, which in turn is constructed with a `CCRect`. For more information on `CCViewport` and `CCRect` see the [CocosSharp API Documentation](https://developer.xamarin.com/api/namespace/CocosSharp/). In the context of creating a `CCViewport` the `CCRect` constructor’s parameters specify (in order):
 
- - x – The amount to horizontally offset the viewport, where each unit represents one entire screen width. For example, using a value of .5f results in the scene shifted to the right by half of the screen width.
- - y – The amount to vertically offset the viewport, where each unit represents one entire screen height. For example, using a value of .5f results in the scene shifted down by half of the screen height.
- - width – The horizontal portion that the scene should occupy. For example, using a value of 1/3.0f results in the scene horizontally occupying one-third of the screen.
- - height – The vertical portion that the scene should occupy. For example, using a value of 1/3.0f results in the scene vertically occupying one-third of the screen.
+- x – The amount to horizontally offset the viewport, where each unit represents one entire screen width. For example, using a value of .5f results in the scene shifted to the right by half of the screen width.
+- y – The amount to vertically offset the viewport, where each unit represents one entire screen height. For example, using a value of .5f results in the scene shifted down by half of the screen height.
+- width – The horizontal portion that the scene should occupy. For example, using a value of 1/3.0f results in the scene horizontally occupying one-third of the screen.
+- height – The vertical portion that the scene should occupy. For example, using a value of 1/3.0f results in the scene vertically occupying one-third of the screen.
 
 Code example:
 
@@ -211,11 +211,11 @@ The simple example presented above represents a common problem in game developme
 
 This property is present in the following classes: 
 
- - `CCApplication`
- - `CCSprite`
- - `CCLabelTtf`
- - `CCLabelBMFont`
- - `CCTMXLayer`
+- `CCApplication`
+- `CCSprite`
+- `CCLabelTtf`
+- `CCLabelBMFont`
+- `CCTMXLayer`
 
 The CocosSharp Visual Studio for Mac templates set `CCSprite.DefaultTexelToContentSizeRatio` according to the width of the device as an example of how it can be used. The following code is contained in `CCApplicationDelegate.ApplicationDidFinishLaunching`:
 

@@ -16,11 +16,11 @@ The `CCTextureCache` class is an essential part of CocosSharp game development. 
 
 This guide covers the `CCTextureCache` and why it is important for game development. Specifically it covers:
 
- - Why texture caching matters
- - Texture lifespan
- - Using SharedTextureCache
- - Lazy loading vs. pre-loading with AddImage
- - Disposing textures
+- Why texture caching matters
+- Texture lifespan
+- Using SharedTextureCache
+- Lazy loading vs. pre-loading with AddImage
+- Disposing textures
 
 
 ## Why texture caching matters

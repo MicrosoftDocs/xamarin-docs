@@ -37,9 +37,9 @@ Clicking the labels on the left changes which type of `CCAction` is performed on
 
 The **ActionProject** uses the following `CCAction`-inheriting classes, which are a part of CocosSharp:
 
- - `CCMoveTo` – Changes a `CCNode` instance’s `Position` property
- - `CCScaleTo` – Changes a `CCNode` instance’s `Scale` property
- - `CCRotateTo` – Changes a `CCNode` instance’s `Rotation` property
+- `CCMoveTo` – Changes a `CCNode` instance’s `Position` property
+- `CCScaleTo` – Changes a `CCNode` instance’s `Scale` property
+- `CCRotateTo` – Changes a `CCNode` instance’s `Rotation` property
 
 This guide refers to these actions as *variable-changing*, which means that they directly impact the variable of the `CCNode` that they are added to. Other types of actions are referred to as *easing* actions, which are covered later in this guide.
 
@@ -155,8 +155,8 @@ All of the classes we’ve discussed so far are included in CocosSharp to provid
 
 `CCAction` implementations typically require two classes:
 
- - `CCFiniteTimeAction` implementation – The finite time action class is responsible for starting the action. It is the class which is instantiated and either added directly to a `CCNode` or to an easing action. It must instantiate and return a `CCFiniteTimeActionState`, which will perform updates.
- - `CCFiniteTimeActionState` implementation – The finite time action state class is responsible for updating the variables involved in the action. It must implement an Update function, which assigns the value on the target according to a time value. This class is not explicitly referenced outside of the `CCFiniteTimeAction` which creates it. It simply works "behind the scenes".
+- `CCFiniteTimeAction` implementation – The finite time action class is responsible for starting the action. It is the class which is instantiated and either added directly to a `CCNode` or to an easing action. It must instantiate and return a `CCFiniteTimeActionState`, which will perform updates.
+- `CCFiniteTimeActionState` implementation – The finite time action state class is responsible for updating the variables involved in the action. It must implement an Update function, which assigns the value on the target according to a time value. This class is not explicitly referenced outside of the `CCFiniteTimeAction` which creates it. It simply works "behind the scenes".
 
 **ActionProject** provides a custom `CCFiniteTimeAction` implementation called `LineWidthAction,` which is used to adjust the width of the yellow line drawn on top of the red circle. Note that its only job is to instantiate and return a `LineWidthState` instance:
 

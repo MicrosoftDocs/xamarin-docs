@@ -114,10 +114,10 @@ Unlike with the Layout Anchor API, the `NSLayoutConstraint` creation methods do 
 The Visual Format Language allows you to define constraints using ASCII art like strings that provide a visual representation of the constraint being created. This has the following advantages and disadvantages:
 
 - The Visual Format Language enforces the creation of valid constraints only.
- - Auto Layout outputs constraints to the console using the Visual Format Language so the debugging messages will resemble the code used to create the constraint.
- - The Visual Format Language allows you to create multiple constraints at the same time with a very compact expression.
- - Since there is no compile-side validation of the Visual Format Language strings, issues can only be discovered at runtime.
- - Since the Visual Format Language emphasizes visualization over completeness some constraint types cannot be created with it (such as ratios).
+- Auto Layout outputs constraints to the console using the Visual Format Language so the debugging messages will resemble the code used to create the constraint.
+- The Visual Format Language allows you to create multiple constraints at the same time with a very compact expression.
+- Since there is no compile-side validation of the Visual Format Language strings, issues can only be discovered at runtime.
+- Since the Visual Format Language emphasizes visualization over completeness some constraint types cannot be created with it (such as ratios).
 
 You take the following steps when using the Visual Format Language to create a constraint:
 

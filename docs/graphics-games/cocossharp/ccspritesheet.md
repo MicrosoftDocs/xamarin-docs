@@ -60,9 +60,9 @@ Of course, the ideal situation is to have a single render state, despite having 
 
 Combining multiple images into one file also improves a game’s load times for a number of reasons:
 
- - Combining multiple images into a single file can reduce the overall number of pixels used through efficient packing
- - Loading fewer files means less per-file overhead, such as parsing .png headers
- - Loading fewer files requires less seek time, which is important for disk-based media such as DVDs and traditional computer hard drives
+- Combining multiple images into a single file can reduce the overall number of pixels used through efficient packing
+- Loading fewer files means less per-file overhead, such as parsing .png headers
+- Loading fewer files requires less seek time, which is important for disk-based media such as DVDs and traditional computer hard drives
 
 ## Using CCSpriteSheet in code
 
@@ -128,13 +128,13 @@ CCSpriteSheet sheet = new CCSpriteSheet ("sheet.plist", "sheet.png");
 
 As games are developed, artists may add, remove, or modify art. Any change requires an updated sprite sheet. The following considerations can ease sprite sheet maintenance:
 
- - Keep the original files (the files used to create the sprite sheets) in a folder in your project, and make sure they are added to version control. These files will be needed to re-create the sprite sheet whenever a change is made.
- - Do not add the original files to Visual Studio for Mac/Visual Studio, or if they are added, set the **Build Action** to **None**. If the files are added and have the platform-specific **Build Action**, then they will needlessly increase the resulting app’s file size.
- - Consider using *smart folders* in TexturePacker. Smart folders automatically add any contained images to the sprite sheet. This feature can save a lot of time when developing games with a large number of images. 
+- Keep the original files (the files used to create the sprite sheets) in a folder in your project, and make sure they are added to version control. These files will be needed to re-create the sprite sheet whenever a change is made.
+- Do not add the original files to Visual Studio for Mac/Visual Studio, or if they are added, set the **Build Action** to **None**. If the files are added and have the platform-specific **Build Action**, then they will needlessly increase the resulting app’s file size.
+- Consider using *smart folders* in TexturePacker. Smart folders automatically add any contained images to the sprite sheet. This feature can save a lot of time when developing games with a large number of images. 
 
 	![](ccspritesheet-images/image9.png "This feature can save a lot of time when developing games with a large number of images")
- - Keep an eye on sprite sheet texture sizes. Some older phone hardware does not support texture sizes larger than 2048x2048. Also, a 32-bit image of 2048x2048 uses nearly 17 mbytes of RAM – a significant amount of memory.
- - TexturePacker does not include folders in sprite names by default, so name conflicts are possible. It’s best to decide whether to include folder names or not at the beginning of development. Larger games should consider using folder names to prevent conflicts. To include folder paths, click **show advanced** in the **Data** section and check **Prepend folder name**. 
+- Keep an eye on sprite sheet texture sizes. Some older phone hardware does not support texture sizes larger than 2048x2048. Also, a 32-bit image of 2048x2048 uses nearly 17 mbytes of RAM – a significant amount of memory.
+- TexturePacker does not include folders in sprite names by default, so name conflicts are possible. It’s best to decide whether to include folder names or not at the beginning of development. Larger games should consider using folder names to prevent conflicts. To include folder paths, click **show advanced** in the **Data** section and check **Prepend folder name**. 
 
 	![](ccspritesheet-images/image10.png "To include folder paths, click show advanced in the Data section and check Prepend folder name")
 

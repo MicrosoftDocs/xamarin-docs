@@ -61,10 +61,10 @@ The `VisualElement.TabIndex` property is used to indicate the order in which [`V
 
 The following rules apply when using the default tab order, or setting the `TabIndex` property:
 
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` equal to 0 are added to the tab order based on their declaration order in XAML or child collections.
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` greater than 0 are added to the tab order based on their `TabIndex` value.
- - [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` less than 0 are added to the tab order and appear before any zero value.
- - Conflicts on a `TabIndex` are resolved by declaration order.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` equal to 0 are added to the tab order based on their declaration order in XAML or child collections.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` greater than 0 are added to the tab order based on their `TabIndex` value.
+- [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances with a `TabIndex` less than 0 are added to the tab order and appear before any zero value.
+- Conflicts on a `TabIndex` are resolved by declaration order.
 
 After defining a tab order, pressing the Tab key will cycle the focus through controls in ascending `TabIndex` order, wrapping around to the beginning once the final control is reached.
 

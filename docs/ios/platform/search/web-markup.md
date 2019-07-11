@@ -158,14 +158,14 @@ The following shows an example of metadata from your website providing rich sear
 
 Apple currently supports the following schema types from schema.org:
 
- - AggregateRating
- - ImageObject
- - InteractionCount
- - Offers
- - Organization
- - PriceRange
- - Recipe
- - SearchAction
+- AggregateRating
+- ImageObject
+- InteractionCount
+- Offers
+- Organization
+- PriceRange
+- Recipe
+- SearchAction
 
 For more information on these scheme types, please see [schema.org](http://schema.org).
 
@@ -173,9 +173,9 @@ For more information on these scheme types, please see [schema.org](http://schem
 
 Specific types of Structured Data will allow a Search Result to be actionable by the end user. Currently the following actions are supported:
 
- - Dialing a phone number.
- - Getting map direction to a given address.
- - Playing an audio or video file.
+- Dialing a phone number.
+- Getting map direction to a given address.
+- Playing an audio or video file.
 
 For example, defining an Action to dial a phone number might look like the following:
 

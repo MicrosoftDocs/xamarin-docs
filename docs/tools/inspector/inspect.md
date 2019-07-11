@@ -59,14 +59,14 @@ values visually.
 
 ## Known Limitations
 
- - View selection is only supported on your main display.
- - Property grid editing is not available for Mac, and on Windows is limited to
+- View selection is only supported on your main display.
+- Property grid editing is not available for Mac, and on Windows is limited to
   a few data types. Use the REPL for more powerful editing.
- - As long as the Inspector addin/extension is installed and enabled in your IDE,
+- As long as the Inspector addin/extension is installed and enabled in your IDE,
   we are injecting code into your app every time it starts in Debug mode. If you
   notice any strange behavior in your app, please try disabling or uninstalling
   the Inspector addin/extension, restarting the IDE, and rechecking. And please
   [file bugs](~/tools/inspector/install.md#reporting-bugs) to let us know!
- - If inspecting a UI element causes it to change in anyway, please
+- If inspecting a UI element causes it to change in anyway, please
   [let us know](~/tools/inspector/install.md#reporting-bugs), as this may indicate a bug.
 

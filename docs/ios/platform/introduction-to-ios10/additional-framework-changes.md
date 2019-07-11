@@ -127,10 +127,10 @@ To learn more, please see Apple's [Metal Programming Guide](https://developer.ap
 
 The following enhancements have been made to the ModelIO framework in iOS 10:
 
- - The USD file format is now supported.
- - Signed Distance Field support has been added to the [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) class.
- - Use the new `MDLLightProbeIrradianceDataSource` class to assist in Light Probe placement.
- - Use the new `MDLMaterialPropertyGraph` class to easily support runtime changes to models.
+- The USD file format is now supported.
+- Signed Distance Field support has been added to the [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) class.
+- Use the new `MDLLightProbeIrradianceDataSource` class to assist in Light Probe placement.
+- Use the new `MDLMaterialPropertyGraph` class to easily support runtime changes to models.
 
 ## Photos Enhancements
 

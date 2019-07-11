@@ -75,10 +75,10 @@ interact with your content, thus raising its ranking.
 Apple provides the following suggestions as to what content and actions to provide
 search indexes for in your app:
 
- - Any content viewed, created or curated by the user from within your app.
- - Navigation points and features within the app.
- - Things like new messages, content or other types of items displayed by your app that
-	have recently been downloaded to the device.
+- Any content viewed, created or curated by the user from within your app.
+- Navigation points and features within the app.
+- Things like new messages, content or other types of items displayed by your app that
+have recently been downloaded to the device.
 
 ## App Search Enhancements
 
