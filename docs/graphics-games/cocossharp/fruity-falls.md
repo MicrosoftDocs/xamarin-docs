@@ -18,13 +18,13 @@ Fruity Falls is a simple, physics-based game in which the player sorts red and y
 
 Fruity Falls extends the concepts introduced in the [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) by adding the following:
 
- - Content in the form of PNGs
- - Advanced physics
- - Game state (transition between scenes)
- - Ability to tune the game coefficients through variables contained in a single class
- - Built-in visual debugging support
- - Code organization using game entities
- - Game design focused on fun and replay value
+- Content in the form of PNGs
+- Advanced physics
+- Game state (transition between scenes)
+- Ability to tune the game coefficients through variables contained in a single class
+- Built-in visual debugging support
+- Code organization using game entities
+- Game design focused on fun and replay value
 
 While the [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) focused on introducing core CocosSharp concepts, Fruity Falls shows how to bring it all together into a finished game product. Since this guide references the BouncingGame, readers should first familiarize themselves with the [BouncingGame guide](~/graphics-games/cocossharp/bouncing-game.md) prior to reading this guide.
 
@@ -423,11 +423,11 @@ The art in Fruity Falls immediately distinguishes the game from the BouncingGame
 
 The art for Fruity Falls was created with the following goals:
 
- - Consistent theme
- - Emphasis on just one character – the Xamarin monkey
- - Bright colors to create a relaxing, enjoyable experience
- - Contrast between the background and foreground so gameplay objects are easy to track visually
- - Ability to create simple visual effects without resource-heavy animations
+- Consistent theme
+- Emphasis on just one character – the Xamarin monkey
+- Bright colors to create a relaxing, enjoyable experience
+- Contrast between the background and foreground so gameplay objects are easy to track visually
+- Ability to create simple visual effects without resource-heavy animations
 
 
 ### Content location

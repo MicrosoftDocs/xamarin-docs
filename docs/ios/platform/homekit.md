@@ -379,77 +379,77 @@ Each `HMService` object can contain a collection of `HMCharacteristic` objects t
 
 The `HMCharacteristicType` enum provides a set of Characteristic Metadata values that can be defined or modified as follows:
 
- - AdminOnlyAccess
- - AirParticulateDensity
- - AirParticulateSize
- - AirQuality
- - AudioFeedback
- - BatteryLevel
- - Brightness
- - CarbonDioxideDetected
- - CarbonDioxideLevel
- - CarbonDioxidePeakLevel
- - CarbonMonoxideDetected
- - CarbonMonoxideLevel
- - CarbonMonoxidePeakLevel
- - ChargingState
- - ContactState
- - CoolingThreshold
- - CurrentDoorState
- - CurrentHeatingCooling
- - CurrentHorizontalTilt
- - CurrentLightLevel
- - CurrentLockMechanismState
- - CurrentPosition
- - CurrentRelativeHumidity
- - CurrentSecuritySystemState
- - CurrentTemperature
- - CurrentVerticalTilt
- - FirmwareVersion
- - HardwareVersion
- - HeatingCoolingStatus
- - HeatingThreshold
- - HoldPosition
- - Hue
- - Identify
- - InputEvent
- - LeakDetected
- - LockManagementAutoSecureTimeout
- - LockManagementControlPoint
- - LockMechanismLastKnownAction
- - Logs
- - Manufacturer
- - Model
- - MotionDetected
- - Name
- - ObstructionDetected
- - OccupancyDetected
- - OutletInUse
- - OutputState
- - PositionState
- - PowerState
- - RotationDirection
- - RotationSpeed
- - Saturation
- - SerialNumber
- - SmokeDetected
- - SoftwareVersion
- - StatusActive
- - StatusFault
- - StatusJammed
- - StatusLowBattery
- - StatusTampered
- - TargetDoorState
- - TargetHeatingCooling
- - TargetHorizontalTilt
- - TargetLockMechanismState
- - TargetPosition
- - TargetRelativeHumidity
- - TargetSecuritySystemState
- - TargetTemperature
- - TargetVerticalTilt
- - TemperatureUnits
- - Version
+- AdminOnlyAccess
+- AirParticulateDensity
+- AirParticulateSize
+- AirQuality
+- AudioFeedback
+- BatteryLevel
+- Brightness
+- CarbonDioxideDetected
+- CarbonDioxideLevel
+- CarbonDioxidePeakLevel
+- CarbonMonoxideDetected
+- CarbonMonoxideLevel
+- CarbonMonoxidePeakLevel
+- ChargingState
+- ContactState
+- CoolingThreshold
+- CurrentDoorState
+- CurrentHeatingCooling
+- CurrentHorizontalTilt
+- CurrentLightLevel
+- CurrentLockMechanismState
+- CurrentPosition
+- CurrentRelativeHumidity
+- CurrentSecuritySystemState
+- CurrentTemperature
+- CurrentVerticalTilt
+- FirmwareVersion
+- HardwareVersion
+- HeatingCoolingStatus
+- HeatingThreshold
+- HoldPosition
+- Hue
+- Identify
+- InputEvent
+- LeakDetected
+- LockManagementAutoSecureTimeout
+- LockManagementControlPoint
+- LockMechanismLastKnownAction
+- Logs
+- Manufacturer
+- Model
+- MotionDetected
+- Name
+- ObstructionDetected
+- OccupancyDetected
+- OutletInUse
+- OutputState
+- PositionState
+- PowerState
+- RotationDirection
+- RotationSpeed
+- Saturation
+- SerialNumber
+- SmokeDetected
+- SoftwareVersion
+- StatusActive
+- StatusFault
+- StatusJammed
+- StatusLowBattery
+- StatusTampered
+- TargetDoorState
+- TargetHeatingCooling
+- TargetHorizontalTilt
+- TargetLockMechanismState
+- TargetPosition
+- TargetRelativeHumidity
+- TargetSecuritySystemState
+- TargetTemperature
+- TargetVerticalTilt
+- TemperatureUnits
+- Version
 
 ### Working with a Characteristic’s Value
 
@@ -672,9 +672,9 @@ Since these features use the same techniques presented above, they should be eas
 
 Before submitting a HomeKit enabled Xamarin.iOS app to iTunes Connect for release in the iTunes App Store, ensure that you follow Apple's guidelines for HomeKit enabled apps:
 
- - The app's primary purpose _must_ be home automation if using the HomeKit framework.
- - The app's marketing text must notify users that HomeKit is being used and they must provide a privacy policy.
- - Gathering user information or using HomeKit for advertising is strictly prohibited.
+- The app's primary purpose _must_ be home automation if using the HomeKit framework.
+- The app's marketing text must notify users that HomeKit is being used and they must provide a privacy policy.
+- Gathering user information or using HomeKit for advertising is strictly prohibited.
 
 For the full review guidelines, please see Apple's [App Store Review Guidelines](https://developer.apple.com/app-store/review/guidelines/).
 

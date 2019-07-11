@@ -379,7 +379,7 @@ string Text { get; [NullAllowed] set; }
 The following caveats should be considered when setting up the binding for a custom control:
 
 1. **Binding properties must be static** - When defining the binding of properties, the [`[Static]`](~/cross-platform/macios/binding/binding-types-reference.md#StaticAttribute) attribute must be used.
- 2. **Property names must match exactly** - The name used to bind the property must match the name of the property in the custom control exactly.
+2. **Property names must match exactly** - The name used to bind the property must match the name of the property in the custom control exactly.
 3. **Property types must match exactly** - The variable type used to bind the property must match the type of the property in the custom control exactly.
 4. **Breakpoints and the getter/setter** - Breakpoints placed in the getter or setter methods of the property will never be hit.
 5. **Observe Callbacks** - You will need to use observation callbacks to be notified of changes in the property values of custom controls.

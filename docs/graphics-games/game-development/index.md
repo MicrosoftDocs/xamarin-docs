@@ -50,9 +50,9 @@ Keep in mind that many of the activities listed above can change the state of th
 
 Manually loading and unloading (or disposing) content may be needed depending on which technology you are using in development. Manually loading and unloading of assets may be necessary for a number of reasons:
 
- - Assets may take a long time to load relative to the length of a single frame. Some assets may even take seconds to load, which would severely disrupt the experience if loaded mid gameplay. If the load time is especially lengthy (such as more than a second or two) you may want to show an animated loading screen or progress bar.
- - Assets can consume a lot of RAM, requiring active management of what is loaded to fit within what is provided by the game’s target platforms.
- - Games may need to display more assets than can fit in RAM. "Open World" games often include large environments which players can navigate through seamlessly – that is with no loading screens. In this case you may need to create a custom system for streaming content in and managing memory usage.
+- Assets may take a long time to load relative to the length of a single frame. Some assets may even take seconds to load, which would severely disrupt the experience if loaded mid gameplay. If the load time is especially lengthy (such as more than a second or two) you may want to show an animated loading screen or progress bar.
+- Assets can consume a lot of RAM, requiring active management of what is loaded to fit within what is provided by the game’s target platforms.
+- Games may need to display more assets than can fit in RAM. "Open World" games often include large environments which players can navigate through seamlessly – that is with no loading screens. In this case you may need to create a custom system for streaming content in and managing memory usage.
 
 Custom file formats may need processing at load time, requiring custom loading code.
 

@@ -23,10 +23,10 @@ Apple Pay is only available within iOS 8 and above, and therefore requires a min
 
 The following items are also required to integrate Apple Pay into your app:
 
- - Payment Processor Platform
- - Merchant Identifier
- - An Apple Pay certificate
- - Apple Pay entitlement
+- Payment Processor Platform
+- Merchant Identifier
+- An Apple Pay certificate
+- Apple Pay entitlement
 
 This document will look at these items in more detail.
 

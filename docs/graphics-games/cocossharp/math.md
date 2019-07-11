@@ -14,10 +14,10 @@ _This guide covers 2D mathematics for game development. It uses CocosSharp to sh
 
 To position and move objects with code is a core part of developing games of all sizes. Positioning and moving require the use of math, whether a game requires moving an object along a straight line, or the use of trigonometry for rotation. This document will cover the following topics:
 
- - Velocity
- - Acceleration
- - Rotating CocosSharp objects
- - Using rotation with velocity
+- Velocity
+- Acceleration
+- Rotating CocosSharp objects
+- Using rotation with velocity
 
 Developers who do not have a strong math background, or who have long-forgotten these topics from school, do not need to worry – this document will break concepts down into bite-sized pieces, and will accompany theoretical explanations with practical examples. In short, this article will answer the age-old math student question: "When will I actually need to use this stuff?"
 
@@ -191,10 +191,10 @@ Some games require objects to be rotated so they face a target. Examples include
 
 This process requires a number of steps:
 
- - Identifying the *offset* of the target. Offset refers to the X and Y distance between the rotating entity and the target entity.
- - Calculating the angle from the offset by using the arctangent trigonometry function (explained in detail below).
- - Adjusting for a difference between 0 degrees pointing towards the right and the direction that the rotating entity points when un-rotated.
- - Adjusting for the difference between mathematical rotation (counterclockwise) and CocosSharp rotation (clockwise).
+- Identifying the *offset* of the target. Offset refers to the X and Y distance between the rotating entity and the target entity.
+- Calculating the angle from the offset by using the arctangent trigonometry function (explained in detail below).
+- Adjusting for a difference between 0 degrees pointing towards the right and the direction that the rotating entity points when un-rotated.
+- Adjusting for the difference between mathematical rotation (counterclockwise) and CocosSharp rotation (clockwise).
 
 The following function (assumed to be written in an entity) rotates the entity to face a target:
 

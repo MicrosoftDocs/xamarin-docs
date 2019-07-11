@@ -533,10 +533,10 @@ All other AnimationChain properties in the .achx file are ignored by Coin Time.
 
 Animation logic is contained in the `AnimatedSpriteEntity` class, which serves as the base class for most entities used in the `GameScene`. It provides the following functionality:
 
- - Loading of `.achx` files
- - Animation cache of loaded animations
- - CCSprite instance for displaying the animation
- - Logic for changing the current frame
+- Loading of `.achx` files
+- Animation cache of loaded animations
+- CCSprite instance for displaying the animation
+- Logic for changing the current frame
 
 The Spikes constructor provides a simple example of how to load and use animations:
 

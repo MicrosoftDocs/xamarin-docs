@@ -16,11 +16,11 @@ The MonoGame Pipeline Tool provides an easy-to-use environment for converting co
 
 This walkthrough will cover the following:
 
- - Installing the MonoGame Pipeline Tool
- - Creating a CocosSharp project
- - Creating a content project
- - Processing files in the MonoGame Pipeline Tool
- - Using files at runtime
+- Installing the MonoGame Pipeline Tool
+- Creating a CocosSharp project
+- Creating a content project
+- Processing files in the MonoGame Pipeline Tool
+- Using files at runtime
 
 This walkthrough uses a CocosSharp project to demonstrate how **.xnb** files can be loaded and used in an application. Users of MonoGame will also be able to reference this walkthrough as CocosSharp and MonoGame both use the same **.xnb** content files.
 
@@ -97,8 +97,8 @@ Next, we’ll be adding content to our **ContentProject**. For this project, we�
 
 We’ll add two files to our project:
 
- - A **.png** file which will be used to draw a sprite. This file can [downloaded here](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/ball.png?raw=true).
- - A **.spritefont** file which will be used to draw text on screen. The Content Pipeline Tool supports creating new .spritefont files, so there is no file to download.
+- A **.png** file which will be used to draw a sprite. This file can [downloaded here](https://github.com/xamarin/mobile-samples/blob/master/BouncingGame/Resources/ball.png?raw=true).
+- A **.spritefont** file which will be used to draw text on screen. The Content Pipeline Tool supports creating new .spritefont files, so there is no file to download.
 
 
 ### Adding a .png file

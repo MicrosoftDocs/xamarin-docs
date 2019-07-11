@@ -16,12 +16,12 @@ The entity pattern can improve a developer’s efforts with CocosSharp through i
 
 This guide covers the following topics:
 
- - Introduction to game entities
- - General vs. specific entity types
- - Project setup
- - Creating entity classes
- - Adding entity instances to the `GameLayer`
- - Reacting to entity logic in the `GameLayer`
+- Introduction to game entities
+- General vs. specific entity types
+- Project setup
+- Creating entity classes
+- Adding entity instances to the `GameLayer`
+- Reacting to entity logic in the `GameLayer`
 
 The finished game will look like this:
 
@@ -34,13 +34,13 @@ Game entities are classes that define objects needing rendering, collision, phys
 
 For example, a space themed [shoot ‘em up game](https://en.wikipedia.org/wiki/Shoot_%27em_up) may include the following entities:
 
- - `PlayerShip`
- - `EnemyShip`
- - `PlayerBullet`
- - `EnemyBullet`
- - `CollectableItem`
- - `HUD`
- - `Environment`
+- `PlayerShip`
+- `EnemyShip`
+- `PlayerBullet`
+- `EnemyBullet`
+- `CollectableItem`
+- `HUD`
+- `Environment`
 
 These entities would be their own classes in the game, and each instance would require little or no setup beyond instantiation.
 
@@ -51,19 +51,19 @@ One of the first questions faced by game developers using an entity system is ho
 
 For example we can imagine a space game that defines the following classes:
 
- - `PlayerDogfighter`
- - `PlayerBomber`
- - `EnemyMissileShip`
- - `EnemyLaserShip`
+- `PlayerDogfighter`
+- `PlayerBomber`
+- `EnemyMissileShip`
+- `EnemyLaserShip`
 
 A more-generalized approach would be to create a single class for player ships and a single class for enemy ships, which could be configured to support different ship types. Customization may include which image to load, which type of bullet entities to create when shooting, movement coefficients, and AI logic for the enemy ships. In this case the list of entities may be reduced to:
 
- - `PlayerShip`
- - `EnemyShip`
+- `PlayerShip`
+- `EnemyShip`
 
 Of course, these entity types can be further generalized by allowing per-instance customization for controlling movement. Player ship instances would read from input while enemy ship instances may perform AI logic. This means that the entities could be generalized even further into a single class:
 
- - `Ship`
+- `Ship`
 
 The generalization can continue even further – a game may use a single base class for all entities. This single class, which may be called `GameEntity`, would be the class used for every entity instance in the entire game, including entities that are not ships such as bullets and collectible items (power-ups).
 
@@ -71,9 +71,9 @@ This most general of systems is often referred to as a *component system*. In su
 
 The level of generalization used depends on many considerations, including:
 
- - Game size – smaller games can afford to create specific classes, while larger games may be difficult to manage with a large number of classes.
- - Data driven development – games that rely on data (images, 3D models, and data files such as JSON or XML) may benefit from having generalized entity types, and configuring the specifics based on data. This is especially import for games that expect to add new content during development or after the game has been released.
- - Game engine patterns – some game engines strongly encourage the usage of component systems while others allow developers to decide how to organize entities. CocosSharp does not require the usage of a component system, so developers are free to implement any type of entity. 
+- Game size – smaller games can afford to create specific classes, while larger games may be difficult to manage with a large number of classes.
+- Data driven development – games that rely on data (images, 3D models, and data files such as JSON or XML) may benefit from having generalized entity types, and configuring the specifics based on data. This is especially import for games that expect to add new content during development or after the game has been released.
+- Game engine patterns – some game engines strongly encourage the usage of component systems while others allow developers to decide how to organize entities. CocosSharp does not require the usage of a component system, so developers are free to implement any type of entity. 
 
 For the sake of simplicity, we’ll be using a specific class-based approach with a single ship and bullet entity for this tutorial.
 
@@ -119,11 +119,11 @@ The `Ship` class will be our game’s first entity. To add a `Ship` class, first
 
 The first change we’ll make to our `Ship` class is to let it inherit from the `CCNode` class. `CCNode` serves as the base class for common CocosSharp classes like `CCSprite` and `CCLayer`, and gives us the following functionality:
 
- - `Position` property for moving the ship around the screen.
- - `Children` property for adding a `CCSprite.`
- - `Parent` property, which can be used to attach `Ship` instances to other `CCNodes`. We won’t be using this feature in this tutorial; larger games often take advantage of attaching entities to other `CCNodes`. 
- - `AddEventListener` method for responding to input for moving the ship.
- - `Schedule` method for shooting bullets.
+- `Position` property for moving the ship around the screen.
+- `Children` property for adding a `CCSprite.`
+- `Parent` property, which can be used to attach `Ship` instances to other `CCNodes`. We won’t be using this feature in this tutorial; larger games often take advantage of attaching entities to other `CCNodes`. 
+- `AddEventListener` method for responding to input for moving the ship.
+- `Schedule` method for shooting bullets.
 
 We’ll also add a `CCSprite` instance so that our ship can be seen on screen:
 

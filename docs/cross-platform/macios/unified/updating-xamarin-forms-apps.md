@@ -47,10 +47,10 @@ Click on the iOS project so that it's selected, then choose **Project > Migrate 
 
 This will automatically:
 
- - Change the project type to support the Unified 64-bit API.
- - Change the framework reference to **Xamarin.iOS** (replacing the old **monotouch** reference).
- - Change the namespace references in the code to remove the `MonoTouch` prefix.
- - Update the **csproj** file to use the correct build targets for the Unified API.
+- Change the project type to support the Unified 64-bit API.
+- Change the framework reference to **Xamarin.iOS** (replacing the old **monotouch** reference).
+- Change the namespace references in the code to remove the `MonoTouch` prefix.
+- Update the **csproj** file to use the correct build targets for the Unified API.
 
 **Clean** and **Build** the project to ensure there are no other errors to fix. No further action should be required. These steps are explained in more detail in the [Unified API docs](~/cross-platform/macios/unified/updating-ios-apps.md).
 
@@ -62,8 +62,8 @@ If you have added additional iOS native code (such as custom renderers or depend
 
 Once the iOS app has been updated to the Unified API, the rest of the solution needs to be updated to Xamarin.Forms version 1.3.1. This includes:
 
- - Updating the Xamarin.Forms NuGet package in each project.
- - Changing the code to use the new Xamarin.Forms `Application`,  `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android), and `FormsApplicationPage` (Windows Phone) classes.
+- Updating the Xamarin.Forms NuGet package in each project.
+- Changing the code to use the new Xamarin.Forms `Application`,  `FormsApplicationDelegate` (iOS), `FormsApplicationActivity` (Android), and `FormsApplicationPage` (Windows Phone) classes.
 
 These steps are explained below:
 
@@ -83,8 +83,8 @@ Once you've updated the NuGet package to Xamarin.Forms 1.3.1, make the following
 
 Change the **App.cs** file so that:
 
- - The `App` class now inherits from `Application`.
- - The `MainPage` property is set to the first content page you wish to display.
+- The `App` class now inherits from `Application`.
+- The `MainPage` property is set to the first content page you wish to display.
 
 ```csharp
 public class App : Application // superclass new in 1.3
@@ -106,8 +106,8 @@ The `App` class is then passed to a new `LoadApplication` method in each app pro
 
 Change the **AppDelegate.cs** file so that:
 
- - The class inherits from `FormsApplicationDelegate` (instead of `UIApplicationDelegate` previously).
- - `LoadApplication` is called with a new instance of `App`.
+- The class inherits from `FormsApplicationDelegate` (instead of `UIApplicationDelegate` previously).
+- `LoadApplication` is called with a new instance of `App`.
 
 ```csharp
 [Register ("AppDelegate")]
@@ -129,8 +129,8 @@ public partial class AppDelegate :
 
 Change the **MainActivity.cs** file so that:
 
- - The class inherits from `FormsApplicationActivity` (instead of `FormsActivity` previously).
- - `LoadApplication` is called with a new instance of `App`
+- The class inherits from `FormsApplicationActivity` (instead of `FormsActivity` previously).
+- `LoadApplication` is called with a new instance of `App`
 
 ```csharp
 [Activity (Label = "YOURAPPNAM", Icon = "@drawable/icon", MainLauncher = true,
@@ -155,8 +155,8 @@ We need to update the **MainPage** - both the XAML and the codebehind.
 
 Change the **MainPage.xaml** file so that:
 
- - The root XAML element should be `winPhone:FormsApplicationPage`.
- - The `xmlns:phone` attribute should be *changed* to `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
+- The root XAML element should be `winPhone:FormsApplicationPage`.
+- The `xmlns:phone` attribute should be *changed* to `xmlns:winPhone="clr-namespace:Xamarin.Forms.Platform.WinPhone;assembly=Xamarin.Forms.Platform.WP8"`
 
 An updated example is shown below - you should only have to edit these things (the rest of the attributes should remain the same):
 
@@ -170,8 +170,8 @@ An updated example is shown below - you should only have to edit these things (t
 
 Change the **MainPage.xaml.cs** file so that:
 
- - The class inherits from `FormsApplicationPage` (instead of `PhoneApplicationPage` previously).
- - `LoadApplication` is called with a new instance of the Xamarin.Forms `App` class. You may need to fully qualify this reference since Windows Phone has it's own `App` class already defined.
+- The class inherits from `FormsApplicationPage` (instead of `PhoneApplicationPage` previously).
+- `LoadApplication` is called with a new instance of the Xamarin.Forms `App` class. You may need to fully qualify this reference since Windows Phone has it's own `App` class already defined.
 
 ```csharp
 public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApplicationPage // superclass new in 1.3

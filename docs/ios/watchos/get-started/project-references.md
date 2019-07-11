@@ -25,16 +25,16 @@ View the references by double-clicking on the References
 
 - **iPhone app** references **Watch App**
 
-![](project-references-images/catalog-reference1.png "iPhone app references Watch App")
+  ![](project-references-images/catalog-reference1.png "iPhone app references Watch App")
 
 - **Watch App** references **Watch App Extension**
 
-![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
+  ![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
 
 
- - The **Watch App Extension** does not reference either of the other projects
+- The **Watch App Extension** does not reference either of the other projects
 
-![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
+  ![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
 
 
 
@@ -46,19 +46,19 @@ You also need to make sure your **Bundle Identifiers** are correct.
 	`watchkitextension` and `watchkitapp`, as follows
 	(for the **WatchKitCatalog** example):
 
- - Xamarin.iOS Unified project - `com.xamarin.WatchKitCatalog`
+- Xamarin.iOS Unified project - `com.xamarin.WatchKitCatalog`
 
- - WatchKit Extension project  - `com.xamarin.WatchKitCatalog.watchkitextension`
+- WatchKit Extension project  - `com.xamarin.WatchKitCatalog.watchkitextension`
 
- - Watch App project - `com.xamarin.WatchKitCatalog.watchkitapp`
+- Watch App project - `com.xamarin.WatchKitCatalog.watchkitapp`
 
 Also make sure that these **Info.plist** settings are correct:
 
- - The Watch App project's
+- The Watch App project's
 	`WKCompanionAppBundleIdentifier` matches the parent/container
 	app's Bundle ID (ie. the one that runs on the iPhone);
 
- - The Watch Kit Extension project's
+- The Watch Kit Extension project's
 	**WKApp Bundle ID** matches the Watch App project’s
 	Bundle ID.
 

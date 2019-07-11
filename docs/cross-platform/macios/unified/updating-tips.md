@@ -82,17 +82,17 @@ After using the migration tool, you may still get some
 	public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
 	```
 
- * The Unified API does not provide an implicit conversion between NSDate
+* The Unified API does not provide an implicit conversion between NSDate
  	and .NET DateTime because it's not a lossless conversion. To prevent
  	errors related to `DateTimeKind.Unspecified` convert the .NET `DateTime`
  	to local or UTC before casting to `NSDate`.
 
- * Objective-C category methods are now generated as extension
+* Objective-C category methods are now generated as extension
  	methods in the Unified API. For example, code that previously
  	used `UIView.DrawString` would now reference
  	`NSString.DrawString` in the Unified API.
 
- * Code using AVFoundation classes with `VideoSettings` should change
+* Code using AVFoundation classes with `VideoSettings` should change
  	to use the `WeakVideoSettings` property. This requires a `Dictionary`,
  	which is available as a property on the settings classes, for example:
 
@@ -100,10 +100,10 @@ After using the migration tool, you may still get some
 	vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
 	```
 
- * The NSObject `.ctor(IntPtr)` constructor has been changed from public
+* The NSObject `.ctor(IntPtr)` constructor has been changed from public
  	to protected ([to prevent improper use](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
- * `NSAction` has been [replaced](~/cross-platform/macios/unified/overview.md#NSAction)
+* `NSAction` has been [replaced](~/cross-platform/macios/unified/overview.md#NSAction)
  	with the starndard .NET `Action`. Some simple (single parameter) delegates
  	have also been replaced with `Action<T>`.
 
