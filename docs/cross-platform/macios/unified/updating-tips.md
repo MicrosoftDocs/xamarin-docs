@@ -104,7 +104,7 @@ After using the migration tool, you may still get some
  	to protected ([to prevent improper use](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
 * `NSAction` has been [replaced](~/cross-platform/macios/unified/overview.md#NSAction)
- 	with the starndard .NET `Action`. Some simple (single parameter) delegates
+ 	with the standard .NET `Action`. Some simple (single parameter) delegates
  	have also been replaced with `Action<T>`.
 
 Finally, refer to the [Classic v Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
