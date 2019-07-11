@@ -29,6 +29,7 @@ Xamarin.Essentials is available as a NuGet package that can be added to any exis
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/) with the [Visual Studio tools for Xamarin](~/get-started/installation/index.md).
 
 2. Open an existing project, or create a new project using the Blank App template under **Visual Studio C#** (Android, iPhone & iPad, or Cross-Platform).
+
     > [!IMPORTANT]
     > If adding to a UWP project ensure Build 16299 or higher is set in the project properties.
 
