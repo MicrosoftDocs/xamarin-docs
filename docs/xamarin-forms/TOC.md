@@ -126,6 +126,7 @@
 ##### [Data Template Selection](app-fundamentals/templates/data-templates/selector.md)
 ### [Triggers](app-fundamentals/triggers.md)
 ## [User Interface](user-interface/index.md)
+### [Activity Indicator](user-interface/activityindicator.md)
 ### [Animation](user-interface/animation/index.md)
 #### [Simple Animations](user-interface/animation/simple.md)
 #### [Easing Functions](user-interface/animation/easing.md)

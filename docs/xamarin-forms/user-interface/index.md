@@ -15,6 +15,10 @@ ms.date: 06/11/2019
 
 _How to use the views provided by Xamarin.Forms_
 
+## [ActivityIndicator](activityindicator.md)
+
+The `ActivityIndicator` is an animated control that indicates to users that the application is engaged in a lengthy activity, without giving any indication of progress.
+
 ## [Animation](animation/index.md)
 
 Xamarin.Forms includes its own animation infrastructure that's straightforward for creating simple animations, while also being versatile enough to create complex animations.
