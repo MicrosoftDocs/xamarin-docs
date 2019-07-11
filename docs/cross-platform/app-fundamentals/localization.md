@@ -40,12 +40,12 @@ localization, and how they apply to mobile application development in general.
 When designing and building an application, things that you might previously have
 hardcoded but which must parameterized for localization include:
 
--	Screen layouts and text,
--	Icons, graphics and colors,
--	Video and sound files,
--	Dynamic text and text-formatting (such as numbers, currency and dates),
+- Screen layouts and text,
+- Icons, graphics and colors,
+- Video and sound files,
+- Dynamic text and text-formatting (such as numbers, currency and dates),
 - Layout changes for right-to-left (RTL) languages, and
--	Data sorting.
+- Data sorting.
 
 Regardless of which mobile platforms your app targets these tips will help you
 build a high-quality localized app.
