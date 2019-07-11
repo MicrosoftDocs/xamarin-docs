@@ -83,6 +83,10 @@ Adding maps requires an additional NuGet package download and some platform-spec
 
 The [`Picker`](xref:Xamarin.Forms.Picker) view is a control for selecting a text item from a list of data.
 
+## [ProgressBar](progressbar.md)
+
+The [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) is a control that visually represents progress as a horizontal bar that is filled based on a float property.
+
 ## [Slider](slider.md)
 
 The `Slider` allows a user to select a numeric value from a continuous range.
