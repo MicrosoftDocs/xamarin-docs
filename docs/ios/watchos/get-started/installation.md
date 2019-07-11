@@ -183,7 +183,7 @@ You can launch watch apps in the simulator using either
 
 There are two modes for launching a WatchKit app:
 
- - normal app mode (the default), and
+- normal app mode (the default), and
 - [Notifications](~/ios/watchos/platform/notifications.md)
 	(which requires a test notification payload in JSON format).
 

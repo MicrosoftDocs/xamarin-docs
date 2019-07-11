@@ -216,9 +216,9 @@ If the `BaselineRelativeArrangement` property is `true`, the subviews will be la
 There are several layout types that work well with Stack View controls. According to Apple, here are a few of the more common uses:
 
 - **Define the Size Along the Axis** – By pinning both edges along the Stack View's `Axis` and one of the adjacent edges to set the position, the Stack view will grow along the axis to fit the space defined by its subviews.
- -  **Define the Subview's Position** – By pinning to adjacent edges of the Stack View to it's parent view, the Stack View will grow in both dimensions to fit it's containing subviews.
+- **Define the Subview's Position** – By pinning to adjacent edges of the Stack View to it's parent view, the Stack View will grow in both dimensions to fit it's containing subviews.
 - **Define the Size and Position of the Stack** – By pinning all four edges of the Stack View to the parent view, the Stack View arranges the subviews based on the space defined within the Stack View.
- -  **Define the Size Perpendicular the Axis** – By pinning both edges perpendicular to the Stack View's `Axis` and one of the edges along the axis to set the position, the Stack view will grow perpendicular to the axis to fit the space defined by its subviews.
+- **Define the Size Perpendicular the Axis** – By pinning both edges perpendicular to the Stack View's `Axis` and one of the edges along the axis to set the position, the Stack view will grow perpendicular to the axis to fit the space defined by its subviews.
 
 ### Managing the Appearance
 

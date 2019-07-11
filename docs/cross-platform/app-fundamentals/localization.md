@@ -44,7 +44,7 @@ hardcoded but which must parameterized for localization include:
 -	Icons, graphics and colors,
 -	Video and sound files,
 -	Dynamic text and text-formatting (such as numbers, currency and dates),
- - Layout changes for right-to-left (RTL) languages, and
+- Layout changes for right-to-left (RTL) languages, and
 -	Data sorting.
 
 Regardless of which mobile platforms your app targets these tips will help you

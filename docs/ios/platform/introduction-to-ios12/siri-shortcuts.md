@@ -297,7 +297,7 @@ messages that can be used to indicate status after an intent's task has
 completed.
 - The **Success** checkbox should be selected for responses that indicate
  success.
- - The **OrderSoupIntent** success response uses the **soup** and
+- The **OrderSoupIntent** success response uses the **soup** and
  **waitTime** properties to provide a friendly and useful message
  describing when the soup order will be ready.
 
