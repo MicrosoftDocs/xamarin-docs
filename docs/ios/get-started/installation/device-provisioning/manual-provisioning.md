@@ -97,36 +97,36 @@ When creating a provisioning profile for development, we must state which device
 
 1. Start Xcode.
 2. Connect the device to be provisioned to the Mac with its supplied USB cable.
-2. From the **Windows** menu select **Devices**:
+3. From the **Windows** menu select **Devices**:
 
-  [![](manual-provisioning-images/add01.png "From the Windows menu select Devices")](manual-provisioning-images/add01.png#lightbox)
+   [![](manual-provisioning-images/add01.png "From the Windows menu select Devices")](manual-provisioning-images/add01.png#lightbox)
 
-3. Select the desired iOS device from the **DEVICES** list on the left side of the Devices Window.
-4. Highlight the **Identifier** string and copy it to the clipboard:
+4. Select the desired iOS device from the **DEVICES** list on the left side of the Devices Window.
+5. Highlight the **Identifier** string and copy it to the clipboard:
 
-  [![](manual-provisioning-images/add02.png "Highlight the Identifier string")](manual-provisioning-images/add02.png#lightbox)
+   [![](manual-provisioning-images/add02.png "Highlight the Identifier string")](manual-provisioning-images/add02.png#lightbox)
 
-5. In Safari, navigate to the [Apple Developer Center](https://developer.apple.com/membercenter/index.action) and log in.
-6. Click the **Certificates, Identifiers & Profiles** link:
+6. In Safari, navigate to the [Apple Developer Center](https://developer.apple.com/membercenter/index.action) and log in.
+7. Click the **Certificates, Identifiers & Profiles** link:
 
-  [![](manual-provisioning-images/add03.png "Click the Certificates, Identifiers  Profiles link")](manual-provisioning-images/add03.png#lightbox)
+   [![](manual-provisioning-images/add03.png "Click the Certificates, Identifiers  Profiles link")](manual-provisioning-images/add03.png#lightbox)
 
-7. Click on the **Devices** link:
+8. Click on the **Devices** link:
 
-  [![](manual-provisioning-images/add04.png "Click on the Devices link")](manual-provisioning-images/add04.png#lightbox)
+   [![](manual-provisioning-images/add04.png "Click on the Devices link")](manual-provisioning-images/add04.png#lightbox)
 
-8. Click the **+** button:
+9. Click the **+** button:
 
-  [![](manual-provisioning-images/add05.png "Click the + button")](manual-provisioning-images/add05.png#lightbox)
+   [![](manual-provisioning-images/add05.png "Click the + button")](manual-provisioning-images/add05.png#lightbox)
 
-9. Provide a name for the new device and paste the device **Identifier** that we copied above into the **UUID** field:
+10. Provide a name for the new device and paste the device **Identifier** that we copied above into the **UUID** field:
 
-  [![](manual-provisioning-images/add06.png "Provide a name for the new device and the device Identifier")](manual-provisioning-images/add06.png#lightbox)
+    [![](manual-provisioning-images/add06.png "Provide a name for the new device and the device Identifier")](manual-provisioning-images/add06.png#lightbox)
 
-10. Click the **Continue** button.
-11. Finally, review the information and click the **Register** button:
+11. Click the **Continue** button.
+12. Finally, review the information and click the **Register** button:
 
-  [![](manual-provisioning-images/add07.png "Review the information")](manual-provisioning-images/add07.png#lightbox)
+    [![](manual-provisioning-images/add07.png "Review the information")](manual-provisioning-images/add07.png#lightbox)
 
 Repeat the above steps for any iOS device that will be used to test or debug a Xamarin.iOS application.
 
@@ -148,9 +148,9 @@ Before creating a provisioning profile, an *App ID* must be made. An App ID is a
     [![](manual-provisioning-images/appid05a.png "Provide a Name")](manual-provisioning-images/appid05a.png#lightbox)
 3. The App prefix should be preset. Select **Wildcard App ID** for the app suffix. Enter a Bundle ID in the format `com.[DomainName].*`:
 
-  [![](manual-provisioning-images/appid05b.png "Enter a Bundle ID")](manual-provisioning-images/appid05b.png#lightbox)
+   [![](manual-provisioning-images/appid05b.png "Enter a Bundle ID")](manual-provisioning-images/appid05b.png#lightbox)
 
-3. Click the **Continue** button and following the on screen instructions to create the new App ID.
+4. Click the **Continue** button and following the on screen instructions to create the new App ID.
 
 ### Provisioning profile
 
@@ -238,13 +238,13 @@ At this point provisioning should be complete, and the app is ready to be deploy
 1. Plug the device in to a Mac.
 2. In the project's **Info.plist**, make sure the Bundle Identifier matches the App ID (unless the App ID is a wildcard):
 
-  ![](manual-provisioning-images/deploydevice01xs.png "Entering an Identifier")
+   ![](manual-provisioning-images/deploydevice01xs.png "Entering an Identifier")
 
 3. Right-click on the project to view the Project Options dialog and browse to **Build > iOS Bundle Signing**. From the drop-down list next to both the **Signing Identity** and **Provisioning Profile**, verify that Visual Studio for Mac can see the correct profiles, and select a specific identity & profile:
 
-  ![](manual-provisioning-images/deploydevice02xs.png "Select a specific identity & profile")
+   ![](manual-provisioning-images/deploydevice02xs.png "Select a specific identity & profile")
 
-If this is set to **Automatic**, Visual Studio for Mac will select the identity and profile based on the Bundle ID that was set in step #2.
+   If this is set to **Automatic**, Visual Studio for Mac will select the identity and profile based on the Bundle ID that was set in step #2.
 
 4. Make sure to set the build configuration to **iPhone** / **iPad**, rather the simulator.
 5. Click **Run** in Visual Studio for Mac and view the app running on the device.
@@ -257,7 +257,7 @@ If this is set to **Automatic**, Visual Studio for Mac will select the identity 
 1. Plug the device in to the Mac build host.
 2. In the project's **Info.plist**, make sure the Bundle Identifier matches the App ID:
 
-  ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")
+   ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")
 
 3. Right-click on the project to view the Project Options dialog, and browse to **Build > iOS Bundle Signing**. From the drop-down list next to both the **Signing Identity** and **Provisioning Profile** verify that Visual Studio can see the correct profiles, and select a specific identity & profile.
 

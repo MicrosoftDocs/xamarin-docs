@@ -46,8 +46,8 @@ For more detailed information, see the [Installing Xamarin.iOS on Windows](~/ios
 1. [Install Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Connect Visual Studio to your Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
 3. [iOS Developer Setup](~/ios/get-started/installation/device-provisioning/index.md) - Required to run your application on device
-5. [Remoted iOS Simulator](~/tools/ios-simulator/index.md)
-6. [Introduction to Xamarin.iOS for Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
+4. [Remoted iOS Simulator](~/tools/ios-simulator/index.md)
+5. [Introduction to Xamarin.iOS for Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 
 ### Android
 

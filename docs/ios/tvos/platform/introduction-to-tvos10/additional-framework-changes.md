@@ -20,7 +20,7 @@ In addition to the major changes to tvOS, Apple has made modifications and impro
 The AVFoundation framework includes the following enhancements:
 
 - In tvOS 10, the app no longer implements different [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) behaviors based on content type. Simply set the `Rate` property and AVFoundation will determine when enough content is available for playback without stalling.
- - The new `AVPlayerLooper` class makes it easier to loop a given piece of media during playback.
+- The new `AVPlayerLooper` class makes it easier to loop a given piece of media during playback.
 
 <a name="AVKit-Framework-Enhancements" />
 

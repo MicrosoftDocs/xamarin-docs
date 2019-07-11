@@ -172,27 +172,27 @@ displayText.SetText (localizedDisplay);
 Images that are populated by code can be set in two ways.
 
 1. You can change an `Image` control by setting its value to the string
-  name of an image that already exists in the Watch App, eg
+    name of an image that already exists in the Watch App, eg
 
-  ```csharp
-  displayImage.SetImage("gradient"); // image in Watch App (as shown above)
-  ```
+    ```csharp
+    displayImage.SetImage("gradient"); // image in Watch App (as shown above)
+    ```
 
 2. You can move an image from the extension to the watch
-  using `FromBundle` and the app will automatically choose
-  the correct image for the user's language selection. In the
-  example solution there is an image **language@2x.png** in
-  each language folder, and it is displayed on `DetailController`
-  using the following code:
+    using `FromBundle` and the app will automatically choose
+    the correct image for the user's language selection. In the
+    example solution there is an image **language@2x.png** in
+    each language folder, and it is displayed on `DetailController`
+    using the following code:
 
-  ```csharp
-  using (var image = UIImage.FromBundle ("language")) {
-  	displayImage.SetImage (image);
-  }
-  ```
+    ```csharp
+    using (var image = UIImage.FromBundle ("language")) {
+        displayImage.SetImage (image);
+    }
+    ```
 
-  Note that you do not need to specify the **@2x** when referring
-  to the image's filename.
+    Note that you do not need to specify the **@2x** when referring
+    to the image's filename.
 
 The second method is also applicable if you download an image from
 a remote server to render on the watch; however in this case you

@@ -44,16 +44,16 @@ If your emulator does not have network access, you may need to follow these
 steps to fix your Hyper-V network switch. If you switch between Wi-Fi networks
 frequently you may need to repeat this periodically:
 
-0. **Make sure any critical network operations are complete, as this may
+1. **Make sure any critical network operations are complete, as this may
    temporarily disconnect Windows from the internet.**
 1. Close emulators.
-2. Open `Hyper-V Manager`.
-3. Under `Actions`, open `Virtual Switch Manager...`.
-4. Delete all virtual switches.
-5. Click `OK`.
-6. Launch VS Android Emulator. You will probably be prompted to recreate
+1. Open `Hyper-V Manager`.
+1. Under `Actions`, open `Virtual Switch Manager...`.
+1. Delete all virtual switches.
+1. Click `OK`.
+1. Launch VS Android Emulator. You will probably be prompted to recreate
    virtual network switch.
-7. Test that VS Android Emulator's browser can access the internet.
+1. Test that VS Android Emulator's browser can access the internet.
 
 [android-emu]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/
 

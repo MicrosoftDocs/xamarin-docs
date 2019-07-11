@@ -130,12 +130,12 @@ using UserNotifications;
 
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 {
-	// Request notification permissions from the user
-	UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
-		// Handle approval
-	});
+    // Request notification permissions from the user
+    UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
+        // Handle approval
+    });
 
-	return true;
+    return true;
 }
 ```
 
@@ -144,8 +144,8 @@ Additionally, a user can always change the notification privileges for an app at
 ```csharp
 // Get current notification settings
 UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
-	var alertsAllowed = (settings.AlertSetting == UNNotificationSetting.Enabled);
-});	
+    var alertsAllowed = (settings.AlertSetting == UNNotificationSetting.Enabled);
+});    
 ``` 
 
 ### Configuring the Remote Notifications Environment
@@ -161,21 +161,21 @@ To provide the required entitlement, do the following:
 1. Double-click the `Entitlements.plist` file in the **Solution Pad** to open it for editing.
 2. Switch to the **Source** view: 
 
-	[![](enhanced-user-notifications-images/setup01.png "The Source view")](enhanced-user-notifications-images/setup01.png#lightbox)
+    [![](enhanced-user-notifications-images/setup01.png "The Source view")](enhanced-user-notifications-images/setup01.png#lightbox)
 3. Click the **+** button to add a new key.
 4. Enter `aps-environment` for the **Property**, leave the **Type** as `String` and enter either `development` or `production` for the **Value**: 
 
-	[![](enhanced-user-notifications-images/setup02.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
+    [![](enhanced-user-notifications-images/setup02.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. Save the changes to the file.
 
 # [Visual Studio](#tab/windows)
 
 1. Double-click the `Entitlements.plist` file in the **Solution Explorer** to open it for editing.
-3. Click the **+** button to add a new key.
-4. Enter `aps-environment` for the **Property**, leave the **Type** as `String` and enter either `development` or `production` for the **Value**: 
+2. Click the **+** button to add a new key.
+3. Enter `aps-environment` for the **Property**, leave the **Type** as `String` and enter either `development` or `production` for the **Value**: 
 
-	[![](enhanced-user-notifications-images/setup02w.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
-5. Save the changes to the file.
+    [![](enhanced-user-notifications-images/setup02w.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
+4. Save the changes to the file.
 
 -----
 
@@ -221,14 +221,14 @@ For Remote Notifications, the process is similar:
 
 ```csharp
 {
-	"aps":{
-		"alert":{
-			"title":"Notification Title",
-			"subtitle":"Notification Subtitle",
-			"body":"This is the message body of the notification."
-		},
-		"badge":1
-	}
+    "aps":{
+        "alert":{
+            "title":"Notification Title",
+            "subtitle":"Notification Subtitle",
+            "body":"This is the message body of the notification."
+        },
+        "badge":1
+    }
 }
 ```
 
@@ -261,9 +261,9 @@ var requestID = "sampleRequest";
 var request = UNNotificationRequest.FromIdentifier (requestID, content, trigger);
 
 UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
-	if (err != null) {
-		// Do something with error...
-	}
+    if (err != null) {
+        // Do something with error...
+    }
 });
 ```
 
@@ -277,26 +277,26 @@ using UserNotifications;
 
 namespace MonkeyNotification
 {
-	public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
-	{
-		#region Constructors
-		public UserNotificationCenterDelegate ()
-		{
-		}
-		#endregion
+    public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
+    {
+        #region Constructors
+        public UserNotificationCenterDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void WillPresentNotification (UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler)
-		{
-			// Do something with the notification
-			Console.WriteLine ("Active Notification: {0}", notification);
+        #region Override Methods
+        public override void WillPresentNotification (UNUserNotificationCenter center, UNNotification notification, Action<UNNotificationPresentationOptions> completionHandler)
+        {
+            // Do something with the notification
+            Console.WriteLine ("Active Notification: {0}", notification);
 
             // Tell system to display the notification anyway or use
-			// `None` to say we have handled the display locally.
+            // `None` to say we have handled the display locally.
             completionHandler (UNNotificationPresentationOptions.Alert);
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }
 ```
 
@@ -313,15 +313,15 @@ With this code in place, open the `AppDelegate.cs` file for editing and change t
 ```csharp
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 {
-	// Request notification permissions from the user
-	UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
-		// Handle approval
-	});
+    // Request notification permissions from the user
+    UNUserNotificationCenter.Current.RequestAuthorization (UNAuthorizationOptions.Alert, (approved, err) => {
+        // Handle approval
+    });
 
-	// Watch for notifications while the app is active
-	UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate ();
+    // Watch for notifications while the app is active
+    UNUserNotificationCenter.Current.Delegate = new UserNotificationCenterDelegate ();
 
-	return true;
+    return true;
 }
 ```
 
@@ -376,9 +376,9 @@ var request = UNNotificationRequest.FromIdentifier (requestID, content, trigger)
 
 // Add to system to modify existing Notification
 UNUserNotificationCenter.Current.AddNotificationRequest (request, (err) => {
-	if (err != null) {
-		// Do something with error...
-	}
+    if (err != null) {
+        // Do something with error...
+    }
 });
 ```
 
@@ -410,7 +410,7 @@ var actions = new UNNotificationAction [] { action };
 var intentIDs = new string [] { };
 var categoryOptions = new UNNotificationCategoryOptions [] { };
 var category = UNNotificationCategory.FromIdentifier (categoryID, actions, intentIDs, UNNotificationCategoryOptions.None);
-	
+    
 // Register category
 var categories = new UNNotificationCategory [] { category };
 UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotificationCategory>(categories)); 
@@ -430,10 +430,10 @@ For Remote Notification, set a `category` in the Remote Notification Payload tha
 
 ```csharp
 {
-	aps:{
-		alert:"Hello world!",
-		category:"message"
-	}
+    aps:{
+        alert:"Hello world!",
+        category:"message"
+    }
 }
 ```
 
@@ -474,33 +474,33 @@ using UserNotifications;
 
 namespace MonkeyNotification
 {
-	public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
-	{
-		...
+    public class UserNotificationCenterDelegate : UNUserNotificationCenterDelegate
+    {
+        ...
 
-		#region Override Methods
-		public override void DidReceiveNotificationResponse (UNUserNotificationCenter center, UNNotificationResponse response, Action completionHandler)
-		{
-			// Take action based on Action ID
-			switch (response.ActionIdentifier) {
-			case "reply":
-				// Do something
-				break;
-			default:
-				// Take action based on identifier
-				if (response.IsDefaultAction) {
-					// Handle default action...
-				} else if (response.IsDismissAction) {
-					// Handle dismiss action
-				}
-				break;
-			}
+        #region Override Methods
+        public override void DidReceiveNotificationResponse (UNUserNotificationCenter center, UNNotificationResponse response, Action completionHandler)
+        {
+            // Take action based on Action ID
+            switch (response.ActionIdentifier) {
+            case "reply":
+                // Do something
+                break;
+            default:
+                // Take action based on identifier
+                if (response.IsDefaultAction) {
+                    // Handle default action...
+                } else if (response.IsDismissAction) {
+                    // Handle dismiss action
+                }
+                break;
+            }
 
-			// Inform caller it has been handled
-			completionHandler();
-		}
-		#endregion
-	}
+            // Inform caller it has been handled
+            completionHandler();
+        }
+        #endregion
+    }
 }
 ```
 
@@ -537,13 +537,13 @@ To implement a Service Extension in a Xamarin.iOS app, do the following:
 2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **Add New Project**.
 3. Select **iOS** > **Extensions** > **Notification Service Extensions** and click the **Next** button: 
 
-	[![](enhanced-user-notifications-images/extension02.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension02.png#lightbox)
+    [![](enhanced-user-notifications-images/extension02.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension02.png#lightbox)
 4. Enter a **Name** for the extension and click the **Next** button: 
 
-	[![](enhanced-user-notifications-images/extension03.png "Enter a Name for the extension")](enhanced-user-notifications-images/extension03.png#lightbox)
+    [![](enhanced-user-notifications-images/extension03.png "Enter a Name for the extension")](enhanced-user-notifications-images/extension03.png#lightbox)
 5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button: 
 
-	[![](enhanced-user-notifications-images/extension04.png "Adjust the Project Name and/or Solution Name")](enhanced-user-notifications-images/extension04.png#lightbox) 
+    [![](enhanced-user-notifications-images/extension04.png "Adjust the Project Name and/or Solution Name")](enhanced-user-notifications-images/extension04.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
@@ -551,7 +551,7 @@ To implement a Service Extension in a Xamarin.iOS app, do the following:
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add > New Project...**.
 3. Select **Visual C# > iOS Extensions > Notification Service Extension**:
 
-	[![](enhanced-user-notifications-images/extension01.w157-sml.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
+    [![](enhanced-user-notifications-images/extension01.w157-sml.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension01.w157.png#lightbox)
 4. Enter a **Name** for the extension and click the **OK** button.
 
 -----
@@ -569,42 +569,42 @@ using UserNotifications;
 
 namespace MonkeyChatServiceExtension
 {
-	[Register ("NotificationService")]
-	public class NotificationService : UNNotificationServiceExtension
-	{
-		#region Computed Properties
-		public Action<UNNotificationContent> ContentHandler { get; set; }
-		public UNMutableNotificationContent BestAttemptContent { get; set; }
-		#endregion
+    [Register ("NotificationService")]
+    public class NotificationService : UNNotificationServiceExtension
+    {
+        #region Computed Properties
+        public Action<UNNotificationContent> ContentHandler { get; set; }
+        public UNMutableNotificationContent BestAttemptContent { get; set; }
+        #endregion
 
-		#region Constructors
-		protected NotificationService (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
-		#endregion
+        #region Constructors
+        protected NotificationService (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+        #endregion
 
-		#region Override Methods
-		public override void DidReceiveNotificationRequest (UNNotificationRequest request, Action<UNNotificationContent> contentHandler)
-		{
-			ContentHandler = contentHandler;
-			BestAttemptContent = (UNMutableNotificationContent)request.Content.MutableCopy ();
+        #region Override Methods
+        public override void DidReceiveNotificationRequest (UNNotificationRequest request, Action<UNNotificationContent> contentHandler)
+        {
+            ContentHandler = contentHandler;
+            BestAttemptContent = (UNMutableNotificationContent)request.Content.MutableCopy ();
 
-			// Modify the notification content here...
-			BestAttemptContent.Title = $"{BestAttemptContent.Title}[modified]";
+            // Modify the notification content here...
+            BestAttemptContent.Title = $"{BestAttemptContent.Title}[modified]";
 
-			ContentHandler (BestAttemptContent);
-		}
+            ContentHandler (BestAttemptContent);
+        }
 
-		public override void TimeWillExpire ()
-		{
-			// Called just before the extension will be terminated by the system.
-			// Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
+        public override void TimeWillExpire ()
+        {
+            // Called just before the extension will be terminated by the system.
+            // Use this as an opportunity to deliver your "best attempt" at modified content, otherwise the original push payload will be used.
 
-			ContentHandler (BestAttemptContent);
-		}
-		#endregion
-	}
+            ContentHandler (BestAttemptContent);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -618,11 +618,11 @@ With a Service Extension created and delivered with the app, it can be triggered
 
 ```csharp
 {
-	aps : {
-		alert : "New Message Available",
-		mutable-content: 1
-	},
-	encrypted-content : "#theencryptedcontent"
+    aps : {
+        alert : "New Message Available",
+        mutable-content: 1
+    },
+    encrypted-content : "#theencryptedcontent"
 }
 ```
 
@@ -634,26 +634,26 @@ Take a look at the following example Service Extension:
 using UserNotification;
 
 namespace myApp {
-	public class NotificationService : UNNotificationServiceExtension {
-	
-		public override void DidReceiveNotificationRequest(UNNotificationRequest request, contentHandler) {
-			// Decrypt payload
-			var decryptedBody = Decrypt(Request.Content.UserInfo["encrypted-content"]);
-			
-			// Modify Notification body
-			var newContent = new UNMutableNotificationContent();
-			newContent.Body = decryptedBody;
-			
-			// Present to user
-			contentHandler(newContent);
-		}
-		
-		public override void TimeWillExpire() {
-			// Handle out-of-time fallback event
-			...
-		}
-		
-	}
+    public class NotificationService : UNNotificationServiceExtension {
+    
+        public override void DidReceiveNotificationRequest(UNNotificationRequest request, contentHandler) {
+            // Decrypt payload
+            var decryptedBody = Decrypt(Request.Content.UserInfo["encrypted-content"]);
+            
+            // Modify Notification body
+            var newContent = new UNMutableNotificationContent();
+            newContent.Body = decryptedBody;
+            
+            // Present to user
+            contentHandler(newContent);
+        }
+        
+        public override void TimeWillExpire() {
+            // Handle out-of-time fallback event
+            ...
+        }
+        
+    }
 }
 ```
 

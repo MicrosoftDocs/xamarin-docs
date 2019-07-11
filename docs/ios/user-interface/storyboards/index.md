@@ -99,7 +99,7 @@ segue in the iOS, read the  [Creating Unwind Segues](https://github.com/xamarin/
 -  **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the 
 user will see first. It is represented by the segue shown below:  
 
-	[![](images/sourcelesssegue.png "A sourceless segue")](images/sourcelesssegue.png#lightbox)
+    [![](images/sourcelesssegue.png "A sourceless segue")](images/sourcelesssegue.png#lightbox)
 
 ### Adaptive Segue Types
 
@@ -354,24 +354,24 @@ Before we begin, follow through steps 1 – 8 above. In these steps we create ou
 
 1. Now, let's build up our UI and add the additional views listed to the `MainViewController` to make it look like that in the screenshot below:
 
-	- UITextField
-		- Name: PasswordTextField
-		- Placeholder: 'Enter the Secret Password'
-	- UILabel
-		- Text: 'Error: Wrong Password. You shall not pass!'
-		- Color: Red
-		- Alignment: Center
-		- Lines: 2
-		- 'Hidden' checkbox checked	
-		
-	[![](images/passwordvc.png "Center Lines")](images/passwordvc.png#lightbox)
-	
+    - UITextField
+        - Name: PasswordTextField
+        - Placeholder: 'Enter the Secret Password'
+    - UILabel
+        - Text: 'Error: Wrong Password. You shall not pass!'
+        - Color: Red
+        - Alignment: Center
+        - Lines: 2
+        - 'Hidden' checkbox checked    
+        
+    [![](images/passwordvc.png "Center Lines")](images/passwordvc.png#lightbox)
+    
 2. Create a Segue between the Go To Pink button and the view controller by Ctrl-Dragging from the *PinkButton* to the *PinkViewController*, and selecting **Push** on mouse-up. 
 
 3. Click on the Segue and give it the *Identifier* `SegueToPink`:
 
-	[![](images/namesegue.png "Click on the Segue and give it the Identifier SegueToPink")](images/namesegue.png#lightbox)  
-	
+    [![](images/namesegue.png "Click on the Segue and give it the Identifier SegueToPink")](images/namesegue.png#lightbox)  
+    
 
 4. Finally, add the following ShouldPerformSegue method to the `MainViewController` class:
 
@@ -414,31 +414,31 @@ Additionally, a Storyboard Reference can provide an _anchor_ to another scene wi
 To add a reference to an external Storyboard, do the following:
 
 1. In the **Solution Explorer**, right-click on the Project Name and select **Add** > **New File...** > **iOS** > **Storyboard**. Enter a **Name** for the new Storyboard and click the **New** button:
-	
-	[![](images/ref01.png "The New File Dialog")](images/ref01.png#lightbox)
-	
+    
+    [![](images/ref01.png "The New File Dialog")](images/ref01.png#lightbox)
+    
 2. Design the layout of the new Storyboard's scenes as you normally would and save your changes: 
-	
-	[![](images/ref02.png "The layout of the new scene")](images/ref02.png#lightbox)
-	
+    
+    [![](images/ref02.png "The layout of the new scene")](images/ref02.png#lightbox)
+    
 3. Open the Storyboard that you are going to be adding the reference to in the iOS Designer.
 
 4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
-	
-	[![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-	
+    
+    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+    
 5. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** that you created above: 
 
-	[![](images/ref04.png "The Widget tab")](images/ref04.png#lightbox)
-	
+    [![](images/ref04.png "The Widget tab")](images/ref04.png#lightbox)
+    
 6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-	[![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox) 
-	
+    [![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox) 
+    
 7. From the popup menu select **Show** to complete the Segue: 
 
-	[![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-	
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
+    
 8. Save your changes to the Storyboard.
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Initial View Controller from the External Storyboard specified in the Storyboard Reference will be displayed.
@@ -453,31 +453,31 @@ To add a reference to a specific Scene an external Storyboard (and not the Initi
 
 2. Add a new Scene and design its layout as you normally would: 
 
-	[![](images/ref07.png "The new scene layout")](images/ref07.png#lightbox)
-	
+    [![](images/ref07.png "The new scene layout")](images/ref07.png#lightbox)
+    
 3. In the **Widget** tab of the **Properties Explorer**, enter a **Storyboard ID** for the new Scene's View Controller: 
 
-	[![](images/ref08.png "Enter a Storyboard ID for the new Scenes View Controller")](images/ref08.png#lightbox)
-	
-3. Open the Storyboard that you are going to be adding the reference to in the iOS Designer.
+    [![](images/ref08.png "Enter a Storyboard ID for the new Scenes View Controller")](images/ref08.png#lightbox)
+    
+4. Open the Storyboard that you are going to be adding the reference to in the iOS Designer.
 
-4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
+5. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
 
-	[![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-	
-5. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above: 
+    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+    
+6. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
-	[![](images/ref09.png "The Widget tab ")](images/ref09.png#lightbox)
-	
-6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
+    [![](images/ref09.png "The Widget tab ")](images/ref09.png#lightbox)
+    
+7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-	[![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox) 
-	
-7. From the popup menu select **Show** to complete the Segue: 
+    [![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox) 
+    
+8. From the popup menu select **Show** to complete the Segue: 
 
-	[![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-	
-8. Save your changes to the Storyboard.
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
+    
+9. Save your changes to the Storyboard.
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Scene with the given **Storyboard ID** from the External Storyboard specified in the Storyboard Reference will be displayed.
 
@@ -491,28 +491,28 @@ To add a reference to a specific Scene the same Storyboard, do the following:
 
 2. Add a new Scene and design its layout as you normally would: 
 
-	[![](images/ref11.png "The new scene layout")](images/ref11.png#lightbox)
+    [![](images/ref11.png "The new scene layout")](images/ref11.png#lightbox)
 
 3. In the **Widget** tab of the **Properties Explorer**, enter a **Storyboard ID** for the new Scene's View Controller: 
 
-	[![](images/ref12.png "The Widget tab")](images/ref12.png#lightbox)
-	
-3. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
+    [![](images/ref12.png "The Widget tab")](images/ref12.png#lightbox)
+    
+4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
 
-	[![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-	
+   [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+    
 5. In the **Widget** tab of the **Properties Explorer**, select **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
-	[![](images/ref13.png "The Widget tab")](images/ref13.png#lightbox)
-	
+    [![](images/ref13.png "The Widget tab")](images/ref13.png#lightbox)
+    
 6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-	[![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox) 
-	
+    [![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox) 
+    
 7. From the popup menu select **Show** to complete the Segue: 
 
-	[![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-	
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
+    
 8. Save your changes to the Storyboard.
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Scene with the given **Storyboard ID** in the same Storyboard specified in the Storyboard Reference will be displayed.

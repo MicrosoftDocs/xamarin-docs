@@ -113,22 +113,22 @@ Do the following:
 3. If you haven't already done so, click on **Identifiers** and create an ID for your app (e.g. `com.company.appname`), else edit your existing ID.
 4. Ensure that the **iCloud** service has been checked for the given ID:
 
-	[![](handoff-images/provision01.png "Enable the iCloud service for the given ID")](handoff-images/provision01.png#lightbox)
+    [![](handoff-images/provision01.png "Enable the iCloud service for the given ID")](handoff-images/provision01.png#lightbox)
 5. Save your changes.
-4. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for you app:
+6. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for you app:
 
-	[![](handoff-images/provision02.png "Create a new development provisioning profile for the app")](handoff-images/provision02.png#lightbox)
-5. Either download and install the new provisioning profile or use Xcode to download and install the profile.
-6. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created:
+    [![](handoff-images/provision02.png "Create a new development provisioning profile for the app")](handoff-images/provision02.png#lightbox)
+7. Either download and install the new provisioning profile or use Xcode to download and install the profile.
+8. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created:
 
-	[![](handoff-images/provision03.png "Select the provisioning profile just created")](handoff-images/provision03.png#lightbox)
-7. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile:
+    [![](handoff-images/provision03.png "Select the provisioning profile just created")](handoff-images/provision03.png#lightbox)
+9. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile:
 
-	[![](handoff-images/provision04.png "Set App ID")](handoff-images/provision04.png#lightbox)
-8. Scroll to the **Background Modes** section and check the following items:
+    [![](handoff-images/provision04.png "Set App ID")](handoff-images/provision04.png#lightbox)
+10. Scroll to the **Background Modes** section and check the following items:
 
-	[![](handoff-images/provision05.png "Enable the required background modes")](handoff-images/provision05.png#lightbox)
-9. Save the changes to all files.
+    [![](handoff-images/provision05.png "Enable the required background modes")](handoff-images/provision05.png#lightbox)
+11. Save the changes to all files.
 
 With these settings in place, the application is now ready to access the Handoff Framework APIs. For detailed information on provisioning, please see our [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) and [Provisioning Your App](~/ios/get-started/installation/device-provisioning/index.md) guides.
 
@@ -170,32 +170,32 @@ using UIKit;
 
 namespace MonkeyBrowse
 {
-	public class UserActivityDelegate : NSUserActivityDelegate
-	{
-		#region Constructors
-		public UserActivityDelegate ()
-		{
-		}
-		#endregion
+    public class UserActivityDelegate : NSUserActivityDelegate
+    {
+        #region Constructors
+        public UserActivityDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void UserActivityReceivedData (NSUserActivity userActivity, NSInputStream inputStream, NSOutputStream outputStream)
-		{
-			// Log
-			Console.WriteLine ("User Activity Received Data: {0}", userActivity.Title);
-		}
+        #region Override Methods
+        public override void UserActivityReceivedData (NSUserActivity userActivity, NSInputStream inputStream, NSOutputStream outputStream)
+        {
+            // Log
+            Console.WriteLine ("User Activity Received Data: {0}", userActivity.Title);
+        }
 
-		public override void UserActivityWasContinued (NSUserActivity userActivity)
-		{
-			Console.WriteLine ("User Activity Was Continued: {0}", userActivity.Title);
-		}
+        public override void UserActivityWasContinued (NSUserActivity userActivity)
+        {
+            Console.WriteLine ("User Activity Was Continued: {0}", userActivity.Title);
+        }
 
-		public override void UserActivityWillSave (NSUserActivity userActivity)
-		{
-			Console.WriteLine ("User Activity will be Saved: {0}", userActivity.Title);
-		}
-		#endregion
-	}
+        public override void UserActivityWillSave (NSUserActivity userActivity)
+        {
+            Console.WriteLine ("User Activity will be Saved: {0}", userActivity.Title);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -267,31 +267,31 @@ public FourthViewController Tab4 { get; set; }
 
 public override bool WillContinueUserActivity (UIApplication application, string userActivityType)
 {
-	// Report Activity
-	Console.WriteLine ("Will Continue Activity: {0}", userActivityType);
+    // Report Activity
+    Console.WriteLine ("Will Continue Activity: {0}", userActivityType);
 
-	// Take action based on the user activity type
-	switch (userActivityType) {
-	case "com.xamarin.monkeybrowser.tab1":
-		// Inform view that it's going to be modified
-		Tab1.PreparingToHandoff ();
-		break;
-	case "com.xamarin.monkeybrowser.tab2":
-		// Inform view that it's going to be modified
-		Tab2.PreparingToHandoff ();
-		break;
-	case "com.xamarin.monkeybrowser.tab3":
-		// Inform view that it's going to be modified
-		Tab3.PreparingToHandoff ();
-		break;
-	case "com.xamarin.monkeybrowser.tab4":
-		// Inform view that it's going to be modified
-		Tab4.PreparingToHandoff ();
-		break;
-	}
+    // Take action based on the user activity type
+    switch (userActivityType) {
+    case "com.xamarin.monkeybrowser.tab1":
+        // Inform view that it's going to be modified
+        Tab1.PreparingToHandoff ();
+        break;
+    case "com.xamarin.monkeybrowser.tab2":
+        // Inform view that it's going to be modified
+        Tab2.PreparingToHandoff ();
+        break;
+    case "com.xamarin.monkeybrowser.tab3":
+        // Inform view that it's going to be modified
+        Tab3.PreparingToHandoff ();
+        break;
+    case "com.xamarin.monkeybrowser.tab4":
+        // Inform view that it's going to be modified
+        Tab4.PreparingToHandoff ();
+        break;
+    }
 
-	// Inform system we handled this
-	return true;
+    // Inform system we handled this
+    return true;
 }
 ```
 
@@ -326,41 +326,41 @@ The `ContinueUserActivity` of the `AppDelegate` will be called to actually conti
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
 {
 
-	// Report Activity
-	Console.WriteLine ("Continuing User Activity: {0}", userActivity.ToString());
+    // Report Activity
+    Console.WriteLine ("Continuing User Activity: {0}", userActivity.ToString());
 
-	// Get input and output streams from the Activity
-	userActivity.GetContinuationStreams ((NSInputStream arg1, NSOutputStream arg2, NSError arg3) => {
-		// Send required data via the streams
-		// ...
-	});
+    // Get input and output streams from the Activity
+    userActivity.GetContinuationStreams ((NSInputStream arg1, NSOutputStream arg2, NSError arg3) => {
+        // Send required data via the streams
+        // ...
+    });
 
-	// Take action based on the Activity type
-	switch (userActivity.ActivityType) {
-	case "com.xamarin.monkeybrowser.tab1":
-		// Preform handoff
-		Tab1.PerformHandoff (userActivity);
-		completionHandler (new NSObject[]{Tab1});
-		break;
-	case "com.xamarin.monkeybrowser.tab2":
-		// Preform handoff
-		Tab2.PerformHandoff (userActivity);
-		completionHandler (new NSObject[]{Tab2});
-		break;
-	case "com.xamarin.monkeybrowser.tab3":
-		// Preform handoff
-		Tab3.PerformHandoff (userActivity);
-		completionHandler (new NSObject[]{Tab3});
-		break;
-	case "com.xamarin.monkeybrowser.tab4":
-		// Preform handoff
-		Tab4.PerformHandoff (userActivity);
-		completionHandler (new NSObject[]{Tab4});
-		break;
-	}
+    // Take action based on the Activity type
+    switch (userActivity.ActivityType) {
+    case "com.xamarin.monkeybrowser.tab1":
+        // Preform handoff
+        Tab1.PerformHandoff (userActivity);
+        completionHandler (new NSObject[]{Tab1});
+        break;
+    case "com.xamarin.monkeybrowser.tab2":
+        // Preform handoff
+        Tab2.PerformHandoff (userActivity);
+        completionHandler (new NSObject[]{Tab2});
+        break;
+    case "com.xamarin.monkeybrowser.tab3":
+        // Preform handoff
+        Tab3.PerformHandoff (userActivity);
+        completionHandler (new NSObject[]{Tab3});
+        break;
+    case "com.xamarin.monkeybrowser.tab4":
+        // Preform handoff
+        Tab4.PerformHandoff (userActivity);
+        completionHandler (new NSObject[]{Tab4});
+        break;
+    }
 
-	// Inform system we handled this
-	return true;
+    // Inform system we handled this
+    return true;
 }
 ```
 
@@ -382,21 +382,21 @@ private void HideBusy() {
 
 public void PerformHandoff(NSUserActivity activity) {
 
-	// Hide busy indicator
-	HideBusy ();
+    // Hide busy indicator
+    HideBusy ();
 
-	// Extract URL from dictionary
-	var url = activity.UserInfo ["Url"].ToString ();
+    // Extract URL from dictionary
+    var url = activity.UserInfo ["Url"].ToString ();
 
-	// Display value
-	URL.Text = url;
+    // Display value
+    URL.Text = url;
 
-	// Display the give webpage
-	WebView.LoadRequest(new NSUrlRequest(NSUrl.FromString(url)));
+    // Display the give webpage
+    WebView.LoadRequest(new NSUrlRequest(NSUrl.FromString(url)));
 
-	// Save activity
-	UserActivity = activity;
-	UserActivity.BecomeCurrent ();
+    // Save activity
+    UserActivity = activity;
+    UserActivity.BecomeCurrent ();
 
 }
 ```
