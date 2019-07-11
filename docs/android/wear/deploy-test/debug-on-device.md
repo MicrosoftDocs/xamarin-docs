@@ -91,9 +91,10 @@ Use the following steps to connect your Wear device to your Phone:
     If port 4444 is not available, you can use any other available port 
     to which you have access. 
 
-    **Note**: If you restart Visual Studio or Visual Studio for Mac,
-    you must run these commands again to setup a connection to the Wear
-    device.
+    > [!NOTE]
+    > If you restart Visual Studio or Visual Studio for Mac,
+    > you must run these commands again to setup a connection to the Wear
+    > device.
 
 5.  When the Wear device prompts you, confirm that you are allowing 
     **ADB Debugging**. In the Android Wear app, you should 

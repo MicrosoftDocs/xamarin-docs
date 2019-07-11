@@ -75,10 +75,11 @@ floating-point computations. All FP operations are performed by
 software helper functions that come from the compiler's `libgcc.a`
 static library. SMP devices are not supported by `armeabi`.
 
-**Note**: Xamarin.Android's `armeabi` code is not thread safe and
-should not be used on multi-CPU `armeabi-v7a` devices (described
-below). Using `armeabi` code on a single-core `armeabi-v7a` device is
-safe.
+> [!IMPORTANT]
+> Xamarin.Android's `armeabi` code is not thread safe and
+> should not be used on multi-CPU `armeabi-v7a` devices (described
+> below). Using `armeabi` code on a single-core `armeabi-v7a` device is
+> safe.
 
 #### armeabi-v7a
 
