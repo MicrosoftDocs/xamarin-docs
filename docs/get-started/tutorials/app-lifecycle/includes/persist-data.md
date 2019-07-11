@@ -12,9 +12,7 @@ In this exercise, you'll modify the application to persist the text from an [`En
     ```csharp
     using System;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace AppLifecycleTutorial
     {
         public partial class App : Application
@@ -118,9 +116,7 @@ In this exercise, you'll modify the application to persist the text from an [`En
     ```csharp
     using System;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace AppLifecycleTutorial
     {
         public partial class App : Application
