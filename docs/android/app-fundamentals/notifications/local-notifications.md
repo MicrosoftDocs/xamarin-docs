@@ -117,10 +117,11 @@ types of notification metadata:
     notification in various circumstances, such as when the device is
     in *Do Not Disturb* mode.
 
-**Note:** **Visibility** and **Category** were introduced in Android
-5.0 and are not available in earlier versions of Android. Beginning
-with Android 8.0, [notification channels](#notif-chan) are used to
-control how notifications are presented to the user.
+> [!NOTE]
+> **Visibility** and **Category** were introduced in Android
+> 5.0 and are not available in earlier versions of Android. Beginning
+> with Android 8.0, [notification channels](#notif-chan) are used to
+> control how notifications are presented to the user.
 
 
 ### Expanded layouts

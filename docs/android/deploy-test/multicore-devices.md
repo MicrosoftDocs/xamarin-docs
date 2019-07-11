@@ -88,7 +88,8 @@ hardware floating-point operations and multiple CPU (SMP) devices. An
 application that uses the `armeabi-v7a` EABI can expect substantial
 performance improvements over an application that uses `armeabi`.
 
-**Note:** `armeabi-v7a` machine code will not run on ARMv5 devices.
+> [!NOTE]
+> `armeabi-v7a` machine code will not run on ARMv5 devices.
 
 #### arm64-v8a
 
@@ -110,7 +111,8 @@ extensions such as:
 - Supplemental SSE3 extension (SSSE3).
 - any variant of SSE4.
 
-**Note:** Google TV, although it runs on x86, is not supported by Android's NDK.
+> [!NOTE]
+> Google TV, although it runs on x86, is not supported by Android's NDK.
 
 #### x86_64
 

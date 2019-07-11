@@ -106,10 +106,11 @@ Delete the `Content` element and replace it with a `p:ListDataPage.DataSource`
 to populate the page with data. In the example below a remote Json data
 file is being loaded from a URL.
 
-**Note:** the preview *requires* a `StyleClass` attribute to
-provide rendering hints for the data source. The `StyleClass="Events"`
-refers to a layout that is predefined in the preview and contains styles
-*hardcoded* to match the JSON data source being used.
+> [!NOTE]
+> The preview *requires* a `StyleClass` attribute to
+> provide rendering hints for the data source. The `StyleClass="Events"`
+> refers to a layout that is predefined in the preview and contains styles
+> *hardcoded* to match the JSON data source being used.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
