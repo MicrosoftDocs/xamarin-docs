@@ -28,6 +28,11 @@ Designer features can speed up Android UI development tremendously.
 This article demonstrates how to use the Xamarin.Android Designer to
 visually create a user interface.
 
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
+
 ## Walkthrough
 
 The objective of this walkthrough is to use the Android Designer to
