@@ -11,7 +11,8 @@ ms.date: 02/16/2018
 
 # What version of Xamarin.Android added Lollipop support?
 
-**Note:** This guide was originally written for the Android L preview.
+> [!NOTE]
+> This guide was originally written for the Android L preview.
 
 -   [Xamarin.Android 4.17](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.17/) added Android L Preview support.
 -   [Xamarin.Android 4.20](https://developer.xamarin.com/releases/android/xamarin.android_4/xamarin.android_4.20/) added Android Lollipop support.
