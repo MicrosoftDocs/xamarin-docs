@@ -1,6 +1,6 @@
 ---
 title: "C# 6 New Features Overview"
-description: "The latest version of the C# language – version 6 – continues to evolve the language to have less boilerplate, improved clarity, and more consistency. Cleaner initialization syntax, the ability to use await in catch/finally blocks, and the null-conditional ? operator are especially useful."
+description: "Version 6 of the C# language continues to evolve the language to have less boilerplate code, improved clarity, and more consistency. Cleaner initialization syntax, the ability to use await in catch/finally blocks, and the null-conditional ? operator are especially useful."
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
@@ -11,7 +11,10 @@ ms.date: 03/22/2017
 
 # C# 6 New Features Overview
 
-_The latest version of the C# language – version 6 – continues to evolve the language to have less boilerplate, improved clarity, and more consistency. Cleaner initialization syntax, the ability to use await in catch/finally blocks, and the null-conditional ? operator are especially useful._
+_Version 6 of the C# language continues to evolve the language to have less boilerplate code, improved clarity, and more consistency. Cleaner initialization syntax, the ability to use await in catch/finally blocks, and the null-conditional ? operator are especially useful._
+
+> [!NOTE]
+> For information about the latest version of the C# language – version 7 – refer to the article [What's New in C# 7.0](/dotnet/csharp/whats-new/csharp-7)
 
 This document introduces the new features of C# 6. It is fully supported by the
 mono compiler and developers can start using the new features across all the
