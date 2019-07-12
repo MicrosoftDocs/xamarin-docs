@@ -380,6 +380,8 @@
       items:
         - name: Getting Started
           href: ~/essentials/get-started.md?context=xamarin/android
+        - name: Platform & Feature Support
+          href: ~/essentials/platform-feature-support.md?context=xamarin/android
         - name: Accelerometer
           href: ~/essentials/accelerometer.md?context=xamarin/android
         - name: App Information

@@ -5,22 +5,12 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 11/04/2018
+ms.date: 07/10/2019
 ---
 
 # Get Started with Xamarin.Essentials
 
-Xamarin.Essentials provides a single cross-platform API that works with any iOS, Android, or UWP application that can be accessed from shared code no matter how the user interface is created.
-
-## Platform Support
-
-Xamarin.Essentials supports the following platforms and operating systems:
-
-| Platform | Version |
-| --- | --- |
-| Android | 4.4 (API 19) or higher |
-| iOS |10.0 or higher |
-| UWP | 10.0.16299.0 or higher |
+Xamarin.Essentials provides a single cross-platform API that works with any iOS, Android, or UWP application that can be accessed from shared code no matter how the user interface is created. See the [platform & feature support guide](platform-feature-support.md) for more information on supported operating systems.
 
 ## Installation
 
