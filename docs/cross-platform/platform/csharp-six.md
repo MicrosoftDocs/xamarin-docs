@@ -14,7 +14,7 @@ ms.date: 03/22/2017
 _The version 6 of the C# language continues to evolve the language to have less boilerplate, improved clarity, and more consistency. Cleaner initialization syntax, the ability to use await in catch/finally blocks, and the null-conditional ? operator are especially useful._
 
 > [!NOTE]
-> For information about the latest version of the C# language – version 7 – refer to the article [What's New in C# 7.0](https://docs.microsoft.com/dotnet/csharp/whats-new/csharp-7)
+> For information about the latest version of the C# language – version 7 – refer to the article [What's New in C# 7.0](/dotnet/csharp/whats-new/csharp-7)
 
 This document introduces the new features of C# 6. It is fully supported by the
 mono compiler and developers can start using the new features across all the
