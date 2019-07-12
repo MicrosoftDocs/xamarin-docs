@@ -86,9 +86,9 @@ using Mono.Data.Sqlite;
 
 The following code sample shows an entire database interaction:
 
-1.  Creating the database file
-2.  Inserting some data
-3.  Querying the data
+1. Creating the database file
+2. Inserting some data
+3. Querying the data
 
 These operations would typically appear in multiple places throughout your code, for example you may create the database file and tables when your application first starts and perform data reads and writes in individual screens in your app. In the example below have been grouped into a single method for this example:
 

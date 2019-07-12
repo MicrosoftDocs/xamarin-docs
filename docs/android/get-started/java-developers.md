@@ -587,10 +587,10 @@ that UI control.
 
 To subscribe to an event:
 
-1.  Create a delegate object that refers to the method that you want
+1. Create a delegate object that refers to the method that you want
     to be invoked when the event occurs.
 
-2.  Use the `+=` operator to attach your delegate to the event
+2. Use the `+=` operator to attach your delegate to the event
     you are subscribing to.
 
 The following example defines a delegate (with an explicit

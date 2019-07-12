@@ -57,19 +57,19 @@ As of this writing, Apple is initially providing CloudKit for free with a high l
 
 Before a Xamarin application can utilize the CloudKit Framework, the application must be correctly provisioned as detailed in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) and [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guides
 
-1.  Open the project in Visual Studio for Mac or Visual Studio.
-2.  In the **Solution Explorer**, open the **Info.plist** file and ensure the **Bundle Identifier** matches the one that was defined in **App ID** created as part of the provisioning set up:
+1. Open the project in Visual Studio for Mac or Visual Studio.
+2. In the **Solution Explorer**, open the **Info.plist** file and ensure the **Bundle Identifier** matches the one that was defined in **App ID** created as part of the provisioning set up:
  
 	[![](intro-to-cloudkit-images/image26a.png "Enter the Bundle Identifier")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
-3.  Scroll down to the bottom of the **Info.plist** file and select **Enabled Background Modes**, **Location Updates** and **Remote Notifications**:
+3. Scroll down to the bottom of the **Info.plist** file and select **Enabled Background Modes**, **Location Updates** and **Remote Notifications**:
 
  	[![](intro-to-cloudkit-images/image27a.png "Select Enabled Background Modes, Location Updates and Remote Notifications")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
-4.  Right-click the iOS project in the solution and select **Options**.
-5.  Select **iOS Bundle Signing**, select the **Developer Identity** and **Provisioning Profile** created above.
-6.  Ensure the  **Entitlements.plist** includes  **Enable iCloud** ,  **Key-value storage** and  **CloudKit** .
-7.  Ensure the **Ubiquity Container** exists for the application (as created above). Example: `iCloud.com.your-company.CloudKitAtlas`
-8.  Save the changes to the file.
+4. Right-click the iOS project in the solution and select **Options**.
+5. Select **iOS Bundle Signing**, select the **Developer Identity** and **Provisioning Profile** created above.
+6. Ensure the  **Entitlements.plist** includes  **Enable iCloud** ,  **Key-value storage** and  **CloudKit** .
+7. Ensure the **Ubiquity Container** exists for the application (as created above). Example: `iCloud.com.your-company.CloudKitAtlas`
+8. Save the changes to the file.
 
 
 With these settings in place, the application is now ready to access the CloudKit Framework APIs.
@@ -78,13 +78,13 @@ With these settings in place, the application is now ready to access the CloudKi
 
 Before implementing CloudKit in a Xamarin iOS application, this article is going to cover the fundamentals of the CloudKit Framework, which will include the following topics:
 
-1.  **Containers** – Isolated silos of iCloud communications.
-2.  **Databases** – Public and private are available to the application.
-3.  **Records** – The mechanism in which structured data is moved to and from CloudKit.
-4.  **Record Zones** – Are groups of Records.
-5.  **Record Identifiers** – Are fully normalized and represent the specific location of the record.
-6.  **Reference** – Provide parent-child relationships between related Records within a given Database.
-7.  **Assets** – Allow for file of large, unstructured data to be uploaded to iCloud and associated with a given Record.
+1. **Containers** – Isolated silos of iCloud communications.
+2. **Databases** – Public and private are available to the application.
+3. **Records** – The mechanism in which structured data is moved to and from CloudKit.
+4. **Record Zones** – Are groups of Records.
+5. **Record Identifiers** – Are fully normalized and represent the specific location of the record.
+6. **Reference** – Provide parent-child relationships between related Records within a given Database.
+7. **Assets** – Allow for file of large, unstructured data to be uploaded to iCloud and associated with a given Record.
 
 
 ### Containers
@@ -93,9 +93,9 @@ A given application running on an iOS device is always running along side other 
 
 The concept of taking a client application and running it separated from other clients is very powerful and provides the following advantages:
 
-1.  **Security** – One application cannot interfere with other client apps or the OS itself.
-1.  **Stability** – If the client application crashes it cannot take out other apps of the OS.
-1.  **Privacy** – Each client application has limited access to the personal information stored within the device.
+1. **Security** – One application cannot interfere with other client apps or the OS itself.
+1. **Stability** – If the client application crashes it cannot take out other apps of the OS.
+1. **Privacy** – Each client application has limited access to the personal information stored within the device.
 
 
 CloudKit was designed to provide the same advantages as the above listed, and apply them to working with cloud-based information:
@@ -175,13 +175,13 @@ Records contain the notion of a Change Tag. This is a previous version of a revi
 
 As stated above, `CKRecords` wrap key-value pairs and as such, the following types of data can be stored in a record:
 
-1.   `NSString`
-1.   `NSNumber`
-1.   `NSData`
-1.   `NSDate`
-1.   `CLLocation`
-1.   `CKReferences`
-1.   `CKAssets`
+1. `NSString`
+1. `NSNumber`
+1. `NSData`
+1. `NSDate`
+1. `CLLocation`
+1. `CKReferences`
+1. `CKAssets`
 
 
 In addition to the single value types, a record can contain a homogenous array of any of the above listed types.
@@ -394,9 +394,9 @@ ThisApp.PublicDatabase.SaveRecord(newRecord, (record, err) => {
 
 Three things to note about the above code:
 
-1.  By calling the  `SaveRecord` method of the  `PublicDatabase`, the developer doesn't have to specify how the data is sent, what Zone it's being written to, etc. The Convenience API is taking care of all of those details itself.
-1.  The call is asynchronous and provides a callback routine when the call completes, either with success or failure. If the call fails, an error message will be provided.
-1.  CloudKit does not provide local storage/persistence; it is a transfer medium only. So when a request is made to save a Record, it is immediately sent to the iCloud servers.
+1. By calling the  `SaveRecord` method of the  `PublicDatabase`, the developer doesn't have to specify how the data is sent, what Zone it's being written to, etc. The Convenience API is taking care of all of those details itself.
+1. The call is asynchronous and provides a callback routine when the call completes, either with success or failure. If the call fails, an error message will be provided.
+1. CloudKit does not provide local storage/persistence; it is a transfer medium only. So when a request is made to save a Record, it is immediately sent to the iCloud servers.
 
 
 > [!NOTE]
@@ -575,11 +575,11 @@ Before implementing Subscription in C# code, let's take a quick overview of how 
 
 The above graph shows the typical subscription process as follows:
 
-1.  The client device creates a new Subscription containing the set of conditions that will trigger the subscription and a Push Notification that will be sent when the trigger occurs.
-2.  The Subscription is sent to the Database where it is added to the collection of existing subscriptions.
-3.  A second device creates a new Record and saves that record to the Database.
-4.  The Database searches through its list of Subscriptions to see if the new Record matches any of their conditions.
-5.  If a match is found, the Push Notification is sent to the device that registered the Subscription with information about the Record that caused it to be triggered.
+1. The client device creates a new Subscription containing the set of conditions that will trigger the subscription and a Push Notification that will be sent when the trigger occurs.
+2. The Subscription is sent to the Database where it is added to the collection of existing subscriptions.
+3. A second device creates a new Record and saves that record to the Database.
+4. The Database searches through its list of Subscriptions to see if the new Record matches any of their conditions.
+5. If a match is found, the Push Notification is sent to the device that registered the Subscription with information about the Record that caused it to be triggered.
 
 
 With this knowledge in place, let's look at creating Subscriptions in a Xamarin iOS 8 application.

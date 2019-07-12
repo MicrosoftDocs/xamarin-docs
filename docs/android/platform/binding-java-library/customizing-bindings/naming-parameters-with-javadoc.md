@@ -30,9 +30,9 @@ if it has access to the Javadoc HTML from the original library.
 Integrating the Javadoc HTML into a Java Binding project is a manual 
 process consisting of the following steps: 
 
-1.  Download the Javadoc for the library
-2.  Edit the `.csproj` file and add a `<JavaDocPaths>` property:
-3.  Clean and rebuild the project
+1. Download the Javadoc for the library
+2. Edit the `.csproj` file and add a `<JavaDocPaths>` property:
+3. Clean and rebuild the project
 
 Once this is done, the original Java parameter names should be present 
 in the APIs bound by a Java Binding Project. 

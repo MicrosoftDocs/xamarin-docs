@@ -47,10 +47,10 @@ This guide will address how to script the building multiple APKs for a
 Xamarin.Android application, each APK targeting a specific ABI. It will
 cover the following topics:
 
-1.  Create a unique  *version code* for the APK.
-1.  Create a temporary version of  **AndroidManifest.XML** that will be used for this APK.
-1.  Build the application using the  **AndroidManifest.XML** from the previous step.
-1.  Prepare the APK for release by signing and zip-aligning it.
+1. Create a unique  *version code* for the APK.
+1. Create a temporary version of  **AndroidManifest.XML** that will be used for this APK.
+1. Build the application using the  **AndroidManifest.XML** from the previous step.
+1. Prepare the APK for release by signing and zip-aligning it.
 
 
 At the end of this guide is a walkthrough that will demonstrate how to

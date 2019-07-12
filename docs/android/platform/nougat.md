@@ -105,13 +105,13 @@ To get started using Android Nougat with Xamarin.Android, you must
 download and install the latest tools and SDK packages before you can
 create an Android Nougat project:
 
-1.  Install the latest Xamarin.Android updates from the Xamarin.
+1. Install the latest Xamarin.Android updates from the Xamarin.
 
-2.  Install the **Android 7.0 (API 24)** packages and tools or later.
+2. Install the **Android 7.0 (API 24)** packages and tools or later.
 
-3.  Create a new Xamarin.Android project that targets Android Nougat.
+3. Create a new Xamarin.Android project that targets Android Nougat.
 
-4.  Configure an emulator or device for Android Nougat.
+4. Configure an emulator or device for Android Nougat.
 
 Each of these steps is explained in the following sections:
 
@@ -135,15 +135,15 @@ To create a project with Xamarin Android 7.0, you must first use the
 Android SDK Manager to install **SDK Platform Android N (API 24)** or
 later. You must also install the latest **Android SDK Tools**:
 
-1.  Start the Android SDK Manager (in Visual Studio for Mac, use
+1. Start the Android SDK Manager (in Visual Studio for Mac, use
     **Tools > Open Android SDK Manager&hellip;**; in Visual Studio,
     use **Tools > Android > Android SDK Manager**).
 
-2.  Install **Android 7.0 (API 24)** or later:
+2. Install **Android 7.0 (API 24)** or later:
 
     [![Selecting Android 7.0 packages in the Android SDK Manager](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
 
-3.  Install the latest Android SDK tools:
+3. Install the latest Android SDK tools:
 
     [![Selecting the latest Android SDK tools in the Android SDK Manager](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
 
@@ -151,7 +151,7 @@ later. You must also install the latest **Android SDK Tools**:
     SDK Platform tools 24.0.3 or later, and Android SDK Build tools 24.0.2
     or later.
 
-4.  Verify that the **Java Development Kit Location**
+4. Verify that the **Java Development Kit Location**
     is configured for JDK 1.8:
 
     [![Configuring the JDK 8 path under Tools options](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)

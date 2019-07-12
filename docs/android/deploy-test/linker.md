@@ -58,9 +58,9 @@ public class MyActivity {
 The primary mechanism for controlling the linker is the **Linker Behavior** (*Linking* in Visual Studio)
 drop-down within the **Project Options** dialog box. There are three options:
 
-1.  **Don't Link** (*None* in Visual Studio)
-1.  **Link SDK Assemblies** (*Sdk Assemblies Only*)
-1.  **Link All Assemblies** (*Sdk and User Assemblies*)
+1. **Don't Link** (*None* in Visual Studio)
+1. **Link SDK Assemblies** (*Sdk Assemblies Only*)
+1. **Link All Assemblies** (*Sdk and User Assemblies*)
 
 
 The **Don't Link** option turns off the linker; the above "Release

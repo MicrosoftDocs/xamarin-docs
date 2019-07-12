@@ -42,11 +42,11 @@ To start the screen creation process, MonoTouch.Dialog creates a `DialogViewCont
 
 To create a multi-screen application with MonoTouch.Dialog, we need to:
 
-1.  Create a `UINavigationController.`
-1.  Create a `DialogViewController.`
-1.  Add the `DialogViewController` as the root of the  `UINavigationController.` 
-1.  Add a `RootElement` to the  `DialogViewController.`
-1.  Add `Sections` and  `Elements` to the  `RootElement.` 
+1. Create a `UINavigationController.`
+1. Create a `DialogViewController.`
+1. Add the `DialogViewController` as the root of the  `UINavigationController.` 
+1. Add a `RootElement` to the  `DialogViewController.`
+1. Add `Sections` and  `Elements` to the  `RootElement.` 
 
 ### Using A UINavigationController
 

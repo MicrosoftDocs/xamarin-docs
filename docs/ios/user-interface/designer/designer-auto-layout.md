@@ -37,8 +37,8 @@ The next section covers working with constraints using the iOS Designer, includi
 
 The default iOS Designer configuration has constraint mode enabled. However, should you need to enable or disable it manually, you can do so in two steps:
 
-1.  Click on an empty space on the design surface. This deselects any elements and brings up the properties for the Storyboard document.
-1.  Check or uncheck the **Use Autolayout** checkbox in the property panel:
+1. Click on an empty space on the design surface. This deselects any elements and brings up the properties for the Storyboard document.
+1. Check or uncheck the **Use Autolayout** checkbox in the property panel:
 
 	![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
 

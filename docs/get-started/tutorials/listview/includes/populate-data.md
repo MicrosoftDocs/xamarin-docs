@@ -169,7 +169,7 @@ In this exercise, you will modify the **ListViewTutorial** project to populate t
     > [!IMPORTANT]
     > The [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) property is inherited through the visual tree. Therefore, because it's been set on the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object, child objects of the `ContentPage` inherit its value, including the [`ListView`](xref:Xamarin.Forms.ListView).
 
-1.  In **MainPage.xaml**, modify the [`ListView`](xref:Xamarin.Forms.Image) declaration to set the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property to the `Monkeys` collection:
+1. In **MainPage.xaml**, modify the [`ListView`](xref:Xamarin.Forms.Image) declaration to set the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property to the `Monkeys` collection:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}" />
@@ -350,7 +350,7 @@ In this exercise, you will modify the **ListViewTutorial** project to populate t
     > [!IMPORTANT]
     > The [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) property is inherited through the visual tree. Therefore, because it's been set on the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object, child objects of the `ContentPage` inherit its value, including the [`ListView`](xref:Xamarin.Forms.ListView).
 
-1.  In **MainPage.xaml**, modify the [`ListView`](xref:Xamarin.Forms.Image) declaration to set the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property to the `Monkeys` collection:
+1. In **MainPage.xaml**, modify the [`ListView`](xref:Xamarin.Forms.Image) declaration to set the [`ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property to the `Monkeys` collection:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}" />

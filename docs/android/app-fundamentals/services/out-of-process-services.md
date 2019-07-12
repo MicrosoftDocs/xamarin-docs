@@ -408,7 +408,7 @@ Because `signature` and `normal` permissions are automatically granted at instal
 
 There are two common ways to secure a service with Android permissions:
 
-1.  **Implement signature level security** &ndash; Signature level
+1. **Implement signature level security** &ndash; Signature level
     security means that permission is automatically granted to those
     applications that are signed with the same key that was used to sign
     the APK holding the service. This is a simple way for developers to
@@ -425,7 +425,7 @@ There are two common ways to secure a service with Android permissions:
     }
     ```
 
-2.  **Create a custom permission** &ndash; It is possible for the
+2. **Create a custom permission** &ndash; It is possible for the
     developer of the service to create a custom permission for the
     service. This is best for when a developer wants to share their
     service with applications from other developers. A custom permission

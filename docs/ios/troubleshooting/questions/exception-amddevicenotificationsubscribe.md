@@ -17,13 +17,13 @@ ms.date: 03/21/2017
 
 ## Fix
 
-1.  Kill the `usbmuxd` process so that the system will restart it:
+1. Kill the `usbmuxd` process so that the system will restart it:
 
     ```csharp
     sudo killall -QUIT usbmuxd
     ```
 
-2.  If that doesn't solve the problem, reboot the Mac.
+2. If that doesn't solve the problem, reboot the Mac.
 
 ## Error message
 

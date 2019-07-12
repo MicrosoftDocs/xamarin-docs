@@ -58,13 +58,13 @@ The following workflow describes the steps needed to start using TestFlight for 
 
 ## Create an iTunes Connect record
 
-1.  Login to the [iTunes Connect Portal](https://itunesconnect.apple.com/) using your Apple developer credentials.
-2.  Select **My Apps**:
+1. Login to the [iTunes Connect Portal](https://itunesconnect.apple.com/) using your Apple developer credentials.
+2. Select **My Apps**:
 
 	[![](testflight-images/my-apps.png "Select My Apps")](testflight-images/my-apps.png#lightbox)
 
 
-3.  On the **My Apps** screen, click on the **+** button at the top-left corner of the screen to add a new app. If you have Mac and iOS developer accounts, you will be prompted to choose the new app type here.
+3. On the **My Apps** screen, click on the **+** button at the top-left corner of the screen to add a new app. If you have Mac and iOS developer accounts, you will be prompted to choose the new app type here.
 
 You will be presented with the **New iOS App** submission window, which needs to contain exactly the same information as your app's Info.plist
 

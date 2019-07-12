@@ -112,12 +112,12 @@ following diagram:
 
 [![App registration steps diagram](firebase-cloud-messaging-images/02-app-registration-sml.png)](firebase-cloud-messaging-images/02-app-registration.png#lightbox)
 
-1.  The client app contacts FCM to obtain a registration token, passing
+1. The client app contacts FCM to obtain a registration token, passing
     the sender ID, API Key, and App ID to FCM.
 
-2.  FCM returns a registration token to the client app.
+2. FCM returns a registration token to the client app.
 
-3.  The client app (optionally) forwards the registration token to the
+3. The client app (optionally) forwards the registration token to the
     app server.
 
 The app server caches the registration token for subsequent
@@ -148,17 +148,17 @@ and forwards downstream messages:
 When the app server sends a downstream message to the client app, it
 uses the following steps as enumerated in the above diagram:
 
-1.  The app server sends the message to FCM.
+1. The app server sends the message to FCM.
 
-2.  If the client device is not available, the FCM server stores the
+2. If the client device is not available, the FCM server stores the
     message in a queue for later transmission. Messages are retained in
     FCM storage for a maximum of 4 weeks (for more information, see
     [Setting the lifespan of a message](https://firebase.google.com/docs/cloud-messaging/concept-options#ttl)).
 
-3.  When the client device is available, FCM forwards the message to
+3. When the client device is available, FCM forwards the message to
     the client app on that device.
 
-4.  The client app receives the message from FCM, processes it, and
+4. The client app receives the message from FCM, processes it, and
     displays it to the user. For example, if the message is a remote
     notification, it is presented to the user in the notification area.
 
@@ -183,12 +183,12 @@ such as weather alerts, stock quotes, and headline news.
 The following steps are used in topic messaging (after the client app
 obtains a registration token as explained earlier):
 
-1.  The client app subscribes to a topic by sending a subscribe message
+1. The client app subscribes to a topic by sending a subscribe message
     to FCM.
 
-2.  The app server sends topic messages to FCM for distribution.
+2. The app server sends topic messages to FCM for distribution.
 
-3.  FCM forwards topic messages to clients that have subscribed to
+3. FCM forwards topic messages to clients that have subscribed to
     that topic.
 
 For more information about Firebase topic messaging, see Google's
@@ -205,7 +205,7 @@ project (or import an existing project) via the
 following steps to create a Firebase Cloud Messaging project for your
 app:
 
-1.  Sign into the [Firebase Console](https://console.firebase.google.com/) with
+1. Sign into the [Firebase Console](https://console.firebase.google.com/) with
     your Google account (i.e., your Gmail address) and click **CREATE NEW
     PROJECT**:
 
@@ -213,31 +213,31 @@ app:
 
     If you have an existing project, click **import a Google project**.
 
-2.  In the **Create a project** dialog, enter the name of your project
+2. In the **Create a project** dialog, enter the name of your project
     and click **CREATE PROJECT**. In the following example, a new
     project called **XamarinFCM** is created:
 
     [![Create a Project dialog](firebase-cloud-messaging-images/06-create-a-project-sml.png)](firebase-cloud-messaging-images/06-create-a-project.png#lightbox)
 
-3.  In the Firebase Console **Overview**, click **Add Firebase to your
+3. In the Firebase Console **Overview**, click **Add Firebase to your
     Android app**:
 
     [![Add Firebase to your Android app](firebase-cloud-messaging-images/07-add-firebase-sml.png)](firebase-cloud-messaging-images/07-add-firebase.png#lightbox)
 
-4.  In the next screen, enter the package name of your app. In this
+4. In the next screen, enter the package name of your app. In this
     example, the package name is **com.xamarin.fcmexample**. This value
     must match the package name of your Android app. An app nickname
     can also be entered in the **App nickname** field:
 
     [![Entering FCM Example as the app nickname](firebase-cloud-messaging-images/08-package-name-sml.png)](firebase-cloud-messaging-images/08-package-name.png#lightbox)
 
-5.  If your app uses Dynamic links, Invites, or Google Auth, you must
+5. If your app uses Dynamic links, Invites, or Google Auth, you must
     also enter your debug signing certificate. For more information
     about locating your signing certificate, see
     [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md).
     In this example, the signing certificate is left blank.
 
-6.  Click **ADD APP**:
+6. Click **ADD APP**:
 
     [![Clicking the Add App button](firebase-cloud-messaging-images/09-add-app-sml.png)](firebase-cloud-messaging-images/09-add-app.png#lightbox)
 

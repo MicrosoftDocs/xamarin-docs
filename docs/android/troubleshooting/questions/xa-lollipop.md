@@ -49,8 +49,8 @@ There are a few workarounds for this issue:
 
 3. Temporarily downgrade back to the Android API Level 21 "L" preview [1]:
 
-    1.  Delete the **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21** 
-    2.  Extract [1] into **C:\\Users\\&lt;username&gt;\\AppData\\Local\\Android\\android-sdk\\platforms** 
+    1. Delete the **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21** 
+    2. Extract [1] into **C:\\Users\\&lt;username&gt;\\AppData\\Local\\Android\\android-sdk\\platforms** 
         to create an **android-L** folder.
 
 # [Visual Studio for Mac](#tab/macos)
@@ -79,8 +79,8 @@ There are a few workarounds for this issue:
 
 3. Temporarily downgrade back to the Android API Level 21 "L" preview [1]:
 
-    1.  Delete **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
-    2.  Extract [1] into **/Users/username/Library/Developer/Xamarin/android-sdk-macosx**
+    1. Delete **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
+    2. Extract [1] into **/Users/username/Library/Developer/Xamarin/android-sdk-macosx**
         to create an **android-L** folder.
 
 -----

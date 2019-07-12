@@ -436,14 +436,14 @@ Not everyone has a designer available to create the custom icons and launch imag
 - [**Sketch**](https://www.sketchapp.com") – Sketch is a Mac app for designing user interfaces, icons, and more. This is the app that was used to design the Xamarin App Icons and Launch Images set. Sketch 3 is available on the App Store. You can try out the free [Sketch Tool](http://bohemiancoding.com/sketch/tool/) as well.
 - [**Pixelmator**](http://www.pixelmator.com/) – A versatile image editing app for Mac that costs about $30.
 - [**Glyphish**](http://www.glyphish.com/) – High-quality prebuilt icon sets for free download and purchase.
-- [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5.  Can be hit or miss but a good resource if you need icons designed on the fly
+- [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5. Can be hit or miss but a good resource if you need icons designed on the fly
 
 ::: zone-end
 ::: zone pivot="windows"
 
 * Visual Studio – You can use this to create a simple icon set for your app directly in the IDE.
 - [**Glyphish**](http://www.glyphish.com/) – High-quality prebuilt icon sets for free download and purchase.
-- [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5.  Can be hit or miss but a good resource if you need icons designed on the fly
+- [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5. Can be hit or miss but a good resource if you need icons designed on the fly
 
 ::: zone-end
 

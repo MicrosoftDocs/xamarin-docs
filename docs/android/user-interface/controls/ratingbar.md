@@ -55,5 +55,5 @@ rating, with the [`RatingBar`](https://developer.xamarin.com/api/type/Android.Wi
     sets a rating. In this case, a simple [`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
     message displays the new rating.
 
-3.  Run the application.
+3. Run the application.
 

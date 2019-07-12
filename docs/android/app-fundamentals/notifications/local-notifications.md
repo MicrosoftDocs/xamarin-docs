@@ -51,16 +51,16 @@ following sections.
 All Android notifications are built on the base layout format, which,
 at a minimum, includes the following elements:
 
-1.  A *notification icon*, which represents the originating app, or the
+1. A *notification icon*, which represents the originating app, or the
     notification type if the app supports different types of
     notifications.
 
-2.  The notification *title*, or the name of the sender if the
+2. The notification *title*, or the name of the sender if the
     notification is a personal message.
 
-3.  The notification message.
+3. The notification message.
 
-4.  A *timestamp*.
+4. A *timestamp*.
 
 These elements are displayed as illustrated in the following diagram:
 
@@ -297,16 +297,16 @@ The notification channel should be created each time the activity is created. Fo
 
 To generate a notification in Android, follow these steps:
 
-1.  Instantiate a `NotificationCompat.Builder` object.
+1. Instantiate a `NotificationCompat.Builder` object.
 
-2.  Call various methods on the `NotificationCompat.Builder` object to set
+2. Call various methods on the `NotificationCompat.Builder` object to set
     notification options.
 
-3.  Call the [Build](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.Build/)
+3. Call the [Build](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.Build/)
     method of the `NotificationCompat.Builder` object to instantiate a
     notification object.
 
-4.  Call the [Notify](https://developer.xamarin.com/api/member/Android.App.NotificationManager.Notify/(System.Int32%2cAndroid.App.Notification))
+4. Call the [Notify](https://developer.xamarin.com/api/member/Android.App.NotificationManager.Notify/(System.Int32%2cAndroid.App.Notification))
     method of the notification manager to publish the notification.
 
 You must provide at least the following information for each

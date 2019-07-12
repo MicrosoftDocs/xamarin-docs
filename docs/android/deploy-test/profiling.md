@@ -54,19 +54,19 @@ screenshots below, the Xamarin Forms
 [XamagonXuzzle](https://developer.xamarin.com/samples/mobile/LivePlayer/XamagonXuzzleLP/)
 app is built and profiled using Android Profiler:
 
-1.  In the Android project build options, disable **Use Shared
+1. In the Android project build options, disable **Use Shared
     Runtime**. This ensures that the Android application package (APK)
     is built without a dependency on the shared development-time Mono
     runtime.
 
     ![Disabling Use Shared Runtime](profiling-images/vswin/01-turn-off-shared-runtime.png)
 
-2.  Build the app for **Debug** and deploy it to a physical device or
+2. Build the app for **Debug** and deploy it to a physical device or
     emulator. This causes a signed **Debug** version of the APK to be built.
     For the **XamagonXuzzle** example, the resulting APK is named
     **com.companyname.XamagonXuzzle-Signed.apk**.
 
-3.  Open the project folder and navigate to **bin/Debug**. In this
+3. Open the project folder and navigate to **bin/Debug**. In this
     folder, locate the **Signed.apk** version of the app and copy it
     to a conveniently-accessible place (such as the desktop). In the following
     screenshot, the APK **com.companyname.XamagonXuzzle-Signed.apk** is located
@@ -74,31 +74,31 @@ app is built and profiled using Android Profiler:
 
     [![Location of the debug signed APK file](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
 
-4.  Launch Android Studio and select **Profile or debug APK**:
+4. Launch Android Studio and select **Profile or debug APK**:
 
     ![Starting the profiler from the Android Studio launch screen](profiling-images/vswin/03-android-studio.png)
 
-5.  In the **Select APK File** dialog, navigate to the APK that you
+5. In the **Select APK File** dialog, navigate to the APK that you
     built and copied earlier. Select the APK and click **OK**: 
     
     ![Selecting the APK in the Select APK File dialog](profiling-images/vswin/04-select-apk-dialog.png)
 
-6.  Android Studio will load the APK and dissassembles **classes.dex**:
+6. Android Studio will load the APK and dissassembles **classes.dex**:
 
     ![Setting up the APK](profiling-images/vswin/05-setting-up-the-apk.png)
 
-7.  After the APK is loaded, Android Studio displays the following
+7. After the APK is loaded, Android Studio displays the following
     project screen for the APK. Right-click the app name in the tree
     view on the left and select **Open Module Settings**:
 
     [![Location of Open Module Settings menu item](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
 
-8.  Navigate to **Project Settings > Modules**, select the **-Signed** node
+8. Navigate to **Project Settings > Modules**, select the **-Signed** node
     of the app, then click **&lt;No SDK&gt;**:
 
     [![Navigating to the SDK setting](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
 
-9.  In the **Module SDK** pull-down menu, select the Android SDK level
+9. In the **Module SDK** pull-down menu, select the Android SDK level
     that was used to build the app (in this example, API level 26 was
     used to build **XamagonXuzzle**):
 

@@ -26,22 +26,22 @@ the results to one or more **output jars**.
 
 ProGuard processes input APK's using the following steps: 
 
-1.  **Shrinking step** &ndash; ProGuard recursively determines which 
+1. **Shrinking step** &ndash; ProGuard recursively determines which 
     classes and class members are used. All other classes and class 
     members are discarded. 
 
-2.  **Optimization step** &ndash; ProGuard further optimizes the code. 
+2. **Optimization step** &ndash; ProGuard further optimizes the code. 
     Among other optimizations, classes and methods that are not entry 
     points can be made private, static, or final, unused parameters can 
     be removed, and some methods may be inlined. 
 
-3.  **Obfuscation step** &ndash; In native Android development, ProGuard renames classes and class 
+3. **Obfuscation step** &ndash; In native Android development, ProGuard renames classes and class 
     members that are not entry points. Retaining entry points ensures 
     that they can still be accessed by their original names. However, this 
     step is not supported by Xamarin.Android because the app is compiled 
     down to Intermediate Language (IL).
 
-4.  **Preverification step** &ndash; Performs checks on Java bytecodes 
+4. **Preverification step** &ndash; Performs checks on Java bytecodes 
     ahead of runtime and annotates class files for the benefit of the 
     Java VM. This is the only step that doesn't have to know the entry 
     points. 
@@ -66,9 +66,9 @@ One important item to know in advance before using ProGuard is how
 it works within the `Xamarin.Android` build process. This process uses 
 two separate steps: 
 
-1.  Xamarin Android Linker
+1. Xamarin Android Linker
 
-2.  ProGuard
+2. ProGuard
 
 Each of these steps is described next.
 
@@ -113,13 +113,13 @@ configuration file for ProGuard to use.
 
 Use the following steps to enable ProGuard in your app project:
 
-1.  Ensure that your project is set to the **Release** configuration 
+1. Ensure that your project is set to the **Release** configuration 
     (this is important because the linker must run in order for 
     ProGuard to run): 
 
     [![Select Release configuration](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
-2.  Enable ProGuard by checking the **Enable ProGuard** option under the 
+2. Enable ProGuard by checking the **Enable ProGuard** option under the 
     **Packaging** tab of **Properties > Android Options**: 
 
     [![Enable Proguard option selected](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)

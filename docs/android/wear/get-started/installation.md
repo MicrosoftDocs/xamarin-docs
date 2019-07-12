@@ -43,9 +43,9 @@ if you are developing specifically for API level 23 or earlier.
 After you have installed Xamarin.Android, perform the following steps 
 so that you're ready to build and test Android Wear apps: 
 
-1.  Install the required Android SDK and tools.
-2.  Configure a test device.
-3.  Create your first Android Wear app.
+1. Install the required Android SDK and tools.
+2. Configure a test device.
+3. Create your first Android Wear app.
 
 These steps are described in the following sections.
 

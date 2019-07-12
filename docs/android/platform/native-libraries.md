@@ -24,8 +24,8 @@ Note that since Android supports multiple Application Binary Interfaces
 (ABIs), Xamarin.Android must know which ABI the native library is built for.
 There are two ways this can be done:
 
-1.  Path "sniffing"
-1.  By using an  `AndroidNativeLibrary/Abi` element within the project file
+1. Path "sniffing"
+1. By using an  `AndroidNativeLibrary/Abi` element within the project file
 
 
 With path sniffing, the parent directory name of the native library is used

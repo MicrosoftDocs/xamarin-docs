@@ -294,9 +294,9 @@ Each Cell in a `UICollectionView` is capable of showing a menu
 that allows cut, copy, and paste to optionally be supported. To create an edit
 menu on a cell:
 
-1.  Override  `ShouldShowMenu` and return true if the item should show a menu.
-1.  Override  `CanPerformAction` and return true for every action that the item can perform, which will be any of cut, copy or paste.
-1.  Override  `PerformAction` to perform the edit, copy of paste operation.
+1. Override  `ShouldShowMenu` and return true if the item should show a menu.
+1. Override  `CanPerformAction` and return true for every action that the item can perform, which will be any of cut, copy or paste.
+1. Override  `PerformAction` to perform the edit, copy of paste operation.
 
 
 The following screenshot show the menu when a cell is long pressed:

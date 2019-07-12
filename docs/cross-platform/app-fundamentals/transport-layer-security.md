@@ -13,7 +13,7 @@ Using the latest version of [_Transport Layer Security_ (TLS)](https://en.wikipe
 is important to ensure application network communications are secure.
 
 > [!WARNING]
-> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2.  Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
+> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2. Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
 >
 > In order to ensure your apps continue to work with these servers and services, **you should update your Xamarin projects to use the settings below, then re-build and re-deploy your apps** to your users.
 

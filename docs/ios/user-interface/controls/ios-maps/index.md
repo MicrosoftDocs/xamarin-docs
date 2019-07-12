@@ -220,10 +220,10 @@ iOS includes a local search API with Map Kit, which allows asynchronous searches
 
 To perform a local search, an application must follow these steps:
 
-1.  Create  `MKLocalSearchRequest` object.
-1.  Create an  `MKLocalSearch` object from the  `MKLocalSearchRequest` .
-1.  Call the  `Start` method on the  `MKLocalSearch` object.
-1.  Retrieve the  `MKLocalSearchResponse` object in a callback.
+1. Create  `MKLocalSearchRequest` object.
+1. Create an  `MKLocalSearch` object from the  `MKLocalSearchRequest` .
+1. Call the  `Start` method on the  `MKLocalSearch` object.
+1. Retrieve the  `MKLocalSearchResponse` object in a callback.
 
 
 The local search API itself provides no user interface. It doesn’t even require a map to be used. However, to make practical use of local search, an application needs to provide some way to specify a search query and display results. Additionally, since the results will contain location data, it will often make sense to show them on a map.

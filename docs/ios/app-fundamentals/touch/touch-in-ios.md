@@ -124,11 +124,11 @@ Xamarin.iOS provides the class `UIGestureRecognizer` as a base class for the fol
 
 The basic pattern to using a gesture recognizer is as follows:
 
-1.  **Instantiate the gesture recognizer** – First, instantiate a  `UIGestureRecognizer` subclass. The object that is instantiated will be associated by a view and will be garbage collected when the view is disposed of. It is not necessary to create this view as a class level variable.
-1.  **Configure any gesture settings** – The next step is to configure the gesture recognizer. Consult Xamarin’s documentation on  `UIGestureRecognizer` and its subclasses for a list of properties that can be set to control the behavior of a  `UIGestureRecognizer` instance.
-1.  **Configure the target** – Because of its Objective-C heritage, Xamarin.iOS doesn’t raise events when a gesture recognizer matches a gesture.  `UIGestureRecognizer` has a method – `AddTarget` – that can accept an anonymous delegate or an Objective-C selector with the code to execute when the gesture recognizer makes a match.
-1.  **Enable gesture recognizer** – Just like with touch events, gestures are only recognized if touch interactions are enabled.
-1.  **Add the gesture recognizer to the view** – The final step is to add the gesture to a view by calling  `View.AddGestureRecognizer` , and passing it a gesture recognizer object.
+1. **Instantiate the gesture recognizer** – First, instantiate a  `UIGestureRecognizer` subclass. The object that is instantiated will be associated by a view and will be garbage collected when the view is disposed of. It is not necessary to create this view as a class level variable.
+1. **Configure any gesture settings** – The next step is to configure the gesture recognizer. Consult Xamarin’s documentation on  `UIGestureRecognizer` and its subclasses for a list of properties that can be set to control the behavior of a  `UIGestureRecognizer` instance.
+1. **Configure the target** – Because of its Objective-C heritage, Xamarin.iOS doesn’t raise events when a gesture recognizer matches a gesture.  `UIGestureRecognizer` has a method – `AddTarget` – that can accept an anonymous delegate or an Objective-C selector with the code to execute when the gesture recognizer makes a match.
+1. **Enable gesture recognizer** – Just like with touch events, gestures are only recognized if touch interactions are enabled.
+1. **Add the gesture recognizer to the view** – The final step is to add the gesture to a view by calling  `View.AddGestureRecognizer` , and passing it a gesture recognizer object.
 
 Refer to the [gesture recognizer samples](~/ios/app-fundamentals/touch/ios-touch-walkthrough.md#Gesture_Recognizer_Samples) for more information on how to implement them in code.
 
@@ -144,8 +144,8 @@ Each `UIGestureRecognizer` has a State property that provides important informat
 
 Gestures can be summarized as one of two types:
 
-1.  *Discrete* – These gestures only fire the first time they are recognized.
-1.  *Continuous* – These gestures continue to fire as long as they are recognized.
+1. *Discrete* – These gestures only fire the first time they are recognized.
+1. *Continuous* – These gestures continue to fire as long as they are recognized.
 
 
 Gesture recognizers exists in one of the following states:
@@ -171,8 +171,8 @@ gesture.ShouldRecognizeSimultaneously += (UIGestureRecognizer r) => { return tru
 
 It is also possible to disable a gesture in iOS. There are two delegate properties that allow a gesture recognizer to examine the state of an application and the current touch events, to make decisions on how and if a gesture should be recognized. The two events are:
 
-1.  *ShouldReceiveTouch* – This delegate is called right before the gesture recognizer is passed a touch event, and provides an opportunity to examine the touches and decide which touches will be handled by the gesture recognizer.
-1.  *ShouldBegin* – This is called when a recognizer attempts to change state from Possible to some other state. Returning false will force the state of the gesture recognizer to be changed to Failed.
+1. *ShouldReceiveTouch* – This delegate is called right before the gesture recognizer is passed a touch event, and provides an opportunity to examine the touches and decide which touches will be handled by the gesture recognizer.
+1. *ShouldBegin* – This is called when a recognizer attempts to change state from Possible to some other state. Returning false will force the state of the gesture recognizer to be changed to Failed.
 
 
 You can override these methods with a strongly typed `UIGestureRecognizerDelegate`, a weak delegate, or bind via the event handler syntax, as illustrated by the following code snippet:
@@ -191,9 +191,9 @@ singleTapGesture.RequireGestureRecognizerToFail(doubleTapGesture);
 
 Although iOS provides some default gesture recognizers, it may be necessary to create custom gesture recognizers in certain cases. Creating a custom gesture recognizer involves the following steps:
 
-1.  Subclass  `UIGestureRecognizer` .
-1.  Override the appropriate touch event methods.
-1.  Bubble up recognition status via the base class’ State property.
+1. Subclass  `UIGestureRecognizer` .
+1. Override the appropriate touch event methods.
+1. Bubble up recognition status via the base class’ State property.
 
 
 A practical example of this will be covered in the [Using Touch in iOS](ios-touch-walkthrough.md) walkthrough.

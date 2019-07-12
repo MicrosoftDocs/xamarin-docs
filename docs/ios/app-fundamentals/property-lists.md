@@ -34,12 +34,12 @@ The next three sections investigate the features of each panel in more detail.
 
 Visual Studio for Mac features a graphical interface for editing common `Info.plist` entries for an application:
 
-1.  Application properties
-1.  Supported device types
-1.  Support orientations for each device type
-1.  Status bar style and color
-1.  Icons and start-up screens
-1.  Maps and Background Modes
+1. Application properties
+1. Supported device types
+1. Support orientations for each device type
+1. Status bar style and color
+1. Icons and start-up screens
+1. Maps and Background Modes
 
 
 These are described in more detail in the next sections.

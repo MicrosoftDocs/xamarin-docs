@@ -64,8 +64,8 @@ JNI. Most of `Mono.Android.dll` consists of managed callable wrappers.
 
 Managed callable wrappers serve two purposes:
 
-1.  Encapsulate JNI use so that client code doesn't need to know about the underlying complexity.
-1.  Make it possible to sub-class Java types and implement Java interfaces.
+1. Encapsulate JNI use so that client code doesn't need to know about the underlying complexity.
+1. Make it possible to sub-class Java types and implement Java interfaces.
 
 The first purpose is purely for convenience and encapsulation of
 complexity so that consumers have a simple, managed set of classes to
@@ -382,17 +382,17 @@ fields, different methods be used when implementing the properties.
 
 Field binding involves three sets of methods:
 
-1.  The *get field id* method. The *get field id* method is responsible
+1. The *get field id* method. The *get field id* method is responsible
     for returning a field handle that the *get field value* and *set
     field value* methods will use. Obtaining the field id requires
     knowing the declaring type, the name of the field, and the
     [JNI type signature](#JNI_Type_Signatures) of the field.
 
-1.  The *get field value* methods. These methods require the field
+1. The *get field value* methods. These methods require the field
     handle and are responsible for reading the field's value from Java.
     The method to use depends upon the field's type.
 
-1.  The *set field value* methods. These methods require the field
+1. The *set field value* methods. These methods require the field
     handle and are responsible for writing the field's value within
     Java. The method to use depends upon the field's type.
 
@@ -440,9 +440,9 @@ property.
 
 Method invocation is a two-step process:
 
-1.  The  *get method id* for the method to invoke. The  *get method id* method is responsible for returning a method handle that the method invocation methods will use. Obtaining the method id requires knowing the declaring type, the name of the method, and the  [JNI type signature](#JNI_Type_Signatures) of the method.
+1. The  *get method id* for the method to invoke. The  *get method id* method is responsible for returning a method handle that the method invocation methods will use. Obtaining the method id requires knowing the declaring type, the name of the method, and the  [JNI type signature](#JNI_Type_Signatures) of the method.
 
-1.  Invoke the method.
+1. Invoke the method.
 
 Just as with fields, the methods to use to get the method id and invoke the
 method differ between static methods and instance methods.
@@ -561,15 +561,15 @@ When subclassing `Java.Lang.Object`, an additional semantic comes into
 play: a `Java.Lang.Object` instance maintains a global reference to a
 Java instance through the `Java.Lang.Object.Handle` property.
 
-1.  The `Java.Lang.Object` default constructor will allocate a Java
+1. The `Java.Lang.Object` default constructor will allocate a Java
     instance.
 
-1.  If the type has a `RegisterAttribute` , and
+1. If the type has a `RegisterAttribute` , and
     `RegisterAttribute.DoNotGenerateAcw` is `true` , then an instance
     of the `RegisterAttribute.Name` type is created through its default
     constructor.
 
-1.  Otherwise, the
+1. Otherwise, the
     [Android Callable Wrapper](~/android/platform/java-integration/android-callable-wrappers.md)
     (ACW) corresponding to `this.GetType` is instantiated
     through its default constructor. Android Callable Wrappers are
@@ -587,11 +587,11 @@ contains a default constructor and/or no other constructor needs to be
 invoked. Otherwise, a constructor must be provided which performs the
 following actions:
 
-1.  Invoking the [Java.Lang.Object(IntPtr, JniHandleOwnership)](https://developer.xamarin.com/api/constructor/Java.Lang.Object.Object/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
+1. Invoking the [Java.Lang.Object(IntPtr, JniHandleOwnership)](https://developer.xamarin.com/api/constructor/Java.Lang.Object.Object/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
     instead of the default `Java.Lang.Object` constructor. This is
     needed to avoid creating a new Java instance.
 
-1.  Check the value of [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/)
+1. Check the value of [Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/)
     before creating any Java instances. The `Object.Handle` property
     will have a value other than `IntPtr.Zero` if an Android Callable
     Wrapper was constructed in Java code, and the class binding is
@@ -604,13 +604,13 @@ following actions:
     `Object.Handle` property being set to the Java instance prior to
     constructor execution.
 
-1.  If the current runtime type is not the same as the declaring type,
+1. If the current runtime type is not the same as the declaring type,
     then an instance of the corresponding Android Callable Wrapper must
     be created, and use [Object.SetHandle](https://developer.xamarin.com/api/member/Java.Lang.Object.SetHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership))
     to store the handle returned by
     [JNIEnv.CreateInstance](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CreateInstance/).
 
-1.  If the current runtime type is the same as the declaring type, then
+1. If the current runtime type is the same as the declaring type, then
     invoke the Java constructor and use
     [Object.SetHandle](https://developer.xamarin.com/api/member/Java.Lang.Object.SetHandle/(System.IntPtr%2cAndroid.Runtime.JniHandleOwnership))
     to store the handle returned by `JNIEnv.NewInstance` .
@@ -744,9 +744,9 @@ Binding `virtual` methods to permit overriding by subclasses requires
 several things that need to be done which fall into the following two
 categories:
 
-1.  **Method Binding**
+1. **Method Binding**
 
-1.  **Method Registration**
+1. **Method Registration**
 
 
 #### Method Binding
@@ -853,11 +853,11 @@ Recall that `Adder.Add` had a `[Register]` custom attribute:
 The `[Register]` custom attribute constructor accepts three
 values:
 
-1.  The name of the Java method, `"add"` in this case.
+1. The name of the Java method, `"add"` in this case.
 
-1.  The JNI Type Signature of the method, `"(II)I"` in this case.
+1. The JNI Type Signature of the method, `"(II)I"` in this case.
 
-1.  The *connector method* , `GetAddHandler` in this case.
+1. The *connector method* , `GetAddHandler` in this case.
     Connector methods will be discussed later.
 
 
@@ -1029,11 +1029,11 @@ public class Adder : Java.Lang.Object {
 
 When writing a type that matches the following criteria:
 
-1.  Subclasses `Java.Lang.Object`
+1. Subclasses `Java.Lang.Object`
 
-1.  Has a `[Register]` custom attribute
+1. Has a `[Register]` custom attribute
 
-1.  `RegisterAttribute.DoNotGenerateAcw` is `true`
+1. `RegisterAttribute.DoNotGenerateAcw` is `true`
 
 
 Then for GC interaction the type *must not* have any fields which may
@@ -1054,11 +1054,11 @@ If the type must contain an instance field that can refer to a
 Binding `abstract` methods is largely identical to binding virtual
 methods. There are only two differences:
 
-1.  The abstract method is abstract. It still retains the `[Register]`
+1. The abstract method is abstract. It still retains the `[Register]`
     attribute and the associated Method Registration, the Method
     Binding is just moved to the `Invoker` type.
 
-1.  A non- `abstract` `Invoker` type is created which subclasses the
+1. A non- `abstract` `Invoker` type is created which subclasses the
     abstract type. The `Invoker` type must override all abstract
     methods declared in the base class, and the overridden
     implementation is the Method Binding implementation, though the
@@ -1576,15 +1576,15 @@ specified type.
 
 The type `T` must fulfill the following requirements:
 
-1.  `T` must be a reference type.
+1. `T` must be a reference type.
 
-1.  `T` must implement the `IJavaObject` interface.
+1. `T` must implement the `IJavaObject` interface.
 
-1.  If `T` is not an abstract class or interface, then `T` must provide
+1. If `T` is not an abstract class or interface, then `T` must provide
     a constructor with the parameter types `(IntPtr,
     JniHandleOwnership)` .
 
-1.  If `T` is an abstract class or an interface, there *must* be an
+1. If `T` is an abstract class or an interface, there *must* be an
     *invoker* available for `T` . An invoker is a non-abstract type
     that inherits `T` or implements `T` , and has the same name as `T`
     with an Invoker suffix. For example, if T is the interface
@@ -2053,11 +2053,11 @@ Simplified type references can only be used in
 [JNIEnv.FindClass(string)](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.FindClass/(System.String)).
 There are two ways to derive a simplified type reference:
 
-1.  From a fully-qualified Java name, replace every `'.'` within
+1. From a fully-qualified Java name, replace every `'.'` within
     the package name and before the type name with `'/'` , and
     every `'.'` within a type name with `'$'` .
 
-1.  Read the output of `'unzip -l android.jar | grep JavaName'` .
+1. Read the output of `'unzip -l android.jar | grep JavaName'` .
 
 
 Either of the two will result in the Java type

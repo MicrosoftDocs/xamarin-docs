@@ -105,25 +105,25 @@ recycling process illustrated in the following figure:
 
 [![Diagram illustrating the six steps of view recycling](parts-and-functionality-images/02-view-recycling-sml.png)](parts-and-functionality-images/02-view-recycling.png#lightbox)
 
-1.  When a view scrolls out of sight and is no longer displayed, it
+1. When a view scrolls out of sight and is no longer displayed, it
     becomes a *scrap view*.
 
-2.  The scrap view is placed in a pool and becomes a *recycle view*.
+2. The scrap view is placed in a pool and becomes a *recycle view*.
     This pool is a cache of views that display the same type of data.
 
-3.  When a new item is to be displayed, a view is taken from the recycle
+3. When a new item is to be displayed, a view is taken from the recycle
     pool for reuse. Because this view must be re-bound by the adapter
     before being displayed, it is called a *dirty view*.
 
-4.  The dirty view is recycled: the adapter locates the data
+4. The dirty view is recycled: the adapter locates the data
     for the next item to be displayed and copies this data to
     the views for this item. References for these views are
     retrieved from the view holder associated with the recycled view.
 
-5.  The recycled view is added to the list of items in the `RecyclerView`
+5. The recycled view is added to the list of items in the `RecyclerView`
     that are about to go on-screen.
 
-6.  The recycled view goes on-screen as the user scrolls the `RecyclerView`
+6. The recycled view goes on-screen as the user scrolls the `RecyclerView`
     to the next item in the list. Meanwhile, another view scrolls out
     of sight and is recycled according to the above steps.
 
@@ -185,9 +185,9 @@ holder instance that caches the view references for that item. To
 create a view holder, use the following steps to define a class to
 hold the exact set of views per item:
 
-1.  Subclass `RecyclerView.ViewHolder`.
-2.  Implement a constructor that looks up and stores the view references.
-3.  Implement properties that the adapter can use to access these references.
+1. Subclass `RecyclerView.ViewHolder`.
+2. Implement a constructor that looks up and stores the view references.
+3. Implement properties that the adapter can use to access these references.
 
 A detailed example of a `ViewHolder` implementation is presented in
 [A Basic RecyclerView Example](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).

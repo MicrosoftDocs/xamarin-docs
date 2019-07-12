@@ -30,14 +30,14 @@ To include the SQLite.NET library in a Xamarin app, add the following NuGet pack
 
 Once you have the SQLite.NET library available, follow these three steps to use it to access a database:
 
-1.  **Add a using statement** &ndash; Add the following statement to the C#
+1. **Add a using statement** &ndash; Add the following statement to the C#
     files where data access is required:
 
     ```csharp
     using SQLite;
     ```
 
-2.  **Create a Blank Database** &ndash; A database reference can be
+2. **Create a Blank Database** &ndash; A database reference can be
     created by passing the file path the SQLiteConnection class
     constructor. You do not need to check if the file already exists
     &ndash; it will automatically be created if required, otherwise the
@@ -49,7 +49,7 @@ Once you have the SQLite.NET library available, follow these three steps to use 
     var db = new SQLiteConnection (dbPath);
     ```
 
-3.  **Save Data** &ndash; Once you have created a SQLiteConnection
+3. **Save Data** &ndash; Once you have created a SQLiteConnection
     object, database commands are executed by calling its methods, such
     as CreateTable and Insert like this:
 
@@ -58,7 +58,7 @@ Once you have the SQLite.NET library available, follow these three steps to use 
     db.Insert (newStock); // after creating the newStock object
     ```
 
-4.  **Retrieve Data** &ndash; To retrieve an object (or a list of
+4. **Retrieve Data** &ndash; To retrieve an object (or a list of
     objects) use the following syntax:
 
     ```csharp
@@ -82,11 +82,11 @@ The following code sample shows an entire database interaction using
 the SQLite.NET library to encapsulate the underlying database access.
 It shows:
 
-1.  Creating the database file
+1. Creating the database file
 
-2.  Inserting some data by creating objects and then saving them
+2. Inserting some data by creating objects and then saving them
 
-3.  Querying the data
+3. Querying the data
 
 You'll need to include these namespaces:
 
@@ -281,7 +281,7 @@ steps. If the call to `SqliteConnection.SetConfig` produces a SQLite
 exception such as `library used incorrectly`, then you must use the
 following workaround:
 
-1.  Link to the native **libsqlite.so** library so that the
+1. Link to the native **libsqlite.so** library so that the
    `sqlite3_shutdown` and `sqlite3_initialize` APIs are made
     available to the app:
 
@@ -293,7 +293,7 @@ following workaround:
     internal static extern int sqlite3_initialize();
     ```
 
-2.  At the very beginning of the `OnCreate` method, add this code
+2. At the very beginning of the `OnCreate` method, add this code
     to shutdown SQLite, configure it for **Serialized** mode, and
     reinitialize SQLite:
 

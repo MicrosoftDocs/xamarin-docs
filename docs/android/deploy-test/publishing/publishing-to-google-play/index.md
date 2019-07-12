@@ -48,20 +48,20 @@ for the distribution of applications.
 To publish applications on Google play, it is necessary to have a
 publisher account. To sign up for a publisher account follow these steps:
 
-1.  Visit the [Google Play Developer Console](https://play.google.com/apps/publish).
-1.  Enter basic information about your developer identity.
-1.  Read and accept the Developer Distribution Agreement for your locale.
-1.  Pay the $25 USD registration fee.
-1.  Confirm verification by e-mail.
-1.  After the account has been created, it is possible to publish applications using Google Play.
+1. Visit the [Google Play Developer Console](https://play.google.com/apps/publish).
+1. Enter basic information about your developer identity.
+1. Read and accept the Developer Distribution Agreement for your locale.
+1. Pay the $25 USD registration fee.
+1. Confirm verification by e-mail.
+1. After the account has been created, it is possible to publish applications using Google Play.
 
 
 Google Play does not support all countries in the world. The most up to date
 lists of countries can be found in the following links:
 
-1.  [Supported Locations for Developer &amp; Merchant Registration](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; This is a list of all countries where developers may register as merchants and sell paid applications.
+1. [Supported Locations for Developer &amp; Merchant Registration](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; This is a list of all countries where developers may register as merchants and sell paid applications.
 
-1.  [Supported Locations for distribution to Google Play users](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; This is a list of all countries where applications may be distributed.
+1. [Supported Locations for distribution to Google Play users](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; This is a list of all countries where applications may be distributed.
 
 
 
@@ -93,15 +93,15 @@ appealing and meaningful.
 
 Tips for Launcher Icons:
 
-1.  **Simple and uncluttered**&ndash; Launcher icons should be kept
+1. **Simple and uncluttered**&ndash; Launcher icons should be kept
     simple and uncluttered. This means excluding the name of the
     application from the icon. Simpler icons will be more memorable,
     and will be easier to distinguish at the smaller sizes.
 
-1.  **Icons should not be thin**&ndash; Overly thin icons will not
+1. **Icons should not be thin**&ndash; Overly thin icons will not
     stand out well on all backgrounds.
 
-1.  **Use the alpha channel**&ndash; Icons should make use of the
+1. **Use the alpha channel**&ndash; Icons should make use of the
     alpha channel, and should not be full-framed images.
 
 
@@ -113,9 +113,9 @@ application icon. It is only used by Google Play, and does not replace the
 application launcher icon. The specifications for the high-resolution icon
 are:
 
-1.  32-bit PNG with an alpha channel
-1.  512 x 512 pixels
-1.  Maximum size of 1024KB
+1. 32-bit PNG with an alpha channel
+1. 512 x 512 pixels
+1. Maximum size of 1024KB
 
 The [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
 is a helpful tool for creating suitable launcher icons and the
@@ -131,8 +131,8 @@ Google Play.
 
 The specs for screen shots are:
 
-1.  24 bit PNG or JPG with no alpha channel
-1.  320w x 480h or 480w x 800h or 480w x 854h. Landscaped images will be cropped.
+1. 24 bit PNG or JPG with no alpha channel
+1. 320w x 480h or 480w x 800h or 480w x 854h. Landscaped images will be cropped.
 
 
 
@@ -140,8 +140,8 @@ The specs for screen shots are:
 
 This is an optional image used by Google Play:
 
-1.  It is a 180w x 120h 24 bit PNG or JPG with no alpha channel.
-1.  No border in art.
+1. It is a 180w x 120h 24 bit PNG or JPG with no alpha channel.
+1. No border in art.
 
 
 
@@ -150,9 +150,9 @@ This is an optional image used by Google Play:
 Used by the featured section of Google Play. This graphic may be displayed
 alone without an application icon.
 
-1.  1024w x 500h PNG or JPG with no alpha channel and no transparency.
-1.  All of the important content should be within a frame of 924x500. Pixels outside of this frame may be cropped for stylistic purposes.
-1.  This graphic may be scaled down: use large text and keep graphics simple.
+1. 1024w x 500h PNG or JPG with no alpha channel and no transparency.
+1. All of the important content should be within a frame of 924x500. Pixels outside of this frame may be cropped for stylistic purposes.
+1. This graphic may be scaled down: use large text and keep graphics simple.
 
 
 

@@ -13,9 +13,9 @@ ms.date: 03/18/2017
 
 Background refresh is the process of waking an application that is suspended or not running, and updating it with new content. iOS provides three options for refreshing content in the background:
 
-1.  *Region Monitoring* and  *Significant Location Changes Service* - Location-aware APIs trigger background updates based on changes in the user's location. These APIs can be used with discretion to refresh content in non-location-based iOS 6 applications, where other options are not available.
-1.  *Background Fetch (iOS 7+)* - A temporal approach to refreshing  *non-critical* content that updates  *frequently* .
-1.  *Remote Notifications (iOS 7+)* - Applications that receive push notifications can use the notifications to trigger background content refreshes. This method can be used to update with  *important, time-sensitive* content that updates  *sporadically* .
+1. *Region Monitoring* and  *Significant Location Changes Service* - Location-aware APIs trigger background updates based on changes in the user's location. These APIs can be used with discretion to refresh content in non-location-based iOS 6 applications, where other options are not available.
+1. *Background Fetch (iOS 7+)* - A temporal approach to refreshing  *non-critical* content that updates  *frequently* .
+1. *Remote Notifications (iOS 7+)* - Applications that receive push notifications can use the notifications to trigger background content refreshes. This method can be used to update with  *important, time-sensitive* content that updates  *sporadically* .
 
 
 The following sections cover the basics of these options.
@@ -24,8 +24,8 @@ The following sections cover the basics of these options.
 
 iOS provides two location-aware APIs with backgrounding capabilities:
 
-1.  *Region Monitoring* is the process of setting up regions with boundaries, and waking the device when the user enters or exits a region. Regions are circular and can be of varying size. When the user crosses a region boundary, the device will wake up to handle the event, usually by firing a notification or kicking off a task. Region Monitoring requires GPS, and increases battery and data usage.
-1.  The  *Significant Location Changes Service* is a simpler, power-conserving option available for devices with cellular radios. An application listening for significant location changes will be notified when the device switches cell towers. This service can be used to wake a suspended or terminated application, and provides an opportunity to check for new content in the background. Background activity is limited to about 10 seconds, unless paired with a  [Background Task](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md) .
+1. *Region Monitoring* is the process of setting up regions with boundaries, and waking the device when the user enters or exits a region. Regions are circular and can be of varying size. When the user crosses a region boundary, the device will wake up to handle the event, usually by firing a notification or kicking off a task. Region Monitoring requires GPS, and increases battery and data usage.
+1. The  *Significant Location Changes Service* is a simpler, power-conserving option available for devices with cellular radios. An application listening for significant location changes will be notified when the device switches cell towers. This service can be used to wake a suspended or terminated application, and provides an opportunity to check for new content in the background. Background activity is limited to about 10 seconds, unless paired with a  [Background Task](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md) .
 
 
 An application does not need the location `UIBackgroundMode` to use these location-aware APIs. Because iOS doesn't track the types of tasks that can run when the device is woken by changes in the user's location, these APIs provide a work-around for updating content in the background on iOS 6. *Keep in mind that triggering background updates with location-based APIs will draw on device resources, and may confuse users who don't understand why an application requires access to their location*. Use discretion when implementing Region Monitoring or Significant Location Changes for background processing in applications that aren't already using the location APIs.
@@ -67,9 +67,9 @@ public override void PerformFetch (UIApplication application, Action<UIBackgroun
 
 When we're done updating content, we let the OS know by calling the completion handler with the appropriate status. iOS offers three options for completion handler status:
 
-1.  `UIBackgroundFetchResult.NewData` - Called when new content has been fetched, and the application has been updated.
-1.  `UIBackgroundFetchResult.NoData` - Called when the fetch for new content went through, but no content is available.
-1.  `UIBackgroundFetchResult.Failed` - Useful for error handling, this is called when the fetch was unable to go through.
+1. `UIBackgroundFetchResult.NewData` - Called when new content has been fetched, and the application has been updated.
+1. `UIBackgroundFetchResult.NoData` - Called when the fetch for new content went through, but no content is available.
+1. `UIBackgroundFetchResult.Failed` - Useful for error handling, this is called when the fetch was unable to go through.
 
 
 Applications using Background Fetch can make calls to update the UI from the background. When the user opens the app, the UI will be up to date and displaying new content. This will also update the application's App Switcher snapshot, so the user can see when the application has new content.
@@ -82,9 +82,9 @@ Applications using Background Fetch can make calls to update the UI from the bac
 
 In the sample code above, we let the OS decide how often to fetch new content by setting the minimum fetch interval to `BackgroundFetchIntervalMinimum`. iOS offers three options for the fetch interval:
 
-1.  `BackgroundFetchIntervalNever` - Tell the system to never fetch new content. Use this to turn off fetching in certain situations, such as when the user is not signed in. This is the default value for the fetch interval. 
-1.  `BackgroundFetchIntervalMinimum` - Let the system decide how often to fetch based on user patterns, battery life, data usage, and the needs of other applications.
-1.  `BackgroundFetchIntervalCustom` - If you know how often an application's content gets updated, you can specify a "sleep" interval after every fetch, during which the application will be prevented from fetching new content. Once that interval is up, the system will determine when to fetch content.
+1. `BackgroundFetchIntervalNever` - Tell the system to never fetch new content. Use this to turn off fetching in certain situations, such as when the user is not signed in. This is the default value for the fetch interval. 
+1. `BackgroundFetchIntervalMinimum` - Let the system decide how often to fetch based on user patterns, battery life, data usage, and the needs of other applications.
+1. `BackgroundFetchIntervalCustom` - If you know how often an application's content gets updated, you can specify a "sleep" interval after every fetch, during which the application will be prevented from fetching new content. Once that interval is up, the system will determine when to fetch content.
 
 
 Both `BackgroundFetchIntervalMinimum` and `BackgroundFetchIntervalCustom` rely on the system to schedule fetches. This interval is dynamic, adapting to the device's needs as well as the individual user's habits. For example, if one user checks an application every morning, and another checks every hour, iOS will ensure the content is up to date for both users every time they open the application.

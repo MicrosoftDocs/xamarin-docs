@@ -125,14 +125,14 @@ To get started using Android Marshmallow with Xamarin.Android, you must
 download and install the latest tools and SDK packages before you can 
 create an Android Marshmallow project: 
 
-1.  Install the latest Xamarin updates from the **Stable** channel. 
+1. Install the latest Xamarin updates from the **Stable** channel. 
 
-2.  Install the Android 6.0 Marshmallow SDK packages and tools.
+2. Install the Android 6.0 Marshmallow SDK packages and tools.
 
-3.  Create a new Xamarin.Android project that targets Android 6.0 
+3. Create a new Xamarin.Android project that targets Android 6.0 
     Marshmallow (API Level 23). 
 
-4.  Configure an emulator or device for Android Marshmallow.
+4. Configure an emulator or device for Android Marshmallow.
 
 Each of these steps is explained in the following sections:
 
@@ -238,8 +238,8 @@ This sample app demonstrates the following:
 
 To use this sample app:
 
-1.  Tap the **Camera** or **Contacts** buttons to display a permissions request dialog.
-2.  Grant permission to view Camera or Contacts fragments.
+1. Tap the **Camera** or **Contacts** buttons to display a permissions request dialog.
+2. Grant permission to view Camera or Contacts fragments.
 
 For more information about the new runtime permissions features
 in Android Marshmallow, see 
@@ -275,8 +275,8 @@ fingerprints to authenticate a user in your app:
 
 To use this sample app:
 
-1.  Touch the **Purchase** button to open a fingerprint authentication dialog.
-2.  Scan in your registered fingerprint to authenticate.
+1. Touch the **Purchase** button to open a fingerprint authentication dialog.
+2. Scan in your registered fingerprint to authenticate.
 
 Note that this sample app requires a device with a fingerprint reader.
 This app does not store your fingerprint (or your password).
@@ -316,8 +316,8 @@ Xamarin provides a sample app that illustrates how to use device credentials
 
 To use this sample app:
 
-1.  Setup a secure lock screen on your device (**Secure > Security > Screenlock**).
-2.  Tap the **Purchase** button and confirm the secure lock screen credentials.
+1. Setup a secure lock screen on your device (**Secure > Security > Screenlock**).
+2. Tap the **Purchase** button and confirm the secure lock screen credentials.
 
 
 

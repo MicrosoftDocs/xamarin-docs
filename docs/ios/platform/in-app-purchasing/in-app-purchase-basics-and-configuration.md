@@ -144,9 +144,9 @@ already added:
 
 The process to add new products has two steps:
 
-1.   Choose the product type: 
+1. Choose the product type: 
 	[![](in-app-purchase-basics-and-configuration-images/image8.png "Choose the product type")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
+2. Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
 	[![](in-app-purchase-basics-and-configuration-images/image9.png "Entering the products attributes")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 The fields required for each in-app purchase product are described
@@ -191,11 +191,11 @@ users, but it is used to reference the product in your application code.
 
 There are five types of in-app purchase product you can offer:
 
-1.  **Consumable** – Things that are ‘used up’, such as in-game currency that the player can spend. If the user does a backup/restore or otherwise has their device refreshed, a consumable transaction does NOT get restored as well (which would effectively give the player the same benefit over again). Application code must be sure to provide the ‘consumable item’ as soon as the transaction is completed.
-1.  **Non-consumable** – Products that the user ‘owns’ once purchased, such as a digital magazine issue or a game level.
-1.  **Auto-Renewable Subscriptions** – Just like a real-world magazine subscription, at the end of the subscription period Apple automatically charges the customer again and extends the subscription term, forever or until the customer explicitly cancels it. This is the preferred payment method for Newsstand apps (in fact, apps MUST support this payment method to be approved for Newsstand distribution).
-1.  **Free Subscription** – Can only be offered in Newsstand-enabled apps, and allows the customer to access subscription content on all their devices. Free subscriptions never expire.
-1.  **Non-Renewing Subscription** – Should be used to sell time-limited access to static content, such as one month’s access to a photo archive.
+1. **Consumable** – Things that are ‘used up’, such as in-game currency that the player can spend. If the user does a backup/restore or otherwise has their device refreshed, a consumable transaction does NOT get restored as well (which would effectively give the player the same benefit over again). Application code must be sure to provide the ‘consumable item’ as soon as the transaction is completed.
+1. **Non-consumable** – Products that the user ‘owns’ once purchased, such as a digital magazine issue or a game level.
+1. **Auto-Renewable Subscriptions** – Just like a real-world magazine subscription, at the end of the subscription period Apple automatically charges the customer again and extends the subscription term, forever or until the customer explicitly cancels it. This is the preferred payment method for Newsstand apps (in fact, apps MUST support this payment method to be approved for Newsstand distribution).
+1. **Free Subscription** – Can only be offered in Newsstand-enabled apps, and allows the customer to access subscription content on all their devices. Free subscriptions never expire.
+1. **Non-Renewing Subscription** – Should be used to sell time-limited access to static content, such as one month’s access to a photo archive.
 
 
  *This document currently covers only the first two product types (Consumable and Non-Consumable).*

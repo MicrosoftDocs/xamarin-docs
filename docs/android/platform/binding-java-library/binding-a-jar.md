@@ -177,9 +177,9 @@ at the following location: **JarBinding/bin/Debug/JarBinding.dll**
 
 To consume this .DLL in your Xamarin.Android app, do the following:
 
-1.  Add a reference to the Bindings Library.
+1. Add a reference to the Bindings Library.
 
-2.  Make calls into the .JAR through the Managed Callable Wrappers. 
+2. Make calls into the .JAR through the Managed Callable Wrappers. 
 
 In the following steps, we'll create a minimal app that uses the 
 Bindings Library to download and display an image in an `ImageView`; 

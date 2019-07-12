@@ -193,7 +193,7 @@ steps:
 
 # [Visual Studio](#tab/windows)
 
-1.  Open a Command Prompt window and set `JAVA_HOME` to the location of
+1. Open a Command Prompt window and set `JAVA_HOME` to the location of
     the Java SDK on your computer. For a typical Xamarin installation,
     you can use the following command:
 
@@ -201,7 +201,7 @@ steps:
     setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
     ```
 
-2.  Add the location of the Android SDK `bin` folder to your `PATH`.
+2. Add the location of the Android SDK `bin` folder to your `PATH`.
     For a typical Xamarin installation, you can use the following
     command:
 
@@ -209,7 +209,7 @@ steps:
     setx PATH "%PATH%;C:\Program Files (x86)\Android\android-sdk\tools\bin"
     ```
 
-3.  Close the Command Prompt window and open a new Command Prompt
+3. Close the Command Prompt window and open a new Command Prompt
     window. Create a new virtual device by using the
     [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
     command. For example, to create an AVD named **AVD-Oreo-8.0** using
@@ -219,7 +219,7 @@ steps:
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-4.  When you are prompted with **Do you wish to create a custom
+4. When you are prompted with **Do you wish to create a custom
     hardware profile
     [no]** you can enter **no** and accept the default hardware
     profile. If you say **yes**, **avdmanager** will prompt you with a
@@ -232,7 +232,7 @@ included in the device pull-down menu:
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  Open a **Terminal** window and change to the location of the
+1. Open a **Terminal** window and change to the location of the
     Android SDK tools directory on your Mac. For a typical Xamarin
     installation, you can use the following command:
 
@@ -240,7 +240,7 @@ included in the device pull-down menu:
     cd ~/Library/Developer/Xamarin/android-sdk-macosx/tools/bin
     ```
 
-2.  Create a new virtual device by using the
+2. Create a new virtual device by using the
     [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
     command. For example, to create an AVD named **AVD-Oreo-8.0** using
     the x86 system image for API level 26, use the following command:
@@ -249,7 +249,7 @@ included in the device pull-down menu:
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-3.  When you are prompted with **Do you wish to create a custom
+3. When you are prompted with **Do you wish to create a custom
     hardware profile
     [no]** you can enter **no** and accept the default hardware
     profile. If you say **yes**, **avdmanager** will prompt you with a
@@ -376,18 +376,18 @@ When your app needs a font, you create a `FontsRequest` object
 `FontsContract` method to download the font. The following steps
 describe the font download process in more detail:
 
-1.  Instantiate a [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) object. 
+1. Instantiate a [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) object. 
 
-2.  Subclass and instantiate 
+2. Subclass and instantiate 
     [FontsContract.FontRequestCallback](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html).
 
-3.  Implement the [FontRequestCallback.OnTypeFaceRetrieved](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRetrieved%28android.graphics.Typeface%29)  method, which is used to
+3. Implement the [FontRequestCallback.OnTypeFaceRetrieved](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRetrieved%28android.graphics.Typeface%29)  method, which is used to
     handle completion of the font request.
 
-4.  Implement the [FontRequestCallback.OnTypeFaceRequestFailed](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRequestFailed%28int%29) method, which is used to inform your app of any errors that
+4. Implement the [FontRequestCallback.OnTypeFaceRequestFailed](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRequestFailed%28int%29) method, which is used to inform your app of any errors that
     take place during the font request process.
 
-5.  Call the [FontsContract.RequestFonts](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) method
+5. Call the [FontsContract.RequestFonts](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) method
     to retrieve the font from the font provider. 
 
 When you call the `RequestFonts` method, it first checks to see if the
@@ -492,13 +492,13 @@ could impair the performance of a video-intensive app running in the
 foreground. As a result, Android Oreo places the following restrictions on
 apps that are not directly interacting with the user:
 
-1.  **Background Service Limitations** &ndash; When an app is running
+1. **Background Service Limitations** &ndash; When an app is running
     in the background, it has a window of several minutes in which it is
     still allowed to create and use services. At the end of that window,
     Android stops the app's background service and treats it as
     being _idle_.
 
-2.  **Broadcast Limitations** &ndash; Android 7.0 (API 25) placed limitations
+2. **Broadcast Limitations** &ndash; Android 7.0 (API 25) placed limitations
     on broadcasts that an app registers to receive. Android Oreo makes
     these limitations more stringent. For example, Android Oreo apps can no
     longer register broadcast receivers for implicit broadcasts in their

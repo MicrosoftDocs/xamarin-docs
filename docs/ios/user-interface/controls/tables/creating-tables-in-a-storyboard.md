@@ -76,19 +76,19 @@ Once the storyboard is complete, code can be added to make everything work.
 The first change to the storyboard is deleting the existing Detail view and
 replacing it with a UITableViewController. Follow these steps:
 
-1.  Select the bar at the bottom of the View Controller and delete it.
-2.  Drag a **Navigation Controller** and a **Table View Controller** onto the Storyboard from the Toolbox. 
-3.  Create a segue from the Root View Controller to the second Table View Controller that was just added. To create the segue, Control+drag *from the Detail cell* to the newly added UITableViewController. Choose the option  **Show** under  **Segue Selection**. 
-4.  Select the new segue you created and give it an identifier to reference this segue in code. Click on the segue and enter `TaskSegue` for the  **Identifier** in the  **Properties Pad**, like this:    
+1. Select the bar at the bottom of the View Controller and delete it.
+2. Drag a **Navigation Controller** and a **Table View Controller** onto the Storyboard from the Toolbox. 
+3. Create a segue from the Root View Controller to the second Table View Controller that was just added. To create the segue, Control+drag *from the Detail cell* to the newly added UITableViewController. Choose the option  **Show** under  **Segue Selection**. 
+4. Select the new segue you created and give it an identifier to reference this segue in code. Click on the segue and enter `TaskSegue` for the  **Identifier** in the  **Properties Pad**, like this:    
   [![Naming segue in property panel](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
 
 5. Next, configure the two Table Views by selecting them and using the Properties Pad. Make sure to select View and not View Controller – you can use the Document Outline to help with selection.
 
-6.  Change the Root View Controller to be  **Content: Dynamic Prototypes** (the View on the Design Surface will be labelled  **Prototype Content** ):
+6. Change the Root View Controller to be  **Content: Dynamic Prototypes** (the View on the Design Surface will be labelled  **Prototype Content** ):
 
     [![Setting the Content property to dynamic prototypes](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7.  Change the new **UITableViewController** to be  **Content: Static Cells**. 
+7. Change the new **UITableViewController** to be  **Content: Static Cells**. 
 
 
 8. The new UITableViewController must have its class name and

@@ -313,10 +313,10 @@ Location Service using a `LocationManager` and a
 
 To obtain the user's location using Android Location Service involves several steps:
 
-1.  Get a reference to the `LocationManager` service.
-2.  Implement the `ILocationListener` interface and handle events when the location changes.
-3.  Use the `LocationManager` to request location updates for a specified provider. The `ILocationListener` from the previous step will be used to receive callbacks from the `LocationManager`.
-4.  Stop location updates when the application it is no longer appropriate to receive updates.
+1. Get a reference to the `LocationManager` service.
+2. Implement the `ILocationListener` interface and handle events when the location changes.
+3. Use the `LocationManager` to request location updates for a specified provider. The `ILocationListener` from the previous step will be used to receive callbacks from the `LocationManager`.
+4. Stop location updates when the application it is no longer appropriate to receive updates.
 
 ### Location Manager
 

@@ -154,27 +154,27 @@ The best way to become familiar with Android Wear is to build and test
 your first app. The following list provides a recommended reading
 order to help you get up to speed quickly:
 
-1.  [Setup & Installation](~/android/wear/get-started/installation.md) provides 
+1. [Setup & Installation](~/android/wear/get-started/installation.md) provides 
     detailed instructions for installing and configuring your development 
     environment for building Xamarin.Android Wear apps. 
 
-2.  After you have installed the required packages and configured an 
+2. After you have installed the required packages and configured an 
     emulator or device, see 
     [Hello, Wear](~/android/wear/get-started/hello-wear.md) for 
     step-by-step instructions that explain how to create a small 
     Android Wear project that handles button clicks and displays a 
     click counter on the Wear device. 
 
-3.  [Deployment & Testing](~/android/wear/deploy-test/index.md) provides
+3. [Deployment & Testing](~/android/wear/deploy-test/index.md) provides
     more detailed information about configuring and deploying to emulators
     and devices, including instructions on how to deploy your app to a
     Wear device via Bluetooth.
 
-4.  [Working with Screen Sizes](~/android/wear/screen-sizes.md) 
+4. [Working with Screen Sizes](~/android/wear/screen-sizes.md) 
     explains how to preview and optimize your user interface for the various 
     available screen sizes on Wear devices. 
 
-5.  [Working with Packaging](~/android/wear/deploy-test/packaging.md) 
+5. [Working with Packaging](~/android/wear/deploy-test/packaging.md) 
     describes the steps for manually packaging Wear apps for distribution 
     on Google Play.
 

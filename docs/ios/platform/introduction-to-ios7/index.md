@@ -102,9 +102,9 @@ There are several different primitive behaviors available to trigger complex int
 
 Although there are many primitives, the general process for adding physics-based interactions to a view using UIKit Dynamics is consistent across behaviors:
 
-1.  Create a dynamic animator.
-1.  Create behavior(s).
-1.  Add behaviors to the dynamic animator.
+1. Create a dynamic animator.
+1. Create behavior(s).
+1. Add behaviors to the dynamic animator.
 
 
 ### Dynamics Example

@@ -74,7 +74,7 @@ states an Activity can go through during its lifetime:
 
 These states can be broken into 4 main groups as follows:
 
-1.  *Active or Running* &ndash; Activities are considered active or running
+1. *Active or Running* &ndash; Activities are considered active or running
     if they are in the foreground, also known as the top of the
     activity stack. This is considered the highest priority activity in
     Android, and as such will only be killed by the OS in extreme
@@ -82,7 +82,7 @@ These states can be broken into 4 main groups as follows:
     is available on the device as this could cause the UI to become
     unresponsive.
 
-1.  *Paused* &ndash; When the device goes to sleep, or an activity is still
+1. *Paused* &ndash; When the device goes to sleep, or an activity is still
     visible but partially hidden by a new, non-full-sized or
     transparent activity, the activity is considered paused. Paused
     activities are still alive, that is, they maintain all state and
@@ -92,7 +92,7 @@ These states can be broken into 4 main groups as follows:
     activity will satisfy the resource requirements needed to keep the
     Active/Running Activity stable and responsive.
 
-1.  *Stopped/Backgrounded* &ndash; Activities that are completely obscured by
+1. *Stopped/Backgrounded* &ndash; Activities that are completely obscured by
     another activity are considered stopped or in the background.
     Stopped activities still try to retain their state and member
     information for as long as possible, but stopped activities are
@@ -100,7 +100,7 @@ These states can be broken into 4 main groups as follows:
     such, the OS will kill activities in this state first to satisfy
     the resource requirements of higher priority activities.
 
-1.  *Restarted* &ndash; It is possible for an activity that is anywhere
+1. *Restarted* &ndash; It is possible for an activity that is anywhere
     from paused to stopped in the lifecycle to be removed from memory
     by Android. If the user navigates back to the activity it must be
     restarted, restored to its previously saved state, and then
@@ -273,8 +273,8 @@ public void OnPause()
 
 There are two possible lifecycle methods that will be called after `OnPause`:
 
-1.  `OnResume` will be called if the Activity is to be returned to the foreground.
-1.  `OnStop` will be called if the Activity is being placed in the background.
+1. `OnResume` will be called if the Activity is to be returned to the foreground.
+1. `OnStop` will be called if the Activity is being placed in the background.
 
 
 #### OnStop

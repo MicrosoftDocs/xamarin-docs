@@ -87,9 +87,9 @@ appropriate view controller.
 To implement the `UITabBarController` we need to do the
 following:
 
-1.  Set the base class of  `TabController` to  `UITabBarController` . 
-1.  Create  `UIViewController` instances to add to the  `TabController` . 
-1.  Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` . 
+1. Set the base class of  `TabController` to  `UITabBarController` . 
+1. Create  `UIViewController` instances to add to the  `TabController` . 
+1. Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` . 
 
 
 Add the following code to the `TabController` class to achieve

@@ -17,9 +17,9 @@ ms.date: 03/15/2018
 Xamarin.Android has a few places to look when tracking down various bugs.
 These include:
 
-1.  Diagnostic MSBuild output.
-2.  Device deployment logs.
-3.  Android Debug Log Output.
+1. Diagnostic MSBuild output.
+2. Device deployment logs.
+3. Android Debug Log Output.
 
 
 <a name="Diagnostic_MSBuild_Output" />
@@ -31,23 +31,23 @@ building and may contain some package deployment information.
 
 To enable diagnostic MSBuild output within Visual Studio:
 
-1.  Click  **Tools > Options...**
-2.  In the left-hand tree view, select  **Projects and Solutions > Build and Run**
-3.  In the right-hand panel, set the MSBuild build output verbosity dropdown to Diagnostic
-4.  Click **OK**
-5.  Clean and rebuild your package.
-6.  Diagnostic output is visible within the Output panel.
+1. Click  **Tools > Options...**
+2. In the left-hand tree view, select  **Projects and Solutions > Build and Run**
+3. In the right-hand panel, set the MSBuild build output verbosity dropdown to Diagnostic
+4. Click **OK**
+5. Clean and rebuild your package.
+6. Diagnostic output is visible within the Output panel.
 
 
 To enable diagnostic MSBuild output within Visual Studio for Mac/OS X:
 
-1.  Click  **Visual Studio for Mac > Preferences...**
-2.  In the left-hand tree view, select  **Projects > Build**
-3.  In the right-hand panel, set the Log verbosity drop-down to Diagnostic
-4.  Click **OK**
-5.  Restart Visual Studio for Mac
-6.  Clean and rebuild your package.
-7.  Diagnostic output is visible within the Errors Pad (**View > Pads > Errors** ), by clicking the Build Output button.
+1. Click  **Visual Studio for Mac > Preferences...**
+2. In the left-hand tree view, select  **Projects > Build**
+3. In the right-hand panel, set the Log verbosity drop-down to Diagnostic
+4. Click **OK**
+5. Restart Visual Studio for Mac
+6. Clean and rebuild your package.
+7. Diagnostic output is visible within the Errors Pad (**View > Pads > Errors** ), by clicking the Build Output button.
 
 
 
@@ -56,10 +56,10 @@ To enable diagnostic MSBuild output within Visual Studio for Mac/OS X:
 
 To enable device deployment logging within Visual Studio:
 
-1.  **Tools > Options...**>
-2.  In the left-hand tree view, select  **Xamarin > Android Settings**
-3.  In the right-hand panel, enable the [X]  **extension debug logging (writes monodroid.log to your desktop)** check box.
-4.  Log messages are written to the monodroid.log file on your desktop.
+1. **Tools > Options...**>
+2. In the left-hand tree view, select  **Xamarin > Android Settings**
+3. In the right-hand panel, enable the [X]  **extension debug logging (writes monodroid.log to your desktop)** check box.
+4. Log messages are written to the monodroid.log file on your desktop.
 
 
 Visual Studio for Mac always writes device deployment logs. FInding them is
@@ -459,9 +459,9 @@ Android packages have three requirements:
 
 Thus, imagine this scenario:
 
-1.  You build & deploy your app as a Debug app
-2.  You change the signing key, e.g. to use as a Release app (or because you don't like the default-provided Debug signing key)
-3.  You install your app without removing it first, e.g. Debug > Start Without Debugging within Visual Studio
+1. You build & deploy your app as a Debug app
+2. You change the signing key, e.g. to use as a Release app (or because you don't like the default-provided Debug signing key)
+3. You install your app without removing it first, e.g. Debug > Start Without Debugging within Visual Studio
 
 
 When this happens, package installation will fail with a
@@ -519,11 +519,11 @@ E/AndroidRuntime( 1710):        at java.lang.Runtime.loadLibrary(Runtime.java:36
 
 If so, there are two possible causes for this:
 
-1.  The .apk doesn't provide an ABI that the target device supports.
+1. The .apk doesn't provide an ABI that the target device supports.
     For example, the .apk only contains armeabi-v7a binaries, and the
     target device only supports armeabi.
 
-2.  An [Android bug](http://code.google.com/p/android/issues/detail?id=21670). If
+2. An [Android bug](http://code.google.com/p/android/issues/detail?id=21670). If
     this is the case, uninstall the app, cross your fingers, and
     reinstall the app.
 

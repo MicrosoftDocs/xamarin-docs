@@ -49,7 +49,7 @@ In certain situations, the Xamarin installer might automatically un-check the in
 
 ## Possible Fix 3: Try a fresh reinstall of Xamarin
 
-1.  From the Windows Control Panel, uninstall any of the following that are present:
+1. From the Windows Control Panel, uninstall any of the following that are present:
 
     *   Xamarin
 
@@ -61,40 +61,40 @@ In certain situations, the Xamarin installer might automatically un-check the in
 
     *   Xamarin for Visual Studio
 
-2.  In Explorer, delete any remaining files from the Xamarin Visual Studio extension folders (all versions, including both **Program Files** and **Program Files (x86)**):
+2. In Explorer, delete any remaining files from the Xamarin Visual Studio extension folders (all versions, including both **Program Files** and **Program Files (x86)**):
 
     `C:\Program Files*\Microsoft Visual Studio 1*.0\Common7\IDE\Extensions\Xamarin`
 
-3.  Also check in the "VirtualStore" directory to see if there might be any "overlay" copies of any of the extension directories:
+3. Also check in the "VirtualStore" directory to see if there might be any "overlay" copies of any of the extension directories:
 
     `%LOCALAPPDATA%\VirtualStore`
 
-4.  Open the registry editor (regedit).
+4. Open the registry editor (regedit).
 
-5.  Look for this key:
+5. Look for this key:
 
     _HKEY\_LOCAL\_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls_
 
-6.  Find and delete any entries that match this pattern:
+6. Find and delete any entries that match this pattern:
 
     _C:\Program Files\*\Microsoft Visual Studio 1\*.0\Common7\IDE\Extensions\Xamarin_
 
-7.  Look for this key:
+7. Look for this key:
 
     `HKEY\_CURRENT\_USER\Software\Microsoft\VisualStudio\1\*.0\ExtensionManager\PendingDeletions`
 
-8.  Delete any entries that look like they might be related to Xamarin. For example, here's one that used to cause trouble in older versions of Xamarin:
+8. Delete any entries that look like they might be related to Xamarin. For example, here's one that used to cause trouble in older versions of Xamarin:
 
     _Mono.VisualStudio.Shell,1.0_
 
-9.  Reboot.
+9. Reboot.
 
-10.  Reinstall the current stable version of Xamarin from [visualstudio.com](https://visualstudio.com/xamarin).
+10. Reinstall the current stable version of Xamarin from [visualstudio.com](https://visualstudio.com/xamarin).
 
 ## Possible Fix 4: Repair Visual Studio installation
 
-1.  Open the Windows **Programs and Features** Control Panel.
+1. Open the Windows **Programs and Features** Control Panel.
 
-2.  Right click the relevant Microsoft Visual Studio entry, and select **Change**
+2. Right click the relevant Microsoft Visual Studio entry, and select **Change**
 
-3.  Click the **Repair** button in the Visual Studio dialog that opens.
+3. Click the **Repair** button in the Visual Studio dialog that opens.

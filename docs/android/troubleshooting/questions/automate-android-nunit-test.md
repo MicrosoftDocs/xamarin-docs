@@ -29,7 +29,7 @@ adb shell am instrument
 
 The following steps explain this process:
 
-1.  Create a new file called **TestInstrumentation.cs**: 
+1. Create a new file called **TestInstrumentation.cs**: 
 
     ```cs 
     using System;
@@ -59,12 +59,12 @@ The following steps explain this process:
     [Xamarin.Android.NUnitLite.TestSuiteInstrumentation](https://developer.xamarin.com/api/type/Xamarin.Android.NUnitLite.TestSuiteInstrumentation/) 
     (from **Xamarin.Android.NUnitLite.dll**) is subclassed to create `TestInstrumentation`.
 
-2.  Implement the [TestInstrumentation](https://developer.xamarin.com/api/constructor/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.TestSuiteInstrumentation/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
+2. Implement the [TestInstrumentation](https://developer.xamarin.com/api/constructor/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.TestSuiteInstrumentation/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
     constructor and the 
     [AddTests](https://developer.xamarin.com/api/member/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.AddTests%28%29) 
     method. The `AddTests` method controls which tests are actually executed.
 
-3.  Modify the `.csproj` file to add **TestInstrumentation.cs**. For example:
+3. Modify the `.csproj` file to add **TestInstrumentation.cs**. For example:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -80,7 +80,7 @@ The following steps explain this process:
     </Project>
     ```
 
-4.  Use the following command to run the unit tests. Replace
+4. Use the following command to run the unit tests. Replace
     `PACKAGE_NAME` with the app's package name (the package name can be
     found in the app's `/manifest/@package` attribute located 
     in **AndroidManifest.xml**):
@@ -89,7 +89,7 @@ The following steps explain this process:
     adb shell am instrument -w PACKAGE_NAME/app.tests.TestInstrumentation
     ```
 
-5.  Optionally, you can modify the `.csproj` file to add the `RunTests`
+5. Optionally, you can modify the `.csproj` file to add the `RunTests`
     MSBuild target. This makes it possible to invoke the unit tests
     with a command like the following:
 

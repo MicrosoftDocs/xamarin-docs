@@ -239,10 +239,10 @@ root.
 Passes are signed with a private certificate that you generate in the iOS
 Provisioning Portal. The steps to sign the pass are:
 
-1.  Calculate a SHA1 hash for each file in the pass directory (do not include the  `manifest.json` or  `signature` file, neither of which should exist at this stage anyway).
-1.  Write  `manifest.json` as a JSON key/value list of each filename with its hash.
-1.  Use the certificate to sign the  `manifest.json` file and write the result to a file called  `signature` .
-1.  ZIP the everything up and give the resulting file a `.pkpass` file extension.
+1. Calculate a SHA1 hash for each file in the pass directory (do not include the  `manifest.json` or  `signature` file, neither of which should exist at this stage anyway).
+1. Write  `manifest.json` as a JSON key/value list of each filename with its hash.
+1. Use the certificate to sign the  `manifest.json` file and write the result to a file called  `signature` .
+1. ZIP the everything up and give the resulting file a `.pkpass` file extension.
 
 
 Because your private key is required to sign the pass, this process should
@@ -259,8 +259,8 @@ and create your first pass.
 
 In order for a pass to enter the App Store, it must be linked to a developer account. This requires two steps:
 
-1.  The pass must be registered using a unique identifier, called the Pass Type ID.
-1.  A valid Certificate must be generated to sign the pass with the developer's digital signature.
+1. The pass must be registered using a unique identifier, called the Pass Type ID.
+1. A valid Certificate must be generated to sign the pass with the developer's digital signature.
 
 To create a Pass Type ID do the following.
 
@@ -271,17 +271,17 @@ The first step is to set up a Pass Type ID for each different _type_ of pass to 
 1. In the  [Certificates, Identifiers, and Profiles section of the iOS Provisioning Portal](https://developer.apple.com/account/overview.action), navigate to  **Identifiers** and select  **Pass Type IDs** . Then select the **+** button to create a new pass type:
   [![](passkit-images/passid.png "Create a new pass type")](passkit-images/passid.png#lightbox)
 
-2.   Provide a **Description** (name) and **Identifier** (unique string) for the Pass. Note that all Pass Type IDs must begin with the string `pass.` In this example we use `pass.com.xamarin.coupon.banana` :
+2. Provide a **Description** (name) and **Identifier** (unique string) for the Pass. Note that all Pass Type IDs must begin with the string `pass.` In this example we use `pass.com.xamarin.coupon.banana` :
   [![](passkit-images/register.png "Provide a Description and Identifier")](passkit-images/register.png#lightbox)
 
 
-3.   Confirm the Pass ID by pressing the **Register** button.
+3. Confirm the Pass ID by pressing the **Register** button.
 
 #### Generate A Certificate
 
 To create a new Certificate for this Pass Type ID, do the following:
 
-1.  Select the newly created Pass ID from the list, and click **Edit** :
+1. Select the newly created Pass ID from the list, and click **Edit** :
   [![](passkit-images/pass-done.png "Select the new Pass ID from the list")](passkit-images/pass-done.png#lightbox)
 
     Then, select  **Create Certificate…** :
@@ -289,7 +289,7 @@ To create a new Certificate for this Pass Type ID, do the following:
     [![](passkit-images/cert-dist.png "Select Create Certificate")](passkit-images/cert-dist.png#lightbox)
 
 
-2.  Follow the steps to create a Certificate Signing Request (CSR).
+2. Follow the steps to create a Certificate Signing Request (CSR).
   
 3. Press the **Continue** button on the developer portal and upload the CSR to generate your certificate.
 

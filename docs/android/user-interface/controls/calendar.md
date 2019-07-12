@@ -289,10 +289,10 @@ event to a calendar. For this to work, be sure to include the
 `android.permission.WRITE_CALENDAR` permission we mentioned earlier. To
 add an event to a calendar, we will:
 
-1.  Create a  `ContentValues` instance.
-1.  Use keys from the  `CalendarContract.Events.InterfaceConsts` class to populate the  `ContentValues` instance.
-1.  Set the time zones for the event start and end times.
-1.  Use a  `ContentResolver` to insert the event data into the calendar.
+1. Create a  `ContentValues` instance.
+1. Use keys from the  `CalendarContract.Events.InterfaceConsts` class to populate the  `ContentValues` instance.
+1. Set the time zones for the event start and end times.
+1. Use a  `ContentResolver` to insert the event data into the calendar.
 
 
 The code below illustrates these steps:

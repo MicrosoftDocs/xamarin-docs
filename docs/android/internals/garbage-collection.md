@@ -102,13 +102,13 @@ collection.
 Mono collections are where the fun happens. Managed objects are collected
 normally. Peer objects are collected by performing the following process:
 
-1.  All Peer objects eligible for Mono collection have their JNI global 
+1. All Peer objects eligible for Mono collection have their JNI global 
     reference replaced with a JNI weak global reference. 
 
-2.  An Android runtime VM GC is invoked. Any Native peer instance may be 
+2. An Android runtime VM GC is invoked. Any Native peer instance may be 
     collected. 
 
-3.  The JNI weak global references created in (1) are checked. If the 
+3. The JNI weak global references created in (1) are checked. If the 
     weak reference has been collected, then the Peer object is 
     collected. If the weak reference has *not* been collected, then the 
     weak reference is replaced with a JNI global reference and the Peer 
@@ -188,12 +188,12 @@ which peer objects needs their "liveness" verified with the Android
 runtime heap. The GC Bridge makes this determination by doing 
 the following steps (in order):
 
-1.  Induce the mono reference graph of unreachable peer objects into 
+1. Induce the mono reference graph of unreachable peer objects into 
     the Java objects they represent. 
 
-2.  Perform a Java GC.
+2. Perform a Java GC.
 
-3.  Verify which objects are really dead. 
+3. Verify which objects are really dead. 
 
 This complicated process is what enables subclasses of 
 `Java.Lang.Object` to freely reference any objects; it removes any 

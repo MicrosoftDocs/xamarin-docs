@@ -381,9 +381,9 @@ In Objective-C classes, you will see that classes that use this programming patt
 In Xamarin.iOS three mutually exclusive mechanisms to bind to these
 delegates are offered:
 
-1.  [Via events](#Via_Events).
-2.  [Strongly typed via a `Delegate` property](#StrongDelegate)
-3.  [Loosely typed via a `WeakDelegate` property](#WeakDelegate)
+1. [Via events](#Via_Events).
+2. [Strongly typed via a `Delegate` property](#StrongDelegate)
+3. [Loosely typed via a `WeakDelegate` property](#WeakDelegate)
 
 For example, consider the [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html)
 class. This dispatches to a [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html)
@@ -750,11 +750,11 @@ necessary to bind some of the controls to your managed code.
 
 This is done in a few steps:
 
-1.  Add the **outlet declaration** to your **File's owner**.
-1.  Connect your control to the **File's owner**.
-1.  Store the UI plus the connections into your XIB/NIB file.
-1.  Load the NIB file at runtime.
-1.  Access the outlet variable.
+1. Add the **outlet declaration** to your **File's owner**.
+1. Connect your control to the **File's owner**.
+1. Store the UI plus the connections into your XIB/NIB file.
+1. Load the NIB file at runtime.
+1. Access the outlet variable.
 
 
 The steps (1) through (3) are covered in Apple's documentation for building

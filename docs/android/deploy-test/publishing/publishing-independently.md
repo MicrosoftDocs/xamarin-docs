@@ -81,8 +81,8 @@ will automatically be installed once the download is complete.
 Manual installation is a third option for installing applications. To effect
 a manual installation of an application:
 
-1.   **Distribute a copy of the APK to user** &ndash; For example, this copy may be distributed on a CD or USB flash drive.
-1.   **(The user) installs the application on an Android device**  &ndash; Use the command-line *Android Debug Bridge* (**adb**) tool. **adb** is a versatile command-line tool that enables communication with either an emulator instance or an Android-powered device. The Android SDK includes **adb**; it can be found in the directory **<sdk>/platform-tools/**.
+1. **Distribute a copy of the APK to user** &ndash; For example, this copy may be distributed on a CD or USB flash drive.
+1. **(The user) installs the application on an Android device**  &ndash; Use the command-line *Android Debug Bridge* (**adb**) tool. **adb** is a versatile command-line tool that enables communication with either an emulator instance or an Android-powered device. The Android SDK includes **adb**; it can be found in the directory **<sdk>/platform-tools/**.
 
 The Android device must be connected with a USB cable to the computer.
 Windows computers might also require additional USB drivers from the

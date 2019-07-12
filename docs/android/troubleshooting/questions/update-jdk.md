@@ -30,21 +30,21 @@ To update to JDK 8, follow these steps:
 
 # [Visual Studio](#tab/windows)
 
-1.  Download JDK 8 (1.8) from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1. Download JDK 8 (1.8) from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Screenshot of the JDK download page on the Oracle website](update-jdk-images/image1.png)
 
-2.  Pick the 64-bit version to allow rendering of 
+2. Pick the 64-bit version to allow rendering of 
     [custom controls](https://developer.xamarin.com/releases/vs/xamarin.vs_4/xamarin.vs_4.2/#androiddesignercustomcontrols)
     in the Xamarin Android designer:
 
     ![Selecting the Windows x64 JDK package to download from the JDK download page](update-jdk-images/image2.png)
 
-3.  Run the .exe and install the **Development Tools**:
+3. Run the .exe and install the **Development Tools**:
 
     ![Installing the Development Tools in the JDK installer](update-jdk-images/image3.png)
 
-4.  Open Visual Studio and update the **Java Development Kit Location**
+4. Open Visual Studio and update the **Java Development Kit Location**
     to point to the new JDK under **Tools > Options > Xamarin > Android
     Settings > Java Development Kit Location**:
 
@@ -54,11 +54,11 @@ Be sure to restart Visual Studio after updating the location.
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  Download JDK 8 (1.8) from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
+1. Download JDK 8 (1.8) from the [Oracle website](https://www.oracle.com/technetwork/java/javase/downloads/index.html):
 
     ![Screenshot of the JDK download page on the Oracle website](update-jdk-images/image1.png)
 
-2.  Open the .dmg file and run the .pkg installer:
+2. Open the .dmg file and run the .pkg installer:
 
     ![Running the JDK installer on macOS](update-jdk-images/image5.png)
 

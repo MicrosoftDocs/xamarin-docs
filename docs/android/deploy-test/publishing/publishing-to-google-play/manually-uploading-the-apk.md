@@ -215,10 +215,10 @@ messages, then Google Play will not show that application to any device
 which cannot send SMS messages. The filters that are applied to a
 search are created from the following:
 
-1.  The hardware configuration of the device.
-2.  Declarations in the applications manifest file.
-3.  The carrier that is used (if any).
-4.  The location of the device.
+1. The hardware configuration of the device.
+2. Declarations in the applications manifest file.
+3. The carrier that is used (if any).
+4. The location of the device.
 
 It is possible to add elements to the app's manifest to help control how
 app is filtered in the Google Play store. The following lists 

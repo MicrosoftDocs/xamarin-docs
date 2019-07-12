@@ -42,10 +42,10 @@ apps:
 - **Utilize MVC or MVVM design patterns** - Develop your application’s User Interface using the Model/View/Controller pattern. Architect your application using a Model/View/Controller approach or a Model/View/ViewModel approach where there is a clear separation between the “Model” and the rest. Determine which parts of your application will be using native user interface elements of each platform (iOS, Android, Windows, Mac) and use this as a guideline to split your application into two components: “Core” and “User-Interface”.
 - **Build native UIs** - Each OS-specific application provides a different user-interface layer (implemented in C# with the assistance of native UI design tools):
 
-1.  On iOS, use the UIKit APIs to create native-looking applications, optionally utilizing Xamarin's iOS designer to create your UI visually.
-1.  On Android, use Android.Views to create native-looking applications, taking advantage of Xamarin’s UI designer.
-1.  On Windows you will be using XAML for presentation layer, created in Visual Studio or Blend’s UI designer.
-1.  On Mac, you will use Storyboards for the presentation layer, created in Xcode.
+1. On iOS, use the UIKit APIs to create native-looking applications, optionally utilizing Xamarin's iOS designer to create your UI visually.
+1. On Android, use Android.Views to create native-looking applications, taking advantage of Xamarin’s UI designer.
+1. On Windows you will be using XAML for presentation layer, created in Visual Studio or Blend’s UI designer.
+1. On Mac, you will use Storyboards for the presentation layer, created in Xcode.
 
 Xamarin.Forms projects are supported on all platforms, and allow you create user interfaces that can be shared across platforms using Xamarin.Forms XAML. 
 
@@ -58,10 +58,10 @@ information.
 To increase the amount of code re-use, you can adopt cross-platform
 components that provide common services across all these systems such as:
 
-1.   [SQLite-net](https://www.nuget.org/packages/sqlite-net-pcl/) for local SQL storage,
-1.   [Xamarin Plugins](https://xamarin.com/plugins) for accessing device-specific capabilities including the camera, contacts and geolocation,
-1.   [NuGet packages](https://nuget.org) that are compatible with Xamarin projects, such as [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/),
-1.  Using .NET framework features for networking, web services, IO and more.
+1. [SQLite-net](https://www.nuget.org/packages/sqlite-net-pcl/) for local SQL storage,
+1. [Xamarin Plugins](https://xamarin.com/plugins) for accessing device-specific capabilities including the camera, contacts and geolocation,
+1. [NuGet packages](https://nuget.org) that are compatible with Xamarin projects, such as [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/),
+1. Using .NET framework features for networking, web services, IO and more.
 
 
 Some of these components are implemented in the *Tasky* case study.

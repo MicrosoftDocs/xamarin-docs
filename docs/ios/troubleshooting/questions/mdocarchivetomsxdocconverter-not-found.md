@@ -27,10 +27,10 @@ Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter
 
 There are 2 separate issues in this message:
 
-1.  `Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found`
+1. `Error: /Developer/MonoTouch/usr/share/doc/MonoTouch/MDocArchiveToMsxDocConverter.exe not found`
 
     This error is harmless, but it is also misleading. It [will be removed](https://bugzilla.xamarin.com/show_bug.cgi?id=21667) in a future release.
 
-2.  `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
+2. `rver.BaseCommand.OnRequest (System.Net.HttpListenerContext context …`
 
     This error is the real problem. Unfortunately, due to a [limitation](https://bugzilla.xamarin.com/show_bug.cgi?id=22080) this exception stack trace is *incomplete*. If you notice an incomplete stack trace like this in the Mac Server Log, you can check the `~/Library/Logs/Xamarin/MonoTouchVS/mtbserver.log` file on the Mac build host to find the complete stack trace.

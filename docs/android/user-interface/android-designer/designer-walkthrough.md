@@ -142,12 +142,12 @@ The next step is to modify the UI to display the `ImageView` on the
 left, with the two `TextView` widgets stacked to the right of the
 `ImageView`.
 
-1.  Select the `ImageView`.
+1. Select the `ImageView`.
 
-2.  In the **Properties window**, enter *width* in the search box
+2. In the **Properties window**, enter *width* in the search box
     and locate **Layout Width**.
 
-3.  Change the **Layout Width** setting to `wrap_content`:
+3. Change the **Layout Width** setting to `wrap_content`:
 
 ![Set wrap content](designer-walkthrough-images/vs/15-wrap-content-w158.png)
 
@@ -213,11 +213,11 @@ Because the `ImageView` is being used to display colors (rather than
 images), the next step is to remove the default image source added by
 the template.
 
-1.  Select the `ImageView` on the **Designer Surface**.
+1. Select the `ImageView` on the **Designer Surface**.
 
-2.  In **Properties**, enter *src* in the search box.
+2. In **Properties**, enter *src* in the search box.
 
-3.  Click the small square to the right of the **Src** property setting 
+3. Click the small square to the right of the **Src** property setting 
     and select **Reset**:
 
 [![Clear the ImageView src setting](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
@@ -467,11 +467,11 @@ The next step is to modify the UI to display the `ImageView` on the
 left, with the two `TextView` widgets stacked to the right of the
 `ImageView`.
 
-1.  With the `ImageView` selected, click the **Properties** tab.
+1. With the `ImageView` selected, click the **Properties** tab.
 
-2.  Just below the **Properties** tab, click **Layout**.
+2. Just below the **Properties** tab, click **Layout**.
 
-3.  Scroll down to **ViewGroup** and change the `Width` setting to
+3. Scroll down to **ViewGroup** and change the `Width` setting to
     `wrap_content`:
 
 [![Set wrap content](designer-walkthrough-images/xs/15-wrap-content-m75-sml.png)](designer-walkthrough-images/xs/15-wrap-content-m75.png#lightbox)
@@ -532,11 +532,11 @@ Because the `ImageView` is being used to display colors (rather than
 images), the next step is to remove the default image source added by
 the template.
 
-1.  Select the `ImageView`.
+1. Select the `ImageView`.
 
-2.  Click the **Widget** tab under **Properties**.
+2. Click the **Widget** tab under **Properties**.
 
-3.  Clear the `Src` setting so that it is blank:
+3. Clear the `Src` setting so that it is blank:
 
 [![Clear the ImageView src setting](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
 

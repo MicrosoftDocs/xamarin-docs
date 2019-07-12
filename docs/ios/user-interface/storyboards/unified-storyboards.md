@@ -261,8 +261,8 @@ In this section we will take a look at how these methods are actually implemente
 
 This method walks the hierarchy chain until the correct container view controller is found. For example:
 
-1.  If a  `ShowViewController` method is called, the first View Controller in the chain that implements this method is the Navigation Controller, so it is used as the parent of the new view.
-1.  If a  `ShowDetailViewController` method was called instead, the Split View Controller is the first View Controller to implement it, so it is used as the parent.
+1. If a  `ShowViewController` method is called, the first View Controller in the chain that implements this method is the Navigation Controller, so it is used as the parent of the new view.
+1. If a  `ShowDetailViewController` method was called instead, the Split View Controller is the first View Controller to implement it, so it is used as the parent.
 
 
 The `GetTargetForAction` method works by locating a View Controller that implements a given Action and then asking that View Controller if it wants to receive that action. Since this method is public, developers can create their own custom methods that function just like the built in `ShowViewController` and `ShowDetailViewController` methods.

@@ -133,13 +133,13 @@ These are the logs from the `XamarinInstaller.dmg` installer.
 
 ## <a id="verbose-build-output-logs" name="verbose-build-output-logs" />Verbose build output
 
-1.  Enable [diagnostic MSBuild output](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output).
+1. Enable [diagnostic MSBuild output](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output).
 
-2.  For iOS apps, also enable **verbose mtouch output** by adding `-v -v -v -v` under **Project Properties > iOS Build > General (tab) > Additional Options > Additional mtouch arguments**.
+2. For iOS apps, also enable **verbose mtouch output** by adding `-v -v -v -v` under **Project Properties > iOS Build > General (tab) > Additional Options > Additional mtouch arguments**.
 
-3.  Clean and rebuild the project.
+3. Clean and rebuild the project.
 
-4.  Copy and paste the build output from the IDE into a text file.
+4. Copy and paste the build output from the IDE into a text file.
      - Visual Studio (Windows): **View > Output > Show output from: Build**
      - Visual Studio for Mac: **View > Pads > Errors > Build Output (tab)**
 

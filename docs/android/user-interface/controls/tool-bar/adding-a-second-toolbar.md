@@ -98,16 +98,16 @@ This section explains how to add edit menu items to the bottom
 
 To add menu items to a secondary `Toolbar`: 
 
-1.  Add menu icons to the `mipmap-` folders of the app 
+1. Add menu icons to the `mipmap-` folders of the app 
     project (if required).
 
-2.  Define the contents of the menu items by adding an additional 
+2. Define the contents of the menu items by adding an additional 
     menu resource file to **Resources/menu**. 
 
-3.  In the Activity's `OnCreate` method, find the `Toolbar` 
+3. In the Activity's `OnCreate` method, find the `Toolbar` 
     (by calling `FindViewById`) and inflate the `Toolbar`'s menus.
 
-4.  Implement a click handler in `OnCreate` for the new menu items. 
+4. Implement a click handler in `OnCreate` for the new menu items. 
 
 The following sections demonstrate this process in detail: **Cut**, 
 **Copy**, and **Paste** menu items are added to the bottom `Toolbar`. 

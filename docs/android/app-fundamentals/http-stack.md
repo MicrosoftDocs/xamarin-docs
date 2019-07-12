@@ -15,7 +15,7 @@ The HttpClient Stack and SSL/TLS Implementation selectors determine the HttpClie
 Projects must reference the **System.Net.Http** assembly.
 
 > [!WARNING]
-> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2.  Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
+> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2. Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
 >
 > In order to ensure your apps continue to work with these servers and services, **you should update your Xamarin projects with the `Android HttpClient` and `Native TLS 1.2` settings shown below, then re-build and re-deploy your apps** to your users.
 

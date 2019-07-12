@@ -29,9 +29,9 @@ code as necessary.
 
 Using the Reflection API is as simple as:
 
-1.  Creating a class decorated with MT.D attributes.
-1.  Creating a  `BindingContext` instance, passing it an instance of the above class. 
-1.  Creating a  `DialogViewController` , passing it the  `BindingContext’s` `RootElement` . 
+1. Creating a class decorated with MT.D attributes.
+1. Creating a  `BindingContext` instance, passing it an instance of the above class. 
+1. Creating a  `DialogViewController` , passing it the  `BindingContext’s` `RootElement` . 
 
 
 Let’s look at an example to illustrate how to use the Reflection API. In

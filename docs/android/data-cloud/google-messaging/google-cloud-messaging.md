@@ -110,12 +110,12 @@ steps shown in the following diagram:
 
 [![App registration steps](google-cloud-messaging-images/02-app-registration-sml.png)](google-cloud-messaging-images/02-app-registration.png#lightbox)
 
-1.  The client app contacts GCM to obtain a registration token, passing
+1. The client app contacts GCM to obtain a registration token, passing
     the sender ID to GCM.
 
-2.  GCM returns a registration token to the client app.
+2. GCM returns a registration token to the client app.
 
-3.  The client app forwards the registration token to the app server.
+3. The client app forwards the registration token to the app server.
 
 The app server caches the registration token for subsequent
 communications with the client app. Optionally, the app server can send
@@ -145,15 +145,15 @@ follows the steps illustrated in the following diagram:
 
 [![Downstream messaging store and forward diagram](google-cloud-messaging-images/03-downstream-sml.png)](google-cloud-messaging-images/03-downstream.png#lightbox)
 
-1.  The app server sends the message to GCM.
+1. The app server sends the message to GCM.
 
-2.  If the client device is not available, the GCM server stores the
+2. If the client device is not available, the GCM server stores the
     message in a queue for later transmission.
 
-3.  When the client device is available, GCM sends the message to the
+3. When the client device is available, GCM sends the message to the
     client app on that device.
 
-4.  The client app receives the message from GCM and handles it
+4. The client app receives the message from GCM and handles it
     accordingly. For example, if the message is a remote notification,
     it is presented to the user.
 
@@ -202,19 +202,19 @@ diagram:
 
 [![Upstream messaging diagram](google-cloud-messaging-images/04-upstream-sml.png)](google-cloud-messaging-images/04-upstream.png#lightbox)
 
-1.  The client app sends a message to the GCM XMPP connection server.
+1. The client app sends a message to the GCM XMPP connection server.
 
-2.  If the app server is disconnected, the GCM server stores the
+2. If the app server is disconnected, the GCM server stores the
     message in a queue for later forwarding.
 
-3.  When the app server is re-connected, GCM forwards the message to
+3. When the app server is re-connected, GCM forwards the message to
     the app server.
 
-4.  The app server parses the message to verify the identity of the
+4. The app server parses the message to verify the identity of the
     client app, then it sends an "ack" to GCM to acknowledge message
     receipt.
 
-5.  The app server processes the message.
+5. The app server processes the message.
 
 Google's [Upstream Messages](https://developers.google.com/cloud-messaging/ccs#upstream)
 explains how to structure JSON-encoded messages and send them to app
@@ -233,7 +233,7 @@ describe the steps required to complete this process:
 
 ### Enable Google Services for Your App
 
-1.  Sign into the [Google Developers Console](https://developers.google.com/mobile/add?platform=android)
+1. Sign into the [Google Developers Console](https://developers.google.com/mobile/add?platform=android)
     with your Google account (i.e, your gmail address) and create a new
     project. If you have an existing project, choose the project that
     you want to become GCM-enabled. In the following example, a new
@@ -241,7 +241,7 @@ describe the steps required to complete this process:
 
     [![Creating XamarinGCM project](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png#lightbox)
 
-2.  Next, enter the package name for your app (in this example, 
+2. Next, enter the package name for your app (in this example, 
     the package name is **com.xamarin.gcmexample**) and click **Continue to
     Choose and configure services**:
 
@@ -249,16 +249,16 @@ describe the steps required to complete this process:
 
     Note that this package name is also the application ID for your app.
 
-3.  The **Choose and configure services** section lists the Google
+3. The **Choose and configure services** section lists the Google
     services that you can add to your app. Click **Cloud Messaging**:
 
     [![Choose Cloud Messaging](google-cloud-messaging-images/07-choose-gcm-service-sml.png)](google-cloud-messaging-images/07-choose-gcm-service.png#lightbox)
 
-4.  Next, click **ENABLE GOOGLE CLOUD MESSAGING**:
+4. Next, click **ENABLE GOOGLE CLOUD MESSAGING**:
 
     [![Enable Google Cloud Messaging](google-cloud-messaging-images/08-enable-gcm-sml.png)](google-cloud-messaging-images/08-enable-gcm.png#lightbox)
 
-5.  A **Server API key** and a **Sender ID** are generated for your
+5. A **Server API key** and a **Sender ID** are generated for your
     app. Record these values and click **CLOSE**:
 
     [![Server API Key and Sender ID displayed](google-cloud-messaging-images/09-get-api-key-and-id-sml.png)](google-cloud-messaging-images/09-get-api-key-and-id.png#lightbox)

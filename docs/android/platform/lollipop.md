@@ -197,17 +197,17 @@ Notifications have changed significantly in Android 5.0:
 In most cases, porting existing app notification functionality to
 Android 5.0 requires the following steps:
 
-1.  Convert your code to use `Notification.Builder` (or
+1. Convert your code to use `Notification.Builder` (or
     `NotificationsCompat.Builder`) for creating notifications. 
 
-2.  Verify that your existing notification assets are viewable 
+2. Verify that your existing notification assets are viewable 
     in the new Material Theme color scheme.
 
-3.  Decide what visibility your notifications should have when
+3. Decide what visibility your notifications should have when
     they are presented on the lockscreen. If a notification is not 
     public, what content should show up on the lockscreen?
 
-4.  Set the category of your notifications so they are handled
+4. Set the category of your notifications so they are handled
     correctly in the new Android 5.0 *Do not disturb* mode.
 
 If your notifications present transport controls, display media playback status, 

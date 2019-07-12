@@ -39,23 +39,23 @@ For Xamarin.Android to work with .NET Embedding, you need the following:
 To consume a .NET library in a native Android project, use the
 following steps:
 
-1.  Create a C# Android Library project.
+1. Create a C# Android Library project.
 
-2.  Install [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/).
+2. Install [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/).
 
-3.  Locate **Embeddinator-4000.exe** and add it to your **PATH**. For example:
+3. Locate **Embeddinator-4000.exe** and add it to your **PATH**. For example:
 
     ```cmd
     set PATH=%PATH%;C:\Users\USERNAME\.nuget\packages\embeddinator-4000\0.4.0\tools
     ```
 
-4.  Run Embeddinator-4000 on the library assembly. For example:
+4. Run Embeddinator-4000 on the library assembly. For example:
 
     ```cmd
     Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
     ```
 
-5.  Use the generated AAR file in a Java project in Android Studio.
+5. Use the generated AAR file in a Java project in Android Studio.
 
 
 # [Visual Studio for Mac](#tab/macos)
@@ -85,24 +85,24 @@ For Xamarin.Android to work with .NET Embedding, you need the following:
 
 To consume a .NET library in a native Android project, use the following steps:
 
-1.  Create a C# Android Library project.
+1. Create a C# Android Library project.
 
-2.  Install [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/).
+2. Install [Embeddinator-4000](https://www.nuget.org/packages/Embeddinator-4000/).
 
-3.  Locate **Embeddinator-4000.exe** and add **mono** to your path. For example:
+3. Locate **Embeddinator-4000.exe** and add **mono** to your path. For example:
 
     ```bash
     export TOOLS=~/.nuget/packages/embeddinator-4000/0.4.0/tools
     export PATH=$PATH:/Library/Frameworks/Mono.framework/Commands
     ```
 
-4.  Run Embeddinator-4000 on the library assembly. For example:
+4. Run Embeddinator-4000 on the library assembly. For example:
 
     ```bash
     mono $TOOLS/Embeddinator-4000.exe -gen=Java -out=foo Xamarin.Foo.dll
     ```
 
-5.  Use the generated AAR file in a Java project in Android Studio.
+5. Use the generated AAR file in a Java project in Android Studio.
 
 -----
 

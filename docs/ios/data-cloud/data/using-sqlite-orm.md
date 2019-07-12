@@ -70,9 +70,9 @@ The *DataAccess_Basic* sample code for this document looks like this when runnin
 
 The following code sample shows an entire database interaction using the SQLite.NET library to encapsulate the underlying database access. It shows:
 
-1.  Creating the database file
-1.  Inserting some data by creating objects and then saving them
-1.  Querying the data
+1. Creating the database file
+1. Inserting some data by creating objects and then saving them
+1. Querying the data
 
 You’ll need to include these namespaces:
 

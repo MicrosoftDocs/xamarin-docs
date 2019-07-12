@@ -23,10 +23,10 @@ The Xamarin Designer for iOS is a powerful tool for visualizing an application's
 
 A control that meets all the following requirements will be rendered on the design surface:
 
-1.  It is a direct or indirect subclass of  [UIView](xref:UIKit.UIView) or  [UIViewController](xref:UIKit.UIViewController). Other [NSObject](xref:Foundation.NSObject) subclasses will appear as an icon on the design surface.
-2.  It has a  [RegisterAttribute](xref:Foundation.RegisterAttribute) to expose it to Objective-C.
-3.  It has  [the required IntPtr constructor](~/ios/internals/api-design/index.md).
-4.  It either implements the [IComponent](xref:System.ComponentModel.IComponent) interface or has a [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) set to True.
+1. It is a direct or indirect subclass of  [UIView](xref:UIKit.UIView) or  [UIViewController](xref:UIKit.UIViewController). Other [NSObject](xref:Foundation.NSObject) subclasses will appear as an icon on the design surface.
+2. It has a  [RegisterAttribute](xref:Foundation.RegisterAttribute) to expose it to Objective-C.
+3. It has  [the required IntPtr constructor](~/ios/internals/api-design/index.md).
+4. It either implements the [IComponent](xref:System.ComponentModel.IComponent) interface or has a [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) set to True.
 
 Controls defined in code that meet the above requirements will appear in the designer when their containing project is compiled for the simulator. By default, all custom controls will appear in the **Custom Components**
 section of the **Toolbox**. However the [CategoryAttribute](xref:System.ComponentModel.CategoryAttribute) can be applied to the custom control's class to specify a different section.
@@ -37,9 +37,9 @@ The designer does not support loading third-party Objective-C libraries.
 
 A property declared by a custom control will appear in the property panel if the following conditions are met:
 
-1.  The property has a public getter and setter.
-1.  The property has an  [ExportAttribute](xref:Foundation.ExportAttribute) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
-1.  The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), or [UIImage](xref:UIKit.UIImage). This list of supported types may be expanded in the future.
+1. The property has a public getter and setter.
+1. The property has an  [ExportAttribute](xref:Foundation.ExportAttribute) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
+1. The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), or [UIImage](xref:UIKit.UIImage). This list of supported types may be expanded in the future.
 
 
 The property may also be decorated with a [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) to specify the label that is displayed for it in the property panel.

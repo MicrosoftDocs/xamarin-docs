@@ -382,9 +382,9 @@ methods must exist in the class where the `MonoTouch.Dialog.BindingContext` is c
 
 The User Interface Layer consists of the following classes:
 
-1.   **AppDelegate** – Contains calls to the Appearance API to style the fonts and colors used in the application. Tasky is a simple application so there are no other initialization tasks running in  `FinishedLaunching` .
-2.   **Screens** –  subclasses of `UIViewController` that define each screen and its behavior. Screens tie together the UI with Application Layer classes and the common API ( `TaskItemManager` ). In this example the screens are created in code, but they could have been designed using Xcode’s Interface Builder or the storyboard designer.
-3.   **Images** – Visual elements are an important part of every application. Tasky has splash screen and icon images, which for iOS must be supplied in regular and Retina resolution.
+1. **AppDelegate** – Contains calls to the Appearance API to style the fonts and colors used in the application. Tasky is a simple application so there are no other initialization tasks running in  `FinishedLaunching` .
+2. **Screens** –  subclasses of `UIViewController` that define each screen and its behavior. Screens tie together the UI with Application Layer classes and the common API ( `TaskItemManager` ). In this example the screens are created in code, but they could have been designed using Xcode’s Interface Builder or the storyboard designer.
+3. **Images** – Visual elements are an important part of every application. Tasky has splash screen and icon images, which for iOS must be supplied in regular and Retina resolution.
 
  <a name="Home_Screen" />
 
@@ -399,8 +399,8 @@ a collection of `TaskItem` objects for display.
 The two main methods related to displaying and interacting with the task list
 are:
 
-1.   **PopulateTable** – Uses the Business Layer’s  `TaskManager.GetTasks` method to retrieve a collection of  `TaskItem` objects to display.
-2.   **Selected** – When a row is touched, displays the task in a new screen.
+1. **PopulateTable** – Uses the Business Layer’s  `TaskManager.GetTasks` method to retrieve a collection of  `TaskItem` objects to display.
+2. **Selected** – When a row is touched, displays the task in a new screen.
 
  <a name="Task_Details_Screen" />
 
@@ -422,9 +422,9 @@ class, because this is where the `MonoTouch.Dialog.BindingContext` is
 created. The following `HomeScreen` methods support the Task Details
 screen:
 
-1.   **ShowTaskDetails** – Creates a  `MonoTouch.Dialog.BindingContext` to render a screen. It creates the input screen using reflection to retrieve property names and types from the  `TaskDialog` class. Additional information, such as the watermark text for the input boxes, is implemented with attributes on the properties.
-2.   **SaveTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It is called when  **Save** is pressed, and uses a  `MonoTouch.Dialog.BindingContext` to retrieve the user-entered data before saving the changes using  `TaskItemManager` .
-3.   **DeleteTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It uses  `TaskItemManager` to delete the data using the primary key (ID property).
+1. **ShowTaskDetails** – Creates a  `MonoTouch.Dialog.BindingContext` to render a screen. It creates the input screen using reflection to retrieve property names and types from the  `TaskDialog` class. Additional information, such as the watermark text for the input boxes, is implemented with attributes on the properties.
+2. **SaveTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It is called when  **Save** is pressed, and uses a  `MonoTouch.Dialog.BindingContext` to retrieve the user-entered data before saving the changes using  `TaskItemManager` .
+3. **DeleteTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It uses  `TaskItemManager` to delete the data using the primary key (ID property).
 
  <a name="Android_App" />
 
@@ -548,8 +548,8 @@ document).
 XAML has a unique data-binding capability that can be declared in markup and
 reduce the amount of code required to display objects:
 
-1.   **Pages** – XAML files and their codebehind define the user interface and reference the ViewModels and the PCL project to display and collect data.
-2.   **Images** – Splash screen, background and icon images are a key part of the user interface.
+1. **Pages** – XAML files and their codebehind define the user interface and reference the ViewModels and the PCL project to display and collect data.
+2. **Images** – Splash screen, background and icon images are a key part of the user interface.
 
  <a name="MainPage" />
 

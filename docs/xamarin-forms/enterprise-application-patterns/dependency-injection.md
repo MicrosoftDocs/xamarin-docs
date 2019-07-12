@@ -145,9 +145,9 @@ After a type is registered, it can be resolved or injected as a dependency. When
 
 Generally, when a type is resolved, one of three things happens:
 
-1.  If the type hasn't been registered, the container throws an exception.
-1.  If the type has been registered as a singleton, the container returns the singleton instance. If this is the first time the type is called for, the container creates it if required, and maintains a reference to it.
-1.  If the type hasn't been registered as a singleton, the container returns a new instance, and doesn't maintain a reference to it.
+1. If the type hasn't been registered, the container throws an exception.
+1. If the type has been registered as a singleton, the container returns the singleton instance. If this is the first time the type is called for, the container creates it if required, and maintains a reference to it.
+1. If the type hasn't been registered as a singleton, the container returns a new instance, and doesn't maintain a reference to it.
 
 The following code example shows how the `RequestProvider` type that was previously registered with Autofac can be resolved:
 

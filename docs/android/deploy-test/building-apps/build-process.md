@@ -376,7 +376,7 @@ when packaging Release applications.
     This may be overridden to instead contain
     `Xamarin.Android.Net.AndroidClientHandler`, which uses the Android
     Java APIs to perform network requests. This allows accessing TLS 1.2 URLs
-    when the underlying Android version supports TLS 1.2.  
+    when the underlying Android version supports TLS 1.2. 
     Only Android 5.0 and later reliably provide TLS 1.2 support through Java.
 
     *Note*: If TLS 1.2 support is required on Android versions prior to 5.0,
@@ -528,7 +528,7 @@ when packaging Release applications.
         network interaction. This *does not* support TLS 1.2.
 
     -   `default`: Allow *Mono* to choose the default TLS provider.
-        This is equivalent to `legacy`, even in Xamarin.Android 7.3.  
+        This is equivalent to `legacy`, even in Xamarin.Android 7.3. 
         *Note*: This value is unlikely to appear in `.csproj` values,
         as the IDE "Default" value results in *removal* of the
         `$(AndroidTlsProvider)` property.
@@ -1077,8 +1077,8 @@ Note that since Android supports multiple Application Binary Interfaces
 (ABIs), the build system must know which ABI the native library is
 built for. There are two ways this can be done:
 
-1.  Path "sniffing".
-2.  Using the  `Abi` item attribute.
+1. Path "sniffing".
+2. Using the  `Abi` item attribute.
 
 With path sniffing, the parent directory name of the native library is
 used to specify the ABI that the library targets. Thus, if you add
