@@ -62,7 +62,7 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 4. Select your team from the **Team** dropdown.
 
-6. After a few seconds a Signing Certificate and Provisioning profile will be created:
+5. After a few seconds a Signing Certificate and Provisioning profile will be created:
 
     ![successfully created certificate and profile](automatic-provisioning-images/image5.png)
 
@@ -82,7 +82,7 @@ To automatically sign your app for deployment on an iOS device, do the following
 
     ![Selection of the Team](automatic-provisioning-images/prov3.png)
 
-4. This starts the automatic signing process. Visual Studio then attempts to generate an App ID, provisioning profile, and a signing identity to use these artifacts for signing. You can see the generation process in the Build output:
+5. This starts the automatic signing process. Visual Studio then attempts to generate an App ID, provisioning profile, and a signing identity to use these artifacts for signing. You can see the generation process in the Build output:
 
     ![Build output showing generation of artifacts](automatic-provisioning-images/prov5.png)
 

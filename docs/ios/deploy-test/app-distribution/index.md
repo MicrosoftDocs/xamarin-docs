@@ -23,7 +23,7 @@ Apple provides the following ways to distribute an iOS application, which are su
 
 1. [**The App Store**](#App_Store_Distribution)
 2. [**In-House (Enterprise)**](#In-House_Distribution)
-2. [**Ad Hoc**](#Ad_Hoc_Distribution)
+3. [**Ad Hoc**](#Ad_Hoc_Distribution)
 
 All these scenarios require that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. For the non-App Store distribution they also contain information about what devices the app can be deployed to.
 

@@ -38,7 +38,7 @@ To configure the entitlements in Visual Studio for Mac, do the following:
 1. In the **Solution Explorer**, double-click the **Info.plist** file to open it for editing.
 2. In the **iOS Application Target** section, fill in a name for the application and enter the **Bundle Identifier** that was created when the App ID was defined:
 
-  ![](entitlements-images/servicexs01.png "Enter a Bundle Identifier")
+    ![](entitlements-images/servicexs01.png "Enter a Bundle Identifier")
 
 3. Save the changes to the **Info.plist** file.
 4. In the **Solution Explorer**, double-click the **Entitlements.plist** file to open it for editing:
@@ -55,7 +55,7 @@ To configure the entitlements in Visual Studio, do the following:
 1. In the **Solution Explorer**, right-click the **Info.plist**, select **Open With…** and **Property List Editor** file to open it for editing.
 2. In the **iOS Application Target** section, fill in a name for the application and enter the **Bundle Identifier** that was created when the App ID was defined:
 
-  ![](entitlements-images/servicevs01.png "Setting the Bundle Identifier")
+    ![](entitlements-images/servicevs01.png "Setting the Bundle Identifier")
 
 3. Save the changes to the **Info.plist** file.
 4. In the **Solution Explorer**, right-click on the **Entitlements.plist** file, select **Open With…** and **Property List Editor** to open it for editing:

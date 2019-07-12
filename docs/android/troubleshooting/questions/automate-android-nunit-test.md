@@ -80,7 +80,7 @@ The following steps explain this process:
     </Project>
     ```
 
-3.  Use the following command to run the unit tests. Replace
+4.  Use the following command to run the unit tests. Replace
     `PACKAGE_NAME` with the app's package name (the package name can be
     found in the app's `/manifest/@package` attribute located 
     in **AndroidManifest.xml**):
@@ -89,7 +89,7 @@ The following steps explain this process:
     adb shell am instrument -w PACKAGE_NAME/app.tests.TestInstrumentation
     ```
 
-4.  Optionally, you can modify the `.csproj` file to add the `RunTests`
+5.  Optionally, you can modify the `.csproj` file to add the `RunTests`
     MSBuild target. This makes it possible to invoke the unit tests
     with a command like the following:
 

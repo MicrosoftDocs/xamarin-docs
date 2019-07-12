@@ -192,7 +192,7 @@ until you add the equivalent NuGet package to replace it.
 1. Right-click on the **Packages** node and choose **Add Packages...**.
 2. Search for the NuGet replacement by name or author:
 
-  ![](component-nuget-images/nuget-search-sml.png)
+    ![](component-nuget-images/nuget-search-sml.png)
 
 3. Press **Add Package**.
 

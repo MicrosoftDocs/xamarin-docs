@@ -28,28 +28,28 @@ If you later need platform-specific functionality, [platform-specific projects c
 
 2. Choose **Multiplatform Library** from the **Multiplatform > Library** section:
 
-  [![](single-codebase-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](single-codebase-images/mulitplatform-library.png#lightbox)
+   [![](single-codebase-images/mulitplatform-library-sml.png "Configure multi-platform library for a single code base")](single-codebase-images/mulitplatform-library.png#lightbox)
 
 3. Enter a **Name** and **Description**, and choose **Single for all platforms**:
 
-  [![](single-codebase-images/single-configure-sml.png "Configure multi-platform library for a single code base")](single-codebase-images/single-configure.png#lightbox)
+   [![](single-codebase-images/single-configure-sml.png "Configure multi-platform library for a single code base")](single-codebase-images/single-configure.png#lightbox)
 
 4. Complete the wizard. A single library project is created in the solution.
 
 5. Right-click on the new library project and then select **Options**. The **Build > General** section
-  allows the **Target Framework** to be set – choose a .NET Portable PCL profile or a .NET Standard version:
+   allows the **Target Framework** to be set – choose a .NET Portable PCL profile or a .NET Standard version:
 
-  [![](single-codebase-images/single-choose-type-sml.png "Choose PCL or .NET Standard for library type")](single-codebase-images/single-choose-type.png#lightbox)
+   [![](single-codebase-images/single-choose-type-sml.png "Choose PCL or .NET Standard for library type")](single-codebase-images/single-choose-type.png#lightbox)
 
 6. Also in the **Project Options** window, open the **NuGet Package > Metadata** section and enter the [required metadata](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
-  (as well as any optional metadata):
+   (as well as any optional metadata):
 
-  [![](single-codebase-images/single-metadata-sml.png "Enter required metadata")](single-codebase-images/single-metadata.png#lightbox)
+   [![](single-codebase-images/single-metadata-sml.png "Enter required metadata")](single-codebase-images/single-metadata.png#lightbox)
 
 7. Right-click on the library project and choose **Create NuGet Package** (or build or deploy the solution) and
-  the **.nupkg** NuGet package file will be saved in the **/bin/** folder (either Debug or Release, depending on configuration):
+   the **.nupkg** NuGet package file will be saved in the **/bin/** folder (either Debug or Release, depending on configuration):
 
-  ![](single-codebase-images/create-nuget-package.png "The NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
+   ![](single-codebase-images/create-nuget-package.png "The NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
 
 
 ## Verifying the Output

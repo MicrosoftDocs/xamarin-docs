@@ -77,12 +77,12 @@ handles to make the new **Button** the same width as the **Call Button**:
     ![](hello-ios-multiscreen-quickstart-images/11new.png "Change the Name of the Button to CallHistoryButton and change the Title to Call History")
 
 11. Create the **Call History** screen. From the **Toolbox**, drag a **table view controller**
- onto the design surface:
+    onto the design surface:
 
-   ![](hello-ios-multiscreen-quickstart-images/12new.png "Drag a table view controller onto the design surface")
+    ![](hello-ios-multiscreen-quickstart-images/12new.png "Drag a table view controller onto the design surface")
 
 12. Next, select the **table view controller** by clicking on the black bar at the bottom of the scene. In the **Properties Pad**,
-change the **table view controller’s** class to `CallHistoryController` and press **Enter**:
+    change the **table view controller’s** class to `CallHistoryController` and press **Enter**:
 
     ![](hello-ios-multiscreen-quickstart-images/13new.png "Change the table view controllers class to CallHistoryController")
 
@@ -155,12 +155,12 @@ change the **table view controller’s** class to `CallHistoryController` and pr
     ![](hello-ios-multiscreen-quickstart-images/17new.png "The Segue between the two scenes")
 
 15. Add a **Title** to the **table view controller** by selecting the black bar at the bottom of the scene
-and changing the **view controller Title** to **Call History** in the **Properties Pad**:
+    and changing the **view controller Title** to **Call History** in the **Properties Pad**:
 
     ![](hello-ios-multiscreen-quickstart-images/18new.png "Change the view controller title to Call History in the Properties Pad")
 
 16. When the application is run, the **Call History Button** will open the **Call History** screen,
-  but the table view will be empty because there is no code to keep track of and display the phone numbers.
+    but the table view will be empty because there is no code to keep track of and display the phone numbers.
 
     This app will store the phone numbers as a list of strings.
 
@@ -266,7 +266,7 @@ and changing the **view controller Title** to **Call History** in the **Properti
 
     Save and build the application to make sure there are no errors.
 
-20. Press the **Start** button to launch the application inside the **iOS Simulator**:
+18. Press the **Start** button to launch the application inside the **iOS Simulator**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "Press the Start button to launch the application inside the iOS Simulator")
 
@@ -519,7 +519,7 @@ This walkthrough will add a Call History screen to our **Phoneword** application
 
     Save and build the application to make sure there are no errors.
 
-20. Press the **Start** button to launch our application inside the **iOS Simulator**:
+18. Press the **Start** button to launch our application inside the **iOS Simulator**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "The first screen of the sample app")
 

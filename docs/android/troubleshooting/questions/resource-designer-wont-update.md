@@ -19,13 +19,13 @@ A bug in Xamarin.Studio 5.1 previously corrupted .csproj files by partially or c
 
 ## Two possible approaches to fixing up the project file
 
-### Either:
+**Either:**
 
-1) Create a brand new Xamarin.Android application project, set all the project properties to match your old project, and add all of your resources, source files, etc. back into the project.
+1. Create a brand new Xamarin.Android application project, set all the project properties to match your old project, and add all of your resources, source files, etc. back into the project.
 
-### OR
+   **OR**
 
-2) Make a backup copy of your original project's .csproj file, then open it in a text editor, and add back in the missing elements from a cleanly generated .csproj file.
+2. Make a backup copy of your original project's .csproj file, then open it in a text editor, and add back in the missing elements from a cleanly generated .csproj file.
 
 ### If this does not solve the problem
 

@@ -115,7 +115,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NotesPage.xaml** by pressing **CTRL+S**, and close the file.
 
-5. In **Solution Explorer**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
+4. In **Solution Explorer**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -164,7 +164,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NoteEntryPage.xaml** by pressing **CTRL+S**, and close the file.
 
-6. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
+5. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
 
     On the **NotesPage** press the **+** button to navigate to the **NoteEntryPage** and enter a note. On each page, observe how the styling has changed from the previous quickstart.
 
@@ -256,7 +256,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NotesPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
-5. In the **Solution Pad**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
+4. In the **Solution Pad**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -305,7 +305,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NoteEntryPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
-6. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
+5. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
 
     On the **NotesPage** press the **+** button to navigate to the **NoteEntryPage** and enter a note. On each page, observe how the styling has changed from the previous quickstart.
 

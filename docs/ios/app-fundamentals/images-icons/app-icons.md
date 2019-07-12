@@ -129,16 +129,16 @@ To use an Asset Catalog, do the following:
 2. Click on the **Visual Assets** tab and click on the **Use Asset Catalog** button under **App Icons**: 
 
     ![](app-icons-images/icon02w.png "Select the Visual Assets tab")
-4. From the **Solution Explorer**, expand the **Asset Catalog** folder: 
+3. From the **Solution Explorer**, expand the **Asset Catalog** folder: 
 
     ![](app-icons-images/image009.png "Expand the Asset Catalog folder")
-5. Double-click the **Media** file to open it in the editor: 
+4. Double-click the **Media** file to open it in the editor: 
 
     ![](app-icons-images/image010.png "Open the Media file in the editor")
-6. Under the **Properties Explorer** the developer can select the different types and sizes of icons required.
-7. Click on given icon type and select an image file for the required type/size.
-8. Click the **Open** button to include the image in the project and set it in the xcasset.
-9. Repeat for all images required.
+5. Under the **Properties Explorer** the developer can select the different types and sizes of icons required.
+6. Click on given icon type and select an image file for the required type/size.
+7. Click the **Open** button to include the image in the project and set it in the xcasset.
+8. Repeat for all images required.
 
 -----
 
@@ -198,8 +198,8 @@ To specify the iTunes Artwork, do the following:
 2. Click on the **Visual Assets** tab and expand the **iTunes Artwork**: 
 
     ![](app-icons-images/itunes01w.png "Editing iTunes Artwork in Visual Studio")
-4. For any missing image, click on the thumbnail in the editor, select the image file for the desired iTunes artwork from the Open File dialog box and click the **Open** button.
-5. Repeat this step until all needed images have been specified for the app.
+3. For any missing image, click on the thumbnail in the editor, select the image file for the desired iTunes artwork from the Open File dialog box and click the **Open** button.
+4. Repeat this step until all needed images have been specified for the app.
 
 -----
 
