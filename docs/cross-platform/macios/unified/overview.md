@@ -42,8 +42,8 @@ to help you successfully update to the Unified API.
 
 From this point on, our APIs will be surfaced in two ways:
 
--  **Classic API:** Limited to 32-bits (only) and exposed in the `monotouch.dll` and `XamMac.dll` assemblies.
--  **Unified API:** Support both 32 and 64 bit development with a single API available in the `Xamarin.iOS.dll` and  `Xamarin.Mac.dll` assemblies.
+- **Classic API:** Limited to 32-bits (only) and exposed in the `monotouch.dll` and `XamMac.dll` assemblies.
+- **Unified API:** Support both 32 and 64 bit development with a single API available in the `Xamarin.iOS.dll` and  `Xamarin.Mac.dll` assemblies.
 
 This means that for Enterprise developers (not targetting the App Store),
 you can continue using the existing Classic APIs, as we will keep
@@ -64,8 +64,8 @@ This makes it simpler to share code between the Mac and iOS
 	platforms without resorting to conditional compilation and
 	will reduce the noise at the top of your source code files.
 
--  **Classic API:** Namespaces use `MonoTouch.` or `MonoMac.` prefix.
--  **Unified API:** No namespace prefix
+- **Classic API:** Namespaces use `MonoTouch.` or `MonoMac.` prefix.
+- **Unified API:** No namespace prefix
 
 ## Runtime Defaults
 
@@ -226,9 +226,9 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 Inside Xamarin.iOS classic API (monotouch.dll) the `[Obsolete]` attribute
 	was used in two different ways:
 
--  **Deprecated iOS API:** This is when Apple hints to you to stop using an API because it's being superseded by a newer one. The Classic API is still fine and often required (if you support the older version of iOS).
+- **Deprecated iOS API:** This is when Apple hints to you to stop using an API because it's being superseded by a newer one. The Classic API is still fine and often required (if you support the older version of iOS).
  Such API (and the  `[Obsolete]` attribute) are included into the new Xamarin.iOS assemblies.
--  **Incorrect API** Some API had typos on their names.
+- **Incorrect API** Some API had typos on their names.
 
 For the original assemblies (monotouch.dll and XamMac.dll)
 	we kept the old code available for compatibility but they have

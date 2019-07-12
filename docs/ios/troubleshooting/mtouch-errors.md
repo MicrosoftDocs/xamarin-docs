@@ -160,12 +160,12 @@ Mtouch does not recognize the command line argument mentioned in the error messa
 
 There are several options for mtouch that can't be used simultaneously:
 
--  --logdev
--  --installdev
--  --killdev
--  --launchdev
--  --launchdebug
--  --launchsim
+- --logdev
+- --installdev
+- --killdev
+- --launchdev
+- --launchdebug
+- --launchsim
 
 <a name="MT0020" />
 

@@ -27,13 +27,13 @@ help users quickly and intuitively understand the interface.
 *Material Theme* is the embodiment of these UI design principles in
 Android. This article begins by covering Material Theme's supporting features:
 
--   **Animations** &ndash; *Touch feedback* animations, *activity transition* 
+- **Animations** &ndash; *Touch feedback* animations, *activity transition* 
     animations, *view state transition* animations, and a *reveal effect*.
 
--   **View shadows and elevation** &ndash; Views now have an `elevation` property; 
+- **View shadows and elevation** &ndash; Views now have an `elevation` property; 
     views with higher `elevation` values cast larger shadows on the background.
 
--   **Color features** &ndash; *Drawable tinting* makes it possible for you to 
+- **Color features** &ndash; *Drawable tinting* makes it possible for you to 
     reuse image assets by changing their color, and *prominent color extraction* 
     helps you dynamically theme your app based on colors in an image.
 
@@ -46,16 +46,16 @@ In addition to the UI improvements brought about through Material
 Theme, Android 5.0 also includes several other new features that are
 covered in this article:
 
--   **Enhanced notifications** &ndash; Notifications in Android 5.0 have
+- **Enhanced notifications** &ndash; Notifications in Android 5.0 have
     been significantly updated with a new look, support for lockscreen 
     notifications, and a new *Heads-up* notification presentation format.
 
--   **New UI widgets** &ndash; The new `RecyclerView` widget makes it easier 
+- **New UI widgets** &ndash; The new `RecyclerView` widget makes it easier 
     for apps to convey large data sets and complex information, and the new 
     `CardView` widget provides a simplified card-like presentation format for 
     displaying text and images.
 
--   **New APIs** &ndash; Android 5.0 adds new APIs for multiple network
+- **New APIs** &ndash; Android 5.0 adds new APIs for multiple network
     support, improved Bluetooth connectivity, easier storage management,
     and more flexible control of multimedia players and camera devices. A
     new job scheduling feature is available to run tasks asynchronously at
@@ -69,13 +69,13 @@ covered in this article:
 The following is required to use the new Android 5.0 features in
 Xamarin-based apps:
 
--   **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be installed and
+- **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be installed and
     configured with either Visual Studio or Visual Studio for Mac. 
 
--   **Android SDK** &ndash; Android 5.0 (API 21) or later must be
+- **Android SDK** &ndash; Android 5.0 (API 21) or later must be
     installed via the Android SDK Manager.
 
--   **Java Developer Kit** &ndash; Xamarin.Android requires
+- **Java Developer Kit** &ndash; Xamarin.Android requires
     [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or
     later if you are developing for API level 24 or greater (JDK 1.8 also supports API levels earlier
     than 24, including Lollipop). The 64-bit version of JDK 1.8 is required if you
@@ -155,17 +155,17 @@ significantly changed notification format.
 Android 5.0 uses the new Android Runtime (ART) as the default runtime
 instead of Dalvik. ART implements several major new features:
 
--   **Ahead-of-time (AOT) compilation** &ndash; AOT can improve app
+- **Ahead-of-time (AOT) compilation** &ndash; AOT can improve app
     performance by compiling app code before the app is first launched. When
     an app is installed, ART generates a compiled app executable for the
     target device.
 
--   **Improved garbage collection (GC)** &ndash; GC improvements in ART
+- **Improved garbage collection (GC)** &ndash; GC improvements in ART
     can also improve app performance. Garbage collection now uses one GC
     pause instead of two, and concurrent GC operations complete in a more
     timely fashion.
 
--   **Improved app debugging** &ndash; ART provides more diagnostic detail
+- **Improved app debugging** &ndash; ART provides more diagnostic detail
     to help in analyzing exceptions and crash reports.
 
 Existing apps should work without change under ART &ndash; except for apps 
@@ -178,19 +178,19 @@ see [Verifying App Behavior on the Android Runtime (ART)](https://developer.andr
 
 Notifications have changed significantly in Android 5.0:
 
--   **Sounds and vibration are handled differently** &ndash; Notification
+- **Sounds and vibration are handled differently** &ndash; Notification
     sounds and vibrations are now handled by `Notification.Builder` instead
     of `Ringtone`, `MediaPlayer`, and `Vibrator`.
 
--   **New color scheme** &ndash; In accordance with Material Theme, 
+- **New color scheme** &ndash; In accordance with Material Theme, 
     notifications are rendered with dark text over white or very light 
     backgrounds. Also, alpha channels in notification icons may be 
     modified by Android to coordinate with system color schemes. 
 
--   **Lockscreen notifications** &ndash; Notifications can now 
+- **Lockscreen notifications** &ndash; Notifications can now 
     appear on the device lockscreen.
 
--   **Heads-up** &ndash; High-priority notifications now 
+- **Heads-up** &ndash; High-priority notifications now 
     appear in a small floating window (Heads-up notification) when the 
     device is unlocked and the screen is turned on.
 
@@ -289,11 +289,11 @@ Activity transition animations give users a sense of visual continuity
 when one activity transitions to another. Apps can specify three types
 of transition animations:
 
--   **Enter transition** &ndash; For when an activity enters the scene.
+- **Enter transition** &ndash; For when an activity enters the scene.
 
--   **Exit transition** &ndash; For when an activity exits the scene.
+- **Exit transition** &ndash; For when an activity exits the scene.
 
--   **Shared element transition** &ndash; For when a view that is
+- **Shared element transition** &ndash; For when a view that is
     common to two activities changes as the first activity transitions to
     the next.
 
@@ -310,31 +310,31 @@ activity as the first activity transitions to the second.
 
 For enter transitions, Android 5.0 provides three types of animations:
 
--   **Explode animation** &ndash; Enlarges a view from the center of the scene.
+- **Explode animation** &ndash; Enlarges a view from the center of the scene.
 
--   **Slide animation** &ndash; Moves a view in from one of the edges of a scene.
+- **Slide animation** &ndash; Moves a view in from one of the edges of a scene.
 
--   **Fade animation** &ndash; Fades a view into the scene.
+- **Fade animation** &ndash; Fades a view into the scene.
 
 #### Exit Transition Animation Types
 
 For exit transitions, Android 5.0 provides three types of animations:
 
--   **Explode animation** &ndash; Shrinks a view to the center of the scene.
+- **Explode animation** &ndash; Shrinks a view to the center of the scene.
 
--   **Slide animation** &ndash; Moves a view out to one of the edges of a scene.
+- **Slide animation** &ndash; Moves a view out to one of the edges of a scene.
 
--   **Fade animation** &ndash; Fades a view out of the scene.
+- **Fade animation** &ndash; Fades a view out of the scene.
 
 #### Shared Element Transition Animation Types
 
 Shared element transitions support multiple types of animations, such as:
 
--   Changing the layout or clip bounds of a view.
+- Changing the layout or clip bounds of a view.
 
--   Changing the scale and rotation of a view.
+- Changing the scale and rotation of a view.
 
--   Changing the size and scale type for a view.
+- Changing the size and scale type for a view.
 
 For more about activity transition animations in Android 5.0, see 
 [Customize Activity Transitions](https://developer.android.com/training/material/animations.html#Transitions).
@@ -346,11 +346,11 @@ Android 5.0 makes it possible for animations to run when the state of a
 view changes. You can animate view state transitions by using one of the
 following techniques:
 
--   Create drawables that animate state changes associated with a
+- Create drawables that animate state changes associated with a
     particular view. The new `AnimatedStateListDrawable` class lets you
     create drawables that display animations between view state changes.
 
--   Define animation functionality that runs when the state of a view
+- Define animation functionality that runs when the state of a view
     changes. The new `StateListAnimator` class lets you define an animator
     that runs when the state of a view changes.
 
@@ -388,13 +388,13 @@ animations. Android 5.0 uses these curves to interpolate temporal and
 spatial movement during animations. Three curves are defined in 
 Android 5.0:
 
--   **Fast\_out\_linear\_in** &ndash; Accelerates quickly and continues to
+- **Fast\_out\_linear\_in** &ndash; Accelerates quickly and continues to
     accelerate until the end of the animation.
 
--   **Fast\_out\_slow\_in** &ndash; Accelerates quickly and slowly
+- **Fast\_out\_slow\_in** &ndash; Accelerates quickly and slowly
     decelerates towards the end of the animation.
 
--   **Linear\_out\_slow\_in** &ndash; Begins with a peak velocity and
+- **Linear\_out\_slow\_in** &ndash; Begins with a peak velocity and
     slowly decelerates to the end of the animation.
 
 You can use the new `PathInterpolator` class to specify how motion interpolation 
@@ -433,10 +433,10 @@ see [Defining Shadows and Clipping Views](https://developer.android.com/training
 
 Android 5.0 provides two new features for managing color in apps:
 
--   *Drawable tinting* lets you alter the colors of image assets by
+- *Drawable tinting* lets you alter the colors of image assets by
     changing a layout attribute.
 
--   *Prominent color extraction* makes it possible for you to dynamically
+- *Prominent color extraction* makes it possible for you to dynamically
     customize your app's color theme to coordinate with the color palette of
     a displayed image.
 
@@ -475,17 +475,17 @@ so that you can dynamically apply them to a custom color palette. The
 colors according to their relative levels of color saturation and
 brightness:
 
--   Vibrant
+- Vibrant
 
--   Vibrant dark
+- Vibrant dark
 
--   Vibrant light
+- Vibrant light
 
--   Muted
+- Muted
 
--   Muted dark
+- Muted dark
 
--   Muted light
+- Muted light
 
 For example, in the following screenshots, a photo viewing app extracts
 the prominent colors from the image on display and uses these colors to
@@ -507,9 +507,9 @@ see [Extracting Prominent Colors from an Image](https://developer.android.com/tr
 
 Android 5.0 introduces two new UI widgets:
 
--   `RecyclerView` &ndash; A view group that displays a list of scrollable items.
+- `RecyclerView` &ndash; A view group that displays a list of scrollable items.
 
--   `CardView` &ndash; A basic layout with rounded corners.
+- `CardView` &ndash; A basic layout with rounded corners.
 
 Both widgets include baked-in support for Material Theme features; for
 example, `RecyclerView` uses animations for adding and removing views,
@@ -613,13 +613,13 @@ displays on top of an app:
 
 Heads-up notifications are typically used for the following events:
 
--   A new next message
+- A new next message
 
--   An incoming phone call
+- An incoming phone call
 
--   Low battery indication
+- Low battery indication
 
--   An alarm
+- An alarm
 
 Android 5.0 displays a notification in Heads-up format only when it has a
 high or max priority setting.
@@ -654,17 +654,17 @@ queue multiple capture requests to a camera device.
 
 The following APIs make these new features possible:
 
--   `CameraManager.GetCameraIdList` &ndash; Helps you to programmatically
+- `CameraManager.GetCameraIdList` &ndash; Helps you to programmatically
     access camera devices; you use `CameraManager.OpenCamera` to connect to
     a specific camera device.
 
--   `CameraCaptureSession` &ndash; Captures or streams images from the
+- `CameraCaptureSession` &ndash; Captures or streams images from the
     camera device. You implement a `CameraCaptureSession.CaptureListener`
     interface to handle new image capture events.
 
--   `CaptureRequest` &ndash; Defines capture parameters.
+- `CaptureRequest` &ndash; Defines capture parameters.
 
--   `CaptureResult` &ndash; Provides the results of an image capture operation.
+- `CaptureResult` &ndash; Provides the results of an image capture operation.
 
 For more about the new camera APIs in Android 5.0, 
 see [Media](https://developer.android.com/about/versions/android-5.0.html#Media).
@@ -673,15 +673,15 @@ see [Media](https://developer.android.com/about/versions/android-5.0.html#Media)
 
 Android 5.0 updates the `AudioTrack` class for better audio playback:
 
--   `ENCODING_PCM_FLOAT` &ndash; Configures `AudioTrack` to accept
+- `ENCODING_PCM_FLOAT` &ndash; Configures `AudioTrack` to accept
     audio data in floating-point format for better dynamic range, greater
     headroom, and higher quality (thanks to increased precision). Also,
     floating-point format helps to avoid audio clipping.
 
--   `ByteBuffer` &ndash; You can now supply audio data to `AudioTrack` 
+- `ByteBuffer` &ndash; You can now supply audio data to `AudioTrack` 
     as a byte array.
 
--   `WRITE_NON_BLOCKING` &ndash; This option simplifies buffering and 
+- `WRITE_NON_BLOCKING` &ndash; This option simplifies buffering and 
      multithreading for some apps.
 
 For more about `AudioTrack` improvements in Android 5.0, 
@@ -695,12 +695,12 @@ provides simplified transport control APIs and offers thread-safe
 control of playback outside of the UI context. The following new APIs
 handle transport control:
 
--   `Android.Media.Session.MediaSession` &ndash; A media
+- `Android.Media.Session.MediaSession` &ndash; A media
     control session that handles multiple controllers. You call
     `MediaSession.GetSessionToken` to request a token that your app uses to
     interact with the session.
 
--   `MediaController.TransportControls` &ndash; Handles transport
+- `MediaController.TransportControls` &ndash; Handles transport
     commands such as **Play**, **Stop**, and **Skip**.
 
 Also, you can use the new `Android.App.Notification.MediaStyle` class
@@ -715,16 +715,16 @@ see [Media](https://developer.android.com/about/versions/android-5.0.html#Media)
 Android 5.0 updates the Storage Access Framework to make it easier for
 applications to work with directories and documents:
 
--   To select a directory subtree, you can build and send an
+- To select a directory subtree, you can build and send an
     `Android.Intent.Action.OPEN_DOCUMENT_TREE` intent. This intent causes
     the system to display all provider instances that support subtree
     selection; the user then browses and selects a directory.
 
--   To create and manage new documents or directories anywhere under
+- To create and manage new documents or directories anywhere under
     a subtree, you use the new `CreateDocument`, `RenameDocument`, and
     `DeleteDocument` methods of `DocumentsContract`.
 
--   To get paths to media directories on all shared storage devices, you 
+- To get paths to media directories on all shared storage devices, you 
     call the new `Android.Content.Context.GetExternalMediaDirs` method.
 
 For more about new storage APIs in Android 5.0, 
@@ -734,13 +734,13 @@ see [Storage](https://developer.android.com/preview/api-overview.html#Storage).
 
 Android 5.0 adds the following API enhancements for wireless and connectivity:
 
--   New *multi-network* APIs that make it possible for apps to find and
+- New *multi-network* APIs that make it possible for apps to find and
     select networks with specific capabilities before making a connection.
 
--   Bluetooth broadcasting functionality that enables an Android 5.0 device
+- Bluetooth broadcasting functionality that enables an Android 5.0 device
     to act as a low-energy Bluetooth peripheral.
 
--   NFC enhancements that make it easier to use near-field communications
+- NFC enhancements that make it easier to use near-field communications
     functionality for sharing data with other devices.
 
 For more about the new wireless and connectivity APIs in Android 5.0, 
@@ -763,20 +763,20 @@ see [Scheduling Jobs](https://developer.android.com/preview/api-overview.html#Jo
 This article provided an overview of important new features in Android 5.0
 for Xamarin.Android app developers:
 
--   Material Theme
+- Material Theme
 
--   Animations
+- Animations
 
--   View shadows and elevation
+- View shadows and elevation
 
--   Color features, such as drawable tinting and prominent 
+- Color features, such as drawable tinting and prominent 
     color extraction
 
--   The new `RecyclerView` and `CardView` widgets
+- The new `RecyclerView` and `CardView` widgets
 
--   Notification enhancements
+- Notification enhancements
 
--   New APIs for camera, audio playback, media control, storage,
+- New APIs for camera, audio playback, media control, storage,
     wireless/connectivity, and job scheduling
 
 If you are new to Xamarin Android development, read

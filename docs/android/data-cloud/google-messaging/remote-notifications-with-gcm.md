@@ -147,19 +147,19 @@ that we entered into the Google Developer console.
 An Android application must have the following permissions configured 
 before it can receive notifications from Google Cloud Messaging: 
 
--   `com.google.android.c2dm.permission.RECEIVE` &ndash; Grants 
+- `com.google.android.c2dm.permission.RECEIVE` &ndash; Grants 
     permission to our app to register and receive messages from Google 
     Cloud Messaging. (What does `c2dm` mean? This stands for _Cloud to 
     Device Messaging_, which is the now-deprecated predecessor to GCM. 
     GCM still uses `c2dm` in many of its permission strings.) 
 
--   `android.permission.WAKE_LOCK` &ndash; (Optional) Prevents the 
+- `android.permission.WAKE_LOCK` &ndash; (Optional) Prevents the 
     device CPU from going to sleep while listening for a message. 
 
--   `android.permission.INTERNET` &ndash; Grants internet access so the 
+- `android.permission.INTERNET` &ndash; Grants internet access so the 
     client app can communicate with GCM. 
 
--   *package_name*`.permission.C2D_MESSAGE` &ndash; Registers the 
+- *package_name*`.permission.C2D_MESSAGE` &ndash; Registers the 
     application with Android and requests permission to exclusively 
     receive all C2D (cloud to device) messages. The *package_name*
     prefix is the same as your application ID. 

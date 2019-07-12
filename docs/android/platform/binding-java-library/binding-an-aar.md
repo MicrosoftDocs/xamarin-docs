@@ -19,10 +19,10 @@ _This walkthrough provides step-by-step instructions for creating a Xamarin.Andr
 The *Android Archive (.AAR)* file is the file format for Android libraries.
 An .AAR file is a .ZIP archive that contains the following:
 
--   Compiled Java code
--   Resource IDs
--   Resources
--   Meta-data (for example, Activity declarations, permissions)
+- Compiled Java code
+- Resource IDs
+- Resources
+- Meta-data (for example, Activity declarations, permissions)
 
 In this guide, we'll step through the basics of creating a Bindings
 Library for a single .AAR file. For an overview of Java library binding

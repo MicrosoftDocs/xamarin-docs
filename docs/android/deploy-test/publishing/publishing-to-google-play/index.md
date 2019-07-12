@@ -81,10 +81,10 @@ should be a 32-bit PNG with an alpha channel for transparency. An application
 should have icons for all of the generalized screen densities as outlined in the
 list below:
 
--   **ldpi** (120dpi) &ndash; 36 x 36 px
--   **mdpi** (160dpi) &ndash; 48 x 48 px
--   **hdpi** (240dpi) &ndash; 72 x 72 px
--   **xhdpi** (320dpi) &ndash; 96 x 96 px
+- **ldpi** (120dpi) &ndash; 36 x 36 px
+- **mdpi** (160dpi) &ndash; 48 x 48 px
+- **hdpi** (240dpi) &ndash; 72 x 72 px
+- **xhdpi** (320dpi) &ndash; 96 x 96 px
 
 
 Launcher icons are the first things that a user will see of applications
@@ -405,13 +405,13 @@ for uploading the application:
 
 Google Play offers four possible tracks for uploading your app:
 
--   **Alpha** &ndash; Used for uploading a very early version of the app to a small list of testers.
+- **Alpha** &ndash; Used for uploading a very early version of the app to a small list of testers.
 
--   **Beta** &ndash; Used for uploading an early version of the app to a larger list of testers.
+- **Beta** &ndash; Used for uploading an early version of the app to a larger list of testers.
 
--   **Rollout** &ndash; Allows a percentage of users to receive an updated version of the app; this makes it possible to slowly increase the percentage from say, 10% of users and increase it to 100% of users while you iron out bugs.
+- **Rollout** &ndash; Allows a percentage of users to receive an updated version of the app; this makes it possible to slowly increase the percentage from say, 10% of users and increase it to 100% of users while you iron out bugs.
 
--   **Production** &ndash; Select this track when the app is ready for full distribution from the Google Play store.
+- **Production** &ndash; Select this track when the app is ready for full distribution from the Google Play store.
 
 For more information about Google Play testing and staged rollouts, see [Set up
 alpha/beta tests](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).

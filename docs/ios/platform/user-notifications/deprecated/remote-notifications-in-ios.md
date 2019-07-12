@@ -35,9 +35,9 @@ Apple maintains two environments of APNS: a *Sandbox* and a *Production* environ
 
 Push notification must observe the following rules that are dictated by the architecture of APNS:
 
--  **256 byte Message Limit** - The entire message size of the notification must not exceed 256 bytes.
--  **No Receipt Confirmation** - APNS does not provide the sender with any notification that a message made it to the intended recipient. If the device is unreachable and multiple sequential notifications are sent, all notifications except the most recent will be lost. Only the most recent notification will be delivered to the device.
--  **Each application requires a secure certificate** - Communication with APNS must be done over SSL.
+- **256 byte Message Limit** - The entire message size of the notification must not exceed 256 bytes.
+- **No Receipt Confirmation** - APNS does not provide the sender with any notification that a message made it to the intended recipient. If the device is unreachable and multiple sequential notifications are sent, all notifications except the most recent will be lost. Only the most recent notification will be delivered to the device.
+- **Each application requires a secure certificate** - Communication with APNS must be done over SSL.
 
 
 ## Creating and Using Certificates

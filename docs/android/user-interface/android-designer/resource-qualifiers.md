@@ -31,10 +31,10 @@ ellipsis icon to the right of the **Landscape** mode button:
 This dialog presents pull-down menus for the following resource
 qualifiers:
 
--   **Language** &ndash; Displays available language resources
+- **Language** &ndash; Displays available language resources
     and offers an option to add new language/region resources.
 
--   **UI Mode** &ndash; Lists display modes (such as **Car Dock**
+- **UI Mode** &ndash; Lists display modes (such as **Car Dock**
     and **Desk Dock**) as well as layout directions.
 
 Each of these pull-down menus opens new dialog boxes where you
@@ -100,14 +100,14 @@ paintbrush (Theme Editor) icon:
 This icon opens a dialog popover that provides a way to select from one of
 three Action Bar modes:
 
--   **Standard** &ndash; Consists of either a logo or an icon and title text
+- **Standard** &ndash; Consists of either a logo or an icon and title text
     with an optional subtitle.
 
--   **List** &ndash; List navigation mode. Instead of static title text, this
+- **List** &ndash; List navigation mode. Instead of static title text, this
     mode presents a list menu for navigation within the activity (that is,
     it can be presented to the user as a dropdown list).
 
--   **Tabs** &ndash; Tab navigation mode. Instead of static title text,
+- **Tabs** &ndash; Tab navigation mode. Instead of static title text,
     this mode presents a series of tabs for navigation within the
     activity.
 
@@ -169,10 +169,10 @@ ellipsis icon to the right of the **Landscape** mode button:
 This dialog presents pull-down menus for the following resource
 qualifiers:
 
--   **Language** &ndash; Displays available language resources
+- **Language** &ndash; Displays available language resources
     and offers an option to add new language/region resources.
 
--   **UI Mode** &ndash; Lists display modes (such as **Car Dock**
+- **UI Mode** &ndash; Lists display modes (such as **Car Dock**
     and **Desk Dock**) as well as layout directions.
 
 Each of these pull-down menus opens new dialog boxes where you
@@ -236,14 +236,14 @@ paintbrush (Theme Editor) icon:
 This icon opens a dialog popover that provides a way to select from one of
 three Action Bar modes:
 
--   **Standard** &ndash; Consists of either a logo or icon and title text
+- **Standard** &ndash; Consists of either a logo or icon and title text
     with an optional subtitle.
 
--   **List** &ndash; List navigation mode. Instead of static title text, this
+- **List** &ndash; List navigation mode. Instead of static title text, this
     mode presents a list menu for navigation within the activity (that is,
     it can be presented to the user as a dropdown list).
 
--   **Tabs** &ndash; Tab navigation mode. Instead of static title text,
+- **Tabs** &ndash; Tab navigation mode. Instead of static title text,
     this mode presents a series of tabs for navigation within the
     activity.
 

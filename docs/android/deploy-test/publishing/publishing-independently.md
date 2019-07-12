@@ -19,14 +19,14 @@ publishing methods and the licensing levels of Xamarin.Android.
 A number of licenses are available for development, deployment, and
 distribution of Xamarin.Android apps:
 
--   **Visual Studio Community** &ndash; For students, small teams, and
+- **Visual Studio Community** &ndash; For students, small teams, and
     OSS developers who use Windows.
 
--   **Visual Studio Professional** &ndash; For individual developers or
+- **Visual Studio Professional** &ndash; For individual developers or
     small teams (Windows only). This license offers a standard or cloud
     subscription and no usage restrictions.
 
--   **Visual Studio Enterprise** &ndash; For teams of any size (Windows
+- **Visual Studio Enterprise** &ndash; For teams of any size (Windows
     only). This license includes enterprise capabilities, a standard or
     cloud subscription.
 

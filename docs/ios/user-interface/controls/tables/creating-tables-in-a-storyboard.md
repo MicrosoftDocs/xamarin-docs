@@ -62,9 +62,9 @@ The solution will open with some C# files and a `Main.storyboard` file already c
 
 The storyboard will be edited in three steps:
 
--  First, layout the required view controllers and set their properties.
--  Second, create your UI by dragging and dropping objects onto your view
--  Finally, add the required UIKit class to each view and give various controls a name so they can be referenced in code.
+- First, layout the required view controllers and set their properties.
+- Second, create your UI by dragging and dropping objects onto your view
+- Finally, add the required UIKit class to each view and give various controls a name so they can be referenced in code.
 
 
 Once the storyboard is complete, code can be added to make everything work.
@@ -123,9 +123,9 @@ Next, you'll need to create a button that will add new tasks, as illustrated bel
 
 Do the following: 
 
--  Drag a **Bar Button Item** from the Toolbox to the _right hand side of the navigation bar_.
--  In the **Properties Pad**, under **Bar Button Item** select  **Identifier: Add** (to make it a *+* plus button). 
--  Give it a Name so that it can be identified in code at a later stage. Note that you will need to give the Root View Controller a Class Name (for example **ItemViewController**) to allow you to set the Bar button item's name.
+- Drag a **Bar Button Item** from the Toolbox to the _right hand side of the navigation bar_.
+- In the **Properties Pad**, under **Bar Button Item** select  **Identifier: Add** (to make it a *+* plus button). 
+- Give it a Name so that it can be identified in code at a later stage. Note that you will need to give the Root View Controller a Class Name (for example **ItemViewController**) to allow you to set the Bar button item's name.
 
 
 #### TaskDetail View Controller
@@ -140,10 +140,10 @@ The steps to build the complete layout are:
 
 Select the table view and open the **Property Pad**. Update the following properties:
 
--  **Sections**: _2_ 
--  **Style**: _Grouped_
--  **Separator**: _None_
--  **Selection**: _No Selection_
+- **Sections**: _2_ 
+- **Style**: _Grouped_
+- **Separator**: _None_
+- **Selection**: _No Selection_
 
 Select the top section and under **Properties > Table View Section** change **Rows** to _3_, as illustrated below:
 
@@ -152,16 +152,16 @@ Select the top section and under **Properties > Table View Section** change **Ro
 
 For each cell open the **Properties Pad** and set:
 
--  **Style**:  _Custom_
--  **Identifier**: Choose a unique identifier for each cell (eg. “_title_”, “_notes_”, “_done_”).
--  Drag the required controls to produce the layout shown in the screenshot (place **UILabel**, **UITextField** and **UISwitch** on the correct cells, and set the labels appropriately, ie. Title, Notes and Done).
+- **Style**:  _Custom_
+- **Identifier**: Choose a unique identifier for each cell (eg. “_title_”, “_notes_”, “_done_”).
+- Drag the required controls to produce the layout shown in the screenshot (place **UILabel**, **UITextField** and **UISwitch** on the correct cells, and set the labels appropriately, ie. Title, Notes and Done).
 
 
 In the second section, set **Rows** to _1_ and grab the bottom resize handle of the cell to make it taller.
 
--  **Set the Identifier**: to a unique value (eg. “save”). 
--  **Set the Background**:  _Clear Color_ .
--  Drag two buttons onto the cell and set their titles appropriately (i.e. _Save_ and _Delete_), as illustrated below:
+- **Set the Identifier**: to a unique value (eg. “save”). 
+- **Set the Background**:  _Clear Color_ .
+- Drag two buttons onto the cell and set their titles appropriately (i.e. _Save_ and _Delete_), as illustrated below:
 
    [![setting two buttons in the bottom section](creating-tables-in-a-storyboard-images/image30-sml.png)](creating-tables-in-a-storyboard-images/image30.png#lightbox)
 
@@ -171,11 +171,11 @@ At this point you may also want to set constraints on your cells and controls to
 
 There are a few final steps in creating our Storyboard. First we must give each of our controls a name under **Identity > Name** so they can be used in code later on. Name these as follows:
 
--  **Title UITextField** : _TitleText_
--  **Notes UITextField** : _NotesText_
--  **UISwitch** : _DoneSwitch_
--  **Delete UIButton** : _DeleteButton_
--  **Save UIButton** : _SaveButton_
+- **Title UITextField** : _TitleText_
+- **Notes UITextField** : _NotesText_
+- **UISwitch** : _DoneSwitch_
+- **Delete UIButton** : _DeleteButton_
+- **Save UIButton** : _SaveButton_
 
 
 <a name="Adding_Code" />
@@ -372,10 +372,10 @@ this:
 
 The example demonstrates:
 
--  Creating a table with Prototype Content where cells are defined for re-use to display lists of data. 
--  Creating a table with Static Content to build an input form. This included changing the table style and adding sections, cells and UI controls. 
--  How to create a segue and override the  `PrepareForSegue` method to notify the target view of any parameters it requires. 
--  Loading storyboard views directly with the  `Storyboard.InstantiateViewController` method.
+- Creating a table with Prototype Content where cells are defined for re-use to display lists of data. 
+- Creating a table with Static Content to build an input form. This included changing the table style and adding sections, cells and UI controls. 
+- How to create a segue and override the  `PrepareForSegue` method to notify the target view of any parameters it requires. 
+- Loading storyboard views directly with the  `Storyboard.InstantiateViewController` method.
 
 
 

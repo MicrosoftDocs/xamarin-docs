@@ -26,13 +26,13 @@ device, an Intent is invoked containing the message data.
 
 Android supports two ways of setting messages with Android Beam:
 
--   `SetNdefPushMessage` - Before Android Beam is initiated, an
+- `SetNdefPushMessage` - Before Android Beam is initiated, an
     application can call SetNdefPushMessage to specify an NdefMessage
     to push over NFC, and the Activity that is pushing it. This
     mechanism is best used when a message doesn’t change while an
     application is in use.
 
--   `SetNdefPushMessageCallback` - When Android Beam is initiated, an
+- `SetNdefPushMessageCallback` - When Android Beam is initiated, an
     application can handle a callback to create an NdefMessage. This
     mechanism allows for message creation to be delayed until devices
     are in range. It supports scenarios where the message may vary

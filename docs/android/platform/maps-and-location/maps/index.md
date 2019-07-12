@@ -24,9 +24,9 @@ maps using location hardware that may be available on the device. This
 article covers a spectrum of what the maps applications under 
 Xamarin.Android have to offer, including: 
 
--  Using the built-in maps application to quickly add mapping functionality.
--  Working with the Maps API to control a map's display.
--  Using a variety of techniques to add graphical overlays.
+- Using the built-in maps application to quickly add mapping functionality.
+- Working with the Maps API to control a map's display.
+- Using a variety of techniques to add graphical overlays.
 
 The topics in this section cover a wide range of mapping features.
 First, they explain how to leverage Android's built-in maps application

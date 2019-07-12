@@ -33,9 +33,9 @@ imgTouchMe.UserInteractionEnabled = true;
 
 There are three phases of touch that occur when the user touches the screen, moves their finger, or removes their finger. These methods are defined in `UIResponder`, which is the base class for UIView. iOS will override the associated methods on the `UIView` and the `UIViewController` to handle touch:
 
--  `TouchesBegan` – This is called when the screen is first touched.
--  `TouchesMoved` – This is called when the location of the touch changes as the user is sliding their fingers around the screen.
--  `TouchesEnded` or  `TouchesCancelled` –  `TouchesEnded` is called when the user’s fingers are lifted off the screen.  `TouchesCancelled` gets called if iOS cancels the touch – for example, if a user slides his or her finger away from a button to cancel a press.
+- `TouchesBegan` – This is called when the screen is first touched.
+- `TouchesMoved` – This is called when the location of the touch changes as the user is sliding their fingers around the screen.
+- `TouchesEnded` or  `TouchesCancelled` –  `TouchesEnded` is called when the user’s fingers are lifted off the screen.  `TouchesCancelled` gets called if iOS cancels the touch – for example, if a user slides his or her finger away from a button to cancel a press.
 
 
 Touch events travel recursively down through the stack of UIViews, to check if the touch event is within the bounds of a view object. This is often called _Hit-testing_. They will first be called on the topmost `UIView` or `UIViewController` and then will be called on the `UIView` and `UIViewControllers` below them in the view hierarchy.
@@ -114,12 +114,12 @@ Gesture recognizers can greatly simplify and reduce the programming effort to su
 
 Xamarin.iOS provides the class `UIGestureRecognizer` as a base class for the following built-in gesture recognizers:
 
--  *UITapGestureRecognizer* – This is for one or more taps.
--  *UIPinchGestureRecognizer* – Pinching and spreading apart fingers.
--  *UIPanGestureRecognizer* – Panning or dragging.
--  *UISwipeGestureRecognizer* – Swiping in any direction.
--  *UIRotationGestureRecognizer* – Rotating two fingers in a clockwise or counter-clockwise motion.
--  *UILongPressGestureRecognizer* – Press and hold, sometimes referred to as a long-press or long-click.
+- *UITapGestureRecognizer* – This is for one or more taps.
+- *UIPinchGestureRecognizer* – Pinching and spreading apart fingers.
+- *UIPanGestureRecognizer* – Panning or dragging.
+- *UISwipeGestureRecognizer* – Swiping in any direction.
+- *UIRotationGestureRecognizer* – Rotating two fingers in a clockwise or counter-clockwise motion.
+- *UILongPressGestureRecognizer* – Press and hold, sometimes referred to as a long-press or long-click.
 
 
 The basic pattern to using a gesture recognizer is as follows:
@@ -150,13 +150,13 @@ Gestures can be summarized as one of two types:
 
 Gesture recognizers exists in one of the following states:
 
--  *Possible* – This is the initial state of all gesture recognizers. This is the default value the State property.
--  *Began* – When a continuous gesture is first recognized, the state is set to Began. This allows subscribes to differentiate between when gesture recognition starts and when it is changed.
--  *Changed* – After a continuous gesture has begun, but hasn’t finished, the state will be set to Changed every time a touch moves or changes, as long as it’s still within the expected parameters of the gesture.
--  *Cancelled* – This state will be set if the recognizer went from Began to Changed, and then the touches changed in such a way as to no longer fit the pattern of the gesture.
--  *Recognized* – The state will be set when the gesture recognizer matches a set of touches and will inform the subscriber that the gesture has finished.
--  *Ended* – This is an alias for the Recognized state.
--  *Failed* – When the gesture recognizer can no longer match the touches it is listening for, the state will changed to Failed.
+- *Possible* – This is the initial state of all gesture recognizers. This is the default value the State property.
+- *Began* – When a continuous gesture is first recognized, the state is set to Began. This allows subscribes to differentiate between when gesture recognition starts and when it is changed.
+- *Changed* – After a continuous gesture has begun, but hasn’t finished, the state will be set to Changed every time a touch moves or changes, as long as it’s still within the expected parameters of the gesture.
+- *Cancelled* – This state will be set if the recognizer went from Began to Changed, and then the touches changed in such a way as to no longer fit the pattern of the gesture.
+- *Recognized* – The state will be set when the gesture recognizer matches a set of touches and will inform the subscriber that the gesture has finished.
+- *Ended* – This is an alias for the Recognized state.
+- *Failed* – When the gesture recognizer can no longer match the touches it is listening for, the state will changed to Failed.
 
 
 Xamarin.iOS represents these values in the `UIGestureRecognizerState` enumeration.

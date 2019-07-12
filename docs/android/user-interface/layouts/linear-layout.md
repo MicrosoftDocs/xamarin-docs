@@ -157,8 +157,8 @@ handles the `android:layout_weight` attribute.
 
 ## References
 
--   [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
+- [`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) 
+- [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
 
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*

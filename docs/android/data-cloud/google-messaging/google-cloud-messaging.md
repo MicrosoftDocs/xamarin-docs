@@ -64,7 +64,7 @@ GCM uses the following credentials to identify the app server and your
 client app, and it uses these credentials to authorize message
 transactions through GCM:
 
--   **API Key** &ndash; The *API key* gives your app server access to
+- **API Key** &ndash; The *API key* gives your app server access to
     Google services; GCM uses this key to authenticate your app server.
     Before you can use the GCM service, you must first obtain an API
     key from the
@@ -73,13 +73,13 @@ transactions through GCM:
     more information about protecting your API key, see
     [Best practices for securely using API keys](https://support.google.com/cloud/answer/6310037?hl=en).
 
--   **Sender ID** &ndash; The *Sender ID* authorizes the app server to
+- **Sender ID** &ndash; The *Sender ID* authorizes the app server to
     your client app &ndash; it is a unique number that identifies the
     app server that is permitted to send messages to your client app.
     The sender ID is also your project number; you obtain the sender ID
     from the Google Developers Console when you register your project.
 
--   **Registration Token** &ndash; The *Registration Token* is the GCM
+- **Registration Token** &ndash; The *Registration Token* is the GCM
     identity of your client app on a given device. The registration
     token is generated at run time &ndash; your app receives a
     registration token when it first registers with GCM while running
@@ -87,7 +87,7 @@ transactions through GCM:
     client app (running on that particular device) to receive messages
     from GCM.
 
--   **Application ID** &ndash; The identity of your client app
+- **Application ID** &ndash; The identity of your client app
     (independent of any given device) that registers to receive
     messages from GCM. On Android, the application ID is the package
     name recorded in **AndroidManifest.xml**, such as
@@ -291,12 +291,12 @@ To view the **API key**, click **API Manager** and then click **Credentials**:
 
 ## For Further Reading
 
--   Google's [Registering Client Apps](https://developers.google.com/cloud-messaging/registration)
+- Google's [Registering Client Apps](https://developers.google.com/cloud-messaging/registration)
     describes the client registration process in more detail, and it
     provides information about configuring automatic retry and keeping
     the registration state in sync.
 
--   [RFC 6120](https://tools.ietf.org/html/rfc6120) and
+- [RFC 6120](https://tools.ietf.org/html/rfc6120) and
     [RFC 6121](https://tools.ietf.org/html/rfc6121) explain and define
     the Extensible Messaging and Presence Protocol (XMPP).
 

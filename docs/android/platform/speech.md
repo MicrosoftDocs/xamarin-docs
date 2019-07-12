@@ -222,12 +222,12 @@ method to be invoked. Unlike the speech-to-text example (which used the
 [RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/)
 as a `PutExtra` parameter to the `Intent`), the testing and loading `Intent`s are `Action`-based:
 
--   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/)
+- [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/)
     &ndash; Starts an activity from the platform `TextToSpeech` engine
     to verify proper installation and availability of language
     resources on the device.
 
--   [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/)
+- [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/)
     &ndash; Starts an activity that prompts the user to download the necessary
     languages.
 

@@ -139,11 +139,11 @@ Run the application. You should see the following:
 
 ## References
 
--   [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 
+- [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 
 
--   [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/) 
+- [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/) 
 
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
+- [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
 
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*

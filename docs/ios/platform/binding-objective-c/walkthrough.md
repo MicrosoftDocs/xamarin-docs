@@ -42,10 +42,10 @@ This article assumes that you have some familiarity with Xcode and the Objective
 [Binding Objective-C](~/cross-platform/macios/binding/index.md)
 documentation. Additionally, the following is required to complete the steps presented:
 
--  **Xcode and iOS SDK** - Apple's Xcode and the latest iOS API need to be installed and configured on the developer's computer.
--  **[Xcode Command Line Tools](#Installing_the_Xcode_Command_Line_Tools)** - The Xcode Command Line Tools must be installed for the currently installed version of Xcode (see below for installation details).
--  **Visual Studio for Mac or Visual Studio** - The latest version of Visual Studio for Mac or Visual Studio should be installed and configured on the development computer. An Apple Mac is required for developing a Xamarin.iOS application, and when using Visual Studio you must be connected to [a Xamarin.iOS build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
--  **The latest version of Objective Sharpie** - A current copy of the Objective Sharpie tool
+- **Xcode and iOS SDK** - Apple's Xcode and the latest iOS API need to be installed and configured on the developer's computer.
+- **[Xcode Command Line Tools](#Installing_the_Xcode_Command_Line_Tools)** - The Xcode Command Line Tools must be installed for the currently installed version of Xcode (see below for installation details).
+- **Visual Studio for Mac or Visual Studio** - The latest version of Visual Studio for Mac or Visual Studio should be installed and configured on the development computer. An Apple Mac is required for developing a Xamarin.iOS application, and when using Visual Studio you must be connected to [a Xamarin.iOS build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- **The latest version of Objective Sharpie** - A current copy of the Objective Sharpie tool
 	downloaded from [here](~/cross-platform/macios/binding/objective-sharpie/get-started.md). If you already have Objective Sharpie installed, you can update it to the latest version by using the `sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>

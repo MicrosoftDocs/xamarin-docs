@@ -51,20 +51,20 @@ Android application packages are ZIP containers with a *.apk* file
 extension. Xamarin.Android application packages have the same structure
 and layout as normal Android packages, with the following additions:
 
--   The application assemblies (containing IL) are *stored*
+- The application assemblies (containing IL) are *stored*
     uncompressed within the *assemblies* folder. During process startup
     in Release builds the *.apk* is *mmap()* ed into the process and
     the assemblies are loaded from memory. This permits faster app
     startup, as assemblies do not need to be extracted prior to
     execution.  
--   *Note:* Assembly location information such as
+- *Note:* Assembly location information such as
     [Assembly.Location](xref:System.Reflection.Assembly.Location)
     and [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
     *cannot be relied upon* in Release builds. They do not exist as
     distinct filesystem entries, and they have no usable location.
 
 
--   Native libraries containing the Mono runtime are present within the
+- Native libraries containing the Mono runtime are present within the
     *.apk* . A Xamarin.Android application must contain native
     libraries for the desired/targeted Android architectures, e.g.
     *armeabi* , *armeabi-v7a* , *x86* . Xamarin.Android applications

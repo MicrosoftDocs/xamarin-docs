@@ -81,10 +81,10 @@ The choice between `AndroidClientHandler` and `HttpClientHandler`
 depends upon the needs of your application. `AndroidClientHandler` is
 recommended for the most up-to-date security support, eg.
 
--   You require TLS 1.2+ support.
--   Your app is targeting Android 4.1 (API 16) or later.
--   You need TLS 1.2+ support for `HttpClient`.
--   You don't need TLS 1.2+ support for `WebClient`.
+- You require TLS 1.2+ support.
+- Your app is targeting Android 4.1 (API 16) or later.
+- You need TLS 1.2+ support for `HttpClient`.
+- You don't need TLS 1.2+ support for `WebClient`.
 
 `HttpClientHandler` is a good choice if you need TLS 1.2+ support but
 must support versions of Android earlier than Android 4.1. It is also a
@@ -94,9 +94,9 @@ Beginning with Xamarin.Android 8.3, `HttpClientHandler` defaults to
 Boring SSL (`btls`) as the underlying TLS provider. The Boring SSL
 TLS provider offers the following advantages:
 
--   It supports TLS 1.2+.
--   It supports all Android versions.
--   It provides TLS 1.2+ support for both `HttpClient` and `WebClient`.
+- It supports TLS 1.2+.
+- It supports all Android versions.
+- It provides TLS 1.2+ support for both `HttpClient` and `WebClient`.
 
 The disadvantage of using Boring SSL as the underling TLS provider is
 that it can increase the size of the resulting APK (it adds about 1MB

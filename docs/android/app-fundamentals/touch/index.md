@@ -27,9 +27,9 @@ This guide follows a similar format for each operating system: first, the platfo
 
 ## Sections
 
--  [Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Walkthrough: Using Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Multi-Touch tracking](touch-tracking.md)
+- [Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Walkthrough: Using Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Multi-Touch tracking](touch-tracking.md)
 
 ## Summary
 

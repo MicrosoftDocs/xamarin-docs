@@ -64,16 +64,16 @@ The inception stage is all about defining and refining the idea for an app.
 To create a successful app, it’s important to ask some fundamental
 questions. Here are some things to consider before publishing an app in one of the public App Stores:
 
--   **Competitive Advantage** – Are there similar apps out there already? If so, how does this application differentiate from others?
+- **Competitive Advantage** – Are there similar apps out there already? If so, how does this application differentiate from others?
 
 For apps that will be distributed in an Enterprise:
 
--   **Infrastructure Integration** – What existing infrastructure will it integrate with or extend?
+- **Infrastructure Integration** – What existing infrastructure will it integrate with or extend?
 
 Additionally, apps should be evaluated in the context of the mobile form factor:
 
--   **Value** – What value does this app bring users? How will they use it?
--   **Form/Mobility** – How will this app work in a mobile form factor? How can I add value using mobile technologies such as location awareness, the camera, etc.?
+- **Value** – What value does this app bring users? How will they use it?
+- **Form/Mobility** – How will this app work in a mobile form factor? How can I add value using mobile technologies such as location awareness, the camera, etc.?
 
 To help with designing the functionality of an app, it can be useful to
 define Actors and [Use Cases](https://en.wikipedia.org/wiki/Use_case). Actors are roles within

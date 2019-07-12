@@ -385,8 +385,8 @@ or the directory where the solution or project are stored contain spaces.
 To fix this:
 
 
--  Make sure that neither your project or the directory where it is stored contains a space.
--  In your project "Main Settings" make sure that the Project Name does not contain any spaces.
+- Make sure that neither your project or the directory where it is stored contains a space.
+- In your project "Main Settings" make sure that the Project Name does not contain any spaces.
 
 ## Error "The binary you uploaded was invalid. A pre-release beta version of the SDK was used to build the application"
 
@@ -410,9 +410,9 @@ automatically.
 
 Follow these steps:
 
--  Change the SDK version in iPhone Build to 3.2 or iTunes connect will reject it on upload because it is seeing an iPad compatible app built using an SDK version less than 3.2
--  Create a custom Info.plist for the project and explicitly set MinimumOSVersion to 3.0 in it.   This will override the MinimumOSVersion 3.2 value set by Xamarin.iOS.   If you do not do this, the app will not be able to run on an iPhone.
--  Rebuild, zip and upload to iTunes connect.
+- Change the SDK version in iPhone Build to 3.2 or iTunes connect will reject it on upload because it is seeing an iPad compatible app built using an SDK version less than 3.2
+- Create a custom Info.plist for the project and explicitly set MinimumOSVersion to 3.0 in it.   This will override the MinimumOSVersion 3.2 value set by Xamarin.iOS.   If you do not do this, the app will not be able to run on an iPhone.
+- Rebuild, zip and upload to iTunes connect.
 
 ## Unhandled Exception: System.Exception: Failed to find selector someSelector: on {type}
 

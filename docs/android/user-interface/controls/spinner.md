@@ -254,9 +254,9 @@ Run the application; the toast should look like this:
 
 ## Resources
 
--   [`Resource.Layout`](https://developer.xamarin.com/api/type/Android.Resource+Layout/) 
--   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 
--   [`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) 
+- [`Resource.Layout`](https://developer.xamarin.com/api/type/Android.Resource+Layout/) 
+- [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) 
+- [`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) 
 
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*

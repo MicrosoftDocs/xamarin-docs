@@ -26,9 +26,9 @@ Developers can focus on their client-side applications and let iCloud eliminate 
 
 The following is required to complete the steps presented in this article:
 
--  **Xcode and the iOS SDK** – Apple's Xcode and iOS 8 APIs need to be installed and configured on the developer's computer.
--  **Visual Studio for Mac** – The latest version of Visual Studio for Mac should be installed and configured on the user device.
--  **iOS 8 Device** – An iOS device running the latest version of iOS 8 for testing.
+- **Xcode and the iOS SDK** – Apple's Xcode and iOS 8 APIs need to be installed and configured on the developer's computer.
+- **Visual Studio for Mac** – The latest version of Visual Studio for Mac should be installed and configured on the user device.
+- **iOS 8 Device** – An iOS device running the latest version of iOS 8 for testing.
 
 ## What is CloudKit?
 
@@ -216,9 +216,9 @@ This is where records are stored by default. In addition, Custom Record Zones ca
 
 Record Identifiers are represented as a tuple, containing both a client provided Record Name and the zone in which the record exists. Record Identifiers have the following characteristics:
 
--  They are created by the client application.
--  They are fully normalized and represent the specific location of the record.
--  By assigning the Unique ID of a record in a foreign database to the record name, they can be used to bridge local databases that are not stored within CloudKit.
+- They are created by the client application.
+- They are fully normalized and represent the specific location of the record.
+- By assigning the Unique ID of a record in a foreign database to the record name, they can be used to bridge local databases that are not stored within CloudKit.
 
 
 When developers create new records, they can choose to pass in a Record Identifier. If a Record Identifier is not specified, a UUID will automatically be created and assigned to the record.
@@ -286,15 +286,15 @@ We have now covered all of the fundamental objects within CloudKit. Containers a
 
 Apple offers two different API sets for working with CloudKit:
 
--  **Operational API** – Offers every single feature of CloudKit. For more complex applications, this API provides fine-grained control over CloudKit.
--  **Convenience API** – Offers a common, pre-configured subset of CloudKit features. It provides a convenient, easy access solution for including CloudKit functionality in an iOS application.
+- **Operational API** – Offers every single feature of CloudKit. For more complex applications, this API provides fine-grained control over CloudKit.
+- **Convenience API** – Offers a common, pre-configured subset of CloudKit features. It provides a convenient, easy access solution for including CloudKit functionality in an iOS application.
 
 
 The Convenience API is usually the best choice for most iOS applications and Apple suggests starting with it. The rest of this section will cover the following Convenience API topics:
 
--  Saving a Record.
--  Fetching a Record.
--  Updating a Record.
+- Saving a Record.
+- Fetching a Record.
+- Updating a Record.
 
 
 ### Common Setup Code
@@ -457,10 +457,10 @@ So far this article has looked at storing and retrieving an application's entire
 
 The more popular an application becomes, the more data in the database and the less feasible it is to have a cache of that entire data on the device. The following techniques can be used to solve this issue:
 
--  **Keep the large data in the Cloud** – CloudKit was designed to handle large data efficiently.
--  **Client should only view a slice of that data** – Bring down the bare minimum of data needed to handle any task at a given time.
--  **Client views can change** – Because each user has different preferences, the slice of data being displayed can change from user to user and the user's individual view of any given slice can be different.
--  **Client uses queries to focus the viewpoint** – Queries allow the user to view a small subset of a larger dataset that exists within the Cloud.
+- **Keep the large data in the Cloud** – CloudKit was designed to handle large data efficiently.
+- **Client should only view a slice of that data** – Bring down the bare minimum of data needed to handle any task at a given time.
+- **Client views can change** – Because each user has different preferences, the slice of data being displayed can change from user to user and the user's individual view of any given slice can be different.
+- **Client uses queries to focus the viewpoint** – Queries allow the user to view a small subset of a larger dataset that exists within the Cloud.
 
 
 ### Queries
@@ -551,9 +551,9 @@ The above code takes the query created above and executes it against the Public 
 
 The way to think about Queries is that they are polls, and are great at slicing through large datasets. Queries, however, are not well suited for large, mostly static datasets because of the following reasons:
 
--  They are bad for the device battery life.
--  They are bad for network traffic.
--  They are bad for user experience because the information they see is limited by how often the application is polling the database. Users today expect push notifications when something changes.
+- They are bad for the device battery life.
+- They are bad for network traffic.
+- They are bad for user experience because the information they see is limited by how often the application is polling the database. Users today expect push notifications when something changes.
 
 
 ### Subscriptions
@@ -662,10 +662,10 @@ When dealing with user accounts, the first consideration is authentication. Clou
 
 CloudKit provides the following user information to the developer:
 
--  **Identity** – a way of uniquely identifying the user.
--  **Metadata** – The ability to save and retrieve information about users.
--  **Privacy** – All information is handled in a privacy conscious manor. Nothing is exposed unless the user has agreed to it.
--  **Discovery** – Gives users the ability to discover their friends that are using the same application.
+- **Identity** – a way of uniquely identifying the user.
+- **Metadata** – The ability to save and retrieve information about users.
+- **Privacy** – All information is handled in a privacy conscious manor. Nothing is exposed unless the user has agreed to it.
+- **Discovery** – Gives users the ability to discover their friends that are using the same application.
 
 
 Next, we will look at these topics in detail.
@@ -755,15 +755,15 @@ This allows the application to leverage the user's Contact Book without providin
 
 To recap, there are three different kinds of inputs available for User Discovery:
 
--  **User Record ID** – Discovery can be done against the User ID of the currently logged in CloudKit user.
--  **User Email Address** – The user can provide an email address and it can be used for discovery.
--  **Contact Book** – The user's address book can be used to discover users of the application that have the same email address as listed in their contacts.
+- **User Record ID** – Discovery can be done against the User ID of the currently logged in CloudKit user.
+- **User Email Address** – The user can provide an email address and it can be used for discovery.
+- **Contact Book** – The user's address book can be used to discover users of the application that have the same email address as listed in their contacts.
 
 
 User Discovery will return the following information:
 
--  **User Record ID** - The unique ID of a user in the Public Database.
--  **First and Last Name** - As stored in the Public Database.
+- **User Record ID** - The unique ID of a user in the Public Database.
+- **First and Last Name** - As stored in the Public Database.
 
 
 This information will only be returned for users that have opted-into Discovery.
@@ -873,10 +873,10 @@ As we have seen in this article, CloudKit provides an easy way for an applicatio
 
 The following use cases should help the developer decide when to use a specific iCloud framework or technology:
 
--  **iCloud Key-Value Store** – Asynchronously keeps small amount of data up-to-date and is great for working with application preferences. However, it is constrained for a very small amount of information.
--  **iCloud Drive** – Built on top of the existing iCloud Documents APIs and provides a simple API to sync unstructured data from the file system. It provides a full offline cache on Mac OS X and is great for document centric applications.
--  **iCloud Core Data** – Allows data to be replicated between all of the user's devices. The data is single-user and great for keeping private, structured data in sync.
--  **CloudKit** – Provides public data both structure and bulk and is capable of handling both large dataset and large unstructured files. Its tied to the user's iCloud account and provides client directed data transfer.
+- **iCloud Key-Value Store** – Asynchronously keeps small amount of data up-to-date and is great for working with application preferences. However, it is constrained for a very small amount of information.
+- **iCloud Drive** – Built on top of the existing iCloud Documents APIs and provides a simple API to sync unstructured data from the file system. It provides a full offline cache on Mac OS X and is great for document centric applications.
+- **iCloud Core Data** – Allows data to be replicated between all of the user's devices. The data is single-user and great for keeping private, structured data in sync.
+- **CloudKit** – Provides public data both structure and bulk and is capable of handling both large dataset and large unstructured files. Its tied to the user's iCloud account and provides client directed data transfer.
 
 
 Keeping these use cases in mind, the developer should pick the correct iCloud technology to provide both the current required application functionality and provide good scalability for future growth.

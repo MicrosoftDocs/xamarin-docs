@@ -40,9 +40,9 @@ testing.
 
 To implement a watch face service, the following is required:
 
--   Android 5.0 (API level 21) or higher on the Wear device or emulator.
+- Android 5.0 (API level 21) or higher on the Wear device or emulator.
 
--   The [Xamarin Android Wear Support Libraries](https://www.nuget.org/packages/Xamarin.Android.Wear)
+- The [Xamarin Android Wear Support Libraries](https://www.nuget.org/packages/Xamarin.Android.Wear)
     must be added to the Xamarin.Android project.
 
 Although Android 5.0 is the minimum API level for implementing a watch

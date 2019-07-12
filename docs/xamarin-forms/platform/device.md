@@ -66,12 +66,12 @@ Alternatively, the `OnPlatform` markup extension can be used in XAML to customiz
 
 The `Device.Idiom` property can be used to alter layouts or functionality depending on the device the application is running on. The [`TargetIdiom`](xref:Xamarin.Forms.TargetIdiom) enumeration contains the following values:
 
--  **Phone** – iPhone, iPod touch, and Android devices narrower than 600 dips^
--  **Tablet** – iPad, Windows devices, and Android devices wider than 600 dips^
--  **Desktop** – only returned in [UWP apps](~/xamarin-forms/platform/windows/installation/index.md) on Windows 10 desktop computers (returns `Phone` on mobile Windows devices, including in Continuum scenarios)
--  **TV** – Tizen TV devices
--  **Watch** – Tizen watch devices
--  **Unsupported** – unused
+- **Phone** – iPhone, iPod touch, and Android devices narrower than 600 dips^
+- **Tablet** – iPad, Windows devices, and Android devices wider than 600 dips^
+- **Desktop** – only returned in [UWP apps](~/xamarin-forms/platform/windows/installation/index.md) on Windows 10 desktop computers (returns `Phone` on mobile Windows devices, including in Continuum scenarios)
+- **TV** – Tizen TV devices
+- **Watch** – Tizen watch devices
+- **Unsupported** – unused
 
 *^ dips is not necessarily the physical pixel count*
 

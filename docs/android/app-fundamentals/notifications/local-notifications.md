@@ -34,9 +34,9 @@ that corresponds to the notification area displayed above:
 
 Android notifications use two types of layouts:
 
--   ***Base layout*** &ndash; a compact, fixed presentation format.
+- ***Base layout*** &ndash; a compact, fixed presentation format.
 
--   ***Expanded layout*** &ndash; a presentation format that can expand
+- ***Expanded layout*** &ndash; a presentation format that can expand
     to a larger size to reveal more information.
 
 Each of these layout types (and how to create them) is explained in the
@@ -105,15 +105,15 @@ metadata also controls how notifications are presented on the
 lock screen and in Heads-up format. Applications can set the following
 types of notification metadata:
 
--   **Priority** &ndash; The priority level determines how and when
+- **Priority** &ndash; The priority level determines how and when
     notifications are presented. For example, In Android 5.0,
     high-priority notifications are displayed as Heads-up
     notifications.
 
--   **Visibility** &ndash; Specifies how much notification content is
+- **Visibility** &ndash; Specifies how much notification content is
     to be displayed when the notification appears on the lock screen.
 
--   **Category** &ndash; Informs the system how to handle the
+- **Category** &ndash; Informs the system how to handle the
     notification in various circumstances, such as when the device is
     in *Do Not Disturb* mode.
 
@@ -140,15 +140,15 @@ When this notification is expanded, it reveals the entire message:
 Android supports three expanded layout styles for single-event
 notifications:
 
--   ***Big Text*** &ndash; In contracted mode, displays an excerpt of
+- ***Big Text*** &ndash; In contracted mode, displays an excerpt of
     the first line of the message followed by two periods. In expanded
     mode, displays the entire message (as seen in the above example).
 
--   ***Inbox*** &ndash; In contracted mode, displays the number of new
+- ***Inbox*** &ndash; In contracted mode, displays the number of new
     messages. In expanded mode, displays the first email message or a
     list of the messages in the inbox.
 
--   ***Image*** &ndash; In contracted mode, displays only the message
+- ***Image*** &ndash; In contracted mode, displays only the message
     text. In expanded mode, displays the text and an image.
 
 [Beyond the Basic Notification](#beyond-the-basic-notification) (later
@@ -184,17 +184,17 @@ download notifications channel:
 In this screen, the user can modify the behavior of the **Download**
 notifications channel by doing the following:
 
--   Set the Importance level to **Urgent**, **High**, **Medium**, or
+- Set the Importance level to **Urgent**, **High**, **Medium**, or
     **Low**, which configures the level of sound and visual
     interruption.
 
--   Turn the notification dot on or off.
+- Turn the notification dot on or off.
 
--   Turn the blinking light on or off.
+- Turn the blinking light on or off.
 
--   Show or hide notifications on the lock screen.
+- Show or hide notifications on the lock screen.
 
--   Override the **Do Not Disturb** setting.
+- Override the **Do Not Disturb** setting.
 
 The **General Notifications** channel has similar settings:
 
@@ -223,25 +223,25 @@ about using `NotificationCompat.Builder`, see
 `NotificationCompat.Builder` provides methods for setting the various
 options in a notification, such as:
 
--   The content, including the title, the message text, and the
+- The content, including the title, the message text, and the
     notification icon.
 
--   The style of the notification, such as *Big Text*, *Inbox*, or
+- The style of the notification, such as *Big Text*, *Inbox*, or
     *Image* style.
 
--   The priority of the notification: minimum, low, default, high, or
+- The priority of the notification: minimum, low, default, high, or
     maximum. On Android 8.0 and higher, the priority is set via a [_notification channel_](#notification-channels).
 
--   The visibility of the notification on the lock screen: public,
+- The visibility of the notification on the lock screen: public,
     private, or secret.
 
--   Category metadata that helps Android classify and filter the
+- Category metadata that helps Android classify and filter the
     notification.
 
--   An optional intent that indicates an activity to launch when the
+- An optional intent that indicates an activity to launch when the
     notification is tapped.
 
--   The ID of the notification channel that the notification will be published on (Android 8.0 and higher).
+- The ID of the notification channel that the notification will be published on (Android 8.0 and higher).
 
 After you set these options in the builder, you generate a notification
 object that contains the settings. To publish the notification, you
@@ -312,11 +312,11 @@ To generate a notification in Android, follow these steps:
 You must provide at least the following information for each
 notification:
 
--   A small icon (24x24 dp in size)
+- A small icon (24x24 dp in size)
 
--   A short title
+- A short title
 
--   The text of the notification
+- The text of the notification
 
 The following code example illustrates how to use
 `NotificationCompat.Builder` to generate a basic notification. Notice that
@@ -488,13 +488,13 @@ to this message."
 
 A notification remains visible until one of three things happens:
 
--   The user dismisses the notification (or taps *Clear All*).
+- The user dismisses the notification (or taps *Clear All*).
 
--   The application makes a call to `NotificationManager.Cancel`,
+- The application makes a call to `NotificationManager.Cancel`,
     passing in the unique notification ID that was assigned when the
     notification was published.
 
--   The application calls `NotificationManager.CancelAll`.
+- The application calls `NotificationManager.CancelAll`.
 
 For more about updating Android notifications, see
 [Modify a Notification](https://developer.android.com/training/notify-user/managing.html#Updating).
@@ -924,37 +924,37 @@ notifications.
 
 Apps running on Android 7.1 and lower need to set the priority directly on the notification itself. The priority setting of a notification determines two outcomes when the notification is published:
 
--   Where the notification appears in relation to other notifications.
+- Where the notification appears in relation to other notifications.
     For example, high priority notifications are presented above lower
     priority notifications in the notifications drawer, regardless of
     when each notification was published.
 
--   Whether the notification is displayed in the Heads-up notification
+- Whether the notification is displayed in the Heads-up notification
     format (Android 5.0 and later). Only *high* and *maximum* priority
     notifications are displayed as Heads-up notifications.
 
 Xamarin.Android defines the following enumerations for setting
 notification priority:
 
--   `NotificationPriority.Max` &ndash; Alerts the user to an urgent or
+- `NotificationPriority.Max` &ndash; Alerts the user to an urgent or
     critical condition (for example, an incoming call, turn-by-turn
     directions, or an emergency alert). On Android 5.0 and later
     devices, maximum priority notifications are displayed in Heads-up
     format.
 
--   `NotificationPriority.High` &ndash; Informs the user of important
+- `NotificationPriority.High` &ndash; Informs the user of important
     events (such as important emails or the arrival of real-time chat
     messages). On Android 5.0 and later devices, high priority
     notifications are displayed in Heads-up format.
 
--   `NotificationPriority.Default` &ndash; Notifies the user of
+- `NotificationPriority.Default` &ndash; Notifies the user of
     conditions that have a medium level of importance.
 
--   `NotificationPriority.Low` &ndash; For non-urgent information that
+- `NotificationPriority.Low` &ndash; For non-urgent information that
     the user needs to be informed of (for example, software update
     reminders or social network updates).
 
--   `NotificationPriority.Min` &ndash; For background information that
+- `NotificationPriority.Min` &ndash; For background information that
     the user notices only when viewing notifications (for example,
     location or weather information).
 
@@ -998,16 +998,16 @@ control how much notification content appears on the secure lock screen.
 Xamarin.Android defines the following enumerations for setting
 notification visibility:
 
--   `NotificationVisibility.Public` &ndash; The full content of the
+- `NotificationVisibility.Public` &ndash; The full content of the
     notification is displayed on the secure lock screen.
 
--   `NotificationVisibility.Private` &ndash; Only essential information
+- `NotificationVisibility.Private` &ndash; Only essential information
     is displayed on the secure lock screen (such as the notification
     icon and the name of the app that posted it), but the rest of the
     notification's details are hidden. All notifications default to
     `NotificationVisibility.Private`.
 
--   `NotificationVisibility.Secret` &ndash; Nothing is displayed on the
+- `NotificationVisibility.Secret` &ndash; Nothing is displayed on the
     secure lock screen, not even the notification icon. The notification
     content is available only after the user unlocks the device.
 
@@ -1039,40 +1039,40 @@ Beginning with Android 5.0, predefined categories are available for
 ranking and filtering notifications. Xamarin.Android provides the
 following enumerations for these categories:
 
--   `Notification.CategoryCall` &ndash; Incoming phone call.
+- `Notification.CategoryCall` &ndash; Incoming phone call.
 
--   `Notification.CategoryMessage` &ndash; Incoming text message.
+- `Notification.CategoryMessage` &ndash; Incoming text message.
 
--   `Notification.CategoryAlarm` &ndash; An alarm condition or timer
+- `Notification.CategoryAlarm` &ndash; An alarm condition or timer
     expiration.
 
--   `Notification.CategoryEmail` &ndash; Incoming email message.
+- `Notification.CategoryEmail` &ndash; Incoming email message.
 
--   `Notification.CategoryEvent` &ndash; A calendar event.
+- `Notification.CategoryEvent` &ndash; A calendar event.
 
--   `Notification.CategoryPromo` &ndash; A promotional message or
+- `Notification.CategoryPromo` &ndash; A promotional message or
     advertisement.
 
--   `Notification.CategoryProgress` &ndash; The progress of a
+- `Notification.CategoryProgress` &ndash; The progress of a
     background operation.
 
--   `Notification.CategorySocial` &ndash; Social networking update.
+- `Notification.CategorySocial` &ndash; Social networking update.
 
--   `Notification.CategoryError` &ndash; Failure of a background
+- `Notification.CategoryError` &ndash; Failure of a background
     operation or authentication process.
 
--   `Notification.CategoryTransport` &ndash; Media playback update.
+- `Notification.CategoryTransport` &ndash; Media playback update.
 
--   `Notification.CategorySystem` &ndash; Reserved for system use
+- `Notification.CategorySystem` &ndash; Reserved for system use
     (system or device status).
 
--   `Notification.CategoryService` &ndash; Indicates that a background
+- `Notification.CategoryService` &ndash; Indicates that a background
     service is running.
 
--   `Notification.CategoryRecommendation` &ndash; A recommendation
+- `Notification.CategoryRecommendation` &ndash; A recommendation
     message related to the currently running app.
 
--   `Notification.CategoryStatus` &ndash; Information about the device.
+- `Notification.CategoryStatus` &ndash; Information about the device.
 
 When notifications are sorted, the notification's priority takes
 precedence over its category setting. For example, a high-priority

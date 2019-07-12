@@ -21,15 +21,15 @@ incorporated into a native Java-based Android app.
 
 For Xamarin.Android to work with .NET Embedding, you need the following:
 
--   **Xamarin.Android** &ndash;
+- **Xamarin.Android** &ndash;
     [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/)
     or later must be installed.
 
--   **Android Studio** &ndash;
+- **Android Studio** &ndash;
     [Android Studio 3.x](https://developer.android.com/studio/) or
     later must be installed.
 
--   **Java Developer Kit** &ndash;
+- **Java Developer Kit** &ndash;
     [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     or later must be installed.
 
@@ -64,19 +64,19 @@ following steps:
 
 For Xamarin.Android to work with .NET Embedding, you need the following:
 
--   **Xamarin.Android** &ndash;
+- **Xamarin.Android** &ndash;
     [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/)
     or later must be installed.
 
--   **Android Studio** &ndash;
+- **Android Studio** &ndash;
     [Android Studio 3.x](https://developer.android.com/studio/) or
     later must be installed.
 
--   **Java Developer Kit** &ndash;
+- **Java Developer Kit** &ndash;
     [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     or later must be installed.
 
--   **Mono** &ndash;
+- **Mono** &ndash;
     [Mono 5.0](https://www.mono-project.com/download/) or later must be
     installed (mono is installed with Visual Studio for Mac).
 

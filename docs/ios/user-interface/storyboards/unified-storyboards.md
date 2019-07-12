@@ -23,8 +23,8 @@ Prior to iOS 8, the developer used `UIInterfaceOrientation` and `UIInterfaceIdio
 
 Devices are defined by Size Classes, in both vertical and horizontal axes, and there are two types of size classes in iOS 8:
 
--  **Regular** – This is for either a large screen size (such as an iPad) or a gadget that gives the impression of a large size (such as a `UIScrollView`
--  **Compact** – This is for smaller devices (such as an iPhone). This size takes into account the orientation of the device.
+- **Regular** – This is for either a large screen size (such as an iPad) or a gadget that gives the impression of a large size (such as a `UIScrollView`
+- **Compact** – This is for smaller devices (such as an iPhone). This size takes into account the orientation of the device.
 
 
 If the two concepts are used together, the result is a 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations, as seen in the following diagram:
@@ -46,8 +46,8 @@ The iPhone has different size classes based on the orientation of the device:
 
  [![](unified-storyboards-images/iphonesizeclasses.png "iPhone Size Classes")](unified-storyboards-images/iphonesizeclasses.png#lightbox)
 
--  When the device is in portrait mode, the screen has a **compact** class horizontally and **regular** vertically
--  When the device is in landscape mode, the screen classes are reversed from portrait mode.
+- When the device is in portrait mode, the screen has a **compact** class horizontally and **regular** vertically
+- When the device is in landscape mode, the screen classes are reversed from portrait mode.
 
 ### iPhone 6 Plus Size Classes
 
@@ -86,11 +86,11 @@ All of the above states are wrapped up in a container that Apple refers to as a 
 
 Trait Environments are a new interface in iOS 8 and are able to return  a Trait Collection for the following objects:
 
--  Screens ( `UIScreens` ).
--  Windows ( `UIWindows` ).
--  View Controllers ( `UIViewController` ).
--  Views ( `UIView` ).
--  Presentation Controller ( `UIPresentationController` ).
+- Screens ( `UIScreens` ).
+- Windows ( `UIWindows` ).
+- View Controllers ( `UIViewController` ).
+- Views ( `UIView` ).
+- Presentation Controller ( `UIPresentationController` ).
 
 
 The developer uses the Trait Collection returned by a Trait Environment to determine how a user interface should be laid out.
@@ -225,16 +225,16 @@ The `TraitCollectionDidChange` is great for working with the `UIView` class, whe
 
 Now let's take a closer look at what happens when a Split View Controller collapses from a two column to a one column view. As part of this change, there are two processes that need to occur:
 
--  By default, the Split View Controller will use the primary view controller as the view after the collapse occurs. The developer can override this behavior by overriding the  `GetPrimaryViewControllerForCollapsingSplitViewController` method of the  `UISplitViewControllerDelegate` and providing any View Controller that they want to display in the collapsed state.
--  The Secondary View Controller has to get merged into the Primary View Controller. Generally the developer will not need to take any action for this step; the Split View Controller includes automatic handling of this phase based on the hardware device. However, there may be some special cases where the developer will want to interact with this change. Calling the  `CollapseSecondViewController` method of the  `UISplitViewControllerDelegate` allows the master view controller to be displayed when the collapse occurs, instead of the details view.
+- By default, the Split View Controller will use the primary view controller as the view after the collapse occurs. The developer can override this behavior by overriding the  `GetPrimaryViewControllerForCollapsingSplitViewController` method of the  `UISplitViewControllerDelegate` and providing any View Controller that they want to display in the collapsed state.
+- The Secondary View Controller has to get merged into the Primary View Controller. Generally the developer will not need to take any action for this step; the Split View Controller includes automatic handling of this phase based on the hardware device. However, there may be some special cases where the developer will want to interact with this change. Calling the  `CollapseSecondViewController` method of the  `UISplitViewControllerDelegate` allows the master view controller to be displayed when the collapse occurs, instead of the details view.
 
 
 ### Expanding the Split View Controller
 
 Now let's take a closer look at what happens when a Split View Controller is expanded from a collapsed state. Once again, there are two stages that need to occur:
 
--  First, define the new Primary View Controller. By default, the Split View Controller will automatically use the Primary View Controller from the collapsed view. Again, the developer can override this behavior using the  `GetPrimaryViewControllerForExpandingSplitViewController` method of the  `UISplitViewControllerDelegate` .
--  Once the Primary View Controller has been chosen, the Secondary View Controller must be recreated. Again, the Split View Controller includes automatic handling of this phase based on the hardware device. The developer can override this behavior by calling the  `SeparateSecondaryViewController` method of the  `UISplitViewControllerDelegate` .
+- First, define the new Primary View Controller. By default, the Split View Controller will automatically use the Primary View Controller from the collapsed view. Again, the developer can override this behavior using the  `GetPrimaryViewControllerForExpandingSplitViewController` method of the  `UISplitViewControllerDelegate` .
+- Once the Primary View Controller has been chosen, the Secondary View Controller must be recreated. Again, the Split View Controller includes automatic handling of this phase based on the hardware device. The developer can override this behavior by calling the  `SeparateSecondaryViewController` method of the  `UISplitViewControllerDelegate` .
 
 
 In a Split View Controller, the Primary View Controller plays a part in both the expanding and collapsing of the views by implementing the `CollapseSecondViewController` and `SeparateSecondaryViewController` methods of the `UISplitViewControllerDelegate`. `UINavigationController` implements these methods to automatically push and pop the Secondary View controller.
@@ -245,8 +245,8 @@ Another change that Apple has made to iOS 8 is in the way that the developer sho
 
 This presented a very tight coupling between the Navigation Controller and the environment that it was running in. In iOS 8, Apple has decoupled this by providing two new methods:
 
--  `ShowViewController` – Adapts to display the new view controller based on its environment. For example, in a  `UINavigationController` it simply pushes the new view onto the stack. In a Split View Controller, the new View Controller will be presented on the left side as the new Primary View Controller. If no container view controller is present, the new view will be displayed as a Modal View Controller.
--  `ShowDetailViewController` – Works in a similar fashion to  `ShowViewController`, but is implemented on a Split View Controller to replace the details view with the new View Controller being passed in. If the Split View Controller is collapsed (as might be seen in an iPhone Application), the call will be redirected to the  `ShowViewController` method, and the new view will be shown as the Primary View Controller. Again, if no container view controller is present, the new view will be displayed as a Modal View Controller.
+- `ShowViewController` – Adapts to display the new view controller based on its environment. For example, in a  `UINavigationController` it simply pushes the new view onto the stack. In a Split View Controller, the new View Controller will be presented on the left side as the new Primary View Controller. If no container view controller is present, the new view will be displayed as a Modal View Controller.
+- `ShowDetailViewController` – Works in a similar fashion to  `ShowViewController`, but is implemented on a Split View Controller to replace the details view with the new View Controller being passed in. If the Split View Controller is collapsed (as might be seen in an iPhone Application), the call will be redirected to the  `ShowViewController` method, and the new view will be shown as the Primary View Controller. Again, if no container view controller is present, the new view will be displayed as a Modal View Controller.
 
 
 These methods work by starting at the Leaf View Controller and walk up the view hierarchy until they find the right container view controller to handle the display of the new view.
@@ -553,9 +553,9 @@ New to iOS 8, Unified Storyboards allow the developer to create one, unified sto
 
 The key benefits of Unified Storyboards are:
 
--  Use the same storyboard file for iPhone and iPad.
--  Deploy backwards to iOS 6 and iOS 7.
--  Preview the layout for different devices, orientations and OS versions all from within the Xamarin iOS Designer.
+- Use the same storyboard file for iPhone and iPad.
+- Deploy backwards to iOS 6 and iOS 7.
+- Preview the layout for different devices, orientations and OS versions all from within the Xamarin iOS Designer.
 
 This feature is fully supported in Visual Studio for Mac
 

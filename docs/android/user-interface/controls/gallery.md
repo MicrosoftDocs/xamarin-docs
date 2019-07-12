@@ -182,9 +182,9 @@ Run the application. It should look like the screenshot below:
 
 ## References
 
--   [`BaseAdapter`](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/)
--   [`Gallery`](https://developer.xamarin.com/api/type/Android.Widget.Gallery/)
--   [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
+- [`BaseAdapter`](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/)
+- [`Gallery`](https://developer.xamarin.com/api/type/Android.Widget.Gallery/)
+- [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
 
 *Portions of this page are modifications based on work created and shared by the 
 Android Open Source Project and used according to terms described in the*

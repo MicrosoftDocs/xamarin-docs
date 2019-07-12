@@ -24,9 +24,9 @@ The swipe to delete feature is a natural gesture in iOS that users expect.
 
 There are three method overrides that affect the swipe gesture to show a **Delete** button in a cell:
 
--   **CommitEditingStyle** – The table source detects if this method is overridden and automatically enables the swipe-to-delete gesture. The method’s implementation should call  `DeleteRows` on the  `UITableView` to cause the cells to disappear, and also remove the underlying data from your model (for example, an array, dictionary or database). 
--   **CanEditRow** – If CommitEditingStyle is overridden, all rows are assumed to be editable. If this method is implemented and returns false (for some specific rows, or for all rows) then the swipe-to-delete gesture will not be available in that cell. 
--   **TitleForDeleteConfirmation** – Optionally specifies the text for the  **Delete** button. If this method is not implemented the button text will be “Delete”. 
+- **CommitEditingStyle** – The table source detects if this method is overridden and automatically enables the swipe-to-delete gesture. The method’s implementation should call  `DeleteRows` on the  `UITableView` to cause the cells to disappear, and also remove the underlying data from your model (for example, an array, dictionary or database). 
+- **CanEditRow** – If CommitEditingStyle is overridden, all rows are assumed to be editable. If this method is implemented and returns false (for some specific rows, or for all rows) then the swipe-to-delete gesture will not be available in that cell. 
+- **TitleForDeleteConfirmation** – Optionally specifies the text for the  **Delete** button. If this method is not implemented the button text will be “Delete”. 
 
 
 These methods are implemented in the `TableSource` class follows:
@@ -71,10 +71,10 @@ The **TableEditMode** sample implements these features as shown.
 There are a number of different methods on `UITableViewSource`
 that affect a table’s edit mode behavior:
 
--   **CanEditRow** – whether each row can be edited. Return false to prevent both swipe-to-delete and deletion while in edit mode. 
--   **CanMoveRow** – return true to enable the move ‘handle’ or false to prevent moving. 
--   **EditingStyleForRow** – when the table is in edit mode, the return value from this method determines whether the cell displays the red deletion icon or the green add icon. Return  `UITableViewCellEditingStyle.None` if the row should not be editable. 
--   **MoveRow** – called when a row is moved so that the underlying data structure can be modified to match the data as it is displayed in the table. 
+- **CanEditRow** – whether each row can be edited. Return false to prevent both swipe-to-delete and deletion while in edit mode. 
+- **CanMoveRow** – return true to enable the move ‘handle’ or false to prevent moving. 
+- **EditingStyleForRow** – when the table is in edit mode, the return value from this method determines whether the cell displays the red deletion icon or the green add icon. Return  `UITableViewCellEditingStyle.None` if the row should not be editable. 
+- **MoveRow** – called when a row is moved so that the underlying data structure can be modified to match the data as it is displayed in the table. 
 
 
 The implementation for the first three methods is relatively straight forward – unless you
@@ -153,16 +153,16 @@ There are a number of different methods on `UITableViewSource`
 that affect a table’s edit mode behavior. These methods have been implemented
 as follows in the example code:
 
--   **EditingStyleForRow** – returns  `UITableViewCellEditingStyle.Delete` for the rows containing data, and returns  `UITableViewCellEditingStyle.Insert` for the last row (which will be added specifically to behave as an insert button). 
--   **CustomizeMoveTarget** – While the user is moving a cell the return value from this optional method can override their choice of location. This means you can prevent them from ‘dropping’ the cell in certain positions – such as this example that prevents any row from being moved after the  **(add new)** row. 
--   **CanMoveRow** – return true to enable the move ‘handle’ or false to prevent moving. In the example, the last row has the move ‘handle’ hidden because it is intended to server as an insert button only. 
+- **EditingStyleForRow** – returns  `UITableViewCellEditingStyle.Delete` for the rows containing data, and returns  `UITableViewCellEditingStyle.Insert` for the last row (which will be added specifically to behave as an insert button). 
+- **CustomizeMoveTarget** – While the user is moving a cell the return value from this optional method can override their choice of location. This means you can prevent them from ‘dropping’ the cell in certain positions – such as this example that prevents any row from being moved after the  **(add new)** row. 
+- **CanMoveRow** – return true to enable the move ‘handle’ or false to prevent moving. In the example, the last row has the move ‘handle’ hidden because it is intended to server as an insert button only. 
 
 
 We also add two custom methods to add the ‘insert’ row and then remove it
 again when no longer required. They are called from the **Edit** and **Done** buttons:
 
--   **WillBeginTableEditing** – When the  **Edit** button is touched it calls  `SetEditing` to put the table in edit mode. This triggers the WillBeginTableEditing method where we display the  **(add new)** row at the end of the table to act as an ‘insert button’. 
--   **DidFinishTableEditing** – When the Done button is touched  `SetEditing` is called again to turn off edit mode. The example code removes the  **(add new)** row from the table when editing is no longer required. 
+- **WillBeginTableEditing** – When the  **Edit** button is touched it calls  `SetEditing` to put the table in edit mode. This triggers the WillBeginTableEditing method where we display the  **(add new)** row at the end of the table to act as an ‘insert button’. 
+- **DidFinishTableEditing** – When the Done button is touched  `SetEditing` is called again to turn off edit mode. The example code removes the  **(add new)** row from the table when editing is no longer required. 
 
 
 These method overrides are implemented in the sample file

@@ -30,18 +30,18 @@ location. The hardware used depends on the type of *location provider*
 selected for the job of collecting data. Android uses three location
 providers:
 
--   **GPS Provider** &ndash; GPS gives the most accurate location, uses
+- **GPS Provider** &ndash; GPS gives the most accurate location, uses
     the most power, and works best outdoors. This provider uses a
     combination of GPS and assisted GPS
     ([aGPS](https://en.wikipedia.org/wiki/Assisted_GPS)), which returns
     GPS data collected by cellular towers.
 
--   **Network Provider** &ndash; Provides a combination of WiFi and
+- **Network Provider** &ndash; Provides a combination of WiFi and
     Cellular data, including aGPS data collected by cell towers. It
     uses less power than the GPS Provider, but returns location data of
     varying accuracy.
 
--   **Passive Provider** &ndash; A "piggyback" option using providers
+- **Passive Provider** &ndash; A "piggyback" option using providers
     requested by other applications or Services to generate location
     data in an application. This is a less reliable but power-saving
     option ideal for applications that don't require constant location
@@ -60,13 +60,13 @@ through appropriate permissions in the application's Android Manifest.
 There are two permissions available &ndash; depending on your application's
 requirements and your choice of API, you will want to allow one:
 
--   `ACCESS_FINE_LOCATION` &ndash; Allows an application access to GPS.
+- `ACCESS_FINE_LOCATION` &ndash; Allows an application access to GPS.
     Required for the *GPS Provider* and *Passive Provider* options
     (*Passive Provider needs permission to access GPS data collected by
     another application or Service*). Optional permission for the
     *Network Provider*.
 
--   `ACCESS_COARSE_LOCATION` &ndash; Allows an application access to
+- `ACCESS_COARSE_LOCATION` &ndash; Allows an application access to
     Cellular and Wi-Fi location. Required for *Network Provider* if
     `ACCESS_FINE_LOCATION` is not set.
 
@@ -216,7 +216,7 @@ await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, l
 ```
 This method takes two parameters:
 
--   **`Android.Gms.Location.LocationRequest`** &ndash; A
+- **`Android.Gms.Location.LocationRequest`** &ndash; A
     `LocationRequest` object is how a Xamarin.Android application
     passes the parameters on how the fused location provider should
     work. The `LocationRequest` holds information such as how frequent
@@ -239,7 +239,7 @@ This method takes two parameters:
     ```
                                           
 
--   **`Android.Gms.Location.LocationCallback`** &ndash; In order to
+- **`Android.Gms.Location.LocationCallback`** &ndash; In order to
     receive location updates, a Xamarin.Android application must
     subclass the `LocationProvider` abstract class. This class exposed
     two methods which maybe invoked by the fused location provider to

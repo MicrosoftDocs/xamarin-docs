@@ -95,8 +95,8 @@ exist.
 
 There are two workarounds:
 
--   Set the `debug.mono.log` system property so that the `.__override__` directory is created.
--   Include `gdbserver` within your `.apk`.
+- Set the `debug.mono.log` system property so that the `.__override__` directory is created.
+- Include `gdbserver` within your `.apk`.
 
 ### Setting the `debug.mono.log` System Property
 

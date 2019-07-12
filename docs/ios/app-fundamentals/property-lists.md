@@ -23,9 +23,9 @@ The Information Property List ( `Info.plist`) is a required iOS file that provid
 
 Each panel controls different properties, as outlined below:
 
--  **Application Panel** - A graphical interface to set common application properties as well as icons and launch images; specify maps integration and backgrounding modes.
--  **Advanced Panel** - The advanced panel is the place to specify supported document types, UTIs, and URL types.
--  **Source Panel** - The source panel controls less common properties as well as custom properties for the application.
+- **Application Panel** - A graphical interface to set common application properties as well as icons and launch images; specify maps integration and backgrounding modes.
+- **Advanced Panel** - The advanced panel is the place to specify supported document types, UTIs, and URL types.
+- **Source Panel** - The source panel controls less common properties as well as custom properties for the application.
 
 
 The next three sections investigate the features of each panel in more detail.

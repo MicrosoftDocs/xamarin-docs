@@ -17,23 +17,23 @@ and recycling of views), but it is essentially a manager that
 coordinates helper classes to display a collection. `RecyclerView`
 delegates tasks to the following helper classes:
 
--   **`Adapter`** &ndash; Inflates item layouts (instantiates
+- **`Adapter`** &ndash; Inflates item layouts (instantiates
     the contents of a layout file) and binds data to views that are
     displayed within a `RecyclerView`. The adapter also reports
     item-click events.
 
--   **`LayoutManager`** &ndash; Measures and positions item views
+- **`LayoutManager`** &ndash; Measures and positions item views
     within a `RecyclerView` and manages the policy for view recycling.
 
--   **`ViewHolder`** &ndash; Looks up and stores view
+- **`ViewHolder`** &ndash; Looks up and stores view
     references. The view holder also helps with detecting item-view
     clicks.
 
--   **`ItemDecoration`** &ndash; Allows an app to add special
+- **`ItemDecoration`** &ndash; Allows an app to add special
     drawing and layout offsets to specific views for drawing dividers
     between items, highlights, and visual grouping boundaries.
 
--   **`ItemAnimator`** &ndash; Defines the animations that take
+- **`ItemAnimator`** &ndash; Defines the animations that take
     place during item actions or as changes are made to the adapter.
 
 The relationship between the `RecyclerView`, `LayoutManager`, and
@@ -56,7 +56,7 @@ set, and copies it to the associated item view.
 When using `RecyclerView` in your app, creating derived types of the
 following classes is required:
 
--   **`RecyclerView.Adapter`** &ndash; Provides a binding from your
+- **`RecyclerView.Adapter`** &ndash; Provides a binding from your
     app's data set (which is specific to your app) to item views that
     are displayed within the `RecyclerView`. The adapter knows how to
     associate each item-view position in the `RecyclerView` to a
@@ -65,13 +65,13 @@ following classes is required:
     and creates the view holder for each view. The adapter also reports
     item-click events that are detected by the item view.
 
--   **`RecyclerView.ViewHolder`** &ndash; Caches references to the
+- **`RecyclerView.ViewHolder`** &ndash; Caches references to the
     views in your item layout file so that resource lookups are not
     repeated unnecessarily. The view holder also arranges for
     item-click events to be forwarded to the adapter when a user taps
     the view-holder's associated item view.
 
--   **`RecyclerView.LayoutManager`** &ndash; Positions items within the
+- **`RecyclerView.LayoutManager`** &ndash; Positions items within the
     `RecyclerView`. You can use one of several predefined layout
     managers or you can implement your own custom layout manager.
     `RecyclerView` delegates the layout policy to the layout manager,
@@ -81,8 +81,8 @@ following classes is required:
 Also, you can optionally extend the following classes to change the look
 and feel of `RecyclerView` in your app:
 
--   **`RecyclerView.ItemDecoration`**
--   **`RecyclerView.ItemAnimator`**
+- **`RecyclerView.ItemDecoration`**
+- **`RecyclerView.ItemAnimator`**
 
 If you do not extend `ItemDecoration` and `ItemAnimator`,
 `RecyclerView` uses default implementations. This guide does not
@@ -159,12 +159,12 @@ You can extend `RecyclerView.LayoutManager` to create your own layout
 manager, or you can use a predefined layout manager. `RecyclerView`
 provides the following predefined layout managers:
 
--   **`LinearLayoutManager`** &ndash; Arranges items in a column that can
+- **`LinearLayoutManager`** &ndash; Arranges items in a column that can
     be scrolled vertically, or in a row that can be scrolled horizontally.
 
--   **`GridLayoutManager`** &ndash; Displays items in a grid.
+- **`GridLayoutManager`** &ndash; Displays items in a grid.
 
--   **`StaggeredGridLayoutManager`** &ndash; Displays items in a staggered grid,
+- **`StaggeredGridLayoutManager`** &ndash; Displays items in a staggered grid,
     where some items have different heights and widths.
 
 To specify the layout manager, instantiate your chosen layout manager
@@ -224,13 +224,13 @@ views as the user scrolls through the collection and reuses views.
 When you implement an adapter, you must override the following
 `RecyclerView.Adapter` methods:
 
--   **`OnCreateViewHolder`** &ndash; Instantiates the item layout file and
+- **`OnCreateViewHolder`** &ndash; Instantiates the item layout file and
     view holder.
 
--   **`OnBindViewHolder`** &ndash; Loads the data at the specified position
+- **`OnBindViewHolder`** &ndash; Loads the data at the specified position
     into the views whose references are stored in the given view holder.
 
--   **`ItemCount`** &ndash; Returns the number of items in the data source.
+- **`ItemCount`** &ndash; Returns the number of items in the data source.
 
 The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. 
@@ -248,25 +248,25 @@ change or the overall structure of the data may be altered.
 so that `RecyclerView` responds to data changes in the most efficient
 manner:
 
--  **`NotifyItemChanged`** &ndash; Signals that the item at the
+- **`NotifyItemChanged`** &ndash; Signals that the item at the
     specified position has changed.
 
--  **`NotifyItemRangeChanged`** &ndash; Signals that the items in the
+- **`NotifyItemRangeChanged`** &ndash; Signals that the items in the
     specified range of positions have changed.
 
--  **`NotifyItemInserted`** &ndash; Signals that the item in the
+- **`NotifyItemInserted`** &ndash; Signals that the item in the
     specified position has been newly inserted.
 
--  **`NotifyItemRangeInserted`** &ndash; Signals that the items in the
+- **`NotifyItemRangeInserted`** &ndash; Signals that the items in the
     specified range of positions have been newly inserted.
 
--  **`NotifyItemRemoved`** &ndash; Signals that the item in the
+- **`NotifyItemRemoved`** &ndash; Signals that the item in the
     specified position has been removed.
 
--  **`NotifyItemRangeRemoved`** &ndash; Signals that the items in the
+- **`NotifyItemRangeRemoved`** &ndash; Signals that the items in the
     specified range of positions have been removed.
 
--  **`NotifyDataSetChanged`** &ndash; Signals that the data set has
+- **`NotifyDataSetChanged`** &ndash; Signals that the data set has
     changed (forces a full update).
 
 If you know exactly how your data set has changed, you can call the

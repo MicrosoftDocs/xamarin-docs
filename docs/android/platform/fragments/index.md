@@ -70,9 +70,9 @@ Fragments.
 This guide contains comprehensive coverage about how to use Fragments,
 including:
 
--   **Creating Fragments** – How to create a basic Fragment and key methods that must be implemented.
--   **Fragment Management and Transactions** – How to manipulate Fragments at run time.
--   **Android Support Package** – How to use the libraries that allow Fragments to be used on older versions of Android.
+- **Creating Fragments** – How to create a basic Fragment and key methods that must be implemented.
+- **Fragment Management and Transactions** – How to manipulate Fragments at run time.
+- **Android Support Package** – How to use the libraries that allow Fragments to be used on older versions of Android.
 
 
 ## Requirements

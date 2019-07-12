@@ -127,10 +127,10 @@ public class CustomView : UIView {
 
 The `CustomView` component exposes a `Counter` property that can be set by the developer inside the iOS Designer. However, no matter what value is set inside the designer, the value of the `Counter` property will always be zero (0). Here's why:
 
--  An instance of the  `CustomControl` is inflated from the Storyboard file.
--  Any properties modified in the iOS designer are set (such as setting the value of the  `Counter` to two (2), for example).
--  The  `AwakeFromNib` method is executed and a call is made to the component's  `Initialize` method.
--  Inside  `Initialize` the value of the  `Counter` property is being reset to zero (0).
+- An instance of the  `CustomControl` is inflated from the Storyboard file.
+- Any properties modified in the iOS designer are set (such as setting the value of the  `Counter` to two (2), for example).
+- The  `AwakeFromNib` method is executed and a call is made to the component's  `Initialize` method.
+- Inside  `Initialize` the value of the  `Counter` property is being reset to zero (0).
 
 
 To fix the above situation, either initialize the `Counter` property elsewhere (such as in the component's constructor) or don't override the `AwakeFromNib` method and call `Initialize` if the component requires no further initialization outside of what is currently being handled by its constructors.
@@ -139,8 +139,8 @@ To fix the above situation, either initialize the `Counter` property elsewhere (
 
 On the design surface, a custom control must adhere to a few restrictions:
 
--  App bundle resources are not available in design mode. Images are available when loaded through  [UIImage methods](xref:UIKit.UIImage) .
--  Asynchronous operations, such as web requests, should not be performed in design mode. The design surface does not support animation or any other asynchronous updates to the control's UI.
+- App bundle resources are not available in design mode. Images are available when loaded through  [UIImage methods](xref:UIKit.UIImage) .
+- Asynchronous operations, such as web requests, should not be performed in design mode. The design surface does not support animation or any other asynchronous updates to the control's UI.
 
 
 A custom control can implement [IComponent](xref:System.ComponentModel.IComponent) and use the [DesignMode](xref:System.ComponentModel.ISite.DesignMode) property to check if it is on the design

@@ -31,8 +31,8 @@ each cell view populated with data.
 
 There are only two mandatory methods required to make a table display data:
 
--   **RowsInSection** – return an  [`nint`](https://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) count of the total number of rows of data the table should display.
--   **GetCell** – return a  `UITableCellView` populated with data for the corresponding row index passed to the method.
+- **RowsInSection** – return an  [`nint`](https://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) count of the total number of rows of data the table should display.
+- **GetCell** – return a  `UITableCellView` populated with data for the corresponding row index passed to the method.
 
 
 The BasicTable sample file **TableSource.cs** has the simplest possible
@@ -256,9 +256,9 @@ keys = indexedTableItems.Keys.ToArray ();
 The `UITableViewSource` subclass then needs the following methods
 added or modified to use the `Dictionary<>` :
 
--   **NumberOfSections** – this method is optional, by default the table assumes one section. When displaying an index this method should return the number of items in the index (for example, 26 if the index contains all the letters of the English alphabet).
--   **RowsInSection** – returns the number of rows in a given section.
--   **SectionIndexTitles** – returns the array of strings that will be used to display the index. The sample code returns an array of letters.
+- **NumberOfSections** – this method is optional, by default the table assumes one section. When displaying an index this method should return the number of items in the index (for example, 26 if the index contains all the letters of the English alphabet).
+- **RowsInSection** – returns the number of rows in a given section.
+- **SectionIndexTitles** – returns the array of strings that will be used to display the index. The sample code returns an array of letters.
 
 
 The updated methods in the sample file **BasicTableIndex/TableSource.cs** look
@@ -296,8 +296,8 @@ The output looks like this:
 To display headers and footers the `UITableViewSource` subclass
 requires these additional methods:
 
--   **TitleForHeader** – returns the text to use as the header
--   **TitleForFooter** – returns the text to use as the footer.
+- **TitleForHeader** – returns the text to use as the header
+- **TitleForFooter** – returns the text to use as the footer.
 
 
 The updated methods in the sample file

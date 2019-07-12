@@ -299,26 +299,26 @@ However, sometimes the View needs to contain buttons that trigger various action
 
 To allow ViewModels to be more independent of particular user interface objects but still allow methods to be called within the ViewModel, a *command* interface exists. This command interface is supported by the following elements in Xamarin.Forms:
 
--  `Button`
--  `MenuItem`
--  `ToolbarItem`
--  `SearchBar`
--  `TextCell` (and hence also `ImageCell`)
--  `ListView`
--  `TapGestureRecognizer`
+- `Button`
+- `MenuItem`
+- `ToolbarItem`
+- `SearchBar`
+- `TextCell` (and hence also `ImageCell`)
+- `ListView`
+- `TapGestureRecognizer`
 
 With the exception of the `SearchBar` and `ListView` element, these elements define two properties:
 
--  `Command` of type  `System.Windows.Input.ICommand`
--  `CommandParameter` of type  `Object`
+- `Command` of type  `System.Windows.Input.ICommand`
+- `CommandParameter` of type  `Object`
 
 The `SearchBar` defines `SearchCommand` and `SearchCommandParameter` properties, while the `ListView` defines a `RefreshCommand` property of type `ICommand`.
 
 The `ICommand` interface defines two methods and one event:
 
--  `void Execute(object arg)`
--  `bool CanExecute(object arg)`
--  `event EventHandler CanExecuteChanged`
+- `void Execute(object arg)`
+- `bool CanExecute(object arg)`
+- `event EventHandler CanExecuteChanged`
 
 The ViewModel can define properties of type `ICommand`. You can then bind these properties to the `Command` property of each `Button` or other element, or perhaps a custom view that implements this interface. You can optionally set the `CommandParameter` property to identify individual `Button` objects (or other elements) that are bound to this ViewModel property. Internally, the `Button` calls the `Execute` method whenever the user taps the `Button`, passing to the `Execute` method its `CommandParameter`.
 

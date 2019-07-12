@@ -17,16 +17,16 @@ _This article walks through the installation steps and configuration details req
 
 The following is required to create Xamarin-based Android Wear apps:
 
--   **Visual Studio or Visual Studio for Mac** &ndash; Visual Studio 2017 Community or later is
+- **Visual Studio or Visual Studio for Mac** &ndash; Visual Studio 2017 Community or later is
     required.
 
--   **Xamarin.Android** &ndash; Xamarin.Android 4.17 or later must
+- **Xamarin.Android** &ndash; Xamarin.Android 4.17 or later must
     be installed and configured with either Visual Studio or Visual Studio for Mac.
 
--   **Android SDK** - Android SDK 5.0.1 (API 21) or later must be installed
+- **Android SDK** - Android SDK 5.0.1 (API 21) or later must be installed
     via the Android SDK Manager.
 
--   **Java Developer Kit** &ndash; Xamarin Android development requires
+- **Java Developer Kit** &ndash; Xamarin Android development requires
     [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     if you are developing for API level 24 or greater (JDK 1.8
     also supports API levels earlier than 24).

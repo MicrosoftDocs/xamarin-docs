@@ -149,9 +149,9 @@ public static string DoSomeDataAccess ()
 
 Because SQLite allows arbitrary SQL commands to be run against the data, you can perform whatever CREATE, INSERT, UPDATE, DELETE or SELECT statements you like. You can read about the SQL commands supported by SQLite at the Sqlite website. The SQL statements are run using one of three methods on an SqliteCommand object:
 
--  **ExecuteNonQuery** – Typically used for table creation or data insertion. The return value for some operations is the number of rows affected, otherwise it’s -1.
--  **ExecuteReader** – Used when a collection of rows should be returned as a  `SqlDataReader` .
--  **ExecuteScalar** – Retrieves a single value (for example an aggregate).
+- **ExecuteNonQuery** – Typically used for table creation or data insertion. The return value for some operations is the number of rows affected, otherwise it’s -1.
+- **ExecuteReader** – Used when a collection of rows should be returned as a  `SqlDataReader` .
+- **ExecuteScalar** – Retrieves a single value (for example an aggregate).
 
 
 ### EXECUTENONQUERY
@@ -196,8 +196,8 @@ public static string MoreComplexQuery ()
 
 The ExecuteReader method returns a SqliteDataReader object. In addition to the Read method shown in the example, other useful properties include:
 
--  **RowsAffected** – Count of the rows affected by the query.
--  **HasRows** – Whether any rows were returned.
+- **RowsAffected** – Count of the rows affected by the query.
+- **HasRows** – Whether any rows were returned.
 
 
 ### EXECUTESCALAR

@@ -290,8 +290,8 @@ Wrist gestures make it possible for users to interact with your app
 without using the touch screen &ndash; users can respond to the app 
 with a single hand. Two wrist gestures are supported: 
 
--   Flick wrist out
--   Flick wrist in
+- Flick wrist out
+- Flick wrist in
 
 For more information, see the Android 
 [Wrist Gestures](https://developer.android.com/wear/preview/features/gestures.html) 

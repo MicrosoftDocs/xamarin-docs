@@ -23,16 +23,16 @@ Visual Studio installer to download and install Xamarin.Android tools.
 earlier versions of Xamarin.Android are no longer necessary.) In this
 guide, you will learn the following:
 
--   How to configure custom locations for the Java Development Kit,
+- How to configure custom locations for the Java Development Kit,
     Android SDK, and Android NDK.
 
--   How to launch the Android SDK Manager to download and install
+- How to launch the Android SDK Manager to download and install
     additional Android SDK components.
 
--   How to prepare an Android device or emulator for debugging and
+- How to prepare an Android device or emulator for debugging and
     testing.
 
--   How to create your first Xamarin.Android app project.
+- How to create your first Xamarin.Android app project.
 
 By the end of this guide, you will have a working Xamarin.Android
 installation integrated into Visual Studio, and you will be ready to

@@ -277,13 +277,13 @@ and replace its contents with the following XML:
 
 This XML creates three menu items:
 
--   An **Edit** menu item that uses the `ic_action_content_create.png` 
+- An **Edit** menu item that uses the `ic_action_content_create.png` 
     icon (a pencil). 
 
--   A **Save** menu item that uses the `ic_action_content_save.png` 
+- A **Save** menu item that uses the `ic_action_content_save.png` 
     icon (a diskette). 
 
--   A **Preferences** menu item that does not have an icon.
+- A **Preferences** menu item that does not have an icon.
 
 The `showAsAction` attributes of the **Edit** and **Save** menu 
 items are set to `ifRoom` &ndash; this setting causes these menu 

@@ -33,10 +33,10 @@ This article will introduce you to the key concepts needed to create an Apple TV
 
 We’ll cover the following concepts:
 
--  **Visual Studio for Mac**  – Introduction to the Visual Studio for Mac and how to create Xamarin.tvOS applications with it.
--  **Anatomy of a Xamarin.tvOS App** – What a Xamarin.tvOS app consists of.
--  **Creating a User Interface** – How to use to Xamarin Designer for iOS to create a user interface.
--  **Deployment and Testing** – How to run and test your app in the tvOS Simulator and on real tvOS hardware.
+- **Visual Studio for Mac**  – Introduction to the Visual Studio for Mac and how to create Xamarin.tvOS applications with it.
+- **Anatomy of a Xamarin.tvOS App** – What a Xamarin.tvOS app consists of.
+- **Creating a User Interface** – How to use to Xamarin Designer for iOS to create a user interface.
+- **Deployment and Testing** – How to run and test your app in the tvOS Simulator and on real tvOS hardware.
 
 ## Starting a new Xamarin.tvOS App in Visual Studio for Mac
 
@@ -72,12 +72,12 @@ If you’re familiar with iOS programming, you’ll notice a lot of similarities
 
 Let’s take a look at the files in the project:
 
--   `Main.cs` – This contains the main entry point of the app. When the app is launched, this contains the very first class and method that is run.
--   `AppDelegate.cs` – This file contains the main application class that is responsible for listening to events from the operating system.
--   `Info.plist` – This file contains application properties such as the application name, icons, etc.
--   `ViewController.cs` – This is the class that represents the main window and controls the lifecycle of it.
--   `ViewController.designer.cs` – This file contains plumbing code that helps you integrate with the main screen’s user interface.
--  `Main.storyboard` – The UI for the main window. This file can be created and maintained by the Xamarin Designer for iOS.
+- `Main.cs` – This contains the main entry point of the app. When the app is launched, this contains the very first class and method that is run.
+- `AppDelegate.cs` – This file contains the main application class that is responsible for listening to events from the operating system.
+- `Info.plist` – This file contains application properties such as the application name, icons, etc.
+- `ViewController.cs` – This is the class that represents the main window and controls the lifecycle of it.
+- `ViewController.designer.cs` – This file contains plumbing code that helps you integrate with the main screen’s user interface.
+- `Main.storyboard` – The UI for the main window. This file can be created and maintained by the Xamarin Designer for iOS.
 
 In the following sections, we'll take a quick look through some of these files. We’ll explore them in more detail later, but it’s a good idea to understand their basics now.
 
@@ -431,8 +431,8 @@ It’s time to build and run our application to make sure it runs as expected. W
 
 Whenever we build an application, we can choose what kind of build we want:
 
--   **Debug** – A debug build is compiled into an `` (application) file with extra metadata that allows us to debug what’s happening while the application is running.
--   **Release** – A release build also creates an `` file, but it doesn’t include debug information, so it’s smaller and executes faster.  
+- **Debug** – A debug build is compiled into an `` (application) file with extra metadata that allows us to debug what’s happening while the application is running.
+- **Release** – A release build also creates an `` file, but it doesn’t include debug information, so it’s smaller and executes faster.  
 
 You can select the type of build from the **Configuration Selector** at the upper left hand corner of the Visual Studio for Mac screen:
 
@@ -448,9 +448,9 @@ If there weren't any errors, you’ll see a **Build Succeeded** message in Visua
 
 To run the application, we have three options:
 
--  Press **⌘+Enter**.
--  From the **Run** menu, choose **Debug**.
--  Click the **Play** button in the Visual Studio for Mac toolbar (just above the **Solution Explorer**).
+- Press **⌘+Enter**.
+- From the **Run** menu, choose **Debug**.
+- Click the **Play** button in the Visual Studio for Mac toolbar (just above the **Solution Explorer**).
 
 The application will build (if it hasn’t been built already), start in debug mode, the tvOS Simulator will start and the app will launch and display it's main interface window:
 

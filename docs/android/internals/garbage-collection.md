@@ -15,8 +15,8 @@ Xamarin.Android uses Mono's
 This is a mark-and-sweep garbage collector with two generations and a *large 
 object space*, with two kinds of collections: 
 
--   Minor collections (collects Gen0 heap) 
--   Major collections (collects Gen1 and large object space heaps). 
+- Minor collections (collects Gen0 heap) 
+- Major collections (collects Gen1 and large object space heaps). 
 
 > [!NOTE]
 > In the absence of an explicit collection via
@@ -50,18 +50,18 @@ with the argument
 
 There are three categories of object types.
 
--   **Managed objects**: types which do *not* inherit from 
+- **Managed objects**: types which do *not* inherit from 
     [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
     , e.g. 
     [System.String](xref:System.String). 
     These are collected normally by the GC. 
 
--   **Java objects**: Java types which are present within the Android 
+- **Java objects**: Java types which are present within the Android 
     runtime VM but not exposed to the Mono VM. These are boring, and 
     won't be discussed further. These are collected normally by the 
     Android runtime VM. 
 
--   **Peer objects**: types which implement 
+- **Peer objects**: types which implement 
     [IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) 
     , e.g. all 
     [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
@@ -77,11 +77,11 @@ There are three categories of object types.
 
 There are two types of native peers:
 
--   **Framework peers** : "Normal" Java types which know nothing of
+- **Framework peers** : "Normal" Java types which know nothing of
     Xamarin.Android, e.g.
     [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/).
 
--   **User peers** :
+- **User peers** :
     [Android Callable Wrappers](~/android/platform/java-integration/working-with-jni.md)
     which are generated at build time for each Java.Lang.Object
     subclass present within the application.
@@ -90,8 +90,8 @@ There are two types of native peers:
 As there are two VMs within a Xamarin.Android process, there are two
 types of garbage collections:
 
--   Android runtime collections 
--   Mono collections 
+- Android runtime collections 
+- Mono collections 
 
 Android runtime collections operate normally, but with a caveat: a JNI
 global reference is treated as a GC root. Consequently, if there is a
@@ -203,19 +203,19 @@ noticeable pauses in an application. If the application is experiencing
 significant pauses, it's worth investigating one of the following three 
 GC Bridge implementations: 
 
--   **Tarjan** - A completely new design of the GC Bridge 
+- **Tarjan** - A completely new design of the GC Bridge 
     based on [Robert Tarjan's algorithm and backwards reference propagation](https://en.wikipedia.org/wiki/Tarjan's_strongly_connected_components_algorithm).
     It has the best performance under our simulated workloads, but it also has 
     the larger share of experimental code. 
 
--   **New** - A major overhaul of the original code, fixing two 
+- **New** - A major overhaul of the original code, fixing two 
     instances of quadratic behavior but keeping the core algorithm 
     (based on 
     [Kosaraju's 
     algorithm](https://en.wikipedia.org/wiki/Kosaraju's_algorithm) for 
     finding strongly connected components). 
 
--   **Old** - The original implementation (considered the most 
+- **Old** - The original implementation (considered the most 
     stable of the three). This is the bridge that an application should 
     use if the `GC_BRIDGE` pauses are acceptable. 
 
@@ -224,7 +224,7 @@ The only way to figure out which GC Bridge works best is by experimenting
 in an application and analyzing the output. There are two ways to 
 collect the data for benchmarking: 
 
--   **Enable logging** - Enable logging (as describe in the 
+- **Enable logging** - Enable logging (as describe in the 
     [Configuration](~/android/internals/garbage-collection.md) 
     section) for each GC Bridge option, then capture and compare the 
     log outputs from each setting. Inspect the `GC` messages for each 
@@ -232,7 +232,7 @@ collect the data for benchmarking:
     for non-interactive applications are tolerable, but pauses above 60ms 
     for very interactive applications (such as games) are a problem. 
 
--   **Enable bridge accounting** - Bridge accounting will display the 
+- **Enable bridge accounting** - Bridge accounting will display the 
     average cost of the objects pointed by each object involved in the 
     bridge process. Sorting this information by size will provide hints 
     as to what is holding the largest amount of extra objects. 
@@ -539,9 +539,9 @@ If your application has a "duty cycle" in which the same thing is done
 over and over, it may be advisable to manually perform a minor 
 collection once the duty cycle has ended. Example duty cycles include: 
 
--  The rendering cycle of a single game frame.
--  The whole interaction with a given app dialog (opening, filling, closing) 
--  A group of network requests to refresh/sync app data.
+- The rendering cycle of a single game frame.
+- The whole interaction with a given app dialog (opening, filling, closing) 
+- A group of network requests to refresh/sync app data.
 
 
 
@@ -556,10 +556,10 @@ on an Android-style device when collecting a 512MB heap.
 
 Major collections should only be manually invoked, if ever: 
 
--   At the end of lengthy duty cycles and when a long pause won't 
+- At the end of lengthy duty cycles and when a long pause won't 
     present a problem to the user. 
 
--   Within an overridden 
+- Within an overridden 
     [Android.App.Activity.OnLowMemory()](https://developer.xamarin.com/api/member/Android.App.Activity.OnLowMemory/) 
     method. 
 
@@ -586,20 +586,20 @@ with a Build action of
 The `MONO_GC_PARAMS` environment variable is a comma-separated list of 
 the following parameters: 
 
--   `nursery-size` = *size* : Sets the size of the nursery. The size is 
+- `nursery-size` = *size* : Sets the size of the nursery. The size is 
     specified in bytes and must be a power of two. The suffixes `k` , 
     `m` and `g` can be used to specify kilo-, mega- and gigabytes, 
     respectively. The nursery is the first generation (of two). A 
     larger nursery will usually speed up the program but will obviously 
     use more memory. The default nursery size 512 kb. 
 
--   `soft-heap-limit` = *size* : The target maximum managed memory 
+- `soft-heap-limit` = *size* : The target maximum managed memory 
     consumption for the app. When memory use is below the specified 
     value, the GC is optimized for execution time (fewer collections). 
     Above this limit, the GC is optimized for memory usage (more 
     collections). 
 
--   `evacuation-threshold` = *threshold* : Sets the evacuation 
+- `evacuation-threshold` = *threshold* : Sets the evacuation 
     threshold in percent. The value must be an integer in the range 0 
     to 100. The default is 66. If the sweep phase of the collection 
     finds that the occupancy of a specific heap block type is less than 
@@ -607,11 +607,11 @@ the following parameters:
     type in the next major collection, thereby restoring occupancy to 
     close to 100 percent. A value of 0 turns evacuation off. 
 
--   `bridge-implementation` = *bridge implementation* : This will set 
+- `bridge-implementation` = *bridge implementation* : This will set 
     the GC Bridge option to help address GC performance issues. There 
     are three possible values: *old* , *new* , *tarjan*.
 
--   `bridge-require-precise-merge`: The Tarjan bridge contains an
+- `bridge-require-precise-merge`: The Tarjan bridge contains an
     optimization which may, on rare occasions, cause an object to
     be collected one GC after it first becomes garbage. Including
     this option disables that optimization, making GCs more

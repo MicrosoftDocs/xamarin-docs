@@ -14,14 +14,14 @@ The Fragments API provides other subclasses that encapsulate some of
 the more common functionality found in applications. These subclasses
 are:
 
--   **ListFragment** &ndash; This Fragment is used to display a list of
+- **ListFragment** &ndash; This Fragment is used to display a list of
     items bound to a datasource such as an array or a cursor.
 
--   **DialogFragment** &ndash; This Fragment is used as a wrapper
+- **DialogFragment** &ndash; This Fragment is used as a wrapper
     around a dialog. The Fragment will display the dialog on top of its
     Activity.
 
--   **PreferenceFragment** &ndash; This Fragment is used to show
+- **PreferenceFragment** &ndash; This Fragment is used to show
     Preference objects as lists.
 
 
@@ -115,9 +115,9 @@ with direct calls on the dialog object. The `DialogFragment` API
 provides each instance with a `Show()` method that is used to display a
 Fragment. There are two ways to get rid of a Fragment:
 
--  Call `DialogFragment.Dismiss()` on the  `DialogFragment` instance. 
+- Call `DialogFragment.Dismiss()` on the  `DialogFragment` instance. 
 
--  Display another `DialogFragment`.
+- Display another `DialogFragment`.
 
 To create a `DialogFragment`, a class inherits from
 `Android.App.DialogFragment,` and then overrides one of the following

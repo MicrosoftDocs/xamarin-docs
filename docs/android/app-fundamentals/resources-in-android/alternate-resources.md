@@ -180,7 +180,7 @@ The possible qualifiers are listed below for reference:
 
     - `navhidden` &ndash; the navigational keys are not available.
 
--  **Primary Non-Touch Navigation Method** &ndash; The kind of
+- **Primary Non-Touch Navigation Method** &ndash; The kind of
    navigation available on the device. Possible values are:
 
     - `nonav` &ndash; the only navigation facility available is the
@@ -193,7 +193,7 @@ The possible qualifiers are listed below for reference:
     - `wheel` &ndash; the uncommon scenario where there are one or more
       directional wheels available
 
--  **Platform Version (API level)** &ndash; The API level supported by
+- **Platform Version (API level)** &ndash; The API level supported by
    the device in the format v*N*, where *N* is the API level that is
    being targeted. For example, v11 will target an API level 11
    (Android 3.0) device.

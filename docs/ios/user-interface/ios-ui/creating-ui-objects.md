@@ -24,9 +24,9 @@ All the controls discussed in this chapter are in the UIKit namespace, and each 
 
 You can edit UI controls and layouts in three ways:
 
--  **[Xamarin iOS Designer](~/ios/user-interface/designer/index.md)** – Use Xamarin’s built-in layout designer to design screens. Double-click storyboard or XIB files to edit with the built-in designer.
--  **Xcode Interface Builder** – Drag controls onto your screen layouts with Interface Builder. Open the storyboard or XIB file in Xcode by right-clicking the file in the **Solution Pad** and choosing **Open With > Xcode Interface Builder**.
--  **Using C#** – Controls can also be programmatically constructed with code and added to the view hierarchy.
+- **[Xamarin iOS Designer](~/ios/user-interface/designer/index.md)** – Use Xamarin’s built-in layout designer to design screens. Double-click storyboard or XIB files to edit with the built-in designer.
+- **Xcode Interface Builder** – Drag controls onto your screen layouts with Interface Builder. Open the storyboard or XIB file in Xcode by right-clicking the file in the **Solution Pad** and choosing **Open With > Xcode Interface Builder**.
+- **Using C#** – Controls can also be programmatically constructed with code and added to the view hierarchy.
 
 New Storyboard and XIB files can be added by right-clicking on an iOS project and choosing **Add > New File...**.
 
@@ -96,13 +96,13 @@ refer to the [Xib Code Generation](~/ios/internals/xib-code-generation.md#genera
 If you decide to programmatically create a user interface object using C# (in a View or View Controller, for example),
 follow these steps:
 
--  Declare a class level field for the user interface object. Create the control itself once, in `ViewDidLoad`
+- Declare a class level field for the user interface object. Create the control itself once, in `ViewDidLoad`
 for example. The object can then be referenced throughout the lifecycle methods of the View Controller (eg.
 `ViewWillAppear`).
--  Create a `CGRect` that defines the frame of the control (its X and Y coordinates on the screen, as well as its width and height). You'll need to make sure you have a `using CoreGraphics` directive for this.
--  Call the constructor to create and assign the control.
--  Set any properties or event handlers.
--  Call `Add()` to add the control to the view hierarchy.
+- Create a `CGRect` that defines the frame of the control (its X and Y coordinates on the screen, as well as its width and height). You'll need to make sure you have a `using CoreGraphics` directive for this.
+- Call the constructor to create and assign the control.
+- Set any properties or event handlers.
+- Call `Add()` to add the control to the view hierarchy.
 
 Here is a simple example of creating a `UILabel` in a View Controller using C#:
 

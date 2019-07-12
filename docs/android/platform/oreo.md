@@ -38,15 +38,15 @@ Android Oreo features in Xamarin.Android apps.
 The following is required to use Android Oreo features in Xamarin-based
 apps:
 
--   **Visual Studio** &ndash; If you are using Windows, version 15.5 
+- **Visual Studio** &ndash; If you are using Windows, version 15.5 
     or later of Visual Studio is required.  If you are using
     a Mac, Visual Studio for Mac version 7.2.0 is 
     required.
 
--   **Xamarin.Android** &ndash; Xamarin.Android 8.0 or later must
+- **Xamarin.Android** &ndash; Xamarin.Android 8.0 or later must
     be installed and configured with Visual Studio.
 
--   **Android SDK** &ndash; Android SDK 8.0 (API 26) or later must be 
+- **Android SDK** &ndash; Android SDK 8.0 (API 26) or later must be 
     installed via the Android SDK Manager.
 
 
@@ -449,11 +449,11 @@ you use to initialize and update an Activity in PIP mode (for example,
 the Activity's preferred aspect ratio). The following new PIP methods
 were added to `Activity` in Android Oreo:
 
--   [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29)
+- [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29)
     &ndash; puts the Activity in PIP mode. The Activity is placed in the corner of the screen, and the rest of the screen is
     filled with the previous Activity that was on the screen.
 
--   [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29)
+- [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29)
     &ndash; Updates the Activity's PIP configuration settings (for example, a change in aspect ratio).
 
 The [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture)
@@ -532,34 +532,34 @@ the following changes, where applicable:
 Several Xamarin.Android samples are available to show you how to take
 advantage of Android Oreo features:
 
--   [NotificationsChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels)
+- [NotificationsChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels)
     demonstrates how to use the new Notification Channels system introduced in Android 
     Oreo. This sample manages two notifications channels: one with default importance
     and the other with high importance.
 
--   [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture)
+- [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture)
     demonstrates basic usage of the Picture-in-Picture (PiP) mode for
     handheld devices introduced in Oreo. The sample plays a video which
     continues uninterrupted while switching back and forth between
     display modes or other activities.
 
--   [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework)
+- [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework)
     demonstrates the use of the Autofill Framework. It includes implementations of client Activities with views that 
     should be autofilled, and a Service that can provide autofill data to client Activities.
 
--   [Downloadable Fonts](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts)
+- [Downloadable Fonts](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts)
     provides an example of how to use the Downloadable Fonts feature
     described earlier.
 
--   [EmojiCompat](https://developer.xamarin.com/samples/monodroid/android-o/EmojiCompat)
+- [EmojiCompat](https://developer.xamarin.com/samples/monodroid/android-o/EmojiCompat)
     demonstrates usage of EmojiCompat support library. You can use this library to prevent your app from 
     showing missing emoji characters as "tofu" characters.
 
--   [Location Updates Pending Intent](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdPendIntent)
+- [Location Updates Pending Intent](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdPendIntent)
     illustrates usage of the Location API to get updates about a
     device's location using a `PendingIntent`.
 
--   [Location Updates Foreground Service](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService)
+- [Location Updates Foreground Service](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService)
     demonstrates how to use the Location API to get updates about a
     device's location using a bound and started foreground service.
 

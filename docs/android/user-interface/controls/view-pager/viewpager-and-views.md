@@ -160,15 +160,15 @@ and loads it into the pages for the `ViewPager` to display.
 
 When you implement a `PagerAdapter`, you must override the following:
 
--   **InstantiateItem** &ndash; Creates the page (`View`) for a given 
+- **InstantiateItem** &ndash; Creates the page (`View`) for a given 
     position and adds it to the `ViewPager`'s collection of views. 
 
--   **DestroyItem** &ndash; Removes a page from a given position.
+- **DestroyItem** &ndash; Removes a page from a given position.
 
--   **Count** &ndash; Read-only property that returns the number of 
+- **Count** &ndash; Read-only property that returns the number of 
     views (pages) available. 
 
--   **IsViewFromObject** &ndash; Determines whether a page is
+- **IsViewFromObject** &ndash; Determines whether a page is
     associated with a specific key object. (This object is created
     by the `InstantiateItem` method.) In this example, the key object
     is the `TreeCatalog` data object.

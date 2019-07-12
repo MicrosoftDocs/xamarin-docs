@@ -31,9 +31,9 @@ cycle.
 
 The first step in designing an application is to identify desired features. These can be high-level goals or detailed use cases. Tasky has straightforward functional requirements:
 
--  View a list of tasks
--  Add, edit and delete tasks
--  Set a task’s status to ‘done’
+- View a list of tasks
+- Add, edit and delete tasks
+- Set a task’s status to ‘done’
 
 You should consider your use of platform-specific features.  Can Tasky take advantage of iOS geofencing or Windows
 Phone Live Tiles? Even if you don't use platform-specific features in the first version, you should plan ahead to make sure your business & data layers can accommodate them.

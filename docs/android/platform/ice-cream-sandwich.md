@@ -19,10 +19,10 @@ Android OS version 4.0 (API Level 14) represents a major reworking of the
 Android Operating System and includes a number of important changes and
 upgrades, including:
 
--   **Updated User Interface** – Several new UI features give developers more power and flexibility when they create application user interfaces. These new features include:  `GridLayout` ,  `PopupMenu` ,  `Switch` widget, and  `TextureView` . 
--   **Better Hardware Acceleration** – 2D rendering now takes place on the GPU for all Android controls. Additionally, hardware acceleration is on, by default, in all applications developed for Android 4.0. 
--   **New Data APIs** – There’s new access to data that was not previously officially accessible, such as calendar data and the user profile of the device owner. 
--   **App Data Sharing** – Sharing data between applications and devices is now easier than ever via technologies such as the  `ShareActionProvider` , which makes it easy to create a sharing action from an Action Bar, and  *Android Beam* for  *Near Field Communications (NFC)* , which makes it a snap to share data across devices in close proximity to each other. 
+- **Updated User Interface** – Several new UI features give developers more power and flexibility when they create application user interfaces. These new features include:  `GridLayout` ,  `PopupMenu` ,  `Switch` widget, and  `TextureView` . 
+- **Better Hardware Acceleration** – 2D rendering now takes place on the GPU for all Android controls. Additionally, hardware acceleration is on, by default, in all applications developed for Android 4.0. 
+- **New Data APIs** – There’s new access to data that was not previously officially accessible, such as calendar data and the user profile of the device owner. 
+- **App Data Sharing** – Sharing data between applications and devices is now easier than ever via technologies such as the  `ShareActionProvider` , which makes it easy to create a sharing action from an Action Bar, and  *Android Beam* for  *Near Field Communications (NFC)* , which makes it a snap to share data across devices in close proximity to each other. 
 
 
 In this article, we’re going to explore these features and other changes
@@ -34,10 +34,10 @@ feature with Xamarin.Android.
 A variety of new user interface technologies are available with Android 4,
 including:
 
--   **[GridLayout](~/android/user-interface/layouts/grid-layout.md)** – Supports 2D grid layout of controls. 
--   **[Switch widget](~/android/user-interface/controls/switch.md)** – Allows toggling between ON or OFF. 
--   **[TextureView](~/android/user-interface/controls/texture-view.md)** – Enables video and OpenGL content within a view. 
--   **[Navigation Bar](~/android/user-interface/controls/navigation-bar.md)** – Contains virtual buttons for back, home, and multi-tasking. 
+- **[GridLayout](~/android/user-interface/layouts/grid-layout.md)** – Supports 2D grid layout of controls. 
+- **[Switch widget](~/android/user-interface/controls/switch.md)** – Allows toggling between ON or OFF. 
+- **[TextureView](~/android/user-interface/controls/texture-view.md)** – Enables video and OpenGL content within a view. 
+- **[Navigation Bar](~/android/user-interface/controls/navigation-bar.md)** – Contains virtual buttons for back, home, and multi-tasking. 
 
 
 Additionally, other UI elements have been enhanced, such as the `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`, which is now easier to work with, and tabs, which have a
@@ -51,10 +51,10 @@ data that were not previously available, such as calendar information and the
 device owner’s user profile. In this section we’ll examine a variety of
 features offered by Android 4 that address these areas including:
 
--  **[Android Beam](~/android/platform/android-beam.md)** – Allows data sharing via NFC.
--   **[ShareActionProvider](~/android/user-interface/controls/action-bar.md)** – Creates a provider that allows developers to specify sharing actions from the Action Bar. 
--   **[User Profile](~/android/user-interface/user-profile.md)** – Provides access to profile data of the device owner. 
--   **[Calendar API](~/android/user-interface/controls/calendar.md)** – Provides access to calendar data from the calendar provider. 
+- **[Android Beam](~/android/platform/android-beam.md)** – Allows data sharing via NFC.
+- **[ShareActionProvider](~/android/user-interface/controls/action-bar.md)** – Creates a provider that allows developers to specify sharing actions from the Action Bar. 
+- **[User Profile](~/android/user-interface/user-profile.md)** – Provides access to profile data of the device owner. 
+- **[Calendar API](~/android/user-interface/controls/calendar.md)** – Provides access to calendar data from the calendar provider. 
 
 ## x86 Emulators
 

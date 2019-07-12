@@ -18,15 +18,15 @@ _Xamarin.Android has several Android API level settings that determine your app'
 
 Xamarin.Android exposes three Android API level project settings:
 
--   [Target Framework](#framework) &ndash; Specifies which framework to
+- [Target Framework](#framework) &ndash; Specifies which framework to
     use in building your application. This API level is used at
     *compile* time by Xamarin.Android.
 
--   [Minimum Android Version](#minimum) &ndash; Specifies the oldest
+- [Minimum Android Version](#minimum) &ndash; Specifies the oldest
     Android version that you want your app to support. This API level
     is used at *run* time by Android.
 
--   [Target Android Version](#target) &ndash; Specifies the version of
+- [Target Android Version](#target) &ndash; Specifies the version of
     Android that your app is intended to run on. This API level is used
     at *run* time by Android.
 
@@ -129,9 +129,9 @@ designed to work with multiple Android API levels.
 
 Each release of Android goes by multiple names:
 
--   The Android version, such as **Android 9.0**
--   A code (or dessert) name, such as _Pie_
--   A corresponding API level, such as **API level 28**
+- The Android version, such as **Android 9.0**
+- A code (or dessert) name, such as _Pie_
+- A corresponding API level, such as **API level 28**
 
 An Android code name may correspond to multiple versions and API levels
 (as seen in the table below), but each Android version corresponds to
@@ -168,10 +168,10 @@ application on a device.
 When an application is built, it contains the following API level
 information:
 
--   The *target* API level of Android that the app is built to
+- The *target* API level of Android that the app is built to
     run on.
 
--   The *minimum* Android API level that an Android device must
+- The *minimum* Android API level that an Android device must
     have to run your app. 
 
 These settings are used to ensure that the functionality needed to run
@@ -495,12 +495,12 @@ be *compiled*, but you can't predict which platform API level the library
 will be run on. With this in mind, the following best practices should
 be observed when consuming or creating libraries:
 
--   **When consuming an Android library** &ndash; If you are consuming
+- **When consuming an Android library** &ndash; If you are consuming
     an Android library in your application, be sure to set your app's
     Target Framework setting to an API level that is *at least as high
     as* the Target Framework setting of the library.
 
--   **When creating an Android library** &ndash; If you are creating an
+- **When creating an Android library** &ndash; If you are creating an
     Android library for use by other applications, be sure to set its
     Target Framework setting to the minimum API level that it needs in
     order to compile.

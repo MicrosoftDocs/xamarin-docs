@@ -17,8 +17,8 @@ and fix any performance bottlenecks, excessive memory usage issues, or
 inefficient use of network resources. Two profiler tools are available
 to serve this purpose:
 
--  Xamarin Profiler 
--  Android Profiler in Android Studio
+- Xamarin Profiler 
+- Android Profiler in Android Studio
 
 This guide introduces the Xamarin Profiler and provides detailed
 information for getting started with using the Android Profiler.
@@ -148,13 +148,13 @@ Detailed information for using the Android Profiler is included in
 the [Android Studio documentation](https://developer.android.com/studio/profile/android-profiler.html).
 The following topics will be of interest to Xamarin Android developers:
 
--   [CPU Profiler](https://developer.android.com/studio/profile/cpu-profiler.html)
+- [CPU Profiler](https://developer.android.com/studio/profile/cpu-profiler.html)
     &ndash; Explains how to inspect the app's CPU usage and thread activity in real-time.
 
--   [Memory Profiler](https://developer.android.com/studio/profile/memory-profiler.html)
+- [Memory Profiler](https://developer.android.com/studio/profile/memory-profiler.html)
     &ndash; Displays a real-time graph of the app's memory usage, and
     includes a button to record memory allocations for analysis.
 
--   [Network Profiler](https://developer.android.com/studio/profile/network-profiler.html)
+- [Network Profiler](https://developer.android.com/studio/profile/network-profiler.html)
     &ndash; Displays real-time network activity of data sent and
     received by the app.

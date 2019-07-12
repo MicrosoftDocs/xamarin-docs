@@ -18,9 +18,9 @@ _A third option for using Java in a Xamarin.Android application is to port the J
 This approach may be of interest to organizations
 that:
 
--  **Are switching technology stacks from Java to C#.**
--  **Must maintain a C# and a Java version of the same product.**
--  **Wish to have a .NET version of a popular Java library.**
+- **Are switching technology stacks from Java to C#.**
+- **Must maintain a C# and a Java version of the same product.**
+- **Wish to have a .NET version of a popular Java library.**
 
 
 There are two ways to port Java code to C#. The first way is to port the code

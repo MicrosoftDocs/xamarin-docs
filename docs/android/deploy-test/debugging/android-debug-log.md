@@ -23,8 +23,8 @@ tool to view the logged data.
 The **Debug Log** tool provides a way to view log output while debugging an
 app through Visual Studio. The debug log supports the following devices:
 
--   Physical Android phones, tablets, and wearables.
--   An Android Virtual device running on the Android Emulator. 
+- Physical Android phones, tablets, and wearables.
+- An Android Virtual device running on the Android Emulator. 
 
 > [!NOTE]
 > The **Debug Log** tool does not work with Xamarin Live Player.
@@ -46,27 +46,27 @@ toolbar:
 Alternately, launch the **Device Log** tool from one of the following
 menu selections:
 
--   **View > Other Windows > Device Log**
--   **Tools > Android > Device Log**
+- **View > Other Windows > Device Log**
+- **Tools > Android > Device Log**
 
 The following screenshot illustrates the various parts of the **Debug
 Tool** window:
 
 [![Parts of the Debug Tool window](android-debug-log-images/vswin-03-features-sml.png)](android-debug-log-images/vswin-03-features.png#lightbox)
 
--   **Device Selector** &ndash; Selects which physical device or
+- **Device Selector** &ndash; Selects which physical device or
     running emulator to monitor.
 
--   **Log Entries** &ndash; A table of log messages from logcat.
+- **Log Entries** &ndash; A table of log messages from logcat.
 
--   **Clear Log Entries** &ndash; Clears all current log entries from the table.
+- **Clear Log Entries** &ndash; Clears all current log entries from the table.
 
--   **Play/Pause** &ndash; Toggles between updating or pausing the
+- **Play/Pause** &ndash; Toggles between updating or pausing the
     display of new log entries.
 
--   **Stop** &ndash; Halts the display of new log entries.
+- **Stop** &ndash; Halts the display of new log entries.
 
--   **Search Box** &ndash; Enter search strings in this box to filter for a subset
+- **Search Box** &ndash; Enter search strings in this box to filter for a subset
     of log entries.
 
 
@@ -94,25 +94,25 @@ The following screenshot illustrates the various parts of the **Debug Tool** win
 
 [![Features of the Debug Tool window](android-debug-log-images/vsmac-03-features-sml.png)](android-debug-log-images/vsmac-03-features.png#lightbox)
 
--   **Device Selector** &ndash; Selects which physical device or
+- **Device Selector** &ndash; Selects which physical device or
     running emulator to monitor.
 
--   **Log Entries** &ndash; A table of log messages from logcat.
+- **Log Entries** &ndash; A table of log messages from logcat.
 
--   **Clear Log Entries** &ndash; Clears all current log entries from the table.
+- **Clear Log Entries** &ndash; Clears all current log entries from the table.
 
--   **Search Box** &ndash; Enter search strings in this box to filter for a subset
+- **Search Box** &ndash; Enter search strings in this box to filter for a subset
     of log entries.
 
--   **Show Messages** &ndash; Toggles the display of informational messages.
+- **Show Messages** &ndash; Toggles the display of informational messages.
 
--   **Show Warnings** &ndash; Toggles the display of warning messages (warning messages are shown in yellow).
+- **Show Warnings** &ndash; Toggles the display of warning messages (warning messages are shown in yellow).
 
--   **Show Errors** &ndash; Toggles the display of error messages (warning messages are shown in red).
+- **Show Errors** &ndash; Toggles the display of error messages (warning messages are shown in red).
 
--   **Reconnect** &ndash; Reconnects to the device and refreshes the log entry display.
+- **Reconnect** &ndash; Reconnects to the device and refreshes the log entry display.
 
--   **Add Marker** &ndash; Inserts a marker message (such as `--- Marker N ---`) 
+- **Add Marker** &ndash; Inserts a marker message (such as `--- Marker N ---`) 
     after the latest log entry, where _N_ is a counter that starts from 1 and 
     increments by 1 as new markers are added.
 

@@ -66,8 +66,8 @@ Visual Studio for Mac always writes device deployment logs. FInding them is
 slightly more difficult; a *AndroidUtils* log file is created for every
 day + time that a deployment occurs, for example: **AndroidTools-2012-10-24_12-35-45.log**.
 
--  On Windows, log files are written to  `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`.
--  On OS X, log files are written to  `$HOME/Library/Logs/XamarinStudio-{VERSION}`.
+- On Windows, log files are written to  `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`.
+- On OS X, log files are written to  `$HOME/Library/Logs/XamarinStudio-{VERSION}`.
 
 
 
@@ -95,10 +95,10 @@ be restarted after the system properties are changed.
 
 Xamarin.Android supports the following system properties:
 
--   *debug.mono.debug*: If a non-empty string, this is equivalent to
+- *debug.mono.debug*: If a non-empty string, this is equivalent to
     `*mono-debug*`.
 
--   *debug.mono.env*: A pipe-separated ('*|*') list of environment
+- *debug.mono.env*: A pipe-separated ('*|*') list of environment
     variables to export during application startup, *before* mono has
     been initialized. This allows setting environment variables that
     control mono logging.
@@ -114,7 +114,7 @@ Xamarin.Android supports the following system properties:
 
             adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
 
--   *debug.mono.log*: A comma-separated ('*,*') list of components that
+- *debug.mono.log*: A comma-separated ('*,*') list of components that
     should print additional messages to the Android Debug Log. By
     default, nothing is set. Components include:
 
@@ -125,7 +125,7 @@ Xamarin.Android supports the following system properties:
 
     *Note*: these are *extremely* verbose. Do not enable unless you really need to.
 
--   *debug.mono.trace*: Allows setting the [mono --trace](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`
+- *debug.mono.trace*: Allows setting the [mono --trace](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`
     setting.
 
 
@@ -228,10 +228,10 @@ I/monodroid-gref(27679): -w- grefc 1915 gwrefc 294 handle 0xde691aaf/W from take
 
 There are four messages of consequence:
 
--  Global reference creation: these are the lines that start with  *+g+* , and will provide a stack trace for the creating code path.
--  Global reference destruction: these are the lines that start with  *-g-* , and may provide a stack trace for the code path disposing of the global reference. If the GC is disposing of the gref, no stack trace will be provided.
--  Weak global reference creation: these are the lines that start with  *+w+* .
--  Weak global reference destruction: these are lines that start with  *-w-* .
+- Global reference creation: these are the lines that start with  *+g+* , and will provide a stack trace for the creating code path.
+- Global reference destruction: these are the lines that start with  *-g-* , and may provide a stack trace for the code path disposing of the global reference. If the GC is disposing of the gref, no stack trace will be provided.
+- Weak global reference creation: these are the lines that start with  *+w+* .
+- Weak global reference destruction: these are lines that start with  *-w-* .
 
 
 In all messages, The *grefc* value is the count of global references
@@ -411,12 +411,12 @@ Ensure you use the correct simulator name, i.e.
 
 Android package names *must* contain a period ('*.*'). Edit your package name so that it contains a period.
 
--   Within Visual Studio:
+- Within Visual Studio:
     -   Right click your project > Properties
     -   Click the Android Manifest tab on the left.
     -   Update the Package name field.
         -   If you see the message &ldquo;No AndroidManifest.xml found. Click to add one.&rdquo;, click the link and then update the Package name field.
--   Within Visual Studio for Mac:
+- Within Visual Studio for Mac:
     -   Right click your project > Options.
     -   Navigate to the Build / Android Application section.
     -   Change the Package name field to contain a '.'.
@@ -453,9 +453,9 @@ for the Google Maps shared library.
 
 Android packages have three requirements:
 
--   They must contain a '.' (see previous entry)
--   They must have a unique string package name (hence the reverse-tld convention seen in Android app names, e.g. com.android.chrome for the Chrome app)
--   When upgrading packages, the package must have the same signing key.
+- They must contain a '.' (see previous entry)
+- They must have a unique string package name (hence the reverse-tld convention seen in Android app names, e.g. com.android.chrome for the Chrome app)
+- When upgrading packages, the package must have the same signing key.
 
 Thus, imagine this scenario:
 
@@ -554,7 +554,7 @@ generally set to &ldquo;Any CPU&rdquo; or &ldquo;x86&rdquo;. You will
 need to remove this environment variable from your machine before
 MSBuild can function:
 
--   Control Panel > System > Advanced > Environment Variables
+- Control Panel > System > Advanced > Environment Variables
 
 Restart Visual Studio or Visual Studio for Mac and try to rebuild. Things
 should now work as expected.
@@ -826,13 +826,13 @@ project.
 
 ### In Release build, MissingMethodException occurs for dynamic code at run time.
 
--   It is likely that your application project does not have references
+- It is likely that your application project does not have references
     to System.Core.dll, Microsoft.CSharp.dll or Mono.CSharp.dll. Make
     sure those assemblies are referenced.
 
     -   Keep in mind that dynamic code always costs. If you need efficient code, consider not using dynamic code.
 
--   In the first preview, those assemblies were excluded unless types
+- In the first preview, those assemblies were excluded unless types
     in each assembly are explicitly used by the application code. See
     the following for a workaround:
     [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)

@@ -78,7 +78,7 @@ To run a service its own process, the `Process` property on the `ServiceAttribut
 
 What kind of process the service will run in depends on the value of the `Process` property. Android identifies three different types of processes:
 
--   **Private Process** &ndash; A private process is one that is only
+- **Private Process** &ndash; A private process is one that is only
     available to the application that started it. To identify a process
     as private, its name must start with a **:** (semi-colon). The
     service depicted in the previous code snippet and screenshot is a private 
@@ -91,7 +91,7 @@ What kind of process the service will run in depends on the value of the `Proces
              Exported=true)]
     ```
 
--   **Global Process** &ndash; A service that is run in a global
+- **Global Process** &ndash; A service that is run in a global
     process is accessible to all applications running on the device. A
     global process must be a fully qualified class name that starts
     with a lower case character.
@@ -105,7 +105,7 @@ What kind of process the service will run in depends on the value of the `Proces
              Exported=true)]
     ```
 
--   **Isolated Process** &ndash; An isolated process is a process that
+- **Isolated Process** &ndash; An isolated process is a process that
     runs in its own sandbox, isolated from the rest of the system and
     with no special permissions of its own. To run a service in an
     isolated process, the `IsolatedProcess` property of the

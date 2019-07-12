@@ -418,15 +418,15 @@ elements into the `<application>` section:
 
 This XML does the following:
 
--   Declares a `FirebaseInstanceIdReceiver` implementation that
+- Declares a `FirebaseInstanceIdReceiver` implementation that
     provides a [unique identifier](https://developers.google.com/instance-id/) for
     each app instance. This receiver also authenticates and authorizes
     actions.
 
--   Declares an internal `FirebaseInstanceIdInternalReceiver`
+- Declares an internal `FirebaseInstanceIdInternalReceiver`
     implementation that is used to start services securely.
 
--   The [app ID](./firebase-cloud-messaging.md#fcm-in-action-app-id) is stored in the **google-services.json** file that was [added to the project](#add-googleplayservices-json). The Xamarin.Android Firebase bindings will replace the token `${applicationId}` with the app ID; no additional code is required by the client app to provide the app ID.
+- The [app ID](./firebase-cloud-messaging.md#fcm-in-action-app-id) is stored in the **google-services.json** file that was [added to the project](#add-googleplayservices-json). The Xamarin.Android Firebase bindings will replace the token `${applicationId}` with the app ID; no additional code is required by the client app to provide the app ID.
 
 The `FirebaseInstanceIdReceiver` is a `WakefulBroadcastReceiver` that
 receives `FirebaseInstanceId` and `FirebaseMessaging` events and delivers
@@ -490,13 +490,13 @@ Log.Debug(TAG, "Refreshed token: " + refreshedToken);
 `OnTokenRefresh` is invoked infrequently: it is used to update the token
 under the following circumstances:
 
--   When the app is installed or uninstalled.
+- When the app is installed or uninstalled.
 
--   When the user deletes app data.
+- When the user deletes app data.
 
--   When the app erases the Instance ID.
+- When the app erases the Instance ID.
 
--   When the security of the token has been compromised.
+- When the security of the token has been compromised.
 
 According to Google's
 [Instance ID](https://developers.google.com/instance-id/guides/android-implementation)

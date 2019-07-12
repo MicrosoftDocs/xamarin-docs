@@ -146,35 +146,35 @@ same name as the property in the class.
 Common attributes that you can apply to your classes to control how
 they are stored in the underlying database include:
 
--   **[PrimaryKey]** &ndash; This attribute can be applied to an
+- **[PrimaryKey]** &ndash; This attribute can be applied to an
     integer property to force it to be the underlying table's primary
     key. Composite primary keys are not supported.
 
--   **[AutoIncrement]** &ndash; This attribute will cause an integer
+- **[AutoIncrement]** &ndash; This attribute will cause an integer
     property's value to be auto-increment for each new object inserted
     into the database
 
--   **[Column(name)]** &ndash; Supplying the optional `name` parameter
+- **[Column(name)]** &ndash; Supplying the optional `name` parameter
     will override the default value of the underlying database column's
     name (which is the same as the property).
 
--   **[Table(name)]** &ndash; Marks the class as being able to be
+- **[Table(name)]** &ndash; Marks the class as being able to be
     stored in an underlying SQLite table. Specifying the optional name
     parameter will override the default value of the underlying
     database table's name (which is the same as the class name).
 
--   **[MaxLength(value)]** &ndash; Restrict the length of a text
+- **[MaxLength(value)]** &ndash; Restrict the length of a text
     property, when a database insert is attempted. Consuming code
     should validate this prior to inserting the object as this
     attribute is only 'checked' when a database insert or update
     operation is attempted.
 
--   **[Ignore]** &ndash; Causes SQLite.NET to ignore this property.
+- **[Ignore]** &ndash; Causes SQLite.NET to ignore this property.
     This is particularly useful for properties that have a type that
     cannot be stored in the database, or properties that model
     collections that cannot be resolved automatically by SQLite.
 
--   **[Unique]** &ndash; Ensures that the values in the underlying
+- **[Unique]** &ndash; Ensures that the values in the underlying
     database column are unique.
 
 
@@ -187,19 +187,19 @@ efficiently on your data.
 
 The following methods on `SQLiteConnection` can be used to perform other data operations:
 
--   **Insert** &ndash; Adds a new object to the database.
+- **Insert** &ndash; Adds a new object to the database.
 
--   **Get&lt;T&gt;** &ndash; Attempts to retrieve an object using the
+- **Get&lt;T&gt;** &ndash; Attempts to retrieve an object using the
     primary key.
 
--   **Table&lt;T&gt;** &ndash; Returns all the objects in the table.
+- **Table&lt;T&gt;** &ndash; Returns all the objects in the table.
 
--   **Delete** &ndash; Deletes an object using its primary key.
+- **Delete** &ndash; Deletes an object using its primary key.
 
--   **Query&lt;T&gt;** &ndash; Perform an SQL query that returns a number of
+- **Query&lt;T&gt;** &ndash; Perform an SQL query that returns a number of
     rows (as objects).
 
--   **Execute** &ndash; Use this method (and not `Query`) when you
+- **Execute** &ndash; Use this method (and not `Query`) when you
     don't expect rows back from the SQL (such as INSERT, UPDATE and
     DELETE instructions).
 

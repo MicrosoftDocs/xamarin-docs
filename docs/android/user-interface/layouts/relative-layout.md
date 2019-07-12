@@ -112,11 +112,11 @@ Run the application. You should see the following layout:
 
 ## Resources
 
--   [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
--   [`RelativeLayout.LayoutParams`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/)
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
--   [`EditText`](https://developer.xamarin.com/api/type/Android.Widget.EditText/)
--   [`Button`](https://developer.xamarin.com/api/type/Android.Widget.Button/)
+- [`RelativeLayout`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/)
+- [`RelativeLayout.LayoutParams`](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout+LayoutParams/)
+- [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
+- [`EditText`](https://developer.xamarin.com/api/type/Android.Widget.EditText/)
+- [`Button`](https://developer.xamarin.com/api/type/Android.Widget.Button/)
 
 
 *Portions of this page are modifications based on work created and shared by the

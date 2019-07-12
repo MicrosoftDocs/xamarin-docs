@@ -39,11 +39,11 @@ interfaces so that they can be implemented in C#.
 
 This document explains:
 
--  How JNI refers to types.
--  How to lookup, read, and write fields.
--  How to lookup and invoke methods.
--  How to expose virtual methods to allow overriding from managed code.
--  How to expose interfaces.
+- How JNI refers to types.
+- How to lookup, read, and write fields.
+- How to lookup and invoke methods.
+- How to expose virtual methods to allow overriding from managed code.
+- How to expose interfaces.
 
 
 
@@ -209,17 +209,17 @@ derives from a Java class and overrides existing Java methods. However,
 in some scenarios, the code generation is not adequate, as outlined
 below:
 
--   Android supports action names in layout XML attributes, for example
+- Android supports action names in layout XML attributes, for example
     the [android:onClick](https://developer.xamarin.com/api/member/Android.Views.View+IOnClickListener.OnClick/p/Android.Views.View/)
     XML attribute. When it is specified, the inflated View instance tries
     to look up the Java method.
 
--   The [java.io.Serializable](https://developer.android.com/reference/java/io/Serializable.html)
+- The [java.io.Serializable](https://developer.android.com/reference/java/io/Serializable.html)
     interface requires `readObject` and `writeObject` methods. Since
     they are not members of this interface, our corresponding managed
     implementation does not expose these methods to Java code.
 
--   The [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.Os.Parcelable/)
+- The [android.os.Parcelable](https://developer.xamarin.com/api/type/Android.Os.Parcelable/)
     interface expects that an implementation class must have a static
     field `CREATOR` of type `Parcelable.Creator`. The generated Java code
     requires some explicit field. With our standard scenario, there is
@@ -234,14 +234,14 @@ Xamarin.Android 4.2, the
 were introduced to offer a solution to the above scenarios. Both
 attributes reside in the `Java.Interop` namespace:
 
--   `ExportAttribute` &ndash; specifies a method name and its expected
+- `ExportAttribute` &ndash; specifies a method name and its expected
     exception types (to give explicit "throws" in Java). When it
     is used on a method, the method will "export" a Java method that
     generates a dispatch code to the corresponding JNI invocation to
     the managed method. This can be used with `android:onClick` and
     `java.io.Serializable`.
 
--   `ExportFieldAttribute` &ndash; specifies a field name. It resides
+- `ExportFieldAttribute` &ndash; specifies a field name. It resides
     on a method that works as a field initializer. This can be used with
     `android.os.Parcelable`.
 
@@ -251,14 +251,14 @@ project illustrates how to use these attributes.
 
 #### Troubleshooting ExportAttribute and ExportFieldAttribute
 
--   Packaging fails due to missing **Mono.Android.Export.dll** &ndash;
+- Packaging fails due to missing **Mono.Android.Export.dll** &ndash;
     if you used `ExportAttribute` or `ExportFieldAttribute` on some methods
     in your code or dependent libraries, you have to add
     **Mono.Android.Export.dll**. This assembly is isolated to support
     callback code from Java. It is separate from **Mono.Android.dll** as it
     adds additional size to the application.
 
--   In Release build, `MissingMethodException` occurs for Export methods
+- In Release build, `MissingMethodException` occurs for Export methods
     &ndash; In Release build, `MissingMethodException` occurs for
     Export methods. (This issue is fixed in the latest version of Xamarin.Android.)
 
@@ -275,10 +275,10 @@ hence, the Java method is generated from a managed method signature.
 However, this case is not fully determinant. Most notably, this is true
 in some advanced mappings between managed types and Java types such as:
 
--  InputStream
--  OutputStream
--  XmlPullParser
--  XmlResourceParser
+- InputStream
+- OutputStream
+- XmlPullParser
+- XmlResourceParser
 
 When types such as these are needed for exported methods, the
 `ExportParameterAttribute` must be used to explicitly give the corresponding
@@ -294,22 +294,22 @@ Java wrappers.
 
 This means the following directional changes:
 
--   The binding generator generates `Java.Lang.DeprecatedAttribute`
+- The binding generator generates `Java.Lang.DeprecatedAttribute`
     from `java.Lang.Deprecated` (while it should be `[Obsolete]` in
     managed code).
 
--   This does not mean that existing `Java.Lang.Deprecated` class will
+- This does not mean that existing `Java.Lang.Deprecated` class will
     vanish. These Java-based objects could be still used as usual Java
     objects (if such usage exists). There will be `Deprecated` and
     `DeprecatedAttribute` classes.
 
--   The `Java.Lang.DeprecatedAttribute` class is marked as
+- The `Java.Lang.DeprecatedAttribute` class is marked as
     `[Annotation]` . When there is a custom attribute that is inherited
     from this `[Annotation]` attribute, msbuild task will generate a
     Java annotation for that custom attribute (@Deprecated) in the
     Android Callable Wrapper (ACW).
 
--   Annotations could be generated onto classes, methods and exported
+- Annotations could be generated onto classes, methods and exported
     fields (which is a method in managed code).
 
 If the containing class (the annotated class itself, or the class that
@@ -324,10 +324,10 @@ not sufficient. The Java compiler does not work in the same way as **apt**.
 
 Additionally the following limitations apply:
 
--   This conversion process does not consider `@Target` annotation on
+- This conversion process does not consider `@Target` annotation on
     the annotation type so far.
 
--   Attributes onto a property does not work. Use attributes for
+- Attributes onto a property does not work. Use attributes for
     property getter or setter instead.
 
 
@@ -344,13 +344,13 @@ overrides.
 
 A binding typically contains the following items:
 
--  A [JNI handle to the Java type being bound](#_Looking_up_Java_Types).
+- A [JNI handle to the Java type being bound](#_Looking_up_Java_Types).
 
--  [JNI field IDs and properties for each bound field](#_Instance_Fields).
+- [JNI field IDs and properties for each bound field](#_Instance_Fields).
 
--  [JNI method IDs and methods for each bound method](#_Instance_Methods).
+- [JNI method IDs and methods for each bound method](#_Instance_Methods).
 
--  If sub-classing is required, the type needs to have a
+- If sub-classing is required, the type needs to have a
    [RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)
    custom attribute on the type declaration with
    [RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/) set to `true`.
@@ -1121,17 +1121,17 @@ Invoker definition for the interface.
 
 The C# interface definition must fulfill the following requirements:
 
--   The interface definition must have a `[Register]` custom attribute.
+- The interface definition must have a `[Register]` custom attribute.
 
--   The interface definition must extend the `IJavaObject interface`.
+- The interface definition must extend the `IJavaObject interface`.
     Failure to do so will prevent ACWs from inheriting from the Java
     interface.
 
--   Each interface method must contain a `[Register]` attribute
+- Each interface method must contain a `[Register]` attribute
     specifying the corresponding Java method name, the JNI signature,
     and the connector method.
 
--   The connector method must also specify the type that the connector
+- The connector method must also specify the type that the connector
     method can be located on.
 
 When binding `abstract` and `virtual` methods, the connector method
@@ -1528,19 +1528,19 @@ constructor which can be used to wrap an exiting JNI reference. The
 [JniHandleOwnership](https://developer.xamarin.com/api/type/Android.Runtime.JniHandleOwnership/)
 parameter determines how the `IntPtr` parameter should be treated:
 
--   [JniHandleOwnership.DoNotTransfer](https://developer.xamarin.com/api/field/Android.Runtime.JniHandleOwnership.DoNotTransfer/)
+- [JniHandleOwnership.DoNotTransfer](https://developer.xamarin.com/api/field/Android.Runtime.JniHandleOwnership.DoNotTransfer/)
     &ndash; The created `Java.Lang.Object` instance will create a new global
     reference from the `handle` parameter, and `handle` is unchanged.
     The caller is responsible to freeing `handle` , if necessary.
 
--   [JniHandleOwnership.TransferLocalRef](https://developer.xamarin.com/api/field/Android.Runtime.JniHandleOwnership.TransferLocalRef/)
+- [JniHandleOwnership.TransferLocalRef](https://developer.xamarin.com/api/field/Android.Runtime.JniHandleOwnership.TransferLocalRef/)
     &ndash; The created `Java.Lang.Object` instance will create a new global
     reference from the `handle` parameter, and `handle` is deleted with
     [JNIEnv.DeleteLocalRef](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.DeleteLocalRef/)
     . The caller must not free `handle` , and must not use `handle`
     after the constructor finishes executing.
 
--   [JniHandleOwnership.TransferGlobalRef](https://developer.xamarin.com/api/field/Android.Runtime.JniHandleOwnership.TransferLocalRef/)
+- [JniHandleOwnership.TransferGlobalRef](https://developer.xamarin.com/api/field/Android.Runtime.JniHandleOwnership.TransferLocalRef/)
     &ndash; The created `Java.Lang.Object` instance will take over ownership
     of the `handle` parameter. The caller must not free `handle` .
 
@@ -1645,33 +1645,33 @@ pattern:
 ```
 where `*` is the type of the field:
 
--   [JNIEnv.GetObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetObjectField/)
+- [JNIEnv.GetObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetObjectField/)
     &ndash; Read the value of any instance field that isn't a builtin type,
     such as `java.lang.Object` , arrays, and interface types. The value
     returned is a JNI local reference.
 
--   [JNIEnv.GetBooleanField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetBooleanField/)
+- [JNIEnv.GetBooleanField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetBooleanField/)
     &ndash; Read the value of `bool` instance fields.
 
--   [JNIEnv.GetByteField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetByteField/)
+- [JNIEnv.GetByteField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetByteField/)
     &ndash; Read the value of `sbyte` instance fields.
 
--   [JNIEnv.GetCharField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetCharField/)
+- [JNIEnv.GetCharField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetCharField/)
     &ndash; Read the value of `char` instance fields.
 
--   [JNIEnv.GetShortField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetShortField/)
+- [JNIEnv.GetShortField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetShortField/)
     &ndash; Read the value of `short` instance fields.
 
--   [JNIEnv.GetIntField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetIntField/)
+- [JNIEnv.GetIntField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetIntField/)
     &ndash; Read the value of `int` instance fields.
 
--   [JNIEnv.GetLongField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetLongField/)
+- [JNIEnv.GetLongField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetLongField/)
     &ndash; Read the value of `long` instance fields.
 
--   [JNIEnv.GetFloatField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetFloatField/)
+- [JNIEnv.GetFloatField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetFloatField/)
     &ndash; Read the value of `float` instance fields.
 
--   [JNIEnv.GetDoubleField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetDoubleField/)
+- [JNIEnv.GetDoubleField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetDoubleField/)
     &ndash; Read the value of `double` instance fields.
 
 
@@ -1689,34 +1689,34 @@ JNIEnv.SetField(IntPtr instance, IntPtr fieldID, Type value);
 
 where *Type* is the type of the field:
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.IntPtr))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.IntPtr))
     &ndash; Write the value of any field that isn't a builtin type, such as
     `java.lang.Object` , arrays, and interface types. The `IntPtr`
     value may be a JNI local reference, JNI global reference, JNI weak
     global reference, or `IntPtr.Zero` (for `null` ).
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Boolean))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Boolean))
     &ndash; Write the value of `bool` instance fields.
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.SByte))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.SByte))
     &ndash; Write the value of `sbyte` instance fields.
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Char))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Char))
     &ndash; Write the value of `char` instance fields.
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Int16))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Int16))
     &ndash; Write the value of `short` instance fields.
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Int32))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Int32))
     &ndash; Write the value of `int` instance fields.
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Int64))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Int64))
     &ndash; Write the value of `long` instance fields.
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Single))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Single))
     &ndash; Write the value of `float` instance fields.
 
--   [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Double))
+- [JNIEnv.SetField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetField/(System.IntPtr,System.IntPtr,System.Double))
     &ndash; Write the value of `double` instance fields.
 
 
@@ -1750,30 +1750,30 @@ pattern:
 
 where `*` is the type of the field:
 
--   [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/)
+- [JNIEnv.GetStaticObjectField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticObjectField/)
     &ndash; Read the value of any static field that isn't a builtin type,
     such as `java.lang.Object` , arrays, and interface types. The value
     returned is a JNI local reference.
 
--   [JNIEnv.GetStaticBooleanField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticBooleanField/)
+- [JNIEnv.GetStaticBooleanField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticBooleanField/)
     &ndash; Read the value of `bool` static fields.
 
--   [JNIEnv.GetStaticByteField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticByteField/)
+- [JNIEnv.GetStaticByteField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticByteField/)
     &ndash; Read the value of `sbyte` static fields.
 
--   [JNIEnv.GetStaticCharField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticCharField/)
+- [JNIEnv.GetStaticCharField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticCharField/)
     &ndash; Read the value of `char` static fields.
 
--   [JNIEnv.GetStaticShortField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticShortField/)
+- [JNIEnv.GetStaticShortField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticShortField/)
     &ndash; Read the value of `short` static fields.
 
--   [JNIEnv.GetStaticLongField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticLongField/)
+- [JNIEnv.GetStaticLongField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticLongField/)
     &ndash; Read the value of `long` static fields.
 
--   [JNIEnv.GetStaticFloatField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticFloatField/)
+- [JNIEnv.GetStaticFloatField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticFloatField/)
     &ndash; Read the value of `float` static fields.
 
--   [JNIEnv.GetStaticDoubleField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticDoubleField/)
+- [JNIEnv.GetStaticDoubleField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.GetStaticDoubleField/)
     &ndash; Read the value of `double` static fields.
 
 
@@ -1789,34 +1789,34 @@ JNIEnv.SetStaticField(IntPtr class, IntPtr fieldID, Type value);
 
 where *Type* is the type of the field:
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.IntPtr))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.IntPtr))
     &ndash; Write the value of any static field that isn't a builtin type,
     such as `java.lang.Object` , arrays, and interface types. The
     `IntPtr` value may be a JNI local reference, JNI global reference,
     JNI weak global reference, or `IntPtr.Zero` (for `null` ).
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Boolean))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Boolean))
     &ndash; Write the value of `bool` static fields.
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.SByte))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.SByte))
     &ndash; Write the value of `sbyte` static fields.
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Char))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Char))
     &ndash; Write the value of `char` static fields.
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Int16))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Int16))
     &ndash; Write the value of `short` static fields.
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Int32))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Int32))
     &ndash; Write the value of `int` static fields.
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Int64))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Int64))
     &ndash; Write the value of `long` static fields.
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Single))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Single))
     &ndash; Write the value of `float` static fields.
 
--   [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Double))
+- [JNIEnv.SetStaticField](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.SetStaticField/(System.IntPtr,System.IntPtr,System.Double))
     &ndash; Write the value of `double` static fields.
 
 
@@ -1860,30 +1860,30 @@ pattern:
 
 where `*` is the return type of the method.
 
--   [JNIEnv.CallObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallObjectMethod/)
+- [JNIEnv.CallObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallObjectMethod/)
     &ndash; Invoke a method which returns a non-builtin type, such as
     `java.lang.Object` , arrays, and interfaces. The value returned is
     a JNI local reference.
 
--   [JNIEnv.CallBooleanMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallBooleanMethod/)
+- [JNIEnv.CallBooleanMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallBooleanMethod/)
     &ndash; Invoke a method which returns a `bool` value.
 
--   [JNIEnv.CallByteMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallByteMethod/)
+- [JNIEnv.CallByteMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallByteMethod/)
     &ndash; Invoke a method which returns a `sbyte` value.
 
--   [JNIEnv.CallCharMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallCharMethod/)
+- [JNIEnv.CallCharMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallCharMethod/)
     &ndash; Invoke a method which returns a `char` value.
 
--   [JNIEnv.CallShortMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallShortMethod/)
+- [JNIEnv.CallShortMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallShortMethod/)
     &ndash; Invoke a method which returns a `short` value.
 
--   [JNIEnv.CallLongMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallLongMethod/)
+- [JNIEnv.CallLongMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallLongMethod/)
     &ndash; Invoke a method which returns a `long` value.
 
--   [JNIEnv.CallFloatMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallFloatMethod/)
+- [JNIEnv.CallFloatMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallFloatMethod/)
     &ndash; Invoke a method which returns a `float` value.
 
--   [JNIEnv.CallDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallDoubleMethod/)
+- [JNIEnv.CallDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallDoubleMethod/)
     &ndash; Invoke a method which returns a `double` value.
 
 
@@ -1900,30 +1900,30 @@ pattern:
 where `*` is the return type of the method. Non-virtual method
 invocation is usually used to invoke the base method of a virtual method.
 
--   [JNIEnv.CallNonvirtualObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualObjectMethod/)
+- [JNIEnv.CallNonvirtualObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualObjectMethod/)
     &ndash; Non-virtually invoke a method which returns a non-builtin type,
     such as `java.lang.Object` , arrays, and interfaces. The value
     returned is a JNI local reference.
 
--   [JNIEnv.CallNonvirtualBooleanMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualBooleanMethod/)
+- [JNIEnv.CallNonvirtualBooleanMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualBooleanMethod/)
     &ndash; Non-virtually invoke a method which returns a `bool` value.
 
--   [JNIEnv.CallNonvirtualByteMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualByteMethod/)
+- [JNIEnv.CallNonvirtualByteMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualByteMethod/)
     &ndash; Non-virtually invoke a method which returns a `sbyte` value.
 
--   [JNIEnv.CallNonvirtualCharMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualCharMethod/)
+- [JNIEnv.CallNonvirtualCharMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualCharMethod/)
     &ndash; Non-virtually invoke a method which returns a `char` value.
 
--   [JNIEnv.CallNonvirtualShortMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualShortMethod/)
+- [JNIEnv.CallNonvirtualShortMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualShortMethod/)
     &ndash; Non-virtually invoke a method which returns a `short` value.
 
--   [JNIEnv.CallNonvirtualLongMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualLongMethod/)
+- [JNIEnv.CallNonvirtualLongMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualLongMethod/)
     &ndash; Non-virtually invoke a method which returns a `long` value.
 
--   [JNIEnv.CallNonvirtualFloatMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualFloatMethod/)
+- [JNIEnv.CallNonvirtualFloatMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualFloatMethod/)
     &ndash; Non-virtually invoke a method which returns a `float` value.
 
--   [JNIEnv.CallNonvirtualDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualDoubleMethod/)
+- [JNIEnv.CallNonvirtualDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallNonvirtualDoubleMethod/)
     &ndash; Non-virtually invoke a method which returns a `double` value.
 
 
@@ -1954,30 +1954,30 @@ pattern:
 
 where `*` is the return type of the method.
 
--   [JNIEnv.CallStaticObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticObjectMethod/)
+- [JNIEnv.CallStaticObjectMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticObjectMethod/)
     &ndash; Invoke a static method which returns a non-builtin type, such as
     `java.lang.Object` , arrays, and interfaces. The value returned is
     a JNI local reference.
 
--   [JNIEnv.CallStaticBooleanMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticBooleanMethod/)
+- [JNIEnv.CallStaticBooleanMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticBooleanMethod/)
     &ndash; Invoke a static method which returns a `bool` value.
 
--   [JNIEnv.CallStaticByteMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticByteMethod/)
+- [JNIEnv.CallStaticByteMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticByteMethod/)
     &ndash; Invoke a static method which returns a `sbyte` value.
 
--   [JNIEnv.CallStaticCharMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticCharMethod/)
+- [JNIEnv.CallStaticCharMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticCharMethod/)
     &ndash; Invoke a static method which returns a `char` value.
 
--   [JNIEnv.CallStaticShortMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticShortMethod/)
+- [JNIEnv.CallStaticShortMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticShortMethod/)
     &ndash; Invoke a static method which returns a `short` value.
 
--   [JNIEnv.CallStaticLongMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallLongMethod/)
+- [JNIEnv.CallStaticLongMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallLongMethod/)
     &ndash; Invoke a static method which returns a `long` value.
 
--   [JNIEnv.CallStaticFloatMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticFloatMethod/)
+- [JNIEnv.CallStaticFloatMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticFloatMethod/)
     &ndash; Invoke a static method which returns a `float` value.
 
--   [JNIEnv.CallStaticDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticDoubleMethod/)
+- [JNIEnv.CallStaticDoubleMethod](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallStaticDoubleMethod/)
     &ndash; Invoke a static method which returns a `double` value.
 
 
@@ -2023,10 +2023,10 @@ fully qualified Java type names such as `java.lang.String` with JNI,
 you must instead use the JNI variations `"java/lang/String"` or `"Ljava/lang/String;"`, depending on context; see below for details.
 There are four types of JNI type references:
 
--  **built-in**
--  **simplified**
--  **type**
--  **array**
+- **built-in**
+- **simplified**
+- **type**
+- **array**
 
 
 ### Built-in Type References
@@ -2034,15 +2034,15 @@ There are four types of JNI type references:
 Built-in type references are a single character, used to reference built-in
 value types. The mapping is as follows:
 
--  `"B"` for  `sbyte` .
--  `"S"` for  `short` .
--  `"I"` for  `int` .
--  `"J"` for  `long` .
--  `"F"` for  `float` .
--  `"D"` for  `double` .
--  `"C"` for  `char` .
--  `"Z"` for  `bool` .
--  `"V"` for  `void` method return types.
+- `"B"` for  `sbyte` .
+- `"S"` for  `short` .
+- `"I"` for  `int` .
+- `"J"` for  `long` .
+- `"F"` for  `float` .
+- `"D"` for  `double` .
+- `"C"` for  `char` .
+- `"Z"` for  `bool` .
+- `"V"` for  `void` method return types.
 
 
 <a name="_Simplified_Type_References_1" />

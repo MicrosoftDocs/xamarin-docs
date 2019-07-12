@@ -43,9 +43,9 @@ possibly even underlying OS instability.
 
 This chapter examines the activity lifecycle in detail, including:
 
--  Activity States
--  Lifecycle Methods
--  Retaining the State of an Application
+- Activity States
+- Lifecycle Methods
+- Retaining the State of an Application
 
 
 This section also includes a
@@ -158,9 +158,9 @@ is the first method to be called when an activity is created.
 `OnCreate` is always overridden to perform any startup initializations
 that may be required by an Activity such as:
 
--  Creating views
--  Initializing variables
--  Binding static data to lists
+- Creating views
+- Initializing variables
+- Binding static data to lists
 
 
 `OnCreate` takes a
@@ -208,11 +208,11 @@ The system calls
 when the Activity is ready to start interacting with the user.
 Activities should override this method to perform tasks such as:
 
--  Ramping up frame rates (a common task in game development)
--  Starting animations
--  Listening for GPS updates
--  Display any relevant alerts or dialogs
--  Wire up external event handlers
+- Ramping up frame rates (a common task in game development)
+- Starting animations
+- Listening for GPS updates
+- Display any relevant alerts or dialogs
+- Wire up external event handlers
 
 
 As an example, the following code snippet shows how to initialize the camera:
@@ -241,17 +241,17 @@ is called when the system is about to put the activity into the
 background or when the activity becomes partially obscured. Activities
 should override this method if they need to:
 
--   Commit unsaved changes to persistent data
+- Commit unsaved changes to persistent data
 
--   Destroy or clean up other objects consuming resources
+- Destroy or clean up other objects consuming resources
 
--   Ramp down frame rates and pausing animations
+- Ramp down frame rates and pausing animations
 
--   Unregister external event handlers or notification handlers (i.e.
+- Unregister external event handlers or notification handlers (i.e.
     those that are tied to a service). This must be done to prevent
     Activity memory leaks.
 
--   Likewise, if the Activity has displayed any dialogs or alerts, they
+- Likewise, if the Activity has displayed any dialogs or alerts, they
     must be cleaned up with the `.Dismiss()` method.
 
 As an example, the following code snippet will release the camera, as
@@ -283,9 +283,9 @@ There are two possible lifecycle methods that will be called after `OnPause`:
 is called when the activity is no longer visible to the user. This
 happens when one of the following occurs:
 
--  A new activity is being started and is covering up this activity.
--  An existing activity is being brought to the foreground.
--  The activity is being destroyed.
+- A new activity is being started and is covering up this activity.
+- An existing activity is being brought to the foreground.
+- The activity is being destroyed.
 
 
 `OnStop` may not always be called in low-memory situations, such as
@@ -384,12 +384,12 @@ bitmaps); rather, it should be used for simple values like strings.
 
 An Activity provides methods to help with saving and retrieving the instance state in the Bundle:
 
--   [OnSaveInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnSaveInstanceState/p/Android.OS.Bundle/)
+- [OnSaveInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnSaveInstanceState/p/Android.OS.Bundle/)
     &ndash; This is invoked by Android when the
     activity is being destroyed. Activities can implement this method
     if they need to persist any key/value state items.
 
--   [OnRestoreInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnRestoreInstanceState/p/Android.OS.Bundle/)
+- [OnRestoreInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnRestoreInstanceState/p/Android.OS.Bundle/)
     &ndash; This is called after the `OnCreate`
     method is finished, and provides another opportunity for an
     Activity to restore its state after initialization is complete.
@@ -526,17 +526,17 @@ For an example of saving state using a `Bundle`, refer to the
 Although `OnSaveInstanceState` makes it easy to save transient
 data, it has some limitations:
 
--   It is not called in all cases. For example, pressing **Home** or
+- It is not called in all cases. For example, pressing **Home** or
     **Back** to exit an Activity will not result in
     `OnSaveInstanceState` being called.
 
--   The bundle passed into `OnSaveInstanceState` is not designed for
+- The bundle passed into `OnSaveInstanceState` is not designed for
     large objects, such as images. In the case of large objects, saving
     the object from
     [OnRetainNonConfigurationInstance](https://developer.xamarin.com/api/member/Android.App.Activity.OnRetainNonConfigurationInstance/)
     is preferable, as discussed below.
 
--   Data saved by using the bundle is serialized, which can lead to
+- Data saved by using the bundle is serialized, which can lead to
     delays.
 
 Bundle state is useful for simple data that doesn't use much memory,
@@ -557,11 +557,11 @@ and returning an instance of a `Java.Lang.Object` that contains the
 data to persist. There are two primary benefits of using
 `OnRetainNonConfigurationInstance` to save state:
 
--   The object returned from `OnRetainNonConfigurationInstance`
+- The object returned from `OnRetainNonConfigurationInstance`
     performs well with larger, more complex data types because memory
     retains this object.
 
--   The `OnRetainNonConfigurationInstance` method is called on demand,
+- The `OnRetainNonConfigurationInstance` method is called on demand,
     and only when needed. This is more economical than using a manual
     cache.
 

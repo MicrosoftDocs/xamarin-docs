@@ -17,9 +17,9 @@ _The Android community has many Java libraries that you may want to use in your 
 
 The third-party library ecosystem for Android is massive. Because of this, it frequently makes sense to use an existing Android library than to create a new one. Xamarin.Android offers two ways to use these libraries:
 
--   Create a *Bindings Library* that automatically wraps the library with C# wrappers so you can invoke Java code via C# calls.
+- Create a *Bindings Library* that automatically wraps the library with C# wrappers so you can invoke Java code via C# calls.
 
--   Use the *Java Native Interface* (*JNI*) to invoke calls in Java library code directly. JNI is a programming framework that enables Java code to call and be called by native applications or libraries.
+- Use the *Java Native Interface* (*JNI*) to invoke calls in Java library code directly. JNI is a programming framework that enables Java code to call and be called by native applications or libraries.
 
 This guide explains the first option: how to create a *Bindings Library* that wraps one or more existing Java libraries into an assembly that you can link to in your application. For more information about using
 JNI, see [Working with JNI](~/android/platform/java-integration/working-with-jni.md).
@@ -112,15 +112,15 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 
 The Xamarin.Android Binding Generator will change some Java idioms and patterns to correspond to .NET patterns. The following list describes how Java is mapped to C#/.NET:
 
--   _Setter/Getter methods_ in Java are _Properties_ in .NET.
+- _Setter/Getter methods_ in Java are _Properties_ in .NET.
 
--   _Fields_ in Java are _Properties_ in .NET.
+- _Fields_ in Java are _Properties_ in .NET.
 
--   _Listeners/Listener Interfaces_ in Java are _Events_ in .NET. The parameters of methods in the callback interfaces will be represented by an `EventArgs` subclass.
+- _Listeners/Listener Interfaces_ in Java are _Events_ in .NET. The parameters of methods in the callback interfaces will be represented by an `EventArgs` subclass.
 
--   A _Static Nested class_ in Java is a _Nested class_ in .NET.
+- A _Static Nested class_ in Java is a _Nested class_ in .NET.
 
--   An _Inner class_ in Java is a _Nested class_ with an instance constructor in C#.
+- An _Inner class_ in Java is a _Nested class_ with an instance constructor in C#.
 
 
 
@@ -128,16 +128,16 @@ The Xamarin.Android Binding Generator will change some Java idioms and patterns 
 
 The following binding scenario guides can help you bind a Java library (or libraries) for incorporation into your app:
 
--   [Binding a .JAR](~/android/platform/binding-java-library/binding-a-jar.md)
+- [Binding a .JAR](~/android/platform/binding-java-library/binding-a-jar.md)
     is a walkthrough for creating Bindings Libraries for **.jar** files.
 
--   [Binding an .AAR](~/android/platform/binding-java-library/binding-an-aar.md) is a walkthrough for creating Bindings Libraries for .AAR files. Read this walkthrough to learn how to bind Android Studio libraries.
+- [Binding an .AAR](~/android/platform/binding-java-library/binding-an-aar.md) is a walkthrough for creating Bindings Libraries for .AAR files. Read this walkthrough to learn how to bind Android Studio libraries.
 
--   [Binding an Eclipse Library Project](~/android/platform/binding-java-library/binding-a-library-project.md) is a walkthrough for creating binding libraries from Android Library Projects. Read this walkthrough to learn how to bind Eclipse Android Library Projects.
+- [Binding an Eclipse Library Project](~/android/platform/binding-java-library/binding-a-library-project.md) is a walkthrough for creating binding libraries from Android Library Projects. Read this walkthrough to learn how to bind Eclipse Android Library Projects.
 
--   [Customizing Bindings](~/android/platform/binding-java-library/customizing-bindings/index.md) explains how to make manual modifications to the binding to resolve build errors and shape the resulting API so that it is more "C#-like".
+- [Customizing Bindings](~/android/platform/binding-java-library/customizing-bindings/index.md) explains how to make manual modifications to the binding to resolve build errors and shape the resulting API so that it is more "C#-like".
 
--   [Troubleshooting Bindings](~/android/platform/binding-java-library/troubleshooting-bindings.md) lists common binding error scenarios, explains possible causes, and offers suggestions for resolving these errors.
+- [Troubleshooting Bindings](~/android/platform/binding-java-library/troubleshooting-bindings.md) lists common binding error scenarios, explains possible causes, and offers suggestions for resolving these errors.
 
 
 ## Related Links

@@ -39,7 +39,7 @@ The following enhancement have been made to the AppKit Framework for macOS Sierr
 	-  `NSSegmentedControl` includes new constructors for creating segmented controls from a group of labels or images.
 	-  `NSSlider` includes new constructors for creating horizontal linear sliders.
 	-  `NSImageView` includes new constructors for creating non-editable image views from a given `NSImage`.
--  The new `NSGridView` has been added to auto layout a collection of sub views into a grid with variable sized rows and columns that can be dynamically hidden or shown.
+- The new `NSGridView` has been added to auto layout a collection of sub views into a grid with variable sized rows and columns that can be dynamically hidden or shown.
 
 <a name="AVFoundation-Framework-Enhancements" />
 

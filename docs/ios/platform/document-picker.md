@@ -19,19 +19,19 @@ Because of the difficulty of keeping documents synchronized across apps and the 
 
 The following is required to complete the steps presented in this article:
 
--  **Xcode 7 and iOS 8 or newer** – Apple's Xcode 7 and iOS 8 or newer APIs need to be installed and configured on the developer's computer.
--  **Visual Studio or Visual Studio for Mac** – The latest version of Visual Studio for Mac should be installed.
--  **iOS Device** – An iOS device running iOS 8 or above.
+- **Xcode 7 and iOS 8 or newer** – Apple's Xcode 7 and iOS 8 or newer APIs need to be installed and configured on the developer's computer.
+- **Visual Studio or Visual Studio for Mac** – The latest version of Visual Studio for Mac should be installed.
+- **iOS Device** – An iOS device running iOS 8 or above.
 
 ## Changes to iCloud
 
 To implement the new features of the Document Picker, the following changes have been made to Apple's iCloud Service:
 
--  The iCloud Daemon has been completely rewritten using CloudKit.
--  The existing iCloud features have been renamed iCloud Drive.
--  Support for Microsoft Windows OS has been added to iCloud.
--  An iCloud folder has been added in the Mac OS Finder.
--  iOS devices can access the contents of the Mac OS iCloud folder.
+- The iCloud Daemon has been completely rewritten using CloudKit.
+- The existing iCloud features have been renamed iCloud Drive.
+- Support for Microsoft Windows OS has been added to iCloud.
+- An iCloud folder has been added in the Mac OS Finder.
+- iOS devices can access the contents of the Mac OS iCloud folder.
 
 > [!IMPORTANT]
 > Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
@@ -228,16 +228,16 @@ By using Stitching the application no longer has to open a data source to monito
 
 The following new features have been added to `NSMetadataQuery` in iOS 8:
 
--   `NSMetatadataQuery` can now list non-local documents stored in the cloud.
--  New APIs have been added to access metadata information on the cloud-based documents. 
--  There is a new  `NSUrl_PromisedItems` API that will to access the file attributes of files that may or may not have their content available locally.
--  Use the  `GetPromisedItemResourceValue` method to get information about a given file or use the  `GetPromisedItemResourceValues` method to get information on more than one file at a time.
+- `NSMetatadataQuery` can now list non-local documents stored in the cloud.
+- New APIs have been added to access metadata information on the cloud-based documents. 
+- There is a new  `NSUrl_PromisedItems` API that will to access the file attributes of files that may or may not have their content available locally.
+- Use the  `GetPromisedItemResourceValue` method to get information about a given file or use the  `GetPromisedItemResourceValues` method to get information on more than one file at a time.
 
 
 Two new file coordination flags have been added for dealing with metadata:
 
--   `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
--   `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
+- `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
+- `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
 
 
 With the above flags, the contents of the Document file do not need to be available locally for them to be used.
@@ -1061,8 +1061,8 @@ The user can select one of these alternative storage locations from the Document
 
 This is implemented using two different extensions:
 
--  **Document Picker Extension** – Provides a  `UIViewController` subclass that provides a graphical interface for the user to choose a document from an alternative storage location. This subclass will be displayed as part of the Document Picker View Controller.
--  **File Provide Extension** – This is a non-UI extension that deals with actually providing the files contents. These extensions are provided through File Coordination ( `NSFileCoordinator` ). This is another important case where File Coordination is required.
+- **Document Picker Extension** – Provides a  `UIViewController` subclass that provides a graphical interface for the user to choose a document from an alternative storage location. This subclass will be displayed as part of the Document Picker View Controller.
+- **File Provide Extension** – This is a non-UI extension that deals with actually providing the files contents. These extensions are provided through File Coordination ( `NSFileCoordinator` ). This is another important case where File Coordination is required.
 
 
 The following diagram shows the typical data flow when working with Document Provider Extensions:

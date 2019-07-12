@@ -337,10 +337,10 @@ display.
 
 When you implement a `FragmentPagerAdapter`, you must override the following:
 
--   **Count** &ndash; Read-only property that returns the number of
+- **Count** &ndash; Read-only property that returns the number of
     views (pages) available.
 
--   **GetItem** &ndash; Returns the fragment to display for the
+- **GetItem** &ndash; Returns the fragment to display for the
     specified page.
 
 Add a new file called **FlashCardDeckAdapter.cs** and replace its contents

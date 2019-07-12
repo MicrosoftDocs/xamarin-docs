@@ -57,10 +57,10 @@ The unmanaged `MyView` object will have a `GCHandle` pointing to the managed obj
 
 In circumstances where a contained object keeps a link to its container, there are several options available to deal with the circular reference:
 
--  Manually break the cycle by setting the link to the container to `null`.
--  Manually remove the contained object from the container.
--  Call `Dispose` on the objects.
--  Avoid the circular reference keeping a weak reference to the container. For more information about weak references.
+- Manually break the cycle by setting the link to the container to `null`.
+- Manually remove the contained object from the container.
+- Call `Dispose` on the objects.
+- Avoid the circular reference keeping a weak reference to the container. For more information about weak references.
 
 ### Using WeakReferences
 

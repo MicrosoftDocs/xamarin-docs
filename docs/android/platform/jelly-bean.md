@@ -56,9 +56,9 @@ Activities may be launched using either zoom animations or custom animations
 by using the `ActivityOptions` class. The following new methods are
 provided to support these animations:
 
--   `MakeScaleUpAnimation` – This will create an animation that scales up an activity window from a start position and size on the screen.
--   `MakeThumbnailScaleUpAnimation` – This will create an animation that scales up from a thumbnail image from specified position on the screen.
--   `MakeCustomAnimation` – This creates an animation from resources in the application. There is one animation for when the activity opens and another for when the activity stops.
+- `MakeScaleUpAnimation` – This will create an animation that scales up an activity window from a start position and size on the screen.
+- `MakeThumbnailScaleUpAnimation` – This will create an animation that scales up from a thumbnail image from specified position on the screen.
+- `MakeCustomAnimation` – This creates an animation from resources in the application. There is one animation for when the activity opens and another for when the activity stops.
 
 
 The new `TimeAnimator` class provides an interface `TimeAnimator.ITimeListener` that can notify an application every
@@ -113,12 +113,12 @@ For more complex scenarios, there are new methods on the Activity class that
 may be used to handle the behavior of Up navigation and construct the back
 stack:
 
--   `OnNavigateUp` – By overriding this method it is possible to perform a custom action when the  <span class="ui">Up</span> button is pressed.
--   `NavigateUpTo` – Calling this method will cause the application to navigate from the current activity to the activity specified by a given intent.
--   `ParentActivityIntent` – This is used to obtain an Intent that will launch the parent activity of the current activity.
--   `ShouldUpRecreateTask` – This method is used to query if the synthetic back stack must be created to navigate up to a parent activity. Returns  `true` if the synthetic stack must be created. 
--   `FinishAffinity` – Calling this method will finish the current activity and all activities below it in the current task that have the same task affinity.
--   `OnCreateNavigateUpTaskStack` – This method is overridden when it is necessary to have complete control over how the synthetic stack is created.
+- `OnNavigateUp` – By overriding this method it is possible to perform a custom action when the  <span class="ui">Up</span> button is pressed.
+- `NavigateUpTo` – Calling this method will cause the application to navigate from the current activity to the activity specified by a given intent.
+- `ParentActivityIntent` – This is used to obtain an Intent that will launch the parent activity of the current activity.
+- `ShouldUpRecreateTask` – This method is used to query if the synthetic back stack must be created to navigate up to a parent activity. Returns  `true` if the synthetic stack must be created. 
+- `FinishAffinity` – Calling this method will finish the current activity and all activities below it in the current task that have the same task affinity.
+- `OnCreateNavigateUpTaskStack` – This method is overridden when it is necessary to have complete control over how the synthetic stack is created.
 
 
 
@@ -152,10 +152,10 @@ The new class `MediaActionSound` provides a set of API's for
 producing sounds for the various media actions. There are several actions that
 can occur with a camera, these are defined by the enum `Android.Media.MediaActionSoundType`:
 
--   `MediaActionSoundType.FocusComplete` – This sound that is played when focusing has completed.
--   `MediaActionSoundType.ShutterClick` – This sound will be played when a still image picture is taken.
--   `MediaActionSoundType.StartVideoRecording` – This sound is used indicate the start of video recording.
--   `MediaActionSoundType.StopVideoRecording` – This sound will be played to indicate the end of video recording.
+- `MediaActionSoundType.FocusComplete` – This sound that is played when focusing has completed.
+- `MediaActionSoundType.ShutterClick` – This sound will be played when a still image picture is taken.
+- `MediaActionSoundType.StartVideoRecording` – This sound is used indicate the start of video recording.
+- `MediaActionSoundType.StopVideoRecording` – This sound will be played to indicate the end of video recording.
 
 
 An example of how to use the `MediaActionSound` class can be seen
@@ -228,10 +228,10 @@ zeroconf. Upnp is set of networking protocols that also supports zeroconf. The
 following methods added to the `WiFiP2pManager` to support Wi-Fi
 service discovery:
 
--   `AddLocalService()` – This method is used announce an application as a service over Wi-Fi for discovery by peers.
--   `AddServiceRequest(` ) – This method is to send a service discovery request to the framework. It is used to initialize the Wi-Fi service discovery.
--   `SetDnsSdResponseListeners()` – This method is used to register callbacks to be invoked on receiving a response to discovery requests from Bonjour.
--   `SetUpnpServiceResponseListener()` – This method is used to register callbacks to be invoked on receiving a response to discovery requests Upnp.
+- `AddLocalService()` – This method is used announce an application as a service over Wi-Fi for discovery by peers.
+- `AddServiceRequest(` ) – This method is to send a service discovery request to the framework. It is used to initialize the Wi-Fi service discovery.
+- `SetDnsSdResponseListeners()` – This method is used to register callbacks to be invoked on receiving a response to discovery requests from Bonjour.
+- `SetUpnpServiceResponseListener()` – This method is used to register callbacks to be invoked on receiving a response to discovery requests Upnp.
 
 
 
@@ -259,9 +259,9 @@ allows for extra data from the clipboard to be transmitted with the intent. An
 instance of `ClipData` can contain one or more `ClipData.Item`. `ClipData.Item`’s are items of the
 following types:
 
--   **Text** – This is any string of text, either HTML or any string whose format is supported by the built-in Android style spans.
--  **Intent** – Any  `Intent` object.
--   **Uri** – This can be any URI, such as an HTTP bookmark or the URI to a content provider.
+- **Text** – This is any string of text, either HTML or any string whose format is supported by the built-in Android style spans.
+- **Intent** – Any  `Intent` object.
+- **Uri** – This can be any URI, such as an HTTP bookmark or the URI to a content provider.
 
 
 
@@ -284,9 +284,9 @@ level codecs are available on the device.
 The new `Android.Media.Audiofx.AudioEffect` subclasses have been
 added to support additional audio pre-processing on captured audio:
 
--   `Android.Media.Audiofx.AcousticEchoCanceler` – This class is used for pre-processing audio to remove the signal from a remote party from a captured audio signal. For example, removing the echo from a voice communication application.
--   `Android.Media.Audiofx.AutomaticGainControl` – This class is used to normalize the captured signal by boosting or lowering an input signal so that the output signal is constant.
--   `Android.Media.Audiofx.NoiseSuppressor` – This class will remove background noise from the captured signal.
+- `Android.Media.Audiofx.AcousticEchoCanceler` – This class is used for pre-processing audio to remove the signal from a remote party from a captured audio signal. For example, removing the echo from a voice communication application.
+- `Android.Media.Audiofx.AutomaticGainControl` – This class is used to normalize the captured signal by boosting or lowering an input signal so that the output signal is constant.
+- `Android.Media.Audiofx.NoiseSuppressor` – This class will remove background noise from the captured signal.
 
 
 Not all devices will support these effects. The method `AudioEffect.IsAvailable` should be called by an application to see
@@ -299,8 +299,8 @@ MediaPlayer to start when the current media player finishes its playback.
 The following new classes provide standard mechanisms and UI for selecting
 where media will be played:
 
--   `MediaRouter` – This class allows applications to control the routing of media channels from a device to external speakers or other devices.
--   `MediaRouterActionProvider` and  `MediaRouteButton` – These classes help provide a consistent UI for selecting and playing media.
+- `MediaRouter` – This class allows applications to control the routing of media channels from a device to external speakers or other devices.
+- `MediaRouterActionProvider` and  `MediaRouteButton` – These classes help provide a consistent UI for selecting and playing media.
 
 
 
@@ -312,17 +312,17 @@ notifications. Applications can now show bigger and better notifications to
 users. A new method, `NotificationBuilder.SetStyle()` allows for one
 of new three new style to be set on notifications:
 
--   `Notification.BigPictureStyle` – This is a helper class that will generate notifications that will have an image in them. The following image shows an example of a notification with a big image:
+- `Notification.BigPictureStyle` – This is a helper class that will generate notifications that will have an image in them. The following image shows an example of a notification with a big image:
 
 
  [![Example screenshot of a BigPictureStyle notification](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
--   `Notification.BigTextStyle` – This is a helper class that will generate notifications that will have multiple lines of text, such as e-mail. An example of this new notification style can be seen in the following screenshot:
+- `Notification.BigTextStyle` – This is a helper class that will generate notifications that will have multiple lines of text, such as e-mail. An example of this new notification style can be seen in the following screenshot:
 
 
  [![Example screenshot of a BigTextStyle notification](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
--   `Notification.InboxStyle` – This is a helper class that will generate notifications that contain a list of strings, such as snippets from an e-mail message, as shown in this screenshot:
+- `Notification.InboxStyle` – This is a helper class that will generate notifications that contain a list of strings, such as snippets from an e-mail message, as shown in this screenshot:
 
 
  [![Example screenshot of a Notification.InboxStyle notification](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
@@ -344,11 +344,11 @@ be set on a notification using the `Priority` property.
 
 The following new permissions have been added:
 
--   `READ_EXTERNAL_STORAGE` - The application requires read only access to external storage. Currently all applications have read access by default, but future releases of Android will require applications explicitly request read access.
--   `READ_USER_DICTIONARY` - Allows a read-access to the user's word dictionary.
--   `READ_CALL_LOG` - Allows an application to obtain information about incoming and outgoing calls by reading the call log.
--   `WRITE_CALL_LOG` - Allows an application to write to the call log on the phone.
--   `WRITE_USER_DICTIONARY` - Allows an application to write to the user's word dictionary.
+- `READ_EXTERNAL_STORAGE` - The application requires read only access to external storage. Currently all applications have read access by default, but future releases of Android will require applications explicitly request read access.
+- `READ_USER_DICTIONARY` - Allows a read-access to the user's word dictionary.
+- `READ_CALL_LOG` - Allows an application to obtain information about incoming and outgoing calls by reading the call log.
+- `WRITE_CALL_LOG` - Allows an application to write to the call log on the phone.
+- `WRITE_USER_DICTIONARY` - Allows an application to write to the user's word dictionary.
 
 
 An important change to note `READ_EXTERNAL_STORAGE` – currently

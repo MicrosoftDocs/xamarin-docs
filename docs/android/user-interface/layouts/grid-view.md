@@ -223,9 +223,9 @@ elements by adjusting their properties. For example, instead of using
 
 ## References
 
--   [`GridView`](https://developer.xamarin.com/api/type/Android.Widget.GridView/) 
--   [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
--   [`BaseAdapter`](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/).
+- [`GridView`](https://developer.xamarin.com/api/type/Android.Widget.GridView/) 
+- [`ImageView`](https://developer.xamarin.com/api/type/Android.Widget.ImageView/)
+- [`BaseAdapter`](https://developer.xamarin.com/api/type/Android.Widget.BaseAdapter/).
 
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*

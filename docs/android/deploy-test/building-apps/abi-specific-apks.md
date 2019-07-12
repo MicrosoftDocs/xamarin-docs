@@ -25,12 +25,12 @@ much simpler to have one APK that can support multiple devices and
 configurations. There are some situations where creating multiple APKs
 can be useful, such as:
 
--  **Reduce the size of the APK** - Google Play imposes a 100MB size
+- **Reduce the size of the APK** - Google Play imposes a 100MB size
    limit on APK files. Creating device specific APK's can reduce the
    size of the APK as you only need to supply a subset of assets and
    resources for the application.
 
--  **Support different CPU architectures** - If your application has
+- **Support different CPU architectures** - If your application has
    shared libraries for specific CPU's, you can distribute only the
    shared libraries for that CPU.
 
@@ -71,20 +71,20 @@ that Google Play will distribute the correct APK to a device. The
 following list explains this eight digit version code format 
 (indexed from left to right):
 
--   **Index 0** (red in diagram below) &ndash; An integer for the ABI:
+- **Index 0** (red in diagram below) &ndash; An integer for the ABI:
     -   1 &ndash; `armeabi`
     -   2 &ndash; `armeabi-v7a`
     -   6 &ndash; `x86`
 
--   **Index 1-2** (orange in diagram below) &ndash; The minimum API level supported by the application.
+- **Index 1-2** (orange in diagram below) &ndash; The minimum API level supported by the application.
 
--   **Index 3-4** (blue in diagram below) &ndash; The screen sizes supported:
+- **Index 3-4** (blue in diagram below) &ndash; The screen sizes supported:
     -   1 &ndash; small
     -   2 &ndash; normal
     -   3 &ndash; large
     -   4 &ndash; xlarge
 
--   **Index 5-7** (green in diagram below) &ndash; A unique number for the version code. 
+- **Index 5-7** (green in diagram below) &ndash; A unique number for the version code. 
     This is set by the developer. It should increase for each public release of the application.
 
 The following diagram illustrates the position of each code described
@@ -98,9 +98,9 @@ based on the `versionCode` and APK configuration. The APK with the
 highest version code will be delivered to the device. As an example, an
 application could have three APKs with the following version codes:
 
--  11413456 - The ABI is  `armeabi` ; targetting API level 14; small to large screens; with a version number of 456.
--  21423456 - The ABI is  `armeabi-v7a` ; targetting API level 14; normal &amp; large screens; with a version number of 456.
--  61423456 - The ABI is  `x86` ; targetting API level 14; normal &amp; large screens; with a version number of 456.
+- 11413456 - The ABI is  `armeabi` ; targetting API level 14; small to large screens; with a version number of 456.
+- 21423456 - The ABI is  `armeabi-v7a` ; targetting API level 14; normal &amp; large screens; with a version number of 456.
+- 61423456 - The ABI is  `x86` ; targetting API level 14; normal &amp; large screens; with a version number of 456.
 
 To continue on with this example, imagine that a bug was fixed which
 was specific to `armeabi-v7a`. The app version increases to 457, and an
@@ -114,9 +114,9 @@ app. The new `versionCode` would change to 61923500 while the
 armeabi/armeabi-v7a remain unchanged. At this point in time, the
 version codes would be:
 
--  11413456 - The ABI is  `armeabi` ; targetting API level 14; small to large screens; with a version name of 456.
--  21423457 - The ABI is  `armeabi-v7a` ; targetting API level 14; normal &amp; large screens; with a version name of 457.
--  61923500 - The ABI is  `x86` ; targetting API level 19; normal &amp; large screens; with a version name of 500.
+- 11413456 - The ABI is  `armeabi` ; targetting API level 14; small to large screens; with a version name of 456.
+- 21423457 - The ABI is  `armeabi-v7a` ; targetting API level 14; normal &amp; large screens; with a version name of 457.
+- 61923500 - The ABI is  `x86` ; targetting API level 19; normal &amp; large screens; with a version name of 500.
 
 
 Maintaining these version codes manually can be a significant burden on
@@ -151,13 +151,13 @@ Building the APK per ABI is best accomplished by using either `xbuild` or `msbui
 
 The following list explains each command line parameter:
 
--   `/t:Package` &ndash; Creates an Android APK that is signed using
+- `/t:Package` &ndash; Creates an Android APK that is signed using
     the debug keystore
 
--   `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; This the ABI to
+- `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; This the ABI to
     target. Must one of `armeabi`, `armeabi-v7a`, or `x86`
 
--   `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; This is the
+- `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; This is the
     directory that will hold the intermediate files that are created as
     a part of the build. If necessary, Xamarin.Android will create a
     directory named after the ABI, such as `obj.armeabi-v7a`. It is
@@ -166,17 +166,17 @@ The following list explains each command line parameter:
     build to another. Notice that this value is terminated with a
     directory separator (a `/` in the case of OS X).
 
--   `/p:AndroidManifest` &ndash; This property specifies the path to
+- `/p:AndroidManifest` &ndash; This property specifies the path to
     the **AndroidManifest.XML** file that will be used during the build.
 
--   `/p:OutputPath=bin.<TARGET_ABI>` &ndash; This is the directory that
+- `/p:OutputPath=bin.<TARGET_ABI>` &ndash; This is the directory that
     will house the final APK. Xamarin.Android will create a directory
     named after the ABI, for example `bin.armeabi-v7a`.
 
--   `/p:Configuration=Release` &ndash; Perform a Release build of the
+- `/p:Configuration=Release` &ndash; Perform a Release build of the
     APK. Debug builds may not be uploaded to Google Play.
 
--   `<CS_PROJ FILE>` &ndash; This is the path to the `.csproj` file for
+- `<CS_PROJ FILE>` &ndash; This is the path to the `.csproj` file for
     the Xamarin.Android project.
 
 
@@ -208,9 +208,9 @@ is a simple Android project that will demonstrate how to calculate an
 ABI specific version number and build three separate APK's for each of
 the following ABI's:
 
--  armeabi
--  armeabi-v7a
--  x86
+- armeabi
+- armeabi-v7a
+- x86
 
 
 The [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb)

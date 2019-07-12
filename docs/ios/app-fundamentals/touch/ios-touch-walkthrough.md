@@ -186,8 +186,8 @@ instance variables to the class `TouchViewController`:
 The [previous section](#Touch_Samples) demonstrated how to drag an object around the screen by using touch events.
 In this section we will get rid of the touch events and show how to use the following gesture recognizers:
 
--  The `UIPanGestureRecognizer` for dragging an image around the screen.
--  The `UITapGestureRecognizer` to respond to double taps on the screen.
+- The `UIPanGestureRecognizer` for dragging an image around the screen.
+- The `UITapGestureRecognizer` to respond to double taps on the screen.
 
 If you run the [starting sample code](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
 and click on the **Gesture Recognizer Samples** button, you should see the following screen:

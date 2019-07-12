@@ -121,8 +121,8 @@ Now, when the button is tapped, the animation implemented in the `UIViewControll
 
 Collection Views have built-in support for creating animated transitions:
 
--  **Navigation Controllers** – The animated transition between two  `UICollectionViewController` instances can optionally be handled automatically when a  `UINavigationController` manages them.
--  **Transition Layout** – A new  `UICollectionViewTransitionLayout` class allows interactive transitioning between layouts.
+- **Navigation Controllers** – The animated transition between two  `UICollectionViewController` instances can optionally be handled automatically when a  `UINavigationController` manages them.
+- **Transition Layout** – A new  `UICollectionViewTransitionLayout` class allows interactive transitioning between layouts.
 
 
 ### Navigation Controller Transitions

@@ -123,9 +123,9 @@ You can select a constraint by clicking on a blue line and editing the constrain
 
 Several types of issues can arise when using constraints:
 
--  **Conflicting constraints** — This happens when multiple constraints force the element to have conflicting values for an attribute and the constraint engine is unable to reconcile them.
--  **Underconstrained items** — An element’s properties (location + size) must be entirely covered by its set of constraints and intrinsic sizes for the constraints to be valid. If these values are ambiguous, the item is said to be underconstrained.
--  **Frame misplacement** — This occurs when an element’s frame and its set of constraints define two different resulting rectangles.
+- **Conflicting constraints** — This happens when multiple constraints force the element to have conflicting values for an attribute and the constraint engine is unable to reconcile them.
+- **Underconstrained items** — An element’s properties (location + size) must be entirely covered by its set of constraints and intrinsic sizes for the constraints to be valid. If these values are ambiguous, the item is said to be underconstrained.
+- **Frame misplacement** — This occurs when an element’s frame and its set of constraints define two different resulting rectangles.
 
 
 This section elaborates on the three issues listed above, and provides details on how to handle them.

@@ -53,9 +53,9 @@ Xamarin.Forms also defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedS
 
 Font styles such as **bold** and *italic* can be set on the `FontAttributes` property. The following values are currently supported:
 
--  **None**
--  **Bold**
--  **Italic**
+- **None**
+- **Bold**
+- **Italic**
 
 The `FontAttribute` enumeration can be used as follows (you can specify a single attribute or `OR` them together):
 
