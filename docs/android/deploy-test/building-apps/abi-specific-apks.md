@@ -72,17 +72,17 @@ following list explains this eight digit version code format
 (indexed from left to right):
 
 - **Index 0** (red in diagram below) &ndash; An integer for the ABI:
-    -   1 &ndash; `armeabi`
-    -   2 &ndash; `armeabi-v7a`
-    -   6 &ndash; `x86`
+    - 1 &ndash; `armeabi`
+    - 2 &ndash; `armeabi-v7a`
+    - 6 &ndash; `x86`
 
 - **Index 1-2** (orange in diagram below) &ndash; The minimum API level supported by the application.
 
 - **Index 3-4** (blue in diagram below) &ndash; The screen sizes supported:
-    -   1 &ndash; small
-    -   2 &ndash; normal
-    -   3 &ndash; large
-    -   4 &ndash; xlarge
+    - 1 &ndash; small
+    - 2 &ndash; normal
+    - 3 &ndash; large
+    - 4 &ndash; xlarge
 
 - **Index 5-7** (green in diagram below) &ndash; A unique number for the version code. 
     This is set by the developer. It should increase for each public release of the application.

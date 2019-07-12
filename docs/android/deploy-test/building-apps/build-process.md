@@ -141,18 +141,18 @@ an [MSBuild PropertyGroup element](https://docs.microsoft.com/visualstudio/msbui
     to generate as part of the build, which also impacts whether the
     Application is debuggable. Possible values include:
 
-    -   **Full**: Full symbols are generated. If the `DebugSymbols`
+    - **Full**: Full symbols are generated. If the `DebugSymbols`
         MSBuild property is also `True`, then the Application package is
         debuggable.
 
-    -   **PdbOnly**: "PDB" symbols are generated. The
+    - **PdbOnly**: "PDB" symbols are generated. The
         Application package will *not* be debuggable.
 
     If `DebugType` is not set or is the empty string, then the
     `DebugSymbols` property controls whether or not the Application is
     debuggable.
 
-    -   **AndroidGenerateLayoutBindings** &ndash; Enables generation of [layout code-behind](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md)
+    - **AndroidGenerateLayoutBindings** &ndash; Enables generation of [layout code-behind](https://github.com/xamarin/xamarin-android/blob/master/Documentation/guides/LayoutCodeBehind.md)
         if set to `true` or disables it completely if set to `false`. The
         default value is `false`.
 
@@ -396,12 +396,12 @@ when packaging Release applications.
     used in Android Application projects. The default value is
     *SdkOnly*. Valid values are:
 
-    -   **None**: No linking will be attempted.
+    - **None**: No linking will be attempted.
 
-    -   **SdkOnly**: Linking will be performed on the base class
+    - **SdkOnly**: Linking will be performed on the base class
         libraries only, not user's assemblies.
 
-    -   **Full**: Linking will be performed on base class libraries and
+    - **Full**: Linking will be performed on base class libraries and
         user assemblies.
 
         > [!NOTE]
@@ -433,14 +433,14 @@ when packaging Release applications.
 - **AndroidLintEnabled** &ndash; A bool property which allows the developer to
     run the android `lint` tool as part of the packaging process.
 
-    -   **AndroidLintEnabledIssues** &ndash; A comma separated list of lint issues to enable.
+    - **AndroidLintEnabledIssues** &ndash; A comma separated list of lint issues to enable.
 
-    -   **AndroidLintDisabledIssues** &ndash; A comma separated list of lint issues to disable.
+    - **AndroidLintDisabledIssues** &ndash; A comma separated list of lint issues to disable.
 
-    -   **AndroidLintCheckIssues** &ndash; A comma separated list of lint issues to check.
+    - **AndroidLintCheckIssues** &ndash; A comma separated list of lint issues to check.
         Note: only these issues will be checked.
 
-    -   **AndroidLintConfig** &ndash; This is a Build action for a lint style config file. This
+    - **AndroidLintConfig** &ndash; This is a Build action for a lint style config file. This
         can be used to enabled/disable issues to check. Multiple files can use this build
         action as their contents will be merged.
 
@@ -510,30 +510,30 @@ when packaging Release applications.
 
     Supported values include:
 
-    -   `armeabi-v7a`
-    -   `x86`
-    -   `arm64-v8a`: Requires Xamarin.Android 5.1 and later.
-    -   `x86_64`: Requires Xamarin.Android 5.1 and later.
+    - `armeabi-v7a`
+    - `x86`
+    - `arm64-v8a`: Requires Xamarin.Android 5.1 and later.
+    - `x86_64`: Requires Xamarin.Android 5.1 and later.
 
 - **AndroidTlsProvider** &ndash; A string value which specifies which
     TLS provider should be used in an application. Possible values are:
 
-    -   `btls`: Use
+    - `btls`: Use
         [Boring SSL](https://boringssl.googlesource.com/boringssl) for
         TLS communication with
         [HttpWebRequest](xref:System.Net.HttpWebRequest).
         This allows use of TLS 1.2 on all Android versions.
 
-    -   `legacy`: Use the historical managed SSL implementation for
+    - `legacy`: Use the historical managed SSL implementation for
         network interaction. This *does not* support TLS 1.2.
 
-    -   `default`: Allow *Mono* to choose the default TLS provider.
+    - `default`: Allow *Mono* to choose the default TLS provider.
         This is equivalent to `legacy`, even in Xamarin.Android 7.3. 
         *Note*: This value is unlikely to appear in `.csproj` values,
         as the IDE "Default" value results in *removal* of the
         `$(AndroidTlsProvider)` property.
 
-    -   Unset/the empty string: In Xamarin.Android 7.1,
+    - Unset/the empty string: In Xamarin.Android 7.1,
         this is equivalent to `legacy`.  
         In Xamarin.Android 7.3, this is equivalent to `btls`.
 
@@ -595,17 +595,17 @@ when packaging Release applications.
 
     Pre-defined key items
 
-    -   **abi**  &ndash; Inserts the targeted abi for the app
-        -   2 &ndash; `armeabi-v7a`
-        -   3 &ndash; `x86`
-        -   4 &ndash; `arm64-v8a`
-        -   5 &ndash; `x86_64`
+    - **abi**  &ndash; Inserts the targeted abi for the app
+        - 2 &ndash; `armeabi-v7a`
+        - 3 &ndash; `x86`
+        - 4 &ndash; `arm64-v8a`
+        - 5 &ndash; `x86_64`
 
-    -   **minSDK**  &ndash; Inserts the minimum supported Sdk
+    - **minSDK**  &ndash; Inserts the minimum supported Sdk
         value from the `AndroidManifest.xml` or `11` if none is
         defined.
 
-    -   **versionCode** &ndash; Uses the version code directly from
+    - **versionCode** &ndash; Uses the version code directly from
         `Properties\AndroidManifest.xml`.
 
     You can define custom items using the `$(AndroidVersionCodeProperties)`
@@ -701,11 +701,11 @@ when packaging Release applications.
     tables. The value is a comma- or semicolon-separated list of one or
     more of the following case-insensitive values:
 
-    -   **None**: Include no additional encodings.
+    - **None**: Include no additional encodings.
 
-    -   **All**: Include all available encodings.
+    - **All**: Include all available encodings.
 
-    -   **CJK**: Include Chinese, Japanese, and Korean encodings such as
+    - **CJK**: Include Chinese, Japanese, and Korean encodings such as
         *Japanese (EUC)* \[enc-jp, CP51932\], *Japanese (Shift-JIS)*
         \[iso-2022-jp, shift\_jis, CP932\], *Japanese (JIS)* \[CP50220\],
         *Chinese Simplified (GB2312)* \[gb2312, CP936\], *Korean (UHC)*
@@ -713,14 +713,14 @@ when packaging Release applications.
         *Chinese Traditional (Big5)* \[big5, CP950\], and *Chinese
         Simplified (GB18030)* \[GB18030, CP54936\].
 
-    -   **MidEast**: Include Middle-Eastern encodings such as *Turkish
+    - **MidEast**: Include Middle-Eastern encodings such as *Turkish
         (Windows)* \[iso-8859-9, CP1254\], *Hebrew (Windows)*
         \[windows-1255, CP1255\], *Arabic (Windows)* \[windows-1256,
         CP1256\], *Arabic (ISO)* \[iso-8859-6, CP28596\], *Hebrew (ISO)*
         \[iso-8859-8, CP28598\], *Latin 5 (ISO)* \[iso-8859-9, CP28599\],
         and *Hebrew (Iso Alternative)* \[iso-8859-8, CP38598\].
 
-    -   **Other**: Include Other encodings such as *Cyrillic (Windows)*
+    - **Other**: Include Other encodings such as *Cyrillic (Windows)*
         \[CP1251\], *Baltic (Windows)* \[iso-8859-4, CP1257\], *Vietnamese
         (Windows)* \[CP1258\], *Cyrillic (KOI8-R)* \[koi8-r, CP1251\],
         *Ukrainian (KOI8-U)* \[koi8-u, CP1251\], *Baltic (ISO)*
@@ -734,7 +734,7 @@ when packaging Release applications.
         *ISCII Punjabi* \[x-iscii-pa, CP57011\], and *Thai (Windows)*
         \[CP874\].
 
-    -   **Rare**: Include Rare encodings such as *IBM EBCDIC (Turkish)*
+    - **Rare**: Include Rare encodings such as *IBM EBCDIC (Turkish)*
         \[CP1026\], *IBM EBCDIC (Open Systems Latin 1)* \[CP1047\], *IBM
         EBCDIC (US-Canada with Euro)* \[CP1140\], *IBM EBCDIC (Germany with
         Euro)* \[CP1141\], *IBM EBCDIC (Denmark/Norway with Euro)*
@@ -759,7 +759,7 @@ when packaging Release applications.
         *Russian (DOS)* \[CP866\], *Greek (DOS)* \[CP869\], *IBM EBCDIC
         (Latin 2)* \[CP870\], and *IBM EBCDIC (Greek)* \[CP875\].
 
-    -   **West**: Include Western encodings such as *Western European
+    - **West**: Include Western encodings such as *Western European
         (Mac)* \[macintosh, CP10000\], *Icelandic (Mac)* \[x-mac-icelandic,
         CP10079\], *Central European (Windows)* \[iso-8859-2, CP1250\],
         *Western European (Windows)* \[iso-8859-1, CP1252\], *Greek
@@ -796,21 +796,21 @@ The following MSBuild properties are used with
 - **AndroidClassParser** &ndash; A string property which controls how
     `.jar` files are parsed. Possible values include:
 
-    -   **class-parse**: Uses `class-parse.exe` to parse Java bytecode
+    - **class-parse**: Uses `class-parse.exe` to parse Java bytecode
         directly, without assistance of a JVM. This value is
         experimental.
 
 
-    -   **jar2xml**: Use `jar2xml.jar` to use Java reflection to extract
+    - **jar2xml**: Use `jar2xml.jar` to use Java reflection to extract
         types and members from a `.jar` file.
 
     The advantages of `class-parse` over `jar2xml` are:
 
-    -   `class-parse` is able to extract parameter names from Java
+    - `class-parse` is able to extract parameter names from Java
         bytecode which contains *debug* symbols (e.g. bytecode compiled
         with `javac -g`).
 
-    -   `class-parse` doesn't "skip" classes which inherit from or
+    - `class-parse` doesn't "skip" classes which inherit from or
         contain members of unresolvable types.
 
     **Experimental**. Added in Xamarin.Android 6.0.
@@ -821,26 +821,26 @@ The following MSBuild properties are used with
 
 - **AndroidCodegenTarget** &ndash; A string property which controls the code generation target ABI. Possible values include:
 
-    -   **XamarinAndroid**: Uses the JNI binding API present in since
+    - **XamarinAndroid**: Uses the JNI binding API present in since
         Mono for Android 1.0. Binding assemblies built with
         Xamarin.Android 5.0 or later can only run on Xamarin.Android 5.0
         or later (API/ABI additions), but the *source* is compatible with
         prior product versions.
 
-    -   **XAJavaInterop1**: Use Java.Interop for JNI invocations. Binding
+    - **XAJavaInterop1**: Use Java.Interop for JNI invocations. Binding
         assemblies using `XAJavaInterop1` can only build and execute with
         Xamarin.Android 6.1 or later. Xamarin.Android 6.1 and later bind
         `Mono.Android.dll` with this value.
 
         The benefits of `XAJavaInterop1` include:
 
-        -   Smaller assemblies.
+        - Smaller assemblies.
 
-        -   `jmethodID` caching for `base` method invocations,
+        - `jmethodID` caching for `base` method invocations,
             so long as all other binding types in the inheritance
             hierarchy are built with `XAJavaInterop1` or later.
 
-        -   `jmethodID` caching of Java Callable Wrapper constructors for
+        - `jmethodID` caching of Java Callable Wrapper constructors for
             managed subclasses.
 
         The default value is `XAJavaInterop1`.

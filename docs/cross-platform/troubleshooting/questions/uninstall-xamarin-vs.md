@@ -13,11 +13,11 @@ ms.date: 12/02/2016
 
 1. From the Windows Control Panel, uninstall any of the following that are present:
 
-    -   Xamarin
-    -   Xamarin for Windows
-    -   Xamarin.Android
-    -   Xamarin.iOS
-    -   Xamarin for Visual Studio
+    - Xamarin
+    - Xamarin for Windows
+    - Xamarin.Android
+    - Xamarin.iOS
+    - Xamarin for Visual Studio
 
 2. In Explorer, delete any remaining files from the Xamarin Visual Studio extension folders (all versions, including both _Program Files_ and _Program Files (x86)_):
 
@@ -29,15 +29,15 @@ ms.date: 12/02/2016
 
     In fact, this step by itself is often sufficient to resolve errors such as:
 
-    -   "The 'XamarinShellPackage' package did not load correctly"
+    - "The 'XamarinShellPackage' package did not load correctly"
 
-    -   "The project file ... cannot be opened. There is a missing project subtype"
+    - "The project file ... cannot be opened. There is a missing project subtype"
 
-    -   "Object reference not set to an instance of an object.  at Xamarin.VisualStudio.IOS.XamarinIOSPackage.Initialize()"
+    - "Object reference not set to an instance of an object.  at Xamarin.VisualStudio.IOS.XamarinIOSPackage.Initialize()"
 
-    -   "SetSite failed for package" (in Visual Studio's _ActivityLog.xml_)
+    - "SetSite failed for package" (in Visual Studio's _ActivityLog.xml_)
 
-    -   "LegacySitePackage failed for package" (in Visual Studio's _ActivityLog.xml_)
+    - "LegacySitePackage failed for package" (in Visual Studio's _ActivityLog.xml_)
 
     (See also the [Clear MEF Component Cache](https://visualstudiogallery.msdn.microsoft.com/22b94661-70c7-4a93-9ca3-8b6dd45f47cd) Visual Studio extension.  And see [Bug 40781, Comment 19](https://bugzilla.xamarin.com/show_bug.cgi?id=40781#c19) for a bit more context about the upstream issue in Visual Studio that can cause these errors.)
 
@@ -84,8 +84,8 @@ In cases where the above steps do not resolve the "package did not load correctl
 
 3. If the extensions load correctly, then the problem is most likely caused by some of the stored settings for the original user:
 
-    -   **In Explorer** –  _%LOCALAPPDATA%\\Microsoft\\VisualStudio\\1\*.0_
-    -   **In regedit** – _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0_
-    -   **In regedit** – _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0\_Config_
+    - **In Explorer** –  _%LOCALAPPDATA%\\Microsoft\\VisualStudio\\1\*.0_
+    - **In regedit** – _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0_
+    - **In regedit** – _HKEY\_CURRENT\_USER\\Software\\Microsoft\\VisualStudio\\1\*.0\_Config_
 
 4. If those stored settings do indeed appear to be the problem, you can try backing them up and then deleting them.

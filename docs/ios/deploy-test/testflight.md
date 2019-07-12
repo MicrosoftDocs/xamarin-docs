@@ -82,7 +82,7 @@ The form should reflect exactly the information in your app's Info.plist file, a
 - **Name** — The descriptive name used when setting up the App Bundle. This must be an exact match to the **Application name** entry in your `Info.plist`.
 - **Primary Language** — The base language used within the app. This is usually whatever language you speak.
 - **Bundle ID** — A drop down menu listing all the App IDs created on your developer account.
-	*  	**Bundle ID Suffix** — If you have selected a wild card Bundle ID (i.e. ending with a *, as in our example above), an additional box will appear, prompting for the Bundle ID suffix. In the example the **Bundle ID** is `mobi.chkn.*`, the Suffix is **PageView**. Together these make up the **Bundle Identifier** in our `Info.plist`.
+	* **Bundle ID Suffix** — If you have selected a wild card Bundle ID (i.e. ending with a *, as in our example above), an additional box will appear, prompting for the Bundle ID suffix. In the example the **Bundle ID** is `mobi.chkn.*`, the Suffix is **PageView**. Together these make up the **Bundle Identifier** in our `Info.plist`.
 - **Version** — The Version number of the app being uploaded. This is chosen by the developer.
 - **SKU** — The SKU is a unique ID for your app, that will not be seen by users. It can be thought of in a similar way as a product ID. In the example above I have chosen the date along with a version number for that date.
 

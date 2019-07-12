@@ -51,15 +51,15 @@ In certain situations, the Xamarin installer might automatically un-check the in
 
 1. From the Windows Control Panel, uninstall any of the following that are present:
 
-    *   Xamarin
+    * Xamarin
 
-    *   Xamarin for Windows
+    * Xamarin for Windows
 
-    *   Xamarin.Android
+    * Xamarin.Android
 
-    *   Xamarin.iOS
+    * Xamarin.iOS
 
-    *   Xamarin for Visual Studio
+    * Xamarin for Visual Studio
 
 2. In Explorer, delete any remaining files from the Xamarin Visual Studio extension folders (all versions, including both **Program Files** and **Program Files (x86)**):
 
