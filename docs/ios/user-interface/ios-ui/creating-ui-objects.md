@@ -91,7 +91,7 @@ property that can be referenced in code:
 For more information on how Xcode's Interface Builder integrates with Visual Studio for Mac,
 refer to the [Xib Code Generation](~/ios/internals/xib-code-generation.md#generated) document.
 
-##  Using C#
+## Using C#
 
 If you decide to programmatically create a user interface object using C# (in a View or View Controller, for example),
 follow these steps:

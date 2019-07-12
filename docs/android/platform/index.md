@@ -34,7 +34,7 @@ introduced in Android 6.0, to a Xamarin.Android application.
 This guide discusses the Firebase Job Dispatcher and how to use it to
 simplify running background jobs in a Xamarin.Android app.
 
-##  [Fragments](~/android/platform/fragments/index.md)
+## [Fragments](~/android/platform/fragments/index.md)
 
 Android 3.0 introduced Fragments, showing how to support more flexible
 designs for the many different screen sizes found on phones and
@@ -53,7 +53,7 @@ and how to configure a website to grant permissions to the mobile app
 to handle app-links for the domain.
 
 
-##  [Android 9 Pie](~/android/platform/pie.md)
+## [Android 9 Pie](~/android/platform/pie.md)
 
 This article provides an outline of the new features in Android Pie,
 explains how to prepare Xamarin.Android for Android Pie development,
@@ -61,7 +61,7 @@ and provides an example app that illustrates how to use the new Android
 Pie display cutout and notification features in Xamarin.Android apps.
 
 
-##  [Android 8 Oreo](~/android/platform/oreo.md)
+## [Android 8 Oreo](~/android/platform/oreo.md)
 
 This article provides an outline of the new features in Android Oreo,
 explains how to prepare Xamarin.Android for Android Oreo development,
@@ -70,7 +70,7 @@ Android Oreo features in Xamarin.Android apps.
 
 
 
-##  [Android 7 Nougat](~/android/platform/nougat.md)
+## [Android 7 Nougat](~/android/platform/nougat.md)
 
 This article provides a high-level overview of the new features
 introduced in Android 7.0 Nougat.
@@ -78,7 +78,7 @@ introduced in Android 7.0 Nougat.
 
 
 
-##  [Android 6 Marshmallow](~/android/platform/marshmallow.md)
+## [Android 6 Marshmallow](~/android/platform/marshmallow.md)
 
 This article provides a high-level overview of the new features
 introduced in Android 6.0 Marshmallow.
@@ -86,7 +86,7 @@ introduced in Android 6.0 Marshmallow.
 
 
 
-##  [Android 5 Lollipop](~/android/platform/lollipop.md)
+## [Android 5 Lollipop](~/android/platform/lollipop.md)
 
 This guide provides an overview of new Android 5.0 Lollipop features such as
 Material Theme, CardView, RecyclerView, and Heads Up Notifications, and
@@ -95,7 +95,7 @@ your app.
 
 
 
-##  [Android 4.4 KitKat](~/android/platform/kitkat.md)
+## [Android 4.4 KitKat](~/android/platform/kitkat.md)
 
 Android 4.4 (KitKat) comes loaded with a cornucopia of features for
 users and developers both. This guide highlights several of these
@@ -105,7 +105,7 @@ you make the most out of KitKat.
 
 
 
-##  [Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
+## [Android 4.1 Jelly Bean](~/android/platform/jelly-bean.md)
 
 This document will provide a high-level overview of the new features
 for developers that were introduced in Android 4.1. These features
@@ -115,7 +115,7 @@ animations, new permissions.
 
 
 
-##  [Android 4.0 Ice Cream Sandwich](~/android/platform/ice-cream-sandwich.md)
+## [Android 4.0 Ice Cream Sandwich](~/android/platform/ice-cream-sandwich.md)
 
 This article describes several of the new features available to
 application developers with the *Android 4 API - Ice Cream Sandwich*.
@@ -124,14 +124,14 @@ variety of new capabilities that Android 4 offers for sharing data
 between applications and between devices.
 
 
-##  [Working with the Android Manifest](android-manifest.md)
+## [Working with the Android Manifest](android-manifest.md)
 
 This article introduces the AndroidManifest.xml file, and how it maybe
 be used to control functionality and describe the requirements of a
 Mono for Android application.
 
 
-##  [Introduction to Content Providers](~/android/platform/content-providers/index.md)
+## [Introduction to Content Providers](~/android/platform/content-providers/index.md)
 
 A ContentProvider encapsulates a data repository and provides an API to
 access it. The provider exists as part of an Android application that
@@ -145,7 +145,7 @@ ContentProviders with Xamarin.Android.
 
 
 
-##  [Maps and Location](~/android/platform/maps-and-location/index.md)
+## [Maps and Location](~/android/platform/maps-and-location/index.md)
 
 This section discusses how to use maps and location with
 Xamarin.Android. It covers everything from leveraging the built-in maps
@@ -164,16 +164,16 @@ to Text facilities. It also covers installing language packs and
 interpretation of the text spoken to the device.
 
 
-##  [Binding a Java Library](binding-java-library/index.md)
+## [Binding a Java Library](binding-java-library/index.md)
 
 This guide explains how to incorporate Java libraries into
 Xamarin.Android apps by creating a Bindings Library.
 
-##  [Java Integration](java-integration/index.md)
+## [Java Integration](java-integration/index.md)
 
 This article provides an overview of the ways that developers can reuse
 existing Java components in Xamarin.Android apps.
 
-##  [Renderscript](renderscript.md)
+## [Renderscript](renderscript.md)
 
 This guide discusses Renderscript.

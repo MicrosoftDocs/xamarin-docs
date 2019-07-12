@@ -15,14 +15,14 @@ to build ABI-specific APKs.
 
 
 
-##  [Build Process](~/android/deploy-test/building-apps/build-process.md)
+## [Build Process](~/android/deploy-test/building-apps/build-process.md)
 
 This topic explains the steps and processes involved with the
 source code, resources, and assets of a Xamarin.Android application and
 producing an APK that can be installed on Android devices.
 
 
-##  [Building ABI Specific APKs](~/android/deploy-test/building-apps/abi-specific-apks.md)
+## [Building ABI Specific APKs](~/android/deploy-test/building-apps/abi-specific-apks.md)
 
 This guide discusses how to create Android APK's that support a single
 CPU architecture and ABI.

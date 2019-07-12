@@ -48,7 +48,7 @@ Microsoft's Web API exposes a REST-like interface
   apps.
 
 
-###  [Introduction To Web Services](~/cross-platform/data-cloud/web-services/index.md)
+### [Introduction To Web Services](~/cross-platform/data-cloud/web-services/index.md)
 
 This tutorial introduces how to integrate REST, WCF and SOAP web service
   technologies with Xamarin mobile applications. It examines various service
