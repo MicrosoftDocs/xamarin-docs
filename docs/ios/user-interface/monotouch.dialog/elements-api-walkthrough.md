@@ -15,7 +15,7 @@ _This article builds upon the information presented in the Introduction to MonoT
 
 In this walkthrough, we’ll use the MT.D Elements API to create a
 master-detail style of application that displays a task list. When the user
-selects the <span class="ui">+</span> button in the navigation bar, a new row
+selects the **+** button in the navigation bar, a new row
 will be added to the table for the task. Selecting the row will navigate to the
 detail screen that allows us to update the task description and the due date, as
 illustrated below:
@@ -96,14 +96,14 @@ we’ll see next.
 ### Using DialogViewController
 
 The `DialogViewController`, being a `UITableViewController` subclass, has a `UITableView` as
-its view. In this example, we want to add items to the table each time the <span class="ui">+</span> button is tapped. Since the `DialogViewController` was added to a `UINavigationController`, we can use the `NavigationItem`’s `RightBarButton` property to add the <span class="ui">+</span> button, as shown below:
+its view. In this example, we want to add items to the table each time the **+** button is tapped. Since the `DialogViewController` was added to a `UINavigationController`, we can use the `NavigationItem`’s `RightBarButton` property to add the **+** button, as shown below:
 
 ```csharp
 _addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
 _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 ```
 
-When we created the `RootElement` earlier, we passed it a single `Section` instance so that we could add elements as the <span class="ui">+</span> button is tapped by the user. We can use the following code
+When we created the `RootElement` earlier, we passed it a single `Section` instance so that we could add elements as the **+** button is tapped by the user. We can use the following code
 to accomplish this in the event handler for the button:
 
 ```csharp

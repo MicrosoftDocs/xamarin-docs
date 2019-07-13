@@ -113,7 +113,7 @@ For more complex scenarios, there are new methods on the Activity class that
 may be used to handle the behavior of Up navigation and construct the back
 stack:
 
--   `OnNavigateUp` – By overriding this method it is possible to perform a custom action when the  <span class="ui">Up</span> button is pressed.
+-   `OnNavigateUp` – By overriding this method it is possible to perform a custom action when the **Up** button is pressed.
 -   `NavigateUpTo` – Calling this method will cause the application to navigate from the current activity to the activity specified by a given intent.
 -   `ParentActivityIntent` – This is used to obtain an Intent that will launch the parent activity of the current activity.
 -   `ShouldUpRecreateTask` – This method is used to query if the synthetic back stack must be created to navigate up to a parent activity. Returns  `true` if the synthetic stack must be created. 

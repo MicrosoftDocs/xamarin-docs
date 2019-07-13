@@ -92,7 +92,7 @@ The easiest way to get exact version information is to use the **Xamarin Studio*
 
 <a name="MM0056" />
 
-#### MM0056: Cannot find Xcode in any of our default locations. Please install Xcode, or pass a custom path using --sdkroot=<path>
+#### MM0056: Cannot find Xcode in any of our default locations. Please install Xcode, or pass a custom path using --sdkroot=\<path>
 
 <a name="MM0059" />
 

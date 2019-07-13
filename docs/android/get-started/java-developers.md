@@ -268,7 +268,7 @@ Both Java and C# use very similar object-oriented programming idioms:
 -   Instances of classes are reference types.
 
 -   When you access the properties and methods of an instance, you
-    use the "<code>.</code>" operator.
+    use the "`.`" operator.
 
 -   All class instances are created on the heap via the `new` operator.
 

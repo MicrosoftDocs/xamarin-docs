@@ -2188,11 +2188,11 @@ IntPtr CreateMapActivity()
 
 Once you have a Java Object instance held in an IntPtr, you'll probably
 want to do something with it. You can use JNIEnv methods such as
-[<span class="external">JNIEnv.CallVoidMethod()</span>](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallVoidMethod/p/System.IntPtr/System.IntPtr/Android.Runtime.JValue[]/)
+[JNIEnv.CallVoidMethod()](https://developer.xamarin.com/api/member/Android.Runtime.JNIEnv.CallVoidMethod/p/System.IntPtr/System.IntPtr/Android.Runtime.JValue[]/)
 to do so, but if there is already an analogue C# wrapper then you'll
 want to construct a wrapper over the JNI reference. You can do so
 through the
-[Extensions.JavaCast <t>()</t>](https://developer.xamarin.com/api/member/Android.Runtime.Extensions.JavaCast%7BTResult%7D/p/Android.Runtime.IJavaObject/)
+[Extensions.JavaCast\<T>](https://developer.xamarin.com/api/member/Android.Runtime.Extensions.JavaCast%7BTResult%7D/p/Android.Runtime.IJavaObject/)
 extension method:
 
 ```csharp
@@ -2204,7 +2204,7 @@ Activity mapActivity = new Java.Lang.Object(lrefActivity, JniHandleOwnership.Tra
 ```
 
 You can also use the
-[Java.Lang.Object.GetObject <t>()</t>](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
+[Java.Lang.Object.GetObject\<T>](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
 method:
 
 ```csharp
