@@ -34,8 +34,8 @@ If you are using a Mac and are encountering Xamarin.Android install issues, plea
 
 The following addresses will need to be added to access NuGet (Xamarin.Forms is packaged as a NuGet):
 
-- www\.nuget.org (to access NuGet)
-- az320820.vo.msecnd.net (NuGet downloads)
+- www.nuget.org (to access NuGet)
+- globalcdn.nuget.org (NuGet downloads)
 - dl-ssl.google.com (Google components for Android and Xamarin.Forms)
 
 ### Software updates
@@ -49,7 +49,3 @@ The following addresses will need to be added to ensure that software updates ca
 ## Xamarin Mac Agent
 
 To connect Visual Studio to a Mac build host using the Xamarin Mac Agent requires the SSH port to be open. By default this is **Port 22**.
-
-## Summary
-
-This guide covered the endpoints to whitelist to allow Xamarin products to install and update properly on your machine.
