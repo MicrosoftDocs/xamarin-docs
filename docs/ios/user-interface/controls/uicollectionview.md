@@ -813,10 +813,10 @@ public override void ViewDidLoad ()
 
 Here we are using several new methods added to the collection view to implement and control the drag operation:
 
- - `BeginInteractiveMovementForItem` - Marks the start of a move operation.
- - `UpdateInteractiveMovementTargetPosition` - Is sent as the item's location is updated.
- - `EndInteractiveMovement` - Marks the end of an item move.
- - `CancelInteractiveMovement` - Marks the user canceling the move operation.
+- `BeginInteractiveMovementForItem` - Marks the start of a move operation.
+- `UpdateInteractiveMovementTargetPosition` - Is sent as the item's location is updated.
+- `EndInteractiveMovement` - Marks the end of an item move.
+- `CancelInteractiveMovement` - Marks the user canceling the move operation.
 
 When the application is run, the drag operation will work exactly like the default
 drag gesture recognizer that comes with the collection view.
@@ -1296,78 +1296,78 @@ In the following sections, we'll take a detailed look at the changes made to eac
 
 The following changes or additions have been made to the `UICollectionView` class for iOS 9:
 
- - `BeginInteractiveMovementForItem` – Marks the start of a drag operation.
- - `CancelInteractiveMovement` – Informs the collection view that the user has canceled a drag operation.
- - `EndInteractiveMovement` – Informs the collection view that the user has finished a drag operation.
- - `GetIndexPathsForVisibleSupplementaryElements` – Returns the `indexPath` of a header or footer in a collection view section.
- - `GetSupplementaryView` – Returns the given header or footer.
- - `GetVisibleSupplementaryViews` – Returns a list of all visible header and footers.
- - `UpdateInteractiveMovementTargetPosition` – Informs the collection view that the user has moved, or is moving, an item during a drag operation.
+- `BeginInteractiveMovementForItem` – Marks the start of a drag operation.
+- `CancelInteractiveMovement` – Informs the collection view that the user has canceled a drag operation.
+- `EndInteractiveMovement` – Informs the collection view that the user has finished a drag operation.
+- `GetIndexPathsForVisibleSupplementaryElements` – Returns the `indexPath` of a header or footer in a collection view section.
+- `GetSupplementaryView` – Returns the given header or footer.
+- `GetVisibleSupplementaryViews` – Returns a list of all visible header and footers.
+- `UpdateInteractiveMovementTargetPosition` – Informs the collection view that the user has moved, or is moving, an item during a drag operation.
 
 ### UICollectionViewController
 
 The following changes or additions have been made to the `UICollectionViewController` class in iOS 9:
 
- - `InstallsStandardGestureForInteractiveMovement` – If `true` the new Gesture Recognizer that automatically supports drag-to-reorder will be used.
- - `CanMoveItem` – Informs the collection view if a given item can be drag reordered.
- - `GetTargetContentOffset` – Used to get the offset of a given collection view item.
- - `GetTargetIndexPathForMove` – Gets the `indexPath` of a given item for a drag operation.
- - `MoveItem` – Moves the order of a given item in the list.
+- `InstallsStandardGestureForInteractiveMovement` – If `true` the new Gesture Recognizer that automatically supports drag-to-reorder will be used.
+- `CanMoveItem` – Informs the collection view if a given item can be drag reordered.
+- `GetTargetContentOffset` – Used to get the offset of a given collection view item.
+- `GetTargetIndexPathForMove` – Gets the `indexPath` of a given item for a drag operation.
+- `MoveItem` – Moves the order of a given item in the list.
 
 
 ### UICollectionViewDataSource
 
 The following changes or additions have been made to the `UICollectionViewDataSource` class in iOS 9:
 
- - `CanMoveItem` – Informs the collection view if a given item can be drag reordered.
- - `MoveItem` – Moves the order of a given item in the list.
+- `CanMoveItem` – Informs the collection view if a given item can be drag reordered.
+- `MoveItem` – Moves the order of a given item in the list.
 
 ### UICollectionViewDelegate
 
 The following changes or additions have been made to the `UICollectionViewDelegate` class in iOS 9:
 
- - `GetTargetContentOffset` – Used to get the offset of a given collection view item.
- - `GetTargetIndexPathForMove` – Gets the `indexPath` of a given item for a drag operation.
+- `GetTargetContentOffset` – Used to get the offset of a given collection view item.
+- `GetTargetIndexPathForMove` – Gets the `indexPath` of a given item for a drag operation.
 
 ### UICollectionViewFlowLayout
 
 The following changes or additions have been made to the `UICollectionViewFlowLayout` class in iOS 9:
 
- - `SectionFootersPinToVisibleBounds` – Sticks the section footers to the visible collection view bounds.
- - `SectionHeadersPinToVisibleBounds` – Sticks the section headers to the visible collection view bounds.
+- `SectionFootersPinToVisibleBounds` – Sticks the section footers to the visible collection view bounds.
+- `SectionHeadersPinToVisibleBounds` – Sticks the section headers to the visible collection view bounds.
 
 ### UICollectionViewLayout
 
 The following changes or additions have been made to the `UICollectionViewLayout` class in iOS 9:
 
- - `GetInvalidationContextForEndingInteractiveMovementOfItems` – Returns the invalidation context at the end of a drag operation when the user either finishes the drag or cancels it.
- - `GetInvalidationContextForInteractivelyMovingItems` – Returns the invalidation context at the start of a drag operation.
- - `GetLayoutAttributesForInteractivelyMovingItem` – Gets the Layout Attributes for a given item while dragging an item.
- - `GetTargetIndexPathForInteractivelyMovingItem` – Returns the `indexPath` of the item that is at the given point when dragging an item.
+- `GetInvalidationContextForEndingInteractiveMovementOfItems` – Returns the invalidation context at the end of a drag operation when the user either finishes the drag or cancels it.
+- `GetInvalidationContextForInteractivelyMovingItems` – Returns the invalidation context at the start of a drag operation.
+- `GetLayoutAttributesForInteractivelyMovingItem` – Gets the Layout Attributes for a given item while dragging an item.
+- `GetTargetIndexPathForInteractivelyMovingItem` – Returns the `indexPath` of the item that is at the given point when dragging an item.
 
 ### UICollectionViewLayoutAttributes
 
 The following changes or additions have been made to the `UICollectionViewLayoutAttributes` class in iOS 9:
 
- - `CollisionBoundingPath` – Returns the collision path of two items during a drag operation.
- - `CollisionBoundsType` – Returns the type of collision (as a `UIDynamicItemCollisionBoundsType`) that has occurred during a drag operation.
+- `CollisionBoundingPath` – Returns the collision path of two items during a drag operation.
+- `CollisionBoundsType` – Returns the type of collision (as a `UIDynamicItemCollisionBoundsType`) that has occurred during a drag operation.
 
 ### UICollectionViewLayoutInvalidationContext
 
 The following changes or additions have been made to the `UICollectionViewLayoutInvalidationContext` class in iOS 9:
 
- - `InteractiveMovementTarget` – Returns the target item of a drag operation.
- - `PreviousIndexPathsForInteractivelyMovingItems` – Returns the `indexPaths` of other items involved in a drag to reorder operation.
- - `TargetIndexPathsForInteractivelyMovingItems` – Returns the `indexPaths` of items that will be reordered as a result of a drag-to-reorder operation.
+- `InteractiveMovementTarget` – Returns the target item of a drag operation.
+- `PreviousIndexPathsForInteractivelyMovingItems` – Returns the `indexPaths` of other items involved in a drag to reorder operation.
+- `TargetIndexPathsForInteractivelyMovingItems` – Returns the `indexPaths` of items that will be reordered as a result of a drag-to-reorder operation.
 
 ### UICollectionViewSource
 
 The following changes or additions have been made to the `UICollectionViewSource` class in iOS 9:
 
- - `CanMoveItem` – Informs the collection view if a given item can be drag reordered.
- - `GetTargetContentOffset` – Returns the offsets of items that will be moved via a drag-to-reorder operation.
- - `GetTargetIndexPathForMove` – Returns the `indexPath` of an item that will be moved during a drag-to-reorder operation.
- - `MoveItem` – Moves the order of a given item in the list.
+- `CanMoveItem` – Informs the collection view if a given item can be drag reordered.
+- `GetTargetContentOffset` – Returns the offsets of items that will be moved via a drag-to-reorder operation.
+- `GetTargetIndexPathForMove` – Returns the `indexPath` of an item that will be moved during a drag-to-reorder operation.
+- `MoveItem` – Moves the order of a given item in the list.
 
 ## Summary
 

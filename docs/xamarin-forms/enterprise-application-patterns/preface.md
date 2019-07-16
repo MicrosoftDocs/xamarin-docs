@@ -21,7 +21,7 @@ The guide comes with source code for the [eShopOnContainers mobile app](https://
 
 This guide is aimed at readers who are already familiar with Xamarin.Forms. For a detailed introduction to Xamarin.Forms, see the [Xamarin.Forms documentation](~/xamarin-forms/index.yml), and [Creating Mobile Apps with Xamarin.Forms](https://aka.ms/xamebook).
 
-The guide is complementary to [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook), which focuses on developing and deploying containerized microservices. Other guides worth reading include [Architecting and Developing Modern Web Applications with ASP.NET Core and Microsoft Azure](http://aka.ms/WebAppEbook), [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](http://aka.ms/dockerlifecycleebook), and [Microsoft Platform and Tools for Mobile App Development](http://aka.ms/MobAppDev/StndPDF).
+The guide is complementary to [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook), which focuses on developing and deploying containerized microservices. Other guides worth reading include [Architecting and Developing Modern Web Applications with ASP.NET Core and Microsoft Azure](https://aka.ms/WebAppEbook), [Containerized Docker Application Lifecycle with Microsoft Platform and Tools](https://aka.ms/dockerlifecycleebook), and [Microsoft Platform and Tools for Mobile App Development](https://aka.ms/MobAppDev/StndPDF).
 
 ## Who Should Use this Guide
 

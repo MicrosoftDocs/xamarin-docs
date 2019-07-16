@@ -126,6 +126,7 @@
 ##### [Data Template Selection](app-fundamentals/templates/data-templates/selector.md)
 ### [Triggers](app-fundamentals/triggers.md)
 ## [User Interface](user-interface/index.md)
+### [Activity Indicator](user-interface/activityindicator.md)
 ### [Animation](user-interface/animation/index.md)
 #### [Simple Animations](user-interface/animation/simple.md)
 #### [Easing Functions](user-interface/animation/easing.md)
@@ -178,6 +179,7 @@
 ### [Picker](user-interface/picker/index.md)
 #### [Setting a Picker's ItemsSource Property](user-interface/picker/populating-itemssource.md)
 #### [Adding Data to a Picker's Items Collection](user-interface/picker/populating-items.md)
+### [ProgressBar](user-interface/progressbar.md)
 ### [Slider](user-interface/slider.md)
 ### [Stepper](user-interface/stepper.md)
 ### [Styles](user-interface/styles/index.md)
@@ -276,6 +278,7 @@
 
 ## [Xamarin.Essentials](~/essentials/index.md?context=xamarin/xamarin-forms)
 ### [Get Started](~/essentials/get-started.md?context=xamarin/xamarin-forms)
+### [Platform & Feature Support](~/essentials/platform-feature-support.md?context=xamarin/xamarin-forms)
 ### [Accelerometer](~/essentials/accelerometer.md?context=xamarin/xamarin-forms)
 ### [App Information](~/essentials/app-information.md?context=xamarin/xamarin-forms)
 ### [Barometer](~/essentials/barometer.md?context=xamarin/xamarin-forms)

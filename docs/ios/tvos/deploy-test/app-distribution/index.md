@@ -24,7 +24,7 @@ Apple provides the following ways to distribute a tvOS app, which are supported 
 
 1. [**The App Store**](#Apple-TV-App-Store-Distribution)
 2. [**In-House (Enterprise)**](#In-House-Distribution) 
-2. [**Ad Hoc**](#Ad_Hoc_Distribution) 
+3. [**Ad Hoc**](#Ad_Hoc_Distribution) 
 
 All these scenarios require that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. For the non-App Store distribution they also contain information about what devices the app can be deployed to.
 

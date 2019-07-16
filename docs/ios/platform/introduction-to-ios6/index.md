@@ -36,7 +36,7 @@ The PassKit framework allows applications to interact with digital passes
 that are managed in the Passbook app. For more information see, the [Introduction to Pass Kit guide](~/ios/platform/passkit.md).
 
 
-##  [Introduction to EventKit](~/ios/platform/eventkit.md)
+## [Introduction to EventKit](~/ios/platform/eventkit.md)
 
 The EventKit framework provides a way to access the Calendars, Calendar
 Events, and Reminders data that Calendar Database stores. Access to the
@@ -44,14 +44,14 @@ calendars and calendar events has been available since iOS 4, but iOS 6 now
 exposes access to reminders data. For more information, see the [I](~/ios/platform/eventkit.md) [ntroduction to EventKit](~/ios/platform/eventkit.md) guide.
 
 
-##  [Introduction to the Social Framework](~/ios/platform/social-framework.md)
+## [Introduction to the Social Framework](~/ios/platform/social-framework.md)
 
 The Social Framework provides a unified API for interacting with social
 networks including Twitter and Facebook, as well as SinaWeibo for users in
 China. For more information see, the [Introduction to the Social Framework](~/ios/platform/social-framework.md) guide.
 
 
-##  [Changes to StoreKit](changes-to-storekit.md)
+## [Changes to StoreKit](changes-to-storekit.md)
 
 Apple has introduced two new features in Store Kit: purchasing and
 downloading iTunes or App Store content from within your app, and hosting your

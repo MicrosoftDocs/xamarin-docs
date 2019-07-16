@@ -47,7 +47,7 @@ Next we will draw a single sprite to the screen to show how to perform 2D render
 
 ### Creating a Texture2D
 
-We need to create a `Texture2D` instance to use when rendering our sprite. All game content is ultimately contained in a folder named **Content,** located in the platform-specific project. MonoGame shared projects cannot contain content, as the content must use build actions specific to the platform. CocosSharp developers will find the Content folder a familiar concept – they are located in the same place in both CocosSharp and MonoGame projects. The Content folder can be found in the iOS project, and inside the Assets folder in the Android project.
+We need to create a `Texture2D` instance to use when rendering our sprite. All game content is ultimately contained in a folder named **Content,** located in the platform-specific project. MonoGame shared projects cannot contain content, as the content must use build actions specific to the platform. The Content folder can be found in the iOS project, and inside the Assets folder in the Android project.
 
 To add our game’s content, right-click on the **Content** folder and select **Add > Add Files...** Navigate to the location where the content.zip file was extracted and select the **charactersheet.png** file. If asked about how to add the file to folder, we should select the **Copy** option:
 

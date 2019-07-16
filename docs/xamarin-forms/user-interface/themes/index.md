@@ -27,9 +27,10 @@ Refer to the [Light theme](light.md) and [Dark theme](dark.md) pages
 for instructions on how to add them to an app, or check out the
 [example custom theme](custom.md).
 
-**IMPORTANT:** You should also follow the steps to [load theme assemblies (below)](#loadtheme)
-by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
-be improved in a future preview release.
+> [!IMPORTANT]
+> You should also follow the steps to [load theme assemblies (below)](#loadtheme)
+> by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
+> be improved in a future preview release.
 
 
 ## Control Appearance

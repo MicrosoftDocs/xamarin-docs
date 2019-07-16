@@ -51,9 +51,9 @@ In this way, each View Controller is a self-contained, reusable pairing of both 
 
 Within a given Scene, you can do all of the things that would normally have been handled by individual `.xib` files: 
 
- - Place subviews and controls (such as buttons and text boxes).
- - Define element positions and auto layout constraints.
- - Wire-up Actions and Outlets to expose UI elements to code.
+- Place subviews and controls (such as buttons and text boxes).
+- Define element positions and auto layout constraints.
+- Wire-up Actions and Outlets to expose UI elements to code.
 
 <a name="Working-with-Segues" />
 

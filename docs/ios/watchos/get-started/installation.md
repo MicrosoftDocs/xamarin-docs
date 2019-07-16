@@ -183,7 +183,7 @@ You can launch watch apps in the simulator using either
 
 There are two modes for launching a WatchKit app:
 
- - normal app mode (the default), and
+- normal app mode (the default), and
 - [Notifications](~/ios/watchos/platform/notifications.md)
 	(which requires a test notification payload in JSON format).
 
@@ -235,9 +235,10 @@ When using Xcode 6, only the iPhone 5, iPhone 5S, iPhone 6, and iPhone 6 Plus
 	**Apple Watch - 38mm** or **Apple Watch - 42mm**
 	where the watch applications will be displayed.
 
-**Note:** Remember that the watch screen does not
-automatically appear in the iOS Simulator when using Xcode 6.
-Use the **Hardware > External Displays** menu to show the watch screen.
+> [!NOTE]
+> Remember that the watch screen does not
+> automatically appear in the iOS Simulator when using Xcode 6.
+> Use the **Hardware > External Displays** menu to show the watch screen.
 
 <a name="custommodes" />
 

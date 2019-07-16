@@ -688,12 +688,12 @@ New to iOS 8, the developer can create a single, atomic `.xib` file in Xcode tha
 
 Dynamic Launch Screens have the following limitations and considerations:
 
- - Use only `UIKit` classes.
- - Use a single root view that is a `UIView` or `UIViewController` object.
- - Don’t make any connections to the application's code (don’t add **Actions** or **Outlets**).
- - Don’t add `UIWebView` objects.
- - Don’t use any custom classes.
- - Don’t use runtime attributes.
+- Use only `UIKit` classes.
+- Use a single root view that is a `UIView` or `UIViewController` object.
+- Don’t make any connections to the application's code (don’t add **Actions** or **Outlets**).
+- Don’t add `UIWebView` objects.
+- Don’t use any custom classes.
+- Don’t use runtime attributes.
 
 With the above guidelines in mind, let's look at adding a Dynamic Launch Screen to an existing Xamarin iOS 8 project.
 

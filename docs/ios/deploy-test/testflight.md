@@ -72,7 +72,7 @@ For more information on creating a new iTunes Connect record, refer to the [Crea
 
 
 
-###  Completing the New iOS App Submission form
+### Completing the New iOS App Submission form
 
 The form should reflect exactly the information in your app's Info.plist file, as illustrated below:
 
@@ -95,7 +95,7 @@ First, build your [final distributable](~/ios/deploy-test/app-distribution/app-s
 
 # [Visual Studio for Mac](#tab/macos)
 
-###  Create an Archive
+### Create an Archive
 
  To build a binary in Visual Studio for Mac, you will need to use the _Archive_ function. Right-Click on the project, and select **Archive for Publishing**, as illustrated below:
 
@@ -104,7 +104,7 @@ First, build your [final distributable](~/ios/deploy-test/app-distribution/app-s
 
  Refer to the [Building the Distributable](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) guide for more information.
 
-###  Sign and Distribute your App
+### Sign and Distribute your App
 
  Creating an archive will automatically open the **Archives View**, displaying all archived projects, grouped by solution. To sign your app and prepare it for distribution, select the **Sign and Distribute...**, shown below:
 
@@ -116,14 +116,14 @@ First, build your [final distributable](~/ios/deploy-test/app-distribution/app-s
 
  Refer to the [Submitting your App to Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) section for more information on these steps.
 
-###  Submitting your Build
+### Submitting your Build
  The publishing wizard will open the Application Loader program to all you to upload your build to iTunes Connect. Select the **Deliver Your App** option, and upload the `.ipa` file created above. The Application Loader will validate and upload your build to iTunes Connect.
 
  Refer to the [Submitting your App to Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) section for more information on these steps.
 
 # [Visual Studio](#tab/windows)
 
-###  Building your final distributable
+### Building your final distributable
  As the Xamarin plugin for Visual Studio does not support archiving Xamarin.iOS apps for publishing to the App Store, there are two options for publishing an iOS application from Visual Studio. These are:
 
 1. Upload an IPA created via the Build Adhoc IPA command.
@@ -131,7 +131,7 @@ First, build your [final distributable](~/ios/deploy-test/app-distribution/app-s
 
  The [Building the Distributable](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) guide has instructions for both of these options.
 
-###  Submitting your Build
+### Submitting your Build
  To submit your app to Apple, you will have to move to your Build Host and use the Application Loader program, which is installed as part of Xcode. For more information on accessing the Application Loader, see to Apple's [Access Application Loader](http://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) guide.
 
 Once opened, select the **Deliver Your App** option, and upload the zip or `.ipa` file created above. The Application Loader will validate and upload your build to iTunes Connect.

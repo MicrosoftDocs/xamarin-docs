@@ -505,7 +505,7 @@ CloudKit supports the following types of `NSPredicates` when working with Querie
     NSPredicate.FromFormat(string.Format("ALL tokenize({0}, 'Cdl') IN allTokens", "after session"))
     ```
     
- 6. CloudKit supports compound predicates joined using the `AND` operator.
+6. CloudKit supports compound predicates joined using the `AND` operator.
     
     ```
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))

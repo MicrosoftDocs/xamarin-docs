@@ -52,13 +52,13 @@ To set the Launch Image for your tvOS project, please do the following:
 
 1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
 
-	[![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
+    [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
 2. In the **Asset Editor**, click on the `LaunchImages` asset: 
 
-	[![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png#lightbox)
+    [![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png#lightbox)
 3. Click on the **1x Apple TV** entry and select the Launch Image or optionally drag a new image in from the file system: 
 
-	[![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
+    [![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
 4. Save your changes.
 
 <a name="Layered-Images" />
@@ -163,20 +163,20 @@ To set the App Icons required for your tvOS project, please do the following:
 
 1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
 
-	[![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
+    [![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
 2. In the **Asset Editor**, expand the `App Icon & Top Shelf Image` asset: 
 
-	[![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
+    [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
 3. Next, Expand the `App Icon - Small` asset: 
 
-	[![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png#lightbox)
+    [![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png#lightbox)
 4. Then expand the `Back` asset and click on the `Contents` entry: 
 
-	[![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png#lightbox)
+    [![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png#lightbox)
 5. Click on the **1x Apple TV entry** and select an image file.
 6. Repeat the above steps for the `Front` and `Middle` assets.
 7. Then repeat the same steps to define the `App Icon - Large` asset.
-4. Save your changes.
+8. Save your changes.
 
 <a name="Top-Shelf-Image" />
 
@@ -206,15 +206,15 @@ To set the Top Shelf Image required for your tvOS project, please do the followi
 
 1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
 
-	[![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
+    [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
 2. In the **Asset Editor**, expand the `App Icon & Top Shelf Image` asset: 
 
-	[![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
+    [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
 3. Click on the `Top Shelf Image` asset: 
 
-	[![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png#lightbox)
-5. Click on the **1x Apple TV entry** and select an image file.
-6. Save your changes.
+    [![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png#lightbox)
+4. Click on the **1x Apple TV entry** and select an image file.
+5. Save your changes.
 
 <a name="Dynamic-Top-Shelf-Content" />
 
@@ -306,10 +306,10 @@ Do the following:
 
 1. In the **Solution Explorer**, double-click the `Info.plist` to open it for editing: 
 
-	[![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png#lightbox)
+    [![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png#lightbox)
 2. In the **Info.Plist Editor**, select the Assets Catalog (configured above in the [Setting the App Icons](#Setting-the-App-Icons) section) for the **App Icons**: 
 
-	[![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
+    [![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
 3. Next, select the Assets Catalog (configured above in the [Setting the Launch Image](#Setting-the-Launch-Image) section) for the **Launch Images**.
 4. Save your changes.
 

@@ -1,7 +1,7 @@
 
 The following command line to specify a Release build of the solution **SOLUTION_FILE.sln** for the iPhone. The location of the IPA can be set by specifying the `IpaPackageDir` property on the command line:
 
- - On the Mac, using **xbuild**:
+- On the Mac, using **xbuild**:
 
         xbuild /p:Configuration="Release" \ 
            /p:Platform="iPhone" \ 
@@ -10,7 +10,7 @@ The following command line to specify a Release build of the solution **SOLUTION
 
 The **xbuild** command is typically found in the directory **/Library/Frameworks/Mono.framework/Commands**.
 
- - On Windows, using **msbuild**:
+- On Windows, using **msbuild**:
 
         msbuild /p:Configuration="Release" 
             /p:Platform="iPhone" 

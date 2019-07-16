@@ -60,7 +60,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 5. In **Solution Explorer**, in the **Notes** project, double-click **MainPage.xaml** to open it:
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
+    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Open MainPage.xaml")
 
 6. In **MainPage.xaml**, remove all of the template code and replace it with the following code:
 
@@ -97,7 +97,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 7. In **Solution Explorer**, in the **Notes** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it:
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "Open MainPage.xaml.cs")
+    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Open MainPage.xaml.cs")
 
 8. In **MainPage.xaml.cs**, remove all of the template code and replace it with the following code:
 

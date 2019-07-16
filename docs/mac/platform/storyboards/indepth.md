@@ -133,15 +133,15 @@ In the View Controller that is acting as the source of the Segue, you should ove
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 {
-	base.PrepareForSegue (segue, sender);
+    base.PrepareForSegue (segue, sender);
 
-	// Take action based on Segue ID
-	switch (segue.Identifier) {
-	case "MyNamedSegue":
-		// Prepare for the segue to happen
-		...
-		break;
-	}
+    // Take action based on Segue ID
+    switch (segue.Identifier) {
+    case "MyNamedSegue":
+        // Prepare for the segue to happen
+        ...
+        break;
+    }
 }
 ```
 
@@ -162,42 +162,42 @@ using Foundation;
 
 namespace OnCardMac
 {
-	[Register("ReplaceViewSeque")]
-	public class ReplaceViewSeque : NSStoryboardSegue
-	{
-		#region Constructors
-		public ReplaceViewSeque() {
+    [Register("ReplaceViewSeque")]
+    public class ReplaceViewSeque : NSStoryboardSegue
+    {
+        #region Constructors
+        public ReplaceViewSeque() {
 
-		}
+        }
 
-		public ReplaceViewSeque (string identifier, NSObject sourceController, NSObject destinationController) : base(identifier,sourceController,destinationController) {
+        public ReplaceViewSeque (string identifier, NSObject sourceController, NSObject destinationController) : base(identifier,sourceController,destinationController) {
 
-		}
+        }
 
-		public ReplaceViewSeque (IntPtr handle) : base(handle) {
-		}
+        public ReplaceViewSeque (IntPtr handle) : base(handle) {
+        }
 
-		public ReplaceViewSeque (NSObjectFlag x) : base(x) {
-		}
-		#endregion
+        public ReplaceViewSeque (NSObjectFlag x) : base(x) {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void Perform ()
-		{
-			// Cast the source and destination controllers
-			var source = SourceController as NSViewController;
-			var destination = DestinationController as NSViewController;
+        #region Override Methods
+        public override void Perform ()
+        {
+            // Cast the source and destination controllers
+            var source = SourceController as NSViewController;
+            var destination = DestinationController as NSViewController;
 
-			// Swap the controllers
-			source.View.Window.ContentViewController = destination;
+            // Swap the controllers
+            source.View.Window.ContentViewController = destination;
 
-			// Release memory
-			source.RemoveFromParentViewController ();
-		}
-		#endregion
+            // Release memory
+            source.RemoveFromParentViewController ();
+        }
+        #endregion
 
-	}
-		
+    }
+        
 }
 ```
 
@@ -266,21 +266,21 @@ To add a reference to an external Storyboard, do the following:
 
 1. In the **Solution Explorer**, right-click on the Project Name and select **Add** > **New File...** > **Mac** > **Storyboard**. Enter a **Name** for the new Storyboard and click the **New** button: 
 
-	[![](indepth-images/ref01.png "Adding a new Storyboard")](indepth-images/ref01.png#lightbox)
+    [![](indepth-images/ref01.png "Adding a new Storyboard")](indepth-images/ref01.png#lightbox)
 2. In the **Solution Explorer**, double-click the new Storyboard name to open it for editing in Xcode's Interface Builder.
-2. Design the layout of the new Storyboard's scenes as you normally would and save your changes: 
+3. Design the layout of the new Storyboard's scenes as you normally would and save your changes: 
 
-	[![](indepth-images/ref02.png "Designing the interface")](indepth-images/ref02.png#lightbox)
-3. Switch to the Storyboard that you are going to be adding the reference to in the Interface Builder.
-4. Drag a **Storyboard Reference** from the **Object Library** onto the Design Surface: 
+    [![](indepth-images/ref02.png "Designing the interface")](indepth-images/ref02.png#lightbox)
+4. Switch to the Storyboard that you are going to be adding the reference to in the Interface Builder.
+5. Drag a **Storyboard Reference** from the **Object Library** onto the Design Surface: 
 
-	[![](indepth-images/ref03.png "Selecting a Storyboard Reference in the Library")](indepth-images/ref03.png#lightbox)
-5. In the **Attribute Inspector**, select the name of the **Storyboard** that you created above: 
+    [![](indepth-images/ref03.png "Selecting a Storyboard Reference in the Library")](indepth-images/ref03.png#lightbox)
+6. In the **Attribute Inspector**, select the name of the **Storyboard** that you created above: 
 
-	[![](indepth-images/ref04.png "Configuring the reference")](indepth-images/ref04.png#lightbox)
-6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created.  From the popup menu select **Show** to complete the Segue: 
+    [![](indepth-images/ref04.png "Configuring the reference")](indepth-images/ref04.png#lightbox)
+7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created.  From the popup menu select **Show** to complete the Segue: 
 
-	[![](indepth-images/ref06.png "Setting the Segue type")](indepth-images/ref06.png#lightbox) 
+    [![](indepth-images/ref06.png "Setting the Segue type")](indepth-images/ref06.png#lightbox) 
 8. Save your changes to the Storyboard.
 9. Return to Visual Studio for Mac to sync your changes.
 
@@ -295,20 +295,20 @@ To add a reference to a specific Scene an external Storyboard (and not the Initi
 1. In the **Solution Explorer**, double-click the external Storyboard to open it for editing in Xcode's Interface Builder.
 2. Add a new Scene and design its layout as you normally would: 
 
-	[![](indepth-images/ref07.png "Designing the layout in Xcode")](indepth-images/ref07.png#lightbox)
+    [![](indepth-images/ref07.png "Designing the layout in Xcode")](indepth-images/ref07.png#lightbox)
 3. In the **Identity Inspector**, enter a **Storyboard ID** for the new Scene's Window Controller: 
 
-	[![](indepth-images/ref08.png "Setting the Storyboard ID")](indepth-images/ref08.png#lightbox)
-3. Open the Storyboard that you are going to be adding the reference to in Interface Builder.
-4. Drag a **Storyboard Reference** from the **Object Library** onto the Design Surface: 
+    [![](indepth-images/ref08.png "Setting the Storyboard ID")](indepth-images/ref08.png#lightbox)
+4. Open the Storyboard that you are going to be adding the reference to in Interface Builder.
+5. Drag a **Storyboard Reference** from the **Object Library** onto the Design Surface: 
 
-	[![](indepth-images/ref03.png "Selecting a Storyboard Reference from the Library")](indepth-images/ref03.png#lightbox)
-5. In the **Identity Inspector**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above: 
+    [![](indepth-images/ref03.png "Selecting a Storyboard Reference from the Library")](indepth-images/ref03.png#lightbox)
+6. In the **Identity Inspector**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
-	[![](indepth-images/ref09.png "Setting the Reference ID")](indepth-images/ref09.png#lightbox)
-6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created. From the popup menu select **Show** to complete the Segue: 
+    [![](indepth-images/ref09.png "Setting the Reference ID")](indepth-images/ref09.png#lightbox)
+7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created. From the popup menu select **Show** to complete the Segue: 
 
-	[![](indepth-images/ref06.png "Setting the Segue Type")](indepth-images/ref06.png#lightbox) 
+    [![](indepth-images/ref06.png "Setting the Segue Type")](indepth-images/ref06.png#lightbox) 
 8. Save your changes to the Storyboard.
 9. Return to Visual Studio for Mac to sync your changes.
 
@@ -323,21 +323,21 @@ To add a reference to a specific Scene the same Storyboard, do the following:
 1. In the **Solution Explorer**, double-click the Storyboard to open it for editing.
 2. Add a new Scene and design its layout as you normally would: 
 
-	[![](indepth-images/ref11.png "Editing the storyboard in Xcode")](indepth-images/ref11.png#lightbox)
+    [![](indepth-images/ref11.png "Editing the storyboard in Xcode")](indepth-images/ref11.png#lightbox)
 3. In the **Identity Inspector**, enter a **Storyboard ID** for the new Scene's Window Controller: 
 
-	[![](indepth-images/ref12.png "Setting the Storyboard ID")](indepth-images/ref12.png#lightbox)
-3. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
+    [![](indepth-images/ref12.png "Setting the Storyboard ID")](indepth-images/ref12.png#lightbox)
+4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
 
-	[![](indepth-images/ref03.png "Selecting a Storyboard Reference from the Library")](indepth-images/ref03.png#lightbox)
+    [![](indepth-images/ref03.png "Selecting a Storyboard Reference from the Library")](indepth-images/ref03.png#lightbox)
 5. In **Attribute Inspector**, select **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
-	[![](indepth-images/ref13.png "Setting the Reference ID")](indepth-images/ref13.png#lightbox)
+    [![](indepth-images/ref13.png "Setting the Reference ID")](indepth-images/ref13.png#lightbox)
 6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created. From the popup menu select **Show** to complete the Segue: 
 
-	[![](indepth-images/ref06.png "Selecting the Segue Type")](indepth-images/ref06.png#lightbox) 
-8. Save your changes to the Storyboard.
-9. Return to Visual Studio for Mac to sync your changes.
+    [![](indepth-images/ref06.png "Selecting the Segue Type")](indepth-images/ref06.png#lightbox) 
+7. Save your changes to the Storyboard.
+8. Return to Visual Studio for Mac to sync your changes.
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Scene with the given **Storyboard ID** in the same Storyboard specified in the Storyboard Reference will be displayed.
 

@@ -26,7 +26,7 @@ ms.date: 03/29/2017
         - Visual Studio startup, verbose logs
     - [Mac logs](#mac-logs)
         - Build host
-	- Visual Studio for Mac
+    - Visual Studio for Mac
         - Xamarin Studio
         - Xamarin installer
 - [Verbose build output](#verbose-build-output-logs)

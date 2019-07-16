@@ -17,34 +17,34 @@ how to install and configure tools required for Wear development, a
 step-by-step walkthrough for creating your first Wear device, and a
 list of samples that you can refer to for creating your own Wear apps.
 
-##  [Getting Started](~/android/wear/get-started/index.md)
+## [Getting Started](~/android/wear/get-started/index.md)
 
 Introduces Android Wear, describes how to install and configure your
 computer for Wear development, and provides steps to help you create
 and run your first Android Wear app on an emulator or Wear device.
 
-##  [User Interface](~/android/wear/user-interface/index.md)
+## [User Interface](~/android/wear/user-interface/index.md)
 
 Explains Android Wear-specific controls and provides links to
 samples that demonstrate how to use these controls.
 
-##  [Platform Features](~/android/wear/platform/index.md)
+## [Platform Features](~/android/wear/platform/index.md)
 
 Documents in this section cover features specific to Android Wear. Here
 you'll find a topic that describes how to create a WatchFace.
 
-##  [Screen Sizes](~/android/wear/screen-sizes.md)
+## [Screen Sizes](~/android/wear/screen-sizes.md)
 
 Preview and optimize your user interface for the available screen sizes.
 
-##  [Deployment & Testing](~/android/wear/deploy-test/index.md)
+## [Deployment & Testing](~/android/wear/deploy-test/index.md)
 
 Explains how to deploy your Android Wear app to an Android
 Wear device or to Android emulator configured for Wear. It also
 includes debugging tips and information for how to set up a Bluetooth
 connection between your development computer and an Android device.
 
-##  [Wear APIs](https://developer.android.com/reference/android/support/wearable)
+## [Wear APIs](https://developer.android.com/reference/android/support/wearable)
 
 The Android Developer site provides detailed information about key Wear APIs
 such as [Wearable Activity](https://developer.android.com/reference/android/support/wearable/activity/package-summary.html),
@@ -75,7 +75,7 @@ directly to
 |[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace is a custom watch face with analog-style hour, minute, and second hands. This sample demonstrates how to create a watch face service that draws the current time and handles ambient mode and visibility change events. It includes a broadcast receiver that listens for time zone changes and automatically updates the time accordingly.|![Screenshot of WatchFace](images/gridviewpager.png)|
 
 
-##  Videos
+## Videos
 
 Check out these video links that discuss Xamarin.Android with Wear support:
 

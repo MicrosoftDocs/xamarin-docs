@@ -31,9 +31,9 @@ cycle.
 
 The first step in designing an application is to identify desired features. These can be high-level goals or detailed use cases. Tasky has straightforward functional requirements:
 
- -  View a list of tasks
- -  Add, edit and delete tasks
- -  Set a task’s status to ‘done’
+-  View a list of tasks
+-  Add, edit and delete tasks
+-  Set a task’s status to ‘done’
 
 You should consider your use of platform-specific features.  Can Tasky take advantage of iOS geofencing or Windows
 Phone Live Tiles? Even if you don't use platform-specific features in the first version, you should plan ahead to make sure your business & data layers can accommodate them.
@@ -58,9 +58,9 @@ mechanism to use. See [Cross-Platform Data Access](~/cross-platform/app-fundamen
 Tasky needs to store three properties for
 each 'TaskItem':
 
- -  **Name** – String
- -  **Notes** – String
- -  **Done** – Boolean
+- **Name** – String
+- **Notes** – String
+- **Done** – Boolean
 
  <a name="Core_Functionality" />
 
@@ -69,11 +69,11 @@ each 'TaskItem':
 Consider the API that the user interface will need to consume to
 meet the requirements. A to-do list requires the following functions:
 
- -   **List all tasks** – to display the main screen list of all available tasks
- -  **Get one task** – when a task row is touched
- -  **Save one task** – when a task is edited
- -  **Delete one task** – when a task is deleted
- -  **Create empty task** – when a new task is created
+- **List all tasks** – to display the main screen list of all available tasks
+- **Get one task** – when a task row is touched
+- **Save one task** – when a task is edited
+- **Delete one task** – when a task is deleted
+- **Create empty task** – when a new task is created
 
 To achieve code reuse, this API should be implemented once in the *Portable Class Library*.
 
@@ -86,10 +86,10 @@ implemented as a cross-platform application. This will become the
 application’s architecture. Following the guidance in the [Building Cross-Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md) document, the
 application code should be broken down into the following parts:
 
- -   **Common Code** – a common project that contains re-useable code to store the task data; expose a Model class and an API to manage the saving and loading of data.
- -   **Platform-specific Code** – platform-specific projects that implement a native UI for each operating system, utilizing the common code as the ‘back end’.
+- **Common Code** – a common project that contains re-useable code to store the task data; expose a Model class and an API to manage the saving and loading of data.
+- **Platform-specific Code** – platform-specific projects that implement a native UI for each operating system, utilizing the common code as the ‘back end’.
 
- [![](case-study-tasky-images/taskypro-architecture.png "Platform-specific projects implement a native UI for each operating system, utilizing the common code as the back end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
+[![](case-study-tasky-images/taskypro-architecture.png "Platform-specific projects implement a native UI for each operating system, utilizing the common code as the back end")](case-study-tasky-images/taskypro-architecture.png#lightbox)
 
 These two parts are described in the following sections.
 
@@ -343,8 +343,8 @@ The Application Layer contains platform-specific classes required to
 ‘bind’ the objects exposed by the PCL to the UI. The iOS-specific
 application has two classes to help display tasks:
 
- -   **EditingSource** – This class is used to bind lists of tasks to the user interface. Because `MonoTouch.Dialog` was used for the Task list, we need to implement this helper to enable swipe-to-delete functionality in the  `UITableView` . Swipe-to-delete is common on iOS, but not Android or Windows Phone, so the iOS specific project is the only one that implements it.
- -   **TaskDialog** – This class is used to bind a single task to the UI. It uses the `MonoTouch.Dialog` Reflection API to ‘wrap’ the `TaskItem` object with a class that contains the correct attributes to allow the input screen to be correctly formatted.
+- **EditingSource** – This class is used to bind lists of tasks to the user interface. Because `MonoTouch.Dialog` was used for the Task list, we need to implement this helper to enable swipe-to-delete functionality in the  `UITableView` . Swipe-to-delete is common on iOS, but not Android or Windows Phone, so the iOS specific project is the only one that implements it.
+- **TaskDialog** – This class is used to bind a single task to the UI. It uses the `MonoTouch.Dialog` Reflection API to ‘wrap’ the `TaskItem` object with a class that contains the correct attributes to allow the input screen to be correctly formatted.
 
 The `TaskDialog` class uses `MonoTouch.Dialog` attributes to create a screen based on a class’s properties. The class looks like this:
 
@@ -470,9 +470,9 @@ in the list – in this case the code uses an Android built-in layout `SimpleLis
 The Android app’s User Interface Layer is a combination of code and XML
 markup.
 
- -   **Resources/Layout** – screen layouts and the row cell design implemented as AXML files. The AXML can be written by hand, or laid-out visually using the Xamarin UI Designer for Android.
- -   **Resources/Drawable** – images (icons) and custom button.
- -   **Screens** – Activity subclasses that define each screen and its behavior. Ties together the UI with Application Layer classes and the common API (`TaskItemManager`).
+- **Resources/Layout** – screen layouts and the row cell design implemented as AXML files. The AXML can be written by hand, or laid-out visually using the Xamarin UI Designer for Android.
+- **Resources/Drawable** – images (icons) and custom button.
+- **Screens** – Activity subclasses that define each screen and its behavior. Ties together the UI with Application Layer classes and the common API (`TaskItemManager`).
 
  <a name="Home_Screen" />
 

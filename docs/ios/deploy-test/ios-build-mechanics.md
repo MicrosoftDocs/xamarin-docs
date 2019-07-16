@@ -109,9 +109,9 @@ Deploying to the device is similar to deploying to the simulator, as the simulat
 
 There are a number of build configurations provided when deploying iOS apps. It is important to have a good understanding of each configuration, to know when and why you should be optimizing.
 
- - Debug
+- Debug
   - This is the main configuration that should be used while an app is under development, and should, therefore, be as quick as possible.
- - Release
+- Release
   - Release builds are those that are shipped to your users and a focus on performance is paramount. When using the Release configuration, you might want to use the LLVM optimizing compiler and optimize PNG files.
 
  

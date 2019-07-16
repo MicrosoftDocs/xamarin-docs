@@ -17,7 +17,7 @@ Once your Xamarin.iOS app has been developed, the next step in the software deve
 
 - Your application does not need to be submitted for review by Apple.
 - There are no limits to the amount of devices onto which you can deploy an application
-	- It is important to note that Apple makes it very clear that In-House applications are for internal use only.
+    - It is important to note that Apple makes it very clear that In-House applications are for internal use only.
 
 It is also important to note that the Enterprise Program:
 
@@ -69,13 +69,13 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 
 1. Select your team, and click *View Details*:
 
-	[![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
+   [![](in-house-distribution-images/selectteam.png "Select your team")](in-house-distribution-images/selectteam.png#lightbox)
 
 2. Next, click the **Create** button next to **iOS Distribution Certificate**:
 
    [![](in-house-distribution-images/selectcert.png "Create the iOS Distribution Certificate")](in-house-distribution-images/selectcert.png#lightbox)
 
-2.   Next, click the **plus (+)** button and select **iOS App Store**:
+3. Next, click the **plus (+)** button and select **iOS App Store**:
 
    [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
@@ -114,11 +114,11 @@ Once you have the required components needed for creating a Distribution Profile
 
    [![](in-house-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](in-house-distribution-images/distribute04.png#lightbox)
 
-6. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
+5. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
 
    [![](in-house-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](in-house-distribution-images/distribute06.png#lightbox)
 
-7. Click the **Generate** button to create the new profile and finalize the process.
+6. Click the **Generate** button to create the new profile and finalize the process.
 
 # [Visual Studio for Mac](#tab/macos)
 

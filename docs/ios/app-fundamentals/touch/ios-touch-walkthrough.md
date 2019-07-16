@@ -181,7 +181,7 @@ instance variables to the class `TouchViewController`:
 
 <a name="Gesture_Recognizer_Samples" />
 
-##  Gesture Recognizer Samples
+## Gesture Recognizer Samples
 
 The [previous section](#Touch_Samples) demonstrated how to drag an object around the screen by using touch events.
 In this section we will get rid of the touch events and show how to use the following gesture recognizers:

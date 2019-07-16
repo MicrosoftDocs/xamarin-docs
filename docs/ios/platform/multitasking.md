@@ -43,10 +43,10 @@ This article will cover the steps required to ensure that your Xamarin.iOS app r
 
 To support **Slide Over** or **Split View** your app must do the following:
 
- - Be built against iOS 9 (or greater).
- - Use a Storyboard for its Launch Screen (and not image assets).
- - Use a Storyboard with Autolayout and Size Classes for its UI.
- - Support all 4 iOS device orientations (Portrait, Upside-down Portrait, Landscape Left & Landscape Right).
+- Be built against iOS 9 (or greater).
+- Use a Storyboard for its Launch Screen (and not image assets).
+- Use a Storyboard with Autolayout and Size Classes for its UI.
+- Support all 4 iOS device orientations (Portrait, Upside-down Portrait, Landscape Left & Landscape Right).
 
 <a name="Multitasking" />
 
@@ -239,9 +239,9 @@ In most situations, your app should allow the user to play any video content it 
 
 To opt out of PIP video playback, do the following in your app:
 
- - If you are using a `AVPlayerViewController` to display video, set the `AllowsPictureInPicturePlayback` property to `false`.
- - If you are using the `AVPlayerLayer` to display video, don't instantiate an `AVPictureInPictureController`.
- - If you are using a `WKWebView` to display video, set the `AllowsPictureInPictureMediaPlayback` property to `false`.
+- If you are using a `AVPlayerViewController` to display video, set the `AllowsPictureInPicturePlayback` property to `false`.
+- If you are using the `AVPlayerLayer` to display video, don't instantiate an `AVPictureInPictureController`.
+- If you are using a `WKWebView` to display video, set the `AllowsPictureInPictureMediaPlayback` property to `false`.
 
 <a name="Summary" />
 
