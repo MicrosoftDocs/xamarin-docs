@@ -1,22 +1,22 @@
 ---
 title: "Xamarin Firewall Configuration Instructions"
-description: "This document provides a list of hosts that must be whitelisted in your firewall to allow Xamarin to work in a corporate environment."
+description: "This document provides a list of hosts that must be allowed in your firewall to allow Xamarin to work in a corporate environment."
 ms.prod: xamarin
 ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: asb3993
 ms.author: amburns
-ms.date: 10/05/2018
+ms.date: 07/17/2019
 ---
 
-# Xamarin Firewall Configuration Instructions
+# Xamarin firewall configuration instructions
 
-_A list of hosts that you need to whitelist in your firewall to allow Xamarin’s platform to work for your company._
+_A list of hosts that you need to allow in your firewall to allow Xamarin’s platform to work for your company._
 
-In order for Xamarin products to install and work properly, certain endpoints must be accessible to download the required tools and updates for your software. If you or your company have strict firewall settings, you may experience issues with installation, licensing, components, and more. This document outlines some of the known endpoints that need to be whitelisted in your firewall in order for Xamarin to work. This list does not include the endpoints required for any third-party tools included in the download. If you are still experiencing trouble after going through this list, refer to the Apple or Android installation troubleshooting guides.
+In order for Xamarin products to install and work properly, certain endpoints must be accessible to download the required tools and updates for your software. If you or your company have strict firewall settings, you may experience issues with installation, licensing, components, and more. This document outlines some of the known endpoints that need to be allowed in your firewall in order for Xamarin to work. This list does not include the endpoints required for any third-party tools included in the download. If you are still experiencing trouble after going through this list, refer to the Apple or Android installation troubleshooting guides.
 
-## Endpoints to Whitelist
+## Endpoints to allow
 
-### Xamarin Installer
+### Xamarin installer
 
 The following known addresses will need to be added in order for the software to install properly when using the latest release of the Xamarin installer:
 
