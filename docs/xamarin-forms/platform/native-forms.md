@@ -44,6 +44,7 @@ public class AppDelegate : UIApplicationDelegate
 
     UIWindow _window;
     UINavigationController _navigation;
+    UIViewController _noteEntryPage;
 
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
@@ -100,12 +101,12 @@ The `static` `AppDelegate.Instance` field allows the `AppDelegate.NavigateToNote
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    UIViewController noteEntryPage = new NoteEntryPage
+    _noteEntryPage = new NoteEntryPage
     {
         BindingContext = note
     }.CreateViewController();
-    noteEntryPage.Title = "Note Entry";
-    _navigation.PushViewController(noteEntryPage, true);
+    _noteEntryPage.Title = "Note Entry";
+    _navigation.PushViewController(_noteEntryPage, true);
 }
 ```
 
@@ -115,8 +116,8 @@ The `NavigateToNoteEntryPage` method converts the Xamarin.Forms [`ContentPage`](
 
 When the `NoteEntryPage` is displayed, tapping the back arrow will pop the `UIViewController` for the `NoteEntryPage` class from the `UINavigationController`, returning the user to the `UIViewController` for the `NotesPage` class.
 
-> [!WARNING]
-> The Popping of a `UIViewController` from the iOS Native Navigation stack does not automatically dispose of `UIViewController`s. It is the responsibility of the developer to ensure that any `UIViewController` that is no longer needed has its `Dispose()` method called, else the `UIViewController` and attached `Page` will be orphaned and will not be collected by the Garbage Collector, resulting in a memory leak.
+> [!IMPORTANT]
+> Popping a `UIViewController` from the iOS native navigation stack does not automatically dispose of `UIViewController`s. It's the responsibility of the developer to ensure that any `UIViewController` that is no longer needed has its `Dispose` method called, else the `UIViewController` and attached `Page` will be orphaned and will not be collected by the garbage collector, resulting in a memory leak.
 
 ## Android
 

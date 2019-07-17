@@ -50,7 +50,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect (typeof(FocusEffect), nameof(FocusEffect))]
+[assembly:ExportEffect (typeof(EffectsDemo.iOS.FocusEffect), nameof(EffectsDemo.iOS.FocusEffect))]
 namespace EffectsDemo.iOS
 {
     public class FocusEffect : PlatformEffect
@@ -103,7 +103,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
+[assembly:ExportEffect(typeof(EffectsDemo.Droid.FocusEffect), nameof(EffectsDemo.Droid.FocusEffect))]
 namespace EffectsDemo.Droid
 {
     public class FocusEffect : PlatformEffect
@@ -157,7 +157,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
-[assembly: ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
+[assembly: ExportEffect(typeof(EffectsDemo.UWP.FocusEffect), nameof(EffectsDemo.UWP.FocusEffect))]
 namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
