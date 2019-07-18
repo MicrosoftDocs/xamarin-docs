@@ -171,7 +171,7 @@ process completes (this can take many minutes, depending on how many
 components need to be downloaded), the added components are marked with
 a checkmark and listed as **Installed**.
 
-### Respository selection
+### Repository selection
 
 By default, the Android SDK Manager downloads platform components and
 tools from a Microsoft-managed repository. If you need access to
@@ -326,7 +326,7 @@ process completes (this can take many minutes, depending on how many
 components need to be downloaded), the added components are marked with
 a checkmark and listed as **Installed**.
 
-### Respository selection
+### Repository selection
 
 By default, the Android SDK Manager downloads platform components and
 tools from a Microsoft-managed repository. If you need access to
