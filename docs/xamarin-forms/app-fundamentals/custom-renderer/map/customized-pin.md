@@ -150,7 +150,7 @@ An overridden version of the `OnElementChanged` method, in each platform-specifi
 Care must be taken when subscribing to event handlers in the `OnElementChanged` method, as demonstrated in the following code example:
 
 ```csharp
-protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.ListView> e)
+protected override void OnElementChanged (ElementChangedEventArgs<Xamarin.Forms.View> e)
 {
   base.OnElementChanged (e);
 
