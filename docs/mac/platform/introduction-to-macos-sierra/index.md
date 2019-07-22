@@ -112,7 +112,7 @@ macOS Sierra includes a new Console App (in Applications/Utilities) that is able
 
 Additionally, log messages can be viewed and maintained using command line tools.
 
-For more information, please see Apple's [Logging Reference](https://developer.apple.com/reference/os/1891852-logging).
+For more information, please see Apple's [Logging Reference](https://developer.apple.com/documentation/os/logging).
 
 <a name="Wide-Color" />
 
@@ -146,9 +146,9 @@ The following APIs have been deprecated in macOS Sierra:
 
 - The HFS Standard File System is no longer supported.
 
-See Apple's [OS X v10.12 API Diffs](https://developer.apple.com/library/prerelease/content/releasenotes/Miscellaneous/APIDiffsMacOS10_12/index.html) documentation for a complete list of deprecations and changes.
+See Apple's [macOS v10.12 API Diffs](https://developer.apple.com/library/archive/releasenotes/General/APIDiffsMacOS10_12/index.html) documentation for a complete list of deprecations and changes.
 
 ## Related Links
 
 - [Mac Samples](https://developer.xamarin.com/samples/mac/)
-- [What's new in OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)
+- [What's new in macOS 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)
