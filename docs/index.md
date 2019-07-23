@@ -438,7 +438,7 @@ featureFlags:
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/deploy-test/index.md">
+                                <a href="~/xamarin-forms/deploy-test/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
