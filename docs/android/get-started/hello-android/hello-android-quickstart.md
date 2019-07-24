@@ -77,6 +77,11 @@ to create the new project:
 
 ## Create a layout
 
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
+
 After the new project is created, expand the **Resources**
 folder and then the **layout** folder in the **Solution Explorer**.
 Double-click **activity_main.axml** to open it in the Android Designer. This
@@ -349,6 +354,11 @@ and Project names set to `Phoneword` and click **Create** to create
 the project.
 
 ## Create a layout
+
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
 
 After the new project is created, expand the **Resources** folder
 and then the **layout** folder in the **Solution** pad.
