@@ -47,6 +47,11 @@ In this walkthrough you'll add a **Translation History** screen to the **Phonewo
 Start by opening the **Phoneword** application in Visual Studio and editing the **Main.axml**
 file from the **Solution Explorer**.
 
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
+
 ### Updating the layout
 
 From the **Toolbox**, drag a **Button** onto the design surface and
@@ -211,6 +216,11 @@ screenshots illustrate the running **Phoneword** application:
 ::: zone pivot="macos"
 
 Start by opening the **Phoneword** project  in Visual Studio for Mac and editing the **Main.axml** file from the **Solution Pad**.
+
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
 
 ### Updating the layout
 
