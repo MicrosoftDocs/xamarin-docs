@@ -131,7 +131,7 @@ namespace EffectsDemo.Droid
             try {
                 if (args.PropertyName == "IsFocused") {
                     if (((Android.Graphics.Drawables.ColorDrawable)Control.Background).Color == backgroundColor) {
-                        Control.SetBackgroundColor (Android.Graphics.Color.Black);
+                        Control.SetBackgroundColor (Android.Graphics.Color.White);
                     } else {
                         Control.SetBackgroundColor (backgroundColor);
                     }
