@@ -1,5 +1,5 @@
 ---
-title: "ActionBar"
+title: "ActionBar for Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: 84A79F1F-9E73-4E3E-80FA-B72E5686900B
 ms.technology: xamarin-android
@@ -8,10 +8,7 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# ActionBar
-
-
-## Overview
+# ActionBar for Xamarin.Android
 
 When using `TabActivity`, the code to create the tab icons has no
 effect when run against the Android 4.0 framework. Although

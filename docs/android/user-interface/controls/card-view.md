@@ -9,10 +9,9 @@ ms.author: crdun
 ms.date: 03/01/2018
 ---
 
-# CardView
+# Xamarin.Android CardView
 
 _The Cardview widget is a UI component that presents text and image content in views that resemble cards. This guide explains how to use and customize CardView in Xamarin.Android applications while maintaining backward compatibility with earlier versions of Android._
-
 
 ## Overview
 

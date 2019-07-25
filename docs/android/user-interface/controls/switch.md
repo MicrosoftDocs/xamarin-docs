@@ -1,5 +1,5 @@
 ---
-title: "Switch"
+title: "Xamarin.Android Switch"
 description: "How to use the Switch widget in a Xamarin.Android application"
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
@@ -9,14 +9,13 @@ ms.author: crdun
 ms.date: 06/29/2018
 ---
 
-# Switch
+# Xamarin.Android Switch
 
 The `Switch` widget (shown below) allows a user
 to toggle between two states, such as ON or OFF. The `Switch` default
 value is OFF. The widget is shown below in both its ON and OFF states:
 
 [![Screenshots of a Switch widget in OFF and ON states](switch-images/16-switch-onoff.png)](switch-images/16-switch-onoff.png#lightbox)
-
 
 ## Creating a Switch
 
@@ -31,7 +30,6 @@ follows:
 This creates a basic switch as shown below:
 
 [![Screenshot of demo app displaying a Switch in the OFF state](switch-images/07-switch.png)](switch-images/07-switch.png#lightbox)
-
 
 ## Changing Default Values
 

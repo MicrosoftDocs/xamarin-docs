@@ -12,12 +12,12 @@ ms.date: 02/06/2018
 
 In this section, you'll create a button used specifically for toggling
 between two states, using the
-[`ToggleButton`](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) widget. This
+[`ToggleButton`](xref:Android.Widget.ToggleButton) widget. This
 widget is an excellent alternative to radio buttons if you have two
 simple states that are mutually exclusive ("on" and "off", for
 example). Android 4.0 (API level 14) introduced an alternative to the
 toggle button known as a
-[`Switch`](https://developer.xamarin.com/api/type/Android.Widget.Switch/).
+[`Switch`](xref:Android.Widget.Switch).
 
 An example of a **ToggleButton** can be seen in the left hand pair of images,
 while the right hand pair of images presents an example of a **Switch**:
@@ -28,13 +28,13 @@ Which control an application uses is a matter of style. Both widgets
 are functionally equivalent.
 
 Open the **Resources/layout/Main.axml** file and add the
-[`ToggleButton`](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) element
+[`ToggleButton`](xref:Android.Widget.ToggleButton) element
 (inside the
-[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+[`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
 To do something when the state is changed, add the following code
 to the end of the
-[`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
+[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 method:
 
 ```csharp
@@ -50,15 +50,15 @@ togglebutton.Click += (o, e) => {
 ```
 
 This captures the
-[`ToggleButton`](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) element
+[`ToggleButton`](xref:Android.Widget.ToggleButton) element
 from the layout, and handles the Click event, which defines the
 action to perform when the button is clicked. In this example, the
 method checks the new state of the button, then shows a
-[`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/) message that indicates
+[`Toast`](xref:Android.Widget.Toast) message that indicates
 the current state.
 
 Notice that the
-[`ToggleButton`](https://developer.xamarin.com/api/type/Android.Widget.ToggleButton/) handles
+[`ToggleButton`](xref:Android.Widget.ToggleButton) handles
 its own state change between checked and unchecked, so you just ask
 which it is.
 
@@ -68,11 +68,11 @@ Run the application.
 > [!TIP]
 > If you need to change the state yourself (such as
 > when loading a saved
-> [`CheckBoxPreference`](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)),
+> [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)),
 > use the
-> [`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
+> [`Checked`](xref:Android.Widget.CompoundButton.Checked)
 > property setter or
-> [`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
+> [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > method.
 
 

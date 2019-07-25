@@ -11,10 +11,10 @@ ms.date: 03/22/2018
 # User Profile
 
 Android has supported enumerating contacts with the
-[ContactsContract](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/)
+[ContactsContract](xref:Android.Provider.ContactsContract)
 provider since API Level 5. For example, listing contacts is as simple
 as using the
-[ContactContracts.Contacts](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Contacts/)
+[ContactContracts.Contacts](xref:Android.Provider.ContactsContract.Contacts)
 class as shown in the following code example:
 
 ```csharp
@@ -46,12 +46,11 @@ if (cursor != null)
 ```
 
 Beginning with Android 4 (API Level 14), the
-[ContactsContact.Profile](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract+Profile/)
+[ContactsContact.Profile](xref:Android.Provider.ContactsContract.Profile)
 class is available through the `ContactsContract` provider. The
 `ContactsContact.Profile` provides access to the personal profile for
 the owner of a device, which includes contact data such as the device
 owner's name and phone number.
-
 
 ## Required Permissions
 
@@ -60,15 +59,14 @@ To read and write contact data, applications must request the
 Additionally, to read and edit the user profile, applications must
 request the `READ_PROFILE` and `WRITE_PROFILE` permissions.
 
-
 ## Updating Profile Data
 
 Once these permissions have been set, an application can use normal
 Android techniques to interact with the user profile's data. For
 example, to update the profile's display name, call
-[ContentResolver.Update](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.Update)
+[ContentResolver.Update](xref:Android.Content.ContentResolver.Update*)
 with a `Uri` retrieved through the
-[ContactsContract.Profile.ContentRawContactsUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentRawContactsUri/)
+[ContactsContract.Profile.ContentRawContactsUri](xref:Android.Provider.ContactsContract.Profile.ContentRawContactsUri)
 property, as shown below:
 
 ```csharp
@@ -82,7 +80,7 @@ ContentResolver.Update (ContactsContract.Profile.ContentRawContactsUri, values, 
 ## Reading Profile Data
 
 Issuing a query to the
-[ContactsContact.Profile.ContentUri](https://developer.xamarin.com/api/property/Android.Provider.ContactsContract+Profile.ContentUri/)
+[ContactsContact.Profile.ContentUri](xref:Android.Provider.ContactsContract.Profile.ContentUri)
 reads back the profile data. For example, the following code will read
 the user profile's display name:
 
@@ -114,7 +112,7 @@ pass it to the `StartActivity` method like this:
 
 ```csharp
 var intent = new Intent (Intent.ActionView,
-    ContactsContract.Profile.ContentUri);           
+    ContactsContract.Profile.ContentUri);
 StartActivity (intent);
 ```
 
@@ -125,8 +123,6 @@ illustrated in the following screenshot:
 
 Working with the user profile is similar to interacting with other data
 in Android, and it offers an additional level of device personalization.
-
-
 
 ## Related Links
 

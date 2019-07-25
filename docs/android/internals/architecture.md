@@ -28,8 +28,8 @@ On Android, most of the system facilities like Audio, Graphics, OpenGL
 and Telephony are not available directly to native applications, they
 are only exposed through the Android Runtime Java APIs residing
 in one of the
-[Java](https://developer.xamarin.com/api/namespace/Java.Lang/).* namespaces
-or the [Android](https://developer.xamarin.com/api/namespace/Android/).*
+[Java](xref:Java.Lang).* namespaces
+or the [Android](xref:Android).*
 namespaces. The architecture is roughly like this:
 
 [![Diagram of Mono and ART above the kernel and below .NET/Java + bindings](architecture-images/architecture1.png)](architecture-images/architecture1.png#lightbox)
@@ -95,7 +95,7 @@ to allow Android to call into managed code.
 Managed callable wrappers are a JNI bridge which are used any time
 managed code needs to invoke Android code and provide support for
 overriding virtual methods and implementing Java interfaces. The entire
-[Android](https://developer.xamarin.com/api/namespace/Android/).* and
+[Android](xref:Android).* and
 related namespaces are managed callable wrappers generated via
 [.jar binding](~/android/platform/binding-java-library/index.md).
 Managed callable wrappers are responsible for converting between
@@ -104,7 +104,7 @@ methods via JNI.
 
 Each created managed callable wrapper holds a Java global reference,
 which is accessible through the
-[Android.Runtime.IJavaObject.Handle](https://developer.xamarin.com/api/property/Android.Runtime.IJavaObject.Handle/)
+[Android.Runtime.IJavaObject.Handle](xref:Android.Runtime.IJavaObject.Handle)
 property. Global references are used to provide the mapping between
 Java instances and managed instances. Global references are a limited
 resource: emulators allow only 2000 global references to exist at a
@@ -118,7 +118,7 @@ system property to contain
 [gref](~/android/troubleshooting/index.md).
 
 Global references can be explicitly freed by calling
-[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/)
+[Java.Lang.Object.Dispose()](xref:Java.Lang.Object.Dispose)
 on the managed callable wrapper. This will remove the mapping between
 the Java instance and the managed instance and allow the Java instance
 to be collected. If the Java instance is re-accessed from managed code,
@@ -138,22 +138,22 @@ between threads.
 
 Managed callable wrapper subclasses are where all the "interesting"
 application-specific logic may live. These include custom
-[Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)
+[Android.App.Activity](xref:Android.App.Activity)
 subclasses (such as the
 [Activity1](https://github.com/xamarin/monodroid-samples/blob/master/HelloM4A/Activity1.cs#L13)
 type in the default project template). (Specifically, these are any
 *Java.Lang.Object* subclasses which do *not* contain a
-[RegisterAttribute](https://developer.xamarin.com/api/type/Android.Runtime.RegisterAttribute/)
+[RegisterAttribute](xref:Android.Runtime.RegisterAttribute)
 custom attribute or
-[RegisterAttribute.DoNotGenerateAcw](https://developer.xamarin.com/api/property/Android.Runtime.RegisterAttribute.DoNotGenerateAcw/)
+[RegisterAttribute.DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw)
 is *false*, which is the default.)
 
 Like managed callable wrappers, managed callable wrapper subclasses
 also contain a global reference, accessible through the
-[Java.Lang.Object.Handle](https://developer.xamarin.com/api/property/Java.Lang.Object.Handle/)
+[Java.Lang.Object.Handle](xref:Java.Lang.Object.Handle)
 property. Just as with managed callable wrappers, global references can
 be explicitly freed by calling
-[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/).
+[Java.Lang.Object.Dispose()](xref:Java.Lang.Object.Dispose).
 Unlike managed callable wrappers, *great care* should be taken before
 disposing of such instances, as *Dispose()*-ing of the instance will
 break the mapping between the Java instance (an instance of an Android
@@ -180,22 +180,21 @@ There are two scenarios in which the *(IntPtr, JniHandleOwnership)*
 constructor must be manually provided on a Managed Callable Wrapper
 subclass:
 
-1. [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/)
+1. [Android.App.Application](xref:Android.App.Application)
    is subclassed. *Application* is special; the default *Applicaton*
    constructor will *never* be invoked, and the
    [(IntPtr, JniHandleOwnership) constructor must instead be provided](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/SanityTests/Hello.cs#L105).
 
 2. Virtual method invocation from a base class constructor.
 
-
 Note that (2) is a leaky abstraction. In Java, as in C#, calls to
 virtual methods from a constructor always invoke the most derived
 method implementation. For example, the
-[TextView(Context, AttributeSet, int) constructor](https://developer.xamarin.com/api/constructor/Android.Widget.TextView.TextView/p/Android.Content.Context/Android.Util.IAttributeSet/System.Int32/)
+[TextView(Context, AttributeSet, int) constructor](xref:Android.Widget.TextView#ctor*)
 invokes the virtual method
 [TextView.getDefaultMovementMethod()](https://developer.android.com/reference/android/widget/TextView.html#getDefaultMovementMethod()),
 which is bound as the
-[TextView.DefaultMovementMethod property](https://developer.xamarin.com/api/property/Android.Widget.TextView.DefaultMovementMethod/).
+[TextView.DefaultMovementMethod property](xref:Android.Widget.TextView.DefaultMovementMethod).
 Thus, if a type
 [LogTextBox](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox.cs)
 were to (1)
@@ -234,7 +233,7 @@ Order of events:
 5.  *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* invokes
     *LogTextBox.n_getDefaultMovementMethod()* , which invokes
     *TextView.n_GetDefaultMovementMethod()* , which invokes
-    [Java.Lang.Object.GetObject&lt;TextView&gt; (handle, JniHandleOwnership.DoNotTransfer)](https://developer.xamarin.com/api/member/Java.Lang.Object.GetObject%7BT%7D/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
+    [Java.Lang.Object.GetObject&lt;TextView&gt; (handle, JniHandleOwnership.DoNotTransfer)](xref:Java.Lang.Object.GetObject*)
     .
 
 6.  *Java.Lang.Object.GetObject&lt;TextView&gt;()* checks to see if
@@ -344,14 +343,14 @@ is read, and the type specified in the
 attribute is loaded and instantiated. Next, all types specified by the
 [/manifest/application/provider/@android:name](https://developer.android.com/guide/topics/manifest/provider-element.html#nm)
 attribute values are instantiated and have their
-[ContentProvider.attachInfo%28)](https://developer.xamarin.com/api/member/Android.Content.ContentProvider.AttachInfo/p/Android.Content.Context/Android.Content.PM.ProviderInfo/)
+[ContentProvider.attachInfo%28)](xref:Android.Content.ContentProvider.AttachInfo*)
 method invoked. Xamarin.Android hooks into this by adding a
 *mono.MonoRuntimeProvider* *ContentProvider* to AndroidManifest.xml
 during the build process. The *mono.MonoRuntimeProvider.attachInfo()*
 method is responsible for loading the Mono runtime into the process.
 Any attempts to use Mono prior to this point will fail. ( *Note*: This
 is why types which subclass
-[Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/)
+[Android.App.Application](xref:Android.App.Application)
 need to provide an
 [(IntPtr, JniHandleOwnership) constructor](https://github.com/xamarin/monodroid-samples/blob/a9e8ef23/SanityTests/Hello.cs#L103),
 as the Application instance is created before Mono can be initialized.)
@@ -362,7 +361,7 @@ launch. For example, the
 [/manifest/application/activity/@android:name attribute](https://developer.android.com/guide/topics/manifest/activity-element.html#nm)
 is used to determine the name of an Activity to load. For Activities,
 this type must inherit
-[android.app.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/).
+[android.app.Activity](xref:Android.App.Activity).
 The specified type is loaded via
 [Class.forName()](https://developer.android.com/reference/java/lang/Class.html#forName(java.lang.String))
 (which requires that the type be a Java type, hence the Android
@@ -371,5 +370,5 @@ Wrapper instance will trigger creation of an instance of the
 corresponding C# type. Android will then invoke
 [Activity.onCreate(Bundle)](https://developer.android.com/reference/android/app/Activity.html#onCreate(android.os.Bundle))
 , which will cause the corresponding
-[Activity.OnCreate(Bundle)](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+[Activity.OnCreate(Bundle)](xref:Android.App.Activity.OnCreate*)
 to be invoked, and you're off to the races.

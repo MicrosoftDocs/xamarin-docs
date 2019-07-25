@@ -55,7 +55,7 @@ class FingerPaintPolyline
 ```
 
 Each polyline has a color, a stroke width, and an Android graphics
-[`Path`](https://developer.xamarin.com/api/type/Android.Graphics.Path/) object to accumulate and
+[`Path`](xref:Android.Graphics.Path) object to accumulate and
 render multiple points of the line as it's being drawn.
 
 The remainder of the code shown below is contained in a `View`
@@ -80,9 +80,9 @@ List<FingerPaintPolyline> completedPolylines = new List<FingerPaintPolyline>();
 The objects in this `List` are in the same order that they were drawn.
 
 `FingerPaintCanvasView` overrides two methods defined by `View`:
-[`OnDraw`](https://developer.xamarin.com/api/member/Android.Views.View.OnDraw/p/Android.Graphics.Canvas/)
+[`OnDraw`](xref:Android.Views.View.OnDraw*)
 and
-[`OnTouchEvent`](https://developer.xamarin.com/api/member/Android.Views.View.OnTouchEvent/p/Android.Views.MotionEvent/).
+[`OnTouchEvent`](xref:Android.Views.View.OnTouchEvent*).
 In its `OnDraw` override, the view draws the completed polylines and
 then draws the in-progress polylines.
 

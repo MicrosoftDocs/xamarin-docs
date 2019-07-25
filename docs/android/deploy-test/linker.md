@@ -113,7 +113,7 @@ preserve. For example:
     properties of your types.
 
 In these cases, you can use the
-[Android.Runtime.Preserve](https://developer.xamarin.com/api/type/Android.Runtime.PreserveAttribute/)
+[Android.Runtime.Preserve](xref:Android.Runtime.PreserveAttribute)
 attribute. Every member that is not statically linked by the
 application is subject to be removed, so this attribute can be used to
 mark members that are not statically referenced but are still needed by

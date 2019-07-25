@@ -71,7 +71,7 @@ will be used.
 
 Alternatively, the value `Xamarin.Android.Net.AndroidClientHandler` may
 be specified to use
-[`java.net.URLConnection`](https://developer.xamarin.com/api/type/Java.Net.URLConnection/)
+[`java.net.URLConnection`](xref:Java.Net.URLConnection)
 for network access, which *may* permit use of TLS 1.2 when Android
 supports it.
 

@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# GridLayout
+# Xamarin.Android GridLayout
 
 The `GridLayout` is a new `ViewGroup` subclass that
 supports laying out views in a 2D grid, similar to an HTML table, as shown

@@ -9,7 +9,7 @@ ms.author: crdun
 ms.date: 08/29/2018
 ---
 
-# Android Controls (Widgets)
+# Xamarin.Android Controls (Widgets)
 
 Xamarin.Android exposes all of the native user interface controls
 (widgets) provided by Android. These controls can be easily added to

@@ -246,7 +246,7 @@ static UriMatcher BuildUriMatcher()
 ```
 
 This code is all private to the `ContentProvider` class. Refer to
-[Google's UriMatcher documentation](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/)
+[Google's UriMatcher documentation](xref:Android.Content.UriMatcher)
 for further information.
 
 

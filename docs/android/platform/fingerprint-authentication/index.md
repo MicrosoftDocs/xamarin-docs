@@ -59,5 +59,5 @@ A fingerprint must already be enrolled with the device for each user that is to 
 - [Requesting Permissions at Runtime](https://developer.android.com/training/permissions/requesting.html)
 - [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
 - [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)
-- [Android.Content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/)
+- [Android.Content.Context](xref:Android.Content.Context)
 - [Fingerprint and payments API (video)](https://youtu.be/VOn7VrTRlA4)

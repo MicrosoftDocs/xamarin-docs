@@ -15,12 +15,12 @@ _We have covered the theory behind saving state in the Activity Lifecycle guide;
 
 ## Activity State Walkthrough
 
-Let's open the **ActivityLifecycle_Start** project (in the 
-[ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle) 
-sample), build it, and run it. This is a very simple project that has 
-two activities to demonstrate the activity lifecycle and how the 
-various lifecycle methods are called. When you start the application, 
-the screen of `MainActivity` is displayed: 
+Let's open the **ActivityLifecycle_Start** project (in the
+[ActivityLifecycle](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle)
+sample), build it, and run it. This is a very simple project that has
+two activities to demonstrate the activity lifecycle and how the
+various lifecycle methods are called. When you start the application,
+the screen of `MainActivity` is displayed:
 
 [![Activity A screen](saving-state-images/01-activity-a-sml.png)](saving-state-images/01-activity-a.png#lightbox)
 
@@ -103,7 +103,7 @@ the following:
 ```
 
 Let's add the following code to the end of the
-[OnCreate](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+[OnCreate](xref:Android.App.Activity.OnCreate*)
 method in `MainActivity` &ndash; this code handles click events from
 the `clickButton`:
 
@@ -150,9 +150,9 @@ add code to save and restore the instance state.
 
 Let's add a method to `MainActivity` to save the instance state. Before
 *Activity A* is destroyed, Android automatically calls
-[OnSaveInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnSaveInstanceState/p/Android.OS.Bundle/)
+[OnSaveInstanceState](xref:Android.App.Activity.OnSaveInstanceState*)
 and passes in a
-[Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/) that we can use to store our
+[Bundle](xref:Android.OS.Bundle) that we can use to store our
 instance state. Let's use it to save our click count as an integer
 value:
 
@@ -185,9 +185,8 @@ we rotate the device to landscape mode, the count is preserved!
 
 [![Rotating the screen shows count of four preserved](saving-state-images/06-rotate-save-sml.png)](saving-state-images/06-rotate-save.png#lightbox)
 
-
 Let's take a look at the output window to see what happened:
-    
+
 ```shell
 [ActivityLifecycle.MainActivity] Activity A - OnPause
 [ActivityLifecycle.MainActivity] Activity A - Saving instance state
@@ -198,25 +197,22 @@ Let's take a look at the output window to see what happened:
 [ActivityLifecycle.MainActivity] Activity A - Recovered instance state
 [ActivityLifecycle.MainActivity] Activity A - OnStart
 [ActivityLifecycle.MainActivity] Activity A - OnResume
-``` 
+```
 
 Before the
-[OnStop](https://developer.xamarin.com/api/member/Android.App.Activity.OnStop/) method was called,
+[OnStop](xref:Android.App.Activity.OnStop) method was called,
 our new `OnSaveInstanceState` method was called to save the `_counter`
 value in a `Bundle`. Android passed this `Bundle` back to us when it
 called our `OnCreate` method, and we were able to used it to restore
 the `_counter` value to where we left off.
 
-
 ## Summary
 
-In this walkthough, we have used our knowledge of the Activity 
-Lifecycle to preserve state data. 
-
-
+In this walkthough, we have used our knowledge of the Activity
+Lifecycle to preserve state data.
 
 ## Related Links
 
 - [ActivityLifecycle (sample)](https://developer.xamarin.com/samples/monodroid/ActivityLifecycle)
 - [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
-- [Android Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)
+- [Android Activity](xref:Android.App.Activity)

@@ -20,7 +20,7 @@ When you create a **Unit Test App (Android)** project in Visual Studio
 (or **Android Unit Test** project in Visual Studio for Mac), this
 project will not automatically run your tests by default.
 To run NUnit tests on a target device, you can create an
-[Android.App.Instrumentation](https://developer.xamarin.com/api/type/Android.App.Instrumentation/)
+[Android.App.Instrumentation](xref:Android.App.Instrumentation)
 subclass that is started by using the following command: 
 
 ```shell

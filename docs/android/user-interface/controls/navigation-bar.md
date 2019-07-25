@@ -1,5 +1,5 @@
 ---
-title: "Navigation Bar"
+title: "Xamarin.Android Navigation Bar"
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 05/01/2017
 ---
 
-# Navigation Bar
+# Xamarin.Android Navigation Bar
 
 Android 4 introduced a new system user interface feature called a
 *Navigation Bar*, which provides navigation controls on devices that

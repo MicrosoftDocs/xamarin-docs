@@ -376,7 +376,7 @@ care if it is named something else.
 When you open **MainActivity.cs**, you can see that the `MainActivity`
 class is a *subclass* of the `Activity` class, and that the Activity is
 adorned with the
-[Activity](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) attribute:
+[Activity](xref:Android.App.ActivityAttribute) attribute:
 
 ```csharp
 [Activity (Label = "Phone Word", MainLauncher = true)]

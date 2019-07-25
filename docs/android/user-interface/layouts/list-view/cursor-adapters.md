@@ -8,10 +8,7 @@ ms.author: crdun
 ms.date: 10/25/2017
 ---
 
-# Using CursorAdapters
-
-
-## Overview
+# Using CursorAdapters with Xamarin.Android
 
 Android provides adapter classes specifically to display data from an SQLite
 database query:
@@ -70,7 +67,7 @@ The cursor query *must* have an integer column `_id` for the
 `CursorAdapter` to work. If the underlying table does not have an
 integer column named `_id` then use a column alias for another unique
 integer in the `RawQuery` that makes up the cursor. Refer to the
-[Android docs](https://developer.xamarin.com/api/type/Android.Widget.CursorAdapter/)
+[Android docs](xref:Android.Widget.CursorAdapter)
 for further information.
 
 

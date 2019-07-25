@@ -524,7 +524,7 @@ the following changes, where applicable:
 - For apps targeting Android Oreo, `PendingIntent.GetService()` does
   not work due to new limits placed on services started in the
   background. If you are targeting Android Oreo, you should use
-  [PendingIntent.GetBroadcast](https://developer.xamarin.com/api/member/Android.App.PendingIntent.GetBroadcast/p/Android.Content.Context/System.Int32/Android.Content.Intent/Android.App.PendingIntentFlags/) instead.  
+  [PendingIntent.GetBroadcast](xref:Android.App.PendingIntent.GetBroadcast*) instead.  
 
 
 ## Sample Code

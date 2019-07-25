@@ -78,7 +78,7 @@ time, KitKat prefers to group several applications that are registered
 to wake during the same time interval, and wake them at the same time.
 To tell Android to wake an app during a specified time interval, call
 `SetWindow` on the
-[`AlarmManager`](https://developer.xamarin.com/api/type/Android.App.AlarmManager/),
+[`AlarmManager`](xref:Android.App.AlarmManager),
 passing in the minimum and maximum time, in milliseconds, that can
 elapse before the app is woken, and the operation to perform at wakeup.
 The following code provides an example of an application that needs to
@@ -100,7 +100,7 @@ alarmManager.SetExact (AlarmType.Rtc, AlarmManager.IntervalDay, pendingIntent);
 
 KitKat no longer lets you set an exact repeating alarm. Applications
 that use
-[`SetRepeating`](https://developer.xamarin.com/api/member/Android.App.AlarmManager.SetRepeating/p/Android.App.AlarmType/System.Int64/System.Int64/Android.App.PendingIntent/)
+[`SetRepeating`](xref:Android.App.AlarmManager.SetRepeating*)
 and require exact alarms to work will now need to trigger each alarm
 manually.
 
@@ -115,16 +115,16 @@ permission. The two types can be classified as such:
 
 -  If you're getting a file or directory path by calling a method on
    `Context` - for example,
-   [`GetExternalFilesDir`](https://developer.xamarin.com/api/member/Android.Content.Context.GetExternalFilesDir/p/System.String/)
+   [`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
    or
-   [`GetExternalCacheDirs`](https://developer.xamarin.com/api/member/Android.Content.Context.GetExternalCacheDirs%28%29/)
+   [`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
    - your app requires no extra permissions.
 
 -  If you're getting a file or directory path by accessing a property or calling a method on
    `Environment` , such as
-   [`GetExternalStorageDirectory`](https://developer.xamarin.com/api/property/Android.OS.Environment.ExternalStorageDirectory/)
+   [`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
    or
-   [`GetExternalStoragePublicDirectory`](https://developer.xamarin.com/api/member/Android.OS.Environment.GetExternalStoragePublicDirectory/p/System.String/)
+   [`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
    , your app requires the `READ_EXTERNAL_STORAGE` or
    `WRITE_EXTERNAL_STORAGE` permission.
 
@@ -146,7 +146,7 @@ guide from Google.
 
 ### WebView Apps
 
-[WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)
+[WebView](xref:Android.Webkit.WebView)
 got a makeover in KitKat. The biggest change is added security for
 loading content into a `WebView`. While most applications targeting
 older API versions should work as expected, testing applications that
@@ -176,7 +176,7 @@ code, or customize transitions using *Scenes*.
 The new Android Transitions library simplifies the code behind property
 animations. The framework allows you to perform simple animations with
 minimal code. For example, the following code sample uses
-[`TransitionManager.BeginDelayedTransition`](https://developer.xamarin.com/api/member/Android.Transitions.TransitionManager.BeginDelayedTransition/p/Android.Views.ViewGroup/Android.Transitions.Transition/)
+[`TransitionManager.BeginDelayedTransition`](xref:Android.Transitions.TransitionManager.BeginDelayedTransition*)
 to animate showing and hiding a `TextView`:
 
 ```csharp
@@ -234,7 +234,7 @@ You can get more control over the transition with Scenes, which are covered in t
 
 #### Android Scenes
 
-[Scenes](https://developer.xamarin.com/api/type/Android.Transitions.Scene/)
+[Scenes](xref:Android.Transitions.Scene)
 were introduced as part of the transition framework to give the
 developer more control over animations. Scenes create a dynamic area in
 the UI: you specify a container and several versions, or "scenes", for
@@ -305,7 +305,7 @@ simplify the view hierarchy. You can read more about `merge` layouts
 [here](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
 
 A Scene is created by calling
-[`Scene.GetSceneForLayout`](https://developer.xamarin.com/api/member/Android.Transitions.Scene.GetSceneForLayout/p/Android.Views.ViewGroup/System.Int32/Android.Content.Context/),
+[`Scene.GetSceneForLayout`](xref:Android.Transitions.Scene.GetSceneForLayout*),
 passing in the container object, the Resource ID of the Scene's layout
 file, and the current `Context`, as illustrated by the code example
 below:
@@ -370,7 +370,7 @@ seconds and uses the
 ```
 
 The transition is created in the Activity using the
-[TransitionInflater](https://developer.xamarin.com/api/type/Android.Transitions.TransitionInflater/),
+[TransitionInflater](xref:Android.Transitions.TransitionInflater),
 as illustrated by the code below:
 
 ```csharp
@@ -447,7 +447,7 @@ that require content from providers need to be updated to a new way of
 requesting content. Second, applications that write data to a
 `ContentProvider` need to be modified to use the new framework. Both
 scenarios depend on the new
-[`DocumentsProvider`](https://developer.xamarin.com/api/type/Android.Provider.DocumentsProvider/)
+[`DocumentsProvider`](xref:Android.Provider.DocumentsProvider)
 API.
 
 #### DocumentsProvider
@@ -542,7 +542,7 @@ protected override void OnActivityResult(int requestCode, Result resultCode, Int
 ```
 
 Note that
-[`ContentResolver.OpenOutputStream(Android.Net.Uri)`](https://developer.xamarin.com/api/member/Android.Content.ContentResolver.OpenOutputStream/(Android.Net.Uri))
+[`ContentResolver.OpenOutputStream(Android.Net.Uri)`](xref:Android.Content.ContentResolver.OpenOutputStream*)
 returns a `System.IO.Stream`, so the entire streaming process can be
 written in .NET.
 
@@ -553,7 +553,7 @@ Storage Access Framework, refer to the
 ### Printing
 
 Printing content is simplified in KitKat with the introduction of the
-[Print Services](https://developer.xamarin.com/api/namespace/Android.PrintServices/)
+[Print Services](xref:Android.PrintServices)
 and `PrintManager`. KitKat is also the first API version to fully
 leverage the
 [Google's Cloud Print service APIs](https://developers.google.com/cloud-print/) using the
@@ -578,10 +578,10 @@ handle printing.
 #### Printing HTML Content
 
 KitKat automatically creates a
-[`PrintDocumentAdapter`](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/) for
+[`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter) for
 a web view with `WebView.CreatePrintDocumentAdapter`. Printing web
 content is a coordinated effort between a
-[`WebViewClient`](https://developer.xamarin.com/api/type/Android.Webkit.WebViewClient/) that
+[`WebViewClient`](xref:Android.Webkit.WebViewClient) that
 waits for the HTML content to load and lets the Activity know to make
 the print option available in the options menu, and the Activity, which
 waits for the user to select the Print option and calls `Print`on the
@@ -604,7 +604,7 @@ the top right corner of the screen, and looks like this:
 
 Additional menu items can be defined in the *menu*directory under
 *Resources*. The code below defines a sample menu item called
-[Print](https://developer.xamarin.com/api/type/Android.Print.PrintManager/):
+[Print](xref:Android.Print.PrintManager):
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -694,9 +694,9 @@ void PrintPage ()
 
 `Print` takes as arguments: a name for the print job ("MyWebPage" in
 this example), a
-[`PrintDocumentAdapter`](https://developer.xamarin.com/api/type/Android.Print.PrintDocumentAdapter/)
+[`PrintDocumentAdapter`](xref:Android.Print.PrintDocumentAdapter)
 that generates the print document from the content, and
-[`PrintAttributes`](https://developer.xamarin.com/api/type/Android.Print.PrintAttributes/)
+[`PrintAttributes`](xref:Android.Print.PrintAttributes)
 (`null` in the example above). You can specify `PrintAttributes` to
 help lay out content on the printed page, although the default
 attributes should handle most scenarios.
@@ -820,7 +820,7 @@ For more information on using NFC with Xamarin, check out the
 ### Sensors
 
 KitKat provides access to the device's sensors through a
-[`SensorManager`](https://developer.xamarin.com/api/type/Android.Hardware.SensorManager/).
+[`SensorManager`](xref:Android.Hardware.SensorManager).
 The `SensorManager` allows the OS to schedule the delivery of sensor
 information to an application in batches, preserving battery life.
 
@@ -842,7 +842,7 @@ You can create a `SensorManager` by calling
 `SensorManager`. To use the step counter, call `GetDefaultSensor` on
 the `SensorManager`. You can register the sensor and listen to changes
 in step count with the help of the
-[`ISensorEventListener`](https://developer.xamarin.com/api/type/Android.Hardware.ISensorEventListener/)
+[`ISensorEventListener`](xref:Android.Hardware.ISensorEventListener)
 interface, as illustrated by the code sample below:
 
 ```csharp
@@ -957,7 +957,7 @@ In addition to the changes described above, KitKat allows you to:
 
 -  *Customize Notifications* - Get additional details about system
    notifications with the
-   [`NotificationListenerService`](https://developer.xamarin.com/api/type/Android.Service.Notification.NotificationListenerService/)
+   [`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
    . This lets you present the information in a different way inside
    your app.
 
@@ -967,7 +967,7 @@ In addition to the changes described above, KitKat allows you to:
    that require flipping for left-to-right layouts.
 
 -  *Pause Animations* - Pause and resume animations created with the
-   [`Animator`](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
+   [`Animator`](xref:Android.Animation.Animator)
    class.
 
 -  *Read Dynamically Changing Text* - Denote parts of UI that update
@@ -977,11 +977,11 @@ In addition to the changes described above, KitKat allows you to:
    accessibility mode.
 
 -  *Enhance Audio Experience* - Make tracks louder with the
-   [`LoudnessEnhancer`](https://developer.xamarin.com/api/type/Android.Media.Audiofx.LoudnessEnhancer/)
+   [`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
    , find the Peak and RMS of an audio stream with the
-   [`Visualizer`](https://developer.xamarin.com/api/field/Android.Media.Audiofx.Visualizer.MeasurementModePeakRms/)
+   [`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
    class, and get information from an
-   [audio timestamp](https://developer.xamarin.com/api/type/Android.Media.AudioTimestamp/)
+   [audio timestamp](xref:Android.Media.AudioTimestamp)
    to help with audio-video synchronization.
 
 -  *Sync ContentResolver at Custom Interval* - KitKat adds some
@@ -998,7 +998,7 @@ In addition to the changes described above, KitKat allows you to:
    software side, KitKat allows you to turn a device outfitted with an
    IR transmitter into a remote control using the `ConsumerIrService`,
    and interact with peripheral devices with the new
-   [`RemoteController`](https://developer.xamarin.com/api/type/Android.Media.RemoteController/)
+   [`RemoteController`](xref:Android.Media.RemoteController)
    APIs.
 
 For more information on the above API changes, please refer to the

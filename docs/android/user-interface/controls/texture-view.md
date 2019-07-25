@@ -1,5 +1,5 @@
 ---
-title: "TextureView"
+title: "Xamarin.Android TextureView"
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 05/30/2017
 ---
 
-# TextureView
+# Xamarin.Android TextureView
 
 The `TextureView` class is a view that uses hardware-accelerated
 2D rendering to enable a video or OpenGL content stream to be displayed. For

@@ -279,7 +279,7 @@ interface:
 
 To support this feature in your app, you must add *inline reply
 actions* to your app via a
-[RemoteInput](https://developer.xamarin.com/api/type/Android.App.RemoteInput/)
+[RemoteInput](xref:Android.App.RemoteInput)
 object so that users can reply via text directly from the notification UI.
 For example, the following code builds a `RemoteInput` for receiving text input,
 builds a pending intent for the reply action, and creates a remote
@@ -335,7 +335,7 @@ notification in detail:
 [![Screenshot example of bundled notifications](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
 
 To support bundled notifications, your app can use the
-[Builder.SetGroup](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetGroup/p/System.String/)
+[Builder.SetGroup](xref:Android.App.Notification.Builder.SetGroup*)
 method to bundle similar notifications. For more information about
 bundled notification groups in Android N, see the Android
 [Bundling Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle)
@@ -358,7 +358,7 @@ topic.
 Beginning with Android Nougat, users can enable a new *Data Saver*
 setting that blocks background data usage. This setting also signals
 your app to use less data in the foreground wherever possible. The
-[ConnectivityManager](https://developer.xamarin.com/api/type/Android.Net.ConnectivityManager/) has
+[ConnectivityManager](xref:Android.Net.ConnectivityManager) has
 been extended in Android Nougat so that your app can check whether the
 user has enabled Data Saver so that your app can make an effort to
 limit its data usage when Data Saver is enabled.

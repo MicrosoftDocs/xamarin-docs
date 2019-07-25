@@ -8,10 +8,7 @@ ms.author: crdun
 ms.date: 04/26/2018
 ---
 
-# Customizing a ListView's Appearance
-
-
-## Overview
+# Customizing a ListView's Appearance with Xamarin.Android
 
 The appearance of a ListView is dictated by the layout of the rows being
 displayed. To change the appearance of a `ListView`, use a

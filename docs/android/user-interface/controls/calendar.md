@@ -1,5 +1,5 @@
 ---
-title: "Calendar"
+title: "Xamarin.Android Calendar"
 ms.prod: xamarin
 ms.assetid: 78666541-CA14-4CD8-A94A-A9621C57813E
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# Calendar
+# Xamarin.Android Calendar
 
 
 ## Calendar API

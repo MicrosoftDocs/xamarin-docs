@@ -441,7 +441,7 @@ To determine which shared libraries are required, view the *generated*
 **obj\\Debug\\android\\AndroidManifest.xml**) and look for the
 `<uses-library/>` elements. `<uses-library/>` elements can be added
 manually in your project's **Properties\\AndroidManifest.xml** file and via the
-[UsesLibraryAttribute custom attribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/).
+[UsesLibraryAttribute custom attribute](xref:Android.App.UsesLibraryAttribute).
 
 For example, adding an assembly reference to
 *Mono.Android.GoogleMaps.dll* will implicitly add a `<uses-library/>`
@@ -563,7 +563,7 @@ should now work as expected.
 
 Xamarin.Android 4.x doesn't properly marshal nested generic types
 properly. For example, consider the following C\# code using
-[SimpleExpandableListAdapter](https://developer.xamarin.com/api/type/Android.Widget.SimpleExpandableListAdapter/):
+[SimpleExpandableListAdapter](xref:Android.Widget.SimpleExpandableListAdapter):
 
 
 ```csharp
@@ -598,11 +598,11 @@ mAdapter = new SimpleExpandableListAdapter (
 
 The problem is that Xamarin.Android incorrectly marshals nested generic
 types. The `List<IDictionary<string, object>>` is being marshaled to a
-[java.lang.ArrrayList](https://developer.xamarin.com/api/type/Java.Util.ArrayList/),
+[java.lang.ArrrayList](xref:Java.Util.ArrayList),
 but the `ArrayList` is containing `mono.android.runtime.JavaObject`
 instances (which reference the `Dictionary<string, object>` instances)
 instead of something that implements
-[java.util.Map](https://developer.xamarin.com/api/type/Java.Util.IMap/),
+[java.util.Map](xref:Java.Util.IMap),
 resulting in the following exception:
 
 ```shell

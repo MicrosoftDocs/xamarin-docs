@@ -204,7 +204,7 @@ when packaging Release applications.
 
 -   **AndroidApplicationJavaClass** &ndash; The full Java class name to
     use in place of `android.app.Application` when a class inherits
-    from [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/).
+    from [Android.App.Application](xref:Android.App.Application).
 
     This property is generally set by *other* properties, such as the
 		`$(AndroidEnableMultiDex)` MSBuild property.
