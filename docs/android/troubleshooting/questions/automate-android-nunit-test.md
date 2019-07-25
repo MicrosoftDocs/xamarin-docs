@@ -55,14 +55,11 @@ The following steps explain this process:
         }
     }
     ```
-    In this file, 
-    [Xamarin.Android.NUnitLite.TestSuiteInstrumentation](https://developer.xamarin.com/api/type/Xamarin.Android.NUnitLite.TestSuiteInstrumentation/) 
+    In this file, `Xamarin.Android.NUnitLite.TestSuiteInstrumentation`
     (from **Xamarin.Android.NUnitLite.dll**) is subclassed to create `TestInstrumentation`.
 
-2.  Implement the [TestInstrumentation](https://developer.xamarin.com/api/constructor/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.TestSuiteInstrumentation/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
-    constructor and the 
-    [AddTests](https://developer.xamarin.com/api/member/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.AddTests%28%29) 
-    method. The `AddTests` method controls which tests are actually executed.
+2.  Implement the `TestInstrumentation` constructor and the
+    `AddTests` method. The `AddTests` method controls which tests are actually executed.
 
 3.  Modify the `.csproj` file to add **TestInstrumentation.cs**. For example:
 
