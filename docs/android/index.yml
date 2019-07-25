@@ -51,7 +51,7 @@ sections:
     className: cardsB
     items:
     - href: ~/android/get-started/index.md
-      html: Tutorials to get you up and running with Xamarin.Android. Make sure everything is installed correctly, and build your first Mac apps.
+      html: Tutorials to get you up and running with Xamarin.Android. Make sure everything is installed correctly, and build your first Android apps.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/android/get-started/index.md
