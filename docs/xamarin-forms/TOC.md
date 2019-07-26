@@ -8,14 +8,15 @@
 ### [Local database quickstart](~/get-started/quickstarts/database.md)
 ### [Styling quickstart](~/get-started/quickstarts/styling.md)
 ### [Deep dive](~/get-started/quickstarts/deepdive.md)
-## [XAML](xaml/index.md)
-### [XAML Controls](xaml/xaml-controls.md)
+## XAML
+### [Overview](xaml/index.md)
 ### [XAML Basics](xaml/xaml-basics/index.md)
 #### [Part 1. Get Started with XAML](xaml/xaml-basics/get-started-with-xaml.md)
 #### [Part 2. Essential XAML Syntax](xaml/xaml-basics/essential-xaml-syntax.md)
 #### [Part 3. XAML Markup Extensions](xaml/xaml-basics/xaml-markup-extensions.md)
 #### [Part 4. Data Binding Basics](xaml/xaml-basics/data-binding-basics.md)
-#### [Part 5. From Data Bindings to MVVM](xaml/xaml-basics/data-bindings-to-mvvm.md)
+#### [Part 5. From Data Bindings to MVVM](xaml/xaml-basics/data-bindings-to-mvvm.md)### [XAML Controls](xaml/xaml-controls.md)
+
 ### [XAML Compilation](xaml/xamlc.md)
 ### [XAML Toolbox](xaml/toolbox.md)
 ### [XAML Previewer](xaml/xaml-previewer/index.md)
