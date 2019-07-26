@@ -9,7 +9,7 @@ metadata:
   ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
   author: davidbritch
   ms.author: dabritch
-  ms.date: 06/28/2019
+  ms.date: 07/26/2019
 abstract:
   description: Learn how to use eXtensible Application Markup Language (XAML) to define Xamarin.Forms user interfaces.
 sections:
