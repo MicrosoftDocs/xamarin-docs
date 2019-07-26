@@ -112,7 +112,7 @@ See the [Verify Attributes](~/cross-platform/macios/binding/objective-sharpie/pl
 
 * Variadic methods and blocks are now bound.
 
-* Frameworks are now supported via the `-framework` option. See the documentation on [Binding Native Frameworks](https://developer.xamarin.com/guides/ios/advanced_topics/binding_objective-c/objective_sharpie/#frameworks) for more details.
+* Frameworks are now supported via the `-framework` option. See the documentation on [Binding Native Frameworks](~/cross-platform/macios/binding/objective-sharpie/index.md) for more details.
 
 * Objective-C source code will be auto-detected now, which should eliminate the need to pass `-ObjC` or `-xobjective-c` to Clang manually.
 

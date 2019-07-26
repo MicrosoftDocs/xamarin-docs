@@ -28,7 +28,7 @@ each child view constitutes a page in the layout:
 [![Screenshots of TreePager app with horizontal swipe example](images/01-intro-sml.png)](images/01-intro.png#lightbox)
 
 Typically, `ViewPager` is used in conjunction with 
-[Fragments](https://developer.xamarin.com/guides/android/platform_features/fragments/); 
+[Fragments](~/android/platform/fragments/index.md); 
 however, there are some situations where you might want to use 
 `ViewPager` without the added complexity of `Fragment`s.
 

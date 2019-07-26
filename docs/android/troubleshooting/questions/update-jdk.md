@@ -35,7 +35,7 @@ To update to JDK 8, follow these steps:
     ![Screenshot of the JDK download page on the Oracle website](update-jdk-images/image1.png)
 
 2.  Pick the 64-bit version to allow rendering of 
-    [custom controls](https://developer.xamarin.com/releases/vs/xamarin.vs_4/xamarin.vs_4.2/#androiddesignercustomcontrols)
+    [custom controls](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/vs/xamarin.vs_4/xamarin.vs_4.2/index.md#androiddesignercustomcontrols)
     in the Xamarin Android designer:
 
     ![Selecting the Windows x64 JDK package to download from the JDK download page](update-jdk-images/image2.png)

@@ -1565,7 +1565,7 @@ To fix this warning, open the project file in a text editor, and remove all `Mto
 
 ### MT2017: Could not process XML description.
 
-This means there is an error on the [custom XML linker configuration file](https://developer.xamarin.com/guides/cross-platform/advanced/custom_linking/) you provided, please review your file.
+This means there is an error on the [custom XML linker configuration file](~/cross-platform/deploy-test/linker.md) you provided, please review your file.
 
 <a name="MT2018" />
 
@@ -1696,7 +1696,7 @@ Sometimes it's possible to work around this by disabling incremental builds in t
 
 <a name="MT3002" />
 
-### MT3002: AOT restriction: Method '*' must be static since it is decorated with [MonoPInvokeCallback]. See [https://developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](https://developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks)
+### MT3002: AOT restriction: Method '*' must be static since it is decorated with [MonoPInvokeCallback]. See [developer.xamarin.com/guides/ios/advanced_topics/limitations/#Reverse_Callbacks](~/ios/internals/limitations.md#reverse-callbacks)
 
 This error message comes from the AOT compiler.
 
@@ -1842,7 +1842,7 @@ This is always a bug in Xamarin.iOS; please file a bug report at [http://bugzill
 
 <a name="MT4112" />
 
-### MT4112: The registrar found an invalid type `*`. Registering generic types with Objective-C is not supported, and may lead to random behavior and/or crashes (for backwards compatibility with older versions of Xamarin.iOS it is possible to ignore this error by passing `--unsupported--enable-generics-in-registrar` as an additional mtouch argument in the project's iOS Build options page. See [developer.xamarin.com/guides/ios/advanced_topics/registrar](https://developer.xamarin.com/guides/ios/advanced_topics/registrar) for more information).
+### MT4112: The registrar found an invalid type `*`. Registering generic types with Objective-C is not supported, and may lead to random behavior and/or crashes (for backwards compatibility with older versions of Xamarin.iOS it is possible to ignore this error by passing `--unsupported--enable-generics-in-registrar` as an additional mtouch argument in the project's iOS Build options page. See [developer.xamarin.com/guides/ios/advanced_topics/registrar](~/ios/internals/registrar.md) for more information).
 
 <a name="MT4113" />
 

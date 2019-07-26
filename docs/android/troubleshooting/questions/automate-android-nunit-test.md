@@ -104,7 +104,7 @@ topic.
 
 > [!NOTE]
 > With the
-[Xamarin.Android 5.0](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming)
+[Xamarin.Android 5.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming)
 release, the default package names for Android Callable Wrappers will
 be based on the MD5SUM of the assembly-qualified name of the type being
 exported. This allows the same fully-qualified name to be provided from

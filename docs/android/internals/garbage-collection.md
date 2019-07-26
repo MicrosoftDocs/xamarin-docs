@@ -154,7 +154,7 @@ allowing the objects to be collected faster.
 ## Automatic Collections
 
 Beginning with
-[Release 4.1.0](https://developer.xamarin.com/releases/android/mono_for_android_4/mono_for_android_4.1.0), 
+[Release 4.1.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/mono_for_android_4/mono_for_android_4.1.0/index.md), 
 Xamarin.Android automatically performs a full GC when a gref 
 threshold is crossed. This threshold is 90% of the known maximum grefs 
 for the platform: 1800 grefs on the emulator (2000 max), and 46800 

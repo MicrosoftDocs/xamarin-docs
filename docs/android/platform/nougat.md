@@ -33,7 +33,7 @@ you use Xamarin.Android 7.0.
 For more information about Android 7.x APIs, see
 [Android 7.1 for Developers](https://developer.android.com/preview/api-overview.html).
 For a list of known Xamarin.Android 7.0 issues, please see the
-[release notes](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/).
+[release notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
 
 Android Nougat provides many new features of interest to Xamarin.Android
 developers. These features include:
@@ -429,4 +429,4 @@ help you get started in creating apps for Android Nougat.
 ## Related Links
 
 - [Android 7.1 For Developers](https://developer.android.com/about/versions/nougat/android-7.1.html)
-- [Xamarin Android 7.0 Release Notes](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/)
+- [Xamarin Android 7.0 Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md)

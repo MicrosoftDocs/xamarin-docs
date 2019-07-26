@@ -31,7 +31,7 @@ each cell view populated with data.
 
 There are only two mandatory methods required to make a table display data:
 
--   **RowsInSection** – return an  [`nint`](https://developer.xamarin.com/guides/cross-platform/macios/nativetypes/) count of the total number of rows of data the table should display.
+-   **RowsInSection** – return an  [`nint`](~/cross-platform/macios/nativetypes.md) count of the total number of rows of data the table should display.
 -   **GetCell** – return a  `UITableCellView` populated with data for the corresponding row index passed to the method.
 
 

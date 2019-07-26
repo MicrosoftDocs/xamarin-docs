@@ -336,4 +336,4 @@ In this guide we looked at what profiling is and how it is advantageous to the d
 ## Related Links
 
 - [Memory and Performance Best Practices](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [Release Notes](https://developer.xamarin.com/releases/profiler/preview/)
+- [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)

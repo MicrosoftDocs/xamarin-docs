@@ -109,7 +109,7 @@ supports TLS 1.2 (which is recommended for all projects),
 however you can switch back to the managed code if required for compatibility reasons.
 
 > [!IMPORTANT]
-> The **Mono/Managed** option has been [removed from iOS and Mac](https://developer.xamarin.com/releases/ios/xamarin.ios_10/xamarin.ios_10.8/) project options.
+> The **Mono/Managed** option has been [removed from iOS and Mac](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_10/xamarin.ios_10.8.md) project options.
 >
 > The Native option is always used on iOS and Mac platforms.
 

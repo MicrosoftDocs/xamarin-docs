@@ -457,7 +457,7 @@ Xamarin.Android development.
 - [Android 6.0 Marshmallow](https://developer.android.com/about/versions/marshmallow/index.html)
 - [Get the Android SDK](https://developer.android.com/sdk/index.html#Other)
 - [Feature Overview](https://developer.android.com/preview/api-overview.html)
-- [Release Notes](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1.99/)
+- [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1.99/index.md)
 - [RuntimePermissions (sample)](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions)
 - [ConfirmCredential (sample)](https://developer.xamarin.com/samples/monodroid/android-m/ConfirmCredential)
 - [FingerprintDialog (sample)](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog)
