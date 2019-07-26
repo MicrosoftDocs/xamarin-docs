@@ -378,4 +378,3 @@ This article described and discussed techniques for increasing the performance o
 - [Xamarin.Forms Performance](~/xamarin-forms/deploy-test/performance.md)
 - [Async Support Overview](~/cross-platform/platform/async.md)
 - [IDisposable](xref:System.IDisposable)
-- [Avoiding Common Pitfalls in Xamarin Apps (video)](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)
