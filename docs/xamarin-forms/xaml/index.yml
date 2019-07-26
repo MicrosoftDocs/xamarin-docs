@@ -3,7 +3,7 @@ documentType: LandingData
 title: eXtensible Application Markup Language (XAML)
 metadata:
   title: eXtensible Application Markup Language (XAML)
-  description: Learn how to use eXtensible Application Markup Language (XAML) to define Xamarin.Forms user interfaces.
+  description: Learn how to use XAML to define Xamarin.Forms user interfaces.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
@@ -11,7 +11,7 @@ metadata:
   ms.author: dabritch
   ms.date: 07/26/2019
 abstract:
-  description: Learn how to use eXtensible Application Markup Language (XAML) to define Xamarin.Forms user interfaces.
+  description: Learn how to use XAML to define Xamarin.Forms user interfaces.
 sections:
 - title:
   items:
@@ -37,48 +37,30 @@ sections:
         src: ~/media/icons/i_xaml-forms.svg
         href: xamlc.md
       title: Compilation
-    - href: xaml-previewer/index.md
-      html: "Learn how to use the XAML previewer, to see a live preview of a page side-by-side with its XAML markup."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: xaml-previewer/index.md
-      title: Previewer
     - href: namespaces.md
       html: "Learn about the XAML namespace syntax, and how to declare a XAML namespace to access a type."
       image:
         src: ~/media/icons/i_xaml-forms.svg
         href: namespaces.md
       title: Namespaces
-    - href: custom-namespace-schemas.md
-      html: "Learn how to create XAML custom namespace schemas, which specify a mapping between a custom URL and one or more CLR namespaces."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: custom-namespace-schemas.md
-      title: Custom Namespace Schemas
-    - href: custom-prefix.md
-      html: "Learn how to specify a recommended prefix to assciate with a XAML namespace, for XAML usage."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: custom-prefix.md
-      title: Namespace Recommended Prefixes
     - href: markup-extensions/index.md
       html: "Learn about XAML markup extensions, that allow element attributes to be set from sources other than literal text strings."
       image:
         src: ~/media/icons/i_xaml-forms.svg
         href: markup-extensions/index.md
       title: Markup Extensions
-    - href: field-modifiers.md
-      html: "Learn about XAML field modifiers, that specify the access level for generated fields for named XAML elements."
+    - href: toolbox.md
+      html: "Learn how to use the XAML toolbox to drag Xamarin.Forms controls and layouts into the XAML editor."
       image:
         src: ~/media/icons/i_xaml-forms.svg
-        href: field-modifiers.md
-      title: Field Modifiers
-    - href: passing-arguments.md
-      html: "Learn how to use XAML to pass arguments to constructors, to call factory methods, and to specify the type of a generic argument."
+        href: toolbox.md
+      title: Toolbox
+    - href: xaml-previewer/index.md
+      html: "Learn how to use the XAML previewer, to see a live preview of a page side-by-side with its XAML markup."
       image:
         src: ~/media/icons/i_xaml-forms.svg
-        href: passing-arguments.md
-      title: Passing Arguments
+        href: xaml-previewer/index.md
+      title: Previewer
     - href: bindable-properties.md
       html: "Learn how to create bindable properties, and how to consume them from XAML."
       image:
@@ -97,9 +79,39 @@ sections:
         src: ~/media/icons/i_xaml-forms.svg
         href: resource-dictionaries.md
       title: Resource Dictionaries
+    - href: passing-arguments.md
+      html: "Learn how to use XAML to pass arguments to constructors, to call factory methods, and to specify the type of a generic argument."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: passing-arguments.md
+      title: Passing Arguments
+    - href: field-modifiers.md
+      html: "Learn about XAML field modifiers, that specify the access level for generated fields for named XAML elements."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: field-modifiers.md
+      title: Field Modifiers
+    - href: custom-namespace-schemas.md
+      html: "Learn how to create XAML custom namespace schemas, which specify a mapping between a custom URL and one or more CLR namespaces."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: custom-namespace-schemas.md
+      title: Custom Namespace Schemas
+    - href: custom-prefix.md
+      html: "Learn how to specify a recommended prefix to assciate with a XAML namespace, for XAML usage."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: custom-prefix.md
+      title: Namespace Recommended Prefixes
     - href: runtime-load.md
       html: "Learn how to load and parse XAML at runtime."
       image:
         src: ~/media/icons/i_xaml-forms.svg
         href: runtime-load.md
       title: Load XAML at Runtime
+    - href: standard/index.md
+      html: "Learn about XAML standard."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: standard/index.md
+      title: XAML Standard
