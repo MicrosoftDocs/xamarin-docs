@@ -44,7 +44,7 @@ sections:
         href: namespaces.md
       title: Namespaces
     - href: markup-extensions/index.md
-      html: "Learn about XAML markup extensions, that allow element attributes to be set from sources other than literal text strings."
+      html: "Learn about XAML markup extensions, which allow element attributes to be set from sources other than literal text strings."
       image:
         src: ~/media/icons/i_xaml-forms.svg
         href: markup-extensions/index.md
@@ -86,7 +86,7 @@ sections:
         href: passing-arguments.md
       title: Passing Arguments
     - href: field-modifiers.md
-      html: "Learn about XAML field modifiers, that specify the access level for generated fields for named XAML elements."
+      html: "Learn about XAML field modifiers, which specify the access level for generated fields for named XAML elements."
       image:
         src: ~/media/icons/i_xaml-forms.svg
         href: field-modifiers.md
