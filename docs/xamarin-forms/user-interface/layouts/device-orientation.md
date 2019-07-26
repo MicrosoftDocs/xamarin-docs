@@ -66,7 +66,7 @@ Xamarin.Android supports several options for specifying orientation:
 - **Landscape** &ndash; forces the application orientation to be landscape, regardless of sensor data.
 - **Portrait** &ndash; forces the application orientation to be portrait, regardless of sensor data.
 - **User** &ndash; causes the application to be presented using the user's preferred orientation.
-- **Behind** &ndash; causes the application's orientation to be the same as the orientation of the [activity](https://developer.xamarin.com/api/type/Android.App.Activity/) behind it.
+- **Behind** &ndash; causes the application's orientation to be the same as the orientation of the [activity](xref:Android.App.Activity) behind it.
 - **Sensor** &ndash; causes the application's orientation to be determined by the sensor, even if the user has disabled automatic rotation.
 - **SensorLandscape** &ndash; causes the application to use landscape orientation while using sensor data to change the direction the screen is facing (so that the screen isn't seen as upside down).
 - **SensorPortrait** &ndash; causes the application to use portrait orientation while using sensor data to change the direction the screen is facing (so that the screen isn't seen as upside down).

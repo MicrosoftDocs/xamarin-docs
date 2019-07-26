@@ -115,7 +115,7 @@ Generally the `Control` property of the renderer class thereafter refers to the 
 
 ### The Android video view
 
-The Android renderer for `VideoPlayer` is based on the Android [`VideoView`](https://developer.xamarin.com/api/type/Android.Widget.VideoView/) class. However, if `VideoView` is used by itself to play a video in a Xamarin.Forms application, the video fills the area alloted for the `VideoPlayer` without maintaining the correct aspect ratio. For this reason (as you'll see shortly), the `VideoView` is made a child of an Android `RelativeLayout`. A `using` directive defines `ARelativeLayout` to distinguish it from the Xamarin.Forms `RelativeLayout`, and that's the second generic argument in the `ViewRenderer`:
+The Android renderer for `VideoPlayer` is based on the Android [`VideoView`](xrtef:Android.Widget.VideoView) class. However, if `VideoView` is used by itself to play a video in a Xamarin.Forms application, the video fills the area alloted for the `VideoPlayer` without maintaining the correct aspect ratio. For this reason (as you'll see shortly), the `VideoView` is made a child of an Android `RelativeLayout`. A `using` directive defines `ARelativeLayout` to distinguish it from the Xamarin.Forms `RelativeLayout`, and that's the second generic argument in the `ViewRenderer`:
 
 ```csharp
 using System;
@@ -360,7 +360,7 @@ The `Element` property of the renderer refers to the `VideoPlayer` class.
 
 ### The Android media controller
 
-In Android, displaying the transport controls requires creating a [`MediaController`](https://developer.xamarin.com/api/type/Android.Widget.MediaController/) object and associating it with the `VideoView` object. The mechanics are demonstrated in the `SetAreTransportControlsEnabled` method:
+In Android, displaying the transport controls requires creating a [`MediaController`](xref:Android.Widget.MediaController) object and associating it with the `VideoView` object. The mechanics are demonstrated in the `SetAreTransportControlsEnabled` method:
 
 ```csharp
 namespace FormsVideoLibrary.Droid

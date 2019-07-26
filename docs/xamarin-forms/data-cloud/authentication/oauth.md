@@ -166,7 +166,7 @@ The `OpenUrl` method converts the received URL from an `NSUrl` to a .NET `Uri`, 
 
 #### Android
 
-On Android, a custom URL scheme is registered by specifying an [`IntentFilter`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) attribute on the `Activity` that will handle the scheme. When the identity provider completes the authorization request, it redirects to the application's redirect URL. As the URL uses a custom scheme it results in Android launching the application, passing in the URL as a launch parameter, where it's processed by the `OnCreate` method of the `Activity` registered to handle the custom URL scheme. The following code example shows the class from the sample application that handles the custom URL scheme:
+On Android, a custom URL scheme is registered by specifying an [`IntentFilter`](xref:Android.App.IntentFilterAttribute) attribute on the `Activity` that will handle the scheme. When the identity provider completes the authorization request, it redirects to the application's redirect URL. As the URL uses a custom scheme it results in Android launching the application, passing in the URL as a launch parameter, where it's processed by the `OnCreate` method of the `Activity` registered to handle the custom URL scheme. The following code example shows the class from the sample application that handles the custom URL scheme:
 
 ```csharp
 [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop )]
@@ -192,7 +192,7 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-The `DataSchemes` property of the [`IntentFilter`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) must be set to the reversed client identifier that's obtained from the Android client id for the project on [Google API Console](http://console.developers.google.com).
+The `DataSchemes` property of the [`IntentFilter`](xref:Android.App.IntentFilterAttribute) must be set to the reversed client identifier that's obtained from the Android client id for the project on [Google API Console](http://console.developers.google.com).
 
 The `OnCreate` method converts the received URL from an `Android.Net.Url` to a .NET `Uri`, before processing the redirect URL with the `OnPageLoading` method of a public `OAuth2Authenticator` object. This causes Xamarin.Auth to close the web browser tab, and parse the received OAuth data.
 

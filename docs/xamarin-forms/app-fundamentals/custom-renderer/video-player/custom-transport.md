@@ -359,7 +359,7 @@ Two properties of `AVPlayer` must be accessed: The [`Status`](xref:AVFoundation.
 
 ### The Android status setting
 
-The [`IsPlaying`](https://developer.xamarin.com/api/property/Android.Widget.VideoView.IsPlaying/) property of the Android `VideoView` is a Boolean that only indicates if the video is playing or paused. To determine if the `VideoView` can neither play nor pause the video yet, the `Prepared` event of `VideoView` must be handled. These two handlers are set in the `OnElementChanged` method, and detached during the `Dispose` override:
+The [`IsPlaying`](xref:Android.Widget.VideoView.IsPlaying) property of the Android `VideoView` is a Boolean that only indicates if the video is playing or paused. To determine if the `VideoView` can neither play nor pause the video yet, the `Prepared` event of `VideoView` must be handled. These two handlers are set in the `OnElementChanged` method, and detached during the `Dispose` override:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
