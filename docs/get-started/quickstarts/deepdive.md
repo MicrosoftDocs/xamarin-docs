@@ -469,7 +469,7 @@ When creating a [`Style`](xref:Xamarin.Forms.Style), the [`TargetType`](xref:Xam
 > [!NOTE]
 > Styling a Xamarin.Forms application is traditionally accomplished by using XAML styles. However, Xamarin.Forms also supports styling visual elements using Cascading Style Sheets (CSS). For more information, see [Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)](~/xamarin-forms/user-interface/styles/css/index.md).
 
-For more information about XAML styles, see [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.yml).
+For more information about XAML styles, see [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
 ### Providing platform-specific styles
 
