@@ -260,7 +260,7 @@ handles to make the new **Button** the same width as the **Call Button**:
 
     There are a few things happening here:
 
-    - The variable `translatedNumber` was moved from the `ViewDidLoad` method to a _class-level variable_.
+    - The variable `translatedNumber` moved from the `ViewDidLoad` method to a _class-level variable_.
     - The  **CallButton** code was modified to add dialed numbers to the list of phone numbers by calling `PhoneNumbers.Add(translatedNumber)`.
     - The `PrepareForSegue` method was added.
 
