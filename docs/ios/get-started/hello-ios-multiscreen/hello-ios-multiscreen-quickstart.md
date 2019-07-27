@@ -21,7 +21,7 @@ The [accompanying Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-m
 
 ## Requirements
 
-This guide resumes where the Hello, iOS document left off, and requires completion of the [Hello, iOS Quickstart](~/ios/get-started/hello-ios/index.md). The completed version of the Phoneword app can be downloaded from the [Hello, iOS sample](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+This guide resumes where the Hello, iOS document left off, and requires completion of the [Hello, iOS Quickstart](~/ios/get-started/hello-ios/index.md). Download the completed version of the Phoneword app from the [Hello, iOS sample](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
 
 ::: zone pivot="macos"
 
