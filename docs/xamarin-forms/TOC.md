@@ -180,6 +180,7 @@
 #### [Setting a Picker's ItemsSource Property](user-interface/picker/populating-itemssource.md)
 #### [Adding Data to a Picker's Items Collection](user-interface/picker/populating-items.md)
 ### [ProgressBar](user-interface/progressbar.md)
+### [SearchBar](user-interface/searchbar.md)
 ### [Slider](user-interface/slider.md)
 ### [Stepper](user-interface/stepper.md)
 ### [Styles](user-interface/styles/index.md)

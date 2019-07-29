@@ -91,6 +91,10 @@ The [`Picker`](xref:Xamarin.Forms.Picker) view is a control for selecting a text
 
 The [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) is a control that visually represents progress as a horizontal bar that is filled based on a float property.
 
+## [SearchBar](searchbar.md)
+
+The [`SearchBar`](xref:Xamarin.Forms.SearchBar) is a user input control that is used for initiating a search. The SearchBar control supports placeholder text, query input, search execution, and cancellation.
+
 ## [Slider](slider.md)
 
 The `Slider` allows a user to select a numeric value from a continuous range.
