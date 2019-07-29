@@ -13,7 +13,7 @@ ms.date: 10/05/2018
 
 # Hello, iOS Multiscreen – Quickstart
 
-This part of the walkthrough will add a second screen to the Phoneword application that will display a history of the phone numbers that were called with the app. The final application will have a second screen that displays the call history, as illustrated by the following screenshot:
+This part of the walkthrough will add a second screen to the Phoneword application that displays a history of the phone numbers that were called with the app. The final application will have a second screen that displays the call history, as illustrated by the following screenshot:
 
 [![](hello-ios-multiscreen-quickstart-images/00.png "The final application will have a second screen that displays the call history, as illustrated by this screenshot")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
@@ -21,7 +21,7 @@ The [accompanying Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-m
 
 ## Requirements
 
-This guide resumes where the Hello, iOS document left off, and requires completion of the [Hello, iOS Quickstart](~/ios/get-started/hello-ios/index.md). The completed version of the Phoneword app can be downloaded from the [Hello, iOS sample](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+This guide resumes where the Hello, iOS document left off, and requires completion of the [Hello, iOS Quickstart](~/ios/get-started/hello-ios/index.md). Download the completed version of the Phoneword app from the [Hello, iOS sample](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
 
 ::: zone pivot="macos"
 
@@ -260,7 +260,7 @@ handles to make the new **Button** the same width as the **Call Button**:
 
     There are a few things happening here:
 
-    - The variable `translatedNumber` was moved from the `ViewDidLoad` method to a _class-level variable_.
+    - The variable `translatedNumber` moved from the `ViewDidLoad` method to a _class-level variable_.
     - The  **CallButton** code was modified to add dialed numbers to the list of phone numbers by calling `PhoneNumbers.Add(translatedNumber)`.
     - The `PrepareForSegue` method was added.
 
