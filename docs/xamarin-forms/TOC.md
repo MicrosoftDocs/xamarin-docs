@@ -35,7 +35,8 @@
 ### [XAML Standard (Preview)](xaml/standard/index.md)
 #### [Controls](xaml/standard/controls.md)
 ### [Loading XAML at Runtime](xaml/runtime-load.md)
-## [Application Fundamentals](app-fundamentals/index.md)
+## Application Fundamentals
+### [Overview](app-fundamentals/index.yml)
 ### [Accessibility](app-fundamentals/accessibility/index.md)
 #### [Automation Properties](app-fundamentals/accessibility/automation-properties.md)
 #### [Keyboard Accessibility](app-fundamentals/accessibility/keyboard.md)
