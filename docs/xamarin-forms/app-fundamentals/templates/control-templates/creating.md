@@ -231,7 +231,7 @@ class MyCustomControl : ContentView
 {
     Label myLabel;
 
-    protected override OnApplyTemplate()
+    protected override void OnApplyTemplate()
     {  
         myLabel = GetTemplateChild("myLabel");
     }
