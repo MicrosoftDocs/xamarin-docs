@@ -2,7 +2,7 @@
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
-  description: Xamarin.Forms exposes the a complete cross-platform UI toolkit for .NET developers to build mobile, tablet, and desktop apps.
+  description: Xamarin.Forms exposes a complete cross-platform UI toolkit for .NET developers to build mobile, tablet, and desktop apps.
   author: conceptdev
   ms.author: crdun
   ms.date: 04/22/2019
