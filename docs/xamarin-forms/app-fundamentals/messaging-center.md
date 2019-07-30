@@ -34,9 +34,9 @@ Publishers send messages using the [`MessagingCenter.Send`](xref:Xamarin.Forms.M
 MessagingCenter.Send<MainPage>(this, "Hi");
 ```
 
-In this example the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies a generic argument. To receive the message, a subscriber must also specify the same generic argument. In addition, this example specifies two method arguments:
+In this example the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies a generic argument that represents the sender. To receive the message, a subscriber must also specify the same generic argument, indicating that they are listening for a message from that sender. In addition, this example specifies two method arguments:
 
-- The first argument specifies the sender class. The sender class must be specified by any subscribers who wish to receive the message.
+- The first argument specifies the sender instance.
 - The second argument specifies the message.
 
 Payload data can also be sent with a message:
@@ -56,11 +56,11 @@ Subscribers can register to receive a message using one of the [`MessagingCenter
 ```csharp
 MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) =>
 {
-    // Do something whenever the "Hi" message is sent
+    // Do something whenever the "Hi" message is received
 });
 ```
 
-In this example, the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method subscribes to `Hi` messages that are sent by the `MainPage` type, and executes a callback delegate in response to receiving the message. This callback delegate, specified as a lambda expression, could be code that updates the UI, saves some data, or triggers some other operation.
+In this example, the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method subscribes the `this` object to `Hi` messages that are sent by the `MainPage` type, and executes a callback delegate in response to receiving the message. This callback delegate, specified as a lambda expression, could be code that updates the UI, saves some data, or triggers some other operation.
 
 > [!NOTE]
 > A subscriber might not need to handle every instance of a published message, and this can be controlled by the generic type arguments that are specified on the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method.
@@ -84,15 +84,15 @@ Subscribers can unsubscribe from messages they no longer want to receive. This i
 MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 ```
 
-In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method unsubscribes from the `Hi` message sent by the `MainPage` type.
+In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method unsubscribes the `this` object from the `Hi` message sent by the `MainPage` type.
 
-Messages containing payload data should be unsubscribed from using the overload that specifies two generic arguments:
+Messages containing payload data should be unsubscribed from using the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) overload that specifies two generic arguments:
 
 ```csharp
 MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
 ```
 
-In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method unsubscribes from the `Hi` message sent by the `MainPage` type, whose payload data is a `string`.
+In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method unsubscribes the `this` object from the `Hi` message sent by the `MainPage` type, whose payload data is a `string`.
 
 ## Related links
 
