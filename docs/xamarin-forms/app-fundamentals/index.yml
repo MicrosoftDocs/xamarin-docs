@@ -46,19 +46,19 @@ sections:
     - href: behaviors/index.md
       html: "Learn how to add functionality to controls without having to subclass them."
       image:
-        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        src: ~/media/icons/i_user-interface.svg
         href: behaviors/index.md
       title: Behaviors
     - href: custom-renderer/index.md
       html: "Learn how to extend the built-in functionality of Xamarin.Forms by modifying existing controls and creating new custom controls."
       image:
-        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        src: https://docs.microsoft.com/media/common/i_extend.svg
         href: custom-renderer/index.md
       title: Custom Renderers
     - href: data-binding/index.md
       html: "Learn how to automatically synchronize a user interface with its data source."
       image:
-        src: https://docs.microsoft.com/media/common/i_form.svg
+        src: https://docs.microsoft.com/media/common/i_sync.svg
         href: data-binding/index.md
       title: Data Binding
     - href: dependency-service/index.md
@@ -76,13 +76,13 @@ sections:
     - href: gestures/index.md
       html: "Learn how to use Xamarin.Forms gesture recognizers to add support for tap, pinch, pan, and swipe gestures to your applications."
       image:
-        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        src: https://docs.microsoft.com/media/common/i_form.svg
         href: gestures/index.md
       title: Gestures
     - href: localization/index.md
       html: "Learn how to develop multilingual applications with Xamarin.Forms."
       image:
-        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        src: https://docs.microsoft.com/media/common/i_article.svg
         href: localization/index.md
       title: Localization
     - href: messaging-center.md
@@ -112,6 +112,6 @@ sections:
     - href: triggers.md
       html: "Learn how to express actions in XAML that change the appearance of controls based on events or property changes."
       image:
-        src: https://docs.microsoft.com/media/common/i_event.svg
+        src: ~/media/icons/i_xaml-forms.svg
         href: triggers.md
       title: Triggers
