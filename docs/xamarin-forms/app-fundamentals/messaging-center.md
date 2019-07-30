@@ -28,26 +28,24 @@ Publishers send messages using the [`MessagingCenter.Send`](xref:Xamarin.Forms.M
 
 ## Publish a message
 
-[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) messages are strings that are used to identify messages. Publishers notify subscribers of a message with one of the [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) overloads. The following code example publishes a `Hi` message:
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) messages are strings. Publishers notify subscribers of a message with one of the [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) overloads. The following code example publishes a `Hi` message:
 
 ```csharp
 MessagingCenter.Send<MainPage>(this, "Hi");
 ```
 
-In this example, the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies two arguments:
+In this example the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies a generic argument. To receive the message, a subscriber must also specify the same generic argument. In addition, this example specifies two method arguments:
 
 - The first argument specifies the sender class. The sender class must be specified by any subscribers who wish to receive the message.
 - The second argument specifies the message.
 
-Payload data can be sent with a message:
+Payload data can also be sent with a message:
 
 ```csharp
 MessagingCenter.Send<MainPage, string>(this, "Hi", "John");
 ```
 
-In this example, the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method also specifies a third argument. The third argument specifies the payload data to be sent to the subscriber. In this case the payload data is a `string` instance.
-
-In addition, the [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method also specifies a generic argument. To receive the message, a subscriber must also specify the same generic argument. This enables multiple messages that share a message identity but send different payload data types to be received by different subscribers.
+In this example, the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies two generic arguments. The first is the type that's sending the message, and the second is the type of the payload data being sent. To receive the message, a subscriber must also specify the same generic arguments. This enables multiple messages that share a message identity but send different payload data types to be received by different subscribers.
 
 The [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method will publish the message, and any payload data, using a fire-and-forget approach. Therefore, the message is sent even if there are no subscribers registered to receive the message. In this situation, the sent message is ignored.
 
@@ -62,12 +60,12 @@ MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) =>
 });
 ```
 
-In this example, the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method subscribes to `Hi` messages sent by the `MainPage` type, and executes a callback delegate in response to receiving the message. This callback delegate, specified as a lambda expression, could be code that updates the UI.
+In this example, the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method subscribes to `Hi` messages that are sent by the `MainPage` type, and executes a callback delegate in response to receiving the message. This callback delegate, specified as a lambda expression, could be code that updates the UI, saves some data, or triggers some other operation.
 
 > [!NOTE]
 > A subscriber might not need to handle every instance of a published message, and this can be controlled by the generic type arguments that are specified on the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method.
 
-In the following example, the subscriber will only receive `Hi` messages that are sent by the `MainPage` type, whose payload data is a `string`:
+The following example shows how to subscribe to a message that contains payload data:
 
 ```csharp
 MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
@@ -75,6 +73,8 @@ MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
     await DisplayAlert("Message received", "arg=" + arg, "OK");
 });
 ```
+
+In this example, the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method subscribes to `Hi` messages that are sent by the `MainPage` type, whose payload data is a `string`. A callback delegate is executed in response to receiving such a message, that displays the payload data in an alert.
 
 ## Unsubscribe from a message
 
@@ -86,7 +86,7 @@ MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 
 In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method unsubscribes from the `Hi` message sent by the `MainPage` type.
 
-Messages containing payload data can also be unsubscribed from:
+Messages containing payload data should be unsubscribed from using the overload that specifies two generic arguments:
 
 ```csharp
 MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
