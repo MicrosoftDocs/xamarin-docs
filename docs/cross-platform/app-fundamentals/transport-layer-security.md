@@ -147,4 +147,4 @@ in this article, then re-build and re-deploy to your customers.
 - [Foundation.CFNetwork](xref:CoreFoundation.CFNetwork)
 - [Foundation.NSUrlConnection](xref:Foundation.NSUrlConnection)
 - [System.Net.WebRequest](https://msdn.microsoft.com/library/system.net.webrequest(v=vs.110).aspx)
-- [HTTP Client (sample)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
+- [HTTP Client (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)

@@ -583,8 +583,8 @@ The **FlashCardPager** presented in this walkthrough uses a
 `MainActivity` derived from `FragmentActivity`, but you can also derive 
 `MainActivity` from `AppCompatActivity` (which also provides support 
 for managing fragments). To view an `AppCompatActivity` example, see 
-[FlashCardPager](https://developer.xamarin.com/samples/monodroid/UserInterface%5CFlashCardPager/) 
-in the Sample Gallery. 
+[FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)
+in the Sample Gallery.
 
 
 

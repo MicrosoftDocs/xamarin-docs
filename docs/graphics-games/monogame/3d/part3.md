@@ -725,4 +725,4 @@ This walkthrough covers how to move and rotate `Models` in 3D space using `Matri
 ## Related Links
 
 - [MonoGame API Link](http://www.monogame.net/documentation/?page=api)
-- [Finished Project (sample)](https://developer.xamarin.com/samples/monodroid/MonoGame3DCamera/)
+- [Finished Project (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/monogame3dcamera)
