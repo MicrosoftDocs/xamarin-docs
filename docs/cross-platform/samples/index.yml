@@ -11,7 +11,7 @@ abstract:
   description: Xamarin cross-platform sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/
+    - href: https://docs.microsoft.com/samples/browse/?products=xamarin
       text: All Xamarin Samples
 sections:
 - title: Get Started
@@ -20,11 +20,11 @@ sections:
      style: cards
      className: cardsW
      items:
-     - href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
+     - href: https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/
        html: This sample demonstrates a Todo list application where the data is stored and accessed in a local SQLite database, built with Xamarin.Forms.
        image:
          src: images/todo.png
-         href: https://developer.xamarin.com/samples/xamarin-forms/Todo/
+         href: https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo/
        title: Todo
      - href: https://github.com/xamarinhq/app-myshoppe
        html: Demo app that empowers salespeople to track their sales performance, manage leads, view their contacts, manage orders, and browse the product catalog.
@@ -79,9 +79,9 @@ sections:
      style: cards
      className: cardsW
      items:
-     - href: https://developer.xamarin.com/samples/
+     - href: https://docs.microsoft.com/samples/browse/?products=xamarin
        html: The complete set of Xamarin cross-platform sample apps and code demos.
        image: 
          src: ~/media/shared/sample-download.svg
-         href: https://developer.xamarin.com/samples/
+         href: https://docs.microsoft.com/samples/browse/?products=xamarin
        title: All Xamarin samples

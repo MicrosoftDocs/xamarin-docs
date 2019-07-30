@@ -11,7 +11,7 @@ ms.date: 11/29/2017
 
 # Highlighting a Route on a Map
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polyline)
 
 _This article explains how to add a polyline overlay to a map. A polyline overlay is a series of connected line segments that are typically used to show a route on a map, or form any shape that's required._
 
@@ -299,6 +299,6 @@ This article explained how to add a polyline overlay to a map, to show a route o
 
 ## Related Links
 
-- [Polyline Map Ovlerlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/Map/Polyline/)
+- [Polyline Map Ovlerlay (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polyline)
 - [Customizing a Map Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

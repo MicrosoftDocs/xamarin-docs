@@ -115,4 +115,4 @@ This article has covered the enhancements Apple has made to App Search in iOS 10
 
 ## Related Links
 
-- [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
+- [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

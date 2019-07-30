@@ -11,7 +11,7 @@ abstract:
   description: Xamarin Android sample apps and code demos to help you get started building mobile apps with C# and Xamarin.
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/android/all/
+    - href: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
       text: All Xamarin.Android Samples
 sections:
 - title: 
@@ -70,9 +70,9 @@ sections:
        title: WatchFace
 
 
-     - href: https://developer.xamarin.com/samples/android/all/
+     - href: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
        html: The complete set of Xamarin.Android sample apps and code demos.
        image: 
          src: ~/media/shared/sample-download.svg
-         href: https://developer.xamarin.com/samples/android/all/
+         href: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
        title: All Xamarin.Android samples

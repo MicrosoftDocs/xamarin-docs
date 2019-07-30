@@ -11,7 +11,7 @@ ms.date: 02/26/2019
 
 # Adding Data to a Picker's Items Collection
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 
 _The Picker view is a control for selecting a text item from a list of data. This article explains how to populate a Picker with data by adding it to the Items collection, and how to respond to item selection by the user._
 
@@ -78,5 +78,5 @@ This method obtains the [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedInde
 
 ## Related links
 
-- [Picker Demo (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/PickerDemo/)
+- [Picker Demo (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo)
 - [Picker](xref:Xamarin.Forms.Picker)

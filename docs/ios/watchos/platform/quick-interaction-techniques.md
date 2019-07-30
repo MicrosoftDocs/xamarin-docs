@@ -350,4 +350,4 @@ This article has covered the quick interaction techniques Apple has added in wat
 
 ## Related Links
 
-- [watchOS Samples](https://developer.xamarin.com/samples/watchos/all/)
+- [watchOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)

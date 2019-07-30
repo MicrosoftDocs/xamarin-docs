@@ -11,7 +11,7 @@ ms.date: 01/12/2016
 
 # Xamarin.Forms Cells
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 
 _Xamarin.Forms cells can be added to ListViews and TableViews._
 
@@ -56,6 +56,6 @@ Xamarin.Forms supports the following cell types:
 
 ## Related Links
 
-- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms FormsGallery sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Xamarin.Forms API Documentation](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

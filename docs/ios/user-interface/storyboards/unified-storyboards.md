@@ -751,7 +751,7 @@ Return to Visual Studio for Mac and stop the application from running.
 
 To maintain backward compatibility with iOS 7, just include the usual `Default.png` image assets as normal in the iOS 8 application. iOS will return to the previous behavior and use those files as the startup screen when running on an iOS 7 device.
 
-To see an implementation of a Dynamic Launch Screen in Xamarin, look at the [Dynamic Launch Screens](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/) sample iOS 8 application attached to this document.
+To see an implementation of a Dynamic Launch Screen in Xamarin, look at the [Dynamic Launch Screens](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen) sample iOS 8 application attached to this document.
 
 ## Summary
 
@@ -761,9 +761,9 @@ Finally, this article covered the basics of creating Unified Storyboards with th
 
 ## Related Links
 
-- [Adaptive Photos (sample)](https://developer.xamarin.com/samples/monotouch/ios8/AdaptivePhotos/)
+- [Adaptive Photos (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
 - [StoryboardIntro Sample](https://developer.xamarin.com/samples/monotouch/StoryboardIntro/)
-- [Dynamic Launch Screens (sample)](https://developer.xamarin.com/samples/monotouch/ios8/DynamicLaunchScreen/)
+- [Dynamic Launch Screens (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Dynamic Layouts in iOS8 - Evolve 2014 (video)](http://youtu.be/f3mMGlS-lM4)
 - [UIPresentationController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPresentationController_class/)

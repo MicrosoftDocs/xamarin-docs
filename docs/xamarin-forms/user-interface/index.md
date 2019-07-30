@@ -11,7 +11,7 @@ ms.date: 06/11/2019
 
 # Xamarin.Forms User Interface Views
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FormsGallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _How to use the views provided by Xamarin.Forms_
 
@@ -141,4 +141,4 @@ Xamarin.Forms uses the native web browser control on each platform, and can disp
 
 ## Related Links
 
-- [Xamarin.Forms Gallery (sample)](https://developer.xamarin.com/samples/FormsGallery/)
+- [Xamarin.Forms Gallery (sample)](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)

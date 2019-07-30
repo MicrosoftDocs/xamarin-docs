@@ -345,13 +345,12 @@ When the app is run and the user clicks on the UI element that you created the S
 
 ## Complex Storyboard Example
 
-For a complex example of working with Storyboards in a Xamarin.Mac app, please see the [SourceWriter Sample App](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
+For a complex example of working with Storyboards in a Xamarin.Mac app, please see the [SourceWriter Sample App](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
 
 The SourceWriter code has been fully commented and, where available, links have be provided from key technologies or methods to relevant information in the Xamarin.Mac Guides Documentation.
 
 ## Related Links
 
-- [MacStoryboard (sample)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

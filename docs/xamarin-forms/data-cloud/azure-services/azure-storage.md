@@ -11,7 +11,7 @@ ms.date: 12/28/2018
 
 # Store and Access Data in Azure Storage from Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 
 _Azure Storage is a scalable cloud storage solution that can be used to store unstructured, and structured data. This article demonstrates how to use Xamarin.Forms to store text and binary data in Azure Storage, and how to access the data._
 
@@ -255,7 +255,7 @@ After retrieving a container reference, the method retrieves a blob reference fo
 
 ## Related Links
 
-- [Azure Storage (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureStorage/)
+- [Azure Storage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azurestorage)
 - [Introduction to Storage](https://azure.microsoft.com/documentation/articles/storage-introduction/)
 - [How to use Blob Storage from Xamarin](https://azure.microsoft.com/documentation/articles/storage-xamarin-blob-storage/)
 - [Using Shared Access Signatures (SAS)](https://azure.microsoft.com/documentation/articles/storage-dotnet-shared-access-signature-part-1/)

@@ -604,4 +604,4 @@ the answer when the user taps on a flash card problem.
 
 ## Related Links
 
-- [FlashCardPager (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager)
+- [FlashCardPager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)

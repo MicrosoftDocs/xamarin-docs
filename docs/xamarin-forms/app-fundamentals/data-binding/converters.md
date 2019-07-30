@@ -11,7 +11,7 @@ ms.date: 01/05/2018
 
 # Xamarin.Forms Binding Value Converters
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 
 Data bindings usually transfer data from a source property to a target property, and in some cases from the target property to the source property. This transfer is straightforward when the source and target properties are of the same type, or when one type can be converted to the other type through an implicit conversion. When that is not the case, a type conversion must take place.
 
@@ -46,7 +46,7 @@ The `ConvertBack` method is called when data moves from the target to the source
 
 If the data binding also includes a `StringFormat` setting, the value converter is invoked before the result is formatted as a string.
 
-The **Enable Buttons** page in the [**Data Binding Demos**](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/) sample demonstrates how to use this value converter in a data binding. The `IntToBoolConverter` is instantiated in the page's resource dictionary. It is then referenced with a `StaticResource` markup extension to set the `Converter` property in two data bindings. It is very common to share data converters among multiple data bindings on the page:
+The **Enable Buttons** page in the [**Data Binding Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) sample demonstrates how to use this value converter in a data binding. The `IntToBoolConverter` is instantiated in the page's resource dictionary. It is then referenced with a `StaticResource` markup extension to set the `Converter` property in two data bindings. It is very common to share data converters among multiple data bindings on the page:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -462,5 +462,5 @@ Here's the result:
 
 ## Related Links
 
-- [Data Binding Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DataBindingDemos/)
+- [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Data binding chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

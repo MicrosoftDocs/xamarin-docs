@@ -456,6 +456,6 @@ In the [next tutorial in the Getting Started series](~/ios/get-started/hello-ios
 
 ## Related links
 
-- [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [iOS Provisioning Portal](https://developer.apple.com/account/#/overview)

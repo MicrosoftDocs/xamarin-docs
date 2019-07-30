@@ -11,7 +11,7 @@ ms.date: 06/19/2017
 
 # Authenticate Users with an Identity Provider
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 
 _Xamarin.Auth is a cross-platform SDK for authenticating users and storing their accounts. It includes OAuth authenticators that provide support for consuming identity providers such as Google, Microsoft, Facebook, and Twitter. This article explains how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application._
 
@@ -262,7 +262,7 @@ This article explained how to use Xamarin.Auth to manage the authentication proc
 
 ## Related Links
 
-- [OAuthNativeFlow (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+- [OAuthNativeFlow (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 - [OAuth 2.0 for Native Apps](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-12)
 - [Using OAuth2.0 to Access Google APIs](https://developers.google.com/identity/protocols/OAuth2)
 - [Xamarin.Auth (NuGet)](https://www.nuget.org/packages/xamarin.auth/)

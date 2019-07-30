@@ -54,8 +54,8 @@ A fingerprint must already be enrolled with the device for each user that is to 
 
 ## Related Links
 
-- [Fingerprint Guide Sample App](https://developer.xamarin.com/samples/monodroid/FingerprintGuide/)
-- [Fingerprint Dialog Sample](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog/)
+- [Fingerprint Guide Sample App](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fingerprintguide)
+- [Fingerprint Dialog Sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)
 - [Requesting Permissions at Runtime](https://developer.android.com/training/permissions/requesting.html)
 - [android.hardware.fingerprint](https://developer.android.com/reference/android/hardware/fingerprint/package-summary.html)
 - [android.support.v4.hardware.fingerprint](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/package-summary.html)

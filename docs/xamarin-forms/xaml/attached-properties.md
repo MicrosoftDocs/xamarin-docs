@@ -11,7 +11,7 @@ ms.date: 06/02/2016
 
 # Attached Properties
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 
 _An attached property is a special type of bindable property, defined in one class but attached to other objects, and recognizable in XAML as an attribute that contains a class and a property name separated by a period. This article provides an introduction to attached properties, and demonstrates how to create and consume them._
 
@@ -142,6 +142,6 @@ This article provided an introduction to attached properties, and demonstrated h
 
 - [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md)
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
-- [Shadow Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/Effects/ShadowEffect/)
+- [Shadow Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-shadoweffect)
 - [BindableProperty](xref:Xamarin.Forms.BindableProperty)
 - [BindableObject](xref:Xamarin.Forms.BindableObject)

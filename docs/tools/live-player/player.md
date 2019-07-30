@@ -29,7 +29,7 @@ barcode showing on your computer:
 ![Screenshot of the Android barcode scanner](player-images/scan-android-sml.png)
 
 If the connection is successful, the code should run on
-the device almost immediately (such as the [Calculator sample](https://developer.xamarin.com/samples/mobile/LivePlayer/BasicCalculator)):
+the device almost immediately (such as the [Calculator sample](https://github.com/xamarin/mobile-samples/tree/master/LivePlayer/BasicCalculator):
 
 ![Sample calculator app running on device](player-images/basic-calculator-sml.png)
 

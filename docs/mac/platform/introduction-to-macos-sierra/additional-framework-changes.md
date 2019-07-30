@@ -196,5 +196,5 @@ The following frameworks have been added to macOS Sierra:
 
 ## Related Links
 
-- [Mac Samples](https://developer.xamarin.com/samples/mac/)
+- [Mac Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [What's new in OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

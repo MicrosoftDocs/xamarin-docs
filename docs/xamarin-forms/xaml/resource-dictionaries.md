@@ -12,7 +12,7 @@ ms.custom: video
 
 # Resource Dictionaries
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 
 _XAML resources are definitions of objects that can be shared and re-used throughout a Xamarin.Forms application._
 
@@ -301,7 +301,7 @@ This article explained how to create and consume a [`ResourceDictionary`](xref:X
 
 ## Related Links
 
-- [Resource Dictionaries (sample)](https://developer.xamarin.com/samples/xamarin-forms/XAML/ResourceDictionaries/)
+- [Resource Dictionaries (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-resourcedictionaries)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 

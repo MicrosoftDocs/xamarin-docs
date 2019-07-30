@@ -11,7 +11,7 @@ ms.date: 08/23/2018
 
 # SkiaSharp blend modes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 These articles focus on the [`BlendMode`](xref:SkiaSharp.SKPaint.BlendMode) property of [`SKPaint`](xref:SkiaSharp.SKPaint). The `BlendMode` property is of type [`SKBlendMode`](xref:SkiaSharp.SKBlendMode), an enumeration with 29 members.
 
@@ -88,4 +88,4 @@ Use the non-separable blend modes to alter hue, saturation, or luminosity.
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

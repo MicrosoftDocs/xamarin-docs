@@ -11,7 +11,7 @@ ms.date: 11/25/2015
 
 # Xamarin.Forms AbsoluteLayout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) positions and sizes child elements proportional to its own size and position or by absolute values. Child views may be positioned and sized using proportional values or static values, and proportional and static values can be mixed.
 
@@ -286,5 +286,5 @@ Notice that `AbsoluteLayout`s are nested, because in some cases nesting layouts 
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 14](https://developer.xamarin.com/r/xamarin-forms/book/chapter14.pdf)
 - [AbsoluteLayout](xref:Xamarin.Forms.AbsoluteLayout)
-- [Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble Example (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble Example (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

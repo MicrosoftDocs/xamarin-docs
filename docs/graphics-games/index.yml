@@ -11,7 +11,7 @@ abstract:
   description: Cross-platform graphics, 2D, and 3D gaming for mobile and desktop platforms.
   menu:
     items:
-    - href: https://developer.xamarin.com/samples/
+    - href: https://docs.microsoft.com/samples/browse/?products=xamarin
       text: Samples
 sections:
 - title:

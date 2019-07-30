@@ -11,7 +11,7 @@ ms.date: 05/03/2016
 
 # Using CocosSharp in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+[![Download Sample](~/media/shared/download.png) Download the sample](hhttps://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
 
 _CocosSharp can be used to add precise shape, image, and text rendering to an application for advanced visualization_
 
@@ -355,4 +355,4 @@ The CocosSharp game engine offers a lot of functionality and depth, so this guid
 
 ## Related Links
 
-- [CocosSharpForms (sample)](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+- [CocosSharpForms (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)

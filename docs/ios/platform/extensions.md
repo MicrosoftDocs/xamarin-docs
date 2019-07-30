@@ -456,5 +456,5 @@ This document has covered Extensions, what they are, the type of Extension Point
 
 ## Related links
 
-- [ContainerApp (sample)](https://developer.xamarin.com/samples/monotouch/intro-to-extensions)
+- [ContainerApp (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/intro-to-extensions)
 - [Creating extensions in Xamarin.iOS (video)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)
