@@ -32,11 +32,11 @@ sections:
          src: images/gps.png
          href: https://developer.xamarin.com/samples/monodroid/GooglePlayServices/
        title: Google Play Services
-     - href: https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/
+     - href: https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/
        html: This sample demonstrates how to use ViewPager and PagerTabStrip together to implement an app that presents a series of math problems on flash cards.
        image:
          src: images/flash.png
-         href: https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager/
+         href: https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager/
        title: Flash Card Pager
      - href: https://developer.xamarin.com/samples/monodroid/FragmentsWalkthrough/
        html: Fragments are self-contained, modular components that are used to help address the complexity of writing applications that may run on screens of different sizes.
@@ -50,11 +50,11 @@ sections:
          src: images/fingerpaint.png
          href: https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint/
        title: Finger Paint
-     - href: https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/
+     - href: https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer/
        html: Use this sample to learn how to use the new CardView and RecyclerView widgets introduced with Android 5.0 Lollipop.
        image:
          src: images/recycler.png
-         href: https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/
+         href: https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer/
        title: RecyclerViewer
      - href: https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/
        html: Android sample replacing the ActionBar with the new ToolBar in Android 5.0 Lollipop.

@@ -213,7 +213,7 @@ The output from a PCL (ie. the resulting assembly DLL) can also be added as a re
 
 ## PCL example
 
-The [TaskyPortable](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
+The [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
 sample application demonstrates how a Portable Class Library can be used with Xamarin.
 Here are some screenshots of the resulting apps running on iOS and Android:
 
@@ -291,7 +291,7 @@ This article has briefly discussed the benefits and pitfalls of Portable Class L
 
 ## Related links
 
-- [TaskyPortable (sample)](https://developer.xamarin.com/samples/mobile/TaskyPortable/)
+- [TaskyPortable (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/taskyportable/)
 - [Building Cross Platform Applications](~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md)
 - [Portable Visual Basic](~/cross-platform/platform/visual-basic/index.md)
 - [Shared Projects](~/cross-platform/app-fundamentals/shared-projects.md)
