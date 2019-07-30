@@ -117,7 +117,7 @@ In the previous sections, we looked at the theory behind access and authenticati
 
 ### Walkthrough
 
-So let’s look at adding some Touch ID Authentication to our application. In this walkthrough we are going to update the [Storyboard Table](https://developer.xamarin.com/samples/StoryboardTable/) sample, adding local authentication so that it works like the [Storyboard Table – Local Authentication](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable-localauthentication) sample, which only allows authenticated users to add chores to the list.
+So let’s look at adding some Touch ID Authentication to our application. In this walkthrough we are going to update the [Storyboard Table](https://docs.microsoft.com/samples/xamarin/ios-samples/data/storyboardtable/) sample, adding local authentication so that it works like the [Storyboard Table – Local Authentication](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable-localauthentication) sample, which only allows authenticated users to add chores to the list.
 
 1. Download the sample and run it in Visual Studio for Mac.
 2. Double Click on `MainStoryboard.Storyboard` to open the sample in the iOS Designer. With this sample, we want to add a new screen to our application, which will control the authentication. This will go before the current `MasterViewController`.

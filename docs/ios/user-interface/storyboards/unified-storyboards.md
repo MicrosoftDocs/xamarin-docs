@@ -762,7 +762,6 @@ Finally, this article covered the basics of creating Unified Storyboards with th
 ## Related Links
 
 - [Adaptive Photos (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
-- [StoryboardIntro Sample](https://developer.xamarin.com/samples/monotouch/StoryboardIntro/)
 - [Dynamic Launch Screens (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Dynamic Layouts in iOS8 - Evolve 2014 (video)](http://youtu.be/f3mMGlS-lM4)
