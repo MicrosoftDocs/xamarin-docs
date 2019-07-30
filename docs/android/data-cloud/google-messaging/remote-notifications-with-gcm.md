@@ -901,5 +901,5 @@ our client app through GCM.
 
 ## Related Links
 
-- [GCM RemoteNotifications (sample)](https://developer.xamarin.com/samples/monodroid/RemoteNotifications)
+- [GCM RemoteNotifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)
 - [Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md)

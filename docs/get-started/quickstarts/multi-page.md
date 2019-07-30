@@ -13,7 +13,7 @@ ms.date: 04/01/2019
 
 # Perform Navigation in a Multi-Page Xamarin.Forms Application
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
 
 In this quickstart, you will learn how to:
 
@@ -28,7 +28,7 @@ The quickstart walks through how to turn a single page cross-platform Xamarin.Fo
 
 ### Prerequisites
 
-You should successfully complete the [previous quickstart](single-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/) and use it as the starting point for this quickstart.
+You should successfully complete the [previous quickstart](single-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/) and use it as the starting point for this quickstart.
 
 ::: zone pivot="windows"
 
@@ -612,5 +612,5 @@ To modify the application so that it stores its data in a local SQLite.NET datab
 
 ## Related links
 
-- [Notes (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/)
+- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

@@ -17,13 +17,11 @@ With the introduction of [ARKit](https://developer.apple.com/arkit/), Apple has 
 
 This page explains how to connect these two worlds together to create great augmented reality applications.
 
-
 ## The Basics
 
 What we want to do is present 3D content on top of the world as seen by the iPhone/iPad.   The idea is to blend the contents coming from the device’s camera with the 3D content, and as the user of the device moves around the room to ensure that the 3D object behave as is they part of that room - this is done by anchoring the objects into this world.
 
 ![Animated figure in ARKit](urhosharp-images/image1.gif)
-
 
 We will be using the Urho library to load our 3D assets and place them on the world, and we will be using ARKit to get the video stream coming from the camera as well as the location of the phone in the world.   As the user moves with his phone, we will use the changes in the location to update the coordinate system that the Urho engine is displaying.
 
@@ -33,7 +31,7 @@ This way, when you place an object in the 3D space and the user moves, the locat
 
 ### iOS Application Launch
 
-Your iOS application needs to create and launch your 3D content, you do this by creating an implementing a subclass of the [`Urho.Application`](https://developer.xamarin.com/api/type/Urho.Application/) and provide your setup code by overriding the `Start` method.  This is where your scene gets populated with data, event handlers are setup and so on.
+Your iOS application needs to create and launch your 3D content, you do this by creating an implementing a subclass of the `Urho.Application` and provide your setup code by overriding the `Start` method.  This is where your scene gets populated with data, event handlers are setup and so on.
 
 We have introduced an `Urho.ArkitApp` class that subclasses `Urho.Application` and on its `Start` method does the heavy lifting.   All you need to do to your existing Urho application is change the base class to be of type `Urho.ArkitApp` and you have an application that will run your urho Scene in the world.
 
@@ -45,11 +43,10 @@ The setup takes place in the `Start`  virtual method.   When you override this m
 
 The `Start`  method sets up the scene, viewport, camera and a directional light, and surfaces those as public properties:
 
-- a [`Scene`](https://developer.xamarin.com/api/type/Urho.Scene/) to hold your objects,
-- a directional [`Light`](https://developer.xamarin.com/api/type/Urho.Light/) with shadows, and whose location is available via the `LightNode`  property
-- a [`Camera`](https://developer.xamarin.com/api/type/Urho.Camera/) whose components are updated when ARKit delivers an update to the application and
-- a [`ViewPort`](https://developer.xamarin.com/api/type/Urho.Viewport/) displaying the results.
-
+- a `Scene` to hold your objects,
+- a directional `Light` with shadows, and whose location is available via the `LightNode`  property
+- a `Camera` whose components are updated when ARKit delivers an update to the application and
+- a `ViewPort` displaying the results.
 
 ### Your code
 
@@ -108,7 +105,7 @@ The following diagram shows what is taking place in the `ArkitApp` class:
 
 The idea is simple, combine the video coming out of the camera with our 3D graphics to produce the combined image.     We will be getting a series of these captured images in sequence, and we will mix this input with the Urho scene.
 
-The simplest way to do it is to insert a [`RenderPathCommand`](https://developer.xamarin.com/api/type/Urho.RenderPathCommand/) into the main [`RenderPath`](https://developer.xamarin.com/api/type/Urho.RenderPath/).  This is a set of commands that are performed to draw a single frame.  This command will fill the viewport with any texture we pass to it.    We set this up on the first frame that is process, and the actual definition is done in th **ARRenderPath.xml** file that is loaded at this point.
+The simplest way to do it is to insert a `RenderPathCommand` into the main `RenderPath`.  This is a set of commands that are performed to draw a single frame.  This command will fill the viewport with any texture we pass to it.    We set this up on the first frame that is process, and the actual definition is done in th **ARRenderPath.xml** file that is loaded at this point.
 
 However, we are faced with two problems to blend these two worlds together:
 

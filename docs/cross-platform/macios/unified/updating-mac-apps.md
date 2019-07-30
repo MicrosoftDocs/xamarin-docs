@@ -122,4 +122,4 @@ Whether or not you choose to use the automatic or manual method to convert your 
 
 - [Tips for Updating Code to the Unified API](~/cross-platform/macios/unified/updating-tips.md)
 - [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

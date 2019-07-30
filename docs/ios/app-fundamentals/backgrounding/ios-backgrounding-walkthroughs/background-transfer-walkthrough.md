@@ -144,4 +144,4 @@ In this walkthrough, we covered the basic steps to implement the Background Tran
 
 ## Related Links
 
-- [Simple Background Transfer (sample)](https://developer.xamarin.com/samples/monotouch/SimpleBackgroundTransfer/)
+- [Simple Background Transfer (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplebackgroundtransfer)

@@ -288,5 +288,5 @@ Android versions.
 
 ## Related Links
 
-- [Lollipop Toolbar (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
-- [AppCompat Toolbar (sample)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)
+- [Lollipop Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)
+- [AppCompat Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)

@@ -11,7 +11,7 @@ ms.date: 12/01/2017
 
 # Xamarin.Forms Modal Pages
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
 
 _Xamarin.Forms provides support for modal pages. A modal page encourages users to complete a self-contained task that cannot be navigated away from until the task is completed or cancelled. This article demonstrates how to navigate to modal pages._
 
@@ -257,5 +257,5 @@ This article demonstrated how to navigate to modal pages. A modal page encourage
 ## Related Links
 
 - [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)
-- [Modal (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Modal/)
-- [PassingData (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/PassingData/)
+- [Modal (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-modal)
+- [PassingData (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)

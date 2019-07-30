@@ -239,4 +239,4 @@ As noted above, if your Xamarin.Forms app includes native code such as custom re
 - [Updating iOS Apps](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md)
 - [Updating Tips](~/cross-platform/macios/unified/updating-tips.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

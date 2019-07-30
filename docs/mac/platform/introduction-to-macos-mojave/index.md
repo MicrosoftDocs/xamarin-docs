@@ -13,7 +13,7 @@ ms.date: 10/05/2018
 This document provides a high-level of overview of new and updated
 features in macOS Mojave.
 
-To get started building macOS Mojave apps with Xamarin, take a look at the [getting started guide](~/mac/platform/introduction-to-macos-mojave/get-started.md) for [Xamarin.Mac 5.0](https://developer.xamarin.com/releases/mac/xamarin.mac_5/xamarin.mac_5.0/).
+To get started building macOS Mojave apps with Xamarin, take a look at the [getting started guide](~/mac/platform/introduction-to-macos-mojave/get-started.md) for [Xamarin.Mac 5.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/mac/xamarin.mac_5/xamarin.mac_5.0.md).
 
 ## Dark Mode
 
@@ -54,6 +54,6 @@ to adopt Metal and Metal Performance Shaders.
 
 ## Related links
 
-- [Xamarin.Mac samples](https://developer.xamarin.com/samples/mac/)
+- [Xamarin.Mac samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [macOS – Apple Developer](https://developer.apple.com/macos/)
 - [Xamarin.Mac 5.0 release notes](https://docs.microsoft.com/xamarin/mac/release-notes/5/5.0/)

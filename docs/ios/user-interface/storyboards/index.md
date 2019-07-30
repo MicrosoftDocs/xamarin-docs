@@ -118,7 +118,7 @@ Any application using Size Classes will also use the new [*Adaptive Segues*](~/i
 
 ### Transferring Data with Segues
 
-The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) sample, demonstrates this: 
+The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) sample, demonstrates this: 
 
 
 ```csharp
@@ -397,7 +397,7 @@ In this code we have matched the segueIdentifier to our `SegueToPink` segue, so 
 
 We can apply this approach to any Segue on this view controller by checking the segueIdentifier argument to the ShouldPerformSegue method. In this case we only have one Segue identifier – `SegueToPink`.
 
-Refer to the Storyboards.Conditional solution in the [Manual Storyboards sample](https://developer.xamarin.com/samples/monotouch/ManualStoryboard/) for a working example.
+Refer to the Storyboards.Conditional solution in the [Manual Storyboards sample](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) for a working example.
 
 <a name="Using-Storyboard-References" />
 
@@ -525,7 +525,7 @@ This article introduces the concept of Storyboards and how they can be beneficia
 
 ## Related Links
 
-- [Manual Storyboard (sample)](https://developer.xamarin.com/samples/ManualStoryboard/)
+- [Manual Storyboard (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard/)
 - [Introduction to iOS Designer](~/ios/user-interface/designer/introduction.md)
 - [Converting to Storyboards](https://developer.apple.com/library/ios/#releasenotes/Miscellaneous/RN-AdoptingStoryboards/)
 - [UIStoryboard Class Reference](https://developer.apple.com/library/ios/#documentation/UIKit/Reference/UIStoryboard_Class/Reference/Reference.html)

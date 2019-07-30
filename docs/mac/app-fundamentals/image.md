@@ -448,7 +448,7 @@ This article has taken a detailed look at working with Images and Icons in a Xam
 
 ## Related Links
 
-- [MacImages (sample)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Table views](~/mac/user-interface/table-view.md)
 - [Outline views](~/mac/user-interface/outline-view.md)

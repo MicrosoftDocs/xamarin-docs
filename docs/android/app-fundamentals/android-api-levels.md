@@ -217,7 +217,7 @@ changing the Target Framework setting does not change runtime behavior.
 The Target Framework identifies which library versions your application
 is linked against &ndash; this setting determines which APIs you can use in
 your app. For example, if you want to use the
-[NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/)
+[NotificationBuilder.SetCategory](xref:Android.App.Notification.Builder.SetCategory*)
 method that was introduced in Android 5.0 Lollipop, you must set the
 Target Framework to **API Level 21 (Lollipop)** or later. If you set
 your project's Target Framework to an API level such as **API Level 19
@@ -230,8 +230,7 @@ for any deprecated APIs that might be called by your code. Using the
 latest Target Framework version is especially important when you use
 the latest support library releases &ndash; each library expects your
 app to be compiled at that support library's minimum API level or
-greater. 
-
+greater.
 
 # [Visual Studio](#tab/windows)
 
@@ -407,7 +406,7 @@ then your code has to find a way to function properly without making
 this API call.
 
 For example, let's suppose that we want to use the
-[NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/)
+[NotificationBuilder.SetCategory](xref:Android.App.Notification.Builder.SetCategory*)
 method to categorize a notification when running on **Android 5.0
 Lollipop** (and later), but we still want our app to run on earlier
 versions of Android such as **Android 4.1 Jelly Bean** (where

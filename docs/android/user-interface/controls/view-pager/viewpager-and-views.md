@@ -487,4 +487,4 @@ caption at the top of each page.
 
 ## Related Links
 
-- [TreePager (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager)
+- [TreePager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)

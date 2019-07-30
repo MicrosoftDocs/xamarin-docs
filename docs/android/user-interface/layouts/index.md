@@ -9,7 +9,7 @@ ms.author: crdun
 ms.date: 08/18/2017
 ---
 
-# Layouts
+# Xamarin.Android Layouts
 
 Layouts are used to arrange the elements that make up the UI interface
 of a screen (such as an Activity). The following sections explain how

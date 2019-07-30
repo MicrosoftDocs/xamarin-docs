@@ -295,7 +295,7 @@ After the client has successfully bound to the service and the `Messenger` is av
 
 Once the client is connected and has a `Messenger` object, it is possible to communicate with the service by dispatching `Message` objects via the `Messenger`. This communication is one-way, the client sends the message but there is no return message from the service to the client. In this regard, the `Message` is a fire-and-forget mechanism.
 
-The preferred way to create a `Message` object is to use the [`Message.Obtain`](https://developer.xamarin.com/api/type/Android.OS.Message/#Public%20Methods) factory method. This method will pull a `Message` object from a global pool that is maintained by Android. `Message.Obtain` also has some overloaded methods that allow the `Message` object to be initialized with the values and parameters required by the service.  Once the `Message` is instantiated, it dispatched to the service by calling `Messenger.Send`. This snippet is one example of creating and dispatching a `Message` to the service process:
+The preferred way to create a `Message` object is to use the [`Message.Obtain`](xref:Android.OS.Message) factory method. This method will pull a `Message` object from a global pool that is maintained by Android. `Message.Obtain` also has some overloaded methods that allow the `Message` object to be initialized with the values and parameters required by the service.  Once the `Message` is instantiated, it dispatched to the service by calling `Messenger.Send`. This snippet is one example of creating and dispatching a `Message` to the service process:
 
 ```csharp
 Message msg = Message.Obtain(null, Constants.SAY_HELLO_TO_TIMESTAMP_SERVICE);
@@ -309,13 +309,13 @@ catch (RemoteException ex)
 }
 ```
 
-There are several different forms of the `Message.Obtain` method. The previous example uses the [`Message.Obtain(Handler h, Int32 what)`](https://developer.xamarin.com/api/member/Android.OS.Message.Obtain/p/Android.OS.Handler/System.Int32/). Because this is an asynchronous request to an out-of-process service; there will be no response from the service, so the `Handler` is set to `null`. The second parameter, `Int32 what`, will be stored in the `.What` property of the `Message` object. The `.What` property is used by code in the service process to invoke methods on the service.
+There are several different forms of the `Message.Obtain` method. The previous example uses the [`Message.Obtain(Handler h, Int32 what)`](xref:Android.OS.Message.Obtain). Because this is an asynchronous request to an out-of-process service; there will be no response from the service, so the `Handler` is set to `null`. The second parameter, `Int32 what`, will be stored in the `.What` property of the `Message` object. The `.What` property is used by code in the service process to invoke methods on the service.
 
-The `Message` class also exposes two additional properties that may be of use to the recipient: `Arg1` and `Arg2`. These two properties are integer values that may have some special agreed upon values that have meaning between the client and the service. For example, `Arg1` may hold a customer ID and `Arg2` may hold a purchase order number for that customer. The [`Method.Obtain(Handler h, Int32 what, Int32 arg1, Int32 arg2)`](https://developer.xamarin.com/api/member/Android.OS.Message.Obtain/p/Android.OS.Handler/System.Int32/System.Int32/System.Int32/) can be used to set the two properties when the `Message` is created. Another way to populate these two values is to  set the `.Arg` and `.Arg2` properties directly on the `Message` object after it has been created.
+The `Message` class also exposes two additional properties that may be of use to the recipient: `Arg1` and `Arg2`. These two properties are integer values that may have some special agreed upon values that have meaning between the client and the service. For example, `Arg1` may hold a customer ID and `Arg2` may hold a purchase order number for that customer. The [`Method.Obtain(Handler h, Int32 what, Int32 arg1, Int32 arg2)`](xref:Android.OS.Message.Obtain) can be used to set the two properties when the `Message` is created. Another way to populate these two values is to  set the `.Arg` and `.Arg2` properties directly on the `Message` object after it has been created.
 
 ### Passing Additional Values to the Service
 
-It is possible to pass more complex data to the service by using a `Bundle`. In this case, extra values can be placed in a `Bundle` and sent along with the `Message` by setting the [`.Data` property](https://developer.xamarin.com/api/property/Android.OS.Message.Data/) property before sending.
+It is possible to pass more complex data to the service by using a `Bundle`. In this case, extra values can be placed in a `Bundle` and sent along with the `Message` by setting the [`.Data` property](xref:Android.OS.Message.Data) property before sending.
 
 ```csharp
 Bundle serviceParameters = new Bundle();
@@ -504,13 +504,13 @@ This guide was an advanced discussion about how to run an Android service in a r
 
 ## Related Links
 
-- [Handler](https://developer.xamarin.com/api/type/Android.OS.Handler/)
-- [Message](https://developer.xamarin.com/api/type/Android.OS.Message/)
-- [Messenger](https://developer.xamarin.com/api/type/Android.OS.Messenger/)
-- [ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute)
+- [Handler](xref:Android.OS.Handler)
+- [Message](xref:Android.OS.Message)
+- [Messenger](xref:Android.OS.Messenger)
+- [ServiceAttribute](xref:Android.App.ServiceAttribute)
 - [The Exported attribute](https://developer.android.com/guide/topics/manifest/service-element.html#exported)
 - [Services with isolated processes and custom Application class fail to resolve overloads properly](https://bugzilla.xamarin.com/show_bug.cgi?id=51940)
 - [Processes and Threads](https://developer.android.com/guide/components/processes-and-threads.html)
 - [Android Manifest - Permissions](https://developer.android.com/guide/topics/manifest/manifest-intro.html#perms)
 - [Security Tips](https://developer.android.com/training/articles/security-tips.html)
-- [MessengerServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/MessengerServiceDemo/)
+- [MessengerServiceDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-messengerservicedemo)

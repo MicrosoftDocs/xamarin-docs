@@ -113,6 +113,6 @@ sections:
     - title: API
       html: <p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-forms">Xamarin.Forms API docs</a></p>
     - title: Samples
-      html: <p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Xamarin.Forms Samples</a></p>
+      html: <p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms">Xamarin.Forms Samples</a></p>
     - title: Books
       html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">Creating Mobile Apps ebook</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">Enterprise Application Patterns ebook</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">SkiaSharp Graphics in Xamarin.Forms ebook</a></p>

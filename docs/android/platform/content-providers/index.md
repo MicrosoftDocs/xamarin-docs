@@ -64,13 +64,13 @@ and writing `ContentProvider` code.
 
 ## Related Links
 
-- [ContactsAdapter Demo (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
-- [SimpleContentProvider (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SimpleContentProvider)
+- [ContactsAdapter Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-contactsadapterdemo)
+- [SimpleContentProvider (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-simplecontentprovider)
 - [Content Providers Developers Guide](https://developer.android.com/guide/topics/providers/content-providers.html)
-- [ContentProvider Class Reference](https://developer.xamarin.com/api/type/Android.Content.ContentProvider/)
-- [ContentResolver Class Reference](https://developer.xamarin.com/api/type/Android.Content.ContentResolver/)
-- [ListView Class Reference](https://developer.xamarin.com/api/type/Android.Widget.ListView/)
-- [CursorAdapter Class Reference](https://developer.xamarin.com/api/type/Android.Widget.CursorAdapter/)
-- [UriMatcher Class Reference](https://developer.xamarin.com/api/type/Android.Content.UriMatcher/)
-- [Android.Provider](https://developer.xamarin.com/api/namespace/Android.Provider/)
-- [ContactsContract Class Reference](https://developer.xamarin.com/api/type/Android.Provider.ContactsContract/)
+- [ContentProvider Class Reference](xref:Android.Content.ContentProvider)
+- [ContentResolver Class Reference](xref:Android.Content.ContentResolver)
+- [ListView Class Reference](xref:Android.Widget.ListView)
+- [CursorAdapter Class Reference](xref:Android.Widget.CursorAdapter)
+- [UriMatcher Class Reference](xref:Android.Content.UriMatcher)
+- [Android.Provider](xref:Android.Provider)
+- [ContactsContract Class Reference](xref:Android.Provider.ContactsContract)

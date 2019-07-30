@@ -153,18 +153,17 @@ Let's examine each of these lifecycle methods and their use:
 
 #### OnCreate
 
-[OnCreate](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+[OnCreate](xref:Android.App.Activity.OnCreate*)
 is the first method to be called when an activity is created.
 `OnCreate` is always overridden to perform any startup initializations
 that may be required by an Activity such as:
 
--  Creating views
--  Initializing variables
--  Binding static data to lists
-
+- Creating views
+- Initializing variables
+- Binding static data to lists
 
 `OnCreate` takes a
-[Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/)
+[Bundle](xref:Android.OS.Bundle)
 parameter, which is a dictionary for storing and passing state
 information and objects between activities If the bundle is not null,
 this indicates the activity is restarting and it should restore its
@@ -194,7 +193,7 @@ Once `OnCreate` has finished, Android will call `OnStart`.
 
 #### OnStart
 
-[OnStart](https://developer.xamarin.com/api/member/Android.App.Activity.OnStart/)
+[OnStart](xref:Android.App.Activity.OnStart)
 is always called by the system after `OnCreate` is finished. Activities
 may override this method if they need to perform any specific tasks
 right before an activity becomes visible such as refreshing current
@@ -204,7 +203,7 @@ immediately after this method.
 #### OnResume
 
 The system calls
-[OnResume](https://developer.xamarin.com/api/member/Android.App.Activity.OnResume/)
+[OnResume](xref:Android.App.Activity.OnResume)
 when the Activity is ready to start interacting with the user.
 Activities should override this method to perform tasks such as:
 
@@ -236,7 +235,7 @@ activity back to life.
 
 #### OnPause
 
-[OnPause](https://developer.xamarin.com/api/member/Android.App.Activity.OnPause/)
+[OnPause](xref:Android.App.Activity.OnPause)
 is called when the system is about to put the activity into the
 background or when the activity becomes partially obscured. Activities
 should override this method if they need to:
@@ -279,7 +278,7 @@ There are two possible lifecycle methods that will be called after `OnPause`:
 
 #### OnStop
 
-[OnStop](https://developer.xamarin.com/api/member/Android.App.Activity.OnStop/)
+[OnStop](xref:Android.App.Activity.OnStop)
 is called when the activity is no longer visible to the user. This
 happens when one of the following occurs:
 
@@ -298,7 +297,7 @@ back to interact with the user.
 
 #### OnDestroy
 
-[OnDestroy](https://developer.xamarin.com/api/member/Android.App.Activity.OnDestroy/)
+[OnDestroy](xref:Android.App.Activity.OnDestroy)
 is the final method that is called on an Activity instance before it's
 destroyed and completely removed from memory. In extreme situations
 Android may kill the application process that is hosting the Activity,
@@ -313,7 +312,7 @@ There will be no lifecycle methods called after the Activity has been destroyed.
 
 #### OnRestart
 
-[OnRestart](https://developer.xamarin.com/api/member/Android.App.Activity.OnRestart/)
+[OnRestart](xref:Android.App.Activity.OnRestart)
 is called after your activity has been stopped, prior to it being
 started again. A good example of this would be when the user presses
 the home button while on an activity in the application. When this
@@ -357,7 +356,7 @@ This saved state is referred to as instance state. Android provides
 three options for storing instance state during the Activity lifecycle:
 
 1. Storing primitive values in a `Dictionary` known as a
-   [Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/)
+   [Bundle](xref:Android.OS.Bundle)
    that Android will use to save state.
 
 1. Creating a custom class that will hold complex values such as
@@ -366,16 +365,13 @@ three options for storing instance state during the Activity lifecycle:
 1. Circumventing the configuration change lifecycle and assuming
    complete responsibility for maintaining state in the activity.
 
-
 This guide covers the first two options.
-
-
 
 ### Bundle State
 
 The primary option for saving instance state is to use a key/value
 dictionary object known as a
-[Bundle](https://developer.xamarin.com/api/type/Android.OS.Bundle/).
+[Bundle](xref:Android.OS.Bundle).
 Recall that when an Activity is created that the `OnCreate` method is
 passed a bundle as a parameter, this bundle can be used to restore the
 instance state. It is not recommended to use a bundle for more complex
@@ -384,12 +380,12 @@ bitmaps); rather, it should be used for simple values like strings.
 
 An Activity provides methods to help with saving and retrieving the instance state in the Bundle:
 
--   [OnSaveInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnSaveInstanceState/p/Android.OS.Bundle/)
+- [OnSaveInstanceState](xref:Android.App.Activity.OnSaveInstanceState*)
     &ndash; This is invoked by Android when the
     activity is being destroyed. Activities can implement this method
     if they need to persist any key/value state items.
 
--   [OnRestoreInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnRestoreInstanceState/p/Android.OS.Bundle/)
+- [OnRestoreInstanceState](xref:Android.App.Activity.OnRestoreInstanceState*)
     &ndash; This is called after the `OnCreate`
     method is finished, and provides another opportunity for an
     Activity to restore its state after initialization is complete.
@@ -400,7 +396,7 @@ The following diagram illustrates how these methods are used:
 
 #### OnSaveInstanceState
 
-[OnSaveInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnSaveInstanceState/p/Android.OS.Bundle/)
+[OnSaveInstanceState](xref:Android.App.Activity.OnSaveInstanceState*)
 will be called as the Activity is being stopped. It will receive a
 bundle parameter that the Activity can store its state in. When a
 device experiences a configuration change, an Activity can use the
@@ -466,8 +462,6 @@ c = bundle.GetInt ("counter", -1);
 > It is important to always call the base implementation of
 > `OnSaveInstanceState` so that the state of the view hierarchy can also be saved.
 
-
-
 ##### View State
 
 Overriding `OnSaveInstanceState` is an appropriate mechanism for saving
@@ -491,7 +485,7 @@ as shown below:
 
 #### OnRestoreInstanceState
 
-[OnRestoreInstanceState](https://developer.xamarin.com/api/member/Android.App.Activity.OnRestoreInstanceState/p/Android.OS.Bundle/)
+[OnRestoreInstanceState](xref:Android.App.Activity.OnRestoreInstanceState*)
 will be called after `OnStart`. It provides an activity the opportunity
 to restore any state that was previously saved to a Bundle during the
 previous `OnSaveInstanceState`. This is the same bundle that is
@@ -533,7 +527,7 @@ data, it has some limitations:
 -   The bundle passed into `OnSaveInstanceState` is not designed for
     large objects, such as images. In the case of large objects, saving
     the object from
-    [OnRetainNonConfigurationInstance](https://developer.xamarin.com/api/member/Android.App.Activity.OnRetainNonConfigurationInstance/)
+    [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance)
     is preferable, as discussed below.
 
 -   Data saved by using the bundle is serialized, which can lead to
@@ -552,7 +546,7 @@ data types through configuration changes.
 
 In addition to persisting data in the bundle, Android also supports
 saving data by overriding
-[OnRetainNonConfigurationInstance](https://developer.xamarin.com/api/member/Android.App.Activity.OnRetainNonConfigurationInstance/)
+[OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance)
 and returning an instance of a `Java.Lang.Object` that contains the
 data to persist. There are two primary benefits of using
 `OnRetainNonConfigurationInstance` to save state:
@@ -723,4 +717,4 @@ these methods.
 ## Related Links
 
 - [Handling Rotation](~/android/app-fundamentals/handling-rotation.md)
-- [Android Activity](https://developer.xamarin.com/api/type/Android.App.Activity/)
+- [Android Activity](xref:Android.App.Activity)

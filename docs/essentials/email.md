@@ -58,22 +58,6 @@ public class EmailTest
 ```
 
 
-## Platform Differences
-
-# [Android](#tab/android)
-
-Not all email clients for Android support `Html`, since there is no way to detect this we recommend using `PlainText` when sending emails.
-
-# [iOS](#tab/ios)
-
-No platform differences.
-
-# [UWP](#tab/uwp)
-
-Only supports `PlainText` as the `BodyFormat` attempting to send `Html` will throw a `FeatureNotSupportedException`.
-
------
-
 ## File Attachments
 
 ![Preview feature](~/media/shared/preview.png)
@@ -103,6 +87,24 @@ message.Attachments.Add(new EmailAttachment(file));
 
 await Email.ComposeAsync(message);
 ```
+
+## Platform Differences
+
+# [Android](#tab/android)
+
+Not all email clients for Android support `Html`, since there is no way to detect this we recommend using `PlainText` when sending emails.
+
+# [iOS](#tab/ios)
+
+No platform differences.
+
+# [UWP](#tab/uwp)
+
+Only supports `PlainText` as the `BodyFormat` attempting to send `Html` will throw a `FeatureNotSupportedException`.
+
+Not all email clients support sending attachments. See [documentation](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) for more inforamtion.
+
+-----
 
 ## API
 

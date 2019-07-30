@@ -36,7 +36,7 @@ columns that are exposed should be available as constants to make it
 easy to bind to the data. Android's built-in `ContentProviders` all
 provide convenience classes with constants that reference the data
 structure in the
-[`Android.Providers`](https://developer.xamarin.com/api/namespace/Android.Provider/) namespace.
+[`Android.Providers`](xref:Android.Provider) namespace.
 
 
 

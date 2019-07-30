@@ -21,7 +21,7 @@ been purchased.
 
 ## Non-Consumable Products Sample
 
-The [InAppPurchaseSample code](https://developer.xamarin.com/samples/monotouch/StoreKit/) contains a project called *NonConsumables*. The code sample
+The [InAppPurchaseSample code](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contains a project called *NonConsumables*. The code sample
 demonstrates how to implement non-consumable products using photo-filters as an
 example. Once you’ve purchased a filter you can apply it to the photo over and
 over again. You never need to re-purchase it.   

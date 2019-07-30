@@ -20,14 +20,14 @@ screen:
 - [Custom Gesture Recognizer sample](#Custom_Gesture_Recognizer) – how to build a custom gesture recognizer.
 
 Each section contains instructions to write the code from scratch.
-The [starting sample code](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
+The [starting sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
 already includes a complete storyboard and menu screen:
 
  [![](ios-touch-walkthrough-images/image3.png "The sample includes menu screen")](ios-touch-walkthrough-images/image3.png#lightbox)
 
 Follow the instructions below to add code to the storyboard, and learn about
 the different types of touch events available in iOS. Alternatively, open the
-[finished sample](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final) to
+[finished sample](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) to
 see everything working.
 
 <a name="Touch_Samples"/>
@@ -189,7 +189,7 @@ In this section we will get rid of the touch events and show how to use the foll
 -  The `UIPanGestureRecognizer` for dragging an image around the screen.
 -  The `UITapGestureRecognizer` to respond to double taps on the screen.
 
-If you run the [starting sample code](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
+If you run the [starting sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
 and click on the **Gesture Recognizer Samples** button, you should see the following screen:
 
  [![](ios-touch-walkthrough-images/image6.png "Clicking on the Gesture Recognizer Samples button shows this screen")](ios-touch-walkthrough-images/image6.png#lightbox)
@@ -524,5 +524,5 @@ touch events, built-in gesture recognizers, or with a custom gesture recognizer.
 
 ## Related Links
 
-- [iOS Touch Start (sample)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
-- [iOS Touch Final (sample)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)
+- [iOS Touch Start (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
+- [iOS Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

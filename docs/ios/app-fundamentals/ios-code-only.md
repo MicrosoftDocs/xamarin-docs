@@ -628,4 +628,4 @@ This article discussed how to develop iOS applications programmatically in Visua
 
 ## Related Links
 
-- [SimpleLogin (sample)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)
+- [SimpleLogin (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)

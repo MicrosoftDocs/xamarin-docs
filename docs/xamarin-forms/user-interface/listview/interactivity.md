@@ -11,7 +11,7 @@ ms.date: 02/27/2019
 
 # ListView Interactivity
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)
 
 [`ListView`](xref:Xamarin.Forms.ListView) supports interacting with the data it presents.
 
@@ -188,4 +188,4 @@ The following screenshots show pull-to-refresh after the user has released the p
 
 ## Related Links
 
-- [ListView Interactivity (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/interactivity)
+- [ListView Interactivity (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-interactivity)

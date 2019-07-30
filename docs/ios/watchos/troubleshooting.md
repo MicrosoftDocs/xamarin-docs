@@ -362,5 +362,5 @@ Example:
 
 ## Related Links
 
-- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [WatchTables (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/)
+- [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [WatchTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)

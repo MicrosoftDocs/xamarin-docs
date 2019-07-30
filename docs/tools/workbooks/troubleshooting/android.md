@@ -55,8 +55,7 @@ frequently you may need to repeat this periodically:
    virtual network switch.
 1. Test that VS Android Emulator's browser can access the internet.
 
-[android-emu]: https://developer.xamarin.com/guides/android/deployment,_testing,_and_metrics/debug-on-emulator/
-
+[android-emu]: ~/android/deploy-test/debugging/debug-on-emulator.md
 
 ## Related Links
 

@@ -34,6 +34,11 @@ folder in the **Solution Explorer** and selecting **Add > New Item... > Android 
 
 This creates a new **.axml** layout file and loads it into the Designer.
 
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
+
 ## Designer features
 
 The Designer is composed of several sections that support its various
@@ -487,6 +492,11 @@ folder in the **Solution Pad** and selecting **Add > New File > Android > Layout
 [![Add New File dialog](designer-basics-images/xs/02-add-new-layout-sml.png)](designer-basics-images/xs/02-add-new-layout.png#lightbox)
 
 This creates a new .axml file and loads it onto the Design Surface.
+
+> [!TIP]
+> Newer releases of Visual Studio support opening .xml files inside the Android Designer.
+>
+> Both .axml and .xml files are supported in the Android Designer.
 
 ## Designer features
 

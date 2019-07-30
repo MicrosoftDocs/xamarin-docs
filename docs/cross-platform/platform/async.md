@@ -193,8 +193,8 @@ This document has given an overview of the new language keywords and examples fo
 
 - [AsyncAwait (sample)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
 - [Callbacks as our Generations' Go To Statement](https://tirania.org/blog/archive/2013/Aug-15.html)
-- [Data (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/Data/)
-- [HttpClient (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
+- [Data (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
+- [HttpClient (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)
 - [MapKitSearch (iOS) (sample)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
 - [Asynchronous programming](https://docs.microsoft.com/dotnet/csharp/async)
 - [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)
