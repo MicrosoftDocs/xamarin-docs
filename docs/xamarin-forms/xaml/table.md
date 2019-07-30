@@ -13,7 +13,5 @@ ms.date: 07/26/2019
 
 Learn how to use XAML to define Xamarin.Forms user interfaces.
 
-| Topic |
-| --- |
 | [Basics](xaml-basics/index.md) <br /> Learn the basics of developing Xamarin.Forms user interfaces with XAML. |
 | [Controls](xaml-controls.md) <br /> Learn how to compile XAML directly into intermediate language with the XAML compiler. |
