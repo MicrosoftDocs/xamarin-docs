@@ -20,7 +20,7 @@ sections:
     className: cardsB
     items:
     - href: accessibility/index.md
-      html: "Learn about how to make applications usable by people who approach the UI with a range of needs and experiences."
+      html: "Learn how to make applications usable by people who approach the UI with a range of needs and experiences."
       image:
         src: https://docs.microsoft.com/media/common/i_accessibility.svg
         href: accessibility/index.md
@@ -38,7 +38,7 @@ sections:
         href: app-lifecycle.md
       title: App Lifecycle
     - href: deep-linking.md
-      html: "Learn how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android."
+      html: "Learn how to use application indexing and deep linking to make application content searchable on iOS and Android."
       image:
         src: https://docs.microsoft.com/media/common/i_link.svg
         href: deep-linking.md
@@ -50,7 +50,7 @@ sections:
         href: behaviors/index.md
       title: Behaviors
     - href: custom-renderer/index.md
-      html: "Learn how to extend the built-in functionality of Xamarin.Forms by modifying existing controls and creating new custom controls."
+      html: "Learn how to extend Xamarin.Forms controls by creating new custom controls and modifying existing controls."
       image:
         src: https://docs.microsoft.com/media/common/i_extend.svg
         href: custom-renderer/index.md
@@ -74,7 +74,7 @@ sections:
         href: effects/index.md
       title: Effects
     - href: gestures/index.md
-      html: "Learn how to use Xamarin.Forms gesture recognizers to add support for tap, pinch, pan, and swipe gestures to your applications."
+      html: "Learn how to use gesture recognizers to add support for tap, pinch, pan, and swipe gestures to applications."
       image:
         src: https://docs.microsoft.com/media/common/i_form.svg
         href: gestures/index.md
