@@ -1,0 +1,69 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: eXtensible Application Markup Language (XAML)
+metadata:
+  title: eXtensible Application Markup Language (XAML)
+  description: Learn how to use XAML to define Xamarin.Forms user interfaces.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/26/2019
+abstract:
+  description: Learn how to use XAML to define Xamarin.Forms user interfaces.
+sections:
+- title:
+  items:
+  - type: list
+    style: cards
+    className: cardsZ
+    items:
+    - href: xaml-basics/index.md
+      html: "Learn the basics of developing Xamarin.Forms user interfaces with XAML."
+      title: Basics
+    - href: xaml-controls.md
+      html: "Learn about the Xamarin.Forms views that can be referenced from XAML files."
+      title: Controls
+    - href: xamlc.md
+      html: "Learn how to compile XAML directly into intermediate language with the XAML compiler."
+      title: Compilation
+    - href: namespaces.md
+      html: "Learn about the XAML namespace syntax, and how to declare a XAML namespace to access a type."
+      title: Namespaces
+    - href: markup-extensions/index.md
+      html: "Learn about XAML markup extensions, which allow element attributes to be set from sources other than literal text strings."
+      title: Markup Extensions
+    - href: toolbox.md
+      html: "Learn how to use the XAML toolbox to drag Xamarin.Forms controls and layouts into the XAML editor."
+      title: Toolbox
+    - href: xaml-previewer/index.md
+      html: "Learn how to use the XAML previewer, to see a live preview of a page side-by-side with its XAML markup."
+      title: Previewer
+    - href: bindable-properties.md
+      html: "Learn how to create bindable properties, and how to consume them from XAML."
+      title: Bindable Properties
+    - href: attached-properties.md
+      html: "Learn how to create attached properties, and how to consume them from XAML."
+      title: Attached Properties
+    - href: resource-dictionaries.md
+      html: "Learn how to create XAML resources, and reuse them throughout a Xamarin.Forms application."
+      title: Resource Dictionaries
+    - href: passing-arguments.md
+      html: "Learn how to use XAML to pass arguments to constructors, to call factory methods, and to specify the type of a generic argument."
+      title: Passing Arguments
+    - href: field-modifiers.md
+      html: "Learn about XAML field modifiers, which specify the access level for generated fields for named XAML elements."
+      title: Field Modifiers
+    - href: custom-namespace-schemas.md
+      html: "Learn how to create XAML custom namespace schemas, which specify a mapping between a custom URL and one or more CLR namespaces."
+      title: Custom Namespace Schemas
+    - href: custom-prefix.md
+      html: "Learn how to specify a recommended prefix to assciate with a XAML namespace, for XAML usage."
+      title: Namespace Recommended Prefixes
+    - href: runtime-load.md
+      html: "Learn how to load and parse XAML at runtime."
+      title: Load XAML at Runtime
+    - href: standard/index.md
+      html: "Learn about XAML standard."
+      title: XAML Standard
