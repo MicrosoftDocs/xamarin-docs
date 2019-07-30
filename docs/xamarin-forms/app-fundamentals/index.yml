@@ -1,0 +1,117 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin.Forms Application Fundamentals
+metadata:
+  title: Xamarin.Forms Application Fundamentals
+  description: Learn about the fundamentals of mobile application development using Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 7B516BBC-F7E1-4387-9779-7754E2E69723
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/30/2019
+abstract:
+  description: Learn about the fundamentals of mobile application development using Xamarin.Forms.
+sections:
+- title:
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: accessibility/index.md
+      html: "Learn about how to make applications usable by people who approach the UI with a range of needs and experiences."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: accessibility/index.md
+      title: Accessibility
+    - href: application-class.md
+      html: "Learn about the features exposed by a subclassed Application class."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: application-class.md
+      title: App Class
+    - href: app-lifecycle.md
+      html: "Learn about handling application lifecycle events."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: app-lifecycle.md
+      title: App Lifecycle
+    - href: deep-linking.md
+      html: "Learn how to use application indexing and deep linking to make Xamarin.Forms application content searchable on iOS and Android."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: deep-linking.md
+      title: Application Indexing and Deep Linking
+    - href: behaviors/index.md
+      html: "Learn how to add functionality to controls without having to subclass them."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: behaviors/index.md
+      title: Behaviors
+    - href: custom-renderer/index.md
+      html: "Learn how to extend the built-in functionality of Xamarin.Forms by modifying existing controls and creating new custom controls."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: custom-renderer/index.md
+      title: Custom Renderers
+    - href: data-binding/index.md
+      html: "Learn how to automatically synchronize a user interface with its data source."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: data-binding/index.md
+      title: Data Binding
+    - href: dependency-service/index.md
+      html: "Learn how to invoke native platform functionality from shared code, with the DependencyService class."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: dependency-service/index.md
+      title: Dependency Service
+    - href: effects/index.md
+      html: "Learn how to adjust the behaviour of Xamarin.Forms controls by accessing the underlying native controls."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: effects/index.md
+      title: Effects
+    - href: gestures/index.md
+      html: "Learn how to use Xamarin.Forms gesture recognizers to add support for tap, pinch, pan, and swipe gestures to your applications."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: gestures/index.md
+      title: Gestures
+    - href: localization/index.md
+      html: "Learn how to develop multilingual applications with Xamarin.Forms."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: localization/index.md
+      title: Localization
+    - href: messaging-center.md
+      html: "Learn how to use message-based communication to reduce dependencies between types."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: messaging-center.md
+      title: Messaging Center
+    - href: navigation/index.md
+      html: "Learn how to perform navigation in Xamarin.Forms applications."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: navigation/index.md
+      title: Navigation
+    - href: shell/index.md
+      html: "Learn how to use Xamarin.Forms Shell to reduce the complexity of mobile application development."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: shell/index.md
+      title: Shell
+    - href: templates/index.md
+      html: "Learn how to use the templating functionality provided by Xamarin.Forms."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: templates/index.md
+      title: Templates
+    - href: triggers.md
+      html: "Learn how to express actions in XAML that change the appearance of controls based on events or property changes."
+      image:
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        href: triggers.md
+      title: Triggers
