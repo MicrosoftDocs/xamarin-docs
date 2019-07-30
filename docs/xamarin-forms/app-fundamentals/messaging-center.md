@@ -97,4 +97,3 @@ In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscr
 ## Related links
 
 - [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
-- [Communicating Between Loosely Coupled Components](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)
