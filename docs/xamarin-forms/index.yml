@@ -57,7 +57,7 @@ sections:
     className: cardsB
     items:
     - href: ~/xamarin-forms/app-fundamentals/
-      html: Everything you need to know to build Xamarin.Forms apps, such as working with files, images, databases, and more.
+      html: Everything you need to know to develop Xamarin.Forms apps, such as navigation, gestures, data binding, and more.
       image:
         src: ~/media/icons/i_app-build.svg
         href: ~/xamarin-forms/app-fundamentals/
