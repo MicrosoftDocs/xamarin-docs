@@ -57,7 +57,7 @@ The built-in .NET localization framework can be used to build cross-platform mul
 
 ## [Messaging Center](messaging-center.md)
 
-Xamarin.Forms `MessagingCenter` enables view models and other components to communicate with without having to know anything about each other besides a simple Message contract.
+The Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class implements the publish-subscribe pattern, allowing message-based communication between components that are inconvenient to link by object and type references
 
 ## [Navigation](navigation/index.md)
 
