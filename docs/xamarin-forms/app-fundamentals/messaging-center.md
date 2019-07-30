@@ -45,7 +45,7 @@ Payload data can also be sent with a message:
 MessagingCenter.Send<MainPage, string>(this, "Hi", "John");
 ```
 
-In this example, the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies two generic arguments. The first is the type that's sending the message, and the second is the type of the payload data being sent. To receive the message, a subscriber must also specify the same generic arguments. This enables multiple messages that share a message identity but send different payload data types to be received by different subscribers.
+In this example, the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies two generic arguments. The first is the type that's sending the message, and the second is the type of the payload data being sent. To receive the message, a subscriber must also specify the same generic arguments. This enables multiple messages that share a message identity but send different payload data types to be received by different subscribers. In addition, this example specifies a third method argument that represents the payload data to be sent to the subscriber. In this case the payload data is a `string`.
 
 The [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method will publish the message, and any payload data, using a fire-and-forget approach. Therefore, the message is sent even if there are no subscribers registered to receive the message. In this situation, the sent message is ignored.
 
