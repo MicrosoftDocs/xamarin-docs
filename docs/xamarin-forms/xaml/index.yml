@@ -43,6 +43,24 @@ sections:
         src: ~/media/icons/i_xaml-forms.svg
         href: markup-extensions/index.md
       title: Markup Extensions
+- title: Tooling
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: toolbox.md
+      html: "Learn how to use the XAML toolbox to drag Xamarin.Forms controls and layouts into the XAML editor."
+      image:
+        src: https://docs.microsoft.com/media/common/i_tools.svg
+        href: toolbox.md
+      title: Toolbox
+    - href: xaml-previewer/index.md
+      html: "Learn how to use the XAML previewer, to see a live preview of a page side-by-side with its XAML markup."
+      image:
+        src: https://docs.microsoft.com/media/common/i_responsive.svg
+        href: xaml-previewer/index.md
+      title: Previewer
 - title: Namespaces
   items:
   - type: list
@@ -67,24 +85,6 @@ sections:
         src: https://docs.microsoft.com/media/common/i_code-automate.svg
         href: custom-prefix.md
       title: Namespace Recommended Prefixes
-- title: Tooling
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: toolbox.md
-      html: "Learn how to use the XAML toolbox to drag Xamarin.Forms controls and layouts into the XAML editor."
-      image:
-        src: https://docs.microsoft.com/media/common/i_tools.svg
-        href: toolbox.md
-      title: Toolbox
-    - href: xaml-previewer/index.md
-      html: "Learn how to use the XAML previewer, to see a live preview of a page side-by-side with its XAML markup."
-      image:
-        src: https://docs.microsoft.com/media/common/i_responsive.svg
-        href: xaml-previewer/index.md
-      title: Previewer
 - title: Advanced
   items:
   - type: list
@@ -100,7 +100,7 @@ sections:
     - href: attached-properties.md
       html: "Learn how to create attached properties, and how to consume them from XAML."
       image:
-        src: https://docs.microsoft.com/media/common/i_code-edit.svg
+        src: https://docs.microsoft.com/media/common/i_code-samples.svg
         href: bindable-properties.md
       title: Attached Properties
     - href: resource-dictionaries.md
