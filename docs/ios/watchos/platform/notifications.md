@@ -88,7 +88,7 @@ Notifications can come from a remote server ([Apple Push Notifications Service](
 	or can be generated locally in the iOS app.
 
 Refer to the [iOS Notifications walkthrough](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) for an example of how to generate
-	local notifications, and the [WatchNotifications sample](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/) for a working example.
+	local notifications, and the [WatchNotifications sample](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications) for a working example.
 
 Local notifications must have the `AlertTitle` set to be displayed on the Apple Watch -
 	the `AlertTitle` string is displayed in the Short-Look interface. Both the `AlertTitle`
@@ -96,7 +96,7 @@ Local notifications must have the `AlertTitle` set to be displayed on the Apple 
 	in the Long-Look interface.
 
 This screenshot shows the `AlertTitle` being displayed in the notifications list, and the
- 	`AlertBody` displayed in the Long-Look interface (using the [sample code](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)):
+ 	`AlertBody` displayed in the Long-Look interface (using the [sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)):
 
 ![](notifications-images/watch-notificationslist-sml.png "This screenshot shows the AlertTitle being displayed in the notifications list") ![](notifications-images/watch-notificationcontroller-sml.png "The AlertBody displayed in the Long-Look interface")
 
@@ -175,7 +175,7 @@ It is also possible to use the
 
 ### Example Notification Payload
 
-In the [Watch Kit Catalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) sample
+In the [Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample
 	there is an example payload JSON file **NotificationPayload.json**
 	(listed below).
 
@@ -202,6 +202,6 @@ In the [Watch Kit Catalog](https://developer.xamarin.com/samples/monotouch/watch
 
 ## Related Links
 
-- [WatchNotifications (local notifications) (sample)](https://developer.xamarin.com/samples/monotouch/WatchKit/WatchNotifications/)
-- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchNotifications (local notifications) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)
+- [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple's Watch Kit Notifications docs](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

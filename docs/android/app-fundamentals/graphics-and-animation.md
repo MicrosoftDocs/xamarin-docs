@@ -680,7 +680,7 @@ API's for creating animations in Android.
 
 ## Related Links
 
-- [Animation Demo (sample)](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
+- [Animation Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/animationdemo)
 - [Animation and Graphics](https://developer.android.com/guide/topics/graphics/index.html)
 - [Using Animations to Bring your Mobile Apps to Life](http://youtu.be/ikSk_ILg3d0)
 - [AnimationDrawable](xref:Android.Graphics.Drawables.AnimationDrawable)

@@ -11,7 +11,7 @@ ms.date: 01/21/2016
 
 # Adding a tap gesture recognizer
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/TapGesture/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 
 _The tap gesture is used for tap detection and is implemented with the TapGestureRecognizer class._
 
@@ -112,6 +112,6 @@ public class TapViewModel : INotifyPropertyChanged
 
 ## Related Links
 
-- [TapGesture (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithGestures/TapGesture/)
+- [TapGesture (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithgestures-tapgesture)
 - [GestureRecognizer](xref:Xamarin.Forms.GestureRecognizer)
 - [TapGestureRecognizer](xref:Xamarin.Forms.TapGestureRecognizer)

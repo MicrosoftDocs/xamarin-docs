@@ -113,6 +113,6 @@ ARKit provides lots of more sophisticated features, such as surface tracking, an
 
 - [Augmented Reality (Apple)](https://developer.apple.com/arkit/)
 - [Using ARKit with UrhoSharp](urhosharp.md)
-- [Simple ARKit (Jet) Sample](https://developer.xamarin.com/samples/monotouch/ios11/ARKitSample/)
-- [ARKit Placing Objects (sample)](https://developer.xamarin.com/samples/monotouch/ios11/ARKitPlacingObjects/)
+- [Simple ARKit (Jet) Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitsample)
+- [ARKit Placing Objects (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-arkitplacingobjects)
 - [Introducing ARKit - Augmented Reality for iOS (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/602/)

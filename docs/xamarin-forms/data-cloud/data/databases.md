@@ -11,7 +11,7 @@ ms.date: 06/21/2018
 
 # Xamarin.Forms Local Databases
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
 _Xamarin.Forms supports database-driven applications using the SQLite database engine, which makes it possible to load and save objects in shared code. This article describes how Xamarin.Forms applications can read and write data to a local SQLite database using SQLite.Net._
 
@@ -117,6 +117,6 @@ This article focused on **accessing** a SQLite database using Xamarin.Forms. For
 
 ## Related Links
 
-- [Todo Sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Todo Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 

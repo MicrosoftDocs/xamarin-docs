@@ -238,7 +238,7 @@ significantly more efficient than calling `NotifyDataSetChanged`.
 
 ## Related Links
 
-- [RecyclerViewer (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerViewer (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)
 - [RecyclerView Parts and Functionality](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
 - [A Basic RecyclerView Example](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)

@@ -951,4 +951,4 @@ This article has covered several tips, features and techniques a developer can u
 
 ## Related Links
 
-- [macOS Samples](https://developer.xamarin.com/samples/mac/)
+- [macOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)

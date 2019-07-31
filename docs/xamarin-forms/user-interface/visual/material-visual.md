@@ -11,7 +11,7 @@ ms.date: 03/12/2019
 
 # Xamarin.Forms Material Visual
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 [Material Design](https://material.io) is an opinionated design system created by Google, that prescribes the size, color, spacing, and other aspects of how views and layouts should look and behave.
 
@@ -143,6 +143,6 @@ For more information about custom renderers, see [Custom Renderers](~/xamarin-fo
 
 ## Related links
 
-- [Material Visual (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
+- [Material Visual (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Create a Xamarin.Forms Visual Renderer](create.md)
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

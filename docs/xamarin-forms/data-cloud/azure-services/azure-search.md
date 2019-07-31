@@ -11,7 +11,7 @@ ms.date: 12/05/2016
 
 # Search Data with Azure Search and Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureSearch/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 
 _Azure Search is a cloud service that provides indexing and querying capabilities for uploaded data. This removes the infrastructure requirements and search algorithm complexities traditionally associated with implementing search functionality in an application. This article demonstrates how to use the Microsoft Azure Search Library to integrate Azure Search into a Xamarin.Forms application._
 
@@ -274,6 +274,6 @@ This article demonstrated how to use the Microsoft Azure Search Library to integ
 
 ## Related Links
 
-- [Azure Search (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureSearch/)
+- [Azure Search (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)
 - [Azure Search Documentation](/azure/search/)
 - [Microsoft Azure Search Library](https://www.nuget.org/packages/Microsoft.Azure.Search/)

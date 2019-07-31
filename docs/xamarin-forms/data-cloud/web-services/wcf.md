@@ -11,7 +11,7 @@ ms.date: 03/28/2019
 
 # Consume a Windows Communication Foundation (WCF) Web Service
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 
 _WCF is Microsoft's unified framework for building service-oriented applications. It enables developers to build secure, reliable, transacted, and interoperable distributed applications. This article demonstrates how to consume an WCF Simple Object Access Protocol (SOAP) service from a Xamarin.Forms application._
 
@@ -306,6 +306,6 @@ By default, IIS Express will only respond to requests to `localhost`. Remote dev
 
 ## Related links
 
-- [TodoWCF (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF/)
+- [TodoWCF (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
 - [How to: Create a Windows Communication Foundation Client](https://docs.microsoft.com/dotnet/framework/wcf/how-to-create-a-wcf-client)
 - [ServiceModel Metadata Utility Tool (svcutil.exe)](https://docs.microsoft.com/dotnet/framework/wcf/servicemodel-metadata-utility-tool-svcutil-exe)

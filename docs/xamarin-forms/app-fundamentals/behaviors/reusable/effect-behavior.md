@@ -11,7 +11,7 @@ ms.date: 04/06/2016
 
 # Reusable EffectBehavior
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 
 _Behaviors are a useful approach for adding an effect to a control, removing boiler-plate effect handling code from code-behind files. This article demonstrates creating and consuming a Xamarin.Forms behavior to add an effect to a control._
 
@@ -27,7 +27,7 @@ The following behavior properties must be set to use the behavior:
 For more information about effects, see [Effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
 > [!NOTE]
-> The `EffectBehavior` is a custom class that can be located in the [Effect Behavior sample](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/), and is not part of Xamarin.Forms.
+> The `EffectBehavior` is a custom class that can be located in the [Effect Behavior sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior), and is not part of Xamarin.Forms.
 
 ## Creating the Behavior
 
@@ -164,6 +164,6 @@ This article demonstrated using a behavior to add an effect to a control. The `E
 ## Related Links
 
 - [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Effect Behavior (sample)](https://developer.xamarin.com/samples/xamarin-forms/Behaviors/EffectBehavior/)
+- [Effect Behavior (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-effectbehavior)
 - [Behavior](xref:Xamarin.Forms.Behavior)
 - [Behavior&lt;T&gt;](xref:Xamarin.Forms.Behavior`1)

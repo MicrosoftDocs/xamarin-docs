@@ -567,7 +567,7 @@ which interface directly with memory buffers.
 
 ## Related Links
 
-- [Working With Audio (sample)](https://developer.xamarin.com/samples/monodroid/Example_WorkingWithAudio/)
+- [Working With Audio (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/example-workingwithaudio)
 - [Media Player](xref:Android.Media.MediaPlayer)
 - [Media Recorder](xref:Android.Media.MediaRecorder)
 - [Audio Manager](xref:Android.Media.AudioManager)

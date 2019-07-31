@@ -11,7 +11,7 @@ ms.date: 08/27/2018
 
 # SkiaSharp mask filters
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Mask filters are effects that manipulate the geometry and alpha channel of graphical objects. To use a mask filter, set the [`MaskFilter`](xref:SkiaSharp.SKPaint.MaskFilter) property of `SKPaint` to an object of type [`SKMaskFilter`](xref:SkiaSharp.SKMaskFilter) that you've created by calling one of the `SKMaskFilter` static methods.
 
@@ -38,7 +38,7 @@ Overloads allow specifying flags for the algorithm used to create the blur, and 
 
 The effects of these styles are shown in the examples below. The `sigma` parameter specifies the extent of the blur. In older versions of Skia, the extent of the blur was indicated with a radius value. If a radius value is preferable for your application, there is a static [`SKMaskFilter.ConvertRadiusToSigma`](xref:SkiaSharp.SKMaskFilter.ConvertRadiusToSigma*) method that can convert from one to the other. The method multiplies the radius by 0.57735 and adds 0.5.
 
-The **Mask Blur Experiment** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample allows you to experiment with the blur styles and sigma values. The XAML file instantiates a `Picker` with the four `SKBlurStyle` enumeration members and a `Slider` for specifying the sigma value:
+The **Mask Blur Experiment** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample allows you to experiment with the blur styles and sigma values. The XAML file instantiates a `Picker` with the four `SKBlurStyle` enumeration members and a `Slider` for specifying the sigma value:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -269,4 +269,4 @@ This blur filter causes the reflection to seem much more realistic:
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

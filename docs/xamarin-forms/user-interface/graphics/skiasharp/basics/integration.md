@@ -11,7 +11,7 @@ ms.date: 02/09/2017
 
 # Integrating with Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Create SkiaSharp graphics that respond to touch and Xamarin.Forms elements_
 
@@ -20,7 +20,7 @@ SkiaSharp graphics can integrate with the rest of Xamarin.Forms in several ways.
 ![](integration-images/integrationexample.png "Selecting a color with sliders")
 
 Another approach to creating interactive SkiaSharp graphics in Xamarin.Forms is through touch.
-The second page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program is entitled **Tap Toggle Fill**. It draws a simple circle two ways &mdash; without a fill and with a fill &mdash; toggled by a tap. The [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) class shows how you can alter SkiaSharp graphics in response to user input.
+The second page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) program is entitled **Tap Toggle Fill**. It draws a simple circle two ways &mdash; without a fill and with a fill &mdash; toggled by a tap. The [`TapToggleFillPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml.cs) class shows how you can alter SkiaSharp graphics in response to user input.
 
 For this page, the `SKCanvasView` class is instantiated in the [TapToggleFill.xaml](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/TapToggleFillPage.xaml) file, which also sets a Xamarin.Forms [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) on the view:
 
@@ -238,4 +238,4 @@ But the best way to get a feel for the two models is to experiment with them you
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

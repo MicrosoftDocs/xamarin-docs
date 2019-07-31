@@ -324,7 +324,7 @@ featureFlags:
                                 </a>
                             </li>
                             <li>
-                                <a href="~/xamarin-forms/app-fundamentals/index.md">
+                                <a href="~/xamarin-forms/app-fundamentals/index.yml">
                                     <div class="cardSize">
                                         <div class="cardPadding">
                                             <div class="card">
@@ -335,7 +335,7 @@ featureFlags:
                                                 </div>
                                                 <div class="cardText">
                                                     <h3>Application Fundamentals</h3>
-                                                    <p>Everything you need to know to build apps, such as working with files, images, databases, and more.</p>
+                                                    <p>Everything you need to know to develop Xamarin.Forms apps, such as navigation, gestures, data binding, and more.</p>
                                                 </div>
                                             </div>
                                         </div>

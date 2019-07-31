@@ -306,8 +306,8 @@ the inclusivity of your apps.
 
 ## Related Links
 
-- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/xamarin-forms/UsingDependencyService/)
-- [Text to Speech (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
-- [Speech to Text (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
+- [Xamarin.Forms DependencyService](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
+- [Text to Speech (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
+- [Speech to Text (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
 - [Android.Speech namespace](xref:Android.Speech)
 - [Android.Speech.Tts namespace](xref:Android.Speech.Tts)

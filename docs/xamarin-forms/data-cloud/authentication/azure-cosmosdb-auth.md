@@ -11,7 +11,7 @@ ms.date: 06/16/2017
 
 # Authenticate Users with an Azure Cosmos DB Document Database and Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Azure Cosmos DB document databases support partitioned collections, which can span multiple servers and partitions, while supporting unlimited storage and throughput. This article explains how to combine access control with partitioned collections, so that a user can only access their own documents in a Xamarin.Forms application._
 
@@ -266,7 +266,7 @@ This article explained how to combine access control with partitioned collection
 
 ## Related Links
 
-- [Todo Azure Cosmos DB Auth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [Todo Azure Cosmos DB Auth (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Consuming an Azure Cosmos DB Document Database](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Securing access to Azure Cosmos DB data](/azure/cosmos-db/secure-access-to-data/)
 - [Access control in the SQL API](/rest/api/documentdb/access-control-on-documentdb-resources/).

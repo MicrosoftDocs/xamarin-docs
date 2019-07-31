@@ -14,6 +14,6 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 
 ## Related links
 
-- [EditorTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/EditorTutorial)
+- [EditorTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-editortutorial/)
 - [Xamarin.Forms Editor (guide)](~/xamarin-forms/user-interface/text/editor.md)
 - [Editor API](xref:Xamarin.Forms.Editor)

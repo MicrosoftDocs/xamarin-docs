@@ -11,7 +11,7 @@ ms.date: 02/28/2017
 
 # Xamarin.Forms Web Services Introduction
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _This topic provides a walkthrough of the Xamarin.Forms sample application that demonstrates how to communicate with different web services. While each web service uses a separate sample application, they are functionally similar and share common classes._
 
@@ -90,6 +90,6 @@ Rather than invoke the web service operations directly, the `TodoItemManager` me
 
 ## Related links
 
-- [ASMX (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX)
-- [WCF (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoWCF)
-- [REST (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST)
+- [ASMX (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
+- [WCF (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todowcf)
+- [REST (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)

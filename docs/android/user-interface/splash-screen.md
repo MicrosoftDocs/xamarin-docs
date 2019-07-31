@@ -44,7 +44,7 @@ This guide assumes that the application targets Android API level
 project.
 
 All of the code and XML in this guide may be found in the
-[SplashScreen](https://developer.xamarin.com/samples/monodroid/SplashScreen) sample project for this
+[SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen) sample project for this
 guide.
 
 
@@ -307,6 +307,6 @@ launch activity.
 
 ## Related Links
 
-- [SplashScreen (sample)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
+- [SplashScreen (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
 - [layer-list Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [Material Design Patterns - Launch Screens](https://material.io/design/communication/launch-screen.html#usage)

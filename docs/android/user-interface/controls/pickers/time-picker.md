@@ -379,4 +379,4 @@ interact with the host Activity to display the selected time.
 - [TimePicker](xref:Android.Widget.TimePicker)
 - [TimePickerDialog](xref:Android.App.TimePickerDialog)
 - [TimePickerDialog.IOnTimeSetListener](xref:Android.App.TimePickerDialog.IOnTimeSetListener)
-- [TimePickerDemo (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/TimePickerDemo)
+- [TimePickerDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-timepickerdemo)

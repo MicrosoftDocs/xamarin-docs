@@ -246,4 +246,4 @@ In this article we have seen when to use the Native Data Types in a Unified API 
 - [Unified API](~/cross-platform/macios/unified/index.md)
 - [Native Types](~/cross-platform/macios/nativetypes.md)
 - [Sharing Code Options](~/cross-platform/app-fundamentals/code-sharing.md)
-- [Code Sharing Sample](https://developer.xamarin.com/samples/mobile/SharingCode/)
+- [Code Sharing Sample](https://docs.microsoft.com/samples/xamarin/mobile-samples/sharingcode/)

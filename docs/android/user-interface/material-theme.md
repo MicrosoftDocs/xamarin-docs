@@ -379,7 +379,7 @@ downward compatibility with older versions of Android.
 
 ## Related Links
 
-- [ThemeSwitcher (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/ThemeSwitcher)
+- [ThemeSwitcher (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-themeswitcher)
 - [Introduction to Lollipop](../platform/lollipop.md)
 - [CardView](controls/card-view.md)
 - [Alternate Resources](../app-fundamentals/resources-in-android/alternate-resources.md)

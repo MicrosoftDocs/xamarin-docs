@@ -85,5 +85,5 @@ s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs
 
 ## Related Links
 
-- [SwitchDemo (sample)](https://developer.xamarin.com/samples/monodroid/SwitchDemo/)
+- [SwitchDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/switchdemo)
 - [Tab Layout Tutorial](~/android/user-interface/layouts/tab-layout/index.md)

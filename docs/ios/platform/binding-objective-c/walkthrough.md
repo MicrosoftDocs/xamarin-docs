@@ -729,7 +729,7 @@ This article walked through the process of creating and using a Xamarin.iOS bind
 
 ## Related Links
 
-- [Binding Example (sample)](https://developer.xamarin.com/samples/monotouch/InfColorPicker/)
+- [Binding Example (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/infcolorpicker)
 - [Binding Objective-C Libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Binding Details](~/cross-platform/macios/binding/overview.md)
 - [Binding Types Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)

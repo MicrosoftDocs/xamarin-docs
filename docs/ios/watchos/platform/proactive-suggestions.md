@@ -360,5 +360,5 @@ This article has covered Proactive Suggestions and showed how the developer can 
 
 ## Related Links
 
-- [watchOS Samples](https://developer.xamarin.com/samples/watchos/all/)
+- [watchOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)
 - [SiriKit Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)

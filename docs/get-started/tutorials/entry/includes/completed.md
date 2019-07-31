@@ -14,6 +14,6 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 
 ## Related links
 
-- [EntryTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/EntryTutorial)
+- [EntryTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-entrytutorial/)
 - [Xamarin.Forms Entry (guide)](~/xamarin-forms/user-interface/text/entry.md)
 - [Entry API](xref:Xamarin.Forms.Entry)

@@ -11,7 +11,7 @@ ms.date: 01/12/2016
 
 # Controls Reference
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/FormsGallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _A description of all the visual elements used to construct a Xamarin.Forms application._
 
@@ -26,9 +26,9 @@ The four main control groups used to create the user interface of a Xamarin.Form
 
 A Xamarin.Forms page generally occupies the entire screen. The page usually contains a layout, which contains views and possibly other layouts. Cells are specialized components used in connection with [`TableView`](views.md#tableView) and [`ListView`](views.md#listView).
 
-In the four articles on [**Pages**](pages.md), [**Layouts**](layouts.md), [**Views**](views.md), and [**Cells**](cells.md), each type of control is described with links to its API documentation, an article describing its use (if one exists), and one or more sample programs (if they exist). Each type of control is also accompanied by a screenshot showing a page from the [**FormsGallery**](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/) sample running on iOS, Android, and UWP devices. Below each screenshot are links to the source code for the C# page, the equivalent XAML page, and (when appropriate) the C# code-behind file for the XAML page.
+In the four articles on [**Pages**](pages.md), [**Layouts**](layouts.md), [**Views**](views.md), and [**Cells**](cells.md), each type of control is described with links to its API documentation, an article describing its use (if one exists), and one or more sample programs (if they exist). Each type of control is also accompanied by a screenshot showing a page from the [**FormsGallery**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) sample running on iOS, Android, and UWP devices. Below each screenshot are links to the source code for the C# page, the equivalent XAML page, and (when appropriate) the C# code-behind file for the XAML page.
 
 ## Related Links
 
-- [Xamarin.Forms FormsGallery sample](https://developer.xamarin.com/samples/xamarin-forms/FormsGallery/)
+- [Xamarin.Forms FormsGallery sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
 - [API Documentation](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

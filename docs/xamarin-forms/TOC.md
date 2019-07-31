@@ -36,7 +36,9 @@
 ### [Loading XAML at Runtime](xaml/runtime-load.md)
 ### [XAML Standard (Preview)](xaml/standard/index.md)
 #### [Controls](xaml/standard/controls.md)
-## [Application Fundamentals](app-fundamentals/index.md)
+### [Loading XAML at Runtime](xaml/runtime-load.md)
+## Application Fundamentals
+### [Overview](app-fundamentals/index.yml)
 ### [Accessibility](app-fundamentals/accessibility/index.md)
 #### [Automation Properties](app-fundamentals/accessibility/automation-properties.md)
 #### [Keyboard Accessibility](app-fundamentals/accessibility/keyboard.md)
@@ -181,6 +183,7 @@
 #### [Setting a Picker's ItemsSource Property](user-interface/picker/populating-itemssource.md)
 #### [Adding Data to a Picker's Items Collection](user-interface/picker/populating-items.md)
 ### [ProgressBar](user-interface/progressbar.md)
+### [SearchBar](user-interface/searchbar.md)
 ### [Slider](user-interface/slider.md)
 ### [Stepper](user-interface/stepper.md)
 ### [Styles](user-interface/styles/index.md)
