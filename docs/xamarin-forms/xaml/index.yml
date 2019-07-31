@@ -22,19 +22,19 @@ sections:
     - href: xaml-basics/index.md
       html: "Learn the basics of developing Xamarin.Forms user interfaces with XAML."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_overview.svg
         href: xaml-basics/index.md
       title: Basics
     - href: xaml-controls.md
       html: "Learn about the Xamarin.Forms views that can be referenced from XAML files."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_form.svg
         href: xaml-controls.md
       title: Controls
     - href: xamlc.md
       html: "Learn how to compile XAML directly into intermediate language with the XAML compiler."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_code-performance.svg
         href: xamlc.md
       title: Compilation
     - href: markup-extensions/index.md
@@ -52,13 +52,13 @@ sections:
     - href: namespaces.md
       html: "Learn about the XAML namespace syntax, and how to declare a XAML namespace to access a type."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_namespace.svg
         href: namespaces.md
       title: Namespaces
     - href: custom-namespace-schemas.md
       html: "Learn how to create XAML custom namespace schemas, which specify a mapping between a custom URL and one or more CLR namespaces."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_code-blocks.svg
         href: custom-namespace-schemas.md
       title: Custom Namespace Schemas
     - href: custom-prefix.md
@@ -76,13 +76,13 @@ sections:
     - href: toolbox.md
       html: "Learn how to use the XAML toolbox to drag Xamarin.Forms controls and layouts into the XAML editor."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_tools.svg
         href: toolbox.md
       title: Toolbox
     - href: xaml-previewer/index.md
       html: "Learn how to use the XAML previewer, to see a live preview of a page side-by-side with its XAML markup."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_responsive.svg
         href: xaml-previewer/index.md
       title: Previewer
 - title: Advanced
@@ -94,36 +94,36 @@ sections:
     - href: bindable-properties.md
       html: "Learn how to create bindable properties, and how to consume them from XAML."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_learn-about.svg
         href: bindable-properties.md
       title: Bindable Properties
     - href: attached-properties.md
       html: "Learn how to create attached properties, and how to consume them from XAML."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_learn-about.svg
         href: bindable-properties.md
       title: Attached Properties
     - href: resource-dictionaries.md
       html: "Learn how to create XAML resources, and reuse them throughout a Xamarin.Forms application."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_reference.svg
         href: resource-dictionaries.md
       title: Resource Dictionaries
     - href: passing-arguments.md
       html: "Learn how to use XAML to pass arguments to constructors, to call factory methods, and to specify the type of a generic argument."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_learn-about.svg
         href: passing-arguments.md
       title: Passing Arguments
     - href: field-modifiers.md
       html: "Learn about XAML field modifiers, which specify the access level for generated fields for named XAML elements."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_learn-about.svg
         href: field-modifiers.md
       title: Field Modifiers
     - href: runtime-load.md
       html: "Learn how to load and parse XAML at runtime."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
         href: runtime-load.md
       title: Load XAML at Runtime
