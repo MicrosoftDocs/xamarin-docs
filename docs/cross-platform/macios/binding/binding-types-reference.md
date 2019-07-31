@@ -25,7 +25,7 @@ Syntax:
 
 ```csharp
 [BaseType (typeof (BTYPE))
-interface MyType [: Protocol1, Protocol2] {
+interface MyType : [Protocol1, Protocol2] {
      IntPtr Constructor (string foo);
 }
 ```
