@@ -126,7 +126,8 @@
 ##### [Data Template Creation](app-fundamentals/templates/data-templates/creating.md)
 ##### [Data Template Selection](app-fundamentals/templates/data-templates/selector.md)
 ### [Triggers](app-fundamentals/triggers.md)
-## [User Interface](user-interface/index.md)
+## User Interface
+### [Overview](user-interface/index.yml)
 ### [Activity Indicator](user-interface/activityindicator.md)
 ### [Animation](user-interface/animation/index.md)
 #### [Simple Animations](user-interface/animation/simple.md)
