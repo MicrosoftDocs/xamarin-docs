@@ -62,7 +62,7 @@ sections:
         href: custom-namespace-schemas.md
       title: Custom Namespace Schemas
     - href: custom-prefix.md
-      html: "Learn how to specify a recommended prefix to assciate with a XAML namespace, for XAML usage."
+      html: "Learn how to specify a recommended prefix to associate with a XAML namespace, for XAML usage."
       image:
         src: https://docs.microsoft.com/media/common/i_code-automate.svg
         href: custom-prefix.md
@@ -94,13 +94,13 @@ sections:
     - href: bindable-properties.md
       html: "Learn how to create bindable properties, and how to consume them from XAML."
       image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
+        src: https://docs.microsoft.com/media/common/i_code-edit.svg
         href: bindable-properties.md
       title: Bindable Properties
     - href: attached-properties.md
       html: "Learn how to create attached properties, and how to consume them from XAML."
       image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
+        src: https://docs.microsoft.com/media/common/i_code-edit.svg
         href: bindable-properties.md
       title: Attached Properties
     - href: resource-dictionaries.md
