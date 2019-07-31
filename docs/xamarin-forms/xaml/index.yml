@@ -34,7 +34,7 @@ sections:
     - href: xamlc.md
       html: "Learn how to compile XAML directly into intermediate language with the XAML compiler."
       image:
-        src: https://docs.microsoft.com/media/common/i_code-performance.svg
+        src: https://docs.microsoft.com/media/common/i_build.svg
         href: xamlc.md
       title: Compilation
     - href: markup-extensions/index.md
@@ -64,7 +64,7 @@ sections:
     - href: custom-prefix.md
       html: "Learn how to specify a recommended prefix to assciate with a XAML namespace, for XAML usage."
       image:
-        src: ~/media/icons/i_xaml-forms.svg
+        src: https://docs.microsoft.com/media/common/i_code-automate.svg
         href: custom-prefix.md
       title: Namespace Recommended Prefixes
 - title: Tooling
@@ -118,7 +118,7 @@ sections:
     - href: field-modifiers.md
       html: "Learn about XAML field modifiers, which specify the access level for generated fields for named XAML elements."
       image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
+        src: ~/media/icons/i_xaml-forms.svg
         href: field-modifiers.md
       title: Field Modifiers
     - href: runtime-load.md
