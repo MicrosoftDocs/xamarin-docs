@@ -109,9 +109,3 @@ sections:
         src: ~/media/icons/i_xaml-forms.svg
         href: runtime-load.md
       title: Load XAML at Runtime
-    - href: standard/index.md
-      html: "Learn about XAML standard."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: standard/index.md
-      title: XAML Standard
