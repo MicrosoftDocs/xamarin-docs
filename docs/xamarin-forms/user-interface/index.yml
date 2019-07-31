@@ -1,8 +1,8 @@
 ### YamlMime:YamlDocument
 documentType: LandingData
-title: Xamarin.Forms User Interface Views
+title: Xamarin.Forms User Interface
 metadata:
-  title: Xamarin.Forms User Interface Views
+  title: Xamarin.Forms User Interface
   description: Learn about creating user interfaces with Xamarin.Forms.
   ms.topic: landing-page
   ms.prod: xamarin
@@ -61,12 +61,6 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: colors.md
       title: Colors
-    - href: controls/index.md
-      html: "Learn about the pages, layouts, views, and cells available in Xamarin.Forms."
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: controls/index.md
-      title: Controls Reference
     - href: controls/index.md
       html: "Learn about the pages, layouts, views, and cells available in Xamarin.Forms."
       image:
