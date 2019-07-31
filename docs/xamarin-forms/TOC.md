@@ -34,9 +34,6 @@
 ### [XAML Custom Namespace Schemas](xaml/custom-namespace-schemas.md)
 ### [XAML Namespace Recommended Prefixes](xaml/custom-prefix.md)
 ### [Loading XAML at Runtime](xaml/runtime-load.md)
-### [XAML Standard (Preview)](xaml/standard/index.md)
-#### [Controls](xaml/standard/controls.md)
-### [Loading XAML at Runtime](xaml/runtime-load.md)
 ## Application Fundamentals
 ### [Overview](app-fundamentals/index.yml)
 ### [Accessibility](app-fundamentals/accessibility/index.md)
