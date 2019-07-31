@@ -73,12 +73,6 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: controls/index.md
       title: Controls Reference
-    - href: datapages/index.md
-      html: "Learn about the DataPages API, which provides the ability to quickly bind a data source to pre-built views."
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: datapages/index.md
-      title: DataPages
     - href: datepicker.md
       html: "Learn how to use a DatePicker to allow a date within a specified range to be selected."
       image:
@@ -181,12 +175,6 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: text/index.md
       title: Text
-    - href: themes/index.md
-      html: "Learn how to use Xamarin.Forms Themes to define a specific visual appearance for standard controls."
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: themes/index.md
-      title: Themes
     - href: timepicker.md
       html: "Learn how to use a TimePicker to allow a time to be selected."
       image:
