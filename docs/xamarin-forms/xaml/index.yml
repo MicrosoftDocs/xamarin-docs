@@ -9,11 +9,11 @@ metadata:
   ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/26/2019
+  ms.date: 07/31/2019
 abstract:
   description: Learn how to use XAML to define Xamarin.Forms user interfaces.
 sections:
-- title:
+- title: Essentials
   items:
   - type: list
     style: cards
@@ -37,18 +37,42 @@ sections:
         src: ~/media/icons/i_xaml-forms.svg
         href: xamlc.md
       title: Compilation
-    - href: namespaces.md
-      html: "Learn about the XAML namespace syntax, and how to declare a XAML namespace to access a type."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: namespaces.md
-      title: Namespaces
     - href: markup-extensions/index.md
       html: "Learn about XAML markup extensions, which allow element attributes to be set from sources other than literal text strings."
       image:
         src: ~/media/icons/i_xaml-forms.svg
         href: markup-extensions/index.md
       title: Markup Extensions
+- title: Namespaces
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: namespaces.md
+      html: "Learn about the XAML namespace syntax, and how to declare a XAML namespace to access a type."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: namespaces.md
+      title: Namespaces
+    - href: custom-namespace-schemas.md
+      html: "Learn how to create XAML custom namespace schemas, which specify a mapping between a custom URL and one or more CLR namespaces."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: custom-namespace-schemas.md
+      title: Custom Namespace Schemas
+    - href: custom-prefix.md
+      html: "Learn how to specify a recommended prefix to assciate with a XAML namespace, for XAML usage."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: custom-prefix.md
+      title: Namespace Recommended Prefixes
+- title: Tooling
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
     - href: toolbox.md
       html: "Learn how to use the XAML toolbox to drag Xamarin.Forms controls and layouts into the XAML editor."
       image:
@@ -61,6 +85,12 @@ sections:
         src: ~/media/icons/i_xaml-forms.svg
         href: xaml-previewer/index.md
       title: Previewer
+- title: Advanced
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
     - href: bindable-properties.md
       html: "Learn how to create bindable properties, and how to consume them from XAML."
       image:
@@ -91,18 +121,6 @@ sections:
         src: ~/media/icons/i_xaml-forms.svg
         href: field-modifiers.md
       title: Field Modifiers
-    - href: custom-namespace-schemas.md
-      html: "Learn how to create XAML custom namespace schemas, which specify a mapping between a custom URL and one or more CLR namespaces."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: custom-namespace-schemas.md
-      title: Custom Namespace Schemas
-    - href: custom-prefix.md
-      html: "Learn how to specify a recommended prefix to assciate with a XAML namespace, for XAML usage."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: custom-prefix.md
-      title: Namespace Recommended Prefixes
     - href: runtime-load.md
       html: "Learn how to load and parse XAML at runtime."
       image:
