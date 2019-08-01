@@ -527,7 +527,7 @@ Alternatively, [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creat
 
 ## Related links
 
-- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md)
+- [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml)
 - [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Controls Reference](~/xamarin-forms/user-interface/controls/index.md)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)
