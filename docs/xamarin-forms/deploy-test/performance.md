@@ -1,46 +1,28 @@
 ---
 title: "Xamarin.Forms Performance"
-description: "There are many techniques for increasing the performance of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application. This article describes and discusses these techniques."
+description: "There are many techniques for increasing the performance of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application."
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/29/2017
+ms.date: 08/01/2019
 ---
 
 # Xamarin.Forms Performance
-
-_There are many techniques for increasing the performance of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application. This article describes and discusses these techniques._
 
 > [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
 **Evolve 2016: Optimizing App Performance with Xamarin.Forms**
 
-## Overview
-
 Poor application performance presents itself in many ways. It can make an application seem unresponsive, can cause slow scrolling, and can reduce battery life. However, optimizing performance involves more than just implementing efficient code. The user's experience of application performance must also be considered. For example, ensuring that operations execute without blocking the user from performing other activities can help to improve the user's experience.
 
-There are a number of techniques for increasing the performance, and perceived performance, of a Xamarin.Forms application. They include:
-
-- [Enable the XAML Compiler](#xamlc)
-- [Choose the Correct Layout](#correctlayout)
-- [Enable Layout Compression](#layoutcompression)
-- [Use Fast Renderers](#fastrenderers)
-- [Reduce Unnecessary Bindings](#databinding)
-- [Optimize Layout Performance](#optimizelayout)
-- [Optimize ListView Performance](#optimizelistview)
-- [Optimize Image Resources](#optimizeimages)
-- [Reduce the Visual Tree Size](#visualtree)
-- [Reduce the Application Resource Dictionary Size](#resourcedictionary)
-- [Use the Custom Renderer Pattern](#rendererpattern)
+There are many techniques for increasing the performance, and perceived performance, of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application.
 
 > [!NOTE]
 >  Before reading this article you should first read [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md), which discusses non-platform specific techniques to improve the memory usage and performance of applications built using the Xamarin platform.
 
-<a name="xamlc" />
-
-## Enable the XAML Compiler
+## Enable the XAML compiler
 
 XAML can be optionally compiled directly into intermediate language (IL) with the XAML compiler (XAMLC). XAMLC offers a number of a benefits:
 
@@ -50,9 +32,7 @@ XAML can be optionally compiled directly into intermediate language (IL) with th
 
 XAMLC is disabled by default to ensure backwards compatibility. However, it can be enabled at both the assembly and class level. For more information, see [Compiling XAML](~/xamarin-forms/xaml/xamlc.md).
 
-<a name="correctlayout" />
-
-## Choose the Correct Layout
+## Choose the correct layout
 
 A layout that's capable of displaying multiple children, but that only has a single child, is wasteful. For example, the following code example shows a [`StackLayout`](xref:Xamarin.Forms.StackLayout) with a single child:
 
@@ -142,27 +122,19 @@ This is wasteful because unnecessary layout calculations are performed. Instead,
 </ContentPage>
 ```
 
-<a name="layoutcompression" />
-
-## Enable Layout Compression
+## Enable layout compression
 
 Layout compression removes specified layouts from the visual tree, in an attempt to improve page rendering performance. The performance benefit that this delivers varies depending on the complexity of a page, the version of the operating system being used, and the device on which the application is running. However, the biggest performance gains will be seen on older devices. For more information, see [Layout Compression](~/xamarin-forms/user-interface/layouts/layout-compression.md).
 
-<a name="fastrenderers" />
-
-## Use Fast Renderers
+## Use fast renderers
 
 Fast renderers reduce the inflation and rendering costs of Xamarin.Forms controls on Android by flattening the resulting native control hierarchy. This further improves performance by creating fewer objects, which in turns results in a less complex visual tree, and less memory use. For more information, see [Fast Renderers](~/xamarin-forms/internals/fast-renderers.md).
 
-<a name="databinding" />
-
-## Reduce Unnecessary Bindings
+## Reduce unnecessary bindings
 
 Don't use bindings for content that can easily be set statically. There is no advantage in binding data that doesn't need to be bound, because bindings aren't cost efficient. For example, setting `Button.Text = "Accept"` has less overhead than binding [`Button.Text`](xref:Xamarin.Forms.Button.Text) to a ViewModel `string` property with value "Accept".
 
-<a name="optimizelayout" />
-
-## Optimize Layout Performance
+## Optimize layout performance
 
 Xamarin.Forms 2 introduced an optimized layout engine that impacts layout updates. To obtain the best possible layout performance, follow these guidelines:
 
@@ -177,9 +149,7 @@ Xamarin.Forms 2 introduced an optimized layout engine that impacts layout update
 - Don't set the [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) property unless required.
 - Set the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) of any [`Label`](xref:Xamarin.Forms.Label) instances to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap) whenever possible.
 
-<a name="optimizelistview" />
-
-## Optimize ListView Performance
+## Optimize ListView performance
 
 When using a [`ListView`](xref:Xamarin.Forms.ListView) control there are a number of user experiences that should be optimized:
 
@@ -189,9 +159,7 @@ When using a [`ListView`](xref:Xamarin.Forms.ListView) control there are a numbe
 
 The [`ListView`](xref:Xamarin.Forms.ListView) control requires an application to supply data and cell templates. How this is achieved will have a large impact on the performance of the control. For more information, see [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md).
 
-<a name="optimizeimages" />
-
-## Optimize Image Resources
+## Optimize image resources
 
 Displaying image resources can greatly increase the app's memory footprint. Therefore, they should only be created when required and should be released as soon as the application no longer requires them. For example, if an application is displaying an image by reading its data from a stream, ensure that stream is created only when it's required, and ensure that the stream is released when it's no longer required. This can be achieved by creating the stream when the page is created, or when the [`Page.Appearing`](xref:Xamarin.Forms.Page.Appearing) event fires, and then disposing of the stream when the [`Page.Disappearing`](xref:Xamarin.Forms.Page.Disappearing) event fires.
 
@@ -199,9 +167,7 @@ When downloading an image for display with the [`ImageSource.FromUri`](xref:Xama
 
 For more information, see [Optimize Image Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages).
 
-<a name="visualtree" />
-
-## Reduce the Visual Tree Size
+## Reduce the visual tree size
 
 Reducing the number of elements on a page will make the page render faster. There are two main techniques for achieving this. The first is to hide elements that aren't visible. The [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) property of each element determines whether the element should be part of the visual tree or not. Therefore, if an element isn't visible because it's hidden behind other elements, either remove the element or set its `IsVisible` property to `false`.
 
@@ -235,9 +201,7 @@ The same page layout can be maintained with a reduced element count, as shown in
 </ContentPage.Content>
 ```
 
-<a name="resourcedictionary" />
-
-## Reduce the Application Resource Dictionary Size
+## Reduce the application resource dictionary size
 
 Any resources that are used throughout the application should be stored in the application's resource dictionary to avoid duplication. This will help to reduce the amount of XAML that has to be parsed throughout the application. The following code example shows the `HeadingLabelStyle` resource, which is used application wide, and so is defined in the application's resource dictionary:
 
@@ -282,9 +246,7 @@ However, XAML that's specific to a page shouldn't be included in the app's resou
 
 For more information about application resources, see [`Working with Styles`](~/xamarin-forms/user-interface/styles/index.md).
 
-<a name="rendererpattern" />
-
-## Use the Custom Renderer Pattern
+## Use the custom renderer pattern
 
 Most renderer classes expose the `OnElementChanged` method, which is called when a Xamarin.Forms custom control is created to render the corresponding native control. Custom renderer classes, in each platform-specific renderer class, then override this method to instantiate and customize the native control. The `SetNativeControl` method is used to instantiate the native control, and this method will also assign the control reference to the `Control` property.
 
@@ -315,12 +277,7 @@ A new native control should only be instantiated once, when the `Control` proper
 
 For more information about custom renderers, see [Customizing Controls on Each Platform](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
-## Summary
-
-This article described and discussed techniques for increasing the performance of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application.
-
-
-## Related Links
+## Related links
 
 - [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md)
 - [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md)
