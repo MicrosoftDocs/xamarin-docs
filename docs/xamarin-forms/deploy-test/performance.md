@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Forms Performance"
+title: "Improve Xamarin.Forms App Performance"
 description: "There are many techniques for increasing the performance of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application."
 ms.prod: xamarin
 ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/01/2019
 ---
 
-# Xamarin.Forms Performance
+# Improve Xamarin.Forms App Performance
 
 > [!VIDEO https://youtube.com/embed/RZvdql3Ev0E]
 
@@ -20,7 +20,7 @@ Poor application performance presents itself in many ways. It can make an applic
 There are many techniques for increasing the performance, and perceived performance, of Xamarin.Forms applications. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application.
 
 > [!NOTE]
->  Before reading this article you should first read [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md), which discusses non-platform specific techniques to improve the memory usage and performance of applications built using the Xamarin platform.
+> Before reading this article you should first read [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md), which discusses non-platform specific techniques to improve the memory usage and performance of applications built using the Xamarin platform.
 
 ## Enable the XAML compiler
 
@@ -45,6 +45,12 @@ Don't use bindings for content that can easily be set statically. There is no ad
 Fast renderers reduce the inflation and rendering costs of Xamarin.Forms controls on Android by flattening the resulting native control hierarchy. This further improves performance by creating fewer objects, which in turns results in a less complex visual tree, and less memory use.
 
 From Xamarin.Forms 4.0 onwards, all applications targeting `FormsAppCompatActivity` use fast renderers by default. For more information, see [Fast Renderers](~/xamarin-forms/internals/fast-renderers.md).
+
+## Enable startup tracing on Android
+
+Ahead of Time (AOT) compilation on Android minimizes Just in Time (JIT) application startup overhead and memory usage, at the cost of creating a much larger APK. An alternative is to use startup tracing, which provides a trade-off between Android APK size and startup time, when compared to conventional AOT compilation.
+
+Instead of compiling as much of the application as possible to unmanaged code, startup tracing compiles only the set of managed methods that represent the most expensive parts of application startup in a blank Xamarin.Forms application. This approach results in a reduced APK size, when compared to conventional AOT compilation, while still providing similar startup improvements.
 
 ## Enable layout compression
 
@@ -146,6 +152,16 @@ To obtain the best possible layout performance, follow these guidelines:
 - Don't update any [`Label`](xref:Xamarin.Forms.Label) instances more frequently than required, as the change of size of the label can result in the entire screen layout being re-calculated.
 - Don't set the [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) property unless required.
 - Set the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) of any [`Label`](xref:Xamarin.Forms.Label) instances to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap) whenever possible.
+
+## Choose a dependency injection container carefully
+
+Dependency injection containers introduce additional performance constraints into mobile applications. Registering and resolving types with a container has a performance cost because of the container's use of reflection for creating each type, especially if dependencies are being reconstructed for each page navigation in the app. If there are many or deep dependencies, the cost of creation can increase significantly. In addition, type registration, which usually occurs during application startup, can have a noticeable impact on startup time, dependent upon the container being used.
+
+As an alternative, dependency injection can be made more performant by implementing it manually using factories.
+
+## Create Shell applications
+
+Xamarin.Forms Shell applications provide an opinionated navigation experience based on flyouts and tabs. If your application user experience can be implemented with Shell, it is beneficial to do so. Shell applications help to avoid a poor startup experience, because pages are created on demand in response to navigation rather than at application startup, which occurs with applications that use a [`TabbedPage'](xref:Xamarin.Forms.TabbedPage). For more information, see [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
 
 ## Use CollectionView instead of ListView
 
