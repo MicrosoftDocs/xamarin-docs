@@ -54,24 +54,6 @@ User interface to share to external application that appears when request is mad
 
 ![Share](images/share.png)
 
-## Platform Differences
-
-# [Android](#tab/android)
-
-* `Subject` property is used for desired subject of a message.
-
-# [iOS](#tab/ios)
-
-* `Subject` not used.
-* `Title` not used.
-
-# [UWP](#tab/uwp)
-
-* `Title` will default to Application Name if not set.
-* `Subject` not used.
-
------
-
 ## Files
 
 ![Preview feature](~/media/shared/preview.png)
@@ -97,6 +79,32 @@ await Share.RequestAsync(new ShareFileRequest
     File = new ShareFile(file)
 });
 ```
+
+## Platform Differences
+
+# [Android](#tab/android)
+
+## Share Text & Share Uri
+* `Subject` property is used for desired subject of a message.
+
+# [iOS](#tab/ios)
+
+## Share Text & Share Uri
+* `Subject` not used.
+* `Title` not used.
+
+## Share File
+* `Title` not used.
+
+# [UWP](#tab/uwp)
+
+## Share Text & Share Uri
+* `Title` will default to Application Name if not set.
+* `Subject` not used.
+
+## Share File
+* `Title` will default to Application Name if not set.
+-----
 
 ## API
 
