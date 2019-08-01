@@ -139,7 +139,7 @@ This method updates the viewable content of the wrapped user interface element, 
 When panning content in an element that does not occupy the full screen, the height and width of the viewport can be obtained from the element's [`Height`](xref:Xamarin.Forms.VisualElement.Height) and [`Width`](xref:Xamarin.Forms.VisualElement.Width) properties.
 
 > [!NOTE]
-> Displaying high-resolution images can greatly increase an app's memory footprint. Therefore, they should only be created when required and should be released as soon as the app no longer requires them. For more information, see [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#Optimize-image-resources).
+> Displaying high-resolution images can greatly increase an app's memory footprint. Therefore, they should only be created when required and should be released as soon as the app no longer requires them. For more information, see [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#optimize-image-resources).
 
 ## Related Links
 
