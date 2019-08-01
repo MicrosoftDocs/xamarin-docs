@@ -24,7 +24,7 @@ There are many techniques for increasing the performance, and perceived performa
 
 ## Enable the XAML compiler
 
-XAML can be optionally compiled directly into intermediate language (IL) with the XAML compiler (XAMLC). XAMLC offers a number of a benefits:
+XAML can be optionally compiled directly into intermediate language (IL) with the XAML compiler (XAMLC). XAMLC offers a number of benefits:
 
 - It performs compile-time checking of XAML, notifying the user of any errors.
 - It removes some of the load and instantiation time for XAML elements.
@@ -34,7 +34,7 @@ XAMLC is enabled by default in new Xamarin.Forms solutions. However, it may need
 
 ## Use compiled bindings
 
-Compiled bindings improve data binding performance in Xamarin.Forms applications by resolving binding expressions at compile-time, rather than at runtime with reflection. Compiling a binding expression generates compiled code that typically resolves a binding 8-20 times quicker than using a classic binding. For more information, see [Compiled Bindings](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
+Compiled bindings improve data binding performance in Xamarin.Forms applications by resolving binding expressions at compile time, rather than at runtime with reflection. Compiling a binding expression generates compiled code that typically resolves a binding 8-20 times quicker than using a classic binding. For more information, see [Compiled Bindings](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md).
 
 ## Reduce unnecessary bindings
 
@@ -259,7 +259,7 @@ For more information about application resources, see [XAML Styles](~/xamarin-fo
 
 ## Use the custom renderer pattern
 
-Most Xamarin.Forms renderer classes expose the `OnElementChanged` method, which is called when a Xamarin.Forms custom control is created to render the corresponding native control. Custom renderer classes, in each platform platform, then override this method to instantiate and customize the native control. The `SetNativeControl` method is used to instantiate the native control, and this method will also assign the control reference to the `Control` property.
+Most Xamarin.Forms renderer classes expose the `OnElementChanged` method, which is called when a Xamarin.Forms custom control is created to render the corresponding native control. Custom renderer classes, in each platform project, then override this method to instantiate and customize the native control. The `SetNativeControl` method is used to instantiate the native control, and this method will also assign the control reference to the `Control` property.
 
 However, in some circumstances the `OnElementChanged` method can be called multiple times. Therefore, to prevent memory leaks, which can have a performance impact, care must be taken when instantiating a new native control. The approach to use when instantiating a new native control in a custom renderer is shown in the following code example:
 
