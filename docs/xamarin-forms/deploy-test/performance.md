@@ -298,6 +298,7 @@ For more information about custom renderers, see [Customizing Controls on Each P
 - [Compiled Bindings](~/xamarin-forms/app-fundamentals/data-binding/compiled-bindings.md)
 - [Fast Renderers](~/xamarin-forms/internals/fast-renderers.md)
 - [Layout Compression](~/xamarin-forms/user-interface/layouts/layout-compression.md)
+- [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)
 - [Xamarin.Forms CollectionView](~/xamarin-forms/user-interface/collectionview/index.md)
 - [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md)
 - [Optimize Image Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages)
