@@ -2178,6 +2178,5 @@ unbound Java cases with Mono for Android.
 
 ## Related links
 
-- [SanityTests (sample)](https://developer.xamarin.com/samples/SanityTests/)
 - [Java Native Interface Specification](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/jniTOC.html)
 - [Java Native Interface Functions](http://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html)
