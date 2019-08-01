@@ -13,7 +13,7 @@ metadata:
 abstract:
   description: Learn how to use XAML to define Xamarin.Forms user interfaces.
 sections:
-- title: Essentials
+- title: Get Started
   items:
   - type: list
     style: cards
@@ -85,7 +85,7 @@ sections:
         src: https://docs.microsoft.com/media/common/i_code-automate.svg
         href: custom-prefix.md
       title: Namespace Recommended Prefixes
-- title: Advanced
+- title: Additional Capabilities
   items:
   - type: list
     style: cards
