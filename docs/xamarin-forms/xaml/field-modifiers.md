@@ -11,11 +11,7 @@ ms.date: 08/02/2019
 
 # XAML Field Modifiers in Xamarin.Forms
 
-_The `x:FieldModifier` namespace attribute specifies the access level for generated fields for named XAML elements._
-
-## Overview
-
-Valid values of the attribute are:
+The `x:FieldModifier` namespace attribute specifies the access level for generated fields for named XAML elements. Valid values of the attribute are:
 
 - `private` – specifies that the generated field for the XAML element is accessible only within the body of the class in which it is declared.
 - `public`  – specifies that the generated field for the XAML element has no access restrictions.
@@ -41,5 +37,5 @@ The following XAML shows examples of setting the attribute:
 <Label x:Name="publicLabel" x:FieldModifier="public" />
 ```
 
-> [!NOTE]
+> [!IMPORTANT]
 > The `x:FieldModifier` attribute cannot be used to specify the access level of a XAML class.
