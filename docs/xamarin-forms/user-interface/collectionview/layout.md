@@ -13,7 +13,7 @@ ms.date: 07/01/2019
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that control layout:
 
@@ -455,6 +455,6 @@ For more information about flow direction, see [Right-to-left localization](~/xa
 
 ## Related links
 
-- [CollectionView (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+- [CollectionView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Right-to-left localization](~/xamarin-forms/app-fundamentals/localization/right-to-left.md)
 - [Xamarin.Forms CollectionView Scrolling](scrolling.md)

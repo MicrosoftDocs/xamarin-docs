@@ -11,7 +11,7 @@ ms.date: 06/11/2019
 
 # Xamarin.Forms CheckBox
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CheckBoxDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 
 The Xamarin.Forms `CheckBox` is a type of button that can either be checked or empty. When a checkbox is checked, it's considered to be on. When a checkbox is empty, it's considered to be off.
 
@@ -157,6 +157,6 @@ For more information about visual states, see [Xamarin.Forms Visual State Manage
 
 ## Related links
 
-- [CheckBox Demos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CheckBoxDemos)
+- [CheckBox Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-checkboxdemos/)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
