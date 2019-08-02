@@ -128,7 +128,25 @@ Xamarin.Android supports the following system properties:
 -   *debug.mono.trace*: Allows setting the [mono --trace](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`
     setting.
 
+## Deleting `bin` and `obj`
 
+Xamarin.Android has suffered in the past from a situation such as:
+
+- You encounter a strange build or runtime error.
+- You `Clean`, `Rebuild`, or manually delete your `bin` and `obj` directories.
+- The problem goes away.
+
+We are heavily invested into fixing problems such as these due to their impact on developer productivity.
+
+If a problem such as this happens to you:
+
+1. Make a mental note. What was the last action that got your project into this state?
+1. Save your current build log. Try building again, and record a [diagnostic build log](#diagnostic-msbuild-output).
+1. Submit a [bug report][bug].
+
+Before deleting your `bin` and `obj` directories, zip them up and save them for later diagnosis if needed. You can probably merely `Clean` your Xamarin.Android application project to get things working again.
+
+[bug]: https://github.com/xamarin/xamarin-android/wiki/Submitting-Bugs,-Feature-Requests,-and-Pull-Requests
 
 ## Xamarin.Android cannot resolve System.ValueTuple
 
