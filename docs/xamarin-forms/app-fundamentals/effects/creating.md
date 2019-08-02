@@ -99,11 +99,12 @@ The `OnElementPropertyChanged` override responds to bindable property changes on
 The following code example shows the `FocusEffect` implementation for the Android project:
 
 ```csharp
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
 [assembly: ResolutionGroupName("MyCompany")]
-[assembly: ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
+[assembly: ExportEffect(typeof(EffectsDemo.Droid.FocusEffect), nameof(EffectsDemo.Droid.FocusEffect))]
 namespace EffectsDemo.Droid
 {
     public class FocusEffect : PlatformEffect
