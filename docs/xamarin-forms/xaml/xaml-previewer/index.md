@@ -45,9 +45,12 @@ You can change whether the screen is split vertically or horizontally, or collap
 
 ### Visual Studio for Mac
 
-The **Preview** button is displayed on the editor when you open a XAML page. Show or hide the Previewer by pressing the **Preview** button in the top-right corner of any XAML document window:
+The **Preview** button is displayed on the editor when you open a XAML page. Show or hide the Previewer by pressing the **Preview** or **Split** buttons in the bottom-left of any XAML document window:
 
-[![Xamarin.Forms Previewer in Visual Studio for Mac](xaml-previewer-images/xamlp-list-sml.png "Xamarin.Forms Previewer in Visual Studio for Mac")](xaml-previewer-images/xamlp-list.png#lightbox)
+[![Xamarin.Forms Previewer enabled with the preview or split button](xaml-previewer-images/xamlp-list-sml.png)](xaml-previewer-images/xamlp-list.png#lightbox)
+
+> [!NOTE]
+> In older versions of Visual Studio for Mac, the **Preview** button was located in the top-right of the window.
 
 ::: zone-end
 
