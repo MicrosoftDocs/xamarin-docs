@@ -17,7 +17,7 @@ _Load bitmaps from various sources and display them._
 
 The support of bitmaps in SkiaSharp is quite extensive. This article covers only the basics &mdash; how to load bitmaps and how to display them:
 
-![](bitmaps-images/bitmapssample.png "The display of two bitmaps")
+![](bitmaps-images/basicbitmaps-small.png "The display of two bitmaps")
 
 A much deeper exploration of bitmaps can be found in the section [SkiaSharp Bitmaps](../bitmaps/index.md).
 
@@ -93,7 +93,7 @@ protected override async void OnAppearing()
 
 The Android operating system raises an exception when using the `Stream` returned from `GetStreamAsync` in the `SKBitmap.Decode` method because it's performing a lengthy operation on a main thread. For this reason, the contents of the bitmap file are copied to a `MemoryStream` object using `CopyToAsync`.
 
-The static `SKBitmap.Decode` method is responsible for decoding bitmap files. It works with JPEG, PNG, and GIF bitmap formats, and stores the results in an internal SkiaSharp format. At this point, the `SKCanvasView` needs to be invalidated to allow the `PaintSurface` handler to update the display. 
+The static `SKBitmap.Decode` method is responsible for decoding bitmap files. It works with JPEG, PNG, and GIF bitmap formats, and stores the results in an internal SkiaSharp format. At this point, the `SKCanvasView` needs to be invalidated to allow the `PaintSurface` handler to update the display.
 
 ## Loading a Bitmap Resource
 
