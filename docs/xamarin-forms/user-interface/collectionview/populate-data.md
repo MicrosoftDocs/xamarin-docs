@@ -237,7 +237,7 @@ The `MonkeyDataTemplateSelector` class defines `AmericanMonkey` and `OtherMonkey
 
 For more information about data template selectors, see [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md). 
 
-> [!NOTE>
+> [!IMPORTANT]
 > When using [`CollectionView`](xref:Xamarin.Forms.CollectionView), never set the root element of your [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objects to a `ViewCell`. This will result in an exception being thrown because `CollectionView` has no concept of cells.
 
 ## Related links
