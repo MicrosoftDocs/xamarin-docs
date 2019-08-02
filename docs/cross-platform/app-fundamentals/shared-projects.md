@@ -59,31 +59,27 @@ Once the Shared Project is referenced by another library or application you can 
 
 When you right-click on a Shared Project and choose **Options** there fewer settings than other project types. Because Shared Projects are not compiled (on their own), you cannot set output or compiler options, project configurations, assembly signing, or custom commands. The code in a Shared Project effectively inherits these values from whatever is referencing them.
 
-
-
 The **Options** screen is shown below - the Project **Name** and the **Default Namespace** are the only two settings that you will generally change.
-
 
 ![](shared-projects-images/xs-sharedprojectoptions.png "Shared Project Options")
 
-
-
 # [Visual Studio](#tab/windows)
 
-
-
 ## Visual Studio Walkthrough
-
 
 This section walks through how to create and use a Shared Project using Visual Studio. Refer the to [Shared Project Example](#Shared_Project_Example) section for a complete implementation.
 
 ### Creating a Shared Project
 
-To create a new Shared Project navigate to **File > New Solution...** and choose a name for the project and solution.
+To create a new Shared Project, navigate to **File** > **New** > **Project**.
 
-![](shared-projects-images/vs-newsolution.png "New Solution")
+In Visual Studio 2019, enter **shared** in the search box on the **Create a new project** page. Select the **Shared Project** template and then select **Next**. Enter a name for the project, and then select **Create**.
 
-You can also add a new Shared Project to a solution by right-clicking on the solution file and choosing **Add > New Project...**. A new Shared Project looks as shown below (after a class file has been added) - notice there are no References or Component nodes; these are not supported for Shared Projects.
+In Visual Studio 2017, select the **Shared Project** template, and then choose a name for the project.
+
+![Shared Project template in Visual Studio 2017](shared-projects-images/vs-newsolution.png)
+
+You can also add a new Shared Project to an existing solution by right-clicking on the solution file and choosing **Add > New Project**. A new Shared Project looks as shown below (after a class file has been added). Notice there are no References or Component nodes; these are not supported for Shared Projects.
 
 ![](shared-projects-images/vs-empty.png "Empty Shared Project")
 
@@ -95,9 +91,7 @@ Adding a reference to a Shared Project is done the same way as referencing a reg
 
 Once the Shared Project is referenced by another library or application you can build the solution and view any errors in the code. When the Shared Project is referenced by _two-or-more_ other projects, a menu appears in the top-left of the source code editor to see which projects reference the current code file.
 
-
 ### Shared Project Properties
-
 
 When you select a Shared Project there fewer settings in the Properties panel than other project types. Because Shared Projects are not compiled (on their own), you cannot set output or compiler options, project configurations, assembly signing, or custom commands. The code in a Shared Project effectively inherits these values from whatever is referencing them.
 
