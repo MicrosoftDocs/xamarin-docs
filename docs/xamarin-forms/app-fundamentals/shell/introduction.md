@@ -11,7 +11,7 @@ ms.date: 05/24/2019
 
 # Xamarin.Forms Shell Introduction
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require, including:
 
@@ -48,4 +48,4 @@ Within each tab, additional [`ContentPage`](xref:Xamarin.Forms.ContentPage) obje
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

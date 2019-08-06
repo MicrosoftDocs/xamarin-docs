@@ -13,7 +13,7 @@ ms.date: 05/06/2019
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that control item selection:
 
@@ -330,5 +330,5 @@ When the [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode)
 
 ## Related links
 
-- [CollectionView (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos/)
+- [CollectionView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

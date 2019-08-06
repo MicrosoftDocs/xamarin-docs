@@ -11,7 +11,7 @@ ms.date: 03/06/2017
 
 # Picking a Photo from the Picture Library
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 This article walks through the creation of an application that allows the user to pick a photo from the phone's picture library. Because Xamarin.Forms does not include this functionality, it is necessary to use [`DependencyService`](xref:Xamarin.Forms.DependencyService) to access native APIs on each platform.
 
@@ -275,6 +275,6 @@ async void OnPickPhotoButtonClicked(object sender, EventArgs e)
 
 ## Related links
 
-- [DependencyService (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+- [DependencyService (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Choose a Photo from the Gallery (iOS)](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/video_and_photos/choose_a_photo_from_the_gallery)
 - [Select an Image (Android)](https://github.com/xamarin/recipes/tree/master/Recipes/android/other_ux/pick_image)

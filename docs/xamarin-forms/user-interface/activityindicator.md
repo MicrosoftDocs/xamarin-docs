@@ -10,7 +10,7 @@ ms.date: 07/10/2019
 ---
 
 # Xamarin.Forms ActivityIndicator
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ActivityIndicatorDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 
 The Xamarin.Forms[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) is a control that displays an animation to show that the application is engaged in a lengthy activity. Unlike the [`ProgressBar`](xref:Xamarin.Forms.ProgressBar), the `ActivityIndicator` gives no indication of progress. The `ActivityIndicator` inherits from [`View`](xref:Xamarin.Forms.View).
 
@@ -59,5 +59,5 @@ The following screenshot shows the `ActivityIndicator` with the `Color` property
 
 ## Related links
 
-* [ActivityIndicator Demos](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ActivityIndicatorDemos)
+* [ActivityIndicator Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/)
 * [ProgressBar](~/xamarin-forms/user-interface/progressbar.md)
