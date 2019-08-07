@@ -101,10 +101,10 @@ public partial class BitmapDraggingPage : ContentPage
     void OnTouchEffectAction(object sender, TouchActionEventArgs args)
     {
         // Convert Xamarin.Forms point to pixels
-        Point pt = args.Location;
+
         SKPoint point = 
-            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
-                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+            new SKPoint((float)(canvasView.CanvasSize.Width * args.Location.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * args.Location.Y / canvasView.Height));
 
         switch (args.Type)
         {
@@ -168,10 +168,10 @@ public partial class BitmapScalingPage : ContentPage
     void OnTouchEffectAction(object sender, TouchActionEventArgs args)
     {
         // Convert Xamarin.Forms point to pixels
-        Point pt = args.Location;
+       
         SKPoint point =
-            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
-                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+            new SKPoint((float)(canvasView.CanvasSize.Width * args.Location.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * args.Location.Y / canvasView.Height));
 
         switch (args.Type)
         {
@@ -280,10 +280,10 @@ public partial class BitmapRotationPage : ContentPage
     void OnTouchEffectAction(object sender, TouchActionEventArgs args)
     {
         // Convert Xamarin.Forms point to pixels
-        Point pt = args.Location;
+       
         SKPoint point =
-            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
-                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+            new SKPoint((float)(canvasView.CanvasSize.Width * args.Location.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * args.Location.Y / canvasView.Height));
 
         switch (args.Type)
         {
@@ -525,10 +525,10 @@ public partial class TouchManipulationPage : ContentPage
     void OnTouchEffectAction(object sender, TouchActionEventArgs args)
     {
         // Convert Xamarin.Forms point to pixels
-        Point pt = args.Location;
+      
         SKPoint point =
-            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
-                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+            new SKPoint((float)(canvasView.CanvasSize.Width * args.Location.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * args.Location.Y / canvasView.Height));
 
         switch (args.Type)
         {
@@ -972,10 +972,10 @@ public partial class BitmapScatterViewPage : ContentPage
     void OnTouchEffectAction(object sender, TouchActionEventArgs args)
     {
         // Convert Xamarin.Forms point to pixels
-        Point pt = args.Location;
+     
         SKPoint point =
-            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
-                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+            new SKPoint((float)(canvasView.CanvasSize.Width * args.Location.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * args.Location.Y / canvasView.Height));
 
         switch (args.Type)
         {
@@ -1144,10 +1144,10 @@ public partial class SingleFingerCornerScalePage : ContentPage
     void OnTouchEffectAction(object sender, TouchActionEventArgs args)
     {
         // Convert Xamarin.Forms point to pixels
-        Point pt = args.Location;
+      
         SKPoint point =
-            new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
-                        (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
+            new SKPoint((float)(canvasView.CanvasSize.Width * args.Location.X / canvasView.Width),
+                        (float)(canvasView.CanvasSize.Height * args.Location.Y / canvasView.Height));
 
         switch (args.Type)
         {
