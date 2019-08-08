@@ -340,7 +340,7 @@
 #### [Speech Recognition](data-cloud/azure-cognitive-services/speech-recognition.md)
 #### [Spell Check](data-cloud/azure-cognitive-services/spell-check.md)
 #### [Text Translation](data-cloud/azure-cognitive-services/text-translation.md)
-#### [Emotion Recognition](data-cloud/azure-cognitive-services/emotion-recognition.md)
+#### [Perceived Emotion Recognition](data-cloud/azure-cognitive-services/emotion-recognition.md)
 ### Web Services
 #### [Web services overview](data-cloud/web-services/index.md)
 #### [Introduction](data-cloud/web-services/introduction.md)
