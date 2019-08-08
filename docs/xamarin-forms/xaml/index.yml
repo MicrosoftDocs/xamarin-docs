@@ -101,7 +101,7 @@ sections:
       html: "Learn how to create attached properties, and how to consume them from XAML."
       image:
         src: https://docs.microsoft.com/media/common/i_code-samples.svg
-        href: bindable-properties.md
+        href: attached-properties.md
       title: Attached Properties
     - href: resource-dictionaries.md
       html: "Learn how to create XAML resources, and reuse them throughout a Xamarin.Forms application."
