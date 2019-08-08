@@ -99,20 +99,23 @@ The `CustomVisual` type can then be registered against the renderer classes, per
 
 ## Register the IVisual type
 
-In the platform projects, decorate the renderer classes with the `ExportRendererAttribute`:
+In the platform projects, decorate the renderer namespaces with the `ExportRendererAttribute`:
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
-public class CustomButtonRenderer : ButtonRenderer
+namespace VisualDemos.iOS
 {
-    protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+    public class CustomButtonRenderer : ButtonRenderer
     {
-        ...
+        protected override void OnElementChanged(ElementChangedEventArgs<Button> e)
+        {
+            // ...
+        }
     }
 }
 ```
 
-In this example, the `ExportRendererAttribute` specifies that the `CustomButtonRenderer` class will be used to render consuming [`Button`](xref:Xamarin.Forms.Button) objects, with the `IVisual` type registered as the third argument. A renderer that specifies an `IVisual` type, as part of its `ExportRendererAttribute`, will be used to render opted in views, rather than the default renderer.
+In this example for the iOS platform project, the `ExportRendererAttribute` specifies that the `CustomButtonRenderer` class will be used to render consuming [`Button`](xref:Xamarin.Forms.Button) objects, with the `IVisual` type registered as the third argument. A renderer that specifies an `IVisual` type, as part of its `ExportRendererAttribute`, will be used to render opted in views, rather than the default renderer.
 
 ## Consume the Visual renderer
 
