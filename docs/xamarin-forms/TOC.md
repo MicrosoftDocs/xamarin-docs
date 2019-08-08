@@ -151,6 +151,7 @@
 #### [Layouts](user-interface/controls/layouts.md)
 #### [Views](user-interface/controls/views.md)
 #### [Cells](user-interface/controls/cells.md)
+#### [Third-Party Controls](user-interface/controls/thirdparty.md)
 ### [DataPages](user-interface/datapages/index.md)
 #### [Get Started](user-interface/datapages/get-started.md)
 #### [Controls Reference](user-interface/datapages/controls.md)
