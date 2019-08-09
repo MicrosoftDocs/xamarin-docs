@@ -99,7 +99,7 @@ The `CustomVisual` type can then be registered against the renderer classes, per
 
 ## Register the IVisual type
 
-In the platform projects, decorate the renderer namespaces with the `ExportRendererAttribute`:
+In the platform projects, add the `ExportRendererAttribute` at the assembly level:
 
 ```csharp
 [assembly: ExportRenderer(typeof(Xamarin.Forms.Button), typeof(CustomButtonRenderer), new[] { typeof(CustomVisual) })]
