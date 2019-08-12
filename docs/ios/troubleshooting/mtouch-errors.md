@@ -846,7 +846,7 @@ For further information see bug #[52727](https://bugzilla.xamarin.com/show_bug.c
 
 A failure occurred when touching a file (which is done to ensure partial builds are done correctly).
 
-This warning can most likely be ignored; in case of any problems file a bug (https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS)) and it will be investigated.
+This warning can most likely be ignored; in case of any problems file a bug [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS) and it will be investigated.
 
 ## MT1xxx: Project related error messages
 
