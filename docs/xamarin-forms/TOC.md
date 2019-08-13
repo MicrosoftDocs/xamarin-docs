@@ -22,6 +22,7 @@
 #### [Consuming XAML Markup Extensions](xaml/markup-extensions/consuming.md)
 #### [Creating XAML Markup Extensions](xaml/markup-extensions/creating.md)
 ### Tooling
+#### [XAML Hot Reload](xaml/hot-reload.md)
 #### [XAML Toolbox](xaml/toolbox.md)
 #### [XAML Previewer](xaml/xaml-previewer/index.md)
 ##### [Design-time data](xaml/xaml-previewer/design-time-data.md)

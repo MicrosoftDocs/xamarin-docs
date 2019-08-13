@@ -49,6 +49,12 @@ sections:
     style: cards
     className: cardsB
     items:
+    - href: hot-reload.md
+      html: "Learn how to use XAML Hot Reload to quickly validate UI changes."
+      image:
+        src: ~/media/icons/i_quickstart-3.svg
+        href: hot-reload.md
+      title: Hot Reload
     - href: toolbox.md
       html: "Learn how to use the XAML toolbox to drag Xamarin.Forms controls and layouts into the XAML editor."
       image:
