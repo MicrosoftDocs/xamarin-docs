@@ -22,7 +22,7 @@ The four main control groups used to create the user interface of a Xamarin.Form
 - [**Views**](views.md)
 - [**Cells**](cells.md)
 
-A Xamarin.Forms page generally occupies the entire screen. The page usually contains a layout, which contains views and possibly other layouts. Cells are specialized components used in connection with [`TableView`](views.md#tableView) and [`ListView`](views.md#listView).
+A Xamarin.Forms page generally occupies the entire screen. The page usually contains a layout, which contains views and possibly other layouts. Cells are specialized components used in connection with [`TableView`](views.md#tableView) and [`ListView`](views.md#listView). A class diagram that shows the hierarchy of types that are typically used to build a user interface in Xamarin.Forms can be found at [Xamarin.Forms Controls Class Hierarchy](~/xamarin-forms/internals/class-hierarchy.md).
 
 In the four articles on [**Pages**](pages.md), [**Layouts**](layouts.md), [**Views**](views.md), and [**Cells**](cells.md), each type of control is described with links to its API documentation, an article describing its use (if one exists), and one or more sample programs (if they exist). Each type of control is also accompanied by a screenshot showing a page from the [**FormsGallery**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) sample running on iOS and Android devices. Below each screenshot are links to the source code for the C# page, the equivalent XAML page, and (when appropriate) the C# code-behind file for the XAML page.
 
@@ -31,4 +31,5 @@ In addition to the controls supplied with Xamarin.Forms, third-party controls ar
 ## Related Links
 
 - [Xamarin.Forms FormsGallery sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)
+- [Xamarin.Forms Controls Class Hierarchy](~/xamarin-forms/internals/class-hierarchy.md)
 - [API Documentation](https://docs.microsoft.com/dotnet/api/xamarin.forms?view=xamarin-forms)

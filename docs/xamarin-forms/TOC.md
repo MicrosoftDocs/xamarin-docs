@@ -364,9 +364,10 @@
 ### [Publish Mac apps](~/mac/deploy-test/publishing-to-the-app-store/index.md)
 ## Advanced Concepts and Internals
 ### [Overview](internals/index.yml)
-### [Dependency Resolution](internals/dependency-resolution.md)
-### [Fast Renderers](internals/fast-renderers.md)
+### [Controls Class Hierarchy](internals/class-hierarchy.md)
 ### [.NET Standard](internals/net-standard.md)
+### [Fast Renderers](internals/fast-renderers.md)
+### [Dependency Resolution](internals/dependency-resolution.md)
 ## [Troubleshooting](troubleshooting/index.md)
 ### [Frequently Asked Questions](troubleshooting/questions/index.md)
 #### [Can I update the Xamarin.Forms default template to a newer NuGet package?](troubleshooting/questions/update-forms-template.md)
