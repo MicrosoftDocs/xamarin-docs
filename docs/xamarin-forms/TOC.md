@@ -182,6 +182,7 @@
 #### [Interactivity](user-interface/listview/interactivity.md)
 #### [Performance](user-interface/listview/performance.md)
 ### [Maps](user-interface/map.md)
+### [MenuItem](user-interface/menuitem.md)
 ### [Picker](user-interface/picker/index.md)
 #### [Setting a Picker's ItemsSource Property](user-interface/picker/populating-itemssource.md)
 #### [Adding Data to a Picker's Items Collection](user-interface/picker/populating-items.md)

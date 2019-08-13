@@ -115,6 +115,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: map.md
       title: Maps
+    - href: menuitem.md
+      html: "Learn how to use the MenuItem class to add items to the context menu of ListView cells."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: menuitem.md
+      title: MenuItem
     - href: picker/index.md
       html: "Learn how to use the Picker control to select a text item from a list of data."
       image:
