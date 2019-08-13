@@ -27,6 +27,7 @@ Each layout control is described below, as well as details on how to handle scre
 * **[RelativeLayout](relative-layout.md)** – used to arrange views by setting constraints relative to their parent's dimensions & position.
 * **[Grid](grid.md)** – used to arrange views in a grid. Rows and columns can be specified in terms of absolute values or ratios.
 * **[FlexLayout](flex-layout.md)** – used to arrange views horizontally or vertically with wrapping.
+* **[Frame](frame.md)** - used to wrap a view with a border, or frame, that can be configured with color, drop shadow, and more.
 * **[ScrollView](scroll-view.md)** – used to provide scrolling when a view can't fit entirely within the bounds of the screen.
 * **[LayoutOptions](layout-options.md)** – define alignment and expansion for a view, relative to its parent.
 * **[Input Transparency](#input_transparency)** – specifies whether an element receives input.
@@ -177,6 +178,10 @@ Note the following aspects of the above code:
 - Grids and Columns are explicitly specified, not inferred from the content.
 - `Height` and `Width` values can be set to star, which means that the Grid will set those values to fill the available space.
 - Each button's position is specified by `Grid.Row` & `Grid.Column` properties.
+
+### [Frame](frame.md)
+
+A `Frame` layout is used for creating a customizable border around child `View`. A `Frame` can be used to put a border around a control such as a `Button` or `Label` or can wrap other layouts to create more complex UI objects such as a card.
 
 ### [LayoutOptions](layout-options.md)
 
