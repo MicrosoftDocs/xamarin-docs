@@ -214,6 +214,7 @@
 #### [Dark Theme](user-interface/themes/dark.md)
 #### [Creating a Custom Theme](user-interface/themes/custom.md)
 ### [TimePicker](user-interface/timepicker.md)
+### [ToolbarItem](user-interface/toolbaritem.md)
 ### [Visual](user-interface/visual/index.md)
 #### [Material Visual](user-interface/visual/material-visual.md)
 #### [Create a Visual Renderer](user-interface/visual/create.md)

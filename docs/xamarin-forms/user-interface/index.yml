@@ -181,6 +181,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: timepicker.md
       title: TimePicker
+    - href: toolbaritem.md
+      html: "Learn how to use a ToolbarItem to add buttons to the navigation bar."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: toolbaritem.md
+      title: ToolbarItem
     - href: visual/index.md
       html: "Learn how to use Xamarin.Forms Material Visual to create applications that look identical, or largely identical, on iOS and Android."
       image:
