@@ -102,7 +102,7 @@ No platform differences.
 
 Only supports `PlainText` as the `BodyFormat` attempting to send `Html` will throw a `FeatureNotSupportedException`.
 
-Not all email clients support sending attachments. See [documentation](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) for more inforamtion.
+Not all email clients support sending attachments. See [documentation](https://docs.microsoft.com/windows/uwp/contacts-and-calendar/sending-email) for more information.
 
 -----
 
