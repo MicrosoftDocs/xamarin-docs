@@ -63,3 +63,10 @@ To set it up, go to Project > iOS Build > Linker Behavior.
 
 - **Problem:** We recommend using the native HttpClient handler instead of the managed one for better performance, smaller executable size, and to easily support the newer standards.
 - **Fix:** Double click on your iOS project, go to Build > iOS Build and change the HttpClient implementation to either NSUrlSession (iOS 7+) or CFNetwork to support version preceding iOS 7.
+
+<a name="XIA0007" />
+
+## XIA0007: UseLLVMRule
+
+- **Problem:** For Release|iPhone configuration we recommend enabling the LLVM compiler which generates code that is faster to execute at the expense of build time.
+- **Fix:** Double click on your iOS project, go to Build > iOS Build and for Release|iPhone, check the LLVM optimizing compiler option.
