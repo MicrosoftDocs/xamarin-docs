@@ -14,8 +14,7 @@ ms.date: 12/01/2017
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> DataPages requires a
-[Xamarin.Forms Theme](~/xamarin-forms/user-interface/themes/index.md) reference to render.
+> DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
 
 Xamarin.Forms DataPages were announced at Evolve 2016 and are available as a
 preview for customers to try and provide feedback.

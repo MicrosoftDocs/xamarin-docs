@@ -527,6 +527,22 @@
     {
       "source_path": "docs/guides/cross-platform/azure/Resources/poster.pdf/index.md",
       "redirect_url": "https://github.com/xamarin/docs-archive/raw/master/Docs/Azure Mobile Apps/poster.pdf"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/themes/index.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/themes/light.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/themes/dark.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/themes/custom.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
     }
   ]
 }
