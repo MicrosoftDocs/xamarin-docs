@@ -500,7 +500,7 @@ standalone tool.
 
 If you want to use Interface Builder, install [XCode series 3](http://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792), available from Apple's web site.
 
-## "Can't create display binding for mime type: application/vnd.apple-<wbr/>interface-builder"
+## "Can't create display binding for mime type: application/vnd.apple-interface-builder"
 
 This error happens if you try to create an iPhone UI from a non-iPhone
 project. Make sure that you start with an iPhone/iPad solution, it is not

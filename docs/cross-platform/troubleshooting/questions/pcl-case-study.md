@@ -67,7 +67,7 @@ The `portable-net45+win8+wp8+wpa81` version of the library does not reference **
 
 ## Questions & Answers
 
-### I was able to leave linking enabled with the <code>portable-net45+win8+wpa81</code> version of the library on older versions of Xamarin.iOS or on Xamarin.Android. How did that work?
+### I was able to leave linking enabled with the `portable-net45+win8+wpa81` version of the library on older versions of Xamarin.iOS or on Xamarin.Android. How did that work?
 
 #### Answer
 

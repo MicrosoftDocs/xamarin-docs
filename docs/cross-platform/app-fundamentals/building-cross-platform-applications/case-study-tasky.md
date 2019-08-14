@@ -458,7 +458,7 @@ Similar to the iOS version we looked at earlier, the Application Layer in the
 Android version contains platform-specific classes required to ‘bind’ the
 objects exposed by the Core to the UI.
 
- **TaskListAdapter** – to display a List<T> of objects
+ **TaskListAdapter** – to display a List\<T> of objects
 we need to implement an adapter to display custom
 objects in a `ListView`. The adapter controls which layout is used for each item
 in the list – in this case the code uses an Android built-in layout `SimpleListItemChecked`.

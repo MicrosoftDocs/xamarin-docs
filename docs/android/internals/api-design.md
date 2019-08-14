@@ -82,21 +82,21 @@ provide lists, sets, and maps. We expose these elements using the
 [System.Collections.Generic](xref:System.Collections.Generic)
 interfaces in our binding. The fundamental mappings are:
 
--   [java.util.Set<E>](https://developer.android.com/reference/java/util/Set.html) maps to
-    system type [ICollection<T>](xref:System.Collections.Generic.ICollection`1),
-    helper class [Android.Runtime.JavaSet<T>](xref:Android.Runtime.JavaSet`1).
+-   [java.util.Set\<E>](https://developer.android.com/reference/java/util/Set.html) maps to
+    system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
+    helper class [Android.Runtime.JavaSet\<T>](xref:Android.Runtime.JavaSet`1).
 
--   [java.util.List<E>](https://developer.android.com/reference/java/util/List.html) maps to
-    system type [IList<T>](xref:System.Collections.Generic.IList`1),
-    helper class [Android.Runtime.JavaList<T>](xref:Android.Runtime.JavaList`1).
+-   [java.util.List\<E>](https://developer.android.com/reference/java/util/List.html) maps to
+    system type [IList\<T>](xref:System.Collections.Generic.IList`1),
+    helper class [Android.Runtime.JavaList\<T>](xref:Android.Runtime.JavaList`1).
 
 -   [java.util.Map<K,V>](https://developer.android.com/reference/java/util/Map.html) maps to
     system type [IDictionary<TKey,TValue>](xref:System.Collections.Generic.IDictionary`2),
     helper class [Android.Runtime.JavaDictionary<K,V>](xref:Android.Runtime.JavaDictionary`2).
 
--   [java.util.Collection<E>](https://developer.android.com/reference/java/util/Collection.html) maps to
-    system type [ICollection<T>](xref:System.Collections.Generic.ICollection`1),
-    helper class [Android.Runtime.JavaCollection<T>](xref:Android.Runtime.JavaCollection`1).
+-   [java.util.Collection\<E>](https://developer.android.com/reference/java/util/Collection.html) maps to
+    system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
+    helper class [Android.Runtime.JavaCollection\<T>](xref:Android.Runtime.JavaCollection`1).
 
 We have provided helper classes to facilitate faster copyless
 marshaling of these types. When possible, we recommend using these
@@ -379,9 +379,9 @@ constants. The *Parcelable* interface methods are placed into the
 The *Parcelable* interface constants are placed into the
 [Android.OS.ParcelableConsts](xref:Android.OS.ParcelableConsts)
 type. The nested
-[android.os.Parcelable.ClassLoaderCreator&lt;T>](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html)
+[android.os.Parcelable.ClassLoaderCreator\<T>](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html)
 and
-[android.os.Parcelable.Creator&lt;T>](https://developer.android.com/reference/android/os/Parcelable.Creator.html)
+[android.os.Parcelable.Creator\<T>](https://developer.android.com/reference/android/os/Parcelable.Creator.html)
 types are currently not bound due to limitations in our generics
 support; if they were supported, they would be present as the
 *Android.OS.IParcelableClassLoaderCreator* and
@@ -393,10 +393,10 @@ interface.
 
 > [!NOTE]
 > Beginning with Xamarin.Android 1.9, Java interface
-constants are _duplicated_ in an effort to simplify porting Java
-code. This helps to improve porting Java code that relies on
-[android provider](https://developer.android.com/reference/android/provider/package-summary.html)
-interface constants.
+> constants are _duplicated_ in an effort to simplify porting Java
+> code. This helps to improve porting Java code that relies on
+> [android provider](https://developer.android.com/reference/android/provider/package-summary.html)
+> interface constants.
 
 In addition to the above types, there are four further changes:
 

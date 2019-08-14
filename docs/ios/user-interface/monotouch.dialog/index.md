@@ -714,7 +714,7 @@ suited for web pages and desktop applications do not map directly to the iPhone
 interaction model.
 
 If you want to do data validation, you should do this when the user triggers
-an action with the data entered. For example a <span class="ui">Done</span> or <span class="ui">Next</span> button on the top toolbar, or some `StringElement` used as a button to go to the next stage.
+an action with the data entered. For example a **Done** or **Next** button on the top toolbar, or some `StringElement` used as a button to go to the next stage.
 
 This is where you would perform basic input validation, and perhaps more
 complicated validation like checking for the validity of a user/password

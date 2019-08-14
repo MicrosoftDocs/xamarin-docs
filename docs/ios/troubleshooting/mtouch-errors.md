@@ -329,7 +329,7 @@ The Xcode path passed using `--sdkroot` does not exist. Please specify a valid p
 
 <a name="MT0056" />
 
-### MT0056: Cannot find Xcode in the default location (/Applications/Xcode.app). Please install Xcode, or pass a custom path using --sdkroot <path>.
+### MT0056: Cannot find Xcode in the default location (/Applications/Xcode.app). Please install Xcode, or pass a custom path using --sdkroot \<path>.
 
 <a name="MT0057" />
 
@@ -1156,10 +1156,10 @@ If you're deploying an enterprise app or using a free provisioning profile, you 
 
 ### MT1108: Could not find developer tools for this XX (YY) device.
 
-A few operations from mtouch require the <tt>DeveloperDiskImage.dmg</tt> file to be present.   This
+A few operations from mtouch require the `DeveloperDiskImage.dmg` file to be present.   This
 	file is part of Xcode and is usually located relative to the
 	SDK that you are using to build against, in
-	the <tt>Xcode.app/Contents/Developer/iPhoneOS.platform/DeviceSupport/VERSION/DeveloperDiskImage.dmg</tt>.
+	the `Xcode.app/Contents/Developer/iPhoneOS.platform/DeviceSupport/VERSION/DeveloperDiskImage.dmg`.
 
 This error can happen either because you do not have a
 	DeveloperDiskImage.dmg that matches the device that you have
@@ -1272,7 +1272,7 @@ This usually indicates a problem with Xcode.
 Things to try to fix this:
 
 * Use the simulator once in Xcode.
-* Pass an explicit SDK version using --sdk <version>.
+* Pass an explicit SDK version using --sdk \<version>.
 * Reinstall Xcode.
 
 <a name="MT1221" />
@@ -2260,7 +2260,7 @@ This happens when the native linker cannot find a symbol that is referenced some
 
             [LinkWith ("mylib.a", IsCxx = true)]
 
-  - If you can't modify the third-party binding, or you're linking manually with a third-party library, you can set the equivalent flag by passing <code>-cxx</code> to mtouch (this is done by modifying the additional mtouch arguments in the project's iOS Build options page. Remember that this must be done for every project configuration).
+  - If you can't modify the third-party binding, or you're linking manually with a third-party library, you can set the equivalent flag by passing `-cxx` to mtouch (this is done by modifying the additional mtouch arguments in the project's iOS Build options page. Remember that this must be done for every project configuration).
 
 <a name="MT5211" />
 
@@ -2268,7 +2268,7 @@ This happens when the native linker cannot find a symbol that is referenced some
 
 This happens when the native linker cannot find an Objective-C class that is referenced somewhere. There are several reasons this may happen: the same as for [MT5210](#MT5210) and in addition:
 
-* A third-party binding bound an Objective-C protocol, but did not annotate it with the <code>[Protocol]</code> attribute in its api definition. Solutions:
+* A third-party binding bound an Objective-C protocol, but did not annotate it with the `[Protocol]` attribute in its api definition. Solutions:
   - Add the missing `[Protocol]` attribute:
 
               [BaseType (typeof (NSObject))]

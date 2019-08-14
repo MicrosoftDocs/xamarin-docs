@@ -98,7 +98,7 @@ An error occurred while loading the assemblies from the root assembly references
 
 <a name="MM0056" />
 
-#### MM0056: Cannot find Xcode in any of our default locations. Please install Xcode, or pass a custom path using --sdkroot=<path>
+#### MM0056: Cannot find Xcode in any of our default locations. Please install Xcode, or pass a custom path using --sdkroot=\<path>
 
 <a name="MM0059" />
 
