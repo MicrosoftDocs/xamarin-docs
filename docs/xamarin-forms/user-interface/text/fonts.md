@@ -96,7 +96,7 @@ There is a built-in converter for the `FontSize` property that allows all font s
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) can also be used in XAML to render a different font on each platform. The example below uses a custom font face on iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-Thin</span>) and specifies only size/attributes on the other platforms:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) can also be used in XAML to render a different font on each platform. The example below uses a custom font face on iOS (MarkerFelt-Thin) and specifies only size/attributes on the other platforms:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -180,7 +180,7 @@ new Label
 
 ### Windows
 
-Xamarin.Forms for Windows platforms can reference a custom font that has been added to the project by following a specific naming standard. First add the font file to the **/Assets/Fonts/** folder in the application project and set the <span class="UIItem">Build Action:Content</span>. Then use the full path and font filename, followed by a hash (#) and the <span class="UIItem">Font Name</span>, as the code snippet below demonstrates:
+Xamarin.Forms for Windows platforms can reference a custom font that has been added to the project by following a specific naming standard. First add the font file to the **/Assets/Fonts/** folder in the application project and set the **Build Action:Content**. Then use the full path and font filename, followed by a hash (#) and the **Font Name**, as the code snippet below demonstrates:
 
 ```csharp
 new Label

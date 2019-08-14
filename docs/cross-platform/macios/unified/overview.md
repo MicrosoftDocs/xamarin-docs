@@ -272,7 +272,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 Previously that would be a compiler error because an `Action` can't be assigned to `NSAction`, but since `UITapGestureRecognizer` now takes an `Action` instead of an `NSAction` it is valid in the Unified APIs.
 
-### Custom delegates replaced with Action<T>
+### Custom delegates replaced with Action\<T>
 
 In **unified** some simple (e.g. one parameter) .net delegates were replaced with `Action<T>`. E.g.
 
@@ -280,7 +280,7 @@ In **unified** some simple (e.g. one parameter) .net delegates were replaced wit
 
 can now be used as an `Action<NSNotification>`. This promote code reuse and reduce code duplication inside both Xamarin.iOS and your own applications.
 
-### Task<bool> replaced with Task<Boolean,NSError>>
+### Task\<bool> replaced with Task<Boolean,NSError>>
 
 In **classic** there were some async APIs returning `Task<bool>`. However some of them where are to use when an `NSError` was part of the signature, i.e. the `bool` was already `true` and you had to catch an exception to get the `NSError`.
 

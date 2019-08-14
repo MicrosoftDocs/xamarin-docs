@@ -139,10 +139,10 @@ Most of these attributes are optional, SQLite will use default values for table 
 The following methods on `SQLiteConnection` can be used to perform other data operations:
 
 -  **Insert** – Adds a new object to the database.
--  **Get<T>** – Attempts to retrieve an object using the primary key.
--  **Table<T>** – Returns all the objects in the table.
+-  **Get\<T>** – Attempts to retrieve an object using the primary key.
+-  **Table\<T>** – Returns all the objects in the table.
 -  **Delete** – Deletes an object using its primary key.
--  **Query<T>** - Perform an SQL query that returns a number of rows (as objects).
+-  **Query\<T>** - Perform an SQL query that returns a number of rows (as objects).
 -  **Execute** – Use this method (and not  `Query` ) when you don’t expect rows back from the SQL (such as INSERT, UPDATE and DELETE instructions).
 
 
@@ -156,7 +156,7 @@ var existingItem = db.Get<Stock>(3);
 
 ### Selecting an object using Linq
 
-Methods that return collections support IEnumerable<T> so you can use Linq to query or sort the contents of a table. 
+Methods that return collections support IEnumerable\<T> so you can use Linq to query or sort the contents of a table. 
 The following code shows an example using Linq to filter out all entries that begin with the letter “A”:
 
 ```csharp

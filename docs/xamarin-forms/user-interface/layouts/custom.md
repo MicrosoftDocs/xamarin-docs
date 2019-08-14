@@ -423,6 +423,6 @@ The number of columns in each row depends on the photo size, the screen width, a
 - [WrapLayout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Custom Layouts](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
 - [Creating Custom Layouts in Xamarin.Forms (video)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
-- [Layout<T>](xref:Xamarin.Forms.Layout`1)
+- [Layout\<T>](xref:Xamarin.Forms.Layout`1)
 - [Layout](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)
