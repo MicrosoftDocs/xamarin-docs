@@ -1,5 +1,5 @@
 ---
-title: "Creating a Custom Layout"
+title: "Create a Custom Layout in Xamarin.Forms"
 description: "This article explains how to write a custom layout class, and demonstrates an orientation-sensitive WrapLayout class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows."
 ms.prod: xamarin
 ms.assetid: B0CFDB59-14E5-49E9-965A-3DCCEDAC2E31
@@ -9,13 +9,11 @@ ms.author: dabritch
 ms.date: 03/29/2017
 ---
 
-# Creating a Custom Layout
+# Create a Custom Layout in Xamarin.Forms
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
 _Xamarin.Forms defines four layout classes – StackLayout, AbsoluteLayout, RelativeLayout, and Grid, and each arranges its children in a different way. However, sometimes it's necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive WrapLayout class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows._
-
-## Overview
 
 In Xamarin.Forms, all layout classes derive from the [`Layout<T>`](xref:Xamarin.Forms.Layout`1) class and constrain the generic type to [`View`](xref:Xamarin.Forms.View) and its derived types. In turn, the `Layout<T>` class derives from the [`Layout`](xref:Xamarin.Forms.Layout) class, which provides the mechanism for positioning and sizing child elements.
 
@@ -62,7 +60,7 @@ The [`Layout`](xref:Xamarin.Forms.Layout) class also defines an [`InvalidateLayo
 
 The [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) can be overridden to implement a cache to minimize repetitive invocations of the [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) methods of the layout's children. Overriding the `InvalidateLayout` method will provide a notification of when children are added to or removed from the layout. Similarly, the [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) method can be overridden to provide a notification when one of the layout's children changes size. For both method overrides, a custom layout should respond by clearing the cache. For more information, see [Calculating and Caching Data](#caching).
 
-## Creating a Custom Layout
+## Create a Custom Layout
 
 The process for creating a custom layout is as follows:
 
@@ -84,7 +82,7 @@ The layout class can then be consumed by adding it to a [`Page`](xref:Xamarin.Fo
 
 <a name="creating" />
 
-### Creating a WrapLayout
+### Create a WrapLayout
 
 The sample application demonstrates an orientation-sensitive `WrapLayout` class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows.
 
@@ -102,7 +100,7 @@ public class WrapLayout : Layout<View>
 
 <a name="caching" />
 
-#### Calculating and Caching Layout Data
+#### Calculate and Cache Layout Data
 
 The `LayoutData` structure stores data about a collection of children in a number of properties:
 
@@ -195,7 +193,7 @@ The `GetLayoutData` method performs the following operations:
 
 <a name="adding_properties" />
 
-#### Adding Properties Backed by Bindable Properties
+#### Add Properties Backed by Bindable Properties
 
 The `WrapLayout` class defines `ColumnSpacing` and `RowSpacing` properties, whose values are used to separate the rows and columns in the layout, and which are backed by bindable properties. The bindable properties are shown in the following code example:
 
@@ -225,7 +223,7 @@ The property-changed handler of each bindable property invokes the `InvalidateLa
 
 <a name="onmeasure" />
 
-#### Overriding the OnMeasure Method
+#### Override the OnMeasure Method
 
 The `OnMeasure` override is shown in the following code example:
 
@@ -251,7 +249,7 @@ The override invokes the `GetLayoutData` method and constructs a `SizeRequest` o
 
 <a name="layoutchildren" />
 
-#### Overriding the LayoutChildren Method
+#### Override the LayoutChildren Method
 
 The `LayoutChildren` override is shown in the following code example:
 
@@ -302,7 +300,7 @@ For more information about the `GetLayoutData` method, see [Calculating and Cach
 
 <a name="invalidatelayout" />
 
-#### Overriding the InvalidateLayout Method
+#### Overridethe InvalidateLayout Method
 
 The [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) override is invoked when children are added to or removed from the layout, or when one of the `WrapLayout` properties changes value, as shown in the following code example:
 
@@ -321,7 +319,7 @@ The override invalidates the layout and discards all the cached layout informati
 
 <a name="onchildmeasureinvalidated" />
 
-#### Overriding the OnChildMeasureInvalidated Method
+#### Override the OnChildMeasureInvalidated Method
 
 The [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) override is invoked when one of the layout's children changes size, and is shown in the following code example:
 
@@ -337,7 +335,7 @@ The override invalidates the child layout, and discards all of the cached layout
 
 <a name="consuming" />
 
-### Consuming the WrapLayout
+### Consume the WrapLayout
 
 The `WrapLayout` class can be consumed by placing it on a [`Page`](xref:Xamarin.Forms.Page) derived type, as demonstrated in the following XAML code example:
 
