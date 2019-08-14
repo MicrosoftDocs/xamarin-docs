@@ -215,12 +215,8 @@ use `RemoteControlClient`, or call `ActivityManager.GetRecentTasks`, see
 [Important Behavior Changes](https://developer.android.com/preview/api-overview.html#Behaviors) 
 for more information about updating your notifications for Android 5.0.
 
-For information about creating notifications in Android, see 
-[Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md). 
-The [Compatibility](~/android/app-fundamentals/notifications/local-notifications.md#compatibility) 
-section of this article explains how to create notifications that are 
-downward-compatible with earlier versions of Android.
-
+For information about creating notifications in Android, see
+[Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md).
 
 ## Material Theme
 

@@ -11,7 +11,7 @@ ms.date: 06/04/2018
 
 # Xamarin.Forms DatePicker
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 
 _A Xamarin.Forms view that allows the user to select a date._
 
@@ -87,7 +87,7 @@ However, this is not recommended. Depending on the setting of the `Format` prope
 
 ## DatePicker in an application
 
-The [**DaysBetweenDates**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker) sample includes two `DatePicker` views on its page. These can be used to select two dates, and the program calculates the number of days between those dates. The program doesn't change the settings of the `MinimumDate` and `MaximumDate` properties, so the two dates must be between 1900 and 2100.
+The [**DaysBetweenDates**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker) sample includes two `DatePicker` views on its page. These can be used to select two dates, and the program calculates the number of days between those dates. The program doesn't change the settings of the `MinimumDate` and `MaximumDate` properties, so the two dates must be between 1900 and 2100.
 
 Here's the XAML file:
 
@@ -191,5 +191,5 @@ After two dates are selected, the application displays the number of days betwee
 
 ## Related links
 
-- [DaysBetweenDates sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/DatePicker)
+- [DaysBetweenDates sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-datepicker)
 - [DatePicker API](xref:Xamarin.Forms.DatePicker)

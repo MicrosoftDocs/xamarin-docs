@@ -35,7 +35,7 @@ There are several steps involved with setting up TeamCity:
 
 ## Requirements
 
-Experience with [Xamarin Test Cloud](https://developer.xamarin.com/guides/testcloud) is required.
+Experience with [App Center Test](https://docs.microsoft.com/appcenter/test-cloud/) is required.
 
 Familiarity with TeamCity 8.1 is required. The installation of TeamCity is beyond the scope of this document. It is assumed that TeamCity is installed on OS X Mavericks and is running under a regular user account and not the root account.
 
@@ -53,10 +53,10 @@ A crucial step in configuring a build server is to install all of the necessary 
 1. **Visual Studio for Mac** – This includes Xamarin.iOS and Xamarin.Android.
 2. **Login to the Xamarin Component Store** – This is an optional step and is only required if your application uses Components from the Xamarin Component store. Proactively logging into the Component store at this point will prevent any issues when a TeamCity build tries to compile the application.
 3. **Xcode** – Xcode is required to compile and sign iOS applications.
-4. **Xcode Command Line Tools** – This is described in step 1 of the Installation section of the [Updating Ruby with rbenv](https://developer.xamarin.com/guides/testcloud/calabash/updating-ruby-using-rbenv/) guide.
+4. **Xcode Command Line Tools** – This is described in step 1 of the Installation section of the [Updating Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) guide.
 5. **Signing Identity & Provisioning Profiles** – Import the certificates and provisioning profile via XCode. Please see Apple’s guide on [Exporting Signing Identities and Provisioning Profiles](https://developer.apple.com/library/ios/recipes/xcode_help-accounts_preferences/articles/export_signing_assets.html) for more details.
 6. **Android Keystores** – Copy the required Android keystores to a directory that the TeamCity user has access to, i.e. `~/Documents/keystores/MyAndroidApp1`.
-7. **Calabash** – This is an optional step if your application has tests written using Calabash. Please see the [Installing Calabash on OS X Mavericks](https://developer.xamarin.com/guides/testcloud/calabash/osx-installation/) guide and the [Updating Ruby with rbenv](https://developer.xamarin.com/guides/testcloud/calabash/updating-ruby-using-rbenv/) guide for more information.
+7. **Calabash** – This is an optional step if your application has tests written using Calabash. Please see the [Installing Calabash on OS X Mavericks](https://github.com/calabash/calabash-ios/wiki) guide and the [Updating Ruby with rbenv](https://github.com/calabash/calabash-ios/wiki) guide for more information.
 
 The following diagram illustrates all of these components:
 
@@ -136,7 +136,7 @@ test-cloud.exe <path-to-apk-or-ipa-file> <test-cloud-team-api-key> --devices <de
 
 When the test is run, the test results will be returned in the form of an NUnit style XML file called **report.xml**. TeamCity will display the information in the Build Log.
 
-For more information about how to submit UITests to Test Cloud, consult this guide on [Preparing Xamarin.UITests for Upload](/appcenter/test-cloud/preparing-for-upload/uitest/).
+For more information about how to submit UITests to Test Cloud, consult this guide on [Preparing Xamarin.UITests for Upload](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest/).
 
 #### Submitting Calabash Tests to Test Cloud
 
@@ -145,13 +145,15 @@ Calabash tests are submitted using the `test-cloud` gem, as shown in the followi
 ```bash
 test-cloud submit /path/to/APK-or-IPA <test-cloud-team-api-key> --devices <device-id> --user <email>
 ```
+
 To submit an Android application to Test Cloud, it is necessary to first rebuild the APK test server using calabash-android:
 
 ```bash
 $ calabash-android build </path/to/signed/APK>
 $ test-cloud submit /path/to/APK <test-cloud-team-api-key> --devices <ANDROID_DEVICE_ID> --profile=android --config=config/cucumber.yml --pretty
 ```
-For more information on submitting Calabash tests, please consult Xamarin’s guide on [Submitting Calabash Tests to Test Cloud](https://developer.xamarin.com/guides/testcloud/calabash/working-with/submitting-tests-to-xamarin-test-cloud/).
+
+For more information on submitting Calabash tests, please consult Xamarin’s guide on [Submitting Calabash Tests to Test Cloud](https://github.com/calabash/calabash-ios/wiki).
 
 ## Creating a TeamCity Project
 

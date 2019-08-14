@@ -829,6 +829,8 @@
               href: troubleshooting/questions/exception-marshal-obj-c.md
             - name: "Runtime error– The assembly mscorlib.dll was not found or could not be loaded"
               href: troubleshooting/questions/error-mscorlib-not-found.md
+            - name: "Compile error– Can not encode offset X in resulting scattered relocation"
+              href: troubleshooting/questions/error-encode-offset-scattered-relocation.md
             - name: IPA file is 0 bytes
               href: troubleshooting/questions/ipa-zero-bytes.md
             - name: "IBTool Error– The operation couldn’t be completed."

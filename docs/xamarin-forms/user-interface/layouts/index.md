@@ -12,7 +12,7 @@ ms.date: 12/18/2018
 
 # Layouts in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 Xamarin.Forms has several layouts and features for organizing content on screen.
 
@@ -27,6 +27,7 @@ Each layout control is described below, as well as details on how to handle scre
 * **[RelativeLayout](relative-layout.md)** – used to arrange views by setting constraints relative to their parent's dimensions & position.
 * **[Grid](grid.md)** – used to arrange views in a grid. Rows and columns can be specified in terms of absolute values or ratios.
 * **[FlexLayout](flex-layout.md)** – used to arrange views horizontally or vertically with wrapping.
+* **[Frame](frame.md)** - used to wrap a view with a border, or frame, that can be configured with color, drop shadow, and more.
 * **[ScrollView](scroll-view.md)** – used to provide scrolling when a view can't fit entirely within the bounds of the screen.
 * **[LayoutOptions](layout-options.md)** – define alignment and expansion for a view, relative to its parent.
 * **[Input Transparency](#input_transparency)** – specifies whether an element receives input.
@@ -178,6 +179,10 @@ Note the following aspects of the above code:
 - `Height` and `Width` values can be set to star, which means that the Grid will set those values to fill the available space.
 - Each button's position is specified by `Grid.Row` & `Grid.Column` properties.
 
+### [Frame](frame.md)
+
+A `Frame` layout is used for creating a customizable border around child `View`. A `Frame` can be used to put a border around a control such as a `Button` or `Label` or can wrap other layouts to create more complex UI objects such as a card.
+
 ### [LayoutOptions](layout-options.md)
 
 The [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) structure can be used to define alignment and expansion for a view, relative to its parent.
@@ -230,5 +235,5 @@ as needed to create more complex designs.
 
 - [Apple's Human Interface Guidelines](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG)
 - [Android Design Website](https://developer.android.com/design/index.html)
-- [Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble Example (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble Example (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

@@ -743,7 +743,7 @@ Also, there are many keywords that are unique to C# and have no
 counterpart in Java. Xamarin.Android code often makes use of the
 following C# keywords (this table is useful to refer to when you
 are reading through Xamarin.Android
-[sample code](https://developer.xamarin.com/samples/android/all/)):
+[sample code](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)):
 
 |C#|Description|
 |---|---|

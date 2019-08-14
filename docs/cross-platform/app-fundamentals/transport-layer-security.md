@@ -109,7 +109,7 @@ supports TLS 1.2 (which is recommended for all projects),
 however you can switch back to the managed code if required for compatibility reasons.
 
 > [!IMPORTANT]
-> The **Mono/Managed** option has been [removed from iOS and Mac](https://developer.xamarin.com/releases/ios/xamarin.ios_10/xamarin.ios_10.8/) project options.
+> The **Mono/Managed** option has been [removed from iOS and Mac](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_10/xamarin.ios_10.8.md) project options.
 >
 > The Native option is always used on iOS and Mac platforms.
 
@@ -147,4 +147,4 @@ in this article, then re-build and re-deploy to your customers.
 - [Foundation.CFNetwork](xref:CoreFoundation.CFNetwork)
 - [Foundation.NSUrlConnection](xref:Foundation.NSUrlConnection)
 - [System.Net.WebRequest](https://msdn.microsoft.com/library/system.net.webrequest(v=vs.110).aspx)
-- [HTTP Client (sample)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
+- [HTTP Client (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)

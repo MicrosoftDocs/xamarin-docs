@@ -1,5 +1,5 @@
 ---
-title: "Calendar"
+title: "Xamarin.Android Calendar"
 ms.prod: xamarin
 ms.assetid: 78666541-CA14-4CD8-A94A-A9621C57813E
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# Calendar
+# Xamarin.Android Calendar
 
 
 ## Calendar API
@@ -359,6 +359,6 @@ calendar capabilities.
 
 ## Related Links
 
-- [Calendar Demo (sample)](https://developer.xamarin.com/samples/monodroid/CalendarDemo/)
+- [Calendar Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

@@ -51,7 +51,7 @@ with the argument
 There are three categories of object types.
 
 -   **Managed objects**: types which do *not* inherit from 
-    [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
+    [Java.Lang.Object](xref:Java.Lang.Object) 
     , e.g. 
     [System.String](xref:System.String). 
     These are collected normally by the GC. 
@@ -62,16 +62,16 @@ There are three categories of object types.
     Android runtime VM. 
 
 -   **Peer objects**: types which implement 
-    [IJavaObject](https://developer.xamarin.com/api/type/Android.Runtime.IJavaObject/) 
+    [IJavaObject](xref:Android.Runtime.IJavaObject) 
     , e.g. all 
-    [Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
+    [Java.Lang.Object](xref:Java.Lang.Object) 
     and 
-    [Java.Lang.Throwable](https://developer.xamarin.com/api/type/Java.Lang.Throwable/) 
+    [Java.Lang.Throwable](xref:Java.Lang.Throwable) 
     subclasses. Instances of these types have two "halfs" a *managed 
     peer* and a *native peer*. The managed peer is an instance of the 
     C# class. The native peer is an instance of a Java class within the 
     Android runtime VM, and the C# 
-    [IJavaObject.Handle](https://developer.xamarin.com/api/property/Android.Runtime.IJavaObject.Handle/) 
+    [IJavaObject.Handle](xref:Android.Runtime.IJavaObject.Handle) 
     property contains a JNI global reference to the native peer. 
 
 
@@ -79,7 +79,7 @@ There are two types of native peers:
 
 -   **Framework peers** : "Normal" Java types which know nothing of
     Xamarin.Android, e.g.
-    [android.content.Context](https://developer.xamarin.com/api/type/Android.Content.Context/).
+    [android.content.Context](xref:Android.Content.Context).
 
 -   **User peers** :
     [Android Callable Wrappers](~/android/platform/java-integration/working-with-jni.md)
@@ -127,11 +127,11 @@ Native peer and the Managed peer are collectible.
 
 Peer objects are logically present within both the Android runtime and Mono 
 VM's. For example, an 
-[Android.App.Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 
+[Android.App.Activity](xref:Android.App.Activity) 
 managed peer instance will have a corresponding 
 [android.app.Activity](https://developer.android.com/reference/android/app/Activity.html) 
 framework peer Java instance. All objects that inherit from 
-[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
+[Java.Lang.Object](xref:Java.Lang.Object) 
 can be expected to have representations within both VMs. 
 
 All objects that have representation in both VMs will have lifetimes 
@@ -145,7 +145,7 @@ needs to ensure that the object isn't referenced by either VM before
 collecting it. 
 
 To shorten object lifetime, 
-[Java.Lang.Object.Dispose()](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose/) 
+[Java.Lang.Object.Dispose()](xref:Java.Lang.Object.Dispose) 
 should be invoked. This will manually "sever" the connection on the 
 object between the two VMs by freeing the global reference, thus 
 allowing the objects to be collected faster. 
@@ -154,13 +154,13 @@ allowing the objects to be collected faster.
 ## Automatic Collections
 
 Beginning with
-[Release 4.1.0](https://developer.xamarin.com/releases/android/mono_for_android_4/mono_for_android_4.1.0), 
+[Release 4.1.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/mono_for_android_4/mono_for_android_4.1.0/index.md), 
 Xamarin.Android automatically performs a full GC when a gref 
 threshold is crossed. This threshold is 90% of the known maximum grefs 
 for the platform: 1800 grefs on the emulator (2000 max), and 46800 
 grefs on hardware (maximum 52000). *Note:* Xamarin.Android only counts 
 the grefs created by 
-[Android.Runtime.JNIEnv](https://developer.xamarin.com/api/type/Android.Runtime.JNIEnv/), 
+[Android.Runtime.JNIEnv](xref:Android.Runtime.JNIEnv), 
 and will not know about any other grefs created in the process. This is 
 a heuristic *only*. 
 
@@ -267,13 +267,13 @@ The GC has an incomplete view of the process and may not run when
 memory is low because the GC doesn't know that memory is low. 
 
 For example, an instance of a 
-[Java.Lang.Object](https://developer.xamarin.com/api/type/Java.Lang.Object/) 
+[Java.Lang.Object](xref:Java.Lang.Object) 
 type or derived type is at least 20 bytes in size (subject to change 
 without notice, etc., etc.). 
 [Managed Callable 
 Wrappers](~/android/internals/architecture.md) do not add 
 additional instance members, so when you have a 
-[Android.Graphics.Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) 
+[Android.Graphics.Bitmap](xref:Android.Graphics.Bitmap) 
 instance that refers to a 10MB blob of memory, Xamarin.Android's GC 
 won't know that &ndash; the GC will see a 20-byte object and will be unable to determine 
 that it's linked to Android runtime-allocated objects that's keeping 10MB of 
@@ -302,7 +302,7 @@ guidelines when calling `Dispose()`.
 
 If the *Java or managed* instance may be shared between multiple 
 threads, *it should not be `Dispose()`d*, **ever**. For example, 
-[`Typeface.Create()`](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/(System.String%2cAndroid.Graphics.TypefaceStyle)) 
+[`Typeface.Create()`](xref:Android.Graphics.Typeface.Create*) 
 may return a *cached instance*. If multiple threads provide the same 
 arguments, they will obtain the *same* instance. Consequently, 
 `Dispose()`ing of the `Typeface` instance from one thread may 
@@ -329,11 +329,11 @@ using (var d = Drawable.CreateFromPath ("path/to/filename"))
 ```
 
 The above is safe because the Peer that 
-[Drawable.CreateFromPath()](https://developer.xamarin.com/api/member/Android.Graphics.Drawables.Drawable.CreateFromPath/) 
+[Drawable.CreateFromPath()](xref:Android.Graphics.Drawables.Drawable.CreateFromPath*) 
 returns will refer to a Framework peer, *not* a User peer. The 
 `Dispose()` call at the end of the `using` block will break the 
 relationship between the managed 
-[Drawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.Drawable/) 
+[Drawable](xref:Android.Graphics.Drawables.Drawable) 
 and framework 
 [Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable.html) 
 instances, allowing the Java instance to be collected as soon as the 
@@ -373,7 +373,7 @@ using (var listener = new MyClickListener ())
 #### Using Explicit Checks to Avoid Exceptions
 
 If you've implemented a 
-[Java.Lang.Object.Dispose](https://developer.xamarin.com/api/member/Java.Lang.Object.Dispose(System.Boolean)/) 
+[Java.Lang.Object.Dispose](xref:Java.Lang.Object.Dispose*) 
 overload method, avoid touching objects that involve JNI. Doing so 
 may create a *double-dispose* situation that makes it possible for 
 your code to (fatally) attempt to access an underlying Java object that has 
@@ -560,7 +560,7 @@ Major collections should only be manually invoked, if ever:
     present a problem to the user. 
 
 -   Within an overridden 
-    [Android.App.Activity.OnLowMemory()](https://developer.xamarin.com/api/member/Android.App.Activity.OnLowMemory/) 
+    [Android.App.Activity.OnLowMemory()](xref:Android.App.Activity.OnLowMemory) 
     method. 
 
 

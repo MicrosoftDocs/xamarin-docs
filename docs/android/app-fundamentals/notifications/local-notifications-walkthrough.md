@@ -306,9 +306,9 @@ Activity to the second Activity.
 
 ## Related Links
 
-- [LocalNotifications (sample)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
+- [LocalNotifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
 - [Android Oreo Notification Channels](https://blog.xamarin.com/android-oreo-notification-channels/)
-- [Notification](https://developer.xamarin.com/api/type/Android.App.Notification/)
-- [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
+- [Notification](xref:Android.App.Notification)
+- [NotificationManager](xref:Android.App.NotificationManager)
 - [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)
-- [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/)
+- [PendingIntent](xref:Android.App.PendingIntent)

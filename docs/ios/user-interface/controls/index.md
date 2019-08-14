@@ -83,4 +83,4 @@ In this article, we will explore each of the three Web Views provided by Apple: 
 
 ## Related Links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/monotouch/Controls/)
+- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)

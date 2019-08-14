@@ -11,7 +11,7 @@ ms.date: 07/17/2018
 
 # Creating and drawing on SkiaSharp bitmaps
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 You've seen how an application can load bitmaps from the Web, from application resources, and from the user's photo library. It's also possible to create new bitmaps within your application. The simplest approach involves one of the constructors of [`SKBitmap`](xref:SkiaSharp.SKBitmap.%23ctor(System.Int32,System.Int32,System.Boolean)):
 
@@ -51,7 +51,7 @@ using (SKCanvas canvas = new SKCanvas(bitmap))
 
 The bitmap can then be displayed. At a later time, the program can create a new `SKCanvas` object based on that same bitmap, and draw on it some more.
 
-The **Hello Bitmap** page in the **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** application writes the text "Hello, Bitmap!" on a bitmap and then displays that bitmap multiple times.  
+The **Hello Bitmap** page in the **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application writes the text "Hello, Bitmap!" on a bitmap and then displays that bitmap multiple times.  
 
 The constructor of the `HelloBitmapPage` begins by creating an `SKPaint` object for displaying text. It determines the dimensions of a text string and creates a bitmap with those dimensions. It then creates an `SKCanvas` object based on that bitmap, calls `Clear`, and then calls `DrawText`. It's always a good idea to call `Clear` with a new bitmap because a newly created bitmap might contain random data.
 
@@ -259,7 +259,7 @@ The methods of `SKCanvas` that you can use to draw on a bitmap include `DrawBitm
 
 The most versatile way to modify a bitmap is through accessing the actual pixel bits, a subject covered in the article **[Accessing SkiaSharp bitmap pixels](pixel-bits.md)**. But there are many other techniques to modify bitmaps that don't require accessing the pixel bits.
 
-The following bitmap included with the **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** application is 360 pixels wide and 480 pixels in height:
+The following bitmap included with the **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application is 360 pixels wide and 480 pixels in height:
 
 ![Mountain Climbers](drawing-images/MountainClimbers.jpg "Mountain Climbers")
 
@@ -491,7 +491,7 @@ The rotated bitmap is just large enough to include the entire original bitmap, b
 
 Another operation commonly performed on bitmaps is called _flipping_. Conceptually, the bitmap is rotated in three dimensions around a vertical axis or horizontal axis through the center of the bitmap. Vertical flipping creates a mirror image.
 
-The **Bitmap Flipper** page in the **[SkiaSharpFormsDemos](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)** application demonstrates these processes. The XAML file contains an `SKCanvasView` and two buttons for flipping vertically and horizontally:
+The **Bitmap Flipper** page in the **[SkiaSharpFormsDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)** application demonstrates these processes. The XAML file contains an `SKCanvasView` and two buttons for flipping vertically and horizontally:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -594,4 +594,4 @@ Another common task that can be handled using similar techniques is cropping a b
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

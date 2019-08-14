@@ -11,7 +11,7 @@ ms.date: 05/10/2017
 
 # Three Ways to Draw an Arc
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Learn how to use SkiaSharp to define arcs in three different ways_
 
@@ -33,7 +33,7 @@ public void AddArc (SKRect oval, Single startAngle, Single sweepAngle)
 public void ArcTo (SKRect oval, Single startAngle, Single sweepAngle, Boolean forceMoveTo)
 ```
 
-These methods are identical to the Android [`AddArc`](https://developer.xamarin.com/api/member/Android.Graphics.Path.AddArc/p/Android.Graphics.RectF/System.Single/System.Single/) and [`ArcTo`](https://developer.xamarin.com/api/member/Android.Graphics.Path.ArcTo/p/Android.Graphics.RectF/System.Single/System.Single/System.Boolean/) methods. The iOS [`AddArc`](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) method is similar but is restricted to arcs on the circumference of a circle rather than generalized to an ellipse.
+These methods are identical to the Android [`AddArc`](xref:Android.Graphics.Path.AddArc*) and [`ArcTo`]xref:Android.Graphics.Path.ArcTo*) methods. The iOS [`AddArc`](xref:CoreGraphics.CGPath.AddArc(System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.nfloat,System.Boolean)) method is similar but is restricted to arcs on the circumference of a circle rather than generalized to an ellipse.
 
 Both methods begin with an `SKRect` value that defines both the location and size of an ellipse:
 
@@ -664,4 +664,4 @@ Although the connections between the arcs and straight lines are mathematically 
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -1,16 +1,16 @@
 ---
-title: "Introduction to the mobile Software Development Lifecycle"
+title: "Mobile software development lifecycle"
 description: "This document describes the mobile software development lifecycle, taking a look at UX design, UI design, development, stabilization, distribution, and more."
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 11/22/2016
 ---
 
-# Introduction to the mobile Software Development Lifecycle
+# Mobile software development lifecycle
 
-Building mobile applications can be as easy as opening up the IDE, throwing
+Building mobile applications can be as easy as opening up Visual Studio, throwing
 something together, doing a quick bit of testing, and submitting to an App Store
 – all done in an afternoon. Or it can be an extremely involved process that
 involves rigorous up-front design, usability testing, QA testing on thousands of
@@ -30,7 +30,7 @@ into during the entire Software Development Lifecycle (SDLC). However, this
 document may not be for everyone, if you’re itching to just start building
 applications, we recommend jumping ahead to the [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md) guide and then coming back to this document later.
 
-## Mobile Development SDLC
+## Mobile development software lifecycle
 
 The lifecycle of mobile development is largely no different than the SDLC for
 web or desktop applications. As with those, there are usually 5 major portions
@@ -125,7 +125,7 @@ And due to the myriad of form factors out there, there are often mid-size
 form factors (somewhere between a phone and a tablet) that you may also want to
 target.
 
-#### User Interface (UI) design
+#### User interface (UI) design
 
 Once the UX is determined, the next step is to
 create the UI design. While UX is typically just black and white mockups, the UI
@@ -260,7 +260,7 @@ mobile devices with less screen space than even most laptops. Because of this,
 mobile platform UI controls have been designed specifically to be effective on
 smaller form factors.
 
-#### Device and OS fragmentation
+#### Device and operating system fragmentation
 
 It’s important to take into account different devices throughout the entire
 software development lifecycle:
@@ -373,7 +373,7 @@ inactive (with special rules for handling the inactive state, or being
 “tombstoned”).
 
 The second part is providing background agents for processing tasks even when
-the application is not running in the foreground. 
+the application is not running in the foreground.
 
 #### Device capabilities
 
@@ -396,6 +396,6 @@ design, testing, and deployment.
 
 ## Next steps
 
-- [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md)
+- [What is Xamarin?](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Get started with Xamarin](~/get-started/index.yml)
 - [Sharing code across platforms](~/cross-platform/app-fundamentals/index.md)

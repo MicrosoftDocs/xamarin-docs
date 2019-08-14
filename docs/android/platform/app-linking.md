@@ -48,16 +48,16 @@ Setting up app-links in Android 6.0 involves two major steps:
 
 ### Configuring the Intent Filter
 
-It is necessary to configure an intent filter that maps a URI (or possible a set of URIs) from a website to an Activity in an Android application. In Xamarin.Android, this relationship is established by  adorning an Activity with the [IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). The intent filter must declare the following information:
+It is necessary to configure an intent filter that maps a URI (or possible a set of URIs) from a website to an Activity in an Android application. In Xamarin.Android, this relationship is established by  adorning an Activity with the [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute). The intent filter must declare the following information:
 
 * **`Intent.ActionView`** &ndash; This will register the intent filter to respond to requests to view information
-* **`Categories`** &ndash;  The intent filter should register both **[Intent.CategoryBrowsable](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryBrowsable/)** and **[Intent.CategoryDefault](https://developer.xamarin.com/api/field/Android.Content.Intent.CategoryDefault/)** to be able to properly handle the web URI.
+* **`Categories`** &ndash;  The intent filter should register both **[Intent.CategoryBrowsable](xref:Android.Content.Intent.CategoryBrowsable)** and **[Intent.CategoryDefault](xref:Android.Content.Intent.CategoryDefault)** to be able to properly handle the web URI.
 * **`DataScheme`** &ndash; The intent filter must declare `http` and/or `https`. These are the only two valid schemes.
 * **`DataHost`** &ndash; This is the domain which the URIs will originate from.
 * **`DataPathPrefix`** &ndash; This is an optional path to resources on the website.
 * **`AutoVerify`** &ndash; The `autoVerify` attribute tells Android to verify the relationship between the application and the website. This will be discussed more below.
 
-The following example shows how to use the [IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) to handle links from `https://www.recipe-app.com/recipes` and from `http://www.recipe-app.com/recipes`:
+The following example shows how to use the [IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) to handle links from `https://www.recipe-app.com/recipes` and from `http://www.recipe-app.com/recipes`:
 
 ```csharp
 [IntentFilter(new [] { Intent.ActionView },

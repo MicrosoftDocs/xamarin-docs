@@ -66,7 +66,7 @@ myTable.SetNumberOfRows ((nint)rows.Count, "default");
 
 Once the rows have been created, you need to populate
 	each cell (like `GetCell` would do in iOS). This code
-	snippet from the [WatchTables example](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/)
+	snippet from the [WatchTables example](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
 	updates the label in each row
 
 ```csharp
@@ -261,6 +261,6 @@ code - however the **.designer.cs** file should NOT be edited directly.
 
 ## Related Links
 
-- [WatchTables (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchTables/)
-- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchtables)
+- [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple's Table doc](https://developer.apple.com/reference/watchkit/wkinterfacetable)

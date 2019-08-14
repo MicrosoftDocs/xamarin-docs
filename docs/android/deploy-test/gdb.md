@@ -170,7 +170,7 @@ editing **Properties/AndroidManifest.xml** or by editing the
 [Project Properties](https://github.com/xamarin/recipes/tree/master/Recipes/android/general/projects/add_permissions_to_android_manifest).
 
 App debugging can be enabled by either setting the
-[ApplicationAttribute.Debugging](https://developer.xamarin.com/api/property/Android.App.ApplicationAttribute.Debuggable/)
+[ApplicationAttribute.Debugging](xref:Android.App.ApplicationAttribute.Debuggable)
 custom attribute property to `true`, or by editing
 **Properties/AndroidManifest.xml** and setting the
 `//application/@android:debuggable` attribute to `true`:

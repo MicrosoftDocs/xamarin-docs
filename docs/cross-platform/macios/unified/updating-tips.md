@@ -107,8 +107,8 @@ After using the migration tool, you may still get some
  	with the standard .NET `Action`. Some simple (single parameter) delegates
  	have also been replaced with `Action<T>`.
 
-Finally, refer to the [Classic v Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
- 	to look up changes to APIs in your code. Searching [this page](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+Finally, refer to the [Classic v Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
+ 	to look up changes to APIs in your code. Searching [this page](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
  	will help find Classic APIs and what they've been updated to.
 
 > [!NOTE]
@@ -230,4 +230,4 @@ class BasicPinAnnotation : MKAnnotation
 - [Updating Xamarin.Forms Apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [Updating Bindings](~/cross-platform/macios/unified/update-binding.md)
 - [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

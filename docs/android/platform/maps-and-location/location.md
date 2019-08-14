@@ -1,5 +1,5 @@
 ---
-title: "Location Services"
+title: "Location services on Android"
 description: "This guide introduces location-awareness in Android applications and illustrates how to get the user's location using the Android Location Service API, as well as the fused location provider available with the Google Location Services API."
 ms.prod: xamarin
 ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
@@ -9,14 +9,12 @@ ms.author: crdun
 ms.date: 05/22/2018
 ---
 
-# Location Services
+# Location services on Android
 
 _This guide introduces location-awareness in Android applications and illustrates how to get the user's location using the Android Location Service API, as well as the fused location provider available with the Google Location Services API._
 
-## Location Services Overview
-
 Android provides access to various location technologies such as cell tower location, Wi-Fi, and GPS. The details of each location technology are abstracted through *location providers*, allowing applications to obtain locations in the same way regardless of the provider used. This guide introduces the fused location provider, a part of the Google Play Services, which intelligently determines the best way to obtain the location of the devices based on what providers are available and how the device is being used. Android Location Service API and shows how to communicate with the system location Service using a `LocationManager`. The second part of the guide explores the Android Location Services API using the `LocationManager`.
- 
+
 As a general rule of thumb, applications should prefer to use the fused location provider, falling back the older Android Location Service API only when necessary.
 
 ## Location fundamentals
@@ -156,7 +154,7 @@ bool IsGooglePlayServicesInstalled()
         var errorString = GoogleApiAvailability.Instance.GetErrorString(queryResult);
         Log.Error("MainActivity", "There is a problem with Google Play Services on this device: {0} - {1}",
                   queryResult, errorString);
-                  
+
         // Alternately, display the error to the user.
     }
 
@@ -214,6 +212,7 @@ A Xamarin.Android application can also subscribe to location updates from the fu
 ```csharp
 await fusedLocationProviderClient.RequestLocationUpdatesAsync(locationRequest, locationCallback);
 ```
+
 This method takes two parameters:
 
 -   **`Android.Gms.Location.LocationRequest`** &ndash; A
@@ -237,7 +236,6 @@ This method takes two parameters:
                                       .SetInterval(60 * 1000 * 5)
                                       .SetFastestInterval(60 * 1000 * 2);
     ```
-                                          
 
 -   **`Android.Gms.Location.LocationCallback`** &ndash; In order to
     receive location updates, a Xamarin.Android application must
@@ -351,7 +349,7 @@ life and creates a better experience for the user.
 
 ### Responding to updates from the LocationManager
 
-Once an application has requested updates from the `LocationManager`, it can receive information from the Service by implementing the [`ILocationListener`](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/) interface. This interface provides four methods for listening to the location Service and the location provider, `OnLocationChanged`. The System will call `OnLocationChanged` when the user's location changes enough to qualify as a location change according to the Criteria set when requesting location updates. 
+Once an application has requested updates from the `LocationManager`, it can receive information from the Service by implementing the [`ILocationListener`](xref:Android.Locations.ILocationListener) interface. This interface provides four methods for listening to the location Service and the location provider, `OnLocationChanged`. The System will call `OnLocationChanged` when the user's location changes enough to qualify as a location change according to the Criteria set when requesting location updates. 
 
 The following code shows the methods in the  `ILocationListener` interface:
 
@@ -405,7 +403,7 @@ guide for more information.
 
 The application above sets GPS as the location provider. However, GPS may not be available in all cases, such as if the device is indoors or does not have a GPS receiver. If this is the case, the result is a `null` return for the Provider.
 
-To get your app to work when GPS is not available, you use the `GetBestProvider` method to ask for the best available (device-supported and user-enabled) location provider at application launch. Instead of passing in a specific provider, you can tell `GetBestProvider` the requirements for the provider - such as accuracy and power - with a [`Criteria` object](https://developer.xamarin.com/api/type/Android.Locations.Criteria/). `GetBestProvider` returns the best provider for the given Criteria.
+To get your app to work when GPS is not available, you use the `GetBestProvider` method to ask for the best available (device-supported and user-enabled) location provider at application launch. Instead of passing in a specific provider, you can tell `GetBestProvider` the requirements for the provider - such as accuracy and power - with a [`Criteria` object](xref:Android.Locations.Criteria). `GetBestProvider` returns the best provider for the given Criteria.
 
 The following code shows how to get the best available provider and use
 it when requesting location updates:
@@ -447,15 +445,14 @@ This guide covered obtaining the user's location using both the Android
 Location Service and the fused location provider from Google Location
 Services API.
 
+## Related links
 
-## Related Links
-
-- [Location (sample)](https://developer.xamarin.com/samples/monodroid/Location/)
-- [FusedLocationProvider (sample)](https://developer.xamarin.com/samples/monodroid/FusedLocationProvider/)
+- [Location (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/location)
+- [FusedLocationProvider (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fusedlocationprovider)
 - [Google Play Services](https://developer.android.com/google/play-services/index.html)
-- [Criteria Class](https://developer.xamarin.com/api/type/Android.Locations.Criteria/)
-- [LocationManager Class](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/)
-- [LocationListener Class](https://developer.xamarin.com/api/type/Android.Locations.ILocationListener/)
+- [Criteria Class](xref:Android.Locations.Criteria)
+- [LocationManager Class](xref:Android.Locations.LocationManager)
+- [LocationListener Class](xref:Android.Locations.ILocationListener)
 - [LocationClient API](https://developer.android.com/reference/com/google/android/gms/location/LocationClient.html)
 - [LocationListener API](https://developer.android.com/reference/com/google/android/gms/location/LocationListener.html)
 - [LocationRequest API](https://developer.android.com/reference/com/google/android/gms/location/LocationRequest.html)

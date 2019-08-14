@@ -99,7 +99,7 @@ The .NET Standard 2.0 library also allows Xamarin.Forms applications to use [`Ht
 
 *Creating Mobile Apps with Xamarin.Forms* begins by describing how to write Xamarin.Forms applications using C#. The Extensible Application Markup Language (XAML) isn't introduced until [Chapter 7. XAML vs. Code](summaries/chapter07.md).
 
-XAML now has a much larger role in Xamarin.Forms. The Xamarin.Forms solution templates distributed with Visual Studio create XAML-based page files. A developer using Xamarin.Forms should become familiar with XAML as early as possible. The [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md) section of the Xamarin.Forms documentation contains several articles about XAML to get you started.
+XAML now has a much larger role in Xamarin.Forms. The Xamarin.Forms solution templates distributed with Visual Studio create XAML-based page files. A developer using Xamarin.Forms should become familiar with XAML as early as possible. The [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml) section of the Xamarin.Forms documentation contains several articles about XAML to get you started.
 
 ### Supported platforms
 

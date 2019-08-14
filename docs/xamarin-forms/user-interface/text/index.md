@@ -11,7 +11,7 @@ ms.date: 10/26/2018
 
 # Text in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Using Xamarin.Forms to enter or display text._
 
@@ -71,4 +71,4 @@ Refer to [working with styles](~/xamarin-forms/user-interface/styles/index.md) t
 
 ## Related Links
 
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

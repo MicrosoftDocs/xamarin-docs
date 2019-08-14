@@ -20,7 +20,7 @@ _Watch this video and follow along to create your first mobile app with Xamarin.
 
 ## Step-by-step instructions for Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 
@@ -83,7 +83,7 @@ This video covers the process of building and testing an iOS app using Visual St
 
 ## Step-by-step instructions for Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 
@@ -132,7 +132,7 @@ Follow these steps along with the video above:
 
 ## Step-by-step instructions for Mac
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/)
 
 Follow these steps along with the video above:
 
@@ -181,7 +181,7 @@ Follow these steps along with the video above:
 
 ::: zone-end
 
-You can download the completed code from the [samples gallery](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/FirstApp/) or view it on [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
+You can download the completed code from the [samples gallery](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-firstapp/) or view it on [GitHub](https://github.com/xamarin/xamarin-forms-samples/tree/master/GetStarted/FirstApp).
 
 ## Next Steps
 

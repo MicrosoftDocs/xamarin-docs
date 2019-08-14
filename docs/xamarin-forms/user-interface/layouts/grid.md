@@ -11,7 +11,7 @@ ms.date: 10/26/2017
 
 # Xamarin.Forms Grid
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 
 [`Grid`](xref:Xamarin.Forms.Grid) supports arranging views into rows and columns. Rows and columns can be set to have proportional sizes or absolute sizes. The `Grid` layout should not be confused with traditional tables and is not intended to present tabular data. `Grid` does not have the concept of row, column or cell formatting. Unlike HTML tables, `Grid` is purely intended for laying out content.
 
@@ -132,7 +132,7 @@ grid.Children.Add(bottomRight, 1, 1);
 
 The above code creates grid with four labels, two columns, and two rows. Note that each label will have the same size and that the rows will expand to use all available space.
 
-In the example above, views are added to the [`Grid.Children`](xref:Xamarin.Forms.Grid.Children) collection using the [`Add`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/) overload that specifies left and top arguments. When using the [`Add`](https://developer.xamarin.com/api/member/Xamarin.Forms.Grid+IGridList%3CT%3E.Add/p/Xamarin.Forms.View/System.Int32/System.Int32/System.Int32/System.Int32/) overload that specifies left, right, top, and bottom arguments, while the left and top arguments will always refer to cells within the [`Grid`](xref:Xamarin.Forms.Grid), the right and bottom arguments may appear to refer to cells that are outside the `Grid`. This is because the right argument must always be greater than the left argument, and the bottom argument must always be greater than the top argument. The following example shows equivalent code using both `Add` overloads:
+In the example above, views are added to the [`Grid.Children`](xref:Xamarin.Forms.Grid.Children) collection using the [`Add`](xref:Xamarin.Forms.Grid.IGridList`1.Add*) overload that specifies left and top arguments. When using the [`Add`](xref:Xamarin.Forms.Grid.IGridList`1.Add*) overload that specifies left, right, top, and bottom arguments, while the left and top arguments will always refer to cells within the [`Grid`](xref:Xamarin.Forms.Grid), the right and bottom arguments may appear to refer to cells that are outside the `Grid`. This is because the right argument must always be greater than the left argument, and the bottom argument must always be greater than the top argument. The following example shows equivalent code using both `Add` overloads:
 
 ```csharp
 // left, top
@@ -379,5 +379,5 @@ public CalculatorGridCode ()
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)
 - [Grid](xref:Xamarin.Forms.Grid)
-- [Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble Example (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
+- [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble Example (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)

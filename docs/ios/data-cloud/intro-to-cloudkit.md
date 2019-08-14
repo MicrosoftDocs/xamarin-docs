@@ -887,6 +887,6 @@ This article has covered a quick introduction to the CloudKit API. It has shown 
 
 ## Related Links
 
-- [CloudKitAtlas (sample)](https://developer.xamarin.com/samples/monotouch/ios8/CloudKitAtlas/)
+- [CloudKitAtlas (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas)
 - [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Creating a provisioning profile](~/ios/get-started/installation/device-provisioning/index.md)

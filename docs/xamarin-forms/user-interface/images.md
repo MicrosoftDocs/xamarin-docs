@@ -11,7 +11,7 @@ ms.date: 08/15/2017
 
 # Images in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _Images can be shared across platforms with Xamarin.Forms, they can be loaded specifically for each platform, or they can be downloaded for display._
 
@@ -317,7 +317,7 @@ Application icon and splash screen images are set-up and configured as for non-X
 
 ## Related Links
 
-- [WorkingWithImages (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
+- [WorkingWithImages (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 - [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md)
 - [Android Iconography](https://developer.android.com/design/style/iconography.html)
 - [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

@@ -457,6 +457,6 @@ Apple’s [Calendar and Reminders Programming Guide](https://developer.apple.com
 
 ## Related Links
 
-- [Calendars (sample)](https://developer.xamarin.com/samples/monotouch/Calendars/)
+- [Calendars (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/calendars)
 - [Introduction to iOS 6](~/ios/platform/introduction-to-ios6/index.md)
 - [Introduction to Calendars and Reminders](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)

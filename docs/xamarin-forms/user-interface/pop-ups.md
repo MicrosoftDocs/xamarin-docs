@@ -11,7 +11,7 @@ ms.date: 12/01/2017
 
 # Display Pop-ups
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)
 
 _Xamarin.Forms provides two pop-up-like user interface elements – an alert and an action sheet. This article demonstrates using the alert and action sheet APIs to display dialog boxes that ask users simple questions and guide users through tasks._
 
@@ -71,4 +71,4 @@ async void OnActionSheetCancelDeleteClicked (object sender, EventArgs e)
 
 ## Related links
 
-- [PopupsSample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/Pop-ups/)
+- [PopupsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-pop-ups)

@@ -11,7 +11,7 @@ ms.date: 10/17/2018
 
 # Xamarin.Forms Stepper
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 
 _Use a Stepper for selecting a numeric value from a range of values._
 
@@ -37,11 +37,11 @@ The [`ValueChangedEventArgs`](xref:Xamarin.Forms.ValueChangedEventArgs) object t
 
 ## Basic Stepper code and markup
 
-The [**StepperDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) sample contains three pages that are functionally identical, but are implemented in different ways. The first page uses only C# code, the second uses XAML with an event handler in code, and third is able to avoid the event handler by using data binding in the XAML file.
+The [**StepperDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) sample contains three pages that are functionally identical, but are implemented in different ways. The first page uses only C# code, the second uses XAML with an event handler in code, and third is able to avoid the event handler by using data binding in the XAML file.
 
 ### Creating a Stepper in code
 
-The **Basic Stepper Code** page in the [**StepperDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos) sample shows how to create a [`Stepper`](xref:Xamarin.Forms.Stepper) and two [`Label`](xref:Xamarin.Forms.Label) objects in code:
+The **Basic Stepper Code** page in the [**StepperDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos) sample shows how to create a [`Stepper`](xref:Xamarin.Forms.Stepper) and two [`Label`](xref:Xamarin.Forms.Label) objects in code:
 
 ```csharp
 public class BasicStepperCodePage : ContentPage
@@ -253,5 +253,5 @@ When [`Minimum`](xref:Xamarin.Forms.Stepper.Minimum) is set to 180, [`Value`](xr
 
 ## Related Links
 
-- [Stepper Demos sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/StepperDemos)
+- [Stepper Demos sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-stepperdemos)
 - [Stepper API](xref:Xamarin.Forms.Stepper)

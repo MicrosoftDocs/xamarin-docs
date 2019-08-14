@@ -11,7 +11,7 @@ ms.date: 02/26/2019
 
 # Xamarin.Forms Label
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Display text in Xamarin.Forms_
 
@@ -300,7 +300,7 @@ The text displayed by [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xama
 1. Define the `ICommand` that will be executed by the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer).
 1. Write the code that will be executed by the `ICommand`.
 
-The following code example, taken from the [Hyperlink Demos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) sample, shows a [`Label`](xref:Xamarin.Forms.Label) whose content is set from multiple [`Span`](xref:Xamarin.Forms.Span) instances:
+The following code example, taken from the [Hyperlink Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) sample, shows a [`Label`](xref:Xamarin.Forms.Label) whose content is set from multiple [`Span`](xref:Xamarin.Forms.Span) instances:
 
 ```xaml
 <Label>
@@ -353,7 +353,7 @@ The `TapCommand` executes the `OpenBrowser` method, passing the [`TapGestureReco
 
 The previous approach to creating a hyperlink requires writing repetitive code every time you require a hyperlink in your application. However, both the [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) classes can be subclassed to create `HyperlinkLabel` and `HyperlinkSpan` classes, with the gesture recognizer and text formatting code added there.
 
-The following code example, taken from the [Hyperlink Demos](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/HyperlinkDemos) sample, shows a `HyperlinkSpan` class:
+The following code example, taken from the [Hyperlink Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks/) sample, shows a `HyperlinkSpan` class:
 
 ```csharp
 public class HyperlinkSpan : Span
@@ -410,8 +410,8 @@ The previous sections covered setting [`Label`](xref:Xamarin.Forms.Label) and [`
 
 ## Related links
 
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
-- [Hyperlinks (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Hyperlinks)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Hyperlinks (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-hyperlinks)
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 3](https://developer.xamarin.com/r/xamarin-forms/book/chapter03.pdf)
 - [Label API](xref:Xamarin.Forms.Label)
 - [Span API](xref:Xamarin.Forms.Span)

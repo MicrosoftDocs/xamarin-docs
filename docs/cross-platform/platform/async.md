@@ -84,7 +84,7 @@ For more information about cancellation, see [Fine-Tuning Your Async Application
 
 ## Example
 
-Download the [example Xamarin solution](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (for both iOS and Android) to see a working example of `async` and `await` in mobile apps. The example code is discussed in more detail in this section.
+Download the [example Xamarin solution](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (for both iOS and Android) to see a working example of `async` and `await` in mobile apps. The example code is discussed in more detail in this section.
 
 ### Writing an async method
 
@@ -191,10 +191,10 @@ This document has given an overview of the new language keywords and examples fo
 
 ## Related Links
 
-- [AsyncAwait (sample)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
+- [AsyncAwait (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
 - [Callbacks as our Generations' Go To Statement](https://tirania.org/blog/archive/2013/Aug-15.html)
-- [Data (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/Data/)
-- [HttpClient (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
+- [Data (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
+- [HttpClient (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)
 - [MapKitSearch (iOS) (sample)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
 - [Asynchronous programming](https://docs.microsoft.com/dotnet/csharp/async)
 - [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)

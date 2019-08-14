@@ -11,7 +11,7 @@ ms.date: 06/03/2019
 
 # Xamarin.Forms in Xamarin Native Projects
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
 
 Typically, a Xamarin.Forms application includes one or more pages that derive from [`ContentPage`](xref:Xamarin.Forms.ContentPage), and these pages are shared by all platforms in a .NET Standard library project or Shared Project. However, Native Forms allows `ContentPage`-derived pages to be added directly to native Xamarin.iOS, Xamarin.Android, and UWP applications. Compared to having the native project consume `ContentPage`-derived pages from a .NET Standard library project or Shared Project, the advantage of adding pages directly to native projects is that the pages can be extended with native views. Native views can then be named in XAML with `x:Name` and referenced from the code-behind. For more information about native views, see [Native Views](~/xamarin-forms/platform/native-views/index.md).
 
@@ -44,6 +44,7 @@ public class AppDelegate : UIApplicationDelegate
 
     UIWindow _window;
     UINavigationController _navigation;
+    UIViewController _noteEntryPage;
 
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
@@ -100,12 +101,12 @@ The `static` `AppDelegate.Instance` field allows the `AppDelegate.NavigateToNote
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    UIViewController noteEntryPage = new NoteEntryPage
+    _noteEntryPage = new NoteEntryPage
     {
         BindingContext = note
     }.CreateViewController();
-    noteEntryPage.Title = "Note Entry";
-    _navigation.PushViewController(noteEntryPage, true);
+    _noteEntryPage.Title = "Note Entry";
+    _navigation.PushViewController(_noteEntryPage, true);
 }
 ```
 
@@ -114,6 +115,9 @@ The `NavigateToNoteEntryPage` method converts the Xamarin.Forms [`ContentPage`](
 [![Screenshot of a Xamarin.iOS application that uses a UI defined in XAML](native-forms-images/ios-noteentrypage.png "Xamarin.iOS app with a XAML UI")](native-forms-images/ios-noteentrypage-large.png#lightbox "Xamarin.iOS app with a XAML UI")
 
 When the `NoteEntryPage` is displayed, tapping the back arrow will pop the `UIViewController` for the `NoteEntryPage` class from the `UINavigationController`, returning the user to the `UIViewController` for the `NotesPage` class.
+
+> [!IMPORTANT]
+> Popping a `UIViewController` from the iOS native navigation stack does not automatically dispose of `UIViewController`s. It's the responsibility of the developer to ensure that any `UIViewController` that is no longer needed has its `Dispose` method called, else the `UIViewController` and attached `Page` will be orphaned and will not be collected by the garbage collector, resulting in a memory leak.
 
 ## Android
 
@@ -363,5 +367,5 @@ For more information about back navigation support on UWP, see [Navigation histo
 
 ## Related links
 
-- [NativeForms (sample)](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
+- [NativeForms (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
 - [Native Views](~/xamarin-forms/platform/native-views/index.md)

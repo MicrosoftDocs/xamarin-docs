@@ -10,7 +10,7 @@ ms.date: 06/07/2019
 
 # Azure SignalR Service with Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/WebServices/AzureSignalR)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresignalr/)
 
 ASP.NET Core SignalR is an application model that simplifies the process of adding real-time communication to applications. Azure SignalR Service allows rapid development and deployment of scalable SignalR applications. Azure Functions are short-lived, serverless code methods that can be combined to form event-driven, scalable applications.
 

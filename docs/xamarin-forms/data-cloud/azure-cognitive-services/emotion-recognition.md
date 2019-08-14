@@ -1,5 +1,5 @@
 ---
-title: "Emotion Recognition Using the Face API"
+title: "Perceived Emotion Recognition Using the Face API"
 description: "The Face API takes a facial expression in an image as an input, and returns data that includes confidence levels across a set of emotions for each face in the image. This article explains how to use the Face API to recognize emotion, to rate a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: 19D36A7C-E8D8-43D1-BE80-48DE6C02879A
@@ -9,15 +9,13 @@ ms.author: dabritch
 ms.date: 05/10/2018
 ---
 
-# Emotion Recognition Using the Face API
+# Perceived Emotion Recognition Using the Face API
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
-_The Face API takes a facial expression in an image as an input, and returns data that includes confidence levels across a set of emotions for each face in the image. This article explains how to use the Face API to recognize emotion, to rate a Xamarin.Forms application._
+The Face API can perform emotion detection to detect anger, contempt, disgust, fear, happiness, neutral, sadness, and surprise, in a facial expression based on perceived annotations by human coders. It is important to note, however, that facial expressions alone may not necessarily represent the internal states of people.
 
-## Overview
-
-The Face API can perform emotion detection to detect anger, contempt, disgust, fear, happiness, neutral, sadness, and surprise, in a facial expression. These emotions are universally and cross-culturally communicated via the same basic facial expressions. As well as returning an emotion result for a facial expression, the Face API can also returns a bounding box for detected faces. Note that an API key must be obtained to use the Face API. This can be obtained at [Try Cognitive Services](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
+In addition to returning an emotion result for a facial expression, the Face API can also returns a bounding box for detected faces. Note that an API key must be obtained to use the Face API. This can be obtained at [Try Cognitive Services](https://azure.microsoft.com/try/cognitive-services/?api=face-api).
 
 Emotion recognition can be performed via a client library, and via a REST API. This article focuses on performing emotion recognition via the REST API. For more information about the REST API, see [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
@@ -39,7 +37,7 @@ public FaceRecognitionService()
 
 Failure to pass a valid API key to the Face API will result in a 401 response error.
 
-## Performing Emotion Recognition
+## Perform emotion recognition
 
 Emotion recognition is performed by making a POST request containing an image to the `detect` API at `https://[location].api.cognitive.microsoft.com/face/v1.0`, where `[location]]` is the region you used to obtain your API key. The optional request parameters are:
 
@@ -76,7 +74,7 @@ This method generates a request URI and then sends the request to the `detect` A
 > [!NOTE]
 > You must use the same region in your Face API calls as you used to obtain your subscription keys. For example, if you obtained your subscription keys from the `westus` region, the face detection endpoint will be `https://westus.api.cognitive.microsoft.com/face/v1.0/detect`.
 
-### Sending the Request
+### Send the request
 
 The `SendRequestAsync` method makes the POST request to the Face API and returns the result as a `Face` array:
 
@@ -127,7 +125,7 @@ The POST request is then sent to `detect` API. The response is read, deserialize
 
 The `detect` API will send HTTP status code 200 (OK) in the response, provided that the request is valid, which indicates that the request succeeded and that the requested information is in the response. For a list of possible error responses, see [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236).
 
-### Processing the Response
+### Process the response
 
 The API response is returned in JSON format. The following JSON data shows a typical successful response message that supplies the data requested by the sample application:
 
@@ -169,12 +167,8 @@ The following screenshot shows the result of the emotion recognition process in 
 
 ![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
 
-## Summary
-
-This article explained how to use the Face API to recognize emotion, to rate a Xamarin.Forms application. The Face API takes a facial expression in an image as an input, and returns data that includes the confidence across a set of emotions for each face in the image.
-
-## Related Links
+## Related links
 
 - [Face API](/azure/cognitive-services/face/overview/).
-- [Todo Cognitive Services (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Todo Cognitive Services (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 - [Face REST API](https://westus.dev.cognitive.microsoft.com/docs/services/563879b61984550e40cbbe8d/operations/563879b61984550f30395236)

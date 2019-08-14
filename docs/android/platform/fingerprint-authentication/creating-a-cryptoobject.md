@@ -111,7 +111,7 @@ The next section will discuss how to create the key and store it on the device.
 
 ## Creating a Secret Key
 
-The `CryptoObjectHelper` class uses the Android [`KeyGenerator`](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/) to create a key and store it on the device. The `KeyGenerator` class can create the key, but needs some meta-data about the type of key to create. This information is provided by an instance of the [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) class. 
+The `CryptoObjectHelper` class uses the Android [`KeyGenerator`](xref:Javax.Crypto.KeyGenerator) to create a key and store it on the device. The `KeyGenerator` class can create the key, but needs some meta-data about the type of key to create. This information is provided by an instance of the [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) class. 
 
 A `KeyGenerator` is instantiated using the `GetInstance` factory method. The sample code uses the [_Advanced Encryption Standard_](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) as the encryption algorithm. AES will break the data up into blocks of a fixed size and encrypt each of those blocks.
 
@@ -154,10 +154,10 @@ Now that we have seen how to create a `CryptoObject`, lets move on to see how th
 
 ## Related Links
 
-- [Cipher](https://developer.xamarin.com/api/type/Javax.Crypto.Cipher/)
+- [Cipher](xref:Javax.Crypto.Cipher)
 - [FingerprintManager.CryptoObject](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.CryptoObject.html)
 - [FingerprintManagerCompat.CryptoObject](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.CryptoObject.html)
-- [KeyGenerator](https://developer.xamarin.com/api/type/Javax.Crypto.KeyGenerator/)
+- [KeyGenerator](xref:Javax.Crypto.KeyGenerator)
 - [KeyGenParameterSpec](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html)
 - [KeyGenParameterSpec.Builder](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.Builder.html)
 - [KeyPermanentlyInvalidatedException](https://developer.android.com/reference/android/security/keystore/KeyPermanentlyInvalidatedException.html)

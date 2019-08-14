@@ -11,7 +11,7 @@ ms.date: 02/08/2017
 
 # Speech Recognition Using the Microsoft Speech API
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
 
 _The Microsoft Speech API is a cloud-based API that provides algorithms to process spoken language. This article explains how to use the Microsoft Speech Recognition REST API to convert audio to text in a Xamarin.Forms application._
 
@@ -166,4 +166,4 @@ This article explained how to use the Microsoft Speech REST API to convert audio
 
 - [Microsoft Speech API Documentation](/azure/cognitive-services/speech/home/).
 - [Consume a RESTful Web Service](~/xamarin-forms/data-cloud/web-services/rest.md)
-- [Todo Cognitive Services (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoCognitiveServices/)
+- [Todo Cognitive Services (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
