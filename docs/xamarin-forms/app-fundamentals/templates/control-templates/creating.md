@@ -147,7 +147,7 @@ When adding a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) at the pag
 
 ## Create a ControlTemplate in C&#35;
 
-To define a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) at the application level, a `class` must be created that represents the `ControlTemplate`. The class should derive from the [layout](~/xamarin-forms/user-interface/layouts/index.md) being used for the template, as shown in the following code example:
+To define a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) at the application level, a `class` must be created that represents the `ControlTemplate`. The class should derive from the [layout](~/xamarin-forms/user-interface/layouts/index.yml) being used for the template, as shown in the following code example:
 
 ```csharp
 class TealTemplate : Grid
