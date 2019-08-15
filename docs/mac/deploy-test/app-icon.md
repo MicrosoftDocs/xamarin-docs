@@ -111,7 +111,7 @@ This article has taken a detailed look at working with Images required to create
 
 ## Related Links
 
-- [MacImages (sample)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Images](~/mac/app-fundamentals/image.md)
 - [macOS Human Interface Guidelines - Icons and Images](https://developer.apple.com/macos/human-interface-guidelines/icons-and-images/image-size-and-resolution/)

@@ -17,7 +17,7 @@ You may see an error of this form:
 
 API changes in iOS 9 require that a callback constructor be used when calling unmanaged code, as the underlying API now expects it. Use the following line to add the callback constructor to the class: 
 
-`public foo (IntPtr handle) : base (handle) ` 
+`public foo (IntPtr handle) : base (handle)` 
 
 ### Next Steps
 

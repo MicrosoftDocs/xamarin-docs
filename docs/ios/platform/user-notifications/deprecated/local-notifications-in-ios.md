@@ -30,7 +30,7 @@ iOS makes it fairly simple to create and handle local notifications.
 First, iOS 8 requires applications to ask for the user's permission
 to display notifications. Add the following code to your app before
 attempting to send a local notification - the 
-[attached sample](https://developer.xamarin.com/samples/monotouch/LocalNotifications/) 
+[attached sample](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications) 
 places it in the **AppDelegate**'s **FinishedLaunching** method.
 
 ```csharp
@@ -50,7 +50,7 @@ minute in the future, and display an alert with a message:
 
 ```csharp
 UILocalNotification notification = new UILocalNotification();
-NSDate.FromTimeIntervalSinceNow(15);
+notification.FireDate = NSDate.FromTimeIntervalSinceNow(15);
 //notification.AlertTitle = "Alert Title"; // required for Apple Watch notifications
 notification.AlertAction = "View Alert";
 notification.AlertBody = "Your 15 second alert has fired!";
@@ -155,7 +155,7 @@ to notifications by overriding the `ReceivedLocalNotification` method or the `Re
 
 ## Related links
 
-- [Local notifications (sample)](https://developer.xamarin.com/samples/monotouch/LocalNotifications)
+- [Local notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
 - [Local and Push Notifications for Developers](https://developer.apple.com/notifications/)
 - [Local and Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
 - [UIApplication](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIApplication)

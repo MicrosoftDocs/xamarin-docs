@@ -42,10 +42,10 @@ This article assumes that you have some familiarity with Xcode and the Objective
 [Binding Objective-C](~/cross-platform/macios/binding/index.md)
 documentation. Additionally, the following is required to complete the steps presented:
 
--  **Xcode and iOS SDK** - Apple's Xcode and the latest iOS API need to be installed and configured on the developer's computer.
--  **[Xcode Command Line Tools](#Installing_the_Xcode_Command_Line_Tools)** - The Xcode Command Line Tools must be installed for the currently installed version of Xcode (see below for installation details).
--  **Visual Studio for Mac or Visual Studio** - The latest version of Visual Studio for Mac or Visual Studio should be installed and configured on the development computer. An Apple Mac is required for developing a Xamarin.iOS application, and when using Visual Studio you must be connected to [a Xamarin.iOS build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
--  **The latest version of Objective Sharpie** - A current copy of the Objective Sharpie tool
+- **Xcode and iOS SDK** - Apple's Xcode and the latest iOS API need to be installed and configured on the developer's computer.
+- **[Xcode Command Line Tools](#Installing_the_Xcode_Command_Line_Tools)** - The Xcode Command Line Tools must be installed for the currently installed version of Xcode (see below for installation details).
+- **Visual Studio for Mac or Visual Studio** - The latest version of Visual Studio for Mac or Visual Studio should be installed and configured on the development computer. An Apple Mac is required for developing a Xamarin.iOS application, and when using Visual Studio you must be connected to [a Xamarin.iOS build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- **The latest version of Objective Sharpie** - A current copy of the Objective Sharpie tool
 	downloaded from [here](~/cross-platform/macios/binding/objective-sharpie/get-started.md). If you already have Objective Sharpie installed, you can update it to the latest version by using the `sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>
@@ -173,7 +173,7 @@ At this point we're close, but we're not quite done. The static library has been
 
 ### Creating a Fat Binary
 
-All iOS devices have processors powered by ARM architecture that have developed over time. Each new architecture added new instructions and other improvements while still maintaining backwards compatibility. On iOS devices we have armv6, armv7, armv7s, arm64 instruction sets – although [we no longer use armv6](~/ios/deploy-test/compiling-for-different-devices.md). The iOS simulator is not powered by ARM and is istead a x86 and x86_64 powered simulator. We that means for us is that we must provide libraries on each instruction sets.
+All iOS devices have processors powered by ARM architecture that have developed over time. Each new architecture added new instructions and other improvements while still maintaining backwards compatibility. iOS devices have armv6, armv7, armv7s, arm64 instruction sets – although [armv6 not used any more](~/ios/deploy-test/compiling-for-different-devices.md). The iOS simulator is not powered by ARM and is instead a x86 and x86_64 powered simulator. That means libraries must be provided for each instruction set.
 
 A Fat library is `.a` file containing all the supported architectures.
 
@@ -183,9 +183,9 @@ Creating a fat binary is a three step process:
 - Compile an x86 and x84_64 version of the static library.
 - Use the `lipo` command line tool to combine the two static libraries into one.
 
-While these three steps are rather straightforward, and it may be necessary to repeat them in the future when the Objective-C library receives updates or if we require bug fixes. If you decide to automate these steps, it will simplify the future maintenance and support of the iOS binding project.
+While these three steps are rather straightforward, it may be necessary to repeat them in the future when the Objective-C library receives updates or if we require bug fixes. If you decide to automate these steps, it will simplify the future maintenance and support of the iOS binding project.
 
-There are many tools available to automate such tasks - a shell script, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), and [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). When we installed the Xcode Command Line tools, we also installed make, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for the any library:
+There are many tools available to automate such tasks - a shell script, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), and [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). When the Xcode Command Line tools are installed, `make` is also installed, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for any library:
 
 ```bash
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
@@ -214,7 +214,7 @@ clean:
 	-rm -f *.a *.dll
 ```
 
-Enter the **Makefile** commands in the plain text editor of your choosing, and update the sections with **YOUR-PROJECT-NAME** with the name of your project. It is also important to ensure that we you paste the instructions above, that the tabs within the instructions have been preserved.
+Enter the **Makefile** commands in the plain text editor of your choosing, and update the sections with **YOUR-PROJECT-NAME** with the name of your project. It is also important to ensure that you paste the instructions above exactly, with the tabs within the instructions preserved.
 
 Save the file with the name **Makefile** to the same location as the InfColorPicker Xcode Static Library we created above:
 
@@ -729,11 +729,9 @@ This article walked through the process of creating and using a Xamarin.iOS bind
 
 ## Related Links
 
-- [Binding Example (sample)](https://developer.xamarin.com/samples/monotouch/InfColorPicker/)
+- [Binding Example (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/infcolorpicker)
 - [Binding Objective-C Libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Binding Details](~/cross-platform/macios/binding/overview.md)
 - [Binding Types Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)
 - [Xamarin for Objective-C Developers](~/ios/get-started/objective-c-developers/index.md)
 - [Framework Design Guidelines](https://msdn.microsoft.com/library/ms229042.aspx)
-- [Xamarin University Course: Building an Objective-C Bindings Library](https://university.xamarin.com/classes/track/all#building-an-objective-c-bindings-library)
-- [Xamarin University Course: Build an Objective-C Bindings Library with Objective Sharpie](https://university.xamarin.com/classes/track/all#build-an-objective-c-bindings-library-with-objective-sharpie)

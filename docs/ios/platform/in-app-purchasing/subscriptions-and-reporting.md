@@ -20,11 +20,11 @@ navigation application or time-limited access to a data archive).
 Key differences between non-renewing subscriptions and other product
 types:
 
--  The product definition in iTunes Connect does not include the term. The application code must be able to infer the validity period from the Product ID. 
--  They can be purchased multiple times (like a consumable product). Applications are required to manage the subscription term/expiry and renewal, and prevent the user from buying overlapping subscriptions. 
--  The purchases are not supported by the StoreKit Restore function. If the subscription should be available across all a user’s devices, the application will have to design and implement this feature in conjunction with a remote server. Applications are also responsible for backing-up the subscription status for cases when a device is backed-up then restored-from-backup. 
--  Implementation Overview
--  Non-Renewing Subscriptions should normally be implemented using the Server-Delivered workflow and managed like Consumable products. 
+- The product definition in iTunes Connect does not include the term. The application code must be able to infer the validity period from the Product ID. 
+- They can be purchased multiple times (like a consumable product). Applications are required to manage the subscription term/expiry and renewal, and prevent the user from buying overlapping subscriptions. 
+- The purchases are not supported by the StoreKit Restore function. If the subscription should be available across all a user’s devices, the application will have to design and implement this feature in conjunction with a remote server. Applications are also responsible for backing-up the subscription status for cases when a device is backed-up then restored-from-backup. 
+- Implementation Overview
+- Non-Renewing Subscriptions should normally be implemented using the Server-Delivered workflow and managed like Consumable products. 
 
 
 ## About Free Subscriptions
@@ -153,7 +153,7 @@ An example Sales and Trends report is shown below:
 
  [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
    
- There’s also an  [ **ITC Connect Mobile**iOS app (iTunes link)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
+ There’s also an  [**ITC Connect Mobile**iOS app (iTunes link)](http://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
 iPhone screenshots for some of the statistics available are shown here:   
    
  [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

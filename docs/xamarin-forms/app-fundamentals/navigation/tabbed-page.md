@@ -11,7 +11,7 @@ ms.date: 10/24/2018
 
 # Xamarin.Forms Tabbed Page
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
 _The Xamarin.Forms TabbedPage consists of a list of tabs and a larger detail area, with each tab loading content into the detail area. This article demonstrates how to use a TabbedPage to navigate through a collection of pages._
 
@@ -39,9 +39,18 @@ The layout of a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), and its tabs, is 
 
 - On Windows tablet form-factors, the tabs aren't always visible and users need to swipe-down (or right-click, if they have a mouse attached) to view the tabs in a `TabbedPage` (as shown below).
 
-![](tabbed-page-images/windows-tabs.png "TabbedPage Tabs on Windows")
+    ![](tabbed-page-images/windows-tabs.png "TabbedPage Tabs on Windows")
 
 ## Creating a TabbedPage
+
+[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) defines the following properties:
+
+- [`BarBackgroundColor`](xref:Xamarin.Forms.TabbedPage.BarBackgroundColor) of type [`Color`](xref:Xamarin.Forms.Color), the background color of the tab bar.
+- [`BarTextColor`](xref:Xamarin.Forms.TabbedPage.BarTextColor) of type [`Color`](xref:Xamarin.Forms.Color), the color of text on the tab bar.
+- [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor) of type [`Color`](xref:Xamarin.Forms.Color), the color of the tab when it's selected.
+- [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor) of type [`Color`](xref:Xamarin.Forms.Color), the color of the tab when it's unselected.
+
+All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be the targets of data bindings.
 
 Two approaches can be used to create a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 
@@ -51,7 +60,7 @@ Two approaches can be used to create a [`TabbedPage`](xref:Xamarin.Forms.TabbedP
 With both approaches, the [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) will display each page as the user selects each tab.
 
 > [!NOTE]
-> It's recommended that a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) should be populated with [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) and [`ContentPage`](xref:Xamarin.Forms.ContentPage)instances only. This will help to ensure a consistent user experience across all platforms.
+> It's recommended that a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) should be populated with [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) and [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances only. This will help to ensure a consistent user experience across all platforms.
 
 <a name="Populating_a_TabbedPage_with_a_Page_Collection" />
 
@@ -65,7 +74,7 @@ The following XAML code example shows a [`TabbedPage`](xref:Xamarin.Forms.Tabbed
             xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
             x:Class="TabbedPageWithNavigationPage.MainPage">
     <local:TodayPage />
-    <NavigationPage Title="Schedule" Icon="schedule.png">
+    <NavigationPage Title="Schedule" IconImageSource="schedule.png">
         <x:Arguments>
             <local:SchedulePage />
         </x:Arguments>
@@ -81,7 +90,7 @@ public class MainPageCS : TabbedPage
   public MainPageCS ()
   {
     var navigationPage = new NavigationPage (new SchedulePageCS ());
-    navigationPage.Icon = "schedule.png";
+    navigationPage.IconImageSource = "schedule.png";
     navigationPage.Title = "Schedule";
 
     Children.Add (new TodayPageCS ());
@@ -144,7 +153,7 @@ The following XAML code example shows a [`TabbedPage`](xref:Xamarin.Forms.Tabbed
   </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
+      <ContentPage Title="{Binding Name}" IconImageSource="monkeyicon.png">
         <StackLayout Padding="5, 25">
           <Label Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Center" />
           <Image Source="{Binding PhotoUrl}" WidthRequest="200" HeightRequest="200" />
@@ -200,7 +209,7 @@ public class TabbedPageDemoPageCS : TabbedPage
       ...
 
       var contentPage = new ContentPage {
-        Icon = "monkeyicon.png",
+        IconImageSource = "monkeyicon.png",
         Content = new StackLayout {
           Padding = new Thickness (5, 25),
           Children = {
@@ -249,6 +258,6 @@ This article demonstrated how to use a TabbedPage to navigate through a collecti
 ## Related Links
 
 - [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
-- [TabbedPageWithNavigationPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPageWithNavigationPage)
-- [TabbedPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/Navigation/TabbedPage/)
+- [TabbedPageWithNavigationPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
+- [TabbedPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
 - [TabbedPage](xref:Xamarin.Forms.TabbedPage)

@@ -19,11 +19,12 @@
         - name: Release notes
           href: /xamarin/tools/inspector/release-notes/
     - name: Live Player
-      href: live-player/index.md
       items: 
-        - name: Setup
+        - name: About Xamarin Live Player preview
+          href: live-player/index.md
+        - name: Visual Studio configuration
           href: live-player/install.md
-        - name: Xamarin Live Player App
+        - name: Xamarin Live Player app
           href: live-player/player.md
         - name: Troubleshooting
           href: live-player/troubleshooting.md
@@ -43,11 +44,6 @@
           href: workbooks/workbook.md
         - name: Editor Keyboard Shortcuts
           href: workbooks/keybindings.md
-        - name: Sample Workbooks
-          href: workbooks/samples/index.md
-          items: 
-            - name: TinyRenderer
-              href: workbooks/samples/tinyrenderer.md
         - name: Troubleshooting
           href: workbooks/troubleshooting/index.md
           items: 

@@ -22,16 +22,16 @@ information must be entered in iTunes Connect.
 Using the App Store to provide in-app purchasing requires the
 following setup and configuration:
 
--  **iTunes Connect** – Configuring the products to sell and setting up sandbox user accounts to test purchasing. You must also have provided your banking and tax information to Apple so they can remit funds collected on your behalf.
--   **iOS Provisioning Portal** – Creating a Bundle Identifier and enabling App Store access for your app.
--  **Store Kit** – Adding code to your app for displaying products, purchasing products and restoring transactions.
--  **Custom code** – To track purchases made by customers and provide the products or services they’ve purchased. You may also need implement a server-side process to validate receipts if your products consist of content downloaded from a server (such as books and magazine issues).
+- **iTunes Connect** – Configuring the products to sell and setting up sandbox user accounts to test purchasing. You must also have provided your banking and tax information to Apple so they can remit funds collected on your behalf.
+- **iOS Provisioning Portal** – Creating a Bundle Identifier and enabling App Store access for your app.
+- **Store Kit** – Adding code to your app for displaying products, purchasing products and restoring transactions.
+- **Custom code** – To track purchases made by customers and provide the products or services they’ve purchased. You may also need implement a server-side process to validate receipts if your products consist of content downloaded from a server (such as books and magazine issues).
 
 
 There are two Store Kit “server environments”:
 
--  **Production** – Transactions with real money. Only accessible via applications that have been submitted and approved by Apple. In-app purchase products must also be reviewed and approved before they are available on the production environment.
--  **Sandbox** – Where your testing happens. Products are available here immediately after creation (the approval process only applies to the Production environment). Transactions in the sandbox require test users (not real Apple IDs) to perform transactions.
+- **Production** – Transactions with real money. Only accessible via applications that have been submitted and approved by Apple. In-app purchase products must also be reviewed and approved before they are available on the production environment.
+- **Sandbox** – Where your testing happens. Products are available here immediately after creation (the approval process only applies to the Production environment). Transactions in the sandbox require test users (not real Apple IDs) to perform transactions.
 
 ## In-App Purchase Rules
 
@@ -69,9 +69,9 @@ iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) and 
 These three steps
 should be complete before writing any code:
 
--  **Apple Developer Account** – Submit your banking and taxation information to Apple.
--  **iOS Provisioning Portal** – Ensure your app has a valid App ID (not a wildcard with an asterisk * in it) and has In App Purchasing enabled.
--  **iTunes Connect Application Management** – Add products to your application.
+- **Apple Developer Account** – Submit your banking and taxation information to Apple.
+- **iOS Provisioning Portal** – Ensure your app has a valid App ID (not a wildcard with an asterisk * in it) and has In App Purchasing enabled.
+- **iTunes Connect Application Management** – Add products to your application.
 
 
 ### Apple Developer Account
@@ -144,9 +144,9 @@ already added:
 
 The process to add new products has two steps:
 
-1.   Choose the product type: 
+1. Choose the product type: 
 	[![](in-app-purchase-basics-and-configuration-images/image8.png "Choose the product type")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2.   Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
+2. Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
 	[![](in-app-purchase-basics-and-configuration-images/image9.png "Entering the products attributes")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 The fields required for each in-app purchase product are described
@@ -191,11 +191,11 @@ users, but it is used to reference the product in your application code.
 
 There are five types of in-app purchase product you can offer:
 
-1.  **Consumable** – Things that are ‘used up’, such as in-game currency that the player can spend. If the user does a backup/restore or otherwise has their device refreshed, a consumable transaction does NOT get restored as well (which would effectively give the player the same benefit over again). Application code must be sure to provide the ‘consumable item’ as soon as the transaction is completed.
-1.  **Non-consumable** – Products that the user ‘owns’ once purchased, such as a digital magazine issue or a game level.
-1.  **Auto-Renewable Subscriptions** – Just like a real-world magazine subscription, at the end of the subscription period Apple automatically charges the customer again and extends the subscription term, forever or until the customer explicitly cancels it. This is the preferred payment method for Newsstand apps (in fact, apps MUST support this payment method to be approved for Newsstand distribution).
-1.  **Free Subscription** – Can only be offered in Newsstand-enabled apps, and allows the customer to access subscription content on all their devices. Free subscriptions never expire.
-1.  **Non-Renewing Subscription** – Should be used to sell time-limited access to static content, such as one month’s access to a photo archive.
+1. **Consumable** – Things that are ‘used up’, such as in-game currency that the player can spend. If the user does a backup/restore or otherwise has their device refreshed, a consumable transaction does NOT get restored as well (which would effectively give the player the same benefit over again). Application code must be sure to provide the ‘consumable item’ as soon as the transaction is completed.
+1. **Non-consumable** – Products that the user ‘owns’ once purchased, such as a digital magazine issue or a game level.
+1. **Auto-Renewable Subscriptions** – Just like a real-world magazine subscription, at the end of the subscription period Apple automatically charges the customer again and extends the subscription term, forever or until the customer explicitly cancels it. This is the preferred payment method for Newsstand apps (in fact, apps MUST support this payment method to be approved for Newsstand distribution).
+1. **Free Subscription** – Can only be offered in Newsstand-enabled apps, and allows the customer to access subscription content on all their devices. Free subscriptions never expire.
+1. **Non-Renewing Subscription** – Should be used to sell time-limited access to static content, such as one month’s access to a photo archive.
 
 
  *This document currently covers only the first two product types (Consumable and Non-Consumable).*

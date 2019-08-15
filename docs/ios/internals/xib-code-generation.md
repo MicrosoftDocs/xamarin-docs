@@ -114,9 +114,9 @@ Designer classes contain partial methods corresponding to all actions defined
 on the custom class. These are methods without an implementation. The purpose of
 the partial methods is twofold:
 
-1.  If you type  `partial` in the class body of the non-designer class part, Visual Studio for Mac will
+1. If you type  `partial` in the class body of the non-designer class part, Visual Studio for Mac will
 offer to autocomplete the signatures of all non-implemented partial methods.
-2.  The partial method signatures have an attribute applied that exposes them to the Objective-C world,
+2. The partial method signatures have an attribute applied that exposes them to the Objective-C world,
 so they can get handled as the corresponding action.
 
 

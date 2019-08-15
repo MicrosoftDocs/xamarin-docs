@@ -13,7 +13,7 @@ ms.date: 01/02/2019
 
 # Style a Cross-Platform Xamarin.Forms Application
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Styled/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 
 In this quickstart, you will learn how to:
 
@@ -26,7 +26,7 @@ The quickstart walks through how to style a cross-platform Xamarin.Forms applica
 
 ### Prerequisites
 
-You should successfully complete the [previous quickstart](database.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/) and use it as the starting point for this quickstart.
+You should successfully complete the [previous quickstart](database.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/) and use it as the starting point for this quickstart.
 
 ::: zone pivot="windows"
 
@@ -115,7 +115,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NotesPage.xaml** by pressing **CTRL+S**, and close the file.
 
-5. In the **Solution Pad**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
+4. In **Solution Explorer**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -164,7 +164,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NoteEntryPage.xaml** by pressing **CTRL+S**, and close the file.
 
-6. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
+5. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
 
     On the **NotesPage** press the **+** button to navigate to the **NoteEntryPage** and enter a note. On each page, observe how the styling has changed from the previous quickstart.
 
@@ -217,7 +217,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **App.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
-3. In **Solution Explorer**, in the **Notes** project, double-click **NotesPage.xaml** to open it. Then replace the existing code with the following code:
+3. In the **Solution Pad**, in the **Notes** project, double-click **NotesPage.xaml** to open it. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -256,7 +256,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NotesPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
-5. In **Solution Explorer**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
+4. In the **Solution Pad**, in the **Notes** project, double-click **NoteEntryPage.xaml** to open it. Then replace the existing code with the following code:
 
     ```xaml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -305,7 +305,7 @@ You should successfully complete the [previous quickstart](database.md) before a
 
     Save the changes to **NoteEntryPage.xaml** by choosing **File > Save** (or by pressing **&#8984; + S**), and close the file.
 
-6. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
+5. Build and run the project on each platform. For more information, see [Building the quickstart](single-page.md#building-the-quickstart).
 
     On the **NotesPage** press the **+** button to navigate to the **NoteEntryPage** and enter a note. On each page, observe how the styling has changed from the previous quickstart.
 
@@ -325,5 +325,5 @@ To learn more about the fundamentals of application development using Xamarin.Fo
 
 ## Related links
 
-- [Notes (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Styled/)
+- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-styled/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

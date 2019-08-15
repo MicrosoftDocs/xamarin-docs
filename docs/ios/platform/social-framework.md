@@ -63,9 +63,9 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
  `SLComposeViewController` never sends a tweet directly without
 user interaction. However, it can be initialized with the following methods:
 
--   `SetInitialText` – Adds the initial text to show in the tweet. 
--  `AddUrl` – Adds a Url to the tweet.
--  `AddImage` – Adds an image to the tweet.
+- `SetInitialText` – Adds the initial text to show in the tweet. 
+- `AddUrl` – Adds a Url to the tweet.
+- `AddImage` – Adds an image to the tweet.
 
 
 Once initialized, calling `PresentVIewController` displays the
@@ -504,5 +504,5 @@ is used to call each social network’s API.
 
 ## Related Links
 
-- [SocialFrameworkDemo (sample)](https://developer.xamarin.com/samples/SocialFrameworkDemo/)
+- [SocialFrameworkDemo (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/socialframeworkdemo)
 - [Introduction to Web Services](~/cross-platform/data-cloud/web-services/index.md)

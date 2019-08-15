@@ -857,7 +857,7 @@ FormattingCommands.Add (Headings);
 FormattingCommands.Add(new LanguageFormatCommand ());
 FormattingCommands.Add(new LanguageFormatCommand("Link","[","]()"));
 FormattingCommands.Add(new LanguageFormatCommand("Image","![](",")"));
-FormattingCommands.Add(new LanguageFormatCommand("Image Link","[ ![](",")](LinkImageHere)"));
+FormattingCommands.Add(new LanguageFormatCommand("Image Link","[![](",")](LinkImageHere)"));
 ```
 
 And that collection passed to the `AssembleMenu` function (with the **Format** Menu set as the base), the following dynamic menus and menu items would be created:
@@ -1070,7 +1070,7 @@ This article has taken a detailed look at working with menus and menu items in a
 
 ## Related Links
 
-- [MacMenus (sample)](https://developer.xamarin.com/samples/mac/MacMenus/)
+- [MacMenus (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macmenus)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Human Interface Guidelines - Menus](https://developer.apple.com/macos/human-interface-guidelines/menus/menu-anatomy/)
 - [Introduction to Application Menus and Pop-up Lists](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/MenuList/MenuList.html)

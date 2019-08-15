@@ -95,7 +95,7 @@ As stated above, a Split View Controller is often used in situations where you a
 
 ### Accessing Master and Detail
 
-If you need to access the Master and Detail View Controllers programmatically, use the `ViewControllers ` property of the Split View Controller. For example:
+If you need to access the Master and Detail View Controllers programmatically, use the `ViewControllers` property of the Split View Controller. For example:
 
 ```csharp
 // Gain access to master and detail view controllers
@@ -171,7 +171,7 @@ This article has covered designing and working with Split View Controllers insid
 
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

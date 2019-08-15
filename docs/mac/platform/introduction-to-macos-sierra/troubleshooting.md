@@ -13,7 +13,7 @@ ms.date: 09/22/2016
 
 _This article provides several troubleshooting tips for working with macOS Sierra in Xamarin.Mac apps._
 
-The following sections list some known issues that can occur when using macOS Sierra with Xamarin.mac and the solution to those issues:
+The following sections list some known issues that can occur when using macOS Sierra with Xamarin.Mac and the solution to those issues:
 
 - [App Store](#App-Store)
 - [Apple Pay](#Apple-Pay)
@@ -47,7 +47,7 @@ If an incorrect expiration date or security code (CW) is entered when adding a n
 Known Issues:
 
 - Calling `NSObject.ValueForKey` will a `null` key will result in an exception.
-- Both `NSURLSession` and NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://` URLs.
+- Both `NSURLSession` and `NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://` URLs.
 - Apps can hang if they modify a superview's geometry in either the `ViewWillLayoutSubviews` or `LayoutSubviews` methods.
 - For all SSL/TLS connections, the RC4 symmetric cipher is now disabled by default. Additionally, the Secure Transport API no longer supports SSLv3 and it is recommended that the app stop using SHA-1 and 3DES cryptography as soon as possible.
 
@@ -87,13 +87,7 @@ After a Handoff operation, the `UserInfo` property of a `NSUserActivity` object 
 
 WebGeolocation requires a secure (`https://`) URL to work on both iOS 10 and macOS Sierra to prevent malicious use of location data.
 
-
-
-
-
-
-
 ## Related Links
 
-- [Mac Samples](https://developer.xamarin.com/samples/mac/)
-- [What's new in OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)
+- [Mac Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
+- [What's new in macOS 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

@@ -107,13 +107,13 @@ deploy the app. However, for Apple TV App Store distribution, only certificate a
 
 Provisioning involves the following steps using Apple's web based iOS Provisioning Portal:
 
-1.  Select **Provisioning** > **Distribution**.
-2.  Click the **+** button and select the type of Distribution Profile that you want to create as **Apple TV App Store**.
-3.  Select **App ID** from the dropdown list that you want to create a Distribution Profile for.
-4.  Select certificate required to sign the application.
-5.  Enter a **Name** for the new **Distribution Profile** and generate the profile.
-6.  Refresh the list of available profiles in Xcode.
-7.  Select the Distribution Provisioning Profile in Visual Studio for the **App Store** _Build Configuration_.
+1. Select **Provisioning** > **Distribution**.
+2. Click the **+** button and select the type of Distribution Profile that you want to create as **Apple TV App Store**.
+3. Select **App ID** from the dropdown list that you want to create a Distribution Profile for.
+4. Select certificate required to sign the application.
+5. Enter a **Name** for the new **Distribution Profile** and generate the profile.
+6. Refresh the list of available profiles in Xcode.
+7. Select the Distribution Provisioning Profile in Visual Studio for the **App Store** _Build Configuration_.
 
 For detailed instructions, please see the [Creating a Distribution Profile](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) and [Selecting a Distribution Profile in a Xamarin.iOS Project](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile). Again, both of these documents are specific to iOS but the same technique is used for tvOS apps.
 
@@ -145,13 +145,13 @@ With your Xamarin.tvOS app properly configured, you are now ready to do the fina
 
 1. Select the **Release | Device** configuration in Visual Studio for Mac:
 
-	![](app-store-publishing-images/buildxs01new.png "Select the Release configuration")
+    ![](app-store-publishing-images/buildxs01new.png "Select the Release configuration")
 2. From the **Build** menu, select **Archive for Publishing**:
 
-	[![](app-store-publishing-images/buildxs02new.png "Select Archive for Publishing")](app-store-publishing-images/buildxs02new.png#lightbox)
+    [![](app-store-publishing-images/buildxs02new.png "Select Archive for Publishing")](app-store-publishing-images/buildxs02new.png#lightbox)
 3. Once the archive has been created, the **Archives** view will be displayed:
 
-	[![](app-store-publishing-images/buildxs03new.png "The Archives view")](app-store-publishing-images/buildxs03new.png#lightbox)
+    [![](app-store-publishing-images/buildxs03new.png "The Archives view")](app-store-publishing-images/buildxs03new.png#lightbox)
 
 ### Sign and Distribute your App
 
@@ -163,19 +163,19 @@ To sign your app and prepare it for distribution:
 
 1. Select the **Sign and Distribute...**, illustrated below:
 
-	[![](app-store-publishing-images/buildxs04new.png ", Select theSign and Distribute...")](app-store-publishing-images/buildxs04new.png#lightbox)
+    [![](app-store-publishing-images/buildxs04new.png ", Select theSign and Distribute...")](app-store-publishing-images/buildxs04new.png#lightbox)
 2. This will open the publishing wizard. Select the **App Store** distribution channel to create a package, and open Application Loader:
 
-	[![](app-store-publishing-images/distribute01.png "Select the App Store distribution channel")](app-store-publishing-images/distribute01.png#lightbox)
+    [![](app-store-publishing-images/distribute01.png "Select the App Store distribution channel")](app-store-publishing-images/distribute01.png#lightbox)
 3. On the Provisioning Profile screen, Select your signing identity and corresponding provisioning profile, or re-sign with another identity:
 
-	[![](app-store-publishing-images/distribute02.png "Select the signing identity and corresponding provisioning profile")](app-store-publishing-images/distribute02.png#lightbox)
+    [![](app-store-publishing-images/distribute02.png "Select the signing identity and corresponding provisioning profile")](app-store-publishing-images/distribute02.png#lightbox)
 4. Verify the details of your package, and click **Publish** to save your `.ipa` package:
 
-	[![](app-store-publishing-images/distribute03.png "Verify the details of the package")](app-store-publishing-images/distribute03.png#lightbox)
+    [![](app-store-publishing-images/distribute03.png "Verify the details of the package")](app-store-publishing-images/distribute03.png#lightbox)
 5. Once your `.ipa` has been saved, your App is ready to be uploaded to iTunes Connect via the Application Loader:
 
-	[![](app-store-publishing-images/distribute04.png "Uploaded to iTunes Connect via the Application Loader")](app-store-publishing-images/distribute04.png#lightbox)
+    [![](app-store-publishing-images/distribute04.png "Uploaded to iTunes Connect via the Application Loader")](app-store-publishing-images/distribute04.png#lightbox)
 
 With your distribution build created and archived, you are now ready to submit your application to iTunes Connect.
 
@@ -188,19 +188,19 @@ With the distribution build completed, you are ready to submit your iOS applicat
 
 The archive workflow in Visual Studio for Mac will open Application Loader automatically, once you have saved the `.ipa`:
 
-2. Select *Deliver Your App* and click the *Choose* button:
+1. Select *Deliver Your App* and click the *Choose* button:
 
-	[![](app-store-publishing-images/publishvs01.png "Select Deliver Your App")](app-store-publishing-images/publishvs01.png#lightbox)
+    [![](app-store-publishing-images/publishvs01.png "Select Deliver Your App")](app-store-publishing-images/publishvs01.png#lightbox)
 
-3. Select the zip or IPA file you created above and click the **OK** button.
-4. The Application Loader will validate the file:
+2. Select the zip or IPA file you created above and click the **OK** button.
+3. The Application Loader will validate the file:
 
-	[![](app-store-publishing-images/publishvs02.png "The Application Loader validation screen")](app-store-publishing-images/publishvs02.png#lightbox)
-5. Click the *Next* button and the application will be validated against the App Store:
+    [![](app-store-publishing-images/publishvs02.png "The Application Loader validation screen")](app-store-publishing-images/publishvs02.png#lightbox)
+4. Click the *Next* button and the application will be validated against the App Store:
 
-	[![](app-store-publishing-images/publishvs03.png "The application being validated against the App Store")](app-store-publishing-images/publishvs03.png#lightbox)
-6. Click the **Send** button to send the application to Apple for review.
-7. The Application Loader will inform you when the file has been successfully uploaded.
+    [![](app-store-publishing-images/publishvs03.png "The application being validated against the App Store")](app-store-publishing-images/publishvs03.png#lightbox)
+5. Click the **Send** button to send the application to Apple for review.
+6. The Application Loader will inform you when the file has been successfully uploaded.
 
 <a name="iTunes_Connect_Status" />
 

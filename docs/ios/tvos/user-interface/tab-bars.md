@@ -106,7 +106,7 @@ The easiest way to work with Tab Bars in a Xamarin.tvOS app is to add them to th
 -----
 
 > [!IMPORTANT]
-> While it is possible to assign events such as `TouchUpInside` to a UI element (such as a `UIButton`) in the iOS Designer, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the `Primary Action ` event when creating event handlers for tvOS user interface elements.
+> While it is possible to assign events such as `TouchUpInside` to a UI element (such as a `UIButton`) in the iOS Designer, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the `Primary Action` event when creating event handlers for tvOS user interface elements.
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
 
@@ -145,7 +145,7 @@ This article has covered designing and working with Tab Bar Controller inside of
 
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

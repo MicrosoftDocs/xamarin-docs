@@ -13,7 +13,7 @@ ms.date: 10/03/2018
 
 The examples below allocate the image buffers manually, this is done
 to illustrate a common platform pattern which is to draw on a existing
-RBGA buffer provided by the platform.
+RGBA buffer provided by the platform.
 
 You do not need to use this idiom if you do not want to.  There is an
 overload that will create and manage the backing storage for your

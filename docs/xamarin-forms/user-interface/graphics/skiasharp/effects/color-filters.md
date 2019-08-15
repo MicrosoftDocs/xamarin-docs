@@ -11,7 +11,7 @@ ms.date: 08/28/2018
 
 # SkiaSharp color filters
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Color filters can translate colors in a bitmap (or other image) to other colors for effects such as posterization:
 
@@ -115,7 +115,7 @@ The static [`SKColorFilter.CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.Crea
 public static SKColorFilter CreateColorMatrix (float[] matrix);
 ```
 
-where `matrix` is an array of the 20 `float` values. When creating the array in C#, it is easy to format the numbers so they resemble the 4×5 matrix. This is demonstrated in the **Gray-Scale Matrix** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample:
+where `matrix` is an array of the 20 `float` values. When creating the array in C#, it is easy to format the numbers so they resemble the 4×5 matrix. This is demonstrated in the **Gray-Scale Matrix** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample:
 
 ```csharp
 public class GrayScaleMatrixPage : ContentPage
@@ -158,7 +158,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-The `DrawBitmap` method used in this code is from the **BitmapExtension.cs** file included with the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample. 
+The `DrawBitmap` method used in this code is from the **BitmapExtension.cs** file included with the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. 
 
 Here's the result running on iOS, Android, and Universal Windows Platform:
 
@@ -295,4 +295,4 @@ You can use various color tables for the different color channels for various ef
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -29,10 +29,10 @@ scrolling list:
 
 `RecyclerView` offers two compelling features:
 
--  It has a flexible architecture that lets you modify its behavior
+- It has a flexible architecture that lets you modify its behavior
    by plugging in your preferred components.
 
--  It is efficient with large collections because it reuses item views
+- It is efficient with large collections because it reuses item views
    and requires the use of *view holders* to cache view references.
 
 This guide explains how to use `RecyclerView` in Xamarin.Android
@@ -53,10 +53,10 @@ works with apps that target API level 7 (Android 2.1) and later. The
 following is required to use `RecyclerView` in Xamarin-based
 applications:
 
--  **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be
+- **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be
    installed and configured with either Visual Studio or Visual Studio for Mac.
 
--  Your app project must include the **Xamarin.Android.Support.v7.RecyclerView**
+- Your app project must include the **Xamarin.Android.Support.v7.RecyclerView**
    package. For more information about installing NuGet packages, see
    [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
@@ -71,29 +71,29 @@ is better optimized for displaying large collections. If you are
 familiar with `ListView`, there are several important differences
 between `ListView` and `RecyclerView`:
 
--   `RecyclerView` is slightly more complex to use: you have to write
+- `RecyclerView` is slightly more complex to use: you have to write
     more code to use `RecyclerView` compared to `ListView`.
 
--   `RecyclerView` does not provide a predefined adapter; you must
+- `RecyclerView` does not provide a predefined adapter; you must
     implement the adapter code that accesses your data source. However,
     Android includes several predefined adapters that work with
     `ListView` and `GridView`.
 
--   `RecyclerView` does not offer an item-click event when a user
+- `RecyclerView` does not offer an item-click event when a user
     taps an item; instead, item-click events are handled by helper
     classes. By contrast, `ListView` offers an item-click event.
 
--   `RecyclerView` enhances performance by recycling views and by
+- `RecyclerView` enhances performance by recycling views and by
     enforcing the view-holder pattern, which eliminates unnecessary
     layout resource lookups. Use of the view-holder pattern is optional
     in `ListView`.
 
--   `RecyclerView` is based on a modular design that makes it
+- `RecyclerView` is based on a modular design that makes it
     easier to customize. For example, you can plug in a different
     layout policy without significant code changes to your app.
     By contrast, `ListView` is relatively monolithic in structure.
 
--   `RecyclerView` includes built-in animations for item add and
+- `RecyclerView` includes built-in animations for item add and
     remove. `ListView` animations require some additional effort
     on the part of the app developer.
 
@@ -141,6 +141,6 @@ For more information about `RecyclerView`, see the
 
 ## Related Links
 
-- [RecyclerViewer (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerViewer (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [Introduction to Lollipop](~/android/platform/lollipop.md)
 - [RecyclerView](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html)

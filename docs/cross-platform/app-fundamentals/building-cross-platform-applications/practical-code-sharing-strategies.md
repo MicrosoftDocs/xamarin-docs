@@ -30,7 +30,7 @@ SQLite is an open-source database implementation. The source and
 documentation can be found at [SQLite.org](http://www.sqlite.org/). SQLite support is available on each mobile
 platform:
 
--  **iOS** – Built in to the operating system.
+- **iOS** – Built in to the operating system.
 - **Android** – Built in to the operating system since Android 2.2 (API Level 10).
 - **Windows** – See the [SQLite for Universal Windows Platform extension](https://visualstudiogallery.msdn.microsoft.com/4913e7d5-96c9-4dde-a1a1-69820d615936).
 
@@ -119,10 +119,10 @@ a combination of compiler directives and other tricks.
 
 Features of SQLite-NET:
 
--  Tables are defined by adding attributes to Model classes.
--  A database instance is represented by a subclass of  `SQLiteConnection` , the main class in the SQLite-Net library.
--  Data can be inserted, queried and deleted using objects. No SQL statements are required (although you can write SQL statements if required).
--  Basic Linq queries can be performed on the collections returned by SQLite-NET.
+- Tables are defined by adding attributes to Model classes.
+- A database instance is represented by a subclass of  `SQLiteConnection` , the main class in the SQLite-Net library.
+- Data can be inserted, queried and deleted using objects. No SQL statements are required (although you can write SQL statements if required).
+- Basic Linq queries can be performed on the collections returned by SQLite-NET.
 
 
 The source code and documentation for SQLite-NET is available at [SQLite-Net on github](https://github.com/praeclarum/sqlite-net) and has been implemented in both case-studies. A simple example of
@@ -168,9 +168,9 @@ See the case study source code for complete examples.
 File access is certain to be a key part of any application. Common examples
 of files that might be part of an application include:
 
--  SQLite database files.
--  User-generated data (text, images, sound, video).
--  Downloaded data for caching (images, html or PDF files).
+- SQLite database files.
+- User-generated data (text, images, sound, video).
+- Downloaded data for caching (images, html or PDF files).
 
 
 
@@ -183,11 +183,11 @@ the `System.IO` namespace.
 Each platform does have different access restrictions that must be taken into
 consideration:
 
--  iOS applications run in a sandbox with very restricted file-system access. Apple further dictates how you should use the file system by specifying certain locations that are backed-up (and others that are not). Refer to the  [Working with the File System in Xamarin.iOS](~/ios/app-fundamentals/file-system.md) guide for more details.
--  Android also restricts access to certain directories related to the application, but it also supports external media (eg. SD cards) and accessing shared data.
--  Windows Phone 8 (Silverlight) do not allow direct file access – files can
+- iOS applications run in a sandbox with very restricted file-system access. Apple further dictates how you should use the file system by specifying certain locations that are backed-up (and others that are not). Refer to the  [Working with the File System in Xamarin.iOS](~/ios/app-fundamentals/file-system.md) guide for more details.
+- Android also restricts access to certain directories related to the application, but it also supports external media (eg. SD cards) and accessing shared data.
+- Windows Phone 8 (Silverlight) do not allow direct file access – files can
   only be manipulated using `IsolatedStorage`.
--  Windows 8.1 WinRT and Windows 10 UWP projects only offer asynchronous file
+- Windows 8.1 WinRT and Windows 10 UWP projects only offer asynchronous file
   operations via `Windows.Storage` APIs, which are different from the other platforms.
 
 #### Example for iOS and Android
@@ -261,10 +261,10 @@ the latest Windows APIs.
 
 Most mobile applications will have networking component, for example:
 
--  Downloading images, video and audio (eg. thumbnails, photos, music).
--  Downloading documents (eg. HTML, PDF).
--  Uploading user data (such as photos or text).
--  Accessing web services or 3rd party APIs (including SOAP, XML or JSON).
+- Downloading images, video and audio (eg. thumbnails, photos, music).
+- Downloading documents (eg. HTML, PDF).
+- Uploading user data (such as photos or text).
+- Accessing web services or 3rd party APIs (including SOAP, XML or JSON).
 
 
 The .NET Framework provides a few different classes for accessing network resources:
@@ -348,9 +348,9 @@ servers.
 
 Actions a mobile app might take in these situations include:
 
--  If the network is unavailable, advise the user. If they have manually disabled it (eg. Airplane mode or turning off Wi-Fi) then they can resolve the issue.
--  If the connection is 3G, applications may behave differently (for example, Apple does not allow apps larger than 20Mb to be downloaded over 3G). Applications could use this information to warn the user about excessive download times when retrieving large files.
--  Even if the network is available, it is good practice to verify connectivity with the target server before initiating other requests. This will prevent the app’s network operations from timing out repeatedly and also allow a more informative error message to be displayed to the user.
+- If the network is unavailable, advise the user. If they have manually disabled it (eg. Airplane mode or turning off Wi-Fi) then they can resolve the issue.
+- If the connection is 3G, applications may behave differently (for example, Apple does not allow apps larger than 20Mb to be downloaded over 3G). Applications could use this information to warn the user about excessive download times when retrieving large files.
+- Even if the network is available, it is good practice to verify connectivity with the target server before initiating other requests. This will prevent the app’s network operations from timing out repeatedly and also allow a more informative error message to be displayed to the user.
 
 
 There is a [Xamarin.iOS sample](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) available (which is based on Apple’s [Reachability sample code](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html)
@@ -480,10 +480,10 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 For code that doesn’t utilize the Parallel Task Library, each platform has
 its own syntax for marshaling operations back to the UI thread:
 
--  **iOS** – `owner.BeginInvokeOnMainThread(new NSAction(action))`
--  **Android** – `owner.RunOnUiThread(action)`
--  **Xamarin.Forms** – `Device.BeginInvokeOnMainThread(action)`
--  **Windows** – `Deployment.Current.Dispatcher.BeginInvoke(action)`
+- **iOS** – `owner.BeginInvokeOnMainThread(new NSAction(action))`
+- **Android** – `owner.RunOnUiThread(action)`
+- **Xamarin.Forms** – `Device.BeginInvokeOnMainThread(action)`
+- **Windows** – `Deployment.Current.Dispatcher.BeginInvoke(action)`
 
 
 
@@ -528,7 +528,7 @@ public class DispatchAdapter : IDispatchOnUIThread {
 }
 ```
 
-Xamarin.Forms developers should use [`Device.BeginInvokeOnMainThread`](~/xamarin-forms/platform/device.md#Device_BeginInvokeOnMainThread)
+Xamarin.Forms developers should use [`Device.BeginInvokeOnMainThread`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads)
 in common code (Shared Projects or PCL).
 
  <a name="Platform_and_Device_Capabilities_and_Degradation" />

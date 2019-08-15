@@ -11,7 +11,7 @@ ms.date: 02/26/2018
 
 # Xamarin.Forms Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Single-line text or password input_
 
@@ -322,7 +322,7 @@ Entry exposes two events:
 
 ### Completed
 
-The `Completed` event is used to react to the completion of an interaction with an Entry. `Completed` is raised when the user ends input with a field by pressing the return key on the keyboard. The handler for the event is a generic event handler, taking the sender and `EventArgs`:
+The `Completed` event is used to react to the completion of an interaction with an Entry. `Completed` is raised when the user ends input with a field by pressing the return key on the keyboard (or by pressing the Tab key on UWP). The handler for the event is a generic event handler, taking the sender and `EventArgs`:
 
 ```csharp
 void Entry_Completed (object sender, EventArgs e)
@@ -376,5 +376,5 @@ entry.TextChanged += Entry_TextChanged;
 
 ## Related Links
 
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Entry API](xref:Xamarin.Forms.Entry)

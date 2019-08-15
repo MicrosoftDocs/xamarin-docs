@@ -1,5 +1,5 @@
 ---
-title: "Authenticating a RESTful Web Service"
+title: "Authenticate a RESTful Web Service"
 description: "Basic authentication provides access to resources to only those clients that have the correct credentials. This article explains how to use basic authentication to protect access to RESTful web service resources."
 ms.prod: xamarin
 ms.assetid: 7B5FFDC4-F2AA-4B12-A30A-1DACC7FECBF1
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/22/2018
 ---
 
-# Authenticating a RESTful Web Service
+# Authenticate a RESTful Web Service
 
 _HTTP supports the use of several authentication mechanisms to control access to resources. Basic authentication provides access to resources to only those clients that have the correct credentials. This article demonstrates how to use basic authentication to protect access to RESTful web service resources._
 
@@ -30,7 +30,7 @@ Basic authentication is the simplest authentication mechanism supported by HTTP,
 ![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
 
 > [!NOTE]
-> Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the <code>Authorization</code> header can easily be decoded if the HTTP traffic is captured by an attacker.
+> Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the `Authorization` header can easily be decoded if the HTTP traffic is captured by an attacker.
 
 ## Specifying Basic Authentication in a Web Request
 
@@ -81,5 +81,5 @@ In the basic authentication module used by IIS, users are authenticated against 
 
 ## Related Links
 
-- [Consuming a RESTful web service](~/xamarin-forms/data-cloud/consuming/rest.md)
+- [Consume a RESTful web service](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

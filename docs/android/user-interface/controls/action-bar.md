@@ -1,5 +1,5 @@
 ---
-title: "ActionBar"
+title: "ActionBar for Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: 84A79F1F-9E73-4E3E-80FA-B72E5686900B
 ms.technology: xamarin-android
@@ -8,10 +8,7 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# ActionBar
-
-
-## Overview
+# ActionBar for Xamarin.Android
 
 When using `TabActivity`, the code to create the tab icons has no
 effect when run against the Android 4.0 framework. Although
@@ -62,7 +59,7 @@ class SampleTabFragment: Fragment
         ViewGroup container, Bundle savedInstanceState)
     {
         base.OnCreateView (inflater, container, savedInstanceState);
-       
+
         var view = inflater.Inflate (
             Resource.Layout.Tab, container, false);
 
@@ -112,7 +109,7 @@ experience that's consistent throughout Android.
 
 For example, below is a screenshot of an Action Bar with a menu item to
 share an image (taken from the
-[ShareActionProvider](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+[ShareActionProvider](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
 sample). When the user taps the menu item on the Action Bar, the
 ShareActionProvider loads the application to handle an Intent that is
 associated with the `ShareActionProvider`. In this example, the
@@ -157,7 +154,7 @@ item and then use the SetShareIntent method to set the
 public override bool OnCreateOptionsMenu (IMenu menu)
 {
     MenuInflater.Inflate (Resource.Menu.ActionBarMenu, menu);       
-           
+
     var shareMenuItem = menu.FindItem (Resource.Id.shareMenuItem);           
     var shareActionProvider =
        (ShareActionProvider)shareMenuItem.ActionProvider;
@@ -194,7 +191,7 @@ article contains the full source of this example, illustrating its use.
 
 ## Related Links
 
-- [Hello Tabs ICS (sample)](https://developer.xamarin.com/samples/HelloTabsICS/)
-- [ShareActionProvider Demo (sample)](https://developer.xamarin.com/samples/monodroid/ShareActionProviderDemo/)
+- [Hello Tabs ICS (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
+- [ShareActionProvider Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

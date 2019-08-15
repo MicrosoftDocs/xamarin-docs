@@ -11,7 +11,7 @@ ms.date: 11/29/2017
 
 # Highlighting a Region on a Map
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon)
 
 _This article explained how to add a polygon overlay to a map, to highlight a region on the map. Polygons are a closed shape and have their interiors filled in._
 
@@ -303,6 +303,6 @@ This article explained how to add a polygon overlay to a map, to highlight a reg
 
 ## Related Links
 
-- [Polygon Map Overlay (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/map/polygon/)
+- [Polygon Map Overlay (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon)
 - [Customizing a Map Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md)
 - [Xamarin.Forms.Maps](xref:Xamarin.Forms.Maps)

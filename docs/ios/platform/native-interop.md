@@ -92,9 +92,9 @@ your application.
 If you wanted to statically link the library "libMyLibrary.a" that you got
 from the Internet or build with Xcode, you would need to do a few things:
 
--  Bring the Library into your project
--  Configure Xamarin.iOS to link the library
--  Access the methods from the library.
+- Bring the Library into your project
+- Configure Xamarin.iOS to link the library
+- Access the methods from the library.
 
 
 To **bring the library into your project**, Select the project
@@ -138,18 +138,18 @@ C++ the previous options would look like:
 
 There are two kinds of native libraries available on iOS:
 
--  Shared libraries that are part of the operating system.
+- Shared libraries that are part of the operating system.
 
--  Static libraries that you ship with your application.
+- Static libraries that you ship with your application.
 
 
 To access methods defined in either one of those, you use [Mono's P/Invoke functionality](https://www.mono-project.com/docs/advanced/pinvoke/) which is the same technology that you
 would use in .NET, which is roughly:
 
--  Determine which C function you want to invoke
--  Determine its signature
--  Determine which library it lives in
--  Write the appropriate P/Invoke declaration
+- Determine which C function you want to invoke
+- Determine its signature
+- Determine which library it lives in
+- Write the appropriate P/Invoke declaration
 
 When you use P/Invoke you need to specify the path of the library that you
 are linking with. When using iOS shared libraries, you can either hardcode the

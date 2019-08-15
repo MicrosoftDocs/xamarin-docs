@@ -12,18 +12,18 @@ ms.date: 02/06/2018
 
 In this section, you will create two mutually-exclusive radio buttons
 (enabling one disables the other), using the
-[`RadioGroup`](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/)
+[`RadioGroup`](xref:Android.Widget.RadioGroup)
 and
-[`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
+[`RadioButton`](xref:Android.Widget.RadioButton)
 widgets. When either radio button is pressed, a toast message will be
 displayed.
 
 
 Open the **Resources/layout/Main.axml** file and add two
-[`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s, nested in
+[`RadioButton`](xref:Android.Widget.RadioButton)s, nested in
 a
-[`RadioGroup`](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) (inside the
-[`LinearLayout`](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/)):
+[`RadioGroup`](xref:Android.Widget.RadioGroup) (inside the
+[`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
 ```xml
 <RadioGroup
@@ -42,17 +42,17 @@ a
 ```
 
 It's important that the
-[`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s are grouped
+[`RadioButton`](xref:Android.Widget.RadioButton)s are grouped
 together by the
-[`RadioGroup`](https://developer.xamarin.com/api/type/Android.Widget.RadioGroup/) element so
+[`RadioGroup`](xref:Android.Widget.RadioGroup) element so
 that no more than one can be selected at a time. This logic is
 automatically handled by the Android system. When one
-[`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)
+[`RadioButton`](xref:Android.Widget.RadioButton)
 within a group is selected, all others are automatically
 deselected.
 
 To do something when each
-[`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/) is selected,
+[`RadioButton`](xref:Android.Widget.RadioButton) is selected,
 we need to write an event handler:
 
 ```csharp
@@ -65,11 +65,11 @@ private void RadioButtonClick (object sender, EventArgs e)
 
 First, the sender that is passed in is cast into a RadioButton.
 Then a
-[`Toast`](https://developer.xamarin.com/api/type/Android.Widget.Toast/)
+[`Toast`](xref:Android.Widget.Toast)
 message displays the selected radio button's text.
 
 Now, at the bottom of the
-[`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/Android.OS.PersistableBundle)
+[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 method, add the following:
 
 ```csharp
@@ -81,18 +81,19 @@ radio_blue.Click += RadioButtonClick;
 ```
 
 This captures each of the
-[`RadioButton`](https://developer.xamarin.com/api/type/Android.Widget.RadioButton/)s
+[`RadioButton`](xref:Android.Widget.RadioButton)s
 from the layout and adds the newly-created event handlerto each.
 
 Run the application.
 
-**Tip:** If you need to change the state yourself (such as when loading a saved
-[`CheckBoxPreference`](https://developer.xamarin.com/api/type/Android.Preferences.CheckBoxPreference/)),
-use the
-[`Checked`](https://developer.xamarin.com/api/property/Android.Widget.CompoundButton.Checked/)
-property setter or
-[`Toggle()`](https://developer.xamarin.com/api/member/Android.Widget.CompoundButton.Toggle/)
-method.
+> [!TIP]
+> If you need to change the state yourself (such as when loading a saved
+> [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference)),
+> use the
+> [`Checked`](xref:Android.Widget.CompoundButton.Checked)
+> property setter or
+> [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
+> method.
 
 *Portions of this page are modifications based on work created and
 shared by the Android Open Source Project and used according to

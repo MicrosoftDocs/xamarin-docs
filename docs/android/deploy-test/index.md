@@ -16,19 +16,19 @@ optimize its performance, prepare it for release, sign it with a
 certificate, and publish it to an app store.
 
 
-##  [Application Package Sizes](app-package-size.md)
+## [Application Package Sizes](app-package-size.md)
 
 This article examines the constituent parts of a Xamarin.Android
 application package and the associated strategies that can be used for
 efficient package deployment during debug and release stages of
 development.
 
-##  [Building Apps](building-apps/index.md)
+## [Building Apps](building-apps/index.md)
 
 This section describes how the build process works and explains how to
 build ABI-specific APKs.
 
-##  [Command Line Emulator](command-line-emulator.md)
+## [Command Line Emulator](command-line-emulator.md)
 
 This article briefly touches starting the emulator via the command
 line.
@@ -38,27 +38,27 @@ line.
 The guides in the section help you to debug your app using Android emulators,
 real Android devices, and the debug log.
 
-##  [Setting the Debuggable Attribute](~/android/deploy-test/debuggable-attribute.md)
+## [Setting the Debuggable Attribute](~/android/deploy-test/debuggable-attribute.md)
 
 This article explains how to set the debuggable attribute so that tools
 such as `adb` can communicate with the JVM.
 
-##  [Environment](environment.md)
+## [Environment](environment.md)
 
 This article describes the Xamarin.Android execution environment and
 the Android system properties that influence program execution.
 
-##  [GDB](gdb.md)
+## [GDB](gdb.md)
 
 This article explains how to use `gdb` for debugging a Xamarin.Android
 application.
 
-##  [Installing a System App](install-system-app.md)
+## [Installing a System App](install-system-app.md)
 
 This guide explains how to install a Xamarin.Android app as a
 System Application on an Android device or as part of a custom ROM.
 
-##  [Linking on Android](linker.md)
+## [Linking on Android](linker.md)
 
 This article discusses the linking process used by Xamarin.Android to
 reduce the final size of an application. It describes the various

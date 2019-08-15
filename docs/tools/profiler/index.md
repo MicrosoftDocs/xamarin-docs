@@ -63,7 +63,7 @@ Currently, the Xamarin Profiler can be used to test Xamarin.Android apps on Wind
 
 Support for the Xamarin Profiler is available on the following platforms:
 
- - Visual Studio for Mac (macOS, with Enterprise License)
+- Visual Studio for Mac (macOS, with Enterprise License)
 	- Android
 		- Device and Emulator
 	- iOS
@@ -72,7 +72,7 @@ Support for the Xamarin Profiler is available on the following platforms:
 		- Device and Simulator
 	- Mac
 
- - Visual Studio (Only **Enterprise** Version)
+- Visual Studio (Only **Enterprise** Version)
 	- Android
 		- Device and Emulator
 	- iOS [Experimental]
@@ -90,7 +90,7 @@ This section introduces the parts of the Xamarin Profiler and tours its features
 
 Before you can successfully Profile your app, you will need to allow Profiling in the app's Project Options.
 
- - iOS:
+- iOS:
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -106,7 +106,7 @@ Before you can successfully Profile your app, you will need to allow Profiling i
 
 -----
 
- - Android:
+- Android:
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -139,8 +139,8 @@ The Xamarin Profiler can be launched from your IDE when you are profiling your i
 
 #### Launching from Visual Studio
 
-1.  First, make sure you have your application loaded in Visual Studio, and select the (default) Debug configuration, as specified above.
-2.  Browse to **Analyze > Xamarin Profiler** in Visual Studio, to open the Profiler, as demonstrated in the diagram below:
+1. First, make sure you have your application loaded in Visual Studio, and select the (default) Debug configuration, as specified above.
+2. Browse to **Analyze > Xamarin Profiler** in Visual Studio, to open the Profiler, as demonstrated in the diagram below:
 
 ![Launching the Profiler from Visual Studio](images/start-profiling-vs.png)
 
@@ -172,7 +172,7 @@ After it has been installed the Xamarin Profiler application can be found in you
 
 You can load *.mlpd* files into the Profiler by opening the standalone application, selecting **Choose Target** and loading the file.
 
-For more information, see [Generating .mlpd Files ](~/tools/profiler/troubleshooting.md#gen_mlpd).
+For more information, see [Generating .mlpd Files](~/tools/profiler/troubleshooting.md#gen_mlpd).
 
 ## Profiler Features
 
@@ -212,7 +212,7 @@ At the top of the profiler is the allocations chart, which displays the amount o
 
 There are different data views in the Allocations instrument, which allow developers to analyze how their application is using and freeing memory. These views are described below:
 
- -   **Allocations** – This displays a list of all allocations and groups them by class name. This provides a great overview of classes and methods being used, how often they are used, and the collective size of the classes used. Double clicking on a class will show the memory allocated : 
+- **Allocations** – This displays a list of all allocations and groups them by class name. This provides a great overview of classes and methods being used, how often they are used, and the collective size of the classes used. Double clicking on a class will show the memory allocated : 
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -226,9 +226,9 @@ There are different data views in the Allocations instrument, which allow develo
 
 The Inspector view for Allocations provides options for filtering and grouping objects, providing statistics on memory allocated, and the top allocations, as well as views for Stack Trace and Path to Root.
 
- -   **Call Tree** – This displays the entire call tree of all threads in the application and includes information about the memory allocated on each node. When an element is selected in the list, all sibling nodes will appear grey. You can expand the tree or double-click the element to drill down into it.When displaying this data view, the display settings inspector view can be used to change the way it is presented. There are currently two options:
-    1.  **Inverted Call Tree** – This considers the stack trace from top to bottom. This is a convenient view option as it indicates the deepest methods where the CPU has been spending its time.
-    2.  **Separate by thread** – This option organizes the call tree by thread.
+- **Call Tree** – This displays the entire call tree of all threads in the application and includes information about the memory allocated on each node. When an element is selected in the list, all sibling nodes will appear grey. You can expand the tree or double-click the element to drill down into it.When displaying this data view, the display settings inspector view can be used to change the way it is presented. There are currently two options:
+    1. **Inverted Call Tree** – This considers the stack trace from top to bottom. This is a convenient view option as it indicates the deepest methods where the CPU has been spending its time.
+    2. **Separate by thread** – This option organizes the call tree by thread.
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -240,7 +240,7 @@ The Inspector view for Allocations provides options for filtering and grouping o
 
 -----
 
- -   **Snapshots** – This pane displays information about memory snapshots. To generate these while profiling a live application, click the _Camera_ button in the toolbar at each point that you'd like to see what memory is retained and released. You can then click each snapshot to explore what is happening under the hood. Note that snapshots can only be taken when live profiling an app. 
+- **Snapshots** – This pane displays information about memory snapshots. To generate these while profiling a live application, click the _Camera_ button in the toolbar at each point that you'd like to see what memory is retained and released. You can then click each snapshot to explore what is happening under the hood. Note that snapshots can only be taken when live profiling an app. 
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -336,4 +336,4 @@ In this guide we looked at what profiling is and how it is advantageous to the d
 ## Related Links
 
 - [Memory and Performance Best Practices](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [Release Notes](https://developer.xamarin.com/releases/profiler/preview/)
+- [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)

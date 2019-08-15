@@ -46,15 +46,15 @@ The Xamarin Android SDK Manager also requires the Java Development Kit
 (which is automatically installed with Xamarin.Android). There are
 several JDK alternatives to choose from:
 
--   By default, Xamarin.Android uses
+- By default, Xamarin.Android uses
     [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
     which is required if you are developing for API level 24 or greater
     (JDK 8 also supports API levels earlier than 24).
 
--   You can continue to use [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+- You can continue to use [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
     if you are developing specifically for API level 23 or earlier.
 
--   If you are using Visual Studio 15.8 Preview 5 or later, you can try
+- If you are using Visual Studio 15.8 Preview 5 or later, you can try
     using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) (currently in preview) 
     rather than JDK 8.
 
@@ -171,7 +171,7 @@ process completes (this can take many minutes, depending on how many
 components need to be downloaded), the added components are marked with
 a checkmark and listed as **Installed**.
 
-### Respository selection
+### Repository selection
 
 By default, the Android SDK Manager downloads platform components and
 tools from a Microsoft-managed repository. If you need access to
@@ -201,21 +201,21 @@ and tools to the default selection.
 
 To use the Xamarin Android SDK Manager, you will need the following:
 
--   Visual Studio for Mac 7.5 (or later).
+- Visual Studio for Mac 7.5 (or later).
 
 The Xamarin Android SDK Manager also requires the Java Development Kit
 (which is automatically installed with Xamarin.Android). There are
 several JDK alternatives to choose from:
 
--   By default, Xamarin.Android uses
+- By default, Xamarin.Android uses
     [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html),
     which is required if you are developing for API level 24 or greater
     (JDK 8 also supports API levels earlier than 24).
 
--   You can continue to use [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
+- You can continue to use [JDK 7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
     if you are developing specifically for API level 23 or earlier.
 
--   If you are using Visual Studio for Mac 7.7 or later, you can try
+- If you are using Visual Studio for Mac 7.7 or later, you can try
     using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) (currently in preview) 
     rather than JDK 8.
 
@@ -326,7 +326,7 @@ process completes (this can take many minutes, depending on how many
 components need to be downloaded), the added components are marked with
 a checkmark and listed as **Installed**.
 
-### Respository selection
+### Repository selection
 
 By default, the Android SDK Manager downloads platform components and
 tools from a Microsoft-managed repository. If you need access to

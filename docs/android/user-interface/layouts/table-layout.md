@@ -1,5 +1,5 @@
 ---
-title: "TableLayout"
+title: "Xamarin.Android TableLayout"
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
@@ -8,13 +8,13 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# TableLayout
+# Xamarin.Android TableLayout
 
-[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/)
+[`TableLayout`](xref:Android.Widget.TableLayout)
 is a
-[`ViewGroup`](https://developer.xamarin.com/api/type/Android.Views.ViewGroup/)
+[`ViewGroup`](xref:Android.Views.ViewGroup)
 that displays child
-[`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+[`View`](xref:Android.Views.View)
 elements in rows and columns.
 
 Start a new project named **HelloTableLayout**.
@@ -101,20 +101,20 @@ Open the **Resources/Layout/Main.axml** file and insert the following:
 ```
 
 Notice how this resembles the structure of an HTML table. The
-[`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/)
+[`TableLayout`](xref:Android.Widget.TableLayout)
 element is like the HTML `<table>` element;
-[`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/)
+[`TableRow`](xref:Android.Widget.TableRow)
 is like a `<tr>` element; but for the cells, you can use any kind
-of [`View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+of [`View`](xref:Android.Views.View)
 element. In this example, a 
-[`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
+[`TextView`](xref:Android.Widget.TextView)
 is used for each cell. In between
 some of the rows, there is also a basic
-[`View`](https://developer.xamarin.com/api/type/Android.Views.View/),
+[`View`](xref:Android.Views.View),
 which is used to draw a horizontal line.
 
 Make sure your **HelloTableLayout** Activity loads this layout in the
-[`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/p/Android.OS.Bundle/)
+[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 method:
 
 ```csharp
@@ -125,9 +125,9 @@ protected override void OnCreate (Bundle savedInstanceState)
 }
 ```
 
-The [`SetContentView(int)`](https://developer.xamarin.com/api/member/Android.App.Activity.SetContentView/(System.Int32))
+The [`SetContentView(int)`](xref:Android.App.Activity.SetContentView*))
 method loads the layout file for the
-[`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/), specified by the
+[`Activity`](xref:Android.App.Activity), specified by the
 resource ID &mdash; `Resource.Layout.Main` refers to the
 **Resources/Layout/Main.axml** layout file.
 
@@ -139,12 +139,10 @@ Run the application. You should see the following:
 
 ## References
 
--   [`TableLayout`](https://developer.xamarin.com/api/type/Android.Widget.TableLayout/) 
+- [`TableLayout`](xref:Android.Widget.TableLayout)
+- [`TableRow`](xref:Android.Widget.TableRow)
+- [`TextView`](xref:Android.Widget.TextView)
 
--   [`TableRow`](https://developer.xamarin.com/api/type/Android.Widget.TableRow/) 
-
--   [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) 
-
-*Portions of this page are modifications based on work created and shared by the
-Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+_Portions of this page are modifications based on work created and shared by the
+Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](http://creativecommons.org/licenses/by/2.5/)._

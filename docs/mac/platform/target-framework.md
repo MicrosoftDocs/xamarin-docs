@@ -39,7 +39,7 @@ To change to the Target Framework type for a Xamarin.Mac project, do the followi
 2. In the **Solution Explorer**, double-click the project file to open the **Project Options** dialog box.
 3. From the **General** tab, select the type of **Target Framework** that suits your application's needs:
 
-  [![Using the Project Options window to choose a target framework](target-framework-images/select-target-full.png "Using the Project Options window to choose a target framework")](target-framework-images/select-target-full-large.png#lightbox)
+    [![Using the Project Options window to choose a target framework](target-framework-images/select-target-full.png "Using the Project Options window to choose a target framework")](target-framework-images/select-target-full-large.png#lightbox)
 
 4. Click the **OK** button to save your changes.
 

@@ -1,5 +1,5 @@
 ---
-title: "UrhoSharp Mac Support"
+title: "UrhoSharp Mac support"
 description: "This document discusses macOS support for UrhoSharp. It describes how to create a project and provides a link to some sample code."
 ms.prod: xamarin
 ms.assetid: 95FFBD36-14E9-4C17-B1E8-9A04E81E824D
@@ -7,7 +7,7 @@ author: conceptdev
 ms.author: crdun
 ms.date: 03/29/2017
 ---
-# UrhoSharp Mac Support
+# UrhoSharp Mac support
 
 _Mac Specific Setup and Features_
 
@@ -23,7 +23,7 @@ In the pages below, assume that `MyGame` is a subclass of the
 
 **Supported architectures:** x86/x86-64 for 32 bit and 64 bit.
 
-## Creating a Project
+## Creating a project
 
 Create a console project, reference the Urho NuGet and then make sure
 that you can locate the assets (the directories containing the Data
@@ -37,5 +37,3 @@ new MyGame().Run();
 ## Example
 
 [Complete example](https://github.com/xamarin/urho-samples/tree/master/FeatureSamples/Cocoa)
-
-

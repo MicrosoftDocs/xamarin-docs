@@ -11,13 +11,13 @@ ms.date: 03/10/2017
 
 # SkiaSharp Drawing Basics
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Learn the basics of SkiaSharp graphics concepts and coordinates_
 
-After you have added the SkiaSharp NuGet package to your Xamarin.Forms application, you can begin using SkiaSharp graphics. The [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) solution includes numerous pages that demonstrate SkiaSharp programming techniques in progressively more advanced lessons.
+After you have added the SkiaSharp NuGet package to your Xamarin.Forms application, you can begin using SkiaSharp graphics. The [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) solution includes numerous pages that demonstrate SkiaSharp programming techniques in progressively more advanced lessons.
 
-All the sample programs in this section appear under the heading **SkiaSharp Drawing Basics** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program, and in the [**Basics**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) folder of the solution.
+All the sample programs in this section appear under the heading **SkiaSharp Drawing Basics** in the home page of the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) program, and in the [**Basics**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics) folder of the solution.
 
 ## [Drawing a Simple Circle](circle.md)
 
@@ -50,4 +50,4 @@ Use transparency to combine multiple images into a composite scene.
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

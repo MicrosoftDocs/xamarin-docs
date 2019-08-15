@@ -31,14 +31,14 @@ be restarted and presented to the user.
 
 The following properties of `NSUserActivity` are used to support App Search:
 
- - `EligibleForHandoff` – If `true`, this activity can be used in a Handoff operation.
- - `EligibleForSearch` – If `true`, this activity will be added to the on-device index and presented in search results.
- - `EligibleForPublicIndexing` – If `true`, this activity will be added to Apple's cloud based index and presented to users (via search) that have not already installed your app on their iOS device. See the [Public Search Indexing](#public-search-indexing) section below for more details.
- - `Title` – Provides a title for your activity and is displayed in the search results. Users can also search for the text of the title itself.
- - `Keywords` – Is an array of strings used to describe your activity that will be indexed and made searchable by the end user.
- - `ContentAttributeSet` – Is a `CSSearchableItemAttributeSet` used to further describe your activity in detail and provide rich content in the search results.
- - `ExpirationDate` – If you want an activity to only be shown up to a given date, you can provide that date here.
- - `WebpageURL` – If the activity can be viewed on the web or if your app supports Safari's deep links, you can set the link to visit here.
+- `EligibleForHandoff` – If `true`, this activity can be used in a Handoff operation.
+- `EligibleForSearch` – If `true`, this activity will be added to the on-device index and presented in search results.
+- `EligibleForPublicIndexing` – If `true`, this activity will be added to Apple's cloud based index and presented to users (via search) that have not already installed your app on their iOS device. See the [Public Search Indexing](#public-search-indexing) section below for more details.
+- `Title` – Provides a title for your activity and is displayed in the search results. Users can also search for the text of the title itself.
+- `Keywords` – Is an array of strings used to describe your activity that will be indexed and made searchable by the end user.
+- `ContentAttributeSet` – Is a `CSSearchableItemAttributeSet` used to further describe your activity in detail and provide rich content in the search results.
+- `ExpirationDate` – If you want an activity to only be shown up to a given date, you can provide that date here.
+- `WebpageURL` – If the activity can be viewed on the web or if your app supports Safari's deep links, you can set the link to visit here.
 
 ## NSUserActivity Quickstart
 
@@ -175,7 +175,7 @@ By adopting App Search via `NSUserActivity` in your app, you also get the follow
 
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [App Search Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

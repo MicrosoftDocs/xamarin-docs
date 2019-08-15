@@ -15,7 +15,7 @@ The HttpClient Stack and SSL/TLS Implementation selectors determine the HttpClie
 Projects must reference the **System.Net.Http** assembly.
 
 > [!WARNING]
-> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2.  Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
+> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2. Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
 >
 > In order to ensure your apps continue to work with these servers and services, **you should update your Xamarin projects with the `Android HttpClient` and `Native TLS 1.2` settings shown below, then re-build and re-deploy your apps** to your users.
 
@@ -81,10 +81,10 @@ The choice between `AndroidClientHandler` and `HttpClientHandler`
 depends upon the needs of your application. `AndroidClientHandler` is
 recommended for the most up-to-date security support, eg.
 
--   You require TLS 1.2+ support.
--   Your app is targeting Android 4.1 (API 16) or later.
--   You need TLS 1.2+ support for `HttpClient`.
--   You don't need TLS 1.2+ support for `WebClient`.
+- You require TLS 1.2+ support.
+- Your app is targeting Android 4.1 (API 16) or later.
+- You need TLS 1.2+ support for `HttpClient`.
+- You don't need TLS 1.2+ support for `WebClient`.
 
 `HttpClientHandler` is a good choice if you need TLS 1.2+ support but
 must support versions of Android earlier than Android 4.1. It is also a
@@ -94,9 +94,9 @@ Beginning with Xamarin.Android 8.3, `HttpClientHandler` defaults to
 Boring SSL (`btls`) as the underlying TLS provider. The Boring SSL
 TLS provider offers the following advantages:
 
--   It supports TLS 1.2+.
--   It supports all Android versions.
--   It provides TLS 1.2+ support for both `HttpClient` and `WebClient`.
+- It supports TLS 1.2+.
+- It supports all Android versions.
+- It provides TLS 1.2+ support for both `HttpClient` and `WebClient`.
 
 The disadvantage of using Boring SSL as the underling TLS provider is
 that it can increase the size of the resulting APK (it adds about 1MB
@@ -127,7 +127,7 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 ```
 
 > [!NOTE]
-> The underlying Android device must support TLS 1.2 (ie. Android 4.1 and later)
+> The underlying Android device must support TLS 1.2 (ie. Android 4.1 and later). Please note that the official support for TLS 1.2 is in Android 5.0+. However some devices support TLS 1.2 in Android 4.1+.
 
 
 ## SSL/TLS implementation build option

@@ -74,14 +74,14 @@ Within the **Properties** section, there are 8 different *Inspector Tabs*, as sh
 
 From left-to-right, these tabs are:
 
--   **File Inspector** – The File Inspector shows file information, such as the file name and location of the Xib file that is being edited.
--   **Quick Help** – The Quick Help tab provides contextual help based on what is selected in Xcode.
--   **Identity Inspector** – The Identity Inspector provides information about the selected control/view.
--   **Attributes Inspector** – The Attributes Inspector allows you to customize various attributes of the selected control/view.
--   **Size Inspector** – The Size Inspector allows you to control the size and resizing behavior of the selected control/view.
--   **Connections Inspector** – The Connections Inspector shows the outlet and action connections of the selected controls. We’ll examine Outlets and Actions in just a moment.
--   **Bindings Inspector** – The Bindings Inspector allows you to configure controls so that their values are automatically bound to data models.
--   **View Effects Inspector** – The View Effects Inspector allows you to specify effects on the controls, such as animations.
+- **File Inspector** – The File Inspector shows file information, such as the file name and location of the Xib file that is being edited.
+- **Quick Help** – The Quick Help tab provides contextual help based on what is selected in Xcode.
+- **Identity Inspector** – The Identity Inspector provides information about the selected control/view.
+- **Attributes Inspector** – The Attributes Inspector allows you to customize various attributes of the selected control/view.
+- **Size Inspector** – The Size Inspector allows you to control the size and resizing behavior of the selected control/view.
+- **Connections Inspector** – The Connections Inspector shows the outlet and action connections of the selected controls. We’ll examine Outlets and Actions in just a moment.
+- **Bindings Inspector** – The Bindings Inspector allows you to configure controls so that their values are automatically bound to data models.
+- **View Effects Inspector** – The View Effects Inspector allows you to specify effects on the controls, such as animations.
 
 In the **Library** section, you can find controls and objects to place into the designer to graphically build your user interface:
 
@@ -266,8 +266,8 @@ Do the following:
 
 So what are outlets and actions? In traditional .NET User Interface programming, a control in the User Interface is automatically exposed as a property when it’s added. Things work differently in Mac, simply adding a control to a view doesn’t make it accessible to code. The developer must explicitly expose the UI element to code. In order do this, Apple gives us two options:
 
--  **Outlets** – Outlets are analogous to properties. If you wire up a control to an Outlet, it’s exposed to your code via a property, so you can do things like attach event handlers, call methods on it, etc.
--  **Actions** – Actions are analogous to the command pattern in WPF. For example, when an Action is performed on a control, say a button click, the control will automatically call a method in your code. Actions are powerful and convenient because you can wire up many controls to the same Action.
+- **Outlets** – Outlets are analogous to properties. If you wire up a control to an Outlet, it’s exposed to your code via a property, so you can do things like attach event handlers, call methods on it, etc.
+- **Actions** – Actions are analogous to the command pattern in WPF. For example, when an Action is performed on a control, say a button click, the control will automatically call a method in your code. Actions are powerful and convenient because you can wire up many controls to the same Action.
 
 In Xcode, outlets and actions are added directly in code via *Control-dragging*. More specifically, this means that to create an outlet or action, you choose which control element you’d like to add an outlet or action, hold down the **Control** button on the keyboard, and drag that control directly into your code.
 
@@ -584,7 +584,7 @@ This article has taken a detailed look at working with .xib files in a Xamarin.M
 
 ## Related Links
 
-- [MacImages (sample)](https://developer.xamarin.com/samples/mac/MacImages/)
+- [MacImages (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macimages)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows](~/mac/user-interface/window.md)
 - [Menus](~/mac/user-interface/menu.md)

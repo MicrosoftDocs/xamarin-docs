@@ -27,16 +27,16 @@ project if a generated path exceeds the maximum length.
 
 ## Fix
 
-Beginning with Xamarin.Android 8.0, the `UseShortFileNames` MSBuild
-property can be set to circumvent this error. When this property is set
-to `True` (the default is `False`), the build process uses shorter path
+The `UseShortFileNames` MSBuild
+property is set to `True` to circumvent this error by default. When this property is set
+to `True`, the build process uses shorter path
 names to reduce the likelihood of producing a **PathTooLongException**.
 For example, when `UseShortFileNames` is set to `True`, the above path
 is shortened to path that is similar to the following:
 
 **C:\\Some\\Directory\\Solution\\Project\\obj\\Debug\\lp\\1\\jl\\assets**
 
-To set this property, add the following MSBuild property to the
+To set this property manually, add the following MSBuild property to the
 project **.csproj** file:
 
 ```xml

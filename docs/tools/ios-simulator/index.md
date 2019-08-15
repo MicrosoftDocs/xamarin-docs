@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: 63c50190-7e54-4140-a30d-1a0e577c47d7
 author: lobrien
 ms.author: laobri
-ms.date: 04/02/2019
+ms.date: 04/26/2019
 ---
 
 # Remoted iOS Simulator for Windows
@@ -66,6 +66,11 @@ with physical iOS devices.
 
 Similarly, the Remoted iOS Simulator for Windows treats Windows Stylus
 input as Apple Pencil input.
+
+## Sound handling
+
+Sounds played by the simulator will come from the host Mac's speakers.
+iOS sounds are not heard on the Windows computer.
 
 ## Disabling the Remoted iOS Simulator for Windows
 

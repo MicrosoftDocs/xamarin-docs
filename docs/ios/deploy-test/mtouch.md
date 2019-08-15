@@ -56,9 +56,9 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 The `mtouch` command can compile your code in three different
 ways:
 
--  Compile for simulator testing.
--  Compile for device deployment.
--  Deploy your executable to the device.
+- Compile for simulator testing.
+- Compile for device deployment.
+- Deploy your executable to the device.
 
 
 ### Building for the Simulator

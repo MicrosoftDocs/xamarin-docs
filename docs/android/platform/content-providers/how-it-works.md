@@ -36,7 +36,7 @@ columns that are exposed should be available as constants to make it
 easy to bind to the data. Android's built-in `ContentProviders` all
 provide convenience classes with constants that reference the data
 structure in the
-[`Android.Providers`](https://developer.xamarin.com/api/namespace/Android.Provider/) namespace.
+[`Android.Providers`](xref:Android.Provider) namespace.
 
 
 
@@ -108,10 +108,10 @@ The purpose of each class is described below:
 The `ContentProvider` API allows consumers to perform a variety of
 operations on the data, such as:
 
--  Query data to return lists or individual records.
--  Modify individual records.
--  Add new records.
--  Delete records.
+- Query data to return lists or individual records.
+- Modify individual records.
+- Add new records.
+- Delete records.
 
 This document contains an example that uses a system-provided
 `ContentProvider`, as well as a simple read-only example that

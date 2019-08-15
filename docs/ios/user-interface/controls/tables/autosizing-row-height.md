@@ -107,4 +107,4 @@ With this code in place, when the app is run, each row will shrink and grow base
 
 ## Related Links
 
-- [GrowRowTable (sample)](https://developer.xamarin.com/samples/monotouch/GrowRowTable/)
+- [GrowRowTable (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/growrowtable)

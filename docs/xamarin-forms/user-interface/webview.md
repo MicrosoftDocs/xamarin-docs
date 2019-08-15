@@ -11,7 +11,7 @@ ms.date: 03/29/2019
 
 # Xamarin.Forms WebView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
 
@@ -104,6 +104,9 @@ browser.Source = htmlSource;
 
 In the above code, `@` is used to mark the HTML as a string literal, meaning all the usual escape characters are ignored.
 
+> [!NOTE]
+> It may be necessary to set the `WidthRequest` and `HeightRequest` properties of the [`WebView`](xref:Xamarin.Forms.WebView) to see the HTML content, depending upon the layout the `WebView` is a child of. For example, this is required in a [`StackLayout`](xref:Xamarin.Forms.StackLayout).
+
 ### Local HTML Content
 
 WebView can display content from HTML, CSS and Javascript embedded within the app. For example:
@@ -135,7 +138,7 @@ body,p,h1 {
 
 Note that the fonts specified in the above CSS will need to be customized for each platform, as not every platform has the same fonts.
 
-To display local content using a `WebView`, you'll need to open the HTML file like any other, then load the contents as a string into the `Html` property of an `HtmlWebViewSource`. For more information on opening files, see [Working with Files](~/xamarin-forms/app-fundamentals/files.md).
+To display local content using a `WebView`, you'll need to open the HTML file like any other, then load the contents as a string into the `Html` property of an `HtmlWebViewSource`. For more information on opening files, see [Working with Files](~/xamarin-forms/data-cloud/data/files.md).
 
 The following screenshots show the result of displaying local content on each platform:
 
@@ -474,7 +477,7 @@ Grid *without* WidthRequest & HeightRequest. Grid is one of the few layouts that
 
 ## Invoking JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView) includes the ability to invoke a JavaScript function from C#, and return any result to the calling C# code. This is accomplished with the [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) method, which is shown in the following example from the [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) sample:
+[`WebView`](xref:Xamarin.Forms.WebView) includes the ability to invoke a JavaScript function from C#, and return any result to the calling C# code. This is accomplished with the [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) method, which is shown in the following example from the [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) sample:
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -508,5 +511,5 @@ function factorial(num) {
 
 ## Related Links
 
-- [Working with WebView (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
-- [WebView (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView)
+- [Working with WebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [WebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)

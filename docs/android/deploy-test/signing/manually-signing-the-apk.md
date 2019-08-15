@@ -13,18 +13,18 @@ ms.date: 02/16/2018
 
 After the application has been built for release, the APK must be signed prior to distribution so that it can be run on an Android device. This process is typically handled with the IDE, however there are some situations where it is necessary to sign the APK manually, at the command line. The following steps are involved with signing an APK:
 
-1.   **Create a Private Key** &ndash; This step needs to be performed
+1. **Create a Private Key** &ndash; This step needs to be performed
     only once. A private key is necessary to digitally sign the APK.
     After the private key has been prepared, this step can be skipped
     for future release builds.
 
-2.   **Zipalign the APK** &ndash; *Zipalign* is an optimization process
+2. **Zipalign the APK** &ndash; *Zipalign* is an optimization process
     that is performed on an application. It enables Android to interact
     more efficiently with the APK at runtime. Xamarin.Android conducts
     a check at runtime, and will not allow the application to run if
     the APK has not been zipaligned.
 
-3.  **Sign the APK** &ndash; This step involves using the **apksigner** utility from the Android SDK and signing the APK with the private key that was created in the previous step. Applications that are developed with older versions of the Android SDK build tools prior to v24.0.3 will use the **jarsigner** app from the JDK. Both of these tools will be discussed in more detail below. 
+3. **Sign the APK** &ndash; This step involves using the **apksigner** utility from the Android SDK and signing the APK with the private key that was created in the previous step. Applications that are developed with older versions of the Android SDK build tools prior to v24.0.3 will use the **jarsigner** app from the JDK. Both of these tools will be discussed in more detail below. 
 
 The order of the steps is important and is dependent on which tool used to sign the APK. When using **apksigner**, it is important to first **zipalign** the application, and then to sign it with **apksigner**.  If it is necessary to use **jarsigner** to sign the APK, then it is important to first sign the APK and then run **zipalign**. 
 

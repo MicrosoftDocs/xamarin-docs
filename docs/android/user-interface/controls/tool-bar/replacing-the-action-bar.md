@@ -21,18 +21,18 @@ offers a significant upgrade over the default action bar.
 
 To replace an app's default action bar with a `Toolbar`: 
 
-1.  Create a new custom theme and modify the app's properties so that it 
+1. Create a new custom theme and modify the app's properties so that it 
     uses this new theme. 
 
-2.  Disable the `windowActionBar` attribute in the custom theme and 
+2. Disable the `windowActionBar` attribute in the custom theme and 
     enable the `windowNoTitle` attribute.
 
-3.  Define a layout for the `Toolbar`.
+3. Define a layout for the `Toolbar`.
 
-4.  Include the `Toolbar` layout in the Activity's **Main.axml** layout 
+4. Include the `Toolbar` layout in the Activity's **Main.axml** layout 
     file. 
 
-5.  Add code to the Activity's `OnCreate` method to locate the `Toolbar`
+5. Add code to the Activity's `OnCreate` method to locate the `Toolbar`
     and call `SetActionBar` to install the `ToolBar` as the action bar.
 
 The following sections explain this process in detail. A simple app is 
@@ -221,17 +221,17 @@ activity or it can perform an action on behalf of the entire app.
 
 To add menus to the `Toolbar`: 
 
-1.  Add menu icons (if required) to the `mipmap-` folders of 
+1. Add menu icons (if required) to the `mipmap-` folders of 
     the app project. Google provides a set of free menu icons on the 
     [Material icons](https://design.google.com/icons/) page. 
 
-2.  Define the contents of the menu items by adding a new menu resource 
+2. Define the contents of the menu items by adding a new menu resource 
     file under **Resources/menu**. 
 
-3.  Implement the `OnCreateOptionsMenu` method of the Activity &ndash; 
+3. Implement the `OnCreateOptionsMenu` method of the Activity &ndash; 
     this method inflates the menu items. 
 
-4.  Implement the `OnOptionsItemSelected` method of the Activity 
+4. Implement the `OnOptionsItemSelected` method of the Activity 
     &ndash; this method performs an action when a menu item is tapped. 
 
 The following sections demonstrate this process in detail by adding
@@ -277,13 +277,13 @@ and replace its contents with the following XML:
 
 This XML creates three menu items:
 
--   An **Edit** menu item that uses the `ic_action_content_create.png` 
+- An **Edit** menu item that uses the `ic_action_content_create.png` 
     icon (a pencil). 
 
--   A **Save** menu item that uses the `ic_action_content_save.png` 
+- A **Save** menu item that uses the `ic_action_content_save.png` 
     icon (a diskette). 
 
--   A **Preferences** menu item that does not have an icon.
+- A **Preferences** menu item that does not have an icon.
 
 The `showAsAction` attributes of the **Edit** and **Save** menu 
 items are set to `ifRoom` &ndash; this setting causes these menu 
@@ -382,5 +382,5 @@ is not configured properly.
 
 ## Related Links
 
-- [Lollipop Toolbar (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
-- [AppCompat Toolbar (sample)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)
+- [Lollipop Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)
+- [AppCompat Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)

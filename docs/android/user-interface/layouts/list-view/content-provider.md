@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# Using a ContentProvider
+# Using a ContentProvider with Xamarin.Android
 
 CursorAdapters can also be used to display data from a ContentProvider.
 ContentProviders allow you to access data exposed by other applications

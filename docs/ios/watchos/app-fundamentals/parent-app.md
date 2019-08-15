@@ -37,7 +37,7 @@ The Parent App is also sometimes referred to as the Container App.
 ## Run Code
 
 Communicating between a watch extension and the parent
-	iPhone app is demonstrated in the [GpsWatch sample](https://developer.xamarin.com/samples/GpsWatch).
+	iPhone app is demonstrated in the [GpsWatch sample](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gpswatch).
 	Your watch extension can request the parent iOS app
 	to do some processing on its behalf using the `OpenParentApplication`
 	method.
@@ -172,7 +172,7 @@ Download the C# version [WormHoleSharp](https://github.com/Clancey/WormHoleSharp
 
 ## Related Links
 
-- [GpsWatch (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [GpsWatch (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [WormHoleSharp (sample)](https://github.com/Clancey/WormHoleSharp)
 - [Apple's WKInterfaceController reference](https://developer.apple.com/library/prerelease/ios/documentation/WatchKit/Reference/WKInterfaceController_class/index.html#//apple_ref/occ/clm/WKInterfaceController/openParentApplication:reply:)
 - [Apple's Sharing Data with Your Containing App](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/ExtensionScenarios.html)

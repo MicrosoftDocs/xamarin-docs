@@ -16,9 +16,7 @@ ms.date: 12/01/2017
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> DataPages requires a
-[Xamarin.Forms Theme](~/xamarin-forms/user-interface/themes/index.md) reference to render.
-
+> DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
 
 To get started building a simple data-driven page using the DataPages Preview,
 follow the steps below. This demo uses a hardcoded style ("Events") in
@@ -51,9 +49,10 @@ and ensure the theme is merged into the application's resource dictionary:
 </Application>
 ```
 
-**IMPORTANT:** You should also follow the steps to [load theme assemblies (below)](#loadtheme)
-by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
-be improved in a future preview release.
+> [!IMPORTANT]
+> You should also follow the steps to [load theme assemblies (below)](#loadtheme)
+> by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
+> be improved in a future preview release.
 
 
 ## 3. Add a XAML Page
@@ -106,10 +105,11 @@ Delete the `Content` element and replace it with a `p:ListDataPage.DataSource`
 to populate the page with data. In the example below a remote Json data
 file is being loaded from a URL.
 
-**Note:** the preview *requires* a `StyleClass` attribute to
-provide rendering hints for the data source. The `StyleClass="Events"`
-refers to a layout that is predefined in the preview and contains styles
-*hardcoded* to match the JSON data source being used.
+> [!NOTE]
+> The preview *requires* a `StyleClass` attribute to
+> provide rendering hints for the data source. The `StyleClass="Events"`
+> refers to a layout that is predefined in the preview and contains styles
+> *hardcoded* to match the JSON data source being used.
 
 ```xaml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -198,9 +198,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
 
-It's a little more work to create themes from scratch
-(see the [Themes guide](~/xamarin-forms/user-interface/themes/index.md))
-but future preview releases will make this easier to do.
+It's a little more work to create themes from scratch but future preview releases will make this easier to do.
 
 
 ## Troubleshooting

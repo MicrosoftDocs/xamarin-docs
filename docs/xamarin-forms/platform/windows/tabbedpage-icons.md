@@ -11,7 +11,7 @@ ms.date: 10/24/2018
 
 # TabbedPage Icons on Windows
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
 This Universal Windows Platform platform-specific enables page icons to be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar, and provides the ability to optionally specify the icon size. It's consumed in XAML by setting the [`TabbedPage.HeaderIconsEnabled`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsEnabledProperty) attached property to `true`, and by optionally setting the [`TabbedPage.HeaderIconsSize`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.TabbedPage.HeaderIconsSizeProperty) attached property to a [`Size`](xref:Xamarin.Forms.Size) value:
 
@@ -27,13 +27,13 @@ This Universal Windows Platform platform-specific enables page icons to be displ
             </x:Arguments>
         </Size>
     </windows:TabbedPage.HeaderIconsSize>
-    <ContentPage Title="Todo" Icon="todo.png">
+    <ContentPage Title="Todo" IconImageSource="todo.png">
         ...
     </ContentPage>
-    <ContentPage Title="Reminders" Icon="reminders.png">
+    <ContentPage Title="Reminders" IconImageSource="reminders.png">
         ...
     </ContentPage>
-    <ContentPage Title="Contacts" Icon="contacts.png">
+    <ContentPage Title="Contacts" IconImageSource="contacts.png">
         ...
     </ContentPage>
 </TabbedPage>
@@ -53,9 +53,9 @@ public class WindowsTabbedPageIconsCS : Xamarin.Forms.TabbedPage
     On<Windows>().SetHeaderIconsEnabled(true);
     On<Windows>().SetHeaderIconsSize(new Size(24, 24));
 
-    Children.Add(new ContentPage { Title = "Todo", Icon = "todo.png" });
-    Children.Add(new ContentPage { Title = "Reminders", Icon = "reminders.png" });
-    Children.Add(new ContentPage { Title = "Contacts", Icon = "contacts.png" });
+    Children.Add(new ContentPage { Title = "Todo", IconImageSource = "todo.png" });
+    Children.Add(new ContentPage { Title = "Reminders", IconImageSource = "reminders.png" });
+    Children.Add(new ContentPage { Title = "Contacts", IconImageSource = "contacts.png" });
   }
 }
 ```
@@ -70,6 +70,6 @@ The result is that page icons can be displayed on a [`TabbedPage`](xref:Xamarin.
 
 ## Related links
 
-- [PlatformSpecifics (sample)](https://developer.xamarin.com/samples/xamarin-forms/userinterface/platformspecifics/)
+- [PlatformSpecifics (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 - [Creating Platform-Specifics](~/xamarin-forms/platform/platform-specifics/index.md#creating-platform-specifics)
 - [WindowsSpecific API](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific)

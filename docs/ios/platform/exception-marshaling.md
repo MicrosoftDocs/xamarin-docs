@@ -53,17 +53,21 @@ dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero);
 
 This will throw an Objective-C NSInvalidArgumentException in native code:
 
-    NSInvalidArgumentException *** setObjectForKey: key cannot be nil
+```
+NSInvalidArgumentException *** setObjectForKey: key cannot be nil
+```
 
 And the stack trace will be something like this:
 
-    0   CoreFoundation          __exceptionPreprocess + 194
-    1   libobjc.A.dylib         objc_exception_throw + 52
-    2   CoreFoundation          -[__NSDictionaryM setObject:forKey:] + 1015
-    3   libobjc.A.dylib         objc_msgSend + 102
-    4   TestApp                 ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
-    5   TestApp                 Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr)
-    6   TestApp                 ExceptionMarshaling.Exceptions.ThrowObjectiveCException ()
+```
+0   CoreFoundation          __exceptionPreprocess + 194
+1   libobjc.A.dylib         objc_exception_throw + 52
+2   CoreFoundation          -[__NSDictionaryM setObject:forKey:] + 1015
+3   libobjc.A.dylib         objc_msgSend + 102
+4   TestApp                 ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
+5   TestApp                 Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr)
+6   TestApp                 ExceptionMarshaling.Exceptions.ThrowObjectiveCException ()
+```
 
 Frames 0-3 are native frames, and the stack unwinder in the Objective-C
 runtime _can_ unwind those frames. In particular, it will execute any
@@ -118,17 +122,19 @@ to unwind Objective-C frames properly.
 When Xamarin.iOS' uncaught Objective-C exception callback is called, the stack
 is like this:
 
-     0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
-     1 CoreFoundation           __handleUncaughtException + 809
-     2 libobjc.A.dylib          _objc_terminate() + 100
-     3 libc++abi.dylib          std::__terminate(void (*)()) + 14
-     4 libc++abi.dylib          __cxa_throw + 122
-     5 libobjc.A.dylib          objc_exception_throw + 337
-     6 CoreFoundation           -[__NSDictionaryM setObject:forKey:] + 1015
-     7 libxamarin-debug.dylib   xamarin_dyn_objc_msgSend + 102
-     8 TestApp                  ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
-     9 TestApp                  Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr) [0x00000]
-    10 TestApp                  ExceptionMarshaling.Exceptions.ThrowObjectiveCException () [0x00013]
+```
+ 0 libxamarin-debug.dylib   exception_handler(exc=name: "NSInvalidArgumentException" - reason: "*** setObjectForKey: key cannot be nil")
+ 1 CoreFoundation           __handleUncaughtException + 809
+ 2 libobjc.A.dylib          _objc_terminate() + 100
+ 3 libc++abi.dylib          std::__terminate(void (*)()) + 14
+ 4 libc++abi.dylib          __cxa_throw + 122
+ 5 libobjc.A.dylib          objc_exception_throw + 337
+ 6 CoreFoundation           -[__NSDictionaryM setObject:forKey:] + 1015
+ 7 libxamarin-debug.dylib   xamarin_dyn_objc_msgSend + 102
+ 8 TestApp                  ObjCRuntime.Messaging.void_objc_msgSend_IntPtr_IntPtr (intptr,intptr,intptr,intptr)
+ 9 TestApp                  Foundation.NSMutableDictionary.LowlevelSetObject (intptr,intptr) [0x00000]
+10 TestApp                  ExceptionMarshaling.Exceptions.ThrowObjectiveCException () [0x00013]
+```
 
 Here, the only managed frames are frames 8-10, but the managed exception is
 thrown in frame 0. This means that the Mono runtime must unwind the native
@@ -180,37 +186,39 @@ execution before eventually calling the managed
 `AppDelegate:FinishedLaunching` method, with still a lot of native frames on
 the stack when the managed exception is thrown:
 
-     0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
-     1: TestApp                 (wrapper runtime-invoke) <Module>:runtime_invoke_bool__this___object_object (object,intptr,intptr,intptr) 
-     2: libmonosgen-2.0.dylib   mono_jit_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
-     3: libmonosgen-2.0.dylib   do_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
-     4: libmonosgen-2.0.dylib   mono_runtime_invoke [inlined] mono_runtime_invoke_checked(method=<unavailable>, obj=<unavailable>, params=<unavailable>, error=0xbff45758)
-     5: libmonosgen-2.0.dylib   mono_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>)
-     6: libxamarin-debug.dylib  xamarin_invoke_trampoline(type=<unavailable>, self=<unavailable>, sel="application:didFinishLaunchingWithOptions:", iterator=<unavailable>), context=<unavailable>)
-     7: libxamarin-debug.dylib  xamarin_arch_trampoline(state=0xbff45ad4)
-     8: libxamarin-debug.dylib  xamarin_i386_common_trampoline
-     9: UIKit                   -[UIApplication _handleDelegateCallbacksWithOptions:isSuspended:restoreState:]
-    10: UIKit                   -[UIApplication _callInitializationDelegatesForMainScene:transitionContext:]
-    11: UIKit                   -[UIApplication _runWithMainScene:transitionContext:completion:]
-    12: UIKit                   __84-[UIApplication _handleApplicationActivationWithScene:transitionContext:completion:]_block_invoke.3124
-    13: UIKit                   -[UIApplication workspaceDidEndTransaction:]
-    14: FrontBoardServices      __37-[FBSWorkspace clientEndTransaction:]_block_invoke_2
-    15: FrontBoardServices      __40-[FBSWorkspace _performDelegateCallOut:]_block_invoke
-    16: FrontBoardServices      __FBSSERIALQUEUE_IS_CALLING_OUT_TO_A_BLOCK__
-    17: FrontBoardServices      -[FBSSerialQueue _performNext]
-    18: FrontBoardServices      -[FBSSerialQueue _performNextFromRunLoopSource]
-    19: FrontBoardServices      FBSSerialQueueRunLoopSourceHandler
-    20: CoreFoundation          __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__
-    21: CoreFoundation          __CFRunLoopDoSources0
-    22: CoreFoundation          __CFRunLoopRun
-    23: CoreFoundation          CFRunLoopRunSpecific
-    24: CoreFoundation          CFRunLoopRunInMode
-    25: UIKit                   -[UIApplication _run]
-    26: UIKit                   UIApplicationMain
-    27: TestApp                 (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
-    28: TestApp                 UIKit.UIApplication:Main (string[],intptr,intptr)
-    29: TestApp                 UIKit.UIApplication:Main (string[],string,string)
-    30: TestApp                 ExceptionMarshaling.IOS.Application:Main (string[])
+```
+ 0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
+ 1: TestApp                 (wrapper runtime-invoke) <Module>:runtime_invoke_bool__this___object_object (object,intptr,intptr,intptr) 
+ 2: libmonosgen-2.0.dylib   mono_jit_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
+ 3: libmonosgen-2.0.dylib   do_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
+ 4: libmonosgen-2.0.dylib   mono_runtime_invoke [inlined] mono_runtime_invoke_checked(method=<unavailable>, obj=<unavailable>, params=<unavailable>, error=0xbff45758)
+ 5: libmonosgen-2.0.dylib   mono_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>)
+ 6: libxamarin-debug.dylib  xamarin_invoke_trampoline(type=<unavailable>, self=<unavailable>, sel="application:didFinishLaunchingWithOptions:", iterator=<unavailable>), context=<unavailable>)
+ 7: libxamarin-debug.dylib  xamarin_arch_trampoline(state=0xbff45ad4)
+ 8: libxamarin-debug.dylib  xamarin_i386_common_trampoline
+ 9: UIKit                   -[UIApplication _handleDelegateCallbacksWithOptions:isSuspended:restoreState:]
+10: UIKit                   -[UIApplication _callInitializationDelegatesForMainScene:transitionContext:]
+11: UIKit                   -[UIApplication _runWithMainScene:transitionContext:completion:]
+12: UIKit                   __84-[UIApplication _handleApplicationActivationWithScene:transitionContext:completion:]_block_invoke.3124
+13: UIKit                   -[UIApplication workspaceDidEndTransaction:]
+14: FrontBoardServices      __37-[FBSWorkspace clientEndTransaction:]_block_invoke_2
+15: FrontBoardServices      __40-[FBSWorkspace _performDelegateCallOut:]_block_invoke
+16: FrontBoardServices      __FBSSERIALQUEUE_IS_CALLING_OUT_TO_A_BLOCK__
+17: FrontBoardServices      -[FBSSerialQueue _performNext]
+18: FrontBoardServices      -[FBSSerialQueue _performNextFromRunLoopSource]
+19: FrontBoardServices      FBSSerialQueueRunLoopSourceHandler
+20: CoreFoundation          __CFRUNLOOP_IS_CALLING_OUT_TO_A_SOURCE0_PERFORM_FUNCTION__
+21: CoreFoundation          __CFRunLoopDoSources0
+22: CoreFoundation          __CFRunLoopRun
+23: CoreFoundation          CFRunLoopRunSpecific
+24: CoreFoundation          CFRunLoopRunInMode
+25: UIKit                   -[UIApplication _run]
+26: UIKit                   UIApplicationMain
+27: TestApp                 (wrapper managed-to-native) UIKit.UIApplication:UIApplicationMain (int,string[],intptr,intptr)
+28: TestApp                 UIKit.UIApplication:Main (string[],intptr,intptr)
+29: TestApp                 UIKit.UIApplication:Main (string[],string,string)
+30: TestApp                 ExceptionMarshaling.IOS.Application:Main (string[])
+```
 
 Frames 0-1 and 27-30 are managed, while all those in between are native. If
 Mono unwinds through these frames, no Objective-C `@catch` or `@finally`

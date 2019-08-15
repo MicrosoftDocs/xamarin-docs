@@ -28,14 +28,14 @@ up into sections, with each section focusing on one of the Activities.
 
 ## Touch Sample Activity
 
--   Open the project **TouchWalkthrough\_Start**. The **MainActivity**
+- Open the project **TouchWalkthrough\_Start**. The **MainActivity**
     is all set to go &ndash; it is up to us to implement the touch
     behaviour in the activity. If you run the application and click
     **Touch Sample**, the following activity should start up:
 
     [![Screenshot of activity with Touch Begins displayed](android-touch-walkthrough-images/image15.png)](android-touch-walkthrough-images/image15.png#lightbox)
 
--   Now that we have confirmed that the Activity starts up, open the
+- Now that we have confirmed that the Activity starts up, open the
     file **TouchActivity.cs** and add a handler for the `Touch` event
     of the `ImageView`:
 
@@ -43,7 +43,7 @@ up into sections, with each section focusing on one of the Activities.
     _touchMeImageView.Touch += TouchMeImageViewOnTouch;
     ```
 
--   Next, add the following method to **TouchActivity.cs**:
+- Next, add the following method to **TouchActivity.cs**:
 
     ```csharp
     private void TouchMeImageViewOnTouch(object sender, View.TouchEventArgs touchEventArgs)
@@ -95,7 +95,7 @@ Now lets implement the Gesture Recognizer activity. This activity will
 demonstrate how to drag a view around the screen and illustrate one way
 to implement pinch-to-zoom.
 
--   Add a new Activity to the application called `GestureRecognizer`.
+- Add a new Activity to the application called `GestureRecognizer`.
     Edit the code for this activity so that it resembles the following
     code:
 
@@ -111,7 +111,7 @@ to implement pinch-to-zoom.
     }
     ```
 
--   Add a new Android view to the project, and name it
+- Add a new Android view to the project, and name it
     `GestureRecognizerView`. Add the following variables to this class:
 
     ```csharp
@@ -128,7 +128,7 @@ to implement pinch-to-zoom.
     private float _scaleFactor = 1.0f;
     ```
 
--   Add the following constructor to `GestureRecognizerView`. This
+- Add the following constructor to `GestureRecognizerView`. This
     constructor will add an `ImageView` to our activity. At this point
     the code still will not compile &ndash; we need to create the class
     `MyScaleListener` that will help with resizing the `ImageView` when
@@ -143,7 +143,7 @@ to implement pinch-to-zoom.
     }
     ```
 
--   To draw the image on our activity, we need to override the `OnDraw`
+- To draw the image on our activity, we need to override the `OnDraw`
     method of the View class as shown in the following snippet. This
     code will move the `ImageView` to the position specified by `_posX`
     and `_posY` as well as resize the image according to the scaling
@@ -161,7 +161,7 @@ to implement pinch-to-zoom.
     }
     ```
 
--   Next we need to update the instance variable `_scaleFactor` as the
+- Next we need to update the instance variable `_scaleFactor` as the
     user pinches the `ImageView`. We will add a class called
     `MyScaleListener`. This class will listen for the scale events that
     will be raised by Android when the user pinches the `ImageView`.
@@ -200,7 +200,7 @@ to implement pinch-to-zoom.
     }
     ```
 
--   The next method we need to override in `GestureRecognizerView` is
+- The next method we need to override in `GestureRecognizerView` is
     `OnTouchEvent`. The following code lists the full implementation of
     this method. There is a lot of code here, so lets take a minute and
     look what is going on here. The first thing this method does is
@@ -278,13 +278,13 @@ to implement pinch-to-zoom.
     }
     ```
 
--   Now run the application, and start the Gesture Recognizer activity.
+- Now run the application, and start the Gesture Recognizer activity.
     When it starts the screen should look something like the screenshot
     below:
 
     [![Gesture Recognizer start screen with Android icon](android-touch-walkthrough-images/image17.png)](android-touch-walkthrough-images/image17.png#lightbox)
 
--   Now touch the icon, and drag it around the screen. Try the
+- Now touch the icon, and drag it around the screen. Try the
     pinch-to-zoom gesture. At some point your screen may look something
     like the following screen shot:
 
@@ -304,7 +304,7 @@ been created using Gesture Tool and added to the project in the file
 **Resources/raw/gestures**. With this bit of housekeeping out of the way,
 lets get on with the final Activity in the walkthrough.
 
--   Add a layout file named **custom\_gesture\_layout.axml** to the
+- Add a layout file named **custom\_gesture\_layout.axml** to the
     project with the following contents. The project already has all
     the images in the **Resources** folder:
 
@@ -332,7 +332,7 @@ lets get on with the final Activity in the walkthrough.
     </LinearLayout>
     ```
 
--   Next add a new Activity to the project and name it
+- Next add a new Activity to the project and name it
     `CustomGestureRecognizerActivity.cs`. Add two instance variables to
     the class, as showing in the following two lines of code:
 
@@ -341,7 +341,7 @@ lets get on with the final Activity in the walkthrough.
     private ImageView _imageView;
     ```
 
--   Edit the `OnCreate` method of the this Activity so that it
+- Edit the `OnCreate` method of the this Activity so that it
     resembles the following code. Lets take a minute to explain what is
     going on in this code. The first thing we do is instantiate a
     `GestureOverlayView` and set that as the root view of the Activity.
@@ -375,7 +375,7 @@ lets get on with the final Activity in the walkthrough.
     }
     ```
 
--   The final thing we need to do implement the method
+- The final thing we need to do implement the method
     `GestureOverlayViewOnGesturePerformed` as shown in the following
     code snippet. When the `GestureOverlayView` detects a gesture, it
     calls back to this method. The first thing we try to get an
@@ -417,7 +417,7 @@ lets get on with the final Activity in the walkthrough.
     }
     ```
 
--   Run the application and start up the Custom Gesture Recognizer
+- Run the application and start up the Custom Gesture Recognizer
     activity. It should look something like the following screenshot:
 
     [![Screenshot with Check Me image](android-touch-walkthrough-images/image19.png)](android-touch-walkthrough-images/image19.png#lightbox)
@@ -438,5 +438,5 @@ an Android application using Xamarin.Android.
 
 ## Related Links
 
-- [Android Touch Start (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
-- [Android Touch Final (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final)
+- [Android Touch Start (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Android Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)

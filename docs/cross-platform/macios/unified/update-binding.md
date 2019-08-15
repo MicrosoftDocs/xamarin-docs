@@ -22,8 +22,8 @@ Additionally, any Xamarin Binding Project must also support the new Unified APIs
 
 The following is required to complete the steps presented in this article:
 
- -  **Visual Studio for Mac** - The latest version of Visual Studio for Mac installed and configured on the development computer.
- -  **Apple Mac** - An Apple mac is required to build Binding Projects for iOS and Mac.
+- **Visual Studio for Mac** - The latest version of Visual Studio for Mac installed and configured on the development computer.
+- **Apple Mac** - An Apple mac is required to build Binding Projects for iOS and Mac.
 
 Binding projects are not supported in Visual studio on a Windows machine.
 
@@ -214,4 +214,4 @@ In this article we have shown the changes that need to be made to an existing Xa
 - [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md)
 - [Upgrading Existing iOS Apps](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Unified API](~/cross-platform/macios/unified/index.md)
-- [BindingSample](https://developer.xamarin.com/samples/monotouch/BindingSample/)
+- [BindingSample](https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/bindingsample/)

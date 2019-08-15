@@ -13,7 +13,7 @@ ms.date: 04/01/2019
 
 # Store Data in a Local SQLite.NET Database
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 
 In this quickstart, you will learn how to:
 
@@ -27,7 +27,7 @@ The quickstart walks through how to store data in a local SQLite.NET database. T
 
 ### Prerequisites
 
-You should successfully complete the [previous quickstart](multi-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/MultiPage/) and use it as the starting point for this quickstart.
+You should successfully complete the [previous quickstart](multi-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) and use it as the starting point for this quickstart.
 
 ::: zone pivot="windows"
 
@@ -172,7 +172,21 @@ You should successfully complete the [previous quickstart](multi-page.md) before
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
     ```
@@ -375,7 +389,21 @@ You should successfully complete the [previous quickstart](multi-page.md) before
                 InitializeComponent();
                 MainPage = new NavigationPage(new NotesPage());
             }
-            ...
+
+            protected override void OnStart()
+            {
+                // Handle when your app starts
+            }
+
+            protected override void OnSleep()
+            {
+                // Handle when your app sleeps
+            }
+
+            protected override void OnResume()
+            {
+                // Handle when your app resumes
+            }
         }
     }
     ```
@@ -450,5 +478,5 @@ To style the application with XAML styles, continue to the next quickstart.
 
 ## Related links
 
-- [Notes (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/Database/)
+- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-database/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

@@ -6,7 +6,7 @@ ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 03/01/2018
+ms.date: 05/30/2019
 ---
 
 # CPU Architectures
@@ -66,21 +66,24 @@ check the ABIs for the architectures that you want to support:
 
 Xamarin.Android supports the following architectures:
 
--   **armeabi** &ndash; ARM-based CPUs that support at least the ARMv5TE instruction
+- **armeabi** &ndash; ARM-based CPUs that support at least the ARMv5TE instruction
     set. Note that `armeabi` is not thread-safe and should not be used on multi-CPU
     devices.
 
--   **armeabi-v7a** &ndash; ARM-based CPUs with hardware floating-point operations
+> [!NOTE]
+> As of [Xamarin.Android 9.2](https://docs.microsoft.com/xamarin/android/release-notes/9/9.2#removal-of-support-for-armeabi-cpu-architecture), `armeabi` is no longer supported.
+
+- **armeabi-v7a** &ndash; ARM-based CPUs with hardware floating-point operations
     and multiple CPU (SMP) devices. Note that `armeabi-v7a` machine code will not
     run on ARMv5 devices.
 
--   **arm64-v8a** &ndash; CPUs based on the 64-bit ARMv8 architecture.
+- **arm64-v8a** &ndash; CPUs based on the 64-bit ARMv8 architecture.
 
--   **x86** &ndash; CPUs that support the x86 (or IA-32) instruction set. This
+- **x86** &ndash; CPUs that support the x86 (or IA-32) instruction set. This
     instruction set is equivalent to that of the Pentium Pro, including MMX, SSE,
     SSE2, and SSE3 instructions.
 
--   **x86_64** CPUs that support the 64-bit x86 (also referred as
+- **x86_64** CPUs that support the 64-bit x86 (also referred as
     *x64* and *AMD64*) instruction set.
 
 Xamarin.Android defaults to `armeabi-v7a` for **Release** builds. This
@@ -106,8 +109,7 @@ the [Nexus 9](http://www.google.com/nexus/9/)) can run apps configured for
 make it possible for your app to address more memory.
 
 > [!NOTE]
-> 64-bit runtime support is currently an experimental
-> feature. Remember that 64-bit runtimes are *not* required to run your app on 64-bit devices. 
+> From August 2018 new apps will be required to target API level 26, and from August 2019 apps will be [required to provide 64-bit versions](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html) in addition to the 32-bit version.
 
 ## Additional Information
 

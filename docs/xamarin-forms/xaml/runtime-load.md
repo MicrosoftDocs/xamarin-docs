@@ -11,7 +11,7 @@ ms.date: 12/12/2018
 
 # Loading XAML at Runtime in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XAML/LoadRuntimeXAML/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)
 
 The [`Xamarin.Forms.Xaml`](xref:Xamarin.Forms.Xaml) namespace includes two [`LoadFromXaml`](xref:Xamarin.Forms.Xaml.Extensions.LoadFromXaml*) extension methods that can be used to load, and parse XAML at runtime.
 
@@ -96,4 +96,4 @@ In this example, the XAML for a [`ContentPage`](xref:Xamarin.Forms.ContentPage) 
 
 ## Related links
 
-- [LoadRuntimeXAML (sample)](https://developer.xamarin.com/samples/xamarin-forms/XAML/LoadRuntimeXAML/)
+- [LoadRuntimeXAML (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-loadruntimexaml)

@@ -15,7 +15,7 @@ _This article builds upon the information presented in the Introduction to MonoT
 
 In this walkthrough, we’ll use the MT.D Elements API to create a
 master-detail style of application that displays a task list. When the user
-selects the <span class="ui">+</span> button in the navigation bar, a new row
+selects the **+** button in the navigation bar, a new row
 will be added to the table for the task. Selecting the row will navigate to the
 detail screen that allows us to update the task description and the due date, as
 illustrated below:
@@ -42,11 +42,11 @@ To start the screen creation process, MonoTouch.Dialog creates a `DialogViewCont
 
 To create a multi-screen application with MonoTouch.Dialog, we need to:
 
-1.  Create a `UINavigationController.`
-1.  Create a `DialogViewController.`
-1.  Add the `DialogViewController` as the root of the  `UINavigationController.` 
-1.  Add a `RootElement` to the  `DialogViewController.`
-1.  Add `Sections` and  `Elements` to the  `RootElement.` 
+1. Create a `UINavigationController.`
+1. Create a `DialogViewController.`
+1. Add the `DialogViewController` as the root of the  `UINavigationController.` 
+1. Add a `RootElement` to the  `DialogViewController.`
+1. Add `Sections` and  `Elements` to the  `RootElement.` 
 
 ### Using A UINavigationController
 
@@ -55,21 +55,20 @@ the `AppDelegate`. To make the `UINavigationController`
 work with MonoTouch.Dialog, we add a `DialogViewController` to the `UINavigationController` as shown below:
 
 ```csharp
-public override bool FinishedLaunching (UIApplication app, 
-        NSDictionary options)
+public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 {
-        _window = new UIWindow (UIScreen.MainScreen.Bounds);
+    _window = new UIWindow (UIScreen.MainScreen.Bounds);
             
-        _rootElement = new RootElement ("To Do List"){new Section ()};
+    _rootElement = new RootElement ("To Do List"){new Section ()};
 
-        // code to create screens with MT.D will go here …
+    // code to create screens with MT.D will go here …
 
-        _rootVC = new DialogViewController (_rootElement);
-        _nav = new UINavigationController (_rootVC);
-        _window.RootViewController = _nav;
-        _window.MakeKeyAndVisible ();
+    _rootVC = new DialogViewController (_rootElement);
+    _nav = new UINavigationController (_rootVC);
+    _window.RootViewController = _nav;
+    _window.MakeKeyAndVisible ();
             
-        return true;
+    return true;
 }
 ```
 
@@ -97,33 +96,31 @@ we’ll see next.
 ### Using DialogViewController
 
 The `DialogViewController`, being a `UITableViewController` subclass, has a `UITableView` as
-its view. In this example, we want to add items to the table each time the <span class="ui">+</span> button is tapped. Since the `DialogViewController` was added to a `UINavigationController`, we can use the `NavigationItem`’s `RightBarButton` property to add the <span class="ui">+</span> button, as shown below:
+its view. In this example, we want to add items to the table each time the **+** button is tapped. Since the `DialogViewController` was added to a `UINavigationController`, we can use the `NavigationItem`’s `RightBarButton` property to add the **+** button, as shown below:
 
 ```csharp
 _addButton = new UIBarButtonItem (UIBarButtonSystemItem.Add);
 _rootVC.NavigationItem.RightBarButtonItem = _addButton;
 ```
 
-When we created the `RootElement` earlier, we passed it a single `Section` instance so that we could add elements as the <span class="ui">+</span> button is tapped by the user. We can use the following code
+When we created the `RootElement` earlier, we passed it a single `Section` instance so that we could add elements as the **+** button is tapped by the user. We can use the following code
 to accomplish this in the event handler for the button:
 
 ```csharp
-_addButton.Clicked += (sender, e) => {
+_addButton.Clicked += (sender, e) => {                
+    ++n;
                 
-        ++n;
+    var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
                 
-        var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
-                
-        var taskElement = new RootElement (task.Name){
-                new Section () {
-                        new EntryElement (task.Name, 
-                                "Enter task description", task.Description)
-                },
-                new Section () {
-                        new DateElement ("Due Date", task.DueDate)
-                }
-        };
-        _rootElement [0].Add (taskElement);
+    var taskElement = new RootElement (task.Name) {
+        new Section () {
+            new EntryElement (task.Name, "Enter task description", task.Description)
+        },
+        new Section () {
+            new DateElement ("Due Date", task.DueDate)
+        }
+    };
+    _rootElement [0].Add (taskElement);
 };
 ```
 
@@ -134,15 +131,15 @@ class:
 ```csharp
 public class Task
 {   
-        public Task ()
-        {
-        }
+    public Task ()
+    {
+    }
+      
+    public string Name { get; set; }
         
-        public string Name { get; set; }
-        
-        public string Description { get; set; }
+    public string Description { get; set; }
 
-        public DateTime DueDate { get; set; }
+    public DateTime DueDate { get; set; }
 }
 ```
 
@@ -182,9 +179,7 @@ screens. In addition, it showed how to use MT.D in conjunction with a `UINavigat
 
 ## Related links
 
-- [MTDWalkthrough (sample)](https://developer.xamarin.com/samples/MTDWalkthrough/)
-- [Screencast - Miguel de Icaza creates an iOS login screen with MonoTouch.Dialog](http://youtu.be/3butqB1EG0c)
-- [Screencast - Easily create iOS user interfaces with MonoTouch.Dialog](http://youtu.be/j7OC5r8ZkYg)
+- [MTDWalkthrough (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdwalkthrough)
 - [Introduction to MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Reflection API Walkthrough](~/ios/user-interface/monotouch.dialog/reflection-api-walkthrough.md)
 - [JSON Element Walkthrough](~/ios/user-interface/monotouch.dialog/json-element-walkthrough.md)

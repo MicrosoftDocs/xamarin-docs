@@ -40,8 +40,8 @@ In applications that use direct client-to-microservice communication, such as th
 
 The eShopOnContainers mobile app communicates with the identity microservice, which uses IdentityServer 4 to perform authentication, and access control for APIs. Therefore, the mobile app requests tokens from IdentityServer, either for authenticating a user or for accessing a resource:
 
--   Authenticating users with IdentityServer is achieved by the mobile app requesting an *identity* token, which represents the outcome of an authentication process. At a bare minimum, it contains an identifier for the user, and information about how and when the user authenticated. It can also contain additional identity data.
--   Accessing a resource with IdentityServer is achieved by the mobile app requesting an *access* token, which allows access to an API resource. Clients request access tokens and forward them to the API. Access tokens contain information about the client, and the user (if present). APIs then use that information to authorize access to their data.
+- Authenticating users with IdentityServer is achieved by the mobile app requesting an *identity* token, which represents the outcome of an authentication process. At a bare minimum, it contains an identifier for the user, and information about how and when the user authenticated. It can also contain additional identity data.
+- Accessing a resource with IdentityServer is achieved by the mobile app requesting an *access* token, which allows access to an API resource. Clients request access tokens and forward them to the API. Access tokens contain information about the client, and the user (if present). APIs then use that information to authorize access to their data.
 
 > [!NOTE]
 > A client must be registered with IdentityServer before it can request tokens.
@@ -87,12 +87,13 @@ public void ConfigureServices(IServiceCollection services)
 
 After calling the `services.AddIdentityServer` method, additional fluent APIs are called to configure the following:
 
--   Credentials used for signing.
--   API and identity resources that users might request access to.
--   Clients that will be connecting to request tokens.
--   ASP.NET Core Identity.
+- Credentials used for signing.
+- API and identity resources that users might request access to.
+- Clients that will be connecting to request tokens.
+- ASP.NET Core Identity.
 
->💡 **Tip**: Dynamically load the IdentityServer 4 configuration. IdentityServer 4's APIs allow for configuring IdentityServer from an in-memory list of configuration objects. In the eShopOnContainers reference application, these in-memory collections are hard-coded into the application. However, in production scenarios they can be loaded dynamically from a configuration file or from a database.
+> [!TIP]
+> Dynamically load the IdentityServer 4 configuration. IdentityServer 4's APIs allow for configuring IdentityServer from an in-memory list of configuration objects. In the eShopOnContainers reference application, these in-memory collections are hard-coded into the application. However, in production scenarios they can be loaded dynamically from a configuration file or from a database.
 
 For information about configuring IdentityServer to use ASP.NET Core Identity, see [Using ASP.NET Core Identity](https://identityserver4.readthedocs.io/en/latest/quickstarts/8_aspnet_identity.html) in the IdentityServer documentation.
 
@@ -139,10 +140,10 @@ IdentityServer also supports defining custom identity resources. For more inform
 
 Clients are applications that can request tokens from IdentityServer. Typically, the following settings must be defined for each client as a minimum:
 
--   A unique client ID.
--   The allowed interactions with the token service (known as the grant type).
--   The location where identity and access tokens are sent to (known as a redirect URI).
--   A list of resources that the client is allowed access to (known as scopes).
+- A unique client ID.
+- The allowed interactions with the token service (known as the grant type).
+- The location where identity and access tokens are sent to (known as a redirect URI).
+- A list of resources that the client is allowed access to (known as scopes).
 
 When configuring clients, the `AddInMemoryClients` method expects an `IEnumerable<Client>` collection. The following code example shows the configuration for the eShopOnContainers mobile app in the `GetClients` method that provides this collection in the eShopOnContainers reference application:
 
@@ -184,17 +185,17 @@ public static IEnumerable<Client> GetClients(Dictionary<string,string> clien
 
 This configuration specifies data for the following properties:
 
--   `ClientId`: A unique ID for the client.
--   `ClientName`: The client display name, which is used for logging and the consent screen.
--   `AllowedGrantTypes`: Specifies how a client wants to interact with IdentityServer. For more information see [Configuring the Authentication Flow](#configuring_the_authentication_flow).
--   `ClientSecrets`: Specifies the client secret credentials that are used when requesting tokens from the token endpoint.
--   `RedirectUris`: Specifies the allowed URIs to which to return tokens or authorization codes.
--   `RequireConsent`: Specifies whether a consent screen is required.
--   `RequirePkce`: Specifies whether clients using an authorization code must send a proof key.
--   `PostLogoutRedirectUris`: Specifies the allowed URIs to redirect to after logout.
--   `AllowedCorsOrigins`: Specifies the origin of the client so that IdentityServer can allow cross-origin calls from the origin.
--   `AllowedScopes`: Specifies the resources the client has access to. By default, a client has no access to any resources.
--   `AllowOfflineAccess`: Specifies whether the client can request refresh tokens.
+- `ClientId`: A unique ID for the client.
+- `ClientName`: The client display name, which is used for logging and the consent screen.
+- `AllowedGrantTypes`: Specifies how a client wants to interact with IdentityServer. For more information see [Configuring the Authentication Flow](#configuring_the_authentication_flow).
+- `ClientSecrets`: Specifies the client secret credentials that are used when requesting tokens from the token endpoint.
+- `RedirectUris`: Specifies the allowed URIs to which to return tokens or authorization codes.
+- `RequireConsent`: Specifies whether a consent screen is required.
+- `RequirePkce`: Specifies whether clients using an authorization code must send a proof key.
+- `PostLogoutRedirectUris`: Specifies the allowed URIs to redirect to after logout.
+- `AllowedCorsOrigins`: Specifies the origin of the client so that IdentityServer can allow cross-origin calls from the origin.
+- `AllowedScopes`: Specifies the resources the client has access to. By default, a client has no access to any resources.
+- `AllowOfflineAccess`: Specifies whether the client can request refresh tokens.
 
 <a name="configuring_the_authentication_flow" />
 
@@ -202,9 +203,9 @@ This configuration specifies data for the following properties:
 
 The authentication flow between a client and IdentityServer can be configured by specifying the grant types in the `Client.AllowedGrantTypes` property. The OpenID Connect and OAuth 2.0 specifications define a number of authentication flows, including:
 
--   Implicit. This flow is optimized for browser-based applications and should be used either for user authentication-only, or authentication and access token requests. All tokens are transmitted via the browser, and therefore advanced features like refresh tokens are not permitted.
--   Authorization code. This flow provides the ability to retrieve tokens on a back channel, as opposed to the browser front channel, while also supporting client authentication.
--   Hybrid. This flow is a combination of the implicit and authorization code grant types. The identity token is transmitted via the browser channel and contains the signed protocol response along with other artifacts such as the authorization code. After successful validation of the response, the back channel should be used to retrieve the access and refresh token.
+- Implicit. This flow is optimized for browser-based applications and should be used either for user authentication-only, or authentication and access token requests. All tokens are transmitted via the browser, and therefore advanced features like refresh tokens are not permitted.
+- Authorization code. This flow provides the ability to retrieve tokens on a back channel, as opposed to the browser front channel, while also supporting client authentication.
+- Hybrid. This flow is a combination of the implicit and authorization code grant types. The identity token is transmitted via the browser channel and contains the signed protocol response along with other artifacts such as the authorization code. After successful validation of the response, the back channel should be used to retrieve the access and refresh token.
 
 > [!TIP]
 > Use the hybrid authentication flow. The hybrid authentication flow mitigates a number of attacks that apply to the browser channel, and is the recommended flow for native applications that want to retrieve access tokens (and possibly refresh tokens).
@@ -312,7 +313,8 @@ private async Task NavigateAsync(string url)
 
 This method parses the authentication response that's contained in the return URI, and provided that a valid authorization code is present, it makes a request to IdentityServer's [token endpoint](https://identityserver4.readthedocs.io/en/latest/endpoints/token.html), passing the authorization code, the PKCE secret verifier, and other required parameters. The token endpoint is at `/connect/token` on port 5105 of the base endpoint exposed as a user setting. For more information about user settings, see [Configuration Management](~/xamarin-forms/enterprise-application-patterns/configuration-management.md).
 
->💡 **Tip**: Validate return URIs. Although the eShopOnContainers mobile app doesn't validate the return URI, the best practice is to validate that the return URI refers to a known location , to prevent open-redirect attacks.
+> [!TIP]
+> Validate return URIs. Although the eShopOnContainers mobile app doesn't validate the return URI, the best practice is to validate that the return URI refers to a known location, to prevent open-redirect attacks.
 
 If the token endpoint receives a valid authorization code and PKCE secret verifier, it responds with an access token, identity token, and refresh token. The access token (which allows access to API resources) and identity token are then stored as application settings, and page navigation is performed. Therefore, the overall effect in the eShopOnContainers mobile app is this: provided that users are able to successfully authenticate with IdentityServer, they are navigated to the `MainView` page, which is a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) that displays the `CatalogView` as its selected tab.
 

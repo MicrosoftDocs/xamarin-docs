@@ -1,5 +1,5 @@
 ---
-title: "Populating a ListView With Data"
+title: "Populating a Xamarin.Android ListView With Data"
 ms.prod: xamarin
 ms.assetid: AC4F95C8-EC3F-D960-7D44-8D55D0E4F1B6
 ms.technology: xamarin-android
@@ -8,10 +8,7 @@ ms.author: crdun
 ms.date: 08/21/2017
 ---
 
-# Populating a ListView With Data
-
-
-## Overview
+# Populating a Xamarin.Android ListView With Data
 
 To add rows to a `ListView` you need to add it to your layout and
 implement an `IListAdapter` with methods that the `ListView` calls to
@@ -24,7 +21,6 @@ to display via an adapter.
 The built-in adapters take a view resource ID as a parameter that gets
 used for each row. You can use built-in resources such as those in
 `Android.Resource.Layout` so you don't need to write your own.
-
 
 ## Using ListActivity and ArrayAdapter&lt;String&gt;
 
@@ -80,16 +76,16 @@ behavior of a `ListView` to control what data is displayed
 you must implement a subclass of `BaseAdapter` overriding
 the following four items:
 
--   **Count** &ndash; To tell the control how many rows are in the data.
+- **Count** &ndash; To tell the control how many rows are in the data.
 
--   **GetView** &ndash; To return a View for each row, populated with data.
+- **GetView** &ndash; To return a View for each row, populated with data.
     This method has a parameter for the `ListView` to pass in an
     existing, unused row for re-use.
 
--   **GetItemId** &ndash; Return a row identifier (typically the row
+- **GetItemId** &ndash; Return a row identifier (typically the row
     number, although it can be any long value that you like).
 
--   **this[int]** indexer &ndash; To return the data associated with a
+- **this[int]** indexer &ndash; To return the data associated with a
     particular row number.
 
 The example code in **BasicTableAdapter/HomeScreenAdapter.cs**
@@ -207,16 +203,16 @@ index text depending on the rows being displayed:
 To implement `ISectionIndexer` you need to add three methods to an
 adapter:
 
--   **GetSections** &ndash; Provides the complete list of section index
+- **GetSections** &ndash; Provides the complete list of section index
     titles that could be displayed. This method requires an array of
     Java Objects so the code needs to create a `Java.Lang.Object[]`
     from a .NET collection. In our example it returns a list of the
     initial characters in the list as `Java.Lang.String` .
 
--   **GetPositionForSection** &ndash; Returns the first row position for a
+- **GetPositionForSection** &ndash; Returns the first row position for a
     given section index.
 
--   **GetSectionForPosition** &ndash; Returns the section index to be
+- **GetSectionForPosition** &ndash; Returns the section index to be
     displayed for a given row.
 
 
@@ -283,6 +279,6 @@ mapping to 26, it may map to 25 or 24, or whatever section index
 
 ## Related Links
 
-- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/BasicTableAndroid/)
-- [BasicTableAdapter (sample)](https://developer.xamarin.com/samples/BasicTableAdapter/)
-- [FastScroll (sample)](https://developer.xamarin.com/samples/FastScroll/)
+- [BasicTableAndroid (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableandroid)
+- [BasicTableAdapter (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableadapter)
+- [FastScroll (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fastscroll)

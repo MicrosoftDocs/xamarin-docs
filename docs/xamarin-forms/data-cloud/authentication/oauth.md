@@ -1,5 +1,5 @@
 ---
-title: "Authenticating Users with an Identity Provider"
+title: "AuthenticateUsers with an Identity Provider"
 description: "This article explains how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
@@ -9,9 +9,9 @@ ms.author: dabritch
 ms.date: 06/19/2017
 ---
 
-# Authenticating Users with an Identity Provider
+# Authenticate Users with an Identity Provider
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 
 _Xamarin.Auth is a cross-platform SDK for authenticating users and storing their accounts. It includes OAuth authenticators that provide support for consuming identity providers such as Google, Microsoft, Facebook, and Twitter. This article explains how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application._
 
@@ -166,7 +166,7 @@ The `OpenUrl` method converts the received URL from an `NSUrl` to a .NET `Uri`, 
 
 #### Android
 
-On Android, a custom URL scheme is registered by specifying an [`IntentFilter`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) attribute on the `Activity` that will handle the scheme. When the identity provider completes the authorization request, it redirects to the application's redirect URL. As the URL uses a custom scheme it results in Android launching the application, passing in the URL as a launch parameter, where it's processed by the `OnCreate` method of the `Activity` registered to handle the custom URL scheme. The following code example shows the class from the sample application that handles the custom URL scheme:
+On Android, a custom URL scheme is registered by specifying an [`IntentFilter`](xref:Android.App.IntentFilterAttribute) attribute on the `Activity` that will handle the scheme. When the identity provider completes the authorization request, it redirects to the application's redirect URL. As the URL uses a custom scheme it results in Android launching the application, passing in the URL as a launch parameter, where it's processed by the `OnCreate` method of the `Activity` registered to handle the custom URL scheme. The following code example shows the class from the sample application that handles the custom URL scheme:
 
 ```csharp
 [Activity(Label = "CustomUrlSchemeInterceptorActivity", NoHistory = true, LaunchMode = LaunchMode.SingleTop )]
@@ -192,7 +192,7 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-The `DataSchemes` property of the [`IntentFilter`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) must be set to the reversed client identifier that's obtained from the Android client id for the project on [Google API Console](http://console.developers.google.com).
+The `DataSchemes` property of the [`IntentFilter`](xref:Android.App.IntentFilterAttribute) must be set to the reversed client identifier that's obtained from the Android client id for the project on [Google API Console](http://console.developers.google.com).
 
 The `OnCreate` method converts the received URL from an `Android.Net.Url` to a .NET `Uri`, before processing the redirect URL with the `OnPageLoading` method of a public `OAuth2Authenticator` object. This causes Xamarin.Auth to close the web browser tab, and parse the received OAuth data.
 
@@ -262,7 +262,7 @@ This article explained how to use Xamarin.Auth to manage the authentication proc
 
 ## Related Links
 
-- [OAuthNativeFlow (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/OAuthNativeFlow/)
+- [OAuthNativeFlow (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)
 - [OAuth 2.0 for Native Apps](https://tools.ietf.org/html/draft-ietf-oauth-native-apps-12)
 - [Using OAuth2.0 to Access Google APIs](https://developers.google.com/identity/protocols/OAuth2)
 - [Xamarin.Auth (NuGet)](https://www.nuget.org/packages/xamarin.auth/)

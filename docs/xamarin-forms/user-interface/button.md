@@ -11,19 +11,19 @@ ms.date: 11/19/2018
 
 # Xamarin.Forms Button
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 
 _The Button responds to a tap or click that directs an application to carry out a particular task._
 
 The [`Button`](xref:Xamarin.Forms.Button) is the most fundamental interactive control in all of Xamarin.Forms. The `Button` usually displays a short text string indicating a command, but it can also display a bitmap image, or a combination of text and an image. The user presses the `Button` with a finger or clicks it with a mouse to initiate that command.
 
-Most of the topics discussed below correspond to pages in the [**ButtonDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) sample.
+Most of the topics discussed below correspond to pages in the [**ButtonDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) sample.
 
 ## Handling button clicks
 
 `Button` defines a [`Clicked`](xref:Xamarin.Forms.Button.Clicked) event that is fired when the user taps the `Button` with a finger or mouse pointer. The event is fired when the finger or mouse button is released from the surface of the `Button`. The `Button` must have its [`IsEnabled`](xref:Xamarin.Forms.VisualElement.IsEnabled) property set to `true` for it to respond to taps.
 
-The **Basic Button Click** page in the [**ButtonDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) sample demonstrates how to instantiate a `Button` in XAML and handle its `Clicked` event. The **BasicButtonClickPage.xaml** file contains a `StackLayout` with both a `Label` and a `Button`:
+The **Basic Button Click** page in the [**ButtonDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) sample demonstrates how to instantiate a `Button` in XAML and handle its `Clicked` event. The **BasicButtonClickPage.xaml** file contains a `StackLayout` with both a `Label` and a `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -147,7 +147,7 @@ This approach is particularly suitable in connection with data-binding, and part
 
 In an MVVM application, the ViewModel defines properties of type `ICommand` that are then connected to the XAML `Button` elements with data bindings. Xamarin.Forms also defines [`Command`]((xref:Xamarin.Forms.Command)) and [`Command<T>`](xref:Xamarin.Forms.Command`1) classes that implement the `ICommand` interface and assist the ViewModel in defining properties of type `ICommand`.
 
-Commanding is described in greater detail in the article [**The Command Interface**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) but the **Basic Button Command** page in the [**ButtonDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) sample shows the basic approach.
+Commanding is described in greater detail in the article [**The Command Interface**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) but the **Basic Button Command** page in the [**ButtonDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) sample shows the basic approach.
 
 The `CommandDemoViewModel` class is a very simple ViewModel that defines a property of type `double` named `Number`, and two properties of type `ICommand` named `MultiplyBy2Command` and `DivideBy2Command`:
 
@@ -263,7 +263,7 @@ The calls to the `ChangeCanExecute` method of `Command` are necessary so that th
 
 It is possible for two or more `Button` elements to be bound to the same `ICommand` property. The `Button` elements can be distinguished using the [`CommandParameter`](xref:Xamarin.Forms.Button.CommandParameter) property of `Button`. In this case, you'll want to use the generic [`Command<T>`](xref:Xamarin.Forms.Command`1) class. The `CommandParameter` object is then passed as an argument to the `execute` and `canExecute` methods. This technique is shown in detail in the [**Basic Commanding**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) section of the [**Command Interface**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md#basic-commanding) article.
 
-The [**ButtonDemos**](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos) sample also uses this technique in its `MainPage` class. The **MainPage.xaml** file contains a `Button` for each page of the sample:
+The [**ButtonDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) sample also uses this technique in its `MainPage` class. The **MainPage.xaml** file contains a `Button` for each page of the sample:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -424,7 +424,7 @@ The `Button` inherits or defines several properties that affect its appearance:
 > [!NOTE]
 > The `Button` class also has [`Margin`](xref:Xamarin.Forms.View.Margin) and [`Padding`](xref:Xamarin.Forms.Button.Padding) properties that control the layout behavior of the `Button`. For more information, see [Margin and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-The effects of six of these properties (excluding `FontFamily` and `FontAttributes`) are demonstrated in the **Button Appearance** page. Another property, [`Image`](xref:Xamarin.Forms.Button.Image), is discussed in the section [**Using bitmaps with button**](#image-button).
+The effects of six of these properties (excluding `FontFamily` and `FontAttributes`) are demonstrated in the **Button Appearance** page. Another property, [`Image`](xref:Xamarin.Forms.Button.ImageSource), is discussed in the section [**Using bitmaps with button**](#image-button).
 
 All of the views and data bindings in the **Button Appearance** page are defined in the XAML file:
 
@@ -744,9 +744,9 @@ Here's the program running on iOS, Android, and the UWP:
 
 ## Using bitmaps with buttons
 
-The `Button` class defines an [`Image`](xref:Xamarin.Forms.Button.Image) property that allows you to display a bitmap image on the `Button`, either alone or in combination with text. You can also specify how the text and image are arranged.
+The `Button` class defines an [`ImageSource`](xref:Xamarin.Forms.Button.Image) property that allows you to display a bitmap image on the `Button`, either alone or in combination with text. You can also specify how the text and image are arranged.
 
-The `Image` property is of type [`FileImageSource`](xref:Xamarin.Forms.FileImageSource), which means that the bitmaps must be stored as resources in the individual platform projects, and not in the .NET Standard library project.
+The `ImageSource` property is of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), which means that the bitmaps can be loaded from a file, embedded resource, URI, or stream.
 
 Each platform supported by Xamarin.Forms allows images to be stored in multiple sizes for different pixel resolutions of the various devices that the application might run on. These multiple bitmaps are named or stored in such a way that the operating system can pick the best match for the device's video display resolution.
 
@@ -777,7 +777,7 @@ In the UWP project, bitmaps can be stored anywhere in the project, but they are 
 
 They were all given a **Build Action** of **Content**.
 
-You can specify how the `Text` and `Image` properties are arranged on the `Button` using the [`ContentLayout`](xref:Xamarin.Forms.Button.ContentLayout) property of `Button`. This property is of type [`ButtonContentLayout`](xref:Xamarin.Forms.Button.ButtonContentLayout), which is an embedded class in `Button`. The [constructor](xref:Xamarin.Forms.Button.ButtonContentLayout.%23ctor(Xamarin.Forms.Button.ButtonContentLayout.ImagePosition,System.Double)) has two arguments:
+You can specify how the `Text` and `ImageSource` properties are arranged on the `Button` using the [`ContentLayout`](xref:Xamarin.Forms.Button.ContentLayout) property of `Button`. This property is of type [`ButtonContentLayout`](xref:Xamarin.Forms.Button.ButtonContentLayout), which is an embedded class in `Button`. The [constructor](xref:Xamarin.Forms.Button.ButtonContentLayout.%23ctor(Xamarin.Forms.Button.ButtonContentLayout.ImagePosition,System.Double)) has two arguments:
 
 - A member of the [`ImagePosition`](xref:Xamarin.Forms.Button.ButtonContentLayout.ImagePosition) enumeration: `Left`, `Top`, `Right`, or `Bottom` indicating how the bitmap appears relative to the text.
 - A `double` value for the spacing between the bitmap and the text.
@@ -790,7 +790,7 @@ In code, you can create a `Button` and set the `ContentLayout` property like thi
 Button button = new Button
 {
     Text = "button text",
-    Image = new FileImageSource
+    ImageSource = new FileImageSource
     {
         File = "image filename"
     },
@@ -802,7 +802,7 @@ In XAML, you need specify only the enumeration member, or the spacing, or both i
 
 ```xaml
 <Button Text="button text"
-        Image="image filename"
+        ImageSource="image filename"
         ContentLayout="Right, 20" />
 ```
 
@@ -812,22 +812,22 @@ The first `Button` on the **Image Button Demo** page sets the `Image` property b
 
 ```xaml
 <Button>
-    <Button.Image>
-        <OnPlatform x:TypeArguments="FileImageSource">
+    <Button.ImageSource>
+        <OnPlatform x:TypeArguments="ImageSource">
             <On Platform="iOS, Android" Value="MonkeyFace.png" />
             <On Platform="UWP" Value="Assets/MonkeyFace.png" />
         </OnPlatform>
-    </Button.Image>
+    </Button.ImageSource>
 </Button>
 ```
 
 If the UWP bitmaps are stored in the root directory of the project, this markup can be considerably simplified:
 
 ```xaml
-<Button Image="MonkeyFace.png" />
+<Button ImageSource="MonkeyFace.png" />
 ```
 
-To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an implicit `Style` is also defined to set the `Image` property. This `Style` is automatically applied to five other `Button` elements. Here's the complete XAML file:
+To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an implicit `Style` is also defined to set the `ImageSource` property. This `Style` is automatically applied to five other `Button` elements. Here's the complete XAML file:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -840,8 +840,8 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
 
         <FlexLayout.Resources>
             <Style TargetType="Button">
-                <Setter Property="Image">
-                    <OnPlatform x:TypeArguments="FileImageSource">
+                <Setter Property="ImageSource">
+                    <OnPlatform x:TypeArguments="ImageSource">
                         <On Platform="iOS, Android" Value="MonkeyFace.png" />
                         <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                     </OnPlatform>
@@ -850,12 +850,12 @@ To avoid a lot of repetitious markup in the **ImageButtonDemo.xaml** file, an im
         </FlexLayout.Resources>
 
         <Button>
-            <Button.Image>
-                <OnPlatform x:TypeArguments="FileImageSource">
+            <Button.ImageSource>
+                <OnPlatform x:TypeArguments="ImageSource">
                     <On Platform="iOS, Android" Value="MonkeyFace.png" />
                     <On Platform="UWP" Value="Assets/MonkeyFace.png" />
                 </OnPlatform>
-            </Button.Image>
+            </Button.ImageSource>
         </Button>
 
         <Button Text="Default" />
@@ -883,5 +883,5 @@ You've now seen the various ways that you can handle `Button` events and change 
 
 ## Related links
 
-- [ButtonDemos sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ButtonDemos)
+- [ButtonDemos sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos)
 - [Button API](xref:Xamarin.Forms.Button)

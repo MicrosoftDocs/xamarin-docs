@@ -136,7 +136,7 @@ Again, the system will issue a `WKSnapshotRefreshBackgroundTask` so that the app
 When the app marks the `WKSnapshotRefreshBackgroundTask` completed, the system will automatically take a Snapshot of the app's UI.
 
 > [!IMPORTANT]
-> It is important to always schedule a ` WKSnapshotRefreshBackgroundTask` after the app has received new data and updated its User Interface or the user will not see the modified information.
+> It is important to always schedule a `WKSnapshotRefreshBackgroundTask` after the app has received new data and updated its User Interface or the user will not see the modified information.
 
 
 
@@ -700,4 +700,4 @@ This article has covered the enhancements Apple has made to watchOS and how they
 
 ## Related Links
 
-- [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
+- [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

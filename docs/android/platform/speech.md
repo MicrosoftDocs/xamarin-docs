@@ -48,7 +48,7 @@ important.
 A simple definition of understanding is that you are able to determine by tone and context the real meaning of what
 is being said. To interpret just means to take the words and output them in another form.
 
-Consider the following simple example that is used in everyday conversation: 
+Consider the following simple example that is used in everyday conversation:
 
 <kbd>Hello, how are you?</kbd>
 
@@ -197,10 +197,10 @@ langAvailable = langAvailable.OrderBy(t => t).Distinct().ToList();
 ```
 
 This code calls
-[TextToSpeech.IsLanguageAvailable](https://developer.xamarin.com/api/member/Android.Speech.Tts.TextToSpeech.IsLanguageAvailable/p/Java.Util.Locale/) 
-to test if the language package for a given locale is already present on the device. 
+[TextToSpeech.IsLanguageAvailable](xref:Android.Speech.Tts.TextToSpeech.IsLanguageAvailable*)
+to test if the language package for a given locale is already present on the device.
 This method returns a
-[LanguageAvailableResult](https://developer.xamarin.com/api/type/Android.Speech.Tts.LanguageAvailableResult/),
+[LanguageAvailableResult](xref:Android.Speech.Tts.LanguageAvailableResult),
 which indicates whether the language for
 the passed locale is available. If `LanguageAvailableResult` indicates
 that the language is `NotSupported`, then there is no voice package
@@ -217,17 +217,17 @@ speed and the tone of the speech). This goes from 0 to 1, with "normal" speech b
 
 Downloading a new language is performed by using an `Intent`. The
 result of this intent causes the
-[OnActivityResult](https://developer.xamarin.com/api/member/Android.App.Activity.OnActivityResult/)
+[OnActivityResult](xref:Android.App.Activity.OnActivityResult*)
 method to be invoked. Unlike the speech-to-text example (which used the
-[RecognizerIntent](https://developer.xamarin.com/api/type/Android.Speech.RecognizerIntent/)
+[RecognizerIntent](xref:Android.Speech.RecognizerIntent)
 as a `PutExtra` parameter to the `Intent`), the testing and loading `Intent`s are `Action`-based:
 
--   [TextToSpeech.Engine.ActionCheckTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionCheckTtsData/)
+- [TextToSpeech.Engine.ActionCheckTtsData](xref:Android.Speech.Tts.TextToSpeech.Engine.ActionCheckTtsData)
     &ndash; Starts an activity from the platform `TextToSpeech` engine
     to verify proper installation and availability of language
     resources on the device.
 
--   [TextToSpeech.Engine.ActionInstallTtsData](https://developer.xamarin.com/api/field/Android.Speech.Tts.TextToSpeech+Engine.ActionInstallTtsData/)
+- [TextToSpeech.Engine.ActionInstallTtsData](xref:Android.Speech.Tts.TextToSpeech.Engine.ActionInstallTtsData)
     &ndash; Starts an activity that prompts the user to download the necessary
     languages.
 
@@ -306,8 +306,8 @@ the inclusivity of your apps.
 
 ## Related Links
 
-- [Xamarin.Forms DependencyService](https://developer.xamarin.com/samples/UsingDependencyService/)
-- [Text to Speech (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/TextToSpeech)
-- [Speech to Text (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/SpeechToText)
-- [Android.Speech namespace](https://developer.xamarin.com/api/namespace/Android.Speech/)
-- [Android.Speech.Tts namespace](https://developer.xamarin.com/api/namespace/Android.Speech.Tts/)
+- [Xamarin.Forms DependencyService](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice//)
+- [Text to Speech (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-texttospeech)
+- [Speech to Text (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-speechtotext)
+- [Android.Speech namespace](xref:Android.Speech)
+- [Android.Speech.Tts namespace](xref:Android.Speech.Tts)

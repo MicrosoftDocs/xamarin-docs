@@ -35,9 +35,9 @@ UIKit provides several features that make it easy to add animation to an applica
 
 This section discusses UIKit animation features including:
 
--  Transitions between controllers
--  Transitions between views
--  View property animation
+- Transitions between controllers
+- Transitions between views
+- View property animation
 
 
 ### View Controller Transitions
@@ -54,9 +54,9 @@ SecondViewController vc2 = new SecondViewController {
 
 In this case a `PartialCurl` animation is used, although several others are available, including:
 
--  `CoverVertical` – Slides up from the bottom of the screen
--  `CrossDissolve` – The old view fades out & the new view fades in
--  `FlipHorizontal` - A horizontal right-to-left flip. On dismissal the transition flips left-to-right.
+- `CoverVertical` – Slides up from the bottom of the screen
+- `CrossDissolve` – The old view fades out & the new view fades in
+- `FlipHorizontal` - A horizontal right-to-left flip. On dismissal the transition flips left-to-right.
 
 
 To animate the transition, pass `true` as the second argument to `PresentViewController`:
@@ -95,12 +95,12 @@ The screenshot below show the animated transition between the image views when `
 
 UIKit supports animating a variety of properties on the `UIView` class for free, including:
 
--  Frame
--  Bounds
--  Center
--  Alpha
--  Transform
--  Color
+- Frame
+- Bounds
+- Center
+- Alpha
+- Transform
+- Color
 
 
 These animations happen implicitly by specifying property changes in an `NSAction` delegate passed to the static `UIView.Animate` method. For example, the following code animates the center point of a `UIImageView`:
@@ -235,7 +235,7 @@ In this article we looked at the animation capabilities provided via the *Core A
 
 ## Related Links
 
-- [Core Animation Sample](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
+- [Core Animation Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
 - [Core Graphics](~/ios/platform/graphics-animation-ios/core-graphics.md)
 - [Graphics and Animation Walkthrough](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 - [Core Animation](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

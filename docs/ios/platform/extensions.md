@@ -13,7 +13,7 @@ ms.date: 03/22/2017
 
 > [!VIDEO https://youtube.com/embed/Sd0-ch9Udmk]
 
-**Creating Extensions in iOS, by [Xamarin University](https://university.xamarin.com/)**
+**Creating Extensions in iOS video**
 
 Extensions, as introduced in iOS 8, are specialized `UIViewControllers` that are presented by iOS inside standard contexts such as within the **Notification Center**, as custom keyboard types requested by the user to perform specialized input or other contexts like editing a photo where the Extension can provide special effect filters.
 
@@ -39,7 +39,7 @@ Extensions have a number of limitations, some of which are universal to all type
 The universal limitations are:
 
 - The [Health Kit](~/ios/platform/healthkit.md) and [Event Kit UI](~/ios/platform/eventkit.md) Frameworks are not available
-- Extensions cannot use [extended background modes](https://developer.xamarin.com/guides/cross-platform/application_fundamentals/backgrounding/part_3_ios_backgrounding_techniques/registering_applications_to_run_in_background/)
+- Extensions cannot use [extended background modes](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/registering-applications-to-run-in-background.md)
 - Extensions cannot access the device’s cameras or microphones (although they may access existing media files)
 - Extensions cannot receive Air Drop data (although they can transmit data via Air Drop)
 - [UIActionSheet](xref:UIKit.UIActionSheet) and [UIAlertView](xref:UIKit.UIAlertView) are not available; extensions must use [UIAlertController](xref:UIKit.UIAlertController)
@@ -65,11 +65,11 @@ If they choose one of your app's Extensions, its `UIViewController` will be inst
 
 Extensions can communicate with their Host apps via an [NSExtensionContext](xref:Foundation.NSExtensionContext) object. Some Extensions have operations that receive asynchronous callbacks with the results. These callbacks will be executed on background threads and the Extension must take this into consideration; for instance, by using [NSObject.InvokeOnMainThread](xref:Foundation.NSObject.InvokeOnMainThread*) if they want to update the user interface. See the [Communicating with the Host App](#communicating-with-the-host-app) section below for more details.
 
-By default, Extensions and their container apps can not communicate, despite being installed together. In some cases, the Container app is essentially an empty "shipping" container whose purpose is served once the Extension is installed. However, if circumstances dictate, the Container app and the Extension may share resources from a common area. Additionally, a **Today Extension** may request its Container app to open a URL. This behavior is shown in the [Evolve Countdown Widget](https://github.com/xamarin/monotouch-samples/tree/master/ExtensionsDemo).
+By default, Extensions and their container apps can not communicate, despite being installed together. In some cases, the Container app is essentially an empty "shipping" container whose purpose is served once the Extension is installed. However, if circumstances dictate, the Container app and the Extension may share resources from a common area. Additionally, a **Today Extension** may request its Container app to open a URL. This behavior is shown in the [Event Countdown Widget](https://github.com/xamarin/ios-samples/tree/master/intro-to-extensions).
 
 ## Creating an extension
 
-Extensions (and their Container apps) must be 64-bit binaries and built using the Xamarin.iOS [Unified APIs](https://developer.xamarin.com/guides/cross-platform/macios/unified). When developing an Extension, your solutions will contain at least two projects: the container app and one project for each Extension the container provides. 
+Extensions (and their Container apps) must be 64-bit binaries and built using the Xamarin.iOS [Unified APIs](~/cross-platform/macios/unified/index.md). When developing an Extension, your solutions will contain at least two projects: the container app and one project for each Extension the container provides.
 
 ### Container app project requirements
 
@@ -456,5 +456,5 @@ This document has covered Extensions, what they are, the type of Extension Point
 
 ## Related links
 
-- [ContainerApp (sample)](https://developer.xamarin.com/samples/monotouch/intro-to-extensions)
+- [ContainerApp (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/intro-to-extensions)
 - [Creating extensions in Xamarin.iOS (video)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)

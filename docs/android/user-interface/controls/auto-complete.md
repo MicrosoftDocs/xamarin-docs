@@ -1,5 +1,5 @@
 ---
-title: "Auto Complete"
+title: "Auto Complete for Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 08/31/2018
 ---
 
-# Auto Complete
+# Auto Complete for Xamarin.Android
 
 `AutoCompleteTextView` is an editable text view element that shows
 completion suggestions automatically while the user is typing. The list
@@ -21,13 +21,13 @@ choose an item to replace the content of the edit box with.
 
 To create a text entry widget that provides auto-complete suggestions,
 use the
-[`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget. Suggestions are received from a collection of strings
 associated with the widget through an
-[`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/).
+[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter).
 
 In this tutorial, you will create a
-[`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget that provides suggestions for a country name.
 
 ```xml
@@ -48,9 +48,9 @@ widget that provides suggestions for a country name.
 </LinearLayout>
 ```
 
-The [`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/)
+The [`TextView`](xref:Android.Widget.TextView)
 is a label that introduces the
-[`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget.
 
 
@@ -71,11 +71,11 @@ Create an XML file named `list_item.xml` and save it inside the
     android:padding="10dp"
     android:textSize="16sp"
     android:textColor="#000">
-</TextView>
+</TextView> 
 ```
 
 This file defines a simple
-[`TextView`](https://developer.xamarin.com/api/type/Android.Widget.TextView/) that will be used for
+[`TextView`](xref:Android.Widget.TextView) that will be used for
 each item that appears in the list of suggestions.
 
 Open **Resources/Layout/Main.axml** and insert the following:
@@ -99,7 +99,7 @@ Open **Resources/Layout/Main.axml** and insert the following:
 ```
 
 Open **MainActivity.cs** and insert the following code for the
-[`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+[`OnCreate()`](xref:Android.App.Activity.OnCreate*)
 method:
 
 ```csharp
@@ -118,15 +118,15 @@ protected override void OnCreate (Bundle bundle)
 ```
 
 After the content view is set to the `main.xml` layout, the
-[`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget is captured from the layout with
-[`FindViewById`](https://developer.xamarin.com/api/member/Android.App.Activity.FindViewById/). A new
-[`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) is then
+[`FindViewById`](xref:Android.App.Activity.FindViewById*). A new
+[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) is then
 initialized to bind the `list_item.xml` layout to each list item in the
 `COUNTRIES` string array (defined in the next step). Finally,
 `SetAdapter()` is called to associate the
-[`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/) with the
-[`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter) with the
+[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget so that the string array will populate the list of suggestions.
 
 Inside the `MainActivity` class, add the string array:
@@ -179,7 +179,7 @@ static string[] COUNTRIES = new string[] {
 
 This is the list of suggestions that will be provided in a drop-down
 list when the user types into the
-[`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget.
 
 Run the application. As you type, you should see something like this:
@@ -196,7 +196,7 @@ content. Application content such as strings should be externalized
 from the code to make modifications to the content easier and
 facilitate localization of the content. The hard-coded strings are used
 in this tutorial only to make it simple and focus on the
-[`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+[`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget. Instead, your application should declare such string arrays in
 an XML file. This can be done with a `<string-array>` resource in your
 project `res/values/strings.xml` file. For example:
@@ -217,9 +217,9 @@ project `res/values/strings.xml` file. For example:
 ```
 
 To use these resource strings for the
-[`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/),
+[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter),
 replace the original
-[`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
+[`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
 constructor line with the following:
 
 ```csharp
@@ -230,15 +230,11 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### References
 
--   [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Xamarin.Android sample project for the `AutoCompleteTextView`.
--   [`ArrayAdapter`](https://developer.xamarin.com/api/type/Android.Widget.ArrayAdapter/)
--   [`AutoCompleteTextView`](https://developer.xamarin.com/api/type/Android.Widget.AutoCompleteTextView/)
+- [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Xamarin.Android sample project for the `AutoCompleteTextView`
+- [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+- [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 
-*Portions of this page are modifications based on work created and
-shared by the Android Open Source Project and used according to terms
-described in the*
-[ *Creative Commons 2.5 Attribution
-License*](http://creativecommons.org/licenses/by/2.5/) *. This tutorial
-is based on the*
-[ *Android Auto Complete tutorial*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
-*.*
+_Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](http://creativecommons.org/licenses/by/2.5/).
+This tutorial is based on the
+[Android Auto Complete tutorial*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._

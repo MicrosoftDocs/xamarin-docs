@@ -10,7 +10,7 @@ ms.date: 02/02/2018
 
 # GridViewPager
 
-The [GridViewPager](https://developer.xamarin.com/samples/GridViewPager/) sample demonstrates
+The [GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) sample demonstrates
 how to implement the 2D picker navigation pattern for Android Wear.
 
 ![Example screenshot of GridViewPager on a square display](gridviewpager-images/gridviewpager.png)
@@ -52,4 +52,4 @@ pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 
 - [Google's 2D Picker doc](https://developer.android.com/training/wearables/ui/2d-picker.html)
 - [android.support.wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-- [GridViewPager (sample)](https://developer.xamarin.com/samples/GridViewPager/)
+- [GridViewPager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)

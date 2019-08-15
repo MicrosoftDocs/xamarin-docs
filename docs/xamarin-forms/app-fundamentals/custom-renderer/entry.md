@@ -11,7 +11,7 @@ ms.date: 11/26/2018
 
 # Customizing an Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/entry/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)
 
 _The Xamarin.Forms Entry control allows a single line of text to be edited. This article demonstrates how to create a custom renderer for the Entry control, enabling developers to override the default native rendering with their own platform-specific customization._
 
@@ -211,4 +211,4 @@ This article has demonstrated how to create a custom control renderer for the Xa
 
 ## Related Links
 
-- [CustomRendererEntry (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/entry/)
+- [CustomRendererEntry (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)

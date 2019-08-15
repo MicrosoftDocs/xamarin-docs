@@ -1,9 +1,11 @@
 # Xamarin.Forms
 docs/xamarin-forms/ @davidbritch
+docs/get-started/ @davidbritch
+docs/whats-new/ @davidbritch
 
 # iOS & Mac
-docs/ios/ @lobrien
-docs/mac/ @lobrien
+docs/ios/ @conceptdev
+docs/mac/ @conceptdev
 
 # Android
 docs/android/ @conceptdev

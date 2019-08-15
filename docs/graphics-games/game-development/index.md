@@ -50,9 +50,9 @@ Keep in mind that many of the activities listed above can change the state of th
 
 Manually loading and unloading (or disposing) content may be needed depending on which technology you are using in development. Manually loading and unloading of assets may be necessary for a number of reasons:
 
- - Assets may take a long time to load relative to the length of a single frame. Some assets may even take seconds to load, which would severely disrupt the experience if loaded mid gameplay. If the load time is especially lengthy (such as more than a second or two) you may want to show an animated loading screen or progress bar.
- - Assets can consume a lot of RAM, requiring active management of what is loaded to fit within what is provided by the game’s target platforms.
- - Games may need to display more assets than can fit in RAM. "Open World" games often include large environments which players can navigate through seamlessly – that is with no loading screens. In this case you may need to create a custom system for streaming content in and managing memory usage.
+- Assets may take a long time to load relative to the length of a single frame. Some assets may even take seconds to load, which would severely disrupt the experience if loaded mid gameplay. If the load time is especially lengthy (such as more than a second or two) you may want to show an animated loading screen or progress bar.
+- Assets can consume a lot of RAM, requiring active management of what is loaded to fit within what is provided by the game’s target platforms.
+- Games may need to display more assets than can fit in RAM. "Open World" games often include large environments which players can navigate through seamlessly – that is with no loading screens. In this case you may need to create a custom system for streaming content in and managing memory usage.
 
 Custom file formats may need processing at load time, requiring custom loading code.
 
@@ -104,25 +104,11 @@ Remaking existing games is also an educational experience, although this may lim
 
 Developers using Xamarin.Android and Xamarin.iOS have a wide range of technologies available to them to assist in game development. This section will discuss some of the most popular cross-platform solutions.
 
-### CocosSharp
-
-CocosSharp is an open-source, cross-platform version of the Cocos 2D game engine. The engine provides access to Android, iOS, Mac OS X, Windows Desktop, Windows RT and Windows Phone.
-
-CocosSharp focuses on a simple programmer API for 2D game development. The growth in gaming on mobile devices has helped to reignite the popularity of 2D game development making CocosSharp viable technology for hobby and commercial projects alike. It is provided as source code or .dll files (which can be obtained through NuGet) but it does not offer a visual editor; therefore, any interaction with the CocosSharp engine requires knowledge of programming.
-
-To get started with CocosSharp, check out our [CocosSharp guides](~/graphics-games/cocossharp/index.md).
-
-The game Angry Ninjas is created with CocosSharp, and it can be a good starting point if you’re looking for an already-running game for multiple platforms:
-
-![](images/image3.png "The game Angry Ninjas was created with CocosSharp")
-
-You can download it and get more information at the [AngryNinjas Github page](https://github.com/xamarin/AngryNinjas).
-
 ### MonoGame
 
 MonoGame is an open-source, cross platform version of Microsoft’s XNA API. MonoGame can be used to make games for iOS, Android, Mac OS X, Linux, Windows, Windows RT, PS4, PSVita, Xbox One, and Switch.
 
-Unlike CocosSharp, MonoGame is technically not a game engine, but rather a game development API. This means that working with MonoGame requires directly managing game objects, manually drawing objects, and implementing common objects such as cameras and *scene graphs* (the parent child hierarchy between game objects). To help understand the distinction, consider that CocosSharp is built on top of MonoGame. MonoGame generalizes some of the platform-specific technology, such as graphics, rendering, and audio, while CocosSharp provides code for organizing and implementing game logic.
+MonoGame is technically not a game engine, but rather a game development API. This means that working with MonoGame requires directly managing game objects, manually drawing objects, and implementing common objects such as cameras and *scene graphs* (the parent child hierarchy between game objects).
 
 MonoGame does not offer a standard visual development environment, so working with MonoGame requires programming knowledge.
 
@@ -158,6 +144,5 @@ The technologies highlighted above is only a sample of the technologies availabl
 
 ## Related Links
 
-- [CocosSharp Guides](~/graphics-games/cocossharp/index.md)
 - [MonoGame Guides](~/graphics-games/monogame/index.md)
 - [UrhoSharp Guides](~/graphics-games/urhosharp/index.md)

@@ -13,7 +13,7 @@ ms.date: 07/30/2018
 
 To understand how `RecyclerView` works in a typical application, this
 topic explores the
-[RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) sample
+[RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) sample
 app, a simple code example that uses `RecyclerView` to display a large
 collection of photos: 
 
@@ -62,7 +62,7 @@ Because the implementation details of `PhotoAlbum` are not relevant to
 understanding `RecyclerView`, the `PhotoAlbum` source code is not
 presented here. The source code to `PhotoAlbum` is available at
 [PhotoAlbum.cs](https://github.com/xamarin/monodroid-samples/blob/master/android5.0/RecyclerViewer/RecyclerViewer/PhotoAlbum.cs)
- in the [RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer/) sample app.
+ in the [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) sample app.
 
 
 ### Layout and Initialization
@@ -231,13 +231,13 @@ that is passed into the constructor; the constructor copies the photo
 album into this member variable. The following required
 `RecyclerView.Adapter` methods are implemented:
 
--   **`OnCreateViewHolder`** &ndash; Instantiates the item layout file and
+- **`OnCreateViewHolder`** &ndash; Instantiates the item layout file and
     view holder.
 
--   **`OnBindViewHolder`** &ndash; Loads the data at the specified position
+- **`OnBindViewHolder`** &ndash; Loads the data at the specified position
     into the views whose references are stored in the given view holder.
 
--   **`ItemCount`** &ndash; Returns the number of items in the data source.
+- **`ItemCount`** &ndash; Returns the number of items in the data source.
 
 The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. The implementation of these methods is
@@ -521,7 +521,7 @@ update `RecyclerView` when the underlying data source changes.
 
 ## Related Links
 
-- [RecyclerViewer (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerViewer (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md)
 - [RecyclerView Parts and Functionality](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
 - [Extending the RecyclerView Example](~/android/user-interface/layouts/recycler-view/extending-the-example.md)

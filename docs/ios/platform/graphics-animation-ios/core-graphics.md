@@ -19,10 +19,10 @@ Core Graphics is a low-level 2D graphics framework that allows drawing device in
 
 Core Graphics supports drawing in a number of scenarios including:
 
--  [Drawing to the screen via a  `UIView`](#Drawing_in_a_UIView_Subclass) .
--  [Drawing images in memory or on screen](#Drawing_Images_and_Text).
--  Creating and drawing to a PDF.
--  Reading and drawing an existing PDF.
+- [Drawing to the screen via a  `UIView`](#Drawing_in_a_UIView_Subclass) .
+- [Drawing images in memory or on screen](#Drawing_Images_and_Text).
+- Creating and drawing to a PDF.
+- Reading and drawing an existing PDF.
 
 
 ## Geometric Space
@@ -31,9 +31,9 @@ Regardless of the scenario, all drawing done with Core Graphics is done in geome
 
 There are a few benefits to this approach:
 
--  Drawing code becomes dynamic, and can subsequently modify graphics at runtime.
--  Reducing the need for static images in the application bundle can reduce application size.
--  Graphics become more resilient to resolution changes across devices.
+- Drawing code becomes dynamic, and can subsequently modify graphics at runtime.
+- Reducing the need for static images in the application bundle can reduce application size.
+- Graphics become more resilient to resolution changes across devices.
 
 <a name="Drawing_in_a_UIView_Subclass"/>
 
@@ -265,10 +265,10 @@ The resulting text is displayed with the image as shown below:
 
 In addition to drawing to a view's graphics context, Core Graphics supports drawing memory backed images, also known as drawing off-screen. Doing so requires:
 
--  Creating a graphics context that is backed by an in memory bitmap
--  Setting drawing state and issuing drawing commands
--  Getting the image from the context
--  Removing the context
+- Creating a graphics context that is backed by an in memory bitmap
+- Setting drawing state and issuing drawing commands
+- Getting the image from the context
+- Removing the context
 
 
 Unlike the `Draw` method, where the context is supplied by the view, in this case you create the context in one of two ways:
@@ -424,7 +424,7 @@ In this article we looked at the graphics capabilities provided via the *Core Gr
 
 ## Related Links
 
-- [Core Graphics Sample](https://developer.xamarin.com/samples/monotouch/GraphicsAndAnimation/)
+- [Core Graphics Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/graphicsandanimation)
 - [Graphics and Animation Walkthrough](~/ios/platform/graphics-animation-ios/graphics-animation-walkthrough.md)
 - [Core Animation](~/ios/platform/graphics-animation-ios/core-animation.md)
 - [Core Animation recipes](https://github.com/xamarin/recipes/tree/master/Recipes/ios/animation/coreanimation)

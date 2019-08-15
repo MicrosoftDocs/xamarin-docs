@@ -42,8 +42,8 @@ sections:
       href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: iOS 12
-      href: ~/ios/platform/introduction-to-ios12/index.md
+      text: iOS 13 preview
+      href: ~/ios/platform/ios13/index.md
 - title: Guides
   items:
   - type: list
@@ -121,5 +121,5 @@ sections:
       html: <p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12">iOS API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8">Base Class Library</a></p>
     - title: Samples
       href: https://developer.xamarin.com/samples
-      html: <p><a href="https://developer.xamarin.com/samples/ios/all/">iOS Samples</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">watchOS Samples</a></p><p><a href="https://developer.xamarin.com/samples/ios/all/">tvOS Samples</a></p>
+      html: <p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">iOS Samples</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">watchOS Samples</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">tvOS Samples</a></p>
     

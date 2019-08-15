@@ -34,12 +34,12 @@ The following enhancement have been made to the AppKit Framework for macOS Sierr
 - The deferred view layout pass has been optimized and extended.
 - The drag-and-drop API now includes the new `NSFilePromiseProvider` and `NSFilePromiseReceiver` classes to support drag flocking.
 - Several convenience constructors have been added to existing controls:
-	-  `NSButton` includes new constructors for creating push buttons, checkboxes and radio buttons.
-	-  `NSTextField` includes new constructors for creating wrapping and non-wrapping labels, attributed labels and editable text fields.
-	-  `NSSegmentedControl` includes new constructors for creating segmented controls from a group of labels or images.
-	-  `NSSlider` includes new constructors for creating horizontal linear sliders.
-	-  `NSImageView` includes new constructors for creating non-editable image views from a given `NSImage`.
--  The new `NSGridView` has been added to auto layout a collection of sub views into a grid with variable sized rows and columns that can be dynamically hidden or shown.
+	- `NSButton` includes new constructors for creating push buttons, checkboxes and radio buttons.
+	- `NSTextField` includes new constructors for creating wrapping and non-wrapping labels, attributed labels and editable text fields.
+	- `NSSegmentedControl` includes new constructors for creating segmented controls from a group of labels or images.
+	- `NSSlider` includes new constructors for creating horizontal linear sliders.
+	- `NSImageView` includes new constructors for creating non-editable image views from a given `NSImage`.
+- The new `NSGridView` has been added to auto layout a collection of sub views into a grid with variable sized rows and columns that can be dynamically hidden or shown.
 
 <a name="AVFoundation-Framework-Enhancements" />
 
@@ -196,5 +196,5 @@ The following frameworks have been added to macOS Sierra:
 
 ## Related Links
 
-- [Mac Samples](https://developer.xamarin.com/samples/mac/)
+- [Mac Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac)
 - [What's new in OS X 10.12](https://developer.apple.com/library/prerelease/content/releasenotes/MacOSX/WhatsNewInOSX/Articles/OSXv10.html#//apple_ref/doc/uid/TP40017145-SW1)

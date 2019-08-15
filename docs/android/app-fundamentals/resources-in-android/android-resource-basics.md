@@ -28,20 +28,20 @@ default resources are setup by the Xamarin.Android project template:
 The five files that make up the default resources were created in the
 Resources folder:
 
--  **Icon.png** &ndash; The default icon for the application
+- **Icon.png** &ndash; The default icon for the application
 
--  **Main.axml** &ndash; The default user interface layout file for an
+- **Main.axml** &ndash; The default user interface layout file for an
    application. Note that while Android uses the **.xml** file
    extension, Xamarin.Android uses the **.axml** file extension.
 
--  **Strings.xml** &ndash; A string table to help with localization of
+- **Strings.xml** &ndash; A string table to help with localization of
    the application
 
--  **AboutResources.txt** &ndash; This is not necessary and may safely
+- **AboutResources.txt** &ndash; This is not necessary and may safely
    be deleted. It just provides a high level overview of the Resources
    folder and the files in it.
 
--  **Resource.designer.cs** &ndash; This file is automatically
+- **Resource.designer.cs** &ndash; This file is automatically
    generated and maintained by Xamarin.Android and holds the unique
    ID's assigned to each resource. This is very similar and identical
    in purpose to the R.java file that an Android application written in
@@ -135,14 +135,14 @@ syntax:
 [<PackageName>.]Resource.<ResourceType>.<ResourceName>
 ```
 
--  **PackageName** &ndash; The package which is providing the resource
+- **PackageName** &ndash; The package which is providing the resource
    and is only required when resources from other packages are being
    used.
 
--  **ResourceType** &ndash; This is the nested resource type that is
+- **ResourceType** &ndash; This is the nested resource type that is
    within the Resource class described above.
 
--  **Resource Name** &ndash; this is the filename of the resource
+- **Resource Name** &ndash; this is the filename of the resource
    (without the extension) or the value of the android:name attribute
    for resources that are in an XML element.
 
@@ -155,14 +155,14 @@ Resources in an XML file are accessed by a following a special syntax:
 @[<PackageName>:]<ResourceType>/<ResourceName>
 ```
 
--  **PackageName** &ndash; the package which is providing the resource
+- **PackageName** &ndash; the package which is providing the resource
    and is only required when resources from other packages are being
    used.
 
--  **ResourceType** &ndash; This is the nested resource type that is
+- **ResourceType** &ndash; This is the nested resource type that is
    within the Resource class.
 
--  **Resource Name** &ndash; this is the filename of the resource
+- **Resource Name** &ndash; this is the filename of the resource
    (*without* the file type extension) or the value of the
    `android:name` attribute for resources that are in an XML element.
 

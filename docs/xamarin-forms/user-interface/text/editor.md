@@ -11,7 +11,7 @@ ms.date: 02/26/2018
 
 # Xamarin.Forms Editor
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Multi-line text input_
 
@@ -64,7 +64,7 @@ Users can be prevented from modifying the text in an [`Editor`](xref:Xamarin.For
 ```
 
 ```csharp
-var editor= new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
+var editor = new Editor { Text = "This is a read-only Editor", IsReadOnly = true });
 ```
 
 > [!NOTE]
@@ -259,7 +259,7 @@ Make sure that the background and text colors you choose are usable on each plat
 
 ### Completed
 
-The `Completed` event is used to react to the completion of an interaction with an `Editor`. `Completed` is raised when the user ends input with a field by entering the return key on the keyboard. The handler for the event is a generic event handler, taking the sender and `EventArgs`:
+The `Completed` event is used to react to the completion of an interaction with an `Editor`. `Completed` is raised when the user ends input with a field by entering the return key on the keyboard (or by pressing the Tab key on UWP). The handler for the event is a generic event handler, taking the sender and `EventArgs`:
 
 ```csharp
 void EditorCompleted (object sender, EventArgs e)
@@ -355,5 +355,5 @@ Title="Editor Demo">
 
 ## Related Links
 
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Editor API](xref:Xamarin.Forms.Editor)

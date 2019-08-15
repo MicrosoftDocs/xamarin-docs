@@ -14,7 +14,7 @@ ms.date: 04/25/2018
 Documents in this section cover features specific to Android Wear. Here
 you'll find a topic that describes how to create a WatchFace.
  
-##  [Creating a Watch Face](~/android/wear/platform/creating-a-watchface.md)
+## [Creating a Watch Face](~/android/wear/platform/creating-a-watchface.md)
 
 A step-by-step walkthrough for implementing a custom watch face service
 for Android Wear. Instructions are provided for building a stripped

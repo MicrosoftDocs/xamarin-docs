@@ -63,7 +63,7 @@ device. By using the support v4 notification API and the
 [Xamarin Android Support Library](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)), 
 you can tap into the native features of the platform, like inbox 
 style cards or voice input. The 
-[RecipeAssistant](https://developer.xamarin.com/samples/monodroid/wear/RecipeAssistant/) 
+[RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant) 
 sample provides example code that demonstrates how to send a list 
 of notifications to an Android Wear device. 
 
@@ -74,7 +74,7 @@ of notifications to an Android Wear device.
 Another strategy is to create a complete application that runs natively 
 on the wearable device and pairs with a companion handheld app. A good 
 example of this approach is the 
-[Quiz](https://developer.xamarin.com/samples/monodroid/wear/Quiz/) sample app, which demonstrates 
+[Quiz](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-quiz) sample app, which demonstrates 
 how to create a quiz that runs on a handheld device and asks quiz
 questions on the wearable device. 
 
@@ -94,7 +94,7 @@ represent each row and column cells as a `Fragment`:
 
 Wear also makes use of action buttons that consist of a big colored circle
 with small description text underneath it (as illustrated above).  The
-[GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/) sample demonstrates
+[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager) sample demonstrates
 how to use `GridViewPager` and `GridPagerAdapter` in a Wear app.
 
 Android Wear 2.0 adds a navigation drawer, an action drawer, and inline 
@@ -132,7 +132,7 @@ You can choose to register callbacks for receiving those messages
 via each of the API listener interfaces or, alternatively,
 implement a service in your app that derives from `WearableListenerService`.
 This service will be automatically instantiated by Android Wear.
-The [FindMyPhone](https://developer.xamarin.com/samples/monodroid/wear/FindMyPhoneSample/) sample
+The [FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) sample
 illustrates how to implement a `WearableListenerService`.
 
 
@@ -154,27 +154,27 @@ The best way to become familiar with Android Wear is to build and test
 your first app. The following list provides a recommended reading
 order to help you get up to speed quickly:
 
-1.  [Setup & Installation](~/android/wear/get-started/installation.md) provides 
+1. [Setup & Installation](~/android/wear/get-started/installation.md) provides 
     detailed instructions for installing and configuring your development 
     environment for building Xamarin.Android Wear apps. 
 
-2.  After you have installed the required packages and configured an 
+2. After you have installed the required packages and configured an 
     emulator or device, see 
     [Hello, Wear](~/android/wear/get-started/hello-wear.md) for 
     step-by-step instructions that explain how to create a small 
     Android Wear project that handles button clicks and displays a 
     click counter on the Wear device. 
 
-3.  [Deployment & Testing](~/android/wear/deploy-test/index.md) provides
+3. [Deployment & Testing](~/android/wear/deploy-test/index.md) provides
     more detailed information about configuring and deploying to emulators
     and devices, including instructions on how to deploy your app to a
     Wear device via Bluetooth.
 
-4.  [Working with Screen Sizes](~/android/wear/screen-sizes.md) 
+4. [Working with Screen Sizes](~/android/wear/screen-sizes.md) 
     explains how to preview and optimize your user interface for the various 
     available screen sizes on Wear devices. 
 
-5.  [Working with Packaging](~/android/wear/deploy-test/packaging.md) 
+5. [Working with Packaging](~/android/wear/deploy-test/packaging.md) 
     describes the steps for manually packaging Wear apps for distribution 
     on Google Play.
 
@@ -290,8 +290,8 @@ Wrist gestures make it possible for users to interact with your app
 without using the touch screen &ndash; users can respond to the app 
 with a single hand. Two wrist gestures are supported: 
 
--   Flick wrist out
--   Flick wrist in
+- Flick wrist out
+- Flick wrist in
 
 For more information, see the Android 
 [Wrist Gestures](https://developer.android.com/wear/preview/features/gestures.html) 
@@ -325,7 +325,7 @@ Check out Google's Android Wear documentation:
 
 * [About Android Wear](http://www.android.com/wear/)
 * [Android Wear App Design](https://developer.android.com/design/wear/index.html)
-* [android.support.wearable library ](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+* [android.support.wearable library](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
 * [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
 
 

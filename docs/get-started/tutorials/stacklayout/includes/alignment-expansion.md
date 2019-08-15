@@ -116,3 +116,8 @@ The [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`Verti
     > When all the space in a [`StackLayout`](xref:Xamarin.Forms.StackLayout) is used, expansion preferences have no effect.
 
     For more information about alignment and expansion, see [Layout Options in Xamarin.Forms](~/xamarin-forms/user-interface/layouts/layout-options.md).
+
+-----
+
+> [!div class="nextstepaction"]
+> [I ran into an issue](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+3+Feedback&template=tutorial_template.md)

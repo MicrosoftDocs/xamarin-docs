@@ -17,7 +17,7 @@ _Control templates provide a clean separation between the appearance of a page a
 
 Xamarin.Forms control templates provide the ability to easily theme and re-theme application pages at runtime. This article provides an introduction to control templates.
 
-## [Creating a ControlTemplate](creating.md)
+## [Create a ControlTemplate](creating.md)
 
 Control templates can be defined at the application level or at the page level. This article demonstrates how to create and consume control templates.
 

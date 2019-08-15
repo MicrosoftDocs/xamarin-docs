@@ -1,78 +1,61 @@
 ---
-title: "Portable Visual Basic.NET"
-description: "This guide will explain how Visual Basic can be used to write Portable Class Library (PCL) projects that can be used in solutions targeting Xamarin.iOS and Xamarin.Android."
+title: "Visual Basic and .NET Standard"
+description: "This guide will explain how Visual Basic can be used to write .NET Standard projects that can be used in solutions targeting Xamarin.iOS and Xamarin.Android."
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
-author: asb3993
-ms.author: amburns
-ms.date: 03/23/2017
+author: conceptdev
+ms.author: crdun
+ms.date: 04/24/2019
 ---
 
-# Portable Visual Basic.NET
+# Visual Basic and .NET Standard
 
-Xamarin iOS and Android projects do not natively support Visual Basic; however developers can use Portable Class Libraries to migrate existing Visual Basic code to iOS and Android, or to write significant portion of their application logic in Visual Basic. Xamarin.Forms applications can be created entirely in Visual Basic (excluding custom renderers, dependency services, and XAML codebehind).
+Xamarin Android and iOS projects do not natively support Visual Basic; however developers can use [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md) libraries to migrate existing Visual Basic code to Android and iOS, or to write significant portion of their application logic in Visual Basic. Xamarin.Forms applications can be created entirely in Visual Basic (excluding custom renderers, dependency services, and XAML code-behind).
 
 ## Requirements
 
-Portable Class Library Support was added in Xamarin.Android 4.10.1, Xamarin.iOS 7.0.4 and Xamarin Studio 4.2, meaning any Xamarin projects created with those tools can incorporate Visual Basic PCL assemblies.
-
-To create and compile Visual Basic Portable Class Libraries you must use Visual Studio on Windows (Visual Studio 2012 or newer).
+To create and compile Visual Basic .NET Standard libraries you must use Visual Studio on Windows (Visual Studio 2017 or newer).
 
 > [!NOTE]
-> Visual Basic libraries can only be created and compiled using Visual Studio. Xamarin.iOS and Xamarin.Android do not support the Visual Basic language.
+> Visual Basic libraries can only be created and compiled using Visual Studio. Xamarin.Android and Xamarin.iOS do not support the Visual Basic language.
 >
-> If you work solely in Visual Studio you can reference the Visual Basic project from Xamarin.iOS and Xamarin.Android projects.
+> If you work solely in Visual Studio you can reference the Visual Basic project from Xamarin.Android and Xamarin.iOS projects.
 >
-> If your iOS and Android projects must also be loaded in Visual Studio for Mac you should reference the output assembly from the Visual Basic PCL.
+> If your Android and iOS projects must also be loaded in Visual Studio for Mac you should reference the output assembly from the Visual Basic assembly.
 
+## Creating a Visual Basic.NET .NET Standard library
 
-## Creating a Visual Basic.NET PCL
+This section walks through how to create a Visual Basic .NET Standard library using Visual Studio 2019.
+The library can then be referenced in other projects, including Xamarin.Android, Xamarin.iOS, and Xamarin.Forms apps.
 
-This section walks through how to create a Visual Basic Portable Class Library using Visual Studio.
-The library can then be referenced in other projects, including Xamarin.iOS, Xamarin.Android, and Xamarin.Forms apps.
+When adding a Visual Basic .NET Standard library in Visual Studio you must be careful to choose the correct project type:
 
-### Creating a PCL
+1. From Visual Studio 2019 choose **Create a new project**.
 
-When adding a Visual Basic PCL in Visual Studio you must choose a Profile that describes what platforms your library should be compatible with. Profiles are explained in the Introduction to PCL document.
+2. Type **Visual Basic library** to filter the project options and choose the **Class Library (.NET Standard)** option with the Visual Basic icon:
 
-The steps to create a PCL and choose its Profile are:
+    [![Filter for Visual Basic library](xamarin-forms-images/06-sml.png)](xamarin-forms-images/06.png#lightbox)
 
-1.  In the  **New Project** screen, select the  **Visual Basic > Class Library (Portable)** option:
+3. On the next screen, type a name for the project and press **Create**.
 
-    [![](images/image1-sml.png "Create new Visual Basic Portable Library")](images/image1.png#lightbox)
+4. The Visual Basic project will appear as shown in the  **Solution Explorer** like this:
 
-1.  Visual Studio will immediately prompt with the following  **Add Portable Class Library** dialog so that the Profile can be configured. Tick the platforms you need to support and press **OK**.
+    [![Empty Visual Basic project](images/new-library-sml.png)](images/new-library.png#lightbox)
 
-    [![](images/image2-sml.png "Select PCL Profile by choosing platforms")](images/image2.png#lightbox)
-
-1.  The Visual Basic PCL project will appear as shown in the  **Solution Explorer** like this:
-
-    [![](images/image3-sml.png "Empty Visual Studio PCL project")](images/image3.png#lightbox)
-
-
-The PCL is now ready for Visual Basic code to be added. PCL projects can be referenced by other projects (Application projects, Library projects and even other PCL projects).
-
-### Editing the PCL Profile
-
-The PCL Profile (that controls which platforms the PCL is compatible with) can be viewed and changed by right-clicking on the project and choosing **Properties > Library > Change...**. The resulting dialog is shown in this screenshot:
-
- [![](images/image4-sml.png "Edit PCL Profile in project properties")](images/image4.png#lightbox)
-
-If the profile is changed after code has already been added to the PCL, it’s possible that the library will no longer compile if the code references features that are not part of the newly selected profile.
-
+The project is now ready for Visual Basic code to be added. .NET Standard projects can be referenced by other projects (application projects or library projects).
 
 ## Summary
 
-This article has demonstrated how consume Visual Basic code in Xamarin applications using Visual Studio and Portable Class Libraries. Even though Xamarin does not support Visual Basic directly, compiling Visual Basic into a PCL allows code written with Visual Basic to be included in iOS and Android apps.
+This article has demonstrated how consume Visual Basic code in Xamarin applications using Visual Studio. Even though Xamarin does not support Visual Basic directly, compiling Visual Basic into a .NET Standard library allows code written with Visual Basic to be included in Android and iOS apps.
 
-The following pages describe how to use Visual Basic.NET PCLs in native or Xamarin.Forms apps:
+The following pages describe how to use Visual Basic.NET .NET Standard libraries in native or Xamarin.Forms apps:
 
 - [Building native Xamarin.iOS and Xamarin.Android apps that use VB](native-apps.md)
 - [Building Xamarin.Forms apps with VB](xamarin-forms.md)
-
 
 ## Related Links
 
 - [TaskyPortableVB (sample)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyPortableVB)
 - [XamarinFormsVB (sample)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)
-- [Cross-Platform Development with the .NET Framework (Microsoft)](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
+- [.NET Standard and Xamarin](~/cross-platform/app-fundamentals/net-standard.md)
+- [.NET Standard](/dotnet/standard/net-standard/)

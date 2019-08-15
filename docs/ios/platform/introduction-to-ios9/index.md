@@ -103,7 +103,7 @@ The [HomeKit](xref:HomeKit) framework, introduced in iOS 8, provides the ability
 
 In iOS 9, Apple has made setup easier, expanded the types of accessories supported and provided more accessory interactions (such as controlling an accessory remotely via iCloud).
 
-For more information, see our [Introduction to HomeKit](~/ios/platform/homekit.md), [HomeKitIntro iOS Sample App](https://developer.xamarin.com/samples/monotouch/HomeKit/HomeKitIntro/) and Apple's [HomeKit](https://developer.apple.com/homekit/) documentation.
+For more information, see our [Introduction to HomeKit](~/ios/platform/homekit.md), [HomeKitIntro iOS Sample App](https://docs.microsoft.com/samples/xamarin/ios-samples/homekit-homekitintro) and Apple's [HomeKit](https://developer.apple.com/homekit/) documentation.
 
 ## Handoff Framework Changes
 
@@ -189,14 +189,14 @@ For a complete list of specific API deprecations, see Apple's
 
 ## iOS 9 Sample Apps
 
-We have some [iOS 9-specific samples](https://developer.xamarin.com/samples/ios/iOS9/) to get started:
+We have some [iOS 9-specific samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) to get started:
 
 - [AstroLayout](https://github.com/xamarin/monotouch-samples/tree/master/ios9/AstroLayout)
 - [CollectionView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/CollectionView)
-- [MetalPerformanceShadersHelloWorld](https://developer.xamarin.com/samples/monotouch/ios9/MetalPerformanceShadersHelloWorld/)
-- [MusicMotion](https://developer.xamarin.com/samples/monotouch/ios9/MusicMotion/)
-- [PhotoProgress](https://developer.xamarin.com/samples/monotouch/ios9/PhotoProgress/)
-- [SegueCatalog](https://developer.xamarin.com/samples/monotouch/ios9/SegueCatalog/)
+- [MetalPerformanceShadersHelloWorld](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-metalperformanceshadershelloworld)
+- [MusicMotion](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-musicmotion)
+- [PhotoProgress](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-photoprogress)
+- [SegueCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-seguecatalog)
 - [StackView](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StackView)
 - [StickyCorners](https://github.com/xamarin/monotouch-samples/tree/master/ios9/StickyCorners)
 
@@ -209,7 +209,7 @@ Also check out the iOS portions of these samples (companion Mac OS X versions co
 
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [Introduction to 3D Touch](~/ios/platform/3d-touch.md)
 - [App Transport Security](~/ios/app-fundamentals/ats.md)
 - [Multitasking for iPad](~/ios/platform/multitasking.md)

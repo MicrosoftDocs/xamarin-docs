@@ -30,11 +30,11 @@ orientation changes.
 
 This guide examines the following orientation topics:
 
--   **Declarative Layout Rotation** &ndash; How to use the Android
+- **Declarative Layout Rotation** &ndash; How to use the Android
     resource system to build orientation-aware applications, including
     how to load both layouts and drawables for particular orientations.
 
--   **Programmatic Layout Rotation** &ndash; How to add controls
+- **Programmatic Layout Rotation** &ndash; How to add controls
     programmatically as well as how to handle orientation changes
     manually.
 
@@ -45,10 +45,10 @@ By including files in folders that follow naming conventions, Android
 automatically loads the appropriate files when the orientation changes.
 This includes support for:
 
--   *Layout Resources* &ndash; Specifying which layout files are
+- *Layout Resources* &ndash; Specifying which layout files are
     inflated for each orientation.
 
--   *Drawable Resources* &ndash; Specifying which drawables are loaded
+- *Drawable Resources* &ndash; Specifying which drawables are loaded
     for each orientation.
 
 
@@ -177,12 +177,12 @@ use XML resources.
 To add controls programmatically, an application needs to perform the
 following steps:
 
--  Create a layout.
--  Set layout parameters.
--  Create controls.
--  Set control layout parameters.
--  Add controls to the layout.
--  Set the layout as the content view.
+- Create a layout.
+- Set layout parameters.
+- Create controls.
+- Set control layout parameters.
+- Add controls to the layout.
+- Set the layout as the content view.
 
 For example, consider a user interface consisting of a single
 `TextView` control added to a `RelativeLayout`, as shown in the
@@ -404,7 +404,7 @@ manually.
 
 ## Related Links
 
-- [Rotation Demo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/RotationDemo/)
+- [Rotation Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-rotationdemo)
 - [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Handling Runtime Changes](https://developer.android.com/guide/topics/resources/runtime-changes.html)
 - [Fast Screen Orientation Change](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)

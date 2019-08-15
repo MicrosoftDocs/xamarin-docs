@@ -30,6 +30,10 @@ Background processing or backgrounding is the process of letting applications pe
 
 This article examines how to create iOS applications entirely in code using Visual Studio and Visual Studio for Mac. It shows how to start from an empty project template to build an application screen in a controller by creating a hierarchy of views from UIKit. Then, it discusses how to create custom views that can be loaded in a controller.
 
+## [Exception marshaling](~/ios/platform/exception-marshaling.md)
+
+Describes how Objective-C and managed exceptions are marshaled between native and managed frames.
+
 ## [Events, protocols, and delegates](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 
 This article presents the key iOS technologies used to receive callbacks and to populate user interface controls with data. These technologies are events, protocols, and delegates; this article explains what each of these is and how each is used from C#. It demonstrates how Xamarin.iOS uses iOS controls to expose familiar .NET events, as well as how Xamarin.iOS provides support for Objective-C concepts such as protocols and delegates (Objective-C delegates should not be confused with C# delegates). This article also provides examples that show how protocols are used both as the basis for Objective-C delegates and in non-delegate scenarios.

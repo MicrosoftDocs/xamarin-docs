@@ -1,5 +1,5 @@
 ---
-title: "Navigation Bar"
+title: "Xamarin.Android Navigation Bar"
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 05/01/2017
 ---
 
-# Navigation Bar
+# Xamarin.Android Navigation Bar
 
 Android 4 introduced a new system user interface feature called a
 *Navigation Bar*, which provides navigation controls on devices that
@@ -22,9 +22,9 @@ Several new flags are available that control the visibility of the Navigation
 Bar and its controls, as well as the visibility of the System Bar that was
 introduced in Android 3. The flags are defined in the `Android.View.View` class and are listed below:
 
--   `SystemUiFlagVisible` &ndash; Makes the Navigation Bar visible. 
--   `SystemUiFlagLowProfile` &ndash; Dims out controls in the Navigation Bar. 
--   `SystemUiFlagHideNavigation` &ndash; Hides the Navigation Bar. 
+- `SystemUiFlagVisible` &ndash; Makes the Navigation Bar visible. 
+- `SystemUiFlagLowProfile` &ndash; Dims out controls in the Navigation Bar. 
+- `SystemUiFlagHideNavigation` &ndash; Hides the Navigation Bar. 
 
 
 These flags can be applied to any view in the view hierarchy by setting
@@ -79,6 +79,6 @@ tv.SystemUiVisibilityChange +=
 
 ## Related Links
 
-- [SystemUIVisibilityDemo (sample)](https://developer.xamarin.com/samples/monodroid/SystemUIVisibilityDemo/)
+- [SystemUIVisibilityDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

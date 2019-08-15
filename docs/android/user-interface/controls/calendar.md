@@ -1,5 +1,5 @@
 ---
-title: "Calendar"
+title: "Xamarin.Android Calendar"
 ms.prod: xamarin
 ms.assetid: 78666541-CA14-4CD8-A94A-A9621C57813E
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# Calendar
+# Xamarin.Android Calendar
 
 
 ## Calendar API
@@ -289,10 +289,10 @@ event to a calendar. For this to work, be sure to include the
 `android.permission.WRITE_CALENDAR` permission we mentioned earlier. To
 add an event to a calendar, we will:
 
-1.  Create a  `ContentValues` instance.
-1.  Use keys from the  `CalendarContract.Events.InterfaceConsts` class to populate the  `ContentValues` instance.
-1.  Set the time zones for the event start and end times.
-1.  Use a  `ContentResolver` to insert the event data into the calendar.
+1. Create a  `ContentValues` instance.
+1. Use keys from the  `CalendarContract.Events.InterfaceConsts` class to populate the  `ContentValues` instance.
+1. Set the time zones for the event start and end times.
+1. Use a  `ContentResolver` to insert the event data into the calendar.
 
 
 The code below illustrates these steps:
@@ -359,6 +359,6 @@ calendar capabilities.
 
 ## Related Links
 
-- [Calendar Demo (sample)](https://developer.xamarin.com/samples/CalendarDemo/)
+- [Calendar Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

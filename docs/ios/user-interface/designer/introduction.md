@@ -354,9 +354,9 @@ The **Properties Window** contains three sections:
 
 -----
 
-1.  **Widget** – The main properties of the control, such as name, class, style properties, etc. Properties for managing the control’s content are usually placed here.
-2.  **Layout** – Properties that keep track of the position and size of the control, including constraints and frames, are listed here.
-3.  **Events** – Events and event handlers are specified here. Useful for handling events such as touch, tap, drag, etc. Events can also be handled directly in code.
+1. **Widget** – The main properties of the control, such as name, class, style properties, etc. Properties for managing the control’s content are usually placed here.
+2. **Layout** – Properties that keep track of the position and size of the control, including constraints and frames, are listed here.
+3. **Events** – Events and event handlers are specified here. Useful for handling events such as touch, tap, drag, etc. Events can also be handled directly in code.
 
 # [Visual Studio for Mac](#tab/macos)
 

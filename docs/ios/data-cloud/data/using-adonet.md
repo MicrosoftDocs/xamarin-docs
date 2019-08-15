@@ -86,9 +86,9 @@ using Mono.Data.Sqlite;
 
 The following code sample shows an entire database interaction:
 
-1.  Creating the database file
-2.  Inserting some data
-3.  Querying the data
+1. Creating the database file
+2. Inserting some data
+3. Querying the data
 
 These operations would typically appear in multiple places throughout your code, for example you may create the database file and tables when your application first starts and perform data reads and writes in individual screens in your app. In the example below have been grouped into a single method for this example:
 
@@ -149,9 +149,9 @@ public static string DoSomeDataAccess ()
 
 Because SQLite allows arbitrary SQL commands to be run against the data, you can perform whatever CREATE, INSERT, UPDATE, DELETE or SELECT statements you like. You can read about the SQL commands supported by SQLite at the Sqlite website. The SQL statements are run using one of three methods on an SqliteCommand object:
 
--  **ExecuteNonQuery** – Typically used for table creation or data insertion. The return value for some operations is the number of rows affected, otherwise it’s -1.
--  **ExecuteReader** – Used when a collection of rows should be returned as a  `SqlDataReader` .
--  **ExecuteScalar** – Retrieves a single value (for example an aggregate).
+- **ExecuteNonQuery** – Typically used for table creation or data insertion. The return value for some operations is the number of rows affected, otherwise it’s -1.
+- **ExecuteReader** – Used when a collection of rows should be returned as a  `SqlDataReader` .
+- **ExecuteScalar** – Retrieves a single value (for example an aggregate).
 
 
 ### EXECUTENONQUERY
@@ -196,8 +196,8 @@ public static string MoreComplexQuery ()
 
 The ExecuteReader method returns a SqliteDataReader object. In addition to the Read method shown in the example, other useful properties include:
 
--  **RowsAffected** – Count of the rows affected by the query.
--  **HasRows** – Whether any rows were returned.
+- **RowsAffected** – Count of the rows affected by the query.
+- **HasRows** – Whether any rows were returned.
 
 
 ### EXECUTESCALAR
@@ -219,4 +219,4 @@ The `ExecuteScalar` method’s return type is `object` – you should cast the r
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)
 - [DataAccess Advanced (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Advanced)
 - [iOS Data Recipes](https://github.com/xamarin/recipes/tree/master/Recipes/ios/data/sqlite)
-- [Xamarin.Forms data access](~/xamarin-forms/app-fundamentals/databases.md)
+- [Xamarin.Forms data access](~/xamarin-forms/data-cloud/data/databases.md)

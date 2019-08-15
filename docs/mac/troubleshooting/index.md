@@ -14,11 +14,11 @@ ms.date: 03/27/2018
 
 _Documents in this section cover features specific to troubleshooting with Xamarin.Mac._
 
-##  [Troubleshooting tips](~/mac/troubleshooting/troubleshooting.md)
+## [Troubleshooting tips](~/mac/troubleshooting/troubleshooting.md)
 
 Troubleshooting tips and tricks.
 
-##  [Errors messages (mmp)](~/mac/troubleshooting/mmp-errors.md)
+## [Errors messages (mmp)](~/mac/troubleshooting/mmp-errors.md)
 
 An errors reference guide, showing the most common errors you may experience when building Xamarin.Mac applications.
 

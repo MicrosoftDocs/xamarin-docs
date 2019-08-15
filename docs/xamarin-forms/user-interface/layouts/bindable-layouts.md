@@ -11,7 +11,7 @@ ms.date: 12/18/2018
 
 # Bindable Layouts in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 
 Bindable layouts enable any layout class that derives from the [`Layout<T>`](xref:Xamarin.Forms.Layout`1) class to generate its content by binding to a collection of items, with the option to set the appearance of each item with a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). Bindable layouts are provided by the `BindableLayout` class, which exposes the following attached properties:
 
@@ -26,8 +26,10 @@ These properties can be attached to the [`AbsoluteLayout`](xref:Xamarin.Forms.Ab
 
 The `Layout<T>` class exposes a [`Children`](xref:Xamarin.Forms.Layout`1.Children) collection, to which the child elements of a layout are added. When the `BinableLayout.ItemsSource` property is set to a collection of items and attached to a [`Layout<T>`](xref:Xamarin.Forms.Layout`1)-derived class, each item in the collection is added to the `Layout<T>.Children` collection for display by the layout. The `Layout<T>`-derived class will then update its child views when the underlying collection changes. For more information about the Xamarin.Forms layout cycle, see [Creating a Custom Layout](~/xamarin-forms/user-interface/layouts/custom.md).
 
+Bindable layouts should only be used when the collection of items to be displayed is small, and scrolling and selection isn't required. While scrolling can be provided by wrapping a bindable layout in a [`ScrollView`](xref:Xamarin.Forms.ScrollView), this is not recommended as bindable layouts lack UI virtualization. When scrolling is required, a scrollable view that includes UI virtualization, such as [`ListView`](xref:Xamarin.Forms.ListView) or [`CollectionView`](xref:Xamarin.Forms.CollectionView), should be used. Failure to observe this recommendation can lead to performance issues.
+
 > [!IMPORTANT]
-> Bindable layouts should only be used when the collection of items to be displayed is small, and scrolling and selection isn't required. While scrolling can be provided by wrapping a bindable layout in a [`ScrollView`](xref:Xamarin.Forms.ScrollView), this is not recommended as bindable layouts lack UI virtualization. When scrolling is required, a scrollable view that includes UI virtualization, such as [`ListView`](xref:Xamarin.Forms.ListView) or `CollectionView`, should be used. Failure to observe this recommendation can lead to performance issues.
+>While it's technically possible to attach a bindable layout to any layout class that derives from the [`Layout<T>`](xref:Xamarin.Forms.Layout`1) class, it's not always practical to do so, particularly for the [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout), [`Grid`](xref:Xamarin.Forms.Grid), and [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) classes. For example, consider the scenario of wanting to display a collection of data in a [`Grid`](xref:Xamarin.Forms.Grid) using a bindable layout, where each item in the collection is an object containing multiple properties. Each row in the `Grid` should display an object from the collection, with each column in the `Grid` displaying one of the object's properties. Because the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) for the bindable layout can only contain a single object, it's necessary for that object to be a layout class containing multiple views that each display one of the object's properties in a specific `Grid` column. While this scenario can be realised with bindable layouts, it results in a parent `Grid` containing a child `Grid` for each item in the bound collection, which is a highly inefficient and problematic use of the `Grid` layout.
 
 ## Populating a bindable layout with data
 
@@ -124,7 +126,7 @@ For more information about data template selectors, see [Creating a Xamarin.Form
 
 ## Related links
 
-- [Bindable Layout Demo (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+- [Bindable Layout Demo (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Creating a Custom Layout](~/xamarin-forms/user-interface/layouts/custom.md)
 - [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

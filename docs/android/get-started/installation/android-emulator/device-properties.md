@@ -39,17 +39,17 @@ development computer's graphics card for rendering.
 
 You can change properties by using the following guidelines:
 
--   To change a boolean property, click the check mark to the right of
+- To change a boolean property, click the check mark to the right of
     the boolean property:
 
     ![Changing a boolean property](device-properties-images/win/02-boolean-value.png)
 
--   To change an *enum* (enumerated) property, click the down-arrow to
+- To change an *enum* (enumerated) property, click the down-arrow to
     the right of the property and choose a new value.
 
     ![Changing an enum property](device-properties-images/win/04-enum-value.png)
 
--   To change a string or integer property, double-click the current
+- To change a string or integer property, double-click the current
     string or integer setting in the value column and enter a new value.
 
     ![Changing an integer property](device-properties-images/win/03-integer-value.png)
@@ -79,17 +79,17 @@ development computer's graphics card for rendering.
 
 You can change properties by using the following guidelines:
 
--   To change a boolean property, click the check mark to the right of
+- To change a boolean property, click the check mark to the right of
     the boolean property:
 
     ![Changing a boolean property](device-properties-images/mac/02-boolean-value.png)
 
--   To change an *enum* (enumerated) property, click the pull-down menu
+- To change an *enum* (enumerated) property, click the pull-down menu
     to the right of the property and choose a new value.
 
     ![Changing an enum property](device-properties-images/mac/04-enum-value.png)
 
--   To change a string or integer property, double-click the current
+- To change a string or integer property, double-click the current
     string or integer setting in the value column and enter a new value.
 
     ![Changing an integer property](device-properties-images/mac/03-integer-value.png)

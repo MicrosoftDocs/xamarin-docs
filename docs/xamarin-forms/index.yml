@@ -2,7 +2,7 @@
 documentType: LandingData
 title: Xamarin.Forms
 metadata:
-  description: Xamarin.Forms exposes the a complete cross-platform UI toolkit for .NET developers to build mobile, tablet, and desktop apps.
+  description: Xamarin.Forms exposes a complete cross-platform UI toolkit for .NET developers to build mobile, tablet, and desktop apps.
   author: conceptdev
   ms.author: crdun
   ms.date: 04/22/2019
@@ -57,7 +57,7 @@ sections:
     className: cardsB
     items:
     - href: ~/xamarin-forms/app-fundamentals/
-      html: Everything you need to know to build Xamarin.Forms apps, such as working with files, images, databases, and more.
+      html: Everything you need to know to develop Xamarin.Forms apps, such as navigation, gestures, data binding, and more.
       image:
         src: ~/media/icons/i_app-build.svg
         href: ~/xamarin-forms/app-fundamentals/
@@ -87,11 +87,11 @@ sections:
         href: ~/essentials/index.md?context=xamarin/xamarin-forms
       title: Xamarin.Essentials
     - href: ~/xamarin-forms/data-cloud/
-      html: Local and remote data storage and retrieval, and other cloud-based services.
+      html: Local and remote data storage and retrieval, and other Azure cloud-based services.
       image:
         src: ~/media/icons/i_data-cloud.svg
         href: ~/xamarin-forms/data-cloud/
-      title: Data & Cloud Services
+      title: Data & Azure Cloud Services
     - href: ~/xamarin-forms/deploy-test/
       html: Instructions for building and deploying your apps, and tips for testing them beforehand!
       image:
@@ -113,6 +113,6 @@ sections:
     - title: API
       html: <p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-forms">Xamarin.Forms API docs</a></p>
     - title: Samples
-      html: <p><a href="https://developer.xamarin.com/samples/xamarin-forms/all/">Xamarin.Forms Samples</a></p>
+      html: <p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms">Xamarin.Forms Samples</a></p>
     - title: Books
       html: <p><a href="~/xamarin-forms/creating-mobile-apps-xamarin-forms">Creating Mobile Apps ebook</a></p><p><a href="~/xamarin-forms/enterprise-application-patterns">Enterprise Application Patterns ebook</a></p><p><a href="~/xamarin-forms/user-interface/graphics/skiasharp/">SkiaSharp Graphics in Xamarin.Forms ebook</a></p>

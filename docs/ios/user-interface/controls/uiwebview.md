@@ -122,4 +122,4 @@ For more information on ATS, including how to implement it in your app, refer to
 
 ## Related Links
 
-- [WebViews (sample)](https://developer.xamarin.com/samples/monotouch/WebView/)
+- [WebViews (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/webview)

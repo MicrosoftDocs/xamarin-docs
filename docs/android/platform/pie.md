@@ -150,19 +150,19 @@ features are intended to leverage new hardware capabilities offered by
 the latest Android devices, while others are designed to further
 enhance the Android user experience:
 
--   **Display Cutout Support** &ndash; Provides APIs to find the
+- **Display Cutout Support** &ndash; Provides APIs to find the
     location and shape of the _cutout_ at the top of the screen on 
     newer Android devices.
 
--   **Notification Enhancements** &ndash; Notification messages can
+- **Notification Enhancements** &ndash; Notification messages can
     now display images, and a new `Person` class is used to simplify
     conversation participants.
 
--   **Indoor Positioning** &ndash; Platform support for the 
+- **Indoor Positioning** &ndash; Platform support for the 
     WiFi Round-Trip-Time protocol, which makes it possible for apps to 
     use WiFi devices for navigation in indoor settings.
 
--   **Multi-Camera Support** &ndash; Offers the capability to access
+- **Multi-Camera Support** &ndash; Offers the capability to access
     streams simultaneously from multiple physical cameras (such as
     dual-front and dual-back cameras).
 
@@ -184,13 +184,13 @@ display cutout, Android Pie has added a new
 window layout attribute. This attribute can be set to one of the
 following values:
 
--   [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER)
+- [LayoutInDisplayCutoutModeNever](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_NEVER)
     &ndash; The window is never allowed to overlap with the cutout area.
 
--   [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES)
+- [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES)
     &ndash; The window is allowed to extend into the cutout area but only on the short edges of the screen. 
 
--   [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT)
+- [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT)
     &ndash; The window is allowed to extend into the cutout area if the cutout is contained within a system bar.
 
 For example, to prevent the app window from overlapping with the cutout
@@ -234,24 +234,24 @@ For more information about the new cutout features in Android P, see
 Android Pie introduces the following enhancements to improve the
 messaging experience:
 
--   Notification channels (introduced in
+- Notification channels (introduced in
     [Android Oreo](~/android/platform/oreo.md)) now supports blocking
     of channel groups.
 
--   The notification system has three new Do-Not-Disturb categories
+- The notification system has three new Do-Not-Disturb categories
     (prioritizing alarms, system sounds, and media sources). In
     addition, there are seven new Do-Not-Disturb modes that can be used
     to suppress visual interruptions (such as badges, notification
     lights, status bar appearances, and launching of full-screen
     activities).
 
--   A new [Person](https://developer.android.com/reference/android/app/Person.html)
+- A new [Person](https://developer.android.com/reference/android/app/Person.html)
     class has been added to represent the sender of a message. Use of
     this class helps to optimize the rendering of each notification by
     identifying people involved in a conversation (including their
     avatars and URIs).
 
--   Notifications can now display images. 
+- Notifications can now display images. 
 
 The following example illustrates how to use the new APIs to generate a
 notification that contains an image. In the following screenshots, a
@@ -363,16 +363,16 @@ For more information about Multi-Camera support in Android P, see
 
 In addition, Android Pie supports several other new features:
 
--   The new [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html)
+- The new [AnimatedImageDrawable](https://developer.android.com/reference/android/graphics/drawable/AnimatedImageDrawable.html)
     class, which can be used for drawing and displaying animated images.
 
--   A new [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) class
+- A new [ImageDecoder](https://developer.android.com/reference/android/graphics/ImageDecoder.html) class
     that replaces `BitmapFactory`. `ImageDecoder` can be used to decode an `AnimatedImageDrawable`.
 
--   Support for HDR (High Dynamic Range) video and HEIF (High
+- Support for HDR (High Dynamic Range) video and HEIF (High
     Efficiency Image File Format) images.
 
--   The [JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) has been
+- The [JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) has been
     enhanced to more intelligently handle network-related jobs. The new 
     [GetNetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) method 
     of the [JobParameters](https://developer.android.com/reference/android/app/job/JobParameters) class
@@ -389,14 +389,14 @@ several platform changes that can affect your app's behavior even if
 you are not implementing the new features described above. The
 following list is a brief summary of these changes:
 
--  Apps must now request foreground permission before using foreground
+- Apps must now request foreground permission before using foreground
    services.
 
--  If your app has more than one process, it cannot share a single
-   [WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) data 
+- If your app has more than one process, it cannot share a single
+   [WebView](xref:Android.Webkit.WebView) data
    directory across processes.
 
--  Directly accessing another app's data directory by path is no longer allowed.
+- Directly accessing another app's data directory by path is no longer allowed.
 
 For more information about behavior changes for apps targeting Android P,
 see [Behavior Changes](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).

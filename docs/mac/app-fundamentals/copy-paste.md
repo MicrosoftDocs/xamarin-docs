@@ -1275,7 +1275,7 @@ This article has taken a detailed look at working with the pasteboard in a Xamar
 
 ## Related Links
 
-- [MacCopyPaste (sample)](https://developer.xamarin.com/samples/mac/MacCopyPaste/)
+- [MacCopyPaste (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccopypaste)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Pasteboard Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/PasteboardGuide106/Articles/pbGettingStarted.html)
 - [macOS Human Interface Guidelines](https://developer.apple.com/macos/human-interface-guidelines/overview/themes/)

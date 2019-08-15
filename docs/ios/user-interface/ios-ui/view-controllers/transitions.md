@@ -19,10 +19,10 @@ The animated transition between view controllers in iOS 7 is fully customizable.
 
 To use a custom transition with `PresentViewController`:
 
-1.  Set the  `ModalPresentationStyle` to  `UIModalPresentationStyle.Custom` on the controller to be presented.
-2.  Implement  `UIViewControllerTransitioningDelegate` to create an animator class, which is an instance of  `UIViewControllerAnimatedTransitioning` .
-3.  Set the  `TransitioningDelegate` property to an instance of  `UIViewControllerTransitioningDelegate` , also on the controller to be presented.
-4.  Present the view controller.
+1. Set the  `ModalPresentationStyle` to  `UIModalPresentationStyle.Custom` on the controller to be presented.
+2. Implement  `UIViewControllerTransitioningDelegate` to create an animator class, which is an instance of  `UIViewControllerAnimatedTransitioning` .
+3. Set the  `TransitioningDelegate` property to an instance of  `UIViewControllerTransitioningDelegate` , also on the controller to be presented.
+4. Present the view controller.
 
 
 For example, the following code presents a view controller of type `ControllerTwo` - a `UIViewController` subclass:
@@ -75,8 +75,8 @@ When the transition takes place, the system creates an instance of `IUIViewContr
 
 The `UIViewControllerAnimatedTransitioning` class handles the actual animation. Two methods must be implemented:
 
-1.  `TransitionDuration` – returns the duration of the animation in seconds.
-1.  `AnimateTransition` – performs the actual animation.
+1. `TransitionDuration` – returns the duration of the animation in seconds.
+1. `AnimateTransition` – performs the actual animation.
 
 
 For example, the following class implements `UIViewControllerAnimatedTransitioning` to animate the frame of the controller’s view:
@@ -121,18 +121,18 @@ Now, when the button is tapped, the animation implemented in the `UIViewControll
 
 Collection Views have built-in support for creating animated transitions:
 
--  **Navigation Controllers** – The animated transition between two  `UICollectionViewController` instances can optionally be handled automatically when a  `UINavigationController` manages them.
--  **Transition Layout** – A new  `UICollectionViewTransitionLayout` class allows interactive transitioning between layouts.
+- **Navigation Controllers** – The animated transition between two  `UICollectionViewController` instances can optionally be handled automatically when a  `UINavigationController` manages them.
+- **Transition Layout** – A new  `UICollectionViewTransitionLayout` class allows interactive transitioning between layouts.
 
 
 ### Navigation Controller Transitions
 
 When used within a navigation controller, a `UICollectionViewController` includes support for animated transitions between controllers. This support is built-in and requires only a few simple steps to implement:
 
-1.  Set  `UseLayoutToLayoutNavigationTransitions` to  `false` on a  `UICollectionViewController` .
-1.  Add an instance of the  `UICollectionViewController` to the root of the navigation controller’s stack.
-1.  Create a second  `UICollectionViewController` and set its  `UseLayoutToLayoutNavigtionTransitions` property to  `true` .
-1.  Push the second  `UICollectionViewController` onto the navigation controller’s stack.
+1. Set  `UseLayoutToLayoutNavigationTransitions` to  `false` on a  `UICollectionViewController` .
+1. Add an instance of the  `UICollectionViewController` to the root of the navigation controller’s stack.
+1. Create a second  `UICollectionViewController` and set its  `UseLayoutToLayoutNavigtionTransitions` property to  `true` .
+1. Push the second  `UICollectionViewController` onto the navigation controller’s stack.
 
 
 The following code adds a `UICollectionViewController` subclass named `ImagesCollectionViewController` to the root of a navigation controller’s stack, with the `UseLayoutToLayoutNavigationTransitions` property set to `false`:
@@ -203,13 +203,13 @@ In addition to layout transition support within navigation controllers, a new la
 
 The steps to implement an interactive transition within a gesture recognizer using `UICollectionViewTransitionLayout` are as follows:
 
-1.  Create a gesture recognizer.
-1.  Call the  `StartInteractiveTransition` method of the  `UICollectionView` , passing it the target layout and a completion handler.
-1.  Set the `TransitionProgress` property of the  `UICollectionViewTransitionLayout` instance returned from the  `StartInteractiveTransition` method.
-1.  Invalidate the layout.
-1.  Call the `FinishInteractiveTransition` method of the  `UICollectionView` to complete the transition or the  `CancelInteractiveTransition` method to cancel it.  `FinishInteractiveTransition` causes the animation to complete its transition to the target layout, whereas `CancelInteractiveTransition` results in the animation returning to the original layout.
-1.  Handle the transition completion in the completion handler of the  `StartInteractiveTransition` method.
-1.  Add the gesture recognizer to the collection view.
+1. Create a gesture recognizer.
+1. Call the  `StartInteractiveTransition` method of the  `UICollectionView` , passing it the target layout and a completion handler.
+1. Set the `TransitionProgress` property of the  `UICollectionViewTransitionLayout` instance returned from the  `StartInteractiveTransition` method.
+1. Invalidate the layout.
+1. Call the `FinishInteractiveTransition` method of the  `UICollectionView` to complete the transition or the  `CancelInteractiveTransition` method to cancel it.  `FinishInteractiveTransition` causes the animation to complete its transition to the target layout, whereas `CancelInteractiveTransition` results in the animation returning to the original layout.
+1. Handle the transition completion in the completion handler of the  `StartInteractiveTransition` method.
+1. Add the gesture recognizer to the collection view.
 
 
 The following code implements an interactive layout transition within a pinch gesture recognizer:
@@ -261,6 +261,6 @@ As the user pinches the collection view, the `TransitionProgress` is set relativ
 
 ## Related Links
 
-- [Intro to iOS 7 (sample)](https://developer.xamarin.com/samples/monotouch/IntroToiOS7)
+- [Intro to iOS 7 (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/introtoios7)
 - [iOS 7 User Interface Overview](~/ios/platform/introduction-to-ios7/ios7-ui.md)
 - [Backgrounding](~/ios/app-fundamentals/backgrounding/index.md)

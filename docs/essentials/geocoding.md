@@ -4,7 +4,8 @@ description: "The Geocoding class in Xamarin.Essentials provides APIs to both ge
 ms.assetid: 3ADC440C-B000-4708-A2CC-296F5160AF90
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 05/28/2019
+ms.custom: video
 ---
 
 # Xamarin.Essentials: Geocoding
@@ -119,3 +120,9 @@ The [`Location`](xref:Xamarin.Essentials.Location) and [`LocationExtensions`](xr
 
 - [Geocoding source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geocoding)
 - [Geocoding API documentation](xref:Xamarin.Essentials.Geocoding)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Geocoding-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

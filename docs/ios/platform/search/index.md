@@ -75,10 +75,10 @@ interact with your content, thus raising its ranking.
 Apple provides the following suggestions as to what content and actions to provide
 search indexes for in your app:
 
- - Any content viewed, created or curated by the user from within your app.
- - Navigation points and features within the app.
- - Things like new messages, content or other types of items displayed by your app that
-	have recently been downloaded to the device.
+- Any content viewed, created or curated by the user from within your app.
+- Navigation points and features within the app.
+- Things like new messages, content or other types of items displayed by your app that
+have recently been downloaded to the device.
 
 ## App Search Enhancements
 
@@ -118,7 +118,7 @@ of when a given search approach should be used and what types of content should 
 
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)
 - [App Search Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/AppSearch/index.html#//apple_ref/doc/uid/TP40016308)

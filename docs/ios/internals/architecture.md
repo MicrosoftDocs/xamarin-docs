@@ -20,7 +20,7 @@ native or managed system.
 
 The diagram below shows a basic overview of this architecture:
 
-[ ![](architecture-images/ios-arch-small.png "This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture")](architecture-images/ios-arch.png#lightbox)
+[![](architecture-images/ios-arch-small.png "This diagram shows a basic overview of the Ahead of Time (AOT) compilation architecture")](architecture-images/ios-arch.png#lightbox)
 
 ## Native and Managed code: An Explanation
 
@@ -230,12 +230,12 @@ Once the Xamarin.iOS.dll has been created, mtouch will bundle all the components
 At a high level, it achieves this by executing the following
 tasks:
 
--   Create an app bundle structure.
--   Copy in your managed assemblies.
--   If linking is enabled, run the managed linker to optimize your assemblies by
+- Create an app bundle structure.
+- Copy in your managed assemblies.
+- If linking is enabled, run the managed linker to optimize your assemblies by
 ripping unused parts out.
--   AOT compilation.
--   Create a native executable, which outputs a series of static libraries (one for each assembly) that are linked into the native executable, so that the native executable consists of the launcher code, the registrar code (if static), and all the outputs from the AOT compiler
+- AOT compilation.
+- Create a native executable, which outputs a series of static libraries (one for each assembly) that are linked into the native executable, so that the native executable consists of the launcher code, the registrar code (if static), and all the outputs from the AOT compiler
 
 
 For more detailed information on the linker and how it is

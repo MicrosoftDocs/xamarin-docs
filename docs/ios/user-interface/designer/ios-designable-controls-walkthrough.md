@@ -272,5 +272,5 @@ In this article we walked through how to create a custom control, as well as con
 
 ## Related Links
 
-- [ScratchTicket (sample)](https://developer.xamarin.com/samples/monotouch/ScratchTicket/)
+- [ScratchTicket (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/scratchticket)
 - [required images (sample)](https://github.com/xamarin/ios-samples/blob/master/ScratchTicket/Resources/images.zip?raw=true)

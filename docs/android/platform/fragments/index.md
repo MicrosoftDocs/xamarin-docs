@@ -70,9 +70,9 @@ Fragments.
 This guide contains comprehensive coverage about how to use Fragments,
 including:
 
--   **Creating Fragments** – How to create a basic Fragment and key methods that must be implemented.
--   **Fragment Management and Transactions** – How to manipulate Fragments at run time.
--   **Android Support Package** – How to use the libraries that allow Fragments to be used on older versions of Android.
+- **Creating Fragments** – How to create a basic Fragment and key methods that must be implemented.
+- **Fragment Management and Transactions** – How to manipulate Fragments at run time.
+- **Android Support Package** – How to use the libraries that allow Fragments to be used on older versions of Android.
 
 
 ## Requirements
@@ -96,7 +96,7 @@ covered in more detail in the documents of this section.
 
 ## Related Links
 
-- [Honeycomb Gallery (sample)](https://developer.xamarin.com/samples/monodroid/HoneycombGallery)
+- [Honeycomb Gallery (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
 - [Fragments](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Support Package](https://developer.android.com/sdk/compatibility-library.html)
 - [MOTODEV Webinar: Introducing Fragments](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

@@ -6,7 +6,7 @@ ms.assetid: A8909AE3-ED0E-4D24-BF96-B49E732E3B93
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
+ms.date: 06/11/2019
 ---
 
 # Renderer Base Classes and Native Controls
@@ -25,6 +25,9 @@ The `MapRenderer` class can be found in the following namespaces:
 - **iOS** – Xamarin.Forms.Maps.iOS
 - **Android** – Xamarin.Forms.Maps.Android
 - **Universal Windows Platform (UWP)** – Xamarin.Forms.Maps.UWP
+
+> [!NOTE]
+> For information about creating custom renderers for Shell applications, see [Xamarin.Forms Shell Custom Renderers](~/xamarin-forms/app-fundamentals/shell/customrenderers.md).
 
 ## Pages
 
@@ -65,7 +68,8 @@ The following table lists the renderer and native control classes that implement
 |[`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)|ActivityIndicatorRenderer|UIActivityIndicator|ProgressBar||ProgressBar|
 |[`BoxView`](xref:Xamarin.Forms.BoxView)|BoxRenderer (iOS and Android), BoxViewRenderer (UWP)|UIView|ViewGroup||Rectangle|
 |[`Button`](xref:Xamarin.Forms.Button)|ButtonRenderer|UIButton|Button|AppCompatButton|Button|
-|`CollectionView`|CollectionViewRenderer|UICollectionView||RecyclerView||
+|`CheckBox`|CheckBoxRenderer|UIButton||AppCompatCheckBox|CheckBox|
+|[`CollectionView`](xref:Xamarin.Forms.CollectionView)|CollectionViewRenderer|UICollectionView||RecyclerView||
 |[`DatePicker`](xref:Xamarin.Forms.DatePicker)|DatePickerRenderer|UITextField|EditText||DatePicker|
 |[`Editor`](xref:Xamarin.Forms.Editor)|EditorRenderer|UITextView|EditText||TextBox|
 |[`Entry`](xref:Xamarin.Forms.Entry)|[EntryRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/entry.md)|UITextField|EditText||TextBox|
@@ -99,7 +103,3 @@ The following table lists the renderer and native control classes that implement
 ## Summary
 
 This article has listed the renderer and native control classes that implement each Xamarin.Forms page, layout, view, and cell. Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control.
-
-## Related Links
-
-- [Custom Renderers (Xamarin University Video)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

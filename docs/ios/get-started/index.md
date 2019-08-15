@@ -44,8 +44,8 @@ This two-part guide explores expanding the application created in the Hello, iOS
 
 Provides information for Objective-C developers transitioning to the Xamarin platform.
 
-## Xamarin University Video
+## Video
 
 > [!VIDEO https://youtube.com/embed/1ilsDnYC-B8]
 
-**Building Your First iOS App with Xamarin for Visual Studio, by [Xamarin University](https://university.xamarin.com)**
+**Building Your First iOS App with Xamarin for Visual Studio**

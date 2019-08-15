@@ -14,7 +14,7 @@ ms.date: 04/25/2018
 The following sections explain the various tools and building blocks
 that are used to compose user interfaces in Android Wear apps.
  
-##  [Controls](~/android/wear/user-interface/controls/index.md)
+## [Controls](~/android/wear/user-interface/controls/index.md)
 
 Explains Android Wear-specific controls and provides links to
 samples that demonstrate how to use these controls.

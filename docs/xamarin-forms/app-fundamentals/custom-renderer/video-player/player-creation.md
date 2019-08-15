@@ -11,9 +11,9 @@ ms.date: 02/12/2018
 
 # Creating the platform video players
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)
 
-The [**VideoPlayerDemos**](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/) solution contains all the code to implement a video player for Xamarin.Forms. It also includes a series of pages that demonstrates how to use the video player within an application. All the `VideoPlayer` code and its platform renderers reside in project folders named `FormsVideoLibrary`, and also use the namespace `FormsVideoLibrary`. This should make it easy to copy the files into your own application and reference the classes.
+The [**VideoPlayerDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos) solution contains all the code to implement a video player for Xamarin.Forms. It also includes a series of pages that demonstrates how to use the video player within an application. All the `VideoPlayer` code and its platform renderers reside in project folders named `FormsVideoLibrary`, and also use the namespace `FormsVideoLibrary`. This should make it easy to copy the files into your own application and reference the classes.
 
 ## The video player
 
@@ -115,7 +115,7 @@ Generally the `Control` property of the renderer class thereafter refers to the 
 
 ### The Android video view
 
-The Android renderer for `VideoPlayer` is based on the Android [`VideoView`](https://developer.xamarin.com/api/type/Android.Widget.VideoView/) class. However, if `VideoView` is used by itself to play a video in a Xamarin.Forms application, the video fills the area alloted for the `VideoPlayer` without maintaining the correct aspect ratio. For this reason (as you'll see shortly), the `VideoView` is made a child of an Android `RelativeLayout`. A `using` directive defines `ARelativeLayout` to distinguish it from the Xamarin.Forms `RelativeLayout`, and that's the second generic argument in the `ViewRenderer`:
+The Android renderer for `VideoPlayer` is based on the Android [`VideoView`](xrtef:Android.Widget.VideoView) class. However, if `VideoView` is used by itself to play a video in a Xamarin.Forms application, the video fills the area alloted for the `VideoPlayer` without maintaining the correct aspect ratio. For this reason (as you'll see shortly), the `VideoView` is made a child of an Android `RelativeLayout`. A `using` directive defines `ARelativeLayout` to distinguish it from the Xamarin.Forms `RelativeLayout`, and that's the second generic argument in the `ViewRenderer`:
 
 ```csharp
 using System;
@@ -360,7 +360,7 @@ The `Element` property of the renderer refers to the `VideoPlayer` class.
 
 ### The Android media controller
 
-In Android, displaying the transport controls requires creating a [`MediaController`](https://developer.xamarin.com/api/type/Android.Widget.MediaController/) object and associating it with the `VideoView` object. The mechanics are demonstrated in the `SetAreTransportControlsEnabled` method:
+In Android, displaying the transport controls requires creating a [`MediaController`](xref:Android.Widget.MediaController) object and associating it with the `VideoView` object. The mechanics are demonstrated in the `SetAreTransportControlsEnabled` method:
 
 ```csharp
 namespace FormsVideoLibrary.Droid
@@ -462,4 +462,4 @@ One more property is necessary to begin playing a video: This is the crucial `So
 
 ## Related Links
 
-- [Video Player Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/customrenderers/VideoPlayerDemos/)
+- [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

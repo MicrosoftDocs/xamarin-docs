@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
 author: conceptdev
 ms.author: crdun
-ms.date: 07/24/2018
+ms.date: 04/26/2018
 ---
 # System requirements
 
@@ -51,7 +51,7 @@ paired iPhone).
 [!include[](~/cross-platform/includes/macos-testing.md)]
 
 > [!WARNING]
-> Xamarin.Mac 4.8 only supports macOS 10.9 () or higher.
+> Xamarin.Mac 4.8 only supports macOS 10.9 (Mavericks) or higher.
 > Previous versions of Xamarin.Mac supported macOS 10.7 or higher, but
 > these older macOS versions lack sufficient TLS infrastructure to support
 > TLS 1.2. To target macOS 10.7 or macOS 10.8, use Xamarin.Mac 4.6 or
@@ -84,10 +84,9 @@ the Mac computer, not the computer running Visual Studio).
 The latest Xamarin release for macOS can be downloaded with [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation). For Windows,
 follow the [Visual Studio installation instructions](https://docs.microsoft.com/visualstudio/install/install-visual-studio).
 
-A complete list of our current product versions is available on the
-[current releases page](https://developer.xamarin.com/releases/current/). This
-page also outlines the individual product versions (and links to the release notes)
-for our beta and alpha channels.
+A complete list of our current product releases is available on the
+[what's new page](~/whats-new/index.yml). This
+page also links to the release notes.
 
 Specific [installation](~/get-started/installation/index.md) instructions for each platform are available here:
 

@@ -12,7 +12,7 @@ ms.date: 03/29/2017
 
 > [!IMPORTANT]
 > The Xamarin Classic API, which preceded the Unified API, has been 
-> deprecated. 
+> deprecated.
 > - The last version of Xamarin.iOS to support the Classic API
 >   (monotouch.dll) was Xamarin.iOS 9.10.
 > - Xamarin.Mac still supports the Classic API, but it is no longer
@@ -20,10 +20,6 @@ ms.date: 03/29/2017
 >   applications to the Unified API.
 
 ## How to Update Your Apps
-
-Xamarin University has a freely available video on **Upgrading to the iOS Unified API**. Visit [Xamarin University Lightning Lectures](http://university.xamarin.com/lightninglectures) to watch!
-
-[ ![](updating-apps-images/xamu-video-sml.png "Xamarin University")](http://university.xamarin.com/lightninglectures)
 
 There are three steps to update your apps:
 
@@ -50,14 +46,14 @@ Existing Xamarin.iOS apps can be updated to the Unified API using
 	fixes may then be required, as explained in [these instructions](~/cross-platform/macios/unified/updating-ios-apps.md)
 	and [tips](~/cross-platform/macios/unified/updating-tips.md).
 
-###  [Xamarin.Mac apps](~/cross-platform/macios/unified/updating-mac-apps.md)
+### [Xamarin.Mac apps](~/cross-platform/macios/unified/updating-mac-apps.md)
 
 Existing Xamarin.Mac apps can be updated to the Unified API using
 	the automated migration tool built in to Visual Studio for Mac. Some additional
 	fixes may then be required, as explained in [these instructions](~/cross-platform/macios/unified/updating-mac-apps.md)
 	and [tips](~/cross-platform/macios/unified/updating-tips.md).
 
-###  [Xamarin.Forms apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+### [Xamarin.Forms apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 
 Follow these instructions to update an existing Xamarin.Forms
 	solution with an iOS project to use the Unified API. Unified API
@@ -86,4 +82,4 @@ Customers that have created bindings to Objective-C libraries
 - [Updating Xamarin.Forms Apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [Updating Bindings](~/cross-platform/macios/unified/update-binding.md)
 - [Updating Tips](~/cross-platform/macios/unified/updating-tips.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

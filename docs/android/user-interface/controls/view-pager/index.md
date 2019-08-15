@@ -28,7 +28,7 @@ each child view constitutes a page in the layout:
 [![Screenshots of TreePager app with horizontal swipe example](images/01-intro-sml.png)](images/01-intro.png#lightbox)
 
 Typically, `ViewPager` is used in conjunction with 
-[Fragments](https://developer.xamarin.com/guides/android/platform_features/fragments/); 
+[Fragments](~/android/platform/fragments/index.md); 
 however, there are some situations where you might want to use 
 `ViewPager` without the added complexity of `Fragment`s.
 
@@ -46,15 +46,15 @@ details of connecting `Fragment`s to data.
 
 This guide demonstrates both approaches: 
 
--   In [Viewpager with Views](~/android/user-interface/controls/view-pager/viewpager-and-views.md), a 
-    [TreePager](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager/) app is 
+- In [Viewpager with Views](~/android/user-interface/controls/view-pager/viewpager-and-views.md), a
+    [TreePager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) app is 
     developed to demonstrate how to use `ViewPager` to display views
     of a tree catalog (an image gallery of deciduous and evergreen trees). 
     `PagerTabStrip`  and `PagerTitleStrip` are used to display titles 
     that help with page navigation.
 
--   In [Viewpager with Fragments](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), a 
-    slightly more complex [FlashCardPager](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager/) 
+- In [Viewpager with Fragments](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), a
+    slightly more complex [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) 
     app is developed to demonstrate how to use `ViewPager` 
     with `Fragment`s to build an app that presents math 
     problems as flash cards and responds to user input. 
@@ -73,9 +73,9 @@ package. For more information about installing NuGet packages, see
 Three components are used for implementing gestural navigation
 with `ViewPager`:
 
--   ViewPager
--   Adapter
--   Pager Indicator
+- ViewPager
+- Adapter
+- Pager Indicator
 
 Each of these components is summarized below.
 
@@ -135,5 +135,5 @@ navigation.
 
 ## Related Links
 
-- [TreePager (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/TreePager)
-- [FlashCardPager (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/FlashCardPager)
+- [TreePager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager)
+- [FlashCardPager (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)

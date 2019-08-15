@@ -29,7 +29,7 @@ common task – in many cases without even opening the app in question.
 
 ## Sample app: Soup Chef
 
-To better understand Siri Shortcuts, take a look at the [Soup Chef](https://developer.xamarin.com/samples/monotouch/ios12/SoupChef/)
+To better understand Siri Shortcuts, take a look at the [Soup Chef](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-soupchef)
 sample app. Soup Chef allows users to place orders from an imaginary soup
 restaurant, view their order history, and define phrases to use when
 ordering soup by interacting with Siri.
@@ -297,7 +297,7 @@ messages that can be used to indicate status after an intent's task has
 completed.
 - The **Success** checkbox should be selected for responses that indicate
  success.
- - The **OrderSoupIntent** success response uses the **soup** and
+- The **OrderSoupIntent** success response uses the **soup** and
  **waitTime** properties to provide a friendly and useful message
  describing when the soup order will be ready.
 
@@ -937,7 +937,7 @@ and download and install them.
 
 ## Related links
 
-- [Soup Chef (Xamarin)](https://developer.xamarin.com/samples/monotouch/ios12/SoupChef/)
+- [Soup Chef (Xamarin)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-soupchef)
 - [Soup Chef (Swift)](https://developer.apple.com/documentation/sirikit/accelerating_app_interactions_with_shortcuts?language=objc)
 - [SiriKit (Apple)](https://developer.apple.com/sirikit/)
 - [Introduction to Siri Shortcuts – WWDC 2018](https://developer.apple.com/videos/play/wwdc2018/211/)

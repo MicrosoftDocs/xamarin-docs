@@ -270,9 +270,9 @@ To help with troubleshooting problems that might arise as part of the build, Jen
 
 Jenkins will retrieve the entire source code into a special folder called a *workspace*. This directory can be found inside the folder at the following location:
 
-    ```
-    ~/.jenkins/jobs/[JOB NAME]/workspace
-    ```
+```
+~/.jenkins/jobs/[JOB NAME]/workspace
+```
 
 The path to the workspace will be stored in an environment variable named `$WORKSPACE`.
 
@@ -321,9 +321,9 @@ Once the build step is added to the project, fill in the form fields that appear
 
 This build step will execute `xbuild` in the **$WORKSPACE** folder. The MSBuild Build File is set to the **Xamarin.Android.csproj** file. The **Command Line Arguments** specify a release build of the target **PackageForAndroid**. The product of this step will be an APK that at the following location:
 
-    ```
-    $WORKSPACE/[PROJECT NAME]/bin/Release
-    ```
+```
+$WORKSPACE/[PROJECT NAME]/bin/Release
+```
 
 The following screenshot shows an example of this APK:
 
@@ -352,9 +352,9 @@ As described in the Requirements section, these environment variables can be set
 
 In the **Properties Content** form field that will appear, environment variables are added, one per line, in the following format:
 
-    ```
-    ENVIRONMENT_VARIABLE_NAME = value
-    ```
+```
+ENVIRONMENT_VARIABLE_NAME = value
+```
 
 The following screenshot shows the environment variables that are required for signing the APK:
 
@@ -370,10 +370,10 @@ Immediately before the **Build** section of the job configuration is a **Build E
 
 Once the environment variables have been initialized, the next step is to add a build step for signing and zip aligning the APK. Immediately after the build step to insert the environment variables will be another **Execute shell** command build that will execute `jarsigner` and `zipalign`. Each command will take up one line, as shown in the following snippet:
 
-    ```
-    jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore $KEYSTORE_FILE -storepass $STORE_PASS -signedjar $SIGNED_APK $INPUT_APK $KEYSTORE_ALIAS
-    zipalign -f -v 4 $SIGNED_APK $FINAL_APK
-    ```
+```
+jarsigner -verbose -sigalg MD5withRSA -digestalg SHA1 -keystore $KEYSTORE_FILE -storepass $STORE_PASS -signedjar $SIGNED_APK $INPUT_APK $KEYSTORE_ALIAS
+zipalign -f -v 4 $SIGNED_APK $FINAL_APK
+```
 
 The following screenshot shows an example of how to enter the `jarsigner` and `zipalign` commands into the step:
 

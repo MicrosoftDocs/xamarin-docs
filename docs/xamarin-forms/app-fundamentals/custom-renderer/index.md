@@ -53,8 +53,6 @@ This article demonstrates how to create a custom renderer for a `HybridWebView` 
 
 This article shows how to write renderers to implement a custom `VideoPlayer` control that can play videos from the web, videos embedded as application resources, or videos stored in the video library on the user's device. Several techniques are demonstrated, including implementing methods and read-only bindable properties.
 
-
 ## Related Links
 
 - [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
-- [Custom Renderers (Xamarin University Video)](https://developer.xamarin.com/videos/cross-platform/xamarinforms-custom-renderers/)

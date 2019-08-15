@@ -83,9 +83,9 @@ The assembly that the Wear app project generates is not used as an
 assembly reference in the Handheld (Phone) project. Instead, the build
 process does the following:
 
--   Verifies that the package names match. 
+- Verifies that the package names match. 
 
--   Generates XML and adds it to the Handheld project to 
+- Generates XML and adds it to the Handheld project to 
     associate it with the Wear app. For example: 
 
     ```xml
@@ -97,7 +97,7 @@ process does the following:
     </ProjectReference>
     ```
 
--   Adds the Wear app as a **raw** resource to the Handheld project. 
+- Adds the Wear app as a **raw** resource to the Handheld project. 
 
 
 ## Manual Packaging

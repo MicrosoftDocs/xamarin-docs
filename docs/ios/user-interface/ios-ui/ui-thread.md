@@ -56,7 +56,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 })).Start();
 ```
 
-You won’t need do use this for the remainder of the examples in this document, but it is an important concept to remember when your app makes network requests, uses the notification center or other methods that require a completion-handler that will run on another thread.
+You won’t need to use this for the remainder of the examples in this document, but it is an important concept to remember when your app makes network requests, uses the notification center or other methods that require a completion-handler that will run on another thread.
 
  <a name="Async_Await_Example" />
 
@@ -91,5 +91,5 @@ If an async method is called from a background thread (not the main UI thread) t
 
 ## Related Links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/Controls/)
+- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
 - [Threading](~/ios/app-fundamentals/threading.md)

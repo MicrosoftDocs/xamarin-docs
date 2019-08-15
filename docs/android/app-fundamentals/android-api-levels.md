@@ -18,15 +18,15 @@ _Xamarin.Android has several Android API level settings that determine your app'
 
 Xamarin.Android exposes three Android API level project settings:
 
--   [Target Framework](#framework) &ndash; Specifies which framework to
+- [Target Framework](#framework) &ndash; Specifies which framework to
     use in building your application. This API level is used at
     *compile* time by Xamarin.Android.
 
--   [Minimum Android Version](#minimum) &ndash; Specifies the oldest
+- [Minimum Android Version](#minimum) &ndash; Specifies the oldest
     Android version that you want your app to support. This API level
     is used at *run* time by Android.
 
--   [Target Android Version](#target) &ndash; Specifies the version of
+- [Target Android Version](#target) &ndash; Specifies the version of
     Android that your app is intended to run on. This API level is used
     at *run* time by Android.
 
@@ -67,7 +67,7 @@ version of Android that you want your app to support. (Note that API
 Level 14 is the minimum API level required for
 [Google Play services and Firebase support](https://android-developers.googleblog.com/2016/11/google-play-services-and-firebase-for-android-will-support-api-level-14-at-minimum.html).)
 The following example configuration supports Android versions from API
-Level 14 thru API level 25:
+Level 14 through API level 25:
 
 [![Compile using API level 25 Nougat, Minimum Android version set to API level 14](android-api-levels-images/vs-minimum-sml.png)](android-api-levels-images/vs-minimum.png#lightbox)
 
@@ -129,9 +129,9 @@ designed to work with multiple Android API levels.
 
 Each release of Android goes by multiple names:
 
--   The Android version, such as **Android 9.0**
--   A code (or dessert) name, such as _Pie_
--   A corresponding API level, such as **API level 28**
+- The Android version, such as **Android 9.0**
+- A code (or dessert) name, such as _Pie_
+- A corresponding API level, such as **API level 28**
 
 An Android code name may correspond to multiple versions and API levels
 (as seen in the table below), but each Android version corresponds to
@@ -168,10 +168,10 @@ application on a device.
 When an application is built, it contains the following API level
 information:
 
--   The *target* API level of Android that the app is built to
+- The *target* API level of Android that the app is built to
     run on.
 
--   The *minimum* Android API level that an Android device must
+- The *minimum* Android API level that an Android device must
     have to run your app. 
 
 These settings are used to ensure that the functionality needed to run
@@ -217,7 +217,7 @@ changing the Target Framework setting does not change runtime behavior.
 The Target Framework identifies which library versions your application
 is linked against &ndash; this setting determines which APIs you can use in
 your app. For example, if you want to use the
-[NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/)
+[NotificationBuilder.SetCategory](xref:Android.App.Notification.Builder.SetCategory*)
 method that was introduced in Android 5.0 Lollipop, you must set the
 Target Framework to **API Level 21 (Lollipop)** or later. If you set
 your project's Target Framework to an API level such as **API Level 19
@@ -230,8 +230,7 @@ for any deprecated APIs that might be called by your code. Using the
 latest Target Framework version is especially important when you use
 the latest support library releases &ndash; each library expects your
 app to be compiled at that support library's minimum API level or
-greater. 
-
+greater.
 
 # [Visual Studio](#tab/windows)
 
@@ -407,7 +406,7 @@ then your code has to find a way to function properly without making
 this API call.
 
 For example, let's suppose that we want to use the
-[NotificationBuilder.SetCategory](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetCategory/p/System.String/)
+[NotificationBuilder.SetCategory](xref:Android.App.Notification.Builder.SetCategory*)
 method to categorize a notification when running on **Android 5.0
 Lollipop** (and later), but we still want our app to run on earlier
 versions of Android such as **Android 4.1 Jelly Bean** (where
@@ -495,12 +494,12 @@ be *compiled*, but you can't predict which platform API level the library
 will be run on. With this in mind, the following best practices should
 be observed when consuming or creating libraries:
 
--   **When consuming an Android library** &ndash; If you are consuming
+- **When consuming an Android library** &ndash; If you are consuming
     an Android library in your application, be sure to set your app's
     Target Framework setting to an API level that is *at least as high
     as* the Target Framework setting of the library.
 
--   **When creating an Android library** &ndash; If you are creating an
+- **When creating an Android library** &ndash; If you are creating an
     Android library for use by other applications, be sure to set its
     Target Framework setting to the minimum API level that it needs in
     order to compile.

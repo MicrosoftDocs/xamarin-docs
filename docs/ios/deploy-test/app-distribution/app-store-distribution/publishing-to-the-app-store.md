@@ -291,7 +291,7 @@ With your build settings properly configured and iTunes Connect awaiting your su
 7. Log in to Application Loader (note that you must [create an app-specific password](https://support.apple.com/ht204397) for your Apple ID).
 8. Select **Deliver Your App** and click the **Choose** button:
 
-    ![Select Deliver Your App ](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")
+    ![Select Deliver Your App](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")
 
 9. Select the .ipa file created above and click **OK**.
 10. The Application Loader will validate the file:

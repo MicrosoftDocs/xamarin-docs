@@ -57,10 +57,10 @@ The unmanaged `MyView` object will have a `GCHandle` pointing to the managed obj
 
 In circumstances where a contained object keeps a link to its container, there are several options available to deal with the circular reference:
 
--  Manually break the cycle by setting the link to the container to `null`.
--  Manually remove the contained object from the container.
--  Call `Dispose` on the objects.
--  Avoid the circular reference keeping a weak reference to the container. For more information about weak references.
+- Manually break the cycle by setting the link to the container to `null`.
+- Manually remove the contained object from the container.
+- Call `Dispose` on the objects.
+- Avoid the circular reference keeping a weak reference to the container. For more information about weak references.
 
 ### Using WeakReferences
 
@@ -118,7 +118,7 @@ assign the `DataSource` property to `this`.
 #### Weak attribute
 
 [Xamarin.iOS
-11.10](https://developer.xamarin.com/releases/ios/xamarin.ios_11/xamarin.ios_11.10/#WeakAttribute)
+11.10](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/xamarin.ios_11/xamarin.ios_11.10.md#WeakAttribute)
 introduced the `[Weak]` attribute. Like `WeakReference <T>`,
 `[Weak]` can be used to break [strong circular
 references](https://docs.microsoft.com/xamarin/ios/deploy-test/performance#avoid-strong-circular-references),
@@ -228,7 +228,7 @@ class MyChild : UIView
 For more information about releasing strong references, see
 [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
 There's also a good discussion in this blog post:
-[Xamarin.iOS, the garbage collector and me](http://krumelur.me/2015/04/27/xamarin-ios-the-garbage-collector-and-me/).
+[Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me).
 
 ### More information
 

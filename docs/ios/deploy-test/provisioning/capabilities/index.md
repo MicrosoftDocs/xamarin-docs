@@ -117,30 +117,30 @@ Using the developer center is a two step process that requires creating an App I
 
 ### Creating an App ID with an app service
 
-1.	Browse to the [Apple Developer Center](https://developer.apple.com/account) on a Mac (the build host mac if using a windows machine) and log in.
-2.	Select **Certificates, Identifiers, and Profiles**:
+1. Browse to the [Apple Developer Center](https://developer.apple.com/account) on a Mac (the build host mac if using a windows machine) and log in.
+2. Select **Certificates, Identifiers, and Profiles**:
 
     ![Apple Developer Center](images/image5.png)
 
-3.	Under **Identifiers**, select **App IDs**:
+3. Under **Identifiers**, select **App IDs**:
 
     ![App ID selection in Developer Center](images/image6.png)
 
-4.	Press the **+** button in the top right corner to create a new App ID.
-5.	Enter an App ID description, select Explicit App ID, and enter a bundle ID in the format `com.domain.appname`. This bundle ID should match the bundle ID in your project:
+4. Press the **+** button in the top right corner to create a new App ID.
+5. Enter an App ID description, select Explicit App ID, and enter a bundle ID in the format `com.domain.appname`. This bundle ID should match the bundle ID in your project:
 
     ![Adding App ID details](images/image7.png)
 
-6.	Under **App Services** select the service or services that are required in your app:
+6. Under **App Services** select the service or services that are required in your app:
 
     ![App Services selection page](images/image8.png)
 
-7.	Press **Continue**.
-8.	Confirm your App ID. Each service will be in one of the following states: **Enabled**, **Disabled**, or **Configurable**, as illustrated below. If it’s **Enabled,** it is ready to be used in a provisioning profile. If it is **Configurable**, additional setup is required for this capability. These additional steps are described in more detail in later sections.
+7. Press **Continue**.
+8. Confirm your App ID. Each service will be in one of the following states: **Enabled**, **Disabled**, or **Configurable**, as illustrated below. If it’s **Enabled,** it is ready to be used in a provisioning profile. If it is **Configurable**, additional setup is required for this capability. These additional steps are described in more detail in later sections.
 
     ![App ID confirmation](images/image9.png)
 
-9.	Click **Register** and then **Done**. The newly created App ID should display in the iOS App IDs list.
+9. Click **Register** and then **Done**. The newly created App ID should display in the iOS App IDs list.
 
 
 <a name="provisioningprofile" />
@@ -149,36 +149,36 @@ Using the developer center is a two step process that requires creating an App I
 
 Now create a provisioning profile that contains this App ID. Follow the steps below:
 
-1.	In the Apple Developer Center, browse to **Provisioning Profiles > All**:
+1. In the Apple Developer Center, browse to **Provisioning Profiles > All**:
 
     ![Provisioning Profile section](images/image10.png)
 
-2.	Press the **+** button in the top right corner to create a new provisioning profile.
-3.	Select the type of provisioning profile that you need, and click **Continue**:
+2. Press the **+** button in the top right corner to create a new provisioning profile.
+3. Select the type of provisioning profile that you need, and click **Continue**:
 
     ![Provisioning Profile selection](images/image11.png)
 
-4.	From the dropdown list, select the App ID that was created in the steps above and press **Continue**:
+4. From the dropdown list, select the App ID that was created in the steps above and press **Continue**:
 
     ![App ID selection](images/image12.png)
 
-5.	Select the certificates used to sign the app and press **Continue**:
+5. Select the certificates used to sign the app and press **Continue**:
 
     ![Certificate selection](images/image13.png)
 
-6.	Select the devices to be included in this profile and press **Continue**:
+6. Select the devices to be included in this profile and press **Continue**:
 
     ![Select devices for Provisioning Profile](images/image14.png)
 
-7.	Give the profile a name so that it can be identified and press **Continue** to generate the profile:
+7. Give the profile a name so that it can be identified and press **Continue** to generate the profile:
 
     ![Name provisioning Profile](images/image15.png)
 
-8.	Press the **Download** button to download it, and double-click on the file in Finder to install the provisioning profile.
+8. Press the **Download** button to download it, and double-click on the file in Finder to install the provisioning profile.
 
 9. If you are using Visual Studio ensure that the **Manual Provisioning** option is selected.
 
-10.	In Visual Studio for Mac / Visual Studio, browse to **Project Options > Bundle Signing** and set the provisioning profile to the one that was just created:
+10. In Visual Studio for Mac / Visual Studio, browse to **Project Options > Bundle Signing** and set the provisioning profile to the one that was just created:
 
     ![Visual Studio for Mac Project Options](images/image16.png)
 
@@ -200,12 +200,12 @@ Once a Capability has been enabled on the server side, there is still work that 
 
 The list below details some of the most common issues that can create roadblocks when developing an app with an app service enabled.
 
--	Ensure that the correct ID has been properly created and registered in the **Certificates, IDs & Profiles** section of Apple's Developer Portal.
--	Ensure that the Service have been added to the App's (or Extension's) ID and that the service is configured to use the App Group/Merchant ID/Container created above in the **Certificates, IDs & Profiles** of Apple's Developer Portal.
--	Ensure that the Provisioning Profiles and App IDs have been installed and that the App's **Info.plist** (in the Xamarin Project) is using one of the App IDs configured above.
--	Ensure that the App's **Entitlements.plist** file (in the Xamarin Project) has the correct service enabled.
--	Ensure that the appropriate privacy-keys are set in info.plist
--	In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
+- Ensure that the correct ID has been properly created and registered in the **Certificates, IDs & Profiles** section of Apple's Developer Portal.
+- Ensure that the Service have been added to the App's (or Extension's) ID and that the service is configured to use the App Group/Merchant ID/Container created above in the **Certificates, IDs & Profiles** of Apple's Developer Portal.
+- Ensure that the Provisioning Profiles and App IDs have been installed and that the App's **Info.plist** (in the Xamarin Project) is using one of the App IDs configured above.
+- Ensure that the App's **Entitlements.plist** file (in the Xamarin Project) has the correct service enabled.
+- Ensure that the appropriate privacy-keys are set in info.plist
+- In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
 
 <a name="summary" />
 

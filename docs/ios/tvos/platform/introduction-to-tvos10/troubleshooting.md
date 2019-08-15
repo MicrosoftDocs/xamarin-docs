@@ -27,8 +27,8 @@ The following sections list some known issues that can occur when using tvOS 10 
 
 Known Issues:
 
- - When testing In-App Purchases in the sandbox environment, the authentication dialog may appear twice.
- - When testing In-App Purchases with hosted content in the sandbox environment, the password dialog will appear every time the app is brought to the foreground until the content download completes.
+- When testing In-App Purchases in the sandbox environment, the authentication dialog may appear twice.
+- When testing In-App Purchases with hosted content in the sandbox environment, the password dialog will appear every time the app is brought to the foreground until the content download completes.
 
 <a name="Binary-Compatibility" />
 
@@ -36,11 +36,11 @@ Known Issues:
 
 Known Issues:
 
- - Calling `NSObject.ValueForKey` will a `null` key will result in an exception.
- - Referencing a font by name when calling `UIFont.WithName` will cause a crash.
- - Both `NSURLSession` and NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://` URLs.
- - Apps can hang if they modify a superview's geometry in either the `ViewWillLayoutSubviews` or `LayoutSubviews` methods.
- - For all SSL/TLS connections, the RC4 symmetric cipher is now disabled by default. Additionally, the Secure Transport API no longer supports SSLv3 and it is recommended that the app stop using SHA-1 and 3DES cryptography as soon as possible.
+- Calling `NSObject.ValueForKey` will a `null` key will result in an exception.
+- Referencing a font by name when calling `UIFont.WithName` will cause a crash.
+- Both `NSURLSession` and `NSURLConnection` no longer RC4 cipher suites during the TLS handshake for `http://` URLs.
+- Apps can hang if they modify a superview's geometry in either the `ViewWillLayoutSubviews` or `LayoutSubviews` methods.
+- For all SSL/TLS connections, the RC4 symmetric cipher is now disabled by default. Additionally, the Secure Transport API no longer supports SSLv3 and it is recommended that the app stop using SHA-1 and 3DES cryptography as soon as possible.
 
 <a name="CFNetwork-HTTP-Protocol" />
 
@@ -72,14 +72,14 @@ After a Handoff operation, the `UserInfo` property of a `NSUserActivity` object 
 
 Known Issues:
 
- - Changes to the background appearance of `UINavigationBar`, `UITabBar` or `UIToolBar` may result in a layout pass to resolve the new appearance. Attempting to modify these appearances inside of a `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` or `DidUpdateSubviews` event can result in an infinite layout loop.
- - In tvOS 10, calling the `RemoveGestureRecognizer` method of a `UIView` object explicitly cancels any in-progress Gesture Recognizer.
- - Presented View Controllers can now affect the appearance of the status bar.
- - tvOS 10 requires the developer to call `base.AwakeFromNib` when subclassing `UIViewController` and overriding the `AwakeFromNib` method.
- - Apps with custom `UIView` subclasses that override `LayoutSubviews` and dirty the layout before calling `base.LayoutSubviews` may trigger an infinite layout loop in tvOS 10.
- - Direction-specific or flippable images assets are no flipping when assigned to `UIButton` objects.
+- Changes to the background appearance of `UINavigationBar`, `UITabBar` or `UIToolBar` may result in a layout pass to resolve the new appearance. Attempting to modify these appearances inside of a `LayoutSubviews`, `UpdateConstraints`, `WillLayoutSubviews` or `DidUpdateSubviews` event can result in an infinite layout loop.
+- In tvOS 10, calling the `RemoveGestureRecognizer` method of a `UIView` object explicitly cancels any in-progress Gesture Recognizer.
+- Presented View Controllers can now affect the appearance of the status bar.
+- tvOS 10 requires the developer to call `base.AwakeFromNib` when subclassing `UIViewController` and overriding the `AwakeFromNib` method.
+- Apps with custom `UIView` subclasses that override `LayoutSubviews` and dirty the layout before calling `base.LayoutSubviews` may trigger an infinite layout loop in tvOS 10.
+- Direction-specific or flippable images assets are no flipping when assigned to `UIButton` objects.
 
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [What's new in tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

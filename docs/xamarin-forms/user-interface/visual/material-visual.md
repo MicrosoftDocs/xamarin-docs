@@ -11,7 +11,7 @@ ms.date: 03/12/2019
 
 # Xamarin.Forms Material Visual
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 
 [Material Design](https://material.io) is an opinionated design system created by Google, that prescribes the size, color, spacing, and other aspects of how views and layouts should look and behave.
 
@@ -30,6 +30,7 @@ The process for enabling Xamarin.Forms Material Visual in your application is:
 Material renderers are currently included in the [Xamarin.Forms.Visual.Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) NuGet package for the following views:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- `CheckBox`
 - [`Entry`](xref:Xamarin.Forms.Entry)
 - [`Frame`](xref:Xamarin.Forms.Frame)
 - [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
@@ -106,6 +107,7 @@ The main visible differences between the default renderers and material renderer
 Material renderers can optionally be customized, just like the default renderers, through the following base classes:
 
 - `MaterialButtonRenderer`
+- `MaterialCheckBoxRenderer`
 - `MaterialEntryRenderer`
 - `MaterialFrameRenderer`
 - `MaterialProgressBarRenderer`
@@ -141,6 +143,6 @@ For more information about custom renderers, see [Custom Renderers](~/xamarin-fo
 
 ## Related links
 
-- [Material Visual (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/VisualDemos/)
+- [Material Visual (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-visualdemos)
 - [Create a Xamarin.Forms Visual Renderer](create.md)
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

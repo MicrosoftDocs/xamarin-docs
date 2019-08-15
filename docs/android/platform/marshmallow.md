@@ -26,7 +26,7 @@ Xamarin.Android apps.
 is the next major Android release after Android Lollipop.
 Xamarin.Android supports Android Marshmallow and includes:
 
--   **API 23/Android 6.0 Bindings** &ndash; Android 6.0 adds many new 
+- **API 23/Android 6.0 Bindings** &ndash; Android 6.0 adds many new 
     APIs for the new features described below; these APIs are available 
     to Xamarin.Android apps when you target API Level 23. For more 
     information about Android 6.0 APIs, see 
@@ -38,45 +38,45 @@ Although the Marshmallow release is mainly focused on "polish and
 quality", it also provides many new features of interest to 
 Xamarin.Android developers. These features include: 
 
--   **Runtime Permissions** &ndash; This enhancement makes it possible 
+- **Runtime Permissions** &ndash; This enhancement makes it possible 
     for users to approve security permissions on a case-by-case basis 
     at run time. 
 
--   **Authentication Improvements** &ndash; Starting with Android 
+- **Authentication Improvements** &ndash; Starting with Android 
     Marshmallow, apps can now use fingerprint sensors to authenticate 
     users, and a new *confirm credential* feature minimizes the need 
     for entering passwords. 
 
--   **App Linking** &ndash; This feature helps to eliminate the 
+- **App Linking** &ndash; This feature helps to eliminate the 
     necessity of having the **App Chooser** pop up by automatically 
     associating apps with web domains. 
 
--   **Direct Share** &ndash; You can define *direct share targets* that 
+- **Direct Share** &ndash; You can define *direct share targets* that 
     make sharing quick and intuitive for users; this feature allows 
     uers to share content with other apps. 
 
--   **Voice Interactions** &ndash; This new API allows you to build 
+- **Voice Interactions** &ndash; This new API allows you to build 
     conversational voice features into your app. 
 
--   **4K Display Mode** &ndash; In Android Marshmallow, your app can 
+- **4K Display Mode** &ndash; In Android Marshmallow, your app can 
     request a 4K display resolution on hardware that supports it. 
 
--   **New Audio Features** &ndash; Starting with Marshmallow, Android 
+- **New Audio Features** &ndash; Starting with Marshmallow, Android 
     now supports the MIDI protocol. It also provides new classes to 
     create digital audio capture and playback objects, and it offers 
     new API hooks for associating audio and input devices. 
 
--   **New Video Features** &ndash; Marshmallow provides a new class that 
+- **New Video Features** &ndash; Marshmallow provides a new class that 
     helps apps render audio and video streams in sync; this class also 
     provides support for dynamic playback rate. 
 
--   **Android for Work** &ndash; Marshmallow includes enhanced controls 
+- **Android for Work** &ndash; Marshmallow includes enhanced controls 
     for corporate-owned, single-user devices. It supports silent 
     install and uninstall of apps by the device owner, auto-acceptance 
     of system updates, improved certificate management, data usage 
     tracking, permissions management, and work status notifications. 
 
--   **Material Design Support Library** &ndash; The new *Design Support 
+- **Material Design Support Library** &ndash; The new *Design Support 
     Library* provides design components and patterns that makes it 
     easier for you to build Material Design look and feel into your 
     app. 
@@ -96,19 +96,19 @@ it provides an overview of the new feature highlights in Android 6.0.
 The following is required to use the new Android Marshmallow features 
 in Xamarin-based apps: 
 
--   **Xamarin.Android** &ndash; Xamarin.Android 5.1.7.12 or later must be
+- **Xamarin.Android** &ndash; Xamarin.Android 5.1.7.12 or later must be
     installed and configured with either Visual Studio or Xamarin
     Studio.
 
--   **Visual Studio for Mac** or **Visual Studio** &ndash; If you are using 
+- **Visual Studio for Mac** or **Visual Studio** &ndash; If you are using 
     Visual Studio for Mac, version 5.9.7.22 or later is 
     required. If you are using Visual Studio, version 3.11.1537 or 
     later of the Xamarin tools for Visual Studio is required. 
 
--   **Android SDK** &ndash; Android SDK 6.0 (API 23) or later must be 
+- **Android SDK** &ndash; Android SDK 6.0 (API 23) or later must be 
     installed via the Android SDK Manager.
 
--   **Java Developer Kit** &ndash; Xamarin.Android requires
+- **Java Developer Kit** &ndash; Xamarin.Android requires
     [JDK 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html) or
     later if you are developing for API level 24 or greater (JDK 1.8 also supports API levels earlier
     than 24, including Marshmallow). The 64-bit version of JDK 1.8 is required if you
@@ -125,14 +125,14 @@ To get started using Android Marshmallow with Xamarin.Android, you must
 download and install the latest tools and SDK packages before you can 
 create an Android Marshmallow project: 
 
-1.  Install the latest Xamarin updates from the **Stable** channel. 
+1. Install the latest Xamarin updates from the **Stable** channel. 
 
-2.  Install the Android 6.0 Marshmallow SDK packages and tools.
+2. Install the Android 6.0 Marshmallow SDK packages and tools.
 
-3.  Create a new Xamarin.Android project that targets Android 6.0 
+3. Create a new Xamarin.Android project that targets Android 6.0 
     Marshmallow (API Level 23). 
 
-4.  Configure an emulator or device for Android Marshmallow.
+4. Configure an emulator or device for Android Marshmallow.
 
 Each of these steps is explained in the following sections:
 
@@ -150,14 +150,14 @@ channel, see [Change the Updates Channel](https://github.com/xamarin/recipes/tre
 To create a Xamarin.Android project for Android Marshmallow, you must first
 use the Android SDK Manager to install the Android 6.0 SDK:
 
--   Start the Android SDK Manager (in Visual Studio for Mac, use
+- Start the Android SDK Manager (in Visual Studio for Mac, use
     **Tools > SDK Manager**; in Visual Studio,
     use **Tools > Android > Android SDK Manager**) and install
     the latest Android SDK Tools:
 
     [![Selecting Android SDK tools in the Android SDK Manager](marshmallow-images/mnc-preview-tools.png)](marshmallow-images/mnc-preview-tools.png#lightbox)
 
--   Also, install the latest **Android 6.0** SDK packages:
+- Also, install the latest **Android 6.0** SDK packages:
 
     [![Selecting Android 6.0 SDK packages in the Android SDK Manager](marshmallow-images/mnc-preview-packages.png)](marshmallow-images/mnc-preview-packages.png#lightbox)
 
@@ -188,9 +188,9 @@ For more about configuring Android API level levels, see
 If you are using an emulator, start the Android AVD Manager and create a new
 device using the following settings:
 
--   Device: Nexus 5, 6, or 9.
--   Target: Android 6.0 - API Level 23
--   ABI: x86
+- Device: Nexus 5, 6, or 9.
+- Target: Android 6.0 - API Level 23
+- ABI: x86
 
 For example, this virtual device is configured to emulate a Nexus 5:
 
@@ -229,17 +229,17 @@ See [Requesting Runtime Permissions in Android Marshmallow](https://blog.xamarin
 for more details (including code examples) about implementing Runtime Permissions in Xamarin.Android apps.
 Xamarin also provides a sample app that illustrates how runtime permissions
 work in Android Marshmallow (and later):
-[RuntimePermissions](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions).
+[RuntimePermissions](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions).
 
 This sample app demonstrates the following:
 
--   How to check and request permissions at run time.
--   How to declare permissions for Android M devices.
+- How to check and request permissions at run time.
+- How to declare permissions for Android M devices.
 
 To use this sample app:
 
-1.  Tap the **Camera** or **Contacts** buttons to display a permissions request dialog.
-2.  Grant permission to view Camera or Contacts fragments.
+1. Tap the **Camera** or **Contacts** buttons to display a permissions request dialog.
+2. Grant permission to view Camera or Contacts fragments.
 
 For more information about the new runtime permissions features
 in Android Marshmallow, see 
@@ -252,9 +252,9 @@ in Android Marshmallow, see
 Android Marshmallow includes two authentication enhancements that help eliminate
 the need for passwords:
 
--   **Fingerprint Authentication** &ndash; Uses a fingerprint scan to authenticate users.
+- **Fingerprint Authentication** &ndash; Uses a fingerprint scan to authenticate users.
 
--   **Confirm Credential** &ndash; Authenticates users based on how long the device has
+- **Confirm Credential** &ndash; Authenticates users based on how long the device has
     been unlocked.
 
 The links and sample apps described next can help you become familiar
@@ -271,12 +271,12 @@ Authentication](https://developer.android.com/preview/api-overview.html#fingerpr
 
 Xamarin provides a sample app that illustrates how to use registered
 fingerprints to authenticate a user in your app:
-[FingerprintDialog](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog).
+[FingerprintDialog](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog).
 
 To use this sample app:
 
-1.  Touch the **Purchase** button to open a fingerprint authentication dialog.
-2.  Scan in your registered fingerprint to authenticate.
+1. Touch the **Purchase** button to open a fingerprint authentication dialog.
+2. Scan in your registered fingerprint to authenticate.
 
 Note that this sample app requires a device with a fingerprint reader.
 This app does not store your fingerprint (or your password).
@@ -312,12 +312,12 @@ Credential](https://developer.android.com/preview/api-overview.html#confirm-cred
 
 Xamarin provides a sample app that illustrates how to use device credentials
 (such as PIN, pattern, or password) in your app:
-[ConfirmCredential](https://developer.xamarin.com/samples/monodroid/android-m/ConfirmCredential/)
+[ConfirmCredential](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
 
 To use this sample app:
 
-1.  Setup a secure lock screen on your device (**Secure > Security > Screenlock**).
-2.  Tap the **Purchase** button and confirm the secure lock screen credentials.
+1. Setup a secure lock screen on your device (**Secure > Security > Screenlock**).
+2. Tap the **Purchase** button and confirm the secure lock screen credentials.
 
 
 
@@ -338,13 +338,13 @@ content more seamless without having to resort to a `WebView`. Your app
 can also affect how Chrome looks and feels by customizing the 
 following: 
 
--   Toolbar color
+- Toolbar color
 
--   Enter and exit animations
+- Enter and exit animations
 
--   Custom actions in the Chrome toolbar and overflow menu
+- Custom actions in the Chrome toolbar and overflow menu
 
--   Chrome pre-start and content pre-fetch (for faster loading)
+- Chrome pre-start and content pre-fetch (for faster loading)
 
 To take advantage of this feature in your Xamarin.Android app, download and install the
 [Android Support Custom Tabs Library](https://www.nuget.org/packages/Xamarin.Android.Support.CustomTabs/).
@@ -364,33 +364,33 @@ Android Marshmallow, Google introduced the *Android Design Support Library* to
 make it easier for app developers to adopt material design look and
 feel. This library includes the following components:
 
--   **CoordinatorLayout** &ndash; The new `CoordinatorLayout` widget is
+- **CoordinatorLayout** &ndash; The new `CoordinatorLayout` widget is
     similar to but more powerful than a `FrameLayout`. You can use
     `CoordinatorLayout` as a container for child views or as a
     top-level layout, and it provides a `layout_anchor` attribute that
     can be used to anchor views relative to other views.
 
--   **Collapsing Toolbars** &ndash; The new `CollapsingToolbarLayout` is a
+- **Collapsing Toolbars** &ndash; The new `CollapsingToolbarLayout` is a
     collapsing app bar that is a wrapper for `Toolbar`. (Note that the
     *app bar* is what was formerly referred to as the *action bar*.)
 
--   **Floating Action Button** &ndash; A round button that denotes the
+- **Floating Action Button** &ndash; A round button that denotes the
     primary action on your app's interface.
 
--   **Floating Labels for Editing Text** &ndash; Uses a new
+- **Floating Labels for Editing Text** &ndash; Uses a new
     `TextInputLayout` widget (which wraps `EditText`) to show a floating
     label when a hint is hidden when a user inputs text.
 
--   **Navigation View** &ndash; The new `NavigationView` widget helps
+- **Navigation View** &ndash; The new `NavigationView` widget helps
     you use the navigation drawer in a way that is easier for users
     to navigate.
 
--   **Snackbar** &ndash; The new `SnackBar` widget is a lightweight
+- **Snackbar** &ndash; The new `SnackBar` widget is a lightweight
     feedback mechanism (similar to a toast) that displays a brief
     message at the bottom of the screen, appearing above all other
     elements on the screen.
 
--   **Material Tabs** &ndash; The new `TabLayout` widget provides a
+- **Material Tabs** &ndash; The new `TabLayout` widget provides a
     horizontal layout for displaying tabs as way to implement top-level
     navigation in your app.
 
@@ -402,15 +402,15 @@ NuGet package.
 
 See [Beautiful Material Design with the Android Support Design Library](https://blog.xamarin.com/add-beautiful-material-design-with-the-android-support-design-library/) for more details (including code examples) about using the Material Design Support Library in Xamarin.Android apps.
 Xamarin provides a sample app that demos the new Android Design library 
-on Xamarin.Android &ndash; [Cheesesquare](https://developer.xamarin.com/samples/monodroid/android5.0/Cheesesquare).
+on Xamarin.Android &ndash; [Cheesesquare](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-cheesesquare).
 This sample demonstrates the following features of the Design library:
 
 
--   Collapsing toolbar
--   Floating action button
--   View anchoring
--   NavigationView
--   Snackbar
+- Collapsing toolbar
+- Floating action button
+- View anchoring
+- NavigationView
+- Snackbar
 
 For more information about the Design library, see
 [Android Design Support Library](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html)
@@ -424,19 +424,19 @@ updates to several core Android libraries. Xamarin provides
 Xamarin.Android support for these updates through several 
 preview-release NuGet packages: 
 
--   [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) 
+- [Google Play Services](https://www.nuget.org/packages?q=Xamarin+Google+Play+Services) 
     &ndash; The latest version of Google Play Services includes the new 
     *App Invites* feature, which makes it possible for users to share 
     their app with friends. For more information about this feature, 
     see 
     [Expand Your App's Reach with Google's App Invites](https://blog.xamarin.com/expand-your-apps-reach-with-googles-app-invites/). 
 
--   [Android Support Libraries](https://www.nuget.org/packages?q=xamarin+support+library) 
+- [Android Support Libraries](https://www.nuget.org/packages?q=xamarin+support+library) 
     &ndash; These NuGets offer features that are only available for 
     library APIs while providing backward-compatible versions of the 
     Android framework APIs. 
 
--   [Android Wearable Library](https://www.nuget.org/packages/Xamarin.Android.Wear) 
+- [Android Wearable Library](https://www.nuget.org/packages/Xamarin.Android.Wear) 
     &ndash; this NuGet includes Google Play Services bindings. The 
     latest version of the wearable library brings new features 
     (including easier navigation for custom apps) to the Android Wear 
@@ -457,7 +457,7 @@ Xamarin.Android development.
 - [Android 6.0 Marshmallow](https://developer.android.com/about/versions/marshmallow/index.html)
 - [Get the Android SDK](https://developer.android.com/sdk/index.html#Other)
 - [Feature Overview](https://developer.android.com/preview/api-overview.html)
-- [Release Notes](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1.99/)
-- [RuntimePermissions (sample)](https://developer.xamarin.com/samples/monodroid/android-m/RuntimePermissions)
-- [ConfirmCredential (sample)](https://developer.xamarin.com/samples/monodroid/android-m/ConfirmCredential)
-- [FingerprintDialog (sample)](https://developer.xamarin.com/samples/monodroid/android-m/FingerprintDialog)
+- [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1.99/index.md)
+- [RuntimePermissions (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-runtimepermissions)
+- [ConfirmCredential (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-confirmcredential)
+- [FingerprintDialog (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog)

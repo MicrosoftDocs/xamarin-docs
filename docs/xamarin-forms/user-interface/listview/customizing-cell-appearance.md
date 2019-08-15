@@ -11,7 +11,7 @@ ms.date: 12/07/2016
 
 # Customizing ListView Cell Appearance
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
 
 [`ListView`](xref:Xamarin.Forms.ListView) presents scrollable lists, which can be customized through the use of `ViewCell`s. `ViewCells` can be used for displaying text and images, indicating a true/false state and receiving user input.
 
@@ -253,6 +253,6 @@ On iOS and Android, if the [`ListView`](xref:Xamarin.Forms.ListView) is recyclin
 
 ## Related Links
 
-- [Built in Cells (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BuiltInCells)
-- [Custom Cells (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/CustomCells)
-- [Binding Context Changed (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ListView/BindingContextChanged)
+- [Built in Cells (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-builtincells)
+- [Custom Cells (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-customcells)
+- [Binding Context Changed (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-listview-bindingcontextchanged)

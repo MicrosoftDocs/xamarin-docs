@@ -15,6 +15,8 @@ _Xamarin.Forms provides a number of different page navigation experiences, depen
 
 ![](images/page-types.png "Xamarin.Forms Page Types")
 
+Alternatively, Xamarin.Forms Shell applications use a URI-based navigation experience that doesn't enforce a set navigation hierarchy. For more information, see [Xamarin.Forms Shell Navigation](~/xamarin-forms/app-fundamentals/shell/navigation.md).
+
 ## [Hierarchical Navigation](hierarchical.md)
 
 The [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class provides a hierarchical navigation experience where the user is able to navigate through pages, forwards and backwards, as desired. The class implements navigation as a last-in, first-out (LIFO) stack of [`Page`](xref:Xamarin.Forms.Page) objects.
@@ -34,7 +36,3 @@ The Xamarin.Forms [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) is a
 ## [Modal Pages](modal.md)
 
 Xamarin.Forms also provides support for modal pages. A modal page encourages users to complete a self-contained task that cannot be navigated away from until the task is completed or cancelled.
-
-## [Displaying Pop-Ups](pop-ups.md)
-
-Xamarin.Forms provides two pop-up-like user interface elements: an alert and an action sheet. These interface elements can be used to ask users simple questions and to guide users through tasks.

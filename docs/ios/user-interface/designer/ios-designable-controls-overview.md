@@ -23,10 +23,10 @@ The Xamarin Designer for iOS is a powerful tool for visualizing an application's
 
 A control that meets all the following requirements will be rendered on the design surface:
 
-1.  It is a direct or indirect subclass of  [UIView](xref:UIKit.UIView) or  [UIViewController](xref:UIKit.UIViewController). Other [NSObject](xref:Foundation.NSObject) subclasses will appear as an icon on the design surface.
-2.  It has a  [RegisterAttribute](xref:Foundation.RegisterAttribute) to expose it to Objective-C.
-3.  It has  [the required IntPtr constructor](~/ios/internals/api-design/index.md).
-4.  It either implements the [IComponent](xref:System.ComponentModel.IComponent) interface or has a [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) set to True.
+1. It is a direct or indirect subclass of  [UIView](xref:UIKit.UIView) or  [UIViewController](xref:UIKit.UIViewController). Other [NSObject](xref:Foundation.NSObject) subclasses will appear as an icon on the design surface.
+2. It has a  [RegisterAttribute](xref:Foundation.RegisterAttribute) to expose it to Objective-C.
+3. It has  [the required IntPtr constructor](~/ios/internals/api-design/index.md).
+4. It either implements the [IComponent](xref:System.ComponentModel.IComponent) interface or has a [DesignTimeVisibleAttribute](xref:System.ComponentModel.DesignTimeVisibleAttribute) set to True.
 
 Controls defined in code that meet the above requirements will appear in the designer when their containing project is compiled for the simulator. By default, all custom controls will appear in the **Custom Components**
 section of the **Toolbox**. However the [CategoryAttribute](xref:System.ComponentModel.CategoryAttribute) can be applied to the custom control's class to specify a different section.
@@ -37,9 +37,9 @@ The designer does not support loading third-party Objective-C libraries.
 
 A property declared by a custom control will appear in the property panel if the following conditions are met:
 
-1.  The property has a public getter and setter.
-1.  The property has an  [ExportAttribute](xref:Foundation.ExportAttribute) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
-1.  The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), or [UIImage](xref:UIKit.UIImage). This list of supported types may be expanded in the future.
+1. The property has a public getter and setter.
+1. The property has an  [ExportAttribute](xref:Foundation.ExportAttribute) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
+1. The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), or [UIImage](xref:UIKit.UIImage). This list of supported types may be expanded in the future.
 
 
 The property may also be decorated with a [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) to specify the label that is displayed for it in the property panel.
@@ -127,10 +127,10 @@ public class CustomView : UIView {
 
 The `CustomView` component exposes a `Counter` property that can be set by the developer inside the iOS Designer. However, no matter what value is set inside the designer, the value of the `Counter` property will always be zero (0). Here's why:
 
--  An instance of the  `CustomControl` is inflated from the Storyboard file.
--  Any properties modified in the iOS designer are set (such as setting the value of the  `Counter` to two (2), for example).
--  The  `AwakeFromNib` method is executed and a call is made to the component's  `Initialize` method.
--  Inside  `Initialize` the value of the  `Counter` property is being reset to zero (0).
+- An instance of the  `CustomControl` is inflated from the Storyboard file.
+- Any properties modified in the iOS designer are set (such as setting the value of the  `Counter` to two (2), for example).
+- The  `AwakeFromNib` method is executed and a call is made to the component's  `Initialize` method.
+- Inside  `Initialize` the value of the  `Counter` property is being reset to zero (0).
 
 
 To fix the above situation, either initialize the `Counter` property elsewhere (such as in the component's constructor) or don't override the `AwakeFromNib` method and call `Initialize` if the component requires no further initialization outside of what is currently being handled by its constructors.
@@ -139,8 +139,8 @@ To fix the above situation, either initialize the `Counter` property elsewhere (
 
 On the design surface, a custom control must adhere to a few restrictions:
 
--  App bundle resources are not available in design mode. Images are available when loaded through  [UIImage methods](xref:UIKit.UIImage) .
--  Asynchronous operations, such as web requests, should not be performed in design mode. The design surface does not support animation or any other asynchronous updates to the control's UI.
+- App bundle resources are not available in design mode. Images are available when loaded through  [UIImage methods](xref:UIKit.UIImage) .
+- Asynchronous operations, such as web requests, should not be performed in design mode. The design surface does not support animation or any other asynchronous updates to the control's UI.
 
 
 A custom control can implement [IComponent](xref:System.ComponentModel.IComponent) and use the [DesignMode](xref:System.ComponentModel.ISite.DesignMode) property to check if it is on the design
@@ -161,7 +161,7 @@ public class DesignerAwareLabel : UILabel, IComponent {
 
 	public override void AwakeFromNib ()
 	{
-		if (Site != null &amp;&amp; Site.DesignMode)
+		if (Site != null && Site.DesignMode)
 			Text = "Design Mode";
 		else
 			Text = "Runtime";

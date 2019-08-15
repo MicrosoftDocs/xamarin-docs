@@ -11,7 +11,7 @@ ms.date: 12/18/2018
 
 # Automation Properties in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)
 
 _Xamarin.Forms allows accessibility values to be set on user interface elements by using attached properties from the AutomationProperties class, which in turn set native accessibility values. This article explains how to use the AutomationProperties class, so that a screen reader can speak about the elements on the page._
 
@@ -144,7 +144,7 @@ On Android, to set the text that screen readers will read for the back arrow in 
 
 ### MasterDetailPage
 
-On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `MasterDetailPage`, or on the `Icon` property of the `Master` page.
+On iOS and the Universal Windows Platform (UWP), to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), either set the `AutomationProperties.Name`, and `AutomationProperties.HelpText` properties on the `MasterDetailPage`, or on the `IconImageSource` property of the `Master` page.
 
 On Android, to set the text that screen readers will read for the toggle button on a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), add string resources to the Android project:
 
@@ -156,11 +156,11 @@ On Android, to set the text that screen readers will read for the toggle button 
 </resources>
 ```
 
-Then set the `AutomationId` property of the `Icon` property of the `Master` page to the appropriate string:
+Then set the `AutomationId` property of the `IconImageSource` property of the `Master` page to the appropriate string:
 
 ```csharp
 var master = new ContentPage { ... };
-master.Icon.AutomationId = "btnMDPAutomationID";
+master.IconImageSource.AutomationId = "btnMDPAutomationID";
 ```
 
 ### ToolbarItem
@@ -174,4 +174,4 @@ On Android, the `AutomationProperties.Name` and/or `AutomationProperties.HelpTex
 ## Related Links
 
 - [Attached Properties](~/xamarin-forms/xaml/attached-properties.md)
-- [Accessibility (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Accessibility/)
+- [Accessibility (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-accessibility)

@@ -408,7 +408,7 @@ The iOS Simulator is a quick way to test an application. The Simulator has a num
 A device takes time to provision and requires an Apple Developer Account. The [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide gives thorough instructions on getting a device ready for development.
 
 > [!NOTE]
-> At present, due to a requirement from Apple, it is necessary to have a development certificate or _signing identity_ to build you code for device or simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
+> At present, due to a requirement from Apple, it is necessary to have a development certificate or _signing identity_ to build your code for a physical device or the simulator. Follow the steps in the [Device Provisioning guide](~/ios/get-started/installation/device-provisioning/manual-provisioning.md) to set this up.
 
 Once the device is provisioned, you can deploy to it by plugging it in, changing the target in the build toolbar to the iOS Device, and pressing **Start** ( **Play**) as illustrated by the following screenshot:
 
@@ -436,14 +436,14 @@ Not everyone has a designer available to create the custom icons and launch imag
 - [**Sketch**](https://www.sketchapp.com") – Sketch is a Mac app for designing user interfaces, icons, and more. This is the app that was used to design the Xamarin App Icons and Launch Images set. Sketch 3 is available on the App Store. You can try out the free [Sketch Tool](http://bohemiancoding.com/sketch/tool/) as well.
 - [**Pixelmator**](http://www.pixelmator.com/) – A versatile image editing app for Mac that costs about $30.
 - [**Glyphish**](http://www.glyphish.com/) – High-quality prebuilt icon sets for free download and purchase.
-- [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5.  Can be hit or miss but a good resource if you need icons designed on the fly
+- [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5. Can be hit or miss but a good resource if you need icons designed on the fly
 
 ::: zone-end
 ::: zone pivot="windows"
 
 * Visual Studio – You can use this to create a simple icon set for your app directly in the IDE.
 - [**Glyphish**](http://www.glyphish.com/) – High-quality prebuilt icon sets for free download and purchase.
-- [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5.  Can be hit or miss but a good resource if you need icons designed on the fly
+- [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5. Can be hit or miss but a good resource if you need icons designed on the fly
 
 ::: zone-end
 
@@ -452,10 +452,10 @@ For more information about icon and launch image sizes and requirements, refer t
 ## Summary
 
 Congratulations! You now have a solid understanding of the components of a Xamarin.iOS application as well as the tools used to create them.
-In the [next tutorial in the Getting Started series](~/ios/get-started/hello-ios-multiscreen/index.md), you’ll extend our application to handle multiple screens. Along the way you’ll implement a Navigation Controller, learn about Storyboard Segues, and introduce the Model, View, Controller (MVC) pattern as you extend our application to handle multiple screens.
+In the [next tutorial in the Getting Started series](~/ios/get-started/hello-ios-multiscreen/index.md), you’ll extend our application to handle multiple screens. Along the way you’ll implement a Navigation Controller, learn about Storyboard Segues, and introduce the Model, View, Controller (MVC) pattern as you extend your application to handle multiple screens.
 
 ## Related links
 
-- [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/overview/themes/)
 - [iOS Provisioning Portal](https://developer.apple.com/account/#/overview)

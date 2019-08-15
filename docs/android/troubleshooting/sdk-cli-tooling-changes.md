@@ -40,12 +40,12 @@ Android Virtual Devices using Android SDK 25.3.0 and later.
 Visual Studio and Visual Studio for Mac now provide Xamarin replacements
 for the discontinued Google GUI-based managers:
 
--   To download Android SDK tools, platforms, and other components that
+- To download Android SDK tools, platforms, and other components that
     you need for developing Xamarin.Android apps, use the
     [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md)
     instead of the legacy Google SDK Manager.
 
--   To create and configure Android Virtual Devices, use 
+- To create and configure Android Virtual Devices, use 
     the [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)
     instead of the legacy Google Emulator Manager.
 

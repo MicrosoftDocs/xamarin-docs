@@ -81,6 +81,6 @@
         - name: Objective-C developers
           href: ~/ios/get-started/objective-c-developers/index.md
         - name: Azure
-          href: ~/xamarin-forms/data-cloud/index.md
+          href: ~/xamarin-forms/data-cloud/index.yml
     - name: Development guidance
       href: ~/cross-platform/index.yml

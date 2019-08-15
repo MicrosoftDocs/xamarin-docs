@@ -1,16 +1,16 @@
 ---
-title: "Introduction to the mobile Software Development Lifecycle"
+title: "Mobile software development lifecycle"
 description: "This document describes the mobile software development lifecycle, taking a look at UX design, UI design, development, stabilization, distribution, and more."
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 11/22/2016
 ---
 
-# Introduction to the mobile Software Development Lifecycle
+# Mobile software development lifecycle
 
-Building mobile applications can be as easy as opening up the IDE, throwing
+Building mobile applications can be as easy as opening up Visual Studio, throwing
 something together, doing a quick bit of testing, and submitting to an App Store
 – all done in an afternoon. Or it can be an extremely involved process that
 involves rigorous up-front design, usability testing, QA testing on thousands of
@@ -20,8 +20,8 @@ ways.
 In this document, we’re going to take a thorough introductory examination
 of building mobile applications, including:
 
-1.   **Process** – The process of software development is called the Software Development Lifecycle (SDLC). We’ll examine all phases of the SDLC with respect to mobile application development, including: Inspiration, Design, Development, Stabilization, Deployment, and Maintenance.
-1.   **Considerations** – There are a number of considerations when building mobile applications, especially in contrast to traditional web or desktop applications. We’ll examine these considerations and how they affect mobile development.
+1. **Process** – The process of software development is called the Software Development Lifecycle (SDLC). We’ll examine all phases of the SDLC with respect to mobile application development, including: Inception, Design, Development, Stabilization, Deployment, and Maintenance.
+1. **Considerations** – There are a number of considerations when building mobile applications, especially in contrast to traditional web or desktop applications. We’ll examine these considerations and how they affect mobile development.
 
 This document is intended to answer fundamental questions about mobile app
 development, for new and experienced application developers alike. It takes a
@@ -30,17 +30,17 @@ into during the entire Software Development Lifecycle (SDLC). However, this
 document may not be for everyone, if you’re itching to just start building
 applications, we recommend jumping ahead to the [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md) guide and then coming back to this document later.
 
-## Mobile Development SDLC
+## Mobile development software lifecycle
 
 The lifecycle of mobile development is largely no different than the SDLC for
 web or desktop applications. As with those, there are usually 5 major portions
 of the process:
 
-1.   **Inception** – All apps start with an idea. That idea is usually refined into a solid basis for an application.
-1.   **Design** – The design phase consists of defining the app’s User Experience (UX) such as what the general layout is, how it works, etc., as well as turning that UX into a proper User Interface (UI) design, usually with the help of a graphic designer.
-1.   **Development** – Usually the most resource intensive phase, this is the actual building of the application.
-1.   **Stabilization** – When development is far enough along, QA usually begins to test the application and bugs are fixed. Often times an application will go into a limited beta phase in which a wider user audience is given a chance to use it and provide feedback and inform changes.
-1.  **Deployment**
+1. **Inception** – All apps start with an idea. That idea is usually refined into a solid basis for an application.
+1. **Design** – The design phase consists of defining the app’s User Experience (UX) such as what the general layout is, how it works, etc., as well as turning that UX into a proper User Interface (UI) design, usually with the help of a graphic designer.
+1. **Development** – Usually the most resource intensive phase, this is the actual building of the application.
+1. **Stabilization** – When development is far enough along, QA usually begins to test the application and bugs are fixed. Often times an application will go into a limited beta phase in which a wider user audience is given a chance to use it and provide feedback and inform changes.
+1. **Deployment**
 
 Often many of these pieces are overlapped, for example, it’s common for
 development to be going on while the UI is being finalized, and it may even
@@ -64,16 +64,16 @@ The inception stage is all about defining and refining the idea for an app.
 To create a successful app, it’s important to ask some fundamental
 questions. Here are some things to consider before publishing an app in one of the public App Stores:
 
--   **Competitive Advantage** – Are there similar apps out there already? If so, how does this application differentiate from others?
+- **Competitive Advantage** – Are there similar apps out there already? If so, how does this application differentiate from others?
 
 For apps that will be distributed in an Enterprise:
 
--   **Infrastructure Integration** – What existing infrastructure will it integrate with or extend?
+- **Infrastructure Integration** – What existing infrastructure will it integrate with or extend?
 
 Additionally, apps should be evaluated in the context of the mobile form factor:
 
--   **Value** – What value does this app bring users? How will they use it?
--   **Form/Mobility** – How will this app work in a mobile form factor? How can I add value using mobile technologies such as location awareness, the camera, etc.?
+- **Value** – What value does this app bring users? How will they use it?
+- **Form/Mobility** – How will this app work in a mobile form factor? How can I add value using mobile technologies such as location awareness, the camera, etc.?
 
 To help with designing the functionality of an app, it can be useful to
 define Actors and [Use Cases](https://en.wikipedia.org/wiki/Use_case). Actors are roles within
@@ -103,9 +103,9 @@ about the actual UI design:
 When creating UX mockups, it’s important to consider the interface
 guidelines for the various platforms that the app will target. The app should "feel at home" on each platform. The official design guidelines for each platform are:
 
-1.   **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
-1.   **Android** –  [Design Guidelines](https://developer.android.com/design/index.html)
-1.   **UWP** –  [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/)
+1. **Apple** -  [Human Interface Guidelines](https://developer.apple.com/ios/human-interface-guidelines/overview/themes/)
+1. **Android** –  [Design Guidelines](https://developer.android.com/design/index.html)
+1. **UWP** –  [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 For example, each app has a metaphor for switching between sections in an
 application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and UWP uses the [Pivot or tab](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot) view.
@@ -125,7 +125,7 @@ And due to the myriad of form factors out there, there are often mid-size
 form factors (somewhere between a phone and a tablet) that you may also want to
 target.
 
-#### User Interface (UI) design
+#### User interface (UI) design
 
 Once the UX is determined, the next step is to
 create the UI design. While UX is typically just black and white mockups, the UI
@@ -158,10 +158,10 @@ they become costly. Typically, applications go into *Prototype*, *Alpha*, *Beta*
 people define these differently, but they generally follow the following
 pattern:
 
-1.   **Prototype** – The app is still in proof-of-concept phase and only core functionality, or specific parts of the application are working. Major bugs are present.
-1.   **Alpha** – Core functionality is generally code-complete (built, but not fully tested). Major bugs are still present, outlying functionality may still not be present.
-1.   **Beta** – Most functionality is now complete and has had at least light testing and bug fixing. Major known issues may still be present.
-1.   **Release Candidate** – All functionality is complete and tested. Barring new bugs, the app is a candidate for release to the wild.
+1. **Prototype** – The app is still in proof-of-concept phase and only core functionality, or specific parts of the application are working. Major bugs are present.
+1. **Alpha** – Core functionality is generally code-complete (built, but not fully tested). Major bugs are still present, outlying functionality may still not be present.
+1. **Beta** – Most functionality is now complete and has had at least light testing and bug fixing. Major known issues may still be present.
+1. **Release Candidate** – All functionality is complete and tested. Barring new bugs, the app is a candidate for release to the wild.
 
 It’s never too early to begin testing an application. For example, if a
 major issue is found in the prototype stage, the UX of the app can still be
@@ -194,9 +194,9 @@ platform.
 
 Xamarin.iOS and Objective-C apps are distributed in exactly the same way:
 
-1.   **Apple App Store** – Apple’s App Store is a globally available online application repository that is built into Mac OS X via iTunes. It’s by far the most popular distribution method for applications and it allows developers to market and distribute their apps online with very little effort.
-1.   **In-House Deployment** – In-House deployment is meant for internal distribution of corporate applications that aren’t available publicly via the App Store.
-1.   **Ad-Hoc Deployment** – Ad-hoc deployment is intended primarily for development and testing and allows you to deploy to a limited number of properly provisioned devices. When you deploy to a device via Xcode or Visual Studio for Mac, it is known as ad-hoc deployment.
+1. **Apple App Store** – Apple’s App Store is a globally available online application repository that is built into Mac OS X via iTunes. It’s by far the most popular distribution method for applications and it allows developers to market and distribute their apps online with very little effort.
+1. **In-House Deployment** – In-House deployment is meant for internal distribution of corporate applications that aren’t available publicly via the App Store.
+1. **Ad-Hoc Deployment** – Ad-hoc deployment is intended primarily for development and testing and allows you to deploy to a limited number of properly provisioned devices. When you deploy to a device via Xcode or Visual Studio for Mac, it is known as ad-hoc deployment.
 
 #### Android
 
@@ -221,10 +221,10 @@ This allows developers a potentially larger yet more complex distribution
 channel for their applications. [Google Play](https://play.google.com/store?hl=en) is Google’s official app store, but there are
 many others. A few popular ones are:
 
-1.  [AppBrain](http://www.appbrain.com/)
-1.  [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
-1.  [Handango](http://www.handango.com/)
-1.  [GetJar](http://www.getjar.com/)
+1. [AppBrain](http://www.appbrain.com/)
+1. [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1. [Handango](http://www.handango.com/)
+1. [GetJar](http://www.getjar.com/)
 
 #### UWP
 
@@ -260,15 +260,15 @@ mobile devices with less screen space than even most laptops. Because of this,
 mobile platform UI controls have been designed specifically to be effective on
 smaller form factors.
 
-#### Device and OS fragmentation
+#### Device and operating system fragmentation
 
 It’s important to take into account different devices throughout the entire
 software development lifecycle:
 
-1.   **Conceptualization and Planning** – Keep in mind that hardware and features will vary from device to device, an application that relies on certain features may not work properly on certain devices. For example, not all devices have cameras, so if you’re building a video messaging application, some devices may be able to play videos, but not take them.
-1.   **Design** – When designing an application’s User Experience (UX), pay attention to the different screen ratios and sizes across devices. Additionally, when designing an application’s User Interface (UI), different screen resolutions should be considered.
-1.   **Development** – When using a feature from code, the presence of that feature should always be tested first. For example, before using a device feature, such as a camera, always query the OS for the presence of that feature first. Then, when initializing the feature/device, make sure to request currently supported from the OS about that device and then use those configuration settings.
-1.   **Testing** – It’s incredibly important to test the application early and often on actual devices. Even devices with the same hardware specs can vary widely in their behavior.
+1. **Conceptualization and Planning** – Keep in mind that hardware and features will vary from device to device, an application that relies on certain features may not work properly on certain devices. For example, not all devices have cameras, so if you’re building a video messaging application, some devices may be able to play videos, but not take them.
+1. **Design** – When designing an application’s User Experience (UX), pay attention to the different screen ratios and sizes across devices. Additionally, when designing an application’s User Interface (UI), different screen resolutions should be considered.
+1. **Development** – When using a feature from code, the presence of that feature should always be tested first. For example, before using a device feature, such as a camera, always query the OS for the presence of that feature first. Then, when initializing the feature/device, make sure to request currently supported from the OS about that device and then use those configuration settings.
+1. **Testing** – It’s incredibly important to test the application early and often on actual devices. Even devices with the same hardware specs can vary widely in their behavior.
 
 #### Limited resources
 
@@ -373,7 +373,7 @@ inactive (with special rules for handling the inactive state, or being
 “tombstoned”).
 
 The second part is providing background agents for processing tasks even when
-the application is not running in the foreground. 
+the application is not running in the foreground.
 
 #### Device capabilities
 
@@ -396,6 +396,6 @@ design, testing, and deployment.
 
 ## Next steps
 
-- [Introduction to Mobile Development](~/cross-platform/get-started/introduction-to-mobile-development.md)
+- [What is Xamarin?](~/cross-platform/get-started/introduction-to-mobile-development.md)
 - [Get started with Xamarin](~/get-started/index.yml)
 - [Sharing code across platforms](~/cross-platform/app-fundamentals/index.md)

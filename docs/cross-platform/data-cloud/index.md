@@ -10,7 +10,7 @@ ms.date: 10/09/2017
 
 # Microsoft Azure and Xamarin
 
-[ ![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
+[![](images/evolve-mikej-azure-sml.png "Azure App Services features are easy to add to Xamarin apps, including cloud data storage and cross-platform push notifications")](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
 [Evolve 2016: Developing Connected Apps Using Azure and Xamarin](https://evolve.xamarin.com/session/56ec886fde91c6253c277bc6)
 
@@ -29,8 +29,8 @@ There is a collection of [Azure Mobile Apps documentation](~/cross-platform/data
   to help implement push notifications across platforms.
 
 Configure your apps on the [Azure App Services portal](https://portal.azure.com/)
-  to access Mobile Apps, Web APIs, Storage, and much more. Learn about [how app services are different](http://azure.microsoft.com/updates/whats-new-with-azure-app-service/) and watch in
-  [these videos from Microsoft](http://azure.microsoft.com/campaigns/azure-march-announcement/).
+  to access Mobile Apps, Web APIs, Storage, and much more. Learn about [how app services are different](https://azure.microsoft.com/updates/whats-new-with-azure-app-service/) and watch in
+  [these videos from Microsoft](https://azure.microsoft.com/campaigns/azure-march-announcement/).
 
 ## Active Directory Authentication
 
@@ -48,7 +48,7 @@ Microsoft's Web API exposes a REST-like interface
   apps.
 
 
-###  [Introduction To Web Services](~/cross-platform/data-cloud/web-services/index.md)
+### [Introduction To Web Services](~/cross-platform/data-cloud/web-services/index.md)
 
 This tutorial introduces how to integrate REST, WCF and SOAP web service
   technologies with Xamarin mobile applications. It examines various service
@@ -75,5 +75,5 @@ incorporated into Xamarin apps:
 ## Related Links
 
 - [Azure PCL Example (by @paulbatum) (sample)](https://github.com/paulbatum/mobile-services-xamarin-pcl)
-- [Azure portal](http://azure.microsoft.com/)
+- [Azure portal](https://azure.microsoft.com/)
 - [Mobile Client for Xamarin (NuGet)](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/)

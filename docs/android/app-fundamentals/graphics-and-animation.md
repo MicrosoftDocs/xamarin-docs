@@ -9,10 +9,9 @@ ms.author: crdun
 ms.date: 02/16/2018
 ---
 
-# Graphics and Animation
+# Android Graphics and Animation
 
 _Android provides a very rich and diverse framework for supporting 2D graphics and animations. This topic introduces these frameworks and discusses how to create custom graphics and animations for use in a Xamarin.Android application._
-
 
 ## Overview
 
@@ -43,32 +42,32 @@ Android provides two different API's for creating 2D graphics. One is a
 high level declarative approach and the other a programmatic low-level
 API:
 
--   **Drawable Resources** &ndash; These are used to create custom graphics 
+- **Drawable Resources** &ndash; These are used to create custom graphics 
     either programmatically or (more typically) by embedding drawing 
     instructions in XML files. Drawable resources are typically defined 
     as XML files that contain instructions or actions for Android to 
     render a 2D graphic. 
 
--   **Canvas** &ndash; this is a low level API that involves drawing 
+- **Canvas** &ndash; this is a low level API that involves drawing 
     directly on an underlying bitmap. It provides very fine-grained 
     control over what is displayed. 
 
 In addition to these 2D graphics techniques, Android also provides
 several different ways to create animations:
 
--   **Drawable Animations** &ndash; Android also supports
+- **Drawable Animations** &ndash; Android also supports
     frame-by-frame animations known as *Drawable Animation*. This is
     the simplest animation API. Android sequentially loads and displays
     Drawable resources in sequence (much like a cartoon).
 
--   **View Animations** &ndash; *View Animations* are the original
+- **View Animations** &ndash; *View Animations* are the original
     animation API's in Android and are available in all versions of
     Android. This API is limited in that it will only work with View
     objects and can only perform simple transformations on those Views.
     View animations are typically defined in XML files found in the
     `/Resources/anim` folder.
 
--   **Property Animations** &ndash; Android 3.0 introduced a new set of
+- **Property Animations** &ndash; Android 3.0 introduced a new set of
     animation API's known as *Property Animations*. These new API's
     introduced an extensible and flexible system that can be used to
     animate the properties of any object, not just View objects. This
@@ -118,7 +117,7 @@ Resources are useful for many simple and common graphic requirements,
 they lack the power and control of the Canvas API.
 
 The other technique, using the
-[Canvas](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/) object, is very similar to
+[Canvas](xref:Android.Graphics.Canvas) object, is very similar to
 other traditional API frameworks such as System.Drawing or iOS's Core
 Drawing. Using the Canvas object provides the most control of how 2D
 graphics are created. It is appropriate for situations where a Drawable
@@ -139,31 +138,31 @@ At runtime, an Android application will load these resources and use
 the instructions contained in these XML files to create 2D graphics.
 Android defines several different types of Drawable Resources:
 
--   [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)
+- [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)
     &ndash; This is a Drawable object that draws a primitive geometric shape
     and applies a limited set of graphical effects on that shape. They
     are very useful for things such as customizing Buttons or setting
     the background of TextViews. We will see an example of how to use a
     `ShapeDrawable` later in this article.
 
--   [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList)
+- [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList)
     &ndash; This is a Drawable Resource that will change appearance based on
     the state of a widget/control. For example, a button may change its
     appearance depending on whether it is pressed or not.
 
--   [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
     &ndash; This Drawable Resource that will stack several other drawables one
     on top of another. An example of a *LayerDrawable* is shown in the
     following screenshot:
 
     ![LayerDrawable example](graphics-and-animation-images/image1.png)
 
--   [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition)
+- [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition)
     &ndash; This is a *LayerDrawable* but with one difference. A
     *TransitionDrawable* is able to animate one layer showing up over
     top another.
 
--   [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList)
+- [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList)
     &ndash; This is very similar to a *StateListDrawable* in that it will
     display an image based on certain conditions. However, unlike a
     *StateListDrawable*, the *LevelListDrawable* displays an image
@@ -172,23 +171,22 @@ Android defines several different types of Drawable Resources:
     of the WiFi signal changes, the drawable that is displayed will
     change accordingly.
 
--   [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)
     &ndash; As their name implies, these Drawables provide both scaling and
     clipping functionality. The *ScaleDrawable* will scale another
     Drawable, while the *ClipDrawable* will clip another Drawable.
 
--   [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset)
+- [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset)
     &ndash; This Drawable will apply insets on the sides of another Drawable
     resource. It is used when a View needs a background that is smaller
     than the View's actual bounds.
 
--   XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap)
+- XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap)
     &ndash; This file is a set of instructions, in XML, that are to be
     performed on an actual bitmap. Some actions that Android can
     perform are tiling, dithering, and anti-aliasing. One of the very
     common uses of this is to tile a bitmap across the background of a
     layout.
-
 
 #### Drawable Example
 
@@ -269,7 +267,7 @@ Instead, the Canvas API allows an application to have very fine-grained
 control to selectively change colors in a specific part of the picture.
 
 One class that is commonly used with the Canvas is the
-[Paint](https://developer.xamarin.com/api/type/Android.Graphics.Paint/) class. This class holds
+[Paint](xref:Android.Graphics.Paint) class. This class holds
 colour and style information about how to draw. It is used to provide
 things such a color and transparency.
 
@@ -281,7 +279,7 @@ completely obscure the old. This is the same way that many other
 drawing APIs such as System.Drawing and iOS's Core Graphics work.
 
 There are two ways to obtain a `Canvas` object. The first way involves
-defining a [Bitmap](https://developer.xamarin.com/api/type/Android.Graphics.Bitmap/) object, and then
+defining a [Bitmap](xref:Android.Graphics.Bitmap) object, and then
 instantiating a `Canvas` object with it. For example, the following
 code snippet creates a new canvas with an underlying bitmap:
 
@@ -291,27 +289,25 @@ Canvas canvas = new Canvas(b);
 ```
 
 The other way to obtain a `Canvas` object is by the
-[OnDraw](https://developer.xamarin.com/api/member/Android.Views.View.OnDraw/) callback method that
+[OnDraw](xref:Android.Views.View.OnDraw*) callback method that
 is provided the
-[View](https://developer.xamarin.com/api/type/Android.Views.View/) base class. Android calls this
+[View](xref:Android.Views.View) base class. Android calls this
 method when it decides a View needs to draw itself and passes in a
 `Canvas` object for the View to work with.
 
 The Canvas class exposes methods to programmatically provide the draw
 instructions. For example:
 
--   [Canvas.DrawPaint](https://developer.xamarin.com/api/member/Android.Graphics.Canvas.DrawPaint/p/Android.Graphics.Paint/)
+- [Canvas.DrawPaint](xref:Android.Graphics.Canvas.DrawPaint*)
     &ndash; Fills the entire canvas's bitmap with the specified paint.
 
--   [Canvas.DrawPath](https://developer.xamarin.com/api/member/Android.Graphics.Canvas.DrawPath/p/Android.Graphics.Path/Android.Graphics.Paint/)
+- [Canvas.DrawPath](xref:Android.Graphics.Canvas.DrawPath*)
     &ndash; Draws the specified geometric shape using the specified
     paint.
 
--   [Canvas.DrawText](https://developer.xamarin.com/api/member/Android.Graphics.Canvas.DrawText/p/System.String/System.Single/System.Single/Android.Graphics.Paint/)
+- [Canvas.DrawText](xref:Android.Graphics.Canvas.DrawText*)
     &ndash; Draws the text on the canvas with the specified colour. The
     text is drawn at location `x,y` .
-
-
 
 #### Drawing with the Canvas API
 
@@ -362,18 +358,18 @@ stand out. The best animations are the ones that users don't notice
 because they feel natural. Android provides the following three API's
 for animations:
 
--   **View Animation** &ndash; This is the original API. These
+- **View Animation** &ndash; This is the original API. These
     animations are tied to a specific View and can perform simple
     transformations on the contents of the View. Because of it's
     simplicity, this API still useful for things like alpha animations,
     rotations, and so forth.
 
--   **Property Animation** &ndash; Property animations were introduced
+- **Property Animation** &ndash; Property animations were introduced
     in Android 3.0. They enable an application to animate almost
     anything. Property animations can be used to change any property of
     any object, even if that object is not visible on the screen.
 
--   **Drawable Animation** &ndash; This a special Drawable resource
+- **Drawable Animation** &ndash; This a special Drawable resource
     that is used to apply a very simple animation effect to layouts.
 
 In general, property animation is the preferred system to use as it is
@@ -394,15 +390,15 @@ The animation XML files will be stored in the `/Resources/anim`
 directory of a Xamarin.Android project. This file must have one of the
 following elements as the root element :
 
--   `alpha` &ndash; A fade-in or fade-out animation.
+- `alpha` &ndash; A fade-in or fade-out animation.
 
--   `rotate` &ndash; A rotation animation.
+- `rotate` &ndash; A rotation animation.
 
--   `scale` &ndash; A resizing animation.
+- `scale` &ndash; A resizing animation.
 
--   `translate` &ndash; A horizontal and/or vertical motion.
+- `translate` &ndash; A horizontal and/or vertical motion.
 
--   `set` &ndash; A container that may hold one or more of the other
+- `set` &ndash; A container that may hold one or more of the other
     animation elements.
 
 By default, all animations in an XML file will be applied
@@ -415,13 +411,13 @@ to be accelerated, repeated, or decelerated. The Android framework
 provides several interpolators out of the box, such as (but not limited
 to):
 
--   `AccelerateInterpolator` / `DecelerateInterpolator` &ndash; these
+- `AccelerateInterpolator` / `DecelerateInterpolator` &ndash; these
     interpolators increase or decrease the rate of change in an
     animation.
 
--   `BounceInterpolator` &ndash; the change bounces at the end.
+- `BounceInterpolator` &ndash; the change bounces at the end.
 
--   `LinearInterpolator` &ndash; the rate of changes is constant.
+- `LinearInterpolator` &ndash; the rate of changes is constant.
 
 
 The following XML shows an example of an animation file that combines
@@ -500,23 +496,23 @@ They provide a more extensible API that can be used to animate any
 property on any object.
 
 All property animations are created by instances of the 
-[Animator](https://developer.xamarin.com/api/type/Android.Animation.Animator/)
+[Animator](xref:Android.Animation.Animator)
 subclass. Applications do not directly use this class, instead they use
 one of it's subclasses:
 
--   [ValueAnimator](https://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/) &ndash;
+- [ValueAnimator](xref:Android.Animation.ValueAnimator) &ndash;
     This class is the most important class in the entire property
     animation API. It calculates the values of properties that need to
     be changed. The `ViewAnimator` does not directly update those
     values; instead, it raises events that can be used to update
     animated objects.
 
--   [ObjectAnimator](https://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/)
+- [ObjectAnimator](xref:Android.Animation.ObjectAnimator)
     &ndash; This class is a subclass of `ValueAnimator` . It is meant
     to simplify the process of animating objects by accepting a target
     object and property to update.
 
--   [AnimationSet](https://developer.xamarin.com/api/type/Android.Animation.AnimatorSet/)
+- [AnimationSet](xref:Android.Animation.AnimatorSet)
     &ndash; This class is responsible for orchestrating how animations
     run in relation to one another. Animations may run simultaneously,
     sequentially, or with a specified delay between them.
@@ -526,13 +522,13 @@ one of it's subclasses:
 calculate the new values during an animation. Out of the box, Android
 provides the following evaluators:
 
--   [IntEvaluator](https://developer.xamarin.com/api/type/Android.Animation.IntEvaluator/)
+- [IntEvaluator](xref:Android.Animation.IntEvaluator)
      &ndash; Calculates values for integer properties.
 
--   [FloatEvaluator](https://developer.xamarin.com/api/type/Android.Animation.FloatEvaluator/)
+- [FloatEvaluator](xref:Android.Animation.FloatEvaluator)
      &ndash; Calculates values for float properties.
 
--   [ArgbEvaluator](https://developer.xamarin.com/api/type/Android.Animation.ArgbEvaluator/)
+- [ArgbEvaluator](xref:Android.Animation.ArgbEvaluator)
     &ndash; Calculates values for colour properties.
 
 If the property that is being animated is not a `float`, `int` or
@@ -544,7 +540,7 @@ the scope of this topic.)
 
 There are two parts to any animation: calculating animated values and
 then setting those values on properties on some object. 
-[ValueAnimator](https://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/)
+[ValueAnimator](xref:Android.Animation.ValueAnimator)
 will only calculate the values, but it will not operate on objects
 directly. Instead, objects will be updated inside event handlers that
 will be invoked during the animation lifespan. This design allows
@@ -553,9 +549,9 @@ several properties to be updated from one animated value.
 You obtain an instance of `ValueAnimator` by calling one of the
 following factory methods:
 
--  `ValueAnimator.OfInt`
--  `ValueAnimator.OfFloat`
--  `ValueAnimator.OfObject`
+- `ValueAnimator.OfInt`
+- `ValueAnimator.OfFloat`
+- `ValueAnimator.OfObject`
 
 Once that is done, the `ValueAnimator` instance must have its duration
 set, and then it can be started. The following example shows how to
@@ -591,7 +587,7 @@ about the `ObjectAnimator`.
 
 #### Using the ObjectAnimator
 
-[ObjectAnimator](https://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/) is a
+[ObjectAnimator](xref:Android.Animation.ObjectAnimator) is a
 subclass of `ViewAnimator` that combines the timing engine and value
 computation of the `ValueAnimator` with the logic required to wire up
 event handlers. The `ValueAnimator` requires applications to explicitly
@@ -684,10 +680,10 @@ API's for creating animations in Android.
 
 ## Related Links
 
-- [Animation Demo (sample)](https://developer.xamarin.com/samples/monodroid/AnimationDemo)
+- [Animation Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/animationdemo)
 - [Animation and Graphics](https://developer.android.com/guide/topics/graphics/index.html)
 - [Using Animations to Bring your Mobile Apps to Life](http://youtu.be/ikSk_ILg3d0)
-- [AnimationDrawable](https://developer.xamarin.com/api/type/Android.Graphics.Drawables.AnimationDrawable/)
-- [Canvas](https://developer.xamarin.com/api/type/Android.Graphics.Canvas/)
-- [Object Animator](https://developer.xamarin.com/api/type/Android.Animation.ObjectAnimator/)
-- [Value Animator](https://developer.xamarin.com/api/type/Android.Animation.ValueAnimator/)
+- [AnimationDrawable](xref:Android.Graphics.Drawables.AnimationDrawable)
+- [Canvas](xref:Android.Graphics.Canvas)
+- [Object Animator](xref:Android.Animation.ObjectAnimator)
+- [Value Animator](xref:Android.Animation.ValueAnimator)

@@ -11,7 +11,7 @@ ms.date: 02/17/2016
 
 # Device Styles in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
 
 _Xamarin.Forms includes six dynamic styles, known as device styles, in the Device.Styles class._
 
@@ -24,12 +24,12 @@ The *device* styles are:
 - [`SubtitleStyle`](xref:Xamarin.Forms.Device.Styles.SubtitleStyle)
 - [`TitleStyle`](xref:Xamarin.Forms.Device.Styles.TitleStyle)
 
-All six styles can only be applied to [`Label`](xref:Xamarin.Forms.Label) instances. For example, a `Label` that's displaying the body of a paragraph might set its [`Style`](xref:Xamarin.Forms.VisualElement.Style) property to [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle).
+All six styles can only be applied to [`Label`](xref:Xamarin.Forms.Label) instances. For example, a `Label` that's displaying the body of a paragraph might set its [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property to [`BodyStyle`](xref:Xamarin.Forms.Device.Styles.BodyStyle).
 
 The following code example demonstrates using the *device* styles in a XAML page:
 
 ```xaml
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" Icon="xaml.png">
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="Styles.DeviceStylesPage" Title="Device" IconImageSource="xaml.png">
     <ContentPage.Resources>
         <ResourceDictionary>
             <Style x:Key="myBodyStyle" TargetType="Label"
@@ -84,7 +84,7 @@ public class DeviceStylesPageCS : ContentPage
         };
 
         Title = "Device";
-        Icon = "csharp.png";
+        IconImageSource = "csharp.png";
         Padding = new Thickness (0, 20, 0, 0);
 
         Content = new StackLayout {
@@ -104,7 +104,7 @@ public class DeviceStylesPageCS : ContentPage
 }
 ```
 
-The [`Style`](xref:Xamarin.Forms.VisualElement.Style) property of each [`Label`](xref:Xamarin.Forms.Label) instance is set to the appropriate property from the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class.
+The [`Style`](xref:Xamarin.Forms.NavigableElement.Style) property of each [`Label`](xref:Xamarin.Forms.Label) instance is set to the appropriate property from the [`Devices.Styles`](xref:Xamarin.Forms.Device.Styles) class.
 
 ## Accessibility
 
@@ -122,8 +122,8 @@ The following screenshots demonstrate the device styles on each platform, with t
 
 - [Text Styles](~/xamarin-forms/user-interface/text/styles.md)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
-- [Dynamic Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/DynamicStyles/)
-- [Working with Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Dynamic Styles (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-dynamicstyles)
+- [Working with Styles (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device.Styles](xref:Xamarin.Forms.Device.Styles)
 - [ResourceDictionary](xref:Xamarin.Forms.ResourceDictionary)
 - [Style](xref:Xamarin.Forms.Style)

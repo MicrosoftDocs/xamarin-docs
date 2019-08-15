@@ -27,9 +27,9 @@ Xamarin tooling can generate a Bindings Library from one or more input
 .JAR files. The Bindings Library (.DLL assembly) contains the 
 following: 
 
--   The contents of the original .JAR file(s).
+- The contents of the original .JAR file(s).
 
--   Managed Callable Wrappers (MCW), which are C# types that wrap corresponding
+- Managed Callable Wrappers (MCW), which are C# types that wrap corresponding
     Java types within the .JAR file(s).
 
 The generated MCW code uses JNI (Java Native Interface) to forward your 
@@ -134,9 +134,9 @@ whether the .JAR is to be embedded in the Bindings Library
 or packaged separately. To do that, you specify one of the 
 following *build actions*: 
 
--   **EmbeddedJar** &ndash; the .JAR will be embedded in the Bindings Library.
+- **EmbeddedJar** &ndash; the .JAR will be embedded in the Bindings Library.
 
--   **InputJar** &ndash; the .JAR will be kept separate from the Bindings
+- **InputJar** &ndash; the .JAR will be kept separate from the Bindings
     Library.
 
 Typically, you use the **EmbeddedJar** build action so that the 
@@ -177,9 +177,9 @@ at the following location: **JarBinding/bin/Debug/JarBinding.dll**
 
 To consume this .DLL in your Xamarin.Android app, do the following:
 
-1.  Add a reference to the Bindings Library.
+1. Add a reference to the Bindings Library.
 
-2.  Make calls into the .JAR through the Managed Callable Wrappers. 
+2. Make calls into the .JAR through the Managed Callable Wrappers. 
 
 In the following steps, we'll create a minimal app that uses the 
 Bindings Library to download and display an image in an `ImageView`; 

@@ -24,13 +24,13 @@ XML file might be your best solution (versus adding code that will ensure the
 linker won't eliminate what you need).
 
 To do this, you define an XML file with the top-level element
-<linker> which contains *assembly* nodes which in turn contain *type* nodes, which in turn contain *method* and *field*
+`<linker>` which contains *assembly* nodes which in turn contain *type* nodes, which in turn contain *method* and *field*
 nodes.
 
 Once you have this linker description file, add it to your project and:
 
--  **For Android** : set the  **Build Action** to **LinkDescription**
--  **For iOS** : set the  **Build Action** to **LinkDescription**
+- **For Android** : set the  **Build Action** to **LinkDescription**
+- **For iOS** : set the  **Build Action** to **LinkDescription**
 
 
 The following example shows what the XML file looks like:

@@ -34,7 +34,7 @@ This article will cover the steps required to ensure that your Xamarin.iOS app r
 
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
-**Multitasking for iPad, by [Xamarin University](https://university.xamarin.com)**
+**Multitasking for iPad video**
 
 
 <a name="Multitasking-QuickStart" />
@@ -43,10 +43,10 @@ This article will cover the steps required to ensure that your Xamarin.iOS app r
 
 To support **Slide Over** or **Split View** your app must do the following:
 
- - Be built against iOS 9 (or greater).
- - Use a Storyboard for its Launch Screen (and not image assets).
- - Use a Storyboard with Autolayout and Size Classes for its UI.
- - Support all 4 iOS device orientations (Portrait, Upside-down Portrait, Landscape Left & Landscape Right).
+- Be built against iOS 9 (or greater).
+- Use a Storyboard for its Launch Screen (and not image assets).
+- Use a Storyboard with Autolayout and Size Classes for its UI.
+- Support all 4 iOS device orientations (Portrait, Upside-down Portrait, Landscape Left & Landscape Right).
 
 <a name="Multitasking" />
 
@@ -96,7 +96,7 @@ As with Slide Over and Split View, the user has full control over watching a vid
 
 For your app to display PIP video at the user's request, you will need to be using either _AVKit_ or the _AV Foundation APIs_. The Media Player framework has been depreciated in iOS 9 and does not support PIP.
 
-Picture in Picture is available only on an iPad Pro, iPad Air, iPad Air 2, iPad Mini 2, iPad Mini 3, or iPad Mini 4. For more information, please see our [PictureInPicture Sample App](https://developer.xamarin.com/samples/ios/iOS9/) and  Apple's [Picture in Picture Quick Start](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) documentation.
+Picture in Picture is available only on an iPad Pro, iPad Air, iPad Air 2, iPad Mini 2, iPad Mini 3, or iPad Mini 4. For more information, please see our [PictureInPicture Sample App](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9) and  Apple's [Picture in Picture Quick Start](https://developer.apple.com/library/prerelease/ios/documentation/WindowsViews/Conceptual/AdoptingMultitaskingOniPad/QuickStartForPictureInPicture.html#//apple_ref/doc/uid/TP40015145-CH14) documentation.
 
 <a name="Supporting-Multitasking-in-your-App" />
 
@@ -126,7 +126,7 @@ On iPads that support Slide Over and Split View, you can end up with the followi
 | **Landscape** |75% of Screen<br />Regular Horizontal<br />Regular Vertical|25% of Screen<br />Compact Horizontal<br />Regular Vertical|
 | **Landscape** |50% of Screen<br />Compact Horizontal<br />Regular Vertical|50% of Screen<br />Compact Horizontal<br />Regular Vertical|
 
-In the example [MuliTask](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) app, if it is run full screen on an iPad in the landscape mode, it will present both the list and the detail view at the same time:
+In the example [MuliTask](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) app, if it is run full screen on an iPad in the landscape mode, it will present both the list and the detail view at the same time:
 
 [![](multitasking-images/sizeclasses03.png "The list and the detail view presented at the same time")](multitasking-images/sizeclasses03.png#lightbox)
 
@@ -192,7 +192,7 @@ If we run this app on an iPad with an hardware keyboard attached and the user ty
 
 [![](multitasking-images/keyboard03.png "The keyboard shortcuts popup")](multitasking-images/keyboard03.png#lightbox)
 
-Please see the sample [MultiTask app](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/) for an example implementation.
+Please see the sample [MultiTask app](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask) for an example implementation.
 
 <a name="Resource-Management-Considerations" />
 
@@ -239,9 +239,9 @@ In most situations, your app should allow the user to play any video content it 
 
 To opt out of PIP video playback, do the following in your app:
 
- - If you are using a `AVPlayerViewController` to display video, set the `AllowsPictureInPicturePlayback` property to `false`.
- - If you are using the `AVPlayerLayer` to display video, don't instantiate an `AVPictureInPictureController`.
- - If you are using a `WKWebView` to display video, set the `AllowsPictureInPictureMediaPlayback` property to `false`.
+- If you are using a `AVPlayerViewController` to display video, set the `AllowsPictureInPicturePlayback` property to `false`.
+- If you are using the `AVPlayerLayer` to display video, don't instantiate an `AVPictureInPictureController`.
+- If you are using a `WKWebView` to display video, set the `AllowsPictureInPictureMediaPlayback` property to `false`.
 
 <a name="Summary" />
 
@@ -253,8 +253,8 @@ This article has covered the steps required to ensure that a Xamarin.iOS app wil
 
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
-- [MultiTask (sample)](https://developer.xamarin.com/samples/monotouch/ios9/MultiTask/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [MultiTask (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-multitask)
 - [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

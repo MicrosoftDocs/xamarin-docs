@@ -27,7 +27,7 @@ In watchOS 1 apps, the code in the extension runs on the iPhone – the
 Apple Watch is effectively an external display. watchOS 2 and 3 apps run
 entirely on the Apple Watch. This difference is shown in the diagram below:
 
-[ ![](intro-to-watchos-images/arch-sml.png "The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram")](intro-to-watchos-images/arch.png#lightbox)
+[![](intro-to-watchos-images/arch-sml.png "The difference between watchOS 1 and watchOS 2 (and greater) is shown in this diagram")](intro-to-watchos-images/arch.png#lightbox)
 
 Regardless of which version of watchOS is targeted, in Visual Studio for Mac’s Solution Pad
 a complete solution will look something like this:
@@ -90,7 +90,7 @@ The majority of watch app/extension interaction will be with  sub-classes of
 `WKInterfaceController` that you write to correspond to scenes in your watch app’s
 **Interface.storyboard**. This is covered in detail in the [Installation](~/ios/watchos/get-started/installation.md)
 and [Getting Started](~/ios/watchos/get-started/index.md) articles.
-The following image shows a portion of the [Watch Kit Catalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+The following image shows a portion of the [Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 sample’s Storyboard. For each scene showed here, there is a corresponding custom
 `WKInterfaceController` (`LabelDetailController`, `ButtonDetailController`, `SwitchDetailController`, etc.)
 in the extension project.
@@ -174,8 +174,8 @@ Check out the documentation from Apple:
 
 ## Related Links
 
-- [watchOS 3 Catalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
-- [watchOS 1 Catalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [watchOS 3 Catalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
+- [watchOS 1 Catalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Setup and Install](~/ios/watchos/get-started/installation.md)
 - [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple's Developing for Watch Kit guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html)
