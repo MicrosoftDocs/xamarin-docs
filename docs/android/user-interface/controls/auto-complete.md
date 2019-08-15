@@ -230,14 +230,11 @@ var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countri
 
 ### References
 
--   [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Xamarin.Android sample project for the `AutoCompleteTextView`.
--   [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
--   [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+- [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Xamarin.Android sample project for the `AutoCompleteTextView`
+- [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+- [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 
-*Portions of this page are modifications based on work created and
-shared by the Android Open Source Project and used according to terms
-described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/) *. This tutorial
-is based on the*
-[*Android Auto Complete tutorial*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
-*.*
+_Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](http://creativecommons.org/licenses/by/2.5/).
+This tutorial is based on the
+[Android Auto Complete tutorial*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._

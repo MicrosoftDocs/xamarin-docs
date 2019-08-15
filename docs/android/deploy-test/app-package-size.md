@@ -97,17 +97,17 @@ modified since the last deployment.
 
 To enable *Fast Assembly Deployment*, do the following:
 
-1.  Right click on the Android Project in the Solution Explorer and select **Options**.
+1. Right click on the Android Project in the Solution Explorer and select **Options**.
 
-2.  From the Project Options dialog select **Android Build** :  
+2. From the Project Options dialog select **Android Build** :  
 
     ![Project Options Android Build](app-package-size-images/fastdev0.png)
 
-3.  Check the  **Use shared Mono runtime checkbox** and the  **Fast assembly deployment** checkboxes:  
+3. Check the  **Use shared Mono runtime checkbox** and the  **Fast assembly deployment** checkboxes:  
 
     ![Checkboxes selected under Packaging tab](app-package-size-images/fastdev.png)
 
-4.  Click the  **OK** button to save the changes and close the Project Options dialog.
+4. Click the  **OK** button to save the changes and close the Project Options dialog.
 
 
 The next time the application is built for debug, the assemblies will be installed directly on the device (if they haven't already been) and a

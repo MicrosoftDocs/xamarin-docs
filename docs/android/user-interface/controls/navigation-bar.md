@@ -22,9 +22,9 @@ Several new flags are available that control the visibility of the Navigation
 Bar and its controls, as well as the visibility of the System Bar that was
 introduced in Android 3. The flags are defined in the `Android.View.View` class and are listed below:
 
--   `SystemUiFlagVisible` &ndash; Makes the Navigation Bar visible. 
--   `SystemUiFlagLowProfile` &ndash; Dims out controls in the Navigation Bar. 
--   `SystemUiFlagHideNavigation` &ndash; Hides the Navigation Bar. 
+- `SystemUiFlagVisible` &ndash; Makes the Navigation Bar visible. 
+- `SystemUiFlagLowProfile` &ndash; Dims out controls in the Navigation Bar. 
+- `SystemUiFlagHideNavigation` &ndash; Hides the Navigation Bar. 
 
 
 These flags can be applied to any view in the view hierarchy by setting

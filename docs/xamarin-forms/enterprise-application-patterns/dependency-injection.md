@@ -45,10 +45,10 @@ Dependency injection containers reduce the coupling between objects by providing
 
 There are several advantages to using a dependency injection container:
 
--   A container removes the need for a class to locate its dependencies and manage their lifetimes.
--   A container allows mapping of implemented dependencies without affecting the class.
--   A container facilitates testability by allowing dependencies to be mocked.
--   A container increases maintainability by allowing new classes to be easily added to the app.
+- A container removes the need for a class to locate its dependencies and manage their lifetimes.
+- A container allows mapping of implemented dependencies without affecting the class.
+- A container facilitates testability by allowing dependencies to be mocked.
+- A container increases maintainability by allowing new classes to be easily added to the app.
 
 In the context of a Xamarin.Forms app that uses MVVM, a dependency injection container will typically be used for registering and resolving view models, and for registering services and injecting them into view models.
 
@@ -62,8 +62,8 @@ In Autofac, the `IContainer` interface provides the dependency injection contain
 
 At runtime, the container must know which implementation of the `IOrderService` interface it should instantiate, before it can instantiate a `ProfileViewModel` object. This involves:
 
--   The container deciding how to instantiate an object that implements the `IOrderService` interface. This is known as *registration*.
--   The container instantiating the object that implements the `IOrderService` interface, and the `ProfileViewModel` object. This is known as *resolution*.
+- The container deciding how to instantiate an object that implements the `IOrderService` interface. This is known as *registration*.
+- The container instantiating the object that implements the `IOrderService` interface, and the `ProfileViewModel` object. This is known as *resolution*.
 
 Eventually, the app will finish using the `ProfileViewModel` object and it will become available for garbage collection. At this point, the garbage collector should dispose of the `IOrderService` instance if other classes do not share the same instance.
 
@@ -76,8 +76,8 @@ Before dependencies can be injected into an object, the types of the dependencie
 
 There are two ways of registering types and objects in the container through code:
 
--   Register a type or mapping with the container. When required, the container will build an instance of the specified type.
--   Register an existing object in the container as a singleton. When required, the container will return a reference to the existing object.
+- Register a type or mapping with the container. When required, the container will build an instance of the specified type.
+- Register an existing object in the container as a singleton. When required, the container will return a reference to the existing object.
 
 > [!TIP]
 > Dependency injection containers are not always suitable. Dependency injection introduces additional complexity and requirements that might not be appropriate or useful to small apps. If a class does not have any dependencies, or is not a dependency for other types, it might not make sense to put it in the container. In addition, if a class has a single set of dependencies that are integral to the type and will never change, it might not make sense to put it in the container.
@@ -145,9 +145,9 @@ After a type is registered, it can be resolved or injected as a dependency. When
 
 Generally, when a type is resolved, one of three things happens:
 
-1.  If the type hasn't been registered, the container throws an exception.
-1.  If the type has been registered as a singleton, the container returns the singleton instance. If this is the first time the type is called for, the container creates it if required, and maintains a reference to it.
-1.  If the type hasn't been registered as a singleton, the container returns a new instance, and doesn't maintain a reference to it.
+1. If the type hasn't been registered, the container throws an exception.
+1. If the type has been registered as a singleton, the container returns the singleton instance. If this is the first time the type is called for, the container creates it if required, and maintains a reference to it.
+1. If the type hasn't been registered as a singleton, the container returns a new instance, and doesn't maintain a reference to it.
 
 The following code example shows how the `RequestProvider` type that was previously registered with Autofac can be resolved:
 

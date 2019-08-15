@@ -21,7 +21,7 @@ available in Xamarin projects via the
 [Wearable Support](https://www.nuget.org/packages/Xamarin.Android.Wear/) 
 NuGet package. These controls include the following:
 
--   **GridViewPager** &ndash; Create a two-dimensional navigation
+- **GridViewPager** &ndash; Create a two-dimensional navigation
     interface where the user scrolls down then across to make a
     selection (for more information, see
     [GridViewPager](~/android/wear/user-interface/controls/gridviewpager.md)):

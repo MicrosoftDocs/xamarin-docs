@@ -56,9 +56,9 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 Add this call in the following files for each platform:
 
--  **iOS** - AppDelegate.cs file, in the  `FinishedLaunching` method.
--  **Android** - MainActivity.cs file, in the  `OnCreate` method.
--  **UWP** - MainPage.xaml.cs file, in the `MainPage` constructor.
+- **iOS** - AppDelegate.cs file, in the  `FinishedLaunching` method.
+- **Android** - MainActivity.cs file, in the  `OnCreate` method.
+- **UWP** - MainPage.xaml.cs file, in the `MainPage` constructor.
 
 Once the NuGet package has been added and the initialization method called inside
 each application, `Xamarin.Forms.Maps` APIs can be used in the common .NET Standard library project or Shared Project code.
@@ -182,16 +182,16 @@ map.MapType == MapType.Street;
 
 Valid `MapType` values are:
 
--  Hybrid
--  Satellite
--  Street (the default)
+- Hybrid
+- Satellite
+- Street (the default)
 
 ### Map region and MapSpan
 
 As shown in the code snippet above, supplying a `MapSpan` instance to a map constructor sets the initial view (center point and zoom level) of the map when it is loaded. The `MoveToRegion` method on the map class can then be used to change the position or zoom level of the map. There are two ways to create a new `MapSpan` instance:
 
--  **MapSpan.FromCenterAndRadius()** - static method to create a span from a  `Position` and specifying a  `Distance` .
--  **new MapSpan ()** - constructor that uses a  `Position` and the degrees of latitude and longitude to display.
+- **MapSpan.FromCenterAndRadius()** - static method to create a span from a  `Position` and specifying a  `Distance` .
+- **new MapSpan ()** - constructor that uses a  `Position` and the degrees of latitude and longitude to display.
 
 
 To change the zoom level of the map without altering the location, create a new `MapSpan` using the current location from the `VisibleRegion.Center` property of the map control. A `Slider` could be used to control map zoom like this (however zooming directly in the map control cannot currently update the value of the slider):
@@ -224,10 +224,10 @@ map.Pins.Add(pin);
 
 `PinType` can be set to one of the following values, which may affect the way the pin is rendered (depending on the platform):
 
--  Generic
--  Place
--  SavedPin
--  SearchResult
+- Generic
+- Place
+- SavedPin
+- SearchResult
 
 ### Map clicks
 

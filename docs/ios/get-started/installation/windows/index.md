@@ -82,11 +82,11 @@ these steps:
 
 To build Xamarin.iOS apps with Visual Studio 2017 on Windows, you will need:
 
--  A Windows machine with Visual Studio 2017 installed. This can be a physical
+- A Windows machine with Visual Studio 2017 installed. This can be a physical
    or a virtual machine.
     - [Windows system requirements](~/cross-platform/get-started/requirements.md#windows-requirements)
     
--  A network-accessible Mac set up with Apple's build tools 
+- A network-accessible Mac set up with Apple's build tools 
    and Xamarin.iOS. Visual Studio 2017 accesses this machine over a network
    connection to use Apple's build tools, which are required for compiling
    native iOS applications. 

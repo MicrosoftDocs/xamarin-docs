@@ -14,8 +14,8 @@ ms.date: 02/16/2018
 > [!NOTE]
 > This guide was originally written for the Android L preview.
 
--   [Xamarin.Android 4.17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) added Android L Preview support.
--   [Xamarin.Android 4.20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) added Android Lollipop support.
+- [Xamarin.Android 4.17](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.17/index.md) added Android L Preview support.
+- [Xamarin.Android 4.20](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_4/xamarin.android_4.20/index.md) added Android Lollipop support.
 
 Xamarin only actively supports the current stable release of the
 Xamarin tools. The information below is provided "as-is" for older
@@ -49,8 +49,8 @@ There are a few workarounds for this issue:
 
 3. Temporarily downgrade back to the Android API Level 21 "L" preview [1]:
 
-    1.  Delete the **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21** 
-    2.  Extract [1] into **C:\\Users\\&lt;username&gt;\\AppData\\Local\\Android\\android-sdk\\platforms** 
+    1. Delete the **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21** 
+    2. Extract [1] into **C:\\Users\\&lt;username&gt;\\AppData\\Local\\Android\\android-sdk\\platforms** 
         to create an **android-L** folder.
 
 # [Visual Studio for Mac](#tab/macos)
@@ -79,8 +79,8 @@ There are a few workarounds for this issue:
 
 3. Temporarily downgrade back to the Android API Level 21 "L" preview [1]:
 
-    1.  Delete **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
-    2.  Extract [1] into **/Users/username/Library/Developer/Xamarin/android-sdk-macosx**
+    1. Delete **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/android-21**
+    2. Extract [1] into **/Users/username/Library/Developer/Xamarin/android-sdk-macosx**
         to create an **android-L** folder.
 
 -----

@@ -61,13 +61,13 @@ You can select the same **App ID** and **Devices** that you used for your develo
 
 Alternatively, it is possible to request a Certificate via the Preferences dialog in Xcode. To do this, follow the steps below:
 
-1.   Select your team, and click **Manage Certificates…**:
+1. Select your team, and click **Manage Certificates…**:
 	[![](images/selectteam.png "Select the team and View Details")](images/selectteam.png#lightbox)
 
-2.   Next, click the **Create** button next to **iOS Distribution Certificate**:
+2. Next, click the **Create** button next to **iOS Distribution Certificate**:
 	[![](images/selectcert.png "Create an iOS Distribution Certificate")](images/selectcert.png#lightbox)
 
-3.   Depending on your team privileges, the signing identity will be generated, as shown below, or you may have to wait until a team agent or admin approves it:
+3. Depending on your team privileges, the signing identity will be generated, as shown below, or you may have to wait until a team agent or admin approves it:
 	[![](images/generated.png "The signing identity will be generated and a dialog displayed")](images/generated.png#lightbox)
 
 

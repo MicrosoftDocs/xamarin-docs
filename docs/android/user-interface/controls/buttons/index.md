@@ -15,16 +15,16 @@ The `Button` class is used to represent various different styles of
 button in Android screens. This section introduces the different
 options for working with buttons in Xamarin.Android:
 
--   [RadioButton](~/android/user-interface/controls/buttons/radio-button.md)
+- [RadioButton](~/android/user-interface/controls/buttons/radio-button.md)
     allows the user to select one option from a set.
 
--   [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md)
+- [ToggleButton](~/android/user-interface/controls/buttons/toggle-button.md)
     allow the user to flip (toggle) a setting between two states.
 
--   [CheckBox](~/android/user-interface/controls/buttons/check-box.md)
+- [CheckBox](~/android/user-interface/controls/buttons/check-box.md)
     is a special type of button that can be either checked
     or unchecked to indicate one of two possible states.
 
--   You can also create a
+- You can also create a
     [custom button](~/android/user-interface/controls/buttons/custom-button.md)
     that uses an image instead of text.

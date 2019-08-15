@@ -158,20 +158,20 @@ Then the [`ListViewCachingStrategy`](xref:Xamarin.Forms.ListViewCachingStrategy)
 
 There are many techniques for improving the performance of a `ListView`:
 
--  Bind the `ItemsSource` property to an `IList<T>` collection instead of an `IEnumerable<T>` collection, because `IEnumerable<T>` collections don't support random access.
--  Use the built-in cells (like  `TextCell` / `SwitchCell` ) instead of  `ViewCell` whenever you can.
--  Use fewer elements. For example consider using a single `FormattedString` label instead of multiple labels.
--  Replace the `ListView` with a `TableView` when displaying non-homogenous data – that is, data of different types.
--  Limit the use of the [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) method. If overused, it will degrade performance.
--  On Android, avoid setting a `ListView`'s row separator visibility or color after it has been instantiated, as it results in a large performance penalty.
--  Avoid changing the cell layout based on the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). This incurs large layout and initialization costs.
--  Avoid deeply nested layout hierarchies. Use  `AbsoluteLayout` or  `Grid` to help reduce nesting.
--  Avoid specific `LayoutOptions` other than  `Fill` (Fill is the cheapest to compute).
--  Avoid placing a `ListView` inside a `ScrollView` for the following reasons:
+- Bind the `ItemsSource` property to an `IList<T>` collection instead of an `IEnumerable<T>` collection, because `IEnumerable<T>` collections don't support random access.
+- Use the built-in cells (like  `TextCell` / `SwitchCell` ) instead of  `ViewCell` whenever you can.
+- Use fewer elements. For example consider using a single `FormattedString` label instead of multiple labels.
+- Replace the `ListView` with a `TableView` when displaying non-homogenous data – that is, data of different types.
+- Limit the use of the [`Cell.ForceUpdateSize`](xref:Xamarin.Forms.Cell.ForceUpdateSize) method. If overused, it will degrade performance.
+- On Android, avoid setting a `ListView`'s row separator visibility or color after it has been instantiated, as it results in a large performance penalty.
+- Avoid changing the cell layout based on the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext). This incurs large layout and initialization costs.
+- Avoid deeply nested layout hierarchies. Use  `AbsoluteLayout` or  `Grid` to help reduce nesting.
+- Avoid specific `LayoutOptions` other than  `Fill` (Fill is the cheapest to compute).
+- Avoid placing a `ListView` inside a `ScrollView` for the following reasons:
     - The `ListView` implements its own scrolling.
     - The `ListView` will not receive any gestures, as they will be handled by the parent `ScrollView`.
     - The `ListView` can present a customized header and footer that scrolls with the elements of the list, potentially offering the functionality that the `ScrollView` was used for. For more information see [Headers and Footers](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
--  Consider a custom renderer if you need a very specific, complex design presented in your cells.
+- Consider a custom renderer if you need a very specific, complex design presented in your cells.
 
 `AbsoluteLayout` has the potential to perform layouts without a single measure call. This makes it very powerful for performance. If `AbsoluteLayout` cannot be used, consider [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout). If using `RelativeLayout`, passing Constraints directly will be considerably faster than using the expression API. That is because the expression API uses JIT, and on iOS the tree has to be interpreted, which is slower. The expression API is suitable for page layouts where it only required on initial layout and rotation, but in `ListView`, where it's run constantly during scrolling, it hurts performance.
 

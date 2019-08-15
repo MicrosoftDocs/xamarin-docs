@@ -167,9 +167,9 @@ without spaces.
 
 This happens when you do all of the following:
 
-1.  Use Mono.Data.Sqlite
-1.  Use Mac OS X Leopard (10.5)
-1.  Run your app within the simulator.
+1. Use Mono.Data.Sqlite
+1. Use Mac OS X Leopard (10.5)
+1. Run your app within the simulator.
 
 
 The problem is that Mono is picking up the OS X `libsqlite3.dylib`, not the iPhoneSimulator's `libsqlite3.dylib` file. Your app *will* work on the
@@ -258,10 +258,10 @@ be reproduced on the same machine after restarting Visual Studio for Mac. For th
 we would appreciate it if you could perform several debugging steps before
 restarting Visual Studio for Mac, and send the results to us.
 
-1.  Try closing the editor tab, and re-opening it. Does it take a little bit of editing or moving the caret around until the slowdown happens again?
-1.  Disable "Beam Sync" using the "Quartz Debug" developer tool (which you can find using Spotlight), and check whether the source editor performance is restored to normal.
-1.  Try repeating step (1) with Beam Sync still disabled.
-1.  If the editor hangs for more than a few seconds, try to run "killall -QUIT [Visual Studio for Mac]" in a terminal while it is hung. It may be difficult to time the kill command to happen while the editor is hung, but it's essential to do so, because the command forces Mono to write stack traces of all threads to the MD log, which we can use to discover what state the threads are in while the XS is hung.
+1. Try closing the editor tab, and re-opening it. Does it take a little bit of editing or moving the caret around until the slowdown happens again?
+1. Disable "Beam Sync" using the "Quartz Debug" developer tool (which you can find using Spotlight), and check whether the source editor performance is restored to normal.
+1. Try repeating step (1) with Beam Sync still disabled.
+1. If the editor hangs for more than a few seconds, try to run "killall -QUIT [Visual Studio for Mac]" in a terminal while it is hung. It may be difficult to time the kill command to happen while the editor is hung, but it's essential to do so, because the command forces Mono to write stack traces of all threads to the MD log, which we can use to discover what state the threads are in while the XS is hung.
 
 
 
@@ -303,7 +303,7 @@ section.  You want to add extra arguments for the Device build targets:
 
  `-aot "ntrampolines=2048"`
 
-The default number of trampolines is 1024.  Try increasing this number
+The default number of trampolines is 1024. Try increasing this number
 until you have enough for your application.
 
 ## Ran out of trampolines of type 1
@@ -315,7 +315,7 @@ arguments for the Device build targets:
 
  `-aot "nrgctx-trampolines=2048"`
 
-The default number of trampolines is 1024.  Try increasing this number
+The default number of trampolines is 1024. Try increasing this number
 until you have enough for your usage of generics.
 
 ## Ran out of trampolines of type 2
@@ -327,7 +327,7 @@ for the Device build targets:
 
  `-aot "nimt-trampolines=512"`
 
-The default number of IMT Thunk trampolines is 128.  Try increasing this
+The default number of IMT Thunk trampolines is 128. Try increasing this
 number until you have enough for your usage of interfaces.
 
 ## Debugger is unable to connect with the device
@@ -385,8 +385,8 @@ or the directory where the solution or project are stored contain spaces.
 To fix this:
 
 
--  Make sure that neither your project or the directory where it is stored contains a space.
--  In your project "Main Settings" make sure that the Project Name does not contain any spaces.
+- Make sure that neither your project or the directory where it is stored contains a space.
+- In your project "Main Settings" make sure that the Project Name does not contain any spaces.
 
 ## Error "The binary you uploaded was invalid. A pre-release beta version of the SDK was used to build the application"
 
@@ -410,18 +410,18 @@ automatically.
 
 Follow these steps:
 
--  Change the SDK version in iPhone Build to 3.2 or iTunes connect will reject it on upload because it is seeing an iPad compatible app built using an SDK version less than 3.2
--  Create a custom Info.plist for the project and explicitly set MinimumOSVersion to 3.0 in it.   This will override the MinimumOSVersion 3.2 value set by Xamarin.iOS.   If you do not do this, the app will not be able to run on an iPhone.
--  Rebuild, zip and upload to iTunes connect.
+- Change the SDK version in iPhone Build to 3.2 or iTunes connect will reject it on upload because it is seeing an iPad compatible app built using an SDK version less than 3.2
+- Create a custom Info.plist for the project and explicitly set MinimumOSVersion to 3.0 in it.   This will override the MinimumOSVersion 3.2 value set by Xamarin.iOS.   If you do not do this, the app will not be able to run on an iPhone.
+- Rebuild, zip and upload to iTunes connect.
 
 ## Unhandled Exception: System.Exception: Failed to find selector someSelector: on {type}
 
 This exception is caused by one of three things:
 
 
-1.  You have provided a Selector to the Objective-C runtime without applying the corresponding [Export] attribute to a method
-1.  You have enabled full linking and not applied the [Preserve] attribute to the [Export]ed method.
-1.  You have applied the [Export] attribute to a private method in an inherited type.
+1. You have provided a Selector to the Objective-C runtime without applying the corresponding [Export] attribute to a method
+1. You have enabled full linking and not applied the [Preserve] attribute to the [Export]ed method.
+1. You have applied the [Export] attribute to a private method in an inherited type.
 
 
 ## MainWindow.xib.designer.cs file is not updated

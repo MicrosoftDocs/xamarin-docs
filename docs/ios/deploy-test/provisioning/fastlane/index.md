@@ -74,7 +74,7 @@ The content provided can be used as a springboard to aid with app distribution, 
     export PATH="$HOME/.fastlane/bin:$PATH"
     ```
 
-8.  Run `which fastlane` again, to confirm the path looks like `/Users/[user]/.fastlane/bin`
+8. Run `which fastlane` again, to confirm the path looks like `/Users/[user]/.fastlane/bin`
 
 
 ## Updating fastlane

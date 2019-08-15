@@ -584,7 +584,7 @@ See the [equivalent mtouch warning](~/ios/troubleshooting/mtouch-errors.md#MT521
 
 <a name="MM5309" />
 
-#### MM5309: Native linking failed with error code 1.  Check build log for details.
+#### MM5309: Native linking failed with error code 1. Check build log for details.
 
 <a name="MM5310" />
 

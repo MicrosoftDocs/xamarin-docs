@@ -221,27 +221,27 @@ colors, fonts and layout.
 
 This example differs from the previous examples in a number of ways:
 
--  Inherits from `Activity` , not `ListActivity` . You can customize
+- Inherits from `Activity` , not `ListActivity` . You can customize
    rows for any `ListView` , however other controls can also be
    included in an `Activity` layout (such as a heading, buttons or
    other user interface elements). This example adds a heading above
    the `ListView` to illustrate.
 
--  Requires an AXML layout file for the screen; in the previous
+- Requires an AXML layout file for the screen; in the previous
    examples the `ListActivity` does not require a layout file. This
    AXML contains a `ListView` control declaration.
 
--  Requires an AXML layout file to render each row. This AXML file
+- Requires an AXML layout file to render each row. This AXML file
    contains the text and image controls with custom font and color
    settings.
 
--  Uses an optional custom selector XML file to set the appearance of
+- Uses an optional custom selector XML file to set the appearance of
    the row when it is selected.
 
--  The `Adapter` implementation returns a custom layout from the
+- The `Adapter` implementation returns a custom layout from the
    `GetView` override.
 
--  `ItemClick` must be declared differently (an event handler is
+- `ItemClick` must be declared differently (an event handler is
    attached to `ListView.ItemClick` rather than an overriding
    `OnListItemClick` in `ListActivity`).
 

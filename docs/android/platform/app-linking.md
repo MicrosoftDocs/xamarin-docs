@@ -165,7 +165,7 @@ There are two tests that can be performed to ensure that the intent
 filters have been properly configured and that the app is set as the
 default handler for a URI:
 
-1.  The Digital Asset File is properly hosted as described above. The
+1. The Digital Asset File is properly hosted as described above. The
     first test will dispatch an intent which Android should redirect to
     the mobile application. The Android application should launch and
     display the Activity registered for the URL. At a command prompt
@@ -177,7 +177,7 @@ default handler for a URI:
         -d "http://<domain1>/recipe/scalloped-potato"
     ```
 
-2.  Display the existing link handling policies for the applications
+2. Display the existing link handling policies for the applications
     installed on a given device. The following command will dump a
     listing of link policies for each user on the device with the
     following information. At the command prompt, type the following

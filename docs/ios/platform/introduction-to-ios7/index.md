@@ -23,8 +23,8 @@ iOS 7 augments the animation support in UIKit, allowing applications to do thing
 
  `UIView` now supports animating property changes with a spring effect. To add this, call either the `AnimateNotify` or `AnimateNotifyAsync` method, passing in values for the spring damping ratio and the initial spring velocity, as described below:
 
--  `springWithDampingRatio` – A value between 0 and 1, where the oscillation increases for smaller value.
--  `initialSpringVelocity` – The initial spring velocity as a percentage of the total animation distance per second.
+- `springWithDampingRatio` – A value between 0 and 1, where the oscillation increases for smaller value.
+- `initialSpringVelocity` – The initial spring velocity as a percentage of the total animation distance per second.
 
 
 The following code produces a spring effect when the image view’s center changes:
@@ -92,19 +92,19 @@ The API is declarative in nature. You declare how the physics interactions behav
 
 There are several different primitive behaviors available to trigger complex interactions, including:
 
--  `UIAttachmentBehavior` – Attaches two dynamic items such that they move together, or attaches a dynamic item to an attachment point.
--  `UICollisionBehavior` – Allows dynamic items to participate in collisions.
--  `UIDynamicItemBehavior` – Specifies a general set of properties to apply to dynamic items, such as elasticity, density and friction.
--  `UIGravityBehavior` - Applies gravity to a dynamic item, causing items to accelerate in the gravitational direction.
--  `UIPushBehavior` – Applies force to a dynamic item.
--  `UISnapBehavior` – Allows a dynamic item to snap to a position with a spring effect.
+- `UIAttachmentBehavior` – Attaches two dynamic items such that they move together, or attaches a dynamic item to an attachment point.
+- `UICollisionBehavior` – Allows dynamic items to participate in collisions.
+- `UIDynamicItemBehavior` – Specifies a general set of properties to apply to dynamic items, such as elasticity, density and friction.
+- `UIGravityBehavior` - Applies gravity to a dynamic item, causing items to accelerate in the gravitational direction.
+- `UIPushBehavior` – Applies force to a dynamic item.
+- `UISnapBehavior` – Allows a dynamic item to snap to a position with a spring effect.
 
 
 Although there are many primitives, the general process for adding physics-based interactions to a view using UIKit Dynamics is consistent across behaviors:
 
-1.  Create a dynamic animator.
-1.  Create behavior(s).
-1.  Add behaviors to the dynamic animator.
+1. Create a dynamic animator.
+1. Create behavior(s).
+1. Add behaviors to the dynamic animator.
 
 
 ### Dynamics Example
@@ -226,9 +226,9 @@ For more information, please see our [TextKit](~/ios/platform/textkit.md)
 
 iOS 7 changes when and how background work is performed. Task completion in iOS 7 no longer keeps applications awake when tasks are running in the background, and applications are woken for background processing in a non-contiguous manner. iOS 7 also adds three new APIs for updating applications with new content in the background:
 
--  Background Fetch – Allows applications to update content in the background at regular intervals.
--  Remote Notifications - Allows applications to update content when receiving a push notification. The notifications can be either silent or can display a banner on the lock screen.
--  Background Transfer Service – Allows uploading and downloading of data, such as large files, without a fixed time limit.
+- Background Fetch – Allows applications to update content in the background at regular intervals.
+- Remote Notifications - Allows applications to update content when receiving a push notification. The notifications can be either silent or can display a banner on the lock screen.
+- Background Transfer Service – Allows uploading and downloading of data, such as large files, without a fixed time limit.
 
 
 For more details about the new multitasking capabilities, see the iOS sections of the Xamarin [Backgrounding guide](~/ios/app-fundamentals/backgrounding/index.md).

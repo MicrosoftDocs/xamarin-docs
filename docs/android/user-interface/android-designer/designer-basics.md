@@ -49,28 +49,28 @@ features, as shown in the following screenshot:
 When you edit a layout in the Designer, you use the following features
 to create and shape your design:
 
--   **Design Surface** &ndash; Facilitates the visual construction of
+- **Design Surface** &ndash; Facilitates the visual construction of
     the user interface by giving you an editable representation of how
     the layout will appear on the device. The **Design Surface** is
     displayed inside the **Design Pane** (with the **Designer Toolbar**
     positioned above it).
 
--   **Source Pane** &ndash; Provides a view of the underlying XML source
+- **Source Pane** &ndash; Provides a view of the underlying XML source
     that corresponds to the design presented on the **Design Surface**.
 
--   **Designer Toolbar** &ndash; Displays a list of selectors:
+- **Designer Toolbar** &ndash; Displays a list of selectors:
     **Device**, **Version**, **Theme**, layout configuration, and
     Action Bar settings. The **Designer Toolbar** also includes icons for
     launching the Theme Editor and for enabling the Material Design
     Grid.
 
--   **Toolbox** &ndash; Provides a list of widgets and layouts that you
+- **Toolbox** &ndash; Provides a list of widgets and layouts that you
     can drag and drop onto the **Design Surface**.
 
--   **Properties Window** &ndash; Lists the properties of the selected
+- **Properties Window** &ndash; Lists the properties of the selected
     widget for viewing and editing.
 
--   **Document Outline** &ndash; Displays the tree of widgets that
+- **Document Outline** &ndash; Displays the tree of widgets that
     compose the layout. You can click an item in the tree to cause it
     to be selected on the **Design Surface**. Also, clicking an item in
     the tree loads the item's properties into the **Properties**
@@ -100,50 +100,50 @@ configuration selectors and tool menus:
 
 The **Designer Toolbar** provides access to the following features:
 
--   **Alternative Layout Selector** &ndash; Allows you to select from
+- **Alternative Layout Selector** &ndash; Allows you to select from
     different layout versions.
 
--   **Device Selector** &ndash; Defines a set of qualifiers 
+- **Device Selector** &ndash; Defines a set of qualifiers 
     (such as screen size, resolution, and keyboard availability)
     associated with a particular device. You can also add and 
     delete new devices.
 
--   **Android Version Selector** &ndash; The Android version that the
+- **Android Version Selector** &ndash; The Android version that the
     layout is targeting. The Designer will render the layout according
     to the selected Android version.
 
--   **Theme Selector** &ndash; Selects the UI theme for the layout.
+- **Theme Selector** &ndash; Selects the UI theme for the layout.
 
--   **Configuration Selector** &ndash; Selects the device configuration,
+- **Configuration Selector** &ndash; Selects the device configuration,
     such as *portrait* or *landscape*.
 
--   **Resource Qualifier Options** &ndash; Opens a dialog that
+- **Resource Qualifier Options** &ndash; Opens a dialog that
     presents drop-down menus for selecting *Language*, *UI Mode*, *Night
     Mode*, and *Round Screen* options.
 
--   **Action Bar Settings** &ndash; Configures the Action Bar settings
+- **Action Bar Settings** &ndash; Configures the Action Bar settings
     for the layout.
 
--   **Theme Editor** &ndash; Opens the *Theme Editor*, which makes it
+- **Theme Editor** &ndash; Opens the *Theme Editor*, which makes it
     possible for you to customize elements of the selected theme.
 
--   **Material Design Grid** &ndash; Enables or disables the
+- **Material Design Grid** &ndash; Enables or disables the
     *Material Design Grid*. The drop-down menu item adjacent to
     the Material Design Grid opens a dialog that enables you
     to customize the grid.
 
 Each of these features is explained in more detail in these topics:
 
--   [Resource Qualifiers and Visualization Options](~/android/user-interface/android-designer/resource-qualifiers.md)
+- [Resource Qualifiers and Visualization Options](~/android/user-interface/android-designer/resource-qualifiers.md)
     provides detailed information about the **Device Selector**,
     **Android Version Selector**, **Theme Selector**, **Configuration
     Selector**, **Resource Qualifications Options**, and **Action Bar
     Settings**.
 
--   [Alternative Layout Views](~/android/user-interface/android-designer/alternative-layout-views.md)
+- [Alternative Layout Views](~/android/user-interface/android-designer/alternative-layout-views.md)
     explains how to use the **Alternative Layout Selector**.
 
--   [Xamarin.Android Designer Material Design Features](~/android/user-interface/android-designer/material-design-features.md)
+- [Xamarin.Android Designer Material Design Features](~/android/user-interface/android-designer/material-design-features.md)
     provides a comprehensive overview of the **Theme Editor** and the
     **Material Design Grid**.
 
@@ -160,10 +160,10 @@ on the **Design Surface**). Here is an example of a context menu:
 In this example, right-clicking a `TextView` opens a context menu that
 provides several options:
 
--   **LinearLayout** &ndash; opens a submenu for editing the `LinearLayout`
+- **LinearLayout** &ndash; opens a submenu for editing the `LinearLayout`
     parent of the `TextView`.
 
--   **Delete**, **Copy**, and **Cut** &ndash; operations that apply to the
+- **Delete**, **Copy**, and **Cut** &ndash; operations that apply to the
     right-clicked `TextView`.
 
 
@@ -176,21 +176,21 @@ The **Design Surface** supports zooming via several controls as shown:
 These controls make it easier to see certain areas of the user
 interface in the Designer:
 
--   **Highlight Containers** &ndash; Highlights containers on the
+- **Highlight Containers** &ndash; Highlights containers on the
     **Design Surface** so that they are easier to locate while zooming in
     and out.
 
--   **Normal Size** &ndash; Renders the layout pixel-for-pixel so that
+- **Normal Size** &ndash; Renders the layout pixel-for-pixel so that
     you can see how the layout will look at the resolution of the
     selected device.
 
--   **Fit to Window** &ndash; Sets the zoom level so that the entire
+- **Fit to Window** &ndash; Sets the zoom level so that the entire
     layout is visible on the Design Surface.
 
--   **Zoom In** &ndash; Zooms in incrementally with each click,
+- **Zoom In** &ndash; Zooms in incrementally with each click,
     magnifying the layout.
 
--   **Zoom Out** &ndash; Zooms out incrementally with each click,
+- **Zoom Out** &ndash; Zooms out incrementally with each click,
     making the layout appear smaller on the Design Surface.
 
 Note that the chosen zoom setting does not affect the user interface of
@@ -206,19 +206,19 @@ there are several buttons that are used to modify how the **Design** and
 
 These buttons do the following:
 
--   **Design** &ndash; This topmost button, **Design**, selects the
+- **Design** &ndash; This topmost button, **Design**, selects the
     **Design** pane. When this button is clicked, the **Toolbox** and
     **Properties** panes are enabled and the **Text Editor Toolbar** is
     not displayed. When the **Collapse** button is clicked (see below),
     the **Design** pane is presented alone without the **Source** pane.
 
--   **Swap Panes** &ndash; This button (which resembles two opposing
+- **Swap Panes** &ndash; This button (which resembles two opposing
     arrows) swaps the **Design** and **Source** panes so that the
     **Source** pane is on the left and the **Design** pane is on the
     right. Clicking it again swaps these panes back to their original
     locations.
 
--   **Source** &ndash; This button (which resembles two opposing angle
+- **Source** &ndash; This button (which resembles two opposing angle
     brackets) selects the **Source** pane. When this button is clicked,
     the **Toolbox** and **Properties** panes are disabled and the
     **Text Editor Toolbar** is made visible at the top of Visual
@@ -226,16 +226,16 @@ These buttons do the following:
     clicking the **Source** button displays the **Source** pane instead
     of the **Design** pane.
 
--   **Vertical Split** &ndash; This button (which resembles a vertical
+- **Vertical Split** &ndash; This button (which resembles a vertical
     bar), displays the **Design** and **Source** panes side-by-side. This is
     the default arrangement.
 
--   **Horizontal Split** &ndash; This button (which resembles a
+- **Horizontal Split** &ndash; This button (which resembles a
     horizontal bar), displays the **Design** pane above the **Source**
     pane. **Swap Panes** can be clicked to place the **Source** pane
     above the **Design** pane.
 
--   **Collapse Pane** &ndash; This button (which resembles two
+- **Collapse Pane** &ndash; This button (which resembles two
     right-pointing angle brackets) "collapses" the dual-pane display of
     **Design** and **Source** into a single view of one of these panes.
     This button becomes the **Expand Pane** button (resembling two
@@ -508,22 +508,22 @@ features, as shown in the following screenshot:
 When you edit a layout in the Designer, you use the following features
 to create and shape your design:
 
--   **Design Surface** &ndash; Facilitates the visual construction of
+- **Design Surface** &ndash; Facilitates the visual construction of
     the user interface by giving you an editable representation of how
     the layout will appear on the device.
 
--   **Toolbar** &ndash; Displays a list of selectors: **Device**,
+- **Toolbar** &ndash; Displays a list of selectors: **Device**,
     **Version**, **Theme**, layout configuration, and Action Bar
     settings. The Toolbar also includes icons for launching the Theme
     Editor and for enabling the Material Design Grid.
 
--   **Toolbox** &ndash; Provides a list of widgets and layouts that you
+- **Toolbox** &ndash; Provides a list of widgets and layouts that you
     can drag and drop onto the Design Surface.
 
--   **Property Pad** &ndash; Lists the properties of the selected
+- **Property Pad** &ndash; Lists the properties of the selected
     widget for viewing and editing.
 
--   **Document Outline** &ndash; Displays the tree of widgets that
+- **Document Outline** &ndash; Displays the tree of widgets that
     compose the layout. You can click an item in the tree to cause it
     to be selected in the Designer. Also, clicking an item in the tree
     loads the item's properties into the Property Pad.
@@ -537,33 +537,33 @@ configuration selectors and tool menus:
 
 The Toolbar provides access to the following features:
 
--   **Alternative Layout Selector** &ndash; Allows you to select from
+- **Alternative Layout Selector** &ndash; Allows you to select from
     different layout versions.
 
--   **Device Selector** &ndash; Defines a set of qualifiers associated
+- **Device Selector** &ndash; Defines a set of qualifiers associated
     with a particular device such as screen size, resolution, and
     keyboard availability. You can also add and delete new devices.
 
--   **Android Version Selector** &ndash; The Android version that the
+- **Android Version Selector** &ndash; The Android version that the
     layout is targeting. The Designer will render the layout according
     to the selected Android version.
 
--   **Theme Selector** &ndash; Selects the UI theme for the layout.
+- **Theme Selector** &ndash; Selects the UI theme for the layout.
 
--   **Configuration Selector** &ndash; Selects the device configuration,
+- **Configuration Selector** &ndash; Selects the device configuration,
     such as *portrait* or *landscape*.
 
--   **Resource Qualifier Options** &ndash; Opens a dialog that
+- **Resource Qualifier Options** &ndash; Opens a dialog that
     presents drop-down menus for selecting *Language*, *UI Mode*, *Night
     Mode*, and *Round Screen* options.
 
--   **Action Bar Settings** &ndash; Configures the Action Bar settings
+- **Action Bar Settings** &ndash; Configures the Action Bar settings
     for the layout.
 
--   **Theme Editor** &ndash; Opens the *Theme Editor*, which makes it
+- **Theme Editor** &ndash; Opens the *Theme Editor*, which makes it
     possible for you to customize elements of the selected theme.
 
--   **Material Design Grid** &ndash; Enables or disables the
+- **Material Design Grid** &ndash; Enables or disables the
     *Material Design Grid*. The drop-down menu item adjacent to
     the Material Design Grid opens a dialog that enables you
     to customize the grid.
@@ -609,10 +609,10 @@ select on the Design Surface). Here is an example of a context menu:
 In this example, right-clicking a `Button` opens a context menu that
 provides several options:
 
--   **LinearLayout** &ndash; opens a submenu for editing the `LinearLayout`
+- **LinearLayout** &ndash; opens a submenu for editing the `LinearLayout`
     parent of the `Button`.
 
--   **Cut**, **Copy**, and **Delete** &ndash; operations that apply to the
+- **Cut**, **Copy**, and **Delete** &ndash; operations that apply to the
     right-clicked `Button`.
 
 ### Zoom controls
@@ -624,21 +624,21 @@ The Design Surface supports zooming via several controls as shown:
 These controls make it easier to see certain areas of the user
 interface in the Designer:
 
--   **Highlight Containers** &ndash; Highlights containers on the
+- **Highlight Containers** &ndash; Highlights containers on the
     Design Surface so that they are easier to locate while zooming in
     and out.
 
--   **Normal Size** &ndash; Renders the layout pixel-for-pixel so that
+- **Normal Size** &ndash; Renders the layout pixel-for-pixel so that
     you can see how the layout will look at the resolution of the
     selected device.
 
--   **Fit to Window** &ndash; Sets the zoom level so that the entire
+- **Fit to Window** &ndash; Sets the zoom level so that the entire
     layout is visible on the Design Surface.
 
--   **Zoom In** &ndash; Zooms in incrementally with each click,
+- **Zoom In** &ndash; Zooms in incrementally with each click,
     magnifying the layout.
 
--   **Zoom Out** &ndash; Zooms out incrementally with each click,
+- **Zoom Out** &ndash; Zooms out incrementally with each click,
     making the layout appear smaller on the Design Surface.
 
 Note that the chosen zoom setting does not affect the user interface of
@@ -660,19 +660,19 @@ The Property Pad is divided into several sections that group similar
 properties together &ndash; this makes it easier to locate properties
 of interest:
 
--   **Widget** &ndash; Main properties of the widget, such as `id`,
+- **Widget** &ndash; Main properties of the widget, such as `id`,
     `visibility`, `text`, etc. Properties for managing the widget's
     content are usually placed here.
 
--   **Style** &ndash; Properties that change the visual appearance of
+- **Style** &ndash; Properties that change the visual appearance of
     the widget, such as `font`, `text color`, `background`, etc.
 
--   **Layout** &ndash; Properties that set the location and size of the
+- **Layout** &ndash; Properties that set the location and size of the
     widget.
 
--   **Scroll** &ndash; Scrolling properties.
+- **Scroll** &ndash; Scrolling properties.
 
--   **Behavior** &ndash; Flags that set how the widget behaves.
+- **Behavior** &ndash; Flags that set how the widget behaves.
 
 ### Default values
 

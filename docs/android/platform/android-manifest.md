@@ -330,18 +330,18 @@ section of
 
 ## List of Custom Attributes
 
--   [Android.App.ActivityAttribute](xref:Android.App.ActivityAttribute) : Generates a  [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML fragment 
--   [Android.App.ApplicationAttribute](xref:Android.App.ApplicationAttribute) : Generates a  [/manifest/application](https://developer.android.com/guide/topics/manifest/application-element.html) XML fragment 
--   [Android.App.InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : Generates a  [/manifest/instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML fragment 
--   [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : Generates a  [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML fragment 
--   [Android.App.MetaDataAttribute](xref:Android.App.MetaDataAttribute) : Generates a  [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML fragment 
--   [Android.App.PermissionAttribute](xref:Android.App.PermissionAttribute) : Generates a  [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html) XML fragment 
--   [Android.App.PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : Generates a  [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML fragment 
--   [Android.App.PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : Generates a  [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML fragment 
--   [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute) : Generates a  [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML fragment 
--   [Android.App.UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : Generates a  [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML fragment 
--   [Android.App.UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : Generates a  [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML fragment 
--   [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : Generates a  [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML fragment 
--   [Android.Content.ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : Generates a  [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML fragment 
--   [Android.Content.GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : Generates a  [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML fragment
+- [Android.App.ActivityAttribute](xref:Android.App.ActivityAttribute) : Generates a  [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML fragment 
+- [Android.App.ApplicationAttribute](xref:Android.App.ApplicationAttribute) : Generates a  [/manifest/application](https://developer.android.com/guide/topics/manifest/application-element.html) XML fragment 
+- [Android.App.InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : Generates a  [/manifest/instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML fragment 
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : Generates a  [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML fragment 
+- [Android.App.MetaDataAttribute](xref:Android.App.MetaDataAttribute) : Generates a  [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML fragment 
+- [Android.App.PermissionAttribute](xref:Android.App.PermissionAttribute) : Generates a  [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html) XML fragment 
+- [Android.App.PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : Generates a  [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML fragment 
+- [Android.App.PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : Generates a  [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML fragment 
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute) : Generates a  [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML fragment 
+- [Android.App.UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : Generates a  [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML fragment 
+- [Android.App.UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : Generates a  [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML fragment 
+- [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : Generates a  [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML fragment 
+- [Android.Content.ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : Generates a  [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML fragment 
+- [Android.Content.GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : Generates a  [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML fragment
 

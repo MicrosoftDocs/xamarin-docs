@@ -41,10 +41,10 @@ Double-click on the Interface.storyboard in your Watch App to
   also right-click and **Open With > Xcode Interface Builder**)
 
 
-1.  Ensure the **Toolbox** and **Properties** pads are visible,
-1.  Click to select the Interface Controller,
-1.  Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**,
-1.  Verify the **Class** is set to  **InterfaceController**
+1. Ensure the **Toolbox** and **Properties** pads are visible,
+1. Click to select the Interface Controller,
+1. Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**,
+1. Verify the **Class** is set to  **InterfaceController**
 
 	![](hello-watch-images/interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 
@@ -53,10 +53,10 @@ Double-click on the Interface.storyboard in your Watch App to
 Double-click on the Interface.storyboard in your Watch App
   to edit with the Xamarin iOS Designer in Visual Studio:
 
-1.  Open the Properties pane;
-1.  Change the Class to **InterfaceController**;
-1.  Click the Interface Controller; and
-1.  Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**.
+1. Open the Properties pane;
+1. Change the Class to **InterfaceController**;
+1. Click the Interface Controller; and
+1. Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**.
 
 	![](hello-watch-images/vs-interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 

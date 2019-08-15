@@ -63,9 +63,9 @@ if (SLComposeViewController.IsAvailable (SLServiceKind.Twitter)) {
  `SLComposeViewController` never sends a tweet directly without
 user interaction. However, it can be initialized with the following methods:
 
--   `SetInitialText` – Adds the initial text to show in the tweet. 
--  `AddUrl` – Adds a Url to the tweet.
--  `AddImage` – Adds an image to the tweet.
+- `SetInitialText` – Adds the initial text to show in the tweet. 
+- `AddUrl` – Adds a Url to the tweet.
+- `AddImage` – Adds an image to the tweet.
 
 
 Once initialized, calling `PresentVIewController` displays the

@@ -45,23 +45,23 @@ After these steps have been performed, it becomes possible to use
 Fragments in earlier versions of Android. The Fragment APIs will work 
 the same now in these earlier versions, with the following exceptions: 
 
--   **Change the minimum Android Version** &ndash; The application no 
+- **Change the minimum Android Version** &ndash; The application no 
     longer needs to target Android 3.0 or higher, as shown below: 
 
     [![Screenshot of Minimum Android target being set under Android Manifest](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
--   **Extend FragmentActivity** &ndash; The Activities that are hosting 
+- **Extend FragmentActivity** &ndash; The Activities that are hosting 
     Fragments must now inherit from 
     `Android.Support.V4.App.FragmentActivity` , and not from 
     `Android.App.Activity` . 
 
--   **Update Namespaces** &ndash; Classes that inherit from 
+- **Update Namespaces** &ndash; Classes that inherit from 
     `Android.App.Fragment` must now inherit from 
     `Android.Support.V4.App.Fragment` . Remove the using statement " 
     `using Android.App;` " at the top of the source code file and 
     replace it with " `using Android.Support.V4.App` ". 
 
--   **Use SupportFragmentManager** &ndash; 
+- **Use SupportFragmentManager** &ndash; 
     `Android.Support.V4.App.FragmentActivity` exposes a 
     `SupportingFragmentManager` property that must be used to get a 
     reference to the `FragmentManager` . For example: 

@@ -37,13 +37,13 @@ explain how the basic photo-viewing app is modified to report which
 photograph had been touched by the user. When an item-click event
 occurs in the sample app, the following sequence takes place:
 
-1.  The photograph's `CardView` detects the item-click event and
+1. The photograph's `CardView` detects the item-click event and
     notifies the adapter.
 
-2.  The adapter forwards the event (with item position information)
+2. The adapter forwards the event (with item position information)
     to the activity's item-click handler.
 
-3.  The activity's item-click handler responds to the item-click event.
+3. The activity's item-click handler responds to the item-click event.
 
 First, an event handler member called `ItemClick` is added to the 
 `PhotoAlbumAdapter` class definition:

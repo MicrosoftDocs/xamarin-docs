@@ -22,23 +22,23 @@ the Java APIs from C# or other .NET languages.
 
 These are some of our design principles for the Xamarin.Android binding
 
--  Conform to the  [.NET Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
+- Conform to the  [.NET Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
 
--  Allow developers to subclass Java classes.
+- Allow developers to subclass Java classes.
 
--  Subclass should work with C# standard constructs.
+- Subclass should work with C# standard constructs.
 
--  Derive from an existing class.
+- Derive from an existing class.
 
--  Call base constructor to chain.
+- Call base constructor to chain.
 
--  Overriding methods should be done with C#'s override system.
+- Overriding methods should be done with C#'s override system.
 
--  Make common Java tasks easy, and hard Java tasks possible.
+- Make common Java tasks easy, and hard Java tasks possible.
 
--  Expose JavaBean properties as C# properties.
+- Expose JavaBean properties as C# properties.
 
--  Expose a strongly typed API:
+- Expose a strongly typed API:
 
     - Increase type-safety.
 
@@ -48,7 +48,7 @@ These are some of our design principles for the Xamarin.Android binding
 
     - Allows for IDE popup documentation.
 
--  Encourage in-IDE exploration of the APIs:
+- Encourage in-IDE exploration of the APIs:
 
     - Utilize Framework Alternatives to Minimize Java Classlib exposure.
 
@@ -82,19 +82,19 @@ provide lists, sets, and maps. We expose these elements using the
 [System.Collections.Generic](xref:System.Collections.Generic)
 interfaces in our binding. The fundamental mappings are:
 
--   [java.util.Set\<E>](https://developer.android.com/reference/java/util/Set.html) maps to
+- [java.util.Set\<E>](https://developer.android.com/reference/java/util/Set.html) maps to
     system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
     helper class [Android.Runtime.JavaSet\<T>](xref:Android.Runtime.JavaSet`1).
 
--   [java.util.List\<E>](https://developer.android.com/reference/java/util/List.html) maps to
+- [java.util.List\<E>](https://developer.android.com/reference/java/util/List.html) maps to
     system type [IList\<T>](xref:System.Collections.Generic.IList`1),
     helper class [Android.Runtime.JavaList\<T>](xref:Android.Runtime.JavaList`1).
 
--   [java.util.Map<K,V>](https://developer.android.com/reference/java/util/Map.html) maps to
+- [java.util.Map<K,V>](https://developer.android.com/reference/java/util/Map.html) maps to
     system type [IDictionary<TKey,TValue>](xref:System.Collections.Generic.IDictionary`2),
     helper class [Android.Runtime.JavaDictionary<K,V>](xref:Android.Runtime.JavaDictionary`2).
 
--   [java.util.Collection\<E>](https://developer.android.com/reference/java/util/Collection.html) maps to
+- [java.util.Collection\<E>](https://developer.android.com/reference/java/util/Collection.html) maps to
     system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
     helper class [Android.Runtime.JavaCollection\<T>](xref:Android.Runtime.JavaCollection`1).
 
@@ -144,17 +144,17 @@ if (goodSource.Count != 4) // false
 
 Java methods are transformed into properties, when appropriate:
 
--  The Java method pair `T getFoo()` and `void setFoo(T)` are
+- The Java method pair `T getFoo()` and `void setFoo(T)` are
    transformed into the `Foo` property. Example:
    [Activity.Intent](xref:Android.App.Activity.Intent).
 
--  The Java method `getFoo()` is transformed into the read-only Foo
+- The Java method `getFoo()` is transformed into the read-only Foo
    property. Example:
    [Context.PackageName](xref:Android.Content.Context.PackageName).
 
--  Set-only properties are not generated.
+- Set-only properties are not generated.
 
--  Properties are *not* generated if the property type would be an
+- Properties are *not* generated if the property type would be an
    array.
 
 
