@@ -217,7 +217,7 @@ This syntax does not instantiate the `MyResourceDictionary` class. Instead, it r
 
 ### Merge resource dictionaries from other assemblies
 
-A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) can also be merged into another `ResourceDictionary` by adding it into the [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) property of the application, page, or control level `ResourceDictionary`. This technique allows both local resource dictionaries, and resource dictionaries residing in other assemblies, to be merged.
+A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) can also be merged into another `ResourceDictionary` by adding it into the [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) property of the `ResourceDictionary`. This technique allows resource dictionaries to be merged, regardless of the assembly in which they reside.
 
 > [!IMPORTANT]
 > The [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) class also defines a [`MergedWith`](xref:Xamarin.Forms.ResourceDictionary.MergedWith) property. However, this property has been deprecated and should no longer be used.
