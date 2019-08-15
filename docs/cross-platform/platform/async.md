@@ -144,7 +144,7 @@ GetButton.Click += async (sender, e) => {
 Notes:
 
 -  The anonymous delegate has the async keyword prefix.
--  The asynchronous method DownloadHomepage returns a Task <int> that is stored in the sizeTask variable.
+-  The asynchronous method DownloadHomepage returns a Task\<int> that is stored in the sizeTask variable.
 -  The code awaits on the sizeTask variable.  *This* is the location that the method is suspended and control is returned to the calling code until the asynchronous task finishes on its own thread.
 -  Execution does  *not* pause when the task is created on the first line of the method, despite the task being created there. The await keyword signifies the location where execution is paused.
 -  When the asynchronous task finishes, intResult is set and execution continues on the original thread, from the await line.

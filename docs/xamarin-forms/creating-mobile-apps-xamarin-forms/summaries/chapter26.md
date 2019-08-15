@@ -111,7 +111,7 @@ Infinite constraints indicate that the requested size should reflect the element
 
 The [**ExploreChildSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/ExploreChildSizes) displays constraint and size request information for a simple layout.
 
-## Deriving from Layout<View>
+## Deriving from Layout\<View>
 
 A custom layout class derives from `Layout<View>`. It has two responsibilities:
 

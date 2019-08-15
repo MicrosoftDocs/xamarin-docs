@@ -30,7 +30,7 @@ Basic authentication is the simplest authentication mechanism supported by HTTP,
 ![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
 
 > [!NOTE]
-> Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the <code>Authorization</code> header can easily be decoded if the HTTP traffic is captured by an attacker.
+> Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the `Authorization` header can easily be decoded if the HTTP traffic is captured by an attacker.
 
 ## Specifying Basic Authentication in a Web Request
 

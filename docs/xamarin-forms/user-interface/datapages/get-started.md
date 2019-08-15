@@ -16,9 +16,7 @@ ms.date: 12/01/2017
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> DataPages requires a
-[Xamarin.Forms Theme](~/xamarin-forms/user-interface/themes/index.md) reference to render.
-
+> DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
 
 To get started building a simple data-driven page using the DataPages Preview,
 follow the steps below. This demo uses a hardcoded style ("Events") in
@@ -200,9 +198,7 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
 
-It's a little more work to create themes from scratch
-(see the [Themes guide](~/xamarin-forms/user-interface/themes/index.md))
-but future preview releases will make this easier to do.
+It's a little more work to create themes from scratch but future preview releases will make this easier to do.
 
 
 ## Troubleshooting

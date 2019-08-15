@@ -9,28 +9,32 @@ ms.date: 03/28/2017
 ---
 # Part 1 – Creating a Cross Platform MonoGame
 
-_This walkthrough shows how to create a new project for iOS and Android using MonoGame. The result is a Visual Studio for Mac solution with a cross-platform shared code project as well as one project for each platform. This project will display an empty blue screen when executed._
+_This walkthrough shows how to create a new project for iOS and Android using MonoGame. The result is a Visual Studio for Mac solution with a cross-platform shared code project as well as one project for each platform. This project will display an empty blue screen when run._
 
 MonoGame enables the development of cross-platform games with large portion of code reuse. This walkthrough will focus on setting up a solution which contains projects for iOS and Android, as well as a shared code project for cross-platform code.
 
-When we’re done, we'll have a project that has the proper structure for performing game update logic and game drawing logic at 30 frames per second. It can be used as the base project for any MonoGame project. Our project will look like this when executed:
+When complete, the project has the proper structure for performing game update logic and game drawing logic at 30 frames per second. It can be used as the base project for any MonoGame project. The project will look like this when run:
 
 ![Blank blue screen](part1-images/image1.png)
 
-## Adding MonoGame to Visual Studio for Mac
-
-MonoGame can be added as an add-in to Visual Studio for Mac. On Mac, select **Visual Studio for Mac** > **Add-in Manager...** . On Windows, select** Tools **> **Add-in Manager...** . Select the **Gallery** tab, expand the **Game Development** category and select **MonoGame Addin**, then click **Install**:
-
-![Visual Studio for Mac extensions gallery selecting MonoGame](part1-images/image2.png)
+## Adding MonoGame to Visual Studio
 
 > [!IMPORTANT]
-> If the **Game Development** section does not appear in the Add-in Manager, you can manually download and install the latest version from here: http://www.monogame.net/downloads/. You may need to restart Visual Studio for Mac for the templates to appear.
+> MonoGame is not installed by default in Visual Studio 2019 or Visual Studio for Mac.
+>
+> You should manually download and install the latest version from http://www.monogame.net/downloads/ then run the installer. You may need to restart Visual Studio for the templates to appear.
+>
+> The **Game Development** section should then appear in the **Add-in Manager**.
+
+To enable the MonoGame add-in for Visual Studio for Mac, select **Visual Studio for Mac** > **Add-in Manager...** . For Visual Studio 2019 on Windows, select **Tools** > **Add-in Manager...**. Select the **Gallery** tab, expand the **Game Development** category and select **MonoGame Addin**, then click **Install...**:
+
+![Visual Studio for Mac extensions gallery selecting MonoGame](part1-images/image2.png)
 
 Once installed, MonoGame templates will appear in Visual Studio for Mac, as we will see in the next section.
 
 ## Creating a new solution
 
-In Visual Studio for Mac select **File > New Solution**. In the **New Project** dialog, click on **Miscellaneous**, scroll to the **General** section, select the **Universal MonoGame Mobile application **option, and click Next.
+In Visual Studio for Mac select **File > New Solution**. In the **New Project** dialog, click on **Miscellaneous**, scroll to the **General** section, select the **Universal MonoGame Mobile application** option, and click Next.
 
 ![New Project dialog creating a MonoGame application](part1-images/image3.png)
 

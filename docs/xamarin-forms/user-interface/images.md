@@ -207,7 +207,7 @@ To use this extension add a custom `xmlns` to the XAML, using the correct namesp
 
 #### Debugging Code
 
-Because it is sometimes difficult to understand why a particular image resource isn't being loaded, the following debug code can be added temporarily to an application to help confirm the resources are correctly configured. It will output all known resources embedded in the given assembly to the <span class="UIItem">Console</span> to help debug resource loading issues.
+Because it is sometimes difficult to understand why a particular image resource isn't being loaded, the following debug code can be added temporarily to an application to help confirm the resources are correctly configured. It will output all known resources embedded in the given assembly to the **Console** to help debug resource loading issues.
 
 ```csharp
 using System.Reflection;

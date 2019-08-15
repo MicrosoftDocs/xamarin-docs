@@ -2144,7 +2144,7 @@ want to do something with it. You can use JNIEnv methods such as
 to do so, but if there is already an analogue C# wrapper then you'll
 want to construct a wrapper over the JNI reference. You can do so
 through the
-[Extensions.JavaCast&lt;T>](xref:Android.Runtime.Extensions.JavaCast*)
+[Extensions.JavaCast\<T>](xref:Android.Runtime.Extensions.JavaCast*)
 extension method:
 
 ```csharp
@@ -2156,7 +2156,7 @@ Activity mapActivity = new Java.Lang.Object(lrefActivity, JniHandleOwnership.Tra
 ```
 
 You can also use the
-[Java.Lang.Object.GetObject&lt;T>](xref:Java.Lang.Object.GetObject*)
+[Java.Lang.Object.GetObject\<T>](xref:Java.Lang.Object.GetObject*)
 method:
 
 ```csharp

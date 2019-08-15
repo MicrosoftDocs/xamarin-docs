@@ -176,7 +176,7 @@ Each key has the following type and meaning:
 - **NSAllowsArbitraryLoads** (`Boolean`) - If `YES` ATS will be disabled for any domain **not** listed in `NSExceptionDomains`. For listed domains, the security settings specified will be used.
 - **NSAllowsArbitraryLoadsInWebContent** (`Boolean`) - If `YES` will allow web pages to load correctly while Apple Transport Security (ATS) protection is still enabled for the rest of the app.
 - **NSExceptionDomains** (`Dictionary`) -  A collection of domains that and the security settings that ATS should use for a given domain.
-- **<domain-name-for-exception-as-string>** (`Dictionary`) - A collection of exceptions for a given domain (eg. `www.xamarin.com`).
+- **\<domain-name-for-exception-as-string>** (`Dictionary`) - A collection of exceptions for a given domain (eg. `www.xamarin.com`).
 - **NSExceptionMinimumTLSVersion** (`String`) - The minimal TLS version as either `TLSv1.0`, `TLSv1.1` or `TLSv1.2` (which is the default).
 - **NSExceptionRequiresForwardSecrecy** (`Boolean`) - If `NO` the domain does not have to use a cipher with forward security. The default value is `YES`.
 - **NSExceptionAllowsInsecureHTTPLoads** (`Boolean`) - If `NO` (the default) all communications with this domain must be in the `HTTPS` protocol.
