@@ -33,6 +33,9 @@ The `ToolbarItem` class inherits the following typically-used properties from th
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects so a `ToolbarItem` instance can be the target of data bindings.
 
+> [!NOTE]
+> An alternative to creating a toolbar from [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) objects is to set the [`NavigationPage.TitleView`](xref:Xamarin.Forms.NavigationPage.TitleViewProperty) attached property to a layout class that contains multiple views. For more information, see [Displaying Views in the Navigation Bar](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md#displaying-views-in-the-navigation-bar).
+
 ## Create a ToolbarItem
 
 A `ToolbarItem` object can be instantiated in XAML. The `Text` and `IconImageSource` properties can be set to determine how the button is displayed in the navigation bar. The following example shows how to instantiate a `ToolbarItem` with some common properties set:
