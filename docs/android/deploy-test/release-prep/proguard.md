@@ -127,29 +127,11 @@ Use the following steps to enable ProGuard in your app project:
 For most Xamarin.Android apps, the default ProGuard configuration file 
 supplied by Xamarin.Android will be sufficient to remove all (and only)
 unused code. To view the default ProGuard configuration, open 
-the file at **obj\\Release\\proguard\\proguard_xamarin.cfg**. The next 
-section describes how to create a customized ProGuard configuration 
-file. 
+the file at **obj\\Release\\proguard\\proguard_xamarin.cfg**.
 
+The following example illustrates a typical generated **proguard_xamarin.cfg** file:
 
-
-### Customizing ProGuard
-
-Optionally, you can add a custom ProGuard Configuration file to exert 
-more control over the ProGuard tooling. For example, you may want to 
-explicitly tell ProGuard which classes to keep. To do this, create a new 
-**.cfg** file and apply the `ProGuardConfiguration` build action in the 
-**Properties** pane of the **Solution Explorer**: 
-
-[![ProguardConfiguration build action selected](proguard-images/04-build-action-sml.png)](proguard-images/04-build-action.png#lightbox)
-
-Keep in mind that this configuration file does not replace the 
-Xamarin.Android **proguard_xamarin.cfg** file since both are used by 
-ProGuard. 
-
-The following example illustrates a typical ProGuard configuration file:
-
-```
+```cfg
 # This is Xamarin-specific (and enhanced) configuration.
 
 -dontobfuscate
@@ -173,15 +155,32 @@ The following example illustrates a typical ProGuard configuration file:
 
 # Android's template misses fluent setters...
 -keepclassmembers class * extends android.view.View {
-    *** set*(***);
+   *** set*(***);
 }
 
 # also misses those inflated custom layout stuff from xml...
 -keepclassmembers class * extends android.view.View {
-    <init>(android.content.Context,android.util.AttributeSet);
-    <init>(android.content.Context,android.util.AttributeSet,int);
+   <init>(android.content.Context,android.util.AttributeSet);
+   <init>(android.content.Context,android.util.AttributeSet,int);
 }
 ```
+
+The next section describes how to create a customized ProGuard configuration 
+file. 
+
+### Customizing ProGuard
+
+Optionally, you can add a custom ProGuard Configuration file to exert 
+more control over the ProGuard tooling. For example, you may want to 
+explicitly tell ProGuard which classes to keep. To do this, create a new 
+**.cfg** file and apply the `ProGuardConfiguration` build action in the 
+**Properties** pane of the **Solution Explorer**: 
+
+[![ProguardConfiguration build action selected](proguard-images/04-build-action-sml.png)](proguard-images/04-build-action.png#lightbox)
+
+Keep in mind that this configuration file does not replace the 
+Xamarin.Android **proguard_xamarin.cfg** file since both are used by 
+ProGuard. 
 
 There might be cases where ProGuard is unable to properly analyze your 
 application; it could potentially remove code that your application 
