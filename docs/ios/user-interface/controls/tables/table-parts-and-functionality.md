@@ -99,4 +99,4 @@ they do (and that you can use Xamarin.iOS’s UITableViewSource instead).
 
 ## Related Links
 
-- [WorkingWithTables (sample)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)
+- [WorkingWithTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

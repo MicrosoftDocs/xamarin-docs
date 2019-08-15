@@ -84,7 +84,7 @@ For more information about cancellation, see [Fine-Tuning Your Async Application
 
 ## Example
 
-Download the [example Xamarin solution](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (for both iOS and Android) to see a working example of `async` and `await` in mobile apps. The example code is discussed in more detail in this section.
+Download the [example Xamarin solution](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (for both iOS and Android) to see a working example of `async` and `await` in mobile apps. The example code is discussed in more detail in this section.
 
 ### Writing an async method
 
@@ -144,7 +144,7 @@ GetButton.Click += async (sender, e) => {
 Notes:
 
 - The anonymous delegate has the async keyword prefix.
-- The asynchronous method DownloadHomepage returns a Task <int> that is stored in the sizeTask variable.
+- The asynchronous method DownloadHomepage returns a Task\<int> that is stored in the sizeTask variable.
 - The code awaits on the sizeTask variable.  *This* is the location that the method is suspended and control is returned to the calling code until the asynchronous task finishes on its own thread.
 - Execution does  *not* pause when the task is created on the first line of the method, despite the task being created there. The await keyword signifies the location where execution is paused.
 - When the asynchronous task finishes, intResult is set and execution continues on the original thread, from the await line.
@@ -191,10 +191,10 @@ This document has given an overview of the new language keywords and examples fo
 
 ## Related Links
 
-- [AsyncAwait (sample)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
+- [AsyncAwait (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
 - [Callbacks as our Generations' Go To Statement](https://tirania.org/blog/archive/2013/Aug-15.html)
-- [Data (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/Data/)
-- [HttpClient (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
+- [Data (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
+- [HttpClient (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)
 - [MapKitSearch (iOS) (sample)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
 - [Asynchronous programming](https://docs.microsoft.com/dotnet/csharp/async)
 - [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)

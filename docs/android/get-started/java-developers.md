@@ -268,7 +268,7 @@ Both Java and C# use very similar object-oriented programming idioms:
 - Instances of classes are reference types.
 
 - When you access the properties and methods of an instance, you
-    use the "<code>.</code>" operator.
+    use the "`.`" operator.
 
 - All class instances are created on the heap via the `new` operator.
 
@@ -743,7 +743,7 @@ Also, there are many keywords that are unique to C# and have no
 counterpart in Java. Xamarin.Android code often makes use of the
 following C# keywords (this table is useful to refer to when you
 are reading through Xamarin.Android
-[sample code](https://developer.xamarin.com/samples/android/all/)):
+[sample code](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)):
 
 |C#|Description|
 |---|---|

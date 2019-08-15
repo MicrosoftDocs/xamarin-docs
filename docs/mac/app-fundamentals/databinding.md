@@ -887,8 +887,8 @@ This article has taken a detailed look at working with data binding and key-valu
 
 ## Related Links
 
-- [MacDatabinding Storyboard (sample)](https://developer.xamarin.com/samples/mac/MacDatabinding-Storyboard/)
-- [MacDatabinding XIBs (sample)](https://developer.xamarin.com/samples/mac/MacDatabinding-XIBs/)
+- [MacDatabinding Storyboard (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-storyboard)
+- [MacDatabinding XIBs (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-xibs)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Standard controls](~/mac/user-interface/standard-controls.md)
 - [Table views](~/mac/user-interface/table-view.md)

@@ -11,7 +11,7 @@ ms.date: 12/11/2017
 
 # ListView Performance
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
 
 When writing mobile applications, performance matters. Users have come to expect smooth scrolling and fast load times. Failing to meet your users' expectations will cost you ratings in the application store, or in the case of a line-of-business application, cost your organization time and money.
 
@@ -180,6 +180,6 @@ Building a custom renderer for a [`ListView`](xref:Xamarin.Forms.ListView) or it
 
 ## Related Links
 
-- [Custom Renderer View (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithListviewNative/)
-- [Custom Renderer ViewCell (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ViewCell/)
+- [Custom Renderer View (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)
+- [Custom Renderer ViewCell (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-viewcell)
 - [ListViewCachingStrategy](xref:Xamarin.Forms.ListViewCachingStrategy)

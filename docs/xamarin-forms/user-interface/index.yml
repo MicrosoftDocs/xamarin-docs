@@ -1,0 +1,213 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin.Forms User Interface
+metadata:
+  title: Xamarin.Forms User Interface
+  description: Learn about creating user interfaces with Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 08/07/2019
+abstract:
+  description: Learn about creating user interfaces with Xamarin.Forms.
+sections:
+- title:
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: activityindicator.md
+      html: "Learn how to use an ActivityIndicator, to indicate to users that the application is engaged in a lengthy activity, without giving any indication of progress."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: activityindicator.md
+      title: ActivityIndicator
+    - href: animation/index.md
+      html: "Learn how to create animations in Xamarin.Forms."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: animation/index.md
+      title: Animation
+    - href: boxview.md
+      html: "Learn how to use a BoxView to create colored rectangles."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: boxview.md
+      title: BoxView
+    - href: button.md
+      html: "Learn how to use a Button to direct an application to carry out of a particular task."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: button.md
+      title: Button
+    - href: checkbox.md
+      html: "Learn how to set a boolean value using a CheckBox."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: checkbox.md
+      title: CheckBox
+    - href: collectionview/index.md
+      html: "Learn how to use a CollectionView to present lists of data using different layout specifications."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: collectionview/index.md
+      title: CollectionView
+    - href: colors.md
+      html: "Learn how to use the Color class to define and use colors across platforms."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: colors.md
+      title: Colors
+    - href: controls/index.md
+      html: "Learn about the pages, layouts, views, and cells available in Xamarin.Forms."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: controls/index.md
+      title: Controls Reference
+    - href: datepicker.md
+      html: "Learn how to use a DatePicker to allow a date within a specified range to be selected."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: datepicker.md
+      title: DatePicker
+    - href: pop-ups.md
+      html: "Learn how to display dialog boxes that ask users simple questions and guide users through tasks."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: pop-ups.md
+      title: Display Pop-Ups
+    - href: graphics/skiasharp/index.md
+      html: "Learn how to incorporate graphics into Xamarin.Forms applications using SkiaSharp."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: graphics/skiasharp/index.md
+      title: Graphics with SkiaSharp
+    - href: images.md
+      html: "Learn how to use the Image control to display an image."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: images.md
+      title: Images
+    - href: imagebutton.md
+      html: "Learn how to use the ImageButton control to display an image and responds to a tap that directs an application to carry out a particular task."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: imagebutton.md
+      title: ImageButton
+    - href: layouts/index.md
+      html: "Learn how to organize content using the layout controls and features in Xamarin.Forms"
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: layouts/index.md
+      title: Layouts
+    - href: listview/index.md
+      html: "Learn how to present lists of data using the ListView control."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: listview/index.md
+      title: ListView
+    - href: map.md
+      html: "Learn how to use the Map control, including the required platform configuration, and how to populate the map with pins."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: map.md
+      title: Maps
+    - href: menuitem.md
+      html: "Learn how to use the MenuItem class to add items to the context menu of ListView cells."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: menuitem.md
+      title: MenuItem
+    - href: picker/index.md
+      html: "Learn how to use the Picker control to select a text item from a list of data."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: picker/index.md
+      title: Picker
+    - href: progressbar.md
+      html: "Learn how to use a ProgressBar, to indicate that an application is progressing through a lengthy activity."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: progressbar.md
+      title: ProgressBar
+    - href: searchbar.md
+      html: "Learn how to initiate a search using the SearchBar control."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: searchbar.md
+      title: SearchBar
+    - href: slider.md
+      html: "Learn how to allow a user to select a numeric value from a continuous range with the Slider control."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: slider.md
+      title: Slider
+    - href: stepper.md
+      html: "Learn how to allow a user to select a numeric value from a range of values with the Stepper control."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: stepper.md
+      title: Stepper
+    - href: styles/index.md
+      html: "Learn how to style a user interface with XAML Styles, and with Cascading Style Sheets (CSS)."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: styles/index.md
+      title: Styles
+    - href: switch.md
+      html: "Learn how to set a boolean value using a Switch."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: switch.md
+      title: Switch
+    - href: tableview.md
+      html: "Learn how to use TableView to display scrollable lists of data or choices, where the rows don't share the same template."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: tableview.md
+      title: TableView
+    - href: text/index.md
+      html: "Learn about the Xamarin.Forms controls that present and receive text."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: text/index.md
+      title: Text
+    - href: theming.md
+      html: "Learn how to create themes for Xamarin.Forms applications, and change the theme at runtime."    
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: theming.md
+      title: Theming
+    - href: timepicker.md
+      html: "Learn how to use a TimePicker to allow a time to be selected."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: timepicker.md
+      title: TimePicker
+    - href: toolbaritem.md
+      html: "Learn how to use a ToolbarItem to add buttons to the navigation bar."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: toolbaritem.md
+      title: ToolbarItem
+    - href: visual/index.md
+      html: "Learn how to use Xamarin.Forms Material Visual to create applications that look identical, or largely identical, on iOS and Android."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: visual/index.md
+      title: Visual
+    - href: visual-state-manager.md
+      html: "Learn how to define visual states for the user interface, and activate the states with the VisualStateManager class."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: visual-state-manager.md
+      title: Visual State Manager
+    - href: webview.md
+      html: "Learn how to display HTML and web content in a Xamarin.Forms application."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: webview.md
+      title: WebView

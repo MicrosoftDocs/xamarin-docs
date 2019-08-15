@@ -12,8 +12,8 @@ ms.date: 05/03/2018
 
 Xamarin.Android services must obey two inviolable rules of Android services:
 
-* They must extend the [`Android.App.Service`](https://developer.xamarin.com/api/type/Android.App.Service/).
-* They must be decorated with the [`Android.App.ServiceAttribute`](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/).
+* They must extend the [`Android.App.Service`](xref:Android.App.Service).
+* They must be decorated with the [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
 
 Another requirement of Android services is that they must be registered in the **AndroidManifest.xml** and given a unique name. Xamarin.Android will automatically register the service in the manifest at build time with the necessary XML attribute.
 
@@ -116,7 +116,7 @@ How the Intent is dispatched depends on the type of service and will be discusse
 
 ### Creating an Intent Filter for Implicit Intents
 
-To associate a service with an implicit Intent, an Android app must provide some meta-data to identify the capabilities of the service. This meta-data is provided by  _intent filters_. Intent filters contain some information, such as an action or a type of data, that must be present in an Intent to start a service. In Xamarin.Android, the intent filter is registered in **AndroidManifest.xml** by decorating a service with the [`IntentFilterAttribute`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/). For example, the following code adds an intent filter with an associated action of `com.xamarin.DemoService`:
+To associate a service with an implicit Intent, an Android app must provide some meta-data to identify the capabilities of the service. This meta-data is provided by  _intent filters_. Intent filters contain some information, such as an action or a type of data, that must be present in an Intent to start a service. In Xamarin.Android, the intent filter is registered in **AndroidManifest.xml** by decorating a service with the [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute). For example, the following code adds an intent filter with an associated action of `com.xamarin.DemoService`:
 
 ```csharp
 [Service]
@@ -141,7 +141,7 @@ With the basics of a Xamarin.Android service out of the way, let's examine the d
 
 ## Related Links
 
-- [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
-- [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/)
-- [Android.App.Intent](https://developer.xamarin.com/api/type/Android.Content.Intent/)
-- [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute)
+- [Android.App.Intent](xref:Android.Content.Intent)
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute)

@@ -11,7 +11,7 @@ ms.date: 01/22/2018
 
 # Consume a RESTful Web Service
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 
 _Integrating a web service into an application is a common scenario. This article demonstrates how to consume a RESTful web service from a Xamarin.Forms application._
 
@@ -203,5 +203,5 @@ The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccess
 ## Related Links
 
 - [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/)
-- [TodoREST (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoREST/)
+- [TodoREST (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest)
 - [HttpClient](https://msdn.microsoft.com/library/system.net.http.httpclient(v=vs.110).aspx)

@@ -1065,7 +1065,7 @@ This article has covered SiriKit and shown how it can be added to the Xamarin.iO
 
 ## Related Links
 
-- [ElizaChat Sample](https://developer.xamarin.com/samples/monotouch/ios10/ElizaChat/)
+- [ElizaChat Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)
 - [SiriKit Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/index.html)
 - [Intents Framework Reference](https://developer.apple.com/reference/intents)
 - [Intents UI Framework Reference](https://developer.apple.com/reference/intentsui)

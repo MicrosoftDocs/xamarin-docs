@@ -11,7 +11,7 @@ ms.date: 03/29/2019
 
 # Xamarin.Forms WebView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
 [`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
 
@@ -477,7 +477,7 @@ Grid *without* WidthRequest & HeightRequest. Grid is one of the few layouts that
 
 ## Invoking JavaScript
 
-[`WebView`](xref:Xamarin.Forms.WebView) includes the ability to invoke a JavaScript function from C#, and return any result to the calling C# code. This is accomplished with the [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) method, which is shown in the following example from the [WebView](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView) sample:
+[`WebView`](xref:Xamarin.Forms.WebView) includes the ability to invoke a JavaScript function from C#, and return any result to the calling C# code. This is accomplished with the [`WebView.EvaluateJavaScriptAsync`](xref:Xamarin.Forms.WebView.EvaluateJavaScriptAsync*) method, which is shown in the following example from the [WebView](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) sample:
 
 ```csharp
 var numberEntry = new Entry { Text = "5" };
@@ -511,5 +511,5 @@ function factorial(num) {
 
 ## Related Links
 
-- [Working with WebView (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithWebview/)
-- [WebView (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/WebView)
+- [Working with WebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
+- [WebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)

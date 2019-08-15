@@ -61,18 +61,18 @@ such as [Wearable Activity](https://developer.android.com/reference/android/supp
 ## Samples
 
 You can find a number of
-[samples](https://developer.xamarin.com/samples/android/Android%20Wear/) using Android Wear (or go
+[samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) using Android Wear (or go
 directly to
 [github](https://github.com/xamarin/monodroid-samples/tree/master/wear)).
 
 |Sample|Description|Screenshot|
 |--- |--- |--- |
-|[SkeletonWear](https://developer.xamarin.com/samples/monodroid/wear/SkeletonWear/)|A simple example of the basics of wearable projects, including GridViewPager and interactive notifications.|![Screenshot of Skeletonwear](images/skeleton.png)|
-|[WatchViewStub](https://developer.xamarin.com/samples/monodroid/wear/WatchViewStub/)|A simple demo of the WatchViewStub control that detects screen shape and automatically loads the correct layout. See how WatchViewStub works in the **Resources/layout/main_activity.xml** layout.|![Screenshot of WatchViewStub](images/watchview.png)|
-|[RecipeAssistant](https://developer.xamarin.com/samples/monodroid/wear/RecipeAssistant/)|Demonstration of Wear notification pages, in the form of recipe steps. Notifications are created in RecipeService.cs.|![Screenshot of RecipeAssistant](images/recipeassist.png)|
-|[ElizaChat](https://developer.xamarin.com/samples/monodroid/wear/ElizaChat/)|Fun sample of interacting with a "personal assistant" called Eliza, using Wear interactive notifications to create a conversation using canned responses.|![Screenshot of ElizaChat](images/eliza.png)|
-|[GridViewPager](https://developer.xamarin.com/samples/monodroid/wear/GridViewPager/)|GridViewPager implements the 2D navigation pattern, where the user swipes vertically and then horizontally to navigate through options and content.|![Screenshot of GridViewPager](images/gridviewpager.png)|
-|[WatchFace](https://developer.xamarin.com/samples/monodroid/wear/WatchFace)|WatchFace is a custom watch face with analog-style hour, minute, and second hands. This sample demonstrates how to create a watch face service that draws the current time and handles ambient mode and visibility change events. It includes a broadcast receiver that listens for time zone changes and automatically updates the time accordingly.|![Screenshot of WatchFace](images/gridviewpager.png)|
+|[SkeletonWear](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-skeletonwear)|A simple example of the basics of wearable projects, including GridViewPager and interactive notifications.|![Screenshot of Skeletonwear](images/skeleton.png)|
+|[WatchViewStub](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchviewstub)|A simple demo of the WatchViewStub control that detects screen shape and automatically loads the correct layout. See how WatchViewStub works in the **Resources/layout/main_activity.xml** layout.|![Screenshot of WatchViewStub](images/watchview.png)|
+|[RecipeAssistant](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-recipeassistant)|Demonstration of Wear notification pages, in the form of recipe steps. Notifications are created in RecipeService.cs.|![Screenshot of RecipeAssistant](images/recipeassist.png)|
+|[ElizaChat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-elizachat)|Fun sample of interacting with a "personal assistant" called Eliza, using Wear interactive notifications to create a conversation using canned responses.|![Screenshot of ElizaChat](images/eliza.png)|
+|[GridViewPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-gridviewpager)|GridViewPager implements the 2D navigation pattern, where the user swipes vertically and then horizontally to navigate through options and content.|![Screenshot of GridViewPager](images/gridviewpager.png)|
+|[WatchFace](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-watchface)|WatchFace is a custom watch face with analog-style hour, minute, and second hands. This sample demonstrates how to create a watch face service that draws the current time and handles ambient mode and visibility change events. It includes a broadcast receiver that listens for time zone changes and automatically updates the time accordingly.|![Screenshot of WatchFace](images/gridviewpager.png)|
 
 
 ## Videos

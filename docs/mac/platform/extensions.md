@@ -48,7 +48,7 @@ The following tips can be helpful when working with extensions in Xamarin.Mac:
 
 Since the developer will create and work with Xamarin.Mac extensions in the same way as Xamarin.iOS extensions, please refer to our [Introduction to Extensions](~/ios/platform/extensions.md) documentation for more details.
 
-An example Xamarin.Mac project containing small, working samples of each extension type can be found [here](https://developer.xamarin.com/samples/mac/ExtensionSamples/).
+An example Xamarin.Mac project containing small, working samples of each extension type can be found [here](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples).
 
 <a name="Summary" />
 
@@ -59,5 +59,5 @@ This article has taken a quick look at working with extensions in a Xamarin.Mac 
 ## Related Links
 
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
-- [ExtensionSamples](https://developer.xamarin.com/samples/mac/ExtensionSamples/)
+- [ExtensionSamples](https://docs.microsoft.com/samples/xamarin/mac-samples/extensionsamples)
 - [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)

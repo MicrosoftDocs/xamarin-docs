@@ -1065,6 +1065,6 @@ foreground.
 
 ## Related links
 
-- [FCMNotifications (sample)](https://developer.xamarin.com/samples/monodroid/Firebase/FCMNotifications)
+- [FCMNotifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/firebase-fcmnotifications)
 - [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md)
 - [About FCM Messages](https://firebase.google.com/docs/cloud-messaging/concept-options)

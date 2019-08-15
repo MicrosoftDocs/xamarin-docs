@@ -18,13 +18,13 @@ ms.date: 06/19/2018
 
 1. Check the [requirements](#requirements) below.
 2. Download and install [Xamarin Workbooks for Windows](https://dl.xamarin.com/interactive/XamarinInteractive.msi).
-3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks or try out the [samples](https://developer.xamarin.com/workbooks)
+3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks.
 
 # [macOS](#tab/macos)
 
 1. Check the [requirements](#requirements) below.
 2. Download and install [Xamarin Workbooks for Mac](https://dl.xamarin.com/interactive/XamarinInteractive.pkg).
-3. Start [playing around](~/tools/workbooks/workbook.md) with workbooks or try out the [samples](https://developer.xamarin.com/workbooks)
+3. Start [playing around](~/tools/workbooks/workbook.md).
 
 -----
 
@@ -145,7 +145,7 @@ sure Workbooks does not get reinstalled without your knowledge.**
 
 ### macOS
 
-Starting with [1.2.2](https://developer.xamarin.com/releases/interactive/interactive-1.2/),
+Starting with [1.2.2](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/interactive/interactive-1.2.md),
 Xamarin Workbooks can be uninstalled from a terminal by running:
 
 ```bash

@@ -1378,8 +1378,8 @@ affects a custom collection view layout.
 
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
-- [Collection View Sample](https://developer.xamarin.com/samples/monotouch/ios9/CollectionView/)
-- [SimpleCollectionView (sample)](https://developer.xamarin.com/samples/monotouch/SimpleCollectionView/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
+- [Collection View Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-collectionview)
+- [SimpleCollectionView (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplecollectionview)
 - [Events, Protocols and Delegates](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md)

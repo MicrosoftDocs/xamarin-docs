@@ -11,7 +11,7 @@ ms.date: 10/25/2017
 
 # Part 5. From Data Bindings to MVVM
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _The Model-View-ViewModel (MVVM) architectural pattern was invented with XAML in mind. The pattern enforces a separation between three software layers — the XAML user interface, called the View; the underlying data, called the Model; and an intermediary between the View and the Model, called the ViewModel. The View and the ViewModel are often connected through data bindings defined in the XAML file. The BindingContext for the View is usually an instance of the ViewModel._
 
@@ -576,7 +576,7 @@ void Download ()
 
 ## Implementing a Navigation Menu
 
-The [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/) program that contains all the source code in this series of articles uses a ViewModel for its home page. This ViewModel is a definition of a short class with three properties named `Type`, `Title`, and `Description` that contain the type of each of the sample pages, a title, and a short description. In addition, the ViewModel defines a static property named `All` that is a collection of all the pages in the program:
+The [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples) program that contains all the source code in this series of articles uses a ViewModel for its home page. This ViewModel is a definition of a short class with three properties named `Type`, `Title`, and `Description` that contain the type of each of the sample pages, a title, and a short description. In addition, the ViewModel defines a static property named `All` that is a collection of all the pages in the program:
 
 ```csharp
 public class PageDataViewModel
@@ -706,7 +706,7 @@ XAML is a powerful tool for defining user interfaces in Xamarin.Forms applicatio
 
 ## Related Links
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Part 1. Getting Started with XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Part 2. Essential XAML Syntax](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Part 3. XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)

@@ -177,7 +177,7 @@ messages.
 ## Writing to the Debug Log
 
 Messages can be written to the **Debug Log** by using the methods of the 
-[Android.Util.Log](https://developer.xamarin.com/api/type/Android.Util.Log/) class.
+[Android.Util.Log](xref:Android.Util.Log) class.
 For example: 
 
 ```csharp

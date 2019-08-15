@@ -11,7 +11,7 @@ ms.date: 06/14/2019
 
 # Create a ControlTemplate
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simpletheme)
 
 _Control templates can be defined at the application level or page level. This article demonstrates how to create and consume control templates._
 
@@ -147,7 +147,7 @@ When adding a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) at the pag
 
 ## Create a ControlTemplate in C&#35;
 
-To define a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) at the application level, a `class` must be created that represents the `ControlTemplate`. The class should derive from the [layout](~/xamarin-forms/user-interface/layouts/index.md) being used for the template, as shown in the following code example:
+To define a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) at the application level, a `class` must be created that represents the `ControlTemplate`. The class should derive from the [layout](~/xamarin-forms/user-interface/layouts/index.yml) being used for the template, as shown in the following code example:
 
 ```csharp
 class TealTemplate : Grid
@@ -231,7 +231,7 @@ class MyCustomControl : ContentView
 {
     Label myLabel;
 
-    protected override OnApplyTemplate()
+    protected override void OnApplyTemplate()
     {  
         myLabel = GetTemplateChild("myLabel");
     }
@@ -244,7 +244,7 @@ In this example, the [`Label`](xref:Xamarin.Forms.Label) object named `myLabel` 
 ## Related links
 
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
-- [Simple Theme (sample)](https://developer.xamarin.com/samples/xamarin-forms/Templates/ControlTemplates/SimpleTheme/)
+- [Simple Theme (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/templates-controltemplates-simpletheme)
 - [ControlTemplate](xref:Xamarin.Forms.ControlTemplate)
 - [ContentPresenter](xref:Xamarin.Forms.ContentPresenter)
 - [ContentView](xref:Xamarin.Forms.ContentView)

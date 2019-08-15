@@ -140,15 +140,13 @@ NUnitLite is a modified version of the NUnit called [Touch.Unit](https://github.
 project. It is a lightweight testing framework for .NET, based on the
 ideas in [NUnit](http://nunit.com/) and providing a subset of its features.
 It uses minimal resources and will run on resource-restricted platforms such as
-those used in embedded and mobile development. You can
-[browse the NUnitLite API](https://developer.xamarin.com/api/namespace/NUnitLite/) available to you in
+those used in embedded and mobile development. The NUnitLite API is available to you in
 Xamarin.iOS. With the basic skeleton provided by the unit test template, your
-main entry point are the [Assert class](https://developer.xamarin.com/api/type/NUnit.Framework.Assert/) methods.
+main entry point are the [Assert class](xref:NUnit.Framework.Assert) methods.
 
 In addition to the assert class methods, the unit testing functionality is
 split on the following namespaces that are part of NUnitLite:
 
-- [NUnit.Framework](https://developer.xamarin.com/api/namespace/NUnit.Framework/)
-- [NUnit.Constraints](https://developer.xamarin.com/api/namespace/NUnit.Framework.Constraints/)
-- [NUnitLite](https://developer.xamarin.com/api/namespace/NUnitLite/)
-- [NUniteLite.Runner](https://developer.xamarin.com/api/namespace/NUnitLite.Runner/)
+- [NUnit.Framework](xref:NUnit.Framework)
+- [NUnit.Constraints](xref:NUnit.Framework.Constraints)
+- [NUniteLite.Runner](xref:NUnitLite.Runner)

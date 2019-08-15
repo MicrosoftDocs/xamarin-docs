@@ -73,7 +73,7 @@ Some examples of Remote Notifications include:
 There are two types of Remote Notifications available to a iOS app:
 
 - **User Facing** - These are displayed to the user on the device.
-- **Silent Updates** - These provide a mechanism to update the contents of an iOS app in the background. When a Silent Update is received, the app can reach out to the remove servers pull down the latest content.
+- **Silent Updates** - These provide a mechanism to update the contents of an iOS app in the background. When a Silent Update is received, the app can reach out to the remote servers to pull down the latest content.
 
 For more information, please see Apple's [Local and Remote Notification Programming Guide](https://developer.apple.com/documentation/usernotifications) documentation.
 
@@ -667,7 +667,7 @@ This article has covered all of the ways that Users Notification have been enhan
 
 ## Related Links
 
-- [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
+- [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [UserNotifications Framework Reference](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
 - [Local and Remote Notification Programming Guide](https://developer.apple.com/documentation/usernotifications)

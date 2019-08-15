@@ -231,7 +231,7 @@ When the Activity is created Android will invoke the `OnActivityCreated` method 
 
 The final step is to display `TitlesFragment` within `MainActivity`. The Activity does not dynamically load the fragment. Instead the fragment will be statically loaded by declaring it in the layout file of the activity using a `fragment` element. The fragment to load is identified by setting the `android:name` attribute to the fragment class (including the namespace of the type). For example, to use the `TitlesFragment`, then `android:name` would be set to `FragmentSample.TitlesFragment`.
 
-Edit the layout file **activity_mail.axml**, replacing the existing XML with the following:
+Edit the layout file **activity_main.axml**, replacing the existing XML with the following:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>

@@ -13,8 +13,8 @@ ms.date: 07/19/2018
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples)
 
-<p><img src="images/cover-sml.png" title="Creating Mobile Apps with Xamarin.Forms Book" align="left" />The book
-<i>Creating Mobile Apps with Xamarin.Forms</i> by Charles Petzold is a guide for learning how to write Xamarin.Forms applications. The only prerequisite is knowledge of the C# programming language. The book provides an extensive exploration into the Xamarin.Forms user interface and also covers animation, MVVM, triggers, behaviors, custom layouts, custom renderers, and much more.
+<img src="images/cover-sml.png" title="Creating Mobile Apps with Xamarin.Forms Book" align="left" />The book
+*Creating Mobile Apps with Xamarin.Forms* by Charles Petzold is a guide for learning how to write Xamarin.Forms applications. The only prerequisite is knowledge of the C# programming language. The book provides an extensive exploration into the Xamarin.Forms user interface and also covers animation, MVVM, triggers, behaviors, custom layouts, custom renderers, and much more.
 
 The book was published in the spring of 2016, and has not been updated since then. There is much in the book that remains valuable, but some of the [material is outdated](#ways-in-which-the-book-is-outdated), and some topics are no longer entirely correct or complete.
 
@@ -81,7 +81,7 @@ These summaries also indicate when material in the chapter might be [somewhat ou
 
 ## Ways in which the book is outdated
 
-Since the publication of <i>Creating Mobile Apps with Xamarin.Forms</i>, several new features have been added to Xamarin.Forms. These new features are described in individual articles in the [Xamarin.Forms](/xamarin/) documentation.
+Since the publication of *Creating Mobile Apps with Xamarin.Forms*, several new features have been added to Xamarin.Forms. These new features are described in individual articles in the [Xamarin.Forms](/xamarin/) documentation.
 
 Other changes have caused some of the content of the book to be outdated:
 
@@ -97,9 +97,9 @@ The .NET Standard 2.0 library also allows Xamarin.Forms applications to use [`Ht
 
 ### The role of XAML has been elevated
 
-<i>Creating Mobile Apps with Xamarin.Forms</i> begins by describing how to write Xamarin.Forms applications using C#. The Extensible Application Markup Language (XAML) isn't introduced until [Chapter 7. XAML vs. Code](summaries/chapter07.md).
+*Creating Mobile Apps with Xamarin.Forms* begins by describing how to write Xamarin.Forms applications using C#. The Extensible Application Markup Language (XAML) isn't introduced until [Chapter 7. XAML vs. Code](summaries/chapter07.md).
 
-XAML now has a much larger role in Xamarin.Forms. The Xamarin.Forms solution templates distributed with Visual Studio create XAML-based page files. A developer using Xamarin.Forms should become familiar with XAML as early as possible. The [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.md) section of the Xamarin.Forms documentation contains several articles about XAML to get you started.
+XAML now has a much larger role in Xamarin.Forms. The Xamarin.Forms solution templates distributed with Visual Studio create XAML-based page files. A developer using Xamarin.Forms should become familiar with XAML as early as possible. The [eXtensible Application Markup Language (XAML)](~/xamarin-forms/xaml/index.yml) section of the Xamarin.Forms documentation contains several articles about XAML to get you started.
 
 ### Supported platforms
 

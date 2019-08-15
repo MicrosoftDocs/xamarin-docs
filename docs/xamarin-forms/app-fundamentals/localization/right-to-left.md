@@ -12,7 +12,7 @@ ms.date: 05/07/2018
 
 # Right-to-left localization
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)
 
 _Right-to-left localization adds support for right-to-left flow direction to Xamarin.Forms applications._
 
@@ -149,4 +149,4 @@ Xamarin.Forms right-to-left localization currently has a number of limitations:
 
 ## Related links
 
-- [TodoLocalizedRTL Sample App](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalizedRTL/)
+- [TodoLocalizedRTL Sample App](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalizedrtl)

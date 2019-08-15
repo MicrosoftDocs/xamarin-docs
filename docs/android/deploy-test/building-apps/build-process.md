@@ -104,6 +104,41 @@ The following build targets are defined for Xamarin.Android projects:
     `Resource.designer.cs` file. This target is usually called by the
     IDE when new resources are added to the project.
 
+## Build Extension Points
+
+The Xamarin.Android build system exposes a few public extension points
+for users wanting to hook into our build process. To use one of these
+extension points you will need to add your custom target to the
+appropriate MSBuild property in a `PropertyGroup`. For example:
+
+```xml
+<PropertyGroup>
+   <AfterGenerateAndroidManifest>
+      $(AfterGenerateAndroidManifest);
+      YourTarget;
+   </AfterGenerateAndroidManifest>
+</PropertyGroup>
+```
+
+A word of caution about extending the build process: If not
+written correctly, build extensions can affect your build
+performance, especially if they run on every build. It is
+highly recommended that you read the MSBuild [documentation](https://docs.microsoft.com/visualstudio/msbuild/msbuild)
+before implementing such extensions.
+
+-   **AfterGenerateAndroidManifest** &ndash; Targets listed in this
+    property will run directly after the internal `_GenerateJavaStubs`
+    target. This is where the `AndroidManifest.xml` file is generated
+    in the `$(IntermediateOutputPath)`. So if you want to make any
+    modifications to the generated `AndroidManifest.xml` file, you can
+    do that using this extension point.
+
+    Added in Xamarin.Android 9.4.
+
+-   **BeforeGenerateAndroidManifest** &ndash; Targets listed in this
+    property will run directly before `_GenerateJavaStubs`.
+
+    Added in Xamarin.Android 9.4.
 
 ## Build Properties
 
@@ -180,6 +215,13 @@ used by the `Install` and `SignAndroidPackage` targets.
 The [Signing Properties](#Signing_Properties) are also relevant
 when packaging Release applications.
 
+- **AndroidApkDigestAlgorithm** &ndash; A string value which specifies
+    the digest algorithm to use with `jarsigner -digestalg`.
+
+    The default value is `SHA1` for APKs and `SHA-256` for App Bundles.
+
+    Added in Xamarin.Android 9.4.
+
 - **AndroidApkSignerAdditionalArguments** &ndash; A string property which allows
     the developer to provide additional arguments to the `apksigner` tool.
 
@@ -188,7 +230,7 @@ when packaging Release applications.
 - **AndroidApkSigningAlgorithm** &ndash; A string value which specifies
     the signing algorithm to use with `jarsigner -sigalg`.
 
-    The default value is `md5withRSA`.
+    The default value is `md5withRSA` for APKs and `SHA256withRSA` for App Bundles.
 
     Added in Xamarin.Android 8.2.
 
@@ -204,7 +246,7 @@ when packaging Release applications.
 
 - **AndroidApplicationJavaClass** &ndash; The full Java class name to
     use in place of `android.app.Application` when a class inherits
-    from [Android.App.Application](https://developer.xamarin.com/api/type/Android.App.Application/).
+    from [Android.App.Application](xref:Android.App.Application).
 
     This property is generally set by *other* properties, such as the
 		`$(AndroidEnableMultiDex)` MSBuild property.
@@ -237,6 +279,14 @@ when packaging Release applications.
     to `False` if using `AndroidDexTool=dx` and defaults to `True` if
     using `AndroidDexTool=d8`.
 
+- **AndroidEnableGooglePlayStoreChecks** &ndash; A bool property
+    which allows developers to disable the following Google Play
+    Store checks: XA1004, XA1005 and XA1006. This is useful for
+    developers who are not targeting the Google Play Store and do
+    not wish to run those checks.
+
+    Added in Xamarin.Android 9.4.
+
 - **AndroidEnableMultiDex** &ndash; A boolean property that
     determines whether or not multi-dex support will be used in the
     final `.apk`.
@@ -268,6 +318,18 @@ when packaging Release applications.
     By default this value will be set to `True`.
 
     Added in Xamarin.Android 9.2.
+
+- **AndroidEnableProfiledAot** &ndash; A boolean property that
+    determines whether or not the AOT profiles are used during
+    Ahead-of-Time compilation.
+
+    The profiles are listed in `AndroidAotProfile` item group. This
+    ItemGroup contains default profile(s). It can be overriden by
+    removing the existing one(s) and adding your own AOT profiles.
+
+    Support for this property was added in Xamarin.Android 9.4.
+
+    This property is `False` by default.
 
 - **AndroidEnableSGenConcurrent** &ndash; A boolean property that
     determines whether or not Mono's
@@ -370,14 +432,38 @@ when packaging Release applications.
     assembly-qualified type name of an `HttpMessageHandler` subclass, suitable
     for use with
     [`System.Type.GetType(string)`](https://docs.microsoft.com/dotnet/api/system.type.gettype?view=netcore-2.0#System_Type_GetType_System_String_).
+    The most common values for this property are:
 
-    The default value is `System.Net.Http.HttpClientHandler, System.Net.Http`.
+    - `Xamarin.Android.Net.AndroidClientHandler`: Use the Android Java APIs
+        to perform network requests. This allows accessing TLS 1.2 URLs when
+        the underlying Android version supports TLS 1.2. Only Android 5.0 and
+        later reliably provide TLS 1.2 support through Java.
 
-    This may be overridden to instead contain
-    `Xamarin.Android.Net.AndroidClientHandler`, which uses the Android
-    Java APIs to perform network requests. This allows accessing TLS 1.2 URLs
-    when the underlying Android version supports TLS 1.2. 
-    Only Android 5.0 and later reliably provide TLS 1.2 support through Java.
+        This corresponds to the **Android** option in the Visual Studio
+        property pages and the **AndroidClientHandler** option in the Visual
+        Studio for Mac property pages.
+
+        The new project wizard selects this option for new projects when the
+        **Minimum Android Version** is configured to **Android 5.0
+        (Lollipop)** or higher in Visual Studio or when **Target Platforms**
+        is set to **Latest and Greatest** in Visual Studio for Mac.
+
+    - Unset/the empty string: This is equivalent to
+        `System.Net.Http.HttpClientHandler, System.Net.Http`
+
+        This corresponds to the **Default** option in the Visual Studio
+        property pages.
+
+        The new project wizard selects this option for new projects when the
+        **Minimum Android Version** is configured to **Android 4.4.87** or
+        lower in Visual Studio or when **Target Platforms** is set to **Modern
+        Development** or **Maximum Compatibility** in Visual Studio for Mac.
+
+    - `System.Net.Http.HttpClientHandler, System.Net.Http`: Use the managed
+       `HttpMessageHandler`.
+
+       This corresponds to the **Managed** option in the Visual Studio
+       property pages.
 
     *Note*: If TLS 1.2 support is required on Android versions prior to 5.0,
     *or* if TLS 1.2 support is required with the `System.Net.WebClient` and
@@ -482,6 +568,23 @@ when packaging Release applications.
 
     Added in Xamarin.Android 8.3.
 
+- **AndroidPackageFormat** &ndash; An enum-style property with valid
+    values of `apk` or `aab`. This indicates if you want to package
+    the Android application as an [APK file][apk] or [Android App
+    Bundle][bundle]. App Bundles are a new format for `Release` builds
+    that are intended for submission on Google Play. This value
+    currently defaults to `apk`.
+
+    When `$(AndroidPackageFormat)` is set to `aab`, other MSBuild
+    properties are set, which are required for Android App Bundles:
+
+    - `$(AndroidUseAapt2)` is `True`.
+    - `$(AndroidUseApkSigner)` is `False`.
+    - `$(AndroidCreatePackagePerAbi)` is `False`.
+
+[apk]: https://en.wikipedia.org/wiki/Android_application_package
+[bundle]: https://developer.android.com/platform/technology/app-bundle
+
 - **AndroidR8JarPath** &ndash; The path to `r8.jar` for use with the
     r8 dex-compiler and shrinker. Defaults to a path in the
     Xamarin.Android installation. For further information see our
@@ -518,26 +621,39 @@ when packaging Release applications.
 - **AndroidTlsProvider** &ndash; A string value which specifies which
     TLS provider should be used in an application. Possible values are:
 
+    - Unset/the empty string: In Xamarin.Android 7.3 and higher, this is
+        equivalent to `btls`.
+
+        In Xamarin.Android 7.1, this is equivalent to `legacy`.
+
+        This corresponds to the **Default** setting in the Visual Studio
+        property pages.
+
     - `btls`: Use
         [Boring SSL](https://boringssl.googlesource.com/boringssl) for
         TLS communication with
         [HttpWebRequest](xref:System.Net.HttpWebRequest).
+
         This allows use of TLS 1.2 on all Android versions.
+
+        This corresponds to the **Native TLS 1.2+** setting in the
+        Visual Studio property pages.
 
     - `legacy`: Use the historical managed SSL implementation for
         network interaction. This *does not* support TLS 1.2.
 
-    - `default`: Allow *Mono* to choose the default TLS provider.
-        This is equivalent to `legacy`, even in Xamarin.Android 7.3. 
-        *Note*: This value is unlikely to appear in `.csproj` values,
-        as the IDE "Default" value results in *removal* of the
-        `$(AndroidTlsProvider)` property.
+        This corresponds to the **Managed TLS 1.0** setting in the
+        Visual Studio property pages.
 
-    - Unset/the empty string: In Xamarin.Android 7.1,
-        this is equivalent to `legacy`.  
-        In Xamarin.Android 7.3, this is equivalent to `btls`.
+    - `default`: This value is unlikely to be used in Xamarin.Android
+        projects. The recommended value to use instead is the empty string,
+        which corresponds to the **Default** setting in the Visual Studio
+        property pages.
 
-    The default value is the empty string.
+        The `default` value is not offered in the Visual Studio property
+        pages.
+
+        This is currently equivalent to `legacy`.
 
     Added in Xamarin.Android 7.1.
 

@@ -33,7 +33,7 @@ you use Xamarin.Android 7.0.
 For more information about Android 7.x APIs, see
 [Android 7.1 for Developers](https://developer.android.com/preview/api-overview.html).
 For a list of known Xamarin.Android 7.0 issues, please see the
-[release notes](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/).
+[release notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
 
 Android Nougat provides many new features of interest to Xamarin.Android
 developers. These features include:
@@ -245,7 +245,7 @@ if (!IsInMultiWindowMode) {
 }
 ```
 
-The [MultiWindowPlayground](https://developer.xamarin.com/samples/monodroid/android-n/MultiWindowPlayground/)
+The [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)
 sample app includes C# code that demonstrates how to take advantage of
 multiple window user interfaces with your app.
 
@@ -279,7 +279,7 @@ interface:
 
 To support this feature in your app, you must add *inline reply
 actions* to your app via a
-[RemoteInput](https://developer.xamarin.com/api/type/Android.App.RemoteInput/)
+[RemoteInput](xref:Android.App.RemoteInput)
 object so that users can reply via text directly from the notification UI.
 For example, the following code builds a `RemoteInput` for receiving text input,
 builds a pending intent for the reply action, and creates a remote
@@ -314,7 +314,7 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-The [Messaging Service](https://developer.xamarin.com/samples/monodroid/android-n/MessagingService/)
+The [Messaging Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice)
 sample app includes C# code that demonstrates how to extend
 notifications with a `RemoteInput` object. For more information about
 adding inline reply actions to your app for Android 7.0 or later, see
@@ -335,7 +335,7 @@ notification in detail:
 [![Screenshot example of bundled notifications](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
 
 To support bundled notifications, your app can use the
-[Builder.SetGroup](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetGroup/p/System.String/)
+[Builder.SetGroup](xref:Android.App.Notification.Builder.SetGroup*)
 method to bundle similar notifications. For more information about
 bundled notification groups in Android N, see the Android
 [Bundling Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle)
@@ -358,7 +358,7 @@ topic.
 Beginning with Android Nougat, users can enable a new *Data Saver*
 setting that blocks background data usage. This setting also signals
 your app to use less data in the foreground wherever possible. The
-[ConnectivityManager](https://developer.xamarin.com/api/type/Android.Net.ConnectivityManager/) has
+[ConnectivityManager](xref:Android.Net.ConnectivityManager) has
 been extended in Android Nougat so that your app can check whether the
 user has enabled Data Saver so that your app can make an effort to
 limit its data usage when Data Saver is enabled.
@@ -391,27 +391,27 @@ topic.
 Several Xamarin.Android samples are available to show you how to take
 advantage of Android Nougat features:
 
-- [MultiWindowPlayground](https://developer.xamarin.com/samples/monodroid/android-n/MultiWindowPlayground/)
+- [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)
     demonstrates the use of the multi-window API available in Android
     Nougat. You can switch the sample app into multi-windows mode to see how
     it affects the app's lifecycle and behavior.
 
-- [Messaging Service](https://developer.xamarin.com/samples/monodroid/android-n/MessagingService/)
+- [Messaging Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice)
     is a simple service that sends notifications using the `NotificationCompatManager`. It also
     extends the notification with a `RemoteInput` object to allow Android Nougat devices to reply via
     text directly from the notification without having to open an app.
 
-- [Active Notifications](https://developer.xamarin.com/samples/monodroid/android-n/ActiveNotifications/)
+- [Active Notifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications)
     demonstrates how to use the `NotificationManager` API to tell you
     how many notifications your application is currently displaying.
 
-- [Scoped Directory Access](https://developer.xamarin.com/samples/monodroid/android-n/ScopedDirectoryAccess/)
+- [Scoped Directory Access](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess)
     Demonstrates how to use the scoped directory access API to easily
     access specific directories. This serves as an alternative to
     having to define `READ_EXTERNAL_STORAGE` or `WRITE_EXTERNAL_STORAGE`
     permissions in your manifest.
 
-- [Direct Boot](https://developer.xamarin.com/samples/monodroid/android-n/DirectBoot/)
+- [Direct Boot](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot)
     Illustrates how to store data in a device-encrypted storage which is always available
     while the device is booted both before and after any user credentials(PIN/Pattern/Password)
     are entered.
@@ -429,4 +429,4 @@ help you get started in creating apps for Android Nougat.
 ## Related Links
 
 - [Android 7.1 For Developers](https://developer.android.com/about/versions/nougat/android-7.1.html)
-- [Xamarin Android 7.0 Release Notes](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/)
+- [Xamarin Android 7.0 Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md)

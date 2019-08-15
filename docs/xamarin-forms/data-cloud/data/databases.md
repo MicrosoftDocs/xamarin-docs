@@ -11,7 +11,7 @@ ms.date: 06/21/2018
 
 # Xamarin.Forms Local Databases
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
 _Xamarin.Forms supports database-driven applications using the SQLite database engine, which makes it possible to load and save objects in shared code. This article describes how Xamarin.Forms applications can read and write data to a local SQLite database using SQLite.Net._
 
@@ -19,7 +19,7 @@ _Xamarin.Forms supports database-driven applications using the SQLite database e
 
 Xamarin.Forms applications can use the [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) package to incorporate database operations into shared code by referencing the `SQLite` classes that ship in the NuGet. Database operations can be defined in the .NET Standard library project of the Xamarin.Forms solution.
 
-The accompanying [sample application](https://github.com/xamarin/xamarin-forms-samples/tree/master/Todo) is a simple Todo-list application. The following screenshots show how the sample appears on each platform:
+The accompanying [sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) is a simple Todo-list application. The following screenshots show how the sample appears on each platform:
 
 [![Xamarin.Forms database example screenshots](databases-images/todo-list-sml.png "TodoList First Page Screenshots")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots") [![Xamarin.Forms database example screenshots](databases-images/todo-list-sml.png "TodoList First Page Screenshots")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots")
 
@@ -117,6 +117,5 @@ This article focused on **accessing** a SQLite database using Xamarin.Forms. For
 
 ## Related Links
 
-- [Todo Sample](https://developer.xamarin.com/samples/xamarin-forms/Todo/)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
-
+- [Todo Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)

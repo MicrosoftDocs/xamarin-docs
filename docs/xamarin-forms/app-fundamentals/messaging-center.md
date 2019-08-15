@@ -1,113 +1,99 @@
 ---
 title: "Xamarin.Forms MessagingCenter"
-description: "This article explains how to use the Xamarin.Forms MessagingCenter to send and receive messages, to reduce coupling between classes such as view models."
+description: "The Xamarin.Forms MessagingCenter class implements the publish-subscribe pattern, allowing message-based communication between components that are inconvenient to link by object and type references."
 ms.prod: xamarin
 ms.assetid: EDFE7B19-C5FD-40D5-816C-FAE56532E885
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/01/2016
+ms.date: 07/30/2019
 ---
 
 # Xamarin.Forms MessagingCenter
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UsingMessagingCenter)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)
 
-_Xamarin.Forms includes a simple messaging service to send and receive messages._
+The publish-subscribe pattern is a messaging pattern in which publishers send messages without having knowledge of any receivers, known as subscribers. Similarly, subscribers listen for specific messages, without having knowledge of any publishers.
 
-<a name="Overview" />
+The Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class implements the publish-subscribe pattern, allowing message-based communication between components that are inconvenient to link by object and type references. This mechanism allows publishers and subscribers to communicate without having a reference to each other, helping to reduce dependencies between them.
 
-## Overview
+The [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class provides multicast publish-subscribe functionality. This means that there can be multiple publishers that publish a single message, and there can be multiple subscribers listening for the same message:
 
-Xamarin.Forms `MessagingCenter` enables view models and other components to communicate without having to know anything about each other besides a simple Message contract.
+![](messaging-center-images/messaging-center.png "Multicast publish-subscribe functionality")
 
-<a name="How_the_MessagingCenter_Works" />
+Publishers send messages using the [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method, while subscribers listen for messages using the [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method. In addition, subscribers can also unsubscribe from message subscriptions, if required, with the [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method.
 
-## How the MessagingCenter Works
+> [!IMPORTANT]
+> Internally, the [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class uses weak references. This means that it will not keep objects alive, and will allow them to be garbage collected. Therefore, it should only be necessary to unsubscribe from a message when a class no longer wishes to receive the message.
 
-There are two parts to `MessagingCenter`:
+## Publish a message
 
-- **Subscribe** - Listen for messages with a certain signature and perform some action when they are received. Multiple subscribers can be listening for the same message.
-- **Send** - Publish a message for listeners to act upon. If no listeners have subscribed then the message is ignored.
-
-The `MessagingCenter` is a static class with `Subscribe` and `Send` methods that are used throughout the solution.
-
-Messages have a string `message` parameter that is used as way to *address* messages. The `Subscribe` and `Send` methods use generic parameters to further control how messages are delivered - two messages with the same `message` text but different generic type arguments will not be delivered to the same subscriber.
-
-The API for `MessagingCenter` is simple:
-
-- `Subscribe<TSender> (object subscriber, string message, Action<TSender> callback, TSender source = null)`
-- `Subscribe<TSender, TArgs> (object subscriber, string message, Action<TSender, TArgs> callback, TSender source = null)`
-- `Send<TSender> (TSender sender, string message)`
-- `Send<TSender, TArgs> (TSender sender, string message, TArgs args)`
-- `Unsubscribe<TSender, TArgs> (object subscriber, string message)`
-- `Unsubscribe<TSender> (object subscriber, string message)`
-
-These methods are explained below.
-
-<a name="Using_the_MessagingCenter" />
-
-## Using the MessagingCenter
-
-Messages may be sent as a result of user-interaction (like a button click), a system event (like controls changing state) or some other incident (like an asynchronous download completing). Subscribers might be listening to change the appearance of the user interface, save data or trigger some other operation.
-
-For more information about using the `MessagingCenter` class, see [Communicating Between Loosely Coupled Components](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md).
-
-### Simple String Message
-
-The simplest message contains just a string in the `message` parameter. A `Subscribe` method that *listens* for a simple string message is shown below - notice the generic type specifying the sender is expected to be of type `MainPage`. Any classes in the solution can subscribe to the message using this syntax:
+[`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) messages are strings. Publishers notify subscribers of a message with one of the [`MessagingCenter.Send`](xref:Xamarin.Forms.MessagingCenter.Send*) overloads. The following code example publishes a `Hi` message:
 
 ```csharp
-MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) => {
-    // do something whenever the "Hi" message is sent
+MessagingCenter.Send<MainPage>(this, "Hi");
+```
+
+In this example the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies a generic argument that represents the sender. To receive the message, a subscriber must also specify the same generic argument, indicating that they are listening for a message from that sender. In addition, this example specifies two method arguments:
+
+- The first argument specifies the sender instance.
+- The second argument specifies the message.
+
+Payload data can also be sent with a message:
+
+```csharp
+MessagingCenter.Send<MainPage, string>(this, "Hi", "John");
+```
+
+In this example, the [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method specifies two generic arguments. The first is the type that's sending the message, and the second is the type of the payload data being sent. To receive the message, a subscriber must also specify the same generic arguments. This enables multiple messages that share a message identity but send different payload data types to be received by different subscribers. In addition, this example specifies a third method argument that represents the payload data to be sent to the subscriber. In this case the payload data is a `string`.
+
+The [`Send`](xref:Xamarin.Forms.MessagingCenter.Send*) method will publish the message, and any payload data, using a fire-and-forget approach. Therefore, the message is sent even if there are no subscribers registered to receive the message. In this situation, the sent message is ignored.
+
+## Subscribe to a message
+
+Subscribers can register to receive a message using one of the [`MessagingCenter.Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) overloads. The following code example shows an example of this:
+
+```csharp
+MessagingCenter.Subscribe<MainPage> (this, "Hi", (sender) =>
+{
+    // Do something whenever the "Hi" message is received
 });
 ```
 
-In the `MainPage` class the following code *sends* the message. The `this` parameter is an instance of `MainPage`.
+In this example, the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method subscribes the `this` object to `Hi` messages that are sent by the `MainPage` type, and executes a callback delegate in response to receiving the message. The callback delegate, specified as a lambda expression, could be code that updates the UI, saves some data, or triggers some other operation.
+
+> [!NOTE]
+> A subscriber might not need to handle every instance of a published message, and this can be controlled by the generic type arguments that are specified on the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method.
+
+The following example shows how to subscribe to a message that contains payload data:
 
 ```csharp
-MessagingCenter.Send<MainPage> (this, "Hi");
-```
-
-The string doesn't change - it indicates the *message type* and is used for determining which subscribers to notify. This sort of message is used to indicate that some event occurred, such as "upload completed", where no further information is required.
-
-### Passing an Argument
-
-To pass an argument with the message, specify the argument Type in the `Subscribe` generic arguments and in the Action signature.
-
-```csharp
-MessagingCenter.Subscribe<MainPage, string> (this, "Hi", (sender, arg) => {
-    // do something whenever the "Hi" message is sent
-    // using the 'arg' parameter which is a string
+MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
+{
+    await DisplayAlert("Message received", "arg=" + arg, "OK");
 });
 ```
 
-To send the message with argument, include the Type generic parameter and the value of the argument in the `Send` method call.
+In this example, the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method subscribes to `Hi` messages that are sent by the `MainPage` type, whose payload data is a `string`. A callback delegate is executed in response to receiving such a message, that displays the payload data in an alert.
+
+## Unsubscribe from a message
+
+Subscribers can unsubscribe from messages they no longer want to receive. This is achieved with one of the [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) overloads:
 
 ```csharp
-MessagingCenter.Send<MainPage, string> (this, "Hi", "John");
+MessagingCenter.Unsubscribe<MainPage>(this, "Hi");
 ```
 
-This simple example uses a `string` argument but any C# object can be passed.
+In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method unsubscribes the `this` object from the `Hi` message sent by the `MainPage` type.
 
-### Unsubscribe
-
-An object can unsubscribe from a message signature so that no future messages are delivered. The `Unsubscribe` method syntax should reflect the signature of the message (so may need to include the generic Type parameter for the message argument).
+Messages containing payload data should be unsubscribed from using the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) overload that specifies two generic arguments:
 
 ```csharp
-MessagingCenter.Unsubscribe<MainPage> (this, "Hi");
-MessagingCenter.Unsubscribe<MainPage, string> (this, "Hi");
+MessagingCenter.Unsubscribe<MainPage, string>(this, "Hi");
 ```
 
-<a name="Summary" />
+In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) method unsubscribes the `this` object from the `Hi` message sent by the `MainPage` type, whose payload data is a `string`.
 
-## Summary
+## Related links
 
-The MessagingCenter is a simple way to reduce coupling, especially between view models. It can be used to send and receive simple messages or pass an argument between classes. Classes should unsubscribe from messages they no longer wish to receive.
-
-
-## Related Links
-
-- [MessagingCenterSample](https://developer.xamarin.com/samples/xamarin-forms/UsingMessagingCenter)
-- [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
-- [Communicating Between Loosely Coupled Components](~/xamarin-forms/enterprise-application-patterns/communicating-between-loosely-coupled-components.md)
+- [MessagingCenterSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingmessagingcenter)

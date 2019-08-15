@@ -298,7 +298,7 @@ channels for each conversation group that is created by a user.
 [Notification Channels](~/android/app-fundamentals/notifications/local-notifications.md#notif-chan)
 explains how to create a notification channel and use it for posting
 local notifications. For a real-world code example, see the
-[NotificationChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels)
+[NotificationChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels)
 sample; this sample app manages two channels and sets additional
 notification options.
 
@@ -396,7 +396,7 @@ is not cached, it calls the font provider, retrieves the font
 asynchronously, and then passes the results back to your app by
 invoking your `OnTypeFaceRetrieved` method.
 
-The [Downloadable Fonts](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts)
+The [Downloadable Fonts](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts)
 sample demonstrates how to use the Downloadable Fonts feature
 introduced in Android Oreo. 
 
@@ -415,7 +415,7 @@ can lead to input errors). Before your app can work with the Autofill
 Framework, an autofill service must be enabled in the system settings
 (users can enable or disable autofill).
 
-The [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework/)
+The [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework)
 sample demonstrates the use of the Autofill Framework. It includes
 implementations of client Activities with views that should be
 autofilled, and a Service that can provide autofill data to client
@@ -456,7 +456,7 @@ were added to `Activity` in Android Oreo:
 - [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29)
     &ndash; Updates the Activity's PIP configuration settings (for example, a change in aspect ratio).
 
-The [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture)
+The [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture)
 sample demonstrates basic usage of the Picture-in-Picture (PiP) mode
 for handheld devices introduced in Oreo. The sample plays a video which
 continues uninterrupted while switching back and forth between display
@@ -524,7 +524,7 @@ the following changes, where applicable:
 - For apps targeting Android Oreo, `PendingIntent.GetService()` does
   not work due to new limits placed on services started in the
   background. If you are targeting Android Oreo, you should use
-  [PendingIntent.GetBroadcast](https://developer.xamarin.com/api/member/Android.App.PendingIntent.GetBroadcast/p/Android.Content.Context/System.Int32/Android.Content.Intent/Android.App.PendingIntentFlags/) instead.  
+  [PendingIntent.GetBroadcast](xref:Android.App.PendingIntent.GetBroadcast*) instead.  
 
 
 ## Sample Code
@@ -532,34 +532,34 @@ the following changes, where applicable:
 Several Xamarin.Android samples are available to show you how to take
 advantage of Android Oreo features:
 
-- [NotificationsChannels](https://developer.xamarin.com/samples/monodroid/android-o/NotificationChannels)
+- [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels)
     demonstrates how to use the new Notification Channels system introduced in Android 
     Oreo. This sample manages two notifications channels: one with default importance
     and the other with high importance.
 
-- [PictureInPicture](https://developer.xamarin.com/samples/monodroid/android-o/PictureInPicture)
+- [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture)
     demonstrates basic usage of the Picture-in-Picture (PiP) mode for
     handheld devices introduced in Oreo. The sample plays a video which
     continues uninterrupted while switching back and forth between
     display modes or other activities.
 
-- [AutofillFramework](https://developer.xamarin.com/samples/monodroid/android-o/AutoFillFramework)
+- [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework)
     demonstrates the use of the Autofill Framework. It includes implementations of client Activities with views that 
     should be autofilled, and a Service that can provide autofill data to client Activities.
 
-- [Downloadable Fonts](https://developer.xamarin.com/samples/monodroid/android-o/DownloadableFonts)
+- [Downloadable Fonts](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts)
     provides an example of how to use the Downloadable Fonts feature
     described earlier.
 
-- [EmojiCompat](https://developer.xamarin.com/samples/monodroid/android-o/EmojiCompat)
+- [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat)
     demonstrates usage of EmojiCompat support library. You can use this library to prevent your app from 
     showing missing emoji characters as "tofu" characters.
 
-- [Location Updates Pending Intent](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdPendIntent)
+- [Location Updates Pending Intent](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent)
     illustrates usage of the Location API to get updates about a
     device's location using a `PendingIntent`.
 
-- [Location Updates Foreground Service](https://developer.xamarin.com/samples/monodroid/android-o/AndroidPlayLocation/LocUpdFgService)
+- [Location Updates Foreground Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice)
     demonstrates how to use the Location API to get updates about a
     device's location using a bound and started foreground service.
 

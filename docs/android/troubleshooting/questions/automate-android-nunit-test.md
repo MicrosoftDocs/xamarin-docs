@@ -20,7 +20,7 @@ When you create a **Unit Test App (Android)** project in Visual Studio
 (or **Android Unit Test** project in Visual Studio for Mac), this
 project will not automatically run your tests by default.
 To run NUnit tests on a target device, you can create an
-[Android.App.Instrumentation](https://developer.xamarin.com/api/type/Android.App.Instrumentation/)
+[Android.App.Instrumentation](xref:Android.App.Instrumentation)
 subclass that is started by using the following command: 
 
 ```shell
@@ -38,16 +38,16 @@ The following steps explain this process:
     using Android.Content;
     using Android.Runtime;
     using Xamarin.Android.NUnitLite;
-     
+
     namespace App.Tests {
-     
+
         [Instrumentation(Name="app.tests.TestInstrumentation")]
         public class TestInstrumentation : TestSuiteInstrumentation {
-     
+
             public TestInstrumentation (IntPtr handle, JniHandleOwnership transfer) : base (handle, transfer)
             {
             }
-     
+
             protected override void AddTests ()
             {
                 AddTest (Assembly.GetExecutingAssembly ());
@@ -55,14 +55,12 @@ The following steps explain this process:
         }
     }
     ```
-    In this file, 
-    [Xamarin.Android.NUnitLite.TestSuiteInstrumentation](https://developer.xamarin.com/api/type/Xamarin.Android.NUnitLite.TestSuiteInstrumentation/) 
+
+    In this file, `Xamarin.Android.NUnitLite.TestSuiteInstrumentation`
     (from **Xamarin.Android.NUnitLite.dll**) is subclassed to create `TestInstrumentation`.
 
-2. Implement the [TestInstrumentation](https://developer.xamarin.com/api/constructor/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.TestSuiteInstrumentation/p/System.IntPtr/Android.Runtime.JniHandleOwnership/)
-    constructor and the 
-    [AddTests](https://developer.xamarin.com/api/member/Xamarin.Android.NUnitLite.TestSuiteInstrumentation.AddTests%28%29) 
-    method. The `AddTests` method controls which tests are actually executed.
+2. Implement the `TestInstrumentation` constructor and the
+    `AddTests` method. The `AddTests` method controls which tests are actually executed.
 
 3. Modify the `.csproj` file to add **TestInstrumentation.cs**. For example:
 
@@ -107,7 +105,7 @@ topic.
 
 > [!NOTE]
 > With the
-[Xamarin.Android 5.0](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming)
+[Xamarin.Android 5.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming)
 release, the default package names for Android Callable Wrappers will
 be based on the MD5SUM of the assembly-qualified name of the type being
 exported. This allows the same fully-qualified name to be provided from

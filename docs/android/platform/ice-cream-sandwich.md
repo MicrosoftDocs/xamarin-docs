@@ -76,9 +76,9 @@ user profile data.
 
 ## Related Links
 
-- [Ice Cream Sandwich Samples](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ICS_Samples/)
-- [TextureViewDemo (sample)](https://developer.xamarin.com/samples/monodroid/TextureViewDemo/)
-- [CalendarDemo (sample)](https://developer.xamarin.com/samples/monodroid/CalendarDemo/)
+- [Ice Cream Sandwich Samples](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-ics-samples)
+- [TextureViewDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
+- [CalendarDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
 - [Tab Layout Tutorial](~/android/user-interface/layouts/tab-layout/index.md)
 - [Ice Cream Sandwich](https://developer.android.com/about/versions/android-4.0-highlights.html)
 - [Android 4.0 Platform](https://developer.android.com/about/versions/android-4.0.html)

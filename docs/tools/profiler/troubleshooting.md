@@ -86,4 +86,4 @@ RunOnUiThread (() => {
 
 - [Walkthrough - Using the Xamarin Profiler](~/tools/profiler/index.md)
 - [Memory and Performance Best Practices](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [Release Notes](https://developer.xamarin.com/releases/profiler/preview/)
+- [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)

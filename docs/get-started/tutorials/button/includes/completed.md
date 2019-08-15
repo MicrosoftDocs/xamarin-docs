@@ -14,6 +14,6 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 
 ## Related links
 
-- [ButtonTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/ButtonTutorial)
+- [ButtonTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-buttontutorial/)
 - [Xamarin.Forms Button (guide)](~/xamarin-forms/user-interface/button.md)
 - [Button API](xref:Xamarin.Forms.Button)

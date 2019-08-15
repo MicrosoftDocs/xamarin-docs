@@ -194,4 +194,4 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
 
 ## Related Links
 
-- [WorkingWithTables (sample)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables)
+- [WorkingWithTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)

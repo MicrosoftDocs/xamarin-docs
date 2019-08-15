@@ -1,0 +1,69 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin.Forms Platform Features
+metadata:
+  title: Xamarin.Forms Platform Features
+  description: Learn how to take advantage of platform-specific features in Xamarin.Forms, by using a variety of techniques.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 2C6CE42C-E380-4BB9-90CC-D0F4E60C4C03
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 07/23/2019
+abstract:
+  description: Learn how to take advantage of platform-specific features in Xamarin.Forms, by using a variety of techniques.
+sections:
+- title: Platform-Specifics
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: android/index.md
+      html: "Learn how to use the Android platform-specifics provided by Xamarin.Forms, and how to update existing Xamarin.Forms Android apps to use Material Design."
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_android.svg
+        href: android/index.md
+      title: Android
+    - href: ios/index.md
+      html: "Learn how to use the iOS platform-specifics provided by Xamarin.Forms, and how to perform additional iOS styling."
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_ios.svg
+        href: ios/index.md
+      title: iOS
+    - href: windows/index.md
+      html: "Learn how to use the UWP platform-specifics provided by Xamarin.Forms, and how to add a UWP project to an existing Xamarin.Forms solution."
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_Windows.svg
+        href: windows/index.md
+      title: Windows
+    - href: platform-specifics/index.md
+      html: "Learn about platform-specifics and how vendors can create platform-specifics with Effects."
+      image:
+        src: ~/media/icons/i_app-build.svg
+        href: platform-specifics/index.md
+      title: Create Platform-Specifics
+- title: Platform Features
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: device.md
+      html: "Learn how to use the Device class to provide fine-grained control over functionality and layouts on a per-platform basis."
+      image:
+        src: ~/media/icons/i_desktop-phone.svg
+        href: device.md
+      title: Device Class
+    - href: native-forms.md
+      html: "Learn how to Xamarin.Forms ContentPage-derived pages can be consumed by native Xamarin.iOS, Xamarin.Android, and UWP projects."
+      image:
+        src: ~/media/icons/i_xaml-forms.svg
+        href: native-forms.md
+      title: Native Forms
+    - href: native-views/index.md
+      html: "Learn how native views from Android, iOS, and the Universal Windows Platform can be directly referenced from Xamarin.Forms applications."
+      image:
+        src: https://docs.microsoft.com/media/common/i_form.svg
+        href: native-views/index.md
+      title: Native Views

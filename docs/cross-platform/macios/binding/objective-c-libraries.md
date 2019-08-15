@@ -1858,4 +1858,4 @@ automatically.
 
 ## Related links
 
-- [Binding Sample](https://developer.xamarin.com/samples/monotouch/BindingSample/)
+- [Binding Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)

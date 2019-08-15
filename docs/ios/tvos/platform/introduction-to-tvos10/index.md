@@ -83,5 +83,5 @@ No APIs or frameworks were deprecated by tvOS 10. See Apple's [tvOS 10 API Diffe
 
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [What's new in tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

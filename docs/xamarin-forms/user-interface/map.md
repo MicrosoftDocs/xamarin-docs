@@ -11,7 +11,7 @@ ms.date: 06/13/2019
 
 # Xamarin.Forms Map
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 _Xamarin.Forms uses the native map APIs on each platform._
 
@@ -20,7 +20,7 @@ fast, familiar maps experience for users, but means that some configuration
 steps are needed to adhere to each platforms API requirements.
 Once configured, the `Map` control works just like any other Xamarin.Forms element in common code.
 
-The map control has been used in the [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/) sample, which is shown below.
+The map control has been used in the [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps) sample, which is shown below.
 
  [![Maps in the MobileCRM sample](map-images/maps-zoom-sml.png "Map Control Example")](map-images/maps-zoom.png#lightbox "Map Control Example")
 
@@ -381,7 +381,8 @@ For more information about data template selectors, see [Creating a Xamarin.Form
 
 ## Related links
 
-- [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
+- [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Map Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Maps API](xref:Xamarin.Forms.Maps)

@@ -23,12 +23,11 @@ The previous parts of this walkthrough showed how to create empty MonoGame proje
 - Adding movement to the character
 - Matching movement and animation
 
-
 ## Unzipping our Game Content
 
 Before we begin writing code, we will want to unzip our game *content*. Game developers often use the term *content* to refer to non-code files which are usually created by visual artists, game designers, or audio designers. Common types of content include files used to display visuals, play sound, or control artificial intelligence (AI) behavior. From a game development team’s perspective content is usually created by non-programmers.
 
-The content used here can be found [on github](https://github.com/xamarin/mobile-samples/blob/master/WalkingGameMG/Resources/charactersheet.png?raw=true). We’ll need these files downloaded to a location that we will access later in this walkthrough.
+The content used here can be found [on GitHub](https://github.com/xamarin/mobile-samples/blob/master/WalkingGameMG/Resources/charactersheet.png?raw=true). We’ll need these files downloaded to a location that we will access later in this walkthrough.
 
 ## MonoGame Class Overview
 
@@ -51,11 +50,11 @@ We need to create a `Texture2D` instance to use when rendering our sprite. All g
 
 To add our game’s content, right-click on the **Content** folder and select **Add > Add Files...** Navigate to the location where the content.zip file was extracted and select the **charactersheet.png** file. If asked about how to add the file to folder, we should select the **Copy** option:
 
-![](part2-images/image1.png "If asked about how to add the file to folder, select the Copy option")
+![If asked about how to add the file to folder, select the Copy option](part2-images/image1.png)
 
 The Content folder now contains the charactersheet.png file:
 
-![](part2-images/image2.png "The Content folder now contains the charactersheet.png file")
+![The Content folder now contains the charactersheet.png file](part2-images/image2.png)
 
 Next, we’ll add code to load the charactersheet.png file and create a `Texture2D`. To do this open the `Game1.cs` file and add the following field to the Game1.cs class:
 
@@ -111,7 +110,7 @@ protected override void Draw(GameTime gameTime)
 
 Running the game now shows a single sprite displaying the texture created from charactersheet.png:
 
-![](part2-images/image3.png "Running the game now shows a single sprite displaying the texture created from charactersheet.png")
+![Running the game now shows a single sprite displaying the texture created from charactersheet.png](part2-images/image3.png)
 
 ## Creating the CharacterEntity
 
@@ -126,7 +125,6 @@ A common pattern for organizing game code is to create a new class for each game
 - Can be created and destroyed dynamically, such as a power-up appearing and being collected by the player
 
 Entity organization systems can be complex, and many game engines offer classes to help manage entities. We’ll be implementing a very simple entity system, so it’s worth noting that full games usually require more organization on the developer’s part.
-
 
 ### Defining the CharacterEntity
 
@@ -209,7 +207,6 @@ The `Draw` method as implemented above takes a `SpriteBatch` argument, but by co
 
 The reason for this is because the most efficient rendering is possible when the same `SpriteBatch` instance is used for all `Draw` calls, and when all `Draw` calls are being made between a single set of `Begin` and `End` calls. Of course, our game will only include a single entity instance, but more complicated games will benefit from pattern that allows multiple entities to use the same `SpriteBatch` instance.
 
-
 ## Adding CharacterEntity to the Game
 
 Now that we’ve added our `CharacterEntity` with code for rendering itself, we can replace the code in `Game1.cs` to use an instance of this new entity. To do this we’ll replace the `Texture2D` field with a `CharacterEntity` field in `Game1`:
@@ -272,7 +269,7 @@ protected override void Draw(GameTime gameTime)
 
 If we run the game, we will now see the character. Since X and Y default to 0, then the character is positioned against the top left corner of the screen:
 
-![](part2-images/image4.png "Since X and Y default to 0, then the character is positioned against the top left corner of the screen")
+![Since X and Y default to 0, then the character is positioned against the top left corner of the screen](part2-images/image4.png)
 
 ## Creating the Animation Class
 
@@ -280,11 +277,9 @@ Currently our `CharacterEntity` displays the full **charactersheet.png** file. T
 
 We will create the `Animation` class to control the logic and state of the CharacterEntity animation. The Animation class will be a general class which could be used for any entity, not just `CharacterEntity` animations. Ultimate the `Animation` class will provide a `Rectangle` which the `CharacterEntity` will use when drawing itself. We'll also create an `AnimationFrame` class which will be used to define the animation.
 
-
 ### Defining AnimationFrame
 
 `AnimationFrame` will not contain any logic related to animation. We’ll be using it only to store data. To add the `AnimationFrame` class, right-click or Control-click on the **WalkingGame** shared project and select **Add > New File....** Enter the name **AnimationFrame** and click the **New** button. We’ll modify the `AnimationFrame.cs` file so that it contains the following code:
-
 
 ```csharp
 using System;
@@ -498,7 +493,7 @@ protected override void Update(GameTime gameTime)
 
 Now the `CharacterEntity` will play its `walkDown` animation:
 
-![](part2-images/image5.gif "Now the CharacterEntity will play its walkDown animation")
+![Now the CharacterEntity will play its walkDown animation](part2-images/image5.gif)
 
 ## Adding Movement to the Character
 
@@ -507,7 +502,6 @@ Next, we’ll be adding movement to our character using touch controls. When the
 ### Defining GetDesiredVelocityFromInput
 
 We’ll be using MonoGame’s `TouchPanel` class, which provides information about the current state of the touch screen. Let’s add a method which will check the `TouchPanel` and return our character’s desired velocity:
-
 
 ```csharp
 Vector2 GetDesiredVelocityFromInput()
@@ -546,7 +540,6 @@ What follows is a bit of math which will keep the character moving at the same s
 
 The `if (desiredVelocity.X != 0 || desiredVelocity.Y != 0)` statement is checking if the velocity is non-zero – in other words, it’s checking to make sure that the user is not touching the same spot as the character’s current position. If not, then we need to set the character’s speed to be constant regardless of how far away the touch is. We accomplish this by normalizing the velocity vector which, results in it being a length of 1. A velocity vector of 1 means that the character will move at 1 pixel per second. We’ll speed this up by multiplying the value by the desired speed of 200.
 
-
 ### Applying Velocity to Position
 
 The velocity returned from `GetDesiredVelocityFromInput` needs to be applied to the character’s `X` and `Y` values to have any effect at runtime. We’ll modify the `Update` method as follows:
@@ -572,7 +565,7 @@ What we’ve implemented here is called *time-based* movement (as opposed to *fr
 
 If we run our game now, we’ll see that the character is moving towards the touch location:
 
-![](part2-images/image6.gif "The character is moving towards the touch location")
+![The character is moving towards the touch location](part2-images/image6.gif)
 
 ## Matching Movement and Animation
 
@@ -655,7 +648,6 @@ We should note that the above code was added to the `CharacterEntity` constructo
 
 Next, we’ll adjust the logic to use the animations according to the direction that the character is moving, or according to the last animation if the character has just stopped. To do this, we’ll modify the `Update` method:
 
-
 ```csharp
 public void Update(GameTime gameTime)
 {
@@ -730,7 +722,7 @@ If the character is not moving, then we want to set the character’s `currentAn
 
 The result of this code is that the character will properly animate when walking, and then face the last direction it was walking when it stops:
 
-![](part2-images/image7.gif "The result of this code is that the character will properly animate when walking, and then face the last direction it was walking when it stops")
+![The result of this code is that the character will properly animate when walking, and then face the last direction it was walking when it stops](part2-images/image7.gif)
 
 ## Summary
 
@@ -739,4 +731,4 @@ This walkthrough showed how to work with MonoGame to create a cross-platform gam
 ## Related Links
 
 - [CharacterSheet Image Resource (sample)](https://github.com/xamarin/mobile-samples/blob/master/WalkingGameMG/Resources/charactersheet.png?raw=true)
-- [Walking Game Complete (sample)](https://developer.xamarin.com/samples/mobile/WalkingGameMG/)
+- [Walking Game Complete (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)

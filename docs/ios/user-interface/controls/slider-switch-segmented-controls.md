@@ -100,5 +100,5 @@ It should be noted that the Segmented Control Style has been deprecated in iOS7,
 
 ## Related Links
 
-- [Controls (sample)](https://developer.xamarin.com/samples/monotouch/Controls/)
+- [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)
 - [Alert Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller)

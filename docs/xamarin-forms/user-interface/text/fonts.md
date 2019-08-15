@@ -11,7 +11,7 @@ ms.date: 06/28/2019
 
 # Fonts in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
 This article describes how Xamarin.Forms lets you specify font attributes (including weight and size) on controls that display text. Font information can be [specified in code](#Setting_Font_in_Code) or [specified in XAML](#Setting_Font_in_Xaml). It's' also possible to use a [custom font](#Using_a_Custom_Font), and [display font icons](#display-font-icons).
 
@@ -96,7 +96,7 @@ There is a built-in converter for the `FontSize` property that allows all font s
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) can also be used in XAML to render a different font on each platform. The example below uses a custom font face on iOS (<span style="font-family:MarkerFelt-Thin">MarkerFelt-Thin</span>) and specifies only size/attributes on the other platforms:
+[`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) can also be used in XAML to render a different font on each platform. The example below uses a custom font face on iOS (MarkerFelt-Thin) and specifies only size/attributes on the other platforms:
 
 ```xaml
 <Label Text="Hello Forms with XAML">
@@ -180,7 +180,7 @@ new Label
 
 ### Windows
 
-Xamarin.Forms for Windows platforms can reference a custom font that has been added to the project by following a specific naming standard. First add the font file to the **/Assets/Fonts/** folder in the application project and set the <span class="UIItem">Build Action:Content</span>. Then use the full path and font filename, followed by a hash (#) and the <span class="UIItem">Font Name</span>, as the code snippet below demonstrates:
+Xamarin.Forms for Windows platforms can reference a custom font that has been added to the project by following a specific naming standard. First add the font file to the **/Assets/Fonts/** folder in the application project and set the **Build Action:Content**. Then use the full path and font filename, followed by a hash (#) and the **Font Name**, as the code snippet below demonstrates:
 
 ```csharp
 new Label
@@ -249,13 +249,13 @@ image.Source = new FontImageSource
 };
 ```
 
-The following screenshots, from the [Bindable Layouts](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/) sample, show several font icons being displayed by a bindable layout:
+The following screenshots, from the [Bindable Layouts](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts) sample, show several font icons being displayed by a bindable layout:
 
 ![Screenshot of font icons being displayed, on iOS and Android](fonts-images/font-image-source.png "Font icons being displayed in an Image view")
 
 ## Related links
 
-- [FontsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFonts/)
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text/)
-- [Bindable Layouts (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindableLayouts/)
+- [FontsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
+- [Bindable Layouts (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablelayouts)
 - [Bindable Layouts](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

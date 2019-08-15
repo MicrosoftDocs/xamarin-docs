@@ -8,10 +8,7 @@ ms.author: crdun
 ms.date: 08/21/2017
 ---
 
-# ListView Parts and Functionality
-
-
-## Overview
+# Xamarin.Android ListView Parts and Functionality
 
 A `ListView` consists of the following parts:
 

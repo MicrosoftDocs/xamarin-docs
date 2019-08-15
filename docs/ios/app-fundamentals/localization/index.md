@@ -186,7 +186,7 @@ There can be a number of different **.strings** files in each language directory
 - **Localizable.strings** – the main list of localized text.
 - **InfoPlist.strings** – certain specific keys are allowed in this file to
   translate things such as the application name.
-- **<storyboard-name>.strings** – optional file that contains translations
+- **\<storyboard-name>.strings** – optional file that contains translations
   for user interface elements in a storyboard.
 
 The **Build Action** for these files should be **Bundle Resource**.

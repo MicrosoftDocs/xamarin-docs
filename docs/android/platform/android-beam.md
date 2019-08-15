@@ -100,7 +100,7 @@ NdefMessage msg = (NdefMessage) rawMsgs [0];
 ```
 
 For a complete code example that uses Android Beam, shown running in the
-screenshot below, see the [Android Beam demo](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/) in the Sample Gallery.
+screenshot below, see the [Android Beam demo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo) in the Sample Gallery.
 
 [![Example screenshots from the Android Beam demo](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
@@ -108,6 +108,6 @@ screenshot below, see the [Android Beam demo](https://developer.xamarin.com/samp
 
 ## Related Links
 
-- [Android Beam Demo (sample)](https://developer.xamarin.com/samples/monodroid/AndroidBeamDemo/)
+- [Android Beam Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
 - [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

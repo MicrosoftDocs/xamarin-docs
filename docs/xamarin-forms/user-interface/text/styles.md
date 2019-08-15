@@ -11,7 +11,7 @@ ms.date: 05/22/2017
 
 # Xamarin.Forms Text Styles
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Styling text in Xamarin.Forms_
 
@@ -145,5 +145,5 @@ To ensure accessibility, make sure that built-in styles are used as the basis fo
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 12](https://developer.xamarin.com/r/xamarin-forms/book/chapter12.pdf)
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Style](xref:Xamarin.Forms.Style)

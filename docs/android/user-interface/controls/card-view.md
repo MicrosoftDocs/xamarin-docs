@@ -9,10 +9,9 @@ ms.author: crdun
 ms.date: 03/01/2018
 ---
 
-# CardView
+# Xamarin.Android CardView
 
 _The Cardview widget is a UI component that presents text and image content in views that resemble cards. This guide explains how to use and customize CardView in Xamarin.Android applications while maintaining backward compatibility with earlier versions of Android._
-
 
 ## Overview
 
@@ -211,7 +210,7 @@ in the following screenshot:
 [![CardView with an image and caption below the image](card-view-images/03-photo-cardview-sml.png)](card-view-images/03-photo-cardview.png#lightbox)
 
 This screenshot is taken from the
-[RecyclerViewer](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+[RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 sample app, which uses a `RecyclerView` widget to present a scrolling
 list of `CardView` images for viewing photos. For more information
 about `RecyclerView`, see the
@@ -373,6 +372,6 @@ Lollipop. For more information about `CardView`, see the
 
 ## Related Links
 
-- [RecyclerView (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/RecyclerViewer)
+- [RecyclerView (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer)
 - [Introduction to Lollipop](~/android/platform/lollipop.md)
 - [CardView class reference](https://developer.android.com/reference/android/support/v7/widget/CardView.html)

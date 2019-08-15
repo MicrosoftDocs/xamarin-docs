@@ -356,4 +356,4 @@ Various `NSDateFormatterStyle` values display dates as follows:
 
 ## Related links
 
-- [PickerControl (sample)](https://developer.xamarin.com/samples/monotouch/PickerControl/)
+- [PickerControl (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/pickercontrol)

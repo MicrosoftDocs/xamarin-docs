@@ -11,7 +11,7 @@ ms.date: 05/23/2019
 
 # Xamarin.Forms Shell Tabs
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 When the navigation pattern for an application includes a flyout, the next level of navigation in the application is the bottom tab bar. In addition, when the flyout is closed the bottom tab bar can be considered to be the top level of navigation.
 
@@ -285,6 +285,6 @@ In addition, tabs can also be styled using Cascading Style Sheets (CSS). For mor
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Xamarin.Forms Shell Navigation](navigation.md)
 - [Xamarin.Forms CSS Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

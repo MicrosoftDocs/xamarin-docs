@@ -17,7 +17,7 @@ and which members are actually used. The linker then behaves like a *garbage col
 are referenced until the entire closure of referenced assemblies, types, and
 members is found. Then everything outside of this closure is *discarded*.
 
-For example, the [Hello, Android](https://developer.xamarin.com/samples/monodroid/HelloM4A/) sample:
+For example, the [Hello, Android](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellom4a) sample:
 
 |Configuration|1.2.0 Size|4.0.1 Size|
 |---|---|---|
@@ -113,7 +113,7 @@ preserve. For example:
     properties of your types.
 
 In these cases, you can use the
-[Android.Runtime.Preserve](https://developer.xamarin.com/api/type/Android.Runtime.PreserveAttribute/)
+[Android.Runtime.Preserve](xref:Android.Runtime.PreserveAttribute)
 attribute. Every member that is not statically linked by the
 application is subject to be removed, so this attribute can be used to
 mark members that are not statically referenced but are still needed by

@@ -73,7 +73,7 @@ By default the watch app is not configured for localization. You
 
 1. Create **Base.lproj** directory and move the **Interface.storyboard** into it.
 
-2. Create **<language>.lproj** directories for each language you wish to support.
+2. Create **\<language>.lproj** directories for each language you wish to support.
 
 3. The **.lproj** directories should contain an **Interface.strings** text file
   (the filename should match the storboard's name). You can optionally

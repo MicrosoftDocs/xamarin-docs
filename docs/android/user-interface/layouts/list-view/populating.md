@@ -1,5 +1,5 @@
 ---
-title: "Populating a ListView With Data"
+title: "Populating a Xamarin.Android ListView With Data"
 ms.prod: xamarin
 ms.assetid: AC4F95C8-EC3F-D960-7D44-8D55D0E4F1B6
 ms.technology: xamarin-android
@@ -8,10 +8,7 @@ ms.author: crdun
 ms.date: 08/21/2017
 ---
 
-# Populating a ListView With Data
-
-
-## Overview
+# Populating a Xamarin.Android ListView With Data
 
 To add rows to a `ListView` you need to add it to your layout and
 implement an `IListAdapter` with methods that the `ListView` calls to
@@ -24,7 +21,6 @@ to display via an adapter.
 The built-in adapters take a view resource ID as a parameter that gets
 used for each row. You can use built-in resources such as those in
 `Android.Resource.Layout` so you don't need to write your own.
-
 
 ## Using ListActivity and ArrayAdapter&lt;String&gt;
 
@@ -283,6 +279,6 @@ mapping to 26, it may map to 25 or 24, or whatever section index
 
 ## Related Links
 
-- [BasicTableAndroid (sample)](https://developer.xamarin.com/samples/monodroid/BasicTableAndroid/)
-- [BasicTableAdapter (sample)](https://developer.xamarin.com/samples/monodroid/BasicTableAdapter/)
-- [FastScroll (sample)](https://developer.xamarin.com/samples/monodroid/FastScroll/)
+- [BasicTableAndroid (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableandroid)
+- [BasicTableAdapter (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableadapter)
+- [FastScroll (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/fastscroll)

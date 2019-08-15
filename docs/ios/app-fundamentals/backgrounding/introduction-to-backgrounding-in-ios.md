@@ -72,7 +72,7 @@ Using the App Switcher, users can scroll through snapshots of all backgrounded a
 
 iOS 7 increases user control over the Application Lifecycle by allowing users to opt out of backgrounding for applications [registered for background processing](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/registering-applications-to-run-in-background.md). *This does not prevent applications from running background tasks*.
 
-Users can change this setting by navigating to <span class="uiitem">Settings > General > Background App Refresh</span> and editing the backgrounding privileges for a selected application. If Background App Refresh is set to off, the application will be suspended immediately upon entering the background, and prevented from doing any background processing:
+Users can change this setting by navigating to **Settings > General > Background App Refresh** and editing the backgrounding privileges for a selected application. If Background App Refresh is set to off, the application will be suspended immediately upon entering the background, and prevented from doing any background processing:
 
  [![](introduction-to-backgrounding-in-ios-images/settings-.png "Background App Refresh Settings")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 

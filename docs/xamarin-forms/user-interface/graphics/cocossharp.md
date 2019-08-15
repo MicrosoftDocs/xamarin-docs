@@ -11,7 +11,7 @@ ms.date: 05/03/2016
 
 # Using CocosSharp in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+[![Download Sample](~/media/shared/download.png) Download the sample](hhttps://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)
 
 _CocosSharp can be used to add precise shape, image, and text rendering to an application for advanced visualization_
 
@@ -60,10 +60,10 @@ All of the code will be written in the .NET Standard library project; however, l
 The CocosSharp Nuget package contains all of the objects needed to create CocosSharp objects.
 The CocosSharp.Forms nuget package includes the `CocosSharpView` class, which is used to host CocosSharp in Xamarin.Forms.
 Add the **CocosSharp.Forms** NuGet and **CocosSharp** will be automatically added as well.
-To do this, right-click on the <span class="UIItem">Packages</span> folder in the .NET Standard library project
-and select <span class="UIItem">Add Packages...</span>. Enter the search term
-<span class="UIItem">CocosSharp.Forms</span>, select <span class="UIItem">CocosSharp for Xamarin.Forms</span>,
-then click <span class="UIItem">Add Package</span>.
+To do this, right-click on the **Packages** folder in the .NET Standard library project
+and select **Add Packages...**. Enter the search term
+**CocosSharp.Forms**, select **CocosSharp for Xamarin.Forms**,
+then click **Add Package**.
 
 ![](cocossharp-images/image1.png "Add Packages Dialog")
 
@@ -355,4 +355,4 @@ The CocosSharp game engine offers a lot of functionality and depth, so this guid
 
 ## Related Links
 
-- [CocosSharpForms (sample)](https://developer.xamarin.com/samples/xamarin-forms/CocosSharpForms/)
+- [CocosSharpForms (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/CocosSharpForms)

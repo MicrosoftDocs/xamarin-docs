@@ -11,7 +11,7 @@ ms.date: 06/12/2019
 
 # Xamarin.Forms Device Class
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
 
 The [`Device`](xref:Xamarin.Forms.Device) class contains a number of properties and methods to help developers customize layout and functionality on a per-platform basis.
 
@@ -203,6 +203,6 @@ Device.BeginInvokeOnMainThread (() =>
 
 ## Related links
 
-- [Device Sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithDevice/)
-- [Styles Sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithStyles/)
+- [Device Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithdevice)
+- [Styles Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithstyles)
 - [Device](xref:Xamarin.Forms.Device)

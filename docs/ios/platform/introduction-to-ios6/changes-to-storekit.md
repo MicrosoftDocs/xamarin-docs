@@ -668,7 +668,7 @@ functionality.
 
 ## Related Links
 
-- [StoreKit (sample)](https://developer.xamarin.com/samples/monotouch/StoreKit/)
+- [StoreKit (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit)
 - [In-App Purchasing](~/ios/platform/in-app-purchasing/index.md)
 - [StoreKit Framework Reference](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [SKStoreProductViewController Class Reference](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)

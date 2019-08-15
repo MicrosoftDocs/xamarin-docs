@@ -114,7 +114,7 @@ For apps that target Android 5.1(API level 22) or lower, there is nothing more t
 
 ### Runtime Permission Checks in Android 6.0
 
-The `ContextCompat.CheckSelfPermission`  method (available with the Android Support Library) is used to check if a specific permission has been granted. This method will return a [`Android.Content.PM.Permission`](https://developer.xamarin.com/api/type/Android.Content.PM.Permission/) enum which has one of two values:
+The `ContextCompat.CheckSelfPermission`  method (available with the Android Support Library) is used to check if a specific permission has been granted. This method will return a [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enum which has one of two values:
 
 * **`Permission.Granted`** &ndash; The specified permission has been granted.
 * **`Permission.Denied`** &ndash; The specified permission has not been granted.

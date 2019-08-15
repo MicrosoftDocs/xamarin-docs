@@ -97,7 +97,7 @@ The Unified API removes deprecated methods and there are a few instances where t
 |`CGContext.SetShadowWithColor`|`CGContext.SetShadow`|
 |`UIView.StringSize`|`UIKit.UIStringDrawing.StringSize`|
 
-For a full list of changes when switching from the Classic to the Unified API, please see our [Classic (monotouch.dll) vs Unified (Xamarin.iOS.dll) API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/) documentation.
+For a full list of changes when switching from the Classic to the Unified API, please see our [Classic (monotouch.dll) vs Unified (Xamarin.iOS.dll) API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md) documentation.
 
 ## Updating to Unified
 
@@ -107,7 +107,7 @@ Several old/broken/deprecated API in **classic** are not
 	or automated) upgrade since you'll have the `[Obsolete]`
 	attribute message (part of the warning) to guide you to the right API.
 
-Note that we are publishing a [*diff*](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+Note that we are publishing a [*diff*](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
 	of the classic vs unified
 	API changes that can be used either before or after your project
 	updates. Still fixing the obsoletes calls in Classic will often
@@ -272,7 +272,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (() => ShowDropDow
 
 Previously that would be a compiler error because an `Action` can't be assigned to `NSAction`, but since `UITapGestureRecognizer` now takes an `Action` instead of an `NSAction` it is valid in the Unified APIs.
 
-### Custom delegates replaced with Action<T>
+### Custom delegates replaced with Action\<T>
 
 In **unified** some simple (e.g. one parameter) .net delegates were replaced with `Action<T>`. E.g.
 
@@ -280,7 +280,7 @@ In **unified** some simple (e.g. one parameter) .net delegates were replaced wit
 
 can now be used as an `Action<NSNotification>`. This promote code reuse and reduce code duplication inside both Xamarin.iOS and your own applications.
 
-### Task<bool> replaced with Task<Boolean,NSError>>
+### Task\<bool> replaced with Task<Boolean,NSError>>
 
 In **classic** there were some async APIs returning `Task<bool>`. However some of them where are to use when an `NSError` was part of the signature, i.e. the `bool` was already `true` and you had to catch an exception to get the `NSError`.
 
@@ -377,5 +377,5 @@ For Mac, we are checking samples in both
 - [Updating Xamarin.Forms Apps](updating-xamarin-forms-apps.md)
 - [Updating Bindings](update-binding.md)
 - [Updating Tips](updating-tips.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
 - [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md)

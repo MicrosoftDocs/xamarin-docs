@@ -19,7 +19,7 @@ This guide uses the Xamarin.Forms .NET Standard library template as an example, 
 
 2. Unzip the `.zip` to a temporary location.
 
-3. Change all of the occurrences of the old version of the Forms package to the new version you'd like to use.
+3. Change all of the occurrences of the old version of the Xamarin.Forms package to the new version you'd like to use.
     * `FormsTemplate\FormsTemplate.vstemplate`
     * `FormsTemplate.Android\FormsTemplate.Android.vstemplate`
     * `FormsTemplate.iOS\FormsTemplate.iOS.vstemplate`
@@ -27,7 +27,8 @@ This guide uses the Xamarin.Forms .NET Standard library template as an example, 
     Example: `<package id="Xamarin.Forms" version="1.5.1.6471" />` -> `<package id="Xamarin.Forms" version="2.1.0.6529" />`
 
 4. Change the "name" element of the main [multi-project template file](https://msdn.microsoft.com/library/ms185308.aspx) (`Xamarin.Forms.PCL.vstemplate`) to make it unique. For example:
-    > <Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>
+
+    > `<Name>Blank App (Xamarin.Forms Portable) - 2.1.0.6529</Name>`
 
 5. Re-zip the whole template folder. Make sure to match the original file structure of the `.zip` file. The `Xamarin.Forms.PCL.vstemplate` file should be at the top of the `.zip` file, not within any folders.
 

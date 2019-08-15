@@ -82,13 +82,13 @@ Below this list are the night modes **Not Night** and **Night**,
 followed by the layout directions **Left to Right** and **Right to
 Left** (for information about **Left to Right** and **Right to Left**
 options, see
-[LayoutDirection](https://developer.xamarin.com/api/type/Android.Util.LayoutDirection/)).
+[LayoutDirection](xref:Android.Util.LayoutDirection)).
 The last items in the **Resource Qualifier Options** dialog are the
 **Round screens** (for use with Android Wear) or **Not Round screens**.
 For information about round and non-round screens, see
 [Layouts](https://developer.android.com/training/wearables/ui/layouts.html).
 For more information about Android UI modes, see
-[UiModeManager](https://developer.xamarin.com/api/type/Android.App.UiModeManager/).
+[UiModeManager](xref:Android.App.UiModeManager).
 
 ## Action Bar settings
 
@@ -221,9 +221,9 @@ Left**. The last pair of options allows you to select either **Round
 screens** or **Rectangular screens** (useful for Android Wear devices).
 
 For more information about Android UI modes, see
-[UiModeManager](https://developer.xamarin.com/api/type/Android.App.UiModeManager/).
+[UiModeManager](xref:Android.App.UiModeManager).
 For information about **Left to Right** and **Right to Left** options,
-see [LayoutDirection](https://developer.xamarin.com/api/type/Android.Util.LayoutDirection/).
+see [LayoutDirection](xref:Android.Util.LayoutDirection).
 
 
 ## Action Bar settings

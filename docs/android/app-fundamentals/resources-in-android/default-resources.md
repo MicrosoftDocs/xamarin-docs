@@ -58,8 +58,8 @@ A complete list of resource types is provided below:
 - **menu** &ndash; XML files that describe application menus such as
    *Options Menus*, *Context Menus*, and *submenus*. For an example of
    menus, see the
-   [Popup Menu Demo](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/) or the
-   [Standard Controls](https://developer.xamarin.com/samples/mobile/StandardControls/) sample.
+   [Popup Menu Demo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) or the
+   [Standard Controls](https://docs.microsoft.com/samples/xamarin/mobile-samples/standardcontrols/) sample.
 
 - **raw** &ndash; Arbitrary files that are saved in their raw, binary
    form. These files are compiled into an Android application in a
@@ -123,8 +123,8 @@ A complete list of resource types is provided below:
 - **menu** &ndash; XML files that describe application menus such as
    *Options Menus*, *Context Menus*, and *submenus*. For an example of
    menus, see the
-   [Popup Menu Demo](https://developer.xamarin.com/samples/monodroid/PopupMenuDemo/) or the
-   [Standard Controls](https://developer.xamarin.com/samples/mobile/StandardControls/) sample.
+   [Popup Menu Demo](https://docs.microsoft.com/samples/xamarin/monodroid-samples/popupmenudemo) or the
+   [Standard Controls](https://docs.microsoft.com/samples/xamarin/mobile-samples/standardcontrols/) sample.
 
 - **raw** &ndash; Arbitrary files that are saved in their raw, binary
    form. These files are compiled into an Android application in a

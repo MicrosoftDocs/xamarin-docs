@@ -225,7 +225,7 @@ is being destroyed:
     is no longer in use. It is still associated with the Activity, but
     the Fragment is no longer functional. This method should release
     any resources that are in use by the Fragment, such as a
-    [**SurfaceView**](https://developer.xamarin.com/api/type/Android.Views.SurfaceView/)
+    [**SurfaceView**](xref:Android.Views.SurfaceView)
     that might be used for a camera. This method may be skipped if
     **SetRetainInstance(true)** is called. This
     alternative will be described in more detail below.

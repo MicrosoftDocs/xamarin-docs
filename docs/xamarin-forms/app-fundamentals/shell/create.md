@@ -11,7 +11,7 @@ ms.date: 05/24/2019
 
 # Create a Xamarin.Forms Shell Application
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 The process for creating a Xamarin.Forms Shell application is as follows:
 
@@ -134,4 +134,4 @@ Pressing the hamburger icon, or swiping from the left, displays the flyout:
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

@@ -10,9 +10,6 @@ ms.date: 02/05/2018
 
 # Working with the Android Manifest
 
-
-## Overview
-
 **AndroidManifest.xml** is a powerful file in the Android platform that 
 allows you to describe the functionality and requirements of your 
 application to Android. However, working with it is not easy. 
@@ -35,8 +32,8 @@ code to generate XML elements, and *inserts* those elements into
 ## The Basics
 
 At compile time, assemblies are scanned for non-`abstract` classes that derive from 
-[Activity](https://developer.xamarin.com/api/type/Android.App.Activity/) 
-and have the [`[Activity]`](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) 
+[Activity](xref:Android.App.Activity) 
+and have the [`[Activity]`](xref:Android.App.ActivityAttribute) 
 attribute declared on them. It then uses these classes and attributes 
 to build the manifest. For example, consider the following code: 
 
@@ -51,7 +48,7 @@ namespace Demo
 
 This results in nothing being generated in **AndroidManifest.xml**. If 
 you want an `<activity/>` element to be generated, you need to use the 
-[`[Activity]`](https://developer.xamarin.com/api/type/Android.App.Activity/Attribute) 
+[`[Activity]`](xref:Android.App.Activity) 
 custom attribute: 
 
 ```csharp
@@ -85,7 +82,7 @@ Xamarin.Android 5.1, the default type name of the activity was created
 from the lowercased namespace and the class name.) 
 
 If you wish to override this default and explicitly specify the name of your activity, use the 
-[`Name`](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Name/) property: 
+[`Name`](xref:Android.App.ActivityAttribute.Name) property: 
 
 ```csharp
 [Activity (Name="awesome.demo.activity")]
@@ -105,7 +102,7 @@ backward-compatibility reasons, as such renaming can slow down type
 lookup at runtime. If you have legacy code that expects the default 
 type name of the activity to be based on the lowercased namespace and 
 the class name, see 
-[Android Callable Wrapper Naming](https://developer.xamarin.com/releases/android/xamarin.android_5/xamarin.android_5.1/#Android_Callable_Wrapper_Naming) 
+[Android Callable Wrapper Naming](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) 
 for tips on maintaining compatibility. 
 
 
@@ -115,7 +112,7 @@ By default, Android gives your application a title bar when it is run.
 The value used for this is 
 [`/manifest/application/activity/@android:label`](https://developer.android.com/guide/topics/manifest/activity-element.html#label). 
 In most cases, this value will differ from your class name. To specify your app's label on the title bar, 
-use the [`Label`](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Label/) property.
+use the [`Label`](xref:Android.App.ActivityAttribute.Label) property.
 For example: 
 
 ```csharp
@@ -139,7 +136,7 @@ By default, your activity will not show up in Android's application
 launcher screen. This is because there will likely be many activities 
 in your application, and you don't want an icon for every one. To 
 specify which one should be launchable from the application launcher, 
-use the [`MainLauncher`](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.MainLauncher/) 
+use the [`MainLauncher`](xref:Android.App.ActivityAttribute.MainLauncher) 
 property. For example: 
 
 ```csharp
@@ -168,7 +165,7 @@ This example produces the following xml fragment:
 By default, your activity will be given the default launcher icon 
 provided by the system. To use a custom icon, first add your **.png** to 
 **Resources/drawable**, set its Build Action to **AndroidResource**, then 
-use the [`Icon`](https://developer.xamarin.com/api/property/Android.App.ActivityAttribute.Icon/) 
+use the [`Icon`](xref:Android.App.ActivityAttribute.Icon) 
 property to specify the icon to use. For example: 
 
 ```csharp
@@ -234,19 +231,19 @@ in Visual Studio).
 
 ### Intent Actions and Features
 
-The Android manifest provides a way for you to describe the 
-capabilities of your activity. This is done via 
-[Intents](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) 
-and the 
-[`[IntentFilter]`](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) 
-custom attribute. You can specify which actions are appropriate for 
-your activity with the 
-[`IntentFilter`](https://developer.xamarin.com/api/constructor/Android.App.IntentFilterAttribute.IntentFilterAttribute/p/System.String[]/) 
-constructor, and which categories are appropriate with the 
-[`Categories`](https://developer.xamarin.com/api/property/Android.App.IntentFilterAttribute.Categories/) 
-property. At least one activity must be provided (which is why 
-activities are provided in the constructor). `[IntentFilter]` can be 
-provided multiple times, and each use results in a separate 
+The Android manifest provides a way for you to describe the
+capabilities of your activity. This is done via
+[Intents](https://developer.android.com/guide/topics/manifest/intent-filter-element.html)
+and the
+[`[IntentFilter]`](xref:Android.App.IntentFilterAttribute)
+custom attribute. You can specify which actions are appropriate for
+your activity with the
+[`IntentFilter`](xref:Android.App.IntentFilterAttribute#ctor*)
+constructor, and which categories are appropriate with the
+[`Categories`](xref:Android.App.IntentFilterAttribute.Categories)
+property. At least one activity must be provided (which is why
+activities are provided in the constructor). `[IntentFilter]` can be
+provided multiple times, and each use results in a separate
 `<intent-filter/>` element within the `<activity/>`. For example:
 
 ```csharp
@@ -281,7 +278,7 @@ This example produces the following xml fragment:
 The Android manifest also provides a way for you to declare properties 
 for your entire application. This is done via the `<application>` 
 element and its counterpart, the 
-[Application](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) 
+[Application](xref:Android.App.ApplicationAttribute) 
 custom attribute. Note that these are application-wide (assembly-wide) 
 settings rather than per-Activity settings. Typically, you declare 
 `<application>` properties for your entire application and then 
@@ -325,26 +322,26 @@ custom attributes.
 There are many application-wide attributes that you can configure in 
 the `<application>` element; for more information about these settings, 
 see the 
-[Public Properties](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/#Public_Properties)
+[Public Properties](xref:Android.App.ApplicationAttribute)
 section of 
-[ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/). 
+[ApplicationAttribute](xref:Android.App.ApplicationAttribute). 
 
 
 
 ## List of Custom Attributes
 
-- [Android.App.ActivityAttribute](https://developer.xamarin.com/api/type/Android.App.ActivityAttribute/) : Generates a  [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML fragment 
-- [Android.App.ApplicationAttribute](https://developer.xamarin.com/api/type/Android.App.ApplicationAttribute/) : Generates a  [/manifest/application](https://developer.android.com/guide/topics/manifest/application-element.html) XML fragment 
-- [Android.App.InstrumentationAttribute](https://developer.xamarin.com/api/type/Android.App.InstrumentationAttribute/) : Generates a  [/manifest/instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML fragment 
-- [Android.App.IntentFilterAttribute](https://developer.xamarin.com/api/type/Android.App.IntentFilterAttribute/) : Generates a  [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML fragment 
-- [Android.App.MetaDataAttribute](https://developer.xamarin.com/api/type/Android.App.MetaDataAttribute/) : Generates a  [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML fragment 
-- [Android.App.PermissionAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionAttribute/) : Generates a  [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html) XML fragment 
-- [Android.App.PermissionGroupAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionGroupAttribute/) : Generates a  [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML fragment 
-- [Android.App.PermissionTreeAttribute](https://developer.xamarin.com/api/type/Android.App.PermissionTreeAttribute/) : Generates a  [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML fragment 
-- [Android.App.ServiceAttribute](https://developer.xamarin.com/api/type/Android.App.ServiceAttribute/) : Generates a  [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML fragment 
-- [Android.App.UsesLibraryAttribute](https://developer.xamarin.com/api/type/Android.App.UsesLibraryAttribute/) : Generates a  [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML fragment 
-- [Android.App.UsesPermissionAttribute](https://developer.xamarin.com/api/type/Android.App.UsesPermissionAttribute/) : Generates a  [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML fragment 
-- [Android.Content.BroadcastReceiverAttribute](https://developer.xamarin.com/api/type/Android.Content.BroadcastReceiverAttribute/) : Generates a  [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML fragment 
-- [Android.Content.ContentProviderAttribute](https://developer.xamarin.com/api/type/Android.Content.ContentProviderAttribute/) : Generates a  [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML fragment 
-- [Android.Content.GrantUriPermissionAttribute](https://developer.xamarin.com/api/type/Android.Content.GrantUriPermissionAttribute/) : Generates a  [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML fragment
+- [Android.App.ActivityAttribute](xref:Android.App.ActivityAttribute) : Generates a  [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML fragment 
+- [Android.App.ApplicationAttribute](xref:Android.App.ApplicationAttribute) : Generates a  [/manifest/application](https://developer.android.com/guide/topics/manifest/application-element.html) XML fragment 
+- [Android.App.InstrumentationAttribute](xref:Android.App.InstrumentationAttribute) : Generates a  [/manifest/instrumentation](https://developer.android.com/guide/topics/manifest/instrumentation-element.html) XML fragment 
+- [Android.App.IntentFilterAttribute](xref:Android.App.IntentFilterAttribute) : Generates a  [//intent-filter](https://developer.android.com/guide/topics/manifest/intent-filter-element.html) XML fragment 
+- [Android.App.MetaDataAttribute](xref:Android.App.MetaDataAttribute) : Generates a  [//meta-data](https://developer.android.com/guide/topics/manifest/meta-data-element.html) XML fragment 
+- [Android.App.PermissionAttribute](xref:Android.App.PermissionAttribute) : Generates a  [//permission](https://developer.android.com/guide/topics/manifest/permission-element.html) XML fragment 
+- [Android.App.PermissionGroupAttribute](xref:Android.App.PermissionGroupAttribute) : Generates a  [//permission-group](https://developer.android.com/guide/topics/manifest/permission-group-element.html) XML fragment 
+- [Android.App.PermissionTreeAttribute](xref:Android.App.PermissionTreeAttribute) : Generates a  [//permission-tree](https://developer.android.com/guide/topics/manifest/permission-tree-element.html) XML fragment 
+- [Android.App.ServiceAttribute](xref:Android.App.ServiceAttribute) : Generates a  [/manifest/application/service](https://developer.android.com/guide/topics/manifest/service-element.html) XML fragment 
+- [Android.App.UsesLibraryAttribute](xref:Android.App.UsesLibraryAttribute) : Generates a  [/manifest/application/uses-library](https://developer.android.com/guide/topics/manifest/uses-library-element.html) XML fragment 
+- [Android.App.UsesPermissionAttribute](xref:Android.App.UsesPermissionAttribute) : Generates a  [/manifest/uses-permission](https://developer.android.com/guide/topics/manifest/uses-permission-element.html) XML fragment 
+- [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : Generates a  [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML fragment 
+- [Android.Content.ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : Generates a  [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML fragment 
+- [Android.Content.GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : Generates a  [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML fragment
 

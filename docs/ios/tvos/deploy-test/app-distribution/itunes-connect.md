@@ -78,7 +78,7 @@ This article gave overview of the tvOS specific setting required in iTunes Conne
 
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

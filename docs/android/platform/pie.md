@@ -393,7 +393,7 @@ following list is a brief summary of these changes:
    services.
 
 - If your app has more than one process, it cannot share a single
-   [WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) data 
+   [WebView](xref:Android.Webkit.WebView) data
    directory across processes.
 
 - Directly accessing another app's data directory by path is no longer allowed.

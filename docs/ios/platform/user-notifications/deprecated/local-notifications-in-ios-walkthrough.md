@@ -128,5 +128,5 @@ This walkthrough showed how to use the various API's for creating and publishing
 
 ## Related Links
 
-- [Local Notifications (sample)](https://developer.xamarin.com/samples/monotouch/LocalNotifications)
+- [Local Notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
 - [Local and Push Notifications Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)

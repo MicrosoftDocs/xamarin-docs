@@ -84,10 +84,10 @@ The steps below guide you through removing the Storyboard from an application:
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -113,10 +113,10 @@ public class AppDelegate : UIApplicationDelegate
     public override bool FinishedLaunching(UIApplication app, NSDictionary options)
     {
         // create a new window instance based on the screen size
-        window = new UIWindow(UIScreen.MainScreen.Bounds);
+        Window = new UIWindow(UIScreen.MainScreen.Bounds);
 
         // make the window visible
-        window.MakeKeyAndVisible();
+        Window.MakeKeyAndVisible();
 
         return true;
     }
@@ -127,7 +127,7 @@ If you were to run this application now, you would likely get an exception throw
 
 ## Adding a controller
 
-Your app can contain many View Controllers, but it needs to have one Root View Controller to control all the View Controllers.  Add a controller to the window by creating a `UIViewController` instance and setting it to the `window.RootViewController` property:
+Your app can contain many View Controllers, but it needs to have one Root View Controller to control all the View Controllers.  Add a controller to the window by creating a `UIViewController` instance and setting it to the `Window.RootViewController` property:
 
 ```csharp
 public class AppDelegate : UIApplicationDelegate
@@ -628,4 +628,4 @@ This article discussed how to develop iOS applications programmatically in Visua
 
 ## Related Links
 
-- [SimpleLogin (sample)](https://developer.xamarin.com/samples/monotouch/SimpleLogin)
+- [SimpleLogin (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplelogin)
