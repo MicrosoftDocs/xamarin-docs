@@ -195,7 +195,7 @@ This task requires merged resource dictionaries.
 
 Merged resource dictionaries combine one or more [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) objects into another `ResourceDictionary`.
 
-### Merging local resource dictionaries
+### Merge local resource dictionaries
 
 A local [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) can be merged into another `ResourceDictionary` by setting the [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) property to the filename of the XAML file with the resources:
 
@@ -215,9 +215,9 @@ This syntax does not instantiate the `MyResourceDictionary` class. Instead, it r
 > [!IMPORTANT]
 > The [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) property can only be set from XAML.
 
-### Merging resource dictionaries from other assemblies
+### Merge resource dictionaries from other assemblies
 
-A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) can also be merged into another `ResourceDictionary` by adding one or more resource dictionaries into the [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) property of the application, page, or control level `ResourceDictionary`. This technique allows local resource dictionaries, and resource dictionaries residing in other assemblies, to be merged.
+A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) can also be merged into another `ResourceDictionary` by adding it into the [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) property of the application, page, or control level `ResourceDictionary`. This technique allows both local resource dictionaries, and resource dictionaries residing in other assemblies, to be merged.
 
 > [!IMPORTANT]
 > The [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) class also defines a [`MergedWith`](xref:Xamarin.Forms.ResourceDictionary.MergedWith) property. However, this property has been deprecated and should no longer be used.
@@ -238,7 +238,7 @@ The following code example shows `MyResourceDictionary` being added to the [`Mer
 </ContentPage>
 ```
 
-This example shows only an instance of `MyResourceDictionary`, which resides in the same assembly, being added to the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). In addition, you can also add resource dictionaries from other assemblies, other `ResourceDictionary` objects within the [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) property-element tags, and other resources outside of those tags:
+This example shows an instance of `MyResourceDictionary`, which resides in the same assembly, being added to the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). In addition, you can also add resource dictionaries from other assemblies, other `ResourceDictionary` objects within the [`MergedDictionaries`](xref:Xamarin.Forms.ResourceDictionary.MergedDictionaries) property-element tags, and other resources outside of those tags:
 
 ```xaml
 <ContentPage ...
