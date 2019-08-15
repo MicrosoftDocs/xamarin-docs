@@ -84,7 +84,7 @@ An application requires a default theme, so that controls have values for the re
 </Application>
 ```
 
-For more information about merging resource dictionaries, see [Merging Dictionaries in Xamarin.Forms 3.0](~/xamarin-forms/xaml/resource-dictionaries.md#merging-dictionaries-in-xamarinforms-30).
+For more information about merging resource dictionaries, see [Merged resource dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md#merged-resource-dictionaries).
 
 ## Consume theme resources
 
