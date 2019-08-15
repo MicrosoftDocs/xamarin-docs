@@ -41,11 +41,13 @@ For images and other static resources, add them to the subfolder called **\<mypa
 
 #### Example structure
 
-    docs
-      /android
-          mypage.md
-          /mypage-images
-              some-image.png
+```
+docs
+    /android
+        mypage.md
+        /mypage-images
+            some-image.png
+```
 
 Be sure to follow the proper Markdown syntax. See the [style guide](../contributing-guidelines/template.md) for more information.
 

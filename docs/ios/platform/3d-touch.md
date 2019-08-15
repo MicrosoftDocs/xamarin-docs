@@ -285,11 +285,11 @@ Here we are defining two static Quick Action items with the following keys:
   - `UIApplicationShortcutIconTypeTime`
   - `UIApplicationShortcutIconTypeUpdate`
 
-		![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
+  ![](3d-touch-images/uiapplicationshortcuticontype.png "UIApplicationShortcutIconType imagery")
 
-* `UIApplicationShortcutItemSubtitle` - Defines the subtitle for the item.
-* `UIApplicationShortcutItemTitle` - Defines the title for the item.
-* `UIApplicationShortcutItemType` - Is a string value that we will use to identify the item in our app. See the following section for more information.
+- `UIApplicationShortcutItemSubtitle` - Defines the subtitle for the item.
+- `UIApplicationShortcutItemTitle` - Defines the title for the item.
+- `UIApplicationShortcutItemType` - Is a string value that we will use to identify the item in our app. See the following section for more information.
 
 > [!IMPORTANT]
 > Quick Action shortcut items that are set in the `Info.plist` file cannot be accessed with the `Application.ShortcutItems` property. They are only passed in to the `HandleShortcutItem` event handler.

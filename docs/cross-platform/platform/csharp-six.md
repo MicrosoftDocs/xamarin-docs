@@ -187,13 +187,15 @@ class Program
 ```
 results in:
 
-    The value is       1.00.
-    The value is       2.00.
-    The value is       3.00.
-    The value is       4.00.
-    The value is      12.00.
-    The value is 123,456.00.
-    Minimum is 1.00.
+```
+The value is       1.00.
+The value is       2.00.
+The value is       3.00.
+The value is       4.00.
+The value is      12.00.
+The value is 123,456.00.
+Minimum is 1.00.
+```
 
 String interpolation is syntactic sugar for `String.Format`: it cannot be used with `@""` string literals and is not compatible with `const`, even if no placeholders are used:
 

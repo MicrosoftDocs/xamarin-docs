@@ -23,7 +23,9 @@ It is possible to compile your 32-bit floating point code to use
 least Xamarin.iOS 8.10 and set in your iOS build options's panel on
 the "mtouch extra arguments" entry line the following value:
 
-     --aot-options=-O=float32
+```
+--aot-options=-O=float32
+```
 
 This will inform the static compilers (either Mono's built-in static
 compiler, or the LLVM-powered one) to perform floating point
