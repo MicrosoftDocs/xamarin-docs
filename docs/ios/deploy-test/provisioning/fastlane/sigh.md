@@ -53,7 +53,9 @@ sigh provides a terminal interface that allows you to create and renew provision
 
 An App ID can be created with the following command:
 
-    fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
+```
+fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
+```
 
 Where `com.company.appname` is the bundle ID of your app, which is found in the Info.plist file of your Xamarin.iOS application, as illustrated below:
 

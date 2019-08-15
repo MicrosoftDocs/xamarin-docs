@@ -171,26 +171,32 @@ This is done using the `Category` attribute, specifying the type to
 extend as an argument to the attribute. The following example will for
 instance extend NSString.
 
-    [Category (typeof (NSString))]
+```csharp
+[Category (typeof (NSString))]
+```
 
 Each category method is using the normal mechanism for exporting
 methods to Objective-C using the `Export` attribute:
 
-    [Export ("today")]
-    public static string Today ()
-    {
-        return "Today";
-    }
+```csharp
+[Export ("today")]
+public static string Today ()
+{
+    return "Today";
+}
+```
 
 All managed extension methods must be static, but it’s possible to
 create Objective-C instance methods using the standard syntax for
 extension methods in C#:
 
-    [Export ("toUpper")]
-    public static string ToUpper (this NSString self)
-    {
-        return self.ToString ().ToUpper ();
-    }
+```csharp
+[Export ("toUpper")]
+public static string ToUpper (this NSString self)
+{
+    return self.ToString ().ToUpper ();
+}
+```
 
 and the first argument to the extension method will be the instance on
 which the method was invoked.
