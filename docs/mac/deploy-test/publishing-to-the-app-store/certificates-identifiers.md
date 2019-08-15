@@ -36,10 +36,10 @@ From here download the **Intermediate Certificates** (Worldwide Developer Relati
 The remainder of this section walks through each of the four sections to
 complete a Mac Developer Account setup.
 
--   **Register Mac App ID** – The developer will need to follow these steps for each application they write.
--   **Register macOS Systems** – This is only required when adding computers to test with.
--   **Create Certificates** – Only required once when seting-up the certificates, and later when renewing them.
--   **Create Provisioning Profile** – The developer will need to follow these steps for each new application written, and when adding new systems.
+- **Register Mac App ID** – The developer will need to follow these steps for each application they write.
+- **Register macOS Systems** – This is only required when adding computers to test with.
+- **Create Certificates** – Only required once when seting-up the certificates, and later when renewing them.
+- **Create Provisioning Profile** – The developer will need to follow these steps for each new application written, and when adding new systems.
 
 Click the **Overview** link at the top left of the page
 to return to this menu at any time.
@@ -91,9 +91,9 @@ Use the Certificates section to create several different types of certificates t
 
 There are three main types of certificate:
 
--   **Mac Development Certificate** – Optional for general app development, but required if the developer plans to use features like iCloud or push notifications. The developer will need a Development Certificate before they can create Provisioning Profiles that allow them to access those features.
--   **Mac App Store** – The developer will need a certificate for their app and another certificate for the installer.
--   **Developer ID** – Certificates for the app and installer if choosing to distribute outside the Mac App Store.
+- **Mac Development Certificate** – Optional for general app development, but required if the developer plans to use features like iCloud or push notifications. The developer will need a Development Certificate before they can create Provisioning Profiles that allow them to access those features.
+- **Mac App Store** – The developer will need a certificate for their app and another certificate for the installer.
+- **Developer ID** – Certificates for the app and installer if choosing to distribute outside the Mac App Store.
 
 The following sections will provide examples of creating each of the above certificate types.
 

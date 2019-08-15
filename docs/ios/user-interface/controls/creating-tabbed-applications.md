@@ -32,8 +32,8 @@ non- `RootViewController` scenario.
 The `UITabBarController` supports tabbed application development
 by the following:
 
--  Allowing multiple controllers to be added to it.
--  Providing a tabbed user interface, via the  `UITabBar` class, to allow a user to switch between controllers and their views. 
+- Allowing multiple controllers to be added to it.
+- Providing a tabbed user interface, via the  `UITabBar` class, to allow a user to switch between controllers and their views. 
 
 
 Controllers are added to the `UITabBarController` via its `ViewControllers` property, which is a `UIViewController`
@@ -87,9 +87,9 @@ appropriate view controller.
 To implement the `UITabBarController` we need to do the
 following:
 
-1.  Set the base class of  `TabController` to  `UITabBarController` . 
-1.  Create  `UIViewController` instances to add to the  `TabController` . 
-1.  Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` . 
+1. Set the base class of  `TabController` to  `UITabBarController` . 
+1. Create  `UIViewController` instances to add to the  `TabController` . 
+1. Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` . 
 
 
 Add the following code to the `TabController` class to achieve
@@ -328,8 +328,8 @@ using the Xamarin iOS Designer.
 
 We want to drag a `Label` and a `Button` onto ViewController1 from the **ToolBox** on the right hand side. Next we'll use the Properties Pad to edit the name and text of the controls to the following:
 
--  **Label** : `Text` = **One**
--  **Button** : `Title` = **User Takes Some Initial Action**
+- **Label** : `Text` = **One**
+- **Button** : `Title` = **User Takes Some Initial Action**
 
 
 We will be controlling the visibility of our button in a `TouchUpInside` event, and we need to refer to it in the code behind. Let's identify it with the **Name** `aButton` in the Properties Pad, as depicted in the following screenshot:

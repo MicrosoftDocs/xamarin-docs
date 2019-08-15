@@ -55,5 +55,5 @@ rating, with the [`RatingBar`](xref:Android.Widget.RatingBar) widget.
     sets a rating. In this case, a simple [`Toast`](xref:Android.Widget.Toast)
     message displays the new rating.
 
-3.  Run the application.
+3. Run the application.
 

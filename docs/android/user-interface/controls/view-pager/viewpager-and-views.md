@@ -128,11 +128,11 @@ protected override void OnCreate(Bundle bundle)
 
 This code does the following:
 
-1.  Sets the view from the **Main.axml** layout resource.
+1. Sets the view from the **Main.axml** layout resource.
 
-2.  Retrieves a reference to the `ViewPager` from the layout.
+2. Retrieves a reference to the `ViewPager` from the layout.
 
-3.  Instantiates a new `TreeCatalog` as the data source.
+3. Instantiates a new `TreeCatalog` as the data source.
 
 When you build and run this code, you should see a display that 
 resembles the following screenshot: 
@@ -160,15 +160,15 @@ and loads it into the pages for the `ViewPager` to display.
 
 When you implement a `PagerAdapter`, you must override the following:
 
--   **InstantiateItem** &ndash; Creates the page (`View`) for a given 
+- **InstantiateItem** &ndash; Creates the page (`View`) for a given 
     position and adds it to the `ViewPager`'s collection of views. 
 
--   **DestroyItem** &ndash; Removes a page from a given position.
+- **DestroyItem** &ndash; Removes a page from a given position.
 
--   **Count** &ndash; Read-only property that returns the number of 
+- **Count** &ndash; Read-only property that returns the number of 
     views (pages) available. 
 
--   **IsViewFromObject** &ndash; Determines whether a page is
+- **IsViewFromObject** &ndash; Determines whether a page is
     associated with a specific key object. (This object is created
     by the `InstantiateItem` method.) In this example, the key object
     is the `TreeCatalog` data object.
@@ -281,19 +281,19 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 
 This code does the following:
 
-1.  Instantiates a new `ImageView` to display the tree image
+1. Instantiates a new `ImageView` to display the tree image
     at the specified position. The app's `MainActivity` is the context 
     that will be passed to the `ImageView` constructor.
 
-2.  Sets the `ImageView` resource to the `TreeCatalog` image
+2. Sets the `ImageView` resource to the `TreeCatalog` image
     resource ID at the specified position.
 
-3.  Casts the passed container `View` to a `ViewPager` reference.
+3. Casts the passed container `View` to a `ViewPager` reference.
     Note that you must use `JavaCast<ViewPager>()` to properly
     perform this cast (this is needed so that Android performs
     a runtime-checked type conversion).
 
-4.  Adds the instantiated `ImageView` to the `ViewPager` and returns
+4. Adds the instantiated `ImageView` to the `ViewPager` and returns
     the `ImageView` to the caller.
 
 When the `ViewPager` displays the image at `position`, it displays this 
@@ -326,11 +326,11 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 
 This code does the following:
 
-1.  Casts the passed container `View` into a `ViewPager` reference.
+1. Casts the passed container `View` into a `ViewPager` reference.
 
-2.  Casts the passed Java object (`view`) into a C# `View` (`view as View`);
+2. Casts the passed Java object (`view`) into a C# `View` (`view as View`);
 
-3.  Removes the view from the `ViewPager`. 
+3. Removes the view from the `ViewPager`. 
 
 
 

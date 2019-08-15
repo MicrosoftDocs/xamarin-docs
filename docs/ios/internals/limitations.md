@@ -62,10 +62,10 @@ Since the iOS kernel prevents an application from generating code
 	dynamically, Xamarin.iOS does not support any form of dynamic code
 	generation. These include:
 
--  The System.Reflection.Emit is not available.
--  No support for System.Runtime.Remoting.
--  No support for creating types dynamically (no Type.GetType ("MyType`1")), although looking up existing types (Type.GetType ("System.String") for example, works just fine). 
--  Reverse callbacks must be registered with the runtime at compile time.
+- The System.Reflection.Emit is not available.
+- No support for System.Runtime.Remoting.
+- No support for creating types dynamically (no Type.GetType ("MyType`1")), although looking up existing types (Type.GetType ("System.String") for example, works just fine). 
+- Reverse callbacks must be registered with the runtime at compile time.
 
 
  
@@ -77,9 +77,9 @@ Since the iOS kernel prevents an application from generating code
 The lack of System.Reflection. **Emit** means that no code that
 	depends on runtime code generation will work. This includes things like:
 
--  The Dynamic Language Runtime.
--  Any languages built on top of the Dynamic Language Runtime.
--  Remoting's TransparentProxy or anything else that would cause the runtime to generate code dynamically. 
+- The Dynamic Language Runtime.
+- Any languages built on top of the Dynamic Language Runtime.
+- Remoting's TransparentProxy or anything else that would cause the runtime to generate code dynamically. 
 
 
   > [!IMPORTANT]
@@ -125,9 +125,9 @@ In Mono these bridges are implemented by the Just-in-Time
 	the iPhone there are two important limitations at this
 	point:
 
--  You must flag all of your callback methods with the
+- You must flag all of your callback methods with the
    [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
--  The methods have to be static methods, there is no support for instance methods.
+- The methods have to be static methods, there is no support for instance methods.
  
 <a name="No_Remoting" />
 
@@ -144,12 +144,12 @@ The Remoting stack is not available on Xamarin.iOS.
 The following features have been disabled in Mono's iOS
 	Runtime:
 
--  Profiler
--  Reflection.Emit
--  Reflection.Emit.Save functionality
--  COM bindings
--  The JIT engine
--  Metadata verifier (since there is no JIT)
+- Profiler
+- Reflection.Emit
+- Reflection.Emit.Save functionality
+- COM bindings
+- The JIT engine
+- Metadata verifier (since there is no JIT)
 
 
  <a name=".NET_API_Limitations" />

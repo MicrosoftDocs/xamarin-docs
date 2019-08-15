@@ -17,18 +17,18 @@ The resolution to this issue is to make sure you have the latest supported Andro
 
 ## Setting in Visual Studio for Mac
 
-1.  Right click on the Android project, and select **Options** in the menu.
-2.  In the **Project Options** dialog, go to **Build > General**.
-3.  Set the **Compile using Android version: (Target Framework)** to the latest installed platform.
-4.  In the **Project Options** dialog, go to **Build > Android Application**.
-5.  Set the **Minimum Android version** to API level 19 or higher, and the **Target Android version** to the latest installed platform you chose in (3).
+1. Right click on the Android project, and select **Options** in the menu.
+2. In the **Project Options** dialog, go to **Build > General**.
+3. Set the **Compile using Android version: (Target Framework)** to the latest installed platform.
+4. In the **Project Options** dialog, go to **Build > Android Application**.
+5. Set the **Minimum Android version** to API level 19 or higher, and the **Target Android version** to the latest installed platform you chose in (3).
 
 ## Setting in Visual Studio
 
-1.  Right click on the Android project, and select **Properies** in the menu.
-2.  In the project properties, go to **Application**.
-3.  Set the **Compile using Android version: (Target Framework)** to the latest installed platform.
-4.  In the project properties, go to **Android Manifest**.
-5.  Set the **Minimum Android version** to API level 19 or higher, and the **Target Android version** to the latest installed platform you chose in (3).
+1. Right click on the Android project, and select **Properies** in the menu.
+2. In the project properties, go to **Application**.
+3. Set the **Compile using Android version: (Target Framework)** to the latest installed platform.
+4. In the project properties, go to **Android Manifest**.
+5. Set the **Minimum Android version** to API level 19 or higher, and the **Target Android version** to the latest installed platform you chose in (3).
 
 Once you've updated those settings, please clean and rebuild your project to ensure your changes are picked up.

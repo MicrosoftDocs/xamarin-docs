@@ -79,8 +79,8 @@ Regardless of which method is used to share code, the overall solution
 structure should implement a layered architecture that encourages code sharing.
 The Xamarin approach is to group code into two project types:
 
--   **Core project** – Write re-usable code in one place, to be shared across different platforms. Use the principles of encapsulation to hide implementation details wherever possible.
--   **Platform-specific application projects** – Consume the re-usable code with as little coupling as possible. Platform-specific features are added at this level, built on components exposed in the Core project.
+- **Core project** – Write re-usable code in one place, to be shared across different platforms. Use the principles of encapsulation to hide implementation details wherever possible.
+- **Platform-specific application projects** – Consume the re-usable code with as little coupling as possible. Platform-specific features are added at this level, built on components exposed in the Core project.
 
 
  <a name="Core_Project" />
@@ -94,10 +94,10 @@ across all platforms – ie. the common framework namespaces like `System`, `Sys
 Shared projects should implement as much non-UI functionality as is possible,
 which could include the following layers:
 
--   **Data Layer** – Code that takes care of physical data storage eg.  [SQLite-NET](https://github.com/praeclarum/sqlite-net), an alternative database like  [Realm.io](https://realm.io/products/realm-mobile-database/) or even XML files. The data layer classes are normally only used by the data access layer.
--   **Data Access Layer** – Defines an API that supports the required data operations for the application’s functionality, such as methods to access lists of data, individual data items and also create, edit, and delete them.
--   **Service Access Layer** – An optional layer to provide cloud services to the application. Contains code that accesses remote network resources (web services, image downloads, etc) and possibly caching of the results.
--   **Business Layer** – Definition of the Model classes and the Façade or Manager classes that expose functionality to the platform-specific applications.
+- **Data Layer** – Code that takes care of physical data storage eg.  [SQLite-NET](https://github.com/praeclarum/sqlite-net), an alternative database like  [Realm.io](https://realm.io/products/realm-mobile-database/) or even XML files. The data layer classes are normally only used by the data access layer.
+- **Data Access Layer** – Defines an API that supports the required data operations for the application’s functionality, such as methods to access lists of data, individual data items and also create, edit, and delete them.
+- **Service Access Layer** – An optional layer to provide cloud services to the application. Contains code that accesses remote network resources (web services, image downloads, etc) and possibly caching of the results.
+- **Business Layer** – Definition of the Model classes and the Façade or Manager classes that expose functionality to the platform-specific applications.
 
 
  <a name="Platform-Specific_Application_Projects" />
@@ -111,8 +111,8 @@ the Core shared code project.
 
 The platform-specific projects should implement:
 
--   **Application Layer** – Platform specific functionality and binding/conversion between the Business Layer objects and the user interface.
--   **User Interface Layer** – Screens, custom user-interface controls, presentation of validation logic.
+- **Application Layer** – Platform specific functionality and binding/conversion between the Business Layer objects and the user interface.
+- **User Interface Layer** – Screens, custom user-interface controls, presentation of validation logic.
 
 
 <a name="Example" />
@@ -163,12 +163,12 @@ studies.
 It is important to set the correct build-action for certain file types. This
 list shows the build action for some common file types:
 
--  **All C# files** – Build Action: Compile
--   **Images in Xamarin.iOS & Windows** – Build Action: Content
--   **XIB and Storyboard files in Xamarin.iOS** – Build Action: InterfaceDefinition
--   **Images and AXML layouts in Android** – Build Action: AndroidResource
--  **XAML files in Windows projects** – Build Action: Page
--  **Xamarin.Forms XAML files** – Build Action: EmbeddedResource
+- **All C# files** – Build Action: Compile
+- **Images in Xamarin.iOS & Windows** – Build Action: Content
+- **XIB and Storyboard files in Xamarin.iOS** – Build Action: InterfaceDefinition
+- **Images and AXML layouts in Android** – Build Action: AndroidResource
+- **XAML files in Windows projects** – Build Action: Page
+- **Xamarin.Forms XAML files** – Build Action: EmbeddedResource
 
 
 Generally the IDE will detect the file type and suggest the correct build

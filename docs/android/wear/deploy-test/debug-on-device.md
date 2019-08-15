@@ -27,15 +27,15 @@ Wear apps, see
 Use the following steps to enable debugging on the Android
 Wear device:
 
-1.  Open the **Settings** menu on the Android Wear device.
+1. Open the **Settings** menu on the Android Wear device.
 
-2.  Scroll to the bottom of the menu and tap **About**.
+2. Scroll to the bottom of the menu and tap **About**.
 
-3.  Tap the build number 7 times.
+3. Tap the build number 7 times.
 
-4.  On the **Settings** menu, tap **Developer Options**.
+4. On the **Settings** menu, tap **Developer Options**.
 
-5.  Confirm that **ADB debugging** is enabled.
+5. Confirm that **ADB debugging** is enabled.
 
 
 ## Debugging over USB
@@ -57,11 +57,11 @@ Android phone that is connected to your computer.
 Use the following steps to prepare your phone for making Bluetooth
 connections to the Wear device: 
 
-1.  If you have not already done so, set up your phone for Xamarin.Android development
+1. If you have not already done so, set up your phone for Xamarin.Android development
     as explained in
     [Set Up Device for Development](~/android/get-started/installation/set-up-device-for-development.md).
 
-2.  Download and install the free
+2. Download and install the free
     [Android Wear](https://play.google.com/store/apps/details?id=com.google.android.wearable.app)
     app from the Google Play Store.
 
@@ -69,18 +69,18 @@ connections to the Wear device:
 
 Use the following steps to connect your Wear device to your Phone:
 
-1.  On the phone that will act as Bluetooth intermediary (configured above), 
+1. On the phone that will act as Bluetooth intermediary (configured above), 
     start the Android Wear app. 
 
-2.  Tap the **Settings** icon.
+2. Tap the **Settings** icon.
 
-3.  Enable **Debugging over Bluetooth**. You should see the following status
+3. Enable **Debugging over Bluetooth**. You should see the following status
     displayed on the screen of the Android Wear app:
 
         Host: disconnected
         Target: connected
 
-4.  Connect the phone to your computer over USB. On your computer, 
+4. Connect the phone to your computer over USB. On your computer, 
     enter the following commands:
 
     ```shell
@@ -96,14 +96,14 @@ Use the following steps to connect your Wear device to your Phone:
     > you must run these commands again to setup a connection to the Wear
     > device.
 
-5.  When the Wear device prompts you, confirm that you are allowing 
+5. When the Wear device prompts you, confirm that you are allowing 
     **ADB Debugging**. In the Android Wear app, you should 
     see the status change to:
 
         Host: connected
         Target: connected
 
-6.  After you complete the above steps, running `adb devices` shows the
+6. After you complete the above steps, running `adb devices` shows the
     status of both the phone and the Android Wear device:
 
         List of devices attached
@@ -169,14 +169,14 @@ installed if possible.
 
 To debug the Wear app with a companion app: 
 
-1.  Build and deploy the companion app to the phone.
+1. Build and deploy the companion app to the phone.
 
-2.  Right-click the Wear project and set it as the default start
+2. Right-click the Wear project and set it as the default start
     project.
 
-3.  Deploy the Wear project to the wearable device.
+3. Deploy the Wear project to the wearable device.
 
-4.  Run and debug the Wear app on the device.
+4. Run and debug the Wear app on the device.
 
  
 ## Summary

@@ -811,8 +811,8 @@ Now we need to create our Collection View, double-click the **Main.storyboard** 
 
 When you add a Collection View to a User Interface design, two extra elements are also added:
 
-1.  **Collection View Item** -  That manages a single instance of an item in the collection.
-2.  **View** - A custom view that provides the visual size and appearance of each item in the collection. This view is tied to and managed by the **Collection View Item**.
+1. **Collection View Item** -  That manages a single instance of an item in the collection.
+2. **View** - A custom view that provides the visual size and appearance of each item in the collection. This view is tied to and managed by the **Collection View Item**.
 
 Select the view and make it look like the following using an Image View and two Text Fields:
 

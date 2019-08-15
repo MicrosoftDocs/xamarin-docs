@@ -125,8 +125,8 @@ SGen (--sgen) must be enabled if profiling (--profiling) is enabled.
 
 This can happen in the following circumstances:
 
-*  ARMv6 is enabled and Xcode 4.5 or later is installed.
-*  ARMv7s is enabled and Xcode 4.4 or earlier is installed.
+* ARMv6 is enabled and Xcode 4.5 or later is installed.
+* ARMv7s is enabled and Xcode 4.4 or earlier is installed.
 
 Please verify that the installed version of Xcode supports the selected architectures.
 
@@ -160,12 +160,12 @@ Mtouch does not recognize the command line argument mentioned in the error messa
 
 There are several options for mtouch that can't be used simultaneously:
 
--  --logdev
--  --installdev
--  --killdev
--  --launchdev
--  --launchdebug
--  --launchsim
+- --logdev
+- --installdev
+- --killdev
+- --launchdev
+- --launchdebug
+- --launchsim
 
 <a name="MT0020" />
 

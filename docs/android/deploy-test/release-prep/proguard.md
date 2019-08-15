@@ -26,22 +26,22 @@ the results to one or more **output jars**.
 
 ProGuard processes input APK's using the following steps: 
 
-1.  **Shrinking step** &ndash; ProGuard recursively determines which 
+1. **Shrinking step** &ndash; ProGuard recursively determines which 
     classes and class members are used. All other classes and class 
     members are discarded. 
 
-2.  **Optimization step** &ndash; ProGuard further optimizes the code. 
+2. **Optimization step** &ndash; ProGuard further optimizes the code. 
     Among other optimizations, classes and methods that are not entry 
     points can be made private, static, or final, unused parameters can 
     be removed, and some methods may be inlined. 
 
-3.  **Obfuscation step** &ndash; In native Android development, ProGuard renames classes and class 
+3. **Obfuscation step** &ndash; In native Android development, ProGuard renames classes and class 
     members that are not entry points. Retaining entry points ensures 
     that they can still be accessed by their original names. However, this 
     step is not supported by Xamarin.Android because the app is compiled 
     down to Intermediate Language (IL).
 
-4.  **Preverification step** &ndash; Performs checks on Java bytecodes 
+4. **Preverification step** &ndash; Performs checks on Java bytecodes 
     ahead of runtime and annotates class files for the benefit of the 
     Java VM. This is the only step that doesn't have to know the entry 
     points. 
@@ -66,9 +66,9 @@ One important item to know in advance before using ProGuard is how
 it works within the `Xamarin.Android` build process. This process uses 
 two separate steps: 
 
-1.  Xamarin Android Linker
+1. Xamarin Android Linker
 
-2.  ProGuard
+2. ProGuard
 
 Each of these steps is described next.
 
@@ -79,11 +79,11 @@ Each of these steps is described next.
 The Xamarin.Android linker employs static analysis of your application 
 to determine the following: 
 
--   Which assemblies are actually used.
+- Which assemblies are actually used.
 
--   Which types are actually used.
+- Which types are actually used.
 
--   Which members are actually used. 
+- Which members are actually used. 
 
 The linker will always run before the ProGuard step. Because of 
 this, the linker can strip an assembly/type/member that you might 
@@ -113,13 +113,13 @@ configuration file for ProGuard to use.
 
 Use the following steps to enable ProGuard in your app project:
 
-1.  Ensure that your project is set to the **Release** configuration 
+1. Ensure that your project is set to the **Release** configuration 
     (this is important because the linker must run in order for 
     ProGuard to run): 
 
     [![Select Release configuration](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
-2.  Enable ProGuard by checking the **Enable ProGuard** option under the 
+2. Enable ProGuard by checking the **Enable ProGuard** option under the 
     **Packaging** tab of **Properties > Android Options**: 
 
     [![Enable Proguard option selected](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)
@@ -211,35 +211,35 @@ provides complete reference documentation for the use of ProGuard.
 Xamarin.Android supports the following ProGuard options: 
 
 
--    [Input/Output Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#iooptions)
+- [Input/Output Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#iooptions)
 
--    [Keep Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoptions)
+- [Keep Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoptions)
 
--    [Shrinking Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#shrinkingoptions)
+- [Shrinking Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#shrinkingoptions)
 
--    [General Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#generaloptions)
+- [General Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#generaloptions)
 
--    [Class Paths](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classpath)
+- [Class Paths](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classpath)
 
--    [File Names](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filename)
+- [File Names](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filename)
 
--    [File Filters](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filefilters)
+- [File Filters](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filefilters)
 
--    [Filters](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filters)
+- [Filters](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#filters)
 
--    [Overview of `Keep` Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoverview)
+- [Overview of `Keep` Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoverview)
 
--    [Keep Option Modifiers](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoptionmodifiers)
+- [Keep Option Modifiers](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#keepoptionmodifiers)
 
--    [Class Specifications](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classspecification)
+- [Class Specifications](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#classspecification)
 
 The following options are *ignored* by Xamarin.Android:
 
--    [Optimization Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#optimizationoptions)
+- [Optimization Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#optimizationoptions)
 
--    [Obfuscation Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#obfuscationoptions) 
+- [Obfuscation Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#obfuscationoptions) 
 
--    [Preverification Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#preverificationoptions)
+- [Preverification Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#preverificationoptions)
 
 
 

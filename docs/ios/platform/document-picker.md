@@ -19,19 +19,19 @@ Because of the difficulty of keeping documents synchronized across apps and the 
 
 The following is required to complete the steps presented in this article:
 
--  **Xcode 7 and iOS 8 or newer** – Apple's Xcode 7 and iOS 8 or newer APIs need to be installed and configured on the developer's computer.
--  **Visual Studio or Visual Studio for Mac** – The latest version of Visual Studio for Mac should be installed.
--  **iOS Device** – An iOS device running iOS 8 or above.
+- **Xcode 7 and iOS 8 or newer** – Apple's Xcode 7 and iOS 8 or newer APIs need to be installed and configured on the developer's computer.
+- **Visual Studio or Visual Studio for Mac** – The latest version of Visual Studio for Mac should be installed.
+- **iOS Device** – An iOS device running iOS 8 or above.
 
 ## Changes to iCloud
 
 To implement the new features of the Document Picker, the following changes have been made to Apple's iCloud Service:
 
--  The iCloud Daemon has been completely rewritten using CloudKit.
--  The existing iCloud features have been renamed iCloud Drive.
--  Support for Microsoft Windows OS has been added to iCloud.
--  An iCloud folder has been added in the Mac OS Finder.
--  iOS devices can access the contents of the Mac OS iCloud folder.
+- The iCloud Daemon has been completely rewritten using CloudKit.
+- The existing iCloud features have been renamed iCloud Drive.
+- Support for Microsoft Windows OS has been added to iCloud.
+- An iCloud folder has been added in the Mac OS Finder.
+- iOS devices can access the contents of the Mac OS iCloud folder.
 
 > [!IMPORTANT]
 > Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
@@ -56,10 +56,10 @@ Because a file can be modified from several different locations, coordination mu
 
 Let's take a look at the above illustration:
 
-1.  An iOS device using file coordination creates a new Document and saves it to the iCloud Folder.
-2.  iCloud saves the modified file to the cloud for distribution to every device.
-3.  An attached Mac sees the modified file in the iCloud Folder and uses File Coordination to copy down the changes to the file.
-4.  A device not using File Coordination makes a change to the file and saves it to the iCloud Folder. These changes are instantly replicated to the other devices.
+1. An iOS device using file coordination creates a new Document and saves it to the iCloud Folder.
+2. iCloud saves the modified file to the cloud for distribution to every device.
+3. An attached Mac sees the modified file in the iCloud Folder and uses File Coordination to copy down the changes to the file.
+4. A device not using File Coordination makes a change to the file and saves it to the iCloud Folder. These changes are instantly replicated to the other devices.
 
 Assume the original iOS device or the Mac was editing the file, now their changes are lost and overwritten with the version of the file from the uncoordinated device. To prevent data loss, File Coordination is a must when working with cloud-based Documents.
 
@@ -195,9 +195,9 @@ Prior to iOS 8, `NSMetadataQuery` was slow to pickup local file changes such as:
 
 In the above diagram:
 
-1.  For files that already exist in the Application Container,  `NSMetadataQuery` has existing  `NSMetadata` records pre-created and spooled so they are instantly available to the application.
-1.  The application creates a new file in the Application Container.
-1.  There is a delay before  `NSMetadataQuery` sees the modification to the Application Container and creates the required  `NSMetadata` record.
+1. For files that already exist in the Application Container,  `NSMetadataQuery` has existing  `NSMetadata` records pre-created and spooled so they are instantly available to the application.
+1. The application creates a new file in the Application Container.
+1. There is a delay before  `NSMetadataQuery` sees the modification to the Application Container and creates the required  `NSMetadata` record.
 
 
 Because of the delay in the creation of the `NSMetadata` record, the application had to have two data sources open: one for local file changes and one for cloud based changes.
@@ -210,10 +210,10 @@ In iOS 8, `NSMetadataQuery` is easier to use directly with a new feature called 
 
 Using Stitching in the above diagram:
 
-1.  As before, for files that already exist in the Application Container,  `NSMetadataQuery` has existing  `NSMetadata` records pre-created and spooled.
-1.  The application creates a new file in the Application Container using File Coordination.
-1.  A hook in the Application Container sees the modification and calls  `NSMetadataQuery` to create the required  `NSMetadata` record.
-1.  The  `NSMetadata` record is created directly after the file and is made available to the application.
+1. As before, for files that already exist in the Application Container,  `NSMetadataQuery` has existing  `NSMetadata` records pre-created and spooled.
+1. The application creates a new file in the Application Container using File Coordination.
+1. A hook in the Application Container sees the modification and calls  `NSMetadataQuery` to create the required  `NSMetadata` record.
+1. The  `NSMetadata` record is created directly after the file and is made available to the application.
 
 
 By using Stitching the application no longer has to open a data source to monitor local and cloud based file changes. Now the application can rely on `NSMetadataQuery` directly.
@@ -228,16 +228,16 @@ By using Stitching the application no longer has to open a data source to monito
 
 The following new features have been added to `NSMetadataQuery` in iOS 8:
 
--   `NSMetatadataQuery` can now list non-local documents stored in the cloud.
--  New APIs have been added to access metadata information on the cloud-based documents. 
--  There is a new  `NSUrl_PromisedItems` API that will to access the file attributes of files that may or may not have their content available locally.
--  Use the  `GetPromisedItemResourceValue` method to get information about a given file or use the  `GetPromisedItemResourceValues` method to get information on more than one file at a time.
+- `NSMetatadataQuery` can now list non-local documents stored in the cloud.
+- New APIs have been added to access metadata information on the cloud-based documents. 
+- There is a new  `NSUrl_PromisedItems` API that will to access the file attributes of files that may or may not have their content available locally.
+- Use the  `GetPromisedItemResourceValue` method to get information about a given file or use the  `GetPromisedItemResourceValues` method to get information on more than one file at a time.
 
 
 Two new file coordination flags have been added for dealing with metadata:
 
--   `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
--   `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
+- `NSFileCoordinatorReadImmediatelyAvailableMetadataOnly` 
+- `NSFileCoordinatorWriteContentIndependentMetadataOnly` 
 
 
 With the above flags, the contents of the Document file do not need to be available locally for them to be used.
@@ -455,19 +455,19 @@ The following steps walkthrough the process of configuring your application for 
 
 Do the following:
 
-1.  Open the project in Visual Studio for Mac or Visual Studio.
-2.  In the **Solution Explorer**, right-click the project and select Options.
-3.  In the Options Dialog Box select **iOS Application**, ensure that the **Bundle Identifier** matches the one that was defined in **App ID** created above for the application. 
-4.  Select **iOS Bundle Signing**, select the **Developer Identity** and the **Provisioning Profile** created above.
-5.  Click the **OK** button to save the changes and close the dialog box.
-6.  Right-click on `Entitlements.plist` in the **Solution Explorer** to open it in the editor.
+1. Open the project in Visual Studio for Mac or Visual Studio.
+2. In the **Solution Explorer**, right-click the project and select Options.
+3. In the Options Dialog Box select **iOS Application**, ensure that the **Bundle Identifier** matches the one that was defined in **App ID** created above for the application. 
+4. Select **iOS Bundle Signing**, select the **Developer Identity** and the **Provisioning Profile** created above.
+5. Click the **OK** button to save the changes and close the dialog box.
+6. Right-click on `Entitlements.plist` in the **Solution Explorer** to open it in the editor.
 
 	> [!IMPORTANT]
 	> In Visual Studio you may need to open the Entitlements editor by right-clicking on it, selecting **Open With…** and selecting Property List Editor
 
-7.  Check  **Enable iCloud** ,  **iCloud Documents** ,  **Key-value storage** and  **CloudKit** .
-8.  Ensure the **Container** exists for the application (as created above). Example: `iCloud.com.your-company.AppName`
-9.  Save the changes to the file.
+7. Check  **Enable iCloud** ,  **iCloud Documents** ,  **Key-value storage** and  **CloudKit** .
+8. Ensure the **Container** exists for the application (as created above). Example: `iCloud.com.your-company.AppName`
+9. Save the changes to the file.
 
 For more information on Entitlements refer to the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
@@ -826,9 +826,9 @@ Prior to iOS 8, it was very difficult to access Documents from another applicati
 
 Let's take a look at accessing an external document prior to iOS 8:
 
-1.  First the user would have to open the application that originally created the Document.
-1.  The Document is selected and the  `UIDocumentInteractionController` is used to send the Document to the new application.
-1.  Finally, a copy of the original Document is placed in the new application's Container.
+1. First the user would have to open the application that originally created the Document.
+1. The Document is selected and the  `UIDocumentInteractionController` is used to send the Document to the new application.
+1. Finally, a copy of the original Document is placed in the new application's Container.
 
 
 From there the Document is available for the second application to open and edit.
@@ -906,20 +906,20 @@ if (presentationPopover!=null) {
 
 Here is an example of how the code above would display a Document Picker when run on an iPhone device:
 
-1.  The user starts the application and the main interface is displayed:   
+1. The user starts the application and the main interface is displayed:   
  
 	[![](document-picker-images/image33.png "The main interface is displayed")](document-picker-images/image33.png#lightbox)
-1.  The user taps the **Action** Button at the top of the screen and is asked to select a **Document Provider** from the list of available providers:   
+1. The user taps the **Action** Button at the top of the screen and is asked to select a **Document Provider** from the list of available providers:   
  
 	[![](document-picker-images/image34.png "Select a Document Provider from the list of available providers")](document-picker-images/image34.png#lightbox)
-1.  The **Document Picker View Controller** is displayed for the selected **Document Provider**:   
+1. The **Document Picker View Controller** is displayed for the selected **Document Provider**:   
  
 	[![](document-picker-images/image35.png "The Document Picker View Controller is displayed")](document-picker-images/image35.png#lightbox)
-1.  The user taps on a **Document Folder** to display its contents:   
+1. The user taps on a **Document Folder** to display its contents:   
  
 	[![](document-picker-images/image36.png "The Document Folder contents")](document-picker-images/image36.png#lightbox)
-1.  The user selects a **Document** and the **Document Picker** is closed.
-1.  The main interface is redisplayed, the **Document** is loaded from the external Container and its contents displayed.
+1. The user selects a **Document** and the **Document Picker** is closed.
+1. The main interface is redisplayed, the **Document** is loaded from the external Container and its contents displayed.
 
 
 The actual display of the Document Picker View Controller depends on the Document Providers that the user has installed on the device and which Document Picker Mode has been implement. The above example is using the Open Mode, the other mode types will be discussed in detail below.
@@ -1017,10 +1017,10 @@ if (Bookmark != null) {
 
 The Document Picker View Controller features two different modes of operation:
 
-1.  **Open Mode** – In this mode, when the user selects and external Document, the Document Picker will create a Security Scoped Bookmark in the Application Container.   
+1. **Open Mode** – In this mode, when the user selects and external Document, the Document Picker will create a Security Scoped Bookmark in the Application Container.   
  
 	[![](document-picker-images/image37.png "A Security Scoped Bookmark in the Application Container")](document-picker-images/image37.png#lightbox)
-1.  **Import Mode** – In this mode, when the user selects and external Document, the Document Picker will not create a Bookmark, but instead, copy the file into a Temporary Location and provide the application access to the Document at this location:   
+1. **Import Mode** – In this mode, when the user selects and external Document, the Document Picker will not create a Bookmark, but instead, copy the file into a Temporary Location and provide the application access to the Document at this location:   
  
 	[![](document-picker-images/image38.png "The Document Picker will copy the file into a Temporary Location and provide the application access to the Document at this location")](document-picker-images/image38.png#lightbox)   
  Once the application terminates for any reason, the Temporary Location is emptied and the file removed. If the application needs to maintain access to the file, it should make a copy and place it in its Application Container.
@@ -1034,11 +1034,11 @@ As noted above, an iOS 8 application does not have access to containers outside 
 
 To move a Document to an external location, do the following:
 
-1.  First create a new Document in a local or temporary location.
-1.  Create a  `NSUrl` that points to the new Document.
-1.  Open a new Document Picker View Controller and pass it the  `NSUrl` with the Mode of `MoveToService` . 
-1.  Once the user chooses a new location, the Document will be moved from its current location to the new location.
-1.  A Reference Document will be written to the app's Application Container so that the file can still be accessed by the creating application.
+1. First create a new Document in a local or temporary location.
+1. Create a  `NSUrl` that points to the new Document.
+1. Open a new Document Picker View Controller and pass it the  `NSUrl` with the Mode of `MoveToService` . 
+1. Once the user chooses a new location, the Document will be moved from its current location to the new location.
+1. A Reference Document will be written to the app's Application Container so that the file can still be accessed by the creating application.
 
 
 The following code can be used to move a Document to an external location: `var picker = new UIDocumentPickerViewController (srcURL, UIDocumentPickerMode.MoveToService);`
@@ -1061,8 +1061,8 @@ The user can select one of these alternative storage locations from the Document
 
 This is implemented using two different extensions:
 
--  **Document Picker Extension** – Provides a  `UIViewController` subclass that provides a graphical interface for the user to choose a document from an alternative storage location. This subclass will be displayed as part of the Document Picker View Controller.
--  **File Provide Extension** – This is a non-UI extension that deals with actually providing the files contents. These extensions are provided through File Coordination ( `NSFileCoordinator` ). This is another important case where File Coordination is required.
+- **Document Picker Extension** – Provides a  `UIViewController` subclass that provides a graphical interface for the user to choose a document from an alternative storage location. This subclass will be displayed as part of the Document Picker View Controller.
+- **File Provide Extension** – This is a non-UI extension that deals with actually providing the files contents. These extensions are provided through File Coordination ( `NSFileCoordinator` ). This is another important case where File Coordination is required.
 
 
 The following diagram shows the typical data flow when working with Document Provider Extensions:
@@ -1071,14 +1071,14 @@ The following diagram shows the typical data flow when working with Document Pro
 
 The following process occurs:
 
-1.  The application presents a Document Picker Controller to allow the user to select a file to work with.
-1.  The user selects an alternative file location and the custom  `UIViewController` extension is called to display the user interface.
-1.  The user selects a file from this location and the URL is passed back to the Document Picker.
-1.  The Document Picker selects the file's URL and returns it to the application for the user to work on.
-1.  The URL is passed to the File Coordinator to return the files contents to the application.
-1.  The File Coordinator calls the custom File Provider Extension to retrieve the file.
-1.  The contents of the file are returned to the File Coordinator.
-1.  The contents of the file are returned to the application.
+1. The application presents a Document Picker Controller to allow the user to select a file to work with.
+1. The user selects an alternative file location and the custom  `UIViewController` extension is called to display the user interface.
+1. The user selects a file from this location and the URL is passed back to the Document Picker.
+1. The Document Picker selects the file's URL and returns it to the application for the user to work on.
+1. The URL is passed to the File Coordinator to return the files contents to the application.
+1. The File Coordinator calls the custom File Provider Extension to retrieve the file.
+1. The contents of the file are returned to the File Coordinator.
+1. The contents of the file are returned to the application.
 
 
 ### Security and Bookmarks
@@ -1097,14 +1097,14 @@ The following diagram shows the data flow when working with Bookmarks and a Docu
 
 The following process occurs:
 
-1.  The application is about to enter the background and needs to persist its state. It calls `NSUrl` to create a bookmark to a file in alternative storage.
-1.  `NSUrl` calls the File Provider Extension to get a persistent URL to the Document. 
-1.  The File Provider Extension returns the URL as a string to the `NSUrl` .
-1.  The `NSUrl` bundles the URL into a Bookmark and returns it to the application.
-1.  When the Application awakes from being in the background and needs to restore state, it passes the Bookmark to `NSUrl` .
-1.  `NSUrl` calls the File Provider Extension with the URL of the file.
-1.  The File Extension Provider accesses the file and returns the location of the file to `NSUrl` .
-1.  The file location is bundled with security information and returned to the application.
+1. The application is about to enter the background and needs to persist its state. It calls `NSUrl` to create a bookmark to a file in alternative storage.
+1. `NSUrl` calls the File Provider Extension to get a persistent URL to the Document. 
+1. The File Provider Extension returns the URL as a string to the `NSUrl` .
+1. The `NSUrl` bundles the URL into a Bookmark and returns it to the application.
+1. When the Application awakes from being in the background and needs to restore state, it passes the Bookmark to `NSUrl` .
+1. `NSUrl` calls the File Provider Extension with the URL of the file.
+1. The File Extension Provider accesses the file and returns the location of the file to `NSUrl` .
+1. The file location is bundled with security information and returned to the application.
 
 
 From here, the application can access the file and work with it as normal.

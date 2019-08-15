@@ -231,13 +231,13 @@ that is passed into the constructor; the constructor copies the photo
 album into this member variable. The following required
 `RecyclerView.Adapter` methods are implemented:
 
--   **`OnCreateViewHolder`** &ndash; Instantiates the item layout file and
+- **`OnCreateViewHolder`** &ndash; Instantiates the item layout file and
     view holder.
 
--   **`OnBindViewHolder`** &ndash; Loads the data at the specified position
+- **`OnBindViewHolder`** &ndash; Loads the data at the specified position
     into the views whose references are stored in the given view holder.
 
--   **`ItemCount`** &ndash; Returns the number of items in the data source.
+- **`ItemCount`** &ndash; Returns the number of items in the data source.
 
 The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. The implementation of these methods is

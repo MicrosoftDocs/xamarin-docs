@@ -115,9 +115,9 @@ public async Task<int> DownloadHomepage()
 
 Note these points:
 
--  The method declaration includes the  `async` keyword.
--  The return type is  `Task<int>` so calling code can access the  `int` value that is calculated in this method.
--  The return statement is  `return exampleInt;` which is an integer object – the fact that the method returns  `Task<int>` is part of the language improvements.
+- The method declaration includes the  `async` keyword.
+- The return type is  `Task<int>` so calling code can access the  `int` value that is calculated in this method.
+- The return statement is  `return exampleInt;` which is an integer object – the fact that the method returns  `Task<int>` is part of the language improvements.
 
 
 ### Calling an async method 1
@@ -143,11 +143,11 @@ GetButton.Click += async (sender, e) => {
 
 Notes:
 
--  The anonymous delegate has the async keyword prefix.
--  The asynchronous method DownloadHomepage returns a Task\<int> that is stored in the sizeTask variable.
--  The code awaits on the sizeTask variable.  *This* is the location that the method is suspended and control is returned to the calling code until the asynchronous task finishes on its own thread.
--  Execution does  *not* pause when the task is created on the first line of the method, despite the task being created there. The await keyword signifies the location where execution is paused.
--  When the asynchronous task finishes, intResult is set and execution continues on the original thread, from the await line.
+- The anonymous delegate has the async keyword prefix.
+- The asynchronous method DownloadHomepage returns a Task\<int> that is stored in the sizeTask variable.
+- The code awaits on the sizeTask variable.  *This* is the location that the method is suspended and control is returned to the calling code until the asynchronous task finishes on its own thread.
+- Execution does  *not* pause when the task is created on the first line of the method, despite the task being created there. The await keyword signifies the location where execution is paused.
+- When the asynchronous task finishes, intResult is set and execution continues on the original thread, from the await line.
 
 
 ### Calling an async method 2
@@ -176,9 +176,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 
 Some important points:
 
--  The method is marked as  `async` but returns  `void` . This is typically only done for event handlers (otherwise you’d return a  `Task` or  `Task<TResult>` ).
--  The code  `await` s on the  `DownloadHomepage` method directly on an assignment to a variable ( `intResult` ) unlike the previous example where we used an intermediate  `Task<int>` variable to reference the task.  *This* is the location where control is returned to the caller until the asynchronous method has completed on another thread.
--  When the asynchronous method completes and returns, execution resumes at the  `await` which means the integer result is returned and then rendered in a UI widget.
+- The method is marked as  `async` but returns  `void` . This is typically only done for event handlers (otherwise you’d return a  `Task` or  `Task<TResult>` ).
+- The code  `await` s on the  `DownloadHomepage` method directly on an assignment to a variable ( `intResult` ) unlike the previous example where we used an intermediate  `Task<int>` variable to reference the task.  *This* is the location where control is returned to the caller until the asynchronous method has completed on another thread.
+- When the asynchronous method completes and returns, execution resumes at the  `await` which means the integer result is returned and then rendered in a UI widget.
 
 
 ## Summary

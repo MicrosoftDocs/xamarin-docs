@@ -257,24 +257,24 @@ The remaining topics (linked below) take a comprehensive look at
 working with the `ListView` class and the different types of Adapter
 types you can use with it. The structure is as follows:
 
--   **Visual Appearance** &ndash; Parts of the `ListView` control and
+- **Visual Appearance** &ndash; Parts of the `ListView` control and
     how they work.
 
--   **Classes** &ndash; Overview of the classes used to display a
+- **Classes** &ndash; Overview of the classes used to display a
     `ListView`.
 
--   **Displaying Data in a ListView** &ndash; How to display a simple
+- **Displaying Data in a ListView** &ndash; How to display a simple
     list of data; how to implement `ListView's` usability features; how
     to use different built-in row layouts; and how Adapters save memory
     by re-using row views.
 
--   **Custom appearance** &ndash; Changing the style of the `ListView`
+- **Custom appearance** &ndash; Changing the style of the `ListView`
     with custom layouts, fonts and colors.
 
--   **Using SQLite** &ndash; How to display data from a SQLite database
+- **Using SQLite** &ndash; How to display data from a SQLite database
     with a `CursorAdapter`.
 
--   **Activity Lifecycle** &ndash; Design considerations when
+- **Activity Lifecycle** &ndash; Design considerations when
     implementing `ListView` Activities, including where in the
     lifecycle you should populate your data and when to release
     resources.
@@ -283,12 +283,12 @@ The discussion (broken into six parts) begins with an
 overview of the `ListView` class itself before introducing
 progressively more complex examples of how to use it.
 
--   [ListView Parts and Functionality](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
--   [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md)
--   [Customizing a ListView's Appearance](~/android/user-interface/layouts/list-view/customizing-appearance.md)
--   [Using CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
--   [Using a ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
--   [ListView and the Activity Lifecycle](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
+- [ListView Parts and Functionality](~/android/user-interface/layouts/list-view/parts-and-functionality.md)
+- [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md)
+- [Customizing a ListView's Appearance](~/android/user-interface/layouts/list-view/customizing-appearance.md)
+- [Using CursorAdapters](~/android/user-interface/layouts/list-view/cursor-adapters.md)
+- [Using a ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
+- [ListView and the Activity Lifecycle](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
 
 ## Summary

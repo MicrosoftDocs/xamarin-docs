@@ -19,10 +19,10 @@ _This walkthrough provides step-by-step instructions for creating a Xamarin.Andr
 The *Android Archive (.AAR)* file is the file format for Android libraries.
 An .AAR file is a .ZIP archive that contains the following:
 
--   Compiled Java code
--   Resource IDs
--   Resources
--   Meta-data (for example, Activity declarations, permissions)
+- Compiled Java code
+- Resource IDs
+- Resources
+- Meta-data (for example, Activity declarations, permissions)
 
 In this guide, we'll step through the basics of creating a Bindings
 Library for a single .AAR file. For an overview of Java library binding
@@ -92,39 +92,39 @@ in **textanalyzer.aar**.
 Before commencing with the steps below, please download the example
 [textanalyzer.aar](https://github.com/xamarin/monodroid-samples/blob/master/JavaIntegration/AarBinding/Resources/textanalyzer.aar?raw=true) Android archive file:
 
-1.  Create a new Bindings Library project starting with the Android
+1. Create a new Bindings Library project starting with the Android
     Bindings Library template. You can use either Visual Studio for Mac or
     Visual Studio (the screenshots below show Visual Studio, but
     Visual Studio for Mac is very similar). Name the solution **AarBinding**:
 
     [![Create AarBindings project](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
 
-2.  The template includes a **Jars** folder where you add your .AAR(s)
+2. The template includes a **Jars** folder where you add your .AAR(s)
     to the Bindings Library project. Right-click the **Jars** folder
     and select **Add > Existing Item**:
 
     [![Add existing item](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
 
-3.  Navigate to the **textanalyzer.aar** file downloaded earlier, select it, and
+3. Navigate to the **textanalyzer.aar** file downloaded earlier, select it, and
     click **Add**:
 
     [![Add textanalayzer.aar](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
 
 
-4.  Verify that the **textanalyzer.aar** file was successfully added
+4. Verify that the **textanalyzer.aar** file was successfully added
     to the project:
 
     [![The textanalyzer.aar file was added](binding-an-aar-images/04-aar-added-vs-sml.png)](binding-an-aar-images/04-aar-added-vs.png#lightbox)
 
-5.  Set the Build Action for **textanalyzer.aar** to
+5. Set the Build Action for **textanalyzer.aar** to
     `LibraryProjectZip`. In Visual Studio for Mac, right-click
     **textanalyzer.aar** to set the Build Action. In Visual Studio,
     the Build Action can be set in the **Properties** pane):
 
     [![Setting the textanalyzer.aar build action to LibraryProjectZip](binding-an-aar-images/05-embedded-aar-vs-sml.png)](binding-an-aar-images/05-embedded-aar-vs.png#lightbox)
 
-6.  Open the project Properties to configure the *Target Framework*. If
+6. Open the project Properties to configure the *Target Framework*. If
     the .AAR uses any Android APIs, set the Target Framework to the API
     level that the .AAR expects. (For more information about the Target
     Framework setting and Android API levels in general, see
@@ -137,7 +137,7 @@ Before commencing with the steps below, please download the example
 
     [![Setting the target level to API 23](binding-an-aar-images/06-set-target-framework-vs-sml.png)](binding-an-aar-images/06-set-target-framework-vs.png#lightbox)
 
-7.  Build the Bindings Library. The Bindings Library project should
+7. Build the Bindings Library. The Bindings Library project should
     build successfully and produce an output .DLL at the following
     location: **AarBinding/bin/Debug/AarBinding.dll**
 
@@ -148,7 +148,7 @@ Before commencing with the steps below, please download the example
 To consume this .DLL in your Xamarin.Android app, you must first add
 a reference to the Bindings Library. Use the following steps:
 
-1.  We're creating this app in the same Solution as the Bindings
+1. We're creating this app in the same Solution as the Bindings
     Library to simplify this walkthrough. (The app 
     that consumes the Bindings Library could also reside in a
     different Solution.) Create a new Xamarin.Android app: right-click
@@ -157,16 +157,16 @@ a reference to the Bindings Library. Use the following steps:
 
     [![Create new BindingTest project](binding-an-aar-images/07-add-new-project-vs-sml.w157.png)](binding-an-aar-images/07-add-new-project-vs.w157.png#lightbox)
 
-2.  Right-click the **References** node of the **BindingTest** project and
+2. Right-click the **References** node of the **BindingTest** project and
     select **Add Reference...**:
 
     [![Click Add Reference](binding-an-aar-images/08-add-reference-vs-sml.png)](binding-an-aar-images/08-add-reference-vs.png#lightbox)
 
-3.  Select the **AarBinding** project created earlier and click **OK**:
+3. Select the **AarBinding** project created earlier and click **OK**:
 
     [![Check the AAR binding project](binding-an-aar-images/09-choose-aar-binding-vs-sml.png)](binding-an-aar-images/09-choose-aar-binding-vs.png#lightbox)
 
-4.  Open the **References** node of the **BindingTest** project to
+4. Open the **References** node of the **BindingTest** project to
     verify that the **AarBinding** reference is present:
 
     [![AarBinding is listed under References](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)

@@ -19,9 +19,9 @@ Maps Android API key v1 will not work.
 
 Obtaining a Maps API v2 key involves the following steps:
 
-1.  Retrieve the SHA-1 fingerprint of the keystore that is used to sign the application.
-2.  Create a project in the Google APIs console.
-3.  Obtaining the API key.
+1. Retrieve the SHA-1 fingerprint of the keystore that is used to sign the application.
+2. Create a project in the Google APIs console.
+3. Obtaining the API key.
 
 
 ## Obtaining your Signing Key Fingerprint

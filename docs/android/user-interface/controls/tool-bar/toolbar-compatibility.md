@@ -29,13 +29,13 @@ so that it runs on versions of Android earlier than Lollipop 5.0.
 
 To modify an app to use the AppCompat version of Toolbar: 
 
-1.  Set the Minimum and Target Android versions for the app.
+1. Set the Minimum and Target Android versions for the app.
 
-2.  Install the AppCompat NuGet Package.
+2. Install the AppCompat NuGet Package.
 
-3.  Use an AppCompat theme instead of a built-in Android theme.
+3. Use an AppCompat theme instead of a built-in Android theme.
 
-4.  Modify `MainActivity` so that it subclasses `AppCompatActivity` 
+4. Modify `MainActivity` so that it subclasses `AppCompatActivity` 
     rather than `Activity`. 
 
 Each of these steps is explained in detail in the following sections.

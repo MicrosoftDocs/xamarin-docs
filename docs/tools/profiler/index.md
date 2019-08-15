@@ -139,8 +139,8 @@ The Xamarin Profiler can be launched from your IDE when you are profiling your i
 
 #### Launching from Visual Studio
 
-1.  First, make sure you have your application loaded in Visual Studio, and select the (default) Debug configuration, as specified above.
-2.  Browse to **Analyze > Xamarin Profiler** in Visual Studio, to open the Profiler, as demonstrated in the diagram below:
+1. First, make sure you have your application loaded in Visual Studio, and select the (default) Debug configuration, as specified above.
+2. Browse to **Analyze > Xamarin Profiler** in Visual Studio, to open the Profiler, as demonstrated in the diagram below:
 
 ![Launching the Profiler from Visual Studio](images/start-profiling-vs.png)
 
@@ -227,8 +227,8 @@ There are different data views in the Allocations instrument, which allow develo
 The Inspector view for Allocations provides options for filtering and grouping objects, providing statistics on memory allocated, and the top allocations, as well as views for Stack Trace and Path to Root.
 
 - **Call Tree** – This displays the entire call tree of all threads in the application and includes information about the memory allocated on each node. When an element is selected in the list, all sibling nodes will appear grey. You can expand the tree or double-click the element to drill down into it.When displaying this data view, the display settings inspector view can be used to change the way it is presented. There are currently two options:
-    1.  **Inverted Call Tree** – This considers the stack trace from top to bottom. This is a convenient view option as it indicates the deepest methods where the CPU has been spending its time.
-    2.  **Separate by thread** – This option organizes the call tree by thread.
+    1. **Inverted Call Tree** – This considers the stack trace from top to bottom. This is a convenient view option as it indicates the deepest methods where the CPU has been spending its time.
+    2. **Separate by thread** – This option organizes the call tree by thread.
 
 # [Visual Studio for Mac](#tab/macos)
 

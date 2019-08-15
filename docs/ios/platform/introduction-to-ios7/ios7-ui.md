@@ -125,9 +125,9 @@ Other UIKit controls have changed as well, including sliders, switches and stepp
 
 In addition to the changes in UIKit, iOS 7 introduces a variety of visual changes to the UI, including:
 
--  Full Screen Content
--  Bar Appearance
--  Tint Color
+- Full Screen Content
+- Bar Appearance
+- Tint Color
 
 <a name="fullscreen" />
 

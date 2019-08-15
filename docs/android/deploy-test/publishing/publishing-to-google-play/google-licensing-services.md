@@ -39,12 +39,12 @@ license status:
 
 The above diagram illustrates this workflow: 
 
--   The application provides the package name, a *nonce* (a 
+- The application provides the package name, a *nonce* (a 
     cryptographic authenticator) that is used to validate server 
     response, and a callback that can handle the response 
     asynchronously. 
 
--   Google Play provides information such as the Google account and the 
+- Google Play provides information such as the Google account and the 
     device itself, such as the IMSI number. 
 
 Google Licensing service is also a key component of APK expansion files

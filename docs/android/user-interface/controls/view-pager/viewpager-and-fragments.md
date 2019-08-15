@@ -139,11 +139,11 @@ protected override void OnCreate(Bundle bundle)
 
 This code does the following:
 
-1.  Sets the view from the **Main.axml** layout resource.
+1. Sets the view from the **Main.axml** layout resource.
 
-2.  Retrieves a reference to the `ViewPager` from the layout.
+2. Retrieves a reference to the `ViewPager` from the layout.
 
-3.  Instantiates a new `FlashCardDeck` as the data source.
+3. Instantiates a new `FlashCardDeck` as the data source.
 
 When you build and run this code, you should see a display that 
 resembles the following screenshot: 
@@ -337,10 +337,10 @@ display.
 
 When you implement a `FragmentPagerAdapter`, you must override the following:
 
--   **Count** &ndash; Read-only property that returns the number of
+- **Count** &ndash; Read-only property that returns the number of
     views (pages) available.
 
--   **GetItem** &ndash; Returns the fragment to display for the
+- **GetItem** &ndash; Returns the fragment to display for the
     specified page.
 
 Add a new file called **FlashCardDeckAdapter.cs** and replace its contents
@@ -443,16 +443,16 @@ public override Android.Support.V4.App.Fragment GetItem(int position)
 
 This code does the following:
 
-1.  Looks up the math problem string in the `FlashCardDeck` deck 
+1. Looks up the math problem string in the `FlashCardDeck` deck 
     for the specified position. 
 
-2.  Looks up the answer string in the `FlashCardDeck` deck for the 
+2. Looks up the answer string in the `FlashCardDeck` deck for the 
     specified position. 
 
-3.  Calls the `FlashCardFragment` factory method `newInstance`, passing 
+3. Calls the `FlashCardFragment` factory method `newInstance`, passing 
     in the flash card problem and answer strings. 
 
-4.  Creates and returns a new flash card `Fragment` that contains the 
+4. Creates and returns a new flash card `Fragment` that contains the 
     question and answer text for that position. 
 
 When the `ViewPager` renders the `Fragment` at `position`, it displays 

@@ -17,13 +17,13 @@ ms.date: 03/21/2017
 
 ## Fix
 
-1.  Kill the `usbmuxd` process so that the system will restart it:
+1. Kill the `usbmuxd` process so that the system will restart it:
 
     ```csharp
     sudo killall -QUIT usbmuxd
     ```
 
-2.  If that doesn't solve the problem, reboot the Mac.
+2. If that doesn't solve the problem, reboot the Mac.
 
 ## Error message
 
@@ -58,4 +58,4 @@ Based on the errors from `system.log` it appears that this problem might be rela
 
 ## References
 
-*   [Bug 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe returned: 0xe8000063 [RESOLVED NORESPONSE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)
+* [Bug 11789 - MonoTouch.MobileDevice.MobileDeviceException: AMDeviceNotificationSubscribe returned: 0xe8000063 [RESOLVED NORESPONSE]](https://bugzilla.xamarin.com/show_bug.cgi?id=11789)

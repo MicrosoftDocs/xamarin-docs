@@ -24,19 +24,19 @@ have become a first-class feature in mobile APIs.
 Android provides extensive support for multimedia. This article
 examines working with audio in Android, and covers the following topics
 
-1.  **Playing Audio with MediaPlayer** &ndash; Using the built-in
+1. **Playing Audio with MediaPlayer** &ndash; Using the built-in
     `MediaPlayer` class to play audio, including local audio files and
     streamed audio files with the `AudioTrack` class.
 
-2.  **Recording Audio** &ndash; Using the built-in `MediaRecorder`
+2. **Recording Audio** &ndash; Using the built-in `MediaRecorder`
     class to record audio.
 
-3.  **Working with Audio Notifications** &ndash; Using audio
+3. **Working with Audio Notifications** &ndash; Using audio
     notifications to create well-behaved applications that respond
     correctly to events (such as incoming phone calls) by suspending or
     canceling their audio outputs.
 
-4.  **Working with Low-Level Audio** &ndash; Playing audio using the
+4. **Working with Low-Level Audio** &ndash; Playing audio using the
     `AudioTrack` class by writing directly to memory buffers. Recording
     audio using the `AudioRecord` class and reading directly from
     memory buffers.
@@ -318,21 +318,21 @@ resources, so that other applications may obtain audio focus.
 The steps required to request the audio resources of the device are as
 follow:
 
-1.  Obtain a handle to the `AudioManager` system service.
+1. Obtain a handle to the `AudioManager` system service.
 
-2.  Create an instance of the callback class.
+2. Create an instance of the callback class.
 
-3.  Request the audio resources of the device by calling the
+3. Request the audio resources of the device by calling the
     `RequestAudioFocus` method on the `AudioManager` . The parameters
     are the callback object, the stream type (music, voice call, ring
     etc.) and the type of the access right being requested (the audio
     resources can be requested momentarily or for an indefinite period,
     for example).
 
-4.  If the request is granted, the `playMusic` method is invoked
+4. If the request is granted, the `playMusic` method is invoked
     immediately, and the audio starts to play back.
 
-5.  If the request is denied, no further action is taken. In this case,
+5. If the request is denied, no further action is taken. In this case,
     the audio will only play if the request is granted at a later time.
 
 
@@ -371,11 +371,11 @@ and recording because they interact directly with memory buffers
 instead of using file URIs. There are some scenarios where this
 approach is preferable. Such scenarios include:
 
-1.  When playing from encrypted audio files.
+1. When playing from encrypted audio files.
 
-2.  When playing a succession of short clips.
+2. When playing a succession of short clips.
 
-3.  Audio streaming.
+3. Audio streaming.
 
 
 ### AudioTrack Class
@@ -393,17 +393,17 @@ instantiated. The argument list passed into the
 how to play the audio sample contained in the buffer. The arguments
 are:
 
-1.  Stream type &ndash; Voice, ringtone, music, system or alarm.
+1. Stream type &ndash; Voice, ringtone, music, system or alarm.
 
-2.  Frequency &ndash; The sampling rate expressed in Hz.
+2. Frequency &ndash; The sampling rate expressed in Hz.
 
-3.  Channel Configuration &ndash; Mono or stereo.
+3. Channel Configuration &ndash; Mono or stereo.
 
-4.  Audio format &ndash; 8 bit or 16 bit encoding.
+4. Audio format &ndash; 8 bit or 16 bit encoding.
 
-5.  Buffer size &ndash; in bytes.
+5. Buffer size &ndash; in bytes.
 
-6.  Buffer mode &ndash; streaming or static.
+6. Buffer mode &ndash; streaming or static.
 
 
 After construction, the
@@ -481,17 +481,17 @@ all the information required for recording. Unlike in `AudioTrack`,
 where the arguments are largely enumerations, the equivalent arguments
 in `AudioRecord` are integers. These include:
 
-1.  Hardware audio input source such as microphone.
+1. Hardware audio input source such as microphone.
 
-2.  Stream type &ndash; Voice, ringtone, music, system or alarm.
+2. Stream type &ndash; Voice, ringtone, music, system or alarm.
 
-3.  Frequency &ndash; The sampling rate expressed in Hz.
+3. Frequency &ndash; The sampling rate expressed in Hz.
 
-4.  Channel Configuration &ndash; Mono or stereo.
+4. Channel Configuration &ndash; Mono or stereo.
 
-5.  Audio format &ndash; 8 bit or 16 bit encoding.
+5. Audio format &ndash; 8 bit or 16 bit encoding.
 
-6.  Buffer size-in bytes
+6. Buffer size-in bytes
 
 
 Once the `AudioRecord` is constructed, its

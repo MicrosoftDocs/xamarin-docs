@@ -165,22 +165,22 @@ missing types.
 
 This error may occur due to several reasons as listed below:
 
--   The library being bound may reference a second Java library. If 
+- The library being bound may reference a second Java library. If 
     the public API for the bound library uses types from the second
     library, you must reference a managed binding for the second
     library as well.
 
--   It is possible that a library was injected due to Java reflection,
+- It is possible that a library was injected due to Java reflection,
     similar to the reason for the library load error above, causing the
     unexpected loading of metadata. Xamarin.Android's tooling cannot
     currently resolve this situation. In such a case, the library must
     be manually bound.
 
--   There was a bug in .NET 4.0 runtime that failed to load assemblies
+- There was a bug in .NET 4.0 runtime that failed to load assemblies
     when it should have. This issue has been fixed in the .NET 4.5
     runtime.
 
--   Java allows deriving a public class from non-public class, but this
+- Java allows deriving a public class from non-public class, but this
     is unsupported in .NET. Since the binding generator does not
     generate bindings for non-public classes, derived classes such as
     these cannot be generated correctly. To fix this, either remove the
@@ -197,7 +197,7 @@ This error may occur due to several reasons as listed below:
         name="visibility">public</attr>
     ```
 
--   Tools that obfuscate Java libraries may interfere with the
+- Tools that obfuscate Java libraries may interfere with the
     Xamarin.Android Binding Generator and its ability to generate C#
     wrapper classes. The following snippet shows how to update
     **Metadata.xml** to unobfuscate a class name:
@@ -313,7 +313,7 @@ return types. In this example, the method
 return type of `HttpURLConnection`. There are two ways to fix this
 issue:
 
--   Add a partial class declaration for
+- Add a partial class declaration for
     `HttpURLConnectionRequestAdapter` and explicitly implement
     `IHttpRequest.Unwrap()`:
 
@@ -327,7 +327,7 @@ issue:
     }
     ```
 
--   Remove the covariance from the generated C# code. This involves
+- Remove the covariance from the generated C# code. This involves
     adding the following transform to **Transforms\Metadata.xml** which
     will cause the generated C# code to have a return type of
     `Java.Lang.Object`:

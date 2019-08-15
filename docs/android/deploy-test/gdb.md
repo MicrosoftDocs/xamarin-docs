@@ -21,9 +21,9 @@ Android NDK be installed.
 
 There are three ways to use `gdb`:
 
-1.  [Debug builds with Fast Deployment enabled](#Debug_Builds_with_Fast_Deployment) .
-1.  [Debug builds with Fast Deployment disabled](#Debug_Builds_without_Fast_Deployment) .
-1.  [Release builds](#Release_Builds) .
+1. [Debug builds with Fast Deployment enabled](#Debug_Builds_with_Fast_Deployment) .
+1. [Debug builds with Fast Deployment disabled](#Debug_Builds_without_Fast_Deployment) .
+1. [Release builds](#Release_Builds) .
 
 
 When things go wrong, please see the
@@ -95,8 +95,8 @@ exist.
 
 There are two workarounds:
 
--   Set the `debug.mono.log` system property so that the `.__override__` directory is created.
--   Include `gdbserver` within your `.apk`.
+- Set the `debug.mono.log` system property so that the `.__override__` directory is created.
+- Include `gdbserver` within your `.apk`.
 
 ### Setting the `debug.mono.log` System Property
 
@@ -160,9 +160,9 @@ GNU gdb (GDB) 7.3.1-gg2
 
 `gdb` support requires three things:
 
-1.  The `INTERNET` permission.
-2.  App Debugging enabled.
-3.  An accessible `gdbserver`.
+1. The `INTERNET` permission.
+2. App Debugging enabled.
+3. An accessible `gdbserver`.
 
 The `INTERNET` permission is enabled by default in Debug apps. If it is
 not already present in your application, you may add it either by

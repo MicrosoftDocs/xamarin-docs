@@ -94,8 +94,8 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
 The Root element contains the following values:
 
--  `title`
--  `sections` (optional)
+- `title`
+- `sections` (optional)
 
 
 The root element can appear inside a section as an element to create a nested
@@ -157,9 +157,9 @@ This is a Json array with individual sections
 
 The section contains:
 
--  `header` (optional)
--  `footer` (optional)
--  `elements` array
+- `header` (optional)
+- `footer` (optional)
+- `elements` array
 
 
  <a name="header" />
@@ -185,9 +185,9 @@ This is an array of elements. Each element must contain at least one key, the `"
 Some of the elements share some common properties like `"caption"`
 and `"value"`. These are the list of supported elements:
 
--  `string` elements (both with and without styling)
--  `entry` lines (regular or password)
--  `boolean` values (using switches or images)
+- `string` elements (both with and without styling)
+- `entry` lines (regular or password)
+- `boolean` values (using switches or images)
 
 
 String elements can be used as buttons by providing a method to invoke when
@@ -264,9 +264,9 @@ examples:
 Determines the kind of accessory to be shown in your rendering element, the
 possible values are:
 
--  `checkmark`
--  `detail-disclosure`
--  `disclosure-indicator`
+- `checkmark`
+- `detail-disclosure`
+- `disclosure-indicator`
 
 
 If the value is not present, no accessory is shown
@@ -307,8 +307,8 @@ The font to use for the caption or the detail text. The format of a font
 specification is the font name followed optionally by a dash and the point size.
 The following are valid font specifications:
 
--  "Helvetica"
--  "Helvetica-14"
+- "Helvetica"
+- "Helvetica-14"
 
 
  <a name="linebreak" />
@@ -318,12 +318,12 @@ The following are valid font specifications:
 
 Determines how lines are broken up. The possible values are:
 
--  `character-wrap`
--  `clip`
--  `head-truncation`
--  `middle-truncation`
--  `tail-truncation`
--  `word-wrap`
+- `character-wrap`
+- `clip`
+- `head-truncation`
+- `middle-truncation`
+- `tail-truncation`
+- `word-wrap`
 
 
 Both `character-wrap` and `word-wrap` can be used
@@ -373,10 +373,10 @@ The style determines the kind of cell style that will be used to render
 the content and they correspond to the UITableViewCellStyle enumeration values.
 The possible values are:
 
--  `"default"`
--  `"value1"`
--  `"value2"`
--  `"subtitle"` : text with a subtitle.
+- `"default"`
+- `"value1"`
+- `"value2"`
+- `"subtitle"` : text with a subtitle.
 
 
  <a name="subtitle" />
@@ -497,10 +497,10 @@ values are true or false (or the strings `"yes"` and `"no"`).
 
 The capitalization style to use for the entry. The possible values are:
 
--  `all`
--  `none`
--  `sentences`
--  `words`
+- `all`
+- `none`
+- `sentences`
+- `words`
 
 
  <a name="caption" />
@@ -517,15 +517,15 @@ The caption to use for the entry
 
 The keyboard type to use for data entry. The possible values are:
 
--  `ascii`
--  `decimal`
--  `default`
--  `email`
--  `name`
--  `numbers`
--  `numbers-and-punctuation`
--  `twitter`
--  `url`
+- `ascii`
+- `decimal`
+- `default`
+- `email`
+- `name`
+- `numbers`
+- `numbers-and-punctuation`
+- `twitter`
+- `url`
 
 
  <a name="placeholder" />
@@ -542,17 +542,17 @@ The hint text that is shown when the entry has an empty value.
 
 The label used for the return key. The possible values are:
 
--  `default`
--  `done`
--  `emergencycall`
--  `go`
--  `google`
--  `join`
--  `next`
--  `route`
--  `search`
--  `send`
--  `yahoo`
+- `default`
+- `done`
+- `emergencycall`
+- `go`
+- `google`
+- `join`
+- `next`
+- `route`
+- `search`
+- `send`
+- `yahoo`
 
 
  <a name="value" />

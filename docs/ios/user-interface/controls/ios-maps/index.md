@@ -43,8 +43,8 @@ map.MapType = MKMapType.Hybrid;
 
  `MKMapView` includes support for map interactivity features such as:
 
--  Zooming via a pinch gesture
--  Panning via a pan gesture
+- Zooming via a pinch gesture
+- Panning via a pan gesture
 
 
 These features can be enabled or disabled by simply setting the `ZoomEnabled` and `ScrollEnabled` properties of the `MKMapView` instance, where the default value is true for both. For example, to display a static map, simply set the appropriate properties to false:
@@ -91,8 +91,8 @@ map.ShowsUserLocation = true;
 
 An annotation itself has two parts:
 
--  The  `MKAnnotation` object, which includes model data about the annotation, such as the title and location of the annotation.
--  The  `MKAnnotationView` , which contains the image to display and optionally a callout that is shown when the user taps the annotation.
+- The  `MKAnnotation` object, which includes model data about the annotation, such as the title and location of the annotation.
+- The  `MKAnnotationView` , which contains the image to display and optionally a callout that is shown when the user taps the annotation.
 
 
 Map Kit uses the iOS delegation pattern to add annotations to a map, where the `Delegate` property of the `MKMapView` is set to an instance of an `MKMapViewDelegate`. It is this delegate's implementation that is responsible for returning the `MKAnnotationView` for an annotation.
@@ -172,9 +172,9 @@ public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotat
 
 Another way to layer graphics on a map is using overlays. Overlays support drawing graphical content that scales with the map as it is zoomed. iOS provides support for several types of overlays, including:
 
--  Polygons - Commonly used to highlight some region on a map.
--  Polylines - Often seen when showing a route.
--  Circles - Used to highlight a circular area of a map.
+- Polygons - Commonly used to highlight some region on a map.
+- Polylines - Often seen when showing a route.
+- Circles - Used to highlight a circular area of a map.
 
 
 Additionally, custom overlays can be created to show arbitrary geometries with granular, customized drawing code. For example, weather radar would be a good candidate for a custom overlay.
@@ -183,8 +183,8 @@ Additionally, custom overlays can be created to show arbitrary geometries with g
 
 Similar to annotations, adding an overlay involves 2 parts:
 
--  Creating a model object for the overlay and adding it to the  `MKMapView` .
--  Creating a view for the overlay in the  `MKMapViewDelegate` .
+- Creating a model object for the overlay and adding it to the  `MKMapView` .
+- Creating a view for the overlay in the  `MKMapViewDelegate` .
 
 
 The model for the overlay can be any `MKShape` subclass. Xamarin.iOS includes `MKShape` subclasses for polygons, polylines and circles, via the `MKPolygon`, `MKPolyline` and `MKCircle` classes respectively.
@@ -220,10 +220,10 @@ iOS includes a local search API with Map Kit, which allows asynchronous searches
 
 To perform a local search, an application must follow these steps:
 
-1.  Create  `MKLocalSearchRequest` object.
-1.  Create an  `MKLocalSearch` object from the  `MKLocalSearchRequest` .
-1.  Call the  `Start` method on the  `MKLocalSearch` object.
-1.  Retrieve the  `MKLocalSearchResponse` object in a callback.
+1. Create  `MKLocalSearchRequest` object.
+1. Create an  `MKLocalSearch` object from the  `MKLocalSearchRequest` .
+1. Call the  `Start` method on the  `MKLocalSearch` object.
+1. Retrieve the  `MKLocalSearchResponse` object in a callback.
 
 
 The local search API itself provides no user interface. It doesn’t even require a map to be used. However, to make practical use of local search, an application needs to provide some way to specify a search query and display results. Additionally, since the results will contain location data, it will often make sense to show them on a map.

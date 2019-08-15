@@ -29,8 +29,8 @@ nodes.
 
 Once you have this linker description file, add it to your project and:
 
--  **For Android** : set the  **Build Action** to **LinkDescription**
--  **For iOS** : set the  **Build Action** to **LinkDescription**
+- **For Android** : set the  **Build Action** to **LinkDescription**
+- **For iOS** : set the  **Build Action** to **LinkDescription**
 
 
 The following example shows what the XML file looks like:

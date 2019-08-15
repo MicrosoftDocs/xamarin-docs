@@ -40,9 +40,9 @@ testing.
 
 To implement a watch face service, the following is required:
 
--   Android 5.0 (API level 21) or higher on the Wear device or emulator.
+- Android 5.0 (API level 21) or higher on the Wear device or emulator.
 
--   The [Xamarin Android Wear Support Libraries](https://www.nuget.org/packages/Xamarin.Android.Wear)
+- The [Xamarin Android Wear Support Libraries](https://www.nuget.org/packages/Xamarin.Android.Wear)
     must be added to the Xamarin.Android project.
 
 Although Android 5.0 is the minimum API level for implementing a watch
@@ -164,25 +164,25 @@ the `OnDraw` method as described below.
 In the following sections, a custom watch face service will be created
 by following these steps:
 
-1.  Define a class called `MyWatchFaceService` that is derived from
+1. Define a class called `MyWatchFaceService` that is derived from
     `CanvasWatchFaceService`.
 
-2.  Within `MyWatchFaceService`, create a nested class called
+2. Within `MyWatchFaceService`, create a nested class called
     `MyWatchFaceEngine` that is derived from
     `CanvasWatchFaceService.Engine`.
 
-3.  In `MyWatchFaceService`, implement a `CreateEngine`
+3. In `MyWatchFaceService`, implement a `CreateEngine`
     method that instantiates `MyWatchFaceEngine` and returns it.
 
-4.  In `MyWatchFaceEngine`, implement the `OnCreate` method to create
+4. In `MyWatchFaceEngine`, implement the `OnCreate` method to create
     the watch face style and perform any other initialization tasks.
 
-5.  Implement the `OnDraw` method of `MyWatchFaceEngine`. This method
+5. Implement the `OnDraw` method of `MyWatchFaceEngine`. This method
     is called whenever the watch face needs to be redrawn (i.e.
     *invalidated*). `OnDraw` is the method that draws (and redraws) watch
     face elements such as hour, minute, and second hands.
 
-6.  Implement the `OnTimeTick` method of `MyWatchFaceEngine`.
+6. Implement the `OnTimeTick` method of `MyWatchFaceEngine`.
     `OnTimeTick` is called at least once per minute (in both ambient
     and interactive modes) or when the date/time has
     changed.
@@ -292,14 +292,14 @@ used to display the time.
 
 The call to `SetWatchFaceStyle` does the following:
 
-1.  Sets *peek mode* to `PeekModeShort`, which causes notifications to
+1. Sets *peek mode* to `PeekModeShort`, which causes notifications to
     appear as small "peek" cards on the display.
 
-2.  Sets the background visibility to `Interruptive`, which causes
+2. Sets the background visibility to `Interruptive`, which causes
     the background of a peek card to be shown only briefly if it
     represents an interruptive notification.
 
-3.  Disables the default system UI time from being drawn on the
+3. Disables the default system UI time from being drawn on the
     watch face so that the custom watch face can display the
     time instead.
 
@@ -392,20 +392,20 @@ the associated Wear app. To do this, add the following XML to the
 
 This XML does the following:
 
-1.  Sets the `android.permission.BIND_WALLPAPER` permission. This
+1. Sets the `android.permission.BIND_WALLPAPER` permission. This
     permission gives the watch face service permission to change the
     system wallpaper on the device. Note that this permission must be
     set in the `<service>` section rather than in the outer
     `<application>` section.
 
-2.  Defines a `watch_face` resource. This resource is a short XML file
+2. Defines a `watch_face` resource. This resource is a short XML file
     that declares a `wallpaper` resource (this file will be created in
     the next section).
 
-3.  Declares a drawable image called `preview` that will be displayed
+3. Declares a drawable image called `preview` that will be displayed
     by the watch picker selection screen.
 
-4.  Includes an `intent-filter` to let Android know that
+4. Includes an `intent-filter` to let Android know that
     `MyWatchFaceService` will be displaying a watch face.
 
 That completes the code for the basic `WatchFace` example. The next
@@ -454,19 +454,19 @@ Build and deploy the app to the Wear device. You should see the Wear
 app screen appear as before. Do the following to enable the new watch
 face:
 
-1.  Swipe to the right until you see the background of the
+1. Swipe to the right until you see the background of the
     watch screen.
 
-2.  Touch and hold anywhere on the background of the screen
+2. Touch and hold anywhere on the background of the screen
     for two seconds.
 
-3.  Swipe from left to right to browse through the various watch faces.
+3. Swipe from left to right to browse through the various watch faces.
 
-4.  Select the **Xamarin Sample** watch face (shown on the right):
+4. Select the **Xamarin Sample** watch face (shown on the right):
 
     [![Watchface Picker](creating-a-watchface-images/11-watchface-picker.png "Swipe to locate Xamarin Sample watch face")](creating-a-watchface-images/11-watchface-picker.png#lightbox)
 
-5.  Tap the **Xamarin Sample** watch face to select it.
+5. Tap the **Xamarin Sample** watch face to select it.
 
 This changes the watch face of the Wear device to use the custom
 watch face service implemented so far:
@@ -490,15 +490,15 @@ to display an analog-style watch face and it is extended to support
 more features. The following capabilities will be added to create the
 upgraded watch face:
 
-1.  Indicates the time with analog hour, minute, and second hands.
+1. Indicates the time with analog hour, minute, and second hands.
 
-2.  Reacts to changes in visibility.
+2. Reacts to changes in visibility.
 
-3.  Responds to changes between ambient mode and interactive mode.
+3. Responds to changes between ambient mode and interactive mode.
 
-4.  Reads the properties of the underlying Wear device.
+4. Reads the properties of the underlying Wear device.
 
-5.  Automatically updates the time when a time zone change takes place.
+5. Automatically updates the time when a time zone change takes place.
 
 Before implementing the code changes below, download
 [drawable.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), unzip it, and move the unzipped
@@ -525,16 +525,16 @@ source code.
 The updated **OnCreate** method configures the watch face style as
 before, but it includes some additional steps:
 
-1.  Sets the background image to the **xamarin_background** resource
+1. Sets the background image to the **xamarin_background** resource
     that resides in **Resources/drawable-hdpi/xamarin_background.png**.
 
-2.  Initializes `Paint` objects for drawing the hour hand, minute hand,
+2. Initializes `Paint` objects for drawing the hour hand, minute hand,
     and second hand.
 
-3.  Initializes a `Paint` object for drawing the hour ticks
+3. Initializes a `Paint` object for drawing the hour ticks
     around the edge of the watch face.
 
-4.  Creates a timer that calls the `Invalidate` (redraw) method
+4. Creates a timer that calls the `Invalidate` (redraw) method
     so that the second hand will be redrawn every second. Note
     that this timer is necessary because `OnTimeTick` calls
     `Invalidate` only once every minute.
@@ -548,20 +548,20 @@ screen density that your custom watch face will support.
 The updated **OnDraw** method draws an analog-style watch face using the
 following steps:
 
-1.  Gets the current time, which is now maintained in a `time` object.
+1. Gets the current time, which is now maintained in a `time` object.
 
-2.  Determines the bounds of the drawing surface and its center.
+2. Determines the bounds of the drawing surface and its center.
 
-3.  Draws the background, scaled to fit the device when the background
+3. Draws the background, scaled to fit the device when the background
     is drawn.
 
-4.  Draws twelve *ticks* around the face of the clock
+4. Draws twelve *ticks* around the face of the clock
     (corresponding to the hours on the clock face).
 
-5.  Calculates the angle, rotation, and length for each
+5. Calculates the angle, rotation, and length for each
     watch hand.
 
-6.  Draws each hand on the watch surface. Note that the second hand is
+6. Draws each hand on the watch surface. Note that the second hand is
     not drawn if the watch is in ambient mode.
 
 

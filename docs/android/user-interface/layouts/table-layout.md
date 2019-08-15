@@ -139,12 +139,10 @@ Run the application. You should see the following:
 
 ## References
 
--   [`TableLayout`](xref:Android.Widget.TableLayout) 
+- [`TableLayout`](xref:Android.Widget.TableLayout)
+- [`TableRow`](xref:Android.Widget.TableRow)
+- [`TextView`](xref:Android.Widget.TextView)
 
--   [`TableRow`](xref:Android.Widget.TableRow) 
-
--   [`TextView`](xref:Android.Widget.TextView) 
-
-*Portions of this page are modifications based on work created and shared by the
-Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+_Portions of this page are modifications based on work created and shared by the
+Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](http://creativecommons.org/licenses/by/2.5/)._

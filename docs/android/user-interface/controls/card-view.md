@@ -40,13 +40,13 @@ of Android earlier than Android 5.0 Lollipop.
 The following is required to use new Android 5.0 and later features
 (including `CardView`) in Xamarin-based apps:
 
--  **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be
+- **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be
    installed and configured with either Visual Studio or Visual Studio for Mac.
 
--  **Android SDK** &ndash; Android 5.0 (API 21) or later must be
+- **Android SDK** &ndash; Android 5.0 (API 21) or later must be
    installed via the Android SDK Manager.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 can be used if you are specifically
+- **Java JDK 1.8** &ndash; JDK 1.7 can be used if you are specifically
     targetting API level 23 and earlier. JDK 1.8 is available from
    [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
@@ -143,8 +143,8 @@ positioned below the `ImageView` for displaying the title of the image.
 In this example layout, the `CardView` has the following
 customizations:
 
--  The `cardElevation` is increased to 4dp to cast a larger shadow.
--  The `cardCornerRadius` is increased to 5dp to make the
+- The `cardElevation` is increased to 4dp to cast a larger shadow.
+- The `cardCornerRadius` is increased to 5dp to make the
    corners appear more rounded.
 
 Because `CardView` is provided by the Android v7 support library, its
@@ -253,19 +253,19 @@ analogous methods in your code:
 
 The padding attributes are explained as follows:
 
--  `contentPadding` &ndash; Inner padding between the child views of
+- `contentPadding` &ndash; Inner padding between the child views of
     the `CardView` and all edges of the card.
 
--  `contentPaddingBottom` &ndash; Inner padding between the child views of
+- `contentPaddingBottom` &ndash; Inner padding between the child views of
     the `CardView` and the bottom edge of the card.
 
--  `contentPaddingLeft` &ndash; Inner padding between the child views of
+- `contentPaddingLeft` &ndash; Inner padding between the child views of
     the `CardView` and the left edge of the card.
 
--  `contentPaddingRight` &ndash; Inner padding between the child views of
+- `contentPaddingRight` &ndash; Inner padding between the child views of
     the `CardView` and the right edge of the card.
 
--  `contentPaddingTop` &ndash; Inner padding between the child views of
+- `contentPaddingTop` &ndash; Inner padding between the child views of
     the `CardView` and the top edge of the card.
 
 Content padding attributes are relative to the boundary of the content
@@ -285,9 +285,9 @@ as a result, the size of its shadow:
 
 The elevation attributes are explained as follows:
 
--  `cardElevation` &ndash; The elevation of the `CardView` (represents its Z axis).
+- `cardElevation` &ndash; The elevation of the `CardView` (represents its Z axis).
 
--  `cardMaxElevation` &ndash; The maximum value of the `CardView`'s elevation.
+- `cardMaxElevation` &ndash; The maximum value of the `CardView`'s elevation.
 
 Larger values of `cardElevation` increase the shadow size to make
 `CardView` seem to float higher above the background. The
@@ -310,9 +310,9 @@ you change the overall style of the `CardView`:
 
 These attributes are explained as follows:
 
--  `cardCornerRadius` &ndash; The corner radius of all corners of the `CardView`.
+- `cardCornerRadius` &ndash; The corner radius of all corners of the `CardView`.
 
--  `cardBackgroundColor` &ndash; The background color of the `CardView`.
+- `cardBackgroundColor` &ndash; The background color of the `CardView`.
 
 In this diagram, `cardCornerRadius` is set to a more rounded 10dp and
 `cardBackgroundColor` is set to `"#FFFFCC"` (light yellow).
@@ -329,22 +329,22 @@ as described in [Requirements](#requirements), above.
 `CardView` exhibits slightly different behavior on devices before
 Lollipop (API level 21):
 
--  `CardView` uses a programmatic shadow implementation that adds
+- `CardView` uses a programmatic shadow implementation that adds
    additional padding.
 
--  `CardView` does not clip child views that intersect with the
+- `CardView` does not clip child views that intersect with the
    `CardView`'s rounded corners.
 
 To help in managing these compatibility differences, `CardView`
 provides several additional attributes that you can configure in your
 layout:
 
--   `cardPreventCornerOverlap` &ndash; Set this attribute to `true` to
+- `cardPreventCornerOverlap` &ndash; Set this attribute to `true` to
     add padding when your app is running on earlier Android versions (API
     level 20 and earlier). This setting prevents `CardView` content from
     intersecting with the `CardView`'s rounded corners.
 
--   `cardUseCompatPadding` &ndash; Set this attribute to `true` to add
+- `cardUseCompatPadding` &ndash; Set this attribute to `true` to add
     padding when your app is running in versions of Android at or
     greater than API level 21. If you want to use `CardView` on
     pre-Lollipop devices and have it look the same on Lollipop (or

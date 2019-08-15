@@ -13,11 +13,11 @@ ms.date: 11/25/2015
 
 Xamarin.iOS 8.10 adds support for [System.Data](xref:System.Data), including the `Mono.Data.Sqlite.dll` ADO.NET provider. Support includes the addition of the following [assemblies](~/cross-platform/internals/available-assemblies.md):
 
--  `System.Data.dll`
--  `System.Data.Service.Client.dll`
--  `System.Transactions.dll`
--  `Mono.Data.Tds.dll`
--  `Mono.Data.Sqlite.dll`
+- `System.Data.dll`
+- `System.Data.Service.Client.dll`
+- `System.Transactions.dll`
+- `Mono.Data.Tds.dll`
+- `Mono.Data.Sqlite.dll`
 
 <a name="Example" />
 
@@ -141,12 +141,12 @@ Both **System.Data** and **Mono.Data.Sqlite** are missing some functionality.
 
 Functionality missing from **System.Data.dll** consists of:
 
--  Anything requiring  [System.CodeDom](xref:System.CodeDom) (e.g.  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
--  XML config file support (e.g.  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
--   [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depends on XML config file support)
--   [System.Data.OleDb](xref:System.Data.OleDb)
--   [System.Data.Odbc](xref:System.Data.Odbc)
--  The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
+- Anything requiring  [System.CodeDom](xref:System.CodeDom) (e.g.  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
+- XML config file support (e.g.  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
+- [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depends on XML config file support)
+- [System.Data.OleDb](xref:System.Data.OleDb)
+- [System.Data.Odbc](xref:System.Data.Odbc)
+- The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
 
 
 <a name="Mono.Data.Sqlite" />
