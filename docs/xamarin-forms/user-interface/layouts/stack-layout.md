@@ -214,7 +214,7 @@ The above code results in the following layout:
 
 ![](stack-layout-images/stack.png "Complex StackLayout")
 
-Notice that `StackLayouts`s are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout. Also notice that, because `StackLayout` doesn't support overlapping items, the page doesn't have some of the layout niceties found in the pages for the other layouts.
+Notice that the `StackLayouts` are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout. Also notice that, because `StackLayout` doesn't support overlapping items, the page doesn't have some of the layout niceties found in the pages for the other layouts.
 
 
 
