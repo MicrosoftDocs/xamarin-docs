@@ -179,7 +179,7 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 }
 ```
 
-The `static` `MainActivity.Instance` field allows the `MainActivity.NavigateToNoteEntryyPage` method to be invoked, which is shown in the following code example:
+The `static` `MainActivity.Instance` field allows the `MainActivity.NavigateToNoteEntryPage` method to be invoked, which is shown in the following code example:
 
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
