@@ -65,7 +65,7 @@ Add the following lines of code after the `<AssemblyName>` element:
 
 Example:
 
-![](updating-mac-apps-images/csproj3.png "Add these lines of code after the <AssemblyName> element")
+![Add these lines of code after the \<AssemblyName> element](updating-mac-apps-images/csproj3.png)
 
 ### 2. Update Project References
 
