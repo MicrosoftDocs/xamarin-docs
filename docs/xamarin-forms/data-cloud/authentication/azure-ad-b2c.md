@@ -272,7 +272,7 @@ namespace TodoAzure.iOS
 
 ### Android
 
-On Android, the custom URL scheme that was registered with Azure Active Directory B2C must be registered in the **AndroidManifest.xml**. MSAL expects the URL scheme to adhere to a specific pattern, described previously in [Register your mobile application with Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). The following example shows the custom URL scheme in the **AndroidManifest.xml**.
+On Android, the custom URL scheme that was registered with Azure Active Directory B2C must be registered in the **AndroidManifest.xml**. MSAL expects the URL scheme to adhere to a specific pattern, described previously in [Register your mobile application with Azure Active Directory B2C](#register-your-mobile-application-with-azure-active-directory-b2c). The following example shows the custom URL scheme in the **AndroidManifest.xml**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
