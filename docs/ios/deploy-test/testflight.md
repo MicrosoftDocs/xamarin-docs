@@ -48,12 +48,12 @@ The following workflow describes the steps needed to start using TestFlight for 
 1. For new apps, create an [iTunes Connect record](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md).
 2. [Archive and Publish](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) your application to iTunes Connect.
 3. Manage Beta Testing:
-	- Add Metadata.
-	- Add Internal Users:
-		- Max 25 users.
-	- Add External Users:
-		- Max 1000 users.
-		- Requires a beta test review, which requires compliance with Apple's guidelines.
+    - Add Metadata.
+    - Add Internal Users:
+      - Max 25 users.
+    - Add External Users:
+      - Max 1000 users.
+      - Requires a beta test review, which requires compliance with Apple's guidelines.
 4. Receive Feedback from users, act upon it, and return to step 2.
 
 ## Create an iTunes Connect record
@@ -61,7 +61,7 @@ The following workflow describes the steps needed to start using TestFlight for 
 1. Login to the [iTunes Connect Portal](https://itunesconnect.apple.com/) using your Apple developer credentials.
 2. Select **My Apps**:
 
-	[![](testflight-images/my-apps.png "Select My Apps")](testflight-images/my-apps.png#lightbox)
+    [![](testflight-images/my-apps.png "Select My Apps")](testflight-images/my-apps.png#lightbox)
 
 
 3. On the **My Apps** screen, click on the **+** button at the top-left corner of the screen to add a new app. If you have Mac and iOS developer accounts, you will be prompted to choose the new app type here.
@@ -82,7 +82,7 @@ The form should reflect exactly the information in your app's Info.plist file, a
 - **Name** — The descriptive name used when setting up the App Bundle. This must be an exact match to the **Application name** entry in your `Info.plist`.
 - **Primary Language** — The base language used within the app. This is usually whatever language you speak.
 - **Bundle ID** — A drop down menu listing all the App IDs created on your developer account.
-	* **Bundle ID Suffix** — If you have selected a wild card Bundle ID (i.e. ending with a *, as in our example above), an additional box will appear, prompting for the Bundle ID suffix. In the example the **Bundle ID** is `mobi.chkn.*`, the Suffix is **PageView**. Together these make up the **Bundle Identifier** in our `Info.plist`.
+  - **Bundle ID Suffix** — If you have selected a wild card Bundle ID (i.e. ending with a *, as in our example above), an additional box will appear, prompting for the Bundle ID suffix. In the example the **Bundle ID** is `mobi.chkn.*`, the Suffix is **PageView**. Together these make up the **Bundle Identifier** in our `Info.plist`.
 - **Version** — The Version number of the app being uploaded. This is chosen by the developer.
 - **SKU** — The SKU is a unique ID for your app, that will not be seen by users. It can be thought of in a similar way as a product ID. In the example above I have chosen the date along with a version number for that date.
 
