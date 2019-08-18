@@ -162,7 +162,7 @@ and then set the client on the web view:
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### Calling JavaScript from C#
+### Calling JavaScript from C\#
 
 In addition to telling a web view to load a new HTML page, C# code can also run JavaScript within the currently displayed page. Entire JavaScript code blocks can be created using C# strings and executed, or you can craft method calls to JavaScript already available on the page via `script` tags.
 
@@ -461,7 +461,7 @@ var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 
 After handling the URL, the method aborts the navigation so that the web view does not attempt to finish navigating to the custom URL.
 
-#### Manipulating the template from C#
+#### Manipulating the template from C\#
 
 Communication to a rendered HTML web view from C# is done by calling JavaScript in the web view. On iOS, this is done by calling `EvaluateJavascript` on the UIWebView:
 

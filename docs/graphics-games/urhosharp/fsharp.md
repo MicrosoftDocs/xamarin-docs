@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 03/29/2017
 ---
 
-# Programming UrhoSharp with F#
+# Programming UrhoSharp with F\#
 
 UrhoSharp can be programmed with F# using the same libraries and concepts used by C# programmers. The [Using UrhoSharp](~/graphics-games/urhosharp/using.md) article gives an overview of the UrhoSharp engine and should be read prior to this article.
 

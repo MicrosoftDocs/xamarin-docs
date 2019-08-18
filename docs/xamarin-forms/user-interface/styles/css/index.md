@@ -123,7 +123,7 @@ Alternatively, a style sheet can be loaded and parsed with the [`StyleSheet`](xr
 
 For more information about resource dictionaries, see [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md).
 
-### C#
+### C\#
 
 In C#, a style sheet can be loaded as an embedded resource and added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
