@@ -192,15 +192,15 @@ Certificates and provisioning profiles that have been created in the Apple Devel
 it may be necessary to download them so they that they can be accessed by
 Visual Studio for Mac and Visual Studio. To update and download any certificates created in the Apple Developer portal, do the following:
 
-1.   Quit Visual Studio for Mac or Visual Studio.
-2.   Start Xcode.
-3.   Choose  **Xcode Menu > Preferences...**
-4.   Click the  **Accounts** tab.
-5.   Select a team and click the  **Download Manual Profiles** button:
+1. Quit Visual Studio for Mac or Visual Studio.
+2. Start Xcode.
+3. Choose  **Xcode Menu > Preferences...**
+4. Click the  **Accounts** tab.
+5. Select a team and click the  **Download Manual Profiles** button:
     [![](manual-provisioning-images/selectteam1.png "Downloading Manual profiles")](manual-provisioning-images/selectteam1.png#lightbox)
 
-6.   Quit Xcode.
-7.  Start Visual Studio for Mac or Visual Studio.
+6. Quit Xcode.
+7. Start Visual Studio for Mac or Visual Studio.
 
 The new certificates or provisioning profiles will be available in Visual Studio for Mac or Visual Studio and ready to use.
 

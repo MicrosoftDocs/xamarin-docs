@@ -48,11 +48,15 @@ cert provides a terminal interface that creates new code signing identities (oft
 
 To use the cert utility, enter the following command into the terminal CLI:
 
-    fastlane cert
+```
+fastlane cert
+```
 
 By default, this will create a distribution certificate. To create a development certificate, pass the `--development` flag:
 
-    fastlane cert --development
+```
+fastlane cert --development
+```
 
 cert will prompt for your Apple ID and password, so enter this now:
 
@@ -63,7 +67,9 @@ cert will prompt for your Apple ID and password, so enter this now:
 
 The Apple ID can also be passed as an argument by using the following command:
 
-    fastlane cert -u myemailadress@domain.com
+```
+fastlane cert -u myemailadress@domain.com
+```
 
 If your Apple ID is connected to multiple teams, they will be displayed here. Select the number that corresponds to the team that you wish to use:
 
@@ -71,7 +77,9 @@ If your Apple ID is connected to multiple teams, they will be displayed here. Se
 
 The Team ID can also be passed by using the following flag:
 
-    fastlane cert -l 2TU993NY9J
+```
+fastlane cert -l 2TU993NY9J
+```
 
 fastlane will check if any of the available signing certificates is installed on your local machine, and if there is it will use it.
 
@@ -94,12 +102,15 @@ The following options can be used to give additional support when using cert:
 
 - Use the `-–help` flag for a list of all available commands:
 
-        fastlane cert --help
+    ```
+    fastlane cert --help
+    ```
 
 - Use the `-–verbose` flag to increase the verbosity of the output
 
-        fastlane cert --development --verbose
-
+    ```
+    fastlane cert --development --verbose
+    ```
 
 ## Related Links
 

@@ -36,8 +36,8 @@ guide for more information on the UI controls.
 
 There are a couple of read operations in the sample:
 
--  Reading the list
--  Reading individual records
+- Reading the list
+- Reading individual records
 
 The two methods in the `StockDatabase` class are:
 
@@ -112,10 +112,10 @@ to a writable directory before accessing it. Because SQLite is a
 standard file format that is used on many platforms, there are a number
 of tools available to create an SQLite database file:
 
--   **SQLite Manager Firefox Extension** &ndash; Works on Mac and Windows
+- **SQLite Manager Firefox Extension** &ndash; Works on Mac and Windows
     and produces files that are compatible with iOS and Android.
 
--   **Command Line** &ndash; See
+- **Command Line** &ndash; See
     [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
 
 When creating a database file for distribution with your app, take care

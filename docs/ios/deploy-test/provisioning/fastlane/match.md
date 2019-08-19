@@ -48,7 +48,9 @@ If you are the team administrator, create a private git repo, either through git
 
 Using your terminal, change directory to the project directory and run:
 
-    fastlane match init
+```
+fastlane match init
+```
 
 When prompted, enter the URL of the git repo:
 
@@ -71,11 +73,13 @@ Initializing the project creates a matchfile – a text file which can be edited
 
 Depending on what environment you require you can use any of the following commands to create a new certificate and provisioning profile and store it in your new git repo:
 
-    fastlane match appstore
+```
+fastlane match appstore
 
-    fastlane match adhoc
+fastlane match adhoc
 
-    fastlane match development
+fastlane match development
+```
 
 In addition to creating new certificates and profiles, using any of these commands will add (or update, if they already exist) the following items to your git repo:
 
@@ -94,15 +98,21 @@ Provisioning profiles are installed in `~/Library/MobileDevice/Provisioning Prof
 
 If you have untidy certificates you can use `nuke` to revoke certificates and profiles for each environment using the following commands:
 
-    fastlane match nuke
+```
+fastlane match nuke
+```
 
 To revoke all certificates and provisioning profiles for a specific environment:
 
-    fastlane match nuke development
+```
+fastlane match nuke development
+```
 
  or
 
-    fastlane match nuke distribution
+```
+fastlane match nuke distribution
+```
 
 fastlane will confirm the files that will be removed before anything is deleted.
 
@@ -122,15 +132,21 @@ The following options can be used to give additional support when using match:
 
 - Use the `-–help` flag for a list of all available commands:
 
-        fastlane match cert --help
+    ```
+    fastlane match cert --help
+    ```
 
 - Use the `-–verbose` flag to increase the verbosity of the output:
 
-        fastlane match --development --verbose
+    ```
+    fastlane match --development --verbose
+    ```
 
 - Use the `--force_for_new_devices` flag to force the provisioning profiles to renew if the device count on the developer portal has changed"
 
-        fastlane match development --force_for_new_devices
+    ```
+    fastlane match development --force_for_new_devices
+    ```
 
 ## Related Links
 

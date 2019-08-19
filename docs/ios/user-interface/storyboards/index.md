@@ -82,21 +82,21 @@ There are different types of transitions, each giving control over how a new vie
 it interacts with other view controllers in the Storyboard. These are explained below. It is also possible to subclass a segue 
 object to implement a custom transition:
 
--  **Show / Push** – A push segue adds the view controller to the navigation stack. It assumes the view controller originating the 
+- **Show / Push** – A push segue adds the view controller to the navigation stack. It assumes the view controller originating the 
 push is part of the same navigation controller as the view controller that is being added to the stack. This does the same 
 thing as  `pushViewController` , and is generally used when there is some relationship between the data on the screens. Using the 
 push segue gives you the luxury of having a navigation bar with a back button and title added to each view on the stack, allowing 
 drill down navigation through the view hierarchy.
--  **Modal** – A modal segue create a relationship between any two view controllers in your project, with the option of an 
+- **Modal** – A modal segue create a relationship between any two view controllers in your project, with the option of an 
 animated transition being shown. The child view controller will completely obscure the parent view controller when brought into 
 view. Unlike a push segue, which adds a back button for us; when using a modal segue  `DismissViewController` must be used in 
 order to return to the previous view controller.
--  **Custom** – Any custom segue can be created as a subclass of `UIStoryboardSegue`.
--  **Unwind** – An unwind segue can be used to navigate back through a push or modal segue – for example, by dismissing the 
+- **Custom** – Any custom segue can be created as a subclass of `UIStoryboardSegue`.
+- **Unwind** – An unwind segue can be used to navigate back through a push or modal segue – for example, by dismissing the 
 modally-presented view controller. In addition to this, you can unwind through not only one, but a series of push and modal 
 segues and go back multiple steps in your navigation hierarchy with a single unwind action. To understand how to use an unwind 
 segue in the iOS, read the  [Creating Unwind Segues](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) recipe.
--  **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the 
+- **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the 
 user will see first. It is represented by the segue shown below:  
 
     [![](images/sourcelesssegue.png "A sourceless segue")](images/sourcelesssegue.png#lightbox)
@@ -172,12 +172,14 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (See below), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window and then makes the window visible on the screen.
 
 3. In the `AppDelegate`, override the default `Window` method, with the following code to implement the window property:
-        
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 # [Visual Studio](#tab/windows)
 
 1. Create a new Storyboard file by right-clicking on the project to **Add > New File > iOS > Empty Storyboard**, as illustrated below: 
@@ -192,11 +194,13 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
 
 3. In the `AppDelegate`, override the default `Window` method, with the following code to implement the window property:
 
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 -----
 
 ## Creating a Storyboard with the iOS Designer

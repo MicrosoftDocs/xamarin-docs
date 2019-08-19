@@ -316,8 +316,8 @@ these packages that just contains your files and a plist.
 Our sample application has book chapters for sale – each chapter content
 package will contain:
 
--  a text file, and
--  an image to represent the chapter.
+- a text file, and
+- an image to represent the chapter.
 
 
 Start by selecting **File > New Project** from the

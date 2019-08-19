@@ -58,13 +58,13 @@ The following workflow describes the steps needed to start using TestFlight for 
 
 ## Create an iTunes Connect record
 
-1.  Login to the [iTunes Connect Portal](https://itunesconnect.apple.com/) using your Apple developer credentials.
-2.  Select **My Apps**:
+1. Login to the [iTunes Connect Portal](https://itunesconnect.apple.com/) using your Apple developer credentials.
+2. Select **My Apps**:
 
 	[![](testflight-images/my-apps.png "Select My Apps")](testflight-images/my-apps.png#lightbox)
 
 
-3.  On the **My Apps** screen, click on the **+** button at the top-left corner of the screen to add a new app. If you have Mac and iOS developer accounts, you will be prompted to choose the new app type here.
+3. On the **My Apps** screen, click on the **+** button at the top-left corner of the screen to add a new app. If you have Mac and iOS developer accounts, you will be prompted to choose the new app type here.
 
 You will be presented with the **New iOS App** submission window, which needs to contain exactly the same information as your app's Info.plist
 
@@ -79,12 +79,12 @@ The form should reflect exactly the information in your app's Info.plist file, a
 [![](testflight-images/infoplist.png "The app's Info.plist")](testflight-images/infoplist.png#lightbox)
 [![](testflight-images/newiosapp.png "The form on iTunes Connect")](testflight-images/newiosapp.png#lightbox)
 
--  **Name** — The descriptive name used when setting up the App Bundle. This must be an exact match to the **Application name** entry in your `Info.plist`.
--  **Primary Language** — The base language used within the app. This is usually whatever language you speak.
--  **Bundle ID** — A drop down menu listing all the App IDs created on your developer account.
-	*  	**Bundle ID Suffix** — If you have selected a wild card Bundle ID (i.e. ending with a *, as in our example above), an additional box will appear, prompting for the Bundle ID suffix. In the example the **Bundle ID** is `mobi.chkn.*`, the Suffix is **PageView**. Together these make up the **Bundle Identifier** in our `Info.plist`.
--  **Version** — The Version number of the app being uploaded. This is chosen by the developer.
--  **SKU** — The SKU is a unique ID for your app, that will not be seen by users. It can be thought of in a similar way as a product ID. In the example above I have chosen the date along with a version number for that date.
+- **Name** — The descriptive name used when setting up the App Bundle. This must be an exact match to the **Application name** entry in your `Info.plist`.
+- **Primary Language** — The base language used within the app. This is usually whatever language you speak.
+- **Bundle ID** — A drop down menu listing all the App IDs created on your developer account.
+	* **Bundle ID Suffix** — If you have selected a wild card Bundle ID (i.e. ending with a *, as in our example above), an additional box will appear, prompting for the Bundle ID suffix. In the example the **Bundle ID** is `mobi.chkn.*`, the Suffix is **PageView**. Together these make up the **Bundle Identifier** in our `Info.plist`.
+- **Version** — The Version number of the app being uploaded. This is chosen by the developer.
+- **SKU** — The SKU is a unique ID for your app, that will not be seen by users. It can be thought of in a similar way as a product ID. In the example above I have chosen the date along with a version number for that date.
 
 
 ## Upload your App
@@ -185,9 +185,9 @@ Testing can be turned off at any time.
 
 Internal Testers are members of your development team who have been assigned one of the following roles in iTunes Connect:
 
--  **Admin** – An admin is responsible for adding and managing new users in iTunes Connect.
--  **Legal** – The Team Agent is the only admin user that will be assigned the Legal role. It allows them to sign legal contracts.
--  **Technical** – A technical user can change most properties regarding an app. For example, edit app information, upload a binary and send an app for review.
+- **Admin** – An admin is responsible for adding and managing new users in iTunes Connect.
+- **Legal** – The Team Agent is the only admin user that will be assigned the Legal role. It allows them to sign legal contracts.
+- **Technical** – A technical user can change most properties regarding an app. For example, edit app information, upload a binary and send an app for review.
 
 Each build can be shared with a maximum of 25 members.
 

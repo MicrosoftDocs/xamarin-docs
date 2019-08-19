@@ -14,11 +14,11 @@ ms.date: 03/22/2017
 A UITableView can have a ‘grouped’ or ‘plain’ style, and consists of
 the following parts:
 
--  [Section Header](#Section_Header)
--  [Cells](#Cells) (or rows, if you prefer)
--  [Section Footer](#Section_Footer)
--  [Index](#Index)
--  [Editing mode](#Edit_Features) (includes ‘swipe to delete’ and drag handles to change row order) 
+- [Section Header](#Section_Header)
+- [Cells](#Cells) (or rows, if you prefer)
+- [Section Footer](#Section_Footer)
+- [Index](#Index)
+- [Editing mode](#Edit_Features) (includes ‘swipe to delete’ and drag handles to change row order) 
 
 These screenshots show how section rows, headers, footers, edit controls and the index are displayed.
 

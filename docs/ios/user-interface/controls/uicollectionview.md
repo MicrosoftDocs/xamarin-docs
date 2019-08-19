@@ -31,9 +31,9 @@ can imagine.
 The `UICollectionView` class is made up of three different
 items:
 
--  **Cells** – Data-driven views for each item
--  **Supplementary Views** – Data-driven views associated with a section.
--  **Decoration Views** – Non-data driven views created by a layout
+- **Cells** – Data-driven views for each item
+- **Supplementary Views** – Data-driven views associated with a section.
+- **Decoration Views** – Non-data driven views created by a layout
 
 ## Cells
 
@@ -46,9 +46,9 @@ views, as shown in the figure below:
 The `UICollectionViewCell` class has the following properties for
 each of these views:
 
--   `ContentView` – This view contains the content that the cell presents. It is rendered in the topmost z-order on the screen.
--   `SelectedBackgroundView` – Cells have built in support for selection. This view is used to visually denote that a cell is selected. It is rendered just below the  `ContentView` when a cell is selected.
--   `BackgroundView` – Cells can also display a background, which is presented by the  `BackgroundView` . This view is rendered beneath the  `SelectedBackgroundView` .
+- `ContentView` – This view contains the content that the cell presents. It is rendered in the topmost z-order on the screen.
+- `SelectedBackgroundView` – Cells have built in support for selection. This view is used to visually denote that a cell is selected. It is rendered just below the  `ContentView` when a cell is selected.
+- `BackgroundView` – Cells can also display a background, which is presented by the  `BackgroundView` . This view is rendered beneath the  `SelectedBackgroundView` .
 
 
 By setting the `ContentView` such that it is smaller than the `BackgroundView` and `SelectedBackgroundView`, the `BackgroundView` can be used to visually frame the content, while the `SelectedBackgroundView` will be displayed when a cell is selected,
@@ -158,10 +158,10 @@ background view that scrolls with the content in the `UICollectionView`, as show
 
 As with other parts of iOS, such as `UITableView` and `MKMapView`, `UICollectionView` gets its data from a *data source*, which is exposed in Xamarin.iOS via the **`UICollectionViewDataSource`** class. This class is responsible for providing content to the `UICollectionView` such as:
 
--  **Cells** – Returned from  `GetCell` method.
--  **Supplementary Views** – Returned from  `GetViewForSupplementaryElement` method.
--  **Number of sections** – Returned from  `NumberOfSections` method. Defaults to 1 if not implemented.
--  **Number of items per section** – Returned from  `GetItemsCount` method.
+- **Cells** – Returned from  `GetCell` method.
+- **Supplementary Views** – Returned from  `GetViewForSupplementaryElement` method.
+- **Number of sections** – Returned from  `NumberOfSections` method. Defaults to 1 if not implemented.
+- **Number of items per section** – Returned from  `GetItemsCount` method.
 
 ### UICollectionViewController
 For convenience, the `UICollectionViewController` class is
@@ -221,9 +221,9 @@ in the animal class and returned for display to the `UICollectionView`.
 
 The `UICollectionView` class uses a delegate of type `UICollectionViewDelegate` to support interaction with content in the `UICollectionView`. This allows control of:
 
--  **Cell Selection** – Determines if a cell is selected.
--  **Cell Highlighting** – Determines if a cell is currently being touched.
--  **Cell Menus** – Menu displayed for a cell in response to a long press gesture.
+- **Cell Selection** – Determines if a cell is selected.
+- **Cell Highlighting** – Determines if a cell is currently being touched.
+- **Cell Menus** – Menu displayed for a cell in response to a long press gesture.
 
 
 As with the data source, the `UICollectionViewController` is
@@ -294,9 +294,9 @@ Each Cell in a `UICollectionView` is capable of showing a menu
 that allows cut, copy, and paste to optionally be supported. To create an edit
 menu on a cell:
 
-1.  Override  `ShouldShowMenu` and return true if the item should show a menu.
-1.  Override  `CanPerformAction` and return true for every action that the item can perform, which will be any of cut, copy or paste.
-1.  Override  `PerformAction` to perform the edit, copy of paste operation.
+1. Override  `ShouldShowMenu` and return true if the item should show a menu.
+1. Override  `CanPerformAction` and return true for every action that the item can perform, which will be any of cut, copy or paste.
+1. Override  `PerformAction` to perform the edit, copy of paste operation.
 
 
 The following screenshot show the menu when a cell is long pressed:
@@ -324,8 +324,8 @@ Layouts in a `UICollectionView` are defined in a class that
 inherits from `UICollectionViewLayout`. The layout implementation is
 responsible for creating the layout attributes for every item in the `UICollectionView`. There are two ways to create a layout:
 
--  Use the built-in  `UICollectionViewFlowLayout` .
--  Provide a custom layout by inheriting from  `UICollectionViewLayout` .
+- Use the built-in  `UICollectionViewFlowLayout` .
+- Provide a custom layout by inheriting from  `UICollectionViewLayout` .
 
 
  <a name="Flow_Layout" />
@@ -339,14 +339,14 @@ seen.
 
 To use a flow layout:
 
--  Create an instance of  `UICollectionViewFlowLayout` :
+- Create an instance of  `UICollectionViewFlowLayout` :
 
 
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
--  Pass the instance to the constructor of the  `UICollectionView` :
+- Pass the instance to the constructor of the  `UICollectionView` :
 
 
 ```csharp
@@ -394,10 +394,10 @@ shown below:
 To implement this by subclassing `UICollectionViewFlowLayout`
 requires:
 
--  Initializing any layout properties that apply to the layout itself or all items in the layout in the constructor.
--  Overriding  `ShouldInvalidateLayoutForBoundsChange` , returning true so that when bounds of the  `UICollectionView` changes, the layout of the cells will be recalculated. This is used in this case ensure the code for transformation applied to the centermost cell will be applied during scrolling.
--  Overriding  `TargetContentOffset` to make the centermost cell snap to the center of the  `UICollectionView` as scrolling stops.
--  Overriding  `LayoutAttributesForElementsInRect` to return an array of  `UICollectionViewLayoutAttributes` . Each  `UICollectionViewLayoutAttribute` contains information on how to layout the particular item, including properties such as its  `Center` ,  `Size` ,  `ZIndex` and  `Transform3D` .
+- Initializing any layout properties that apply to the layout itself or all items in the layout in the constructor.
+- Overriding  `ShouldInvalidateLayoutForBoundsChange` , returning true so that when bounds of the  `UICollectionView` changes, the layout of the cells will be recalculated. This is used in this case ensure the code for transformation applied to the centermost cell will be applied during scrolling.
+- Overriding  `TargetContentOffset` to make the centermost cell snap to the center of the  `UICollectionView` as scrolling stops.
+- Overriding  `LayoutAttributesForElementsInRect` to return an array of  `UICollectionViewLayoutAttributes` . Each  `UICollectionViewLayoutAttribute` contains information on how to layout the particular item, including properties such as its  `Center` ,  `Size` ,  `ZIndex` and  `Transform3D` .
 
 
 The following code shows such an implementation:
@@ -479,9 +479,9 @@ also be fully customized by inheriting directly from `UICollectionViewLayout`.
 
 The key methods to override are:
 
--   `PrepareLayout` – Used for performing initial geometric calculations that will be used throughout the layout process.
--   `CollectionViewContentSize` – Returns the size of the area used to display content.
--   `LayoutAttributesForElementsInRect` – As with the UICollectionViewFlowLayout example shown earlier, this method is used to provide information to the  `UICollectionView` regarding how to layout each item. However, unlike the  `UICollectionViewFlowLayout` , when creating a custom layout, you can position items however you choose.
+- `PrepareLayout` – Used for performing initial geometric calculations that will be used throughout the layout process.
+- `CollectionViewContentSize` – Returns the size of the area used to display content.
+- `LayoutAttributesForElementsInRect` – As with the UICollectionViewFlowLayout example shown earlier, this method is used to provide information to the  `UICollectionView` regarding how to layout each item. However, unlike the  `UICollectionViewFlowLayout` , when creating a custom layout, you can position items however you choose.
 
 
 For example, the same content could be presented in a circular layout as

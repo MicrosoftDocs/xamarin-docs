@@ -51,20 +51,20 @@ Android application packages are ZIP containers with a *.apk* file
 extension. Xamarin.Android application packages have the same structure
 and layout as normal Android packages, with the following additions:
 
--   The application assemblies (containing IL) are *stored*
+- The application assemblies (containing IL) are *stored*
     uncompressed within the *assemblies* folder. During process startup
     in Release builds the *.apk* is *mmap()* ed into the process and
     the assemblies are loaded from memory. This permits faster app
     startup, as assemblies do not need to be extracted prior to
     execution.  
--   *Note:* Assembly location information such as
+- *Note:* Assembly location information such as
     [Assembly.Location](xref:System.Reflection.Assembly.Location)
     and [Assembly.CodeBase](xref:System.Reflection.Assembly.CodeBase)
     *cannot be relied upon* in Release builds. They do not exist as
     distinct filesystem entries, and they have no usable location.
 
 
--   Native libraries containing the Mono runtime are present within the
+- Native libraries containing the Mono runtime are present within the
     *.apk* . A Xamarin.Android application must contain native
     libraries for the desired/targeted Android architectures, e.g.
     *armeabi* , *armeabi-v7a* , *x86* . Xamarin.Android applications
@@ -216,40 +216,40 @@ constructor *on the same instance* when the ACW constructor executes.
 
 Order of events:
 
-1.  Layout XML is loaded into a
+1. Layout XML is loaded into a
     [ContentView](https://github.com/xamarin/monodroid-samples/blob/f01b5c31/ApiDemo/Text/LogTextBox1.cs#L41).
 
-2.  Android instantiates the Layout object graph, and instantiates an
+2. Android instantiates the Layout object graph, and instantiates an
     instance of *monodroid.apidemo.LogTextBox* , the ACW for
     *LogTextBox* .
 
-3.  The *monodroid.apidemo.LogTextBox* constructor executes the
+3. The *monodroid.apidemo.LogTextBox* constructor executes the
     [android.widget.TextView](https://developer.android.com/reference/android/widget/TextView.html#TextView%28android.content.Context,%20android.util.AttributeSet%29)
     constructor.
 
-4.  The *TextView* constructor invokes
+4. The *TextView* constructor invokes
     *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* .
 
-5.  *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* invokes
+5. *monodroid.apidemo.LogTextBox.getDefaultMovementMethod()* invokes
     *LogTextBox.n_getDefaultMovementMethod()* , which invokes
     *TextView.n_GetDefaultMovementMethod()* , which invokes
     [Java.Lang.Object.GetObject&lt;TextView&gt; (handle, JniHandleOwnership.DoNotTransfer)](xref:Java.Lang.Object.GetObject*)
     .
 
-6.  *Java.Lang.Object.GetObject&lt;TextView&gt;()* checks to see if
+6. *Java.Lang.Object.GetObject&lt;TextView&gt;()* checks to see if
     there is already a corresponding C# instance for *handle* . If
     there is, it is returned. In this scenario, there isn't, so
     *Object.GetObject&lt;T&gt;()* must create one.
 
-7.  *Object.GetObject&lt;T&gt;()* looks for the *LogTextBox(IntPtr,
+7. *Object.GetObject&lt;T&gt;()* looks for the *LogTextBox(IntPtr,
     JniHandleOwneship)* constructor, invokes it, creates a mapping
     between *handle* and the created instance, and returns the created
     instance.
 
-8.  *TextView.n_GetDefaultMovementMethod()* invokes the
+8. *TextView.n_GetDefaultMovementMethod()* invokes the
     *LogTextBox.DefaultMovementMethod* property getter.
 
-9.  Control returns to the *android.widget.TextView* constructor, which
+9. Control returns to the *android.widget.TextView* constructor, which
     finishes execution.
 
 10. The *monodroid.apidemo.LogTextBox* constructor executes, invoking

@@ -124,7 +124,7 @@ So let’s look at adding some Touch ID Authentication to our application. In th
 3. Drag a new **View Controller** from the **Toolbox** to the **Design Surface**. Set this as the **Root View Controller** by **Ctrl + Drag** from the **Navigation Controller**:
 
 	[![](touchid-images/image4.png "Set the Root View Controller")](touchid-images/image4.png#lightbox)
-4.  Name the new View Controller `AuthenticationViewController`.
+4. Name the new View Controller `AuthenticationViewController`.
 5. Next, drag a button and place it on the `AuthenticationViewController`. Call this `AuthenticateButton`, and give it the text `Add a Chore`.
 6. Create an event on the `AuthenticateButton` called `AuthenticateMe`.
 7. Create a manual segue from `AuthenticationViewController` by clicking the black bar at the bottom and **Ctrl + Drag** from the bar to the `MasterViewController` and choosing **push** (or **show** if using size classes):

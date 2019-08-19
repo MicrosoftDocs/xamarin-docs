@@ -16,8 +16,8 @@ To make debugging possible, Android supports the Java Debug Wire Protocol (JDWP)
 
 JDWP can be the value of the `android:debuggable` attribute in an Android application. Xamarin.Android provides the following ways to set this attribute:
 
-1.  Created a  `AndroidManifext.xml` file, and setting the  `android:debuggable` attribute there.
-2.  Including the  `ApplicationAttribute` in a  `.CS` file like so :  `[assembly: Application(Debuggable=false)]` .
+1. Created a  `AndroidManifext.xml` file, and setting the  `android:debuggable` attribute there.
+2. Including the  `ApplicationAttribute` in a  `.CS` file like so :  `[assembly: Application(Debuggable=false)]` .
 
 
 If both the `AndroidManifest.xml` and the `ApplicationAttribute` are present, the contents of `AndroidManifest.xml` take priority over what is specified by the `ApplicationAttribute`.

@@ -107,13 +107,13 @@ deploy the app. However, for Apple TV App Store distribution, only certificate a
 
 Provisioning involves the following steps using Apple's web based iOS Provisioning Portal:
 
-1.  Select **Provisioning** > **Distribution**.
-2.  Click the **+** button and select the type of Distribution Profile that you want to create as **Apple TV App Store**.
-3.  Select **App ID** from the dropdown list that you want to create a Distribution Profile for.
-4.  Select certificate required to sign the application.
-5.  Enter a **Name** for the new **Distribution Profile** and generate the profile.
-6.  Refresh the list of available profiles in Xcode.
-7.  Select the Distribution Provisioning Profile in Visual Studio for the **App Store** _Build Configuration_.
+1. Select **Provisioning** > **Distribution**.
+2. Click the **+** button and select the type of Distribution Profile that you want to create as **Apple TV App Store**.
+3. Select **App ID** from the dropdown list that you want to create a Distribution Profile for.
+4. Select certificate required to sign the application.
+5. Enter a **Name** for the new **Distribution Profile** and generate the profile.
+6. Refresh the list of available profiles in Xcode.
+7. Select the Distribution Provisioning Profile in Visual Studio for the **App Store** _Build Configuration_.
 
 For detailed instructions, please see the [Creating a Distribution Profile](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) and [Selecting a Distribution Profile in a Xamarin.iOS Project](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile). Again, both of these documents are specific to iOS but the same technique is used for tvOS apps.
 

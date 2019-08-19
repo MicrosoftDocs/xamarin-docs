@@ -148,8 +148,8 @@ framework is required.
 
 To do this you should take the following steps:
 
--  Open your **Project Options** and navigate to the **iOS Build** pane.
--  Add  `'-gcc_flags "-weak_framework iAd"'` to the **Additional Options** for each configuration you wish to weakly link on:
+- Open your **Project Options** and navigate to the **iOS Build** pane.
+- Add  `'-gcc_flags "-weak_framework iAd"'` to the **Additional Options** for each configuration you wish to weakly link on:
 
 
 [![](compiling-for-different-devices-images/image3.png "Additional Options")](compiling-for-different-devices-images/image3.png#lightbox)

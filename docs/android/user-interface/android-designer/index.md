@@ -32,15 +32,15 @@ the process of UI creation less laborious.
 This article surveys the many features of the Xamarin.Android Designer. It
 explains the following:
 
-1.  The basics of using the Designer.
-2.  The various parts that make up the Designer.
-3.  How to load an Android layout into the Designer.
-4.  How to add widgets.
-5.  How to edit properties.
-6.  How to work with various resources and device configurations.
-7.  How to modify a user interface for alternative views such as landscape and portrait. 
-8.  How to handle conflicts that may arise when working with alternative views. 
-9.  How to use Material Design tools to build Material Design-compliant apps.
+1. The basics of using the Designer.
+2. The various parts that make up the Designer.
+3. How to load an Android layout into the Designer.
+4. How to add widgets.
+5. How to edit properties.
+6. How to work with various resources and device configurations.
+7. How to modify a user interface for alternative views such as landscape and portrait. 
+8. How to handle conflicts that may arise when working with alternative views. 
+9. How to use Material Design tools to build Material Design-compliant apps.
 
 
 

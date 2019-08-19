@@ -42,8 +42,8 @@ to help you successfully update to the Unified API.
 
 From this point on, our APIs will be surfaced in two ways:
 
--  **Classic API:** Limited to 32-bits (only) and exposed in the `monotouch.dll` and `XamMac.dll` assemblies.
--  **Unified API:** Support both 32 and 64 bit development with a single API available in the `Xamarin.iOS.dll` and  `Xamarin.Mac.dll` assemblies.
+- **Classic API:** Limited to 32-bits (only) and exposed in the `monotouch.dll` and `XamMac.dll` assemblies.
+- **Unified API:** Support both 32 and 64 bit development with a single API available in the `Xamarin.iOS.dll` and  `Xamarin.Mac.dll` assemblies.
 
 This means that for Enterprise developers (not targetting the App Store),
 you can continue using the existing Classic APIs, as we will keep
@@ -64,8 +64,8 @@ This makes it simpler to share code between the Mac and iOS
 	platforms without resorting to conditional compilation and
 	will reduce the noise at the top of your source code files.
 
--  **Classic API:** Namespaces use `MonoTouch.` or `MonoMac.` prefix.
--  **Unified API:** No namespace prefix
+- **Classic API:** Namespaces use `MonoTouch.` or `MonoMac.` prefix.
+- **Unified API:** No namespace prefix
 
 ## Runtime Defaults
 
@@ -226,9 +226,9 @@ public static NSDate DateTimeToNSDate(this DateTime date)
 Inside Xamarin.iOS classic API (monotouch.dll) the `[Obsolete]` attribute
 	was used in two different ways:
 
--  **Deprecated iOS API:** This is when Apple hints to you to stop using an API because it's being superseded by a newer one. The Classic API is still fine and often required (if you support the older version of iOS).
+- **Deprecated iOS API:** This is when Apple hints to you to stop using an API because it's being superseded by a newer one. The Classic API is still fine and often required (if you support the older version of iOS).
  Such API (and the  `[Obsolete]` attribute) are included into the new Xamarin.iOS assemblies.
--  **Incorrect API** Some API had typos on their names.
+- **Incorrect API** Some API had typos on their names.
 
 For the original assemblies (monotouch.dll and XamMac.dll)
 	we kept the old code available for compatibility but they have
@@ -245,7 +245,9 @@ In classic this was a `public` constructor. However it was easy to misuse this f
 
 To avoid those kind of problems the `IntPtr` constructors are now `protected` in **unified** API, to be used only for subclassing. This will ensure the correct/safe API is used to create managed instance from handles, i.e.
 
-    var label = Runtime.GetNSObject<UILabel> (handle);
+```csharp
+var label = Runtime.GetNSObject<UILabel> (handle);
+```
 
 This API will return an existing managed instance (if it already exists) or will create a new one (when required). It is already available in both classic and unified API.
 
@@ -276,7 +278,9 @@ Previously that would be a compiler error because an `Action` can't be assigned 
 
 In **unified** some simple (e.g. one parameter) .net delegates were replaced with `Action<T>`. E.g.
 
-	public delegate void NSNotificationHandler (NSNotification notification);
+```csharp
+public delegate void NSNotificationHandler (NSNotification notification);
+```
 
 can now be used as an `Action<NSNotification>`. This promote code reuse and reduce code duplication inside both Xamarin.iOS and your own applications.
 
@@ -292,11 +296,15 @@ In a few cases some constants had to be changed from `string` to `NSString`, e.g
 
 **Classic**
 
-    public virtual string ReuseIdentifier { get; }
+```csharp
+public virtual string ReuseIdentifier { get; }
+```
 
 **Unified**
 
-    public virtual NSString ReuseIdentifier { get; }
+```csharp
+public virtual NSString ReuseIdentifier { get; }
+```
 
 In general we prefer the .NET `System.String` type. However, despite Apple guidelines, some native API are comparing constant pointers (not the string itself) and this can only work when we expose the constants as `NSString`.
 
@@ -315,11 +323,15 @@ These limitations have been removed and cleaned up on the
 
 **Classic**
 
-    public virtual AVAssetResourceLoaderDelegate Delegate { get; }
+```csharp
+public virtual AVAssetResourceLoaderDelegate Delegate { get; }
+```
 
 **Unified**
 
-    public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
+```csharp
+public virtual IAVAssetResourceLoaderDelegate Delegate { get; }
+```
 
 The `I` prefix means **unified** expose an interface, instead of a specific type, for the ObjC protocol. This will ease cases where you do not want to subclass the specific type that Xamarin.iOS provided.
 
@@ -327,11 +339,15 @@ It also allowed some API to be more precise and easy to use, e.g.:
 
 **Classic**
 
-    public virtual void SelectionDidChange (NSObject uiTextInput);
+```csharp
+public virtual void SelectionDidChange (NSObject uiTextInput);
+```
 
 **Unified**
 
-    public virtual void SelectionDidChange (IUITextInput uiTextInput);
+```csharp
+public virtual void SelectionDidChange (IUITextInput uiTextInput);
+```
 
 Such API are now easier to us, without referring to documentation, and your IDE code completion will provide you with more useful suggestions based on the protocol/interface.
 

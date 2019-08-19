@@ -21,11 +21,11 @@ In this guide and accompanying walkthroughs, we are going to learn to perform ap
 
 ## Contents
 
-1.  [Introduction to Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
-1.  [Application Lifecycle Demo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
-1.  [iOS Backgrounding Techniques](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
-1.  [Walkthroughs: Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
-1.  [iOS Backgrounding Guidance](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
+1. [Introduction to Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
+1. [Application Lifecycle Demo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
+1. [iOS Backgrounding Techniques](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
+1. [Walkthroughs: Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+1. [iOS Backgrounding Guidance](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
 
 ## Summary
 

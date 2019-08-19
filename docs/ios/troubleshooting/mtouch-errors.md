@@ -125,8 +125,8 @@ SGen (--sgen) must be enabled if profiling (--profiling) is enabled.
 
 This can happen in the following circumstances:
 
-*  ARMv6 is enabled and Xcode 4.5 or later is installed.
-*  ARMv7s is enabled and Xcode 4.4 or earlier is installed.
+* ARMv6 is enabled and Xcode 4.5 or later is installed.
+* ARMv7s is enabled and Xcode 4.4 or earlier is installed.
 
 Please verify that the installed version of Xcode supports the selected architectures.
 
@@ -160,12 +160,12 @@ Mtouch does not recognize the command line argument mentioned in the error messa
 
 There are several options for mtouch that can't be used simultaneously:
 
--  --logdev
--  --installdev
--  --killdev
--  --launchdev
--  --launchdebug
--  --launchsim
+- --logdev
+- --installdev
+- --killdev
+- --launchdev
+- --launchdebug
+- --launchsim
 
 <a name="MT0020" />
 
@@ -580,7 +580,9 @@ The assemblies mentioned in the error message have conflicting build targets.
 
 For example:
 
-    --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
+```
+  --assembly-build-target:Assembly1.dll=framework=MyBinary --assembly-build-target:Assembly2.dll=dynamiclibrary=MyBinary
+```
 
 This example is trying to create both a dynamic library and a framework with the same make (`MyBinary`).
 
@@ -592,7 +594,9 @@ The assemblies mentioned in the error message are all compiled to a single stati
 
 For example:
 
-    --assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
+```
+--assembly-build-target:Assembly1.dll=staticobject=MyBinary --assembly-build-target:Assembly2.dll=staticobject=MyBinary
+```
 
 This example tries to build a static object (`MyBinary`) comprised of two assemblies (`Assembly1.dll` and `Assembly2.dll`), which is not allowed.
 
@@ -614,7 +618,9 @@ The assembly build target name must be a valid filename.
 
 For example these values will trigger this error:
 
-    --assembly-build-target:Assembly1.dll=staticobject=my/path.o
+```
+--assembly-build-target:Assembly1.dll=staticobject=my/path.o
+```
 
 because `my/path.o` is not a valid filename due to the directory separator character.
 
@@ -1443,7 +1449,9 @@ Please make sure the dynamic library is a valid Mach-O dynamic library.
 
 The format of a library can be verified using the `file` command from a terminal:
 
-    file -arch all -l /path/to/library.dylib
+```
+file -arch all -l /path/to/library.dylib
+```
 
 <a name="MT1601" />
 
@@ -1455,7 +1463,9 @@ Please make sure the static library is a valid Mach-O static library.
 
 The format of a library can be verified using the `file` command from a terminal:
 
-    file -arch all -l /path/to/library.a
+```
+file -arch all -l /path/to/library.a
+```
 
 <a name="MT1602" />
 
@@ -1467,7 +1477,9 @@ Please make sure the dynamic library is a valid Mach-O dynamic library.
 
 The format of a library can be verified using the `file` command from a terminal:
 
-    file -arch all -l /path/to/library.dylib
+```
+file -arch all -l /path/to/library.dylib
+```
 
 <a name="MT1603" />
 
@@ -1479,7 +1491,9 @@ Please make sure the fat archive is valid.
 
 The format of a fat archive can be verified using the `file` command from a terminal:
 
-    file -arch all -l /path/to/file
+```
+file -arch all -l /path/to/file
+```
 
 <a name="MT1604" />
 
@@ -1491,7 +1505,9 @@ Please make sure the file is a valid Mach-O dynamic library.
 
 The format of a file can be verified using the `file` command from a terminal:
 
-    file -arch all -l /path/to/file
+```
+file -arch all -l /path/to/file
+```
 
 ## MT2xxx: Linker error messages
 
@@ -2246,7 +2262,9 @@ This happens when the native linker cannot find a symbol that is referenced some
 * A third-party binding requires a framework, but the binding does not specify this in its `[LinkWith]` attribute. Solutions:
   - If you're the author of the third-party binding, or have access to its source, modify the binding's `[LinkWith]` attribute to include the framework it needs:
 
-            [LinkWith ("mylib.a", Frameworks = "SystemConfiguration")]
+    ```csharp
+    [LinkWith ("mylib.a", Frameworks = "SystemConfiguration")]
+    ```
 
   - If you can't modify the third-party binding, you can manually link with the required framework by passing `-gcc_flags '-framework SystemFramework'` to `mtouch` (this is done by modifying the additional mtouch arguments in the project's iOS Build options page. Remember that this must be done for every project configuration).
 * In some cases a managed binding is composed of several native libraries, and all must be included in the bindings. It is possible to have more than one native library in each binding project, so the solution is to just add all the required native libraries to the binding project.</li>
@@ -2258,7 +2276,9 @@ This happens when the native linker cannot find a symbol that is referenced some
 * A third-party binding / library was built using C++, but the binding does not specify this in its `[LinkWith]` attribute. This is usually fairly easy to recognize, because the symbols have are mangled C++ symbols (one common example is `__ZNKSt9exception4whatEv`).
   - If you're the author of the third-party binding, or have access to its source, modify the binding's `[LinkWith]` attribute to set the `IsCxx` flag:
 
-            [LinkWith ("mylib.a", IsCxx = true)]
+    ```csharp
+    [LinkWith ("mylib.a", IsCxx = true)]
+    ```
 
   - If you can't modify the third-party binding, or you're linking manually with a third-party library, you can set the equivalent flag by passing `-cxx` to mtouch (this is done by modifying the additional mtouch arguments in the project's iOS Build options page. Remember that this must be done for every project configuration).
 
@@ -2271,11 +2291,13 @@ This happens when the native linker cannot find an Objective-C class that is ref
 * A third-party binding bound an Objective-C protocol, but did not annotate it with the `[Protocol]` attribute in its api definition. Solutions:
   - Add the missing `[Protocol]` attribute:
 
-              [BaseType (typeof (NSObject))]
-              [Protocol] // Add this
-              public interface MyProtocol
-              {
-              }
+    ```csharp
+    [BaseType (typeof (NSObject))]
+    [Protocol] // Add this
+    public interface MyProtocol
+    {
+    }
+    ```
 
 <a name="MT5212" />
 
@@ -2288,48 +2310,54 @@ This happens when the native linker encounters duplicated symbols between all th
 * A native library is not correctly built, and contains the same symbol more than once.
   You can confirm this by using the following set of commands from a terminal (replace i386 with x86_64/armv7/armv7s/arm64 according to which architecture you're building for):
 
-        # Native libraries are usually fat libraries, containing binary code for
-        # several architectures in the same file. First we extract the binary
-        # code for the architecture we're interested in.
-        lipo libNative.a -thin i386 -output libNative.i386.a
+  ```
+  # Native libraries are usually fat libraries, containing binary code for
+  # several architectures in the same file. First we extract the binary
+  # code for the architecture we're interested in.
+  lipo libNative.a -thin i386 -output libNative.i386.a
 
-        # Now query the native library for the duplicated symbol.
-        nm libNative.i386.a | fgrep 'SYMBOL'
+  # Now query the native library for the duplicated symbol.
+  nm libNative.i386.a | fgrep 'SYMBOL'
 
-        # You can also list the object files inside the native library.
-        # In most cases this will reveal duplicated object files.
-        ar -t libNative.i386.a
+  # You can also list the object files inside the native library.
+  # In most cases this will reveal duplicated object files.
+  ar -t libNative.i386.a
+  ```
 
   There are a few possible ways to fix this:
 
   - Request that the provider of the native library fix it and provide the updated version.
   - Fix it yourself by removing the extra object files (this only works if the problem is in fact duplicated object files)
 
-            # Find out if the library is a fat library, and which
-            # architectures it contains.
-            lipo -info libNative.a
+  ```
+  # Find out if the library is a fat library, and which
+  # architectures it contains.
+  lipo -info libNative.a
 
-            # Extract each architecture (i386/x86_64/armv7/armv7s/arm64) to a separate file
-            lipo libNative.a -thin ARCH -output libNative.ARCH.a
+  # Extract each architecture (i386/x86_64/armv7/armv7s/arm64) to a separate file
+  lipo libNative.a -thin ARCH -output libNative.ARCH.a
 
-            # Extract the object files for the offending architecture
-            # This will remove the duplicates by overwriting them
-            # (since they have the same filename)
-            mkdir -p ARCH
-            cd ARCH
-            ar -x ../libNative.ARCH.a
+  # Extract the object files for the offending architecture
+  # This will remove the duplicates by overwriting them
+  # (since they have the same filename)
+  mkdir -p ARCH
+  cd ARCH
+  ar -x ../libNative.ARCH.a
 
-            # Reassemble the object files in an .a
-            ar -r ../libNative.ARCH.a *.o
-            cd ..
+  # Reassemble the object files in an .a
+  ar -r ../libNative.ARCH.a *.o
+  cd ..
 
-            # Reassemble the fat library
-            lipo *.a -create -output libNative.a
+  # Reassemble the fat library
+  lipo *.a -create -output libNative.a
+  ```
 
   - Ask the linker to remove unused code. Xamarin.iOS will do this automatically if all of the following conditions are met:
     - All third-party bindings' `[LinkWith]` attributes have enabled SmartLink:
 
-            [assembly: LinkWith ("libNative.a", SmartLink = true)]
+      ```csharp
+      [assembly: LinkWith ("libNative.a", SmartLink = true)]
+      ```
 
     - No `-gcc_flags` is passed to mtouch (in the additional mtouch arguments field of the project's iOS Build options).
     - It's also possible to ask the linker directly to remove unused code by adding `-gcc_flags -dead_strip` to the additional mtouch arguments in the project's iOS Build options.

@@ -15,9 +15,9 @@ The simplest way to perform backgrounding on iOS is to break your backgrounding 
 
 Background tasks can be broken up into three categories:
 
-1.  **Background-Safe Tasks** - Called anywhere in the application where you have a task you don't want interrupted should the application enter the background.
-1.  **DidEnterBackground Tasks** - Called during the  `DidEnterBackground` application lifecycle method to assist in cleanup and state saving.
-1.  **Background Transfers (iOS 7+)** - A special type of background task used to perform network transfers on iOS 7. Unlike regular tasks, background transfers do not have a pre-determined time limit.
+1. **Background-Safe Tasks** - Called anywhere in the application where you have a task you don't want interrupted should the application enter the background.
+1. **DidEnterBackground Tasks** - Called during the  `DidEnterBackground` application lifecycle method to assist in cleanup and state saving.
+1. **Background Transfers (iOS 7+)** - A special type of background task used to perform network transfers on iOS 7. Unlike regular tasks, background transfers do not have a pre-determined time limit.
 
 
 Background-safe and `DidEnterBackground` tasks are safe to use on both iOS 6 and iOS 7, with some minor differences. Let's investigate these two types of tasks in greater detail.
@@ -125,8 +125,8 @@ Because the task run time is not longer continuous, tasks that perform network t
 
 The backbone of background transfers in iOS 7 is the new `NSURLSession` API. `NSURLSession` allows us to create tasks to:
 
-1.  Transfer content through network and device interruptions.
-1.  Upload and download large files ( *Background Transfer Service* ).
+1. Transfer content through network and device interruptions.
+1. Upload and download large files ( *Background Transfer Service* ).
 
 
 Let's take a closer look at how this works.

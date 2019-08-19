@@ -42,8 +42,8 @@ The image will be added to your project and available to be loaded and displayed
 
 Files placed in the **Resources** directory are treated differently from regular files – the contents of the **Resources** folder are copied to the root of the application and can be referenced from there in your code. This can be useful for many reasons:
 
--  Storing the images configured in the application’s properties, such as the default start-up images and application icons.
--  Storing other images and files separately from the code, so they’re easier to manage (subdirectories are preserved when the Resources directory contents are copied).
+- Storing the images configured in the application’s properties, such as the default start-up images and application icons.
+- Storing other images and files separately from the code, so they’re easier to manage (subdirectories are preserved when the Resources directory contents are copied).
 
 
 The **Resources** directory is especially useful in a library project, since the code can assume that those images will be copied into the root of the consuming application, making it easier to write shared code libraries that require image, sound, video, XML or other files.

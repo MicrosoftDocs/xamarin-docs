@@ -206,9 +206,9 @@ The `HorizontalTextAlignment` property is of type `TextAlignment`, which is an e
 
 For properties of more complex types, however, converters are used for parsing the XAML. These are classes in Xamarin.Forms that derive from `TypeConverter`. Many are public classes but some are not. For this particular XAML file, several of these classes play a role behind the scenes:
 
--  `LayoutOptionsConverter` for the  `VerticalOptions` property
--  `FontSizeConverter` for the  `FontSize` property
--  `ColorTypeConverter` for the  `TextColor` property
+- `LayoutOptionsConverter` for the  `VerticalOptions` property
+- `FontSizeConverter` for the  `FontSize` property
+- `ColorTypeConverter` for the  `TextColor` property
 
 These converters govern the allowable syntax of the property settings.
 

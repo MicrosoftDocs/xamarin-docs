@@ -15,17 +15,17 @@ TextKit is a new API that offers powerful text layout and rendering features. It
 
 To make the features of TextKit available to standard controls, several iOS text controls have been re-implemented to use TextKit, including:
 
--  UITextView
--  UITextField
--  UILabel
+- UITextView
+- UITextField
+- UILabel
 
 ## Architecture
 
 TextKit provides a layered architecture that separates the text storage from the layout and display, including the following classes:
 
--  `NSTextContainer` – Provides the coordinate system and geometry that is used to layout text.
--  `NSLayoutManager` – Lays out text by turning text into glyphs. 
--  `NSTextStorage` – Holds the text data, as well as handles batch text property updates. Any batch updates are handed to the layout manager for the actual processing of the changes, such as recalculating the layout and redrawing the text.
+- `NSTextContainer` – Provides the coordinate system and geometry that is used to layout text.
+- `NSLayoutManager` – Lays out text by turning text into glyphs. 
+- `NSTextStorage` – Holds the text data, as well as handles batch text property updates. Any batch updates are handed to the layout manager for the actual processing of the changes, such as recalculating the layout and redrawing the text.
 
 
 These three classes are applied to a view that renders text. The built-in text handling views, such as `UITextView`, `UITextField`, and `UILabel` already have them set, but you can create and apply them to any `UIView` instance as well.

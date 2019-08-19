@@ -89,11 +89,11 @@ by name from external code and from `adb` scripts. The `Name` attribute
 can be set for many different types including `Activity`, 
 `Application`, `Service`, `BroadcastReceiver`, and `ContentProvider`: 
 
--   [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
--   [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
--   [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
--   [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
--   [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
+- [ActivityAttribute.Name](xref:Android.App.ActivityAttribute.Name)
+- [ApplicationAttribute.Name](xref:Android.App.ApplicationAttribute.Name)
+- [ServiceAttribute.Name](xref:Android.App.ServiceAttribute.Name)
+- [BroadcastReceiverAttribute.Name](xref:Android.Content.BroadcastReceiverAttribute.Name)
+- [ContentProviderAttribute.Name](xref:Android.Content.ContentProviderAttribute.Name)
 
 MD5SUM-based ACW naming was introduced in Xamarin.Android 5.0. For more 
 information about attribute naming, see 
