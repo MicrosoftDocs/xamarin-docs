@@ -53,16 +53,16 @@ macOS):
 - Encourage in-IDE exploration of the APIs:
 
   - For example, instead of exposing a weakly-typed array like this:
-    
+
     ```objc
     NSArray *getViews
     ```
     Expose a strong type, like this:
-	
+
     ```csharp
     NSView [] Views { get; set; }
     ```
-	
+
     This gives Visual Studio for Mac the ability to do auto-completion while
     browsing the API, makes all of the `System.Array` operations available 
     on the returned value, and allows the return value to participate in 
@@ -77,14 +77,14 @@ macOS):
     strongly-typed arrays.
   - For events and notifications, give users a choice between:
 
-	- A strongly-typed version by default
-	- A weakly-typed version for advanced use cases
+    - A strongly-typed version by default
+    - A weakly-typed version for advanced use cases
 
 - Support the Objective-C delegate pattern:
 
-	- C# event system
-	- Expose C# delegates (lambdas, anonymous methods, and `System.Delegate`) 
-      to Objective-C APIs as blocks
+  - C# event system
+  - Expose C# delegates (lambdas, anonymous methods, and `System.Delegate`) 
+    to Objective-C APIs as blocks
 
 ### Assemblies
 

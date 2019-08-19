@@ -120,12 +120,12 @@ With iOS 9, Apple is extending Extension support by providing several new _Exten
 - **New Audio Unit Extension Point** – Use this Extension Point to provide audio effects, musical instruments, sound generators, etc. for use within  other Audio Unit host apps (such as GarageBand). This Extension Point also allows you to sell _Audio Units_ (audio plug-ins) on the App Store.
 - **New Index Maintenance Extension Point** — Use this Extension Point to support reindexing of app data without requiring an app relaunch.
 - **New Network Extension Points** (these require special permission from Apple):
-	- **App Proxy Provider Extension** — Use this Extension Point to implement a custom transparent client-side network proxy.
-	- **Filter Data Provider / Filter Control Provider Extension** - Use these Extension Points to implement dynamic network content filtering on-device.
-	- **Packet Tunnel Provider Extension** — Use this Extension Point to implement a custom VPN tunneling protocol client-side.
+  - **App Proxy Provider Extension** — Use this Extension Point to implement a custom transparent client-side network proxy.
+  - **Filter Data Provider / Filter Control Provider Extension** - Use these Extension Points to implement dynamic network content filtering on-device.
+  - **Packet Tunnel Provider Extension** — Use this Extension Point to implement a custom VPN tunneling protocol client-side.
 - **New Safari Extension Points**:
-	- **Content Blocking Extension** — Use this Extension Point to define a list of blocked content that will not be displayed when the user is browsing the web.
-	- **Shared Links Extension** — Use this Extension Point to enable viewing of your app's content in Safari's Shared Links.
+  - **Content Blocking Extension** — Use this Extension Point to define a list of blocked content that will not be displayed when the user is browsing the web.
+  - **Shared Links Extension** — Use this Extension Point to enable viewing of your app's content in Safari's Shared Links.
 
 For more information, please see our [Introduction to Extensions](~/ios/platform/extensions.md) and Apple's [App Extension Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214) documentation.
 

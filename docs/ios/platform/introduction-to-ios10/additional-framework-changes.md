@@ -177,8 +177,8 @@ The following enhancements have been made to the SpriteKit framework in iOS 10:
 The following enhancements have been made to the ScrollView control in iOS 10.3:
 
 - `UIScrollView` now include the `IndexDisplayMode` property to control how the index is shown while the user is scrolling as a `UIScrollViewIndexDisplayMode` of:
-	- `Automatic` - The index display is controlled by the OS.
-	- `AlwaysHidden` - The index display is always hidden.
+  - `Automatic` - The index display is controlled by the OS.
+  - `AlwaysHidden` - The index display is always hidden.
 
 See the [iOSTenThree Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree) for usage.
 

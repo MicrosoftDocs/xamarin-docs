@@ -85,13 +85,13 @@ Additionally, the Extension's project has the following requirements:
 
 - It must have a Bundle Identifier that starts with its Container app's Bundle Identifier. For example, if the Container app's has a Bundle Identifier of `com.myCompany.ContainerApp`, the Extension's identifier might be `com.myCompany.ContainerApp.MyExtension`: 
 
-	![](extensions-images/bundleidentifiers.png) 
+  ![](extensions-images/bundleidentifiers.png) 
 - It must define the key `NSExtensionPointIdentifier`, with an appropriate value (such as `com.apple.widget-extension` for a **Today** Notification Center widget), in its `Info.plist` file.
 - It must also define *either* the `NSExtensionMainStoryboard` key or the `NSExtensionPrincipalClass` key in its `Info.plist` file with an appropriate value:
-	- Use the `NSExtensionMainStoryboard` key to specify the name of the Storyboard that presents the main UI for the Extension (minus `.storyboard`). For example, `Main` for the `Main.storyboard` file.
-	- Use the `NSExtensionPrincipalClass` key to specify the class that will be initialized when the Extension is started. The value must match the **Register** value of your `UIViewController`: 
+  - Use the `NSExtensionMainStoryboard` key to specify the name of the Storyboard that presents the main UI for the Extension (minus `.storyboard`). For example, `Main` for the `Main.storyboard` file.
+  - Use the `NSExtensionPrincipalClass` key to specify the class that will be initialized when the Extension is started. The value must match the **Register** value of your `UIViewController`: 
 
-	![](extensions-images/registerandprincipalclass.png)
+  ![](extensions-images/registerandprincipalclass.png)
 
 Specific types of Extensions may have additional requirements. For instance, a **Today** or **Notification Center** Extension’s principal class must implement [INCWidgetProviding](xref:NotificationCenter.INCWidgetProviding).
 
@@ -110,22 +110,22 @@ To create the required solution, do the following:
 
 1. First, create a new iOS, **Single View App** project and click the **Next** button: 
 
-	[![](extensions-images/today01.png "First, create a new iOS, Single View App project and click the Next button")](extensions-images/today01.png#lightbox)
+    [![](extensions-images/today01.png "First, create a new iOS, Single View App project and click the Next button")](extensions-images/today01.png#lightbox)
 2. Call the project `TodayContainer` and click the **Next** button: 
 
-	[![](extensions-images/today02.png "Call the project TodayContainer and click the Next button")](extensions-images/today02.png#lightbox)
+    [![](extensions-images/today02.png "Call the project TodayContainer and click the Next button")](extensions-images/today02.png#lightbox)
 3. Verify the **Project Name** and **SolutionName** and click the **Create** button to create the solution: 
 
-	[![](extensions-images/today03.png "Verify the Project Name and SolutionName and click the Create button to create the solution")](extensions-images/today03.png#lightbox)
+    [![](extensions-images/today03.png "Verify the Project Name and SolutionName and click the Create button to create the solution")](extensions-images/today03.png#lightbox)
 4. Next, in the **Solution Explorer**, right-click on the Solution and add a new **iOS Extension** project from the **Today Extension** template: 
 
-	[![](extensions-images/today04.png "Next, in the Solution Explorer, right-click on the Solution and add a new iOS Extension project from the Today Extension template")](extensions-images/today04.png#lightbox)
+    [![](extensions-images/today04.png "Next, in the Solution Explorer, right-click on the Solution and add a new iOS Extension project from the Today Extension template")](extensions-images/today04.png#lightbox)
 5. Call the project `DaysRemaining` and click the **Next** button: 
 
-	[![](extensions-images/today05.png "Call the project DaysRemaining and click the Next button")](extensions-images/today05.png#lightbox)
+    [![](extensions-images/today05.png "Call the project DaysRemaining and click the Next button")](extensions-images/today05.png#lightbox)
 6. Review the project and click the **Create** button to create it: 
 
-	[![](extensions-images/today06.png "Review the project and click the Create button to create it")](extensions-images/today06.png#lightbox)
+    [![](extensions-images/today06.png "Review the project and click the Create button to create it")](extensions-images/today06.png#lightbox)
 
 The resulting Solution should now have two projects, as shown here:
 
@@ -141,10 +141,10 @@ To build the UI with a Storyboard, do the following:
 
 1. In the **Solution Explorer**, double-click the Extension project's `Main.storyboard` file to open it for editing: 
 
-	[![](extensions-images/today08.png "Double-click the Extension projects Main.storyboard file to open it for editing")](extensions-images/today08.png#lightbox)
+    [![](extensions-images/today08.png "Double-click the Extension projects Main.storyboard file to open it for editing")](extensions-images/today08.png#lightbox)
 2. Select the Label that was automatically added to the UI by template and give it the **Name** `TodayMessage` in the **Widget** tab of the **Properties Explorer**: 
 
-	[![](extensions-images/today09.png "Select the Label that was automatically added to the UI by template and give it the Name TodayMessage in the Widget tab of the Properties Explorer")](extensions-images/today09.png#lightbox)
+    [![](extensions-images/today09.png "Select the Label that was automatically added to the UI by template and give it the Name TodayMessage in the Widget tab of the Properties Explorer")](extensions-images/today09.png#lightbox)
 3. Save the changes to the Storyboard.
 
 #### Using code
@@ -153,16 +153,16 @@ To build the UI in code, do the following:
 
 1. In the **Solution Explorer**, select the **DaysRemaining** project, add a new class and call it `CodeBasedViewController`: 
 
-	[![](extensions-images/code01.png "Aelect the DaysRemaining project, add a new class and call it CodeBasedViewController")](extensions-images/code01.png#lightbox)
+    [![](extensions-images/code01.png "Aelect the DaysRemaining project, add a new class and call it CodeBasedViewController")](extensions-images/code01.png#lightbox)
 2. Again, in the **Solution Explorer**, double-click Extension's `Info.plist` file to open it for editing: 
 
-	[![](extensions-images/code02.png "Double-click Extensions Info.plist file to open it for editing")](extensions-images/code02.png#lightbox)
+    [![](extensions-images/code02.png "Double-click Extensions Info.plist file to open it for editing")](extensions-images/code02.png#lightbox)
 3. Select the **Source View** (from the bottom of the screen) and open the `NSExtension` node: 
 
-	[![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
+    [![](extensions-images/code03.png "Select the Source View from the bottom of the screen and open the NSExtension node")](extensions-images/code03.png#lightbox)
 4. Remove the `NSExtensionMainStoryboard` key and add a `NSExtensionPrincipalClass` with the value `CodeBasedViewController`: 
 
-	[![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSExtensionPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
+    [![](extensions-images/code04.png "Remove the NSExtensionMainStoryboard key and add a NSExtensionPrincipalClass with the value CodeBasedViewController")](extensions-images/code04.png#lightbox)
 5. Save your changes.
 
 Next, edit the `CodeBasedViewController.cs` file and make it look like the following:
@@ -176,28 +176,28 @@ using CoreGraphics;
 
 namespace DaysRemaining
 {
-	[Register("CodeBasedViewController")]
-	public class CodeBasedViewController : UIViewController, INCWidgetProviding
-	{
-		public CodeBasedViewController ()
-		{
-		}
+  [Register("CodeBasedViewController")]
+  public class CodeBasedViewController : UIViewController, INCWidgetProviding
+  {
+    public CodeBasedViewController ()
+    {
+    }
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+    public override void ViewDidLoad ()
+    {
+      base.ViewDidLoad ();
 
-			// Add label to view
-			var TodayMessage = new UILabel (new CGRect (0, 0, View.Frame.Width, View.Frame.Height)) {
-				TextAlignment = UITextAlignment.Center
-			};
+      // Add label to view
+      var TodayMessage = new UILabel (new CGRect (0, 0, View.Frame.Width, View.Frame.Height)) {
+        TextAlignment = UITextAlignment.Center
+      };
 
-			View.AddSubview (TodayMessage);
-			
-			// Insert code to power extension here...
+      View.AddSubview (TodayMessage);
 
-		}
-	}
+      // Insert code to power extension here...
+
+    }
+  }
 }
 ```
 
@@ -210,19 +210,19 @@ With the User Interface created, open either the `TodayViewController.cs` or the
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+  base.ViewDidLoad ();
 
-	// Calculate the values
-	var dayOfYear = DateTime.Now.DayOfYear;
-	var leapYearExtra = DateTime.IsLeapYear (DateTime.Now.Year) ? 1 : 0;
-	var daysRemaining = 365 + leapYearExtra - dayOfYear;
+  // Calculate the values
+  var dayOfYear = DateTime.Now.DayOfYear;
+  var leapYearExtra = DateTime.IsLeapYear (DateTime.Now.Year) ? 1 : 0;
+  var daysRemaining = 365 + leapYearExtra - dayOfYear;
 
-	// Display the message
-	if (daysRemaining == 1) {
-		TodayMessage.Text = String.Format ("Today is day {0}. There is one day remaining in the year.", dayOfYear);
-	} else {
-		TodayMessage.Text = String.Format ("Today is day {0}. There are {1} days remaining in the year.", dayOfYear, daysRemaining);
-	}
+  // Display the message
+  if (daysRemaining == 1) {
+    TodayMessage.Text = String.Format ("Today is day {0}. There is one day remaining in the year.", dayOfYear);
+  } else {
+    TodayMessage.Text = String.Format ("Today is day {0}. There are {1} days remaining in the year.", dayOfYear, daysRemaining);
+  }
 }
 ```
 
