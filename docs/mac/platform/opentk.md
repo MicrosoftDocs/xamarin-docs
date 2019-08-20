@@ -175,6 +175,7 @@ using OpenTK.Platform.MacOS;
 using Foundation;
 using CoreGraphics;
 ```
+
 This minimal set will be required for any class using OpenTK.
 
 <a name="Adding_the_Game_View" />

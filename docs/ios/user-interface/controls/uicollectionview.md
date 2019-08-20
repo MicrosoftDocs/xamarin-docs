@@ -532,6 +532,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
   ...
 }
 ```
+
 <a name="Simple-Reordering-Example" />
 
 ### Simple Reordering Example

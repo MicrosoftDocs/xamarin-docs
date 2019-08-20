@@ -292,6 +292,7 @@ follows:
 ```csharp
 [Activity (Label = "CodeLayoutActivity", ConfigurationChanges=Android.Content.PM.ConfigChanges.Orientation | Android.Content.PM.ConfigChanges.ScreenSize)]
 ```
+
 Now when the device is rotated, the Activity is not restarted. In order
 to manually handle the orientation change in this case, an Activity can
 override the `OnConfigurationChanged` method and determine the

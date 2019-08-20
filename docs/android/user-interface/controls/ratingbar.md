@@ -30,7 +30,8 @@ rating, with the [`RatingBar`](xref:Android.Widget.RatingBar) widget.
             android:layout_height="wrap_content"
             android:numStars="5"
             android:stepSize="1.0"/>
-    ```
+   ```
+
    The `android:numStars` attribute defines how many stars to display
    for the rating bar. The `android:stepSize` attribute defines the
    granularity for each star (for example, a value of `0.5` would allow

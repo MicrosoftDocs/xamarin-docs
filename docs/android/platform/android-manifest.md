@@ -304,6 +304,7 @@ This declaration causes the following XML fragment to be generated in
              android:theme="@android:style/Theme.Light"
                 ... />
 ```
+
 In this example, all activities in the app will default to the 
 `Theme.Light` style. If you set an Activity's theme to 
 `Theme.Dialog`, only that Activity will use the `Theme.Dialog` style 

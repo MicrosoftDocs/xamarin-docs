@@ -185,6 +185,7 @@ public class PhotoViewHolder : RecyclerView.ViewHolder
     }
 }
 ```
+
 In this code example, the `PhotoViewHolder` constructor is passed a
 reference to the parent item view (the `CardView`) that
 `PhotoViewHolder` wraps. Note that you always forward the parent item

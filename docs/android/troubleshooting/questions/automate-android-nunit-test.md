@@ -94,6 +94,7 @@ The following steps explain this process:
     ```shell
     msbuild /t:RunTests Project.csproj
     ```
+
     (Note that using this new target is not required; the earlier `adb` command
     can be used instead of `msbuild`.)
 

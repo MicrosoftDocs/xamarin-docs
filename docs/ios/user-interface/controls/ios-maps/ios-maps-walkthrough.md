@@ -173,6 +173,7 @@ Let's begin by creating a new **iOS Empty Project**, and giving it a relevant na
 	
 	map.AddOverlay (hotelOverlay);	
 	```
+
 This completes the code in `ViewDidLoad`. Now we need to implement our `MapDelegate` class to handle creating the annotation and overlay views respectively.
 
 
@@ -187,6 +188,7 @@ This completes the code in `ViewDidLoad`. Now we need to implement our `MapDeleg
 	    ...
 	}
 	```
+
 	We only have one annotation here so the reuse code isn't strictly necessary, but it's a good practice to include it.
 
 1. Implement the `GetViewForAnnotation` method to return a view for the `ConferenceAnnotation` using the **conference.png** image included with this walkthrough:
@@ -256,6 +258,7 @@ This completes the code in `ViewDidLoad`. Now we need to implement our `MapDeleg
 	    }
 	}
 	```
+
 	We now have the code for the annotation in place. All that is left is to add code to the `MapDelegate` to create the view for the hotel overlay.
 
 1. Add the following implementation of `GetViewForOverlay` to the `MapDelegate`:

@@ -38,12 +38,15 @@ Before you start the automatic signing process, you should ensure that you have 
 
 > [!IMPORTANT]
 > Before you begin, make sure to sign in to either [iTunes Connect](https://itunesconnect.apple.com/) or [appleid.apple.com](https://appleid.apple.com) to check that you have accepted the latest Apple account policies. If prompted, complete the steps to accept any new account agreements from Apple. If you don't accept the privacy agreement from May 2018, you'll see one of the following alerts when trying to provision your device:
+>
 > ```
 > Unexpected authentication failure. Reason: {
 > "authType" : "sa"
 > }
 > ```
+>
 > or
+>
 > ```
 > Authentication Service Is Unavailable
 > ```

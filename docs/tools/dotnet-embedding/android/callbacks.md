@@ -57,6 +57,7 @@ public class JavaCallbacks : Java.Lang.Object
     }
 }
 ```
+
 `JavaCallbacks` could be any class to test this, as long as it is a `Java.Lang.Object`.
 
 Now, run .NET Embedding on your .NET assembly to generate an AAR. See the [Getting Started guide](~/tools/dotnet-embedding/get-started/java/android.md) for details.
@@ -77,6 +78,7 @@ public void abstractCallback() throws Throwable {
     assertEquals("Java", JavaCallbacks.abstractCallback(callback));
 }
 ```
+
 So we:
 
 - Implemented the `AbstractClass` in Java with an anonymous type
@@ -95,6 +97,7 @@ What is missing here is an `Invoker` type. This is a subclass of `AbstractClass`
 Xamarin.Android uses this `Invoker` pattern for Java binding projects among other things.
 
 Here is our implementation of `AbstractClassInvoker`:
+
 ```csharp
 class AbstractClassInvoker : AbstractClass
 {

@@ -214,9 +214,11 @@ TimeInterval = DateTimeObjectTicks - NSDateReferenceDateTicks / TicksPerSecond
 In this formula: 
 
 - `NSDateReferenceDateTicks` is calculated based on the `NSDate` reference date of 00:00:00 UTC on 1 January 2001: 
+
     ```csharp
     new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;
     ```
+
 - [`TicksPerSecond`](https://docs.microsoft.com/dotnet/api/system.timespan.tickspersecond) is defined on [`TimeSpan`](https://docs.microsoft.com/dotnet/api/system.timespan)
 
 To create the `NSDate` object, the `TimeInterval` is used with the `NSDate` [dateWithTimeIntervalSinceReferenceDate:](https://developer.apple.com/reference/foundation/nsdate/1591577-datewithtimeintervalsincereferen?language=objc) selector.
@@ -232,9 +234,11 @@ DateTimeTicks = NSDateTimeIntervalSinceReferenceDate * TicksPerSecond + NSDateRe
 In this formula: 
 
 - `NSDateReferenceDateTicks` is calculated based on the `NSDate` reference date of 00:00:00 UTC on 1 January 2001: 
+
     ```csharp
     new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;
     ```
+
 - [`TicksPerSecond`](https://docs.microsoft.com/dotnet/api/system.timespan.tickspersecond) is defined on [`TimeSpan`](https://docs.microsoft.com/dotnet/api/system.timespan)
 
 After calculating `DateTimeTicks`, the `DateTime` [constructor](https://docs.microsoft.com/dotnet/api/system.datetime.-ctor?#System_DateTime__ctor_System_Int64_System_DateTimeKind_) is invoked, setting its `kind` to `DateTimeKind.Utc`.

@@ -188,6 +188,7 @@ datePickerView.MaximumDate = NSDate.Now;
 
 > [!TIP]
 > It's possible to explicitly cast a `DateTime` to an `NSDate`:
+>
 > ```csharp
 > DatePicker.MinimumDate = (NSDate)DateTime.Today.AddDays (-7);
 > DatePicker.MaximumDate = (NSDate)DateTime.Today.AddDays (7);

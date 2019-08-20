@@ -114,6 +114,7 @@ The `UIRequiredDeviceCapabilities` key lets iTunes know which device specific fe
 	<true/>
 </dict>
 ```
+
 Specifies that the iOS device must support the ARM7 instruction set and have a front-facing camera before this application can be installed on the device. For a complete list of allowed values, please see Apple's [UIRequiredDeviceCapabilities](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW3) documentation.
 
 ### artistName and playlistArtistName
