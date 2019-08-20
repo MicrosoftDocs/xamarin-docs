@@ -55,6 +55,12 @@ sections:
         src: https://docs.microsoft.com/media/common/i_dashboard.svg
         href: scroll-view.md
       title: ScrollView
+    - href: contentview.md
+      html: "Learn how to use a ContentView to create a custom control."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: contentview.md
+      title: Frame
     - href: frame.md
       html: "Learn how to wrap a view with a frame that can be configured with color, drop shadow, and other options."
       image:
