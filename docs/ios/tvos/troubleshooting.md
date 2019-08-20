@@ -21,10 +21,10 @@ _This article covers know issues you might encounter while working with Xamarin'
 The current release of Xamarin's tvOS support has the following known issues:
 
 - **Mono Framework** – Mono 4.3 Cryptography.ProtectedData fails to decrypt data from Mono 4.2. As a result, NuGet packages will fail to restore with the error `Data unprotection failed` when a protected NuGet source is configured.
-	- **Workaround** – In Visual Studio for Mac you will need to add back any NuGet package sources that use password authentication before re-attempting to restore the packages.
+  - **Workaround** – In Visual Studio for Mac you will need to add back any NuGet package sources that use password authentication before re-attempting to restore the packages.
 - **Visual Studio for Mac w/ F# Add-in** – Error when creating an F# Android template on Windows. This should still function correctly on Mac.
 - **Xamarin.Mac** – When running the Xamarin.Mac unified template project with the target Framework set to `Unsupported`, the popup `Could not connect to the debugger` may appear.
-	- **Potential Workaround** – Downgrade the Mono framework version available in our Stable channel.
+  - **Potential Workaround** – Downgrade the Mono framework version available in our Stable channel.
 - **Xamarin Visual Studio & Xamarin.iOS** – When deploying WatchKit applications in Visual studio, the error `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` may appear.
 
 Please report any bugs you find on [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
@@ -42,7 +42,7 @@ To solve this issue, do the following:
 1. In Visual Studio for Mac, right-click on your Xamarin.tvOS Project File in the **Solution Explorer** and select **Options**.
 2. Select **tvOS Build** and ensure that you are on the **Release** configuration: 
 
-	[![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
+    [![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
 3. Add `--bitcode=asmonly` to the **Additional mtouch arguments** field and click the **OK** button.
 4. Rebuild your app in the **Release** configuration.
 
@@ -110,7 +110,7 @@ If this occurs, edit your `Info.plist` file and ensure that it has the  followin
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
 <array>
-	<string>arm64</string>
+  <string>arm64</string>
 </array>
 ```
 
@@ -200,7 +200,7 @@ With this file in place, you should be able to successfully add the PCL file to 
 
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [tvOS](https://developer.apple.com/tvos/)
 - [tvOS Human Interface Guides](https://developer.apple.com/tvos/human-interface-guidelines/)
 - [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/)

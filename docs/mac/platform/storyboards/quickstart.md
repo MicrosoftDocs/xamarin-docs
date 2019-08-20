@@ -133,8 +133,7 @@ For more information, please see our [Working with Images](~/mac/app-fundamental
 
 ## Related Links
 
-- [MacStoryboard (sample)](https://developer.xamarin.com/samples/mac/MacStoryboard/)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Windows](~/mac/user-interface/window.md)
-- [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
+- [macOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/macos/overview/themes/)
 - [Introduction to Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

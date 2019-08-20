@@ -11,7 +11,7 @@ ms.date: 06/12/2019
 
 # Xamarin.Forms DependencyService Introduction
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/DependencyServiceDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 The [`DependencyService`](xref:Xamarin.Forms.DependencyService) class is a service locator that enables Xamarin.Forms applications to invoke native platform functionality from shared code.
 
@@ -151,5 +151,5 @@ For more information about resolving platform implementations with the [`Depende
 
 ## Related links
 
-- [DependencyService Demos (sample)](https://developer.xamarin.com/samples/xamarin-forms/DependencyServiceDemos)
+- [DependencyService Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Xamarin.Forms DependencyService Registration and Resolution](registration-and-resolution.md)

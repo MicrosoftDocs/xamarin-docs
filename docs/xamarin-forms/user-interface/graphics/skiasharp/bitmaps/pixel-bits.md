@@ -11,7 +11,7 @@ ms.date: 07/11/2018
 
 # Accessing SkiaSharp bitmap pixel bits
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you saw in the article [**Saving SkiaSharp bitmaps to files**](saving.md), bitmaps are generally stored in files in a compressed format, such as JPEG or PNG. In constrast, a SkiaSharp bitmap stored in memory is not compressed. It is stored as a sequential series of pixels. This uncompressed format facilitates the transfer of bitmaps to a display surface.
 
@@ -32,7 +32,7 @@ SkiaSharp provides several techniques for accessing a bitmap's pixel bits. Which
 
 You can think of the first two techniques as "high level" and the second two as "low level." There are some other methods and properties that you can use, but these are the most valuable.
 
-To allow you to see the performance differences between these techniques, the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) application contains a page named **Gradient Bitmap** that creates a bitmap with pixels that combine red and blue shades to create a gradient. The program creates eight different copies of this bitmap, all using different techniques for setting the bitmap pixels. Each of these eight bitmaps is created in a separate method that also sets a brief text description of the technique and calculates the time required to set all the pixels. Each method loops through the pixel-setting logic 100 times to get a better estimate of the performance.
+To allow you to see the performance differences between these techniques, the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) application contains a page named **Gradient Bitmap** that creates a bitmap with pixels that combine red and blue shades to create a gradient. The program creates eight different copies of this bitmap, all using different techniques for setting the bitmap pixels. Each of these eight bitmaps is created in a separate method that also sets a brief text description of the technique and calculates the time required to set all the pixels. Each method loops through the pixel-setting logic 100 times to get a better estimate of the performance.
 
 ### The SetPixel method
 
@@ -789,4 +789,4 @@ The code in the constructor accesses each pixel, performs a bitwise AND operatio
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

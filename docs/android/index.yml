@@ -51,7 +51,7 @@ sections:
     className: cardsB
     items:
     - href: ~/android/get-started/index.md
-      html: Tutorials to get you up and running with Xamarin.Android. Make sure everything is installed correctly, and build your first Mac apps.
+      html: Tutorials to get you up and running with Xamarin.Android. Make sure everything is installed correctly, and build your first Android apps.
       image:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/android/get-started/index.md
@@ -111,8 +111,8 @@ sections:
     className: cardsD
     items:
     - title: API
-      href: https://developer.xamarin.com/api/root/MonoAndroid-lib/
-      html: <p><a href="https://developer.xamarin.com/api/root/MonoAndroid-lib/">Android API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Base Class Library</a></p>
+      href: https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9
+      html: <p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9">Android API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Base Class Library</a></p>
     - title: Samples
-      href: https://developer.xamarin.com/samples/android/all/
-      html: <p><a href="https://developer.xamarin.com/samples/android/all/">Android Samples</a></p>
+      href: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
+      html: <p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android">Android Samples</a></p>

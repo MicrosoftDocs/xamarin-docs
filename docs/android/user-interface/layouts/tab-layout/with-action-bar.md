@@ -74,14 +74,14 @@ that implements the ActionBar.ITabListener interface. This interface
 provides three callback methods that Android will invoke when the state 
 of the tab changes: 
 
--  **OnTabSelected** - This method is called when the user selects the
+- **OnTabSelected** - This method is called when the user selects the
    tab. It should display the fragment.
 
--  **OnTabReselected** - This method is called when the tab is already
+- **OnTabReselected** - This method is called when the tab is already
    selected but is selected again by the user. This callback is
    typically used to refresh/update the displayed fragment.
 
--  **OnTabUnselected** - This method is called when the user selects
+- **OnTabUnselected** - This method is called when the user selects
    another tab. This callback is used to save the state in the
    displayed fragment before it disappears.
 
@@ -90,9 +90,9 @@ Xamarin.Android wraps the `ActionBar.ITabListener` with events on the
 more of these events. There are three events (one for each method in 
 `ActionBar.ITabListener`) that an action bar tab will raise: 
 
--  TabSelected
--  TabReselected
--  TabUnselected
+- TabSelected
+- TabReselected
+- TabUnselected
 
 
 
@@ -248,7 +248,7 @@ versions of Android.
 
 ## Related Links
 
-- [ActionBarTabs (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/ActionBarTabs/)
+- [ActionBarTabs (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-actionbartabs)
 - [Toolbar](~/android/user-interface/controls/tool-bar/index.md)
 - [Fragments](~/android/platform/fragments/index.md)
 - [ActionBar](https://developer.android.com/guide/topics/ui/actionbar.html)

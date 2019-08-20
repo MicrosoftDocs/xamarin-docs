@@ -46,14 +46,14 @@ Existing Xamarin.iOS apps can be updated to the Unified API using
 	fixes may then be required, as explained in [these instructions](~/cross-platform/macios/unified/updating-ios-apps.md)
 	and [tips](~/cross-platform/macios/unified/updating-tips.md).
 
-###  [Xamarin.Mac apps](~/cross-platform/macios/unified/updating-mac-apps.md)
+### [Xamarin.Mac apps](~/cross-platform/macios/unified/updating-mac-apps.md)
 
 Existing Xamarin.Mac apps can be updated to the Unified API using
 	the automated migration tool built in to Visual Studio for Mac. Some additional
 	fixes may then be required, as explained in [these instructions](~/cross-platform/macios/unified/updating-mac-apps.md)
 	and [tips](~/cross-platform/macios/unified/updating-tips.md).
 
-###  [Xamarin.Forms apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
+### [Xamarin.Forms apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 
 Follow these instructions to update an existing Xamarin.Forms
 	solution with an iOS project to use the Unified API. Unified API
@@ -82,4 +82,4 @@ Customers that have created bindings to Objective-C libraries
 - [Updating Xamarin.Forms Apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [Updating Bindings](~/cross-platform/macios/unified/update-binding.md)
 - [Updating Tips](~/cross-platform/macios/unified/updating-tips.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

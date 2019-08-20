@@ -11,7 +11,7 @@ ms.date: 02/26/2018
 
 # Xamarin.Forms Entry
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 
 _Single-line text or password input_
 
@@ -376,5 +376,5 @@ entry.TextChanged += Entry_TextChanged;
 
 ## Related Links
 
-- [Text (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Text)
+- [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)
 - [Entry API](xref:Xamarin.Forms.Entry)

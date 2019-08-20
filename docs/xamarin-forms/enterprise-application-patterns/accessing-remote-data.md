@@ -290,8 +290,8 @@ The most common form of caching is read-through caching, where an app retrieves 
 
 Distributed applications, such as the eShopOnContainers reference application, should provide either or both of the following caches:
 
--   A shared cache, which can be accessed by multiple processes or machines.
--   A private cache, where data is held locally on the device running the app.
+- A shared cache, which can be accessed by multiple processes or machines.
+- A private cache, where data is held locally on the device running the app.
 
 The eShopOnContainers mobile app uses a private cache, where data is held locally on the device that's running an instance of the app. For information about the cache used by the eShopOnContainers reference application, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
 
@@ -349,9 +349,9 @@ All apps that communicate with remote services and resources must be sensitive t
 
 Transient faults can have a huge impact on the perceived quality of an app, even if it has been thoroughly tested under all foreseeable circumstances. To ensure that an app that communicates with remote services operates reliably, it must be able to do all of the following:
 
--   Detect faults when they occur, and determine if the faults are likely to be transient.
--   Retry the operation if it determines that the fault is likely to be transient and keep track of the number of times the operation was retried.
--   Use an appropriate retry strategy, which specifies the number of retries, the delay between each attempt, and the actions to take after a failed attempt.
+- Detect faults when they occur, and determine if the faults are likely to be transient.
+- Retry the operation if it determines that the fault is likely to be transient and keep track of the number of times the operation was retried.
+- Use an appropriate retry strategy, which specifies the number of retries, the delay between each attempt, and the actions to take after a failed attempt.
 
 This transient fault handling can be achieved by wrapping all attempts to access a remote service in code that implements the retry pattern.
 
@@ -359,9 +359,9 @@ This transient fault handling can be achieved by wrapping all attempts to access
 
 If an app detects a failure when it tries to send a request to a remote service, it can handle the failure in any of the following ways:
 
--   Retrying the operation. The app could retry the failing request immediately.
--   Retrying the operation after a delay. The app should wait for a suitable amount of time before retrying the request.
--   Cancelling the operation. The application should cancel the operation and report an exception.
+- Retrying the operation. The app could retry the failing request immediately.
+- Retrying the operation after a delay. The app should wait for a suitable amount of time before retrying the request.
+- Cancelling the operation. The application should cancel the operation and report an exception.
 
 The retry strategy should be tuned to match the business requirements of the app. For example, it's important to optimize the retry count and retry interval to the operation being attempted. If the operation is part of a user interaction, the retry interval should be short and only a few retries attempted to avoid making users wait for a response. If the operation is part of a long running workflow, where cancelling or restarting the workflow is expensive or time-consuming, it's appropriate to wait longer between attempts and to retry more times.
 

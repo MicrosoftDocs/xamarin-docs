@@ -82,13 +82,13 @@ Let's do the following to create our sample project:
 8. Add the following using statement: `using WebKit;`
 9. Make the `ViewDidLoad` method look like the following: 
 
-```csharp
-public override void AwakeFromNib ()
-{
-    base.AwakeFromNib ();
-    webView.MainFrame.LoadRequest(new NSUrlRequest(new NSUrl("http://www.apple.com")));
-}
-```
+    ```csharp
+    public override void AwakeFromNib ()
+    {
+        base.AwakeFromNib ();
+        webView.MainFrame.LoadRequest(new NSUrlRequest(new NSUrl("http://www.apple.com")));
+    }
+    ```
 
 10. Save your changes.
 
@@ -159,14 +159,14 @@ Next, we need to select the new App ID and Provisioning Profile in our Xamarin.M
 3. Next, double-click the **Entitlements.plist** file and ensure our **iCloud Key-Value Store** and the **iCloud Containers** all match our App ID we created above (example: `com.appracatappra.MacSandbox`): 
 
     [![Editing the Entitlements.plist file](sandboxing-images/sign17.png "Editing the Entitlements.plist file")](sandboxing-images/sign17-large.png#lightbox)
-3. Save your changes.
-4. In the **Solution Pad**, double-click the project file to open its Options for editing:  
+4. Save your changes.
+5. In the **Solution Pad**, double-click the project file to open its Options for editing:  
 
     ![Editign the solution's options](sandboxing-images/sign14.png "Editign the solution's options")
-5. Select **Mac Signing**, then check **Sign the application bundle** and **Sign the installer package**. Under **Provisioning profile**, select the one we created above: 
+6. Select **Mac Signing**, then check **Sign the application bundle** and **Sign the installer package**. Under **Provisioning profile**, select the one we created above: 
 
     ![Setting the provisioning profile](sandboxing-images/sign15.png "Setting the provisioning profile")
-6. Click the **Done** button.
+7. Click the **Done** button.
 
 > [!IMPORTANT]
 > You might have to quit and restart Visual Studio for Mac to get it to recognize the new App ID and Provisioning Profile that was installed by Xcode.

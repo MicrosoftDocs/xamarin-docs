@@ -8,12 +8,12 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# Web View
+# Xamarin.Android Web View
 
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/)
+[`WebView`](xref:Android.Webkit.WebView)
 allows you to create your own window for viewing web pages (or even
 develop a complete browser). In this tutorial, you'll create a simple
-[`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/)
+[`Activity`](xref:Android.App.Activity)
 that can view and navigate web pages.
 
 Create a new project named **HelloWebView**.
@@ -43,7 +43,7 @@ using Android.Webkit;
 ```
 
 At the top of the `MainActivity` class, declare a
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) object:
+[`WebView`](xref:Android.Webkit.WebView) object:
 
 ```csharp
 WebView web_view;
@@ -89,7 +89,7 @@ public class HelloWebViewClient : WebViewClient
 ```
 
 Next, use the following code for the
-[`OnCreate()`](https://developer.xamarin.com/api/member/Android.App.Activity.OnCreate/(Android.OS.Bundle))
+[`OnCreate()`](xref:Android.App.Activity.OnCreate*))
 method:
 
 ```csharp
@@ -108,17 +108,17 @@ protected override void OnCreate (Bundle bundle)
 ```
 
 This initializes the member
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) with the one from
+[`WebView`](xref:Android.Webkit.WebView) with the one from
 the
-[`Activity`](https://developer.xamarin.com/api/type/Android.App.Activity/) layout and enables
+[`Activity`](xref:Android.App.Activity) layout and enables
 JavaScript for the
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) with
-[`JavaScriptEnabled`](https://developer.xamarin.com/api/property/Android.Webkit.WebSettings.JavaScriptEnabled/)
+[`WebView`](xref:Android.Webkit.WebView) with
+[`JavaScriptEnabled`](xref:Android.Webkit.WebSettings.JavaScriptEnabled)
 `= true` (see the
 [Call C\# from JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
 recipe for information about how to call C\# functions from
 JavaScript). Finally, an initial web page is loaded with
-[`LoadUrl(String)`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/%2fM%2fLoadUrl).
+[`LoadUrl(String)`](xref:Android.Webkit.WebView).
 
 Build and run the app. You should see a simple web page viewer app
 as the one seen in the following screenshot:
@@ -147,17 +147,17 @@ public override bool OnKeyDown (Android.Views.Keycode keyCode, Android.Views.Key
 ```
 
 This
-[`OnKeyDown(int, KeyEvent)`](https://developer.xamarin.com/api/member/Android.App.Activity.OnKeyDown/(Android.Views.Keycode%2cAndroid.Views.KeyEvent))
+[`OnKeyDown(int, KeyEvent)`](xref:Android.App.Activity.OnKeyDown*)
 callback method will be called whenever a button is pressed while
 the Activity is running. The condition inside uses the
-[`KeyEvent`](https://developer.xamarin.com/api/type/Android.Views.KeyEvent/) to check whether
+[`KeyEvent`](xref:Android.Views.KeyEvent) to check whether
 the key pressed is the **BACK** button and whether the
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) is actually capable
+[`WebView`](xref:Android.Webkit.WebView) is actually capable
 of navigating back (if it has a history). If both are true, then
 the
-[`GoBack()`](https://developer.xamarin.com/api/member/Android.Webkit.WebView.GoBack/) method is
+[`GoBack()`](xref:Android.Webkit.WebView.GoBack) method is
 called, which will navigate back one step in the
-[`WebView`](https://developer.xamarin.com/api/type/Android.Webkit.WebView/) history. Returning
+[`WebView`](xref:Android.Webkit.WebView) history. Returning
 `true` indicates that the event has been handled. If this condition
 is not met, then the event is sent back to the system.
 
@@ -166,14 +166,12 @@ navigate back through the page history:
 
 [![Example screenshots of the Back button in action](web-view-images/03-back-button-sml.png)](web-view-images/03-back-button.png#lightbox)
 
-
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*
 [*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
 
-
 ## Related Links
 
 - [Call C# from JavaScript](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/webview/call_csharp_from_javascript)
-- [Android.Webkit.WebView](https://developer.xamarin.com/api/type/Android.Webkit.WebView)
-- [KeyEvent](https://developer.xamarin.com/api/type/Android.Webkit.WebView/Client)
+- [Android.Webkit.WebView](xref:Android.Webkit.WebView)
+- [KeyEvent](xref:Android.Webkit.WebView)

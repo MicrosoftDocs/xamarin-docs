@@ -1,5 +1,5 @@
 ---
-title: "ListView and the Activity Lifecycle"
+title: "Xamarin.Android ListView and the Activity Lifecycle"
 ms.prod: xamarin
 ms.assetid: 40840D03-6074-30A2-74DA-3664703E3367
 ms.technology: xamarin-android
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# ListView and the Activity Lifecycle
+# Xamarin.Android ListView and the Activity Lifecycle
 
 Activities go through certain states as your application runs, such as
 starting up, running, being paused and being stopped. For more

@@ -17,11 +17,11 @@ action is performed, where the touch took place, how much pressure was
 applied, etc. A `MotionEvent` object breaks down the movement into to
 the following values:
 
--  An action code that describes the type of motion, such as the
+- An action code that describes the type of motion, such as the
    initial touch, the touch moving across the screen, or the touch
    ending.
 
--  A set of axis values that describe the position of the `MotionEvent`
+- A set of axis values that describe the position of the `MotionEvent`
    and other movement properties such as where the touch is taking
    place, when the touch took place, and how much pressure was used.
    The axis values may be different depending on the device, so the
@@ -32,11 +32,11 @@ The `MotionEvent` object will be passed to an appropriate method in an
 application. There are three ways for a Xamarin.Android application to
 respond to a touch event:
 
--  *Assign an event handler to `View.Touch`* - The `Android.Views.View`
+- *Assign an event handler to `View.Touch`* - The `Android.Views.View`
    class has an `EventHandler<View.TouchEventArgs>` which applications
    can assign a handler to. This is typical .NET behavior.
 
--  *Implementing `View.IOnTouchListener`* - Instances of this interface
+- *Implementing `View.IOnTouchListener`* - Instances of this interface
    may be assigned to a view object using the View. `SetOnListener`
    method.This is functionally equivalent to assigning an event handler
    to the `View.Touch` event. If there is some common or shared logic
@@ -44,7 +44,7 @@ respond to a touch event:
    more efficient to create a class and implement this method than to
    assign each view its own event handler.
 
--  *Override `View.OnTouchEvent`* - All views in Android subclass
+- *Override `View.OnTouchEvent`* - All views in Android subclass
    `Android.Views.View`. When a View is touched, Android will call the
    `OnTouchEvent` and pass it a `MotionEvent` object as a parameter.
 
@@ -99,19 +99,19 @@ it will notify the activity or application either by raising an event
 or through a callback provided by `GestureDetector.IOnGestureListener`.
 This interface provides six methods for the various gestures:
 
--  *OnDown* - Called when a tap occurs but is not released.
+- *OnDown* - Called when a tap occurs but is not released.
 
--  *OnFling* - Called when a fling occurs and provides data on the
+- *OnFling* - Called when a fling occurs and provides data on the
    start and end touch that triggered the event.
 
--  *OnLongPress* - Called when a long press occurs.
+- *OnLongPress* - Called when a long press occurs.
 
--  *OnScroll* - Called when a scroll event occurs.
+- *OnScroll* - Called when a scroll event occurs.
 
--  *OnShowPress* - Called after an OnDown has occurred and a move or up
+- *OnShowPress* - Called after an OnDown has occurred and a move or up
    event has not been performed.
 
--  *OnSingleTapUp* - Called when a single tap occurs.
+- *OnSingleTapUp* - Called when a single tap occurs.
 
 
 In many cases applications may only be interested in a subset of
@@ -243,5 +243,5 @@ application.
 
 ## Related Links
 
-- [Android Touch Start (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
-- [Android Touch Final (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final)
+- [Android Touch Start (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Android Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)

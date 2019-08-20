@@ -11,7 +11,7 @@ ms.date: 04/02/2019
 
 # Consume an ASP.NET Web Service (ASMX)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
 
 _ASMX provides the ability to build web services that send messages using the Simple Object Access Protocol (SOAP). SOAP is a platform-independent and language-independent protocol for building and accessing web services. Consumers of an ASMX service do not need to know anything about the platform, object model, or programming language used to implement the service. They only need to understand how to send and receive SOAP messages. This article demonstrates how to consume an ASMX SOAP service from a Xamarin.Forms application._
 
@@ -262,5 +262,5 @@ Testing physical or emulated devices with a locally-hosted service requires cust
 
 ## Related links
 
-- [TodoASMX (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoASMX/)
+- [TodoASMX (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todoasmx)
 - [IAsyncResult](https://docs.microsoft.com/dotnet/api/system.iasyncresult)

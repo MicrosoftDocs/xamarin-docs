@@ -11,7 +11,7 @@ ms.date: 09/06/2016
 
 # Localization
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
 
 _Xamarin.Forms apps can be localized using .NET resources files._
 
@@ -634,8 +634,8 @@ namespace UsingResxLocalization.Android
 Once this code has been added to the Android application project, it will be able
 to automatically display translated strings.
 
-> [!NOTE]
->️ **WARNING:** If the translated strings are working in your
+> [!WARNING]
+> If the translated strings are working in your
 > RELEASE Android builds but not while debugging, right-click on the **Android Project**
 > and select **Options > Build > Android Build** and ensure that the
 > **Fast assembly deployment** is NOT ticked. This option causes problems
@@ -882,8 +882,8 @@ Images are generally handled in a platform-specific way to take advantage of the
 
 ## Related Links
 
-- [RESX Localization Sample](https://developer.xamarin.com/samples/xamarin-forms/UsingResxLocalization/)
-- [TodoLocalized Sample App](https://developer.xamarin.com/samples/xamarin-forms/TodoLocalized/)
+- [RESX Localization Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/usingresxlocalization)
+- [TodoLocalized Sample App](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todolocalized)
 - [Cross-Platform Localization](~/cross-platform/app-fundamentals/localization.md)
 - [iOS Localization](~/ios/app-fundamentals/localization/index.md)
 - [Android Localization](~/android/app-fundamentals/localization.md)

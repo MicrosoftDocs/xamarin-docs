@@ -17,11 +17,11 @@ _This article covers additional, minor changes or enhancements to existing frame
 
 The AVFoundation framework includes the following enhancements:
 
-- In iOS 10, the developer no longer has to implement different [AVPlayerItem](https://developer.xamarin.com/api/type/AVFoundation.AVPlayerItem/) behaviors based on content type. Simply set the `Rate` property and AVFoundation will determine when enough content is available for playback without stalling.
-- The new [AVCapturePhotoOutput](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureFileOutput/) class replaces the  deprecated `AVCaptureStillImageOutput` class and provides a unified method for handling all photography workflows by providing sophisticated control and monitoring of the capture process and support for new features such as Live Photos and the RAW capture format.
+- In iOS 10, the developer no longer has to implement different [AVPlayerItem](xref:AVFoundation.AVPlayerItem) behaviors based on content type. Simply set the `Rate` property and AVFoundation will determine when enough content is available for playback without stalling.
+- The new [AVCapturePhotoOutput](xref:AVFoundation.AVCaptureFileOutput) class replaces the  deprecated `AVCaptureStillImageOutput` class and provides a unified method for handling all photography workflows by providing sophisticated control and monitoring of the capture process and support for new features such as Live Photos and the RAW capture format.
 - The new `AVPlayerLooper` class makes it easier to loop a given piece of media during playback.
 - The `AVAssetDownloadURLSession` class allows for the downloading and later playback of FairPlay encrypted HLS streams.
-- By default, the [AVCaptureSession](https://developer.xamarin.com/api/type/AVFoundation.AVCaptureSession/) class automatically supports wide-color, wide-gamut capture when the device hardware supports it. See Apple's [iOS Device Compatibility Reference](https://developer.apple.com/library/prerelease/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599) for more details.
+- By default, the [AVCaptureSession](xref:AVFoundation.AVCaptureSession) class automatically supports wide-color, wide-gamut capture when the device hardware supports it. See Apple's [iOS Device Compatibility Reference](https://developer.apple.com/library/prerelease/content/documentation/DeviceInformation/Reference/iOSDeviceCompatibility/Introduction/Introduction.html#//apple_ref/doc/uid/TP40013599) for more details.
 
 ## AVKit Additions
 
@@ -31,11 +31,11 @@ The AVKit framework now includes the new `UpdatesNowPlayingInfoCenter` property 
 
 iOS 10 includes the following enhancements to the Core Data framework:
 
-- The [NSManagedObjectContext](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectContext/) objects with SQLite data stores in the WAL Journal Mode support the new query generation feature where Managed Object Contexts (MOC) can be pinned to specific database versions for future fetching and faulting transactions.
-- Root [NSManagedObjectContext](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectContext/) objects supports concurrent faulting and fetching without serialization.
-- The [NSPersistentStoreCoordinator](https://developer.xamarin.com/api/type/CoreData.NSPersistentStoreCoordinator/) class maintains a pool of SQLite data stores.
+- The [NSManagedObjectContext](xref:CoreData.NSManagedObjectContext) objects with SQLite data stores in the WAL Journal Mode support the new query generation feature where Managed Object Contexts (MOC) can be pinned to specific database versions for future fetching and faulting transactions.
+- Root [NSManagedObjectContext](xref:CoreData.NSManagedObjectContext) objects supports concurrent faulting and fetching without serialization.
+- The [NSPersistentStoreCoordinator](xref:CoreData.NSPersistentStoreCoordinator) class maintains a pool of SQLite data stores.
 - Several new convenience methods have been added to `NSManagedObject` making it easier to perform fetches and create subclasses.
-- Using the high-level `NSPersistenceContainer` to reference the `NSPersistentStoreCoordinator`, [NSManagedObjectModel](https://developer.xamarin.com/api/type/CoreData.NSManagedObjectModel/) and other Core Data configuration resources.
+- Using the high-level `NSPersistenceContainer` to reference the `NSPersistentStoreCoordinator`, [NSManagedObjectModel](xref:CoreData.NSManagedObjectModel) and other Core Data configuration resources.
 
 For more information, please see Apple's [Core Data Framework Reference](https://developer.apple.com/reference/coredata).
 
@@ -44,11 +44,11 @@ For more information, please see Apple's [Core Data Framework Reference](https:/
 iOS 10 makes the following enhancements to the Core Image framework:
 
 - The developer can now process images in a color space outside of the Core Image context's working color space by converting in and out of the color space before and after processing.
-- For iOS devices that use the A8 or A9 CPUs, the RAW image format is now supported. Core Image now provides support for decoding RAW images from either the built-in iSight camera or from a 3rd party camera. Use the `FilterWithImageData` or `FilterWithImageURL` methods of the [CIFilter](https://developer.xamarin.com/api/type/CoreImage.CIFilter/) class to process RAW images.
+- For iOS devices that use the A8 or A9 CPUs, the RAW image format is now supported. Core Image now provides support for decoding RAW images from either the built-in iSight camera or from a 3rd party camera. Use the `FilterWithImageData` or `FilterWithImageURL` methods of the [CIFilter](xref:CoreImage.CIFilter) class to process RAW images.
 - Several rendering performance enhancements have been made to `UIImage` rendering (when backed by Core Image image stores) in `UIImageView` objects. 
 - `UIImage` objects tagged wide-gamut will render as wide-gamut color in `UIImageView` objects on iOS devices that support wide color.
 - Core Image kernel code can now request specific pixel output formats.
-- The `ImageWithExtent` method of the [CIFilter](https://developer.xamarin.com/api/type/CoreImage.CIFilter/) class can be used to insert custom processing into the filter operation. Core Image will invoke the given callback between filters when processing an image for output or display.
+- The `ImageWithExtent` method of the [CIFilter](xref:CoreImage.CIFilter) class can be used to insert custom processing into the filter operation. Core Image will invoke the given callback between filters when processing an image for output or display.
 
 Additionally, the following new Core Image filters have been added:
 
@@ -60,7 +60,7 @@ Additionally, the following new Core Image filters have been added:
 
 ## Core Motion Additions
 
-New to iOS 10, the Core Motion framework includes pedometer events which enable an app to receive fast, real-time notifications of the user pausing and resuming tracking while running. Use the [CMPedometer](https://developer.xamarin.com/api/type/CoreMotion.CMPedometer/) to register for foreground or background pedometer events.
+New to iOS 10, the Core Motion framework includes pedometer events which enable an app to receive fast, real-time notifications of the user pausing and resuming tracking while running. Use the [CMPedometer](xref:CoreMotion.CMPedometer) to register for foreground or background pedometer events.
 
 ## Foundation Enhancements
 
@@ -127,10 +127,10 @@ To learn more, please see Apple's [Metal Programming Guide](https://developer.ap
 
 The following enhancements have been made to the ModelIO framework in iOS 10:
 
- - The USD file format is now supported.
- - Signed Distance Field support has been added to the [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) class.
- - Use the new `MDLLightProbeIrradianceDataSource` class to assist in Light Probe placement.
- - Use the new `MDLMaterialPropertyGraph` class to easily support runtime changes to models.
+- The USD file format is now supported.
+- Signed Distance Field support has been added to the [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) class.
+- Use the new `MDLLightProbeIrradianceDataSource` class to assist in Light Probe placement.
+- Use the new `MDLMaterialPropertyGraph` class to easily support runtime changes to models.
 
 ## Photos Enhancements
 
@@ -169,18 +169,18 @@ The following enhancements have been made to the SpriteKit framework in iOS 10:
 
 - Custom shaders can provide attributes (`SKAttribute`) that can be configured separately by each node that uses the shader by supplying an Attribute Value (`SKAttributeValue`).
 - Tilemaps now support square, hexagonal and isometric tile shapes for 2D, 2.5D and side-scrolling games using the `SKTileMapMode`, `SKTileGroup`, `SKTileGroupRule` and `SKTileSet` classes.
-- Use the new `SKWarpGeometry` class to stretch or distort [SKSpriteNode](https://developer.xamarin.com/api/type/SpriteKit.SKSpriteNode/) or [SKEffectNode](https://developer.xamarin.com/api/type/SpriteKit.SKEffectNode/) rendering. The new [SKAction](https://developer.xamarin.com/api/type/SpriteKit.SKAction/) class can be used to animate transitions between warp effects.
-- The [SKView](https://developer.xamarin.com/api/type/SpriteKit.SKView/) class provides several new methods to give fine-grained control over when and how a scene is rendered.
+- Use the new `SKWarpGeometry` class to stretch or distort [SKSpriteNode](xref:SpriteKit.SKSpriteNode) or [SKEffectNode](xref:SpriteKit.SKEffectNode) rendering. The new [SKAction](xref:SpriteKit.SKAction) class can be used to animate transitions between warp effects.
+- The [SKView](xref:SpriteKit.SKView) class provides several new methods to give fine-grained control over when and how a scene is rendered.
 
 ## ScrollView Enhancements
 
 The following enhancements have been made to the ScrollView control in iOS 10.3:
 
 - `UIScrollView` now include the `IndexDisplayMode` property to control how the index is shown while the user is scrolling as a `UIScrollViewIndexDisplayMode` of:
-	- `Automatic` - The index display is controlled by the OS.
-	- `AlwaysHidden` - The index display is always hidden.
+  - `Automatic` - The index display is controlled by the OS.
+  - `AlwaysHidden` - The index display is always hidden.
 
-See the [iOSTenThree Sample](https://developer.xamarin.com/samples/monotouch/iOS10/iOSTenThree) for usage.
+See the [iOSTenThree Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree) for usage.
 
 ## UIKit Enhancements
 
@@ -209,5 +209,5 @@ The following enhancements have been made to the WebKit framework in iOS 10:
 
 ## Related Links
 
-- [iOS 10 Samples](https://developer.xamarin.com/samples/ios/iOS10/)
+- [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [What's new in iOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewIniOS/Articles/iOS10.html#//apple_ref/doc/uid/TP40017084-SW1)

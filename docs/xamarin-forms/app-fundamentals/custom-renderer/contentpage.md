@@ -11,7 +11,7 @@ ms.date: 11/29/2017
 
 # Customizing a ContentPage
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)
 
 _A ContentPage is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the ContentPage page, enabling developers to override the default native rendering with their own platform-specific customization._
 
@@ -194,7 +194,7 @@ namespace CustomRenderer.Droid
 
 The call to the base class's `OnElementChanged` method instantiates an Android `ViewGroup` control, which is a group of views. The live camera stream is only rendered provided that the renderer isn't already attached to an existing Xamarin.Forms element, and provided that a page instance exists that is being rendered by the custom renderer.
 
-The page is then customized by invoking a series of methods that use the `Camera` API to provide the live stream from the camera and the ability to capture a photo, before the `AddView` method is invoked to add the live camera stream UI to the `ViewGroup`. Note that on Android it's also necessary to override the `OnLayout` method to perform measure and layout operations on the view. For more information, see the [ContentPage renderer sample](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/).
+The page is then customized by invoking a series of methods that use the `Camera` API to provide the live stream from the camera and the ability to capture a photo, before the `AddView` method is invoked to add the live camera stream UI to the `ViewGroup`. Note that on Android it's also necessary to override the `OnLayout` method to perform measure and layout operations on the view. For more information, see the [ContentPage renderer sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage).
 
 ### Creating the Page Renderer on UWP
 
@@ -252,4 +252,4 @@ This article has demonstrated how to create a custom renderer for the [`ContentP
 
 ## Related Links
 
-- [CustomRendererContentPage (sample)](https://developer.xamarin.com/samples/xamarin-forms/CustomRenderers/ContentPage/)
+- [CustomRendererContentPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

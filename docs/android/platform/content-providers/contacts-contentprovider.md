@@ -48,11 +48,11 @@ There are three ways to create a cursor from the Uri:
 
 Each of these methods has the same basic set of inputs:
 
--  **Uri** &ndash; The fully qualified name of the  `ContentProvider` .
--  **Projection** &ndash; Specification of which columns to select for the cursor.
--  **Selection** &ndash; Similar to a SQL  `WHERE` clause.
--  **SelectionArgs** &ndash; Parameters to be substituted in the Selection.
--  **SortOrder** &ndash; Columns to sort by.
+- **Uri** &ndash; The fully qualified name of the  `ContentProvider` .
+- **Projection** &ndash; Specification of which columns to select for the cursor.
+- **Selection** &ndash; Similar to a SQL  `WHERE` clause.
+- **SelectionArgs** &ndash; Parameters to be substituted in the Selection.
+- **SortOrder** &ndash; Columns to sort by.
 
 
 
@@ -261,4 +261,4 @@ for further information on implementing `SimpleCursorAdapter`.
 
 ## Related Links
 
-- [ContactsAdapter Demo (sample)](https://developer.xamarin.com/samples/monodroid/PlatformFeatures/ContactsAdapterDemo/)
+- [ContactsAdapter Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-contactsadapterdemo)

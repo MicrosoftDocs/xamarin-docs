@@ -11,7 +11,7 @@ ms.date: 11/24/2016
 
 # Native Views in XAML
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
 
 _Native views from iOS, Android, and the Universal Windows Platform can be directly referenced from Xamarin.Forms XAML files. Properties and event handlers can be set on native views, and they can interact with Xamarin.Forms views. This article demonstrates how to consume native views from Xamarin.Forms XAML files._
 
@@ -179,7 +179,7 @@ The following code example demonstrates both techniques:
 
 The [`UIFont.FromName`](xref:UIKit.UIFont.FromName*) factory method is used to set the [`UILabel.Font`](xref:UIKit.UILabel.Font) property to a new [`UIFont`](xref:UIKit.UIFont) on iOS. The `UIFont` name and size are specified by the method arguments that are children of the `x:Arguments` attribute.
 
-The [`Typeface.Create`](https://developer.xamarin.com/api/member/Android.Graphics.Typeface.Create/p/System.String/Android.Graphics.TypefaceStyle/) factory method is used to set the [`TextView.Typeface`](https://developer.xamarin.com/api/property/Android.Widget.TextView.Typeface/) property to a new [`Typeface`](https://developer.xamarin.com/api/type/Android.Graphics.Typeface/) on Android. The `Typeface` family name and style are specified by the method arguments that are children of the `x:Arguments` attribute.
+The [`Typeface.Create`](xref:Android.Graphics.Typeface.Create*) factory method is used to set the [`TextView.Typeface`](xref:Android.Widget.TextView.Typeface) property to a new [`Typeface`](xref:Android.Graphics.Typeface) on Android. The `Typeface` family name and style are specified by the method arguments that are children of the `x:Arguments` attribute.
 
 The [`FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.media.fontfamily) constructor is used to set the [`TextBlock.FontFamily`](https://msdn.microsoft.com/library/windows/apps/windows.ui.xaml.controls.textblock.fontfamily) property to a new `FontFamily` on the Universal Windows Platform (UWP). The `FontFamily` name is specified by the method argument that is a child of the `x:Arguments` attribute.
 
@@ -418,7 +418,7 @@ The `PickerModel` class provides the underlying storage for the `MyUIPickerView`
 
 ### Android
 
-The Android implementation subclasses the [`Spinner`](https://developer.xamarin.com/api/type/Android.Widget.Spinner/) view, and exposes properties and an event that can be easily consumed from XAML:
+The Android implementation subclasses the [`Spinner`](xref:Android.Widget.Spinner) view, and exposes properties and an event that can be easily consumed from XAML:
 
 ```csharp
 class MySpinner : Spinner
@@ -476,7 +476,7 @@ class MySpinner : Spinner
 }
 ```
 
-The `MySpinner` class exposes `ItemsSource` and `SelectedObject` properties, and a `ItemSelected` event. The items displayed by the `MySpinner` class are provided by the [`Adapter`](https://developer.xamarin.com/api/type/Android.Widget.Adapter/) associated with the view, and items are populated into the `Adapter` when the `ItemsSource` property is first set. Whenever the selected item in the `MySpinner` class changes, the `OnBindableSpinnerItemSelected` event handler updates the `SelectedObject` property.
+The `MySpinner` class exposes `ItemsSource` and `SelectedObject` properties, and a `ItemSelected` event. The items displayed by the `MySpinner` class are provided by the [`Adapter`](xref:Android.Widget.Adapter) associated with the view, and items are populated into the `Adapter` when the `ItemsSource` property is first set. Whenever the selected item in the `MySpinner` class changes, the `OnBindableSpinnerItemSelected` event handler updates the `SelectedObject` property.
 
 ## Summary
 
@@ -485,9 +485,9 @@ This article demonstrated how to consume native views from Xamarin.Forms XAML fi
 
 ## Related Links
 
-- [NativeSwitch (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeSwitch/)
-- [Forms2Native (sample)](https://developer.xamarin.com/samples/xamarin-forms/Forms2Native/)
-- [NativeViewInsideContentView (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/NativeViewInsideContentView/)
-- [SubclassedNativeControls (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/NativeViews/SubclassedNativeControls/)
+- [NativeSwitch (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)
+- [Forms2Native (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/forms2native)
+- [NativeViewInsideContentView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeviewinsidecontentview)
+- [SubclassedNativeControls (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-subclassednativecontrols)
 - [Native Forms](~/xamarin-forms/platform/native-forms.md)
 - [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md)

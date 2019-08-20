@@ -41,5 +41,5 @@ The programmatic names of all the controls is prefixed with
 
 ## Related Links
 
-- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Watch Kit API Reference](xref:WatchKit)

@@ -9,11 +9,11 @@
         - name: Requirements
           displayName: System requirements
           href: get-started/requirements.md
-        - name: Introduction to Mobile Development
+        - name: What is Xamarin?
           href: get-started/introduction-to-mobile-development.md
-        - name: Introduction to the Mobile SDLC
+        - name: Mobile software development lifecycle
           href: get-started/introduction-to-mobile-sdlc.md
-        - name: Building Cross-Platform Applications
+        - name: Walkthrough building a cross-platform app
           href: app-fundamentals/building-cross-platform-applications/index.md
           items:
             - name: Overview

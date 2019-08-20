@@ -11,7 +11,7 @@ ms.date: 05/10/2018
 
 # Part 1. Getting Started with XAML
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _In a Xamarin.Forms application, XAML is mostly used to define the visual contents of a page and works together with a C# code-behind file._
 
@@ -206,9 +206,9 @@ The `HorizontalTextAlignment` property is of type `TextAlignment`, which is an e
 
 For properties of more complex types, however, converters are used for parsing the XAML. These are classes in Xamarin.Forms that derive from `TypeConverter`. Many are public classes but some are not. For this particular XAML file, several of these classes play a role behind the scenes:
 
--  `LayoutOptionsConverter` for the  `VerticalOptions` property
--  `FontSizeConverter` for the  `FontSize` property
--  `ColorTypeConverter` for the  `TextColor` property
+- `LayoutOptionsConverter` for the  `VerticalOptions` property
+- `FontSizeConverter` for the  `FontSize` property
+- `ColorTypeConverter` for the  `TextColor` property
 
 These converters govern the allowable syntax of the property settings.
 
@@ -450,7 +450,7 @@ With this introduction, you’ve seen how a XAML file and code file contribute t
 
 ## Related Links
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Part 2. Essential XAML Syntax](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Part 3. XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

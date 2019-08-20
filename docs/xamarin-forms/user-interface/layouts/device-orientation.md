@@ -11,7 +11,7 @@ ms.date: 12/09/2015
 
 # Device Orientation
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 
 It is important to consider how your application will be used and how landscape orientation can be incorporated to improve the user experience. Individual layouts can be designed to accommodate multiple orientations and best use the available space. At the application level, rotation can be disabled or enabled.
 
@@ -66,7 +66,7 @@ Xamarin.Android supports several options for specifying orientation:
 - **Landscape** &ndash; forces the application orientation to be landscape, regardless of sensor data.
 - **Portrait** &ndash; forces the application orientation to be portrait, regardless of sensor data.
 - **User** &ndash; causes the application to be presented using the user's preferred orientation.
-- **Behind** &ndash; causes the application's orientation to be the same as the orientation of the [activity](https://developer.xamarin.com/api/type/Android.App.Activity/) behind it.
+- **Behind** &ndash; causes the application's orientation to be the same as the orientation of the [activity](xref:Android.App.Activity) behind it.
 - **Sensor** &ndash; causes the application's orientation to be determined by the sensor, even if the user has disabled automatic rotation.
 - **SensorLandscape** &ndash; causes the application to use landscape orientation while using sensor data to change the direction the screen is facing (so that the screen isn't seen as upside down).
 - **SensorPortrait** &ndash; causes the application to use portrait orientation while using sensor data to change the direction the screen is facing (so that the screen isn't seen as upside down).
@@ -470,7 +470,7 @@ Note the following:
 
 ## Related Links
 
-- [Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Layout/)
-- [BusinessTumble Example (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BusinessTumble/)
-- [Responsive Layout (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/ResponsiveLayout)
+- [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
+- [BusinessTumble Example (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-businesstumble)
+- [Responsive Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-responsivelayout)
 - [Display an Image based on Screen Orientation](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation)

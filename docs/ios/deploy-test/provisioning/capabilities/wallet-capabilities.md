@@ -27,21 +27,21 @@ Developers can work with Wallet in a variety of ways:
 
 To create a new provisioning profile for use with Wallet, do the following:
 
-1.	Browse to the [Certificates, Identifiers, and Profiles](https://developer.apple.com/account/ios/certificate/) section of the Apple Developer Portal.
-2.	Under **Identifiers**, browse to **App IDs**: 
+1. Browse to the [Certificates, Identifiers, and Profiles](https://developer.apple.com/account/ios/certificate/) section of the Apple Developer Portal.
+2. Under **Identifiers**, browse to **App IDs**: 
     
     ![App ID selection](wallet-capabilities-images/image17.png)
 
-3.	Click the **+** icon in the top right of the page.
-4.	Register a new App ID by giving it a **Name** and a bundle identifier. (Note that this bundle identifier must match the bundle ID in your project):
+3. Click the **+** icon in the top right of the page.
+4. Register a new App ID by giving it a **Name** and a bundle identifier. (Note that this bundle identifier must match the bundle ID in your project):
    
     ![Add App ID details](wallet-capabilities-images/image18.png)
 
-5.	Select the **Wallet** App Service from the list of services:
+5. Select the **Wallet** App Service from the list of services:
     
     ![Select service screen](wallet-capabilities-images/image19.png)
 
-6.	Press **Continue**, and then **Register** to create the App ID.
+6. Press **Continue**, and then **Register** to create the App ID.
 
 If required, existing App IDs can be edited to add the Wallet capability.
 
@@ -60,6 +60,6 @@ The list below describes additional steps that may need to be taken:
 
 * Use the framework namespace in your app.
 * Add the required entitlements to your App. Information on the entitlements required and how to add them is detailed in the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
-* In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
+* In the App's **iOS Bundle Signing**, ensure that the **Custom Entitlements** is set to **Entitlements.plist**. This is _not_ the default setting for Debug and iOS Simulator builds.
 
 If you encounter issues with app services, refer to the [Troubleshooting](~/ios/deploy-test/provisioning/capabilities/index.md) section of the main guide.

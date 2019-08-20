@@ -125,9 +125,9 @@ Other UIKit controls have changed as well, including sliders, switches and stepp
 
 In addition to the changes in UIKit, iOS 7 introduces a variety of visual changes to the UI, including:
 
--  Full Screen Content
--  Bar Appearance
--  Tint Color
+- Full Screen Content
+- Bar Appearance
+- Tint Color
 
 <a name="fullscreen" />
 
@@ -163,7 +163,7 @@ We can use the value calculated above to set our `ImageView`'s displacement from
 
  [![](ios7-ui-images/good2.png "Example ImageViews displacement from the top of the screen")](ios7-ui-images/good2.png#lightbox)
 
-Refer to the [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) for a working sample.
+Refer to the [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) for a working sample.
 
 The displacement value is generated dynamically after the View has been added to the hierarchy, so attempting to read `TopLayoutGuide` and `BottomLayoutGuide` values in `ViewDidLoad` will return 0. Calculate the value after the View has loaded - for example, in the `ViewDidLayoutSubviews`.
 
@@ -198,7 +198,7 @@ In our app, we'll see the view is again repositioned, so the whole image is visi
 
 Note that while the effects of the `TopLayoutGuide/BottomLayoutGuide` and `EdgesForExtendedLayout` APIs are similar, they are meant to fill different goals. Changing the `EdgesForExtendedLayout` setting from the default may fix clipped views in applications designed for iOS 6, but a good iOS 7 design should honor the full-screen aesthetic and provide a full-screen viewing experience, relying on `TopLayoutGuide` and `BottomLayoutGuide` to properly position content that's meant to be manipulated into a comfortable place for the user.
 
-Refer to the [ImageViewer](https://developer.xamarin.com/samples/mobile/iOS7-ui-updates) for a working sample.
+Refer to the [ImageViewer](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates/) for a working sample.
 
 ### Status and Navigation Bars
 
@@ -260,4 +260,4 @@ This article covers the changes to user interface elements in iOS 7. It examines
 
 ## Related Links
 
-- [ImageViewer (sample)](https://developer.xamarin.com/samples/monotouch/iOS7-ui-updates)
+- [ImageViewer (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios7-ui-updates)

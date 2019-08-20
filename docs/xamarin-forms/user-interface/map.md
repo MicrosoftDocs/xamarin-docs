@@ -11,7 +11,7 @@ ms.date: 06/13/2019
 
 # Xamarin.Forms Map
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
 _Xamarin.Forms uses the native map APIs on each platform._
 
@@ -20,7 +20,7 @@ fast, familiar maps experience for users, but means that some configuration
 steps are needed to adhere to each platforms API requirements.
 Once configured, the `Map` control works just like any other Xamarin.Forms element in common code.
 
-The map control has been used in the [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/) sample, which is shown below.
+The map control has been used in the [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps) sample, which is shown below.
 
  [![Maps in the MobileCRM sample](map-images/maps-zoom-sml.png "Map Control Example")](map-images/maps-zoom.png#lightbox "Map Control Example")
 
@@ -56,9 +56,9 @@ Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 
 Add this call in the following files for each platform:
 
--  **iOS** - AppDelegate.cs file, in the  `FinishedLaunching` method.
--  **Android** - MainActivity.cs file, in the  `OnCreate` method.
--  **UWP** - MainPage.xaml.cs file, in the `MainPage` constructor.
+- **iOS** - AppDelegate.cs file, in the  `FinishedLaunching` method.
+- **Android** - MainActivity.cs file, in the  `OnCreate` method.
+- **UWP** - MainPage.xaml.cs file, in the `MainPage` constructor.
 
 Once the NuGet package has been added and the initialization method called inside
 each application, `Xamarin.Forms.Maps` APIs can be used in the common .NET Standard library project or Shared Project code.
@@ -182,16 +182,16 @@ map.MapType == MapType.Street;
 
 Valid `MapType` values are:
 
--  Hybrid
--  Satellite
--  Street (the default)
+- Hybrid
+- Satellite
+- Street (the default)
 
 ### Map region and MapSpan
 
 As shown in the code snippet above, supplying a `MapSpan` instance to a map constructor sets the initial view (center point and zoom level) of the map when it is loaded. The `MoveToRegion` method on the map class can then be used to change the position or zoom level of the map. There are two ways to create a new `MapSpan` instance:
 
--  **MapSpan.FromCenterAndRadius()** - static method to create a span from a  `Position` and specifying a  `Distance` .
--  **new MapSpan ()** - constructor that uses a  `Position` and the degrees of latitude and longitude to display.
+- **MapSpan.FromCenterAndRadius()** - static method to create a span from a  `Position` and specifying a  `Distance` .
+- **new MapSpan ()** - constructor that uses a  `Position` and the degrees of latitude and longitude to display.
 
 
 To change the zoom level of the map without altering the location, create a new `MapSpan` using the current location from the `VisibleRegion.Center` property of the map control. A `Slider` could be used to control map zoom like this (however zooming directly in the map control cannot currently update the value of the slider):
@@ -224,10 +224,10 @@ map.Pins.Add(pin);
 
 `PinType` can be set to one of the following values, which may affect the way the pin is rendered (depending on the platform):
 
--  Generic
--  Place
--  SavedPin
--  SearchResult
+- Generic
+- Place
+- SavedPin
+- SearchResult
 
 ### Map clicks
 
@@ -381,7 +381,8 @@ For more information about data template selectors, see [Creating a Xamarin.Form
 
 ## Related links
 
-- [MapsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithMaps/)
+- [MapsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Map Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
-- [Xamarin.Forms Samples](https://developer.xamarin.com/samples/xamarin-forms/all/)
+- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
 - [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)
+- [Maps API](xref:Xamarin.Forms.Maps)

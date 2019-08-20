@@ -385,7 +385,7 @@ The default behavior can be overridden by passing
 ## Remove the dynamic registrar
 
 Both the Xamarin.iOS and the Xamarin.Mac runtime include support for
-[registering managed types](https://developer.xamarin.com/guides/ios/advanced_topics/registrar/)
+[registering managed types](~/ios/internals/registrar.md)
 with the Objective-C runtime. It can either be done at build time or at
 runtime (or partially at build time and the rest at runtime), but if it's
 completely done at build time, it means the supporting code for doing it at

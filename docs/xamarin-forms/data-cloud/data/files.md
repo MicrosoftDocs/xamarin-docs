@@ -11,7 +11,7 @@ ms.date: 06/21/2018
 
 # File Handling in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 
 _File handling with Xamarin.Forms can be achieved using code in a .NET Standard library, or by using embedded resources._
 
@@ -82,7 +82,7 @@ using (var reader = new System.IO.StreamReader (stream)) {
 }
 ```
 
-The `text` variable can then be used to display the text or otherwise use it in code. This screenshot of the [sample app](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/) shows the text rendered in a `Label` control.
+The `text` variable can then be used to display the text or otherwise use it in code. This screenshot of the [sample app](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles) shows the text rendered in a `Label` control.
 
  [![Text file embedded in PCL](files-images/pcltext-sml.png "Embedded Text File in PCL Displayed in App")](files-images/pcltext.png#lightbox "Embedded Text File in PCL Displayed in App")
 
@@ -110,8 +110,8 @@ Shared Projects can also contain files as embedded resources, however because th
 
 There are two solutions to this issue with Shared Projects:
 
--  **Synchronize the Projects** - Edit the project properties for each platform to use the  **same** assembly name and default namespace. This value can then be "hardcoded" as the prefix for embedded resource IDs in the Shared Project.
--  **#if compiler directives** - Use compiler directives to set the correct resource ID prefix and use that value to dynamically construct the correct resource ID.
+- **Synchronize the Projects** - Edit the project properties for each platform to use the  **same** assembly name and default namespace. This value can then be "hardcoded" as the prefix for embedded resource IDs in the Shared Project.
+- **#if compiler directives** - Use compiler directives to set the correct resource ID prefix and use that value to dynamically construct the correct resource ID.
 
 
 Code illustrating the second option is shown below. Compiler directives are used to select the hardcoded resource prefix (which is normally the same as the default namespace for the referencing project). The `resourcePrefix` variable is then used to create a valid resource ID by concatenating it with the embedded resource filename.
@@ -161,7 +161,7 @@ This article has shown some simple file operations for saving and loading text o
 
 ## Related Links
 
-- [FilesSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithFiles/)
+- [FilesSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfiles)
 - [Xamarin.Forms Samples](https://github.com/xamarin/xamarin-forms-samples)
 - [Working with the File System in Xamarin.iOS](~/ios/app-fundamentals/file-system.md)
 

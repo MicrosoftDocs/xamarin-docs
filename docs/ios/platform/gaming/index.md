@@ -472,6 +472,6 @@ new features of SceneKit and SpriteKit.
 
 ## Related Links
 
-- [iOS 9 Samples](https://developer.xamarin.com/samples/ios/iOS9/)
+- [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)
 - [iOS 9 for Developers](https://developer.apple.com/ios/pre-release/)
 - [iOS 9.0](https://developer.apple.com/library/prerelease/ios/releasenotes/General/WhatsNewIniOS/Articles/iOS9.html)

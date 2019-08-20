@@ -43,7 +43,7 @@ However, Objective Sharpie is a very advanced tool that requires advanced knowle
 
 ## Related Links
 
-- [Objective Sharpie download](https://dl.xamarin.com/objective-sharpie/ObjectiveSharpie.pkg)
+- [Objective Sharpie download](https://aka.ms/objective-sharpie)
 - [Walkthrough: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md)
 - [Binding Objective-C Libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Binding Details](~/cross-platform/macios/binding/overview.md)

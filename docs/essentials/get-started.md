@@ -5,33 +5,27 @@ ms.assetid: B2669C48-B659-4854-BD80-FEB0E876F5B9
 author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
-ms.date: 11/04/2018
+ms.date: 07/10/2019
 ---
 
 # Get Started with Xamarin.Essentials
 
-Xamarin.Essentials provides a single cross-platform API that works with any iOS, Android, or UWP application that can be accessed from shared code no matter how the user interface is created.
-
-## Platform Support
-
-Xamarin.Essentials supports the following platforms and operating systems:
-
-| Platform | Version |
-| --- | --- |
-| Android | 4.4 (API 19) or higher |
-| iOS |10.0 or higher |
-| UWP | 10.0.16299.0 or higher |
+Xamarin.Essentials provides a single cross-platform API that works with any iOS, Android, or UWP application that can be accessed from shared code no matter how the user interface is created. See the [platform & feature support guide](platform-feature-support.md) for more information on supported operating systems.
 
 ## Installation
 
 Xamarin.Essentials is available as a NuGet package that can be added to any existing or new project using Visual Studio.
 
-1. Download and install [Visual Studio](http://visualstudio.com) with the [Visual Studio tools for Xamarin](~/get-started/installation/index.md).
+1. Download and install [Visual Studio](https://visualstudio.microsoft.com/) with the [Visual Studio tools for Xamarin](~/get-started/installation/index.md).
 
-2. Open an existing project, or create a new project using the Blank App template under **Visual Studio C#** (Android, iPhone & iPad, or Cross-Platform). **Important**: If adding to a UWP project ensure Build 16299 or higher is set in the project properties.
+2. Open an existing project, or create a new project using the Blank App template under **Visual Studio C#** (Android, iPhone & iPad, or Cross-Platform).
+
+    > [!IMPORTANT]
+    > If adding to a UWP project ensure Build 16299 or higher is set in the project properties.
 
 3. Add the [**Xamarin.Essentials**](https://www.nuget.org/packages/Xamarin.Essentials/) NuGet package to each project:
 
+    <!--markdownlint-disable MD023 -->
     # [Visual Studio](#tab/windows)
 
     In the Solution Explorer panel, right click on the solution name and select **Manage NuGet Packages**. Search for **Xamarin.Essentials** and install the package into **ALL** projects including Android, iOS, UWP, and .NET Standard libraries.

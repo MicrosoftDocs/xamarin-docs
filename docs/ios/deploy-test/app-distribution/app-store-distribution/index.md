@@ -22,7 +22,7 @@ Once a Xamarin.iOS app has been developed, the next step in the software develop
 Distributing an application – just as with developing an application – requires that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. They also contain information about what devices the app can be deployed to for the non-App Store distribution.
 
 > [!IMPORTANT]
-> It is **important** to note that to use iTunes Connect, and therefore publish an app to the App Store, you **must** be part of either an individual or organizational Apple Developer Program. You will not be able to follow the steps on this page if you are a member of an Apple Developer **Enterprise** Program.
+> To use iTunes Connect, and therefore publish an app to the App Store, you **must** be part of either an individual or organizational Apple Developer Program. You will not be able to follow the steps on this page if you are a member of an Apple Developer **Enterprise** Program.
 
 <a name="provisioning" />
 
@@ -61,13 +61,13 @@ You can select the same **App ID** and **Devices** that you used for your develo
 
 Alternatively, it is possible to request a Certificate via the Preferences dialog in Xcode. To do this, follow the steps below:
 
-1.   Select your team, and click **Manage Certificates…**:
+1. Select your team, and click **Manage Certificates…**:
 	[![](images/selectteam.png "Select the team and View Details")](images/selectteam.png#lightbox)
 
-2.   Next, click the **Create** button next to **iOS Distribution Certificate**:
+2. Next, click the **Create** button next to **iOS Distribution Certificate**:
 	[![](images/selectcert.png "Create an iOS Distribution Certificate")](images/selectcert.png#lightbox)
 
-3.   Depending on your team privileges, the signing identity will be generated, as shown below, or you may have to wait until a team agent or admin approves it:
+3. Depending on your team privileges, the signing identity will be generated, as shown below, or you may have to wait until a team agent or admin approves it:
 	[![](images/generated.png "The signing identity will be generated and a dialog displayed")](images/generated.png#lightbox)
 
 

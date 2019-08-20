@@ -21,11 +21,11 @@ In this guide and accompanying walkthroughs, we are going to learn to perform ap
 
 ## Contents
 
-1.  [Introduction to Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
-1.  [Application Lifecycle Demo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
-1.  [iOS Backgrounding Techniques](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
-1.  [Walkthroughs: Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
-1.  [iOS Backgrounding Guidance](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
+1. [Introduction to Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
+1. [Application Lifecycle Demo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
+1. [iOS Backgrounding Techniques](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
+1. [Walkthroughs: Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+1. [iOS Backgrounding Guidance](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
 
 ## Summary
 
@@ -36,7 +36,7 @@ In this guide, we introduced the different ways of doing background processing i
 ## Related Links
 
 - [Backgrounding on Android](~/android/app-fundamentals/services/index.md)
-- [LifecycleDemo (sample)](https://developer.xamarin.com/samples/monotouch/LifecycleDemo/)
-- [Location (sample)](https://developer.xamarin.com/samples/monotouch/Location/)
-- [Simple Background Transfer (sample)](https://developer.xamarin.com/samples/monotouch/SimpleBackgroundTransfer/)
+- [LifecycleDemo (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/lifecycledemo)
+- [Location (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/location)
+- [Simple Background Transfer (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplebackgroundtransfer)
 - [iOS Background Execution](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/BackgroundExecution/BackgroundExecution.html)

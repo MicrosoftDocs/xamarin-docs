@@ -96,7 +96,7 @@ public class ConnectivityTest
         Connectivity.ConnectivityChanged += Connectivity_ConnectivityChanged;
     }
 
-    void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs  e)
+    void Connectivity_ConnectivityChanged(object sender, ConnectivityChangedEventArgs e)
     {
         var access = e.NetworkAccess;
         var profiles = e.ConnectionProfiles;

@@ -17,35 +17,35 @@ entails setting some application attributes.
 
 Use the following steps to build the app for release:
 
--   **[Specify the Application Icon](#Specify_the_Application_Icon)**
+- **[Specify the Application Icon](#Specify_the_Application_Icon)**
     &ndash; Each Xamarin.Android application should have an application
     icon specified. Although not technically necessary, some markets,
     such as Google Play, require it.
 
--   **[Version the Application](#Versioning)** &ndash; This step
+- **[Version the Application](#Versioning)** &ndash; This step
     involves initializing or updating the versioning information. This
     is important for future application updates and to ensure that the
     users are aware of which version of the application they have
     installed.
 
--   **[Shrink the APK](#shrink_apk)** &ndash; The size of the final APK
+- **[Shrink the APK](#shrink_apk)** &ndash; The size of the final APK
     can be substantially reduced by using the Xamarin.Android linker on
     the managed code and ProGuard on the Java bytecode.
 
--   **[Protect the Application](#protect_app)** &ndash; Prevent users
+- **[Protect the Application](#protect_app)** &ndash; Prevent users
     or attackers from debugging, tampering, or reverse engineering the
     application by disabling debugging, obfuscating the managed code,
     adding anti-debug and anti-tamper, and using native compilation.
 
--   **[Set Packaging Properties](#Set_Packaging_Properties)** &ndash;
+- **[Set Packaging Properties](#Set_Packaging_Properties)** &ndash;
     Packaging properties control the creation of the Android
     application package (APK). This step optimizes the APK, protects
     its assets, and modularizes the packaging as needed.
 
--   **[Compile](#Compile)** &ndash; This step compiles the code and
+- **[Compile](#Compile)** &ndash; This step compiles the code and
     assets to verify that it builds in Release mode.
 
--   **[Archive for Publishing](#archive)** &ndash; This step builds the
+- **[Archive for Publishing](#archive)** &ndash; This step builds the
     app and places it in an archive for signing and publishing.
 
 Each of these steps is described below in more detail.
@@ -102,7 +102,7 @@ distribution. Without some sort of versioning in place, it is difficult
 to determine if or how an application should be updated. To assist with 
 versioning, Android recognizes two different types of information: 
 
--   **Version Number** &ndash; An integer value (used internally by 
+- **Version Number** &ndash; An integer value (used internally by 
     Android and the application) that represents the version of the 
     application. Most applications start out with this value set to 1, 
     and then it is incremented with each build. This value has no 
@@ -111,7 +111,7 @@ versioning, Android recognizes two different types of information:
     display this value to users. This value is stored in the 
     **AndroidManifest.xml** file as `android:versionCode`. 
 
--   **Version Name** &ndash; A string that is used only for 
+- **Version Name** &ndash; A string that is used only for 
     communicating information to the user about the version of the 
     application (as installed on a specific device). The version name 
     is intended to be displayed to users or in Google Play. This string 
@@ -162,9 +162,9 @@ size. For example, consider the
 [HelloWorld](~/android/deploy-test/linker.md) sample, which 
 experiences an 83% reduction in the final size of its APK: 
 
--   Configuration: None &ndash; Xamarin.Android 4.2.5 Size = 17.4 MB.
+- Configuration: None &ndash; Xamarin.Android 4.2.5 Size = 17.4 MB.
 
--   Configuration: SDK Assemblies Only &ndash; Xamarin.Android 4.2.5 Size = 3.0 MB.
+- Configuration: SDK Assemblies Only &ndash; Xamarin.Android 4.2.5 Size = 3.0 MB.
 
 # [Visual Studio](#tab/windows)
 
@@ -176,14 +176,14 @@ Set linker options through the **Android Options** section of the project
 The **Linking** pull-down menu provides the following options for
 controlling the linker:
 
--   **None** &ndash; This turns off the linker; no linking will be
+- **None** &ndash; This turns off the linker; no linking will be
     performed.
 
--   **SDK Assemblies Only** &ndash; This will only link the assemblies
+- **SDK Assemblies Only** &ndash; This will only link the assemblies
     that are [required by Xamarin.Android](~/cross-platform/internals/available-assemblies.md). 
     Other assemblies will not be linked.
 
--   **Sdk and User Assemblies** &ndash; This will link all assemblies
+- **Sdk and User Assemblies** &ndash; This will link all assemblies
     that are required by the application, and not just the ones
     required by Xamarin.Android.
 
@@ -196,16 +196,16 @@ section of **Project Options**, as shown in the following screenshot:
 
 The options for controlling the linker are as follows:
 
--   **Don't link** &ndash; This turns off the linker; no linking will
+- **Don't link** &ndash; This turns off the linker; no linking will
     be performed.
 
--   **Link SDK assemblies only** &ndash; This will only link the
+- **Link SDK assemblies only** &ndash; This will only link the
     assemblies that are
     [required by
     Xamarin.Android](~/cross-platform/internals/available-assemblies.md). Other
     assemblies will not be linked.
 
--   **Link all assemblies** &ndash; This will link all assemblies that
+- **Link all assemblies** &ndash; This will link all assemblies that
     are required by the application, and not just the ones required by
     Xamarin.Android.
 
@@ -590,7 +590,7 @@ resulting **Sign and Distribute** dialog presents two choices:
 
 From here, it is possible to select the distribution channel:
 
--   **Ad-Hoc** &ndash; Saves a signed APK to disk so it can be
+- **Ad-Hoc** &ndash; Saves a signed APK to disk so it can be
     sideloaded to Android devices. Continue to
     [Signing the App
     Package](~/android/deploy-test/signing/index.md)
@@ -600,7 +600,7 @@ From here, it is possible to select the distribution channel:
     to create an APK for testing.
 
 
--   **Google Play** &ndash; Publishes a signed APK to Google Play.
+- **Google Play** &ndash; Publishes a signed APK to Google Play.
     Continue to
     [Publishing to Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md)
     to learn how to sign and publish an APK in the Google Play store.

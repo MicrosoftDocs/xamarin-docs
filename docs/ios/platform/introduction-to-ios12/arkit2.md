@@ -23,7 +23,7 @@ One showcase feature in ARKit 2 is the ability to recognize reference images and
 
 ### Sample app: Scanning and detecting 3D objects
 
-The [Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/ios12/ScanningAndDetecting3DObjects/) sample is a port of an [Apple project](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) that demonstrates:
+The [Scanning and Detecting 3D Objects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) sample is a port of an [Apple project](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) that demonstrates:
 
 * Application state management using [`NSNotification`](xref:Foundation.NSNotification) objects
 * Custom visualization
@@ -281,7 +281,7 @@ There are two interesting aspects to this configuration:
 * It's efficient and can be used with a potentially large number of reference images
 * The digital imagery is anchored to the image, even if that image moves in the real world (for example, if the cover of a book is recognized, it will track the book as it is pulled off the shelf, laid down, etc.).
 
-The `ARObjectScanningConfiguration` was discussed [previously](#recognizing-reference-objects) and is a developer-centric configuration for scanning 3D objects. It is highly processor and battery intensive and should not be used in end-user applications. The sample [Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/ios12/ScanningAndDetecting3DObjects/) demonstrates the use of this configuration.
+The `ARObjectScanningConfiguration` was discussed [previously](#recognizing-reference-objects) and is a developer-centric configuration for scanning 3D objects. It is highly processor and battery intensive and should not be used in end-user applications. The sample [Scanning and Detecting 3D Objects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) demonstrates the use of this configuration.
 
 The final tracking configuration, `ARWorldTrackingConfiguration` , is the workhorse of most mixed-reality experiences. This configuration uses "visual inertial odometry" to relate real-world "feature points" to digital imagery. Digital geometry or sprites are anchored relative to real-world horizontal and vertical planes or relative to detected `ARReferenceObject` instances. In this configuration, the world origin is the camera's original position in space with the Z-axis aligned to gravity, and digital objects "stay in place" relative to objects in the real world.
 
@@ -392,7 +392,7 @@ Being consistent with the choice of matrix interpretation is vital to proper beh
 
 ## Related links
 
-- [Sample app – Scanning and Detecting 3D Objects](https://developer.xamarin.com/samples/monotouch/iOS12/ScanningAndDetecting3DObjects/)
+- [Sample app – Scanning and Detecting 3D Objects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects)
 - [What's new in ARKit 2 (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/602/)
 - [Understanding ARKit Tracking and Detection (WWDC 2018)](https://developer.apple.com/videos/play/wwdc2018/610/)
 - [Introduction to ARKit in Xamarin.iOS](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios11/arkit/)

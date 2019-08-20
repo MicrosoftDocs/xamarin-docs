@@ -11,7 +11,7 @@ ms.date: 08/15/2017
 
 # Colors in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithColors)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
 
 _Xamarin.Forms provides a flexible cross-platform Color class._
 
@@ -19,12 +19,12 @@ This article introduces the various ways the `Color` class can be used in Xamari
 
 The `Color` class provides a number of methods to build a color instance
 
--  **Named Colors** - a collection of common named-colors, including `Red`, `Green`, and `Blue`.
--  **FromHex** - string value similar to the syntax used in HTML, for example "00FF00". Alpha can optionally be specified as the first pair of characters ("CC00FF00").
--  **FromHsla** - Hue, saturation and luminosity  `double` values, with optional alpha value (0.0-1.0).
--  **FromRgb** - Red, green, and blue `int` values (0-255).
--  **FromRgba** - Red, green, blue, and alpha  `int` values (0-255).
--  **FromUint** - set a single `double` value representing **argb**.
+- **Named Colors** - a collection of common named-colors, including `Red`, `Green`, and `Blue`.
+- **FromHex** - string value similar to the syntax used in HTML, for example "00FF00". Alpha can optionally be specified as the first pair of characters ("CC00FF00").
+- **FromHsla** - Hue, saturation and luminosity  `double` values, with optional alpha value (0.0-1.0).
+- **FromRgb** - Red, green, and blue `int` values (0-255).
+- **FromRgba** - Red, green, blue, and alpha  `int` values (0-255).
+- **FromUint** - set a single `double` value representing **argb**.
 
 Here's some example colors, assigned to the `BackgroundColor` of some labels using different variations of the allowed syntax:
 
@@ -64,11 +64,11 @@ On iOS and Android this instance is set to a contrasting color that is visible o
 
 `Color` instances include additional methods that can be used to create new colors:
 
--  **AddLuminosity** - returns a new color by modifying the luminosity by the supplied delta.
--  **WithHue** - returns a new color, replacing the hue with the value supplied.
--  **WithLuminosity** - returns a new color, replacing the luminosity with the value supplied.
--  **WithSaturation** - returns a new color, replacing the saturation with the value supplied.
--  **MultiplyAlpha** - returns a new color by modifying the alpha, multiplying it by the supplied alpha value.
+- **AddLuminosity** - returns a new color by modifying the luminosity by the supplied delta.
+- **WithHue** - returns a new color, replacing the hue with the value supplied.
+- **WithLuminosity** - returns a new color, replacing the luminosity with the value supplied.
+- **WithSaturation** - returns a new color, replacing the saturation with the value supplied.
+- **MultiplyAlpha** - returns a new color by modifying the alpha, multiplying it by the supplied alpha value.
 
 ## Implicit Conversions
 
@@ -119,5 +119,5 @@ The Xamarin.Forms `Color` class is used to create platform-aware color reference
 
 ## Related Links
 
-- [ColorsSample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithColors)
-- [Bindable Picker (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/BindablePicker/)
+- [ColorsSample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithcolors)
+- [Bindable Picker (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-bindablepicker)

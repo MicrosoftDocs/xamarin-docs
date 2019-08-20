@@ -11,7 +11,7 @@ ms.date: 03/10/2017
 
 # SkiaSharp Lines and Paths
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 _Use SkiaSharp to draw lines and graphics paths_
 
@@ -19,7 +19,7 @@ The [previous section](~/xamarin-forms/user-interface/graphics/skiasharp/basics/
 
 The graphics path is the most generalized approach to drawing lines and curves in SkiaSharp. This section covers using an [`SKPath`](xref:SkiaSharp.SKPath) object to draw straight lines, and to use a collection of tiny straight lines (called a *polyline*) to draw curves that you can define algorithmically. A later section on [**SkiaSharp Curves and Paths**](../curves/index.md) discusses the various sorts of curves supported by `SKPath`.
 
-All the sample programs in this section appear under the heading **Lines and Paths** in the home page of the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) program, and in the [**Paths**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) folder of that solution.
+All the sample programs in this section appear under the heading **Lines and Paths** in the home page of the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) program, and in the [**Paths**](https://github.com/xamarin/xamarin-forms-samples/tree/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths) folder of that solution.
 
 ## [Lines and Stroke Caps](lines.md)
 
@@ -49,4 +49,4 @@ Use your fingers to paint on the canvas.
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

@@ -11,7 +11,7 @@ ms.date: 06/11/2019
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 
 _Xamarin.Forms supports styling visual elements using Cascading Style Sheets (CSS)._
 
@@ -70,7 +70,7 @@ In Xamarin.Forms, CSS style sheets are parsed and evaluated at runtime, rather t
 > [!NOTE]
 > Currently, all of the styling that's possible with XAML styling cannot be performed with CSS. However, XAML styles can be used to supplement CSS for properties that are currently unsupported by Xamarin.Forms. For more information about XAML styles, see [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
-The [MonkeyAppCSS](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/) sample demonstrates using CSS to style a simple app, and is shown in the following screenshots:
+The [MonkeyAppCSS](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss) sample demonstrates using CSS to style a simple app, and is shown in the following screenshots:
 
 [![MonkeyApp Main Page with CSS styling](css-images/MonkeyAppMainPage.png "MonkeyApp Main Page with CSS styling")](css-images/MonkeyAppMainPage-Large.png#lightbox "MonkeyApp Main Page with CSS styling")
 
@@ -123,7 +123,7 @@ Alternatively, a style sheet can be loaded and parsed with the [`StyleSheet`](xr
 
 For more information about resource dictionaries, see [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md).
 
-### C#
+### C\#
 
 In C#, a style sheet can be loaded as an embedded resource and added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
@@ -502,6 +502,6 @@ The exact meaning of each `namedsize` value is platform-dependent and view-depen
 
 ## Related Links
 
-- [MonkeyAppCSS (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/MonkeyAppCSS/)
+- [MonkeyAppCSS (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-monkeyappcss)
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md)

@@ -11,7 +11,7 @@ ms.date: 10/24/2016
 
 # Creating an Effect
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)
 
 _Effects simplify the customization of a control. This article demonstrates how to create an effect that changes the background color of the Entry control when the control gains focus._
 
@@ -50,7 +50,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.iOS;
 
 [assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect (typeof(FocusEffect), nameof(FocusEffect))]
+[assembly:ExportEffect (typeof(EffectsDemo.iOS.FocusEffect), nameof(EffectsDemo.iOS.FocusEffect))]
 namespace EffectsDemo.iOS
 {
     public class FocusEffect : PlatformEffect
@@ -99,45 +99,56 @@ The `OnElementPropertyChanged` override responds to bindable property changes on
 The following code example shows the `FocusEffect` implementation for the Android project:
 
 ```csharp
+using System;
 using Xamarin.Forms;
 using Xamarin.Forms.Platform.Android;
 
-[assembly:ResolutionGroupName ("MyCompany")]
-[assembly:ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
+[assembly: ResolutionGroupName("MyCompany")]
+[assembly: ExportEffect(typeof(EffectsDemo.Droid.FocusEffect), nameof(EffectsDemo.Droid.FocusEffect))]
 namespace EffectsDemo.Droid
 {
     public class FocusEffect : PlatformEffect
     {
+        Android.Graphics.Color originalBackgroundColor = new Android.Graphics.Color(0, 0, 0, 0);
         Android.Graphics.Color backgroundColor;
 
-        protected override void OnAttached ()
+        protected override void OnAttached()
         {
-            try {
+            try
+            {
                 backgroundColor = Android.Graphics.Color.LightGreen;
-                Control.SetBackgroundColor (backgroundColor);
-
-            } catch (Exception ex) {
-                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+                Control.SetBackgroundColor(backgroundColor);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
             }
         }
 
-        protected override void OnDetached ()
+        protected override void OnDetached()
         {
         }
 
-        protected override void OnElementPropertyChanged (System.ComponentModel.PropertyChangedEventArgs args)
+        protected override void OnElementPropertyChanged(System.ComponentModel.PropertyChangedEventArgs args)
         {
-            base.OnElementPropertyChanged (args);
-            try {
-                if (args.PropertyName == "IsFocused") {
-                    if (((Android.Graphics.Drawables.ColorDrawable)Control.Background).Color == backgroundColor) {
-                        Control.SetBackgroundColor (Android.Graphics.Color.Black);
-                    } else {
-                        Control.SetBackgroundColor (backgroundColor);
+            base.OnElementPropertyChanged(args);
+            try
+            {
+                if (args.PropertyName == "IsFocused")
+                {
+                    if (((Android.Graphics.Drawables.ColorDrawable)Control.Background).Color == backgroundColor)
+                    {
+                        Control.SetBackgroundColor(originalBackgroundColor);
+                    }
+                    else
+                    {
+                        Control.SetBackgroundColor(backgroundColor);
                     }
                 }
-            } catch (Exception ex) {
-                Console.WriteLine ("Cannot set property on attached control. Error: ", ex.Message);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Cannot set property on attached control. Error: ", ex.Message);
             }
         }
     }
@@ -157,7 +168,7 @@ using Xamarin.Forms;
 using Xamarin.Forms.Platform.UWP;
 
 [assembly: ResolutionGroupName("MyCompany")]
-[assembly: ExportEffect(typeof(FocusEffect), nameof(FocusEffect))]
+[assembly: ExportEffect(typeof(EffectsDemo.UWP.FocusEffect), nameof(EffectsDemo.UWP.FocusEffect))]
 namespace EffectsDemo.UWP
 {
     public class FocusEffect : PlatformEffect
@@ -256,5 +267,5 @@ This article demonstrated how to create an effect that changes the background co
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)
 - [Effect](xref:Xamarin.Forms.Effect)
 - [PlatformEffect](xref:Xamarin.Forms.PlatformEffect`2)
-- [Background Color Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/effects/backgroundcoloreffect/)
-- [Focus Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/Effects/FocusEffect/)
+- [Background Color Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-backgroundcoloreffect)
+- [Focus Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-focuseffect)

@@ -15,7 +15,7 @@ _Samples and code downloads for the Azure portal documentation._
 <!--
 NOTE TO AUTHORS: this page is referenced from
 https://azure.microsoft.com/develop/mobile/xamarin/
-as https://developer.xamarin.com/guides/cross-platform/data-cloud/mobile-services/
+as https://developer xamarin com/guides/cross-platform/data-cloud/mobile-services/
 A redirect has been put in place to /mobile-apps/ HOWEVER the /Resources/ .ZIP files are still located in /mobile-services/ so that the following permalinks don't break
 
 The ZIPs in /Resources/ are also referenced by inbound links
@@ -40,17 +40,17 @@ General documentation [Working with the Xamarin Client Library (Component)](http
 This article provides step-by-step instructions to get your first Xamarin Azure app up and running.
 It covers creating a new Azure Mobile App in the portal and then downloading and running the pre-configured app.
 
--  [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started/)
--  [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started/)
--  [Xamarin.Forms](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started)
+- [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started/)
+- [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started/)
+- [Xamarin.Forms](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-forms-get-started)
 
 <!--
 ## Validate, Modify and Augment Data in Scripts
 
 Demonstrates how to add server-side scripts to Azure Mobile Services data tables to implement server-side validation and other functionality.
 
--  [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
--  [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+- [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
+- [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#errors)
 -->
 
 <!--
@@ -58,39 +58,39 @@ Demonstrates how to add server-side scripts to Azure Mobile Services data tables
 
 A quick example of paging large sets of data using Skip() and Take().
 
--  [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
--  [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
+- [iOS](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
+- [Android](https://azure.microsoft.com/documentation/articles/mobile-services-dotnet-how-to-use-client-library/#paging)
 -->
 
 ## Get Started with Users
 
 Provides complete instructions for configuring and coding a Login screen using Azure Mobile Services. Supported authentication providers include Microsoft, Google, Facebook, and Twitter.
 
--  [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
--  [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
+- [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
+- [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
 
 
 ## Authorize Users in Scripts
 
 Some sample code for Javascript backends
 
--  [Todo.js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
+- [Todo.js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
 
 
 ## Get Started with Push
 
 Complete instructions to configure push notifications on the Apple and Google websites, then send a push notification from Azure Mobile Services to a device.
 
--  [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started-push)
--  [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started-push)
+- [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started-push)
+- [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started-push)
 
 
 ## Get Started with Notification Hubs
 
 Complete instructions to configure push notifications on the Apple and Google websites, configure the Azure Notification Hub and then generate push notifications to devices.
 
--  [iOS](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started)
--  [Android](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm)
+- [iOS](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started)
+- [Android](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm)
 
 
 

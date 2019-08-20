@@ -11,7 +11,7 @@ ms.date: 08/15/2017
 
 # Images in Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 
 _Images can be shared across platforms with Xamarin.Forms, they can be loaded specifically for each platform, or they can be downloaded for display._
 
@@ -207,7 +207,7 @@ To use this extension add a custom `xmlns` to the XAML, using the correct namesp
 
 #### Debugging Code
 
-Because it is sometimes difficult to understand why a particular image resource isn't being loaded, the following debug code can be added temporarily to an application to help confirm the resources are correctly configured. It will output all known resources embedded in the given assembly to the <span class="UIItem">Console</span> to help debug resource loading issues.
+Because it is sometimes difficult to understand why a particular image resource isn't being loaded, the following debug code can be added temporarily to an application to help confirm the resources are correctly configured. It will output all known resources embedded in the given assembly to the **Console** to help debug resource loading issues.
 
 ```csharp
 using System.Reflection;
@@ -317,7 +317,7 @@ Application icon and splash screen images are set-up and configured as for non-X
 
 ## Related Links
 
-- [WorkingWithImages (sample)](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithImages/)
+- [WorkingWithImages (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 - [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md)
 - [Android Iconography](https://developer.android.com/design/style/iconography.html)
 - [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/)

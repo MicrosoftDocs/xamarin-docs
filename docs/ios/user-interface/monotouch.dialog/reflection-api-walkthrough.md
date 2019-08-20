@@ -29,9 +29,9 @@ code as necessary.
 
 Using the Reflection API is as simple as:
 
-1.  Creating a class decorated with MT.D attributes.
-1.  Creating a  `BindingContext` instance, passing it an instance of the above class. 
-1.  Creating a  `DialogViewController` , passing it the  `BindingContext’s` `RootElement` . 
+1. Creating a class decorated with MT.D attributes.
+1. Creating a  `BindingContext` instance, passing it an instance of the above class. 
+1. Creating a  `DialogViewController` , passing it the  `BindingContext’s` `RootElement` . 
 
 
 Let’s look at an example to illustrate how to use the Reflection API. In
@@ -176,7 +176,7 @@ hierarchy that is created, as well as how to use MT.D with a `UINavigationContro
 
 ## Related links
 
-- [MTDReflectionWalkthrough (sample)](https://developer.xamarin.com/samples/monotouch/MTDReflectionWalkthrough/)
+- [MTDReflectionWalkthrough (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/mtdreflectionwalkthrough)
 - [Introduction to MonoTouch Dialog](~/ios/user-interface/monotouch.dialog/index.md)
 - [Elements API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md)
 - [JSON Element Walkthrough](~/ios/user-interface/monotouch.dialog/monotouch.dialog-json-markup.md)

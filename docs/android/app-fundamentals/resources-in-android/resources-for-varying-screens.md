@@ -250,14 +250,14 @@ tips can help minimize the effort necessary to support various devices:
   density changes. Do not hardcode pixel values. Avoid pixels in favor
   of dp (density-independent pixels).
 
-- **Avoid** [AbsoluteLayout](https://developer.xamarin.com/api/type/Android.Widget.AbsoluteLayout/)
+- **Avoid** [AbsoluteLayout](xref:Android.Widget.AbsoluteLayout)
   **Wherever Possible** &ndash; it is deprecated in API level 3
   (Android 1.5) and will result in brittle layouts. It should not be
   used. Instead, try to use more flexible layout widgets such as
-  [**LinearLayout**](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/),
-  [**RelativeLayout**](https://developer.xamarin.com/api/type/Android.Widget.RelativeLayout/),
+  [**LinearLayout**](xref:Android.Widget.LinearLayout),
+  [**RelativeLayout**](xref:Android.Widget.RelativeLayout),
   or the new
-  [**GridLayout**](https://developer.xamarin.com/api/type/Android.Widget.GridLayout/).
+  [**GridLayout**](xref:Android.Widget.GridLayout).
 
 - **Pick one layout orientation as your default** &ndash; For example,
   instead of providing the alternate resources **layout-land** and

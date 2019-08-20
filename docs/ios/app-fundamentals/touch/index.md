@@ -23,9 +23,9 @@ However, there are times when you need to use low-level touch processing and eve
 
 ## Sections
 
--  [Touch in iOS](touch-in-ios.md)
--  [Walkthrough: Using Touch in iOS](ios-touch-walkthrough.md)
--  [Multi-Touch Tracking](touch-tracking.md)
+- [Touch in iOS](touch-in-ios.md)
+- [Walkthrough: Using Touch in iOS](ios-touch-walkthrough.md)
+- [Multi-Touch Tracking](touch-tracking.md)
 
 This guide serves as introduction to Touch in iOS. For more information on using 3D Touch and Haptic Feedback in iOS, which were introduced in iOS 9 and 10 respectively please refer to the specific guides below:
 
@@ -34,6 +34,6 @@ This guide serves as introduction to Touch in iOS. For more information on using
 
 ## Related Links
 
-- [iOS Touch Start (sample)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_start)
-- [iOS Touch Final (sample)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/Touch_final)
-- [FingerPaint (sample)](https://developer.xamarin.com/samples/monotouch/ApplicationFundamentals/FingerPaint)
+- [iOS Touch Start (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
+- [iOS Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
+- [FingerPaint (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

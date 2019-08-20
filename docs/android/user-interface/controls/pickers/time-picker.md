@@ -9,12 +9,12 @@ ms.author: crdun
 ms.date: 02/06/2018
 ---
 
-# Time Picker
+# Android Time Picker
 
 To provide a way for the user to select a time, you can use
-[TimePicker](https://developer.xamarin.com/api/type/Android.Widget.TimePicker/). Android apps
+[TimePicker](xref:Android.Widget.TimePicker). Android apps
 typically use `TimePicker` with
-[TimePickerDialog](https://developer.xamarin.com/api/type/Android.App.TimePickerDialog/) for
+[TimePickerDialog](xref:Android.App.TimePickerDialog) for
 selecting a time value &ndash; this helps to ensure a consistent
 interface across devices and applications. `TimePicker` allows users to
 select the time of day in either 24-hour or 12-hour AM/PM mode.
@@ -26,7 +26,7 @@ in a dialog.
 ## Overview
 
 Modern Android applications display the `TimePickerDialog` in a
-[DialogFragment](https://developer.xamarin.com/api/type/Android.App.DialogFragment/). This makes
+[DialogFragment](xref:Android.App.DialogFragment). This makes
 it possible for an application to display the `TimePicker` as a popup
 dialog or embed it in an Activity. In addition, the `DialogFragment`
 manages the lifecycle and display of the dialog, reducing the amount of
@@ -64,7 +64,7 @@ When you click the **PICK TIME** button, the example app launches the
 
 In the `TimePickerDialog`, selecting a time and clicking the **OK**
 button causes the `TimePickerDialog` to invoke the method
-[IOnTimeSetListener.OnTimeSet](https://developer.xamarin.com/api/member/Android.App.TimePickerDialog+IOnTimeSetListener.OnTimeSet/p/Android.Widget.TimePicker/System.Int32/System.Int32/System.Int32/).
+[IOnTimeSetListener.OnTimeSet](xref:Android.App.TimePickerDialog.IOnTimeSetListener.OnTimeSet*).
 This interface is implemented by the hosting `DialogFragment`
 (`TimePickerFragment`, described below). Clicking the **Cancel**
 button causes the fragment and dialog to be dismissed.
@@ -81,12 +81,10 @@ one of three ways:
 3. **Using an `Action`** &ndash; The `DialogFragment` can invoke an
    `Action<DateTime>` to display the time in the Activity. The Activity
    will provide the `Action<DateTime` when instantiating the
-   `DialogFragment`. 
+   `DialogFragment`.
 
 This sample will use the third technique, which requires that the
 Activity supply an `Action<DateTime>` handler to the `DialogFragment`.
-
-
 
 ## Start an App Project
 
@@ -125,10 +123,10 @@ following XML:
 ```
 
 This is a basic
-[LinearLayout](https://developer.xamarin.com/api/type/Android.Widget.LinearLayout/) with a
-[TextView](https://developer.xamarin.com/api/type/Android.Widget.TextView/) that displays the time
+[LinearLayout](xref:Android.Widget.LinearLayout) with a
+[TextView](xref:Android.Widget.TextView) that displays the time
 and a
-[Button](https://developer.xamarin.com/api/type/Android.Widget.Button/) that opens the
+[Button](xref:Android.Widget.Button) that opens the
 `TimePickerDialog`. Note that this layout uses hard-coded strings and
 dimensions to make the app simpler and easier to understand &ndash; a
 production app normally uses resources for these values (as can be seen
@@ -175,8 +173,6 @@ Clicking the **PICK TIME** button does nothing because the
 `DialogFragment` has not yet been implemented to display the `TimePicker`.
 The next step is to create this `DialogFragment`.
 
-
-
 ## Extending DialogFragment
 
 To extend `DialogFragment` for use with `TimePicker`, it is necessary
@@ -219,14 +215,13 @@ public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetLis
 This `TimePickerFragment` class is broken down into smaller pieces and
 explained in the next section.
 
-
 ### DialogFragment Implementation
 
 `TimePickerFragment` implements several methods: a factory method, a
 Dialog instantiation method, and the `OnTimeSet` handler method
 required by `TimePickerDialog.IOnTimeSetListener`.
 
--   `TimePickerFragment` is a subclass of `DialogFragment`. It also
+- `TimePickerFragment` is a subclass of `DialogFragment`. It also
     implements the `TimePickerDialog.IOnTimeSetListener` interface (that
     is, it supplies the required `OnTimeSet` method):
 
@@ -234,7 +229,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetListener
     ```
 
--   `TAG` is initialized for logging purposes (*MyTimePickerFragment*
+- `TAG` is initialized for logging purposes (*MyTimePickerFragment*
     can be changed to whatever string you want to use). The
     `timeSelectedHandler` Action is initialized to an empty delegate to
     prevent null reference exceptions:
@@ -244,7 +239,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     Action<DateTime> timeSelectedHandler = delegate { };
     ```
 
--   The `NewInstance` factory method is called to instantiate a new
+- The `NewInstance` factory method is called to instantiate a new
     `TimePickerFragment`. This method takes an `Action<DateTime>` handler that
     is invoked when the user clicks the **OK** button in the
     `TimePickerDialog`:
@@ -258,8 +253,8 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     }
     ```
 
--   When the fragment is to be displayed, Android calls the `DialogFragment`
-    method [OnCreateDialog](https://developer.xamarin.com/api/member/Android.App.DialogFragment.OnCreateDialog/p/Android.OS.Bundle/). 
+- When the fragment is to be displayed, Android calls the `DialogFragment`
+    method [OnCreateDialog](xref:Android.App.DialogFragment.OnCreateDialog*).
     This method creates a new `TimePickerDialog`
     object and initializes it with the Activity, the callback object
     (which is the current instance of the `TimePickerFragment`), and
@@ -276,7 +271,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     }
     ```
 
--   When the user changes the time setting in the `TimePicker` dialog,
+- When the user changes the time setting in the `TimePicker` dialog,
     the `OnTimeSet` method is invoked. `OnTimeSet` creates a `DateTime`
     object using the current date and merges in the time (hour and
     minute) selected by the user:
@@ -289,7 +284,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     ```
 
 
--   This `DateTime` object is passed to the `timeSelectedHandler` that
+- This `DateTime` object is passed to the `timeSelectedHandler` that
     is registered with the `TimePickerFragment` object at creation
     time. `OnTimeSet` invokes this handler to update the Activity's
     time display to the selected time (this handler is implemented in
@@ -299,14 +294,12 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     timeSelectedHandler (selectedTime);
     ```
 
-
-
 ## Displaying the TimePickerFragment
 
 Now that the `DialogFragment` has been implemented, it is time to
 instantiate the `DialogFragment` using the `NewInstance` factory method
 and display it by invoking
-[DialogFragment.Show](https://developer.xamarin.com/api/member/Android.App.DialogFragment.Show/p/Android.App.FragmentManager/System.String/):
+[DialogFragment.Show](xref:Android.App.DialogFragment.Show*):
 
 Add the following method to `MainActivity`:
 
@@ -338,8 +331,6 @@ timeSelectButton.Click += TimeSelectOnClick;
 
 When the **PICK TIME** button is clicked, `TimeSelectOnClick` will be
 invoked to display the `TimePicker` dialog fragment to the user.
-
-
 
 ## Try It!
 
@@ -374,8 +365,6 @@ Because the handler calls
 to print the time to the Activity's `TextView`, the time is still printed
 in the default 12-hour AM/PM format.
 
-
-
 ## Summary
 
 This article explained how to display a `TimePicker` widget as a popup
@@ -384,11 +373,10 @@ modal dialog from an Android Activity. It provided a sample
 interface. This sample also demonstrated how the `DialogFragment` can
 interact with the host Activity to display the selected time.
 
-
 ## Related Links
 
-- [DialogFragment](https://developer.xamarin.com/api/type/Android.App.DialogFragment/)
-- [TimePicker](https://developer.xamarin.com/api/type/Android.Widget.TimePicker/)
-- [TimePickerDialog](https://developer.xamarin.com/api/type/Android.App.TimePickerDialog/)
-- [TimePickerDialog.IOnTimeSetListener](https://developer.xamarin.com/api/type/Android.App.TimePickerDialog+IOnTimeSetListener/)
-- [TimePickerDemo (sample)](https://developer.xamarin.com/samples/monodroid/UserInterface/TimePickerDemo)
+- [DialogFragment](xref:Android.App.DialogFragment)
+- [TimePicker](xref:Android.Widget.TimePicker)
+- [TimePickerDialog](xref:Android.App.TimePickerDialog)
+- [TimePickerDialog.IOnTimeSetListener](xref:Android.App.TimePickerDialog.IOnTimeSetListener)
+- [TimePickerDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-timepickerdemo)

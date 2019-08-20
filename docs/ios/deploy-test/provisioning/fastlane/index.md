@@ -45,21 +45,21 @@ The content provided can be used as a springboard to aid with app distribution, 
 3. Install fastlane by unzipping the file, and double-click on the `install` executable. If you get an error advising that the file "can't be opened because it is from an unidentified developer", press OK and do the following:
     - Control + Click on the `install` executable. This will display the dialog below:
 
-	  ![](images/fastlane-image12.png "The install dialog")
-	
+     ![](images/fastlane-image12.png "The install dialog")
+
     - Press OK to start installing fastlane tools
 
 4. Terminal will prompt you with the dialog illustrated below. Press `y`:
 
-  ![](images/fastlane-image13.png "The Terminal prompt")
- 
-4. Run `which fastlane` before using fastlane for the first time. The path should look like the following: 
+   ![](images/fastlane-image13.png "The Terminal prompt")
+
+5. Run `which fastlane` before using fastlane for the first time. The path should look like the following: 
 
     ```bash
     /Users/[user]/.fastlane/bin
     ```
 
-5. If the path matches the above, you're ready to get started.
+6. If the path matches the above, you're ready to get started.
 
      If not, do the following:
     On macOS open `.bash_profile`, which is a hidden plaintext file in the home directory, with the following command:
@@ -68,13 +68,13 @@ The content provided can be used as a springboard to aid with app distribution, 
     open ~/.bash_profile
     ```
 
-6. Add the following PATH environment variable, and save it: 
+7. Add the following PATH environment variable, and save it: 
 
     ```bash
     export PATH="$HOME/.fastlane/bin:$PATH"
     ```
 
-7.  Run `which fastlane` again, to confirm the path looks like `/Users/[user]/.fastlane/bin`
+8. Run `which fastlane` again, to confirm the path looks like `/Users/[user]/.fastlane/bin`
 
 
 ## Updating fastlane

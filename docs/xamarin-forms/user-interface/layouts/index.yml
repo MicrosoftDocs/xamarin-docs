@@ -1,0 +1,111 @@
+### YamlMime:YamlDocument
+documentType: LandingData
+title: Xamarin.Forms Layouts
+metadata:
+  title: Xamarin.Forms Layouts
+  description: Learn about layout classes and layout features in Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: CF6BD41F-CD4B-4576-841D-B8A49A4EC754
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 08/14/2019
+abstract:
+  description: Learn about layout classes and layout features in Xamarin.Forms.
+sections:
+- title:
+  items:
+  - type: list
+    style: cards
+    className: cardsB
+    items:
+    - href: stack-layout.md
+      html: "Learn how to organize views in a one-dimensional stack, either horizontally or vertically."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: stack-layout.md
+      title: StackLayout
+    - href: grid.md
+      html: "Learn how to organize views into rows and columns, which can have proportional or absolute sizes."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: grid.md
+      title: Grid
+    - href: flex-layout.md
+      html: "Learn how to organize views horizontally or vertically, with wrapping."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: flex-layout.md
+      title: FlexLayout
+    - href: absolute-layout.md
+      html: "Learn how to organize views by setting coordinate and size values, which can be proportional or absolute."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: absolute-layout.md
+      title: AbsoluteLayout
+    - href: relative-layout.md
+      html: "Learn how to organize views by setting constraints, relative to properties of the layout or sibling views."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: absolute-layout.md
+      title: RelativeLayout
+    - href: scroll-view.md
+      html: "Learn how to provide scrolling when a view doesn't fit within the bounds of the screen."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: scroll-view.md
+      title: ScrollView
+    - href: contentview.md
+      html: "Learn how to use a ContentView to create a custom control."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: contentview.md
+      title: Frame
+    - href: frame.md
+      html: "Learn how to wrap a view with a frame that can be configured with color, drop shadow, and other options."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: frame.md
+      title: Frame
+    - href: layout-options.md
+      html: "Learn how to define a view's alignment within its parent layout."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: layout-options.md
+      title: LayoutOptions
+    - href: margin-and-padding.md
+      html: "Learn how to control the distance between an element and its adjacent elements, and its child elements."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: margin-and-padding.md
+      title: Margin and Padding
+    - href: device-orientation.md
+      html: "Learn how to configure and respond to device orientation changes."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: device-orientation.md
+      title: Device Orientation
+    - href: tablet.md
+      html: "Learn how to optimize layout for tablet and desktop applications."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: tablet.md
+      title: Tablet and Desktop Layout
+    - href: bindable-layouts.md
+      html: "Learn how to enable layout classes to generate their content, and set its appearance, by binding to a collection of items."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: bindable-layouts.md
+      title: Bindable Layouts
+    - href: layout-compression.md
+      html: "Learn how to remove specific layout objects from the visual tree, in an attempt to improve page rendering performance."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: layout-compression.md
+      title: Layout Compression
+    - href: custom.md
+      html: "Learn how to create an orientation-sensitive custom layout class."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: custom.md
+      title: Custom Layout

@@ -11,7 +11,7 @@ ms.date: 08/23/2018
 
 # SkiaSharp transparency
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 As you've seen, the [`SKPaint`](xref:SkiaSharp.SKPaint) class includes a [`Color`](xref:SkiaSharp.SKPaint.Color) property of type [`SKColor`](xref:SkiaSharp.SKColor). `SKColor` includes an alpha channel, so anything that you color with an `SKColor` value can be partially transparent. 
 
@@ -31,7 +31,7 @@ In addition, `SKColor` defines a handy [`WithAlpha`](xref:SkiaSharp.SKColor.With
 SKColor halfTransparentBlue = SKColors.Blue.WithAlpha(0x80);
 ```
 
-The use of partially transparent text is demonstrated in the **Code More Code** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample. This page fades two text strings in and out by incorporating transparency in the `SKColor` values:
+The use of partially transparent text is demonstrated in the **Code More Code** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. This page fades two text strings in and out by incorporating transparency in the `SKColor` values:
 
 ```csharp
 public class CodeMoreCodePage : ContentPage
@@ -236,4 +236,4 @@ In the past several articles, you have seen how to use SkiaSharp to draw text, c
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

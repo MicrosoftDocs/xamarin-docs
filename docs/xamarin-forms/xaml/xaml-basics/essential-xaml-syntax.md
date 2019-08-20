@@ -11,7 +11,7 @@ ms.date: 10/25/2017
 
 # Part 2. Essential XAML Syntax
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML is mostly designed for instantiating and initializing objects. But often, properties must be set to complex objects that cannot easily be represented as XML strings, and sometimes properties defined by one class must be set on a child class. These two needs require the essential XAML syntax features of property elements and attached properties._
 
@@ -77,9 +77,9 @@ These two ways to specify the `TextColor` property are functionally equivalent, 
 
 With this new syntax, some handy terminology can be introduced:
 
--  `Label` is an  *object element*. It is a Xamarin.Forms object expressed as an XML element.
--  `Text`,  `VerticalOptions`, `FontAttributes` and  `FontSize` are  *property attributes*. They are Xamarin.Forms properties expressed as XML attributes.
--  In that final snippet, `TextColor` has become a  *property element*. It is a Xamarin.Forms property but it is now an XML element.
+- `Label` is an  *object element*. It is a Xamarin.Forms object expressed as an XML element.
+- `Text`,  `VerticalOptions`, `FontAttributes` and  `FontSize` are  *property attributes*. They are Xamarin.Forms properties expressed as XML attributes.
+- In that final snippet, `TextColor` has become a  *property element*. It is a Xamarin.Forms property but it is now an XML element.
 
 
 The definition of property elements might at first seem to be a violation of XML syntax, but it’s not. The period has no special meaning in XML. To an XML decoder, `Label.TextColor` is simply a normal child element.
@@ -171,13 +171,13 @@ You've just seen that the `Grid` requires property elements for the `RowDefiniti
 
 Within the tag for each child of the `Grid` you specify the row and column of that child using the following attributes:
 
--  `Grid.Row`
--  `Grid.Column`
+- `Grid.Row`
+- `Grid.Column`
 
 The default values of these attributes are 0. You can also indicate if a child spans more than one row or column with these attributes:
 
--  `Grid.RowSpan`
--  `Grid.ColumnSpan`
+- `Grid.RowSpan`
+- `Grid.ColumnSpan`
 
 These two attributes have default values of 1.
 
@@ -527,7 +527,7 @@ With property elements and attached properties, much of the basic XAML syntax ha
 
 ## Related Links
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Part 1. Getting Started with XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Part 3. XAML Markup Extensions](~/xamarin-forms/xaml/xaml-basics/xaml-markup-extensions.md)
 - [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

@@ -78,10 +78,10 @@ To use ACL we should be using the `SecAccessControl` policy, and then checking t
 
 There are many things we should keep in mind when using ACL with the keychain and some of these are listed below:
 
--	Only use with Foreground Application – if you call any keychain operation on a background thread the call will fail.
--	Adding and updating keychain items may require authentication.
--	If a request returns multiple matching items in the keychain, authentication may be required.
--	ACL protected items are device-only, and therefore not synchronized or backed up.
+- Only use with Foreground Application – if you call any keychain operation on a background thread the call will fail.
+- Adding and updating keychain items may require authentication.
+- If a request returns multiple matching items in the keychain, authentication may be required.
+- ACL protected items are device-only, and therefore not synchronized or backed up.
 
 ### Using Local Authentication without Keychain Services
 
@@ -117,14 +117,14 @@ In the previous sections, we looked at the theory behind access and authenticati
 
 ### Walkthrough
 
-So let’s look at adding some Touch ID Authentication to our application. In this walkthrough we are going to update the [Storyboard Table](https://developer.xamarin.com/samples/StoryboardTable/) sample, adding local authentication so that it works like the [Storyboard Table – Local Authentication](https://developer.xamarin.com/samples/monotouch/StoryboardTable_LocalAuthentication/) sample, which only allows authenticated users to add chores to the list.
+So let’s look at adding some Touch ID Authentication to our application. In this walkthrough we are going to update the [Storyboard Table](https://docs.microsoft.com/samples/xamarin/ios-samples/data/storyboardtable/) sample, adding local authentication so that it works like the [Storyboard Table – Local Authentication](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable-localauthentication) sample, which only allows authenticated users to add chores to the list.
 
 1. Download the sample and run it in Visual Studio for Mac.
 2. Double Click on `MainStoryboard.Storyboard` to open the sample in the iOS Designer. With this sample, we want to add a new screen to our application, which will control the authentication. This will go before the current `MasterViewController`.
 3. Drag a new **View Controller** from the **Toolbox** to the **Design Surface**. Set this as the **Root View Controller** by **Ctrl + Drag** from the **Navigation Controller**:
 
 	[![](touchid-images/image4.png "Set the Root View Controller")](touchid-images/image4.png#lightbox)
-4.  Name the new View Controller `AuthenticationViewController`.
+4. Name the new View Controller `AuthenticationViewController`.
 5. Next, drag a button and place it on the `AuthenticationViewController`. Call this `AuthenticateButton`, and give it the text `Add a Chore`.
 6. Create an event on the `AuthenticateButton` called `AuthenticateMe`.
 7. Create a manual segue from `AuthenticationViewController` by clicking the black bar at the bottom and **Ctrl + Drag** from the bar to the `MasterViewController` and choosing **push** (or **show** if using size classes):
@@ -178,10 +178,11 @@ Finally, when the authentication has been successful, we want to transition to t
 [![](touchid-images/image11.png "Call PerformSegue method to transition to the MasterViewController")](touchid-images/image11.png#lightbox)
 
 ## Summary
+
 In this guide we looked at Keychain and how this works in iOS. We also explored the keychain ACL, and changes to this in iOS. Next, we took a look at the Local Authentication framework, which is new in iOS 8 and then looked at implementing Touch ID authentication in our application.
 
 ## Related Links
 
-- [Storyboard Table – Local Authentication](https://developer.xamarin.com/samples/monotouch/StoryboardTable_LocalAuthentication/) 
-- [Keychain WWDC Sample](https://developer.xamarin.com/samples/KeychainTouchID/)
-- [Keychain (sample)](https://developer.xamarin.com/samples/Keychain/)
+- [Storyboard Table – Local Authentication](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable-localauthentication)
+- [Keychain WWDC Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-keychaintouchid/)
+- [Keychain (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/keychain/)

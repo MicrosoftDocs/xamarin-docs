@@ -309,7 +309,7 @@ With the basics of working with OpenTk in a Xamarin.mac application done, here a
 
 For more examples, please see the [OpenTK Samples GitHub](https://github.com/opentk/opentk/tree/master/Source/Examples) repo. It contains an official list of examples of using OpenTK. You'll have to adapt these examples for using with the Xamarin.Mac version of OpenTK.
 
-For a more complex Xamarin.Mac example of an OpenTK implementation, please see our [MonoMacGameView](https://developer.xamarin.com/samples/mac/MonoMacGameWindow/) sample.
+For a more complex Xamarin.Mac example of an OpenTK implementation, please see our [MonoMacGameView](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow) sample.
 
 <a name="Summary" />
 
@@ -319,8 +319,8 @@ This article has taken a quick look at working with OpenTK in a Xamarin.Mac appl
 
 ## Related Links
 
-- [MacOpenTK (sample)](https://developer.xamarin.com/samples/mac/MacOpenTK/)
-- [MonoMacGameView (sample)](https://developer.xamarin.com/samples/mac/MonoMacGameWindow/)
+- [MacOpenTK (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macopentk)
+- [MonoMacGameView (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Windows](~/mac/user-interface/window.md)
 - [The Open Toolkit](http://www.opentk.com)

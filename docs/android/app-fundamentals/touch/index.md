@@ -27,9 +27,9 @@ This guide follows a similar format for each operating system: first, the platfo
 
 ## Sections
 
--  [Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Walkthrough: Using Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Multi-Touch tracking](touch-tracking.md)
+- [Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Walkthrough: Using Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Multi-Touch tracking](touch-tracking.md)
 
 ## Summary
 
@@ -39,6 +39,6 @@ In this guide we examined touch in Android. For both operating systems, we learn
 
 ## Related Links
 
-- [Android Touch Start (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_start)
-- [Android Touch Final (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/Touch_final)
-- [FingerPaint (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/FingerPaint)
+- [Android Touch Start (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-start)
+- [Android Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-touch-final)
+- [FingerPaint (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-fingerpaint)

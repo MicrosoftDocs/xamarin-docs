@@ -65,7 +65,7 @@ Add the following lines of code after the `<AssemblyName>` element:
 
 Example:
 
-![](updating-mac-apps-images/csproj3.png "Add these lines of code after the <AssemblyName> element")
+![Add these lines of code after the \<AssemblyName> element](updating-mac-apps-images/csproj3.png)
 
 ### 2. Update Project References
 
@@ -122,4 +122,4 @@ Whether or not you choose to use the automatic or manual method to convert your 
 
 - [Tips for Updating Code to the Unified API](~/cross-platform/macios/unified/updating-tips.md)
 - [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

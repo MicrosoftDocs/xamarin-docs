@@ -33,7 +33,7 @@ A watch app consists of three projects:
 - **Watch App project** - This contains the User Interface
 	storyboard file with all the UI resources for the Watch App.
 
-The [Watch Kit Catalog sample](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+The [Watch Kit Catalog sample](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 	solution looks like this in Xamarin.Studio:
 
 # [Visual Studio for Mac](#tab/macos)
@@ -46,7 +46,7 @@ The [Watch Kit Catalog sample](https://developer.xamarin.com/samples/monotouch/w
 
 -----
 
-Download and run the [WatchKitCatalog](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/) sample to get started.
+Download and run the [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample to get started.
 	Screens from the sample can be found on the [Controls](~/ios/watchos/user-interface/index.md)
 	page.
 
@@ -183,7 +183,7 @@ You can launch watch apps in the simulator using either
 
 There are two modes for launching a WatchKit app:
 
- - normal app mode (the default), and
+- normal app mode (the default), and
 - [Notifications](~/ios/watchos/platform/notifications.md)
 	(which requires a test notification payload in JSON format).
 
@@ -235,9 +235,10 @@ When using Xcode 6, only the iPhone 5, iPhone 5S, iPhone 6, and iPhone 6 Plus
 	**Apple Watch - 38mm** or **Apple Watch - 42mm**
 	where the watch applications will be displayed.
 
-**Note:** Remember that the watch screen does not
-automatically appear in the iOS Simulator when using Xcode 6.
-Use the **Hardware > External Displays** menu to show the watch screen.
+> [!NOTE]
+> Remember that the watch screen does not
+> automatically appear in the iOS Simulator when using Xcode 6.
+> Use the **Hardware > External Displays** menu to show the watch screen.
 
 <a name="custommodes" />
 
@@ -302,6 +303,6 @@ The watchOS template files (such as `InterfaceController`,
 
 ## Related Links
 
-- [WatchKitCatalog (sample)](https://developer.xamarin.com/samples/monotouch/watchOS/WatchKitCatalog/)
+- [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)
 - [Apple's WatchKit Tips](https://developer.apple.com/watchkit/tips/)

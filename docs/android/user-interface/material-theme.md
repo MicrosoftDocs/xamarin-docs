@@ -22,11 +22,11 @@ and feel of your app.
 
 Android provides three Material Theme flavors:
 
--  `Theme.Material` &ndash; Dark version of Material Theme; this is the default flavor in Android 5.0.
+- `Theme.Material` &ndash; Dark version of Material Theme; this is the default flavor in Android 5.0.
 
--  `Theme.Material.Light` &ndash; Light version of Material Theme.
+- `Theme.Material.Light` &ndash; Light version of Material Theme.
 
--  `Theme.Material.Light.DarkActionBar` &ndash; Light version of Material Theme, but with a dark action bar.
+- `Theme.Material.Light.DarkActionBar` &ndash; Light version of Material Theme, but with a dark action bar.
 
 Examples of these Material Theme flavors are displayed here:
 
@@ -61,13 +61,13 @@ of Android (see the
 The following is required to use the new Android 5.0 Material Theme
 features in Xamarin-based apps:
 
--  **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be 
+- **Xamarin.Android** &ndash; Xamarin.Android 4.20 or later must be 
    installed and configured with either Visual Studio or Visual Studio for Mac. 
 
--  **Android SDK** &ndash; Android 5.0 (API 21) or later must be 
+- **Android SDK** &ndash; Android 5.0 (API 21) or later must be 
    installed via the Android SDK Manager.
 
--  **Java JDK 1.8** &ndash; JDK 1.7 can be used if you are specifically 
+- **Java JDK 1.8** &ndash; JDK 1.7 can be used if you are specifically 
     targetting API level 23 and earlier. JDK 1.8 is available from 
    [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
@@ -94,11 +94,11 @@ To configure an entire application to use a Material Theme flavor,
 set the `android:theme` attribute of the application node in
 **AndroidManifest.xml** to one of the following:
 
--  `@android:style/Theme.Material` &ndash; Dark theme.
+- `@android:style/Theme.Material` &ndash; Dark theme.
 
--  `@android:style/Theme.Material.Light` &ndash; Light theme.
+- `@android:style/Theme.Material.Light` &ndash; Light theme.
 
--  `@android:style/Theme.Material.Light.DarkActionBar` &ndash; Light 
+- `@android:style/Theme.Material.Light.DarkActionBar` &ndash; Light 
    theme with dark action bar.
 
 The following example configures the application *MyApp* to use the light theme:
@@ -150,21 +150,21 @@ color to beige instead of white.
 
 Material Theme exposes the following layout attributes for customization:
 
--  `colorPrimary` &ndash; The color of the app bar.
+- `colorPrimary` &ndash; The color of the app bar.
 
--  `colorPrimaryDark` &ndash; The color of the status bar and contextual 
+- `colorPrimaryDark` &ndash; The color of the status bar and contextual 
     app bars; this is normally a dark version of `colorPrimary`.
 
--  `colorAccent` &ndash; The color of UI controls such as check boxes, 
+- `colorAccent` &ndash; The color of UI controls such as check boxes, 
     radio buttons, and edit text boxes.
 
--  `windowBackground` &ndash; The color of the screen background.
+- `windowBackground` &ndash; The color of the screen background.
 
--  `textColorPrimary` &ndash; The color of UI text in the app bar.
+- `textColorPrimary` &ndash; The color of UI text in the app bar.
 
--  `statusBarColor` &ndash; The color of the status bar.
+- `statusBarColor` &ndash; The color of the status bar.
 
--  `navigationBarColor` &ndash; The color of the navigation bar.
+- `navigationBarColor` &ndash; The color of the navigation bar.
 
 These screen areas are labeled in the following diagram:
 
@@ -183,7 +183,7 @@ You can create a custom app theme by creating and modifying files in
 the **Resources** folder of your app project. To style your app with a
 custom theme, use the following steps:
 
--   Create a **colors.xml** file in **Resources/values** &mdash; you use this 
+- Create a **colors.xml** file in **Resources/values** &mdash; you use this 
     file to define your custom theme colors. For example, you can paste the 
     following code into **colors.xml** to help you get started:
 
@@ -197,10 +197,10 @@ custom theme, use the following steps:
 </resources>
 ```
 
--   Modify this example file to define the names and color codes for 
+- Modify this example file to define the names and color codes for 
     color resources that you will use in your custom theme.
 
--   Create a **Resources/values-v21** folder. In this folder, create 
+- Create a **Resources/values-v21** folder. In this folder, create 
     a **styles.xml** file:
 
     [![Location of styles.xml in the Resources/values-21.xml folder](material-theme-images/values-v21-sml.png)](material-theme-images/values-v21.png#lightbox)
@@ -208,7 +208,7 @@ custom theme, use the following steps:
     Note that **Resources/values-v21** is specific to Android 5.0 &ndash; older 
     versions of Android will not read files in this folder.
 
--   Add a `resources` node to **styles.xml** and define a `style` node with the 
+- Add a `resources` node to **styles.xml** and define a `style` node with the 
     name of your custom theme. For example, here is a **styles.xml** file 
     that defines *MyCustomTheme* (derived from the built-in 
     `Theme.Material.Light` theme style):
@@ -223,12 +223,12 @@ custom theme, use the following steps:
 </resources>
 ```
 
--   At this point, an app that uses *MyCustomTheme* will display the 
+- At this point, an app that uses *MyCustomTheme* will display the 
     stock `Theme.Material.Light` theme without customizations:
 
     [![Custom theme appearance before customizations](material-theme-images/custom-theme-before-sml.png)](material-theme-images/custom-theme-before.png#lightbox)
 
--   Add color customizations to **styles.xml** by defining the colors of layout 
+- Add color customizations to **styles.xml** by defining the colors of layout 
     attributes that you want to change. For example, to change the app bar color 
     to `my_blue` and change the color of UI controls to `my_purple`, add color 
     overrides to **styles.xml** that refer to color resources configured 
@@ -267,7 +267,7 @@ view. After you create **colors.xml** and **styles.xml** (as described
 in the previous section), you can add a view style to **styles.xml**.
 To style an individual view, use the following steps:
 
--   Edit **Resources/values-v21/styles.xml** and add a `style` node with 
+- Edit **Resources/values-v21/styles.xml** and add a `style` node with 
     the name of your custom view style. Set the custom color attributes for 
     your view within this `style` node. For example, to create a custom 
     [CardView](~/android/user-interface/controls/card-view.md) 
@@ -287,7 +287,7 @@ To style an individual view, use the following steps:
 </style>
 ```
 
--   In your layout, set the `style` attribute for that view to match the custom 
+- In your layout, set the `style` attribute for that view to match the custom 
     style name that you chose in the previous step. For example:
 
 ```xml
@@ -315,7 +315,7 @@ To style your app so that it uses Material Theme on Android 5.0 but
 automatically reverts to a downward-compatible style on older Android
 versions, use the following steps:
 
--   Define a custom theme in **Resources/values-v21/styles.xml** that derives 
+- Define a custom theme in **Resources/values-v21/styles.xml** that derives 
     from a Material Theme style. For example:
 
 ```xml
@@ -326,7 +326,7 @@ versions, use the following steps:
 </resources>
 ```
 
--   Define a custom theme in **Resources/values/styles.xml** that derives 
+- Define a custom theme in **Resources/values/styles.xml** that derives 
     from an older theme, but uses the same theme name as above. For example:
 
 ```xml
@@ -337,7 +337,7 @@ versions, use the following steps:
 </resources>
 ```
 
--   In **AndroidManifest.xml**, configure your app with the custom theme name. 
+- In **AndroidManifest.xml**, configure your app with the custom theme name. 
     For example:
 
 ```xml
@@ -346,7 +346,7 @@ versions, use the following steps:
 </application>
 ```
 
--   Alternately, you can style a specific activity using your custom theme:
+- Alternately, you can style a specific activity using your custom theme:
 
 ```C#
 [Activity(Label = "MyActivity", Theme = "@style/MyCustomTheme")]
@@ -379,7 +379,7 @@ downward compatibility with older versions of Android.
 
 ## Related Links
 
-- [ThemeSwitcher (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/ThemeSwitcher)
+- [ThemeSwitcher (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-themeswitcher)
 - [Introduction to Lollipop](../platform/lollipop.md)
 - [CardView](controls/card-view.md)
 - [Alternate Resources](../app-fundamentals/resources-in-android/alternate-resources.md)

@@ -11,7 +11,7 @@ ms.date: 03/27/2018
 
 # Part 3. XAML Markup Extensions
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 
 _XAML markup extensions constitute an important feature in XAML that allow properties to be set to objects or values that are referenced indirectly from other sources. XAML markup extensions are particularly important for sharing objects, and referencing constants used throughout an application, but they find their greatest utility in data bindings._
 
@@ -440,9 +440,9 @@ The size of the resultant `BoxView` relative to the screen is platform-dependent
 
 Several markup extensions are intrinsic to XAML and supported in Xamarin.Forms XAML files. Some of these are not used very often but are essential when you need them:
 
--  If a property has a non- `null` value by default but you want to set it to  `null`, set it to the `{x:Null}` markup extension.
--  If a property is of type `Type`, you can assign it to a  `Type` object using the markup extension `{x:Type someClass}`.
--  You can define arrays in XAML using the  `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
+- If a property has a non- `null` value by default but you want to set it to  `null`, set it to the `{x:Null}` markup extension.
+- If a property is of type `Type`, you can assign it to a  `Type` object using the markup extension `{x:Type someClass}`.
+- You can define arrays in XAML using the  `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
 - The `Binding` markup extension is discussed in [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 ## The ConstraintExpression Markup Extension
@@ -560,7 +560,7 @@ The XAML markup extensions shown here provide important support for XAML files. 
 
 ## Related Links
 
-- [XamlSamples](https://developer.xamarin.com/samples/xamarin-forms/XamlSamples/)
+- [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)
 - [Part 1. Getting Started with XAML](~/xamarin-forms/xaml/xaml-basics/get-started-with-xaml.md)
 - [Part 2. Essential XAML Syntax](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md)
 - [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md)

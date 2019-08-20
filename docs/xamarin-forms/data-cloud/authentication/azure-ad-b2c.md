@@ -11,7 +11,7 @@ ms.date: 04/17/2019
 
 # Authenticate Users with Azure Active Directory B2C
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 
 _Azure Active Directory B2C provides cloud identity management for consumer-facing web and mobile applications. This article shows how to use Azure Active Directory B2C to integrate identity management into a mobile application with the Microsoft Authentication Library._
 
@@ -242,7 +242,7 @@ public partial class LogoutPage : ContentPage
 
 ### iOS
 
-On iOS, the custom URL scheme that was registered with Azure Active Directory B2C must be registered in **Info.plist**. MSAL expects the URL scheme to adhere to a specific pattern, described previously in [Register your mobile application with Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). The following screenshot shows the custom URL scheme in **Info.plist**.
+On iOS, the custom URL scheme that was registered with Azure Active Directory B2C must be registered in **Info.plist**. MSAL expects the URL scheme to adhere to a specific pattern, described previously in [Register your mobile application with Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). The following screenshot shows the custom URL scheme in **Info.plist**.
 
 !["Registering a custom URL scheme on iOS"](azure-ad-b2c-images/customurl-ios.png)
 
@@ -272,7 +272,7 @@ namespace TodoAzure.iOS
 
 ### Android
 
-On Android, the custom URL scheme that was registered with Azure Active Directory B2C must be registered in the **AndroidManifest.xml**. MSAL expects the URL scheme to adhere to a specific pattern, described previously in [Register your mobile application with Azure Active Directory B2C](/docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). The following example shows the custom URL scheme in the **AndroidManifest.xml**.
+On Android, the custom URL scheme that was registered with Azure Active Directory B2C must be registered in the **AndroidManifest.xml**. MSAL expects the URL scheme to adhere to a specific pattern, described previously in [Register your mobile application with Azure Active Directory B2C](~/xamarin-forms/data-cloud/authentication/azure-ad-b2c.md#register-your-mobile-application-with-azure-active-directory-b2c). The following example shows the custom URL scheme in the **AndroidManifest.xml**.
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -284,7 +284,9 @@ On Android, the custom URL scheme that was registered with Azure Active Director
         <action android:name="android.intent.action.VIEW" />
         <category android:name="android.intent.category.DEFAULT" />
         <category android:name="android.intent.category.BROWSABLE" />
-        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />"
+        <!-- example -->
+        <!-- <data android:scheme="msalaaaaaaaa-bbbb-cccc-dddd-eeeeeeeeeeee" android:host="auth" /> -->
+        <data android:scheme="INSERT_URI_SCHEME_HERE" android:host="auth" />
       </intent-filter>
     </activity>"
   </application>
@@ -328,7 +330,7 @@ Run the application on a virtual or physical device. Tapping the **Login** butto
 
 ## Related Links
 
-- [AzureADB2CAuth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/AzureADB2CAuth/)
+- [AzureADB2CAuth (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azureadb2cauth)
 - [Azure Active Directory B2C](/azure/active-directory-b2c/)
 - [Microsoft Authentication Library](https://www.nuget.org/packages/Microsoft.Identity.Client)
 - [Microsoft Authentication Library Documentation](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki)

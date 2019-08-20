@@ -81,7 +81,7 @@ To deploy to an iOS or tvOS device, use the following steps:
 
 2. Select your device from the target device list and run the application.
 
-2. If your device is locked, you'll be prompted to unlock your device. Once the device is unlocked, your app is deployed to the device.
+3. If your device is locked, you'll be prompted to unlock your device. Once the device is unlocked, your app is deployed to the device.
 
 Wireless debugging is automatically enabled after wireless deployment, so you can use previously set breakpoints and continue your debugging workflow as you've always done.
 

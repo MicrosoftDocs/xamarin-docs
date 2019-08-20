@@ -46,9 +46,9 @@ As stated above, alerts should be shown to your application's user when a seriou
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Critical,
-	InformativeText = "We need to save the document here...",
-	MessageText = "Save Document",
+  AlertStyle = NSAlertStyle.Critical,
+  InformativeText = "We need to save the document here...",
+  MessageText = "Save Document",
 };
 alert.RunModal ();
 ```
@@ -60,9 +60,9 @@ The code above displays an alert with the applications icon superimposed on the 
 Apple provides several properties that can be used to customize an alert:
 
 - **AlertStyle** defines the type of an alert as one of the following:
-	- **Warning** - Used to warn the user a current or impending event that is not critical. This is the default style.
-	- **Informational** - Used to warn the user about a current or impending event. Currently, there is no visible difference between a **Warning** and a **Informational**
-	- **Critical** - Used to warn the user about severe consequences of an impending event (such as deleting a file). This type of alert should be used sparingly.
+  - **Warning** - Used to warn the user a current or impending event that is not critical. This is the default style.
+  - **Informational** - Used to warn the user about a current or impending event. Currently, there is no visible difference between a **Warning** and a **Informational**
+  - **Critical** - Used to warn the user about severe consequences of an impending event (such as deleting a file). This type of alert should be used sparingly.
 - **MessageText** - This is the main message or title of the alert and should quickly define the situation to the user.
 - **InformativeText** - This is the body of the alert where you should define the situation clearly and present workable options to the user.
 - **Icon** - Allows a custom icon to be displayed to the user.
@@ -79,9 +79,9 @@ There are two different ways that an alert can be displayed, Free-Floating or as
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.RunModal ();
 ```
@@ -93,9 +93,9 @@ The following code displays the same alert as a Sheet:
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.BeginSheet (this);
 ```
@@ -113,9 +113,9 @@ By default, an Alert displays only the **OK** button. However, you are not limit
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -137,15 +137,15 @@ Here is the code for the same alert as a Sheet:
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
 alert.AddButton ("Maybe");
 alert.BeginSheetForResponse (this, (result) => {
-	Console.WriteLine ("Alert Result: {0}", result);
+  Console.WriteLine ("Alert Result: {0}", result);
 });
 ```
 If this code is run, the following will be displayed:
@@ -163,9 +163,9 @@ If the Alert's `ShowSuppressButton` property is `true`, the alert displays a che
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -185,16 +185,16 @@ Here is the code for the same alert as a Sheet:
 
 ```csharp
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
 alert.AddButton ("Maybe");
 alert.ShowsSuppressionButton = true;
 alert.BeginSheetForResponse (this, (result) => {
-	Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
+  Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 });
 ```
 
@@ -214,7 +214,7 @@ var input = new NSTextField (new CGRect (0, 0, 300, 20));
 var alert = new NSAlert () {
 AlertStyle = NSAlertStyle.Informational,
 InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -238,9 +238,9 @@ Here is the same alert as a sheet:
 var input = new NSTextField (new CGRect (0, 0, 300, 20));
 
 var alert = new NSAlert () {
-	AlertStyle = NSAlertStyle.Informational,
-	InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
-	MessageText = "Alert Title",
+  AlertStyle = NSAlertStyle.Informational,
+  InformativeText = "This is the body of the alert where you describe the situation and any actions to correct it.",
+  MessageText = "Alert Title",
 };
 alert.AddButton ("Ok");
 alert.AddButton ("Cancel");
@@ -249,7 +249,7 @@ alert.ShowsSuppressionButton = true;
 alert.AccessoryView = input;
 alert.Layout ();
 alert.BeginSheetForResponse (this, (result) => {
-	Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
+  Console.WriteLine ("Alert Result: {0}, Suppress: {1}", result, alert.SuppressionButton.State == NSCellStateValue.On);
 });
 ```
 
@@ -265,7 +265,7 @@ This article has taken a detailed look at working with Alerts in a Xamarin.Mac a
 
 ## Related Links
 
-- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Windows](~/mac/user-interface/window.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

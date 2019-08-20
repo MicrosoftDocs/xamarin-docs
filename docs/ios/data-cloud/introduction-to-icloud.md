@@ -48,9 +48,9 @@ Applications must be configured to use iCloud both in the [Apple Provisioning Po
 
 To correctly configure an application to access iCloud:
 
--   **Find your TeamID** - login to  [developer.apple.com](https://developer.apple.com) and visit the  **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( **A93A5CM278** for example) - this forms part of the "container identifier".
+- **Find your TeamID** - login to  [developer.apple.com](https://developer.apple.com) and visit the  **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( **A93A5CM278** for example) - this forms part of the "container identifier".
 
--   **Create a new App ID** - To create an App ID, follow the steps outlined in the  [Provisioning for Store Technologies section of the Device Provisioning guide](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md), and be sure to check **iCloud** as an allowed service:
+- **Create a new App ID** - To create an App ID, follow the steps outlined in the  [Provisioning for Store Technologies section of the Device Provisioning guide](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md), and be sure to check **iCloud** as an allowed service:
 
  [![](introduction-to-icloud-images/icloud-sml.png "Check iCloud as an allowed service")](introduction-to-icloud-images/icloud.png#lightbox)
 
@@ -541,7 +541,7 @@ Finally it included a brief discussion on how the addition of iCloud Backup shou
 
 ## Related Links
 
-- [Introduction To iCloud (sample)](https://developer.xamarin.com/samples/monotouch/IntroductionToiCloud)
+- [Introduction To iCloud (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/introductiontoicloud)
 - [iCloud Seminar Sample Code](https://github.com/xamarin/Seminars/tree/master/2012-03-22-iCloud)
 - [iCloud Seminar Slides](https://www.slideshare.net/Xamarin/using-icloud-with-monotouch)
 - [iCloud NSUbiquitousKeyValueStore](https://developer.apple.com/library/prerelease/ios/)

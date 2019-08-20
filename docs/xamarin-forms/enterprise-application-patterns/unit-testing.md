@@ -22,9 +22,9 @@ Unit testing has the greatest effect on code quality when it's an integral part 
 
 Unit tests typically use the arrange-act-assert pattern:
 
--   The *arrange* section of the unit test method initializes objects and sets the value of the data that is passed to the method under test.
--   The *act* section invokes the method under test with the required arguments.
--   The *assert* section verifies that the action of the method under test behaves as expected.
+- The *arrange* section of the unit test method initializes objects and sets the value of the data that is passed to the method under test.
+- The *act* section invokes the method under test with the required arguments.
+- The *assert* section verifies that the action of the method under test behaves as expected.
 
 Following this pattern ensures that unit tests are readable and consistent.
 
@@ -62,8 +62,8 @@ Testing models and view models from MVVM applications is identical to testing an
 
 The eShopOnContainers mobile app uses [xUnit](https://xunit.github.io/) to perform unit testing, which supports two different types of unit tests:
 
--   Facts are tests that are always true, which test invariant conditions.
--   Theories are tests that are only true for a particular set of data.
+- Facts are tests that are always true, which test invariant conditions.
+- Theories are tests that are only true for a particular set of data.
 
 The unit tests included with the eShopOnContainers mobile app are fact tests, and so each unit test method is decorated with the `[Fact]` attribute.
 
@@ -165,7 +165,8 @@ public void InvalidEventNameShouldThrowArgumentExceptionText()
 
 This unit test will throw an exception, because the [`ListView`](xref:Xamarin.Forms.ListView) control does not have an event named `OnItemTapped`. The `Assert.Throws<T>` method is a generic method where `T` is the type of the expected exception. The argument passed to the `Assert.Throws<T>` method is a lambda expression that will throw the exception. Therefore, the unit test will pass provided that the lambda expression throws an `ArgumentException`.
 
->💡 **Tip**: Avoid writing unit tests that examine exception message strings. Exception message strings might change over time, and so unit tests that rely on their presence are regarded as brittle.
+> [!TIP]
+> Avoid writing unit tests that examine exception message strings. Exception message strings might change over time, and so unit tests that rely on their presence are regarded as brittle.
 
 ### Testing Validation
 

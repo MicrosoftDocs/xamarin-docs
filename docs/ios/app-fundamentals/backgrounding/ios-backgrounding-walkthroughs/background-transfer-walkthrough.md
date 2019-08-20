@@ -50,15 +50,15 @@ Now that we have configured a background session, let's kick off tasks to handle
 
 An `NSUrlSessionDelegate` provides the following basic methods to check transfer status:
 
--  *DidFinishEventsForBackgroundSession* - This method gets called when all tasks have finished, and the transfer is complete.
--  *DidReceiveChallenge* - Called to request credentials when authorization is required.
--  *DidBecomeInvalidWithError* - Called if the  `NSURLSession` becomes invalidated.
+- *DidFinishEventsForBackgroundSession* - This method gets called when all tasks have finished, and the transfer is complete.
+- *DidReceiveChallenge* - Called to request credentials when authorization is required.
+- *DidBecomeInvalidWithError* - Called if the  `NSURLSession` becomes invalidated.
 
 
 Background sessions require more specialized delegates depending on the types of tasks that are running. Background sessions are limited to two types of tasks:
 
--  *Upload Tasks* - Tasks of type  `NSUrlSessionUploadTask` use the  `NSUrlSessionTaskDelegate` , which inherits from  `NSUrlSessionDelegate` . This delegate provides additional methods to track upload progress, handle HTTP redirection, and more.
--  *Download Tasks* - Tasks of type  `NSUrlSessionDownloadTask` use the  `NSUrlSessionDownloadDelegate` , which inherits from  `NSUrlSessionTaskDelegate` . This delegate provides all the methods for upload tasks, as well as download-specific methods to track the download progress and determine when a download task has resumed or completed.
+- *Upload Tasks* - Tasks of type  `NSUrlSessionUploadTask` use the  `NSUrlSessionTaskDelegate` , which inherits from  `NSUrlSessionDelegate` . This delegate provides additional methods to track upload progress, handle HTTP redirection, and more.
+- *Download Tasks* - Tasks of type  `NSUrlSessionDownloadTask` use the  `NSUrlSessionDownloadDelegate` , which inherits from  `NSUrlSessionTaskDelegate` . This delegate provides all the methods for upload tasks, as well as download-specific methods to track the download progress and determine when a download task has resumed or completed.
 
 
 The following code defines a task that can be used to download an image from a URL. We kick off the task by calling `CreateDownloadTask` on our background session, and passing in the URL request:
@@ -144,4 +144,4 @@ In this walkthrough, we covered the basic steps to implement the Background Tran
 
 ## Related Links
 
-- [Simple Background Transfer (sample)](https://developer.xamarin.com/samples/monotouch/SimpleBackgroundTransfer/)
+- [Simple Background Transfer (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/simplebackgroundtransfer)

@@ -11,7 +11,7 @@ ms.date: 06/16/2017
 
 # Authenticate Users with an Azure Cosmos DB Document Database and Xamarin.Forms
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 
 _Azure Cosmos DB document databases support partitioned collections, which can span multiple servers and partitions, while supporting unlimited storage and throughput. This article explains how to combine access control with partitioned collections, so that a user can only access their own documents in a Xamarin.Forms application._
 
@@ -91,9 +91,9 @@ The process for creating a Facebook app to perform authentication is as follows:
 1. Create a Facebook app. For more information, see [Register and Configure an App](https://developers.facebook.com/docs/apps/register) on the Facebook Developer Center.
 1. Add the Facebook Login product to the app. For more information, see [Add Facebook Login to Your App or Website](https://developers.facebook.com/docs/facebook-login) on the Facebook Developer Center.
 1. Configure Facebook Login as follows:
-  - Enable Client OAuth Login.
-  - Enable Web OAuth Login.
-  - Set the Valid OAuth redirect URI to the URI of the App Service web app, with `/.auth/login/facebook/callback` appended.
+   - Enable Client OAuth Login.
+   - Enable Web OAuth Login.
+   - Set the Valid OAuth redirect URI to the URI of the App Service web app, with `/.auth/login/facebook/callback` appended.
 
   The following screenshot demonstrates this configuration:
 
@@ -109,12 +109,12 @@ The process for configuring App Service easy authentication is as follows:
 
 1. In the Azure Portal, navigate to the App Service web app.
 1. In the Azure Portal, open the Authentication / Authorization blade and perform the following configuration:
-  - App Service Authentication should be turned on.
-  - The action to take when a request is not authenticated should be set to **Login in with Facebook**.
+    - App Service Authentication should be turned on.
+    - The action to take when a request is not authenticated should be set to **Login in with Facebook**.
 
-  The following screenshot demonstrates this configuration:
+    The following screenshot demonstrates this configuration:
 
-  [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
+    [![](azure-cosmosdb-auth-images/app-service-authentication-settings.png "App Service Web App Authentication Settings")](azure-cosmosdb-auth-images/app-service-authentication-settings-large.png#lightbox "App Service Web App Authentication Settings")
 
 The App Service web app should also be configured to communicate with the Facebook app to enable the authentication flow. This can be accomplished by selecting the Facebook identity provider, and entering the **App ID** and **App Secret** values from the Facebook app settings on the Facebook Developer Center. For more information, see [Add Facebook information to your application](/azure/app-service-mobile/app-service-mobile-how-to-configure-facebook-authentication#a-namesecrets-aadd-facebook-information-to-your-application).
 
@@ -126,10 +126,10 @@ The process for configuring the Xamarin.Forms sample application is as follows:
 
 1. Open the Xamarin.Forms solution.
 1. Open `Constants.cs` and update the values of the following constants:
-  - `EndpointUri` – the value should be the Cosmos DB account URL from the Keys blade of the Cosmos DB account.
-  - `DatabaseName` – the value should be the name of the document database.
-  - `CollectionName` – the value should be the name of the document database collection (in this case, `UserItems`).
-  - `ResourceTokenBrokerUrl` – the value should be the URL of the resource token broker web app from the Overview blade of the App Service account.
+    - `EndpointUri` – the value should be the Cosmos DB account URL from the Keys blade of the Cosmos DB account.
+    - `DatabaseName` – the value should be the name of the document database.
+    - `CollectionName` – the value should be the name of the document database collection (in this case, `UserItems`).
+    - `ResourceTokenBrokerUrl` – the value should be the URL of the resource token broker web app from the Overview blade of the App Service account.
 
 ## Initiating Login
 
@@ -266,7 +266,7 @@ This article explained how to combine access control with partitioned collection
 
 ## Related Links
 
-- [Todo Azure Cosmos DB Auth (sample)](https://developer.xamarin.com/samples/xamarin-forms/WebServices/TodoDocumentDBAuth/)
+- [Todo Azure Cosmos DB Auth (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)
 - [Consuming an Azure Cosmos DB Document Database](~/xamarin-forms/data-cloud/azure-services/azure-cosmosdb.md)
 - [Securing access to Azure Cosmos DB data](/azure/cosmos-db/secure-access-to-data/)
 - [Access control in the SQL API](/rest/api/documentdb/access-control-on-documentdb-resources/).

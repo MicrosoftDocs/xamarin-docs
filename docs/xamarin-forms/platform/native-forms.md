@@ -6,12 +6,12 @@ ms.assetid: f343fc21-dfb1-4364-a332-9da6705d36bc
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/03/2019
+ms.date: 08/19/2019
 ---
 
 # Xamarin.Forms in Xamarin Native Projects
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
 
 Typically, a Xamarin.Forms application includes one or more pages that derive from [`ContentPage`](xref:Xamarin.Forms.ContentPage), and these pages are shared by all platforms in a .NET Standard library project or Shared Project. However, Native Forms allows `ContentPage`-derived pages to be added directly to native Xamarin.iOS, Xamarin.Android, and UWP applications. Compared to having the native project consume `ContentPage`-derived pages from a .NET Standard library project or Shared Project, the advantage of adding pages directly to native projects is that the pages can be extended with native views. Native views can then be named in XAML with `x:Name` and referenced from the code-behind. For more information about native views, see [Native Views](~/xamarin-forms/platform/native-views/index.md).
 
@@ -38,12 +38,11 @@ On iOS, the `FinishedLaunching` override in the `AppDelegate` class is typically
 [Register("AppDelegate")]
 public class AppDelegate : UIApplicationDelegate
 {
-    public static string FolderPath { get; private set; }
-
     public static AppDelegate Instance;
-
     UIWindow _window;
-    UINavigationController _navigation;
+    AppNavigationController _navigation;
+
+    public static string FolderPath { get; private set; }
 
     public override bool FinishedLaunching(UIApplication application, NSDictionary launchOptions)
     {
@@ -61,13 +60,13 @@ public class AppDelegate : UIApplicationDelegate
         UIViewController mainPage = new NotesPage().CreateViewController();
         mainPage.Title = "Notes";
 
-        _navigation = new UINavigationController(mainPage);
+        _navigation = new AppNavigationController(mainPage);
         _window.RootViewController = _navigation;
         _window.MakeKeyAndVisible();
 
         return true;
     }
-    ...
+    // ...
 }
 ```
 
@@ -79,8 +78,8 @@ The `FinishedLaunching` method performs the following tasks:
 - The `FolderPath` property is initialized to a path on the device where note data will be stored.
 - The `NotesPage` class, which is a Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page defined in XAML, is constructed and converted to a `UIViewController` using the `CreateViewController` extension method.
 - The `Title` property of the `UIViewController` is set, which will be displayed on the `UINavigationBar`.
-- A `UINavigationController` is created for managing hierarchical navigation. The `UINavigationController` class manages a stack of view controllers, and the `UIViewController` passed into the constructor will be presented initially when the `UINavigationController` is loaded.
-- The `UINavigationController` instance is set as the top-level `UIViewController` for the `UIWindow`, and the `UIWindow` is set as the key window for the application and is made visible.
+- A `AppNavigationController` is created for managing hierarchical navigation. This is a custom navigation controller class, which derives from `UINavigationController`. The `AppNavigationController` object manages a stack of view controllers, and the `UIViewController` passed into the constructor will be presented initially when the `AppNavigationController` is loaded.
+- The `AppNavigationController` object is set as the top-level `UIViewController` for the `UIWindow`, and the `UIWindow` is set as the key window for the application and is made visible.
 
 Once the `FinishedLaunching` method has executed, the UI defined in the Xamarin.Forms `NotesPage` class will be displayed, as shown in the following screenshot:
 
@@ -100,7 +99,7 @@ The `static` `AppDelegate.Instance` field allows the `AppDelegate.NavigateToNote
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    UIViewController noteEntryPage = new NoteEntryPage
+    var noteEntryPage = new NoteEntryPage
     {
         BindingContext = note
     }.CreateViewController();
@@ -109,11 +108,33 @@ public void NavigateToNoteEntryPage(Note note)
 }
 ```
 
-The `NavigateToNoteEntryPage` method converts the Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page to a `UIViewController` with the `CreateViewController` extension method, and sets the `Title` property of the `UIViewController`. The `UIViewController` is then pushed onto `UINavigationController` by the `PushViewController` method. Therefore, the UI defined in the Xamarin.Forms `NoteEntryPage` class will be displayed, as shown in the following screenshot:
+The `NavigateToNoteEntryPage` method converts the Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page to a `UIViewController` with the `CreateViewController` extension method, and sets the `Title` property of the `UIViewController`. The `UIViewController` is then pushed onto `AppNavigationController` by the `PushViewController` method. Therefore, the UI defined in the Xamarin.Forms `NoteEntryPage` class will be displayed, as shown in the following screenshot:
 
 [![Screenshot of a Xamarin.iOS application that uses a UI defined in XAML](native-forms-images/ios-noteentrypage.png "Xamarin.iOS app with a XAML UI")](native-forms-images/ios-noteentrypage-large.png#lightbox "Xamarin.iOS app with a XAML UI")
 
-When the `NoteEntryPage` is displayed, tapping the back arrow will pop the `UIViewController` for the `NoteEntryPage` class from the `UINavigationController`, returning the user to the `UIViewController` for the `NotesPage` class.
+When the `NoteEntryPage` is displayed, back navigation will pop the `UIViewController` for the `NoteEntryPage` class from the `AppNavigationController`, returning the user to the `UIViewController` for the `NotesPage` class. However, popping a `UIViewController` from the iOS native navigation stack does not automatically dispose of the `UIViewController` and attached `Page` object. Therefore, the `AppNavigationController` class overrides the `PopViewController` method, to dispose of view controllers on backwards navigation:
+
+```csharp
+public class AppNavigationController : UINavigationController
+{
+    //...
+    public override UIViewController PopViewController(bool animated)
+    {
+        UIViewController topView = TopViewController;
+        if (topView != null)
+        {
+            // Dispose of ViewController on back navigation.
+            topView.Dispose();
+        }
+        return base.PopViewController(animated);
+    }
+}
+```
+
+The `PopViewController` override calls the `Dispose` method on the `UIViewController` object that's been popped from the iOS native navigation stack. Failure to do this will result in the `UIViewController` and attached `Page` object being orphaned.
+
+> [!IMPORTANT]
+> Orphaned objects can't be garbage collected, and so result in a memory leak.
 
 ## Android
 
@@ -175,7 +196,7 @@ void OnNoteAddedClicked(object sender, EventArgs e)
 }
 ```
 
-The `static` `MainActivity.Instance` field allows the `MainActivity.NavigateToNoteEntryyPage` method to be invoked, which is shown in the following code example:
+The `static` `MainActivity.Instance` field allows the `MainActivity.NavigateToNoteEntryPage` method to be invoked, which is shown in the following code example:
 
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
@@ -363,5 +384,5 @@ For more information about back navigation support on UWP, see [Navigation histo
 
 ## Related links
 
-- [NativeForms (sample)](https://developer.xamarin.com/samples/xamarin-forms/Native2Forms/)
+- [NativeForms (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/native2forms)
 - [Native Views](~/xamarin-forms/platform/native-views/index.md)

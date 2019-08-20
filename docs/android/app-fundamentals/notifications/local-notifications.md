@@ -1,5 +1,5 @@
 ---
-title: "Local Notifications"
+title: "Local Notifications on Android"
 description: "This section shows how to implement local notifications in Xamarin.Android. It explains the various UI elements of an Android notification and discusses the API's involved with creating and displaying a notification."
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
@@ -8,10 +8,7 @@ author: conceptdev
 ms.author: crdun
 ms.date: 08/16/2018
 ---
-
-<a name="compatibility"></a>
-
-# Local notifications
+# Local notifications on Android
 
 _This section shows how to implement local notifications in Xamarin.Android. It explains the various UI elements of an Android notification and discusses the API's involved with creating and displaying a notification._
 
@@ -34,9 +31,9 @@ that corresponds to the notification area displayed above:
 
 Android notifications use two types of layouts:
 
--   ***Base layout*** &ndash; a compact, fixed presentation format.
+- ***Base layout*** &ndash; a compact, fixed presentation format.
 
--   ***Expanded layout*** &ndash; a presentation format that can expand
+- ***Expanded layout*** &ndash; a presentation format that can expand
     to a larger size to reveal more information.
 
 Each of these layout types (and how to create them) is explained in the
@@ -45,22 +42,21 @@ following sections.
 > [!NOTE]
 > This guide focuses on the [NotificationCompat APIs](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.html) from the [Android support library](https://www.nuget.org/packages/Xamarin.Android.Support.v4/). These APIs will ensure maximum backwards compatibility to Android 4.0 (API level 14).
 
-
 ### Base layout
 
 All Android notifications are built on the base layout format, which,
 at a minimum, includes the following elements:
 
-1.  A *notification icon*, which represents the originating app, or the
+1. A *notification icon*, which represents the originating app, or the
     notification type if the app supports different types of
     notifications.
 
-2.  The notification *title*, or the name of the sender if the
+2. The notification *title*, or the name of the sender if the
     notification is a personal message.
 
-3.  The notification message.
+3. The notification message.
 
-4.  A *timestamp*.
+4. A *timestamp*.
 
 These elements are displayed as illustrated in the following diagram:
 
@@ -105,22 +101,23 @@ metadata also controls how notifications are presented on the
 lock screen and in Heads-up format. Applications can set the following
 types of notification metadata:
 
--   **Priority** &ndash; The priority level determines how and when
+- **Priority** &ndash; The priority level determines how and when
     notifications are presented. For example, In Android 5.0,
     high-priority notifications are displayed as Heads-up
     notifications.
 
--   **Visibility** &ndash; Specifies how much notification content is
+- **Visibility** &ndash; Specifies how much notification content is
     to be displayed when the notification appears on the lock screen.
 
--   **Category** &ndash; Informs the system how to handle the
+- **Category** &ndash; Informs the system how to handle the
     notification in various circumstances, such as when the device is
     in *Do Not Disturb* mode.
 
-**Note:** **Visibility** and **Category** were introduced in Android
-5.0 and are not available in earlier versions of Android. Beginning
-with Android 8.0, [notification channels](#notif-chan) are used to
-control how notifications are presented to the user.
+> [!NOTE]
+> **Visibility** and **Category** were introduced in Android
+> 5.0 and are not available in earlier versions of Android. Beginning
+> with Android 8.0, [notification channels](#notif-chan) are used to
+> control how notifications are presented to the user.
 
 
 ### Expanded layouts
@@ -139,15 +136,15 @@ When this notification is expanded, it reveals the entire message:
 Android supports three expanded layout styles for single-event
 notifications:
 
--   ***Big Text*** &ndash; In contracted mode, displays an excerpt of
+- ***Big Text*** &ndash; In contracted mode, displays an excerpt of
     the first line of the message followed by two periods. In expanded
     mode, displays the entire message (as seen in the above example).
 
--   ***Inbox*** &ndash; In contracted mode, displays the number of new
+- ***Inbox*** &ndash; In contracted mode, displays the number of new
     messages. In expanded mode, displays the first email message or a
     list of the messages in the inbox.
 
--   ***Image*** &ndash; In contracted mode, displays only the message
+- ***Image*** &ndash; In contracted mode, displays only the message
     text. In expanded mode, displays the text and an image.
 
 [Beyond the Basic Notification](#beyond-the-basic-notification) (later
@@ -183,17 +180,17 @@ download notifications channel:
 In this screen, the user can modify the behavior of the **Download**
 notifications channel by doing the following:
 
--   Set the Importance level to **Urgent**, **High**, **Medium**, or
+- Set the Importance level to **Urgent**, **High**, **Medium**, or
     **Low**, which configures the level of sound and visual
     interruption.
 
--   Turn the notification dot on or off.
+- Turn the notification dot on or off.
 
--   Turn the blinking light on or off.
+- Turn the blinking light on or off.
 
--   Show or hide notifications on the lock screen.
+- Show or hide notifications on the lock screen.
 
--   Override the **Do Not Disturb** setting.
+- Override the **Do Not Disturb** setting.
 
 The **General Notifications** channel has similar settings:
 
@@ -207,7 +204,6 @@ described below). As these examples illustrate, the new notification
 channels feature makes it possible for you to give users fine-grained
 control over different kinds of notifications.
 
-
 ## Notification creation
 
 To create a notification in Android, you use the
@@ -215,42 +211,40 @@ To create a notification in Android, you use the
 class from the
 [Xamarin.Android.Support.v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 NuGet package. This class makes it possible to create and publish
-notifications on older versions of Android. For more information 
-about using `NotificationCompat.Builder`, see
-[Compatibility](#compatibility) later in this topic.
+notifications on older versions of Android.
+`NotificationCompat.Builder` is also discussed.
 
 `NotificationCompat.Builder` provides methods for setting the various
 options in a notification, such as:
 
--   The content, including the title, the message text, and the
+- The content, including the title, the message text, and the
     notification icon.
 
--   The style of the notification, such as *Big Text*, *Inbox*, or
+- The style of the notification, such as *Big Text*, *Inbox*, or
     *Image* style.
 
--   The priority of the notification: minimum, low, default, high, or
+- The priority of the notification: minimum, low, default, high, or
     maximum. On Android 8.0 and higher, the priority is set via a [_notification channel_](#notification-channels).
 
--   The visibility of the notification on the lock screen: public,
+- The visibility of the notification on the lock screen: public,
     private, or secret.
 
--   Category metadata that helps Android classify and filter the
+- Category metadata that helps Android classify and filter the
     notification.
 
--   An optional intent that indicates an activity to launch when the
+- An optional intent that indicates an activity to launch when the
     notification is tapped.
 
--   The ID of the notification channel that the notification will be published on (Android 8.0 and higher).
+- The ID of the notification channel that the notification will be published on (Android 8.0 and higher).
 
 After you set these options in the builder, you generate a notification
 object that contains the settings. To publish the notification, you
 pass this notification object to the *Notification Manager*. Android
 provides the
-[NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
+[NotificationManager](xref:Android.App.NotificationManager)
 class, which is responsible for publishing notifications and displaying
 them to the user. A reference to this class can be obtained from any
 context, such as an activity or a service.
-
 
 ### Creating a notification channel
 
@@ -258,9 +252,9 @@ Apps that are running on Android 8.0 must create a notification channel
 for their notifications. A notification channel requires the following
 three pieces of information:
 
-* An ID string that is unique to the package that will identify the channel.
-* The name of the channel that will be displayed to the user.  The name must be between one and 40 characters.
-* The importance of the channel.
+- An ID string that is unique to the package that will identify the channel.
+- The name of the channel that will be displayed to the user.  The name must be between one and 40 characters.
+- The importance of the channel.
 
 Apps will need to check the version of Android that they are running.
 Devices running versions older than Android 8.0 should not create a
@@ -296,26 +290,26 @@ The notification channel should be created each time the activity is created. Fo
 
 To generate a notification in Android, follow these steps:
 
-1.  Instantiate a `NotificationCompat.Builder` object.
+1. Instantiate a `NotificationCompat.Builder` object.
 
-2.  Call various methods on the `NotificationCompat.Builder` object to set
+2. Call various methods on the `NotificationCompat.Builder` object to set
     notification options.
 
-3.  Call the [Build](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.Build/)
+3. Call the [Build](xref:Android.App.Notification.Builder.Build)
     method of the `NotificationCompat.Builder` object to instantiate a
     notification object.
 
-4.  Call the [Notify](https://developer.xamarin.com/api/member/Android.App.NotificationManager.Notify/(System.Int32%2cAndroid.App.Notification))
+4. Call the [Notify](xref:Android.App.NotificationManager.Notify*)
     method of the notification manager to publish the notification.
 
 You must provide at least the following information for each
 notification:
 
--   A small icon (24x24 dp in size)
+- A small icon (24x24 dp in size)
 
--   A short title
+- A short title
 
--   The text of the notification
+- The text of the notification
 
 The following code example illustrates how to use
 `NotificationCompat.Builder` to generate a basic notification. Notice that
@@ -374,7 +368,7 @@ display a photographic image as an icon, see
 
 The timestamp is set automatically, but you can override this setting
 by calling the
-[SetWhen](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetWhen/)
+[SetWhen](xref:Android.App.Notification.Builder.SetWhen*)
 method of the notification builder. For example, the following code
 example sets the timestamp to the current time:
 
@@ -386,7 +380,7 @@ builder.SetWhen (Java.Lang.JavaSystem.CurrentTimeMillis());
 
 If you want your notification to also play a sound, you can call the
 notification builder's
-[SetDefaults](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetDefaults/)
+[SetDefaults](xref:Android.App.Notification.Builder.SetDefaults*)
 method and pass in the `NotificationDefaults.Sound` flag:
 
 ```csharp
@@ -411,11 +405,11 @@ builder.SetDefaults (NotificationDefaults.Sound | NotificationDefaults.Vibrate);
 If you enable sound without specifying a sound to play, Android uses
 the default system notification sound. However, you can change the
 sound that will be played by calling the notification builder's
-[SetSound](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetSound/p/Android.Net.Uri/)
+[SetSound](xref:Android.App.Notification.Builder.SetSound*)
 method. For example, to play the alarm sound with your notification
 (instead of the default notification sound), you can get the URI for
 the alarm sound from the
-[RingtoneManager](https://developer.xamarin.com/api/type/Android.Media.RingtoneManager/)
+[RingtoneManager](xref:Android.Media.RingtoneManager)
 and pass it to `SetSound`:
 
 ```csharp
@@ -435,7 +429,7 @@ configure them in advance through `NotificationCompat.Builder` methods). For
 example, instead of calling the `SetDefaults` method to enable
 vibration on a notification, you can directly modify the bit flag of
 the notification's
-[Defaults](https://developer.xamarin.com/api/property/Android.App.Notification.Defaults/)
+[Defaults](xref:Android.App.Notification.Defaults)
 property:
 
 ```csharp
@@ -448,8 +442,6 @@ notification.Defaults |= NotificationDefaults.Vibrate;
 
 This example causes the device to vibrate when the notification is
 published.
-
-<a name="updating-a-notification" />
 
 ### Updating a notification
 
@@ -487,13 +479,13 @@ to this message."
 
 A notification remains visible until one of three things happens:
 
--   The user dismisses the notification (or taps *Clear All*).
+- The user dismisses the notification (or taps *Clear All*).
 
--   The application makes a call to `NotificationManager.Cancel`,
+- The application makes a call to `NotificationManager.Cancel`,
     passing in the unique notification ID that was assigned when the
     notification was published.
 
--   The application calls `NotificationManager.CancelAll`.
+- The application calls `NotificationManager.CancelAll`.
 
 For more about updating Android notifications, see
 [Modify a Notification](https://developer.android.com/training/notify-user/managing.html#Updating).
@@ -505,7 +497,7 @@ In Android, it's common for a notification to be associated with
 an *action* &ndash; an activity that's launched when the user taps the
 notification. This activity can reside in another application or even
 in another task. To add an action to a notification, you create a
-[PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/)
+[PendingIntent](xref:Android.App.PendingIntent)
 object and associate the `PendingIntent` with the notification. A
 `PendingIntent` is a special type of intent that allows the recipient
 application to run a predefined piece of code with the permissions of
@@ -549,7 +541,7 @@ section, except that a `PendingIntent` is added to the notification
 object. In this example, the `PendingIntent` is associated with the
 activity of the originating app before it is passed to the notification
 builder's
-[SetContentIntent](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetContentIntent/)
+[SetContentIntent](xref:Android.App.Notification.Builder.SetContentIntent*)
 method. The `PendingIntentFlags.OneShot` flag is passed to the
 `PendingIntent.GetActivity` method so that the `PendingIntent` is used
 only once. When this code runs, the following notification is
@@ -567,7 +559,7 @@ you are not familiar with Android tasks and the back stack, see
 In most cases, navigating backward out of the notification activity
 should return the user out of the app and back to Home screen. To
 manage the back stack, your app uses the
-[TaskStackBuilder](https://developer.xamarin.com/api/type/Android.App.TaskStackBuilder/)
+[TaskStackBuilder](xref:Android.App.TaskStackBuilder)
 class to create a `PendingIntent` with a back stack.
 
 Another real-world consideration is that the originating activity may
@@ -576,7 +568,7 @@ notification may indicate that a text message has arrived, and the
 notification activity (a message viewing screen), requires the ID of
 the message to display the message to the user. The activity
 that creates the `PendingIntent` can use the
-[Intent.PutExtra](https://developer.xamarin.com/api/member/Android.Content.Intent.PutExtra/p/System.String/System.String/)
+[Intent.PutExtra](xref:Android.Content.Intent.PutExtra*)
 method to add data (for example, a string) to the intent so that this
 data is passed to the notification activity.
 
@@ -651,8 +643,7 @@ leads out of the app and back to the screen preceding the launch of the
 app.
 
 For more information about creating pending intents, see
-[PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/).
-
+[PendingIntent](xref:Android.App.PendingIntent).
 
 <a name="beyond-the-basic-notification" />
 
@@ -691,11 +682,11 @@ large icon.
 
 To use an image as a large icon in a notification, you call the
 notification builder's
-[SetLargeIcon](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetLargeIcon/)
+[SetLargeIcon](xref:Android.App.Notification.Builder.SetLargeIcon*)
 method and pass in a bitmap of the image. Unlike `SetSmallIcon`,
 `SetLargeIcon` only accepts a bitmap. To convert an image file into a
 bitmap, you use the
-[BitmapFactory](https://developer.xamarin.com/api/type/Android.Graphics.BitmapFactory/)
+[BitmapFactory](xref:Android.Graphics.BitmapFactory)
 class. For example:
 
 ```csharp
@@ -708,7 +699,6 @@ passes the resulting bitmap to `NotificationCompat.Builder`. Typically, the
 source image resolution is larger than the small icon &ndash; but not
 much larger. An image that is too large might cause unnecessary
 resizing operations that could delay the posting of the notification.
-
 
 ### Big text style
 
@@ -731,7 +721,7 @@ is 256 dp.
 
 To create a *Big Text* notification, you instantiate a
 `NotificationCompat.Builder` object, as before, and then instantiate and add
-a [BigTextStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigTextStyle/)
+a [BigTextStyle](xref:Android.App.Notification.BigTextStyle)
 object to the `NotificationCompat.Builder` object. Here is an example:
 
 ```csharp
@@ -756,7 +746,6 @@ builder.SetStyle (textStyle);
 In this example, the message text and summary text are stored in the
 `BigTextStyle` object (`textStyle`) before it is passed to
 `NotificationCompat.Builder.`
-
 
 ### Image style
 
@@ -789,7 +778,7 @@ above the image.
 
 To create an *Image* notification, you instantiate a
 `NotificationCompat.Builder` object as before, and then create and insert a
-[BigPictureStyle](https://developer.xamarin.com/api/type/Android.App.Notification+BigPictureStyle/)
+[BigPictureStyle](xref:Android.App.Notification.BigPictureStyle)
 object into the `NotificationCompat.Builder` object. For example:
 
 ```csharp
@@ -809,10 +798,10 @@ builder.SetStyle (picStyle);
 ```
 
 Like the `SetLargeIcon` method of `NotificationCompat.Builder`, the
-[BigPicture](https://developer.xamarin.com/api/member/Android.App.Notification+BigPictureStyle.BigPicture/)
+[BigPicture](xref:Android.App.Notification.BigPictureStyle.BigPicture*)
 method of `BigPictureStyle` requires a bitmap of the image that you
 want to display in the body of the notification. In this example, the
-[DecodeResource](https://developer.xamarin.com/api/member/Android.Graphics.BitmapFactory.DecodeResource/(Android.Content.Res.Resources%2cSystem.Int32))
+[DecodeResource](xref:Android.Graphics.BitmapFactory.DecodeResource*)
 method of `BitmapFactory` reads the image file located at
 **Resources/drawable/x_bldg.png** and converts it into a bitmap.
 
@@ -848,13 +837,12 @@ notification:
 
 If you don't know the size of the image file in advance, it's a good
 idea to wrap the call to
-[BitmapFactory.DecodeFile](https://developer.xamarin.com/api/member/Android.Graphics.BitmapFactory.DecodeFile/p/System.String/Android.Graphics.BitmapFactory+Options/)
+[BitmapFactory.DecodeFile](xref:Android.Graphics.BitmapFactory.DecodeFile*)
 in an exception handler &ndash; an `OutOfMemoryError` exception might
 be thrown if the image is too large for Android to resize.
 
 For more about loading and decoding large bitmap images, see
 [Load Large Bitmaps Efficiently](https://github.com/xamarin/recipes/tree/master/Recipes/android/resources/general/load_large_bitmaps_efficiently).
-
 
 ### Inbox style
 
@@ -872,7 +860,7 @@ email summary as seen in the screenshot below:
 
 To create an *Inbox* notification, you instantiate a
 `NotificationCompat.Builder` object, as before, and add an
-[InboxStyle](https://developer.xamarin.com/api/type/Android.App.Notification+InboxStyle/)
+[InboxStyle](xref:Android.App.Notification.InboxStyle)
 object to the `NotificationCompat.Builder`. Here is an example:
 
 ```csharp
@@ -894,9 +882,9 @@ builder.SetStyle (inboxStyle);
 ```
 
 To add new lines of text to the notification body, call the
-[Addline](https://developer.xamarin.com/api/member/Android.App.Notification+InboxStyle.AddLine/p/System.String/)
+[Addline](xref:Android.App.Notification.InboxStyle.AddLine*)
 method of the `InboxStyle` object (the maximum height of the *Inbox*
-notification is 256 dp). Note that, unlike *Big Text* style, the *Inbox* 
+notification is 256 dp). Note that, unlike *Big Text* style, the *Inbox*
 style supports individual lines of text in the notification
 body.
 
@@ -909,7 +897,6 @@ content (see
 [Updating a Notification](#updating-a-notification) above), rather than
 generate a continuous stream of new, mostly similar notifications.
 
-
 ## Configuring metadata
 
 `NotificationCompat.Builder` includes methods that you can call to set
@@ -918,47 +905,46 @@ category. Android uses this information &mdash; along with user
 preference settings &mdash; to determine how and when to display
 notifications.
 
-
 ### Priority settings
 
 Apps running on Android 7.1 and lower need to set the priority directly on the notification itself. The priority setting of a notification determines two outcomes when the notification is published:
 
--   Where the notification appears in relation to other notifications.
+- Where the notification appears in relation to other notifications.
     For example, high priority notifications are presented above lower
     priority notifications in the notifications drawer, regardless of
     when each notification was published.
 
--   Whether the notification is displayed in the Heads-up notification
+- Whether the notification is displayed in the Heads-up notification
     format (Android 5.0 and later). Only *high* and *maximum* priority
     notifications are displayed as Heads-up notifications.
 
 Xamarin.Android defines the following enumerations for setting
 notification priority:
 
--   `NotificationPriority.Max` &ndash; Alerts the user to an urgent or
+- `NotificationPriority.Max` &ndash; Alerts the user to an urgent or
     critical condition (for example, an incoming call, turn-by-turn
     directions, or an emergency alert). On Android 5.0 and later
     devices, maximum priority notifications are displayed in Heads-up
     format.
 
--   `NotificationPriority.High` &ndash; Informs the user of important
+- `NotificationPriority.High` &ndash; Informs the user of important
     events (such as important emails or the arrival of real-time chat
     messages). On Android 5.0 and later devices, high priority
     notifications are displayed in Heads-up format.
 
--   `NotificationPriority.Default` &ndash; Notifies the user of
+- `NotificationPriority.Default` &ndash; Notifies the user of
     conditions that have a medium level of importance.
 
--   `NotificationPriority.Low` &ndash; For non-urgent information that
+- `NotificationPriority.Low` &ndash; For non-urgent information that
     the user needs to be informed of (for example, software update
     reminders or social network updates).
 
--   `NotificationPriority.Min` &ndash; For background information that
+- `NotificationPriority.Min` &ndash; For background information that
     the user notices only when viewing notifications (for example,
     location or weather information).
 
 To set the priority of a notification, call the
-[SetPriority](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetPriority/)
+[SetPriority](xref:Android.App.Notification.Builder.SetPriority*)
 method of the `NotificationCompat.Builder` object, passing in the priority
 level. For example:
 
@@ -997,16 +983,16 @@ control how much notification content appears on the secure lock screen.
 Xamarin.Android defines the following enumerations for setting
 notification visibility:
 
--   `NotificationVisibility.Public` &ndash; The full content of the
+- `NotificationVisibility.Public` &ndash; The full content of the
     notification is displayed on the secure lock screen.
 
--   `NotificationVisibility.Private` &ndash; Only essential information
+- `NotificationVisibility.Private` &ndash; Only essential information
     is displayed on the secure lock screen (such as the notification
     icon and the name of the app that posted it), but the rest of the
     notification's details are hidden. All notifications default to
     `NotificationVisibility.Private`.
 
--   `NotificationVisibility.Secret` &ndash; Nothing is displayed on the
+- `NotificationVisibility.Secret` &ndash; Nothing is displayed on the
     secure lock screen, not even the notification icon. The notification
     content is available only after the user unlocks the device.
 
@@ -1031,47 +1017,46 @@ Lock screen is secure (i.e., secured via PIN, pattern, or password)
 &ndash; if the lock screen is not secure, the full content of the
 notification is available on the lock screen.
 
-
 ### Category settings
 
 Beginning with Android 5.0, predefined categories are available for
 ranking and filtering notifications. Xamarin.Android provides the
 following enumerations for these categories:
 
--   `Notification.CategoryCall` &ndash; Incoming phone call.
+- `Notification.CategoryCall` &ndash; Incoming phone call.
 
--   `Notification.CategoryMessage` &ndash; Incoming text message.
+- `Notification.CategoryMessage` &ndash; Incoming text message.
 
--   `Notification.CategoryAlarm` &ndash; An alarm condition or timer
+- `Notification.CategoryAlarm` &ndash; An alarm condition or timer
     expiration.
 
--   `Notification.CategoryEmail` &ndash; Incoming email message.
+- `Notification.CategoryEmail` &ndash; Incoming email message.
 
--   `Notification.CategoryEvent` &ndash; A calendar event.
+- `Notification.CategoryEvent` &ndash; A calendar event.
 
--   `Notification.CategoryPromo` &ndash; A promotional message or
+- `Notification.CategoryPromo` &ndash; A promotional message or
     advertisement.
 
--   `Notification.CategoryProgress` &ndash; The progress of a
+- `Notification.CategoryProgress` &ndash; The progress of a
     background operation.
 
--   `Notification.CategorySocial` &ndash; Social networking update.
+- `Notification.CategorySocial` &ndash; Social networking update.
 
--   `Notification.CategoryError` &ndash; Failure of a background
+- `Notification.CategoryError` &ndash; Failure of a background
     operation or authentication process.
 
--   `Notification.CategoryTransport` &ndash; Media playback update.
+- `Notification.CategoryTransport` &ndash; Media playback update.
 
--   `Notification.CategorySystem` &ndash; Reserved for system use
+- `Notification.CategorySystem` &ndash; Reserved for system use
     (system or device status).
 
--   `Notification.CategoryService` &ndash; Indicates that a background
+- `Notification.CategoryService` &ndash; Indicates that a background
     service is running.
 
--   `Notification.CategoryRecommendation` &ndash; A recommendation
+- `Notification.CategoryRecommendation` &ndash; A recommendation
     message related to the currently running app.
 
--   `Notification.CategoryStatus` &ndash; Information about the device.
+- `Notification.CategoryStatus` &ndash; Information about the device.
 
 When notifications are sorted, the notification's priority takes
 precedence over its category setting. For example, a high-priority
@@ -1098,12 +1083,11 @@ Android allows notifications with a category setting of
 not disturb* mode. Note that `Notification.CategoryAlarm` notifications
 are never blocked in *Do not disturb* mode.
 
-The [LocalNotifications](https://developer.xamarin.com/samples/monodroid/LocalNotifications) sample
+The [LocalNotifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications) sample
 demonstrates how to use `NotificationCompat.Builder` to launch a second
 activity from a notification. This sample code is explained in the
 [Using Local Notifications in Xamarin.Android](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
 walkthrough.
-
 
 ### Notification styles
 
@@ -1122,7 +1106,6 @@ builder.SetStyle (textStyle);
 Similarly, your app can use `NotificationCompat.InboxStyle` and
 `NotificationCompat.BigPictureStyle` for *Inbox* and *Image* styles,
 respectively.
-
 
 ### Notification priority and category
 
@@ -1150,7 +1133,6 @@ level 21 and later, this example code will call `SetCategory` only when it
 is available &ndash; it will not call `SetCategory` when the API level is 
 less than 21.
 
-
 ### Lock screen visibility
 
 Because Android did not support lock screen notifications before Android
@@ -1164,7 +1146,6 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
     builder.SetVisibility (Notification.Public);
 }
 ```
-
 
 ## Summary
 
@@ -1183,14 +1164,13 @@ with earlier versions of Android.
 For guidelines about designing notifications for Android, see
 [Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
-
 ## Related Links
 
-- [NotificationsLab (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/NotificationsLab/)
-- [LocalNotifications (sample)](https://developer.xamarin.com/samples/monodroid/LocalNotifications/)
+- [NotificationsLab (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-notificationslab)
+- [LocalNotifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
 - [Local Notifications In Android Walkthrough](~/android/app-fundamentals/notifications/local-notifications-walkthrough.md)
 - [Notifying the User](https://developer.android.com/training/notify-user/index.html)
-- [Notification](https://developer.xamarin.com/api/type/Android.App.Notification/)
-- [NotificationManager](https://developer.xamarin.com/api/type/Android.App.NotificationManager/)
+- [Notification](xref:Android.App.Notification)
+- [NotificationManager](xref:Android.App.NotificationManager)
 - [NotificationCompat.Builder](https://developer.android.com/reference/android/support/v4/app/NotificationCompat.Builder.html)
-- [PendingIntent](https://developer.xamarin.com/api/type/Android.App.PendingIntent/)
+- [PendingIntent](xref:Android.App.PendingIntent)

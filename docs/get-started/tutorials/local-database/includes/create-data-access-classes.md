@@ -61,9 +61,7 @@ In this exercise you will add data access classes to the **LocalDatabaseTutorial
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace LocalDatabaseTutorial
     {
         public partial class App : Application
@@ -109,7 +107,7 @@ In this exercise you will add data access classes to the **LocalDatabaseTutorial
 
     This code defines a `Database` property that creates a new `Database` instance as a singleton. A local file path and filename, which represents where to store the database, are passed as the argument to the `Database` class constructor.
 
-    > [!IMPORTANT
+    > [!IMPORTANT]
     > The advantage of exposing the database as a singleton is that a single database connection is created that's kept open while the application runs, therefore avoiding the expense of opening and closing the database file each time a database operation is performed.
 
 1. Build the solution to ensure there are no errors.
@@ -175,9 +173,7 @@ In this exercise you will add data access classes to the **LocalDatabaseTutorial
     using System;
     using System.IO;
     using Xamarin.Forms;
-    using Xamarin.Forms.Xaml;
 
-    [assembly: XamlCompilation(XamlCompilationOptions.Compile)]
     namespace LocalDatabaseTutorial
     {
         public partial class App : Application
@@ -223,7 +219,7 @@ In this exercise you will add data access classes to the **LocalDatabaseTutorial
 
     This code defines a `Database` property that creates a new `Database` instance as a singleton. A local file path and filename, which represents where to store the database, are passed as the argument to the `Database` class constructor.
 
-    > [!IMPORTANT
+    > [!IMPORTANT]
     > The advantage of exposing the database as a singleton is that a single database connection is created that's kept open while the application runs, therefore avoiding the expense of opening and closing the database file each time a database operation is performed.
-    
+
 1. Build the solution to ensure there are no errors.

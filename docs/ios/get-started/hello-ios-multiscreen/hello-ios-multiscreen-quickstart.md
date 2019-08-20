@@ -13,7 +13,7 @@ ms.date: 10/05/2018
 
 # Hello, iOS Multiscreen – Quickstart
 
-This part of the walkthrough will add a second screen to the Phoneword application that will display a history of the phone numbers that were called with the app. The final application will have a second screen that displays the call history, as illustrated by the following screenshot:
+This part of the walkthrough will add a second screen to the Phoneword application that displays a history of the phone numbers that were called with the app. The final application will have a second screen that displays the call history, as illustrated by the following screenshot:
 
 [![](hello-ios-multiscreen-quickstart-images/00.png "The final application will have a second screen that displays the call history, as illustrated by this screenshot")](hello-ios-multiscreen-quickstart-images/00.png#lightbox)
 
@@ -21,7 +21,7 @@ The [accompanying Deep Dive](~/ios/get-started/hello-ios-multiscreen/hello-ios-m
 
 ## Requirements
 
-This guide resumes where the Hello, iOS document left off, and requires completion of the [Hello, iOS Quickstart](~/ios/get-started/hello-ios/index.md). The completed version of the Phoneword app can be downloaded from the [Hello, iOS sample](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+This guide resumes where the Hello, iOS document left off, and requires completion of the [Hello, iOS Quickstart](~/ios/get-started/hello-ios/index.md). Download the completed version of the Phoneword app from the [Hello, iOS sample](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 ::: zone pivot="macos"
 
@@ -29,7 +29,7 @@ This guide resumes where the Hello, iOS document left off, and requires completi
 
 This walkthrough will add a Call History screen to our **Phoneword** application.
 
-1. Open the **Phoneword** application in Visual Studio for Mac. If necessary, the completed Phoneword application from the [Hello, iOS walkthrough](~/ios/get-started/hello-ios/index.md) guide can be downloaded from [here](https://developer.xamarin.com/samples/monotouch/Hello_iOS/).
+1. Open the **Phoneword** application in Visual Studio for Mac. If necessary, the completed Phoneword application from the [Hello, iOS walkthrough](~/ios/get-started/hello-ios/index.md) guide can be downloaded from [here](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios).
 
 2. Open the **Main.storyboard** file from the **Solution Pad**:
 
@@ -77,12 +77,12 @@ handles to make the new **Button** the same width as the **Call Button**:
     ![](hello-ios-multiscreen-quickstart-images/11new.png "Change the Name of the Button to CallHistoryButton and change the Title to Call History")
 
 11. Create the **Call History** screen. From the **Toolbox**, drag a **table view controller**
- onto the design surface:
+    onto the design surface:
 
-   ![](hello-ios-multiscreen-quickstart-images/12new.png "Drag a table view controller onto the design surface")
+    ![](hello-ios-multiscreen-quickstart-images/12new.png "Drag a table view controller onto the design surface")
 
 12. Next, select the **table view controller** by clicking on the black bar at the bottom of the scene. In the **Properties Pad**,
-change the **table view controller’s** class to `CallHistoryController` and press **Enter**:
+    change the **table view controller’s** class to `CallHistoryController` and press **Enter**:
 
     ![](hello-ios-multiscreen-quickstart-images/13new.png "Change the table view controllers class to CallHistoryController")
 
@@ -155,12 +155,12 @@ change the **table view controller’s** class to `CallHistoryController` and pr
     ![](hello-ios-multiscreen-quickstart-images/17new.png "The Segue between the two scenes")
 
 15. Add a **Title** to the **table view controller** by selecting the black bar at the bottom of the scene
-and changing the **view controller Title** to **Call History** in the **Properties Pad**:
+    and changing the **view controller Title** to **Call History** in the **Properties Pad**:
 
     ![](hello-ios-multiscreen-quickstart-images/18new.png "Change the view controller title to Call History in the Properties Pad")
 
 16. When the application is run, the **Call History Button** will open the **Call History** screen,
-  but the table view will be empty because there is no code to keep track of and display the phone numbers.
+    but the table view will be empty because there is no code to keep track of and display the phone numbers.
 
     This app will store the phone numbers as a list of strings.
 
@@ -260,13 +260,13 @@ and changing the **view controller Title** to **Call History** in the **Properti
 
     There are a few things happening here:
 
-    - The variable `translatedNumber` was moved from the `ViewDidLoad` method to a _class-level variable_.
+    - The variable `translatedNumber` moved from the `ViewDidLoad` method to a _class-level variable_.
     - The  **CallButton** code was modified to add dialed numbers to the list of phone numbers by calling `PhoneNumbers.Add(translatedNumber)`.
     - The `PrepareForSegue` method was added.
 
     Save and build the application to make sure there are no errors.
 
-20. Press the **Start** button to launch the application inside the **iOS Simulator**:
+18. Press the **Start** button to launch the application inside the **iOS Simulator**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "Press the Start button to launch the application inside the iOS Simulator")
 
@@ -279,7 +279,7 @@ Congratulations on completing your first multi-screen Xamarin.iOS application!
 
 This walkthrough will add a Call History screen to our **Phoneword** application.
 
-1. Open the **Phoneword** application in Visual Studio. If necessary, download the [completed Phoneword application](https://developer.xamarin.com/samples/monotouch/Hello_iOS/) from the [Hello, iOS walkthrough](~/ios/get-started/hello-ios/index.md) guide. Recall that it is necessary to connect to a [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) to use the iOS Designer, and iOS simulator.
+1. Open the **Phoneword** application in Visual Studio. If necessary, download the [completed Phoneword application](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) from the [Hello, iOS walkthrough](~/ios/get-started/hello-ios/index.md) guide. Recall that it is necessary to connect to a [Mac](~/ios/get-started/installation/windows/connecting-to-mac/index.md) to use the iOS Designer, and iOS simulator.
 
 2. Start by editing the user interface. Open the **Main.storyboard** file from the **Solution Explorer**, making sure that **View As** is set to _iPhone 6_:
 
@@ -519,7 +519,7 @@ This walkthrough will add a Call History screen to our **Phoneword** application
 
     Save and build the application to make sure there are no errors.
 
-20. Press the **Start** button to launch our application inside the **iOS Simulator**:
+18. Press the **Start** button to launch our application inside the **iOS Simulator**:
 
     ![](hello-ios-multiscreen-quickstart-images/19.png "The first screen of the sample app")
 
@@ -532,6 +532,6 @@ learned in the [Hello, iOS Multiscreen Deep Dive](~/ios/get-started/hello-ios-mu
 
 ## Related Links
 
-- [Hello, iOS (sample)](https://developer.xamarin.com/samples/monotouch/Hello_iOS/)
+- [Hello, iOS (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios)
 - [iOS Human Interface Guidelines](https://developer.apple.com/library/ios/#documentation/UserExperience/Conceptual/MobileHIG/Introduction/Introduction.html)
 - [iOS Provisioning Portal](https://developer.apple.com/ios/manage/overview/index.action)

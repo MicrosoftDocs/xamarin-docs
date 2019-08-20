@@ -36,15 +36,15 @@ into the example code presented in this walkthrough.
 We'll use the following steps to create a GCM-enabled Xamarin.Android 
 client app:
 
-1.  Install additional packages required for communications 
+1. Install additional packages required for communications 
     with GCM servers.
-2.  Configure app permissions for access to GCM servers.
-3.  Implement code to check for the presence of Google Play Services. 
-4.  Implement a registration intent service that negotiates with GCM for 
+2. Configure app permissions for access to GCM servers.
+3. Implement code to check for the presence of Google Play Services. 
+4. Implement a registration intent service that negotiates with GCM for 
     a registration token.
-5.  Implement an instance ID listener service that listens for 
+5. Implement an instance ID listener service that listens for 
     registration token updates from GCM.
-6.  Implement a GCM listener service that receives remote 
+6. Implement a GCM listener service that receives remote 
     messages from the app server through GCM.
 
 This app will use a new GCM feature known as *topic messaging*. In 
@@ -147,19 +147,19 @@ that we entered into the Google Developer console.
 An Android application must have the following permissions configured 
 before it can receive notifications from Google Cloud Messaging: 
 
--   `com.google.android.c2dm.permission.RECEIVE` &ndash; Grants 
+- `com.google.android.c2dm.permission.RECEIVE` &ndash; Grants 
     permission to our app to register and receive messages from Google 
     Cloud Messaging. (What does `c2dm` mean? This stands for _Cloud to 
     Device Messaging_, which is the now-deprecated predecessor to GCM. 
     GCM still uses `c2dm` in many of its permission strings.) 
 
--   `android.permission.WAKE_LOCK` &ndash; (Optional) Prevents the 
+- `android.permission.WAKE_LOCK` &ndash; (Optional) Prevents the 
     device CPU from going to sleep while listening for a message. 
 
--   `android.permission.INTERNET` &ndash; Grants internet access so the 
+- `android.permission.INTERNET` &ndash; Grants internet access so the 
     client app can communicate with GCM. 
 
--   *package_name*`.permission.C2D_MESSAGE` &ndash; Registers the 
+- *package_name*`.permission.C2D_MESSAGE` &ndash; Registers the 
     application with Android and requests permission to exclusively 
     receive all C2D (cloud to device) messages. The *package_name*
     prefix is the same as your application ID. 
@@ -300,14 +300,14 @@ must register with GCM and get back a registration token. The work of
 registering our application with GCM is handled by an `IntentService` 
 that we create. Our `IntentService` performs the following steps: 
 
-1.  Uses the [InstanceID](https://developers.google.com/instance-id/) API to
+1. Uses the [InstanceID](https://developers.google.com/instance-id/) API to
     generate security tokens that authorize our client app to access the
     app server. In return, we get back a registration token from GCM.
 
-2.  Forwards the registration token to the app server (if the app
+2. Forwards the registration token to the app server (if the app
     server requires it).
 
-3.  Subscribes to one or more notification topic channels.
+3. Subscribes to one or more notification topic channels.
 
 After we implement this `IntentService`, we'll test it to see if we
 get back a registration token from GCM.
@@ -373,13 +373,13 @@ namespace ClientApp
 In the above sample code, change *YOUR_SENDER_ID* to the Sender ID number for 
 your client app project. To get the Sender ID for your project: 
 
-1.  Log into the [Google Cloud Console](https://console.cloud.google.com/) and
+1. Log into the [Google Cloud Console](https://console.cloud.google.com/) and
     select your project name from the pull down menu. In the **Project info**
     pane that is displayed for your project, click **Go to project settings**:
 
     [![Selecting XamarinGCM project](remote-notifications-with-gcm-images/7-choose-project-sml.png)](remote-notifications-with-gcm-images/7-choose-project.png#lightbox)
 
-2.  On the **Settings** page, locate the **Project number** &ndash;
+2. On the **Settings** page, locate the **Project number** &ndash;
     this is the Sender ID for your project:
 
     [![Project number displayed](remote-notifications-with-gcm-images/9-project-number-sml.png)](remote-notifications-with-gcm-images/9-project-number.png#lightbox)
@@ -901,5 +901,5 @@ our client app through GCM.
 
 ## Related Links
 
-- [GCM RemoteNotifications (sample)](https://developer.xamarin.com/samples/monodroid/RemoteNotifications)
+- [GCM RemoteNotifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)
 - [Google Cloud Messaging](~/android/data-cloud/google-messaging/google-cloud-messaging.md)

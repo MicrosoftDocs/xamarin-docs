@@ -37,15 +37,17 @@ For large contributions and new content, [open an issue](https://github.com/Micr
 
 If it's a new topic, you can use the [template file](../contributing-guidelines/template.md) as your starting point. It contains the writing guidelines and also explains the metadata required for each article, such as author information.
 
-For images and other static resources, add them to the subfolder called **<mypage>-images**. If you are creating a new folder for content, add an images folder to the new folder.
+For images and other static resources, add them to the subfolder called **\<mypage>-images**. If you are creating a new folder for content, add an images folder to the new folder.
 
 #### Example structure
 
-    docs
-      /android
-          mypage.md
-          /mypage-images
-              some-image.png
+```
+docs
+    /android
+        mypage.md
+        /mypage-images
+            some-image.png
+```
 
 Be sure to follow the proper Markdown syntax. See the [style guide](../contributing-guidelines/template.md) for more information.
 

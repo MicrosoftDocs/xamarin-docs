@@ -11,10 +11,10 @@ ms.date: 03/19/2018
 # Foreground Services
 
 A foreground service is a special type of a bound service or a started service. Occasionally services will perform tasks that users must be actively aware of, these services are known as _foreground services_. An example of a foreground service is an app that is providing the user with directions while driving or walking. Even if the app is in the background, it is still important that the service has sufficient resources to work properly and that the user has a quick and handy way to access the app. For an Android app, this means that a foreground service should receive higher priority than a "regular" service and a foreground service must provide a `Notification` that Android will display as long as the service is running.
- 
+
 To start a foreground service, the app must dispatch an Intent that tells Android to start the service. Then the service must register itself as a foreground service with Android. Apps that are running on Android 8.0 (or higher) should use the `Context.StartForegroundService` method to start the service, while apps that are running on devices with an older version of Android should use `Context.StartService`
 
-This C# extension method is an example of how to start a foreground service. On Android 8.0 and higher it will use the `StartForegroundService` method, otherwise the older `StartService` method will be used.  
+This C# extension method is an example of how to start a foreground service. On Android 8.0 and higher it will use the `StartForegroundService` method, otherwise the older `StartService` method will be used.
 
 ```csharp
 public static void StartForegroundServiceCompat<T>(this Context context, Bundle args = null) where T : Service
@@ -38,12 +38,12 @@ public static void StartForegroundServiceCompat<T>(this Context context, Bundle 
 
 ## Registering as a Foreground Service
 
-Once a foreground service has started, it must register itself with Android by invoking the [`StartForeground`](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/). If the service is started with the `Service.StartForegroundService` method but does not register itself, then Android will stop the service and flag the app as non-responsive.
+Once a foreground service has started, it must register itself with Android by invoking the [`StartForeground`](xref:Android.App.Service.StartForeground*). If the service is started with the `Service.StartForegroundService` method but does not register itself, then Android will stop the service and flag the app as non-responsive.
 
 `StartForeground` takes two parameters, both of which are mandatory:
- 
-* An integer value that is unique within the application to identify the service.
-* A `Notification` object that Android will display in the status bar for as long as the service is running.
+
+- An integer value that is unique within the application to identify the service.
+- A `Notification` object that Android will display in the status bar for as long as the service is running.
 
 Android will display the notification in the status bar for as long as the service is running. The notification, at minimum, will provide a visual cue to the user that the service is running. Ideally, the notification should provide the user with a shortcut to the application or possibly some action buttons to control the application. An example of this is a music player &ndash; the notification that is displayed may have buttons to pause/play music, to rewind to the previous song, or to skip to the next song. 
 
@@ -57,7 +57,7 @@ public override StartCommandResult OnStartCommand(Intent intent, StartCommandFla
 {
     // Code not directly related to publishing the notification has been omitted for clarity.
     // Normally, this method would hold the code to be run when the service is started.
-    
+
     var notification = new Notification.Builder(this)
         .SetContentTitle(Resources.GetString(Resource.String.app_name))
         .SetContentText(Resources.GetString(Resource.String.notification_text))
@@ -97,7 +97,7 @@ If the service is halted with a call to `StopSelf` or `StopService`, the status 
 
 ## Related Links
 
-- [Android.App.Service](https://developer.xamarin.com/api/type/Android.App.Service/)
-- [Android.App.Service.StartForeground](https://developer.xamarin.com/api/member/Android.App.Service.StartForeground/p/System.Int32/Android.App.Notification/)
+- [Android.App.Service](xref:Android.App.Service)
+- [Android.App.Service.StartForeground](xref:Android.App.Service.StartForeground*)
 - [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md)
-- [ForegroundServiceDemo (sample)](https://developer.xamarin.com/samples/monodroid/ApplicationFundamentals/ServiceSamples/ForegroundServiceDemo/)
+- [ForegroundServiceDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-servicesamples-foregroundservicedemo)

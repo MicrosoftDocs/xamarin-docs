@@ -100,17 +100,17 @@ At least one screenshot is required, up to five may be submitted.
 ## Visual Studio for Mac
 
 1. Ensure that the iOS app is the startup project. If not,
-  right-click to set it:
+   right-click to set it:
 
-  ![](appstore-images/xs-startup.png "Setting the startup project")
+   ![](appstore-images/xs-startup.png "Setting the startup project")
 
 2. Choose the **AppStore** build configuration:
 
-  ![](appstore-images/xs-appstore.png "The AppStore build configuration")
+   ![](appstore-images/xs-appstore.png "The AppStore build configuration")
 
 3. Choose the **Build > Archive** menu item to start the archive process:
 
-  ![](appstore-images/xs-archive.png "The Build menu")
+   ![](appstore-images/xs-archive.png "The Build menu")
 
 You can also choose the **View > Archives...** menu item to
   see archives that have been created previously.
@@ -125,26 +125,26 @@ Xcode will automatically show archives created in Visual Studio for Mac.
 
 1. Start Xcode and choose **Window > Organizer**:
 
-  ![](appstore-images/xc-organizer.png "The Window menu")
+   ![](appstore-images/xc-organizer.png "The Window menu")
 
 2. Switch to the **Archives** tab and select the archive that
   was created with Visual Studio for Mac:
 
-  ![](appstore-images/xc-archives.png "The Archives tab")
+   ![](appstore-images/xc-archives.png "The Archives tab")
 
 3. Optionally **Validate...** the archive, then choose **Submit...**
-  to upload the app to iTunes Connect.
+   to upload the app to iTunes Connect.
 
 4. Choose the development team (if you belong to more than one)
-  and then confirm the submission:
+   and then confirm the submission:
 
-  ![](appstore-images/xc-submit1.png "The development team section")
+   ![](appstore-images/xc-submit1.png "The development team section")
 
 5. Visit iTunes Connect again to see the uploaded binary. Go to
-  your app's configuration page and choose **Prerelease** from the top
-  menu to see the **Builds** list:
+   your app's configuration page and choose **Prerelease** from the top
+   menu to see the **Builds** list:
 
-  [![](appstore-images/itc-prerelease-sml.png "The apps configuration page in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
+   [![](appstore-images/itc-prerelease-sml.png "The apps configuration page in iTunes Connect")](appstore-images/itc-prerelease.png#lightbox)
 
 You can then submit the app for approval on the **Versions** page. Refer to the
  [iOS app distribution overview](~/ios/deploy-test/app-distribution/index.md)

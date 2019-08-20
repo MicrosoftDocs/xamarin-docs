@@ -180,7 +180,7 @@ The possible qualifiers are listed below for reference:
 
     - `navhidden` &ndash; the navigational keys are not available.
 
--  **Primary Non-Touch Navigation Method** &ndash; The kind of
+- **Primary Non-Touch Navigation Method** &ndash; The kind of
    navigation available on the device. Possible values are:
 
     - `nonav` &ndash; the only navigation facility available is the
@@ -193,7 +193,7 @@ The possible qualifiers are listed below for reference:
     - `wheel` &ndash; the uncommon scenario where there are one or more
       directional wheels available
 
--  **Platform Version (API level)** &ndash; The API level supported by
+- **Platform Version (API level)** &ndash; The API level supported by
    the device in the format v*N*, where *N* is the API level that is
    being targeted. For example, v11 will target an API level 11
    (Android 3.0) device.
@@ -247,14 +247,16 @@ resource which would require a factor of 0.75.
 As an example, consider an application that has the following drawable
 resource directories:
 
-    drawable
-    drawable-en
-    drawable-fr-rCA
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
-    drawable-port-ldpi
-    drawable-port-notouch-12key
+```
+drawable
+drawable-en
+drawable-fr-rCA
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+drawable-port-ldpi
+drawable-port-notouch-12key
+```
 
 And now the application is run on a device with the following configuration:
 
@@ -267,13 +269,15 @@ And now the application is run on a device with the following configuration:
 To begin with, the French resources are eliminated as they conflict
 with the locale of `en-GB`, leaving us with:
 
-    drawable
-    drawable-en
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
-    drawable-port-ldpi
-    drawable-port-notouch-12key
+```
+drawable
+drawable-en
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+drawable-port-ldpi
+drawable-port-notouch-12key
+```
 
 Next, the first qualifier is selected from the qualifiers table above:
 MCC and MNC. There are no resource directories that contain this
@@ -283,19 +287,25 @@ The next qualifier is selected, which is Language. There are resources that
 match the language code. All resource directories that do not match the language
 code of `en` are rejected, so that the list of resources is now:
 
-    drawable-en-port
-    drawable-en-notouch-12key
-    drawable-en-port-ldpi
+```
+drawable-en-port
+drawable-en-notouch-12key
+drawable-en-port-ldpi
+```
 
 The next qualifier that is present is for screen orientation, so all resource
 directories that do not match the screen orientation of `port` are eliminated:
 
-    drawable-en-port
-    drawable-en-port-ldpi
+```
+drawable-en-port
+drawable-en-port-ldpi
+```
 
 Next is the qualifier for screen density, `ldpi`, which results in the exclusion of one more resource directory:
 
-    drawable-en-port-ldpi
+```
+drawable-en-port-ldpi
+```
 
 As a result of this process, Android will use the drawable resources in the
 resource directory `drawable-en-port-ldpi` for the device.

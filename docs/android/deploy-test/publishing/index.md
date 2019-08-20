@@ -23,12 +23,12 @@ to publish the application. Publishing is the process of compiling a
 Xamarin.Android application so that it is ready for users to install on
 their devices, and it involves two essential tasks:
 
--   **Preparing for Publication** &ndash; A release version of the
+- **Preparing for Publication** &ndash; A release version of the
     application is created that can be deployed to Android-powered
     devices (see [Preparing an Application for Release](~/android/deploy-test/release-prep/index.md)
     for more information about release preparation).
 
--   **Distribution** &ndash; The release version of an application is made
+- **Distribution** &ndash; The release version of an application is made
     available through one or more of the various distribution channels.
 
 The following diagram illustrates the steps involved with publishing a Xamarin.Android application:
@@ -39,9 +39,9 @@ As can be seen by the diagram above, the preparation is the same regardless
 of the distribution method that is used. There are several ways that an Android
 application may be released to users:
 
--   **Via a Website** &ndash; A Xamarin.Android application can be made available for download on a website, from which users may then install the application by clicking on a link.
--   **By e-mail** &ndash; It is possible for users to install a Xamarin.Android application from their e-mail. The application will be installed when the attachment is opened with an Android-powered device.
--   **Through a Market** &ndash; There are several application marketplaces that exist for distribution, such as  [Google Play](http://play.google.com/) or  [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) .
+- **Via a Website** &ndash; A Xamarin.Android application can be made available for download on a website, from which users may then install the application by clicking on a link.
+- **By e-mail** &ndash; It is possible for users to install a Xamarin.Android application from their e-mail. The application will be installed when the attachment is opened with an Android-powered device.
+- **Through a Market** &ndash; There are several application marketplaces that exist for distribution, such as  [Google Play](http://play.google.com/) or  [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) .
 
 
 Using an established marketplace is the most common way to publish an
@@ -86,7 +86,7 @@ and the Amazon App Store for Android.
 
 ## Related Links
 
-- [HelloWorldPublishing (sample)](https://developer.xamarin.com/samples/monodroid/HelloWorldPublishing/)
+- [HelloWorldPublishing (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/helloworldpublishing)
 - [Build Process](~/android/deploy-test/building-apps/build-process.md)
 - [Linking](~/android/deploy-test/linker.md)
 - [Obtaining A Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)

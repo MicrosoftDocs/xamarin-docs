@@ -46,7 +46,7 @@ The iOS [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xamarin.
 The Android [`ViewRenderer<TView, TNativeView>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.Android/ViewRenderer.cs#L17) has generic arguments:
 
 - `TView` constrained to [`Xamarin.Forms.View`](xref:Xamarin.Forms.View)
-- `TNativeView` constrained to [`Android.Views.View`](https://developer.xamarin.com/api/type/Android.Views.View/)
+- `TNativeView` constrained to [`Android.Views.View`](xref:Android.Views.View)
 
 The UWP [`ViewRenderer<TElement, TNativeElement>`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Platform.UAP/ViewRenderer.cs#L6) has differently named generic arguments:
 

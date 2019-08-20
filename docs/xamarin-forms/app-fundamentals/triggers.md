@@ -11,7 +11,7 @@ ms.date: 07/01/2016
 
 # Xamarin.Forms Triggers
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 
 Triggers allow
     you to express actions declaratively in XAML that
@@ -133,10 +133,11 @@ The example below uses the data binding syntax
 </Button>
 ```
 
-Tip: when evaluating `Path=Text.Length` always provide a
-    default value for the target property (eg. `Text=""`)
-    because otherwise it will be `null` and the trigger
-    won't work like you expect.
+> [!TIP]
+> When evaluating `Path=Text.Length` always provide a
+> default value for the target property (eg. `Text=""`)
+> because otherwise it will be `null` and the trigger
+> won't work like you expect.
 
 In addition to specifying `Setter`s you can also provide
     [`EnterActions` and `ExitActions`](#enterexit).
@@ -403,5 +404,5 @@ Note: `EnterActions` and `ExitActions` are ignored on
 
 ## Related Links
 
-- [Triggers Sample](https://developer.xamarin.com/samples/xamarin-forms/WorkingWithTriggers)
+- [Triggers Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)
 - [Xamarin.Forms API Documentation](xref:Xamarin.Forms.TriggerAction`1)

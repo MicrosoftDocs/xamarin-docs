@@ -82,17 +82,17 @@ After using the migration tool, you may still get some
 	public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
 	```
 
- * The Unified API does not provide an implicit conversion between NSDate
+* The Unified API does not provide an implicit conversion between NSDate
  	and .NET DateTime because it's not a lossless conversion. To prevent
  	errors related to `DateTimeKind.Unspecified` convert the .NET `DateTime`
  	to local or UTC before casting to `NSDate`.
 
- * Objective-C category methods are now generated as extension
+* Objective-C category methods are now generated as extension
  	methods in the Unified API. For example, code that previously
  	used `UIView.DrawString` would now reference
  	`NSString.DrawString` in the Unified API.
 
- * Code using AVFoundation classes with `VideoSettings` should change
+* Code using AVFoundation classes with `VideoSettings` should change
  	to use the `WeakVideoSettings` property. This requires a `Dictionary`,
  	which is available as a property on the settings classes, for example:
 
@@ -100,21 +100,22 @@ After using the migration tool, you may still get some
 	vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
 	```
 
- * The NSObject `.ctor(IntPtr)` constructor has been changed from public
+* The NSObject `.ctor(IntPtr)` constructor has been changed from public
  	to protected ([to prevent improper use](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
- * `NSAction` has been [replaced](~/cross-platform/macios/unified/overview.md#NSAction)
- 	with the starndard .NET `Action`. Some simple (single parameter) delegates
+* `NSAction` has been [replaced](~/cross-platform/macios/unified/overview.md#NSAction)
+ 	with the standard .NET `Action`. Some simple (single parameter) delegates
  	have also been replaced with `Action<T>`.
 
-Finally, refer to the [Classic v Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
- 	to look up changes to APIs in your code. Searching [this page](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+Finally, refer to the [Classic v Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
+ 	to look up changes to APIs in your code. Searching [this page](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
  	will help find Classic APIs and what they've been updated to.
 
-**Note:** the `MonoTouch.Dialog` namespace remains the same
-	after migration. If your code uses **MonoTouch.Dialog**
-	you should continue to use that namespace - do *not*
-	change `MonoTouch.Dialog` to `Dialog`!
+> [!NOTE]
+> The `MonoTouch.Dialog` namespace remains the same
+> after migration. If your code uses **MonoTouch.Dialog**
+> you should continue to use that namespace - do *not*
+> change `MonoTouch.Dialog` to `Dialog`!
 
 ## Common Compiler Errors
 
@@ -229,4 +230,4 @@ class BasicPinAnnotation : MKAnnotation
 - [Updating Xamarin.Forms Apps](~/cross-platform/macios/unified/updating-xamarin-forms-apps.md)
 - [Updating Bindings](~/cross-platform/macios/unified/update-binding.md)
 - [Working with Native Types in Cross-Platform Apps](~/cross-platform/macios/native-types-cross-platform.md)
-- [Classic vs Unified API differences](https://developer.xamarin.com/releases/ios/api_changes/classic-vs-unified-8.6.0/)
+- [Classic vs Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)

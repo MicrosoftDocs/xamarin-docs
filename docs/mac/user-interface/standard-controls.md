@@ -118,73 +118,73 @@ using Foundation;
 
 namespace AppKit
 {
-	[Register("SourceListView")]
-	public class SourceListView : NSOutlineView
-	{
-		#region Computed Properties
-		public SourceListDataSource Data {
-			get {return (SourceListDataSource)this.DataSource; }
-		}
-		#endregion
+    [Register("SourceListView")]
+    public class SourceListView : NSOutlineView
+    {
+        #region Computed Properties
+        public SourceListDataSource Data {
+            get {return (SourceListDataSource)this.DataSource; }
+        }
+        #endregion
 
-		#region Constructors
-		public SourceListView ()
-		{
+        #region Constructors
+        public SourceListView ()
+        {
 
-		}
+        }
 
-		public SourceListView (IntPtr handle) : base(handle)
-		{
+        public SourceListView (IntPtr handle) : base(handle)
+        {
 
-		}
+        }
 
-		public SourceListView (NSCoder coder) : base(coder)
-		{
+        public SourceListView (NSCoder coder) : base(coder)
+        {
 
-		}
+        }
 
-		public SourceListView (NSObjectFlag t) : base(t)
-		{
+        public SourceListView (NSObjectFlag t) : base(t)
+        {
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Override Methods
-		public override void AwakeFromNib ()
-		{
-			base.AwakeFromNib ();
+        #region Override Methods
+        public override void AwakeFromNib ()
+        {
+            base.AwakeFromNib ();
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Public Methods
-		public void Initialize() {
+        #region Public Methods
+        public void Initialize() {
 
-			// Initialize this instance
-			this.DataSource = new SourceListDataSource (this);
-			this.Delegate = new SourceListDelegate (this);
+            // Initialize this instance
+            this.DataSource = new SourceListDataSource (this);
+            this.Delegate = new SourceListDelegate (this);
 
-		}
+        }
 
-		public void AddItem(SourceListItem item) {
-			if (Data != null) {
-				Data.Items.Add (item);
-			}
-		}
-		#endregion
+        public void AddItem(SourceListItem item) {
+            if (Data != null) {
+                Data.Items.Add (item);
+            }
+        }
+        #endregion
 
-		#region Events
-		public delegate void ItemSelectedDelegate(SourceListItem item);
-		public event ItemSelectedDelegate ItemSelected;
+        #region Events
+        public delegate void ItemSelectedDelegate(SourceListItem item);
+        public event ItemSelectedDelegate ItemSelected;
 
-		internal void RaiseItemSelected(SourceListItem item) {
-			// Inform caller
-			if (this.ItemSelected != null) {
-				this.ItemSelected (item);
-			}
-		}
-		#endregion
-	}
+        internal void RaiseItemSelected(SourceListItem item) {
+            // Inform caller
+            if (this.ItemSelected != null) {
+                this.ItemSelected (item);
+            }
+        }
+        #endregion
+    }
 }
 ```
 
@@ -240,9 +240,9 @@ Line up with the definition in the `MainWindow.h` file in Xcode:
 
 ```csharp
 @interface SplitViewController : NSSplitViewController {
-	NSSplitViewItem *_LeftController;
-	NSSplitViewItem *_RightController;
-	NSSplitView *_SplitView;
+    NSSplitViewItem *_LeftController;
+    NSSplitViewItem *_RightController;
+    NSSplitView *_SplitView;
 }
 
 @property (nonatomic, retain) IBOutlet NSSplitViewItem *LeftController;
@@ -271,7 +271,7 @@ If a button has been exposed via an **Outlet**, the following code will respond 
 
 ```csharp
 ButtonOutlet.Activated += (sender, e) => {
-		FeedbackLabel.StringValue = "Button Outlet Pressed";
+        FeedbackLabel.StringValue = "Button Outlet Pressed";
 };
 ```
 
@@ -279,8 +279,8 @@ For buttons that have been exposed via **Actions**, a `public partial` method wi
 
 ```csharp
 partial void ButtonAction (Foundation.NSObject sender) {
-	// Do something in response to the Action
-	FeedbackLabel.StringValue = "Button Action Pressed";
+    // Do something in response to the Action
+    FeedbackLabel.StringValue = "Button Action Pressed";
 }
 ```
 
@@ -288,7 +288,7 @@ For buttons that have a state (like **On** and **Off**), the state can be checke
 
 ```csharp
 DisclosureButton.Activated += (sender, e) => {
-	LorumIpsum.Hidden = (DisclosureButton.State == NSCellStateValue.On);
+    LorumIpsum.Hidden = (DisclosureButton.State == NSCellStateValue.On);
 };
 ```
 
@@ -325,7 +325,7 @@ Checkboxes and Radio Buttons (exposed via **Outlets**) have a state (like **On**
 
 ```csharp
 AdjustTime.Activated += (sender, e) => {
-	FeedbackLabel.StringValue = string.Format("Adjust Time: {0}",AdjustTime.State == NSCellStateValue.On);
+    FeedbackLabel.StringValue = string.Format("Adjust Time: {0}",AdjustTime.State == NSCellStateValue.On);
 };
 ```
 
@@ -339,8 +339,8 @@ To select a button in a Radio Button Group, expose the Radio Button to select as
 
 ```csharp
 partial void SelectCar (Foundation.NSObject sender) {
-	TransportationCar.State = NSCellStateValue.On;
-	FeedbackLabel.StringValue = "Car Selected";
+    TransportationCar.State = NSCellStateValue.On;
+    FeedbackLabel.StringValue = "Car Selected";
 }
 ```
 
@@ -357,8 +357,8 @@ Save your changes and return to Visual Studio for Mac, add the code to handle th
 ```csharp
 partial void NumberChanged(Foundation.NSObject sender)
 {
-	var check = sender as NSButton;
-	Console.WriteLine("Changed to {0}", check.Tag);
+    var check = sender as NSButton;
+    Console.WriteLine("Changed to {0}", check.Tag);
 }
 ```
 
@@ -463,8 +463,8 @@ Optionally, you can respond the a Internal Data Menu Items defined in Interface 
 
 ```csharp
 partial void ItemOne (Foundation.NSObject sender) {
-	DropDownSelected.Title = "Item 1";
-	FeedbackLabel.StringValue = "Item One Selected";
+    DropDownSelected.Title = "Item 1";
+    FeedbackLabel.StringValue = "Item One Selected";
 }
 ```
 
@@ -482,7 +482,7 @@ There are two ways to track when a Selection Control has user interaction, by ex
 
 ```csharp
 partial void SegmentButtonPressed (Foundation.NSObject sender) {
-	FeedbackLabel.StringValue = string.Format("Button {0} Pressed",SegmentButtons.SelectedSegment);
+    FeedbackLabel.StringValue = string.Format("Button {0} Pressed",SegmentButtons.SelectedSegment);
 }
 ```
 
@@ -490,7 +490,7 @@ Or by attaching a **Delegate** to the `Activated` event. For example:
 
 ```csharp
 TickedSlider.Activated += (sender, e) => {
-	FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.IntValue);
+    FeedbackLabel.StringValue = string.Format("Stepper Value: {0:###}",TickedSlider.IntValue);
 };
 ```
 
@@ -527,7 +527,7 @@ There are two ways to track when a Indicator Control has user interaction, eithe
 
 ```csharp
 LevelIndicator.Activated += (sender, e) => {
-	FeedbackLabel.StringValue = string.Format("Level: {0:###}",LevelIndicator.DoubleValue);
+    FeedbackLabel.StringValue = string.Format("Level: {0:###}",LevelIndicator.DoubleValue);
 };
 ```
 
@@ -574,7 +574,7 @@ FeedbackLabel.StringValue = string.Format("Number: {0}",NumberField.IntValue);
 
 An `NSTextView` provides a full featured text edit and display area with built-in formatting. Like a `NSTextField`, use the `StringValue` property to read or set the area's value.
 
-For an example of a complex example of working with Text Views in a Xamarin.Mac app, please see the [SourceWriter Sample App](https://developer.xamarin.com/samples/mac/SourceWriter/). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
+For an example of a complex example of working with Text Views in a Xamarin.Mac app, please see the [SourceWriter Sample App](https://docs.microsoft.com/samples/xamarin/mac-samples/sourcewriter). SourceWriter is a simple source code editor that provides support for code completion and simple syntax highlighting.
 
 The SourceWriter code has been fully commented and, where available, links have be provided from key technologies or methods to relevant information in the Xamarin.Mac Guides Documentation.
 
@@ -597,17 +597,17 @@ To create a popover, do the following:
 1. Open the `.storyboard` file of the window that you want to add a popover to by double-clicking it in the **Solution Explorer**
 2. Drag a **View Controller** from the **Library Inspector** onto the **Interface Editor**: 
 
-	[![](standard-controls-images/content02.png "Selecting a View Controller from the Library")](standard-controls-images/content02.png#lightbox)
-4. Define the size and the layout of the **Custom View**: 
+    [![](standard-controls-images/content02.png "Selecting a View Controller from the Library")](standard-controls-images/content02.png#lightbox)
+3. Define the size and the layout of the **Custom View**: 
 
-	[![](standard-controls-images/content04.png "Editing the layout")](standard-controls-images/content04.png#lightbox)
-5. Control-click and drag from the source of the popup onto the **View Controller**: 
+    [![](standard-controls-images/content04.png "Editing the layout")](standard-controls-images/content04.png#lightbox)
+4. Control-click and drag from the source of the popup onto the **View Controller**: 
 
-	[![](standard-controls-images/content05.png "Dragging to create a segue")](standard-controls-images/content05.png#lightbox)
-6. Select **Popover** from the popup menu: 
+    [![](standard-controls-images/content05.png "Dragging to create a segue")](standard-controls-images/content05.png#lightbox)
+5. Select **Popover** from the popup menu: 
 
-	[![](standard-controls-images/content06.png "Setting the segue type")](standard-controls-images/content06.png#lightbox)
-7. Save your changes and return to Visual Studio for Mac to sync with Xcode.
+    [![](standard-controls-images/content06.png "Setting the segue type")](standard-controls-images/content06.png#lightbox)
+6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 <a name="Tab_Views" />
 
@@ -642,7 +642,7 @@ This article has taken a detailed look at working with the standard AppKit contr
 
 ## Related Links
 
-- [MacControls (sample)](https://developer.xamarin.com/samples/mac/MacControls/)
+- [MacControls (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccontrols)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Windows](~/mac/user-interface/window.md)
 - [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md)

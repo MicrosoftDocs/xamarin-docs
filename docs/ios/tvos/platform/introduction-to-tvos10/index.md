@@ -51,10 +51,10 @@ Additionally, `UIKit` has been modified to work in the new extended **sRGB** col
 
 Apple offers the following best practices when working with wide colors:
 
- - `UIColor` now uses the sRGB color space and will no longer clamp values to the `0.0` to `1.0` range. If the app relies on the previous clamp behavior, it will need to be modified for tvOS 10.
- - If the app performs custom rendering of `UIImages`, use the new [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) class to specify the use of the extended-range or standard-range formats.
- - When using a low-level API such as Core Graphics or Metal to provide image processing, the app should use an extended range color space and pixel format that supports 16-bit floating point values. Where necessary, the app will have to manually clamp color component values.
- - Core Graphics, Core Image and Metal Performance Shaders all provide new methods for converting between the two color spaces.
+- `UIColor` now uses the sRGB color space and will no longer clamp values to the `0.0` to `1.0` range. If the app relies on the previous clamp behavior, it will need to be modified for tvOS 10.
+- If the app performs custom rendering of `UIImages`, use the new [UIGraphicsImageRender](https://developer.apple.com/reference/uikit/uigraphicsimagerenderer) class to specify the use of the extended-range or standard-range formats.
+- When using a low-level API such as Core Graphics or Metal to provide image processing, the app should use an extended range color space and pixel format that supports 16-bit floating point values. Where necessary, the app will have to manually clamp color component values.
+- Core Graphics, Core Image and Metal Performance Shaders all provide new methods for converting between the two color spaces.
 
 To find out more, please see our [Introduction to Wide Color](~/ios/platform/wide-color.md) guide.
 
@@ -62,12 +62,12 @@ To find out more, please see our [Introduction to Wide Color](~/ios/platform/wid
 
 Several frameworks that were available on iOS (and not tvOS), have been made available for tvOS 10 such as:
 
- - ExternalAccessory
- - HomeKit
- - MultipeerConnectivity
- - Photos
- - ReplayKit
- - UserNotification
+- ExternalAccessory
+- HomeKit
+- MultipeerConnectivity
+- Photos
+- ReplayKit
+- UserNotification
 
 ## Additional Framework Changes
 
@@ -83,5 +83,5 @@ No APIs or frameworks were deprecated by tvOS 10. See Apple's [tvOS 10 API Diffe
 
 ## Related Links
 
-- [tvOS Samples](https://developer.xamarin.com/samples/tvos/all/)
+- [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
 - [What's new in tvOS 10](https://developer.apple.com/library/prerelease/content/releasenotes/General/WhatsNewinTVOS/Articles/tvOS10.html#//apple_ref/doc/uid/TP40017259-SW1)

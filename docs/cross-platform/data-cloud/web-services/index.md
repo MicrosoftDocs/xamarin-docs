@@ -63,10 +63,10 @@ For more information about the `HttpClient` class, see [Creating the HTTPClient 
 
 Calling web services with `HTTPWebRequest` involves:
 
--  Creating the request instance for a particular URI.
--  Setting various HTTP properties on the request instance.
--  Retrieving an  `HttpWebResponse` from the request.
--  Reading data out of the response.
+- Creating the request instance for a particular URI.
+- Setting various HTTP properties on the request instance.
+- Retrieving an  `HttpWebResponse` from the request.
+- Reading data out of the response.
 
 For example, the following code retrieves data from the U.S. National Library of Medicine web service:
 

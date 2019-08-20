@@ -109,7 +109,7 @@ Most modern macOS applications present auxiliary controls and options that affec
 
 [![](window-images/panel02.png "An example inspector")](window-images/panel02.png#lightbox)
 
-For more information, see the [Panels](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) and our [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) sample app for a full implementation of an **Inspector Interface** in a Xamarin.Mac app.
+For more information, see the [Panels](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowPanels.html#//apple_ref/doc/uid/20000957-CH42-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) and our [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) sample app for a full implementation of an **Inspector Interface** in a Xamarin.Mac app.
 
 <a name="Creating_and_Maintaining_Windows_in_Xcode" />
 
@@ -171,15 +171,15 @@ Do the following:
 2. Select the `NSWindowController` in the  Design Surface.
 3. Switch to the **Identity Inspector** view and enter `WindowController` as the **Class Name**: 
 
-	[![](window-images/windowcontroller01.png "Setting the class name")](window-images/windowcontroller01.png#lightbox)
+    [![](window-images/windowcontroller01.png "Setting the class name")](window-images/windowcontroller01.png#lightbox)
 4. Save your changes and return to Visual Studio for Mac to sync.
 5. A `WindowController.cs` file will be added to your Project in the **Solution Explorer** in Visual Studio for Mac: 
 
-	[![](window-images/windowcontroller02.png "Selecting the windows controller")](window-images/windowcontroller02.png#lightbox)
+    [![](window-images/windowcontroller02.png "Selecting the windows controller")](window-images/windowcontroller02.png#lightbox)
 6. Reopen the Storyboard in Xcode's Interface Builder.
 7. The `WindowController.h` file will be available for use: 
 
-	[![](window-images/windowcontroller03.png "Editing the WindowController.h file")](window-images/windowcontroller03.png#lightbox)
+    [![](window-images/windowcontroller03.png "Editing the WindowController.h file")](window-images/windowcontroller03.png#lightbox)
 
 <a name="Adding_UI_Elements" />
 
@@ -216,13 +216,13 @@ For more information about working with **Outlets** and **Actions**, please see 
 For any window that you create and work with in your Xamarin.Mac application, the process is basically the same as what we have just done above:
 
 1. For new windows that are not the default added automatically to your project, add a new window definition to the project. This will be discussed in detail below.
-2. Double-click the `Main.storyboard` file to open the window design for editing in Xcode's Interface Builder.
-3. Drag a new Window into the User Interface's design and hook the window into Main Window using _Segues_ (for more information see the [Segues](~/mac/platform/storyboards/indepth.md#Segues) section of our [Working with Storyboards](~/mac/platform/storyboards/indepth.md) documentation).
-3. Set any required window properties in the **Attribute Inspector** and the **Size Inspector**.
-4. Drag in the controls required to build your interface and configure them in the **Attribute Inspector**.
-5. Use the **Size Inspector** to handle the resizing for your UI Elements.
-6. Expose the window's UI elements to C# code via **Outlets** and **Actions**.
-7. Save your changes and switch back to Visual Studio for Mac to sync with Xcode.
+1. Double-click the `Main.storyboard` file to open the window design for editing in Xcode's Interface Builder.
+1. Drag a new Window into the User Interface's design and hook the window into Main Window using _Segues_ (for more information see the [Segues](~/mac/platform/storyboards/indepth.md#Segues) section of our [Working with Storyboards](~/mac/platform/storyboards/indepth.md) documentation).
+1. Set any required window properties in the **Attribute Inspector** and the **Size Inspector**.
+1. Drag in the controls required to build your interface and configure them in the **Attribute Inspector**.
+1. Use the **Size Inspector** to handle the resizing for your UI Elements.
+1. Expose the window's UI elements to C# code via **Outlets** and **Actions**.
+1. Save your changes and switch back to Visual Studio for Mac to sync with Xcode.
 
 Now that we have a basic window created, we'll look at the typical processes a Xamarin.Mac application does when working with windows. 
 
@@ -249,12 +249,12 @@ For our window, we'd like it to have a title of `untitled` when it first opens s
 ```csharp
 public override void ViewWillAppear ()
 {
-	base.ViewWillAppear ();
+    base.ViewWillAppear ();
 
-	// Set Window Title
-	this.View.Window.Title = "untitled";
+    // Set Window Title
+    this.View.Window.Title = "untitled";
 }
-```	
+```    
 
 > [!NOTE]
 > We are setting the value of the Window's `Title` property in the `ViewWillAppear` method instead of the `ViewDidLoad` method because, while the view might be loaded into memory, it is not yet fully instantiated. If we tried to access the `Title` property in the `ViewDidLoad` method we would get a `null` exception since the Window hasn't been constructed and wired-up to the property yet.
@@ -342,79 +342,79 @@ using Foundation;
 
 namespace SourceWriter
 {
-	public class EditorWindowDelegate : NSWindowDelegate
-	{
-		#region Computed Properties
-		public NSWindow Window { get; set;}
-		#endregion
+    public class EditorWindowDelegate : NSWindowDelegate
+    {
+        #region Computed Properties
+        public NSWindow Window { get; set;}
+        #endregion
 
-		#region constructors
-		public EditorWindowDelegate (NSWindow window)
-		{
-			// Initialize
-			this.Window = window;
+        #region constructors
+        public EditorWindowDelegate (NSWindow window)
+        {
+            // Initialize
+            this.Window = window;
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Override Methods
-		public override bool WindowShouldClose (Foundation.NSObject sender)
-		{
-			// is the window dirty?
-			if (Window.DocumentEdited) {
-				var alert = new NSAlert () {
-					AlertStyle = NSAlertStyle.Critical,
-					InformativeText = "Save changes to document before closing window?",
-					MessageText = "Save Document",
-				};
-				alert.AddButton ("Save");
-				alert.AddButton ("Lose Changes");
-				alert.AddButton ("Cancel");
-				var result = alert.RunSheetModal (Window);
+        #region Override Methods
+        public override bool WindowShouldClose (Foundation.NSObject sender)
+        {
+            // is the window dirty?
+            if (Window.DocumentEdited) {
+                var alert = new NSAlert () {
+                    AlertStyle = NSAlertStyle.Critical,
+                    InformativeText = "Save changes to document before closing window?",
+                    MessageText = "Save Document",
+                };
+                alert.AddButton ("Save");
+                alert.AddButton ("Lose Changes");
+                alert.AddButton ("Cancel");
+                var result = alert.RunSheetModal (Window);
 
-				// Take action based on result
-				switch (result) {
-				case 1000:
-					// Grab controller
-					var viewController = Window.ContentViewController as ViewController;
+                // Take action based on result
+                switch (result) {
+                case 1000:
+                    // Grab controller
+                    var viewController = Window.ContentViewController as ViewController;
 
-					// Already saved?
-					if (Window.RepresentedUrl != null) {
-						var path = Window.RepresentedUrl.Path;
+                    // Already saved?
+                    if (Window.RepresentedUrl != null) {
+                        var path = Window.RepresentedUrl.Path;
 
-						// Save changes to file
-						File.WriteAllText (path, viewController.Text);
-						return true;
-					} else {
-						var dlg = new NSSavePanel ();
-						dlg.Title = "Save Document";
-						dlg.BeginSheet (Window, (rslt) => {
-							// File selected?
-							if (rslt == 1) {
-								var path = dlg.Url.Path;
-								File.WriteAllText (path, viewController.Text);
-								Window.DocumentEdited = false;
-								viewController.View.Window.SetTitleWithRepresentedFilename (Path.GetFileName(path));
-								viewController.View.Window.RepresentedUrl = dlg.Url;
-								Window.Close();
-							}
-						});
-						return true;
-					}
-					return false;
-				case 1001:
-					// Lose Changes
-					return true;
-				case 1002:
-					// Cancel
-					return false;
-				}
-			}
+                        // Save changes to file
+                        File.WriteAllText (path, viewController.Text);
+                        return true;
+                    } else {
+                        var dlg = new NSSavePanel ();
+                        dlg.Title = "Save Document";
+                        dlg.BeginSheet (Window, (rslt) => {
+                            // File selected?
+                            if (rslt == 1) {
+                                var path = dlg.Url.Path;
+                                File.WriteAllText (path, viewController.Text);
+                                Window.DocumentEdited = false;
+                                viewController.View.Window.SetTitleWithRepresentedFilename (Path.GetFileName(path));
+                                viewController.View.Window.RepresentedUrl = dlg.Url;
+                                Window.Close();
+                            }
+                        });
+                        return true;
+                    }
+                    return false;
+                case 1001:
+                    // Lose Changes
+                    return true;
+                case 1002:
+                    // Cancel
+                    return false;
+                }
+            }
 
-			return true;
-		}
-		#endregion
-	}
+            return true;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -432,16 +432,16 @@ Finally, your Xamarin.Mac App should check to see if any of its Windows contain 
 ```csharp
 public override NSApplicationTerminateReply ApplicationShouldTerminate (NSApplication sender)
 {
-	// See if any window needs to be saved first
-	foreach (NSWindow window in NSApplication.SharedApplication.Windows) {
-		if (window.Delegate != null && !window.Delegate.WindowShouldClose (this)) {
-			// Did the window terminate the close?
-			return NSApplicationTerminateReply.Cancel;
-		}
-	}
+    // See if any window needs to be saved first
+    foreach (NSWindow window in NSApplication.SharedApplication.Windows) {
+        if (window.Delegate != null && !window.Delegate.WindowShouldClose (this)) {
+            // Did the window terminate the close?
+            return NSApplicationTerminateReply.Cancel;
+        }
+    }
 
-	// Allow normal termination
-	return NSApplicationTerminateReply.Now;
+    // Allow normal termination
+    return NSApplicationTerminateReply.Now;
 }
 ```
 
@@ -466,15 +466,15 @@ Next, add the following method:
 ```csharp
 [Export ("newDocument:")]
 void NewDocument (NSObject sender) {
-	// Get new window
-	var storyboard = NSStoryboard.FromName ("Main", null);
-	var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
+    // Get new window
+    var storyboard = NSStoryboard.FromName ("Main", null);
+    var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
 
-	// Display
-	controller.ShowWindow(this);
+    // Display
+    controller.ShowWindow(this);
 
-	// Set the title
-	controller.Window.Title = (++UntitledWindowCount == 1) ? "untitled" : string.Format ("untitled {0}", UntitledWindowCount);
+    // Set the title
+    controller.Window.Title = (++UntitledWindowCount == 1) ? "untitled" : string.Format ("untitled {0}", UntitledWindowCount);
 }
 ```
 
@@ -511,12 +511,12 @@ The `NSApplication.SharedApplication` maintains a `Windows` property that contai
 ```csharp
 // Is the file already open?
 for(int n=0; n<NSApplication.SharedApplication.Windows.Length; ++n) {
-	var content = NSApplication.SharedApplication.Windows[n].ContentViewController as ViewController;
-	if (content != null && path == content.FilePath) {
-		// Bring window to front
-		NSApplication.SharedApplication.Windows[n].MakeKeyAndOrderFront(this);
-		return true;
-	}
+    var content = NSApplication.SharedApplication.Windows[n].ContentViewController as ViewController;
+    if (content != null && path == content.FilePath) {
+        // Bring window to front
+        NSApplication.SharedApplication.Windows[n].MakeKeyAndOrderFront(this);
+        return true;
+    }
 }
 ```
 
@@ -561,11 +561,11 @@ Next, edit the custom Window Controller class and monitor the `DidResize` event 
 ```csharp
 public override void WindowDidLoad ()
 {
-	base.WindowDidLoad ();
+    base.WindowDidLoad ();
 
-	Window.DidResize += (sender, e) => {
-		// Do something as the window is being live resized
-	};
+    Window.DidResize += (sender, e) => {
+        // Do something as the window is being live resized
+    };
 }
 ```
 
@@ -574,12 +574,12 @@ Optionally, you can use the `DidEndLiveResize` event to only be notified after t
 ```csharp
 public override void WindowDidLoad ()
 {
-	base.WindowDidLoad ();
+    base.WindowDidLoad ();
 
-		Window.DidEndLiveResize += (sender, e) => {
-		// Do something after the user's finished resizing
-		// the window
-	};
+        Window.DidEndLiveResize += (sender, e) => {
+        // Do something after the user's finished resizing
+        // the window
+    };
 }
 ```
 
@@ -593,45 +593,45 @@ Let's edit our `ViewController.cs` file and make the following changes:
 
 ```csharp
 public bool DocumentEdited {
-	get { return View.Window.DocumentEdited; }
-	set { View.Window.DocumentEdited = value; }
+    get { return View.Window.DocumentEdited; }
+    set { View.Window.DocumentEdited = value; }
 }
 ...
 
 public override void ViewWillAppear ()
 {
-	base.ViewWillAppear ();
+    base.ViewWillAppear ();
 
-	// Set Window Title
-	this.View.Window.Title = "untitled";
+    // Set Window Title
+    this.View.Window.Title = "untitled";
 
-	View.Window.WillClose += (sender, e) => {
-		// is the window dirty?
-		if (DocumentEdited) {
-			var alert = new NSAlert () {
-				AlertStyle = NSAlertStyle.Critical,
-				InformativeText = "We need to give the user the ability to save the document here...",
-				MessageText = "Save Document",
-			};
-			alert.RunModal ();
-		}
-	};
+    View.Window.WillClose += (sender, e) => {
+        // is the window dirty?
+        if (DocumentEdited) {
+            var alert = new NSAlert () {
+                AlertStyle = NSAlertStyle.Critical,
+                InformativeText = "We need to give the user the ability to save the document here...",
+                MessageText = "Save Document",
+            };
+            alert.RunModal ();
+        }
+    };
 }
 
 public override void AwakeFromNib ()
 {
-	base.AwakeFromNib ();
+    base.AwakeFromNib ();
 
-	// Show when the document is edited
-	DocumentEditor.TextDidChange += (sender, e) => {
-		// Mark the document as dirty
-		DocumentEdited = true;
-	};
+    // Show when the document is edited
+    DocumentEditor.TextDidChange += (sender, e) => {
+        // Mark the document as dirty
+        DocumentEdited = true;
+    };
 
-	// Overriding this delegate is required to monitor the TextDidChange event
-	DocumentEditor.ShouldChangeTextInRanges += (NSTextView view, NSValue[] values, string[] replacements) => {
-		return true;
-	};
+    // Overriding this delegate is required to monitor the TextDidChange event
+    DocumentEditor.ShouldChangeTextInRanges += (NSTextView view, NSValue[] values, string[] replacements) => {
+        return true;
+    };
 
 }
 ```
@@ -654,32 +654,32 @@ Let's edit the `AppDelegate.cs` file and add the following method:
 [Export ("openDocument:")]
 void OpenDialog (NSObject sender)
 {
-	var dlg = NSOpenPanel.OpenPanel;
-	dlg.CanChooseFiles = true;
-	dlg.CanChooseDirectories = false;
+    var dlg = NSOpenPanel.OpenPanel;
+    dlg.CanChooseFiles = true;
+    dlg.CanChooseDirectories = false;
 
-	if (dlg.RunModal () == 1) {
-		// Nab the first file
-		var url = dlg.Urls [0];
+    if (dlg.RunModal () == 1) {
+        // Nab the first file
+        var url = dlg.Urls [0];
 
-		if (url != null) {
-			var path = url.Path;
+        if (url != null) {
+            var path = url.Path;
 
-			// Get new window
-			var storyboard = NSStoryboard.FromName ("Main", null);
-			var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
+            // Get new window
+            var storyboard = NSStoryboard.FromName ("Main", null);
+            var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
 
-			// Display
-			controller.ShowWindow(this);
+            // Display
+            controller.ShowWindow(this);
 
-			// Load the text into the window
-			var viewController = controller.Window.ContentViewController as ViewController;
-			viewController.Text = File.ReadAllText(path);
-					viewController.View.Window.SetTitleWithRepresentedFilename (Path.GetFileName(path));
-			viewController.View.Window.RepresentedUrl = url;
+            // Load the text into the window
+            var viewController = controller.Window.ContentViewController as ViewController;
+            viewController.Text = File.ReadAllText(path);
+                    viewController.View.Window.SetTitleWithRepresentedFilename (Path.GetFileName(path));
+            viewController.View.Window.RepresentedUrl = url;
 
-		}
-	}
+        }
+    }
 }
 ```
 
@@ -702,18 +702,18 @@ To add a new window, do the following:
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing in Xcode's Interface Builder.
 2. Drag a new **Window Controller** from the **Library** and drop it on the **Design Surface**:
 
-	[![](window-images/new01.png "Selecting a new Window Controller in the Library")](window-images/new01.png#lightbox)
+    [![](window-images/new01.png "Selecting a new Window Controller in the Library")](window-images/new01.png#lightbox)
 3. In the **Identity Inspector**, enter `PreferencesWindow` for the **Storyboard ID**: 
 
-	[![](window-images/new02.png "Setting the storyboard ID")](window-images/new02.png#lightbox)
-5. Design your interface: 
+    [![](window-images/new02.png "Setting the storyboard ID")](window-images/new02.png#lightbox)
+4. Design your interface: 
 
-	[![](window-images/new03.png "Designing the UI")](window-images/new03.png#lightbox)
-6. Open the App Menu (`MacWindows`), select **Preferences...**, Control-Click and drag to the new window: 
+    [![](window-images/new03.png "Designing the UI")](window-images/new03.png#lightbox)
+5. Open the App Menu (`MacWindows`), select **Preferences...**, Control-Click and drag to the new window: 
 
-	[![](window-images/new05.png "Creating a segue")](window-images/new05.png#lightbox)
-7. Select **Show** from the popup menu.
-6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
+    [![](window-images/new05.png "Creating a segue")](window-images/new05.png#lightbox)
+6. Select **Show** from the popup menu.
+7. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 If we run the code and select the **Preferences...** from the **Application Menu**, the window will be displayed:
 
@@ -729,7 +729,7 @@ Just like any other type of window that you create and work with in your Xamarin
 
 1. Add a new window definition to the project.
 2. Double-click the `.xib` file to open the window design for editing in Xcode's Interface Builder.
-2. Set any required window properties in the **Attribute Inspector** and the **Size Inspector**.
+3. Set any required window properties in the **Attribute Inspector** and the **Size Inspector**.
 4. Drag in the controls required to build your interface and configure them in the **Attribute Inspector**.
 5. Use the **Size Inspector** to handle the resizing for your UI Elements.
 6. Expose the window's UI elements to C# code via **Outlets** and **Actions**.
@@ -749,34 +749,34 @@ To add a new Panel, do the following:
 1. In the **Solution Explorer**, right-click on the Project and select **Add** > **New File..**.
 2. In the New File dialog box, select **Xamarin.Mac** > **Cocoa Window with Controller**:
 
-	[![](window-images/panels00.png "Adding a new window controller")](window-images/panels00.png#lightbox)
+    [![](window-images/panels00.png "Adding a new window controller")](window-images/panels00.png#lightbox)
 3. Enter `DocumentPanel` for the **Name** and click the **New** button.
 4. Double-click the `DocumentPanel.xib` file to open it for editing in Interface Builder: 
 
-	[![](window-images/new02.png "Editing the panel")](window-images/new02.png#lightbox)
+    [![](window-images/new02.png "Editing the panel")](window-images/new02.png#lightbox)
 5. Delete the existing Window and drag a Panel from the **Library Inspector** in the **Interface Editor**: 
 
-	[![](window-images/panels01.png "Deleting the existing window")](window-images/panels01.png#lightbox)
+    [![](window-images/panels01.png "Deleting the existing window")](window-images/panels01.png#lightbox)
 6. Hook the panel up to the **File's Owner** - **window** - **Outlet**: 
 
-	[![](window-images/panels02.png "Dragging to wire up the panel")](window-images/panels02.png#lightbox)
+    [![](window-images/panels02.png "Dragging to wire up the panel")](window-images/panels02.png#lightbox)
 7. Switch to the **Identity Inspector** and set the Panel's class to `DocumentPanel`: 
 
-	[![](window-images/panels03.png "Setting the panel's class")](window-images/panels03.png#lightbox)
-6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
-7. Edit the `DocumentPanel.cs` file and change the class definition to the following: 
+    [![](window-images/panels03.png "Setting the panel's class")](window-images/panels03.png#lightbox)
+8. Save your changes and return to Visual Studio for Mac to sync with Xcode.
+9. Edit the `DocumentPanel.cs` file and change the class definition to the following: 
 
-	`public partial class DocumentPanel : NSPanel`
-8. Save the changes to the file.
+    `public partial class DocumentPanel : NSPanel`
+10. Save the changes to the file.
 
 Edit the `AppDelegate.cs` file and make the `DidFinishLaunching` method look like the following:
 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
-		// Display panel
-	var panel = new DocumentPanelController ();
-	panel.Window.MakeKeyAndOrderFront (this);
+        // Display panel
+    var panel = new DocumentPanelController ();
+    panel.Window.MakeKeyAndOrderFront (this);
 }
 
 ```
@@ -786,7 +786,7 @@ If we run our application, the panel will be displayed:
 [![](window-images/panels04.png "The panel in a running app")](window-images/panels04.png#lightbox)
 
 > [!IMPORTANT]
-> Panel Windows have been deprecated by Apple and should be replaced with **Inspector Interfaces**. For a full example of creating an **Inspector** in a Xamarin.Mac app, please see our [MacInspector](https://developer.xamarin.com/samples/mac/MacInspector/) sample app.
+> Panel Windows have been deprecated by Apple and should be replaced with **Inspector Interfaces**. For a full example of creating an **Inspector** in a Xamarin.Mac app, please see our [MacInspector](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector) sample app.
 
 <a name="Summary" />
 
@@ -796,8 +796,8 @@ This article has taken a detailed look at working with Windows and Panels in a X
 
 ## Related Links
 
-- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
-- [MacInspector (sample)](https://developer.xamarin.com/samples/mac/MacInspector/)
+- [MacWindows (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
+- [MacInspector (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macinspector)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Menus](~/mac/user-interface/menu.md)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)

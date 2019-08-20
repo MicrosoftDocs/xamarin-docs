@@ -26,11 +26,11 @@ To resolve the issue, you can require the Internet permission in the
 Android Manifest. This can be done either through the manifest editor
 or the manifest's sourcecode:
 
--   Fix in Editor: In your Android project, go to **Properties ->
+- Fix in Editor: In your Android project, go to **Properties ->
     AndroidManifest.xml -> Required Permissions** and check
     **Internet**
 
--   Fix in Sourcecode: Open the AndroidManifest in a source editor and
+- Fix in Sourcecode: Open the AndroidManifest in a source editor and
     add the permission tag inside the `<Manifest>` tags:
 
     ```xml

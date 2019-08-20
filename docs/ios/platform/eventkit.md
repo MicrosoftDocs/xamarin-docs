@@ -22,8 +22,8 @@ stores. Access to the calendars and calendar events has been available since iOS
 
 In this guide we’re going to cover:
 
--   **EventKit Basics** – This will introduce the fundamental pieces of EventKit via the major classes and provides an understanding of their usage. This section is required reading before tackling the next part of the document. 
--   **Common Tasks** – The common tasks section is intended to be a quick reference on how to do common things such as; enumerating calendars, creating, saving and retrieving calendar events and reminders, as well as using the built-in controllers for creating and modifying calendar events. This section need not be read front-to-back, as it’s meant to be a reference for particular tasks. 
+- **EventKit Basics** – This will introduce the fundamental pieces of EventKit via the major classes and provides an understanding of their usage. This section is required reading before tackling the next part of the document. 
+- **Common Tasks** – The common tasks section is intended to be a quick reference on how to do common things such as; enumerating calendars, creating, saving and retrieving calendar events and reminders, as well as using the built-in controllers for creating and modifying calendar events. This section need not be read front-to-back, as it’s meant to be a reference for particular tasks. 
 
 
 All tasks in this guide are available in the companion sample
@@ -457,6 +457,6 @@ Apple’s [Calendar and Reminders Programming Guide](https://developer.apple.com
 
 ## Related Links
 
-- [Calendars (sample)](https://developer.xamarin.com/samples/monotouch/Calendars/)
+- [Calendars (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/calendars)
 - [Introduction to iOS 6](~/ios/platform/introduction-to-ios6/index.md)
 - [Introduction to Calendars and Reminders](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html)

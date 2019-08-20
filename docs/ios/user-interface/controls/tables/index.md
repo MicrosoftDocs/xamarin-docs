@@ -17,10 +17,10 @@ For those working on cross-platform applications with Xamarin.Android, the UITab
 
 These articles will take a comprehensive look at working with tables, including:
 
--   **Table parts** – Introducing and explaining the visual elements of the  `UITableView` control. 
--   **Displaying data in tables** – Demonstrating how to create and populate a table, use different table and cell styles and avoid memory issues by recycling cell objects. 
--   **Advanced usage** – Building custom cells and using the editing features of the UITableView class. 
--   **Creating a table visually** – Using the Xamarin Designer for iOS to create a table-driven interface with a Storyboard. 
+- **Table parts** – Introducing and explaining the visual elements of the  `UITableView` control. 
+- **Displaying data in tables** – Demonstrating how to create and populate a table, use different table and cell styles and avoid memory issues by recycling cell objects. 
+- **Advanced usage** – Building custom cells and using the editing features of the UITableView class. 
+- **Creating a table visually** – Using the Xamarin Designer for iOS to create a table-driven interface with a Storyboard. 
 
 ## Contents
 
@@ -40,8 +40,8 @@ These articles will take a comprehensive look at working with tables, including:
 
 ## Related Links
 
-- [WorkingWithTables (sample)](https://developer.xamarin.com/samples/monotouch/WorkingWithTables/)
-- [Tables in Storyboards (sample)](https://developer.xamarin.com/samples/monotouch/StoryboardTable/)
+- [WorkingWithTables (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/workingwithtables)
+- [Tables in Storyboards (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/storyboardtable)
 - [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md)
 - [Storyboard a TableView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/storyboard_a_tableview)
 - [Introduction to MonoTouch.Dialog](~/ios/user-interface/monotouch.dialog/index.md)

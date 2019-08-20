@@ -11,7 +11,7 @@ ms.date: 12/14/2018
 
 # Invoking Events from Effects
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)
 
 _An effect can define and invoke an event, signaling changes in the underlying native view. This article shows how to implement low-level multi-touch finger tracking, and how to generate events that signal touch activity._
 
@@ -35,7 +35,7 @@ In Android, the `View` class defines an overridable method named `OnTouchEvent` 
 
 In the Universal Windows Platform (UWP), the `UIElement` class defines events named `PointerPressed`, `PointerMoved`, and `PointerReleased`. These are described in the article [Handle Pointer Input article on MSDN](/windows/uwp/input-and-devices/handle-pointer-input/) and the API documentation for the [`UIElement`](/uwp/api/windows.ui.xaml.uielement/) class.
 
-The `Pointer` API in the Universal Windows Platform is intended to unify mouse, touch, and pen input. For that reason, the `PointerMoved` event is invoked when the mouse moves across an element even when a mouse button is not depressed. The `PointerRoutedEventArgs` object that accompanies these events has a property named `Pointer` that has a property named `IsInContact` which indicates if a mouse button is pressed or a finger is in contact with the screen.
+The `Pointer` API in the Universal Windows Platform is intended to unify mouse, touch, and pen input. For that reason, the `PointerMoved` event is invoked when the mouse moves across an element even when a mouse button is not pressed. The `PointerRoutedEventArgs` object that accompanies these events has a property named `Pointer` that has a property named `IsInContact` which indicates if a mouse button is pressed or a finger is in contact with the screen.
 
 In addition, the UWP defines two more events named `PointerEntered` and `PointerExited`. These indicate when a mouse or finger moves from one element to another. For example, consider two adjacent elements named A and B. Both elements have installed handlers for the pointer events. When a finger presses on A, the `PointerPressed` event is invoked. As the finger moves, A invokes `PointerMoved` events. If the finger moves from A to B, A invokes a `PointerExited` event and B invokes a `PointerEntered` event. If the finger is then released, B invokes a `PointerReleased` event.
 
@@ -47,7 +47,7 @@ For that reason, the touch-tracking effect described in this article implements 
 
 ## The Touch-Tracking Effect API
 
-The [**Touch Tracking Effect Demos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) sample contains the classes (and an enumeration) that implement the low-level touch-tracking. These types belong to the namespace `TouchTracking` and begin with the word `Touch`. The **TouchTrackingEffectDemos** .NET Standard library project includes the `TouchActionType` enumeration for the type of touch events:
+The [**Touch Tracking Effect Demos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) sample contains the classes (and an enumeration) that implement the low-level touch-tracking. These types belong to the namespace `TouchTracking` and begin with the word `Touch`. The **TouchTrackingEffectDemos** .NET Standard library project includes the `TouchActionType` enumeration for the type of touch events:
 
 ```csharp
 public enum TouchActionType
@@ -354,7 +354,7 @@ Much of the structure of this `TouchRecognizer` class is similar to the Android 
 
 ## Putting the Touch Effect to Work
 
-The [**TouchTrackingEffectDemos**](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/) program contains five pages that test the touch-tracking effect for common tasks.
+The [**TouchTrackingEffectDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/) program contains five pages that test the touch-tracking effect for common tasks.
 
 The **BoxView Dragging** page allows you to add `BoxView` elements to an `AbsoluteLayout` and then drag them around the screen. The [XAML file](https://github.com/xamarin/xamarin-forms-samples/blob/master/Effects/TouchTrackingEffectDemos/TouchTrackingEffectDemos/TouchTrackingEffectDemos/BoxViewDraggingPage.xaml) instantiates two `Button` views for adding `BoxView` elements to the `AbsoluteLayout` and clearing the `AbsoluteLayout`.
 
@@ -804,4 +804,4 @@ This article has demonstrated how to invoke events in an effect, and how to writ
 
 - [Multi-Touch Finger Tracking in iOS](~/ios/app-fundamentals/touch/touch-tracking.md)
 - [Multi-Touch Finger Tracking in Android](~/android/app-fundamentals/touch/touch-tracking.md)
-- [Touch Tracking Effect (sample)](https://developer.xamarin.com/samples/xamarin-forms/effects/TouchTrackingEffectDemos/)
+- [Touch Tracking Effect (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/effects-touchtrackingeffect/)

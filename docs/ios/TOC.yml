@@ -491,6 +491,8 @@
           href: ~/essentials/index.md?context=xamarin/ios
         - name: Get Started
           href: ~/essentials/get-started.md?context=xamarin/ios
+        - name: Platform & Feature Support
+          href: ~/essentials/platform-feature-support.md?context=xamarin/ios
         - name: Accelerometer
           href: ~/essentials/accelerometer.md?context=xamarin/ios
         - name: App Information
@@ -827,6 +829,8 @@
               href: troubleshooting/questions/exception-marshal-obj-c.md
             - name: "Runtime error– The assembly mscorlib.dll was not found or could not be loaded"
               href: troubleshooting/questions/error-mscorlib-not-found.md
+            - name: "Compile error– Can not encode offset X in resulting scattered relocation"
+              href: troubleshooting/questions/error-encode-offset-scattered-relocation.md
             - name: IPA file is 0 bytes
               href: troubleshooting/questions/ipa-zero-bytes.md
             - name: "IBTool Error– The operation couldn’t be completed."
@@ -912,6 +916,58 @@
               href: watchos/platform/quick-interaction-techniques.md
             - name: Workout App Enhancements
               href: watchos/platform/workout-apps.md
+        - name: Xamarin.Essentials for watchOS
+          items: 
+            - name: About Xamarin.Essentials
+              href: ~/essentials/index.md?context=xamarin/watchos
+            - name: Get Started
+              href: ~/essentials/get-started.md?context=xamarin/watchos
+            - name: Platform & Feature Support
+              href: ~/essentials/platform-feature-support.md?context=xamarin/watchos
+            - name: Accelerometer
+              href: ~/essentials/accelerometer.md?context=xamarin/watchos
+            - name: App Information
+              href: ~/essentials/app-information.md?context=xamarin/watchos
+            - name: Barometer
+              href: ~/essentials/barometer.md?context=xamarin/watchos
+            - name: Battery
+              href: ~/essentials/battery.md?context=xamarin/watchos
+            - name: Color Converters
+              href: ~/essentials/color-converters.md?context=xamarin/watchos
+            - name: Connectivity
+              href: ~/essentials/connectivity.md?context=xamarin/watchos
+            - name: Detect Shake
+              href: ~/essentials/detect-shake.md?context=xamarin/watchos
+            - name: Device Information
+              href: ~/essentials/device-information.md?context=xamarin/watchos
+            - name: File System Helpers
+              href: ~/essentials/file-system-helpers.md?context=xamarin/watchos
+            - name: Geocoding
+              href: ~/essentials/geocoding.md?context=xamarin/watchos
+            - name: Gyroscope
+              href: ~/essentials/gyroscope.md?context=xamarin/watchos
+            - name: Magnetometer
+              href: ~/essentials/magnetometer.md?context=xamarin/watchos
+            - name: Main Thread
+              href: ~/essentials/main-thread.md?context=xamarin/watchos
+            - name: Maps
+              href: ~/essentials/maps.md?context=xamarin/watchos
+            - name: Orientation Sensor
+              href: ~/essentials/orientation-sensor.md?context=xamarin/watchos
+            - name: Platform Extensions(Size, Rect, Point)
+              href: ~/essentials/platform-extensions.md?context=xamarin/watchos
+            - name: Preferences
+              href: ~/essentials/preferences.md?context=xamarin/watchos
+            - name: Secure Storage
+              href: ~/essentials/secure-storage.md?context=xamarin/watchos
+            - name: Text-to-Speech
+              href: ~/essentials/text-to-speech.md?context=xamarin/watchos
+            - name: Unit Converters
+              href: ~/essentials/unit-converters.md?context=xamarin/watchos
+            - name: Version Tracking
+              href: ~/essentials/version-tracking.md?context=xamarin/watchos
+            - name: Troubleshooting
+              href: ~/essentials/troubleshooting.md?context=xamarin/watchos
         - name: Deployment & Testing
           href: watchos/deploy-test/index.md
           items: 
@@ -963,6 +1019,42 @@
               href: tvos/platform/remote-bluetooth.md
             - name: User Interface Styles
               href: tvos/platform/user-interface-styles.md
+        - name: Xamarin.Essentials for tvOS
+          items: 
+            - name: About Xamarin.Essentials
+              href: ~/essentials/index.md?context=xamarin/tvos
+            - name: Get Started
+              href: ~/essentials/get-started.md?context=xamarin/tvos
+            - name: Platform & Feature Support
+              href: ~/essentials/platform-feature-support.md?context=xamarin/tvos
+            - name: App Information
+              href: ~/essentials/app-information.md?context=xamarin/tvos
+            - name: Color Converters
+              href: ~/essentials/color-converters.md?context=xamarin/tvos
+            - name: Connectivity
+              href: ~/essentials/connectivity.md?context=xamarin/tvos
+            - name: Device Information
+              href: ~/essentials/device-information.md?context=xamarin/tvos
+            - name: File System Helpers
+              href: ~/essentials/file-system-helpers.md?context=xamarin/tvos
+            - name: Geocoding
+              href: ~/essentials/geocoding.md?context=xamarin/tvos
+            - name: Main Thread
+              href: ~/essentials/main-thread.md?context=xamarin/tvos
+            - name: Platform Extensions(Size, Rect, Point)
+              href: ~/essentials/platform-extensions.md?context=xamarin/tvos
+            - name: Preferences
+              href: ~/essentials/preferences.md?context=xamarin/tvos
+            - name: Secure Storage
+              href: ~/essentials/secure-storage.md?context=xamarin/tvos
+            - name: Text-to-Speech
+              href: ~/essentials/text-to-speech.md?context=xamarin/tvos
+            - name: Unit Converters
+              href: ~/essentials/unit-converters.md?context=xamarin/tvos
+            - name: Version Tracking
+              href: ~/essentials/version-tracking.md?context=xamarin/tvos
+            - name: Troubleshooting
+              href: ~/essentials/troubleshooting.md?context=xamarin/tvos
         - name: User Interface
           href: tvos/user-interface/index.md
           items: 

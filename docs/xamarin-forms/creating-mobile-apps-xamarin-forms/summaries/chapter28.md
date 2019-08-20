@@ -61,7 +61,7 @@ The iOS implementation of `ILocationTracker` is a [`LocationTracker`](https://gi
 
 #### The Android location manager
 
-The Android implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) class that makes use of the Android [`LocationManager`](https://developer.xamarin.com/api/type/Android.Locations.LocationManager/) class.
+The Android implementation of `ILocationTracker` is a [`LocationTracker`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Platform/Xamarin.FormsBook.Platform.Android/LocationTracker.cs) class that makes use of the Android [`LocationManager`](xref:Android.Locations.LocationManager) class.
 
 #### The UWP geo locator
 

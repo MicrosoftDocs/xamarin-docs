@@ -18,7 +18,7 @@ Xamarin's Async support is built on the Mono 3.0 foundation and upgrades the API
 
 This document introduces the new async and await keywords then walks through some simple examples implementing asynchronous methods in Xamarin.iOS and Xamarin.Android.
 
-For a more complete discussion of the new asynchronous features of C# 5 (including lots of samples and different usage scenarios) refer to the MSDN documentation [Asynchronous Programming with Async and Await](https://msdn.microsoft.com/library/vstudio/hh191443.aspx).
+For a more complete discussion of the new asynchronous features of C# 5 (including lots of samples and different usage scenarios) refer to the article [Asynchronous programming](https://docs.microsoft.com/dotnet/csharp/async).
 
 The sample application makes a simple asynchronous web request (without blocking the main thread) then updates the UI with the downloaded html and character count.
 
@@ -64,7 +64,7 @@ Using await does not block the caller’s thread – rather control is returned 
 
 When the task completes, the method resumes executing at the same point in the code. This includes returning to the try scope of a try-catch-finally block (if one is present). await cannot be used in a catch or finally block.
 
-Read more about [await on MSDN](https://msdn.microsoft.com/library/vstudio/hh156528.aspx).
+Read more about [await](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/await) on Microsoft Docs.
 
 ## Exception Handling
 
@@ -80,11 +80,11 @@ Asynchronous methods that take a long time to complete should support cancellati
 
 The task then cancels itself and acknowledges the cancellation.
 
-For more information about cancellation, see [how to cancel an asynchronous task](https://msdn.microsoft.com/library/vstudio/jj155761.aspx) on MSDN.
+For more information about cancellation, see [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application).
 
 ## Example
 
-Download the [example Xamarin solution](https://developer.xamarin.com/samples/mobile/AsyncAwait/) (for both iOS and Android) to see a working example of `async` and `await` in mobile apps. The example code is discussed in more detail in this section.
+Download the [example Xamarin solution](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/) (for both iOS and Android) to see a working example of `async` and `await` in mobile apps. The example code is discussed in more detail in this section.
 
 ### Writing an async method
 
@@ -115,9 +115,9 @@ public async Task<int> DownloadHomepage()
 
 Note these points:
 
--  The method declaration includes the  `async` keyword.
--  The return type is  `Task<int>` so calling code can access the  `int` value that is calculated in this method.
--  The return statement is  `return exampleInt;` which is an integer object – the fact that the method returns  `Task<int>` is part of the language improvements.
+- The method declaration includes the  `async` keyword.
+- The return type is  `Task<int>` so calling code can access the  `int` value that is calculated in this method.
+- The return statement is  `return exampleInt;` which is an integer object – the fact that the method returns  `Task<int>` is part of the language improvements.
 
 
 ### Calling an async method 1
@@ -143,11 +143,11 @@ GetButton.Click += async (sender, e) => {
 
 Notes:
 
--  The anonymous delegate has the async keyword prefix.
--  The asynchronous method DownloadHomepage returns a Task <int> that is stored in the sizeTask variable.
--  The code awaits on the sizeTask variable.  *This* is the location that the method is suspended and control is returned to the calling code until the asynchronous task finishes on its own thread.
--  Execution does  *not* pause when the task is created on the first line of the method, despite the task being created there. The await keyword signifies the location where execution is paused.
--  When the asynchronous task finishes, intResult is set and execution continues on the original thread, from the await line.
+- The anonymous delegate has the async keyword prefix.
+- The asynchronous method DownloadHomepage returns a Task\<int> that is stored in the sizeTask variable.
+- The code awaits on the sizeTask variable.  *This* is the location that the method is suspended and control is returned to the calling code until the asynchronous task finishes on its own thread.
+- Execution does  *not* pause when the task is created on the first line of the method, despite the task being created there. The await keyword signifies the location where execution is paused.
+- When the asynchronous task finishes, intResult is set and execution continues on the original thread, from the await line.
 
 
 ### Calling an async method 2
@@ -176,9 +176,9 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 
 Some important points:
 
--  The method is marked as  `async` but returns  `void` . This is typically only done for event handlers (otherwise you’d return a  `Task` or  `Task<TResult>` ).
--  The code  `await` s on the  `DownloadHomepage` method directly on an assignment to a variable ( `intResult` ) unlike the previous example where we used an intermediate  `Task<int>` variable to reference the task.  *This* is the location where control is returned to the caller until the asynchronous method has completed on another thread.
--  When the asynchronous method completes and returns, execution resumes at the  `await` which means the integer result is returned and then rendered in a UI widget.
+- The method is marked as  `async` but returns  `void` . This is typically only done for event handlers (otherwise you’d return a  `Task` or  `Task<TResult>` ).
+- The code  `await` s on the  `DownloadHomepage` method directly on an assignment to a variable ( `intResult` ) unlike the previous example where we used an intermediate  `Task<int>` variable to reference the task.  *This* is the location where control is returned to the caller until the asynchronous method has completed on another thread.
+- When the asynchronous method completes and returns, execution resumes at the  `await` which means the integer result is returned and then rendered in a UI widget.
 
 
 ## Summary
@@ -191,15 +191,14 @@ This document has given an overview of the new language keywords and examples fo
 
 ## Related Links
 
-- [AsyncAwait (sample)](https://developer.xamarin.com/samples/mobile/AsyncAwait/)
+- [AsyncAwait (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/asyncawait/)
 - [Callbacks as our Generations' Go To Statement](https://tirania.org/blog/archive/2013/Aug-15.html)
-- [Data (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/Data/)
-- [HttpClient (iOS) (sample)](https://developer.xamarin.com/samples/monotouch/HttpClient/)
+- [Data (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/data/)
+- [HttpClient (iOS) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/httpclient/)
 - [MapKitSearch (iOS) (sample)](https://github.com/xamarin/monotouch-samples/tree/master/MapKitSearch)
-- [Webinar: C# Async on iOS and Android (video)](http://xamarin.wistia.com/medias/k27mc627xz)
-- [Asynchronous Programming with Async and Await (MSDN)](https://msdn.microsoft.com/library/vstudio/hh191443.aspx)
-- [Fine Tuning your Async application (MSDN)](https://msdn.microsoft.com/library/vstudio/jj155761.aspx)
-- [Await, and UI, and deadlocks! Oh my! (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2011/01/13/10115163.aspx)
-- [Processing tasks as they complete (MSDN)](http://blogs.msdn.com/b/pfxteam/archive/2012/08/02/processing-tasks-as-they-complete.aspx)
+- [Asynchronous programming](https://docs.microsoft.com/dotnet/csharp/async)
+- [Fine-Tuning Your Async Application (C#)](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/async/fine-tuning-your-async-application)
+- [Await, and UI, and deadlocks! Oh my!](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
+- [Processing tasks as they complete)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
 - [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx)
 - [Asynchrony in C# 5 (Eric Lippert's blog) – about the introduction of the keywords](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)

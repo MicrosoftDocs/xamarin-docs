@@ -23,10 +23,10 @@ Apple Pay is only available within iOS 8 and above, and therefore requires a min
 
 The following items are also required to integrate Apple Pay into your app:
 
- - Payment Processor Platform
- - Merchant Identifier
- - An Apple Pay certificate
- - Apple Pay entitlement
+- Payment Processor Platform
+- Merchant Identifier
+- An Apple Pay certificate
+- Apple Pay entitlement
 
 This document will look at these items in more detail.
 
@@ -65,15 +65,15 @@ Two options include:
 Configuring an app to use Apple Pay requires setup on the Apple Developer Portal and within your app. There are a number of steps that should be followed to successfully provision your app for Apple pay:
 
 1. Create a Merchant ID:
-	- Follow the steps [here](~/ios/deploy-test/provisioning/capabilities/apple-pay-capabilities.md#merchantid)
+    - Follow the steps [here](~/ios/deploy-test/provisioning/capabilities/apple-pay-capabilities.md#merchantid)
 2. Create an App ID with the Apply Pay capability and add the merchant to it:
-	- Follow the steps [here](~/ios/deploy-test/provisioning/capabilities/apple-pay-capabilities.md#appid)
+    - Follow the steps [here](~/ios/deploy-test/provisioning/capabilities/apple-pay-capabilities.md#appid)
 3. Generate a certificate for the Merchant ID:
-	- Follow the steps [here](~/ios/deploy-test/provisioning/capabilities/apple-pay-capabilities.md#certificate)
+    - Follow the steps [here](~/ios/deploy-test/provisioning/capabilities/apple-pay-capabilities.md#certificate)
 4. Generate a Provisioning Profile with the newly created App ID:
-	- Follow the steps [here](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning)
+    - Follow the steps [here](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning)
 5. Add Apple Pay entitlements:
-	- Select the Apple pay entitlement as detailed [here](~/ios/deploy-test/provisioning/entitlements.md), or manually add the key/value pair to the file from [here](~/ios/deploy-test/provisioning/entitlements.md)
+    - Select the Apple pay entitlement as detailed [here](~/ios/deploy-test/provisioning/entitlements.md), or manually add the key/value pair to the file from [here](~/ios/deploy-test/provisioning/entitlements.md)
 
 ## Working with Apple Pay
 
@@ -133,4 +133,4 @@ looked at how to create a Merchant ID, and how it is used within the **Entitleme
 - [Intro to PassKit](~/ios/platform/passkit.md)
 - [PassKit](https://developer.apple.com/library/ios/documentation/PassKit/Reference/PKPaymentAuthorizationViewController_Ref/)
 - [Apple Pay](https://developer.apple.com/apple-pay/)
-- [Emporium (sample)](https://developer.xamarin.com/samples/monotouch/ios9/Emporium/)
+- [Emporium (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios9-emporium)

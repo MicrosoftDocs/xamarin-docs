@@ -22,9 +22,9 @@ The Xamarin.iOS runtime gives developers access to the
 
 Xamarin strongly recommends that you use
 	the [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) for building applications for a few reasons:
--  The default TPL scheduler will delegate Task execution to the thread pool, which in turn will dynamically grow the number of threads needed as process takes place, while avoiding a scenario where too many threads end up competing for CPU time. 
--  It is easier to think about operations in terms of TPL Tasks. You can easily manipulate them, schedule them, serialize their execution or launch many in parallel with a rich set of APIs. 
--  It is the foundation for programming with the new C# async language extensions. 
+- The default TPL scheduler will delegate Task execution to the thread pool, which in turn will dynamically grow the number of threads needed as process takes place, while avoiding a scenario where too many threads end up competing for CPU time. 
+- It is easier to think about operations in terms of TPL Tasks. You can easily manipulate them, schedule them, serialize their execution or launch many in parallel with a rich set of APIs. 
+- It is the foundation for programming with the new C# async language extensions. 
 
 
 The thread pool will slowly grow the number of threads

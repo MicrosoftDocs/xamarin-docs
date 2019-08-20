@@ -42,11 +42,11 @@ This article assumes that you have some familiarity with Xcode and the Objective
 [Binding Objective-C](~/cross-platform/macios/binding/index.md)
 documentation. Additionally, the following is required to complete the steps presented:
 
--  **Xcode and iOS SDK** - Apple's Xcode and the latest iOS API need to be installed and configured on the developer's computer.
--  **[Xcode Command Line Tools](#Installing_the_Xcode_Command_Line_Tools)** - The Xcode Command Line Tools must be installed for the currently installed version of Xcode (see below for installation details).
--  **Visual Studio for Mac or Visual Studio** - The latest version of Visual Studio for Mac or Visual Studio should be installed and configured on the development computer. An Apple Mac is required for developing a Xamarin.iOS application, and when using Visual Studio you must be connected to [a Xamarin.iOS build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
--  **The latest version of Objective Sharpie** - A current copy of the Objective Sharpie tool
-	downloaded from [here](~/cross-platform/macios/binding/objective-sharpie/get-started.md). If you already have Objective Sharpie installed, you can update it to the latest version by using the `sharpie update`
+- **Xcode and iOS SDK** - Apple's Xcode and the latest iOS API need to be installed and configured on the developer's computer.
+- **[Xcode Command Line Tools](#Installing_the_Xcode_Command_Line_Tools)** - The Xcode Command Line Tools must be installed for the currently installed version of Xcode (see below for installation details).
+- **Visual Studio for Mac or Visual Studio** - The latest version of Visual Studio for Mac or Visual Studio should be installed and configured on the development computer. An Apple Mac is required for developing a Xamarin.iOS application, and when using Visual Studio you must be connected to [a Xamarin.iOS build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)
+- **The latest version of Objective Sharpie** - A current copy of the Objective Sharpie tool
+  downloaded from [here](~/cross-platform/macios/binding/objective-sharpie/get-started.md). If you already have Objective Sharpie installed, you can update it to the latest version by using the `sharpie update`
 
 <a name="Installing_the_Xcode_Command_Line_Tools"/>
 
@@ -72,18 +72,18 @@ You'll need to use one of the following methods to install the tools:
 
 - **Install Xcode** - When you install Xcode, it comes bundled with all your command-line tools. In OS X 10.9  shims (installed in `/usr/bin`), can map any tool included in `/usr/bin` to the corresponding tool inside Xcode. For example, the `xcrun` command, which allows you to find or run any tool inside Xcode from the command line.
 - **The Terminal Application** - From the Terminal application, you can install the command line tools by running the `xcode-select --install` command:
-	- Start the Terminal Application.
-	- Type `xcode-select --install` and press **Enter**, for example:
+  - Start the Terminal Application.
+  - Type `xcode-select --install` and press **Enter**, for example:
 
-	```bash
-	Europa:~ kmullins$ xcode-select --install
-	```
+  ```bash
+  Europa:~ kmullins$ xcode-select --install
+  ```
 
-	- You'll be asked to install the command line tools, click the **Install** button:
-		[![](walkthrough-images/xcode01.png "Installing the command line tools")](walkthrough-images/xcode01.png#lightbox)
+  - You'll be asked to install the command line tools, click the **Install** button:
+    [![](walkthrough-images/xcode01.png "Installing the command line tools")](walkthrough-images/xcode01.png#lightbox)
 
-	- The tools will be downloaded and installed from Apple's servers:
-		[![](walkthrough-images/xcode02.png "Downloading the tools")](walkthrough-images/xcode02.png#lightbox)
+  - The tools will be downloaded and installed from Apple's servers:
+    [![](walkthrough-images/xcode02.png "Downloading the tools")](walkthrough-images/xcode02.png#lightbox)
 
 - **Downloads for Apple Developers** - The Command Line Tools package is available the [Downloads for Apple Developers](https://developer.apple.com/downloads/index.action) web page. Log in with your Apple ID, then search for and download the Command Line Tools:
 [![](walkthrough-images/xcode03.png "Finding the Command Line Tools")](walkthrough-images/xcode03.png#lightbox)
@@ -126,48 +126,48 @@ The first step is for us to add the InfoColorPicker source code into the Static 
 1. Start Xcode.
 2. From the **File** menu select **New** > **Project...**:
 
-	[![](walkthrough-images/image04.png "Starting a new project")](walkthrough-images/image04.png#lightbox)
+    [![](walkthrough-images/image04.png "Starting a new project")](walkthrough-images/image04.png#lightbox)
 3. Select **Framework & Library**, the **Cocoa Touch Static Library** template and click the **Next** button:
 
-	[![](walkthrough-images/image05.png "Select the Cocoa Touch Static Library template")](walkthrough-images/image05.png#lightbox)
+    [![](walkthrough-images/image05.png "Select the Cocoa Touch Static Library template")](walkthrough-images/image05.png#lightbox)
 
 4. Enter `InfColorPicker` for the **Project Name** and click the **Next** button:
 
-	[![](walkthrough-images/image06.png "Enter InfColorPicker for the Project Name")](walkthrough-images/image06.png#lightbox)
+    [![](walkthrough-images/image06.png "Enter InfColorPicker for the Project Name")](walkthrough-images/image06.png#lightbox)
 5. Select a location to save the project and click the **OK** button.
 6. Now we need to add the source from the InfColorPicker project to our static library project. Because the **InfColorPicker.h** file already exists in our static library (by default), Xcode will not allow us to overwrite it. From the **Finder**, navigate to the InfColorPicker source code in the original project that we unzipped from GitHub, copy all of the InfColorPicker files and paste them into our new static library project:
 
-	[![](walkthrough-images/image12.png "Copy all of the InfColorPicker files")](walkthrough-images/image12.png#lightbox)
+    [![](walkthrough-images/image12.png "Copy all of the InfColorPicker files")](walkthrough-images/image12.png#lightbox)
 
 7. Return to Xcode, right click on the **InfColorPicker** folder and select **Add files to "InfColorPicker..."**:
 
-	[![](walkthrough-images/image08.png "Adding files")](walkthrough-images/image08.png#lightbox)
+    [![](walkthrough-images/image08.png "Adding files")](walkthrough-images/image08.png#lightbox)
 
 8. From the Add Files dialog box, navigate to the InfColorPicker source code files that we just copied, select them all and click the **Add** button:
 
-	[![](walkthrough-images/image09.png "Select all and click the Add button")](walkthrough-images/image09.png#lightbox)
+    [![](walkthrough-images/image09.png "Select all and click the Add button")](walkthrough-images/image09.png#lightbox)
 
 9. The source code will be copied into our project:
 
-	[![](walkthrough-images/image10.png "The source code will be copied into the project")](walkthrough-images/image10.png#lightbox)
+    [![](walkthrough-images/image10.png "The source code will be copied into the project")](walkthrough-images/image10.png#lightbox)
 
 10. From the Xcode Project Navigator, select the **InfColorPicker.m** file and comment out the last two lines (because of the way this library was written, this file is not used):
 
-	[![](walkthrough-images/image14.png "Editing the InfColorPicker.m file")](walkthrough-images/image14.png#lightbox)
+    [![](walkthrough-images/image14.png "Editing the InfColorPicker.m file")](walkthrough-images/image14.png#lightbox)
 
 11. We now need to check if there are any Frameworks required by the library. You can find this information either in the README, or by opening one of the sample projects provided. This example uses `Foundation.framework`, `UIKit.framework`, and `CoreGraphics.framework` so let's add them.
 
 12. Select the **InfColorPicker target > Build Phases** and expand the **Link Binary With Libraries** section:
 
-	[![](walkthrough-images/image16b.png "Expand the Link Binary With Libraries section")](walkthrough-images/image16b.png#lightbox)
+    [![](walkthrough-images/image16b.png "Expand the Link Binary With Libraries section")](walkthrough-images/image16b.png#lightbox)
 
 13. Use the **+** button to open the dialog allowing you to add the required frames frameworks listed above:
 
-	[![](walkthrough-images/image16c.png "Add the required frames frameworks listed above")](walkthrough-images/image16c.png#lightbox)
+    [![](walkthrough-images/image16c.png "Add the required frames frameworks listed above")](walkthrough-images/image16c.png#lightbox)
 
 14. The **Link Binary With Libraries** section should now look like the image below:
 
-	[![](walkthrough-images/image16d.png "The Link Binary With Libraries section")](walkthrough-images/image16d.png#lightbox)
+    [![](walkthrough-images/image16d.png "The Link Binary With Libraries section")](walkthrough-images/image16d.png#lightbox)
 
 At this point we're close, but we're not quite done. The static library has been created, but we need to build it to create a Fat binary that includes all of the required architectures for both iOS device and iOS simulator.
 
@@ -187,7 +187,8 @@ While these three steps are rather straightforward, it may be necessary to repea
 
 There are many tools available to automate such tasks - a shell script, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), and [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). When the Xcode Command Line tools are installed, `make` is also installed, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for any library:
 
-```bash
+<!--markdownlint-disable MD010 -->
+```makefile
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=./YOUR-PROJECT-NAME
 PROJECT=$(PROJECT_ROOT)/YOUR-PROJECT-NAME.xcodeproj
@@ -213,6 +214,7 @@ lib$(TARGET).a: lib$(TARGET)-i386.a lib$(TARGET)-armv7.a lib$(TARGET)-arm64.a
 clean:
 	-rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 Enter the **Makefile** commands in the plain text editor of your choosing, and update the sections with **YOUR-PROJECT-NAME** with the name of your project. It is also important to ensure that you paste the instructions above exactly, with the tabs within the instructions preserved.
 
@@ -255,17 +257,17 @@ Let's do the following:
 1. Start Visual Studio for Mac.
 1. From the **File** menu, select **New** > **Solution...**:
 
-	![](walkthrough-images/bind01.png "Starting a new solution")
+    ![](walkthrough-images/bind01.png "Starting a new solution")
 
 1. From the New Solution dialog box, select **Library** > **iOS Binding Project**:
 
-	![](walkthrough-images/bind02.png "Select iOS Binding Project")
+    ![](walkthrough-images/bind02.png "Select iOS Binding Project")
 
 1. Click the **Next** button.
 
 1. Enter "InfColorPickerBinding" as the **Project Name** and click the **Create** button to create the solution:
 
-	![](walkthrough-images/bind02a.png "Enter InfColorPickerBinding as the Project Name")
+    ![](walkthrough-images/bind02a.png "Enter InfColorPickerBinding as the Project Name")
 
 The solution will be created and two default files will be included:
 
@@ -308,14 +310,14 @@ Follow these steps to add the library:
 
 1. Right-click on the **Native References** folder in the Solution Pad and select **Add Native References**:
 
-	![](walkthrough-images/bind04a.png "Add Native References")
+    ![](walkthrough-images/bind04a.png "Add Native References")
 
 1. Navigate to the Fat Binary we made earlier (`libInfColorPickerSDK.a`) and press the **Open** button:
 
-	![](walkthrough-images/bind05.png "Select the libInfColorPickerSDK.a file")
+    ![](walkthrough-images/bind05.png "Select the libInfColorPickerSDK.a file")
 1. The file will be included in the project:
 
-	![](walkthrough-images/bind04.png "Including a file")
+    ![](walkthrough-images/bind04.png "Including a file")
 
 # [Visual Studio](#tab/windows)
 
@@ -323,11 +325,11 @@ Follow these steps to add the library:
 
 1. Right-click on the project and choose **Add > Existing Item...**:
 
-	![](walkthrough-images/bind04vs.png "Adding an existing file")
+    ![](walkthrough-images/bind04vs.png "Adding an existing file")
 
 1. Navigate to the `libInfColorPickerSDK.a` and press the **Add** button:
 
-	![](walkthrough-images/bind05vs.png "Adding libInfColorPickerSDK.a")
+    ![](walkthrough-images/bind05vs.png "Adding libInfColorPickerSDK.a")
 
 1. The file will be included in the project.
 
@@ -525,21 +527,21 @@ Follow these steps to create a sample iPhone application to use the iOS Binding 
 
 1. **Create Xamarin.iOS Project** - Add a new Xamarin.iOS project called **InfColorPickerSample** to the solution, as shown in the following screenshots:
 
-	![](walkthrough-images/use01.png "Adding a Single View App")
+    ![](walkthrough-images/use01.png "Adding a Single View App")
 
-	![](walkthrough-images/use01a.png "Setting the Identifier")
+    ![](walkthrough-images/use01a.png "Setting the Identifier")
 
 1. **Add Reference to the Binding Project** - Update the **InfColorPickerSample** project so that it has a reference to the **InfColorPickerBinding** project:
 
-	![](walkthrough-images/use02.png "Adding Reference to the Binding Project")
+    ![](walkthrough-images/use02.png "Adding Reference to the Binding Project")
 
 1. **Create the iPhone User Interface** - Double click on the **MainStoryboard.storyboard** file in the **InfColorPickerSample** project to edit it in the iOS Designer. Add a **Button** to the view and call it `ChangeColorButton`, as shown in the following:
 
-	![](walkthrough-images/use03.png "Adding a Button to the view")
+    ![](walkthrough-images/use03.png "Adding a Button to the view")
 
 1. **Add the InfColorPickerView.xib** - The InfColorPicker Objective-C library includes a **.xib** file. Xamarin.iOS will not include this **.xib** in the binding project, which will cause run-time errors in our sample application. The workaround for this is to add the **.xib** file to our Xamarin.iOS project. Select the Xamarin.iOS project, right-click and select **Add > Add Files**, and add the **.xib** file as shown in the following screenshot:
 
-	![](walkthrough-images/use04.png "Add the InfColorPickerView.xib")
+    ![](walkthrough-images/use04.png "Add the InfColorPickerView.xib")
 
 1. When asked, copy the **.xib** file into the project.
 
@@ -553,11 +555,11 @@ Follow these steps to create a sample iPhone application to use the iOS Binding 
 
 1. **Add Reference to the Binding Project** - Update the **InfColorPickerSample** project so that it has a reference to the **InfColorPickerBinding** project:
 
-	![](walkthrough-images/use02vs.png "Add Reference to the Binding Project")
+    ![](walkthrough-images/use02vs.png "Add Reference to the Binding Project")
 
 1. **Create the iPhone User Interface** - Double click on the **MainStoryboard.storyboard** file in the **InfColorPickerSample** project to edit it in the iOS Designer. Add a **Button** to the view and call it `ChangeColorButton`, as shown in the following:
 
-	![](walkthrough-images/use03vs.png "Create the iPhone User Interface")
+    ![](walkthrough-images/use03vs.png "Create the iPhone User Interface")
 
 1. **Add the InfColorPickerView.xib** - The InfColorPicker Objective-C library includes a **.xib** file. Xamarin.iOS will not include this **.xib** in the binding project, which will cause run-time errors in our sample application. The workaround for this is to add the **.xib** file to our Xamarin.iOS project from our **Mac Build Host**. Select the Xamarin.iOS project, right-click and select **Add** > **Existing Item...**, and add the **.xib** file.
 
@@ -623,21 +625,21 @@ using UIKit;
 
 namespace InfColorPickerSample
 {
-	public class ColorSelectedDelegate:InfColorPickerControllerDelegate
-	{
-		readonly UIViewController parent;
+  public class ColorSelectedDelegate:InfColorPickerControllerDelegate
+  {
+    readonly UIViewController parent;
 
-		public ColorSelectedDelegate (UIViewController parent)
-		{
-			this.parent = parent;
-		}
+    public ColorSelectedDelegate (UIViewController parent)
+    {
+      this.parent = parent;
+    }
 
-		public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
-		{
-			parent.View.BackgroundColor = controller.ResultColor;
-			parent.DismissViewController (false, null);
-		}
-	}
+    public override void ColorPickerControllerDidFinish (InfColorPickerController controller)
+    {
+      parent.View.BackgroundColor = controller.ResultColor;
+      parent.DismissViewController (false, null);
+    }
+  }
 }
 ```
 
@@ -654,9 +656,9 @@ ColorSelectedDelegate selector;
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
-	ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
-	selector = new ColorSelectedDelegate (this);
+  base.ViewDidLoad ();
+  ChangeColorButton.TouchUpInside += HandleTouchUpInsideWithStrongDelegate;
+  selector = new ColorSelectedDelegate (this);
 }
 ```
 **Implement the method HandleTouchUpInsideWithStrongDelegate** - Next implement the event handler for when the user touches **ColorChangeButton**. Edit `ViewController`, and add the following method:
@@ -729,7 +731,7 @@ This article walked through the process of creating and using a Xamarin.iOS bind
 
 ## Related Links
 
-- [Binding Example (sample)](https://developer.xamarin.com/samples/monotouch/InfColorPicker/)
+- [Binding Example (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/infcolorpicker)
 - [Binding Objective-C Libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Binding Details](~/cross-platform/macios/binding/overview.md)
 - [Binding Types Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)

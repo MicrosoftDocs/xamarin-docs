@@ -46,15 +46,15 @@ The next section will describe how to get set up with a Distribution Certificate
 3. Click the **+** button to create a new Certificate.
 4. Under the *Production* heading, select **In-House and Ad Hoc**, or **App Store and Ad Hoc**, depending on your program membership:
 
-  [![](ad-hoc-distribution-images/cert-first-small.png "Select In-House and Ad Hoc, or App Store and Ad Hoc")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
+   [![](ad-hoc-distribution-images/cert-first-small.png "Select In-House and Ad Hoc, or App Store and Ad Hoc")](ad-hoc-distribution-images/cert-first-large.png#lightbox)
 
 5. Click Continue, and follow the instructions to create a Certificate Signing Request via Keychain Access:
 
-  [![](ad-hoc-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
+   [![](ad-hoc-distribution-images/createcertmanually02.png "Create a Certificate Signing Request via Keychain Access")](ad-hoc-distribution-images/createcertmanually02.png#lightbox)
 
 6. Once you have created the CSR as instructed, click Continue, and upload the CSR to the Member Center:
 
-  [![](ad-hoc-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
+   [![](ad-hoc-distribution-images/createcertmanually03.png "Upload the CSR to the Member Center")](ad-hoc-distribution-images/createcertmanually03.png#lightbox)
 
 7. Click Generate to create a certificate.
 8. Finally, Download the completed certificate and double-click on the file to install it.
@@ -62,11 +62,11 @@ The next section will describe how to get set up with a Distribution Certificate
 
 Alternatively, it is possible to request a Certificate via the Preferences dialog in Xcode. To do this, follow the steps below:
 
-1.   Select your team, and click **Manage Certificates…**:
-	[![](ad-hoc-distribution-images/selectteam.png "Selecting the team")](ad-hoc-distribution-images/selectteam.png#lightbox)
+1. Select your team, and click **Manage Certificates…**:
+    [![](ad-hoc-distribution-images/selectteam.png "Selecting the team")](ad-hoc-distribution-images/selectteam.png#lightbox)
 
-2.   Next, click the **plus (+)** button and select **iOS App Store**:
-	[![](ad-hoc-distribution-images/selectcert.png "Selecting iOS App Store")](ad-hoc-distribution-images/selectcert.png#lightbox)
+2. Next, click the **plus (+)** button and select **iOS App Store**:
+    [![](ad-hoc-distribution-images/selectcert.png "Selecting iOS App Store")](ad-hoc-distribution-images/selectcert.png#lightbox)
 
 <a name="createprofile" />
 
@@ -89,25 +89,25 @@ As with any other Provisioning Profile you create, an App ID will be required to
 Once you have the required components needed for creating a Distribution Profile, follow the steps below to create it:
 
 1. Return to the Apple Provisioning Portal and select **Provisioning > Distribution**:
-	[![](ad-hoc-distribution-images/distribute01.png "Select Provisioning > Distribution")](ad-hoc-distribution-images/distribute01.png#lightbox)
+    [![](ad-hoc-distribution-images/distribute01.png "Select Provisioning > Distribution")](ad-hoc-distribution-images/distribute01.png#lightbox)
 
 2. Click the **+** button and select the type of Distribution Profile that you want to create as **Ad-Hoc**:
 
-	[![](ad-hoc-distribution-images/distribute02.png "Create an Ad-Hoc Distribution type")](ad-hoc-distribution-images/distribute02.png#lightbox)
+    [![](ad-hoc-distribution-images/distribute02.png "Create an Ad-Hoc Distribution type")](ad-hoc-distribution-images/distribute02.png#lightbox)
 
 3. Click the **Continue** button and select App ID from the dropdown list that you want to create a Distribution Profile for:
 
-	[![](ad-hoc-distribution-images/distribute03.png "Select App ID from the dropdown list")](ad-hoc-distribution-images/distribute03.png#lightbox)
+    [![](ad-hoc-distribution-images/distribute03.png "Select App ID from the dropdown list")](ad-hoc-distribution-images/distribute03.png#lightbox)
 
 4. Click the **Continue** button and select distribution certificate required to sign the application:
 
-	[![](ad-hoc-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](ad-hoc-distribution-images/distribute04.png#lightbox)
+    [![](ad-hoc-distribution-images/distribute04.png "Select distribution certificate required to sign the application")](ad-hoc-distribution-images/distribute04.png#lightbox)
 
-6. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
+5. Click the **Continue** button and enter a **Name** for the new Distribution Profile:
 
-	[![](ad-hoc-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](ad-hoc-distribution-images/distribute06.png#lightbox)
+    [![](ad-hoc-distribution-images/distribute06.png "Enter a Name for the new Distribution Profile")](ad-hoc-distribution-images/distribute06.png#lightbox)
 
-7. Click the **Generate** button to create the new profile and finalize the process.
+6. Click the **Generate** button to create the new profile and finalize the process.
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -132,13 +132,13 @@ When you are ready to do a final build of a Xamarin.iOS application, select the 
 1. Double-click the project name in the **Solution Explorer** to open it for edit.
 2. Select **iOS Bundle Signing** and the type of build from the **Configuration** dropdown:
 
-	![](ad-hoc-distribution-images/releasexs01.png "Select the type of build from the Configuration dropdown")
+    ![](ad-hoc-distribution-images/releasexs01.png "Select the type of build from the Configuration dropdown")
 3. In most cases, the **Signing Identity** and the **Provisioning Profile** can be left as a default values of **Automatic** and Visual Studio for Mac will choose the correct profile, based on the Bundle Identifier in the Info.plist:
 
-	![](ad-hoc-distribution-images/releasexs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
+    ![](ad-hoc-distribution-images/releasexs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
 4. If required, select the Signing Identity and Distribution Profile (the one created above) from the drop-downs:
 
-	![](ad-hoc-distribution-images/releasexs03.png "Select the Signing Identity and Distribution Profile")
+    ![](ad-hoc-distribution-images/releasexs03.png "Select the Signing Identity and Distribution Profile")
 5. Click the **OK** button to save the changes.
 
 # [Visual Studio](#tab/windows)
@@ -147,13 +147,13 @@ When you are ready to do a final build of a Xamarin.iOS application, select the 
 1. Right-click the project name in the **Solution Explorer** and select **Properties** to open it for edit.
 2. Select **iOS Bundle Signing** and the type of build from the **Configuration** dropdown:
 
-	![](ad-hoc-distribution-images/releasevs01.png "Select the type of build from the Configuration dropdown")
+    ![](ad-hoc-distribution-images/releasevs01.png "Select the type of build from the Configuration dropdown")
 3. In most cases, the **Signing Identity** and the **Provisioning Profile** can be left as a default values of **Automatic** and Visual Studio will choose the correct profile, based on the Bundle Identifier in the Info.plist:
 
-	![](ad-hoc-distribution-images/releasevs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
+    ![](ad-hoc-distribution-images/releasevs02.png "The Signing Identity and the Provisioning Profile set to the default values of Automatic")
 4. If required, select the Signing Identity and Distribution Profile (the one created above) from the drop-downs:
 
-	![](ad-hoc-distribution-images/releasevs03.png "Select the Signing Identity and Distribution Profile")
+    ![](ad-hoc-distribution-images/releasevs03.png "Select the Signing Identity and Distribution Profile")
 5. Save the changes to the project's Properties.
 
 -----

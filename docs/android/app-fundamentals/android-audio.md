@@ -24,19 +24,19 @@ have become a first-class feature in mobile APIs.
 Android provides extensive support for multimedia. This article
 examines working with audio in Android, and covers the following topics
 
-1.  **Playing Audio with MediaPlayer** &ndash; Using the built-in
+1. **Playing Audio with MediaPlayer** &ndash; Using the built-in
     `MediaPlayer` class to play audio, including local audio files and
     streamed audio files with the `AudioTrack` class.
 
-2.  **Recording Audio** &ndash; Using the built-in `MediaRecorder`
+2. **Recording Audio** &ndash; Using the built-in `MediaRecorder`
     class to record audio.
 
-3.  **Working with Audio Notifications** &ndash; Using audio
+3. **Working with Audio Notifications** &ndash; Using audio
     notifications to create well-behaved applications that respond
     correctly to events (such as incoming phone calls) by suspending or
     canceling their audio outputs.
 
-4.  **Working with Low-Level Audio** &ndash; Playing audio using the
+4. **Working with Low-Level Audio** &ndash; Playing audio using the
     `AudioTrack` class by writing directly to memory buffers. Recording
     audio using the `AudioRecord` class and reading directly from
     memory buffers.
@@ -56,7 +56,7 @@ It is necessary to request the `RECORD_AUDIO` permissions in **AndroidManifest.X
 ## Playing Audio with the MediaPlayer Class
 
 The simplest way to play audio in Android is with the built-in
-[MediaPlayer](https://developer.xamarin.com/api/type/Android.Media.MediaPlayer/) class.
+[MediaPlayer](xref:Android.Media.MediaPlayer) class.
 `MediaPlayer` can play either local or remote files by passing in the
 file path. However, `MediaPlayer` is very state-sensitive and calling
 one of its methods in the wrong state will cause an exception to be
@@ -70,18 +70,18 @@ described below to avoid errors.
 Playing audio with `MediaPlayer` requires the following sequence:
 
 1. Instantiate a new
-   [MediaPlayer](https://developer.xamarin.com/api/type/Android.Media.MediaPlayer/) object.
+   [MediaPlayer](xref:Android.Media.MediaPlayer) object.
 
 1. Configure the file to play via the
-   [SetDataSource](https://developer.xamarin.com/api/member/Android.Media.MediaPlayer.SetDataSource/p/Java.IO.FileDescriptor/)
+   [SetDataSource](xref:Android.Media.MediaPlayer.SetDataSource*)
    method.
 
 1. Call the
-   [Prepare](https://developer.xamarin.com/api/member/Android.Media.MediaPlayer.Prepare/) method to
+   [Prepare](xref:Android.Media.MediaPlayer.Prepare) method to
    initialize the player.
 
 1. Call the
-   [Start](https://developer.xamarin.com/api/member/Android.Media.MediaPlayer.Start/) method to
+   [Start](xref:Android.Media.MediaPlayer.Start) method to
    start the audio playing.
 
 
@@ -106,14 +106,14 @@ public void StartPlayer(String  filePath)
 ### Suspending and Resuming Playback
 
 The playback can be suspended by calling the
-[Pause](https://developer.xamarin.com/api/member/Android.Media.MediaPlayer.Pause%28%29/) method:
+[Pause](xref:Android.Media.MediaPlayer.Pause) method:
 
 ```csharp
 player.Pause();
 ```
 
 To resume paused playback, call the
-[Start](https://developer.xamarin.com/api/member/Android.Media.MediaPlayer.Start%28%29/) method.
+[Start](xref:Android.Media.MediaPlayer.Start) method.
 This will resume from the paused location in the playback:
 
 ```csharp
@@ -121,7 +121,7 @@ player.Start();
 ```
 
 Calling the
-[Stop](https://developer.xamarin.com/api/member/Android.Media.MediaPlayer.Stop%28%29/) method on the
+[Stop](xref:Android.Media.MediaPlayer.Stop) method on the
 player ends an ongoing playback:
 
 ```csharp
@@ -130,7 +130,7 @@ player.Stop();
 
 When the player is no longer needed, the resources must be released by
 calling the
-[Release](https://developer.xamarin.com/api/member/Android.Media.MediaPlayer.Release%28%29/) method:
+[Release](xref:Android.Media.MediaPlayer.Release) method:
 
 ```csharp
 player.Release();
@@ -141,7 +141,7 @@ player.Release();
 ## Using the MediaRecorder Class to Record Audio
 
 The corollary to `MediaPlayer` for recording audio in Android is the
-[MediaRecorder](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/) class. Like the
+[MediaRecorder](xref:Android.Media.MediaRecorder) class. Like the
 `MediaPlayer`, it is state-sensitive and transitions through several
 states to get to the point where it can start recording. In
 order to record audio, the `RECORD_AUDIO` permission must be set. For
@@ -154,32 +154,32 @@ instructions on how to set application permissions see
 Recording audio with the `MediaRecorder` requires the following steps:
 
 1. Instantiate a new
-   [MediaRecorder](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/) object.
+   [MediaRecorder](xref:Android.Media.MediaRecorder) object.
 
 2. Specify which hardware device to use to capture the audio input via
-   the [SetAudioSource](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioSource/p/Android.Media.AudioSource/)
+   the [SetAudioSource](xref:Android.Media.MediaRecorder.SetAudioSource*)
    method.
 
 3. Set the output file audio format using the
-   [SetOutputFormat](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFormat/p/Android.Media.OutputFormat/)
+   [SetOutputFormat](xref:Android.Media.MediaRecorder.SetOutputFormat*)
    method. For a list of supported audio types see
    [Android Supported Media Formats](https://developer.android.com/guide/appendix/media-formats.html).
 
 4. Call the
-   [SetAudioEncoder](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetAudioEncoder/p/Android.Media.AudioEncoder/)
+   [SetAudioEncoder](xref:Android.Media.MediaRecorder.SetAudioEncoder*)
    method to set the audio encoding type.
 
 5. Call the
-   [SetOutputFile](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.SetOutputFile/p/System.String/)
+   [SetOutputFile](xref:Android.Media.MediaRecorder.SetOutputFile*)
    method to specify the name of the output file that the audio data is
    written to.
 
 6. Call the
-   [Prepare](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.Prepare%28%29/)
+   [Prepare](xref:Android.Media.MediaRecorder.Prepare)
    method to initialize the recorder.
 
 7. Call the
-   [Start](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.Start%28%29/) method
+   [Start](xref:Android.Media.MediaRecorder.Start) method
    to start recording.
 
 
@@ -226,7 +226,7 @@ recorder.Stop();
 ### Cleaning up
 
 Once the `MediaRecorder` has been stopped, call the
-[Reset](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.Reset%28%29/) method to
+[Reset](xref:Android.Media.MediaRecorder.Reset) method to
 put it back into its idle state:
 
 ```csharp
@@ -235,7 +235,7 @@ recorder.Reset();
 
 When the `MediaRecorder` is no longer needed, its resources must be
 released by calling the
-[Release](https://developer.xamarin.com/api/member/Android.Media.MediaRecorder.Release%28%29/)
+[Release](xref:Android.Media.MediaRecorder.Release)
 method:
 
 ```csharp
@@ -249,7 +249,7 @@ recorder.Release();
 
 ### The AudioManager Class
 
-The [AudioManager](https://developer.xamarin.com/api/type/Android.Media.AudioManager/) class provides
+The [AudioManager](xref:Android.Media.AudioManager) class provides
 access to audio notifications that let applications know when audio
 events occur. This service also provides access to other audio
 features, such as volume and ringer mode control. The `AudioManager`
@@ -318,21 +318,21 @@ resources, so that other applications may obtain audio focus.
 The steps required to request the audio resources of the device are as
 follow:
 
-1.  Obtain a handle to the `AudioManager` system service.
+1. Obtain a handle to the `AudioManager` system service.
 
-2.  Create an instance of the callback class.
+2. Create an instance of the callback class.
 
-3.  Request the audio resources of the device by calling the
+3. Request the audio resources of the device by calling the
     `RequestAudioFocus` method on the `AudioManager` . The parameters
     are the callback object, the stream type (music, voice call, ring
     etc.) and the type of the access right being requested (the audio
     resources can be requested momentarily or for an indefinite period,
     for example).
 
-4.  If the request is granted, the `playMusic` method is invoked
+4. If the request is granted, the `playMusic` method is invoked
     immediately, and the audio starts to play back.
 
-5.  If the request is denied, no further action is taken. In this case,
+5. If the request is denied, no further action is taken. In this case,
     the audio will only play if the request is granted at a later time.
 
 
@@ -371,16 +371,16 @@ and recording because they interact directly with memory buffers
 instead of using file URIs. There are some scenarios where this
 approach is preferable. Such scenarios include:
 
-1.  When playing from encrypted audio files.
+1. When playing from encrypted audio files.
 
-2.  When playing a succession of short clips.
+2. When playing a succession of short clips.
 
-3.  Audio streaming.
+3. Audio streaming.
 
 
 ### AudioTrack Class
 
-The [AudioTrack](https://developer.xamarin.com/api/type/Android.Media.AudioTrack/) class uses the
+The [AudioTrack](xref:Android.Media.AudioTrack) class uses the
 low-level audio APIs for recording, and is the low-level equivalent of
 the `MediaPlayer` class.
 
@@ -389,25 +389,25 @@ the `MediaPlayer` class.
 
 To play audio, a new instance of `AudioTrack` must be
 instantiated. The argument list passed into the
-[constructor](https://developer.xamarin.com/api/type/Android.Media.AudioTrack/#memberlist) specifies
+[constructor](xref:Android.Media.AudioTrack) specifies
 how to play the audio sample contained in the buffer. The arguments
 are:
 
-1.  Stream type &ndash; Voice, ringtone, music, system or alarm.
+1. Stream type &ndash; Voice, ringtone, music, system or alarm.
 
-2.  Frequency &ndash; The sampling rate expressed in Hz.
+2. Frequency &ndash; The sampling rate expressed in Hz.
 
-3.  Channel Configuration &ndash; Mono or stereo.
+3. Channel Configuration &ndash; Mono or stereo.
 
-4.  Audio format &ndash; 8 bit or 16 bit encoding.
+4. Audio format &ndash; 8 bit or 16 bit encoding.
 
-5.  Buffer size &ndash; in bytes.
+5. Buffer size &ndash; in bytes.
 
-6.  Buffer mode &ndash; streaming or static.
+6. Buffer mode &ndash; streaming or static.
 
 
 After construction, the
-[Play](https://developer.xamarin.com/api/member/Android.Media.AudioTrack.Play%28%29/) method of
+[Play](xref:Android.Media.AudioTrack.Play) method of
 `AudioTrack` is invoked, to set it up to start playing. Writing the
 audio buffer to the `AudioTrack` starts the playback:
 
@@ -437,7 +437,7 @@ void PlayAudioTrack(byte[] audioBuffer)
 #### Pausing and Stopping the Playback
 
 Call the
-[Pause](https://developer.xamarin.com/api/member/Android.Media.AudioTrack.Pause%28%29/) method to
+[Pause](xref:Android.Media.AudioTrack.Pause) method to
 pause the playback:
 
 ```csharp
@@ -445,7 +445,7 @@ audioTrack.Pause();
 ```
 
 Calling the
-[Stop](https://developer.xamarin.com/api/member/Android.Media.AudioTrack.Stop%28%29/) method will
+[Stop](xref:Android.Media.AudioTrack.Stop) method will
 terminate the playback permanently:
 
 ```csharp
@@ -456,7 +456,7 @@ audioTrack.Stop();
 #### Cleanup
 
 When the `AudioTrack` is no longer needed, its resources must be
-released by calling [Release](https://developer.xamarin.com/api/member/Android.Media.AudioTrack.Release%28%29/):
+released by calling [Release](xref:Android.Media.AudioTrack.Release):
 
 ```csharp
 audioTrack.Release();
@@ -465,7 +465,7 @@ audioTrack.Release();
 
 ### The AudioRecord Class
 
-The [AudioRecord](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/) class is the
+The [AudioRecord](xref:Android.Media.AudioRecord) class is the
 equivalent of `AudioTrack` on the recording side. Like `AudioTrack`, it
 uses memory buffers directly, in place of files and URIs. It requires
 that the `RECORD_AUDIO` permission be set in the manifest.
@@ -474,28 +474,28 @@ that the `RECORD_AUDIO` permission be set in the manifest.
 #### Initializing and Recording
 
 The first step is to construct a new
-[AudioRecord](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/) object. The
+[AudioRecord](xref:Android.Media.AudioRecord) object. The
 argument list passed into the
-[constructor](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/#memberlist) provides
+[constructor](xref:Android.Media.AudioRecord) provides
 all the information required for recording. Unlike in `AudioTrack`,
 where the arguments are largely enumerations, the equivalent arguments
 in `AudioRecord` are integers. These include:
 
-1.  Hardware audio input source such as microphone.
+1. Hardware audio input source such as microphone.
 
-2.  Stream type &ndash; Voice, ringtone, music, system or alarm.
+2. Stream type &ndash; Voice, ringtone, music, system or alarm.
 
-3.  Frequency &ndash; The sampling rate expressed in Hz.
+3. Frequency &ndash; The sampling rate expressed in Hz.
 
-4.  Channel Configuration &ndash; Mono or stereo.
+4. Channel Configuration &ndash; Mono or stereo.
 
-5.  Audio format &ndash; 8 bit or 16 bit encoding.
+5. Audio format &ndash; 8 bit or 16 bit encoding.
 
-6.  Buffer size-in bytes
+6. Buffer size-in bytes
 
 
 Once the `AudioRecord` is constructed, its
-[StartRecording](https://developer.xamarin.com/api/member/Android.Media.AudioRecord.StartRecording%28%29/)
+[StartRecording](xref:Android.Media.AudioRecord.StartRecording)
 method is invoked. It is now ready to begin recording. The
 `AudioRecord` continuously reads the audio buffer for input, and writes
 this input out to an audio file.
@@ -535,7 +535,7 @@ void RecordAudio()
 #### Stopping the Recording
 
 Calling the
-[Stop](https://developer.xamarin.com/api/member/Android.Media.AudioRecord.Stop%28%29/) method
+[Stop](xref:Android.Media.AudioRecord.Stop) method
 terminates the recording:
 
 ```csharp
@@ -546,7 +546,7 @@ audRecorder.Stop();
 #### Cleanup
 
 When the `AudioRecord` object is no longer needed, calling its
-[Release](https://developer.xamarin.com/api/member/Android.Media.AudioRecord.Release%28%29/)
+[Release](xref:Android.Media.AudioRecord.Release)
 method releases all resources associated with it:
 
 ```csharp
@@ -567,9 +567,9 @@ which interface directly with memory buffers.
 
 ## Related Links
 
-- [Working With Audio (sample)](https://developer.xamarin.com/samples/monodroid/Example_WorkingWithAudio/)
-- [Media Player](https://developer.xamarin.com/api/type/Android.Media.MediaPlayer/)
-- [Media Recorder](https://developer.xamarin.com/api/type/Android.Media.MediaRecorder/)
-- [Audio Manager](https://developer.xamarin.com/api/type/Android.Media.AudioManager/)
-- [Audio Track](https://developer.xamarin.com/api/type/Android.Media.AudioTrack/)
-- [Audio Recorder](https://developer.xamarin.com/api/type/Android.Media.AudioRecord/)
+- [Working With Audio (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/example-workingwithaudio)
+- [Media Player](xref:Android.Media.MediaPlayer)
+- [Media Recorder](xref:Android.Media.MediaRecorder)
+- [Audio Manager](xref:Android.Media.AudioManager)
+- [Audio Track](xref:Android.Media.AudioTrack)
+- [Audio Recorder](xref:Android.Media.AudioRecord)

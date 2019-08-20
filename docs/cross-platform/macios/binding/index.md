@@ -14,13 +14,13 @@ This section includes a variety of documents that cover
     creating bindings to Objective-C libraries, so they can be
     called from C# applications created with Xamarin.iOS or Xamarin.Mac.
 
-##  [Overview](~/cross-platform/macios/binding/overview.md)
+## [Overview](~/cross-platform/macios/binding/overview.md)
 
 This document contains some of the internals of how a
     binding takes place. It is an advanced document with some
     technical information.
 
-##  [Binding Objective-C Libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
+## [Binding Objective-C Libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
 
 This document describes the process used to create C#
     bindings of Objective-C APIs and how the idioms in Objective-C
@@ -28,7 +28,7 @@ This document describes the process used to create C#
     If you are binding just C APIs, you should use the standard
     .NET mechanism for this, the P/Invoke framework.
 
-##  [Binding Definition Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)
+## [Binding Definition Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)
 
 This is the reference guide that describes all of the
     attributes available to binding authors to drive the binding

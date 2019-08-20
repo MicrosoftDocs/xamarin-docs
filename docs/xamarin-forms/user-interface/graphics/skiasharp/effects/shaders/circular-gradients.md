@@ -11,7 +11,7 @@ ms.date: 08/23/2018
 
 # The SkiaSharp circular gradients
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 The [`SKShader`](xref:SkiaSharp.SKShader) class defines static methods to create four different types of gradients. The [**SkiaSharp linear gradient**](linear-gradient.md) article discusses the [`CreateLinearGradient`](xref:SkiaSharp.SKShader.CreateLinearGradient*) method. This article covers the other three types of gradients, all of which are based on circles.
 
@@ -49,7 +49,7 @@ The first two arguments specify the center of a circle and a radius. The gradien
 
 If you use `CreateRadialGradient` to fill a circle, you can set the center of the gradient to the center of the circle, and the radius of the gradient to the radius of the circle. In that case, the `SKShaderTileMode` argument has no effect on the rendering of the gradient. But if the area filled by the gradient is larger than the circle defined by the gradient, then the `SKShaderTileMode` argument has a profound effect on what happens outside the circle.
 
-The effect of `SKShaderMode` is demonstrated in the **Radial Gradient** page in the [**SkiaSharpFormsDemos**](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample. The XAML file for this page instantiates a `Picker` that allows you to select one of the three members of the `SKShaderTileMode` enumeration:
+The effect of `SKShaderMode` is demonstrated in the **Radial Gradient** page in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. The XAML file for this page instantiates a `Picker` that allows you to select one of the three members of the `SKShaderTileMode` enumeration:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -615,4 +615,4 @@ The two circles have centers of `offCenter` and `center`. The circle centered at
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

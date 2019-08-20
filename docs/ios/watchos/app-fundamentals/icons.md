@@ -58,35 +58,35 @@ Once your [Parent app](~/ios/watchos/app-fundamentals/parent-app.md) has
   asset catalog to the watch app.
 
 1. Right-click on the Watch App Project and select
-  **File > Add > New File... > iOS > Asset Catalog** to add an
-  asset catalog to the project.
+    **File > Add > New File... > iOS > Asset Catalog** to add an
+    asset catalog to the project.
 
- ![](icons-images/newasset.png "Add an asset catalog to the project")
+    ![](icons-images/newasset.png "Add an asset catalog to the project")
 
 2. Double-click on the **AppIcon.appiconset/Contents.json** file
 
-  ![](icons-images/xcassets-iconset-sml.png "The AppIcon contents")
+    ![](icons-images/xcassets-iconset-sml.png "The AppIcon contents")
 
 3. Add all the watchOS images, as shown in this screenshot:
 
-  [![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png#lightbox)
+    [![](icons-images/appicons-sml.png "Add all the watchOS images, as shown in this screenshot")](icons-images/appicons.png#lightbox)
 
-  Refer to [Apple's icon guidelines](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) for the required sizes
-  (the dimensions are also shown on the screen). Remember
-  that these icons will be automatically clipped to render
-  in a circle.
+    Refer to [Apple's icon guidelines](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/menu-icons/) for the required sizes
+    (the dimensions are also shown on the screen). Remember
+    that these icons will be automatically clipped to render
+    in a circle.
 
-  Your icon list should look something like this:
+    Your icon list should look something like this:
 
-  ![](icons-images/xcassets-complete-sml.png "The icon list in the Solution Explorer")
+    ![](icons-images/xcassets-complete-sml.png "The icon list in the Solution Explorer")
 
 4. To ensure the asset catalog is included in the app, add
   the following key and value to the **Watch App's Info.plist**:
 
-```xml
-<key>XSAppIconAssets</key>
-<string>Images.xcassets/AppIcon.appiconset</string>
-```
+    ```xml
+    <key>XSAppIconAssets</key>
+    <string>Images.xcassets/AppIcon.appiconset</string>
+    ```
 
 You can verify the icons are configured correct by checking
   the [Apple Watch settings app](~/ios/watchos/app-fundamentals/settings.md)

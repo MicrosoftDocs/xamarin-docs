@@ -72,6 +72,9 @@ API changes in iOS 9 require that a callback constructor be used when calling un
 ### [Runtime error: The assembly mscorlib.dll was not found or could not be loaded](error-mscorlib-not-found.md)
 This issue occurs when the *hidden* `.monotouch-32` and `.monotouch-64` folders are missing from the `.xcarchive` for signing / IPA creation, triggering the runtime error.
 
+### [Compile error: Can not encode offset X in resulting scattered relocation](error-encode-offset-scattered-relocation.md)
+This issue occurs when building for 32-bit architectures, such as ARMv7, when the final binary is too large for the native toolchain.
+
 ## Deprecated
 
 > [!IMPORTANT]

@@ -11,7 +11,7 @@ ms.date: 01/30/2019
 
 # Xamarin.Forms Style Classes
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)
 
 _Xamarin.Forms style classes enable multiple styles to be applied to a control, without resorting to style inheritance._
 
@@ -220,4 +220,4 @@ Content = new StackLayout
 
 ## Related links
 
-- [Basic Styles (sample)](https://developer.xamarin.com/samples/xamarin-forms/UserInterface/Styles/BasicStyles/)
+- [Basic Styles (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-styles-basicstyles)

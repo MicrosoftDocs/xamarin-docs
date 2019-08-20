@@ -21,7 +21,7 @@ been purchased.
 
 ## Non-Consumable Products Sample
 
-The [InAppPurchaseSample code](https://developer.xamarin.com/samples/monotouch/StoreKit/) contains a project called *NonConsumables*. The code sample
+The [InAppPurchaseSample code](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) contains a project called *NonConsumables*. The code sample
 demonstrates how to implement non-consumable products using photo-filters as an
 example. Once you’ve purchased a filter you can apply it to the photo over and
 over again. You never need to re-purchase it.   
@@ -73,15 +73,15 @@ work.
  There are situations where an application cannot tell
 whether a non-consumable product has already been purchased:
 
--  If an application is deleted and re-installed on a device, all purchase records will be gone (unless/until the user does a backup-restore). 
--  If the user has the application installed on two (or more) devices and makes a purchase on one of the devices. The other devices will continue to show the product available for purchase. 
--  If a customer attempts to re-purchase a non-consumable product in these situations, the App Store will fulfill the product again without charge. The user interface will initially appear to perform a purchase (for example, a confirmation alert is displayed and the Apple ID will be required) however the user will then see a message advising them that the product has already been purchased.  
+- If an application is deleted and re-installed on a device, all purchase records will be gone (unless/until the user does a backup-restore). 
+- If the user has the application installed on two (or more) devices and makes a purchase on one of the devices. The other devices will continue to show the product available for purchase. 
+- If a customer attempts to re-purchase a non-consumable product in these situations, the App Store will fulfill the product again without charge. The user interface will initially appear to perform a purchase (for example, a confirmation alert is displayed and the Apple ID will be required) however the user will then see a message advising them that the product has already been purchased.  
    
    
    
  The code path in this scenario is exactly the same as a regular
 purchase, the only differences are:
 
--  The user does not get charged again for the product.
--  The  `SKPaymentTransaction` object passed to the application will have an  `OriginalTransaction` property that refers to the transaction that was generated when the product was initially purchased. 
--  Applications that sell Non-Consumable products must also implement StoreKit’s  **Restore** feature to help users retrieve existing purchases. 
+- The user does not get charged again for the product.
+- The  `SKPaymentTransaction` object passed to the application will have an  `OriginalTransaction` property that refers to the transaction that was generated when the product was initially purchased. 
+- Applications that sell Non-Consumable products must also implement StoreKit’s  **Restore** feature to help users retrieve existing purchases. 

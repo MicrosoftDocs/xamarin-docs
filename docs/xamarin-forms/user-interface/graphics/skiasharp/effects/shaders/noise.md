@@ -11,7 +11,7 @@ ms.date: 08/23/2018
 
 # SkiaSharp noise and composing
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
 
 Simple vector graphics tend to look unnatural. The straight lines, smooth curves, and solid colors don't resemble the imperfections of real-world objects. While working on the computer-generated graphics for the 1982 movie _Tron_, computer scientist Ken Perlin began developing algorithms that used random processes to give these images more realistic textures. In 1997, Ken Perlin won an Academy Award for Technical Achievement. His work has come to be known as Perlin noise, and it is supported in SkiaSharp. Here's an example:
 
@@ -39,7 +39,7 @@ The `numOctaves` value is an integer of 1 or higher. It relates to an iteration 
 
 The `seed` parameter is the starting point for the random-number generator. Although specified as a floating-point value, the fraction is truncated before it's used, and 0 is the same as 1.
 
-The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/) sample allows you experiment with various values of the `baseFrequency` and `numOctaves` arguments. Here's the XAML file:
+The **Perlin Noise** page in the [**SkiaSharpFormsDemos**)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample allows you experiment with various values of the `baseFrequency` and `numOctaves` arguments. Here's the XAML file:
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -394,4 +394,4 @@ The final parameter is a member of the `SKBlendMode` enumeration, an enumeration
 ## Related links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
-- [SkiaSharpFormsDemos (sample)](https://developer.xamarin.com/samples/xamarin-forms/SkiaSharpForms/Demos/)
+- [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)

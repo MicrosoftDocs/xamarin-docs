@@ -69,27 +69,27 @@ mapping files when creating the binding assembly
 These XML mapping files may be found in the **Transforms** folder of
 the project:
 
--   **MetaData.xml** &ndash; Allows changes to be made to the final API, 
+- **MetaData.xml** &ndash; Allows changes to be made to the final API, 
     such as changing the namespace of the generated binding. 
 
--   **EnumFields.xml** &ndash; Contains the mapping between Java `int` 
+- **EnumFields.xml** &ndash; Contains the mapping between Java `int` 
     constants and C# `enums` . 
 
--   **EnumMethods.xml** &ndash; Allows changing method parameters and 
+- **EnumMethods.xml** &ndash; Allows changing method parameters and 
     return types from Java `int` constants to C# `enums` . 
 
 The **MetaData.xml** file is the most import of these files as it
 allows general-purpose changes to the binding such as:
 
--   Renaming namespaces, classes, methods, or fields so they follow 
+- Renaming namespaces, classes, methods, or fields so they follow 
     .NET conventions. 
 
--   Removing namespaces, classes, methods, or fields that aren't 
+- Removing namespaces, classes, methods, or fields that aren't 
     needed. 
 
--   Moving classes to different namespaces. 
+- Moving classes to different namespaces. 
 
--   Adding additional support classes to make the design of the binding 
+- Adding additional support classes to make the design of the binding 
     follow .NET framework patterns. 
 
 Lets move on to discuss **Metadata.xml** in more detail.
@@ -136,13 +136,13 @@ The following is an example of a **Metadata.xml** file:
 The following lists some of the more commonly used XPath elements for
 the Java API's:
 
--   `interface` &ndash; Used to locate a Java interface. e.g. `/interface[@name='AuthListener']`.
+- `interface` &ndash; Used to locate a Java interface. e.g. `/interface[@name='AuthListener']`.
 
--   `class` &ndash; Used to locate a class . e.g. `/class[@name='MapView']`.
+- `class` &ndash; Used to locate a class . e.g. `/class[@name='MapView']`.
 
--   `method` &ndash; Used to locate a method on a Java class or interface. e.g. `/class[@name='MapView']/method[@name='setTitleSource']`.
+- `method` &ndash; Used to locate a method on a Java class or interface. e.g. `/class[@name='MapView']/method[@name='setTitleSource']`.
 
--   `parameter` &ndash; Identify a parameter for a method. e.g. `/parameter[@name='p0']`
+- `parameter` &ndash; Identify a parameter for a method. e.g. `/parameter[@name='p0']`
 
 
 
@@ -298,15 +298,15 @@ For example, the Bindings Generator believes that the Java method
 which results in the error message **Error CS0535:
 'DE.Neom.Neoreadersdk.Resolution' does not implement interface member
 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. The following
-snippet demonstrates how to change the return type of the generated C#
-method from an `int` to a `Java.Lang.Object`: 
+snippet demonstrates how to change the paramter type of the generated C#
+method from a `DE.Neom.Neoreadersdk.Resolution` to a `Java.Lang.Object`: 
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
     class[@name='Resolution']/
     method[@name='compareTo' and count(parameter)=1 and
     parameter[1][@type='de.neom.neoreadersdk.Resolution']]/
-    parameter[1]"name="managedType">Java.Lang.Object</attr> 
+    parameter[1]" name="managedType">Java.Lang.Object</attr> 
 ```
 
 ### managedReturn

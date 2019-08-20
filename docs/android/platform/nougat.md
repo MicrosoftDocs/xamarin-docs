@@ -33,15 +33,15 @@ you use Xamarin.Android 7.0.
 For more information about Android 7.x APIs, see
 [Android 7.1 for Developers](https://developer.android.com/preview/api-overview.html).
 For a list of known Xamarin.Android 7.0 issues, please see the
-[release notes](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/).
+[release notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md).
 
 Android Nougat provides many new features of interest to Xamarin.Android
 developers. These features include:
 
--   **Multi-window support** &ndash; This enhancement makes it possible
+- **Multi-window support** &ndash; This enhancement makes it possible
     for users to open two apps on the screen at once.
 
--   **Notification Enhancements** &ndash; The redesigned notifications
+- **Notification Enhancements** &ndash; The redesigned notifications
     system in Android Nougat includes a *Direct Reply* feature that allow
     users to quickly respond to text messages directly from the
     notification UI. Also, if your app creates notifications for
@@ -49,7 +49,7 @@ developers. These features include:
     bundle notifications together as a single group when more than one
     message is received.
 
--   **Data Saver** &ndash; This feature is a new system service that
+- **Data Saver** &ndash; This feature is a new system service that
     helps reduce cellular data use by apps; it gives users control over
     how apps use cellular data.
 
@@ -70,18 +70,18 @@ to target the new Android Nougat platform.
 The following is required to use the new Android Nougat features in
 Xamarin-based apps:
 
--   **Visual Studio or Visual Studio for Mac** &ndash; If you are using Visual
+- **Visual Studio or Visual Studio for Mac** &ndash; If you are using Visual
     Studio, version 4.2.0.628 or later of Visual Studio Tools for Xamarin is
     required. If you are using Visual Studio for Mac, version 6.1.0 or later
     of Visual Studio for Mac is required.
 
--   **Xamarin.Android** &ndash; Xamarin.Android 7.0 or later must
+- **Xamarin.Android** &ndash; Xamarin.Android 7.0 or later must
     be installed and configured with either Visual Studio or Visual Studio for Mac.
 
--   **Android SDK** - Android SDK 7.0 (API 24) or later must be installed
+- **Android SDK** - Android SDK 7.0 (API 24) or later must be installed
     via the Android SDK Manager.
 
--   **Java Developer Kit** &ndash; Xamarin Android 7.0 development requires
+- **Java Developer Kit** &ndash; Xamarin Android 7.0 development requires
     [JDK 8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     or later if you are developing for API level 24 or greater (JDK 8
     also supports API levels earlier than 24). The 64-bit version of
@@ -105,13 +105,13 @@ To get started using Android Nougat with Xamarin.Android, you must
 download and install the latest tools and SDK packages before you can
 create an Android Nougat project:
 
-1.  Install the latest Xamarin.Android updates from the Xamarin.
+1. Install the latest Xamarin.Android updates from the Xamarin.
 
-2.  Install the **Android 7.0 (API 24)** packages and tools or later.
+2. Install the **Android 7.0 (API 24)** packages and tools or later.
 
-3.  Create a new Xamarin.Android project that targets Android Nougat.
+3. Create a new Xamarin.Android project that targets Android Nougat.
 
-4.  Configure an emulator or device for Android Nougat.
+4. Configure an emulator or device for Android Nougat.
 
 Each of these steps is explained in the following sections:
 
@@ -135,15 +135,15 @@ To create a project with Xamarin Android 7.0, you must first use the
 Android SDK Manager to install **SDK Platform Android N (API 24)** or
 later. You must also install the latest **Android SDK Tools**:
 
-1.  Start the Android SDK Manager (in Visual Studio for Mac, use
+1. Start the Android SDK Manager (in Visual Studio for Mac, use
     **Tools > Open Android SDK Manager&hellip;**; in Visual Studio,
     use **Tools > Android > Android SDK Manager**).
 
-2.  Install **Android 7.0 (API 24)** or later:
+2. Install **Android 7.0 (API 24)** or later:
 
     [![Selecting Android 7.0 packages in the Android SDK Manager](nougat-images/preview-packages.png)](nougat-images/preview-packages.png#lightbox)
 
-3.  Install the latest Android SDK tools:
+3. Install the latest Android SDK tools:
 
     [![Selecting the latest Android SDK tools in the Android SDK Manager](nougat-images/preview-tools.png)](nougat-images/preview-tools.png#lightbox)
 
@@ -151,7 +151,7 @@ later. You must also install the latest **Android SDK Tools**:
     SDK Platform tools 24.0.3 or later, and Android SDK Build tools 24.0.2
     or later.
 
-4.  Verify that the **Java Development Kit Location**
+4. Verify that the **Java Development Kit Location**
     is configured for JDK 1.8:
 
     [![Configuring the JDK 8 path under Tools options](nougat-images/use-jdk-1.8.png)](nougat-images/use-jdk-1.8.png#lightbox)
@@ -190,9 +190,9 @@ app to Android Nougat devices or emulators.
 If you are using an emulator, start the Android AVD Manager and create a new
 device using the following settings:
 
--   Device: Nexus 5X, Nexus 6, Nexus 6P, Nexus Player, Nexus 9, or Pixel C.
--   Target: Android 7.0 - API Level 24
--   ABI: x86 or x86\_64
+- Device: Nexus 5X, Nexus 6, Nexus 6P, Nexus Player, Nexus 9, or Pixel C.
+- Target: Android 7.0 - API Level 24
+- ABI: x86 or x86\_64
 
 For example, this virtual device is configured to emulate a Nexus 6:
 
@@ -245,7 +245,7 @@ if (!IsInMultiWindowMode) {
 }
 ```
 
-The [MultiWindowPlayground](https://developer.xamarin.com/samples/monodroid/android-n/MultiWindowPlayground/)
+The [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)
 sample app includes C# code that demonstrates how to take advantage of
 multiple window user interfaces with your app.
 
@@ -279,7 +279,7 @@ interface:
 
 To support this feature in your app, you must add *inline reply
 actions* to your app via a
-[RemoteInput](https://developer.xamarin.com/api/type/Android.App.RemoteInput/)
+[RemoteInput](xref:Android.App.RemoteInput)
 object so that users can reply via text directly from the notification UI.
 For example, the following code builds a `RemoteInput` for receiving text input,
 builds a pending intent for the reply action, and creates a remote
@@ -314,7 +314,7 @@ NotificationCompat.Builder builder = new NotificationCompat.Builder (Application
    .AddAction (actionReplyByRemoteInput);
 ```
 
-The [Messaging Service](https://developer.xamarin.com/samples/monodroid/android-n/MessagingService/)
+The [Messaging Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice)
 sample app includes C# code that demonstrates how to extend
 notifications with a `RemoteInput` object. For more information about
 adding inline reply actions to your app for Android 7.0 or later, see
@@ -335,7 +335,7 @@ notification in detail:
 [![Screenshot example of bundled notifications](nougat-images/bundled-notifications-sml.png)](nougat-images/bundled-notifications.png#lightbox)
 
 To support bundled notifications, your app can use the
-[Builder.SetGroup](https://developer.xamarin.com/api/member/Android.App.Notification+Builder.SetGroup/p/System.String/)
+[Builder.SetGroup](xref:Android.App.Notification.Builder.SetGroup*)
 method to bundle similar notifications. For more information about
 bundled notification groups in Android N, see the Android
 [Bundling Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle)
@@ -358,7 +358,7 @@ topic.
 Beginning with Android Nougat, users can enable a new *Data Saver*
 setting that blocks background data usage. This setting also signals
 your app to use less data in the foreground wherever possible. The
-[ConnectivityManager](https://developer.xamarin.com/api/type/Android.Net.ConnectivityManager/) has
+[ConnectivityManager](xref:Android.Net.ConnectivityManager) has
 been extended in Android Nougat so that your app can check whether the
 user has enabled Data Saver so that your app can make an effort to
 limit its data usage when Data Saver is enabled.
@@ -391,27 +391,27 @@ topic.
 Several Xamarin.Android samples are available to show you how to take
 advantage of Android Nougat features:
 
--   [MultiWindowPlayground](https://developer.xamarin.com/samples/monodroid/android-n/MultiWindowPlayground/)
+- [MultiWindowPlayground](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-multiwindowplayground)
     demonstrates the use of the multi-window API available in Android
     Nougat. You can switch the sample app into multi-windows mode to see how
     it affects the app's lifecycle and behavior.
 
--   [Messaging Service](https://developer.xamarin.com/samples/monodroid/android-n/MessagingService/)
+- [Messaging Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-messagingservice)
     is a simple service that sends notifications using the `NotificationCompatManager`. It also
     extends the notification with a `RemoteInput` object to allow Android Nougat devices to reply via
     text directly from the notification without having to open an app.
 
--   [Active Notifications](https://developer.xamarin.com/samples/monodroid/android-n/ActiveNotifications/)
+- [Active Notifications](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-activenotifications)
     demonstrates how to use the `NotificationManager` API to tell you
     how many notifications your application is currently displaying.
 
--   [Scoped Directory Access](https://developer.xamarin.com/samples/monodroid/android-n/ScopedDirectoryAccess/)
+- [Scoped Directory Access](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-scopeddirectoryaccess)
     Demonstrates how to use the scoped directory access API to easily
     access specific directories. This serves as an alternative to
     having to define `READ_EXTERNAL_STORAGE` or `WRITE_EXTERNAL_STORAGE`
     permissions in your manifest.
 
--   [Direct Boot](https://developer.xamarin.com/samples/monodroid/android-n/DirectBoot/)
+- [Direct Boot](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-n-directboot)
     Illustrates how to store data in a device-encrypted storage which is always available
     while the device is booted both before and after any user credentials(PIN/Pattern/Password)
     are entered.
@@ -429,4 +429,4 @@ help you get started in creating apps for Android Nougat.
 ## Related Links
 
 - [Android 7.1 For Developers](https://developer.android.com/about/versions/nougat/android-7.1.html)
-- [Xamarin Android 7.0 Release Notes](https://developer.xamarin.com/releases/android/xamarin.android_7/xamarin.android_7.0/)
+- [Xamarin Android 7.0 Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_7/xamarin.android_7.0/index.md)

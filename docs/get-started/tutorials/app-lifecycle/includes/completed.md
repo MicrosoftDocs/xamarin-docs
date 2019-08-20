@@ -13,7 +13,7 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 
 ## Related links
 
-- [AppLifecycleTutorial (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Tutorials/AppLifecycleTutorial)
+- [AppLifecycleTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-applifecycletutorial/)
 - [Xamarin.Forms App Lifecycle (guide)](~/xamarin-forms/app-fundamentals/app-lifecycle.md)
 - [Xamarin.Forms App Class (guide)](~/xamarin-forms/app-fundamentals/application-class.md)
 - [Application API](xref:Xamarin.Forms.Application)

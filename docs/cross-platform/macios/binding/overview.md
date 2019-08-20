@@ -15,24 +15,25 @@ _Details of how the binding process works_
 Binding an Objective-C library for use with Xamarin takes of three steps:
 
 1. Write a C# "API definition" to describe how the native API is exposed in .NET, and how it
-  maps to the underlying Objective-C. This is done using standard
-  C# constructs like `interface` and various binding **attributes**
-  (see this [simple example](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
+   maps to the underlying Objective-C. This is done using standard
+   C# constructs like `interface` and various binding **attributes**
+   (see this [simple example](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. Once you have written the "API definition" in C#, you compile it
-  to produce a "binding" assembly. This can be done on the [**command line**](#commandline) or
-  using a [**binding project**](#bindingproject) in Visual Studio for Mac or Visual Studio.
+   to produce a "binding" assembly. This can be done on the [**command line**](#commandline) or
+   using a [**binding project**](#bindingproject) in Visual Studio for Mac or Visual Studio.
 
 3. That "binding" assembly is then added to your Xamarin application project,
-  so you can access the native functionality using the API you defined.
-  The binding project is completely separate from your application projects.
+   so you can access the native functionality using the API you defined.
+   The binding project is completely separate from your application projects.
 
-**NOTE:** Step 1 can be automated with the assistance of
-  [**Objective Sharpie**](#objectivesharpie). It examines the Objective-C API
-  and generates a proposed C# "API definition." You can customize the files
-  created by Objective Sharpie and use them in a binding project
-  (or on the command line) to create your binding assembly. Objective Sharpie
-  does not create bindings by itself, it's merely an optional part of the larger process.
+   > [!NOTE]
+   > Step 1 can be automated with the assistance of
+   > [**Objective Sharpie**](#objectivesharpie). It examines the Objective-C API
+   > and generates a proposed C# "API definition." You can customize the files
+   > created by Objective Sharpie and use them in a binding project
+   > (or on the command line) to create your binding assembly. Objective Sharpie
+   > does not create bindings by itself, it's merely an optional part of the larger process.
 
 You can also read more technical details of [how it works](#howitworks), which will
 help you to write your bindings.

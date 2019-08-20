@@ -13,7 +13,7 @@ ms.date: 04/01/2019
 
 # Create a Single Page Xamarin.Forms Application
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 
 In this quickstart, you will learn how to:
 
@@ -60,7 +60,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 5. In **Solution Explorer**, in the **Notes** project, double-click **MainPage.xaml** to open it:
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
+    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Open MainPage.xaml")
 
 6. In **MainPage.xaml**, remove all of the template code and replace it with the following code:
 
@@ -97,7 +97,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 7. In **Solution Explorer**, in the **Notes** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it:
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "Open MainPage.xaml.cs")
+    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Open MainPage.xaml.cs")
 
 8. In **MainPage.xaml.cs**, remove all of the template code and replace it with the following code:
 
@@ -498,5 +498,5 @@ To turn this single page application into a multi-page application, continue to 
 
 ## Related links
 
-- [Notes (sample)](https://developer.xamarin.com/samples/xamarin-forms/GetStarted/Notes/SinglePage/)
+- [Notes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-singlepage/)
 - [Xamarin.Forms Quickstart Deep Dive](deepdive.md)

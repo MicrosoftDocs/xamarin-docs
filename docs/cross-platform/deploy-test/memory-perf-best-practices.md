@@ -259,9 +259,9 @@ Managed languages such as C# use garbage collection to reclaim memory that is al
 
 SGen utilizes one of three heaps to allocate space for objects:
 
--  **The Nursery** – This is where new small objects are allocated. When the nursery runs out of space, a minor garbage collection will occur. Any live objects will be moved to the major heap.
--  **Major Heap** – This is where long running objects are kept. If there is not enough memory in the major heap, then a major garbage collection will occur. If a major garbage collection fails to free up enough memory then SGen will ask the system for more memory.
--  **Large Object Space** – This is where objects that require more than 8000 bytes are kept. Large objects will not start out in the nursery, but instead will be allocated in this heap.
+- **The Nursery** – This is where new small objects are allocated. When the nursery runs out of space, a minor garbage collection will occur. Any live objects will be moved to the major heap.
+- **Major Heap** – This is where long running objects are kept. If there is not enough memory in the major heap, then a major garbage collection will occur. If a major garbage collection fails to free up enough memory then SGen will ask the system for more memory.
+- **Large Object Space** – This is where objects that require more than 8000 bytes are kept. Large objects will not start out in the nursery, but instead will be allocated in this heap.
 
 One of the advantages of SGen is that the time it takes to perform a minor garbage collection is proportional to the number of new live objects that were created since the last minor garbage collection. This will reduce the impact of garbage collection on the performance of an application, as these minor garbage collections will take less time than a major garbage collection. Major garbage collections will still occur, but less frequently.
 
@@ -304,16 +304,16 @@ The following screenshot shows the linker options in Visual Studio for Mac for a
 
 The linker provides three different settings to control its behavior:
 
--  **Don’t Link** – No unused types and methods will be removed by the linker. For performance reasons, this is the default setting for debug builds.
--  **Link Framework SDKs/SDK Assemblies Only** – This setting will only reduce the size of those assemblies that are shipped by Xamarin. User code will be unaffected.
--  **Link All Assemblies** – This is a more aggressive optimization that will target the SDK assemblies and user code. For bindings this will remove unused backing fields and make each instance (or bound objects) lighter, consuming less memory.
+- **Don’t Link** – No unused types and methods will be removed by the linker. For performance reasons, this is the default setting for debug builds.
+- **Link Framework SDKs/SDK Assemblies Only** – This setting will only reduce the size of those assemblies that are shipped by Xamarin. User code will be unaffected.
+- **Link All Assemblies** – This is a more aggressive optimization that will target the SDK assemblies and user code. For bindings this will remove unused backing fields and make each instance (or bound objects) lighter, consuming less memory.
 
 The *Link All Assemblies* should be used with caution as it may break the application in unexpected ways. The static analysis that is performed by the linker may not correctly identify all of the code that is required, resulting in too much code being removed from the compiled application. This situation will manifest itself only at runtime when the application crashes. Because of this it is important to thoroughly test an application after changing the linker behavior.
 
 If testing does reveal that the linker has incorrectly removed a class or method it is possible to mark types or methods that are not statically referenced but are required by the application by using one of the following attributes:
 
--  `Xamarin.iOS.Foundation.PreserveAttribute` – This attribute is for Xamarin.iOS projects.
--  `Android.Runtime.PreserveAttribute` – This attribute is for Xamarin.Android projects.
+- `Xamarin.iOS.Foundation.PreserveAttribute` – This attribute is for Xamarin.iOS projects.
+- `Android.Runtime.PreserveAttribute` – This attribute is for Xamarin.Android projects.
 
 For instance, it may be necessary to preserve the default constructors of types that are dynamically instantiated. Also, the use of XML serialization may require that the properties of types are preserved.
 
@@ -378,4 +378,3 @@ This article described and discussed techniques for increasing the performance o
 - [Xamarin.Forms Performance](~/xamarin-forms/deploy-test/performance.md)
 - [Async Support Overview](~/cross-platform/platform/async.md)
 - [IDisposable](xref:System.IDisposable)
-- [Avoiding Common Pitfalls in Xamarin Apps (video)](https://university.xamarin.com/guestlectures/avoiding-common-pitfalls-in-xamarin-apps)

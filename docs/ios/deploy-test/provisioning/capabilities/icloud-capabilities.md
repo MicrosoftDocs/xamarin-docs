@@ -28,67 +28,67 @@ Adding the iCloud capability to an application is slightly more difficult than o
 
 When provisioning a new app through the developer center there are two steps that need to be taken:
 
-1.	Create a container.
-2.	Create an App ID with the iCloud capability and add the container to it.
+1. Create a container.
+2. Create an App ID with the iCloud capability and add the container to it.
 3. Create a Provisioning profile that includes this App ID
 
 The steps below will guide you through these steps:
 
-1.	Browse to the [Apple Developer Center](https://developer.apple.com/account/) and go to the Certificates, Identifier, and Profiles section: 
+1. Browse to the [Apple Developer Center](https://developer.apple.com/account/) and go to the Certificates, Identifier, and Profiles section: 
     
      ![Apple Developer Center main page](icloud-capabilities-images/image22.png)
 
-2.	Under **Identifiers** select **iCloud Containers**, and then select the **+** to create a new container:  
+2. Under **Identifiers** select **iCloud Containers**, and then select the **+** to create a new container:  
     
     ![iCloud Container screen](icloud-capabilities-images/image23.png)
 
-3.	Enter a **Description** and a unique **Identifier** for the iCloud container: 
+3. Enter a **Description** and a unique **Identifier** for the iCloud container: 
     
     ![iCloud container registration screen](icloud-capabilities-images/image24.png)
 
-4.	Press **Continue**, ensure that the information is correct, and press **Register** to create the iCloud Container:  
+4. Press **Continue**, ensure that the information is correct, and press **Register** to create the iCloud Container:  
     
     ![iCloud container registration screen](icloud-capabilities-images/image25.png)
 
 To create a new App ID and add a container to it, do the following:
 
-1.	In the [Developer Center](https://developer.apple.com/account/), click on **App IDs** under **Identifiers**: 
+1. In the [Developer Center](https://developer.apple.com/account/), click on **App IDs** under **Identifiers**: 
     
     ![Identifier Section in Developer Center](icloud-capabilities-images/image26.png)
 
-2.	Select the **+** button to add a new App ID: 
+2. Select the **+** button to add a new App ID: 
     
     ![Add new App ID button](icloud-capabilities-images/image27.png)
 
-3.	Enter a **Name** for the App ID and give it an **Explicit App ID**:
+3. Enter a **Name** for the App ID and give it an **Explicit App ID**:
     
     ![Enter new App ID details](icloud-capabilities-images/image28.png)
 
-4.	Under **App Services** select **iCloud** and choose **Include CloudKit support**:
+4. Under **App Services** select **iCloud** and choose **Include CloudKit support**:
     
     ![Select iCloud app services](icloud-capabilities-images/image29.png)
 
-5.	Select **Continue** and then **Register**. Note that on the confirmation screen, iCloud will display with Configurable selected, with a yellow symbol:   
+5. Select **Continue** and then **Register**. Note that on the confirmation screen, iCloud will display with Configurable selected, with a yellow symbol:   
     
     ![Confirmation screen](icloud-capabilities-images/image30.png)
 
-6.	Return to the list of App IDs and select the one that you have just created: 
+6. Return to the list of App IDs and select the one that you have just created: 
     
     ![Select App ID screen](icloud-capabilities-images/image31.png)
 
-7.	Scroll down to the bottom of this expanded section and click **Edit**:
+7. Scroll down to the bottom of this expanded section and click **Edit**:
     
     ![Edit App ID](icloud-capabilities-images/image32.png)
 
-8.	Scroll down the list to iCloud and click the **Edit** button:  
+8. Scroll down the list to iCloud and click the **Edit** button:  
     
     ![Edit iCloud App ID](icloud-capabilities-images/image33.png)
 
-9.	Select the Container to use with this App ID:  
+9. Select the Container to use with this App ID:  
     
     ![Select container screen](icloud-capabilities-images/image34.png)
 
-10.	Confirm the Container assignments, and press **Assign**.
+10. Confirm the Container assignments, and press **Assign**.
  
 This App ID can now be used to generate, or to re-generate, a new provisioning profile, as described in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide. 
 

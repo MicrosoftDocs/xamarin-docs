@@ -53,16 +53,16 @@ macOS):
 - Encourage in-IDE exploration of the APIs:
 
   - For example, instead of exposing a weakly-typed array like this:
-    
+
     ```objc
     NSArray *getViews
     ```
     Expose a strong type, like this:
-	
+
     ```csharp
     NSView [] Views { get; set; }
     ```
-	
+
     This gives Visual Studio for Mac the ability to do auto-completion while
     browsing the API, makes all of the `System.Array` operations available 
     on the returned value, and allows the return value to participate in 
@@ -77,14 +77,14 @@ macOS):
     strongly-typed arrays.
   - For events and notifications, give users a choice between:
 
-	- A strongly-typed version by default
-	- A weakly-typed version for advanced use cases
+    - A strongly-typed version by default
+    - A weakly-typed version for advanced use cases
 
 - Support the Objective-C delegate pattern:
 
-	- C# event system
-	- Expose C# delegates (lambdas, anonymous methods, and `System.Delegate`) 
-      to Objective-C APIs as blocks
+  - C# event system
+  - Expose C# delegates (lambdas, anonymous methods, and `System.Delegate`) 
+    to Objective-C APIs as blocks
 
 ### Assemblies
 
@@ -171,26 +171,32 @@ This is done using the `Category` attribute, specifying the type to
 extend as an argument to the attribute. The following example will for
 instance extend NSString.
 
-    [Category (typeof (NSString))]
+```csharp
+[Category (typeof (NSString))]
+```
 
 Each category method is using the normal mechanism for exporting
 methods to Objective-C using the `Export` attribute:
 
-    [Export ("today")]
-    public static string Today ()
-    {
-        return "Today";
-    }
+```csharp
+[Export ("today")]
+public static string Today ()
+{
+    return "Today";
+}
+```
 
 All managed extension methods must be static, but it’s possible to
 create Objective-C instance methods using the standard syntax for
 extension methods in C#:
 
-    [Export ("toUpper")]
-    public static string ToUpper (this NSString self)
-    {
-        return self.ToString ().ToUpper ();
-    }
+```csharp
+[Export ("toUpper")]
+public static string ToUpper (this NSString self)
+{
+    return self.ToString ().ToUpper ();
+}
+```
 
 and the first argument to the extension method will be the instance on
 which the method was invoked.
@@ -363,9 +369,9 @@ difference being that the methods are not always mandatory.
 
 These delegates play an important role in UIKit and other CocoaTouch APIs. They are used to accomplish various tasks:
 
--  To provide notifications to your code (Similar to event delivery in C# or Gtk+).
--  To implement models for data visualization controls.
--  To drive the behavior of a control.
+- To provide notifications to your code (Similar to event delivery in C# or Gtk+).
+- To implement models for data visualization controls.
+- To drive the behavior of a control.
 
 
 The programming pattern was designed to minimize the creation of derived
@@ -381,9 +387,9 @@ In Objective-C classes, you will see that classes that use this programming patt
 In Xamarin.iOS three mutually exclusive mechanisms to bind to these
 delegates are offered:
 
-1.  [Via events](#Via_Events).
-2.  [Strongly typed via a `Delegate` property](#StrongDelegate)
-3.  [Loosely typed via a `WeakDelegate` property](#WeakDelegate)
+1. [Via events](#Via_Events).
+2. [Strongly typed via a `Delegate` property](#StrongDelegate)
+3. [Loosely typed via a `WeakDelegate` property](#WeakDelegate)
 
 For example, consider the [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html)
 class. This dispatches to a [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html)
@@ -398,9 +404,9 @@ For many types, Xamarin.iOS will automatically create an appropriate delegate
 which will forward the `UIWebViewDelegate` calls onto C# events. For
 `UIWebView`:
 
--  The  [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
--  The  [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
--  The  [webView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
+- The  [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
+- The  [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
+- The  [webView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
 
 For example, this simple program records the start and end times when loading a web view:
 
@@ -667,9 +673,9 @@ it manually or use the existing strongly typed definitions.
 The manual mechanism is necessary when you try to implement a class
 that has not been bound by Xamarin.iOS. It is very easy to do:
 
--  Flag your class for registration with the runtime
--  Apply the [Export] attribute with the actual selector name on each method you want to override
--  Instantiate the class, and pass it.
+- Flag your class for registration with the runtime
+- Apply the [Export] attribute with the actual selector name on each method you want to override
+- Instantiate the class, and pass it.
 
 For example, the following implement only one of the optional methods
 in the UIApplicationDelegate protocol definition:
@@ -750,11 +756,11 @@ necessary to bind some of the controls to your managed code.
 
 This is done in a few steps:
 
-1.  Add the **outlet declaration** to your **File's owner**.
-1.  Connect your control to the **File's owner**.
-1.  Store the UI plus the connections into your XIB/NIB file.
-1.  Load the NIB file at runtime.
-1.  Access the outlet variable.
+1. Add the **outlet declaration** to your **File's owner**.
+1. Connect your control to the **File's owner**.
+1. Store the UI plus the connections into your XIB/NIB file.
+1. Load the NIB file at runtime.
+1. Access the outlet variable.
 
 
 The steps (1) through (3) are covered in Apple's documentation for building

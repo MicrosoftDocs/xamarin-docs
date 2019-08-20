@@ -111,21 +111,21 @@ To add a new window, do the following:
 1. In the **Solution Explorer**, open the `Main.storyboard` file for editing in Xcode's Interface Builder.
 2. Drag a new **View Controller** into the Design Surface:
 
-	[![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
+    [![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
 3. In the **Identity Inspector**, enter `CustomDialogController` for the **Class Name**: 
 
-	[![](dialog-images/new02.png "Setting the class name")](dialog-images/new02.png#lightbox)
+    [![](dialog-images/new02.png "Setting the class name")](dialog-images/new02.png#lightbox)
 4. Switch back to Visual Studio for Mac, allow it to sync with Xcode and create the `CustomDialogController.h` file.
 5. Return to Xcode and design your interface: 
 
-	[![](dialog-images/new03.png "Designing the UI in Xcode")](dialog-images/new03.png#lightbox)
+    [![](dialog-images/new03.png "Designing the UI in Xcode")](dialog-images/new03.png#lightbox)
 6. Create a **Modal Segue** from the Main Window of your app to the new View Controller by control-dragging from the UI element that will open the dialog to the dialog's window. Assign the **Identifier** `ModalSegue`: 
 
-	[![](dialog-images/new06.png "A modal segue")](dialog-images/new06.png#lightbox)
-6. Wire-up any **Actions** and **Outlets**: 
+    [![](dialog-images/new06.png "A modal segue")](dialog-images/new06.png#lightbox)
+7. Wire-up any **Actions** and **Outlets**: 
 
-	[![](dialog-images/new04.png "Configuring an Action")](dialog-images/new04.png#lightbox)
-6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
+    [![](dialog-images/new04.png "Configuring an Action")](dialog-images/new04.png#lightbox)
+8. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 Make the `CustomDialogController.cs` file look like the following:
 
@@ -136,82 +136,82 @@ using AppKit;
 
 namespace MacDialog
 {
-	public partial class CustomDialogController : NSViewController
-	{
-		#region Private Variables
-		private string _dialogTitle = "Title";
-		private string _dialogDescription = "Description";
-		private NSViewController _presentor;
-		#endregion
+    public partial class CustomDialogController : NSViewController
+    {
+        #region Private Variables
+        private string _dialogTitle = "Title";
+        private string _dialogDescription = "Description";
+        private NSViewController _presentor;
+        #endregion
 
-		#region Computed Properties
-		public string DialogTitle {
-			get { return _dialogTitle; }
-			set { _dialogTitle = value; }
-		}
+        #region Computed Properties
+        public string DialogTitle {
+            get { return _dialogTitle; }
+            set { _dialogTitle = value; }
+        }
 
-		public string DialogDescription {
-			get { return _dialogDescription; }
-			set { _dialogDescription = value; }
-		}
+        public string DialogDescription {
+            get { return _dialogDescription; }
+            set { _dialogDescription = value; }
+        }
 
-		public NSViewController Presentor {
-			get { return _presentor; }
-			set { _presentor = value; }
-		}
-		#endregion
+        public NSViewController Presentor {
+            get { return _presentor; }
+            set { _presentor = value; }
+        }
+        #endregion
 
-		#region Constructors
-		public CustomDialogController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructors
+        public CustomDialogController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewWillAppear ()
-		{
-			base.ViewWillAppear ();
+        #region Override Methods
+        public override void ViewWillAppear ()
+        {
+            base.ViewWillAppear ();
 
-			// Set initial title and description
-			Title.StringValue = DialogTitle;
-			Description.StringValue = DialogDescription;
-		}
-		#endregion
+            // Set initial title and description
+            Title.StringValue = DialogTitle;
+            Description.StringValue = DialogDescription;
+        }
+        #endregion
 
-		#region Private Methods
-		private void CloseDialog() {
-			Presentor.DismissViewController (this);
-		}
-		#endregion
+        #region Private Methods
+        private void CloseDialog() {
+            Presentor.DismissViewController (this);
+        }
+        #endregion
 
-		#region Custom Actions
-		partial void AcceptDialog (Foundation.NSObject sender) {
-			RaiseDialogAccepted();
-			CloseDialog();
-		}
+        #region Custom Actions
+        partial void AcceptDialog (Foundation.NSObject sender) {
+            RaiseDialogAccepted();
+            CloseDialog();
+        }
 
-		partial void CancelDialog (Foundation.NSObject sender) {
-			RaiseDialogCanceled();
-			CloseDialog();
-		}
-		#endregion
+        partial void CancelDialog (Foundation.NSObject sender) {
+            RaiseDialogCanceled();
+            CloseDialog();
+        }
+        #endregion
 
-		#region Events
-		public EventHandler DialogAccepted;
+        #region Events
+        public EventHandler DialogAccepted;
 
-		internal void RaiseDialogAccepted() {
-			if (this.DialogAccepted != null)
-				this.DialogAccepted (this, EventArgs.Empty);
-		}
+        internal void RaiseDialogAccepted() {
+            if (this.DialogAccepted != null)
+                this.DialogAccepted (this, EventArgs.Empty);
+        }
 
-		public EventHandler DialogCanceled;
+        public EventHandler DialogCanceled;
 
-		internal void RaiseDialogCanceled() {
-			if (this.DialogCanceled != null)
-				this.DialogCanceled (this, EventArgs.Empty);
-		}
-		#endregion
-	}
+        internal void RaiseDialogCanceled() {
+            if (this.DialogCanceled != null)
+                this.DialogCanceled (this, EventArgs.Empty);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -222,21 +222,21 @@ Next, edit the `ViewController.cs` file, override the `PrepareForSegue` method a
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 {
-	base.PrepareForSegue (segue, sender);
+    base.PrepareForSegue (segue, sender);
 
-	// Take action based on the segue name
-	switch (segue.Identifier) {
-	case "ModalSegue":
-		var dialog = segue.DestinationController as CustomDialogController;
-		dialog.DialogTitle = "MacDialog";
-		dialog.DialogDescription = "This is a sample dialog.";
-		dialog.DialogAccepted += (s, e) => {
-			Console.WriteLine ("Dialog accepted");
-			DismissViewController (dialog);
-		};
-		dialog.Presentor = this;
-		break;
-	}
+    // Take action based on the segue name
+    switch (segue.Identifier) {
+    case "ModalSegue":
+        var dialog = segue.DestinationController as CustomDialogController;
+        dialog.DialogTitle = "MacDialog";
+        dialog.DialogDescription = "This is a sample dialog.";
+        dialog.DialogAccepted += (s, e) => {
+            Console.WriteLine ("Dialog accepted");
+            DismissViewController (dialog);
+        };
+        dialog.Presentor = this;
+        break;
+    }
 }
 ```
 
@@ -259,20 +259,20 @@ To create a Custom Sheet in Xamarin.Mac, let's do the following:
 1. In the **Solution Explorer**, open the `Main.storyboard` file for editing in Xcode's Interface Builder.
 2. Drag a new **View Controller** into the Design Surface:
 
-	[![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
-2. Design your user interface:
+    [![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
+3. Design your user interface:
 
-	[![](dialog-images/sheet01.png "The UI design")](dialog-images/sheet01.png#lightbox)
-3. Create a **Sheet Segue** from your Main Window to the new View Controller: 
+    [![](dialog-images/sheet01.png "The UI design")](dialog-images/sheet01.png#lightbox)
+4. Create a **Sheet Segue** from your Main Window to the new View Controller: 
 
-	[![](dialog-images/sheet02.png "Selecting the Sheet segue type")](dialog-images/sheet02.png#lightbox)
-4. In the **Identity Inspector**, name the View Controller's **Class** `SheetViewController`: 
+    [![](dialog-images/sheet02.png "Selecting the Sheet segue type")](dialog-images/sheet02.png#lightbox)
+5. In the **Identity Inspector**, name the View Controller's **Class** `SheetViewController`: 
 
-	[![](dialog-images/sheet03.png "Setting the class name")](dialog-images/sheet03.png#lightbox)
-5. Define any needed **Outlets** and **Actions**: 
+    [![](dialog-images/sheet03.png "Setting the class name")](dialog-images/sheet03.png#lightbox)
+6. Define any needed **Outlets** and **Actions**: 
 
-	[![](dialog-images/sheet04.png "Defining the required Outlets and Actions")](dialog-images/sheet04.png#lightbox)
-6. Save your changes and return to Visual Studio for Mac to sync.
+    [![](dialog-images/sheet04.png "Defining the required Outlets and Actions")](dialog-images/sheet04.png#lightbox)
+7. Save your changes and return to Visual Studio for Mac to sync.
 
 Next, edit the `SheetViewController.cs` file and make it look like the following:
 
@@ -283,90 +283,90 @@ using AppKit;
 
 namespace MacDialog
 {
-	public partial class SheetViewController : NSViewController
-	{
-		#region Private Variables
-		private string _userName = "";
-		private string _password = "";
-		private NSViewController _presentor;
-		#endregion
+    public partial class SheetViewController : NSViewController
+    {
+        #region Private Variables
+        private string _userName = "";
+        private string _password = "";
+        private NSViewController _presentor;
+        #endregion
 
-		#region Computed Properties
-		public string UserName {
-			get { return _userName; }
-			set { _userName = value; }
-		}
+        #region Computed Properties
+        public string UserName {
+            get { return _userName; }
+            set { _userName = value; }
+        }
 
-		public string Password {
-			get { return _password;}
-			set { _password = value;}
-		}
+        public string Password {
+            get { return _password;}
+            set { _password = value;}
+        }
 
-		public NSViewController Presentor {
-			get { return _presentor; }
-			set { _presentor = value; }
-		}
-		#endregion
+        public NSViewController Presentor {
+            get { return _presentor; }
+            set { _presentor = value; }
+        }
+        #endregion
 
-		#region Constructors
-		public SheetViewController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructors
+        public SheetViewController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewWillAppear ()
-		{
-			base.ViewWillAppear ();
+        #region Override Methods
+        public override void ViewWillAppear ()
+        {
+            base.ViewWillAppear ();
 
-			// Set initial values
-			NameField.StringValue = UserName;
-			PasswordField.StringValue = Password;
+            // Set initial values
+            NameField.StringValue = UserName;
+            PasswordField.StringValue = Password;
 
-			// Wireup events
-			NameField.Changed += (sender, e) => {
-				UserName = NameField.StringValue;
-			};
-			PasswordField.Changed += (sender, e) => {
-				Password = PasswordField.StringValue;
-			};
-		}
-		#endregion
+            // Wireup events
+            NameField.Changed += (sender, e) => {
+                UserName = NameField.StringValue;
+            };
+            PasswordField.Changed += (sender, e) => {
+                Password = PasswordField.StringValue;
+            };
+        }
+        #endregion
 
-		#region Private Methods
-		private void CloseSheet() {
-			Presentor.DismissViewController (this);
-		}
-		#endregion
+        #region Private Methods
+        private void CloseSheet() {
+            Presentor.DismissViewController (this);
+        }
+        #endregion
 
-		#region Custom Actions
-		partial void AcceptSheet (Foundation.NSObject sender) {
-			RaiseSheetAccepted();
-			CloseSheet();
-		}
+        #region Custom Actions
+        partial void AcceptSheet (Foundation.NSObject sender) {
+            RaiseSheetAccepted();
+            CloseSheet();
+        }
 
-		partial void CancelSheet (Foundation.NSObject sender) {
-			RaiseSheetCanceled();
-			CloseSheet();
-		}
-		#endregion
+        partial void CancelSheet (Foundation.NSObject sender) {
+            RaiseSheetCanceled();
+            CloseSheet();
+        }
+        #endregion
 
-		#region Events
-		public EventHandler SheetAccepted;
+        #region Events
+        public EventHandler SheetAccepted;
 
-		internal void RaiseSheetAccepted() {
-			if (this.SheetAccepted != null)
-				this.SheetAccepted (this, EventArgs.Empty);
-		}
+        internal void RaiseSheetAccepted() {
+            if (this.SheetAccepted != null)
+                this.SheetAccepted (this, EventArgs.Empty);
+        }
 
-		public EventHandler SheetCanceled;
+        public EventHandler SheetCanceled;
 
-		internal void RaiseSheetCanceled() {
-			if (this.SheetCanceled != null)
-				this.SheetCanceled (this, EventArgs.Empty);
-		}
-		#endregion
-	}
+        internal void RaiseSheetCanceled() {
+            if (this.SheetCanceled != null)
+                this.SheetCanceled (this, EventArgs.Empty);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -375,28 +375,28 @@ Next, edit the `ViewController.cs` file, edit the `PrepareForSegue` method and m
 ```csharp
 public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 {
-	base.PrepareForSegue (segue, sender);
+    base.PrepareForSegue (segue, sender);
 
-	// Take action based on the segue name
-	switch (segue.Identifier) {
-	case "ModalSegue":
-		var dialog = segue.DestinationController as CustomDialogController;
-		dialog.DialogTitle = "MacDialog";
-		dialog.DialogDescription = "This is a sample dialog.";
-		dialog.DialogAccepted += (s, e) => {
-			Console.WriteLine ("Dialog accepted");
-			DismissViewController (dialog);
-		};
-		dialog.Presentor = this;
-		break;
-	case "SheetSegue":
-		var sheet = segue.DestinationController as SheetViewController;
-		sheet.SheetAccepted += (s, e) => {
-			Console.WriteLine ("User Name: {0} Password: {1}", sheet.UserName, sheet.Password);
-		};
-		sheet.Presentor = this;
-		break;
-	}
+    // Take action based on the segue name
+    switch (segue.Identifier) {
+    case "ModalSegue":
+        var dialog = segue.DestinationController as CustomDialogController;
+        dialog.DialogTitle = "MacDialog";
+        dialog.DialogDescription = "This is a sample dialog.";
+        dialog.DialogAccepted += (s, e) => {
+            Console.WriteLine ("Dialog accepted");
+            DismissViewController (dialog);
+        };
+        dialog.Presentor = this;
+        break;
+    case "SheetSegue":
+        var sheet = segue.DestinationController as SheetViewController;
+        sheet.SheetAccepted += (s, e) => {
+            Console.WriteLine ("User Name: {0} Password: {1}", sheet.UserName, sheet.Password);
+        };
+        sheet.Presentor = this;
+        break;
+    }
 }
 ```
 
@@ -417,54 +417,54 @@ using Foundation;
 
 namespace MacWindows
 {
-	[Register("ReplaceViewSeque")]
-	public class ReplaceViewSeque : NSStoryboardSegue
-	{
-		#region Constructors
-		public ReplaceViewSeque() {
+    [Register("ReplaceViewSeque")]
+    public class ReplaceViewSeque : NSStoryboardSegue
+    {
+        #region Constructors
+        public ReplaceViewSeque() {
 
-		}
+        }
 
-		public ReplaceViewSeque (string identifier, NSObject sourceController, NSObject destinationController) : base(identifier,sourceController,destinationController) {
+        public ReplaceViewSeque (string identifier, NSObject sourceController, NSObject destinationController) : base(identifier,sourceController,destinationController) {
 
-		}
+        }
 
-		public ReplaceViewSeque (IntPtr handle) : base(handle) {
-		}
+        public ReplaceViewSeque (IntPtr handle) : base(handle) {
+        }
 
-		public ReplaceViewSeque (NSObjectFlag x) : base(x) {
-		}
-		#endregion
+        public ReplaceViewSeque (NSObjectFlag x) : base(x) {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void Perform ()
-		{
-			// Cast the source and destination controllers
-			var source = SourceController as NSViewController;
-			var destination = DestinationController as NSViewController;
+        #region Override Methods
+        public override void Perform ()
+        {
+            // Cast the source and destination controllers
+            var source = SourceController as NSViewController;
+            var destination = DestinationController as NSViewController;
 
-			// Is there a source?
-			if (source == null) {
-				// No, get the current key window
-				var window = NSApplication.SharedApplication.KeyWindow;
+            // Is there a source?
+            if (source == null) {
+                // No, get the current key window
+                var window = NSApplication.SharedApplication.KeyWindow;
 
-				// Swap the controllers
-				window.ContentViewController = destination;
+                // Swap the controllers
+                window.ContentViewController = destination;
 
-				// Release memory
-				window.ContentViewController?.RemoveFromParentViewController ();
-			} else {
-				// Swap the controllers
-				source.View.Window.ContentViewController = destination;
+                // Release memory
+                window.ContentViewController?.RemoveFromParentViewController ();
+            } else {
+                // Swap the controllers
+                source.View.Window.ContentViewController = destination;
 
-				// Release memory
-				source.RemoveFromParentViewController ();
-			}
-		
-		}
-		#endregion
+                // Release memory
+                source.RemoveFromParentViewController ();
+            }
+        
+        }
+        #endregion
 
-	}
+    }
 
 }
 ```
@@ -476,31 +476,31 @@ To add a new window, do the following:
 1. In the **Solution Explorer**, open the `Main.storyboard` file for editing in Xcode's Interface Builder.
 2. Drag a new **Window Controller** into the Design Surface:
 
-	[![](dialog-images/pref01.png "Select a Window Controller from the Library")](dialog-images/pref01.png#lightbox)
+    [![](dialog-images/pref01.png "Select a Window Controller from the Library")](dialog-images/pref01.png#lightbox)
 3. Arrange the Window near the **Menu Bar** designer:
 
-	[![](dialog-images/pref02.png "Adding the new Window")](dialog-images/pref02.png#lightbox)
+    [![](dialog-images/pref02.png "Adding the new Window")](dialog-images/pref02.png#lightbox)
 4. Create copies of the attached View Controller as there will be tabs in your preference view:
 
-	[![](dialog-images/pref03.png "Adding the required View Controllers")](dialog-images/pref03.png#lightbox)
+    [![](dialog-images/pref03.png "Adding the required View Controllers")](dialog-images/pref03.png#lightbox)
 5. Drag a new **Toolbar Controller** from the **Library**:
 
-	[![](dialog-images/pref04.png "Select a Toolbar Controller from the Library")](dialog-images/pref04.png#lightbox)
+    [![](dialog-images/pref04.png "Select a Toolbar Controller from the Library")](dialog-images/pref04.png#lightbox)
 6. And drop it on the Window in the Design Surface:
 
-	[![](dialog-images/pref05.png "Adding a new Toolbar Controller")](dialog-images/pref05.png#lightbox)
+    [![](dialog-images/pref05.png "Adding a new Toolbar Controller")](dialog-images/pref05.png#lightbox)
 7. Layout the design of your toolbar:
 
-	[![](dialog-images/pref06.png "Layout the toolbar")](dialog-images/pref06.png#lightbox)
+    [![](dialog-images/pref06.png "Layout the toolbar")](dialog-images/pref06.png#lightbox)
 8. Control-Click and drag from each **Toolbar Button** to the Views you created above. Select a **Custom** segue type:
 
-	[![](dialog-images/pref07.png "Setting the segue type")](dialog-images/pref07.png#lightbox)
+    [![](dialog-images/pref07.png "Setting the segue type")](dialog-images/pref07.png#lightbox)
 9. Select the new Segue and set the **Class** to `ReplaceViewSegue`:
 
-	[![](dialog-images/pref08.png "Setting the segue class")](dialog-images/pref08.png#lightbox)
+    [![](dialog-images/pref08.png "Setting the segue class")](dialog-images/pref08.png#lightbox)
 10. In the **Menubar Designer** on the Design Surface, from the Application Menu select **Preferences...**, control-click and drag to the Preferences Window to create a **Show** segue:
 
-	[![](dialog-images/pref09.png "Setting the segue type")](dialog-images/pref09.png#lightbox)
+    [![](dialog-images/pref09.png "Setting the segue type")](dialog-images/pref09.png#lightbox)
 11. Save your changes and return to Visual Studio for Mac to sync.
 
 If we run the code and select the **Preferences...** from the **Application Menu**, the window will be displayed:
@@ -526,155 +526,155 @@ using AppKit;
 
 namespace SourceWriter
 {
-	[Register("AppPreferences")]
-	public class AppPreferences : NSObject
-	{
-		#region Computed Properties
-		[Export("DefaultLanguage")]
-		public int DefaultLanguage {
-			get { 
-				var value = LoadInt ("DefaultLanguage", 0);
-				return value; 
-			}
-			set {
-				WillChangeValue ("DefaultLanguage");
-				SaveInt ("DefaultLanguage", value, true);
-				DidChangeValue ("DefaultLanguage");
-			}
-		}
+    [Register("AppPreferences")]
+    public class AppPreferences : NSObject
+    {
+        #region Computed Properties
+        [Export("DefaultLanguage")]
+        public int DefaultLanguage {
+            get { 
+                var value = LoadInt ("DefaultLanguage", 0);
+                return value; 
+            }
+            set {
+                WillChangeValue ("DefaultLanguage");
+                SaveInt ("DefaultLanguage", value, true);
+                DidChangeValue ("DefaultLanguage");
+            }
+        }
 
-		[Export("SmartLinks")]
-		public bool SmartLinks {
-			get { return LoadBool ("SmartLinks", true); }
-			set {
-				WillChangeValue ("SmartLinks");
-				SaveBool ("SmartLinks", value, true);
-				DidChangeValue ("SmartLinks");
-			}
-		}
+        [Export("SmartLinks")]
+        public bool SmartLinks {
+            get { return LoadBool ("SmartLinks", true); }
+            set {
+                WillChangeValue ("SmartLinks");
+                SaveBool ("SmartLinks", value, true);
+                DidChangeValue ("SmartLinks");
+            }
+        }
 
-		// Define any other required user preferences in the same fashion
-		...
+        // Define any other required user preferences in the same fashion
+        ...
 
-		[Export("EditorBackgroundColor")]
-		public NSColor EditorBackgroundColor {
-			get { return LoadColor("EditorBackgroundColor", NSColor.White); }
-			set {
-				WillChangeValue ("EditorBackgroundColor");
-				SaveColor ("EditorBackgroundColor", value, true);
-				DidChangeValue ("EditorBackgroundColor");
-			}
-		}
-		#endregion
+        [Export("EditorBackgroundColor")]
+        public NSColor EditorBackgroundColor {
+            get { return LoadColor("EditorBackgroundColor", NSColor.White); }
+            set {
+                WillChangeValue ("EditorBackgroundColor");
+                SaveColor ("EditorBackgroundColor", value, true);
+                DidChangeValue ("EditorBackgroundColor");
+            }
+        }
+        #endregion
 
-		#region Constructors
-		public AppPreferences ()
-		{
-		}
-		#endregion
+        #region Constructors
+        public AppPreferences ()
+        {
+        }
+        #endregion
 
-		#region Public Methods
-		public int LoadInt(string key, int defaultValue) {
-			// Attempt to read int
-			var number = NSUserDefaults.StandardUserDefaults.IntForKey(key);
+        #region Public Methods
+        public int LoadInt(string key, int defaultValue) {
+            // Attempt to read int
+            var number = NSUserDefaults.StandardUserDefaults.IntForKey(key);
 
-			// Take action based on value
-			if (number == null) {
-				return defaultValue;
-			} else {
-				return (int)number;
-			}
-		}
-			
-		public void SaveInt(string key, int value, bool sync) {
-			NSUserDefaults.StandardUserDefaults.SetInt(value, key);
-			if (sync) NSUserDefaults.StandardUserDefaults.Synchronize ();
-		}
+            // Take action based on value
+            if (number == null) {
+                return defaultValue;
+            } else {
+                return (int)number;
+            }
+        }
+            
+        public void SaveInt(string key, int value, bool sync) {
+            NSUserDefaults.StandardUserDefaults.SetInt(value, key);
+            if (sync) NSUserDefaults.StandardUserDefaults.Synchronize ();
+        }
 
-		public bool LoadBool(string key, bool defaultValue) {
-			// Attempt to read int
-			var value = NSUserDefaults.StandardUserDefaults.BoolForKey(key);
+        public bool LoadBool(string key, bool defaultValue) {
+            // Attempt to read int
+            var value = NSUserDefaults.StandardUserDefaults.BoolForKey(key);
 
-			// Take action based on value
-			if (value == null) {
-				return defaultValue;
-			} else {
-				return value;
-			}
-		}
+            // Take action based on value
+            if (value == null) {
+                return defaultValue;
+            } else {
+                return value;
+            }
+        }
 
-		public void SaveBool(string key, bool value, bool sync) {
-			NSUserDefaults.StandardUserDefaults.SetBool(value, key);
-			if (sync) NSUserDefaults.StandardUserDefaults.Synchronize ();
-		}
+        public void SaveBool(string key, bool value, bool sync) {
+            NSUserDefaults.StandardUserDefaults.SetBool(value, key);
+            if (sync) NSUserDefaults.StandardUserDefaults.Synchronize ();
+        }
 
-		public string NSColorToHexString(NSColor color, bool withAlpha) {
-			//Break color into pieces
-			nfloat red=0, green=0, blue=0, alpha=0;
-			color.GetRgba (out red, out green, out blue, out alpha);
+        public string NSColorToHexString(NSColor color, bool withAlpha) {
+            //Break color into pieces
+            nfloat red=0, green=0, blue=0, alpha=0;
+            color.GetRgba (out red, out green, out blue, out alpha);
 
-			// Adjust to byte
-			alpha *= 255;
-			red *= 255;
-			green *= 255;
-			blue *= 255;
+            // Adjust to byte
+            alpha *= 255;
+            red *= 255;
+            green *= 255;
+            blue *= 255;
 
-			//With the alpha value?
-			if (withAlpha) {
-				return String.Format ("#{0:X2}{1:X2}{2:X2}{3:X2}", (int)alpha, (int)red, (int)green, (int)blue);
-			} else {
-				return String.Format ("#{0:X2}{1:X2}{2:X2}", (int)red, (int)green, (int)blue);
-			}
-		}
+            //With the alpha value?
+            if (withAlpha) {
+                return String.Format ("#{0:X2}{1:X2}{2:X2}{3:X2}", (int)alpha, (int)red, (int)green, (int)blue);
+            } else {
+                return String.Format ("#{0:X2}{1:X2}{2:X2}", (int)red, (int)green, (int)blue);
+            }
+        }
 
-		public NSColor NSColorFromHexString (string hexValue)
-		{
-			var colorString = hexValue.Replace ("#", "");
-			float red, green, blue, alpha;
+        public NSColor NSColorFromHexString (string hexValue)
+        {
+            var colorString = hexValue.Replace ("#", "");
+            float red, green, blue, alpha;
 
-			// Convert color based on length
-			switch (colorString.Length) {
-			case 3 : // #RGB
-				red = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(0, 1)), 16) / 255f;
-				green = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(1, 1)), 16) / 255f;
-				blue = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(2, 1)), 16) / 255f;
-				return NSColor.FromRgba(red, green, blue, 1.0f);
-			case 6 : // #RRGGBB
-				red = Convert.ToInt32(colorString.Substring(0, 2), 16) / 255f;
-				green = Convert.ToInt32(colorString.Substring(2, 2), 16) / 255f;
-				blue = Convert.ToInt32(colorString.Substring(4, 2), 16) / 255f;
-				return NSColor.FromRgba(red, green, blue, 1.0f);
-			case 8 : // #AARRGGBB
-				alpha = Convert.ToInt32(colorString.Substring(0, 2), 16) / 255f;
-				red = Convert.ToInt32(colorString.Substring(2, 2), 16) / 255f;
-				green = Convert.ToInt32(colorString.Substring(4, 2), 16) / 255f;
-				blue = Convert.ToInt32(colorString.Substring(6, 2), 16) / 255f;
-				return NSColor.FromRgba(red, green, blue, alpha);
-			default :
-				throw new ArgumentOutOfRangeException(string.Format("Invalid color value '{0}'. It should be a hex value of the form #RBG, #RRGGBB or #AARRGGBB", hexValue));
-			}
-		}
+            // Convert color based on length
+            switch (colorString.Length) {
+            case 3 : // #RGB
+                red = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(0, 1)), 16) / 255f;
+                green = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(1, 1)), 16) / 255f;
+                blue = Convert.ToInt32(string.Format("{0}{0}", colorString.Substring(2, 1)), 16) / 255f;
+                return NSColor.FromRgba(red, green, blue, 1.0f);
+            case 6 : // #RRGGBB
+                red = Convert.ToInt32(colorString.Substring(0, 2), 16) / 255f;
+                green = Convert.ToInt32(colorString.Substring(2, 2), 16) / 255f;
+                blue = Convert.ToInt32(colorString.Substring(4, 2), 16) / 255f;
+                return NSColor.FromRgba(red, green, blue, 1.0f);
+            case 8 : // #AARRGGBB
+                alpha = Convert.ToInt32(colorString.Substring(0, 2), 16) / 255f;
+                red = Convert.ToInt32(colorString.Substring(2, 2), 16) / 255f;
+                green = Convert.ToInt32(colorString.Substring(4, 2), 16) / 255f;
+                blue = Convert.ToInt32(colorString.Substring(6, 2), 16) / 255f;
+                return NSColor.FromRgba(red, green, blue, alpha);
+            default :
+                throw new ArgumentOutOfRangeException(string.Format("Invalid color value '{0}'. It should be a hex value of the form #RBG, #RRGGBB or #AARRGGBB", hexValue));
+            }
+        }
 
-		public NSColor LoadColor(string key, NSColor defaultValue) {
+        public NSColor LoadColor(string key, NSColor defaultValue) {
 
-			// Attempt to read color
-			var hex = NSUserDefaults.StandardUserDefaults.StringForKey(key);
+            // Attempt to read color
+            var hex = NSUserDefaults.StandardUserDefaults.StringForKey(key);
 
-			// Take action based on value
-			if (hex == null) {
-				return defaultValue;
-			} else {
-				return NSColorFromHexString (hex);
-			}
-		}
+            // Take action based on value
+            if (hex == null) {
+                return defaultValue;
+            } else {
+                return NSColorFromHexString (hex);
+            }
+        }
 
-		public void SaveColor(string key, NSColor color, bool sync) {
-			// Save to default
-			NSUserDefaults.StandardUserDefaults.SetString(NSColorToHexString(color,true), key);
-			if (sync) NSUserDefaults.StandardUserDefaults.Synchronize ();
-		}
-		#endregion
-	}
+        public void SaveColor(string key, NSColor color, bool sync) {
+            // Save to default
+            NSUserDefaults.StandardUserDefaults.SetString(NSColorToHexString(color,true), key);
+            if (sync) NSUserDefaults.StandardUserDefaults.Synchronize ();
+        }
+        #endregion
+    }
 }
 ```
 
@@ -690,22 +690,22 @@ using System;
 
 namespace SourceWriter
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : NSApplicationDelegate
-	{
-		#region Computed Properties
-		public int NewWindowNumber { get; set;} = -1;
+    [Register ("AppDelegate")]
+    public class AppDelegate : NSApplicationDelegate
+    {
+        #region Computed Properties
+        public int NewWindowNumber { get; set;} = -1;
 
-		public AppPreferences Preferences { get; set; } = new AppPreferences();
-		#endregion
+        public AppPreferences Preferences { get; set; } = new AppPreferences();
+        #endregion
 
-		#region Constructors
-		public AppDelegate ()
-		{
-		}
-		#endregion
-		
-		...
+        #region Constructors
+        public AppDelegate ()
+        {
+        }
+        #endregion
+        
+        ...
 ```
 
 <a name="Wiring-Preferences-to-Preference-Views" />
@@ -725,27 +725,27 @@ using AppKit;
 
 namespace SourceWriter
 {
-	public partial class EditorPrefsController : NSViewController
-	{
-		#region Application Access
-		public static AppDelegate App {
-			get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
-		}
-		#endregion
+    public partial class EditorPrefsController : NSViewController
+    {
+        #region Application Access
+        public static AppDelegate App {
+            get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
+        }
+        #endregion
 
-		#region Computed Properties
-		[Export("Preferences")]
-		public AppPreferences Preferences {
-			get { return App.Preferences; }
-		}
-		#endregion
+        #region Computed Properties
+        [Export("Preferences")]
+        public AppPreferences Preferences {
+            get { return App.Preferences; }
+        }
+        #endregion
 
-		#region Constructors
-		public EditorPrefsController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
-	}
+        #region Constructors
+        public EditorPrefsController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
+    }
 }
 ```
 
@@ -770,7 +770,7 @@ For any Window that will be consuming App Preferences, add the following helper 
 ```csharp
 #region Application Access
 public static AppDelegate App {
-	get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
+    get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
 }
 #endregion
 ```
@@ -780,10 +780,10 @@ Next, add a class to configure the contents or behavior based on the user's pref
 ```csharp
 public void ConfigureEditor() {
 
-	// General Preferences
-	TextEditor.AutomaticLinkDetectionEnabled = App.Preferences.SmartLinks;
-	TextEditor.AutomaticQuoteSubstitutionEnabled = App.Preferences.SmartQuotes;
-	...
+    // General Preferences
+    TextEditor.AutomaticLinkDetectionEnabled = App.Preferences.SmartLinks;
+    TextEditor.AutomaticQuoteSubstitutionEnabled = App.Preferences.SmartQuotes;
+    ...
 
 }
 ``` 
@@ -793,11 +793,11 @@ You need to call the configuration method when the Window is first opened to mak
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// Configure editor from user preferences
-	ConfigureEditor ();
-	...
+    // Configure editor from user preferences
+    ConfigureEditor ();
+    ...
 }
 ```
 
@@ -806,14 +806,14 @@ Next, edit the `AppDelegate.cs` file and add the following method to apply any p
 ```csharp
 public void UpdateWindowPreferences() {
 
-	// Process all open windows
-	for(int n=0; n<NSApplication.SharedApplication.Windows.Length; ++n) {
-		var content = NSApplication.SharedApplication.Windows[n].ContentViewController as ViewController;
-		if (content != null ) {
-			// Reformat all text
-			content.ConfigureEditor ();
-		}
-	}
+    // Process all open windows
+    for(int n=0; n<NSApplication.SharedApplication.Windows.Length; ++n) {
+        var content = NSApplication.SharedApplication.Windows[n].ContentViewController as ViewController;
+        if (content != null ) {
+            // Reformat all text
+            content.ConfigureEditor ();
+        }
+    }
 
 }
 ```
@@ -828,38 +828,38 @@ using Foundation;
 
 namespace SourceWriter
 {
-	public class PreferenceWindowDelegate : NSWindowDelegate
-	{
-		#region Application Access
-		public static AppDelegate App {
-			get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
-		}
-		#endregion
+    public class PreferenceWindowDelegate : NSWindowDelegate
+    {
+        #region Application Access
+        public static AppDelegate App {
+            get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
+        }
+        #endregion
 
-		#region Computed Properties
-		public NSWindow Window { get; set;}
-		#endregion
+        #region Computed Properties
+        public NSWindow Window { get; set;}
+        #endregion
 
-		#region constructors
-		public PreferenceWindowDelegate (NSWindow window)
-		{
-			// Initialize
-			this.Window = window;
+        #region constructors
+        public PreferenceWindowDelegate (NSWindow window)
+        {
+            // Initialize
+            this.Window = window;
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Override Methods
-		public override bool WindowShouldClose (Foundation.NSObject sender)
-		{
-			
-			// Apply any changes to open windows
-			App.UpdateWindowPreferences();
+        #region Override Methods
+        public override bool WindowShouldClose (Foundation.NSObject sender)
+        {
+            
+            // Apply any changes to open windows
+            App.UpdateWindowPreferences();
 
-			return true;
-		}
-		#endregion
-	}
+            return true;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -874,25 +874,25 @@ using AppKit;
 
 namespace SourceWriter
 {
-	public partial class PreferenceWindowController : NSWindowController
-	{
-		#region Constructors
-		public PreferenceWindowController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class PreferenceWindowController : NSWindowController
+    {
+        #region Constructors
+        public PreferenceWindowController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void WindowDidLoad ()
-		{
-			base.WindowDidLoad ();
+        #region Override Methods
+        public override void WindowDidLoad ()
+        {
+            base.WindowDidLoad ();
 
-			// Initialize
-			Window.Delegate = new PreferenceWindowDelegate(Window);
-			Toolbar.SelectedItemIdentifier = "General";
-		}
-		#endregion
-	}
+            // Initialize
+            Window.Delegate = new PreferenceWindowDelegate(Window);
+            Toolbar.SelectedItemIdentifier = "General";
+        }
+        #endregion
+    }
 }
 ```
 
@@ -913,23 +913,23 @@ dlg.CanChooseDirectories = false;
 dlg.AllowedFileTypes = new string[] { "txt", "html", "md", "css" };
 
 if (dlg.RunModal () == 1) {
-	// Nab the first file
-	var url = dlg.Urls [0];
+    // Nab the first file
+    var url = dlg.Urls [0];
 
-	if (url != null) {
-		var path = url.Path;
+    if (url != null) {
+        var path = url.Path;
 
-		// Create a new window to hold the text
-		var newWindowController = new MainWindowController ();
-		newWindowController.Window.MakeKeyAndOrderFront (this);
+        // Create a new window to hold the text
+        var newWindowController = new MainWindowController ();
+        newWindowController.Window.MakeKeyAndOrderFront (this);
 
-		// Load the text into the window
-		var window = newWindowController.Window as MainWindow;
-		window.Text = File.ReadAllText(path);
-		window.SetTitleWithRepresentedFilename (Path.GetFileName(path));
-		window.RepresentedUrl = url;
+        // Load the text into the window
+        var window = newWindowController.Window as MainWindow;
+        window.Text = File.ReadAllText(path);
+        window.SetTitleWithRepresentedFilename (Path.GetFileName(path));
+        window.RepresentedUrl = url;
 
-	}
+    }
 }
 ```
 
@@ -965,21 +965,21 @@ public bool ShowPrintAsSheet { get; set;} = true;
 
 [Export ("showPrinter:")]
 void ShowDocument (NSObject sender) {
-	var dlg = new NSPrintPanel();
+    var dlg = new NSPrintPanel();
 
-	// Display the print dialog as dialog box
-	if (ShowPrintAsSheet) {
-		dlg.BeginSheet(new NSPrintInfo(),this,this,null,new IntPtr());
-	} else {
-		if (dlg.RunModalWithPrintInfo(new NSPrintInfo()) == 1) {
-			var alert = new NSAlert () {
-				AlertStyle = NSAlertStyle.Critical,
-				InformativeText = "We need to print the document here...",
-				MessageText = "Print Document",
-			};
-			alert.RunModal ();
-		}
-	}
+    // Display the print dialog as dialog box
+    if (ShowPrintAsSheet) {
+        dlg.BeginSheet(new NSPrintInfo(),this,this,null,new IntPtr());
+    } else {
+        if (dlg.RunModalWithPrintInfo(new NSPrintInfo()) == 1) {
+            var alert = new NSAlert () {
+                AlertStyle = NSAlertStyle.Critical,
+                InformativeText = "We need to print the document here...",
+                MessageText = "Print Document",
+            };
+            alert.RunModal ();
+        }
+    }
 }
 
 ```
@@ -997,21 +997,21 @@ The following code will display the Page Layout Dialog:
 ```csharp
 [Export ("showLayout:")]
 void ShowLayout (NSObject sender) {
-	var dlg = new NSPageLayout();
+    var dlg = new NSPageLayout();
 
-	// Display the print dialog as dialog box
-	if (ShowPrintAsSheet) {
-		dlg.BeginSheet (new NSPrintInfo (), this);
-	} else {
-		if (dlg.RunModal () == 1) {
-			var alert = new NSAlert () {
-				AlertStyle = NSAlertStyle.Critical,
-				InformativeText = "We need to print the document here...",
-				MessageText = "Print Document",
-			};
-			alert.RunModal ();
-		}
-	}
+    // Display the print dialog as dialog box
+    if (ShowPrintAsSheet) {
+        dlg.BeginSheet (new NSPrintInfo (), this);
+    } else {
+        if (dlg.RunModal () == 1) {
+            var alert = new NSAlert () {
+                AlertStyle = NSAlertStyle.Critical,
+                InformativeText = "We need to print the document here...",
+                MessageText = "Print Document",
+            };
+            alert.RunModal ();
+        }
+    }
 }
 ```
 
@@ -1040,29 +1040,29 @@ public bool ShowSaveAsSheet { get; set;} = true;
 [Export("saveDocumentAs:")]
 void ShowSaveAs (NSObject sender)
 {
-	var dlg = new NSSavePanel ();
-	dlg.Title = "Save Text File";
-	dlg.AllowedFileTypes = new string[] { "txt", "html", "md", "css" };
+    var dlg = new NSSavePanel ();
+    dlg.Title = "Save Text File";
+    dlg.AllowedFileTypes = new string[] { "txt", "html", "md", "css" };
 
-	if (ShowSaveAsSheet) {
-		dlg.BeginSheet(mainWindowController.Window,(result) => {
-			var alert = new NSAlert () {
-				AlertStyle = NSAlertStyle.Critical,
-				InformativeText = "We need to save the document here...",
-				MessageText = "Save Document",
-			};
-			alert.RunModal ();
-		});
-	} else {
-		if (dlg.RunModal () == 1) {
-			var alert = new NSAlert () {
-				AlertStyle = NSAlertStyle.Critical,
-				InformativeText = "We need to save the document here...",
-				MessageText = "Save Document",
-			};
-			alert.RunModal ();
-		}
-	}
+    if (ShowSaveAsSheet) {
+        dlg.BeginSheet(mainWindowController.Window,(result) => {
+            var alert = new NSAlert () {
+                AlertStyle = NSAlertStyle.Critical,
+                InformativeText = "We need to save the document here...",
+                MessageText = "Save Document",
+            };
+            alert.RunModal ();
+        });
+    } else {
+        if (dlg.RunModal () == 1) {
+            var alert = new NSAlert () {
+                AlertStyle = NSAlertStyle.Critical,
+                InformativeText = "We need to save the document here...",
+                MessageText = "Save Document",
+            };
+            alert.RunModal ();
+        }
+    }
 
 }
 ```
@@ -1095,7 +1095,7 @@ This article has taken a detailed look at working with Modal Windows, Sheets and
 
 ## Related Links
 
-- [MacWindows (sample)](https://developer.xamarin.com/samples/mac/MacWindows/)
+- [MacWindows (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macwindows)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Menus](~/mac/user-interface/menu.md)
 - [Windows](~/mac/user-interface/window.md)

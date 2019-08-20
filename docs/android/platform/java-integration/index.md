@@ -1,5 +1,5 @@
 ---
-title: "Java Integration Overview"
+title: "Java integration with Xamarin.Android"
 description: "The Java ecosystem includes a diverse and immense collection of components. Many of these components can be used to reduce the time it takes to develop an Android application. This document will introduce and provide a high-level overview of some of the ways that developers can use these existing Java components to improve their Xamarin.Android application development experience."
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
@@ -9,32 +9,31 @@ ms.author: crdun
 ms.date: 01/18/2017
 ---
 
-# Java Integration Overview
+# Java integration with Xamarin.Android
 
 _The Java ecosystem includes a diverse and immense collection of components. Many of these components can be used to reduce the time it takes to develop an Android application. This document will introduce and provide a high-level overview of some of the ways that developers can use these existing Java components to improve their Xamarin.Android application development experience._
 
-
 ## Overview
 
-Given the extent of the Java ecosystem, it is very likely that any 
-given functionality required for a Xamarin.Android application has 
-already been coded in Java. Because of this, it is appealing to try and 
-reuse these existing libraries when creating a Xamarin.Android 
-application. 
+Given the extent of the Java ecosystem, it is very likely that any
+given functionality required for a Xamarin.Android application has
+already been coded in Java. Because of this, it is appealing to try and
+reuse these existing libraries when creating a Xamarin.Android
+application.
 
 There are three possible ways to reuse Java libraries in a 
 Xamarin.Android application: 
 
--   **Create a Java Bindings Library** &ndash; With this technique, a 
+- **Create a Java Bindings Library** &ndash; With this technique, a 
     Xamarin.Android project is used to create C# wrappers around the 
     Java types. A Xamarin.Android application can then reference the C# 
     wrappers created by this project, and then use the `.jar` file. 
 
--   **Java Native Interface** &ndash; The *Java Native* *Interface* (JNI) 
+- **Java Native Interface** &ndash; The *Java Native* *Interface* (JNI) 
     is a framework that allows non-Java code (such as C++ or C#) to 
     call or be called by Java code running inside a JVM. 
 
--   **Port the Code** &ndash; This method involves taking the Java source 
+- **Port the Code** &ndash; This method involves taking the Java source 
     code, and then converting it to C#. This can be done manually, or 
     by using an automated tool such as Sharpen. 
 

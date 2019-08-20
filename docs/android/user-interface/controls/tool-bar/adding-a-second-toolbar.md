@@ -98,16 +98,16 @@ This section explains how to add edit menu items to the bottom
 
 To add menu items to a secondary `Toolbar`: 
 
-1.  Add menu icons to the `mipmap-` folders of the app 
+1. Add menu icons to the `mipmap-` folders of the app 
     project (if required).
 
-2.  Define the contents of the menu items by adding an additional 
+2. Define the contents of the menu items by adding an additional 
     menu resource file to **Resources/menu**. 
 
-3.  In the Activity's `OnCreate` method, find the `Toolbar` 
+3. In the Activity's `OnCreate` method, find the `Toolbar` 
     (by calling `FindViewById`) and inflate the `Toolbar`'s menus.
 
-4.  Implement a click handler in `OnCreate` for the new menu items. 
+4. Implement a click handler in `OnCreate` for the new menu items. 
 
 The following sections demonstrate this process in detail: **Cut**, 
 **Copy**, and **Paste** menu items are added to the bottom `Toolbar`. 
@@ -205,7 +205,7 @@ ActionBar.SetDisplayHomeAsUpEnabled (true);
 ActionBar.SetHomeButtonEnabled (true);
 ```
 
-The [Support v7 Toolbar](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/) 
+The [Support v7 Toolbar](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar) 
 code sample demonstrates the **Up** button in action. This sample 
 (which uses the AppCompat library described next) implements a second 
 activity that uses the Toolbar **Up** button for hierarchical 
@@ -235,5 +235,5 @@ rather than to the previous screen.
 
 ## Related Links
 
-- [Lollipop Toolbar (sample)](https://developer.xamarin.com/samples/monodroid/android5.0/Toolbar/)
-- [AppCompat Toolbar (sample)](https://developer.xamarin.com/samples/monodroid/Supportv7/AppCompat/Toolbar/)
+- [Lollipop Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)
+- [AppCompat Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)

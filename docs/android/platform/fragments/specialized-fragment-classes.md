@@ -14,14 +14,14 @@ The Fragments API provides other subclasses that encapsulate some of
 the more common functionality found in applications. These subclasses
 are:
 
--   **ListFragment** &ndash; This Fragment is used to display a list of
+- **ListFragment** &ndash; This Fragment is used to display a list of
     items bound to a datasource such as an array or a cursor.
 
--   **DialogFragment** &ndash; This Fragment is used as a wrapper
+- **DialogFragment** &ndash; This Fragment is used as a wrapper
     around a dialog. The Fragment will display the dialog on top of its
     Activity.
 
--   **PreferenceFragment** &ndash; This Fragment is used to show
+- **PreferenceFragment** &ndash; This Fragment is used to show
     Preference objects as lists.
 
 
@@ -115,9 +115,9 @@ with direct calls on the dialog object. The `DialogFragment` API
 provides each instance with a `Show()` method that is used to display a
 Fragment. There are two ways to get rid of a Fragment:
 
--  Call `DialogFragment.Dismiss()` on the  `DialogFragment` instance. 
+- Call `DialogFragment.Dismiss()` on the  `DialogFragment` instance. 
 
--  Display another `DialogFragment`.
+- Display another `DialogFragment`.
 
 To create a `DialogFragment`, a class inherits from
 `Android.App.DialogFragment,` and then overrides one of the following
@@ -206,7 +206,7 @@ destruction of a Fragment will be called.
 
 Instead of overriding `OnCreateView`, a `DialogFragment` may instead
 override `OnCreateDialog`. This allows an application to create an
-[AlertDialog](https://developer.xamarin.com/api/type/Android.App.AlertDialog/)
+[AlertDialog](xref:Android.App.AlertDialog)
 that is managed by a Fragment. The following code is an example that
 uses the `AlertDialog.Builder` to create a `Dialog`:
 
@@ -234,7 +234,7 @@ public class AlertDialogFragment : DialogFragment
 
 To help manage preferences, the Fragments API provides the
 `PreferenceFragment` subclass. The `PreferenceFragment` is similar to
-the [PreferenceActivity](https://developer.xamarin.com/api/type/Android.Preferences.PreferenceActivity/) &ndash; 
+the [PreferenceActivity](xref:Android.Preferences.PreferenceActivity) &ndash; 
 it will show a hierarchy of preferences to the user in a
 Fragment. As the user interacts with the preferences, they will be
 automatically saved to
@@ -249,7 +249,7 @@ example of a `PreferenceFragment`:
 ### Create A Preference Fragment from a Resource
 
 The preference Fragment may be inflated from an XML resource file by using the
-[PreferenceFragment.AddPreferencesFromResource](https://developer.xamarin.com/api/member/Android.Preferences.PreferenceFragment.AddPreferencesFromResource/p/System.Int32/)
+[PreferenceFragment.AddPreferencesFromResource](xref:Android.Preferences.PreferenceFragment.AddPreferencesFromResource*)
 method. A logical place to call this method in the lifecycle of the
 Fragment would be in the `OnCreate` method.
 
@@ -326,12 +326,12 @@ public class PrefFragment : PreferenceFragment
 
 Another technique for creating a `PreferenceFragment` involves querying
 Activities. Each Activity can use the
-[METADATA\_KEY\_PREFERENCE](https://developer.xamarin.com/api/field/Android.Preferences.PreferenceManager.MetadataKeyPreferences/)
+[METADATA\_KEY\_PREFERENCE](xref:Android.Preferences.PreferenceManager.MetadataKeyPreferences)
 attribute that will point to an XML resource file. In Xamarin.Android,
 this is done by adorning an Activity with the `MetaDataAttribute`, and
 then specifying the resource file to use. The `PreferenceFragment`
 class provides the method
-[AddPreferenceFromIntent](https://developer.xamarin.com/api/member/Android.Preferences.PreferenceFragment.AddPreferencesFromIntent/p/Android.Content.Intent/))
+[AddPreferenceFromIntent](xref:Android.Preferences.PreferenceFragment.AddPreferencesFromIntent*)
 that can be used to query an Activity to find this XML resource and
 inflate a preference hierarchy for it.
 

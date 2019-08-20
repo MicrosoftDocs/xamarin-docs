@@ -34,13 +34,13 @@ Visual Studio includes pre-configured virtual devices that appear in
 the device drop-down menu. For example, in the following Visual Studio
 2017 screenshot, several pre-configured virtual devices are available:
 
--   **VisualStudio\_android-23\_arm\_phone**
+- **VisualStudio\_android-23\_arm\_phone**
 
--   **VisualStudio\_android-23\_arm\_tablet**
+- **VisualStudio\_android-23\_arm\_tablet**
 
--   **VisualStudio\_android-23\_x86\_phone** 
+- **VisualStudio\_android-23\_x86\_phone** 
 
--   **VisualStudio\_android-23\_x86\_tablet** 
+- **VisualStudio\_android-23\_x86\_tablet** 
 
 [![Virtual devices](debug-on-emulator-images/win/01-virtual-devices-sml.png)](debug-on-emulator-images/win/01-virtual-devices.png#lightbox)
 
@@ -76,9 +76,9 @@ Visual Studio for Mac includes pre-configured virtual devices that
 appear in the device drop-down menu. For example, in the following
 screenshot, two pre-configured virtual devices are available:
 
--   **Android\_Accelerated\_x86**
+- **Android\_Accelerated\_x86**
 
--   **Android\_ARMv7a**
+- **Android\_ARMv7a**
 
 [![Virtual devices](debug-on-emulator-images/mac/01-virtual-devices-sml.png)](debug-on-emulator-images/mac/01-virtual-devices.png#lightbox)
 
@@ -149,8 +149,8 @@ close the emulator, it takes a snapshot of the virtual device state so
 that it can be quickly restored from that state when it is restarted.
 To access this feature, you will need the following:
 
--   Android Emulator version 27.0.2 or later
--   Android SDK Tools version 26.1.1 or later
+- Android Emulator version 27.0.2 or later
+- Android SDK Tools version 26.1.1 or later
 
 When the above-listed versions of the emulator and SDK tools are
 installed, the Quick Boot feature is enabled by default. 
@@ -188,10 +188,10 @@ Visual Studio.
 For more information about using the Android Emulator, see
 the following Android Developer topics:
 
--   [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate)
+- [Navigating on the Screen](https://developer.android.com/studio/run/emulator.html#navigate)
 
--   [Performing Basic Tasks in the Emulator](https://developer.android.com/studio/run/emulator.html#tasks)
+- [Performing Basic Tasks in the Emulator](https://developer.android.com/studio/run/emulator.html#tasks)
 
--   [Working with Extended Controls, Settings, and Help](https://developer.android.com/studio/run/emulator.html#extended)
+- [Working with Extended Controls, Settings, and Help](https://developer.android.com/studio/run/emulator.html#extended)
 
--   [Run the emulator with Quick Boot](https://developer.android.com/studio/run/emulator#quickboot)
+- [Run the emulator with Quick Boot](https://developer.android.com/studio/run/emulator#quickboot)

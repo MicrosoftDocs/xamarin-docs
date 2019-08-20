@@ -25,11 +25,11 @@ the application.
 This guide discusses one technique to implement a splash screen in
 an Android application. It covers the following steps:
 
-1.  Creating a drawable resource for the splash screen.
+1. Creating a drawable resource for the splash screen.
 
-2.  Defining a new theme that will display the drawable resource.
+2. Defining a new theme that will display the drawable resource.
 
-3.  Adding a new Activity to the application that will be used as the
+3. Adding a new Activity to the application that will be used as the
     splash screen defined by the theme created in the previous step.
 
 [![Example Xamarin logo splash screen followed by app screen](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
@@ -44,7 +44,7 @@ This guide assumes that the application targets Android API level
 project.
 
 All of the code and XML in this guide may be found in the
-[SplashScreen](https://developer.xamarin.com/samples/monodroid/SplashScreen) sample project for this
+[SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen) sample project for this
 guide.
 
 
@@ -234,14 +234,14 @@ To add a splash screen for landscape mode, use the following steps:
     </layer-list>
     ```
 
-3.  Create the **Resources/values-land** folder if it doesn't already
+3. Create the **Resources/values-land** folder if it doesn't already
     exist.
 
-4.  Add the files **colors.xml** and **style.xml** to **values-land**
+4. Add the files **colors.xml** and **style.xml** to **values-land**
     (these can be copied and modified from the existing
     **values/colors.xml** and **values/style.xml** files).
 
-5.  Modify **values-land/style.xml** so that it uses the landscape
+5. Modify **values-land/style.xml** so that it uses the landscape
     version of the drawable for `windowBackground`. In this example,
     **splash_screen_land.xml** is used:
 
@@ -261,7 +261,7 @@ To add a splash screen for landscape mode, use the following steps:
     </resources>
     ```
 
-6.  Modify **values-land/colors.xml** to configure the colors you want
+6. Modify **values-land/colors.xml** to configure the colors you want
     to use for the landscape version of the splash screen. In this
     example, the splash background color is changed to blue for
     landscape mode:
@@ -277,7 +277,7 @@ To add a splash screen for landscape mode, use the following steps:
     </resources>
     ```
 
-7.  Build and run the app again. Rotate the device to landscape mode while
+7. Build and run the app again. Rotate the device to landscape mode while
     the splash screen is still displayed. The splash screen changes to the
     landscape version:
 
@@ -307,6 +307,6 @@ launch activity.
 
 ## Related Links
 
-- [SplashScreen (sample)](https://developer.xamarin.com/samples/monodroid/SplashScreen)
+- [SplashScreen (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
 - [layer-list Drawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
 - [Material Design Patterns - Launch Screens](https://material.io/design/communication/launch-screen.html#usage)
