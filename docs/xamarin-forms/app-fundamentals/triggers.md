@@ -133,10 +133,11 @@ The example below uses the data binding syntax
 </Button>
 ```
 
-Tip: when evaluating `Path=Text.Length` always provide a
-    default value for the target property (eg. `Text=""`)
-    because otherwise it will be `null` and the trigger
-    won't work like you expect.
+> [!TIP]
+> When evaluating `Path=Text.Length` always provide a
+> default value for the target property (eg. `Text=""`)
+> because otherwise it will be `null` and the trigger
+> won't work like you expect.
 
 In addition to specifying `Setter`s you can also provide
     [`EnterActions` and `ExitActions`](#enterexit).
