@@ -235,13 +235,6 @@ public class MainPageCS : CarouselPage
 
 Each [`ContentPage`](xref:Xamarin.Forms.ContentPage) simply displays a [`Label`](xref:Xamarin.Forms.Label) for a particular color and a [`BoxView`](xref:Xamarin.Forms.BoxView) of that color.
 
-> [!NOTE]
-> The [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) does not support UI virtualization. Therefore, performance may be affected if the `CarouselPage` contains too many child elements.
-
-If a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) is embedded into the [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) page of a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), the [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
-
-For more information about the [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), see [Chapter 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) of Charles Petzold's Xamarin.Forms book.
-
 ## Summary
 
 This article demonstrated how to use a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) to navigate through a collection of pages. The `CarouselPage` is a page that users can swipe from side to side to navigate through pages of content,much like a gallery.
