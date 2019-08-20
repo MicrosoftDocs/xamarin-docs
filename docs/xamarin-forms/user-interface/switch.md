@@ -13,9 +13,9 @@ ms.date: 07/03/2019
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
 
-The Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch) is a horizontal toggle button that can be manipulated by the user to toggle between on and off states, which are represented by a `boolean` value. The `Switch` class inherits from [`View`](xref:Xamarin.Forms.View).
+The Xamarin.Forms [`Switch`](xref:Xamarin.Forms.Switch) control is a horizontal toggle button that can be manipulated by the user to toggle between on and off states, which are represented by a `boolean` value. The `Switch` class inherits from [`View`](xref:Xamarin.Forms.View).
 
-The following screenshot shows a `Switch` control in its **on** and **off** toggle states on iOS and Android:
+The following screenshots show a `Switch` control in its **on** and **off** toggle states on iOS and Android:
 
 ![Screenshot of Switches in on and off states, on iOS and Android](switch-images/switch-states-default.png "Switches on iOS and Android")
 
@@ -39,7 +39,7 @@ A `Switch` can be instantiated in XAML. Its `IsToggled` property can be set to t
 A `Switch` can also be created in code:
 
 ```csharp
-Switch switch = new Switch { IsToggled = true };
+Switch switchControl = new Switch { IsToggled = true };
 ```
 
 ### Switch style properties
@@ -53,10 +53,10 @@ The `OnColor` property can be set to define the `Switch` color when it is toggle
 The `OnColor` property can also be set when creating a `Switch` in code:
 
 ```csharp
-Switch switch = new Switch { OnColor = Color.Orange };
+Switch switchControl = new Switch { OnColor = Color.Orange };
 ```
 
-The following screenshot shows the `Switch` in its **on** and **off** toggle states, with the `OnColor` property set to `Color.Orange` on iOS and Android:
+The following screenshots show the `Switch` in its **on** and **off** toggle states, with the `OnColor` property set to `Color.Orange` on iOS and Android:
 
 ![Screenshot of Switches in on and off states, on iOS and Android](switch-images/switch-states-oncolor.png "Switches on iOS and Android")
 
@@ -82,8 +82,8 @@ The `sender` argument in the event handler is the `Switch` responsible for firin
 The `Toggled` event handler can also be assigned in code:
 
 ```csharp
-Switch switch = new Switch {...};
-switch.Toggled += (sender, e) =>
+Switch switchControl = new Switch {...};
+switchControl.Toggled += (sender, e) =>
 {
     // Perform an action after examining e.Value
 }

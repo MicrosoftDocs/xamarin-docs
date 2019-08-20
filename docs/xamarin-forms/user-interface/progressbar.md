@@ -12,9 +12,9 @@ ms.date: 07/09/2019
 # Xamarin.Forms ProgressBar
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-progressbardemos/)
 
-The Xamarin.Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) is a control that visually represents progress as a horizontal bar that is filled to a percentage represented by a `float` value. The `ProgressBar` class inherits from [`View`](xref:Xamarin.Forms.View).
+The Xamarin.Forms [`ProgressBar`](xref:Xamarin.Forms.ProgressBar) control visually represents progress as a horizontal bar that is filled to a percentage represented by a `float` value. The `ProgressBar` class inherits from [`View`](xref:Xamarin.Forms.View).
 
-The following screenshot shows a `ProgressBar` on iOS and Android:
+The following screenshots show a `ProgressBar` on iOS and Android:
 
 ![Screenshot of ProgressBar on iOS and Android](progressbar-images/progressbars-default.png "ProgressBar on iOS and Android")
 
@@ -32,7 +32,7 @@ The `ProgressBar` control also defines a `ProgressTo` method that animates the b
 
 ## Create a ProgressBar
 
-A `ProgressBar` can be instantiated in XAML. Its `Progress` property can be set to determine the fill percentage of the inner, colored bar. If the `Progress` property is not set, it defaults to 0. The following example shows how to instantiate a `ProgressBar` in XAML with the optional `Progress` property set:
+A `ProgressBar` can be instantiated in XAML. Its `Progress` property determines the fill percentage of the inner, colored bar. The default `Progress` property value is 0. The following example shows how to instantiate a `ProgressBar` in XAML with the optional `Progress` property set:
 
 ```xaml
 <ProgressBar Progress="0.5" />
@@ -49,7 +49,7 @@ ProgressBar progressBar = new ProgressBar { Progress = 0.5f };
 
 ## ProgressBar appearance properties
 
-The `ProgressColor` property can be set to define the inner bar color when the `Progress` property is greater than zero. The following example shows how to instantiate a `ProgressBar` in XAML with the `ProgressColor` property set:
+The `ProgressColor` property defines the inner bar color when the `Progress` property is greater than zero. The following example shows how to instantiate a `ProgressBar` in XAML with the `ProgressColor` property set:
 
 ```xaml
 <ProgressBar OnColor="Orange" />
@@ -61,7 +61,7 @@ The `ProgressColor` property can also be set when creating a `ProgressBar` in co
 ProgressBar progressBar = new ProgressBar { ProgressColor = Color.Orange };
 ```
 
-The following screenshot shows the `ProgressBar` with the `ProgressColor` property set to `Color.Orange` on iOS and Android:
+The following screenshots show the `ProgressBar` with the `ProgressColor` property set to `Color.Orange` on iOS and Android:
 
 ![Screenshot of styled ProgressBar on iOS and Android](progressbar-images/progressbars-styled.png "Styled ProgressBar on iOS and Android")
 
