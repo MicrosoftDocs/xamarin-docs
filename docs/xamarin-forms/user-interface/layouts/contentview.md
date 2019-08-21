@@ -56,7 +56,7 @@ The `CardView` custom control defines the following properties:
 > [!NOTE]
 > The `BorderColor` property affects multiple items for the purposes of demonstration. This property could be broken out into three properties if needed.
 
-Each property is backed by a `BindableProperty` instance. The backing `BindableProperty` allows each property to be styled, and bound, using the MVVM pattern. For more information, see [Bind data with MVVM](#bind-data-with-mvvm).
+Each property is backed by a `BindableProperty` instance. The backing `BindableProperty` allows each property to be styled, and bound, using the MVVM pattern.
 
 The following example shows how to create a backing `BindableProperty`:
 
@@ -146,117 +146,6 @@ CardView card = new CardView
     IconImageSource = ImageSource.FromFile("user.png")
 };
 ```
-
-### Bind data with MVVM
-
-The `BindableProperty` objects in the `CardView` class allow Model-View-ViewModel (MVVM) style bindings. The sample application contains a `PersonCollectionViewModel` class that defines a single collection property:
-
-```csharp
-public class PersonCollectionViewModel : INotifyPropertyChanged
-{
-    ...
-    public List<PersonViewModel> Items
-    {
-        get
-        {
-            return items;
-        }
-        set
-        {
-            items = value;
-            NotifyPropertyChanged();
-        }
-    }
-    ...
-}
-```
-
-The `PersonViewModel` class represents a personal profile:
-
-```csharp
-public class PersonViewModel : INotifyPropertyChanged
-{
-    ...
-
-    string photo;
-    public string Photo
-    {
-        get
-        {
-            return photo;
-        }
-        set
-        {
-            photo = value;
-            NotifyPropertyChanged();
-        }
-    }
-
-    string name;
-    public string Name
-    {
-        get
-        {
-            return name;
-        }
-        set
-        {
-            name = value;
-            NotifyPropertyChanged();
-        }
-    }
-
-    string bio;
-    public string Bio
-    {
-        get
-        {
-            return bio;
-        }
-        set
-        {
-            bio = value;
-            NotifyPropertyChanged();
-        }
-    }
-    ...
-}
-```
-
-The `CardView` can be used to render the collection of `PersonViewModel` objects as a list of cards. The following example shows how to bind a `PersonViewCollection` instance to a `StackLayout` instance in XAML:
-
-```xaml
-<StackLayout HorizontalOptions="Fill"
-             VerticalOptions="Fill"
-             BindableLayout.ItemsSource="{Binding Items}">
-    <BindableLayout.ItemTemplate>
-        <DataTemplate>
-            <controls:CardView Margin="4"
-                               BorderColor="DarkGray"
-                               IconBackgroundColor="SlateGray"
-                               BindingContext="{Binding .}"
-                               CardTitle="{Binding Name}"
-                               CardDescription="{Binding Bio}"
-                               IconImageSource="{Binding Photo}"/>
-        </DataTemplate>
-    </BindableLayout.ItemTemplate>
-</StackLayout>
-```
-
-The `Items` property on a `PersonViewCollection` instance is bound to the `StackLayout` using a bindable layout. The `DataTemplate` defines the appearance of each `CardView` object, and data binds to properties on a `PersonViewModel`. When the `BindingContext` is set, a `CardView` object will be created for each `PersonView` object in the `Items` collection. The `BindingContext` is set as shown in the following example:
-
-```csharp
-public partial class CardViewMvvmPage : ContentPage
-{
-    public CardViewMvvmPage()
-    {
-        InitializeComponent();
-        BindingContext = DataService.GetPersonCollection();
-    }
-}
-```
-
-For more information on data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md). For more information about `BindableProperty` objects, see [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md).
 
 ## Customize appearance with a ControlTemplate
 
