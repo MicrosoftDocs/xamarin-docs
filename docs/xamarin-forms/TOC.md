@@ -163,11 +163,12 @@
 ### [ImageButton](user-interface/imagebutton.md)
 ### Layouts
 #### [Overview](user-interface/layouts/index.yml)
+#### [Choose a Layout](user-interface/layouts/choose-layout.md)
 #### [StackLayout](user-interface/layouts/stack-layout.md)
 #### [Grid](user-interface/layouts/grid.md)
 #### [FlexLayout](user-interface/layouts/flex-layout.md)
-#### [AbsoluteLayout](user-interface/layouts/absolute-layout.md)
 #### [RelativeLayout](user-interface/layouts/relative-layout.md)
+#### [AbsoluteLayout](user-interface/layouts/absolute-layout.md)
 #### [ScrollView](user-interface/layouts/scroll-view.md)
 #### [ContentView](user-interface/layouts/contentview.md)
 #### [Frame](user-interface/layouts/frame.md)
