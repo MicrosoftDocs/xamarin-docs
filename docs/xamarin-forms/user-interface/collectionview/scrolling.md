@@ -6,7 +6,7 @@ ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 08/13/2019
 ---
 
 # Xamarin.Forms CollectionView Scrolling
@@ -19,7 +19,50 @@ ms.date: 05/06/2019
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) event that is fired when one of the [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) methods is invoked. The [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) object that accompanies the `ScrollToRequested` event has many properties, including `IsAnimated`, `Index`, `Item`, and `ScrollToPosition`. These properties are set from the arguments specified in the `ScrollTo` method calls.
 
+In addition, [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a `Scrolled` event that is fired to indicate that scrolling occurred. The `ItemsViewScrolledEventArgs` object that accompanies the `Scrolled` event has many properties. For more information, see [Detect scrolling](#detect-scrolling).
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) also defines a `ItemsUpdatingScrollMode` property that represents the scrolling behavior of the `CollectionView` when new items are added to it. For more information about this property, see [Control scroll position when new items are added](#control-scroll-position-when-new-items-are-added).
+
 When a user swipes to initiate a scroll, the end position of the scroll can be controlled so that items are fully displayed. This feature is known as snapping, because items snap to position when scrolling stops. For more information, see [Snap points](#snap-points).
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) can also load data incrementally as the user scrolls. For more information, see [Load data incrementally](populate-data.md#load-data-incrementally).
+
+## Detect scrolling
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a `Scrolled` event which is fired to indicate that scrolling occurred. The following XAML example shows a `CollectionView` that sets an event handler for the `Scrolled` event:
+
+```xaml
+<CollectionView Scrolled="OnCollectionViewScrolled">
+    ...
+</CollectionView>
+```
+
+The equivalent C# code is:
+
+```csharp
+CollectionView collectionView = new CollectionView();
+collectionView.Scrolled += OnCollectionViewScrolled;
+```
+
+In this code example, the `OnCollectionViewScrolled` event handler is executed when the `Scrolled` event fires:
+
+```csharp
+void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
+{
+    Debug.WriteLine("HorizontalDelta: " + e.HorizontalDelta);
+    Debug.WriteLine("VerticalDelta: " + e.VerticalDelta);
+    Debug.WriteLine("HorizontalOffset: " + e.HorizontalOffset);
+    Debug.WriteLine("VerticalOffset: " + e.VerticalOffset);
+    Debug.WriteLine("FirstVisibleItemIndex: " + e.FirstVisibleItemIndex);
+    Debug.WriteLine("CenterItemIndex: " + e.CenterItemIndex);
+    Debug.WriteLine("LastVisibleItemIndex: " + e.LastVisibleItemIndex);
+}
+```
+
+The `OnCollectionViewScrolled` event handler outputs the values of the `ItemsViewScrolledEventArgs` object that accompanies the event.
+
+> [!IMPORTANT]
+> The `Scrolled` event is fired for user initiated scrolls, and for programmatic scrolls.
 
 ## Scroll an item at an index into view
 
@@ -28,6 +71,9 @@ The first [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) method overload s
 ```csharp
 collectionView.ScrollTo(12);
 ```
+
+> [!NOTE]
+> The [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) event is fired when the [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) method is invoked.
 
 ## Scroll an item into view
 
@@ -38,6 +84,17 @@ MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
 Monkey monkey = viewModel.Monkeys.FirstOrDefault(m => m.Name == "Proboscis Monkey");
 collectionView.ScrollTo(monkey);
 ```
+
+> [!NOTE]
+> The [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) event is fired when the [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) method is invoked.
+
+## Scroll bar visibility
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties, which are backed by bindable properties. These properties get or set a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) enumeration value that represents when the horizontal, or vertical, scroll bar is visible. The `ScrollBarVisibility` enumeration defines the following members:
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indicates the default scroll bar behavior for the platform, and is the default value for the `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will be visible, even when the content fits in the view.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will not be visible, even if the content doesn't fit in the view.
 
 ## Control scroll position
 
@@ -100,6 +157,31 @@ A scrolling animation is displayed when scrolling an item into view. However, th
 
 ```csharp
 collectionView.ScrollTo(monkey, animate: false);
+```
+
+## Control scroll position when new items are added
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a `ItemsUpdatingScrollMode` property, which is backed by a bindable property. This property gets or sets a `ItemsUpdatingScrollMode` enumeration value that represents the scrolling behavior of the `CollectionView` when new items are added to it. The `ItemsUpdatingScrollMode` enumeration defines the following members:
+
+- `KeepItemsInView` adjusts the scroll offset to keep the first visible item displayed when new items are added.
+- `KeepScrollOffset` maintains the scroll offset relative to the beginning of the list when new items are added.
+- `KeepLastItemInView` adjusts the scroll offset to keep the last item visible when new items are added.
+
+The default value of the `ItemsUpdatingScrollMode` property is `KeepItemsInView`. Therefore, when new items are added to a [`CollectionView`](xref:Xamarin.Forms.CollectionView) the first visible item in the list will remain displayed. To ensure that newly added items are always visible at the bottom of the list, the `ItemsUpdatingScrollMode` property should be set to `KeepLastItemInView`:
+
+```xaml
+<CollectionView ItemsUpdatingScrollMode="KeepLastItemInView">
+    ...
+</CollectionView>
+```
+
+The equivalent C# code is:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    ItemsUpdatingScrollMode = ItemsUpdatingScrollMode.KeepLastItemInView
+};
 ```
 
 ## Snap points

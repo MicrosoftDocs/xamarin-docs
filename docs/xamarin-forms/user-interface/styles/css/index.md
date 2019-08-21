@@ -125,25 +125,7 @@ For more information about resource dictionaries, see [Resource Dictionaries](~/
 
 ### C\#
 
-In C#, a style sheet can be loaded as an embedded resource and added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
-
-```csharp
-public partial class MyPage : ContentPage
-{
-    public MyPage()
-    {
-        InitializeComponent();
-
-        this.Resources.Add(StyleSheet.FromAssemblyResource(
-            IntrospectionExtensions.GetTypeInfo(typeof(MyPage)).Assembly,
-            "MyProject.Assets.styles.css"));
-    }
-}
-```
-
-The first argument to the `StyleSheet.FromAssemblyResource` method is the assembly containing the style sheet, while the second argument is a `string` representing the resource identifier. The resource identifier can be obtained from the **Properties** window when the CSS file is selected.
-
-Alternatively, a style sheet can be loaded from a `StringReader` and added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
+In C#, a style sheet can be loaded from a `StringReader` and added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
 
 ```csharp
 public partial class MyPage : ContentPage

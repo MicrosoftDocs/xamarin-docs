@@ -86,7 +86,7 @@ about
 To navigate to the `ShellContent` object for the `dogs` route, the absolute route URI is `//animals/domestic/dogs`. Similarly, to navigate to the `ShellContent` object for the `about` route, the absolute route URI is `//about`.
 
 > [!IMPORTANT]
-> Duplicate route names are permitted. However, duplicate routes are not permitted. An `ArgumentException` will be thrown on application startup if a duplicate route is detected.
+> An `ArgumentException` will be thrown on application startup if a duplicate route is detected. This exception will also be thrown if two or more routes at the same level in the hierarchy share a route name.
 
 #### Register page routes
 
@@ -118,7 +118,7 @@ Routing.RegisterRoute("elephants/details", typeof(ElephantDetailPage));
 This example enables contextual page navigation, where navigating to the `details` route from the page for the `monkeys` route displays the `MonkeyDetailPage`. Similarly, navigating to the `details` route from the page for the `elephants` route displays the `ElephantDetailPage`.
 
 > [!IMPORTANT]
-> Currently, duplicate route names are permitted when using the `Routing.RegisterRoute` method, with the duplicate registration overwriting the previous registration.
+> An `ArgumentException` will be thrown if the `Routing.RegisterRoute` method attempts to register the same route to two or more different types.
 
 ## Perform navigation
 

@@ -6,7 +6,7 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/29/2019
+ms.date: 07/19/2019
 ---
 
 # Xamarin.Forms WebView
@@ -404,6 +404,9 @@ The popular web browsers now adopt technologies like hardware accelerated render
 // Opt-in to using WkWebView instead of UIWebView.
 [assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
 ```
+
+> [!NOTE]
+> On iOS, the `WkWebViewRenderer` has a constructor overload that accepts a `WkWebViewConfiguration` argument. This enables the renderer to be configured on creation.
 
 `WebView` on Android by default is about as fast as the built-in browser.
 

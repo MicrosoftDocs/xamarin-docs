@@ -6,7 +6,7 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2019
+ms.date: 07/18/2019
 ---
 
 # Consuming XAML Markup Extensions
@@ -23,6 +23,7 @@ XAML markup extensions help enhance the power and flexibility of XAML by allowin
 - [`OnPlatform`](#onplatform) – customize UI appearance on a per-platform basis.
 - [`OnIdiom`](#onidiom) – customize UI appearance based on the idiom of the device the application is running on.
 - [`DataTemplate`](#datatemplate-markup-extension) - converts a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
+- [`FontImage`](#fontimage-markup-extension) - display a font icon in any view that can display an `ImageSource`.
 
 Additional XAML markup extensions have historically been supported by other XAML implementations, and are also supported by Xamarin.Forms. These are described more fully in other articles:
 
@@ -551,6 +552,37 @@ A typical usage of this markup extension is in a Shell application, as shown in 
 In this example, `MonkeysPage` is converted from a [`ContentPage`](xref:Xamarin.Forms.ContentPage) to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which is set as the value of the `ShellContent.ContentTemplate` property. This ensures that `MonkeysPage` is only created when navigation to the page occurs, rather than at application startup.
 
 For more information about Shell applications, see [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+
+## FontImage Markup Extension
+
+The `FontImage` markup extension allows you to display a font icon in any view that can display an `ImageSource`. It provides the same functionality as the `FontImageSource` class, but with a more concise representation.
+
+The `FontImage` markup extension is supported by the `FontImageExtension` class, which defines the following properties:
+
+- `FontFamily` of type `string`, the font family to which the font icon belongs.
+- `Glyph` of type `string`, the unicode character value of the font icon.
+- `Color` of type `Color`, the color to be used when displaying the font icon.
+- `Size` of type `double`, the size, in device-independent units, of the rendered font icon.
+
+> [!NOTE]
+> The XAML parser allows the `FontImageExtension` class to be abbreviated as `FontImage`.
+
+The `Glyph` property is the content property of `FontImageExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `Glyph=` part of the expression provided that it's the first argument.
+
+The **FontImage Demo** page shows how to use the `FontImage` markup extension:
+
+```xaml
+<Image BackgroundColor="#D1D1D1"
+       Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=44}" />
+```
+
+In this example, the abbreviated version of the `FontImageExtension` class name is used to display an XBox icon, from the Ionicons font family, in an [`Image`](xref:Xamarin.Forms.Image). The expression also uses the `OnPlatform` markup extension to specify different `FontFamily` property values on iOS and Android. In addition, the `Glyph=` part of the expression is eliminated, and the markup extension properties that are set are separated by commas. Note that while the unicode character for the icon is `\uf30c`, it has to be escaped in XAML and so becomes `&#xf30c;`.
+
+Here's the program running:
+
+[![Screenshot of the FontImage markup extension](consuming-images/fontimagedemo.png "FontImage Demo")](consuming-images/fontimagedemo-large.png#lightbox "FontImage Demo")
+
+For information about displaying font icons by specifying the font icon data in a `FontImageSource` object, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
 ## Define Your Own Markup Extensions
 
