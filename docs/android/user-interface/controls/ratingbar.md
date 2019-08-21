@@ -24,8 +24,8 @@ rating, with the [`RatingBar`](xref:Android.Widget.RatingBar) widget.
    [`RatingBar`](xref:Android.Widget.RatingBar)
    element (inside the [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
-    ```xml
-    <RatingBar android:id="@+id/ratingbar"
+   ```xml
+   <RatingBar android:id="@+id/ratingbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
