@@ -66,6 +66,7 @@ The image loading behavior in iOS also recognizes an `@3x` suffix on image files
 ```csharp
 UIImage icon = UIImage.FromFile("MonkeyImage.png");
 ```
+
 Or if they assign the image to a UI element using the iOS Designer as `MonkeyIcon.png`, the `MonkeyIcon@3x.png` will be used, again automatically, on the iPhone 6 Plus.
 
 <a name="dynamic-launch-screens" />

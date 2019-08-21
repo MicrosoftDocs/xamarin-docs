@@ -491,6 +491,7 @@ Objective Sharpie sometimes has an issue translating `Delegates`, so we will nee
 [BaseType(typeof(NSObject))]
 [Model]
 ```
+
 So that the definition looks like:
 
 [![](walkthrough-images/os11.png "The definition")](walkthrough-images/os11.png#lightbox)
@@ -661,6 +662,7 @@ public override void ViewDidLoad ()
   selector = new ColorSelectedDelegate (this);
 }
 ```
+
 **Implement the method HandleTouchUpInsideWithStrongDelegate** - Next implement the event handler for when the user touches **ColorChangeButton**. Edit `ViewController`, and add the following method:
 
 ```csharp
@@ -699,6 +701,7 @@ private void HandleTouchUpInsideWithWeakDelegate (object sender, EventArgs e)
     picker.PresentModallyOverViewController (this);
 }
 ```
+
 **Update ViewDidLoad** - We must change `ViewDidLoad` so that it uses the event handler that we just created. Edit `ViewController` and change `ViewDidLoad` to resemble the following code snippet:
 
 

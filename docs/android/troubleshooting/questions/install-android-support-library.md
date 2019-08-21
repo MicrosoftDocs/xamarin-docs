@@ -24,6 +24,7 @@ the NuGet package needs:
 ```cmd
 ildasm /caverbal /text /item:Xamarin.Android.Support.v4 packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll | findstr SourceUrl
 ```
+
 Example output:
 
 ```cmd
@@ -56,6 +57,7 @@ in PowerShell:
 $url = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip"
 (([System.Security.Cryptography.MD5]::Create()).ComputeHash([System.Text.Encoding]::UTF8.GetBytes($url)) | %{ $_.ToString("X02") }) -join ""
 ```
+
 Example output:
 
 ```powershell
@@ -79,6 +81,7 @@ can use `ildasm` to find the correct version number:
 ```cmd
 ildasm /caverbal /text /item:Xamarin.Android.Support.v4 packages\Xamarin.Android.Support.v4.23.4.0.1\lib\MonoAndroid403\Xamarin.Android.Support.v4.dll | findstr /C:"string 'Version'"
 ```
+
 Example output:
 
 ```cmd
@@ -134,6 +137,7 @@ following command in a **Terminal.app** command prompt:
 ```bash
 csharp -e 'var url = "https://dl-ssl.google.com/android/repository/android_m2repository_r32.zip"; string.Concat((System.Security.Cryptography.MD5.Create().ComputeHash(System.Text.Encoding.UTF8.GetBytes(url))).Select(b => b.ToString("X02")))'
 ```
+
 Example output:
 
 ```bash

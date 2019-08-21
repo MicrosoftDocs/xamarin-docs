@@ -84,6 +84,7 @@ We would update the new binding to be:
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
+
 If we are mapping to a newer version 3rd party library than what we had initially linked to, we need to review the `.h` header files for the library and see if any exiting, explicit calls to `int`, `int32_t`, `unsigned int`, `uint32_t` or `float` have been upgraded to be an `NSInteger`, `NSUInteger` or a `CGFloat`. If so, the same modifications to the `nint`, `nuint` and `nfloat` types will need to be made to their mappings as well.
 
 To learn more about these data type changes, see the [Native Types](~/cross-platform/macios/nativetypes.md) document.

@@ -229,6 +229,7 @@ following steps:
     ```powershell
     Get-WindowsOptionalFeature -FeatureName HypervisorPlatform -Online
     ```
+
     If the Hypervisor is not enabled, a message similar to the following example will be 
     displayed to indicate that the state of HypervisorPlatform is **Disabled**:
 

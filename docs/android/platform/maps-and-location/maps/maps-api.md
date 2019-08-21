@@ -267,6 +267,7 @@ Similar to other Fragment classes, there are two ways to add a
 The `MapFragment.GetMapAsync` method is used to initialize the [`GoogleMap`](#googlemap_object) that is hosted by the fragment and obtain a reference to the map object that is hosted by the `MapFragment`. This method takes an object that implements the `IOnMapReadyCallback` interface.
 
 This interface has a single method, `IMapReadyCallback.OnMapReady(MapFragment map)` that will be invoked when it is possible for the app to interact with the `GoogleMap` object. The following code snippet shows how an Android Activity can initialize a `MapFragment` and implement the `IOnMapReadyCallback` interface:
+
 ```csharp
 public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 {

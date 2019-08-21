@@ -133,6 +133,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     canvas.DrawCircle(args.Info.Width / 2, args.Info.Height / 2, 100, paint);
 }
 ```
+
 This time, the `DrawCircle` call fills the circle using the new properties of the `SKPaint` object.
 
 Here's the program running on iOS, Android, and the Universal Windows Platform:
