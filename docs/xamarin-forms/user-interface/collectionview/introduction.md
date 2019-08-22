@@ -11,7 +11,7 @@ ms.date: 07/24/2019
 
 # Xamarin.Forms CollectionView Introduction
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![This API is currently pre-release](~/media/shared/preview.png)
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -26,7 +26,7 @@ Forms.SetFlags("CollectionView_Experimental");
 ```
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) is available on iOS and Android, but is only partially available on the Universal Windows Platform.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) is available on iOS and Android, but is only [partially available](https://gist.github.com/hartez/7d0edd4182dbc7de65cebc6c67f72e14) on the Universal Windows Platform.
 
 ## CollectionView and ListView differences
 
