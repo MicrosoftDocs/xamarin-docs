@@ -110,6 +110,7 @@ Next, create an instance of our View Controller:
 ```csharp
 HomeScreen owner;
 ```
+
 Add a constructor to your UITableViewSource class which takes a view controller as a parameter and saves it in a field:
 
 ```csharp
@@ -120,11 +121,13 @@ public TableSource (string[] items, HomeScreen owner)
 
 }
 ```
+
 Modify the ViewDidLoad method where the UITableViewSource class is created to pass the `this` reference:
 
 ```csharp
 table.Source = new TableSource(tableItems, this);
 ```
+
 Finally, back in your `RowSelected` method, call `PresentViewController` on the cached field:
 
 ```csharp

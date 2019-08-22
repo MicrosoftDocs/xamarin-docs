@@ -19,7 +19,7 @@ E.g. parameters, environment, missing tools.
 <!--
  MT0xxx mtouch itself, e.g. parameters, environment (e.g. missing tools)
  https://github.com/xamarin/xamarin-macios/blob/master/tools/mtouch/error.cs
-	-->
+  -->
 
 <a name="MT0000" />
 
@@ -1163,13 +1163,13 @@ If you're deploying an enterprise app or using a free provisioning profile, you 
 ### MT1108: Could not find developer tools for this XX (YY) device.
 
 A few operations from mtouch require the `DeveloperDiskImage.dmg` file to be present.   This
-	file is part of Xcode and is usually located relative to the
-	SDK that you are using to build against, in
-	the `Xcode.app/Contents/Developer/iPhoneOS.platform/DeviceSupport/VERSION/DeveloperDiskImage.dmg`.
+file is part of Xcode and is usually located relative to the
+SDK that you are using to build against, in
+the `Xcode.app/Contents/Developer/iPhoneOS.platform/DeviceSupport/VERSION/DeveloperDiskImage.dmg`.
 
 This error can happen either because you do not have a
-	DeveloperDiskImage.dmg that matches the device that you have
-	connected.
+DeveloperDiskImage.dmg that matches the device that you have
+connected.
 
 <a name="MT1109" />
 
@@ -1993,14 +1993,14 @@ This occurs when subclassing a framework type, and trying to implement a 'retain
 ```csharp
 class MyNSObject : NSObject
 {
-	[Export ("retain")]
-	new void Retain () {}
+  [Export ("retain")]
+  new void Retain () {}
 
-	[Export ("release")]
-	new void Release () {}
+  [Export ("release")]
+  new void Release () {}
 
-	[Export ("dealloc")]
-	new void Dealloc () {}
+  [Export ("dealloc")]
+  new void Dealloc () {}
 }
 ```
 
@@ -2013,14 +2013,14 @@ class MyNSObject : NSObject
 
 class MyCustomNSObject : MyNSObject
 {
-	[Export ("retain")]
-	new void Retain () {}
+  [Export ("retain")]
+  new void Retain () {}
 
-	[Export ("release")]
-	new void Release () {}
+  [Export ("release")]
+  new void Release () {}
 
-	[Export ("dealloc")]
-	new void Dealloc () {}
+  [Export ("dealloc")]
+  new void Dealloc () {}
 }
 ```
 
@@ -2471,8 +2471,8 @@ be manually preserved.
 There are two main reasons for this:
 
 * The symbol name is incorrect.
-	* Don't prepend an underscore to the symbol name.
-	* The symbol for Objective-C classes is `OBJC_CLASS_$_<classname>`.
+  * Don't prepend an underscore to the symbol name.
+  * The symbol for Objective-C classes is `OBJC_CLASS_$_<classname>`.
 * The symbol is correct, but it's a symbol that's already preserved by normal
   means (some build options causes the exact list of dynamic symbols to vary).
 

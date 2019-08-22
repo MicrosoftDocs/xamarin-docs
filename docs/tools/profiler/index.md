@@ -64,21 +64,21 @@ Currently, the Xamarin Profiler can be used to test Xamarin.Android apps on Wind
 Support for the Xamarin Profiler is available on the following platforms:
 
 - Visual Studio for Mac (macOS, with Enterprise License)
-	- Android
-		- Device and Emulator
-	- iOS
-		- Device and Simulator
-	- tvOS (Time Instrument is not supported)
-		- Device and Simulator
-	- Mac
+  - Android
+    - Device and Emulator
+  - iOS
+    - Device and Simulator
+  - tvOS (Time Instrument is not supported)
+    - Device and Simulator
+  - Mac
 
 - Visual Studio (Only **Enterprise** Version)
-	- Android
-		- Device and Emulator
-	- iOS [Experimental]
-		- Device and Simulator
-	- tvOS
-		- Device and Simulator
+  - Android
+    - Device and Emulator
+  - iOS [Experimental]
+    - Device and Simulator
+  - tvOS
+    - Device and Simulator
 
 Note that you can **only** profile **Debug** configurations.
 

@@ -160,6 +160,7 @@ public class AbsoluteLayoutExplorationCode : ContentPage
     }
 }
 ```
+
 <a name="Proportional_Values" />
 
 ### Proportional Values

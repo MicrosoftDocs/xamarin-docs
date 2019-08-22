@@ -23,25 +23,27 @@ map = new MKMapView (UIScreen.MainScreen.Bounds);
 View = map;
 ```
 
- `MKMapView` is a `UIView` subclass that displays a map. Simply adding the map using the code above produces an interactive map:
+`MKMapView` is a `UIView` subclass that displays a map. Simply adding the map using the code above produces an interactive map:
 
- ![](images/00-map.png "A sample map")
+![](images/00-map.png "A sample map")
 
 ## Map Style
 
- `MKMapView` supports 3 different styles of maps. To apply a map style, simply set the `MapType` property to a value from the `MKMapType` enumeration:
- ```
+`MKMapView` supports 3 different styles of maps. To apply a map style, simply set the `MapType` property to a value from the `MKMapType` enumeration:
+
+```
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
- ```
-  The following screenshot show the different map styles that are available:
+```
 
- ![](images/01-mapstyles.png "This screenshot show the different map styles that are available")
+The following screenshot show the different map styles that are available:
+
+![](images/01-mapstyles.png "This screenshot show the different map styles that are available")
 
 ## Panning and Zooming
 
- `MKMapView` includes support for map interactivity features such as:
+`MKMapView` includes support for map interactivity features such as:
 
 - Zooming via a pinch gesture
 - Panning via a pan gesture

@@ -61,6 +61,7 @@ class Foo {
      public NSString FooNotification { get; }
 }
 ```
+
 Notifications are keys that are used for the `NSNotification` class when you want to register for a particular event being broadcast by the runtime.
 
 Keys usually look something like this:

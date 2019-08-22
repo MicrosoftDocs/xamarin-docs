@@ -31,10 +31,10 @@ All platform extensions can only be called from the iOS, Android, or UWP project
 var system = new System.Drawing.Point(x, y);
 
 // Convert to CoreGraphics.CGPoint, Android.Graphics.Point, and Windows.Foundation.Point
-var platform = system.ToPlatformSize();
+var platform = system.ToPlatformPoint();
 
 // Back to System.Drawing.Size
-var system2 = platform.ToSystemSize();
+var system2 = platform.ToSystemPoint();
 ```
 
 ### Size
@@ -55,10 +55,10 @@ var system2 = platform.ToSystemSize();
 var system = new System.Drawing.Rectangle(x, y, width, height);
 
 // Convert to CoreGraphics.CGRect, Android.Graphics.Rect, and Windows.Foundation.Rect
-var platform = system.ToPlatformSize();
+var platform = system.ToPlatformRectangle();
 
 // Back to System.Drawing.Size
-var system2 = platform.ToSystemSize();
+var system2 = platform.ToSystemRectangle();
 ```
 
 ## API

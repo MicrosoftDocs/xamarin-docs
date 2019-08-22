@@ -266,6 +266,7 @@ UITapGestureRecognizer singleTap = new UITapGestureRecognizer (new NSAction (del
 	ShowDropDownAnimated (tblDataView);
 }));
 ```
+
 It can now be replaced with a simple lambda:
 
 ```csharp

@@ -607,6 +607,7 @@ for (nuint n = 0; n < People.Count; ++n) {
 	Person.Update (conn);
 }
 ```
+
 #### Loading a record
 
 The following code was added to load an existing record from the SQLite database:
@@ -1966,6 +1967,7 @@ First, we include SQLite.NET (`using Sqlite`), then we expose several Properties
 [PrimaryKey, AutoIncrement]
 public int ID { get; set; }
 ```
+
 ### Initializing the database
 
 With the changes to our Data Model in place to support reading and writing to the database, we need to open a connection to the database and initialize it on the first run. Let's add the following code:

@@ -101,6 +101,7 @@ using (CGContext g = UIGraphics.GetCurrentContext ()) {
 ...
 }
 ```
+
 With this line, it first gets the current graphics context to use for drawing. You can think of a graphics context as the canvas that drawing happens on, containing all the state about the drawing, such as stroke and fill colors, as well as the geometry to draw.
 
 ```csharp

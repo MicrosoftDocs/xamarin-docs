@@ -6,7 +6,7 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
+ms.date: 07/19/2019
 ---
 
 # Xamarin.Forms Shell Flyout
@@ -125,6 +125,32 @@ The following example shows how to collapse the flyout header as the user scroll
     ...
 </Shell>
 ```
+
+## Flyout background image
+
+The flyout can have an optional background image, which appears beneath the flyout header and behind any flyout items and menu items. The background image can be specified by setting the `FlyoutBackgroundImage` bindable property, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), to a file, embedded resource, URI, or stream.
+
+The aspect ratio of the background image can be configured by setting the `FlyoutBackgroundImageAspect` bindable property, of type [`Aspect`](xref:Xamarin.Forms.Aspect), to one of the `Aspect` enumeration members:
+
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - clips the image so that it fills the display area while preserving the aspect ratio.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - letterboxes the image, if required, so that the image fits into the display area, with blank space added to the top/bottom or sides depending on whether the image is wide or tall.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) - stretches the image to completely and exactly fill the display area. This may result in image distortion.
+
+By default, the `FlyoutBackgroundImageAspect` property will be set to `AspectFit`.
+
+The following example shows setting these properties:
+
+```xaml
+<Shell ...
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill">
+    ...
+</Shell>
+```
+
+This results in a background image appearing in the flyout:
+
+![Screenshot of a flyout background image](flyout-images/flyout-backgroundimage.png "Flyout background image")
 
 ## Flyout items
 

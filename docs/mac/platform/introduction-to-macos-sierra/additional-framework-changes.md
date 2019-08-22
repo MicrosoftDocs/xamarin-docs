@@ -28,17 +28,17 @@ The following enhancement have been made to the Accelerate Framework for macOS S
 The following enhancement have been made to the AppKit Framework for macOS Sierra:
 
 - Several enhancements to `NSCollectionView` such as:
-	- **Collapsible Sections** - Allows the user to collapse a Collection View section into a single horizontal row.
-	- **Floating Headers** - Headers and Footers can now be floated (in a flow layout) using the same API as [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
-	- **Scrollable Background Views** - A collection Views background can now be set to scroll along with the content.
+  - **Collapsible Sections** - Allows the user to collapse a Collection View section into a single horizontal row.
+  - **Floating Headers** - Headers and Footers can now be floated (in a flow layout) using the same API as [UICollectionView](https://developer.apple.com/reference/uikit/uicollectionview) in iOS.
+  - **Scrollable Background Views** - A collection Views background can now be set to scroll along with the content.
 - The deferred view layout pass has been optimized and extended.
 - The drag-and-drop API now includes the new `NSFilePromiseProvider` and `NSFilePromiseReceiver` classes to support drag flocking.
 - Several convenience constructors have been added to existing controls:
-	- `NSButton` includes new constructors for creating push buttons, checkboxes and radio buttons.
-	- `NSTextField` includes new constructors for creating wrapping and non-wrapping labels, attributed labels and editable text fields.
-	- `NSSegmentedControl` includes new constructors for creating segmented controls from a group of labels or images.
-	- `NSSlider` includes new constructors for creating horizontal linear sliders.
-	- `NSImageView` includes new constructors for creating non-editable image views from a given `NSImage`.
+  - `NSButton` includes new constructors for creating push buttons, checkboxes and radio buttons.
+  - `NSTextField` includes new constructors for creating wrapping and non-wrapping labels, attributed labels and editable text fields.
+  - `NSSegmentedControl` includes new constructors for creating segmented controls from a group of labels or images.
+  - `NSSlider` includes new constructors for creating horizontal linear sliders.
+  - `NSImageView` includes new constructors for creating non-editable image views from a given `NSImage`.
 - The new `NSGridView` has been added to auto layout a collection of sub views into a grid with variable sized rows and columns that can be dynamically hidden or shown.
 
 <a name="AVFoundation-Framework-Enhancements" />

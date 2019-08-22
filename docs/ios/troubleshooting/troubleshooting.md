@@ -106,6 +106,7 @@ public partial class MyImageView : UIView {
    public MyImageView (IntPtr handle) : base (handle {}
 }
 ```
+
 ## System.MissingMethodException: No constructor found for Foo.Bar::ctor(System.IntPtr)
 
 This error is produced at runtime when the code tries to instantiate an
@@ -121,6 +122,7 @@ To fix this, add the following line of code to the class Foo.Bar:
 ```csharp
 public Bar (IntPtr handle) : base (handle) { }
 ```
+
 ## Type {Foo}  does not contain a definition for `GetNativeField` and no extension method `GetNativeField` of type {Foo} could be found
 
 If you get this error in the designer generated files (*.xib.designer.cs), it
@@ -268,7 +270,8 @@ restarting Visual Studio for Mac, and send the results to us.
 Please attach the XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log**
 (in older versions of XS/MonoDevelop, just send **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
 
- **NOTE: The above issue was fixed in XS 2.2 Final**
+> [!NOTE]
+> The above issue was fixed in XS 2.2 Final**
 
 ## Compiled application is very large
 
@@ -516,6 +519,7 @@ trace that looks like this:
   at MonoTouch.ObjCRuntime.Runtime.RegisterAssembly (System.Reflection.Assembly)
   at (wrapper runtime-invoke) <Module>.runtime_invoke_void_object (object,intptr,intptr,intptr)
 ```
+
 ...then you probably have one (or more) stale assembly in your simulator
 application directory. Such assemblies may exists since Apple iOS simulator
 adds and updates files but never deletes them. If this happens then the easiest

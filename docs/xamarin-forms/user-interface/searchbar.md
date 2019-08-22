@@ -13,11 +13,11 @@ ms.date: 07/12/2019
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/)
 
-The Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) is a user input control that is used for initiating a search. The `SearchBar` control supports placeholder text, query input, search execution, and cancellation. The following screenshot shows a `SearchBar` query with results displayed in a `ListView`:
+The Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) is a user input control used to initiating a search. The `SearchBar` control supports placeholder text, query input, search execution, and cancellation. The following screenshot shows a `SearchBar` query with results displayed in a `ListView`:
 
 [![Screenshot of SearchBar on iOS and Android](searchbar-images/device-searchbars-cropped.png "SearchBar on iOS and Android")](searchbar-images/device-searchbars.png#lightbox "SearchBar on iOS and Android")
 
-The `SearchBar` defines the following properties:
+The `SearchBar` class defines the following properties:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) is a `Color` that defines the color of the cancel button.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) is a `FontAttributes` enum value that determines whether the `SearchBar` font is bold, italic, or neither.
@@ -61,7 +61,7 @@ The `SearchBar` control defines many properties that customize the appearance of
            FontAttributes="Italic" />
 ```
 
-These properties can also be specified when creating a `SearchBar` in code:
+These properties can also be specified when creating a `SearchBar` object in code:
 
 ```csharp
 SearchBar searchBar = new SearchBar
@@ -75,7 +75,7 @@ SearchBar searchBar = new SearchBar
 };
 ```
 
-The following screenshot shows the resulting `SearchBar`:
+The following screenshot shows the resulting `SearchBar` control:
 
 [![Screenshot of customized SearchBar on iOS and Android](searchbar-images/device-searchbars-styled-cropped.png "Customized SearchBar on iOS and Android")](searchbar-images/device-searchbars-styled.png#lightbox "Customized SearchBar on iOS and Android")
 

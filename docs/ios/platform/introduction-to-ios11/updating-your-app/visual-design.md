@@ -62,6 +62,7 @@ In iOS 10 and before, all views had a minimum margin size to which they would al
 ViewRespectsSystemMinimumLayoutMargins = false;
 View.LayoutMargins = UIEdgeInsets.Zero;
 ```
+
 ![Image showing margin with zero inset in ios 11](visual-design-images/image9.png)
 
 <a name="fullscreen" />

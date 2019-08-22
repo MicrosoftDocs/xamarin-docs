@@ -20,9 +20,9 @@ will be added to the table for the task. Selecting the row will navigate to the
 detail screen that allows us to update the task description and the due date, as
 illustrated below:
 
- [![](elements-api-walkthrough-images/01-task-list-app.png "Selecting the row will navigate to the detail screen that allows us to update the task description and the due date")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
+[![](elements-api-walkthrough-images/01-task-list-app.png "Selecting the row will navigate to the detail screen that allows us to update the task description and the due date")](elements-api-walkthrough-images/01-task-list-app.png#lightbox)
 
- ## Setting up MT.D
+## Setting up MT.D
 
 MT.D is distributed with Xamarin.iOS. To use it, right-click on the
 **References** node of a Xamarin.iOS project in Visual Studio 2017 or

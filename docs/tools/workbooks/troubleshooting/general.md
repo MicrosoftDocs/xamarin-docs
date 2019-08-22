@@ -20,6 +20,7 @@ a [bug in Mono's `AppContext.SetSwitch`][appcontext-bug] implementation.
 ### Workarounds
 
 * Set the application-domain-local `DefaultThreadCurrentCulture`:
+
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")

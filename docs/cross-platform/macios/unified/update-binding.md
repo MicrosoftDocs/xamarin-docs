@@ -84,6 +84,7 @@ We would update the new binding to be:
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
+
 If we are mapping to a newer version 3rd party library than what we had initially linked to, we need to review the `.h` header files for the library and see if any exiting, explicit calls to `int`, `int32_t`, `unsigned int`, `uint32_t` or `float` have been upgraded to be an `NSInteger`, `NSUInteger` or a `CGFloat`. If so, the same modifications to the `nint`, `nuint` and `nfloat` types will need to be made to their mappings as well.
 
 To learn more about these data type changes, see the [Native Types](~/cross-platform/macios/nativetypes.md) document.
@@ -135,7 +136,8 @@ If we are using a makefile to build our binding project into a Xamarin .DLL, we 
 
 So given the following `MakeFile`:
 
-```csharp
+<!--markdownlint-disable MD010 -->
+```makefile
 BINDDIR=/src/binding
 XBUILD=/Applications/Xcode.app/Contents/Developer/usr/bin/xcodebuild
 PROJECT_ROOT=XMBindingLibrarySample
@@ -167,19 +169,22 @@ XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMB
 clean:
 	-rm -f *.a *.dll
 ```
+<!--markdownlint-enable MD010 -->
 
 We need to switch from calling `btouch` to `btouch-native`, so we would adjust our macro definition as follows:
 
-```csharp
+```makefile
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch-native
 ```
 
 We would update the call to `btouch` and add the `--new-style` option as follows:
 
-```csharp
+<!--markdownlint-disable MD010 -->
+```makefile
 XMBindingLibrary.dll: AssemblyInfo.cs XMBindingLibrarySample.cs extras.cs libXMBindingLibrarySampleUniversal.a
 	$(BTOUCH) -unsafe --new-style -out:$@ XMBindingLibrarySample.cs -x=AssemblyInfo.cs -x=extras.cs --link-with=libXMBindingLibrarySampleUniversal.a,libXMBindingLibrarySampleUniversal.a
 ```
+<!--markdownlint-enable MD010 -->
 
 We can now execute our `MakeFile` as normal to build the new 64 bit version of our API.
 
@@ -193,7 +198,7 @@ Do the following:
 2. Select **File** > **New** > **Solution...**
 3. In the New Solution Dialog Box, select **iOS** > **Unified API** > **iOS Binding Project**: 
 
-	[![](update-binding-images/image01new.png "In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project")](update-binding-images/image01new.png#lightbox)
+    [![](update-binding-images/image01new.png "In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project")](update-binding-images/image01new.png#lightbox)
 4. On 'Configure your new project' dialog enter a **Name** for the new binding project and click the **OK** button.
 5. Include the 64 bit version of Objective-C library that you are going to be creating bindings for.
 6. Copy over the source code from your existing 32 bit Classic API binding project (such as the `ApiDefinition.cs` and `StructsAndEnums.cs` files).

@@ -19,6 +19,12 @@ sections:
     style: cards
     className: cardsB
     items:
+    - href: choose-layout.md
+      html: "Learn about how the main layout classes in Xamarin.Forms position and size their children."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: choose-layout.md
+      title: Choose a Layout
     - href: stack-layout.md
       html: "Learn how to organize views in a one-dimensional stack, either horizontally or vertically."
       image:
@@ -37,24 +43,30 @@ sections:
         src: https://docs.microsoft.com/media/common/i_dashboard.svg
         href: flex-layout.md
       title: FlexLayout
-    - href: absolute-layout.md
-      html: "Learn how to organize views by setting coordinate and size values, which can be proportional or absolute."
-      image:
-        src: https://docs.microsoft.com/media/common/i_dashboard.svg
-        href: absolute-layout.md
-      title: AbsoluteLayout
     - href: relative-layout.md
       html: "Learn how to organize views by setting constraints, relative to properties of the layout or sibling views."
       image:
         src: https://docs.microsoft.com/media/common/i_dashboard.svg
         href: absolute-layout.md
       title: RelativeLayout
+    - href: absolute-layout.md
+      html: "Learn how to organize views by setting coordinate and size values, which can be proportional or absolute."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: absolute-layout.md
+      title: AbsoluteLayout
     - href: scroll-view.md
       html: "Learn how to provide scrolling when a view doesn't fit within the bounds of the screen."
       image:
         src: https://docs.microsoft.com/media/common/i_dashboard.svg
         href: scroll-view.md
       title: ScrollView
+    - href: contentview.md
+      html: "Learn how to use a ContentView to create a custom control."
+      image:
+        src: https://docs.microsoft.com/media/common/i_dashboard.svg
+        href: contentview.md
+      title: ContentView
     - href: frame.md
       html: "Learn how to wrap a view with a frame that can be configured with color, drop shadow, and other options."
       image:

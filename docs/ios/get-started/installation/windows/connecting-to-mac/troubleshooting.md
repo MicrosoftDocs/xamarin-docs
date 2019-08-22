@@ -78,6 +78,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
     ```bash
     ssh amyb@10.1.8.95
     ```
+
     <a name="stepnine" />
 
 9. If **step 8 succeeds**, you can try running a simple command like `ls` over the connection:

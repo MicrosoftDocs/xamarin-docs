@@ -15,21 +15,21 @@ ms.date: 07/29/2019
 
 The Xamarin.Forms [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) class is a special type of button that can be added to a `Page` object's `ToolbarItems` collection. Each `ToolbarItem` object will appear as a button in the application's navigation bar. A `ToolbarItem` instance can have an icon and appear as a primary or secondary menu item. The `ToolbarItem` class inherits from [`MenuItem`](xref:Xamarin.Forms.MenuItem).
 
-The following screenshot shows `ToolbarItem` objects in the navigation bar on iOS and Android:
+The following screenshots show `ToolbarItem` objects in the navigation bar on iOS and Android:
 
 !["ToolbarItem demo screenshot on Android and iOS"](toolbaritem-images/toolbaritem-device-screenshot.png "ToolbarItem demo screenshot on Android and iOS")
 
-The `ToolbarItem` control defines the following properties:
+The `ToolbarItem` class defines the following properties:
 
 * [`Order`](xref:Xamarin.Forms.ToolbarItem.Order) is a `ToolbarItemOrder` enum value that determines whether the `ToolbarItem` instance displays in the primary or secondary menu.
 * [`Priority`](xref:Xamarin.Forms.ToolbarItem.Priority) is an `integer` value that determines the display order of items in a `Page` object's `ToolbarItems` collection.
 
 The `ToolbarItem` class inherits the following typically-used properties from the `MenuItem` class:
 
-* [`Text`](xref:Xamarin.Forms.MenuItem.Text) is a `string` that determines the display text on a `ToolbarItem` object.
-* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) is an `ImageSource` value that determines the display icon on a `ToolbarItem` object.
 * [`Command`](xref:Xamarin.Forms.MenuItem.Command) is an `ICommand` that allows binding user actions, such as finger taps or clicks, to commands defined on a viewmodel.
-* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) is an `object` that specifies the parameter that should be passed to the `SearchCommand`.
+* [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) is an `object` that specifies the parameter that should be passed to the `Command`.
+* [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) is an `ImageSource` value that determines the display icon on a `ToolbarItem` object.
+* [`Text`](xref:Xamarin.Forms.MenuItem.Text) is a `string` that determines the display text on a `ToolbarItem` object.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects so a `ToolbarItem` instance can be the target of data bindings.
 
@@ -114,3 +114,4 @@ When the `Order` property is set to `Secondary`, behavior varies across platform
 
 * [ToolbarItem Demos](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
 * [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)
+* [Xamarin.Forms MenuItem](~/xamarin-forms/user-interface/menuitem.md)

@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 04/27/2016
 ---
 
-# Native Views in C#
+# Native Views in C\#
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)
 

@@ -42,12 +42,12 @@ Because of the glanceable nature of Apple Watch apps, Apple suggests that the id
 Apple has added several new features and APIs to WatchKit to assist the developer in adding quick interactions to their Apple Watch apps:
 
 - watchOS 3 provides access to new kinds of user input such as:
-	- Gesture Recognizers
-	- Digital Crown rotation 
+  - Gesture Recognizers
+  - Digital Crown rotation 
 - watchOS 3 provides new ways of displaying and updating information, such as:
-	- Enhanced Table navigation
-	- New User Notification framework support
-	- SpriteKit and SceneKit integration
+  - Enhanced Table navigation
+  - New User Notification framework support
+  - SpriteKit and SceneKit integration
 
 By implementing these new features, the developer can ensure that their watchOS 3 app is Glanceable, Actionable and Responsive.
 
@@ -58,11 +58,11 @@ If the developer has implemented Gesture Recognizers in iOS, they should be very
 watchOS 3 will support the four following Gesture Recognizers:
 
 - Discrete gestures types:
-	- The Swipe Gesture (`WKSwipeGestureRecognizer`).
-	- The Tap Gesture (`WKTapGestureRecognizer`).
+  - The Swipe Gesture (`WKSwipeGestureRecognizer`).
+  - The Tap Gesture (`WKTapGestureRecognizer`).
 - Continuous gesture types:
-	- The Pan Gesture (`WKPanGestureRecognizer`).
-	- The Long-Press Gesture (`WKLongPressGestureRecognizer`).
+  - The Pan Gesture (`WKPanGestureRecognizer`).
+  - The Long-Press Gesture (`WKLongPressGestureRecognizer`).
 
 To implement one of the new Gesture Recognizers, simply drag it onto a design surface in the iOS Designer in Visual Studio for Mac and configure its properties.
 
@@ -91,8 +91,8 @@ Apple suggest the following when working with Gesture Recognizers in watchOS 3:
 - Add the Gesture Recognizers to Group Elements instead of individual Controls. Since the Apple Watch has a smaller physical screen size, Group Elements tend to be bigger and easier targets for the user to hit. Also, the Gesture Recognizers can conflict with built in gestures already in the native UI Controls.
 - Set dependency relationships in the watch app's Storyboard.
 - Some gesture take precedence over other gesture types, such as:
-	- Scrolling
-	- Force Touch
+  - Scrolling
+  - Force Touch
  
 ### Digital Crown Rotation
 
@@ -132,28 +132,28 @@ using Foundation;
 
 namespace MonkeyWatch.MonkeySeeExtension
 {
-	public class CrownDelegate : WKCrownDelegate
-	{
-		#region Computed Properties
-		public double AccumulatedRotations { get; set;}
-		#endregion
+  public class CrownDelegate : WKCrownDelegate
+  {
+    #region Computed Properties
+    public double AccumulatedRotations { get; set;}
+    #endregion
 
-		#region Constructors
-		public CrownDelegate ()
-		{
-		}
-		#endregion
+    #region Constructors
+    public CrownDelegate ()
+    {
+    }
+    #endregion
 
-		#region Override Methods
-		public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
-		{
-			base.CrownDidRotate (crownSequencer, rotationalDelta);
+    #region Override Methods
+    public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
+    {
+      base.CrownDidRotate (crownSequencer, rotationalDelta);
 
-			// Accumulate rotations
-			AccumulatedRotations += rotationalDelta;
-		}
-		#endregion
-	}
+      // Accumulate rotations
+      AccumulatedRotations += rotationalDelta;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -220,8 +220,8 @@ There are several ways that a user may respond to the Notification:
 - For a well defined and presented Notification, the user will do nothing and simply dismiss the Notification.
 - They might also tap of the Notification to launch the watchOS app.
 - For a Notification that supports Custom Actions, the user might select one of the custom actions. These can either be:
-	- **Foreground Actions** - These launch the app to perform the action.
-	- **Background Actions** - Were always routed to the iPhone in watchOS 2 but can be routed to the watchApp in watchOS 3.
+  - **Foreground Actions** - These launch the app to perform the action.
+  - **Background Actions** - Were always routed to the iPhone in watchOS 2 but can be routed to the watchApp in watchOS 3.
 
 New for watchOS 3:
 
