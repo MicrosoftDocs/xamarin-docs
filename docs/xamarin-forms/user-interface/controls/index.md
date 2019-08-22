@@ -11,7 +11,7 @@ ms.date: 08/08/2019
 
 # Controls Reference
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 The user interface of a Xamarin.Forms application is constructed of objects that map to the native controls of each target platform. This allows platform-specific applications for iOS, Android, and the Universal Windows Platform to use Xamarin.Forms code contained in a [.NET Standard library](~/cross-platform/app-fundamentals/net-standard.md).
 
