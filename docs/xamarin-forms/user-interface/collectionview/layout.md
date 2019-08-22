@@ -6,7 +6,7 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/12/2019
+ms.date: 08/22/2019
 ---
 
 # Xamarin.Forms CollectionView Layout
@@ -339,7 +339,7 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-This results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
+This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
 
 [![Screenshot of a CollectionView string header and footer, on iOS and Android](layout-images/header-footer-string.png "CollectionView string header and footer")](layout-images/header-footer-string-large.png#lightbox "CollectionView string header and footer")
 
@@ -392,7 +392,7 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-This results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
+This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
 
 [![Screenshot of a CollectionView header and footer using views, on iOS and Android](layout-images/header-footer-view.png "CollectionView view header and footer")](layout-images/header-footer-view-large.png#lightbox "CollectionView view header and footer")
 
@@ -447,7 +447,7 @@ collectionView.SetBinding(ItemsView.FooterProperty, ".");
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-This results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
+This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
 
 [![Screenshot of a CollectionView header and footer using templates, on iOS and Android](layout-images/header-footer-template.png "CollectionView template header and footer")](layout-images/header-footer-template-large.png#lightbox "CollectionView template header and footer")
 
