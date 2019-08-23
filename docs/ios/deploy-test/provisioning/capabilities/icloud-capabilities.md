@@ -94,9 +94,9 @@ This App ID can now be used to generate, or to re-generate, a new provisioning p
 
 For more information on using iCloud, refer to the following guides:
 
-*	[Introduction to iCloud](~/ios/data-cloud/introduction-to-icloud.md)
-*	[Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
-*	[Introduction to Document Picker](~/ios/platform/document-picker.md)
+* [Introduction to iCloud](~/ios/data-cloud/introduction-to-icloud.md)
+* [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
+* [Introduction to Document Picker](~/ios/platform/document-picker.md)
 
 ## Next Steps
  

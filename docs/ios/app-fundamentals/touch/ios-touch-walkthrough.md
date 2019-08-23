@@ -39,64 +39,64 @@ to add the code required to implement touch events:
 
 
 1. Open the project **Touch_Start**. First run the project to make sure everything is okay, and touch the **Touch Samples** button. You should see a screen similar to the following (although none of the buttons will work):
-	
-	[![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png#lightbox)
+
+    [![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png#lightbox)
 
 
 1. Edit the file **TouchViewController.cs** and add the following two
 instance variables to the class `TouchViewController`:
 
-	```csharp 
-	#region Private Variables
-	private bool imageHighlighted = false;
-	private bool touchStartedInside;
-	#endregion
-	```
+    ```csharp 
+    #region Private Variables
+    private bool imageHighlighted = false;
+    private bool touchStartedInside;
+    #endregion
+    ```
 
 
 1. Implement the `TouchesBegan` method, as shown in the code below:
 
-	```csharp 
-	public override void TouchesBegan(NSSet touches, UIEvent evt)
-	{
-		base.TouchesBegan(touches, evt);
-	
-		// If Multitouch is enabled, report the number of fingers down
-		TouchStatus.Text = string.Format ("Number of fingers {0}", touches.Count);
-	
-		// Get the current touch
-		UITouch touch = touches.AnyObject as UITouch;
-		if (touch != null)
-		{
-			// Check to see if any of the images have been touched
-			if (TouchImage.Frame.Contains(touch.LocationInView(TouchView)))
-			{
-				// Fist image touched
-				TouchImage.Image = UIImage.FromBundle("TouchMe_Touched.png");
-				TouchStatus.Text = "Touches Began";
-			} else if (touch.TapCount == 2 && DoubleTouchImage.Frame.Contains(touch.LocationInView(TouchView)))
-			{
-				// Second image double-tapped, toggle bitmap
-				if (imageHighlighted)
-				{
-					DoubleTouchImage.Image = UIImage.FromBundle("DoubleTapMe.png");
-					TouchStatus.Text = "Double-Tapped Off";
-				}
-				else
-				{
-					DoubleTouchImage.Image = UIImage.FromBundle("DoubleTapMe_Highlighted.png");
-					TouchStatus.Text = "Double-Tapped On";
-				}
-				imageHighlighted = !imageHighlighted;
-			} else if (DragImage.Frame.Contains(touch.LocationInView(View)))
-			{
-				// Third image touched, prepare to drag
-				touchStartedInside = true;
-			}
-		}
-	}
-	```
-	
+    ```csharp 
+    public override void TouchesBegan(NSSet touches, UIEvent evt)
+    {
+        base.TouchesBegan(touches, evt);
+    
+        // If Multitouch is enabled, report the number of fingers down
+        TouchStatus.Text = string.Format ("Number of fingers {0}", touches.Count);
+    
+        // Get the current touch
+        UITouch touch = touches.AnyObject as UITouch;
+        if (touch != null)
+        {
+            // Check to see if any of the images have been touched
+            if (TouchImage.Frame.Contains(touch.LocationInView(TouchView)))
+            {
+                // Fist image touched
+                TouchImage.Image = UIImage.FromBundle("TouchMe_Touched.png");
+                TouchStatus.Text = "Touches Began";
+            } else if (touch.TapCount == 2 && DoubleTouchImage.Frame.Contains(touch.LocationInView(TouchView)))
+            {
+                // Second image double-tapped, toggle bitmap
+                if (imageHighlighted)
+                {
+                    DoubleTouchImage.Image = UIImage.FromBundle("DoubleTapMe.png");
+                    TouchStatus.Text = "Double-Tapped Off";
+                }
+                else
+                {
+                    DoubleTouchImage.Image = UIImage.FromBundle("DoubleTapMe_Highlighted.png");
+                    TouchStatus.Text = "Double-Tapped On";
+                }
+                imageHighlighted = !imageHighlighted;
+            } else if (DragImage.Frame.Contains(touch.LocationInView(View)))
+            {
+                // Third image touched, prepare to drag
+                touchStartedInside = true;
+            }
+        }
+    }
+    ```
+    
     This method works by checking for a `UITouch` object, and if it exists perform some action based on where the touch occurred:
 
     * _Inside TouchImage_ – display the text `Touches Began` in a label and change the image.
@@ -108,30 +108,30 @@ instance variables to the class `TouchViewController`:
     as shown in the code below:
 
     ```csharp 
-	public override void TouchesMoved(NSSet touches, UIEvent evt)
-	{
-		base.TouchesMoved(touches, evt);
-		// get the touch
-		UITouch touch = touches.AnyObject as UITouch;
-		if (touch != null)
-		{
-			//==== IMAGE TOUCH
-			if (TouchImage.Frame.Contains(touch.LocationInView(TouchView)))
-			{
-				TouchStatus.Text = "Touches Moved";
-			}
+    public override void TouchesMoved(NSSet touches, UIEvent evt)
+    {
+        base.TouchesMoved(touches, evt);
+        // get the touch
+        UITouch touch = touches.AnyObject as UITouch;
+        if (touch != null)
+        {
+            //==== IMAGE TOUCH
+            if (TouchImage.Frame.Contains(touch.LocationInView(TouchView)))
+            {
+                TouchStatus.Text = "Touches Moved";
+            }
 
-			//==== IMAGE DRAG
-			// check to see if the touch started in the drag me image
-			if (touchStartedInside)
-			{
-				// move the shape
-				float offsetX = touch.PreviousLocationInView(View).X - touch.LocationInView(View).X;
-				float offsetY = touch.PreviousLocationInView(View).Y - touch.LocationInView(View).Y;
-				DragImage.Frame = new RectangleF(new PointF(DragImage.Frame.X - offsetX, DragImage.Frame.Y - offsetY), DragImage.Frame.Size);
-			}
-		}
-	}
+            //==== IMAGE DRAG
+            // check to see if the touch started in the drag me image
+            if (touchStartedInside)
+            {
+                // move the shape
+                float offsetX = touch.PreviousLocationInView(View).X - touch.LocationInView(View).X;
+                float offsetY = touch.PreviousLocationInView(View).Y - touch.LocationInView(View).Y;
+                DragImage.Frame = new RectangleF(new PointF(DragImage.Frame.X - offsetX, DragImage.Frame.Y - offsetY), DragImage.Frame.Size);
+            }
+        }
+    }
     ```
 
     This method gets a `UITouch` object, and then checks to see where the touch occurred. If the touch occurred in `TouchImage`, then the text Touches Moved is displayed on the screen. 
@@ -140,43 +140,43 @@ instance variables to the class `TouchViewController`:
 
 1. We need to handle the case when the user lifts his or her finger off the screen, or iOS cancels the touch event. For this, we will implement `TouchesEnded` and `TouchesCancelled` as shown below:
 
-	```csharp
-	public override void TouchesCancelled(NSSet touches, UIEvent evt)
-	{
-		base.TouchesCancelled(touches, evt);
-	
-		// reset our tracking flags
-		touchStartedInside = false;
-		TouchImage.Image = UIImage.FromBundle("TouchMe.png");
-		TouchStatus.Text = "";
-	}
-	
-	public override void TouchesEnded(NSSet touches, UIEvent evt)
-	{
-		base.TouchesEnded(touches, evt);
-		// get the touch
-		UITouch touch = touches.AnyObject as UITouch;
-		if (touch != null)
-		{
-			//==== IMAGE TOUCH
-			if (TouchImage.Frame.Contains(touch.LocationInView(TouchView)))
-			{
-				TouchImage.Image = UIImage.FromBundle("TouchMe.png");
-				TouchStatus.Text = "Touches Ended";
-			}
-		}
-		// reset our tracking flags
-		touchStartedInside = false;
-	}
-	```
-	
-	Both of these methods will reset the `touchStartedInside` flag to false. `TouchesEnded` will also display `TouchesEnded` on the screen.
+    ```csharp
+    public override void TouchesCancelled(NSSet touches, UIEvent evt)
+    {
+        base.TouchesCancelled(touches, evt);
+    
+        // reset our tracking flags
+        touchStartedInside = false;
+        TouchImage.Image = UIImage.FromBundle("TouchMe.png");
+        TouchStatus.Text = "";
+    }
+    
+    public override void TouchesEnded(NSSet touches, UIEvent evt)
+    {
+        base.TouchesEnded(touches, evt);
+        // get the touch
+        UITouch touch = touches.AnyObject as UITouch;
+        if (touch != null)
+        {
+            //==== IMAGE TOUCH
+            if (TouchImage.Frame.Contains(touch.LocationInView(TouchView)))
+            {
+                TouchImage.Image = UIImage.FromBundle("TouchMe.png");
+                TouchStatus.Text = "Touches Ended";
+            }
+        }
+        // reset our tracking flags
+        touchStartedInside = false;
+    }
+    ```
+
+    Both of these methods will reset the `touchStartedInside` flag to false. `TouchesEnded` will also display `TouchesEnded` on the screen.
 
 1. At this point the Touch Samples screen is finished. Notice how the screen changes as you interact with each of the images, as shown in the following screenshot:
-		
-	[![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
-	
-	[![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
+
+    [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
+    
+    [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
  
 
 <a name="Gesture_Recognizer_Samples" />
@@ -199,127 +199,127 @@ Follow these steps to implement gesture recognizers:
 
 1. Edit the file **GestureViewController.cs** and add the following instance variable:
 
-	```csharp
-	#region Private Variables
-	private bool imageHighlighted = false;
-	private RectangleF originalImageFrame = RectangleF.Empty;
-	#endregion
-	```
+    ```csharp
+    #region Private Variables
+    private bool imageHighlighted = false;
+    private RectangleF originalImageFrame = RectangleF.Empty;
+    #endregion
+    ```
 
-	We need this instance variable to keep track of the previous location of the image.
+    We need this instance variable to keep track of the previous location of the image.
 The pan gesture recognizer will use the `originalImageFrame` value to
 calculate the offset required to redraw the image on the screen.
 
 1. Add the following method to the controller:
 
-	```csharp
-	private void WireUpDragGestureRecognizer()
-	{
-		// Create a new tap gesture
-		UIPanGestureRecognizer gesture = new UIPanGestureRecognizer();
-	
-		// Wire up the event handler (have to use a selector)
-		gesture.AddTarget(() => HandleDrag(gesture));  // to be defined
-	
-		// Add the gesture recognizer to the view
-		DragImage.AddGestureRecognizer(gesture);
-	}
-	```
+    ```csharp
+    private void WireUpDragGestureRecognizer()
+    {
+        // Create a new tap gesture
+        UIPanGestureRecognizer gesture = new UIPanGestureRecognizer();
+    
+        // Wire up the event handler (have to use a selector)
+        gesture.AddTarget(() => HandleDrag(gesture));  // to be defined
+    
+        // Add the gesture recognizer to the view
+        DragImage.AddGestureRecognizer(gesture);
+    }
+    ```
 
-	This code instantiates a `UIPanGestureRecognizer` instance, and adds it to a view.
+    This code instantiates a `UIPanGestureRecognizer` instance, and adds it to a view.
 Notice that we assign a target to the gesture in the form of the method `HandleDrag` –
 this method is provided in the next step.
 
 1. To implement HandleDrag, add the following code to the controller:
 
-	```csharp
-	private void HandleDrag(UIPanGestureRecognizer recognizer)
-	{
-		// If it's just began, cache the location of the image
-		if (recognizer.State == UIGestureRecognizerState.Began)
-		{
-			originalImageFrame = DragImage.Frame;
-		}
-	
-		// Move the image if the gesture is valid
-		if (recognizer.State != (UIGestureRecognizerState.Cancelled | UIGestureRecognizerState.Failed
-			| UIGestureRecognizerState.Possible))
-		{
-			// Move the image by adding the offset to the object's frame
-			PointF offset = recognizer.TranslationInView(DragImage);
-			RectangleF newFrame = originalImageFrame;
-			newFrame.Offset(offset.X, offset.Y);
-			DragImage.Frame = newFrame;
-		}
-	}
-	```
+    ```csharp
+    private void HandleDrag(UIPanGestureRecognizer recognizer)
+    {
+        // If it's just began, cache the location of the image
+        if (recognizer.State == UIGestureRecognizerState.Began)
+        {
+            originalImageFrame = DragImage.Frame;
+        }
+    
+        // Move the image if the gesture is valid
+        if (recognizer.State != (UIGestureRecognizerState.Cancelled | UIGestureRecognizerState.Failed
+            | UIGestureRecognizerState.Possible))
+        {
+            // Move the image by adding the offset to the object's frame
+            PointF offset = recognizer.TranslationInView(DragImage);
+            RectangleF newFrame = originalImageFrame;
+            newFrame.Offset(offset.X, offset.Y);
+            DragImage.Frame = newFrame;
+        }
+    }
+    ```
 
-	The code above will first check the state of the gesture recognizer and then
+    The code above will first check the state of the gesture recognizer and then
 move the image around the screen. With this code in place, the controller can
 now support dragging the one image around the screen.
 
 
 1. Add a `UITapGestureRecognizer` that will change the image being displayed in DoubleTouchImage. Add the following method to the `GestureViewController` controller:
 
-	```csharp
-	private void WireUpTapGestureRecognizer()
-	{
-		// Create a new tap gesture
-		UITapGestureRecognizer tapGesture = null;
-	
-		// Report touch
-		Action action = () => {
-			TouchStatus.Text = string.Format("Image touched at: {0}",tapGesture.LocationOfTouch(0, DoubleTouchImage));
-	
-			// Toggle the image
-			if (imageHighlighted)
-			{
-				DoubleTouchImage.Image = UIImage.FromBundle("DoubleTapMe.png");
-			}
-			else
-			{
-				DoubleTouchImage.Image = UIImage.FromBundle("DoubleTapMe_Highlighted.png");
-			}
-			imageHighlighted = !imageHighlighted;
-		};
-	
-		tapGesture = new UITapGestureRecognizer(action);
-	
-		// Configure it
-		tapGesture.NumberOfTapsRequired = 2;
-	
-		// Add the gesture recognizer to the view
-		DoubleTouchImage.AddGestureRecognizer(tapGesture);
-	}
-	```
+    ```csharp
+    private void WireUpTapGestureRecognizer()
+    {
+        // Create a new tap gesture
+        UITapGestureRecognizer tapGesture = null;
+    
+        // Report touch
+        Action action = () => {
+            TouchStatus.Text = string.Format("Image touched at: {0}",tapGesture.LocationOfTouch(0, DoubleTouchImage));
+    
+            // Toggle the image
+            if (imageHighlighted)
+            {
+                DoubleTouchImage.Image = UIImage.FromBundle("DoubleTapMe.png");
+            }
+            else
+            {
+                DoubleTouchImage.Image = UIImage.FromBundle("DoubleTapMe_Highlighted.png");
+            }
+            imageHighlighted = !imageHighlighted;
+        };
+    
+        tapGesture = new UITapGestureRecognizer(action);
+    
+        // Configure it
+        tapGesture.NumberOfTapsRequired = 2;
+    
+        // Add the gesture recognizer to the view
+        DoubleTouchImage.AddGestureRecognizer(tapGesture);
+    }
+    ```
 
-	This code is very similar to the code for the `UIPanGestureRecognizer`
+    This code is very similar to the code for the `UIPanGestureRecognizer`
 but instead of using a delegate for a target we are using an `Action`. 
 
 1. The final thing we need to do is modify `ViewDidLoad` so that it calls the methods we just added. Change ViewDidLoad so it resembles the following code:
 
-	```csharp
-	public override void ViewDidLoad()
-	{
-		base.ViewDidLoad();
-	
-		Title = "Gesture Recognizers";
-	
-		// Save initial state
-		originalImageFrame = DragImage.Frame;
-	
-		WireUpTapGestureRecognizer();
-		WireUpDragGestureRecognizer();
-	}
-	```
+    ```csharp
+    public override void ViewDidLoad()
+    {
+        base.ViewDidLoad();
+    
+        Title = "Gesture Recognizers";
+    
+        // Save initial state
+        originalImageFrame = DragImage.Frame;
+    
+        WireUpTapGestureRecognizer();
+        WireUpDragGestureRecognizer();
+    }
+    ```
 
-	Notice as well that we initialize the value of `originalImageFrame`.
+    Notice as well that we initialize the value of `originalImageFrame`.
 
 
 1. Run the application, and interact with the two images.
 The following screenshot is one example of these interactions:
-	
-	[![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
+    
+    [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 
 
@@ -339,120 +339,120 @@ Follow these steps to create a custom gesture recognizer:
 
 1. Add a new class to the project named `CheckmarkGestureRecognizer`, and make it look like the following code:
 
-	```csharp
-	using System;
-	using CoreGraphics;
-	using Foundation;
-	using UIKit;
-	
-	namespace Touch
-	{
-		public class CheckmarkGestureRecognizer : UIGestureRecognizer
-		{
-			#region Private Variables
-			private CGPoint midpoint = CGPoint.Empty;
-			private bool strokeUp = false;
-			#endregion
-	
-			#region Override Methods
-			/// <summary>
-			///   Called when the touches end or the recognizer state fails
-			/// </summary>
-			public override void Reset()
-			{
-				base.Reset();
-	
-				strokeUp = false;
-				midpoint = CGPoint.Empty;
-			}
-	
-			/// <summary>
-			///   Is called when the fingers touch the screen.
-			/// </summary>
-			public override void TouchesBegan(NSSet touches, UIEvent evt)
-			{
-				base.TouchesBegan(touches, evt);
-	
-				// we want one and only one finger
-				if (touches.Count != 1)
-				{
-					base.State = UIGestureRecognizerState.Failed;
-				}
-	
-				Console.WriteLine(base.State.ToString());
-			}
-	
-			/// <summary>
-			///   Called when the touches are cancelled due to a phone call, etc.
-			/// </summary>
-			public override void TouchesCancelled(NSSet touches, UIEvent evt)
-			{
-				base.TouchesCancelled(touches, evt);
-				// we fail the recognizer so that there isn't unexpected behavior
-				// if the application comes back into view
-				base.State = UIGestureRecognizerState.Failed;
-			}
-	
-			/// <summary>
-			///   Called when the fingers lift off the screen
-			/// </summary>
-			public override void TouchesEnded(NSSet touches, UIEvent evt)
-			{
-				base.TouchesEnded(touches, evt);
-				//
-				if (base.State == UIGestureRecognizerState.Possible && strokeUp)
-				{
-					base.State = UIGestureRecognizerState.Recognized;
-				}
-	
-				Console.WriteLine(base.State.ToString());
-			}
-	
-			/// <summary>
-			///   Called when the fingers move
-			/// </summary>
-			public override void TouchesMoved(NSSet touches, UIEvent evt)
-			{
-				base.TouchesMoved(touches, evt);
-	
-				// if we haven't already failed
-				if (base.State != UIGestureRecognizerState.Failed)
-				{
-					// get the current and previous touch point
-					CGPoint newPoint = (touches.AnyObject as UITouch).LocationInView(View);
-					CGPoint previousPoint = (touches.AnyObject as UITouch).PreviousLocationInView(View);
-	
-					// if we're not already on the upstroke
-					if (!strokeUp)
-					{
-						// if we're moving down, just continue to set the midpoint at
-						// whatever point we're at. when we start to stroke up, it'll stick
-						// as the last point before we upticked
-						if (newPoint.X >= previousPoint.X && newPoint.Y >= previousPoint.Y)
-						{
-							midpoint = newPoint;
-						}
-						// if we're stroking up (moving right x and up y [y axis is flipped])
-						else if (newPoint.X >= previousPoint.X && newPoint.Y <= previousPoint.Y)
-						{
-							strokeUp = true;
-						}
-						// otherwise, we fail the recognizer
-						else
-						{
-							base.State = UIGestureRecognizerState.Failed;
-						}
-					}
-				}
-	
-				Console.WriteLine(base.State.ToString());
-			}
-			#endregion
-		}
-	}
-	```
+    ```csharp
+    using System;
+    using CoreGraphics;
+    using Foundation;
+    using UIKit;
+    
+    namespace Touch
+    {
+        public class CheckmarkGestureRecognizer : UIGestureRecognizer
+        {
+            #region Private Variables
+            private CGPoint midpoint = CGPoint.Empty;
+            private bool strokeUp = false;
+            #endregion
+    
+            #region Override Methods
+            /// <summary>
+            ///   Called when the touches end or the recognizer state fails
+            /// </summary>
+            public override void Reset()
+            {
+                base.Reset();
+    
+                strokeUp = false;
+                midpoint = CGPoint.Empty;
+            }
+    
+            /// <summary>
+            ///   Is called when the fingers touch the screen.
+            /// </summary>
+            public override void TouchesBegan(NSSet touches, UIEvent evt)
+            {
+                base.TouchesBegan(touches, evt);
+    
+                // we want one and only one finger
+                if (touches.Count != 1)
+                {
+                    base.State = UIGestureRecognizerState.Failed;
+                }
+    
+                Console.WriteLine(base.State.ToString());
+            }
+    
+            /// <summary>
+            ///   Called when the touches are cancelled due to a phone call, etc.
+            /// </summary>
+            public override void TouchesCancelled(NSSet touches, UIEvent evt)
+            {
+                base.TouchesCancelled(touches, evt);
+                // we fail the recognizer so that there isn't unexpected behavior
+                // if the application comes back into view
+                base.State = UIGestureRecognizerState.Failed;
+            }
+    
+            /// <summary>
+            ///   Called when the fingers lift off the screen
+            /// </summary>
+            public override void TouchesEnded(NSSet touches, UIEvent evt)
+            {
+                base.TouchesEnded(touches, evt);
+                //
+                if (base.State == UIGestureRecognizerState.Possible && strokeUp)
+                {
+                    base.State = UIGestureRecognizerState.Recognized;
+                }
+    
+                Console.WriteLine(base.State.ToString());
+            }
+    
+            /// <summary>
+            ///   Called when the fingers move
+            /// </summary>
+            public override void TouchesMoved(NSSet touches, UIEvent evt)
+            {
+                base.TouchesMoved(touches, evt);
+    
+                // if we haven't already failed
+                if (base.State != UIGestureRecognizerState.Failed)
+                {
+                    // get the current and previous touch point
+                    CGPoint newPoint = (touches.AnyObject as UITouch).LocationInView(View);
+                    CGPoint previousPoint = (touches.AnyObject as UITouch).PreviousLocationInView(View);
+    
+                    // if we're not already on the upstroke
+                    if (!strokeUp)
+                    {
+                        // if we're moving down, just continue to set the midpoint at
+                        // whatever point we're at. when we start to stroke up, it'll stick
+                        // as the last point before we upticked
+                        if (newPoint.X >= previousPoint.X && newPoint.Y >= previousPoint.Y)
+                        {
+                            midpoint = newPoint;
+                        }
+                        // if we're stroking up (moving right x and up y [y axis is flipped])
+                        else if (newPoint.X >= previousPoint.X && newPoint.Y <= previousPoint.Y)
+                        {
+                            strokeUp = true;
+                        }
+                        // otherwise, we fail the recognizer
+                        else
+                        {
+                            base.State = UIGestureRecognizerState.Failed;
+                        }
+                    }
+                }
+    
+                Console.WriteLine(base.State.ToString());
+            }
+            #endregion
+        }
+    }
+    ```
 
-	The Reset method is called when the `State` property changes to either `Recognized`
+    The Reset method is called when the `State` property changes to either `Recognized`
 or `Ended`. This is the time to reset any internal state set in the custom gesture recognizer.
 Now the class can start fresh next time the user interacts with the application, and be ready to re-attempt recognizing the gesture.
 
@@ -461,59 +461,59 @@ Now the class can start fresh next time the user interacts with the application,
 1. Now that we’ve defined a custom gesture recognizer (`CheckmarkGestureRecognizer`) edit
 the **CustomGestureViewController.cs** file and add the following two instance variables:
 
-	```csharp
-	#region Private Variables
-	private bool isChecked = false;
-	private CheckmarkGestureRecognizer checkmarkGesture;
-	#endregion
-	```
+    ```csharp
+    #region Private Variables
+    private bool isChecked = false;
+    private CheckmarkGestureRecognizer checkmarkGesture;
+    #endregion
+    ```
 
 1. To instantiate and configure our gesture recognizer, add the following method to the controller:
 
-	```csharp
-	private void WireUpCheckmarkGestureRecognizer()
-	{
-		// Create the recognizer
-		checkmarkGesture = new CheckmarkGestureRecognizer();
-	
-		// Wire up the event handler
-		checkmarkGesture.AddTarget(() => {
-			if (checkmarkGesture.State == (UIGestureRecognizerState.Recognized | UIGestureRecognizerState.Ended))
-			{
-				if (isChecked)
-				{
-					CheckboxImage.Image = UIImage.FromBundle("CheckBox_Unchecked.png");
-				}
-				else
-				{
-					CheckboxImage.Image = UIImage.FromBundle("CheckBox_Checked.png");
-				}
-				isChecked = !isChecked;
-			}
-		});
-	
-		// Add the gesture recognizer to the view
-		View.AddGestureRecognizer(checkmarkGesture);
-	}
-	```
+    ```csharp
+    private void WireUpCheckmarkGestureRecognizer()
+    {
+        // Create the recognizer
+        checkmarkGesture = new CheckmarkGestureRecognizer();
+    
+        // Wire up the event handler
+        checkmarkGesture.AddTarget(() => {
+            if (checkmarkGesture.State == (UIGestureRecognizerState.Recognized | UIGestureRecognizerState.Ended))
+            {
+                if (isChecked)
+                {
+                    CheckboxImage.Image = UIImage.FromBundle("CheckBox_Unchecked.png");
+                }
+                else
+                {
+                    CheckboxImage.Image = UIImage.FromBundle("CheckBox_Checked.png");
+                }
+                isChecked = !isChecked;
+            }
+        });
+    
+        // Add the gesture recognizer to the view
+        View.AddGestureRecognizer(checkmarkGesture);
+    }
+    ```
 
 1. Edit `ViewDidLoad` so that it calls `WireUpCheckmarkGestureRecognizer`, as shown in the following code snippet:
 
-	```csharp
-	public override void ViewDidLoad()
-	{
-		base.ViewDidLoad();
-	
-		// Wire up the gesture recognizer
-		WireUpCheckmarkGestureRecognizer();
-	}
-	```
+    ```csharp
+    public override void ViewDidLoad()
+    {
+        base.ViewDidLoad();
+    
+        // Wire up the gesture recognizer
+        WireUpCheckmarkGestureRecognizer();
+    }
+    ```
 
 1. Run the application, and try drawing a “V” on the screen. You should see the image being displayed change, as shown in the following screenshots:
-	
-	[![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
-	
-	[![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
+    
+    [![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
+    
+    [![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 
 
