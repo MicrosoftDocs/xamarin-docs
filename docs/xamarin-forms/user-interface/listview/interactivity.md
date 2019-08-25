@@ -70,7 +70,7 @@ Context Actions are created using `MenuItem`s. Tap events for MenuItems are rais
 
 By default, a MenuItem has no way of knowing which cell it belongs to. `CommandParameter` is available on `MenuItem` to store objects, such as the object behind the MenuItem's ViewCell. `CommandParameter` can be set in both XAML and C#.
 
-### C#  
+### C\#
 
 Context actions can be implemented in any `Cell` subclass (as long as it isn't being used as a group header) by creating `MenuItem`s and adding them to the `ContextActions` collection for the cell. You have the following properties can be configured for the context action:
 
