@@ -23,18 +23,18 @@ watchOS 1 originally required OS X Yosemite (10.10) with Xcode 7.
 A watch app consists of three projects:
 
 - **Xamarin.iOS iPhone app project** -
-	This is a normal iPhone project, it can be any of
-	the Xamarin.iOS templates. The Watch App and its
-	extension will be bundled inside this main project.
+  This is a normal iPhone project, it can be any of
+  the Xamarin.iOS templates. The Watch App and its
+  extension will be bundled inside this main project.
 
 - **Watch Extension project** - This contains
-	the code (such as Controller classes) for the Watch App.
+  the code (such as Controller classes) for the Watch App.
 
 - **Watch App project** - This contains the User Interface
-	storyboard file with all the UI resources for the Watch App.
+  storyboard file with all the UI resources for the Watch App.
 
 The [Watch Kit Catalog sample](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
-	solution looks like this in Xamarin.Studio:
+  solution looks like this in Xamarin.Studio:
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -47,41 +47,41 @@ The [Watch Kit Catalog sample](https://docs.microsoft.com/samples/xamarin/ios-sa
 -----
 
 Download and run the [WatchKitCatalog](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog) sample to get started.
-	Screens from the sample can be found on the [Controls](~/ios/watchos/user-interface/index.md)
-	page.
+  Screens from the sample can be found on the [Controls](~/ios/watchos/user-interface/index.md)
+  page.
 
 
 ## Creating a New Project
 
 You cannot create a new "Watch Solution"... rather you can add
-	a Watch App to an existing iOS application. Follow these
-	steps to create a watch app:
+  a Watch App to an existing iOS application. Follow these
+  steps to create a watch app:
 
 1. If you don't have
-	an existing project, first choose **File > New Solution** and
-	create an iOS app (for example, a **Single View App**):
+    an existing project, first choose **File > New Solution** and
+    create an iOS app (for example, a **Single View App**):
 
-	[![](installation-images/cycle8-2-sml.png "Choose File > New Solution and create an iOS app")](installation-images/cycle8-2.png#lightbox)
+    [![](installation-images/cycle8-2-sml.png "Choose File > New Solution and create an iOS app")](installation-images/cycle8-2.png#lightbox)
 
 2. Once the iOS app is created (or you plan to use your existing iOS app),
-	right-click on the solution
-	and choose **Add > Add New Project..**. In the **New Project**
-	window select **watchOS > App > WatchKit App**:
+    right-click on the solution
+    and choose **Add > Add New Project..**. In the **New Project**
+    window select **watchOS > App > WatchKit App**:
 
-	[![](installation-images/cycle8-6-sml.png "Select watchOS > App > WatchKit App")](installation-images/cycle8-6.png#lightbox)
+    [![](installation-images/cycle8-6-sml.png "Select watchOS > App > WatchKit App")](installation-images/cycle8-6.png#lightbox)
 
 3. The next screen lets you choose which iOS app project
-	should include the watch app:
+    should include the watch app:
 
-	[![](installation-images/cycle8-7-sml.png "Choose which iOS app project should include the watch app")](installation-images/cycle8-7.png#lightbox)
+    [![](installation-images/cycle8-7-sml.png "Choose which iOS app project should include the watch app")](installation-images/cycle8-7.png#lightbox)
 
 4. Finally, choose the location to save the project
-	(and optionally enabled source control):
+    (and optionally enabled source control):
 
-	[![](installation-images/cycle8-8-sml.png "Choose the location to save the project")](installation-images/cycle8-8.png#lightbox)
+    [![](installation-images/cycle8-8-sml.png "Choose the location to save the project")](installation-images/cycle8-8.png#lightbox)
 
 5. Visual Studio for Mac automatically configures [project references
-	and **Info.plist** settings](~/ios/watchos/get-started/project-references.md) for you.
+    and **Info.plist** settings](~/ios/watchos/get-started/project-references.md) for you.
 
 ## Creating the Watch User Interface
 
@@ -90,9 +90,9 @@ You cannot create a new "Watch Solution"... rather you can add
 ### Using the Xamarin iOS Designer
 
 Double-click on the watch app's **Interface.storyboard** to edit
-	using the iOS Designer. You can drag interface controllers
-	and UI controls onto the storyboard from the **Toolbox** and
-	configure them using the **Properties** pad:
+  using the iOS Designer. You can drag interface controllers
+  and UI controls onto the storyboard from the **Toolbox** and
+  configure them using the **Properties** pad:
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -105,8 +105,8 @@ Double-click on the watch app's **Interface.storyboard** to edit
 -----
 
 You should give each new interface controller a **Class**
-	by selecting it and then entering the name in the **Properties**
-	pad (this will create the required C# codebehind files automatically):
+  by selecting it and then entering the name in the **Properties**
+  pad (this will create the required C# codebehind files automatically):
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -119,7 +119,7 @@ You should give each new interface controller a **Class**
 -----
 
 Create segues by **Ctrl + dragging** from a button, table
-	or interface controller onto another interface controller.
+  or interface controller onto another interface controller.
 
 
 ### Using Xcode on the Mac
@@ -127,42 +127,42 @@ Create segues by **Ctrl + dragging** from a button, table
 # [Visual Studio for Mac](#tab/macos)
 
 You can continue to use Xcode to build your user interface
-	by right-clicking on the Interface.storyboard file
-	and selecting **Open With > Xcode Interface Builder**:
+  by right-clicking on the Interface.storyboard file
+  and selecting **Open With > Xcode Interface Builder**:
 
 # [Visual Studio](#tab/windows)
 
 Visual Studio users can also use Xcode to build their user interface
-	by switching over to use the Mac Build Host directly.
-	Open your solution in Visual Studio for Mac and then
-	right-click on the Interface.storyboard file
-	and select **Open With > Xcode Interface Builder**:
+  by switching over to use the Mac Build Host directly.
+  Open your solution in Visual Studio for Mac and then
+  right-click on the Interface.storyboard file
+  and select **Open With > Xcode Interface Builder**:
 
 -----
 
 ![](installation-images/openwith-xcode.png "Open the Interface.storyboard in Xcode Interface Builder")
 
 If using Xcode, then you should follow the same steps
-	for watch apps as for normal
-	[iOS app storyboards](~/ios/user-interface/storyboards/index.md)
-	(such as creating outlets and actions by **Ctrl+dragging**
-	into the **.h** header file).
+  for watch apps as for normal
+  [iOS app storyboards](~/ios/user-interface/storyboards/index.md)
+  (such as creating outlets and actions by **Ctrl+dragging**
+  into the **.h** header file).
 
 When you save the storyboard in Xcode Interface Builder
-	it will automatically add the outlets
-	and actions you create to the C# **.designer.cs** files
-	in the watch extension project.
+  it will automatically add the outlets
+  and actions you create to the C# **.designer.cs** files
+  in the watch extension project.
 
 
 ### Adding Additional Screens in Xcode
 
 When you add additional screens (beyond what
-	is included in the template by default) to your
-	storyboard using Xcode Interface Builder **you must manually add the C# code
-	files** for each new interface controller.
+  is included in the template by default) to your
+  storyboard using Xcode Interface Builder **you must manually add the C# code
+  files** for each new interface controller.
 
 Refer to the [Advanced instructions on how to add
-	new interface controllers to a storyboard](~/ios/watchos/troubleshooting.md#add).
+  new interface controllers to a storyboard](~/ios/watchos/troubleshooting.md#add).
 
 *The Xamarin iOS Designer does this automatically, no manual steps are required.*
 
@@ -170,22 +170,22 @@ Refer to the [Advanced instructions on how to add
 ## Building
 
 A project that includes a watch app builds like other
-	iOS projects. The building process will result in an
-	iPhone application (.app) that contains a watch
-	extension (.appex), which in turn contains the
-	code-less watch application (.app).
+  iOS projects. The building process will result in an
+  iPhone application (.app) that contains a watch
+  extension (.appex), which in turn contains the
+  code-less watch application (.app).
 
 
 ## Launching
 
 You can launch watch apps in the simulator using either
-	Visual Studio for Mac or Visual Studio (starts on the Mac Build Host).
+  Visual Studio for Mac or Visual Studio (starts on the Mac Build Host).
 
 There are two modes for launching a WatchKit app:
 
 - normal app mode (the default), and
 - [Notifications](~/ios/watchos/platform/notifications.md)
-	(which requires a test notification payload in JSON format).
+  (which requires a test notification payload in JSON format).
 
 ### Xcode 8 support
 
@@ -223,17 +223,17 @@ work.
 ### Xcode 6 and watchOS 1
 
 You must make the *watch extension project* the **Startup
-	Project** before running or debugging the app. You cannot
-	"start" the watch app itself, and if you choose the iOS
-	app then it will start as normal in the iOS Simulator.
+  Project** before running or debugging the app. You cannot
+  "start" the watch app itself, and if you choose the iOS
+  app then it will start as normal in the iOS Simulator.
 
 By default a watch app starts in normal **app** mode (not Glance or Notifications mode)
-	from Visual Studio for Mac's **Run** or **Debug** commands.
+  from Visual Studio for Mac's **Run** or **Debug** commands.
 
 When using Xcode 6, only the iPhone 5, iPhone 5S, iPhone 6, and iPhone 6 Plus
-	can activate the external display for either
-	**Apple Watch - 38mm** or **Apple Watch - 42mm**
-	where the watch applications will be displayed.
+  can activate the external display for either
+  **Apple Watch - 38mm** or **Apple Watch - 42mm**
+  where the watch applications will be displayed.
 
 > [!NOTE]
 > Remember that the watch screen does not
@@ -249,20 +249,20 @@ information how to handle notifications in code.
 
 
 Visual Studio for Mac can start the watch app with a notification
-	_startup modes_ for notifications:
+  _startup modes_ for notifications:
 
 
 
 Right-click on the watch app project and choose
-	**Run With > Custom Configuration...**:
+  **Run With > Custom Configuration...**:
 
 
 [![](installation-images/runwith-customparams-sml.png "Running a Custom Configuration")](installation-images/runwith-customparams.png#lightbox)
 
 
 This opens the **Custom Parameters** window where you can select
-	**Notification** (and provide a JSON
-	payload), then press **Run** to start the watch app in the simulator:
+  **Notification** (and provide a JSON
+  payload), then press **Run** to start the watch app in the simulator:
 
 
 [![](installation-images/runwith-execargs-sml.png "Setting the Notification and Payload")](installation-images/runwith-execargs.png#lightbox)
@@ -272,32 +272,32 @@ This opens the **Custom Parameters** window where you can select
 ## Debugging
 
 Debugging is supported in both Visual Studio for Mac and Visual Studio.
-	Remember to supply a notification JSON file when debugging in
-	notifications mode. This screenshot shows a debug breakpoint
-	being hit in a watch app:
+  Remember to supply a notification JSON file when debugging in
+  notifications mode. This screenshot shows a debug breakpoint
+  being hit in a watch app:
 
 ![](installation-images/debug-sml.png "This screenshot shows a debug breakpoint being hit in a watch app")
 
 After following the launch instructions you will end up with
-	your watch app running on the **iOS Simulator (Watch)**.
-	For the notification mode you can select **Debug > Open System Log**
-	(**CMD + /**) and use `Console.WriteLine` in your code.
+  your watch app running on the **iOS Simulator (Watch)**.
+  For the notification mode you can select **Debug > Open System Log**
+  (**CMD + /**) and use `Console.WriteLine` in your code.
 
 ### Debugging Lifecycle Event Handlers
 
 <!--
 To test the functionality in your  and 
-	methods, use the **Hardware > Lock** command in the iOS Simulator.
-	Locking will trigger the `DidDeactivate` method and the watch simulator
-	will indicate that it has been locked. Swipe the iOS Simulator to unlock,
-	which triggers the `WillActivate` method of the watch app.
+  methods, use the **Hardware > Lock** command in the iOS Simulator.
+  Locking will trigger the `DidDeactivate` method and the watch simulator
+  will indicate that it has been locked. Swipe the iOS Simulator to unlock,
+  which triggers the `WillActivate` method of the watch app.
 -->
 
 The watchOS template files (such as `InterfaceController`,
-	`ExtensionDelegate`, `NotificationController`, and `ComplicationController`)
-	come with their required lifecycle methods already implemented. Add
-	`Console.WriteLine` calls and read the **Application Output** to better
-	understand the event lifecycle.
+  `ExtensionDelegate`, `NotificationController`, and `ComplicationController`)
+  come with their required lifecycle methods already implemented. Add
+  `Console.WriteLine` calls and read the **Application Output** to better
+  understand the event lifecycle.
 
 
 

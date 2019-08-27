@@ -50,18 +50,18 @@ As stated above, an **Asset Catalogs Image Sets** contain all the versions or re
 
 1. In the **Solution Pad**, double-click the **Assets.xcassets** file to open it for editing: 
 
-	![Selecting the Assets.xcassets](image-images/imageset01.png "Selecting the Assets.xcassets")
+    ![Selecting the Assets.xcassets](image-images/imageset01.png "Selecting the Assets.xcassets")
 2. Right-click on the **Assets List** and select **New Image Set**: 
 
-	[![Adding a new image set](image-images/imageset02.png "Adding a new image set")](image-images/imageset02-large.png#lightbox)
+    [![Adding a new image set](image-images/imageset02.png "Adding a new image set")](image-images/imageset02-large.png#lightbox)
 3. Select the new image set and the editor will be displayed: 
 
-	[![Selecting the new image set](image-images/imageset03.png "Selecting the new image set")](image-images/imageset03-large.png#lightbox)
+    [![Selecting the new image set](image-images/imageset03.png "Selecting the new image set")](image-images/imageset03-large.png#lightbox)
 4. From here we can drag in images for each of the different devices and resolutions required. 
 5. Double-click the new image set's **Name** in the **Assets List** to edit it: 
 
-	[![Editing the image set name](image-images/imageset04.png "Editing the image set name")](image-images/imageset04-large.png#lightbox)
-	
+    [![Editing the image set name](image-images/imageset04.png "Editing the image set name")](image-images/imageset04-large.png#lightbox)
+    
 A special **Vector** class as been added to **Image Sets** that allows us to include a _PDF_ formatted vector image in the casset instead including individual bitmap files at the different resolutions. Using this method, you supply a single vector file for the **@1x** resolution (formatted as a vector PDF file) and the **@2x** and **@3x** versions of the file will be generated at compile time and included in the application's bundle.
 
 [![The image set editor interface](image-images/imageset05.png "The image set editor interface")](image-images/imageset05-large.png#lightbox)
@@ -92,7 +92,7 @@ To add a new Assets Catalog to your project:
 1. Right-click on the project in the **Solution Pad** and select **Add** > **New File...**
 2. Select **Mac** > **Asset Catalog**, enter a **Name** for the collection and click the **New** button: 
 
-	![Adding a new Asset Catalog](image-images/asset01.png "Adding a new Asset Catalog")
+    ![Adding a new Asset Catalog](image-images/asset01.png "Adding a new Asset Catalog")
 
 From here you can work with the collection in the same way as the default **Assets.xcassets** collection automatically included in the project.
 
@@ -106,16 +106,16 @@ Before you can use an Image file in your Xamarin.Mac application (either in C# c
 
 1. Right-click on the **Resources** folder in your project in the **Solution Pad** and select **Add** > **Add Files...**: 
 
-	![Adding a file](image-images/add01.png "Adding a file")
+    ![Adding a file](image-images/add01.png "Adding a file")
 2. From the **Add Files** dialog box, select the images files to add to the project, select `BundleResource` for the **Override build action** and click the **Open** button:
 
-	[![Selecting the files to add](image-images/add02.png "Selecting the files to add")](image-images/add02-large.png#lightbox)
+    [![Selecting the files to add](image-images/add02.png "Selecting the files to add")](image-images/add02-large.png#lightbox)
 3. If the files are not already in the **Resources** folder, you'll be asked if you want to **Copy**, **Move** or **Link** the files. Pick which every suits your needs, typically that will be **Copy**:
 
-	![Selecting the add action](image-images/add04.png "Selecting the add action")
+    ![Selecting the add action](image-images/add04.png "Selecting the add action")
 4. The new files will be included in the project and read for use: 
 
-	![The new image files added to the Solution Pad](image-images/add03.png "The new image files added to the Solution Pad")
+    ![The new image files added to the Solution Pad](image-images/add03.png "The new image files added to the Solution Pad")
 5. Repeat the process for any image files required.
 
 You can use any png, jpg, or pdf file as a source image in your Xamarin.Mac application. In the next section, we'll look at adding High Resolution versions of our Images and Icons to support Retina based Macs.
@@ -155,19 +155,19 @@ To use an image in interface builder, do the following:
 
 1. Add an image to the **Resources** folder with a **Build Action** of `BundleResource`: 
 
-	 ![An image resource in the Solution Pad](image-images/ib00.png "An image resource in the Solution Pad")
+     ![An image resource in the Solution Pad](image-images/ib00.png "An image resource in the Solution Pad")
 2. Double-click the **Main.storyboard** file to open it for editing in Interface Builder: 
 
-	 [![Editing the main storyboard](image-images/ib01.png "Editing the main storyboard")](image-images/ib01-large.png#lightbox)
+     [![Editing the main storyboard](image-images/ib01.png "Editing the main storyboard")](image-images/ib01-large.png#lightbox)
 3. Drag a UI element that takes images onto the design surface (for example, a **Image Toolbar Item**): 
 
-	 ![Editing a toolbar item](image-images/ib02.png "Editing a toolbar item")
+     ![Editing a toolbar item](image-images/ib02.png "Editing a toolbar item")
 4. Select the Image that you added to the **Resources** folder in the **Image Name** dropdown: 
 
-	 [![Selecting an image for a toolbar item](image-images/ib03.png "Selecting an image for a toolbar item")](image-images/ib03-large.png#lightbox)
+     [![Selecting an image for a toolbar item](image-images/ib03.png "Selecting an image for a toolbar item")](image-images/ib03-large.png#lightbox)
 5. The selected image will be displayed in the design surface: 
 
-	 ![The image being displayed in the Toolbar editor](image-images/ib04.png "The image being displayed in the Toolbar editor")
+     ![The image being displayed in the Toolbar editor](image-images/ib04.png "The image being displayed in the Toolbar editor")
 6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 The above steps work for any UI element that allows their image property to be set in the **Attribute Inspector**. Again, if you have included a **@2x** version of your image file, it will automatically be used on Retina Display based Macs.
@@ -215,16 +215,16 @@ Add the following public function to your View Controller:
 
 ```csharp
 public NSImage ImageTintedWithColor(NSImage sourceImage, NSColor tintColor)
-	=> NSImage.ImageWithSize(sourceImage.Size, false, rect => {
-		// Draw the original source image
-		sourceImage.DrawInRect(rect, CGRect.Empty, NSCompositingOperation.SourceOver, 1f);
+    => NSImage.ImageWithSize(sourceImage.Size, false, rect => {
+        // Draw the original source image
+        sourceImage.DrawInRect(rect, CGRect.Empty, NSCompositingOperation.SourceOver, 1f);
 
-		// Apply tint
-		tintColor.Set();
-		NSGraphics.RectFill(rect, NSCompositingOperation.SourceAtop);
+        // Apply tint
+        tintColor.Set();
+        NSGraphics.RectFill(rect, NSCompositingOperation.SourceAtop);
 
-		return true;
-	});
+        return true;
+    });
 ```
 
 > [!IMPORTANT]
@@ -248,56 +248,56 @@ To include an image as part of the cell in a `NSTableView`, you'll need to chang
 public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
 {
 
-	// This pattern allows you reuse existing views when they are no-longer in use.
-	// If the returned view is null, you instance up a new view
-	// If a non-null view is returned, you modify it enough to reflect the new data
-	NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
-	if (view == null) {
-		view = new NSTableCellView ();
-		if (tableColumn.Title == "Product") {
-			view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
-			view.AddSubview (view.ImageView);
-			view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
-		} else {
-			view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
-		}
-		view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
-		view.AddSubview (view.TextField);
-		view.Identifier = tableColumn.Title;
-		view.TextField.BackgroundColor = NSColor.Clear;
-		view.TextField.Bordered = false;
-		view.TextField.Selectable = false;
-		view.TextField.Editable = true;
+    // This pattern allows you reuse existing views when they are no-longer in use.
+    // If the returned view is null, you instance up a new view
+    // If a non-null view is returned, you modify it enough to reflect the new data
+    NSTableCellView view = (NSTableCellView)tableView.MakeView (tableColumn.Title, this);
+    if (view == null) {
+        view = new NSTableCellView ();
+        if (tableColumn.Title == "Product") {
+            view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
+            view.AddSubview (view.ImageView);
+            view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
+        } else {
+            view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
+        }
+        view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
+        view.AddSubview (view.TextField);
+        view.Identifier = tableColumn.Title;
+        view.TextField.BackgroundColor = NSColor.Clear;
+        view.TextField.Bordered = false;
+        view.TextField.Selectable = false;
+        view.TextField.Editable = true;
 
-		view.TextField.EditingEnded += (sender, e) => {
+        view.TextField.EditingEnded += (sender, e) => {
 
-			// Take action based on type
-			switch(view.Identifier) {
-			case "Product":
-				DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
-				break;
-			case "Details":
-				DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
-				break; 
-			}
-		};
-	}
+            // Take action based on type
+            switch(view.Identifier) {
+            case "Product":
+                DataSource.Products [(int)view.TextField.Tag].Title = view.TextField.StringValue;
+                break;
+            case "Details":
+                DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
+                break; 
+            }
+        };
+    }
 
-	// Tag view
-	view.TextField.Tag = row;
+    // Tag view
+    view.TextField.Tag = row;
 
-	// Setup view based on the column selected
-	switch (tableColumn.Title) {
-	case "Product":
-		view.ImageView.Image = NSImage.ImageNamed ("tags.png");
-		view.TextField.StringValue = DataSource.Products [(int)row].Title;
-		break;
-	case "Details":
-		view.TextField.StringValue = DataSource.Products [(int)row].Description;
-		break;
-	}
+    // Setup view based on the column selected
+    switch (tableColumn.Title) {
+    case "Product":
+        view.ImageView.Image = NSImage.ImageNamed ("tags.png");
+        view.TextField.StringValue = DataSource.Products [(int)row].Title;
+        break;
+    case "Details":
+        view.TextField.StringValue = DataSource.Products [(int)row].Description;
+        break;
+    }
 
-	return view;
+    return view;
 }
 ```
 
@@ -305,11 +305,11 @@ There are a few lines of interest here. First, for columns that we want to inclu
 
 ```csharp
 if (tableColumn.Title == "Product") {
-	view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
-	view.AddSubview (view.ImageView);
-	view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
+    view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
+    view.AddSubview (view.ImageView);
+    view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
 } else {
-	view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
+    view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
 }
 ```
 
@@ -344,63 +344,63 @@ To include an image as part of the cell in a `NSOutlineView`, you'll need to cha
 
 ```csharp
 public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableColumn, NSObject item) {
-	// Cast item
-	var product = item as Product;
+    // Cast item
+    var product = item as Product;
 
-	// This pattern allows you reuse existing views when they are no-longer in use.
-	// If the returned view is null, you instance up a new view
-	// If a non-null view is returned, you modify it enough to reflect the new data
-	NSTableCellView view = (NSTableCellView)outlineView.MakeView (tableColumn.Title, this);
-	if (view == null) {
-		view = new NSTableCellView ();
-		if (tableColumn.Title == "Product") {
-			view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
-			view.AddSubview (view.ImageView);
-			view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
-		} else {
-			view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
-		}
-		view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
-		view.AddSubview (view.TextField);
-		view.Identifier = tableColumn.Title;
-		view.TextField.BackgroundColor = NSColor.Clear;
-		view.TextField.Bordered = false;
-		view.TextField.Selectable = false;
-		view.TextField.Editable = !product.IsProductGroup;
-	}
+    // This pattern allows you reuse existing views when they are no-longer in use.
+    // If the returned view is null, you instance up a new view
+    // If a non-null view is returned, you modify it enough to reflect the new data
+    NSTableCellView view = (NSTableCellView)outlineView.MakeView (tableColumn.Title, this);
+    if (view == null) {
+        view = new NSTableCellView ();
+        if (tableColumn.Title == "Product") {
+            view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
+            view.AddSubview (view.ImageView);
+            view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
+        } else {
+            view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
+        }
+        view.TextField.AutoresizingMask = NSViewResizingMask.WidthSizable;
+        view.AddSubview (view.TextField);
+        view.Identifier = tableColumn.Title;
+        view.TextField.BackgroundColor = NSColor.Clear;
+        view.TextField.Bordered = false;
+        view.TextField.Selectable = false;
+        view.TextField.Editable = !product.IsProductGroup;
+    }
 
-	// Tag view
-	view.TextField.Tag = outlineView.RowForItem (item);
+    // Tag view
+    view.TextField.Tag = outlineView.RowForItem (item);
 
-	// Allow for edit
-	view.TextField.EditingEnded += (sender, e) => {
+    // Allow for edit
+    view.TextField.EditingEnded += (sender, e) => {
 
-		// Grab product
-		var prod = outlineView.ItemAtRow(view.Tag) as Product;
+        // Grab product
+        var prod = outlineView.ItemAtRow(view.Tag) as Product;
 
-		// Take action based on type
-		switch(view.Identifier) {
-		case "Product":
-			prod.Title = view.TextField.StringValue;
-			break;
-		case "Details":
-			prod.Description = view.TextField.StringValue;
-			break; 
-		}
-	};
+        // Take action based on type
+        switch(view.Identifier) {
+        case "Product":
+            prod.Title = view.TextField.StringValue;
+            break;
+        case "Details":
+            prod.Description = view.TextField.StringValue;
+            break; 
+        }
+    };
 
-	// Setup view based on the column selected
-	switch (tableColumn.Title) {
-	case "Product":
-		view.ImageView.Image = NSImage.ImageNamed (product.IsProductGroup ? "tags.png" : "tag.png");
-		view.TextField.StringValue = product.Title;
-		break;
-	case "Details":
-		view.TextField.StringValue = product.Description;
-		break;
-	}
+    // Setup view based on the column selected
+    switch (tableColumn.Title) {
+    case "Product":
+        view.ImageView.Image = NSImage.ImageNamed (product.IsProductGroup ? "tags.png" : "tag.png");
+        view.TextField.StringValue = product.Title;
+        break;
+    case "Details":
+        view.TextField.StringValue = product.Description;
+        break;
+    }
 
-	return view;
+    return view;
 }
 ```
 
@@ -408,11 +408,11 @@ There are a few lines of interest here. First, for columns that we want to inclu
 
 ```csharp
 if (tableColumn.Title == "Product") {
-	view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
-	view.AddSubview (view.ImageView);
-	view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
+    view.ImageView = new NSImageView (new CGRect (0, 0, 16, 16));
+    view.AddSubview (view.ImageView);
+    view.TextField = new NSTextField (new CGRect (20, 0, 400, 16));
 } else {
-	view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
+    view.TextField = new NSTextField (new CGRect (0, 0, 400, 16));
 }
 ```
 

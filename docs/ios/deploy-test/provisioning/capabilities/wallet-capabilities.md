@@ -17,11 +17,11 @@ Wallet is an app that stores and displays barcodes and other content allowing us
 
 Developers can work with Wallet in a variety of ways:
 
-*	To create a pass, an application does not need to be built. A Passfile is a zipped archive that contains some JSON files and optional metadata files. To prepare this, a [Pass Type ID](~/ios/platform/passkit.md) and a [Pass certificate](~/ios/platform/passkit.md) is required. This information is then declared in a JSON file. More information on provisioning a Passfile can be found in the [Introduction to PassKit](~/ios/platform/passkit.md) guide.
+* To create a pass, an application does not need to be built. A Passfile is a zipped archive that contains some JSON files and optional metadata files. To prepare this, a [Pass Type ID](~/ios/platform/passkit.md) and a [Pass certificate](~/ios/platform/passkit.md) is required. This information is then declared in a JSON file. More information on provisioning a Passfile can be found in the [Introduction to PassKit](~/ios/platform/passkit.md) guide.
 
-*	Companion Apps are written to distribute passes. They also have the functionality to create, edit, and update passes and then to add them to the Wallet app. A good example of this kind of app would be a cinema app – once a user purchases a ticket through the app, that ticket can be added directly from the app to Wallet. To use a companion app, your provisioning profile must include an App ID with the Wallet features, which can be set by following the steps below. Your app must also include the required entitlements.
+* Companion Apps are written to distribute passes. They also have the functionality to create, edit, and update passes and then to add them to the Wallet app. A good example of this kind of app would be a cinema app – once a user purchases a ticket through the app, that ticket can be added directly from the app to Wallet. To use a companion app, your provisioning profile must include an App ID with the Wallet features, which can be set by following the steps below. Your app must also include the required entitlements.
 
-*	Conduit Apps are apps which do not manipulate passes directly. They have minimum interaction with the pass beyond receiving it and giving the user the option of adding them to Wallet. These apps do not need any special provisioning or entitlements, but will use some methods from the PassKit Framework.
+* Conduit Apps are apps which do not manipulate passes directly. They have minimum interaction with the pass beyond receiving it and giving the user the option of adding them to Wallet. These apps do not need any special provisioning or entitlements, but will use some methods from the PassKit Framework.
 
 ## Developer Center
 
@@ -52,7 +52,7 @@ This App ID can now be used to generate, or to re-generate, a new provisioning p
 
 For more information on using Wallet refer to the following guides:
 
-*	[Introduction to PassKit](~/ios/platform/passkit.md)
+* [Introduction to PassKit](~/ios/platform/passkit.md)
  
 ## Next Steps
  

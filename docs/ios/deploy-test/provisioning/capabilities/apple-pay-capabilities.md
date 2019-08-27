@@ -141,7 +141,7 @@ To create a certificate, follow the steps below:
 
 For more information on using Apple Pay, refer to the following guide:
 
-*	[Introduction to Apple Pay](~/ios/platform/apple-pay.md)
+* [Introduction to Apple Pay](~/ios/platform/apple-pay.md)
 
 ## Next Steps
  

@@ -191,8 +191,8 @@ Now create a provisioning profile that contains this App ID. Follow the steps be
 
 Once a Capability has been enabled on the server side, there is still work that needs to be done to allow your app to use the functionality. The list below describes additional steps that may need to be taken:
 
-*	Use the framework namespace in your app.
-*	Add the required entitlements to your App. Information on the entitlements required and how to add them is detailed in the [Introduction to Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
+* Use the framework namespace in your app.
+* Add the required entitlements to your App. Information on the entitlements required and how to add them is detailed in the [Introduction to Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
 <a name="troubleshooting" />
 
