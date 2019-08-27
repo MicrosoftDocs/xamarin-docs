@@ -325,7 +325,7 @@
 ### [Unit Converters](~/essentials/unit-converters.md?context=xamarin/xamarin-forms)
 ### [Version Tracking](~/essentials/version-tracking.md?context=xamarin/xamarin-forms)
 ### [Vibrate](~/essentials/vibrate.md?context=xamarin/xamarin-forms)
-### [Xamarin.Essentials Release Notes](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+### [Xamarin.Essentials release notes](https://docs.microsoft.com/xamarin/essentials/release-notes/)
 ### [Troubleshooting](~/essentials/troubleshooting.md?context=xamarin/xamarin-forms)
 
 ## Data & Azure Cloud Services
@@ -381,7 +381,7 @@
 #### [Why doesn't the Visual Studio XAML designer work for Xamarin.Forms XAML files?](troubleshooting/questions/forms-xaml-designer.md)
 #### [Android build error: The "LinkAssemblies" task failed unexpectedly](troubleshooting/questions/android-linkassemblies-error.md)
 #### [Why does my Xamarin.Forms.Maps Android project fail with COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR?](troubleshooting/questions/maps-compiletodalvik-error.md)
-## [Release Notes](https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/)
+## [Release notes](https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/)
 ## [Samples](samples/index.yml)
 ## [Creating Mobile Apps with Xamarin.Forms Book](creating-mobile-apps-xamarin-forms/index.md)
 ## [Enterprise Application Patterns eBook](enterprise-application-patterns/index.md)
