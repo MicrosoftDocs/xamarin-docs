@@ -68,6 +68,7 @@ When we click the **Back** button, *Activity B* is destroyed and
 [ActivityLifecycle.SecondActivity] Activity B - OnStop
 [ActivityLifecycle.SecondActivity] Activity B - OnDestroy
 ```
+
 ### Adding a Click Counter
 
 Next, we're going to change the application so that we have a button 

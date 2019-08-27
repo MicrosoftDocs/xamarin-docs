@@ -11,11 +11,11 @@ ms.date: 08/01/2019
 
 # Xamarin.Forms MenuItem
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 
-The Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) class is a used to define menu items for menus such as `ListView` item context menus and Shell application flyout menus.
+The Xamarin.Forms [`MenuItem`](xref:Xamarin.Forms.MenuItem) class defines menu items for menus such as `ListView` item context menus and Shell application flyout menus.
 
-The following screenshot shows `MenuItem` objects in a `ListView` context menu on iOS and Android:
+The following screenshots show `MenuItem` objects in a `ListView` context menu on iOS and Android:
 
 [!["MenuItems on iOS and Android"](menuitem-images/menuitem-demo-cropped.png "MenuItems on iOS and Android")](menuitem-images/menuitem-demo-full.png#lightbox "MenuItems on iOS and Android full image")
 
@@ -210,5 +210,5 @@ On UWP, the context menu is activated by right-clicking on a list item. The cont
 
 ## Related links
 
-* [MenuItem Demos](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
+* [MenuItem Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-menuitem/)
 * [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

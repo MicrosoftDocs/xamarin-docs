@@ -270,6 +270,7 @@ Finally, the app can indicate if the instance is suitable for navigation and pho
 attributes.SupportsPhoneCalls = true;
 attributes.SupportsNavigation = true;
 ```
+
 ## Activities Best Practices
 
 Apple suggests the following best practices when working with activities:

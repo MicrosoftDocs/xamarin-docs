@@ -85,6 +85,7 @@ var alert = new NSAlert () {
 };
 alert.RunModal ();
 ```
+
 If this code is run, the following is displayed:
 
 [![](alert-images/alert02.png "A simple alert")](alert-images/alert02.png#lightbox)
@@ -148,6 +149,7 @@ alert.BeginSheetForResponse (this, (result) => {
   Console.WriteLine ("Alert Result: {0}", result);
 });
 ```
+
 If this code is run, the following will be displayed:
 
 [![](alert-images/alert05.png "A three button alert displayed as a sheet")](alert-images/alert05.png#lightbox)

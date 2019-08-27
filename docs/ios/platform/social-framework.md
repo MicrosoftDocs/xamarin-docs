@@ -267,6 +267,7 @@ var parameters = new NSDictionary ();
 var url = new NSUrl("https://api.twitter.com/1.1/statuses/user_timeline.json?count=10");
 var request = SLRequest.Create (SLServiceKind.Twitter, SLRequestMethod.Get, url, parameters);
 ```
+
 This example is limiting the returned results to the last ten entries by including `?count=10` in the URL. Finally, it attaches the request to the Twitter account (that was loaded above) and performs the call to Twitter to fetch the data:
 
 ```csharp

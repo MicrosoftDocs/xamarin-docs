@@ -6,7 +6,7 @@ ms.assetid: 5FE78207-1BD6-4706-91EF-B13932321FC9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/01/2019
+ms.date: 08/22/2019
 ---
 
 # Xamarin.Forms CollectionView Layout
@@ -100,16 +100,12 @@ However, for completeness, a [`CollectionView`](xref:Xamarin.Forms.CollectionVie
 </CollectionView>
 ```
 
-Alternatively, this can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to an object of the [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) class, specifying the `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as an argument:
+Alternatively, this can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to an object of the [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) class, specifying the `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout>
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>    
-            </x:Arguments>
-        </ListItemsLayout>
+        <ListItemsLayout Orientation="Vertical" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
@@ -168,16 +164,12 @@ This results in a single column list, which grows vertically as new items are ad
 </CollectionView>
 ```
 
-Alternatively, this can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to a [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) object, specifying the `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as an argument:
+Alternatively, this can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to an object of the [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) class, specifying the `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout>
-            <x:Arguments>
-                <ItemsLayoutOrientation>Horizontal</ItemsLayoutOrientation>    
-            </x:Arguments>
-        </ListItemsLayout>
+        <ListItemsLayout Orientation="Horizontal" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
@@ -308,6 +300,156 @@ CollectionView collectionView = new CollectionView
 By default, a horizontal [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) will display items in a single row. However, this example sets the `GridItemsLayout.Span` property to 4. This results in a four-row grid, which grows horizontally as new items are added:
 
 [![Screenshot of a CollectionView horizontal grid layout, on iOS and Android](layout-images/horizontal-grid.png "CollectionView horizontal grid layout")](layout-images/horizontal-grid-large.png#lightbox "CollectionView horizontal grid layout")
+
+## Headers and footers
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) can present a header and footer that scroll with the items in the list. The header and footer can be strings, views, or [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objects.
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties for specifying the header and footer:
+
+- `Header`, of type `object`, specifies the string, binding, or view that will be displayed at the start of the list.
+- `HeaderTemplate`, of type [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), specifies the `DataTemplate` to use to format the `Header`.
+- `Footer`, of type `object`, specifies the string, binding, or view that will be displayed at the end of the list.
+- `FooterTemplate`, of type [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), specifies the `DataTemplate` to use to format the `Footer`.
+
+These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
+
+When a header is added to a layout that grows horizontally, from left to right, the header is displayed to the left of the list. Similarly, when a footer is added to a layout that grows horizontally, from left to right, the footer is displayed to the right of the list.
+
+### Display strings in the header and footer
+
+The `Header` and `Footer` properties can be set to `string` values, as shown in the following example:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}"
+                Header="Monkeys"
+                Footer="2019">
+    ...
+</CollectionView>
+```
+
+The equivalent C# code is:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    Header = "Monkeys",
+    Footer = "2019"
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
+
+[![Screenshot of a CollectionView string header and footer, on iOS and Android](layout-images/header-footer-string.png "CollectionView string header and footer")](layout-images/header-footer-string-large.png#lightbox "CollectionView string header and footer")
+
+### Display views in the header and footer
+
+The `Header` and `Footer` properties can each be set to a view. This can be a single view, or a view that contains multiple child views. The following example shows the `Header` and `Footer` properties each set to a [`StackLayout`](xref:Xamarin.Forms.StackLayout) object that contains a [`Label`](xref:Xamarin.Forms.Label) object:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}">
+    <CollectionView.Header>
+        <StackLayout BackgroundColor="LightGray">
+            <Label Margin="10,0,0,0"
+                   Text="Monkeys"
+                   FontSize="Small"
+                   FontAttributes="Bold" />
+        </StackLayout>
+    </CollectionView.Header>
+    <CollectionView.Footer>
+        <StackLayout BackgroundColor="LightGray">
+            <Label Margin="10,0,0,0"
+                   Text="Friends of Xamarin Monkey"
+                   FontSize="Small"
+                   FontAttributes="Bold" />
+        </StackLayout>
+    </CollectionView.Footer>
+    ...
+</CollectionView>
+```
+
+The equivalent C# code is:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    Header = new StackLayout
+    {
+        Children =
+        {
+            new Label { Text = "Monkeys", ... }
+        }
+    },
+    Footer = new StackLayout
+    {
+        Children =
+        {
+            new Label { Text = "Friends of Xamarin Monkey", ... }
+        }
+    }
+};
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
+
+[![Screenshot of a CollectionView header and footer using views, on iOS and Android](layout-images/header-footer-view.png "CollectionView view header and footer")](layout-images/header-footer-view-large.png#lightbox "CollectionView view header and footer")
+
+### Display a templated header and footer
+
+The `HeaderTemplate` and `FooterTemplate` properties can be set to [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objects that are used to format the header and footer. In this scenario, the `Header` and `Footer` properties must bind to the current source for the templates to be applied, as shown in the following example:
+
+```xaml
+<CollectionView ItemsSource="{Binding Monkeys}"
+                Header="{Binding .}"
+                Footer="{Binding .}">
+    <CollectionView.HeaderTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="LightGray">
+                <Label Margin="10,0,0,0"
+                       Text="Monkeys"
+                       FontSize="Small"
+                       FontAttributes="Bold" />
+            </StackLayout>
+        </DataTemplate>
+    </CollectionView.HeaderTemplate>
+    <CollectionView.FooterTemplate>
+        <DataTemplate>
+            <StackLayout BackgroundColor="LightGray">
+                <Label Margin="10,0,0,0"
+                       Text="Friends of Xamarin Monkey"
+                       FontSize="Small"
+                       FontAttributes="Bold" />
+            </StackLayout>
+        </DataTemplate>
+    </CollectionView.FooterTemplate>
+    ...
+</CollectionView>
+```
+
+The equivalent C# code is:
+
+```csharp
+CollectionView collectionView = new CollectionView
+{
+    HeaderTemplate = new DataTemplate(() =>
+    {
+        return new StackLayout { };
+    }),
+    FooterTemplate = new DataTemplate(() =>
+    {
+        return new StackLayout { };
+    })
+};
+collectionView.SetBinding(ItemsView.HeaderProperty, ".");
+collectionView.SetBinding(ItemsView.FooterProperty, ".");
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+```
+
+This code results in the following screenshots, with the header shown in the iOS screenshot, and the footer shown in the Android screenshot:
+
+[![Screenshot of a CollectionView header and footer using templates, on iOS and Android](layout-images/header-footer-template.png "CollectionView template header and footer")](layout-images/header-footer-template-large.png#lightbox "CollectionView template header and footer")
 
 ## Item spacing
 

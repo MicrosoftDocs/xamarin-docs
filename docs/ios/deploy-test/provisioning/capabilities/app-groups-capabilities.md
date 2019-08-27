@@ -15,9 +15,9 @@ _Adding capabilities to an application often requires additional provisioning se
 
 An App Group allows different applications (or an application and its extensions) to access a shared file storage location. App Groups can be used for data like:
 
-*	[Apple Watch Settings](~/ios/watchos/app-fundamentals/settings.md)
-*	[Shared NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
-*	[Shared Files](~/ios/watchos/app-fundamentals/parent-app.md#files)
+* [Apple Watch Settings](~/ios/watchos/app-fundamentals/settings.md)
+* [Shared NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
+* [Shared Files](~/ios/watchos/app-fundamentals/parent-app.md#files)
 
 ## Configure a new App Group
 

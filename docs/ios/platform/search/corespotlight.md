@@ -129,6 +129,7 @@ CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
 	}
 });
 ```
+
 ## Additional Core Spotlight Features
 
 Core Spotlight has the following features that help to keep the index accurate

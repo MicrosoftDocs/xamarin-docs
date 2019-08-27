@@ -214,6 +214,7 @@ A complete example that uses this approach might look similar to the following o
 ```bash
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser" /p:IpaPackageDir="%USERPROFILE%\Builds" /t:Build SingleViewIphone1.sln
 ```
+
 Or the following on Mac:
 
 ```bash

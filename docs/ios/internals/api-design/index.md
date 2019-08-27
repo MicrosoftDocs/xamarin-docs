@@ -57,6 +57,7 @@ macOS):
     ```objc
     NSArray *getViews
     ```
+
     Expose a strong type, like this:
 
     ```csharp

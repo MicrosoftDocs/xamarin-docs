@@ -25,7 +25,7 @@ Xamarin.Forms | 4.1 or greater
 
 ## Use XAML Hot Reload for Xamarin.Forms
 
-No additional installation or setup is required to use XAML Hot Reload. It's built into Visual Studio and can be enabled in the IDE settings. Once enabled, you can start using XAML Hot Reload by debugging your app on an emulator, simulator, or physical device.
+No additional installation or setup is required to use XAML Hot Reload. It's built into Visual Studio and can be enabled in the IDE settings. Once enabled, you can start using XAML Hot Reload by debugging your app on an emulator, simulator, or physical device. Currently, XAML Hot Reload only works when debugging on iOS or Android.
 
 On Windows, XAML Hot Reload can be enabled by checking the **Enable Xamarin Hot Reload** checkbox at **Tools** > **Options** > **Xamarin** > **Hot Reload**.
 

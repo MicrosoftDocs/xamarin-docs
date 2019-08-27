@@ -52,6 +52,7 @@ You can set a design time Source for images that are bound to the page or loaded
 ```xaml
 <Image Source={Binding ProfilePicture} d:Source="DesignTimePicture.jpg" />
 ```
+
 [![Design time data with images](xaml-previewer-images/designtimedata-image-sm.png "Design time data with iamges")](xaml-previewer-images/designtimedata-image-lg.png#lightbox)
 
 ## Design time data for ListViews

@@ -155,6 +155,7 @@ Add the following `using` statement:
 ```csharp
 using System;
 ```
+
 Next, add the following string array as a member of `MainActivity`:
 
 ```csharp

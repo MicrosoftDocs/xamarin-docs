@@ -84,6 +84,7 @@ We would update the new binding to be:
 [Export("add:and:")]
 nint Add(nint operandUn, nint operandDeux);
 ```
+
 If we are mapping to a newer version 3rd party library than what we had initially linked to, we need to review the `.h` header files for the library and see if any exiting, explicit calls to `int`, `int32_t`, `unsigned int`, `uint32_t` or `float` have been upgraded to be an `NSInteger`, `NSUInteger` or a `CGFloat`. If so, the same modifications to the `nint`, `nuint` and `nfloat` types will need to be made to their mappings as well.
 
 To learn more about these data type changes, see the [Native Types](~/cross-platform/macios/nativetypes.md) document.
@@ -218,4 +219,4 @@ In this article we have shown the changes that need to be made to an existing Xa
 - [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md)
 - [Upgrading Existing iOS Apps](~/cross-platform/macios/unified/updating-ios-apps.md)
 - [Unified API](~/cross-platform/macios/unified/index.md)
-- [BindingSample](https://docs.microsoft.com/en-us/samples/xamarin/ios-samples/bindingsample/)
+- [BindingSample](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)

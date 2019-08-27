@@ -77,10 +77,10 @@ To add an Entitlements.plist file to your Xamarin.iOS do the following:
 
 1. Right-click on the project file and browse to **Add > New File…**:
 
-	![Add Files context menu](entitlements-images/image1.png)
+    ![Add Files context menu](entitlements-images/image1.png)
 2. In the New File dialog select **iOS > Property List** and name it Entitlements:
 
-	![New File dialog](entitlements-images/image2.png)
+    ![New File dialog](entitlements-images/image2.png)
 
 ## Entitlement key reference
 
@@ -88,7 +88,7 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 
 ### Wallet
 
-*	**Description**: Formally known as Passbook, wallet is an app that stores and manages passes. These passes may be credit cards, store cards, boarding passes, or tickets.
+* **Description**: Formally known as Passbook, wallet is an app that stores and manages passes. These passes may be credit cards, store cards, boarding passes, or tickets.
 
     - **Pass Type Identifier**
         * **Keys**: com.apple.developer.pass-type-identifiers
@@ -104,7 +104,7 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 
 ### iCloud
 
-*	**Description**: iCloud provides iOS users with a convenient and simple way to store their content and share it between devices. There are four ways developers can use iCloud to provide a means of storage for their users: Key-Value storage, UIDocument Storage, CoreData, and using CloudKit directly to provide storage for Individual files and directories. For more information on these, refer to the Introduction to iCloud guide.
+* **Description**: iCloud provides iOS users with a convenient and simple way to store their content and share it between devices. There are four ways developers can use iCloud to provide a means of storage for their users: Key-Value storage, UIDocument Storage, CoreData, and using CloudKit directly to provide storage for Individual files and directories. For more information on these, refer to the Introduction to iCloud guide.
 
     - **iCloud Documents & CloudKit**
         - **Keys**: com.apple.developer.ubiquity-container-identifiers

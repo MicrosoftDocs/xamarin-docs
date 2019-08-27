@@ -163,6 +163,7 @@ Finally, you can draw a vertical line on one side of a paragraph of text by encl
     </Label>
 </StackLayout>
 ```
+
 <a name="listingcolors" />
 
 ## Listing Colors with BoxView
@@ -589,6 +590,7 @@ public partial class MainPage : ContentPage
     }
 }
 ```
+
 <a name="analogclock" />
 
 ## Creating an Analog Clock

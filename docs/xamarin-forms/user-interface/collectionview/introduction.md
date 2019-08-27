@@ -6,12 +6,12 @@ ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 07/24/2019
 ---
 
 # Xamarin.Forms CollectionView Introduction
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![This API is currently pre-release](~/media/shared/preview.png)
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -26,7 +26,7 @@ Forms.SetFlags("CollectionView_Experimental");
 ```
 
 > [!IMPORTANT]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) is available on iOS and Android, but is only partially available on the Universal Windows Platform.
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) is available on iOS and Android, but is only [partially available](https://gist.github.com/hartez/7d0edd4182dbc7de65cebc6c67f72e14) on the Universal Windows Platform.
 
 ## CollectionView and ListView differences
 
@@ -52,8 +52,8 @@ While the [`CollectionView`](xref:Xamarin.Forms.CollectionView) and [`ListView`]
 | Selection | `SelectionMode`, `SelectedItem` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) supports single and multiple selection. For more information, see [Xamarin.Forms CollectionView Selection](selection.md). |
 | Row height | `HasUnevenRows`, `RowHeight` | In a `CollectionView`, the row height of each item is determined by the `ItemSizingStrategy` property. For more information, see [Item sizing](layout.md#item-sizing).|
 | Caching | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) automatically uses the virtualization provided by the underlying native controls. |
-| Headers and footers | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | Headers and footers are currently unsupported in `CollectionView`, but will be added in a future release.|
-| Grouping | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | Grouping is currently unsupported in `CollectionView`, but will be added in a future release. |
+| Headers and footers | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) can present a header and footer that scroll with the items in the list, via the `Header`, `Footer`, `HeaderTemplate`, and `FooterTemplate` properties. For more information, see [Headers and footers](layout.md#headers-and-footers). |
+| Grouping | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays correctly grouped data by setting its `IsGrouped` property to `true`. Group headers and group footers can be customized by setting the `GroupHeaderTemplate` and `GroupFooterTemplate` properties to  [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objects. For more information, see [Xamarin.Forms CollectionView Grouping](grouping.md). |
 | Pull to refresh | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | Pull to refresh is currently unsupported in `CollectionView`, but will be added in a future release. |
 | Context actions | `ContextActions` | Context actions are currently unsupported in `CollectionView`, but will be added in a future release. |
 | Scrolling | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines `ScrollTo` methods, that scroll items into view. For more information, see [Scrolling](scrolling.md). |

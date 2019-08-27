@@ -6,7 +6,7 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/13/2019
+ms.date: 07/18/2019
 ---
 
 # Xamarin.Forms Map
@@ -177,35 +177,41 @@ public class MapPage : ContentPage {
 The map content can also be changed by setting the `MapType` property, to show a regular street map (the default), satellite imagery or a combination of both.
 
 ```csharp
-map.MapType == MapType.Street;
+map.MapType = MapType.Street;
 ```
 
 Valid `MapType` values are:
 
-- Hybrid
-- Satellite
-- Street (the default)
+- `Hybrid`
+- `Satellite`
+- `Street` (the default)
 
 ### Map region and MapSpan
 
-As shown in the code snippet above, supplying a `MapSpan` instance to a map constructor sets the initial view (center point and zoom level) of the map when it is loaded. The `MoveToRegion` method on the map class can then be used to change the position or zoom level of the map. There are two ways to create a new `MapSpan` instance:
+As shown in the code snippet above, supplying a `MapSpan` instance to a map constructor sets the initial view (center point and zoom level) of the map when it is loaded. There are two ways to create a new `MapSpan` instance:
 
 - **MapSpan.FromCenterAndRadius()** - static method to create a span from a  `Position` and specifying a  `Distance` .
 - **new MapSpan ()** - constructor that uses a  `Position` and the degrees of latitude and longitude to display.
 
-
-To change the zoom level of the map without altering the location, create a new `MapSpan` using the current location from the `VisibleRegion.Center` property of the map control. A `Slider` could be used to control map zoom like this (however zooming directly in the map control cannot currently update the value of the slider):
+The `MoveToRegion` method on the map class can then be used to change the position or zoom level of the map. To change the zoom level of the map without altering the location, create a new `MapSpan` using the current location from the `VisibleRegion.Center` property of the map control. A `Slider` can be used to control map zoom like this (however zooming directly in the map control cannot currently update the value of the slider):
 
 ```csharp
-var slider = new Slider (1, 18, 1);
-slider.ValueChanged += (sender, e) => {
+Slider slider = new Slider (1, 18, 1);
+slider.ValueChanged += (sender, e) =>
+{
     var zoomLevel = e.NewValue; // between 1 and 18
     var latlongdegrees = 360 / (Math.Pow(2, zoomLevel));
     map.MoveToRegion(new MapSpan (map.VisibleRegion.Center, latlongdegrees, latlongdegrees));
 };
 ```
 
- [![Maps with zoom](map-images/maps-zoom-sml.png "Map Control Zoom")](map-images/maps-zoom.png#lightbox "Map Control Zoom")
+[![Maps with zoom](map-images/maps-zoom-sml.png "Map Control Zoom")](map-images/maps-zoom.png#lightbox "Map Control Zoom")
+
+In addition, the [`Map`](xref:Xamarin.Forms.Maps.Map) class has a `MoveToLastRegionOnLayoutChange` property of type `bool`, which is backed by a bindable property. By default this property is `true`, which indicates that the displayed map region will move from its current region to its previously set region when a layout change occurs, such as on device rotation. When this property is set to `false`, the displayed map region will remain centered when a layout change occurs. The following example shows setting this property:
+
+```csharp
+map.MoveToLastRegionOnLayoutChange = false;
+```
 
 ### Map pins
 
@@ -301,6 +307,7 @@ A [`Map`](xref:Xamarin.Forms.Maps.Map) can be populated with data by using data 
     <Grid>
         ...
         <maps:Map x:Name="map"
+                  MoveToLastRegionOnLayoutChange="false"
                   ItemsSource="{Binding Locations}">
             <maps:Map.ItemTemplate>
                 <DataTemplate>

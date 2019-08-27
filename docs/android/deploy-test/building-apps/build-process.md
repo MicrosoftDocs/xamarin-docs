@@ -799,6 +799,7 @@ when packaging Release applications.
     [`_CompileDex` target throws a `java.lang.OutOfMemoryError`](https://bugzilla.xamarin.com/show_bug.cgi?id=18327).
 
     Customize the value by changing:
+
     ```xml
     <JavaMaximumHeapSize>1G</JavaMaximumHeapSize>
     ```

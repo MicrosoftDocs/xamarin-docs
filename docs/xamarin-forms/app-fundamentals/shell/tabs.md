@@ -159,6 +159,9 @@ The child of every `Tab` object is a `ShellContent` object, whose `Content` prop
 
 Within each [`ContentPage`](xref:Xamarin.Forms.ContentPage) object, additional `ContentPage` objects can be navigated to. For more information about navigation, see [Xamarin.Forms Shell Navigation](navigation.md).
 
+> [!NOTE]
+> The [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of each `ShellContent` object is inherited from the parent `Tab` object.
+
 ### ShellContent class
 
 The `ShellContent` class includes the following properties that control tab content appearance and behavior:

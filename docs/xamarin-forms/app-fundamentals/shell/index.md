@@ -39,6 +39,10 @@ Shell applications can utilize a URI-based navigation scheme that uses routes to
 
 Shell applications can use integrated search functionality that's provided by a search box that can be added to the top of each page.
 
+## [Lifecycle](lifecycle.md)
+
+Shell applications respect the Xamarin.Forms lifecycle, and an `Appearing` event is raised when a page is about to appear on the screen, and a `Disappearing` event is raised when a page is about to disappear from the screen.
+
 ## [Custom renderers](customrenderers.md)
 
 Shell applications are highly customizable through the properties and methods that the various Shell classes expose. However, it's also possible to create a Shell custom renderer when more sophisticated platform-specific customizations are required.
