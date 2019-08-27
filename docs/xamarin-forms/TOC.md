@@ -324,6 +324,7 @@
 ### [Unit Converters](~/essentials/unit-converters.md?context=xamarin/xamarin-forms)
 ### [Version Tracking](~/essentials/version-tracking.md?context=xamarin/xamarin-forms)
 ### [Vibrate](~/essentials/vibrate.md?context=xamarin/xamarin-forms)
+### [Xamarin.Essentials Release Notes](https://docs.microsoft.com/xamarin/essentials/release-notes/)
 ### [Troubleshooting](~/essentials/troubleshooting.md?context=xamarin/xamarin-forms)
 
 ## Data & Azure Cloud Services
