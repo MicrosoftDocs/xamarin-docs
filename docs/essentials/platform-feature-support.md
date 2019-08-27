@@ -4,7 +4,7 @@ description: "Xamarin.Essentials provides a single cross-platform API that works
 ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/10/2019
+ms.date: 08/20/2019
 ---
 
 # Platform Support
@@ -23,7 +23,6 @@ Xamarin.Essentials supports the following platforms and operating systems:
 > [!NOTE]
 > * Tizen is officially supported by the Samsung development team.
 > * tvOS & watchOS have limited API coverage, please see the feature guide for more information.
-> * Tizen, tvOS, & watchOS are currently in preview and available in Xamarin.Essentials 1.3-pre
 
 ## Feature Support
 
