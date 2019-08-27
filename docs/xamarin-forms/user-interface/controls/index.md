@@ -26,6 +26,9 @@ A Xamarin.Forms page generally occupies the entire screen. The page usually cont
 
 In the four articles on [**Pages**](pages.md), [**Layouts**](layouts.md), [**Views**](views.md), and [**Cells**](cells.md), each type of control is described with links to its API documentation, an article describing its use (if one exists), and one or more sample programs (if they exist). Each type of control is also accompanied by a screenshot showing a page from the [**FormsGallery**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) sample running on iOS and Android devices. Below each screenshot are links to the source code for the C# page, the equivalent XAML page, and (when appropriate) the C# code-behind file for the XAML page.
 
+> [!NOTE]
+> Pages, Layouts, and Views derive from the `VisualElement` class. The `VisualElement` class provides a variety of properties, methods, and events that are useful in deriving classes. For more information, see [VisualElement properties, methods, and events](common-properties.md).
+
 In addition to the controls supplied with Xamarin.Forms, third-party controls are available. For more information, see [Third Party Controls](thirdparty.md).
 
 ## Related Links
