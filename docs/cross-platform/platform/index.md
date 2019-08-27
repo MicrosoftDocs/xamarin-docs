@@ -10,7 +10,7 @@ ms.date: 02/18/2018
 
 # Programming Language Support in Xamarin
 
-## C# 
+## C\#
 
 ### [Async Support Overview](~/cross-platform/platform/async.md)
 
