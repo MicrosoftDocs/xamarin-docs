@@ -957,9 +957,9 @@ notification will appear in the notification area.
 
 When an app is in the background, the [payload of the message](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) will determine how the message is handled:
 
-* **Notification** &ndash; messages will be sent to the **system tray**. A local notification will appear there. When the user taps on the notification the app will launch.
-* **Data** &ndash; messages will be handled by `OnMessageReceived`.
-* **Both** &ndash; messages that have both a notification and data payload will be delivered to the system tray. When the app launches, the data payload will appear in the `Extras` of the `Intent` that was used to start the app.
+- **Notification** &ndash; messages will be sent to the **system tray**. A local notification will appear there. When the user taps on the notification the app will launch.
+- **Data** &ndash; messages will be handled by `OnMessageReceived`.
+- **Both** &ndash; messages that have both a notification and data payload will be delivered to the system tray. When the app launches, the data payload will appear in the `Extras` of the `Intent` that was used to start the app.
 
 In this example, if the app is backgrounded, `SendNotification` will run if the message has a data payload. Otherwise, a background notification (illustrated earlier in this walkthrough) will be launched.
 

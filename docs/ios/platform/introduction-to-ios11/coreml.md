@@ -188,11 +188,11 @@ void HandleClassification(VNRequest request, NSError error){
 
 There are three CoreML samples to try:
 
-* The [Mars Habitat Price Predictor sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) has simple numeric inputs and outputs.
+- The [Mars Habitat Price Predictor sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-marshabitatcoremltimer/) has simple numeric inputs and outputs.
 
-* The [Vision & CoreML sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) accepts an image parameter, and uses the Vision framework to identify square regions in the image, which are passed to a CoreML model that recognizes single digits.
+- The [Vision & CoreML sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlvision) accepts an image parameter, and uses the Vision framework to identify square regions in the image, which are passed to a CoreML model that recognizes single digits.
 
-* Finally, the [CoreML Image Recognition sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) uses CoreML to identify features in a photo. By default it uses the smaller **SqueezeNet** model (5MB), but it's been written so that you can download and incorporate the larger **VGG16** model (553MB). For more information, see the [sample's readme](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
+- Finally, the [CoreML Image Recognition sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-coremlimagerecognition) uses CoreML to identify features in a photo. By default it uses the smaller **SqueezeNet** model (5MB), but it's been written so that you can download and incorporate the larger **VGG16** model (553MB). For more information, see the [sample's readme](https://github.com/xamarin/ios-samples/blob/master/ios11/CoreMLImageRecognition/CoreMLImageRecognition/README.md).
 
 ## Related Links
 

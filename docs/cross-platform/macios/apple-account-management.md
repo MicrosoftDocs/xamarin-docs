@@ -16,8 +16,8 @@ Authentication of your Apple ID is performed on the command line with [fastlane]
 
 The Apple Account dialog allows you to do the following:
 
-* **Create and Manage Certificates**
-* **Create and Manage Provisioning Profiles**
+- **Create and Manage Certificates**
+- **Create and Manage Provisioning Profiles**
 
 Information on how to do this is described in this guide.
 
@@ -91,13 +91,13 @@ You must have an Apple Developer account to use this feature. More information o
 
 The team details dialog displays a list of Signing Identities, organized by type. The **Status** column advises you if the certificate is: 
 
-* **Valid** – The signing identity (both the certificate and the private key) is installed on your machine and it has not expired.
+- **Valid** – The signing identity (both the certificate and the private key) is installed on your machine and it has not expired.
 
-* **Not in Keychain** – There is a valid signing identity on Apple's server. To install this on your machine, it must be exported from another machine. You cannot download the signing identity from the Apple Developer Portal as it will not contain the private key.
+- **Not in Keychain** – There is a valid signing identity on Apple's server. To install this on your machine, it must be exported from another machine. You cannot download the signing identity from the Apple Developer Portal as it will not contain the private key.
 
-* **Private key is missing** – A Certificate with no private key is installed in the keychain.
+- **Private key is missing** – A Certificate with no private key is installed in the keychain.
 
-* **Expired** – The Certificate is expired. You should remove this from your keychain.
+- **Expired** – The Certificate is expired. You should remove this from your keychain.
 
   ![team details dialog information](apple-account-management-images/image7.png)
 
@@ -143,7 +143,7 @@ This is currently a known issue, relating to bug [#53906](https://bugzilla.xamar
 
 ### If you are experiencing issues logging in your account, please try the following:
 
-* Open the keychain application and under Category select *Passwords*. Search for `deliver.`, and delete all entries.
+- Open the keychain application and under Category select *Passwords*. Search for `deliver.`, and delete all entries.
 
 ### "Error Adding Account. Please Sign in with an app-specific password"
 
@@ -158,4 +158,4 @@ The maximum number of certificates allowed have been generated. To fix this, bro
 
 ## Known Issues
 
-* Distribution provisioning profiles by default will target App Store. In House or Ad Hoc profiles should be created manually.
+- Distribution provisioning profiles by default will target App Store. In House or Ad Hoc profiles should be created manually.

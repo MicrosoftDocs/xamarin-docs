@@ -310,12 +310,12 @@ see the Android
 
 Here are some examples of the devices that can run Android Wear:
 
-* [Motorola 360](https://moto360.motorola.com/)
-* [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
-* [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
-* [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
-* [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
-* [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
+- [Motorola 360](https://moto360.motorola.com/)
+- [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
+- [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
+- [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
+- [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
+- [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 
 
@@ -323,10 +323,10 @@ Here are some examples of the devices that can run Android Wear:
 
 Check out Google's Android Wear documentation:
 
-* [About Android Wear](http://www.android.com/wear/)
-* [Android Wear App Design](https://developer.android.com/design/wear/index.html)
-* [android.support.wearable library](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-* [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
+- [About Android Wear](http://www.android.com/wear/)
+- [Android Wear App Design](https://developer.android.com/design/wear/index.html)
+- [android.support.wearable library](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+- [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
 
 
 

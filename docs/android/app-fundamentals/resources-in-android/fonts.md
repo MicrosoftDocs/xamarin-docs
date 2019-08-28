@@ -98,20 +98,20 @@ The following XML is an example of a font family for the _Sources Sans Pro_ font
 
 The `fontStyle` attribute has two possible values:
 
-* **normal** &ndash; a normal font
-* **italic** &ndash; an italic font
+- **normal** &ndash; a normal font
+- **italic** &ndash; an italic font
 
 The `fontWeight` attribute corresponds to the CSS `font-weight` attribute and refers to the thickness of the font. This is a value in the range of 100 - 900. The following list describes the common font weight values and their name:
 
-* **Thin** &ndash; 100
-* **Extra Light** &ndash; 200
-* **Light** &ndash; 300
-* **Normal** &ndash; 400
-* **Medium** &ndash; 500
-* **Semi Bold** &ndash; 600
-* **Bold** &ndash; 700
-* **Extra Bold** &ndash; 800
-* **Black** &ndash; 900
+- **Thin** &ndash; 100
+- **Extra Light** &ndash; 200
+- **Light** &ndash; 300
+- **Normal** &ndash; 400
+- **Medium** &ndash; 500
+- **Semi Bold** &ndash; 600
+- **Bold** &ndash; 700
+- **Extra Bold** &ndash; 800
+- **Black** &ndash; 900
 
 Once a font family has been defined, it can be used declaratively by setting the `fontFamily`, `textStyle`, and `fontWeight` attributes in the layout file.  For example the following XML snippet sets a 600 weight font (normal) and an italic text style:
 
@@ -255,8 +255,8 @@ In the previous snippet `FontToDownload` is a query that will help the font from
 
 Before passing the `FontRequest` to the `FontContractCompat.RequestFont` method, there are two objects that must be created:
 
-* **`FontsContractCompat.FontRequestCallback`** &ndash; This is an abstract class which must be extended. It is a callback that will be invoked when `RequestFont` is finished. A Xamarin.Android app must subclass `FontsContractCompat.FontRequestCallback` and override the `OnTypefaceRequestFailed` and `OnTypefaceRetrieved`, providing the actions to be taken when the download fails or succeeds respectively.
-* **`Handler`** &ndash; This is a `Handler` which will be used by `RequestFont` to download the font on a thread, if necessary. Fonts should **not** be downloaded on the UI thread.
+- **`FontsContractCompat.FontRequestCallback`** &ndash; This is an abstract class which must be extended. It is a callback that will be invoked when `RequestFont` is finished. A Xamarin.Android app must subclass `FontsContractCompat.FontRequestCallback` and override the `OnTypefaceRequestFailed` and `OnTypefaceRetrieved`, providing the actions to be taken when the download fails or succeeds respectively.
+- **`Handler`** &ndash; This is a `Handler` which will be used by `RequestFont` to download the font on a thread, if necessary. Fonts should **not** be downloaded on the UI thread.
 
 This snippet is an example of a C# class that will asynchronously download a font from Google Fonts Open Source collection. It implements the `FontRequestCallback` interface, and raises a C# event when `FontRequest` has finished.
 

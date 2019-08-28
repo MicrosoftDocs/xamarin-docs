@@ -322,8 +322,8 @@ Now that we have our User Interface created, we need to expose the UI items so t
 
 There are two main ways to access the controls that you have added in the iOS designer from code:
 
-* Creating an event handler on a control.
-* Giving the control a name, so that we can later reference it.
+- Creating an event handler on a control.
+- Giving the control a name, so that we can later reference it.
 
 When either of these are added, the partial class within the `ViewController.designer.cs` will be updated to reflect the changes. This will allow you to then access the controls in the View Controller.
 

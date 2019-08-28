@@ -878,8 +878,8 @@ namespace tvTable
 
 Again, this class just defines a few shortcuts to make it easier to communicate across the two sides of the Split View Controller:
 
-* `SplitView` - Is a link to the Split View Controller (`MainSpiltViewController`) that the Navigation View Controller belongs to.
-* `TableController` - Gets the Table View Controller (`AttractionTableViewController`) that is presented as the Top View in the Navigation View Controller.
+- `SplitView` - Is a link to the Split View Controller (`MainSpiltViewController`) that the Navigation View Controller belongs to.
+- `TableController` - Gets the Table View Controller (`AttractionTableViewController`) that is presented as the Top View in the Navigation View Controller.
 
 <a name="The-Split-View-Controller" />
 

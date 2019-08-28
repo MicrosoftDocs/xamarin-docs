@@ -36,13 +36,13 @@ code and a locale code, separated by an underscore. For reference, here is a [li
 
 Common examples include:
 
-* `en_US` for English (United States)
-* `es_ES` for Spanish (Spain)
-* `ja_JP` for Japanese (Japan)
-* `zh_CN` for Chinese (China)
-* `zh_TW` for Chinese (Taiwan)
-* `pt_PT` for Portuguese (Portugal)
-* `pt_BR` for Portuguese (Brazil)
+- `en_US` for English (United States)
+- `es_ES` for Spanish (Spain)
+- `ja_JP` for Japanese (Japan)
+- `zh_CN` for Chinese (China)
+- `zh_TW` for Chinese (Taiwan)
+- `pt_PT` for Portuguese (Portugal)
+- `pt_BR` for Portuguese (Brazil)
 
 ### LOCALE_CHANGED
 
@@ -75,10 +75,10 @@ Android's localization strategy has the following key parts:
 
 Android applications manage most content in resource folders, such as:
 
-* **layout** - contains AXML layout files.
-* **drawable** - contains images and other drawable resources.
-* **values** - contains strings.
-* **raw** - contains data files.
+- **layout** - contains AXML layout files.
+- **drawable** - contains images and other drawable resources.
+- **values** - contains strings.
+- **raw** - contains data files.
 
 Most developers are already familiar with the use of **dpi** suffixes
 on the **drawable** directory to provide multiple versions of an image,
@@ -181,8 +181,8 @@ var cancelText = Resources.GetText (Resource.String.taskcancel);
 Android string resources also let you create *quantity strings* which
 allow translators to provide different translations for different quantities, such as:
 
-* "There is 1 task left."
-* "There are 2 tasks still to do."
+- "There is 1 task left."
+- "There are 2 tasks still to do."
 
 (rather than a generic "There are n task(s) left").
 
@@ -213,12 +213,12 @@ var translated = Resources.GetQuantityString (
 
 Valid `quantity` switches are:
 
-* zero
-* one
-* two
-* few
-* many
-* other
+- zero
+- one
+- two
+- few
+- many
+- other
 
 They're described in more detail in the [Android docs](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals).
 If a given language does not require 'special' handling, those `quantity` strings

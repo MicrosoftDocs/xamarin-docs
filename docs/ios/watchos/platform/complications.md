@@ -117,7 +117,7 @@ You must implement the following methods for the complication to run:
 
 Complications that display personal data
 
-* `GetPrivacyBehavior` - `CLKComplicationPrivacyBehavior.ShowOnLockScreen` or `HideOnLockScreen`
+- `GetPrivacyBehavior` - `CLKComplicationPrivacyBehavior.ShowOnLockScreen` or `HideOnLockScreen`
 
 If this method returns `HideOnLockScreen` then the complication will show either
 an icon or the application name (and not any data) when the watch is locked.

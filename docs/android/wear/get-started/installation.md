@@ -67,9 +67,9 @@ Launch the **Android SDK Manager**:
 
 Ensure that you have the following Android SDK and tools installed:
 
-* Android SDK Tools v 24.0.0 or higher, and
-* Android 4.4W (API20), or
-* Android 5.0.1 (API21) or higher.
+- Android SDK Tools v 24.0.0 or higher, and
+- Android 4.4W (API20), or
+- Android 5.0.1 (API21) or higher.
 
 If you do not have the latest SDK and tools installed, download the 
 required SDK tools *and* the API bits (you may need to scroll a bit to 

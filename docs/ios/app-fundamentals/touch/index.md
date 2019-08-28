@@ -29,8 +29,8 @@ However, there are times when you need to use low-level touch processing and eve
 
 This guide serves as introduction to Touch in iOS. For more information on using 3D Touch and Haptic Feedback in iOS, which were introduced in iOS 9 and 10 respectively please refer to the specific guides below:
 
-* [3D Touch](~/ios/platform/3d-touch.md)
-* [Providing Haptic Feedback](~/ios/user-interface/ios-ui/haptic-feedback.md)
+- [3D Touch](~/ios/platform/3d-touch.md)
+- [Providing Haptic Feedback](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 ## Related Links
 

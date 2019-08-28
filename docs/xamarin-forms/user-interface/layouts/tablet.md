@@ -14,14 +14,14 @@ ms.date: 02/01/2016
 Xamarin.Forms supports all device types available on the supported platforms,
 so in addition to phones, apps can also run on:
 
-* iPads,
-* Android tablets,
-* Windows tablets and desktop computers (running Windows 10).
+- iPads,
+- Android tablets,
+- Windows tablets and desktop computers (running Windows 10).
 
 This page briefly discusses:
 
-* the supported [device types](#Device_Types), and
-* how to [optimize](#optimize) layouts for tablets versus phones.
+- the supported [device types](#Device_Types), and
+- how to [optimize](#optimize) layouts for tablets versus phones.
 
 <a name="Device_Types" />
 

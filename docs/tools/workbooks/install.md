@@ -75,7 +75,7 @@ It is very helpful to know details about your Operating System and installed Xam
 
 From the main menu in Workbooks:
 
-* **Help > Copy Version Information**
+- **Help > Copy Version Information**
 
 #### Instructions for Workbooks 1.3 and earlier:
 

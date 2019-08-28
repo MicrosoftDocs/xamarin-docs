@@ -17,15 +17,15 @@ Android applications run in their own sandbox and for security reasons do not ha
 
 Permissions are declared in the **AndroidManifest.xml** by the application developer when the app is developed. Android has two different workflows for obtaining the user's consent for those permissions:
  
-* For apps that targeted Android 5.1 (API level 22) or lower, the permission request occurred when the app was installed. If the user did not grant the permissions, then the app would not be installed. Once the app is installed, there is no way to revoke the permissions except by uninstalling the app.
-* Starting in Android 6.0 (API level 23), users were given more control over permissions; they can grant or revoke permissions as long as the app is installed on the device. This screenshot shows the permission settings for the Google Contacts app. It lists the various permissions and allows the user to enable or disable permissions:
+- For apps that targeted Android 5.1 (API level 22) or lower, the permission request occurred when the app was installed. If the user did not grant the permissions, then the app would not be installed. Once the app is installed, there is no way to revoke the permissions except by uninstalling the app.
+- Starting in Android 6.0 (API level 23), users were given more control over permissions; they can grant or revoke permissions as long as the app is installed on the device. This screenshot shows the permission settings for the Google Contacts app. It lists the various permissions and allows the user to enable or disable permissions:
 
 ![Sample Permissions screen](permissions-images/01-permissions-check.png) 
 
 Android apps must check at run-time to see if they have permission to access a protected resource. If the app does not have permission, then it must make requests using the new APIs provided by the Android SDK for the user to grant the permissions. Permissions are divided into two categories:
 
-* **Normal Permissions** &ndash; These are permissions which pose little security risk to the user's security or privacy. Android 6.0 will automatically grant normal permissions at the time of installation. Please consult the Android documentation for a [complete list of normal permissions](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
-* **Dangerous Permissions** &ndash; In contrast to normal permissions, dangerous permissions are those that protect the user's security or privacy. These must be explictly granted by the user. Sending or receiving an SMS message is an example of an action requiring a dangerous permission.
+- **Normal Permissions** &ndash; These are permissions which pose little security risk to the user's security or privacy. Android 6.0 will automatically grant normal permissions at the time of installation. Please consult the Android documentation for a [complete list of normal permissions](https://developer.android.com/guide/topics/permissions/normal-permissions.html).
+- **Dangerous Permissions** &ndash; In contrast to normal permissions, dangerous permissions are those that protect the user's security or privacy. These must be explictly granted by the user. Sending or receiving an SMS message is an example of an action requiring a dangerous permission.
 
 > [!IMPORTANT]
 > The category that a permission belongs to may change over time.  It is possible that a permission which was categorized as a "normal" permission may be elevated in future API levels to a dangerous permission.
@@ -116,8 +116,8 @@ For apps that target Android 5.1(API level 22) or lower, there is nothing more t
 
 The `ContextCompat.CheckSelfPermission`  method (available with the Android Support Library) is used to check if a specific permission has been granted. This method will return a [`Android.Content.PM.Permission`](xref:Android.Content.PM.Permission) enum which has one of two values:
 
-* **`Permission.Granted`** &ndash; The specified permission has been granted.
-* **`Permission.Denied`** &ndash; The specified permission has not been granted.
+- **`Permission.Granted`** &ndash; The specified permission has been granted.
+- **`Permission.Denied`** &ndash; The specified permission has not been granted.
 
 This code snippet is an example of how to check for the Camera permission in an Activity: 
 
@@ -140,9 +140,9 @@ The `ActivityCompat.ShouldShowRequestPermissionRationale` method is used to dete
 
 If the user grants the permission, the `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` method should be called. This method requires the following parameters:
 
-* **activity** &ndash; This is the activity that is requesting the permissions and is to be informed by Android of the results.
-* **permissions** &ndash; A list of the permissions that are being requested.
-* **requestCode** &ndash; An integer value that is used to match the results of the permission request to a `RequestPermissions` call. This value should be greater than zero.
+- **activity** &ndash; This is the activity that is requesting the permissions and is to be informed by Android of the results.
+- **permissions** &ndash; A list of the permissions that are being requested.
+- **requestCode** &ndash; An integer value that is used to match the results of the permission request to a `RequestPermissions` call. This value should be greater than zero.
 
 This code snippet is an example of the two methods that were discussed. First, a check is made to determine if the permission rationale should be shown. If the rationale is to be shown, then a Snackbar is displayed with the rationale. If the user clicks **OK** in the Snackbar, then the app will request the permissions. If the user does not accept the rationale, then the app should not proceed to request permissions. If the rationale is not shown, then the Activity will request the permission:
 

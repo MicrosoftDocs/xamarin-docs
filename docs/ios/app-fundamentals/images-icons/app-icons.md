@@ -13,9 +13,9 @@ ms.date: 05/22/2017
 
 The following topics will be covered in detail:
 
-* [Application, Spotlight and Settings Icons](#icon-types) - The different types of icons required for an iOS app.
-* [Managing Icons with Asset Catalogs](#managing) - Managing application icons using Asset Catalogs.
-* [iTunes Artwork](#itunes) - Supplying the required iTunes Artwork for the Ad-Hoc method of delivering your application.
+- [Application, Spotlight and Settings Icons](#icon-types) - The different types of icons required for an iOS app.
+- [Managing Icons with Asset Catalogs](#managing) - Managing application icons using Asset Catalogs.
+- [iTunes Artwork](#itunes) - Supplying the required iTunes Artwork for the Ad-Hoc method of delivering your application.
 
 <a name="icon-types" />
 

@@ -44,12 +44,12 @@ var blueWithAlpha = blue.MultiplyAlpha(.5f);
 
 There are several other extension methods including:
 
-* ToUInt
-* MultiplyAlpha
-* WithHue
-* WithAlpha
-* WithSaturation
-* WithLuminosity
+- ToUInt
+- MultiplyAlpha
+- WithHue
+- WithAlpha
+- WithSaturation
+- WithLuminosity
 
 
 ## Using Platform Extensions

@@ -111,9 +111,9 @@ metadata spec include a path attribute to identify the node to which
 the rule is to be applied. The rules are applied in the following
 order:
 
-* **add-node** &ndash; Appends a child node to the node specified by the path attribute.
-* **attr** &ndash; Sets the value of an attribute of the element specified by the path attribute.
-* **remove-node** &ndash; Removes nodes matching a specified XPath.
+- **add-node** &ndash; Appends a child node to the node specified by the path attribute.
+- **attr** &ndash; Sets the value of an attribute of the element specified by the path attribute.
+- **remove-node** &ndash; Removes nodes matching a specified XPath.
 
 The following is an example of a **Metadata.xml** file:
 
@@ -330,8 +330,8 @@ Tools that obfuscate Java libraries may interfere with the
 Xamarin.Android Binding Generator and its ability to generate C#
 wrapper classes. Characteristics of obfuscated classes include: 
 
-* The class name includes a **$**, i.e. **a$.class**
-* The class name is entirely compromised of lower case characters, i.e. **a.class**
+- The class name includes a **$**, i.e. **a$.class**
+- The class name is entirely compromised of lower case characters, i.e. **a.class**
 
 This snippet is an example of how to generate an "un-obfuscated" C# type:
 

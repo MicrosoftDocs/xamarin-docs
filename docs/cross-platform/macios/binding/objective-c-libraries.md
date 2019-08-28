@@ -1227,9 +1227,9 @@ there are scenarios where the value might not be set.
 
 To do this, you need to do a few things:
 
-* Create a strongly-typed class, that subclasses
+- Create a strongly-typed class, that subclasses
   [DictionaryContainer](xref:Foundation.DictionaryContainer) and provides the various getters and setters for each property.
-* Declare overloads for the methods taking `NSDictionary` to take the new strongly-typed version.
+- Declare overloads for the methods taking `NSDictionary` to take the new strongly-typed version.
 
 You can create the strongly-typed class either manually, or use the
 generator to do the work for you.  We first explore how to do this
@@ -1859,3 +1859,4 @@ automatically.
 ## Related links
 
 - [Binding Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
+ 

@@ -60,12 +60,12 @@ Markdown uses special characters such as \*, \`, and \# for formatting. If you w
 ## File name
 
 File names use the following rules:
-* Contain only lowercase letters, numbers, and hyphens.
-* No spaces or punctuation characters. Use the hyphens to separate words and numbers in the file name.
-* Use action verbs that are specific, such as develop, buy, build, troubleshoot. No -ing words.
-* No small words - don't include a, and, the, in, or, etc.
-* Must be in Markdown and use the .md file extension.
-* Keep file names reasonably short. They are part of the URL for your articles.
+- Contain only lowercase letters, numbers, and hyphens.
+- No spaces or punctuation characters. Use the hyphens to separate words and numbers in the file name.
+- Use action verbs that are specific, such as develop, buy, build, troubleshoot. No -ing words.
+- No small words - don't include a, and, the, in, or, etc.
+- Must be in Markdown and use the .md file extension.
+- Keep file names reasonably short. They are part of the URL for your articles.
 
 
 

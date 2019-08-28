@@ -166,12 +166,12 @@ No platform differences.
 
 # [iOS](#tab/ios)
 
-* Device must be used to test APIs. 
-* Only will return `AC` or `Battery` for `PowerSource`.
+- Device must be used to test APIs. 
+- Only will return `AC` or `Battery` for `PowerSource`.
 
 # [UWP](#tab/uwp)
 
-* Only will return `AC` or `Battery` for `PowerSource`.
+- Only will return `AC` or `Battery` for `PowerSource`.
 
 -----
 

@@ -75,8 +75,8 @@ Apple included the following changes to the Foundation framework in iOS 9:
 
 The following changes have been made to the [NSBundle](xref:Foundation.NSBundle) class for iOS 9:
 
-* `GetPreservationPriorityForTag (NSString tag)` - Gets the current preservation priority for resources with the given tag. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
-* `SetPreservationPriorityForTag (double priority, NSSet tags)` - Sets the current preservation priority for resources with the given tags. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
+- `GetPreservationPriorityForTag (NSString tag)` - Gets the current preservation priority for resources with the given tag. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)` - Sets the current preservation priority for resources with the given tags. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
 
 For more information, please see Apple's [NSBundle Reference](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle).
 

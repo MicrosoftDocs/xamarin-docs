@@ -119,13 +119,13 @@ Without a valid API key the maps control will display as a gray box on Android.
 
 You'll also need to enable appropriate permissions by right-clicking on the Android project and selecting **Options > Build > Android Application** and ticking the following:
 
-* `AccessCoarseLocation`
-* `AccessFineLocation`
-* `AccessLocationExtraCommands`
-* `AccessMockLocation`
-* `AccessNetworkState`
-* `AccessWifiState`
-* `Internet`
+- `AccessCoarseLocation`
+- `AccessFineLocation`
+- `AccessLocationExtraCommands`
+- `AccessMockLocation`
+- `AccessNetworkState`
+- `AccessWifiState`
+- `Internet`
 
 Some of these are shown in the screenshot below:
 

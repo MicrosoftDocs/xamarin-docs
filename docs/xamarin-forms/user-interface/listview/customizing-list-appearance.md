@@ -218,8 +218,8 @@ To create a customized header and footer, define the Header and Footer views:
 ## Row Separators
 Separator lines are displayed between `ListView` elements by default on iOS and Android. If you'd prefer to hide the separator lines on iOS and Android, set the `SeparatorVisibility` property on your ListView. The options for `SeparatorVisibility` are:
 
-* **Default** - shows a separator line on iOS and Android.
-* **None** - hides the separator on all platforms.
+- **Default** - shows a separator line on iOS and Android.
+- **None** - hides the separator on all platforms.
 
 Default Visibility:
 
