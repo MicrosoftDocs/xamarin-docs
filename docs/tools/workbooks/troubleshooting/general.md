@@ -19,14 +19,14 @@ a [bug in Mono's `AppContext.SetSwitch`][appcontext-bug] implementation.
 
 ### Workarounds
 
-* Set the application-domain-local `DefaultThreadCurrentCulture`:
+- Set the application-domain-local `DefaultThreadCurrentCulture`:
 
 ```csharp
 using System.Globalization;
 CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 ```
 
-* Or, update to Workbooks 1.2.1 or newer , which will rewrite
+- Or, update to Workbooks 1.2.1 or newer , which will rewrite
   assignments to `System.Threading.CurrentThread.CurrentCulture` and
   `System.Globalization.CultureInfo.CurrentCulture` to provide for
   the desired behavior (working around the Mono bug).
@@ -35,7 +35,7 @@ CultureInfo.DefaultThreadCurrentCulture = new CultureInfo("de-DE")
 
 ### Workaround
 
-* Update to Workbooks 1.2.1, which will install Newtonsoft.Json 9.0.1.
+- Update to Workbooks 1.2.1, which will install Newtonsoft.Json 9.0.1.
   Workbooks 1.3, currently in the alpha channel, supports versions 10
   and newer.
 
@@ -60,9 +60,9 @@ tooltips rendering without text.
 
 ### Workaround
 
-* Clicking on the tooltip after it appears will force the text to render.
+- Clicking on the tooltip after it appears will force the text to render.
 
-* Or update to Workbooks 1.2.1 or newer
+- Or update to Workbooks 1.2.1 or newer
 
 [appcontext-bug]: https://bugzilla.xamarin.com/show_bug.cgi?id=54448
 [monaco-bug]: https://github.com/Microsoft/monaco-editor/issues/408
@@ -75,7 +75,7 @@ our [SDK](~/tools/workbooks/sdk/index.md).
 
 ### Workaround
 
-* Update SkiaSharp to the latest version in NuGet. At the time of writing, this
+- Update SkiaSharp to the latest version in NuGet. At the time of writing, this
   is 1.57.1.
 
 ## Related Links

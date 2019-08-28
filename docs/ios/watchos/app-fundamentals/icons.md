@@ -13,8 +13,8 @@ ms.date: 07/26/2018
 
 Apple Watch solutions require two sets of icons:
 
-* The iOS app icons that will appear on the iPhone.
-* Apple Watch icons that will be rendered in a circle
+- The iOS app icons that will appear on the iPhone.
+- Apple Watch icons that will be rendered in a circle
   on the watch menu and in notification screens. The watch
   app icon also appears in the [Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
   iOS app.

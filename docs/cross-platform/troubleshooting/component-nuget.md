@@ -214,9 +214,9 @@ This means if you open the solution on a new computer, the component will
 not be downloaded and installed; and the author will not be able to provide you
 with updates. You should plan to:
 
-* Extract the assemblies from the component and reference them directly in your project.
-* Contact the component author and ask about plans to migrate to NuGet.
-* Investigate alternative NuGet packages, or seek the source code if the component is open-source.
+- Extract the assemblies from the component and reference them directly in your project.
+- Contact the component author and ask about plans to migrate to NuGet.
+- Investigate alternative NuGet packages, or seek the source code if the component is open-source.
 
 Many component vendors are still working on migrating to NuGet, and others
 (including commercially available products) may be investigating

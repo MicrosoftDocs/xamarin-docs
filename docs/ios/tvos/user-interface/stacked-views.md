@@ -56,16 +56,16 @@ While the Stack View has total control over the layout of any subview (based on 
 
 Generally, this means pinning at least two edges of the Stack View to expand and contract, thus defining its position. Without any additional constraints, the Stack View will automatically be resized to fit all of its subviews as follows:
 
-* The size along its `Axis` will be the sum of all subview sizes plus any space that has been defined between each subview.
-* If the `LayoutMarginsRelativeArrangement` property is `true`, the Stack Views size will also include room for the margins.
-* The size perpendicular to the `Axis` will be set to the largest subview in the collection.
+- The size along its `Axis` will be the sum of all subview sizes plus any space that has been defined between each subview.
+- If the `LayoutMarginsRelativeArrangement` property is `true`, the Stack Views size will also include room for the margins.
+- The size perpendicular to the `Axis` will be set to the largest subview in the collection.
 
 Additionally, you can specify constraints for the Stack View's **Height** and **Width**. In this case, the subviews will be laid out (sized) to fill the space specified by the Stack View as determined by the `Distribution` and `Alignment` properties.
 
 If the `BaselineRelativeArrangement` property is `true`, the subviews will be laid out based on the first or last subview's baseline, instead of using the **Top**, **Bottom** or **Center*- **Y** position. These are calculated on the Stack View's content as follows:
 
-* A Vertical Stack View will return the first subview for the first baseline and the last for the last. If either of these subviews are themselves Stack Views, then their first or last baseline will be used.
-* A Horizontal Stack View will use its tallest subview for both the first and last baseline. If the tallest view is also a Stack View, it will use it's tallest subview as the baseline.
+- A Vertical Stack View will return the first subview for the first baseline and the last for the last. If either of these subviews are themselves Stack Views, then their first or last baseline will be used.
+- A Horizontal Stack View will use its tallest subview for both the first and last baseline. If the tallest view is also a Stack View, it will use it's tallest subview as the baseline.
 
 > [!IMPORTANT]
 > Baseline Alignment does not work on stretched or compressed subview sizes as the baseline will be calculated to the wrong position. For Baseline Alignment, ensure that the subview's **Height** matches the Intrinsic Content View's **Height**.

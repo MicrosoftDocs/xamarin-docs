@@ -112,9 +112,9 @@ The [Android Emulator](https://developer.android.com/studio/run/emulator) can be
 
 Emulating an Android device on a computer involves the following components:
 
-* **Google Android Emulator** &ndash; This is an emulator based on [QEMU](https://www.qemu.org/) that creates a virtualized device running on the developer's workstation.
-* **An Emulator Image** &ndash; An _emulator image_ is a template or a specification of the hardware and operating system that is meant to be virtualized. For example, one emulator image would identify the hardware requirements for a Nexus 5X running Android 7.0 with Google Play Services installed. Another emulator image might specific a 10" table running Android 6.0.
-* **Android Virtual Device (AVD)** &ndash; An _Android Virtual Device_ is an emulated Android device created from an emulator image. When running and testing Android apps, Xamarin.Android will start the Android Emulator, starting a specific AVD, install the APK, and then run the app.
+- **Google Android Emulator** &ndash; This is an emulator based on [QEMU](https://www.qemu.org/) that creates a virtualized device running on the developer's workstation.
+- **An Emulator Image** &ndash; An _emulator image_ is a template or a specification of the hardware and operating system that is meant to be virtualized. For example, one emulator image would identify the hardware requirements for a Nexus 5X running Android 7.0 with Google Play Services installed. Another emulator image might specific a 10" table running Android 6.0.
+- **Android Virtual Device (AVD)** &ndash; An _Android Virtual Device_ is an emulated Android device created from an emulator image. When running and testing Android apps, Xamarin.Android will start the Android Emulator, starting a specific AVD, install the APK, and then run the app.
 
 A significant improvement in performance when developing on x86 based computers can be achieved by using special emulator images that are optimized for x86 architecture and one of two virtualization technologies:
 

@@ -4,7 +4,7 @@ Thank you for your interest in contributing to the Xamarin documentation!
 
 This page covers the basic process for updating content in the [Xamarin documentation](https://docs.microsoft.com/xamarin).
 
-* [Contributor License Agreement](LICENSE)
+- [Contributor License Agreement](LICENSE)
 
 ## Process for contributing
 

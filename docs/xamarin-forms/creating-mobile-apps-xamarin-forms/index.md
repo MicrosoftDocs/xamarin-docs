@@ -22,11 +22,11 @@ The book was published in the spring of 2016, and has not been updated since the
 
 Download your preferred eBook format from Microsoft Virtual Academy:
 
-* [**PDF (56Mb)**](https://aka.ms/xamebook)
+- [**PDF (56Mb)**](https://aka.ms/xamebook)
 
-* [**ePub (151Mb)**](https://aka.ms/xamebook/epub)
+- [**ePub (151Mb)**](https://aka.ms/xamebook/epub)
 
-* [**Kindle edition (325Mb)**](https://aka.ms/xamebook/mobi)
+- [**Kindle edition (325Mb)**](https://aka.ms/xamebook/mobi)
 
 You can also [download individual chapters](#download-chapters-and-summaries) as PDF files.
 

@@ -336,7 +336,7 @@ A sandboxed Xamarin.Mac application can access file system locations outside of 
 
 - At the specific direction of the user (via Open and Save Dialogs or other methods such as drag and drop).
 - By using entitlements for specific file system locations (such as `/bin` or `/usr/lib`).
-* When the file system location is in certain directories that are world readable (such as Sharing).
+- When the file system location is in certain directories that are world readable (such as Sharing).
 
 _Powerbox_ is the macOS security technology that interacts with the user to expand your sandboxed Xamarin.Mac app's file access rights. Powerbox has no API, but is activated transparently when the app calls a `NSOpenPanel` or `NSSavePanel`. Powerbox access is enabled via the Entitlements that you set for your Xamarin.Mac application.
 

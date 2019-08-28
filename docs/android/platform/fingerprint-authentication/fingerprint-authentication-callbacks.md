@@ -16,10 +16,10 @@ one method of `FingerprintManager.AuthenticationCallback` on the UI
 thread. An Android application must provide its own handler which
 extends this abstract class, implementing all the following methods:
 
-* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Called when there is an unrecoverable error. There is nothing more an application or user can do to correct the situation except possibly try again.
-* **`OnAuthenticationFailed()`** &ndash; This method is invoked when a fingerprint has been detected but not recognized by the device.
-* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Called when there is a recoverable error, such as the finger being swiped to fast over the scanner.
-* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; This is called when a fingerprint has been recognized.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Called when there is an unrecoverable error. There is nothing more an application or user can do to correct the situation except possibly try again.
+- **`OnAuthenticationFailed()`** &ndash; This method is invoked when a fingerprint has been detected but not recognized by the device.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Called when there is a recoverable error, such as the finger being swiped to fast over the scanner.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; This is called when a fingerprint has been recognized.
 
 If a `CryptoObject` was used when calling `Authenticate`, it is
 recommended to call `Cipher.DoFinal` in `OnAuthenticationSuccessful`.

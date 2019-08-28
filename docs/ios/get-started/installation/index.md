@@ -34,5 +34,5 @@ For instructions on installing Xamarin.iOS on a Windows machine, visit the [Wind
 
 Once you have successfully installed Xamarin.iOS, learn how to provision your iOS device so that you can develop and test a Xamarin.iOS application on device.
 
-* [Set Up Device for Development](device-provisioning/index.md)
-* [Free Provisioning](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
+- [Set Up Device for Development](device-provisioning/index.md)
+- [Free Provisioning](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

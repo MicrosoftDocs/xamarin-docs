@@ -177,9 +177,9 @@ See also the [Android Debug Log](~/android/deploy-test/debugging/android-debug-l
 
 ### <a id="ios-simulator-logs" name="ios-simulator-logs" />iOS simulator logs (on Mac)
 
-* To access the system log, select **Debug > Open System Log...** in the iOS Simulator app.
+- To access the system log, select **Debug > Open System Log...** in the iOS Simulator app.
 
-* To view crash reports from the simulator, open Console.app and navigate to `~/Library/Logs > DiagnosticReports`.
+- To view crash reports from the simulator, open Console.app and navigate to `~/Library/Logs > DiagnosticReports`.
 
 ### <a id="ios-device-logs" name="ios-device-logs" />iOS device logs (on Mac)
 

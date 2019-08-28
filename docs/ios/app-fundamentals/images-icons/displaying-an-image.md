@@ -153,9 +153,9 @@ Because the `RenderMode` property of a `UIImage` is read only, use the `ImageWit
 
 There are three possibly settings for `UIImage.RenderMode` via the `UIImageRenderingMode` enum:
 
-* `AlwaysOriginal` - Forces the image to be rendered as the original source image file without any changes.
-* `AlwaysTemplate` - Forces the image to be rendered as a Template Image by colorizing the pixels with the specified `Tint` color.
-* `Automatic` -  Either renders the image as a Template or Original based on the environment that it is used in. For example, if the image is used in a `UIToolBar`, `UINavigationBar`, `UITabBar` or `UISegmentControl` it will be treated as a Template.
+- `AlwaysOriginal` - Forces the image to be rendered as the original source image file without any changes.
+- `AlwaysTemplate` - Forces the image to be rendered as a Template Image by colorizing the pixels with the specified `Tint` color.
+- `Automatic` -  Either renders the image as a Template or Original based on the environment that it is used in. For example, if the image is used in a `UIToolBar`, `UINavigationBar`, `UITabBar` or `UISegmentControl` it will be treated as a Template.
 
 ## Adding new assets collections
 

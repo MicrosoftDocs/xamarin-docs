@@ -202,9 +202,9 @@ The syntax for localized string values is:
 
 You should escape the following characters in strings:
 
-* `\"` quote
-* `\\` backslash
-* `\n` newline
+- `\"` quote
+- `\\` backslash
+- `\n` newline
 
 This is an example **es/Localizable.strings** (ie. Spanish) file from the sample:
 

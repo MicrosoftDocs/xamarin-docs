@@ -28,7 +28,7 @@ Whether you are deploying to a test Watch, or uploading to the App Store,
   - Check the bundle version numbers match in all projects.
   - Configure the **Entitlements.plist** for App Groups (if required).
 
-* Then follow the instructions to:
+- Then follow the instructions to:
   - [Deploy to an Apple Watch for testing](~/ios/watchos/deploy-test/device.md), or
   - [Upload to the App Store](~/ios/watchos/deploy-test/appstore.md).
 

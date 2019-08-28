@@ -117,4 +117,4 @@ Learn about [making calls between C# and Java](callbacks.md).
 
 ## Samples
 
-* [Weather sample app](https://github.com/jamesmontemagno/embeddinator-weather)
+- [Weather sample app](https://github.com/jamesmontemagno/embeddinator-weather)

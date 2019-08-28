@@ -130,12 +130,12 @@ For more information about flow direction, see [Right-to-left Localization](~/xa
 
 The [`Styles` property](~/xamarin-forms/user-interface/styles/index.md) contains built-in style definitions that can be applied to some controls' (such as `Label`) `Style` property. The available styles are:
 
-* BodyStyle
-* CaptionStyle
-* ListItemDetailTextStyle
-* ListItemTextStyle
-* SubtitleStyle
-* TitleStyle
+- BodyStyle
+- CaptionStyle
+- ListItemDetailTextStyle
+- ListItemTextStyle
+- SubtitleStyle
+- TitleStyle
 
 ## Device.GetNamedSize
 

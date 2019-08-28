@@ -17,9 +17,9 @@ When working on iOS, you might encounter cases where you want to consume a third
 
 Generally in the iOS ecosystem you can find libraries in 3 flavors:
 
-* As a precompiled static library file with `.a` extension together with its header(s) (.h files). For example, [Google’s Analytics Library](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
-* As a precompiled Framework. This is just a folder containing the static library, headers and sometimes additional resources with `.framework` extension. For example, [Google’s AdMob Library](https://developers.google.com/admob/ios/download).
-* As just source code files. For example, a library containing just `.m` and `.h` Objective C files.
+- As a precompiled static library file with `.a` extension together with its header(s) (.h files). For example, [Google’s Analytics Library](https://developers.google.com/analytics/devguides/collection/ios/v3/sdk-download?hl=es#download_sdk)
+- As a precompiled Framework. This is just a folder containing the static library, headers and sometimes additional resources with `.framework` extension. For example, [Google’s AdMob Library](https://developers.google.com/admob/ios/download).
+- As just source code files. For example, a library containing just `.m` and `.h` Objective C files.
 
 In the first and second scenario there will already be a precompiled CocoaTouch Static Library so in this article we will focus on the third scenario. Remember, before you start to create a binding, always check the licence provided with the library to ensure that you are free to bind it.
 

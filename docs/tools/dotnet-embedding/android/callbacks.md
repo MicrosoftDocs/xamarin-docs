@@ -288,8 +288,8 @@ There is a lot of work to be done here, but these enhancements to .NET Embedding
 
 ## Further Reading
 
-* [Getting Started on Android](~/tools/dotnet-embedding/get-started/java/android.md)
-* [Preliminary Android Research](~/tools/dotnet-embedding/android/index.md)
-* [.NET Embedding Limitations](~/tools/dotnet-embedding/limitations.md)
-* [Contributing to the open source project](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
-* [Error codes and descriptions](~/tools/dotnet-embedding/errors.md)
+- [Getting Started on Android](~/tools/dotnet-embedding/get-started/java/android.md)
+- [Preliminary Android Research](~/tools/dotnet-embedding/android/index.md)
+- [.NET Embedding Limitations](~/tools/dotnet-embedding/limitations.md)
+- [Contributing to the open source project](https://github.com/mono/Embeddinator-4000/blob/master/docs/Contributing.md)
+- [Error codes and descriptions](~/tools/dotnet-embedding/errors.md)

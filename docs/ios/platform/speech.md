@@ -84,8 +84,8 @@ There are four major steps that the developer must take to adopt speech recognit
 - Provide a usage description in the app's `Info.plist` file using the `NSSpeechRecognitionUsageDescription` key. For example, a camera app might include the following description, _"This allows you to take a photo just by saying the word 'cheese'."_
 - Request authorization by calling the `SFSpeechRecognizer.RequestAuthorization` method to present an explanation (provided in the `NSSpeechRecognitionUsageDescription` key above) of why the app wants speech recognition access to the user in a dialog box and allow them to accept or decline.
 - Create a Speech Recognition Request:
-    * For pre-recorded audio on disk, use the `SFSpeechURLRecognitionRequest` class.
-    * For live audio (or audio from memory), use the `SFSPeechAudioBufferRecognitionRequest` class.
+    - For pre-recorded audio on disk, use the `SFSpeechURLRecognitionRequest` class.
+    - For live audio (or audio from memory), use the `SFSPeechAudioBufferRecognitionRequest` class.
 - Pass the Speech Recognition Request to a Speech Recognizer (`SFSpeechRecognizer`) to begin recognition. The app can optionally hold onto the returned `SFSpeechRecognitionTask` to monitor and track the recognition results.
 
 These steps will be covered in detail below.

@@ -12,8 +12,8 @@ ms.date: 05/03/2018
 
 Xamarin.Android services must obey two inviolable rules of Android services:
 
-* They must extend the [`Android.App.Service`](xref:Android.App.Service).
-* They must be decorated with the [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
+- They must extend the [`Android.App.Service`](xref:Android.App.Service).
+- They must be decorated with the [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
 
 Another requirement of Android services is that they must be registered in the **AndroidManifest.xml** and given a unique name. Xamarin.Android will automatically register the service in the manifest at build time with the necessary XML attribute.
 

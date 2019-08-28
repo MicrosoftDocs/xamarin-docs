@@ -25,9 +25,9 @@ This guide will show you how to create and work with constraints using C# code i
 
 As stated above, typically you'll be working with Auto Layout Constraints in the iOS Designer. For those times that you do have to create your constraints programmatically, you have three options to choose from:
 
-* [Layout Anchors](#Layout-Anchors) - This API provides access to the anchor properties (such as `TopAnchor`, `BottomAnchor` or `HeightAnchor`) of the UI items being constrained.
-* [Layout Constraints](#Layout-Constraints) - You can create constraints directly using the `NSLayoutConstraint` class.
-* [Visual Formatting Language](#Visual-Format-Language) - Provides an ASCII art like method to define your constraints.
+- [Layout Anchors](#Layout-Anchors) - This API provides access to the anchor properties (such as `TopAnchor`, `BottomAnchor` or `HeightAnchor`) of the UI items being constrained.
+- [Layout Constraints](#Layout-Constraints) - You can create constraints directly using the `NSLayoutConstraint` class.
+- [Visual Formatting Language](#Visual-Format-Language) - Provides an ASCII art like method to define your constraints.
 
 The following sections will go over each option in detail.
 

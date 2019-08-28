@@ -53,10 +53,10 @@ The Siri Remote's Touch Surface is able to detect a variety of single-finger ges
 
 Apple provides the following suggestions for working with Touch Surface gestures:
 
-* **Differentiate between Clicks and Taps** - Clicking is an intentional action by the user and is well suited for selection, activation and the primary button of a game. Tapping is more subtle and should be used sparingly because the user is often holding the Siri Remote in their hand and can accidentally activate a Tap event easily.
-* **Don't Redefine Standard Gestures** - The user has an expectation that specific gestures will perform specific actions, you shouldn't redefine the meaning or function of these gestures in your app. The one exception is a game app during active gameplay.
-* **Define New Gestures Sparingly** - Again, the user has an expectation that specific gestures will perform specific actions. You should avoid defining custom gestures to perform standard actions. And again, games are the most usual exception where custom gestures can add fun, immersive play to the game.
-* **If Appropriate, Respond to D-Pad Taps** - Lightly tapping on the corner edges of the Touch Surface will react like a D-Pad on a game controller moving focus or direction up, down, left or right. If appropriate, you should respond to these gestures in your app or game.
+- **Differentiate between Clicks and Taps** - Clicking is an intentional action by the user and is well suited for selection, activation and the primary button of a game. Tapping is more subtle and should be used sparingly because the user is often holding the Siri Remote in their hand and can accidentally activate a Tap event easily.
+- **Don't Redefine Standard Gestures** - The user has an expectation that specific gestures will perform specific actions, you shouldn't redefine the meaning or function of these gestures in your app. The one exception is a game app during active gameplay.
+- **Define New Gestures Sparingly** - Again, the user has an expectation that specific gestures will perform specific actions. You should avoid defining custom gestures to perform standard actions. And again, games are the most usual exception where custom gestures can add fun, immersive play to the game.
+- **If Appropriate, Respond to D-Pad Taps** - Lightly tapping on the corner edges of the Touch Surface will react like a D-Pad on a game controller moving focus or direction up, down, left or right. If appropriate, you should respond to these gestures in your app or game.
 
 <a name="Siri-Remote-Buttons" />
 
