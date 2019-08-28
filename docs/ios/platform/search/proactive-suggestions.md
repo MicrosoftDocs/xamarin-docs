@@ -509,14 +509,14 @@ Would tell the system that the app expects the user to enter a full street addre
 
 The following are a few of the more common types available to the developer in the `UITextContentType` static class:
 
-* `Name`
-* `GivenName`
-* `FamilyName`
-* `Location`
-* `FullStreetAddress`
-* `AddressCityAndState`
-* `TelephoneNumber`
-* `EmailAddress`
+- `Name`
+- `GivenName`
+- `FamilyName`
+- `Location`
+- `FullStreetAddress`
+- `AddressCityAndState`
+- `TelephoneNumber`
+- `EmailAddress`
 
 ### Routing Apps and Locations Suggestions
 

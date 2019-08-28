@@ -99,15 +99,15 @@ On the subject of security, it is also extremely important to know that there is
 
 To use Touch ID without keychain by leveraging the Local Authentication API, there are a few functions that we can use. These are detailed below:
 
-* `CanEvaluatePolicy` – This will simply check to see if the device is capable of accepting Touch ID.
-* `EvaluatePolicy` – This starts the authentication operation and displays the UI, and returns a `true` or `false` answer.
-* `DeviceOwnerAuthenticationWithBiometrics` – This is the policy that can be used to show the Touch ID screen. It is worth noting that there is no passcode fallback mechanism here, instead you should implement this fallback in your application to allow users to skip the Touch ID authentication.
+- `CanEvaluatePolicy` – This will simply check to see if the device is capable of accepting Touch ID.
+- `EvaluatePolicy` – This starts the authentication operation and displays the UI, and returns a `true` or `false` answer.
+- `DeviceOwnerAuthenticationWithBiometrics` – This is the policy that can be used to show the Touch ID screen. It is worth noting that there is no passcode fallback mechanism here, instead you should implement this fallback in your application to allow users to skip the Touch ID authentication.
 
 There are a few caveats with using Local Authentication, which are listed below:
 
-* As with Keychain, it can only be run in the foreground. Calling it on a background thread will cause it to fail.
-* Keep in mind that the policy evaluation may fail. A passcode button will need to be implemented as a fall back.
-* You must supply a `localizedReason` to explain why Authentication is needed. This helps to build trust with the user.
+- As with Keychain, it can only be run in the foreground. Calling it on a background thread will cause it to fail.
+- Keep in mind that the policy evaluation may fail. A passcode button will need to be implemented as a fall back.
+- You must supply a `localizedReason` to explain why Authentication is needed. This helps to build trust with the user.
 
 Next, in the section below, we will look at how to implement the API taking these caveats into consideration.
 

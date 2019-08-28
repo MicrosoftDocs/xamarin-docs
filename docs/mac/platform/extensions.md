@@ -23,9 +23,9 @@ In Xamarin.Mac 2.10 support was added for multiple macOS extension points:
 
 The following are the limitations and know issues that can occur when developing extensions in Xamarin.Mac:
 
-* There is currently no debugging support in Visual Studio for Mac. All debugging will need to be done via **NSLog** and the **Console**. See the tips section below for details.
-* Extensions must be contained in a host application, which when run one time with register with the system. They must then be enabled in the **Extension** section of **System Preferences**. 
-* Some extension crashes may destabilize the host application and cause strange behavior. In particular, **Finder** and the **Today** section of the **Notification Center** may become “jammed” and become unresponsive. This has been experienced in extension projects in Xcode as well, and currently appears unrelated to Xamarin.Mac. Often this can be seen in the system log (via **Console**, see Tips for details) printing repeated error messages. Restarting macOS appears to fix this.
+- There is currently no debugging support in Visual Studio for Mac. All debugging will need to be done via **NSLog** and the **Console**. See the tips section below for details.
+- Extensions must be contained in a host application, which when run one time with register with the system. They must then be enabled in the **Extension** section of **System Preferences**. 
+- Some extension crashes may destabilize the host application and cause strange behavior. In particular, **Finder** and the **Today** section of the **Notification Center** may become “jammed” and become unresponsive. This has been experienced in extension projects in Xcode as well, and currently appears unrelated to Xamarin.Mac. Often this can be seen in the system log (via **Console**, see Tips for details) printing repeated error messages. Restarting macOS appears to fix this.
 
 <a name="Tips" />
 

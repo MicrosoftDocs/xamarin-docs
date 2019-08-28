@@ -99,9 +99,9 @@ instance variables to the class `TouchViewController`:
     
     This method works by checking for a `UITouch` object, and if it exists perform some action based on where the touch occurred:
 
-    * _Inside TouchImage_ – display the text `Touches Began` in a label and change the image.
-    * _Inside DoubleTouchImage_ – change the image displayed if the gesture was a double-tap.
-    * _Inside DragImage_ – set a flag indicating that the touch has started. The method `TouchesMoved` will use this flag to determine if `DragImage` should be moved around the screen or not, as we shall see in the next step.
+    - _Inside TouchImage_ – display the text `Touches Began` in a label and change the image.
+    - _Inside DoubleTouchImage_ – change the image displayed if the gesture was a double-tap.
+    - _Inside DragImage_ – set a flag indicating that the touch has started. The method `TouchesMoved` will use this flag to determine if `DragImage` should be moved around the screen or not, as we shall see in the next step.
 
     The above code only deals with individual touches, there is still no behavior if the user
     is moving their finger on the screen. To respond to movement, implement `TouchesMoved`

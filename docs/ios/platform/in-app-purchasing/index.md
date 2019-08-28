@@ -38,17 +38,17 @@ To support In-App Purchasing you must use Xamarin.iOS 5.0 or newer with Xcode 7 
 
 ## Contents
 
-* [In-App Purchase Basics and Configuration](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+- [In-App Purchase Basics and Configuration](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
-* [StoreKit Overview and Retrieving Product Information](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+- [StoreKit Overview and Retrieving Product Information](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
-* [Purchasing Consumable Products](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+- [Purchasing Consumable Products](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
-* [Purchasing Non-Consumable Products](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+- [Purchasing Non-Consumable Products](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
-* [Transactions and Verification](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+- [Transactions and Verification](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
-* [Subscriptions and Reporting](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+- [Subscriptions and Reporting](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 ## Summary
 

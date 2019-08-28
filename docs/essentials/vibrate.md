@@ -102,9 +102,9 @@ No platform differences.
 
 # [iOS](#tab/ios)
 
-* Only vibrates when device is set to "Vibrate on ring".
-* Always vibrates for 500 milliseconds.
-* Not possible to cancel vibration.
+- Only vibrates when device is set to "Vibrate on ring".
+- Always vibrates for 500 milliseconds.
+- Not possible to cancel vibration.
 
 # [UWP](#tab/uwp)
 

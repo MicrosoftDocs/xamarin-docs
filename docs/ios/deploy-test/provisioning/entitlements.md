@@ -88,13 +88,13 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 
 ### Wallet
 
-* **Description**: Formally known as Passbook, wallet is an app that stores and manages passes. These passes may be credit cards, store cards, boarding passes, or tickets.
+- **Description**: Formally known as Passbook, wallet is an app that stores and manages passes. These passes may be credit cards, store cards, boarding passes, or tickets.
 
     - **Pass Type Identifier**
-        * **Keys**: com.apple.developer.pass-type-identifiers
-        * **String**: `$(TeamIdentifierPrefix)*`
+        - **Keys**: com.apple.developer.pass-type-identifiers
+        - **String**: `$(TeamIdentifierPrefix)*`
 
-* **Notes**:
+- **Notes**:
     - This will enable your app to allow all pass types. To restrict your app and only allow a subset of team pass types, set the string value to:
         `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
@@ -104,7 +104,7 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 
 ### iCloud
 
-* **Description**: iCloud provides iOS users with a convenient and simple way to store their content and share it between devices. There are four ways developers can use iCloud to provide a means of storage for their users: Key-Value storage, UIDocument Storage, CoreData, and using CloudKit directly to provide storage for Individual files and directories. For more information on these, refer to the Introduction to iCloud guide.
+- **Description**: iCloud provides iOS users with a convenient and simple way to store their content and share it between devices. There are four ways developers can use iCloud to provide a means of storage for their users: Key-Value storage, UIDocument Storage, CoreData, and using CloudKit directly to provide storage for Individual files and directories. For more information on these, refer to the Introduction to iCloud guide.
 
     - **iCloud Documents & CloudKit**
         - **Keys**: com.apple.developer.ubiquity-container-identifiers
@@ -113,7 +113,7 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
         - **Key**: com.apple.developer.ubiquity-kvstore-identifier
         - **String**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
-* **Notes**:
+- **Notes**:
     - The `$(TeamIdentifierPrefix)` string can be located by logging to developer.apple.com and visit the **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( A93A5CM278 for example).
     - The `$(CFBundleIdentifier)` string begins with `iCloud` and is set when the iCloud container is crated as per the steps in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) guide.
     - The $`(TeamIdentifierPrefix)` and `$(CFBundleIdentifier)` placeholders can be used and will be substituted for the correct values at build time.

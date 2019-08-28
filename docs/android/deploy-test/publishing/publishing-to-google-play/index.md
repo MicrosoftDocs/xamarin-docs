@@ -335,10 +335,10 @@ click **Continue**:
 Next, the **Google Play Track** dialog is presented. Google Play offers
 four possible tracks for uploading your app:
 
-* **Alpha** &ndash; Used for uploading a very early version of the app to a small list of testers.
-* **Beta** &ndash; Used for uploading an early version of the app to a larger list of testers.
-* **Rollout** &ndash; Allows a percentage of users to receive an updated version of the app; this makes it possible to slowly increase the percentage from say, 10% of users and increase it to 100% of users while you iron out bugs.
-* **Production** &ndash; Select this track when the app is ready for full distribution from the Google Play store.
+- **Alpha** &ndash; Used for uploading a very early version of the app to a small list of testers.
+- **Beta** &ndash; Used for uploading an early version of the app to a larger list of testers.
+- **Rollout** &ndash; Allows a percentage of users to receive an updated version of the app; this makes it possible to slowly increase the percentage from say, 10% of users and increase it to 100% of users while you iron out bugs.
+- **Production** &ndash; Select this track when the app is ready for full distribution from the Google Play store.
 
 Choose which Google Play track will be used for uploading the app and
 click **Upload**. If you select **Rollout**, be sure to enter a

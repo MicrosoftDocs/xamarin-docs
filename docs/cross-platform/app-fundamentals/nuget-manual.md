@@ -27,14 +27,14 @@ but does not include the target framework names used by Xamarin.
 
 The main Xamarin target frameworks in use today are:
 
-* **MonoAndroid** - Xamarin.Android
-* **Xamarin.iOS** - Xamarin.iOS [Unified API](~/cross-platform/macios/unified/index.md) (supports 64-bit)
-* **Xamarin.Mac** - Xamarin.Mac's mobile profile, which is equivalent
+- **MonoAndroid** - Xamarin.Android
+- **Xamarin.iOS** - Xamarin.iOS [Unified API](~/cross-platform/macios/unified/index.md) (supports 64-bit)
+- **Xamarin.Mac** - Xamarin.Mac's mobile profile, which is equivalent
   to the Xamarin.iOS and Xamarin.Android API surface.
 
 There is also a target for the older iOS [Classic API](~/cross-platform/macios/unified/index.md):
 
-* **MonoTouch** - iOS Classic API
+- **MonoTouch** - iOS Classic API
 
 A **.nuspec** file that targeted all these would look something like:
 

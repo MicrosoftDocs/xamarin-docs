@@ -11,11 +11,11 @@ ms.date: 04/26/2017
 
 Most application code can be categorized into one of the following areas:
 
-* User interface code (eg. windows and buttons)
-* 3rd party controls (eg. charts)
-* Business logic (eg. validation rules)
-* Local data storage and access
-* Web services and remote data access
+- User interface code (eg. windows and buttons)
+- 3rd party controls (eg. charts)
+- Business logic (eg. validation rules)
+- Local data storage and access
+- Web services and remote data access
 
 For Windows Forms and WPF applications written with C# (or Visual Basic.NET)
 a surprising amount of the business logic, local data access, and web services
@@ -33,9 +33,9 @@ Hopefully the analyzer shows a large portion of your code is portable, but there
 
 Different chunks of code will probably fall into one of these buckets, explained in more detail below:
 
-* Re-useable portable code
-* Code that requires changes
-* Code that isn't portable and requires a re-write
+- Re-useable portable code
+- Code that requires changes
+- Code that isn't portable and requires a re-write
 
 ### Re-useable portable code
 

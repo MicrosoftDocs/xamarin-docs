@@ -23,11 +23,11 @@ performance API based on
 that will run on CPUs, GPUs, or DSPs, Renderscript is well suited for
 Android apps that may need to perform any of the following:
 
-* Graphics
-* Image Processing
-* Encryption
-* Signal Processing
-* Mathematical Routines
+- Graphics
+- Image Processing
+- Encryption
+- Signal Processing
+- Mathematical Routines
 
 Renderscript will use `clang` and compile the scripts to LLVM byte code
 which is bundled into the APK. When the app is run for the first time,

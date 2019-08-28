@@ -441,7 +441,7 @@ Not everyone has a designer available to create the custom icons and launch imag
 ::: zone-end
 ::: zone pivot="windows"
 
-* Visual Studio – You can use this to create a simple icon set for your app directly in the IDE.
+- Visual Studio – You can use this to create a simple icon set for your app directly in the IDE.
 - [**Glyphish**](http://www.glyphish.com/) – High-quality prebuilt icon sets for free download and purchase.
 - [**Fiverr**](http://www.fiverr.com/) – Choose from a variety of designers to create an icon set for you, starting at $5. Can be hit or miss but a good resource if you need icons designed on the fly
 

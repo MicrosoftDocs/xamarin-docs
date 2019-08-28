@@ -29,9 +29,9 @@ in the code.
 
 Add these Nuget packages to your Xamarin.Forms .NET Standard library and application projects:
 
-* Xamarin.Forms.Pages
-* Xamarin.Forms.Theme.Base
-* A theme implementation Nuget (eg. Xamarin.Forms.Theme.Light)
+- Xamarin.Forms.Pages
+- Xamarin.Forms.Theme.Base
+- A theme implementation Nuget (eg. Xamarin.Forms.Theme.Light)
 
 ## 2. Add Theme Reference
 

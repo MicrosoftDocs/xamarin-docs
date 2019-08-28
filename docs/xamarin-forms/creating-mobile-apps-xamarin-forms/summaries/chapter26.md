@@ -15,10 +15,10 @@ ms.date: 11/07/2017
 
 Xamarin.Forms includes several classes derived from [`Layout<View>`](xref:Xamarin.Forms.Layout`1):
 
-* `StackLayout`,
-* `Grid`,
-* `AbsoluteLayout`, and
-* `RelativeLayout`.
+- `StackLayout`,
+- `Grid`,
+- `AbsoluteLayout`, and
+- `RelativeLayout`.
 
 This chapter describes how to create your own classes that derive from `Layout<View>`.
 

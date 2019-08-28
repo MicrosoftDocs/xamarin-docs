@@ -222,9 +222,9 @@ The new certificates or provisioning profiles will be available in Visual Studio
 
 Apple provides a selection of special Application Services, also called capabilities, that can be activated for a Xamarin.iOS application. These Application Services must be configured on both the iOS Provisioning Portal when the **App ID** is created and in the **Entitlements.plist** file that is part of the Xamarin.iOS application's project. For information on adding Application Services to your app, refer to the [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide and the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
-* Create an App ID with the required app services.
-* Create a new [provisioning profile](#provisioningprofile) that contains this App ID.
-* Set Entitlements in the Xamarin.iOS Project
+- Create an App ID with the required app services.
+- Create a new [provisioning profile](#provisioningprofile) that contains this App ID.
+- Set Entitlements in the Xamarin.iOS Project
 
 ## Deploying to a device
 

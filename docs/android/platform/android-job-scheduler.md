@@ -22,9 +22,9 @@ For example, a background job might poll a website every three or four minutes t
 
 Android provides the following APIs to help with performing work in the background but by themselves they are not sufficient for intelligent job scheduling. 
 
-* **[Intent Services](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** &ndash; Intent Services are great for performing the work, however they provide no way to schedule work.
-* **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** &ndash; These APIs only allow work to be scheduled but provide no way to actually perform the work. Also, the AlarmManager only allows time based constraints, which means raise an alarm at a certain time or after a certain period of time has elapsed. 
-* **[Broadcast Receivers](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; An Android app can setup broadcast receivers to perform work in response to system-wide events or Intents. However, broadcast receivers don't provide any control over when the job should be run. Also changes in the Android operating system will restrict when broadcast receivers will work, or the kinds of work that they can respond to. 
+- **[Intent Services](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** &ndash; Intent Services are great for performing the work, however they provide no way to schedule work.
+- **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** &ndash; These APIs only allow work to be scheduled but provide no way to actually perform the work. Also, the AlarmManager only allows time based constraints, which means raise an alarm at a certain time or after a certain period of time has elapsed. 
+- **[Broadcast Receivers](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; An Android app can setup broadcast receivers to perform work in response to system-wide events or Intents. However, broadcast receivers don't provide any control over when the job should be run. Also changes in the Android operating system will restrict when broadcast receivers will work, or the kinds of work that they can respond to. 
 
 There are two key features to efficiently performing background work (sometimes referred to as a _background job_ or a _job_):
 
@@ -33,19 +33,19 @@ There are two key features to efficiently performing background work (sometimes 
 
 The Android Job Scheduler is a framework built in to the Android operating system that provides a fluent API to simplify scheduling background work.  The Android Job Scheduler consists of the following types:
 
-* The `Android.App.Job.JobScheduler` is a system service that is used to schedule, execute, and if necessary cancel, jobs on behalf of an Android application.
-* An `Android.App.Job.JobService` is an abstract class that must be extended with the logic that will run the job on the main thread of the application. This means that the `JobService` is responsible for how the work is to be performed asynchronously.
-* An `Android.App.Job.JobInfo` object holds the criteria to guide Android when the job should run.
+- The `Android.App.Job.JobScheduler` is a system service that is used to schedule, execute, and if necessary cancel, jobs on behalf of an Android application.
+- An `Android.App.Job.JobService` is an abstract class that must be extended with the logic that will run the job on the main thread of the application. This means that the `JobService` is responsible for how the work is to be performed asynchronously.
+- An `Android.App.Job.JobInfo` object holds the criteria to guide Android when the job should run.
 
 To schedule work with the Android Job Scheduler, a Xamarin.Android application must encapsulate the code in a class that extends the `JobService` class. `JobService` has three lifecycle methods that can be called during the lifetime of the job:
 
-* **bool OnStartJob(JobParameters parameters)** &ndash; This method is called by the `JobScheduler` to perform work, and runs on the main thread of the application. It is the responsibility of the `JobService` to asynchronously perform the work and  `true` if there is work remaining, or `false` if the work is done.
+- **bool OnStartJob(JobParameters parameters)** &ndash; This method is called by the `JobScheduler` to perform work, and runs on the main thread of the application. It is the responsibility of the `JobService` to asynchronously perform the work and  `true` if there is work remaining, or `false` if the work is done.
     
     When the `JobScheduler` calls this method, it will request and retain a wakelock from Android for the duration of the job. When the job is finished, it is the responsibility of the `JobService` to tell the `JobScheduler` of this fact by call the `JobFinished` method (described next).
 
-* **JobFinished(JobParameters parameters, bool needsReschedule)** &ndash; This method must be called by the `JobService` to tell the `JobScheduler` that the work is done. If `JobFinished` is not called, the `JobScheduler` will not remove the wakelock, causing unnecessary battery drain. 
+- **JobFinished(JobParameters parameters, bool needsReschedule)** &ndash; This method must be called by the `JobService` to tell the `JobScheduler` that the work is done. If `JobFinished` is not called, the `JobScheduler` will not remove the wakelock, causing unnecessary battery drain. 
 
-* **bool OnStopJob(JobParameters parameters)** &ndash; This is called when the job is prematurely stopped by Android. It should return `true` if the job should be rescheduled based on the retry criteria (discussed below in more detail).
+- **bool OnStopJob(JobParameters parameters)** &ndash; This is called when the job is prematurely stopped by Android. It should return `true` if the job should be rescheduled based on the retry criteria (discussed below in more detail).
 
 It is possible to specify _constraints_ or _triggers_ that will control when a job can or should run. For example, it is possible to constrain a job so that it will only run when the device is charging or to start a job when a picture is taken.
 
@@ -108,8 +108,8 @@ public class DownloadJob : JobService
 
 Xamarin.Android applications do not instantiate a `JobService` directly, instead they will pass a `JobInfo` object to the `JobScheduler`. The `JobScheduler` will instantiate the requested `JobService` object, scheduling and running the `JobService` according to the metadata in the `JobInfo`. A `JobInfo` object must contain the following information:
 
-* **JobId** &ndash; this is an `int` value that is used to identify a job to the `JobScheduler`. Reusing this value will update any existing jobs. The value must be unique for the application. 
-* **JobService** &ndash; this parameter is a `ComponentName` that explicitly identifies the type that the  `JobScheduler` should use to run a job. 
+- **JobId** &ndash; this is an `int` value that is used to identify a job to the `JobScheduler`. Reusing this value will update any existing jobs. The value must be unique for the application. 
+- **JobService** &ndash; this parameter is a `ComponentName` that explicitly identifies the type that the  `JobScheduler` should use to run a job. 
   
 
 This extension method demonstrates how to create a `JobInfo.Builder` with an Android `Context`, such as an Activity:
@@ -148,8 +148,8 @@ A powerful feature of the Android Job Scheduler is the ability to control when a
 
 The `SetBackoffCriteria` provides some guidance on how long the `JobScheduler` should wait before trying to run a job again. There are two parts to the backoff criteria: a delay in milliseconds (default value of 30 seconds)and type of back off that should be used (sometimes referred to as the _backoff policy_ or the _retry policy_). The two policies are encapsulated in the `Android.App.Job.BackoffPolicy` enum:
 
-* `BackoffPolicy.Exponential` &ndash; An exponential backoff policy will increase the initial backoff value exponentially after each failure. The first time a job fails, the library will wait the initial interval that is specified before rescheduling the job – example 30 seconds. The second time the job fails, the library will wait at least 60 seconds before trying to run the job. After the third failed attempt, the library will wait 120 seconds, and so on. This is the default value.
-* `BackoffPolicy.Linear` &ndash; This strategy is a linear backoff that the job should be rescheduled to run at set intervals (until it succeeds). Linear backoff is best suited for work that must be completed as soon as possible or for problems that will quickly resolve themselves. 
+- `BackoffPolicy.Exponential` &ndash; An exponential backoff policy will increase the initial backoff value exponentially after each failure. The first time a job fails, the library will wait the initial interval that is specified before rescheduling the job – example 30 seconds. The second time the job fails, the library will wait at least 60 seconds before trying to run the job. After the third failed attempt, the library will wait 120 seconds, and so on. This is the default value.
+- `BackoffPolicy.Linear` &ndash; This strategy is a linear backoff that the job should be rescheduled to run at set intervals (until it succeeds). Linear backoff is best suited for work that must be completed as soon as possible or for problems that will quickly resolve themselves. 
 
 For more details on create a `JobInfo` object, please read [Google's documentation for the `JobInfo.Builder` class](https://developer.android.com/reference/android/app/job/JobInfo.Builder.html).
 
@@ -181,8 +181,8 @@ public override bool OnStartJob(JobParameters jobParameters)
 
 To schedule a job, a Xamarin.Android application will get a reference to the `JobScheduler` system service and call the `JobScheduler.Schedule` method with the `JobInfo` object that was created in the previous step. `JobScheduler.Schedule` will immediately return with one of two integer values:
 
-* **JobScheduler.ResultSuccess** &ndash; The job has been successfully scheduled. 
-* **JobScheduler.ResultFailure** &ndash; The job could not be scheduled. This is typically caused by conflicting `JobInfo` parameters.
+- **JobScheduler.ResultSuccess** &ndash; The job has been successfully scheduled. 
+- **JobScheduler.ResultFailure** &ndash; The job could not be scheduled. This is typically caused by conflicting `JobInfo` parameters.
 
 This code is an example of scheduling a job and notifying the user of the results of the scheduling attempt:
 

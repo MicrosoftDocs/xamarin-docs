@@ -35,8 +35,8 @@ A Table View's behavior can be customized by providing a subclass of the Table V
 
 When creating Table Views, Apple suggests the following:
 
-* Allow the user to sort the table by clicking on a Column Headers.
-* Create Column Headers that are nouns or short noun phrases that describe the data being shown in that column.
+- Allow the user to sort the table by clicking on a Column Headers.
+- Create Column Headers that are nouns or short noun phrases that describe the data being shown in that column.
 
 For more information, please see the [Content Views](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 

@@ -76,17 +76,17 @@ await Share.RequestAsync(new ShareFileRequest
 
 # [Android](#tab/android)
 
-* `Subject` property is used for desired subject of a message.
+- `Subject` property is used for desired subject of a message.
 
 # [iOS](#tab/ios)
 
-* `Subject` not used.
-* `Title` not used.
+- `Subject` not used.
+- `Title` not used.
 
 # [UWP](#tab/uwp)
 
-* `Title` will default to Application Name if not set.
-* `Subject` not used.
+- `Title` will default to Application Name if not set.
+- `Subject` not used.
 
 -----
 

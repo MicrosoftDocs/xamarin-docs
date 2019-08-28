@@ -74,9 +74,9 @@ By default, a MenuItem has no way of knowing which cell it belongs to. `CommandP
 
 Context actions can be implemented in any `Cell` subclass (as long as it isn't being used as a group header) by creating `MenuItem`s and adding them to the `ContextActions` collection for the cell. You have the following properties can be configured for the context action:
 
-* **Text** &ndash; the string that appears in the menu item.
-* **Clicked** &ndash; the event when the item is clicked.
-* **IsDestructive** &ndash; (optional) when true the item is
+- **Text** &ndash; the string that appears in the menu item.
+- **Clicked** &ndash; the event when the item is clicked.
+- **IsDestructive** &ndash; (optional) when true the item is
     rendered differently on iOS.
 
 Multiple context actions can be added to a cell, however only one should have `IsDestructive` set to `true`. The following code demonstrates how context actions would be added to a `ViewCell`:

@@ -18,16 +18,16 @@ Unlike the classes it replaced, which are subclasses of UIView, UIAlertControlle
 Use `UIAlertControllerStyle` to indicate the type of alert to display. These alerts types are:
 
 - **UIAlertControllerStyleActionSheet**
-  * Pre-iOS 8 this would have been a UIActionSheet
+  - Pre-iOS 8 this would have been a UIActionSheet
 - **UIAlertControllerStyleAlert**
-  * Pre-iOS 8 this would have been UIAlertView 
+  - Pre-iOS 8 this would have been UIAlertView 
 
 There are three necessary steps to take when creating an Alert Controller:
 
 - Create and configure the Alert with a:
-  * title
-  * message
-  * preferredStyle
+  - title
+  - message
+  - preferredStyle
 
 - (Optional) Add a text field
 - Add the Required actions

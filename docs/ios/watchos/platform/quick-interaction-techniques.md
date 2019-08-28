@@ -225,16 +225,16 @@ There are several ways that a user may respond to the Notification:
 
 New for watchOS 3:
 
-* Notification use a similar API across all platforms (iOS, watchOS, tvOS and macOS).
-* Local Notification can be scheduled on the Apple Watch.
-* Background Notification will be routed to the app's Extension if they were scheduled on the Apple Watch.
+- Notification use a similar API across all platforms (iOS, watchOS, tvOS and macOS).
+- Local Notification can be scheduled on the Apple Watch.
+- Background Notification will be routed to the app's Extension if they were scheduled on the Apple Watch.
 
 #### Notification Scheduling and Delivery
 
 Notification from the user's iPhone will be forward to the Apple Watch when the following occurs:
 
-* The iPhone's screen is off.
-* The Apple Watch is being worn and has been unlocked.
+- The iPhone's screen is off.
+- The Apple Watch is being worn and has been unlocked.
 
 In watchOS 3, Local Notifications can be scheduled on the Apple Watch and are only delivered on the watch. It is up the developer to schedule a corresponding iPhone Notification if it is required by the app.
 

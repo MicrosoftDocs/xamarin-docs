@@ -30,15 +30,15 @@ NuGet package. These controls include the following:
 
 Other important controls for Wear apps include:
 
-* `BoxInsetLayout` (see [working with screen sizes](~/android/wear/screen-sizes.md)),
+- `BoxInsetLayout` (see [working with screen sizes](~/android/wear/screen-sizes.md)),
 
-* `WatchViewStub` (see [working with screen sizes](~/android/wear/screen-sizes.md)),
+- `WatchViewStub` (see [working with screen sizes](~/android/wear/screen-sizes.md)),
 
-* `CardFrame` (see [Android Creating Cards](https://developer.android.com/training/wearables/ui/cards.html)),
+- `CardFrame` (see [Android Creating Cards](https://developer.android.com/training/wearables/ui/cards.html)),
 
-* `CardScrollView` (see [Android Creating Cards](https://developer.android.com/training/wearables/ui/cards.html)),
+- `CardScrollView` (see [Android Creating Cards](https://developer.android.com/training/wearables/ui/cards.html)),
 
-* `WearableListView` (see [Android Create Lists](https://developer.android.com/training/wearables/ui/lists.html)).
+- `WearableListView` (see [Android Create Lists](https://developer.android.com/training/wearables/ui/lists.html)).
 
 
 ## Related Links
