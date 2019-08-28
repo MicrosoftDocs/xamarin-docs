@@ -75,11 +75,15 @@ The `IsVisible` property is a `bool` value that determines whether the control i
 
 ### [`MinimumHeightRequest`](xref:Xamarin.Forms.VisualElement.MinimumHeightRequest)
 
-The `MinimumHeightRequest` property is a `double` value that determines the smallest desired height of the control. For more information, see [Request properties](#request-properties).
+The `MinimumHeightRequest` property is a `double` value that determines how overflow is handled when two elements are competing for limited space. Setting the `MinimumHeightRequest` property allows the layout process to scale the element down to the minimum dimension requested. If no `MinimumHeightRequest` is specified, the default value is -1 and the layout process will consider the `HeightRequest` to be the minimum value. This means that elements with no `MinimumHeightRequest` value will not have scalable height.
+
+For more information, see [Minimum request properties](#minimum-request-properties).
 
 ### [`MinimumWidthRequest`](xref:Xamarin.Forms.VisualElement.MinimumWidthRequest)
 
-The `MinimumWidthRequest` property is a `double` value that determines the smallest desired width of the control. For more information, see [Request properties](#request-properties).
+The `MinimumWidthRequest` property is a `double` value that determines how overflow is handled when two elements are competing for limited space. Setting the `MinimumWidthRequest` property allows the layout process to scale the element down to the minimum dimension requested. If no `MinimumWidthRequest` is specified, the default value is -1 and the layout process will consider the `WidthRequest` to be the minimum value. This means that elements with no `MinimumWidthRequest` value will not have scalable width.
+
+For more information, see [Minimum request properties](#minimum-request-properties).
 
 ### [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity)
 
@@ -224,6 +228,35 @@ Android, iOS, and UWP platforms all have different measurement units that can va
 ## Request properties
 
 Properties whose names contain "request" define a desired value, which may not match the actual rendered value. For example, `HeightRequest` might be set to 150 but if the layout only allows room for 100 units, the rendered `Height` of the control will only be 100. Rendered size is affected by available space and contained components.
+
+## Minimum request properties
+
+Minimum request properties include `MinimumHeightRequest` and `MinimumWidthRequest`, and are intended to enable more precise control over how elements handle overflow relative to each other. However, layout behavior related to these properties has some important considerations.
+
+### Unspecified minimum property values
+
+If a minimum value is not set, the minimum property defaults to -1. The layout process ignores this value and considers the absolute value to be the minimum. The practical consequence of this behavior is that an element with no minimum value specified **will not** shrink. An element with a minimum value specified **will** shrink.
+
+The following XAML shows two `BoxView` elements in a horizontal `StackLayout`:
+
+```xaml
+<StackLayout Orientation="Horizontal">
+    <BoxView HeightRequest="100" BackgroundColor="Purple" WidthRequest="500"></BoxView>
+    <BoxView HeightRequest="100" BackgroundColor="Green" WidthRequest="500" MinimumWidthRequest="250"></BoxView>
+</StackLayout>
+```
+
+The first `BoxView` instance requests a width of 500 and does not specify a minimum width. The second `BoxView` instance requests a width of 500 and a minimum width of 250. If the parent `StackLayout` element is not wide enough to contain both components at their requested width, the first `BoxView` instance will be considered by the layout process to have a minimum width of 500 because no other valid minimum is specified. The second `BoxView` instance is allowed to scale down to 250 and it will shrink to fit until its width hits 250 units.
+
+If the desired behavior is for the first `BoxView` instance to scale down with no minimum width, the `MinimumWidthRequest` must be set to a valid value, such as 0.
+
+### Minimum and absolute property values
+
+Behavior is undefined when the minimum value is greater than the absolute value. For example, if `MinimumWidthRequest` is set to 100, the `WidthRequest` property should never exceed 100. When specifying a minimum property value, you should always specify an absolute value to ensure the absolute value is greater than the minimum value.
+
+### Minimum properties within a Grid
+
+`Grid` layouts have their own system for relative sizing of rows and columns. Using `MinimumWidthRequest` or `MinimumHeightRequest` within a `Grid` layout will not have an effect. For more information, see [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md).
 
 ## Related links
 
