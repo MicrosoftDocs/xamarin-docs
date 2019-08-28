@@ -14,7 +14,7 @@ ms.date: 07/01/2019
 
 Follow these [instructions](~/ios/platform/ios13/get-started.md) to get started.
 
-## Dark Mode
+## [Dark Mode](dark-mode.md)
 
 iOS 13 introduces a new dark mode which provides developers with the
 means to easily allow their apps to fit in. New tools enable
