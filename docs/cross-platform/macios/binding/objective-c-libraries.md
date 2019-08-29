@@ -414,13 +414,13 @@ Example:
 ```csharp
 [BaseType (typeof (NSObject))]
 interface MyTree {
-	string Name { get; [NotImplemented] set; }
+    string Name { get; [NotImplemented] set; }
 }
 
 [BaseType (typeof (MyTree))]
 interface MyMutableTree {
-	[Override]
-	string Name { get; set; }
+    [Override]
+    string Name { get; set; }
 }
 ```
 
@@ -452,7 +452,7 @@ IntPtr Constructor (CGRect frame);
 ### Binding protocols
 
 As described in the API design document, in the section [discussing
-Models and Protocols](~/ios/internals/api-design/index.md#Models),
+Models and Protocols](~/ios/internals/api-design/index.md#models),
 Xamarin.iOS maps the Objective-C protocols into classes that have been
 flagged with the
 [`[Model]`](~/cross-platform/macios/binding/binding-types-reference.md#ModelAttribute)
@@ -1859,4 +1859,3 @@ automatically.
 ## Related links
 
 - [Binding Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/bindingsample/)
- 
