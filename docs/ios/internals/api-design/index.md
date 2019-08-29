@@ -538,7 +538,7 @@ a public method.
 
 When you see Objective-C samples that look like this:
 
-```csharp
+```objc
 foo.delegate = [[SomethingDelegate] alloc] init]
 ```
 
