@@ -89,11 +89,11 @@ Change the **App.cs** file so that:
 ```csharp
 public class App : Application // superclass new in 1.3
 {
-	public App ()
-	{
-		// The root page of your application
-		MainPage = new ContentPage {...}; // property new in 1.3
-	}
+    public App ()
+    {
+        // The root page of your application
+        MainPage = new ContentPage {...}; // property new in 1.3
+    }
 ```
 
 We have completely removed the `GetMainPage` method, and instead set the `MainPage` *property* on the `Application` subclass.
@@ -114,14 +114,14 @@ Change the **AppDelegate.cs** file so that:
 public partial class AppDelegate :
     global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
 {
-	public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-	{
-		global::Xamarin.Forms.Forms.Init ();
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        global::Xamarin.Forms.Forms.Init ();
 
-		LoadApplication (new App ());  // method is new in 1.3
+        LoadApplication (new App ());  // method is new in 1.3
 
-		return base.FinishedLaunching (app, options);
-	}
+        return base.FinishedLaunching (app, options);
+    }
 }
 ```
 
@@ -138,14 +138,14 @@ ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 public class MainActivity :
     global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
 {
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		global::Xamarin.Forms.Forms.Init (this, bundle);
+        global::Xamarin.Forms.Forms.Init (this, bundle);
 
-		LoadApplication (new App ()); // method is new in 1.3
-	}
+        LoadApplication (new App ()); // method is new in 1.3
+    }
 }
 ```
 

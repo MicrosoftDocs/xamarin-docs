@@ -28,10 +28,10 @@ Replace the code in the **MyClass.cs** file with the following snippet:
 using AppKit;
 public class MyNSView : NSTextView
 {
-	public MyNSView ()
-	{
-		Value = "Hello from C#";
-	}
+    public MyNSView ()
+    {
+        Value = "Hello from C#";
+    }
 }
 ```
 

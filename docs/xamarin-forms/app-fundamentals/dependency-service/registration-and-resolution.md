@@ -63,13 +63,13 @@ The following example shows using the [`Register`](xref:Xamarin.Forms.Dependency
 [Register("AppDelegate")]
 public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
 {
-		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-		{
-				global::Xamarin.Forms.Forms.Init();
-				LoadApplication(new App());
-				DependencyService.Register<IDeviceOrientationService, DeviceOrientationService>();
-				return base.FinishedLaunching(app, options);
-		}
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        global::Xamarin.Forms.Forms.Init();
+        LoadApplication(new App());
+        DependencyService.Register<IDeviceOrientationService, DeviceOrientationService>();
+        return base.FinishedLaunching(app, options);
+    }
 }
 ```
 
@@ -160,7 +160,7 @@ When an application finishes using a platform implementation that implements `ID
 ITextToSpeechService service = DependencyService.Get<ITextToSpeechService>(DependencyFetchTarget.NewInstance);
 using (service as IDisposable)
 {
-		await service.SpeakAsync("Hello world");
+    await service.SpeakAsync("Hello world");
 }
 ```
 

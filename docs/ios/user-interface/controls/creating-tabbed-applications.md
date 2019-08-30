@@ -298,15 +298,15 @@ There are a few important steps to note when adding a Storyboard to a previously
  
 1. Add your Storyboard name to the **Main Interface** section of the `Info.plist`:
 
-	[![](creating-tabbed-applications-images/project-options.png "Set the Main Interface to MainStoryboard")](creating-tabbed-applications-images/project-options.png#lightbox)
+    [![](creating-tabbed-applications-images/project-options.png "Set the Main Interface to MainStoryboard")](creating-tabbed-applications-images/project-options.png#lightbox)
 1. In your `App Delegate`, override the Window method, with the following code:
 
-	```csharp
-	public override UIWindow Window {
-	    get;
-	    set;
-	}
-	```
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
 
 We are going to need three View Controllers for this example. One, named `ViewController1`, will be used as our Initial View Controller and in the first tab. The other two, named `ViewController2` and `ViewController3`, which will be used in the second and third tabs respectively.
 

@@ -40,7 +40,7 @@ The default iOS Designer configuration has constraint mode enabled. However, sho
 1. Click on an empty space on the design surface. This deselects any elements and brings up the properties for the Storyboard document.
 1. Check or uncheck the **Use Autolayout** checkbox in the property panel:
 
-	![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
+    ![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
 
 
 By default, no constraints are created or visible on the surface. Instead, they are automatically inferred from the frame information at compile time. To add constraints, we need to select an element on the design surface and add constraints to it. We can do that using the **Constraint Toolbar**.
@@ -169,10 +169,10 @@ To access a Constraint in code, you first have to expose it in the iOS Designer 
 1. Create the Constraint as normal (using any of the methods listed above).
 2. In the **Document Outline Explorer**, find the desired Constraint and select it:
 
-	[![](designer-auto-layout-images/modify01.png "The Document Outline Explorer")](designer-auto-layout-images/modify01.png#lightbox)
+    [![](designer-auto-layout-images/modify01.png "The Document Outline Explorer")](designer-auto-layout-images/modify01.png#lightbox)
 3. Next, assign a **Name** to the Constraint in the **Widget** tab of the **Properties Explorer**:
 
-	[![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
+    [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
 4. Save your changes.
 
 With the above changes in place, you can access the Constraint in code and modify its properties. For example, you can use the following to set the height of the attached View to zero:

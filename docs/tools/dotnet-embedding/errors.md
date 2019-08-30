@@ -178,10 +178,10 @@ Note: Supported features will evolve with new versions of the tool.
 
 This is a **warning** that the default parameters of constructor `C` are not generating any extra code. The most common cause is that an existing method already has the same signature. E.g. in .net it's possible to have:
 
-```
+```csharp
 public class MyType {
-	public MyType () { ... }
-	public MyType (int i = 0) { ... }
+    public MyType () { ... }
+    public MyType (int i = 0) { ... }
 }
 ```
 
@@ -213,10 +213,10 @@ Note: Supported features will evolve with new versions of the tool.
 
 This is a **warning** that the default parameters of method `M` are not generating any extra code. The most common cause is that an existing method already has the same signature. E.g. in .net it's possible to have:
 
-```
+```csharp
 public class MyType {
-	public int Increment () { ... }
-	public int Increment (int i = 0) { ... }
+    public int Increment () { ... }
+    public int Increment (int i = 0) { ... }
 }
 ```
 

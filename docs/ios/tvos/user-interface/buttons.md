@@ -62,19 +62,19 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Button** from the **Library** and drop it on the View: 
 
-	[![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
+    [![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
 1. In the **Properties Explorer**, you can adjust several properties of the button such as its **Title** and **Text Color**: 
 
-	[![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
+    [![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
 1. Next, switch to the **Events Tab** and wire-up an **Event** from the **Button** and call it `ButtonPressed`: 
 
-	[![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
+    [![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
 1. You will be automatically switched to the `ViewController.cs` view where you can place the new Action in your code using the **Up** and **Down** arrow keys: 
 
-	[![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
+    [![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
 1. Press the **Enter** to select the location: 
 
-	[![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
+    [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
 1. Save the changes to all files.
 
 
@@ -83,13 +83,13 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Button** from the **Library** and drop it on the View: 
 
-	[![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
+    [![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
 1. In the **Properties Explorer**, you can adjust several properties of the button such as its **Title** and **Text Color**: 
 
-	[![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
+    [![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
 1. Next, switch to the **Events Tab** and wire-up an **Event** from the **Button** and call it `ButtonPressed`: 
 
-	[![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
+    [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
 1. Save the changes to all files.
 
 
@@ -140,8 +140,8 @@ var button = new UIButton(UIButtonType.System);
 button.Frame = new CGRect (25, 25, 300, 150);
 button.SetTitle ("Hello", UIControlState.Normal);
 button.AllEvents += (sender, e) => {
-	// Do something when the button is clicked
-	...
+    // Do something when the button is clicked
+    ...
 };
 View.AddSubview (button);
 ```
@@ -171,8 +171,8 @@ Next, use the `AllEvents` event to see when the user has clicked the button. Exa
 
 ```csharp
 button.AllEvents += (sender, e) => {
-	// Do something when the button is clicked
-	...
+    // Do something when the button is clicked
+    ...
 };
 ```
 
