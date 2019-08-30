@@ -17,25 +17,25 @@ Yes, you can use customized MSBuild targets to achieve this. The easiest option 
 These steps will work for any iOS project that uses the MSBuild build engine on either Mac or Windows. (Note: all Unified API projects use the MSBuild build engine.)
 
 1. Open the `.csproj` file for the iOS app project in a text editor and then add the following lines at the end (immediately before the closing `</Project>` tag):
-	
-	```
-	<PropertyGroup>
-		   <CreateIpaDependsOn>
-	       $(CreateIpaDependsOn);
-			CopyIpa
-	       </CreateIpaDependsOn>
-	</PropertyGroup>
-	
-	<Target Name="CopyIpa"
-		Condition="'$(OutputType)' == 'Exe'
-			And '$(ComputedPlatform)' == 'iPhone'
-			And '$(BuildIpa)' == 'true'">
-		<Copy
-			SourceFiles="$(IpaPackagePath)"
-			DestinationFolder="$(OutputPath)"
-		/>
-	</Target>
-	```
+
+    ```xml
+    <PropertyGroup>
+        <CreateIpaDependsOn>
+        $(CreateIpaDependsOn);
+        CopyIpa
+        </CreateIpaDependsOn>
+    </PropertyGroup>
+    
+    <Target Name="CopyIpa"
+            Condition="'$(OutputType)' == 'Exe'
+            And '$(ComputedPlatform)' == 'iPhone'
+            And '$(BuildIpa)' == 'true'">
+        <Copy
+            SourceFiles="$(IpaPackagePath)"
+            DestinationFolder="$(OutputPath)"
+        />
+    </Target>
+    ```
 
 2. Set the DestinationFolder to the desired output folder. As usual you may use MSBuild properties (like $(OutputPath)) within this argument if you wish.
 
@@ -52,24 +52,24 @@ These steps will work for any iOS project that uses the MSBuild build engine on 
 
 1. Open the `.csproj` file for the iOS app project in a text editor and then add the following lines at the end (immediately before the closing `</Project>` tag).
 
-	```csharp
-	<PropertyGroup>
-		<CreateIpaDependsOn>
-			$(CreateIpaDependsOn);
-			CopyIpa
-		</CreateIpaDependsOn>
-	</PropertyGroup>
-	
-	<Target Name="CopyIpa"
-		Condition="'$(OutputType)' == 'Exe'
-			And '$(ComputedPlatform)' == 'iPhone'
-			And '$(BuildIpa)' == 'true'">
-		<Copy
-			SourceFiles="$(OutputPath)$(IpaPackageName)"
-			DestinationFolder="/Users/macuser/Desktop/"
-		/>
-	</Target>
-	```
+    ```xml
+    <PropertyGroup>
+        <CreateIpaDependsOn>
+            $(CreateIpaDependsOn);
+            CopyIpa
+        </CreateIpaDependsOn>
+    </PropertyGroup>
+
+    <Target Name="CopyIpa"
+            Condition="'$(OutputType)' == 'Exe'
+            And '$(ComputedPlatform)' == 'iPhone'
+            And '$(BuildIpa)' == 'true'">
+        <Copy
+            SourceFiles="$(OutputPath)$(IpaPackageName)"
+            DestinationFolder="/Users/macuser/Desktop/"
+        />
+    </Target>
+    ```
 
 2. Set the `DestinationFolder` to the desired output folder. As usual you may use MSBuild properties (like `$(OutputPath)`) within this argument if you wish.
 

@@ -322,10 +322,10 @@ public partial class BrickWallCompositingPage : ContentPage
 
     int step = 0;
 
-	public BrickWallCompositingPage ()
-	{
-		InitializeComponent ();
-	}
+    public BrickWallCompositingPage ()
+    {
+        InitializeComponent ();
+    }
 
     void OnButtonClicked(object sender, EventArgs args)
     {
@@ -665,7 +665,7 @@ public class CompositingMaskPage : ContentPage
     static readonly float RADIUS = 120;
 
     public CompositingMaskPage ()
-	{
+    {
         Title = "Compositing Mask";
 
         SKCanvasView canvasView = new SKCanvasView();
@@ -785,8 +785,8 @@ public partial class GradientTransitionsPage : ContentPage
     };
 
     public GradientTransitionsPage ()
-	{
-		InitializeComponent ();
+    {
+        InitializeComponent ();
 
         foreach (TransitionMode mode in Enum.GetValues(typeof(TransitionMode)))
         {
@@ -794,7 +794,7 @@ public partial class GradientTransitionsPage : ContentPage
         }
 
         transitionPicker.SelectedIndex = 0;
-	}
+    }
 
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
     {

@@ -277,14 +277,14 @@ Start by creating the page for the browser view:
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WebViewSample.InAppBrowserXaml"
              Title="Browser">
-	<StackLayout Margin="20">
-		<StackLayout Orientation="Horizontal">
-			<Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="OnBackButtonClicked" />
-			<Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="OnForwardButtonClicked" />
-		</StackLayout>
-		<!-- WebView needs to be given height and width request within layouts to render. -->
-		<WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" />
-	</StackLayout>
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="OnBackButtonClicked" />
+            <Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="OnForwardButtonClicked" />
+        </StackLayout>
+        <!-- WebView needs to be given height and width request within layouts to render. -->
+        <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" />
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -354,11 +354,11 @@ If you anticipate using webpages that take a long time to load, consider using t
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WebViewSample.LoadingLabelXaml"
              Title="Loading Demo">
-	<StackLayout>
-		<!--Loading label should not render by default.-->
-		<Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
-		<WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
-	</StackLayout>
+    <StackLayout>
+        <!--Loading label should not render by default.-->
+        <Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
+        <WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
+    </StackLayout>
 </ContentPage>
 ```
 

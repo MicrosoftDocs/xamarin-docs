@@ -762,21 +762,21 @@ guide):
 
 ```csharp
 [Service(Exported=true, Permission="android.permissions.BIND_NFC_SERVICE"),
-	IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
-	MetaData("android.nfc.cardemulation.host.apdu_service",
-	Resource="@xml/hceservice")]
+    IntentFilter(new[] {"android.nfc.cardemulation.HOST_APDU_SERVICE"}),
+    MetaData("android.nfc.cardemulation.host.apdu_service",
+    Resource="@xml/hceservice")]
 
 class HceService : HostApduService
 {
-	public override byte[] ProcessCommandApdu(byte[] apdu, Bundle extras)
-	{
-		...
-	}
+    public override byte[] ProcessCommandApdu(byte[] apdu, Bundle extras)
+    {
+        ...
+    }
 
-	public override void OnDeactivated (DeactivationReason reason)
-	{
-		...
-	}
+    public override void OnDeactivated (DeactivationReason reason)
+    {
+        ...
+    }
 }
 ```
 

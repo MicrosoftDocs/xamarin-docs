@@ -41,7 +41,7 @@ instructions against the database.
 
 1. **Creating a Blank Database** - Call the `CreateFile` method with a valid (ie. writeable) file path. You should check whether the file already exists before calling this method, otherwise a new (blank) database will be created over the top of the old one, and the data in the old file will be lost:
 
-	`Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`
+    `Mono.Data.Sqlite.SqliteConnection.CreateFile (dbPath);`
 
     > [!NOTE]
     > The `dbPath` variable should be determined according the rules discussed earlier in this document.
@@ -55,8 +55,8 @@ instructions against the database.
     connection.Close();
     ```
 
-	As mentioned earlier, a connection should never be re-used across different threads. If in doubt, create the connection as required and close it when you’re done; but be mindful of doing this more often than required too.
-	
+    As mentioned earlier, a connection should never be re-used across different threads. If in doubt, create the connection as required and close it when you’re done; but be mindful of doing this more often than required too.
+
 3. **Creating and Executing a Database Command** - Once we have a connection we can execute arbitrary SQL commands against it. The code below shows a CREATE TABLE statement being executed.
 
     ```csharp

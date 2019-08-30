@@ -107,14 +107,14 @@ To respond to the user tapping on a search result (`NSUserActivity`) for our app
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
 {
 
-	// Take action based on the activity type
-	switch (userActivity.ActivityType) {
-	case "com.xamarin.platform":
-		// Restore the state of the app here...
-		break;
-	}
+    // Take action based on the activity type
+    switch (userActivity.ActivityType) {
+    case "com.xamarin.platform":
+        // Restore the state of the app here...
+        break;
+    }
 
-	return true;
+    return true;
 }
 ```
 

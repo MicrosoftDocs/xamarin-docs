@@ -159,8 +159,8 @@ in a **Strings.xml** file, such as this:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="enter_info">Enter some text</string>
-	<string name="save_info">Save data</string>
+    <string name="enter_info">Enter some text</string>
+    <string name="save_info">Save data</string>
 </resources>
 ```
 

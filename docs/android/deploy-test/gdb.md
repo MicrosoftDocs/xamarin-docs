@@ -49,8 +49,8 @@ command line will be printed:
 ```bash
 $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 ...
-	Target _Gdb:
-		"/opt/android/ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gdb" -x "/Users/jon/Development/Projects/Scratch.HelloXamarin20//gdb-symbols/gdb.env"
+    Target _Gdb:
+        "/opt/android/ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gdb" -x "/Users/jon/Development/Projects/Scratch.HelloXamarin20//gdb-symbols/gdb.env"
 ...
 ```
 

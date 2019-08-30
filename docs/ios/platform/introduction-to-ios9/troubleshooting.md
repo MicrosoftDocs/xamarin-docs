@@ -148,19 +148,19 @@ To solve this issue, do the following:
 1. Start Xcode (the latest beta version) on the development Mac.
 2. Select **Devices** from the **Window** menu to open the Devices Window: 
 
-	[![](troubleshooting-images/untrusted02.png "The Devices Window")](troubleshooting-images/untrusted02.png#lightbox)
+    [![](troubleshooting-images/untrusted02.png "The Devices Window")](troubleshooting-images/untrusted02.png#lightbox)
 3. Under the **DEVICES** side panel, select your device, right-click and select **Show Provisioning Profiles...**: 
 
-	[![](troubleshooting-images/untrusted03.png "SShow Provisioning Profiles")](troubleshooting-images/untrusted03.png#lightbox)
+    [![](troubleshooting-images/untrusted03.png "SShow Provisioning Profiles")](troubleshooting-images/untrusted03.png#lightbox)
 4. Select each provisioning profile currently on the device and click the **-** button to delete it: 
 
-	[![](troubleshooting-images/untrusted04.png "Deleting a provisioning profile")](troubleshooting-images/untrusted04.png#lightbox)
+    [![](troubleshooting-images/untrusted04.png "Deleting a provisioning profile")](troubleshooting-images/untrusted04.png#lightbox)
 5. From the **Xcode** menu, select **Preferences...** and **Accounts**: 
 
-	[![](troubleshooting-images/untrusted05.png "Xcode account preferences")](troubleshooting-images/untrusted05.png#lightbox)
+    [![](troubleshooting-images/untrusted05.png "Xcode account preferences")](troubleshooting-images/untrusted05.png#lightbox)
 6. Click the **View Details...** button, then click the **Download all** button: 
 
-	[![](troubleshooting-images/untrusted06.png "Download all profiles")](troubleshooting-images/untrusted06.png#lightbox)
+    [![](troubleshooting-images/untrusted06.png "Download all profiles")](troubleshooting-images/untrusted06.png#lightbox)
 7. When the list has finished updating, click the **Done** button and close the Preferences window.
 8. Remove the existing version of the Xamarin.iOS app that you were trying to test from the iOS device.
 9. Return to Visual Studio for Mac, do a clean build and try to re-run the app on the device.

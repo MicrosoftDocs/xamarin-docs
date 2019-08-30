@@ -93,9 +93,9 @@ A style sheet can be loaded and parsed with the [`StyleSheet`](xref:Xamarin.Form
 
 ```xaml
 <Application ...>
-	<Application.Resources>
+    <Application.Resources>
         <StyleSheet Source="/Assets/styles.css" />
-	</Application.Resources>
+    </Application.Resources>
 </Application>
 ```
 

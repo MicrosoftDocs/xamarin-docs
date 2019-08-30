@@ -111,8 +111,8 @@ Ultimately, your `Entitlements.plist` must have the following key and value pair
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>com.apple.developer.HealthKit</key>
-	<true/>
+    <key>com.apple.developer.HealthKit</key>
+    <true/>
 </dict>
 </plist>
 
@@ -124,7 +124,7 @@ Similarly, the `Info.plist` for the app must have a value of `healthkit` associa
 <key>UIRequiredDeviceCapabilities</key>
 <array>
 <string>armv7</string>
-	<string>healthkit</string>
+    <string>healthkit</string>
 </array>
 
 ```

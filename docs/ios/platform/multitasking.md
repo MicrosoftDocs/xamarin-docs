@@ -163,22 +163,22 @@ If we add the following code to a View or View Controller in our app, when that 
 ```csharp
 #region Custom Keyboard Shortcut
 public override bool CanBecomeFirstResponder {
-	get { return true; }
+    get { return true; }
 }
 
 public override UIKeyCommand[] KeyCommands {
-	get {
+    get {
 
-		var keyCommand = UIKeyCommand.Create (new NSString("n"), UIKeyModifierFlags.Command, new Selector ("NewEntry"), new NSString("New Entry"));
-		return new UIKeyCommand[]{ keyCommand };
-	}
+        var keyCommand = UIKeyCommand.Create (new NSString("n"), UIKeyModifierFlags.Command, new Selector ("NewEntry"), new NSString("New Entry"));
+        return new UIKeyCommand[]{ keyCommand };
+    }
 }
 
 [Export("NewEntry")]
 public void NewEntry() {
 
-	// Add a new entry
-	...
+    // Add a new entry
+    ...
 
 }
 #endregion

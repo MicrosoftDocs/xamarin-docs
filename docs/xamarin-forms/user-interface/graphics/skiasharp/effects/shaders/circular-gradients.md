@@ -144,8 +144,8 @@ You can use more than two colors in a radial gradient. The **Rainbow Arc Gradien
 ```csharp
 public class RainbowArcGradientPage : ContentPage
 {
-	public RainbowArcGradientPage ()
-	{
+    public RainbowArcGradientPage ()
+    {
         Title = "Rainbow Arc Gradient";
 
         SKCanvasView canvasView = new SKCanvasView();
@@ -222,7 +222,7 @@ public class RadialGradientMaskPage : ContentPage
     static readonly float RADIUS = 120;
 
     public RadialGradientMaskPage ()
-	{
+    {
         Title = "Radial Gradient Mask";
 
         SKCanvasView canvasView = new SKCanvasView();
