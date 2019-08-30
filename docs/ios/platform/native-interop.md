@@ -187,11 +187,11 @@ To do this, edit the `Main.CS` file and make it look like the following:
 ```csharp
 static void Main (string[] args)
 {
-	// Load Dylib
-	MonoTouch.ObjCRuntime.Dlfcn.dlopen ("/full/path/to/Animal.dylib", 0);
+    // Load Dylib
+    MonoTouch.ObjCRuntime.Dlfcn.dlopen ("/full/path/to/Animal.dylib", 0);
 
-	// Start application
-	UIApplication.Main (args, null, "AppDelegate");
+    // Start application
+    UIApplication.Main (args, null, "AppDelegate");
 }
 ```
 

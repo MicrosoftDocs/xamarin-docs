@@ -232,7 +232,7 @@ public class FillRectanglePage : ContentPage
         BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
                                             "SkiaSharpFormsDemos.Media.Banana.jpg");
     public FillRectanglePage ()
-	{
+    {
         Title = "Fill Rectangle";
 
         SKCanvasView canvasView = new SKCanvasView();

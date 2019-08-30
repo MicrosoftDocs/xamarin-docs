@@ -44,7 +44,7 @@ Once you have the SQLite.NET library available, follow these three steps to use 
     var db = new SQLiteConnection (dbPath);
     ```
 
-	The dbPath variable should be determined according the rules discussed earlier in this document.
+    The dbPath variable should be determined according the rules discussed earlier in this document.
 
 1. **Save Data** - Once you have created a SQLiteConnection object, database commands are executed by calling its methods, such as CreateTable and Insert like this:
 

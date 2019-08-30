@@ -169,9 +169,9 @@ Then implement the handlers in the activity, such as in `OnResume`:
 
 ```csharp
 service1UpdateHandler = (object s, UpdatingEventArgs args) => {
-	this.RunOnUiThread (() => {
-		this.updateStatusText1.Text = args.Message;
-	});
+    this.RunOnUiThread (() => {
+        this.updateStatusText1.Text = args.Message;
+    });
 };
 App.Current.Service1.Updated += service1UpdateHandler;
 ```

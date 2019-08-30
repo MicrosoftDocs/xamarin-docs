@@ -81,9 +81,9 @@ There might be times that you want to create a custom control that can become a 
 ```csharp
 public class myView : UIView
 {
-	public override bool CanBecomeFocused {
-		get {return true;}
-	}
+    public override bool CanBecomeFocused {
+        get {return true;}
+    }
 }
 ```
 
@@ -92,8 +92,8 @@ At any time you can use the `Focused` property of a `UIKit` control to see if it
 ```csharp
 // Is my view in focus?
 if (myView.Focused) {
-	// Do something
-	...
+    // Do something
+    ...
 }
 ```
 
@@ -147,17 +147,17 @@ public UIFocusGuide FocusGuide = new UIFocusGuide ();
 
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// Add Focus Guide to layout
-	View.AddLayoutGuide (FocusGuide);
+    // Add Focus Guide to layout
+    View.AddLayoutGuide (FocusGuide);
 
-	// Define Focus Guide that will allow the user to move
-	// between the More Info and Buy buttons.
-	FocusGuide.LeftAnchor.ConstraintEqualTo (BuyButton.LeftAnchor).Active = true;
-	FocusGuide.TopAnchor.ConstraintEqualTo (MoreInfoButton.TopAnchor).Active = true;
-	FocusGuide.WidthAnchor.ConstraintEqualTo (BuyButton.WidthAnchor).Active = true;
-	FocusGuide.HeightAnchor.ConstraintEqualTo (MoreInfoButton.HeightAnchor).Active = true;
+    // Define Focus Guide that will allow the user to move
+    // between the More Info and Buy buttons.
+    FocusGuide.LeftAnchor.ConstraintEqualTo (BuyButton.LeftAnchor).Active = true;
+    FocusGuide.TopAnchor.ConstraintEqualTo (MoreInfoButton.TopAnchor).Active = true;
+    FocusGuide.WidthAnchor.ConstraintEqualTo (BuyButton.WidthAnchor).Active = true;
+    FocusGuide.HeightAnchor.ConstraintEqualTo (MoreInfoButton.HeightAnchor).Active = true;
 }
 ```
 
@@ -178,26 +178,26 @@ With the new Focus Guide established and added to the View, the View Controller'
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
 {
-	base.DidUpdateFocus (context, coordinator);
+    base.DidUpdateFocus (context, coordinator);
 
-	// Get next focusable item from context
-	var nextFocusableItem = context.NextFocusedView;
+    // Get next focusable item from context
+    var nextFocusableItem = context.NextFocusedView;
 
-	// Anything to process?
-	if (nextFocusableItem == null) return;
+    // Anything to process?
+    if (nextFocusableItem == null) return;
 
-	// Decide the next focusable item based on the current
-	// item with focus
-	if (nextFocusableItem == MoreInfoButton) {
-		// Move from the More Info to Buy button
-		FocusGuide.PreferredFocusedView = BuyButton;
-	} else if (nextFocusableItem == BuyButton) {
-		// Move from the Buy to the More Info button
-		FocusGuide.PreferredFocusedView = MoreInfoButton;
-	} else {
-		// No valid move
-		FocusGuide.PreferredFocusedView = null;
-	}
+    // Decide the next focusable item based on the current
+    // item with focus
+    if (nextFocusableItem == MoreInfoButton) {
+        // Move from the More Info to Buy button
+        FocusGuide.PreferredFocusedView = BuyButton;
+    } else if (nextFocusableItem == BuyButton) {
+        // Move from the Buy to the More Info button
+        FocusGuide.PreferredFocusedView = MoreInfoButton;
+    } else {
+        // No valid move
+        FocusGuide.PreferredFocusedView = null;
+    }
 }
 ```
 
@@ -226,16 +226,16 @@ When deciding whether or not an individual item can be focusable in a `UICollect
 ```csharp
 public class CardHandDelegate : UICollectionViewDelegateFlowLayout
 {
-	...
-	public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath indexPath)
-	{
-		if (indexPath == null) {
-			return false;
-		} else {
-			var controller = collectionView as CardHandViewController;
-			return !controller.Hand [indexPath.Row].IsFaceDown;
-		}
-	}
+    ...
+    public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath indexPath)
+    {
+        if (indexPath == null) {
+            return false;
+        } else {
+            var controller = collectionView as CardHandViewController;
+            return !controller.Hand [indexPath.Row].IsFaceDown;
+        }
+    }
 }
 ```
 

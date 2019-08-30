@@ -49,10 +49,10 @@ Do the following:
 
 1. Right-click on the **Project Name** in the **Solution Explorer** and select **Properties**:
 
-	![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
+    ![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
 2. In the **Project Properties**, select **IOS Build**:
 
-	![](linker-images/linking02w.png "Select IOS Build")
+    ![](linker-images/linking02w.png "Select IOS Build")
 3. Follow the instructions below to change the linking options.
 
 -----

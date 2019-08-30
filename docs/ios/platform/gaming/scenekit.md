@@ -76,12 +76,12 @@ Adding a camera (SCNCamera) to the scene changes the point of view. The pattern 
 ```csharp
 // camera
 camera = new SCNCamera {
-	XFov = 80,
-	YFov = 80
+    XFov = 80,
+    YFov = 80
 };
 cameraNode = new SCNNode {
-	Camera = camera,
-	Position = new SCNVector3 (0, 0, 40)
+    Camera = camera,
+    Position = new SCNVector3 (0, 0, 40)
 };
 scene.RootNode.AddChildNode (cameraNode);
 ```

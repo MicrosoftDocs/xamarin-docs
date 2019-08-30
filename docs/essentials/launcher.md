@@ -44,7 +44,7 @@ public class LauncherTest
 {
     public async Task<bool> OpenRideShareAsync()
     {
-		return await Launcher.TryOpenAsync("lyft://ridetype?id=lyft_line");
+        return await Launcher.TryOpenAsync("lyft://ridetype?id=lyft_line");
     }
 }
 ```

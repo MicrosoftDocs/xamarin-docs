@@ -59,9 +59,9 @@ public partial class LightenAndDarkenPage : ContentPage
                 "SkiaSharpFormsDemos.Media.Banana.jpg");
 
     public LightenAndDarkenPage ()
-	{
-		InitializeComponent ();
-	}
+    {
+        InitializeComponent ();
+    }
 
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
     {
@@ -341,8 +341,8 @@ public class PrimaryColorsPage : ContentPage
 {
     bool isSubtractive;
 
-	public PrimaryColorsPage ()
-	{
+    public PrimaryColorsPage ()
+    {
         Title = "Primary Colors";
 
         SKCanvasView canvasView = new SKCanvasView();

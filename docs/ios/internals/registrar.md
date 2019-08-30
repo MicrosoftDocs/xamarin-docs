@@ -193,7 +193,7 @@ Below are some examples of the errors caught by the new registrar.
     class MyDemo : NSObject
     {
         [Export ("foo")]
-	    void Foo<T> () {}
+        void Foo<T> () {}
     }
     ```
 

@@ -276,8 +276,8 @@ public class PixelizedImagePage : ContentPage
 {
     SKBitmap pixelizedBitmap;
 
-	public PixelizedImagePage ()
-	{
+    public PixelizedImagePage ()
+    {
         Title = "Pixelize Image";
 
         SKBitmap originalBitmap = BitmapExtensions.LoadBitmapResource(GetType(),
@@ -437,10 +437,10 @@ public partial class BitmapRotatorPage : ContentPage
 
     SKBitmap rotatedBitmap = originalBitmap;
 
-	public BitmapRotatorPage ()
-	{
-		InitializeComponent ();
-	}
+    public BitmapRotatorPage ()
+    {
+    	InitializeComponent ();
+    }
 
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {

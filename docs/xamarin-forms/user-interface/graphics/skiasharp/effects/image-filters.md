@@ -83,8 +83,8 @@ public partial class ImageBlurExperimentPage : ContentPage
                             "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
 
     public ImageBlurExperimentPage ()
-	{
-		InitializeComponent ();
+    {
+        InitializeComponent ();
     }
 
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
@@ -227,10 +227,10 @@ public partial class DropShadowExperimentPage : ContentPage
 {
     const string TEXT = "Drop Shadow";
 
-	public DropShadowExperimentPage ()
-	{
-		InitializeComponent ();
-	}
+    public DropShadowExperimentPage ()
+    {
+        InitializeComponent ();
+    }
 
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
     {

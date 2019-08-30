@@ -41,7 +41,7 @@ In certain situations, the Xamarin installer might automatically un-check the in
     If the extensions are properly installed (for version 3.1.228), there will be 60 items in the folder:
 
 
-	![](missing-vs-extensions-images/folder.png "List of 'Xamarin\3.1.228.0' folder contents in Explorer")
+    ![](missing-vs-extensions-images/folder.png "List of 'Xamarin\3.1.228.0' folder contents in Explorer")
 
 2. After you have confirmed that this folder looks correct, tell Visual Studio to try setting up the extensions again:
 
