@@ -126,19 +126,19 @@ performance, especially if they run on every build. It is
 highly recommended that you read the MSBuild [documentation](https://docs.microsoft.com/visualstudio/msbuild/msbuild)
 before implementing such extensions.
 
--   **AfterGenerateAndroidManifest** &ndash; Targets listed in this
-    property will run directly after the internal `_GenerateJavaStubs`
-    target. This is where the `AndroidManifest.xml` file is generated
-    in the `$(IntermediateOutputPath)`. So if you want to make any
-    modifications to the generated `AndroidManifest.xml` file, you can
-    do that using this extension point.
+- **AfterGenerateAndroidManifest** &ndash; Targets listed in this
+  property will run directly after the internal `_GenerateJavaStubs`
+  target. This is where the `AndroidManifest.xml` file is generated
+  in the `$(IntermediateOutputPath)`. So if you want to make any
+  modifications to the generated `AndroidManifest.xml` file, you can
+  do that using this extension point.
 
-    Added in Xamarin.Android 9.4.
+  Added in Xamarin.Android 9.4.
 
--   **BeforeGenerateAndroidManifest** &ndash; Targets listed in this
-    property will run directly before `_GenerateJavaStubs`.
+- **BeforeGenerateAndroidManifest** &ndash; Targets listed in this
+  property will run directly before `_GenerateJavaStubs`.
 
-    Added in Xamarin.Android 9.4.
+  Added in Xamarin.Android 9.4.
 
 ## Build Properties
 
