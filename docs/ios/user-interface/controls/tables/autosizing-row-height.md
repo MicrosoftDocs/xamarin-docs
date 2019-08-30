@@ -64,21 +64,21 @@ In either our Table View's Datasource (`UITableViewDatasource`) or Source (`UITa
 
 ```csharp
 public string CellID {
-	get { return "GrowCell"; }
+    get { return "GrowCell"; }
 }
 ...
 
 public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
 {
-	var cell = tableView.DequeueReusableCell (CellID, indexPath) as GrowRowTableCell;
-	var item = Items [indexPath.Row];
+    var cell = tableView.DequeueReusableCell (CellID, indexPath) as GrowRowTableCell;
+    var item = Items [indexPath.Row];
 
-	// Setup
-	cell.Image = UIImage.FromFile(item.ImageName);
-	cell.Title = item.Title;
-	cell.Description = item.Description;
+    // Setup
+    cell.Image = UIImage.FromFile(item.ImageName);
+    cell.Title = item.Title;
+    cell.Description = item.Description;
 
-	return cell;
+    return cell;
 }
 ```
 
@@ -87,14 +87,14 @@ By default, the Table View will be set for Auto-Resizing Row Height. To ensure t
 ```csharp
 public override void ViewWillAppear (bool animated)
 {
-	base.ViewWillAppear (animated);
+    base.ViewWillAppear (animated);
 
-	// Initialize table
-	TableView.DataSource = new GrowRowTableDataSource(this);
-	TableView.Delegate = new GrowRowTableDelegate (this);
-	TableView.RowHeight = UITableView.AutomaticDimension;
-	TableView.EstimatedRowHeight = 40f;
-	TableView.ReloadData ();
+    // Initialize table
+    TableView.DataSource = new GrowRowTableDataSource(this);
+    TableView.Delegate = new GrowRowTableDelegate (this);
+    TableView.RowHeight = UITableView.AutomaticDimension;
+    TableView.EstimatedRowHeight = 40f;
+    TableView.ReloadData ();
 }
 ```
 

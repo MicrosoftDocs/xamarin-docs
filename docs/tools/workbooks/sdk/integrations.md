@@ -49,12 +49,12 @@ using Xamarin.Interactive;
 
 class AgentIntegration : IAgentIntegration
 {
-	const string TAG = nameof (AgentIntegration);
+    const string TAG = nameof (AgentIntegration);
 
-	public void IntegrateWith (IAgent agent)
-	{
-		// hook into IAgent APIs
-	}
+    public void IntegrateWith (IAgent agent)
+    {
+        // hook into IAgent APIs
+    }
 }
 ```
 

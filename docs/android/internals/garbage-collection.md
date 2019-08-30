@@ -457,16 +457,16 @@ Consider the following class:
 ```csharp
 class BadActivity : Activity {
 
-	private List<string> strings;
+    private List<string> strings;
 
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		strings.Value = new List<string> (
-				Enumerable.Range (0, 10000)
-				.Select(v => new string ('x', v % 1000)));
-	}
+        strings.Value = new List<string> (
+                Enumerable.Range (0, 10000)
+                .Select(v => new string ('x', v % 1000)));
+    }
 }
 ```
 
@@ -486,43 +486,43 @@ inherit from Java.Lang.Object:
 ```csharp
 class HiddenReference<T> {
 
-	static Dictionary<int, T> table = new Dictionary<int, T> ();
-	static int idgen = 0;
+    static Dictionary<int, T> table = new Dictionary<int, T> ();
+    static int idgen = 0;
 
-	int id;
+    int id;
 
-	public HiddenReference ()
-	{
-		lock (table) {
-			id = idgen ++;
-		}
-	}
+    public HiddenReference ()
+    {
+        lock (table) {
+            id = idgen ++;
+        }
+    }
 
-	~HiddenReference ()
-	{
-		lock (table) {
-			table.Remove (id);
-		}
-	}
+    ~HiddenReference ()
+    {
+        lock (table) {
+            table.Remove (id);
+        }
+    }
 
-	public T Value {
-		get { lock (table) { return table [id]; } }
-		set { lock (table) { table [id] = value; } }
-	}
+    public T Value {
+        get { lock (table) { return table [id]; } }
+        set { lock (table) { table [id] = value; } }
+    }
 }
 
 class BetterActivity : Activity {
 
-	HiddenReference<List<string>> strings = new HiddenReference<List<string>>();
+    HiddenReference<List<string>> strings = new HiddenReference<List<string>>();
 
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		strings.Value = new List<string> (
-				Enumerable.Range (0, 10000)
-				.Select(v => new string ('x', v % 1000)));
-	}
+        strings.Value = new List<string> (
+                Enumerable.Range (0, 10000)
+                .Select(v => new string ('x', v % 1000)));
+    }
 }
 ```
 

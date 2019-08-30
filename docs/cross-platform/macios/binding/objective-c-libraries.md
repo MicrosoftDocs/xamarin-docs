@@ -538,23 +538,23 @@ generate three supporting classes that vastly improve the way that you
 consume protocols:
 
 ```csharp
-    // Full method implementation, contains all methods
-	class MyProtocol : IMyProtocol {
-		public void Say (string msg);
-		public void Listen (string msg);
-	}
+// Full method implementation, contains all methods
+class MyProtocol : IMyProtocol {
+    public void Say (string msg);
+    public void Listen (string msg);
+}
 
-	// Interface that contains only the required methods
-	interface IMyProtocol: INativeObject, IDisposable {
-		[Export ("say:")]
-		void Say (string msg);
-	}
+// Interface that contains only the required methods
+interface IMyProtocol: INativeObject, IDisposable {
+    [Export ("say:")]
+    void Say (string msg);
+}
 
-	// Extension methods
-	static class IMyProtocol_Extensions {
-		public static void Optional (this IMyProtocol this, string msg);
-		}
-	}
+// Extension methods
+static class IMyProtocol_Extensions {
+    public static void Optional (this IMyProtocol this, string msg);
+    }
+}
 ```
 
 The **class implementation** provides a complete abstract class that
@@ -604,8 +604,8 @@ interface IMyProtocol {}
 
 [BaseType (typeof(NSObject))]
 interface MyTool {
-	[Export ("getProtocol")]
-	IMyProtocol GetProtocol ();
+    [Export ("getProtocol")]
+    IMyProtocol GetProtocol ();
 }
 ```
 
@@ -707,15 +707,15 @@ public void AppendWorkers(params Worker[] workers)
 ### Binding fields
 
 Sometimes you will want to access public fields that were declared in a
-	library.
+library.
 
 Usually these fields contain strings or integers values that must be
-	referenced. They are commonly used as string that represent a specific
-	notification and as keys in dictionaries.
+referenced. They are commonly used as string that represent a specific
+notification and as keys in dictionaries.
 
 To bind a field, add a property to your interface definition file, and
-	decorate the property with the [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) attribute. This attribute takes one parameter: the C name of the
-	symbol to lookup. For example:
+decorate the property with the [`[Field]`](~/cross-platform/macios/binding/binding-types-reference.md#FieldAttribute) attribute. This attribute takes one parameter: the C name of the
+symbol to lookup. For example:
 
 ```csharp
 [Field ("NSSomeEventNotification")]
@@ -789,8 +789,8 @@ Example:
 enum MyEnum {}
 
 interface MyType {
-	[Export ("initWithEnum:")]
-	IntPtr Constructor (MyEnum value);
+    [Export ("initWithEnum:")]
+    IntPtr Constructor (MyEnum value);
 }
 ```
 
@@ -803,23 +803,23 @@ Example:
 ```csharp
 enum NSRunLoopMode {
 
-	[DefaultEnumValue]
-	[Field ("NSDefaultRunLoopMode")]
-	Default,
+    [DefaultEnumValue]
+    [Field ("NSDefaultRunLoopMode")]
+    Default,
 
-	[Field ("NSRunLoopCommonModes")]
-	Common,
+    [Field ("NSRunLoopCommonModes")]
+    Common,
 
-	[Field (null)]
-	Other = 1000
+    [Field (null)]
+    Other = 1000
 }
 
 interface MyType {
-	[Export ("performForMode:")]
-	void Perform (NSString mode);
+    [Export ("performForMode:")]
+    void Perform (NSString mode);
 
-	[Wrap ("Perform (mode.GetConstant ())")]
-	void Perform (NSRunLoopMode mode);
+    [Wrap ("Perform (mode.GetConstant ())")]
+    void Perform (NSRunLoopMode mode);
 }
 ```
 
@@ -1041,8 +1041,8 @@ into C# extension methods:
 [BaseType (typeof (UIView))]
 [Category]
 interface MyUIViewExtension {
-	[Export ("makeBackgroundRed")]
-	void MakeBackgroundRed ();
+    [Export ("makeBackgroundRed")]
+    void MakeBackgroundRed ();
 }
 ```
 
@@ -1078,15 +1078,15 @@ interface SocialNetworking {
 [Category]
 [BaseType (typeof (SocialNetworking))]
 interface Twitter {
-	[Export ("postToTwitter:")]
-	void PostToTwitter (Message message);
+    [Export ("postToTwitter:")]
+    void PostToTwitter (Message message);
 }
 
 [Category]
 [BaseType (typeof (SocialNetworking))]
 interface Facebook {
-	[Export ("postToFacebook:andPicture:")]
-	void PostToFacebook (Message message, UIImage picture);
+    [Export ("postToFacebook:andPicture:")]
+    void PostToFacebook (Message message, UIImage picture);
 }
 ```
 
@@ -1095,11 +1095,11 @@ It is just shorter in these cases to merge the categories:
 ```csharp
 [BaseType (typeof (NSObject))]
 interface SocialNetworking {
-	[Export ("postToTwitter:")]
-	void PostToTwitter (Message message);
+    [Export ("postToTwitter:")]
+    void PostToTwitter (Message message);
 
-	[Export ("postToFacebook:andPicture:")]
-	void PostToFacebook (Message message, UIImage picture);
+    [Export ("postToFacebook:andPicture:")]
+    void PostToFacebook (Message message, UIImage picture);
 }
 ```
 
@@ -1187,7 +1187,7 @@ void LoadFile (string file, Action<string> completed);
 ```
 
 The above code will generate both the LoadFile method, as
-	well as:
+well as:
 
 ```csharp
 [Export ("loadfile:completed:")]

@@ -319,11 +319,11 @@ This functionality is achieved as follows:
 
 In addition, **Info.plist** must be updated to include the following values:
 
-```
+```xml
 <key>NSAppTransportSecurity</key>
 <dict>
-	<key>NSAllowsArbitraryLoads</key>
-	<true/>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
 </dict>
 ```
 

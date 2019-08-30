@@ -88,47 +88,47 @@ public int Rating { get; set;} = 0;
 
 partial void IncreaseRating (Foundation.NSObject sender) {
 
-	// Maximum of 5 "stars"
-	if (++Rating > 5 ) {
-		// Abort
-		Rating = 5;
-		return;
-	}
+    // Maximum of 5 "stars"
+    if (++Rating > 5 ) {
+        // Abort
+        Rating = 5;
+        return;
+    }
 
-	// Create new rating icon and add it to stack
-	var icon = new UIImageView (new UIImage("icon.png"));
-	icon.ContentMode = UIViewContentMode.ScaleAspectFit;
-	RatingView.AddArrangedSubview(icon);
+    // Create new rating icon and add it to stack
+    var icon = new UIImageView (new UIImage("icon.png"));
+    icon.ContentMode = UIViewContentMode.ScaleAspectFit;
+    RatingView.AddArrangedSubview(icon);
 
-	// Animate stack
-	UIView.Animate(0.25, ()=>{
-		// Adjust stack view
-		RatingView.LayoutIfNeeded();
-	});
+    // Animate stack
+    UIView.Animate(0.25, ()=>{
+        // Adjust stack view
+        RatingView.LayoutIfNeeded();
+    });
 
 }
 
 partial void DecreaseRating (Foundation.NSObject sender) {
 
-	// Minimum of zero "stars"
-	if (--Rating < 0) {
-		// Abort
-		Rating =0;
-		return;
-	}
+    // Minimum of zero "stars"
+    if (--Rating < 0) {
+        // Abort
+        Rating =0;
+        return;
+    }
 
-	// Get the last subview added
-	var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
+    // Get the last subview added
+    var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 
-	// Remove from stack and screen
-	RatingView.RemoveArrangedSubview(icon);
-	icon.RemoveFromSuperview();
+    // Remove from stack and screen
+    RatingView.RemoveArrangedSubview(icon);
+    icon.RemoveFromSuperview();
 
-	// Animate stack
-	UIView.Animate(0.25, ()=>{
-		// Adjust stack view
-		RatingView.LayoutIfNeeded();
-	});
+    // Animate stack
+    UIView.Animate(0.25, ()=>{
+        // Adjust stack view
+        RatingView.LayoutIfNeeded();
+    });
 }
 ```
 
@@ -259,8 +259,8 @@ Layout changes can be animated by placing them within an Animation Block, for ex
 ```csharp
 // Animate stack
 UIView.Animate(0.25, ()=>{
-	// Adjust stack view
-	RatingView.LayoutIfNeeded();
+    // Adjust stack view
+    RatingView.LayoutIfNeeded();
 });
 ```
 

@@ -89,8 +89,8 @@ an example of this:
 ```csharp
 public override bool OnTouchEvent(MotionEvent e)
 {
-	// This method is in an Activity
-	return _gestureDetector.OnTouchEvent(e);
+    // This method is in an Activity
+    return _gestureDetector.OnTouchEvent(e);
 }
 ```
 
@@ -170,8 +170,8 @@ in the following snippet:
 GestureLibrary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
 if (!myGestures.Load())
 {
-	// The library didn't load, so close the activity.
-	Finish();
+    // The library didn't load, so close the activity.
+    Finish();
 }
 ```
 
@@ -217,20 +217,20 @@ The following code shows an example of matching a gesture:
 ```csharp
 private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayView.GesturePerformedEventArgs gesturePerformedEventArgs)
 {
-	// In this example _gestureLibrary was instantiated in OnCreate
-	IEnumerable<Prediction> predictions = from p in _gestureLibrary.Recognize(gesturePerformedEventArgs.Gesture)
-	orderby p.Score descending
-	where p.Score > 1.0
-	select p;
-	Prediction prediction = predictions.FirstOrDefault();
+    // In this example _gestureLibrary was instantiated in OnCreate
+    IEnumerable<Prediction> predictions = from p in _gestureLibrary.Recognize(gesturePerformedEventArgs.Gesture)
+    orderby p.Score descending
+    where p.Score > 1.0
+    select p;
+    Prediction prediction = predictions.FirstOrDefault();
 
-	if (prediction == null)
-	{
-		Log.Debug(GetType().FullName, "Nothing matched the user's gesture.");
-		return;
-	}
+    if (prediction == null)
+    {
+        Log.Debug(GetType().FullName, "Nothing matched the user's gesture.");
+        return;
+    }
 
-	Toast.MakeText(this, prediction.Name, ToastLength.Short).Show();
+    Toast.MakeText(this, prediction.Name, ToastLength.Short).Show();
 }
 ```
 

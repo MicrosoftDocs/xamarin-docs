@@ -54,7 +54,7 @@ attribute on the activity, like this:
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
-		ConfigurationChanges = ConfigChanges.Locale | ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    ConfigurationChanges = ConfigChanges.Locale | ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 ```
 
 <a name="basics" />
@@ -119,12 +119,12 @@ an example of the default (English) strings file for the example:
 
 ```xml
 <resources>
-	<string name="app_name">TaskyL10n</string>
-	<string name="taskadd">Add Task</string>
-	<string name="taskname">Name</string>
-	<string name="tasknotes">Notes</string>
-	<string name="taskdone">Done</string>
-	<string name="taskcancel">Cancel</string>
+    <string name="app_name">TaskyL10n</string>
+    <string name="taskadd">Add Task</string>
+    <string name="taskname">Name</string>
+    <string name="tasknotes">Notes</string>
+    <string name="taskdone">Done</string>
+    <string name="taskcancel">Cancel</string>
 </resources>
 ```
 
@@ -136,12 +136,12 @@ name (**Strings.xml**) that contains the translations:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">TaskyLeon</string>
-	<string name="taskadd">agregar tarea</string>
-	<string name="taskname">Nombre</string>
-	<string name="tasknotes">Notas</string>
-	<string name="taskdone">Completo</string>
-	<string name="taskcancel">Cancelar</string>
+    <string name="app_name">TaskyLeon</string>
+    <string name="taskadd">agregar tarea</string>
+    <string name="taskname">Nombre</string>
+    <string name="tasknotes">Notas</string>
+    <string name="taskdone">Completo</string>
+    <string name="taskcancel">Cancelar</string>
 </resources>
 ```
 
@@ -158,13 +158,13 @@ resource IDs (some other attributes have been omitted):
 
 ```xml
 <TextView
-	android:id="@+id/NameLabel"
-	android:text="@string/taskname"
-	... />
+    android:id="@+id/NameLabel"
+    android:text="@string/taskname"
+    ... />
 <CheckBox
-	android:id="@+id/chkDone"
-	android:text="@string/taskdone"
-	... />
+    android:id="@+id/chkDone"
+    android:text="@string/taskdone"
+    ... />
 ```
 
 ### GetText Method
@@ -208,7 +208,7 @@ are required).
 
 ```csharp
 var translated = Resources.GetQuantityString (
-					Resource.Plurals.numberOfTasks, taskcount, taskcount);`
+                    Resource.Plurals.numberOfTasks, taskcount, taskcount);`
 ```
 
 Valid `quantity` switches are:
@@ -265,7 +265,7 @@ The application name is easy to localize by using a `@string/id` in for the
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
-	ConfigurationChanges =  ConfigChanges.Orientation | ConfigChanges.Locale)]
+    ConfigurationChanges =  ConfigChanges.Orientation | ConfigChanges.Locale)]
 ```
 
 ### Right-to-Left (RTL) Languages

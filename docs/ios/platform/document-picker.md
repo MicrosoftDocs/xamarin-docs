@@ -275,10 +275,10 @@ private void FindDocument () {
     // Create a new query and set it's scope
     Query = new NSMetadataQuery();
     Query.SearchScopes = new NSObject [] {
-				NSMetadataQuery.UbiquitousDocumentsScope,
-				NSMetadataQuery.UbiquitousDataScope,
-				NSMetadataQuery.AccessibleUbiquitousExternalDocumentsScope
-			};
+                NSMetadataQuery.UbiquitousDocumentsScope,
+                NSMetadataQuery.UbiquitousDataScope,
+                NSMetadataQuery.AccessibleUbiquitousExternalDocumentsScope
+            };
 
     // Build a predicate to locate the file by name and attach it to the query
     var pred = NSPredicate.FromFormat ("%K == %@"
@@ -289,8 +289,8 @@ private void FindDocument () {
 
     // Register a notification for when the query returns
     NSNotificationCenter.DefaultCenter.AddObserver (this,
-    		new Selector("queryDidFinishGathering:"), 			NSMetadataQuery.DidFinishGatheringNotification,
-    		Query);
+            new Selector("queryDidFinishGathering:"),             NSMetadataQuery.DidFinishGatheringNotification,
+            Query);
 
     // Start looking for the file
     Query.StartQuery ();
@@ -462,8 +462,8 @@ Do the following:
 5. Click the **OK** button to save the changes and close the dialog box.
 6. Right-click on `Entitlements.plist` in the **Solution Explorer** to open it in the editor.
 
-	> [!IMPORTANT]
-	> In Visual Studio you may need to open the Entitlements editor by right-clicking on it, selecting **Open With…** and selecting Property List Editor
+    > [!IMPORTANT]
+    > In Visual Studio you may need to open the Entitlements editor by right-clicking on it, selecting **Open With…** and selecting Property List Editor
 
 7. Check  **Enable iCloud** ,  **iCloud Documents** ,  **Key-value storage** and  **CloudKit** .
 8. Ensure the **Container** exists for the application (as created above). Example: `iCloud.com.your-company.AppName`
@@ -490,302 +490,302 @@ using System.IO;
 namespace DocPicker
 {
 
-	[Register ("AppDelegate")]
-	public partial class AppDelegate : UIApplicationDelegate
-	{
-		#region Static Properties
-		public const string TestFilename = "test.txt"; 
-		#endregion
+    [Register ("AppDelegate")]
+    public partial class AppDelegate : UIApplicationDelegate
+    {
+        #region Static Properties
+        public const string TestFilename = "test.txt"; 
+        #endregion
 
-		#region Computed Properties
-		public override UIWindow Window { get; set; }
-		public bool HasiCloud { get; set; }
-		public bool CheckingForiCloud { get; set; }
-		public NSUrl iCloudUrl { get; set; }
+        #region Computed Properties
+        public override UIWindow Window { get; set; }
+        public bool HasiCloud { get; set; }
+        public bool CheckingForiCloud { get; set; }
+        public NSUrl iCloudUrl { get; set; }
 
-		public GenericTextDocument Document { get; set; }
-		public NSMetadataQuery Query { get; set; }
-		public NSData Bookmark { get; set; }
-		#endregion
+        public GenericTextDocument Document { get; set; }
+        public NSMetadataQuery Query { get; set; }
+        public NSData Bookmark { get; set; }
+        #endregion
 
-		#region Private Methods
-		private void FindDocument () {
-			Console.WriteLine ("Finding Document...");
+        #region Private Methods
+        private void FindDocument () {
+            Console.WriteLine ("Finding Document...");
 
-			// Create a new query and set it's scope
-			Query = new NSMetadataQuery();
-			Query.SearchScopes = new NSObject [] {
-				NSMetadataQuery.UbiquitousDocumentsScope,
-				NSMetadataQuery.UbiquitousDataScope,
-				NSMetadataQuery.AccessibleUbiquitousExternalDocumentsScope
-			};
+            // Create a new query and set it's scope
+            Query = new NSMetadataQuery();
+            Query.SearchScopes = new NSObject [] {
+                NSMetadataQuery.UbiquitousDocumentsScope,
+                NSMetadataQuery.UbiquitousDataScope,
+                NSMetadataQuery.AccessibleUbiquitousExternalDocumentsScope
+            };
 
-			// Build a predicate to locate the file by name and attach it to the query
-			var pred = NSPredicate.FromFormat ("%K == %@",
-			 	new NSObject[] {NSMetadataQuery.ItemFSNameKey
-				, new NSString(TestFilename)});
-			Query.Predicate = pred;
+            // Build a predicate to locate the file by name and attach it to the query
+            var pred = NSPredicate.FromFormat ("%K == %@",
+                 new NSObject[] {NSMetadataQuery.ItemFSNameKey
+                , new NSString(TestFilename)});
+            Query.Predicate = pred;
 
-			// Register a notification for when the query returns
-			NSNotificationCenter.DefaultCenter.AddObserver (this
-				, new Selector("queryDidFinishGathering:")
-				, NSMetadataQuery.DidFinishGatheringNotification
-				, Query);
+            // Register a notification for when the query returns
+            NSNotificationCenter.DefaultCenter.AddObserver (this
+                , new Selector("queryDidFinishGathering:")
+                , NSMetadataQuery.DidFinishGatheringNotification
+                , Query);
 
-			// Start looking for the file
-			Query.StartQuery ();
-			Console.WriteLine ("Querying: {0}", Query.IsGathering);
-		}
+            // Start looking for the file
+            Query.StartQuery ();
+            Console.WriteLine ("Querying: {0}", Query.IsGathering);
+        }
 
 
-		[Export("queryDidFinishGathering:")]
-		public void DidFinishGathering (NSNotification notification) {
-			Console.WriteLine ("Finish Gathering Documents.");
+        [Export("queryDidFinishGathering:")]
+        public void DidFinishGathering (NSNotification notification) {
+            Console.WriteLine ("Finish Gathering Documents.");
 
-			// Access the query and stop it from running
-			var query = (NSMetadataQuery)notification.Object;
-			query.DisableUpdates();
-			query.StopQuery();
+            // Access the query and stop it from running
+            var query = (NSMetadataQuery)notification.Object;
+            query.DisableUpdates();
+            query.StopQuery();
 
-			// Release the notification
-			NSNotificationCenter.DefaultCenter.RemoveObserver (this
-				, NSMetadataQuery.DidFinishGatheringNotification
-				, query);
+            // Release the notification
+            NSNotificationCenter.DefaultCenter.RemoveObserver (this
+                , NSMetadataQuery.DidFinishGatheringNotification
+                , query);
 
-			// Load the document that the query returned
-			LoadDocument(query);
-		}
+            // Load the document that the query returned
+            LoadDocument(query);
+        }
 
-		private void LoadDocument (NSMetadataQuery query) {
-			Console.WriteLine ("Loading Document...");	
+        private void LoadDocument (NSMetadataQuery query) {
+            Console.WriteLine ("Loading Document...");    
 
-			// Take action based on the returned record count
-			switch (query.ResultCount) {
-			case 0:
-				// Create a new document
-				CreateNewDocument ();
-				break;
-			case 1:
-				// Gain access to the url and create a new document from
-				// that instance
-				NSMetadataItem item = (NSMetadataItem)query.ResultAtIndex (0);
-				var url = (NSUrl)item.ValueForAttribute (NSMetadataQuery.ItemURLKey);
+            // Take action based on the returned record count
+            switch (query.ResultCount) {
+            case 0:
+                // Create a new document
+                CreateNewDocument ();
+                break;
+            case 1:
+                // Gain access to the url and create a new document from
+                // that instance
+                NSMetadataItem item = (NSMetadataItem)query.ResultAtIndex (0);
+                var url = (NSUrl)item.ValueForAttribute (NSMetadataQuery.ItemURLKey);
 
-				// Load the document
-				OpenDocument (url);
-				break;
-			default:
-				// There has been an issue
-				Console.WriteLine ("Issue: More than one document found...");
-				break;
-			}
-		}
-		#endregion
+                // Load the document
+                OpenDocument (url);
+                break;
+            default:
+                // There has been an issue
+                Console.WriteLine ("Issue: More than one document found...");
+                break;
+            }
+        }
+        #endregion
 
-		#region Public Methods
+        #region Public Methods
 
-		public void OpenDocument(NSUrl url) {
+        public void OpenDocument(NSUrl url) {
 
-			Console.WriteLine ("Attempting to open: {0}", url);
-			Document = new GenericTextDocument (url);
+            Console.WriteLine ("Attempting to open: {0}", url);
+            Document = new GenericTextDocument (url);
 
-			// Open the document
-			Document.Open ( (success) => {
-				if (success) {
-					Console.WriteLine ("Document Opened");
-				} else
-					Console.WriteLine ("Failed to Open Document");
-			});
+            // Open the document
+            Document.Open ( (success) => {
+                if (success) {
+                    Console.WriteLine ("Document Opened");
+                } else
+                    Console.WriteLine ("Failed to Open Document");
+            });
 
-			// Inform caller
-			RaiseDocumentLoaded (Document);
-		}
+            // Inform caller
+            RaiseDocumentLoaded (Document);
+        }
 
-		public void CreateNewDocument() {
-			// Create path to new file
-			// var docsFolder = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
-			var docsFolder = Path.Combine(iCloudUrl.Path, "Documents");
-			var docPath = Path.Combine (docsFolder, TestFilename);
-			var ubiq = new NSUrl (docPath, false);
+        public void CreateNewDocument() {
+            // Create path to new file
+            // var docsFolder = Environment.GetFolderPath (Environment.SpecialFolder.Personal);
+            var docsFolder = Path.Combine(iCloudUrl.Path, "Documents");
+            var docPath = Path.Combine (docsFolder, TestFilename);
+            var ubiq = new NSUrl (docPath, false);
 
-			// Create new document at path 
-			Console.WriteLine ("Creating Document at:" + ubiq.AbsoluteString);
-			Document = new GenericTextDocument (ubiq);
+            // Create new document at path 
+            Console.WriteLine ("Creating Document at:" + ubiq.AbsoluteString);
+            Document = new GenericTextDocument (ubiq);
 
-			// Set the default value
-			Document.Contents = "(default value)";
+            // Set the default value
+            Document.Contents = "(default value)";
 
-			// Save document to path
-			Document.Save (Document.FileUrl, UIDocumentSaveOperation.ForCreating, (saveSuccess) => {
-				Console.WriteLine ("Save completion:" + saveSuccess);
-				if (saveSuccess) {
-					Console.WriteLine ("Document Saved");
-				} else {
-					Console.WriteLine ("Unable to Save Document");
-				}
-			});
+            // Save document to path
+            Document.Save (Document.FileUrl, UIDocumentSaveOperation.ForCreating, (saveSuccess) => {
+                Console.WriteLine ("Save completion:" + saveSuccess);
+                if (saveSuccess) {
+                    Console.WriteLine ("Document Saved");
+                } else {
+                    Console.WriteLine ("Unable to Save Document");
+                }
+            });
 
-			// Inform caller
-			RaiseDocumentLoaded (Document);
-		}
+            // Inform caller
+            RaiseDocumentLoaded (Document);
+        }
 
-		/// <summary>
-		/// Saves the document.
-		/// </summary>
-		/// <returns><c>true</c>, if document was saved, <c>false</c> otherwise.</returns>
-		public bool SaveDocument() {
-			bool successful = false;
+        /// <summary>
+        /// Saves the document.
+        /// </summary>
+        /// <returns><c>true</c>, if document was saved, <c>false</c> otherwise.</returns>
+        public bool SaveDocument() {
+            bool successful = false;
 
-			// Save document to path
-			Document.Save (Document.FileUrl, UIDocumentSaveOperation.ForOverwriting, (saveSuccess) => {
-				Console.WriteLine ("Save completion: " + saveSuccess);
-				if (saveSuccess) {
-					Console.WriteLine ("Document Saved");
-					successful = true;
-				} else {
-					Console.WriteLine ("Unable to Save Document");
-					successful=false;
-				}
-			});
+            // Save document to path
+            Document.Save (Document.FileUrl, UIDocumentSaveOperation.ForOverwriting, (saveSuccess) => {
+                Console.WriteLine ("Save completion: " + saveSuccess);
+                if (saveSuccess) {
+                    Console.WriteLine ("Document Saved");
+                    successful = true;
+                } else {
+                    Console.WriteLine ("Unable to Save Document");
+                    successful=false;
+                }
+            });
 
-			// Return results
-			return successful;
-		}
-		#endregion
+            // Return results
+            return successful;
+        }
+        #endregion
 
-		#region Override Methods
-		public override void FinishedLaunching (UIApplication application)
-		{
+        #region Override Methods
+        public override void FinishedLaunching (UIApplication application)
+        {
 
-			// Start a new thread to check and see if the user has iCloud
-			// enabled.
-			new Thread(new ThreadStart(() => {
-				// Inform caller that we are checking for iCloud
-				CheckingForiCloud = true;
+            // Start a new thread to check and see if the user has iCloud
+            // enabled.
+            new Thread(new ThreadStart(() => {
+                // Inform caller that we are checking for iCloud
+                CheckingForiCloud = true;
 
-				// Checks to see if the user of this device has iCloud
-				// enabled
-				var uburl = NSFileManager.DefaultManager.GetUrlForUbiquityContainer(null);
+                // Checks to see if the user of this device has iCloud
+                // enabled
+                var uburl = NSFileManager.DefaultManager.GetUrlForUbiquityContainer(null);
 
-				// Connected to iCloud?
-				if (uburl == null)
-				{
-					// No, inform caller
-					HasiCloud = false;
-					iCloudUrl =null;
-					Console.WriteLine("Unable to connect to iCloud");
-					InvokeOnMainThread(()=>{
-						var okAlertController = UIAlertController.Create ("iCloud Not Available", "Developer, please check your Entitlements.plist, Bundle ID and Provisioning Profiles.", UIAlertControllerStyle.Alert);
-						okAlertController.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
-						Window.RootViewController.PresentViewController (okAlertController, true, null);
-					});
-				}
-				else
-				{	
-					// Yes, inform caller and save location the Application Container
-					HasiCloud = true;
-					iCloudUrl = uburl;
-					Console.WriteLine("Connected to iCloud");
+                // Connected to iCloud?
+                if (uburl == null)
+                {
+                    // No, inform caller
+                    HasiCloud = false;
+                    iCloudUrl =null;
+                    Console.WriteLine("Unable to connect to iCloud");
+                    InvokeOnMainThread(()=>{
+                        var okAlertController = UIAlertController.Create ("iCloud Not Available", "Developer, please check your Entitlements.plist, Bundle ID and Provisioning Profiles.", UIAlertControllerStyle.Alert);
+                        okAlertController.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
+                        Window.RootViewController.PresentViewController (okAlertController, true, null);
+                    });
+                }
+                else
+                {    
+                    // Yes, inform caller and save location the Application Container
+                    HasiCloud = true;
+                    iCloudUrl = uburl;
+                    Console.WriteLine("Connected to iCloud");
 
-					// If we have made the connection with iCloud, start looking for documents
-					InvokeOnMainThread(()=>{
-						// Search for the default document
-						FindDocument ();
-					});
-				}
+                    // If we have made the connection with iCloud, start looking for documents
+                    InvokeOnMainThread(()=>{
+                        // Search for the default document
+                        FindDocument ();
+                    });
+                }
 
-				// Inform caller that we are no longer looking for iCloud
-				CheckingForiCloud = false;
+                // Inform caller that we are no longer looking for iCloud
+                CheckingForiCloud = false;
 
-			})).Start();
-				
-		}
-		
-		// This method is invoked when the application is about to move from active to inactive state.
-		// OpenGL applications should use this method to pause.
-		public override void OnResignActivation (UIApplication application)
-		{
-		}
-		
-		// This method should be used to release shared resources and it should store the application state.
-		// If your application supports background execution this method is called instead of WillTerminate
-		// when the user quits.
-		public override void DidEnterBackground (UIApplication application)
-		{
-			// Trap all errors
-			try {
-				// Values to include in the bookmark packet
-				var resources = new string[] {
-					NSUrl.FileSecurityKey,
-					NSUrl.ContentModificationDateKey,
-					NSUrl.FileResourceIdentifierKey,
-					NSUrl.FileResourceTypeKey,
-					NSUrl.LocalizedNameKey
-				};
+            })).Start();
+                
+        }
+        
+        // This method is invoked when the application is about to move from active to inactive state.
+        // OpenGL applications should use this method to pause.
+        public override void OnResignActivation (UIApplication application)
+        {
+        }
+        
+        // This method should be used to release shared resources and it should store the application state.
+        // If your application supports background execution this method is called instead of WillTerminate
+        // when the user quits.
+        public override void DidEnterBackground (UIApplication application)
+        {
+            // Trap all errors
+            try {
+                // Values to include in the bookmark packet
+                var resources = new string[] {
+                    NSUrl.FileSecurityKey,
+                    NSUrl.ContentModificationDateKey,
+                    NSUrl.FileResourceIdentifierKey,
+                    NSUrl.FileResourceTypeKey,
+                    NSUrl.LocalizedNameKey
+                };
 
-				// Create the bookmark
-				NSError err;
-				Bookmark = Document.FileUrl.CreateBookmarkData (NSUrlBookmarkCreationOptions.WithSecurityScope, resources, iCloudUrl, out err);
+                // Create the bookmark
+                NSError err;
+                Bookmark = Document.FileUrl.CreateBookmarkData (NSUrlBookmarkCreationOptions.WithSecurityScope, resources, iCloudUrl, out err);
 
-				// Was there an error?
-				if (err != null) {
-					// Yes, report it
-					Console.WriteLine ("Error Creating Bookmark: {0}", err.LocalizedDescription);
-				}
-			}
-			catch (Exception e) {
-				// Report error
-				Console.WriteLine ("Error: {0}", e.Message);
-			}
-		}
-		
-		// This method is called as part of the transition from background to active state.
-		public override void WillEnterForeground (UIApplication application)
-		{
-			// Is there any bookmark data?
-			if (Bookmark != null) {
-				// Trap all errors
-				try {
-					// Yes, attempt to restore it
-					bool isBookmarkStale;
-					NSError err;
-					var srcUrl = new NSUrl (Bookmark, NSUrlBookmarkResolutionOptions.WithSecurityScope, iCloudUrl, out isBookmarkStale, out err);
+                // Was there an error?
+                if (err != null) {
+                    // Yes, report it
+                    Console.WriteLine ("Error Creating Bookmark: {0}", err.LocalizedDescription);
+                }
+            }
+            catch (Exception e) {
+                // Report error
+                Console.WriteLine ("Error: {0}", e.Message);
+            }
+        }
+        
+        // This method is called as part of the transition from background to active state.
+        public override void WillEnterForeground (UIApplication application)
+        {
+            // Is there any bookmark data?
+            if (Bookmark != null) {
+                // Trap all errors
+                try {
+                    // Yes, attempt to restore it
+                    bool isBookmarkStale;
+                    NSError err;
+                    var srcUrl = new NSUrl (Bookmark, NSUrlBookmarkResolutionOptions.WithSecurityScope, iCloudUrl, out isBookmarkStale, out err);
 
-					// Was there an error?
-					if (err != null) {
-						// Yes, report it
-						Console.WriteLine ("Error Loading Bookmark: {0}", err.LocalizedDescription);
-					} else {
-						// Load document from bookmark
-						OpenDocument (srcUrl);
-					}
-				}
-				catch (Exception e) {
-					// Report error
-					Console.WriteLine ("Error: {0}", e.Message);
-				}
-			}
+                    // Was there an error?
+                    if (err != null) {
+                        // Yes, report it
+                        Console.WriteLine ("Error Loading Bookmark: {0}", err.LocalizedDescription);
+                    } else {
+                        // Load document from bookmark
+                        OpenDocument (srcUrl);
+                    }
+                }
+                catch (Exception e) {
+                    // Report error
+                    Console.WriteLine ("Error: {0}", e.Message);
+                }
+            }
 
-		}
-		
-		// This method is called when the application is about to terminate. Save data, if needed.
-		public override void WillTerminate (UIApplication application)
-		{
-		}
-		#endregion
+        }
+        
+        // This method is called when the application is about to terminate. Save data, if needed.
+        public override void WillTerminate (UIApplication application)
+        {
+        }
+        #endregion
 
-		#region Events
-		public delegate void DocumentLoadedDelegate(GenericTextDocument document);
-		public event DocumentLoadedDelegate DocumentLoaded;
+        #region Events
+        public delegate void DocumentLoadedDelegate(GenericTextDocument document);
+        public event DocumentLoadedDelegate DocumentLoaded;
 
-		internal void RaiseDocumentLoaded(GenericTextDocument document) {
-			// Inform caller
-			if (this.DocumentLoaded != null) {
-				this.DocumentLoaded (document);
-			}
-		}
-		#endregion
-	}
+        internal void RaiseDocumentLoaded(GenericTextDocument document) {
+            // Inform caller
+            if (this.DocumentLoaded != null) {
+                this.DocumentLoaded (document);
+            }
+        }
+        #endregion
+    }
 }
 
 ```
@@ -855,47 +855,47 @@ using MobileCoreServices;
 ...
 
 // Allow the Document picker to select a range of document types
-		var allowedUTIs = new string[] {
-			UTType.UTF8PlainText,
-			UTType.PlainText,
-			UTType.RTF,
-			UTType.PNG,
-			UTType.Text,
-			UTType.PDF,
-			UTType.Image
-		};
+        var allowedUTIs = new string[] {
+            UTType.UTF8PlainText,
+            UTType.PlainText,
+            UTType.RTF,
+            UTType.PNG,
+            UTType.Text,
+            UTType.PDF,
+            UTType.Image
+        };
 
-		// Display the picker
-		//var picker = new UIDocumentPickerViewController (allowedUTIs, UIDocumentPickerMode.Open);
-		var pickerMenu = new UIDocumentMenuViewController(allowedUTIs, UIDocumentPickerMode.Open);
-		pickerMenu.DidPickDocumentPicker += (sender, args) => {
+        // Display the picker
+        //var picker = new UIDocumentPickerViewController (allowedUTIs, UIDocumentPickerMode.Open);
+        var pickerMenu = new UIDocumentMenuViewController(allowedUTIs, UIDocumentPickerMode.Open);
+        pickerMenu.DidPickDocumentPicker += (sender, args) => {
 
-			// Wireup Document Picker
-			args.DocumentPicker.DidPickDocument += (sndr, pArgs) => {
+            // Wireup Document Picker
+            args.DocumentPicker.DidPickDocument += (sndr, pArgs) => {
 
-				// IMPORTANT! You must lock the security scope before you can
-				// access this file
-				var securityEnabled = pArgs.Url.StartAccessingSecurityScopedResource();
+                // IMPORTANT! You must lock the security scope before you can
+                // access this file
+                var securityEnabled = pArgs.Url.StartAccessingSecurityScopedResource();
 
-				// Open the document
-				ThisApp.OpenDocument(pArgs.Url);
+                // Open the document
+                ThisApp.OpenDocument(pArgs.Url);
 
-				// IMPORTANT! You must release the security lock established
-				// above.
-				pArgs.Url.StopAccessingSecurityScopedResource();
-			};
+                // IMPORTANT! You must release the security lock established
+                // above.
+                pArgs.Url.StopAccessingSecurityScopedResource();
+            };
 
-			// Display the document picker
-			PresentViewController(args.DocumentPicker,true,null);
-		};
+            // Display the document picker
+            PresentViewController(args.DocumentPicker,true,null);
+        };
 
 pickerMenu.ModalPresentationStyle = UIModalPresentationStyle.Popover;
 PresentViewController(pickerMenu,true,null);
 UIPopoverPresentationController presentationPopover = pickerMenu.PopoverPresentationController;
 if (presentationPopover!=null) {
-	presentationPopover.SourceView = this.View;
-	presentationPopover.PermittedArrowDirections = UIPopoverArrowDirection.Down;
-	presentationPopover.SourceRect = ((UIButton)s).Frame;
+    presentationPopover.SourceView = this.View;
+    presentationPopover.PermittedArrowDirections = UIPopoverArrowDirection.Down;
+    presentationPopover.SourceRect = ((UIButton)s).Frame;
 }
 ```
 
@@ -908,16 +908,16 @@ Here is an example of how the code above would display a Document Picker when ru
 
 1. The user starts the application and the main interface is displayed:   
  
-	[![](document-picker-images/image33.png "The main interface is displayed")](document-picker-images/image33.png#lightbox)
+    [![](document-picker-images/image33.png "The main interface is displayed")](document-picker-images/image33.png#lightbox)
 1. The user taps the **Action** Button at the top of the screen and is asked to select a **Document Provider** from the list of available providers:   
  
-	[![](document-picker-images/image34.png "Select a Document Provider from the list of available providers")](document-picker-images/image34.png#lightbox)
+    [![](document-picker-images/image34.png "Select a Document Provider from the list of available providers")](document-picker-images/image34.png#lightbox)
 1. The **Document Picker View Controller** is displayed for the selected **Document Provider**:   
  
-	[![](document-picker-images/image35.png "The Document Picker View Controller is displayed")](document-picker-images/image35.png#lightbox)
+    [![](document-picker-images/image35.png "The Document Picker View Controller is displayed")](document-picker-images/image35.png#lightbox)
 1. The user taps on a **Document Folder** to display its contents:   
  
-	[![](document-picker-images/image36.png "The Document Folder contents")](document-picker-images/image36.png#lightbox)
+    [![](document-picker-images/image36.png "The Document Folder contents")](document-picker-images/image36.png#lightbox)
 1. The user selects a **Document** and the **Document Picker** is closed.
 1. The main interface is redisplayed, the **Document** is loaded from the external Container and its contents displayed.
 
@@ -1019,10 +1019,10 @@ The Document Picker View Controller features two different modes of operation:
 
 1. **Open Mode** – In this mode, when the user selects and external Document, the Document Picker will create a Security Scoped Bookmark in the Application Container.   
  
-	[![](document-picker-images/image37.png "A Security Scoped Bookmark in the Application Container")](document-picker-images/image37.png#lightbox)
+    [![](document-picker-images/image37.png "A Security Scoped Bookmark in the Application Container")](document-picker-images/image37.png#lightbox)
 1. **Import Mode** – In this mode, when the user selects and external Document, the Document Picker will not create a Bookmark, but instead, copy the file into a Temporary Location and provide the application access to the Document at this location:   
  
-	[![](document-picker-images/image38.png "The Document Picker will copy the file into a Temporary Location and provide the application access to the Document at this location")](document-picker-images/image38.png#lightbox)   
+    [![](document-picker-images/image38.png "The Document Picker will copy the file into a Temporary Location and provide the application access to the Document at this location")](document-picker-images/image38.png#lightbox)   
  Once the application terminates for any reason, the Temporary Location is emptied and the file removed. If the application needs to maintain access to the file, it should make a copy and place it in its Application Container.
 
 
