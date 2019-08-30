@@ -51,9 +51,9 @@ To customize your build with MSbuild targets, first create a **Embeddinator-4000
 
 ```xml
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Target Name="RunEmbeddinator" AfterTargets="AfterBuild" Inputs="$(OutputPath)/$(AssemblyName).dll" Outputs="$(IntermediateOutputPath)/Embeddinator/$(AssemblyName).framework/$(AssemblyName)">
-		<Exec Command="" />
-	</Target>
+    <Target Name="RunEmbeddinator" AfterTargets="AfterBuild" Inputs="$(OutputPath)/$(AssemblyName).dll" Outputs="$(IntermediateOutputPath)/Embeddinator/$(AssemblyName).framework/$(AssemblyName)">
+        <Exec Command="" />
+    </Target>
 </Project>
 ```
 
@@ -104,3 +104,4 @@ We will essentially set up the same thing, but the menus in Visual Studio 2017 a
 Go to **Project Options > Build Events** and enter the command listed in the platform-specific documentation into the **Post-build event command line** box. For example:
 
 ![.NET Embedding on Windows](images/visualstudiowindows.png)
+ 

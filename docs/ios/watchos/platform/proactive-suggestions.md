@@ -305,29 +305,29 @@ using CoreLocation;
 
 namespace MonkeyChat
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
-	{
-		...
-		
-		public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
-		{
-			if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
-				var request = new MKDirectionsRequest (url);
-				var coordinate = request.Destination?.Placemark.Location?.Coordinate;
-				var address = request.Destination.Placemark.AddressDictionary;
-				if (coordinate.IsValid()) {
-					var geocoder = new CLGeocoder ();
-					geocoder.GeocodeAddress (address, (place, err) => {
-						// Handle the display of the address
+    [Register ("AppDelegate")]
+    public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
+    {
+        ...
 
-					});
-				}
-			}
+        public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
+        {
+            if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
+                var request = new MKDirectionsRequest (url);
+                var coordinate = request.Destination?.Placemark.Location?.Coordinate;
+                var address = request.Destination.Placemark.AddressDictionary;
+                if (coordinate.IsValid()) {
+                    var geocoder = new CLGeocoder ();
+                    geocoder.GeocodeAddress (address, (place, err) => {
+                        // Handle the display of the address
 
-			return true;
-		}
-	}		
+                    });
+                }
+            }
+
+            return true;
+        }
+    }
 }
 ```
 
@@ -348,8 +348,8 @@ New in watchOS 3, the app can be sent an address that does not have geo-coordina
 ```csharp
 var geocoder = new CLGeocoder();
 geocoder.GeocodeAddress(address, (place, err)=> {
-	// Handle the display of the address
-	
+    // Handle the display of the address
+
 });
 
 ```

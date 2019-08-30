@@ -211,41 +211,41 @@ As mentioned above, a single `Model` can be drawn multiple times. To make this e
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
-	GraphicsDevice.Clear(Color.CornflowerBlue);
-	DrawModel (new Vector3 (-4, 0, 0));
-	DrawModel (new Vector3 ( 0, 0, 0));
-	DrawModel (new Vector3 ( 4, 0, 0));
-	DrawModel (new Vector3 (-4, 0, 3));
-	DrawModel (new Vector3 ( 0, 0, 3));
-	DrawModel (new Vector3 ( 4, 0, 3));
-	base.Draw(gameTime);
+    GraphicsDevice.Clear(Color.CornflowerBlue);
+    DrawModel (new Vector3 (-4, 0, 0));
+    DrawModel (new Vector3 ( 0, 0, 0));
+    DrawModel (new Vector3 ( 4, 0, 0));
+    DrawModel (new Vector3 (-4, 0, 3));
+    DrawModel (new Vector3 ( 0, 0, 3));
+    DrawModel (new Vector3 ( 4, 0, 3));
+    base.Draw(gameTime);
 }
 void DrawModel(Vector3 modelPosition)
 {
-	foreach (var mesh in model.Meshes)
-	{
-		foreach (BasicEffect effect in mesh.Effects)
-		{
-			effect.EnableDefaultLighting ();
-			effect.PreferPerPixelLighting = true;
-			effect.World = Matrix.CreateTranslation (modelPosition);
-			var cameraPosition = new Vector3 (0, 10, 0);
-			var cameraLookAtVector = Vector3.Zero;
-			var cameraUpVector = Vector3.UnitZ;
-			effect.View = Matrix.CreateLookAt (
-				cameraPosition, cameraLookAtVector, cameraUpVector);
-			float aspectRatio = 
-				graphics.PreferredBackBufferWidth / (float)graphics.PreferredBackBufferHeight;
-			float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
-			float nearClipPlane = 1;
-			float farClipPlane = 200;
-			effect.Projection = Matrix.CreatePerspectiveFieldOfView(
-				fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
-		}
-		// Now that we've assigned our properties on the effects we can
-		// draw the entire mesh
-		mesh.Draw ();
-	}
+    foreach (var mesh in model.Meshes)
+    {
+        foreach (BasicEffect effect in mesh.Effects)
+        {
+            effect.EnableDefaultLighting ();
+            effect.PreferPerPixelLighting = true;
+            effect.World = Matrix.CreateTranslation (modelPosition);
+            var cameraPosition = new Vector3 (0, 10, 0);
+            var cameraLookAtVector = Vector3.Zero;
+            var cameraUpVector = Vector3.UnitZ;
+            effect.View = Matrix.CreateLookAt (
+                cameraPosition, cameraLookAtVector, cameraUpVector);
+            float aspectRatio = 
+                graphics.PreferredBackBufferWidth / (float)graphics.PreferredBackBufferHeight;
+            float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
+            float nearClipPlane = 1;
+            float farClipPlane = 200;
+            effect.Projection = Matrix.CreatePerspectiveFieldOfView(
+                fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
+        }
+        // Now that we've assigned our properties on the effects we can
+        // draw the entire mesh
+        mesh.Draw ();
+    }
 }
 ```
 

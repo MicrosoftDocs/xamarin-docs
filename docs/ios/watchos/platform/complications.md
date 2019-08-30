@@ -69,16 +69,16 @@ public class ComplicationController : CLKComplicationDataSource
 {
   public ComplicationController ()
   {
-	}
+  }
   public override void GetPlaceholderTemplate (CLKComplication complication, Action<CLKComplicationTemplate> handler)
-	{
-	}
+  {
+  }
   public override void GetCurrentTimelineEntry (CLKComplication complication, Action<CLKComplicationTimelineEntry> handler)
-	{
-	}
+  {
+  }
   public override void GetSupportedTimeTravelDirections (CLKComplication complication, Action<CLKComplicationTimeTravelDirections> handler)
-	{
-	}
+  {
+  }
 }
 ```
 
@@ -164,42 +164,42 @@ on a watch, it displays **MY COMPLICATION** and when *running* it displays the t
 [Register ("ComplicationController")]
 public class ComplicationController : CLKComplicationDataSource
 {
-	public ComplicationController ()
-	{
-	}
-	public ComplicationController (IntPtr p) : base (p)
-	{
-	}
-	public override void GetCurrentTimelineEntry (CLKComplication complication, Action<CLKComplicationTimelineEntry> handler)
-	{
-		CLKComplicationTimelineEntry entry = null;
+    public ComplicationController ()
+    {
+    }
+    public ComplicationController (IntPtr p) : base (p)
+    {
+    }
+    public override void GetCurrentTimelineEntry (CLKComplication complication, Action<CLKComplicationTimelineEntry> handler)
+    {
+        CLKComplicationTimelineEntry entry = null;
     var complicationDisplay = "MINUTE " + DateTime.Now.Minute.ToString(); // text to display on watch face
-		if (complication.Family == CLKComplicationFamily.UtilitarianLarge)
-		{
-			var textTemplate = new CLKComplicationTemplateUtilitarianLargeFlat();
-			textTemplate.TextProvider = CLKSimpleTextProvider.FromText(complicationDisplay); // dynamic display
-			entry = CLKComplicationTimelineEntry.Create(NSDate.Now, textTemplate);
-		} else {
-			Console.WriteLine("Complication family timeline not supported (" + complication.Family + ")");
-		}
-		handler (entry);
-	}
-	public override void GetPlaceholderTemplate (CLKComplication complication, Action<CLKComplicationTemplate> handler)
-	{
-		CLKComplicationTemplate template = null;
-		if (complication.Family == CLKComplicationFamily.UtilitarianLarge) {
-			var textTemplate = new CLKComplicationTemplateUtilitarianLargeFlat ();
-			textTemplate.TextProvider = CLKSimpleTextProvider.FromText ("MY COMPLICATION"); // static display
-			template = textTemplate;
-		} else {
-			Console.WriteLine ("Complication family placeholder not not supported (" + complication.Family + ")");
-		}
-		handler (template);
-	}
-	public override void GetSupportedTimeTravelDirections (CLKComplication complication, Action<CLKComplicationTimeTravelDirections> handler)
-	{
-		handler (CLKComplicationTimeTravelDirections.None);
-	}
+        if (complication.Family == CLKComplicationFamily.UtilitarianLarge)
+        {
+            var textTemplate = new CLKComplicationTemplateUtilitarianLargeFlat();
+            textTemplate.TextProvider = CLKSimpleTextProvider.FromText(complicationDisplay); // dynamic display
+            entry = CLKComplicationTimelineEntry.Create(NSDate.Now, textTemplate);
+        } else {
+            Console.WriteLine("Complication family timeline not supported (" + complication.Family + ")");
+        }
+        handler (entry);
+    }
+    public override void GetPlaceholderTemplate (CLKComplication complication, Action<CLKComplicationTemplate> handler)
+    {
+        CLKComplicationTemplate template = null;
+        if (complication.Family == CLKComplicationFamily.UtilitarianLarge) {
+            var textTemplate = new CLKComplicationTemplateUtilitarianLargeFlat ();
+            textTemplate.TextProvider = CLKSimpleTextProvider.FromText ("MY COMPLICATION"); // static display
+            template = textTemplate;
+        } else {
+            Console.WriteLine ("Complication family placeholder not not supported (" + complication.Family + ")");
+        }
+        handler (template);
+    }
+    public override void GetSupportedTimeTravelDirections (CLKComplication complication, Action<CLKComplicationTimeTravelDirections> handler)
+    {
+        handler (CLKComplicationTimeTravelDirections.None);
+    }
 }
 ```
 

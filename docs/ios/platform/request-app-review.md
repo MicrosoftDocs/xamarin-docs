@@ -32,22 +32,22 @@ using UIKit;
 
 namespace iOSTenThree
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate
-	{
-		...
+    [Register ("AppDelegate")]
+    public class AppDelegate : UIApplicationDelegate
+    {
+        ...
 
-		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
-		{
-			// Request a review from the user
-			SKStoreReviewController.RequestReview ();
+        public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
+        {
+            // Request a review from the user
+            SKStoreReviewController.RequestReview ();
 
-			return true;
-		}
-		
-		...
-		
-	}
+            return true;
+        }
+
+        ...
+
+    }
 }
 ```
 
