@@ -9,6 +9,6 @@ ms.author: amburns
 ms.date: 03/29/2017
 ---
 
-Note to editors: This content has been intentionally deleted and redirected. 
+Note to editors: This content has been intentionally deleted and redirected.
 This redirect should be centralized with other redirects and this file should
 be removed.
