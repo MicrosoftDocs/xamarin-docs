@@ -90,15 +90,15 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 
 - **Description**: Formally known as Passbook, wallet is an app that stores and manages passes. These passes may be credit cards, store cards, boarding passes, or tickets.
 
-    - **Pass Type Identifier**
-        - **Keys**: com.apple.developer.pass-type-identifiers
-        - **String**: `$(TeamIdentifierPrefix)*`
+  - **Pass Type Identifier**
+    - **Keys**: com.apple.developer.pass-type-identifiers
+    - **String**: `$(TeamIdentifierPrefix)*`
 
 - **Notes**:
-    - This will enable your app to allow all pass types. To restrict your app and only allow a subset of team pass types, set the string value to:
-        `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
+  - This will enable your app to allow all pass types. To restrict your app and only allow a subset of team pass types, set the string value to:
+      `$(TeamIdentifierPrefix)pass.$(CFBundleIdentifier)`
 
-    Where pass.$(CFBundleIdentifier) is the Pass ID that has been created [above](~/ios/platform/passkit.md)
+  Where pass.$(CFBundleIdentifier) is the Pass ID that has been created [above](~/ios/platform/passkit.md)
 
 <a name="icloud" />
 
@@ -106,17 +106,17 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 
 - **Description**: iCloud provides iOS users with a convenient and simple way to store their content and share it between devices. There are four ways developers can use iCloud to provide a means of storage for their users: Key-Value storage, UIDocument Storage, CoreData, and using CloudKit directly to provide storage for Individual files and directories. For more information on these, refer to the Introduction to iCloud guide.
 
-    - **iCloud Documents & CloudKit**
-        - **Keys**: com.apple.developer.ubiquity-container-identifiers
-        - **String**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
-    - **iCloud KeyValue Storage**
-        - **Key**: com.apple.developer.ubiquity-kvstore-identifier
-        - **String**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
+  - **iCloud Documents & CloudKit**
+    - **Keys**: com.apple.developer.ubiquity-container-identifiers
+    - **String**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
+  - **iCloud KeyValue Storage**
+    - **Key**: com.apple.developer.ubiquity-kvstore-identifier
+    - **String**: `$(TeamIdentifierPrefix)$(CFBundleIdentifier)`
 
 - **Notes**:
-    - The `$(TeamIdentifierPrefix)` string can be located by logging to developer.apple.com and visit the **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( A93A5CM278 for example).
-    - The `$(CFBundleIdentifier)` string begins with `iCloud` and is set when the iCloud container is crated as per the steps in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) guide.
-    - The $`(TeamIdentifierPrefix)` and `$(CFBundleIdentifier)` placeholders can be used and will be substituted for the correct values at build time.
+  - The `$(TeamIdentifierPrefix)` string can be located by logging to developer.apple.com and visit the **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( A93A5CM278 for example).
+  - The `$(CFBundleIdentifier)` string begins with `iCloud` and is set when the iCloud container is crated as per the steps in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) guide.
+  - The $`(TeamIdentifierPrefix)` and `$(CFBundleIdentifier)` placeholders can be used and will be substituted for the correct values at build time.
 
 > [!IMPORTANT]
 > Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/)
@@ -127,16 +127,16 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 
 - **Description**: An App Group allows different applications (or an application and its extensions) to access a shared file storage location.
 
-    - **Key**: com.apple.security.application-groups
-    - **String**: group.$(CFBundleIdentifier)
+  - **Key**: com.apple.security.application-groups
+  - **String**: group.$(CFBundleIdentifier)
 
 <a name="apple-pay" />
 
 ### Apple Pay
 
 - **Description**: Apple pay enables users to pay for physical goods via their iOS device.
-    - **Key**: com.apple.developer.in-app-payments
-    - **String**: merchant.your.mechantid
+  - **Key**: com.apple.developer.in-app-payments
+  - **String**: merchant.your.mechantid
 
 ### Push Notifications
 
@@ -146,7 +146,7 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 ### Siri
 
 - **Description**: SiriKit allows an iOS app to provide services that are accessible to Siri and the Maps app on an iOS device using App Extensions and the new Intents and Intents UI frameworks. For more information, refer to the Introduction to SiriKit guide.
-    - **Key**: com.apple.developer.siri
+  - **Key**: com.apple.developer.siri
 
 ### Personal VPN
 
@@ -156,51 +156,51 @@ Entitlement keys can be added via the Source panel of the Entitlements.plist edi
 ### Keychain Sharing
 
 - **Description**: Keychain sharing enables app developers to share passwords that are stored in the device keychain with other apps developed by the same team. Access can be restricted by passing a keychain access group identifier in the string.
-    - **Key**: keychain-access-groups
-    - **String**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
+  - **Key**: keychain-access-groups
+  - **String**: $(AppIdentifierPrefix) $(CFBundleIdentifier)
 
 ### Inter-App Audio
 
 - **Description**: Inter-App Audio enables developers to stream audio between apps.
-    - **Key**: inter-app-audio
-    - **Boolean**: YES
+  - **Key**: inter-app-audio
+  - **Boolean**: YES
 
 ### Associated Domains
 
 - **Description**: Associated domains that should be handled as universal links should be passed with this entitlement. Universal links can be implemented to allow deep linking between your app and website. You should provide an entry to each domain that your app supports and each entry should begin with `applinks:`
-    - **Key**: com.apple.developer.associated-domains
-    - **String**: webcredentials:example.com
+  - **Key**: com.apple.developer.associated-domains
+  - **String**: webcredentials:example.com
 
 ### Data Protection
 
 - **Description**: Enabling data protection uses built-in encryption hardware to store sensitive data used in your app in an encrypted format. By default, the level of protection is set to complete protection (files are only accessible when then device is unlocked).
-    - **Key**: com.apple.developer.default-data-protection
-    - **String**: NSFileProtectionComplete
+  - **Key**: com.apple.developer.default-data-protection
+  - **String**: NSFileProtectionComplete
 
 ### HomeKit
 
 - **Description**: The HomeKit framework provides a platform for setting up, configuring, and managing supported home automation devices – all from an iOS device. For more information on using HomeKit, refer to the Introduction to HomeKit guide.
-    - **Key**: com.apple.developer.homekit
-    - **Boolean**: YES
+  - **Key**: com.apple.developer.homekit
+  - **Boolean**: YES
 
 ### HealthKit
 
 - **Description**: HealthKit is a framework introduced in iOS 8 that provides a centralized, coordinated, and secure data store for health-related information. For more information on using HealthKit, refer to the Introduction to HealthKit guide.
-    - **Key**: com.apple.developer.healthkit
-    - **Boolean**: YES
+  - **Key**: com.apple.developer.healthkit
+  - **Boolean**: YES
 
 ### Wireless Accessory Configuration
 
 - **Description**: Using the Wireless Accessory Configuration allows your app to configure MFi Wi-Fi accessories
-    - **Key**: com.apple.external-accessory.wireless-configuration
-    - **Boolean**: YES
+  - **Key**: com.apple.external-accessory.wireless-configuration
+  - **Boolean**: YES
 
 ### ClassKit
 
 - **Description**: ClassKit enables teachers to view student progress on
 assigned activities in your app.
-    - **Key**: com.apple.developer.ClassKit-environment
-    - **String**: `development` or `production`
+  - **Key**: com.apple.developer.ClassKit-environment
+  - **String**: `development` or `production`
 
 ## Summary
 

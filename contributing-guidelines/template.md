@@ -182,8 +182,8 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 - This
 - bulleted
 - list
-    - Mrs. Peacock
-    - Mr. Green
+  - Mrs. Peacock
+  - Mr. Green
 - contains
 - other
     1. Colonel Mustard

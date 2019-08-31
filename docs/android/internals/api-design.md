@@ -40,23 +40,23 @@ These are some of our design principles for the Xamarin.Android binding
 
 - Expose a strongly typed API:
 
-    - Increase type-safety.
+  - Increase type-safety.
 
-    - Minimize runtime errors.
+  - Minimize runtime errors.
 
-    - Get IDE intellisense on return types.
+  - Get IDE intellisense on return types.
 
-    - Allows for IDE popup documentation.
+  - Allows for IDE popup documentation.
 
 - Encourage in-IDE exploration of the APIs:
 
-    - Utilize Framework Alternatives to Minimize Java Classlib exposure.
+  - Utilize Framework Alternatives to Minimize Java Classlib exposure.
 
-    - Expose C# delegates (lambdas, anonymous methods and System.Delegate)
-instead of single-method interfaces when appropriate and applicable.
+  - Expose C# delegates (lambdas, anonymous methods and System.Delegate)
+    instead of single-method interfaces when appropriate and applicable.
 
-    - Provide a mechanism to call arbitrary Java libraries (
-      [Android.Runtime.JNIEnv](xref:Android.Runtime.JNIEnv)).
+  - Provide a mechanism to call arbitrary Java libraries (
+    [Android.Runtime.JNIEnv](xref:Android.Runtime.JNIEnv)).
 
 
 ## Assemblies
@@ -83,20 +83,20 @@ provide lists, sets, and maps. We expose these elements using the
 interfaces in our binding. The fundamental mappings are:
 
 - [java.util.Set\<E>](https://developer.android.com/reference/java/util/Set.html) maps to
-    system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
-    helper class [Android.Runtime.JavaSet\<T>](xref:Android.Runtime.JavaSet`1).
+  system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
+  helper class [Android.Runtime.JavaSet\<T>](xref:Android.Runtime.JavaSet`1).
 
 - [java.util.List\<E>](https://developer.android.com/reference/java/util/List.html) maps to
-    system type [IList\<T>](xref:System.Collections.Generic.IList`1),
-    helper class [Android.Runtime.JavaList\<T>](xref:Android.Runtime.JavaList`1).
+  system type [IList\<T>](xref:System.Collections.Generic.IList`1),
+  helper class [Android.Runtime.JavaList\<T>](xref:Android.Runtime.JavaList`1).
 
 - [java.util.Map<K,V>](https://developer.android.com/reference/java/util/Map.html) maps to
-    system type [IDictionary<TKey,TValue>](xref:System.Collections.Generic.IDictionary`2),
-    helper class [Android.Runtime.JavaDictionary<K,V>](xref:Android.Runtime.JavaDictionary`2).
+  system type [IDictionary<TKey,TValue>](xref:System.Collections.Generic.IDictionary`2),
+  helper class [Android.Runtime.JavaDictionary<K,V>](xref:Android.Runtime.JavaDictionary`2).
 
 - [java.util.Collection\<E>](https://developer.android.com/reference/java/util/Collection.html) maps to
-    system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
-    helper class [Android.Runtime.JavaCollection\<T>](xref:Android.Runtime.JavaCollection`1).
+  system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
+  helper class [Android.Runtime.JavaCollection\<T>](xref:Android.Runtime.JavaCollection`1).
 
 We have provided helper classes to facilitate faster copyless
 marshaling of these types. When possible, we recommend using these
@@ -145,17 +145,17 @@ if (goodSource.Count != 4) // false
 Java methods are transformed into properties, when appropriate:
 
 - The Java method pair `T getFoo()` and `void setFoo(T)` are
-   transformed into the `Foo` property. Example:
-   [Activity.Intent](xref:Android.App.Activity.Intent).
+  transformed into the `Foo` property. Example:
+  [Activity.Intent](xref:Android.App.Activity.Intent).
 
 - The Java method `getFoo()` is transformed into the read-only Foo
-   property. Example:
-   [Context.PackageName](xref:Android.Content.Context.PackageName).
+  property. Example:
+  [Context.PackageName](xref:Android.Content.Context.PackageName).
 
 - Set-only properties are not generated.
 
 - Properties are *not* generated if the property type would be an
-   array.
+  array.
 
 
 
@@ -328,17 +328,17 @@ An example derivation of an inner class is CubeWallpaper.CubeEngine:
 
 ```csharp
 class CubeWallpaper : WallpaperService {
-        public override WallpaperService.Engine OnCreateEngine ()
-        {
-                return new CubeEngine (this);
-        }
+    public override WallpaperService.Engine OnCreateEngine ()
+    {
+        return new CubeEngine (this);
+    }
 
-        class CubeEngine : WallpaperService.Engine {
-                public CubeEngine (CubeWallpaper s)
-                        : base (s)
-                {
-                }
+    class CubeEngine : WallpaperService.Engine {
+        public CubeEngine (CubeWallpaper s)
+                : base (s)
+        {
         }
+    }
 }
 ```
 

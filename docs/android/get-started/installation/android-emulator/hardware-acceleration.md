@@ -46,10 +46,10 @@ automatically make use of hardware acceleration if the following
 criteria are met:
 
 - Hardware acceleration is available and enabled on your development
-    computer.
+  computer.
 
 - The emulator is running a system image created for
-    an **x86**-based virtual device.
+  an **x86**-based virtual device.
 
 > [!IMPORTANT]
 > You can't run a VM-accelerated emulator inside another VM, such as
@@ -76,26 +76,26 @@ to support the Windows Hypervisor Platform:
 
 - Your computer hardware must meet the following requirements:
 
-    - A 64-bit Intel or AMD Ryzen CPU with Second Level Address Translation (SLAT).
-    - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
-    - Minimum of 4-GB memory.
+  - A 64-bit Intel or AMD Ryzen CPU with Second Level Address Translation (SLAT).
+  - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
+  - Minimum of 4-GB memory.
 
 - In your computer's BIOS, the following items must be enabled:
 
-    - Virtualization Technology (may have a different label depending on motherboard manufacturer).
-    - Hardware Enforced Data Execution Prevention.
+  - Virtualization Technology (may have a different label depending on motherboard manufacturer).
+  - Hardware Enforced Data Execution Prevention.
 
 - Your computer must be updated to Windows 10 April 2018 update
-    (build 1803) or later. You can verify that your Windows version
-    is up-to-date by using the following steps:
+  (build 1803) or later. You can verify that your Windows version
+  is up-to-date by using the following steps:
 
-    1. Enter **About** in the Windows search box.
-    2. Select **About your PC** in the search results.
-    3. Scroll down in the **About** dialog to the **Windows specifications**
-       section.
-    4. Verify that the **Version** is at least 1803:
+  1. Enter **About** in the Windows search box.
+  2. Select **About your PC** in the search results.
+  3. Scroll down in the **About** dialog to the **Windows specifications**
+      section.
+  4. Verify that the **Version** is at least 1803:
 
-        [![Windows specifications](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
+      [![Windows specifications](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
 
 To verify that your computer hardware and software is compatible with
 Hyper-V, open a command prompt and type the following command:
@@ -231,10 +231,10 @@ Android emulator will automatically make use of hardware acceleration
 if the following criteria are met:
 
 - Hardware acceleration is available and enabled on the development
-    computer.
+  computer.
 
 - The emulator is running a system image created for
-    an **x86**-based virtual device.
+  an **x86**-based virtual device.
 
 > [!IMPORTANT]
 >

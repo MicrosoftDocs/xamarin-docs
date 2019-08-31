@@ -18,10 +18,10 @@ building iOS 12 apps with Xamarin.
 Check the following resources for known issues:
 
 - Release notes
-    - The [Xamarin Releases](http://releases.xamarin.com/) blog
-    - Xamarin's [Release Notes](https://docs.microsoft.com/xamarin/ios/release-notes/) archive
-    - Visual Studio for Mac ([stable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
-    - Visual Studio 2017 ([stable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
+  - The [Xamarin Releases](http://releases.xamarin.com/) blog
+  - Xamarin's [Release Notes](https://docs.microsoft.com/xamarin/ios/release-notes/) archive
+  - Visual Studio for Mac ([stable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
+  - Visual Studio 2017 ([stable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
 - [Developer Community](https://developercommunity.visualstudio.com/search.html)
 - [GitHub](https://github.com/xamarin/xamarin-macios/issues)
 - [Xamarin Bugzilla](https://bugzilla.xamarin.com/query.cgi?product=iOS)
