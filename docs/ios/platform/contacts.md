@@ -19,10 +19,10 @@ that replace the existing Address Book and Address Book UI frameworks used by iO
 The two new frameworks contain the following functionality:
 
 - [**Contacts**](#contacts) - Provides access to the user's contact list data.
-	Because most apps only require read-only access, this framework has been optimized for thread safe, read-only access.
+  Because most apps only require read-only access, this framework has been optimized for thread safe, read-only access.
 
 - [**ContactsUI**](#contactsui) - Provides Xamarin.iOS UI elements to display, edit, select
-	and create contacts on iOS devices.
+  and create contacts on iOS devices.
 
 [![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
 
@@ -76,19 +76,19 @@ contact.PhoneNumbers = new CNLabeledValue<CNPhoneNumber>[] { cellPhone, workPhon
 // Add work address
 var workAddress = new CNMutablePostalAddress()
 {
-	Street = "1 Infinite Loop",
-	City = "Cupertino",
-	State = "CA",
-	PostalCode = "95014"
+    Street = "1 Infinite Loop",
+    City = "Cupertino",
+    State = "CA",
+    PostalCode = "95014"
 };
 contact.PostalAddresses = new CNLabeledValue<CNPostalAddress>[] { new CNLabeledValue<CNPostalAddress>(CNLabelKey.Work, workAddress) };
 
 // Add birthday
 var birthday = new NSDateComponents()
 {
-	Day = 1,
-	Month = 4,
-	Year = 1984
+    Day = 1,
+    Month = 4,
+    Year = 1984
 };
 contact.Birthday = birthday;
 
@@ -101,11 +101,11 @@ saveRequest.AddContact(contact, store.DefaultContainerIdentifier);
 NSError error;
 if (store.ExecuteSaveRequest(saveRequest, out error))
 {
-	Console.WriteLine("New contact saved");
+    Console.WriteLine("New contact saved");
 }
 else
 {
-	Console.WriteLine("Save error: {0}", error);
+    Console.WriteLine("Save error: {0}", error);
 }
 ```
 
@@ -179,11 +179,11 @@ You can easily check to see if a given contact has the desired property by using
 ```csharp
 // Does the contact contain the requested key?
 if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
-	// No, re-request to pull required info
-	var fetchKeys = new NSString[] {CNContactKey.GivenName, CNContactKey.FamilyName, CNContactKey.PostalAddresses};
-	var store = new CNContactStore();
-	NSError error;
-	contact = store.GetUnifiedContact(contact.Identifier, fetchKeys, out error);
+    // No, re-request to pull required info
+    var fetchKeys = new NSString[] {CNContactKey.GivenName, CNContactKey.FamilyName, CNContactKey.PostalAddresses};
+    var store = new CNContactStore();
+    NSError error;
+    contact = store.GetUnifiedContact(contact.Identifier, fetchKeys, out error);
 }
 ```
 
@@ -217,9 +217,9 @@ saveRequest.AddContact(contact, store.DefaultContainerIdentifier);
 
 NSError error;
 if (store.ExecuteSaveRequest(saveRequest, out error)) {
-	Console.WriteLine("New contact saved");
+    Console.WriteLine("New contact saved");
 } else {
-	Console.WriteLine("Save error: {0}", error);
+    Console.WriteLine("Save error: {0}", error);
 }
 ```
 
@@ -245,9 +245,9 @@ saveRequest.UpdateContact(mutable);
 
 NSError error;
 if (store.ExecuteSaveRequest(saveRequest, out error)) {
-	Console.WriteLine("Contact updated.");
+    Console.WriteLine("Contact updated.");
 } else {
-	Console.WriteLine("Update error: {0}", error);
+    Console.WriteLine("Update error: {0}", error);
 }
 ```
 
@@ -291,36 +291,36 @@ using ContactsUI;
 
 namespace iOS9Contacts
 {
-	public class ContactPickerDelegate: CNContactPickerDelegate
-	{
-		#region Constructors
-		public ContactPickerDelegate ()
-		{
-		}
+    public class ContactPickerDelegate: CNContactPickerDelegate
+    {
+        #region Constructors
+        public ContactPickerDelegate ()
+        {
+        }
 
-		public ContactPickerDelegate (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        public ContactPickerDelegate (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ContactPickerDidCancel (CNContactPickerViewController picker)
-		{
-			Console.WriteLine ("User canceled picker");
+        #region Override Methods
+        public override void ContactPickerDidCancel (CNContactPickerViewController picker)
+        {
+            Console.WriteLine ("User canceled picker");
 
-		}
+        }
 
-		public override void DidSelectContact (CNContactPickerViewController picker, CNContact contact)
-		{
-			Console.WriteLine ("Selected: {0}", contact);
-		}
+        public override void DidSelectContact (CNContactPickerViewController picker, CNContact contact)
+        {
+            Console.WriteLine ("Selected: {0}", contact);
+        }
 
-		public override void DidSelectContactProperty (CNContactPickerViewController picker, CNContactProperty contactProperty)
-		{
-			Console.WriteLine ("Selected Property: {0}", contactProperty);
-		}
-		#endregion
-	}
+        public override void DidSelectContactProperty (CNContactPickerViewController picker, CNContactProperty contactProperty)
+        {
+            Console.WriteLine ("Selected Property: {0}", contactProperty);
+        }
+        #endregion
+    }
 }
 ```
 

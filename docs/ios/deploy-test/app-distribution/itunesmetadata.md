@@ -28,72 +28,72 @@ The following is an example of typical `iTunesMetadata.plist` file used to defin
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>UIRequiredDeviceCapabilities</key>
-	<dict>
-		<key>armv7</key>
-		<true/>
-		<key>front-facing-camera</key>
-		<true/>
-	</dict>
-	<key>artistName</key>
-	<string>Company, Inc.</string>
-	<key>bundleDisplayName</key>
-	<string>App Name</string>
-	<key>bundleShortVersionString</key>
-	<string>1.5.1</string>
-	<key>bundleVersion</key>
-	<string>1.5.1</string>
-	<key>copyright</key>
-	<string>© 2015 Company, Inc.</string>
-	<key>drmVersionNumber</key>
-	<integer>0</integer>
-	<key>fileExtension</key>
-	<string>.app</string>
-	<key>gameCenterEnabled</key>
-	<false/>
-	<key>gameCenterEverEnabled</key>
-	<false/>
-	<key>genre</key>
-	<string>Games</string>
-	<key>genreId</key>
-	<integer>6014</integer>
-	<key>itemName</key>
-	<string>App Name</string>
-	<key>kind</key>
-	<string>software</string>
-	<key>playlistArtistName</key>
-	<string>Company, Inc.</string>
-	<key>playlistName</key>
-	<string>App Name</string>
-	<key>releaseDate</key>
-	<string>2015-11-18T03:23:10Z</string>
-	<key>s</key>
-	<integer>143441</integer>
-	<key>softwareIconNeedsShine</key>
-	<false/>
-	<key>softwareSupportedDeviceIds</key>
-	<array>
-		<integer>9</integer>
-	</array>
-	<key>softwareVersionBundleId</key>
-	<string>com.company.appid</string>
-	<key>subgenres</key>
-	<array>
-		<dict>
-			<key>genre</key>
-			<string>Puzzle</string>
-			<key>genreId</key>
-			<integer>7012</integer>
-		</dict>
-		<dict>
-			<key>genre</key>
-			<string>Word</string>
-			<key>genreId</key>
-			<integer>7019</integer>
-		</dict>
-	</array>
-	<key>versionRestrictions</key>
-	<integer>16843008</integer>
+    <key>UIRequiredDeviceCapabilities</key>
+    <dict>
+        <key>armv7</key>
+        <true/>
+        <key>front-facing-camera</key>
+        <true/>
+    </dict>
+    <key>artistName</key>
+    <string>Company, Inc.</string>
+    <key>bundleDisplayName</key>
+    <string>App Name</string>
+    <key>bundleShortVersionString</key>
+    <string>1.5.1</string>
+    <key>bundleVersion</key>
+    <string>1.5.1</string>
+    <key>copyright</key>
+    <string>© 2015 Company, Inc.</string>
+    <key>drmVersionNumber</key>
+    <integer>0</integer>
+    <key>fileExtension</key>
+    <string>.app</string>
+    <key>gameCenterEnabled</key>
+    <false/>
+    <key>gameCenterEverEnabled</key>
+    <false/>
+    <key>genre</key>
+    <string>Games</string>
+    <key>genreId</key>
+    <integer>6014</integer>
+    <key>itemName</key>
+    <string>App Name</string>
+    <key>kind</key>
+    <string>software</string>
+    <key>playlistArtistName</key>
+    <string>Company, Inc.</string>
+    <key>playlistName</key>
+    <string>App Name</string>
+    <key>releaseDate</key>
+    <string>2015-11-18T03:23:10Z</string>
+    <key>s</key>
+    <integer>143441</integer>
+    <key>softwareIconNeedsShine</key>
+    <false/>
+    <key>softwareSupportedDeviceIds</key>
+    <array>
+        <integer>9</integer>
+    </array>
+    <key>softwareVersionBundleId</key>
+    <string>com.company.appid</string>
+    <key>subgenres</key>
+    <array>
+        <dict>
+            <key>genre</key>
+            <string>Puzzle</string>
+            <key>genreId</key>
+            <integer>7012</integer>
+        </dict>
+        <dict>
+            <key>genre</key>
+            <string>Word</string>
+            <key>genreId</key>
+            <integer>7019</integer>
+        </dict>
+    </array>
+    <key>versionRestrictions</key>
+    <integer>16843008</integer>
 </dict>
 </plist>
 
@@ -108,10 +108,10 @@ The `UIRequiredDeviceCapabilities` key lets iTunes know which device specific fe
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
 <dict>
-	<key>armv7</key>
-	<true/>
-	<key>front-facing-camera</key>
-	<true/>
+    <key>armv7</key>
+    <true/>
+    <key>front-facing-camera</key>
+    <true/>
 </dict>
 ```
 
@@ -218,18 +218,18 @@ Optionally the `subgenres` key can be used to further define up to two sub genre
 ```xml
 <key>subgenres</key>
 <array>
-	<dict>
-		<key>genre</key>
-		<string>Puzzle</string>
-		<key>genreId</key>
-		<integer>7012</integer>
-	</dict>
-	<dict>
-		<key>genre</key>
-		<string>Word</string>
-		<key>genreId</key>
-		<integer>7019</integer>
-	</dict>
+    <dict>
+        <key>genre</key>
+        <string>Puzzle</string>
+        <key>genreId</key>
+        <integer>7012</integer>
+    </dict>
+    <dict>
+        <key>genre</key>
+        <string>Word</string>
+        <key>genreId</key>
+        <integer>7019</integer>
+    </dict>
 </array>
 ```
 
@@ -246,7 +246,7 @@ Use the `softwareSupportedDeviceIds` key to tell iTunes what iOS devices this iO
 ```xml
 <key>softwareSupportedDeviceIds</key>
 <array>
-	<integer>9</integer>
+    <integer>9</integer>
 </array>
 ```
 
@@ -297,26 +297,26 @@ Do the following:
 1. In the **Solution Explorer**, right-click the Xamarin.iOS project file and select **Add** > **New File...**
 2. From the New File Dialog, select **iOS** > **Property List**:
 
-	![](itunesmetadata-images/image01.png "Select iOS Property List")
+    ![](itunesmetadata-images/image01.png "Select iOS Property List")
 3. Enter `iTunesMetadata` for the **Name** and click the **New** button.
 4. Double-click the `iTunesMetadata.plist` file in the **Solution Explorer** to open it for editing:
 
-	![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
+    ![](itunesmetadata-images/image02.png "The iTunesMetadata.plist editor")
 5. Click the green **+** to create a new entry and enter `UIRequiredDeviceCapabilities` as the key name:
 
-	![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
+    ![](itunesmetadata-images/image03.png "Create a new entry and enter UIRequiredDeviceCapabilities as the key name")
 6. Click on the **String** value type and select **Dictionary** from the popup list:
 
-	![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
+    ![](itunesmetadata-images/image04.png "Select Dictionary from the popup list")
 7. Click the turndown at the left of the Property's name to reveal the dictionary's entries:
 
-	![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
+    ![](itunesmetadata-images/image05.png "Reveal the dictionary entries")
 8. Click on the **Add new entry** text, then click the green **+** to add an entry to the dictionary:
 
-	![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
+    ![](itunesmetadata-images/image06.png "Add an entry to the dictionary")
 9. Enter `armv7` for the key name, select a type of **Boolean** and enter **Yes** as the value:
 
-	![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
+    ![](itunesmetadata-images/image07.png "Enter armv7 for the key name, select a type of Boolean and enter Yes as the value")
 10. Repeat the steps above until you have filled out the `iTunesMetadata.plist` file with all of the key/value pairs required (see the [The iTunesMetadata.plist Contents](#iTunesMetadata_contents) section above for more details).
 
 11. Save the changes to the plist file.

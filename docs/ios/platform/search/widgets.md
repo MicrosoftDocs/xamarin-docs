@@ -66,7 +66,7 @@ var vibrancy2 = UIVibrancyEffect.CreateSecondaryVibrancyEffectForNotificationCen
 
 New to iOS 10, widgets now contain a [NCWidgetDisplayMode](https://developer.apple.com/reference/notificationcenter/ncwidgetdisplaymode) property that allows the developer to describe how much content is available and allows the user to expand and collapse the content.
 
-When a Widget is initially shown, it is in a Collapsed state. A Collapsed Widget has a height of roughly two and a half standard iOS table rows. The developer can request the size for an Expanded Widget but it should ideally be less than the height of the screen. 
+When a Widget is initially shown, it is in a Collapsed state. A Collapsed Widget has a height of roughly two and a half standard iOS table rows. The developer can request the size for an Expanded Widget but it should ideally be less than the height of the screen.
 
 In the Collapsed state, the Widget should show only essential, stand-alone information. When Expanded, the Widget should show supplemental information that enhances the primary content shown in the Collapsed state. For example, the Weather app shows the current weather conditions when collapsed, and adds the hourly forecast when expanded.
 
@@ -83,61 +83,61 @@ using CoreGraphics;
 
 namespace MonkeyAbout
 {
-	public partial class TodayViewController : UIViewController, INCWidgetProviding
-	{
-		protected TodayViewController (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
+    public partial class TodayViewController : UIViewController, INCWidgetProviding
+    {
+        protected TodayViewController (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
 
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Tell widget it can be expanded
-			ExtensionContext.SetWidgetLargestAvailableDisplayMode (NCWidgetDisplayMode.Expanded);
+            // Tell widget it can be expanded
+            ExtensionContext.SetWidgetLargestAvailableDisplayMode (NCWidgetDisplayMode.Expanded);
 
-			// Get the maximum size
-			var maxSize = ExtensionContext.GetWidgetMaximumSize (NCWidgetDisplayMode.Expanded);
-		}
+            // Get the maximum size
+            var maxSize = ExtensionContext.GetWidgetMaximumSize (NCWidgetDisplayMode.Expanded);
+        }
 
-		[Export ("widgetPerformUpdateWithCompletionHandler:")]
-		public void WidgetPerformUpdate (Action<NCUpdateResult> completionHandler)
-		{
-			// Take action based on the display mode
-			switch (ExtensionContext.GetWidgetActiveDisplayMode()) {
-			case NCWidgetDisplayMode.Compact:
-				Content.Text = "Let's Monkey About!";
-				break;
-			case NCWidgetDisplayMode.Expanded:
-				Content.Text = "Gorilla!!!!";
-				break;
-			}
+        [Export ("widgetPerformUpdateWithCompletionHandler:")]
+        public void WidgetPerformUpdate (Action<NCUpdateResult> completionHandler)
+        {
+            // Take action based on the display mode
+            switch (ExtensionContext.GetWidgetActiveDisplayMode()) {
+            case NCWidgetDisplayMode.Compact:
+                Content.Text = "Let's Monkey About!";
+                break;
+            case NCWidgetDisplayMode.Expanded:
+                Content.Text = "Gorilla!!!!";
+                break;
+            }
 
-			// Report results
-			// If an error is encoutered, use NCUpdateResultFailed
-			// If there's no update required, use NCUpdateResultNoData
-			// If there's an update, use NCUpdateResultNewData
-			completionHandler (NCUpdateResult.NewData);
-		}
+            // Report results
+            // If an error is encoutered, use NCUpdateResultFailed
+            // If there's no update required, use NCUpdateResultNoData
+            // If there's an update, use NCUpdateResultNewData
+            completionHandler (NCUpdateResult.NewData);
+        }
 
-		[Export ("widgetActiveDisplayModeDidChange:withMaximumSize:")]
-		public void WidgetActiveDisplayModeDidChange (NCWidgetDisplayMode activeDisplayMode, CGSize maxSize)
-		{
-			// Take action based on the display mode
-			switch (activeDisplayMode) {
-			case NCWidgetDisplayMode.Compact:
-				PreferredContentSize = maxSize;
-				Content.Text = "Let's Monkey About!";
-				break;
-			case NCWidgetDisplayMode.Expanded:
-				PreferredContentSize = new CGSize (0, 200);
-				Content.Text = "Gorilla!!!!";
-				break;
-			}
-		}
+        [Export ("widgetActiveDisplayModeDidChange:withMaximumSize:")]
+        public void WidgetActiveDisplayModeDidChange (NCWidgetDisplayMode activeDisplayMode, CGSize maxSize)
+        {
+            // Take action based on the display mode
+            switch (activeDisplayMode) {
+            case NCWidgetDisplayMode.Compact:
+                PreferredContentSize = maxSize;
+                Content.Text = "Let's Monkey About!";
+                break;
+            case NCWidgetDisplayMode.Expanded:
+                PreferredContentSize = new CGSize (0, 200);
+                Content.Text = "Gorilla!!!!";
+                break;
+            }
+        }
 
-	}
+    }
 }
 ```
 
@@ -167,17 +167,17 @@ And to handle the state (Display Mode) changing, it uses:
 [Export ("widgetActiveDisplayModeDidChange:withMaximumSize:")]
 public void WidgetActiveDisplayModeDidChange (NCWidgetDisplayMode activeDisplayMode, CGSize maxSize)
 {
-	// Take action based on the display mode
-	switch (activeDisplayMode) {
-	case NCWidgetDisplayMode.Compact:
-		PreferredContentSize = maxSize;
-		Content.Text = "Let's Monkey About!";
-		break;
-	case NCWidgetDisplayMode.Expanded:
-		PreferredContentSize = new CGSize (0, 200);
-		Content.Text = "Gorilla!!!!";
-		break;
-	}
+    // Take action based on the display mode
+    switch (activeDisplayMode) {
+    case NCWidgetDisplayMode.Compact:
+        PreferredContentSize = maxSize;
+        Content.Text = "Let's Monkey About!";
+        break;
+    case NCWidgetDisplayMode.Expanded:
+        PreferredContentSize = new CGSize (0, 200);
+        Content.Text = "Gorilla!!!!";
+        break;
+    }
 }
 ```
 

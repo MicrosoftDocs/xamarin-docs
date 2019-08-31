@@ -249,7 +249,7 @@ when packaging Release applications.
     from [Android.App.Application](xref:Android.App.Application).
 
     This property is generally set by *other* properties, such as the
-    	`$(AndroidEnableMultiDex)` MSBuild property.
+    `$(AndroidEnableMultiDex)` MSBuild property.
 
     Added in Xamarin.Android 6.1.
 

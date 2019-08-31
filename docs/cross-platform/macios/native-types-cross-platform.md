@@ -65,32 +65,32 @@ using CoreGraphics;
 
 namespace NativeShared
 {
-	public class Transformations
-	{
-		#region Constructors
-		public Transformations ()
-		{
-		}
-		#endregion
+    public class Transformations
+    {
+        #region Constructors
+        public Transformations ()
+        {
+        }
+        #endregion
 
-		#region Public Methods
-		#if __UNIFIED__
-			public static nfloat CalculateArea(CGRect rect) {
+        #region Public Methods
+        #if __UNIFIED__
+            public static nfloat CalculateArea(CGRect rect) {
 
-				// Calculate area...
-				return (rect.Width * rect.Height);
+                // Calculate area...
+                return (rect.Width * rect.Height);
 
-			}
-		#else
-			public static float CalculateArea(RectangleF rect) {
+            }
+        #else
+            public static float CalculateArea(RectangleF rect) {
 
-				// Calculate area...
-				return (rect.Width * rect.Height);
+                // Calculate area...
+                return (rect.Width * rect.Height);
 
-			}
-		#endif
-		#endregion
-	}
+            }
+        #endif
+        #endregion
+    }
 }
 ```
 
@@ -110,33 +110,33 @@ using CoreGraphics;
 
 namespace NativeShared
 {
-	public class Transformations
-	{
-		#region Constructors
-		public Transformations ()
-		{
-		}
-		#endregion
+    public class Transformations
+    {
+        #region Constructors
+        public Transformations ()
+        {
+        }
+        #endregion
 
-		#region Public Methods
-		#if __UNIFIED__
-			public static nfloat CalculateArea(CGRect rect) {
+        #region Public Methods
+        #if __UNIFIED__
+            public static nfloat CalculateArea(CGRect rect) {
 
-				// Call original routine to calculate area
-				return (nfloat)CalculateArea((RectangleF)rect);
+                // Call original routine to calculate area
+                return (nfloat)CalculateArea((RectangleF)rect);
 
-			}
-		#endif
+            }
+        #endif
 
-		public static float CalculateArea(RectangleF rect) {
+        public static float CalculateArea(RectangleF rect) {
 
-			// Calculate area...
-			return (rect.Width * rect.Height);
+            // Calculate area...
+            return (rect.Width * rect.Height);
 
-		}
+        }
 
-		#endregion
-	}
+        #endregion
+    }
 }
 
 ```
@@ -149,15 +149,15 @@ For areas where the loss of precision is an issue, another possible solution is 
 
 ```csharp
 #if __UNIFIED__
-	// Mappings Unified CoreGraphic classes to MonoTouch classes
-	using RectangleF = global::CoreGraphics.CGRect;
-	using SizeF = global::CoreGraphics.CGSize;
-	using PointF = global::CoreGraphics.CGPoint;
+    // Mappings Unified CoreGraphic classes to MonoTouch classes
+    using RectangleF = global::CoreGraphics.CGRect;
+    using SizeF = global::CoreGraphics.CGSize;
+    using PointF = global::CoreGraphics.CGPoint;
 #else
-	// Mappings Unified types to MonoTouch types
-	using nfloat = global::System.Single;
-	using nint = global::System.Int32;
-	using nuint = global::System.UInt32;
+    // Mappings Unified types to MonoTouch types
+    using nfloat = global::System.Single;
+    using nint = global::System.Int32;
+    using nuint = global::System.UInt32;
 #endif
 ```
 
@@ -168,37 +168,37 @@ using System;
 using System.Drawing;
 
 #if __UNIFIED__
-	// Map Unified CoreGraphic classes to MonoTouch classes
-	using RectangleF = global::CoreGraphics.CGRect;
-	using SizeF = global::CoreGraphics.CGSize;
-	using PointF = global::CoreGraphics.CGPoint;
+    // Map Unified CoreGraphic classes to MonoTouch classes
+    using RectangleF = global::CoreGraphics.CGRect;
+    using SizeF = global::CoreGraphics.CGSize;
+    using PointF = global::CoreGraphics.CGPoint;
 #else
-	// Map Unified types to MonoTouch types
-	using nfloat = global::System.Single;
-	using nint = global::System.Int32;
-	using nuint = global::System.UInt32;
+    // Map Unified types to MonoTouch types
+    using nfloat = global::System.Single;
+    using nint = global::System.Int32;
+    using nuint = global::System.UInt32;
 #endif
 
 namespace NativeShared
 {
 
-	public class Transformations
-	{
-		#region Constructors
-		public Transformations ()
-		{
-		}
-		#endregion
+    public class Transformations
+    {
+        #region Constructors
+        public Transformations ()
+        {
+        }
+        #endregion
 
-		#region Public Methods
-		public static nfloat CalculateArea(RectangleF rect) {
+        #region Public Methods
+        public static nfloat CalculateArea(RectangleF rect) {
 
-			// Calculate area...
-			return (rect.Width * rect.Height);
+            // Calculate area...
+            return (rect.Width * rect.Height);
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }
 ```
 

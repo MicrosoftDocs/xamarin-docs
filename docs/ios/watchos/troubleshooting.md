@@ -135,7 +135,7 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 
     ![](troubleshooting-images/add-2.png "A button in the layout")
 
-4. Close the storyboard and return to Visual Studio for Mac. Create a new C# file **MyInterfaceController.cs** (or whatever name you like) in the **watch app extension** project (NOT the watch app itself where the storyboard is). Add the	following code (updating the namespace, classname,
+4. Close the storyboard and return to Visual Studio for Mac. Create a new C# file **MyInterfaceController.cs** (or whatever name you like) in the **watch app extension** project (NOT the watch app itself where the storyboard is). Add the following code (updating the namespace, classname,
     and the constructor name):
 
     ```csharp
@@ -268,7 +268,7 @@ in C#!
 
 > [!IMPORTANT]
 > You can start the Watch App in normal app mode by default, and also in
-> **Glance** or **Notification** modes using 
+> **Glance** or **Notification** modes using
 > [custom execution parameters](~/ios/watchos/get-started/installation.md#custommodes) in
 > Visual Studio for Mac and Visual Studio.
 

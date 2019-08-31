@@ -18,8 +18,8 @@ of anonymity by allowing access to applications with their iCloud IDs without sh
 Developers can focus on their client-side applications and let iCloud eliminate the need to write server-side application logic. CloudKit provides authentication, private and public databases, and structured data and asset storage services.
 
 > [!IMPORTANT]
-> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
-> to help developers properly handle the European Union's General Data 
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/)
+> to help developers properly handle the European Union's General Data
 > Protection Regulation (GDPR).
 
 ## Requirements
@@ -59,12 +59,12 @@ Before a Xamarin application can utilize the CloudKit Framework, the application
 
 1. Open the project in Visual Studio for Mac or Visual Studio.
 2. In the **Solution Explorer**, open the **Info.plist** file and ensure the **Bundle Identifier** matches the one that was defined in **App ID** created as part of the provisioning set up:
- 
-	[![](intro-to-cloudkit-images/image26a.png "Enter the Bundle Identifier")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
+
+    [![](intro-to-cloudkit-images/image26a.png "Enter the Bundle Identifier")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
 3. Scroll down to the bottom of the **Info.plist** file and select **Enabled Background Modes**, **Location Updates** and **Remote Notifications**:
 
- 	[![](intro-to-cloudkit-images/image27a.png "Select Enabled Background Modes, Location Updates and Remote Notifications")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
+    [![](intro-to-cloudkit-images/image27a.png "Select Enabled Background Modes, Location Updates and Remote Notifications")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
 4. Right-click the iOS project in the solution and select **Options**.
 5. Select **iOS Bundle Signing**, select the **Developer Identity** and **Provisioning Profile** created above.
 6. Ensure the  **Entitlements.plist** includes  **Enable iCloud** ,  **Key-value storage** and  **CloudKit** .
@@ -475,42 +475,42 @@ CloudKit supports the following types of `NSPredicates` when working with Querie
 
 
 1. Matching Records where the name is equal to a value stored in a variable:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("name = '{0}'", recordName))
     ```
-   
+
 2. Allows matching to be based on a dynamic key value, so that the key doesn't have to be know at compile time:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("{0} = '{1}'", key, value))
     ```
-    
+
 3. Matching Records where the Record's value is greater than the given value:
-   
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("start > {0}", (NSDate)date))
     ```
 
 4. Matching Records where Record's location is within 100 meters of the given location:
-    
+
+    ```csharp
+    var location = new CLLocation(37.783,-122.404);
+    var predicate = NSPredicate.FromFormat(string.Format("distanceToLocation:fromLocation(Location,{0}) < 100", location));
     ```
-	var location = new CLLocation(37.783,-122.404);
-	var predicate = NSPredicate.FromFormat(string.Format("distanceToLocation:fromLocation(Location,{0}) < 100", location));
-	```
 
 5. CloudKit supports a tokenized search. This call will create two tokens, one for `after` and another for `session`. It will return a Record that contains those two tokens:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("ALL tokenize({0}, 'Cdl') IN allTokens", "after session"))
     ```
-    
+
 6. CloudKit supports compound predicates joined using the `AND` operator.
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
     ```
-    
+
 
 
 #### Creating Queries
@@ -824,42 +824,42 @@ Before shipping an application that uses CloudKit, it will need to be configured
 
 Do the following:
 
-1. In Visual Studio for Ma, compile the application for **Release** > **iOS Device**: 
+1. In Visual Studio for Ma, compile the application for **Release** > **iOS Device**:
 
-	[![](intro-to-cloudkit-images/shipping01.png "Compile the application for Release")](intro-to-cloudkit-images/shipping01.png#lightbox)
+    [![](intro-to-cloudkit-images/shipping01.png "Compile the application for Release")](intro-to-cloudkit-images/shipping01.png#lightbox)
 
-2. From the **Build** menu, select **Archive**: 
+2. From the **Build** menu, select **Archive**:
 
-	[![](intro-to-cloudkit-images/shipping02.png "Select Archive")](intro-to-cloudkit-images/shipping02.png#lightbox)
+    [![](intro-to-cloudkit-images/shipping02.png "Select Archive")](intro-to-cloudkit-images/shipping02.png#lightbox)
 
-3. The **Archive** will be created and displayed in Visual Studio for Mac: 
+3. The **Archive** will be created and displayed in Visual Studio for Mac:
 
-	[![](intro-to-cloudkit-images/shipping03.png "The Archive will be created and displayed")](intro-to-cloudkit-images/shipping03.png#lightbox)
+    [![](intro-to-cloudkit-images/shipping03.png "The Archive will be created and displayed")](intro-to-cloudkit-images/shipping03.png#lightbox)
 
 4. Start **Xcode**.
-5. From the **Window** menu, select **Organizer**: 
+5. From the **Window** menu, select **Organizer**:
 
-	[![](intro-to-cloudkit-images/shipping04.png "Select Organizer")](intro-to-cloudkit-images/shipping04.png#lightbox)
+    [![](intro-to-cloudkit-images/shipping04.png "Select Organizer")](intro-to-cloudkit-images/shipping04.png#lightbox)
 
-6. Select the application's archive and click the **Export...** button: 
+6. Select the application's archive and click the **Export...** button:
 
-	[![](intro-to-cloudkit-images/shipping05.png "The application's archive")](intro-to-cloudkit-images/shipping05.png#lightbox)
-    
-7. Select a method for export and click the **Next** button: 
+    [![](intro-to-cloudkit-images/shipping05.png "The application's archive")](intro-to-cloudkit-images/shipping05.png#lightbox)
 
-	[![](intro-to-cloudkit-images/shipping06.png "Select a method for export")](intro-to-cloudkit-images/shipping06.png#lightbox)
+7. Select a method for export and click the **Next** button:
 
-8. Select the **Development Team** from the dropdown list and click the **Choose** button: 
+    [![](intro-to-cloudkit-images/shipping06.png "Select a method for export")](intro-to-cloudkit-images/shipping06.png#lightbox)
 
-	[![](intro-to-cloudkit-images/shipping07.png "Select the Development Team from the dropdown list")](intro-to-cloudkit-images/shipping07.png#lightbox)
+8. Select the **Development Team** from the dropdown list and click the **Choose** button:
 
-9. Select **Production** from the dropdown list and click the **Next** button: 
+    [![](intro-to-cloudkit-images/shipping07.png "Select the Development Team from the dropdown list")](intro-to-cloudkit-images/shipping07.png#lightbox)
 
-	[![](intro-to-cloudkit-images/shipping08.png "Select Production from the dropdown list")](intro-to-cloudkit-images/shipping08.png#lightbox)
+9. Select **Production** from the dropdown list and click the **Next** button:
 
-10. Review the setting and click the **Export** button: 
+    [![](intro-to-cloudkit-images/shipping08.png "Select Production from the dropdown list")](intro-to-cloudkit-images/shipping08.png#lightbox)
 
-	[![](intro-to-cloudkit-images/shipping09.png "Review the setting")](intro-to-cloudkit-images/shipping09.png#lightbox)
+10. Review the setting and click the **Export** button:
+
+    [![](intro-to-cloudkit-images/shipping09.png "Review the setting")](intro-to-cloudkit-images/shipping09.png#lightbox)
 
 11. Choose a location to generate the resulting application `.ipa` file.
 

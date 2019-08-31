@@ -31,7 +31,7 @@ View = map;
 
 `MKMapView` supports 3 different styles of maps. To apply a map style, simply set the `MapType` property to a value from the `MKMapType` enumeration:
 
-```
+```csharp
 map.MapType = MKMapType.Standard; //road map
 map.MapType = MKMapType.Satellite;
 map.MapType = MKMapType.Hybrid;
@@ -82,7 +82,7 @@ map.ShowsUserLocation = true;
 ```
 
  ![](images/02-location-alert.png "The allow location access alert")
- 
+
 ## Annotations
 
  `MKMapView` also supports displaying images, known as annotations, on a map. These can be either custom images or system-defined pins of various colors. For example, the following screenshot shows a map with a both a pin and a custom image:
@@ -104,8 +104,8 @@ To add an annotation, first the annotation is added by calling `AddAnnotations` 
 ```csharp
 // add an annotation
 map.AddAnnotations (new MKPointAnnotation (){
-	Title="MyAnnotation",
-	Coordinate = new CLLocationCoordinate2D (42.364260, -71.120824)
+    Title="MyAnnotation",
+    Coordinate = new CLLocationCoordinate2D (42.364260, -71.120824)
 });
 ```
 
@@ -119,7 +119,7 @@ string pId = "PinAnnotation";
 public override MKAnnotationView GetViewForAnnotation (MKMapView mapView, NSObject annotation)
 {
     if (annotation is MKUserLocation)
-	    return null;
+        return null;
 
     // create pin annotation view
     MKAnnotationView pinView = (MKPinAnnotationView)mapView.DequeueReusableAnnotation (pId);
@@ -166,7 +166,7 @@ To handle the user tapping the right accessory, simply implement the `CalloutAcc
 ```csharp
 public override void CalloutAccessoryControlTapped (MKMapView mapView, MKAnnotationView view, UIControl control)
 {
-	...
+    ...
 }
 ```
 
@@ -245,11 +245,11 @@ var searchResultsController = new SearchResultsViewController (map);
 //Creates a search controller updater
 var searchUpdater = new SearchResultsUpdator ();
 searchUpdater.UpdateSearchResults += searchResultsController.Search;
-			
+
 //add the search controller
 searchController = new UISearchController (searchResultsController) {
-				SearchResultsUpdater = searchUpdater
-			};
+                SearchResultsUpdater = searchUpdater
+            };
 
 //format the search bar
 searchController.SearchBar.SizeToFit ();
@@ -259,7 +259,7 @@ searchController.SearchBar.Placeholder = "Enter a search query";
 //the search bar is contained in the navigation bar, so it should be visible
 searchController.HidesNavigationBarDuringPresentation = false;
 
-//Ensure the searchResultsController is presented in the current View Controller 
+//Ensure the searchResultsController is presented in the current View Controller
 DefinesPresentationContext = true;
 
 //Set the search bar in the navigation bar
@@ -274,7 +274,7 @@ We will take a look at how to implement both the `searchResultsController` and t
 This results in a search bar displayed over the map as shown below:
 
  ![](images/07-searchbar.png "A search bar displayed over the map")
- 
+
 
 
 ### Displaying the Search Results
@@ -285,97 +285,97 @@ The following code is an example of how to create this custom View Controller:
 ```csharp
 public class SearchResultsViewController : UITableViewController
 {
-	static readonly string mapItemCellId = "mapItemCellId";
-	MKMapView map;
+    static readonly string mapItemCellId = "mapItemCellId";
+    MKMapView map;
 
-	public List<MKMapItem> MapItems { get; set; }
+    public List<MKMapItem> MapItems { get; set; }
 
-	public SearchResultsViewController (MKMapView map)
-	{
-		this.map = map;
+    public SearchResultsViewController (MKMapView map)
+    {
+        this.map = map;
 
-		MapItems = new List<MKMapItem> ();
-	}
+        MapItems = new List<MKMapItem> ();
+    }
 
-	public override nint RowsInSection (UITableView tableView, nint section)
-	{
-		return MapItems.Count;
-	}
+    public override nint RowsInSection (UITableView tableView, nint section)
+    {
+        return MapItems.Count;
+    }
 
-	public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
-	{
-		var cell = tableView.DequeueReusableCell (mapItemCellId);
+    public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+    {
+        var cell = tableView.DequeueReusableCell (mapItemCellId);
 
-		if (cell == null)
-			cell = new UITableViewCell ();
+        if (cell == null)
+            cell = new UITableViewCell ();
 
-		cell.TextLabel.Text = MapItems [indexPath.Row].Name;
-		return cell;
-	}
+        cell.TextLabel.Text = MapItems [indexPath.Row].Name;
+        return cell;
+    }
 
-	public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
-	{
-		// add item to map
-		CLLocationCoordinate2D coord = MapItems [indexPath.Row].Placemark.Location.Coordinate;
-		map.AddAnnotations (new MKPointAnnotation () {
-			Title = MapItems [indexPath.Row].Name,
-			Coordinate = coord
-		});
+    public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
+    {
+        // add item to map
+        CLLocationCoordinate2D coord = MapItems [indexPath.Row].Placemark.Location.Coordinate;
+        map.AddAnnotations (new MKPointAnnotation () {
+            Title = MapItems [indexPath.Row].Name,
+            Coordinate = coord
+        });
 
-		map.SetCenterCoordinate (coord, true);
+        map.SetCenterCoordinate (coord, true);
 
-		DismissViewController (false, null);
-	}
+        DismissViewController (false, null);
+    }
 
-	public void Search (string forSearchString)
-	{
-		// create search request
-		var searchRequest = new MKLocalSearchRequest ();
-		searchRequest.NaturalLanguageQuery = forSearchString;
-		searchRequest.Region = new MKCoordinateRegion (map.UserLocation.Coordinate, new MKCoordinateSpan (0.25, 0.25));
+    public void Search (string forSearchString)
+    {
+        // create search request
+        var searchRequest = new MKLocalSearchRequest ();
+        searchRequest.NaturalLanguageQuery = forSearchString;
+        searchRequest.Region = new MKCoordinateRegion (map.UserLocation.Coordinate, new MKCoordinateSpan (0.25, 0.25));
 
-		// perform search
-		var localSearch = new MKLocalSearch (searchRequest);
+        // perform search
+        var localSearch = new MKLocalSearch (searchRequest);
 
-		localSearch.Start (delegate (MKLocalSearchResponse response, NSError error) {
-			if (response != null && error == null) {
-				this.MapItems = response.MapItems.ToList ();
-				this.TableView.ReloadData ();
-			} else {
-				Console.WriteLine ("local search error: {0}", error);
-			}
-		});
+        localSearch.Start (delegate (MKLocalSearchResponse response, NSError error) {
+            if (response != null && error == null) {
+                this.MapItems = response.MapItems.ToList ();
+                this.TableView.ReloadData ();
+            } else {
+                Console.WriteLine ("local search error: {0}", error);
+            }
+        });
 
 
-	}
+    }
 }
 ```
 
 ### Updating the Search Results
 
-The `SearchResultsUpdater` acts as a mediator between the `searchController`'s search bar and search results. 
+The `SearchResultsUpdater` acts as a mediator between the `searchController`'s search bar and search results.
 
 In this example we have to first create the search method in the `SearchResultsViewController`. To do this we must create an `MKLocalSearch` object and use it to issue a search for an `MKLocalSearchRequest`, the results are retrieved in a callback passed to the `Start` method of the `MKLocalSearch` object. The results are then returned in an `MKLocalSearchResponse` object containing an array of `MKMapItem` objects:
 
 ```csharp
 public void Search (string forSearchString)
 {
-	// create search request
-	var searchRequest = new MKLocalSearchRequest ();
-	searchRequest.NaturalLanguageQuery = forSearchString;
-	searchRequest.Region = new MKCoordinateRegion (map.UserLocation.Coordinate, new MKCoordinateSpan (0.25, 0.25));
+    // create search request
+    var searchRequest = new MKLocalSearchRequest ();
+    searchRequest.NaturalLanguageQuery = forSearchString;
+    searchRequest.Region = new MKCoordinateRegion (map.UserLocation.Coordinate, new MKCoordinateSpan (0.25, 0.25));
 
-	// perform search
-	var localSearch = new MKLocalSearch (searchRequest);
+    // perform search
+    var localSearch = new MKLocalSearch (searchRequest);
 
-	localSearch.Start (delegate (MKLocalSearchResponse response, NSError error) {
-		if (response != null && error == null) {
-			this.MapItems = response.MapItems.ToList ();
-			this.TableView.ReloadData ();
-		} else {
-			Console.WriteLine ("local search error: {0}", error);
-		}
-	});
+    localSearch.Start (delegate (MKLocalSearchResponse response, NSError error) {
+        if (response != null && error == null) {
+            this.MapItems = response.MapItems.ToList ();
+            this.TableView.ReloadData ();
+        } else {
+            Console.WriteLine ("local search error: {0}", error);
+        }
+    });
 
 
 }
@@ -386,19 +386,19 @@ Then, in our `MapViewController` we'll create a custom implementation of `UISear
 ```csharp
 public class SearchResultsUpdator : UISearchResultsUpdating
 {
-	public event Action<string> UpdateSearchResults = delegate {};
+    public event Action<string> UpdateSearchResults = delegate {};
 
-	public override void UpdateSearchResultsForSearchController (UISearchController searchController)
-	{
-		this.UpdateSearchResults (searchController.SearchBar.Text);
-	}
+    public override void UpdateSearchResultsForSearchController (UISearchController searchController)
+    {
+        this.UpdateSearchResults (searchController.SearchBar.Text);
+    }
 }
 ```
 
 The implementation above adds an annotation to the map when an item is selected from the results, as shown below:
 
  ![](images/08-search-results.png "An annotation added to the map when an item is selected from the results")
- 
+
 > [!IMPORTANT]
 > `UISearchController` was implemented in iOS 8. If you wish to support devices earlier than this, then you will need to use `UISearchDisplayController`.
 
