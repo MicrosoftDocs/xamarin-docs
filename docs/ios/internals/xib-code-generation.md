@@ -12,9 +12,9 @@ ms.date: 03/21/2017
 # .xib Code Generation in Xamarin.iOS
 
 > [!IMPORTANT]
->  This document explains Visual Studio for Mac's integration with Xcode's Interface Builder only,
-as Actions and Outlets are not used in the Xamarin Designer for iOS. For more information on the iOS Designer,
-please review the [iOS Designer](~/ios/user-interface/designer/index.md) document.
+> This document explains Visual Studio for Mac's integration with Xcode's Interface Builder only,
+> as Actions and Outlets are not used in the Xamarin Designer for iOS. For more information on the iOS Designer,
+> please review the [iOS Designer](~/ios/user-interface/designer/index.md) document.
 
 The Apple Interface Builder tool ("IB") can be used to design user
 interfaces visually. The interface definitions created by IB are saved in **.xib** files. Widgets and other objects in **.xib** files may be given a "class identity",

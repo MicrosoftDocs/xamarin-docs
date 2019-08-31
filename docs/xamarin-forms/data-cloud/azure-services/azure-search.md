@@ -55,7 +55,7 @@ var searchClient =
 The `SearchServiceClient` constructor overload takes a search service name and a `SearchCredentials` object as arguments, with the `SearchCredentials` object wrapping the *admin key* for the Azure Search service. The *admin key* is required to create an index.
 
 > [!NOTE]
->  A single `SearchServiceClient` instance should be used in an application to avoid opening too many connections to Azure Search.
+> A single `SearchServiceClient` instance should be used in an application to avoid opening too many connections to Azure Search.
 
 An index is defined by the `Index` object, as demonstrated in the following code example:
 

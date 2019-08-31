@@ -139,8 +139,8 @@ InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
 
 > [!NOTE]
 > These APIs give you a quick way to get up and running, but we would not
-  recommend shipping an entire integration only using them&mdash;they provide very
-  little control over how your types are processed by the client.
+> recommend shipping an entire integration only using them&mdash;they provide very
+> little control over how your types are processed by the client.
 
 With the representation registered, your integration is ready to ship!
 
