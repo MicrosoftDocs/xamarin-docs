@@ -84,8 +84,8 @@ There are four major steps that the developer must take to adopt speech recognit
 - Provide a usage description in the app's `Info.plist` file using the `NSSpeechRecognitionUsageDescription` key. For example, a camera app might include the following description, _"This allows you to take a photo just by saying the word 'cheese'."_
 - Request authorization by calling the `SFSpeechRecognizer.RequestAuthorization` method to present an explanation (provided in the `NSSpeechRecognitionUsageDescription` key above) of why the app wants speech recognition access to the user in a dialog box and allow them to accept or decline.
 - Create a Speech Recognition Request:
-    - For pre-recorded audio on disk, use the `SFSpeechURLRecognitionRequest` class.
-    - For live audio (or audio from memory), use the `SFSPeechAudioBufferRecognitionRequest` class.
+  - For pre-recorded audio on disk, use the `SFSpeechURLRecognitionRequest` class.
+  - For live audio (or audio from memory), use the `SFSPeechAudioBufferRecognitionRequest` class.
 - Pass the Speech Recognition Request to a Speech Recognizer (`SFSpeechRecognizer`) to begin recognition. The app can optionally hold onto the returned `SFSpeechRecognitionTask` to monitor and track the recognition results.
 
 These steps will be covered in detail below.
@@ -375,8 +375,8 @@ It is important to call `RecognitionTask.Cancel` if the user cancels the transla
 Apple imposes the following limitations when working with Speech Recognition in an iOS app:
 
 - Speech Recognition is free to all apps, but its usage is not unlimited:
-    - Individual iOS devices have a limited number of recognitions that can be performed per day.
-    - Apps will be throttled globally on a request-per-day basis.
+  - Individual iOS devices have a limited number of recognitions that can be performed per day.
+  - Apps will be throttled globally on a request-per-day basis.
 - The app must be prepared to handle Speech Recognition network connection and usage rate limit failures.
 - Speech Recognition can have a high cost in both battery drain and high network traffic on the user's iOS device, because of this, Apple imposes a strict audio duration limit of approximately one minute of speech max.
 

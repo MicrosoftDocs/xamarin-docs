@@ -17,7 +17,7 @@ to a Mac build host. The same instructions apply to Visual Studio 2017._
 ## Overview
 
 Building native iOS applications requires access to Apple's build tools,
-which only run on a Mac. Because of this, Visual Studio 2019 must connect to 
+which only run on a Mac. Because of this, Visual Studio 2019 must connect to
 a network-accessible Mac to build Xamarin.iOS applications.
 
 Visual Studio 2019's Pair to Mac feature discovers, connects to,
@@ -38,18 +38,18 @@ Pair to Mac enables the following development workflow:
   example, when an iOS device is plugged in to the Mac or becomes available
   on the network, the iOS Toolbar updates instantly.
 
-- Multiple instances of Visual Studio 2019 can connect to the Mac 
+- Multiple instances of Visual Studio 2019 can connect to the Mac
   simultaneously.
 
 - It's possible to use the Windows command-line to build iOS applications.
 
 > [!NOTE]
-> 
+>
 > Before following the instructions in this guide, complete the following steps:
-> 
+>
 > - On a Windows machine, [install Visual Studio 2019](~/get-started/installation/windows.md)
 > - On a Mac, [install Xcode](https://itunes.apple.com/us/app/xcode/id497799835?mt=12) and [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
->    - _You must manually open Xcode after installing_ so that it can add any additional components.
+>   - _You must manually open Xcode after installing_ so that it can add any additional components.
 >
 > If you would prefer not to install Visual Studio for Mac, Visual Studio 2019
 > can automatically configure the Mac build host with Xamarin.iOS and Mono.
@@ -89,30 +89,30 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
    by choosing **File > New > Project** and then selecting an iOS project
    template.
 
-2. Open the **Pair to Mac** dialog. 
+2. Open the **Pair to Mac** dialog.
 
     - Use the **Pair to Mac** button iOS toolbar:
 
-        ![The iOS toolbar, with the Pair to Mac button highlighted](images/ios-toolbar.png "The iOS toolbar, with the Pair to Mac button highlighted")
+      ![The iOS toolbar, with the Pair to Mac button highlighted](images/ios-toolbar.png "The iOS toolbar, with the Pair to Mac button highlighted")
 
     - Or, select **Tools > iOS > Pair to Mac**.
 
-    - The **Pair to Mac** dialog displays a list of all previously-connected 
+    - The **Pair to Mac** dialog displays a list of all previously-connected
       and currently-available Mac build hosts:
 
-        ![The Pair to Mac dialog](images/pairtomac.png "The Pair to Mac dialog")
+      ![The Pair to Mac dialog](images/pairtomac.png "The Pair to Mac dialog")
 
-3. Select a Mac in the list. Click **Connect**. 
+3. Select a Mac in the list. Click **Connect**.
 
 4. Enter your username and password.
 
-    - The first time you connect to any paticular Mac, you are 
+    - The first time you connect to any paticular Mac, you are
       prompted to enter your username and password for that machine:
 
-        ![Entering a username and password for the Mac](images/auth.png "Entering a username and password for the Mac")
+      ![Entering a username and password for the Mac](images/auth.png "Entering a username and password for the Mac")
 
-        > [!TIP]
-        > When logging in, use your system username rather than full name.
+      > [!TIP]
+      > When logging in, use your system username rather than full name.
 
     - Pair to Mac uses these credentials to create a new SSH connection
       to the Mac. If it succeeds, a key is added to the **authorized_keys**
@@ -134,23 +134,23 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
       in the **Pair to Mac** dialog displays an icon indicating that
       it is currently connected:
 
-        ![A connected Mac](images/connected.png "A connected Mac")
+      ![A connected Mac](images/connected.png "A connected Mac")
 
       There can be only one connected Mac at a time.
 
       > [!TIP]
-      > Right-clicking any Mac in the **Pair to Mac** list brings up a context 
-      > menu that allows you to **Connect...**, **Forget this Mac**, or 
+      > Right-clicking any Mac in the **Pair to Mac** list brings up a context
+      > menu that allows you to **Connect...**, **Forget this Mac**, or
       > **Disconnect**:
       >
       > ![The Pair to Mac context menus](images/contextmenu.png "The Pair to Mac context menus")
       >
-      > If you choose **Forget this Mac**, your credentials for the selected 
-      > Mac will be forgotten. To reconnect to that Mac, you will need to re-enter 
+      > If you choose **Forget this Mac**, your credentials for the selected
+      > Mac will be forgotten. To reconnect to that Mac, you will need to re-enter
       > your username and password.
 
 If you have successfully paired to a Mac build host, you are ready to build
-Xamarin.iOS apps in Visual Studio 2019. Take a look at the 
+Xamarin.iOS apps in Visual Studio 2019. Take a look at the
 [Introduction to Xamarin.iOS for Visual Studio](~/ios/get-started/installation/windows/introduction-to-xamarin-ios-for-visual-studio.md)
 guide.
 
@@ -163,20 +163,20 @@ guide](~/ios/get-started/installation/windows/connecting-to-mac/troubleshooting.
 If you do not see a particular Mac listed in the **Pair to Mac** dialog,
 add it manually:
 
-1. Locate your Mac’s IP address. 
+1. Locate your Mac’s IP address.
 
     - Open **System Preferences > Sharing > Remote Login** on your Mac:
 
-        [![The Mac's IP address in System Preferences > Sharing](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing")](images/sharing.png#lightbox)
+      [![The Mac's IP address in System Preferences > Sharing](images/sharing-ipaddress.png "The Mac's IP address in System Preferences > Sharing")](images/sharing.png#lightbox)
 
-    - Alternatively, use the command line. In Terminal, issue this command: 
+    - Alternatively, use the command line. In Terminal, issue this command:
 
-        ```bash
-        $ ipconfig getifaddr en0
-        196.168.1.8
-        ```
+      ```bash
+      $ ipconfig getifaddr en0
+      196.168.1.8
+      ```
 
-      Depending on your network configuration, you may need to use an 
+      Depending on your network configuration, you may need to use an
       interface name other than `en0`. For example: `en1`, `en2`, etc.
 
 2. In Visual Studio 2019's **Pair to Mac** dialog, select **Add Mac...**:
@@ -194,7 +194,7 @@ add it manually:
    > [!TIP]
    > When logging in, use your system username rather than full name.
 
-5. Click **Login** to connect Visual Studio 2019 to the Mac over SSH and add 
+5. Click **Login** to connect Visual Studio 2019 to the Mac over SSH and add
    it to the list of known machines.
 
 ## Automatic Mac provisioning
@@ -206,11 +206,11 @@ framework, not the Visual Studio for Mac IDE), and various Xcode-related
 tools (but not Xcode itself).
 
 > [!IMPORTANT]
-> - Pair to Mac cannot install Xcode; you must manually install it on the 
+> - Pair to Mac cannot install Xcode; you must manually install it on the
 >   Mac build host. It is required for Xamarin.iOS development.
-> - Automatic Mac provisioning requires that remote login is 
->   enabled on the Mac, and the Mac must be network-accessible to the Windows 
->   machine. See [Enabling remote login on the Mac](#enable-remote-login-on-the-mac) 
+> - Automatic Mac provisioning requires that remote login is
+>   enabled on the Mac, and the Mac must be network-accessible to the Windows
+>   machine. See [Enabling remote login on the Mac](#enable-remote-login-on-the-mac)
 >   for more details.
 > - Automatic Mac provisioning requires 3GB of free space on the Mac to install Xamarin.iOS.
 
@@ -222,7 +222,7 @@ Mac](#connect-to-the-mac-from-visual-studio-2019).
 
 Pair to Mac will check to make sure that Mono is installed. If it is not
 installed, Pair to Mac will download and install the latest stable version
-of Mono on the Mac. 
+of Mono on the Mac.
 
 Progress is indicated by various prompts, as shown by the following
 screenshots (click to zoom):
@@ -239,11 +239,11 @@ installed on the Windows machine.
 > [!IMPORTANT]
 > Pair to Mac will not downgrade Xamarin.iOS on the Mac from alpha/beta
 > to stable. If you have Visual Studio for Mac installed, set your
-> [release channel](https://docs.microsoft.com/visualstudio/mac/update) as 
+> [release channel](https://docs.microsoft.com/visualstudio/mac/update) as
 > follows:
 > - If you use Visual Studio 2019, select the **Stable** updates channel in
 >   Visual Studio for Mac.
-> - If you use Visual Studio 2019 Preview, select the **Alpha** updates 
+> - If you use Visual Studio 2019 Preview, select the **Alpha** updates
 >   channel in Visual Studio for Mac.
 
 Progress is indicated by various prompts, as shown by the following
@@ -276,7 +276,7 @@ The installation of these packages happens quickly and without a prompt.
 
 > [!NOTE]
 > These tools are distinct from the Xcode Command Line Tools, which
-> as of macOS 10.9 are 
+> as of macOS 10.9 are
 > [installed with Xcode](https://developer.apple.com/library/content/technotes/tn2339/_index.html).
 
 ### Troubleshooting automatic Mac provisioning
@@ -311,14 +311,14 @@ either Visual Studio 2019 or the command-line, it sets up SSH keys. With these
 keys, future logins will not require a username or password. Newly
 created keys are stored in **%LOCALAPPDATA%\Xamarin\MonoTouch**.
 
-If the `ServerPassword` parameter is omitted from a command-line build 
+If the `ServerPassword` parameter is omitted from a command-line build
 invocation, Pair to Mac attempts to log in to the Mac build host
 using the saved SSH keys.
 
 ## Summary
 
-This article described how to use Pair to Mac to connect Visual Studio 2019 to a 
-Mac build host, enabling Visual Studio 2019 developers to build native iOS 
+This article described how to use Pair to Mac to connect Visual Studio 2019 to a
+Mac build host, enabling Visual Studio 2019 developers to build native iOS
 applications with Xamarin.iOS.
 
 ## Next steps

@@ -96,39 +96,39 @@ be restarted after the system properties are changed.
 Xamarin.Android supports the following system properties:
 
 - *debug.mono.debug*: If a non-empty string, this is equivalent to
-    `*mono-debug*`.
+  `*mono-debug*`.
 
 - *debug.mono.env*: A pipe-separated ('*|*') list of environment
-    variables to export during application startup, *before* mono has
-    been initialized. This allows setting environment variables that
-    control mono logging.
+  variables to export during application startup, *before* mono has
+  been initialized. This allows setting environment variables that
+  control mono logging.
 
-    - *Note*: Since the value is '*|*'-separated, the value must have
-      an extra level of quoting, as the \`*adb shell*\` command will
-      remove a set of quotes.
+  - *Note*: Since the value is '*|*'-separated, the value must have
+    an extra level of quoting, as the \`*adb shell*\` command will
+    remove a set of quotes.
 
-    - *Note*: Android system property values can be no longer than 92
-      characters in length.
+  - *Note*: Android system property values can be no longer than 92
+    characters in length.
 
-    - Example:
+  - Example:
 
-      ```
-      adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
-      ```
+    ```
+    adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+    ```
 
 - *debug.mono.log*: A comma-separated ('*,*') list of components that
-    should print additional messages to the Android Debug Log. By
-    default, nothing is set. Components include:
+  should print additional messages to the Android Debug Log. By
+  default, nothing is set. Components include:
 
-    - *all*: Print all messages
-    - *gc*: Print GC-related messages.
-    - *gref*: Print (weak, global) reference allocation and deallocation messages.
-    - *lref*: Print local reference allocation and deallocation messages.
+  - *all*: Print all messages
+  - *gc*: Print GC-related messages.
+  - *gref*: Print (weak, global) reference allocation and deallocation messages.
+  - *lref*: Print local reference allocation and deallocation messages.
 
-    *Note*: these are *extremely* verbose. Do not enable unless you really need to.
+  *Note*: these are *extremely* verbose. Do not enable unless you really need to.
 
 - *debug.mono.trace*: Allows setting the [mono --trace](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`
-    setting.
+  setting.
 
 ## Deleting `bin` and `obj`
 
@@ -432,14 +432,14 @@ Ensure you use the correct simulator name, i.e.
 Android package names *must* contain a period ('*.*'). Edit your package name so that it contains a period.
 
 - Within Visual Studio:
-    - Right click your project > Properties
-    - Click the Android Manifest tab on the left.
-    - Update the Package name field.
-        - If you see the message &ldquo;No AndroidManifest.xml found. Click to add one.&rdquo;, click the link and then update the Package name field.
+  - Right click your project > Properties
+  - Click the Android Manifest tab on the left.
+  - Update the Package name field.
+    - If you see the message &ldquo;No AndroidManifest.xml found. Click to add one.&rdquo;, click the link and then update the Package name field.
 - Within Visual Studio for Mac:
-    - Right click your project > Options.
-    - Navigate to the Build / Android Application section.
-    - Change the Package name field to contain a '.'.
+  - Right click your project > Options.
+  - Navigate to the Build / Android Application section.
+  - Change the Package name field to contain a '.'.
 
 
 
@@ -847,15 +847,15 @@ project.
 ### In Release build, MissingMethodException occurs for dynamic code at run time.
 
 - It is likely that your application project does not have references
-    to System.Core.dll, Microsoft.CSharp.dll or Mono.CSharp.dll. Make
-    sure those assemblies are referenced.
+  to System.Core.dll, Microsoft.CSharp.dll or Mono.CSharp.dll. Make
+  sure those assemblies are referenced.
 
-    - Keep in mind that dynamic code always costs. If you need efficient code, consider not using dynamic code.
+  - Keep in mind that dynamic code always costs. If you need efficient code, consider not using dynamic code.
 
 - In the first preview, those assemblies were excluded unless types
-    in each assembly are explicitly used by the application code. See
-    the following for a workaround:
-    [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
+  in each assembly are explicitly used by the application code. See
+  the following for a workaround:
+  [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 
 
 ## Projects built with AOT+LLVM crash on x86 devices

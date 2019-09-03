@@ -78,8 +78,8 @@ Once you have decompiled the Android library, examine the source code. Generally
 - **Classes that have characteristics of obfuscation** &ndash;
   Characteristics of obfuscated classes include:
 
-    - The class name includes a **$**, i.e. **a$.class**
-    - The class name is entirely compromised of lower case characters, i.e. **a.class**      
+  - The class name includes a **$**, i.e. **a$.class**
+  - The class name is entirely compromised of lower case characters, i.e. **a.class**      
 
 - **`import` statements for unreferenced libraries** &ndash; Identify
   the unreferenced library and add those dependencies to the
@@ -88,10 +88,10 @@ Once you have decompiled the Android library, examine the source code. Generally
 
 > [!NOTE]
 > Decompiling a Java library may be prohibited or
-subject to legal restrictions based on local laws or the license under
-which the Java library was published. If necessary, enlist the services
-of a legal professional before attempting to decompile a Java library
-and inspect the source code.
+> subject to legal restrictions based on local laws or the license under
+> which the Java library was published. If necessary, enlist the services
+> of a legal professional before attempting to decompile a Java library
+> and inspect the source code.
 
 
 ## Inspect API.XML
@@ -166,46 +166,46 @@ missing types.
 This error may occur due to several reasons as listed below:
 
 - The library being bound may reference a second Java library. If 
-    the public API for the bound library uses types from the second
-    library, you must reference a managed binding for the second
-    library as well.
+  the public API for the bound library uses types from the second
+  library, you must reference a managed binding for the second
+  library as well.
 
 - It is possible that a library was injected due to Java reflection,
-    similar to the reason for the library load error above, causing the
-    unexpected loading of metadata. Xamarin.Android's tooling cannot
-    currently resolve this situation. In such a case, the library must
-    be manually bound.
+  similar to the reason for the library load error above, causing the
+  unexpected loading of metadata. Xamarin.Android's tooling cannot
+  currently resolve this situation. In such a case, the library must
+  be manually bound.
 
 - There was a bug in .NET 4.0 runtime that failed to load assemblies
-    when it should have. This issue has been fixed in the .NET 4.5
-    runtime.
+  when it should have. This issue has been fixed in the .NET 4.5
+  runtime.
 
 - Java allows deriving a public class from non-public class, but this
-    is unsupported in .NET. Since the binding generator does not
-    generate bindings for non-public classes, derived classes such as
-    these cannot be generated correctly. To fix this, either remove the
-    metadata entry for those derived classes using the remove-node in
-    **Metadata.xml**, or fix the metadata that is making the non-public
-    class public. Although the latter solution will create the binding
-    so that the C# source will build, the non-public class should not
-    be used.
+  is unsupported in .NET. Since the binding generator does not
+  generate bindings for non-public classes, derived classes such as
+  these cannot be generated correctly. To fix this, either remove the
+  metadata entry for those derived classes using the remove-node in
+  **Metadata.xml**, or fix the metadata that is making the non-public
+  class public. Although the latter solution will create the binding
+  so that the C# source will build, the non-public class should not
+  be used.
 
-    For example:
+  For example:
 
-    ```xml
-    <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
-        name="visibility">public</attr>
-    ```
+  ```xml
+  <attr path="/api/package[@name='com.some.package']/class[@name='SomeClass']"
+      name="visibility">public</attr>
+  ```
 
 - Tools that obfuscate Java libraries may interfere with the
-    Xamarin.Android Binding Generator and its ability to generate C#
-    wrapper classes. The following snippet shows how to update
-    **Metadata.xml** to unobfuscate a class name:
+  Xamarin.Android Binding Generator and its ability to generate C#
+  wrapper classes. The following snippet shows how to update
+  **Metadata.xml** to unobfuscate a class name:
 
-    ```xml
-    <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
-        name="obfuscated">false</attr>
-    ```
+  ```xml
+  <attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
+      name="obfuscated">false</attr>
+  ```
 
 ### Problem: Generated C# source does not build due to parameter type mismatch
 
@@ -218,7 +218,7 @@ Xamarin.Android includes a variety of Java fields that are mapped to
 enums in the C# bindings. These can cause type incompatibilities in the
 generated bindings. To resolve this, the method signatures created from
 the binding generator need to be modified to use the enums. For more
-imformation, please see
+information, please see
 [Correcting Enums](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md).
 
 ### Problem: NoClassDefFoundError in packaging
@@ -314,30 +314,30 @@ return type of `HttpURLConnection`. There are two ways to fix this
 issue:
 
 - Add a partial class declaration for
-    `HttpURLConnectionRequestAdapter` and explicitly implement
-    `IHttpRequest.Unwrap()`:
+  `HttpURLConnectionRequestAdapter` and explicitly implement
+  `IHttpRequest.Unwrap()`:
 
-    ```csharp
-    namespace Oauth.Signpost.Basic {
-        partial class HttpURLConnectionRequestAdapter {
-            Java.Lang.Object OauthSignpost.Http.IHttpRequest.Unwrap() {
-                return Unwrap();
-            }
-        }
-    }
-    ```
+  ```csharp
+  namespace Oauth.Signpost.Basic {
+      partial class HttpURLConnectionRequestAdapter {
+          Java.Lang.Object OauthSignpost.Http.IHttpRequest.Unwrap() {
+              return Unwrap();
+          }
+      }
+  }
+  ```
 
 - Remove the covariance from the generated C# code. This involves
-    adding the following transform to **Transforms\Metadata.xml** which
-    will cause the generated C# code to have a return type of
-    `Java.Lang.Object`:
+  adding the following transform to **Transforms\Metadata.xml** which
+  will cause the generated C# code to have a return type of
+  `Java.Lang.Object`:
 
-    ```xml
-    <attr
-        path="/api/package[@name='oauth.signpost.basic']/class[@name='HttpURLConnectionRequestAdapter']/method[@name='unwrap']"
-        name="managedReturn">Java.Lang.Object
-    </attr>
-    ```
+  ```xml
+  <attr
+      path="/api/package[@name='oauth.signpost.basic']/class[@name='HttpURLConnectionRequestAdapter']/method[@name='unwrap']"
+      name="managedReturn">Java.Lang.Object
+  </attr>
+  ```
 
 ### Problem: Name Collisions on Inner Classes / Properties
 

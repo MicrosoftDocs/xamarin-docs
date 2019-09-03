@@ -36,8 +36,8 @@ ListView has a number of components available to exercise the native functionali
 
 - **[Cells](customizing-cell-appearance.md)** &ndash; Data in a ListView is presented in cells. Each cell corresponds to a row of data. There are built-in cells to choose from, or you can define your own custom cell. Both built-in and custom cells can be used/defined in XAML or code.
   - **[Built-in](customizing-cell-appearance.md#Built_in_Cells)** &ndash; Built in cells, especially TextCell and ImageCell, can be great for performance, since they correspond to native controls on each platform.
-       - **[TextCell](customizing-cell-appearance.md#TextCell)** &ndash; Displays a string of text, optionally with detail text. Detail text is rendered as a second line in a smaller font with an accent color.
-       - **[ImageCell](customizing-cell-appearance.md#ImageCell)** &ndash; Displays an image with text. Appears as a TextCell with an image on the left.
+    - **[TextCell](customizing-cell-appearance.md#TextCell)** &ndash; Displays a string of text, optionally with detail text. Detail text is rendered as a second line in a smaller font with an accent color.
+    - **[ImageCell](customizing-cell-appearance.md#ImageCell)** &ndash; Displays an image with text. Appears as a TextCell with an image on the left.
   - **[Custom Cells](customizing-cell-appearance.md#customcells)** &ndash; Custom cells are great when you need to present complex data. For example, a custom view could be used to present a list of songs, including album and artist:
 
 ![](images/image-cell-default.png "ListView with ImageCells")
