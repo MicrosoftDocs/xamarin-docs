@@ -102,7 +102,7 @@ Each resource has a key that is specified using the `x:Key` attribute, which bec
 
 The first [`Label`](xref:Xamarin.Forms.Label) instance retrieves and consumes the `LabelPageHeadingStyle` resource defined in the application level `ResourceDictionary`, with the second `Label` instance retrieving and consuming the `LabelNormalStyle` resource defined in the control level `ResourceDictionary`. Similarly, the [`Button`](xref:Xamarin.Forms.Button) instance retrieves and consumes the `NormalTextColor` resource defined in the application level `ResourceDictionary`, and the `MediumBoldText` resource defined in the control level `ResourceDictionary`. This results in the appearance shown in the following screenshots:
 
-[![](resource-dictionaries-images/screenshots-sml.png "Consuming ResourceDictionary Resources")](resource-dictionaries-images/screenshots.png#lightbox "Consuming ResourceDictionary Resources")
+[![Consuming ResourceDictionary Resources](resource-dictionaries-images/screenshots-sml.png)](resource-dictionaries-images/screenshots.png#lightbox)
 
 > [!NOTE]
 > Resources that are specific to a single page shouldn't be included in an application level resource dictionary, as such resources will then be parsed at application startup instead of when required by a page. For more information, see [Reduce the Application Resource Dictionary Size](~/xamarin-forms/deploy-test/performance.md).
@@ -137,7 +137,7 @@ When `ResourceDictionary` resources share `x:Key` attribute values, resources de
 
 The original `PageBackgroundColor` and `NormalTextColor` instances, defined at the application level, are overridden by the `PageBackgroundColor` and `NormalTextColor` instances defined at page level. Therefore, the page background color becomes blue, and the text on the page becomes yellow, as demonstrated in the following screenshots:
 
-[![](resource-dictionaries-images/overridding-screenshots-sml.png "Overriding ResourceDictionary Resources")](resource-dictionaries-images/overridding-screenshots.png#lightbox "Overriding ResourceDictionary Resources")
+[![Overriding ResourceDictionary Resources](resource-dictionaries-images/overridding-screenshots-sml.png)](resource-dictionaries-images/overridding-screenshots.png#lightbox)
 
 However, note that the background bar of the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is still yellow, because the  [`BarBackgroundColor`](xref:Xamarin.Forms.NavigationPage.BarBackgroundColor) property is set to the value of the `PageBackgroundColor` resource defined in the application level `ResourceDictionary`.
 

@@ -100,7 +100,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![](entry-images/password.png "Entry IsPassword Example")
+![Entry IsPassword Example](entry-images/password.png)
 
 Placeholders may be used with instances of `Entry` that are configured as password fields:
 
@@ -116,7 +116,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![](entry-images/passwordplaceholder.png "Entry IsPassword and Placeholder Example")
+![Entry IsPassword and Placeholder Example](entry-images/passwordplaceholder.png)
 
 ### Setting the Cursor Position and Text Selection Length
 
@@ -289,7 +289,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![](entry-images/textcolor.png "Entry TextColor Example")
+![Entry TextColor Example](entry-images/textcolor.png)
 
 Note that the placeholder is not affected by the specified `TextColor`.
 
@@ -306,7 +306,7 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![](entry-images/textbackgroundcolor.png "Entry BackgroundColor Example")
+![Entry BackgroundColor Example](entry-images/textbackgroundcolor.png)
 
 Be careful to make sure that the background and text colors you choose are usable on each platform and don't obscure any placeholder text.
 
