@@ -250,7 +250,7 @@ The `Grid.Row` and `Grid.Column` settings of 0 are not required but are generall
 
 Here’s what it looks like:
 
-[![](essential-xaml-syntax-images/griddemo.png "Grid Layout")](essential-xaml-syntax-images/griddemo-large.png#lightbox "Grid Layout")
+[![Grid Layout](essential-xaml-syntax-images/griddemo.png)](essential-xaml-syntax-images/griddemo-large.png#lightbox)
 
 Judging solely from the syntax, these `Grid.Row`, `Grid.Column`, `Grid.RowSpan`, and `Grid.ColumnSpan` attributes appear to be static fields or properties of `Grid`, but interestingly enough, `Grid` does not define anything named `Row`, `Column`, `RowSpan`, or `ColumnSpan`.
 
@@ -307,7 +307,7 @@ The `AbsoluteLayout` class defines two attached properties named `LayoutBounds` 
 
 And here it is:
 
-[![](essential-xaml-syntax-images/absolutedemo-large.png "Absolute Layout")](essential-xaml-syntax-images/absolutedemo-large.png#lightbox "Absolute Layout")
+[![Absolute Layout](essential-xaml-syntax-images/absolutedemo-large.png)](essential-xaml-syntax-images/absolutedemo-large.png#lightbox)
 
 For something like this, you might question the wisdom of using XAML. Certainly, the repetition and regularity of the `LayoutBounds` rectangle suggests that it might be better realized in code.
 
