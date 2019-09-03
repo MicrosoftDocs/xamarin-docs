@@ -73,86 +73,86 @@ using CoreGraphics;
 
 namespace ManualCameraControls
 {
-	public class OutputRecorder : AVCaptureVideoDataOutputSampleBufferDelegate
-	{
-		#region Computed Properties
-		public UIImageView DisplayView { get; set; }
-		#endregion
+    public class OutputRecorder : AVCaptureVideoDataOutputSampleBufferDelegate
+    {
+        #region Computed Properties
+        public UIImageView DisplayView { get; set; }
+        #endregion
 
-		#region Constructors
-		public OutputRecorder ()
-		{
+        #region Constructors
+        public OutputRecorder ()
+        {
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Private Methods
-		private UIImage GetImageFromSampleBuffer(CMSampleBuffer sampleBuffer) {
+        #region Private Methods
+        private UIImage GetImageFromSampleBuffer(CMSampleBuffer sampleBuffer) {
 
-			// Get a pixel buffer from the sample buffer
-			using (var pixelBuffer = sampleBuffer.GetImageBuffer () as CVPixelBuffer) {
-				// Lock the base address
-				pixelBuffer.Lock (0);
+            // Get a pixel buffer from the sample buffer
+            using (var pixelBuffer = sampleBuffer.GetImageBuffer () as CVPixelBuffer) {
+                // Lock the base address
+                pixelBuffer.Lock (0);
 
-				// Prepare to decode buffer
-				var flags = CGBitmapFlags.PremultipliedFirst | CGBitmapFlags.ByteOrder32Little;
+                // Prepare to decode buffer
+                var flags = CGBitmapFlags.PremultipliedFirst | CGBitmapFlags.ByteOrder32Little;
 
-				// Decode buffer - Create a new colorspace
-				using (var cs = CGColorSpace.CreateDeviceRGB ()) {
+                // Decode buffer - Create a new colorspace
+                using (var cs = CGColorSpace.CreateDeviceRGB ()) {
 
-					// Create new context from buffer
-					using (var context = new CGBitmapContext (pixelBuffer.BaseAddress,
-						pixelBuffer.Width,
-						pixelBuffer.Height,
-						8,
-						pixelBuffer.BytesPerRow,
-						cs,
-						(CGImageAlphaInfo)flags)) {
+                    // Create new context from buffer
+                    using (var context = new CGBitmapContext (pixelBuffer.BaseAddress,
+                        pixelBuffer.Width,
+                        pixelBuffer.Height,
+                        8,
+                        pixelBuffer.BytesPerRow,
+                        cs,
+                        (CGImageAlphaInfo)flags)) {
 
-						// Get the image from the context
-						using (var cgImage = context.ToImage ()) {
+                        // Get the image from the context
+                        using (var cgImage = context.ToImage ()) {
 
-							// Unlock and return image
-							pixelBuffer.Unlock (0);
-							return UIImage.FromImage (cgImage);
-						}
-					}
-				}
-			}
-		}
-		#endregion
+                            // Unlock and return image
+                            pixelBuffer.Unlock (0);
+                            return UIImage.FromImage (cgImage);
+                        }
+                    }
+                }
+            }
+        }
+        #endregion
 
-		#region Override Methods
-		public override void DidOutputSampleBuffer (AVCaptureOutput captureOutput, CMSampleBuffer sampleBuffer, AVCaptureConnection connection)
-		{
-			// Trap all errors
-			try {
-				// Grab an image from the buffer
-				var image = GetImageFromSampleBuffer(sampleBuffer);
+        #region Override Methods
+        public override void DidOutputSampleBuffer (AVCaptureOutput captureOutput, CMSampleBuffer sampleBuffer, AVCaptureConnection connection)
+        {
+            // Trap all errors
+            try {
+                // Grab an image from the buffer
+                var image = GetImageFromSampleBuffer(sampleBuffer);
 
-				// Display the image
-				if (DisplayView !=null) {
-					DisplayView.BeginInvokeOnMainThread(() => {
-						// Set the image
-						if (DisplayView.Image != null) DisplayView.Image.Dispose();
-						DisplayView.Image = image;
+                // Display the image
+                if (DisplayView !=null) {
+                    DisplayView.BeginInvokeOnMainThread(() => {
+                        // Set the image
+                        if (DisplayView.Image != null) DisplayView.Image.Dispose();
+                        DisplayView.Image = image;
 
-						// Rotate image to the correct display orientation
-						DisplayView.Transform = CGAffineTransform.MakeRotation((float)Math.PI/2);
-					});
-				}
+                        // Rotate image to the correct display orientation
+                        DisplayView.Transform = CGAffineTransform.MakeRotation((float)Math.PI/2);
+                    });
+                }
 
-				// IMPORTANT: You must release the buffer because AVFoundation has a fixed number
-				// of buffers and will stop delivering frames if it runs out.
-				sampleBuffer.Dispose();
-			}
-			catch(Exception e) {
-				// Report error
-				Console.WriteLine ("Error sampling buffer: {0}", e.Message);
-			}
-		}
-		#endregion
-	}
+                // IMPORTANT: You must release the buffer because AVFoundation has a fixed number
+                // of buffers and will stop delivering frames if it runs out.
+                sampleBuffer.Dispose();
+            }
+            catch(Exception e) {
+                // Report error
+                Console.WriteLine ("Error sampling buffer: {0}", e.Message);
+            }
+        }
+        #endregion
+    }
 }
 ```
 
@@ -167,101 +167,101 @@ Do the following to modify the application's `AppDelegate` and add the necessary
 
 1. Double-click the `AppDelegate.cs` file in the Solution Explorer to open it for editing.
 1. Add the following using statements to the top of the file:
-	
-	```
-	using System;
-	using Foundation;
-	using UIKit;
-	using System.CodeDom.Compiler;
-	using System.Collections.Generic;
-	using System.Linq;
-	using AVFoundation;
-	using CoreVideo;
-	using CoreMedia;
-	using CoreGraphics;
-	using CoreFoundation;
-	```
+
+    ```csharp
+    using System;
+    using Foundation;
+    using UIKit;
+    using System.CodeDom.Compiler;
+    using System.Collections.Generic;
+    using System.Linq;
+    using AVFoundation;
+    using CoreVideo;
+    using CoreMedia;
+    using CoreGraphics;
+    using CoreFoundation;
+    ```
 
 1. Add the following private variables and computed properties to the `AppDelegate` class:
-	
-	```
-	#region Private Variables
-	private NSError Error;
-	#endregion
-	
-	#region Computed Properties
-	public override UIWindow Window {get;set;}
-	public bool CameraAvailable { get; set; }
-	public AVCaptureSession Session { get; set; }
-	public AVCaptureDevice CaptureDevice { get; set; }
-	public OutputRecorder Recorder { get; set; }
-	public DispatchQueue Queue { get; set; }
-	public AVCaptureDeviceInput Input { get; set; }
-	#endregion
-	```
-  
+
+    ```csharp
+    #region Private Variables
+    private NSError Error;
+    #endregion
+
+    #region Computed Properties
+    public override UIWindow Window {get;set;}
+    public bool CameraAvailable { get; set; }
+    public AVCaptureSession Session { get; set; }
+    public AVCaptureDevice CaptureDevice { get; set; }
+    public OutputRecorder Recorder { get; set; }
+    public DispatchQueue Queue { get; set; }
+    public AVCaptureDeviceInput Input { get; set; }
+    #endregion
+    ```
+
 1. Override the finished method and change it to:
-	
-	```
-	public override void FinishedLaunching (UIApplication application)
-	{
-	    // Create a new capture session
-	    Session = new AVCaptureSession ();
-	    Session.SessionPreset = AVCaptureSession.PresetMedium;
-	
-	    // Create a device input
-	    CaptureDevice = AVCaptureDevice.DefaultDeviceWithMediaType (AVMediaType.Video);
-	    if (CaptureDevice == null) {
-	        // Video capture not supported, abort
-	        Console.WriteLine ("Video recording not supported on this device");
-	        CameraAvailable = false;
-	        return;
-	    }
-	
-	    // Prepare device for configuration
-	    CaptureDevice.LockForConfiguration (out Error);
-	    if (Error != null) {
-	        // There has been an issue, abort
-	        Console.WriteLine ("Error: {0}", Error.LocalizedDescription);
-	        CaptureDevice.UnlockForConfiguration ();
-	        return;
-	    }
-	
-	    // Configure stream for 15 frames per second (fps)
-	    CaptureDevice.ActiveVideoMinFrameDuration = new CMTime (1, 15);
-	
-	    // Unlock configuration
-	    CaptureDevice.UnlockForConfiguration ();
-	
-	    // Get input from capture device
-	    Input = AVCaptureDeviceInput.FromDevice (CaptureDevice);
-	    if (Input == null) {
-	        // Error, report and abort
-	        Console.WriteLine ("Unable to gain input from capture device.");
-	        CameraAvailable = false;
-	        return;
-	    }
-	
-	    // Attach input to session
-	    Session.AddInput (Input);
-	
-	    // Create a new output
-	    var output = new AVCaptureVideoDataOutput ();
-		var settings = new AVVideoSettingsUncompressed ();
-		settings.PixelFormatType = CVPixelFormatType.CV32BGRA;
-		output.WeakVideoSettings = settings.Dictionary;
-	
-	    // Configure and attach to the output to the session
-	    Queue = new DispatchQueue ("ManCamQueue");
-	    Recorder = new OutputRecorder ();
-	    output.SetSampleBufferDelegate (Recorder, Queue);
-	    Session.AddOutput (output);
-	
-	    // Let tabs know that a camera is available
-	    CameraAvailable = true;
-	}
-	```  
-  
+
+    ```csharp
+    public override void FinishedLaunching (UIApplication application)
+    {
+        // Create a new capture session
+        Session = new AVCaptureSession ();
+        Session.SessionPreset = AVCaptureSession.PresetMedium;
+
+        // Create a device input
+        CaptureDevice = AVCaptureDevice.DefaultDeviceWithMediaType (AVMediaType.Video);
+        if (CaptureDevice == null) {
+            // Video capture not supported, abort
+            Console.WriteLine ("Video recording not supported on this device");
+            CameraAvailable = false;
+            return;
+        }
+
+        // Prepare device for configuration
+        CaptureDevice.LockForConfiguration (out Error);
+        if (Error != null) {
+            // There has been an issue, abort
+            Console.WriteLine ("Error: {0}", Error.LocalizedDescription);
+            CaptureDevice.UnlockForConfiguration ();
+            return;
+        }
+
+        // Configure stream for 15 frames per second (fps)
+        CaptureDevice.ActiveVideoMinFrameDuration = new CMTime (1, 15);
+
+        // Unlock configuration
+        CaptureDevice.UnlockForConfiguration ();
+
+        // Get input from capture device
+        Input = AVCaptureDeviceInput.FromDevice (CaptureDevice);
+        if (Input == null) {
+            // Error, report and abort
+            Console.WriteLine ("Unable to gain input from capture device.");
+            CameraAvailable = false;
+            return;
+        }
+
+        // Attach input to session
+        Session.AddInput (Input);
+
+        // Create a new output
+        var output = new AVCaptureVideoDataOutput ();
+        var settings = new AVVideoSettingsUncompressed ();
+        settings.PixelFormatType = CVPixelFormatType.CV32BGRA;
+        output.WeakVideoSettings = settings.Dictionary;
+
+        // Configure and attach to the output to the session
+        Queue = new DispatchQueue ("ManCamQueue");
+        Recorder = new OutputRecorder ();
+        output.SetSampleBufferDelegate (Recorder, Queue);
+        Session.AddOutput (output);
+
+        // Let tabs know that a camera is available
+        CameraAvailable = true;
+    }
+    ```
+
 1. Save the changes to the file.
 
 
@@ -295,10 +295,10 @@ In an iOS device, the lens is moved closer to, or further from, the sensor by ma
 
 When dealing with focus, there are a few terms that the developer should be familiar with:
 
-- **Depth of Field** – The distance between the nearest and farthest in-focus objects. 
+- **Depth of Field** – The distance between the nearest and farthest in-focus objects.
 - **Macro** - This is the near end of the focus spectrum and is the closest distance at which the lens can focus.
 - **Infinity** – This is the far end of the focus spectrum and is the farthest distance at which the lens can focus.
-- **Hyperfocal Distance** – This is the point in the focus spectrum where the farthest object in the frame is just at the far end of focus. In other words, this is the focal position that maximizes Depth of Field. 
+- **Hyperfocal Distance** – This is the point in the focus spectrum where the farthest object in the frame is just at the far end of focus. In other words, this is the focal position that maximizes Depth of Field.
 - **Lens Position** – That's what controls all of the above other terms. This is the distance of the lens from the sensor and thereby the controller of focus.
 
 
@@ -365,129 +365,129 @@ Do the following to wire-up the view controller for Manual Focus Control:
 
 1. Add the following using statements:
 
-	```csharp
-	using System;
-	using Foundation;
-	using UIKit;
-	using System.CodeDom.Compiler;
-	using System.Collections.Generic;
-	using System.Linq;
-	using AVFoundation;
-	using CoreVideo;
-	using CoreMedia;
-	using CoreGraphics;
-	using CoreFoundation;
-	using System.Timers;
-	```  
-  
+    ```csharp
+    using System;
+    using Foundation;
+    using UIKit;
+    using System.CodeDom.Compiler;
+    using System.Collections.Generic;
+    using System.Linq;
+    using AVFoundation;
+    using CoreVideo;
+    using CoreMedia;
+    using CoreGraphics;
+    using CoreFoundation;
+    using System.Timers;
+    ```
+
 1. Add the following private variables:
 
-	```csharp
-	#region Private Variables
-	private NSError Error;
-	private bool Automatic = true;
-	#endregion
-	```  
-  
+    ```csharp
+    #region Private Variables
+    private NSError Error;
+    private bool Automatic = true;
+    #endregion
+    ```
+
 1. Add the following computed properties:
 
-	```csharp
-	#region Computed Properties
-	public AppDelegate ThisApp {
-	    get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-	}
-	public Timer SampleTimer { get; set; }
-	#endregion
-	```  
-  
+    ```csharp
+    #region Computed Properties
+    public AppDelegate ThisApp {
+        get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+    }
+    public Timer SampleTimer { get; set; }
+    #endregion
+    ```
+
 1. Override the `ViewDidLoad` method and add the following code:
 
-	```csharp
-	public override void ViewDidLoad ()
-	{
-	    base.ViewDidLoad ();
-	
-	    // Hide no camera label
-	    NoCamera.Hidden = ThisApp.CameraAvailable;
-	
-	    // Attach to camera view
-	    ThisApp.Recorder.DisplayView = CameraView;
-	
-	    // Create a timer to monitor and update the UI
-	    SampleTimer = new Timer (5000);
-	    SampleTimer.Elapsed += (sender, e) => {
-	        // Update position slider
-	        Position.BeginInvokeOnMainThread(() =>{
-	            Position.Value = ThisApp.Input.Device.LensPosition;
-	        });
-	    };
-	
-	    // Watch for value changes
-	    Segments.ValueChanged += (object sender, EventArgs e) => {
-	
-	        // Lock device for change
-	        ThisApp.CaptureDevice.LockForConfiguration(out Error);
-	
-	        // Take action based on the segment selected
-	        switch(Segments.SelectedSegment) {
-	        case 0:
-	            // Activate auto focus and start monitoring position
-	            Position.Enabled = false;
-	            ThisApp.CaptureDevice.FocusMode = AVCaptureFocusMode.ContinuousAutoFocus;
-	            SampleTimer.Start();
-	            Automatic = true;
-	            break;
-	        case 1:
-	            // Stop auto focus and allow the user to control the camera
-	            SampleTimer.Stop();
-	            ThisApp.CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;
-	            Automatic = false;
-	            Position.Enabled = true;
-	            break;
-	        }
-	
-	        // Unlock device
-	        ThisApp.CaptureDevice.UnlockForConfiguration();
-	    };
-	
-	    // Monitor position changes
-	    Position.ValueChanged += (object sender, EventArgs e) => {
-	
-	        // If we are in the automatic mode, ignore changes
-	        if (Automatic) return;
-	
-	        // Update Focus position
-	        ThisApp.CaptureDevice.LockForConfiguration(out Error);
-	        ThisApp.CaptureDevice.SetFocusModeLocked(Position.Value,null);
-	        ThisApp.CaptureDevice.UnlockForConfiguration();
-	    };
-	}
-	```  
-  
+    ```csharp
+    public override void ViewDidLoad ()
+    {
+        base.ViewDidLoad ();
+
+        // Hide no camera label
+        NoCamera.Hidden = ThisApp.CameraAvailable;
+
+        // Attach to camera view
+        ThisApp.Recorder.DisplayView = CameraView;
+
+        // Create a timer to monitor and update the UI
+        SampleTimer = new Timer (5000);
+        SampleTimer.Elapsed += (sender, e) => {
+            // Update position slider
+            Position.BeginInvokeOnMainThread(() =>{
+                Position.Value = ThisApp.Input.Device.LensPosition;
+            });
+        };
+
+        // Watch for value changes
+        Segments.ValueChanged += (object sender, EventArgs e) => {
+
+            // Lock device for change
+            ThisApp.CaptureDevice.LockForConfiguration(out Error);
+
+            // Take action based on the segment selected
+            switch(Segments.SelectedSegment) {
+            case 0:
+                // Activate auto focus and start monitoring position
+                Position.Enabled = false;
+                ThisApp.CaptureDevice.FocusMode = AVCaptureFocusMode.ContinuousAutoFocus;
+                SampleTimer.Start();
+                Automatic = true;
+                break;
+            case 1:
+                // Stop auto focus and allow the user to control the camera
+                SampleTimer.Stop();
+                ThisApp.CaptureDevice.FocusMode = AVCaptureFocusMode.Locked;
+                Automatic = false;
+                Position.Enabled = true;
+                break;
+            }
+
+            // Unlock device
+            ThisApp.CaptureDevice.UnlockForConfiguration();
+        };
+
+        // Monitor position changes
+        Position.ValueChanged += (object sender, EventArgs e) => {
+
+            // If we are in the automatic mode, ignore changes
+            if (Automatic) return;
+
+            // Update Focus position
+            ThisApp.CaptureDevice.LockForConfiguration(out Error);
+            ThisApp.CaptureDevice.SetFocusModeLocked(Position.Value,null);
+            ThisApp.CaptureDevice.UnlockForConfiguration();
+        };
+    }
+    ```
+
 1. Override the `ViewDidAppear` method and add the following to start recording when the view loads:
 
-	```csharp
-	public override void ViewDidAppear (bool animated)
-	{
-	    base.ViewDidAppear (animated);
-	
-	    // Start udating the display
-	    if (ThisApp.CameraAvailable) {
-	        // Remap to this camera view
-	        ThisApp.Recorder.DisplayView = CameraView;
-	
-	        ThisApp.Session.StartRunning ();
-	        SampleTimer.Start ();
-	    }
-	}
-	```  
-  
+    ```csharp
+    public override void ViewDidAppear (bool animated)
+    {
+        base.ViewDidAppear (animated);
+
+        // Start udating the display
+        if (ThisApp.CameraAvailable) {
+            // Remap to this camera view
+            ThisApp.Recorder.DisplayView = CameraView;
+
+            ThisApp.Session.StartRunning ();
+            SampleTimer.Start ();
+        }
+    }
+    ```
+
 1. With the camera in the Auto mode, the slider will move automatically as the camera adjusts focus:
 
-	[![](intro-to-manual-camera-controls-images/image6.png "The slider will move automatically as the camera adjusts focus in this sample app")](intro-to-manual-camera-controls-images/image6.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image6.png "The slider will move automatically as the camera adjusts focus in this sample app")](intro-to-manual-camera-controls-images/image6.png#lightbox)
 1. Tap the Locked segment and drag the position slider to adjust the lens position manually:
 
-	[![](intro-to-manual-camera-controls-images/image7.png "Manually adjusting the lens position")](intro-to-manual-camera-controls-images/image7.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image7.png "Manually adjusting the lens position")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. Stop the application.
 
 
@@ -512,7 +512,7 @@ Before discussing the details of controlling exposure in an IOS 8 application. L
 The three basic elements that come together to control exposure are:
 
 - **Shutter Speed** – This is the length of time that the shutter is open to let light onto the camera sensor. The shorter the time the shutter is open, the less light is let in and the crisper the image is (less motion blur). The longer the shutter is open, the more light is let in and the more motion blur that occurs.
-- **ISO Mapping** – This is a term borrowed from film photography and refers to the sensitivity of the chemicals in the film to light. Low ISO values in film have less grain and finer color reproduction; low ISO values on digital sensors have less sensor noise but less brightness. The higher the ISO value, the brighter the image but with more sensor noise. “ISO” on a digital sensor is a measure of [electronic gain](https://en.wikipedia.org/wiki/Gain), not a physical feature. 
+- **ISO Mapping** – This is a term borrowed from film photography and refers to the sensitivity of the chemicals in the film to light. Low ISO values in film have less grain and finer color reproduction; low ISO values on digital sensors have less sensor noise but less brightness. The higher the ISO value, the brighter the image but with more sensor noise. “ISO” on a digital sensor is a measure of [electronic gain](https://en.wikipedia.org/wiki/Gain), not a physical feature.
 - **Lens Aperture** – This is the size of the lens opening. On all iOS devices the lens aperture is fixed, so the only two values that can be used to adjust exposure are Shutter Speed and ISO.
 
 
@@ -568,12 +568,12 @@ CaptureDevice.UnlockForConfiguration();
 
 The minimum and maximum setting ranges depend on the device the application is running on, so they should never be hard coded. Instead, use the following properties to get the minimum and maximum value ranges:
 
-- `CaptureDevice.MinExposureTargetBias` 
-- `CaptureDevice.MaxExposureTargetBias` 
-- `CaptureDevice.ActiveFormat.MinISO` 
-- `CaptureDevice.ActiveFormat.MaxISO` 
-- `CaptureDevice.ActiveFormat.MinExposureDuration` 
-- `CaptureDevice.ActiveFormat.MaxExposureDuration` 
+- `CaptureDevice.MinExposureTargetBias`
+- `CaptureDevice.MaxExposureTargetBias`
+- `CaptureDevice.ActiveFormat.MinISO`
+- `CaptureDevice.ActiveFormat.MaxISO`
+- `CaptureDevice.ActiveFormat.MinExposureDuration`
+- `CaptureDevice.ActiveFormat.MaxExposureDuration`
 
 
 As seen in the code above, the Capture Device must be locked for configuration before a change in exposure can be made.
@@ -595,202 +595,202 @@ Do the following to wire-up the view controller for Manual Exposure Control:
 
 
 1. Add the following using statements:
-	
-	```
-	using System;
-	using Foundation;
-	using UIKit;
-	using System.CodeDom.Compiler;
-	using System.Collections.Generic;
-	using System.Linq;
-	using AVFoundation;
-	using CoreVideo;
-	using CoreMedia;
-	using CoreGraphics;
-	using CoreFoundation;
-	using System.Timers;
-	```  
-  
+
+    ```csharp
+    using System;
+    using Foundation;
+    using UIKit;
+    using System.CodeDom.Compiler;
+    using System.Collections.Generic;
+    using System.Linq;
+    using AVFoundation;
+    using CoreVideo;
+    using CoreMedia;
+    using CoreGraphics;
+    using CoreFoundation;
+    using System.Timers;
+    ```
+
 1. Add the following private variables:
 
-	```csharp
-	#region Private Variables
-	private NSError Error; 
-	private bool Automatic = true;
-	private nfloat ExposureDurationPower = 5;
-	private nfloat ExposureMinimumDuration = 1.0f/1000.0f;
-	#endregion
-	```  
-  
+    ```csharp
+    #region Private Variables
+    private NSError Error;
+    private bool Automatic = true;
+    private nfloat ExposureDurationPower = 5;
+    private nfloat ExposureMinimumDuration = 1.0f/1000.0f;
+    #endregion
+    ```
+
 1. Add the following computed properties:
 
-	```csharp
-	#region Computed Properties
-	public AppDelegate ThisApp {
-	    get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-	}
-	public Timer SampleTimer { get; set; }
-	#endregion
-	```  
-  
+    ```csharp
+    #region Computed Properties
+    public AppDelegate ThisApp {
+        get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+    }
+    public Timer SampleTimer { get; set; }
+    #endregion
+    ```
+
 1. Override the `ViewDidLoad` method and add the following code:
 
-	```csharp
-	public override void ViewDidLoad ()
-	{
-	    base.ViewDidLoad ();
-	
-	    // Hide no camera label
-	    NoCamera.Hidden = ThisApp.CameraAvailable;
-	
-	    // Attach to camera view
-	    ThisApp.Recorder.DisplayView = CameraView;
-	
-	    // Set min and max values
-	    Offset.MinValue = ThisApp.CaptureDevice.MinExposureTargetBias;
-	    Offset.MaxValue = ThisApp.CaptureDevice.MaxExposureTargetBias;
-	
-	    Duration.MinValue = 0.0f;
-	    Duration.MaxValue = 1.0f;
-	
-	    ISO.MinValue = ThisApp.CaptureDevice.ActiveFormat.MinISO;
-	    ISO.MaxValue = ThisApp.CaptureDevice.ActiveFormat.MaxISO;
-	
-	    Bias.MinValue = ThisApp.CaptureDevice.MinExposureTargetBias;
-	    Bias.MaxValue = ThisApp.CaptureDevice.MaxExposureTargetBias;
-	
-	    // Create a timer to monitor and update the UI
-	    SampleTimer = new Timer (5000);
-	    SampleTimer.Elapsed += (sender, e) => {
-	        // Update position slider
-	        Offset.BeginInvokeOnMainThread(() =>{
-	            Offset.Value = ThisApp.Input.Device.ExposureTargetOffset;
-	        });
-	
-	        Duration.BeginInvokeOnMainThread(() =>{
-	            var newDurationSeconds = CMTimeGetSeconds(ThisApp.Input.Device.ExposureDuration);
-	            var minDurationSeconds = Math.Max(CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MinExposureDuration), ExposureMinimumDuration);
-	            var maxDurationSeconds = CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MaxExposureDuration);
-	            var p = (newDurationSeconds - minDurationSeconds) / (maxDurationSeconds - minDurationSeconds);
-	            Duration.Value = (float)Math.Pow(p, 1.0f/ExposureDurationPower);
-	        });
-	
-	        ISO.BeginInvokeOnMainThread(() => {
-	            ISO.Value = ThisApp.Input.Device.ISO;
-	        });
-	
-	        Bias.BeginInvokeOnMainThread(() => {
-	            Bias.Value = ThisApp.Input.Device.ExposureTargetBias;
-	        });
-	    };
-	
-	    // Watch for value changes
-	    Segments.ValueChanged += (object sender, EventArgs e) => {
-	
-	        // Lock device for change
-	        ThisApp.CaptureDevice.LockForConfiguration(out Error);
-	
-	        // Take action based on the segment selected
-	        switch(Segments.SelectedSegment) {
-	        case 0:
-	            // Activate auto exposure and start monitoring position
-	            Duration.Enabled = false;
-	            ISO.Enabled = false;
-	            ThisApp.CaptureDevice.ExposureMode = AVCaptureExposureMode.ContinuousAutoExposure;
-	            SampleTimer.Start();
-	            Automatic = true;
-	            break;
-	        case 1:
-	            // Lock exposure and allow the user to control the camera
-	            SampleTimer.Stop();
-	            ThisApp.CaptureDevice.ExposureMode = AVCaptureExposureMode.Locked;
-	            Automatic = false;
-	            Duration.Enabled = false;
-	            ISO.Enabled = false;
-	            break;
-	        case 2:
-	            // Custom exposure and allow the user to control the camera
-	            SampleTimer.Stop();
-	            ThisApp.CaptureDevice.ExposureMode = AVCaptureExposureMode.Custom;
-	            Automatic = false;
-	            Duration.Enabled = true;
-	            ISO.Enabled = true;
-	            break;
-	        }
-	
-	        // Unlock device
-	        ThisApp.CaptureDevice.UnlockForConfiguration();
-	    };
-	
-	    // Monitor position changes
-	    Duration.ValueChanged += (object sender, EventArgs e) => {
-	
-	        // If we are in the automatic mode, ignore changes
-	        if (Automatic) return;
-	
-	        // Calculate value
-	        var p = Math.Pow(Duration.Value,ExposureDurationPower);
-	        var minDurationSeconds = Math.Max(CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MinExposureDuration),ExposureMinimumDuration);
-	        var maxDurationSeconds = CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MaxExposureDuration);
-	        var newDurationSeconds = p * (maxDurationSeconds - minDurationSeconds) +minDurationSeconds;
-	
-	        // Update Focus position
-	        ThisApp.CaptureDevice.LockForConfiguration(out Error);
-	        ThisApp.CaptureDevice.LockExposure(CMTime.FromSeconds(p,1000*1000*1000),ThisApp.CaptureDevice.ISO,null);
-	        ThisApp.CaptureDevice.UnlockForConfiguration();
-	    };
-	
-	    ISO.ValueChanged += (object sender, EventArgs e) => {
-	
-	        // If we are in the automatic mode, ignore changes
-	        if (Automatic) return;
-	
-	        // Update Focus position
-	        ThisApp.CaptureDevice.LockForConfiguration(out Error);
-	        ThisApp.CaptureDevice.LockExposure(ThisApp.CaptureDevice.ExposureDuration,ISO.Value,null);
-	        ThisApp.CaptureDevice.UnlockForConfiguration();
-	    };
-	
-	    Bias.ValueChanged += (object sender, EventArgs e) => {
-	
-	        // If we are in the automatic mode, ignore changes
-	        // if (Automatic) return;
-	
-	        // Update Focus position
-	        ThisApp.CaptureDevice.LockForConfiguration(out Error);
-	        ThisApp.CaptureDevice.SetExposureTargetBias(Bias.Value,null);
-	        ThisApp.CaptureDevice.UnlockForConfiguration();
-	    };
-	}
-	```  
-  
+    ```csharp
+    public override void ViewDidLoad ()
+    {
+        base.ViewDidLoad ();
+
+        // Hide no camera label
+        NoCamera.Hidden = ThisApp.CameraAvailable;
+
+        // Attach to camera view
+        ThisApp.Recorder.DisplayView = CameraView;
+
+        // Set min and max values
+        Offset.MinValue = ThisApp.CaptureDevice.MinExposureTargetBias;
+        Offset.MaxValue = ThisApp.CaptureDevice.MaxExposureTargetBias;
+
+        Duration.MinValue = 0.0f;
+        Duration.MaxValue = 1.0f;
+
+        ISO.MinValue = ThisApp.CaptureDevice.ActiveFormat.MinISO;
+        ISO.MaxValue = ThisApp.CaptureDevice.ActiveFormat.MaxISO;
+
+        Bias.MinValue = ThisApp.CaptureDevice.MinExposureTargetBias;
+        Bias.MaxValue = ThisApp.CaptureDevice.MaxExposureTargetBias;
+
+        // Create a timer to monitor and update the UI
+        SampleTimer = new Timer (5000);
+        SampleTimer.Elapsed += (sender, e) => {
+            // Update position slider
+            Offset.BeginInvokeOnMainThread(() =>{
+                Offset.Value = ThisApp.Input.Device.ExposureTargetOffset;
+            });
+
+            Duration.BeginInvokeOnMainThread(() =>{
+                var newDurationSeconds = CMTimeGetSeconds(ThisApp.Input.Device.ExposureDuration);
+                var minDurationSeconds = Math.Max(CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MinExposureDuration), ExposureMinimumDuration);
+                var maxDurationSeconds = CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MaxExposureDuration);
+                var p = (newDurationSeconds - minDurationSeconds) / (maxDurationSeconds - minDurationSeconds);
+                Duration.Value = (float)Math.Pow(p, 1.0f/ExposureDurationPower);
+            });
+
+            ISO.BeginInvokeOnMainThread(() => {
+                ISO.Value = ThisApp.Input.Device.ISO;
+            });
+
+            Bias.BeginInvokeOnMainThread(() => {
+                Bias.Value = ThisApp.Input.Device.ExposureTargetBias;
+            });
+        };
+
+        // Watch for value changes
+        Segments.ValueChanged += (object sender, EventArgs e) => {
+
+            // Lock device for change
+            ThisApp.CaptureDevice.LockForConfiguration(out Error);
+
+            // Take action based on the segment selected
+            switch(Segments.SelectedSegment) {
+            case 0:
+                // Activate auto exposure and start monitoring position
+                Duration.Enabled = false;
+                ISO.Enabled = false;
+                ThisApp.CaptureDevice.ExposureMode = AVCaptureExposureMode.ContinuousAutoExposure;
+                SampleTimer.Start();
+                Automatic = true;
+                break;
+            case 1:
+                // Lock exposure and allow the user to control the camera
+                SampleTimer.Stop();
+                ThisApp.CaptureDevice.ExposureMode = AVCaptureExposureMode.Locked;
+                Automatic = false;
+                Duration.Enabled = false;
+                ISO.Enabled = false;
+                break;
+            case 2:
+                // Custom exposure and allow the user to control the camera
+                SampleTimer.Stop();
+                ThisApp.CaptureDevice.ExposureMode = AVCaptureExposureMode.Custom;
+                Automatic = false;
+                Duration.Enabled = true;
+                ISO.Enabled = true;
+                break;
+            }
+
+            // Unlock device
+            ThisApp.CaptureDevice.UnlockForConfiguration();
+        };
+
+        // Monitor position changes
+        Duration.ValueChanged += (object sender, EventArgs e) => {
+
+            // If we are in the automatic mode, ignore changes
+            if (Automatic) return;
+
+            // Calculate value
+            var p = Math.Pow(Duration.Value,ExposureDurationPower);
+            var minDurationSeconds = Math.Max(CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MinExposureDuration),ExposureMinimumDuration);
+            var maxDurationSeconds = CMTimeGetSeconds(ThisApp.CaptureDevice.ActiveFormat.MaxExposureDuration);
+            var newDurationSeconds = p * (maxDurationSeconds - minDurationSeconds) +minDurationSeconds;
+
+            // Update Focus position
+            ThisApp.CaptureDevice.LockForConfiguration(out Error);
+            ThisApp.CaptureDevice.LockExposure(CMTime.FromSeconds(p,1000*1000*1000),ThisApp.CaptureDevice.ISO,null);
+            ThisApp.CaptureDevice.UnlockForConfiguration();
+        };
+
+        ISO.ValueChanged += (object sender, EventArgs e) => {
+
+            // If we are in the automatic mode, ignore changes
+            if (Automatic) return;
+
+            // Update Focus position
+            ThisApp.CaptureDevice.LockForConfiguration(out Error);
+            ThisApp.CaptureDevice.LockExposure(ThisApp.CaptureDevice.ExposureDuration,ISO.Value,null);
+            ThisApp.CaptureDevice.UnlockForConfiguration();
+        };
+
+        Bias.ValueChanged += (object sender, EventArgs e) => {
+
+            // If we are in the automatic mode, ignore changes
+            // if (Automatic) return;
+
+            // Update Focus position
+            ThisApp.CaptureDevice.LockForConfiguration(out Error);
+            ThisApp.CaptureDevice.SetExposureTargetBias(Bias.Value,null);
+            ThisApp.CaptureDevice.UnlockForConfiguration();
+        };
+    }
+    ```
+
 1. Override the `ViewDidAppear` method and add the following to start recording when the view loads:
 
-	```csharp
-	public override void ViewDidAppear (bool animated)
-	{
-	    base.ViewDidAppear (animated);
-	
-	    // Start udating the display
-	    if (ThisApp.CameraAvailable) {
-	        // Remap to this camera view
-	        ThisApp.Recorder.DisplayView = CameraView;
-	
-	        ThisApp.Session.StartRunning ();
-	        SampleTimer.Start ();
-	    }
-	}
-	```  
-  
+    ```csharp
+    public override void ViewDidAppear (bool animated)
+    {
+        base.ViewDidAppear (animated);
+
+        // Start udating the display
+        if (ThisApp.CameraAvailable) {
+            // Remap to this camera view
+            ThisApp.Recorder.DisplayView = CameraView;
+
+            ThisApp.Session.StartRunning ();
+            SampleTimer.Start ();
+        }
+    }
+    ```
+
 1. With the camera in the Auto mode, the sliders will move automatically as the camera adjusts exposure:
 
-	[![](intro-to-manual-camera-controls-images/image13.png "The sliders will move automatically as the camera adjusts exposure")](intro-to-manual-camera-controls-images/image13.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image13.png "The sliders will move automatically as the camera adjusts exposure")](intro-to-manual-camera-controls-images/image13.png#lightbox)
 1. Tap the Locked segment and drag the Bias slider to adjust the bias of the automatic exposure manually:
 
-	[![](intro-to-manual-camera-controls-images/image14.png "Adjusting the bias of the automatic exposure manually")](intro-to-manual-camera-controls-images/image14.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image14.png "Adjusting the bias of the automatic exposure manually")](intro-to-manual-camera-controls-images/image14.png#lightbox)
 1. Tap the Custom segment and drag the Duration and ISO sliders to manually control exposure:
 
-	[![](intro-to-manual-camera-controls-images/image15.png "Drag the Duration and ISO sliders to manually control exposure")](intro-to-manual-camera-controls-images/image15.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image15.png "Drag the Duration and ISO sliders to manually control exposure")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. Stop the application.
 
 
@@ -848,9 +848,9 @@ In addition to the features already provided by iOS 7 and above, the following f
 
 To implement the above features, the `AVCaptureWhiteBalanceGain` structure has been added with the following members:
 
-- `RedGain` 
-- `GreenGain` 
-- `BlueGain` 
+- `RedGain`
+- `GreenGain`
+- `BlueGain`
 
 
 The maximum white balance gain is currently four (4) and can be ready from the `MaxWhiteBalanceGain` property. So the legal range is from one (1) to `MaxWhiteBalanceGain` (4) currently.
@@ -908,209 +908,209 @@ Do the following to wire-up the view controller for Manual White Balance Control
 
 1. Add the following using statements:
 
-	```csharp
-	using System;
-	using Foundation;
-	using UIKit;
-	using System.CodeDom.Compiler;
-	using System.Collections.Generic;
-	using System.Linq;
-	using AVFoundation;
-	using CoreVideo;
-	using CoreMedia;
-	using CoreGraphics;
-	using CoreFoundation;
-	using System.Timers;
-	```  
-  
+    ```csharp
+    using System;
+    using Foundation;
+    using UIKit;
+    using System.CodeDom.Compiler;
+    using System.Collections.Generic;
+    using System.Linq;
+    using AVFoundation;
+    using CoreVideo;
+    using CoreMedia;
+    using CoreGraphics;
+    using CoreFoundation;
+    using System.Timers;
+    ```
+
 1. Add the following private variables:
 
-	```csharp
-	#region Private Variables
-	private NSError Error; 
-	private bool Automatic = true;
-	#endregion
-	```
-  
+    ```csharp
+    #region Private Variables
+    private NSError Error;
+    private bool Automatic = true;
+    #endregion
+    ```
+
 1. Add the following computed properties:
 
-	```csharp
-	#region Computed Properties
-	public AppDelegate ThisApp {
-	    get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-	}
-	public Timer SampleTimer { get; set; }
-	#endregion
-	```  
-  
+    ```csharp
+    #region Computed Properties
+    public AppDelegate ThisApp {
+        get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+    }
+    public Timer SampleTimer { get; set; }
+    #endregion
+    ```
+
 1. Add the following private method to set the new white balance Temperature and Tint:
 
-	```csharp
-	#region Private Methods
-	void SetTemperatureAndTint() {
-		// Grab current temp and tint
-		var TempAndTint = new AVCaptureWhiteBalanceTemperatureAndTintValues (Temperature.Value, Tint.Value);
+    ```csharp
+    #region Private Methods
+    void SetTemperatureAndTint() {
+        // Grab current temp and tint
+        var TempAndTint = new AVCaptureWhiteBalanceTemperatureAndTintValues (Temperature.Value, Tint.Value);
 
-		// Convert Color space
-		var gains = ThisApp.CaptureDevice.GetDeviceWhiteBalanceGains (TempAndTint);
+        // Convert Color space
+        var gains = ThisApp.CaptureDevice.GetDeviceWhiteBalanceGains (TempAndTint);
 
-		// Set the new values
-		if (ThisApp.CaptureDevice.LockForConfiguration (out Error)) {
-			gains = NomralizeGains (gains);
-			ThisApp.CaptureDevice.SetWhiteBalanceModeLockedWithDeviceWhiteBalanceGains (gains, null);
-			ThisApp.CaptureDevice.UnlockForConfiguration ();
-		}
-	}
-	
-	AVCaptureWhiteBalanceGains NomralizeGains (AVCaptureWhiteBalanceGains gains)
-	{
-		gains.RedGain = Math.Max (1, gains.RedGain);
-		gains.BlueGain = Math.Max (1, gains.BlueGain);
-		gains.GreenGain = Math.Max (1, gains.GreenGain);
+        // Set the new values
+        if (ThisApp.CaptureDevice.LockForConfiguration (out Error)) {
+            gains = NomralizeGains (gains);
+            ThisApp.CaptureDevice.SetWhiteBalanceModeLockedWithDeviceWhiteBalanceGains (gains, null);
+            ThisApp.CaptureDevice.UnlockForConfiguration ();
+        }
+    }
 
-		float maxGain = ThisApp.CaptureDevice.MaxWhiteBalanceGain;
-		gains.RedGain = Math.Min (maxGain, gains.RedGain);
-		gains.BlueGain = Math.Min (maxGain, gains.BlueGain);
-		gains.GreenGain = Math.Min (maxGain, gains.GreenGain);
+    AVCaptureWhiteBalanceGains NomralizeGains (AVCaptureWhiteBalanceGains gains)
+    {
+        gains.RedGain = Math.Max (1, gains.RedGain);
+        gains.BlueGain = Math.Max (1, gains.BlueGain);
+        gains.GreenGain = Math.Max (1, gains.GreenGain);
 
-		return gains;
-	}
-	#endregion
-	```   
-  
+        float maxGain = ThisApp.CaptureDevice.MaxWhiteBalanceGain;
+        gains.RedGain = Math.Min (maxGain, gains.RedGain);
+        gains.BlueGain = Math.Min (maxGain, gains.BlueGain);
+        gains.GreenGain = Math.Min (maxGain, gains.GreenGain);
+
+        return gains;
+    }
+    #endregion
+    ```
+
 1. Override the `ViewDidLoad` method and add the following code:
 
-	```csharp
-	public override void ViewDidLoad ()
-	{
-		base.ViewDidLoad ();
+    ```csharp
+    public override void ViewDidLoad ()
+    {
+        base.ViewDidLoad ();
 
-		// Hide no camera label
-		NoCamera.Hidden = ThisApp.CameraAvailable;
+        // Hide no camera label
+        NoCamera.Hidden = ThisApp.CameraAvailable;
 
-		// Attach to camera view
-		ThisApp.Recorder.DisplayView = CameraView;
+        // Attach to camera view
+        ThisApp.Recorder.DisplayView = CameraView;
 
-		// Set min and max values
-		Temperature.MinValue = 1000f;
-		Temperature.MaxValue = 10000f;
+        // Set min and max values
+        Temperature.MinValue = 1000f;
+        Temperature.MaxValue = 10000f;
 
-		Tint.MinValue = -150f;
-		Tint.MaxValue = 150f;
+        Tint.MinValue = -150f;
+        Tint.MaxValue = 150f;
 
-		// Create a timer to monitor and update the UI
-		SampleTimer = new Timer (5000);
-		SampleTimer.Elapsed += (sender, e) => {
-			// Convert color space
-			var TempAndTint = ThisApp.CaptureDevice.GetTemperatureAndTintValues (ThisApp.CaptureDevice.DeviceWhiteBalanceGains);
+        // Create a timer to monitor and update the UI
+        SampleTimer = new Timer (5000);
+        SampleTimer.Elapsed += (sender, e) => {
+            // Convert color space
+            var TempAndTint = ThisApp.CaptureDevice.GetTemperatureAndTintValues (ThisApp.CaptureDevice.DeviceWhiteBalanceGains);
 
-			// Update slider positions
-			Temperature.BeginInvokeOnMainThread (() => {
-				Temperature.Value = TempAndTint.Temperature;
-			});
+            // Update slider positions
+            Temperature.BeginInvokeOnMainThread (() => {
+                Temperature.Value = TempAndTint.Temperature;
+            });
 
-			Tint.BeginInvokeOnMainThread (() => {
-				Tint.Value = TempAndTint.Tint;
-			});
-		};
+            Tint.BeginInvokeOnMainThread (() => {
+                Tint.Value = TempAndTint.Tint;
+            });
+        };
 
-		// Watch for value changes
-		Segments.ValueChanged += (sender, e) => {
-			// Lock device for change
-			if (ThisApp.CaptureDevice.LockForConfiguration (out Error)) {
+        // Watch for value changes
+        Segments.ValueChanged += (sender, e) => {
+            // Lock device for change
+            if (ThisApp.CaptureDevice.LockForConfiguration (out Error)) {
 
-				// Take action based on the segment selected
-				switch (Segments.SelectedSegment) {
-				case 0:
-				// Activate auto focus and start monitoring position
-					Temperature.Enabled = false;
-					Tint.Enabled = false;
-					ThisApp.CaptureDevice.WhiteBalanceMode = AVCaptureWhiteBalanceMode.ContinuousAutoWhiteBalance;
-					SampleTimer.Start ();
-					Automatic = true;
-					break;
-				case 1:
-				// Stop auto focus and allow the user to control the camera
-					SampleTimer.Stop ();
-					ThisApp.CaptureDevice.WhiteBalanceMode = AVCaptureWhiteBalanceMode.Locked;
-					Automatic = false;
-					Temperature.Enabled = true;
-					Tint.Enabled = true;
-					break;
-				}
+                // Take action based on the segment selected
+                switch (Segments.SelectedSegment) {
+                case 0:
+                // Activate auto focus and start monitoring position
+                    Temperature.Enabled = false;
+                    Tint.Enabled = false;
+                    ThisApp.CaptureDevice.WhiteBalanceMode = AVCaptureWhiteBalanceMode.ContinuousAutoWhiteBalance;
+                    SampleTimer.Start ();
+                    Automatic = true;
+                    break;
+                case 1:
+                // Stop auto focus and allow the user to control the camera
+                    SampleTimer.Stop ();
+                    ThisApp.CaptureDevice.WhiteBalanceMode = AVCaptureWhiteBalanceMode.Locked;
+                    Automatic = false;
+                    Temperature.Enabled = true;
+                    Tint.Enabled = true;
+                    break;
+                }
 
-				// Unlock device
-				ThisApp.CaptureDevice.UnlockForConfiguration ();
-			}
-		};
+                // Unlock device
+                ThisApp.CaptureDevice.UnlockForConfiguration ();
+            }
+        };
 
-		// Monitor position changes
-		Temperature.TouchUpInside += (sender, e) => {
+        // Monitor position changes
+        Temperature.TouchUpInside += (sender, e) => {
 
-			// If we are in the automatic mode, ignore changes
-			if (Automatic)
-				return;
+            // If we are in the automatic mode, ignore changes
+            if (Automatic)
+                return;
 
-			// Update white balance
-			SetTemperatureAndTint ();
-		};
+            // Update white balance
+            SetTemperatureAndTint ();
+        };
 
-		Tint.TouchUpInside += (sender, e) => {
+        Tint.TouchUpInside += (sender, e) => {
 
-			// If we are in the automatic mode, ignore changes
-			if (Automatic)
-				return;
+            // If we are in the automatic mode, ignore changes
+            if (Automatic)
+                return;
 
-			// Update white balance
-			SetTemperatureAndTint ();
-		};
+            // Update white balance
+            SetTemperatureAndTint ();
+        };
 
-		GrayCardButton.TouchUpInside += (sender, e) => {
+        GrayCardButton.TouchUpInside += (sender, e) => {
 
-			// If we are in the automatic mode, ignore changes
-			if (Automatic)
-				return;
+            // If we are in the automatic mode, ignore changes
+            if (Automatic)
+                return;
 
-			// Get gray card values
-			var gains = ThisApp.CaptureDevice.GrayWorldDeviceWhiteBalanceGains;
+            // Get gray card values
+            var gains = ThisApp.CaptureDevice.GrayWorldDeviceWhiteBalanceGains;
 
-			// Set the new values
-			if (ThisApp.CaptureDevice.LockForConfiguration (out Error)) {
-				ThisApp.CaptureDevice.SetWhiteBalanceModeLockedWithDeviceWhiteBalanceGains (gains, null);
-				ThisApp.CaptureDevice.UnlockForConfiguration ();
-			}
-		};
-	}
-	``` 
-  
+            // Set the new values
+            if (ThisApp.CaptureDevice.LockForConfiguration (out Error)) {
+                ThisApp.CaptureDevice.SetWhiteBalanceModeLockedWithDeviceWhiteBalanceGains (gains, null);
+                ThisApp.CaptureDevice.UnlockForConfiguration ();
+            }
+        };
+    }
+    ```
+
 1. Override the `ViewDidAppear` method and add the following to start recording when the view loads:
 
-	```csharp
-	public override void ViewDidAppear (bool animated)
-	{
-	    base.ViewDidAppear (animated);
-	
-	    // Start udating the display
-	    if (ThisApp.CameraAvailable) {
-	        // Remap to this camera view
-	        ThisApp.Recorder.DisplayView = CameraView;
-	
-	        ThisApp.Session.StartRunning ();
-	        SampleTimer.Start ();
-	    }
-	}
-	```  
-  
+    ```csharp
+    public override void ViewDidAppear (bool animated)
+    {
+        base.ViewDidAppear (animated);
+
+        // Start udating the display
+        if (ThisApp.CameraAvailable) {
+            // Remap to this camera view
+            ThisApp.Recorder.DisplayView = CameraView;
+
+            ThisApp.Session.StartRunning ();
+            SampleTimer.Start ();
+        }
+    }
+    ```
+
 1. Save the changes the to code and run the application.
 1. With the camera in the Auto mode, the sliders will move automatically as the camera adjusts white balance:
 
-	[![](intro-to-manual-camera-controls-images/image19.png "The sliders will move automatically as the camera adjusts white balance")](intro-to-manual-camera-controls-images/image19.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image19.png "The sliders will move automatically as the camera adjusts white balance")](intro-to-manual-camera-controls-images/image19.png#lightbox)
 1. Tap the Locked segment and drag the Temp and Tint sliders to adjust the white balance manually:
 
-	[![](intro-to-manual-camera-controls-images/image20.png "Drag the Temp and Tint sliders to adjust the white balance manually")](intro-to-manual-camera-controls-images/image20.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image20.png "Drag the Temp and Tint sliders to adjust the white balance manually")](intro-to-manual-camera-controls-images/image20.png#lightbox)
 1. With the Locked segment still selected, place a physical gray card in front of the camera and tap the Gray Card button to adjust white balance to the Gray World:
 
-	[![](intro-to-manual-camera-controls-images/image21.png "Tap the Gray Card button to adjust white balance to the Gray World")](intro-to-manual-camera-controls-images/image21.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image21.png "Tap the Gray Card button to adjust white balance to the Gray World")](intro-to-manual-camera-controls-images/image21.png#lightbox)
 1. Stop the application.
 
 The above code has shown how to monitor the white balance settings when the camera is in the Automatic mode or use sliders to control the white balance when it is in the Locked mode.
@@ -1140,8 +1140,8 @@ All Bracketed Capture commands are implemented in the `AVCaptureStillImageOutput
 
 Two new classes have been implemented to handle settings:
 
-- `AVCaptureAutoExposureBracketedStillImageSettings` – It has one property,  `ExposureTargetBias`, used to set the bias for an auto exposure bracket. 
-- `AVCaptureManual`  `ExposureBracketedStillImageSettings` – It has two properties,  `ExposureDuration` and  `ISO`, used to set the shutter speed and ISO for a manual exposure bracket. 
+- `AVCaptureAutoExposureBracketedStillImageSettings` – It has one property,  `ExposureTargetBias`, used to set the bias for an auto exposure bracket.
+- `AVCaptureManual`  `ExposureBracketedStillImageSettings` – It has two properties,  `ExposureDuration` and  `ISO`, used to set the shutter speed and ISO for a manual exposure bracket.
 
 
 ### Bracketed Capture Controls Do's and Don'ts
@@ -1195,153 +1195,153 @@ Do the following to wire-up the view controller for Bracketed Capture:
 
 1. Add the following using statements:
 
-	```csharp
-	using System;
-	using System.Drawing;
-	using Foundation;
-	using UIKit;
-	using System.CodeDom.Compiler;
-	using System.Collections.Generic;
-	using System.Linq;
-	using AVFoundation;
-	using CoreVideo;
-	using CoreMedia;
-	using CoreGraphics;
-	using CoreFoundation;
-	using CoreImage;
-	```  
-  
+    ```csharp
+    using System;
+    using System.Drawing;
+    using Foundation;
+    using UIKit;
+    using System.CodeDom.Compiler;
+    using System.Collections.Generic;
+    using System.Linq;
+    using AVFoundation;
+    using CoreVideo;
+    using CoreMedia;
+    using CoreGraphics;
+    using CoreFoundation;
+    using CoreImage;
+    ```
+
 1. Add the following private variables:
 
-	```csharp
-	#region Private Variables
-	private NSError Error;
-	private List<UIImageView> Output = new List<UIImageView>();
-	private nint OutputIndex = 0;
-	#endregion
-	```    
-  
+    ```csharp
+    #region Private Variables
+    private NSError Error;
+    private List<UIImageView> Output = new List<UIImageView>();
+    private nint OutputIndex = 0;
+    #endregion
+    ```
+
 1. Add the following computed properties:
 
-	```csharp
-	#region Computed Properties
-	public AppDelegate ThisApp {
-	    get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-	}
-	#endregion
-	```  
-  
+    ```csharp
+    #region Computed Properties
+    public AppDelegate ThisApp {
+        get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+    }
+    #endregion
+    ```
+
 1. Add the following private method to build the required output image views:
 
-	```csharp
-	#region Private Methods
-	private UIImageView BuildOutputView(nint n) {
-	
-	    // Create a new image view controller
-	    var imageView = new UIImageView (new CGRect (CameraView.Frame.Width * n, 0, CameraView.Frame.Width, CameraView.Frame.Height));
-	
-	    // Load a temp image
-	    imageView.Image = UIImage.FromFile ("Default-568h@2x.png");
-	
-	    // Add a label
-	    UILabel label = new UILabel (new CGRect (0, 20, CameraView.Frame.Width, 24));
-	    label.TextColor = UIColor.White;
-	    label.Text = string.Format ("Bracketed Image {0}", n);
-	    imageView.AddSubview (label);
-	
-	    // Add to scrolling view
-	    ScrollView.AddSubview (imageView);
-	
-	    // Return new image view
-	    return imageView;
-	}
-	#endregion
-	```  
-  
+    ```csharp
+    #region Private Methods
+    private UIImageView BuildOutputView(nint n) {
+
+        // Create a new image view controller
+        var imageView = new UIImageView (new CGRect (CameraView.Frame.Width * n, 0, CameraView.Frame.Width, CameraView.Frame.Height));
+
+        // Load a temp image
+        imageView.Image = UIImage.FromFile ("Default-568h@2x.png");
+
+        // Add a label
+        UILabel label = new UILabel (new CGRect (0, 20, CameraView.Frame.Width, 24));
+        label.TextColor = UIColor.White;
+        label.Text = string.Format ("Bracketed Image {0}", n);
+        imageView.AddSubview (label);
+
+        // Add to scrolling view
+        ScrollView.AddSubview (imageView);
+
+        // Return new image view
+        return imageView;
+    }
+    #endregion
+    ```
+
 1. Override the `ViewDidLoad` method and add the following code:
-	
-	```
-	public override void ViewDidLoad ()
-	{
-	    base.ViewDidLoad ();
-	
-	    // Hide no camera label
-	    NoCamera.Hidden = ThisApp.CameraAvailable;
-	
-	    // Attach to camera view
-	    ThisApp.Recorder.DisplayView = CameraView;
-	
-	    // Setup scrolling area
-	    ScrollView.ContentSize = new SizeF (CameraView.Frame.Width * 4, CameraView.Frame.Height);
-	
-	    // Add output views
-	    Output.Add (BuildOutputView (1));
-	    Output.Add (BuildOutputView (2));
-	    Output.Add (BuildOutputView (3));
-	
-	    // Create preset settings
-	    var Settings = new AVCaptureBracketedStillImageSettings[] {
-	        AVCaptureAutoExposureBracketedStillImageSettings.Create(-2.0f),
-	        AVCaptureAutoExposureBracketedStillImageSettings.Create(0.0f),
-	        AVCaptureAutoExposureBracketedStillImageSettings.Create(2.0f)
-	    };
-	
-	    // Wireup capture button
-	    CaptureButton.TouchUpInside += (sender, e) => {
-	        // Reset output index
-	        OutputIndex = 0;
-	
-	        // Tell the camera that we are getting ready to do a bracketed capture
-	        ThisApp.StillImageOutput.PrepareToCaptureStillImageBracket(ThisApp.StillImageOutput.Connections[0],Settings,async (bool ready, NSError err) => {
-	            // Was there an error, if so report it
-	            if (err!=null) {
-	                Console.WriteLine("Error: {0}",err.LocalizedDescription);
-	            }
-	        });
-	
-	        // Ask the camera to snap a bracketed capture
-	        ThisApp.StillImageOutput.CaptureStillImageBracket(ThisApp.StillImageOutput.Connections[0],Settings, (sampleBuffer, settings, err) =>{
-	            // Convert raw image stream into a Core Image Image
-	            var imageData = AVCaptureStillImageOutput.JpegStillToNSData(sampleBuffer);
-	            var image = CIImage.FromData(imageData);
-	
-	            // Display the resulting image
-	            Output[OutputIndex++].Image = UIImage.FromImage(image);
-	
-	            // IMPORTANT: You must release the buffer because AVFoundation has a fixed number
-	            // of buffers and will stop delivering frames if it runs out.
-	            sampleBuffer.Dispose();
-	        });
-	    };
-	}
-	```
-	
-  
+
+    ```csharp
+    public override void ViewDidLoad ()
+    {
+        base.ViewDidLoad ();
+
+        // Hide no camera label
+        NoCamera.Hidden = ThisApp.CameraAvailable;
+
+        // Attach to camera view
+        ThisApp.Recorder.DisplayView = CameraView;
+
+        // Setup scrolling area
+        ScrollView.ContentSize = new SizeF (CameraView.Frame.Width * 4, CameraView.Frame.Height);
+
+        // Add output views
+        Output.Add (BuildOutputView (1));
+        Output.Add (BuildOutputView (2));
+        Output.Add (BuildOutputView (3));
+
+        // Create preset settings
+        var Settings = new AVCaptureBracketedStillImageSettings[] {
+            AVCaptureAutoExposureBracketedStillImageSettings.Create(-2.0f),
+            AVCaptureAutoExposureBracketedStillImageSettings.Create(0.0f),
+            AVCaptureAutoExposureBracketedStillImageSettings.Create(2.0f)
+        };
+
+        // Wireup capture button
+        CaptureButton.TouchUpInside += (sender, e) => {
+            // Reset output index
+            OutputIndex = 0;
+
+            // Tell the camera that we are getting ready to do a bracketed capture
+            ThisApp.StillImageOutput.PrepareToCaptureStillImageBracket(ThisApp.StillImageOutput.Connections[0],Settings,async (bool ready, NSError err) => {
+                // Was there an error, if so report it
+                if (err!=null) {
+                    Console.WriteLine("Error: {0}",err.LocalizedDescription);
+                }
+            });
+
+            // Ask the camera to snap a bracketed capture
+            ThisApp.StillImageOutput.CaptureStillImageBracket(ThisApp.StillImageOutput.Connections[0],Settings, (sampleBuffer, settings, err) =>{
+                // Convert raw image stream into a Core Image Image
+                var imageData = AVCaptureStillImageOutput.JpegStillToNSData(sampleBuffer);
+                var image = CIImage.FromData(imageData);
+
+                // Display the resulting image
+                Output[OutputIndex++].Image = UIImage.FromImage(image);
+
+                // IMPORTANT: You must release the buffer because AVFoundation has a fixed number
+                // of buffers and will stop delivering frames if it runs out.
+                sampleBuffer.Dispose();
+            });
+        };
+    }
+    ```
+
+
 1. Override the `ViewDidAppear` method and add the following code:
 
-	```csharp
-	public override void ViewDidAppear (bool animated)
-	{
-	    base.ViewDidAppear (animated);
-	
-	    // Start udating the display
-	    if (ThisApp.CameraAvailable) {
-	        // Remap to this camera view
-	        ThisApp.Recorder.DisplayView = CameraView;
-	
-	        ThisApp.Session.StartRunning ();
-	    }
-	}
-	
-	```  
-	
+    ```csharp
+    public override void ViewDidAppear (bool animated)
+    {
+        base.ViewDidAppear (animated);
+
+        // Start udating the display
+        if (ThisApp.CameraAvailable) {
+            // Remap to this camera view
+            ThisApp.Recorder.DisplayView = CameraView;
+
+            ThisApp.Session.StartRunning ();
+        }
+    }
+
+    ```
+
 1. Save the changes the to code and run the application.
 1. Frame a scene and tap the Capture Bracket button:
 
-	[![](intro-to-manual-camera-controls-images/image24.png "Frame a scene and tap the Capture Bracket button")](intro-to-manual-camera-controls-images/image24.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image24.png "Frame a scene and tap the Capture Bracket button")](intro-to-manual-camera-controls-images/image24.png#lightbox)
 1. Swipe right to left to see the three images taken by the Bracketed Capture:
 
-	[![](intro-to-manual-camera-controls-images/image25.png "Swipe right to left to see the three images taken by the Bracketed Capture")](intro-to-manual-camera-controls-images/image25.png#lightbox)
+    [![](intro-to-manual-camera-controls-images/image25.png "Swipe right to left to see the three images taken by the Bracketed Capture")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. Stop the application.
 
 

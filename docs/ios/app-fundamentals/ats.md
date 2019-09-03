@@ -40,7 +40,7 @@ ATS will enforce the following requirements for all internet connections:
 - The Transport Layer Security (TLS) protocol must be version 1.2 or greater.
 - At least a SHA256 fingerprint with either a 2048 bit or greater RSA key, or a 256 bit or greater Elliptic-Curve (ECC) key must be used for all certificates.
 
-Again, since ATS is enabled by default in iOS 9, any attempt to make a connection that doesn't meet these requirements will result in an exception being thrown. 
+Again, since ATS is enabled by default in iOS 9, any attempt to make a connection that doesn't meet these requirements will result in an exception being thrown.
 
 <a name="ATS-Compatible-Ciphers" />
 
@@ -131,7 +131,7 @@ Pros:
 Cons:
 
 - Requires iOS 7 or later.
-- Some HttpClient features and options are not available. 
+- Some HttpClient features and options are not available.
 
 ## Diagnosing ATS Issues
 
@@ -154,20 +154,20 @@ You can configure several of the features of ATS by setting values for specific
 keys in your app's **Info.plist** file. The following keys are available for
 controlling ATS (_indented to show how they are nested_):
 
-```csharp
+```
 NSAppTransportSecurity
-	NSAllowsArbitraryLoads
-	NSAllowsArbitraryLoadsInWebContent
-	NSExceptionDomains
-	<domain-name-for-exception-as-string>
-		NSExceptionMinimumTLSVersion
-		NSExceptionRequiresForwardSecrecy
-		NSExceptionAllowsInsecureHTTPLoads
-		NSRequiresCertificateTransparency
-		NSIncludesSubdomains
-		NSThirdPartyExceptionMinimumTLSVersion
-		NSThirdPartyExceptionRequiresForwardSecrecy
-		NSThirdPartyExceptionAllowsInsecureHTTPLoads
+    NSAllowsArbitraryLoads
+    NSAllowsArbitraryLoadsInWebContent
+    NSExceptionDomains
+    <domain-name-for-exception-as-string>
+        NSExceptionMinimumTLSVersion
+        NSExceptionRequiresForwardSecrecy
+        NSExceptionAllowsInsecureHTTPLoads
+        NSRequiresCertificateTransparency
+        NSIncludesSubdomains
+        NSThirdPartyExceptionMinimumTLSVersion
+        NSThirdPartyExceptionRequiresForwardSecrecy
+        NSThirdPartyExceptionAllowsInsecureHTTPLoads
 ```
 
 Each key has the following type and meaning:
@@ -197,20 +197,20 @@ If your Xamarin.iOS app must make a request to an insecure domain, the following
 ```xml
 <key>NSAppTransportSecurity</key>
 <dict>
-	<key>NSExceptionDomains</key>
-	<dict>
-		<key>www.the-domain-name.com</key>
-		<dict>
-			<key>NSExceptionMinimumTLSVersion</key>
-			<string>TLSv1.0</string>
-			<key>NSExceptionRequiresForwardSecrecy</key>
-			<false/>
-			<key>NSExceptionAllowsInsecureHTTPLoads</key>
-			<true/>
-			<key>NSIncludesSubdomains</key>
-			<true/>
-		</dict>
-	</dict>
+    <key>NSExceptionDomains</key>
+    <dict>
+        <key>www.the-domain-name.com</key>
+        <dict>
+            <key>NSExceptionMinimumTLSVersion</key>
+            <string>TLSv1.0</string>
+            <key>NSExceptionRequiresForwardSecrecy</key>
+            <false/>
+            <key>NSExceptionAllowsInsecureHTTPLoads</key>
+            <true/>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+        </dict>
+    </dict>
 </dict>
 ```
 
@@ -224,8 +224,8 @@ If your app needs to load and display web content from non-secure sites, add the
 ```xml
 <key>NSAppTransportSecurity</key>
 <dict>
-	<key> NSAllowsArbitraryLoadsInWebContent</key>
-	<true/>
+    <key> NSAllowsArbitraryLoadsInWebContent</key>
+    <true/>
 </dict>
 ```
 
@@ -234,8 +234,8 @@ Optionally, you can make the following changes to your app's **Info.plist** file
 ```xml
 <key>NSAppTransportSecurity</key>
 <dict>
-	<key>NSAllowsArbitraryLoads</key>
-	<true/>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
 </dict>
 ```
 

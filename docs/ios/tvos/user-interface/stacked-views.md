@@ -19,7 +19,7 @@ The layout of all subviews attached to a Stack View are managed by it based on d
 
 When using a `UIStackView` in a Xamarin.tvOS app, the developer can either define the subviews either inside a Storyboard in the iOS Designer, or by adding and removing subviews in C# code.
 
-## About Stacked View Controls 
+## About Stacked View Controls
 
 The `UIStackView` is designed as a non-rendering container view and as such, it is not drawn to the canvas like other subclasses of `UIView`. Setting properties such as `BackgroundColor` or overriding `DrawRect` will have no visual effect.
 
@@ -93,23 +93,23 @@ The easiest way to work with Stack Views in a Xamarin.tvOS app is to add them to
 # [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, double-clicking the `Main.storyboard` file and open it for editing.
-1. Design the layout of your individual elements that you are going to add to the Stack View: 
+1. Design the layout of your individual elements that you are going to add to the Stack View:
 
-	[![](stacked-views-images/layout01.png "Element layout example")](stacked-views-images/layout01.png#lightbox)
+    [![](stacked-views-images/layout01.png "Element layout example")](stacked-views-images/layout01.png#lightbox)
 1. Add any required constraints to the elements to ensure they scale correctly. This step is important once the element is added to the Stack View.
-1. Make the required number of copies (four in this case): 
+1. Make the required number of copies (four in this case):
 
-	[![](stacked-views-images/layout02.png "The required number of copies")](stacked-views-images/layout02.png#lightbox)
-1. Drag a **Stack View** from the **Toolbox** and drop it on the View: 
+    [![](stacked-views-images/layout02.png "The required number of copies")](stacked-views-images/layout02.png#lightbox)
+1. Drag a **Stack View** from the **Toolbox** and drop it on the View:
 
-	[![](stacked-views-images/layout03.png "A Stack View")](stacked-views-images/layout03.png#lightbox)
-1. Select the Stack View, in the **Widget Tab** of the **Properties Pad** select **Fill** for the **Alignment**, **Fill Equally** for the **Distribution** and enter `25` for the **Spacing**: 
+    [![](stacked-views-images/layout03.png "A Stack View")](stacked-views-images/layout03.png#lightbox)
+1. Select the Stack View, in the **Widget Tab** of the **Properties Pad** select **Fill** for the **Alignment**, **Fill Equally** for the **Distribution** and enter `25` for the **Spacing**:
 
-	[![](stacked-views-images/layout04.png "The Widget Tab")](stacked-views-images/layout04.png#lightbox)
+    [![](stacked-views-images/layout04.png "The Widget Tab")](stacked-views-images/layout04.png#lightbox)
 1. Position the Stack View on the screen where you want it and add Constraints to keep it in the required location.
-1. Select the individual elements and drag them into the Stack View: 
+1. Select the individual elements and drag them into the Stack View:
 
-	[![](stacked-views-images/layout05.png "The individual elements in the Stack View")](stacked-views-images/layout05.png#lightbox)
+    [![](stacked-views-images/layout05.png "The individual elements in the Stack View")](stacked-views-images/layout05.png#lightbox)
 1. The layout will be adjusted and the elements will be arranged in the Stack View based on the attributes you set above.
 1. Assign **Names** in the **Widget Tab** of the **Properties Explorer** to work with your UI controls in C# code.
 1. Save your changes.
@@ -117,23 +117,23 @@ The easiest way to work with Stack Views in a Xamarin.tvOS app is to add them to
 # [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, double-clicking the `Main.storyboard` file and open it for editing.
-1. Design the layout of your individual elements that you are going to add to the Stack View: 
+1. Design the layout of your individual elements that you are going to add to the Stack View:
 
-	[![](stacked-views-images/layout01.png "Example element layout")](stacked-views-images/layout01.png#lightbox)
+    [![](stacked-views-images/layout01.png "Example element layout")](stacked-views-images/layout01.png#lightbox)
 1. Add any required constraints to the elements to ensure they scale correctly. This step is important once the element is added to the Stack View.
-1. Make the required number of copies (four in this case): 
+1. Make the required number of copies (four in this case):
 
-	[![](stacked-views-images/layout02.png "The required number of copies")](stacked-views-images/layout02.png#lightbox)
-1. Drag a **Stack View** from the **Toolbox** and drop it on the View: 
+    [![](stacked-views-images/layout02.png "The required number of copies")](stacked-views-images/layout02.png#lightbox)
+1. Drag a **Stack View** from the **Toolbox** and drop it on the View:
 
-	[![](stacked-views-images/layout03-vs.png "A Stack View")](stacked-views-images/layout03-vs.png#lightbox)
-1. Select the Stack View, in the **Widget Tab** of the **Properties Explorer** select **Fill** for the **Alignment**, **Fill Equally** for the **Distribution** and enter `25` for the **Spacing**: 
+    [![](stacked-views-images/layout03-vs.png "A Stack View")](stacked-views-images/layout03-vs.png#lightbox)
+1. Select the Stack View, in the **Widget Tab** of the **Properties Explorer** select **Fill** for the **Alignment**, **Fill Equally** for the **Distribution** and enter `25` for the **Spacing**:
 
-	[![](stacked-views-images/layout04-vs.png "The Widget Tab")](stacked-views-images/layout04-vs.png#lightbox)
+    [![](stacked-views-images/layout04-vs.png "The Widget Tab")](stacked-views-images/layout04-vs.png#lightbox)
 1. Position the Stack View on the screen where you want it and add Constraints to keep it in the required location.
-1. Select the individual elements and drag them into the Stack View: 
+1. Select the individual elements and drag them into the Stack View:
 
-	[![](stacked-views-images/layout05-vs.png "The individual elements in the Stack View")](stacked-views-images/layout05-vs.png#lightbox)
+    [![](stacked-views-images/layout05-vs.png "The individual elements in the Stack View")](stacked-views-images/layout05-vs.png#lightbox)
 1. The layout will be adjusted and the elements will be arranged in the Stack View based on the attributes you set above.
 1. Assign **Names** in the **Widget Tab** of the **Properties Explorer** to work with your UI controls in C# code.
 1. Save your changes.
@@ -150,33 +150,33 @@ In the case of our example, we've exposed an Outlet and Action for the Segment C
 ```csharp
 partial void PlayerCountChanged (Foundation.NSObject sender) {
 
-	// Take Action based on the segment
-	switch(PlayerCount.SelectedSegment) {
-	case 0:
-		Player1.Hidden = false;
-		Player2.Hidden = true;
-		Player3.Hidden = true;
-		Player4.Hidden = true;
-		break;
-	case 1:
-		Player1.Hidden = false;
-		Player2.Hidden = false;
-		Player3.Hidden = true;
-		Player4.Hidden = true;
-		break;
-	case 2:
-		Player1.Hidden = false;
-		Player2.Hidden = false;
-		Player3.Hidden = false;
-		Player4.Hidden = true;
-		break;
-	case 3:
-		Player1.Hidden = false;
-		Player2.Hidden = false;
-		Player3.Hidden = false;
-		Player4.Hidden = false;
-		break;
-	}
+    // Take Action based on the segment
+    switch(PlayerCount.SelectedSegment) {
+    case 0:
+        Player1.Hidden = false;
+        Player2.Hidden = true;
+        Player3.Hidden = true;
+        Player4.Hidden = true;
+        break;
+    case 1:
+        Player1.Hidden = false;
+        Player2.Hidden = false;
+        Player3.Hidden = true;
+        Player4.Hidden = true;
+        break;
+    case 2:
+        Player1.Hidden = false;
+        Player2.Hidden = false;
+        Player3.Hidden = false;
+        Player4.Hidden = true;
+        break;
+    case 3:
+        Player1.Hidden = false;
+        Player2.Hidden = false;
+        Player3.Hidden = false;
+        Player4.Hidden = false;
+        break;
+    }
 }
 ```
 
@@ -202,47 +202,47 @@ public int Rating { get; set;} = 0;
 
 partial void IncreaseRating (Foundation.NSObject sender) {
 
-	// Maximum of 5 "stars"
-	if (++Rating > 5 ) {
-		// Abort
-		Rating = 5;
-		return;
-	}
+    // Maximum of 5 "stars"
+    if (++Rating > 5 ) {
+        // Abort
+        Rating = 5;
+        return;
+    }
 
-	// Create new rating icon and add it to stack
-	var icon = new UIImageView (new UIImage("icon.png"));
-	icon.ContentMode = UIViewContentMode.ScaleAspectFit;
-	RatingView.AddArrangedSubview(icon);
+    // Create new rating icon and add it to stack
+    var icon = new UIImageView (new UIImage("icon.png"));
+    icon.ContentMode = UIViewContentMode.ScaleAspectFit;
+    RatingView.AddArrangedSubview(icon);
 
-	// Animate stack
-	UIView.Animate(0.25, ()=>{
-		// Adjust stack view
-		RatingView.LayoutIfNeeded();
-	});
+    // Animate stack
+    UIView.Animate(0.25, ()=>{
+        // Adjust stack view
+        RatingView.LayoutIfNeeded();
+    });
 
 }
 
 partial void DecreaseRating (Foundation.NSObject sender) {
 
-	// Minimum of zero "stars"
-	if (--Rating < 0) {
-		// Abort
-		Rating =0;
-		return;
-	}
+    // Minimum of zero "stars"
+    if (--Rating < 0) {
+        // Abort
+        Rating =0;
+        return;
+    }
 
-	// Get the last subview added
-	var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
+    // Get the last subview added
+    var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 
-	// Remove from stack and screen
-	RatingView.RemoveArrangedSubview(icon);
-	icon.RemoveFromSuperview();
+    // Remove from stack and screen
+    RatingView.RemoveArrangedSubview(icon);
+    icon.RemoveFromSuperview();
 
-	// Animate stack
-	UIView.Animate(0.25, ()=>{
-		// Adjust stack view
-		RatingView.LayoutIfNeeded();
-	});
+    // Animate stack
+    UIView.Animate(0.25, ()=>{
+        // Adjust stack view
+        RatingView.LayoutIfNeeded();
+    });
 }
 ```
 
@@ -292,8 +292,8 @@ Layout changes can be animated by placing them within an Animation Block, for ex
 ```csharp
 // Animate stack
 UIView.Animate(0.25, ()=>{
-	// Adjust stack view
-	RatingView.LayoutIfNeeded();
+    // Adjust stack view
+    RatingView.LayoutIfNeeded();
 });
 ```
 

@@ -52,8 +52,8 @@ Managed extensions methods are converted into categories. For example, the follo
 
 ```csharp
 public static class SomeExtensions {
-	public static int CountNonNull (this Collection collection) { ... }
-	public static int CountNull (this Collection collection) { ... }
+    public static int CountNonNull (this Collection collection) { ... }
+    public static int CountNull (this Collection collection) { ... }
 }
 ```
 
@@ -76,8 +76,8 @@ Managed indexed properties are converted into object subscripting. For example:
 
 ```csharp
 public bool this[int index] {
-	get { return c[index]; }
-	set { c[index] = value; }
+    get { return c[index]; }
+    set { c[index] = value; }
 }
 ```
 
@@ -92,7 +92,7 @@ which can be used via the Objective-C subscripting syntax:
 
 ```objc
 if ([intCollection [0] isEqual:@42])
-	intCollection[0] = @13;
+    intCollection[0] = @13;
 ```
 
 Depending on the type of your indexer, indexed or keyed subscripting will be generated where appropriate.
@@ -113,19 +113,19 @@ C# API:
 
 ```csharp
 public class Unique {
-	public Unique () : this (1)
-	{
-	}
+    public Unique () : this (1)
+    {
+    }
 
-	public Unique (int id)
-	{
-	}
+    public Unique (int id)
+    {
+    }
 }
 
 public class SuperUnique : Unique {
-	public SuperUnique () : base (911)
-	{
-	}
+    public SuperUnique () : base (911)
+    {
+    }
 }
 ```
 
@@ -149,7 +149,7 @@ Objective-C does not support operator overloading as C# does, so operators are c
 ```csharp
 public static AllOperators operator + (AllOperators c1, AllOperators c2)
 {
-	return new AllOperators (c1.Value + c2.Value);
+    return new AllOperators (c1.Value + c2.Value);
 }
 ```
 
@@ -166,12 +166,12 @@ If both the operator version and the "friendly" version are found, only the frie
 ```csharp
 public static AllOperatorsWithFriendly operator + (AllOperatorsWithFriendly c1, AllOperatorsWithFriendly c2)
 {
-	return new AllOperatorsWithFriendly (c1.Value + c2.Value);
+    return new AllOperatorsWithFriendly (c1.Value + c2.Value);
 }
 
 public static AllOperatorsWithFriendly Add (AllOperatorsWithFriendly c1, AllOperatorsWithFriendly c2)
 {
-	return new AllOperatorsWithFriendly (c1.Value + c2.Value);
+    return new AllOperatorsWithFriendly (c1.Value + c2.Value);
 }
 ```
 

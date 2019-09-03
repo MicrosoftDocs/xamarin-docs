@@ -32,7 +32,7 @@ JDK later than JDK 8, you will get an explicit error indicating that
 this version of JDK is not supported. For example:
 
 ```shell
-Building with JDK Version `9.0.4` is not supported. Please install JDK version `1.8.0`. See https://aka.ms/xamarin/jdk9-errors	
+Building with JDK Version `9.0.4` is not supported. Please install JDK version `1.8.0`. See https://aka.ms/xamarin/jdk9-errors
 ```
 
 To resolve these errors, you must install JDK 8 (1.8) as explained in
