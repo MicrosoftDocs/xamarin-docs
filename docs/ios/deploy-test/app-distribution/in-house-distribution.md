@@ -17,7 +17,7 @@ Once your Xamarin.iOS app has been developed, the next step in the software deve
 
 - Your application does not need to be submitted for review by Apple.
 - There are no limits to the amount of devices onto which you can deploy an application
-    - It is important to note that Apple makes it very clear that In-House applications are for internal use only.
+  - It is important to note that Apple makes it very clear that In-House applications are for internal use only.
 
 It is also important to note that the Enterprise Program:
 

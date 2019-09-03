@@ -79,20 +79,20 @@ Alternatively, you can define the binding relationship in XAML using the `Bindin
 The binding support and engine are more similar to the Silverlight implementation than WPF. There are several missing features which were not implemented in Xamarin.Forms:
 
 - There is no support for the following features in bindings:
-    - BindingGroupName
-    - BindsDirectlyToSource
-    - IsAsync
-    - MultiBinding
-    - NotifyOnSourceUpdated
-    - NotifyOnTargetUpdated
-    - NotifyOnValidationError
-    - UpdateSourceTrigger
-    - UpdateSourceExceptionFilter
-    - ValidatesOnDataErrors
-    - ValidatesOnExceptions
-    - ValidationRules collection
-    - XPath
-    - XmlNamespaceManager
+  - BindingGroupName
+  - BindsDirectlyToSource
+  - IsAsync
+  - MultiBinding
+  - NotifyOnSourceUpdated
+  - NotifyOnTargetUpdated
+  - NotifyOnValidationError
+  - UpdateSourceTrigger
+  - UpdateSourceExceptionFilter
+  - ValidatesOnDataErrors
+  - ValidatesOnExceptions
+  - ValidationRules collection
+  - XPath
+  - XmlNamespaceManager
 
 #### RelativeSource
 

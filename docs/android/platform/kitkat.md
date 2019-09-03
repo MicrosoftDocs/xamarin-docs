@@ -20,21 +20,21 @@ late 2013. KitKat offers a variety of new features and improvements,
 including:
 
 - [User Experience](#user_experience) &ndash; Easy animations with
-   transition framework, translucent status and navigation bars, and
-   full-screen immersive mode help create a better experience for the
-   user.
+  transition framework, translucent status and navigation bars, and
+  full-screen immersive mode help create a better experience for the
+  user.
 
 - [User Content](#user_content) &ndash; User file management
-   simplified with storage access framework; printing pictures, web
-   sites, and other content is easier with improved printing APIs.
+  simplified with storage access framework; printing pictures, web
+  sites, and other content is easier with improved printing APIs.
 
 - [Hardware](#hardware) &ndash; Turn any app into an NFC card with NFC
-   Host-Based Card Emulation; run low-power sensors with the
-   `SensorManager` .
+  Host-Based Card Emulation; run low-power sensors with the
+  `SensorManager` .
 
 - [Developer Tools](#developer_tools) &ndash; Screencast applications
-   in action with the Android Debug Bridge client, available as part of
-   the Android SDK.
+  in action with the Android Debug Bridge client, available as part of
+  the Android SDK.
 
 
 This guide provides guidance for migrating an existing Xamarin.Android
@@ -114,19 +114,19 @@ requires the `READ_EXTERNAL_STORAGE` or `WRITE_EXTERNAL_STORAGE`
 permission. The two types can be classified as such:
 
 - If you're getting a file or directory path by calling a method on
-   `Context` - for example,
-   [`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
-   or
-   [`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
-   - your app requires no extra permissions.
+  `Context` - for example,
+  [`GetExternalFilesDir`](xref:Android.Content.Context.GetExternalFilesDir*)
+  or
+  [`GetExternalCacheDirs`](xref:Android.Content.Context.GetExternalCacheDirs)
+  - your app requires no extra permissions.
 
 - If you're getting a file or directory path by accessing a property or calling a method on
-   `Environment` , such as
-   [`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
-   or
-   [`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
-   , your app requires the `READ_EXTERNAL_STORAGE` or
-   `WRITE_EXTERNAL_STORAGE` permission.
+  `Environment` , such as
+  [`GetExternalStorageDirectory`](xref:Android.OS.Environment.ExternalStorageDirectory)
+  or
+  [`GetExternalStoragePublicDirectory`](xref:Android.OS.Environment.GetExternalStoragePublicDirectory*)
+  , your app requires the `READ_EXTERNAL_STORAGE` or
+  `WRITE_EXTERNAL_STORAGE` permission.
 
 > [!NOTE]
 > `WRITE_EXTERNAL_STORAGE` implies the
@@ -343,11 +343,11 @@ The screenshot below illustrates the scene after the animation:
 
 > [!NOTE]
 > There is a
-[known bug](https://code.google.com/p/android/issues/detail?id=62450)
-in the Android Transitions library that causes Scenes created using
-`GetSceneForLayout` to break when a user navigates through an Activity
-the second time. A java workaround is described
-[here](http://www.doubleencore.com/2013/11/new-transitions-framework/).
+> [known bug](https://code.google.com/p/android/issues/detail?id=62450)
+> in the Android Transitions library that causes Scenes created using
+> `GetSceneForLayout` to break when a user navigates through an Activity
+> the second time. A java workaround is described
+> [here](http://www.doubleencore.com/2013/11/new-transitions-framework/).
 
 
 ##### Custom Transitions in Scenes
@@ -392,15 +392,15 @@ translucency of system UI elements in the same XML file you use to
 define your Android theme. KitKat introduces the following properties:
 
 - `windowTranslucentStatus` - When set to true, makes the top status
-   bar translucent.
+  bar translucent.
 
 - `windowTranslucentNavigation` - When set to true, makes the bottom
-   navigation bar translucent.
+  navigation bar translucent.
 
 - `fitsSystemWindows` - Setting the top or bottom bar to transcluent
-   shifts content under the transparent UI elements by default. Setting
-   this property to `true` is a simple way to prevent content from
-   overlapping with the translucent system UI elements.
+  shifts content under the transparent UI elements by default. Setting
+  this property to `true` is a simple way to prevent content from
+  overlapping with the translucent system UI elements.
 
 
 The following code defines a theme with translucent status and
@@ -569,9 +569,9 @@ settings by navigating to **Settings > System > Printing**:
 
 > [!NOTE]
 > Although the printing APIs are set up to work with
-Google Cloud Print by default, Android still lets developers prepare
-print content using the new APIs, and send it to other applications to
-handle printing.
+> Google Cloud Print by default, Android still lets developers prepare
+> print content using the new APIs, and send it to other applications to
+> handle printing.
 
 
 
@@ -744,12 +744,12 @@ the HCE code as a `Service`. An HCE Service implements the
 `HostApduService` interface, which implements the following methods:
 
 - *ProcessCommandApdu* - An Application Protocol Data Unit (APDU) is
-   what gets sent between the NFC Reader and the HCE Service. This
-   method consumes an ADPU from the reader, and returns a data unit in
-   response.
+  what gets sent between the NFC Reader and the HCE Service. This
+  method consumes an ADPU from the reader, and returns a data unit in
+  response.
 
 - *OnDeactivated* - The `HostAdpuService` is deactivated when the HCE
-   Service is no longer communicating with the NFC Reader.
+  Service is no longer communicating with the NFC Reader.
 
 
 An HCE Service also needs to be registered with the application's
@@ -828,10 +828,10 @@ KitKat also ships with two new sensor types for tracking the user's
 steps. These are based on accelerometer and include:
 
 - *StepDetector* - App is notified/woken when the user takes a step,
-   and the detector provides a time value for when the step occurred.
+  and the detector provides a time value for when the step occurred.
 
 - *StepCounter* - Keeps track of the number of steps the user has
-   taken since the sensor was registered *until the next device reboot*.
+  taken since the sensor was registered *until the next device reboot*.
 
 The screenshot below depicts the step counter in action:
 
@@ -906,11 +906,11 @@ state of the device.
 
 > [!NOTE]
 > While the API for the step detection and counting
-ships with KitKat, not all phones are outfitted with the sensor. You
-can check if the sensor is available by running
-`PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`,
-or check to ensure the returned value of `GetDefaultSensor` isn't
-`null`.
+> ships with KitKat, not all phones are outfitted with the sensor. You
+> can check if the sensor is available by running
+> `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`,
+> or check to ensure the returned value of `GetDefaultSensor` isn't
+> `null`.
 
 
 <a name="developer_tools" />
@@ -951,55 +951,55 @@ when the recording is complete.
 In addition to the changes described above, KitKat allows you to:
 
 - *Use the Full Screen* - KitKat introduces a new
-   [Immersive mode](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int))
-   for browsing content, playing games, and running other applications
-   that could benefit from a full-screen experience.
+  [Immersive mode](https://developer.android.com/reference/android/view/View.html#setSystemUiVisibility(int))
+  for browsing content, playing games, and running other applications
+  that could benefit from a full-screen experience.
 
 - *Customize Notifications* - Get additional details about system
-   notifications with the
-   [`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
-   . This lets you present the information in a different way inside
-   your app.
+  notifications with the
+  [`NotificationListenerService`](xref:Android.Service.Notification.NotificationListenerService)
+  . This lets you present the information in a different way inside
+  your app.
 
 - *Mirror Drawable Resources* - Drawable resources have a new
-   [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
-   attribute that tells the system create a mirrored version for images
-   that require flipping for left-to-right layouts.
+  [`autoMirrored`](https://developer.android.com/reference/android/R.attr.html#autoMirrored)
+  attribute that tells the system create a mirrored version for images
+  that require flipping for left-to-right layouts.
 
 - *Pause Animations* - Pause and resume animations created with the
-   [`Animator`](xref:Android.Animation.Animator)
-   class.
+  [`Animator`](xref:Android.Animation.Animator)
+  class.
 
 - *Read Dynamically Changing Text* - Denote parts of UI that update
-   dynamically with new text as "live regions" with the new
-   [`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
-   attribute so the new text will be read automatically in
-   accessibility mode.
+  dynamically with new text as "live regions" with the new
+  [`accessibilityLiveRegion`](https://developer.android.com/reference/android/R.attr.html#accessibilityLiveRegion)
+  attribute so the new text will be read automatically in
+  accessibility mode.
 
 - *Enhance Audio Experience* - Make tracks louder with the
-   [`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
-   , find the Peak and RMS of an audio stream with the
-   [`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
-   class, and get information from an
-   [audio timestamp](xref:Android.Media.AudioTimestamp)
-   to help with audio-video synchronization.
+  [`LoudnessEnhancer`](xref:Android.Media.Audiofx.LoudnessEnhancer)
+  , find the Peak and RMS of an audio stream with the
+  [`Visualizer`](xref:Android.Media.Audiofx.Visualizer.MeasurementModePeakRms)
+  class, and get information from an
+  [audio timestamp](xref:Android.Media.AudioTimestamp)
+  to help with audio-video synchronization.
 
 - *Sync ContentResolver at Custom Interval* - KitKat adds some
-   variability to the time that a sync request is performed. Sync a
-   `ContentResolver` at custom time or interval by calling
-   `ContentResolver.RequestSync` and passing in a `SyncRequest`.
+  variability to the time that a sync request is performed. Sync a
+  `ContentResolver` at custom time or interval by calling
+  `ContentResolver.RequestSync` and passing in a `SyncRequest`.
 
 - *Distinguish Between Controllers* - In KitKat, controllers are
-   assigned unique integer identifiers that can be accessed through the
-   device's `ControllerNumber` property. This makes it easier to tell
-   apart players in a game.
+  assigned unique integer identifiers that can be accessed through the
+  device's `ControllerNumber` property. This makes it easier to tell
+  apart players in a game.
 
 - *Remote Control* - With a few changes on both the hardware and
-   software side, KitKat allows you to turn a device outfitted with an
-   IR transmitter into a remote control using the `ConsumerIrService`,
-   and interact with peripheral devices with the new
-   [`RemoteController`](xref:Android.Media.RemoteController)
-   APIs.
+  software side, KitKat allows you to turn a device outfitted with an
+  IR transmitter into a remote control using the `ConsumerIrService`,
+  and interact with peripheral devices with the new
+  [`RemoteController`](xref:Android.Media.RemoteController)
+  APIs.
 
 For more information on the above API changes, please refer to the
 Google [Android 4.4 APIs](https://developer.android.com/about/versions/android-4.4.html)

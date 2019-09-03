@@ -11,7 +11,7 @@ ms.date: 07/11/2017
 
 # Labels in Xamarin.iOS
 
-The `UILabel` control is used for displaying single and multi-line, read only text. 
+The `UILabel` control is used for displaying single and multi-line, read only text.
 
 ## Implementing a Label
 
@@ -35,9 +35,9 @@ The following properties can be adjusted on the properties pad:
 - **Color, Font, Alignment** – Formatting Attributes that can be applied to the label.
 - **Lines** – Sets the number of lines that the label can span. Set this to 0 to allow the label to use as many lines as needed.
 - **Behavior** – Can be set to either Enabled or Highlighted. Enabled is set by default, disabled text will be displayed in a lighter grey color. Highlighted is disabled by default and allows the label to be redrawn with a highlighted state when it is selected by a user.
-- **Baselane and Line Break** – 
-    - Basline determines how the text will be positioned if the font sizes is different from the one specified.
-    - Line Breaks determine how a string will be wrapped or truncated if it is longer than a single line.
+- **Baselane and Line Break** –
+  - Basline determines how the text will be positioned if the font sizes is different from the one specified.
+  - Line Breaks determine how a string will be wrapped or truncated if it is longer than a single line.
 - **Autoshrink** – Determines how the font sized will be minimized within a label, if necessary.
 - **Highlighted, Shadow, Offset** – Allows you to set the Hightlighted and Shadow color, and the shadow offset.
 

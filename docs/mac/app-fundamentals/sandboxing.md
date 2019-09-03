@@ -63,24 +63,24 @@ We'll verify that the application is actually sandboxed and learn how to trouble
 Let's do the following to create our sample project:
 
 1. Start Visual Studio for Mac and click the **New Solution..** link.
-2. From the **New Project** dialog box, select **Mac** > **App** > **Cocoa App**: 
+2. From the **New Project** dialog box, select **Mac** > **App** > **Cocoa App**:
 
     [![Creating a new Cocoa App](sandboxing-images/sample01.png "Creating a new Cocoa App")](sandboxing-images/sample01-large.png#lightbox)
-3. Click the **Next** button, enter `MacSandbox` for the project name and click the **Create** button: 
+3. Click the **Next** button, enter `MacSandbox` for the project name and click the **Create** button:
 
     [![Entering the app name](sandboxing-images/sample02.png "Entering the app name")](sandboxing-images/sample02-large.png#lightbox)
-4. In the **Solution Pad**, double-click the **Main.storyboard** file to open it for editing in Xcode: 
+4. In the **Solution Pad**, double-click the **Main.storyboard** file to open it for editing in Xcode:
 
     [![Editing the main storyboard](sandboxing-images/sample03.png "Editing the main storyboard")](sandboxing-images/sample03-large.png#lightbox)
-5. Drag a **Web View** onto the Window, size it to fill the content area and set it to grow and shrink with the window: 
+5. Drag a **Web View** onto the Window, size it to fill the content area and set it to grow and shrink with the window:
 
     [![Adding a web view](sandboxing-images/sample04.png "Adding a web view")](sandboxing-images/sample04-large.png#lightbox)
-6. Create an outlet for the web view called `webView`: 
+6. Create an outlet for the web view called `webView`:
 
     [![Creating a new outlet](sandboxing-images/sample05.png "Creating a new outlet")](sandboxing-images/sample05-large.png#lightbox)
 7. Return to Visual Studio for Mac and double-click the **ViewController.cs** file in the **Solution Pad** to open it for editing.
 8. Add the following using statement: `using WebKit;`
-9. Make the `ViewDidLoad` method look like the following: 
+9. Make the `ViewDidLoad` method look like the following:
 
     ```csharp
     public override void AwakeFromNib ()
@@ -104,34 +104,34 @@ Before we can enable the App Sandbox, we first need to provision and sign our Xa
 
 Let do the following:
 
-1. Log into the Apple Developer Portal: 
+1. Log into the Apple Developer Portal:
 
     [![Logging into the Apple Developer Portal](sandboxing-images/sign01.png "Logging into the Apple Developer Portal")](sandboxing-images/sign01-large.png#lightbox)
-2. Select **Certificates, Identifiers & Profiles**: 
+2. Select **Certificates, Identifiers & Profiles**:
 
     [![Selecting Certificates, Identifiers & Profiles](sandboxing-images/sign02.png "Selecting Certificates, Identifiers & Profiles")](sandboxing-images/sign02-large.png#lightbox)
-3. Under **Mac Apps**, select **Identifiers**: 
+3. Under **Mac Apps**, select **Identifiers**:
 
     [![Selecting Identifiers](sandboxing-images/sign03.png "Selecting Identifiers")](sandboxing-images/sign03-large.png#lightbox)
-4. Create a new ID for the application: 
+4. Create a new ID for the application:
 
     [![Creating a new App ID](sandboxing-images/sign04.png "Creating a new App ID")](sandboxing-images/sign04-large.png#lightbox)
-5. Under **Provisioning Profiles**, select **Development**: 
+5. Under **Provisioning Profiles**, select **Development**:
 
     [![Selecting Development](sandboxing-images/sign05.png "Selecting Development")](sandboxing-images/sign05-large.png#lightbox)
-6. Create a new profile and select **Mac App Development**: 
+6. Create a new profile and select **Mac App Development**:
 
     [![Creating a new profile](sandboxing-images/sign06.png "Creating a new profile")](sandboxing-images/sign06-large.png#lightbox)
-7. Select the App ID we created above: 
+7. Select the App ID we created above:
 
     [![Selecting the App ID](sandboxing-images/sign07.png "Selecting the App ID")](sandboxing-images/sign07-large.png#lightbox)
-8. Select the Developers for this profile: 
+8. Select the Developers for this profile:
 
     [![Adding developers](sandboxing-images/sign08.png "Adding developers")](sandboxing-images/sign08-large.png#lightbox)
-9. Select the computers for this profile: 
+9. Select the computers for this profile:
 
     [![Selecting the allowed computers](sandboxing-images/sign09.png "Selecting the allowed computers")](sandboxing-images/sign09-large.png#lightbox)
-10. Give the profile a Name: 
+10. Give the profile a Name:
 
     [![Giving the profile a name](sandboxing-images/sign10.png "Giving the profile a name")](sandboxing-images/sign10-large.png#lightbox)
 11. Click the **Done** button.
@@ -141,10 +141,10 @@ Let do the following:
 
 Next, we need to load the new App ID and Profile on the development machine. Let's do the following:
 
-1. Start Xcode and select **Preferences** from the **Xcode** menu: 
+1. Start Xcode and select **Preferences** from the **Xcode** menu:
 
     ![Editing accounts in Xcode](sandboxing-images/sign11.png "Editing accounts in Xcode")
-2. Click on the **View Details...** button: 
+2. Click on the **View Details...** button:
 
     ![Clicking the View Details button](sandboxing-images/sign12.png "Clicking the View Details button")
 3. Click on the **Refresh** button (in the lower left hand corner).
@@ -153,17 +153,17 @@ Next, we need to load the new App ID and Profile on the development machine. Let
 Next, we need to select the new App ID and Provisioning Profile in our Xamarin.Mac project. Let's do the following:
 
 1. In the **Solution Pad**, double-click the **Info.plist** file to open it for editing.
-2. Ensure that the **Bundle Identifier** matches our App ID we created above (example: `com.appracatappra.MacSandbox`): 
+2. Ensure that the **Bundle Identifier** matches our App ID we created above (example: `com.appracatappra.MacSandbox`):
 
     [![Editing the Bundle Identifier](sandboxing-images/sign13.png "Editing the Bundle Identifier")](sandboxing-images/sign13-large.png#lightbox)
-3. Next, double-click the **Entitlements.plist** file and ensure our **iCloud Key-Value Store** and the **iCloud Containers** all match our App ID we created above (example: `com.appracatappra.MacSandbox`): 
+3. Next, double-click the **Entitlements.plist** file and ensure our **iCloud Key-Value Store** and the **iCloud Containers** all match our App ID we created above (example: `com.appracatappra.MacSandbox`):
 
     [![Editing the Entitlements.plist file](sandboxing-images/sign17.png "Editing the Entitlements.plist file")](sandboxing-images/sign17-large.png#lightbox)
 4. Save your changes.
-5. In the **Solution Pad**, double-click the project file to open its Options for editing:  
+5. In the **Solution Pad**, double-click the project file to open its Options for editing:
 
     ![Editign the solution's options](sandboxing-images/sign14.png "Editign the solution's options")
-6. Select **Mac Signing**, then check **Sign the application bundle** and **Sign the installer package**. Under **Provisioning profile**, select the one we created above: 
+6. Select **Mac Signing**, then check **Sign the application bundle** and **Sign the installer package**. Under **Provisioning profile**, select the one we created above:
 
     ![Setting the provisioning profile](sandboxing-images/sign15.png "Setting the provisioning profile")
 7. Click the **Done** button.
@@ -190,7 +190,7 @@ In the case of an issue, correct the problem on the Apple Developer Portal, refr
 You enable the App Sandbox by selecting a checkbox in your projects options. Do the following:
 
 1. In the **Solution Pad**, double-click the **Entitlements.plist** file to open it for editing.
-2. Check both **Enable Entitlements** and **Enable App Sandboxing**: 
+2. Check both **Enable Entitlements** and **Enable App Sandboxing**:
 
     [![Editing entitlements and enabling sandboxing](sandboxing-images/sign17.png "Editing entitlements and enabling sandboxing")](sandboxing-images/sign17-large.png#lightbox)
 3. Save your changes.
@@ -203,25 +203,25 @@ At this point, you have enabled the App Sandbox but you have not provided the re
 
 Aside from the resource blocking behavior, there are three main ways to tell if a Xamarin.Mac application has been successfully sandboxed:
 
-1. In Finder, check the contents of the `~/Library/Containers/` folder - If the app is sandboxed, there will be a folder named like your app's Bundle Identifier (example: `com.appracatappra.MacSandbox`): 
+1. In Finder, check the contents of the `~/Library/Containers/` folder - If the app is sandboxed, there will be a folder named like your app's Bundle Identifier (example: `com.appracatappra.MacSandbox`):
 
     [![Opening the app's bundle](sandboxing-images/sample09.png "Opening the app's bundle")](sandboxing-images/sample09-large.png#lightbox)
 2. The system sees the app as sandboxed in the Activity Monitor:
-    - Launch Activity Monitor (under `/Applications/Utilities`). 
+    - Launch Activity Monitor (under `/Applications/Utilities`).
     - Choose **View** > **Columns** and ensure that the **Sandbox** menu item is checked.
-    - Ensure that the Sandbox column reads `Yes` for your application: 
+    - Ensure that the Sandbox column reads `Yes` for your application:
 
     [![Checking the app in the Activity Monitor](sandboxing-images/sample10.png "Checking the app in the Activity Monitor")](sandboxing-images/sample10-large.png#lightbox)
 3. Check that the app binary is sandboxed:
     - Start the Terminal app.
     - Navigate to the applications `bin` directory.
-    - Issue this command: `codesign -dvvv --entitlements :- executable_path` (where `executable_path` is the path to your application): 
+    - Issue this command: `codesign -dvvv --entitlements :- executable_path` (where `executable_path` is the path to your application):
 
     [![Checking the app on the command line](sandboxing-images/sample11.png "Checking the app on the command line")](sandboxing-images/sample11-large.png#lightbox)
 
 ### Debugging a sandboxed app
 
-The debugger connects to Xamarin.Mac apps through TCP, which means that by default when you enable sandboxing, it is unable to connect to the app, so if you try to run the app without the proper permissions enabled, you get an error *“Unable to connect to the debugger”*. 
+The debugger connects to Xamarin.Mac apps through TCP, which means that by default when you enable sandboxing, it is unable to connect to the app, so if you try to run the app without the proper permissions enabled, you get an error *“Unable to connect to the debugger”*.
 
 [![Setting the required options](sandboxing-images/debug01.png "Setting the required options")](sandboxing-images/debug01-large.png#lightbox)
 
@@ -241,7 +241,7 @@ Do the following:
 
 1. Compile the app in question and run it from Visual Studio for Mac.
 2. Open the **Console** application (from `/Applications/Utilties/`).
-3. Select **All Messages** in the sidebar and enter `sandbox` in the search: 
+3. Select **All Messages** in the sidebar and enter `sandbox` in the search:
 
     [![An example of a sandboxing issue in the console](sandboxing-images/resolve01.png "An example of a sandboxing issue in the console")](sandboxing-images/resolve01-large.png#lightbox)
 
@@ -254,7 +254,7 @@ Now that we have seen how to find App Sandboxing Violations, let's see how they 
 Do the following:
 
 1. In the **Solution Pad**, double-click the **Entitlements.plist** file to open it for editing.
-2. Under the **Entitlements** section, check the **Allow Outgoing Network Connections (Client)** checkbox: 
+2. Under the **Entitlements** section, check the **Allow Outgoing Network Connections (Client)** checkbox:
 
     [![Editing the entitlements](sandboxing-images/sign17.png "Editing the entitlements")](sandboxing-images/sign17-large.png#lightbox)
 3. Save the changes to the application.
@@ -275,7 +275,7 @@ When designing for the App Sandbox, you are designing for a worst-case scenario.
 
 As we saw above, a Xamarin.Mac application that has not been sandboxed is granted the full rights and access of the user that is running the app. If compromised by malicious code, a non-protected app can act as an agent for hostile behavior, with a wide ranging potential for doing harm.
 
-By enabling the App Sandbox, you remove all but a minimal set of privileges, which you then re-enable on a need-only basis using your Xamarin.Mac app's entitlements. 
+By enabling the App Sandbox, you remove all but a minimal set of privileges, which you then re-enable on a need-only basis using your Xamarin.Mac app's entitlements.
 
 You modify your application's App Sandbox Resources by editing its **Entitlements.plist** file and checking or selecting the rights required from the editors dropdown boxes:
 
@@ -351,13 +351,13 @@ Additionally, the system automatically permits the following to a sandboxed app:
 - Open files choose by the user from the **Open Recent** menu.
 - Use Copy & Paste between other applications.
 - Read files from the following world-readable locations:
-    - `/bin`
-    - `/sbin`
-    - `/usr/bin`
-    - `/usr/lib`
-    - `/usr/sbin`
-    - `/usr/share`
-    - `/System`
+  - `/bin`
+  - `/sbin`
+  - `/usr/bin`
+  - `/usr/lib`
+  - `/usr/sbin`
+  - `/usr/share`
+  - `/System`
 - Read and write files in the directories created by `NSTemporaryDirectory`.
 
 Be default, files opened or saved by a sandboxed Xamarin.Mac app remain accessible until the app terminates (unless the file was still open when the app quits). Open files will be automatically restored to the app's sandbox via the macOS Resume feature the next time the app is started.
@@ -396,10 +396,10 @@ By using _Security-Scoped Bookmarks_, a Sandboxed Xamarin.Mac application can pr
 
 When working with Security-Scoped Bookmarks and Persistent Resource Access, there are two sistine use cases:
 
-- **An App-Scoped Bookmark provides persistent access to a user-specified file or folder.** 
+- **An App-Scoped Bookmark provides persistent access to a user-specified file or folder.**
 
     For example, if the sandboxed Xamarin.Mac application allows to use to open an external document for editing (using a `NSOpenPanel`), the app can create an App-Scoped Bookmark so that it can access the same file again in the future.
-- **A Document-Scoped Bookmark provides a specific document persistent access to a sub-file.** 
+- **A Document-Scoped Bookmark provides a specific document persistent access to a sub-file.**
 
 For example, a video editing app that creates a project file that has access to the individual images, video clips and sound files that will later be combined into a single movie.
 
@@ -429,7 +429,7 @@ After you relinquish access to a resource, you'll need to return to step 4 again
 
 ### The App Sandbox and code signing
 
-After you enable the App Sandbox and enable the specific requirements for your Xamarin.Mac app (via Entitlements), you must code sign the project for the sandboxing to take effect. You must perform code signing because the Entitlements required for App Sandboxing are linked to the app's signature. 
+After you enable the App Sandbox and enable the specific requirements for your Xamarin.Mac app (via Entitlements), you must code sign the project for the sandboxing to take effect. You must perform code signing because the Entitlements required for App Sandboxing are linked to the app's signature.
 
 macOS enforces a link between an app's Container and its code signature, in this way no other application can access that container, even if it is spoofing the apps Bundle ID. This mechanism works as follows:
 
@@ -526,7 +526,7 @@ Here are a few common issues and things that you can do to solve them:
 - **Retain Access to File System Resources** - If the Xamarin.Mac app depends on persistent access to resources outside of its container, use security-scoped bookmarks to maintain access.
 - **Create a Login Item for an App** - With the App Sandbox, you cannot create a login item using `LSSharedFileList` nor can you manipulate the state of launch services using `LSRegisterURL`. Use the `SMLoginItemSetEnabled` function as described in Apples [Adding Login Items Using the Service Management Framework](https://developer.apple.com/library/prerelease/mac/documentation/MacOSX/Conceptual/BPSystemStartup/Chapters/CreatingLoginItems.html#//apple_ref/doc/uid/10000172i-SW5-SW1) documentation.
 - **Accessing User Data** - If you are using POSIX functions such as `getpwuid` to obtain the user's home directory from directory services, consider using Cocoa or Core Foundation symbols such as `NSHomeDirectory`.
-- **Accessing the Preferences of Other Apps** - Because the App Sandbox directs path-finding APIs to the app's container, modifying preferences takes place within that container and accessing another apps preferences in not allowed. 
+- **Accessing the Preferences of Other Apps** - Because the App Sandbox directs path-finding APIs to the app's container, modifying preferences takes place within that container and accessing another apps preferences in not allowed.
 - **Using HTML5 Embedded Video in Web Views** - If the Xamarin.Mac app uses WebKit to play embedded HTML5 videos, you must also link the app against the AV Foundation framework. The App Sandbox will prevent CoreMedia from play these videos otherwise.
 
 ### Applying required App Sandbox entitlements
@@ -552,7 +552,7 @@ For more information, see Apple's [Creating XPC Services](https://developer.appl
 
 ### Implement a migration strategy
 
-If you are releasing a new, sandboxed version of a Xamarin.Mac application that was not previously sandboxed, you'll need to ensure that current users have a smooth upgrade path. 
+If you are releasing a new, sandboxed version of a Xamarin.Mac application that was not previously sandboxed, you'll need to ensure that current users have a smooth upgrade path.
 
  For details on how to implement a container migration manifest, read Apple's [Migrating an App to a Sandbox](https://developer.apple.com/library/prerelease/mac/documentation/Security/Conceptual/AppSandboxDesignGuide/MigratingALegacyApp/MigratingAnAppToASandbox.html#//apple_ref/doc/uid/TP40011183-CH6-SW1) documentation.
 

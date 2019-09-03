@@ -26,13 +26,13 @@ configurations. There are some situations where creating multiple APKs
 can be useful, such as:
 
 - **Reduce the size of the APK** - Google Play imposes a 100MB size
-   limit on APK files. Creating device specific APK's can reduce the
-   size of the APK as you only need to supply a subset of assets and
-   resources for the application.
+  limit on APK files. Creating device specific APK's can reduce the
+  size of the APK as you only need to supply a subset of assets and
+  resources for the application.
 
 - **Support different CPU architectures** - If your application has
-   shared libraries for specific CPU's, you can distribute only the
-   shared libraries for that CPU.
+  shared libraries for specific CPU's, you can distribute only the
+  shared libraries for that CPU.
 
 
 Multiple APKs can complicate distribution - a problem that is addressed
@@ -72,17 +72,17 @@ following list explains this eight digit version code format
 (indexed from left to right):
 
 - **Index 0** (red in diagram below) &ndash; An integer for the ABI:
-    - 1 &ndash; `armeabi`
-    - 2 &ndash; `armeabi-v7a`
-    - 6 &ndash; `x86`
+  - 1 &ndash; `armeabi`
+  - 2 &ndash; `armeabi-v7a`
+  - 6 &ndash; `x86`
 
 - **Index 1-2** (orange in diagram below) &ndash; The minimum API level supported by the application.
 
 - **Index 3-4** (blue in diagram below) &ndash; The screen sizes supported:
-    - 1 &ndash; small
-    - 2 &ndash; normal
-    - 3 &ndash; large
-    - 4 &ndash; xlarge
+  - 1 &ndash; small
+  - 2 &ndash; normal
+  - 3 &ndash; large
+  - 4 &ndash; xlarge
 
 - **Index 5-7** (green in diagram below) &ndash; A unique number for the version code. 
     This is set by the developer. It should increase for each public release of the application.
@@ -152,32 +152,32 @@ Building the APK per ABI is best accomplished by using either `xbuild` or `msbui
 The following list explains each command line parameter:
 
 - `/t:Package` &ndash; Creates an Android APK that is signed using
-    the debug keystore
+  the debug keystore
 
 - `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; This the ABI to
-    target. Must one of `armeabi`, `armeabi-v7a`, or `x86`
+  target. Must one of `armeabi`, `armeabi-v7a`, or `x86`
 
 - `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; This is the
-    directory that will hold the intermediate files that are created as
-    a part of the build. If necessary, Xamarin.Android will create a
-    directory named after the ABI, such as `obj.armeabi-v7a`. It is
-    recommended to use one folder for each ABI as this will prevent
-    issues that make result with files "leaking" from one
-    build to another. Notice that this value is terminated with a
-    directory separator (a `/` in the case of OS X).
+  directory that will hold the intermediate files that are created as
+  a part of the build. If necessary, Xamarin.Android will create a
+  directory named after the ABI, such as `obj.armeabi-v7a`. It is
+  recommended to use one folder for each ABI as this will prevent
+  issues that make result with files "leaking" from one
+  build to another. Notice that this value is terminated with a
+  directory separator (a `/` in the case of OS X).
 
 - `/p:AndroidManifest` &ndash; This property specifies the path to
-    the **AndroidManifest.XML** file that will be used during the build.
+  the **AndroidManifest.XML** file that will be used during the build.
 
 - `/p:OutputPath=bin.<TARGET_ABI>` &ndash; This is the directory that
-    will house the final APK. Xamarin.Android will create a directory
-    named after the ABI, for example `bin.armeabi-v7a`.
+  will house the final APK. Xamarin.Android will create a directory
+  named after the ABI, for example `bin.armeabi-v7a`.
 
 - `/p:Configuration=Release` &ndash; Perform a Release build of the
-    APK. Debug builds may not be uploaded to Google Play.
+  APK. Debug builds may not be uploaded to Google Play.
 
 - `<CS_PROJ FILE>` &ndash; This is the path to the `.csproj` file for
-    the Xamarin.Android project.
+  the Xamarin.Android project.
 
 
 
