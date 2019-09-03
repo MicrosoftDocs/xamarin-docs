@@ -97,7 +97,7 @@ Before commencing with the steps below, please download the example
     Visual Studio (the screenshots below show Visual Studio, but
     Visual Studio for Mac is very similar). Name the solution **AarBinding**:
 
-    [![Create AarBindings project](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
+    [![Create AarBindings project](binding-an-aar-images/01-new-bindings-library-vs-sml.w160.png)](binding-an-aar-images/01-new-bindings-library-vs.w160.png#lightbox)
 
 2. The template includes a **Jars** folder where you add your .AAR(s)
     to the Bindings Library project. Right-click the **Jars** folder
