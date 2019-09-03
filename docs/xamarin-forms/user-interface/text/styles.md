@@ -43,7 +43,7 @@ In C#, built-in styles are selected from `Device.Styles`:
 label.Style = Device.Styles.TitleStyle;
 ```
 
-![](styles-images/builtinstyles.png "Device Styles Example")
+![Device Styles Example](styles-images/builtinstyles.png)
 
 <a name="Custom_Styles" />
 
@@ -85,7 +85,7 @@ In XAML:
 
 Note that resources (including all styles) are defined within `ContentPage.Resources`, which is a sibling of the more familiar `ContentPage.Content` element.
 
-![](styles-images/customstyle.png "Custom Styles Example")
+![Custom Styles Example](styles-images/customstyle.png)
 
 <a name="Applying_Styles" />
 
@@ -132,11 +132,11 @@ Consider the following example of the same page of views styled with the built-i
 
 Disabled:
 
-![](styles-images/pre-access.png "Device Styles with Accessibility Disabled")
+![Device Styles with Accessibility Disabled](styles-images/pre-access.png)
 
 Enabled:
 
-![](styles-images/post-access.png "Device Styles with Accessibility Enabled")
+![Device Styles with Accessibility Enabled](styles-images/post-access.png)
 
 To ensure accessibility, make sure that built-in styles are used as the basis for any text-related styles within your app, and that you are using styles consistently. See [Styles](~/xamarin-forms/user-interface/styles/index.md) for more details on extending and working with styles in general.
 

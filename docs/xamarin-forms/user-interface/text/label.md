@@ -43,7 +43,7 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 The following screenshots show the `TextDecorations` enumeration members applied to [`Label`](xref:Xamarin.Forms.Label) instances:
 
-![](label-images/label-textdecorations.png "Labels with Text Decorations")
+![Labels with Text Decorations](label-images/label-textdecorations.png)
 
 > [!NOTE]
 > Text decorations can also be applied to [`Span`](xref:Xamarin.Forms.Span) instances. For more information about the `Span` class, see [Formatted Text](#Formatted_Text).
@@ -86,7 +86,7 @@ public partial class LabelPage : ContentPage
 
 The following screenshots show the result of setting the `TextColor` property:
 
-![](label-images/textcolor.png "Label TextColor Example")
+![Label TextColor Example](label-images/textcolor.png)
 
 For more information about colors, see [Colors](~/xamarin-forms/user-interface/colors.md).
 
@@ -135,7 +135,7 @@ var label =
 
 The following screenshots show the result of setting the `MaxLines` property to 2, when the text is long enough to occupy more than 2 lines:
 
-![](label-images/label-maxlines.png "Label MaxLines Example")
+![Label MaxLines Example](label-images/label-maxlines.png)
 
 <a name="Formatted_Text" />
 
@@ -218,7 +218,7 @@ Note that a [`Span`](xref:Xamarin.Forms.Span) can also respond to any gestures t
 
 The following screenshots show the result of setting the `FormattedString` property to three `Span` instances:
 
-![](label-images/formattedtext.png "Label FormattedText Example")
+![Label FormattedText Example](label-images/formattedtext.png)
 
 ## Line height
 
@@ -249,7 +249,7 @@ var label =
 
 The following screenshots show the result of setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property to 1.8:
 
-![](label-images/label-lineheight.png "Label LineHeight Example")
+![Label LineHeight Example](label-images/label-lineheight.png)
 
 The following XAML example demonstrates setting the [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property on a [`Span`](xref:Xamarin.Forms.Span):
 
@@ -289,7 +289,7 @@ var label = new Label
 
 The following screenshots show the result of setting the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property to 1.8:
 
-![](label-images/span-lineheight.png "Span LineHeight Example")
+![Span LineHeight Example](label-images/span-lineheight.png)
 
 ## Hyperlinks
 
