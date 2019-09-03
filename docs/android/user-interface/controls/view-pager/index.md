@@ -54,7 +54,7 @@ This guide demonstrates both approaches:
     that help with page navigation.
 
 - In [Viewpager with Fragments](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), a
-    slightly more complex [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) 
+    slightly more complex [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) 
     app is developed to demonstrate how to use `ViewPager` 
     with `Fragment`s to build an app that presents math 
     problems as flash cards and responds to user input. 
