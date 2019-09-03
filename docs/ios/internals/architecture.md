@@ -119,7 +119,7 @@ of how this is done:
     -(void)myFunc;
 @end
 
-@implementation	MyViewController {}
+@implementation MyViewController {}
 
     -(void) myFunc
     {

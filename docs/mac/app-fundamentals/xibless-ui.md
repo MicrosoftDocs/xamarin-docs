@@ -30,16 +30,16 @@ When you create a new Xamarin.Mac Cocoa application, you get a standard blank, w
 To switch to a Xibless window for an application, do the following:
 
 1. Open the application that you want to stop using `.storyboard` or .xib files to define the user interface in Visual Studio for Mac.
-2. In the **Solution Pad**, right-click on the **Main.storyboard** or **MainWindow.xib** file and select **Remove**: 
+2. In the **Solution Pad**, right-click on the **Main.storyboard** or **MainWindow.xib** file and select **Remove**:
 
-	![Removing the main storyboard or window](xibless-ui-images/switch01.png "Removing the main storyboard or window")
-3. From the **Remove Dialog**, click the **Delete** button to remove the .storyboard or .xib completely from the project: 
+    ![Removing the main storyboard or window](xibless-ui-images/switch01.png "Removing the main storyboard or window")
+3. From the **Remove Dialog**, click the **Delete** button to remove the .storyboard or .xib completely from the project:
 
-	![Confirming the deletion](xibless-ui-images/switch02.png "Confirming the deletion")
+    ![Confirming the deletion](xibless-ui-images/switch02.png "Confirming the deletion")
 
 Now we'll need to modify the **MainWindow.cs** file to define the window's layout and modify the **ViewController.cs** or **MainWindowController.cs** file to create an instance of our `MainWindow` class since we are no longer using the .storyboard or .xib file.
 
-Modern Xamarin.Mac apps that use Storyboards for their user interface may not automatically include the **MainWindow.cs**, **ViewController.cs** or **MainWindowController.cs** files. As required, simply add a new Empty C# Class to the project (**Add** > **New File...** > **General** > **Empty Class**) and name it the same as the missing file. 
+Modern Xamarin.Mac apps that use Storyboards for their user interface may not automatically include the **MainWindow.cs**, **ViewController.cs** or **MainWindowController.cs** files. As required, simply add a new Empty C# Class to the project (**Add** > **New File...** > **General** > **Empty Class**) and name it the same as the missing file.
 
 
 ### Defining the window in code
@@ -54,66 +54,66 @@ using CoreGraphics;
 
 namespace MacXibless
 {
-	public partial class MainWindow : NSWindow
-	{
-		#region Private Variables
-		private int NumberOfTimesClicked = 0;
-		#endregion
+    public partial class MainWindow : NSWindow
+    {
+        #region Private Variables
+        private int NumberOfTimesClicked = 0;
+        #endregion
 
-		#region Computed Properties
-		public NSButton ClickMeButton { get; set;}
-		public NSTextField ClickMeLabel { get ; set;}
-		#endregion
+        #region Computed Properties
+        public NSButton ClickMeButton { get; set;}
+        public NSTextField ClickMeLabel { get ; set;}
+        #endregion
 
-		#region Constructors
-		public MainWindow (IntPtr handle) : base (handle)
-		{
-		}
+        #region Constructors
+        public MainWindow (IntPtr handle) : base (handle)
+        {
+        }
 
-		[Export ("initWithCoder:")]
-		public MainWindow (NSCoder coder) : base (coder)
-		{
-		}
+        [Export ("initWithCoder:")]
+        public MainWindow (NSCoder coder) : base (coder)
+        {
+        }
 
-		public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore bufferingType, bool deferCreation): base (contentRect, aStyle,bufferingType,deferCreation) {
-			// Define the user interface of the window here
-			Title = "Window From Code";
+        public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore bufferingType, bool deferCreation): base (contentRect, aStyle,bufferingType,deferCreation) {
+            // Define the user interface of the window here
+            Title = "Window From Code";
 
-			// Create the content view for the window and make it fill the window
-			ContentView = new NSView (Frame);
+            // Create the content view for the window and make it fill the window
+            ContentView = new NSView (Frame);
 
-			// Add UI elements to window
-			ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
-				AutoresizingMask = NSViewResizingMask.MinYMargin
-			};
-			ContentView.AddSubview (ClickMeButton);
+            // Add UI elements to window
+            ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
+                AutoresizingMask = NSViewResizingMask.MinYMargin
+            };
+            ContentView.AddSubview (ClickMeButton);
 
-			ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
-				BackgroundColor = NSColor.Clear,
-				TextColor = NSColor.Black,
-				Editable = false,
-				Bezeled = false,
-				AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin,
-				StringValue = "Button has not been clicked yet."
-			};
-			ContentView.AddSubview (ClickMeLabel);
-		}
-		#endregion
+            ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
+                BackgroundColor = NSColor.Clear,
+                TextColor = NSColor.Black,
+                Editable = false,
+                Bezeled = false,
+                AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin,
+                StringValue = "Button has not been clicked yet."
+            };
+            ContentView.AddSubview (ClickMeLabel);
+        }
+        #endregion
 
-		#region Override Methods
-		public override void AwakeFromNib ()
-		{
-			base.AwakeFromNib ();
+        #region Override Methods
+        public override void AwakeFromNib ()
+        {
+            base.AwakeFromNib ();
 
-			// Wireup events
-			ClickMeButton.Activated += (sender, e) => {
-				// Update count
-				ClickMeLabel.StringValue = (++NumberOfTimesClicked == 1) ? "Button clicked one time." : string.Format("Button clicked {0} times.",NumberOfTimesClicked);
-			};
-		}
-		#endregion
+            // Wireup events
+            ClickMeButton.Activated += (sender, e) => {
+                // Update count
+                ClickMeLabel.StringValue = (++NumberOfTimesClicked == 1) ? "Button clicked one time." : string.Format("Button clicked {0} times.",NumberOfTimesClicked);
+            };
+        }
+        #endregion
 
-	}
+    }
 }
 ```
 
@@ -130,7 +130,7 @@ These will give us access to the UI elements that we are going to display on the
 
 ```csharp
 public MainWindow(CGRect contentRect, NSWindowStyle aStyle, NSBackingStore bufferingType, bool deferCreation): base (contentRect, aStyle,bufferingType,deferCreation) {
-	...
+    ...
 }
 ```
 
@@ -144,7 +144,7 @@ This creates a Content View that will fill the window. Now we add our first UI e
 
 ```csharp
 ClickMeButton = new NSButton (new CGRect (10, Frame.Height-70, 100, 30)){
-	AutoresizingMask = NSViewResizingMask.MinYMargin
+    AutoresizingMask = NSViewResizingMask.MinYMargin
 };
 ContentView.AddSubview (ClickMeButton);
 ```
@@ -155,19 +155,19 @@ The `AutoresizingMask = NSViewResizingMask.MinYMargin` property tells the button
 
 Finally, the `ContentView.AddSubview (ClickMeButton)` method adds the `NSButton` to the Content View so that it will be displayed on screen when the application is run and the window displayed.
 
-Next a label is added to the window that will display the number of times that the `NSButton` has been clicked: 
+Next a label is added to the window that will display the number of times that the `NSButton` has been clicked:
 
 ```csharp
 ClickMeLabel = new NSTextField (new CGRect (120, Frame.Height - 65, Frame.Width - 130, 20)) {
-	BackgroundColor = NSColor.Clear,
-	TextColor = NSColor.Black,
-	Editable = false,
-	Bezeled = false,
-	AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin,
-	StringValue = "Button has not been clicked yet."
+    BackgroundColor = NSColor.Clear,
+    TextColor = NSColor.Black,
+    Editable = false,
+    Bezeled = false,
+    AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin,
+    StringValue = "Button has not been clicked yet."
 };
 ContentView.AddSubview (ClickMeLabel);
-``` 
+```
 
 Since macOS doesn't have a specific _Label_ UI element, we've added a specially styled, non-editable `NSTextField` to act as a Label. Just like the button before, the size and location takes into account that (0,0) is at the bottom left of the window. The `AutoresizingMask = NSViewResizingMask.WidthSizable | NSViewResizingMask.MinYMargin` property is using the **or** operator to combine two `NSViewResizingMask` features. This will make the label stay in the same location from the top of the window when the window is resized vertically and shrink and grow in width as the window is resized horizontally.
 
@@ -187,36 +187,36 @@ using CoreGraphics;
 
 namespace MacXibless
 {
-	public partial class MainWindowController : NSWindowController
-	{
-		public MainWindowController (IntPtr handle) : base (handle)
-		{
-		}
+    public partial class MainWindowController : NSWindowController
+    {
+        public MainWindowController (IntPtr handle) : base (handle)
+        {
+        }
 
-		[Export ("initWithCoder:")]
-		public MainWindowController (NSCoder coder) : base (coder)
-		{
-		}
+        [Export ("initWithCoder:")]
+        public MainWindowController (NSCoder coder) : base (coder)
+        {
+        }
 
-		public MainWindowController () : base ("MainWindow")
-		{
-			// Construct the window from code here
-			CGRect contentRect = new CGRect (0, 0, 1000, 500);
-			base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable), NSBackingStore.Buffered, false);
+        public MainWindowController () : base ("MainWindow")
+        {
+            // Construct the window from code here
+            CGRect contentRect = new CGRect (0, 0, 1000, 500);
+            base.Window = new MainWindow(contentRect, (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable), NSBackingStore.Buffered, false);
 
-			// Simulate Awaking from Nib
-			Window.AwakeFromNib ();
-		}
+            // Simulate Awaking from Nib
+            Window.AwakeFromNib ();
+        }
 
-		public override void AwakeFromNib ()
-		{
-			base.AwakeFromNib ();
-		}
+        public override void AwakeFromNib ()
+        {
+            base.AwakeFromNib ();
+        }
 
-		public new MainWindow Window {
-			get { return (MainWindow)base.Window; }
-		}
-	}
+        public new MainWindow Window {
+            get { return (MainWindow)base.Window; }
+        }
+    }
 }
 
 ```
@@ -234,7 +234,7 @@ We define the location of the window of screen with a `CGRect`. Just like the co
 
 ```csharp
 ... (NSWindowStyle.Titled | NSWindowStyle.Closable | NSWindowStyle.Miniaturizable | NSWindowStyle.Resizable) ...
-``` 
+```
 
 The following `NSWindowStyle` features are available:
 
@@ -244,7 +244,7 @@ The following `NSWindowStyle` features are available:
 - **Miniaturizable** - The window has a Miniaturize Button and can be minimized.
 - **Resizable** - The window will have a Resize Button and be resizable.
 - **Utility** - The window is a Utility style window (panel).
-- **DocModal** - If the window is a Panel, it will be Document Modal instead of System Modal. 
+- **DocModal** - If the window is a Panel, it will be Document Modal instead of System Modal.
 - **NonactivatingPanel** - If the window is a Panel, it will not be made the main window.
 - **TexturedBackground** - The window will have a textured background.
 - **Unscaled** - The window will not be scaled.
@@ -287,7 +287,7 @@ At this point, if the application is run and the button clicked a couple of time
 
 If we want to add a code only, xibless window to an existing Xamarin.Mac application, right-click on the project in the **Solution Pad** and select **Add** > **New File..**. In the **New File** dialog choose **Xamarin.Mac** > **Cocoa Window with Controller**, as illustrated below:
 
-![Adding a new window controller](xibless-ui-images/add01.png "Adding a new window controller") 
+![Adding a new window controller](xibless-ui-images/add01.png "Adding a new window controller")
 
 Just like before, we'll delete the default .storyboard or .xib file from the project (in this case **SecondWindow.xib**) and follow the steps in the [Switching a Window to use Code](#Switching_a_Window_to_use_Code) section above to cover the window's definition to code.
 
@@ -298,7 +298,7 @@ Whether a window was created in code or loaded from a .storyboard or .xib file, 
 
 ```csharp
 var ClickMeButton = new NSButton (new CGRect (10, 10, 100, 30)){
-	AutoresizingMask = NSViewResizingMask.MinYMargin
+    AutoresizingMask = NSViewResizingMask.MinYMargin
 };
 MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
@@ -315,40 +315,40 @@ For example, edit the **AppDelegate.cs** file and make the `DidFinishLaunching` 
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
-	mainWindowController = new MainWindowController ();
-	mainWindowController.Window.MakeKeyAndOrderFront (this);
+    mainWindowController = new MainWindowController ();
+    mainWindowController.Window.MakeKeyAndOrderFront (this);
 
-	// Create a Status Bar Menu
-	NSStatusBar statusBar = NSStatusBar.SystemStatusBar;
+    // Create a Status Bar Menu
+    NSStatusBar statusBar = NSStatusBar.SystemStatusBar;
 
-	var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);
-	item.Title = "Phrases";
-	item.HighlightMode = true;
-	item.Menu = new NSMenu ("Phrases");
+    var item = statusBar.CreateStatusItem (NSStatusItemLength.Variable);
+    item.Title = "Phrases";
+    item.HighlightMode = true;
+    item.Menu = new NSMenu ("Phrases");
 
-	var address = new NSMenuItem ("Address");
-	address.Activated += (sender, e) => {
-		Console.WriteLine("Address Selected");
-	};
-	item.Menu.AddItem (address);
+    var address = new NSMenuItem ("Address");
+    address.Activated += (sender, e) => {
+        Console.WriteLine("Address Selected");
+    };
+    item.Menu.AddItem (address);
 
-	var date = new NSMenuItem ("Date");
-	date.Activated += (sender, e) => {
-		Console.WriteLine("Date Selected");
-	};
-	item.Menu.AddItem (date);
+    var date = new NSMenuItem ("Date");
+    date.Activated += (sender, e) => {
+        Console.WriteLine("Date Selected");
+    };
+    item.Menu.AddItem (date);
 
-	var greeting = new NSMenuItem ("Greeting");
-	greeting.Activated += (sender, e) => {
-		Console.WriteLine("Greetings Selected");
-	};
-	item.Menu.AddItem (greeting);
+    var greeting = new NSMenuItem ("Greeting");
+    greeting.Activated += (sender, e) => {
+        Console.WriteLine("Greetings Selected");
+    };
+    item.Menu.AddItem (greeting);
 
-	var signature = new NSMenuItem ("Signature");
-	signature.Activated += (sender, e) => {
-		Console.WriteLine("Signature Selected");
-	};
-	item.Menu.AddItem (signature);
+    var signature = new NSMenuItem ("Signature");
+    signature.Activated += (sender, e) => {
+        Console.WriteLine("Signature Selected");
+    };
+    item.Menu.AddItem (signature);
 }
 ```
 

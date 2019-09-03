@@ -19,12 +19,12 @@ as https://developer xamarin com/guides/cross-platform/data-cloud/mobile-service
 A redirect has been put in place to /mobile-apps/ HOWEVER the /Resources/ .ZIP files are still located in /mobile-services/ so that the following permalinks don't break
 
 The ZIPs in /Resources/ are also referenced by inbound links
-Getting Started	 http://go.microsoft.com/fwlink/p/?LinkId=331359
-Get started with data	http://go.microsoft.com/fwlink/p/?LinkId=331302
-Get started with push	http://go.microsoft.com/fwlink/p/?LinkId=331303
-Get started with authentication	http://go.microsoft.com/fwlink/p/?LinkId=331328
-Get started with Notification Hubs	http://go.microsoft.com/fwlink/p/?LinkId=331329
-Validate and modify data 	http://go.microsoft.com/fwlink/p/?LinkId=331330
+Getting Started http://go.microsoft.com/fwlink/p/?LinkId=331359
+Get started with data http://go.microsoft.com/fwlink/p/?LinkId=331302
+Get started with push http://go.microsoft.com/fwlink/p/?LinkId=331303
+Get started with authentication http://go.microsoft.com/fwlink/p/?LinkId=331328
+Get started with Notification Hubs http://go.microsoft.com/fwlink/p/?LinkId=331329
+Validate and modify data  http://go.microsoft.com/fwlink/p/?LinkId=331330
 -->
 
 

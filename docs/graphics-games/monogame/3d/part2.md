@@ -79,7 +79,7 @@ Our plane will serve as a floor, and we’ll want to apply a texture when perfor
 First, we’ll add a member to our Game1 class:
 
 ```csharp
-VertexPositionTexture[] floorVerts; 
+VertexPositionTexture[] floorVerts;
 ```
 
 Next, define our vertices in `Game1.Initialize`. Notice that the provided template referenced earlier in this article does not contain a `Game1.Initialize` method, so we need to add the entire method to `Game1`:
@@ -87,15 +87,15 @@ Next, define our vertices in `Game1.Initialize`. Notice that the provided templa
 ```csharp
 protected override void Initialize ()
 {
-	floorVerts = new VertexPositionTexture[6];
-	floorVerts [0].Position = new Vector3 (-20, -20, 0);
-	floorVerts [1].Position = new Vector3 (-20,  20, 0);
-	floorVerts [2].Position = new Vector3 ( 20, -20, 0);
-	floorVerts [3].Position = floorVerts[1].Position;
-	floorVerts [4].Position = new Vector3 ( 20,  20, 0);
-	floorVerts [5].Position = floorVerts[2].Position;
-	// We’ll be assigning texture values later
-	base.Initialize ();
+    floorVerts = new VertexPositionTexture[6];
+    floorVerts [0].Position = new Vector3 (-20, -20, 0);
+    floorVerts [1].Position = new Vector3 (-20,  20, 0);
+    floorVerts [2].Position = new Vector3 ( 20, -20, 0);
+    floorVerts [3].Position = floorVerts[1].Position;
+    floorVerts [4].Position = new Vector3 ( 20,  20, 0);
+    floorVerts [5].Position = floorVerts[2].Position;
+    // We’ll be assigning texture values later
+    base.Initialize ();
 }
 ```
 
@@ -173,7 +173,7 @@ void DrawGround()
             PrimitiveType.TriangleList,
             // The array of verts that we want to render
             floorVerts,
-            // The offset, which is 0 since we want to start 
+            // The offset, which is 0 since we want to start
             // at the beginning of the floorVerts array
             0,
             // The number of triangles to draw
@@ -187,11 +187,11 @@ We'll need to call `DrawGround` in our `Game1.Draw`:
 ```csharp
 protected override void Draw (GameTime gameTime)
 {
-	GraphicsDevice.Clear (Color.CornflowerBlue);
+    GraphicsDevice.Clear (Color.CornflowerBlue);
 
-	DrawGround ();
+    DrawGround ();
 
-	base.Draw (gameTime);
+    base.Draw (gameTime);
 }
 ```
 
@@ -207,7 +207,7 @@ The `View` and `Projection` properties control how we view the scene. We’ll be
 
 ### Techniques and Passes
 
-Once we’ve assigned properties on our effect we can perform the actual rendering. 
+Once we’ve assigned properties on our effect we can perform the actual rendering.
 
 We won’t be changing the `CurrentTechnique` property in this walkthrough, but more advanced games may have a single effect which can perform drawing in different ways (such as how the color value is applied). Each of these rendering modes can be represented as a technique which can be assigned prior to rendering. Furthermore, each technique may require multiple passes to render properly. Effects may need multiple passes if rendering complex visuals such as a glowing surface or fur.
 
@@ -225,7 +225,7 @@ Finally, we specify how many triangles to render. Our vertex array contains two 
 
 ## Rendering with a Texture
 
-At this point our app renders a white plane (in perspective). Next we’ll add a texture to our project to be used when rendering our plane. 
+At this point our app renders a white plane (in perspective). Next we’ll add a texture to our project to be used when rendering our plane.
 
 To keep things simple we’ll add the .png directly to our project rather than using the MonoGame Pipeline tool. To do this, download [this .png file](https://github.com/xamarin/mobile-samples/blob/master/ModelRenderingMG/Resources/checkerboard.png?raw=true) to your computer. Once downloaded, right-click on the **Content** folder in the Solution pad and select **Add>Add Files...** . If working on Android, then this folder will be located under the **Assets** folder in the Android-specific project. If on iOS, then this folder will be in the root of the iOS project. Navigate to the location where **checkerboard.png** is saved and select this file. Select to copy the file to the directory.
 
@@ -326,7 +326,7 @@ protected override void Initialize ()
     effect = new BasicEffect (graphics.GraphicsDevice);
 
     base.Initialize ();
-} 
+}
 ```
 
 If we run the code, we can see that our plane now displays a checkerboard pattern:
@@ -398,7 +398,7 @@ protected override void Draw(GameTime gameTime)
     DrawModel (new Vector3 ( 4, 4, 3));
 
     base.Draw(gameTime);
-} 
+}
 ```
 
 We will also create a `Vector3` in `Game1` to represent our camera’s position. We’ll add a field under our `checkerboardTexture` declaration:
@@ -407,7 +407,7 @@ We will also create a `Vector3` in `Game1` to represent our camera’s position.
 ...
 Texture2D checkerboardTexture;
 // new code:
-Vector3 cameraPosition = new Vector3(0, 10, 10); 
+Vector3 cameraPosition = new Vector3(0, 10, 10);
 ```
 
 Next, remove the local `cameraPosition` variable from the `DrawModel` method:
@@ -428,7 +428,7 @@ void DrawModel(Vector3 modelPosition)
             var cameraUpVector = Vector3.UnitZ;
 
             effect.View = Matrix.CreateLookAt (
-                cameraPosition, cameraLookAtVector, cameraUpVector); 
+                cameraPosition, cameraLookAtVector, cameraUpVector);
             ...
 ```
 
@@ -444,7 +444,7 @@ void DrawGround()
 
     effect.View = Matrix.CreateLookAt (
         cameraPosition, cameraLookAtVector, cameraUpVector);
-    ... 
+    ...
 ```
 
 Now if we run the code we can see both the models and the ground at the same time:

@@ -62,7 +62,7 @@ Apple provides the following suggestions for working with Touch Surface gestures
 
 ## Siri Remote Buttons
 
-In addition to gestures on the Touch Surface, your app can respond to the user clicking the Touch Surface or pressing the Play/Pause button. If you are accessing the Siri Remote using the Game Controller Framework, you can also detect the Menu button being pressed. 
+In addition to gestures on the Touch Surface, your app can respond to the user clicking the Touch Surface or pressing the Play/Pause button. If you are accessing the Siri Remote using the Game Controller Framework, you can also detect the Menu button being pressed.
 
 Additionally, menu button presses can be detected using a Gesture Recognizer with standard `UIKit` elements. If you intercept the Menu button being pressed, you'll be responsible for closing the current View and View Controller and return to the previous one.
 
@@ -78,16 +78,16 @@ The easiest way to work with the Siri Remote in your Xamarin.tvOS app is to add 
 To add a Gestures Recognizer, do the following:
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing the Interface Designer.
-2. Drag a **Tap Gesture Recognizer** from the **Library** and drop it on the View: 
+2. Drag a **Tap Gesture Recognizer** from the **Library** and drop it on the View:
 
-	[![](remote-bluetooth-images/storyboard01.png "A Tap Gesture Recognizer")](remote-bluetooth-images/storyboard01.png#lightbox)
-3. Check **Select** in the **Button** section of the **Attribute Inspector**: 
+    [![](remote-bluetooth-images/storyboard01.png "A Tap Gesture Recognizer")](remote-bluetooth-images/storyboard01.png#lightbox)
+3. Check **Select** in the **Button** section of the **Attribute Inspector**:
 
-	[![](remote-bluetooth-images/storyboard02.png "Check Select")](remote-bluetooth-images/storyboard02.png#lightbox)
+    [![](remote-bluetooth-images/storyboard02.png "Check Select")](remote-bluetooth-images/storyboard02.png#lightbox)
 4. **Select** means the gesture will respond to the user clicking the **Touch Surface** on the Siri Remote. You also have the option of responding to the **Menu**, **Play/Pause**, **Up**, **Down**, **Left** and **Right** buttons.
-5. Next, wire up an **Action** from the **Tap Gesture Recognizer** and call it `TouchSurfaceClicked`: 
+5. Next, wire up an **Action** from the **Tap Gesture Recognizer** and call it `TouchSurfaceClicked`:
 
-	[![](remote-bluetooth-images/storyboard03.png "An Action from the Tap Gesture Recognizer")](remote-bluetooth-images/storyboard03.png#lightbox)
+    [![](remote-bluetooth-images/storyboard03.png "An Action from the Tap Gesture Recognizer")](remote-bluetooth-images/storyboard03.png#lightbox)
 6. Save your changes and return to Visual Studio for Mac.
 
 Edit your View Controller (example `FirstViewController.cs`) file and add the following code to handle the gesture being triggered:
@@ -98,17 +98,17 @@ using UIKit;
 
 namespace tvRemote
 {
-	public partial class FirstViewController : UIViewController
-	{
-		...
+    public partial class FirstViewController : UIViewController
+    {
+        ...
 
-		#region Custom Actions
-		partial void TouchSurfaceClicked (Foundation.NSObject sender) {
-			// Handle click here
-			...
-		}
-		#endregion
-	}
+        #region Custom Actions
+        partial void TouchSurfaceClicked (Foundation.NSObject sender) {
+            // Handle click here
+            ...
+        }
+        #endregion
+    }
 }
 ```
 
@@ -126,54 +126,54 @@ using UIKit;
 
 namespace tvRemote
 {
-	public partial class SecondViewController : UIViewController
-	{
-		#region Constructors
-		public SecondViewController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class SecondViewController : UIViewController
+    {
+        #region Constructors
+        public SecondViewController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();	
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Wire-up gestures
-			var upGesture = new UISwipeGestureRecognizer (() => {
-				RemoteView.ArrowPressed = "Up";
-				ButtonLabel.Text = "Swiped Up";
-			}) {
-				Direction = UISwipeGestureRecognizerDirection.Up
-			};
-			this.View.AddGestureRecognizer (upGesture);
+            // Wire-up gestures
+            var upGesture = new UISwipeGestureRecognizer (() => {
+                RemoteView.ArrowPressed = "Up";
+                ButtonLabel.Text = "Swiped Up";
+            }) {
+                Direction = UISwipeGestureRecognizerDirection.Up
+            };
+            this.View.AddGestureRecognizer (upGesture);
 
-			var downGesture = new UISwipeGestureRecognizer (() => {
-				RemoteView.ArrowPressed = "Down";
-				ButtonLabel.Text = "Swiped Down";
-			}) {
-				Direction = UISwipeGestureRecognizerDirection.Down
-			};
-			this.View.AddGestureRecognizer (downGesture);
+            var downGesture = new UISwipeGestureRecognizer (() => {
+                RemoteView.ArrowPressed = "Down";
+                ButtonLabel.Text = "Swiped Down";
+            }) {
+                Direction = UISwipeGestureRecognizerDirection.Down
+            };
+            this.View.AddGestureRecognizer (downGesture);
 
-			var leftGesture = new UISwipeGestureRecognizer (() => {
-				RemoteView.ArrowPressed = "Left";
-				ButtonLabel.Text = "Swiped Left";
-			}) {
-				Direction = UISwipeGestureRecognizerDirection.Left
-			};
-			this.View.AddGestureRecognizer (leftGesture);
+            var leftGesture = new UISwipeGestureRecognizer (() => {
+                RemoteView.ArrowPressed = "Left";
+                ButtonLabel.Text = "Swiped Left";
+            }) {
+                Direction = UISwipeGestureRecognizerDirection.Left
+            };
+            this.View.AddGestureRecognizer (leftGesture);
 
-			var rightGesture = new UISwipeGestureRecognizer (() => {
-				RemoteView.ArrowPressed = "Right";
-				ButtonLabel.Text = "Swiped Right";
-			}) {
-				Direction = UISwipeGestureRecognizerDirection.Right
-			};
-			this.View.AddGestureRecognizer (rightGesture);
-		}
-		#endregion
-	}
+            var rightGesture = new UISwipeGestureRecognizer (() => {
+                RemoteView.ArrowPressed = "Right";
+                ButtonLabel.Text = "Swiped Right";
+            }) {
+                Direction = UISwipeGestureRecognizerDirection.Right
+            };
+            this.View.AddGestureRecognizer (rightGesture);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -181,9 +181,9 @@ namespace tvRemote
 
 ## Low-Level Event Handling
 
-If you are creating a custom type based on `UIKit` in your Xamarin.tvOS app (for example `UIView`), you also have the ability to provide low-level handling of button press via `UIPress` events. 
+If you are creating a custom type based on `UIKit` in your Xamarin.tvOS app (for example `UIView`), you also have the ability to provide low-level handling of button press via `UIPress` events.
 
-A `UIPress` event is to tvOS what a `UITouch` event is to iOS, except `UIPress` returns information about button presses on the Siri Remote or other attached Bluetooth devices (like a Game Controller). `UIPress` events describe the button being pressed and its state (Began, Canceled, Changed or Ended). 
+A `UIPress` event is to tvOS what a `UITouch` event is to iOS, except `UIPress` returns information about button presses on the Siri Remote or other attached Bluetooth devices (like a Game Controller). `UIPress` events describe the button being pressed and its state (Began, Canceled, Changed or Ended).
 
 For analog buttons on devices like Bluetooth Game Controllers, `UIPress` also returns the amount of force being applied to the button. The `Type` property of the `UIPress` event defines which physical button has changed state, while the rest of the properties describe the change that occurred.
 
@@ -196,65 +196,65 @@ using UIKit;
 
 namespace tvRemote
 {
-	public partial class EventView : UIView
-	{
-		#region Computed Properties
-		public override bool CanBecomeFocused {
-			get {
-				return true;
-			}
-		}
-		#endregion
+    public partial class EventView : UIView
+    {
+        #region Computed Properties
+        public override bool CanBecomeFocused {
+            get {
+                return true;
+            }
+        }
+        #endregion
 
-		#region 
-		public EventView (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region
+        public EventView (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void PressesBegan (NSSet<UIPress> presses, UIPressesEvent evt)
-		{
-			base.PressesBegan (presses, evt);
+        #region Override Methods
+        public override void PressesBegan (NSSet<UIPress> presses, UIPressesEvent evt)
+        {
+            base.PressesBegan (presses, evt);
 
-			foreach (UIPress press in presses) {
-				// Was the Touch Surface clicked?
-				if (press.Type == UIPressType.Select) {
-					BackgroundColor = UIColor.Red;
-				}
-			}
-		}
+            foreach (UIPress press in presses) {
+                // Was the Touch Surface clicked?
+                if (press.Type == UIPressType.Select) {
+                    BackgroundColor = UIColor.Red;
+                }
+            }
+        }
 
-		public override void PressesCancelled (NSSet<UIPress> presses, UIPressesEvent evt)
-		{
-			base.PressesCancelled (presses, evt);
+        public override void PressesCancelled (NSSet<UIPress> presses, UIPressesEvent evt)
+        {
+            base.PressesCancelled (presses, evt);
 
-			foreach (UIPress press in presses) {
-				// Was the Touch Surface clicked?
-				if (press.Type == UIPressType.Select) {
-					BackgroundColor = UIColor.Clear;
-				}
-			}
-		}
+            foreach (UIPress press in presses) {
+                // Was the Touch Surface clicked?
+                if (press.Type == UIPressType.Select) {
+                    BackgroundColor = UIColor.Clear;
+                }
+            }
+        }
 
-		public override void PressesChanged (NSSet<UIPress> presses, UIPressesEvent evt)
-		{
-			base.PressesChanged (presses, evt);
-		}
+        public override void PressesChanged (NSSet<UIPress> presses, UIPressesEvent evt)
+        {
+            base.PressesChanged (presses, evt);
+        }
 
-		public override void PressesEnded (NSSet<UIPress> presses, UIPressesEvent evt)
-		{
-			base.PressesEnded (presses, evt);
+        public override void PressesEnded (NSSet<UIPress> presses, UIPressesEvent evt)
+        {
+            base.PressesEnded (presses, evt);
 
-			foreach (UIPress press in presses) {
-				// Was the Touch Surface clicked?
-				if (press.Type == UIPressType.Select) {
-					BackgroundColor = UIColor.Clear;
-				}
-			}
-		}
-		#endregion
-	}
+            foreach (UIPress press in presses) {
+                // Was the Touch Surface clicked?
+                if (press.Type == UIPressType.Select) {
+                    BackgroundColor = UIColor.Clear;
+                }
+            }
+        }
+        #endregion
+    }
 }
 ```
 

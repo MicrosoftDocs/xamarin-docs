@@ -37,10 +37,10 @@ var item = new CSSearchableItem ("1", "products", attributes);
 
 // Index item
 CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, (error) => {
-	// Successful?
-	if (error !=null) {
-		Console.WriteLine(error.LocalizedDescription);
-	}
+    // Successful?
+    if (error !=null) {
+        Console.WriteLine(error.LocalizedDescription);
+    }
 });
 ```
 
@@ -59,19 +59,19 @@ public override bool ContinueUserActivity (UIApplication application,
    NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
 {
 
-	// Take action based on the activity type
-	switch (userActivity.ActivityType) {
-	case "com.xamarin.platform":
-		// Restore the state of the app here...
-		break;
-	default:
-		if (userActivity.ActivityType == CSSearchableItem.ActionType.ToString ()) {
-			// Display content for searchable item...
-		}
-		break;
-	}
+    // Take action based on the activity type
+    switch (userActivity.ActivityType) {
+    case "com.xamarin.platform":
+        // Restore the state of the app here...
+        break;
+    default:
+        if (userActivity.ActivityType == CSSearchableItem.ActionType.ToString ()) {
+            // Display content for searchable item...
+        }
+        break;
+    }
 
-	return true;
+    return true;
 }
 ```
 
@@ -99,10 +99,10 @@ First, you can delete an item by its identifier, for example:
 ```csharp
 // Delete Items by ID
 CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) => {
-	// Successful?
-	if (error !=null) {
-		Console.WriteLine(error.LocalizedDescription);
-	}
+    // Successful?
+    if (error !=null) {
+        Console.WriteLine(error.LocalizedDescription);
+    }
 });
 ```
 
@@ -111,10 +111,10 @@ Next, you can delete a group of index items by their domain name. For example:
 ```csharp
 // Delete by Domain Name
 CSSearchableIndex.DefaultSearchableIndex.DeleteWithDomain(new string[]{"domain-name"},(error) => {
-	// Successful?
-	if (error !=null) {
-		Console.WriteLine(error.LocalizedDescription);
-	}
+    // Successful?
+    if (error !=null) {
+        Console.WriteLine(error.LocalizedDescription);
+    }
 });
 ```
 
@@ -123,10 +123,10 @@ Finally, you can delete all Index Items with the following code:
 ```csharp
 // Delete all index items
 CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
-	// Successful?
-	if (error !=null) {
-		Console.WriteLine(error.LocalizedDescription);
-	}
+    // Successful?
+    if (error !=null) {
+        Console.WriteLine(error.LocalizedDescription);
+    }
 });
 ```
 

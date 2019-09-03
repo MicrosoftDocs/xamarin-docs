@@ -42,32 +42,32 @@ string:
 ```csharp
 public class TableSource : UITableViewSource {
 
-		string[] TableItems;
-		string CellIdentifier = "TableCell";
+        string[] TableItems;
+        string CellIdentifier = "TableCell";
 
-		public TableSource (string[] items)
-		{
-			TableItems = items;
-		}
+        public TableSource (string[] items)
+        {
+            TableItems = items;
+        }
 
-	    public override nint RowsInSection (UITableView tableview, nint section)
-	    {
-	        return TableItems.Length;
-	    }
+        public override nint RowsInSection (UITableView tableview, nint section)
+        {
+            return TableItems.Length;
+        }
 
-    	public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
-		{
-			UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
-			string item = TableItems[indexPath.Row];
+        public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+        {
+            UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
+            string item = TableItems[indexPath.Row];
 
-			//---- if there are no cells to reuse, create a new one
-			if (cell == null)
-			{ cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
+            //---- if there are no cells to reuse, create a new one
+            if (cell == null)
+            { cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
 
-			cell.TextLabel.Text = item;
+            cell.TextLabel.Text = item;
 
-			return cell;
-		}
+            return cell;
+        }
 }
 ```
 
@@ -97,11 +97,11 @@ screen). To achieve this, there are a few things we need to do. First, let's cre
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 {
-	UIAlertController okAlertController = UIAlertController.Create ("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
-	okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-	...
+    UIAlertController okAlertController = UIAlertController.Create ("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
+    okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+    ...
 
-	tableView.DeselectRow (indexPath, true);
+    tableView.DeselectRow (indexPath, true);
 }
 ```
 
@@ -116,8 +116,8 @@ Add a constructor to your UITableViewSource class which takes a view controller 
 ```csharp
 public TableSource (string[] items, HomeScreen owner)
 {
-	...
-	this.owner = owner;
+    ...
+    this.owner = owner;
 
 }
 ```
@@ -133,10 +133,10 @@ Finally, back in your `RowSelected` method, call `PresentViewController` on the 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 {
-	...
-	owner.PresentViewController (okAlertController, true, null);
+    ...
+    owner.PresentViewController (okAlertController, true, null);
 
-	...
+    ...
 }
 ```
 

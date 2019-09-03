@@ -29,7 +29,7 @@ As stated above, alerts are used to get the user's attention and inform them of 
 
 Apple has the following suggestions for working with Alerts:
 
-- **Use Alerts Sparingly** - Alerts disrupt the user's flow with the app and interrupt the user experience and as such, should only be used for important situations such as error notifications, In-App Purchases and destructive actions. 
+- **Use Alerts Sparingly** - Alerts disrupt the user's flow with the app and interrupt the user experience and as such, should only be used for important situations such as error notifications, In-App Purchases and destructive actions.
 - **Provides Useful Choices** - If the Alert presents options to the user, your should ensure that each option offers critical information and provides useful actions for the user to take.
 
 <a name="Alert-Titles-and-Messages" />
@@ -39,7 +39,7 @@ Apple has the following suggestions for working with Alerts:
 Apple has the following suggestions for presenting an Alert's Title and optional Message:
 
 - **Use Multiword Titles** - An Alert's Title should get the point of the situation across clearly while still remaining simple. A single word title rarely provides enough information.
-- **Use Descriptive Titles that do not Require a Message** - Wherever possible, consider making the Alert's title descriptive enough that the optional Message text is not required. 
+- **Use Descriptive Titles that do not Require a Message** - Wherever possible, consider making the Alert's title descriptive enough that the optional Message text is not required.
 - **Make the Message a Short, Complete Sentence** - If the optional Message is required to get the point of the Alert across, keep it as simple as possible and make it a complete sentence with proper capitalization and punctuation.
 
 <a name="Alert-Buttons" />
@@ -65,16 +65,16 @@ const string acceptButtonTitle = "OK";
 const string cancelButtonTitle = "Cancel";
 const string deleteButtonTitle = "Delete";
 ...
-		
+
 var alertController = UIAlertController.Create (title, message, UIAlertControllerStyle.Alert);
 
 // Create the action.
-var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ => 
-	Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
+var acceptAction = UIAlertAction.Create (acceptButtonTitle, UIAlertActionStyle.Default, _ =>
+    Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
-var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ => 
-	Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
+var cancelAction = UIAlertAction.Create (cancelButtonTitle, UIAlertActionStyle.Cancel, _ =>
+    Console.WriteLine ("The \"OK/Cancel\" alert's other action occurred.")
 );
 
 // Add the actions.
@@ -92,9 +92,9 @@ UIAlertController.Create (title, message, UIAlertControllerStyle.Alert)
 Next, for each button that we want to display in the alert we create an Action defining the title of the button, its style and the action we want to take if the button is pressed:
 
 ```csharp
-UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ => 
-	// Do something when the button is pressed
-	...
+UIAlertAction.Create ("Button Title", UIAlertActionStyle.Default, _ =>
+    // Do something when the button is pressed
+    ...
 );
 ```
 
@@ -126,29 +126,29 @@ UITextField field = null;
 
 // Add and configure text field
 alert.AddTextField ((textField) => {
-	// Save the field
-	field = textField;
+    // Save the field
+    field = textField;
 
-	// Initialize field
-	field.Placeholder = placeholder;
-	field.Text = text;
-	field.AutocorrectionType = UITextAutocorrectionType.No;
-	field.KeyboardType = UIKeyboardType.Default;
-	field.ReturnKeyType = UIReturnKeyType.Done;
-	field.ClearButtonMode = UITextFieldViewMode.WhileEditing;
+    // Initialize field
+    field.Placeholder = placeholder;
+    field.Text = text;
+    field.AutocorrectionType = UITextAutocorrectionType.No;
+    field.KeyboardType = UIKeyboardType.Default;
+    field.ReturnKeyType = UIReturnKeyType.Done;
+    field.ClearButtonMode = UITextFieldViewMode.WhileEditing;
 
 });
 
 // Add cancel button
 alert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel,(actionCancel) => {
-	// User canceled, do something
-	...
+    // User canceled, do something
+    ...
 }));
 
 // Add ok button
 alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) => {
-	// User selected ok, do something
-	...
+    // User selected ok, do something
+    ...
 }));
 
 // Display the alert
@@ -175,9 +175,9 @@ UITextField field = null;
 
 // Add and configure text field
 alert.AddTextField ((textField) => {
-	// Save the field
-	field = textField;
-	...
+    // Save the field
+    field = textField;
+    ...
 });
 ```
 
@@ -197,130 +197,130 @@ using System.CodeDom.Compiler;
 
 namespace UIKit
 {
-	/// <summary>
-	/// Alert view controller is a reusable helper class that makes working with <c>UIAlertViewController</c> alerts
-	/// easier in a tvOS app.
-	/// </summary>
-	public class AlertViewController
-	{
-		#region Static Methods
-		public static UIAlertController PresentOKAlert(string title, string description, UIViewController controller) {
-			// No, inform the user that they must create a home first
-			UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
+    /// <summary>
+    /// Alert view controller is a reusable helper class that makes working with <c>UIAlertViewController</c> alerts
+    /// easier in a tvOS app.
+    /// </summary>
+    public class AlertViewController
+    {
+        #region Static Methods
+        public static UIAlertController PresentOKAlert(string title, string description, UIViewController controller) {
+            // No, inform the user that they must create a home first
+            UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
 
-			// Configure the alert
-			alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(action) => {}));
+            // Configure the alert
+            alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(action) => {}));
 
-			// Display the alert
-			controller.PresentViewController(alert,true,null);
+            // Display the alert
+            controller.PresentViewController(alert,true,null);
 
-			// Return created controller
-			return alert;
-		}
+            // Return created controller
+            return alert;
+        }
 
-		public static UIAlertController PresentOKCancelAlert(string title, string description, UIViewController controller, AlertOKCancelDelegate action) {
-			// No, inform the user that they must create a home first
-			UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
+        public static UIAlertController PresentOKCancelAlert(string title, string description, UIViewController controller, AlertOKCancelDelegate action) {
+            // No, inform the user that they must create a home first
+            UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
 
-			// Add cancel button
-			alert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel,(actionCancel) => {
-				// Any action?
-				if (action!=null) {
-					action(false);
-				}
-			}));
+            // Add cancel button
+            alert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel,(actionCancel) => {
+                // Any action?
+                if (action!=null) {
+                    action(false);
+                }
+            }));
 
-			// Add ok button
-			alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) => {
-				// Any action?
-				if (action!=null) {
-					action(true);
-				}
-			}));
+            // Add ok button
+            alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) => {
+                // Any action?
+                if (action!=null) {
+                    action(true);
+                }
+            }));
 
-			// Display the alert
-			controller.PresentViewController(alert,true,null);
+            // Display the alert
+            controller.PresentViewController(alert,true,null);
 
-			// Return created controller
-			return alert;
-		}
+            // Return created controller
+            return alert;
+        }
 
-		public static UIAlertController PresentDestructiveAlert(string title, string description, string destructiveAction, UIViewController controller, AlertOKCancelDelegate action) {
-			// No, inform the user that they must create a home first
-			UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
+        public static UIAlertController PresentDestructiveAlert(string title, string description, string destructiveAction, UIViewController controller, AlertOKCancelDelegate action) {
+            // No, inform the user that they must create a home first
+            UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
 
-			// Add cancel button
-			alert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel,(actionCancel) => {
-				// Any action?
-				if (action!=null) {
-					action(false);
-				}
-			}));
+            // Add cancel button
+            alert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel,(actionCancel) => {
+                // Any action?
+                if (action!=null) {
+                    action(false);
+                }
+            }));
 
-			// Add ok button
-			alert.AddAction(UIAlertAction.Create(destructiveAction,UIAlertActionStyle.Destructive,(actionOK) => {
-				// Any action?
-				if (action!=null) {
-					action(true);
-				}
-			}));
+            // Add ok button
+            alert.AddAction(UIAlertAction.Create(destructiveAction,UIAlertActionStyle.Destructive,(actionOK) => {
+                // Any action?
+                if (action!=null) {
+                    action(true);
+                }
+            }));
 
-			// Display the alert
-			controller.PresentViewController(alert,true,null);
+            // Display the alert
+            controller.PresentViewController(alert,true,null);
 
-			// Return created controller
-			return alert;
-		}
+            // Return created controller
+            return alert;
+        }
 
-		public static UIAlertController PresentTextInputAlert(string title, string description, string placeholder, string text, UIViewController controller, AlertTextInputDelegate action) {
-			// No, inform the user that they must create a home first
-			UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
-			UITextField field = null;
+        public static UIAlertController PresentTextInputAlert(string title, string description, string placeholder, string text, UIViewController controller, AlertTextInputDelegate action) {
+            // No, inform the user that they must create a home first
+            UIAlertController alert = UIAlertController.Create(title, description, UIAlertControllerStyle.Alert);
+            UITextField field = null;
 
-			// Add and configure text field
-			alert.AddTextField ((textField) => {
-				// Save the field
-				field = textField;
+            // Add and configure text field
+            alert.AddTextField ((textField) => {
+                // Save the field
+                field = textField;
 
-				// Initialize field
-				field.Placeholder = placeholder;
-				field.Text = text;
-				field.AutocorrectionType = UITextAutocorrectionType.No;
-				field.KeyboardType = UIKeyboardType.Default;
-				field.ReturnKeyType = UIReturnKeyType.Done;
-				field.ClearButtonMode = UITextFieldViewMode.WhileEditing;
+                // Initialize field
+                field.Placeholder = placeholder;
+                field.Text = text;
+                field.AutocorrectionType = UITextAutocorrectionType.No;
+                field.KeyboardType = UIKeyboardType.Default;
+                field.ReturnKeyType = UIReturnKeyType.Done;
+                field.ClearButtonMode = UITextFieldViewMode.WhileEditing;
 
-			});
+            });
 
-			// Add cancel button
-			alert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel,(actionCancel) => {
-				// Any action?
-				if (action!=null) {
-					action(false,"");
-				}
-			}));
+            // Add cancel button
+            alert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel,(actionCancel) => {
+                // Any action?
+                if (action!=null) {
+                    action(false,"");
+                }
+            }));
 
-			// Add ok button
-			alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) => {
-				// Any action?
-				if (action!=null && field !=null) {
-					action(true, field.Text);
-				}
-			}));
+            // Add ok button
+            alert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default,(actionOK) => {
+                // Any action?
+                if (action!=null && field !=null) {
+                    action(true, field.Text);
+                }
+            }));
 
-			// Display the alert
-			controller.PresentViewController(alert,true,null);
+            // Display the alert
+            controller.PresentViewController(alert,true,null);
 
-			// Return created controller
-			return alert;
-		}
-		#endregion
+            // Return created controller
+            return alert;
+        }
+        #endregion
 
-		#region Delegates
-		public delegate void AlertOKCancelDelegate(bool OK);
-		public delegate void AlertTextInputDelegate(bool OK, string text);
-		#endregion
-	}
+        #region Delegates
+        public delegate void AlertOKCancelDelegate(bool OK);
+        public delegate void AlertTextInputDelegate(bool OK, string text);
+        #endregion
+    }
 }
 ```
 
@@ -329,29 +329,29 @@ Using this class, displaying and responding to simple alerts can be done as foll
 ```csharp
 #region Custom Actions
 partial void DisplayDestructiveAlert (Foundation.NSObject sender) {
-	// User helper class to present alert
-	AlertViewController.PresentDestructiveAlert("A Short Title is Best","The message should be a short, complete sentence.","Delete",this, (ok) => {
-		Console.WriteLine("Destructive Alert: The user selected {0}",ok);
-	});
+    // User helper class to present alert
+    AlertViewController.PresentDestructiveAlert("A Short Title is Best","The message should be a short, complete sentence.","Delete",this, (ok) => {
+        Console.WriteLine("Destructive Alert: The user selected {0}",ok);
+    });
 }
 
 partial void DisplayOkCancelAlert (Foundation.NSObject sender) {
-	// User helper class to present alert
-	AlertViewController.PresentOKCancelAlert("A Short Title is Best","The message should be a short, complete sentence.",this, (ok) => {
-		Console.WriteLine("OK/Cancel Alert: The user selected {0}",ok);
-	});
+    // User helper class to present alert
+    AlertViewController.PresentOKCancelAlert("A Short Title is Best","The message should be a short, complete sentence.",this, (ok) => {
+        Console.WriteLine("OK/Cancel Alert: The user selected {0}",ok);
+    });
 }
 
 partial void DisplaySimpleAlert (Foundation.NSObject sender) {
-	// User helper class to present alert
-	AlertViewController.PresentOKAlert("A Short Title is Best","The message should be a short, complete sentence.",this);
+    // User helper class to present alert
+    AlertViewController.PresentOKAlert("A Short Title is Best","The message should be a short, complete sentence.",this);
 }
 
 partial void DisplayTextInputAlert (Foundation.NSObject sender) {
-	// User helper class to present alert
-	AlertViewController.PresentTextInputAlert("A Short Title is Best","The message should be a short, complete sentence.","placeholder", "", this, (ok, text) => {
-		Console.WriteLine("Text Input Alert: The user selected {0} and entered `{1}`",ok,text);
-	});
+    // User helper class to present alert
+    AlertViewController.PresentTextInputAlert("A Short Title is Best","The message should be a short, complete sentence.","placeholder", "", this, (ok, text) => {
+        Console.WriteLine("Text Input Alert: The user selected {0} and entered `{1}`",ok,text);
+    });
 }
 #endregion
 ```
