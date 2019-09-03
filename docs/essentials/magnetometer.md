@@ -66,7 +66,7 @@ public class MagnetometerTest
 }
 ```
 
-All data is returned in µ (microteslas).
+All data is returned in µT (microteslas).
 
 [!include[](~/essentials/includes/sensor-speed.md)]
 
