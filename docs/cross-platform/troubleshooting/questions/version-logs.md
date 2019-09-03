@@ -14,26 +14,26 @@ ms.date: 03/29/2017
 ## Outline
 
 - [Version information](#version-information)
-    - Windows version information
-    - Mac version information
-    - Android SDK Tools, Platform-tools, Build-tools
+  - Windows version information
+  - Mac version information
+  - Android SDK Tools, Platform-tools, Build-tools
 - [IDE and installer logs](#ide-and-installer-logs)
-    - [Windows logs](#windows-logs)
-        - Xamarin Studio
-        - Xamarin for Visual Studio
-        - Xamarin Universal installer
-        - Individual `.msi` installers, verbose logs
-        - Visual Studio startup, verbose logs
-    - [Mac logs](#mac-logs)
-        - Build host
-    - Visual Studio for Mac
-        - Xamarin Studio
-        - Xamarin installer
+  - [Windows logs](#windows-logs)
+    - Xamarin Studio
+    - Xamarin for Visual Studio
+    - Xamarin Universal installer
+    - Individual `.msi` installers, verbose logs
+    - Visual Studio startup, verbose logs
+  - [Mac logs](#mac-logs)
+    - Build host
+  - Visual Studio for Mac
+    - Xamarin Studio
+    - Xamarin installer
 - [Verbose build output](#verbose-build-output-logs)
 - [Debug logs for Xamarin.Android and Xamarin.iOS apps](#debug-logs-for-xamarin-apps)
-    - Android `adb` logcat logs
-    - iOS simulator logs (on Mac)
-    - iOS device logs (on Mac)
+  - Android `adb` logcat logs
+  - iOS simulator logs (on Mac)
+  - iOS device logs (on Mac)
 
 ## <a id="version-information" name="version-information" />Version information
 

@@ -59,10 +59,10 @@ To use the Android Device Manager, you will need the following items:
 
 - The following packages must be installed (via the
   [Android SDK Manager](~/android/get-started/installation/android-sdk.md)): 
-    - **Android SDK Tools version 26.1.1** or later
-    - **Android SDK Platform-Tools 27.0.1** or later
-    - **Android SDK Build-Tools 27.0.3** or later 
-    - **Android Emulator 27.2.7** or later. 
+  - **Android SDK Tools version 26.1.1** or later
+  - **Android SDK Platform-Tools 27.0.1** or later
+  - **Android SDK Build-Tools 27.0.3** or later 
+  - **Android Emulator 27.2.7** or later. 
 
   These packages should be displayed with **Installed** status as seen in
   the following screenshot:
@@ -300,9 +300,9 @@ To use the Android Device Manager, you will need the following items:
 
 - The following packages must be installed (via the
   [Android SDK Manager](~/android/get-started/installation/android-sdk.md)): 
-    - **SDK tools version 26.1.1** or later
-    - **Android SDK Platform-Tools 28.0.1** or later 
-    - **Android SDK Build-Tools 26.0.3** or later
+  - **SDK tools version 26.1.1** or later
+  - **Android SDK Platform-Tools 28.0.1** or later 
+  - **Android SDK Build-Tools 26.0.3** or later
 
   These packages should be displayed with **Installed** status as seen in
   the following screenshot:

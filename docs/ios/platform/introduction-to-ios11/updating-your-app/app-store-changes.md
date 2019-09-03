@@ -56,15 +56,15 @@ The following changes have been made to the product page:
 
 - Titles are now set to a maximum of 30 characters
 - A Subtitle has been added
-    - It should be a brief summary that compliments the title.
-    - Subtitle should have a maximum of 30 characters
+  - It should be a brief summary that compliments the title.
+  - Subtitle should have a maximum of 30 characters
 - App Previews
-    - You can now have three videos or screenshots.
-    - Videos autoplay when a user visits the page.
-    - For more information, see Apple's [App Preview](https://developer.apple.com/app-store/app-previews/) page.
+  - You can now have three videos or screenshots.
+  - Videos autoplay when a user visits the page.
+  - For more information, see Apple's [App Preview](https://developer.apple.com/app-store/app-previews/) page.
 - Promotional text
-    - This new feature provides 170 characters of text allowing you to describe frequently changing information about your app.
-    - It can be updated at any time without needing to submit a new version of the app.
+  - This new feature provides 170 characters of text allowing you to describe frequently changing information about your app.
+  - It can be updated at any time without needing to submit a new version of the app.
 
 ## Customer Communication
 
