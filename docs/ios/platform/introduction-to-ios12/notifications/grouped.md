@@ -4,8 +4,8 @@ description: "With iOS 12, it is possible to group notifications in Notification
 ms.prod: xamarin
 ms.assetid: C6FA7C25-061B-4FD7-8E55-88597D512F3C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/04/2018
 ---
 # Grouped notifications in Xamarin.iOS

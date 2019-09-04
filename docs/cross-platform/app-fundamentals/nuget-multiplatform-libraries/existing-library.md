@@ -3,8 +3,8 @@ title: "Creating a NuGet from Existing Library Projects"
 description: "This document describes how to create a NuGet package from an existing library project, allowing the code to be shared with other developers."
 ms.prod: xamarin
 ms.assetid: EDAC3E5E-DB7D-40A9-AE28-45C52ADA854E
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/20/2017
 ---
 

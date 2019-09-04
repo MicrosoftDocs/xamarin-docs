@@ -4,8 +4,8 @@ description: "Entitlements are special app capabilities and security permissions
 ms.prod: xamarin
 ms.assetid: 8A3961A2-02AB-4228-A41D-06CB4108D9D0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/13/2018
 ---
 # Working with entitlements in Xamarin.iOS

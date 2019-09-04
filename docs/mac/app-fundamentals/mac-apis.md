@@ -4,8 +4,8 @@ description: "This document describes how to read Objective-C selectors and how 
 ms.prod: xamarin
 ms.assetid: 9F7451FA-E07E-4C7B-B5CF-27AFC157ECDA
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/02/2017
 ---
 

@@ -4,8 +4,8 @@ description: "This guide describes how to use Pair to Mac to connect Visual Stud
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/29/2018
 ---
 

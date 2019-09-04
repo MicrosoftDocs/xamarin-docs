@@ -4,8 +4,8 @@ description: "This document discusses how to use labels in Xamarin.iOS. It descr
 ms.prod: xamarin
 ms.assetid: 54DA1221-13E4-4D45-B263-5F22A0AC7B53
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/11/2017
 ---
 

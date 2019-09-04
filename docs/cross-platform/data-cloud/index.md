@@ -3,8 +3,8 @@ title: "Microsoft Azure and Xamarin"
 description: "This document links to documentation about Connected Services in Visual Studio for Mac, Azure Mobile Apps, Active Directory Authentication, and WebAPI."
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 10/09/2017
 ---
 

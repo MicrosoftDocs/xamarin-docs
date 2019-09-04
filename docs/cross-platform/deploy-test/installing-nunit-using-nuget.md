@@ -3,8 +3,8 @@ title: "Installing NUnit 2.6.4 using NuGet"
 description: "This document describes how to downgrade NUnit 3.0 to NUnit 2.6.4 using NuGet. This is necessary when working with Xamarin.UITest, which does not support NUnit 3.x."
 ms.prod: xamarin
 ms.assetid: 7683F2B8-7FDF-48C4-8E7D-649D4D4E79F0
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
 ---
 

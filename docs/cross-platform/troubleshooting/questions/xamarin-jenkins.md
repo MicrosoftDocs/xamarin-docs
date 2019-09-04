@@ -4,8 +4,8 @@ description: "This document describes, at a high level, Xamarin's interaction wi
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2018
 ---
 

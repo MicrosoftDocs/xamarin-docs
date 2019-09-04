@@ -3,8 +3,8 @@ title: "Building Cross Platform Applications Overview"
 description: "This document provides a high-level overview of building cross-platform applications. It discusses the value of C#, design patterns such as MVC/MVVM, and native UIs."
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
 ---
 

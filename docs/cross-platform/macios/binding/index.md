@@ -3,8 +3,8 @@ title: "Binding Objective-C"
 description: "This document provides links to various guides that describe how to create C# bindings to Objective-C code, enabling developers to consume off-the-shelf libraries in Xamarin applications."
 ms.prod: xamarin
 ms.assetid: DBBAA086-BB0F-8161-DF44-632F4F5DFE5D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
 ---
 

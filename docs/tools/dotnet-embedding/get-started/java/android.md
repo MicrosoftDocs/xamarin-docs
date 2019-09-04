@@ -3,8 +3,8 @@ title: "Getting started with Android"
 description: "This document describes how to get started using .NET Embedding with Android. It discusses installing .NET Embedding, creating an Android library project, using generated output in an Android Studio project, and other considerations."
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/28/2018
 ---
 

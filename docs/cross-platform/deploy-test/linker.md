@@ -3,8 +3,8 @@ title: "Custom Linker Configuration"
 description: "This document describes an XML file that can be used to configure the linker, ensuring explicitly that needed code is not eliminated from the linked application."
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 

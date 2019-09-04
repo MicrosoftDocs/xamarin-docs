@@ -3,8 +3,8 @@ title: "Apple Account Management"
 description: "This document describes how to use the Apple account management features in Visual Studio for Mac and Visual Studio 2019."
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
 ---
 

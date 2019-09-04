@@ -3,8 +3,8 @@ title: "Apple Platform (iOS and Mac)"
 description: "This document describes various topics related to Xamarin.iOS and Xamarin.Mac development: code sharing, the Unified API, binding Objective-C libraries, native references, native types, and more."
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 

@@ -4,8 +4,8 @@ description: "This document describes the various icons necessary for a watchOS 
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/26/2018
 ---
 

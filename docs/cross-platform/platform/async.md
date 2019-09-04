@@ -3,8 +3,8 @@ title: "Async Support Overview"
 description: "This document describes programming with async and await, concepts introduced in C# 5 to make it easier to write asynchronous code."
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 

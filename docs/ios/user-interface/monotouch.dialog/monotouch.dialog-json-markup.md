@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ---
 
 # MonoTouch.Dialog Json Markup

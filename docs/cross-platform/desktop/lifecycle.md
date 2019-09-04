@@ -2,8 +2,8 @@
 ms.assetid: 7C132A7C-4973-4B2D-98DC-3661C08EA33F
 title: "WPF vs. Xamarin.Forms App Lifecycle"
 description: "This document compares the similarities and differences between the application lifecycle for Xamarin.Forms and WPF applications. It also looks at the visual tree, graphics, resources, and styles."
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
 ---
 

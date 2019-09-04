@@ -3,8 +3,8 @@ title: "Multi-Process Debugging"
 description: "This document describes how to use Visual Studio for Mac to debug multiple processes running at the same time. For example, this feature could be used to debug a mobile application and a web service project simultaneously."
 ms.prod: xamarin
 ms.assetid: 852F8AB1-F9E2-4126-9C8A-12500315C599
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
 ---
 

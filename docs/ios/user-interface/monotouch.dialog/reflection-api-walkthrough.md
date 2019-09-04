@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ---
 # Creating a Xamarin.iOS application using the Reflection API
 

@@ -4,8 +4,8 @@ title: "Xamarin – Internals"
 description: "This document links to guides that describe the internal workings of Xamarin. Currently, it links to the Available Assemblies document."
 ms.prod: xamarin
 ms.assetid: 0bec99a9-ab79-4f10-8d7b-35f9338c0728
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2018
 ---
 

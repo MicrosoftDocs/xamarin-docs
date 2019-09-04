@@ -3,8 +3,8 @@ title: "Part 3 - Setting Up A Xamarin Cross-Platform Solution"
 description: "This document describes how to set up a cross-platform solution in Xamarin. It discusses various code sharing strategies such as shared projects and .NET Standard."
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
 ---
 
