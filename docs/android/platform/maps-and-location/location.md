@@ -426,18 +426,18 @@ else
 ```
 
 > [!NOTE]
->  If the user has disabled all location providers,
-`GetBestProvider` will return `null`. To see how this code works on a
-real device, be sure to enable GPS, Wi-Fi, and cellular networks under
-**Google Settings > Location > Mode** as shown in this screenshot:
-
-[![Settings Location Mode screen on an Android phone](location-images/location-02.png)](location-images/location-02.png#lightbox)
-
-The screenshot below demonstrates the location application running using `GetBestProvider`:
-
-[![GetBestProvider app displaying latitude, longitude, and provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
-
-Keep in mind that `GetBestProvider` does not change the provider dynamically. Rather, it determines the best available provider once during the Activity lifecycle. If the provider status changes after it has been set, the application will require additional code in the `ILocationListener` methods &ndash; `OnProviderEnabled`, `OnProviderDisabled`, and `OnStatusChanged` &ndash; to handle every possibility related to the provider switch.
+> If the user has disabled all location providers,
+> `GetBestProvider` will return `null`. To see how this code works on a
+> real device, be sure to enable GPS, Wi-Fi, and cellular networks under
+> **Google Settings > Location > Mode** as shown in this screenshot:
+>
+> [![Settings Location Mode screen on an Android phone](location-images/location-02.png)](location-images/location-02.png#lightbox)
+>
+> The screenshot below demonstrates the location application running using `GetBestProvider`:
+>
+> [![GetBestProvider app displaying latitude, longitude, and provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
+>
+> Keep in mind that `GetBestProvider` does not change the provider dynamically. Rather, it determines the best available provider once during the Activity lifecycle. If the provider status changes after it has been set, the application will require additional code in the `ILocationListener` methods &ndash; `OnProviderEnabled`, `OnProviderDisabled`, and `OnStatusChanged` &ndash; to handle every possibility related to the provider switch.
 
 ## Summary
 
