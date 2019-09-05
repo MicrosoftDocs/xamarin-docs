@@ -130,7 +130,7 @@ UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used
 to create animated 3D and 2D scenes for your applications using geometries,
 materials, lights and cameras.
 
-![](images/urhosharp.gif "UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used to create animated 3D and 2D scenes")
+![UrhoSharp is a cross-platform high-level 3D and 2D engine that can be used to create animated 3D and 2D scenes](images/urhosharp.gif)
 
 Check out the [UrhoSharp Guides](~/graphics-games/urhosharp/index.md) to get started.
 

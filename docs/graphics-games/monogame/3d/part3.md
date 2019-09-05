@@ -26,7 +26,7 @@ We’ll be covering the following topics:
 
 Once finished, we’ll have a project with a robot moving in a circle and a camera which can be controlled by touch input:
 
-![](part3-images/image1.gif "Once finished, the app will include a project with a robot moving in a circle and a camera which can be controlled by touch input")
+![Once finished, the app will include a project with a robot moving in a circle and a camera which can be controlled by touch input](part3-images/image1.gif)
 
 ## Creating a Project
 
@@ -318,7 +318,7 @@ Matrix GetWorldMatrix()
 
 The result of running this code results in the robot moving in a circle:
 
-![](part3-images/image5.gif "Running this code results in the robot moving in a circle")
+![Running this code results in the robot moving in a circle](part3-images/image5.gif)
 
 ## Matrix Multiplication
 
@@ -362,7 +362,7 @@ The code above would first rotate the model in-place, then translate it:
 
 If we run the code with the inverted multiplication, we’ll notice that since the rotation applies first, it only impacts the orientation of the model and the position of the model stays the same. In other words, the model rotates in place:
 
-![](part3-images/image10.gif "The model rotates in place")
+![The model rotates in place](part3-images/image10.gif)
 
 ## Creating the Camera Entity
 
@@ -584,7 +584,7 @@ So far, we’ve added a `Camera` entity but haven’t done anything with it to c
 
 First we’ll update the `Camera` class to include an `angle` field which will be used to set the direction that the `Camera` is facing. Currently, our `Camera` determines the direction it is facing through the local `lookAtVector`, which is assigned to `Vector3.Zero`. In other words, our `Camera` always looks at the origin. If the Camera moves, then the angle that the camera is facing will also change:
 
-![](part3-images/image11.gif "If the Camera moves, then the angle that the camera is facing will also change")
+![If the Camera moves, then the angle that the camera is facing will also change](part3-images/image11.gif)
 
 We want the `Camera` to be facing the same direction regardless of its position – at least until we implement the logic for rotating the `Camera` using input. The first change will be to adjust the `lookAtVector` variable to be based off of our current location, rather than looking at an absolute position:
 
@@ -707,7 +707,7 @@ public void Update(GameTime gameTime)
 
 Now the `Camera` will respond to touch input:
 
-![](part3-images/image1.gif "Now the Camera will respond to touch input")
+![Now the Camera will respond to touch input](part3-images/image1.gif)
 
 The Update method begins by calling `TouchPanel.GetState`, which returns a collection of touches. Although `TouchPanel.GetState` can return multiple touch points, we’ll only worry about the first one for simplicity.
 

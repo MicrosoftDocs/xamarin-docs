@@ -62,7 +62,7 @@ view hierarchy to help you understand your layouts.
 
 You can edit the text around your code using the rich text editor included, as illustrated below:
 
-![](workbook-images/inspector-0.6.2-editing.gif "Edit the text around the code using the built-in rich text editor")
+![Edit the text around the code using the built-in rich text editor](workbook-images/inspector-0.6.2-editing.gif)
 
 ### Markdown Authoring
 

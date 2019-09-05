@@ -24,8 +24,8 @@ UrhoSharp can be used to render graphics in Xamarin.Forms applications.
 This [sample](https://github.com/xamarin/urho-samples/tree/master/FormsSample)
 demonstrates how UrhoSharp could be used to construct an interactive 3D chart:
 
-![](urhosharp-images/ios-animation.gif "UrhoSharp 3D Interactive Chart on iOS")
-![](urhosharp-images/android-animation.gif "UrhoSharp 3D Interactive Chart on Android")
+![UrhoSharp 3D Interactive Chart on iOS](urhosharp-images/ios-animation.gif)
+![UrhoSharp 3D Interactive Chart on Android](urhosharp-images/android-animation.gif)
 
 ## Adding the UrhoSharp Nuget packages
 
