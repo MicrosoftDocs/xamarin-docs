@@ -58,7 +58,7 @@ This page contains additional information and workarounds for issues you may enc
     file in a text editor and then manually change the `id`
     element to be unique.
 
-    [![](troubleshooting-images/duplicate-id-sml.png "Opening the storyboard file in a text editor and manually change the id element to be unique")](troubleshooting-images/duplicate-id.png#lightbox)
+    [![Opening the storyboard file in a text editor and manually change the id element to be unique](troubleshooting-images/duplicate-id-sml.png)](troubleshooting-images/duplicate-id.png#lightbox)
 
 - You may see an error "The application has not been built"
     when trying to launch the app. This occurs after a **Clean**
@@ -95,7 +95,7 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 2. The dialog that appears will include an **Alpha** checkbox if an alpha channel
     is present.
 
-    ![](troubleshooting-images/remove-alpha-sml.png "The dialog that appears will include an Alpha checkbox if an alpha channel is present")
+    ![The dialog that appears will include an Alpha checkbox if an alpha channel is present](troubleshooting-images/remove-alpha-sml.png)
 
 3. *Untick* the **Alpha** checkbox and **Save** the file to the correct location.
 
@@ -120,18 +120,18 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 
 1. Open the watch app's **Interface.storyboard** in **Xcode Interface Builder**.
 
-    ![](troubleshooting-images/add-6.png "Opening the storyboard in Xcode Interface Builder")
+    ![Opening the storyboard in Xcode Interface Builder](troubleshooting-images/add-6.png)
 
 2. Drag a new `InterfaceController` onto the storyboard:
 
-    ![](troubleshooting-images/add-1.png "A InterfaceController")
+    ![A InterfaceController](troubleshooting-images/add-1.png)
 
 3. You can now drag controls onto the interface controller
     (eg. labels and buttons) but you cannot create outlets or actions yet,
     because there is no **.h** header file. The following steps will
     cause the required **.h** header file to be created.
 
-    ![](troubleshooting-images/add-2.png "A button in the layout")
+    ![A button in the layout](troubleshooting-images/add-2.png)
 
 4. Close the storyboard and return to Visual Studio for Mac. Create a new C# file **MyInterfaceController.cs** (or whatever name you like) in the **watch app extension** project (NOT the watch app itself where the storyboard is). Add the following code (updating the namespace, classname,
     and the constructor name):
@@ -194,7 +194,7 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
     > [!TIP]
     > You can (optionally) make this file a child node of the first file by dragging it onto the other C# file in the Visual Studio for Mac Solution Pad. It will then appear like this:
 
-    ![](troubleshooting-images/add-5.png "The Solution pad")
+    ![The Solution pad](troubleshooting-images/add-5.png)
 
 6. Select **Build > Build All** so that Xcode synchronization
     will recognize the new class (via the `Register` attribute)
@@ -204,36 +204,36 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
     storyboard file and selecting
     **Open With > Xcode Interface Builder**:
 
-    ![](troubleshooting-images/add-6.png "Opening the storyboard in Interface Builder")
+    ![Opening the storyboard in Interface Builder](troubleshooting-images/add-6.png)
 
 8. Select your new interface controller and
     give it the classname you defined above, eg. `MyInterfaceController`.
     If everything has worked correctly, it should appear automatically
     in the **Class:** drop down list and you can select it from there.
 
-    ![](troubleshooting-images/add-4.png "Setting a custom class")
+    ![Setting a custom class](troubleshooting-images/add-4.png)
 
 9. Choose the **Assistant Editor** view in Xcode (the icon
     with two overlapping circles) so that you
     can see the storyboard and the code side-by-side:
 
-    ![](troubleshooting-images/add-7.png "The Assistant Editor toolbar item")
+    ![The Assistant Editor toolbar item](troubleshooting-images/add-7.png)
 
     When the focus is in the code pane, ensure you're look at the
     **.h** header file, and if not right-click in the breadcrumb
     bar and select the correct file (**MyInterfaceController.h**)
 
-    ![](troubleshooting-images/add-8.png "Select MyInterfaceController")
+    ![Select MyInterfaceController](troubleshooting-images/add-8.png)
 
 10. You can now create outlets and actions by **Ctrl + drag**
     from the storyboard into the **.h** header file.
 
-    ![](troubleshooting-images/add-9.png "Creating outlets and actions")
+    ![Creating outlets and actions](troubleshooting-images/add-9.png)
 
     When you release the drag, you'll be prompted to select whether
     to create an outlet or an action, and choose its name:
 
-    ![](troubleshooting-images/add-a.png "The outlet and an action dialog")
+    ![The outlet and an action dialog](troubleshooting-images/add-a.png)
 
 11. Once the storyboard changes are saved and Xcode is closed,
     return to Visual Studio for Mac. It will detect the header file changes

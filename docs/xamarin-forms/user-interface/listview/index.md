@@ -41,11 +41,11 @@ Header and footer components display at the beginning and end of a list, separat
 
 Data in a `ListView` can be grouped for easier navigation. Groups are typically data bound. The following screenshot shows a `ListView` with grouped data:
 
-[!["Grouped data in a ListView"](images/grouping-depth-cropped.png)](images/grouping-depth.png#lightbox "Grouped data in a ListView")
+![ListView with Grouped Data](images/grouping-depth.png)
 
 ### [Cells](customizing-cell-appearance.md)
 
-Data items in a `ListView` are called cells. Each cell corresponds to a row of data. There are built-in cells to choose from, or you can define your own custom cell. Both built-in and custom cells can be used/defined in XAML or code.
+![ListView with ImageCells](images/image-cell-default.png)
 
 - [Built-in cells](customizing-cell-appearance.md#built-in-cells), such as the `TextCell` and `ImageCell`, correspond to native controls and are especially performant.
   - A [`TextCell`](customizing-cell-appearance.md#textcell) displays a string of text, optionally with detail text. Detail text is rendered as a second line in a smaller font with an accent color.
@@ -67,7 +67,7 @@ The `ListView` class supports a number of interaction styles.
 
 The following screenshot shows a `ListView` with context actions:
 
-[!["Context actions in a ListView"](images/context-default-cropped.png)](images/context-default.png#lightbox "Context actions in a ListView")
+![ListView with Context Actions](images/context-default.png)
 
 To learn more about the interactivity features of `ListView`, see [Actions & Interactivity with ListView](interactivity.md).
 

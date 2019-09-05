@@ -33,7 +33,7 @@ Ensure the Android project's target framework is Android 6.0 (Marshmallow). Chec
   the **Android project > Options > Build > General** settings to ensure
   the corrent framework is selected:
 
- ![](appcompat-images/target-android-6-sml.png "Android General Build Configuration")
+ ![Android General Build Configuration](appcompat-images/target-android-6-sml.png)
 
 ### 3. Add new themes to support Material Design
 

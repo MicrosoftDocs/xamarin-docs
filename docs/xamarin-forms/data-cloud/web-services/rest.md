@@ -35,7 +35,7 @@ The simplicity of REST has helped make it the primary method for accessing web s
 
 When the sample application is run, it will connect to a locally hosted REST service, as shown in the following screenshot:
 
-![](rest-images/portal.png "Sample Application")
+![Sample Application](rest-images/portal.png)
 
 > [!NOTE]
 > In iOS 9 and greater, App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and the app, thereby preventing accidental disclosure of sensitive information. Since ATS is enabled by default in apps built for iOS 9, all connections will be subject to ATS security requirements. If connections do not meet these requirements, they will fail with an exception.

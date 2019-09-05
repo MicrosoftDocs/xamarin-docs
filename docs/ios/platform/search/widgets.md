@@ -19,7 +19,7 @@ Widgets (also known as Today Extensions) are a special type of iOS Extension tha
 
 Widgets are highly customizable and may contain UI elements such as text, images, buttons, etc. Additionally, the developer can further customize the layout of their widgets.
 
-[![](widgets-images/widgets01.png "Example widgets")](widgets-images/widgets01.png#lightbox)
+[![Example widgets](widgets-images/widgets01.png)](widgets-images/widgets01.png#lightbox)
 
 There are two main places that a user can view and interact with an app's Widgets:
 

@@ -46,7 +46,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 This results in a grid of images as shown below:
 
-![](photokit-images/image4.png "The running app displaying a grid of images")
+![The running app displaying a grid of images](photokit-images/image4.png)
 
 ## Saving Changes to the Photo Library
 
@@ -118,8 +118,8 @@ void ApplyNoirFilter (object sender, EventArgs e)
 
 When the user selects the button, the filter is applied:
 
-![](photokit-images/image5.png "An example of the filter being applied")
+![An example of the filter being applied](photokit-images/image5.png)
 
 And thanks to the PHPhotoLibraryChangeObserver, the change is reflected in the collection view when the user navigates back:
 
-![](photokit-images/image6.png "The change is reflected in the collection view when the user navigates back")
+![The change is reflected in the collection view when the user navigates back](photokit-images/image6.png)

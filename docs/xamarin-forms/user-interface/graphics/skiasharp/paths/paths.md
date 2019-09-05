@@ -17,7 +17,7 @@ _Explore the SkiaSharp SKPath object for combining connected lines and curves_
 
 One of the most important features of the graphics path is the ability to define when multiple lines should be connected and when they should not be connected. The difference can be significant, as the tops of these two triangles demonstrate:
 
-![](paths-images/connectedlinesexample.png "Two triangles showing the difference between connected and disconnected lines")
+![Two triangles showing the difference between connected and disconnected lines](paths-images/connectedlinesexample.png)
 
 A graphics path is encapsulated by the [`SKPath`](xref:SkiaSharp.SKPath) object. A path is a collection of one or more *contours*. Each contour is a collection of *connected* straight lines and curves. Contours are not connected to each other but they might visually overlap. Sometimes a single contour can overlap itself.
 
@@ -96,7 +96,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The first contour consists of a call to [`MoveTo`](xref:SkiaSharp.SKPath.MoveTo(System.Single,System.Single)) using X and Y coordinates rather than an `SKPoint` value, followed by three calls to [`LineTo`](xref:SkiaSharp.SKPath.LineTo(System.Single,System.Single)) to draw the three sides of the triangle. The second contour has only two calls to `LineTo` but it finishes the contour with a call to [`Close`](xref:SkiaSharp.SKPath.Close), which closes the contour. The difference is significant:
 
-[![](paths-images/twotrianglecontours-small.png "Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page")
+[![Triple screenshot of the Two Triangle Contours page")](paths-images/twotrianglecontours-large.png#lightbox "Triple screenshot of the Two Triangle Contours page](paths-images/twotrianglecontours-small.png)
 
 As you can see, the first contour is obviously a series of three connected lines, but the end doesn't connect with the beginning. The two lines overlap at the top. The second contour is obviously closed, and was accomplished with one fewer `LineTo` calls because the `Close` method automatically adds a final line to close the contour.
 
@@ -186,7 +186,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here's the program running:
 
-[![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
+[![Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page](paths-images/strokejoins-small.png)
 
 The miter join consists of a sharp point where the lines connect. When two lines join at a small angle, the miter join can become quite long. To prevent excessively long miter joins, the length of the miter join is limited by the value of the [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) property of `SKPaint`. A miter join that exceeds this length is chopped off to become a bevel join.
 

@@ -11,7 +11,7 @@ ms.date: 07/24/2019
 
 # Xamarin.Forms CollectionView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![This API is currently pre-release](~/media/shared/preview.png)
 
 ## [Introduction](introduction.md)
 

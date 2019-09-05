@@ -15,7 +15,7 @@ ms.date: 10/26/2017
 
 [`Grid`](xref:Xamarin.Forms.Grid) supports arranging views into rows and columns. Rows and columns can be set to have proportional sizes or absolute sizes. The `Grid` layout should not be confused with traditional tables and is not intended to present tabular data. `Grid` does not have the concept of row, column or cell formatting. Unlike HTML tables, `Grid` is purely intended for laying out content.
 
-[![](grid-images/layouts-sml.png "Xamarin.Forms Layouts")](grid-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.Forms Layouts")](grid-images/layouts.png#lightbox "Xamarin.Forms Layouts](grid-images/layouts-sml.png)
 
 This article will cover:
 
@@ -26,7 +26,7 @@ This article will cover:
   - **[Spacing](#spacing)** &ndash; configure the spaces between rows and columns.
   - **[Spans](#spans)** &ndash; configure elements to span across multiple rows or columns.
 
-![](grid-images/grid.png "Grid Exploration")
+![Grid Exploration](grid-images/grid.png)
 
 ## Purpose
 
@@ -88,7 +88,7 @@ In XAML, use `Grid.Row` and `Grid.Column` on each individual view to specify pla
 
 The `Grid` shown below contains four cells:
 
-![](grid-images/label-grid.png "Grid with Four Views")
+![Grid with Four Views](grid-images/label-grid.png)
 
 In XAML:
 
@@ -178,7 +178,7 @@ grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength (1, Gri
 
 Often when working with a grid, there is an element that should occupy more than one row or column. Consider a simple calculator application:
 
-![](grid-images/calculator.png "Calulator Application")
+![Calulator Application](grid-images/calculator.png)
 
 Notice that the 0 button spans two columns, just like on the built-in calculators for each platform. This is accomplished using the `ColumnSpan` property, which specifies how many columns an element should occupy. The XAML for that button:
 

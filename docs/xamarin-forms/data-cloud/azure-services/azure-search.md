@@ -211,7 +211,7 @@ This filter query is applied to the entire index and removes documents from the 
 
 The `SearchAsync` method returns a `DocumentSearchResult` object that contains the query results. This object is enumerated, with each `Document` object being created as a `Monkey` object and added to the `Monkeys` `ObservableCollection` for display. The following screenshots show search query results returned from Azure Search:
 
-![](azure-search-images/search.png "Search Results")
+![Search Results](azure-search-images/search.png)
 
 For more information about searching and filtering, see [Query your Azure Search index using the .NET SDK](/azure/search/search-query-dotnet/).
 
@@ -263,7 +263,7 @@ The overall effect is that the top 10 results from the index will be returned wi
 
 The `SuggestAsync` method returns a `DocumentSuggestResult` object that contains the query results. This object is enumerated, with each `Document` object being created as a `Monkey` object and added to the `Monkeys` `ObservableCollection` for display. The following screenshots show the suggestion results returned from Azure Search:
 
-![](azure-search-images/suggest.png "Suggestion Results")
+![Suggestion Results](azure-search-images/suggest.png)
 
 Note that in the sample application, the `SuggestAsync` method is only invoked when the user finishes inputting a search term. However, it can also be used to support auto-complete search queries by executing on each keypress.
 

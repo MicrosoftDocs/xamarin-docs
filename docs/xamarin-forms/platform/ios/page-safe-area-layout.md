@@ -40,7 +40,7 @@ The `Page.On<iOS>` method specifies that this platform-specific will only run on
 
 The result is that page content can be positioned on an area of the screen that is safe for all iPhones:
 
-[![](page-safe-area-images/safe-area-layout.png "Safe Area Layout Guide")](page-safe-area-images/safe-area-layout-large.png#lightbox "Safe Area Layout Guide")
+[![Safe Area Layout Guide")](page-safe-area-images/safe-area-layout-large.png#lightbox "Safe Area Layout Guide](page-safe-area-images/safe-area-layout.png)
 
 > [!NOTE]
 > The safe area defined by Apple is used in Xamarin.Forms to set the [`Page.Padding`](xref:Xamarin.Forms.Page.Padding) property, and will override any previous values of this property that have been set.

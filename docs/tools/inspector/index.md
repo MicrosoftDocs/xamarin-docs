@@ -18,7 +18,7 @@ Live app inspection is available for enterprise customers. Let us know if
 you [run into any bugs](~/tools/inspector/install.md#reporting-bugs). We have a
 [forum](https://forums.xamarin.com/categories/inspector) too!
 
-[![](images/interactive-1.0.0-bike-inspect-3d-small.png "Live app inspection is available for enterprise customers")](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
+[![Live app inspection is available for enterprise customers](images/interactive-1.0.0-bike-inspect-3d-small.png)](images/interactive-1.0.0-bike-inspect-3d.png#lightbox)
 
 ## [Installation and Requirements](~/tools/inspector/install.md)
 

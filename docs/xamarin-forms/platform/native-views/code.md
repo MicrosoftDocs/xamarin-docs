@@ -21,7 +21,7 @@ Any Xamarin.Forms control that allows `Content` to be set, or that has a `Childr
 
 The following screenshots demonstrate platform-specific views having been added to a Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout):
 
-[![](code-images/screenshots-sml.png "StackLayout Containing Platform-Specific Views")](code-images/screenshots.png#lightbox "StackLayout Containing Platform-Specific Views")
+[![StackLayout Containing Platform-Specific Views")](code-images/screenshots.png#lightbox "StackLayout Containing Platform-Specific Views](code-images/screenshots-sml.png)
 
 The ability to add platform-specific views to a Xamarin.Forms layout is enabled by two extension methods on each platform:
 
@@ -124,7 +124,7 @@ stackLayout.Children.Add (customControl);
 
 However, because the `CustomControl.SizeThatFits` override always returns a height of 150, the view will be displayed with empty space above and below it, as shown in the following screenshot:
 
-![](code-images/ios-bad-measurement.png "iOS CustomControl with Bad SizeThatFits Implementation")
+![iOS CustomControl with Bad SizeThatFits Implementation](code-images/ios-bad-measurement.png)
 
 A solution to this problem is to provide a `GetDesiredSizeDelegate` implementation, as demonstrated in the following code example:
 
@@ -155,7 +155,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 This results in the custom view being displayed correctly, without empty space above and below it, as shown in the following screenshot:
 
-![](code-images/ios-good-measurement.png "iOS CustomControl with GetDesiredSize Override")
+![iOS CustomControl with GetDesiredSize Override](code-images/ios-good-measurement.png)
 
 ### Android
 
@@ -193,7 +193,7 @@ stackLayout.Children.Add (customControl);
 
 However, because the `CustomControl.OnMeasure` override always returns half of the requested width, the view will be displayed occupying only half the available width of the device, as shown in the following screenshot:
 
-![](code-images/android-bad-measurement.png "Android CustomControl with Bad OnMeasure Implementation")
+![Android CustomControl with Bad OnMeasure Implementation](code-images/android-bad-measurement.png)
 
 A solution to this problem is to provide a `GetDesiredSizeDelegate` implementation, as demonstrated in the following code example:
 
@@ -222,7 +222,7 @@ stackLayout.Children.Add (customControl, FixSize);
 
 This results in the custom view being displayed correctly, occupying the width of the device, as shown in the following screenshot:
 
-![](code-images/android-good-measurement.png "Android CustomControl with Custom GetDesiredSize Delegate")
+![Android CustomControl with Custom GetDesiredSize Delegate](code-images/android-good-measurement.png)
 
 ### Universal Windows Platform
 
@@ -290,7 +290,7 @@ stackLayout.Children.Add(brokenControl);
 
 However, because the `CustomControl.ArrangeOverride` override always returns half of the requested width, the view will be clipped to half the available width of the device, as shown in the following screenshot:
 
-![](code-images/winrt-bad-measurement.png "UWP CustomControl with Bad ArrangeOverride Implementation")
+![UWP CustomControl with Bad ArrangeOverride Implementation](code-images/winrt-bad-measurement.png)
 
 A solution to this problem is to provide an `ArrangeOverrideDelegate` implementation, when adding the view to the [`StackLayout`](xref:Xamarin.Forms.StackLayout), as demonstrated in the following code example:
 
@@ -309,7 +309,7 @@ stackLayout.Children.Add(fixedControl, arrangeOverrideDelegate: (renderer, final
 
 This method uses the width provided by the `CustomControl.ArrangeOverride` method, but multiplies it by two. This results in the custom view being displayed correctly, occupying the width of the device, as shown in the following screenshot:
 
-![](code-images/winrt-good-measurement.png "UWP CustomControl with ArrangeOverride Delegate")
+![UWP CustomControl with ArrangeOverride Delegate](code-images/winrt-good-measurement.png)
 
 ## Summary
 

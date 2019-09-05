@@ -41,11 +41,11 @@ To begin, right-click on the **Packages** folder in the .NET Standard library pr
 Enter the search term **UrhoSharp.Forms**, select **UrhoSharp for Xamarin.Forms**,
 then click **Add Package**.
 
-[![](urhosharp-images/add-package-sml.png "Add Packages Dialog")](urhosharp-images/add-package.png#lightbox "Add Packages Dialog")
+[![Add Packages Dialog")](urhosharp-images/add-package.png#lightbox "Add Packages Dialog](urhosharp-images/add-package-sml.png)
 
 The UrhoSharp.Forms NuGet package will be added to the project:
 
-![](urhosharp-images/packages.png "Packages Folder")
+![Packages Folder](urhosharp-images/packages.png)
 
 Repeat the above steps for platform-specific projects (such as iOS and Android).
 

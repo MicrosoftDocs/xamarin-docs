@@ -60,7 +60,7 @@ fastlane cert --development
 
 cert will prompt for your Apple ID and password, so enter this now:
 
-[![](cert-images/fastlane-image1.png "cert will prompt for your Apple ID and password")](cert-images/fastlane-image1.png#lightbox)
+[![cert will prompt for your Apple ID and password](cert-images/fastlane-image1.png)](cert-images/fastlane-image1.png#lightbox)
 
 > [!IMPORTANT]
 > The first time your password is entered it is saved to the local macOS Keychain. Alternatively, Environment Variables can be used to store the username and password, or you can use `export fastlane_DONT_STORE_PASSWORD=1` if you do not wish to have your password stored in the keychain. For more information on managing credentials with fastlane, refer to fastlane's [credentials manager guide](https://github.com/fastlane/fastlane/blob/master/credentials_manager/README.md).
@@ -73,7 +73,7 @@ fastlane cert -u myemailadress@domain.com
 
 If your Apple ID is connected to multiple teams, they will be displayed here. Select the number that corresponds to the team that you wish to use:
 
-[![](cert-images/fastlane-image2.png "Select the team that you wish to use")](cert-images/fastlane-image2.png#lightbox)
+[![Select the team that you wish to use](cert-images/fastlane-image2.png)](cert-images/fastlane-image2.png#lightbox)
 
 The Team ID can also be passed by using the following flag:
 

@@ -18,20 +18,20 @@ When the GUI locks up (hangs, freezes) in Visual Studio, an important piece of d
 
 3. Select **Debug > Attach to Process**.
 
-   ![](vs-callstack-images/image1.png "Select Debug > Attach to Process")
+   ![Select Debug > Attach to Process](vs-callstack-images/image1.png)
 
 4. Select the original hung instance of `devenv.exe` from the list of **Available Processes**.
 
 5. Select **Debug > Break All**.
 
-   ![](vs-callstack-images/image2.png "Select Debug > Break All")
+   ![Select Debug > Break All](vs-callstack-images/image2.png)
 
 6. Select **Debug > Save Dump As**.
 
-   ![](vs-callstack-images/image3.png "Select Debug > Save Dump As")
+   ![Select Debug > Save Dump As](vs-callstack-images/image3.png)
 
 7. Change **Save as type** to **Minidump (\*.dmp)**. This will produce a much smaller file than **Minidump with Heap**, and the heap is usually not relevant for diagnosing freezes.
 
-   ![](vs-callstack-images/image4.png "This will produce a much smaller file than Minidump with Heap, and the heap is usually not relevant for diagnosing freezes")
+   ![This will produce a much smaller file than Minidump with Heap, and the heap is usually not relevant for diagnosing freezes](vs-callstack-images/image4.png)
 
 8. Save the dump file. If submitting the file online, you can zip it to reduce the size.

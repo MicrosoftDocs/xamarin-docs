@@ -43,13 +43,13 @@ The result is shown in the screen snippet below. Notice that the status bar
 items are black (this cannot be set within Xamarin.Forms because it is
 a platform-specific feature).
 
-![](theme-images/status-default-sml.png "iOS Theming")
+![iOS Theming](theme-images/status-default-sml.png)
 
 Ideally the status bar would also be white - something we can accomplish
 directly in the iOS project. Add the following entries to the **Info.plist** to
 force the status bar to be white:
 
-![](theme-images/info-plist.png "iOS Info.plist Entries")
+![iOS Info.plist Entries](theme-images/info-plist.png)
 
 or edit the corresponding **Info.plist** file directly to include:
 
@@ -64,7 +64,7 @@ Now when the app is run, the navigation bar is green and its text is white
 (due to Xamarin.Forms formatting) *and* the status bar text is also white
 thanks to iOS-specific configuration:
 
-![](theme-images/status-white-sml.png "iOS Theming")
+![iOS Theming](theme-images/status-white-sml.png)
 
 <a name="uiappearance"/>
 
@@ -100,7 +100,7 @@ By default, the selected tab bar icon in a
 [`TabbedPage`](~/xamarin-forms/app-fundamentals/navigation/tabbed-page.md)
 would be blue:
 
-![](theme-images/tabbar-default.png "Default iOS Tab Bar Icon in TabbedPage")
+![Default iOS Tab Bar Icon in TabbedPage](theme-images/tabbar-default.png)
 
 To change this behavior, set the `UITabBar.Appearance` property:
 
@@ -110,7 +110,7 @@ UITabBar.Appearance.SelectedImageTintColor = UIColor.FromRGB(0x91, 0xCA, 0x47); 
 
 This causes the selected tab to be green:
 
-![](theme-images/tabbar-custom.png "Green iOS Tab Bar Icon in TabbedPage")
+![Green iOS Tab Bar Icon in TabbedPage](theme-images/tabbar-custom.png)
 
 Using this API lets you customize the appearance of the Xamarin.Forms
 `TabbedPage` on iOS with very little code. Refer to the
@@ -129,7 +129,7 @@ These two screen captures show the default `UISwitch` control on the left
 and the customized version (setting `Appearance`) on the right in the
 [Todo sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
 
-![](theme-images/switch-default.png "Default UISwitch Color") ![](theme-images/switch-custom.png "Customized UISwitch Color")
+![Customized UISwitch Color](theme-images/switch-default.png "Default UISwitch Color") ![](theme-images/switch-custom.png)
 
 ### Other controls
 

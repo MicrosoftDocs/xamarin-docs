@@ -54,7 +54,7 @@ All of these features have one thing in common, they all use `NSUserActivity` in
 
 As stated above, `NSUserActivity` helps the system understand what information the user is currently working with on screen. `NSUserActivity` is a light-weight state caching mechanism to capture the user's activity as they navigate through the app. For example, looking at the restaurant app:
 
-[![](proactive-suggestions-images/activity02.png "The restaurant app")](proactive-suggestions-images/activity02.png#lightbox)
+[![The restaurant app](proactive-suggestions-images/activity02.png)](proactive-suggestions-images/activity02.png#lightbox)
 
 With the following interactions:
 
@@ -64,7 +64,7 @@ With the following interactions:
 
 Take a closer look at the last screen:
 
-[![](proactive-suggestions-images/activity03.png "The NSUserActivity payload")](proactive-suggestions-images/activity03.png#lightbox)
+[![The NSUserActivity payload](proactive-suggestions-images/activity03.png)](proactive-suggestions-images/activity03.png#lightbox)
 
 Here the app is creating a `NSUserActivity` and it has been populated with information to recreate the state later. The app has also included some metadata such as the location's name and address. With this activity created, the app lets iOS know that it represents the user's current state.
 

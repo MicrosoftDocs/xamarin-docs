@@ -21,8 +21,8 @@ SpriteKit includes a 2D, rigid body physics API. Every sprite has an associated 
 SpriteKit now supports deriving the physics body of a sprite from its texture. This makes it easy to implement collisions that look more natural.
 
 For example, notice in the following collision how the banana and monkey collide nearly at the surface of each image:
-
-![](spritekit-images/image13.png "The banana and monkey collide nearly at the surface of each image")
+ 
+![The banana and monkey collide nearly at the surface of each image](spritekit-images/image13.png)
 
 SpriteKit makes creating such a physics body possible with a single line of code. Simply call `SKPhysicsBody.Create` with the texture and size:
     sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, sprite.Size);
@@ -39,8 +39,8 @@ sprite.PhysicsBody = SKPhysicsBody.Create (sprite.Texture, 0.7f, sprite.Size);
 
 The effect of tweaking the alpha threshold like this fine-tunes the previous collision, such that the monkey falls over when colliding with the banana:
 
-![](spritekit-images/image14.png "The monkey falls over when colliding with the banana")
-
+![The monkey falls over when colliding with the banana](spritekit-images/image14.png)
+ 
 ## Physics Fields
 
 Another great addition to SpriteKit is the new physics field support. These allow you to add things such as vortex fields, radial gravity fields and spring fields to name just a few.
@@ -81,8 +81,8 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 This causes the bananas to oscillate like a spring around the field node:
 
-![](spritekit-images/image15.png "The bananas oscillate like a spring around the field node")
-
+![The bananas oscillate like a spring around the field node](spritekit-images/image15.png)
+ 
 ## Radial Gravity Field
 
 Adding a different field is similar. For instance, the following code creates a radial gravity field:
@@ -97,4 +97,4 @@ fieldNode.Falloff = 1.0f;
 
 This results in a different force field, where the bananas are pulled radially about the field:
 
-![](spritekit-images/image16.png "The bananas are pulled radially around the field")
+![The bananas are pulled radially around the field](spritekit-images/image16.png)

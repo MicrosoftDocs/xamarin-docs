@@ -37,7 +37,7 @@ The `Page.On<Windows>` method specifies that this platform-specific will only ru
 
 The result is that the specified toolbar placement is applied to the [`Page`](xref:Xamarin.Forms.Page) instance:
 
-[![](page-toolbar-placement-images/toolbar-placement.png "Toolbar Placement Platform-Specific")](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "Toolbar Placement Platform-Specific")
+[![Toolbar Placement Platform-Specific")](page-toolbar-placement-images/toolbar-placement-large.png#lightbox "Toolbar Placement Platform-Specific](page-toolbar-placement-images/toolbar-placement.png)
 
 ## Related links
 

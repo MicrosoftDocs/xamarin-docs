@@ -45,13 +45,13 @@ The content provided can be used as a springboard to aid with app distribution, 
 3. Install fastlane by unzipping the file, and double-click on the `install` executable. If you get an error advising that the file "can't be opened because it is from an unidentified developer", press OK and do the following:
     - Control + Click on the `install` executable. This will display the dialog below:
 
-     ![](images/fastlane-image12.png "The install dialog")
+     ![The install dialog](images/fastlane-image12.png)
 
     - Press OK to start installing fastlane tools
 
 4. Terminal will prompt you with the dialog illustrated below. Press `y`:
 
-   ![](images/fastlane-image13.png "The Terminal prompt")
+   ![The Terminal prompt](images/fastlane-image13.png)
 
 5. Run `which fastlane` before using fastlane for the first time. The path should look like the following: 
 
@@ -80,11 +80,11 @@ The content provided can be used as a springboard to aid with app distribution, 
 
 fastlane is a very active open source project that regularly pushes new releases. When a new version of fastlane is available, you will be advised when you run any fastlane command:
 
-[![](images/fastlane-image0.png "The fast lane update prompt")](images/fastlane-image0.png#lightbox)
+[![The fast lane update prompt](images/fastlane-image0.png)](images/fastlane-image0.png#lightbox)
 
 To update to a new version of fastlane, download the latest package from [here](https://download.fastlane.tools) and double-click on the install package to run it:
 
-[![](images/fastlane-image0a.png "Running the install package")](images/fastlane-image0a.png#lightbox)
+[![Running the install package](images/fastlane-image0a.png)](images/fastlane-image0a.png#lightbox)
 
 ## Contents
 
@@ -102,7 +102,7 @@ Once you have created a signing identity and provisioning profiles with fastlane
 
 To set the code signing options for a Xamarin.iOS application, right-click on the project name, select **Project Options > Build > iOS Bundle Signing** and set the Signing Identity and Provisioning Profile explicitly, as demonstrated below:
 
-[![](images/fastlane-image11.png "Set the Signing Identity and Provisioning Profile explicitly")](images/fastlane-image11.png#lightbox)
+[![Set the Signing Identity and Provisioning Profile explicitly](images/fastlane-image11.png)](images/fastlane-image11.png#lightbox)
 
 ## Related Links
 

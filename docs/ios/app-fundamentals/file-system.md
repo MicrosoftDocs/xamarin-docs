@@ -106,7 +106,7 @@ For more information see the [System.IO API reference](xref:System.IO).
 
 [Json.NET](http://www.newtonsoft.com/json) is a high-performance JSON framework that works with Xamarin.iOS and is available on NuGet. Add the NuGet package to your application project, using **Add NuGet** in Visual Studio for Mac:
 
-[![](file-system-images/json01.png "Adding the NuGet package to the applications project")](file-system-images/json01.png#lightbox)
+[![Adding the NuGet package to the applications project](file-system-images/json01.png)](file-system-images/json01.png#lightbox)
 
 Next, add a class to act as the data model for serialization/deserialization (in this case `Account.cs`):
 
@@ -257,7 +257,7 @@ These directories, how to determine their path, and their purposes are listed be
 
 This screenshot shows the directory structure in a Finder window:
 
-[![](file-system-images/08-library-directory.png "This screenshot shows the directory structure in a Finder window")](file-system-images/08-library-directory.png#lightbox)
+[![This screenshot shows the directory structure in a Finder window](file-system-images/08-library-directory.png)](file-system-images/08-library-directory.png#lightbox)
 
 ### Accessing other directories programmatically
 

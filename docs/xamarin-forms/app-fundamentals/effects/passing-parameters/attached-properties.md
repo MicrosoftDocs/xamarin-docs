@@ -30,11 +30,11 @@ Parameters can then be passed to the effect by adding the attached properties, a
 
 The sample application demonstrates a `ShadowEffect` that adds a shadow to the text displayed by a [`Label`](xref:Xamarin.Forms.Label) control. In addition, the color of the shadow can be changed at runtime. The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![](attached-properties-images/shadow-effect.png "Shadow Effect Project Responsibilities")
+![Shadow Effect Project Responsibilities](attached-properties-images/shadow-effect.png)
 
 A [`Label`](xref:Xamarin.Forms.Label) control on the `HomePage` is customized by the `LabelShadowEffect` in each platform-specific project. Parameters are passed to each `LabelShadowEffect` through attached properties in the `ShadowEffect` class. Each `LabelShadowEffect` class derives from the `PlatformEffect` class for each platform. This results in a shadow being added to the text displayed by the `Label` control, as shown in the following screenshots:
 
-![](attached-properties-images/screenshots.png "Shadow Effect on each Platform")
+![Shadow Effect on each Platform](attached-properties-images/screenshots.png)
 
 ## Creating Effect Parameters
 

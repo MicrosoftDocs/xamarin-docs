@@ -38,12 +38,12 @@ To configure the entitlements in Visual Studio for Mac, do the following:
 1. In the **Solution Explorer**, double-click the **Info.plist** file to open it for editing.
 2. In the **iOS Application Target** section, fill in a name for the application and enter the **Bundle Identifier** that was created when the App ID was defined:
 
-    ![](entitlements-images/servicexs01.png "Enter a Bundle Identifier")
+    ![Enter a Bundle Identifier](entitlements-images/servicexs01.png)
 
 3. Save the changes to the **Info.plist** file.
 4. In the **Solution Explorer**, double-click the **Entitlements.plist** file to open it for editing:
 
-    ![](entitlements-images/servicexs02.png "Editing the Entitlements")
+    ![Editing the Entitlements](entitlements-images/servicexs02.png)
 
 5. Select and configure any entitlements required for the Xamarin.iOS application so that they match the setup that was defined when the App ID was created.
 6. Save the changes to the **Entitlements.plist** file.
@@ -55,12 +55,12 @@ To configure the entitlements in Visual Studio, do the following:
 1. In the **Solution Explorer**, right-click the **Info.plist**, select **Open With…** and **Property List Editor** file to open it for editing.
 2. In the **iOS Application Target** section, fill in a name for the application and enter the **Bundle Identifier** that was created when the App ID was defined:
 
-    ![](entitlements-images/servicevs01.png "Setting the Bundle Identifier")
+    ![Setting the Bundle Identifier](entitlements-images/servicevs01.png)
 
 3. Save the changes to the **Info.plist** file.
 4. In the **Solution Explorer**, right-click on the **Entitlements.plist** file, select **Open With…** and **Property List Editor** to open it for editing:
 
-    ![](entitlements-images/servicevs02.png "Editing the Entitlements")
+    ![Editing the Entitlements](entitlements-images/servicevs02.png)
 
     Alternatively, double-clicking on the **Entitlements.plist** file will open the XML Source editor which will allow you to set the Entitlement property and key value as detailed in the [Entitlement key Reference](#entitlement-key-reference) section below.
 

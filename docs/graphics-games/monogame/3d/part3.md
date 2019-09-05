@@ -32,7 +32,7 @@ Once finished, we’ll have a project with a robot moving in a circle and a came
 
 This walkthrough focuses on moving objects in 3D space. We’ll begin with the project for rendering models and vertex arrays [which can be found here](https://docs.microsoft.com/samples/xamarin/mobile-samples/modelsandvertsmg/). Once downloaded, unzip and open the project to make sure it runs and we should see the following:
 
-![](part3-images/image2.png "Once downloaded, unzip and open the project to make sure it runs and this view should be displayed")
+![Once downloaded, unzip and open the project to make sure it runs and this view should be displayed](part3-images/image2.png)
 
 ## Creating a Robot Entity
 
@@ -40,7 +40,7 @@ Before we begin moving our robot around, we will create a `Robot` class to conta
 
 Add a new empty class file to the **MonoGame3D** Portable Class Library (not the platform-specific ModelAndVerts.Android). Name it **Robot** and click **New**:
 
-![](part3-images/image3.png "Name it Robot and click New")
+![Name it Robot and click New](part3-images/image3.png)
 
 Modify the `Robot` class as follows:
 
@@ -221,7 +221,7 @@ namespace MonoGame3D
 
 If we run the code now we will have a scene with only one robot which is drawn mostly under the floor:
 
-![](part3-images/image4.png "If the code is run now, the app will display a scene with only one robot which is drawn mostly under the floor")
+![If the code is run now, the app will display a scene with only one robot which is drawn mostly under the floor](part3-images/image4.png)
 
 ## Moving the Robot
 
@@ -326,7 +326,7 @@ The code above rotates the robot by creating a `Matrix` in the `GetWorldMatrix` 
 
 Fortunately, the `Matrix` struct includes a number of methods which simplify the creation of common types of matrices. The first used in the code above is `Matrix.CreateTranslation`. The mathematical term *translation* refers to an operation which results in a point (or in our case a model) moving from one location to another without any other modification (such as rotating or resizing). The function takes an X, Y, and Z value for translation. If we view our scene from top-down, our `CreateTranslation` method (in isolation) performs the following:
 
-![](part3-images/image6.png "The CreateTranslation method in isolation performs this action")
+![The CreateTranslation method in isolation performs this action](part3-images/image6.png)
 
 The second matrix that we create is a rotation matrix using the `CreateRotationZ` matrix. This is one of three methods which can be used to create rotation:
 
@@ -336,7 +336,7 @@ The second matrix that we create is a rotation matrix using the `CreateRotationZ
 
 Each method creates a rotation matrix by rotating about a given axis. In our case, we are rotating about the Z axis, which points "up". The following can help visualize how axis-based rotation works:
 
-![](part3-images/image7.png "This can help visualize how axis-based rotation works")
+![This can help visualize how axis-based rotation works](part3-images/image7.png)
 
 We are also using the `CreateRotationZ` method with the angle field, which increments over time due to our `Update` method being called. The result is that the `CreateRotationZ` method causes our robot to orbit around the origin as time passes.
 
@@ -348,7 +348,7 @@ Matrix combined = translationMatrix * rotationMatrix;
 
 This is referred to as matrix multiplication, which works slightly different than regular multiplication. The *commutative property of multiplication* states that the order of numbers in a multiplication operation does not change the result. That is, 3 * 4 is equivalent to 4 * 3. Matrix multiplication differs in that it is not commutative. That is, the above line can be read as "Apply the translationMatrix to move the model, then rotate everything by applying the rotationMatrix". We could visualize the way that the above line affects the position and rotation as follows:
 
-![](part3-images/image8.png "A visualization pf the way that the above line affects the position and rotation")
+![A visualization pf the way that the above line affects the position and rotation](part3-images/image8.png)
 
 To help understand how the order of matrix multiplication can impact the outcome, consider the following, where the matrix multiplication is inverted:
 
@@ -358,7 +358,7 @@ Matrix combined = rotationMatrix * translationMatrix;
 
 The code above would first rotate the model in-place, then translate it:
 
-![](part3-images/image9.png "The code above would first rotate the model in-place, then translate it")
+![The code above would first rotate the model in-place, then translate it](part3-images/image9.png)
 
 If we run the code with the inverted multiplication, we’ll notice that since the rotation applies first, it only impacts the orientation of the model and the position of the model stays the same. In other words, the model rotates in place:
 
@@ -614,7 +614,7 @@ public class Camera
 
 This results in the `Camera` viewing the world straight-on. Notice that the initial `position` value has been modified to `(0, 20, 10)` so the `Camera` is centered on the X axis. Running the game displays:
 
-![](part3-images/image12.png "Running the game displays this view")
+![Running the game displays this view](part3-images/image12.png)
 
 ### Creating an angle Variable
 

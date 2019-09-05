@@ -15,7 +15,7 @@ _This article provides an introduction to working with Storyboards in a Xamarin.
 
 Storyboards allow you to develop a User Interface for your Xamarin.Mac app that not only includes the window definitions and controls, but also contains the links between different windows (via segues) and view states.
 
-[![](images/intro01.png "A sample UI in Xcode")](images/intro01.png#lightbox)
+[![A sample UI in Xcode](images/intro01.png)](images/intro01.png#lightbox)
 
 This article will provide an introduction to using Storyboards to define a Xamarin.Mac app's user Interface.
 
@@ -31,11 +31,11 @@ By using Storyboards, all of a Xamarin.Mac app's UI can be defined in a single l
 
 As stated above, a Storyboard defines all of the UI for a given app broken down into a functional overview of its _View Controllers_. In Xcode's Interface Builder, each of these controllers lives in its own _Scene_.
 
-[![](images/intro02.png "An example view controller")](images/intro02.png#lightbox)
+[![An example view controller](images/intro02.png)](images/intro02.png#lightbox)
 
 Each Scene represents a given View and View Controller Pair with a set of lines (called Segues) that connect each Scene in the UI, thus showing their relationships. Some Segues define how one View Controller contains one or more child Views or View Controllers. Other Segues, define transitions between View Controller (such as displaying a popover or dialog box). 
 
-[![](images/intro03.png "A sample segue")](images/intro03.png#lightbox)
+[![A sample segue](images/intro03.png)](images/intro03.png#lightbox)
 
 The most important thing to note is that each Segue represents the flow of some form of data between the given element of the app's UI.
 
@@ -45,7 +45,7 @@ The most important thing to note is that each Segue represents the flow of some 
 
 View Controllers define the relationships between a given View of information within a Mac app and the data model that provides that information. Each top level scene in the Storyboard represents one View Controller in the Xamarin.Mac app's code.
 
-[![](images/intro04.png "An example slips view controller")](images/intro04.png#lightbox)
+[![An example slips view controller](images/intro04.png)](images/intro04.png#lightbox)
 
 In this way, each View Controller is a self-contained, reusable pairing of both the information's visual representation (View) and the logic to present and control that information.
 

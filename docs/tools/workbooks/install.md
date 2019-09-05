@@ -135,7 +135,7 @@ Control Panel on older versions of Windows.
 
 > **Start > Settings > System > Apps & features**
 
-![](install-images/windows-remove.png "Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;")
+![Xamarin Workbooks as listed in &quot;Apps &amp; features&quot;](install-images/windows-remove.png)
 
 **You should still follow the procedure for the Visual Studio Installer to make
 sure Workbooks does not get reinstalled without your knowledge.**

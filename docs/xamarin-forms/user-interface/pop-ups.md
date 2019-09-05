@@ -25,7 +25,7 @@ All Xamarin.Forms-supported platforms have a modal pop-up to alert the user or a
 DisplayAlert ("Alert", "You have been alerted", "OK");
 ```
 
-![](pop-ups-images/alert.png "Alert Dialog with One Button")
+![Alert Dialog with One Button](pop-ups-images/alert.png)
 
 This example does not collect information from the user. The alert displays modally and once dismissed the user continues interacting with the application.
 
@@ -55,7 +55,7 @@ async void OnActionSheetSimpleClicked (object sender, EventArgs e)
 }
 ```
 
-![](pop-ups-images/action.png "ActionSheet Dialog")
+![ActionSheet Dialog](pop-ups-images/action.png)
 
 The `destroy` button is rendered differently than the others, and can be left `null` or specified as the third string parameter. The following example uses the `destroy` button:
 

@@ -17,7 +17,7 @@ powered by [Google’s Skia library](http://skia.org), the
 same library that powers Google Chrome, Firefox and Android’s graphic
 stacks.
 
-[![](images/ide-sml.png "SkiaSharp provides a powerful C# API for doing 2D graphics")](images/ide.png#lightbox)
+[![SkiaSharp provides a powerful C# API for doing 2D graphics](images/ide-sml.png)](images/ide.png#lightbox)
 
 SkiaSharp is a Portable Library, and ships conveniently as a
 [cross-platform NuGet package](https://www.nuget.org/packages/SkiaSharp),

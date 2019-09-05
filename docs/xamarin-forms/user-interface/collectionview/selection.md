@@ -11,7 +11,7 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms CollectionView Selection
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![This API is currently pre-release](~/media/shared/preview.png)
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 

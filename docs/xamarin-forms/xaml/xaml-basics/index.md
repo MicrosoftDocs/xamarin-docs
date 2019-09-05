@@ -26,7 +26,7 @@ XAML—the eXtensible Application Markup Language—allows developers to define 
 
 In addition to these XAML Basics articles, you can download chapters of the book [Creating Mobile Apps with Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md):
 
-[![](images/cover-sml.png "Book Cover")](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
+[![Book Cover](images/cover-sml.png)](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md)
 
 XAML topics are covered in more depth in many chapters of the book, including:
 

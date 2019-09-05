@@ -31,7 +31,7 @@ Some of the next steps include:
 See the [binding an API](~/cross-platform/macios/binding/objective-c-libraries.md)
 description to see how these files fit into the binding process, as shown in the diagram below:
 
-![](apidefinitions-structsandenums-images/binding-flowchart.png "The binding process is shown in this diagram")
+![The binding process is shown in this diagram](apidefinitions-structsandenums-images/binding-flowchart.png)
 
 Refer to the [binding Types reference](~/cross-platform/macios/binding/binding-types-reference.md)
 for more information on the contents of these files.

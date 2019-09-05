@@ -15,7 +15,7 @@ ms.date: 11/25/2015
 
 [StackLayout](xref:Xamarin.Forms.StackLayout) organizes views in a one-dimensional line ("stack"), either horizontally or vertically. Views in a `StackLayout` can be sized based on the space in the layout using layout options. Positioning is determined by the order views were added to the layout and the layout options of the views.
 
-[![](stack-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.Forms Layouts")](stack-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts](stack-layout-images/layouts-sml.png)
 
 ## Purpose
 
@@ -77,11 +77,11 @@ public class StackLayoutCode : ContentPage
 
 Spacing = 0:
 
-![](stack-layout-images/spacing-zero.png "StackLayout with Spacing=0")
+![StackLayout with Spacing=0](stack-layout-images/spacing-zero.png)
 
 Spacing of ten:
 
-![](stack-layout-images/spacing-ten.png "StackLayout with Spacing=10")
+![StackLayout with Spacing=10](stack-layout-images/spacing-ten.png)
 
 ### Sizing
 
@@ -212,7 +212,7 @@ Title="StackLayouts">
 
 The above code results in the following layout:
 
-![](stack-layout-images/stack.png "Complex StackLayout")
+![Complex StackLayout](stack-layout-images/stack.png)
 
 Notice that the `StackLayouts` are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout. Also notice that, because `StackLayout` doesn't support overlapping items, the page doesn't have some of the layout niceties found in the pages for the other layouts.
 

@@ -78,7 +78,7 @@ The following code example shows a [`ContentPage`](xref:Xamarin.Forms.ContentPag
 
 The `TealTemplate` is assigned to the [`ContentView.ControlTemplate`](xref:Xamarin.Forms.TemplatedView.ControlTemplate) property by using the `StaticResource` markup extension. The [`ContentView.Content`](xref:Xamarin.Forms.ContentView.Content) property is set to a [`StackLayout`](xref:Xamarin.Forms.StackLayout) that defines the content to be displayed on the [`ContentPage`](xref:Xamarin.Forms.ContentPage). This content will be displayed by the [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) contained in the `TealTemplate`. This results in the appearance shown in the following screenshots:
 
-![](creating-images/teal-theme.png "Teal Control Template")
+![Teal Control Template](creating-images/teal-theme.png)
 
 ### Re-theming an Application at Runtime
 
@@ -94,7 +94,7 @@ void OnButtonClicked (object sender, EventArgs e)
 
 This method replaces the active [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) instance with the alternative `ControlTemplate` instance, resulting in the following screenshot:
 
-![](creating-images/aqua-theme.png "Aqua Control Template")
+![Aqua Control Template](creating-images/aqua-theme.png)
 
 > [!NOTE]
 > On a `ContentPage`, the `Content` property can be assigned and the `ControlTemplate` property can also be set. When this occurs, if the `ControlTemplate` contains a `ContentPresenter` instance, the content assigned to the `Content` property will be presented by the `ContentPresenter` within the `ControlTemplate`.

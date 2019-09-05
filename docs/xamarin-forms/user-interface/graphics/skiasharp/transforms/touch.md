@@ -17,7 +17,7 @@ _Use matrix transforms to implement touch dragging, pinching, and rotation_
 
 In multi-touch environments such as those on mobile devices, users often use their fingers to manipulate objects on the screen. Common gestures such as a one-finger drag and a two-finger pinch can move and scale objects, or even rotate them. These gestures are generally implemented using transform matrices, and this article shows you how to do that.
 
-![](touch-images/touchmanipulationsexample.png "A bitmap subjected to translation, scaling, and rotation")
+![A bitmap subjected to translation, scaling, and rotation](touch-images/touchmanipulationsexample.png)
 
 All the samples shown here use the Xamarin.Forms touch-tracking effect presented in the article [**Invoking Events from Effects**](~/xamarin-forms/app-fundamentals/effects/touch-tracking.md).
 
@@ -912,7 +912,7 @@ public partial class TouchManipulationPage : ContentPage
 
 The `PaintSurface` handler concludes by displaying a `MatrixDisplay` object showing the accumulated touch matrix:
 
-[![](touch-images/touchmanipulation-small.png "Triple screenshot of the Touch Manipulation page")](touch-images/touchmanipulation-large.png#lightbox "Triple screenshot of the Touch Manipulation page")
+[![Triple screenshot of the Touch Manipulation page")](touch-images/touchmanipulation-large.png#lightbox "Triple screenshot of the Touch Manipulation page](touch-images/touchmanipulation-small.png)
 
 ## Manipulating Multiple Bitmaps
 
@@ -1050,7 +1050,7 @@ public partial class BitmapScatterViewPage : ContentPage
 
 The code loops through the collection and displays the pile of bitmaps from the beginning of the collection to the end:
 
-[![](touch-images/bitmapscatterview-small.png "Triple screenshot of the Bitmap Scatter View page")](touch-images/bitmapscatterview-large.png#lightbox "Triple screenshot of the Bitmap Scatter View page")
+[![Triple screenshot of the Bitmap Scatter View page")](touch-images/bitmapscatterview-large.png#lightbox "Triple screenshot of the Bitmap Scatter View page](touch-images/bitmapscatterview-small.png)
 
 ## Single-Finger Scaling
 

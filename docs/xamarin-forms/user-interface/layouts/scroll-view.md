@@ -15,7 +15,7 @@ ms.date: 07/10/2018
 
 [`ScrollView`](xref:Xamarin.Forms.ScrollView) contains layouts and enables them to scroll offscreen. `ScrollView` is also used to allow views to automatically move to the visible portion of the screen when the keyboard is showing.
 
-[![](scroll-view-images/layouts-sml.png "Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.Forms Layouts")](scroll-view-images/layouts.png#lightbox "Xamarin.Forms Layouts](scroll-view-images/layouts-sml.png)
 
 This article covers:
 
@@ -59,11 +59,11 @@ stack.Children.Add(new Entry());
 
 Before the user scrolls down, only the `BoxView` is visible:
 
-![](scroll-view-images/scroll-start.png "BoxView in ScrollView")
+![BoxView in ScrollView](scroll-view-images/scroll-start.png)
 
 Notice that when the user starts to enter text in the `Entry`, the view scrolls to keep it visible on screen:
 
-![](scroll-view-images/scroll-end.png "Entry in ScrollView")
+![Entry in ScrollView](scroll-view-images/scroll-end.png)
 
 ## Properties
 

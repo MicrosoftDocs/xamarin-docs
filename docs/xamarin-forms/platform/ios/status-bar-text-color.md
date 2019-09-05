@@ -67,7 +67,7 @@ In addition, the [`GetStatusBarTextColorMode`](xref:Xamarin.Forms.PlatformConfig
 
 The result is that the status bar text color on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) can be adjusted to match the luminosity of the navigation bar. In this example, the status bar text color changes as the user switches between the [`Master`](xref:Xamarin.Forms.MasterDetailPage.Master) and [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) pages of a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage):
 
-![](status-bar-text-color-images/status-bar-text-color-mode.png "Status Bar Text Color Mode Platform-Specific")
+![Status Bar Text Color Mode Platform-Specific](status-bar-text-color-images/status-bar-text-color-mode.png)
 
 ## Related links
 

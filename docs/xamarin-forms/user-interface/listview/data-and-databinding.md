@@ -55,7 +55,7 @@ listView.ItemsSource = new string[]
 };
 ```
 
-![](data-and-databinding-images/itemssource-simple.png "ListView Displaying List of Strings")
+![ListView Displaying List of Strings](data-and-databinding-images/itemssource-simple.png)
 
 The above approach will populate the `ListView` with a list of strings. By default, `ListView` will call `ToString` and display the result in a `TextCell` for each row. To customize how data is displayed, see [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
 
@@ -141,7 +141,7 @@ The following snippet demonstrates a `ListView` bound to a list of employees:
 
 This XAML example defines a `ContentPage` that contains a `ListView`. The data source of the `ListView` is set via the `ItemsSource` attribute. The layout of each row in the `ItemsSource` is defined within the `ListView.ItemTemplate` element. This results in the following screenshots:
 
-![](data-and-databinding-images/bound-data.png "ListView using Data Binding")
+![ListView using Data Binding](data-and-databinding-images/bound-data.png)
 
 ### Binding SelectedItem
 

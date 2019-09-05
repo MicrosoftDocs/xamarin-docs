@@ -63,7 +63,7 @@ public string FooterText {
 
 This results in the appearance shown in the following screenshots:
 
-![](template-binding-images/teal-theme.png "Teal Control Template using Template Bindings")
+![Teal Control Template using Template Bindings](template-binding-images/teal-theme.png)
 
 ## Creating a TemplateBinding in C&#35;
 

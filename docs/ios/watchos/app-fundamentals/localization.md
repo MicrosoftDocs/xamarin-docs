@@ -13,7 +13,7 @@ ms.date: 03/17/2017
 
 _Adapting your watchOS apps for multiple languages_
 
-![](localization-images/both-languages-sml.png "Apple Watch displaying localized content")
+![Apple Watch displaying localized content](localization-images/both-languages-sml.png)
 
 watchOS apps are localized using the standard iOS
   methods:
@@ -82,14 +82,14 @@ By default the watch app is not configured for localization. You
 The watch app project looks like this after these changes have been made (only
   English and Spanish language files have been added):
 
-  ![](localization-images/watchapp-solution.png "The watch app project with English and Spanish language files")
+  ![The watch app project with English and Spanish language files](localization-images/watchapp-solution.png)
 
 #### Storyboard Text
 
 When you edit the storyboard, select each element and notice the
   **Localization ID** that appears in the **Properties** pad:
 
-  [![](localization-images/storyboard-sml.png "The Localization ID that appears in the Properties pad")](localization-images/storyboard.png#lightbox)
+  [![The Localization ID that appears in the Properties pad](localization-images/storyboard-sml.png)](localization-images/storyboard.png#lightbox)
 
 In the **Base.lproj** folder, create key-value pairs as shown
   below, where the key is formed by the **Localization ID**
@@ -126,7 +126,7 @@ Simply set the image's **Image** property in the storyboard
   and the correct image will be rendered on the watch according
   to the language selected by the user.
 
-![](localization-images/storyboard-image.png "Set the images Image property in the storyboard")
+![Set the images Image property in the storyboard](localization-images/storyboard-image.png)
 
 Note: because all Apple Watches have Retina displays, only the **@2x**
   version of the image is required. You do not need to specify **@2x**
@@ -139,7 +139,7 @@ The watch extension requires a similar directory
   is no storyboard. The localized strings in the extension
   are only those referenced by C# code.
 
-![](localization-images/watchextension-solution.png "The watch extension directory structure to support localization")
+![The watch extension directory structure to support localization](localization-images/watchextension-solution.png)
 
 #### Strings in Code
 
@@ -267,14 +267,14 @@ The method to change language preferences differs between the simulator
 On the simulator, select the language to test using the
   iOS **Settings** app (the grey gears icon in the simulator home screen).
 
-  ![](localization-images/sim-settings-sml.png "The iOS Settings app Localization settings")
+  ![The iOS Settings app Localization settings](localization-images/sim-settings-sml.png)
 
 ### Watch device
 
 When testing with a watch, change the watch's language
   in the **Apple Watch** app on the paired iPhone.
 
-  ![](localization-images/phone-settings-sml.png "Change the watch's language in the Apple Watch app on the paired iPhone")
+  ![Change the watch's language in the Apple Watch app on the paired iPhone](localization-images/phone-settings-sml.png)
 
 ## Related Links
 

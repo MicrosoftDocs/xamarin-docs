@@ -99,14 +99,14 @@ iPhone 5 devices have a 640x1136 resolution. Applications that targeted
 previous versions of iOS will appear letterboxed when run on an iPhone 5, as
 shown below:
 
- [![](images/01-letterboxed.png "Applications that targeted previous versions of iOS will appear letterboxed when run on an iPhone 5")](images/01-letterboxed.png#lightbox)
+ [![Applications that targeted previous versions of iOS will appear letterboxed when run on an iPhone 5](images/01-letterboxed.png)](images/01-letterboxed.png#lightbox)
 
 In order for the application to appear full-screen on iPhone 5, simply add an
 image named `Default-568h@2x.png` having a resolution of 640x1136. The
 following screenshot shows the application running after this image has been
 included:
 
- [![](images/02-fullscreen.png "This screenshot shows the application running after this image has been included")](images/02-fullscreen.png#lightbox)
+ [![This screenshot shows the application running after this image has been included](images/02-fullscreen.png)](images/02-fullscreen.png#lightbox)
 
 ### Subclassing UINavigationBar
 
@@ -146,7 +146,7 @@ navController = new UINavigationController (typeof(CustomNavBar), typeof(UIToolb
 Using this `UINavigationBar` subclass results in the image view
 being displayed as shown in the following screenshot:
 
- [![](images/03-navbar.png "Using this UINavigationBar subclass results in the image view being displayed as shown in this screenshot")](images/03-navbar.png#lightbox)
+ [![Using this UINavigationBar subclass results in the image view being displayed as shown in this screenshot](images/03-navbar.png)](images/03-navbar.png#lightbox)
 
 ### Interface Orientation
 

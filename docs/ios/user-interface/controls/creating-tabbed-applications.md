@@ -51,7 +51,7 @@ application that uses one.
 
 For this walkthrough we’re going to create the following application:
 
-[![](creating-tabbed-applications-images/00-app.png "Sample tabbed app")](creating-tabbed-applications-images/00-app.png#lightbox)
+[![Sample tabbed app](creating-tabbed-applications-images/00-app.png)](creating-tabbed-applications-images/00-app.png#lightbox)
 
 Although there is already a tabbed application template available in
 Visual Studio for Mac, for this example, we’re going to work from an empty project to
@@ -66,16 +66,16 @@ Let’s start by creating a new application.
 Select the **File > New > Solution** menu item in
 Visual Studio for Mac and select a **iOS > App > Empty Project** template, Name the project `TabbedApplication`, as shown below:
 
-[![](creating-tabbed-applications-images/newsolution1.png "Select the Empty Project template")](creating-tabbed-applications-images/newsolution1.png#lightbox)
+[![Select the Empty Project template](creating-tabbed-applications-images/newsolution1.png)](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
-[![](creating-tabbed-applications-images/newsolution2.png "Name the project TabbedApplication")](creating-tabbed-applications-images/newsolution2.png#lightbox)
+[![Name the project TabbedApplication](creating-tabbed-applications-images/newsolution2.png)](creating-tabbed-applications-images/newsolution2.png#lightbox)
 
 ### Adding the UITabBarController
 
 Next, add an empty class by selecting **File > New
 File** and choosing the **General : Empty Class** template. Name the file `TabController` as shown below:
 
-[![](creating-tabbed-applications-images/02-newclass.png "Add the TabController class")](creating-tabbed-applications-images/02-newclass.png#lightbox)
+[![Add the TabController class](creating-tabbed-applications-images/02-newclass.png)](creating-tabbed-applications-images/02-newclass.png#lightbox)
 
 The `TabController` class will contain the implementation of the `UITabBarController` that will manage an array of `UIViewControllers`. When the user selects a tab, the `UITabBarController` will take care of presenting the view for the
 appropriate view controller.
@@ -127,7 +127,7 @@ Notice that for each `UIViewController` instance, we set the `Title` property of
 controllers are added to the `UITabBarController`, the `UITabBarController` will read the `Title` for each
 controller and display it on the associated tab’s label as shown below:
 
-[![](creating-tabbed-applications-images/00-app.png "The sample app run")](creating-tabbed-applications-images/00-app.png#lightbox)
+[![The sample app run](creating-tabbed-applications-images/00-app.png)](creating-tabbed-applications-images/00-app.png#lightbox)
 
 #### Setting the TabController as the RootViewController
 
@@ -164,7 +164,7 @@ with the first tab selected by default. Selecting any of the other tabs results
 in the associated controller’s view being presented by the `UITabBarController,` as shown below where the end user has selected
 the second tab:
 
-[![](creating-tabbed-applications-images/03-secondtab.png "The second tab shown")](creating-tabbed-applications-images/03-secondtab.png#lightbox)
+[![The second tab shown](creating-tabbed-applications-images/03-secondtab.png)](creating-tabbed-applications-images/03-secondtab.png#lightbox)
 
  <a name="Modifying_TabBarItems" />
 
@@ -188,7 +188,7 @@ When creating the `UITabBarItem` using a `UITabBarSystemItem`, the title and ima
 by iOS, as seen in the screenshot below showing the **Favorites**
 icon and title on the first tab:
 
- ![](creating-tabbed-applications-images/04a-tabimage.png "The first tab with a star icon")
+ ![The first tab with a star icon](creating-tabbed-applications-images/04a-tabimage.png)
 
  <a name="Setting_the_Title_and_Image" />
 
@@ -208,7 +208,7 @@ tab2.View.BackgroundColor = UIColor.Orange;
 The above code assumes an image named `second.png` has been added
 to the root of the project in Visual Studio for Mac. We have actually added three images to our project, to cover all device resolutions, as shown below:
 
- [![](creating-tabbed-applications-images/tabbedimages7new.png "The images added to the project")](creating-tabbed-applications-images/tabbedimages7new.png#lightbox)
+ [![The images added to the project](creating-tabbed-applications-images/tabbedimages7new.png)](creating-tabbed-applications-images/tabbedimages7new.png#lightbox)
 
 The tab image should be a 30x30 png with transparency for normal resolution, 60x60 for high resolution and 90 x 90 for iPhone 6 Plus resolution. In our code, we only need to load the file named `second.png` and iOS will automatically load the high resolution one
 on devices with a Retina display. You can read more about this in the [Working with Images](~/ios/app-fundamentals/images-icons/index.md) guides. By default tab bar items are grey, with a blue tint when selected.
@@ -218,14 +218,14 @@ on devices with a Retina display. You can read more about this in the [Working w
 The images above could also be added to the **Resources** directory, which is a special directory whose content
 will automatically be copied to the root of the application bundle:
 
-[![](creating-tabbed-applications-images/tabbedapplication8.png "The images as Resources")](creating-tabbed-applications-images/tabbedapplication8.png#lightbox)
+[![The images as Resources](creating-tabbed-applications-images/tabbedapplication8.png)](creating-tabbed-applications-images/tabbedapplication8.png#lightbox)
 
 Additionally, when we set the `Title` property directly on the `TabBarItem`, it would override any value set for `Title` on the controller itself.
 
 When we run the application now, the second tab shows our custom title and
 image as shown below:
 
-[![](creating-tabbed-applications-images/05-customtab.png "The second tab with a square icon")](creating-tabbed-applications-images/05-customtab.png#lightbox)
+[![The second tab with a square icon](creating-tabbed-applications-images/05-customtab.png)](creating-tabbed-applications-images/05-customtab.png#lightbox)
 
  <a name="Setting_the_Badge_Value" />
 
@@ -241,7 +241,7 @@ tab3.TabBarItem.BadgeValue = "Hi";
 Running this results in a red label with the string “Hi” in the upper
 left corner of the tab as shown below:
 
-[![](creating-tabbed-applications-images/06-badge.png "The second tab with a Hi badge")](creating-tabbed-applications-images/06-badge.png#lightbox)
+[![The second tab with a Hi badge](creating-tabbed-applications-images/06-badge.png)](creating-tabbed-applications-images/06-badge.png#lightbox)
 
 The badge is often used to display a number indication unread, new items. To
 remove the badge, set the `BadgeValue` to null as shown below:
@@ -266,7 +266,7 @@ For this scenario, the initial screen loads from a controller that is not a `UIT
 tapping a button, the same View Controller will be loaded into a `UITabBarController`, which is then presented to the user. The
 following screenshot shows the application flow:
 
-[![](creating-tabbed-applications-images/inital-screen-application.png "This screenshot shows the application flow")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
+[![This screenshot shows the application flow](creating-tabbed-applications-images/inital-screen-application.png)](creating-tabbed-applications-images/inital-screen-application.png#lightbox)
 
 Let’s start a new application for this example. Again, we’ll use the **iPhone > App > Empty Project (C#)** template,
 this time naming the project `InitialScreenDemo`.
@@ -279,13 +279,13 @@ In this example We’ll need a Storyboard to hold our View Controllers. To add a
 
 Let's call this new Storyboard **MainStoryboard** , as illustrated below: 
 
-[![](creating-tabbed-applications-images/new-file-dialog.png "Add a MainStoryboard file to the project")](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
+[![Add a MainStoryboard file to the project](creating-tabbed-applications-images/new-file-dialog.png)](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
 There are a few important steps to note when adding a Storyboard to a previously non-storyboard file, which are covered in the [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) guide. These are:
 
 1. Add your Storyboard name to the **Main Interface** section of the `Info.plist`:
 
-    [![](creating-tabbed-applications-images/project-options.png "Set the Main Interface to MainStoryboard")](creating-tabbed-applications-images/project-options.png#lightbox)
+    [![Set the Main Interface to MainStoryboard](creating-tabbed-applications-images/project-options.png)](creating-tabbed-applications-images/project-options.png#lightbox)
 1. In your `App Delegate`, override the Window method, with the following code:
 
     ```csharp
@@ -299,11 +299,11 @@ We are going to need three View Controllers for this example. One, named `ViewCo
 
 Open the Designer by double clicking the MainStoryboard.storyboard file, and drag three View Controllers on to the design surface. We want each of these View Controllers to have their own class corresponding to the name above, So, under **Identity > Class**, type in its name, as illustrated in the screenshot below:
 
-[![](creating-tabbed-applications-images/class-name.png "Set the Class to ViewController1")](creating-tabbed-applications-images/class-name.png#lightbox)
+[![Set the Class to ViewController1](creating-tabbed-applications-images/class-name.png)](creating-tabbed-applications-images/class-name.png#lightbox)
 
 Visual Studio for Mac will automatically generate the classes and designer files needed, this can be seen in the Solution Pad, as illustrated below:
 
-[![](creating-tabbed-applications-images/solution-pad2.png "Auto-generated files in the project")](creating-tabbed-applications-images/solution-pad2.png#lightbox)
+[![Auto-generated files in the project](creating-tabbed-applications-images/solution-pad2.png)](creating-tabbed-applications-images/solution-pad2.png#lightbox)
 
  <a name="Creating_the_UI" />
 
@@ -319,11 +319,11 @@ We want to drag a `Label` and a `Button` onto ViewController1 from the **ToolBox
 
 We will be controlling the visibility of our button in a `TouchUpInside` event, and we need to refer to it in the code behind. Let's identify it with the **Name** `aButton` in the Properties Pad, as depicted in the following screenshot:
 
-[![](creating-tabbed-applications-images/abutton-properties.png "Set the Name to aButton in the Properties Pad")](creating-tabbed-applications-images/abutton-properties.png#lightbox)
+[![Set the Name to aButton in the Properties Pad](creating-tabbed-applications-images/abutton-properties.png)](creating-tabbed-applications-images/abutton-properties.png#lightbox)
 
 Your Design Surface should now look similar to the screenshot below:
 
-[![](creating-tabbed-applications-images/design-surface1.png "Your Design Surface should now look similar to this screenshot")](creating-tabbed-applications-images/design-surface1.png#lightbox)
+[![Your Design Surface should now look similar to this screenshot](creating-tabbed-applications-images/design-surface1.png)](creating-tabbed-applications-images/design-surface1.png#lightbox)
 
 Let's add a little more detail to `ViewController2` and `ViewController3`, by adding a label to each, and changing the text to 'Two' and 'Three' respectively. This  highlights to the user which tab/View we are looking at.
 
@@ -334,7 +334,7 @@ in the first tab.
 
 When the user releases the `aButton`, we want a TouchUpInside event to be triggered. Let's select the button, and in the **Events Tab** of the Properties pad, declare the event handler – `InitialActionCompleted` – so it can be referred  to in code. This is illustrated in the screenshot below:
 
-[![](creating-tabbed-applications-images/event-handler.png "When the user releases the aButton, trigger a TouchUpInside event")](creating-tabbed-applications-images/event-handler.png#lightbox)
+[![When the user releases the aButton, trigger a TouchUpInside event](creating-tabbed-applications-images/event-handler.png)](creating-tabbed-applications-images/event-handler.png#lightbox)
 
 We now need to tell the View Controller to hide the button when the event fires `InitialActionCompleted`. In `ViewController1`, add the following partial method:
 
@@ -353,7 +353,7 @@ We now have our Initial view working as expected. Next, we want to add it to a `
 
 In the **Toolbox**, search for the **Tab Bar Controller** under Controllers & Objects and drag this onto the Design Surface. As you can see in the screenshot below, the Tab Bar Controller is UI-less and therefore brings two View Controllers with it by default:
 
-[![](creating-tabbed-applications-images/tabbarcontroller.png "Adding a Tab Bar Controller to the layout")](creating-tabbed-applications-images/tabbarcontroller.png#lightbox)
+[![Adding a Tab Bar Controller to the layout](creating-tabbed-applications-images/tabbarcontroller.png)](creating-tabbed-applications-images/tabbarcontroller.png#lightbox)
 
 Delete these new View controllers by selecting the black bar at the bottom and pressing delete.
 
@@ -363,15 +363,15 @@ In our Storyboard, we can use Segues to handle the transitions between the TabBa
 
 To set up each of our tabs, **Ctrl-Click** from the TabBarController to each of our View Controllers in order from one to three, and select the Relationship **Tab** from the context menu, as illustrated below:
 
-[![](creating-tabbed-applications-images/context-menu.png "Select the Tab Relationship")](creating-tabbed-applications-images/context-menu.png#lightbox)
+[![Select the Tab Relationship](creating-tabbed-applications-images/context-menu.png)](creating-tabbed-applications-images/context-menu.png#lightbox)
 
 Your Storyboard should resemble the screenshot below:
 
-[![](creating-tabbed-applications-images/segue-layout.png "The Storyboard should resemble this screenshot")](creating-tabbed-applications-images/segue-layout.png#lightbox)
+[![The Storyboard should resemble this screenshot](creating-tabbed-applications-images/segue-layout.png)](creating-tabbed-applications-images/segue-layout.png#lightbox)
 
 If we click on one of the tab bar items and explore the properties panel, you can see a number of different options, as illustrated below:
 
-[![](creating-tabbed-applications-images/properties-panel.png "Setting the tab options in the Properties Explorer")](creating-tabbed-applications-images/properties-panel.png#lightbox)
+[![Setting the tab options in the Properties Explorer](creating-tabbed-applications-images/properties-panel.png)](creating-tabbed-applications-images/properties-panel.png#lightbox)
 
 We can use this to edit certain attributes such as the badge, the title and the iOS [identifier](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/TabBarItem.html), among others
 
@@ -388,11 +388,11 @@ public override void ViewDidLoad ()
 
 When the application runs and the user taps the button on the first screen, the UITabBarController is loaded, with the view from the first screen placed in the first tab as shown below:
 
-[![](creating-tabbed-applications-images/first-view.png "The sample app output")](creating-tabbed-applications-images/first-view.png#lightbox)
+[![The sample app output](creating-tabbed-applications-images/first-view.png)](creating-tabbed-applications-images/first-view.png#lightbox)
 
 <!--Save the files and run the application:
 
-[![](creating-tabbed-applications-images/inital-screen-application.png "Save the files and run the application")](creating-tabbed-applications-images/inital-screen-application.png#lightbox)-->
+[![Save the files and run the application](creating-tabbed-applications-images/inital-screen-application.png)](creating-tabbed-applications-images/inital-screen-application.png#lightbox)-->
 
 ## Summary
 

@@ -51,11 +51,11 @@ To implement this feature, edit the app's `Info.plist` file, add the `CoreSpotli
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![](app-search-enhancements-images/search01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png#lightbox)
+[![Editing CoreSpotlightContinuation in the Info.plist file](app-search-enhancements-images/search01.png)](app-search-enhancements-images/search01.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![](app-search-enhancements-images/searchw01.png "Editing CoreSpotlightContinuation in the Info.plist file")](app-search-enhancements-images/search01.png#lightbox)
+[![Editing CoreSpotlightContinuation in the Info.plist file](app-search-enhancements-images/searchw01.png)](app-search-enhancements-images/search01.png#lightbox)
 
 -----
 

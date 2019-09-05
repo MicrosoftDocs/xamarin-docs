@@ -34,7 +34,7 @@ The app group will have an identifier, which is typically your
   the Bundle ID `com.xamarin.WatchSettings` and the app group
   `group.com.xamarin.WatchSettings`.
 
-[![](app-groups-images/app-group-sml.png "Use the Bundle ID com.xamarin.WatchSettings and the app group   group.com.xamarin.WatchSettings")](app-groups-images/app-group.png#lightbox)
+[![Use the Bundle ID com.xamarin.WatchSettings and the app group   group.com.xamarin.WatchSettings](app-groups-images/app-group-sml.png)](app-groups-images/app-group.png#lightbox)
 
 ### Entitlements.plist
 
@@ -42,7 +42,7 @@ As well as configuring the provisioning profile,
   **Enable App Groups** in the **Entitlements.plist** and enter
   the ID you've chosen:
 
-[![](app-groups-images/entitlements-sml.png "Configure the plist and enter the ID")](app-groups-images/entitlements.png#lightbox)
+[![Configure the plist and enter the ID](app-groups-images/entitlements-sml.png)](app-groups-images/entitlements.png#lightbox)
 
 ### Deployment
 

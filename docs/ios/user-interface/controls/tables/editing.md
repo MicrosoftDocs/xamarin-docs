@@ -20,7 +20,7 @@ mode.
 
 The swipe to delete feature is a natural gesture in iOS that users expect. 
 
- [![](editing-images/image10.png "Example of Swipe to Delete")](editing-images/image10.png#lightbox)
+ [![Example of Swipe to Delete](editing-images/image10.png)](editing-images/image10.png#lightbox)
 
 There are three method overrides that affect the swipe gesture to show a **Delete** button in a cell:
 
@@ -64,7 +64,7 @@ row, which reveals a Delete button when touched. The table also displays a
 ‘handle’ icon to indicate that the row can be dragged to change the order.
 The **TableEditMode** sample implements these features as shown.
 
- [![](editing-images/image11.png "The TableEditMode sample implements these features as shown")](editing-images/image11.png#lightbox)
+ [![The TableEditMode sample implements these features as shown](editing-images/image11.png)](editing-images/image11.png#lightbox)
 
 There are a number of different methods on `UITableViewSource`
 that affect a table’s edit mode behavior:
@@ -143,7 +143,7 @@ Contact** screen. This screenshot shows how the row insertion functionality
 works – in edit mode there is an additional row that (when clicked) inserts
 additional rows into the data. When editing is complete, the temporary **(add new)** row is removed.
 
- [![](editing-images/image12.png "When editing is complete, the temporary add new row is removed")](editing-images/image12.png#lightbox)
+ [![When editing is complete, the temporary add new row is removed](editing-images/image12.png)](editing-images/image12.png#lightbox)
 
 There are a number of different methods on `UITableViewSource`
 that affect a table’s edit mode behavior. These methods have been implemented

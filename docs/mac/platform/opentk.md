@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 OpenTK (The Open Toolkit) is an advanced, low-level C# library that makes working with OpenGL, OpenCL and OpenAL easier. OpenTK can be used for games, scientific applications or other projects that require 3D graphics, audio or computational functionality. This article gives a brief introduction to using OpenTK in a Xamarin.Mac app.
 
-[![](opentk-images/intro01.png "An example app run")](opentk-images/intro01.png#lightbox)
+[![An example app run](opentk-images/intro01.png)](opentk-images/intro01.png#lightbox)
 
 In this article, we'll cover the basics of OpenTK in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -49,11 +49,11 @@ As a quick introduction to using OpenTK in a Xamarin.Mac app, we are going to cr
 
 Start Visual Studio for Mac and create a new Xamarin.Mac solution. Select **Mac** > **App** > **General** > **Cocoa App**:
 
-[![](opentk-images/sample01.png "Adding a new Cocoa App")](opentk-images/sample01.png#lightbox)
+[![Adding a new Cocoa App](opentk-images/sample01.png)](opentk-images/sample01.png#lightbox)
 
 Enter `MacOpenTK` for the **Project Name**:
 
-[![](opentk-images/sample02.png "Setting the project name")](opentk-images/sample02.png#lightbox)
+[![Setting the project name](opentk-images/sample02.png)](opentk-images/sample02.png#lightbox)
 
 Click the **Create** button to build the new project.
 
@@ -65,7 +65,7 @@ Before you can use Open TK in a Xamarin.Mac application, you need to include a r
 
 Place a check by `OpenTK` and click the **OK** button:
 
-[![](opentk-images/sample03.png "Editing the project references")](opentk-images/sample03.png#lightbox)
+[![Editing the project references](opentk-images/sample03.png)](opentk-images/sample03.png#lightbox)
 
 <a name="Using_OpenTK" />
 
@@ -292,7 +292,7 @@ We pass in the desired frame rate that we want the Game View to update at, for o
 
 Let's run our app and see the output:
 
-[![](opentk-images/intro01.png "A sample of the apps output")](opentk-images/intro01.png#lightbox)
+[![A sample of the apps output](opentk-images/intro01.png)](opentk-images/intro01.png#lightbox)
 
 If we resize our window, the Game View will also be reside and the triangle will be resized and updated real-time as well.
 

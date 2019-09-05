@@ -39,7 +39,7 @@ The `Entry.On<iOS>` method specifies that this platform-specific will only run o
 
 The result is that the cursor color in a [`Entry`](xref:Xamarin.Forms.Entry) can be set to a specific [`Color`](xref:Xamarin.Forms.Color):
 
-![](entry-cursor-color-images/entry-cursorcolor.png "Entry Cursor Color")
+![Entry Cursor Color](entry-cursor-color-images/entry-cursorcolor.png)
 
 ## Related links
 

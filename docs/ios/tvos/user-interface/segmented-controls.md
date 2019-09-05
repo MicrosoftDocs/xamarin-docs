@@ -13,7 +13,7 @@ ms.date: 03/16/2017
 
 A Segmented Control provides a set of linear elements, each of which can contain an icon or text, and is used to provide a set of related choices to the user.
 
-[![](segmented-controls-images/segment01.png "Sample segment controls")](segmented-controls-images/segment01.png#lightbox)
+[![Sample segment controls](segmented-controls-images/segment01.png)](segmented-controls-images/segment01.png#lightbox)
 
 Apple has the following suggestions for working with Segmented Controls:
 
@@ -54,15 +54,15 @@ The easiest way to work with Segment Controls in a Xamarin.tvOS app is to add th
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Segment Control** from the **Toolbox** and drop it on the View: 
 
-    [![](segmented-controls-images/segment02.png "A Segment Control")](segmented-controls-images/segment02.png#lightbox)
+    [![A Segment Control](segmented-controls-images/segment02.png)](segmented-controls-images/segment02.png#lightbox)
 1. In the **Widget Tab** of the **Property Pad**, you can adjust several properties of the Segment Control such as its **Style** and **State**: 
 
-    [![](segmented-controls-images/segment03.png "The Widget Tab")](segmented-controls-images/segment03.png#lightbox)
+    [![The Widget Tab](segmented-controls-images/segment03.png)](segmented-controls-images/segment03.png#lightbox)
 1. Use the **Segments** field to control the number of Segments in the controller.
 1. Select a given Segment from the **Segment Dropdown** to adjust its individual properties such as **Title** or **Image** and to control if a given Segment is **Enabled** or **Selected** when the control is displayed.
 1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
 
-    [![](segmented-controls-images/segment04.png "Assign a Name")](segmented-controls-images/segment04.png#lightbox)
+    [![Assign a Name](segmented-controls-images/segment04.png)](segmented-controls-images/segment04.png#lightbox)
 1. Save your changes.
 
 # [Visual Studio](#tab/windows)
@@ -70,15 +70,15 @@ The easiest way to work with Segment Controls in a Xamarin.tvOS app is to add th
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Segment Control** from the **Toolbox** and drop it on the View: 
 
-    [![](segmented-controls-images/segment02-vs.png "A Segment Control")](segmented-controls-images/segment02-vs.png#lightbox)
+    [![A Segment Control](segmented-controls-images/segment02-vs.png)](segmented-controls-images/segment02-vs.png#lightbox)
 1. In the **Widget Tab** of the **Property Explorer**, you can adjust several properties of the Segment Control such as its **Style** and **State**: 
 
-    [![](segmented-controls-images/segment03-vs.png "The Widget Tab")](segmented-controls-images/segment03-vs.png#lightbox)
+    [![The Widget Tab](segmented-controls-images/segment03-vs.png)](segmented-controls-images/segment03-vs.png#lightbox)
 1. Use the **Segments** field to control the number of Segments in the controller.
 1. Select a given Segment from the **Segment Dropdown** to adjust its individual properties such as **Title** or **Image** and to control if a given Segment is **Enabled** or **Selected** when the control is displayed.
 1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
 
-    [![](segmented-controls-images/segment04-vs.png "Assign a Name")](segmented-controls-images/segment04-vs.png#lightbox)
+    [![Assign a Name](segmented-controls-images/segment04-vs.png)](segmented-controls-images/segment04-vs.png#lightbox)
 1. Save your changes.
 
 -----

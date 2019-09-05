@@ -35,7 +35,7 @@ of views and controls (or *subviews*) is known as a *Content View Hierarchy*. Sc
 represent a transition between view controllers. This is normally achieved by creating a segue between an object on the 
 initial view, and the connecting view. The relationships on the design surface are illustrated in the image below:
 
- [![](images/storyboardsview.png "The relationships on the design surface are illustrated in this image")](images/storyboardsview.png#lightbox)
+ [![The relationships on the design surface are illustrated in this image](images/storyboardsview.png)](images/storyboardsview.png#lightbox)
 
 As shown, the storyboard will lay out each of your scenes with content already rendered and illustrates the connections 
 between them.  It is worth noting at this point, that when we talk about scenes on an iPhone, it is safe to assume that 
@@ -58,22 +58,22 @@ known as nibs. At runtime, these nibs are initialized and instantiated to create
 A *Segue*, or *Segue Object*, is used in iOS development to represent a transition between scenes. To create a segue, hold 
 down the **Ctrl** key and click-drag from one scene to another. As we drag our mouse, a blue connector appears, indicating where the segue will lead as demonstrated in the image below:
 
- [![](images/createsegue.png "A blue connector appears, indicating where the segue will lead as demonstrated in this image")](images/createsegue.png#lightbox)
+ [![A blue connector appears, indicating where the segue will lead as demonstrated in this image](images/createsegue.png)](images/createsegue.png#lightbox)
 
 On mouse-up, a menu will appear letting us choose the action for our segue. It may look similar to the images below: 
 
 **Pre-iOS 8 and Size Classes**:
 
-[![](images/segue1.png "The Action Segue dropdown without Size Classes")](images/segue1.png#lightbox)
+[![The Action Segue dropdown without Size Classes](images/segue1.png)](images/segue1.png#lightbox)
 
 **When using Size Classes and Adaptive Segues**:
 
-[![](images/16new.png "The Action Segue dropdown with Size Classes")](images/16new.png#lightbox)
+[![The Action Segue dropdown with Size Classes](images/16new.png)](images/16new.png#lightbox)
 
 > [!IMPORTANT]
 > If you are using VMWare for your Windows Virtual Machine,  Ctrl-click is mapped as the _Right-Click_ mouse button by default. To create a Segue, edit your Keyboard preferences through **Preferences** > **Keyboard & Mouse** > **Mouse Shortcuts** and remap your **Secondary button** as illustrated below:
 > 
-> [![](images/image22.png "Keyboard and Mouse preference settings")](images/image22.png#lightbox)
+> [![Keyboard and Mouse preference settings](images/image22.png)](images/image22.png#lightbox)
 > 
 > You should now be able to add a segue between your View Controllers as normal.
 
@@ -98,7 +98,7 @@ segue in the iOS, read the  [Creating Unwind Segues](https://github.com/xamarin/
 - **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the 
 user will see first. It is represented by the segue shown below:  
 
-    [![](images/sourcelesssegue.png "A sourceless segue")](images/sourcelesssegue.png#lightbox)
+    [![A sourceless segue](images/sourcelesssegue.png)](images/sourcelesssegue.png#lightbox)
 
 ### Adaptive Segue Types
 
@@ -106,7 +106,7 @@ user will see first. It is represented by the segue shown below:
 
 Any application using Size Classes will also use the new [*Adaptive Segues*](~/ios/user-interface/storyboards/unified-storyboards.md). When using size classes, remember that we aren't directly specifying wether we are using an iPhone or iPad. In other words we are creating one UI that will always look the same, regardless of how much real estate it has to work with. Adaptive Segues work by judging the environment, and determining how best to present content. The Adaptive Segues are shown below: 
 
-[![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
+[![The Adaptive Segues dropdown](images/adaptivesegue.png)](images/adaptivesegue.png#lightbox)
 
 |Segue|Description|
 |--- |--- |
@@ -161,11 +161,11 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
 
 1. Create a new Storyboard file by browsing to **File > New File > iOS > Storyboard**, as illustrated below: 
     
-    [![](images/new-storyboard-xs.png "The new file dialog")](images/new-storyboard-xs.png#lightbox)
+    [![The new file dialog](images/new-storyboard-xs.png)](images/new-storyboard-xs.png#lightbox)
 
 2. Add your Storyboard name to the **Main Interface** section of the **Info.plist**, as shown below:
     
-    [![](images/infoplist.png "The Info.plist editor")](images/infoplist.png#lightbox)
+    [![The Info.plist editor](images/infoplist.png)](images/infoplist.png#lightbox)
     
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (See below), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window and then makes the window visible on the screen.
 
@@ -182,11 +182,11 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
 
 1. Create a new Storyboard file by right-clicking on the project to **Add > New File > iOS > Empty Storyboard**, as illustrated below: 
     
-    [![](images/new-storyboard-vs.png "The new item dialog")](images/new-storyboard-vs.png#lightbox)
+    [![The new item dialog](images/new-storyboard-vs.png)](images/new-storyboard-vs.png#lightbox)
 
 2. Add your Storyboard name to the **Main Interface** section of the iOS Application, as shown below:
     
-    [![](images/ios-app.png "The Info.plist editor")](images/ios-app.png#lightbox)
+    [![The Info.plist editor](images/ios-app.png)](images/ios-app.png#lightbox)
     
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (See below), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window and then makes the window visible on the screen.
 
@@ -220,37 +220,37 @@ ourselves.
 The screenshot below shows two view controllers on our design surface with no segue between them. The next section will walk 
 through how that transition can be set up in code.
 
- [![](images/viewcontrollerspink.png "This screenshot shows two view controllers on the design surface with no segue between them")](images/viewcontrollerspink.png#lightbox)
+ [![This screenshot shows two view controllers on the design surface with no segue between them](images/viewcontrollerspink.png)](images/viewcontrollerspink.png#lightbox)
 
 1. Add an _Empty iPhone Storyboard_ to an existing project project:
     
-    [![](images/add-storyboard1.png "Adding storyboard")](images/add-storyboard1.png#lightbox)
+    [![Adding storyboard](images/add-storyboard1.png)](images/add-storyboard1.png#lightbox)
 
 2. Double click on the newly created storyboard to open it, and add a new **Navigation Controller** to the design surface. As the Navigation Controller is UI-less, by default it will come with a Root View Controller, as illustrated below:
 
-    [![](images/uinavigationcontroller.png "View Controllers with Segues")](images/uinavigationcontroller.png#lightbox)
+    [![View Controllers with Segues](images/uinavigationcontroller.png)](images/uinavigationcontroller.png#lightbox)
 
 3. Select the _View Controller_ by clicking on the black bar at the bottom. In the Designer's **Property Pad**, under **Identity** we can specify a custom class as well as a unique ID for the View Controller. Set the **class name** and **Storyboard ID** to `MainViewController`.
 
-    [![](images/identitypanelnew.png "Specify custom class")](images/identitypanelnew.png#lightbox)
+    [![Specify custom class](images/identitypanelnew.png)](images/identitypanelnew.png#lightbox)
 
 4. Later, we will need to instantiate our view controllers from the storyboard, and will use the Storyboard ID to reference them in our code. Setting the Restoration ID to match the Storyboard ID ensures that the view controller gets recreated correctly if the state needs to be restored.
 
 5. We currently only have one view controller. Drag another view controller onto the design surface. In the **Property Pad**, under Identity, set the class and Storyboard ID to `PinkViewController`, as illustrated below:
 
-    [![](images/pinkvcnew.png "The Property Pad")](images/pinkvcnew.png#lightbox)
+    [![The Property Pad](images/pinkvcnew.png)](images/pinkvcnew.png#lightbox)
     
     The IDE will create these custom classes for the view controllers. These can be viewed in the **Solution Pad**, as illustrated in the screenshot below:
     
-    [![](images/solution-pad.png "Solution Pad")](images/solution-pad.png#lightbox)
+    [![Solution Pad](images/solution-pad.png)](images/solution-pad.png#lightbox)
 
 6. In the `PinkViewController`, select the view by clicking towards the center of the controller's frame. In the Properties Pad, under View change the **Background** to Magenta:
     
-    [![](images/pinkcontroller.png "Set Background color")](images/pinkcontroller.png#lightbox)
+    [![Set Background color](images/pinkcontroller.png)](images/pinkcontroller.png#lightbox)
 
 7. Finally, drag a button from the **ToolBox** onto the `MainViewController`. In the Properties Pad, give it the name `PinkButton` and the Title GoToPink, as illustrated below:
 
-    [![](images/pinkbutton.png "Set Button Name")](images/pinkbutton.png#lightbox)
+    [![Set Button Name](images/pinkbutton.png)](images/pinkbutton.png#lightbox)
 
 The storyboard is complete, but if we deploy the project now, we will get a blank screen. That's because we still need to tell the IDE to use our storyboard, and to set up a root view controller to serve as the first view. Normally this can be done through our Project Options, as shown above. However in this example we will achieved the same result in code, by adding the following to the **AppDelegate**:
 
@@ -343,7 +343,7 @@ public partial class MainViewController : UIViewController
 
 Running the application produces a 2-screen application:
 
-![](images/finishedstoryboard.png "Sample app run screens")
+![Sample app run screens](images/finishedstoryboard.png)
 
 ## Conditional Segues
 
@@ -365,13 +365,13 @@ Before we begin, follow through steps 1 – 8 above. In these steps we create ou
         - Lines: 2
         - 'Hidden' checkbox checked    
         
-    [![](images/passwordvc.png "Center Lines")](images/passwordvc.png#lightbox)
+    [![Center Lines](images/passwordvc.png)](images/passwordvc.png#lightbox)
     
 2. Create a Segue between the Go To Pink button and the view controller by Ctrl-Dragging from the *PinkButton* to the *PinkViewController*, and selecting **Push** on mouse-up. 
 
 3. Click on the Segue and give it the *Identifier* `SegueToPink`:
 
-    [![](images/namesegue.png "Click on the Segue and give it the Identifier SegueToPink")](images/namesegue.png#lightbox)  
+    [![Click on the Segue and give it the Identifier SegueToPink](images/namesegue.png)](images/namesegue.png#lightbox)  
 
 4. Finally, add the following ShouldPerformSegue method to the `MainViewController` class:
 
@@ -415,29 +415,29 @@ To add a reference to an external Storyboard, do the following:
 
 1. In the **Solution Explorer**, right-click on the Project Name and select **Add** > **New File...** > **iOS** > **Storyboard**. Enter a **Name** for the new Storyboard and click the **New** button:
     
-    [![](images/ref01.png "The New File Dialog")](images/ref01.png#lightbox)
+    [![The New File Dialog](images/ref01.png)](images/ref01.png#lightbox)
     
 2. Design the layout of the new Storyboard's scenes as you normally would and save your changes: 
     
-    [![](images/ref02.png "The layout of the new scene")](images/ref02.png#lightbox)
+    [![The layout of the new scene](images/ref02.png)](images/ref02.png#lightbox)
     
 3. Open the Storyboard that you are going to be adding the reference to in the iOS Designer.
 
 4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
     
-    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+    [![A Storyboard Reference](images/ref03.png)](images/ref03.png#lightbox)
     
 5. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** that you created above: 
 
-    [![](images/ref04.png "The Widget tab")](images/ref04.png#lightbox)
+    [![The Widget tab](images/ref04.png)](images/ref04.png#lightbox)
     
 6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-    [![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox) 
+    [![Creating a segue](images/ref05.png)](images/ref05.png#lightbox) 
     
 7. From the popup menu select **Show** to complete the Segue: 
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
+    [![Selecting Show to complete the Segue](images/ref06.png)](images/ref06.png#lightbox) 
     
 8. Save your changes to the Storyboard.
 
@@ -453,29 +453,29 @@ To add a reference to a specific Scene an external Storyboard (and not the Initi
 
 2. Add a new Scene and design its layout as you normally would: 
 
-    [![](images/ref07.png "The new scene layout")](images/ref07.png#lightbox)
+    [![The new scene layout](images/ref07.png)](images/ref07.png#lightbox)
     
 3. In the **Widget** tab of the **Properties Explorer**, enter a **Storyboard ID** for the new Scene's View Controller: 
 
-    [![](images/ref08.png "Enter a Storyboard ID for the new Scenes View Controller")](images/ref08.png#lightbox)
+    [![Enter a Storyboard ID for the new Scenes View Controller](images/ref08.png)](images/ref08.png#lightbox)
     
 4. Open the Storyboard that you are going to be adding the reference to in the iOS Designer.
 
 5. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
 
-    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+    [![A Storyboard Reference](images/ref03.png)](images/ref03.png#lightbox)
     
 6. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
-    [![](images/ref09.png "The Widget tab ")](images/ref09.png#lightbox)
+    [![The Widget tab](images/ref09.png)](images/ref09.png#lightbox)
     
 7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-    [![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox) 
+    [![Creating a segue](images/ref10.png)](images/ref10.png#lightbox) 
     
 8. From the popup menu select **Show** to complete the Segue: 
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
+    [![Selecting Show to complete the Segue](images/ref06.png)](images/ref06.png#lightbox) 
     
 9. Save your changes to the Storyboard.
 
@@ -491,27 +491,27 @@ To add a reference to a specific Scene the same Storyboard, do the following:
 
 2. Add a new Scene and design its layout as you normally would: 
 
-    [![](images/ref11.png "The new scene layout")](images/ref11.png#lightbox)
+    [![The new scene layout](images/ref11.png)](images/ref11.png#lightbox)
 
 3. In the **Widget** tab of the **Properties Explorer**, enter a **Storyboard ID** for the new Scene's View Controller: 
 
-    [![](images/ref12.png "The Widget tab")](images/ref12.png#lightbox)
+    [![The Widget tab](images/ref12.png)](images/ref12.png#lightbox)
     
 4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
 
-   [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
+   [![A Storyboard Reference](images/ref03.png)](images/ref03.png#lightbox)
     
 5. In the **Widget** tab of the **Properties Explorer**, select **Reference ID** (Storyboard ID) of the Scene that you created above: 
 
-    [![](images/ref13.png "The Widget tab")](images/ref13.png#lightbox)
+    [![The Widget tab](images/ref13.png)](images/ref13.png#lightbox)
     
 6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-    [![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox) 
+    [![Creating a segue](images/ref14.png)](images/ref14.png#lightbox) 
     
 7. From the popup menu select **Show** to complete the Segue: 
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
+    [![Selecting Show to complete the Segue](images/ref06.png)](images/ref06.png#lightbox) 
     
 8. Save your changes to the Storyboard.
 

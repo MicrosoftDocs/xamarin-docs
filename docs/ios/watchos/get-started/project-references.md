@@ -25,15 +25,15 @@ View the references by double-clicking on the References
 
 - **iPhone app** references **Watch App**
 
-  ![](project-references-images/catalog-reference1.png "iPhone app references Watch App")
+  ![iPhone app references Watch App](project-references-images/catalog-reference1.png)
 
 - **Watch App** references **Watch App Extension**
 
-  ![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
+  ![iPhone app references Watch App](project-references-images/catalog-reference2.png)
 
 - The **Watch App Extension** does not reference either of the other projects
 
-  ![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
+  ![Watch App Extension does not reference the other projects](project-references-images/catalog-reference3.png)
 
 ## Bundle Identifiers
 
@@ -68,11 +68,11 @@ This screenshot
 
 # [Visual Studio for Mac](#tab/macos)
 
-![](project-references-images/infoplist-extension.png "This screenshot is the Watch Extension's Info.plist file")
+![This screenshot is the Watch Extension's Info.plist file](project-references-images/infoplist-extension.png)
 
 # [Visual Studio](#tab/windows)
 
-![](project-references-images/infoplist-extension-vs.png "This screenshot is the Watch Extension's Info.plist file")
+![This screenshot is the Watch Extension's Info.plist file](project-references-images/infoplist-extension-vs.png)
 
 -----
 
@@ -83,7 +83,7 @@ This screenshot is the **Watch App's** Info.plist file.
   this value might be set to 8.3 - you should change
   it 8.2.
 
-![](project-references-images/infoplist-watchapp.png "The watch Info.plist file")
+![The watch Info.plist file](project-references-images/infoplist-watchapp.png)
 
 The deployment target for the Watch App can be
   different from the Watch Extension and iOS App.

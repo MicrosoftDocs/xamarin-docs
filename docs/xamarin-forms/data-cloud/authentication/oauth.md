@@ -45,7 +45,7 @@ Xamarin.Auth supports two approaches for applications to interact with an identi
 
 A high-level overview of how the sample application uses Xamarin.Auth to authenticate users and retrieve their basic data is shown in the following diagram:
 
-![](oauth-images/google-auth.png "Using Xamarin.Auth to Authenticate with Google")
+![Using Xamarin.Auth to Authenticate with Google](oauth-images/google-auth.png)
 
 The application makes an authentication request to Google using the `OAuth2Authenticator` class. An authentication response is returned, once the user has successfully authenticated with Google through their sign-in page, which includes an access token. The application then makes a request to Google for basic user data, using the `OAuth2Request` class, with the access token being included in the request.
 
@@ -127,7 +127,7 @@ presenter.Login(authenticator);
 
 Note that the argument to the `Xamarin.Auth.Presenters.OAuthLoginPresenter.Login` method is the `OAuth2Authenticator` instance. When the `Login` method is invoked, the sign-in user interface is presented to the user in a tab from the device's web browser, which is shown in the following screenshots:
 
-![](oauth-images/login.png "Google Sign-In")
+![Google Sign-In](oauth-images/login.png)
 
 ### Processing the Redirect URL
 
@@ -143,7 +143,7 @@ The mechanism for registering a custom URL scheme with the operating system and 
 
 On iOS, a custom URL scheme is registered in **Info.plist**, as shown in the following screenshot:
 
-![](oauth-images/info-plist.png "URL Scheme Registration")
+![URL Scheme Registration](oauth-images/info-plist.png)
 
 The **Identifier** value can be anything, and the **Role** value must be set to **Viewer**. The **Url Schemes** value, which begins with `com.googleusercontent.apps`, can be obtained from the iOS client id for the project on [Google API Console](http://console.developers.google.com).
 

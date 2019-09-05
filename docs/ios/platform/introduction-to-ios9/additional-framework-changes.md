@@ -13,7 +13,7 @@ ms.date: 03/19/2017
 
 _This article covers additional, minor changes or enhancements to existing frameworks for iOS 9._
 
-[![](additional-framework-changes-images/ios9-sml.png "iOS 9 Logo")](additional-framework-changes-images/ios9.png#lightbox)
+[![iOS 9 Logo](additional-framework-changes-images/ios9-sml.png)](additional-framework-changes-images/ios9.png#lightbox)
 
 In addition to the major changes to iOS, Apple has made modifications and improvements to several existing frameworks in iOS 9.
 

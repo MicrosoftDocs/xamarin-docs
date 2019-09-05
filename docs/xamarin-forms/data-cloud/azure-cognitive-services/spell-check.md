@@ -146,9 +146,9 @@ foreach (var flaggedToken in spellCheckResult.FlaggedTokens)
 
 This code iterates through the `FlaggedTokens` collection and replaces any misspelled or grammatically incorrect words in the source text with the first suggestion. The following screenshots show before and after the spell check:
 
-![](spell-check-images/before-spell-check.png "Before Spell Check")
+![Before Spell Check](spell-check-images/before-spell-check.png)
 
-![](spell-check-images/after-spell-check.png "After Spell Check")
+![After Spell Check](spell-check-images/after-spell-check.png)
 
 > [!NOTE]
 > The example above uses `Replace` for simplicity, but across a large amount of text it

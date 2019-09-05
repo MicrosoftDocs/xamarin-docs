@@ -41,7 +41,7 @@ Cells are objects that represent a single item in the data set that is being
 presented by the collection view. Each cell is an instance of the `UICollectionViewCell` class, which is composed of three different
 views, as shown in the figure below:
 
- [![](uicollectionview-images/01-uicollectionviewcell.png "Each cell is composed of three different views, as shown here")](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
+ [![Each cell is composed of three different views, as shown here](uicollectionview-images/01-uicollectionviewcell.png)](uicollectionview-images/01-uicollectionviewcell.png#lightbox)
 
 The `UICollectionViewCell` class has the following properties for
 each of these views:
@@ -53,7 +53,7 @@ each of these views:
 By setting the `ContentView` such that it is smaller than the `BackgroundView` and `SelectedBackgroundView`, the `BackgroundView` can be used to visually frame the content, while the `SelectedBackgroundView` will be displayed when a cell is selected,
 as shown below:
 
- [![](uicollectionview-images/02-cells.png "The different cell elements")](uicollectionview-images/02-cells.png#lightbox)
+ [![The different cell elements](uicollectionview-images/02-cells.png)](uicollectionview-images/02-cells.png#lightbox)
 
 The Cells in the screenshot above are created by inheriting from `UICollectionViewCell` and setting the `ContentView`, `SelectedBackgroundView` and `BackgroundView` properties,
 respectively, as shown in the following code:
@@ -103,7 +103,7 @@ the genre of music in a music library.
 For example, a Supplementary View could be used to present a header for a
 particular section, as shown in the figure below:
 
- [![](uicollectionview-images/02a-supplementary-view.png "A Supplementary View used to present a header for a particular section, as shown here")](uicollectionview-images/02a-supplementary-view.png#lightbox)
+ [![A Supplementary View used to present a header for a particular section, as shown here](uicollectionview-images/02a-supplementary-view.png)](uicollectionview-images/02a-supplementary-view.png#lightbox)
 
 To use a Supplementary View, it first needs to be registered in the `ViewDidLoad` method:
 
@@ -135,7 +135,7 @@ Decoration Views are purely visual views that can be displayed in a `UICollectio
 not data-driven. They are always created within a layout's subclass and subsequently can change as the content’s layout. For example, a Decoration View could be used to present a
 background view that scrolls with the content in the `UICollectionView`, as shown below:
 
- [![](uicollectionview-images/02c-decoration-view.png "Decoration View with a red background")](uicollectionview-images/02c-decoration-view.png#lightbox)
+ [![Decoration View with a red background](uicollectionview-images/02c-decoration-view.png)](uicollectionview-images/02c-decoration-view.png#lightbox)
 
  The code snippet below changes the background to red in the samples `CircleLayout` class:
 
@@ -169,7 +169,7 @@ will only call its data source to get Cells for items that are on the screen.
 Cells that scroll off the screen are placed in to a queue for reuse, as the
 following image illustrates:
 
- [![](uicollectionview-images/03-cell-reuse.png "Cells that scroll off the screen are placed in to a queue for reuse as shown here")](uicollectionview-images/03-cell-reuse.png#lightbox)
+ [![Cells that scroll off the screen are placed in to a queue for reuse as shown here](uicollectionview-images/03-cell-reuse.png)](uicollectionview-images/03-cell-reuse.png#lightbox)
 
 Cell reuse has been simplified with `UICollectionView` and `UITableView`. You no longer need to create a Cell directly in the data source if one isn’t available in the reuse queue, as Cells are registered with the system. If a Cell is not available when making the
 call to de-queue the Cell from the reuse queue, iOS will create it automatically based upon the type or nib that was registered.
@@ -232,7 +232,7 @@ and it is not selected until the user lifts their finger from the
 Cell. This allows a temporary change in the appearance of the cell before it is
 actually selected. Upon selection, the Cell’s `SelectedBackgroundView` is displayed. The figure below shows the highlighted state just before the selection occurs:
 
- [![](uicollectionview-images/04-cell-highlight.png "This figure shows the highlighted state just before the selection occurs")](uicollectionview-images/04-cell-highlight.png#lightbox)
+ [![This figure shows the highlighted state just before the selection occurs](uicollectionview-images/04-cell-highlight.png)](uicollectionview-images/04-cell-highlight.png#lightbox)
 
 To implement highlighting, the `ItemHighlighted` and `ItemUnhighlighted` methods of the `UICollectionViewDelegate` can be used. For example, the following code
 will apply a yellow background of the `ContentView` when the Cell is highlighted, and a white background when un-highlighted, as shown in the image above:
@@ -291,7 +291,7 @@ menu on a cell:
 
 The following screenshot show the menu when a cell is long pressed:
 
- [![](uicollectionview-images/04a-menu.png "This screenshot show the menu when a cell is long pressed")](uicollectionview-images/04a-menu.png#lightbox)
+ [![This screenshot show the menu when a cell is long pressed](uicollectionview-images/04a-menu.png)](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
 
@@ -341,7 +341,7 @@ This is all that is needed to layout content in a grid. Also, when the
 orientation changes, the `UICollectionViewFlowLayout` handles
 rearranging the content appropriately, as shown below:
 
- [![](uicollectionview-images/05-layout-orientation.png "Example of the orientation changes")](uicollectionview-images/05-layout-orientation.png#lightbox)
+ [![Example of the orientation changes](uicollectionview-images/05-layout-orientation.png)](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
 
@@ -359,7 +359,7 @@ layout.SectionInset = new UIEdgeInsets (50,50,50,50);
 
 This results in spacing around the section as shown below:
 
- [![](uicollectionview-images/06-sectioninset.png "Spacing around the section as shown here")](uicollectionview-images/06-sectioninset.png#lightbox)
+ [![Spacing around the section as shown here](uicollectionview-images/06-sectioninset.png)](uicollectionview-images/06-sectioninset.png#lightbox)
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
@@ -371,7 +371,7 @@ example, this can be used to create a layout that does not wrap the Cells into a
 grid, but instead creates a single row with a horizontal scrolling effect, as
 shown below:
 
- [![](uicollectionview-images/07-line-layout.png "A single row with a horizontal scrolling effect")](uicollectionview-images/07-line-layout.png#lightbox)
+ [![A single row with a horizontal scrolling effect](uicollectionview-images/07-line-layout.png)](uicollectionview-images/07-line-layout.png#lightbox)
 
 To implement this by subclassing `UICollectionViewFlowLayout`
 requires:
@@ -466,7 +466,7 @@ The key methods to override are:
 For example, the same content could be presented in a circular layout as
 shown below:
 
- [![](uicollectionview-images/08-circle-layout.png "A circular custom layout as shown here")](uicollectionview-images/08-circle-layout.png#lightbox)
+ [![A circular custom layout as shown here](uicollectionview-images/08-circle-layout.png)](uicollectionview-images/08-circle-layout.png#lightbox)
 
 The powerful thing about layouts is that to change from the grid-like
 layout, to a horizontal scrolling layout, and subsequently to this circular
@@ -481,7 +481,7 @@ of items out of the box by adding a new default gesture recognizer and several n
 Using these new methods, you can easily implement drag to reorder in your collection view
 and have the option of customizing the items appearance during any stage of the reordering process.
 
-[![](uicollectionview-images/intro01.png "An example of the reordering process")](uicollectionview-images/intro01.png#lightbox)
+[![An example of the reordering process](uicollectionview-images/intro01.png)](uicollectionview-images/intro01.png#lightbox)
 
 In this article, we'll take a look at implementing drag-to-reorder in a Xamarin.iOS
 application as well as some of the other changes iOS 9 has made to the collection view control:
@@ -516,7 +516,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 
 As a quick example, start a new Xamarin.iOS project and edit the **Main.storyboard** file. Drag a `UICollectionViewController` onto the design surface:
 
-[![](uicollectionview-images/quick01.png "Adding a UICollectionViewController")](uicollectionview-images/quick01.png#lightbox)
+[![Adding a UICollectionViewController](uicollectionview-images/quick01.png)](uicollectionview-images/quick01.png#lightbox)
 
 Select the Collection View (It may be easiest to do this from the document outline). In the layout tab of the Properties Pad, set the following sizes, as illustrated in the screenshot below:
 
@@ -526,28 +526,28 @@ Select the Collection View (It may be easiest to do this from the document outli
 - **Min Spacing**: For Cells – 8 | For Lines – 8
 - **Section Insets**: Top – 16 | Bottom – 16 | Left – 16 | Right – 16
 
-[![](uicollectionview-images/quick04.png "Set the Collection View sizes")](uicollectionview-images/quick04.png#lightbox)
+[![Set the Collection View sizes](uicollectionview-images/quick04.png)](uicollectionview-images/quick04.png#lightbox)
 
 Next, edit the default Cell:
 - Change its background color to blue
 - Add a label to act as the title for the cell
 - Set the reuse identifier to **cell**
 
-[![](uicollectionview-images/quick02.png "Edit the default Cell")](uicollectionview-images/quick02.png#lightbox)
+[![Edit the default Cell](uicollectionview-images/quick02.png)](uicollectionview-images/quick02.png#lightbox)
 
 Add constraints to keep the Label centered inside the cell as it changes size:
 
 In the **Property Pad** for the _CollectionViewCell_ and set the **Class** to `TextCollectionViewCell`:
 
-[![](uicollectionview-images/quick05.png "Set the Class to TextCollectionViewCell")](uicollectionview-images/quick05.png#lightbox)
+[![Set the Class to TextCollectionViewCell](uicollectionview-images/quick05.png)](uicollectionview-images/quick05.png#lightbox)
 
 Set the **Collection Reusable View** to `Cell`:
 
-[![](uicollectionview-images/quick06.png "Set the Collection Reusable View to Cell")](uicollectionview-images/quick06.png#lightbox)
+[![Set the Collection Reusable View to Cell](uicollectionview-images/quick06.png)](uicollectionview-images/quick06.png#lightbox)
 
 Finally, select the Label and name it `TextLabel`:
 
-[![](uicollectionview-images/quick07.png "name label TextLabel")](uicollectionview-images/quick07.png#lightbox)
+[![name label TextLabel](uicollectionview-images/quick07.png)](uicollectionview-images/quick07.png#lightbox)
 
 Edit the `TextCollectionViewCell` class and add the following properties.:
 
@@ -747,7 +747,7 @@ If the user selects an item from the list and drags it to a new location, the
 other items will animate automatically as they move out of the way of the item.
 When the user drops the item in a new location, it will stick to that location. For example:
 
-[![](uicollectionview-images/intro01.png "An example of dragging an item to a new location")](uicollectionview-images/intro01.png#lightbox)
+[![An example of dragging an item to a new location](uicollectionview-images/intro01.png)](uicollectionview-images/intro01.png#lightbox)
 
 <a name="Using-a-Custom-Gesture-Recognizer" />
 
@@ -1260,7 +1260,7 @@ of each item and attaches the new layout to our collection view.
 
 If we run the Xamarin.iOS app again, the collection view will now look like the following:
 
-[![](uicollectionview-images/custom01.png "The collection view will now look like this")](uicollectionview-images/custom01.png#lightbox)
+[![The collection view will now look like this](uicollectionview-images/custom01.png)](uicollectionview-images/custom01.png#lightbox)
 
 We can still drag-to-reorder items as before, but the items will now change size
 to fit their new location when they are dropped.

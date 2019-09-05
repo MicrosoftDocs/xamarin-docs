@@ -22,8 +22,8 @@ In this quickstart, you will learn how to:
 
 The quickstart walks through how to store data in a local SQLite.NET database. The final application is shown below:
 
-[![](database-images/screenshots1-sml.png "Notes Page")](database-images/screenshots1.png#lightbox "Notes Page")
-[![](database-images/screenshots2-sml.png "Note Entry Page")](database-images/screenshots2.png#lightbox "Note Entry Page")
+[![Notes Page")](database-images/screenshots1.png#lightbox "Notes Page](database-images/screenshots1-sml.png)
+[![Note Entry Page")](database-images/screenshots2.png#lightbox "Note Entry Page](database-images/screenshots2-sml.png)
 
 ### Prerequisites
 
@@ -37,11 +37,11 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
 2. In **Solution Explorer**, select the **Notes** project, right-click and select **Manage NuGet Packages...**:
 
-    ![](database-images/vs/add-nuget-packages.png "Add NuGet Packages")    
+    ![Add NuGet Packages](database-images/vs/add-nuget-packages.png)    
 
 3. In the **NuGet Package Manager**, select the **Browse** tab, search for the **sqlite-net-pcl** NuGet package, select it, and click the **Install** button to add it to the project:
 
-    ![](database-images/vs/add-package.png "Add Package")
+    ![Add Package](database-images/vs/add-package.png)
 
     > [!NOTE]
     > There are a number of NuGet packages with similar names. The correct package has these attributes:
@@ -254,11 +254,11 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
 2. In the **Solution Pad**, select the **Notes** project, right-click and select **Add > Add NuGet Packages...**:
 
-    ![](database-images/vsmac/add-nuget-packages.png "Add NuGet Packages")    
+    ![Add NuGet Packages](database-images/vsmac/add-nuget-packages.png)    
 
 3. In the **Add Packages** window, search for the **sqlite-net-pcl** NuGet package, select it, and click the **Add Package** button to add it to the project:
 
-    ![](database-images/vsmac/add-package.png "Add Package")
+    ![Add Package](database-images/vsmac/add-package.png)
 
     > [!NOTE]
     > There are a number of NuGet packages with similar names. The correct package has these attributes:

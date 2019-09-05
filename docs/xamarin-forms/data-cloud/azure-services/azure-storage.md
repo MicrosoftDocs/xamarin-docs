@@ -35,7 +35,7 @@ For more information about Azure Storage, see [Introduction to Storage](https://
 
 Blob storage consists of three components, which are shown in the following diagram:
 
-![](azure-storage-images/blob-storage.png "Blob Storage Concepts")
+![Blob Storage Concepts](azure-storage-images/blob-storage.png)
 
 All access to Azure Storage is through a storage account. A storage account can contain an unlimited number of containers, and a container can store an unlimited number of blobs, up to the capacity limit of the storage account.
 

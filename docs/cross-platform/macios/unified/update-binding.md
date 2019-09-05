@@ -196,7 +196,7 @@ Do the following:
 2. Select **File** > **New** > **Solution...**
 3. In the New Solution Dialog Box, select **iOS** > **Unified API** > **iOS Binding Project**: 
 
-    [![](update-binding-images/image01new.png "In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project")](update-binding-images/image01new.png#lightbox)
+    [![In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project](update-binding-images/image01new.png)](update-binding-images/image01new.png#lightbox)
 4. On 'Configure your new project' dialog enter a **Name** for the new binding project and click the **OK** button.
 5. Include the 64 bit version of Objective-C library that you are going to be creating bindings for.
 6. Copy over the source code from your existing 32 bit Classic API binding project (such as the `ApiDefinition.cs` and `StructsAndEnums.cs` files).

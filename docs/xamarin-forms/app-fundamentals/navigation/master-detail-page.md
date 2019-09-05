@@ -19,7 +19,7 @@ _The Xamarin.Forms MasterDetailPage is a page that manages two related pages of 
 
 A master page typically displays a list of items, as shown in the following screenshots:
 
-[![](master-detail-page-images/masterpage-components.png "Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components")
+[![Master Page Components")](master-detail-page-images/masterpage-components-large.png#lightbox "Master Page Components](master-detail-page-images/masterpage-components.png)
 
 The location of the list of items is identical on each platform, and selecting one of the items will navigate to the corresponding detail page. In addition, the master page also features a navigation bar that contains a button that can be used to navigate to the active detail page:
 
@@ -29,7 +29,7 @@ The location of the list of items is identical on each platform, and selecting o
 
 A detail page displays data that corresponds to the item selected on the master page, and the main components of the detail page are shown in the following screenshots:
 
-![](master-detail-page-images/detailpage-components.png "Detail Page Components")
+![Detail Page Components](master-detail-page-images/detailpage-components.png)
 
 The detail page contains a navigation bar, whose contents are platform-dependent:
 
@@ -205,7 +205,7 @@ public class MasterPageCS : ContentPage
 
 The following screenshots show the master page on each platform:
 
-![](master-detail-page-images/masterpage.png "Master Page Example")
+![Master Page Example](master-detail-page-images/masterpage.png)
 
 ### Creating and Displaying the Detail Page
 
@@ -240,7 +240,7 @@ The `OnItemSelected` method performs the following actions:
 
 The following screenshots show the `ContactPage` detail page, which is shown after it's been selected on the master page:
 
-![](master-detail-page-images/detailpage.png "Detail Page Example")
+![Detail Page Example](master-detail-page-images/detailpage.png)
 
 <a name="Controlling_the_Detail_Page_Display_Behavior" />
 

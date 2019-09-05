@@ -165,7 +165,7 @@ emotionResultLabel.Text = faces.FirstOrDefault().FaceAttributes.Emotion.ToRanked
 
 The following screenshot shows the result of the emotion recognition process in the sample application:
 
-![](emotion-recognition-images/emotion-recognition.png "Emotion Recognition")
+![Emotion Recognition](emotion-recognition-images/emotion-recognition.png)
 
 ## Related links
 

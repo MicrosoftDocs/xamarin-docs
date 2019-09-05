@@ -59,7 +59,7 @@ fastlane produce -u your@appleid.com -a com.company.appname --skip_itc
 
 Where `com.company.appname` is the bundle ID of your app, which is found in the Info.plist file of your Xamarin.iOS application, as illustrated below:
 
-[![](sigh-images/fastlane-image5.png "The Info.plist file of the Xamarin.iOS application")](sigh-images/fastlane-image5.png#lightbox)
+[![The Info.plist file of the Xamarin.iOS application](sigh-images/fastlane-image5.png)](sigh-images/fastlane-image5.png#lightbox)
 
 The unique App ID must be a reverse-DNS style string. Once it has been created, keep a note of it, as you will need to use it when using sigh later in this guide.
 
@@ -106,7 +106,7 @@ Enter your Apple ID username when prompted by fastlane. You may also be asked fo
 
 If your Apple ID is connected to multiple teams they will be displayed here. Select the number that corresponds to the team that you wish to use:
 
-[![](sigh-images/fastlane-image2.png "Select the team that you wish to use")](sigh-images/fastlane-image2.png#lightbox)
+[![Select the team that you wish to use](sigh-images/fastlane-image2.png)](sigh-images/fastlane-image2.png#lightbox)
 
 The Team ID can also be passed to the CLI in the following way:
 
@@ -122,7 +122,7 @@ fastlane will then create, download, and install the provisioning profile for yo
 
 If you browse the Developer Center, you can view the newly created provisioning profile, as illustrated below:
 
-[![](sigh-images/fastlane-image10.png "View the newly created provisioning profile")](sigh-images/fastlane-image10.png#lightbox)
+[![View the newly created provisioning profile](sigh-images/fastlane-image10.png)](sigh-images/fastlane-image10.png#lightbox)
 
 sigh will store provisioning profiles in the current folder, by default. To change the output directory, edit the `output_path`, or do the following:
 

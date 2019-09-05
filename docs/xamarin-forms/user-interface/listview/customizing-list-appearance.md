@@ -105,7 +105,7 @@ x:Class="DemoListView.GroupingViewPage"
 
 This results in the following:
 
-![](customizing-list-appearance-images/grouping-depth.png "ListView Grouping Example")
+![ListView Grouping Example](customizing-list-appearance-images/grouping-depth.png)
 
 Note that we have:
 
@@ -182,7 +182,7 @@ In XAML:
 <ListView  x:Name="HeaderList"  Header="Header" Footer="Footer"></ListView>
 ```
 
-![](customizing-list-appearance-images/header-default.png "ListView with Header and Footer")
+![ListView with Header and Footer](customizing-list-appearance-images/header-default.png)
 
 To create a customized header and footer, define the Header and Footer views:
 
@@ -203,7 +203,7 @@ To create a customized header and footer, define the Header and Footer views:
 </ListView.Footer>
 ```
 
-![](customizing-list-appearance-images/header-custom.png "ListView with Customized Header and Footer")
+![ListView with Customized Header and Footer](customizing-list-appearance-images/header-custom.png)
 
 ## Scrollbar Visibility
 
@@ -235,7 +235,7 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="Default" />
 ```
 
-![](customizing-list-appearance-images/separator-default.png "ListView with Default Row Separators")
+![ListView with Default Row Separators](customizing-list-appearance-images/separator-default.png)
 
 None:
 
@@ -251,7 +251,7 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorVisibility="None" />
 ```
 
-![](customizing-list-appearance-images/separator-none.png "ListView without Row Separators")
+![ListView without Row Separators](customizing-list-appearance-images/separator-none.png)
 
 You can also set the color of the separator line via the `SeparatorColor` property:
 
@@ -267,7 +267,7 @@ XAML:
 <ListView x:Name="SeparatorDemoListView" SeparatorColor="Green" />
 ```
 
-![](customizing-list-appearance-images/separator-custom.png "ListView with Green Row Separators")
+![ListView with Green Row Separators](customizing-list-appearance-images/separator-custom.png)
 
 > [!NOTE]
 > Setting either of these properties on Android after loading the `ListView` incurs a large performance penalty.
@@ -296,7 +296,7 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" RowHeight="100" />
 ```
 
-![](customizing-list-appearance-images/height-custom.png "ListView with Fixed Row Height")
+![ListView with Fixed Row Height](customizing-list-appearance-images/height-custom.png)
 
 ### Uneven Rows
 
@@ -317,7 +317,7 @@ XAML:
 <ListView x:Name="RowHeightDemoListView" HasUnevenRows="true" />
 ```
 
-![](customizing-list-appearance-images/height-uneven.png "ListView with Uneven Rows")
+![ListView with Uneven Rows](customizing-list-appearance-images/height-uneven.png)
 
 ### Runtime Resizing of Rows
 
@@ -338,7 +338,7 @@ void OnImageTapped (object sender, EventArgs args)
 
 The `OnImageTapped` event handler is executed in response to an [`Image`](xref:Xamarin.Forms.Image) in a cell being tapped, and increases the size of the `Image` displayed in the cell so that it's easily viewed.
 
-![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView with Runtime Row Resizing")
+![ListView with Runtime Row Resizing](customizing-list-appearance-images/dynamic-row-resizing.png)
 
 Note that there is a strong possibility of performance degradation if this feature is overused.
 

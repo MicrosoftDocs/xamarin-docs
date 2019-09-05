@@ -21,8 +21,8 @@ In this quickstart, you will learn how to:
 
 The quickstart walks through how to style a cross-platform Xamarin.Forms application with XAML styles. The final application is shown below:
 
-[![](styling-images/screenshots1-sml.png "Notes Page")](styling-images/screenshots1.png#lightbox "Notes Page")
-[![](styling-images/screenshots2-sml.png "Note Entry Page")](styling-images/screenshots2.png#lightbox "Note Entry Page")
+[![Notes Page")](styling-images/screenshots1.png#lightbox "Notes Page](styling-images/screenshots1-sml.png)
+[![Note Entry Page")](styling-images/screenshots2.png#lightbox "Note Entry Page](styling-images/screenshots2-sml.png)
 
 ### Prerequisites
 

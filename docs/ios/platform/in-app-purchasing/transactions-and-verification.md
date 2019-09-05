@@ -189,7 +189,7 @@ new issues of a magazine. So that the application can discover these news
 products and display them to the user, the additional server should store and
 deliver this information.   
    
-[![](transactions-and-verification-images/image38.png "Getting Prices for Server-Delivered Products")](transactions-and-verification-images/image38.png#lightbox)   
+[![Getting Prices for Server-Delivered Products](transactions-and-verification-images/image38.png)](transactions-and-verification-images/image38.png#lightbox)   
    
 1. Product information must be stored in multiple places: on your server
 and in iTunes Connect. In addition, each product will have content files
@@ -224,7 +224,7 @@ along for authentication. The remote server forwards that data to iTunes for
 verification and, if successful, includes the product content in the response to
 the application.   
    
- [![](transactions-and-verification-images/image39.png "Purchasing Server-Delivered Products")](transactions-and-verification-images/image39.png#lightbox)   
+ [![Purchasing Server-Delivered Products](transactions-and-verification-images/image39.png)](transactions-and-verification-images/image39.png#lightbox)   
    
 1. The app adds an `SKPayment` to the queue. If required the
 user will be prompted for their Apple ID, and asked to confirm the payment.   

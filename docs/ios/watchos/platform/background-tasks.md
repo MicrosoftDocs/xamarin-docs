@@ -23,7 +23,7 @@ Before discussing all of the ways a developer can keep a watchOS app's data and 
 
 Take the following example:
 
-[![](background-tasks-images/update00.png "How a user might move between their iPhone and their Apple Watch throughout the day")](background-tasks-images/update00.png#lightbox)
+[![How a user might move between their iPhone and their Apple Watch throughout the day](background-tasks-images/update00.png)](background-tasks-images/update00.png#lightbox)
 
 1. In the morning, while waiting in line for a coffee, the user browses the current news on their iPhone for several minutes.
 2. Before leaving the coffee shop, they quickly check the weather with a Complication on their watch face.
@@ -36,7 +36,7 @@ Because of the "quick glance" (less than three seconds) nature of how a user is 
 
 By using the new APIs Apple has included in watchOS 3, the app can schedule for a _Background Refresh_ and have the desired information ready before the user requests it. Take the example of the Weather Complication discussed above:
 
-[![](background-tasks-images/update01.png "An example of the Weather Complication")](background-tasks-images/update01.png#lightbox)
+[![An example of the Weather Complication](background-tasks-images/update01.png)](background-tasks-images/update01.png#lightbox)
 
 1. The app schedules to be woken up by the system at a specific time. 
 2. The app fetches the information that it will require to generate the update.
@@ -45,7 +45,7 @@ By using the new APIs Apple has included in watchOS 3, the app can schedule for 
 
 As seen above, the watchOS system wakes the app using one or more Tasks, of which it has a very limited pool available:
 
-[![](background-tasks-images/update02.png "The watchOS system wakes the app using one or more Tasks")](background-tasks-images/update02.png#lightbox)
+[![The watchOS system wakes the app using one or more Tasks](background-tasks-images/update02.png)](background-tasks-images/update02.png#lightbox)
 
 Apple suggest making the most of this Task (since it is such a limited resource to the app) by holding onto it until the app has finished the process of updating itself.
 
@@ -79,7 +79,7 @@ namespace MonkeyWatch.MonkeySeeExtension
 
 When the app has finished the given Task, it returns it to the system by marking it completed:
 
-[![](background-tasks-images/update03.png "The Task returns to the system by marking it completed")](background-tasks-images/update03.png#lightbox)
+[![The Task returns to the system by marking it completed](background-tasks-images/update03.png)](background-tasks-images/update03.png#lightbox)
 
 <a name="New-Background-Tasks" />
 
@@ -100,7 +100,7 @@ These Tasks will be covered in detail in the sections below.
 
 The `WKApplicationRefreshBackgroundTask` is a generic Task that can be scheduled to have the app woken at a future date:
 
-[![](background-tasks-images/update04.png "A WKApplicationRefreshBackgroundTask woken at a future date")](background-tasks-images/update04.png#lightbox)
+[![A WKApplicationRefreshBackgroundTask woken at a future date](background-tasks-images/update04.png)](background-tasks-images/update04.png#lightbox)
 
 Within the runtime of the Task, the app can do any kind of local processing such as update a Complication timeline or fetch some required data with a `NSUrlSession`.
 
@@ -110,7 +110,7 @@ Within the runtime of the Task, the app can do any kind of local processing such
 
 The system will send a `WKURLSessionRefreshBackgroundTask` when the data has finished downloading and ready to be processed by the app:
 
-[![](background-tasks-images/update05.png "The WKURLSessionRefreshBackgroundTask when the data has finished downloading")](background-tasks-images/update05.png#lightbox)
+[![The WKURLSessionRefreshBackgroundTask when the data has finished downloading](background-tasks-images/update05.png)](background-tasks-images/update05.png#lightbox)
 
 An app is not left running while data is downloading in the background. Instead, the app schedules the request for data, then it is suspended and the system handles the downloading of the data, only reawakening the app when the download is complete.
 
@@ -120,17 +120,17 @@ An app is not left running while data is downloading in the background. Instead,
 
 In watchOS 3, Apple has added the Dock where users can pin their favorite apps and quickly access them. When the user presses the Side Button on the Apple Watch, a gallery of pinned app Snapshots will be displayed. The user can swipe left or right to find the desired app, then tap the app to launch it replacing the Snapshot with the running app's interface.
 
-[![](background-tasks-images/update06.png "Replacing the Snapshot with the running apps interface")](background-tasks-images/update06.png#lightbox)
+[![Replacing the Snapshot with the running apps interface](background-tasks-images/update06.png)](background-tasks-images/update06.png#lightbox)
 
 The system periodically takes snapshots of the app's UI (by sending a `WKSnapshotRefreshBackgroundTask`) and uses those snapshots to populate the Dock. watchOS gives the app the opportunity to update its content and UI before this Snapshot is taken.
 
 Snapshots are very important in watchOS 3 since they function as both the preview and launch images for the app. If the user settles on an app in the Dock, it will expand to full screen, enter the foreground and start running, so it is imperative that the Snapshot be up-to-date:
 
-[![](background-tasks-images/update07.png "If the user settles on an app in the Dock, it will expand to full screen")](background-tasks-images/update07.png#lightbox)
+[![If the user settles on an app in the Dock, it will expand to full screen](background-tasks-images/update07.png)](background-tasks-images/update07.png#lightbox)
 
 Again, the system will issue a `WKSnapshotRefreshBackgroundTask` so that the app can prepare (by updating the data and the UI) before the snapshot is taken:
 
-[![](background-tasks-images/update08.png "The app can prepare by updating the data and the UI before the snapshot is taken")](background-tasks-images/update08.png#lightbox)
+[![The app can prepare by updating the data and the UI before the snapshot is taken](background-tasks-images/update08.png)](background-tasks-images/update08.png#lightbox)
 
 When the app marks the `WKSnapshotRefreshBackgroundTask` completed, the system will automatically take a Snapshot of the app's UI.
 
@@ -139,7 +139,7 @@ When the app marks the `WKSnapshotRefreshBackgroundTask` completed, the system w
 
 Additionally, when the user receives a notification from the app and taps it to bring the app to the foreground, the Snapshot needs to be up-to-date since it is acting as the launch screen as well:
 
-[![](background-tasks-images/update09.png "The user receives a notification from the app and taps it to bring the app to the foreground")](background-tasks-images/update09.png#lightbox)
+[![The user receives a notification from the app and taps it to bring the app to the foreground](background-tasks-images/update09.png)](background-tasks-images/update09.png#lightbox)
 
 If it has been more than one hour since the user has interacted with a watchOS app, it will be able to return to its Default State. The Default State can mean different things to different apps and, based on the design of an app, it might not have a Default State at all.
 
@@ -151,13 +151,13 @@ If it has been more than one hour since the user has interacted with a watchOS a
 
 In watchOS 3, Apple has integrated watch connectivity with the Background Refresh API via the new `WKWatchConnectivityRefreshBackgroundTask`. Using this new feature, an iPhone app can deliver fresh data to its watch app counterpart, while the watchOS app is running in the background:
 
-[![](background-tasks-images/update10.png "An iPhone app can deliver fresh data to its watch app counterpart, while the watchOS app is running in the background")](background-tasks-images/update10.png#lightbox)
+[![An iPhone app can deliver fresh data to its watch app counterpart, while the watchOS app is running in the background](background-tasks-images/update10.png)](background-tasks-images/update10.png#lightbox)
 
 Initiating a Complication Push, App Context, sending a file or updating User Information from the iPhone app will wake the Apple Watch app in the background.
 
 When the watch app is woken via a `WKWatchConnectivityRefreshBackgroundTask` it will need to use the standard API methods to receive the data from the iPhone app.
 
-[![](background-tasks-images/update11.png "The WKWatchConnectivityRefreshBackgroundTask data flow")](background-tasks-images/update11.png#lightbox)
+[![The WKWatchConnectivityRefreshBackgroundTask data flow](background-tasks-images/update11.png)](background-tasks-images/update11.png#lightbox)
 
 1. Ensure that the Session has activated.
 2. Monitor the new `HasContentPending` property as long as the value is `true`, the app still has data to process. As before, the app should hold onto the Task until it has finished processing all data.
@@ -169,7 +169,7 @@ When the watch app is woken via a `WKWatchConnectivityRefreshBackgroundTask` it 
 
 Placing all of the pieces of the new Background Tasks API together, a typical set of interactions would look like the following:
 
-[![](background-tasks-images/update12.png "The Background API Lifecycle")](background-tasks-images/update12.png#lightbox)
+[![The Background API Lifecycle](background-tasks-images/update12.png)](background-tasks-images/update12.png#lightbox)
 
 1. First, the watchOS app schedules a background Task to be awoke as some point in the future.
 2. The app is woken by the system and sent a Task.
@@ -185,7 +185,7 @@ It is critical that a watchOS app behaves responsibly within this ecosystem by l
 
 Take a look at the following scenario:
 
-[![](background-tasks-images/update13.png "A watchOS app limits its drain on the system's shared resources")](background-tasks-images/update13.png#lightbox)
+[![A watchOS app limits its drain on the system's shared resources](background-tasks-images/update13.png)](background-tasks-images/update13.png#lightbox)
 
 1. The user launches a watchOS app at 1:00 PM.
 2. The app schedules a task to wake up and download new content in an hour at 2:00 PM.
@@ -202,7 +202,7 @@ For the sake of example, this document will use the fake MonkeySoccer sports app
 
 Take a look at the following typical usage scenario:
 
-[![](background-tasks-images/update14.png "The typical usage scenario")](background-tasks-images/update14.png#lightbox)
+[![The typical usage scenario](background-tasks-images/update14.png)](background-tasks-images/update14.png#lightbox)
 
 The user's favorite soccer team is playing a big match from 7:00 PM to 9:00 PM so the app should expect the user to be checking the score regularly and it decides on a 30 minute update interval.
 
@@ -251,7 +251,7 @@ The system will return a `NSError` if it was unable to schedule the requested Ta
 
 Next, take a closer look at the 5 minute window showing the steps required to update the score:
 
-[![](background-tasks-images/update15.png "The 5 minute window showing the steps required to update the score")](background-tasks-images/update15.png#lightbox)
+[![The 5 minute window showing the steps required to update the score](background-tasks-images/update15.png)](background-tasks-images/update15.png#lightbox)
 
 1. At 7:30:02 PM the app is awakened by the system and given the update background Task. Its first priority is to get the latest scores from the server. See [Scheduling a NSUrlSession](#Scheduling-a-NSUrlSession) below.
 2. At 7:30:05 the app completes the original Task, the system puts the app to sleep and continues to download the requested data in the background.
@@ -518,7 +518,7 @@ Additionally, it also tells the Snapshot Task that the app is not returning to t
 
 As seen in the above example of the five minute window that the MonkeySoccer app took to update its scores, by working efficiently and using the new watchOS 3 background Tasks, the app was only active for a total of 15 seconds: 
 
-[![](background-tasks-images/update16.png "The app was only active for a total of 15 seconds")](background-tasks-images/update16.png#lightbox)
+[![The app was only active for a total of 15 seconds](background-tasks-images/update16.png)](background-tasks-images/update16.png#lightbox)
 
 This lowers the impact that the app will have on both available Apple Watch resources and battery life and also allows the app to work better with other apps running on the watch.
 
@@ -606,7 +606,7 @@ It uses the `RemainingComplicationUserInfoTransfers` property of the `WCSession`
 
 In watchOS 3, Apple has added the Dock where users can pin their favorite apps and quickly access them. When the user presses the Side Button on the Apple Watch, a gallery of pinned app snapshots will be displayed. The user can swipe left or right to find the desired app, then tap the app to launch it replacing the snapshot with the running app's interface.
 
-[![](background-tasks-images/dock01.png "The Dock")](background-tasks-images/dock01.png#lightbox)
+[![The Dock](background-tasks-images/dock01.png)](background-tasks-images/dock01.png#lightbox)
 
 The system periodically takes snapshots of the app's UI and uses those snapshots to populate the Docs. watchOS gives the app the opportunity to update its content and UI before this snapshot is taken.
 
@@ -665,7 +665,7 @@ When working with Snapshot updates, Apple makes the following suggestions:
 
 Apple suggest the following for working with data flow:
 
-[![](background-tasks-images/update17.png "App Data Flow Diagram")](background-tasks-images/update17.png#lightbox)
+[![App Data Flow Diagram](background-tasks-images/update17.png)](background-tasks-images/update17.png#lightbox)
 
 An external event (such as Watch Connectivity) wakes the app. This forces the app to update its Data Model (that represents the apps current state). As a result of the Data Model change the app will need to update its Complications, request a new Snapshot, possibly start a background `NSURLSession` to pull more data and schedule further background refreshes.
 

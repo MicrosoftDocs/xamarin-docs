@@ -29,15 +29,15 @@ All of the properties are backed by [`BindableProperty`](xref:Xamarin.Forms.Bind
 
 A [`Picker`](xref:Xamarin.Forms.Picker) doesn't show any data when it's first displayed. Instead, the value of its [`Title`](xref:Xamarin.Forms.Picker.Title) property is shown as a placeholder on the iOS and Android platforms:
 
-[![](images/picker-initial.png "Initial Picker Display")](images/picker-initial-large.png#lightbox "Initial Picker Display")
+[![Initial Picker Display")](images/picker-initial-large.png#lightbox "Initial Picker Display](images/picker-initial.png)
 
 When the [`Picker`](xref:Xamarin.Forms.Picker) gains focus, its data is displayed and the user can select an item:
 
-[![](images/picker-selection.png "Picker Selecting an Item")](images/picker-selection-large.png#lightbox "Picker Selecting an Item")
+[![Picker Selecting an Item")](images/picker-selection-large.png#lightbox "Picker Selecting an Item](images/picker-selection.png)
 
 The [`Picker`](xref:Xamarin.Forms.Picker) fires a [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) event when the user selects an item. Following selection, the selected item is displayed by the `Picker`:
 
-![](images/picker-after-selection.png "Picker after Selection")
+![Picker after Selection](images/picker-after-selection.png)
 
 There are two techniques for populating a [`Picker`](xref:Xamarin.Forms.Picker) with data:
 

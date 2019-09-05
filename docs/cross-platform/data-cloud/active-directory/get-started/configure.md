@@ -20,20 +20,20 @@ Whenever any resource e.g. web application, web service,
 1. On the **Configure** tab, locate **permissions to
    other applications** section:
 
-   ![](configure-images/2.1-configure.png "On the Configure tab, locate permissions to other applications section")
+   ![On the Configure tab, locate permissions to other applications section](configure-images/2.1-configure.png)
 
 2. Click on **Add application** button. On the next
    screen pop-up you should see list of all the applications
    which are secured by Azure Active Directory. Select the
    applications that needs to be accessed from the mobile application.
 
-   ![](configure-images/2.2-add-application.png "Select the applications that needs to be accessed from the mobile application")
+   ![Select the applications that needs to be accessed from the mobile application](configure-images/2.2-add-application.png)
 
 3. After selecting the application, once again select the
    newly-added application in **permissions to other
    applications** section and give appropriate rights.
 
-   ![](configure-images/2.3-permissions.png "After selecting the application, once again select the newly-added application in permissions to other   applications section and give appropriate rights")
+   ![After selecting the application, once again select the newly-added application in permissions to other   applications section and give appropriate rights](configure-images/2.3-permissions.png)
 
 4. Finally, **Save** the configuration. These services should
    now be available in mobile applications!

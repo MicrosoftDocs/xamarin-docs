@@ -17,7 +17,7 @@ _Define paths using text strings in the Scalable Vector Graphics format_
 
 The [`SKPath`](xref:SkiaSharp.SKPath) class supports the definition of entire path objects from text strings in a format established by the Scalable Vector Graphics (SVG) specification. You'll see later in this article how you can represent an entire path such as this one in a text string:
 
-![](path-data-images/pathdatasample.png "A sample path defined with SVG path data")
+![A sample path defined with SVG path data](path-data-images/pathdatasample.png)
 
 SVG is an XML-based graphics programming language for web pages. Because SVG must allow paths to be defined in markup rather than a series of function calls, the SVG standard includes an extremely concise way of specifying an entire graphics path as a text string.
 
@@ -214,7 +214,7 @@ public class PathDataHelloPage : ContentPage
 
 The path fills the canvas, which looks more reasonable when viewed in landscape mode:
 
-[![](path-data-images/pathdatahello-small.png "Triple screenshot of the Path Data Hello page")](path-data-images/pathdatahello-large.png#lightbox "Triple screenshot of the Path Data Hello page")
+[![Triple screenshot of the Path Data Hello page")](path-data-images/pathdatahello-large.png#lightbox "Triple screenshot of the Path Data Hello page](path-data-images/pathdatahello-small.png)
 
 The **Path Data Cat** page is similar. The path and paint objects are both defined as fields in the [`PathDataCatPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Curves/PathDataCatPage.cs) class:
 
@@ -285,7 +285,7 @@ public class PathDataCatPage : ContentPage
 
 Here's the program running:
 
-[![](path-data-images/pathdatacat-small.png "Triple screenshot of the Path Data Cat page")](path-data-images/pathdatacat-large.png#lightbox "Triple screenshot of the Path Data Cat page")
+[![Triple screenshot of the Path Data Cat page")](path-data-images/pathdatacat-large.png#lightbox "Triple screenshot of the Path Data Cat page](path-data-images/pathdatacat-small.png)
 
 Normally, when an `SKPath` object is defined as a field, the contours of the path must be defined in the constructor or another method. When using SVG path data, however, you've seen that the path can be specified entirely in the field definition.
 
@@ -422,7 +422,7 @@ public class PrettyAnalogClockPage : ContentPage
 
 Something special is done with the second hand, however. Because the clock is updated every 16 milliseconds, the `Millisecond` property of the `DateTime` value can potentially be used to animate a sweep second hand instead of one that moves in discrete jumps from second to second. But this code does not allow the movement to be smooth. Instead, it uses the Xamarin.Forms [`SpringIn`](xref:Xamarin.Forms.Easing.SpringIn) and [`SpringOut`](xref:Xamarin.Forms.Easing.SpringOut) animation easing functions for a different kind of movement. These easing functions cause the second hand to move in a jerkier manner &mdash; pulling back a little before it moves, and then slightly over-shooting its destination, an effect that unfortunately can't be reproduced in these static screenshots:
 
-[![](path-data-images/prettyanalogclock-small.png "Triple screenshot of the Pretty Analog Clock page")](path-data-images/prettyanalogclock-large.png#lightbox "Triple screenshot of the Pretty Analog Clock page")
+[![Triple screenshot of the Pretty Analog Clock page")](path-data-images/prettyanalogclock-large.png#lightbox "Triple screenshot of the Pretty Analog Clock page](path-data-images/prettyanalogclock-small.png)
 
 ## Related Links
 

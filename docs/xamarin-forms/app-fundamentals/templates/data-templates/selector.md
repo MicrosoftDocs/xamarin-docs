@@ -86,7 +86,7 @@ At runtime, the [`ListView`](xref:Xamarin.Forms.ListView) calls the `PersonDataT
 
 The following screenshots show the result of the [`ListView`](xref:Xamarin.Forms.ListView) applying the `PersonDataTemplateSelector` to each object in the underlying collection:
 
-![](selector-images/data-template-selector.png "ListView with a Data Template Selector")
+![ListView with a Data Template Selector](selector-images/data-template-selector.png)
 
 Any `Person` object that has a `DateOfBirth` property value greater than or equal to 1980 is displayed in green, with the remaining objects being displayed in red.
 

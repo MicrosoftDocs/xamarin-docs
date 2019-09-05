@@ -33,11 +33,11 @@ Optionally, you might also require:
 
 With all of the above steps completed, open your app's iTunes Connect Record and select to add tvOS support using the left hand sidebar:
 
-[![](itunes-connect-images/connect01.png "Add tvOS support using the left hand sidebar")](itunes-connect-images/connect01.png#lightbox)
+[![Add tvOS support using the left hand sidebar](itunes-connect-images/connect01.png)](itunes-connect-images/connect01.png#lightbox)
 
 The tvOS specific information screens will then be available for the given iTunes Connect Record:
 
-[![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
+[![The tvOS specific information screen](itunes-connect-images/connect02.png)](itunes-connect-images/connect02.png#lightbox)
 
 <a name="tvOS-Version-Information" />
 
@@ -45,7 +45,7 @@ The tvOS specific information screens will then be available for the given iTune
 
 From the left hand sidebar, select **1.0 Prepare for Submission** under the tvOS APP section:
 
-[![](itunes-connect-images/connect03.png "tvOS Version Information")](itunes-connect-images/connect03.png#lightbox)
+[![tvOS Version Information](itunes-connect-images/connect03.png)](itunes-connect-images/connect03.png#lightbox)
 
 On this screen provide the following information:
 
@@ -57,7 +57,7 @@ On this screen provide the following information:
 
 Once you have entered the required information, click the **Save** button in the upper right-hand corner of the screen to save your changes:
 
-[![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
+[![tvOS Version Information ready for submission](itunes-connect-images/connect04.png)](itunes-connect-images/connect04.png#lightbox)
 
 <a name="Submitting-for-Review" />
 
@@ -65,7 +65,7 @@ Once you have entered the required information, click the **Save** button in the
 
 When you are finally ready to submit your Xamarin.tvOS app to the Apple TV App Store for review, return to the app's iTunes Connect Record and click the **Submit for Review** button in the upper right hand corner of the screen:
 
-[![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
+[![Submit for Review](itunes-connect-images/connect05.png)](itunes-connect-images/connect05.png#lightbox)
 
 <a name="Summary" />
 

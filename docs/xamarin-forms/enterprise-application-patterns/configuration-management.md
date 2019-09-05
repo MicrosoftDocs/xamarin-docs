@@ -116,7 +116,7 @@ Each time the `BaseEndpoint` property is set, the `UpdateEndpoint` method is cal
 
 In the eShopOnContainers mobile app, the `SettingsView` exposes two user settings. These settings allow configuration of whether the app should retrieve data from microservices that are deployed as Docker containers, or whether the app should retrieve data from mock services that don't require an internet connection. When choosing to retrieve data from containerized microservices, a base endpoint URL for the microservices must be specified. Figure 7-1 shows the `SettingsView` when the user has chosen to retrieve data from containerized microservices.
 
-![](configuration-management-images/settings-endpoint.png "User settings exposed by the eShopOnContainers mobile app")
+![User settings exposed by the eShopOnContainers mobile app](configuration-management-images/settings-endpoint.png)
 
 **Figure 7-1**: User settings exposed by the eShopOnContainers mobile app
 

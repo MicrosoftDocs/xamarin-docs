@@ -13,7 +13,7 @@ ms.date: 03/21/2017
 
 The application we’re going to build in this walkthrough is shown below:
 
- [![](ios-maps-walkthrough-images/00-map-overlay.png "An example MapKit app")](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
+ [![An example MapKit app](ios-maps-walkthrough-images/00-map-overlay.png)](ios-maps-walkthrough-images/00-map-overlay.png#lightbox)
 
 You can find the completed code in the [Maps Walkthrough sample](https://docs.microsoft.com/samples/xamarin/ios-samples/mapswalkthrough).
 
@@ -273,7 +273,7 @@ This completes the code in `ViewDidLoad`. Now we need to implement our `MapDeleg
 
 Run the application. We now have an interactive map with a custom annotation and an overlay! Tap on the annotation and the image of Austin is displayed, as shown below:
 
- [![](ios-maps-walkthrough-images/01-map-image.png "Tap on the annotation and the image of Austin is displayed")](ios-maps-walkthrough-images/01-map-image.png#lightbox)
+ [![Tap on the annotation and the image of Austin is displayed](ios-maps-walkthrough-images/01-map-image.png)](ios-maps-walkthrough-images/01-map-image.png#lightbox)
 
 ## Summary
 

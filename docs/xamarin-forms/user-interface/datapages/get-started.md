@@ -13,7 +13,7 @@ ms.date: 12/01/2017
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/Pages/DataPagesDemo)
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![This API is currently in preview](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
@@ -23,7 +23,7 @@ follow the steps below. This demo uses a hardcoded style ("Events") in
 the Preview builds that only works with the specific JSON format
 in the code.
 
-[![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application](get-started-images/demo-sml.png)
 
 ## 1. Add NuGet Packages
 
@@ -148,7 +148,7 @@ is shown below:
 
 The above steps should result in a working data page:
 
-[![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application](get-started-images/demo-sml.png)
 
 This works because the pre-built style **"Events"** exists in the Light Theme Nuget package
 and has styles defined that match the data source (eg. "title", "image", "presenter").
@@ -187,7 +187,7 @@ syntax which is included in the **Xamarin.Forms.Pages** Nuget:
 By providing a `DataTemplate` this code overrides the `StyleClass`
 and instead uses the default layout for a `ListItemControl`.
 
-[![](get-started-images/custom-sml.png "DataPages Sample Application")](get-started-images/custom.png#lightbox "DataPages Sample Application")
+[![DataPages Sample Application")](get-started-images/custom.png#lightbox "DataPages Sample Application](get-started-images/custom-sml.png)
 
 Developers that prefer C# to XAML can create data source bindings too
 (remember to include a `using Xamarin.Forms.Pages;` statement):

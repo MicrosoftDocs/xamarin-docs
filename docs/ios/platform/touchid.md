@@ -24,7 +24,7 @@ Keychain is a large database providing secure storage for passwords, keys, certi
 Keychain is a specialized database, where each row is known as a _Keychain Item_. Each item is described by keychain attributes and is composed of encrypted values. To allow for efficient use of keychain, it is optimized for small items, or _secrets_.
 Each keychain item is protected by the users passcode and a unique device secret. Keychain items should be protected even when users are not using their devices. This is implemented in iOS by only allowing the items to become available when the device is unlocked — when the device is locked they become unavailable. They can also be stored in an encrypted backup. One of the key features of keychain is to enforce access control; an application has access to its portion of the keychain, and all other applications will be prevented. The diagram below illustrates how an application interacts with the keychain:
 
-[![](touchid-images/image1.png "This diagram illustrates how an application interacts with the keychain")](touchid-images/image1.png#lightbox)
+[![This diagram illustrates how an application interacts with the keychain](touchid-images/image1.png)](touchid-images/image1.png#lightbox)
 
 ### Secure Enclave
 
@@ -42,7 +42,7 @@ First your application should query into the Keychain to see if a password exist
 
 Access Control List is a new keychain item attribute in iOS 8 that describes the information regarding what must happen to permit a particular operation to occur. This could be in the form of displaying an alert dialog or requesting a passcode. ACL allows you to set the accessibility and authentication for a keychain Item. The diagram below shows how this new attribute ties in with the rest of the keychain item:
 
-[![](touchid-images/image2.png "This diagram shows how this new attribute ties in with the rest of the keychain item")](touchid-images/image2.png#lightbox)
+[![This diagram shows how this new attribute ties in with the rest of the keychain item](touchid-images/image2.png)](touchid-images/image2.png#lightbox)
 
 As of iOS 8, there is now a new user presence policy, `SecAccessControl`, which is enforced by the secure enclave on an iPhone 5s and above. We can see in the table below, just how the device configuration can influence the policy evaluation:
 
@@ -67,7 +67,7 @@ Secondly, LocalAuthentication provides two methods to authenticate your applicat
 While both capabilities offer local authentication, they do not provide a mechanism for the application or the user to authenticate to a remote server.
 Local Authentication provides a new standard user interface for authentication. In the case of Touch ID, this is an alert view with two buttons as illustrated below. One button to cancel, and one to use the fallback means of authentication – the passcode. There is also a custom message that must be set. It is good practice to use this to explain to the user why Touch ID authentication is required.
 
-[![](touchid-images/image12.png "The Touch ID authentication alert")](touchid-images/image12.png#lightbox)
+[![The Touch ID authentication alert](touchid-images/image12.png)](touchid-images/image12.png#lightbox)
 
 ### With Keychain Services
 
@@ -89,7 +89,7 @@ Local Authentication was created as a way to collect credentials, such as passco
 
 To do this an application calls the policy evaluation inside Local Authentication, which starts the operation inside Secure Enclave. You can leverage this to provide authentication to your app, without directly querying/accessing the Secure Enclave.
 
-[![](touchid-images/image13a.png "Using Local Authentication without Keychain Services")](touchid-images/image13a.png#lightbox)
+[![Using Local Authentication without Keychain Services](touchid-images/image13a.png)](touchid-images/image13a.png#lightbox)
 
 Using Local Authentication in your application provides a simple way of implementing user verification, for example to unlock a feature solely for the eyes of the device owner, such as banking applications, or to aide parental controls for the individual application. You can also use it as a way to extend authentication that already exists – users like their information to be secure, but they also like to have options.
 
@@ -123,16 +123,16 @@ So let’s look at adding some Touch ID Authentication to our application. In th
 2. Double Click on `MainStoryboard.Storyboard` to open the sample in the iOS Designer. With this sample, we want to add a new screen to our application, which will control the authentication. This will go before the current `MasterViewController`.
 3. Drag a new **View Controller** from the **Toolbox** to the **Design Surface**. Set this as the **Root View Controller** by **Ctrl + Drag** from the **Navigation Controller**:
 
-    [![](touchid-images/image4.png "Set the Root View Controller")](touchid-images/image4.png#lightbox)
+    [![Set the Root View Controller](touchid-images/image4.png)](touchid-images/image4.png#lightbox)
 4. Name the new View Controller `AuthenticationViewController`.
 5. Next, drag a button and place it on the `AuthenticationViewController`. Call this `AuthenticateButton`, and give it the text `Add a Chore`.
 6. Create an event on the `AuthenticateButton` called `AuthenticateMe`.
 7. Create a manual segue from `AuthenticationViewController` by clicking the black bar at the bottom and **Ctrl + Drag** from the bar to the `MasterViewController` and choosing **push** (or **show** if using size classes):
 
-    [![](touchid-images/image5.png "Drag from the bar to the MasterViewController and choosing push or show")](touchid-images/image6.png#lightbox)
+    [![Drag from the bar to the MasterViewController and choosing push or show](touchid-images/image5.png)](touchid-images/image6.png#lightbox)
 8. Click on the newly created segue and give it the identifier `AuthenticationSegue`, as illustrated below:
 
-    [![](touchid-images/image7.png "Set the segue identifier to AuthenticationSegue")](touchid-images/image7.png#lightbox)
+    [![Set the segue identifier to AuthenticationSegue](touchid-images/image7.png)](touchid-images/image7.png#lightbox)
 9. Add the following code to `AuthenticationViewController`:
 
     ```csharp
@@ -163,19 +163,19 @@ So let’s look at adding some Touch ID Authentication to our application. In th
 
 This is all the code you need to implement Touch ID authentication using Local Authentication. The highlighted lines in the image below show the use of Local Authentication:
 
-[![](touchid-images/image8.png "The highlighted lines show the use of Local Authentication")](touchid-images/image8.png#lightbox)
+[![The highlighted lines show the use of Local Authentication](touchid-images/image8.png)](touchid-images/image8.png#lightbox)
 
 First, we need to establish if the device is capable of accepting Touch ID input, by using the `CanEvaluatePolicy` and passing in the policy `DeviceOwnerAuthenticationWithBiometrics`. If this is true then we can display the Touch ID UI by using `EvaluatePolicy`. There are three pieces of information we have to pass into `EvaluatePolicy` – the policy itself, a string explaining why authentication is necessary, and a reply handler. The reply handler tells the application what it should do in the case of a successful, or unsuccessful, authentication. Let’s look closer at the reply handler:
 
-[![](touchid-images/image9.png "The reply handler")](touchid-images/image9.png#lightbox)
+[![The reply handler](touchid-images/image9.png)](touchid-images/image9.png#lightbox)
 
 The reply handler is specified of type `LAContextReplyHandler`, which takes the parameters success – a `bool` value, and an `NSError` called `error`. If it is successful, this is where we will actually perform whatever it is we want to authenticate – in this case displaying the screen that will let us add a new chore. Remember one of the caveats of Local Authentication is that it must be run on the foreground, so make sure to use `InvokeOnMainThread`:
 
-[![](touchid-images/image10.png "Use InvokeOnMainThread for Local Authentication")](touchid-images/image10.png#lightbox)
+[![Use InvokeOnMainThread for Local Authentication](touchid-images/image10.png)](touchid-images/image10.png#lightbox)
 
 Finally, when the authentication has been successful, we want to transition to the `MasterViewController`. The `PerformSegue` method can be used to do this:
 
-[![](touchid-images/image11.png "Call PerformSegue method to transition to the MasterViewController")](touchid-images/image11.png#lightbox)
+[![Call PerformSegue method to transition to the MasterViewController](touchid-images/image11.png)](touchid-images/image11.png#lightbox)
 
 ## Summary
 

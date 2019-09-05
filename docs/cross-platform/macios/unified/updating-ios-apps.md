@@ -28,11 +28,11 @@ Before you update your existing code to the Unified API, it is highly recommende
 
 Once the warnings have been fixed, select an existing iOS project in Visual Studio for Mac or Visual Studio and choose **Migrate to Xamarin.iOS Unified API** from the **Project** menu. For example:
 
-![](updating-ios-apps-images/beta-tool1.png "Choose Migrate to Xamarin.iOS Unified API from the Project menu")
+![Choose Migrate to Xamarin.iOS Unified API from the Project menu](updating-ios-apps-images/beta-tool1.png)
 
 You'll need to agree to this warning before the automated migration will run (obviously you should ensure you have backups/source control before embarking on this adventure):
 
-![](updating-ios-apps-images/beta-tool2.png "Agree to this warning before the automated migration will run")
+![Agree to this warning before the automated migration will run](updating-ios-apps-images/beta-tool2.png)
 
 The tool basically automates all the steps outlined in the **Update Manually** section presented below and is the suggested method of converting an existing Xamarin.iOS project to the Unified API.
 
@@ -44,25 +44,25 @@ Again, once the warnings have been fixed, follow these steps to manually update 
 
 Change the project flavor in your **csproj** files from `6BC8ED88-2882-458C-8E55-DFD12B67127B` to `FEACFBD2-3405-455C-9665-78FE426C6842`. Edit the **csproj** file in a text editor, replacing the first item in the `<ProjectTypeGuids>` element as shown:
 
-![](updating-ios-apps-images/csproj.png "Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown")
+![Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown](updating-ios-apps-images/csproj.png)
 
 Change the **Import** element that contains `Xamarin.MonoTouch.CSharp.targets` to `Xamarin.iOS.CSharp.targets` as shown:
 
-![](updating-ios-apps-images/csproj2.png "Change the Import element that contains Xamarin.MonoTouch.CSharp.targets to Xamarin.iOS.CSharp.targets as shown")
+![Change the Import element that contains Xamarin.MonoTouch.CSharp.targets to Xamarin.iOS.CSharp.targets as shown](updating-ios-apps-images/csproj2.png)
 
 ### 2. Update Project References
 
 Expand the iOS application project's **References** node. It will initially show a *broken- **monotouch** reference similar to this screenshot (because we just changed the project type):
 
-![](updating-ios-apps-images/references.png "It will initially show a broken- monotouch reference similar to this screenshot because the project type changed")
+![It will initially show a broken- monotouch reference similar to this screenshot because the project type changed](updating-ios-apps-images/references.png)
 
 Right-click on the iOS application project to **Edit References**, then click on the **monotouch** reference and delete it using the red "X" button.
 
-![](updating-ios-apps-images/references-delete-monotouch-sml.png "Right-click on the iOS application project to Edit References, then click on the monotouch reference and delete it using the red X button")
+![Right-click on the iOS application project to Edit References, then click on the monotouch reference and delete it using the red X button](updating-ios-apps-images/references-delete-monotouch-sml.png)
 
 Now scroll to the end of the references list and tick the **Xamarin.iOS** assembly.
 
-![](updating-ios-apps-images/references-add-xamarinios-sml.png "Now scroll to the end of the references list and tick the Xamarin.iOS assembly")
+![Now scroll to the end of the references list and tick the Xamarin.iOS assembly](updating-ios-apps-images/references-add-xamarinios-sml.png)
 
 Press **OK** to save the project references changes.
 

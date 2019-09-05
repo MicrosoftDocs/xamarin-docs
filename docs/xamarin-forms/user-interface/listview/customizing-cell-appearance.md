@@ -38,9 +38,9 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 - `TextColor` &ndash; the color of the text.
 - `DetailColor` &ndash; the color of the detail text
 
-![](customizing-cell-appearance-images/text-cell-default.png "Default TextCell Example")
+![Default TextCell Example](customizing-cell-appearance-images/text-cell-default.png)
 
-![](customizing-cell-appearance-images/text-cell-custom.png "Customized TextCell Example")
+![Customized TextCell Example](customizing-cell-appearance-images/text-cell-custom.png)
 
 <a name="ImageCell" />
 
@@ -56,9 +56,9 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 - `DetailColor` &ndash; the color of the detail text
 - `ImageSource` &ndash; the image to display next to the text
 
-![](customizing-cell-appearance-images/image-cell-default.png "Default ImageCell Example")
+![Default ImageCell Example](customizing-cell-appearance-images/image-cell-default.png)
 
-![](customizing-cell-appearance-images/image-cell-custom.png "Customized ImageCell Example")
+![Customized ImageCell Example](customizing-cell-appearance-images/image-cell-custom.png)
 
 <a name="customcells" />
 
@@ -71,7 +71,7 @@ Xamarin.Forms 2 introduced a new [caching behavior](~/xamarin-forms/user-interfa
 
 This is an example of a custom cell:
 
-![](customizing-cell-appearance-images/custom-cell.png "Custom Cell Example")
+![Custom Cell Example](customizing-cell-appearance-images/custom-cell.png)
 
 ### XAML
 The XAML to create the above layout is below:

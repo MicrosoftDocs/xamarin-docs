@@ -156,7 +156,7 @@ The API response is returned in JSON format, with the recognized text being cont
 
 In the sample application, the JSON response is deserialized into a `SpeechResult` instance, with the result being returned to the calling method for display, as shown in the following screenshots:
 
-![](speech-recognition-images/speech-recognition.png "Speech Recognition")
+![Speech Recognition](speech-recognition-images/speech-recognition.png)
 
 ## Summary
 

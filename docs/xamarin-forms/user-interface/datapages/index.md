@@ -11,7 +11,7 @@ ms.date: 12/01/2017
 
 # Xamarin.Forms DataPages
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![This API is currently in preview](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
@@ -26,7 +26,7 @@ will automatically render the data, and can be customized using themes.
 To see how the Evolve keynote demo works, check out the
 [getting started guide](get-started.md).
 
-[![](images/demo-sml.png "DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application")
+[![DataPages Sample Application")](images/demo.png#lightbox "DataPages Sample Application](images/demo-sml.png)
 
 ## Introduction
 

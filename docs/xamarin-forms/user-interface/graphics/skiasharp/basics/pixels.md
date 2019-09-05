@@ -17,7 +17,7 @@ _Explore the differences between SkiaSharp coordinates and Xamarin.Forms coordin
 
 This article explores the differences in the coordinate system used in SkiaSharp and Xamarin.Forms. You can obtain information to convert between the two coordinate systems and also draw graphics that fill a particular area:
 
-![](pixels-images/screenfillexample.png "An oval that fills the screen")
+![An oval that fills the screen](pixels-images/screenfillexample.png)
 
 If you've been programming in Xamarin.Forms for a while, you might have a feel for Xamarin.Forms coordinates and sizes. The circles drawn in the two previous articles might seem a little small to you.
 
@@ -97,7 +97,7 @@ The method begins the first line of text with an X coordinate of 20 (for a littl
 
 Here's the program running:
 
-[![](pixels-images/surfacesize-small.png "Triple screenshot of the Surface Size  page")](pixels-images/surfacesize-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![Triple screenshot of the Surface Size  page")](pixels-images/surfacesize-large.png#lightbox "Triple screenshot of the Surface Size  page](pixels-images/surfacesize-small.png)
 
 As you can see, the `CanvasSize` property of the `SKCanvasView` and the `Size` property of the `SKImageInfo` value are consistent in reporting the pixel dimensions. The `Height` and `Width` properties of the `SKCanvasView` are Xamarin.Forms properties, and report the size of the view in the device-independent units defined by the platform.
 
@@ -140,7 +140,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Here it is running:
 
-[![](pixels-images/ellipsefill-small.png "Triple screenshot of the Surface Size  page")](pixels-images/ellipsefill-large.png#lightbox "Triple screenshot of the Surface Size  page")
+[![Triple screenshot of the Surface Size  page")](pixels-images/ellipsefill-large.png#lightbox "Triple screenshot of the Surface Size  page](pixels-images/ellipsefill-small.png)
 
 The other [`DrawOval`](xref:SkiaSharp.SKCanvas.DrawOval(SkiaSharp.SKRect,SkiaSharp.SKPaint)) method has an [`SKRect`](xref:SkiaSharp.SKRect) argument, which is a rectangle defined in terms of the X and Y coordinates of its upper-left corner and lower-right corner. The oval fills that rectangle, which suggests that it might be possible to use it in the **Ellipse Fill** page like this:
 

@@ -50,7 +50,7 @@ The result of exposing an Effect as a platform-specific is that the Effect can b
 
 The [sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) demonstrates a `Shadow` platform-specific that adds a shadow to the text displayed by a [`Label`](xref:Xamarin.Forms.Label) control:
 
-![](images/screenshots.png "Shadow Platform-Specific")
+![Shadow Platform-Specific](images/screenshots.png)
 
 The [sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shadowplatformspecific) implements the `Shadow` platform-specific on each platform, for ease of understanding. However, aside from each platform-specific Effect implementation, the implementation of the Shadow class is largely identical for each platform. Therefore, this guide focusses on the implementation of the Shadow class and associated Effect on a single platform.
 

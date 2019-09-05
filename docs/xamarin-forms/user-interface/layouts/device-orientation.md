@@ -124,11 +124,11 @@ protected override void OnSizeAllocated(double width, double height)
 
 Once a change in device orientation has been detected, you may want to add or remove additional views to/from your user interface to react to the change in available space. For example, consider the built-in calculator on each platform in portrait:
 
-![](device-orientation-images/calculator-portrait.png "Calculator Application in Portrait")
+![Calculator Application in Portrait](device-orientation-images/calculator-portrait.png)
 
 and landscape:
 
-![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
+![Calculator Application in Landscape](device-orientation-images/calculator-landscape.png)
 
 Notice that the apps take advantage of the available space by adding more functionality in landscape.
 
@@ -150,11 +150,11 @@ The above rules also apply when implementing interfaces for multiple screen size
 
 Consider the following application, displayed in portrait:
 
-![](device-orientation-images/photo-stack-portrait.png "Photo Application in Portrait")
+![Photo Application in Portrait](device-orientation-images/photo-stack-portrait.png)
 
 and landscape:
 
-![](device-orientation-images/photo-stack-landscape.png "Photo Application in Landscape")
+![Photo Application in Landscape](device-orientation-images/photo-stack-landscape.png)
 
 That is accomplished with the following XAML:
 
@@ -224,11 +224,11 @@ Note the following:
 
 Consider the following application, displayed in portrait:
 
-![](device-orientation-images/photo-abs-portrait.png "Photo Application in Portrait")
+![Photo Application in Portrait](device-orientation-images/photo-abs-portrait.png)
 
 and landscape:
 
-![](device-orientation-images/photo-abs-landscape.png "Photo Application in Landscape")
+![Photo Application in Landscape](device-orientation-images/photo-abs-landscape.png)
 
 That is accomplished with the following XAML:
 
@@ -276,11 +276,11 @@ Note the following:
 
 Consider the following application, displayed in portrait:
 
-![](device-orientation-images/photo-rel-portrait.png "Photo Application in Portrait")
+![Photo Application in Portrait](device-orientation-images/photo-rel-portrait.png)
 
 and landscape:
 
-![](device-orientation-images/photo-rel-landscape.png "Photo Application in Landscape")
+![Photo Application in Landscape](device-orientation-images/photo-rel-landscape.png)
 
 That is accomplished with the following XAML:
 
@@ -367,11 +367,11 @@ Note the following:
 
 Consider the following application, displayed in portrait:
 
-![](device-orientation-images/photo-grid-portrait.png "Photo Application in Portrait")
+![Photo Application in Portrait](device-orientation-images/photo-grid-portrait.png)
 
 and landscape:
 
-![](device-orientation-images/photo-grid-landscape.png "Photo Application in Landscape")
+![Photo Application in Landscape](device-orientation-images/photo-grid-landscape.png)
 
 That is accomplished with the following XAML:
 

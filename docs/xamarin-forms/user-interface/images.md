@@ -114,7 +114,7 @@ To embed an image in a project, right-click to add new items and select the imag
 
 # [Visual Studio](#tab/windows)
 
-![](images-images/vs-buildaction.png "Set Build Action: EmbeddedResource")
+![Set Build Action: EmbeddedResource](images-images/vs-buildaction.png)
 
 The **Build Action** can be viewed and changed in the
 **Properties** window for a file.
@@ -126,7 +126,7 @@ for this project with the filename, using a period (.) between each value.
 
 # [Visual Studio for Mac](#tab/macos)
 
-![](images-images/xs-buildaction.png "Set Build Action: EmbeddedResource")
+![Set Build Action: EmbeddedResource](images-images/xs-buildaction.png)
 
 **Build Action** can also be viewed and changed in the
 **Properties** pad for a file.
@@ -138,7 +138,7 @@ for this project with the filename, using a period (.) between each value.
 This ID can be edited in the **Properties** pad,
 but for these examples the value **WorkingWithImages.beach.jpg** will be used.
 
-![](images-images/xs-embeddedproperties.png "EmbeddedResource Properties Pad")
+![EmbeddedResource Properties Pad](images-images/xs-embeddedproperties.png)
 
 -----
 

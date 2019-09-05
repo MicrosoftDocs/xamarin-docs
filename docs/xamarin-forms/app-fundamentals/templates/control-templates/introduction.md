@@ -21,7 +21,7 @@ Control templates provide a clean separation between the appearance of a page an
 
 A [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) specifies the appearance of a page or view, and contains a root layout, and within the layout, the controls that implement the template. Typically, a `ControlTemplate` will utilize a [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) to mark where the content to be displayed by the page or view will appear. The page or view that consumes the `ControlTemplate` will then define content to be displayed by the `ContentPresenter`. The following diagram illustrates a `ControlTemplate` for a page that contains a number of controls, including a `ContentPresenter` marked by a blue rectangle:
 
-![](introduction-images/control-template.png "Control Template for a Page")
+![Control Template for a Page](introduction-images/control-template.png)
 
 A [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) can be applied to the following types by setting their `ControlTemplate` properties:
 

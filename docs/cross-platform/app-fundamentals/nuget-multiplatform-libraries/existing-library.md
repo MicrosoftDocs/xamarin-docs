@@ -17,18 +17,18 @@ via the **Project Options** window:
 
 2. Go to the **NuGet Package > Metadata** section and enter all the [required information](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md) in the **General** tab:
 
-   [![](existing-library-images/existing-metadata-sml.png "Enter required metadata")](existing-library-images/existing-metadata.png#lightbox)
+   [![Enter required metadata](existing-library-images/existing-metadata-sml.png)](existing-library-images/existing-metadata.png#lightbox)
 
 3. Optionally, [add additional metadata](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)
    in the **Details** tab.
 
 4. Once the metadata is configured, you can right-click on the project and choose **Create NuGet Package** and the **.nupkg** NuGet package file will be saved in the **/bin/** folder (either Debug or Release, depending on configuration).
 
-   ![](existing-library-images/create-nuget-package.png "Choose Create NuGet Package from the right-click menu")
+   ![Choose Create NuGet Package from the right-click menu](existing-library-images/create-nuget-package.png)
 
 5. To create the NuGet package on _every_ build or deploy, go to the **NuGet Package > Build** section and tick **Create a NuGet Package when building the project**:
 
-    [![](existing-library-images/existing-tickbox-sml.png "Tick to create a NuGet package")](existing-library-images/existing-tickbox.png#lightbox)
+    [![Tick to create a NuGet package](existing-library-images/existing-tickbox-sml.png)](existing-library-images/existing-tickbox.png#lightbox)
 
 > [!NOTE]
 > Building the NuGet package can slow down the build process. If this box is not ticked,
@@ -41,7 +41,7 @@ NuGet packages are also ZIP files, so it's possible to inspect the internal stru
 
 This screenshot shows the contents of a PCL-based NuGet – only a single PCL assembly is included:
 
-![](existing-library-images/nuget-output.png "Files contained in the NuGet package")
+![Files contained in the NuGet package](existing-library-images/nuget-output.png)
 
 ## Related Links
 

@@ -24,7 +24,7 @@ Xamarin.Forms application indexing and deep linking provide an API for publishin
 
 The sample application demonstrates a Todo list application where the data is stored in a local SQLite database, as shown in the following screenshots:
 
-![](deep-linking-images/screenshots.png "TodoList Application")
+![TodoList Application](deep-linking-images/screenshots.png)
 
 Each `TodoItem` instance created by the user is indexed. Platform-specific search can then be used to locate indexed data from the application. When the user taps on a search result item for the application, the application is launched, the `TodoItemPage` is navigated to, and the `TodoItem` referenced from the deep link is displayed.
 
@@ -130,7 +130,7 @@ This adds the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance to the 
 
 Once an [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance has been registered for indexing, it can appear in search results. The following screenshot shows indexed content appearing in search results on the iOS platform:
 
-![](deep-linking-images/ios-search.png "Indexed Content in Search Results on iOS")
+![Indexed Content in Search Results on iOS](deep-linking-images/ios-search.png)
 
 ## De-registering Indexed Content
 

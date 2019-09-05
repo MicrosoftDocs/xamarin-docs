@@ -19,11 +19,11 @@ _The Xamarin.Forms TabbedPage consists of a list of tabs and a larger detail are
 
 The following screenshots show a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) on each platform:
 
-![](tabbed-page-images/tab1.png "TabbedPage Example")
+![TabbedPage Example](tabbed-page-images/tab1.png)
 
 The following screenshots focus on the tab format on each platform:
 
-![](tabbed-page-images/tabbedpage-components.png "TabbedPage Tab Components")
+![TabbedPage Tab Components](tabbed-page-images/tabbedpage-components.png)
 
 The layout of a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), and its tabs, is dependent on the platform:
 
@@ -39,7 +39,7 @@ The layout of a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), and its tabs, is 
 
 - On Windows tablet form-factors, the tabs aren't always visible and users need to swipe-down (or right-click, if they have a mouse attached) to view the tabs in a `TabbedPage` (as shown below).
 
-    ![](tabbed-page-images/windows-tabs.png "TabbedPage Tabs on Windows")
+    ![TabbedPage Tabs on Windows](tabbed-page-images/windows-tabs.png)
 
 ## Creating a TabbedPage
 
@@ -107,11 +107,11 @@ The [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) is populated with two child [`
 
 The following screenshots show the `TodayPage` [`ContentPage`](xref:Xamarin.Forms.ContentPage) instance, which is shown on the *Today* tab:
 
-![](tabbed-page-images/today-page.png "ContentPage in a TabbedPage")
+![ContentPage in a TabbedPage](tabbed-page-images/today-page.png)
 
 Selecting the *Schedule* tab displays the `SchedulePage` [`ContentPage`](xref:Xamarin.Forms.ContentPage) instance, which is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance, and is shown in the following screenshot:
 
-![](tabbed-page-images/schedule-page.png "NavigationPage in a TabbedPage")
+![NavigationPage in a TabbedPage](tabbed-page-images/schedule-page.png)
 
 For information about the layout of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), see [Performing Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
@@ -131,7 +131,7 @@ async void OnUpcomingAppointmentsButtonClicked (object sender, EventArgs e)
 
 This causes the `UpcomingAppointmentsPage` instance to be pushed onto the navigation stack, where it becomes the active page. This is shown in the following screenshots:
 
-![](tabbed-page-images/navigationpage.png "Navigation Inside a Tab")
+![Navigation Inside a Tab](tabbed-page-images/navigationpage.png)
 
 For more information about performing navigation using the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class, see [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
 
@@ -241,7 +241,7 @@ public class TabbedPageDemoPageCS : TabbedPage
 
 Each tab displays a [`ContentPage`](xref:Xamarin.Forms.ContentPage) that uses a series of [`StackLayout`](xref:Xamarin.Forms.StackLayout) and [`Label`](xref:Xamarin.Forms.Label) instances to display data for the tab. The following screenshots show the content for the *Tamarin* tab:
 
-![](tabbed-page-images/tab3.png "Populating a TabbedPage with a Template")
+![Populating a TabbedPage with a Template](tabbed-page-images/tab3.png)
 
 Selecting another tab then displays content for that tab.
 

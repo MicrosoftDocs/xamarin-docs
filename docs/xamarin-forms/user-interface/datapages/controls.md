@@ -11,7 +11,7 @@ ms.date: 12/01/2017
 
 # DataPages Controls Reference
 
-![](~/media/shared/preview.png "This API is currently in preview")
+![This API is currently in preview](~/media/shared/preview.png)
 
 > [!IMPORTANT]
 > DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
@@ -60,11 +60,11 @@ The `HeroImage` control has four properties:
 
 **Android**
 
-![](controls-images/heroimage-light-android.png "HeroImage Control on Android") ![](controls-images/heroimage-dark-android.png "HeroImage Control on Android")
+![HeroImage Control on Android](controls-images/heroimage-light-android.png "HeroImage Control on Android") ![](controls-images/heroimage-dark-android.png)
 
 **iOS**
 
-![](controls-images/heroimage-light-ios.png "HeroImage Control on iOS") ![](controls-images/heroimage-dark-ios.png "HeroImage Control on iOS")
+![HeroImage Control on iOS](controls-images/heroimage-light-ios.png "HeroImage Control on iOS") ![](controls-images/heroimage-dark-ios.png)
 
 <a name="listitem" />
 
@@ -98,11 +98,11 @@ both the Light and Dark themes:
 
 **Android**
 
-![](controls-images/listitem-light-android.png "ListItem Control on Android") ![](controls-images/listitem-dark-android.png "ListItem Control on Android")
+![ListItem Control on Android](controls-images/listitem-light-android.png "ListItem Control on Android") ![](controls-images/listitem-dark-android.png)
 
 **iOS**
 
-![](controls-images/listitem-light-ios.png "ListItem Control on iOS") ![](controls-images/listitem-dark-ios.png "ListItem Control on iOS")
+![ListItem Control on iOS](controls-images/listitem-light-ios.png "ListItem Control on iOS") ![](controls-images/listitem-dark-ios.png)
 
 ## Custom Control Example
 
@@ -130,11 +130,11 @@ to the built-in Light and Dark themes:
 
 **Android**
 
-![](controls-images/cardview-light-android.png "CardView Custom Control on Android") ![](controls-images/cardview-dark-android.png "CardView Custom Control on Android")
+![CardView Custom Control on Android](controls-images/cardview-light-android.png "CardView Custom Control on Android") ![](controls-images/cardview-dark-android.png)
 
 **iOS**
 
-![](controls-images/cardview-light-ios.png "CardView Custom Control on iOS") ![](controls-images/cardview-dark-ios.png "CardView Custom Control on iOS")
+![CardView Custom Control on iOS](controls-images/cardview-light-ios.png "CardView Custom Control on iOS") ![](controls-images/cardview-dark-ios.png)
 
 <a name="custom" />
 

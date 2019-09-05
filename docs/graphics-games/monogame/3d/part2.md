@@ -15,11 +15,11 @@ Users who have read through the [guide on rendering Models](~/graphics-games/mon
 
 To help visualize how vertices are used to create 3D objects, let’s consider the following sphere:
 
-![](part2-images/image1.png "To help visualize how vertices are used to create 3D objects, consider this sphere")
+![To help visualize how vertices are used to create 3D objects, consider this sphere](part2-images/image1.png)
 
 As shown above, the sphere is clearly composed of multiple triangles. We can view the wireframe of the sphere to see how the vertices connect to form triangles:
 
-![](part2-images/image2.png "View the wireframe of the sphere to see how the vertices connect to form triangles")
+![View the wireframe of the sphere to see how the vertices connect to form triangles](part2-images/image2.png)
 
 This walkthrough will cover the following topics:
 
@@ -32,7 +32,7 @@ This walkthrough will cover the following topics:
 
 The finished project will contain a checkered floor which will be drawn using a vertex array:
 
-![](part2-images/image3.png "The finished project will contain a checkered floor which will be drawn using a vertex array")
+![The finished project will contain a checkered floor which will be drawn using a vertex array](part2-images/image3.png)
 
 ## Creating a Project
 
@@ -40,7 +40,7 @@ First, we’ll download a project which will serve as our starting point. We’l
 
 Once downloaded and unzipped, open and run the project. We expect to see six robot models being drawn on-screen:
 
-![](part2-images/image4.png "Six robot models being drawn on-screen")
+![Six robot models being drawn on-screen](part2-images/image4.png)
 
 By the end of this project we’ll be combining our own custom vertex rendering with the robot `Model`, so we aren’t going to delete the robot rendering code. Instead, we’ll just clear out the `Game1.Draw` call to remove the drawing of the 6 robots for now. To do this, open the **Game1.cs** file and locate the `Draw` method. Modify it so it contains the following code:
 
@@ -54,7 +54,7 @@ protected override void Draw(GameTime gameTime)
 
 This will result in our game displaying an empty blue screen:
 
-![](part2-images/image5.png "This will result in the game displaying an empty blue screen")
+![This will result in the game displaying an empty blue screen](part2-images/image5.png)
 
 ## Creating the Vertices
 
@@ -101,7 +101,7 @@ protected override void Initialize ()
 
 To help visualize what our vertices will look like, consider the following diagram:
 
-![](part2-images/image6.png "To help visualize what the vertices will look like, consider this diagram")
+![To help visualize what the vertices will look like, consider this diagram](part2-images/image6.png)
 
 We need to rely on our diagram to visualize the vertices until we finish implementing our rendering code.
 
@@ -195,7 +195,7 @@ protected override void Draw (GameTime gameTime)
 
 The app will display the following when executed:
 
-![](part2-images/image7.png "The app will display this when executed")
+![The app will display this when executed](part2-images/image7.png)
 
 Let’s look at some of the details in the code above.
 
@@ -327,13 +327,13 @@ protected override void Initialize ()
 
 If we run the code, we can see that our plane now displays a checkerboard pattern:
 
-![](part2-images/image8.png "The plane now displays a checkerboard pattern")
+![The plane now displays a checkerboard pattern](part2-images/image8.png)
 
 ## Modifying Texture Coordinates
 
 MonoGame uses normalized texture coordinates, which are coordinates between 0 and 1 rather than between 0 and the texture’s width or height. The following diagram can help visualize normalized coordinates:
 
-![](part2-images/image9.png "This diagram can help visualize normalized coordinates")
+![This diagram can help visualize normalized coordinates](part2-images/image9.png)
 
 Normalized texture coordinates allow texture resizing without needing to rewrite code or recreate models (such as .fbx files). This is possible because normalized coordinates represent a ratio rather than specific pixels. For example, (1,1) will always represent the bottom-right corner regardless of the texture size.
 
@@ -370,7 +370,7 @@ protected override void Initialize ()
 
 This results in the texture repeating 20 times:
 
-![](part2-images/image10.png "This results in the texture repeating 20 times")
+![This results in the texture repeating 20 times](part2-images/image10.png)
 
 ## Rendering Vertices with Models
 
@@ -443,7 +443,7 @@ void DrawGround()
 
 Now if we run the code we can see both the models and the ground at the same time:
 
-![](part2-images/image11.png "Both the models and the ground are displayed at the same time")
+![Both the models and the ground are displayed at the same time](part2-images/image11.png)
 
 If we modify the camera position (such as by increasing its X value, which in this case moves the camera to the left) we can see that the value impacts both the ground and the models:
 
@@ -453,7 +453,7 @@ Vector3 cameraPosition = new Vector3(15, 10, 10);
 
 This code results in the following:
 
-![](part2-images/image3.png "This code results in this view")
+![This code results in this view](part2-images/image3.png)
 
 ## Summary
 

@@ -26,12 +26,12 @@ You should take screen size into account when designing and testing your apps.
 By default the Visual Studio for Mac Designer will display
   watch interface controllers at **Any Apple Watch**.
 
-![](screen-sizes-images/screen-any-sml.png "The Designer displays watch interface controllers at Any Apple Watch")
+![The Designer displays watch interface controllers at Any Apple Watch](screen-sizes-images/screen-any-sml.png)
 
 Use the size menu to edit and preview your storyboard at either
   of the available screen sizes: **38mm** or **42mm**:
 
-![](screen-sizes-images/screen-menu-sml.png "Selecting the 38mm or 42mm size")
+![Selecting the 38mm or 42mm size](screen-sizes-images/screen-menu-sml.png)
 
 The larger screen size will sometimes render content
   that would be truncated/hidden on the smaller screen.
@@ -45,7 +45,7 @@ Your app should display the same content on the screen,
   Inspector, you should use **Relative to Container** or
   **Size to Fit Content** in preference to fixed sizes.
 
-![](screen-sizes-images/sizeattributepanel-sml.png "Use Relative to Container or Size to Fit Content in preference to fixed sizes")
+![Use Relative to Container or Size to Fit Content in preference to fixed sizes](screen-sizes-images/sizeattributepanel-sml.png)
 
 Because the watch screen is surrounded by a black bezel, providing
   padding around your interface is not recommended. Let
@@ -57,7 +57,7 @@ Because the watch screen is surrounded by a black bezel, providing
 When testing on the simulator you can easily switch between the
   two screen sizes using the **Hardware > Device** menu.
 
-![](screen-sizes-images/simulator.png "The simulator can switch between the two screen sizes using the Hardware Device menu")
+![The simulator can switch between the two screen sizes using the Hardware Device menu](screen-sizes-images/simulator.png)
 
 ## Image Resources
 
@@ -65,7 +65,7 @@ You should use multiple image assets if a single asset does not look
   good at different sizes. Image asset catalogs allow for separate bitmaps
   to be specified for each size:
 
-![](screen-sizes-images/images-xcassets.png "Image asset catalog editor")
+![Image asset catalog editor](screen-sizes-images/images-xcassets.png)
 
 ```csharp
 // specify the asset name, the correct size will automatically be loaded

@@ -31,7 +31,7 @@ The `InvokeOnMainThread` method is defined on `NSObject` so it can be called fro
 
 While debugging Xamarin.iOS applications, an error will be thrown if your code attempts to access a UI control from the wrong thread. This helps you to track down and fix these problems with the InvokeOnMainThread method. This only occurs while debugging and does not throw an error in release builds. The error message will appear like this:
 
- ![](ui-thread-images/image10.png "UI Thread Execution")
+ ![UI Thread Execution](ui-thread-images/image10.png)
 
  <a name="Background_Thread_Example" />
 

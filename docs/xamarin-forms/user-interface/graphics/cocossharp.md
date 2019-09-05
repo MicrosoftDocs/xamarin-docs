@@ -65,11 +65,11 @@ and select **Add Packages...**. Enter the search term
 **CocosSharp.Forms**, select **CocosSharp for Xamarin.Forms**,
 then click **Add Package**.
 
-![](cocossharp-images/image1.png "Add Packages Dialog")
+![Add Packages Dialog](cocossharp-images/image1.png)
 
 Both **CocosSharp** and **CocosSharp.Forms** NuGet packages will be added to the project:
 
-![](cocossharp-images/image2.png "Packages Folder")
+![Packages Folder](cocossharp-images/image2.png)
 
 Repeat the above steps for platform-specific projects (such as iOS and Android).
 
@@ -143,7 +143,7 @@ public HomePage ()
 
 On iOS, the `HomePage` appears as shown in the following image:
 
-![](cocossharp-images/image3.png "HomePage Screenshot")
+![HomePage Screenshot](cocossharp-images/image3.png)
 
 <a name="2" />
 
@@ -199,7 +199,7 @@ The `CCScene` class is the visual root of all CocosSharp rendering. Any visible 
 
 The following graph can help visualize a typical CocosSharp hierarchy:
 
-![](cocossharp-images/image4.png "Typical CocosSharp Hierarchy")
+![Typical CocosSharp Hierarchy](cocossharp-images/image4.png)
 
 Only one `CCScene` can be active at one time. Most games use multiple `CCLayer` instances to sort content, but our application uses only one. Similarly, most games use multiple visual objects, but we’ll only have one in our app. A more detailed discussion about the CocosSharp visual hierarchy can be found in the [BouncingGame walkthrough](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md).
 
@@ -225,7 +225,7 @@ GameScene gameScene;
 
 We can now compile our project and run it to see CocosSharp running. We haven’t added anything to our `GameScene,` so the top half of our page is black – the default color of a CocosSharp scene:
 
-![](cocossharp-images/image5.png "Blank GameScene")
+![Blank GameScene](cocossharp-images/image5.png)
 
 <a name="4" />
 
@@ -259,7 +259,7 @@ public class GameScene : CCScene
 
 Running the app now shows a circle on the left side of the CocosSharp display area:
 
-![](cocossharp-images/image6.png "Circle in GameScene")
+![Circle in GameScene](cocossharp-images/image6.png)
 
 #### Understanding DesignResolution
 
@@ -267,7 +267,7 @@ Now that a visual CocosSharp object is displayed, we can investigate the `Design
 
 The `DesignResolution` represents the width and height of the CocosSharp area for placing and sizing objects. The actual resolution of the area is measured in *pixels* while the `DesignResolution` is measured in world *units*. The following diagram shows the resolution of various parts of the view as displayed on an iPhone 5 with a screen resolution of 640x1136 pixels:
 
-![](cocossharp-images/image7.png "iPhone 5s Design Resolution")
+![iPhone 5s Design Resolution](cocossharp-images/image7.png)
 
 The diagram above displays pixel dimensions on the outside of the screen in black text. Units are displayed on the inside of the diagram in white text. Here are some important details displayed above:
 
@@ -335,7 +335,7 @@ void CreateBottomHalf(Grid grid)
 
 The CocosSharp circle now moves in response to clicks. We can also clearly see the boundaries of the CocosSharp canvas by moving the circle far enough to the left or right:
 
-![](cocossharp-images/image8.png "GameScene with Moving Circle")
+![GameScene with Moving Circle](cocossharp-images/image8.png)
 
 ## Summary
 

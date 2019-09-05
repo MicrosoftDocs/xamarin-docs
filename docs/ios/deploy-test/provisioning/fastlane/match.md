@@ -54,15 +54,15 @@ fastlane match init
 
 When prompted, enter the URL of the git repo:
 
- [![](match-images/fastlane-image7.png "Enter the URL of the git repo")](match-images/fastlane-image7.png#lightbox)
+ [![Enter the URL of the git repo](match-images/fastlane-image7.png)](match-images/fastlane-image7.png#lightbox)
 
 The URL can be found and copied by clicking the **Clone or Download** button on github.com, as illustrated below:
 
-[![](match-images/fastlane-image6.png "The URL under the Clone or Download button on github.com")](match-images/fastlane-image6.png#lightbox)
+[![The URL under the Clone or Download button on github.com](match-images/fastlane-image6.png)](match-images/fastlane-image6.png#lightbox)
 
 Initializing the project creates a matchfile – a text file which can be edited to pass environment variables to the match tool. An matchfile example is illustrated below:
 
-[![](match-images/fastlane-image8.png "A matchfile example")](match-images/fastlane-image8.png#lightbox)
+[![A matchfile example](match-images/fastlane-image8.png)](match-images/fastlane-image8.png#lightbox)
 
 <a name="running" />
 
@@ -88,7 +88,7 @@ In addition to creating new certificates and profiles, using any of these comman
 - A readme with basic instructions
 - A match version
 
-[![](match-images/fastlane-image9.png "The project structure in the git repo")](match-images/fastlane-image9.png#lightbox)
+[![The project structure in the git repo](match-images/fastlane-image9.png)](match-images/fastlane-image9.png#lightbox)
 
 Provisioning profiles are installed in `~/Library/MobileDevice/Provisioning Profiles`. Certificates and private keys are installed directly in your Keychain.
 

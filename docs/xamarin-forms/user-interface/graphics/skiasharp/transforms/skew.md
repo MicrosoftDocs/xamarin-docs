@@ -17,7 +17,7 @@ _See how the skew transform can create tilted graphical objects in SkiaSharp_
 
 In SkiaSharp, the skew transform tilts graphical objects, such as the shadow in this image:
 
-![](skew-images/skewexample.png "An example of skewing from the Skew Shadow Text program")
+![An example of skewing from the Skew Shadow Text program](skew-images/skewexample.png)
 
 The skew turns a rectangle into a parallelogram, but a skewed ellipse is still an ellipse.
 
@@ -67,7 +67,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 Values of the `xSkew` argument shift the bottom of the text right for positive values or left for negative values. Values of `ySkew` shift the right of the text down for positive values or up for negative values:
 
-[![](skew-images/skewexperiment-small.png "Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png#lightbox "Triple screenshot of the Skew Experiment page")
+[![Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png#lightbox "Triple screenshot of the Skew Experiment page](skew-images/skewexperiment-small.png)
 
 If the `xSkew` value is the negative of the `ySkew` value, the result is rotation, but also scaled somewhat as the UWP display indicates.
 
@@ -81,7 +81,7 @@ For example, for a positive `xSkew` value, the transformed `x'` value increases 
 
 If a triangle 200 pixels wide and 100 pixels high is positioned with its upper-left corner at the point (0, 0) and is rendered with an `xSkew` value of 1.5, the following parallelogram results:
 
-![](skew-images/skeweffect.png "The effect of the skew transform on a rectangle")
+![The effect of the skew transform on a rectangle](skew-images/skeweffect.png)
 
 The coordinates of the bottom edge have `y` values of 100, so it is shifted 150 pixels to the right.
 
@@ -103,7 +103,7 @@ If `ySkew` is zero, then the `px` value is not used. The value is irrelevant, an
 
 You might feel more comfortable specifying skew as an angle of tilt, such as the angle α in this diagram:
 
-![](skew-images/skewangleeffect.png "The effect of the skew transform on a rectangle with a skewing angle indicated")
+![The effect of the skew transform on a rectangle with a skewing angle indicated](skew-images/skewangleeffect.png)
 
 The ratio of the 150-pixel shift to the 100-pixel vertical is the tangent of that angle, in this example 56.3 degrees.
 
@@ -150,7 +150,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 As an angle approaches positive or negative 90 degrees, the tangent approaches infinity, but angles up to about 80 degrees or so are usable:
 
-[![](skew-images/skewangleexperiment-small.png "Triple screenshot of the Skew Angle Experiment page")](skew-images/skewangleexperiment-large.png#lightbox "Triple screenshot of the Skew Angle Experiment page")
+[![Triple screenshot of the Skew Angle Experiment page")](skew-images/skewangleexperiment-large.png#lightbox "Triple screenshot of the Skew Angle Experiment page](skew-images/skewangleexperiment-small.png)
 
 A small negative horizontal skew can mimic oblique or italic text, as the **Oblique Text** page demonstrates. The [`ObliqueTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/ObliqueTextPage.cs) class shows how it's done:
 
@@ -186,7 +186,7 @@ void SkewDegrees(SKCanvas canvas, double xDegrees, double yDegrees)
 
 The `TextAlign` property of `SKPaint` is set to `Center`. Without any transforms, the `DrawText` call with coordinates of (0, 0) would position the text with the horizontal center of the baseline at the upper-left corner. The `SkewDegrees` skews the text horizontally 20 degrees relative to the baseline. The `Translate` call moves the horizontal center of the text's baseline to the center of the canvas:
 
-[![](skew-images/obliquetext-small.png "Triple screenshot of the Oblique Text page")](skew-images/obliquetext-large.png#lightbox "Triple screenshot of the Oblique Text page")
+[![Triple screenshot of the Oblique Text page")](skew-images/obliquetext-large.png#lightbox "Triple screenshot of the Oblique Text page](skew-images/obliquetext-small.png)
 
 The **Skew Shadow Text** page demonstrates how to use a combination of a 45-degree skew and vertical scale to make a text shadow that tilts away from the text. Here's the pertinent part of the `PaintSurface` handler:
 
@@ -219,11 +219,11 @@ using (SKPaint textPaint = new SKPaint())
 
 The shadow is displayed first and then the text:
 
-[![](skew-images/skewshadowtext1-small.png "Triple screenshot of the Skew Shadow Text page")](skew-images/skewshadowtext1-large.png#lightbox "Triple screenshot of the Skew Shadow Text page")
+[![Triple screenshot of the Skew Shadow Text page")](skew-images/skewshadowtext1-large.png#lightbox "Triple screenshot of the Skew Shadow Text page](skew-images/skewshadowtext1-small.png)
 
 The vertical coordinate passed to the `DrawText` method indicates the position of the text relative to the baseline. That is the same vertical coordinate used for the center of skewing. This technique will not work if the text string contains descenders. For example, substitute the word "quirky" for "Shadow" and here's the result:
 
-[![](skew-images/skewshadowtext2-small.png "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")](skew-images/skewshadowtext2-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")
+[![Triple screenshot of the Skew Shadow Text page with an alternative word with descenders")](skew-images/skewshadowtext2-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with an alternative word with descenders](skew-images/skewshadowtext2-small.png)
 
 The shadow and text are still aligned at the baseline, but the effect just looks wrong. To fix it, you need to obtain the text bounds:
 
@@ -243,7 +243,7 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 
 Now the shadow extends from the bottom of those descenders:
 
-[![](skew-images/skewshadowtext3-small.png "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")](skew-images/skewshadowtext3-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")
+[![Triple screenshot of the Skew Shadow Text page with adjustments for descenders")](skew-images/skewshadowtext3-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with adjustments for descenders](skew-images/skewshadowtext3-small.png)
 
 ## Related Links
 

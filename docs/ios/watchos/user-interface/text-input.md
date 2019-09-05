@@ -23,7 +23,7 @@ The Apple Watch does not provide a keyboard for
 The simulator does not currently support dictation but you can still
   test the text input controller's other options, such as Scribble, as shown here:
 
-![](text-input-images/textinput-sml.png "Testing the scribble option")
+![Testing the scribble option](text-input-images/textinput-sml.png)
 
 To accept text input in a watch app:
 
@@ -66,7 +66,7 @@ When the plain mode is set, the user can choose:
 - Scribble, or
 - from a pre-defined list that the application supplies.
 
-[![](text-input-images/plain-scribble-sml.png "Dictation, Scribble, or from a pre-defined list that the app supplies")](text-input-images/plain-scribble.png#lightbox)
+[![Dictation, Scribble, or from a pre-defined list that the app supplies](text-input-images/plain-scribble-sml.png)](text-input-images/plain-scribble.png#lightbox)
 
 The result is always returned as an `NSObject` that can be cast to a `string`.
 
@@ -106,7 +106,7 @@ When the user is speaking, the watch screen displays
   the following screen which includes the text as it
   is understood (for example "This is a test"):
 
-![](text-input-images/dictation.png "When the user is speaking, the watch screen displays the text as it is understood")
+![When the user is speaking, the watch screen displays the text as it is understood](text-input-images/dictation.png)
 
 Once they press the **Done** button the text will
   be returned.

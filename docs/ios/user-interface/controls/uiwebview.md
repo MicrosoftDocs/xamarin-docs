@@ -35,7 +35,7 @@ webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
 
 This produces the following web view:
 
-[![](uiwebview-images/webview.png "The effect of ScalesPagesToFit")](uiwebview-images/webview.png#lightbox)
+[![The effect of ScalesPagesToFit](uiwebview-images/webview.png)](uiwebview-images/webview.png#lightbox)
 
 For more information on using `UIWebView`, refer to the following recipes:
 
@@ -62,7 +62,7 @@ The code below can be used to launch a `WKWebView` in your Xamarin.iOS app:
 
 This produces the following web view:
 
-[![](uiwebview-images/wkwebview.png "An example web view without ScalesPagesToFit")](uiwebview-images/wkwebview.png#lightbox)
+[![An example web view without ScalesPagesToFit](uiwebview-images/wkwebview.png)](uiwebview-images/wkwebview.png#lightbox)
 
 It is important to note that `WKWebView` is in the WebKit namespace, so you will have to add this using directive to the top of your class.
 
@@ -92,7 +92,7 @@ PresentViewController(sfViewController, true, null);
 
 This produces the following web view:
 
-[![](uiwebview-images/sfsafariviewcontroller.png "An example web view with SFSafariViewController")](uiwebview-images/sfsafariviewcontroller.png#lightbox)
+[![An example web view with SFSafariViewController](uiwebview-images/sfsafariviewcontroller.png)](uiwebview-images/sfsafariviewcontroller.png#lightbox)
 
 ## Safari
 
@@ -107,7 +107,7 @@ UIApplication.SharedApplication.OpenUrl(url);
 
 This produces the following web view:
 
-[![](uiwebview-images/safari.png "A web page presented in Safari")](uiwebview-images/safari.png#lightbox)
+[![A web page presented in Safari](uiwebview-images/safari.png)](uiwebview-images/safari.png#lightbox)
 
 Navigating users away from your app to Safari should generally always be avoided. Most users will not expect navigation outside of your application, so if you navigate away from your app, users may never return it, essentially killing engagement.
 

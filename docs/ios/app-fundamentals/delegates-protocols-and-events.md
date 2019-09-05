@@ -37,8 +37,8 @@ foundation for handling callback scenarios in Xamarin.iOS, including:
 To illustrate protocols and delegates, we’ll build a simple map application
 that adds an annotation to a map as shown here:
 
-[![](delegates-protocols-and-events-images/01-map-sml.png "An example of a simple map application that adds an annotation to a map")](delegates-protocols-and-events-images/01-map.png#lightbox)
-[![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "An example annotation added to a map")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+[![An example of a simple map application that adds an annotation to a map](delegates-protocols-and-events-images/01-map-sml.png)](delegates-protocols-and-events-images/01-map.png#lightbox)
+[![An example annotation added to a map](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png)](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 Before tackling this app, let’s get started by looking at .NET events under
 the UIKit.
@@ -69,19 +69,19 @@ UIViewController. The `aButton` variable references a button, which you could ad
 either in the iOS Designer or with code. The following figure shows a button
 that has been added in the iOS Designer:
 
-[![](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png "A button added in iOS Designer")](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
+[![A button added in iOS Designer](delegates-protocols-and-events-images/02-interface-builder-outlet-sml.png)](delegates-protocols-and-events-images/02-interface-builder-outlet.png#lightbox)
 
 Xamarin.iOS also supports the target-action style of connecting your code to an
 interaction that occurs with a control. To create a target-action for the **Hello** button,
 double click it in the iOS Designer. The UIViewController's code-behind file will be displayed
 and the developer will be asked to select a location to insert the connecting method:
 
-[![](delegates-protocols-and-events-images/03-interface-builder-action-sml.png "The UIViewControllers code-behind file")](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
+[![The UIViewControllers code-behind file](delegates-protocols-and-events-images/03-interface-builder-action-sml.png)](delegates-protocols-and-events-images/03-interface-builder-action.png#lightbox)
 
 After a location is selected, a new method is created and wired-up to the control. In the following
 example, a message will be written to the console when the button is clicked:
 
-[![](delegates-protocols-and-events-images/05-interface-builder-action-sml.png "A message will be written to the console when the button is clicked")](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
+[![A message will be written to the console when the button is clicked](delegates-protocols-and-events-images/05-interface-builder-action-sml.png)](delegates-protocols-and-events-images/05-interface-builder-action.png#lightbox)
 
 For more details about the iOS target-action pattern, see the Target-Action
 section of [Core Application Competencies for iOS](https://developer.apple.com/library/ios/#DOCUMENTATION/General/Conceptual/Devpedia-CocoaApp/TargetAction.html) in Apple’s iOS
@@ -196,7 +196,7 @@ appears when the user taps on the annotation (as shown in the screenshot below)
 comes from the `Title` property in the class that implements the
 protocol:
 
- [![](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png "Example text for the callout when the user taps on the annotation")](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
+ [![Example text for the callout when the user taps on the annotation](delegates-protocols-and-events-images/04-annotation-with-callout-sml.png)](delegates-protocols-and-events-images/04-annotation-with-callout.png#lightbox)
 
 As described in the next section, [Protocols Deep Dive](#protocols-deep-dive), Xamarin.iOS binds
 protocols to abstract classes. For the `MKAnnotation` protocol, the

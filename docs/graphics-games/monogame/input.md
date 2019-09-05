@@ -89,7 +89,7 @@ iOS apps support wireless game controller input.
 
 The `GamePad` class returns properties read from wireless controllers. The properties in the `GamePad` provide good coverage for the standard iOS controller hardware, as shown in the following diagram:
 
-![](input-images/image1.png "The properties in the GamePad provide good coverage for the standard iOS controller hardware, as shown in this diagram")
+![The properties in the GamePad provide good coverage for the standard iOS controller hardware, as shown in this diagram](input-images/image1.png)
 
 ## Apple TV
 
@@ -101,7 +101,7 @@ Apple TV games can use the Siri Remote or wireless game controllers for input.
 
 Notice that `GamePad` can only read input from the play button and touch surface:
 
-![](input-images/image2.png "Notice that GamePad can only read input from the play button and touch surface")
+![Notice that GamePad can only read input from the play button and touch surface](input-images/image2.png)
 
 Since the touch surface movement is read through the `DPad` property, movement values are reported using the `ButtonState` class. In other words, values are only available as `ButtonState.Pressed` or `ButtonState.Released`, as opposed to numerical values or gestures.
 
@@ -117,7 +117,7 @@ The Xbox One console supports reading input from an Xbox One game controller.
 
 The Xbox One game controller is the most common input device for the Xbox One. The `GamePad` class provides input values from the game controller hardware.
 
-![](input-images/image3.png "The GamePad class provides input values from the game controller hardware")
+![The GamePad class provides input values from the game controller hardware](input-images/image3.png)
 
 ## Summary
 

@@ -29,7 +29,7 @@ Registered apps can fall into several categories:
 
 Applications can be registered by setting the **Required Background Modes** property in the application's *Info.plist*. An application can register in as many categories as it requires:
 
- [![](registering-applications-to-run-in-background-images/bgmodes.png "Setting the background modes")](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
+ [![Setting the background modes](registering-applications-to-run-in-background-images/bgmodes.png)](registering-applications-to-run-in-background-images/bgmodes.png#lightbox)
 
 For a step-by-step guide to registering an application for background location updates, see the [Background Location Walkthrough](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/location-walkthrough.md).
 
@@ -37,7 +37,7 @@ For a step-by-step guide to registering an application for background location u
 
 Another property that can be set in *Info.plist* is the *Application does not run in background*, or `UIApplicationExitsOnSuspend` property:
 
- [![](registering-applications-to-run-in-background-images/plist.png "Disabling Background Running")](registering-applications-to-run-in-background-images/plist.png#lightbox)
+ [![Disabling Background Running](registering-applications-to-run-in-background-images/plist.png)](registering-applications-to-run-in-background-images/plist.png#lightbox)
 
 This has the exact same effect as setting the Background App Refresh setting to off in iOS 7+, except it can only be changed on the developer side, and is available for iOS 4 and above. The application will be suspended immediately after entering the background, and will not be able to do any processing.
 

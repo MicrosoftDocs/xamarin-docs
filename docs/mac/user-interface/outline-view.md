@@ -17,7 +17,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 An Outline View is a type of Table that allows the user expand or collapse rows of hierarchical data. Like a Table View, an Outline View displays data for a set of related items, with rows representing individual items and columns representing the attributes of those items. Unlike a Table View, items in an Outline View are not in a flat list, they are organized in a hierarchy, like files and folders on a hard drive.
 
-[![](outline-view-images/populate03.png "An example app run")](outline-view-images/populate03.png#lightbox)
+[![An example app run](outline-view-images/populate03.png)](outline-view-images/populate03.png#lightbox)
 
 In this article, we'll cover the basics of working with Outline Views in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -45,23 +45,23 @@ Since an Outline View shares much of it's behavior and functionality with a Tabl
 
 When you create a new Xamarin.Mac Cocoa application, you get a standard blank, window by default. This windows is defined in a `.storyboard` file automatically included in the project. To edit your windows design, in the **Solution Explorer**, double click the `Main.storyboard` file:
 
-[![](outline-view-images/edit01.png "Selecting the main storyboard")](outline-view-images/edit01.png#lightbox)
+[![Selecting the main storyboard](outline-view-images/edit01.png)](outline-view-images/edit01.png#lightbox)
 
 This will open the window design in Xcode's Interface Builder:
 
-[![](outline-view-images/edit02.png "Editing the UI in Xcode")](outline-view-images/edit02.png#lightbox)
+[![Editing the UI in Xcode](outline-view-images/edit02.png)](outline-view-images/edit02.png#lightbox)
 
 Type `outline` into the **Library Inspector's** Search Box to make it easier to find the Outline View controls:
 
-[![](outline-view-images/edit03.png "Selecting an Outline View from the Library")](outline-view-images/edit03.png#lightbox)
+[![Selecting an Outline View from the Library](outline-view-images/edit03.png)](outline-view-images/edit03.png#lightbox)
 
 Drag a Outline View onto the View Controller in the **Interface Editor**, make it fill the content area of the View Controller and set it to where it shrinks and grows with the window in the **Constraint Editor**:
 
-[![](outline-view-images/edit04.png "Editing the constraints")](outline-view-images/edit04.png#lightbox)
+[![Editing the constraints](outline-view-images/edit04.png)](outline-view-images/edit04.png#lightbox)
 
 Select the Outline View in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](outline-view-images/edit05.png "The Attribute Inspector")](outline-view-images/edit05.png#lightbox)
+[![The Attribute Inspector](outline-view-images/edit05.png)](outline-view-images/edit05.png#lightbox)
 
 - **Outline Column** - The Table Column in which the Hierarchical data is displayed.
 - **Autosave Outline Column** - If `true`, the Outline Column will be automatically saved and restored between application runs.
@@ -96,7 +96,7 @@ Select the Outline View in the **Interface Hierarchy** and the following propert
 
 Select a Table Column in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](outline-view-images/edit06.png "The Attribute Inspector")](outline-view-images/edit06.png#lightbox)
+[![The Attribute Inspector](outline-view-images/edit06.png)](outline-view-images/edit06.png#lightbox)
 
 - **Title** - Sets the title of the column.
 - **Alignment** - Set the alignment of the text within the cells.
@@ -114,19 +114,19 @@ Let's select the each Column in our Table View and give the first column a **Tit
 
 Select a Table Cell View (`NSTableViewCell`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](outline-view-images/edit07.png "The Attribute Inspector")](outline-view-images/edit07.png#lightbox)
+[![The Attribute Inspector](outline-view-images/edit07.png)](outline-view-images/edit07.png#lightbox)
 
 These are all of the properties of a standard View. You also have the option of resizing the rows for this column here.
 
 Select a Table View Cell (by default, this is a `NSTextField`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](outline-view-images/edit08.png "The Attribute Inspector")](outline-view-images/edit08.png#lightbox)
+[![The Attribute Inspector](outline-view-images/edit08.png)](outline-view-images/edit08.png#lightbox)
 
 You'll have all the properties of a standard Text Field to set here. By default, a standard Text Field is used to display data for a cell in a column.
 
 Select a Table Cell View (`NSTableFieldCell`) in the **Interface Hierarchy** and the following properties are available in the **Attribute Inspector**:
 
-[![](outline-view-images/edit09.png "The Attribute Inspector")](outline-view-images/edit09.png#lightbox)
+[![The Attribute Inspector](outline-view-images/edit09.png)](outline-view-images/edit09.png#lightbox)
 
 The most important settings here are:
 
@@ -140,7 +140,7 @@ The most important settings here are:
 
 Select the Table Cell View (`NSTableFieldCell`) at the bottom of a Table Column in the **Interface Hierarchy**:
 
-[![](outline-view-images/edit11.png "Selecting the table cell view")](outline-view-images/edit10.png#lightbox)
+[![Selecting the table cell view](outline-view-images/edit11.png)](outline-view-images/edit10.png#lightbox)
 
 This allows you to edit the Table Cell View used as the base _Pattern_ for all cells created for the given column.
 
@@ -154,14 +154,14 @@ The process is the same for any Outline View element that we want to expose:
 
 1. Switch to the **Assistant Editor** and ensure that the `ViewController.h` file is selected:
 
-    [![](outline-view-images/edit11.png "Selecting the correct .h file")](outline-view-images/edit11.png#lightbox)
+    [![Selecting the correct .h file](outline-view-images/edit11.png)](outline-view-images/edit11.png#lightbox)
 2. Select the Outline View from the **Interface Hierarchy**, control-click and drag to the `ViewController.h` file.
 3. Create an **Outlet** for the Outline View called `ProductOutline`:
 
-    [![](outline-view-images/edit13.png "Configuring an Outlet")](outline-view-images/edit13.png#lightbox)
+    [![Configuring an Outlet](outline-view-images/edit13.png)](outline-view-images/edit13.png#lightbox)
 4. Create **Outlets** for the tables columns as well called `ProductColumn` and `DetailsColumn`:
 
-    [![](outline-view-images/edit14.png "Configuring an Outlet")](outline-view-images/edit14.png#lightbox)
+    [![Configuring an Outlet](outline-view-images/edit14.png)](outline-view-images/edit14.png#lightbox)
 5. Save you changes and return to Visual Studio for Mac to sync with Xcode.
 
 Next, we'll write the code display some data for the outline when the application is run.
@@ -174,7 +174,7 @@ With our Outline View designed in Interface Builder and exposed via an **Outlet*
 
 First, let's create a new `Product` class to hold the information for the individual rows and groups of sub products. In the **Solution Explorer**, right-click the Project and select **Add** > **New File...** Select **General** > **Empty Class**, enter `Product` for the **Name** and click the **New** button:
 
-[![](outline-view-images/populate01.png "Creating an empty class")](outline-view-images/populate01.png#lightbox)
+[![Creating an empty class](outline-view-images/populate01.png)](outline-view-images/populate01.png#lightbox)
 
 Make the `Product.cs` file look like the following:
 
@@ -385,11 +385,11 @@ public override void AwakeFromNib ()
 
 If we run the application, the following is displayed:
 
-[![](outline-view-images/populate02.png "The collapsed view")](outline-view-images/populate02.png#lightbox)
+[![The collapsed view](outline-view-images/populate02.png)](outline-view-images/populate02.png#lightbox)
 
 If we expand a node in the Outline View, it will look like the following:
 
-[![](outline-view-images/populate03.png "The expanded view")](outline-view-images/populate03.png#lightbox)
+[![The expanded view](outline-view-images/populate03.png)](outline-view-images/populate03.png#lightbox)
 
 <a name="Sorting_by_Column" />
 
@@ -397,7 +397,7 @@ If we expand a node in the Outline View, it will look like the following:
 
 Let's allow the user to sort the data in the outline by clicking on a Column Header. First, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the `Product` column, enter `Title` for the **Sort Key**, `compare:` for the **Selector** and select `Ascending` for the **Order**:
 
-[![](outline-view-images/sort01.png "Setting the sort key order")](outline-view-images/sort01.png#lightbox)
+[![Setting the sort key order](outline-view-images/sort01.png)](outline-view-images/sort01.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -430,7 +430,7 @@ The `Sort` method allow us to sort the data in the Data Source based on a given 
 
 If we run the application and click in the Column Headers, the rows will be sorted by that column:
 
-[![](outline-view-images/sort02.png "Example of sorted output")](outline-view-images/sort02.png#lightbox)
+[![Example of sorted output](outline-view-images/sort02.png)](outline-view-images/sort02.png#lightbox)
 
 <a name="Row_Selection" />
 
@@ -438,7 +438,7 @@ If we run the application and click in the Column Headers, the rows will be sort
 
 If you want to allow the user to select a single row, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Outline View in the **Interface Hierarchy** and uncheck the **Multiple** checkbox in the **Attribute Inspector**:
 
-[![](outline-view-images/select01.png "The Attribute Inspector")](outline-view-images/select01.png#lightbox)
+[![The Attribute Inspector](outline-view-images/select01.png)](outline-view-images/select01.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -460,7 +460,7 @@ This will allow the user to select any single row in the Outline View. Return `f
 
 If you want to allow the user to select a multiple rows, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Outline View in the **Interface Hierarchy** and check the **Multiple** checkbox in the **Attribute Inspector**:
 
-[![](outline-view-images/select02.png "The Attribute Inspector")](outline-view-images/select02.png#lightbox)
+[![The Attribute Inspector](outline-view-images/select02.png)](outline-view-images/select02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -482,7 +482,7 @@ This will allow the user to select any single row in the Outline View. Return `f
 
 If you want to allow the user to type a character with the Outline View selected and select the first row that has that character, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Outline View in the **Interface Hierarchy** and check the **Type Select** checkbox in the **Attribute Inspector**:
 
-[![](outline-view-images/type01.png "Editing the row type")](outline-view-images/type01.png#lightbox)
+[![Editing the row type](outline-view-images/type01.png)](outline-view-images/type01.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
@@ -510,7 +510,7 @@ The `GetNextTypeSelectMatch` method takes the given `searchString` and returns t
 
 If you want to allow the user to drag reorder columns in the Outline View, double-click the `Main.storyboard` file to open it for editing in Interface Builder. Select the Outline View in the **Interface Hierarchy** and check the **Reordering** checkbox in the **Attribute Inspector**:
 
-[![](outline-view-images/reorder01.png "The Attribute Inspector")](outline-view-images/reorder01.png#lightbox)
+[![The Attribute Inspector](outline-view-images/reorder01.png)](outline-view-images/reorder01.png#lightbox)
 
 If we give a value for the **Autosave** property and check the **Column Information** field, any changes we make to the table's layout will automatically be saved for us and restored the next time the application is run.
 
@@ -529,7 +529,7 @@ The `ShouldReorder` method should return `true` for any column that it want to a
 
 If we run the application, we can drag Column Headers around to reorder our columns:
 
-[![](outline-view-images/reorder02.png "Example of reordering columns")](outline-view-images/reorder02.png#lightbox)
+[![Example of reordering columns](outline-view-images/reorder02.png)](outline-view-images/reorder02.png#lightbox)
 
 <a name="Editing_Cells" />
 
@@ -591,7 +591,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 Now if we run the application, the user can edit the cells in the Table View:
 
-[![](outline-view-images/editing01.png "An example of editing cells")](outline-view-images/editing01.png#lightbox)
+[![An example of editing cells](outline-view-images/editing01.png)](outline-view-images/editing01.png#lightbox)
 
 <a name="Using_Images_in_Outline_Views" />
 

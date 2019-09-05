@@ -17,7 +17,7 @@ _Use non-affine transforms to rotate 2D objects in 3D space._
 
 One common application of non-affine transforms is simulating the rotation of a 2D object in 3D space:
 
-![](3d-rotation-images/3drotationsexample.png "A text string rotated in 3D space")
+![A text string rotated in 3D space](3d-rotation-images/3drotationsexample.png)
 
 This job involves working with three-dimensional rotations, and then deriving a non-affine `SKMatrix` transform that performs these 3D rotations.
 
@@ -404,7 +404,7 @@ public partial class Rotation3DPage : ContentPage
 
 When you experiment with the fourth slider, you'll notice that the different depth settings don't move the object further away from the viewer, but instead alter the extent of the perspective effect:
 
-[![](3d-rotation-images/rotation3d-small.png "Triple screenshot of the Rotation 3D page")](3d-rotation-images/rotation3d-large.png#lightbox "Triple screenshot of the Rotation 3D page")
+[![Triple screenshot of the Rotation 3D page")](3d-rotation-images/rotation3d-large.png#lightbox "Triple screenshot of the Rotation 3D page](3d-rotation-images/rotation3d-small.png)
 
 The **Animated Rotation 3D** also uses `SKMatrix44` to animate a text string in 3D space. The `textPaint` object set as a field is used in the constructor to determine the bounds of the text:
 
@@ -528,7 +528,7 @@ public class AnimatedRotation3DPage : ContentPage
 
 This 3D rotation is surrounded with several 2D transforms to move the center of rotation to the center of the screen, and to scale the size of the text string so that it is the same width as the screen:
 
-[![](3d-rotation-images/animatedrotation3d-small.png "Triple screenshot of the Animated Rotation 3D page")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple screenshot of the Animated Rotation 3D page")
+[![Triple screenshot of the Animated Rotation 3D page")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple screenshot of the Animated Rotation 3D page](3d-rotation-images/animatedrotation3d-small.png)
 
 ## Related Links
 

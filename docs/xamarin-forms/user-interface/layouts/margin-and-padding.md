@@ -22,7 +22,7 @@ Margin and padding are related layout concepts:
 
 The following diagram illustrates the two concepts:
 
-[![](margin-and-padding-images/margins-and-padding-sml.png "Margins and Padding Concepts")](margin-and-padding-images/margins-and-padding.png#lightbox "Margins and Padding Concepts")
+[![Margins and Padding Concepts")](margin-and-padding-images/margins-and-padding.png#lightbox "Margins and Padding Concepts](margin-and-padding-images/margins-and-padding-sml.png)
 
 Note that [`Margin`](xref:Xamarin.Forms.View.Margin) values are additive. Therefore, if two adjacent elements specify a margin of 20 pixels, the distance between the elements will be 40 pixels. In addition, margin and padding are additive when both are applied, in that the distance between an element and any content will be the margin plus padding.
 

@@ -181,7 +181,7 @@ table.Delegate = tableDelegate;
 When the above code is run and the user swipes left on a table row,
 the **Hi** button will be displayed instead of the **Delete** button that is displayed by default:
 
-[![](row-action-images/action01.png "The Hi button being displayed instead of the Delete button")](row-action-images/action01.png#lightbox)
+[![The Hi button being displayed instead of the Delete button](row-action-images/action01.png)](row-action-images/action01.png#lightbox)
 
 If the user taps the **Hi** button, `Hello World!` will be written out to the
 console in Visual Studio for Mac or Visual Studio when the application is run in the debug mode.

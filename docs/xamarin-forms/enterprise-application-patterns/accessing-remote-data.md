@@ -48,7 +48,7 @@ The `CatalogService` class is used to manage the data retrieval process from the
 
 Figure 10-1 shows the interaction of classes that read catalog data from the catalog microservice for displaying by the `CatalogView`.
 
-[![](accessing-remote-data-images/catalogdata.png "Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice")
+[![Retrieving data from the catalog microservice")](accessing-remote-data-images/catalogdata-large.png#lightbox "Retrieving data from the catalog microservice](accessing-remote-data-images/catalogdata.png)
 
 **Figure 10-1**: Retrieving data from the catalog microservice
 
@@ -153,7 +153,7 @@ The `BasketService` class is used to manage the data retrieval and update proces
 
 Figure 10-2 shows the interaction of classes that send the basket data displayed by the `BasketView`, to the basket microservice.
 
-[![](accessing-remote-data-images/basketdata.png "Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice")
+[![Sending data to the basket microservice")](accessing-remote-data-images/basketdata-large.png#lightbox "Sending data to the basket microservice](accessing-remote-data-images/basketdata.png)
 
 **Figure 10-2**: Sending data to the basket microservice
 
@@ -226,7 +226,7 @@ This method uses an instance of the `RedisBasketRepository` class to persist the
 
 Figure 10-3 shows the interactions of classes that delete basket data from the basket microservice, for the `CheckoutView`.
 
-![](accessing-remote-data-images/checkoutdata.png "Deleteing data from the basket microservice")
+![Deleteing data from the basket microservice](accessing-remote-data-images/checkoutdata.png)
 
 **Figure 10-3**: Deleting data from the basket microservice
 

@@ -15,7 +15,7 @@ ms.date: 11/25/2015
 
 [`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout) positions and sizes child elements proportional to its own size and position or by absolute values. Child views may be positioned and sized using proportional values or static values, and proportional and static values can be mixed.
 
-[![](absolute-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.Forms Layouts")](absolute-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts](absolute-layout-images/layouts-sml.png)
 
 This article will cover:
 
@@ -51,9 +51,9 @@ Because of the positioning model of `AbsoluteLayout`, the layout makes it relati
 
 Note in the following screenshot, the anchor of the box is a white dot. Notice the relationship between the anchor and the box as it moves through the layout:
 
-![](absolute-layout-images/anchor-start.png "Anchor at Start")
-![](absolute-layout-images/anchor-center.png "Anchor at Center")
-![](absolute-layout-images/anchor-end.png "Anchor at End")
+![Anchor at Start](absolute-layout-images/anchor-start.png)
+![Anchor at Center](absolute-layout-images/anchor-center.png)
+![Anchor at End](absolute-layout-images/anchor-end.png)
 
 <a name="Specifying_Values" />
 
@@ -109,7 +109,7 @@ Title="Absolute Layout Exploration">
 </ContentPage>
 ```
 
-![](absolute-layout-images/exploration.png "AbsoluteLayout Examples")
+![AbsoluteLayout Examples](absolute-layout-images/exploration.png)
 
 Note the following:
 
@@ -279,7 +279,7 @@ Title="AbsoluteLayout">
 
 The above code results in the following layout:
 
-![](absolute-layout-images/abs.png "Complex AbsoluteLayout")
+![Complex AbsoluteLayout](absolute-layout-images/abs.png)
 
 Notice that `AbsoluteLayout`s are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout.
 

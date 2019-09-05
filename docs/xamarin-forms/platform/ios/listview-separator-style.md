@@ -43,7 +43,7 @@ The `ListView.On<iOS>` method specifies that this platform-specific will only ru
 
 The result is that a specified [`SeparatorStyle`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific.SeparatorStyle) value is applied to the [`ListView`](xref:Xamarin.Forms.ListView), which controls the width of the separator between cells:
 
-![](listview-separator-style-images/listview-separatorstyle.png "ListView SeparatorStyle Platform-Specific")
+![ListView SeparatorStyle Platform-Specific](listview-separator-style-images/listview-separatorstyle.png)
 
 > [!NOTE]
 > Once the separator style has been set to `FullWidth`, it cannot be changed back to `Default` at runtime.

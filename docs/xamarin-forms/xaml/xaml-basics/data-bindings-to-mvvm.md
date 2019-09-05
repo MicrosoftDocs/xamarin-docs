@@ -56,7 +56,7 @@ In the **One-Shot DateTime** program, two of the children contain bindings to pr
 
 Of course, the big problem is that the date and time are set once when the page is first built, and never change:
 
-[![](data-bindings-to-mvvm-images/oneshotdatetime.png "View Displaying Date and Time")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "View Displaying Date and Time")
+[![View Displaying Date and Time")](data-bindings-to-mvvm-images/oneshotdatetime-large.png#lightbox "View Displaying Date and Time](data-bindings-to-mvvm-images/oneshotdatetime.png)
 
 A XAML file can display a clock that always shows the current time, but it needs some code to help out. When thinking in terms of MVVM, the Model and ViewModel are classes written entirely in code. The View is often a XAML file that references properties defined in the ViewModel through data bindings.
 
@@ -139,7 +139,7 @@ Notice how the `ClockViewModel` is set to the `BindingContext` of the `Label` us
 
 The `Binding` markup extension on the `Text` property of the `Label` formats the `DateTime` property. Here’s the display:
 
-[![](data-bindings-to-mvvm-images/clock.png "View Displaying Date and Time via ViewModel")](data-bindings-to-mvvm-images/clock-large.png#lightbox "View Displaying Date and Time via ViewModel")
+[![View Displaying Date and Time via ViewModel")](data-bindings-to-mvvm-images/clock-large.png#lightbox "View Displaying Date and Time via ViewModel](data-bindings-to-mvvm-images/clock.png)
 
 It’s also possible to access individual properties of the `DateTime` property of the ViewModel by separating the properties with periods:
 
@@ -289,7 +289,7 @@ The following XAML file contains a `BoxView` whose `Color` property is bound to 
 
 The binding on each `Label` is the default `OneWay`. It only needs to display the value. But the binding on each `Slider` is `TwoWay`. This allows the `Slider` to be initialized from the ViewModel. Notice that the `Color` property is set to `Aqua` when the ViewModel is instantiated. But a change in the `Slider` also needs to set a new value for the property in the ViewModel, which then calculates a new color.
 
-[![](data-bindings-to-mvvm-images/hslcolorscroll.png "MVVM using Two-Way Data Bindings")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM using Two-Way Data Bindings")
+[![MVVM using Two-Way Data Bindings")](data-bindings-to-mvvm-images/hslcolorscroll-large.png#lightbox "MVVM using Two-Way Data Bindings](data-bindings-to-mvvm-images/hslcolorscroll.png)
 
 ## Commanding with ViewModels
 
@@ -550,7 +550,7 @@ The following keypad is not as visually sophisticated as it could be. Instead, t
 
 The `Command` property of the first `Button` that appears in this markup is bound to the `DeleteCharCommand`; the rest are bound to the `AddCharCommand` with a `CommandParameter` that is the same as the character that appears on the `Button` face. Here’s the program in action:
 
-[![](data-bindings-to-mvvm-images/keypad.png "Calculator using MVVM and Commands")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "Calculator using MVVM and Commands")
+[![Calculator using MVVM and Commands")](data-bindings-to-mvvm-images/keypad-large.png#lightbox "Calculator using MVVM and Commands](data-bindings-to-mvvm-images/keypad.png)
 
 ### Invoking Asynchronous Methods
 
@@ -675,7 +675,7 @@ The XAML file for `MainPage` defines a `ListBox` whose `ItemsSource` property is
 
 The pages are shown in a scrollable list:
 
-[![](data-bindings-to-mvvm-images/mainpage.png "Scrollable list of pages")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Scrollable list of pages")
+[![Scrollable list of pages")](data-bindings-to-mvvm-images/mainpage-large.png#lightbox "Scrollable list of pages](data-bindings-to-mvvm-images/mainpage.png)
 
 The handler in the code-behind file is triggered when the user selects an item. The handler sets the `SelectedItem` property of the `ListBox` back to `null` and then instantiates the selected page and navigates to it:
 
