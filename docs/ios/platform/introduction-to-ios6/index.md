@@ -13,7 +13,7 @@ ms.date: 03/19/2017
 
 _iOS 6 includes a variety of new technologies for developing apps, which Xamarin.iOS 6 brings to C# developers._
 
-[![](images/ios6-large.jpg "The iOS 6 logo")](images/ios6-large.jpg#lightbox)
+[![The iOS 6 logo](images/ios6-large.jpg)](images/ios6-large.jpg#lightbox)
 
 With iOS 6 and Xamarin.iOS 6, developers now have a wealth of capability at
 their disposal to create iOS applications, including ones that target iPhone 5.

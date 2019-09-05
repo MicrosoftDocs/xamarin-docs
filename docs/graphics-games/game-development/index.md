@@ -120,7 +120,7 @@ FEZ:
 
 Bastion:
 
-![](images/image8.jpg "Bastion")
+![Bastion](images/image8.jpg)
 
 To start working with MonoGame, head over to our [MonoGame Guides](~/graphics-games/monogame/index.md).
 

@@ -20,23 +20,23 @@ ms.date: 03/23/2017
    section and choose the directory where you want
    to register the application (2)
 
-   [![](register-images/01.-active-directory-in-azure-portal-sml.jpg "section and choose the directory where you want to register the application")](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
+   [![section and choose the directory where you want to register the application](register-images/01.-active-directory-in-azure-portal-sml.jpg)](register-images/01.-active-directory-in-azure-portal.jpg#lightbox)
 
 3. Click **Add** to create new application, then
    select **Add an application my organization is developing**
 
-   [![](register-images/02.-add-new-application-sml.jpg "Add an application my organization is developing")](register-images/02.-add-new-application.jpg#lightbox)
+   [![Add an application my organization is developing](register-images/02.-add-new-application-sml.jpg)](register-images/02.-add-new-application.jpg#lightbox)
 
 4. On the next screen, give your app a name (eg. XAM-DEMO).
    Make sure you select **Native Client Application** as the type of application.
 
-   ![](register-images/03.-app-name.jpg "Make sure you select Native Client Application as the type of application")
+   ![Make sure you select Native Client Application as the type of application](register-images/03.-app-name.jpg)
 
 5. On the final screen, provide a **Redirect URI* that is unique
    to your application as it will return to this URI when
    authentication is complete.
 
-   ![](register-images/04.-app-redirect.jpg "On the final screen, provide a Redirect URI that is unique to your application as it will return to this URI when   authentication is complete")
+   ![On the final screen, provide a Redirect URI that is unique to your application as it will return to this URI when   authentication is complete](register-images/04.-app-redirect.jpg)
 
 6. Once the app is created, navigate to the **Configure** tab.
    Write down the **Client ID** which we’ll use in our application
@@ -45,7 +45,7 @@ ms.date: 03/23/2017
    Web API or Office365, which can be used by mobile application once
    authentication is complete.
 
-   ![](register-images/05.-configure.jpg "Also, on this screen you can give your mobile application access to Active Directory or add another application like Web API or Office365")
+   ![Also, on this screen you can give your mobile application access to Active Directory or add another application like Web API or Office365](register-images/05.-configure.jpg)
 
 ## Related Links
 
