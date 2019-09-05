@@ -92,7 +92,6 @@ Let's do the following:
 
 # [Visual Studio for Mac](#tab/macos)
 
-    
 1. Start a new **Single View tvOS App** in Visual Studio for Mac.
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it in the iOS Designer.
 1. Add a Image View, a Label and a Button to the existing view and configure them to look like the following: 
@@ -128,11 +127,9 @@ Let's do the following:
 
     [![](collection-views-images/collection11.png "Set the Identity to CityCell")](collection-views-images/collection11.png#lightbox)
 1. Save your changes.
-    
 
 # [Visual Studio](#tab/windows)
 
-    
 1. Start a new **Single View tvOS App** in Visual Studio.
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it in the iOS Designer.
 1. Add a Image View, a Label and a Button to the existing view and configure them to look like the following: 
@@ -166,7 +163,6 @@ Let's do the following:
 
     [![](collection-views-images/collection11vs.png "Set the Identity to CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Save your changes.
-    
 
 -----
 

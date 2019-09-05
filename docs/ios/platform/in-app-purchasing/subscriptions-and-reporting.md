@@ -75,10 +75,8 @@ From the bottom of the page, select **View or generate a shared secret**:
  [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
-   
-   
-   
- To use the shared secret, include it in the JSON payload that is sent to
+
+To use the shared secret, include it in the JSON payload that is sent to
 Apple’s servers when validating an in-app purchase receipt for an
 auto-renewable subscription, like this:
 
@@ -121,10 +119,8 @@ You’ll get back multiple transactions – the original purchase transaction
 plus a separate transaction for each period of time the subscription was
 renewed. You need to track the start dates and terms to understand what the
 validity period is.   
-   
-   
-   
- The SKPaymentTransaction object does NOT
+
+The SKPaymentTransaction object does NOT
 include the subscription term – you should use a different Product ID for each
 term and write code that can extrapolate the subscription period from the
 purchase date of the transaction.

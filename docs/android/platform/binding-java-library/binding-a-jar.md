@@ -167,7 +167,6 @@ API level 19):
 Finally, build the Bindings Library. Although some warning messages may be displayed,
 the Bindings Library project should build successfully and produce an output .DLL
 at the following location: **JarBinding/bin/Debug/JarBinding.dll**
-    
 
 ### Using the Bindings Library
 

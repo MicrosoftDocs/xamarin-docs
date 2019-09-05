@@ -18,7 +18,6 @@ the confirmation dialog and Apple ID login. Assuming the transaction then
 succeeds, StoreKit notifies the application code, which must store the
 transaction result and provide the user with access to their purchase.   
 
-   
  [![](store-kit-overview-and-retreiving-product-information-images/image14.png "StoreKit notifies the application code, which must store the transaction result and provide the user with access to their purchase")](store-kit-overview-and-retreiving-product-information-images/image14.png#lightbox)
 
 ## Classes
@@ -41,14 +40,10 @@ number of product Ids.
 
 The following diagram shows the relationships between the various StoreKit
 classes (abstract classes must be implemented in your application):   
-   
-   
-   
+
  [![](store-kit-overview-and-retreiving-product-information-images/image15.png "The relationships between the various StoreKit classes abstract classes must be implemented in the app")](store-kit-overview-and-retreiving-product-information-images/image15.png#lightbox)   
-   
-   
-   
- These classes are explained in more detail later in this
+
+These classes are explained in more detail later in this
 document.
 
 ## Testing
@@ -62,15 +57,10 @@ Note: StoreKit does not operate in iOS Simulator. When running your
 application in iOS Simulator, StoreKit logs a warning if your application
 attempts to retrieve the payment queue. Testing the store must be done on actual
 devices.   
-   
-   
-   
- Important: Do not sign in with your test account in
+
+Important: Do not sign in with your test account in
 the Settings application. You can use the Settings application to Sign Out of
 any existing Apple ID account, then you must wait to be prompted *within your In-App Purchase sequence* to login using a test Apple ID.   
-   
-   
-   
 
 If you attempt to sign-in to the real store with a test account, it will be
 automatically converted to a real Apple ID. That account will no longer be
@@ -113,10 +103,8 @@ logged-in as that user.
 
 The first step in selling an in-app purchase product is displaying it:
 retrieving the current price and description from the App Store for display.   
-   
-   
-   
- Regardless of which type of products an app sells (Consumable,
+
+Regardless of which type of products an app sells (Consumable,
 Non-Consumable or a type of Subscription), the process of retrieving product
 information for display is the same. The InAppPurchaseSample
 code that accompanies this article contains a project named *Consumables* that demonstrates how to retrieve production information
@@ -139,14 +127,10 @@ servers):
 The [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit) *Consumables* sample-code demonstrates how
 product information can be retrieved. The main screen of the sample displays
 information for two products that is retrieved from the App Store:   
-   
-   
-   
+
  [![](store-kit-overview-and-retreiving-product-information-images/image23.png "The main screen displays information products  retrieved from the App Store")](store-kit-overview-and-retreiving-product-information-images/image23.png#lightbox)   
-   
-   
-   
- The sample code to retrieve and display product information
+
+The sample code to retrieve and display product information
 is explained in more detail below.
 
 #### ViewController Methods
@@ -185,9 +169,7 @@ priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (
 }
 ```
 
-   
-   
- At the end of the `ViewWillAppear` method, call the `RequestProductData` method to initiate the StoreKit request. Once
+At the end of the `ViewWillAppear` method, call the `RequestProductData` method to initiate the StoreKit request. Once
 this request has been made, StoreKit will asynchronously contact Apple’s
 servers to get the information and feed it back to your app. This is achieved by
 the `SKProductsRequestDelegate` subclass
@@ -256,10 +238,8 @@ the application is running with – so when you are developing or testing your
 app the request will have access to every product configured in iTunes Connect
 (even those that have not yet been submitted or approved by Apple). When your
 application is in production, StoreKit requests will only return information for **Approved** products.   
-   
-   
-   
- The `ReceivedResponse` overridden method is called after Apple’s
+
+The `ReceivedResponse` overridden method is called after Apple’s
 servers have responded with data. Because this is called in the background, the
 code should parse out the valid data and use a notification to send the product
 information to any ViewControllers that are ‘listening’ for that
@@ -307,10 +287,8 @@ no product information is available):
 
 An `SKProductsRequest` may also return a list of invalid Product
 IDs. Invalid products are usually returned due to one of the following:   
-   
-   
-   
- **Product ID has been mistyped** – Only valid Product
+
+**Product ID has been mistyped** – Only valid Product
 IDs are accepted.   
    
  **Product has not been approved** –
@@ -375,20 +353,14 @@ buy5Button.SetTitle(String.Format(Buy, product.LocalizedPrice()), UIControlState
 
 Using two different iTunes test accounts (one for the American store and one
 for the Japanese store) results in the following screenshots:   
-   
-   
-   
+
  [![](store-kit-overview-and-retreiving-product-information-images/image25.png "Two different iTunes test accounts showing language specific results")](store-kit-overview-and-retreiving-product-information-images/image25.png#lightbox)   
-   
-   
-   
- Notice that the store affects the language that is used
+
+Notice that the store affects the language that is used
 for product information and price currency, while the device’s language
 setting affects labels and other localized content.   
-   
-   
-   
- Recall
+
+Recall
 that to use a different store test account you must **Sign Out** in
 the **Settings > iTunes and App Store** and re-start the application to sign-in
 with a different account. To change the device’s language go to **Settings > General > International > Language**.

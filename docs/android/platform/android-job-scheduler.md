@@ -72,7 +72,6 @@ All work performed by the Android Job Scheduler library must be done in a type t
 4. Override the `OnStartJob` method, adding the code to perform the work. Android will invoke this method on the main thread of the application to run the job. Work that will take longer that a few milliseconds should be performed on a thread to avoid blocking the application.
 5. When the work is done, the `JobService` must call the `JobFinished` method. This method is how `JobService` tells the `JobScheduler` that work is done. Failure to call `JobFinished` will result in the `JobService` putting unnecessary demands on the device, shortening the battery life. 
 6. It is a good idea to also override the `OnStopJob` method. This method is called by Android when the job is being shut down before it is finished and provides the `JobService` with an opportunity to properly dispose of any resources. This method should return `true` if it is necessary to reschedule the job, or `false` if it is not desireable to re-run the job.
-   
 
 The following code is an example of the simplest `JobService` for an application, using the TPL to asynchronously perform some work:
 
@@ -109,7 +108,6 @@ Xamarin.Android applications do not instantiate a `JobService` directly, instead
 
 - **JobId** &ndash; this is an `int` value that is used to identify a job to the `JobScheduler`. Reusing this value will update any existing jobs. The value must be unique for the application. 
 - **JobService** &ndash; this parameter is a `ComponentName` that explicitly identifies the type that the  `JobScheduler` should use to run a job. 
-  
 
 This extension method demonstrates how to create a `JobInfo.Builder` with an Android `Context`, such as an Activity:
 

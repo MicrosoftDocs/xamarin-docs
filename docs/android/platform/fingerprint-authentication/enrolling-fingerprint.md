@@ -48,8 +48,7 @@ To setup a screen lock, perform the following steps:
     ![Screen that prompts you to put your finger on the sensor](enrolling-fingerprint-images/testing-05.png)
 
     If you are using an Android device, complete the process by touching a finger to the scanner. 
-    
-    
+
 ### Simulating a Fingerprint Scan on the Emulator
 
 On an Android emulator, it is possible to simulate a fingerprint scan

@@ -372,7 +372,6 @@ Before we begin, follow through steps 1 – 8 above. In these steps we create ou
 3. Click on the Segue and give it the *Identifier* `SegueToPink`:
 
     [![](images/namesegue.png "Click on the Segue and give it the Identifier SegueToPink")](images/namesegue.png#lightbox)  
-    
 
 4. Finally, add the following ShouldPerformSegue method to the `MainViewController` class:
 

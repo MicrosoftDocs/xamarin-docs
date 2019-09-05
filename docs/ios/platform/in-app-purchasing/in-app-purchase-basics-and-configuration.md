@@ -242,10 +242,8 @@ number of supported languages. Each language can be added/edited in via a
 popup:
 
  [![](in-app-purchase-basics-and-configuration-images/image12.png "Each language can be added/edited in via a popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
-   
-   
-   
- When you display product information in your app, the localized
+
+When you display product information in your app, the localized
 text is available for you to display via StoreKit. The currency display must
 also be localized to show the correct symbol and decimal formatting – this
 formatting is covered later in the document.
@@ -265,10 +263,8 @@ choose some products to submit with it. The iTunes Connect portal will prompt
 you to do this, as shown in this screenshot:
 
  [![](in-app-purchase-basics-and-configuration-images/image13.png "The iTunes Connect portal will prompt you to submit some products as well")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
-   
-   
-   
- The application and the in-app purchases will be reviewed
+
+The application and the in-app purchases will be reviewed
 together, so that they all get approved at once (so that app doesn’t go into
 the store without any approved products!).
 
