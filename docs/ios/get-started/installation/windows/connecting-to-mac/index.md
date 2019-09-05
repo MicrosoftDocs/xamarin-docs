@@ -32,7 +32,7 @@ Pair to Mac enables the following development workflow:
   uses the build tools on that machine to compile and sign the iOS app.
 
 - There is no need to run a separate application on the Mac – Visual
-  Studio 2017 invokes Mac builds securely over SSH.
+  Studio 2019 invokes Mac builds securely over SSH.
 
 - Visual Studio 2019 is notified of changes as soon as they happen. For
   example, when an iOS device is plugged in to the Mac or becomes available
