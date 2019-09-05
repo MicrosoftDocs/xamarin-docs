@@ -58,4 +58,3 @@ The following macOS frameworks are supported by Xamarin.Mac:
 - StoreKit 
 - VideoToolbox
 - WebKit
-

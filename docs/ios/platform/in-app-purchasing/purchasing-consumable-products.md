@@ -446,4 +446,3 @@ will see a message that **In-app purchases are not allowed**
  Real-world applications may take a different approach to handling the
 restriction, such as hiding the buttons altogether and perhaps offering a more
 detailed message than the alert that StoreKit shows automatically.
-

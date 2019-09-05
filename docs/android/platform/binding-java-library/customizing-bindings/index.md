@@ -46,4 +46,3 @@ explain how to modify this metadata to address these issues:
 
 - [Naming Parameters with Javadoc](~/android/platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md)
     explains how to recover parameter names in a Java Binding Project by using Javadoc produced from the bound Java project.
-

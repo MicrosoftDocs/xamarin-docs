@@ -46,4 +46,3 @@ properly named.
 
 This article covered how use Javadoc in a Java Binding Project to 
 provide meaning parameter names for bound APIs. 
-

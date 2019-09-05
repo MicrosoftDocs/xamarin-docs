@@ -44,4 +44,3 @@ Xamarin.Android ships with several assemblies. Just as Silverlight is
 an extended subset of the desktop .NET assemblies, Xamarin.Android is 
 also an extended subset of several Silverlight and desktop .NET 
 assemblies. 
-

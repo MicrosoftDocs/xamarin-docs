@@ -392,4 +392,3 @@ setting affects labels and other localized content.
 that to use a different store test account you must **Sign Out** in
 the **Settings > iTunes and App Store** and re-start the application to sign-in
 with a different account. To change the device’s language go to **Settings > General > International > Language**.
-

@@ -25,4 +25,3 @@ Please note the most important thing to check for is this file:
 No matter the above results, if that file exists, the aforementioned spyware/malware issue is present on your computer.  
 
 The following link has the steps to remove this spyware/malware: [http://www.thesafemac.com/arg-genieo/](http://www.thesafemac.com/arg-genieo/)  
-

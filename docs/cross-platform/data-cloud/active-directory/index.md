@@ -36,4 +36,3 @@ Once you have added Active Directory authentication
 
 Learn how to access the [Graph API](~/cross-platform/data-cloud/active-directory/graph.md)
   using Xamarin (also covered in our [blog](https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/)).
-

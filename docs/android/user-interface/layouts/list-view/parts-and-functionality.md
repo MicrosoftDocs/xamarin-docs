@@ -90,4 +90,3 @@ The purpose of each class is described below:
 This document contains simple examples that use an `ArrayAdapter` as
 well as more complex examples that require custom implementations of
 `BaseAdapter` or `CursorAdapter`.
-

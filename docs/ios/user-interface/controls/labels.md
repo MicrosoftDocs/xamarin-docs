@@ -96,4 +96,3 @@ Which displays the text like this:
 ![Highlight and Shadow set on text](labels-images/image4.png)
 
 For more information on changing the font of a UILabel, refer to the [Change The Font](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/change_the_font) recipe.
-

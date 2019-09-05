@@ -70,4 +70,3 @@ ld: symbol(s) not found for architecture x86_64
 
 To build and run successfully, update these dependencies to 64-bit and 
 recompile your app.
-

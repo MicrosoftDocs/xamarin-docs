@@ -32,4 +32,3 @@ This is most commonly resolved by increasing the Java Heap Size for your Xamarin
 4. Rebuild the project.  
 
 ![Screenshot of the Visual Studio for Mac Project Options](maps-compiletodalvik-error-images/xsjavaheap.png "Android Build Options in Visual Studio for Mac")
-

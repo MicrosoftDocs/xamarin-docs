@@ -116,4 +116,3 @@ to generate a readable ACW/class name.
 _The ACW name must be used in the `adb` command above_.
 Renaming/refactoring the C# class will thus require modifying the
 `RunTests` command to use the correct ACW name.
-

@@ -197,4 +197,3 @@ The **Microsoft.Bcl.Build.targets** file that is added to the
   extensions during deployment. You can track the [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
   A possible workaround is to edit the .csproj file and manually
   move the **Microsoft.Bcl.Build.targets** to be the last element.
-

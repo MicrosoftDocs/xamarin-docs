@@ -135,4 +135,3 @@ the app:
 
 See also the Android Developer site's 
 [manual packging instructions](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually).
-

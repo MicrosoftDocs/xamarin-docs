@@ -38,4 +38,3 @@ You can also quickly receive documentation for a hint using the `sharpie verify-
 ```csharp
 sharpie verify-docs InferredFromPreceedingTypedef
 ```
-

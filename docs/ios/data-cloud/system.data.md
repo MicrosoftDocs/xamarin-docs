@@ -168,4 +168,3 @@ anything using [DataTable](xref:System.Data.DataTable) is unlikely to work.
 ## Data Binding
 
 Data Binding is not supported at this time.
-

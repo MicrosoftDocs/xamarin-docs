@@ -87,4 +87,3 @@ This screenshot is the **Watch App's** Info.plist file.
 
 The deployment target for the Watch App can be
   different from the Watch Extension and iOS App.
-

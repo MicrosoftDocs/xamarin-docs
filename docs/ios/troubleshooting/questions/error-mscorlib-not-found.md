@@ -18,4 +18,3 @@ ms.date: 04/03/2018
 ```
 
 This issue occurs when the *hidden* `.monotouch-32` and `.monotouch-64` folders are missing from the `.xcarchive` for signing / IPA creation, triggering the runtime error.
-

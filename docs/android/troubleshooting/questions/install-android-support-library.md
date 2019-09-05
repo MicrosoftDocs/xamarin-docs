@@ -190,4 +190,3 @@ after utilizing the above information, please see
 Xamarin?](~/cross-platform/troubleshooting/support-options.md) for
 information on contact options, suggestions, as well as how to file a
 new bug if needed.
-

@@ -379,4 +379,3 @@ here:
 
 Therefore, when a project is closed and reopened, all the conflicts will
 still be there &ndash; even the ones that have been ignored.
-

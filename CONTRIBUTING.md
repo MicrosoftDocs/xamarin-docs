@@ -70,4 +70,3 @@ Below is a short list of guiding rules that you should keep in mind when you are
 
 > [!NOTE]
 > You might notice that some of the topics are not currently following all the guidelines specified here and on the [style guide](contributing-guidelines/template.md) as well. We're working towards achieving consistency throughout the site. 
-

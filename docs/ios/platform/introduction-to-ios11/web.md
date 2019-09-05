@@ -99,4 +99,3 @@ config.SetUrlSchemeHandler(new MyHandler(), "xamarin-asset");
 webView = new WKWebView (View.Frame, config);
 webView.LoadRequest (new NSUrlRequest("xamarin-asset://xamarin.com"));
 ```
-

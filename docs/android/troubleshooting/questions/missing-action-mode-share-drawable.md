@@ -28,4 +28,3 @@ Stack Overflow Reference: [https://stackoverflow.com/questions/26431676/appcompa
 ## See Also
 
 - [Which Android SDK packages should I install?](~/android/troubleshooting/questions/install-android-sdk-packages.md)
-

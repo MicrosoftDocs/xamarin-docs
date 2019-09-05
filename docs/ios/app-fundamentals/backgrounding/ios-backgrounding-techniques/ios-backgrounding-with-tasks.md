@@ -157,4 +157,3 @@ Prior to iOS 7, uploading or downloading files in the background was unreliable.
 Transfers initiated using the Background Transfer Service are managed by the operating system and provide APIs to handle authentication and errors. Because transfers are not bound by an arbitrary time limit, they can be used to upload or download large files, auto-update content in the background, and more. Refer to the [Background Transfer Walkthrough](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/background-transfer-walkthrough.md) for details on how to implement the Service.
 
 The Background Transfer Service is often paired with Background Fetch or Remote Notifications to help applications refresh content in the background. In the next two sections, we introduce the concept of registering entire applications to run in the background on both iOS 6 and iOS 7.
-

@@ -252,4 +252,3 @@ The static registrar can't resolve an exported member in a generic
 type at build time as it usually does, it has to be looked up at
 runtime. This means    that invoking such a method from Objective-C
 is slightly slower than invoking members from non-generic classes.
-

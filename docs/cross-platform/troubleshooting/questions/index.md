@@ -49,4 +49,3 @@ Jenkins is an open-source CI suite; because of this many issues that are directl
 
 ### [What project settings are required for the debugger?](debugger-settings.md)
 In order for the debugger to work as expected (hit breakpoints, display debug logs, etc.), developer instrumentation and debug information display must both be enabled. This guide details how to find and activate these settings.
-

@@ -29,4 +29,3 @@ Windows computer.
 
 Discusses how to use the Inspector to attach to a app while it is being run from
 the IDE, allowing its state to be explored and manipulated without pausing.
-

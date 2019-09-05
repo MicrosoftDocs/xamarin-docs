@@ -89,4 +89,3 @@ library project. We built the Android library project in Eclipse, then
 we created a zip file from the **bin** and **res** folders of the 
 Android library project. Next, we used this zip to create a 
 Xamarin.Android Java Binding project. 
-

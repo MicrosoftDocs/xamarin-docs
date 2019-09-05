@@ -111,4 +111,3 @@ operations on the data, such as:
 This document contains an example that uses a system-provided
 `ContentProvider`, as well as a simple read-only example that
 implements a custom `ContentProvider`.
-

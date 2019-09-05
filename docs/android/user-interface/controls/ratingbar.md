@@ -56,4 +56,3 @@ rating, with the [`RatingBar`](xref:Android.Widget.RatingBar) widget.
     message displays the new rating.
 
 3. Run the application.
-

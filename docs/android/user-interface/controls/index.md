@@ -152,4 +152,3 @@ and right through pages of data.
 viewing web pages (or even develop a complete browser).
 
 ![Example Web View](images/web-view.png)
-

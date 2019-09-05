@@ -116,4 +116,3 @@ Table Views have support for drag and drop in iOS 11. For more information, see 
 - [Updated App Store Product Page (Apple)](https://developer.apple.com/app-store/product-page/)
 - [Designing for iPhone X (Apple) (video)](https://developer.apple.com/videos/play/fall2017/801/)
 - [Updating Your App for iOS 11 (WWDC) (video)](https://developer.apple.com/videos/play/wwdc2017/204/)
-

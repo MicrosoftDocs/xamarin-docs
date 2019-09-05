@@ -148,4 +148,3 @@ request.Headers.Authorization =
 var response = await client.SendAsync(request);
 var content = await response.Content.ReadAsStringAsync();
 ```
-

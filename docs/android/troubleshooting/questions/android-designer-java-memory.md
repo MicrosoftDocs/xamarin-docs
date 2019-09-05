@@ -120,4 +120,3 @@ The following property names correspond to the indicated java
 10. Restart Visual Studio for Mac and reopen your solution.
 
 -----
-

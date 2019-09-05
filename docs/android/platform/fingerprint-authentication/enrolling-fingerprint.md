@@ -75,4 +75,3 @@ After the fingerprint scan is complete, Android will notify you that the fingerp
 ## Summary 
 
 This guide covered how to setup a screen lock and enroll a fingerprint on an Android device or in an Android emulator. 
-

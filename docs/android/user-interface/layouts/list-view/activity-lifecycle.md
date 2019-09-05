@@ -56,4 +56,3 @@ recreated as a result of configuration changes:
 The Activity should then override `OnConfigurationChanged` to respond
 to those changes appropriately. For more details on how to handle
 configuration changes see the documentation.
-

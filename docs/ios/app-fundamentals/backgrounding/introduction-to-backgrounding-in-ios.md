@@ -74,4 +74,3 @@ Users can change this setting by navigating to **Settings > General > Background
 Developers can check the Background Refresh Application status with the `BackgroundRefreshStatus` API. For an example, refer to the [Check Background Refresh Setting recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
 
 We've covered the basics of the iOS Application Lifecycle, and features for controlling the Application Lifecycle. Next, let's see the iOS Application Lifecycle in action.
-

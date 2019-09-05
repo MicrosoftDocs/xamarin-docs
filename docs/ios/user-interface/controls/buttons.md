@@ -146,4 +146,3 @@ respectively):
 For more information about working with custom buttons, refer to the
 [Use an image for a button](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button)
 recipe.
-

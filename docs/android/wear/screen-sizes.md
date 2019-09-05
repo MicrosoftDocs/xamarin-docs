@@ -96,4 +96,3 @@ It will render like this for a round screen:
 
 [Fullscreen apps for Android Wear](https://www.youtube.com/watch?v=naf_WbtFAlY) from
 [developers.google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
-

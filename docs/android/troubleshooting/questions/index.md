@@ -121,4 +121,3 @@ updating the Android Resource.designer.cs) to fail. As of the 5.1.4
 stable release on July 15th, this bug has been fixed; but in many cases
 the project file has to be repaired manually, as described in this
 guide.
-
