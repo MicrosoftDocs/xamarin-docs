@@ -283,7 +283,6 @@ Let's call this new Storyboard **MainStoryboard** , as illustrated below:
 
 There are a few important steps to note when adding a Storyboard to a previously non-storyboard file, which are covered in the [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) guide. These are:
 
- 
 1. Add your Storyboard name to the **Main Interface** section of the `Info.plist`:
 
     [![](creating-tabbed-applications-images/project-options.png "Set the Main Interface to MainStoryboard")](creating-tabbed-applications-images/project-options.png#lightbox)
@@ -361,7 +360,7 @@ Delete these new View controllers by selecting the black bar at the bottom and p
 In our Storyboard, we can use Segues to handle the transitions between the TabBarController and our View Controllers. After interacting with the Initial View, we want to load it into the TabBarController presented to the user. Let's set this up in the designer.
 
 **Ctrl-Click** and **Drag** from the button to the TabBarController. On mouse-up, a context menu will appear. We want to use a modal segue. 
- 
+
 To set up each of our tabs, **Ctrl-Click** from the TabBarController to each of our View Controllers in order from one to three, and select the Relationship **Tab** from the context menu, as illustrated below:
 
 [![](creating-tabbed-applications-images/context-menu.png "Select the Tab Relationship")](creating-tabbed-applications-images/context-menu.png#lightbox)

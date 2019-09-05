@@ -894,16 +894,16 @@ if (presentationPopover!=null) {
 Here is an example of how the code above would display a Document Picker when run on an iPhone device:
 
 1. The user starts the application and the main interface is displayed:   
- 
+
     [![](document-picker-images/image33.png "The main interface is displayed")](document-picker-images/image33.png#lightbox)
 1. The user taps the **Action** Button at the top of the screen and is asked to select a **Document Provider** from the list of available providers:   
- 
+
     [![](document-picker-images/image34.png "Select a Document Provider from the list of available providers")](document-picker-images/image34.png#lightbox)
 1. The **Document Picker View Controller** is displayed for the selected **Document Provider**:   
- 
+
     [![](document-picker-images/image35.png "The Document Picker View Controller is displayed")](document-picker-images/image35.png#lightbox)
 1. The user taps on a **Document Folder** to display its contents:   
- 
+
     [![](document-picker-images/image36.png "The Document Folder contents")](document-picker-images/image36.png#lightbox)
 1. The user selects a **Document** and the **Document Picker** is closed.
 1. The main interface is redisplayed, the **Document** is loaded from the external Container and its contents displayed.
@@ -1004,10 +1004,10 @@ if (Bookmark != null) {
 The Document Picker View Controller features two different modes of operation:
 
 1. **Open Mode** – In this mode, when the user selects and external Document, the Document Picker will create a Security Scoped Bookmark in the Application Container.   
- 
+
     [![](document-picker-images/image37.png "A Security Scoped Bookmark in the Application Container")](document-picker-images/image37.png#lightbox)
 1. **Import Mode** – In this mode, when the user selects and external Document, the Document Picker will not create a Bookmark, but instead, copy the file into a Temporary Location and provide the application access to the Document at this location:   
- 
+
     [![](document-picker-images/image38.png "The Document Picker will copy the file into a Temporary Location and provide the application access to the Document at this location")](document-picker-images/image38.png#lightbox)   
  Once the application terminates for any reason, the Temporary Location is emptied and the file removed. If the application needs to maintain access to the file, it should make a copy and place it in its Application Container.
 

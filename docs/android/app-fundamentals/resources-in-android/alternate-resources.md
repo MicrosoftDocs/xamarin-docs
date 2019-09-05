@@ -34,13 +34,12 @@ screen density, screen size, and orientation:
 # [Visual Studio](#tab/windows)
 
 ![Alternate resources](alternate-resources-images/alternate-resources-vs.png)
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Alternate resources](alternate-resources-images/alternate-resources-xs.png)
- 
+
 -----
- 
 
 The following rules apply when adding qualifiers to a resource type:
 

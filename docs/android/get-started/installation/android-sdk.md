@@ -61,7 +61,6 @@ several JDK alternatives to choose from:
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
 
- 
 ## SDK Manager 
 
 To start the SDK Manager in Visual Studio, click **Tools > Android >
@@ -217,11 +216,11 @@ several JDK alternatives to choose from:
 
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
- 
+
 ## SDK Manager 
 
 To start the SDK Manager in Visual Studio for Mac, click **Tools > SDK Manager**:
- 
+
 [![Location of the Android SDK Manager menu item](android-sdk-images/mac/01-sdk-manager-menu-item-m75-sml.png)](android-sdk-images/mac/01-sdk-manager-menu-item-m75.png#lightbox)
 
 The **Android SDK Manager** opens in the **Preferences window**, which
@@ -344,7 +343,6 @@ and tools to the default selection.
 
 -----
 
- 
 ## Summary
 
 This guide explained how to install and use the Xamarin Android SDK

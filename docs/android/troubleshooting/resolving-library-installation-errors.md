@@ -24,8 +24,6 @@ guide describes the most common support library installation errors and
 provides the steps to work around these issues and get your app project 
 building again. 
 
- 
- 
 ## Errors While Downloading m2Repository
 
 You may see **m2repository** errors when referencing a NuGet package of

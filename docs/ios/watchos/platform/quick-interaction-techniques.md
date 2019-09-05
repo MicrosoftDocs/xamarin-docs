@@ -93,7 +93,7 @@ Apple suggest the following when working with Gesture Recognizers in watchOS 3:
 - Some gesture take precedence over other gesture types, such as:
   - Scrolling
   - Force Touch
- 
+
 ### Digital Crown Rotation
 
 By implementing Digital Crown Support in their watchOS 3 apps, a developer can provide increased navigation speed and precision interactions for their users.

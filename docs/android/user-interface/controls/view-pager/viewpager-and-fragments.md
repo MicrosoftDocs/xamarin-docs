@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement a swipeable UI with ViewPager, using Fragments as the data pages._
 
- 
 ## Overview
 
 `ViewPager` is often used in conjunction with fragments so that it is 

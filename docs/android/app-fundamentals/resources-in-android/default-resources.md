@@ -51,7 +51,7 @@ A complete list of resource types is provided below:
    special resizable bitmaps known as
    [Nine-Patches](https://developer.android.com/guide/topics/graphics/2d-graphics.html#nine-patch),
    state lists, generic shapes defined in XML, etc.
- 
+
 - **layout** &ndash; XML files that describe a user interface layout,
    such as an activity or a row in a list.
 

@@ -65,7 +65,7 @@ created/accessed via iTunes Connect.
 From the iTunes Connect home page select **My Apps**:   
    
  [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
- 
+
 Select an application and click on the **In-App Purchases** tab:
 
 [![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)

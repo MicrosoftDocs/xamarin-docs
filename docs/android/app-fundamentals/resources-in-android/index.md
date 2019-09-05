@@ -48,7 +48,7 @@ Resources is created, along with some subdirectories:
 In the image above, the application resources are organized according
 to their type into these subdirectories: images will go in the
 **drawable** directory; views go in the **layout** subdirectory, etc.
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Resources folder and contents](images/resources-folder-xs.png)
@@ -56,7 +56,7 @@ to their type into these subdirectories: images will go in the
 In the image above, the application resources are organized according
 to their type into these subdirectories: images will go in the
 **mipmap** directory; views go in the **layout** subdirectory, etc.
- 
+
 -----
 
 There are two ways to access these resources in a Xamarin.Android

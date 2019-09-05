@@ -225,7 +225,7 @@ This code changes the `Position` of the layer by creating a path that is then us
 The following screenshots show the layer containing the image animating through the specified path:
 
  ![](core-animation-images/12-explicit-animation.png "This screenshot shows the layer containing the image animating through the specified path")
- 
+
 ## Summary
 
 In this article we looked at the animation capabilities provided via the *Core Animation* frameworks. We examined Core Animation, showing both how it powers animations in UIKit, and how it can be used directly for lower-level animation control.

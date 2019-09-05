@@ -868,7 +868,6 @@ be manually restarted. For more information about this Android policy, see
 and this 
 [stack overflow post](https://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
- 
 ## Summary
 
 This walkthrough detailed the steps for implementing remote 

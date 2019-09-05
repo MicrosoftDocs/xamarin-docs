@@ -232,15 +232,13 @@ NavigationManager.2DSignNextManueverEventArgs
 This is not a legal C# class name. To correct this problem, the binding
 author must use the `argsType` attribute and provide a valid C# name
 for the `EventArgs` subclass:
- 
+
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
     interface[@name='NavigationManager.Listener']/
     method[@name='on2DSignNextManeuver']" 
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
-
- 
 
 ## Supported Attributes
 

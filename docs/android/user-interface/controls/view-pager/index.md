@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement gestural navigation with ViewPager, with and without Fragments. It also describes how to add page indicators using PagerTitleStrip and PagerTabStrip._
 
- 
 ## Overview
 
 A common scenario in app development is the need to provide users with 
@@ -66,7 +65,6 @@ To use `ViewPager` in your app project, you must install the
 package. For more information about installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
- 
 ## Architecture
 
 Three components are used for implementing gestural navigation

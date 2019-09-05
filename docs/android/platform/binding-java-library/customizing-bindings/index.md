@@ -14,7 +14,7 @@ ms.date: 09/25/2017
 _You can customize an Xamarin.Android binding by editing the metadata that controls the binding process. These manual modifications are often necessary for resolving build errors and for shaping the resulting API so that it is more consistent with C#/.NET. These guides explain the structure of this metadata, how to modify the metadata, and how to use JavaDoc to recover the names of method parameters._
 
 ## Overview
- 
+
 Xamarin.Android automates much of the binding process; however, in some
 cases manual modification is required to address the following issues:
 
@@ -46,6 +46,4 @@ explain how to modify this metadata to address these issues:
 
 - [Naming Parameters with Javadoc](~/android/platform/binding-java-library/customizing-bindings/naming-parameters-with-javadoc.md)
     explains how to recover parameter names in a Java Binding Project by using Javadoc produced from the bound Java project.
-
- 
 

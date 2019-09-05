@@ -51,7 +51,6 @@ required. For an overview of Java library binding in general (with a
 basic code example), see 
 [Binding a Java Library](~/android/platform/binding-java-library/index.md). 
 
- 
 ## Walkthrough
 
 In the following walkthrough, we'll create a Bindings Library for 
@@ -258,8 +257,7 @@ the following screenshot:
 
 Congratulations! You've successfully bound a Java library .JAR and used it in your 
 Xamarin.Android app.
- 
- 
+
 ## Summary
 
 In this walkthrough, we created a Bindings Library for a third-party 

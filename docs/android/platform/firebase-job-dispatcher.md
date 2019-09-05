@@ -101,7 +101,7 @@ public class DemoJob : JobService
 ### Creating a FirebaseJobDispatcher
 
 Before any work can be scheduled, it is necessary to create a `Firebase.JobDispatcher.FirebaseJobDispatcher` object. The `FirebaseJobDispatcher` is responsible for scheduling a `JobService`. The following code snippet is one way to create an instance of the `FirebaseJobDispatcher`: 
- 
+
  ```csharp
 // This is the "Java" way to create a FirebaseJobDispatcher object
 IDriver driver = new GooglePlayDriver(context);
@@ -156,7 +156,7 @@ The value returned by `FirebaseJobDispatcher.Schedule` will be one of the follow
 - `FirebaseJobDispatcher.ScheduleResultNoDriverAvailable` &ndash; An invalid `IDriver` was used or the `IDriver` was somehow unavailable. 
 - `FirebaseJobDispatcher.ScheduleResultUnsupportedTrigger` &ndash; The `Trigger` was not supported.
 - `FirebaseJobDispatcher.ScheduleResultBadService` &ndash; The service is not configured correctly or is unavailable.
- 
+
 ### Configuring a job
 
 It is possible to customize a job. Examples of how a job may be customized include the following:
@@ -236,7 +236,7 @@ The default `JobTrigger` for a job is represented by the value `Trigger.Now`, wh
 #### Setting a RetryStrategy
 
 The `Firebase.JobDispatcher.RetryStrategy` is used to specify how much of a delay a device should use before trying to re-run a failed job. A `RetryStrategy` has a _policy_, which defines what time-base algorithm will be used to re-schedule the failed job, and an execution window that specifies a window in which the job should be scheduled. This _rescheduling window_ is defined by two values. The first value is the number of seconds to wait before rescheduling the job (the _initial backoff_ value), and the second number is the maximum number of seconds before the job must run (the _maximum backoff_ value). 
- 
+
 The two types of retry policies are identified by these int values:
 
 - `RetryStrategy.RetryPolicyExponential` &ndash; An _exponential backoff_  policy will increase the initial backoff value exponentially after each failure. The first time a job fails, the library will wait the _initial interval that is specified before rescheduling the job &ndash; example 30 seconds. The second time the job fails, the library will wait at least 60 seconds before trying to run the job. After the third failed attempt, the library will wait 120 seconds, and so on. The default `RetryStrategy` for the Firebase Job Dispatcher library is represented by the `RetryStrategy.DefaultExponential` object. It has an initial backoff of 30 seconds and a maximum backoff of 3600 seconds.

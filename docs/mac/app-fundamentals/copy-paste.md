@@ -598,7 +598,7 @@ namespace MacCopyPaste
 Again, we get the current, topmost window and use its `ImageDocument` class instance to see if the required image data exists. Then we use the `MenuWillHighlightItem` method to enable or disable each item based on this state.
 
 Edit the **AppDelegate.cs** file and make the `DidFinishLaunching` method look like the following:
- 
+
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {

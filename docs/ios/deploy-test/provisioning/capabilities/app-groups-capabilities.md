@@ -68,7 +68,7 @@ Do the following:
 12. Repeat these steps for any Apps (or Extensions) that will be using the App Group.
 
 ## Next Steps
- 
+
 The list below describes additional steps that may need to be taken:
 
 * Use the framework namespace in your app.

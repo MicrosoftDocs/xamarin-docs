@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement a swipeable UI with ViewPager and PagerTabStrip, using Views as the data pages (a subsequent guide covers how to use Fragments for the pages)._
 
- 
 ## Overview
 
 This guide is a walkthrough that provides a step-by-step demonstration 
@@ -446,7 +445,6 @@ and run the app again to see how it looks with `PagerTitleStrip`:
 Note that the underline is removed when you convert to 
 `PagerTitleStrip`. 
 
- 
 ## Summary
 
 This walkthrough provided a step-by-step example of how to build a 

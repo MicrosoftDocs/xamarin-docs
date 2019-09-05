@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _The Toolbar is an action bar component that provides more flexibility than the default action bar: it can be placed anywhere in the app, its size can be changed, and it can use a color scheme that is different from the app's theme. Also, each app screen can have multiple Toolbars._
 
- 
 ## Overview
 
 A key design element of any Android activity is an *action bar*. The 
@@ -82,8 +81,6 @@ This guide covers the most commonly-used `Toolbar` scenarios:
     (referred to as *AppCompat* in the rest of this guide) to deploy 
     `Toolbar` on earlier versions of Android. 
 
- 
- 
 ## Requirements
 
 `Toolbar` is available on Android 5.0 Lollipop (API 21) and later. 

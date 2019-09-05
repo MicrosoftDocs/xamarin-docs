@@ -247,7 +247,6 @@ Because your private key is required to sign the pass, this process should
 only be done on a secure server that you control. DO NOT distribute your keys to
 try and generate passes in an application.
 
- 
 ## Configuration and Setup
 
 This section contains instructions to help setup your provisioning details

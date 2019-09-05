@@ -81,7 +81,7 @@ login with a special test account (created in iTunes Connect) that is linked to
 the test store. To sign out of the current account visit **Settings > iTunes and App Store** as shown here:
 
  [![](store-kit-overview-and-retreiving-product-information-images/image16.png "To sign out of the current account visit Settings iTunes and App Store")](store-kit-overview-and-retreiving-product-information-images/image16.png#lightbox)
- 
+
 then sign in with a test account *when requested by StoreKit within your app*:
 
 To create test users in iTunes Connect click on **Users and Roles**

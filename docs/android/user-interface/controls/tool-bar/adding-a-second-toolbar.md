@@ -87,7 +87,6 @@ the app displays a blank second toolbar at the bottom of the screen:
 
 [![Screenshot of app with yellow second toolbar at the bottom of the screen](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
- 
 ## Add Edit Menu Items 
 
 This section explains how to add edit menu items to the bottom 

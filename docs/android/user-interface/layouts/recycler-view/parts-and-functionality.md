@@ -132,7 +132,6 @@ item-layout file, it also creates a corresponding view holder. The view
 holder uses `FindViewById` to get references to the views inside the
 inflated item-layout file. These references are used to load new data
 into the views every time the layout is recycled to show new data.
- 
 
 ### The Layout Manager
 

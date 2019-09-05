@@ -57,14 +57,14 @@ Additionally, you can convert System.Drawing.Color to the platform specific colo
 
 ```csharp
 var system = System.Drawing.Color.FromArgb(255, 52, 152, 219);
- 
+
 // Extension to convert to Android.Graphics.Color, UIKit.UIColor, or Windows.UI.Color
 var platform = system.ToPlatformColor();
 ```
 
 ```csharp
 var platform = new Android.Graphics.Color(52, 152, 219, 255);
- 
+
 // Back to System.Drawing.Color
 var system = platform.ToSystemColor();
 ```

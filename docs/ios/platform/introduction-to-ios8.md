@@ -44,7 +44,7 @@ With HomeKit, third-party apps and Siri can discover accessories and add them to
 The diagram below shows the basic hierarchy of the configuration of HomeKit accessories:
 
 ![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
- 
+
 To get started with HomeKit, developers will need to make sure that their provisioning profile has the HomeKit service selected. Apple has also provided developers with a HomeKit simulator add-in for Xcode. This can be found in the [Apple Developer Center](https://developer.apple.com/downloads/index.action), under `Hardware IO Tools for Xcode`. 
 
 For more information, please see our [HomeKit](~/ios/platform/homekit.md) guide.
@@ -66,7 +66,7 @@ The first step in creating an App Extension is to define the correct extension p
 In the **New Project** dialog navigate to **C#** > **iOS** > **Unified API** > **Extensions**, as illustrated in the screenshot below:
 
 ![](introduction-to-ios8-images/image2.png "Creating a new extension")
- 
+
 The New Project dialog provides seven new project templates for creating App Extensions, and are discussed below. Notice that many of the extensions relate to other new APIs in iOS, such as Document Picker:
 
 - **Action** – This allows developers to create unique custom action buttons allowing users to performs certain tasks
@@ -117,7 +117,7 @@ Every device is defined by a Size Class, in both the vertical and the horizontal
 If the two concepts are used together, the result is a 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations, as seen in the following diagram:
 
 ![](introduction-to-ios8-images/image3.png "A diagram representing the 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations")
- 
+
 For more information about size classes, refer to the [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md).
 
 ## Photo Kit

@@ -31,11 +31,11 @@ These articles will take a comprehensive look at working with tables, including:
  [Customizing a Table's Appearance](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
  [Editing](~/ios/user-interface/controls/tables/editing.md)
- 
+
  [Row Actions](~/ios/user-interface/controls/tables/row-action.md)
 
  [Creating Tables in a Storyboard](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
- 
+
  [Auto-Sizing Row Height](~/ios/user-interface/controls/tables/autosizing-row-height.md)
 
 ## Related Links

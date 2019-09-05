@@ -51,13 +51,13 @@ You can view all the breakpoints that have been set in your code by going to the
 [![](debugging-in-xamarin-ios-images/image0a.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  If the Breakpoints pad does not display automatically, you can make it visible by selecting _View > Debug Windows > Breakpoints_
- 
+
 # [Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/image0.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  If the Breakpoints pad does not display automatically, you can make it visible by selecting _Debug > Windows > Breakpoints_
- 
+
 -----
 
 Before you begin debugging any application, always ensure that the configuration is set to **Debug**, as this contains a helpful set of tools to support debugging such as breakpoints, using data visualizers, and viewing the call stack:

@@ -174,7 +174,6 @@ instance variables to the class `TouchViewController`:
     [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
- 
 
 <a name="Gesture_Recognizer_Samples" />
 

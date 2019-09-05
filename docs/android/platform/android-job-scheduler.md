@@ -198,7 +198,7 @@ else
     snackBar.Show();
 }
 ```
- 
+
 ### Cancelling a job
 
 It is possible to cancel all the jobs that have been scheduled, or just a single job using the `JobsScheduler.CancelAll()` method  or the `JobScheduler.Cancel(jobId)` method:

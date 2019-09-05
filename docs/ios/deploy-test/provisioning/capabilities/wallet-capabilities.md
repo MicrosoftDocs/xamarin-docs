@@ -52,9 +52,9 @@ This App ID can now be used to generate, or to re-generate, a new provisioning p
 For more information on using Wallet refer to the following guides:
 
 * [Introduction to PassKit](~/ios/platform/passkit.md)
- 
+
 ## Next Steps
- 
+
 The list below describes additional steps that may need to be taken:
 
 * Use the framework namespace in your app.

@@ -188,7 +188,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 7. Choose a device and orientation on which to preview the Launch Screen
    Storyboard in the iOS Designer. Open the device selection panel on the
    bottom toolbar and select **iPhone 4S** and **Portrait**: 
- 
+
     ![The device selection toolbar](launch-screens-images/launch07-vs.png)
 
     - Note that selecting a device and orientation only changes how the iOS

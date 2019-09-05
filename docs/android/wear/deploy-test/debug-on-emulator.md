@@ -60,8 +60,7 @@ first. The watch emulator can take a while to start up:
 The emulator may be left running; it is not necessary to shut it down
 and restart it each time the app is run.
 
- 
 ## Summary
- 
+
 This guide explained how to configure the Android Emulator for Wear
 development and launch a Wear virtual device for debugging.

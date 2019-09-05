@@ -130,7 +130,7 @@ However, there might be times, because of the necessities of your UI design, whe
 Take the following UI layout for an example:
 
  [![](navigation-focus-images/guide01.png "Working with Focus Guides example")](navigation-focus-images/guide01.png#lightbox)
- 
+
 Because the **More Info** button does not fall on a horizontal and vertical grid with the **Buy** button it would be inaccessible to the user. However, this can be easily corrected using a _Focus Guide_ to provide movement hints to the Focus Engine. 
 
 A Focus Guide (`UIFocusGuide`) exposes a non-visible area of the view as Focusable to the Focus Engine, thus allowing Focus to be redirected to another view.

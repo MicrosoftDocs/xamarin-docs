@@ -179,7 +179,6 @@ To debug the Wear app with a companion app:
 
 4. Run and debug the Wear app on the device.
 
- 
 ## Summary
 
 This article explained how to configure an Android Wear device for Wear

@@ -57,7 +57,7 @@ public class SampleReceiver : BroadcastReceiver
 ```
 
 When Xamarin.Android compiles the class, it will also update the AndroidManifest with the necessary meta-data to register the receiver. For a statically-registered broadcast receiver, the `Enabled` properly must be set to `true`, otherwise Android will not be able to create an instance of the receiver.
- 
+
 The `Exported` property controls whether the broadcast receiver can receive messages from outside the application. If the property is not explicitly set, the default value of the property is determined by Android based on if there are any intent-filters associated with the broadcast receiver. If there is at least one intent-filter for the broadcast receiver then Android will assume that the `Exported` property is `true`. If there are no intent-filters associated with the broadcast receiver, then Android will assume that the value is `false`. 
 
 The `OnReceive` method receives a reference to the `Intent` that was dispatched to the broadcast receiver. This makes is possible for the sender of the intent to pass values to the broadcast receiver.

@@ -48,13 +48,13 @@ resources by providing the resource ID for the string:
 # [Visual Studio](#tab/windows)
 
 ![Resource strings for three languages](application-localization-images/02-resource-strings-vs.png)
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Resource strings for three languages](application-localization-images/02-resource-strings-xs.png)
- 
+
 -----
- 
+
 ## Localizing Android Apps
 
 Read the [Introduction to Localization](~/cross-platform/app-fundamentals/localization.md)

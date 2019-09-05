@@ -85,7 +85,7 @@ disabled:
 
 An olive-green `colorPrimary` setting is used for the background 
 color of the toolbar: 
- 
+
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
@@ -201,7 +201,6 @@ the remainder of the app.
 If an exception occurs while running the app, see the
 [Troubleshooting](#troubleshooting) section below.
 
- 
 ## Add Menu Items 
 
 In this section, menus are added to the `Toolbar`. The upper right area 
@@ -337,7 +336,6 @@ and **Save**:
 For more information about Android menus, see the Android Developer 
 [Menus](https://developer.android.com/guide/topics/ui/menus.html) 
 topic. 
- 
 
 ## Troubleshooting
 

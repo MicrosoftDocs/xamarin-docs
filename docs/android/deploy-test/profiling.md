@@ -9,7 +9,7 @@ author: conceptdev
 ms.author: crdun
 ms.date: 04/03/2018
 ---
- 
+
 # Profiling Android Apps
 
 Before deploying your app to an app store, it's important to identify
@@ -23,7 +23,6 @@ to serve this purpose:
 This guide introduces the Xamarin Profiler and provides detailed
 information for getting started with using the Android Profiler.
 
- 
 ## Xamarin Profiler
 
 The Xamarin Profiler is a standalone application that is integrated
@@ -35,7 +34,7 @@ Profiler, see [Xamarin Profiler](~/tools/profiler/index.md).
 > You must be a [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) 
 > subscriber to unlock the Xamarin Profiler feature in either Visual Studio Enterprise 
 > on Windows or Visual Studio for Mac.
- 
+
 ## Android Studio Profiler
 
 Android Studio 3.0 and later includes an Android Profiler tool. You can 

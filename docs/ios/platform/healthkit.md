@@ -58,7 +58,7 @@ To find out more about provisioning an iOS app, the [Device Provisioning](~/ios/
 The creation of an explicit **App ID** and an appropriate **Provisioning Profile** is done within Apple’s [iOS Dev Center](https://developer.apple.com/devcenter/ios/index.action). 
 
 Your current **App IDs** are listed within the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) section of the Dev Center. Often, this list will show **ID** values of `*`, indicating that the **App ID** - **Name** can be used with any number of suffixes. Such *Wildcard App IDs* cannot be used with Health Kit.
- 
+
 To create an explicit **App ID**, click the **+** button in the upper-right to take you to the **Register iOS App ID** page:
 
 [![](healthkit-images/image02.png "Registering an app on the Apple Developer Portal")](healthkit-images/image02.png#lightbox)

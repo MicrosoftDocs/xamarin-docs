@@ -23,7 +23,7 @@ services.
 
 This section discusses data access in Xamarin.Android using SQLite as
 the database engine.
- 
+
 ## [Google Messaging](~/android/data-cloud/google-messaging/index.md)
 
 Google provides both Firebase Cloud Messaging and legacy Google Cloud

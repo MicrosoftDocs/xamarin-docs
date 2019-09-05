@@ -30,7 +30,7 @@ The steps below will guide you through creating the above items:
 A Merchant ID is used to let Apple Pay know that you can accept payments, and is passed to PassKit’s `PaymentRequest` method and used in the Apple Pay entitlement:
 
 1. Browse to the [Apple Developer Center](https://developer.apple.com/account/) and go to the Certificates, Identifier, and Profiles section: 
- 
+
     ![Developer Center Merchant ID selection](apple-pay-capabilities-images/image57.png)
 
 2. Under **Identifiers**, select **Merchant IDs**, and then select the **+** to create a new merchant ID:  
@@ -144,7 +144,7 @@ For more information on using Apple Pay, refer to the following guide:
 * [Introduction to Apple Pay](~/ios/platform/apple-pay.md)
 
 ## Next Steps
- 
+
 The list below describes additional steps that may need to be taken:
 
 * Use the framework namespace in your app.

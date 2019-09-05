@@ -15,7 +15,7 @@ ms.date: 03/09/2018
 Android applications run in their own sandbox and for security reasons do not have access to certain system resources or hardware on the device. The user must explicitly grant permission to the app before it may use these resources. For example, an application cannot access the GPS on a device without explicit permission from the user. Android will throw a `Java.Lang.SecurityException` if an app tries to access a protected resource without permission.
 
 Permissions are declared in the **AndroidManifest.xml** by the application developer when the app is developed. Android has two different workflows for obtaining the user's consent for those permissions:
- 
+
 - For apps that targeted Android 5.1 (API level 22) or lower, the permission request occurred when the app was installed. If the user did not grant the permissions, then the app would not be installed. Once the app is installed, there is no way to revoke the permissions except by uninstalling the app.
 - Starting in Android 6.0 (API level 23), users were given more control over permissions; they can grant or revoke permissions as long as the app is installed on the device. This screenshot shows the permission settings for the Google Contacts app. It lists the various permissions and allows the user to enable or disable permissions:
 

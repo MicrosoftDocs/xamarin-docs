@@ -27,7 +27,7 @@ editor to add the document type and assign image icons to it. For
 example, here is a screenshot showing registration for PDF support:
 
  [![](custom-document-types-images/18.png "The Document Types section under the Advanced tab on the `Info.plist` editor")](custom-document-types-images/18.png#lightbox)
- 
+
 # [Visual Studio](#tab/windows)
 
 To assign these values in Visual Studio, use the **Document Types** section under the **Advanced** tab on the `Info.plist`:
