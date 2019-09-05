@@ -129,7 +129,8 @@ These two screen captures show the default `UISwitch` control on the left
 and the customized version (setting `Appearance`) on the right in the
 [Todo sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo):
 
-![Customized UISwitch Color](theme-images/switch-default.png "Default UISwitch Color") ![](theme-images/switch-custom.png)
+![Default UISwitch Color](theme-images/switch-default.png)
+![Customized UISwitch Color](theme-images/switch-custom.png)
 
 ### Other controls
 

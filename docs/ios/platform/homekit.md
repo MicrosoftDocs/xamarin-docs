@@ -63,7 +63,7 @@ Do the following:
     [![Select provisioning profile just created](homekit-images/provision03.png)](homekit-images/provision03.png#lightbox)
 9. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile: 
 
-    [![Set the App ID ](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
+    [![Set the App ID](homekit-images/provision04.png)](homekit-images/provision04.png#lightbox)
 10. Finally, edit your **Entitlements.plist** file and ensure that the **HomeKit** entitlement has been selected: 
 
     [![Enable the HomeKit entitlement](homekit-images/provision05.png)](homekit-images/provision05.png#lightbox)

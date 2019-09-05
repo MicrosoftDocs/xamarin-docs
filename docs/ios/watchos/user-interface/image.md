@@ -16,7 +16,8 @@ watchOS provides a [`WKInterfaceImage`](xref:WatchKit.WKInterfaceImage) control 
   can also have a background image (such as
   buttons, groups, and interface controllers).
 
-![Apple Watch with simple animation](image-images/image-walkway.png "Apple Watch showing picture") ![](image-images/image-animation.png)
+![Apple Watch showing picture](image-images/image-walkway.png)
+![Apple Watch with simple animation](image-images/image-animation.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 Use asset catalog images to add images to Watch Kit apps.

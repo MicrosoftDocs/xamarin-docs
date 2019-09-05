@@ -20,7 +20,7 @@ MT.D supports the full range of features that are available in the Elements
 API when using JSON. For example, the application in the following screenshot is
 completely declared using JSON:
 
-[![For example, the application in this screenshot is completely declared using JSON](json-element-walkthrough-images/01-load-from-file.png "For example, the application in this screenshot is completely declared using JSON")](json-element-walkthrough-images/01-load-from-file.png#lightbox) [![](json-element-walkthrough-images/01-load-from-file.png)](json-element-walkthrough-images/01-load-from-file.png#lightbox)
+[![For example, the application in this screenshot is completely declared using JSON](json-element-walkthrough-images/01-load-from-file.png)](json-element-walkthrough-images/01-load-from-file.png#lightbox)
 
 Let’s revisit the example from the [Elements API Walkthrough](~/ios/user-interface/monotouch.dialog/elements-api-walkthrough.md) tutorial, showing how to add a task detail screen using
 JSON.

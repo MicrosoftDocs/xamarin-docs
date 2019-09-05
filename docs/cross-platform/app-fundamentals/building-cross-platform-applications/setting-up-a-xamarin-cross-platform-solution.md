@@ -127,7 +127,8 @@ platform.
 The application projects each reference Shared project, and contain the
 user-interface code required to present functionality to the user, as shown in these screenshots:
 
-![The application projects each reference Shared project](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "The application projects each reference Shared project") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png)
+![The application projects each reference Shared project](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png)
+![The application projects each reference Shared project](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png)
 
 Specific examples of how projects should be structured are given in the case
 studies.

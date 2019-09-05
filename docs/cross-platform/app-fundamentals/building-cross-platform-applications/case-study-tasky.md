@@ -582,9 +582,9 @@ The application uses iOS-standard user interface design, such as the
 `UINavigationController` ‘back’ button behavior and supports
 ‘swipe-to-delete’ in the table.
 
- [![It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table](case-study-tasky-images/ios-taskylist.png "It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png)](case-study-tasky-images/ios-taskylist.png#lightbox)
+[![It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table](case-study-tasky-images/ios-taskylist.png "It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
- <a name="Android" />
+<a name="Android" />
 
 #### Android
 
@@ -592,18 +592,18 @@ The Android app uses built-in controls including the built-in layout for rows
 that require a ‘tick’ displayed. The hardware/system back behavior is
 supported in addition to an on-screen back button.
 
- [![The hardware/system back behavior is supported in addition to an on-screen back button](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)[![](case-study-tasky-images/android-taskylist.png)](case-study-tasky-images/android-taskylist.png#lightbox)
+[![The hardware/system back behavior is supported in addition to an on-screen back button](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)
 
- <a name="Windows_Phone" />
+<a name="Windows_Phone" />
 
 #### Windows Phone
 
 The Windows Phone app uses the standard layout, populating the app bar at the bottom
 of the screen instead of a nav bar at the top.
 
- [![The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top](case-study-tasky-images/wp-taskylist.png "The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png)](case-study-tasky-images/wp-taskylist.png#lightbox)
+[![The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top](case-study-tasky-images/wp-taskylist.png "The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
- <a name="Summary" />
+<a name="Summary" />
 
 ## Summary
 

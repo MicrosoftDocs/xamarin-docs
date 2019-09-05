@@ -74,7 +74,8 @@ Users will interact with the settings via the new **Apple Watch**
   apps on the watch, and also edit the settings exposed
   using the **Settings-Watch.bundle**.
 
-![Example of app settings](settings-images/applewatch-1.png "Example of app settings") ![](settings-images/applewatch-2.png)
+![Example of app settings](settings-images/applewatch-1.png)
+![Example of app settings](settings-images/applewatch-2.png)
 
 ## Related Links
 

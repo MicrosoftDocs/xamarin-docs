@@ -95,7 +95,8 @@ Local notifications must have the `AlertTitle` set to be displayed on the Apple 
 This screenshot shows the `AlertTitle` being displayed in the notifications list, and the
   `AlertBody` displayed in the Long-Look interface (using the [sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)):
 
-![The AlertBody displayed in the Long-Look interface](notifications-images/watch-notificationslist-sml.png "This screenshot shows the AlertTitle being displayed in the notifications list") ![](notifications-images/watch-notificationcontroller-sml.png)
+![This screenshot shows the AlertTitle being displayed in the notifications list](notifications-images/watch-notificationslist-sml.png)
+![The AlertBody displayed in the Long-Look interface](notifications-images/watch-notificationcontroller-sml.png)
 
 ## Testing Notifications
 

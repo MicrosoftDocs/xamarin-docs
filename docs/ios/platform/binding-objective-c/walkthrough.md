@@ -482,7 +482,7 @@ So that the definition looks like:
 
 Next, we do the same thing with the contents of the `InfColorPicker.enums.cs` file, copying and pasting them in the `StructsAndEnums.cs` file leaving the `using` statements intact:
 
-[![The contents the StructsAndEnums.cs file ](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
+[![The contents the StructsAndEnums.cs file](walkthrough-images/os09.png)](walkthrough-images/os09.png#lightbox)
 
 You may also find that Objective Sharpie has annotated the binding with `[Verify]` attributes. These attributes indicate that you should verify that Objective Sharpie did the correct thing by comparing the binding with the original C/Objective-C declaration (which will be provided in a comment above the bound declaration). Once you have verified the bindings, you should remove the verify attribute. For more information, refer to the [Verify](~/cross-platform/macios/binding/objective-sharpie/platform/verify.md) guide.
 

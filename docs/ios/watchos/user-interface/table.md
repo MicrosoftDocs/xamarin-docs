@@ -16,7 +16,8 @@ The watchOS `WKInterfaceTable` control is much simpler than
   a scrolling list of rows that can have custom layouts, and
   which respond to touch events.
 
-![Watch table list](table-images/table-list-sml.png) ![](table-images/table-detail-sml.png)
+![Watch table list](table-images/table-list-sml.png)
+![Watch table detail](table-images/table-detail-sml.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## Adding a Table
@@ -179,7 +180,8 @@ the detail pages related to each row, without having to go back to the
 table and choose another row. The detail screens can be scrolled by swiping
 up and down, or using the Digital Crown.
 
-![Vertical Detail Paging example](table-images/table-scroll-sml.png) ![](table-images/table-detail-sml.png)
+![Vertical Detail Paging scroll example](table-images/table-scroll-sml.png)
+![Vertical Detail Paging detail example](table-images/table-detail-sml.png)
 
 > [!IMPORTANT]
 > This feature is currently only available by editing the

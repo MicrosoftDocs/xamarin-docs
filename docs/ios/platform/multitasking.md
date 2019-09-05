@@ -14,7 +14,8 @@ ms.date: 03/20/2017
 
 _iOS 9 supports two apps running at the same time, using slide over or split view. It also supports video playing Picture-In-Picture._
 
-![Picture-in-Picture Example](multitasking-images/about02-sml.png "Split Screen Example") ![](multitasking-images/about03-sml.png)
+![Split Screen Example](multitasking-images/about02-sml.png)
+![Picture-in-Picture Example](multitasking-images/about03-sml.png)
 
 iOS 9 adds multitasking support for running two apps at the same time on specific iPad hardware. Multitasking for iPad is supported via the following features:
 

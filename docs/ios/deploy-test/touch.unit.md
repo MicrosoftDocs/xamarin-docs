@@ -129,7 +129,9 @@ one ignored test. This is what the report looks like, and you can drill down
 directly to the failing tests and find out more information about the
 failure:
 
-[![A sample report](touch.unit-images/05-sml.png "A sample report")](touch.unit-images/05.png#lightbox) [![](touch.unit-images/06-sml.png "A sample report")](touch.unit-images/06.png#lightbox) [![](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox)
+[![A sample report](touch.unit-images/05-sml.png)](touch.unit-images/05.png#lightbox)
+[![A sample report](touch.unit-images/06-sml.png)](touch.unit-images/06.png#lightbox)
+[![A sample report](touch.unit-images/07-sml.png)](touch.unit-images/07.png#lightbox)
 
 You can also look at the Application Output window in your IDE to see
 which tests are being executed and their current status.

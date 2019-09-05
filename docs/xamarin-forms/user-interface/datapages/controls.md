@@ -60,11 +60,13 @@ The `HeroImage` control has four properties:
 
 **Android**
 
-![HeroImage Control on Android](controls-images/heroimage-light-android.png "HeroImage Control on Android") ![](controls-images/heroimage-dark-android.png)
+![HeroImage Control on Android](controls-images/heroimage-light-android.png)
+![HeroImage Control on Android](controls-images/heroimage-dark-android.png)
 
 **iOS**
 
-![HeroImage Control on iOS](controls-images/heroimage-light-ios.png "HeroImage Control on iOS") ![](controls-images/heroimage-dark-ios.png)
+![HeroImage Control on iOS](controls-images/heroimage-light-ios.png)
+![HeroImage Control on iOS](controls-images/heroimage-dark-ios.png)
 
 <a name="listitem" />
 
@@ -98,11 +100,13 @@ both the Light and Dark themes:
 
 **Android**
 
-![ListItem Control on Android](controls-images/listitem-light-android.png "ListItem Control on Android") ![](controls-images/listitem-dark-android.png)
+![ListItem Control on Android](controls-images/listitem-light-android.png)
+![ListItem Control on Android](controls-images/listitem-dark-android.png)
 
 **iOS**
 
-![ListItem Control on iOS](controls-images/listitem-light-ios.png "ListItem Control on iOS") ![](controls-images/listitem-dark-ios.png)
+![ListItem Control on iOS](controls-images/listitem-light-ios.png)
+![ListItem Control on iOS](controls-images/listitem-dark-ios.png)
 
 ## Custom Control Example
 
@@ -130,11 +134,13 @@ to the built-in Light and Dark themes:
 
 **Android**
 
-![CardView Custom Control on Android](controls-images/cardview-light-android.png "CardView Custom Control on Android") ![](controls-images/cardview-dark-android.png)
+![CardView Custom Control on Android](controls-images/cardview-light-android.png)
+![CardView Custom Control on Android](controls-images/cardview-dark-android.png)
 
 **iOS**
 
-![CardView Custom Control on iOS](controls-images/cardview-light-ios.png "CardView Custom Control on iOS") ![](controls-images/cardview-dark-ios.png)
+![CardView Custom Control on iOS](controls-images/cardview-light-ios.png)
+![CardView Custom Control on iOS](controls-images/cardview-dark-ios.png)
 
 <a name="custom" />
 
