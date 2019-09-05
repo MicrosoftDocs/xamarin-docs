@@ -135,7 +135,6 @@ The animation alternates between the two words, urging the user to "code more" (
 
 [![Code More Code](transparency-images/CodeMoreCode.png "Code More Code")](transparency-images/CodeMoreCode-Large.png#lightbox)
 
-
 In the previous article on [**Bitmap Basics in SkiaSharp**](bitmaps.md), you saw how to display bitmaps using one of the [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap*) methods of `SKCanvas`. All the `DrawBitmap` methods include an `SKPaint` object as the last parameter. By default, this parameter is set to `null` and you can ignore it. 
 
 Alternatively, you can set the `Color` property of this `SKPaint` object to display a bitmap with some level of transparency. Setting a level of transparency in the `Color` property of `SKPaint` allows you to fade bitmaps in and out, or to dissolve one bitmap into another. 

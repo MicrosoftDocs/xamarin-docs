@@ -29,8 +29,6 @@ Xamarin.Forms supports two different styles of behaviors:
 
 This guide focuses on Xamarin.Forms behaviors because they are the preferred approach to behavior construction.
 
-
-
 ## Related Links
 
 - [Behavior](xref:Xamarin.Forms.Behavior)

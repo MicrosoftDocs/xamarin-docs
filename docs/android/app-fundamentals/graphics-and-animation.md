@@ -74,7 +74,6 @@ several different ways to create animations:
     flexibility allows animations to be encapsulated in distinct
     classes that will make code sharing easier.
 
-
 View Animations are more suitable for applications that must support
 the older pre-Android 3.0 API's (API level 11). Otherwise applications
 should use the newer Property Animation API's for the reasons that were
@@ -85,7 +84,6 @@ preference should be given to Property Animations, as it is a more
 flexible API to work with. Property Animations allow for animation
 logic to be encapsulated in distinct classes that makes code sharing
 easier and simplifies code maintenance.
-
 
 ## Accessibility
 
@@ -102,8 +100,6 @@ descriptions for pictorial elements of the UI.
 Refer to
 [Google's Accessibility Guide](https://developer.android.com/guide/topics/ui/accessibility/) for
 more information on how to utilize Android's accessibility APIs.
-
-
 
 ## 2D Graphics
 
@@ -127,7 +123,6 @@ will change based on calculations related to the value of the slider.
 
 Let's examine Drawable Resources first. They are simpler and cover the
 most common custom drawing cases.
-
 
 ### Drawable Resources
 
@@ -256,7 +251,6 @@ For more details about the XML elements and syntax of Drawable
 Resources, consult
 [Google's documentation](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
 
-
 ### Using the Canvas Drawing API
 
 Drawables are powerful but have their limitations. Certain things are
@@ -349,7 +343,6 @@ should a screen similar to the following:
 
 ![Screen with red paint and green paint objects](graphics-and-animation-images/image3.png)
 
-
 ## Animation
 
 Users like things that move in their applications. Animations are a
@@ -374,7 +367,6 @@ for animations:
 
 In general, property animation is the preferred system to use as it is
 more flexible and offers more features.
-
 
 ### View Animations
 
@@ -418,7 +410,6 @@ to):
 - `BounceInterpolator` &ndash; the change bounces at the end.
 
 - `LinearInterpolator` &ndash; the rate of changes is constant.
-
 
 The following XML shows an example of an animation file that combines
 some of these elements:
@@ -488,7 +479,6 @@ myImage.StartAnimation(myAnimation);
 Now that we have a fundamental understanding of how View Animations
 work, lets move to Property Animations.
 
-
 ### Property Animations
 
 Property animators are a new API that was introduced in Android 3.0.
@@ -516,7 +506,6 @@ one of it's subclasses:
     &ndash; This class is responsible for orchestrating how animations
     run in relation to one another. Animations may run simultaneously,
     sequentially, or with a specified delay between them.
-
 
 *Evaluators* are special classes that are used by animators to
 calculate the new values during an animation. Out of the box, Android
@@ -611,7 +600,6 @@ animator.Start();
 As you can see from the previous code snippet, `ObjectAnimator` can
 reduce and simplify the code that is necessary to animate an object.
 
-
 ### Drawable Animations
 
 The final animation API is the Drawable Animation API. Drawable
@@ -665,7 +653,6 @@ protected override void OnCreate(Bundle bundle)
 At this point we have covered the foundations of the animation APIs
 available in an Android application.
 
-
 ## Summary
 
 This article introduced a lot of new concepts and API's to help add
@@ -675,8 +662,6 @@ draw directly to the screen using a Canvas object. We also saw some
 alternate techniques that allow graphics to be declaratively 
 created using XML files. Then we went on to discuss the old and new 
 API's for creating animations in Android.
-
-
 
 ## Related Links
 

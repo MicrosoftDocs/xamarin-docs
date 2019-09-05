@@ -151,7 +151,6 @@ public class TitlesFragment : ListFragment
             selectedPlayId = savedInstanceState.GetInt("current_play_id", 0);
         }
 
-
         var quoteContainer = Activity.FindViewById(Resource.Id.playquote_container);
         showingTwoFragments = quoteContainer != null &&
                                 quoteContainer.Visibility == ViewStates.Visible;

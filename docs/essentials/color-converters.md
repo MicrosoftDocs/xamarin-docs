@@ -51,7 +51,6 @@ There are several other extension methods including:
 - WithSaturation
 - WithLuminosity
 
-
 ## Using Platform Extensions
 
 Additionally, you can convert System.Drawing.Color to the platform specific color structure. These methods can only be called from the iOS, Android, and UWP projects.
@@ -63,7 +62,6 @@ var system = System.Drawing.Color.FromArgb(255, 52, 152, 219);
 var platform = system.ToPlatformColor();
 ```
 
-
 ```csharp
 var platform = new Android.Graphics.Color(52, 152, 219, 255);
  
@@ -72,7 +70,6 @@ var system = platform.ToSystemColor();
 ```
 
 The `ToSystemColor` method applies to Android.Graphics.Color, UIKit.UIColor, and Windows.UI.Color.
-
 
 ## API
 

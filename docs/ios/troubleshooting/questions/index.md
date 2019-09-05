@@ -31,7 +31,6 @@ This guide tells you how to edit info.plist to enable User Location in iOS 8.
 ### [Where can I find the .dSYM file to symbolicate iOS crash logs?](symbolicate-ios-crash.md)
 This guide describes basic steps for symbolicating iOS crash logs to help with diagnosing crashes. It also links to additional resources for more advanced symbolication techniques & info on interpreting iOS crash logs.
 
-
 ### [How do I set Mono Runtime environment variables for iOS projects in Xamarin Studio?](xs-mono-runtime.md)
 If you need to set any runtime environment variables for Mono, they can be set in the **Project Options > Run > General** page.
 
@@ -57,7 +56,6 @@ As of Xamarin 4, it is now possible to create a `.xcarchive` from Windows by set
 ### [Why does my app submission fail with: "Disallowed paths ( "iTunesMetadata.plist" ) found at ..." ?](itunesmetadata-disallowed-paths.md)
 This error is the result of a change in Apple's App Store verification process. This specific error is _not_ related to the particular version of Xamarin you have installed, so downgrading will _not_ help. This guide links to more information on how to fix the issue.
 
-
 ## Diagnosing Specific Error Messages
 
 ### [iOS Designer Error with RegisterServicePort](error-registerserviceport.md)
@@ -79,8 +77,6 @@ This issue occurs when building for 32-bit architectures, such as ARMv7, when th
 
 > [!IMPORTANT]
 > The articles below apply to issues that have been resolved in recent versions of Xamarin. However, if the issue occurs on the latest version of the software, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
-
-
 
 ### [IPA file is 0 bytes](ipa-zero-bytes.md)
 There were some known issues in previous versions of Xamarin that could cause the IPA file on Windows to be 0 bytes.

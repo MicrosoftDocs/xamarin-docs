@@ -548,7 +548,6 @@ But set the angle to 180 degrees, and the mathematics fail.
 
 It is unfortunate in this case that `ConicTo` does not support negative weights, because in theory (based on the parametric equations), the circle can be completed with another call to `ConicTo` with the same points but a negative value of the weight. This would allow creating a whole circle with just two `ConicTo` curves based on any angle between (but not including) zero degrees and 180 degrees.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

@@ -13,7 +13,6 @@ ms.date: 06/05/2018
 
 _This guide discusses how to schedule background work using the Firebase Job Dispatcher library from Google._
 
-
 ## Overview
 
 One of the best ways to keep an Android application responsive to the user is to ensure that complex or long running work is performed in the background. However, it is important that background work will not negatively impact the user's experience with the device. 
@@ -60,7 +59,6 @@ The Firebase Job Dispatcher requires Android API level 9 or higher. The Firebase
 To get started with the Firebase Job Dispatcher, first add the [Xamarin.Firebase.JobDispatcher NuGet package](https://www.nuget.org/packages/Xamarin.Firebase.JobDispatcher) to the Xamarin.Android project. Search the NuGet Package Manager for the **Xamarin.Firebase.JobDispatcher** package (which is still in pre-release).
 
 After adding the Firebase Job Dispatcher library, create a `JobService` class and then schedule it to run with an instance of the `FirebaseJobDispatcher`.
-
 
 ### Creating a JobService
 
@@ -281,7 +279,6 @@ Either method will return an integer value:
 ## Summary
 
 This guide discussed how to use the Firebase Job Dispatcher to intelligently perform work in the background. It discussed how to encapsulate the work to be performed as a `JobService` and how to use the `FirebaseJobDispatcher` to schedule that work, specifying the criteria with a `JobTrigger` and how failures should be handled with a `RetryStrategy`.
-
 
 ## Related Links
 

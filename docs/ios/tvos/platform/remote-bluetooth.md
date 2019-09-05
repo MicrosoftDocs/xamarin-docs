@@ -360,8 +360,6 @@ For information about implementing Game Controller support, please see Apple's [
 
 This article has covered the new Siri Remote that ships with the Apple TV, Touch Surface gestures and Siri Remote buttons. Next, it covered working with gestures and Storyboards, gestures and code and low-level events. Finally, if discussed working with Game Controllers.
 
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

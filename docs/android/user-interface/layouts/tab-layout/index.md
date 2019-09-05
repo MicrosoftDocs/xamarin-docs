@@ -11,7 +11,6 @@ ms.date: 05/08/2017
 
 # Tabbed Layouts
 
-
 ## Overview
 
 Tabs are a popular user interface pattern in mobile applications 
@@ -37,8 +36,6 @@ has several API's for tabbed interfaces:
     [Android Support Library v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) NuGet package. 
     `Toolbar` is currently the recommended action bar component to use in Android apps.
     For more information, see [Toolbar](~/android/user-interface/controls/tool-bar/index.md). 
-
-
 
 ## Related Links
 

@@ -15,7 +15,6 @@ ms.date: 08/29/2018
 _This article explains how to resolve Java Development Kit (JDK) 9 or
 later errors in Xamarin.Android._
 
-
 ## Overview
 
 Xamarin.Android uses the Java Development Kit (JDK) to integrate with
@@ -40,7 +39,6 @@ To resolve these errors, you must install JDK 8 (1.8) as explained in
 Alternately, you can install the 
 [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md) 
 The Microsoft Mobile OpenJDK will eventually replace JDK 8 for Xamarin.Android development.
-
 
 ## Checking the JDK Version
 

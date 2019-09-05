@@ -27,7 +27,6 @@ Get started with Notification Hubs http://go.microsoft.com/fwlink/p/?LinkId=3313
 Validate and modify data  http://go.microsoft.com/fwlink/p/?LinkId=331330
 -->
 
-
 These links are for the Xamarin documentation available on the [Azure Mobile Apps](https://docs.microsoft.com/azure/app-service-mobile/) website.
 Adding Azure functionality to a Xamarin app by downloading the [Azure Mobile Client](https://www.nuget.org/packages/Microsoft.Azure.Mobile.Client/).
 
@@ -69,13 +68,11 @@ Provides complete instructions for configuring and coding a Login screen using A
 - [iOS](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-ios-get-started-users/)
 - [Android](https://azure.microsoft.com/documentation/articles/app-service-mobile-xamarin-android-get-started-users/)
 
-
 ## Authorize Users in Scripts
 
 Some sample code for Javascript backends
 
 - [Todo.js](https://github.com/Azure/azure-mobile-apps-node/blob/master/samples/personal-table/tables/TodoItem.js#L38)
-
 
 ## Get Started with Push
 
@@ -84,15 +81,12 @@ Complete instructions to configure push notifications on the Apple and Google we
 - [iOS](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-ios-get-started-push)
 - [Android](https://docs.microsoft.com/azure/app-service-mobile/app-service-mobile-xamarin-android-get-started-push)
 
-
 ## Get Started with Notification Hubs
 
 Complete instructions to configure push notifications on the Apple and Google websites, configure the Azure Notification Hub and then generate push notifications to devices.
 
 - [iOS](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-ios-push-notification-apns-get-started)
 - [Android](https://docs.microsoft.com/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm)
-
-
 
 ## Related Links
 

@@ -107,7 +107,6 @@ The SourceWriter code has been fully commented and, where available, links have 
 
 This article has taken a quick look at working with Storyboards in a Xamarin.Mac app. We saw how to create a new app using storyboards and how to define a user interface. We also saw how to navigate between different windows and view states using segues.
 
-
 ## Related Links
 
 - [Hello, Mac (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/hello-mac)

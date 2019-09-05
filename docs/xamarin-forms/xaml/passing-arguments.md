@@ -164,7 +164,6 @@ The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class and
 
 This article demonstrated using the XAML attributes that can be used to pass arguments to non-default constructors, to call factory methods, and to specify the type of a generic argument.
 
-
 ## Related Links
 
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)

@@ -103,8 +103,6 @@ of each control:
 
 For more information, read the [testing accessibility for OS X guide](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
 
-
-
 ## Related Links
 
 - [Cross-platform accessibility](~/cross-platform/app-fundamentals/accessibility.md)

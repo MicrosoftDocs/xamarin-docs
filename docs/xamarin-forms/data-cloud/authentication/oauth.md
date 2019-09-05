@@ -259,7 +259,6 @@ The `FindAccountsForService` method returns an `IEnumerable` collection of `Acco
 
 This article explained how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application. Xamarin.Auth provides the `OAuth2Authenticator` and `OAuth2Request` classes that are used by Xamarin.Forms applications to consume identity providers such as Google, Microsoft, Facebook, and Twitter.
 
-
 ## Related Links
 
 - [OAuthNativeFlow (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-oauthnativeflow)

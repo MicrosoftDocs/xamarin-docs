@@ -38,8 +38,6 @@ Whenever any resource e.g. web application, web service,
 4. Finally, **Save** the configuration. These services should
    now be available in mobile applications!
 
-
-
 ## Related Links
 
 - [Microsoft NativeClient sample](https://github.com/AzureADSamples/NativeClient-MultiTarget-DotNet)

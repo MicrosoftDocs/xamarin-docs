@@ -29,7 +29,6 @@ In your application, add a reference to **Azure Active Directory
 and there may be breaking changes before the final version
 is released. 
 
-
 ![](graph-images/06.-adal-nuget-package.jpg "Add a reference to Azure Active Directory Authentication Library (Azure ADAL)")
 
 In your application, you will now need to add the following
@@ -97,7 +96,6 @@ After authentication is complete, the flow should return
   to the app. In the case of
   Android it is handled by following code, which should
   be added to **MainActivity.cs**:
-
 
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)

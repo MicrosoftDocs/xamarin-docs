@@ -59,7 +59,6 @@ The Open Dialog gives users a consistent way to find and open an item in an appl
 
 [![](dialog-images/dialog03.png "A open dialog box")](dialog-images/dialog03.png#lightbox)
 
-
 ### Print and Page Setup Dialogs
 
 macOS provides standard Print and Page Setup Dialogs that your application can display so that users can have a consistent printing experience in every application they use.

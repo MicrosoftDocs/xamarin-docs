@@ -10,7 +10,6 @@ ms.date: 03/23/2017
 
 # Microsoft Azure Active Directory
 
-
 Azure Active Directory allows developers to secure
   resources such as files, links, and Web APIs,
   Office 365, and more

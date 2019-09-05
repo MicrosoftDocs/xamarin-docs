@@ -53,7 +53,6 @@ is a label that introduces the
 [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget.
 
-
 ## Tutorial
 
 Start a new project named *HelloAutoComplete*.
@@ -186,8 +185,6 @@ Run the application. As you type, you should see something like this:
 
 [![Example auto-complete screenshot listing names that contain "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
-
-
 ## More Information
 
 Note that using a hard-coded string array is not a recommended design
@@ -226,7 +223,6 @@ constructor line with the following:
 string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
-
 
 ### References
 

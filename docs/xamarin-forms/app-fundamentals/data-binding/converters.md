@@ -459,7 +459,6 @@ Here's the result:
 
 [![RGB Color Selector](converters-images/rgbcolorselector-small.png "RGB Color Selector")](converters-images/rgbcolorselector-large.png#lightbox "RGB Color Selector")
 
-
 ## Related Links
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

@@ -22,7 +22,6 @@ of the application's user interface.
 A Storyboard can be created, opened and edited with the Xamarin iOS Designer. This guide will also walkthrough how to use the 
 Designer to create your storyboards while using C# to program the navigation.
 
-
 ## Requirements
 
 Storyboards can be used with the iOS Designer in Visual Studio for Mac or with Visual Studio 2017 with the Xamarin workloads installed.
@@ -119,7 +118,6 @@ Any application using Size Classes will also use the new [*Adaptive Segues*](~/i
 ### Transferring Data with Segues
 
 The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) sample, demonstrates this: 
-
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, 
@@ -286,7 +284,6 @@ public MainViewController (IntPtr handle) : base (handle)
 {
 }
 ```
-
 
 When creating a Storyboard using the Designer, the IDE will automatically add the [[Register]](xref:Foundation.RegisterAttribute) attribute at the top of the `designer.cs` class, and pass in a string identifier, which is identical to the Storyboard ID specified in the previous step. This will link the C# to the relevant scene in the Storyboard.
 
@@ -524,8 +521,6 @@ When the app is run and the user clicks on the UI element that you created the S
 ## Summary
 
 This article introduces the concept of Storyboards and how they can be beneficial in the development of iOS applications. It discusses scenes, view controllers, views and view hierarchies and how scenes are linked together with different types of Segues.  It also explores instantiating view controllers manually from a storyboard, and creating conditional Segues.
-
-
 
 ## Related Links
 

@@ -273,8 +273,6 @@ subviews in either a horizontally or vertically arranged stack in a Xamarin.iOS 
 It began with a simple example of using Stack Views to create a UI, and finished
 with a more detailed look at Stack Views and their properties and features.
 
-
-
 ## Related Links
 
 - [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)

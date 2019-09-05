@@ -76,18 +76,15 @@ The content provided can be used as a springboard to aid with app distribution, 
 
 8. Run `which fastlane` again, to confirm the path looks like `/Users/[user]/.fastlane/bin`
 
-
 ## Updating fastlane
 
 fastlane is a very active open source project that regularly pushes new releases. When a new version of fastlane is available, you will be advised when you run any fastlane command:
 
 [![](images/fastlane-image0.png "The fast lane update prompt")](images/fastlane-image0.png#lightbox)
 
-
 To update to a new version of fastlane, download the latest package from [here](https://download.fastlane.tools) and double-click on the install package to run it:
 
 [![](images/fastlane-image0a.png "Running the install package")](images/fastlane-image0a.png#lightbox)
-
 
 ## Contents
 

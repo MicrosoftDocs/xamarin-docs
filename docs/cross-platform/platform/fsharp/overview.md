@@ -27,7 +27,6 @@ In Visual Studio for Mac choose **File > New Solution**. In the **New Project** 
 
 Select your project type and click **Next** to name and create it.
 
-
 You are now ready to start creating some great F# applications!
 
 ## Learning to use F&#35;

@@ -37,7 +37,6 @@ use the Wear **x86** CPU/ABI as seen in this example:
 
 [![Example Wear virtual device configuration](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
-
 ## Launch The Wear Virtual Device 
 
 After you have created an Android Wear virtual device, you can choose

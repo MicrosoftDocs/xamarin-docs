@@ -319,7 +319,6 @@ package will contain:
 - a text file, and
 - an image to represent the chapter.
 
-
 Start by selecting **File > New Project** from the
 menu, and choosing **In-App Purchase Content**:
 
@@ -605,7 +604,6 @@ public void SaveDownload (SKDownload download)
 When `FinishTransaction` is called, the downloaded files are no
 longer guaranteed to be in the `Cache` directory. All files should be
 copied before calling `FinishTransaction`.
-
 
 ## Other Considerations
 

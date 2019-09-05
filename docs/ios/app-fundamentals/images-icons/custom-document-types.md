@@ -40,9 +40,7 @@ Click the **Add Document Type** button and fill in the required fields:
 
 -----
 
-
 For more information about document types, see Apple’s [Uniform Type Identifiers Reference](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) and [Document Interaction Programming Topics for iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
-
 
 ## Related Links
 

@@ -29,9 +29,6 @@ The two new frameworks contain the following functionality:
 > [!IMPORTANT]
 > The existing `AddressBook` and `AddressBookUI` frameworks use by iOS 8 (and prior) have been deprecated in iOS 9 and should be replaced with the new `Contacts` and `ContactsUI` frameworks as soon as possible for any existing Xamarin.iOS app. New apps should be written against the new frameworks.
 
-
-
-
 In the following sections, we'll take a look at these new frameworks and how to
 implement them in a Xamarin.iOS app.
 
@@ -361,7 +358,6 @@ frameworks in a Xamarin.iOS application. First, it covered the different types
 of objects that the Contact framework provides and how you use them to create new
 or access existing contacts. It also examined the Contact UI framework to select
 existing contacts and display contact information.
-
 
 ## Related Links
 

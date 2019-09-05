@@ -39,7 +39,6 @@ This section discusses UIKit animation features including:
 - Transitions between views
 - View property animation
 
-
 ### View Controller Transitions
 
  `UIViewController` provides built-in support for transitioning between view controllers through the `PresentViewController` method. When using `PresentViewController`, the transition to the second controller can optionally be animated.
@@ -57,7 +56,6 @@ In this case a `PartialCurl` animation is used, although several others are avai
 - `CoverVertical` – Slides up from the bottom of the screen
 - `CrossDissolve` – The old view fades out & the new view fades in
 - `FlipHorizontal` - A horizontal right-to-left flip. On dismissal the transition flips left-to-right.
-
 
 To animate the transition, pass `true` as the second argument to `PresentViewController`:
 
@@ -101,7 +99,6 @@ UIKit supports animating a variety of properties on the `UIView` class for free,
 - Alpha
 - Transform
 - Color
-
 
 These animations happen implicitly by specifying property changes in an `NSAction` delegate passed to the static `UIView.Animate` method. For example, the following code animates the center point of a `UIImageView`:
 

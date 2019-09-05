@@ -26,7 +26,6 @@ types:
 - Implementation Overview
 - Non-Renewing Subscriptions should normally be implemented using the Server-Delivered workflow and managed like Consumable products. 
 
-
 ## About Free Subscriptions
 
 Free subscriptions allow developers to put free content in Newsstand apps
@@ -41,7 +40,6 @@ application must have a Free Subscription product available for ‘purchase’
 in iTunes Connect. When purchased by the user, the free subscription purchase
 should be validated like an auto-renewable subscription product. Free
 subscription transactions can be Restored.
-
 
 ## About Auto-Renewable Subscriptions
 

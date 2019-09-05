@@ -17,7 +17,6 @@ rating, with the [`RatingBar`](xref:Android.Widget.RatingBar) widget.
 
 ![Example of a RatingBar](ratingbar-images/01-ratingbar.png)
 
-
 ## Creating a RatingBar
 
 1. Open the **Resource/layout/Main.axml** file and add the

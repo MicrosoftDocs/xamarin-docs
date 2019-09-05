@@ -560,8 +560,6 @@ If you are releasing a new, sandboxed version of a Xamarin.Mac application that 
 
 This article has taken a detailed look at sandboxing a Xamarin.Mac application. First, we created a simply Xamarin.Mac app to show the basics of the App Sandbox. Next, we showed how to resolve sandbox violations. Then, we took an in-depth look at the App Sandbox and finally, we looked at designing a Xamarin.Mac app for the App Sandbox.
 
-
-
 ## Related Links
 
 - [Publishing to the App Store](~/mac/deploy-test/publishing-to-the-app-store/index.md)

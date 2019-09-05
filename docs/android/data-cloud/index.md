@@ -33,4 +33,3 @@ provided by step-by-step explanation of how to use these services to
 implement remote notifications (also called push notifications) in
 Xamarin.Android applications.
 
-

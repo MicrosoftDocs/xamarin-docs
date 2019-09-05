@@ -47,7 +47,6 @@ Choosing where to define a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplat
 
 Control templates lower in the view hierarchy take precedence over those defined higher up. For example, a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) named `DarkTheme` that's defined at the page-level will take precedence over an identically named template defined at the application-level. Therefore, a control template that defines a theme to be applied to each page in an application should be defined at the application-level.
 
-
 ## Related Links
 
 - [Styles](~/xamarin-forms/user-interface/styles/index.md)

@@ -40,7 +40,6 @@ The next section will describe how to get set up with a Distribution Certificate
 
 ## Create a Distribution Certificate
 
-
 1. Browse to the *Certificates, Identifiers & Profiles* section of the Apple Developer Member Center.
 2. Under *Certificates*, select **Production**.
 3. Click the **+** button to create a new Certificate.
@@ -76,7 +75,6 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 
 ### Create an App ID
 As with any other Provisioning Profile you create, an App ID will be required to identify the App that will be distributed to the user's device. If you haven't already created this, follow the steps below to create one:
-
 
 1. In the [Apple Developer Center](https://developer.apple.com/account/overview.action) browse to the *Certificate, Identifiers and Profiles* section. Select **App IDs** under **Identifiers**.
 2. Click the **+** button and provide a **Name** which will identify it in the Portal.
@@ -178,7 +176,6 @@ see [IPA Support](~/ios/deploy-test/app-distribution/ipa-support.md) guide.
 ## Summary
 
 This article explained the Ad Hoc distribution mechanisms, which are required for testing Xamarin.iOS applications.
-
 
 ## Related Links
 

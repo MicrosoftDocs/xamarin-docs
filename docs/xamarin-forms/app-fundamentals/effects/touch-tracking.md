@@ -799,7 +799,6 @@ If you sweep your finger across the keys, you'll see by the slight changes in co
 
 This article has demonstrated how to invoke events in an effect, and how to write and use an effect that implements low-level multi-touch processing.
 
-
 ## Related Links
 
 - [Multi-Touch Finger Tracking in iOS](~/ios/app-fundamentals/touch/touch-tracking.md)

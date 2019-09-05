@@ -203,8 +203,6 @@ Finally, the following HTML would add an action to get directions from the searc
 
 For more information, please see Apple's [App Search Developer Site](https://developer.apple.com/ios/search/).
 
-
-
 ## Related Links
 
 - [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)

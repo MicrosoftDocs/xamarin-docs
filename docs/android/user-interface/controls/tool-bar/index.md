@@ -94,9 +94,6 @@ package.
 [Toolbar Compatibility](~/android/user-interface/controls/tool-bar/toolbar-compatibility.md) 
 explains how to use this library. 
 
-
-
-
 ## Related Links
 
 - [Lollipop Toolbar (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-toolbar)

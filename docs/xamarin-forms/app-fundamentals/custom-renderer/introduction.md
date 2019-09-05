@@ -88,7 +88,6 @@ This creates a reference to the `ClassInPCL` type, indicating that it's required
 
 This article has provided an introduction to custom renderers, and has outlined the process for creating a custom renderer. Custom renderers provide a powerful approach for customizing the appearance and behavior of Xamarin.Forms controls. They can be used for small styling changes or sophisticated platform-specific layout and behavior customization.
 
-
 ## Related Links
 
 - [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)

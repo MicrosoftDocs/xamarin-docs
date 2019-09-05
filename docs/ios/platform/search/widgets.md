@@ -187,8 +187,6 @@ In addition to setting the requested size for each state (Collapsed or Expanded)
 
 This article has covered the enhancements Apple has made to the Widget System in iOS 10 and shown how to implement them in Xamarin.iOS.
 
-
-
 ## Related Links
 
 - [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

@@ -13,7 +13,6 @@ ms.date: 02/01/2018
 
 _This article introduces the concept of Android resources in Xamarin.Android and will document how to use them. It covers how to use resources in your Android application to support application localization, and multiple devices including varying screen sizes and densities._
 
-
 ## Overview
 
 An Android application is seldom just source code. There are often many other
@@ -96,7 +95,6 @@ This article will take a comprehensive look at using resources and cover the fol
 
 - **Localization** &ndash; Using resources to support the different
    regions an application may be used.
-
 
 ## Related Links
 

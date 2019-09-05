@@ -31,8 +31,6 @@ In this guide and accompanying walkthroughs, we are going to learn to perform ap
 
 In this guide, we introduced the different ways of doing background processing in iOS. We covered iOS Application States and examined the role backgrounding plays in the iOS Application Lifecycle. Additionally, we learned how we could register individual tasks or entire applications to operate in the background in iOS. Finally, we reinforced our understanding of backgrounding on iOS by building applications that perform updates in the background.
 
-
-
 ## Related Links
 
 - [Backgrounding on Android](~/android/app-fundamentals/services/index.md)

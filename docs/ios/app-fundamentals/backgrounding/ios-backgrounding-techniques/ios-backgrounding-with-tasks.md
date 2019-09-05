@@ -19,7 +19,6 @@ Background tasks can be broken up into three categories:
 1. **DidEnterBackground Tasks** - Called during the  `DidEnterBackground` application lifecycle method to assist in cleanup and state saving.
 1. **Background Transfers (iOS 7+)** - A special type of background task used to perform network transfers on iOS 7. Unlike regular tasks, background transfers do not have a pre-determined time limit.
 
-
 Background-safe and `DidEnterBackground` tasks are safe to use on both iOS 6 and iOS 7, with some minor differences. Let's investigate these two types of tasks in greater detail.
 
 ## Creating Background-Safe Tasks
@@ -42,7 +41,6 @@ The registration process pairs a task with a unique identifier, `taskID`, and th
 > [!IMPORTANT]
 > Background-safe tasks can run on either the main thread or a background thread, depending on the application's needs.
 
-
 ## Performing Tasks During DidEnterBackground
 
 In addition to making a long-running task background-safe, registration can be used to kick off tasks as an application is being put in the background. iOS provides an event method in the *AppDelegate* class called `DidEnterBackground` that can be used to save application state, save user data, and encrypt sensitive content before an application enters the background. An application has approximately five seconds to return from this method or it will get terminated. Therefore, cleanup tasks that might take more than five seconds to complete can be called from inside the `DidEnterBackground` method. These tasks must be invoked on a separate thread.
@@ -63,7 +61,6 @@ We begin by overriding the `DidEnterBackground` method in the `AppDelegate`, whe
 
 > [!IMPORTANT]
 > iOS uses a [watchdog mechanism](https://developer.apple.com/library/ios/qa/qa1693/_index.html) to ensure that an application's UI remains responsive. An application that spends too much time in `DidEnterBackground` will become unresponsive in the UI. Kicking off tasks to run in the background allows `DidEnterBackground` to return in a timely manner, keeping the UI responsive and preventing the watchdog from killing the application.
-
 
 ## Handling Background Task Time Limits
 
@@ -128,7 +125,6 @@ The backbone of background transfers in iOS 7 is the new `NSURLSession` API. `NS
 1. Transfer content through network and device interruptions.
 1. Upload and download large files ( *Background Transfer Service* ).
 
-
 Let's take a closer look at how this works.
 
 ### NSURLSession API
@@ -151,7 +147,6 @@ else {
 
 > [!IMPORTANT]
 > Avoid making calls to update the UI from the background in iOS 6-compliant code, as iOS 6 does not support background UI updates, and will terminate the application.
-
 
 The `NSURLSession` API includes a rich set of features to handle authentication, manage failed transfers, and report client-side - but not server-side - errors. It helps bridge the interruptions in task run time introduced in iOS 7, and also provides support for transferring large files quickly and reliably. The next section explores this second feature.
 

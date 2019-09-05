@@ -65,7 +65,6 @@ synchronizing to the directory
 Fast deployment is enabled by default, and may be disabled in Debug builds
 by setting the `$(EmbedAssembliesIntoApk)` property to `True`.
 
-
 ## MSBuild Projects
 
 The Xamarin.Android build process is based on MSBuild, which is also
@@ -206,7 +205,6 @@ Install properties control the behavior of the `Install` and
   # Use `/Library/Frameworks/Mono.framework/Commands/msbuild` on OS X
   MSBuild /t:Install ProjectName.csproj /p:AdbTarget=-e
   ```
-
 
 ### Packaging Properties
 
@@ -890,7 +888,6 @@ when packaging Release applications.
     (DOS)* \[CP861\], *French Canadian (DOS)* \[CP863\], and *Nordic
     (DOS)* \[CP865\].
 
-
   ```xml
   <MandroidI18n>West</MandroidI18n>
   ```
@@ -918,7 +915,6 @@ The following MSBuild properties are used with
   - **class-parse**: Uses `class-parse.exe` to parse Java bytecode
     directly, without assistance of a JVM. This value is
     experimental.
-
 
   - **jar2xml**: Use `jar2xml.jar` to use Java reflection to extract
     types and members from a `.jar` file.
@@ -963,7 +959,6 @@ The following MSBuild properties are used with
       managed subclasses.
 
     The default value is `XAJavaInterop1`.
-
 
 ### Resource Properties
 
@@ -1116,7 +1111,6 @@ To use the keystore generated above, use the property group:
 [applied to files](https://docs.microsoft.com/visualstudio/msbuild/common-msbuild-project-items)
 within the project and control how the file is processed.
 
-
 ### AndroidAarLibrary
 
 The Build action of `AndroidAarLibrary` should be used to directly
@@ -1129,7 +1123,6 @@ the embedded resources found in Library projects. The .aar will be
 extracted into the intermediate directory. Then any assets, resource
 and .jar files will be included in the appropriate item groups.
 
-
 ### AndroidBoundLayout
 
 Indicates that the layout file is to have code-behind generated for it in case when
@@ -1140,7 +1133,6 @@ with layout files:
 ```xml
 <AndroidBoundLayout Include="Resources\layout\Main.axml" />
 ```
-
 
 <a name="AndroidEnvironment" />
 
@@ -1153,13 +1145,11 @@ multiple files, and they will be evaluated in no particular order (so don't
 specify the same environment variable or system property in multiple
 files).
 
-
 ### AndroidFragmentType
 
 Specifies the default fully qualified type to be used for all `<fragment>` layout
 elements when generating the layout bindings code. The property defaults to the standard
 Android `Android.App.Fragment` type.
-
 
 ### AndroidJavaLibrary
 
@@ -1167,12 +1157,10 @@ Files with a Build action of `AndroidJavaLibrary` are Java
 Archives ( `.jar` files) which will be included in the final Android
 package.
 
-
 ### AndroidJavaSource
 
 Files with a Build action of `AndroidJavaSource` are Java source code which
 will be included in the final Android package.
-
 
 ### AndroidLintConfig
 
@@ -1184,7 +1172,6 @@ enable and disable.
 
 See the [lint documentation](https://developer.android.com/studio/write/lint)
 for more details.
-
 
 ### AndroidNativeLibrary
 
@@ -1204,7 +1191,6 @@ used to specify the ABI that the library targets. Thus, if you add
 `lib/armeabi-v7a/libfoo.so` to the build, then the ABI will be "sniffed" as
 `armeabi-v7a`.
 
-
 #### Item Attribute Name
 
 **Abi** &ndash; Specifies the ABI of the native library.
@@ -1216,7 +1202,6 @@ used to specify the ABI that the library targets. Thus, if you add
   </AndroidNativeLibrary>
 </ItemGroup>
 ```
-
 
 ### AndroidResource
 
@@ -1263,7 +1248,6 @@ distinct resource names.
 </ItemGroup>
 ```
 
-
 ### Content
 
 The normal `Content` Build action is not supported (as we
@@ -1273,12 +1257,10 @@ step).
 Starting in Xamarin.Android 5.1, attempting to use the `@(Content)`
 Build action will result in a `XA0101` warning.
 
-
 ### LinkDescription
 
 Files with a *LinkDescription* build action are used to
 [control linker behavior](~/cross-platform/deploy-test/linker.md).
-
 
 <a name="ProguardConfiguration" />
 
@@ -1291,7 +1273,6 @@ this build action, see
 
 These files are ignored unless the `$(EnableProguard)` MSBuild property
 is `True`.
-
 
 ## Target Definitions
 

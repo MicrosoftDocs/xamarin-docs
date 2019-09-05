@@ -32,6 +32,3 @@ This article covers the new types of haptic feedback available in iOS 10 and how
 
 Your code should only make changes to user interface controls from the main (or UI) thread. Any UI updates that occur on a different thread (such as a callback or background thread) may not get rendered to the screen, or could even cause a crash.
 
-
-
-

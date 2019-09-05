@@ -17,7 +17,6 @@ At the core of Xamarin.Android there is an interop engine that bridges
 the C# world with the Java world and provides developers with access to
 the Java APIs from C# or other .NET languages.
 
-
 ## Design Principles
 
 These are some of our design principles for the Xamarin.Android binding
@@ -58,7 +57,6 @@ These are some of our design principles for the Xamarin.Android binding
   - Provide a mechanism to call arbitrary Java libraries (
     [Android.Runtime.JNIEnv](xref:Android.Runtime.JNIEnv)).
 
-
 ## Assemblies
 
 Xamarin.Android includes a number of assemblies that constitute the
@@ -71,9 +69,7 @@ The bindings to the Android platform are contained in the
 for consuming Android APIs and communicating with the Android runtime
 VM.
 
-
 ## Binding Design
-
 
 ### Collections
 
@@ -139,7 +135,6 @@ if (goodSource.Count != 4) // false
     throw new InvalidOperationException ("should not be reached.");
 ```
 
-
 ### Properties
 
 Java methods are transformed into properties, when appropriate:
@@ -156,8 +151,6 @@ Java methods are transformed into properties, when appropriate:
 
 - Properties are *not* generated if the property type would be an
   array.
-
-
 
 ### Events and Listeners
 
@@ -218,7 +211,6 @@ event-registration method:
    `Listener` , e.g.
    [View.OnClick *Listener*](xref:Android.Views.View.IOnClickListener).
 
-
 Furthermore, if the Listener interface method has a return type of
 **boolean** instead of **void**, then the generated *EventArgs*
 subclass will contain a *Handled* property. The value of the *Handled*
@@ -259,7 +251,6 @@ implementing the listener interface on a subclass of
 [Java.Lang.Object](xref:Java.Lang.Object) or any other wrapped
 Java object, such as an Android activity.
 
-
 ### Runnables
 
 Java utilizes the
@@ -288,7 +279,6 @@ We left the
 [IRunnable](xref:Java.Lang.IRunnable) overloads in place instead
 of replacing them since several types implement the interface and can
 therefore be passed as runnables directly.
-
 
 ### Inner Classes
 
@@ -412,7 +402,6 @@ In addition to the above types, there are four further changes:
 
 1. The *Consts* type is now obsolete.
 
-
 For the *android.os.Parcelable* interface, this means that there will
 now be an
 [*Android.OS.Parcelable*](xref:Android.OS.Parcelable) type to
@@ -459,7 +448,6 @@ Finally, types with a *Consts* suffix such as
 *Android.OS.ParcelableConsts* are now Obsolete, other than the newly
 introduced InterfaceConsts nested types. They will be removed in
 Xamarin.Android 3.0.
-
 
 ## Resources
 
@@ -522,7 +510,6 @@ You would then use `Resource.Drawable.icon` to reference the
 `drawable/icon.png` file, or `Resource.Layout.main` to reference the
 `layout/main.xml` file, or `Resource.String.first_string` to reference
 the first string in the dictionary file `values/strings.xml`.
-
 
 ## Constants and Enumerations
 

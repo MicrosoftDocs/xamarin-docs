@@ -1271,8 +1271,6 @@ if (ok) {
 
 This article has taken a detailed look at working with the pasteboard in a Xamarin.Mac application to support copy and paste operations. First, it introduced a simple example to get you familiar with standard pasteboards operations. Next, it took a detailed look at the pasteboard and how to read and write data from it. Finally, it looked at using a custom data type to support the copying and pasting of complex data types within an app.
 
-
-
 ## Related Links
 
 - [MacCopyPaste (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/maccopypaste)

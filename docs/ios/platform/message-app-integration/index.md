@@ -23,7 +23,6 @@ This article shows how include a Message App Extension in a Xamarin.iOS solution
 
 This article shows advanced techniques for working with Message App Extensions in a Xamarin.iOS solution that integrates with the **Messages** app and presents new functionality to the user.
 
-
 ## Related Links
 
 - [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

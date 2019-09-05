@@ -291,7 +291,6 @@ progressively more complex examples of how to use it.
 - [Using a ContentProvider](~/android/user-interface/layouts/list-view/content-provider.md)
 - [ListView and the Activity Lifecycle](~/android/user-interface/layouts/list-view/activity-lifecycle.md)
 
-
 ## Summary
 
 This set of topics introduced `ListView` and provided some examples of
@@ -299,7 +298,6 @@ how to use the built-in features of the `ListActivity`. It discussed
 custom implementations of `ListView` that allowed for colorful layouts
 and using an SQLite database, and it briefly touched on the relevance
 of the activity lifecycle on your `ListView` implementation.
-
 
 ## Related Links
 

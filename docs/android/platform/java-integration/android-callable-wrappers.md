@@ -33,8 +33,6 @@ program during the
 are generated for all types that (directly or indirectly) inherit 
 [Java.Lang.Object](xref:Java.Lang.Object). 
 
-
-
 ## Android Callable Wrapper Naming
 
 Package names for Android Callable Wrappers are based on the MD5SUM of 
@@ -99,8 +97,6 @@ MD5SUM-based ACW naming was introduced in Xamarin.Android 5.0. For more
 information about attribute naming, see 
 [RegisterAttribute](xref:Android.Runtime.RegisterAttribute). 
 
-
-
 ## Implementing Interfaces
 
 There are times when you may need to implement an Android interface, such as 
@@ -130,7 +126,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
     }
 }
 ```
-
 
 ## Implementation Details
 

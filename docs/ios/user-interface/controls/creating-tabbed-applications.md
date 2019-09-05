@@ -35,7 +35,6 @@ by the following:
 - Allowing multiple controllers to be added to it.
 - Providing a tabbed user interface, via the  `UITabBar` class, to allow a user to switch between controllers and their views. 
 
-
 Controllers are added to the `UITabBarController` via its `ViewControllers` property, which is a `UIViewController`
 array. The `UITabBarController` itself handles loading the proper
 controller and presenting its view based upon the selected tab.
@@ -60,7 +59,6 @@ gain a better understanding of how the application is constructed.
 
  <a name="Creating_the_Application" />
 
-
 ### Creating the Application
 
 Let’s start by creating a new application.
@@ -71,8 +69,6 @@ Visual Studio for Mac and select a **iOS > App > Empty Project** template, Name 
 [![](creating-tabbed-applications-images/newsolution1.png "Select the Empty Project template")](creating-tabbed-applications-images/newsolution1.png#lightbox)
 
 [![](creating-tabbed-applications-images/newsolution2.png "Name the project TabbedApplication")](creating-tabbed-applications-images/newsolution2.png#lightbox)
-
-
 
 ### Adding the UITabBarController
 
@@ -90,7 +86,6 @@ following:
 1. Set the base class of  `TabController` to  `UITabBarController` . 
 1. Create  `UIViewController` instances to add to the  `TabController` . 
 1. Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` . 
-
 
 Add the following code to the `TabController` class to achieve
 these steps:
@@ -173,13 +168,11 @@ the second tab:
 
  <a name="Modifying_TabBarItems" />
 
-
 ### Modifying TabBarItems
 
 Now that we have a running tab application, let’s modify the `TabBarItem` to change the image and text that is displayed, as well as to add a badge to one of the tabs.
 
  <a name="Setting_a_System_Item" />
-
 
 #### Setting a System Item
 
@@ -198,7 +191,6 @@ icon and title on the first tab:
  ![](creating-tabbed-applications-images/04a-tabimage.png "The first tab with a star icon")
 
  <a name="Setting_the_Title_and_Image" />
-
 
 #### Setting the Title and Image
 
@@ -237,7 +229,6 @@ image as shown below:
 
  <a name="Setting_the_Badge_Value" />
 
-
 #### Setting the Badge Value
 
 A tab can also display a badge. For example, add the following line of code
@@ -261,7 +252,6 @@ tab3.TabBarItem.BadgeValue = null;
 
  <a name="Tabs_in_Non-RootViewController_Scenarios" />
 
-
 ## Tabs in Non-RootViewController Scenarios
 
 In the example above, we showed how to work with a `UITabBarController` when it is the `RootViewController`
@@ -269,7 +259,6 @@ of the window. In this example we will examine how to use a `UITabBarController`
 when it is not the `RootViewController` and show how this is created use Storyboards.
 
  <a name="Initial_Screen_Example" />
-
 
 ### Initial Screen Example
 
@@ -281,7 +270,6 @@ following screenshot shows the application flow:
 
 Let’s start a new application for this example. Again, we’ll use the **iPhone > App > Empty Project (C#)** template,
 this time naming the project `InitialScreenDemo`.
-
 
 In this example We’ll need a Storyboard to hold our View Controllers. To add a Storyboard:
 
@@ -320,7 +308,6 @@ Visual Studio for Mac will automatically generate the classes and designer files
 
  <a name="Creating_the_UI" />
 
-
 #### Creating the UI
 
 Next, we’ll create a simple user interface for  each of the ViewController's views,
@@ -330,7 +317,6 @@ We want to drag a `Label` and a `Button` onto ViewController1 from the **ToolBox
 
 - **Label** : `Text` = **One**
 - **Button** : `Title` = **User Takes Some Initial Action**
-
 
 We will be controlling the visibility of our button in a `TouchUpInside` event, and we need to refer to it in the code behind. Let's identify it with the **Name** `aButton` in the Properties Pad, as depicted in the following screenshot:
 
@@ -415,7 +401,6 @@ This article covered how to use a `UITabBarController` in an
 application. We walked through how to load controllers into each tab as well as
 how to set properties on tabs such the title, image and badge. We then examined, using storyboards,
 how to load a `UITabBarController` at runtime when it is not the `RootViewController` of the window.
-
 
 ## Related Links
 

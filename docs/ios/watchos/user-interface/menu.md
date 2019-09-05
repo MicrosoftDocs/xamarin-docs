@@ -30,7 +30,6 @@ regardless of where the Force Touch press occurs on the screen.
 
 Between one and four menu options can be presented.
 
-
 ## Adding a Menu
 
 A `Menu` must be added to an `InterfaceController` on the storyboard
@@ -69,7 +68,6 @@ with an alpha channel that allows the background to show through.
 You should add the images used for the menu to the watch app project
 (not the watch app extension project) for best performance.
 
-
 ## Changing the Menu Items
 
 <!--
@@ -105,8 +103,6 @@ The `ClearAllMenuItems` method can be called to remove all *programmatically
 added* menu items.
 
 Menu items configured in the storyboard cannot be cleared.
-
-
 
 ## Related Links
 

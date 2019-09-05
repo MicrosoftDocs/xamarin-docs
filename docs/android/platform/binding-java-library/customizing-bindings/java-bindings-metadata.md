@@ -13,7 +13,6 @@ ms.date: 03/09/2018
 
 _C# code in Xamarin.Android calls Java libraries through bindings, which are a mechanism that abstracts the low-level details that are specified in Java Native Interface (JNI). Xamarin.Android provides a tool that generates these bindings. This tooling lets the developer control how a binding is created by using metadata, which allows procedures such as modifying namespaces and renaming members. This document discusses how metadata works, summarizes the attributes that metadata supports, and explains how to resolve binding problems by modifying this metadata._
 
-
 ## Overview
 
 A Xamarin.Android **Java Binding Library** tries to automate much of
@@ -94,7 +93,6 @@ allows general-purpose changes to the binding such as:
 
 Lets move on to discuss **Metadata.xml** in more detail.
 
-
 ## Metadata.xml Transform File
 
 As we've already learned, the file **Metadata.xml** is used by the
@@ -144,8 +142,6 @@ the Java API's:
 
 - `parameter` &ndash; Identify a parameter for a method. e.g. `/parameter[@name='p0']`
 
-
-
 ### Adding Types
 
 The `add-node` element will tell the Xamarin.Android binding project to
@@ -161,7 +157,6 @@ constructor and a single field:
     </class>
 </add-node>
 ```
-
 
 ### Removing Types
 
@@ -451,7 +446,6 @@ Xamarin.Android to set the `MeasurementUnit`:
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-
 ## Summary
 
 This article discussed how Xamarin.Android uses metadata to transform
@@ -460,8 +454,6 @@ changes that are possible using *Metadata.xml*, it examined the
 limitations encountered when renaming members and it presented the list
 of supported XML attributes, describing when each attribute should be
 used.
-
-
 
 ## Related Links
 

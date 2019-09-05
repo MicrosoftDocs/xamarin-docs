@@ -400,8 +400,6 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 Note: `EnterActions` and `ExitActions` are ignored on
     **Event Triggers**.
 
-
-
 ## Related Links
 
 - [Triggers Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithtriggers)

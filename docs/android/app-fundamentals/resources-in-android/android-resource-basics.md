@@ -48,7 +48,6 @@ Resources folder:
    Java would have. It is automatically created by the Xamarin.Android
    tools and will be regenerated from time to time.
 
-
 ## Creating and Accessing Resources
 
 Creating resources is as simple as adding files to the directory for
@@ -84,7 +83,6 @@ processed if dashes or spaces are used as separators.
 Once resources have been added to a project, there are two ways to use
 them in an application &ndash; programmatically (inside code) or from
 XML files.
-
 
 ## Referencing Resources Programmatically
 
@@ -145,7 +143,6 @@ syntax:
 - **Resource Name** &ndash; this is the filename of the resource
    (without the extension) or the value of the android:name attribute
    for resources that are in an XML element.
-
 
 ## Referencing Resources from XML
 

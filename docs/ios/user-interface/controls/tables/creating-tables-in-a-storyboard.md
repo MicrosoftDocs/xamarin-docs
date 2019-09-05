@@ -9,7 +9,6 @@ ms.author: crdun
 ms.date: 03/22/2017
 ---
 
-
 # Working with Tables in the iOS Designer
 
 Storyboards are a WYSIWYG way to create iOS applications, and are supported inside Visual Studio on Mac and Windows. For more information on Storyboards, refer to the [Introduction To Storyboards](~/ios/user-interface/storyboards/index.md) document. Storyboards also allow you to edit the cell layouts *in* the table, which simplifies developing with tables and cells
@@ -27,13 +26,11 @@ they are obtained in the `GetView` method by calling the `DequeueReusableCell` m
 
  <a name="Static_Content" />
 
-
 ## Static Content
 
 `UITableView`s with static content allow tables to be designed right on the design surface. Cells can be dragged into the table and customized by changing properties and adding controls.
 
  <a name="Creating_a_Storyboard-driven_app" />
-
 
 ## Creating a Storyboard-Driven App
 
@@ -66,7 +63,6 @@ The storyboard will be edited in three steps:
 - Second, create your UI by dragging and dropping objects onto your view
 - Finally, add the required UIKit class to each view and give various controls a name so they can be referenced in code.
 
-
 Once the storyboard is complete, code can be added to make everything work.
 
 <a name="Layout_The_View_Controllers" />
@@ -90,7 +86,6 @@ replacing it with a UITableViewController. Follow these steps:
 
 7. Change the new **UITableViewController** to be  **Content: Static Cells**. 
 
-
 8. The new UITableViewController must have its class name and
 identifier set. Select the View Controller and type _TaskDetailViewController_ for the **Class** in the **Properties Pad** – this will create a new `TaskDetailViewController.cs` file in the Solution Pad. Enter the **StoryboardID** as _detail_, as illustrated in the example below. This will be
 used later to load this view in C# code:  
@@ -101,8 +96,6 @@ used later to load this view in C# code:
 has been changed to “Chore Board”):
 
     [![Design surface](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
-
-
 
 <a name="Create_the_UI" />
 
@@ -127,7 +120,6 @@ Do the following:
 - In the **Properties Pad**, under **Bar Button Item** select  **Identifier: Add** (to make it a *+* plus button). 
 - Give it a Name so that it can be identified in code at a later stage. Note that you will need to give the Root View Controller a Class Name (for example **ItemViewController**) to allow you to set the Bar button item's name.
 
-
 #### TaskDetail View Controller
 
 The Detail View requires a lot more work. Table View Cells need to be dragged
@@ -147,7 +139,6 @@ Select the table view and open the **Property Pad**. Update the following proper
 
 Select the top section and under **Properties > Table View Section** change **Rows** to _3_, as illustrated below:
 
-
  [![setting the top section to three rows](creating-tables-in-a-storyboard-images/image29-sml.png)](creating-tables-in-a-storyboard-images/image29.png#lightbox)
 
 For each cell open the **Properties Pad** and set:
@@ -155,7 +146,6 @@ For each cell open the **Properties Pad** and set:
 - **Style**:  _Custom_
 - **Identifier**: Choose a unique identifier for each cell (eg. “_title_”, “_notes_”, “_done_”).
 - Drag the required controls to produce the layout shown in the screenshot (place **UILabel**, **UITextField** and **UISwitch** on the correct cells, and set the labels appropriately, ie. Title, Notes and Done).
-
 
 In the second section, set **Rows** to _1_ and grab the bottom resize handle of the cell to make it taller.
 
@@ -176,7 +166,6 @@ There are a few final steps in creating our Storyboard. First we must give each 
 - **UISwitch** : _DoneSwitch_
 - **Delete UIButton** : _DeleteButton_
 - **Save UIButton** : _SaveButton_
-
 
 <a name="Adding_Code" />
 
@@ -376,8 +365,6 @@ The example demonstrates:
 - Creating a table with Static Content to build an input form. This included changing the table style and adding sections, cells and UI controls. 
 - How to create a segue and override the  `PrepareForSegue` method to notify the target view of any parameters it requires. 
 - Loading storyboard views directly with the  `Storyboard.InstantiateViewController` method.
-
-
 
 ## Related Links
 

@@ -141,7 +141,6 @@ app is built and profiled using Android Profiler:
 
     [![CPU usage when RANDOMIZE button is tapped](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
 
-
 ### Using the Android Profiler
 
 Detailed information for using the Android Profiler is included in 

@@ -62,7 +62,6 @@ UIBackgroundModes
 
 NSHomeKitUsageDescription 
 
-
 ## Related Links
 
 - [Apple Reference guide.](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Articles/iPhoneOSKeys.html#//apple_ref/doc/uid/TP40009252-SW10)

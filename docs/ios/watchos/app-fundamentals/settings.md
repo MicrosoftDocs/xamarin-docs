@@ -51,7 +51,6 @@ In the **iPhone app** in your solution (*not* the watch app or extension):
 
   [![](settings-images/rootplist-sml.png "Edit the Settings-Watch.bundle/Root.plist")](settings-images/rootplist.png#lightbox)
 
-
 ## Use Settings in the Watch App
 
 To access the values selected by the user, create an `NSUserDefaults`
@@ -76,8 +75,6 @@ Users will interact with the settings via the new **Apple Watch**
   using the **Settings-Watch.bundle**.
 
 ![](settings-images/applewatch-1.png "Example of app settings") ![](settings-images/applewatch-2.png "Example of app settings")
-
-
 
 ## Related Links
 

@@ -23,7 +23,6 @@ Once you have named the outlet and saved the Storyboard file, Visual Studio for 
 
  <a name="UITextField" />
 
-
 ## UITextField
 
 The `UITextField` control is most often used to accept a single line of text input such as a username or password. Some of the options available for customizing the control are shown here:
@@ -41,7 +40,6 @@ These controls are explained below:
 - **Appearance** – Controls the appearance style of the keyboard and will be either dark or light themed.
 - **Return Key** – Change the label on the Return key to better reflect what action will be taken. Supported values include Go, Join, Next, Route, Done, and Search.
 - **Secure** – Identifies whether the input is masked (such as for a Password input).
-
 
 If a UITextField called `textfield1` has been added to a screen with the designer, you can set or change its properties in C# as follows:
 
@@ -67,7 +65,6 @@ View.Add(textfield1);
 
  <a name="UITextView" />
 
-
 ## UITextView
 
 The `UITextView` control can be used to display read-only text or to accept multiple-line text input. It has many of the same options as the `UITextField` (such as Capitalization, Correction, etc).
@@ -79,7 +76,6 @@ Specific properties include:
 - **Behavior** – Whether the text is editable or read-only.
 - **Detection** – Detects and converts the inputted data into clickable elements such as phone numbers that can trigger a call, addresses that become links to Maps, URLs that open in Safari or dates and times that become events in Calendar.
 
-
 If a UITextView has been added to a screen with the designer, you can set or change its properties like this:
 
 ```csharp
@@ -87,8 +83,6 @@ textview1.Text = "Lorem ipsum..."; // lots of text can go here
 textview1.Editable = true;
 textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorType.Link;
 ```
-
-
 
 ## Related Links
 

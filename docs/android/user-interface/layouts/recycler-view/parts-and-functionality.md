@@ -11,7 +11,6 @@ ms.date: 07/13/2018
 
 # RecyclerView Parts and Functionality
 
-
 `RecyclerView` handles some tasks internally (such as the scrolling
 and recycling of views), but it is essentially a manager that
 coordinates helper classes to display a collection. `RecyclerView`
@@ -92,7 +91,6 @@ classes; for more information about these classes, see
 and
 [RecyclerView.ItemAnimator](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html).
 
-
 <a name="recycling" />
 
 ### How View Recycling Works
@@ -136,7 +134,6 @@ inflated item-layout file. These references are used to load new data
 into the views every time the layout is recycled to show new data.
  
 
-
 ### The Layout Manager
 
 The layout manager is responsible for positioning items in the
@@ -175,7 +172,6 @@ predefined layout manager by default.
 For more information about the layout manager, see the
 [RecyclerView.LayoutManager class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-
 ### The View Holder
 
 The view holder is a class that you define for caching view
@@ -193,7 +189,6 @@ A detailed example of a `ViewHolder` implementation is presented in
 [A Basic RecyclerView Example](~/android/user-interface/layouts/recycler-view/recyclerview-example.md).
 For more information about `RecyclerView.ViewHolder`, see the
 [RecyclerView.ViewHolder class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
-
 
 ### The Adapter
 
@@ -234,8 +229,6 @@ When you implement an adapter, you must override the following
 
 The layout manager calls these methods while it is positioning items
 within the `RecyclerView`. 
-
-
 
 ### Notifying RecyclerView of Data Changes
 
@@ -281,7 +274,6 @@ In the next topic,
 [A Basic RecyclerView Example](~/android/user-interface/layouts/recycler-view/recyclerview-example.md),
 an example app is implemented to demonstrate real code examples of the parts and functionality
 outlined above.
-
 
 ## Related Links
 

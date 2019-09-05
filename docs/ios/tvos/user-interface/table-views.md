@@ -948,8 +948,6 @@ Since tvOS is based off of iOS, Table Views and Table View Controllers are desig
 
 This article has covered designing and working with Table Views inside of a Xamarin.tvOS app. And has presented an example of working with a Table View inside of a Split View, which is the typical usage of a Table View in a tvOS app.
 
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

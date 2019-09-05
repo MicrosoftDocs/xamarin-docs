@@ -12,7 +12,6 @@ ms.date: 04/07/2016
 
 _This article covers using the new iOS Unified API Native types (nint, nuint, nfloat) in a cross-platform application where code is shared with non-iOS devices such as Android or Windows Phone OSes._
 
-
 The 64-types native types work with the iOS and Mac APIs. If you are writing shared code that runs on Android or Windows as well, you'll need to manage the conversion of Unified types into regular .NET types that you can share.
 
 This document discusses different ways to interoperate with the Unified API from your shared/common code.
@@ -206,7 +205,6 @@ Note that here we have changed the `CalculateArea` method to return an `nfloat` 
 
 If the code is compiled and run on a non Unified API device, the `using nfloat = global::System.Single;` maps the `nfloat` to a `Single` which will implicitly convert to a `float` allowing the consuming front-end application to call the `CalculateArea` method without modification.
 
-
 #### Using Type Conversions in the Front End App
 
 In the event that your front end applications only make a handful of calls to your shared code library, another solution could be to leave the library unchanged and do type casting in the Xamarin.iOS or Xamarin.Mac application when calling the existing routine. For example:
@@ -223,7 +221,6 @@ If the consuming application makes hundreds of calls to the shared code library,
 
 Based on our application's architecture, we might end up using one or more of the above solutions to support Native Data Types (where required) in our cross-platform code.
 
-
 ## Xamarin.Forms Applications
 
 The following is required to use Xamarin.Forms for cross-platform UIs that will also be shared with a Unified API application:
@@ -238,8 +235,6 @@ For more details, see our [Updating Existing Xamarin.Forms Apps](~/cross-platfor
 ## Summary
 
 In this article we have seen when to use the Native Data Types in a Unified API application and their implications cross-platform. We have presented several solutions that can be used in situations where the new Native Data Types must be used in cross-platform libraries. Also, we've seen a quick guide to supporting Unified APIs in Xamarin.Forms cross-platform applications.
-
-
 
 ## Related Links
 

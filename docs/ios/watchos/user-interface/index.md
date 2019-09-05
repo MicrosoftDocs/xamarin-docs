@@ -38,7 +38,6 @@ The programmatic names of all the controls is prefixed with
 |Digital Crown|The Digital Crown can be used to drive a picker, or it's rotation can be tracked in code.<br />[Catalog code](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
 |Gestures|There are four types of gesture recognition that can be added to a scene: Tap, Swipe, Pan, and LongPress.<br />[Catalog code](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
 
-
 ## Related Links
 
 - [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)

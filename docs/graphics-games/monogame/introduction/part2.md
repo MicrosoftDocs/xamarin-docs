@@ -145,7 +145,6 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input.Touch;
 
-
 namespace WalkingGame
 {
     public class CharacterEntity
@@ -249,7 +248,6 @@ It’s worth noting that despite its name the `LoadContent` method is not the on
 
 Finally we can modify the Draw method as follows:
 
-
 ```csharp
 protected override void Draw(GameTime gameTime)
 {
@@ -306,7 +304,6 @@ The `Animation` class will contain a `List<AnimationFrame>` as well as the logic
 
 To add the `Animation` class, right-click or Control-click on the **WalkingGame** shared project and select **Add > New File...**. Enter the name **Animation** and click the **New** button. We’ll modify the `Animation.cs` file so it contains the following code:
 
-
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -349,7 +346,6 @@ namespace WalkingGame
         {
             double secondsIntoAnimation = 
                 timeIntoAnimation.TotalSeconds + gameTime.ElapsedGameTime.TotalSeconds;
-
 
             double remainder = secondsIntoAnimation % Duration.TotalSeconds;
 
@@ -455,7 +451,6 @@ public CharacterEntity (GraphicsDevice graphicsDevice)
 ```
 
 As mentioned earlier, we need to call `Animation.Update` for time-based animations to play. We also need to assign the `currentAnimation`. For now we’ll assign the `currentAnimation` to `walkDown`, but we’ll be replacing this code later when we implement our movement logic. We’ll add the `Update` method to `CharacterEntity` as follows:
-
 
 ```csharp
 public void Update(GameTime gameTime)
@@ -655,7 +650,6 @@ public void Update(GameTime gameTime)
 
     this.X += velocity.X * (float)gameTime.ElapsedGameTime.TotalSeconds;
     this.Y += velocity.Y * (float)gameTime.ElapsedGameTime.TotalSeconds;
-
 
     if (velocity != Vector2.Zero)
     {

@@ -96,7 +96,6 @@ You can verify the icons are configured correct by checking
 > [!NOTE]
 > Icons cannot have an alpha channel (the app will be rejected during App Store submission if an alpha channel is present). You can check if an alpha channel exists and remove it [using the Preview app on Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
 
-
 ## Related Links
 
 - [Apple's watchOS icon & images guide](https://developer.apple.com/design/human-interface-guidelines/watchos/icons-and-images/)

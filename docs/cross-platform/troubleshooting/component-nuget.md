@@ -149,7 +149,6 @@ will be performed via the **Nuget** update feature:
 
 ![Update NuGet package](component-nuget-images/nuget-update-sml.png)
 
-
 <a name="replace" />
 
 ## Components with NuGet replacements
@@ -221,7 +220,6 @@ with updates. You should plan to:
 Many component vendors are still working on migrating to NuGet, and others
 (including commercially available products) may be investigating
 alternative delivery options.
-
 
 ## Related Links
 - [List of popular Xamarin Plugins and Libraries](https://github.com/xamarin/XamarinComponents/blob/master/README.md)

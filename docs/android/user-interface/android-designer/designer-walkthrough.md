@@ -15,7 +15,6 @@ _This article is a walkthrough of the Xamarin.Android Designer. It
 demonstrates how to create a user interface for a small color browser
 app; this user interface is created entirely in the Designer._
 
-
 ## Overview
 
 Android user interfaces can be created declaratively by using XML files
@@ -44,7 +43,6 @@ how to modify widgets interactively on the **Design Surface** or
 by using the Designer's **Properties** pane. Finally, you'll see how 
 the design looks when the app runs on a device or emulator.
 
-
 # [Visual Studio](#tab/windows)
 
 ### Creating a new project
@@ -59,7 +57,6 @@ Name the new app **DesignerWalkthrough** and click **OK**.
 In the **New Android App** dialog, choose **Blank App** and click **OK**:
 
 [![Selecting the Android Blank App template](designer-walkthrough-images/vs/02-blank-app-w158-sml.png)](designer-walkthrough-images/vs/02-blank-app-w158.png#lightbox)
-
 
 ### Adding a layout
 
@@ -139,7 +136,6 @@ If the two `textView` widgets are not inside `linearLayout1`, you can
 drag them to `linearLayout1` in the **Document Outline** and position
 them so they appear as shown in the previous screenshot (indented under
 `linearLayout1`).
-
 
 ### Arranging the user interface
 
@@ -366,8 +362,6 @@ app appears when running on a device:
 
 [![Final screenshot](designer-walkthrough-images/vs/25-final-screenshot-sml.png)](designer-walkthrough-images/vs/25-final-screenshot.png#lightbox)
 
-
-
 # [Visual Studio for Mac](#tab/macos)
 
 ### Creating a new project
@@ -465,7 +459,6 @@ drag them to `linearLayout1` in the **Document Outline** and position
 them so that they appear as shown in the previous screenshot (indented under
 `linearLayout1`).
 
-
 ### Arranging the user interface
 
 The next step is to modify the UI to display the `ImageView` on the
@@ -500,7 +493,6 @@ following screenshot. Notice that the `TextView` widgets have been
 moved to the right of the `ImageView`:
 
 [![Select horizontal orientation](designer-walkthrough-images/xs/18-horizontal-orientation-m75-sml.png)](designer-walkthrough-images/xs/18-horizontal-orientation-m75.png#lightbox)
-
 
 ### Modifying the spacing
 
@@ -683,7 +675,6 @@ app appears when running on a device:
 [![Final screenshot](designer-walkthrough-images/xs/26-final-screenshot-sml.png)](designer-walkthrough-images/xs/26-final-screenshot.png#lightbox)
 
 -----
-
 
 ## Summary
 

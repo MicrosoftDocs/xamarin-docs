@@ -78,7 +78,6 @@ Tools** screen. This screen has two tabs &ndash; **Platforms** and
 The **Android SDKs and Tools** screen is described in more detail in
 the following sections.
 
-
 ### Android SDK location
 
 The Android SDK location is configured at the top of the **Android SDKs
@@ -102,14 +101,12 @@ the Android SDK. In the following screenshot, the Android SDK under
 When you click **OK**, the SDK Manager will manage the Android SDK that
 is installed at the selected location.
 
-
 ### Tools tab
 
 The **Tools** tab displays a list of _tools_ and _extras_. Use this tab
 to install the Android SDK tools, platform tools, and build tools.
 Also, you can install the Android Emulator, the low-level debugger
 (LLDB), the NDK, HAXM acceleration, and Google Play libraries.
-
 
 For example, to download the Google Android Emulator package, click the
 check mark next to **Android Emulator** and click the **Apply Changes**
@@ -194,7 +191,6 @@ To switch back to the supported repository of platforms and tools,
 click **Microsoft (Recommended)**. This restores the list of packages
 and tools to the default selection.
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 ## Requirements
@@ -235,7 +231,6 @@ contains three tabs, **Platforms**, **Tools**, and **Locations**:
 
 The tabs of the Android SDK Manager are described in the
 following sections.
-
 
 ### Locations tab
 
@@ -281,7 +276,6 @@ Click **Accept** if you accept the Terms and Conditions. At the bottom
 of the window, a progress bar indicates download and installation
 progress. After the installation completes, the **Tools** tab will show
 that the selected tools and extras were installed.
-
 
 ### Platforms tab
 
@@ -355,7 +349,6 @@ and tools to the default selection.
 
 This guide explained how to install and use the Xamarin Android SDK
 Manager tool in Visual Studio and Visual Studio for Mac.
-
 
 ## Related Links
 

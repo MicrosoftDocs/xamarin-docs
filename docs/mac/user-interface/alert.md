@@ -105,7 +105,6 @@ If this code is run, the following will be displayed:
 
 [![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
 
-
 <a name="Working_with_Alert_Buttons" />
 
 ## Working with Alert Buttons

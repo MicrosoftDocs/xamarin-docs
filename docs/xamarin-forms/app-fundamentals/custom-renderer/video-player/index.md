@@ -61,10 +61,6 @@ Although the video players on each platform provide their own transport controls
 
 Each of the platform video players has a position bar that shows the progress of the video and allows you to skip ahead or back to a particular position. This article demonstrates how you can replace that position bar with a custom control.
 
-
-
-
-
 ## Related Links
 
 - [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

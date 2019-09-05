@@ -124,9 +124,6 @@ To provide the required `NSSpeechRecognitionUsageDescription` key in the `Info.p
 > [!IMPORTANT]
 > Failing to provide either of the above `Info.plist` keys (`NSSpeechRecognitionUsageDescription` or `NSMicrophoneUsageDescription`) can result in the app failing without warning when trying to access either Speech Recognition or the microphone for live audio.
 
-
-
-
 ### Requesting Authorization
 
 To request the required user authorization that allows the app to access speech recognition, edit the main View Controller class and add the following code:
@@ -393,8 +390,6 @@ Apple has the following suggestion for being transparent and respecting the user
 ## Summary
 
 This article has presented the new Speech API and showed how to implement it in a Xamarin.iOS app to support continuous speech recognition and transcribe speech (from live or recorded audio streams) into text. 
-
-
 
 ## Related Links
 

@@ -356,14 +356,11 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 #endregion
 ```
 
-
 <a name="Summary" />
 
 ## Summary
 
 This article has covered working with `UIAlertController` to display an alert message to the user in Xamarin.tvOS. First, it showed how to display a simple alert and add buttons. Next, it showed how to add Text Fields to an alert. Finally, it showed how to use a helper class to reduce the amount of repetitive code required to display an Alert.
-
-
 
 ## Related Links
 

@@ -10,7 +10,6 @@ ms.date: 03/09/2018
 
 # Permissions In Xamarin.Android
 
-
 ## Overview
 
 Android applications run in their own sandbox and for security reasons do not have access to certain system resources or hardware on the device. The user must explicitly grant permission to the app before it may use these resources. For example, an application cannot access the GPS on a device without explicit permission from the user. Android will throw a `Java.Lang.SecurityException` if an app tries to access a protected resource without permission.
@@ -42,17 +41,14 @@ The Android Support Library backports some of the new APIs for permissions to ol
 
 This document will discuss how to add permissions to a Xamarin.Android application and how apps that target Android 6.0 (API level 23) or higher should perform a run-time permission check.
 
-
 > [!NOTE]
 > It is possible that permissions for hardware may affect how the app is filtered by Google Play. For example, if the app requires permission for the camera, then Google Play will not show the app in the Google Play Store on a device that does not have a camera installed.
-
 
 <a name="requirements" />
 
 ## Requirements
 
 It is strongly recommended that Xamarin.Android projects include the [Xamarin.Android.Support.Compat](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/) NuGet package. This package will backport permission specific APIs to older versions of Android, providing one common interface without the need to constantly check the version of Android that the app is running on.
-
 
 ## Requesting System Permissions
 
@@ -62,7 +58,6 @@ Apps that target Android 6.0 or higher cannot assume that because the user grant
 
 > [!NOTE]
 > Applications should only request the permissions that they require.
-
 
 ### Declaring Permissions in the Manifest
 
@@ -110,7 +105,6 @@ It is possible to declare the permissions using the tool support built into Visu
 Xamarin.Android will automatically add some permissions at build time to Debug builds. This will make debugging the application easier. In particular, two notable permissions are `INTERNET` and `READ_EXTERNAL_STORAGE`. These automatically-set permissions will not appear to be enabled in the **Required permissions** list. Release builds, however, use only the permissions that are explicitly set in the **Required permissions** list. 
 
 For apps that target Android 5.1(API level 22) or lower, there is nothing more that needs to be done. Apps that will run on Android 6.0 (API 23 level 23) or higher should proceed on to the next section on how to perform run time permission checks. 
-
 
 ### Runtime Permission Checks in Android 6.0
 
@@ -204,11 +198,9 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
 }
 ```  
 
-
 ## Summary
 
 This guide discussed how to add and check for permissions in an Android device. The differences in how permissions work between old Android apps (API level < 23) and new Android apps (API level > 22). It discussed how to perform run-time permission checks in Android 6.0.
-
 
 ## Related Links
 

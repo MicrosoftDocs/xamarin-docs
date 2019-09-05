@@ -81,7 +81,6 @@ With this new syntax, some handy terminology can be introduced:
 - `Text`,  `VerticalOptions`, `FontAttributes` and  `FontSize` are  *property attributes*. They are Xamarin.Forms properties expressed as XML attributes.
 - In that final snippet, `TextColor` has become a  *property element*. It is a Xamarin.Forms property but it is now an XML element.
 
-
 The definition of property elements might at first seem to be a violation of XML syntax, but it’s not. The period has no special meaning in XML. To an XML decoder, `Label.TextColor` is simply a normal child element.
 
 In XAML, however, this syntax is very special. One of the rules for property elements is that nothing else can appear in the `Label.TextColor` tag. The value of the property is always defined as content between the property-element start and end tags.

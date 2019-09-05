@@ -221,7 +221,6 @@ double-click to install it in the **Keychain**.
 
     [![The certificate in Keychain access](certificates-identifiers-images/image43.png "The certificate in Keychain access")](certificates-identifiers-images/image43-large.png#lightbox)
 
-
 ## Related Links
 
 - [Installation](/visualstudio/mac/installation/)

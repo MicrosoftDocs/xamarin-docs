@@ -60,7 +60,6 @@ Xamarin.iOS and Android projects.
 
     ![](platform-specific-images/create-nuget-package.png "NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
 
-
 ## Verifying the Output
 
 NuGet packages are also ZIP files, so it's possible to inspect the internal structure of the generated package.
@@ -69,7 +68,6 @@ This screenshot shows the contents of a platform-specific NuGet that supports iO
 and had two reference assemblies selected:
 
 ![](platform-specific-images/nuget-output.png "Files contained in the NuGet package")
-
 
 ## Related Links
 

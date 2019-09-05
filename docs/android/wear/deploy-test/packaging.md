@@ -61,7 +61,6 @@ the following steps to create this association:
 
 -----
 
-
 Note that you will get an **XA5211** error if the package name of the
 Wear app does not match the package name of the Handheld app. For
 example:
@@ -98,7 +97,6 @@ process does the following:
     ```
 
 - Adds the Wear app as a **raw** resource to the Handheld project. 
-
 
 ## Manual Packaging
 

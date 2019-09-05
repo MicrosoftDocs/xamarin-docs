@@ -88,7 +88,6 @@ the `ImageView`, the message **Touch Ends** will be displayed in the
 
 [![Screenshot of activity with Touch Ends](android-touch-walkthrough-images/image16.png)](android-touch-walkthrough-images/image16.png#lightbox)
 
-
 ## Gesture Recognizer Activity
 
 Now lets implement the Gesture Recognizer activity. This activity will
@@ -434,7 +433,6 @@ lets get on with the final Activity in the walkthrough.
 
 You now have an understanding of how to integrate touch and gestures in
 an Android application using Xamarin.Android.
-
 
 ## Related Links
 

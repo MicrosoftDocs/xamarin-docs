@@ -41,7 +41,6 @@ Now we'll need to modify the **MainWindow.cs** file to define the window's layou
 
 Modern Xamarin.Mac apps that use Storyboards for their user interface may not automatically include the **MainWindow.cs**, **ViewController.cs** or **MainWindowController.cs** files. As required, simply add a new Empty C# Class to the project (**Add** > **New File...** > **General** > **Empty Class**) and name it the same as the missing file.
 
-
 ### Defining the window in code
 
 Next, edit the **MainWindow.cs** file and make it look like the following:
@@ -173,7 +172,6 @@ Since macOS doesn't have a specific _Label_ UI element, we've added a specially 
 
 Again, the `ContentView.AddSubview (ClickMeLabel)` method adds the `NSTextField` to the Content View so that it will be displayed on screen when the application is run and the window opened.
 
-
 ### Adjusting the window controller
 
 Since the design of the `MainWindow` is no longer being loaded from a .storyboard or .xib file, we'll need to make some adjustments to the window controller. Edit the **MainWindowController.cs** file and make it look like the following:
@@ -263,7 +261,6 @@ Window.AwakeFromNib ();
 
 This will allow you to code against the window just like a standard window loaded from a .storyboard or .xib file.
 
-
 ### Displaying the window
 
 With the .storyboard or .xib file removed and the **MainWindow.cs** and **MainWindowController.cs** files modified, you'll be using the window just as you would any normal window that had been created in Xcode's Interface Builder with a .xib file.
@@ -282,7 +279,6 @@ At this point, if the application is run and the button clicked a couple of time
 
 ![An example app run](xibless-ui-images/run01.png "An example app run")
 
-
 ## Adding a code only window
 
 If we want to add a code only, xibless window to an existing Xamarin.Mac application, right-click on the project in the **Solution Pad** and select **Add** > **New File..**. In the **New File** dialog choose **Xamarin.Mac** > **Cocoa Window with Controller**, as illustrated below:
@@ -290,7 +286,6 @@ If we want to add a code only, xibless window to an existing Xamarin.Mac applica
 ![Adding a new window controller](xibless-ui-images/add01.png "Adding a new window controller")
 
 Just like before, we'll delete the default .storyboard or .xib file from the project (in this case **SecondWindow.xib**) and follow the steps in the [Switching a Window to use Code](#Switching_a_Window_to_use_Code) section above to cover the window's definition to code.
-
 
 ## Adding a UI element to a window in code
 
@@ -304,7 +299,6 @@ MyWindow.ContentView.AddSubview (ClickMeButton);
 ```
 
 The above code creates a new `NSButton` and adds it to the `MyWindow` window instance for display. Basically any UI element that can be defined in Xcode's Interface Builder in a .storyboard or .xib file can be created in code and displayed in a window.
-
 
 ## Defining the menu bar in code
 
@@ -354,12 +348,9 @@ public override void DidFinishLaunching (NSNotification notification)
 
 The above creates a Status Bar menu from code and displays it when the application is launched. For more information on working with Menus, please see our [Menus](~/mac/user-interface/menu.md) documentation.
 
-
 ## Summary
 
 This article has taken a detailed look at creating a Xamarin.Mac application's user interface in C# code as opposed to using Xcode's Interface Builder with .storyboard or .xib files.
-
-
 
 ## Related Links
 

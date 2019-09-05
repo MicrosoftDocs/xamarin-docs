@@ -13,7 +13,6 @@ ms.date: 03/19/2018
 
 _This guide discusses how to schedule background work using the Android Job Scheduler API, which is available on Android devices running Android 5.0 (API level 21) and higher._
 
-
 ## Overview 
 
 One of the best ways to keep an Android application responsive to the user is to ensure that complex or long running work is performed in the background. However, it is important that background work will not negatively impact the user's experience with the device. 
@@ -133,7 +132,6 @@ var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 
 A powerful feature of the Android Job Scheduler is the ability to control when a job runs or under what conditions a job may run. The following table describes some of the methods on `JobInfo.Builder` that allow an app to influence when a job can run:  
 
-
 |  Method | Description   |
 |---|---|
 | `SetMinimumLatency`  | Specifies that a delay (in milliseconds) that should be observed before a job is run. |
@@ -144,7 +142,6 @@ A powerful feature of the Android Job Scheduler is the ability to control when a
 | `SetDeviceIdle` | The job will run when the device is busy. |
 | `SetPeriodic` | Specifies that the job should be regularly run. |
 | `SetPersisted` | The job should perisist across device reboots. | 
-
 
 The `SetBackoffCriteria` provides some guidance on how long the `JobScheduler` should wait before trying to run a job again. There are two parts to the backoff criteria: a delay in milliseconds (default value of 30 seconds)and type of back off that should be used (sometimes referred to as the _backoff policy_ or the _retry policy_). The two policies are encapsulated in the `Android.App.Job.BackoffPolicy` enum:
 

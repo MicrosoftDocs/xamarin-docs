@@ -70,7 +70,6 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 3. Depending on your team privileges, the signing identity will be generated, as shown below, or you may have to wait until a team agent or admin approves it:
     [![](images/generated.png "The signing identity will be generated and a dialog displayed")](images/generated.png#lightbox)
 
-
 <a name="creatingprofile" />
 
 ## Creating a Distribution Profile
@@ -81,7 +80,6 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 
 As with any other Provisioning Profile you create, an App ID is required to identify the App that you are distributing to the user's device. If you haven't already created this, follow the steps below to create one:
 
-
 1. In the [Apple Developer Center](https://developer.apple.com/account/overview.action) browse to the *Certificate, Identifiers and Profiles* section. Select **App IDs** under **Identifiers**.
 2. Click the **+** button and provide a **Name** which will identify it in the Portal.
 3. The App prefix should be already set as your Team ID, and cannot be changed. Select either an Explicit or Wildcard App ID, and enter a Bundle ID in a reverse DNS format like:
@@ -89,7 +87,6 @@ As with any other Provisioning Profile you create, an App ID is required to iden
     - **Wildcard**:com.[DomainName].*
 4. Select any [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) that the app requires.
 5. Click the **Continue** button and following the on screen instructions to create the new App ID.
-
 
 ### Creating a Provisioning Profile
 
@@ -120,7 +117,6 @@ Once you have the required components needed for creating a Distribution Profile
     [![](images/distribute06.png "Enter a Name for the new Distribution Profile")](images/distribute06.png#lightbox)
 
 7. Click the **Generate** button to create the new profile and finalize the process.
-
 
 # [Visual Studio for Mac](#tab/macos)
 

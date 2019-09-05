@@ -884,7 +884,6 @@ This line is telling us that the key `Title` doesn't exist on the object that we
 
 This article has taken a detailed look at working with data binding and key-value coding in a Xamarin.Mac application. First, it looked at exposing a C# class to Objective-C by using key-value coding (KVC) and key-value observing (KVO). Next, it showed how to use a KVO compliant class and Data Bind it to UI elements in Xcode's Interface Builder. Finally, it showed complex data binding using **Array Controllers** and **Tree Controllers**.
 
-
 ## Related Links
 
 - [MacDatabinding Storyboard (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macdatabinding-storyboard)

@@ -13,7 +13,6 @@ ms.date: 03/16/2017
 
 _This article covers the concept of Focus and how it is used to present and handle Navigation inside of a Xamarin.tvOS app._
 
-
 This article covers the concept of [Focus](#Focus-and-Selection) and how it is used to handle [Navigation](#Navigation) in a Xamarin.tvOS app's User Interface. We'll examine how the built-in tvOS Navigation controls use Focus, Highlighting and Selection to provide your Xamarin.tvOS app's User Interface Navigation.
 
 [![](navigation-focus-images/intro01.png "tvOS apps User Interface Navigation")](navigation-focus-images/intro01.png#lightbox)
@@ -119,9 +118,6 @@ To request that the Focus Engine moves focus back to the `PreferredFocusedView` 
 
 > [!IMPORTANT]
 > Calling `SetNeedsUpdateFocus` only has effect if the View Controller it is being called against contains the View that currently has focus.
-
-
-
 
 <a name="Working-with-Focus-Guides" />
 
@@ -272,9 +268,6 @@ With this property set to `true`, the Image View will automatically get the Para
 ## Summary
 
 This article has covered the concept of Focus and how it is used to handle Navigation in a Xamarin.tvOS app's User Interface. It examine how the built-in tvOS Navigation controls use Focus, Highlighting and Selection to provide navigation. Next, it looked at how Focus can be used with Parallax and Layered Images to provide visual clues for the current Navigation State to the end user. Finally, it examined working with Focus, Focus Updates, Focus in Collections and Enabling Parallax.
-
-
-
 
 ## Related Links
 

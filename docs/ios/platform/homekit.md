@@ -262,7 +262,6 @@ You should also monitor the Home Manager’s `DidAddHome` and `DidRemoveHome` ev
 > [!IMPORTANT]
 > The `AlertView.PresentOKAlert` method used in the sample code above is a helper class in the HomeKitIntro application that makes working with the iOS Alerts easier.
 
-
 ## Finding New Accessories
 
 Once a Primary Home has been defined or loaded from the Home Manager, your Xamarin.iOS app can call the `HMAccessoryBrowser` to find any new home automation accessories and add them to a home.
@@ -700,8 +699,6 @@ For more information about the new features of HomeKit in iOS 9, please see Appl
 ## Summary
 
 This article has introduced Apple's HomeKit home automation framework. It showed how to setup and configure test devices using the HomeKit Accessory Simulator and how to create a simple Xamarin.iOS app to discover, communicate with and control home automation devices using HomeKit.
-
-
 
 ## Related Links
 

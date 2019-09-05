@@ -278,7 +278,6 @@ Next, double-click the `Info.plist` file in the **Solution Explorer** to open it
 
 ![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
 
-
 To use the new Storyboard as a launch screen, do the following:
 
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.

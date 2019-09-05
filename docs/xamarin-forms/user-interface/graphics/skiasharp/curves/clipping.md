@@ -52,7 +52,6 @@ public class MonkeyThroughKeyholePage : ContentPage
 
 Although the `keyholePath` object describes the outline of a keyhole, the coordinates are completely arbitrary and reflect what was convenient when the path data was devised. For this reason, the `PaintSurface` handler obtains the bounds of this path and calls `Translate` and `Scale` to move the path to the center of the screen and to make it nearly as tall as the screen:
 
-
 ```csharp
 public class MonkeyThroughKeyholePage : ContentPage
 {
@@ -505,7 +504,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 It doesn't really look like a four-leaf clover, but it's an image that might otherwise be hard to render without clipping:
 
 [![Triple screenshot of the Four-Leaf Clover page](clipping-images//fourleafclover-small.png)](clipping-images/fourleafclover-large.png#lightbox)
-
 
 ## Related Links
 

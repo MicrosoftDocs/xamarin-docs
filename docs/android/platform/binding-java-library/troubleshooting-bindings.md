@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _This article summarizes serveral common errors that may occur when generating bindings, along with possible causes and suggested ways to resolve them._
 
-
 ## Overview
 
 Binding an Android library (an **.aar** or a **.jar**) file is seldom a
@@ -55,7 +54,6 @@ It can also prove helpful to decompile the Android library and examine
 the types and methods that Xamarin.Android is trying to bind. This is
 covered in more detail later on in this guide.
 
-
 ## Decompiling an Android Library
 
 Inspecting the classes and methods of the Java classes can provide
@@ -93,7 +91,6 @@ Once you have decompiled the Android library, examine the source code. Generally
 > of a legal professional before attempting to decompile a Java library
 > and inspect the source code.
 
-
 ## Inspect API.XML
 
 As a part of building a binding project, Xamarin.Android will generate
@@ -109,12 +106,10 @@ be causing any binding problems. For example, **api.xml** might reveal
 that a property is returning an inappropriate type, or that there are
 two types that share the same managed name.
 
-
 ## Known Issues
 
 This section will list some of the common error messages or symptoms
 that my occur when trying to bind an Android library.
-
 
 ### Problem: Java Version Mismatch
 
@@ -123,7 +118,6 @@ because you are using either a newer or older version of Java compared
 to what the library was compiled with. Recompile the Android library
 with the same version of the JDK that your Xamarin.Android project 
 is using.
-
 
 ### Problem: At least one Java library is required
 
@@ -139,7 +133,6 @@ generator cannot automatically guess which one to use by default. For
 more information about build actions, see
 [Build Actions](~/android/platform/binding-java-library/index.md).
 
-
 ### Problem: Binding tools cannot load the .JAR library
 
 The binding library generator fails to load the .JAR library.
@@ -152,8 +145,6 @@ of Java reflection and the ASM byte code engineering library, those
 dependent tools may reject the obfuscated libraries while Android
 runtime tools may pass. The workaround for this is to hand-bind these
 libraries instead of using the binding generator.
-
-
 
 ### Problem: Missing C# types in generated output.
 
@@ -382,7 +373,6 @@ Java.Lang.JavaSystem.LoadLibrary("pocketsphinx_jni");
 
 In this article, we listed common troubleshooting issues associated
 with Java Bindings and explained how to resolve them.
-
 
 ## Related Links
 

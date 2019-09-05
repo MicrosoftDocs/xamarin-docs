@@ -233,7 +233,6 @@ The Universal Windows Platform doesn't provide a shadow effect, and so the `Labe
 
 This article has demonstrated using CLR properties to pass parameters to an effect. CLR properties can be used to define effect parameters that don't respond to runtime property changes.
 
-
 ## Related Links
 
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

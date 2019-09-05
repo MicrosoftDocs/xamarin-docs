@@ -19,5 +19,3 @@ Xamarin.iOS, Xamarin.Android, and Xamarin.Mac all ship with over a dozen assembl
 
 This guide provides a list of all available assemblies shipped with each platform, and show which can be used on each platform.
 
-
-

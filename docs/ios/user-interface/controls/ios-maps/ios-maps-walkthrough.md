@@ -21,7 +21,6 @@ Let's begin by creating a new **iOS Empty Project**, and giving it a relevant na
 
 ## ViewController
 
-
 1. Add the following namespaces to the `ViewController`:
 
     ```csharp
@@ -105,9 +104,7 @@ Let's begin by creating a new **iOS Empty Project**, and giving it a relevant na
 
     `Maps Walkthrough Docs Sample`.
 
-
 ## ConferenceAnnotation.cs – A class for custom Annotations
-
 
 1. We're going to use a custom class for the annotation called `ConferenceAnnotation`. Add the following class to the project:
 
@@ -175,7 +172,6 @@ Let's begin by creating a new **iOS Empty Project**, and giving it a relevant na
     ```
 
 This completes the code in `ViewDidLoad`. Now we need to implement our `MapDelegate` class to handle creating the annotation and overlay views respectively.
-
 
 ## MapDelegate
 
@@ -282,7 +278,6 @@ Run the application. We now have an interactive map with a custom annotation and
 ## Summary
 
 In this article we looked at how to add an annotation to a map as well as how to add an overlay for a specified polygon. We also demonstrated how to add touch support to the annotation to animate an image over a map.
-
 
 ## Related Links
 

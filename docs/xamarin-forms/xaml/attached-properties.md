@@ -137,7 +137,6 @@ When creating an attached property, there are a number of optional parameters th
 
 This article provided an introduction to attached properties, and demonstrated how to create and consume them. An attached property is a special type of bindable property, defined in one class but attached to other objects, and recognizable in XAML as attributes that contain a class and a property name separated by a period.
 
-
 ## Related Links
 
 - [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md)

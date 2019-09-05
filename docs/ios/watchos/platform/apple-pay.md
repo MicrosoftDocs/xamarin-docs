@@ -13,7 +13,6 @@ ms.date: 03/17/2017
 
 Apple has made several enhancements to Apple Pay in watchOS 3 that adds support for In-App Payments. This allows the user to securely provide payment and contact information to pay for physical goods and services directly from the Apple Watch.
 
-
 ## About Apple Pay Enhancements
 
 As Stated above, Apple has made several enhancements to Apple Pay in watchOS 3 that allow for secure payment and contact information to pay for physical goods and services directly from the Apple Watch. These enhancements are provided by modifications to the PassKit framework.

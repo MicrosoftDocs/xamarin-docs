@@ -24,7 +24,6 @@ Store) set the **Signing Settings** to use the **Developer ID**. Ensure to edit 
 
  [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
 
-
 ## Build
 
 Before building, ensure to selected the correct configuration and select to create an install package in the **Mac Build** settings:

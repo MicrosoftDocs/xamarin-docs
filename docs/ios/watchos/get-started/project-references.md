@@ -31,12 +31,9 @@ View the references by double-clicking on the References
 
   ![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
 
-
 - The **Watch App Extension** does not reference either of the other projects
 
   ![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
-
-
 
 ## Bundle Identifiers
 

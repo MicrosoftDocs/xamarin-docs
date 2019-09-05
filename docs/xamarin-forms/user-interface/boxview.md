@@ -779,7 +779,6 @@ The second hand is treated a little differently: An animation easing function is
 
 The `BoxView` might seem simple at first, but as you've seen, it can be quite versatile, and can almost reproduce visuals that are normally possible only with vector graphics. For more sophisticated graphics, consult [Using SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
 
-
 ## Related Links
 
 - [Basic BoxView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview)

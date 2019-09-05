@@ -43,7 +43,6 @@ The key point is: make your user interface readable and useable
   expose less-frequently used functionality to keep your app
   design clear and concise.
 
-
 ## Implementation
 
 Watch Kit includes the following controls to help you
@@ -73,7 +72,6 @@ When the size is set to **Relative to Container**
 
 ![](layout-images/button-attributes.png "Provide a proportional value and an offset adjustment")
 
-
 ### Group
 
 `WKInterfaceGroup` is a simple layout container that
@@ -89,7 +87,6 @@ Groups can themselves be sized and positioned relative
   to create complex layouts.
 
 ![](layout-images/group-scene.png "Groups can be nested to create complex layouts")
-
 
 ### Separator
 
@@ -111,8 +108,6 @@ No layout would be complete without the `Label`, `Image`,
   [other controls](~/ios/watchos/user-interface/index.md).
   These can be positioned in your layouts using **Groups**
   or the position and size settings on each control.
-
-
 
 ## Related Links
 

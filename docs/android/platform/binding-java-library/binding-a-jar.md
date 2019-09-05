@@ -99,7 +99,6 @@ Picasso.With (this)
 
 ```
 
-
 ### Creating the Bindings Library
 
 Before commencing with the steps below, please download 
@@ -166,12 +165,10 @@ API level 19):
 
 [![Target API level set to API 19](binding-a-jar-images/06-set-target-framework-sml.png)](binding-a-jar-images/06-set-target-framework.png#lightbox)
 
-
 Finally, build the Bindings Library. Although some warning messages may be displayed,
 the Bindings Library project should build successfully and produce an output .DLL
 at the following location: **JarBinding/bin/Debug/JarBinding.dll**
     
-
 
 ### Using the Bindings Library
 
@@ -269,8 +266,6 @@ In this walkthrough, we created a Bindings Library for a third-party
 .JAR file, added the Bindings Library to a minimal test app, and then 
 ran the app to verify that our C# code can call Java code residing in 
 the .JAR file. 
-
-
 
 ## Related Links
 

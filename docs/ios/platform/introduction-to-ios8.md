@@ -159,8 +159,6 @@ With all the improvements made in iOS 8, a number of APIs have deprecated. Some 
 ## Summary
 In this article we looked at some of the new features introduced by Apple in iOS 8.
 
-
-
 ## Related Links
 
 - [UIKitEnhancements (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-uikitenhancements)

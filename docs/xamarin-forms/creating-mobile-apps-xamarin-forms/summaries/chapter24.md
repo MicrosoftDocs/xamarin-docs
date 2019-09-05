@@ -169,8 +169,6 @@ The [**StackRestoreDemo**](https://github.com/xamarin/xamarin-forms-book-samples
 
 The [**NoteTaker**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter24/NoteTaker) sample also makes use of `MultiPageRestorableApp` and allows for the entering and editing of notes that are saved in the `Properties` dictionary.
 
-
-
 ## Related links
 
 - [Chapter 24 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch24-Apr2016.pdf)

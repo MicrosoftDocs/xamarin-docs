@@ -30,7 +30,6 @@ The following property names correspond to the indicated java
 
 - **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
 
-
 # [Visual Studio](#tab/windows)
 
 1. Open your solution in Visual Studio.

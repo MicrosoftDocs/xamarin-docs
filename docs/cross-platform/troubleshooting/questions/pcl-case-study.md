@@ -87,7 +87,6 @@ Windows: `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFr
 
 Mac (Mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
 
-
 ### Will it help if I manually add a reference to the "System.Diagnostics.Tracing" facade assembly?
 
 _In particular can I solve the problem using these 2 steps?_

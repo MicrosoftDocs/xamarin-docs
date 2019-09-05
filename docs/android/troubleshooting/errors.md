@@ -28,7 +28,6 @@ This document provides some information on the various error codes from Xamarin.
 |XA8xxx|Reserved|
 |XA9xxx|Licensing Errors|
 
-
 ## Error Codes
 
 ### XA0xxx Errors
@@ -99,7 +98,6 @@ These are AOT errors.
 |XA3002|AOT restriction: Method '{0}' must be static since it is decorated with [MonoPInvokeCallback].|
 |XA3003|Conflicting --debug and --llvm options. Soft-debugging is disabled.|
 
-
 ### XA4xxx Errors
 
 These are code generation errors.
@@ -129,7 +127,6 @@ These are code generation errors.
 |XA4209|Failed to create JavaTypeInfo for class: {0} due to {1}.|
 |XA4210|You need to add a reference to Mono.Android.Export.dll when you use ExportAttribute or ExportFieldAttribute.|
 |XA4211|AndroidManifest.xml //uses-sdk/@android:targetSdkVersion '{0}' is less than $(TargetFrameworkVersion) '{1}'. Using API-{1} for ACW compilation.|
-
 
 ### XA5xxx Errors
 
@@ -165,7 +162,6 @@ These are code generation errors.
 
 These error codes are licensing and activation errors.
 
-
 #### XA9000
 
  **Cause:** License expired
@@ -176,7 +172,6 @@ These error codes are licensing and activation errors.
 |--- |--- |--- |--- |--- |
 |WARNING|WARNING|WARNING|WARNING|WARNING|
 
-
 #### XA9001
 
  **Cause:** Trial Expired
@@ -186,8 +181,6 @@ These error codes are licensing and activation errors.
 |Starter|Indie|Business(Trial)|Business|Enterprise|
 |--- |--- |--- |--- |--- |
 |WARNING|WARNING|WARNING|WARNING|WARNING|
-
-
 
 #### XA9002
 
@@ -216,7 +209,6 @@ These error codes are licensing and activation errors.
 |Starter|Indie|Business(Trial)|Business|Enterprise|
 |--- |--- |--- |--- |--- |
 |ERROR|OK|OK|OK|OK|
-
 
 #### XA9003
 
@@ -254,8 +246,6 @@ These error codes are licensing and activation errors.
 |--- |--- |--- |--- |--- |
 |ERROR|OK|OK|OK|OK|
 
-
-
 #### XA9004
 
  **Cause:** --profiling
@@ -265,8 +255,6 @@ These error codes are licensing and activation errors.
 |Starter|Indie|Business(Trial)|Business|Enterprise|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|OK|OK|OK|
-
-
 
 #### XA9005
 
@@ -278,8 +266,6 @@ These error codes are licensing and activation errors.
 |--- |--- |--- |--- |--- |
 |ERROR|OK|-|-|-|
 
-
-
 #### XA9006
 
  **Cause:** System.Data.SqlClient namespace.
@@ -289,7 +275,6 @@ These error codes are licensing and activation errors.
 |Starter|Indie|Business(Trial)|Business|Enterprise|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|OK|OK|OK|
-
 
 #### XA9008
 
@@ -301,7 +286,6 @@ These error codes are licensing and activation errors.
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|OK|OK|OK|
 
-
 #### XA9009
 
  **Cause:** Missing serial number.
@@ -311,7 +295,6 @@ These error codes are licensing and activation errors.
 |Starter|Indie|Business(Trial)|Business|Enterprise|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
-
 
 #### XA9010
 
@@ -324,8 +307,6 @@ These error codes are licensing and activation errors.
 |ERROR|ERROR|ERROR|ERROR|ERROR|
 
 Equivalent to XA9018.
-
-
 
 #### XA9011
 
@@ -347,7 +328,6 @@ Equivalent to XA9018.
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
 
-
 #### XA9013
 
  **Cause:** Unknown Error
@@ -357,7 +337,6 @@ Equivalent to XA9018.
 |Starter|Indie|Business(Trial)|Business|Enterprise|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
-
 
 #### XA9014
 
@@ -369,7 +348,6 @@ Equivalent to XA9018.
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
 
-
 #### XA9017
 
  **Cause:** Activation server doesn't return a valid license.
@@ -379,7 +357,6 @@ Equivalent to XA9018.
 |Starter|Indie|Business(Trial)|Business|Enterprise|
 |--- |--- |--- |--- |--- |
 |ERROR|ERROR|ERROR|ERROR|ERROR|
-
 
 #### XA9018
 

@@ -51,7 +51,6 @@ selected at run-time:
 
 ![Files shown under Resources/layout](screen-sizes-images/solution.png)
 
-
 ### BoxInsetLayout
 
 Rather than build different layouts for each screen type, you can also
@@ -61,7 +60,6 @@ This
 [Google example](https://developer.android.com/training/wearables/ui/layouts.html#same-layout)
 shows how to use the `BoxInsetLayout` to use the same layout on both
 rectangular and round screens.
-
 
 ## Wear UI Designer
 
@@ -77,7 +75,6 @@ The design surface in rectangular style is shown here:
 The design surface in round style is shown here:
 
 ![Design surface in round style](screen-sizes-images/design-round.png)
-
 
 ## Wear Simulator
 

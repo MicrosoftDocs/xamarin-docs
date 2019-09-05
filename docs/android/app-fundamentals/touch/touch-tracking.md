@@ -269,7 +269,6 @@ program to track individual fingers and draw the results on the screen:
 You've now seen how you can track individual fingers on the screen and
 distinguish among them.
 
-
 ## Related Links
 
 - [Equivalent Xamarin iOS guide](~/ios/app-fundamentals/touch/touch-tracking.md)

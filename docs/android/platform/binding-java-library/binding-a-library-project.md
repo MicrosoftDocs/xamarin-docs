@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _This walkthrough explains how to use Xamarin.Android project templates to bind an Eclipse Android library project._
 
-
 ## Overview
 
 Although .AAR files are increasingly becoming the norm for Android library
@@ -36,8 +35,6 @@ compiled Android library project and include the code and resources
 into the APK for distribution. Because of this difference, creating a
 binding for an Android library project is slightly different than
 creating a binding for a Java .JAR or .AAR file.
-
-
 
 ## Walkthrough
 
@@ -84,7 +81,6 @@ be used as described earlier on in this document.
 
 > [!NOTE]
 > Compiling the Android library projects in other IDEs is not supported at this time. Other IDEs may not create the same directory structure or files in the **bin** folder as Eclipse. 
-
 
 ## Summary
 

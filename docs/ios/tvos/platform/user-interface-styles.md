@@ -97,9 +97,6 @@ Additionally, Trait Collections have the following features in tvOS 10:
 > [!IMPORTANT]
 > The Xamarin.tvOS Early Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection` yet. Full support will be added in a future release.
 
-
-
-
 <a name="Customizing-Appearance-Based-on-Theme" />
 
 ### Customizing Appearance Based on Theme
@@ -204,8 +201,6 @@ Additionally, the tvOS Simulator now has a keyboard shortcut to allow the develo
 ## Summary
 
 This article has covered the Light and Dark UI Themes that Apple has added to tvOS 10 and how to implement them in a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

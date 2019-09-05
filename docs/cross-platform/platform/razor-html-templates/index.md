@@ -193,7 +193,6 @@ This section has introduced the features of the web view controls on both Androi
 - The ability to intercept navigation requests in C# code,
 - The ability to call JavaScript from C# code.
 
-
 The next section introduces Razor, which makes it easy to create the HTML to use in hybrid apps.
 
 ## What is Razor?
@@ -231,7 +230,6 @@ Notice the following differences from a regular HTML file:
  ![RazorView.cshtml](images/image6_125x34.png)
  The partial class is named RazorView to match the .cshtml template file name. It is this name that is used to refer to the template in C# code.
 - `@using` statements can also be included at the top of a Razor template to include additional namespaces.
-
 
 The final HTML output can then be generated with the following C# code. Note that we specify the Model to be a string “Hello World” which will be incorporated into the rendered template output.
 
@@ -375,8 +373,6 @@ This section explains how to use build your own hybrid application using the sol
 - **iOS > App > WebView Application**
 - **ASP.NET MVC Project**
 
-
-
 The **New Solution** window looks like this for iPhone and Android projects - the solution description on the right highlights support for the Razor templating engine.
 
  ![Creating iPhone and Android solutions](images/image13_1139x959.png)
@@ -395,7 +391,6 @@ The important parts of the solution are:
 - Razor .cshtml template files like  **RazorView.cshtml** .
 - Model classes that are referenced in the Razor templates such as  **ExampleModel.cs** .
 - The platform-specific class that creates the web view and renders the template, such as the  `MainActivity` on Android and the  `iPhoneHybridViewController` on iOS.
-
 
 The following section explains how the projects work.
 
@@ -490,7 +485,6 @@ The [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
 - **RazorTodo** - Completely HTML-driven app using Razor templates.
 - **RazorNativeTodo** - Uses native list view controls for iOS and Android but displays the edit screen with HTML and Razor.
 
-
 These Xamarin apps run on both iOS and Android, utilizing Portable Class Libraries (PCLs) to share common code such as the database and model classes. Razor **.cshtml** templates can also be included in the PCL so they’re easily shared across platforms.
 
 Both sample apps incorporate Twitter sharing and text-to-speech APIs from the native platform, demonstrating that hybrid applications with Xamarin still have access to all the underlying functionality from HTML Razor template-driven views.
@@ -503,7 +497,6 @@ The **RazorNativeTodo** app uses an HTML Razor template for the edit view, but i
 
 - Performance - the native scrolling controls use virtualization to ensure fast, smooth scrolling even with very long lists of data.
 - Native experience - platform-specific UI elements are easily enabled, such as the fast-scrolling index support in iOS and Android.
-
 
 A key benefit of building hybrid apps with Xamarin is that you can start with a completely HTML-driven user interface (like the first sample) and then add platform-specific functionality when required (as the second sample shows). The native list screens and HTML Razor edit screens on both iOS and Android are shown below.
 

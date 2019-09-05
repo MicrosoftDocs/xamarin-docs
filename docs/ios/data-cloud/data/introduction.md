@@ -21,7 +21,6 @@ While the storage and processing capabilities of mobile devices are increasing, 
 - **Database** – The SQLite database engine is available iOS, and is useful for storing structured data that you need to query, sort or otherwise manipulate. Database storage is suited to lists of data with many properties.
 - **Image files** – Although it’s possible to store binary data in the database on a mobile device, it is recommended that you store them directly in the file-system. If necessary you can store the filenames in a database to associate the image with other data. When dealing with large images, or lots of images, it is good practice to plan a caching strategy that deletes files you no longer need to avoid consuming all the user’s storage space.
 
-
 If a database is the right storage mechanism for your app, the remainder of this document discusses how to use SQLite on the Xamarin platform.
 
 ## Advantages of using a Database
@@ -35,7 +34,6 @@ There are a number of advantages to using an SQL database in your mobile app:
 - Developers with existing database skills can utilize their knowledge to design the database and data access code.
 - The data model from the server component of a connected application may be re-used (in whole or in part) in the mobile application.
 
-
 ## SQLite Database Engine
 
 SQLite is an open-source database engine that has been adopted by Apple for their mobile platform. The SQLite database engine is built-in to iOS so there is no additional work for developers to take advantage of it. SQLite is well suited to cross-platform mobile development because:
@@ -45,13 +43,11 @@ SQLite is an open-source database engine that has been adopted by Apple for thei
 - The file format is easy to use across platforms: whether 32- or 64-bit, and big- or little-endian systems.
 - It implements most of the SQL92 standard.
 
-
 Because SQLite is designed to be small and fast, there are some caveats on its use:
 
 - Some OUTER join syntax is not supported.
 - Only table RENAME and ADDCOLUMN are supported. You cannot perform other modifications to your schema.
 - Views are read-only.
-
 
 You can learn more about SQLite on the website - [SQLite.org](http://SQLite.org) - however all the information you need to use SQLite with Xamarin is contained in this document and associated samples. The SQLite database engine is built-in to all versions of iOS.
 Although not covered in this chapter, SQLite is also available for use on Windows Phone and Windows applications.
@@ -60,8 +56,6 @@ Although not covered in this chapter, SQLite is also available for use on Window
 
 SQLite can also be used on Windows platforms, although those platforms are not covered in this document.
 Read more in the [Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) and [Tasky Pro](http://docs.xamarin.com/guides/cross-platform/application_fundamentals/building_cross_platform_applications/case_study%3A_tasky) case studies, and review [Tim Heuer’s blog](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
-
-
 
 ## Related Links
 

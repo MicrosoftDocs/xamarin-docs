@@ -13,8 +13,6 @@ ms.date: 03/23/2017
 This section gives examples of how to share code for common application
 scenarios.
 
-
-
 ## Data Layer
 
 The data layer consists of a storage engine and methods to read and write
@@ -22,7 +20,6 @@ information. For performance, flexibility and cross-platform compatibility the
 SQLite database engine is recommended for Xamarin cross-platform applications.
 It runs on a wide variety of platforms including Windows,
 Android, iOS and Mac.
-
 
 ### SQLite
 
@@ -34,7 +31,6 @@ platform:
 - **Android** – Built in to the operating system since Android 2.2 (API Level 10).
 - **Windows** – See the [SQLite for Universal Windows Platform extension](https://visualstudiogallery.msdn.microsoft.com/4913e7d5-96c9-4dde-a1a1-69820d615936).
 
-
 Even with the database engine available on all platforms, the native methods
 to access the database are different. Both iOS and Android offer built-in APIs
 to access SQLite that could be used from Xamarin.iOS or Xamarin.Android, however
@@ -43,8 +39,6 @@ the SQL queries themselves, assuming they’re stored as strings). For details
 about native database functionality search for `CoreData` in iOS or
 Android’s `SQLiteOpenHelper` class; because these options are not
 cross-platform they are beyond the scope of this document.
-
-
 
 ### ADO.NET
 
@@ -99,8 +93,6 @@ Real-world implementations of ADO.NET would obviously be split across
 different methods and classes (this example is for demonstration purposes
 only).
 
-
-
 ### SQLite-NET – Cross-Platform ORM
 
 An ORM (or Object-Relational Mapper) attempts to simplify storage of data
@@ -123,7 +115,6 @@ Features of SQLite-NET:
 - A database instance is represented by a subclass of  `SQLiteConnection` , the main class in the SQLite-Net library.
 - Data can be inserted, queried and deleted using objects. No SQL statements are required (although you can write SQL statements if required).
 - Basic Linq queries can be performed on the collections returned by SQLite-NET.
-
 
 The source code and documentation for SQLite-NET is available at [SQLite-Net on github](https://github.com/praeclarum/sqlite-net) and has been implemented in both case-studies. A simple example of
 SQLite-NET code (from the *Tasky Pro* case study) is shown below.
@@ -161,8 +152,6 @@ Table<TodoItem>.ToList(); // returns all rows in a collection
 
 See the case study source code for complete examples.
 
-
-
 ## File Access
 
 File access is certain to be a key part of any application. Common examples
@@ -171,9 +160,6 @@ of files that might be part of an application include:
 - SQLite database files.
 - User-generated data (text, images, sound, video).
 - Downloaded data for caching (images, html or PDF files).
-
-
-
 
 ### System.IO Direct Access
 
@@ -211,8 +197,6 @@ file-systems are case-sensitive and have different directory separators. It is
 good practice to always use the same casing for filenames and the `Path.Combine()` method when constructing file or directory
 paths.
 
-
-
 ### Windows.Storage for Windows 8 and Windows 10
 
 The *Creating Mobile Apps with Xamarin.Forms* [book](https://developer.xamarin.com/r/xamarin-forms/book/)
@@ -231,7 +215,6 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 Refer to the [book chapter](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) for more details.
 
-
 <a name="Isolated_Storage" />
 
 ### Isolated Storage on Windows Phone 7 & 8 (Silverlight)
@@ -248,14 +231,11 @@ Refer to the [Isolated Storage Overview for Windows Phone](https://msdn.microsof
 
 The Isolated Storage APIs are not available in [Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md). One alternative for PCL is the [PCLStorage NuGet](https://pclstorage.codeplex.com/)
 
-
-
 ### Cross-platform file access in PCLs
 
 There is also a PCL-compatible Nuget – [PCLStorage](https://www.nuget.org/packages/PCLStorage/) –
 that facilities cross-platform file access for Xamarin-supported platforms and
 the latest Windows APIs.
-
 
 ## Network Operations
 
@@ -265,7 +245,6 @@ Most mobile applications will have networking component, for example:
 - Downloading documents (eg. HTML, PDF).
 - Uploading user data (such as photos or text).
 - Accessing web services or 3rd party APIs (including SOAP, XML or JSON).
-
 
 The .NET Framework provides a few different classes for accessing network resources:
 `HttpClient`, `WebClient`, and `HttpWebRequest`.
@@ -337,7 +316,6 @@ There is an example in our [Web Services documentation](~/cross-platform/data-cl
 
  <a name="Reachability" />
 
-
 ### Reachability
 
 Mobile devices operate under a variety of network conditions from fast Wi-Fi
@@ -352,10 +330,8 @@ Actions a mobile app might take in these situations include:
 - If the connection is 3G, applications may behave differently (for example, Apple does not allow apps larger than 20Mb to be downloaded over 3G). Applications could use this information to warn the user about excessive download times when retrieving large files.
 - Even if the network is available, it is good practice to verify connectivity with the target server before initiating other requests. This will prevent the app’s network operations from timing out repeatedly and also allow a more informative error message to be displayed to the user.
 
-
 There is a [Xamarin.iOS sample](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) available (which is based on Apple’s [Reachability sample code](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html)
 ) to help detect network availability.
-
 
 ## WebServices
 
@@ -389,7 +365,6 @@ There is also a Xamarin.iOS code snippet in our [Web Services documentation](~/c
 
  <a name="ServiceStack" />
 
-
 ### ServiceStack
 
 Unlike RestSharp, ServiceStack is both a server-side solution to host a web
@@ -402,7 +377,6 @@ service as well as various client-side applications that can access it.
 
 There is a [Xamarin.iOS example](http://www.servicestack.net/monotouch/remote-info/) on the ServiceStack website, and a code
 snippet in our [Web Services documentation](~/cross-platform/data-cloud/web-services/index.md).
-
 
 ### WCF
 
@@ -418,7 +392,6 @@ Xamarin’s client-subset domain. In addition, WCF support requires the use of
 tools only available in a Windows environment to generate the proxy.
 
  <a name="Threading" />
-
 
 ## Threading
 
@@ -437,7 +410,6 @@ threads, which means the background tasks needs a way to communicate back to the
 main thread to indicate progress or when they have completed.
 
  <a name="Parallel_Task_Library" />
-
 
 ### Parallel Task Library
 
@@ -474,7 +446,6 @@ static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 
  <a name="Invoking_on_the_UI_Thread" />
 
-
 ### Invoking on the UI Thread
 
 For code that doesn’t utilize the Parallel Task Library, each platform has
@@ -484,8 +455,6 @@ its own syntax for marshaling operations back to the UI thread:
 - **Android** – `owner.RunOnUiThread(action)`
 - **Xamarin.Forms** – `Device.BeginInvokeOnMainThread(action)`
 - **Windows** – `Deployment.Current.Dispatcher.BeginInvoke(action)`
-
-
 
 Both the iOS and Android syntax requires a ‘context’ class to be
 available which means the code needs to pass this object into any methods that
@@ -532,7 +501,6 @@ Xamarin.Forms developers should use [`Device.BeginInvokeOnMainThread`](~/xamarin
 in common code (Shared Projects or PCL).
 
  <a name="Platform_and_Device_Capabilities_and_Degradation" />
-
 
 ## Platform and Device Capabilities and Degradation
 

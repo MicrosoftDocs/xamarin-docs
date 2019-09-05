@@ -23,7 +23,6 @@ This document contains simple examples of:
 - Applying filters to an image
 - Listing the available filters.
 
-
 These examples should help get you started incorporating Core Image features
 into your Xamarin.iOS applications.
 
@@ -60,7 +59,6 @@ face. `CIFaceFeature` has the following properties:
 - MouthPosition – The coordinates of the mouth for this face.
 - LeftEyePosition – The coordinates of the left eye for this face.
 - RightEyePosition – The coordinates of the right eye for this face.
-
 
 The coordinates for all these properties have their origin in the bottom-left
 – unlike UIKit which uses the top-left as the origin. When using the

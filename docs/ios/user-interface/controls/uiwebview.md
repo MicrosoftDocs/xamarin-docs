@@ -39,7 +39,6 @@ This produces the following web view:
 
 For more information on using `UIWebView`, refer to the following recipes:
 
-
 - [Load a Web Page](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_a_web_page)
 - [Load Local Content](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_local_content)
 - [Load Non-Web Documents](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_non-web_documents)

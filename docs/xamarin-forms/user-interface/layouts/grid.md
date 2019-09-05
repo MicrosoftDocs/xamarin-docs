@@ -374,7 +374,6 @@ public CalculatorGridCode ()
 }
 ```
 
-
 ## Related Links
 
 - [Creating Mobile Apps with Xamarin.Forms, Chapter 17](https://developer.xamarin.com/r/xamarin-forms/book/chapter17.pdf)

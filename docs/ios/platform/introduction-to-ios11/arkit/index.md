@@ -32,7 +32,6 @@ Assets should be added to the project with the **SceneKitAsset** build action.
 
 ![SceneKit assets in a project](images/scene-assets.png)
 
-
 ### 2. Configure the view
 
 In the view controller's `ViewDidLoad` method, load the scene asset and set the `Scene` property on the view:
@@ -107,7 +106,6 @@ would expect the view controller hosting the augmented reality session to
 implement `IARSCNViewDelegate`, and additional methods be implemented.
 
 ARKit provides lots of more sophisticated features, such as surface tracking, and user interaction. See the [UrhoSharp demo](urhosharp.md) for an example combining ARKit tracking with UrhoSharp.
-
 
 ## Related Links
 

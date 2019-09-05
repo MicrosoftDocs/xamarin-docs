@@ -110,7 +110,6 @@ iOS 11 has expanded the functionality of row actions. `UISwipeActionsConfigurati
 
 Table Views have support for drag and drop in iOS 11. For more information, see the [Drag and Drop](~/ios/platform/introduction-to-ios11/drag-and-drop.md#uitableview) guide.
 
-
 ## Related Links
 
 - [What’s New in iOS 11 (Apple)](https://developer.apple.com/ios/)

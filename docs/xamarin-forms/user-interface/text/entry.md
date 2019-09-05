@@ -373,7 +373,6 @@ var entry = new Entry ();
 entry.TextChanged += Entry_TextChanged;
 ```
 
-
 ## Related Links
 
 - [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

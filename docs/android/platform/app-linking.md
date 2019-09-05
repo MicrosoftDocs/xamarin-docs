@@ -209,7 +209,6 @@ covered how to configure an Android 6.0 application to support and
 respond to app links. It also discussed how to test app-linking in an
 Android application.
 
-
 ## Related Links
 
 - [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md)

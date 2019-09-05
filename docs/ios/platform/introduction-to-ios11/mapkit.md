@@ -254,7 +254,6 @@ button.TranslatesAutoresizingMaskIntoConstraints = false;
 View.AddSubview(button); // constraints omitted for simplicity
 ```
 
-
 ## Related Links
 
 - [MapKit Sample 'Tandm'](https://docs.microsoft.com/samples/xamarin/ios-samples/ios11-mapkitsample)

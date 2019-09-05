@@ -171,7 +171,6 @@ Studio for Mac to find the correct version number. Look for the
 
 -----
 
-
 ## Additional references
 
 - [Bug 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) –

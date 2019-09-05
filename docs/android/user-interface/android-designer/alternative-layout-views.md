@@ -48,7 +48,6 @@ screenshot:
 
 [![Loaded layout indicator](alternative-layout-views-images/vs/04-new-layout-sml.png "Loaded layout indicator")](alternative-layout-views-images/vs/04-new-layout.png#lightbox)
 
-
 ## Editing alternative layouts
 
 When you create alternative layouts, it is often desirable to make a
@@ -191,8 +190,6 @@ dropped into the layout where the widget is missing (in this case, the
 As seen in the previous example with the `Button`, the `CheckBox` does not
 have a red change marker because only the `LinearLayout` has changes that
 were applied in the **large-land** layout.
-
-
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -369,9 +366,7 @@ As seen in the previous example with the `Button`, the `CheckBox` does not
 have a red change marker because only the `LinearLayout` has changes that
 were applied in the **large-land** layout.
 
-
 -----
-
 
 ### Conflict persistence
 
@@ -384,6 +379,4 @@ here:
 
 Therefore, when a project is closed and reopened, all the conflicts will
 still be there &ndash; even the ones that have been ignored.
-
-
 

@@ -23,7 +23,6 @@ Obtaining a Maps API v2 key involves the following steps:
 2. Create a project in the Google APIs console.
 3. Obtaining the API key.
 
-
 ## Obtaining your Signing Key Fingerprint
 
 To request a Maps API key from Google, you need to know the
@@ -60,7 +59,6 @@ directory:
 
 -----
 
-
 Run keytool using the following command (using the file paths shown
 above):
 
@@ -86,7 +84,6 @@ keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ And
 ```
 
 -----
-
 
 ### Production Keys
 

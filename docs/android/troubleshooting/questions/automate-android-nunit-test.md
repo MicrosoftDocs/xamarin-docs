@@ -103,7 +103,6 @@ to run unit tests, see the Android Developer
 [Running tests with ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice)
 topic.
 
-
 > [!NOTE]
 > With the
 [Xamarin.Android 5.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming)

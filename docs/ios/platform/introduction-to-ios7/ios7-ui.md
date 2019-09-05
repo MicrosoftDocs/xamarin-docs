@@ -249,7 +249,6 @@ The tint color can be applied to images as well when the `RenderingMode` is set 
 > [!IMPORTANT]
 > Tint color cannot be set using `UIAppearance`.
 
-
 ### Dynamic Type
 
 In iOS 7, the user can specify text size in the system settings. With dynamic type, the font is adjusted dynamically to look good regardless of the size. `UIFont.PreferredFontForTextStyle` should be used to get a font that is optimized for the user-controlled size.

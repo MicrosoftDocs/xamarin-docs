@@ -11,7 +11,6 @@ ms.date: 07/13/2018
 
 # Extending the RecyclerView Example
 
-
 The basic app described in
 [A Basic RecyclerView Example](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)
 actually doesn't do much &ndash; it simply scrolls and displays a fixed
@@ -22,7 +21,6 @@ change (or be changed by the app), and the contents of the display
 must remain consistent with these changes. In the following sections,
 you'll learn how to handle item-click events and update `RecyclerView`
 when the underlying data source changes.
-
 
 ### Handling Item-Click Events
 
@@ -234,7 +232,6 @@ making the two calls to `NotifyItemChanged`, but doing so would force
 `RecyclerView` to refresh the entire collection even though only two
 items in the collection had changed. Calling `NotifyItemChanged` is
 significantly more efficient than calling `NotifyDataSetChanged`.
-
 
 ## Related Links
 

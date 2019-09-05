@@ -45,9 +45,6 @@ To add an App Store icon do the following:
 
 3. Click on the icon and browse for your 1024 x 1024 pixel image. Save the Asset Catalog.
 
-
-
-
 ## Related Links
 
 - [Managing Icons with Asset Catalogs](~/ios/app-fundamentals/images-icons/app-icons.md#managing)

@@ -254,7 +254,6 @@ For more information about the [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), se
 
 This article demonstrated how to use a TabbedPage to navigate through a collection of pages. The Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consists of a list of tabs and a larger detail area, with each tab loading content into the detail area.
 
-
 ## Related Links
 
 - [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)

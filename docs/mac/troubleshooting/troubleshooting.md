@@ -28,7 +28,6 @@ With any of these resources, there are some steps of preparation you can take to
 
 - Knowing what changes you’ve made to your application to cause an issue to appear can quickly narrow down the source of the problem. Noting if you’ve recently upgraded versions of Xamarin.Mac, trimming out sections of your application to find the part causing the issue, or testing previous builds to find what change introduced the issue can be very helpful.
 
-
 ### What to do when your app crashes with no output
 
 In most cases, the debugger in Visual Studio for Mac will catch exceptions and crashes in your application and help you track down the root cause. However there are some cases where your application will bounce on the dock and then exit with little or no output. These can include:

@@ -43,9 +43,7 @@ The easiest way to work with Navigation Bars in a Xamarin.tvOS app is to add the
     [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
 1. Save your changes.
 
-
 # [Visual Studio](#tab/windows)
-
 
 1. In the **Solution Explorer**, double-click `Main.storyboard` file and open it for editing.
 1. Drag a **Navigation Bar** from the **Toolbox** and drop it on the View at the top of the screen:
@@ -61,7 +59,6 @@ The easiest way to work with Navigation Bars in a Xamarin.tvOS app is to add the
 
     [![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Save your changes.
-
 
 -----
 
@@ -128,8 +125,6 @@ For more information on working with Storyboards, please see our [Hello, tvOS Qu
 ## Summary
 
 This article has covered designing and working with Navigation Bars inside of a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

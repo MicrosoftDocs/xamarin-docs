@@ -529,7 +529,6 @@ This section will take a look at consuming Location Suggestions directly from wi
 
 When the app is started with a MapKit `MKDirectionsRequest` object, it should automatically start giving the user directions to the requested location, or present a UI that makes it easy for the user to start getting directions. For example:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -602,7 +601,6 @@ For apps that handle media, iOS supports the following behaviors:
   - After arriving at home or work. 
 
 By including a simple API call in iOS 10, the developer can create a more engaging lock screen experience for users of the media app. By using the `MPPlayableContentManager` class to manage the media playback, full media controls (like those presented by the Music app) will be presented on the lock screen for the app.
-
 
 ```csharp
 using System;
@@ -677,8 +675,6 @@ namespace MonkeyPlayer
 ## Summary
 
 This article has covered Proactive Suggestions and showed how the developer can use them to drive traffic to the Xamarin.iOS app. It covered the step to implement Proactive Suggestions and presented usage guidelines.
-
-
 
 ## Related Links
 

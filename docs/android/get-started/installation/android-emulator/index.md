@@ -13,7 +13,6 @@ ms.date: 08/27/2018
 
 _This guide explains how to prepare the Android Emulator for testing your app._
 
-
 ## Overview
 
 The Android Emulator can be run in a variety of configurations
@@ -58,7 +57,6 @@ After you have configured the Android Emulator, see
 [Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)
 for information about how to launch the emulator and use it for testing
 and debugging your app.
-
 
 > [!NOTE]
 > As of Android SDK Tools version **26.0.1** and later, Google has removed support for existing AVD/SDK managers in favor of their new CLI (Command Line Interface) tools. Because of this deprecation change, Xamarin SDK/Device Managers are now used instead of Google SDK/Device Managers for Android Tools 26.0.1 and later. For more information about the Xamarin SDK Manager, see [Setting up the Android SDK for Xamarin.Android](~/android/get-started/installation/android-sdk.md).

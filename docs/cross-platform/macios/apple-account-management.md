@@ -86,7 +86,6 @@ You must have an Apple Developer account to use this feature. More information o
 
 -----
 
-
 ## Managing Signing Identities and Provisioning Profiles
 
 The team details dialog displays a list of Signing Identities, organized by type. The **Status** column advises you if the certificate is: 

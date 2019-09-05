@@ -75,7 +75,6 @@ A complete list of resource types is provided below:
    configuration files. These are arbitrary XML that can be read at run
    time by the application.
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 ![Default resource files](default-resources-images/01-resource-files-xs.png)

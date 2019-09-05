@@ -304,7 +304,6 @@ Currently, only the default Debug configurations can be profiled.
 
 If you profile an app with any other configuration, you will be presented with the following message dialog:
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 [![Profiling Error Dialog](images/image001.png)](images/image001.png#lightbox) 

@@ -70,9 +70,6 @@ If the `BaselineRelativeArrangement` property is `true`, the subviews will be la
 > [!IMPORTANT]
 > Baseline Alignment does not work on stretched or compressed subview sizes as the baseline will be calculated to the wrong position. For Baseline Alignment, ensure that the subview's **Height** matches the Intrinsic Content View's **Height**.
 
-
-
-
 <a name="Common-Stack-View-Uses" />
 
 ## Common Stack View Uses
@@ -304,8 +301,6 @@ Many of the Stack View's properties can be specified using Size Classes within a
 ## Summary
 
 This article has covered designing and working with Stacked View inside of a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

@@ -14,7 +14,6 @@ ms.date: 03/21/2017
 > [!IMPORTANT]
 > This issue has been resolved in recent versions of Xamarin. However, if the issue occurs on the latest version of the software, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
 
-
 ## Error message
 
 This error may appear in the *Mac Server Log* in Visual Studio:

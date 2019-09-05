@@ -51,4 +51,3 @@ remote notifications in Xamarin.Android using Google Cloud Messaging.
 It explains the various components that must be leveraged to enable
 Google Cloud Messaging in an Android application.
 
-

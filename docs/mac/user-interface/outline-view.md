@@ -442,7 +442,6 @@ If you want to allow the user to select a single row, double-click the `Main.sto
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
-
 Next, edit the `ProductOutlineDelegate.cs` file and add the following method:
 
 ```csharp
@@ -464,7 +463,6 @@ If you want to allow the user to select a multiple rows, double-click the `Main.
 [![](outline-view-images/select02.png "The Attribute Inspector")](outline-view-images/select02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
-
 
 Next, edit the `ProductOutlineDelegate.cs` file and add the following method:
 

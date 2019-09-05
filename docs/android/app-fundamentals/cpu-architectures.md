@@ -24,7 +24,6 @@ interact with Android at run time.
 For more information about how this works, see
 [Multi-Core Devices &amp; Xamarin.Android](~/android/deploy-test/multicore-devices.md).
 
-
 ## How to Specify Supported Architectures
 
 # [Visual Studio](#tab/windows)
@@ -62,7 +61,6 @@ check the ABIs for the architectures that you want to support:
 [![Selecting armeabi and armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
-
 
 Xamarin.Android supports the following architectures:
 

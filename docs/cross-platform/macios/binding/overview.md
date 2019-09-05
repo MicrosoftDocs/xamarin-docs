@@ -48,7 +48,6 @@ works by passing the C# API definitions that you've created by hand
 (or using Objective Sharpie) to the command line tool (`btouch-native` for
 iOS or `bmac-native` for Mac).
 
-
 The general syntax for invoking these tools is:
 
 ```csharp
@@ -65,7 +64,6 @@ The above command will generate the file `cocos2d.dll` in the current
 directory, and it will contain the fully bound library that you can use in your
 project. This is the tool that Visual Studio for Mac uses to create your bindings if you use a
 binding project (described [below](#bindingproject)).
-
 
 <a name="bindingproject" />
 

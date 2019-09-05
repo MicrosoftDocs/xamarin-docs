@@ -17,7 +17,6 @@ the `TabActivity` class itself has been deprecated in 4.0. A new way to
 create a tabbed interface has been introduced that uses the Action Bar,
 which we'll discuss next.
 
-
 ## Action Bar Tabs
 
 The Action Bar includes support for adding tabbed interfaces in Android 4.0.
@@ -67,7 +66,6 @@ class SampleTabFragment: Fragment
             view.FindViewById<TextView> (Resource.Id.sampleTextView);            
         sampleTextView.Text = "sample fragment text";
 
-
         return view;
     }
 }
@@ -94,7 +92,6 @@ this.ActionBar.AddTab (tab);
 For the complete example, see the *HelloTabsICS* project in the sample
 code for this document.
 
-
 ## ShareActionProvider
 
 The `ShareActionProvider` class enables a sharing action to take place
@@ -103,7 +100,6 @@ list of apps that can handle a sharing Intent and keeps a history of
 the previously used applications for easy access to them later from the
 Action Bar. This allows applications to share data via a user
 experience that's consistent throughout Android.
-
 
 ### Image Sharing Example
 
@@ -118,12 +114,10 @@ the Action Bar.
 
 [![Screenshot of messaging application icon in the Action Bar](action-bar-images/09-shareactionprovider.png)](action-bar-images/09-shareactionprovider.png#lightbox)
 
-
 When the user clicks on the item in the Action Bar, the messaging app that
 contains the shared image is launched, as shown below:
 
 [![Screenshot of messaging app displaying monkey image](action-bar-images/10-messagewithimage.png)](action-bar-images/10-messagewithimage.png#lightbox)
-
 
 ### Specifying the action Provider Class
 
@@ -140,7 +134,6 @@ follows:
       android:actionProviderClass="android.widget.ShareActionProvider" />
 </menu>
 ```
-
 
 ### Inflating the Menu
 
@@ -161,7 +154,6 @@ public override bool OnCreateOptionsMenu (IMenu menu)
     shareActionProvider.SetShareIntent (CreateIntent ());
 }
 ```
-
 
 ### Creating the Intent
 
@@ -186,8 +178,6 @@ application and copied to a publicly accessible location when the
 Activity is created, so it will be accessible to other applications,
 such as the messaging app. The sample code that accompanies this
 article contains the full source of this example, illustrating its use.
-
-
 
 ## Related Links
 

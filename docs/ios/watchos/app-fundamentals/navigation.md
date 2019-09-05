@@ -121,7 +121,6 @@ Page-based interfaces swipe left-to-right, similar to the way
 
 ![](navigation-images/paged-1.png "Sample first page") ![](navigation-images/paged-2.png "Sample second page") ![](navigation-images/paged-5.png "Sample fifth page")
 
-
 To make a page-based interface the main UI for your watch app,
   use `ReloadRootControllers` with an array of interface
   controllers and contexts:
@@ -141,8 +140,6 @@ var controllerNames = new [] { "pageController", "pageController", "pageControll
 var contexts = new [] { "First", "Second", "Third", "Fourth", "Fifth" };
 PresentController (controllerNames, contexts);
 ```
-
-
 
 ## Related Links
 

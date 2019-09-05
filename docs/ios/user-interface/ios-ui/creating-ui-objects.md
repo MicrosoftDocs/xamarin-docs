@@ -178,8 +178,6 @@ it synchronized with the Storyboard.
 
 When user interface objects are added programmatically to a `View` or `ViewController`, you instantiate and manage the object references yourself, and therefore no designer file is required.
 
-
-
 ## Related Links
 
 - [Controls (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/controls)

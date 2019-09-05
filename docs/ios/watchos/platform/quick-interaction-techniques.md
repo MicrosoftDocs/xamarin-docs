@@ -165,7 +165,6 @@ The sign (`+/-`) of the Rotational Delta indicates the direction that the user i
 
 [![](quick-interaction-techniques-images/quick03.png "The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
 
-
 If the user is scrolling up, WatchKit will return positive deltas and if scrolling down, then negative deltas will be returned, no matter what orientation the user is wearing the watch in.
 
 #### Digital Crown Focus

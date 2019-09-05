@@ -271,7 +271,6 @@ Note that in the sample application, the `SuggestAsync` method is only invoked w
 
 This article demonstrated how to use the Microsoft Azure Search Library to integrate Azure Search into a Xamarin.Forms application. Azure Search is a cloud service that provides indexing and querying capabilities for uploaded data. This removes the infrastructure requirements and search algorithm complexities traditionally associated with implementing search functionality in an application.
 
-
 ## Related Links
 
 - [Azure Search (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-azuresearch)

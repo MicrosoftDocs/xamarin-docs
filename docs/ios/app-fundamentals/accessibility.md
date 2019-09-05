@@ -86,7 +86,6 @@ UIAccessibility.PostNotification (
     someControl);  // someControl gets focus
 ```
 
-
 ## Accessibility and Localization
 
 Accessibility properties like the label and hint can be
@@ -146,7 +145,6 @@ other configuration options.
 Follow these [VoiceOver instructions](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)
 to test accessibility on iOS devices.
 
-
 ## Simulator Testing
 
 When testing in the simulator, the **Accessibility Inspector**
@@ -166,8 +164,6 @@ also that it is "done" (ie. the tick is visible):
 While the inspector is visible, use the "X" icon at the top-left
 to temporarily show and hide the overlay and enable/disable
 accessibility settings.
-
-
 
 ## Related Links
 

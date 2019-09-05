@@ -80,7 +80,6 @@ Go beyond the oridinary with non-affine transform effects.
 
 Use non-affine transforms to rotate 2D objects in 3D space.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

@@ -64,8 +64,6 @@ The [Localizing Android Apps](~/android/app-fundamentals/localization.md) guide 
 more specific examples on how to translate strings and localize images using
 Xamarin.Android.
 
-
-
 ## Related Links
 
 - [Localizing Android Apps](~/android/app-fundamentals/localization.md)

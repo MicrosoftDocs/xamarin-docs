@@ -13,7 +13,6 @@ ms.date: 09/06/2018
 
 _An Android app takes some time to start up, especially when the app is first launched on a device. A splash screen may display start up progress to the user or to indicate branding._
 
-
 ## Overview
 
 An Android app takes some time to start up, especially during the
@@ -34,7 +33,6 @@ an Android application. It covers the following steps:
 
 [![Example Xamarin logo splash screen followed by app screen](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
 ## Requirements
 
 This guide assumes that the application targets Android API level
@@ -46,7 +44,6 @@ project.
 All of the code and XML in this guide may be found in the
 [SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen) sample project for this
 guide.
-
 
 ## Implementing A Splash Screen
 
@@ -60,7 +57,6 @@ The splash screen is implemented as an Activity that displays the
 branded drawable, performs any initializations, and starts up any
 tasks. Once the app has bootstrapped, the splash screen Activity starts
 the main Activity and removes itself from the application back stack.
-
 
 ### Creating a Drawable for the Splash Screen
 
@@ -93,7 +89,6 @@ This `layer-list` will center the splash image **splash.png** on the background 
 After the splash screen drawable has been created, the next step is to
 create a theme for the splash screen.
 
-
 ### Implementing a Theme
 
 To create a custom theme for the splash screen Activity, edit (or add)
@@ -125,7 +120,6 @@ layout, you can use `windowContentOverlay` rather than
 `windowBackground` in your style definition. In this case, you must
 also modify the **splash_screen.xml** drawable so that it displays an
 emulation of your UI.
-
 
 ### Create a Splash Activity
 
@@ -283,7 +277,6 @@ To add a splash screen for landscape mode, use the following steps:
 
     [![Rotation of splash screen to landscape mode](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
-
 Note that the use of a landscape-mode splash screen does not always
 provide a seamless experience. By default, Android launches the app in
 portrait mode and transitions it to landscape mode even if the device
@@ -297,13 +290,11 @@ specified in the splash Activity's flags. The best way to work around
 this limitation is to create a single splash screen image that renders
 correctly in both portrait and landscape modes.
 
-
 ## Summary
 
 This guide discussed one way to implement a splash screen in a
 Xamarin.Android application; namely, applying a custom theme to the
 launch activity.
-
 
 ## Related Links
 

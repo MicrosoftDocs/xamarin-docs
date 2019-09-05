@@ -13,7 +13,6 @@ ms.date: 02/16/2018
 
 _This article explains how to debug a Xamarin.Android Wear application on a Wear device._
 
-
 ## Overview
 
 If you have an Android Wear device such as an Android Wear Smartwatch,
@@ -37,14 +36,12 @@ Wear device:
 
 5. Confirm that **ADB debugging** is enabled.
 
-
 ## Debugging over USB
 
 If your Wear device has a USB port, you can connect the Wear device to
 your computer, deploy to it, and run/debug the app as you would using
 an Android phone (for more information, see
 [Debug on a Device](~/android/deploy-test/debugging/debug-on-device.md)).
-
 
 ## Debugging over Bluetooth
 
@@ -141,7 +138,6 @@ Delete the screenshot on the device by entering the following command:
 adb -s 127.0.0.1:4444 shell rm /sdcard/DCIM/screencap.png
 ```
 
-
 ### Uninstalling an app
 
 You can uninstall an app from the wear device by entering the
@@ -161,7 +157,6 @@ adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
 For more information about debugging Android Wear devices over
 Bluetooth, see 
 [Debugging over Bluetooth](https://developer.android.com/training/wearables/apps/bt-debugging.html).
-
 
 ## Debugging a Wear app with a companion phone app
 

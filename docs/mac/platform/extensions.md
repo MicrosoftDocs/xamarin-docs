@@ -41,7 +41,6 @@ The following tips can be helpful when working with extensions in Xamarin.Mac:
 - As noted above, running the extension host application will register it with the system. Deleting the application bundle with unregister it. 
 - If “stray” versions of an app's extensions are registered, use the following command to locate them (so they can be deleted): `plugin kit -mv`
 
-
 <a name="Walkthrough-and-Sample-App" />
 
 ## Walkthrough and Sample App
