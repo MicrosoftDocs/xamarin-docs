@@ -83,7 +83,6 @@ Xamarin.Forms is primarily oriented around mobile scenarios. As such, applicatio
 |Activated/Got focus|Window.OnActivated|Page.OnResume|
 |Closed|Window.OnClosing + Window.OnClosed|n/a|
 
-
 Both support hiding/showing child controls as well, in WPF it's a tri-state property `IsVisible` (visible, hidden, and collapsed). In Xamarin.Forms, it's just visible or hidden through the `IsVisible` property.
 
 ### Layout

@@ -334,7 +334,6 @@ When the `execute` method of `NewCommand` calls `RefreshCanExecutes`, the `NewCo
 
 The `PropertyChanged` handler for the new `PersonViewModel` object calls the `ChangeCanExecute` method of `SubmitCommand`. Here's how that command property is implemented:
 
-
 ```csharp
 public class PersonCollectionViewModel : INotifyPropertyChanged
 {

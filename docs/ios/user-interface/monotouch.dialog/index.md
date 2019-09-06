@@ -62,7 +62,6 @@ there are two APIs available in MT.D:
 - **Low-level Elements API** – The  *Elements API* is based on creating a hierarchal tree of elements that represent screens and their components. The Elements API gives developers the most flexibility and control in creating UIs. Additionally, the Elements API has advanced support for declarative definition via JSON, which allows for both incredibly fast declaration, as well as dynamic UI generation from a server. 
 - **High-Level Reflection API** – Also known as the  *Binding*  *API* , in which classes are annotated with UI hints and then MT.D automatically creates screens based on the objects and provides a binding between what is displayed (and optionally edited) on screen, and the underlying object backing. The example above illustrated the use of the Reflection API. This API doesn’t provide the fine-grained control that the elements API does, but it reduces complexity even further by automatically building out the element hierarchy based on class attributes. 
 
-
 MT.D comes packed with a large set of built in UI elements for screen
 creation, but it also recognizes the need for customized elements and advanced
 screen layouts. As such, extensibility is a first-class featured baked into the
@@ -102,7 +101,6 @@ MT.D builds screens using the following four parts:
 - **RootElement**
 - **Section**
 - **Element**
-
 
 ### DialogViewController
 
@@ -323,7 +321,6 @@ It is initialized with three values:
 - Placeholder text (this is the greyed-out text that provides a hint to the user). 
 - The value of the text.
 
-
 The placeholder and value can be null. However, the caption is required.
 
 At any point, accessing its Value property can retrieve the value of the `EntryElement`.
@@ -337,7 +334,6 @@ below:
 - Phone
 - Url
 - Email
-
 
 ### Boolean Element
 
@@ -544,7 +540,6 @@ methods are listed below:
 - `FinishSearch`
 - `PerformFilter`
 
-
 The system is extensible, so you can alter this behavior if you want.
 
 ### Background Image Loading
@@ -731,7 +726,6 @@ components that comprise MT.D. It also showed the wide array of elements and
 table customizations supported by MT.D and discussed how MT.D can be extended
 with custom elements. Additionally it explained the JSON support in MT.D that
 allows creating elements dynamically from JSON.
-
 
 ## Related Links
 

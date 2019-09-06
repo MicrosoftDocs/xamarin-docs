@@ -276,8 +276,6 @@ When testing with a watch, change the watch's language
 
   ![](localization-images/phone-settings-sml.png "Change the watch's language in the Apple Watch app on the paired iPhone")
 
-
-
 ## Related Links
 
 - [WatchLocalization (sample)](https://developer.xamarin.com//samples/monotouch/watchOS/WatchLocalization/)

@@ -180,7 +180,6 @@ Settings allow the separation of data that configures the behavior of an app fro
 
 The Xam.Plugins.Settings library provides a consistent, type-safe, cross-platform approach for persisting and retrieving app and user settings, and data binding can be used to access settings created with the library.
 
-
 ## Related Links
 
 - [Download eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)

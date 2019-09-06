@@ -26,7 +26,6 @@ You'll find a plethora of information on our documentation site to help ease the
 - [C# Primer for Objective-C Developers](primer.md) - A short primer for Objective-C developers looking to move to Xamarin and the C# language. 
 - [Walkthrough: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md) - A step-by-step walkthrough for reusing existing Objective-C code in a Xamarin.iOS application. 
 
-
 ## Binding Objective-C
 
 Once you have a grasp of how C# compares to Objective-C and have worked through the binding walkthrough above, you'll be in good shape for transitioning to the Xamarin platform. As a follow up, more detailed information on Xamarin.iOS binding technologies, including a comprehensive binding reference is available in the [Binding Objective-C](~/ios/platform/binding-objective-c/index.md) section.

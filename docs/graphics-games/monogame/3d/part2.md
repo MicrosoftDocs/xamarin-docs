@@ -111,7 +111,6 @@ Now that we have the positions for our geometry defined, we can write our render
 
 First, we’ll need to define a `BasicEffect` instance which will hold parameters for rendering such as position and lighting. To do this, add a `BasicEffect` member to the `Game1` class below where the `floorVerts` field is defined:
 
-
 ```csharp
 ...
 VertexPositionTexture[] floorVerts;
@@ -162,7 +161,6 @@ void DrawGround()
 
     effect.Projection = Matrix.CreatePerspectiveFieldOfView(
         fieldOfView, aspectRatio, nearClipPlane, farClipPlane);
-
 
     foreach (var pass in effect.CurrentTechnique.Passes)
     {
@@ -240,7 +238,6 @@ Texture2D checkerboardTexture;
 
 Modify `Game1.LoadContent` as follows:
 
-
 ```csharp
 protected override void LoadContent()
 {
@@ -300,7 +297,6 @@ void DrawGround()
 
 Finally, we need to modify the `Game1.Initialize` method to also assign texture coordinates on our vertices:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -343,7 +339,6 @@ Normalized texture coordinates allow texture resizing without needing to rewrite
 
 We can change the texture coordinate assignment to use a single variable for the number of repetitions:
 
-
 ```csharp
 protected override void Initialize ()
 {
@@ -376,7 +371,6 @@ protected override void Initialize ()
 This results in the texture repeating 20 times:
 
 ![](part2-images/image10.png "This results in the texture repeating 20 times")
-
 
 ## Rendering Vertices with Models
 

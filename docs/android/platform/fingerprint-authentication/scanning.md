@@ -55,9 +55,6 @@ It might be necessary for the user (or the application) to cancel the fingerprin
 
 Now that we have seen the `Authenticate` method, let's examine some of the more important parameters in more detail. First, we'll look at [Responding to Authentication Callbacks](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md), which will discuss how to subclass the [FingerprintManager.AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html), enabling an Android application to react to the results provided by the fingerprint scanner.
 
-
-
-
 ## Related Links
 
 - [CancellationSignal](https://developer.android.com/reference/android/os/CancellationSignal.html)

@@ -64,8 +64,6 @@ In addition to the new `RequestReview` method, the developer can still provide a
 
 This article has covered the RequestReview method that Apple added to iOS 10 and how to implement it in Xamarin.iOS.
 
-
-
 ## Related Links
 
 - [iOSTenThree Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)

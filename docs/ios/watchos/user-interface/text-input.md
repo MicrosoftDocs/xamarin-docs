@@ -111,8 +111,6 @@ When the user is speaking, the watch screen displays
 Once they press the **Done** button the text will
   be returned.
 
-
-
 ## Related Links
 
 - [Apple's Text and Labels doc](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/TextandLabels.html)

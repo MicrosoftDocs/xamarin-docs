@@ -37,12 +37,10 @@ follows:
 - **Main expansion**  &ndash; This file is the primary expansion file for resources and assets that will not fit in the APK size limit. The main expansion file should contain the primary assets that an application needs and should rarely be updated.
 - **Patch expansion**  &ndash; This is intended for small updates to the main expansion file. This file can be updated. It is the responsibility of the application to perform any necessary patches or updates from this file.
 
-
 The expansion files must be uploaded at the same time as the APK is uploaded.
 Google play does not allow an expansion file to be uploaded to an existing APK
 or for existing APKs to be updated. If it is necessary to update an expansion
 file, then a new APK must be uploaded with the  `versionCode` updated.
-
 
 ## Expansion File Storage
 
@@ -51,7 +49,6 @@ When the files are downloaded to a device, they will be stored in
 
 - **_shared-store_** &ndash; This is the directory specified by `Android.OS.Environment.ExternalStorageDirectory` .
 - **_package-name_** &ndash; This is the application's Java-style package name.
-
 
 Once downloaded, expansion files should not be moved, altered, renamed, or
 deleted from their location on the device. To do so will cause the expansion
@@ -78,7 +75,6 @@ zip file, media playback calls may directly use files in the zip
 without having to unpack the zip file. The media files should not be 
 compressed when added to the zip file. 
 
-
 ### FileName Format
 
 When the expansion files are downloaded, Google Play will use the following
@@ -94,10 +90,8 @@ The three components of this scheme are:
 - `<expansion-version>` &ndash; This is an integer that matches the  `versionCode`  of the APK that the file was first associated with.
 - `<package-name>` &ndash; This is the application's Java-style package name.
 
-
 For example, if the APK version is 21, and the package name is `mono.samples.helloworld`, the
 main expansion file will be named **main.21.mono.samples.helloworld**.
-
 
 ## Download Process
 
@@ -127,7 +121,6 @@ files that the application requires:
 - **Filenames**  &ndash; This is the file name (on the current device) to which the expansion packs must be saved.
 - **URL for Download**  &ndash; The URL that should be used to download the expansion packs. This is unique for every download and will expire shortly after it is provided.
 
-
 After the LVL check has been performed, the application should download the
 expansion files, taking into consideration the following points as part of the
 download:
@@ -137,8 +130,6 @@ download:
 - The expansion files are downloaded in the background to avoid blocking user interactions.
 - While the download is occurring in the background, a progress indicator should be displayed.
 - Errors that occur during the download are gracefully handled and recoverable.
-
-
 
 ## Architectural Overview
 
@@ -159,7 +150,6 @@ Google created several libraries in Java. The libraries in question are:
 - **Downloader Library**  &ndash; This is a library that reduces the effort required to integrate expansion files in an application. The library will download the expansion files in a background service, display user notifications, handle network connectivity issues, resume downloads, etc.
 - **License Verification Library (LVL)**  &ndash; A library for making and processing the calls to the Application Licensing services. It can also be used to perform licensing checks, to see if the application is authorized for use on the device.
 - **APK Expansion Zip Library (optional)**  &ndash; If the expansion files are in a zip file, this library will act as a content provider and allow an application to read resources and assets directly from the zip file without having to expand the zip file.
-
 
 These libraries have been ported to C# and are available under the Apache 2.0
 license. To quickly integrate expansion files into an existing application,

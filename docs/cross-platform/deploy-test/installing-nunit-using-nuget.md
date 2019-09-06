@@ -34,7 +34,6 @@ This guide assumes that there is an existing solution with a mobile app project 
 
 The following steps describe how to install NUnit 2.6.4.
 
-
 1. **Open the Package Manager** - Right click on **Packages** and select **Add Packages** from the popup menu:
 
     [![](installing-nunit-using-nuget-images/add-packages-xs.png "Right click on Packages and select Add Packages from the popup menu")](installing-nunit-using-nuget-images/add-packages-xs.png#lightbox)
@@ -42,7 +41,6 @@ The following steps describe how to install NUnit 2.6.4.
 1. **Search for `NUnit version:2.6.4`** - Visual Studio for Mac will uninstall NUnit 3.0 (if necessary) and then download and install NUnit 2.6.4. In **Add Packages** dialog, enter the text `nunit version:2.6.4` in the **Search** field located in the upper right hand corner. Select **NUnit** from the search results and click the **Add Package** button:
 
     [![](installing-nunit-using-nuget-images/nunit-search-xs.png "Select NUnit from the search results and click the Add Package button")](installing-nunit-using-nuget-images/nunit-search-xs.png#lightbox)
-
 
 It is possible to confirm that NUnit 2.6.4 has been installed by inspecting the version number of the NUnit package in the Solution Pad:
 
@@ -52,13 +50,11 @@ It is possible to confirm that NUnit 2.6.4 has been installed by inspecting the 
 
 This guide discussed how to downgrade NUnit 3.0 to NUnit 2.6.4 in Visual Studio for Mac using the Package Manager Console.
 
-
 # [Visual Studio](#tab/windows)
 
 ## Installing NUnit 2.6.4 in Visual Studio
 
 This section will focus on using the _NuGet Package Manager Console_ in Visual Studio 2015 or later to uninstall NUnit 3.0 and install NUnit 2.6.4.
-
 
 1. **Start the NuGet Package Manager Console** - Select **Tools > NuGet Package Manager > Package Manager Console**: 
     [![](installing-nunit-using-nuget-images/package-manager-console.png "Start the NuGet Package Manager Console - Select Tools  NuGet Package Manager  Package Manager Console")](installing-nunit-using-nuget-images/package-manager-console.png#lightbox)

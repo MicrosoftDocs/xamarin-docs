@@ -59,7 +59,6 @@ Do the following:
 
 The three main options are offered are described below:
 
-
 ### Don't Link
 
 Disabling linking will make sure that no assemblies are modified. For
@@ -240,7 +239,6 @@ class LinkerSafeAttribute : System.Attribute {}
 ## Custom Linker Configuration
 
 Follow the [instructions for creating a linker configuration file](~/cross-platform/deploy-test/linker.md).
-
 
 ## Related Links
 

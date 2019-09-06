@@ -333,7 +333,6 @@ namespace MonkeyStickers
         {
             base.ViewDidLoad ();
 
-
             // Create new browser and configure it
             BrowserViewController = new StickerBrowserViewController (MSStickerSize.Regular);
             BrowserViewController.View.Frame = View.Frame;
@@ -702,8 +701,6 @@ public override void DidTransition (MSMessagesAppPresentationStyle presentationS
 ## Summary
 
 This article has covered include a Message App Extension in a Xamarin.iOS solution that integrates with the **Messages** app and present new functionality to the user. It covered using the extension to send text, stickers, media files and interactive messages.
-
-
 
 ## Related Links
 

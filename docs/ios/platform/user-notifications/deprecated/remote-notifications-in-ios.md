@@ -39,7 +39,6 @@ Push notification must observe the following rules that are dictated by the arch
 - **No Receipt Confirmation** - APNS does not provide the sender with any notification that a message made it to the intended recipient. If the device is unreachable and multiple sequential notifications are sent, all notifications except the most recent will be lost. Only the most recent notification will be delivered to the device.
 - **Each application requires a secure certificate** - Communication with APNS must be done over SSL.
 
-
 ## Creating and Using Certificates
 
 Each of the environments mentioned in the previous section require their own certificate. This section will cover how to create a certificate, associate it with a provisioning profile, and then get a Personal Information Exchange certificate for use with PushSharp.
@@ -198,7 +197,6 @@ This section introduce the key concepts surrounding push notifications in iOS. I
     Push Notification Gateway Service (APNS). It then covered the creation and use of the security certificates that are
     essential to APNS. Finally this document finished up with a discussion on how application servers can use the *Feedback Services* to
     stop tracking expired device tokens.
-
 
 ## Related Links
 

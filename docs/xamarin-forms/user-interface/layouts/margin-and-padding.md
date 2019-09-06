@@ -64,7 +64,6 @@ var stackLayout = new StackLayout {
 
 This article demonstrated the difference between the [`Margin`](xref:Xamarin.Forms.View.Margin) and [`Padding`](xref:Xamarin.Forms.Layout.Padding) properties, and how to set them. The properties control layout behavior when an element is rendered in the user interface.
 
-
 ## Related Links
 
 - [Margin](xref:Xamarin.Forms.View.Margin)

@@ -52,7 +52,6 @@ with external users, there are two challenges:
 - **Distribution** – Managing the provisioning process (especially for iOS devices) and getting updated versions of software to the testers.
 - **Feedback** – Collecting information about application usage, and detailed information on any errors that may occur.
 
-
 There are a number of services help to address these issues, by providing
 infrastructure that is built into your application to collect and report on
 usage and errors, and also streamlining the provisioning process to help sign-up

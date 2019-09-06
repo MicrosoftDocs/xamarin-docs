@@ -47,7 +47,6 @@ ms.date: 06/19/2018
 |Console (.NET Framework)|Supported on Mac and Windows|
 |Console (.NET Core)|Supported on Mac and Windows|
 
-
 ## Reporting Bugs
 
 Please [report issues on GitHub][bugs], and include all of the following information:

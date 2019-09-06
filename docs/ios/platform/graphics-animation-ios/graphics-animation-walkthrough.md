@@ -21,7 +21,6 @@ Before we begin download the *GraphicsDemo* sample that accompanies this guide. 
 
 ## Drawing a Path
 
-
 1. In `DemoView` add a `CGPath` variable to the class and instantiate it in the constructor. Also declare two `CGPoint` variables , `initialPoint` and `latestPoint`, that we will use to capture the touch point from which we construct the path:
 
     ```csharp
@@ -174,7 +173,6 @@ Now that we have implemented the code to allow users to draw the path, let’s a
 ## Summary
 
 In this article, we stepped through an example that tied graphics and animation concepts together. First, we showed how to use Core Graphics to draw a path in a `UIView` in response to user touch. Then we showed how to use Core Animation to make an image travel along that path.
-
 
 ## Related Links
 

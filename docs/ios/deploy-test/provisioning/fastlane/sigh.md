@@ -150,7 +150,6 @@ The following options can be used to give additional support when using sigh:
     
     Where `Amy cert` is the Code Signing Identity name.
 
-
 ## Related Links
 
 - [fastlane - sigh](https://github.com/fastlane/fastlane/tree/master/sigh#readme)

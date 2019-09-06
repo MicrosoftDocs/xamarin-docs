@@ -352,7 +352,6 @@ Title="Editor Demo">
 </ContentPage>
 ```
 
-
 ## Related Links
 
 - [Text (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text)

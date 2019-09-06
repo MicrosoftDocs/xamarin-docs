@@ -90,8 +90,6 @@ The [**AddingMachine**](https://github.com/xamarin/xamarin-forms-book-samples/tr
 
 The `AdderViewModel` used in the **AddingMachine** sample also defines two methods named `SaveState` and `RestoreState`. These methods are called from the application when it goes to sleep and when it starts up again.
 
-
-
 ## Related links
 
 - [Chapter 18 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch18-Apr2016.pdf)

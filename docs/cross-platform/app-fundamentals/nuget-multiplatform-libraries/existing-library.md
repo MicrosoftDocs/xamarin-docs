@@ -43,7 +43,6 @@ This screenshot shows the contents of a PCL-based NuGet – only a single PCL as
 
 ![](existing-library-images/nuget-output.png "Files contained in the NuGet package")
 
-
 ## Related Links
 
 - [Metadata Guide](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/metadata.md)

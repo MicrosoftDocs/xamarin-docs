@@ -153,7 +153,6 @@ Although the width of the circle's outline is specified as 25 pixels &mdash; or 
 
 The next sample in the [Integrating with Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/basics/integration.md) article demonstrates this visually.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

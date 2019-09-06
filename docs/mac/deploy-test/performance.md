@@ -56,7 +56,6 @@ Whenever possible, use [async](~/cross-platform/platform/async.md) and threads t
 
 For long running operations consider using [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) or other options noted in Apple’s [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) to notify users.
 
-
 ## Related Links
 
 - [Cross-platform performance](~/cross-platform/deploy-test/memory-perf-best-practices.md)

@@ -54,7 +54,6 @@ AOT options will be added to the Mac Build pane in a future update. Until then, 
                             --aot:core,+MyOtherAssembly.dll,-mscorlib.dll
 ```
 
-
 ## Hybrid AOT
 
 During execution of a macOS application the runtime defaults to using machine code loaded from the native libraries produced by AOT compilation. There are, however, some areas of code such as trampolines, where JIT compilation can produce significantly more optimized results. This requires the managed assemblies IL to be available. On iOS, applications are restricted from any use of JIT compilation; those section of code are AOT compiled as well.

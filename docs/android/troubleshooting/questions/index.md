@@ -38,7 +38,6 @@ article lists some common error messages that you may see if JDK 9 or
 later is installed, along with instructions for checking the JDK
 version.
 
-
 ### [How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?](install-android-support-library.md)
 
 This guide provides example steps for installing the
@@ -85,8 +84,6 @@ will encounter duplicate type errors.
 This article explains how to resolve a **PathTooLongException** error
 that may occur while building a Xamarin.Android project.
 
-
-
 ## Deprecated
 
 > [!NOTE]
@@ -124,6 +121,3 @@ updating the Android Resource.designer.cs) to fail. As of the 5.1.4
 stable release on July 15th, this bug has been fixed; but in many cases
 the project file has to be repaired manually, as described in this
 guide.
-
-
-

@@ -15,7 +15,6 @@ The build properties of your executable can be configured from the Project's **i
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 [![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
@@ -30,7 +29,6 @@ your own set of command line options to the [Xamarin.iOS build tool (mtouch)](~/
 [http://iossupportmatrix.com/](http://iossupportmatrix.com/) is a helpful resource that can be used to make sure you are including all the required devices, architectures, and iOS versions.
 
  <a name="SDK_Options" />
-
 
 ## SDK Options
 
@@ -52,7 +50,6 @@ Xamarin.iOS, we do all the work behind the scenes).
 
  <a name="Linking" />
 
-
 ## Linking
 
 See our dedicated page on the [Linker](~/ios/deploy-test/linker.md) to learn more about how the
@@ -60,7 +57,6 @@ linker helps you reduce the size of your executables and to find out how to use
 it effectively.
 
  <a name="Code_Generation_Engine" />
-
 
 ## Code Generation Engine
 
@@ -83,7 +79,6 @@ You can enable these from iOS Build options in Visual Studio for Mac or Visual S
 [![](compiling-for-different-devices-images/image2a.png "Enabling LLVM")](compiling-for-different-devices-images/image2a.png#lightbox)
 
  <a name="ARMV7_and_ARMV7s_support" />
-
 
 ## Architecture Support
 
@@ -126,7 +121,6 @@ Note that any builds submitted to the App Store must contain 64 bit support, thi
 
  <a name="ARM_Thumb_Support" />
 
-
 ### ARM Thumb-2 Support
 
 Thumb is a more compact instruction set used by ARM processors. By enabling
@@ -134,7 +128,6 @@ the Thumb support, you can reduce the size of your executable, at the expense of
 slower execution times. Thumb is supported on ARMv7 and ARMv7s.
 
  <a name="Conditional_framwork_useage" />
-
 
 ## Conditional Framework Usage
 
@@ -151,16 +144,12 @@ To do this you should take the following steps:
 - Open your **Project Options** and navigate to the **iOS Build** pane.
 - Add  `'-gcc_flags "-weak_framework iAd"'` to the **Additional Options** for each configuration you wish to weakly link on:
 
-
 [![](compiling-for-different-devices-images/image3.png "Additional Options")](compiling-for-different-devices-images/image3.png#lightbox)
-
 
 In addition to this you will need to guard your usage of the types from
 running on older versions of iOS where they may not exist. There are several
 methods to accomplish this, but one of which is parsing
 `UIDevice.CurrentDevice.SystemVersion`.
-
-
 
 ## Related Links
 

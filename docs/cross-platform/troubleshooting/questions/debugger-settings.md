@@ -27,4 +27,3 @@ Please follow these steps to check your environment settings:
 3. Settings for each platform:
     - Go to **Build > Android Build > Debugging Options**. Tick the **Enable Developer Instrumentation** box.
     - Go to **Build > iOS Debug**. Tick the **Enable Debugging** box.
-

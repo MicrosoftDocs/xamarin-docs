@@ -31,12 +31,9 @@ View the references by double-clicking on the References
 
   ![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
 
-
 - The **Watch App Extension** does not reference either of the other projects
 
   ![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
-
-
 
 ## Bundle Identifiers
 
@@ -90,4 +87,3 @@ This screenshot is the **Watch App's** Info.plist file.
 
 The deployment target for the Watch App can be
   different from the Watch Extension and iOS App.
-

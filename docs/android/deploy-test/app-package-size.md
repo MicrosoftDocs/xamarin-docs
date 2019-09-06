@@ -13,7 +13,6 @@ ms.date: 02/05/2018
 
 _This article examines the constituent parts of a Xamarin.Android application package and the associated strategies that can be used for efficient package deployment during debug and release stages of development._
 
-
 ## Overview
 
 Xamarin.Android uses a variety of mechanisms to minimize package size while
@@ -21,7 +20,6 @@ maintaining an efficient debug and release deploy process. In this article, we
 look at the Xamarin.Android release and debug deployment workflow and how the
 Xamarin.Android platform ensures that we build and release small application
 packages.
-
 
 ## Release Packages
 
@@ -60,7 +58,6 @@ size because ApiDemo uses more of the BCL than Hello, World does:
 
 As illustrated here, your application package size will generally be about
 2.9 MB larger than your application and its dependencies.
-
 
 ## Debug Packages
 
@@ -109,7 +106,6 @@ To enable *Fast Assembly Deployment*, do the following:
 
 4. Click the  **OK** button to save the changes and close the Project Options dialog.
 
-
 The next time the application is built for debug, the assemblies will be installed directly on the device (if they haven't already been) and a
 smaller application package (that does not include the assemblies) will be installed on the device. This will shorten the time it takes to get changes
 to the application up and running for testing.
@@ -117,7 +113,6 @@ to the application up and running for testing.
 By enduring the long first deploy of the shared runtime and shared platform,
 every time we make a change to the application, we can deploy the new version
 quickly and painlessly, so we can have a fast change/deploy/run cycle.
-
 
 ## Summary
 

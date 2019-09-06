@@ -29,7 +29,6 @@ Store icons (or marketing icons) are no longer managed in iTunes Connect, and in
 
 App thinning makes sure that this additional asset catalog doesn't increase the app size.
 
-
 ## In-App Purchases promoted in the App Store
 
 Apple has made in-app purchases more discoverable in the App Store. You can now add up to 20 _App Store promoted_ in-app purchases that can now be found on the Apps page, on your app's product page, or by searching.
@@ -91,7 +90,6 @@ Phased Releases are enabled in iTunes Connect. Click on your app in the sidebar,
 ![Option showing phased release for automatic updates](app-store-changes-images/image6.png)
 
 Your update is available immediately for download in the Updates tab of the App Store. Phased releases are only available for users who have automatic downloads selected.
-
 
 ## Related Links
 

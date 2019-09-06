@@ -111,8 +111,6 @@ See our [Message App Integration](~/ios/platform/message-app-integration/index.m
 
 This article has covered the enhancements Apple has made to App Search in iOS 10 and how to implement them in Xamarin.iOS.
 
-
-
 ## Related Links
 
 - [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

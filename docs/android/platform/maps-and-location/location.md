@@ -105,11 +105,10 @@ else
 
 Apps must be tolerant of the scenario where the user will not grant permission (or has revoked the permission) and have a way to gracefully deal with that situation. Please see the [Permissions guide](~/android/app-fundamentals/permissions.md) for more details on implementing run-time permission checks in Xamarin.Android.
 
-
 ## Using the fused location provider
 
 The fused location provider is the preferred way for Android applications to receive location updates from the device because it will efficiently select the location provider during run time to provide the best location information in a battery-efficient fashion. For example, a user walking around outdoors gets the best location reading with GPS. If the user then walks indoors, where GPS works poorly (if at all), the fused location provider may automatically switch to WiFi, which works better indoors.
- 
+
 The fused location provider API provides a variety of other tools to
 empower location-aware applications, including geofencing and activity
 monitoring. In this section, we are going to focus on the basics of

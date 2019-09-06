@@ -94,7 +94,6 @@ At least one screenshot is required, up to five may be submitted.
   They should be 312x390 pixels and demonstrate your Watch App in action.
   You can use the 42mm watch simulator to take screenshots at this size.
 
-
 <a name="xamarin_studio" />
 
 ## Visual Studio for Mac
@@ -149,7 +148,6 @@ Xcode will automatically show archives created in Visual Studio for Mac.
 You can then submit the app for approval on the **Versions** page. Refer to the
  [iOS app distribution overview](~/ios/deploy-test/app-distribution/index.md)
  for more information.
-
 
 ## Troubleshooting
 
@@ -213,12 +211,9 @@ Ensure you have the latest version of Visual Studio for Mac, and that your
 > [!IMPORTANT]
 > There is a known bug in Visual Studio for Mac's Watch icon support: it expects an 88x88 pixel image for the **29x29@3x** image (which should be 87x87 pixels).
 
-
 You
 cannot fix this in Visual Studio for Mac - either edit the image asset in Xcode or manually
 edit the **Contents.json** file (to match [this sample](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
-
-
 
 ### Invalid WatchKit Support
 
@@ -235,10 +230,7 @@ Ensure you are using the latest version of Xcode and Xamarin's tools.
 > [!IMPORTANT]
 > You must **Archive** your app in Visual Studio for Mac and then switch to Xcode 6.2+ to validate and upload to iTunes Connect.
 
-
 Use the Stable Xamarin channel, and Xcode 6.2+.
-
-
 
 ### Invalid Provisioning Profile
 
@@ -310,8 +302,6 @@ Error MT5309: Native linking error: clang: error: no such file or directory:
 This error is likely the result of your having renamed your
 Xcode installation from **Xcode.app**. For instance, this
 error will occur if you rename your installation to **XCode 6.2.app**.
-
-
 
 ## Related Links
 

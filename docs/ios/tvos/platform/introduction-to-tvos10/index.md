@@ -79,8 +79,6 @@ To find out more, please see our [Additional Framework Changes](~/ios/tvos/platf
 
 No APIs or frameworks were deprecated by tvOS 10. See Apple's [tvOS 10 API Differences](https://developer.apple.com/library/prerelease/content/releasenotes/General/tvOS10APIDiffs/index.html) documentation for a complete list of API modifications.
 
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

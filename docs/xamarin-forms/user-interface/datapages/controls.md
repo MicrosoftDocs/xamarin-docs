@@ -66,7 +66,6 @@ The `HeroImage` control has four properties:
 
 ![](controls-images/heroimage-light-ios.png "HeroImage Control on iOS") ![](controls-images/heroimage-dark-ios.png "HeroImage Control on iOS")
 
-
 <a name="listitem" />
 
 ### ListItem
@@ -104,7 +103,6 @@ both the Light and Dark themes:
 **iOS**
 
 ![](controls-images/listitem-light-ios.png "ListItem Control on iOS") ![](controls-images/listitem-dark-ios.png "ListItem Control on iOS")
-
 
 ## Custom Control Example
 
@@ -317,7 +315,6 @@ template, using the resources defined above:
       VerticalOptions="End"
       Style="{ StaticResource CardViewTextStyle }"
     />
-
 
     <!-- CARDVIEW DETAIL -->
     <Label

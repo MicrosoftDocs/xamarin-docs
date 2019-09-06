@@ -61,15 +61,12 @@ another can be a very laborious process, but it is possible to reduce
 that effort with the help of a tool called *Sharpen*. Sharpen is an 
 open source tool that is a Java-to-C# converter. 
 
-
-
 ## Summary
 
 This document provided a high-level overview of some of the different 
 ways that libraries from Java can be reused in a Xamarin.Android 
 application. It introduced the concepts of bindings and managed 
 callable wrappers, and discussed options for porting Java code to C#. 
-
 
 ## Related Links
 

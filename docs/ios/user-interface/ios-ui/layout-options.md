@@ -44,7 +44,6 @@ textfield1.Frame = new RectangleF(15, 277, 79, 27);
 textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleBottomMargin;
 ```
 
-
 To test the Autosizing settings, enable different **Supported Device Orientations** in the 
 project’s options:
 
@@ -58,7 +57,6 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin;
 ```
 
-
 We can also adjust the controls using the Designer. Selecting the struts as exhibited below will cause the image to stay 
 right-aligned without being clipped off the bottom of the view:
 
@@ -71,10 +69,6 @@ These screenshots show how the controls resize or reposition themselves when the
 Notice that the text view and text field both stretch to keep the same left and right margins, due to the `FlexibleWidth` 
 setting. The image has the top and left margin flexible, which means it preserves the bottom and right margins – keeping 
 the image in view when the screen is rotated. Complex layouts typically require a combination of these settings on every visible control to keep the user-interface consistent and to prevent controls from overlapping when the view’s bounds change (due to rotation or other resizing event).
-
-
-
-
 
 ## Related Links
 

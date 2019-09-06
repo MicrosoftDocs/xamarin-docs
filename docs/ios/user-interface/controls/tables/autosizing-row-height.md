@@ -104,7 +104,6 @@ With this code in place, when the app is run, each row will shrink and grow base
 
 [![](autosizing-row-height-images/table07.png "A sample table run")](autosizing-row-height-images/table07.png#lightbox)
 
-
 ## Related Links
 
 - [GrowRowTable (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/growrowtable)

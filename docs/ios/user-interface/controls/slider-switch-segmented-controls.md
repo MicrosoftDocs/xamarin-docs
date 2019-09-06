@@ -78,7 +78,6 @@ switch1.On = true;
 
  <a name="Segmented_Controls" />
 
-
 ## Segmented Controls
 
 A Segmented Control is an organized way to allow users to interact with a small number of options. It is laid out 

@@ -220,7 +220,6 @@ It's an interesting image created with a minimum of code:
 
 [![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

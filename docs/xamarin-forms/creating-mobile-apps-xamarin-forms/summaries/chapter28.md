@@ -231,8 +231,6 @@ The [**Xamarin.Forms.Maps**](xref:Xamarin.Forms.Maps) assembly also contains a [
 
 The [GeocoderRoundTrip.xaml](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml) file and [GeocoderRoundTrip.xaml.cs](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Chapter28/MapDemos/MapDemos/MapDemos/GeocoderRoundTripPage.xaml.cs) code-behind file demonstrate this facility.
 
-
-
 ## Related links
 
 - [Chapter 28 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch28-Aug2016.pdf)

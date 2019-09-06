@@ -93,4 +93,3 @@ Examples:
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Accelerometer-XamarinEssentials-API-of-the-Week/player]
 
 [!include[](~/essentials/includes/xamarin-show-essentials.md)]
-

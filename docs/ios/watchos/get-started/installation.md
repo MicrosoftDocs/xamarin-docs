@@ -50,7 +50,6 @@ Download and run the [WatchKitCatalog](https://docs.microsoft.com/samples/xamari
   Screens from the sample can be found on the [Controls](~/ios/watchos/user-interface/index.md)
   page.
 
-
 ## Creating a New Project
 
 You cannot create a new "Watch Solution"... rather you can add
@@ -121,7 +120,6 @@ You should give each new interface controller a **Class**
 Create segues by **Ctrl + dragging** from a button, table
   or interface controller onto another interface controller.
 
-
 ### Using Xcode on the Mac
 
 # [Visual Studio for Mac](#tab/macos)
@@ -153,7 +151,6 @@ When you save the storyboard in Xcode Interface Builder
   and actions you create to the C# **.designer.cs** files
   in the watch extension project.
 
-
 ### Adding Additional Screens in Xcode
 
 When you add additional screens (beyond what
@@ -166,7 +163,6 @@ Refer to the [Advanced instructions on how to add
 
 *The Xamarin iOS Designer does this automatically, no manual steps are required.*
 
-
 ## Building
 
 A project that includes a watch app builds like other
@@ -174,7 +170,6 @@ A project that includes a watch app builds like other
   iPhone application (.app) that contains a watch
   extension (.appex), which in turn contains the
   code-less watch application (.app).
-
 
 ## Launching
 
@@ -217,7 +212,6 @@ Refer to [Apple's forums](https://forums.developer.apple.com/thread/7783)
 for instructions on configuring the simulators, if the defaults do not
 work.
 
-
 <a name="xcode6" />
 
 ### Xcode 6 and watchOS 1
@@ -247,27 +241,19 @@ When using Xcode 6, only the iPhone 5, iPhone 5S, iPhone 6, and iPhone 6 Plus
 Refer to the [Notifications page](~/ios/watchos/platform/notifications.md) for
 information how to handle notifications in code.
 
-
 Visual Studio for Mac can start the watch app with a notification
   _startup modes_ for notifications:
-
-
 
 Right-click on the watch app project and choose
   **Run With > Custom Configuration...**:
 
-
 [![](installation-images/runwith-customparams-sml.png "Running a Custom Configuration")](installation-images/runwith-customparams.png#lightbox)
-
 
 This opens the **Custom Parameters** window where you can select
   **Notification** (and provide a JSON
   payload), then press **Run** to start the watch app in the simulator:
 
-
 [![](installation-images/runwith-execargs-sml.png "Setting the Notification and Payload")](installation-images/runwith-execargs.png#lightbox)
-
-
 
 ## Debugging
 
@@ -298,8 +284,6 @@ The watchOS template files (such as `InterfaceController`,
   come with their required lifecycle methods already implemented. Add
   `Console.WriteLine` calls and read the **Application Output** to better
   understand the event lifecycle.
-
-
 
 ## Related Links
 

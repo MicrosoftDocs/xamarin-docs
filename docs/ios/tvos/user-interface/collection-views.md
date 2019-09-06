@@ -92,7 +92,6 @@ Let's do the following:
 
 # [Visual Studio for Mac](#tab/macos)
 
-    
 1. Start a new **Single View tvOS App** in Visual Studio for Mac.
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it in the iOS Designer.
 1. Add a Image View, a Label and a Button to the existing view and configure them to look like the following: 
@@ -128,11 +127,9 @@ Let's do the following:
 
     [![](collection-views-images/collection11.png "Set the Identity to CityCell")](collection-views-images/collection11.png#lightbox)
 1. Save your changes.
-    
 
 # [Visual Studio](#tab/windows)
 
-    
 1. Start a new **Single View tvOS App** in Visual Studio.
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it in the iOS Designer.
 1. Add a Image View, a Label and a Button to the existing view and configure them to look like the following: 
@@ -166,7 +163,6 @@ Let's do the following:
 
     [![](collection-views-images/collection11vs.png "Set the Identity to CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Save your changes.
-    
 
 -----
 
@@ -282,7 +278,6 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 ```
 
 For more information on Navigation and Focus, please see our [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) and [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) documentation.
-
 
 <a name="The-Collection-View-Data-Provider" />
 
@@ -465,7 +460,6 @@ This defines the property and sets the default city that will initially be shown
 ### The Collection View Delegate
 
 Next, add a new `CityViewDelegate` class to the project and make it look like the following:
-
 
 ```csharp
 using System;
@@ -680,7 +674,6 @@ public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimat
 
 We set the transparence of the previous item losing focus to zero (0) and the transparence of the next item gain focus to 100%. These transition get animated as well.
 
-
 ## Configuring the Collection View Controller
 
 Now we need to do the final configuration on our Collection View and allow the controller to set the property that we defined so the Collection View can be closed after the user makes a selection.
@@ -820,14 +813,11 @@ One of the key features of using a Collection View is the ability to create cust
 
 Recently added to Collection Views for iOS 9 was the ability to easily allow the reordering of items in the collection. Again, since tvOS 9 is a subset of iOS 9, this is done them same way. Please see our [Collection View Changes](~/ios/user-interface/controls/uicollectionview.md) document for more details.
 
-
 <a name="Summary" />
 
 ## Summary
 
 This article has covered designing and working with Collection Views inside of a Xamarin.tvOS app. First, it discussed all of the elements that make up the Collection View. Next, it showed how to design and implement a Collection View using a Storyboard. Finally, is provided links to information on creating custom layouts and reordering items.
-
-
 
 ## Related Links
 

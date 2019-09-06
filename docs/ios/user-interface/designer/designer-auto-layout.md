@@ -42,7 +42,6 @@ The default iOS Designer configuration has constraint mode enabled. However, sho
 
     ![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
 
-
 By default, no constraints are created or visible on the surface. Instead, they are automatically inferred from the frame information at compile time. To add constraints, we need to select an element on the design surface and add constraints to it. We can do that using the **Constraint Toolbar**.
 
 ## Constraints Toolbar
@@ -60,7 +59,6 @@ The constraints toolbar has been updated and now consists of two main parts:
   It's important to note that the changes depending on if you are in constraints editing mode.
   - In Constraint editing mode this button adjusts the constraints to match the element frame.
   - In Frame editing mode this button adjusts the element frame to match the position the constraints are defining.
-
 
 ## Surface-Based Constraint Editing
 
@@ -84,8 +82,6 @@ Note the three dashed green lines across the other two buttons. The green lines 
 
 > [!IMPORTANT]
 > Layout guides are special types of constraint targets that allow us to create top and bottom constraints that take into account the presence of system bars, such as status bars or toolbars. One of the main uses is to have an app compatible between iOS 6 and iOS 7 since the newest version has the container view extending below the status bar. For more information on the top layout guide, refer to the [Apple documentation](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
-
-
 
 The next three sections introduce working with different types of constraints.
 
@@ -126,7 +122,6 @@ Several types of issues can arise when using constraints:
 - **Conflicting constraints** — This happens when multiple constraints force the element to have conflicting values for an attribute and the constraint engine is unable to reconcile them.
 - **Underconstrained items** — An element’s properties (location + size) must be entirely covered by its set of constraints and intrinsic sizes for the constraints to be valid. If these values are ambiguous, the item is said to be underconstrained.
 - **Frame misplacement** — This occurs when an element’s frame and its set of constraints define two different resulting rectangles.
-
 
 This section elaborates on the three issues listed above, and provides details on how to handle them.
 

@@ -24,7 +24,6 @@ Core Graphics supports drawing in a number of scenarios including:
 - Creating and drawing to a PDF.
 - Reading and drawing an existing PDF.
 
-
 ## Geometric Space
 
 Regardless of the scenario, all drawing done with Core Graphics is done in geometric space, meaning it works in abstract points rather than pixels. You describe what you want drawn in terms of geometry and drawing state such as colors, line styles, etc. and Core Graphics handles translating everything into pixels. Such state is added to a graphics context, which you can think of like a painter’s canvas.
@@ -271,7 +270,6 @@ In addition to drawing to a view's graphics context, Core Graphics supports draw
 - Getting the image from the context
 - Removing the context
 
-
 Unlike the `Draw` method, where the context is supplied by the view, in this case you create the context in one of two ways:
 
 1. By calling `UIGraphics.BeginImageContext` (or `BeginImageContextWithOptions`)
@@ -417,7 +415,6 @@ UIGraphics.EndPDFContent ();
 ```
 
 The resulting text is drawn to the PDF, which is then contained in an `NSData` that can be saved, uploaded, emailed, etc.
-
 
 ## Summary
 

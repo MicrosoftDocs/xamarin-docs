@@ -139,8 +139,6 @@ and up-to-date:
 - **Respond to Index Changes** – Using the `CSSearchableIndexDelegate` your app can respond to changes and notifications from the searchable index.
 - **Apply Data Protection** – Using the data protection classes, you can implement security on the items that you add to the searchable index using Core Spotlight.
 
-
-
 ## Related Links
 
 - [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)

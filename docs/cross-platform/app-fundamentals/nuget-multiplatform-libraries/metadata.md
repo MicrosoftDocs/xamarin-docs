@@ -53,7 +53,6 @@ for more information about the required and optional fields.
 > [!NOTE]
 > If the NuGet package is being distributed on [NuGet.org](https://www.nuget.org) it is recommended to supply as much information as possible.
 
-
 ## Related Links
 
 - [.nuspec Reference](https://docs.microsoft.com/nuget/schema/nuspec#general-form-and-schema)

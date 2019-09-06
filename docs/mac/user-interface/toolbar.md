@@ -353,7 +353,6 @@ Run the application and note that the **Trash** item is now disabled in the tool
 
 This article has taken a detailed look at working with toolbars and toolbar items in a Xamarin.Mac application. It described how to create and maintain toolbars in Xcode's Interface Builder, how some UI controls automatically work with toolbar items, how to work with toolbars in C# code, and how to enable and disable toolbar items.
 
-
 ## Related Links
 
 - [MacToolbar (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/mactoolbar)

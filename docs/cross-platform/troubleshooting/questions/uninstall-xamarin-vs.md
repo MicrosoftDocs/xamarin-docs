@@ -10,7 +10,6 @@ ms.date: 12/02/2016
 
 # How do I perform a thorough uninstall for Xamarin for Visual Studio?
 
-
 1. From the Windows Control Panel, uninstall any of the following that are present:
 
     - Xamarin

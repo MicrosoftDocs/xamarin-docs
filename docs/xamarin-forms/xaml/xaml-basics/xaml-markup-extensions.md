@@ -556,8 +556,6 @@ Here’s the program running:
 
 The XAML markup extensions shown here provide important support for XAML files. But perhaps the most valuable XAML markup extension is `Binding`, which is covered in the next part of this series, [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
-
-
 ## Related Links
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

@@ -62,7 +62,6 @@ Xamarin.iOS. It has covered:
 - **Coding your app for purchasing** – Examples of how to build in-app purchase into a Xamarin.iOS app.
 - **Reporting** – Overview of the statistics available via iTunes Connect.
 
-
 ## Related Links
 
 - [InAppPurchaseSample](https://docs.microsoft.com/samples/xamarin/ios-samples/storekit/)

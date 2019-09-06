@@ -51,9 +51,6 @@ The new _CloudKit Web Services_ framework provides  a JavaScript library (CloudK
 > [!IMPORTANT]
 > Before you can access, present or update content from a CloudKit database using CloudKit JS, you must have previously defined that database's schema.
 
-
-
-
 For more information, please see the following documents:
 
 - [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) - Our introduction to using CloudKit in a Xamarin.iOS app.
@@ -258,8 +255,6 @@ To correct this situation, use Auto Layout and Size Classes to pin the width of 
 ### New UITextInputAssistantItem Class
 
 Use the new `UITextInputAssistantItem` class to layout Bar Button Groups in a _Shortcut Bar_. The Shortcut Bar is a new area that is available in the soft keyboard to provide typing shortcuts.
-
-
 
 ## Related Links
 

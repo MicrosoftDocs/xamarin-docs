@@ -119,7 +119,6 @@ offer to autocomplete the signatures of all non-implemented partial methods.
 2. The partial method signatures have an attribute applied that exposes them to the Objective-C world,
 so they can get handled as the corresponding action.
 
-
 If you wish, you may ignore the partial method, and implement the action by
 applying the attribute to a different method, or let it fall through to a base
 class.

@@ -61,4 +61,3 @@ Android controls (also called *widgets*) are the UI elements that you
 use to build a user interface. This section explains how to use
 controls such as buttons, toolbars, date/time pickers, calendars,
 spinners, switches, pop-up menus, view pagers, and web views.
-

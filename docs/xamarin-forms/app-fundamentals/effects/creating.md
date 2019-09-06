@@ -261,7 +261,6 @@ The [`Effect.Resolve`](xref:Xamarin.Forms.Effect.Resolve(System.String)) returns
 
 This article demonstrated how to create an effect that changes the background color of the [`Entry`](xref:Xamarin.Forms.Entry) control when the control gains focus.
 
-
 ## Related Links
 
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

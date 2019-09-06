@@ -335,4 +335,3 @@ The C# language continues to evolve to make developers more productive while als
 ## Related Links
 
 - [New Language Features in C# 6](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6)
-

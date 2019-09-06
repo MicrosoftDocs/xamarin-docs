@@ -33,4 +33,3 @@ or Visual Studio for Mac.
 
 How to package Xamarin.Android Wear apps for distribution on Google
 Play.
-

@@ -145,7 +145,6 @@ Microservices offer an approach to application development and deployment that's
 
 A container is an isolated, resource controlled, and portable operating environment, where an application can run without touching the resources of other containers, or the host. Enterprises are increasingly adopting containers when implementing microservice based applications, and Docker has become the standard container implementation that has been adopted by most software platforms and cloud vendors.
 
-
 ## Related Links
 
 - [Download eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)

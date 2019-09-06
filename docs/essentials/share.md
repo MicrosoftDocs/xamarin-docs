@@ -90,7 +90,6 @@ await Share.RequestAsync(new ShareFileRequest
 
 -----
 
-
 ## API
 
 - [Share source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Share)

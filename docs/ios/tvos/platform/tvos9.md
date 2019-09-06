@@ -171,11 +171,6 @@ Instead of displaying a static Top Shelf Image, it can contain a dynamic row or 
 
 For more information, please see our [Working with Icons and Images](~/ios/tvos/app-fundamentals/icons-images.md) documentation and Apple's [TVServices Framework Reference](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) for more information on adding a Top Shelf Extension to your app to provide dynamic Top Shelf content.
 
-
-
-
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

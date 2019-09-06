@@ -88,8 +88,6 @@ the camera, both the `android.permission.CAMERA` permission and the
 `android.hardware.camera` feature must be set in the
 **AndroidManifest.xml**.
 
-
-
 ## Related Links
 
 - [TextureViewDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)

@@ -206,7 +206,6 @@ The following enhancements have been made to the WebKit framework in iOS 10:
 
 - Peek and pop support has been added to the `WKWebView` class. Use the `ShouldPreviewElement` method to determine if a given web view should display a preview.
 
-
 ## Related Links
 
 - [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)

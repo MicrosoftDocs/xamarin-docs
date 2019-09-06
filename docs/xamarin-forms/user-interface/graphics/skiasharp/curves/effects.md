@@ -938,7 +938,6 @@ You can use this path effect for either stroking or filling. Lines are separated
 
 The final argument is a seed used to generate the pseudo-random sequence used for the effect. The jitter effect will look a little different for different seeds. The argument has a default value of zero, which means that the effect is the same whenever you run the program. If you want different jitter whenever the screen is repainted, you can set the seed to the `Millisecond` property of a `DataTime.Now` value (for example).
 
-
 The **Jitter Experiment** page allows you to experiment with different values in stroking a rectangle:
 
 [![Triple screenshot of the JitterExperiment page](effects-images/jitterexperiment-small.png)](effects-images/jitterexperiment-large.png#lightbox)
@@ -1407,8 +1406,6 @@ As you've already discovered, the hatch lines aren't precisely restricted to the
 [![Triple screenshot of the Dashed Hatch Lines page](effects-images/dashedhatchlines-small.png)](effects-images/dashedhatchlines-large.png#lightbox)
 
 Now that you've seen path effects that range from simple dots and dashes to strange combinations, use your imagination and see what you can create.
-
-
 
 ## Related Links
 

@@ -45,7 +45,6 @@ Master the intricacies of drawing dotted and dashed lines in SkiaSharp.
 
 Use your fingers to paint on the canvas.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

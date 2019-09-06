@@ -30,7 +30,6 @@ There are a number of techniques for increasing the performance, and perceived p
 - [Avoid Floating-Point Arithmetic](#avoidfloats)
 - [Dismiss Dialogs](#dismissdialogs)
 
-
 > [!NOTE]
 > Before reading this article you should first read [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md), which discusses non-platform specific techniques to improve the memory usage and performance of applications built using the Xamarin platform.
 
@@ -251,7 +250,6 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 For more information about releasing disposable resources, see
 [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).  
 
-
 <a name="avoidfloats" />
 
 ## Avoid Floating-Point Arithmetic
@@ -270,7 +268,6 @@ When using the [`ProgressDialog`](xref:Android.App.ProgressDialog) class (or any
 ## Summary
 
 This article described and discussed techniques for increasing the performance of applications built with Xamarin.Android. Collectively these techniques can greatly reduce the amount of work being performed by a CPU, and the amount of memory consumed by an application.
-
 
 ## Related Links
 

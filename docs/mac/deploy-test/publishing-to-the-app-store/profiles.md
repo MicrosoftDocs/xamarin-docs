@@ -87,7 +87,6 @@ Do the following:
 
     [![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png#lightbox)
 
-
 If the developer ever changes the features being used by an App ID (eg. enabling iCloud or push notifications) then they should re-create the provision profiles for that App ID.
 
 ## Related Links

@@ -743,7 +743,6 @@ In the **Attribute Inspector**, you have the following options specific to Panel
 - **Non Activating** - Determines in the panel becomes the key window.
 - **Document Modal** - If Document Modal, the panel will only float above the application's windows, else it floats above all.
 
-
 To add a new Panel, do the following:
 
 1. In the **Solution Explorer**, right-click on the Project and select **Add** > **New File..**.

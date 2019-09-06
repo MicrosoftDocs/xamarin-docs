@@ -18,6 +18,3 @@ This section contains documents that explain some more advanced cross-platform a
 Xamarin.iOS, Xamarin.Android, and Xamarin.Mac all ship with over a dozen assemblies. Just as Silverlight is an extended subset of the desktop .NET assemblies, Xamarin platforms is also an extended subset of several Silverlight and desktop .NET assemblies.
 
 This guide provides a list of all available assemblies shipped with each platform, and show which can be used on each platform.
-
-
-

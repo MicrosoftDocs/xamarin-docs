@@ -35,7 +35,6 @@ remember to release those resources in the complementary method to
 where they were instantiated (eg. objects created in `OnStart` can be
 disposed of in `OnStop`).
 
-
 ## Configuration Changes
 
 It's important to remember that configuration changes &ndash; especially
@@ -57,4 +56,3 @@ recreated as a result of configuration changes:
 The Activity should then override `OnConfigurationChanged` to respond
 to those changes appropriately. For more details on how to handle
 configuration changes see the documentation.
-

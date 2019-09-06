@@ -165,8 +165,6 @@ If the user switches back to the primary icon, an alert like the following will 
 
 This article has covered adding alternate app icons to a Xamarin.iOS project and using them inside of the app.
 
-
-
 ## Related Links
 
 - [iOSTenThree Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-iostenthree/)

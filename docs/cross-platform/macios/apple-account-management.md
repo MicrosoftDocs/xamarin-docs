@@ -53,7 +53,7 @@ You must have an Apple Developer account to use this feature. More information o
     ![fastlane dialog.](apple-account-management-images/image2.png)
 
 3. Enter your Apple ID and Password and click the **Sign In** button. This will save your credentials in the secure Keychain on this machine. [fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) is used to handle your credentials securely and pass them to Apple's developer portal.
- 
+
 4. Select **Always Allow** on the alert dialog to allow Visual Studio to use your credentials :
 
     ![Always allow alert dialog](apple-account-management-images/image4.png)
@@ -79,13 +79,12 @@ You must have an Apple Developer account to use this feature. More information o
     ![username and password dialog](apple-account-management-images/prov1a.png)
 
 1. Once your account has been added successfully, you'll see your Apple ID and any teams that your Apple ID is part of.
- 
+
 1. Select any team and press the **View Details…** button. This will display a list of all Signing Identities and Provisioning Profiles that are installed on your machine:
 
     ![username and password dialog](apple-account-management-images/prov2.png)
 
 -----
-
 
 ## Managing Signing Identities and Provisioning Profiles
 

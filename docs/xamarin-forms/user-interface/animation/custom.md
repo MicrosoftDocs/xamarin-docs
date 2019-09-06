@@ -15,7 +15,6 @@ ms.date: 07/14/2016
 
 _The Animation class is the building block of all Xamarin.Forms animations, with the extension methods in the ViewExtensions class creating one or more Animation objects. This article demonstrates how to use the Animation class to create and cancel animations, synchronize multiple animations, and create custom animations that animate properties that aren't animated by the existing animation methods._
 
-
 A number of parameters must be specified when creating an `Animation` object, including start and end values of the property being animated, and a callback that changes the value of the property. An `Animation` object can also maintain a collection of child animations that can be run and synchronized. For more information, see [Child Animations](#child).
 
 Running an animation created with the [`Animation`](xref:Xamarin.Forms.Animation) class, which may or may not include child animations, is achieved by calling the [`Commit`](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) method. This method specifies the duration of the animation, and amongst other items, a callback that controls whether to repeat the animation.
@@ -175,7 +174,6 @@ In this code example, the `ColorTo` method animates the [`TextColor`](xref:Xamar
 ## Summary
 
 This article demonstrated how to use the [`Animation`](xref:Xamarin.Forms.Animation) class to create and cancel animations, synchronize multiple animations, and create custom animations that animate properties that aren't animated by the existing animation methods. The `Animation` class is the building block of all Xamarin.Forms animations.
-
 
 ## Related Links
 

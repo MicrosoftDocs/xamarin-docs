@@ -33,7 +33,6 @@ Examples of different services you can access include:
 - Web API
 - Office365
 
-
 ## Conclusion
 
 Using the steps above you can authenticate your mobile apps against
@@ -41,8 +40,6 @@ Using the steps above you can authenticate your mobile apps against
   Authentication Library (ADAL) makes it much
   easier with fewer lines of code, while keeping most
   of the code the same and thus making it shareable across platforms.
-
-
 
 ## Related Links
 

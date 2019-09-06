@@ -20,11 +20,9 @@ _This guide provides troubleshooting steps for issues that may be encountered us
 
 The log files can be located by browsing to **Help &gt; Xamarin &gt; Zip Logs** in Visual Studio.
 
-
 ## Where's the Xamarin Build Host App?
 
 The Xamarin Build Host from older versions of Xamarin.iOS is no longer required. Visual Studio now automatically deploys the agent over Remote Login and runs it in the background. There is no additional app that will run on either the Mac or Windows machines.
-
 
 ## Troubleshooting Remote Login
 
@@ -59,7 +57,6 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
     For example, from the screenshot below, the account name will be **amyb** and not **Amy Burns**:
 
     [![](troubleshooting-images/troubleshooting-image5a.png "Getting the account name from the Terminal app")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
-
 
 6. Check that the IP address you are using for the Mac is correct. You can find the IP address under **System Preferences > Sharing > Remote Login** on the Mac.
 
@@ -371,7 +368,6 @@ If you are troubleshooting a build problem and want to make sure the behavior is
 2. Control-click the **mtbs** folder and select **Move to Trash**:
 
     [![](troubleshooting-images/troubleshooting-image9.png "Move the mtbs folder to Trash")](troubleshooting-images/troubleshooting-image9.png#lightbox)
-
 
 ## Related Links
 

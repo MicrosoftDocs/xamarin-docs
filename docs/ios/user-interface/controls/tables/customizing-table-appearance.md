@@ -24,7 +24,6 @@ There are four built-in styles:
 - **Value1** – right aligned subtitle, supports a `UIImageView`.
 - **Value2** – title is right-aligned and subtitle is left-aligned (but no image).
 
-
 These screenshots show how each style appears:
 
  [![](customizing-table-appearance-images/image7.png "These screenshots show how each style appears")](customizing-table-appearance-images/image7.png#lightbox)
@@ -56,7 +55,6 @@ Cells can have the following accessories added to the right of the view:
 - **DetailButton** – responds to touch independently of the rest of the cell, allowing it to perform a different function to touching the cell itself (such as opening a popup or new window that is not part of a `UINavigationController` stack).
 - **DisclosureIndicator** – normally used to indicate that touching the cell will open another view.
 - **DetailDisclosureButton** – a combination of the `DetailButton` and `DisclosureIndicator`.
-
 
 This is what they look like:
 
@@ -132,7 +130,6 @@ The custom cell class consists of only three methods:
 - **UpdateCell** – a method for  `UITableView.GetCell` to use to set the cell’s properties.
 - **LayoutSubviews** – set the location of the UI controls. In the example every cell has the same layout, but a more complex cell (particularly those with varying sizes) might need different layout positions depending on the content being displayed.
 
-
 The complete sample code in **CellCustomTable > CustomVegeCell.cs** follows:
 
 ```csharp
@@ -189,8 +186,6 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
     return cell;
 }
 ```
-
-
 
 ## Related Links
 

@@ -21,4 +21,3 @@ Troubleshooting tips and tricks.
 ## [Errors messages (mmp)](~/mac/troubleshooting/mmp-errors.md)
 
 An errors reference guide, showing the most common errors you may experience when building Xamarin.Mac applications.
-

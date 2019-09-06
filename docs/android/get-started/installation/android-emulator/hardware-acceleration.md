@@ -109,7 +109,6 @@ computer can support Hyper-V. For example:
 
 [![Example systeminfo output](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
 
-
 ### Enabling Hyper-V acceleration
 
 If your computer meets the above criteria, use the following steps
@@ -136,12 +135,10 @@ to accelerate the Android emulator with Hyper-V:
 
     [![Android SDKs and Tools dialog](hardware-acceleration-images/win/04-sdk-manager-w158-sml.png)](hardware-acceleration-images/win/04-sdk-manager-w158.png#lightbox)
 
-
 When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
 be sure to select an **x86**-based system image. If you use an ARM-based system image,
 the virtual device will not be accelerated and will run slowly.
-
 
 ## Accelerating with HAXM
 
@@ -193,7 +190,6 @@ page. Use the following steps to download and install HAXM:
    the default values in the installer dialogs:
 
    ![Intel Hardware Accelerated Execution Manager Setup window](hardware-acceleration-images/win/06-haxm-installer.png)
-
 
 When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
@@ -322,7 +318,6 @@ install HAXM.
 HAXM installation packages for macOS are available from the
 [Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager)
 page. Use the following steps to download and install HAXM:
-
 
 1. From the Intel website, download the latest
    [HAXM virtualization engine](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/)

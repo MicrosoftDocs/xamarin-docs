@@ -13,4 +13,3 @@ ms.date: 03/29/2017
 ## [MonoGame on Universal Windows Platform (UWP)](~/graphics-games/monogame/platforms/uwp.md)
 
 This walkthrough covers MonoGame Universal Windows Platform (UWP) project creation and content loading. UWP apps can run on all Windows 10 devices, including desktops, tablets, Windows Phones, and Xbox One.
-

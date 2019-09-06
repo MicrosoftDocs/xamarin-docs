@@ -302,7 +302,6 @@ Do the following in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
     [![](itunesconnect-images/review02.png "Editing release information in iTunes Connect")](itunesconnect-images/review02.png#lightbox)
 7. Click the **Save** button at the top of the screen to save your changes.
 
-
 ## Maintaining Pricing Information
 
 If you plan on releasing your application for sale, you'll need to set the sales price by selecting one of Apple's available pricing tiers and the date that the given pricing goes into effect. For example, as of the time of this writing, the **Tier 1** pricing looks like the following:

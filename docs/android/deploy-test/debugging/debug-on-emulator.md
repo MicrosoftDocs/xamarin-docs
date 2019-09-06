@@ -25,7 +25,6 @@ information about configuring the Android Emulator and creating new
 virtual devices, see 
 [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md).
 
-
 ## Using a Pre-Configured Virtual Device
 
 # [Visual Studio](#tab/windows)
@@ -96,7 +95,6 @@ emulator. (If you are not yet familiar with Android API levels, see
 
 To modify virtual devices (or to create new ones), you must use the
 [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-
 
 <a name="launching" />
 
@@ -170,12 +168,10 @@ simply restores the state at which you closed the emulator.
 
 ![Loading state on restart](debug-on-emulator-images/loading-state.png)
 
-
 ## Troubleshooting
 
 For tips and workarounds for common emulator problems, see
 [Android Emulator Troubleshooting](~/android/get-started/installation/android-emulator/troubleshooting.md).
-
 
 ## Summary
 

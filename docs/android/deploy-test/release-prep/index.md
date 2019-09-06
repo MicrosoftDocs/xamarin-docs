@@ -148,7 +148,6 @@ bytecode*. The build process first uses the Xamarin.Android linker to
 optimize the app at the managed code (C#) level, and then it later uses
 ProGuard (if enabled) to optimize the APK at the Java bytecode level.
 
-
 ### Configure the Linker
 
 Release mode turns off the shared runtime and turns on linking so that 
@@ -392,7 +391,6 @@ default. To use the LLVM compiler, the **AOT Compilation** option must
 first be enabled (on the
 [Packaging Properties](#Set_Packaging_Properties) page).
 
-
 > [!NOTE]
 > The **LLVM Optimizing Compiler** option requires an Enterprise license.  
 
@@ -598,7 +596,6 @@ From here, it is possible to select the distribution channel:
     signing certificate for Android applications, and publish an
     &ldquo;ad hoc&rdquo; version of the app to disk. This is a good way
     to create an APK for testing.
-
 
 - **Google Play** &ndash; Publishes a signed APK to Google Play.
     Continue to

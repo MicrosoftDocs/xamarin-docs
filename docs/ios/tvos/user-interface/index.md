@@ -65,8 +65,6 @@ This article covers designing and working with Table Views and Table View Contro
 
 This article covers designing and working with Text and Search Fields inside of a Xamarin.tvOS app.
 
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

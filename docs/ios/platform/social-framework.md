@@ -67,7 +67,6 @@ user interaction. However, it can be initialized with the following methods:
 - `AddUrl` – Adds a Url to the tweet.
 - `AddImage` – Adds an image to the tweet.
 
-
 Once initialized, calling `PresentVIewController` displays the
 view created by the `SLComposeViewController`. The user can then
 optionally edit and send the tweet, or cancel sending it. In either case, the
@@ -501,7 +500,6 @@ and Facebook. It showed where to configure accounts for each social network in
 the device settings. It also discussed how to use the `SLComposeViewController` to present a unified view for posting to
 social networks. Additionally, it examined the `SLRequest` class that
 is used to call each social network’s API.
-
 
 ## Related Links
 

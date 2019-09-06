@@ -40,7 +40,6 @@ Double-click on the Interface.storyboard in your Watch App to
   start the Xamarin iOS Designer (if you are on a Mac you can
   also right-click and **Open With > Xcode Interface Builder**)
 
-
 1. Ensure the **Toolbox** and **Properties** pads are visible,
 1. Click to select the Interface Controller,
 1. Set the Identifier and Title of the Interface Controller to **interfaceController** and **Hi Watch**,
@@ -61,7 +60,6 @@ Double-click on the Interface.storyboard in your Watch App
     ![](hello-watch-images/vs-interfacecontrollerattributes.png "Set the Identifier and Title of the Interface Controller to interfaceController and Hi Watch")
 
 -----
-
 
 Create your UI:
 
@@ -163,7 +161,6 @@ When the Simulator launches, press the button to increment the label.
   Congratulations, you’ve got yourself a Watch App!
 
 ![](hello-watch-images/running.png "The app running in the Simulator")
-
 
 ## Related Links
 

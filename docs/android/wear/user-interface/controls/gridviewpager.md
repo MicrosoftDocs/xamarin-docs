@@ -46,8 +46,6 @@ Wire up the adapter as shown:
 pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 ```
 
-
-
 ## Related Links
 
 - [Google's 2D Picker doc](https://developer.android.com/training/wearables/ui/2d-picker.html)

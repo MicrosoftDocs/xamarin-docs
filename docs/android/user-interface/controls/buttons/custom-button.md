@@ -51,7 +51,6 @@ by a [`Button`](xref:Android.Widget.Button)
 for its background, the image displayed will change based on these
 three states.
 
-
 > [!NOTE]
 > The order of the `<item>` elements is important. When
 > this drawable is referenced, the `<item>`s are traversed in-order
@@ -99,7 +98,6 @@ message to be displayed when the [`Button`](xref:Android.Widget.Button)
 is clicked.
 
 Now run the application.
-
 
 *Portions of this page are modifications based on work created and
 shared by the Android Open Source Project and used according to

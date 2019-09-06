@@ -11,7 +11,6 @@ ms.date: 03/17/2017
 
 # Working with watchOS App Groups in Xamarin
 
-
 An App Group allows different applications (or an
   application and its extensions) to access a shared
   file storage location. App Groups can be used for
@@ -45,16 +44,13 @@ As well as configuring the provisioning profile,
 
 [![](app-groups-images/entitlements-sml.png "Configure the plist and enter the ID")](app-groups-images/entitlements.png#lightbox)
 
-
 ### Deployment
 
 Ensure you configure the App Group correctly
   in your [deployment](~/ios/watchos/deploy-test/index.md#App_Groups)
   provisioning.
 
-
 For more information, please see the [App Group Capabilities](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentation.
-
 
 ## Related Links
 

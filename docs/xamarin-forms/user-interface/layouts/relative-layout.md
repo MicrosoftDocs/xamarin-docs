@@ -222,7 +222,6 @@ The above code results in the following layout:
 
 Notice that `RelativeLayouts`s are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout. Also notice that some elements are `RelativeToView`, because that allows for easier and more intuitive layout when the relationships between views guide positioning.
 
-
 ## Related Links
 
 - [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)

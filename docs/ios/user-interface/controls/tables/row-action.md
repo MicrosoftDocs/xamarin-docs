@@ -27,7 +27,6 @@ button by default. By attaching multiple instances of the `UITableViewRowAction`
 class to a `UITableView`, multiple custom actions can be defined, each with its
 own text, formatting and behavior.
 
-
 ## UISwipeActionsConfiguration
 
 There are a three steps required to implement swipe actions with `UISwipeActionsConfiguration`:
@@ -43,7 +42,6 @@ These are explained in greater detail in the following sections.
 `UITableViewController` (and also `UITableViewSource` and `UITableViewDelegate`) contain two methods: `GetLeadingSwipeActionsConfiguration` and `GetTrailingSwipeActionsConfiguration`, that are used to implement a set of swipe actions on a table view row. The leading swipe action refers to a swipe from the left hand side of the screen in a left-to-right language and from the right hand side of the screen in a right-to-left language.
 
 The following example (from the [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) sample) demonstrates implementing the leading swipe configuration. Two actions are created from the contextual actions, which are explained [below](#create-uicontextualaction). These actions are then passed in to a newly initialized [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations), which is used as the return value.
-
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
@@ -187,8 +185,6 @@ the **Hi** button will be displayed instead of the **Delete** button that is dis
 
 If the user taps the **Hi** button, `Hello World!` will be written out to the
 console in Visual Studio for Mac or Visual Studio when the application is run in the debug mode.
-
-
 
 ## Related Links
 

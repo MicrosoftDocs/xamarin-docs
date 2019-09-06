@@ -50,8 +50,6 @@ Protocols in Objective-C can be compared to interfaces in C#, and in many cases 
 
 More information please see our [Delegates, Protocols and Events](~/ios/app-fundamentals/delegates-protocols-and-events.md) documentation.
 
-
-
 ## Related Links
 
 - [Table views](~/mac/user-interface/table-view.md)

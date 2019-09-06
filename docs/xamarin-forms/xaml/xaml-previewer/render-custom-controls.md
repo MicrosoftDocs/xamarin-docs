@@ -35,7 +35,6 @@ namespace MyProject
 
 Use [James Montemagno's ImageCirclePlugin's base class](https://github.com/jamesmontemagno/ImageCirclePlugin/blob/master/src/ImageCircle/CircleImage.shared.cs) as an example.
 
-
 ## SkiaSharp controls
 
 Currently, SkiaSharp controls are only supported when you're previewing on iOS. They won't render on the Android preview.

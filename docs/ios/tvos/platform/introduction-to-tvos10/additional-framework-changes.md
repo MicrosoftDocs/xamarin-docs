@@ -190,8 +190,6 @@ The following enhancements have been made to the UIKit framework in tvOS 10:
 - Initiate CloudKit sharing and modify its properties using the new `UICloudSharingController` and `UICloudSharingControllerDelegate` classes.
 - Take advantage of prefetched cells to improve the scrolling experience of `UICollectionViews` with the new `UICollectionViewDataSourcePrefetching` delegate.
 
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

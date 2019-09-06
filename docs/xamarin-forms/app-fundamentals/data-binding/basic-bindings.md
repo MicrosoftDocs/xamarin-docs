@@ -324,7 +324,6 @@ The `BindingContext` property of the `StackLayout` is set to the `slider` object
 
 In the [next article](binding-mode.md), you'll see how the *binding mode* can change the flow of data between target and source objects.
 
-
 ## Related Links
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

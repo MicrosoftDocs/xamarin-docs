@@ -33,7 +33,6 @@ For Xamarin.Android to work with .NET Embedding, you need the following:
     [Java 1.8](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html)
     or later must be installed.
 
-
 ## Using Embeddinator-4000
 
 To consume a .NET library in a native Android project, use the
@@ -57,7 +56,6 @@ following steps:
 
 5. Use the generated AAR file in a Java project in Android Studio.
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 ## Xamarin.Android Requirements
@@ -79,7 +77,6 @@ For Xamarin.Android to work with .NET Embedding, you need the following:
 - **Mono** &ndash;
     [Mono 5.0](https://www.mono-project.com/download/) or later must be
     installed (mono is installed with Visual Studio for Mac).
-
 
 ## Using Embeddinator-4000
 
@@ -109,7 +106,6 @@ To consume a .NET library in a native Android project, use the following steps:
 Usage and command line options are described in the
 [Embeddinator-4000](https://github.com/mono/Embeddinator-4000/blob/master/Usage.md#java--c)
 documentation.
-
 
 ## Callbacks
 

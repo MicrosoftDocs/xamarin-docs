@@ -428,7 +428,6 @@ the old and undefined behavior (this may be improved in the future).
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
 
-
 ## Related Links
 
 - [Exception Marshaling (sample)](https://github.com/xamarin/mac-ios-samples/tree/master/ExceptionMarshaling)

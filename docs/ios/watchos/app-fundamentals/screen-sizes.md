@@ -37,7 +37,6 @@ The larger screen size will sometimes render content
   that would be truncated/hidden on the smaller screen.
   Be sure to test on both sizes.
 
-
 ### Interface Design
 
 Your app should display the same content on the screen,
@@ -53,14 +52,12 @@ Because the watch screen is surrounded by a black bezel, providing
   elements rest against the edge of the screen and let
   the bezel form a natural border around the app.
 
-
 ## watchOS Simulator
 
 When testing on the simulator you can easily switch between the
   two screen sizes using the **Hardware > Device** menu.
 
 ![](screen-sizes-images/simulator.png "The simulator can switch between the two screen sizes using the Hardware Device menu")
-
 
 ## Image Resources
 
@@ -88,8 +85,6 @@ using (var image = UIImage.FromBundle (large ? "42mm-Walkway" : "38mm-Walkway"))
 ```
 
 Read more about using the [image control](~/ios/watchos/user-interface/image.md).
-
-
 
 ## Related Links
 

@@ -31,7 +31,6 @@ Using the new APIs provided by iOS 8, the application can take control of the fo
 - **Manual Exposure** – By providing manual control over the exposure, an application can provide more freedom to users and allow them to achieve a stylized look.
 - **Manual White Balance** – White Balance is used to adjust the color in an image—often to make it look realistic. Different light sources have different color temperatures, and the camera settings used to capture an image is adjusted to compensate for these differences. Again, by allowing the user control over the white balance, users can make adjustments that cannot be done automatically.
 
-
 iOS 8 provides extensions and enhancements to existing iOS APIs to provide this fine-grained control over the image capture process.
 
 ## Bracketed Capture
@@ -47,7 +46,6 @@ The following are required to complete the steps presented in this article:
 - **Xcode 7+ and iOS 8 or newer** – Apple's Xcode 7 and iOS 8 or newer  APIs need to be installed and configured on the developer's computer.
 - **Visual Studio for Mac** – The latest version of Visual Studio for Mac should be installed and configured on the user device.
 - **iOS 8 Device** – An iOS device running the latest version of iOS 8. Camera features cannot be tested in the iOS Simulator.
-
 
 ## General AV Capture Setup
 
@@ -164,7 +162,6 @@ The AV Capture session is used to control recording of live video from the iOS D
 
 Do the following to modify the application's `AppDelegate` and add the necessary code:
 
-
 1. Double-click the `AppDelegate.cs` file in the Solution Explorer to open it for editing.
 1. Add the following using statements to the top of the file:
 
@@ -264,7 +261,6 @@ Do the following to modify the application's `AppDelegate` and add the necessary
 
 1. Save the changes to the file.
 
-
 With this code in place, the Manual Camera Controls can be easily implemented for experimentation and testing.
 
 ## Manual Focus
@@ -301,7 +297,6 @@ When dealing with focus, there are a few terms that the developer should be fami
 - **Hyperfocal Distance** – This is the point in the focus spectrum where the farthest object in the frame is just at the far end of focus. In other words, this is the focal position that maximizes Depth of Field.
 - **Lens Position** – That's what controls all of the above other terms. This is the distance of the lens from the sensor and thereby the controller of focus.
 
-
 With these terms and knowledge in mind, the new Manual Focus Controls can be successfully implemented in an iOS 8 application.
 
 ### Existing Focus Controls
@@ -312,14 +307,12 @@ iOS 7, and earlier versions, provided existing Focus Controls via `FocusMode`pro
 - `AVCaptureFocusModeAutoFocus` – The camera sweeps the lens through all focal points until it finds sharp focus and then stays there.
 - `AVCaptureFocusModeContinuousAutoFocus` – The camera refocuses whenever it detects an out-of-focus condition.
 
-
 The existing controls also provided a settable point of interest via the`FocusPointOfInterest` property, so that the user can tap to focus on a particular area. The application can also track the lens movement by monitoring the `IsAdjustingFocus` property.
 
 In addition, range restriction was provided by the `AutoFocusRangeRestriction` property as:
 
 - `AVCaptureAutoFocusRangeRestrictionNear` – Restricts the autofocus to nearby depths. Useful in situations such as scanning a QR Code or barcode.
 - `AVCaptureAutoFocusRangeRestrictionFar` – Restricts the autofocus to distant depths. Useful in situations where objects that are known to be irrelevant are in the field of view (for instance, a window frame).
-
 
 Finally there is the `SmoothAutoFocus` property that slows down the auto focus algorithm and steps it in smaller increments to avoid moving artifacts when recording video.
 
@@ -329,7 +322,6 @@ In addition to the features already provided by iOS 7 and above, the following f
 
 - Full manual control of the lens position when locking focus.
 - Key-value observation of the lens position in any focus mode.
-
 
 To implement the above features, the `AVCaptureDevice` class has been modified to include a read-only `LensPosition` property used to get the current position of the camera lens.
 
@@ -359,9 +351,7 @@ The view contains the following main elements:
 - A  `UISegmentedControl` that will change the Focus Mode from Automatic to Locked.
 - A  `UISlider` that will show and update the current Lens Position.
 
-
 Do the following to wire-up the view controller for Manual Focus Control:
-
 
 1. Add the following using statements:
 
@@ -490,7 +480,6 @@ Do the following to wire-up the view controller for Manual Focus Control:
     [![](intro-to-manual-camera-controls-images/image7.png "Manually adjusting the lens position")](intro-to-manual-camera-controls-images/image7.png#lightbox)
 1. Stop the application.
 
-
 The above code has shown how to monitor the lens position when the camera is in the Automatic mode or use a slider to control the lens position when it is in the Locked mode.
 
 ## Manual Exposure
@@ -515,7 +504,6 @@ The three basic elements that come together to control exposure are:
 - **ISO Mapping** – This is a term borrowed from film photography and refers to the sensitivity of the chemicals in the film to light. Low ISO values in film have less grain and finer color reproduction; low ISO values on digital sensors have less sensor noise but less brightness. The higher the ISO value, the brighter the image but with more sensor noise. “ISO” on a digital sensor is a measure of [electronic gain](https://en.wikipedia.org/wiki/Gain), not a physical feature.
 - **Lens Aperture** – This is the size of the lens opening. On all iOS devices the lens aperture is fixed, so the only two values that can be used to adjust exposure are Shutter Speed and ISO.
 
-
 ### How Continuous Auto Exposure Works
 
 Before learning how manual exposure works, it’s a good idea to understand how continuous auto exposure works in an iOS device.
@@ -539,7 +527,6 @@ iOS 7 and above, provide the following existing Exposure controls via the `Expos
 - `AVCaptureExposureModeLocked` – Samples the scene once and uses those values throughout the scene.
 - `AVCaptureExposureModeContinuousAutoExposure` – Samples the scene continuously to ensure that it is well lit.
 
-
 The `ExposurePointOfInterest` can be used to tap to expose the scene by selecting a target object to expose on, and the application can monitor the `AdjustingExposure` property to see when exposure is being adjusted.
 
 ### New Exposure Controls in iOS 8
@@ -548,7 +535,6 @@ In addition to the features already provided by iOS 7 and above, the following f
 
 - Fully manual custom exposure.
 - Get, Set and Key-Value Observe IOS and Shutter Speed (Duration).
-
 
 To implement the above features, a new `AVCaptureExposureModeCustom` mode has been added. When the camera in is the custom mode, the following code can be used to adjust the Exposure Duration and ISO:
 
@@ -575,7 +561,6 @@ The minimum and maximum setting ranges depend on the device the application is r
 - `CaptureDevice.ActiveFormat.MinExposureDuration`
 - `CaptureDevice.ActiveFormat.MaxExposureDuration`
 
-
 As seen in the code above, the Capture Device must be locked for configuration before a change in exposure can be made.
 
 ### Manual Exposure Example
@@ -590,9 +575,7 @@ The view contains the following main elements:
 - A  `UISegmentedControl` that will change the Focus Mode from Automatic to Locked.
 - Four  `UISlider` controls that will show and update the Offset, Duration, ISO and Bias.
 
-
 Do the following to wire-up the view controller for Manual Exposure Control:
-
 
 1. Add the following using statements:
 
@@ -793,7 +776,6 @@ Do the following to wire-up the view controller for Manual Exposure Control:
     [![](intro-to-manual-camera-controls-images/image15.png "Drag the Duration and ISO sliders to manually control exposure")](intro-to-manual-camera-controls-images/image15.png#lightbox)
 1. Stop the application.
 
-
 The above code has shown how to monitor the exposure settings when the camera is in the Automatic mode, and how to use sliders to control the exposure when it is in the Locked or Custom modes.
 
 ## Manual White Balance
@@ -833,7 +815,6 @@ iOS 7 and above provided the following existing White Balance controls via `Whit
 - `AVCapture WhiteBalance ModeLocked` – Samples the scene once and using those values throughout the scene.
 - `AVCapture WhiteBalance ModeContinuousAutoExposure` – Samples the scene continuously to ensure that it is well balanced.
 
-
 And the application can monitor the `AdjustingWhiteBalance` property to see when exposure is being adjusted.
 
 ### New White Balance Controls in iOS 8
@@ -845,13 +826,11 @@ In addition to the features already provided by iOS 7 and above, the following f
 - Support for White Balance using a Gray Card.
 - Conversion routines to and from device independent color spaces.
 
-
 To implement the above features, the `AVCaptureWhiteBalanceGain` structure has been added with the following members:
 
 - `RedGain`
 - `GreenGain`
 - `BlueGain`
-
 
 The maximum white balance gain is currently four (4) and can be ready from the `MaxWhiteBalanceGain` property. So the legal range is from one (1) to `MaxWhiteBalanceGain` (4) currently.
 
@@ -864,20 +843,15 @@ Conversion routines have been added to iOS 8 to help with converting to, and fro
 - `X` - is a value from 0 to 1.
 - `Y` - is a value from 0 to 1.
 
-
 An `AVCaptureWhiteBalanceTemperatureAndTintValues` structure has also been added with the following members:
 
 - `Temperature` - is a floating point value in degrees Kelvin.
 - `Tint` - is an offset from green or magenta from 0 to 150 with positive values towards the green direction and negative toward in the magenta.
 
-
 Use the `CaptureDevice.GetTemperatureAndTintValues`and the `CaptureDevice.GetDeviceWhiteBalanceGains`methods to convert between temperature and tint, chromaticity and RGB gain color spaces.
 
 > [!NOTE]
 > The conversion routines are more accurate the closer the value to be converted is to the Planckian Locus.
-
-
-
 
 #### Gray Card Support
 
@@ -902,9 +876,7 @@ The view contains the following main elements:
 - Two  `UISlider` controls that will show and update the Temperature and Tint.
 - A  `UIButton` used to sample a Gray Card (Gray World) space and set the White Balance using those values.
 
-
 Do the following to wire-up the view controller for Manual White Balance Control:
-
 
 1. Add the following using statements:
 
@@ -1133,7 +1105,6 @@ Again, Bracketed Capture is a burst of still images taken with varied settings f
 - **Manual Exposure Bracket** – where all images have a varied Shutter Speed (Duration) and ISO amount.
 - **Simple Burst Bracket** – A series of still images taken in rapid succession.
 
-
 ### New Bracketed Capture Controls in iOS 8
 
 All Bracketed Capture commands are implemented in the `AVCaptureStillImageOutput` class. Use the `CaptureStillImageBracket`method to get a series of images with the given array of settings.
@@ -1142,7 +1113,6 @@ Two new classes have been implemented to handle settings:
 
 - `AVCaptureAutoExposureBracketedStillImageSettings` – It has one property,  `ExposureTargetBias`, used to set the bias for an auto exposure bracket.
 - `AVCaptureManual`  `ExposureBracketedStillImageSettings` – It has two properties,  `ExposureDuration` and  `ISO`, used to set the shutter speed and ISO for a manual exposure bracket.
-
 
 ### Bracketed Capture Controls Do's and Don'ts
 
@@ -1154,14 +1124,12 @@ The following is a list of things that should be done when using the Bracketed C
 - Assume that the sample buffers are going to come from the same shared pool.
 - To release the memory that was allocated by a previous prepare call, call  `PrepareToCaptureStillImageBracket` again and send it an array of one object.
 
-
 #### Don'ts
 
 The following is a list of things that should not be done when using the Bracketed Capture controls in iOS 8:
 
 - Don't mix Bracketed Capture settings types in a single capture.
 - Don't request more than  `MaxBracketedCaptureStillImageCount` images in a single capture.
-
 
 ### Bracketed Capture Details
 
@@ -1172,7 +1140,6 @@ The following details should be taken into consideration when working with Brack
 - All images must use the same output format (jpeg, png, etc.)
 - Video preview may drop frames.
 - Bracketed Capture is supported on all devices compatible with iOS 8.
-
 
 With this information in mind, let's take a look at an example of using Bracketed Capture in iOS 8.
 
@@ -1189,9 +1156,7 @@ The view contains the following main elements:
 - A  `UIScrollView` to house the video feed and result views.
 - A  `UIButton` used to take a Bracketed Capture with some preset settings.
 
-
 Do the following to wire-up the view controller for Bracketed Capture:
-
 
 1. Add the following using statements:
 
@@ -1316,7 +1281,6 @@ Do the following to wire-up the view controller for Bracketed Capture:
     }
     ```
 
-
 1. Override the `ViewDidAppear` method and add the following code:
 
     ```csharp
@@ -1343,7 +1307,6 @@ Do the following to wire-up the view controller for Bracketed Capture:
 
     [![](intro-to-manual-camera-controls-images/image25.png "Swipe right to left to see the three images taken by the Bracketed Capture")](intro-to-manual-camera-controls-images/image25.png#lightbox)
 1. Stop the application.
-
 
 The above code has shown how to configure and take an Auto Exposure Bracketed Capture in iOS 8.
 

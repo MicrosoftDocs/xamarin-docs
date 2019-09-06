@@ -47,7 +47,6 @@ Microsoft's Web API exposes a REST-like interface
   and build a WebAPI-based app to connect to Xamarin
   apps.
 
-
 ### [Introduction To Web Services](~/cross-platform/data-cloud/web-services/index.md)
 
 This tutorial introduces how to integrate REST, WCF and SOAP web service
@@ -70,7 +69,6 @@ incorporated into Xamarin apps:
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) – sample for the [Architecture series](https://www.microsoft.com/net/learn/architecture) of ebooks.
 - [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT sample from Build 2016.
-
 
 ## Related Links
 

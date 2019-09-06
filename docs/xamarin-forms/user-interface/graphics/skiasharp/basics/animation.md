@@ -241,7 +241,6 @@ The result is that the image looks the same when `t` equals 0 as when `t` equals
 
 [![](animation-images/expandingcircles-small.png "Triple screenshot of the Expanding Circles page")](animation-images/expandingcircles-large.png#lightbox "Triple screenshot of the Expanding Circles page")
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

@@ -41,7 +41,6 @@ A property declared by a custom control will appear in the property panel if the
 1. The property has an  [ExportAttribute](xref:Foundation.ExportAttribute) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
 1. The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), or [UIImage](xref:UIKit.UIImage). This list of supported types may be expanded in the future.
 
-
 The property may also be decorated with a [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) to specify the label that is displayed for it in the property panel.
 
 ## Initialization
@@ -50,7 +49,6 @@ For `UIViewController` subclasses, you should use the [ViewDidLoad](xref:UIKit.U
 
 For `UIView` and other `NSObject` subclasses, the [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) method
 is the recommended place to perform initialization of your custom control after it is loaded from the layout file. This is because any custom properties set in the property panel will not be set when the control's constructor is run, but they will be set before `AwakeFromNib` is called:
-
 
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
@@ -132,7 +130,6 @@ The `CustomView` component exposes a `Counter` property that can be set by the d
 - The  `AwakeFromNib` method is executed and a call is made to the component's  `Initialize` method.
 - Inside  `Initialize` the value of the  `Counter` property is being reset to zero (0).
 
-
 To fix the above situation, either initialize the `Counter` property elsewhere (such as in the component's constructor) or don't override the `AwakeFromNib` method and call `Initialize` if the component requires no further initialization outside of what is currently being handled by its constructors.
 
 ## Design Mode
@@ -141,7 +138,6 @@ On the design surface, a custom control must adhere to a few restrictions:
 
 - App bundle resources are not available in design mode. Images are available when loaded through  [UIImage methods](xref:UIKit.UIImage) .
 - Asynchronous operations, such as web requests, should not be performed in design mode. The design surface does not support animation or any other asynchronous updates to the control's UI.
-
 
 A custom control can implement [IComponent](xref:System.ComponentModel.IComponent) and use the [DesignMode](xref:System.ComponentModel.ISite.DesignMode) property to check if it is on the design
 surface. In this example, the label will display "Design Mode" on the design surface and "Runtime" at runtime:

@@ -70,7 +70,6 @@ There are a couple of different editing features available:
 The remainder of this document shows how to implement all these UITableView
 features with Xamarin.iOS.
 
-
 ## Classes Overview
 
 The primary classes used to display table views are shown here:

@@ -45,7 +45,6 @@ Files placed in the **Resources** directory are treated differently from regular
 - Storing the images configured in the application’s properties, such as the default start-up images and application icons.
 - Storing other images and files separately from the code, so they’re easier to manage (subdirectories are preserved when the Resources directory contents are copied).
 
-
 The **Resources** directory is especially useful in a library project, since the code can assume that those images will be copied into the root of the consuming application, making it easier to write shared code libraries that require image, sound, video, XML or other files.
 
 The **Resources** directory must be so named, and all files should have the build action set to **BundleResource**.

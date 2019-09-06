@@ -21,7 +21,6 @@ occur on a device, it must be
 [setup for development](~/android/get-started/installation/set-up-device-for-development.md)
 and connected to your PC or Mac.
 
-
 ## Debug Application
 
 Once a device is connected to your computer, debugging a 
@@ -65,14 +64,11 @@ application:
 
 -----
 
-
-
 ## Summary
 
 In this document discussed how to debug a Xamarin.Android
 application by setting a breakpoint and selecting the target
 device.
-
 
 ## Related Links
 

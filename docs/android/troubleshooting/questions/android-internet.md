@@ -19,7 +19,6 @@ for a release build. This is because the Internet permission is used to
 allow a debugger to attach to the process, as described for
 "DebugSymbols" [here](~/android/deploy-test/building-apps/build-process.md).
 
-
 ## Fix
 
 To resolve the issue, you can require the Internet permission in the

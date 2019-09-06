@@ -95,8 +95,6 @@ are easy to find and use.
 Accessibility descriptions can (and should) be localized
 where the application supports multiple languages.
 
-
-
 ## Related Links
 
 - [Android Accessibility](~/android/app-fundamentals/accessibility.md)

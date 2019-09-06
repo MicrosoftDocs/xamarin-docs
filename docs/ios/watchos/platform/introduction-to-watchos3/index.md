@@ -183,7 +183,6 @@ The following APIs have been deprecated in watchOS 3:
 
 See Apple's [watchOS 2.2 to watchOS 3.0 API Differences](https://developer.apple.com/library/prerelease/content/releasenotes/General/watchOS30APIDiffs/index.html) documentation for a complete list of deprecations and changes.
 
-
 ## Related Links
 
 - [watchOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+watchOS)

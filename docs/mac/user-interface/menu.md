@@ -1067,7 +1067,6 @@ You can create and work with pull-down lists in the exact same way as pop-up but
 
 This article has taken a detailed look at working with menus and menu items in a Xamarin.Mac application. First we examined the application's menu bar, then we looked at creating contextual menus, next we examined status bar menus and custom dock menus. Finally, we covered pop-up menus and pull-down Lists.
 
-
 ## Related Links
 
 - [MacMenus (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/macmenus)

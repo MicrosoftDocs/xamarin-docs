@@ -71,4 +71,3 @@ values visually.
   [file bugs](~/tools/inspector/install.md#reporting-bugs) to let us know!
 - If inspecting a UI element causes it to change in anyway, please
   [let us know](~/tools/inspector/install.md#reporting-bugs), as this may indicate a bug.
-

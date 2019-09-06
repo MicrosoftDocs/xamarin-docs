@@ -119,7 +119,6 @@ In this example, the [`Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscr
 
 The Xamarin.Forms [`MessagingCenter`](xref:Xamarin.Forms.MessagingCenter) class implements the publish-subscribe pattern, allowing message-based communication between components that are inconvenient to link by object and type references. This mechanism allows publishers and subscribers to communicate without having a reference to each other, helping to reduce dependencies between components, while also allowing components to be independently developed and tested.
 
-
 ## Related Links
 
 - [Download eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)

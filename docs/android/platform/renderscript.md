@@ -113,7 +113,6 @@ class. The `Script` class is used to set parameters for a Renderscript,
 set the appropriate `Allocations`, and run the Renderscript. There are
 two `Script` subclasses in the Android SDK:
 
-
 - **`Android.Renderscripts.ScriptIntrinsic`** &ndash; Some of the more
   common Renderscript tasks are bundled in the Android SDK and are
   accessible by a subclass of the
@@ -264,8 +263,6 @@ and how it works in an Android application. It described some of the
 key components in Renderscript and the difference between _user
 scripts_ and _instrinsic scripts_. Finally, this guide discussed the
 steps in using an intrinsic script in a Xamarin.Android application.
-
-
 
 ## Related Links
 

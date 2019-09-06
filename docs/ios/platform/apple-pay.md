@@ -89,7 +89,6 @@ New to iOS 10, the developer can incorporate Apple Pay directly into their websi
 
 In iOS 10, the PassKit framework has been expanded to support Apple Pay outside of `UIKit` and to allow card issuers to present their own cards from within their apps.
 
-
 #### Supporting Apple Pay Outside of UIKit
 
 By using [PKPaymentAuthorizationController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontroller) and [PKPaymentAuthorixationControllerDelegate](https://developer.apple.com/reference/passkit/pkpaymentauthorizationcontrollerdelegate), an app can support the same functionality provided by [PKPaymentAuthorizationViewController](https://developer.apple.com/reference/passkit/pkpaymentauthorizationviewcontroller) without using UIKit. While this new API is required for supporting Apple Pay on the Apple Watch (and in specific Intents as well), it is optional in other situations (such as existing apps). However, Apple suggests moving to the new API as soon as possible to provide broad Apple Pay support throughout all of the developer's apps with a single code base. For more information about Intents and Siri integration, please see our [Introduction to SiriKit](~/ios/platform/sirikit/index.md) documentation.

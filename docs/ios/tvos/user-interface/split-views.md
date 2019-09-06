@@ -167,8 +167,6 @@ To get the current presentation state, use the `DisplayMode` property of the Spl
 
 This article has covered designing and working with Split View Controllers inside of a Xamarin.tvOS app.
 
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)
