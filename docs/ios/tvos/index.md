@@ -67,7 +67,6 @@ If you encounter any problems building tvOS with Xamarin, check the [release not
 
 Report new issues and suggestions [on GitHub](https://github.com/xamarin/xamarin-macios/issues).
 
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

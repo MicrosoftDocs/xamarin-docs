@@ -136,8 +136,6 @@ and the customized version (setting `Appearance`) on the right in the
 Many iOS user interface controls can have their default colors and other attributes set using
 the [`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
 
-
-
 ## Related Links
 
 - [UIAppearance](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md)

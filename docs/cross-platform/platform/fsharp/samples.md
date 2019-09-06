@@ -35,4 +35,3 @@ have been ported to F#. These links take you to the github location for each cha
 - [Chapter 6. Button clicks](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
 - [Chapter 7. XAML vs. code](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
 - [Chapter 8. Code and XAML in harmony](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
-

@@ -47,7 +47,6 @@ This chapter examines the activity lifecycle in detail, including:
 - Lifecycle Methods
 - Retaining the State of an Application
 
-
 This section also includes a
 [walkthrough](~/android/app-fundamentals/activity-lifecycle/saving-state.md)
 that provide practical examples on how to efficiently save state during
@@ -105,7 +104,6 @@ These states can be broken into 4 main groups as follows:
     by Android. If the user navigates back to the activity it must be
     restarted, restored to its previously saved state, and then
     displayed to the user.
-
 
 ### Activity Re-Creation in Response to Configuration Changes
 
@@ -213,7 +211,6 @@ Activities should override this method to perform tasks such as:
 - Display any relevant alerts or dialogs
 - Wire up external event handlers
 
-
 As an example, the following code snippet shows how to initialize the camera:
 
 ```csharp
@@ -275,7 +272,6 @@ There are two possible lifecycle methods that will be called after `OnPause`:
 1. `OnResume` will be called if the Activity is to be returned to the foreground.
 1. `OnStop` will be called if the Activity is being placed in the background.
 
-
 #### OnStop
 
 [OnStop](xref:Android.App.Activity.OnStop)
@@ -285,7 +281,6 @@ happens when one of the following occurs:
 - A new activity is being started and is covering up this activity.
 - An existing activity is being brought to the foreground.
 - The activity is being destroyed.
-
 
 `OnStop` may not always be called in low-memory situations, such as
 when Android is starved for resources and cannot properly background
@@ -514,7 +509,6 @@ state using the bundle provided to `OnCreate`.
 For an example of saving state using a `Bundle`, refer to the
 [Walkthrough - Saving the Activity state](saving-state.md).
 
-
 #### Bundle Limitations
 
 Although `OnSaveInstanceState` makes it easy to save transient
@@ -540,7 +534,6 @@ call or a complicated database query. Non-configuration instance data
 gets saved in an object as needed. The next section introduces
 `OnRetainNonConfigurationInstance` as a way of preserving more complex
 data types through configuration changes.
-
 
 ### Persisting Complex Data
 
@@ -712,7 +705,6 @@ that an activity may go through during its lifetime, as well as the
 lifecycle methods that are associated with those states. Next, guidance
 was provided as to what kind of logic should be performed in each of
 these methods.
-
 
 ## Related Links
 

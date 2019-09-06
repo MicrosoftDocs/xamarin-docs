@@ -23,7 +23,6 @@ without requiring that any intermediate views provide a table structure, such as
 seen in the table rows used in the TableLayout. By maintaining a flat hierarchy, *GridLayout* is able to more swiftly layout its child views. Let’s take
 a look at an example to illustrate what this concept actually means in code.
 
-
 ## Creating a Grid Layout
 
 The following XML adds several `TextView` controls to a *GridLayout*.
@@ -59,8 +58,6 @@ This results in the following user interface when run in an application:
 
  [![Screenshot of GridLayoutDemo app displaying four cells](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
-
-
 ## Specifying Orientation
 
 Notice in the XML above, each `TextView` does not specify a row or
@@ -87,8 +84,6 @@ in each column, instead of left to right, as shown below:
 This results in the following user interface at runtime:
 
  [![Screenshot of GridLayoutDemo with cells positioned in vertical orientation](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
-
-
 
 ### Specifying Explicit Position
 
@@ -125,8 +120,6 @@ the orientation.
             android:layout_column="1"  />
 </GridLayout>
 ```
-
-
 
 ### Specifying spacing
 
@@ -190,8 +183,6 @@ This XML creates spacing in the `GridLayout` as shown below:
 
 The benefit of using the new `Space` view is that it allows for
 spacing and doesn’t require us to set attributes on every child view.
-
-
 
 ### Spanning Columns and Rows
 
@@ -260,7 +251,6 @@ Doing this results in a layout for the `TextViews` that is similar
 to the layout we had earlier, with the button added to the bottom of the `GridLayout` as shown below:
 
  [![Screenshot of GridLayoutDemo with button spanning both columns](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
-
 
 ## Related Links
 

@@ -17,7 +17,6 @@ Background refresh is the process of waking an application that is suspended or 
 1. *Background Fetch (iOS 7+)* - A temporal approach to refreshing  *non-critical* content that updates  *frequently* .
 1. *Remote Notifications (iOS 7+)* - Applications that receive push notifications can use the notifications to trigger background content refreshes. This method can be used to update with  *important, time-sensitive* content that updates  *sporadically* .
 
-
 The following sections cover the basics of these options.
 
 ## Region Monitoring and Significant Location Changes
@@ -26,7 +25,6 @@ iOS provides two location-aware APIs with backgrounding capabilities:
 
 1. *Region Monitoring* is the process of setting up regions with boundaries, and waking the device when the user enters or exits a region. Regions are circular and can be of varying size. When the user crosses a region boundary, the device will wake up to handle the event, usually by firing a notification or kicking off a task. Region Monitoring requires GPS, and increases battery and data usage.
 1. The  *Significant Location Changes Service* is a simpler, power-conserving option available for devices with cellular radios. An application listening for significant location changes will be notified when the device switches cell towers. This service can be used to wake a suspended or terminated application, and provides an opportunity to check for new content in the background. Background activity is limited to about 10 seconds, unless paired with a  [Background Task](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/ios-backgrounding-with-tasks.md) .
-
 
 An application does not need the location `UIBackgroundMode` to use these location-aware APIs. Because iOS doesn't track the types of tasks that can run when the device is woken by changes in the user's location, these APIs provide a work-around for updating content in the background on iOS 6. *Keep in mind that triggering background updates with location-based APIs will draw on device resources, and may confuse users who don't understand why an application requires access to their location*. Use discretion when implementing Region Monitoring or Significant Location Changes for background processing in applications that aren't already using the location APIs.
 
@@ -71,12 +69,10 @@ When we're done updating content, we let the OS know by calling the completion h
 1. `UIBackgroundFetchResult.NoData` - Called when the fetch for new content went through, but no content is available.
 1. `UIBackgroundFetchResult.Failed` - Useful for error handling, this is called when the fetch was unable to go through.
 
-
 Applications using Background Fetch can make calls to update the UI from the background. When the user opens the app, the UI will be up to date and displaying new content. This will also update the application's App Switcher snapshot, so the user can see when the application has new content.
 
 > [!IMPORTANT]
 > Once `PerformFetch` is called, the application has approximately 30 seconds to kick off download of new content, and call the completion handler block. If this takes too long, the app will be terminated. Consider using Background Fetch with the _Background Transfer Service_ when downloading media or other large files.
-
 
 ### BackgroundFetchInterval
 
@@ -86,13 +82,11 @@ In the sample code above, we let the OS decide how often to fetch new content by
 1. `BackgroundFetchIntervalMinimum` - Let the system decide how often to fetch based on user patterns, battery life, data usage, and the needs of other applications.
 1. `BackgroundFetchIntervalCustom` - If you know how often an application's content gets updated, you can specify a "sleep" interval after every fetch, during which the application will be prevented from fetching new content. Once that interval is up, the system will determine when to fetch content.
 
-
 Both `BackgroundFetchIntervalMinimum` and `BackgroundFetchIntervalCustom` rely on the system to schedule fetches. This interval is dynamic, adapting to the device's needs as well as the individual user's habits. For example, if one user checks an application every morning, and another checks every hour, iOS will ensure the content is up to date for both users every time they open the application.
 
 Background Fetch should be used for applications that update frequently with non-critical content. For applications with critical updates, Remote Notifications should be used. Remote Notifications are based on Background Fetch, and share the same completion handler. We'll dive into Remote Notifications next.
 
  <a name="remote_notifications" />
-
 
 ## Remote Notifications (iOS 7 and Greater)
 
@@ -130,7 +124,6 @@ Remote notifications should be used for infrequent updates with content that is 
 > [!IMPORTANT]
 > Because the update mechanism in Remote Notifications is based on Background Fetch, the application must kick off download of new content and call the completion handler block within 30 seconds of receiving the notification, or iOS will terminate the application. Consider pairing Remote Notifications with _Background Transfer Service_ when downloading media or other large files in the background.
 
-
 ### Silent Remote Notifications
 
 Remote Notifications are a simple way to notify applications of updates and kick off fetching new content, but there are cases where we don't need to notify the user that something has changed. For example, if a user flags a file for synching, we don't need to notify them every time the file updates. File synching is not a surprising event, nor does it require the user's immediate attention. Users just expect the file to be up-to-date when they open it.
@@ -153,7 +146,6 @@ However, APNs will let silent notifications "piggyback" alongside a normal Remot
 
 > [!IMPORTANT]
 > Apple encourages developers to send silent push notifications whenever the application requires, and let the APNs schedule their delivery.
-
 
 In this section, we've covered the various options for refreshing content in the background to run tasks that don't fit into a background-necessary category. Now, let's see some of these APIs in action.
 

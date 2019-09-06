@@ -37,7 +37,6 @@ There used to be several Google Play Services Components and NuGet packages, but
 ### [Where are the components stored on my machine?](component-storage.md)
 Whenever you install a Xamarin component into an App project, it gets placed in the two locations listed in this guide.
 
-
 ## Troubleshooting
 ### [Where can I find my version information and logs?](version-logs.md)
 This guide details where to find most diagnostic information that can be used to troubleshoot Xamarin issues.
@@ -50,4 +49,3 @@ Jenkins is an open-source CI suite; because of this many issues that are directl
 
 ### [What project settings are required for the debugger?](debugger-settings.md)
 In order for the debugger to work as expected (hit breakpoints, display debug logs, etc.), developer instrumentation and debug information display must both be enabled. This guide details how to find and activate these settings.
-

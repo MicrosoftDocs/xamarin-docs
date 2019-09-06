@@ -32,7 +32,6 @@ Once you have this linker description file, add it to your project and:
 - **For Android** : set the  **Build Action** to **LinkDescription**
 - **For iOS** : set the  **Build Action** to **LinkDescription**
 
-
 The following example shows what the XML file looks like:
 
 ```xml
@@ -72,8 +71,6 @@ The `My.Own.Namespace` namespace will preserve all the types it contains.
 Lastly, any type whose full name (including the namespace) matches the wildcard
 pattern "My.Other\*" will preserve all of its fields and methods. The wildcard
 character `*` can be included multiple times within a "type fullname" pattern.
-
-
 
 ## Related Links
 

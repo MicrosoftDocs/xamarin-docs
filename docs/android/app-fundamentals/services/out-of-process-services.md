@@ -327,7 +327,6 @@ msg.Data = serviceParameters;
 messenger.Send(msg);
 ```
 
-
 > [!NOTE]
 > In general, a `Message` should not have a payload larger than 1MB. The size limit may vary according the version of Android and on any proprietary changes the vendor might have made to their implementation of the Android Open Source Project (AOSP) that is bundled with the device.
 
@@ -500,7 +499,6 @@ To view the permissions that an application has been granted, open the Android S
 ## Summary
 
 This guide was an advanced discussion about how to run an Android service in a remote process. The differences between a local and a remote service was explained, along with some reasons why a remote service can be helpful to stability and performance of an Android app. After explaining how to implement a remote service and how a client can communicate with the service, the guide went on to provide one way to limit access to the service from only authorized clients.
-
 
 ## Related Links
 

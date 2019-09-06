@@ -24,4 +24,3 @@ before being bound to a ListView for display.
 Refer to
 [Intro to ContentProviders](~/android/platform/content-providers/index.md)
 for more information.
-

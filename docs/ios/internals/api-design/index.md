@@ -725,7 +725,6 @@ This is done in a few steps:
 1. Load the NIB file at runtime.
 1. Access the outlet variable.
 
-
 The steps (1) through (3) are covered in Apple's documentation for building
 interfaces with Interface Builder.
 

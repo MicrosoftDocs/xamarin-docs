@@ -39,11 +39,11 @@ To start creating your user interface in the iOS Designer, double-click on a sto
 # [Visual Studio for Mac](#tab/macos)
 
  [![](creating-ui-objects-images/image2b.png "Toolbox Pad")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 # [Visual Studio](#tab/windows)
 
  [![](creating-ui-objects-images/image2b-vs.png "Toolbox Pad - Visual Stuio")](creating-ui-objects-images/image2b.png#lightbox)
- 
+
 -----
 
 When a control is selected on the design surface the **Properties Pad** will show the attributes for that control. The **Widget > Identity > Name** field, which is populated in the screenshot below, is used as the *Outlet* name. This is how you can reference the control in C#:
@@ -61,7 +61,7 @@ To open a Storyboard in Xcode, right-click to access the context menu for the st
 # [Visual Studio for Mac](#tab/macos)
 
  [![](creating-ui-objects-images/imagexcode.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode.png#lightbox)
- 
+
 # [Visual Studio](#tab/windows)
 
 [![](creating-ui-objects-images/imagexcode-vs.png "Storyboard context menu - Xcode")](creating-ui-objects-images/imagexcode-vs.png#lightbox)
@@ -177,8 +177,6 @@ The `designer.cs` file should not be manually edited – the IDE (Visual Studio 
 it synchronized with the Storyboard.
 
 When user interface objects are added programmatically to a `View` or `ViewController`, you instantiate and manage the object references yourself, and therefore no designer file is required.
-
-
 
 ## Related Links
 

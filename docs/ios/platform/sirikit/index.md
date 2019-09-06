@@ -34,10 +34,6 @@ This article covers the key concepts that will be required for working with Siri
 
 This article covers the steps required to implement SiriKit support in a Xamarin.iOS apps. The developer should read the Understanding SiriKit Concepts guide above before attempting to add SiriKit support to an app, as key concepts are covered that will be required for successful implementation.
 
-
-
-
-
 ## Related Links
 
 - [ElizaChat Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios10-elizachat)

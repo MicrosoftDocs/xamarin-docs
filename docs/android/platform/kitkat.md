@@ -36,7 +36,6 @@ including:
   in action with the Android Debug Bridge client, available as part of
   the Android SDK.
 
-
 This guide provides guidance for migrating an existing Xamarin.Android
 application to KitKat, as well as a high-level overview of KitKat for
 Xamarin.Android developers.
@@ -340,7 +339,6 @@ The screenshot below illustrates the scene after the animation:
 
 [![Screenshot of app after the animation completes](kitkat-images/scene.png)](kitkat-images/scene.png#lightbox)
 
-
 > [!NOTE]
 > There is a
 > [known bug](https://code.google.com/p/android/issues/detail?id=62450)
@@ -348,7 +346,6 @@ The screenshot below illustrates the scene after the animation:
 > `GetSceneForLayout` to break when a user navigates through an Activity
 > the second time. A java workaround is described
 > [here](http://www.doubleencore.com/2013/11/new-transitions-framework/).
-
 
 ##### Custom Transitions in Scenes
 
@@ -401,7 +398,6 @@ define your Android theme. KitKat introduces the following properties:
   shifts content under the transparent UI elements by default. Setting
   this property to `true` is a simple way to prevent content from
   overlapping with the translucent system UI elements.
-
 
 The following code defines a theme with translucent status and
 navigation bars:
@@ -566,14 +562,11 @@ settings by navigating to **Settings > System > Printing**:
 
 [![Example screenshot of the Print settings screen](kitkat-images/printing.png)](kitkat-images/printing.png#lightbox)
 
-
 > [!NOTE]
 > Although the printing APIs are set up to work with
 > Google Cloud Print by default, Android still lets developers prepare
 > print content using the new APIs, and send it to other applications to
 > handle printing.
-
-
 
 #### Printing HTML Content
 
@@ -600,7 +593,6 @@ The options menu lets users perform actions on an Activity. It is in
 the top right corner of the screen, and looks like this:
 
 [![Example screenshot of Print menu item displayed in the top right corner of the screen](kitkat-images/menu.png)](kitkat-images/menu.png#lightbox)
-
 
 Additional menu items can be defined in the *menu*directory under
 *Resources*. The code below defines a sample menu item called
@@ -750,7 +742,6 @@ the HCE code as a `Service`. An HCE Service implements the
 
 - *OnDeactivated* - The `HostAdpuService` is deactivated when the HCE
   Service is no longer communicating with the NFC Reader.
-
 
 An HCE Service also needs to be registered with the application's
 manifest, and decorated with the proper permissions, intent filter, and
@@ -903,7 +894,6 @@ extra code to ensure it is reporting an accurate count for the
 application, regardless of other applications using the sensor or the
 state of the device.
 
-
 > [!NOTE]
 > While the API for the step detection and counting
 > ships with KitKat, not all phones are outfitted with the sensor. You
@@ -911,7 +901,6 @@ state of the device.
 > `PackageManager.HasSystemFeature(PackageManager.FeatureSensorStepCounter);`,
 > or check to ensure the returned value of `GetDefaultSensor` isn't
 > `null`.
-
 
 <a name="developer_tools" />
 
@@ -944,7 +933,6 @@ adb shell screenrecord --bit-rate 8000000 --time-limit 60 /sdcard/screencast.mp4
 
 You can find your video on your device - it will appear in your Gallery
 when the recording is complete.
-
 
 ## Other KitKat Additions
 
@@ -1005,7 +993,6 @@ For more information on the above API changes, please refer to the
 Google [Android 4.4 APIs](https://developer.android.com/about/versions/android-4.4.html)
 overview.
 
-
 ## Summary
 
 This article introduced some of the new APIs available in Android 4.4
@@ -1019,7 +1006,6 @@ explored *NFC host-based card emulation* and how to work with
 steps. Finally, it demonstrated capturing real-time demos of
 applications with *screen recording*, and provided a detailed list of
 KitKat API changes and additions.
-
 
 ## Related Links
 

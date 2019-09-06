@@ -94,8 +94,6 @@ The [**DotMatrixClock**](https://github.com/xamarin/xamarin-forms-book-samples/t
 
 The [**BouncingText**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter14/BouncingText) program animates two `Label` objects to bounce horizontally and vertically across the screen.
 
-
-
 ## Related links
 
 - [Chapter 14 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch14-Apr2016.pdf)

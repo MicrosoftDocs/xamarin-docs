@@ -182,7 +182,6 @@ client.GetAsync<CustomersResponse>("",
 > [!IMPORTANT]
 > While tools like ServiceStack and RestSharp make it easy to call and consume REST services, it is sometimes non-trivial to consume XML or JSON that does not conform to the standard _DataContract_ serialization conventions. If necessary, invoke the request and handle the appropriate serialization explicitly using the ServiceStack.Text library discussed below.
 
-
 <a name="Options_for_consuming_RESTful_data" />
 
 ## Consuming RESTful Data

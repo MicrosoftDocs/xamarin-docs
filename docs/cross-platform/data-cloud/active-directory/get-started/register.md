@@ -47,8 +47,6 @@ ms.date: 03/23/2017
 
    ![](register-images/05.-configure.jpg "Also, on this screen you can give your mobile application access to Active Directory or add another application like Web API or Office365")
 
-
-
 ## Related Links
 
 - [Microsoft NativeClient sample](https://github.com/AzureADSamples/NativeClient-MultiTarget-DotNet)

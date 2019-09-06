@@ -270,7 +270,6 @@ three-bar menu next to the **Launch** button.
 >
 >This is resolved by running the **Repair** option in the Visual Studio installer, which will re-install the missing components.
 
-
 ## Uninstalling older and unsupported products
 
 <a name="uninstallvs2015"></a>
@@ -368,7 +367,6 @@ This article provided instruction on uninstalling Xamarin completely from a Mac
 through the use of Terminal commands. It also provided instruction on uninstalling Xamarin from
 a Windows machine through the **Programs and Features** option (for Visual Studio 2015
 and earlier), and using the **Visual Studio Installer** for Visual Studio 2017.
-
 
 ## Related Links
 

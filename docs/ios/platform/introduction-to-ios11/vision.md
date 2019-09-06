@@ -104,7 +104,6 @@ Rectangle detection is often just the first step in a chain of operations,
 such as with [this CoreMLVision example](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision),
 where the rectangles are passed to a CoreML model to parse handwritten digits.
 
-
 <a name="faces" />
 
 ## Face Detection
@@ -185,7 +184,6 @@ facial features, such as the eyes and mouth. Use the
 `VNDetectFaceLandmarksRequest` type, which will return
 `VNFaceObservation` results as in step 3 above, but with additional
 `VNFaceLandmark` data.
-
 
 ## Related Links
 

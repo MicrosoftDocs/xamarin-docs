@@ -34,7 +34,6 @@ Before moving on we should verify that the project opens and deploys correctly. 
 
 ![Blank blue game screen](part1-images/image2.png)
 
-
 ## Including the XNBs in the game project
 
 The .xnb file format is a standard extension for built content (content which has been created by the [MonoGame Pipeline Tool](http://www.monogame.net/documentation/?page=Pipeline)). All built content has a source file (which is an .fbx file in the case of our model) and a destination file (an .xnb file). The .fbx format is a common 3D model format which can be created by applications such as [Maya](http://www.autodesk.com/products/maya/overview) and [Blender](http://www.blender.org/). 
@@ -206,7 +205,6 @@ We can see the camera has moved further back, resulting in the `Model` appearing
 ## Rendering Multiple Models
 
 As mentioned above, a single `Model` can be drawn multiple times. To make this easier we will be moving the `Model` drawing code into its own method that takes the desired `Model` position as a parameter. Once finished, our `Draw` and `DrawModel` methods will look like:
-
 
 ```csharp
 protected override void Draw(GameTime gameTime)

@@ -283,7 +283,6 @@ This particular example allow an activity to invoke methods on the service itsel
 string currentTimestamp = serviceConnection.Binder.GetFormattedTimestamp()
 ```
 
-
 ## Related Links
 
 - [Android.App.Service](xref:Android.App.Service)

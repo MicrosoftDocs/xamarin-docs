@@ -99,7 +99,6 @@ show how Xamarin.Forms and CocosSharp can be rendered simultaneously on the same
 
 First, set up the Page so it contains a `Grid` and two `Button` instances:
 
-
 ```csharp
 public class HomePage : ContentPage
 {
@@ -152,7 +151,6 @@ On iOS, the `HomePage` appears as shown in the following image:
 
 The `CocosSharpView` class is used to embed CocosSharp into a Xamarin.Forms app. Since `CocosSharpView` inherits from the [Xamarin.Forms.View](xref:Xamarin.Forms.View) class, it provides a familiar interface for layout, and it can be used within layout containers such as [Xamarin.Forms.Grid](xref:Xamarin.Forms.Grid). Add a new `CocosSharpView` to the project by completing the `CreateTopHalf` method:
 
-
 ```csharp
 void CreateTopHalf(Grid grid)
 {
@@ -170,7 +168,6 @@ void CreateTopHalf(Grid grid)
 ```
 
 CocosSharp initialization is not immediate, so register an event for when the `CocosSharpView` has finished its creation. Do this in the `HandleViewCreated` method:
-
 
 ```csharp
 void HandleViewCreated (object sender, EventArgs e)
@@ -208,7 +205,6 @@ Only one `CCScene` can be active at one time. Most games use multiple `CCLayer` 
 
 Initially the `GameScene` class will be nearly empty – we’ll just create it to satisfy the reference in `HomePage`. Add a new class to your .NET Standard library project named `GameScene`. It should inherit from the `CCScene` class as follows:
 
-
 ```csharp
 public class GameScene : CCScene
 {
@@ -220,7 +216,6 @@ public class GameScene : CCScene
 ```
 
 Now that `GameScene` is defined, we can return to `HomePage` and add a field:
-
 
 ```csharp
 // Keep the GameScene at class scope
@@ -239,7 +234,6 @@ We can now compile our project and run it to see CocosSharp running. We haven’
 The app currently has a running instance of the CocosSharp engine, displaying an empty `CCScene`. Next, we’ll add a visual object: a circle. The `CCDrawNode` class can be used to draw a variety of geometric shapes, as outlined in the [Drawing Geometry with CCDrawNode guide](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md).
 
 Add a circle to our `GameScene` class and instantiate it in the constructor as shown in the following code:
-
 
 ```csharp
 public class GameScene : CCScene
@@ -267,7 +261,6 @@ Running the app now shows a circle on the left side of the CocosSharp display ar
 
 ![](cocossharp-images/image6.png "Circle in GameScene")
 
-
 #### Understanding DesignResolution
 
 Now that a visual CocosSharp object is displayed, we can investigate the `DesignResolution` property.
@@ -292,7 +285,6 @@ Our simple app uses the `CCDrawNode` class to draw a circle. This class can be v
 
 CocosSharp visual elements (such as `CCDrawNode`) inherit from the `CCNode` class. `CCNode` provides two properties which can be used to position an object relative to its parent: `PositionX` and `PositionY`. Our code currently uses these two properties to position the center of the circle, as shown in this code snippet:
 
-
 ```csharp
 circle.PositionX = 20;
 circle.PositionY = 50;
@@ -301,7 +293,6 @@ circle.PositionY = 50;
 It’s important to note that CocosSharp objects are positioned by explicit position values, as opposed to most Xamarin.Forms views, which are automatically positioned according to the behavior of their parent layout controls.
 
 We’ll add code to allow the user to click one of the two buttons to move the circle to the left or to the right by 10 units (not pixels, since the circle draws in the CocosSharp world unit space). First we’ll create two public methods in the `GameScene` class:
-
 
 ```csharp
 public void MoveCircleLeft()
@@ -316,7 +307,6 @@ public void MoveCircleRight()
 ```
 
 Next, we’ll add handlers to the two buttons in `HomePage` to respond to clicks. When finished, our `CreateBottomHalf` method contains the following code:
-
 
 ```csharp
 void CreateBottomHalf(Grid grid)

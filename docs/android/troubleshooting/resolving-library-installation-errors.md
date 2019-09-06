@@ -24,8 +24,6 @@ guide describes the most common support library installation errors and
 provides the steps to work around these issues and get your app project 
 building again. 
 
- 
- 
 ## Errors While Downloading m2Repository
 
 You may see **m2repository** errors when referencing a NuGet package of
@@ -39,8 +37,6 @@ Download failed. Please download https://dl-ssl.google.com/android/repository/an
 This example is for **android\_m2repository\_r16**, but you may see this 
 same error message for a different version such as 
 **android\_m2repository\_r18** or **android\_m2repository\_r25**. 
-
-
 
 ### Automatic Recovery from m2repository Errors 
 
@@ -81,8 +77,6 @@ In most cases, these steps will resolve the build error and allow you
 to continue. If deleting this library does not resolve the build error, 
 you must manually download and install the **android\_m2repository\_r_nn_.zip** 
 file as described in the next section. 
-
-
 
 ### Manually Downloading m2repository
 
@@ -178,11 +172,9 @@ but you are able to download the archive using a different computer.
 
     [![Example of the r16.zip repository being renamed to 0595E577D19D31708195A83087881EE6.zip](resolving-library-installation-errors-images/03-md5-rename-vs.png)](resolving-library-installation-errors-images/03-md5-rename-vs.png#lightbox)
 
-
 If this procedure does not resolve the build error, you must 
 manually download the **android\_m2repository\_r_nn_.zip** file, 
 unzip it, and install its contents as described in the next section. 
-
 
 ### Manually Downloading and Installing m2repository Files
 
@@ -258,8 +250,6 @@ you have downloaded the **m2repository** **.zip** archive version that
 corresponds exactly to the version in the error message, and verify 
 that you have installed its contents in the correct locations as 
 described in the above steps. 
-
-
 
 ## Summary 
 

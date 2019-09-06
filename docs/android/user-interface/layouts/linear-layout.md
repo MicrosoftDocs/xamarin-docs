@@ -154,7 +154,6 @@ document for more about how
 [`LinearLayout`](xref:Android.Widget.LinearLayout)
 handles the `android:layout_weight` attribute.
 
-
 ## References
 
 - [`LinearLayout`](xref:Android.Widget.LinearLayout)

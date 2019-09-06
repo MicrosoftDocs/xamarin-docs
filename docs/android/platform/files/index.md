@@ -70,7 +70,6 @@ To maximize code sharing, Xamarin.Android apps (or Xamarin.Forms apps targeting 
 | `MyVideos` | **_INTERNAL\_STORAGE_/Videos** |
 | `Personal` | **_INTERNAL\_STORAGE_** |
 
-
 ### Reading or Writing to files on internal storage
 
 Any of the [C# APIs for writing](https://docs.microsoft.com/dotnet/csharp/programming-guide/file-system/how-to-write-to-a-text-file) to a file are sufficient; all that is necessary is to get the path to the file that is in the directory allocated to the application. It is strongly recommended that the async versions of the .NET APIs are used to minimize any issues that may be associate with file access blocking the main thread.

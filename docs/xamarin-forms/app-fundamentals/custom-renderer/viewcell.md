@@ -569,7 +569,6 @@ The `DataTemplate` specifies the controls used to display the contents of the ce
 
 This article has demonstrated how to create a custom renderer for a [`ViewCell`](xref:Xamarin.Forms.ViewCell) that's hosted inside a Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
 
-
 ## Related Links
 
 - [ListView Performance](~/xamarin-forms/user-interface/listview/performance.md)

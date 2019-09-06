@@ -171,8 +171,6 @@ By adopting App Search via `NSUserActivity` in your app, you also get the follow
 - **Siri Suggestions** - Along with the standard suggestions that Siri Suggestions normally makes, actives from your app can be automatically suggested.
 - **Siri Smart Reminders** - Users will be able to ask Siri to remind them about activities from your app.
 
-
-
 ## Related Links
 
 - [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)

@@ -401,8 +401,6 @@ If properties of the items themselves change during runtime, then the items in t
 
 Data bindings provide a powerful mechanism for linking properties between two objects within a page, or between visual objects and underlying data. But when the application begins working with data sources, a popular application architectural pattern begins to emerge as a useful paradigm. This is covered in [Part 5. From Data Bindings to MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md).
 
-
-
 ## Related Links
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

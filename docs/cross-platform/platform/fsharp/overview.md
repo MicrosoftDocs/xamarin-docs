@@ -27,7 +27,6 @@ In Visual Studio for Mac choose **File > New Solution**. In the **New Project** 
 
 Select your project type and click **Next** to name and create it.
 
-
 You are now ready to start creating some great F# applications!
 
 ## Learning to use F&#35;
@@ -52,4 +51,3 @@ language, covering all proficiencies. Listed below are a few of our recommendati
 - [Visual F# Code Gallery](http://go.microsoft.com/fwlink/?LinkID=124614)
 - [Visual F# Math/Stats Programming](http://go.microsoft.com/fwlink/?LinkId=235173)
 - [Visual F# Charting](http://go.microsoft.com/fwlink/?LinkId=235176)
-

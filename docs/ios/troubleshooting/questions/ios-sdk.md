@@ -25,4 +25,3 @@ Xamarin.iOS & the Apple SDK (Xcode) will have the default location when the loca
 
 - Xcode: `/Applications/Xcode.app`
 - Xamarin.iOS (Visual Studio for Mac): `/Library/Frameworks/Xamarin.iOS.framework/Versions/Current`
-

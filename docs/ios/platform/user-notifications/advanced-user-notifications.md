@@ -197,7 +197,6 @@ using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
 
-
 namespace MonkeyChatNotifyExtension
 {
     public partial class NotificationViewController : UIViewController, IUNNotificationContentExtension
@@ -304,7 +303,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {
@@ -543,7 +541,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {

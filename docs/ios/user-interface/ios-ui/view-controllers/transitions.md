@@ -24,7 +24,6 @@ To use a custom transition with `PresentViewController`:
 3. Set the  `TransitioningDelegate` property to an instance of  `UIViewControllerTransitioningDelegate` , also on the controller to be presented.
 4. Present the view controller.
 
-
 For example, the following code presents a view controller of type `ControllerTwo` - a `UIViewController` subclass:
 
 ```csharp
@@ -78,7 +77,6 @@ The `UIViewControllerAnimatedTransitioning` class handles the actual animation. 
 1. `TransitionDuration` – returns the duration of the animation in seconds.
 1. `AnimateTransition` – performs the actual animation.
 
-
 For example, the following class implements `UIViewControllerAnimatedTransitioning` to animate the frame of the controller’s view:
 
 ```csharp
@@ -124,7 +122,6 @@ Collection Views have built-in support for creating animated transitions:
 - **Navigation Controllers** – The animated transition between two  `UICollectionViewController` instances can optionally be handled automatically when a  `UINavigationController` manages them.
 - **Transition Layout** – A new  `UICollectionViewTransitionLayout` class allows interactive transitioning between layouts.
 
-
 ### Navigation Controller Transitions
 
 When used within a navigation controller, a `UICollectionViewController` includes support for animated transitions between controllers. This support is built-in and requires only a few simple steps to implement:
@@ -133,7 +130,6 @@ When used within a navigation controller, a `UICollectionViewController` include
 1. Add an instance of the  `UICollectionViewController` to the root of the navigation controller’s stack.
 1. Create a second  `UICollectionViewController` and set its  `UseLayoutToLayoutNavigtionTransitions` property to  `true` .
 1. Push the second  `UICollectionViewController` onto the navigation controller’s stack.
-
 
 The following code adds a `UICollectionViewController` subclass named `ImagesCollectionViewController` to the root of a navigation controller’s stack, with the `UseLayoutToLayoutNavigationTransitions` property set to `false`:
 
@@ -211,7 +207,6 @@ The steps to implement an interactive transition within a gesture recognizer usi
 1. Handle the transition completion in the completion handler of the  `StartInteractiveTransition` method.
 1. Add the gesture recognizer to the collection view.
 
-
 The following code implements an interactive layout transition within a pinch gesture recognizer:
 
 ```csharp
@@ -255,9 +250,6 @@ imagesController.CollectionView.AddGestureRecognizer (pinch);
 ```
 
 As the user pinches the collection view, the `TransitionProgress` is set relative to the scale of the pinch. In this implementation, if the user ends the pinch before the transition is 50% completed, the transition is cancelled. Otherwise, the transition is finished.
-
-
-
 
 ## Related Links
 

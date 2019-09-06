@@ -238,7 +238,6 @@ one, **flag.png**, has localized copies in other directories.
 
 ![Screenshot of multiple drawable folders, each containing one or more localized .png files](localization-images/drawable.png)
 
-
 #### Other Resource Types
 
 You can also provide other types of alternative, language-specific
@@ -256,7 +255,6 @@ contain custom layouts that are designed for RTL display.
 For more information on resource directory naming and fallback, refer
 to the Android docs for
 [providing alternative resources](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
-
 
 ### App name
 
@@ -316,15 +314,12 @@ To test on a device, change the language in the **Settings** app.
 > Make a note of the icons and location of the menu items so
 > that you can revert the language to the original setting.
 
-
 ## Summary
 
 This article covers the basics of localizing Android applications using
 the built-in resource handling. You can learn more about i18n and L10n
 for iOS, Android and cross-platform (including Xamarin.Forms) apps in
 [this cross-platform guide](~/cross-platform/app-fundamentals/localization.md).
-
-
 
 ## Related Links
 

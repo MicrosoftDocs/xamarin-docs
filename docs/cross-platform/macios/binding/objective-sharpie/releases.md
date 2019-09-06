@@ -137,4 +137,3 @@ Minor bug fixes.
 [Download v1.1.1](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.1.pkg)
 
 1.1.1 was the first major release after 1.5 years of internal use and development at Xamarin following the initial preview of Objective Sharpie in April 2013. This release is the first to be generally considered stable and usable for a wide variety of native libraries, featuring a new Clang backend.
-

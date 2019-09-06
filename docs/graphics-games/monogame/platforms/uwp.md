@@ -51,7 +51,6 @@ Once Visual Studio finishes creating the template, we can run it to see the empt
 
 The numbers in the corners provide diagnostic information. This information can be removed  by deleting the code in `App.xaml.cs` in the `DEBUG` block in the `OnLaunched` method:
 
-
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
 {

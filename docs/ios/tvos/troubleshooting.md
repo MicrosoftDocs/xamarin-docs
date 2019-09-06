@@ -141,7 +141,6 @@ Game Controllers can be used to enhance gameplay and provide a sense of immersio
 
 If you are submitting a Xamarin.tvOS app with Game Controller support to the Apple TV App store and you are getting an error message in the form of:
 
-
 _We have discovered one or more issues with your recent delivery for “app name”. Your delivery was successful, but you may wish to correct the following issues in your next delivery:_
 
 _Invalid bundle – An app that supports game controllers must also support the Apple TV remote._
@@ -195,8 +194,6 @@ To the following path:
 Note that the profile number in the path must match the profile number of the PCL.
 
 With this file in place, you should be able to successfully add the PCL file to the Xamarin.tvOS project.
-
-
 
 ## Related Links
 

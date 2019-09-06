@@ -652,7 +652,6 @@ But on Android and UWP, the **Play** button looks very different when the video 
 
 In a production application, you'll probably want to use your own bitmap images for the buttons to achieve visual uniformity.
 
-
 ## Related Links
 
 - [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

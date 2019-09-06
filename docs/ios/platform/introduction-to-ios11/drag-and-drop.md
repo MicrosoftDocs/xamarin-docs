@@ -214,7 +214,6 @@ drag rows and text between them:
 
 ![screenshot of drag operation in progress](drag-and-drop-images/01-sml.png)
 
-
 ## Related Links
 
 - [Drag and Drop Human Interface Guidelines (Apple)](https://developer.apple.com/ios/human-interface-guidelines/interaction/drag-and-drop/)

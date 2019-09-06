@@ -256,4 +256,3 @@ expensive and unnecessary in those cases.
 Thus, we'd don't set up those try / catches for you. For places where you code
 does non-trivial things (beyond say returning a booleans or simple math), you
 can try catch yourself. 
-

@@ -47,7 +47,6 @@ namespaces on the same file, but this was a little ugly. The Classic API
 should only continue to be used in legacy apps that are internally distributed
 (upgrading to the Unified API is recommended).
 
-
 ### Updating from Classic to the Unified API
 
 There are detailed instructions for updating any application from

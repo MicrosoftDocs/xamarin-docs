@@ -107,7 +107,6 @@ class Demo {
 > [!IMPORTANT]
 > As mentioned in the code sample above, it is bad practice to embed strings in SQL commands because it makes your code vulnerable to [SQL injection](https://en.wikipedia.org/wiki/SQL_injection).
 
-
 ### Using Command Parameters
 
 The following code shows how to use command parameters
@@ -148,7 +147,6 @@ Functionality missing from **System.Data.dll** consists of:
 - [System.Data.Odbc](xref:System.Data.Odbc)
 - The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
 
-
 <a name="Mono.Data.Sqlite" />
 
 ### Mono.Data.Sqlite
@@ -170,4 +168,3 @@ anything using [DataTable](xref:System.Data.DataTable) is unlikely to work.
 ## Data Binding
 
 Data Binding is not supported at this time.
-

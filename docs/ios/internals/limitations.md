@@ -19,7 +19,6 @@ These are the Xamarin.iOS limitations compared to desktop Mono:
 
  <a name="Limited_Generics_Support" />
 
-
 ## Limited Generics Support
 
 Unlike traditional Mono/.NET, code on the iPhone is statically compiled ahead
@@ -37,7 +36,6 @@ Some of the common problems that developers run into, include:
 
  <a name="Generic_Subclasses_of_NSObjects_are_limited" />
 
-
 ### Generic Subclasses of NSObjects are limited
 
 Xamarin.iOS currently has limited support for creating generic subclasses of the
@@ -52,9 +50,7 @@ class Foo<T> : UIView {
 > [!NOTE]
 > While generic subclasses of NSObjects are possible, there are a few limitations. Read the [Generic subclasses of NSObject](~/ios/internals/api-design/nsobject-generics.md) document for more information
 
-
  <a name="No_Dynamic_Code_Generation" />
-
 
 ## No Dynamic Code Generation
 
@@ -67,10 +63,7 @@ generation. These include:
 - No support for creating types dynamically (no Type.GetType ("MyType`1")), although looking up existing types (Type.GetType ("System.String") for example, works just fine).
 - Reverse callbacks must be registered with the runtime at compile time.
 
-
-
  <a name="System.Reflection.Emit" />
-
 
 ### System.Reflection.Emit
 
@@ -80,7 +73,6 @@ depends on runtime code generation will work. This includes things like:
 - The Dynamic Language Runtime.
 - Any languages built on top of the Dynamic Language Runtime.
 - Remoting's TransparentProxy or anything else that would cause the runtime to generate code dynamically.
-
 
   > [!IMPORTANT]
   > Do not confuse **Reflection.Emit** with **Reflection**. Reflection.Emit is about
@@ -111,7 +103,6 @@ System.ExecutionEngineException: Attempting to JIT compile method '(wrapper mana
 
  <a name="Reverse_Callbacks" />
 
-
 ### Reverse Callbacks
 
 In standard Mono it is possible to pass C# delegate
@@ -135,9 +126,7 @@ point:
 
 The Remoting stack is not available on Xamarin.iOS.
 
-
  <a name="Runtime_Disabled_Features" />
-
 
 ## Runtime Disabled Features
 
@@ -151,16 +140,12 @@ Runtime:
 - The JIT engine
 - Metadata verifier (since there is no JIT)
 
-
  <a name=".NET_API_Limitations" />
-
 
 ## .NET API Limitations
 
 The .NET API exposed is a subset of the full framework as not everything is
 available in iOS. See the FAQ for a [list of currently supported assemblies](~/cross-platform/internals/available-assemblies.md).
-
-
 
 In particular, the API profile used by Xamarin.iOS does not
 include System.Configuration, so it is not possible to use

@@ -38,9 +38,6 @@ The following are required to complete the steps presented in this article:
 > [!IMPORTANT]
 > Health Kit was introduced in iOS 8. Currently, Health Kit is not available on the iOS simulator, and debugging requires connection to a physical iOS device.
 
-
-
-
 ## Creating and Provisioning A Health Kit App
 Before a Xamarin iOS 8 application can use the HealthKit API, it must be properly configured and provisioned. This section will cover the steps required to properly setup your Xamarin Application.
 
@@ -61,16 +58,14 @@ To find out more about provisioning an iOS app, the [Device Provisioning](~/ios/
 The creation of an explicit **App ID** and an appropriate **Provisioning Profile** is done within Apple’s [iOS Dev Center](https://developer.apple.com/devcenter/ios/index.action). 
 
 Your current **App IDs** are listed within the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) section of the Dev Center. Often, this list will show **ID** values of `*`, indicating that the **App ID** - **Name** can be used with any number of suffixes. Such *Wildcard App IDs* cannot be used with Health Kit.
- 
-To create an explicit **App ID**, click the **+** button in the upper-right to take you to the **Register iOS App ID** page:
 
+To create an explicit **App ID**, click the **+** button in the upper-right to take you to the **Register iOS App ID** page:
 
 [![](healthkit-images/image02.png "Registering an app on the Apple Developer Portal")](healthkit-images/image02.png#lightbox)
 
 As shown in the image above, after creating an app description, use the **Explicit App ID** section to create an ID for your application. In the **App Services** section, check **Health Kit** in the **Enable Services** section.
 
 When you are done, press the **Continue** button to register the **App ID** in your account. You will be brought back to the **Certificates, Identifiers, and Profiles** page. Click **Provisioning Profiles** to take you to the list of your current provisioning profiles, and click the **+** button in the upper-right corner to take you to the **Add iOS Provisioning Profile** page. Select the **iOS App Development** option and click **Continue** to get to the **Select App ID** page. Here, select the explicit **App ID** that you previously specified:
-
 
 [![](healthkit-images/image03.png "Select the explicit App ID")](healthkit-images/image03.png#lightbox)
 
@@ -166,7 +161,6 @@ Since health information is extremely sensitive, app developers should write the
 ### Permissions Walkthrough
 
 In your Health Kit-provisioned project, open the `AppDelegate.cs` file. Notice the statement using `HealthKit`; at the top of the file.
-
 
 The following code relates to Health Kit permissions:
 
@@ -405,11 +399,9 @@ Attach a properly-provisioned iOS 8 development device to your system. Select it
 
 Assuming that provisions have been properly set, your application will start. When it reaches its `OnActivated` method, it will request Health Kit authorization. The first time this is encountered by the operating system, your user will be presented with the following dialog:
 
-
 [![](healthkit-images/image12.png "The user will be presented with this dialog")](healthkit-images/image12.png#lightbox)
 
 Enable your app to update Heart Rate data and your app will reappear. The `ReactToHealthCarePermissions` callback will be activated asynchronously. This will cause the `HeartRateModel’s` `Enabled` property to change, which will raise the `EnabledChanged` event, which will cause the `HKPermissionsViewController.OnEnabledChanged()` event handler to run, which enables the `StoreData` button. The following diagram shows the sequence:
-
 
 [![](healthkit-images/image13.png "This diagram shows the sequence of events")](healthkit-images/image13.png#lightbox)
 

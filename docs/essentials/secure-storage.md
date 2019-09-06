@@ -123,7 +123,6 @@ To remove all keys, call:
 SecureStorage.RemoveAll();
 ```
 
-
 ## Platform Implementation Specifics
 
 # [Android](#tab/android)

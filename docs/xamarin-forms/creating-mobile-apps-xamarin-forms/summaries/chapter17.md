@@ -98,8 +98,6 @@ The `Grid` can help structure a program to respond to orientation changes. The
 
 The program initializes `Slider` elements to a range of 0 to 255, and uses data bindings to display the value of the sliders in hexadecimal. Because the `Slider` values are floating point, and the .NET formatting string for hexadecimal only works with integers, a [`DoubleToIntConvert`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/DoubleToIntConverter.cs) class in the [**Xamarin.FormsBook.Toolkit**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/Xamarin.FormsBook.Toolkit) library helps out.
 
-
-
 ## Related links
 
 - [Chapter 17 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch17-Apr2016.pdf)

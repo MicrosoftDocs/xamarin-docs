@@ -189,7 +189,7 @@ The iOS Designer has six primary sections:
 To add a control to an interface, drag it from the **Toolbox** and drop it on the design surface. When adding or positioning a control, vertical and horizontal guidelines highlight commonly-used layout positions such as vertical center, horizontal center, and margins:
 
 # [Visual Studio for Mac](#tab/macos)
- 
+
 ![On the design surface, guidelines highlight commonly-used layout positions](introduction-images/9-layoutguides-vsmac.png "On the design surface, guidelines highlight commonly-used layout positions")
 
 # [Visual Studio](#tab/windows)
@@ -215,7 +215,7 @@ A context menu is available both on the design surface and in the **Document Out
 ### Constraints toolbar
 
 # [Visual Studio for Mac](#tab/macos)
- 
+
 [![The contraints toolbar](introduction-images/11-constraintstoolbar-vsmac.png "The constraints toolbar")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/windows)
@@ -311,7 +311,7 @@ When [size classes](~/ios/user-interface/storyboards/unified-storyboards.md#size
 The design surface supports zooming via several controls:
 
 # [Visual Studio for Mac](#tab/macos)
- 
+
 ![The zoom controls in the bottom toolbar](introduction-images/16-zoomcontrols-vsmac.png "The zoom controls in the bottom toolbar")
 
 # [Visual Studio](#tab/windows)

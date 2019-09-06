@@ -446,8 +446,6 @@ Feel free. It’s your page, and XAML is only a tool to build its content.
 With this introduction, you’ve seen how a XAML file and code file contribute to a class definition, and how the XAML and code files interact. But XAML also has its own unique syntactical features that allow it to be used in a very flexible manner. You can begin exploring these in
 [Part 2. Essential XAML Syntax](~/xamarin-forms/xaml/xaml-basics/essential-xaml-syntax.md).
 
-
-
 ## Related Links
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

@@ -114,8 +114,6 @@ Xamarin.iOS apps. It covered [NSUserActivity](nsuseractivity.md), [Core Spotligh
 and [Web Markup](web-markup.md) methods for indexing content. It finished with a short discussion
 of when a given search approach should be used and what types of content should be indexed.
 
-
-
 ## Related Links
 
 - [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)

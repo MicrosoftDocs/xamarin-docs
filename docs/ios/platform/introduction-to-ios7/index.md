@@ -26,7 +26,6 @@ iOS 7 augments the animation support in UIKit, allowing applications to do thing
 - `springWithDampingRatio` – A value between 0 and 1, where the oscillation increases for smaller value.
 - `initialSpringVelocity` – The initial spring velocity as a percentage of the total animation distance per second.
 
-
 The following code produces a spring effect when the image view’s center changes:
 
 ```csharp
@@ -99,13 +98,11 @@ There are several different primitive behaviors available to trigger complex int
 - `UIPushBehavior` – Applies force to a dynamic item.
 - `UISnapBehavior` – Allows a dynamic item to snap to a position with a spring effect.
 
-
 Although there are many primitives, the general process for adding physics-based interactions to a view using UIKit Dynamics is consistent across behaviors:
 
 1. Create a dynamic animator.
 1. Create behavior(s).
 1. Add behaviors to the dynamic animator.
-
 
 ### Dynamics Example
 
@@ -229,7 +226,6 @@ iOS 7 changes when and how background work is performed. Task completion in iOS 
 - Background Fetch – Allows applications to update content in the background at regular intervals.
 - Remote Notifications - Allows applications to update content when receiving a push notification. The notifications can be either silent or can display a banner on the lock screen.
 - Background Transfer Service – Allows uploading and downloading of data, such as large files, without a fixed time limit.
-
 
 For more details about the new multitasking capabilities, see the iOS sections of the Xamarin [Backgrounding guide](~/ios/app-fundamentals/backgrounding/index.md).
 

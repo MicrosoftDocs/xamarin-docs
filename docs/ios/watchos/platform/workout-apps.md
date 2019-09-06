@@ -13,7 +13,6 @@ ms.date: 03/17/2017
 
 _This article covers the enhancements Apple has made to workout apps in watchOS 3 and how to implement them in Xamarin._
 
-
 New to watchOS 3, workout related apps have the ability to run in the background on the Apple Watch and gain access to HealthKit data. Their parent iOS 10 based app also has the ability to launch the watchOS 3 based app without user intervention.
 
 The following topics will be covered in detail:
@@ -183,7 +182,6 @@ namespace MonkeyWorkout.MWWatchExtension
     {
       if (this.Failed != null) this.Failed ();
     }
-
 
     public event OutdoorRunEventDelegate Paused;
     internal void RaisePaused ()
@@ -609,7 +607,6 @@ public HKHealthStore HealthStore { get; private set; }
 public List<HKSample> WorkoutSamples { get; set; } = new List<HKSample> ();
 ...
 
-
 private void SaveWorkoutSamples (HKWorkout workout)
 {
   // Add samples to saved workout
@@ -710,7 +707,6 @@ public OutdoorRunDelegate RunDelegate { get; set; }
 #endregion
 ...
 
-
 public override void HandleWorkoutConfiguration (HKWorkoutConfiguration workoutConfiguration)
 {
   // Create workout session
@@ -760,8 +756,6 @@ Taking all of the information presented in this document, a watchOS 3 based work
 
 > [!IMPORTANT]
 > The code shown in the following sections only includes the parts required to implement the new, enhanced features provided to Workout apps in watchOS 3. All supporting code and the code to present and update the UI is not included but can be easily created by following our other watchOS documentation.<p/>
-
-
 
 ### ViewController.cs
 
@@ -1204,7 +1198,6 @@ namespace MonkeyWorkout.MWWatchExtension
       if (this.Failed != null) this.Failed ();
     }
 
-
     public event OutdoorRunEventDelegate Paused;
     internal void RaisePaused ()
     {
@@ -1252,8 +1245,6 @@ Apple suggests using the following best practices when designing and implementin
 ## Summary
 
 This article has covered the enhancements Apple has made to workout apps in watchOS 3 and how to implement them in Xamarin.
-
-
 
 ## Related Links
 

@@ -38,7 +38,6 @@ After the application has been built, the developer can right-click on the proje
 
  ![Selecting the build package in Finder](bundling-images/image64.png "Selecting the build package in Finder")
 
-
 ## Related Links
 
 - [Installation](/visualstudio/mac/installation/)

@@ -300,7 +300,6 @@ This method performs the following operations, provided that the custom renderer
 
 This article explained how to add a polygon overlay to a map, to highlight a region of the map. Polygons are a closed shape and have their interiors filled in.
 
-
 ## Related Links
 
 - [Polygon Map Overlay (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polygon)

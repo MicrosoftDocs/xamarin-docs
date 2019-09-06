@@ -19,7 +19,6 @@ the [ATS configuration options](#config) and it will cover how to [opt-out of AT
 ATS if required. Because ATS is enabled by default, any non-secure internet connections
 will raise an exception in iOS 9 apps (unless you've explicitly allowed it).
 
-
 ## About App Transport Security
 
 As stated above, ATS ensures that all internet communications in iOS 9 and OS X El Capitan conform to secure connection best practices, thereby preventing accidental disclosure of sensitive information either directly through your app or a library that it is consuming.
@@ -89,7 +88,6 @@ To set the HTTPClient Implementation used by an iOS app, double-click the **Proj
 
 ![](ats-images/client01.png "Setting the iOS Build Options")
 
-
 #### Managed Handler
 
 The Managed handler is the fully managed HttpClient handler that has been shipped with previous versions of Xamarin.iOS and is the default handler.
@@ -144,7 +142,6 @@ In iOS9, App Transport Security (ATS) enforces secure connections between intern
 Since ATS is enabled by default in apps built for iOS 9 and OS X 10.11 (El Capitan), all connections using `NSURLConnection`, `CFURL` or `NSURLSession` will be subject to ATS security requirements. If your connections do not meet these requirement, they will fail with an exception.
 
 Apple also provides the [TLSTool Sample App](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) that can be compiled (or optionally transcoded to Xamarin and C#) and used to diagnose ATS/TLS issues. Please see the [Opting-Out of ATS](#optout) section below for information on how to solve this issue.
-
 
 <a name="config" />
 
@@ -218,7 +215,6 @@ Inside Visual Studio for Mac, double-click the `Info.plist` file in the **Soluti
 
 [![](ats-images/ats01.png "The Source view of the Info.plist file")](ats-images/ats01.png#lightbox)
 
-
 If your app needs to load and display web content from non-secure sites, add the following to your app's **Info.plist** file to allow web pages to load correctly while Apple Transport Security (ATS) protection is still enabled for the rest of the app:
 
 ```xml
@@ -246,9 +242,6 @@ Inside Visual Studio for Mac, double-click the `Info.plist` file in the **Soluti
 > [!IMPORTANT]
 > If your application requires a connection to an insecure website, you should **always** enter the domain as an exception using `NSExceptionDomains` instead of turning ATS off completely using `NSAllowsArbitraryLoads`. `NSAllowsArbitraryLoads` should only be used in extreme emergency situations.
 
-
-
-
 Again, disabling ATS should _only_ be used as a last resort, if switching to secure connections is either unavailable or impractical.
 
 <a name="Summary" />
@@ -256,8 +249,6 @@ Again, disabling ATS should _only_ be used as a last resort, if switching to sec
 ## Summary
 
 This article has introduced App Transport Security (ATS) and described the way it enforces secure communications with the internet. First, we covered the changes ATS requires for a Xamarin.iOS app running on iOS 9. Then we covered controlling ATS features and options. Finally, we covered opting out of ATS in your Xamarin.iOS app.
-
-
 
 ## Related Links
 

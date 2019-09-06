@@ -203,7 +203,6 @@ public class ComplicationController : CLKComplicationDataSource
 }
 ```
 
-
 <a name="templates" />
 
 ## Complication Templates
@@ -259,8 +258,6 @@ These template class names are all prefixed with `CLKComplicationTemplateUtilita
 
 There's only one template for this complication style: `CLKComplicationTemplateUtilitarianLargeFlat`.
 It displays a single image and some text, all on a single line.
-
-
 
 ## Related Links
 

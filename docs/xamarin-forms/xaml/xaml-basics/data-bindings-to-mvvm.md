@@ -703,7 +703,6 @@ private async void OnListViewItemSelected(object sender, SelectedItemChangedEven
 
 XAML is a powerful tool for defining user interfaces in Xamarin.Forms applications, particularly when data-binding and MVVM are used. The result is a clean, elegant, and potentially toolable representation of a user interface with all the background support in code.
 
-
 ## Related Links
 
 - [XamlSamples](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xamlsamples)

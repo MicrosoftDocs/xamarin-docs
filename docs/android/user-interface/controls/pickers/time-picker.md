@@ -283,7 +283,6 @@ required by `TimePickerDialog.IOnTimeSetListener`.
         DateTime selectedTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, hourOfDay, minute, 0);
     ```
 
-
 - This `DateTime` object is passed to the `timeSelectedHandler` that
     is registered with the `TimePickerFragment` object at creation
     time. `OnTimeSet` invokes this handler to update the Activity's

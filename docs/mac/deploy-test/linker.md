@@ -49,7 +49,6 @@ To change to the linker configuration for a Xamarin.Mac project, do the followin
 4. Platform linking for Full Target Frameworks will not appear in the IDE until a future update. Until then, add `--linkplatform`  to the **Additional mmp arguments** instead.
 5. Click the **OK** button to save your changes.
 
-
 ## Related Links
 
 - [Linking on iOS](~/ios/deploy-test/linker.md)

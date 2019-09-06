@@ -155,4 +155,3 @@ Here are some more detailed explanations of how things work internally:
 - [Theading Fundamentals](~/ios/app-fundamentals/threading.md)
 - [Delegates, Protocols, and Events](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [About `newrefcount`](~/ios/internals/newrefcount.md)
-

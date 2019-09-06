@@ -177,7 +177,6 @@ There are many techniques for improving the performance of a `ListView`:
 
 Building a custom renderer for a [`ListView`](xref:Xamarin.Forms.ListView) or its cells is one approach to reducing the effect of layout calculations on scrolling performance. For more information, see [Customizing a ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) and [Customizing a ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
 
-
 ## Related Links
 
 - [Custom Renderer View (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithlistviewnative)

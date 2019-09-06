@@ -628,8 +628,6 @@ User Activity between multiple of the user's Apple devices. Next, it showed how
 to enable and implement Handoff in a Xamarin.iOS app. Finally, it discussed the
 different types of Handoff continuations available and the Handoff best practices.
 
-
-
 ## Related Links
 
 - [iOS 9 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS9)

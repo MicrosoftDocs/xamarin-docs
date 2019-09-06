@@ -13,8 +13,6 @@ ms.date: 02/15/2018
 
 _This document will discuss how to build an APK that will target a single ABI using Xamarin.Android._
 
-
-
 ## Overview
 
 In some situations it may be advantageous for an application to have
@@ -34,7 +32,6 @@ can be useful, such as:
   shared libraries for specific CPU's, you can distribute only the
   shared libraries for that CPU.
 
-
 Multiple APKs can complicate distribution - a problem that is addressed
 by Google Play. Google Play will ensure that the correct APK is
 delivered to a device based on the application's version code and other
@@ -52,12 +49,9 @@ cover the following topics:
 1. Build the application using the  **AndroidManifest.XML** from the previous step.
 1. Prepare the APK for release by signing and zip-aligning it.
 
-
 At the end of this guide is a walkthrough that will demonstrate how to
 script these steps using
 [Rake](http://martinfowler.com/articles/rake.html).
-
-
 
 ### Creating the Version Code for the APK
 
@@ -92,7 +86,6 @@ in the above list:
 
 [![Diagram of eight-digit version code format, coded by color](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
 
-
 Google Play will ensure that the correct APK is delivered to the device
 based on the `versionCode` and APK configuration. The APK with the
 highest version code will be delivered to the device. As an example, an
@@ -118,13 +111,11 @@ version codes would be:
 - 21423457 - The ABI is  `armeabi-v7a` ; targetting API level 14; normal &amp; large screens; with a version name of 457.
 - 61923500 - The ABI is  `x86` ; targetting API level 19; normal &amp; large screens; with a version name of 500.
 
-
 Maintaining these version codes manually can be a significant burden on
 the developer. The process of calculating the correct
 `android:versionCode` and then building the APK's should be automated.
 An example of how to do so will be covered in the walkthrough at the
 end of this document.
-
 
 ### Create A Temporary AndroidManifest.XML
 
@@ -138,8 +129,6 @@ How this is done depends on the scripting system involved, but
 typically involves taking a copy of the Android manifest used during
 development, modifying it, and then using that modify manifest during
 the build process.
-
-
 
 ### Compiling the APK
 
@@ -179,8 +168,6 @@ The following list explains each command line parameter:
 - `<CS_PROJ FILE>` &ndash; This is the path to the `.csproj` file for
   the Xamarin.Android project.
 
-
-
 ### Sign and Zipalign The APK
 
 It is necessary to sign the APK before it can be distributed via Google
@@ -199,7 +186,6 @@ run on a device. This is the format of the command line to use:
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-
 ## Automating APK Creation With Rake
 
 The sample project
@@ -211,7 +197,6 @@ the following ABI's:
 - armeabi
 - armeabi-v7a
 - x86
-
 
 The [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb)
 in the sample project performs each of the steps that were described in
@@ -234,7 +219,6 @@ the previous sections:
 1. [Zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67)
    the APK.
 
-
 To build all of the APKs for the application, run the `build` Rake task
 from the command line:
 
@@ -251,14 +235,12 @@ of these folders with their contents:
 
 [![Locations of platform-specific folders containing xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
-
 > [!NOTE]
 > The build process outlined in this guide may be
 implemented in one of many different build systems. Although we don't
 have a pre-written example, it should also be possible with
 [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) or
 [Fake](http://fsharp.github.io/FAKE/).
-
 
 ## Summary
 
@@ -267,8 +249,6 @@ that target a specify ABI. It also discussed one possible scheme for
 creating `android:versionCodes` that will identify the CPU architecture
 that the APK is intended for. The walkthrough included a sample project
 that has it's build scripted using Rake.
-
-
 
 ## Related Links
 

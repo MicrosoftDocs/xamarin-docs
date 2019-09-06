@@ -284,7 +284,6 @@ The [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is added to the [`Resource
 
 This article has explained how to create data templates, inline, from a custom type, or in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). An inline template should be used if there's no need to reuse the data template elsewhere. Alternatively, a data template can be reused by defining it as a custom type, or as a control-level, page-level, or application-level resource.
 
-
 ## Related Links
 
 - [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)

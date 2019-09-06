@@ -28,7 +28,6 @@ These are the recommended settings for TLS 1.2 support:
 
 [![Visual Studio Android Options](http-stack-images/android-win-sml.png)](http-stack-images/android-win.png#lightbox)
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 The Xamarin.Android HttpClient configuration is in **Project Options > Build > Android Build**
@@ -73,8 +72,6 @@ shipped with previous Xamarin.Android versions.
 - It is usually much slower (eg. encryption) than native API.
 - It requires more managed code, creating larger applications.
 
-
-
 ### Choosing a Handler
 
 The choice between `AndroidClientHandler` and `HttpClientHandler`
@@ -109,7 +106,6 @@ the historical managed SSL implementation by setting the
 about setting build properties, see
 [Build Process](~/android/deploy-test/building-apps/build-process.md)).
 
-
 ### Programatically Using `AndroidClientHandler`
 
 The `Xamarin.Android.Net.AndroidClientHandler` is an
@@ -128,7 +124,6 @@ HttpClient client = new HttpClient(new Xamarin.Android.Net.AndroidClientHandler 
 
 > [!NOTE]
 > The underlying Android device must support TLS 1.2 (ie. Android 4.1 and later). Please note that the official support for TLS 1.2 is in Android 5.0+. However some devices support TLS 1.2 in Android 4.1+.
-
 
 ## SSL/TLS implementation build option
 
@@ -214,7 +209,6 @@ build action of **AndroidEnvironment**:
 -----
 
 Please see the [Xamarin.Android Environment](~/android/deploy-test/environment.md) guide for more details about environment variables and Xamarin.Android.
-
 
 ## Related Links
 

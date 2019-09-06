@@ -18,11 +18,9 @@ _Documents in this section cover features specific to troubleshooting with Andro
 
 Troubleshooting tips and tricks.
 
-
 ## [Frequently Asked Questions](questions/index.md)
 
 Frequently asked Xamarin.Android troubleshooting questions.
-
 
 ## [Resolving Library Installation Errors](~/android/troubleshooting/resolving-library-installation-errors.md)
 
@@ -30,12 +28,10 @@ This guide provides workarounds for some common errors that may occur
 while referencing and automatically downloading Android Support
 Libraries or Google Play services.
 
-
 ## [Changes to the Android SDK Tooling](~/android/troubleshooting/sdk-cli-tooling-changes.md)
 
 Starting in 26.0.1 of the Android SDK Tools, Google has removed the
 existing AVD and SDK managers in favour of new command line tooling.
-
 
 ## [Xamarin.Android Errors Reference](~/android/troubleshooting/errors.md)
 

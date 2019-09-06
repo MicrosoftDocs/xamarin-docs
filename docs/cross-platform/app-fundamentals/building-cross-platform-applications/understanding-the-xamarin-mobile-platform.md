@@ -38,7 +38,6 @@ platform:
 - **Windows** – C# is compiled to IL and executed by the built-in runtime, and does not require Xamarin tools. Designing Windows applications following Xamarin’s guidance makes it simpler to re-use the code on iOS and Android.
   Note that the Universal Windows Platform also has a **.NET Native** option which behaves similarly to Xamarin.iOS' AOT compilation.
 
-
 The linker documentation for [Xamarin.iOS](~/ios/deploy-test/linker.md) and [Xamarin.Android](~/android/deploy-test/linker.md) provides more
 information about this part of the compilation process.
 

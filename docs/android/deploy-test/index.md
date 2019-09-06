@@ -15,7 +15,6 @@ This section includes guides that explain how to test an application,
 optimize its performance, prepare it for release, sign it with a
 certificate, and publish it to an app store.
 
-
 ## [Application Package Sizes](app-package-size.md)
 
 This article examines the constituent parts of a Xamarin.Android
@@ -77,7 +76,6 @@ amount of memory consumed by an application.
 
 This guide explains how to use profiler tools to examine the
 performance and memory usage of an Android app.
-
 
 ## [Preparing an Application for Release](~/android/deploy-test/release-prep/index.md)
 

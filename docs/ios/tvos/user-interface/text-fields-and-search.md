@@ -777,8 +777,6 @@ At any time, the user can switch Focus to an item in the search results and clic
 
 This article has covered designing and working with Text and Search Fields inside of a Xamarin.tvOS app. It showed how to create Text and Search Collection contents in the Interface Designer and it showed to two different ways that a Search Field could be presented to the user in tvOS.
 
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

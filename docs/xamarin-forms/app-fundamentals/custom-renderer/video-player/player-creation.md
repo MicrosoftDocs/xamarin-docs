@@ -150,7 +150,6 @@ Beginning in Xamarin.Forms 2.5, Android renderers should include a constructor w
 
 The `OnElementChanged` override creates both the `VideoView` and `RelativeLayout` and sets the layout parameters for the `VideoView` to center it within the `RelativeLayout`.
 
-
 ```csharp
 namespace FormsVideoLibrary.Droid
 {
@@ -279,7 +278,6 @@ The two event handlers are detached in the `Dispose` event for the renderer.
 All the video players included in the platforms support a default set of transport controls that include buttons for playing and pausing, and a bar to indicate the current position within the video, and to move to a new position.
 
 The `VideoPlayer` class defines a property named `AreTransportControlsEnabled` and sets the default value to `true`:
-
 
 ```csharp
 namespace FormsVideoLibrary
@@ -458,7 +456,6 @@ namespace FormsVideoLibrary.UWP
 ```
 
 One more property is necessary to begin playing a video: This is the crucial `Source` property that references a video file. Implementing the `Source` property is described in the next article, [Playing a Web Video](web-videos.md).
-
 
 ## Related Links
 

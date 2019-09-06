@@ -15,7 +15,6 @@ ms.date: 07/14/2016
 
 _Xamarin.Forms includes an Easing class that allows you to specify a transfer function that controls how animations speed up or slow down as they're running. This article demonstrates how to consume the pre-defined easing functions, and how to create custom easing functions._
 
-
 The [`Easing`](xref:Xamarin.Forms.Easing) class defines a number of easing functions that can be consumed by animations:
 
 - The [`BounceIn`](xref:Xamarin.Forms.Easing.BounceIn) easing function bounces the animation at the beginning.
@@ -101,8 +100,6 @@ The custom easing function is specified as a lambda function argument to the [`E
 ## Summary
 
 This article demonstrated how to consume the pre-defined easing functions, and how to create custom easing functions. Xamarin.Forms includes an [`Easing`](xref:Xamarin.Forms.Easing) class that allows you to specify a transfer function that controls how animations speed up or slow down as they're running.
-
-
 
 ## Related Links
 

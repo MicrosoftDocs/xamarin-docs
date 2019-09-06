@@ -54,16 +54,13 @@ The Empty Project template adds 4 files to the project:
 1. **Info.plist** - Property list file that contains application configuration information.
 1. **Entitlements.plist** – Property list file that contains information about the capabilities and permissions of the application.
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 ## iOS templates
 
-
 Visual Studio for Mac does not provide an Empty template. All templates come with Storyboard support, which Apple recommends as the primary way to create a UI. However, it is possible to create your UI completely in code.
 
 The steps below guide you through removing the Storyboard from an application:
-
 
 1. Use the Single View App template to create a new iOS Project:
 

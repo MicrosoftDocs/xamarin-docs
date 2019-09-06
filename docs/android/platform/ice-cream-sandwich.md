@@ -24,7 +24,6 @@ upgrades, including:
 - **New Data APIs** – There’s new access to data that was not previously officially accessible, such as calendar data and the user profile of the device owner. 
 - **App Data Sharing** – Sharing data between applications and devices is now easier than ever via technologies such as the  `ShareActionProvider` , which makes it easy to create a sharing action from an Action Bar, and  *Android Beam* for  *Near Field Communications (NFC)* , which makes it a snap to share data across devices in close proximity to each other. 
 
-
 In this article, we’re going to explore these features and other changes
 that have been made to the Android 4.0 API, and we’ll explain how to use each
 feature with Xamarin.Android.
@@ -38,7 +37,6 @@ including:
 - **[Switch widget](~/android/user-interface/controls/switch.md)** – Allows toggling between ON or OFF. 
 - **[TextureView](~/android/user-interface/controls/texture-view.md)** – Enables video and OpenGL content within a view. 
 - **[Navigation Bar](~/android/user-interface/controls/navigation-bar.md)** – Contains virtual buttons for back, home, and multi-tasking. 
-
 
 Additionally, other UI elements have been enhanced, such as the `<a href"/guides/android/user_interface/popup_menus">PopupMenu</a>`, which is now easier to work with, and tabs, which have a
 more polished appearance.
@@ -71,8 +69,6 @@ sharing technologies. We covered how *Android Beam* let’s you share
 information across devices that use *NFC*, discussed the new *Calendar API*, and also showed how to use the built in *ShareActionProvider*.
 Finally, we examined how to use the *ContactsContract* provider to access
 user profile data.
-
-
 
 ## Related Links
 

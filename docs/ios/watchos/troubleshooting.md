@@ -101,7 +101,6 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 
 4. The icon image should now pass Apple's validation checks.
 
-
 <a name="add" />
 
 ## Manually Adding Interface Controller Files
@@ -112,7 +111,6 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 > does not require the steps outlined below. Simply give an interface
 > controller a Class name in the Visual Studio for Mac Properties pad and
 > the C# code files will be created automatically.
-
 
 *If* you are using Xcode Interface Builder, follow
     these steps to create new interface controllers
@@ -261,7 +259,6 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 You can now reference the control (or implement the action)
 in C#!
 
-
 <a name="command_line" />
 
 ## Launching the Watch App from the Command Line
@@ -271,7 +268,6 @@ in C#!
 > **Glance** or **Notification** modes using
 > [custom execution parameters](~/ios/watchos/get-started/installation.md#custommodes) in
 > Visual Studio for Mac and Visual Studio.
-
 
 You can also use the command line to control the iOS Simulator. The command
      line tool used to launch watch apps is **mtouch**.
@@ -301,7 +297,6 @@ Example:
 --launchsimwatch=/path/to/watchkitproject/watchsample/bin/iPhoneSimulator/Debug/watchsample.app
 ```
 
-
 ## Notification Mode
 
 To test the app's [**Notification** mode](~/ios/watchos/platform/notifications.md), set the
@@ -316,7 +311,6 @@ For example, add these arguments to the mtouch command:
 ```bash
 --watchlaunchmode=Notification --watchnotificationpayload=/path/to/file.json
 ```
-
 
 ## Other Arguments
 
@@ -360,8 +354,6 @@ Example:
 ```bash
 --device=:v2:runtime=com.apple.CoreSimulator.SimRuntime.iOS-8-2,devicetype=com.apple.CoreSimulator.SimDeviceType.iPhone-6
 ```
-
-
 
 ## Related Links
 

@@ -36,7 +36,6 @@ You can use the Watch Kit sizes (38mm and 42mm) in an asset
 
 ![](image-images/asset-watch-sml.png "You can use the Watch Kit sizes 38mm and 42mm in an asset catalog image to specify different images for each display size")
 
-
 ## Images on the Watch
 
 The most efficient way to display images is to
@@ -63,7 +62,6 @@ myOtherImageControl.SetImage("Worry");
 The same logic applies for the `SetBackgroundImage (string imageName)`
   on the `Button`, `Group`, and `InterfaceController` classes. Best
   performance is achieved by storing the images in the watch app itself.
-
 
 ## Images in the Watch Extension
 
@@ -92,7 +90,6 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 }
 ```
 
-
 ## Animations
 
 To animate a set of images, they should all begin
@@ -119,7 +116,6 @@ Call `StopAnimating` on the image control to
 ```csharp
 animatedImage.StopAnimating ();
 ```
-
 
 <a name="cache" />
 
@@ -155,15 +151,12 @@ using (var image = UIImage.FromBundle ("Bumblebee")) {
 You can query the contents of the image cache in
   code using `WKInterfaceDevice.CurrentDevice.WeakCachedImages`.
 
-
 ### Managing the Cache
 
 The cache about 20 MB in size. It is kept across app restarts,
   and when it fills up it is your responsibility to clear out
   files using `RemoveCachedImage` or `RemoveAllCachedImages`
   methods on the `WKInterfaceDevice.CurrentDevice` object.
-
-
 
 ## Related Links
 

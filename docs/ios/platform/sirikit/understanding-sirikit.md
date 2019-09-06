@@ -13,7 +13,6 @@ ms.date: 05/02/2017
 
 _This article covers the key concepts that will be required for working with SiriKit in a Xamarin.iOS app._
 
-
 New to iOS 10, SiriKit allows a Xamarin.iOS app to provide services that are accessible to the user using Siri and the Maps app on an iOS device. This functionality is provided in one or more App Extension using the new **Intents** and **Intents UI** frameworks.
 
 SiriKit allows an iOS app to provide services that are accessible to the user using Siri and the Maps app on an iOS device using App Extensions and the new **Intents** and **Intents UI** frameworks.
@@ -456,9 +455,6 @@ Strive to have the conversations with Siri (on behalf of the app) be fluid, natu
 ## Summary
 
 This article has covered the key concepts required to use SiriKit and shown it can interact with the Xamarin.iOS apps to provide services that are accessible to the user using Siri and the Maps app on an iOS device.
-
-
-
 
 ## Related Links
 

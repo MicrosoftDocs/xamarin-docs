@@ -224,8 +224,6 @@ The [**ConditionalSection**](https://github.com/xamarin/xamarin-forms-book-sampl
 
 Another use of a `TableView` is a menu. The [**MenuCommands**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter19/MenuCommands) sample demonstrates a menu that lets you move a little `BoxView` around the screen.
 
-
-
 ## Related links
 
 - [Chapter 19 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch19-Apr2016.pdf)

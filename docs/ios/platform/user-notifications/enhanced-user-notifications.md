@@ -355,7 +355,6 @@ UNUserNotificationCenter.Current.RemoveDeliveredNotifications (requests);
 
 To update an existing Notification, simply create a new notification with the desired parameters modified (such as a new trigger time) and add it to the system with the same Request Identifier as the Notification that needs to be modified. Example:
 
-
 ```csharp
 using UserNotifications;
 ...
@@ -662,8 +661,6 @@ This code decrypts the encrypted content from the `encrypted-content` key, creat
 ## Summary
 
 This article has covered all of the ways that Users Notification have been enhanced by iOS 10. It presented the new User Notification framework and how to use it in a Xamarin.iOS app or App Extension.
-
-
 
 ## Related Links
 

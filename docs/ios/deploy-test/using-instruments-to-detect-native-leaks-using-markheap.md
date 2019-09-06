@@ -32,7 +32,6 @@ Select the device and run the Instruments app:
 4. In the **Run** menu, select **Upload to Device** . The application will now be built and uploaded to the device.
 5. In the **Tools** menu, select **Launch Instruments**.
 
-
 Instruments will now open and display the following dialog:
 
  [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Choosing a profiling template")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)

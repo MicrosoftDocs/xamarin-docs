@@ -314,7 +314,6 @@ var configuration = new ARWorldTrackingConfiguration
 
 Although the perfectly reflective texture shown in the preceding code snippet is fun in a sample, environmental texturing is probably better used with restraint lest it trigger an "uncanny valley" response (the texture is only an estimate based on what the camera recorded).
 
-
 ### Shared and persistent AR experiences
 
 Another major addition to ARKit 2 is the [`ARWorldMap`](xref:ARKit.ARWorldMap) class, which allows you to share or store world-tracking data. You get the current world map with [`ARSession.GetCurrentWorldMapAsync`](xref:ARKit.ARSession.GetCurrentWorldMapAsync) or [`GetCurrentWorldMap(Action<ARWorldMap,NSError>)`](xref:ARKit.ARSession.GetCurrentWorldMap(System.Action{ARKit.ARWorldMap,Foundation.NSError})) :

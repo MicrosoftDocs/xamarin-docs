@@ -33,7 +33,6 @@ Create a new **Android Wear Application**:
 
 -----
 
-
 This template automatically includes the **Xamarin Android Wearable 
 Library** NuGet (and dependencies) so you'll have access to 
 Wear-specific widgets. If you don't see the Wear template, review the 
@@ -59,7 +58,6 @@ Ensure the target framework is set to **Android 5.0 (Lollipop)** or later:
 
 For more information on setting the target framework, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
-
 
 ### 3. Edit the **Main.axml** layout
 
@@ -149,7 +147,6 @@ You can run the app on the device instead of using an emulator. For
 more information about debugging on a Wear device,
 see [Debug on a Wear Device](~/android/wear/deploy-test/debug-on-device.md).
 
-
 ### 6. Run the Android Wear app
 
 The Android Wear device should appear in the device pulldown menu. Be
@@ -188,7 +185,6 @@ see the count increment with each tap:
 
 [![Screenshot of Wear app after 3 clicks](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
-
 ## Next Steps
 
 Check out the [Wear samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) including
@@ -196,7 +192,6 @@ Android Wear apps with companion Phone apps.
 
 When you are ready to distribute your app, see
 [Working with Packaging](~/android/wear/deploy-test/packaging.md).
-
 
 ## Related Links
 

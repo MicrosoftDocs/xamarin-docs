@@ -83,8 +83,6 @@ Another way to fit text to a rectangle is to empirically calculate the rendered 
 
 For a `Label`, the first argument should be the width of the container (to allow wrapping), while the second argument should be set to `Double.PositiveInfinity` to make the height unconstrained. The [**EmpiricalFontSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter05/EmpiricalFontSize) sample demonstrates this technique.
 
-
-
 ## Related links
 
 - [Chapter 5 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch05-Apr2016.pdf)

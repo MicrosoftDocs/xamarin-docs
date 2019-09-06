@@ -53,7 +53,6 @@ what's displayed on the screen while the device is in low-power
 in *interactive* mode. For more about these modes, see
 [Keeping Your App Visible](https://developer.android.com/training/wearables/apps/always-on.html).
 
-
 ## Start an App Project
 
 Create a new Android Wear 1.0 project called **WatchFace**
@@ -69,7 +68,6 @@ see [Hello, Android](~/android/get-started/hello-android/hello-android-quickstar
 [![New project dialog](creating-a-watchface-images/03-wear-project-xs-sml.png "Select Wear App in the New Project dialog")](creating-a-watchface-images/03-wear-project-xs.png#lightbox)
 
 -----
-
 
 Set the package name to `com.xamarin.watchface`:
 
@@ -102,7 +100,6 @@ Also, enable the **Internet** and **WakeLock** permissions:
 Next, download [preview.png](creating-a-watchface-images/preview.png) &ndash; this will
 be added to the **drawables** folder later in this walkthrough.
 
-
 ## Add the Xamarin.Android Wear Package
 
 # [Visual Studio](#tab/windows)
@@ -129,7 +126,6 @@ Update the project to the latest stable version of
 
 -----
 
-
 Build and run the app on a Wear device or emulator (for more
 information about how to do this, see the
 [Getting Started](~/android/wear/get-started/index.md) guide). You
@@ -140,7 +136,6 @@ should see the following app screen on the Wear device:
 At this point, the basic Wear app does not have watch face
 functionality because it does not yet provide a watch face service
 implementation. This service will be added next.
-
 
 ## CanvasWatchFaceService
 
@@ -193,7 +188,6 @@ the Android
 Similarly,
 [CanvasWatchFaceService.Engine](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine.html) explains
 the actual implementation of the watch face.
-
 
 ### Add the CanvasWatchFaceService
 
@@ -255,7 +249,6 @@ contains the code that draws the watch face. It also handles system
 events such as screen changes (ambient/interactive modes, screen
 turning off, etc.).
 
-
 ### Implement the Engine OnCreate method
 
 The `OnCreate` method initializes the watch face. Add the following
@@ -312,7 +305,6 @@ After `SetWatchFaceStyle` completes, `OnCreate` instantiates the
 text size to 48 pixels
 ([TextSize](https://developer.android.com/reference/android/graphics/Paint.html#setTextSize%28float%29) must be specified in pixels).
 
-
 ### Implement the Engine OnDraw method
 
 The `OnDraw` method is perhaps the most important
@@ -341,7 +333,6 @@ over from the left edge and 80 pixels down from the top edge.
 For more information about the `OnDraw` method, see the Android
 [onDraw](https://developer.android.com/reference/android/support/wearable/watchface/CanvasWatchFaceService.Engine#ondraw) API documentation.
 
-
 ### Implement the Engine OnTimeTick method
 
 Android periodically calls the `OnTimeTick` method to update the time
@@ -362,7 +353,6 @@ This implementation of `OnTimeTick` simply calls `Invalidate`. The
 For more information about the `OnTimeTick` method, see the Android
 [onTimeTick](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onTimeTick())
 API documentation.
-
 
 ## Register the CanvasWatchFaceService
 
@@ -411,7 +401,6 @@ This XML does the following:
 That completes the code for the basic `WatchFace` example. The next
 step is to add the necessary resources.
 
-
 ## Add resource files
 
 Before you can run the watch service, you must add the **watch_face**
@@ -447,7 +436,6 @@ your own watch face, you can take a screenshot of the watch face while
 it is running. (For more about getting screenshots from
 Wear devices, see [Taking screenshots](~/android/wear/deploy-test/debug-on-device.md#screenshots)).
 
-
 ## Try it!
 
 Build and deploy the app to the Wear device. You should see the Wear
@@ -482,7 +470,6 @@ required to create a custom watch face.
 In the next section, this watch face will be upgraded to a more
 sophisticated implementation.
 
-
 ## Upgrading the watch face
 
 In the remainder of this walkthrough, `MyWatchFaceService` is upgraded
@@ -504,7 +491,6 @@ Before implementing the code changes below, download
 [drawable.zip](https://github.com/xamarin/monodroid-samples/blob/master/wear/WatchFace/Resources/drawable.zip?raw=true), unzip it, and move the unzipped
 .png files to **Resources/drawable** (overwrite the previous
 **preview.png**). Add the new .png files to the `WatchFace` project.
-
 
 ### Update Engine features
 
@@ -564,7 +550,6 @@ following steps:
 6. Draws each hand on the watch surface. Note that the second hand is
     not drawn if the watch is in ambient mode.
 
-
 #### OnPropertiesChanged
 
 This method is called to inform `MyWatchFaceEngine` about the
@@ -576,7 +561,6 @@ fewer bits for each color).
 For more information about this method, see the Android
 [onPropertiesChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onPropertiesChanged%28android.os.Bundle%29) API documentation.
 
-
 #### OnAmbientModeChanged
 
 This method is called when the Wear device enters or exits ambient
@@ -586,7 +570,6 @@ disables anti-aliasing when it is in ambient mode.
 For more information about this method, see the Android
 [onAmbientModeChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onAmbientModeChanged%28boolean%29) API documentation.
 
-
 #### OnVisibilityChanged
 
 This method is called whenever the watch becomes visible or hidden. In
@@ -595,7 +578,6 @@ receiver (described below) according to the visibility state.
 
 For more information about this method, see the Android
 [onVisibilityChanged](https://developer.android.com/reference/android/support/wearable/watchface/WatchFaceService.Engine.html#onVisibilityChanged%28boolean%29) API documentation.
-
 
 ### Time zone feature
 
@@ -663,7 +645,6 @@ In this screenshot, the second hand is moving once per second. When you
 run this code on a Wear device, the second hand disappears when the
 watch enters ambient mode.
 
-
 ## Summary
 
 In this walkthrough, a custom Android Wear 1.0 watchface was implemented
@@ -676,7 +657,6 @@ were implemented to handle changes in visibility, ambient mode, and
 differences in device properties. Finally, a time zone broadcast
 receiver was implemented so that the watch automatically updates the
 time when a time zone is crossed.
-
 
 ## Related Links
 

@@ -56,7 +56,6 @@ Xamarin.Android supports the `XA_HTTP_CLIENT_HANDLER_TYPE` variable,
 which may be set either via `adb shell setprop debug.mono.env` or via
 the `$(AndroidEnvironment)` Build action.
 
-
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
 The assembly-qualified type which must inherit from
@@ -130,7 +129,6 @@ It is a comma-separated string (`,`), containing one of the following values:
 - `timing`: Print out some method timing information. This will also create
     the files `.__override__/methods.txt` and `.__override__/counters.txt`.
 
-
 ### `debug.mono.max_grefc`
 
 The value of the `debug.mono.max_grefc` system property is an integer.
@@ -197,13 +195,11 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 > The underlying Android device must support TLS 1.2.
 Android 5.0 and later support TLS 1.2
 
-
 ## Example
 
 ```shell
 ## Comments are lines which start with '#'
 ## Blank lines are ignored.
-
 
 ## Enable GREF messages to `adb logcat`
 debug.mono.log=gref
@@ -211,8 +207,6 @@ debug.mono.log=gref
 ## Clear out a Mono environment variable to decrease logging
 MONO_LOG_LEVEL=
 ```
-
-
 
 ## Related Links
 

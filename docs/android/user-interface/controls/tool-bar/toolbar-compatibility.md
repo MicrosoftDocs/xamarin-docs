@@ -10,7 +10,6 @@ ms.date: 02/15/2018
 
 # Toolbar Compatibility
 
-
 ## Overview
 
 This section explains how to use `Toolbar` on versions of Android 
@@ -40,8 +39,6 @@ To modify an app to use the AppCompat version of Toolbar:
 
 Each of these steps is explained in detail in the following sections.
 
-
-
 ## Set the Minimum and Target Android Version
 
 The app's Target Framework must be set to API Level 21 or 
@@ -58,7 +55,6 @@ Android API levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md). 
 In the `ToolbarFun` example, the Minimum Android Version is set to 
 KitKat (API Level 4.4). 
-
 
 ## Install the AppCompat NuGet Package
 
@@ -80,7 +76,6 @@ installed if not already present (such as
 about installing NuGet packages, see 
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
-
 ## Use an AppCompat Theme and Toolbar
 
 The AppCompat library comes with several `Theme.AppCompat` themes that 
@@ -93,7 +88,6 @@ to use the AppCompat counterpart for this theme,
 available on versions of Android earlier than Lollipop, we must use the 
 AppCompat version of `Toolbar`. Therefore, layouts must use 
 `android.support.v7.widget.Toolbar` instead of `Toolbar`. 
-
 
 ### Update Layouts
 
@@ -135,7 +129,6 @@ the `android:theme` attribute is set to a theme in the AppCompat
 library &ndash; the `ThemeOverlay.AppCompat.Dark.ActionBar` theme is 
 used here rather than `ThemeOverlay.Material.Dark.ActionBar`. 
 
-
 ### Update the Style
 
 Edit **Resources/values/styles.xml** and replace its contents with the 
@@ -158,8 +151,6 @@ The item names and parent theme in this example are no longer
 prefixed with `android:` because we are using the AppCompat library. 
 Also, the parent theme is changed to the AppCompat version of 
 `Light.DarkActionBar`. 
-
-
 
 ### Update Menus
 
@@ -240,7 +231,6 @@ attribute on Android versions prior to API Level 11? The custom
 attribute `showAsAction` and all of its possible values are included in 
 the app when the AppCompat NuGet is installed. 
 
-
 ## Subclass AppCompatActivity
 
 The final step in the conversion is to modify `MainActivity` so that it 
@@ -282,9 +272,6 @@ When the AppCompat library is used, themes do not have to be switched
 based on the Android version &ndash; the AppCompat library makes it 
 possible to provide a consistent user experience across all supported 
 Android versions. 
-
-
-
 
 ## Related Links
 

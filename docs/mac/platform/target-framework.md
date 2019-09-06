@@ -49,7 +49,6 @@ You should **Clean** and then **Rebuild** your Xamarin.Mac project after switchi
 
 This article has briefly covered the different types of Target Frameworks (Base Class Libraries) available to a Xamarin.Mac application and when each type of framework should be used.
 
-
 ## Related Links
 
 - [iOS and Mac code sharing](~/cross-platform/macios/index.md)

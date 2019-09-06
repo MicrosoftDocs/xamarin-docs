@@ -266,7 +266,6 @@ At this point provisioning should be complete, and the app is ready to be deploy
 4. Make sure to set the build configuration to **iPhone** or **iPad**, rather the simulator.
 5. Click **Run** in Visual Studio and view the app running on the device.
 
-
 -----
 
 ## Summary

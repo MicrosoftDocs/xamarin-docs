@@ -13,7 +13,6 @@ ms.date: 03/19/2018
 
 _This guide discusses how to schedule background work using the Android Job Scheduler API, which is available on Android devices running Android 5.0 (API level 21) and higher._
 
-
 ## Overview 
 
 One of the best ways to keep an Android application responsive to the user is to ensure that complex or long running work is performed in the background. However, it is important that background work will not negatively impact the user's experience with the device. 
@@ -73,7 +72,6 @@ All work performed by the Android Job Scheduler library must be done in a type t
 4. Override the `OnStartJob` method, adding the code to perform the work. Android will invoke this method on the main thread of the application to run the job. Work that will take longer that a few milliseconds should be performed on a thread to avoid blocking the application.
 5. When the work is done, the `JobService` must call the `JobFinished` method. This method is how `JobService` tells the `JobScheduler` that work is done. Failure to call `JobFinished` will result in the `JobService` putting unnecessary demands on the device, shortening the battery life. 
 6. It is a good idea to also override the `OnStopJob` method. This method is called by Android when the job is being shut down before it is finished and provides the `JobService` with an opportunity to properly dispose of any resources. This method should return `true` if it is necessary to reschedule the job, or `false` if it is not desireable to re-run the job.
-   
 
 The following code is an example of the simplest `JobService` for an application, using the TPL to asynchronously perform some work:
 
@@ -110,7 +108,6 @@ Xamarin.Android applications do not instantiate a `JobService` directly, instead
 
 - **JobId** &ndash; this is an `int` value that is used to identify a job to the `JobScheduler`. Reusing this value will update any existing jobs. The value must be unique for the application. 
 - **JobService** &ndash; this parameter is a `ComponentName` that explicitly identifies the type that the  `JobScheduler` should use to run a job. 
-  
 
 This extension method demonstrates how to create a `JobInfo.Builder` with an Android `Context`, such as an Activity:
 
@@ -133,7 +130,6 @@ var jobInfo = jobBuilder.Build();  // creates a JobInfo object.
 
 A powerful feature of the Android Job Scheduler is the ability to control when a job runs or under what conditions a job may run. The following table describes some of the methods on `JobInfo.Builder` that allow an app to influence when a job can run:  
 
-
 |  Method | Description   |
 |---|---|
 | `SetMinimumLatency`  | Specifies that a delay (in milliseconds) that should be observed before a job is run. |
@@ -144,7 +140,6 @@ A powerful feature of the Android Job Scheduler is the ability to control when a
 | `SetDeviceIdle` | The job will run when the device is busy. |
 | `SetPeriodic` | Specifies that the job should be regularly run. |
 | `SetPersisted` | The job should perisist across device reboots. | 
-
 
 The `SetBackoffCriteria` provides some guidance on how long the `JobScheduler` should wait before trying to run a job again. There are two parts to the backoff criteria: a delay in milliseconds (default value of 30 seconds)and type of back off that should be used (sometimes referred to as the _backoff policy_ or the _retry policy_). The two policies are encapsulated in the `Android.App.Job.BackoffPolicy` enum:
 
@@ -201,7 +196,7 @@ else
     snackBar.Show();
 }
 ```
- 
+
 ### Cancelling a job
 
 It is possible to cancel all the jobs that have been scheduled, or just a single job using the `JobsScheduler.CancelAll()` method  or the `JobScheduler.Cancel(jobId)` method:

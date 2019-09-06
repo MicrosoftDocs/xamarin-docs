@@ -30,18 +30,18 @@ $ xcodebuild -sdk iphoneos9.0 -arch arm64
 Build settings from command line:
     ARCHS = arm64
     SDKROOT = iphoneos8.1
- 
+
 === BUILD TARGET pop OF PROJECT pop WITH THE DEFAULT CONFIGURATION (Release) ===
- 
+
 ...
- 
+
 CpHeader pop/POPAnimationTracer.h build/Headers/POP/POPAnimationTracer.h
     cd /Users/aaron/src/sharpie/pop
     export PATH="/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode.app/Contents/Developer/usr/bin:/Users/aaron/bin::/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/X11/bin:/usr/local/git/bin:/Users/aaron/.rvm/bin"
     builtin-copy -exclude .DS_Store -exclude CVS -exclude .svn -exclude .git -exclude .hg -strip-debug-symbols -strip-tool /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/strip -resolve-src-symlinks /Users/aaron/src/sharpie/pop/pop/POPAnimationTracer.h /Users/aaron/src/sharpie/pop/build/Headers/POP
- 
+
 ...
- 
+
 ** BUILD SUCCEEDED **
 ```
 

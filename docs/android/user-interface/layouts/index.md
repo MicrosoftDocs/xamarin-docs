@@ -72,4 +72,3 @@ to use the most commonly-used layouts in Xamarin.Android apps.
     application.
 
     ![Example Tabbed Layout](images/tabbed-layout.png)
- 

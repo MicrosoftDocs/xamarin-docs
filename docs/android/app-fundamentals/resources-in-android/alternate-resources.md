@@ -34,13 +34,12 @@ screen density, screen size, and orientation:
 # [Visual Studio](#tab/windows)
 
 ![Alternate resources](alternate-resources-images/alternate-resources-vs.png)
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Alternate resources](alternate-resources-images/alternate-resources-xs.png)
- 
+
 -----
- 
 
 The following rules apply when adding qualifiers to a resource type:
 
@@ -171,7 +170,6 @@ The possible qualifiers are listed below for reference:
 
   - `12key` &ndash; There is a 12-key hardware keyboard
 
-
 - **Navigation Key Availability** &ndash; For when 5-way or d-pad
   (directional-pad) navigation is available. This can change during the
   lifetime of your application. Possible values are:
@@ -198,11 +196,9 @@ The possible qualifiers are listed below for reference:
   being targeted. For example, v11 will target an API level 11
   (Android 3.0) device.
 
-
 For more complete information about resource qualifiers see
 [Providing Resources](https://developer.android.com/guide/topics/resources/providing-resources.html)
 on the Android Developers website.
-
 
 ## How Android Determines What Resources to Use
 

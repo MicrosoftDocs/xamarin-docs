@@ -80,11 +80,9 @@ class MyIntentService : IntentService {
 }
 ```
 
-
 ### Generic C# classes
 
 Generic C# classes are only partially supported. The following limitations exist:
-
 
 - Generic types may not use `[Export]` or `[ExportField`]. Attempting
     to do so will generate an `XA4207` error.

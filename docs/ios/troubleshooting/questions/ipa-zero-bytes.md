@@ -14,8 +14,6 @@ ms.date: 03/21/2017
 > [!IMPORTANT]
 > This issue has been resolved in recent versions of Xamarin. However, if the issue occurs on the latest version of the software, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
 
-
-
 There were some known issues in previous versions of Xamarin that could cause the IPA file on Windows to be 0 bytes. 
 
 ### Fixed in Xamarin for Visual Studio 3.11.584 

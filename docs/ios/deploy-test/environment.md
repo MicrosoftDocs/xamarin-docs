@@ -39,4 +39,3 @@ executable, and will be set even if the app is not launched from Visual Studio f
 # to pass multipe environment variables, use --setenv multiple times
 --setenv:MONO_TRACE=E:all --setenv:GC_DONT_GC=1
 ```
-

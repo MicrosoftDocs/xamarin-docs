@@ -13,7 +13,6 @@ ms.date: 03/09/2018
 
 _The Android operating system uses content providers to facilitate access to shared data such as media files, contacts and calendar information. This article introduces the ContentProvider class, and provides two examples of how to use it._
 
-
 ## Content Providers Overview
 
 A *ContentProvider* encapsulates a data repository and provides an API to access
@@ -59,8 +58,6 @@ special uses like custom search and copy/paste).
 
 The topics in this section provide some simple examples of consuming
 and writing `ContentProvider` code.
-
-
 
 ## Related Links
 

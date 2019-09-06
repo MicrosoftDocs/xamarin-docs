@@ -486,7 +486,6 @@ If you run into any problems working with Xamarin.tvOS, please see our [Troubles
 
 This article provided a quick start to developing apps for tvOS with Visual Studio for Mac by creating a simple Hello, tvOS app. It covered the basics of tvOS device provisioning, interface creation, coding for tvOS and testing on the tvOS simulator.
 
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

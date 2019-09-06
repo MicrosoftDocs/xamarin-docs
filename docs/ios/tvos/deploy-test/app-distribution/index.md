@@ -13,12 +13,9 @@ ms.date: 03/16/2017
 
 _This document gives an overview of the distribution techniques that are available for Xamarin.tvOS app and serves as a pointer to more detailed documents on the topic._
 
-
 Once your Xamarin.tvOS app has been developed, the next step in the software development lifecycle is to distribute your app to users, as shown in the highlighted section of the diagram below:
 
-
 [![The software development lifecycle overview](images/publishingdiagram.png)](images/publishingdiagram.png#lightbox)
-
 
 Apple provides the following ways to distribute a tvOS app, which are supported by Xamarin.tvOS:
 
@@ -78,8 +75,6 @@ For more information on getting set-up and how to distribute your app In-House, 
 ## Summary
 
 This article gave a brief overview of the distribution mechanisms that are available for Xamarin.tvOS apps. It introduced the Apple TV App Store, Ad Hoc and In-house deployment, and provided links to more detailed information.
-
-
 
 ## Related Links
 

@@ -176,7 +176,6 @@ Here's that page running:
 
 You've now seen how to [load videos from a Web URI](web-videos.md) and how to play embedded resources. In addition, you can [load videos from the device's video library](accessing-library.md).
 
-
 ## Related Links
 
 - [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

@@ -30,7 +30,6 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Page Control** from the **Toolbox** and drop it on the View:
 
@@ -44,9 +43,7 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
     [![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
 1. Save your changes.
 
-
 # [Visual Studio](#tab/windows)
-
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Page Control** from the **Toolbox** and drop it on the View:
@@ -60,7 +57,6 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
 
     [![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
 1. Save your changes.
-
 
 -----
 
@@ -162,8 +158,6 @@ For more information on working with Storyboards, please see our [Hello, tvOS Qu
 ## Summary
 
 This article has covered designing and working with Page Control inside of a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

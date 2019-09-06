@@ -19,7 +19,6 @@ various configurations, such as themes, languages, and device
 configurations, as well as how to design for alternative views such as
 landscape and portrait._
 
-
 ## Overview
 
 Xamarin.Android supports both a declarative style of user interface design
@@ -42,8 +41,6 @@ explains the following:
 8. How to handle conflicts that may arise when working with alternative views. 
 9. How to use Material Design tools to build Material Design-compliant apps.
 
-
-
 ## Sections
 
  [Using the Android Designer](~/android/user-interface/android-designer/designer-walkthrough.md)
@@ -56,8 +53,6 @@ explains the following:
 
  [Material Design Features](~/android/user-interface/android-designer/material-design-features.md)
 
-
-
 ## Summary
 
 This article discussed the feature set of the Xamarin.Android Designer.
@@ -69,8 +64,6 @@ resources and device configurations. Finally, it examined how to use
 the Designer to develop user interfaces that are built specifically for
 alternative views, such as landscape and portrait, as well as how to
 resolve conflicts that may arise between such views.
-
-
 
 ## Related links
 

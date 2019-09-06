@@ -26,4 +26,3 @@ that are specially configured for watchOS solutions.
 ## [Hello, Watch](~/ios/watchos/get-started/hello-watch.md)
 
 Build your first watchOS app using C# and Xamarin.
-

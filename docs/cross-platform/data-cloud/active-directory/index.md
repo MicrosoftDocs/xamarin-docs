@@ -10,7 +10,6 @@ ms.date: 03/23/2017
 
 # Microsoft Azure Active Directory
 
-
 Azure Active Directory allows developers to secure
   resources such as files, links, and Web APIs,
   Office 365, and more
@@ -37,4 +36,3 @@ Once you have added Active Directory authentication
 
 Learn how to access the [Graph API](~/cross-platform/data-cloud/active-directory/graph.md)
   using Xamarin (also covered in our [blog](https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/)).
-

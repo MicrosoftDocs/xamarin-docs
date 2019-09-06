@@ -85,5 +85,4 @@ There are a few workarounds for this issue:
 
 -----
 
-
 [1] - [https://dl-ssl.google.com/android/repository/android-L_r04.zip](https://dl-ssl.google.com/android/repository/android-L_r04.zip)

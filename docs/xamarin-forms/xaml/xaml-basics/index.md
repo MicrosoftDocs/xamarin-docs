@@ -30,7 +30,6 @@ In addition to these XAML Basics articles, you can download chapters of the book
 
 XAML topics are covered in more depth in many chapters of the book, including:
 
-
 | Chapter | Download | Summary |
 |---------|---------|---------|
 | Chapter 7. XAML vs. Code | [Download PDF](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch07-Apr2016.pdf) | [Summary](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter07.md) |

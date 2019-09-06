@@ -43,9 +43,6 @@ Once the class for the row's controller is set, the IDE will create a
 corresponding C# file in the project. Drag controls (such as labels)
 onto the row and give them names so they can be referred to in code.
 
-
-
-
 ## Create and Populate Rows
 
 `SetNumberOfRows` creates the row controller classes for each row, using
@@ -81,7 +78,6 @@ for (var i = 0; i < rows.Count; i++) {
 > `GetRowController` causes the entire table to be sent to the watch. On
 > subsequent views of the table, if you need to add or remove specific rows
 > use `InsertRowsAt` and `RemoveRowsAt` for better performance.
-
 
 ## Respond to Taps
 
@@ -176,7 +172,6 @@ for (var i = 0; i < rows.Count; i++) {
 }
 ```
 
-
 ## Vertical Detail Paging
 
 watchOS 3 introduced a new feature for tables: the ability to scroll through
@@ -256,8 +251,6 @@ namespace WatchTables.OnWatchExtension
 
 The outlets and actions declared here can then be referenced in
 code - however the **.designer.cs** file should NOT be edited directly.
-
-
 
 ## Related Links
 

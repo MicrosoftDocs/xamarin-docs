@@ -36,4 +36,3 @@ external testing services. Some of these include:
 - [Visual Studio Emulator for Android](https://visualstudio.microsoft.com/vs/msft-android-emulator/)
 
 - [Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md)
-

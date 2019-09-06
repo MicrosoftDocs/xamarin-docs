@@ -34,7 +34,6 @@ This is the reference guide that describes all of the
     attributes available to binding authors to drive the binding
     generation process.
 
-
 ## [Objective Sharpie](~/cross-platform/macios/binding/objective-sharpie/index.md)
 
 Objective Sharpie is a command line tool to help bootstrap the first pass of a

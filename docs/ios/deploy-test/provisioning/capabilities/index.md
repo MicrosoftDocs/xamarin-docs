@@ -108,7 +108,6 @@ Capabilities are added to the **Entitlements.plist**. To add capabilities in Vis
 
 -----
 
-
 <a name="devcenter" />
 
 ## Using the Developer Center
@@ -141,7 +140,6 @@ Using the developer center is a two step process that requires creating an App I
     ![App ID confirmation](images/image9.png)
 
 9. Click **Register** and then **Done**. The newly created App ID should display in the iOS App IDs list.
-
 
 <a name="provisioningprofile" />
 

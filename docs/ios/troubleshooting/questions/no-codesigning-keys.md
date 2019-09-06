@@ -14,16 +14,13 @@ ms.date: 04/03/2018
 ## Cause of the error
 This error message occurs when the project in question is looking for valid code-signing credentials but are unable to find them. Code signing is required for testing and deployments on physical iOS devices; as well as Ad-hoc & App store builds. 
 
-
 ### Provisioning Devices
 If you haven't provisioned an iOS device before, the following guide will take you through the full step-by-step process: [Device Provisioning Guide](~/ios/get-started/installation/device-provisioning/index.md)
-
 
 ## Bug when using iOS Simulator
 
 > [!NOTE]
 > This issue has been resolved in recent versions of Xamarin for Visual Studio. However, if the issue occurs on the latest version of the software, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
-
 
 There was a bug in Xamarin.Visual Studio 3.11 which caused the iOS project in a Xamarin.Forms template to add the codesign Entitlements.plist to Simulator builds; effectively blocking testing using the Simulator.
 

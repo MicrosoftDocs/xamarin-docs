@@ -40,7 +40,6 @@ Console Notifications GUI.
 
 ## Requirements
 
-
 It will be helpful to familiarize yourself with the [different types of messages](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) that can be sent by Firebase Cloud Messaging. The payload of the message will determine how a client app will receive and process the message.
 
 Before you can proceed with this walkthrough, you must acquire the
@@ -249,7 +248,6 @@ merged/generated **AndroidManifest.xml** that resides at
 automatically adds any permissions and other FCM elements that are
 needed for connection to FCM servers.
 
-
 ## Check for Google Play Services and create a notification channel
 
 Google recommends that Android apps check for the presence of the
@@ -281,7 +279,6 @@ following XML:
 This `TextView` will be used to display messages that indicate whether
 Google Play Services is installed. Save the changes to **Main.axml**.
 
-
 Edit **MainActivity.cs** and add the following instance variables
  to the `MainActivity` class:
 
@@ -297,7 +294,6 @@ public class MainActivity : AppCompatActivity
 ```
 
 The variables `CHANNEL_ID` and `NOTIFICATION_ID` will be used in the method [`CreateNotificationChannel`](#create-notification-channel-code) that will be added to `MainActivity` later on in this walkthrough.
-
 
 In the following example, the `OnCreate` method will verify that Google
 Play Services is available before the app attempts to use FCM services.
@@ -389,7 +385,6 @@ is installed on your device (for more information, see
 Also verify that you have added the
 **Xamarin.Google.Play.Services.Base** package to your **FCMClient**
 project as explained earlier.
-
 
 ## Add the instance ID receiver
 
@@ -593,7 +588,6 @@ fired, the `click_action` field of the notification message must be set
 to that `Intent` (the launcher `Intent` is used when no `click_action`
 is specified).
 
-
 ## Background notifications
 
 Build and run the **FCMClient** app. The **Log Token** button is displayed:
@@ -662,7 +656,6 @@ of the app (in this example, `41590732`), and the **collapse_key** is
 set to its package name (**com.xamarin.fcmexample**).
 If you do not receive a message, try deleting the **FCMClient** app on
 the device (or emulator) and repeat the above steps.
-
 
 > [!NOTE]
 > If you force-close the app, FCM will stop delivering
@@ -854,7 +847,6 @@ Log.Debug(TAG, "Notification Message Body: " + body);
 > your debugging session may or may not hit these breakpoints because of
 > how FCM delivers messages.
 
-
 ### Send another message
 
 Uninstall the app, rebuild it, run it again, and follow these steps to
@@ -879,7 +871,6 @@ send another message:
 6. The incoming message is logged to the IDE output window:
 
     [![Message body printed to output window](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
-
 
 ### Add a local notification sender
 
@@ -993,7 +984,6 @@ was sent from the Firebase Console Notifications GUI:
 
 [![Foreground notification shown with foreground icon](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
 
-
 ## Disconnecting from FCM
 
 To unsubscribe from a topic, call the
@@ -1026,7 +1016,6 @@ FirebaseInstanceId.Instance.DeleteInstanceId();
 This method call deletes the instance ID and the data associated
 with it. As a result, the periodic sending of FCM data to the device is
 halted.
-
 
 ## Troubleshooting
 
@@ -1061,7 +1050,6 @@ how to subscribe to topic messages, and it provided an example
 implementation of a message listener service that is used to receive
 and display remote notifications while the app is running in the
 foreground.
-
 
 ## Related links
 

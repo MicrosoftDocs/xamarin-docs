@@ -150,8 +150,6 @@ protected void FingerPrintAuthenticationExample()
 
 Now that we have seen how to create a `CryptoObject`, lets move on to see how the `FingerprintManager.AuthenticationCallbacks` are used to transfer the results of fingerprint scanner service to an Android application.
 
-
-
 ## Related Links
 
 - [Cipher](xref:Javax.Crypto.Cipher)

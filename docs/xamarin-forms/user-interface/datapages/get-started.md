@@ -54,7 +54,6 @@ and ensure the theme is merged into the application's resource dictionary:
 > by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
 > be improved in a future preview release.
 
-
 ## 3. Add a XAML Page
 
 Add a new XAML page to the Xamarin.Forms application, and *change the base class*
@@ -197,9 +196,7 @@ Developers that prefer C# to XAML can create data source bindings too
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
-
 It's a little more work to create themes from scratch but future preview releases will make this easier to do.
-
 
 ## Troubleshooting
 
@@ -229,8 +226,6 @@ var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
 x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
 ```
-
-
 
 ## Related Links
 

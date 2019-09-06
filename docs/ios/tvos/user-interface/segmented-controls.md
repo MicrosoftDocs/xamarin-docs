@@ -228,8 +228,6 @@ Where the first `UIControlState` specifies the state of the Segment to the left 
 
 This article has covered designing and working with Segmented Control inside of a Xamarin.tvOS app.
 
-
-
 ## Related Links
 
 - [tvOS Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+tvOS)

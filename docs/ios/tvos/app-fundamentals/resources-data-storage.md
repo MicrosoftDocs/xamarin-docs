@@ -32,9 +32,6 @@ As a result, your app cannot rely on previously downloaded content being availab
 > [!IMPORTANT]
 > While you have the ability to download other assets and resources as required, Apple warns against consuming all of the space in your app's cache, as it can lead to unpredictable results.
 
-
-
-
 <a name="Managing-Resources" />
 
 ## Managing Resources
@@ -72,16 +69,11 @@ You use Xcode to create bundles of related content (such as all assets for game 
 > [!IMPORTANT]
 > Care should be taken to strike the right balance between the number of times the app has to download On-Demand Resources and the size of the individual downloads. User may become frustrated with your app if gameplay is interrupted constantly to download new content or if a single download takes too much time.
 
-
-
-
 <a name="Summary" />
 
 ## Summary
 
 This article has covered the size, resource and data storage limitations placed on a Xamarin.tvOS app by the tvOS system. It has presented options to work around these limitations and suggestions to create a great user experience for your app.
-
-
 
 ## Related Links
 

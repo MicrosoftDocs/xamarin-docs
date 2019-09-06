@@ -54,15 +54,11 @@ documentation. Additionally, the following is required to complete the steps pre
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 As stated above, we'll be using Xcode Command Line Tools (specifically `make` and `lipo`) in this walkthrough. The `make` command is a very common Unix utility that will automate the compilation of executable programs and libraries by using a _makefile_ that specifies how the program should be built. The `lipo` command is an OS X command line utility for creating multi-architecture files; it will combine multiple `.a` files into one file that can be used by all hardware architectures.
-
 
 # [Visual Studio](#tab/windows)
 
-
 As stated above, we'll be using Xcode Command Line Tools on the **Mac Build Host** (specifically `make` and `lipo`) in this walkthrough. The `make` command is a very common Unix utility that will automate the compilation of executable programs and libraries by using a _makefile_ to specifies how to build the program. The `lipo` command is an OS X command line utility for creating multi-architecture files; it will combine multiple `.a` files into one file that can be used by all hardware architectures.
-
 
 -----
 
@@ -273,9 +269,7 @@ The solution will be created and two default files will be included:
 
 ![](walkthrough-images/bind03.png "The solution structure in the Solution Explorer")
 
-
 # [Visual Studio](#tab/windows)
-
 
 1. Start Visual Studio.
 
@@ -337,7 +331,6 @@ Follow these steps to add the library:
 
 When the **.a** file is added to the project, Xamarin.iOS will automatically set the **Build Action** of the file to **ObjcBindingNativeLibrary**, and create a special file called `libInfColorPickerSDK.linkwith.cs`.
 
-
 This file contains the `LinkWith` attribute that tells Xamarin.iOS how handle the static library that we just added. The contents of this file are shown in the following code snippet:
 
 ```csharp
@@ -348,7 +341,6 @@ using ObjCRuntime;
 
 The `LinkWith` attribute identifies the static library for the project and some important linker flags.
 
-
 The next thing we need to do is to create the API definitions for the InfColorPicker project. For the purposes of this walkthrough, we will use Objective Sharpie to generate the file **ApiDefinition.cs**.
 
 <a name="Using_Objective_Sharpie"/>
@@ -357,15 +349,11 @@ The next thing we need to do is to create the API definitions for the InfColorPi
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 Objective Sharpie is a command line tool (provided by Xamarin) that can assist in creating the definitions required to bind a 3rd party Objective-C library to C#. In this section, we'll use Objective Sharpie to create the initial **ApiDefinition.cs** for the InfColorPicker project.
-
 
 # [Visual Studio](#tab/windows)
 
-
 Objective Sharpie is a command line tool (provided by Xamarin) that can assist in creating the definitions required to bind a 3rd party Objective-C library to C#. In this section, we'll use Objective Sharpie on our **Mac Build Host** to create the initial **ApiDefinition.cs** for the InfColorPicker project.
-
 
 -----
 
@@ -467,17 +455,13 @@ And the **InfColorPicker.enums.cs** and **InfColorPicker.cs** files will be crea
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 Open both of these files in the Binding project that we created above. Copy the contents of the **InfColorPicker.cs** file and paste it into the **ApiDefinition.cs** file, replacing the existing `namespace ...` code block with the contents of the **InfColorPicker.cs** file (leaving the `using` statements intact):
 
 ![](walkthrough-images/os07.png "The InfColorPickerControllerDelegate file")
 
-
 # [Visual Studio](#tab/windows)
 
-
 Open both of these files in the Binding project that we created above. Copy the contents of the **InfColorPicker.cs** file (from the **Mac Build Host**) and paste it into the **ApiDefinition.cs** file, replacing the existing `namespace ...` code block with the contents of the **InfColorPicker.cs** file (leaving the `using` statements intact).
-
 
 -----
 
@@ -504,17 +488,13 @@ You may also find that Objective Sharpie has annotated the binding with `[Verify
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 At this point, our binding project should be complete and ready to build. Let's build our binding project and make sure that we ended up with no errors:
 
 [Build the binding project and make sure there are no errors](walkthrough-images/os12.png)
 
-
 # [Visual Studio](#tab/windows)
 
-
 At this point, our binding project should be complete and ready to build. Let's build our binding project and make sure that we ended up with no errors.
-
 
 -----
 
@@ -703,7 +683,6 @@ private void HandleTouchUpInsideWithWeakDelegate (object sender, EventArgs e)
 ```
 
 **Update ViewDidLoad** - We must change `ViewDidLoad` so that it uses the event handler that we just created. Edit `ViewController` and change `ViewDidLoad` to resemble the following code snippet:
-
 
 ```csharp
 public override void ViewDidLoad ()

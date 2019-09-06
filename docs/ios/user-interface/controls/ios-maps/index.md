@@ -48,7 +48,6 @@ The following screenshot show the different map styles that are available:
 - Zooming via a pinch gesture
 - Panning via a pan gesture
 
-
 These features can be enabled or disabled by simply setting the `ZoomEnabled` and `ScrollEnabled` properties of the `MKMapView` instance, where the default value is true for both. For example, to display a static map, simply set the appropriate properties to false:
 
 ```csharp
@@ -95,7 +94,6 @@ An annotation itself has two parts:
 
 - The  `MKAnnotation` object, which includes model data about the annotation, such as the title and location of the annotation.
 - The  `MKAnnotationView` , which contains the image to display and optionally a callout that is shown when the user taps the annotation.
-
 
 Map Kit uses the iOS delegation pattern to add annotations to a map, where the `Delegate` property of the `MKMapView` is set to an instance of an `MKMapViewDelegate`. It is this delegate's implementation that is responsible for returning the `MKAnnotationView` for an annotation.
 
@@ -178,7 +176,6 @@ Another way to layer graphics on a map is using overlays. Overlays support drawi
 - Polylines - Often seen when showing a route.
 - Circles - Used to highlight a circular area of a map.
 
-
 Additionally, custom overlays can be created to show arbitrary geometries with granular, customized drawing code. For example, weather radar would be a good candidate for a custom overlay.
 
 #### Adding an Overlay
@@ -187,7 +184,6 @@ Similar to annotations, adding an overlay involves 2 parts:
 
 - Creating a model object for the overlay and adding it to the  `MKMapView` .
 - Creating a view for the overlay in the  `MKMapViewDelegate` .
-
 
 The model for the overlay can be any `MKShape` subclass. Xamarin.iOS includes `MKShape` subclasses for polygons, polylines and circles, via the `MKPolygon`, `MKPolyline` and `MKCircle` classes respectively.
 
@@ -226,7 +222,6 @@ To perform a local search, an application must follow these steps:
 1. Create an  `MKLocalSearch` object from the  `MKLocalSearchRequest` .
 1. Call the  `Start` method on the  `MKLocalSearch` object.
 1. Retrieve the  `MKLocalSearchResponse` object in a callback.
-
 
 The local search API itself provides no user interface. It doesn’t even require a map to be used. However, to make practical use of local search, an application needs to provide some way to specify a search query and display results. Additionally, since the results will contain location data, it will often make sense to show them on a map.
 
@@ -274,8 +269,6 @@ We will take a look at how to implement both the `searchResultsController` and t
 This results in a search bar displayed over the map as shown below:
 
  ![](images/07-searchbar.png "A search bar displayed over the map")
-
-
 
 ### Displaying the Search Results
 
@@ -346,7 +339,6 @@ public class SearchResultsViewController : UITableViewController
             }
         });
 
-
     }
 }
 ```
@@ -377,7 +369,6 @@ public void Search (string forSearchString)
         }
     });
 
-
 }
 ```
 
@@ -401,8 +392,6 @@ The implementation above adds an annotation to the map when an item is selected 
 
 > [!IMPORTANT]
 > `UISearchController` was implemented in iOS 8. If you wish to support devices earlier than this, then you will need to use `UISearchDisplayController`.
-
-
 
 ## Summary
 
