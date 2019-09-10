@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`Grid`](xref:Xamarin.Forms.Grid) in XAML.
 > - Specify columns and rows for the `Grid`.
 > - Span content across multiple columns or multiple rows in the `Grid`.

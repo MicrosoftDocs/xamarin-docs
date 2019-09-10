@@ -206,6 +206,7 @@ framework, not the Visual Studio for Mac IDE), and various Xcode-related
 tools (but not Xcode itself).
 
 > [!IMPORTANT]
+>
 > - Pair to Mac cannot install Xcode; you must manually install it on the
 >   Mac build host. It is required for Xamarin.iOS development.
 > - Automatic Mac provisioning requires that remote login is
@@ -241,6 +242,7 @@ installed on the Windows machine.
 > to stable. If you have Visual Studio for Mac installed, set your
 > [release channel](https://docs.microsoft.com/visualstudio/mac/update) as
 > follows:
+>
 > - If you use Visual Studio 2019, select the **Stable** updates channel in
 >   Visual Studio for Mac.
 > - If you use Visual Studio 2019 Preview, select the **Alpha** updates

@@ -222,6 +222,7 @@ Many component vendors are still working on migrating to NuGet, and others
 alternative delivery options.
 
 ## Related Links
+
 - [List of popular Xamarin Plugins and Libraries](https://github.com/xamarin/XamarinComponents/blob/master/README.md)
 - [Install and use a NuGet package (Windows)](https://docs.microsoft.com/nuget/quickstart/use-a-package)
 - [Including a NuGet package (Mac)](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

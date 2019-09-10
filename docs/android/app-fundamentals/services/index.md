@@ -61,6 +61,7 @@ Starting in Android 8.0 (API level 26), an Android application no longer have th
 * Another app is in the foreground and is using components from an app that would be otherwise in the background. An example of this is if Application A, which is in the foreground, is bound to a service provided by Application B. Application B would then also be considered in the foreground, and not terminated by Android for being in the background.
 
 There are some situations where, even though an app is in the background,  Android will wake up the app and relax these restrictions for a few minutes, allowing the app to perform some work:
+
 * A high priority Firebase Cloud Message is received by the app.
 * The app receives a broadcast. 
 * The application receives and executes a `PendingIntent` in response to a Notification.

@@ -47,9 +47,8 @@ transaction does not go through Apple at all, instead, it goes through a Payment
 ## Using a Payment Processor Platform
 
 One of the fundamental parts of Apple Pay is the processing of payments. While it
-is possible to do this yourself, it requires significant knowledge of cryptography
-- as detailed in Apple’s [Payment Processing
-guide](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html).
+is possible to do this yourself, it requires significant knowledge of
+cryptography - as detailed in Apple’s [Payment Processing guide](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html).
 Payment processing platforms, on the other hand, handle these operations for you, allowing you
 to concentrate on building your app.
 

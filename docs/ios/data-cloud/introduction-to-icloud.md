@@ -412,8 +412,8 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 ### Displaying iCloud Documents
 
-Displaying a UIDocument shouldn't be any different to any other model class
-- properties are displayed in UI controls, possibly edited by the user and
+Displaying a UIDocument shouldn't be any different to any other model class -
+properties are displayed in UI controls, possibly edited by the user and
 then written back to the model.
 
 In the example **iCloudUIDoc\MonkeyDocumentViewController.cs** displays the
