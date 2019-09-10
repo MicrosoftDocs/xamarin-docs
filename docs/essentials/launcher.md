@@ -53,7 +53,7 @@ public class LauncherTest
 
 This features enables an app to request other apps to open and view a file. Xamarin.Essentials will automatically detect the file type (MIME) and request the file to be opened.
 
-Here is a sample of writing text to disk and and requesting it be opened:
+Here is a sample of writing text to disk and requesting it be opened:
 
 ```csharp
 var fn = "File.txt";
