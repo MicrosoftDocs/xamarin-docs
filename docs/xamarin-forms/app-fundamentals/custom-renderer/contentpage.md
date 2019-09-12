@@ -249,7 +249,6 @@ When implementing a custom renderer that derives from `PageRenderer` on UWP, the
 
 This article has demonstrated how to create a custom renderer for the [`ContentPage`](xref:Xamarin.Forms.ContentPage) page, enabling developers to override the default native rendering with their own platform-specific customization. A `ContentPage` is a visual element that displays a single view and occupies most of the screen.
 
-
 ## Related Links
 
 - [CustomRendererContentPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-contentpage)

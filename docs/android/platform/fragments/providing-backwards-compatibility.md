@@ -26,7 +26,6 @@ that enables devices running Android 1.6 (API level 4) to Android
 > the `PreferenceFragment,` are supported in the Android Support Package. 
 > They will not work in pre-Android 3.0 applications. 
 
-
 ## Adding the Support Package
 
 The Android Support Package is not automatically added to a 
@@ -76,7 +75,6 @@ fragmentTx.Commit();
 With these changes in place, it will be possible to run a 
 Fragment-based application on Android 1.6 or 2.x as well as on 
 Honeycomb and Ice Cream Sandwich. 
-
 
 ## Related Links
 

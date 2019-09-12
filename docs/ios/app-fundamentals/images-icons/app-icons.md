@@ -4,8 +4,8 @@ description: "This document describes how to work with various application icons
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/22/2017
 ---
 
@@ -93,7 +93,7 @@ The following image asset sizes and resolutions will be needed to support all of
  4. Uses the same images and sizes as the Spotlight Icon.
  5. Uses the same size icons as the iPhone.
  6. Only supported with Asset Catalog Image Sets.
- 
+
  For more information about icons, please see Apple's [Icon and Image Sizes](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) documentation.
 
 <a name="managing" />

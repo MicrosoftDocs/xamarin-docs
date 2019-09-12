@@ -298,14 +298,12 @@ XAML:
 
 ![](customizing-list-appearance-images/height-custom.png "ListView with Fixed Row Height")
 
-
 ### Uneven Rows
 
 If you'd like individual rows to have different heights, you can set the
 `HasUnevenRows` property to `true`.
 Note that row heights don't have to be manually set once `HasUnevenRows` has
 been set to `true`, because the heights will be automatically calculated by Xamarin.Forms.
-
 
 C#:
 
@@ -343,8 +341,6 @@ The `OnImageTapped` event handler is executed in response to an [`Image`](xref:X
 ![](customizing-list-appearance-images/dynamic-row-resizing.png "ListView with Runtime Row Resizing")
 
 Note that there is a strong possibility of performance degradation if this feature is overused.
-
-
 
 ## Related Links
 

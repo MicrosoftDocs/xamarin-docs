@@ -57,4 +57,3 @@
 |`skin.name`|**Skin name** &ndash; The name for an Android emulator skin. A skin is a collection of files that defines the visual and control elements of an emulator display; it describes what the window of the AVD will look like on your development computer. A skin describes screen size, buttons, and the overall design, but it does not affect the operation of your app.||
 |`skin.path`|**Skin path** &ndash; Path to the directory that contains the emulator skin files specified in skin.name This directory contains hardware.ini layout files, and image files for the display elements of the skin.||
 |`skin.dynamic`|**Skin dynamic** &ndash; Whether or not the skin is dynamic. The emulator skin is a dynamic skin if the emulator is to construct a skin of a given size based on a specified width and height.|no|
-

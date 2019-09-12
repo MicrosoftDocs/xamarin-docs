@@ -48,7 +48,6 @@ The Preview has some prebuilt data sources available for use:
 See the [getting started guide](get-started.md) for an example
 using a `JsonDataSource`.
 
-
 ### Pages & Controls
 
 The following pages and controls are included to allow easy binding
@@ -63,8 +62,6 @@ to the supplied data sources:
 * **ListItem** – a pre-built view with a layout similar to native iOS and Android list items.
 
 See the [DataPages controls reference](controls.md) for examples.
-
-
 
 ### Under the Hood
 

@@ -4,8 +4,8 @@ description: "This article covers working with the pasteboard to provide copy an
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -598,7 +598,7 @@ namespace MacCopyPaste
 Again, we get the current, topmost window and use its `ImageDocument` class instance to see if the required image data exists. Then we use the `MenuWillHighlightItem` method to enable or disable each item based on this state.
 
 Edit the **AppDelegate.cs** file and make the `DidFinishLaunching` method look like the following:
- 
+
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
@@ -1270,8 +1270,6 @@ if (ok) {
 ## Summary
 
 This article has taken a detailed look at working with the pasteboard in a Xamarin.Mac application to support copy and paste operations. First, it introduced a simple example to get you familiar with standard pasteboards operations. Next, it took a detailed look at the pasteboard and how to read and write data from it. Finally, it looked at using a custom data type to support the copying and pasting of complex data types within an app.
-
-
 
 ## Related Links
 

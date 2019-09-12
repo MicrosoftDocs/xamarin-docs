@@ -4,8 +4,8 @@ description: "This document describes how to work with tvOS split views in an ap
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
 ---
 
@@ -166,8 +166,6 @@ To get the current presentation state, use the `DisplayMode` property of the Spl
 ## Summary
 
 This article has covered designing and working with Split View Controllers inside of a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

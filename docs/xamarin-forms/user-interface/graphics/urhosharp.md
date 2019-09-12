@@ -247,7 +247,6 @@ to Xamarin.Forms. Read the [UrhoSharp documentation](~/graphics-games/urhosharp/
 for more information on how to build Urho scenes that can be included
 in Xamarin.Forms apps using the method shown above.
 
-
 ## Related Links
 
 - [Charts Sample (C# 6)](https://github.com/xamarin/urho-samples/tree/master/FormsSample)

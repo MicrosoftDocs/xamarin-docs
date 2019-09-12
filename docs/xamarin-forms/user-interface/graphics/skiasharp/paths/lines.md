@@ -233,7 +233,6 @@ The UWP screenshot shows the result of the `SKPointMode.Polygon` value. A line i
 
 Whether lines are connected or not connected is a crucial aspect of working with graphics paths.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

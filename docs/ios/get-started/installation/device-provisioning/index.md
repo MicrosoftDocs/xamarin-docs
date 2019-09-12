@@ -4,8 +4,8 @@ description: "This document describes how to provision a device so that it can b
 ms.prod: xamarin
 ms.assetid: CACA5236-3C90-F6DF-FD4E-0797B61670CE
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
 ---
 # Device provisioning for Xamarin.iOS

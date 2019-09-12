@@ -134,8 +134,6 @@ Instead the [`NewCheckBox.cs.xaml`](https://github.com/xamarin/xamarin-forms-boo
 
 The [**NewCheckBoxDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter16/NewCheckBoxDemo) sample demonstrates the `NewCheckBox` custom control.
 
-
-
 ## Related links
 
 - [Chapter 16 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch16-Apr2016.pdf)

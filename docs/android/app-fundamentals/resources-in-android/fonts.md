@@ -273,7 +273,6 @@ public class FontDownloadHelper : FontsContractCompat.FontRequestCallback
         // just an empty delegate to avoid null reference exceptions.  
     };
 
-
     public void DownloadFonts(Context context)
     {
         FontRequest request = new FontRequest("com.google.android.gms.fonts", "com.google.android.gms",FontToDownload , Resource.Array.com_google_android_gms_fonts_certs);

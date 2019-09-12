@@ -18,11 +18,11 @@ default resources are setup by the Xamarin.Android project template:
 # [Visual Studio](#tab/windows)
 
 ![Resource files](android-resource-basics-images/01-resource-files-vs.png)
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Resource files](android-resource-basics-images/01-resource-files-xs.png)
- 
+
 -----
 
 The five files that make up the default resources were created in the
@@ -48,7 +48,6 @@ Resources folder:
    Java would have. It is automatically created by the Xamarin.Android
    tools and will be regenerated from time to time.
 
-
 ## Creating and Accessing Resources
 
 Creating resources is as simple as adding files to the directory for
@@ -60,13 +59,12 @@ automatically set to **AndroidResource** by the Xamarin.Android tools:
 # [Visual Studio](#tab/windows)
 
 ![Build action for Strings.xml set to AndroidResource](android-resource-basics-images/02-build-action-vs.png)
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Build action for Strings.xml set to AndroidResource](android-resource-basics-images/02-build-action-xs.png)
- 
+
 -----
- 
 
 This allows the Xamarin.Android tools to properly compile and embed the
 resources in to the APK file. If for some reason the **Build Action**
@@ -84,7 +82,6 @@ processed if dashes or spaces are used as separators.
 Once resources have been added to a project, there are two ways to use
 them in an application &ndash; programmatically (inside code) or from
 XML files.
-
 
 ## Referencing Resources Programmatically
 
@@ -145,7 +142,6 @@ syntax:
 - **Resource Name** &ndash; this is the filename of the resource
    (without the extension) or the value of the android:name attribute
    for resources that are in an XML element.
-
 
 ## Referencing Resources from XML
 

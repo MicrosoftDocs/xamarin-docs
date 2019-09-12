@@ -199,8 +199,6 @@ The [**ColorAnimations**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 It's sometimes useful to express animations in XAML and use them in conjunction with MVVM. This is covered in the next chapter, [**Chapter 23. Triggers and Behaviors**](chapter23.md).
 
-
-
 ## Related links
 
 - [Chapter 22 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf)

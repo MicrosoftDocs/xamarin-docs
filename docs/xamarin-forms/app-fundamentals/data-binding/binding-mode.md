@@ -676,7 +676,6 @@ The other screenshot shows altered settings. When experimenting with this page, 
 
 In the next article you'll see how to specify [**String Formatting**](string-formatting.md) of data bindings that are set on the `Text` property of `Label`.
 
-
 ## Related Links
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

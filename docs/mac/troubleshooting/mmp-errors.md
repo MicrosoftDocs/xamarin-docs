@@ -5,8 +5,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2018
 ---
 
@@ -636,9 +636,9 @@ argument in the project's Mac Build options.
 <a name="MM8026" />
 
 #### MM8026: * is not supported when the dynamic registrar has been linked away.
- 
+
 This usually indicates a bug in Xamarin.Mac, because the dynamic registrar should not be linked away if it's needed. Please file a bug at [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
- 
+
 It's possible to force the linker to keep the dynamic registrar by adding
 `--optimize=-remove-dynamic-registrar` to the additional mmp arguments in
 the project's Mac Build options.

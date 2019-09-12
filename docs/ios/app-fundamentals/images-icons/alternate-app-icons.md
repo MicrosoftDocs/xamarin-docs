@@ -4,8 +4,8 @@ description: "This document describes how to use alternate app icons in Xamarin.
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 
@@ -164,8 +164,6 @@ If the user switches back to the primary icon, an alert like the following will 
 ## Summary
 
 This article has covered adding alternate app icons to a Xamarin.iOS project and using them inside of the app.
-
-
 
 ## Related Links
 

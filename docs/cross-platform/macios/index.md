@@ -3,8 +3,8 @@ title: "Apple Platform (iOS and Mac)"
 description: "This document describes various topics related to Xamarin.iOS and Xamarin.Mac development: code sharing, the Unified API, binding Objective-C libraries, native references, native types, and more."
 ms.prod: xamarin
 ms.assetid: 67246203-D78E-4DCC-9E55-7D3D93968E54
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 
@@ -46,7 +46,6 @@ namespaces that allows developers to share code by adding
 namespaces on the same file, but this was a little ugly. The Classic API
 should only continue to be used in legacy apps that are internally distributed
 (upgrading to the Unified API is recommended).
-
 
 ### Updating from Classic to the Unified API
 

@@ -646,7 +646,6 @@ The `SKMatrix` structure in SkiaSharp defines properties for that third row:
 
 Non-zero values of `Persp0` and `Persp1` result in transforms that move objects off the two-dimensional plane where Z equals 1. What happens when those objects are moved back to that plane is covered in the article on [**Non-Affine Transforms**](~/xamarin-forms/user-interface/graphics/skiasharp/transforms/non-affine.md).
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

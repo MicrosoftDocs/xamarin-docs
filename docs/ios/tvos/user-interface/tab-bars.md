@@ -4,8 +4,8 @@ description: "This document describes how to work with tab bar controllers in a 
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
 ---
 
@@ -116,7 +116,6 @@ For more information on working with Storyboards, please see our [Hello, tvOS Qu
 
 Use the `Items` property of the `UITabBar` to access the collection of `UITabBarItems` it contains as a zero (0) indexed array. The `SelectedItem` property will return the currently selected Tab (Category) as a `UITabBarItem`.
 
-
 <a name="Working-with-Tab-Bar-Items" />
 
 ## Working with Tab Bar Items
@@ -139,9 +138,6 @@ Use the `Title` property of the `UITabBarItem` to change the title and the `Imag
 ## Summary
 
 This article has covered designing and working with Tab Bar Controller inside of a Xamarin.tvOS app.
-
-
-
 
 ## Related Links
 

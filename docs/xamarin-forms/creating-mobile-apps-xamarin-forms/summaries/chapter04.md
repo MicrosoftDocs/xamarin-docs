@@ -108,8 +108,6 @@ The trick is to give the `ScrollView` child of the `StackLayout` a `VerticalOpti
 
 The **BlackCat** sample also demonstrates how to define and access program resources that are embedded in the shared library. This can also be achieved with Shared Asset Projects (SAPs) but the process is a little trickier, as the [**BlackCatSap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter04/BlackCatSap) sample demonstrates.
 
-
-
 ## Related links
 
 - [Chapter 4 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch04-Apr2016.pdf)

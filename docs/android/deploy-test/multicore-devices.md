@@ -282,7 +282,6 @@ that is extracted, even though the `armeabi-v7a` `libmonodroid.so` is
 present and optimized for the target. This can also result in obscure
 run-time errors, as `armeabi` is not SMP safe.
 
-
 ##### Installing Native Libraries: Android 4.0.4 and later
 
 Android 4.0.4 changes the extraction logic: it will enumerate all native

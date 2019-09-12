@@ -4,8 +4,8 @@ description: "TestFlight is now owned by Apple, and is the primary way to beta t
 ms.prod: xamarin
 ms.assetid: BA880768-2BC8-41E4-B57E-A56F8EED4690
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -17,9 +17,7 @@ Beta testing is an integral part of the software development cycle, and there ar
 
 TestFlight is Apple’s beta testing service for iOS apps, and is accessible only through [iTunes Connect](https://itunesconnect.apple.com/). It is currently available for iOS 8.0 apps and above. TestFlight allows for beta testing with both internal and external users, and due to a Beta app review for the latter, ensures a much easier process in your final review when publishing to the App Store.
 
-
 Previously, the binary was generated within Visual Studio for Mac and uploaded to the TestFlightApp website for distribution to testers. With the new process there are a number of improvements that will allow you to have high quality, well tested apps in the App Store. For example:
-
 
 - The Beta App review needed for external testing ensures a higher chance of success for your final App Store Review, as both require adherence to Apple’s guidelines.
 - Prior to uploading, the app needs to be registered with iTunes Connect. This ensures that there will be no mismatch between provisioning profiles, names and certificates.
@@ -39,7 +37,6 @@ To test your builds with TestFlight, you will need to create an *App Store distr
 You can confirm that your distribution profile contains the beta entitlement when [validating your build in Xcode](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md), as illustrated below:
 
 [![](testflight-images/validate-build.png "Submitting the App to Apple")](testflight-images/validate-build.png#lightbox)
-
 
 ## TestFlight Workflow
 
@@ -63,14 +60,11 @@ The following workflow describes the steps needed to start using TestFlight for 
 
     [![](testflight-images/my-apps.png "Select My Apps")](testflight-images/my-apps.png#lightbox)
 
-
 3. On the **My Apps** screen, click on the **+** button at the top-left corner of the screen to add a new app. If you have Mac and iOS developer accounts, you will be prompted to choose the new app type here.
 
 You will be presented with the **New iOS App** submission window, which needs to contain exactly the same information as your app's Info.plist
 
 For more information on creating a new iTunes Connect record, refer to the [Creating an iTunes Connect Record](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) guide.
-
-
 
 ### Completing the New iOS App Submission form
 
@@ -86,7 +80,6 @@ The form should reflect exactly the information in your app's Info.plist file, a
 - **Version** — The Version number of the app being uploaded. This is chosen by the developer.
 - **SKU** — The SKU is a unique ID for your app, that will not be seen by users. It can be thought of in a similar way as a product ID. In the example above I have chosen the date along with a version number for that date.
 
-
 ## Upload your App
 
 Once the iTunes Connect record has been created, you will be able to upload new builds. Remember that builds must have the new beta entitlement.
@@ -100,7 +93,6 @@ First, build your [final distributable](~/ios/deploy-test/app-distribution/app-s
  To build a binary in Visual Studio for Mac, you will need to use the _Archive_ function. Right-Click on the project, and select **Archive for Publishing**, as illustrated below:
 
  [![](testflight-images/new-archive.png "Select Archive for Publishing")](testflight-images/new-archive.png#lightbox)
-
 
  Refer to the [Building the Distributable](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) guide for more information.
 
@@ -139,7 +131,6 @@ Once opened, select the **Deliver Your App** option, and upload the zip or `.ipa
  Refer to the [Submitting your App to Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) section for more information on these steps.
 
 -----
-
 
 The [Publishing to the App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) guide describes all of the above steps in more detail, refer to this for a more in-depth look into the App Store submission process.
 
@@ -212,7 +203,6 @@ You can invite these testers by selecting their name and clicking the **Invite**
 You can see the status of their invitation in the status column of the Internal Testers page:
 
 [![](testflight-images/status-added.png "The invitation status")](testflight-images/status-added.png#lightbox)
-
 
 ### External Testers
 

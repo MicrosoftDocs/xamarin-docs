@@ -13,7 +13,6 @@ ms.date: 04/11/2018
 
 _This walkthrough provides step-by-step instructions for creating a Xamarin.Android Java Bindings Library from an Android .AAR file._
 
-
 ## Overview
 
 The *Android Archive (.AAR)* file is the file format for Android libraries.
@@ -29,10 +28,8 @@ Library for a single .AAR file. For an overview of Java library binding
 in general (with a basic code example), see
 [Binding a Java Library](~/android/platform/binding-java-library/index.md).
 
-
 > [!IMPORTANT]
 > A binding project can only include one .AAR file. If the .AAR dependencies on other .AAR, then those dependencies should be contained in their own binding project and then referenced. See [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
-
 
 ## Walkthrough
 
@@ -85,8 +82,6 @@ resource that is packaged in **textanalyzer.aar**:
 This image resource resides at **res/drawable/monkey.png**
 in **textanalyzer.aar**.
 
-
-
 ### Creating the Bindings Library
 
 Before commencing with the steps below, please download the example
@@ -97,7 +92,7 @@ Before commencing with the steps below, please download the example
     Visual Studio (the screenshots below show Visual Studio, but
     Visual Studio for Mac is very similar). Name the solution **AarBinding**:
 
-    [![Create AarBindings project](binding-an-aar-images/01-new-bindings-library-vs-sml.w157.png)](binding-an-aar-images/01-new-bindings-library-vs.w157.png#lightbox)
+    [![Create AarBindings project](binding-an-aar-images/01-new-bindings-library-vs-sml.w160.png)](binding-an-aar-images/01-new-bindings-library-vs.w160.png#lightbox)
 
 2. The template includes a **Jars** folder where you add your .AAR(s)
     to the Bindings Library project. Right-click the **Jars** folder
@@ -105,12 +100,10 @@ Before commencing with the steps below, please download the example
 
     [![Add existing item](binding-an-aar-images/02-add-existing-item-vs-sml.png)](binding-an-aar-images/02-add-existing-item-vs.png#lightbox)
 
-
 3. Navigate to the **textanalyzer.aar** file downloaded earlier, select it, and
     click **Add**:
 
     [![Add textanalayzer.aar](binding-an-aar-images/03-select-aar-file-vs-sml.png)](binding-an-aar-images/03-select-aar-file-vs.png#lightbox)
-
 
 4. Verify that the **textanalyzer.aar** file was successfully added
     to the project:
@@ -141,8 +134,6 @@ Before commencing with the steps below, please download the example
     build successfully and produce an output .DLL at the following
     location: **AarBinding/bin/Debug/AarBinding.dll**
 
-
-
 ### Using the Bindings Library
 
 To consume this .DLL in your Xamarin.Android app, you must first add
@@ -171,7 +162,6 @@ a reference to the Bindings Library. Use the following steps:
 
     [![AarBinding is listed under References](binding-an-aar-images/10-references-shows-aarbinding-vs-sml.png)](binding-an-aar-images/10-references-shows-aarbinding-vs.png#lightbox)
 
-
 If you would like to view the contents of the Binding Library project,
 you can double-click the reference to open it in the **Object
 Browser**. You can see the mapped contents of the
@@ -185,8 +175,6 @@ The above screenshot highlights the two `TextAnalyzer` methods that the
 example app will call: `NumConsonants` (which wraps the underlying Java
 `numConsonants` method), and `NumVowels` (which wraps the underlying
 Java `numVowels` method).
-
-
 
 ### Accessing .AAR Types
 
@@ -330,8 +318,6 @@ Try tapping the **COUNT CONSONANTS** button. Also, you can modify the
 line of text and tap these buttons again to test for different vowel
 and consonant counts.
 
-
-
 ### Accessing .AAR Resources
 
 The Xamarin tooling merges the **R** data from the .AAR into your app's
@@ -383,10 +369,7 @@ results are displayed as shown on the right:
 
 [![BindingTest displaying consonant count](binding-an-aar-images/13-count-consonants.png)](binding-an-aar-images/13-count-consonants.png#lightbox)
 
-
 Congratulations! You've successfully bound a Java library .AAR!
-
-
 
 ## Summary
 
@@ -395,7 +378,6 @@ added the Bindings Library to a minimal test app, and ran the app to
 verify that our C# code can call Java code residing in the .AAR file.
 In addition, we extended the app to access and display an image
 resource that resides in the .AAR file.
-
 
 ## Related Links
 

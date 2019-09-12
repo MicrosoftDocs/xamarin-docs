@@ -4,8 +4,8 @@ description: "This document describes how to localize watchOS apps built with Xa
 ms.prod: xamarin
 ms.assetid: 55834877-757B-4860-AF2F-933A948BE38D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
 ---
 
@@ -275,8 +275,6 @@ When testing with a watch, change the watch's language
   in the **Apple Watch** app on the paired iPhone.
 
   ![](localization-images/phone-settings-sml.png "Change the watch's language in the Apple Watch app on the paired iPhone")
-
-
 
 ## Related Links
 

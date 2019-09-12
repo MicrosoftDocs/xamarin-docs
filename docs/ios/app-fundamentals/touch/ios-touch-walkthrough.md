@@ -4,8 +4,8 @@ description: "This document describes how to handle touch in Xamarin.iOS applica
 ms.prod: xamarin
 ms.assetid: 13F8289B-7A80-4959-AF3F-57874D866DCA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -37,11 +37,9 @@ see everything working.
 In this sample, we will demonstrate some of the touch APIs. Follow these steps
 to add the code required to implement touch events:
 
-
 1. Open the project **Touch_Start**. First run the project to make sure everything is okay, and touch the **Touch Samples** button. You should see a screen similar to the following (although none of the buttons will work):
 
     [![](ios-touch-walkthrough-images/image4.png "Sample app run with non-working buttons")](ios-touch-walkthrough-images/image4.png#lightbox)
-
 
 1. Edit the file **TouchViewController.cs** and add the following two
 instance variables to the class `TouchViewController`:
@@ -52,7 +50,6 @@ instance variables to the class `TouchViewController`:
     private bool touchStartedInside;
     #endregion
     ```
-
 
 1. Implement the `TouchesBegan` method, as shown in the code below:
 
@@ -177,7 +174,6 @@ instance variables to the class `TouchViewController`:
     [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
     
     [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
- 
 
 <a name="Gesture_Recognizer_Samples" />
 
@@ -195,7 +191,6 @@ and click on the **Gesture Recognizer Samples** button, you should see the follo
  [![](ios-touch-walkthrough-images/image6.png "Clicking on the Gesture Recognizer Samples button shows this screen")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 Follow these steps to implement gesture recognizers:
-
 
 1. Edit the file **GestureViewController.cs** and add the following instance variable:
 
@@ -258,7 +253,6 @@ this method is provided in the next step.
 move the image around the screen. With this code in place, the controller can
 now support dragging the one image around the screen.
 
-
 1. Add a `UITapGestureRecognizer` that will change the image being displayed in DoubleTouchImage. Add the following method to the `GestureViewController` controller:
 
     ```csharp
@@ -315,13 +309,10 @@ but instead of using a delegate for a target we are using an `Action`.
 
     Notice as well that we initialize the value of `originalImageFrame`.
 
-
 1. Run the application, and interact with the two images.
 The following screenshot is one example of these interactions:
     
     [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
-
-
 
 <a name="Custom_Gesture_Recognizer"/>
 
@@ -335,7 +326,6 @@ then toggle a bitmap. The following screenshot is an example of this screen:
  [![](ios-touch-walkthrough-images/image8.png "The app will recognize when the user draws a `V` on the screen")](ios-touch-walkthrough-images/image8.png#lightbox)
 
 Follow these steps to create a custom gesture recognizer:
-
 
 1. Add a new class to the project named `CheckmarkGestureRecognizer`, and make it look like the following code:
 
@@ -456,8 +446,6 @@ Follow these steps to create a custom gesture recognizer:
 or `Ended`. This is the time to reset any internal state set in the custom gesture recognizer.
 Now the class can start fresh next time the user interacts with the application, and be ready to re-attempt recognizing the gesture.
 
-
-
 1. Now that we’ve defined a custom gesture recognizer (`CheckmarkGestureRecognizer`) edit
 the **CustomGestureViewController.cs** file and add the following two instance variables:
 
@@ -515,12 +503,8 @@ the **CustomGestureViewController.cs** file and add the following two instance v
     
     [![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
 
-
-
 The above three sections demonstrated different ways to respond to touch events in iOS: using
 touch events, built-in gesture recognizers, or with a custom gesture recognizer.
-
-
 
 ## Related Links
 

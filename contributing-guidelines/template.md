@@ -67,8 +67,6 @@ File names use the following rules:
 - Must be in Markdown and use the .md file extension.
 - Keep file names reasonably short. They are part of the URL for your articles.
 
-
-
 ## Headings
 
 Use sentence-style capitalization. Always capitalize:
@@ -155,7 +153,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 1. Ordered
 1. List
 
-
 #### Ordered list with an embedded list
 
 1. Here
@@ -167,7 +164,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 1. ordered
 1. list
 
-
 ### Unordered Lists
 
 - This
@@ -176,20 +172,18 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 - bulleted
 - list
 
-
 ##### Unordered list with an embedded list
 
 - This
 - bulleted
 - list
-    - Mrs. Peacock
-    - Mr. Green
+  - Mrs. Peacock
+  - Mr. Green
 - contains
 - other
     1. Colonel Mustard
     1. Mrs. White
 - lists
-
 
 ## Horizontal rule
 
@@ -204,7 +198,6 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 | col 1 is default | left-aligned     |    $1 |
 
 You can use a [Markdown table generator tool](http://www.tablesgenerator.com/markdown_tables) to help creating them more easily.
-
 
 ### Inline code blocks with language identifier
 

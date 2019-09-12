@@ -5,8 +5,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: c866e5f4-8154-4342-876e-efa0693d66f5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
 ---
 # Hello, iOS Multiscreen – deep dive
@@ -95,11 +95,9 @@ The navigation controller serves three primary functions:
 
     [![](hello-ios-multiscreen-deepdive-images/02.png "This diagram illustrates navigation as a stack of cards")](hello-ios-multiscreen-deepdive-images/02.png#lightbox)
 
-
 - **Optionally Provides a Back Button** - When we push a new item onto the navigation stack, the title bar can automatically display a  *back button* that allows the user to navigate backwards. Pressing the back button  *pops* the current view controller off the navigation stack, and loads the previous Content View hierarchy into the Window:  
 
     [![](hello-ios-multiscreen-deepdive-images/03.png "This diagram illustrates 'popping' a card off the stack")](hello-ios-multiscreen-deepdive-images/03.png#lightbox)
-
 
 - **Provides a Title Bar** – The top portion of the  navigation controller is called the  *Title Bar* . It’s responsible for displaying the view controller title, as illustrated by the diagram below:  
 

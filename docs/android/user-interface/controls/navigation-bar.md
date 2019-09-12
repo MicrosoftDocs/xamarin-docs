@@ -26,7 +26,6 @@ introduced in Android 3. The flags are defined in the `Android.View.View` class 
 - `SystemUiFlagLowProfile` &ndash; Dims out controls in the Navigation Bar. 
 - `SystemUiFlagHideNavigation` &ndash; Hides the Navigation Bar. 
 
-
 These flags can be applied to any view in the view hierarchy by setting
 the `SystemUiVisibility` property. If multiple views have this property
 set, the system combines them with an OR operation and applies them so
@@ -74,8 +73,6 @@ tv.SystemUiVisibilityChange +=
         tv.Text = String.Format ("Visibility = {0}", e.Visibility);
   };
 ```
-
-
 
 ## Related Links
 

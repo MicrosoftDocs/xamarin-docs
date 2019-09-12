@@ -52,7 +52,6 @@ Google Licensing service is also a key component of APK expansion files
 Licensing services to obtain the URLs of the expansion files that will be
 downloaded.
 
-
 ## Requirements
 
 Applications that are not purchased through Google Play will receive no

@@ -296,7 +296,6 @@ This method performs the following operations, provided that the custom renderer
 
 This article explained how to add a polyline overlay to a map, to show a route on a map, or form any shape that's required.
 
-
 ## Related Links
 
 - [Polyline Map Ovlerlay (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-polyline)

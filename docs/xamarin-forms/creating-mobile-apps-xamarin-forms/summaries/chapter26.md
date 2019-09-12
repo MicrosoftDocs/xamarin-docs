@@ -188,8 +188,6 @@ The [**UnitCube**](https://github.com/xamarin/xamarin-forms-book-samples/tree/ma
 A `Layout<T>` derivative can call `LayoutTo` rather than `Layout` to animate the layout. The [`AnimatedCartesianLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnimatedCartesianLayout.cs) class does this, and the
 [**AnimatedUnitCube**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/AnimatedUnitCube) sample demonstrates it.
 
-
-
 ## Related links
 
 - [Chapter 26 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch26-Apr2016.pdf)

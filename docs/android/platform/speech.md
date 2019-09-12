@@ -273,7 +273,6 @@ to download French voice data:
 
 Installation of this data happens automatically after the download completes.
 
-
 ### Step 5 - The IOnInitListener
 
 For an activity to be able to convert the text to speech, the interface method `OnInit` has to be implemented
@@ -301,8 +300,6 @@ In this guide we have looked at the basics of converting text to speech and spee
 of how to include them within your own apps. While they do not cover every particular case, you should now
 have a basic understanding of how speech is interpreted, how to install new languages, and how to increase
 the inclusivity of your apps.
-
-
 
 ## Related Links
 

@@ -47,4 +47,3 @@ project from the Classic API to the Unified API
 ## [Tips for Updating Code to the Unified API](updating-tips.md)
 
 Various tips that can be helpful when updating to the Unified API
-

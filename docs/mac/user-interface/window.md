@@ -4,8 +4,8 @@ description: "This article covers working with windows and panels in a Xamarin.M
 ms.prod: xamarin
 ms.assetid: 4F6C67E9-BBFF-44F7-B29E-AB47D7F44287
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -742,7 +742,6 @@ In the **Attribute Inspector**, you have the following options specific to Panel
 - **Style** - Allow you to adjust the style of the panel from: Regular Panel (looks like a standard window), Utility Panel (has a smaller Title bar), HUD Panel (is translucent and the title bar is part of the background).
 - **Non Activating** - Determines in the panel becomes the key window.
 - **Document Modal** - If Document Modal, the panel will only float above the application's windows, else it floats above all.
-
 
 To add a new Panel, do the following:
 

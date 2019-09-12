@@ -4,8 +4,8 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: A7E738E1-9F94-489B-918F-7DF8F0810987
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
 ---
 
@@ -170,11 +170,6 @@ The Top Shelf Image can either be provided as a single static `.png` or `.lsr` f
 Instead of displaying a static Top Shelf Image, it can contain a dynamic row or Focusable Items or a dynamic set of scrolling banners. Both of these dynamic style allow you to highlight the content provided by your app or jump into its most used features.
 
 For more information, please see our [Working with Icons and Images](~/ios/tvos/app-fundamentals/icons-images.md) documentation and Apple's [TVServices Framework Reference](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) for more information on adding a Top Shelf Extension to your app to provide dynamic Top Shelf content.
-
-
-
-
-
 
 ## Related Links
 

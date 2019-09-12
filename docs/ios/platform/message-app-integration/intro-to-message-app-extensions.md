@@ -4,8 +4,8 @@ description: "This article shows how include a Message App Extension in a Xamari
 ms.prod: xamarin
 ms.assetid: 0CFB494C-376C-449D-B714-9E82644F9DA3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
 ---
 
@@ -113,16 +113,16 @@ To creating a Custom Sticker Experience, do the following:
 # [Visual Studio for Mac](#tab/macos)
 
 1. Start Visual Studio for Mac.
-2. Open the solution to add a Message App Extension to. 
-3. Select **iOS** > **Extensions** > **iMessage Extension** and click the **Next** button: 
+2. Open the solution to add a Message App Extension to.
+3. Select **iOS** > **Extensions** > **iMessage Extension** and click the **Next** button:
 
-	[![](intro-to-message-app-extensions-images/message01.png "Select iMessage Extension")](intro-to-message-app-extensions-images/message01.png#lightbox)
-4. Enter an **Extension Name** and click the **Next** button: 
+    [![](intro-to-message-app-extensions-images/message01.png "Select iMessage Extension")](intro-to-message-app-extensions-images/message01.png#lightbox)
+4. Enter an **Extension Name** and click the **Next** button:
 
-	[![](intro-to-message-app-extensions-images/message02.png "Enter an Extension Name")](intro-to-message-app-extensions-images/message02.png#lightbox)
-5. Click the **Create** button to build the Extension: 
+    [![](intro-to-message-app-extensions-images/message02.png "Enter an Extension Name")](intro-to-message-app-extensions-images/message02.png#lightbox)
+5. Click the **Create** button to build the Extension:
 
-	[![](intro-to-message-app-extensions-images/message03.png "Click the Create button")](intro-to-message-app-extensions-images/message03.png#lightbox)
+    [![](intro-to-message-app-extensions-images/message03.png "Click the Create button")](intro-to-message-app-extensions-images/message03.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -130,7 +130,7 @@ To creating a Custom Sticker Experience, do the following:
 2. Open the solution to add a Message App Extension.
 3. Select **iOS Extensions > iMessage Extension (iOS)** and click the **Next** button:
 
-	[![Select iMessage Extension (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
+    [![Select iMessage Extension (iOS)](intro-to-message-app-extensions-images/message01.w157-sml.png)](intro-to-message-app-extensions-images/message01.w157.png#lightbox)
 
 4. Enter a **Name** and click the **OK** button
 
@@ -153,17 +153,17 @@ Do the following:
 # [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, right-click on the Extension's project name and select **Add** > **New File...** > **iOS | Apple Watch** > **Interface Controller**.
-2. Enter `StickerBrowserViewController` for the **Name** and click the **New** button: 
+2. Enter `StickerBrowserViewController` for the **Name** and click the **New** button:
 
-	[![](intro-to-message-app-extensions-images/browser01.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png#lightbox)
+    [![](intro-to-message-app-extensions-images/browser01.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.png#lightbox)
 3. Open the `StickerBrowserViewController.cs` file for editing.
 
 # [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, right-click on the Extension's project name and select **Add** > **New File...** > **iOS | Apple Watch** > **Interface Controller**.
-2. Enter `StickerBrowserViewController` for the **Name** and click the **New** button: 
+2. Enter `StickerBrowserViewController` for the **Name** and click the **New** button:
 
-	[![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
+    [![](intro-to-message-app-extensions-images/browser01.w157-sml.png "Enter StickerBrowserViewController for the Name")](intro-to-message-app-extensions-images/browser01.w157.png#lightbox)
 3. Open the `StickerBrowserViewController.cs` file for editing.
 
 -----
@@ -179,81 +179,81 @@ using Foundation;
 
 namespace MonkeyStickers
 {
-	public partial class StickerBrowserViewController : MSStickerBrowserViewController
-	{
-		#region Computed Properties
-		public List<MSSticker> Stickers { get; set; } = new List<MSSticker> ();
-		#endregion
+    public partial class StickerBrowserViewController : MSStickerBrowserViewController
+    {
+        #region Computed Properties
+        public List<MSSticker> Stickers { get; set; } = new List<MSSticker> ();
+        #endregion
 
-		#region Constructors
-		public StickerBrowserViewController (MSStickerSize stickerSize) : base (stickerSize)
-		{
-		}
-		#endregion
+        #region Constructors
+        public StickerBrowserViewController (MSStickerSize stickerSize) : base (stickerSize)
+        {
+        }
+        #endregion
 
-		#region Private Methods
-		private void CreateSticker (string assetName, string localizedDescription)
-		{
+        #region Private Methods
+        private void CreateSticker (string assetName, string localizedDescription)
+        {
 
-			// Get path to asset
-			var path = NSBundle.MainBundle.PathForResource (assetName, "png");
-			if (path == null) {
-				Console.WriteLine ("Couldn't create sticker {0}.", assetName);
-				return;
-			}
+            // Get path to asset
+            var path = NSBundle.MainBundle.PathForResource (assetName, "png");
+            if (path == null) {
+                Console.WriteLine ("Couldn't create sticker {0}.", assetName);
+                return;
+            }
 
-			// Build new sticker
-			var stickerURL = new NSUrl (path);
-			NSError error = null;
-			var sticker = new MSSticker (stickerURL, localizedDescription, out error);
-			if (error == null) {
-				// Add to collection
-				Stickers.Add (sticker);
-			} else {
-				// Report error
-				Console.WriteLine ("Error, couldn't create sticker {0}: {1}", assetName, error);
-			}
-		}
+            // Build new sticker
+            var stickerURL = new NSUrl (path);
+            NSError error = null;
+            var sticker = new MSSticker (stickerURL, localizedDescription, out error);
+            if (error == null) {
+                // Add to collection
+                Stickers.Add (sticker);
+            } else {
+                // Report error
+                Console.WriteLine ("Error, couldn't create sticker {0}: {1}", assetName, error);
+            }
+        }
 
-		private void LoadStickers ()
-		{
+        private void LoadStickers ()
+        {
 
-			// Load sticker assets from disk
-			CreateSticker ("canada", "Canada Sticker");
-			CreateSticker ("clouds", "Clouds Sticker");
-			...
-			CreateSticker ("tree", "Tree Sticker");
-		}
-		#endregion
+            // Load sticker assets from disk
+            CreateSticker ("canada", "Canada Sticker");
+            CreateSticker ("clouds", "Clouds Sticker");
+            ...
+            CreateSticker ("tree", "Tree Sticker");
+        }
+        #endregion
 
-		#region Public Methods
-		public void ChangeBackgroundColor (UIColor color)
-		{
-			StickerBrowserView.BackgroundColor = color;
+        #region Public Methods
+        public void ChangeBackgroundColor (UIColor color)
+        {
+            StickerBrowserView.BackgroundColor = color;
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Initialize
-			LoadStickers ();
-		}
+            // Initialize
+            LoadStickers ();
+        }
 
-		public override nint GetNumberOfStickers (MSStickerBrowserView stickerBrowserView)
-		{
-			return Stickers.Count;
-		}
+        public override nint GetNumberOfStickers (MSStickerBrowserView stickerBrowserView)
+        {
+            return Stickers.Count;
+        }
 
-		public override MSSticker GetSticker (MSStickerBrowserView stickerBrowserView, nint index)
-		{
-			return Stickers[(int)index];
-		}
-		#endregion
-	}
+        public override MSSticker GetSticker (MSStickerBrowserView stickerBrowserView, nint index)
+        {
+            return Stickers[(int)index];
+        }
+        #endregion
+    }
 }
 ```
 
@@ -268,12 +268,12 @@ And overrides two methods of the `MSStickerBrowserViewController` class to provi
 ```csharp
 public override nint GetNumberOfStickers (MSStickerBrowserView stickerBrowserView)
 {
-	return Stickers.Count;
+    return Stickers.Count;
 }
 
 public override MSSticker GetSticker (MSStickerBrowserView stickerBrowserView, nint index)
 {
-	return Stickers[(int)index];
+    return Stickers[(int)index];
 }
 ```
 
@@ -283,24 +283,24 @@ The `CreateSticker` method gets the path of an image asset from the Extension's 
 private void CreateSticker (string assetName, string localizedDescription)
 {
 
-	// Get path to asset
-	var path = NSBundle.MainBundle.PathForResource (assetName, "png");
-	if (path == null) {
-		Console.WriteLine ("Couldn't create sticker {0}.", assetName);
-		return;
-	}
+    // Get path to asset
+    var path = NSBundle.MainBundle.PathForResource (assetName, "png");
+    if (path == null) {
+        Console.WriteLine ("Couldn't create sticker {0}.", assetName);
+        return;
+    }
 
-	// Build new sticker
-	var stickerURL = new NSUrl (path);
-	NSError error = null;
-	var sticker = new MSSticker (stickerURL, localizedDescription, out error);
-	if (error == null) {
-		// Add to collection
-		Stickers.Add (sticker);
-	} else {
-		// Report error
-		Console.WriteLine ("Error, couldn't create sticker {0}: {1}", assetName, error);
-	}
+    // Build new sticker
+    var stickerURL = new NSUrl (path);
+    NSError error = null;
+    var sticker = new MSSticker (stickerURL, localizedDescription, out error);
+    if (error == null) {
+        // Add to collection
+        Stickers.Add (sticker);
+    } else {
+        // Report error
+        Console.WriteLine ("Error, couldn't create sticker {0}: {1}", assetName, error);
+    }
 }
 ```
 
@@ -315,37 +315,36 @@ using Messages;
 
 namespace MonkeyStickers
 {
-	public partial class MessagesViewController : MSMessagesAppViewController
-	{
-		#region Computed Properties
-		public StickerBrowserViewController BrowserViewController { get; set;}
-		#endregion
+    public partial class MessagesViewController : MSMessagesAppViewController
+    {
+        #region Computed Properties
+        public StickerBrowserViewController BrowserViewController { get; set;}
+        #endregion
 
-		#region Constructors
-		protected ViewController (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
-		#endregion
+        #region Constructors
+        protected ViewController (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
+            // Create new browser and configure it
+            BrowserViewController = new StickerBrowserViewController (MSStickerSize.Regular);
+            BrowserViewController.View.Frame = View.Frame;
+            BrowserViewController.ChangeBackgroundColor (UIColor.Gray);
 
-			// Create new browser and configure it
-			BrowserViewController = new StickerBrowserViewController (MSStickerSize.Regular);
-			BrowserViewController.View.Frame = View.Frame;
-			BrowserViewController.ChangeBackgroundColor (UIColor.Gray);
-
-			// Add to view
-			AddChildViewController (BrowserViewController);
-			BrowserViewController.DidMoveToParentViewController (this);
-			View.AddSubview (BrowserViewController.View);
-		}
-		#endregion
-	}
+            // Add to view
+            AddChildViewController (BrowserViewController);
+            BrowserViewController.DidMoveToParentViewController (this);
+            View.AddSubview (BrowserViewController.View);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -398,93 +397,93 @@ using Foundation;
 
 namespace MessageExtension
 {
-	public partial class StickerBrowserViewController : MSStickerBrowserViewController
-	{
-		#region Computed Properties
-		public MessagesViewController MessagesAppViewController { get; set; }
-		public List<MSSticker> Stickers { get; set; } = new List<MSSticker> ();
-		#endregion
+    public partial class StickerBrowserViewController : MSStickerBrowserViewController
+    {
+        #region Computed Properties
+        public MessagesViewController MessagesAppViewController { get; set; }
+        public List<MSSticker> Stickers { get; set; } = new List<MSSticker> ();
+        #endregion
 
-		#region Constructors
-		public StickerBrowserViewController (MessagesViewController messagesAppViewController, MSStickerSize stickerSize) : base (stickerSize)
-		{
-			// Initialize
-			this.MessagesAppViewController = messagesAppViewController;
-		}
-		#endregion
+        #region Constructors
+        public StickerBrowserViewController (MessagesViewController messagesAppViewController, MSStickerSize stickerSize) : base (stickerSize)
+        {
+            // Initialize
+            this.MessagesAppViewController = messagesAppViewController;
+        }
+        #endregion
 
-		#region Private Methods
-		private void CreateSticker (string assetName, string localizedDescription)
-		{
+        #region Private Methods
+        private void CreateSticker (string assetName, string localizedDescription)
+        {
 
-			// Get path to asset
-			var path = NSBundle.MainBundle.PathForResource (assetName, "png");
-			if (path == null) {
-				Console.WriteLine ("Couldn't create sticker {0}.", assetName);
-				return;
-			}
+            // Get path to asset
+            var path = NSBundle.MainBundle.PathForResource (assetName, "png");
+            if (path == null) {
+                Console.WriteLine ("Couldn't create sticker {0}.", assetName);
+                return;
+            }
 
-			// Build new sticker
-			var stickerURL = new NSUrl (path);
-			NSError error = null;
-			var sticker = new MSSticker (stickerURL, localizedDescription, out error);
-			if (error == null) {
-				// Add to collection
-				Stickers.Add (sticker);
-			} else {
-				// Report error
-				Console.WriteLine ("Error, couldn't create sticker {0}: {1}", assetName, error);
-			}
-		}
+            // Build new sticker
+            var stickerURL = new NSUrl (path);
+            NSError error = null;
+            var sticker = new MSSticker (stickerURL, localizedDescription, out error);
+            if (error == null) {
+                // Add to collection
+                Stickers.Add (sticker);
+            } else {
+                // Report error
+                Console.WriteLine ("Error, couldn't create sticker {0}: {1}", assetName, error);
+            }
+        }
 
-		private void LoadStickers ()
-		{
+        private void LoadStickers ()
+        {
 
-			// Load sticker assets from disk
-			CreateSticker ("add", "Add New Sticker");
-			CreateSticker ("canada", "Canada Sticker");
-			CreateSticker ("clouds", "Clouds Sticker");
+            // Load sticker assets from disk
+            CreateSticker ("add", "Add New Sticker");
+            CreateSticker ("canada", "Canada Sticker");
+            CreateSticker ("clouds", "Clouds Sticker");
             CreateSticker ("tree", "Tree Sticker");
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Public Methods
-		public void ChangeBackgroundColor (UIColor color)
-		{
-			StickerBrowserView.BackgroundColor = color;
+        #region Public Methods
+        public void ChangeBackgroundColor (UIColor color)
+        {
+            StickerBrowserView.BackgroundColor = color;
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Initialize
-			LoadStickers ();
+            // Initialize
+            LoadStickers ();
 
-		}
+        }
 
-		public override nint GetNumberOfStickers (MSStickerBrowserView stickerBrowserView)
-		{
-			return Stickers.Count;
-		}
+        public override nint GetNumberOfStickers (MSStickerBrowserView stickerBrowserView)
+        {
+            return Stickers.Count;
+        }
 
-		public override MSSticker GetSticker (MSStickerBrowserView stickerBrowserView, nint index)
-		{
-			// Wanting to add a new sticker?
-			if (index == 0) {
-				// Yes, ask controller to present add sticker interface
-				MessagesAppViewController.AddNewSticker ();
-				return null;
-			} else {
-				// No, return existing sticker
-				return Stickers [(int)index];
-			}
-		}
-		#endregion
-	}
+        public override MSSticker GetSticker (MSStickerBrowserView stickerBrowserView, nint index)
+        {
+            // Wanting to add a new sticker?
+            if (index == 0) {
+                // Yes, ask controller to present add sticker interface
+                MessagesAppViewController.AddNewSticker ();
+                return null;
+            } else {
+                // No, return existing sticker
+                return Stickers [(int)index];
+            }
+        }
+        #endregion
+    }
 }
 ```
 
@@ -498,45 +497,45 @@ using Messages;
 
 namespace MessageExtension
 {
-	public class AddStickerViewController : UIViewController
-	{
-		#region Computed Properties
-		public MessagesViewController MessagesAppViewController { get; set;}
-		public MSSticker NewSticker { get; set;}
-		#endregion
+    public class AddStickerViewController : UIViewController
+    {
+        #region Computed Properties
+        public MessagesViewController MessagesAppViewController { get; set;}
+        public MSSticker NewSticker { get; set;}
+        #endregion
 
-		#region Constructors
-		public AddStickerViewController (MessagesViewController messagesAppViewController)
-		{
-			// Initialize
-			this.MessagesAppViewController = messagesAppViewController;
-		}
-		#endregion
+        #region Constructors
+        public AddStickerViewController (MessagesViewController messagesAppViewController)
+        {
+            // Initialize
+            this.MessagesAppViewController = messagesAppViewController;
+        }
+        #endregion
 
-		#region Override Method
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Method
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Build interface to create new sticker
-			var cancelButton = new UIButton (UIButtonType.RoundedRect);
-			cancelButton.TouchDown += (sender, e) => {
-				// Cancel add new sticker
-				MessagesAppViewController.CancelAddNewSticker ();
-			};
-			View.AddSubview (cancelButton);
+            // Build interface to create new sticker
+            var cancelButton = new UIButton (UIButtonType.RoundedRect);
+            cancelButton.TouchDown += (sender, e) => {
+                // Cancel add new sticker
+                MessagesAppViewController.CancelAddNewSticker ();
+            };
+            View.AddSubview (cancelButton);
 
-			var doneButton = new UIButton (UIButtonType.RoundedRect);
-			doneButton.TouchDown += (sender, e) => {
-				// Add new sticker to collection
-				MessagesAppViewController.AddStickerToCollection (NewSticker);
-			};
-			View.AddSubview (doneButton);
-			
-			...
-		}
-		#endregion
-	}
+            var doneButton = new UIButton (UIButtonType.RoundedRect);
+            doneButton.TouchDown += (sender, e) => {
+                // Add new sticker to collection
+                MessagesAppViewController.AddStickerToCollection (NewSticker);
+            };
+            View.AddSubview (doneButton);
+
+            ...
+        }
+        #endregion
+    }
 }
 ```
 
@@ -549,114 +548,114 @@ using Messages;
 
 namespace MessageExtension
 {
-	public partial class MessagesViewController : MSMessagesAppViewController
-	{
-		#region Computed Properties
-		public bool IsAddingSticker { get; set;}
-		public StickerBrowserViewController BrowserViewController { get; set; }
-		public AddStickerViewController AddStickerController { get; set;}
-		#endregion
+    public partial class MessagesViewController : MSMessagesAppViewController
+    {
+        #region Computed Properties
+        public bool IsAddingSticker { get; set;}
+        public StickerBrowserViewController BrowserViewController { get; set; }
+        public AddStickerViewController AddStickerController { get; set;}
+        #endregion
 
-		#region Constructors
-		protected MessagesViewController (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
-		#endregion
+        #region Constructors
+        protected MessagesViewController (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+        #endregion
 
-		#region Public Methods
-		public void PresentStickerBrowser ()
-		{
-			// Is the Add sticker view being displayed?
-			if (IsAddingSticker) {
-				// Yes, remove it from view
-				AddStickerController.RemoveFromParentViewController ();
-				AddStickerController.View.RemoveFromSuperview ();
-			}
+        #region Public Methods
+        public void PresentStickerBrowser ()
+        {
+            // Is the Add sticker view being displayed?
+            if (IsAddingSticker) {
+                // Yes, remove it from view
+                AddStickerController.RemoveFromParentViewController ();
+                AddStickerController.View.RemoveFromSuperview ();
+            }
 
-			// Add to view
-			AddChildViewController (BrowserViewController);
-			BrowserViewController.DidMoveToParentViewController (this);
-			View.AddSubview (BrowserViewController.View);
+            // Add to view
+            AddChildViewController (BrowserViewController);
+            BrowserViewController.DidMoveToParentViewController (this);
+            View.AddSubview (BrowserViewController.View);
 
-			// Save mode
-			IsAddingSticker = false;
-		}
+            // Save mode
+            IsAddingSticker = false;
+        }
 
-		public void PresentAddSticker ()
-		{
-			// Is the sticker browser being displayed?
-			if (!IsAddingSticker) {
-				// Yes, remove it from view
-				BrowserViewController.RemoveFromParentViewController ();
-				BrowserViewController.View.RemoveFromSuperview ();
-			}
+        public void PresentAddSticker ()
+        {
+            // Is the sticker browser being displayed?
+            if (!IsAddingSticker) {
+                // Yes, remove it from view
+                BrowserViewController.RemoveFromParentViewController ();
+                BrowserViewController.View.RemoveFromSuperview ();
+            }
 
-			// Add to view
-			AddChildViewController (AddStickerController);
-			AddStickerController.DidMoveToParentViewController (this);
-			View.AddSubview (AddStickerController.View);
+            // Add to view
+            AddChildViewController (AddStickerController);
+            AddStickerController.DidMoveToParentViewController (this);
+            View.AddSubview (AddStickerController.View);
 
-			// Save mode
-			IsAddingSticker = true;
-		}
+            // Save mode
+            IsAddingSticker = true;
+        }
 
-		public void AddNewSticker ()
-		{
-			// Switch to expanded view mode
-			Request (MSMessagesAppPresentationStyle.Expanded);
-		}
+        public void AddNewSticker ()
+        {
+            // Switch to expanded view mode
+            Request (MSMessagesAppPresentationStyle.Expanded);
+        }
 
-		public void CancelAddNewSticker ()
-		{
-			// Switch to compact view mode
-			Request (MSMessagesAppPresentationStyle.Compact);
-		}
+        public void CancelAddNewSticker ()
+        {
+            // Switch to compact view mode
+            Request (MSMessagesAppPresentationStyle.Compact);
+        }
 
-		public void AddStickerToCollection (MSSticker sticker)
-		{
-			// Add sticker to collection
-			BrowserViewController.Stickers.Add (sticker);
+        public void AddStickerToCollection (MSSticker sticker)
+        {
+            // Add sticker to collection
+            BrowserViewController.Stickers.Add (sticker);
 
-			// Switch to compact view mode
-			Request (MSMessagesAppPresentationStyle.Compact);
-		}
-		#endregion
+            // Switch to compact view mode
+            Request (MSMessagesAppPresentationStyle.Compact);
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Create new browser and configure it
-			BrowserViewController = new StickerBrowserViewController (this, MSStickerSize.Regular);
-			BrowserViewController.View.Frame = View.Frame;
-			BrowserViewController.ChangeBackgroundColor (UIColor.Gray);
+            // Create new browser and configure it
+            BrowserViewController = new StickerBrowserViewController (this, MSStickerSize.Regular);
+            BrowserViewController.View.Frame = View.Frame;
+            BrowserViewController.ChangeBackgroundColor (UIColor.Gray);
 
-			// Create new Add controller and configure it as well
-			AddStickerController = new AddStickerViewController (this);
-			AddStickerController.View.Frame = View.Frame;
+            // Create new Add controller and configure it as well
+            AddStickerController = new AddStickerViewController (this);
+            AddStickerController.View.Frame = View.Frame;
 
-			// Initially present the sticker browser
-			PresentStickerBrowser ();
-		}
+            // Initially present the sticker browser
+            PresentStickerBrowser ();
+        }
 
-		public override void DidTransition (MSMessagesAppPresentationStyle presentationStyle)
-		{
-			base.DidTransition (presentationStyle);
+        public override void DidTransition (MSMessagesAppPresentationStyle presentationStyle)
+        {
+            base.DidTransition (presentationStyle);
 
-			// Take action based on style
-			switch (presentationStyle) {
-			case MSMessagesAppPresentationStyle.Compact:
-				PresentStickerBrowser ();
-				break;
-			case MSMessagesAppPresentationStyle.Expanded:
-				PresentAddSticker ();
-				break;
-			}
-		}
-		#endregion
-	}
+            // Take action based on style
+            switch (presentationStyle) {
+            case MSMessagesAppPresentationStyle.Compact:
+                PresentStickerBrowser ();
+                break;
+            case MSMessagesAppPresentationStyle.Expanded:
+                PresentAddSticker ();
+                break;
+            }
+        }
+        #endregion
+    }
 }
 ```
 
@@ -672,11 +671,11 @@ When the user, chooses a sticker to add, it's added to their available collectio
 ```csharp
 public void AddStickerToCollection (MSSticker sticker)
 {
-	// Add sticker to collection
-	BrowserViewController.Stickers.Add (sticker);
+    // Add sticker to collection
+    BrowserViewController.Stickers.Add (sticker);
 
-	// Switch to compact view mode
-	Request (MSMessagesAppPresentationStyle.Compact);
+    // Switch to compact view mode
+    Request (MSMessagesAppPresentationStyle.Compact);
 }
 ```
 
@@ -685,25 +684,23 @@ The `DidTransition` method is overridden to handle switching between the two mod
 ```csharp
 public override void DidTransition (MSMessagesAppPresentationStyle presentationStyle)
 {
-	base.DidTransition (presentationStyle);
+    base.DidTransition (presentationStyle);
 
-	// Take action based on style
-	switch (presentationStyle) {
-	case MSMessagesAppPresentationStyle.Compact:
-		PresentStickerBrowser ();
-		break;
-	case MSMessagesAppPresentationStyle.Expanded:
-		PresentAddSticker ();
-		break;
-	}
+    // Take action based on style
+    switch (presentationStyle) {
+    case MSMessagesAppPresentationStyle.Compact:
+        PresentStickerBrowser ();
+        break;
+    case MSMessagesAppPresentationStyle.Expanded:
+        PresentAddSticker ();
+        break;
+    }
 }
-``` 
+```
 
 ## Summary
 
 This article has covered include a Message App Extension in a Xamarin.iOS solution that integrates with the **Messages** app and present new functionality to the user. It covered using the extension to send text, stickers, media files and interactive messages.
-
-
 
 ## Related Links
 

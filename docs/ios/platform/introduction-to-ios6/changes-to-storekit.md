@@ -4,8 +4,8 @@ description: "iOS 6 introduces two changes to the Store Kit API: the ability to 
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -319,7 +319,6 @@ package will contain:
 - a text file, and
 - an image to represent the chapter.
 
-
 Start by selecting **File > New Project** from the
 menu, and choosing **In-App Purchase Content**:
 
@@ -605,7 +604,6 @@ public void SaveDownload (SKDownload download)
 When `FinishTransaction` is called, the downloaded files are no
 longer guaranteed to be in the `Cache` directory. All files should be
 copied before calling `FinishTransaction`.
-
 
 ## Other Considerations
 

@@ -10,7 +10,6 @@ ms.date: 02/15/2018
 
 # Adding a Second Toolbar
 
-
 ## Overview 
 
 The `Toolbar` can do more than replace the action bar &ndash; it can be 
@@ -19,7 +18,6 @@ placement anywhere on the screen, and it can be configured to span only
 a partial width of the screen. The examples below illustrate how to 
 create a second `Toolbar` and place it at the bottom of the screen. 
 This `Toolbar` implements **Copy**, **Cut**, and **Paste** menu items. 
-
 
 ## Define the Second Toolbar 
 
@@ -89,8 +87,6 @@ the app displays a blank second toolbar at the bottom of the screen:
 
 [![Screenshot of app with yellow second toolbar at the bottom of the screen](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
-
- 
 ## Add Edit Menu Items 
 
 This section explains how to add edit menu items to the bottom 
@@ -111,8 +107,6 @@ To add menu items to a secondary `Toolbar`:
 
 The following sections demonstrate this process in detail: **Cut**, 
 **Copy**, and **Paste** menu items are added to the bottom `Toolbar`. 
-
-
 
 ### Define the Edit Menu Resource
 
@@ -144,8 +138,6 @@ the contents with the following XML:
 This XML creates the **Cut**, **Copy**, and **Paste** menu items (using 
 icons that were added to the `mipmap-` folders in 
 [Replacing the Action Bar](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
-
-
 
 ### Inflate the Menus
 
@@ -179,8 +171,6 @@ displayed:
 Tapping menu items on either toolbar displays the resulting toasts: 
 
 [![Screenshots of Toasts for Save, Copy, and Paste menu items being tapped](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
-
-
 
 ## The Up Button 
 
@@ -230,8 +220,6 @@ Tapping this **Up** button causes the app to return to `MainActivity`.
 In a more complex app with multiple levels of hierarchy, tapping this 
 button would return the user to the next highest level in the app 
 rather than to the previous screen. 
-
-
 
 ## Related Links
 

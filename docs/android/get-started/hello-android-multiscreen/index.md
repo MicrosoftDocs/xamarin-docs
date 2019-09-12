@@ -27,7 +27,6 @@ In the second part of this document, you will review what you've built
 and discusses architecture, navigation, and other new Android concepts
 that are encountered along the way.
 
-
 ## Related Links
 
 - [Android Getting Started](https://developer.android.com/training/index.html)

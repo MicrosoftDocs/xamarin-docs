@@ -195,7 +195,6 @@ The items are summarized in the table below:
 
 - **mipmap** &ndash; The mipmap directory holds drawable files for different launcher icon densities. In the default template, the drawable directory houses the application icon file, **Icon.png**.
 
-
 ::: zone pivot="windows"
 
 - **layout** &ndash; The layout directory contains _Android designer

@@ -4,8 +4,8 @@ description: "This document lists the various macOS frameworks available for use
 ms.prod: xamarin
 ms.assetid: E8108E77-13FE-2EC2-83FF-AFE0408D3EE6
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
 ---
 
@@ -58,4 +58,3 @@ The following macOS frameworks are supported by Xamarin.Mac:
 - StoreKit 
 - VideoToolbox
 - WebKit
-

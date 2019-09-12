@@ -3,8 +3,8 @@ title: "Overview of Objective-C Bindings"
 description: "This document provides an overview of different ways to create C# bindings for Objective-C code, including command-line bindings, binding projects, and Objective Sharpie. It also discusses how binding works."
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
 ---
 
@@ -48,7 +48,6 @@ works by passing the C# API definitions that you've created by hand
 (or using Objective Sharpie) to the command line tool (`btouch-native` for
 iOS or `bmac-native` for Mac).
 
-
 The general syntax for invoking these tools is:
 
 ```csharp
@@ -65,7 +64,6 @@ The above command will generate the file `cocos2d.dll` in the current
 directory, and it will contain the fully bound library that you can use in your
 project. This is the tool that Visual Studio for Mac uses to create your bindings if you use a
 binding project (described [below](#bindingproject)).
-
 
 <a name="bindingproject" />
 

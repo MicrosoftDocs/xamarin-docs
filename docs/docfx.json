@@ -94,7 +94,6 @@
       }
     },
     "template": [],
-    "dest": "xamarin-docs",
-    "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ]
+    "dest": "xamarin-docs"
   }
 }

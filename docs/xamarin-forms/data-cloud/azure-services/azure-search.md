@@ -55,7 +55,7 @@ var searchClient =
 The `SearchServiceClient` constructor overload takes a search service name and a `SearchCredentials` object as arguments, with the `SearchCredentials` object wrapping the *admin key* for the Azure Search service. The *admin key* is required to create an index.
 
 > [!NOTE]
->  A single `SearchServiceClient` instance should be used in an application to avoid opening too many connections to Azure Search.
+> A single `SearchServiceClient` instance should be used in an application to avoid opening too many connections to Azure Search.
 
 An index is defined by the `Index` object, as demonstrated in the following code example:
 
@@ -270,7 +270,6 @@ Note that in the sample application, the `SuggestAsync` method is only invoked w
 ## Summary
 
 This article demonstrated how to use the Microsoft Azure Search Library to integrate Azure Search into a Xamarin.Forms application. Azure Search is a cloud service that provides indexing and querying capabilities for uploaded data. This removes the infrastructure requirements and search algorithm complexities traditionally associated with implementing search functionality in an application.
-
 
 ## Related Links
 

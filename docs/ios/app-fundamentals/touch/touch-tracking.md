@@ -4,8 +4,8 @@ description: "This document describes how to track individual fingers in multi-t
 ms.prod: xamarin
 ms.assetid: 48E8B20D-0833-43D2-976A-0605DDB386E3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -36,7 +36,6 @@ class FingerPaintPolyline
 ```
 
 Each polyline has a color, a stroke width, and an iOS graphics [`CGPath`](xref:CoreGraphics.CGPath) object to accumulate and render multiple points of the line as it's being drawn.
-
 
 All the rest of the code shown below is contained in a `UIView` derivative named `FingerPaintCanvasView`. That class maintains a dictionary of objects of type `FingerPaintPolyline` during the time that they are actively being drawn by one or more fingers:
 
@@ -182,8 +181,6 @@ Altogether, this processing allows the [FingerPaint](https://docs.microsoft.com/
 [![](touch-tracking-images/image01.png "Tracking individual fingers and drawing the results on the screen")](touch-tracking-images/image01.png#lightbox)
 
 You've now seen how you can track individual fingers on the screen and distinguish among them.
-
-
 
 ## Related Links
 

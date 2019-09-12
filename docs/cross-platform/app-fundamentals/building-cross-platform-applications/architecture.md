@@ -3,8 +3,8 @@ title: "Part 2 - Architecture"
 description: "This document describes architecture patterns helpful for building cross-platform applications. It discusses typical application layers (data layer, data access layer, etc.) and common mobile software patterns (MVVM, MVC, etc.)"
 ms.prod: xamarin
 ms.assetid: 2176DB2D-E84A-3757-CFAB-04A586068D50
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
 ---
 
@@ -19,7 +19,6 @@ well-architected application:
 - **Separation of Responsibilities** – Ensure that each component (both at architectural and class level) has a clear and well-defined purpose. Each component should perform only its defined tasks and expose that functionality via an API that is accessible to the other classes that need to use it.
 - **Polymorphism** – Programming to an interface (or abstract class) that supports multiple implementations means that core code can be written and shared across platforms, while still interacting with platform-specific features.
 
-
 The natural outcome is an application modeled after real world or abstract
 entities with separate logical layers. Separating code into layers make
 applications easier to understand, test and maintain. It is recommended that the
@@ -28,7 +27,6 @@ separate projects for very large applications) as well as logically separate
 (using namespaces).
 
  <a name="Typical_Application_Layers" />
-
 
 ## Typical Application Layers
 
@@ -42,14 +40,12 @@ application layers:
 - **Application Layer** – Code that’s typically platform specific (not generally shared across platforms) or code that is specific to the application (not generally reusable). A good test of whether to place code in the Application Layer versus the UI Layer is (a) to determine whether the class has any actual display controls or (b) whether it could be shared between multiple screens or devices (eg. iPhone and iPad).
 - **User Interface (UI) Layer** – The user-facing layer, contains screens, widgets and the controllers that manage them.
 
-
 An application may not necessarily contain all layers – for example the
 Service Access Layer would not exist in an application that does not access
 network resources. A very simple application might merge the Data Layer and Data
 Access Layer because the operations are extremely basic.
 
  <a name="Common_Mobile_Software_Patterns" />
-
 
 ## Common Mobile Software Patterns
 
@@ -63,7 +59,6 @@ maintainable/understandable mobile applications.
 - **Singleton** – The Singleton pattern provides for a way in which only a single instance of a particular object can ever exist. For example, when using SQLite in mobile applications, you only ever want one instance of the database. Using the Singleton pattern is a simple way to ensure this.
 - **Provider** – A pattern coined by Microsoft (arguably similar to Strategy, or basic Dependency Injection) to encourage code re-use across Silverlight, WPF and WinForms applications. Shared code can be written against an interface or abstract class, and platform-specific concrete implementations are written and passed in when the code is used.
 - **Async** – Not to be confused with the Async keyword, the Async pattern is used when long-running work needs to be executed without holding up the UI or current processing. In its simplest form, the Async pattern simply describes that long-running tasks should be kicked off in another thread (or similar thread abstraction such as a Task) while the current thread continues to process and listens for a response from the background process, and then updates the UI when data and or state is returned.
-
 
 Each of the patterns will be examined in more detail as their practical use
 is illustrated in the case studies. Wikipedia has more detailed descriptions of

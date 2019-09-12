@@ -6,8 +6,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D3868F3A-4EED-BDDF-45AA-665102C39634
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
 ---
 
@@ -327,7 +327,6 @@ This walkthrough describes how to create an application called Phoneword that tr
 
     ![](hello-ios-quickstart-images/vs-image14.png "Adjust the width so the Button is as wide as the Text Field and Label")
 
-
 1. With the **Button** selected on the design surface, change the **Name** property in the **Identity** section of the **Properties** to `TranslateButton`. Change the **Title** property to "Translate":
 
     ![](hello-ios-quickstart-images/vs-image15.png "Change the Title property to Translate")
@@ -422,7 +421,6 @@ This walkthrough describes how to create an application called Phoneword that tr
 1. Double-click on **ViewController.cs** in the **Solution Explorer** to open it, so that logic can be added to handles interactions with the buttons:
 
     ![](hello-ios-quickstart-images/vs-image20.png "Logic added to handle interactions with the buttons")
-
 
 1. Begin by wiring up the `TranslateButton`. In the **ViewController** class, find the `ViewDidLoad` method. Add  the following button code inside `ViewDidLoad`, beneath the `base.ViewDidLoad()` call:
 

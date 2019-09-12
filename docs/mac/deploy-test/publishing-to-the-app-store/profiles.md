@@ -4,8 +4,8 @@ description: "This guide walks through creating the necessary Provisioning Profi
 ms.prod: xamarin
 ms.assetid: bdff6c32-f7e3-4a97-a093-dbda48be8227
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
 ---
 
@@ -86,7 +86,6 @@ Do the following:
 7. The provisioning profile will also appear in the list: 
 
     [![](profiles-images/certif26.png "Showing the installed profiles")](profiles-images/certif26.png#lightbox)
-
 
 If the developer ever changes the features being used by an App ID (eg. enabling iCloud or push notifications) then they should re-create the provision profiles for that App ID.
 

@@ -4,8 +4,8 @@ description: "In order to help clarify the features available to tvOS applicatio
 ms.prod: xamarin
 ms.assetid: 28EF1337-3D0E-47AB-8A13-1B333A964FB6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
 ---
 
@@ -104,8 +104,6 @@ The following is a list of frameworks that are supported by iOS 9 but have been 
 - WatchConnectivity
 - WatchKit
 - WebKit
-
-
 
 ## Related Links
 

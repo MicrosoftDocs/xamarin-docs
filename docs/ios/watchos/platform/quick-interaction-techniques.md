@@ -4,8 +4,8 @@ description: "This article covers the quick interaction techniques Apple has add
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
 ---
 
@@ -93,7 +93,7 @@ Apple suggest the following when working with Gesture Recognizers in watchOS 3:
 - Some gesture take precedence over other gesture types, such as:
   - Scrolling
   - Force Touch
- 
+
 ### Digital Crown Rotation
 
 By implementing Digital Crown Support in their watchOS 3 apps, a developer can provide increased navigation speed and precision interactions for their users.
@@ -164,7 +164,6 @@ Apple has left it up to the developer to determine how the rotation counts corre
 The sign (`+/-`) of the Rotational Delta indicates the direction that the user is turning the Digital Crown:
 
 [![](quick-interaction-techniques-images/quick03.png "The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
-
 
 If the user is scrolling up, WatchKit will return positive deltas and if scrolling down, then negative deltas will be returned, no matter what orientation the user is wearing the watch in.
 

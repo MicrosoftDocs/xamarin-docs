@@ -4,8 +4,8 @@ description: "This document describes how to replace your component references w
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/18/2018
 ---
 
@@ -149,7 +149,6 @@ will be performed via the **Nuget** update feature:
 
 ![Update NuGet package](component-nuget-images/nuget-update-sml.png)
 
-
 <a name="replace" />
 
 ## Components with NuGet replacements
@@ -221,7 +220,6 @@ with updates. You should plan to:
 Many component vendors are still working on migrating to NuGet, and others
 (including commercially available products) may be investigating
 alternative delivery options.
-
 
 ## Related Links
 - [List of popular Xamarin Plugins and Libraries](https://github.com/xamarin/XamarinComponents/blob/master/README.md)

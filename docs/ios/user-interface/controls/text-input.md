@@ -4,8 +4,8 @@ description: "This document describes text input in a Xamarin.iOS app. It discus
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
 ---
 
@@ -22,7 +22,6 @@ The screenshots below show the icons for these controls, located in the Toolbox 
 Once you have named the outlet and saved the Storyboard file, Visual Studio for Mac will update the `.designer.cs` partial class and you can add C# code that references the control to your class file. Each control has its own unique properties and events that can be accessed in your C# code.
 
  <a name="UITextField" />
-
 
 ## UITextField
 
@@ -41,7 +40,6 @@ These controls are explained below:
 - **Appearance** – Controls the appearance style of the keyboard and will be either dark or light themed.
 - **Return Key** – Change the label on the Return key to better reflect what action will be taken. Supported values include Go, Join, Next, Route, Done, and Search.
 - **Secure** – Identifies whether the input is masked (such as for a Password input).
-
 
 If a UITextField called `textfield1` has been added to a screen with the designer, you can set or change its properties in C# as follows:
 
@@ -67,7 +65,6 @@ View.Add(textfield1);
 
  <a name="UITextView" />
 
-
 ## UITextView
 
 The `UITextView` control can be used to display read-only text or to accept multiple-line text input. It has many of the same options as the `UITextField` (such as Capitalization, Correction, etc).
@@ -79,7 +76,6 @@ Specific properties include:
 - **Behavior** – Whether the text is editable or read-only.
 - **Detection** – Detects and converts the inputted data into clickable elements such as phone numbers that can trigger a call, addresses that become links to Maps, URLs that open in Safari or dates and times that become events in Calendar.
 
-
 If a UITextView has been added to a screen with the designer, you can set or change its properties like this:
 
 ```csharp
@@ -87,8 +83,6 @@ textview1.Text = "Lorem ipsum..."; // lots of text can go here
 textview1.Editable = true;
 textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorType.Link;
 ```
-
-
 
 ## Related Links
 

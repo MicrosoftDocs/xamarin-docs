@@ -4,8 +4,8 @@ description: "This article covers using key-value coding and key-value observing
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -2216,8 +2216,6 @@ First, we gain access to our SQLite.NET database, creating and populating it if 
 ## Summary
 
 This article has taken a detailed look at working with data binding and key-value coding with SQLite databases in a Xamarin.Mac application. First, it looked at exposing a C# class to Objective-C by using key-value coding (KVC) and key-value observing (KVO). Next, it showed how to use a KVO compliant class and Data Bind it to UI elements in Xcode's Interface Builder. The article also covered working with SQLite data via the SQLite.NET ORM and displaying that data in a Table View.
-
-
 
 ## Related Links
 

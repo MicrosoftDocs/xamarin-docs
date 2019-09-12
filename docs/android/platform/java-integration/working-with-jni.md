@@ -124,7 +124,6 @@ class MyComponentCallbacks : Java.Lang.Object, Android.Content.IComponentCallbac
 }
 ```
 
-
 ### Implementation Details
 
 *The remainder of this article provides implementation details subject
@@ -191,8 +190,6 @@ public class HelloAndroid extends android.app.Activity {
 Notice that the base class is preserved, and native method declarations are
 provided for each method that is overridden within managed code.
 
-
-
 ### ExportAttribute and ExportFieldAttribute
 
 Typically, Xamarin.Android automatically generates the Java code that
@@ -239,7 +236,6 @@ attributes reside in the `Java.Interop` namespace:
 The [ExportAttribute](https://docs.microsoft.com/samples/xamarin/monodroid-samples/exportattribute) sample
 project illustrates how to use these attributes.
 
-
 #### Troubleshooting ExportAttribute and ExportFieldAttribute
 
 - Packaging fails due to missing **Mono.Android.Export.dll** &ndash;
@@ -252,8 +248,6 @@ project illustrates how to use these attributes.
 - In Release build, `MissingMethodException` occurs for Export methods
     &ndash; In Release build, `MissingMethodException` occurs for
     Export methods. (This issue is fixed in the latest version of Xamarin.Android.)
-
-
 
 ### ExportParameterAttribute
 
@@ -274,8 +268,6 @@ in some advanced mappings between managed types and Java types such as:
 When types such as these are needed for exported methods, the
 `ExportParameterAttribute` must be used to explicitly give the corresponding
 parameter or return value a type.
-
-
 
 ### Annotation Attribute
 
@@ -321,8 +313,6 @@ Additionally the following limitations apply:
 - Attributes onto a property does not work. Use attributes for
     property getter or setter instead.
 
-
-
 ## Class Binding
 
 Binding a class means writing a managed callable wrapper to simplify
@@ -346,8 +336,6 @@ A binding typically contains the following items:
    custom attribute on the type declaration with
    [RegisterAttribute.DoNotGenerateAcw](xref:Android.Runtime.RegisterAttribute.DoNotGenerateAcw) set to `true`.
 
-
-
 ### Declaring Type Handle
 
 The field and method lookup methods require an object reference
@@ -360,7 +348,6 @@ static IntPtr class_ref = JNIEnv.FindClass(CLASS);
 
 See the [JNI Type References](#_JNI_Type_References) section for details about
 the `CLASS` token.
-
 
 ### Binding Fields
 
@@ -490,8 +477,6 @@ an `IntPtr` which contains the handle of the returned Java instance.
 is used to convert the Java handle into a strongly typed object
 instance.
 
-
-
 #### Non-virtual Instance Method Binding
 
 Binding a `final` instance method, or an instance method which doesn't
@@ -524,7 +509,6 @@ an `IntPtr` which contains the handle of the returned Java instance.
 is used to convert the Java handle into a strongly typed object
 instance.
 
-
 ### Binding Constructors
 
 Constructors are Java methods with the name `"<init>"`. Just as with
@@ -533,7 +517,6 @@ constructor handle. Unlike Java methods, the
 [JNIEnv.NewObject](xref:Android.Runtime.JNIEnv.NewObject*)
 methods are used to invoke the constructor method handle. The return
 value of `JNIEnv.NewObject` is a JNI local reference:
-
 
 ```csharp
 int value = 42;
@@ -719,8 +702,6 @@ the Xamarin.Android build process would have generated a new
 errors, as the `mono.android.test.Adder` type would be present twice,
 in two separate files.
 
-
-
 ### Binding Virtual Methods
 
 `ManagedAdder` subclasses the Java `Adder` type, but it isn't
@@ -734,7 +715,6 @@ categories:
 1. **Method Binding**
 
 1. **Method Registration**
-
 
 #### Method Binding
 
@@ -816,8 +796,6 @@ implementation will only be invoked if the subclass invoked
 `ThresholdClass` comes in. `ThresholdClass` specifies which Java class
 will provide the implementation of the method to invoke.
 
-
-
 #### Method Registration
 
 Assume we have an updated `ManagedAdder` definition which overrides the
@@ -846,7 +824,6 @@ values:
 
 1. The *connector method* , `GetAddHandler` in this case.
     Connector methods will be discussed later.
-
 
 The first two parameters allow the ACW generation process to generate a
 method declaration to override the method. The resulting ACW would
@@ -1008,8 +985,6 @@ public class Adder : Java.Lang.Object {
 }
 ```
 
-
-
 ### Restrictions
 
 When writing a type that matches the following criteria:
@@ -1019,7 +994,6 @@ When writing a type that matches the following criteria:
 1. Has a `[Register]` custom attribute
 
 1. `RegisterAttribute.DoNotGenerateAcw` is `true`
-
 
 Then for GC interaction the type *must not* have any fields which may
 refer to a `Java.Lang.Object` or `Java.Lang.Object` subclass at
@@ -1031,8 +1005,6 @@ restriction is to prevent premature object collection by the GC.
 If the type must contain an instance field that can refer to a
 `Java.Lang.Object` instance, then the field type must be
 `System.WeakReference` or `GCHandle`.
-
-
 
 ## Binding Abstract Methods
 
@@ -1048,7 +1020,6 @@ methods. There are only two differences:
     methods declared in the base class, and the overridden
     implementation is the Method Binding implementation, though the
     non-virtual dispatch case can be ignored.
-
 
 For example, assume that the above `mono.android.test.Adder.add` method
 were `abstract`. The C# binding would change so that `Adder.Add` were
@@ -1083,7 +1054,6 @@ partial class AdderInvoker : Adder {
 The `Invoker` type is only necessary when obtaining JNI references to
 Java-created instances.
 
-
 ## Binding Interfaces
 
 Binding interfaces is conceptually similar to binding classes
@@ -1099,8 +1069,6 @@ public interface Progress {
 
 Interface bindings have two parts: the C# interface definition, and an
 Invoker definition for the interface.
-
-
 
 ### Interface Definition
 
@@ -1207,8 +1175,6 @@ method, the `ThresholdType` and `ThresholdClass` members, the
 `GetObject` method, interface method implementation, and the connector
 method implementation.
 
-
-
 #### Constructor
 
 The constructor needs to lookup the runtime class of the instance being
@@ -1231,7 +1197,6 @@ Note: The `Handle` property must be used within the constructor body,
 and not the `handle` parameter, as on Android v4.0 the `handle`
 parameter may be invalid after the base constructor finishes executing.
 
-
 #### Dispose Method
 
 The `Dispose` method needs to free the global reference allocated in
@@ -1248,7 +1213,6 @@ partial class IAdderProgressInvoker {
     }
 }
 ```
-
 
 #### ThresholdType and ThresholdClass
 
@@ -1270,7 +1234,6 @@ partial class IAdderProgressInvoker {
 }
 ```
 
-
 #### GetObject Method
 
 A static `GetObject` method is required to support
@@ -1284,7 +1247,6 @@ partial class IAdderProgressInvoker {
     }
 }
 ```
-
 
 #### Interface Methods
 
@@ -1302,8 +1264,6 @@ partial class IAdderProgressInvoker {
     }
 }
 ```
-
-
 
 #### Connector Methods
 
@@ -1344,7 +1304,6 @@ int[] _values = (int[]) JNIEnv.GetArray(values, JniHandleOwnership.DoNotTransfer
 Note, however, that `JNIEnv.GetArray` copies the entire array between
 VMs, so for large arrays this could result in lots of added GC
 pressure.
-
 
 ### Complete Invoker Definition
 
@@ -1479,8 +1438,6 @@ dealt with: explicitly deleting them, creating a `Java.Lang.Object`
 instance to hold them, and using `Java.Lang.Object.GetObject<T>()` to
 create a managed callable wrapper around them.
 
-
-
 ### Explicitly Deleting Local References
 
 [JNIEnv.DeleteLocalRef](xref:Android.Runtime.JNIEnv.DeleteLocalRef*)
@@ -1522,7 +1479,6 @@ parameter determines how the `IntPtr` parameter should be treated:
 - [JniHandleOwnership.TransferGlobalRef](xref:Android.Runtime.JniHandleOwnership.TransferLocalRef)
     &ndash; The created `Java.Lang.Object` instance will take over ownership
     of the `handle` parameter. The caller must not free `handle` .
-
 
 Since the JNI method invocation methods return local refs,
 `JniHandleOwnership.TransferLocalRef` would normally be used:
@@ -1568,7 +1524,6 @@ The type `T` must fulfill the following requirements:
     `Java.Lang.IRunnable` , then the type `Java.Lang.IRunnableInvoker`
     must exist and must contain the required `(IntPtr,
     JniHandleOwnership)` constructor.
-
 
 Since the JNI method invocation methods return local refs,
 `JniHandleOwnership.TransferLocalRef` would normally be used:
@@ -1787,7 +1742,6 @@ where *Type* is the type of the field:
 
 - [JNIEnv.SetStaticField](xref:Android.Runtime.JNIEnv.SetStaticField*))
     &ndash; Write the value of `double` static fields.
-
 
 <a name="_Instance_Methods" />
 

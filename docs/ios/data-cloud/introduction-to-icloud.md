@@ -4,8 +4,8 @@ description: "This document describes iCloud and its use in Xamarin.iOS applicat
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/09/2016
 ---
 
@@ -68,7 +68,6 @@ Select and turn on the **Documents & Data** option.
 In fact, you really need two or more devices all signed in with the same Apple
 ID to see iCloud in action.
 
-
 ## Key-Value Storage
 
 Key-value storage is intended for small amounts of data that a user might
@@ -100,8 +99,6 @@ propagated.
 This screenshot shows the sample in use. When change notifications are
 received from iCloud they are printed in the scrolling text view at the bottom
 of the screen and updated in the input fields.
-
-
 
  [![](introduction-to-icloud-images/icloud-kv-arrows.png "The flow of messages between devices")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
@@ -496,8 +493,6 @@ application data in the **Documents** directory.
 
  [![](introduction-to-icloud-images/icloudstorage.png "Managing iCloud Documents workflow")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
-
-
 Users will also receive different warnings when they attempt to remove an
 iCloud-enabled application from their device, to inform them of the status of
 iCloud documents related to that application.
@@ -536,8 +531,6 @@ UIDocument example showed how more complex data can be stored and synchronized
 across multiple devices via iCloud.
 
 Finally it included a brief discussion on how the addition of iCloud Backup should influence your application design.
-
-
 
 ## Related Links
 

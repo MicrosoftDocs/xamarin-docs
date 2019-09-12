@@ -374,7 +374,7 @@ public partial class SaveFileFormatsPage : ContentPage
 
     public SaveFileFormatsPage ()
     {
-    	InitializeComponent ();
+        InitializeComponent ();
     }
 
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)

@@ -4,13 +4,12 @@ description: "This document describes app groups and their use in a watchOS appl
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 6968606B-C287-424F-A321-2492E12BC0BB
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
 ---
 
 # Working with watchOS App Groups in Xamarin
-
 
 An App Group allows different applications (or an
   application and its extensions) to access a shared
@@ -45,16 +44,13 @@ As well as configuring the provisioning profile,
 
 [![](app-groups-images/entitlements-sml.png "Configure the plist and enter the ID")](app-groups-images/entitlements.png#lightbox)
 
-
 ### Deployment
 
 Ensure you configure the App Group correctly
   in your [deployment](~/ios/watchos/deploy-test/index.md#App_Groups)
   provisioning.
 
-
 For more information, please see the [App Group Capabilities](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentation.
-
 
 ## Related Links
 

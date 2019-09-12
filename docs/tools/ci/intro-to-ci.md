@@ -3,8 +3,8 @@ title: "Introduction to Continuous Integration with Xamarin"
 description: "This document describes continuous integration with Xamarin. It discusses version control and various continuous integration environments."
 ms.prod: xamarin
 ms.assetid: C034200E-2947-4309-9DDD-80DAC505C43F
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/19/2017
 ---
 

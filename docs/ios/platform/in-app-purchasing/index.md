@@ -4,8 +4,8 @@ description: "This document describes how to sell digital products and services 
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -61,7 +61,6 @@ Xamarin.iOS. It has covered:
 - **Store Kit** – Explanation of the classes used to build in-app purchase features.
 - **Coding your app for purchasing** – Examples of how to build in-app purchase into a Xamarin.iOS app.
 - **Reporting** – Overview of the statistics available via iTunes Connect.
-
 
 ## Related Links
 

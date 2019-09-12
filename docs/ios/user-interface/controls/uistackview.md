@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
 ---
 
@@ -272,8 +272,6 @@ This article has covered the new `UIStackView` control (for iOS 9) to manage a s
 subviews in either a horizontally or vertically arranged stack in a Xamarin.iOS app.
 It began with a simple example of using Stack Views to create a UI, and finished
 with a more detailed look at Stack Views and their properties and features.
-
-
 
 ## Related Links
 

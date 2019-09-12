@@ -35,7 +35,6 @@ This guide focuses on building cross-platform enterprise apps using Xamarin.Form
 
 Feel free to forward this guide to team members to help ensure a common understanding of cross-platform enterprise app development using Xamarin.Forms. Having everybody working from a common set of terminologies and underlying principles will help ensure a consistent application of architectural patterns and practices.
 
-
 ## Related Links
 
 - [Download eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)

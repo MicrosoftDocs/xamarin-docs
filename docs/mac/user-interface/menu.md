@@ -4,8 +4,8 @@ description: "This article covers working with menus in a Xamarin.Mac applicatio
 ms.prod: xamarin
 ms.assetid: 5D367F8E-3A76-4995-8A89-488530FAD802
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -1066,7 +1066,6 @@ You can create and work with pull-down lists in the exact same way as pop-up but
 ## Summary
 
 This article has taken a detailed look at working with menus and menu items in a Xamarin.Mac application. First we examined the application's menu bar, then we looked at creating contextual menus, next we examined status bar menus and custom dock menus. Finally, we covered pop-up menus and pull-down Lists.
-
 
 ## Related Links
 

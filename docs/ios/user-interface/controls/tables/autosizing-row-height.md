@@ -4,8 +4,8 @@ description: "This document describes how to add to Xamarin.iOS apps table view 
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -103,7 +103,6 @@ This estimate doesn't have to be exact, just a rough estimate of the average hei
 With this code in place, when the app is run, each row will shrink and grow based on the height of the last Label in the Cell Prototype. For example:
 
 [![](autosizing-row-height-images/table07.png "A sample table run")](autosizing-row-height-images/table07.png#lightbox)
-
 
 ## Related Links
 

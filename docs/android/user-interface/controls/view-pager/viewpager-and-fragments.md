@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement a swipeable UI with ViewPager, using Fragments as the data pages._
 
- 
 ## Overview
 
 `ViewPager` is often used in conjunction with fragments so that it is 
@@ -35,8 +34,6 @@ not yet familiar with fragments in Xamarin.Android, see
 [Fragments](~/android/platform/fragments/index.md) to help you 
 get started with fragments. 
 
-
-
 ## Start an App Project
 
 Create a new Android project called **FlashCardPager**. Next, launch 
@@ -45,8 +42,6 @@ packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 
 Find and install the **Xamarin.Android.Support.v4** package as 
 explained in [Viewpager and Views](~/android/user-interface/controls/view-pager/viewpager-and-views.md). 
-
-
 
 ## Add an Example Data Source
 
@@ -82,8 +77,6 @@ The source code to `FlashCardDeck` is available at
 Download this source file (or copy and paste the code into a new
 **FlashCardDeck.cs** file) and add it to your project.
 
-
-
 ## Create a ViewPager Layout
 
 Open **Resources/layout/Main.axml** and replace its contents with the following XML:
@@ -105,7 +98,6 @@ because `ViewPager` is packaged in a support library. `ViewPager` is
 available only from the
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
 it is not available in the Android SDK.
-
 
 ## Set up ViewPager
 
@@ -160,8 +152,6 @@ the functionality of each flash card, and a `FragmentPagerAdapter` is
 created to connect the `ViewPager` to the fragments created from data 
 in the `FlashCardDeck`. 
 
-
-
 ## Create the Fragment
 
 Each flash card will be managed by a UI fragment called 
@@ -172,8 +162,6 @@ information contained with a single flash card. Each instance of
 the flash card problem text. This view will implement an event handler 
 that uses a `Toast` to display the answer when the user taps the flash 
 card question. 
-
-
 
 ### Create the FlashCardFragment Layout
 
@@ -207,8 +195,6 @@ This layout defines a single flash card fragment; each fragment is
 comprised of a `TextView` that displays a math problem using a large 
 (100sp) font. This text is centered vertically and horizontally on the 
 flash card. 
-
-
 
 ### Create the Initial FlashCardFragment Class
 
@@ -264,8 +250,6 @@ the `false` flag instructs the inflater to refrain from adding the
 inflated view to the view's parent (it will be added when `ViewPager` 
 call's the adapter's `GetItem` method later in this walkthrough). 
 
-
-
 ### Add State Code to FlashCardFragment
 
 Like an Activity, a fragment has a `Bundle` that it uses to save and 
@@ -317,7 +301,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 
 The `answer` variable is not used here, but it will be used later when 
 event handler code is added to this file. 
-
 
 ## Create the Adapter
 
@@ -380,8 +363,6 @@ replaced with working code. The purpose of the constructor is to pass
 the fragment manager to the `FlashCardDeckAdapter`'s base class 
 constructor. 
 
-
-
 ### Implement the Adapter Constructor
 
 When the app instantiates the `FlashCardDeckAdapter`, it supplies a 
@@ -403,8 +384,6 @@ this.flashCardDeck = flashCards;
 This line of code stores the `FlashCardDeck` instance that the 
 `FlashCardDeckAdapter` will use. 
 
-
-
 ### Implement Count
 
 The `Count` implementation is relatively simple: it returns the number 
@@ -418,11 +397,8 @@ public override int Count
 }
 ```
 
-
 The `NumCards` property of `FlashCardDeck` returns the number of flash 
 cards (number of fragments) in the data set. 
-
-
 
 ### Implement GetItem
 
@@ -459,8 +435,6 @@ When the `ViewPager` renders the `Fragment` at `position`, it displays
 the `TextBox` containing the math problem string residing at `position` 
 in the flash card deck. 
 
-
-
 ## Add the Adapter to the ViewPager
 
 Now that the `FlashCardDeckAdapter` is implemented, it's time to add it to the
@@ -486,8 +460,6 @@ as shown on the left in the next screenshot. Swipe left to see more
 flash cards, then swipe right to move back through the flash card deck:
 
 [![Example screenshots of FlashCardPager app without pager indicators](viewpager-and-fragments-images/02-example-views-sml.png)](viewpager-and-fragments-images/02-example-views.png#lightbox)
-
-
 
 ## Add a Pager Indicator
 
@@ -523,8 +495,6 @@ When you build and run the app, you should see the empty
 
 [![Closeup of PagerTabStrip without text](viewpager-and-fragments-images/03-empty-pagetabstrip-sml.png)](viewpager-and-fragments-images/03-empty-pagetabstrip.png#lightbox)
 
-
-
 ### Display a Title
 
 To add a title to each page tab, implement the `GetPageTitleFormatted` 
@@ -549,8 +519,6 @@ each page displays the problem number in the `PagerTabStrip`:
 
 You can swipe back and forth to see the problem number in the flash card 
 deck that is displayed at the top of each flash card. 
-
-
 
 ## Handle User Input
 
@@ -586,8 +554,6 @@ for managing fragments). To view an `AppCompatActivity` example, see
 [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager)
 in the Sample Gallery.
 
-
-
 ## Summary
 
 This walkthrough provided a step-by-step example of how to build a basic 
@@ -599,8 +565,6 @@ user navigate through the flash cards, instructions were included that
 explain how to add a `PagerTabStrip` to display the problem number at 
 the top of each page. Finally, event handling code was added to display 
 the answer when the user taps on a flash card problem. 
-
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This document describes how to work with native and managed except
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/05/2017
 ---
 
@@ -427,7 +427,6 @@ C function, which then throws any Objective-C exceptions, will still run into
 the old and undefined behavior (this may be improved in the future).
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
-
 
 ## Related Links
 

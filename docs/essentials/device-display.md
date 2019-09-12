@@ -94,7 +94,6 @@ No differences.
 
 --------------
 
-
 ## API
 
 - [DeviceDisplay source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)

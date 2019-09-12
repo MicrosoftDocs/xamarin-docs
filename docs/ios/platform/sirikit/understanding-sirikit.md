@@ -4,15 +4,14 @@ description: "This document describes the key concepts required for working with
 ms.prod: xamarin
 ms.assetid: 99EC5C1E-484F-4371-8555-58C9F60DE37F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/02/2017
 ---
 
 # Understanding SiriKit Concepts
 
 _This article covers the key concepts that will be required for working with SiriKit in a Xamarin.iOS app._
-
 
 New to iOS 10, SiriKit allows a Xamarin.iOS app to provide services that are accessible to the user using Siri and the Maps app on an iOS device. This functionality is provided in one or more App Extension using the new **Intents** and **Intents UI** frameworks.
 
@@ -147,7 +146,7 @@ The Intent is then sent to the App Extension for processing. As a result of proc
 
 Each IntentResponse will also include a **Response Code** which tells Siri if the app was able to complete the request or not. Some Domains have very specific error response codes that can be sent as well.
 
-Finally, the IntentResponse will include a `NSUserActivity` (like those used to support Hand Off). The `NSUserActivity` will be used to launch the app if the response requires them to leave the Siri environment and enter the app to complete it. 
+Finally, the IntentResponse will include a `NSUserActivity` (like those used to support Hand Off). The `NSUserActivity` will be used to launch the app if the response requires them to leave the Siri environment and enter the app to complete it.
 
 Siri will automatically build an appropriate `NSUserActivity` to start the app and pickup where the user left off in the Siri environment. However, the app can provide its own `NSUserActivity` with customized information, if it is required.
 
@@ -169,7 +168,7 @@ There are three main tasks that the App Extension will need to perform when deal
 
 ### The Resolve Stage
 
-The Resolve stage helps Siri understand the values that the user has provided and ensures that what the user actually meant is what will happen when the Intent is processed by the app. 
+The Resolve stage helps Siri understand the values that the user has provided and ensures that what the user actually meant is what will happen when the Intent is processed by the app.
 
 This stage also provides an opportunity for the app to influence Siri's behavior during the conversation with the user. To do this, the app will provide a **Resolution Response**. There are a number of predefined response to the different types of data that Siri understands.
 
@@ -177,7 +176,7 @@ The most common Resolution Response from the app will be **Success**, meaning th
 
 There might be times when the app needs to confirm that a given request matches the correct piece of information it knows about. In these cases, it will send a **ConfirmationRequired** response to ask a yes or no question to the user such as *"Send message to Bobo the Great?"*
 
-There may be other cases where the app will require the user to pick from a short list of options. In this case, the app will provide a **Disambiguation** response with a list of two to ten options for the user to choose from such as: 
+There may be other cases where the app will require the user to pick from a short list of options. In this case, the app will provide a **Disambiguation** response with a list of two to ten options for the user to choose from such as:
 
 ```csharp
 Who do you want to message?
@@ -212,7 +211,7 @@ Based on the Domain and Action type, Siri may prompt the user for confirmation, 
 
 The Handle Stage is the most important part of working with an Intent because it is the point where the app fulfills the user's request by performing the task it has been asked to do.
 
-Just like it did in the Confirm Stage, the app needs to provide as much information about the result as possible so Siri can relate this to the user. Sometimes this information will be presented visually or other times Siri will simply speak it back to the user. 
+Just like it did in the Confirm Stage, the app needs to provide as much information about the result as possible so Siri can relate this to the user. Sometimes this information will be presented visually or other times Siri will simply speak it back to the user.
 
 There might be times when the app may require extra time to process a given request, such as network call delays or if a live person needs to fulfill the request (like completing and shipping an order or driving a car to the user's location). When Siri is waiting for a response back from the app, it will display a Waiting UI to the user telling them that the app is processing the request.
 
@@ -223,7 +222,7 @@ Ideally, the app should provide a response to Siri within two to three seconds a
 With SiriKit in iOS 10, Apple has created two new Extension points:
 
 - **Intents Extension** - Provides Siri with the app's content and performs the tasks required to fulfill any supported intents.
-- **Intents UI Extension** - Provides a custom UI that will be displayed for the apps content inside of Siri. 
+- **Intents UI Extension** - Provides a custom UI that will be displayed for the apps content inside of Siri.
 
 There is also an API to provide words and phrases to Siri to aid in recognition in the form of:
 
@@ -287,9 +286,9 @@ There are several parts to a Vocabulary `AppIntentVocabulary.plist` file:
 
 - **Example App Uses** - These provide a set of common use cases for the requests that the user can make of the app. For example: *"Start a workout with MonkeyFit."*
 - **Parameters** - These provide a set of non standard parameter types specific to the app. For example, workout names for the MonkeyFit app. These consist of:
-    - **Phrase** - Allows the app to define unique terms for the app. For example: the "Bananarific" workout type for the MonkeyFit app. 
-    - **Pronunciation** - Gives pronunciation hints to Siri as a simple phonetic spelling for a given phrase. For example, "ba nana ri fic".
-    - **Example** - Provides an example of using the given phrase in the app. For example, *"Start a Bananarific in MonkeyFit"*.
+  - **Phrase** - Allows the app to define unique terms for the app. For example: the "Bananarific" workout type for the MonkeyFit app.
+  - **Pronunciation** - Gives pronunciation hints to Siri as a simple phonetic spelling for a given phrase. For example, "ba nana ri fic".
+  - **Example** - Provides an example of using the given phrase in the app. For example, *"Start a Bananarific in MonkeyFit"*.
 
 For more information, please see Apple's [App Vocabulary File Format Reference](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/CustomVocabularyKeys.html#//apple_ref/doc/uid/TP40016875-CH10-SW1).
 
@@ -321,7 +320,7 @@ More importantly, the app _must_ delete information from the Siri vocabulary pro
 
 The final piece of SiriKit is centered around permissions. Just like using other features of iOS (such as Photos, Camera or Contacts), users have to grant explicit permission for the app to talk to Siri.
 
-The app is able to provide a string defining what information it will provide to Siri and give a reason as to why the user should grant this access. 
+The app is able to provide a string defining what information it will provide to Siri and give a reason as to why the user should grant this access.
 
 Apple suggests the app should request permission from the user to use Siri the first time the user opens the app after they have upgraded to iOS 10. This is so users know about the Siri integration and can pre-approved usage before they make their first request.
 
@@ -331,9 +330,9 @@ SiriKit is an integral part of iOS and makes use of the larger Intents framework
 
 The Intents framework goes beyond just Siri integration and provides other features such as Contacts integration where the app can become the default telephony or messaging app for specific contacts. Intents also provide deep integration with CallKit to provide users with the best VOIP experience possible.
 
-The Maps app in iOS 10 has added features such as ride sharing where the user can book a ride directly inside of the Maps UI. SiriKit provides a common extension point with Maps so ride sharing (and other) intents can be shared between Siri and Maps. 
+The Maps app in iOS 10 has added features such as ride sharing where the user can book a ride directly inside of the Maps UI. SiriKit provides a common extension point with Maps so ride sharing (and other) intents can be shared between Siri and Maps.
 
-This means that if the app has adopted the SiriKit extensions, it will also get the Maps integration for free. 
+This means that if the app has adopted the SiriKit extensions, it will also get the Maps integration for free.
 
 ## Designing a Great Siri Experience
 
@@ -451,14 +450,11 @@ Take the appropriate time to explore and experiment on how the app can shape the
 
 Always remember to test the app in different situations and all of the different methods to invoke a conversation with Siri. Test in real world locations the user's might be using the app, away from the office and desk.
 
-Strive to have the conversations with Siri (on behalf of the app) be fluid, natural and "feel just right". 
+Strive to have the conversations with Siri (on behalf of the app) be fluid, natural and "feel just right".
 
 ## Summary
 
 This article has covered the key concepts required to use SiriKit and shown it can interact with the Xamarin.iOS apps to provide services that are accessible to the user using Siri and the Maps app on an iOS device.
-
-
-
 
 ## Related Links
 

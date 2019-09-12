@@ -53,7 +53,6 @@ Xamarin.Forms supports the following cell types:
 | The [`EntryCell`](xref:Xamarin.Forms.EntryCell) defines a [`Label`](xref:Xamarin.Forms.EntryCell.Label) property that identifies the cell and a single line of editable text in the [`Text`](xref:Xamarin.Forms.EntryCell.Text) property. Handle the [`Completed`](xref:Xamarin.Forms.EntryCell.Completed) event to be notified when the user has completed the text entry.<br /><br />[API Documentation](xref:Xamarin.Forms.EntryCell) / [Guide](~/xamarin-forms/user-interface/tableview.md#entrycell) | [![EntryCell Example](cells-images/EntryCell.png "EntryCell Example")](cells-images/EntryCell-Large.png#lightbox "EntryCell Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryCellDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryCellDemoPage.xaml) |
 |     |     |
 
-
 ## Related Links
 
 - [Xamarin.Forms FormsGallery sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery)

@@ -4,8 +4,8 @@ description: "This article describes how to use 3D Touch gestures introduced wit
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -71,9 +71,6 @@ The `MaximumPossibleForce` property returns the highest possible value for the `
 
 > [!IMPORTANT]
 > Changes in pressure will cause the `TouchesMoved` event to be raised, even if the X/Y coordinates have not changed. Because of this change in behavior, your iOS apps should be prepared for the `TouchesMoved` event to be invoked more often and for the X/Y coordinates to be the same as the last `TouchesMoved` call.
-
-
-
 
 For more information, please see Apple's [TouchCanvas: Using UITouch efficiently and effectively](https://developer.apple.com/library/prerelease/ios/samplecode/TouchCanvas/)
 sample app and [UITouch Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITouch_Class/).
@@ -221,7 +218,6 @@ of your app.
 
 [![](3d-touch-images/quickactions01.png "An example of a Quick Actions menu")](3d-touch-images/quickactions01.png#lightbox)
 
-
 ### Defining Static Quick Actions
 
 If one or more of the Quick Actions required by your app are static and do not need to change, you can define them in the app's `Info.plist` file. Edit this file in an external editor and add the following keys:
@@ -293,10 +289,6 @@ Here we are defining two static Quick Action items with the following keys:
 
 > [!IMPORTANT]
 > Quick Action shortcut items that are set in the `Info.plist` file cannot be accessed with the `Application.ShortcutItems` property. They are only passed in to the `HandleShortcutItem` event handler.
-
-
-
-
 
 ### Identifying Quick Action Items
 
@@ -398,7 +390,6 @@ Next, we override the `OnActivated` method and pass any selected Quick Launch it
 
 Finally, if your app was already running, the `PerformActionForShortcutItem` method would be called to handle the Quick Action item so we need to override it and call our `HandleShortcutItem` method here as well.
 
-
 ### Creating Dynamic Quick Action Items
 
 In addition to defining static Quick Action items in your app's `Info.plist` file, you can create dynamic on-the-fly Quick Actions. To define two new dynamic Quick Actions, edit your `AppDelegate.cs` file again and modify the `FinishedLaunching` method to look like the following:
@@ -461,8 +452,6 @@ the iPhone 6s and iPhone 6s Plus. It covered adding Pressure Sensitivity
 to an app; using Peek and Pop to quickly display in-app information from the
 current context without navigation; and using Quick Actions to provide
 shortcuts to your app's most commonly used features.
-
-
 
 ## Related Links
 

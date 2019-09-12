@@ -4,8 +4,8 @@ description: "This document describes ahead of time compilation in Xamarin.Mac. 
 ms.prod: xamarin
 ms.assetid: 38B8A017-5A58-429C-A6E9-9860A1DCEF63
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/10/2017
 ---
 
@@ -53,7 +53,6 @@ AOT options will be added to the Mac Build pane in a future update. Until then, 
                             --aot:all,-MyAssembly.dll
                             --aot:core,+MyOtherAssembly.dll,-mscorlib.dll
 ```
-
 
 ## Hybrid AOT
 

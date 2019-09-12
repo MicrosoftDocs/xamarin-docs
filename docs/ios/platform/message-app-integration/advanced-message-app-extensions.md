@@ -4,15 +4,14 @@ description: "This article shows advanced techniques for working with Message Ap
 ms.prod: xamarin
 ms.assetid: 394A1FDA-AF70-4493-9B2C-4CFE4BE791B6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
 ---
 
 # Advanced Message App Extensions in Xamarin.iOS
 
 _This article shows advanced techniques for working with Message App Extensions in a Xamarin.iOS solution that integrates with the Messages app and presents new functionality to the user._
-
 
 New to iOS 10, a Message App Extension integrates with the **Messages** app and presents new functionality to the user. The extension can send text, stickers, media files and interactive messages.
 
@@ -50,7 +49,6 @@ Interactive Messages present a Custom Message Bubble and are provided by a Messa
 The receiving user can reply to an Interactive Message by tapping its Message Bubble in the Message History to load the Message App Extension that created it. The Extension will be launched full-screen and allow the user to compose a reply and send it back to the originating user.
 
 [![](advanced-message-app-extensions-images/interactive02.png "The Extension launched full-screen")](advanced-message-app-extensions-images/interactive02.png#lightbox)
-
 
 The following topics will be covered in detail below:
 
@@ -422,7 +420,6 @@ using Foundation;
 using Messages;
 using UIKit;
 
-
 namespace MessageExtension
 {
     public partial class MessagesViewController : MSMessagesAppViewController
@@ -600,7 +597,6 @@ They will be delivered in a fallback format as two separate messages:
 ## Summary
 
 This article has presented advanced techniques for working with Message App Extensions in a Xamarin.iOS solution that integrates with the **Messages** app and present new functionality to the user.
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This document describes how to create web-based search results tha
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
 ---
 
@@ -202,8 +202,6 @@ Finally, the following HTML would add an action to get directions from the searc
 ```
 
 For more information, please see Apple's [App Search Developer Site](https://developer.apple.com/ios/search/).
-
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This article covers the steps required to setup and maintain a Xam
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -197,7 +197,7 @@ This section of the iTunes Connect Application Record provides the unique ID of 
 ### App Icon
 
 > [!IMPORTANT]
->  App Icons are no longer submitted through iTunes Connect. They must be submitted through the **AppIcon** image set in your project's **Assets.xcassets** file. For more information, see the [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) guide.
+> App Icons are no longer submitted through iTunes Connect. They must be submitted through the **AppIcon** image set in your project's **Assets.xcassets** file. For more information, see the [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) guide.
 
 The App Icon is the face of your application to your users, so it must be memorable and display well at a small size. Memorable icons are clean, simple, and immediately recognizable.
 
@@ -301,7 +301,6 @@ Do the following in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 
     [![](itunesconnect-images/review02.png "Editing release information in iTunes Connect")](itunesconnect-images/review02.png#lightbox)
 7. Click the **Save** button at the top of the screen to save your changes.
-
 
 ## Maintaining Pricing Information
 

@@ -3,8 +3,8 @@ title: "How can I update NuGet?"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 40DDE713-DE80-422F-BE34-A732E40C3F81
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
 ---
 
@@ -22,4 +22,3 @@ Please note, updates will *only* be shown in these menus if you do not have the 
 
 1. Open **Visual Studio for Mac > Extensions > Updates > IDE Extensions**
 2. Select **NuGet Package Management**
-

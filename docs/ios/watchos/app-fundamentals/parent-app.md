@@ -4,8 +4,8 @@ description: "This document describes how to work with a watchOS parent applicat
 ms.prod: xamarin
 ms.assetid: 9AD29833-E9CC-41A3-95D2-8A655FF0B511
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
 ---
 
@@ -14,7 +14,6 @@ ms.date: 03/17/2017
 > [!IMPORTANT]
 > Accessing the parent application using the examples below
 only works on watchOS 1 watch apps.
-
 
 There are different ways to communicate between the watch
 app and the iOS app that it is bundled with:
@@ -31,7 +30,6 @@ app and the iOS app that it is bundled with:
 
 The Parent App is also sometimes referred to as the Container App.
 
-
 <a name="code" />
 
 ## Run Code
@@ -46,8 +44,6 @@ This is especially useful for long running tasks (including
 network requests) - only the parent iOS app can take advantage of
 background processing to complete these tasks and save the
 retrieved data in a location accessible to the watch extension.
-
-
 
 ### Watch Kit App Extension
 
@@ -68,7 +64,6 @@ WKInterfaceController.OpenParentApplication (new NSDictionary (), (replyInfo, er
 });
 ```
 
-
 ### iOS App
 
 All calls from a watch app extension are routed through
@@ -76,7 +71,6 @@ the iPhone app's `HandleWatchKitExtensionRequest` method.
 If you are making different requests in the watch app
 then this method will need to query the `userInfo` dictionary
 to determine how to process the request.
-
 
 ```csharp
 [Register ("AppDelegate")]
@@ -95,7 +89,6 @@ public partial class AppDelegate : UIApplicationDelegate
     }
 }
 ```
-
 
 <a name="storage" />
 
@@ -167,8 +160,6 @@ wormHole = new Wormhole ("group.com.your-company.watchstuff", "messageDir");
 ```
 
 Download the C# version [WormHoleSharp](https://github.com/Clancey/WormHoleSharp).
-
-
 
 ## Related Links
 

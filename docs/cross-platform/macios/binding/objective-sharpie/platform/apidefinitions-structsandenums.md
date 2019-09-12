@@ -3,8 +3,8 @@ title: "ApiDefinitions & StructsAndEnums Files"
 description: "This document describes the ApiDefinitions.cs and StructsAndEnums.cs files that Objective Sharpie generates. These files are then used to access the Objective-C code from C#."
 ms.prod: xamarin
 ms.assetid: AC2087C0-BA54-46D8-B70C-6972941C8F73
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 
@@ -35,4 +35,3 @@ description to see how these files fit into the binding process, as shown in the
 
 Refer to the [binding Types reference](~/cross-platform/macios/binding/binding-types-reference.md)
 for more information on the contents of these files.
-

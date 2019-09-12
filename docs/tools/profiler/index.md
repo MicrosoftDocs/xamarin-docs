@@ -3,8 +3,8 @@ title: "Xamarin Profiler"
 description: "This guide explores the key features of the Xamarin Profiler. It look at profilers, profiling and when they should be used, and at a standard workflow for profiling Xamarin applications."
 ms.prod: xamarin
 ms.assetid: 3247fcee-6acc-470d-ab87-c1c511d67363
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/03/2018
 ---
 
@@ -96,13 +96,13 @@ Before you can successfully Profile your app, you will need to allow Profiling i
 
   **Build > iOS Debug > Enable Profiling**
 
-  ![](images/ios-options-mac.png "iOS Options Dialog in Visual Studio for Mac")
+  ![iOS Options Dialog in Visual Studio for Mac](images/ios-options-mac.png)
 
 # [Visual Studio](#tab/windows)
 
   **Properties > iOS Build > Enable Profiling**
 
-  ![](images/ios-project-options-vs.png "iOS Options Dialog in Visual Studio")
+  ![iOS Options Dialog in Visual Studio](images/ios-project-options-vs.png)
 
 -----
 
@@ -133,7 +133,7 @@ The Xamarin Profiler can be launched from your IDE when you are profiling your i
 1. First, make sure you have your application loaded in Visual Studio for Mac, and select the (default) Debug configuration.
 2. Browse to **Run > Start Profiling**in Visual Studio for Mac, or **Analyze > Xamarin Profiler** in Visual Studio, to open the Profiler, as demonstrated in the diagram below:
 
-  ![](images/start-profiling-xs.png "Launching the Profiler from Visual Studio for Mac")
+  ![Launching the Profiler from Visual Studio for Mac](images/start-profiling-xs.png)
 
 # [Visual Studio](#tab/windows)
 
@@ -160,13 +160,13 @@ To save a profiling session at any time, choose **File > Save As...** from the P
 
 After it has been installed the Xamarin Profiler can be found in your Applications folder as illustrated in the screenshot below:
 
-![](images/applications.png "Open standalone Profiler from Mac")
+![Open standalone Profiler from Mac](images/applications.png)
 
 # [Visual Studio](#tab/windows)
 
 After it has been installed the Xamarin Profiler application can be found in your Application directory:
 
-![](images/applications-vs.png "Open standalone Profiler from Windows ")
+![Open standalone Profiler from Windows](images/applications-vs.png)
 
 -----
 
@@ -180,11 +180,11 @@ The Xamarin Profiler is composed of five sections as illustrated below:
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![](images/profiler-mac-sml.png "Profiler sections in Visual Studio for Mac")](images/profiler-mac.png#lightbox) 
+[![Profiler sections in Visual Studio for Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-[![](images/profiler-vs.png "Profiler sections in Visual Studio")](images/profiler-vs.png#lightbox)
+[![Profiler sections in Visual Studio](images/profiler-vs.png)](images/profiler-vs.png#lightbox)
 
 -----
 
@@ -202,11 +202,11 @@ At the top of the profiler is the allocations chart, which displays the amount o
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![](images/allocations1.png "Allocations Instrument")](images/allocations1.png#lightbox) 
+[![Allocations Instrument](images/allocations1.png)](images/allocations1.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-[![](images/allocations1-vs.png "Allocations Instrument")](images/allocations1-vs.png#lightbox)
+[![Allocations Instrument](images/allocations1-vs.png)](images/allocations1-vs.png#lightbox)
 
 -----
 
@@ -216,11 +216,11 @@ There are different data views in the Allocations instrument, which allow develo
 
 # [Visual Studio for Mac](#tab/macos)
 
-  [![](images/allocations3.png "Allocations Tab")](images/allocations3.png#lightbox) 
+  [![Allocations Tab](images/allocations3.png)](images/allocations3.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-  [![](images/allocations2-vs.png "Allocations Tab")](images/allocations2-vs.png#lightbox)
+  [![Allocations Tab](images/allocations2-vs.png)](images/allocations2-vs.png#lightbox)
 
 -----
 
@@ -232,11 +232,11 @@ The Inspector view for Allocations provides options for filtering and grouping o
 
 # [Visual Studio for Mac](#tab/macos)
 
-  [![](images/allocations2.png "Call Tree Tab")](images/allocations2.png#lightbox) 
+  [![Call Tree Tab](images/allocations2.png)](images/allocations2.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-  [![](images/allocations3-vs.png "Call Tree Tab")](images/allocations3-vs.png#lightbox)
+  [![Call Tree Tab](images/allocations3-vs.png)](images/allocations3-vs.png#lightbox)
 
 -----
 
@@ -244,11 +244,11 @@ The Inspector view for Allocations provides options for filtering and grouping o
 
 # [Visual Studio for Mac](#tab/macos)
 
-  [![](images/allocations4.png "Snapshots Tab")](images/allocations4.png#lightbox) 
+  [![Snapshots Tab](images/allocations4.png)](images/allocations4.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-  [![](images/allocations4-vs.png "Snapshots Tab")](images/allocations4-vs.png#lightbox)
+  [![Snapshots Tab](images/allocations4-vs.png)](images/allocations4-vs.png#lightbox)
 
 -----
 
@@ -276,11 +276,11 @@ The plot chart, as shown in the screenshot below, displays the number of samples
 
 # [Visual Studio for Mac](#tab/macos)
 
-  [![](images/time2.png "Time Profiler Instrument – Call Tree")](images/time2.png#lightbox) 
+  [![Time Profiler Instrument – Call Tree](images/time2.png)](images/time2.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-  [![](images/time2-vs.png "Time Profiler Instrument – Call Tree")](images/time2-vs.png#lightbox) 
+  [![Time Profiler Instrument – Call Tree](images/time2-vs.png)](images/time2-vs.png#lightbox) 
 
 -----
 
@@ -304,14 +304,13 @@ Currently, only the default Debug configurations can be profiled.
 
 If you profile an app with any other configuration, you will be presented with the following message dialog:
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 [![Profiling Error Dialog](images/image001.png)](images/image001.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
-[![](images/image1vs.png "Profiling Error Dialog")](images/image1vs.png#lightbox) 
+[![Profiling Error Dialog](images/image1vs.png)](images/image1vs.png#lightbox) 
 
 -----
 

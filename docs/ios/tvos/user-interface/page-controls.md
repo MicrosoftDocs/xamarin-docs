@@ -4,8 +4,8 @@ description: "This document describes how to work with tvOS page controls in an 
 ms.prod: xamarin
 ms.assetid: 19198D46-7BBE-4D04-9BFA-7D1C5C9F9FC6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
 ---
 
@@ -30,37 +30,33 @@ The easiest way to work with Page Controls in a Xamarin.tvOS app is to add them 
 
 # [Visual Studio for Mac](#tab/macos)
 
-	
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
-1. Drag a **Page Control** from the **Toolbox** and drop it on the View: 
+1. Drag a **Page Control** from the **Toolbox** and drop it on the View:
 
-	[![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png#lightbox)
-1. In the **Widget Tab** of the **Properties Pad**, you can adjust several properties of the Page Control such as its **Current Page** and **# of Pages**: 
+    [![](page-controls-images/page02.png "A Page Control")](page-controls-images/page02.png#lightbox)
+1. In the **Widget Tab** of the **Properties Pad**, you can adjust several properties of the Page Control such as its **Current Page** and **# of Pages**:
 
-	[![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png#lightbox)
+    [![](page-controls-images/page03.png "The Widget Tab")](page-controls-images/page03.png#lightbox)
 1. Next, add controls or gestures to the view to move backward and forward through the collection of pages.
-1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
+1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example:
 
-	[![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
+    [![](page-controls-images/page04.png "Name the control")](page-controls-images/page04.png#lightbox)
 1. Save your changes.
-	
 
 # [Visual Studio](#tab/windows)
 
-	
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
-1. Drag a **Page Control** from the **Toolbox** and drop it on the View: 
+1. Drag a **Page Control** from the **Toolbox** and drop it on the View:
 
-	[![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png#lightbox)
-1. In the **Widget Tab** of the **Properties Explorer**, you can adjust several properties of the Page Control such as its **Current Page** and **# of Pages**: 
+    [![](page-controls-images/page02-vs.png "A Page Control")](page-controls-images/page02-vs.png#lightbox)
+1. In the **Widget Tab** of the **Properties Explorer**, you can adjust several properties of the Page Control such as its **Current Page** and **# of Pages**:
 
-	[![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png#lightbox)
+    [![](page-controls-images/page03-vs.png "The Widget tab")](page-controls-images/page03-vs.png#lightbox)
 1. Next, add controls or gestures to the view to move backward and forward through the collection of pages.
-1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example: 
+1. Finally, assign **Names** to the controls so that you can respond to them in C# code. For example:
 
-	[![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
+    [![](page-controls-images/page04-vs.png "Name the control")](page-controls-images/page04-vs.png#lightbox)
 1. Save your changes.
-	
 
 -----
 
@@ -76,68 +72,68 @@ using UIKit;
 
 namespace MySingleView
 {
-	public partial class ViewController : UIViewController
-	{
-		#region Computed Properties
-		public nint PageNumber { get; set; } = 0;
-		#endregion
+    public partial class ViewController : UIViewController
+    {
+        #region Computed Properties
+        public nint PageNumber { get; set; } = 0;
+        #endregion
 
-		#region Constructors
-		public ViewController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructors
+        public ViewController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// Initialize
-			PageView.Pages = 6;
-			ShowCat ();
-		}
+            // Initialize
+            PageView.Pages = 6;
+            ShowCat ();
+        }
 
-		public override void DidReceiveMemoryWarning ()
-		{
-			base.DidReceiveMemoryWarning ();
-			// Release any cached data, images, etc that aren't in use.
-		}
-		#endregion
+        public override void DidReceiveMemoryWarning ()
+        {
+            base.DidReceiveMemoryWarning ();
+            // Release any cached data, images, etc that aren't in use.
+        }
+        #endregion
 
-		#region Custom Actions
-		partial void NextCat (UIBarButtonItem sender) {
+        #region Custom Actions
+        partial void NextCat (UIBarButtonItem sender) {
 
-			// Display next Cat
-			if (++PageNumber > 5) {
-				PageNumber = 5;
-			}
-			ShowCat();
+            // Display next Cat
+            if (++PageNumber > 5) {
+                PageNumber = 5;
+            }
+            ShowCat();
 
-		}
+        }
 
-		partial void PreviousCat (UIBarButtonItem sender) {
-			// Display previous cat
-			if (--PageNumber < 0) {
-				PageNumber = 0;
-			}
-			ShowCat();
-		}
-		#endregion
+        partial void PreviousCat (UIBarButtonItem sender) {
+            // Display previous cat
+            if (--PageNumber < 0) {
+                PageNumber = 0;
+            }
+            ShowCat();
+        }
+        #endregion
 
-		#region Private Methods
-		private void ShowCat() {
+        #region Private Methods
+        private void ShowCat() {
 
-			// Adjust UI
-			PreviousButton.Enabled = (PageNumber > 0);
-			NextButton.Enabled = (PageNumber < 5);
-			PageView.CurrentPage = PageNumber;
+            // Adjust UI
+            PreviousButton.Enabled = (PageNumber > 0);
+            NextButton.Enabled = (PageNumber < 5);
+            PageView.CurrentPage = PageNumber;
 
-			// Display new cat
-			CatView.Image = UIImage.FromFile(string.Format("Cat{0:00}.jpg",PageNumber+1));
-		}
-		#endregion
-	}
+            // Display new cat
+            CatView.Image = UIImage.FromFile(string.Format("Cat{0:00}.jpg",PageNumber+1));
+        }
+        #endregion
+    }
 }
 ```
 
@@ -155,15 +151,13 @@ PageView.CurrentPage = PageNumber;
 
 The `CurrentPage` property is zero (0) based, so the first page will be zero and the last will be one minus the maximum number of pages.
 
-For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
+For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Summary" />
 
 ## Summary
 
 This article has covered designing and working with Page Control inside of a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

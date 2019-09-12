@@ -126,7 +126,6 @@ also set your Target Framework level to API 28 or later. For more about
 configuring Android API levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
 
-
 ### Configure a device or emulator
 
 If you are using a physical device such as a Nexus or a Pixel, you can
@@ -140,8 +139,6 @@ Device Manager to create and manage virtual devices, see
 For information about using the Android emulator for testing and
 debugging, see
 [Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
-
-
 
 ## New features
 
@@ -165,7 +162,6 @@ enhance the Android user experience:
 - **Multi-Camera Support** &ndash; Offers the capability to access
     streams simultaneously from multiple physical cameras (such as
     dual-front and dual-back cameras).
-
 
 The following sections highlight these features and provide brief code
 examples to help you get started using them in your app.
@@ -226,8 +222,6 @@ to display content in this non-functional area.
 
 For more information about the new cutout features in Android P, see 
 [Display cutout support](https://developer.android.com/about/versions/pie/android-9.0#cutout).
-
-
 
 ### Notifications enhancements
 
@@ -315,7 +309,6 @@ Pie notification, and it demonstrates usage of the new `Person` class:
 For more information about creating notifications, see
 [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md).
 
-
 ### Indoor positioning
 
 Android Pie provides support for IEEE 802.11mc (also known as _WiFi
@@ -335,7 +328,6 @@ class and several helper classes provides the means for measuring
 distance to Wi-Fi devices. For more information about the indoor
 positioning APIs introduced in Android P, see
 [Android.Net.Wifi.Rtt](https://developer.android.com/reference/android/net/wifi/rtt/package-summary).
-
 
 ### Multi-Camera support
 
@@ -357,7 +349,6 @@ eliminate the need to start and start the camera stream.
 
 For more information about Multi-Camera support in Android P, see 
 [Multi-camera support and camera updates](https://developer.android.com/about/versions/pie/android-9.0#camera).
-
 
 ### Other features
 
@@ -381,7 +372,6 @@ In addition, Android Pie supports several other new features:
 For more information about the latest Android Pie features, see
 [Android 9 features and APIs](https://developer.android.com/about/versions/pie/android-9.0).
 
-
 ## Behavior changes
 
 When the Target Android Version is set to API level 28, there are
@@ -401,14 +391,12 @@ following list is a brief summary of these changes:
 For more information about behavior changes for apps targeting Android P,
 see [Behavior Changes](https://developer.android.com/about/versions/pie/android-9.0-changes-all#p-apps).
 
-
 ## Sample code
 
 [AndroidPMiniDemo](https://github.com/xamarin/monodroid-samples/tree/master/android-p/AndroidPMiniDemo)
 is a Xamarin.Android sample app for Android Pie that demonstrates how to
 set display cutout modes, how to use the new `Person` class, and how to
 send a notification that includes an image.
-
 
 ## Summary
 
@@ -420,7 +408,6 @@ It included links to API documentation and Android Developer topics to
 help you get started in creating apps for Android Pie. It also
 highlighted the most important Android Pie behavior changes that could
 impact existing apps.
-
 
 ## Related links
 

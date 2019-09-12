@@ -4,8 +4,8 @@ description: "This document describes how to use TextKit in Xamarin.iOS. TextKit
 ms.prod: xamarin
 ms.assetid: 1D0477E8-CD1E-48A9-B7C8-7CA892069EFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -24,9 +24,8 @@ To make the features of TextKit available to standard controls, several iOS text
 TextKit provides a layered architecture that separates the text storage from the layout and display, including the following classes:
 
 - `NSTextContainer` – Provides the coordinate system and geometry that is used to layout text.
-- `NSLayoutManager` – Lays out text by turning text into glyphs. 
+- `NSLayoutManager` – Lays out text by turning text into glyphs.
 - `NSTextStorage` – Holds the text data, as well as handles batch text property updates. Any batch updates are handed to the layout manager for the actual processing of the changes, such as recalculating the layout and redrawing the text.
-
 
 These three classes are applied to a view that renders text. The built-in text handling views, such as `UITextView`, `UITextField`, and `UILabel` already have them set, but you can create and apply them to any `UIView` instance as well.
 
@@ -63,74 +62,74 @@ Consider the following `UITextView` subclass implementation:
 public class ExclusionPathView : UITextView
 {
     CGPath exclusionPath;
-	CGPoint initialPoint;
-	CGPoint latestPoint;
-	UIBezierPath bezierPath;
+    CGPoint initialPoint;
+    CGPoint latestPoint;
+    UIBezierPath bezierPath;
 
-	public ExclusionPathView (string text)
-	{
-		Text = text;
-		ContentInset = new UIEdgeInsets (20, 0, 0, 0);
-		BackgroundColor = UIColor.White;
-		exclusionPath = new CGPath ();
-		bezierPath = UIBezierPath.Create ();
+    public ExclusionPathView (string text)
+    {
+        Text = text;
+        ContentInset = new UIEdgeInsets (20, 0, 0, 0);
+        BackgroundColor = UIColor.White;
+        exclusionPath = new CGPath ();
+        bezierPath = UIBezierPath.Create ();
 
-		LayoutManager.AllowsNonContiguousLayout = false;
-	}
+        LayoutManager.AllowsNonContiguousLayout = false;
+    }
 
-	public override void TouchesBegan (NSSet touches, UIEvent evt)
-	{
-		base.TouchesBegan (touches, evt);
+    public override void TouchesBegan (NSSet touches, UIEvent evt)
+    {
+        base.TouchesBegan (touches, evt);
 
-		var touch = touches.AnyObject as UITouch;
+        var touch = touches.AnyObject as UITouch;
 
-		if (touch != null) {
-			initialPoint = touch.LocationInView (this);
-		}
-	}
+        if (touch != null) {
+            initialPoint = touch.LocationInView (this);
+        }
+    }
 
-	public override void TouchesMoved (NSSet touches, UIEvent evt)
-	{
-		base.TouchesMoved (touches, evt);
+    public override void TouchesMoved (NSSet touches, UIEvent evt)
+    {
+        base.TouchesMoved (touches, evt);
 
-		UITouch touch = touches.AnyObject as UITouch;
+        UITouch touch = touches.AnyObject as UITouch;
 
-		if (touch != null) {
-			latestPoint = touch.LocationInView (this);
-			SetNeedsDisplay ();
-		}
-	}
+        if (touch != null) {
+            latestPoint = touch.LocationInView (this);
+            SetNeedsDisplay ();
+        }
+    }
 
-	public override void TouchesEnded (NSSet touches, UIEvent evt)
-	{
-		base.TouchesEnded (touches, evt);
+    public override void TouchesEnded (NSSet touches, UIEvent evt)
+    {
+        base.TouchesEnded (touches, evt);
 
-		bezierPath.CGPath = exclusionPath;
-		TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
-	}
+        bezierPath.CGPath = exclusionPath;
+        TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
+    }
 
-	public override void Draw (CGRect rect)
-	{
-		base.Draw (rect);
+    public override void Draw (CGRect rect)
+    {
+        base.Draw (rect);
 
-		if (!initialPoint.IsEmpty) {
+        if (!initialPoint.IsEmpty) {
 
-			using (var g = UIGraphics.GetCurrentContext ()) {
+            using (var g = UIGraphics.GetCurrentContext ()) {
 
-				g.SetLineWidth (4);
-				UIColor.Blue.SetStroke ();
+                g.SetLineWidth (4);
+                UIColor.Blue.SetStroke ();
 
-				if (exclusionPath.IsEmpty) {
-					exclusionPath.AddLines (new CGPoint[] { initialPoint, latestPoint });
-				} else {
-					exclusionPath.AddLineToPoint (latestPoint);
-				}
+                if (exclusionPath.IsEmpty) {
+                    exclusionPath.AddLines (new CGPoint[] { initialPoint, latestPoint });
+                } else {
+                    exclusionPath.AddLineToPoint (latestPoint);
+                }
 
-				g.AddPath (exclusionPath);
-				g.DrawPath (CGPathDrawingMode.Stroke);
-			}
-		}
-	}
+                g.AddPath (exclusionPath);
+                g.DrawPath (CGPathDrawingMode.Stroke);
+            }
+        }
+    }
 }
 ```
 
@@ -138,8 +137,6 @@ This code adds support for drawing on the text view using Core Graphics. Since t
 
 > [!IMPORTANT]
 > This example subclasses `UITextView` to add touch drawing support. Subclassing `UITextView` isn’t necessary to get the features of TextKit.
-
-
 
 After the user draws on the text view, the drawn `CGPath` is applied to a `UIBezierPath` instance by setting the `UIBezierPath.CGPath` property:
 
@@ -155,11 +152,10 @@ TextContainer.ExclusionPaths = new UIBezierPath[] { bezierPath };
 
 The following screenshot illustrates how the text layout changes to flow around the drawn path:
 
-<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")--> 
+<!-- ![](textkit-images/exclusionpath1.png "This screenshot illustrates how the text layout changes to flow around the drawn path")-->
 ![](textkit-images/exclusionpath2.png "This screenshot illustrates how the text layout changes to flow around the drawn path")
 
 Notice that the layout manager’s `AllowsNonContiguousLayout` property is set to false in this case. This causes the layout to be recalculated for all cases where the text changes. Setting this to true may benefit performance by avoiding a full-layout refresh, especially in the case of large documents. However, setting `AllowsNonContiguousLayout` to true would prevent the exclusion path from updating the layout in some circumstances - for example, if text is entered at runtime without a trailing carriage return prior to the path being set.
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This article covers working with alerts in a Xamarin.Mac applicati
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -104,7 +104,6 @@ alert.BeginSheet (this);
 If this code is run, the following will be displayed:
 
 [![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
-
 
 <a name="Working_with_Alert_Buttons" />
 

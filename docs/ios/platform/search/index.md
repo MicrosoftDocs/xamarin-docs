@@ -4,8 +4,8 @@ description: "This article covers using the new App Search APIs provided by iOS 
 ms.prod: xamarin
 ms.assetid: 7323EB3D-A78F-4BF0-9990-3160C7E83CF0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
 ---
 
@@ -113,8 +113,6 @@ This article has covered the new Search API features that iOS 9 provides for
 Xamarin.iOS apps. It covered [NSUserActivity](nsuseractivity.md), [Core Spotlight](corespotlight.md)
 and [Web Markup](web-markup.md) methods for indexing content. It finished with a short discussion
 of when a given search approach should be used and what types of content should be indexed.
-
-
 
 ## Related Links
 

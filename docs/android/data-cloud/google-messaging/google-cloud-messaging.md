@@ -45,8 +45,6 @@ server.
 For information about implementing an app server for GCM, see
 [About GCM Connection Server](https://developers.google.com/cloud-messaging/server).
 
-
-
 ## Google Cloud Messaging in Action
 
 When downstream messages are sent from an app server to a client app,
@@ -100,8 +98,6 @@ these credentials.
 The following sections explain how these credentials are used when
 client apps communicate with app servers through GCM.
 
-
-
 ### Registration with GCM
 
 A client app installed on a device must first register with GCM before
@@ -136,8 +132,6 @@ explains the registration process in more detail; it explains
 unregistration and unsubscription, and it describes the process of
 unregistration when a client app is uninstalled.
 
-
-
 ### Downstream Messaging
 
 When the app server sends a downstream message to the client app, it
@@ -164,7 +158,6 @@ For detailed information (including code samples) about receiving
 downstream GCM messages on Android, see
 [Remote Notifications](~/android/data-cloud/google-messaging/remote-notifications-with-gcm.md).
 
-
 #### Topic Messaging
 
 *Topic Messaging* is a type of downstream messaging where the app
@@ -178,8 +171,6 @@ server. Google's
 explains how to send messages from an app server to multiple devices
 that subscribe to a particular topic.
 
-
-
 #### Group Messaging
 
 *Group Messaging* is a type of downstream messaging where the app
@@ -191,7 +182,6 @@ limited to a maximum of 20 members. Google's
 [Device Group Messaging](https://developers.google.com/cloud-messaging/notifications)
 explains how app servers can send a single message to multiple client
 app instances running on devices that belong to a group.
-
 
 ### Upstream Messaging
 
@@ -220,7 +210,6 @@ Google's [Upstream Messages](https://developers.google.com/cloud-messaging/ccs#u
 explains how to structure JSON-encoded messages and send them to app
 servers that run Google's XMPP-based Cloud Connection Server.
 
-
 <a name="settingup" />
 
 ## Setting Up Google Cloud Messaging
@@ -228,8 +217,6 @@ servers that run Google's XMPP-based Cloud Connection Server.
 Before you can use GCM services in your app, you must first acquire
 credentials for access to Google's GCM servers. The following sections
 describe the steps required to complete this process:
-
-
 
 ### Enable Google Services for Your App
 
@@ -269,8 +256,6 @@ describe the steps required to complete this process:
     [Best practices for securely using API keys](https://support.google.com/cloud/answer/6310037?hl=en)
     provides useful guidelines for protecting your API Key.
 
-
-
 ### View Your Project Settings
 
 You can view your project settings at any time by signing into the
@@ -287,8 +272,6 @@ To view the **API key**, click **API Manager** and then click **Credentials**:
 
 [![Viewing the API key](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png#lightbox)
 
-
-
 ## For Further Reading
 
 - Google's [Registering Client Apps](https://developers.google.com/cloud-messaging/registration)
@@ -300,8 +283,6 @@ To view the **API key**, click **API Manager** and then click **Credentials**:
     [RFC 6121](https://tools.ietf.org/html/rfc6121) explain and define
     the Extensible Messaging and Presence Protocol (XMPP).
 
-
-
 ## Summary
 
 This article provided an overview of Google Cloud Messaging (GCM). It
@@ -309,7 +290,6 @@ explained the various credentials that are used to identify and
 authorize messaging between app servers and client apps. It illustrated
 the most common messaging scenarios, and it detailed the steps for
 registering your app with GCM to use GCM services.
-
 
 ## Related Links
 

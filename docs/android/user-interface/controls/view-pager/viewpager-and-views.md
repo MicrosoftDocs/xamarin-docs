@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement a swipeable UI with ViewPager and PagerTabStrip, using Views as the data pages (a subsequent guide covers how to use Fragments for the pages)._
 
- 
 ## Overview
 
 This guide is a walkthrough that provides a step-by-step demonstration 
@@ -33,8 +32,6 @@ app illustrated in this walkthrough does not require the use of
 back and forth between different images, the implementation can be kept 
 simpler by using standard Android views and layouts. 
 
-
-
 ## Start an App Project
 
 Create a new Android project called **TreePager** (see
@@ -48,8 +45,6 @@ Find and install **Android Support Library v4**:
 [![Screenshot of Support v4 Nuget selected in the NuGet Package Manager](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 This will also install any additional packages reaquired by **Android Support Library v4**.
-
-
 
 ## Add an Example Data Source
 
@@ -81,8 +76,6 @@ Download this source file (or copy and paste the code into a new
 unzip the [image files](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/Resources/tree-images.zip?raw=true) into your 
 **Resources/drawable** folder and include them in the project. 
 
-
-
 ## Create a ViewPager Layout
 
 Open **Resources/layout/Main.axml** and replace its contents with the following XML:
@@ -104,7 +97,6 @@ because `ViewPager` is packaged in a support library. `ViewPager` is
 available only from 
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
 it is not available in the Android SDK. 
-
 
 ## Set up ViewPager
 
@@ -143,7 +135,6 @@ At this point, the `ViewPager` is empty because it is lacking an
 adapter for accessing the content in **TreeCatalog**. In the next 
 section, a **PagerAdapter** is created to connect the `ViewPager` to 
 the **TreeCatalog**. 
-
 
 ## Create the Adapter
 
@@ -217,8 +208,6 @@ This code stubs out the essential `PagerAdapter` implementation. In the
 following sections, each of these methods is replaced with working 
 code. 
 
-
-
 ### Implement the Constructor
 
 When the app instantiates the `TreePagerAdapter`, it supplies a context 
@@ -240,8 +229,6 @@ public TreePagerAdapter (Context context, TreeCatalog treeCatalog)
 The purpose of this constructor is to store the context and 
 `TreeCatalog` instance that the `TreePagerAdapter` will use. 
 
-
-
 ### Implement Count
 
 The `Count` implementation is relatively simple: it returns the number of
@@ -256,8 +243,6 @@ public override int Count
 
 The `NumTrees` property of `TreeCatalog` returns the number of trees
 (number of pages) in the data set.
-
-
 
 ### Implement InstantiateItem
 
@@ -301,8 +286,6 @@ When the `ViewPager` displays the image at `position`, it displays this
 the first two pages with views. As the user scrolls, it is called again 
 to maintain views just behind and ahead of the currently displayed item. 
 
-
-
 ### Implement DestroyItem
 
 The `DestroyItem` method removes a page from the given position. In 
@@ -331,8 +314,6 @@ This code does the following:
 2. Casts the passed Java object (`view`) into a C# `View` (`view as View`);
 
 3. Removes the view from the `ViewPager`. 
-
-
 
 ### Implement IsViewFromObject
 
@@ -363,7 +344,6 @@ public override bool IsViewFromObject(View view, Java.Lang.Object obj)
 }
 ```
 
-
 ## Add the Adapter to the ViewPager
 
 Now that the `TreePagerAdapter` is implemented, it's time to add it to the
@@ -386,8 +366,6 @@ as shown on the left in the next screenshot. Swipe left to see more
 tree views, then swipe right to move back through the tree catalog: 
 
 [![Screenshots of TreePager app swiping through tree images](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
-
-
 
 ## Add a Pager Indicator
 
@@ -429,8 +407,6 @@ adapter. When you build and run the app, you should see the empty
 
 [![Closeup screenshot of an empty PagerTabStrip](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
-
-
 ### Display a Title
 
 To add a title to each page tab, implement the `GetPageTitleFormatted` 
@@ -457,8 +433,6 @@ should see the tree name at the top of the screen without an underline:
 You can swipe back and forth to view each captioned tree image in the 
 catalog. 
 
-
-
 ### PagerTitleStrip Variation
 
 `PagerTitleStrip` is very similar to `PagerTabStrip` except that 
@@ -471,8 +445,6 @@ and run the app again to see how it looks with `PagerTitleStrip`:
 Note that the underline is removed when you convert to 
 `PagerTitleStrip`. 
 
-
- 
 ## Summary
 
 This walkthrough provided a step-by-step example of how to build a 
@@ -483,7 +455,6 @@ that connects the `ViewPager` to the data source. To help the user
 navigate through the data set, instructions were included that explain 
 how to add a `PagerTabStrip` or `PagerTitleStrip` to display the image 
 caption at the top of each page. 
-
 
 ## Related Links
 

@@ -22,7 +22,6 @@ can read from by your application using
 In this simple demo, we are going to add a text file asset to our
 project, read it using `AssetManager`, and display it in a TextView.
 
-
 ## Add Asset to Project
 
 Assets go in the `Assets` folder of your project. Add a new text file
@@ -47,7 +46,6 @@ Visual Studio for Mac should have set the **Build Action** for this file to
 
 Selecting the correct **BuildAction** ensures that the file will be
 packaged into the APK at compile time.
-
 
 ## Reading Assets
 
@@ -81,13 +79,11 @@ protected override void OnCreate (Bundle bundle)
 }
 ```
 
-
 ## Running the Application
 
 Run the application and you should see the following:
 
 ![Example screenshot](android-assets-images/screenshot.png)
-
 
 ## Related Links
 

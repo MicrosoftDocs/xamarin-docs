@@ -168,15 +168,14 @@ There are many techniques for improving the performance of a `ListView`:
 - Avoid deeply nested layout hierarchies. Use  `AbsoluteLayout` or  `Grid` to help reduce nesting.
 - Avoid specific `LayoutOptions` other than  `Fill` (Fill is the cheapest to compute).
 - Avoid placing a `ListView` inside a `ScrollView` for the following reasons:
-    - The `ListView` implements its own scrolling.
-    - The `ListView` will not receive any gestures, as they will be handled by the parent `ScrollView`.
-    - The `ListView` can present a customized header and footer that scrolls with the elements of the list, potentially offering the functionality that the `ScrollView` was used for. For more information see [Headers and Footers](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
+  - The `ListView` implements its own scrolling.
+  - The `ListView` will not receive any gestures, as they will be handled by the parent `ScrollView`.
+  - The `ListView` can present a customized header and footer that scrolls with the elements of the list, potentially offering the functionality that the `ScrollView` was used for. For more information see [Headers and Footers](~/xamarin-forms/user-interface/listview/customizing-list-appearance.md#Headers_and_Footers).
 - Consider a custom renderer if you need a very specific, complex design presented in your cells.
 
 `AbsoluteLayout` has the potential to perform layouts without a single measure call. This makes it very powerful for performance. If `AbsoluteLayout` cannot be used, consider [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout). If using `RelativeLayout`, passing Constraints directly will be considerably faster than using the expression API. That is because the expression API uses JIT, and on iOS the tree has to be interpreted, which is slower. The expression API is suitable for page layouts where it only required on initial layout and rotation, but in `ListView`, where it's run constantly during scrolling, it hurts performance.
 
 Building a custom renderer for a [`ListView`](xref:Xamarin.Forms.ListView) or its cells is one approach to reducing the effect of layout calculations on scrolling performance. For more information, see [Customizing a ListView](~/xamarin-forms/app-fundamentals/custom-renderer/listview.md) and [Customizing a ViewCell](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md).
-
 
 ## Related Links
 

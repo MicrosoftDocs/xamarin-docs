@@ -3,8 +3,8 @@ title: "Step 2. Configure Service Access for Mobile Application"
 description: "This document describes how to provide a Xamarin application with access to an Azure application secured by Azure Active Directory."
 ms.prod: xamarin
 ms.assetid: 8A14A457-F72E-4B08-B4B6-801F7619F893
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
 ---
 
@@ -37,8 +37,6 @@ Whenever any resource e.g. web application, web service,
 
 4. Finally, **Save** the configuration. These services should
    now be available in mobile applications!
-
-
 
 ## Related Links
 

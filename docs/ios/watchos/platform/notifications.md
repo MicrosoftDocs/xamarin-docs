@@ -4,8 +4,8 @@ description: "This document describes how to work with watchOS notifications in 
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
 ---
 
@@ -40,7 +40,6 @@ After you have customized the controller it may look like
 
 ![](notifications-images/notifications-segue.png "The Notification Properties")
 
-
 There are two types of notification:
 
 - **Short-look** - non-scrollable static view
@@ -59,7 +58,6 @@ If the user does not ignore the notification,
   the system will automatically switch to
   a long-look notification that provides
   more information.
-
 
 ### Long-Look Notification Controller
 
@@ -80,7 +78,6 @@ The dynamic view can display more data and provide
   more interactivity.
 
 ![](notifications-images/notification-dynamic.png "The dynamic view")
-
 
 ## Generating Notifications
 
@@ -197,8 +194,6 @@ In the [Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-sample
         "customKey": "Use this file to define a testing payload for your notifications. The aps dictionary specifies the category, alert text and title. The WatchKit Simulator Actions array can provide info for one or more action buttons in addition to the standard Dismiss button. Any other top level keys are custom payload. If you have multiple such JSON files in your project, you'll be able to choose between them in when selecting to debug the notification interface of your Watch App."
     }
 ```
-
-
 
 ## Related Links
 

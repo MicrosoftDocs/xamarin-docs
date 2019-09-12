@@ -216,8 +216,6 @@ The above code results in the following layout:
 
 Notice that the `StackLayouts` are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout. Also notice that, because `StackLayout` doesn't support overlapping items, the page doesn't have some of the layout niceties found in the pages for the other layouts.
 
-
-
 ## Related Links
 
 - [LayoutOptions](~/xamarin-forms/user-interface/layouts/layout-options.md)

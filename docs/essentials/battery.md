@@ -157,7 +157,6 @@ public class EnergySaverTest
 
 If the energy-saver status changes to `On`, the application should stop performing background processing. If the status changes to `Unknown` or `Off`, the application can resume background processing.
 
-
 ## Platform Differences
 
 # [Android](#tab/android)

@@ -4,8 +4,8 @@ description: "This document describes how to work with touch events, multi-touch
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -36,7 +36,6 @@ There are three phases of touch that occur when the user touches the screen, mov
 - `TouchesBegan` – This is called when the screen is first touched.
 - `TouchesMoved` – This is called when the location of the touch changes as the user is sliding their fingers around the screen.
 - `TouchesEnded` or  `TouchesCancelled` –  `TouchesEnded` is called when the user’s fingers are lifted off the screen.  `TouchesCancelled` gets called if iOS cancels the touch – for example, if a user slides his or her finger away from a button to cancel a press.
-
 
 Touch events travel recursively down through the stack of UIViews, to check if the touch event is within the bounds of a view object. This is often called _Hit-testing_. They will first be called on the topmost `UIView` or `UIViewController` and then will be called on the `UIView` and `UIViewControllers` below them in the view hierarchy.
 
@@ -121,7 +120,6 @@ Xamarin.iOS provides the class `UIGestureRecognizer` as a base class for the fol
 - *UIRotationGestureRecognizer* – Rotating two fingers in a clockwise or counter-clockwise motion.
 - *UILongPressGestureRecognizer* – Press and hold, sometimes referred to as a long-press or long-click.
 
-
 The basic pattern to using a gesture recognizer is as follows:
 
 1. **Instantiate the gesture recognizer** – First, instantiate a  `UIGestureRecognizer` subclass. The object that is instantiated will be associated by a view and will be garbage collected when the view is disposed of. It is not necessary to create this view as a class level variable.
@@ -147,7 +145,6 @@ Gestures can be summarized as one of two types:
 1. *Discrete* – These gestures only fire the first time they are recognized.
 1. *Continuous* – These gestures continue to fire as long as they are recognized.
 
-
 Gesture recognizers exists in one of the following states:
 
 - *Possible* – This is the initial state of all gesture recognizers. This is the default value the State property.
@@ -157,7 +154,6 @@ Gesture recognizers exists in one of the following states:
 - *Recognized* – The state will be set when the gesture recognizer matches a set of touches and will inform the subscriber that the gesture has finished.
 - *Ended* – This is an alias for the Recognized state.
 - *Failed* – When the gesture recognizer can no longer match the touches it is listening for, the state will changed to Failed.
-
 
 Xamarin.iOS represents these values in the `UIGestureRecognizerState` enumeration.
 
@@ -173,7 +169,6 @@ It is also possible to disable a gesture in iOS. There are two delegate properti
 
 1. *ShouldReceiveTouch* – This delegate is called right before the gesture recognizer is passed a touch event, and provides an opportunity to examine the touches and decide which touches will be handled by the gesture recognizer.
 1. *ShouldBegin* – This is called when a recognizer attempts to change state from Possible to some other state. Returning false will force the state of the gesture recognizer to be changed to Failed.
-
 
 You can override these methods with a strongly typed `UIGestureRecognizerDelegate`, a weak delegate, or bind via the event handler syntax, as illustrated by the following code snippet:
 
@@ -194,6 +189,5 @@ Although iOS provides some default gesture recognizers, it may be necessary to c
 1. Subclass  `UIGestureRecognizer` .
 1. Override the appropriate touch event methods.
 1. Bubble up recognition status via the base class’ State property.
-
 
 A practical example of this will be covered in the [Using Touch in iOS](ios-touch-walkthrough.md) walkthrough.
