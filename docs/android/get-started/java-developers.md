@@ -400,7 +400,7 @@ app:
 public class PictureLayout : ViewGroup
 {
     ...
-    public class PictureLayout (Context context)
+    public PictureLayout (Context context)
            : base (context)
     {
         ...
