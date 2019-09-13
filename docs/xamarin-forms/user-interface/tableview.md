@@ -85,7 +85,7 @@ In addition, the color of the text displayed for each [`TableSection`](xref:Xama
 
 Xamarin.Forms comes with built-in cells for collecting and displaying information. Although [`ListView`](xref:Xamarin.Forms.ListView) and [`TableView`](xref:Xamarin.Forms.TableView) can use all of the same cells, [`SwitchCell`](xref:Xamarin.Forms.SwitchCell) and [`EntryCell`](xref:Xamarin.Forms.EntryCell) are the most relevant for a `TableView` scenario.
 
-See [ListView Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) for a detailed description of [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#TextCell) and [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#ImageCell).
+See [ListView Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md) for a detailed description of [TextCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#textcell) and [ImageCell](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell).
 
 <a name="switchcell" />
 

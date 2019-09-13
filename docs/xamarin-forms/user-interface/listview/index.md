@@ -31,6 +31,7 @@ A `ListView` is best suited for a collections consisting of a single data type. 
 For more information about binding data to a `ListView` instance, see [ListView data sources](~/xamarin-forms/user-interface/listview/data-and-databinding.md).
 
 ## Components
+
 The `ListView` control has a number of components available to exercise the native functionality of each platform. These components are defined in the following sections.
 
 ### [Headers and footers](customizing-list-appearance.md#headers-and-footers)
@@ -50,7 +51,7 @@ Data items in a `ListView` are called cells. Each cell corresponds to a row of d
 - [Built-in cells](customizing-cell-appearance.md#built-in-cells), such as the `TextCell` and `ImageCell`, correspond to native controls and are especially performant.
   - A [`TextCell`](customizing-cell-appearance.md#textcell) displays a string of text, optionally with detail text. Detail text is rendered as a second line in a smaller font with an accent color.
   - An [`ImageCell`](customizing-cell-appearance.md#imagecell) displays an image with text. Appears as a `TextCell` with an image on the left.
-- [Custom cells](customizing-cell-appearance.md#customcells) are used to present complex data. For example, a custom cell could be used to present a list of songs that includes the album and artist.
+- [Custom cells](customizing-cell-appearance.md#custom-cells) are used to present complex data. For example, a custom cell could be used to present a list of songs that includes the album and artist.
 
 The following screenshot shows a `ListView` with ImageCell items:
 
@@ -59,11 +60,12 @@ The following screenshot shows a `ListView` with ImageCell items:
 To learn more about customizing cells in a `ListView`, see [Customizing ListView Cell Appearance](customizing-cell-appearance.md).
 
 ## Functionality
+
 The `ListView` class supports a number of interaction styles.
 
 - [Pull-to-refresh](interactivity.md#pull-to-refresh) allows the user to pull the `ListView` down to refresh the contents.
 - [Context actions](interactivity.md#context-actions) allow the developer to specify custom actions on individual list items. For example, you can implement swipe-to-action on iOS, or long-tap actions on Android.
-- [Selection](interactivity.md#selectiontaps) allow the developer to attach functionality to selection and deselection events on list items.
+- [Selection](interactivity.md#selection-and-taps) allow the developer to attach functionality to selection and deselection events on list items.
 
 The following screenshot shows a `ListView` with context actions:
 
