@@ -21,10 +21,10 @@ When supporting Sign In with Apple within a Xamarin.Forms solution, there are ad
 
 This guide walks through the setup necessary to enable Sign in with Apple for iOS applications.
 
-## [Setup for Other Platforms](setup.md)
+## [Setup for other platforms](setup.md)
 
 This guide walks through the setup necessary to enable Sign in with Apple for non-iOS applications including Xamarin.Forms Android and UWP.
 
-## [Using Sign In with Apple](android-ios-sign-in.md)
+## [Use Sign In with Apple](android-ios-sign-in.md)
 
 With a few services you can support Sign In with Apple in your cross-platform Xamarin.Forms applications. This guide describes the necessary steps.

@@ -20,7 +20,7 @@ iOS 13 introduces a new dark mode which provides developers with the
 means to easily allow their apps to fit in. New tools enable
 you to simultaneously design your apps with both light and dark themes.
 
-## [Privacy and Security](sign-in.md)
+## [Sign In with Apple](sign-in.md)
 
 iOS 13 provides new functionality for signing into apps using Sign In with
 Apple devices, allowing you to have more confidence that their personal
@@ -51,8 +51,6 @@ With iPadOS, you can make greater use of the Apple Pencil using PencilKit
 with new gestures, allow for the use of multiple windows, and drag-and-drop
 various content between apps. iPadOS can also allow apps to provide system-
 wide fonts.
-
-
 
 ## Related links
 

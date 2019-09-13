@@ -19,8 +19,8 @@ Sign In with Apple is for all new applications on iOS 13 that use third-party au
 
 In this guide and sample, specific platform services are used to handle Sign In with Apple:
 
-* Android using a generic web service talking to Azure Functions with OpenID/OpenAuth
-* iOS uses the native API for authentication on iOS 13, and falls back to a generic web service for iOS 12 and below
+- Android using a generic web service talking to Azure Functions with OpenID/OpenAuth
+- iOS uses the native API for authentication on iOS 13, and falls back to a generic web service for iOS 12 and below
 
 ## A sample Apple sign in flow
 

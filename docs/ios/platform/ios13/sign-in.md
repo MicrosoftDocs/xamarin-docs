@@ -139,7 +139,7 @@ This example code checks the current login status in `PerformExistingAccountSetu
 
 Apple provides `ASAuthorizationAppleIdButton`, a button specifically for this purpose. When touched, the button will trigger the workflow handled in the method `HandleAuthorizationAppleIDButtonPress`.
 
-## Handling Authorization
+## Handling authorization
 
 In the `IASAuthorizationController` implement any custom logic to store the user's account. The example below stores the user's account in Keychain, Apple's own storage service.
 
