@@ -210,7 +210,6 @@ This method accesses the `MainActivity` class for several purposes: for the `Ins
 
 Unlike the iOS and Android implementations, the implementation of the photo picker for the Universal Windows Platform does not require the `TaskCompletionSource` class. The [`PhotoPickerService`](https://github.com/xamarin/xamarin-forms-samples/blob/master/DependencyService/DependencyServiceDemos.UWP/Services/PhotoPickerService.cs) class uses the [`FileOpenPicker`](/uwp/api/Windows.Storage.Pickers.FileOpenPicker/) class to get access to the photo library. Because the `PickSingleFileAsync` method of `FileOpenPicker` is itself asynchronous, the `GetImageStreamAsync` method can simply use `await` with that method (and other asynchronous methods) and return a `Stream` object:
 
-
 ```csharp
 [assembly: Dependency(typeof(PhotoPickerService))]
 namespace DependencyServiceDemos.UWP

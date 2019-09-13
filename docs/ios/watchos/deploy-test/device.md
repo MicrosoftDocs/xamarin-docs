@@ -4,8 +4,8 @@ description: "This document describes how to deploy a watchOS app built with Xam
 ms.prod: xamarin
 ms.assetid: A72A7D38-FAE8-4DD2-843D-54B74C5078D7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
 ---
 
@@ -80,7 +80,6 @@ The **Provisioning Profile** list will show all matching
 
 ![](device-images/options-selectprofile.png "The Provisioning Profile list")
 
-
 <a name="testing" />
 
 ## Testing on a Watch device
@@ -111,7 +110,6 @@ Once you have configured your Device, App IDs, and Provisioning
 8. If the watch app is successfully installed, the icon will remain on the watch
   screen - touch it to start testing your app!
 
-
 ## Troubleshooting
 
 If an error occurs during deployment use the **View > Pads > Device Log** to
@@ -130,13 +128,11 @@ To *temporarily* work around this issue, disable **Incremental Builds** in the W
 This will be fixed in a future release, after which incremental builds can be
 re-enabled to take advantage of faster build times.
 
-
 ### Watch App fails to start while debugging on device
 
 When attempting to debug a watch app on a physical device, only the icon & loading
 spinner appear (and eventually time-out). This will be addressed in a future release;
 a workaround is to run a RELEASE build (which will not allow debugging).
-
 
 ### Invalid Application Executable or Application Verification Failed
 
@@ -170,8 +166,6 @@ If these messages appear *on the watch screen* after the
 - The Watch App's **App ID** incorrectly has an entitlement
   enabled (such as App Groups) in the Dev Center that it shouldn't have.
 
-
-
 ### Install Never Finished
 
 ```csharp
@@ -184,7 +178,6 @@ This error could indicate unnecessary (and invalid) keys
   in the Watch App.
 
 <!--eg. NSLocationAlwaysUsageDescription -->
-
 
 ### "waiting for debugger to connect"
 
@@ -204,4 +197,3 @@ The **Microsoft.Bcl.Build.targets** file that is added to the
   extensions during deployment. You can track the [bug](https://bugzilla.xamarin.com/show_bug.cgi?id=29912).
   A possible workaround is to edit the .csproj file and manually
   move the **Microsoft.Bcl.Build.targets** to be the last element.
-

@@ -4,8 +4,8 @@ description: "This document describes how to work with buttons in a tvOS app bui
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/07/2017
 ---
 
@@ -58,7 +58,6 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Button** from the **Library** and drop it on the View: 
 
@@ -77,7 +76,6 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
     [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
 1. Save the changes to all files.
 
-
 # [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
@@ -92,10 +90,7 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
     [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
 1. Save the changes to all files.
 
-
-
 Edit your View Controller (example `ViewController.cs`) file and add the following code to handle the button being selected:
-
 
 ```
 
@@ -123,9 +118,6 @@ As long as a button's `Enabled` property is `true` and it is not covered by anot
 
 > [!IMPORTANT]
 > While it is possible to assign actions such as `TouchUpInside` to a `UIButton` in the iOS Designer when creating an **Event Handler**, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the default **Action Type** when creating **Actions** for tvOS user interface elements.
-
-
-
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
@@ -184,9 +176,6 @@ View.AddSubview (button);
 
 > [!IMPORTANT]
 > While it is possible to assign actions such as `TouchUpInside` to a `UIButton`, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use events such as **AllEvents** or **PrimaryActionTriggered**.
-
-
-
 
 <a name="Styling-a-Button" />
 
@@ -257,8 +246,6 @@ Use the `TintColor` property to set a color tint that is applied to both the tit
 ## Summary
 
 This article has covered designing and working with buttons inside of a Xamarin.tvOS app. It showed how to work with buttons in the iOS Designer and how to create buttons in C# code. Finally, it showed how to modify a button's title and change its style and appearance.
-
-
 
 ## Related Links
 

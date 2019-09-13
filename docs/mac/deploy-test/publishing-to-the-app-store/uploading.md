@@ -4,8 +4,8 @@ description: "This document describes how to use iTunes Connect to upload a Xama
 ms.prod: xamarin
 ms.assetid: 30cd0e47-1b2e-47ef-93f6-4bed20b15c03
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 

@@ -161,7 +161,6 @@ So far no mention has been made of the second parameter to the `SKPathEffect.Cre
 
 One interesting application of the `phase` parameter is in an animation. The **Animated Spiral** page is similar to the **Archimedean Spiral** page, except that the [`AnimatedSpiralPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/AnimatedSpiralPage.cs) class animates the `phase` parameter using the Xamarin.Forms `Device.Timer` method:
 
-
 ```csharp
 public class AnimatedSpiralPage : ContentPage
 {

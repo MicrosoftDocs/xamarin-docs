@@ -4,8 +4,8 @@ description: "This document describes non-renewing subscriptions, free subscript
 ms.prod: xamarin
 ms.assetid: 27EE4234-07F5-D2CD-DC1C-86E27C20141E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -26,7 +26,6 @@ types:
 - Implementation Overview
 - Non-Renewing Subscriptions should normally be implemented using the Server-Delivered workflow and managed like Consumable products. 
 
-
 ## About Free Subscriptions
 
 Free subscriptions allow developers to put free content in Newsstand apps
@@ -41,7 +40,6 @@ application must have a Free Subscription product available for ‘purchase’
 in iTunes Connect. When purchased by the user, the free subscription purchase
 should be validated like an auto-renewable subscription product. Free
 subscription transactions can be Restored.
-
 
 ## About Auto-Renewable Subscriptions
 
@@ -67,7 +65,7 @@ created/accessed via iTunes Connect.
 From the iTunes Connect home page select **My Apps**:   
    
  [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
- 
+
 Select an application and click on the **In-App Purchases** tab:
 
 [![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
@@ -77,10 +75,8 @@ From the bottom of the page, select **View or generate a shared secret**:
  [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
  [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
-   
-   
-   
- To use the shared secret, include it in the JSON payload that is sent to
+
+To use the shared secret, include it in the JSON payload that is sent to
 Apple’s servers when validating an in-app purchase receipt for an
 auto-renewable subscription, like this:
 
@@ -123,10 +119,8 @@ You’ll get back multiple transactions – the original purchase transaction
 plus a separate transaction for each period of time the subscription was
 renewed. You need to track the start dates and terms to understand what the
 validity period is.   
-   
-   
-   
- The SKPaymentTransaction object does NOT
+
+The SKPaymentTransaction object does NOT
 include the subscription term – you should use a different Product ID for each
 term and write code that can extrapolate the subscription period from the
 purchase date of the transaction.

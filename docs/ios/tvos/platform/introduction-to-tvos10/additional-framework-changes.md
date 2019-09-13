@@ -4,8 +4,8 @@ description: "This document describes minor changes and enhancements made to exi
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
 ---
 
@@ -189,8 +189,6 @@ The following enhancements have been made to the UIKit framework in tvOS 10:
 - The `OpenURL` method of the `UIApplication` class is called asynchronously now supports a Completion Handler that is called after the open has completed.
 - Initiate CloudKit sharing and modify its properties using the new `UICloudSharingController` and `UICloudSharingControllerDelegate` classes.
 - Take advantage of prefetched cells to improve the scrolling experience of `UICollectionViews` with the new `UICollectionViewDataSourcePrefetching` delegate.
-
-
 
 ## Related Links
 

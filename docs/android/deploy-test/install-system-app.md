@@ -94,14 +94,11 @@ system app.
 4. **Copy the APK file to /system/app** &ndash; The final step is
    to copy the APK file to the **/system/app** folder on the ROM.
 
-
 ## Summary
 
 This guide discussed the difference between a _system app_ and a _user
 app_, and explained how to install a Xamarin.Android application as a
 system app.
-
-
 
 ## Related Links
 

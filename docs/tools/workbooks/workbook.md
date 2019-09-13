@@ -3,8 +3,8 @@ title: "Interactive Workbooks"
 description: "This document describes how to use Xamarin Workbooks to create live documents containing C# code for experimenting, teaching, training, or exploring."
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/30/2017
 ---
 

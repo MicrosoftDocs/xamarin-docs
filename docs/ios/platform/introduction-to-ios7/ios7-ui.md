@@ -4,8 +4,8 @@ description: "iOS 7 introduces a plethora of user interface changes. This articl
 ms.prod: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
 ---
 
@@ -64,7 +64,7 @@ UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle
 This produces a standard alert view, with the subview being ignored, as shown below:
 
  ![](ios7-ui-images/alert.png "Sample UIAlertView")
- 
+
  Note: UIAlertView was deprecated in iOS 8. View the [Alert Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) recipe on using an Alert View in iOS 8 and above.
 
 ### UISegmentedControl
@@ -248,7 +248,6 @@ The tint color can be applied to images as well when the `RenderingMode` is set 
 
 > [!IMPORTANT]
 > Tint color cannot be set using `UIAppearance`.
-
 
 ### Dynamic Type
 

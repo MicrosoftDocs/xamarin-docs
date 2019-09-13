@@ -4,8 +4,8 @@ description: "In order to help clarify the features available to tvOS applicatio
 ms.prod: xamarin
 ms.assetid: 0B1ACF06-65FF-49E2-B6BC-7AEC55638ED8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/07/2016
 ---
 

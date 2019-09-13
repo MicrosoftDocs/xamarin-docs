@@ -46,8 +46,6 @@ default to ON and read NO/YES instead of OFF/ON, we can set the
         android:textOff="NO" />
 ```
 
-
-
 ## Providing a Title
 
 The `Switch` widget also supports including a text label by setting the
@@ -81,7 +79,6 @@ s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs
     toast.Show ();
 };
 ```
-
 
 ## Related Links
 

@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 0F2266D7-21FF-404D-A148-0CFDE76B12AA
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
 ---
 
@@ -35,7 +35,6 @@ This article will cover the steps required to ensure that your Xamarin.iOS app r
 > [!VIDEO https://youtube.com/embed/GctYAozoLr8]
 
 **Multitasking for iPad video**
-
 
 <a name="Multitasking-QuickStart" />
 
@@ -248,8 +247,6 @@ To opt out of PIP video playback, do the following in your app:
 ## Summary
 
 This article has covered the steps required to ensure that a Xamarin.iOS app will run and behave correctly in iOS 9's new multitasking ability for iPads. In addition, it covered opting-out of multitasking for apps where it is not a good fit.
-
-
 
 ## Related Links
 

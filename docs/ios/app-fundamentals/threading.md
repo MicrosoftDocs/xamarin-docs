@@ -4,8 +4,8 @@ description: "This document describes how to use the System.Threading APIs in a 
 ms.prod: xamarin
 ms.assetid: 50BCAF3B-1020-DDC1-0339-7028985AAC72
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
 ---
 
@@ -18,14 +18,11 @@ and implicitly when using the asynchronous delegate patterns or
 the BeginXXX methods as well as the full range of APIs that
 support the Task Parallel Library.
 
-
-
 Xamarin strongly recommends that you use
 the [Task Parallel Library](https://msdn.microsoft.com/library/dd460717.aspx) (TPL) for building applications for a few reasons:
 - The default TPL scheduler will delegate Task execution to the thread pool, which in turn will dynamically grow the number of threads needed as process takes place, while avoiding a scenario where too many threads end up competing for CPU time. 
 - It is easier to think about operations in terms of TPL Tasks. You can easily manipulate them, schedule them, serialize their execution or launch many in parallel with a rich set of APIs. 
 - It is the foundation for programming with the new C# async language extensions. 
-
 
 The thread pool will slowly grow the number of threads
 as needed based on the number of CPU cores available on the
@@ -37,7 +34,6 @@ responsive applications and they do not want to block the main
 UI run loop.
 
  <a name="Developing_Responsive_Applications" />
-
 
 ## Developing Responsive Applications
 
@@ -67,7 +63,6 @@ conditions that could potentially crash your application.
 
  <a name="Threading_and_Garbage_Collection" />
 
-
 ## Threading and Garbage Collection
 
 In the course of execution, the Objective-C runtime will
@@ -94,7 +89,6 @@ void MyThreadStart (object arg)
 
 Note: Since Xamarin.iOS 5.2 you do not have to provide your own `NSAutoReleasePool` anymore as one will be provided
 automatically for you.
-
 
 ## Related Links
 

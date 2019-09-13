@@ -160,7 +160,6 @@ The advantage of using this behavior to add and remove effects from controls is 
 
 This article demonstrated using a behavior to add an effect to a control. The `EffectBehavior` class is a reusable Xamarin.Forms custom behavior that adds an [`Effect`](xref:Xamarin.Forms.Effect) instance to a control when the behavior is attached to the control, and removes the `Effect` instance when the behavior is detached from the control.
 
-
 ## Related Links
 
 - [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)

@@ -4,8 +4,8 @@ description: "This document gives a brief overview of distribution of applicatio
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -17,7 +17,7 @@ Once your Xamarin.iOS app has been developed, the next step in the software deve
 
 - Your application does not need to be submitted for review by Apple.
 - There are no limits to the amount of devices onto which you can deploy an application
-    - It is important to note that Apple makes it very clear that In-House applications are for internal use only.
+  - It is important to note that Apple makes it very clear that In-House applications are for internal use only.
 
 It is also important to note that the Enterprise Program:
 
@@ -89,7 +89,6 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 
 As with any other Provisioning Profile you create, an App ID will be required to identify the App that you will be distributing to the user's device. If you haven't already created this, follow the steps below to create one:
 
-
 1. In the [Apple Developer Center](https://developer.apple.com/account/overview.action) browse to the *Certificate, Identifiers and Profiles* section. Select **App IDs** under **Identifiers**.
 2. Click the **+** button and provide a **Name** which will identify it in the Portal.
 3. The App prefix should be already set as your Team ID, and cannot be changed. Select either an Explicit or Wildcard App ID, and enter a Bundle ID in a reverse DNS format like: **Explicit**: com.[DomainName].[AppName] **Wildcard**:com.[DomainName].*
@@ -145,13 +144,11 @@ Your app can be distributed securely using a variety of different means, such as
 
 To distribute your app in any of these ways you must first create an IPA file, as explained in the next section.
 
-
 ### Creating an IPA for In-House Deployment
 
 Once provisioned, applications can be packaged into a file known as an *IPA*. This is a zip file that contains the application, along with additional metadata and icons. The IPA is used to add an application locally into iTunes so that it can be synced directly to a device that is included in the provisioning profile.
 
 For more information on creating an IPA see [IPA Support](~/ios/deploy-test/app-distribution/ipa-support.md) guide.
-
 
 ## Summary
 

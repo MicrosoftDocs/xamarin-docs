@@ -40,7 +40,6 @@ Other important controls for Wear apps include:
 
 - `WearableListView` (see [Android Create Lists](https://developer.android.com/training/wearables/ui/lists.html)).
 
-
 ## Related Links
 
 - [Android.Support.Wearable docs](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)

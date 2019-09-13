@@ -203,7 +203,6 @@ In addition, note that behaviors are not implicitly removed from controls when p
 
 This article demonstrated how to create and consume Xamarin.Forms behaviors. Xamarin.Forms behaviors are created by deriving from the [`Behavior`](xref:Xamarin.Forms.Behavior) or [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class.
 
-
 ## Related Links
 
 - [Xamarin.Forms Behavior (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-numericvalidationbehavior)

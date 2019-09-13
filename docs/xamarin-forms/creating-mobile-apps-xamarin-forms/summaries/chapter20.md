@@ -171,8 +171,6 @@ The [`WebRequest`](xref:System.Net.WebRequest) class used in some samples uses a
 [**ApmToTap**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20/ApmToTap)
 sample demonstrates this.
 
-
-
 ## Related links
 
 - [Chapter 20 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch20-Apr2016.pdf)

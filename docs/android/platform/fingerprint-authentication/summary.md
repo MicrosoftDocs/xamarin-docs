@@ -30,8 +30,6 @@ First we discussed the fingerprint API's themselves, `FingerprintManager` (and `
 
 If you haven't already done so, you should look at the [sample application](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide) that accompanies this guide. The [Fingerprint Dialog Sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-m-fingerprintdialog) has been ported from Java to Xamarin.Android and provides another example on how to add fingerprint authentication to an Android application.
 
-
-
 ## Related Links
 
 - [Fingerprint Guide Sample App](https://github.com/xamarin/monodroid-samples/tree/master/FingerprintGuide)

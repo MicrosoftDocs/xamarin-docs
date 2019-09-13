@@ -27,8 +27,6 @@ The merging process is trivial: it uses custom attributes within the
 code to generate XML elements, and *inserts* those elements into 
 **AndroidManifest.xml**. 
 
-
-
 ## The Basics
 
 At compile time, assemblies are scanned for non-`abstract` classes that derive from 
@@ -70,8 +68,6 @@ This example causes the following xml fragment to be added to **AndroidManifest.
 The `[Activity]` attribute has no effect on `abstract`
 types; `abstract` types are ignored.
 
-
-
 ### Activity Name
 
 Beginning with Xamarin.Android 5.1, the type name of an activity is 
@@ -105,7 +101,6 @@ the class name, see
 [Android Callable Wrapper Naming](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) 
 for tips on maintaining compatibility. 
 
-
 ### Activity Title Bar
 
 By default, Android gives your application a title bar when it is run. 
@@ -128,7 +123,6 @@ This example produces the following xml fragment:
 <activity android:label="Awesome Demo App" 
           android:name="md5a7a3c803e481ad8926683588c7e9031b.MainActivity" />
 ```
-
 
 ### Launchable from Application Chooser
 
@@ -158,8 +152,6 @@ This example produces the following xml fragment:
 </activity>
 ```
 
-
-
 ### Activity Icon
 
 By default, your activity will be given the default launcher icon 
@@ -186,7 +178,6 @@ This example produces the following xml fragment:
   </intent-filter>
 </activity>
 ```
-
 
 ### Permissions
 
@@ -223,11 +214,7 @@ build, verify that you have explicitly set this permission in the
 Application** in Visual Studio for Mac; see **Properties > Android Manifest** 
 in Visual Studio). 
 
-
-
-
 ## Advanced Features
-
 
 ### Intent Actions and Features
 
@@ -271,7 +258,6 @@ This example produces the following xml fragment:
   </intent-filter>
 </activity>
 ```
-
 
 ### Application Element
 
@@ -327,8 +313,6 @@ see the
 section of 
 [ApplicationAttribute](xref:Android.App.ApplicationAttribute). 
 
-
-
 ## List of Custom Attributes
 
 - [Android.App.ActivityAttribute](xref:Android.App.ActivityAttribute) : Generates a  [/manifest/application/activity](https://developer.android.com/guide/topics/manifest/activity-element.html) XML fragment 
@@ -345,4 +329,3 @@ section of
 - [Android.Content.BroadcastReceiverAttribute](xref:Android.Content.BroadcastReceiverAttribute) : Generates a  [/manifest/application/receiver](https://developer.android.com/guide/topics/manifest/receiver-element.html) XML fragment 
 - [Android.Content.ContentProviderAttribute](xref:Android.Content.ContentProviderAttribute) : Generates a  [/manifest/application/provider](https://developer.android.com/guide/topics/manifest/provider-element.html) XML fragment 
 - [Android.Content.GrantUriPermissionAttribute](xref:Android.Content.GrantUriPermissionAttribute) : Generates a  [/manifest/application/provider/grant-uri-permission](https://developer.android.com/guide/topics/manifest/grant-uri-permission-element.html) XML fragment
-

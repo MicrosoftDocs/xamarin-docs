@@ -15,7 +15,6 @@ ms.date: 10/27/2017
 
 _The ViewExtensions class provides extension methods that can be used to construct simple animations. This article demonstrates creating and canceling animations using the ViewExtensions class._
 
-
 The [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class provides the following extension methods that can be used to create simple animations:
 
 - [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) properties of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
@@ -224,7 +223,6 @@ This will immediately cancel all animations that are currently running on the [`
 ## Summary
 
 This article demonstrated creating and canceling animations using the [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class. This class provides extension methods that can be used to construct simple animations that rotate, scale, translate, and fade [`VisualElement`](xref:Xamarin.Forms.VisualElement) instances.
-
 
 ## Related Links
 

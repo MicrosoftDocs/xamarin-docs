@@ -4,8 +4,8 @@ description: "This document describes how to use the ADO.NET as a method to acce
 ms.prod: xamarin
 ms.assetid: 79078A4D-2D24-44F3-9543-B50418A7A000
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -37,7 +37,6 @@ Right-click **References > Edit References...** then click to select the require
 We will use the `Mono.Data.Sqlite.SqliteConnection` class to create a blank database
 file and then to instantiate `SqliteCommand` objects that we can use to execute SQL
 instructions against the database.
-
 
 1. **Creating a Blank Database** - Call the `CreateFile` method with a valid (ie. writeable) file path. You should check whether the file already exists before calling this method, otherwise a new (blank) database will be created over the top of the old one, and the data in the old file will be lost:
 
@@ -153,7 +152,6 @@ Because SQLite allows arbitrary SQL commands to be run against the data, you can
 - **ExecuteReader** – Used when a collection of rows should be returned as a  `SqlDataReader` .
 - **ExecuteScalar** – Retrieves a single value (for example an aggregate).
 
-
 ### EXECUTENONQUERY
 
 INSERT, UPDATE and DELETE statements will return the number of rows affected. All other SQL statements will return -1.
@@ -199,7 +197,6 @@ The ExecuteReader method returns a SqliteDataReader object. In addition to the R
 - **RowsAffected** – Count of the rows affected by the query.
 - **HasRows** – Whether any rows were returned.
 
-
 ### EXECUTESCALAR
 
 Use this for SELECT statements that return a single value (such as an aggregate).
@@ -212,7 +209,6 @@ using (var contents = connection.CreateCommand ()) {
 ```
 
 The `ExecuteScalar` method’s return type is `object` – you should cast the result depending on the database query. The result could be an integer from a COUNT query or a string from a single column SELECT query. Note that this is different to other Execute methods that return a reader object or a count of the number of rows affected.
-
 
 ## Related Links
 

@@ -88,7 +88,6 @@ You can still use the original GUI by running the **android** program
 inside your **tools** folder as long as you are on **Android SDK
 Tools** version **25.2.5** or lower.
 
-
 ## Related Links
 
 - [Android SDK Setup](~/android/get-started/installation/android-sdk.md)

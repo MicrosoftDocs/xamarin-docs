@@ -4,8 +4,8 @@ description: "This document describes C# for Objective-C developers. It compares
 ms.prod: xamarin
 ms.assetid: 00285CBD-AE5E-4126-8F22-6B231B9467EA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
 ---
 
@@ -44,10 +44,10 @@ Extension methods let you add static methods to a class, where static methods in
 ```csharp
 public static class UITextViewExtensions
 {
-	public static void ScrollToBottom (this UITextView textView)
-	{
-		// code to scroll textView
-	}
+    public static void ScrollToBottom (this UITextView textView)
+    {
+        // code to scroll textView
+    }
 }
 ```
 
@@ -83,7 +83,7 @@ For example, the following code includes the `UIKit` namespace, making every cla
 using UIKit
 namespace MyAppNamespace
 {
-	// implementation of classes
+    // implementation of classes
 }
 ```
 
@@ -100,13 +100,13 @@ public string Name { get; set; }
 // property implemented with a backing field
 string address;
 public string Address {
-	get {
-		// could add additional code here
-		return address;
-	}
-	set {
-		address = value;
-	}
+    get {
+        // could add additional code here
+        return address;
+    }
+    set {
+        address = value;
+    }
 }
 ```
 
@@ -134,7 +134,7 @@ Objective-C uses *blocks* to create closures, where you can create a function in
 
 ```csharp
 (args) => {
-	//  implementation code
+    //  implementation code
 };
 ```
 

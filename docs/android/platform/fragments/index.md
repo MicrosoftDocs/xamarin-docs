@@ -74,7 +74,6 @@ including:
 - **Fragment Management and Transactions** – How to manipulate Fragments at run time.
 - **Android Support Package** – How to use the libraries that allow Fragments to be used on older versions of Android.
 
-
 ## Requirements
 
 Fragments are available in the Android SDK starting with API level 11
@@ -92,7 +91,6 @@ as shown below:
 It is possible to use Fragments in older versions of Android by using the
 Android Support Package and Xamarin.Android 4.2 or higher. How to do this is
 covered in more detail in the documents of this section.
-
 
 ## Related Links
 

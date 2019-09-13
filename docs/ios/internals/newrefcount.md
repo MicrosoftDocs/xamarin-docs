@@ -4,8 +4,8 @@ description: "This document describes Xamarin's enhanced reference counting syst
 ms.prod: xamarin
 ms.assetid: 0221ED8C-5382-4C1C-B182-6C3F3AA47DB1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
 ---
 
@@ -41,10 +41,8 @@ Note that these options have been removed in newer versions of Visual Studio for
 
  The new reference counting extension is required for the Unified API and should be enabled by default. Older versions of your IDE may not have this value checked automatically and you might have to place a check by it yourself.
 
-
 > [!IMPORTANT]
 > An earlier version of this feature has been around since MonoTouch 5.2 but was only available for **sgen** as an experimental preview. This new, enhanced version is now also available for the **Boehm** garbage collector.
-
 
 Historically there have been two kinds of objects managed by Xamarin.iOS: those
 that were merely a wrapper around a native object (peer objects) and those that

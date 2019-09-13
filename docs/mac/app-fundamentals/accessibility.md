@@ -4,8 +4,8 @@ description: "This document describes how to work with macOS accessibility featu
 ms.prod: xamarin
 ms.assetid: D7F4892B-501A-4271-A7E0-BDD1586B63AD
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -102,8 +102,6 @@ of each control:
 [![Example of Accessibility Inspector running](accessibility-images/accessibility-example.png "Example of Accessibility Inspector running")](accessibility-images/accessibility-example-large.png#lightbox)
 
 For more information, read the [testing accessibility for OS X guide](https://developer.apple.com/library/mac/documentation/Accessibility/Conceptual/AccessibilityMacOSX/OSXAXTestingApps.html).
-
-
 
 ## Related Links
 

@@ -27,12 +27,12 @@ Now that the NuGet is installed, you can run the tooling by hand.
 - Open a Terminal (macOS) or Command Prompt (Windows)
 - Change directory to your solution root
 - The tooling is installed in:
-    - **./packages/Embeddinator-4000.[VERSION]/tools/objcgen** (Objective-C)
-    - **./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe** (Java/C)
+  - **./packages/Embeddinator-4000.[VERSION]/tools/objcgen** (Objective-C)
+  - **./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe** (Java/C)
 - On macOS, **objcgen** can be run directly.
 - On Windows, **Embeddinator-4000.exe** can be run directly.
 - On macOS, **Embeddinator-4000.exe** needs to be run with **mono**:
-    - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
+  - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
 
 Each command invocation will need a number of paramaters listed in the platform-specific documentation.
 

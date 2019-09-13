@@ -300,7 +300,6 @@ This method performs the following operations, provided that the custom renderer
 - The circle is created by instantiating a `MapPolygon` object. The `MapPolygon` class is used to display a multi-point shape on the map by setting its `Path` property to a `Geopath` object that contains the shape coordinates.
 - The polygon is rendered on the map by adding it to the `MapControl.MapElements` collection.
 
-
 ```
 List<Position> GenerateCircleCoordinates(Position position, double radius)
 {
@@ -326,7 +325,6 @@ List<Position> GenerateCircleCoordinates(Position position, double radius)
 ## Summary
 
 This article explained how to add a circular overlay to a map, to highlight a circular area of the map.
-
 
 ## Related Links
 

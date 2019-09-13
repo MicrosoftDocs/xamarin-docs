@@ -36,7 +36,6 @@ directly within an application, covering both how to control the
 position and display of a map, as well as how to add graphical
 overlays.
 
-
 ## Related Links
 
 - [MapsAndLocationDemo_v3 (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/mapsandlocationdemo-v3)

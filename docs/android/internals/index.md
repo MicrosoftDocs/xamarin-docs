@@ -20,7 +20,6 @@ Xamarin.Android is
 possible to understand the inner workings of Xamarin.Android by
 examining its source code._
 
-
 ## [Architecture](~/android/internals/architecture.md)
 
 This article explains the underlying architecture behind a 
@@ -28,8 +27,6 @@ Xamarin.Android application. It explains how Xamarin.Android
 applications run inside a Mono execution environment alongside with the 
 Android runtime Virtual Machine and explains such key concepts as Android 
 Callable Wrappers and Managed Callable Wrappers. 
-
-
 
 ## [API Design](~/android/internals/api-design.md)
 
@@ -41,12 +38,9 @@ At the core of Xamarin.Android there is an interop engine that bridges the
 C# world with the Java world and provides developers with access to the Java
 APIs from C# or other .NET languages.
 
-
-
 ## [Assemblies](~/cross-platform/internals/available-assemblies.md)
 
 Xamarin.Android ships with several assemblies. Just as Silverlight is 
 an extended subset of the desktop .NET assemblies, Xamarin.Android is 
 also an extended subset of several Silverlight and desktop .NET 
 assemblies. 
-

@@ -116,7 +116,6 @@ The result is also called an *arithmetic spiral* because the offset between each
 
 Notice that the `SKPath` is created in a `using` block. This `SKPath` consumes more memory than the `SKPath` objects in the previous programs, which suggests that a `using` block is more appropriate to dispose any unmanaged resources.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

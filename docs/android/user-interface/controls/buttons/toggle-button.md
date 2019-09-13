@@ -64,7 +64,6 @@ which it is.
 
 Run the application.
 
-
 > [!TIP]
 > If you need to change the state yourself (such as
 > when loading a saved
@@ -74,7 +73,6 @@ Run the application.
 > property setter or
 > [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > method.
-
 
 ## Related Links
 

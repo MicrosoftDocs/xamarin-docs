@@ -4,8 +4,8 @@ description: "This document describes how to bundle a Xamarin.Mac app for public
 ms.prod: xamarin
 ms.assetid: 00a36d7c-937d-4657-bf6a-0de9684b8f94
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -37,7 +37,6 @@ Before building, ensure that the **Release** configuration has been selected. Wh
 After the application has been built, the developer can right-click on the project and choose **Open Containing Folder** to find the package file (in the `bin/x86/AppStore` directory in the example shown below).  This package file includes an installer for the app that can be submitted to Apple for inclusion in the Mac App Store.
 
  ![Selecting the build package in Finder](bundling-images/image64.png "Selecting the build package in Finder")
-
 
 ## Related Links
 

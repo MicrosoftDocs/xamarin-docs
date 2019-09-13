@@ -4,8 +4,8 @@ description: "In this section we'll walk through how to use local notifications 
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -21,7 +21,6 @@ _In this section we'll walk through how to use local notifications in a Xamarin.
 Let create a simple application that will show local notifications in action. This application will have a single
     button on it. When we click on the button, it will create a local notification. After the specified time period has
     elapsed, we will see the notification appear.
-
 
 1. In Visual Studio for Mac, create a new Single View iOS solution and call it `Notifications`.
 1. Open the `Main.storyboard` file, and drag a button onto the View. Name the button **button**, and give it the title **Add Notification**. You may also want to set some [constraints](~/ios/user-interface/designer/designer-auto-layout.md) to the button at this point:  
@@ -88,7 +87,6 @@ Let create a simple application that will show local notifications in action. Th
 1. We need to handle the case where the notification was launched because of a local notification. Edit
     the method `FinishedLaunching` in the `AppDelegate` to include the following snippet of code:
 
-
     ```csharp
     // check for a notification
 
@@ -122,7 +120,6 @@ Let create a simple application that will show local notifications in action. Th
 
 This walkthrough showed how to use the various API's for creating and publishing notifications in iOS. It also demonstrated
 how to update the application icon with a badge to provide some application specific feedback to the user.
-
 
 ## Related Links
 

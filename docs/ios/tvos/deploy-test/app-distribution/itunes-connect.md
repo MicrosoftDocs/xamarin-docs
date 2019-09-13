@@ -4,15 +4,14 @@ description: "This article provides a supplemental guide to the iOS Configure yo
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
 ---
 
 # Configure your tvOS App in iTunes Connect
 
 _This article provides a supplemental guide to the iOS Configure your App in iTunes Connect for the tvOS specific configurations._
-
 
 In addition to the configurations and setting that you will need to make by following the iOS [Configure your App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) guide, this document covers the specific configurations that will be required to release a Xamarin.tvOS app in the Apple TV App Store.
 
@@ -73,8 +72,6 @@ When you are finally ready to submit your Xamarin.tvOS app to the Apple TV App S
 ## Summary
 
 This article gave overview of the tvOS specific setting required in iTunes Connect to release a tvOS app to the Apple TV App Store.
-
-
 
 ## Related Links
 

@@ -47,7 +47,6 @@ Explore the intersection of paths and text
 
 Get information about paths and enumerate the contents
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

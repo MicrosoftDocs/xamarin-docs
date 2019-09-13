@@ -503,7 +503,6 @@ This functionality is achieved as follows:
 
 This article has demonstrated how to create a custom renderer for a `HybridWebView` custom control, that demonstrates how to enhance the platform-specific web controls to allow C# code to be invoked from JavaScript.
 
-
 ## Related Links
 
 - [CustomRendererHybridWebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)

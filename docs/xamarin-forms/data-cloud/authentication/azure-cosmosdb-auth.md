@@ -263,7 +263,6 @@ For more information about deleting a document from a document collection, see [
 
 This article explained how to combine access control with partitioned collections, so that a user can only access their own document database documents in a Xamarin.Forms application. Specifying the user's identity as a partition key ensures that a partitioned collection can only store documents for that user.
 
-
 ## Related Links
 
 - [Todo Azure Cosmos DB Auth (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdbauth)

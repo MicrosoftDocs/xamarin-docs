@@ -109,7 +109,7 @@ Alternatively, the `OnIdiom` markup extension can be used in XAML to customize U
 The [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) value retrieves a [`FlowDirection`](xref:Xamarin.Forms.FlowDirection) enumeration value that represents the current flow direction being used by the device. Flow direction is the direction in which the UI elements on the page are scanned by the eye. The enumeration values are:
 
 - [`LeftToRight`](xref:Xamarin.Forms.FlowDirection.LeftToRight)
-- [`RightToRight`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
+- [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft)
 - [`MatchParent`](xref:Xamarin.Forms.FlowDirection.MatchParent)
 
 In XAML, the [`Device.FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) value can be retrieved by using the `x:Static` markup extension:

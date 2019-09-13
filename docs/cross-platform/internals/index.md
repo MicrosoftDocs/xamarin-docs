@@ -4,8 +4,8 @@ title: "Xamarin – Internals"
 description: "This document links to guides that describe the internal workings of Xamarin. Currently, it links to the Available Assemblies document."
 ms.prod: xamarin
 ms.assetid: 0bec99a9-ab79-4f10-8d7b-35f9338c0728
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2018
 ---
 
@@ -18,6 +18,3 @@ This section contains documents that explain some more advanced cross-platform a
 Xamarin.iOS, Xamarin.Android, and Xamarin.Mac all ship with over a dozen assemblies. Just as Silverlight is an extended subset of the desktop .NET assemblies, Xamarin platforms is also an extended subset of several Silverlight and desktop .NET assemblies.
 
 This guide provides a list of all available assemblies shipped with each platform, and show which can be used on each platform.
-
-
-

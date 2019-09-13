@@ -38,8 +38,6 @@ To replace an app's default action bar with a `Toolbar`:
 The following sections explain this process in detail. A simple app is 
 created and its action bar is replaced with a customized `Toolbar`. 
 
-
-
 ## Start an App Project
 
 Create a new Android project called **ToolbarFun** (see
@@ -53,8 +51,6 @@ is built and run, it displays the default action bar as seen in this
 screenshot:
 
 [![Screenshot of default action bar](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
-
-
 
 ## Create a Custom Theme
 
@@ -89,7 +85,7 @@ disabled:
 
 An olive-green `colorPrimary` setting is used for the background 
 color of the toolbar: 
- 
+
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
@@ -106,8 +102,6 @@ app uses the `MyTheme` custom theme:
 
 For more information about applying a custom theme to an app, see 
 [Using Custom Themes](~/android/user-interface/material-theme.md#customtheme). 
-
-
 
 ## Define a Toolbar Layout
 
@@ -154,8 +148,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 This setting is used so that menu items contrast with the darker 
 background color.
 
-
-
 ## Include the Toolbar Layout
 
 Edit the layout file **Resources/layout/Main.axml** and replace
@@ -175,8 +167,6 @@ its contents with the following XML:
 This layout includes the `Toolbar` defined in **toolbar.xml** and 
 uses a `RelativeLayout` to specify that the `Toolbar` is to be 
 placed at the very top of the UI (above the button). 
-
-
 
 ## Find and Activate the Toolbar
 
@@ -211,7 +201,6 @@ the remainder of the app.
 If an exception occurs while running the app, see the
 [Troubleshooting](#troubleshooting) section below.
 
- 
 ## Add Menu Items 
 
 In this section, menus are added to the `Toolbar`. The upper right area 
@@ -237,8 +226,6 @@ To add menus to the `Toolbar`:
 The following sections demonstrate this process in detail by adding
 **Edit** and **Save** menu items to the customized `Toolbar`. 
 
-
-
 ### Install Menu Icons
 
 Continuing with the `ToolbarFun` example app, add menu icons to the app
@@ -247,7 +234,6 @@ project. Download
 unzip, and copy the contents of the extracted *mipmap-* folders to
 the project *mipmap-* folders under **ToolbarFun/Resources** and
 include each added icon file in the project.
-
 
 ### Define a Menu Resource
 
@@ -292,7 +278,6 @@ them to be displayed. The **Preferences** menu item sets
 `showAsAction` to `never` &ndash; this causes the **Preferences** 
 menu to appear in the *overflow* menu (three vertical dots). 
 
-
 ### Implement OnCreateOptionsMenu
 
 Add the following method to **MainActivity.cs**:
@@ -310,8 +295,6 @@ specify the menu resource for an activity. In this method, the
 **top_menus.xml** resource is inflated into the passed `menu`. This 
 code causes the new **Edit**, **Save**, and **Preferences** menu 
 items to appear in the `Toolbar`. 
-
-
 
 ### Implement OnOptionsItemSelected
 
@@ -353,7 +336,6 @@ and **Save**:
 For more information about Android menus, see the Android Developer 
 [Menus](https://developer.android.com/guide/topics/ui/menus.html) 
 topic. 
- 
 
 ## Troubleshooting
 
@@ -378,7 +360,6 @@ the custom theme is added to `<application>` (in
 [Apply the Custom Theme](#apply-the-custom-theme). In addition,
 this error may be caused if the `Toolbar` layout or custom theme 
 is not configured properly.
-
 
 ## Related Links
 

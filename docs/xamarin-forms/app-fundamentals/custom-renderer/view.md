@@ -326,7 +326,6 @@ Provided that the `Control` property is `null`, a new `CaptureElement` is instan
 
 This article has demonstrated how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera. Xamarin.Forms custom user interface controls should derive from the [`View`](xref:Xamarin.Forms.View) class, which is used to place layouts and controls on the screen.
 
-
 ## Related Links
 
 - [CustomRendererView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-view)

@@ -3,8 +3,8 @@ title: "Custom Linker Configuration"
 description: "This document describes an XML file that can be used to configure the linker, ensuring explicitly that needed code is not eliminated from the linked application."
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -31,7 +31,6 @@ Once you have this linker description file, add it to your project and:
 
 - **For Android** : set the  **Build Action** to **LinkDescription**
 - **For iOS** : set the  **Build Action** to **LinkDescription**
-
 
 The following example shows what the XML file looks like:
 
@@ -72,8 +71,6 @@ The `My.Own.Namespace` namespace will preserve all the types it contains.
 Lastly, any type whose full name (including the namespace) matches the wildcard
 pattern "My.Other\*" will preserve all of its fields and methods. The wildcard
 character `*` can be included multiple times within a "type fullname" pattern.
-
-
 
 ## Related Links
 

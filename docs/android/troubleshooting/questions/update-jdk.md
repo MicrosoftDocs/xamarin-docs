@@ -71,4 +71,3 @@ Projects > SDK Locations > Android > Locations > Java SDK (JDK) Location**:
 [![Setting the JDK location in the Android Locations tab](update-jdk-images/image6-sml.png)](update-jdk-images/image6.png#lightbox)
 
 -----
-

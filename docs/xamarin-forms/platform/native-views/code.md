@@ -315,7 +315,6 @@ This method uses the width provided by the `CustomControl.ArrangeOverride` metho
 
 This article explained how to add native views to a Xamarin.Forms layout created using C#, and how to override the layout of custom views to correct their measurement API usage.
 
-
 ## Related Links
 
 - [NativeEmbedding (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeembedding)

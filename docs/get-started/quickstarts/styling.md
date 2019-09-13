@@ -311,7 +311,6 @@ You should successfully complete the [previous quickstart](database.md) before a
 
 ::: zone-end
 
-
 ## Next steps
 
 In this quickstart, you learned how to:

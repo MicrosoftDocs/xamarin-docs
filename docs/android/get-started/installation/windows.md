@@ -13,7 +13,6 @@ ms.date: 06/22/2018
 
 _This guide describes the steps for installing Xamarin.Android for Visual Studio on Windows, and it explains how to configure Xamarin.Android for building your first Xamarin.Android application._
 
-
 ## Overview
 
 Because Xamarin is now included with all editions of Visual Studio at
@@ -45,7 +44,6 @@ Studio on Windows, see the
 [Windows Install](~/get-started/installation/windows.md)
 guide.
 
-
 ## Configuration
 
 Xamarin.Android uses the Java Development Kit (JDK) and the Android SDK
@@ -74,7 +72,6 @@ if you are developing specifically for API level 23 or earlier.
 
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
-
 
 ### Android SDK Manager
 
@@ -127,7 +124,6 @@ For more information about the Android Emulator, Hyper-V, and HAXM, please see [
 > On versions of Windows prior to Windows 10 April 2018 Update, HAXM is not compatible with Hyper-V. In this scenario it is necessary 
 to either [disable Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) or to use the slower emulator images that do not have the x86 optimizations.
 
-
 <a name="device" />
 
 ### Android Device
@@ -137,7 +133,6 @@ good time to set it up for development use. See
 [Set Up Device for Development](~/android/get-started/installation/set-up-device-for-development.md)
 to configure your Android device for development, then connect it to
 your computer for running and debugging Xamarin.Android applications.
-
 
 ## Create an Application
 
@@ -157,7 +152,6 @@ click **OK**:
 That's it! Now you are ready to use Xamarin.Android to create
 Android applications!
 
-
 ## Summary
 
 In this article, you learned how to set up and install the
@@ -170,7 +164,6 @@ start building your first application.
 The next step is to have a look at the 
 [Hello, Android](~/android/get-started/hello-android/index.md)
 tutorials to learn how to create a working Xamarin.Android app.
-
 
 ## Related Links
 

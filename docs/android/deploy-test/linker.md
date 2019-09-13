@@ -27,8 +27,6 @@ For example, the [Hello, Android](https://docs.microsoft.com/samples/xamarin/mon
 Linking results in a package that is 30% the size of the original
 (unlinked) package in 1.2.0, and 18% of the unlinked package in 4.0.1.
 
-
-
 ## Control
 
 Linking is based on *static analysis*. Consequently, anything that
@@ -52,7 +50,6 @@ public class MyActivity {
 }
 ```
 
-
 ### Linker Behavior
 
 The primary mechanism for controlling the linker is the **Linker Behavior** (*Linking* in Visual Studio)
@@ -61,7 +58,6 @@ drop-down within the **Project Options** dialog box. There are three options:
 1. **Don't Link** (*None* in Visual Studio)
 1. **Link SDK Assemblies** (*Sdk Assemblies Only*)
 1. **Link All Assemblies** (*Sdk and User Assemblies*)
-
 
 The **Don't Link** option turns off the linker; the above "Release
 without Linking" application size example used this behavior. This is useful for
@@ -96,7 +92,6 @@ E/mono    (17755):   at LinkerScratch2.Activity1.OnCreate (Android.OS.Bundle bun
 E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (IntPtr jnienv, IntPtr native__this, IntPtr native_savedInstanceState) [0x00000] in <filename unknown>:0
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
-
 
 ### Preserving Code
 
@@ -181,8 +176,6 @@ In the above examples, the `Preserve` attribute is declared in the
 attribute in any namespace because the linker looks up this attribute
 by type name.
 
-
-
 ### falseflag
 
 If the [Preserve] attribute can't be used, it is often useful to provide a
@@ -208,8 +201,6 @@ class MyActivity {
 }
 ```
 
-
-
 ### linkskip
 
 It is possible to specify that a set of user-provided assemblies should not
@@ -221,7 +212,6 @@ be linked at all, while allowing other user assemblies to be skipped with the *L
 </PropertyGroup>
 ```
 
-
 ### LinkDescription
 
 The [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
@@ -229,8 +219,6 @@ The [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
 [Custom linker configuration file](~/cross-platform/deploy-test/linker.md).
 file. Custom linker configuration files may be required to preserve
 `internal` or `private` members that need to be preserved.
-
-
 
 ### Custom Attributes
 
@@ -246,7 +234,6 @@ removed from all members:
 - System.MonoTODOAttribute
 - System.Xml.MonoFIXAttribute
 
-
 When an assembly is linked, the following custom attribute types will be
 removed from all members in Release builds:
 
@@ -259,7 +246,6 @@ removed from all members in Release builds:
 - System.Diagnostics.DebuggerStepThroughAttribute
 - System.Diagnostics.DebuggerTypeProxyAttribute
 - System.Diagnostics.DebuggerVisualizerAttribute
-
 
 ## Related Links
 

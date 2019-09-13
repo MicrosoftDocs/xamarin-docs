@@ -464,7 +464,6 @@ The `a` and `b` values are calculated so that the third transform is affine. The
 
 Another use of non-affine transforms is to mimic three-dimensional graphics. In the next article, [**3D Rotations**](3d-rotation.md) you see how to rotate a two-dimensional graphic in 3D space.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

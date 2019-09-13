@@ -29,4 +29,3 @@
 |Cupcake|1.5|3|May 2009|`BuildVersionCodes.Cupcake`|
 |Base|1.1|2|Feb 2009|`BuildVersionCodes.Base11`|
 |Base|1.0|1|Oct 2008|`BuildVersionCodes.Base`|
-

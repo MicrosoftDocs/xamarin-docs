@@ -4,8 +4,8 @@ description: "This document describes how to debug exceptions that originate in 
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/19/2016
 ---
 
@@ -256,4 +256,3 @@ expensive and unnecessary in those cases.
 Thus, we'd don't set up those try / catches for you. For places where you code
 does non-trivial things (beyond say returning a booleans or simple math), you
 can try catch yourself. 
-

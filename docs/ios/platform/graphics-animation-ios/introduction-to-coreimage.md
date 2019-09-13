@@ -4,8 +4,8 @@ description: "Core Image is a new framework introduced with iOS 5 to provide ima
 ms.prod: xamarin
 ms.assetid: 91E0780B-FF8A-E70D-9CD4-419119612B2D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -22,7 +22,6 @@ This document contains simple examples of:
 - Face detection.
 - Applying filters to an image
 - Listing the available filters.
-
 
 These examples should help get you started incorporating Core Image features
 into your Xamarin.iOS applications.
@@ -60,7 +59,6 @@ face. `CIFaceFeature` has the following properties:
 - MouthPosition – The coordinates of the mouth for this face.
 - LeftEyePosition – The coordinates of the left eye for this face.
 - RightEyePosition – The coordinates of the right eye for this face.
-
 
 The coordinates for all these properties have their origin in the bottom-left
 – unlike UIKit which uses the top-left as the origin. When using the

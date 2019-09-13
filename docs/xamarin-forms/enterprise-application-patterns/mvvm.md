@@ -359,7 +359,6 @@ The Model-View-ViewModel (MVVM) pattern helps to cleanly separate the business a
 
 Using the MVVM pattern, the UI of the app and the underlying presentation and business logic is separated into three separate classes: the view, which encapsulates the UI and UI logic; the view model, which encapsulates presentation logic and state; and the model, which encapsulates the app's business logic and data.
 
-
 ## Related Links
 
 - [Download eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)

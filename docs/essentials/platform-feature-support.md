@@ -26,7 +26,7 @@ Xamarin.Essentials supports the following platforms and operating systems:
 
 ## Feature Support
 
-Xamarin.Essentials always tries to bring features to every platform, however sometimes there are limitations based on the device. Below is a a guide of what features are supported on each platform.
+Xamarin.Essentials always tries to bring features to every platform, however sometimes there are limitations based on the device. Below is a guide of what features are supported on each platform.
 
 Icon Guide:
 
@@ -69,4 +69,3 @@ Icon Guide:
 | [Unit Converters](unit-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Version Tracking](version-tracking.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Vibrate](vibrate.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-

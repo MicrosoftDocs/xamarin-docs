@@ -4,8 +4,8 @@ description: "This document describes how to wirelessly deploy a Xamarin.iOS app
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.custom: video
 ms.date: 01/22/2019
 ---

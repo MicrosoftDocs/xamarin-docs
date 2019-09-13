@@ -296,7 +296,7 @@ Here’s the final complete XAML file with three buttons accessing six shared va
 
 The screenshots verify the consistent styling, and the platform-dependent styling:
 
-[![](xaml-markup-extensions-images/sharedresources.png "Styled Controls")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "Styled Controls")
+[![Styled Controls](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
 Although it is most common to define the `Resources` collection at the top of the page, keep in mind that the `Resources` property is defined by `VisualElement`, and you can have `Resources` collections on other elements on the page. For example, try adding one to the `StackLayout` in this example:
 
@@ -434,7 +434,7 @@ Both these namespace declarations are included in the **StaticConstantsPage** sa
 
 The size of the resultant `BoxView` relative to the screen is platform-dependent:
 
- [![](xaml-markup-extensions-images/staticconstants.png "Controls using x:Static Markup Extension")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "Controls using x:Static Markup Extension")
+[![Controls using x:Static Markup Extension](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## Other Standard Markup Extensions
 
@@ -550,13 +550,11 @@ Perhaps the most important lesson you should take from this sample is the syntax
 
 Here’s the program running:
 
-[![](xaml-markup-extensions-images/relativelayout.png "Relative Layout using Constraints")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "Relative Layout using Constraints")
+[![Relative Layout using Constraints](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## Summary
 
 The XAML markup extensions shown here provide important support for XAML files. But perhaps the most valuable XAML markup extension is `Binding`, which is covered in the next part of this series, [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-
 
 ## Related Links
 

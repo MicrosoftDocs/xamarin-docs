@@ -41,7 +41,6 @@ public class HomeScreen : ListActivity {
 }
 ```
 
-
 ### Handling Row Clicks
 
 Usually a `ListView` will also allow the user to touch a row to perform
@@ -63,7 +62,6 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 Now the user can touch a row and a `Toast` alert will appear:
 
 [![Screenshot of Toast that appears when a row is touched](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
-
 
 ## Implementing a ListAdapter
 
@@ -120,7 +118,6 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-
 ### Using a Custom Adapter
 
 Using the custom adapter is similar to the built-in `ArrayAdapter`,
@@ -132,7 +129,6 @@ ListAdapter = new HomeScreenAdapter(this, items);
 
 Because this example uses the same row layout (`SimpleListItem1`) the
 resulting application will look identical to the previous example.
-
 
 ### Row View Re-Use
 
@@ -173,7 +169,6 @@ and `BindView` which enforce row re-use by separating the
 responsibilities of `GetView` into two methods. There is a
 `CursorAdapter` example later in the document.
 
-
 ## Enabling Fast Scrolling
 
 Fast Scrolling helps the user to scroll through long lists by providing
@@ -188,7 +183,6 @@ Causing the fast scrolling handle to appear is as simple as setting the
 ```csharp
 ListView.FastScrollEnabled = true;
 ```
-
 
 ### Adding a Section Index
 
@@ -214,7 +208,6 @@ adapter:
 
 - **GetSectionForPosition** &ndash; Returns the section index to be
     displayed for a given row.
-
 
 The example `SectionIndex/HomeScreenAdapter.cs` file implements those
 methods, and some additional code in the constructor. The constructor
@@ -274,8 +267,6 @@ view. For example, you may have a "z" in your index, but you may
 not have a table section for every letter, so instead of "z"
 mapping to 26, it may map to 25 or 24, or whatever section index
 "z" should map to.
-
-
 
 ## Related Links
 

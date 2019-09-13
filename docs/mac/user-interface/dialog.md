@@ -4,8 +4,8 @@ description: "This article covers working with dialogs and modal windows in a Xa
 ms.prod: xamarin
 ms.assetid: 55451990-B77B-4D44-B8BB-F874EC503B0C
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -58,7 +58,6 @@ A Preferences Window is a modeless dialog that contains the application's settin
 The Open Dialog gives users a consistent way to find and open an item in an application:
 
 [![](dialog-images/dialog03.png "A open dialog box")](dialog-images/dialog03.png#lightbox)
-
 
 ### Print and Page Setup Dialogs
 

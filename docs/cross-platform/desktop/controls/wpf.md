@@ -2,8 +2,8 @@
 ms.assetid: 1BB412D1-FC3D-4E69-8B01-B976A3DB6328
 title: "WPF vs. Xamarin.Forms: Similarities & Differences"
 description: "This document compares and contrasts WPF to Xamarin.Forms. It discusses control templates, XAML, binding infrastructure, data templates, ItemsControl, UserControl, navigation, and URL navigation."
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/26/2017
 ---
 
@@ -79,20 +79,20 @@ Alternatively, you can define the binding relationship in XAML using the `Bindin
 The binding support and engine are more similar to the Silverlight implementation than WPF. There are several missing features which were not implemented in Xamarin.Forms:
 
 - There is no support for the following features in bindings:
-    - BindingGroupName
-    - BindsDirectlyToSource
-    - IsAsync
-    - MultiBinding
-    - NotifyOnSourceUpdated
-    - NotifyOnTargetUpdated
-    - NotifyOnValidationError
-    - UpdateSourceTrigger
-    - UpdateSourceExceptionFilter
-    - ValidatesOnDataErrors
-    - ValidatesOnExceptions
-    - ValidationRules collection
-    - XPath
-    - XmlNamespaceManager
+  - BindingGroupName
+  - BindsDirectlyToSource
+  - IsAsync
+  - MultiBinding
+  - NotifyOnSourceUpdated
+  - NotifyOnTargetUpdated
+  - NotifyOnValidationError
+  - UpdateSourceTrigger
+  - UpdateSourceExceptionFilter
+  - ValidatesOnDataErrors
+  - ValidatesOnExceptions
+  - ValidationRules collection
+  - XPath
+  - XmlNamespaceManager
 
 #### RelativeSource
 

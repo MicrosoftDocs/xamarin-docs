@@ -63,7 +63,6 @@ Certificate fingerprints:
          Version: 3
 ```
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 Locate the Xamarin **debug.keystore** file that is used to sign the
@@ -72,7 +71,6 @@ a Xamarin.Android application can be found at the following
 location:
 
 **~/.local/share/Xamarin/Mono for Android/debug.keystore**
-
 
 Information about a keystore is obtained by running the **keytool**
 command from the JDK. This tool is typically found in the following
@@ -142,7 +140,6 @@ For example, if you followed the steps in [Create a New Certificate](~/android/d
 For more information about signing a Xamarin.Android app, see
 [Signing the Android Application Package](~/android/deploy-test/signing/index.md).
 
-
 # [Visual Studio for Mac](#tab/macos)
 
 When the Visual Studio for Mac **Sign and Distribute...**
@@ -156,6 +153,5 @@ For example, if you followed the steps in [Create a New Certificate](~/android/d
 
 For more information about signing a Xamarin.Android app, see
 [Signing the Android Application Package](~/android/deploy-test/signing/index.md).
-
 
 -----

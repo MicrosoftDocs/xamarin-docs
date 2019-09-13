@@ -3,8 +3,8 @@ title: "PCL Reflection API"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 3137957A-478F-4DCC-BA58-EA14D99E2ED8
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/27/2018
 ---
 

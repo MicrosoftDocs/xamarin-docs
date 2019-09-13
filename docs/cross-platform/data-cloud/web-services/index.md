@@ -3,8 +3,8 @@ title: "Introduction to Web Services"
 description: "This guide demonstrates how to consume different web service technologies. Topics covered include communicating with REST services, SOAP services, and Windows Communication Foundation services."
 ms.prod: xamarin
 ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
 ---
 
@@ -181,7 +181,6 @@ client.GetAsync<CustomersResponse>("",
 
 > [!IMPORTANT]
 > While tools like ServiceStack and RestSharp make it easy to call and consume REST services, it is sometimes non-trivial to consume XML or JSON that does not conform to the standard _DataContract_ serialization conventions. If necessary, invoke the request and handle the appropriate serialization explicitly using the ServiceStack.Text library discussed below.
-
 
 <a name="Options_for_consuming_RESTful_data" />
 

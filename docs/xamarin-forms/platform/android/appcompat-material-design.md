@@ -146,7 +146,6 @@ In these files we're creating specific theme for the toolbar that may vary for y
 Refer to the [Hello Toolbar](https://blog.xamarin.com/android-tips-hello-toolbar-goodbye-action-bar/)
 blog post to learn more.
 
-
 ### 6. Update the `MainActivity`
 
 In existing Xamarin.Forms apps the **MainActivity.cs** class will inherit

@@ -4,8 +4,8 @@ description: "This document describes how to register a Xamarin.iOS application 
 ms.prod: xamarin
 ms.assetid: 8F89BE63-DDB5-4740-A69D-F60AEB21150D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -26,7 +26,6 @@ Registered apps can fall into several categories:
 - **Location** - Applications that make use of GPS or network location data can send and receive location updates in the background.
 - **Fetch (iOS 7+)** - An application registered for background fetch privileges can check a provider for new content at regular intervals, presenting the user with updated content when they return to the application.
 - **Remote Notifications (iOS 7+)** - Applications can register to receive notifications from a provider, and use the notification to kick off an update before the user opens the application. Notifications can come in the form of push notifications, or opt to wake the application silently.
-
 
 Applications can be registered by setting the **Required Background Modes** property in the application's *Info.plist*. An application can register in as many categories as it requires:
 

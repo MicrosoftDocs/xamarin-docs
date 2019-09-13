@@ -4,8 +4,8 @@ description: "Adding capabilities to an application often requires additional pr
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 05/06/2018
 ---
 
@@ -108,7 +108,6 @@ Capabilities are added to the **Entitlements.plist**. To add capabilities in Vis
 
 -----
 
-
 <a name="devcenter" />
 
 ## Using the Developer Center
@@ -141,7 +140,6 @@ Using the developer center is a two step process that requires creating an App I
     ![App ID confirmation](images/image9.png)
 
 9. Click **Register** and then **Done**. The newly created App ID should display in the iOS App IDs list.
-
 
 <a name="provisioningprofile" />
 

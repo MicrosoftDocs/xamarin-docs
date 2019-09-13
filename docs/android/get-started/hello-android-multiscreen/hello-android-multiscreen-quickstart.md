@@ -258,7 +258,6 @@ string value:
 
 [![Button reflects new string value](hello-android-multiscreen-quickstart-images/xs/05-new-string-value-sml.png)](hello-android-multiscreen-quickstart-images/xs/05-new-string-value.png#lightbox)
 
-
 With the **Translation History** button selected on the design surface,
 open the **Behavior** tab in the **Properties Pad** and
 double-click the **Enabled** checkbox to disable the button. This

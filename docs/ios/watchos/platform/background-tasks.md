@@ -4,8 +4,8 @@ description: "This document describes how to use background tasks with watchOS i
 ms.prod: xamarin
 ms.assetid: 2049C430-7566-45F8-9E3D-1446F484981E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/13/2017
 ---
 
@@ -104,7 +104,6 @@ The `WKApplicationRefreshBackgroundTask` is a generic Task that can be scheduled
 
 Within the runtime of the Task, the app can do any kind of local processing such as update a Complication timeline or fetch some required data with a `NSUrlSession`.
 
-
 <a name="WKURLSessionRefreshBackgroundTask" />
 
 ### WKURLSessionRefreshBackgroundTask
@@ -137,9 +136,6 @@ When the app marks the `WKSnapshotRefreshBackgroundTask` completed, the system w
 
 > [!IMPORTANT]
 > It is important to always schedule a `WKSnapshotRefreshBackgroundTask` after the app has received new data and updated its User Interface or the user will not see the modified information.
-
-
-
 
 Additionally, when the user receives a notification from the app and taps it to bring the app to the foreground, the Snapshot needs to be up-to-date since it is acting as the launch screen as well:
 
@@ -695,8 +691,6 @@ Apple has the following suggestions:
 ## Summary
 
 This article has covered the enhancements Apple has made to watchOS and how they can be used to keep a watch app up-to-date. First, it covered all of the new Background Task Apple has added in watchOS 3. Then, it covered the Background API Lifecycle and how to implement Background Tasks in a Xamarin watchOS app. Finally, it covered how scheduling works and gave some best practices.
-
-
 
 ## Related Links
 

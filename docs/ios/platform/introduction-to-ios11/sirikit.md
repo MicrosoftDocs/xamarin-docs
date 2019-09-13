@@ -4,8 +4,8 @@ description: "This document describes how to work with SiriKit in iOS 11. In par
 ms.prod: xamarin
 ms.assetid: 8F75300B-B591-42ED-9D17-001992A5C381
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/07/2017
 ---
 
@@ -245,7 +245,6 @@ also work for the sample app (which is actually named **TasksNotes**):
 - "Make a grocery list with apples, bananas, and pears in _MonkeyNotes_"
 - "Add task WWDC in _MonkeyTodo_"
 
-
 ## Troubleshooting
 
 Some errors that you might encounter while running the sample or
@@ -261,7 +260,6 @@ _Objective-C exception thrown.  Name: NSInternalInconsistencyException Reason: U
   [![Project options showing Entitlements correctly set](sirikit-images/set-entitlements-sml.png)](sirikit-images/set-entitlements.png#lightbox)
 
 - (for device deployment) App ID has SiriKit enabled and provisioning profile downloaded.
-
 
 ## Related Links
 

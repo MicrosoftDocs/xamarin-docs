@@ -129,7 +129,6 @@ A [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) that's placed as a direct ch
 
 Data templates lower in the view hierarchy take precedence over those defined higher up when they share `x:Key` attributes. For example, an application-level data template will be overridden by a page-level data template, and a page-level data template will be overridden by a control-level data template, or an inline data template.
 
-
 ## Related Links
 
 - [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md)

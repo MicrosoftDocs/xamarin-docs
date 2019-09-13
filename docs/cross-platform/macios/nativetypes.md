@@ -3,8 +3,8 @@ title: "Native Types for iOS and macOS"
 description: "This document describes how Xamarin's Unified API maps .NET types to 32-bit and 64-bit native types, as necessary based on compilation target architecture."
 ms.prod: xamarin
 ms.assetid: B5237770-0FC3-4B01-9E22-766B35C9A952
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/25/2016
 ---
 

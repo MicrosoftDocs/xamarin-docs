@@ -554,10 +554,10 @@ The code-behind file implements a `Clicked` handler that uses the `IPhotoLibrary
 ```csharp
 public partial class PhotoPuzzlePage1 : ContentPage
 {
-	public PhotoPuzzlePage1 ()
-	{
-		InitializeComponent ();
-	}
+    public PhotoPuzzlePage1 ()
+    {
+        InitializeComponent ();
+    }
 
     async void OnPickButtonClicked(object sender, EventArgs args)
     {
@@ -586,12 +586,12 @@ public partial class PhotoPuzzlePage2 : ContentPage
 {
     SKBitmap bitmap;
 
-	public PhotoPuzzlePage2 (SKBitmap bitmap)
-	{
+    public PhotoPuzzlePage2 (SKBitmap bitmap)
+    {
         this.bitmap = bitmap;
 
-		InitializeComponent ();
-	}
+        InitializeComponent ();
+    }
 
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
@@ -687,9 +687,9 @@ public partial class PhotoPuzzlePage3 : ContentPage
 {
     PhotoCropperCanvasView photoCropper;
 
-	public PhotoPuzzlePage3(SKBitmap bitmap)
-	{
-		InitializeComponent ();
+    public PhotoPuzzlePage3(SKBitmap bitmap)
+    {
+        InitializeComponent ();
 
         photoCropper = new PhotoCropperCanvasView(bitmap, 1f);
         canvasViewHost.Children.Add(photoCropper);

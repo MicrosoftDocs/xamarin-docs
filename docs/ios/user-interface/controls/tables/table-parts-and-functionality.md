@@ -4,8 +4,8 @@ description: "This document describes the various pieces of a UITableView in iOS
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -69,7 +69,6 @@ There are a couple of different editing features available:
 
 The remainder of this document shows how to implement all these UITableView
 features with Xamarin.iOS.
-
 
 ## Classes Overview
 

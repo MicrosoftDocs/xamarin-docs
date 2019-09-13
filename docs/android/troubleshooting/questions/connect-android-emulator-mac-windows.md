@@ -141,4 +141,3 @@ other mistakes in the document, feel free to add to the discussion on
 the following forum thread:
 [http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
 Thanks!
-

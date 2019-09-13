@@ -3,8 +3,8 @@ title: "Migrating a Binding to the Unified API"
 description: "This article covers the steps required to update an existing Xamarin Binding Project to support the Unified APIs for Xamarin.IOS and Xamarin.Mac applications."
 ms.prod: xamarin
 ms.assetid: 5E2A3251-D17F-4F9C-9EA0-6321FEBE8577
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 
@@ -129,7 +129,6 @@ With all of the code changes now in place, we need to modify our binding project
 
 As the final step to updating our binding project to use the Unified APIs, we need to either modify the `MakeFile` that we use to build the project or the Xamarin Project Type (if we are binding from within Visual Studio for Mac) and instruct _btouch_ to bind against the Unified APIs instead of the Classic ones.
 
-
 ### Updating a MakeFile
 
 If we are using a makefile to build our binding project into a Xamarin .DLL, we will need to include the `--new-style` command line option and call `btouch-native` instead of `btouch`.
@@ -144,7 +143,6 @@ PROJECT_ROOT=XMBindingLibrarySample
 PROJECT=$(PROJECT_ROOT)/XMBindingLibrarySample.xcodeproj
 TARGET=XMBindingLibrarySample
 BTOUCH=/Developer/MonoTouch/usr/bin/btouch
-
 
 all: XMBindingLibrary.dll
 
@@ -209,8 +207,6 @@ With all of these changes in place, you can build the new 64 bit version of the 
 ## Summary
 
 In this article we have shown the changes that need to be made to an existing Xamarin Binding Project to support the new Unified APIs and 64 bit devices and the steps required to build the new 64 bit compatible version of an API.
-
-
 
 ## Related Links
 

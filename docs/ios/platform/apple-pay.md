@@ -4,8 +4,8 @@ description: "This guide explores setting up the Xamarin.iOS environment for use
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2017
 ---
 
@@ -88,7 +88,6 @@ New to iOS 10, the developer can incorporate Apple Pay directly into their websi
 ### PassKit Framework Enhancements
 
 In iOS 10, the PassKit framework has been expanded to support Apple Pay outside of `UIKit` and to allow card issuers to present their own cards from within their apps.
-
 
 #### Supporting Apple Pay Outside of UIKit
 

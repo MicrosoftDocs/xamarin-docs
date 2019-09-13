@@ -18,7 +18,6 @@ and
 widgets. When either radio button is pressed, a toast message will be
 displayed.
 
-
 Open the **Resources/layout/Main.axml** file and add two
 [`RadioButton`](xref:Android.Widget.RadioButton)s, nested in
 a

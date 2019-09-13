@@ -75,7 +75,6 @@ Testing models and view models from MVVM applications is identical to testing an
 
 This project has a community site, on which you can post questions, and provide feedback. The community site is located on [GitHub](https://github.com/dotnet-architecture/eShopOnContainers). Alternatively, feedback about the eBook can be emailed to [dotnet-architecture-ebooks-feedback@service.microsoft.com](mailto:dotnet-architecture-ebooks-feedback@service.microsoft.com).
 
-
 ## Related Links
 
 - [Download eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)

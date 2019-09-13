@@ -4,8 +4,8 @@ description: "Once Xamarin.iOS has been successfully installed, the next step in
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/15/2017
 ---
 # Manual provisioning for Xamarin.iOS
@@ -265,7 +265,6 @@ At this point provisioning should be complete, and the app is ready to be deploy
 
 4. Make sure to set the build configuration to **iPhone** or **iPad**, rather the simulator.
 5. Click **Run** in Visual Studio and view the app running on the device.
-
 
 -----
 

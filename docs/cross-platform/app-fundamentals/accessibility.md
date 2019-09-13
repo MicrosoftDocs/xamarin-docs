@@ -3,8 +3,8 @@ title: "Accessibility in Xamarin Apps"
 description: "This document provides various tips for the creation of accessible apps. For example, it includes recommendations about large fonts, high contrast, self-describing interfaces, and more."
 ms.prod: xamarin
 ms.assetid: E587F0CF-7C1D-41F8-B5A8-DA3E738EDA81
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -94,8 +94,6 @@ are easy to find and use.
 
 Accessibility descriptions can (and should) be localized
 where the application supports multiple languages.
-
-
 
 ## Related Links
 

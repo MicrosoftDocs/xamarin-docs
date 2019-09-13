@@ -4,8 +4,8 @@ description: "This article describes working with collection views in a Xamarin.
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/24/2017
 ---
 

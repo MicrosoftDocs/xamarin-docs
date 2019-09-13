@@ -34,7 +34,6 @@ Visit the [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) to dow
 Community Edition or to learn more about purchasing the Professional
 and Enterprise editions.
 
-
 ## Allow Installation from Unknown Sources
 
 By default, Android prevents users from downloading and installing
@@ -46,11 +45,8 @@ Security**, as shown in the following diagram:
 
 [![Security settings screen](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
-
 > [!IMPORTANT]
 > Some network providers might prevent the installation of applications from unknown sources, regardless of this setting.
-
-
 
 ## Publishing by E-Mail
 
@@ -66,7 +62,6 @@ against piracy or unauthorized distribution. It is best reserved for
 situations where the recipients of the application are few, and they
 are trusted not to distribute the application.
 
-
 ## Publishing by Web
 
 It is possible to distribute an application by a web server. This is
@@ -74,7 +69,6 @@ accomplished by uploading the application to the web server, and then
 providing a download link to users. When an Android-powered device
 browses to a link and then downloads the application, that application
 will automatically be installed once the download is complete.
-
 
 ## Manually Installing an APK
 

@@ -4,8 +4,8 @@ description: "This document describes how to use asset catalogs to manage an App
 ms.prod: xamarin
 ms.assetid: BFB5665A-F557-46E1-B35E-870CC2026AD9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/26/2017
 ---
 
@@ -44,9 +44,6 @@ To add an App Store icon do the following:
     ![App Store Icon](app-store-icon-images/image2.png)
 
 3. Click on the icon and browse for your 1024 x 1024 pixel image. Save the Asset Catalog.
-
-
-
 
 ## Related Links
 

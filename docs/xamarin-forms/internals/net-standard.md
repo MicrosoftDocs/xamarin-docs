@@ -28,7 +28,6 @@ Xamarin.Forms 2.4 allows Xamarin.Forms applications to target .NET Standard 2.0 
 - Copy the files from the PCL project to the .NET Standard library.
 - Remove the PCL project that contains the Xamarin.Forms user interface logic.
 
-
 ## Related Links
 
 - [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)

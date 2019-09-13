@@ -4,8 +4,8 @@ description: "This document describes additional framework changes introduced in
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -50,9 +50,6 @@ The new _CloudKit Web Services_ framework provides  a JavaScript library (CloudK
 
 > [!IMPORTANT]
 > Before you can access, present or update content from a CloudKit database using CloudKit JS, you must have previously defined that database's schema.
-
-
-
 
 For more information, please see the following documents:
 
@@ -258,8 +255,6 @@ To correct this situation, use Auto Layout and Size Classes to pin the width of 
 ### New UITextInputAssistantItem Class
 
 Use the new `UITextInputAssistantItem` class to layout Bar Button Groups in a _Shortcut Bar_. The Shortcut Bar is a new area that is available in the soft keyboard to provide typing shortcuts.
-
-
 
 ## Related Links
 

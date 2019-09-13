@@ -222,7 +222,6 @@ The `DeleteDatabaseAsync` method specifies a `Uri` argument that represents the 
 
 This article explained how to use the Azure Cosmos DB .NET Standard client library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application. An Azure Cosmos DB document database is a NoSQL database that provides low latency access to JSON documents, offering a fast, highly available, scalable database service for applications that require seamless scale and global replication.
 
-
 ## Related Links
 
 - [Todo Azure Cosmos DB (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-tododocumentdb)
