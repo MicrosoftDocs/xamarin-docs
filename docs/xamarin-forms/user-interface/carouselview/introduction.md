@@ -15,7 +15,6 @@ ms.date: 09/09/2019
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) is a view for presenting information in a carousel-like way.
 
-
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) is available in Xamarin.Forms 4.3. However, it is currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
 
 ```csharp
