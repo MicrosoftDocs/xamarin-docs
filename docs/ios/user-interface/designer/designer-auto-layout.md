@@ -65,13 +65,13 @@ The constraints toolbar has been updated and now consists of two main parts:
 The constraints editor pop-up allows us to add and update the multiple constraints at once for a select view. We can create multiple spacing, aspect ratio, and alignment constraints, such as align a view to the left edges of two views.
 
 For editing constraints on the selected view, click the ellipsis to display the popover:
-![constraints editing popover](images/constraints-popup.png)
+![constraints editing popover](designer-auto-layout-images/constraints-popup.png)
 
-On opening the constraints popover it displays any preset constraints on the view. We can set all the spacing constraints selecting _All Sides_ from the combobox on top right corner, and select _Clear All_ to remove them. 
+On opening the constraints popover it displays any preset constraints on the view. We can set all the spacing constraints selecting **All Sides** from the combobox on top right corner, and select **Clear All** to remove them. 
 
-The _W_ will will set width and _H_ will set height constraint. When you check _Aspect Ratio_, the views height and width will be controlled on different screen sizes, the width of the view is used as numerator for the ration, and the height as denominator.
+The **W** will set width and **H** will set height constraint. When you check **Aspect Ratio**, the views height and width will be controlled on different screen sizes, the width of the view is used as numerator for the ration, and the height as denominator.
 
-![constraints spacing](images/constraints-spacing.png)
+![constraints spacing](designer-auto-layout-images/constraints-spacing.png)
 
 Four combo boxes for spacing constraints lists the neighboring views to anchor the constraint
 
