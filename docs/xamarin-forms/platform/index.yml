@@ -67,3 +67,9 @@ sections:
         src: https://docs.microsoft.com/media/common/i_form.svg
         href: native-views/index.md
       title: Native Views
+    - href: sign-in-with-apple/index.md
+      html: "Learn how to use Sign In with Apple on Android and iOS to provide stronger user privacy."
+      image:
+        src: https://docs.microsoft.com/media/logos/logo_ios.svg
+        href: sign-in-with-apple/index.md
+      title: Sign In with Apple
