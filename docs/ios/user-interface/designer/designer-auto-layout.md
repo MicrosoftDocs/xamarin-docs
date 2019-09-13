@@ -60,9 +60,24 @@ The constraints toolbar has been updated and now consists of two main parts:
   - In Constraint editing mode this button adjusts the constraints to match the element frame.
   - In Frame editing mode this button adjusts the element frame to match the position the constraints are defining.
 
+## Constraints editing popover
+
+The constraints editor pop-up allows us to add and update the multiple constraints at once for a select view. We can create multiple spacing, aspect ratio, and alignment constraints, such as align a view to the left edges of two views.
+
+For editing constraints on the selected view, click the ellipsis to display the popover:
+![constraints editing popover](designer-auto-layout-images/constraints-popup.png)
+
+On opening the constraints popover it displays any preset constraints on the view. We can set all the spacing constraints selecting **All Sides** from the combobox on top right corner, and select **Clear All** to remove them. 
+
+The **W** will set width and **H** will set height constraint. When you check **Aspect Ratio**, the views height and width will be controlled on different screen sizes, the width of the view is used as numerator for the ration, and the height as denominator.
+
+![constraints spacing](designer-auto-layout-images/constraints-spacing.png)
+
+Four combo boxes for spacing constraints lists the neighboring views to anchor the constraint
+
 ## Surface-Based Constraint Editing
 
-In the previous section, we learned to add default constraints and remove constraints using the Constraints Toolbar. For more fine-tuned constraint editing, we can interact with constraints directly on the design surface. This section introduces the basics of surface-based constraint editing, including pin-spacing controls, drop areas, and working with different types of constraints.
+For more fine-tuned constraint editing, we can interact with constraints directly on the design surface. This section introduces the basics of surface-based constraint editing, including pin-spacing controls, drop areas, and working with different types of constraints.
 
 ### Creating Constraints
 
