@@ -20,10 +20,11 @@ This document introduces how you can add Sign In with Apple to iOS 13 applicatio
 ## Requirements
 
 This feature requires:
+
 * iOS 13
 * Xamarin.iOS 12.99
-* Visual Studio 2019 or Visual Studio 2019 for Mac with Xcode 11 support. 
- 
+* Visual Studio 2019 or Visual Studio 2019 for Mac with Xcode 11 support.
+
 See [Get Started](get-started.md) for more details.
 
 ## Apple developer setup
@@ -213,7 +214,7 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 
 ## Summary
 
-This article introduced Sign In with Apple for iOS. 
+This article introduced Sign In with Apple for iOS.
 
 ## Related links
 
