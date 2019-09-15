@@ -54,4 +54,4 @@ wide fonts.
 
 ## Related links
 
-- [Xamarin.iOS preview release notes](/xamarin/ios/release-notes/12/12.99)
+- [Xamarin.iOS 13 release notes](/xamarin/ios/release-notes/13/13.0)
