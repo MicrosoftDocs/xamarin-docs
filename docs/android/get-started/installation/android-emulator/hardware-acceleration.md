@@ -24,6 +24,14 @@ improve the performance of the Android emulator by using special x86
 virtual device images in conjunction with the virtualization features
 of your computer.
 
+| Scenario    | HAXM        | WHPX       | Hypervisor.Framework |
+| ----------- | ----------- | -----------| ----------- |
+| You have an Intel Processor | X | X | X |
+| You have an AMD Processor   |   | X |   |
+| You want to support Hyper-V |   | X |   |
+| You want to support nested Virtualization |   | Limited |   |
+| You want to use technologies like Docker  |   | X | X |
+
 ::: zone pivot="windows"
 
 ## Accelerating Android emulators on Windows
@@ -31,7 +39,7 @@ of your computer.
 The following virtualization technologies are available for
 accelerating the Android emulator:
 
-1. **Microsoft's Hyper-V and the Hypervisor Platform**.
+1. **Microsoft's Hyper-V and the Windows Hypervisor Platform (WHPX)**.
    [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/)
    is a virtualization feature of Windows that makes it possible to run
    virtualized computer systems on a physical host computer.
@@ -39,9 +47,9 @@ accelerating the Android emulator:
 2. **Intel's Hardware Accelerated Execution Manager (HAXM)**.
    HAXM is a virtualization engine for computers running Intel CPUs.
 
-For optimum performance, it is recommended that you use Hyper-V to
-accelerate the Android emulator. If Hyper-V is not available on your
-computer, then HAXM can be used. The Android emulator will
+For the best experience on Windows, it is recommended that you use HAXM to
+accelerate the Android emulator. If HAXM is not available on your
+computer, then Windows Hypervisor Platform (WHPX) can be used. The Android emulator will
 automatically make use of hardware acceleration if the following
 criteria are met:
 
@@ -220,7 +228,7 @@ accelerating the Android emulator:
    [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm)
    is a virtualization engine for computers running Intel CPUs.
 
-For optimum performance, it is recommended that you use the Hypervisor
+It is recommended that you use the Hypervisor
 Framework to accelerate the Android emulator. If the Hypervisor
 Framework is not available on your Mac, then HAXM can be used. The
 Android emulator will automatically make use of hardware acceleration
@@ -255,8 +263,7 @@ meet the following criteria:
 - Your Mac's CPU must be able to support the Hypervisor Framework.
 
 If your Mac meets these criteria, the Android emulator will
-automatically use the Hypervisor Framework for acceleration (even if
-HAXM is installed). If you are not sure if Hypervisor Framework
+automatically use the Hypervisor Framework for acceleration. If you are not sure if Hypervisor Framework
 is supported on your Mac, see the
 [Troubleshooting](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#hypervisor-issues)
 guide for ways to verify that your Mac supports Hypervisor.
