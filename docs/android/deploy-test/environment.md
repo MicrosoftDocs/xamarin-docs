@@ -117,17 +117,18 @@ Controls which additional information Xamarin.Android will log to `adb logcat`.
 It is a comma-separated string (`,`), containing one of the following values:
 
 - `all`: Print out *all* messages. This is seldom a good idea, as it includes
-    `lref` messages.
+  `lref` messages.
 - `assembly`: Print out `.apk` and assembly parsing messages.
 - `gc`: Print out GC-related messages.
 - `gref`: Print out JNI Global Reference messages.
-- `lref`: Print out JNI Local Reference messages.  
-    *Note*: This will *really* spam `adb logcat`.  
-    In Xamarin.Android 5.1, this will also create a `.__override__/lrefs.txt`
-    file, which can get *gigantic*.  
-    Avoid.
+- `lref`: Print out JNI Local Reference messages.
+  > [!NOTE]
+  > This will *really* spam `adb logcat`.
+  > In Xamarin.Android 5.1, this will also create a `.__override__/lrefs.txt`
+  > file, which can get *gigantic*.
+  > Avoid.
 - `timing`: Print out some method timing information. This will also create
-    the files `.__override__/methods.txt` and `.__override__/counters.txt`.
+  the files `.__override__/methods.txt` and `.__override__/counters.txt`.
 
 ### `debug.mono.max_grefc`
 
@@ -170,9 +171,9 @@ The `debug.mono.wref` system property allows overriding the default detected
 JNI Weak Reference mechanism. There are two supported values:
 
 - `jni`: Use JNI weak references, as created by `JNIEnv::NewWeakGlobalRef()`
-    and destroyed by `JNIEnv::DeleteWeakGlobalREf()`.
+  and destroyed by `JNIEnv::DeleteWeakGlobalREf()`.
 - `java`: Use JNI Global references which reference
-    `java.lang.WeakReference` instances.
+  `java.lang.WeakReference` instances.
 
 `java` is used, by default, up through API-7 and on API-19 (Kit Kat) with
 ART enabled. (API-8 added `jni` references, and ART *broke* `jni` references.)

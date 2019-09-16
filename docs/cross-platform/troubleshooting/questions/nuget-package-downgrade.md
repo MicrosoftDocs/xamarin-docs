@@ -38,4 +38,5 @@ You can also copy/paste the exact command from the package's NuGet page. Example
 
     `Xamarin.Forms version:1.4`
 
-*Note: If you add a space between `version:` & the version number, the search will behave as though no version was specified.*
+> [!NOTE]
+> If you add a space between `version:` & the version number, the search will behave as though no version was specified.
