@@ -21,6 +21,7 @@ Xamarin.Essentials supports the following platforms and operating systems:
 | UWP | 10.0.16299.0 or higher |
 
 > [!NOTE]
+>
 > * Tizen is officially supported by the Samsung development team.
 > * tvOS & watchOS have limited API coverage, please see the feature guide for more information.
 

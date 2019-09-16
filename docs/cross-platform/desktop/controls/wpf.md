@@ -60,6 +60,7 @@ One of the core concepts carried over is a data binding infrastructure to connec
 ### Defining bindable properties
 
 The definition for a bindable property in Xamarin.Forms is the same as WPF:
+
 1. The object must derive from `BindableObject`.
 2. There must be a public static field of type `BindableProperty` declared to define the backing storage key for the property.
 3. There should be a public instance property wrapper that uses `GetValue` and `SetValue` to retrieve and change the properties value.

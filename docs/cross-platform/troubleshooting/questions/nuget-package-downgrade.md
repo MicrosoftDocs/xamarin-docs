@@ -30,6 +30,7 @@ You can also copy/paste the exact command from the package's NuGet page. Example
     `[PackageName] version:*`
 
 ### Examples 
+
 - Lists all Xamarin.Forms packages: 
 
     `Xamarin.Forms version:`

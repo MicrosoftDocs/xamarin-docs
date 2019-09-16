@@ -162,6 +162,7 @@ going to handling lists and notes intents, it also implements
 `IINNotebookDomainHandling`.
 
 > [!NOTE]
+>
 > - There is a convention in .NET for interfaces to be prefixed with a
 >   capital `I`, which Xamarin adheres to when binding protocols from the 
 >   iOS SDK.

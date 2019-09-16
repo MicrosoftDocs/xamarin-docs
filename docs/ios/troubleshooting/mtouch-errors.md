@@ -1616,6 +1616,7 @@ The root assembly could not be loaded. Please verify that the path in the error 
 Something unexpected occured when trying to optimize generated binding code. The element causing the issue is named in the error message. To fix this issue the assembly named (or containing the type or method named) will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 The last digit `x` will be:
+
 - `0` for an assembly name;
 - `1` for a type name;
 - `3` for a method name;

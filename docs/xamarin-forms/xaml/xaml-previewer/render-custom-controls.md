@@ -46,6 +46,7 @@ Make sure you have at least Xamarin.Forms 3.6 installed. You can update your Xam
 
 ### Even with `[DesignTimeVisible(true)]`, my custom control isn't rendering properly.
 Custom controls that rely heavily on code-behind or backend data don't always work in the XAML Previewer. You can try:
+
 * Moving the control so it doesn't initialize if [design mode is enabled](index.md#detect-design-mode)
 * Setting up [design time data](design-time-data.md) to show fake data from the backend
 

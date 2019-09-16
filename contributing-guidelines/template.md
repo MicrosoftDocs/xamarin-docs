@@ -60,6 +60,7 @@ Markdown uses special characters such as \*, \`, and \# for formatting. If you w
 ## File name
 
 File names use the following rules:
+
 - Contain only lowercase letters, numbers, and hyphens.
 - No spaces or punctuation characters. Use the hyphens to separate words and numbers in the file name.
 - Use action verbs that are specific, such as develop, buy, build, troubleshoot. No -ing words.
@@ -70,6 +71,7 @@ File names use the following rules:
 ## Headings
 
 Use sentence-style capitalization. Always capitalize:
+
 - The first word of a heading.
 - The word following a colon in a title or heading (for example, "How to: Sort an array").
 
@@ -128,6 +130,7 @@ The build system has some extensions that allow us to link to .NET APIs without 
 When linking to an API, you can use its unique identifier (UID) that is auto-generated from the source code.
 
 You can use one of the following syntax:
+
 1. Markdown link: `[link_text](xref:UID)`
 2. Auto link: `<xref:UID>`
 3. Shorthand form: `@UID`
@@ -140,6 +143,7 @@ For more information about using this notation, see [Using cross reference](http
 > Right now, there is no easy way to find the UIDs. The best way to find the UID for an API is to search for it in this repo: [docascode/coreapi](https://github.com/docascode/coreapi). We're working on having a better system in the future.
 
 When the UID contains the special characters \` or \#, the UID value needs to be HTML encoded as %60 and %23 respectively as in the following examples:
+
 - Example: @System.Threading.Tasks.Task\`1 becomes `@System.Threading.Tasks.Task%601`
 - Example: @System.Exception.\#ctor becomes `@System.Exception.%23ctor`
 
