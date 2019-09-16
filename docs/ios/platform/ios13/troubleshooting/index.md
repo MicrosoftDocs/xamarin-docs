@@ -26,6 +26,7 @@ Until there is a [fix](https://github.com/xamarin/xamarin-macios/issues/6216), t
 
 > [!NOTE]
 > These steps assume you have two Xcode applications:
+>
 > - **Xcode11-beta1.app** – The beta version which does not work with simulators and Visual Studio for Mac.
 > - **Xcode102.app** – A stable version of Xcode 10. Yours might also be called **Xcode.app**.
 >

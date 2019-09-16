@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Use the NuGet Package Manager to add Newtonsoft.Json to a Xamarin.Forms project.
 > - Create the web service classes.
 > - Consume the web service classes.

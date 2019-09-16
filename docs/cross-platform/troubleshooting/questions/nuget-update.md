@@ -15,6 +15,7 @@ NuGet updates, extensions, and add-ins can be found under the **Updates** tab in
 Please note, updates will *only* be shown in these menus if you do not have the latest supported version of NuGet by the IDE installed:
 
 ## Visual Studio
+
 1. Open **Tools > Extensions and Updates > Updates > Visual Studio Gallery**
 2. Select **NuGet Package Manager for Visual Studio [Year]**
 

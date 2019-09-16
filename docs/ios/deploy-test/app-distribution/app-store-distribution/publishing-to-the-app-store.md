@@ -20,6 +20,7 @@ This guide describes the steps to follow to prepare an app for the App
 Store and send it to Apple for review. In particular, it describes:
 
 > [!div class="checklist"]
+>
 > - Following the App Store Review Guidelines
 > - Setting up an App ID and entitlements
 > - Providing an App Store icon and app icons

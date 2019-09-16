@@ -6,6 +6,7 @@ Before attempting this tutorial, you should have successfully completed the:
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) in XAML.
 > - Respond to the text in the `Entry` changing.
 > - Customize the behavior of the `Entry`.

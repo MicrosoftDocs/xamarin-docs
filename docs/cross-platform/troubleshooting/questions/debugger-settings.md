@@ -15,6 +15,7 @@ In order for the debugger to work as expected (hit breakpoints, display debug lo
 Please follow these steps to check your environment settings:
 
 ## Visual Studio
+
 1. Open the Project options
 2. Go to **Build > Advanced...** Set Debug Information to **Full**
 3. Settings for each platform:
@@ -22,6 +23,7 @@ Please follow these steps to check your environment settings:
    - Go to **iOS Debug > Debugging & Instrumentation**. Tick the **Enable Debugging** box.
 
 ## Visual Studio for Mac
+
 1. Open the Project options
 2. Go to **Build > Compiler > General Options**. Set Debug Information to **Full**
 3. Settings for each platform:

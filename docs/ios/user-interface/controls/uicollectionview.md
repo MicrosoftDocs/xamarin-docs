@@ -529,6 +529,7 @@ Select the Collection View (It may be easiest to do this from the document outli
 [![](uicollectionview-images/quick04.png "Set the Collection View sizes")](uicollectionview-images/quick04.png#lightbox)
 
 Next, edit the default Cell:
+
 - Change its background color to blue
 - Add a label to act as the title for the cell
 - Set the reuse identifier to **cell**
