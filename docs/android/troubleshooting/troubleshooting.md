@@ -91,18 +91,20 @@ Xamarin.Android supports the following system properties:
   been initialized. This allows setting environment variables that
   control mono logging.
 
-  - *Note*: Since the value is '*|*'-separated, the value must have
-    an extra level of quoting, as the \`*adb shell*\` command will
-    remove a set of quotes.
+  > [!NOTE]
+  > Since the value is '*|*'-separated, the value must have
+  > an extra level of quoting, as the \`*adb shell*\` command will
+  > remove a set of quotes.
 
-  - *Note*: Android system property values can be no longer than 92
-    characters in length.
+  > [!NOTE]
+  > Android system property values can be no longer than 92
+  > characters in length.
 
-  - Example:
+  Example:
 
-    ```
-    adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
-    ```
+  ```
+  adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+  ```
 
 - *debug.mono.log*: A comma-separated ('*,*') list of components that
   should print additional messages to the Android Debug Log. By
@@ -113,7 +115,8 @@ Xamarin.Android supports the following system properties:
   - *gref*: Print (weak, global) reference allocation and deallocation messages.
   - *lref*: Print local reference allocation and deallocation messages.
 
-  *Note*: these are *extremely* verbose. Do not enable unless you really need to.
+  > [!NOTE]
+  > These are *extremely* verbose. Do not enable unless you really need to.
 
 - *debug.mono.trace*: Allows setting the [mono --trace](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`
   setting.
@@ -206,10 +209,11 @@ at a time. Hardware has a much higher limit of 52000 global references. The
 lower limit can be problematic when running applications on the emulator, so
 knowing *where* the instance came from can be very useful.
 
- *Note*: the global reference count is internal to Xamarin.Android,
-and does not (and cannot) include global references taken out by other native
-libraries loaded into the process. Use the global reference count as an
-estimate.
+> [!NOTE]
+> The global reference count is internal to Xamarin.Android,
+> and does not (and cannot) include global references taken out by other native
+> libraries loaded into the process. Use the global reference count as an
+> estimate.
 
 ```shell
 I/monodroid-gref(12405): +g+ grefc 108 gwrefc 0 obj-handle 0x40517468/L -> new-handle 0x40517468/L from    at Java.Lang.Object.RegisterInstance(IJavaObject instance, IntPtr value, JniHandleOwnership transfer)

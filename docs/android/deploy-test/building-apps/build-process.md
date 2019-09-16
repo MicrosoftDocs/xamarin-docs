@@ -463,14 +463,16 @@ when packaging Release applications.
     This corresponds to the **Managed** option in the Visual Studio
     property pages.
 
-  *Note*: If TLS 1.2 support is required on Android versions prior to 5.0,
-  *or* if TLS 1.2 support is required with the `System.Net.WebClient` and
-  related APIs, then `$(AndroidTlsProvider)` should be used.
+  > [!NOTE]
+  > If TLS 1.2 support is required on Android versions prior to 5.0,
+  > *or* if TLS 1.2 support is required with the `System.Net.WebClient` and
+  > related APIs, then `$(AndroidTlsProvider)` should be used.
 
-  *Note*: Support for this property works by setting the
-  [`XA_HTTP_CLIENT_HANDLER_TYPE` environment variable](~/android/deploy-test/environment.md).
-  A `$XA_HTTP_CLIENT_HANDLER_TYPE` value found in a file
-  with a Build action of `@(AndroidEnvironment)` will take precedence.
+  > [!NOTE]
+  > Support for this property works by setting the
+  > [`XA_HTTP_CLIENT_HANDLER_TYPE` environment variable](~/android/deploy-test/environment.md).
+  > A `$XA_HTTP_CLIENT_HANDLER_TYPE` value found in a file
+  > with a Build action of `@(AndroidEnvironment)` will take precedence.
 
   Added in Xamarin.Android 6.1.
 

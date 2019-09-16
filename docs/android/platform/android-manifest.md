@@ -93,13 +93,14 @@ This example produces the following xml fragment:
 <activity android:name="awesome.demo.activity" />
 ```
 
-*Note*: you should use the `Name` property only for 
-backward-compatibility reasons, as such renaming can slow down type 
-lookup at runtime. If you have legacy code that expects the default 
-type name of the activity to be based on the lowercased namespace and 
-the class name, see 
-[Android Callable Wrapper Naming](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) 
-for tips on maintaining compatibility. 
+> [!NOTE]
+> you should use the `Name` property only for 
+> backward-compatibility reasons, as such renaming can slow down type 
+> lookup at runtime. If you have legacy code that expects the default 
+> type name of the activity to be based on the lowercased namespace and 
+> the class name, see 
+> [Android Callable Wrapper Naming](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming) 
+> for tips on maintaining compatibility. 
 
 ### Activity Title Bar
 
