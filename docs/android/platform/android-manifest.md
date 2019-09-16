@@ -94,7 +94,7 @@ This example produces the following xml fragment:
 ```
 
 > [!NOTE]
-> you should use the `Name` property only for 
+> You should use the `Name` property only for 
 > backward-compatibility reasons, as such renaming can slow down type 
 > lookup at runtime. If you have legacy code that expects the default 
 > type name of the activity to be based on the lowercased namespace and 
