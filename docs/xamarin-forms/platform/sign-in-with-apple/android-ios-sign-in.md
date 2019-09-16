@@ -235,7 +235,8 @@ public class WebAppleSignInService : IAppleSignInService
 
         return await tcsAccount.Task;
     }
-}```
+}
+```
 
 ## Summary
 
