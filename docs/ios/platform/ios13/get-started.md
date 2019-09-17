@@ -26,7 +26,7 @@ APIs released with Xcode 11, for iOS 13. Using the preview requires macOS 10.14.
    Studio for Mac, as it installs some tools that Xamarin requires.
 
 3. In Visual Studio for Mac, select **Visual Studio > Check for Updates...**, 
-   select the **Xcode 11 Previews** channel, and install the available updates.
+   select the **Xcode 11 Previews** channel, and install the available updates. If you do not see this channel, make sure you are logged into your account from **Visual Studio > Account...**.
 
 4. In Visual Studio for Mac, select **Visual Studio > Preferences > Projects > SDK Locations > Apple** and select **Xcode-beta.app**.
 
