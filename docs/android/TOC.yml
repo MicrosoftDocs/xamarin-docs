@@ -303,6 +303,8 @@
               href: platform/fragments/providing-backwards-compatibility.md
         - name: App Linking
           href: platform/app-linking.md
+        - name: Android 10
+          href: platform/android-10.md
         - name: Android 9 Pie
           href: platform/pie.md
         - name: Android 8 Oreo

@@ -49,6 +49,13 @@ will discuss how to implement app-linking in an Android 6.0 application
 and how to configure a website to grant permissions to the mobile app
 to handle app-links for the domain.
 
+## [Android 10](~/android/platform/android-10.md)
+
+This article provides an outline of the new features in Android 10,
+explains how to prepare Xamarin.Android for Android 10 development,
+and provides links to sample applications that illustrate how to use
+Android Oreo features in Xamarin.Android apps.
+
 ## [Android 9 Pie](~/android/platform/pie.md)
 
 This article provides an outline of the new features in Android Pie,
