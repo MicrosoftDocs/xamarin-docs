@@ -355,12 +355,11 @@ There are several possible ways to use the new property. For example, to output 
        <MtouchFloat32>true</MtouchFloat32>
        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
        <MtouchLink>SdkOnly</MtouchLink>
-       <MtouchArch>;ARMv7, ARM64</MtouchArch>
+       <MtouchArch>ARMv7, ARM64</MtouchArch>
        <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
        <MtouchTlsProvider>Default</MtouchTlsProvider>
-       <PlatformTarget>x86&</PlatformTarget>
        <BuildIpa>true</BuildIpa>
-       <IpaPackageDir>$(OutputPath</IpaPackageDir>
+       <IpaPackageDir>$(OutputPath)</IpaPackageDir>
     </PropertyGroup>
     ```
 
