@@ -173,7 +173,7 @@ might have been missed:
 Apple is famous for being strict about adherence to their Human Interface
 Guidelines as one of the key strengths of their platform is consistency (and the
 perceived increase in usability). Microsoft has taken a similar approach with
-Windows applications implementing the Metro-style UI. The approval process
+Windows applications implementing the [Fluent Design System](https://microsoft.com/design/fluent). The approval process
 for both platforms will involve your app being evaluated for its adherence to
 the relevant design philosophy.
 
