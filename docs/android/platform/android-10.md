@@ -56,11 +56,11 @@ To create a project with Xamarin.Android 10.0, you must first use the Android SD
 1. Start the SDK Manager. In Visual Studio, click **Tools > Android > Android SDK Manager.** In Visual Studio for Mac, click **Tools > SDK Manager.**
 2. In the lower right-hand corner, click the gear icon and select **Repository > Google (Unsupported):**
 
-![Android SDK Manager Repository Selection](~/android/platform/android-10-images/sdkrepository.png)
+    ![Android SDK Manager Repository Selection](~/android/platform/android-10-images/sdkrepository.png)
 
 3. Install the **Android 10 SDK Platform** packages, which are listed as **Android SDK Platform 29** in the **Platforms** tab (for more information about using the SDK Manager, see [Android SDK setup](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk)):
 
-![Android SDK Manager Platform Tab](~/android/platform/android-10-images/sdkplatforms.png)
+    ![Android SDK Manager Platform Tab](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### Create a Xamarin.Android project
 
