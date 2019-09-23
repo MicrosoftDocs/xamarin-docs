@@ -11,8 +11,6 @@ ms.date: 09/10/2019
 
 # Sign In with Apple in Xamarin.Forms
 
-![This API is currently in preview](~/media/shared/preview.png)
-
 Sign In with Apple introduces a new service providing identity protection for users. As of iOS 13 Apple requires any apps using third-party authentication providers to also offer Sign In with Apple. For instructions on using this featuring with Xamarin.iOS, [read more here](~/ios/platform/ios13/sign-in.md).
 
 When supporting Sign In with Apple within a Xamarin.Forms solution, there are additional considerations to account for Android and UWP. For those platforms, Apple provides a different workflow.

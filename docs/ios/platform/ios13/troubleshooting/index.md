@@ -10,8 +10,6 @@ ms.date: 06/12/2019
 ---
 # Troubleshooting tips for iOS 13 and Xamarin.iOS
 
-![Preview feature](~/media/shared/preview.png)
-
 ## Updating to Xcode 11 stops the simulator from launching
 
 After updating to **Xcode 11 beta 1** every time a simulator is launched the following exception is thrown, and the simulator does not start. This happens with all simulators.

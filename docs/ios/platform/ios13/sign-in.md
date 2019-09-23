@@ -11,21 +11,9 @@ ms.date: 09/10/2019
 
 # Sign In with Apple in Xamarin.iOS
 
-![This API is currently in preview](~/media/shared/preview.png)
-
 Sign In with Apple is a new service that provides identity protection for users of third-party authentication services. Beginning with iOS 13, Apple requires that any new app using a third-party authentication services should also provide Sign In with Apple. Existing apps being updated do not need to add Sign In with Apple until April 2020.
 
 This document introduces how you can add Sign In with Apple to iOS 13 applications.
-
-## Requirements
-
-This feature requires:
-
-* iOS 13
-* Xamarin.iOS 12.99
-* Visual Studio 2019 or Visual Studio 2019 for Mac with Xcode 11 support.
-
-See [Get Started](get-started.md) for more details.
 
 ## Apple developer setup
 

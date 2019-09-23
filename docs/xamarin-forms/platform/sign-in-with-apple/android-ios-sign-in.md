@@ -11,8 +11,6 @@ ms.date: 09/10/2019
 
 # Use Sign In with Apple in Xamarin.Forms
 
-![This API is currently in preview](~/media/shared/preview.png)
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/Redth/Xamarin.AppleSignIn.Sample)
 
 Sign In with Apple is for all new applications on iOS 13 that use third-party authentication services. The implementation details between iOS and Android are quite different. This guide walks through how you can do this today in Xamarin.Forms.
