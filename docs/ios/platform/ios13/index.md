@@ -6,7 +6,7 @@ ms.assetid: AB486B2F-6E3B-4E0B-ABB8-58F5804D56D2
 ms.technology: xamarin-ios
 author: conceptdev
 ms.author: crdun
-ms.date: 07/01/2019
+ms.date: 09/20/2019
 ---
 # Introduction to iOS 13
 
@@ -25,7 +25,7 @@ Apple devices, allowing you to have more confidence that their personal
 information is not being stolen or collected in any way by taking advantage
 of 2FA and a restricted set of provided information.
 
-## [Multiple Windows for iPad](multi-window-ipad.md)
+## [Multiple windows for iPad](multi-window-ipad.md)
 
 iPad apps can now use multiple windows created from a variety of interactions.
 

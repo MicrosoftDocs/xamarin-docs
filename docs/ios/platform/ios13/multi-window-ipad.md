@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 09/20/2019
 ---
 
-# Multiple Windows for iPad
+# Multiple windows for iPad
 
 iOS 13 now supports side-by-side windows for the same app on iPad. This enables new experiences and drag-and-drop interactions between windows. This document shows you how to setup your application to support this feature, and introduces these new features. 
 
@@ -47,9 +47,9 @@ To configure your project for multiple windows, amend the `info.plist` to declar
 
 With your app open and running on an iPad, there are a few ways to open multiple windows of that app that iOS handles be default.
 
-* **App Expose** - tap the app icon in the dock to enter this mode while your app is open.
-* **Slide Over** - drag the app icon from the dock over the top of your running app to have a floating window.
-* **Split Screen** - drag the app icon from the dock to the edge of the iPad screen to create a new side-by-side window.
+- **App Expose** - tap the app icon in the dock to enter this mode while your app is open.
+- **Slide Over** - drag the app icon from the dock over the top of your running app to have a floating window.
+- **Split Screen** - drag the app icon from the dock to the edge of the iPad screen to create a new side-by-side window.
 
 Additional interactions to enter a multiple window mode are available from within your application.
 
@@ -72,7 +72,6 @@ public UIDragItem [] GetItemsForBeginningDragSession (UICollectionView collectio
 
     return new [] { dragItem };
 }
-
 ```
 
 In the code above, the `selectedPhoto` model object has a method to return an `NSUserActivity` called `OpenDetailUserActivity()`. When the drag gesture is complete, the `UIDragItem` with present the `userActivity` via the `NSItemProvider`.
@@ -99,6 +98,6 @@ In this example, the `userActivity` is the only value passed to the `RequestScen
 
 ## Related links
 
-* [Drag and Drop in Xamarin.iOS][0]
+- [Drag and Drop in Xamarin.iOS][0]
 
 [0]: ~/ios/platform/introduction-to-ios11/drag-and-drop.md
