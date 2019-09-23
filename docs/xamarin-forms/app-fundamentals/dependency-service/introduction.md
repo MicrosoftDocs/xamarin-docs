@@ -113,7 +113,7 @@ The following example shows using the [`DependencyAttribute`](xref:Xamarin.Forms
 ```csharp
 using Xamarin.Forms;
 
-[assembly: Dependency(typeof(DeviceOrientationService))]
+[assembly: Dependency(typeof(DependencyServiceDemos.iOS.DeviceOrientationService))]
 namespace DependencyServiceDemos.iOS
 {
     public class DeviceOrientationService : IDeviceOrientationService
