@@ -234,7 +234,7 @@ Use specific strings for each state to provide a better user experience:
 
 ```csharp
 "You have no messages."
-"You have 1 messages."
+"You have 1 message."
 "You have 2 messages."
 "You have {0} messages."
 ```
