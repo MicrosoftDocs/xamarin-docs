@@ -197,8 +197,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-The properties exposed by the trigger action can be set
-    in the XAML declaration as follows:
+The event trigger can then be consumed from XAML:
 
 ```xaml
 <EventTrigger Event="TextChanged">
