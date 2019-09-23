@@ -126,7 +126,7 @@ It will be these wrapper functions that are used on the [Xamarin](https://visual
 
 ## Wrapping the native library (Stage 2)
 
-This stage requires the [precompiled libraries](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) described in the [previous section](##creating-the-native-libraries-stage-1).
+This stage requires the [precompiled libraries](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) described in the [previous section](#creating-the-native-libraries-stage-1).
 
 ### Creating the Visual Studio solution
 
