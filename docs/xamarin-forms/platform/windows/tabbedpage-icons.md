@@ -49,7 +49,7 @@ using Xamarin.Forms.PlatformConfiguration.WindowsSpecific;
 public class WindowsTabbedPageIconsCS : Xamarin.Forms.TabbedPage
 {
   public WindowsTabbedPageIconsCS()
-	{
+  {
     On<Windows>().SetHeaderIconsEnabled(true);
     On<Windows>().SetHeaderIconsSize(new Size(24, 24));
 

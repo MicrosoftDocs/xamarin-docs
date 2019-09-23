@@ -78,7 +78,6 @@ fragmentTx.AddToBackStack(null);
 fragmentTx.Commit();
 ```
 
-
 ## Communicating with Fragments
 
 The *FragmentManager* knows about all of the Fragments that are
@@ -107,7 +106,6 @@ find Fragments:
 var emailList = FragmentManager.FindFragmentById<EmailListFragment>(Resource.Id.email_list_fragment);
 emailList.SomeCustomMethod(parameter1, parameter2);
 ```
-
 
 ### Communicating with the Activity
 

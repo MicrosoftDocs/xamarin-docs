@@ -20,7 +20,6 @@ Amazon does not limit the size of APKs. However, if an APK is larger than
 30MB, then it will use FTP for distribution rather than the Amazon Mobile App
 Distribution Portal.
 
-
 ## Submitting Apps: Binary Info
 
 Submitting an application to the Amazon App Store is a similar process 
@@ -32,8 +31,6 @@ by Amazon require the following assets:
 - **Screenshots** &ndash;   Amazon requires a minimum of three and a maximum of 10 screenshots. The screenshots must be 1024w x 600h pixels or 800w x 480h pixels. Both .png and .jpg formats are acceptable.
 - **Promotional Image** &ndash;   In order for an application to be featured in promotional placements such as the home page, a promotional image may be optionally submitted. It should be a 1024w x 500h pixel .png or .jpg file, in landscape orientation. It may not have any animation.
 - Updates to five videos may be provided.
-
-
 
 ## Approval Process
 

@@ -4,8 +4,8 @@ description: "This document links to guides that describe how to install Xamarin
 ms.prod: xamarin
 ms.assetid: E5A29963-C8BD-465B-BFC1-7FAC9CC64BD3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/05/2018
 ---
 # Xamarin.iOS Installation
@@ -34,5 +34,5 @@ For instructions on installing Xamarin.iOS on a Windows machine, visit the [Wind
 
 Once you have successfully installed Xamarin.iOS, learn how to provision your iOS device so that you can develop and test a Xamarin.iOS application on device.
 
-* [Set Up Device for Development](device-provisioning/index.md)
-* [Free Provisioning](~/ios/get-started/installation/device-provisioning/free-provisioning.md)
+- [Set Up Device for Development](device-provisioning/index.md)
+- [Free Provisioning](~/ios/get-started/installation/device-provisioning/free-provisioning.md)

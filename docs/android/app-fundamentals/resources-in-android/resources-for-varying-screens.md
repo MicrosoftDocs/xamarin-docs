@@ -15,7 +15,6 @@ resolutions, screen sizes, and screen densities. Android will perform scaling
 and resizing to make your application work on these devices, but this may result
 in a sub-optimal user experience. For example, images could appear blurry, or they may be positioned as expected on a view.
 
-
 ## Concepts
 
 A few terms and concepts are important to understand to support
@@ -53,7 +52,6 @@ To help deal with this complexity, the Android framework prefers to use
 independent pixels, UI elements will appear to the user to have the
 same physical size on screens with different densities.
 
-
 ## Supporting various screen sizes and densities
 
 Android handles most of the work to render the layouts properly for
@@ -68,7 +66,6 @@ blurry. To work around this problem, supply alternate
 resources for the different densities. When designing devices for
 multiple resolutions and screen densities, it will prove easier to start
 with the higher resolution or density images and then scale down.
-
 
 ### Declare the supported screen size
 
@@ -120,7 +117,6 @@ Edit **AndroidManifest.xml** to include [supports-screens](https://developer.and
 
 ### Provide alternate layouts for different screen sizes
 
-
 Alternate layouts make it possible to customize a view for a specifc screen size, changing the positioning or size of the component UI elements.
 
 Starting with API Level 13 (Android 3.2), the screen sizes are
@@ -141,7 +137,6 @@ alternate layout would go in a folder **layout-sw700dp**:
 ![Layout folder for 700 dp screen width](resources-for-varying-screens-images/03-layout-sw700dp-xs.png)
 
 -----
-
 
 As a guideline, here are some numbers for various devices:
 
@@ -197,8 +192,6 @@ qualifiers as shown in the following screenshot:
 
 -----
 
-
-
 ### Provide different bitmaps for different screen densities
 
 Although Android will scale bitmaps as necessary for a device, the
@@ -217,7 +210,6 @@ resources:
 
 ![Screenshots with density-specific resources](resources-for-varying-screens-images/07-density-specific-resources.png)
 
-
 ### Create varying density resources with Android Asset Studio
 
 The creation of these bitmaps of various densities can be a bit
@@ -231,7 +223,6 @@ This website will help with creation of bitmaps that target the four
 common screen densities by providing one image. Android Asset Studio
 will then create the bitmaps with some customizations and then allow
 them to be downloaded as a zip file.
-
 
 ## Tips for multiple screens
 
@@ -272,7 +263,6 @@ tips can help minimize the effort necessary to support various devices:
   scale bitmap resources as appropriate. For this same reason,
   density-independent units are best reserved for when specifying the
   margins and padding of UI elements.
-
 
 ## Testing multiple screens
 

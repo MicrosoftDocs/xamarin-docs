@@ -4,8 +4,8 @@ description: "This document links to guides that describe how to work with touch
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/23/2017
 ---
 
@@ -29,8 +29,8 @@ However, there are times when you need to use low-level touch processing and eve
 
 This guide serves as introduction to Touch in iOS. For more information on using 3D Touch and Haptic Feedback in iOS, which were introduced in iOS 9 and 10 respectively please refer to the specific guides below:
 
-* [3D Touch](~/ios/platform/3d-touch.md)
-* [Providing Haptic Feedback](~/ios/user-interface/ios-ui/haptic-feedback.md)
+- [3D Touch](~/ios/platform/3d-touch.md)
+- [Providing Haptic Feedback](~/ios/user-interface/ios-ui/haptic-feedback.md)
 
 ## Related Links
 

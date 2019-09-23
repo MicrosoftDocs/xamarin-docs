@@ -4,8 +4,8 @@ description: "This document describes how to build custom controls in Xamarin.Ma
 ms.prod: xamarin
 ms.assetid: 004534B1-5AEE-452C-BBBE-8C2673FD49B7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -56,68 +56,68 @@ using CoreGraphics;
 
 namespace MacCustomControl
 {
-	[Register("NSFlipSwitch")]
-	public class NSFlipSwitch : NSControl
-	{
-		#region Private Variables
-		private bool _value = false;
-		#endregion
+    [Register("NSFlipSwitch")]
+    public class NSFlipSwitch : NSControl
+    {
+        #region Private Variables
+        private bool _value = false;
+        #endregion
 
-		#region Computed Properties
-		public bool Value {
-			get { return _value; }
-			set {
-				// Save value and force a redraw
-				_value = value;
-				NeedsDisplay = true;
-			}
-		}
-		#endregion
+        #region Computed Properties
+        public bool Value {
+            get { return _value; }
+            set {
+                // Save value and force a redraw
+                _value = value;
+                NeedsDisplay = true;
+            }
+        }
+        #endregion
 
-		#region Constructors
-		public NSFlipSwitch ()
-		{
-			// Init
-			Initialize();
-		}
+        #region Constructors
+        public NSFlipSwitch ()
+        {
+            // Init
+            Initialize();
+        }
 
-		public NSFlipSwitch (IntPtr handle) : base (handle)
-		{
-			// Init
-			Initialize();
-		}
+        public NSFlipSwitch (IntPtr handle) : base (handle)
+        {
+            // Init
+            Initialize();
+        }
 
-		[Export ("initWithFrame:")]
-		public NSFlipSwitch (CGRect frameRect) : base(frameRect) {
-			// Init
-			Initialize();
-		}
+        [Export ("initWithFrame:")]
+        public NSFlipSwitch (CGRect frameRect) : base(frameRect) {
+            // Init
+            Initialize();
+        }
 
-		private void Initialize() {
-			this.WantsLayer = true;
-			this.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
-		}
-		#endregion
+        private void Initialize() {
+            this.WantsLayer = true;
+            this.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
+        }
+        #endregion
 
-		#region Draw Methods
-		public override void DrawRect (CGRect dirtyRect)
-		{
-			base.DrawRect (dirtyRect);
+        #region Draw Methods
+        public override void DrawRect (CGRect dirtyRect)
+        {
+            base.DrawRect (dirtyRect);
 
-			// Use Core Graphic routines to draw our UI
-			...
+            // Use Core Graphic routines to draw our UI
+            ...
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Private Methods
-		private void FlipSwitchState() {
-			// Update state
-			Value = !Value;
-		}
-		#endregion
+        #region Private Methods
+        private void FlipSwitchState() {
+            // Update state
+            Value = !Value;
+        }
+        #endregion
 
-	}
+    }
 }
 ```
 
@@ -141,12 +141,12 @@ private bool _value = false;
 ...
 
 public bool Value {
-	get { return _value; }
-	set {
-		// Save value and force a redraw
-		_value = value;
-		NeedsDisplay = true;
-	}
+    get { return _value; }
+    set {
+        // Save value and force a redraw
+        _value = value;
+        NeedsDisplay = true;
+    }
 }
 ```
 
@@ -158,8 +158,8 @@ We also added a helper method to swap the state of the switch between On and Off
 
 ```csharp
 private void FlipSwitchState() {
-	// Update state
-	Value = !Value;
+    // Update state
+    Value = !Value;
 }
 ```
 
@@ -173,8 +173,8 @@ We are going to use Core Graphic drawing routines to draw our custom control's U
 
 ```csharp
 private void Initialize() {
-	this.WantsLayer = true;
-	this.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
+    this.WantsLayer = true;
+    this.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
 }
 ```
 
@@ -183,8 +183,8 @@ This method gets called from each of the control's constructors to ensure that t
 ```csharp
 public NSFlipSwitch (IntPtr handle) : base (handle)
 {
-	// Init
-	Initialize();
+    // Init
+    Initialize();
 }
 ```
 
@@ -193,10 +193,10 @@ Next, we need to override the `DrawRect` method and add the Core Graphic routine
 ```csharp
 public override void DrawRect (CGRect dirtyRect)
 {
-	base.DrawRect (dirtyRect);
+    base.DrawRect (dirtyRect);
 
-	// Use Core Graphic routines to draw our UI
-	...
+    // Use Core Graphic routines to draw our UI
+    ...
 
 }
 ```
@@ -226,24 +226,24 @@ Objects that inherit from `NSControl` (or `NSView`) have several override method
 // --------------------------------------------------------------------------------
 public override void MouseDown (NSEvent theEvent)
 {
-	base.MouseDown (theEvent);
+    base.MouseDown (theEvent);
 
-	FlipSwitchState ();
+    FlipSwitchState ();
 }
 
 public override void MouseDragged (NSEvent theEvent)
 {
-	base.MouseDragged (theEvent);
+    base.MouseDragged (theEvent);
 }
 
 public override void MouseUp (NSEvent theEvent)
 {
-	base.MouseUp (theEvent);
+    base.MouseUp (theEvent);
 }
 
 public override void MouseMoved (NSEvent theEvent)
 {
-	base.MouseMoved (theEvent);
+    base.MouseMoved (theEvent);
 }
 ## endregion
 ```
@@ -258,17 +258,17 @@ Optionally, you can use Gesture Recognizers to handle the user interacting with 
 
 ```csharp
 private void Initialize() {
-	this.WantsLayer = true;
-	this.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
+    this.WantsLayer = true;
+    this.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
 
-	// --------------------------------------------------------------------------------
-	// Handle mouse with Gesture Recognizers.
-	// NOTE: Use either this method or the Override Methods, NOT both!
-	// --------------------------------------------------------------------------------
-	var click = new NSClickGestureRecognizer (() => {
-		FlipSwitchState();
-	});
-	AddGestureRecognizer (click);
+    // --------------------------------------------------------------------------------
+    // Handle mouse with Gesture Recognizers.
+    // NOTE: Use either this method or the Override Methods, NOT both!
+    // --------------------------------------------------------------------------------
+    var click = new NSClickGestureRecognizer (() => {
+        FlipSwitchState();
+    });
+    AddGestureRecognizer (click);
 }
 ```
 
@@ -280,7 +280,7 @@ Again, which method we use depends on what we are trying to accomplish with our 
 
 ### Responding to State Change Events
 
-When the user changes the state of our custom control, we need a way to respond to the state change in code (such as doing something when clicks on a custom button). 
+When the user changes the state of our custom control, we need a way to respond to the state change in code (such as doing something when clicks on a custom button).
 
 To provide this functionality, edit the `NSFlipSwitch` class and add the following code:
 
@@ -289,13 +289,13 @@ To provide this functionality, edit the `NSFlipSwitch` class and add the followi
 public event EventHandler ValueChanged;
 
 internal void RaiseValueChanged() {
-	if (this.ValueChanged != null)
-		this.ValueChanged (this, EventArgs.Empty);
+    if (this.ValueChanged != null)
+        this.ValueChanged (this, EventArgs.Empty);
 
-	// Perform any action bound to the control from Interface Builder
-	// via an Action.
-	if (this.Action !=null) 
-		NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
+    // Perform any action bound to the control from Interface Builder
+    // via an Action.
+    if (this.Action !=null)
+        NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 }
 ## endregion
 ```
@@ -304,9 +304,9 @@ Next, edit the `FlipSwitchState` method and make it look like the following:
 
 ```csharp
 private void FlipSwitchState() {
-	// Update state
-	Value = !Value;
-	RaiseValueChanged ();
+    // Update state
+    Value = !Value;
+    RaiseValueChanged ();
 }
 ```
 
@@ -315,8 +315,8 @@ First, we provide a `ValueChanged` event that we can add a handler to in C# code
 Second, because our custom control inherits from `NSControl`, it automatically has an **Action** that can be assigned in Xcode's Interface Builder. To call this **Action** when the state changes, we use the following code:
 
 ```csharp
-if (this.Action !=null) 
-	NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
+if (this.Action !=null)
+    NSApplication.SharedApplication.SendAction (this.Action, this.Target, this);
 ```
 
 First, we check to see if an **Action** has been assigned to the control. Next, we call the **Action** if it has been defined.
@@ -348,15 +348,15 @@ Save your changes, return to Visual Studio for Mac and allow the changes to sync
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// Do any additional setup after loading the view.
-	OptionTwo.ValueChanged += (sender, e) => {
-		// Display the state of the option switch
-		Console.WriteLine("Option Two: {0}", OptionTwo.Value);
-	};
+    // Do any additional setup after loading the view.
+    OptionTwo.ValueChanged += (sender, e) => {
+        // Display the state of the option switch
+        Console.WriteLine("Option Two: {0}", OptionTwo.Value);
+    };
 }
-``` 
+```
 
 Here, we respond to the `ValueChanged` event we defined above on the `NSFlipSwitch` class and write out the current **Value** when the user clicks on the control.
 
@@ -368,8 +368,8 @@ Again, edit the `ViewController.cs` file and add the following method:
 
 ```csharp
 partial void OptionTwoFlipped (Foundation.NSObject sender) {
-	// Display the state of the option switch
-	Console.WriteLine("Option Two: {0}", OptionTwo.Value);
+    // Display the state of the option switch
+    Console.WriteLine("Option Two: {0}", OptionTwo.Value);
 }
 ```
 

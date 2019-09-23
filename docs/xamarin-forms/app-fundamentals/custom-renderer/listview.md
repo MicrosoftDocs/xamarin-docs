@@ -559,7 +559,6 @@ The method re-populates the native `ListView` control with the changed data, pro
 
 This article has demonstrated how to create a custom renderer that encapsulates platform-specific list controls and native cell layouts, allowing more control over native list control performance.
 
-
 ## Related Links
 
 - [CustomRendererListView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-listview)

@@ -55,7 +55,6 @@ gracefully fall back to an earlier theme when it runs on older versions
 of Android (see the
 [Compatibility](#compatibility) section of this article for details).
 
-
 ## Requirements
 
 The following is required to use the new Android 5.0 Material Theme
@@ -74,7 +73,6 @@ features in Xamarin-based apps:
 To learn how to configure an Android 5.0 app project, 
 see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).
 
-
 ## Using the Built-in Themes
 
 The easiest way to use Material Theme is to configure your app to use
@@ -86,7 +84,6 @@ you can configure a theme at the application level so that it uses the
 same theme across all activities, or you can assign different themes to
 different activities. The following sections explain how to configure
 themes at the app level and at the activity level.
-
 
 ### Theming an Application
 
@@ -119,7 +116,6 @@ Alternately, you can set the application `Theme` attribute in **AssemblyInfo.cs*
 When the application theme is set to
 `@android:style/Theme.Material.Light`, every activity in *MyApp* will be
 displayed using `Theme.Material.Light`.
-
 
 ### Theming an Activity
 
@@ -175,7 +171,6 @@ By default, `statusBarColor` is set to the value of
 you can set it to `@android:color/transparent` to make the status bar
 transparent. The navigation bar can also be made transparent by setting
 `navigationBarColor` to `@android:color/transparent`.
-
 
 ### Creating a Custom App Theme
 
@@ -308,7 +303,6 @@ on the right):
 In this example, the custom `CardView` is displayed with the 
 background color `my_blue` and an 18dp corner radius.
 
-
 ## Compatibility
 
 To style your app so that it uses Material Theme on Android 5.0 but
@@ -374,8 +368,6 @@ how to create a custom theme for branding your app, and it provided
 an example of how to theme an individual view. Finally, this article
 explained how to use Material Theme in your app while maintaining
 downward compatibility with older versions of Android.
-
-
 
 ## Related Links
 

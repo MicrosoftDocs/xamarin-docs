@@ -4,8 +4,8 @@ description: "This document describes the various controls that are available fo
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/19/2016
 ---
 
@@ -37,7 +37,6 @@ The programmatic names of all the controls is prefixed with
 |Text Input|Use `PresentTextInputController` and the `WKTextInputMode` enumeration.<br />[Text Input documentation](~/ios/watchos/user-interface/text-input.md)<br />[Catalog code](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/TextInputController.cs)|![](Images/textinput.png)|
 |Digital Crown|The Digital Crown can be used to drive a picker, or it's rotation can be tracked in code.<br />[Catalog code](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/CrownDetailController.cs)|![](Images/digital-crown.png)|
 |Gestures|There are four types of gesture recognition that can be added to a scene: Tap, Swipe, Pan, and LongPress.<br />[Catalog code](https://github.com/xamarin/ios-samples/blob/master/watchOS/WatchKitCatalog/WatchKit3Extension/GestureDetailController.cs)|![](Images/gestures.png)|
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This document describes how to use Apple's Instruments app to prof
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -31,7 +31,6 @@ Select the device and run the Instruments app:
 3. Connect an iOS device to the computer.
 4. In the **Run** menu, select **Upload to Device** . The application will now be built and uploaded to the device.
 5. In the **Tools** menu, select **Launch Instruments**.
-
 
 Instruments will now open and display the following dialog:
 

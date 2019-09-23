@@ -14,11 +14,18 @@ ms.date: 07/01/2019
 
 Follow these [instructions](~/ios/platform/ios13/get-started.md) to get started.
 
-## Dark Mode
+## [Dark Mode](dark-mode.md)
 
 iOS 13 introduces a new dark mode which provides developers with the
 means to easily allow their apps to fit in. New tools enable
 you to simultaneously design your apps with both light and dark themes.
+
+## [Sign In with Apple](sign-in.md)
+
+iOS 13 provides new functionality for signing into apps using Sign In with
+Apple devices, allowing you to have more confidence that their personal
+information is not being stolen or collected in any way by taking advantage
+of 2FA and a restricted set of provided information.
 
 ## Augmented Reality
 
@@ -45,13 +52,6 @@ with new gestures, allow for the use of multiple windows, and drag-and-drop
 various content between apps. iPadOS can also allow apps to provide system-
 wide fonts.
 
-## Privacy and Security
-
-iOS 13 provides new functionality for signing into apps using Sign In with
-Apple devices, allowing you to have more confidence that their personal
-information is not being stolen or collected in any way by taking advantage
-of 2FA and a restricted set of provided information.
-
 ## Related links
 
-- [Xamarin.iOS preview release notes](/xamarin/ios/release-notes/12/12.99)
+- [Xamarin.iOS 13 release notes](/xamarin/ios/release-notes/13/13.0)

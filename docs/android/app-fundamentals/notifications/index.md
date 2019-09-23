@@ -23,7 +23,7 @@ notification and discuss the APIs involved with creating and
 displaying a notification.
 
 ## [Walkthrough - using local notifications in Xamarin.Android](local-notifications-walkthrough.md)  
- 
+
 This walkthrough covers how to use local notifications in a 
 Xamarin.Android application. It demonstrates the basics of creating and 
 publishing a notification. When the user clicks on the notification in 

@@ -3,8 +3,8 @@ title: "Accessing the Graph API"
 description: "This document describes how to add Azure Active Directory authentication to a mobile application built with Xamarin."
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
 ---
 
@@ -28,7 +28,6 @@ In your application, add a reference to **Azure Active Directory
 > Note: Azure ADAL 3.0 is currently a preview
 and there may be breaking changes before the final version
 is released. 
-
 
 ![](graph-images/06.-adal-nuget-package.jpg "Add a reference to Azure Active Directory Authentication Library (Azure ADAL)")
 
@@ -98,14 +97,11 @@ After authentication is complete, the flow should return
   Android it is handled by following code, which should
   be added to **MainActivity.cs**:
 
-
 ```csharp
 protected override void OnActivityResult(int requestCode, Result resultCode, Intent data)
 {
   base.OnActivityResult(requestCode, resultCode, data);
   AuthenticationAgentContinuationHelper.SetAuthenticationAgentContinuationEventArgs(requestCode, resultCode, data);
-
-	
 }
 ```
 
@@ -152,4 +148,3 @@ request.Headers.Authorization =
 var response = await client.SendAsync(request);
 var content = await response.Content.ReadAsStringAsync();
 ```
-

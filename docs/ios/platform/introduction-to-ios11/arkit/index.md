@@ -4,8 +4,8 @@ description: "This document describes augmented reality in iOS 11 with ARKit. It
 ms.prod: xamarin
 ms.assetid: 70291430-BCC1-445F-9D41-6FBABE87078E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 08/30/2017
 ---
 
@@ -31,7 +31,6 @@ To get started with augmented reality, the following instructions walk through a
 Assets should be added to the project with the **SceneKitAsset** build action.
 
 ![SceneKit assets in a project](images/scene-assets.png)
-
 
 ### 2. Configure the view
 
@@ -107,7 +106,6 @@ would expect the view controller hosting the augmented reality session to
 implement `IARSCNViewDelegate`, and additional methods be implemented.
 
 ARKit provides lots of more sophisticated features, such as surface tracking, and user interaction. See the [UrhoSharp demo](urhosharp.md) for an example combining ARKit tracking with UrhoSharp.
-
 
 ## Related Links
 

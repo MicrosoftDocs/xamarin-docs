@@ -4,8 +4,8 @@ description: "This document describes techniques that can be used to improve per
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 01/29/2016
 ---
 
@@ -27,7 +27,7 @@ class Container : UIView
 {
     public void Poke ()
     {
-	// Call this method to poke this object
+    // Call this method to poke this object
     }
 }
 
@@ -73,7 +73,7 @@ class Container : UIView
 {
     public void Poke ()
     {
-	    // Call this method to poke this object
+        // Call this method to poke this object
     }
 }
 
@@ -128,15 +128,15 @@ Consider the following code, which uses `WeakReference <T>`:
 
 ```csharp
 public class MyFooDelegate : FooDelegate {
-	WeakReference<MyViewController> controller;
-	public MyFooDelegate (MyViewController ctrl) => controller = new WeakReference<MyViewController> (ctrl);
-	public void CallDoSomething ()
-	{
-		MyViewController ctrl;
-		if (controller.TryGetTarget (out ctrl)) {
-			ctrl.DoSomething ();
-		}
-	}
+    WeakReference<MyViewController> controller;
+    public MyFooDelegate (MyViewController ctrl) => controller = new WeakReference<MyViewController> (ctrl);
+    public void CallDoSomething ()
+    {
+        MyViewController ctrl;
+        if (controller.TryGetTarget (out ctrl)) {
+            ctrl.DoSomething ();
+        }
+    }
 }
 ```
 
@@ -144,9 +144,9 @@ Equivalent code using `[Weak]` is far more concise:
 
 ```csharp
 public class MyFooDelegate : FooDelegate {
-	[Weak] MyViewController controller;
-	public MyFooDelegate (MyViewController ctrl) => controller = ctrl;
-	public void CallDoSomething () => controller.DoSomething ();
+    [Weak] MyViewController controller;
+    public MyFooDelegate (MyViewController ctrl) => controller = ctrl;
+    public void CallDoSomething () => controller.DoSomething ();
 }
 ```
 
@@ -157,33 +157,33 @@ pattern:
 ```csharp
 public class MyViewController : UIViewController
 {
-	WKWebView webView;
+    WKWebView webView;
 
-	protected MyViewController (IntPtr handle) : base (handle) { }
+    protected MyViewController (IntPtr handle) : base (handle) { }
 
-	public override void ViewDidLoad ()
-	{
-		base.ViewDidLoad ();
-		webView = new WKWebView (View.Bounds, new WKWebViewConfiguration ());
-		webView.UIDelegate = new UIDelegate (this);
-		View.AddSubview (webView);
-	}
+    public override void ViewDidLoad ()
+    {
+        base.ViewDidLoad ();
+        webView = new WKWebView (View.Bounds, new WKWebViewConfiguration ());
+        webView.UIDelegate = new UIDelegate (this);
+        View.AddSubview (webView);
+    }
 }
 
 public class UIDelegate : WKUIDelegate
 {
-	[Weak] MyViewController controller;
+    [Weak] MyViewController controller;
 
-	public UIDelegate (MyViewController ctrl) => controller = ctrl;
+    public UIDelegate (MyViewController ctrl) => controller = ctrl;
 
-	public override void RunJavaScriptAlertPanel (WKWebView webView, string message, WKFrameInfo frame, Action completionHandler)
-	{
-		var msg = $"Hello from: {controller.Title}";
-		var alertController = UIAlertController.Create (null, msg, UIAlertControllerStyle.Alert);
-		alertController.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
-		controller.PresentViewController (alertController, true, null);
-		completionHandler ();
-	}
+    public override void RunJavaScriptAlertPanel (WKWebView webView, string message, WKFrameInfo frame, Action completionHandler)
+    {
+        var msg = $"Hello from: {controller.Title}";
+        var alertController = UIAlertController.Create (null, msg, UIAlertControllerStyle.Alert);
+        alertController.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
+        controller.PresentViewController (alertController, true, null);
+        completionHandler ();
+    }
 }
 ```
 

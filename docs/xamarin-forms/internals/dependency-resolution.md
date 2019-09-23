@@ -24,9 +24,9 @@ Control over the creation and lifetime of types in platform projects is traditio
 
 ## Injecting a dependency resolution method
 
-The [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) class provides the ability to inject a dependency resolution method into Xamarin.Forms, using the [`ResolveUsing`](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method. Then, when Xamarin.Forms needs an instance of a particular type, the dependency resolution method is given the opportunity to provide the instance. If the dependency resolution method returns `null` for a requested type, Xamarin.Forms falls back to attempting to create the type instance itself using the `Activator.CreateInstance` method.
+The [`DependencyResolver`](xref:Xamarin.Forms.Internals.DependencyResolver) class provides the ability to inject a dependency resolution method into Xamarin.Forms, using the [`ResolveUsing`](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method. Then, when Xamarin.Forms needs an instance of a particular type, the dependency resolution method is given the opportunity to provide the instance. If the dependency resolution method returns `null` for a requested type, Xamarin.Forms falls back to attempting to create the type instance itself using the `Activator.CreateInstance` method.
 
-The following example shows how to set the dependency resolution method with the [`ResolveUsing`](Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method:
+The following example shows how to set the dependency resolution method with the [`ResolveUsing`](xref:Xamarin.Forms.Internals.DependencyResolver.ResolveUsing*) method:
 
 ```csharp
 using Autofac;

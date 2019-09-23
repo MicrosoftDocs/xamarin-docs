@@ -15,7 +15,7 @@ Check the [system requirements](~/cross-platform/get-started/requirements.md) be
 
 ## Installation
 
-[!include[](~/cross-platform/includes/install-xamarin-windows.md)]
+[!include[](~/cross-platform/includes/install-xamarin-windows-2019.md)]
 
 In Visual Studio 2019, verify that Xamarin is installed by
 clicking the **Help** menu. If Xamarin is installed, you should

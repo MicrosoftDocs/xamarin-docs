@@ -4,8 +4,8 @@ description: "This guide explores how to time your apps and how to use methods t
 ms.prod: xamarin
 ms.assetid: 06FD3940-D666-4C9E-BC3E-BBE481EF8012
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -18,7 +18,6 @@ Developing great applications is more than just writing code that works. A well-
 Remember that the default options are safe and fast, but are not optimal for every situation. In addition, many options can either slow down or speed up the development cycle depending on the individual project. For instance, native stripping takes time, but if very little size is gained then the time spent stripping will not be recovered by a faster deploy. On the other hand, native stripping can shrink the app significantly, in which case it will be faster to deploy. This varies between projects, and the only way to know is to test.
 
 Xamarin build speeds can also be affected by various capacities and capabilities of a computer than can affect performance: processor capabilities, bus speeds, the amount of physical memory, disk speed, network speed. These performance limitations are beyond the scope of this document and are the responsibility of the developer.
-
 
 ## Timing apps
 
@@ -34,7 +33,6 @@ To enable diagnostic MSBuild output within Visual Studio for Mac:
 5. Restart Visual Studio for Mac
 6. Clean and rebuild your package
 7. View diagnostic output within the Errors Pad ( View > Pads > Errors ) by clicking the Build Output button
-
 
 # [Visual Studio](#tab/windows)
 
@@ -69,12 +67,10 @@ Xamarin tooling technically works on any Mac that can run OS X 10.10 Yosemite or
 In the disconnected state, Visual Studio on Windows only performs the C# compilation phase and does not attempt to perform linking or AOT compilation, package the app into a _.app_ Bundle, or sign the app bundle. (The C# compilation phase is rarely a performance bottleneck.)
 Attempt to pinpoint where in the pipeline the build is slowing down by building directly on the Mac build host in Visual Studio for Mac.
 
-
 In addition, one of the more common places for sluggishness is the network connection between the Windows machine and the Mac build host. This could be due to a physical impediment on the network, using a wireless connection, or having to travel through a saturated machine (such as a Mac-in-the-cloud service).
 
 ## Simulator Tricks
 
- 
 When developing mobile applications, it is essential to deploy code rapidly. For a variety of reasons including speed and a lack of device provisioning requirements, developers often choose to deploy to a pre-installed simulator or emulator. For manufacturers of developer tools, the decision to provide a simulator or emulator comes down to a trade-off between speed and compatibility. 
 
 Apple provides a simulator for iOS development, promoting speed over compatibility by creating a less restrictive environment for running code. This less restrictive environment allows Xamarin to use the Just In Time (JIT) compiler for the simulator (as opposed to [AOT](~/ios/internals/architecture.md) on a device), which means that the build is compiled to native code at runtime. As the Mac is much faster than a device, this allows for better performance.
@@ -82,7 +78,7 @@ Apple provides a simulator for iOS development, promoting speed over compatibili
 The simulator uses a shared application launcher, allowing the launcher to be reused, as opposed to being built each time, as is required on the device.
 
 While taking into account the information above, the list below gives some information on steps to take when building and deploying your app on the simulator to provide the best performance.
- 
+
 ### Tips
 
 - For Builds: 
@@ -114,14 +110,12 @@ There are a number of build configurations provided when deploying iOS apps. It 
 - Release
   - Release builds are those that are shipped to your users and a focus on performance is paramount. When using the Release configuration, you might want to use the LLVM optimizing compiler and optimize PNG files.
 
- 
 It is also important to understand the relationship between building and deploying. The deployment time is a function of the application size. A larger application takes a longer time to deploy. By minimizing the app size, you can reduce the deployment time.
 
 Minimizing the app size can also reduce the build time. This is because removing code from the application takes less time than natively compiling the code that won't be used. Smaller object files mean faster linking, which creates a smaller executable with fewer symbols to generate. Saving space, therefore, has a double payoff, which is why **Link SDK** is the default for all device builds. 
 
 > [!NOTE]
 > The **Link SDK** option may appear as Link Framework SDKs Only or Link SDK assemblies only, depending on the IDE that is being used.
- 
 
 ### Tips
 
@@ -131,7 +125,6 @@ Minimizing the app size can also reduce the build time. This is because removing
   - Consider Linking all assemblies. Optimize every assembly 
   - Disabling the creation of debug symbols by using `--dsym=false`. However, you should be aware that disabling this will mean that crash reports can only be symbolicated on that machine that built the app, and only if the app wasn't stripped.
 
- 
 Some things that should be avoided are:
 
 - Fat Binaries (debug) 
@@ -139,7 +132,7 @@ Some things that should be avoided are:
 - Disabling stripping 
   - Symbols `--nosymbolstrip` 
   - IL (release) `--nostrip`.  
- 
+
 Additional tips 
 
 - As on the simulator, prefer Build over Rebuild 
@@ -174,7 +167,6 @@ The tools can be instructed to keep things inside the application by using the [
 
 If you do not have access to the source code, or it is generated by a tool and you do not want to change it, it can still be linked by creating an XML file that describes all the types and members that need to be preserved. You can then add the flag `--xml={file.name}.xml` to your project options, which processed code exactly as though you were using Attributes.
 
-
 ### Partially Linking Applications 
 
 It is also possible to partially link applications, to help optimize the build time of your application:
@@ -183,11 +175,11 @@ It is also possible to partially link applications, to help optimize the build t
   - Some of the application size optimization is lost.
   - No access to the source code is required.
   - For example `--linkall --linkskip=fieldserviceiOS` .
- 
+
 - Use `Link SDK` option and use the  `[LinkerSafe]` attribute on the assemblies you need 
   - Access to the source code required.
   - Tells the system that the assembly is safe to link, and is processed as though it was a Xamarin SDK.
- 
+
 ### Objective-C Bindings 
 
 - Using the `[Assembly: LinkerSafe]` attribute on your bindings can save time and size.
@@ -206,110 +198,81 @@ This guide explored how to time an iOS application and options to consider that 
 # Benchmarks
 
 ## Layer 1: building again after making modifications, but _without_ cleaning should be faster 
- 
+
 The app should build a bit more quickly if you have only made changes to a subset of the libraries and you do not clean the build before re-deploying. 
- 
- 
- 
+
 ### Clean build time 
 178 seconds 
- 
- 
+
 ### Build again (without cleaning) after making _no changes_ 
 12.5 seconds 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 3 trials: 45 seconds, 43 seconds, 43 seconds 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in each of the following files 
- 
+
 - ViewIOS/ImageResourcesHelper.cs 
 - Sales.Native.Core.Tools/UIComponents/ListView/IListView.cs 
 - View.Models/Mailing/MailingModel.cs 
- 
+
 3 trials: 45 seconds, 45 seconds, 45 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in each of the following files 
- 
+
 - ViewIOS/ImageResourcesHelper.cs 
 - Sales.Native.Core.Tools/UIComponents/ListView/IListView.cs 
 - View.Models/Mailing/MailingModel.cs 
 - Sales.Native.Core.IOS.Ext/ServiceInterfaces/AlertDialog/Dialog.cs 
 - Sales.Native.Core.Tools.IOS.Ext/BaseViews/BaseNavigationViewController.cs 
 - View.Common/Services/DataTransferResult.cs 
- 
+
 45 seconds 
- 
- 
- 
- 
- 
- 
+
 ## Layer 2: "app thinning" aka "device specific builds" 
- 
+
 The idea of "app thinning" is that the IDE will only build the 1 architecture needed for the specific device that you're deploying to (rather than _both_ 32-bit and 64-bit architectures). 
- 
+
 As of the latest "Xamarin 4" builds, you can now enable "app thinning" in Visual Studio via the "Project Options -> iOS Build -> Enable device-specific builds" setting. 
- 
+
 Or if you prefer you can achieve a similar result by changing the "Project Options -> iOS Build -> Advanced [tab] -> Supported architectures" to select just _one_ architecture (for example ARM64 if you are developing on a 64-bit device). 
- 
- 
- 
+
 (Caveat: I ran the following builds in Visual Studio for Mac on the Mac rather than on the command line.) 
- 
+
 ### Clean build time without "device specific builds" 
 177 seconds 
- 
- 
- 
+
 ### Clean build time _with_ "device specific builds"  
 2 trials: 106 seconds, 98 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 2 trials: 31 seconds, 31 seconds 
- 
- 
+
 * * * 
- 
- 
+
 ## Using the same strategy, but explicitly setting "Supported architectures" to select ARM64 _only_ (rather than using "device specific builds") 
- 
+
 (These builds were again run on the command line using `xbuild`.) 
- 
- 
- 
+
 ### Clean build time with "Supported architectures" set to ARM64 _only_ 
 2 trials: 80 seconds, 91 seconds 
- 
- 
- 
+
 ### Build again (without cleaning) after changing 1 line in "ViewIOS/ImageResourcesHelper.cs" 
 2 trials: 26 seconds, 26 seconds 
- 
- 
- 
- 
- 
+
 [1] Mac system used for testing: MacBookAir5,2 
- 
+
 - 2.0 GHz Core i7 (I7-3667U) 
- 
+
 2 Cores with hyper-threading 
- 
+
 L2 Cache (per Core): 256 KB 
 L3 Cache: 4 MB 
- 
+
 - Standard MacBook soldered-in solid-state storage 
- 
+
 - 8 GB RAM 
 ---->
-
 
 ## Related Links
 

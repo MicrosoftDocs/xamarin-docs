@@ -19,7 +19,6 @@ displayed:
 
 [![Example of an app with a button and three-item pop-up menu](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
 
-
 ## Creating a Popup Menu
 
 The first step is to create a menu resource file for the menu and place
@@ -71,7 +70,6 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-
 ## Handling Menu Events
 
 When the user selects a menu item, the
@@ -98,8 +96,6 @@ showPopupMenu.Click += (s, arg) => {
     menu.Show ();
 };
 ```
-
-
 
 ## Related Links
 

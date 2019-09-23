@@ -43,7 +43,7 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 The following screenshots show the `TextDecorations` enumeration members applied to [`Label`](xref:Xamarin.Forms.Label) instances:
 
-![](label-images/label-textdecorations.png "Labels with Text Decorations")
+![Labels with Text Decorations](label-images/label-textdecorations.png)
 
 > [!NOTE]
 > Text decorations can also be applied to [`Span`](xref:Xamarin.Forms.Span) instances. For more information about the `Span` class, see [Formatted Text](#Formatted_Text).
@@ -86,7 +86,7 @@ public partial class LabelPage : ContentPage
 
 The following screenshots show the result of setting the `TextColor` property:
 
-![](label-images/textcolor.png "Label TextColor Example")
+![Label TextColor Example](label-images/textcolor.png)
 
 For more information about colors, see [Colors](~/xamarin-forms/user-interface/colors.md).
 
@@ -135,7 +135,7 @@ var label =
 
 The following screenshots show the result of setting the `MaxLines` property to 2, when the text is long enough to occupy more than 2 lines:
 
-![](label-images/label-maxlines.png "Label MaxLines Example")
+![Label MaxLines Example](label-images/label-maxlines.png)
 
 <a name="Formatted_Text" />
 
@@ -218,13 +218,14 @@ Note that a [`Span`](xref:Xamarin.Forms.Span) can also respond to any gestures t
 
 The following screenshots show the result of setting the `FormattedString` property to three `Span` instances:
 
-![](label-images/formattedtext.png "Label FormattedText Example")
+![Label FormattedText Example](label-images/formattedtext.png)
 
 ## Line height
 
 The vertical height of a [`Label`](xref:Xamarin.Forms.Label) and a [`Span`](xref:Xamarin.Forms.Span) can be customized by setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property or [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) to a `double` value. On iOS and Android these values are multipliers of the original line height, and on the Universal Windows Platform (UWP) the `Label.LineHeight` property value is a multiplier of the label font size.
 
 > [!NOTE]
+>
 > - On iOS, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) and [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) properties change the line height of text that fits on a single line, and text that wraps onto multiple lines.
 > - On Android, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) and [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) properties only change the line height of text that wraps onto multiple lines.
 > - On UWP, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property changes the line height of text that wraps onto multiple lines, and the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property has no effect.
@@ -249,7 +250,7 @@ var label =
 
 The following screenshots show the result of setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property to 1.8:
 
-![](label-images/label-lineheight.png "Label LineHeight Example")
+![Label LineHeight Example](label-images/label-lineheight.png)
 
 The following XAML example demonstrates setting the [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property on a [`Span`](xref:Xamarin.Forms.Span):
 
@@ -289,7 +290,7 @@ var label = new Label
 
 The following screenshots show the result of setting the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property to 1.8:
 
-![](label-images/span-lineheight.png "Span LineHeight Example")
+![Span LineHeight Example](label-images/span-lineheight.png)
 
 ## Hyperlinks
 

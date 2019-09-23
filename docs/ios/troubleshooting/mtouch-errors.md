@@ -5,8 +5,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9F76162B-D622-45DA-996B-2FBF8017E208
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/06/2018
 ---
 
@@ -27,9 +27,9 @@ E.g. parameters, environment, missing tools.
 
 An unexpected error condition occurred. Please file a new issue on [GitHub](https://github.com/xamarin/xamarin-macios/issues/new) with as much information as possible, including:
 
-* Full build logs, with maximum verbosity (e.g. `-v -v -v -v` in the **Additional mtouch arguments**);
-* A minimal test case that reproduce the error; and
-* All version informations
+- Full build logs, with maximum verbosity (e.g. `-v -v -v -v` in the **Additional mtouch arguments**);
+- A minimal test case that reproduce the error; and
+- All version informations
 
 The easiest way to get exact version information is to use the **Visual Studio for Mac** menu, **About Visual Studio for Mac** item, **Show Details** button and copy/paste the version informations (you can use the **Copy Information** button).
 
@@ -125,8 +125,8 @@ SGen (--sgen) must be enabled if profiling (--profiling) is enabled.
 
 This can happen in the following circumstances:
 
-* ARMv6 is enabled and Xcode 4.5 or later is installed.
-* ARMv7s is enabled and Xcode 4.4 or earlier is installed.
+- ARMv6 is enabled and Xcode 4.5 or later is installed.
+- ARMv7s is enabled and Xcode 4.4 or earlier is installed.
 
 Please verify that the installed version of Xcode supports the selected architectures.
 
@@ -668,15 +668,15 @@ For further information see bug #[51634](https://bugzilla.xamarin.com/show_bug.c
 
 There are multiple reasons code sharing can be disabled:
 
-* because the container app's deployment target is earlier than iOS 8.0 (it's *)).
+- because the container app's deployment target is earlier than iOS 8.0 (it's *)).
 
 Native code sharing requires iOS 8.0 because native code sharing is implemented using user frameworks, which was introduced with iOS 8.0.
 
-* because the container app includes I18N assemblies (*).
+- because the container app includes I18N assemblies (*).
 
 Native code sharing is currently not supported if the container app includes I18N assemblies.
 
-* because the container app has custom xml definitions for the managed linker (*).
+- because the container app has custom xml definitions for the managed linker (*).
 
 Native code sharing requires is not supported for projects that use custom xml definitions for the managed linker.
 
@@ -684,59 +684,59 @@ Native code sharing requires is not supported for projects that use custom xml d
 
 ### MT0113: Native code sharing has been disabled for the extension '*' because *.
 
-* because the bitcode options differ between the container app (\*) and the extension (\*).
+- because the bitcode options differ between the container app (\*) and the extension (\*).
 
   Native code sharing requires that the bitcode options match between the projects that share code.
 
-* because the --assembly-build-target options are different between the container app (\*) and the extension (\*).
+- because the --assembly-build-target options are different between the container app (\*) and the extension (\*).
 
   Native code sharing requires that the --assembly-build-target options are identical between the projects that share code.
 
   This condition can occur if incremental builds are not either enabled or disabled in all the projects.
 
-* because the I18N assemblies are different between the container app (\*) and the extension (\*).
+- because the I18N assemblies are different between the container app (\*) and the extension (\*).
 
   Native code sharing is currently not supported for extensions that include I18N assemblies.
 
-* because the arguments to the AOT compiler are different between the container app (\*) and the extension (\*).
+- because the arguments to the AOT compiler are different between the container app (\*) and the extension (\*).
 
   Native code sharing requires that the arguments to the AOT compiler do not differ between projects that share code.
 
-* because the other arguments to the AOT compiler are different between the container app (\*) and the extension (\*).
+- because the other arguments to the AOT compiler are different between the container app (\*) and the extension (\*).
 
   Native code sharing requires that the arguments to the AOT compiler do not differ between projects that share code.
 
   This condition occurs if the 'Perform all 32-bit float operations as 64-bit float' differs between projects.
 
-* because LLVM is not enabled or disabled in both the container app (\*) and the extension (\*).
+- because LLVM is not enabled or disabled in both the container app (\*) and the extension (\*).
 
   Native code sharing requires that LLVM is either enabled or disabled for all projects that share code.
 
-* because the managed linker settings are different between the container app (\*) and the extension (\*).
+- because the managed linker settings are different between the container app (\*) and the extension (\*).
 
   Native code sharing requires that the managed linker settings are identical for all projects that share code.
 
-* because the skipped assemblies for the managed linker are different between the container app (\*) and the extension (\*).
+- because the skipped assemblies for the managed linker are different between the container app (\*) and the extension (\*).
 
   Native code sharing requires that the managed linker settings are identical for all projects that share code.
 
-* because the extension has custom xml definitions for the managed linker (*).
+- because the extension has custom xml definitions for the managed linker (*).
 
   Native code sharing requires is not supported for projects that use custom xml definitions for the managed linker.
 
-* because the container app does not build for the ABI * (while the extension is building for this ABI).
+- because the container app does not build for the ABI * (while the extension is building for this ABI).
 
   Native code sharing requires that the container app builds for all the architectures any app extension builds for.
 
   For instance: this condition occurs when an extension builds for ARM64+ARMv7, but the container app only builds for ARM64.
 
-* because the container app is building for the ABI \*, which is not compatible with the extension's ABI (\*).
+- because the container app is building for the ABI \*, which is not compatible with the extension's ABI (\*).
 
   Native code sharing requires that all the projects build for the exact same API.
 
   For instance: this condition occurs when an extension builds for ARMv7+llvm+thumb2, but the container app only builds for ARMv7+llvm.
 
-* because the container app is referencing the assembly '\*' from '\*', while the extension references a different version from '*'.
+- because the container app is referencing the assembly '\*' from '\*', while the extension references a different version from '*'.
 
   Native code sharing requires that all the projects that share code use the same versions for all assemblies.
 
@@ -862,7 +862,7 @@ To build your application, Xamarin.iOS must link against system libraries, some 
 
 The recommended way to fix this error is to upgrade Xcode to get the needed SDK. If you have multiple versions of Xcode installed or want to use an Xcode in a non-default location, make sure to set the correct Xcode location in your IDE's preferences.
 
-Alternatively, enable the managed [linker](https://docs.microsoft.com/en-us/xamarin/ios/deploy-test/linker) to remove unused APIs, including (in most cases) the new ones which require the specified library. However, this will not work if your project requires APIs introduced in a newer SDK than the one your Xcode provides.
+Alternatively, enable the managed [linker](https://docs.microsoft.com/xamarin/ios/deploy-test/linker) to remove unused APIs, including (in most cases) the new ones which require the specified library. However, this will not work if your project requires APIs introduced in a newer SDK than the one your Xcode provides.
 
 As a last-straw solution, use an older version of Xamarin.iOS that does not require these new SDKs to be present during the build process.
 
@@ -986,11 +986,11 @@ Remove the directory `NOTICE` from the project.
 
 This can happen if:
 
-* Your application has entitlements that the current provisioning profile does not support.
+- Your application has entitlements that the current provisioning profile does not support.
   Possible solutions:
   - Specify a different provisioning profile that supports the entitlements your application needs.
   - Remove the entitlements not supported in current provisioning profile.
-* The device you're trying to deploy to is not included in the provisioning profile you're using.
+- The device you're trying to deploy to is not included in the provisioning profile you're using.
   Possible solutions:
   - Create a new app from a template in Xcode, select the same provisioning profile, and deploy to same device. Sometimes Xcode can automatically refresh provisioning profiles with new devices (in other cases Xcode will ask you what to do).
   -Go to the iOS Dev Center and update the provisioning profile with the new device, then download the updated provisioning profile to your machine.
@@ -1021,10 +1021,10 @@ An error occurred when trying to lookup an application on device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
 
 <a name="MT1024" />
 
@@ -1042,11 +1042,11 @@ An error occurred when trying to list the crash reports on the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <a name="MT1026" />
 
@@ -1056,11 +1056,11 @@ An error occurred when trying to download the crash reports from the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <a name="MT1027" />
 
@@ -1277,9 +1277,9 @@ This usually indicates a problem with Xcode.
 
 Things to try to fix this:
 
-* Use the simulator once in Xcode.
-* Pass an explicit SDK version using --sdk \<version>.
-* Reinstall Xcode.
+- Use the simulator once in Xcode.
+- Pass an explicit SDK version using --sdk \<version>.
+- Reinstall Xcode.
 
 <a name="MT1221" />
 
@@ -1330,7 +1330,7 @@ Please set the deployment target in the Info.plist file to at least 8.0 to solve
 ### MT14xx: Crash Reports
 
 <!--
-  MT14xx	CrashReports.cs
+  MT14xx    CrashReports.cs
   -->
 
 <a name="MT1400" />
@@ -1341,11 +1341,11 @@ An error occurred when trying to access crash reports from the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <a name="MT1401" />
 
@@ -1355,11 +1355,11 @@ An error occurred when trying to access crash reports from the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <a name="MT1402" />
 
@@ -1369,11 +1369,11 @@ An error occurred when trying to access crash reports from the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <a name="MT1403" />
 
@@ -1383,11 +1383,11 @@ An error occurred when trying to access crash reports from the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <a name="MT1404" />
 
@@ -1397,11 +1397,11 @@ An error occurred when trying to access crash reports from the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <a name="MT1405" />
 
@@ -1411,11 +1411,11 @@ An error occurred when trying to access crash reports from the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <a name="MT1406" />
 
@@ -1425,18 +1425,18 @@ An error occurred when trying to access crash reports from the device.
 
 Things to try to solve this:
 
-* Delete the application from the device and try again.
-* Disconnect the device and reconnect it.
-* Reboot the device.
-* Reboot the Mac.
-* Synchronize the device with iTunes (this will remove any crash reports from the device).
+- Delete the application from the device and try again.
+- Disconnect the device and reconnect it.
+- Reboot the device.
+- Reboot the Mac.
+- Synchronize the device with iTunes (this will remove any crash reports from the device).
 
 <!--- 1407 used by mmp -->
 
 ### MT16xx: MachO
 
 <!--
-  MT16xx	MachO.cs
+  MT16xx    MachO.cs
   -->
 
 <a name="MT1600" />
@@ -1524,8 +1524,8 @@ This error means that the managed linker encountered an unexpected error, e.g. a
 
 ```
 error MT2001: Could not link assemblies.
-	Method: `System.Void Todo.TodoListPageCS/<<-ctor>b__1_0>d::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)`
-	Assembly: `QuickTodo, Version=1.0.6297.28241, Culture=neutral, PublicKeyToken=null`
+    Method: `System.Void Todo.TodoListPageCS/<<-ctor>b__1_0>d::SetStateMachine(System.Runtime.CompilerServices.IAsyncStateMachine)`
+    Assembly: `QuickTodo, Version=1.0.6297.28241, Culture=neutral, PublicKeyToken=null`
 Reason: Value cannot be null.
 Parameter name: instruction
 ```
@@ -1616,9 +1616,10 @@ The root assembly could not be loaded. Please verify that the path in the error 
 Something unexpected occured when trying to optimize generated binding code. The element causing the issue is named in the error message. To fix this issue the assembly named (or containing the type or method named) will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 The last digit `x` will be:
-* `0` for an assembly name;
-* `1` for a type name;
-* `3` for a method name;
+
+- `0` for an assembly name;
+- `1` for a type name;
+- `3` for a method name;
 
 <a name="MT2030" />
 
@@ -1628,8 +1629,8 @@ Something unexpected occured when trying to remove user resources. The assembly 
 
 User resources are files included inside assemblies (as resources) that needs to be extracted, at build time, to create the application bundle. This includes:
 
-* `__monotouch_content_*` and `__monotouch_pages_*` resources; and
-* Native libraries embedded inside a binding assembly;
+- `__monotouch_content_*` and `__monotouch_pages_*` resources; and
+- Native libraries embedded inside a binding assembly;
 
 <a name="MT2040" />
 
@@ -2259,7 +2260,7 @@ This usually indicates a bug in Xamarin.iOS; please file a new issue on [github]
 
 This happens when the native linker cannot find a symbol that is referenced somewhere. There are several reasons this may happen:
 
-* A third-party binding requires a framework, but the binding does not specify this in its `[LinkWith]` attribute. Solutions:
+- A third-party binding requires a framework, but the binding does not specify this in its `[LinkWith]` attribute. Solutions:
   - If you're the author of the third-party binding, or have access to its source, modify the binding's `[LinkWith]` attribute to include the framework it needs:
 
     ```csharp
@@ -2267,13 +2268,13 @@ This happens when the native linker cannot find a symbol that is referenced some
     ```
 
   - If you can't modify the third-party binding, you can manually link with the required framework by passing `-gcc_flags '-framework SystemFramework'` to `mtouch` (this is done by modifying the additional mtouch arguments in the project's iOS Build options page. Remember that this must be done for every project configuration).
-* In some cases a managed binding is composed of several native libraries, and all must be included in the bindings. It is possible to have more than one native library in each binding project, so the solution is to just add all the required native libraries to the binding project.</li>
-* A managed binding refers to native symbols that don't exist in the native library.
+- In some cases a managed binding is composed of several native libraries, and all must be included in the bindings. It is possible to have more than one native library in each binding project, so the solution is to just add all the required native libraries to the binding project.</li>
+- A managed binding refers to native symbols that don't exist in the native library.
     This usually happens when a binding has existed for some time, and the native
     code has been modified during that time so that a particular native class has
     either been removed or renamed, while the binding has not been updated.
-* A P/Invoke refers to a native symbol that does not exist. Starting with Xamarin.iOS 7.4 an <a href="#MT5214">MT5214</a> error will be reported for this case (see MT5214 for more information).
-* A third-party binding / library was built using C++, but the binding does not specify this in its `[LinkWith]` attribute. This is usually fairly easy to recognize, because the symbols have are mangled C++ symbols (one common example is `__ZNKSt9exception4whatEv`).
+- A P/Invoke refers to a native symbol that does not exist. Starting with Xamarin.iOS 7.4 an <a href="#MT5214">MT5214</a> error will be reported for this case (see MT5214 for more information).
+- A third-party binding / library was built using C++, but the binding does not specify this in its `[LinkWith]` attribute. This is usually fairly easy to recognize, because the symbols have are mangled C++ symbols (one common example is `__ZNKSt9exception4whatEv`).
   - If you're the author of the third-party binding, or have access to its source, modify the binding's `[LinkWith]` attribute to set the `IsCxx` flag:
 
     ```csharp
@@ -2288,7 +2289,7 @@ This happens when the native linker cannot find a symbol that is referenced some
 
 This happens when the native linker cannot find an Objective-C class that is referenced somewhere. There are several reasons this may happen: the same as for [MT5210](#MT5210) and in addition:
 
-* A third-party binding bound an Objective-C protocol, but did not annotate it with the `[Protocol]` attribute in its api definition. Solutions:
+- A third-party binding bound an Objective-C protocol, but did not annotate it with the `[Protocol]` attribute in its api definition. Solutions:
   - Add the missing `[Protocol]` attribute:
 
     ```csharp
@@ -2305,9 +2306,9 @@ This happens when the native linker cannot find an Objective-C class that is ref
 
 This happens when the native linker encounters duplicated symbols between all the native libraries. Following this error there may be one or more [MT5213](#MT5213) errors with the location for each occurrence of the symbol. Possible reasons for this error:
 
-* The same native library is included twice.
-* Two distinct native libraries happen to define the same symbols.
-* A native library is not correctly built, and contains the same symbol more than once.
+- The same native library is included twice.
+- Two distinct native libraries happen to define the same symbols.
+- A native library is not correctly built, and contains the same symbol more than once.
   You can confirm this by using the following set of commands from a terminal (replace i386 with x86_64/armv7/armv7s/arm64 according to which architecture you're building for):
 
   ```
@@ -2421,40 +2422,40 @@ operating system.
 
 There are a few possible sources for such dynamic symbols:
 
-* P/Invokes to methods in statically linked libraries (where the dll name is
+- P/Invokes to methods in statically linked libraries (where the dll name is
   `__Internal` in the DllImport attribute `[DllImport ("__Internal")]`).
-* Field references to memory locations in statically linked libraries from
+- Field references to memory locations in statically linked libraries from
   binding projects (`[Field]` attributes).
-* Objective-C classes referenced in statically linked libraries from binding
+- Objective-C classes referenced in statically linked libraries from binding
   projects (when using incremental builds or when not using the static
   registrar).
 
 Possible solutions:
 
-* Enable the managed linker (if possible for all assemblies instead of only
+- Enable the managed linker (if possible for all assemblies instead of only
   SDK assemblies). This might remove enough of the sources for dynamic symbols
   so that the linker's command-line doesn't exceeded the maximum.
-* Reduce the number of P/Invokes, field references and/or Objective-C classes.
-* Rewrite the dynamic symbols to have shorter names.
-* Pass `-dlsym:false` as an additional mtouch argument in the project's iOS
+- Reduce the number of P/Invokes, field references and/or Objective-C classes.
+- Rewrite the dynamic symbols to have shorter names.
+- Pass `-dlsym:false` as an additional mtouch argument in the project's iOS
   Build options. With this option, Xamarin.iOS will generate a native
   reference in the AOT-compiled code, and won't need to ask the linker to keep
   this symbol. However, this only works for device builds, and it will cause
   linker errors if there are P/Invokes to functions that don't exist in the
   static library.
-* Pass `--dynamic-symbol-mode=code` as an additional mtouch arguments in
+- Pass `--dynamic-symbol-mode=code` as an additional mtouch arguments in
   the project's iOS Build options. With this option, Xamarin.iOS will generate
   additional native code that references these symbols instead of asking the
   native linker to keep these symbols using command-line arguments. The
   downside to this approach is that it will increase the size of the
   executable somewhat.
-* Enable the static registrar by passing `--registrar:static` as an additional
+- Enable the static registrar by passing `--registrar:static` as an additional
   mtouch argument in the project's iOS Build options (for simulator builds,
   since the static registrar is already the default for device builds). The
   static registrar will generate code that references Objective-C classes
   statically, so there is no need to ask the native linker to keep such
   classes.
-* Disable incremental builds (for device builds). When incremental builds are
+- Disable incremental builds (for device builds). When incremental builds are
   enabled, the code generated by the static registrar won't be considered by
   the native linker, which means that Xamarin.iOS must still ask the linker to
   keep referenced Objective-C classes. Thus disabling incremental builds will
@@ -2470,10 +2471,10 @@ be manually preserved.
 
 There are two main reasons for this:
 
-* The symbol name is incorrect.
-  * Don't prepend an underscore to the symbol name.
-  * The symbol for Objective-C classes is `OBJC_CLASS_$_<classname>`.
-* The symbol is correct, but it's a symbol that's already preserved by normal
+- The symbol name is incorrect.
+  - Don't prepend an underscore to the symbol name.
+  - The symbol for Objective-C classes is `OBJC_CLASS_$_<classname>`.
+- The symbol is correct, but it's a symbol that's already preserved by normal
   means (some build options causes the exact list of dynamic symbols to vary).
 
 ### MT53xx: Other tools
@@ -2564,7 +2565,7 @@ Troubleshooting steps:
 - try to run `csharp -e 'System.Net.Dns.GetHostEntry (System.Net.Dns.GetHostName ()).AddressList'` (that should give you an IP address and not an error obviously).
 - try to run "ping \`hostname\`" which might give you more information, like: `cannot resolve MyHost.local: Unknown host`
 
-In some cases, it's a "local network" issue and it can be addressed by adding the unknown host `127.0.0.1	MyHost.local` in `/etc/hosts`.
+In some cases, it's a "local network" issue and it can be addressed by adding the unknown host `127.0.0.1    MyHost.local` in `/etc/hosts`.
 
 <a name="MT7002" />
 

@@ -3,8 +3,8 @@ title: "Manually Creating NuGet Packages for Xamarin"
 description: "This document contains tips to help build NuGet packages that target the Xamarin platform. It describes NuGet package Xamarin profiles, PCL NuGets with platform dependencies, and links to various open-source samples."
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -27,14 +27,14 @@ but does not include the target framework names used by Xamarin.
 
 The main Xamarin target frameworks in use today are:
 
-* **MonoAndroid** - Xamarin.Android
-* **Xamarin.iOS** - Xamarin.iOS [Unified API](~/cross-platform/macios/unified/index.md) (supports 64-bit)
-* **Xamarin.Mac** - Xamarin.Mac's mobile profile, which is equivalent
+- **MonoAndroid** - Xamarin.Android
+- **Xamarin.iOS** - Xamarin.iOS [Unified API](~/cross-platform/macios/unified/index.md) (supports 64-bit)
+- **Xamarin.Mac** - Xamarin.Mac's mobile profile, which is equivalent
   to the Xamarin.iOS and Xamarin.Android API surface.
 
 There is also a target for the older iOS [Classic API](~/cross-platform/macios/unified/index.md):
 
-* **MonoTouch** - iOS Classic API
+- **MonoTouch** - iOS Classic API
 
 A **.nuspec** file that targeted all these would look something like:
 

@@ -4,7 +4,7 @@ description: "The MainThread class allows applications to run code on the main e
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 11/04/2018
+ms.date: 08/20/2019
 ---
 
 # Xamarin.Essentials: MainThread
@@ -93,6 +93,18 @@ else
 You might suspect that this check might improve performance if the block of code is already running on the main thread.
 
 _However, this check is not necessary._ The platform implementations of `BeginInvokeOnMainThread` themselves check if the call is made on the main thread. There is very little performance penalty if you call `BeginInvokeOnMainThread` when it's not really necessary.
+
+## Additional Methods
+
+The `MainThread` class includes the following additional `static` methods that can be used to interact with user interface elements from backgrounds threads:
+
+| Method | Arguments | Returns | Purpose |
+|---|---|---|---|
+| `InvokeOnMainThreadAsync<T>` | `Func<T>` | `Task<T>` | Invokes a `Func<T>` on the main thread, and waits for it to complete. |
+| `InvokeOnMainThreadAsync` | `Action` | `Task` | Invokes an `Action` on the main thread, and waits for it to complete. |
+| `InvokeOnMainThreadAsync<T>`| `Func<Task<T>>` | `Task<T>` | Invokes a `Func<Task<T>>` on the main thread, and waits for it to complete. |
+| `InvokeOnMainThreadAsync` | `Func<Task>` | `Task` | Invokes a `Func<Task>` on the main thread, and waits for it to complete. |
+| `GetMainThreadSynchronizationContextAsync` | | `Task<SynchronizationContext>` | Returns the `SynchronizationContext` for the main thread. |
 
 ## API
 

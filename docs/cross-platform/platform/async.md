@@ -3,8 +3,8 @@ title: "Async Support Overview"
 description: "This document describes programming with async and await, concepts introduced in C# 5 to make it easier to write asynchronous code."
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -119,7 +119,6 @@ Note these points:
 - The return type is  `Task<int>` so calling code can access the  `int` value that is calculated in this method.
 - The return statement is  `return exampleInt;` which is an integer object – the fact that the method returns  `Task<int>` is part of the language improvements.
 
-
 ### Calling an async method 1
 
 This button click event handler can be found in the Android sample application to call the method discussed above:
@@ -148,7 +147,6 @@ Notes:
 - The code awaits on the sizeTask variable.  *This* is the location that the method is suspended and control is returned to the calling code until the asynchronous task finishes on its own thread.
 - Execution does  *not* pause when the task is created on the first line of the method, despite the task being created there. The await keyword signifies the location where execution is paused.
 - When the asynchronous task finishes, intResult is set and execution continues on the original thread, from the await line.
-
 
 ### Calling an async method 2
 
@@ -180,14 +178,11 @@ Some important points:
 - The code  `await` s on the  `DownloadHomepage` method directly on an assignment to a variable ( `intResult` ) unlike the previous example where we used an intermediate  `Task<int>` variable to reference the task.  *This* is the location where control is returned to the caller until the asynchronous method has completed on another thread.
 - When the asynchronous method completes and returns, execution resumes at the  `await` which means the integer result is returned and then rendered in a UI widget.
 
-
 ## Summary
 
 Using async and await greatly simplifies the code required to spawn long-running operations on background threads without blocking the main thread. They also make it easy to access the results when the task has completed.
 
 This document has given an overview of the new language keywords and examples for both Xamarin.iOS and Xamarin.Android.
-
-
 
 ## Related Links
 

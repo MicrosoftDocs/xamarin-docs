@@ -4,8 +4,8 @@ description: "This document describes PhotoKit, discussing its model objects, ho
 ms.prod: xamarin
 ms.assetid: 7FDEE394-3787-40FA-8372-76A05BF184B3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/14/2017
 ---
 
@@ -20,13 +20,13 @@ Similarly, the `PHAssetCollection` and `PHCollectionList` classes contain metada
 
 ## Querying Model Data
 
-PhotoKit makes it easy to query model data through a variety of fetch methods. For example, to retrieve all images, you would call `PFAsset.Fetch`, passing the `PHAssetMediaType.Image` media type.
+PhotoKit makes it easy to query model data through a variety of fetch methods. For example, to retrieve all images, you would call `PHAsset.Fetch`, passing the `PHAssetMediaType.Image` media type.
 
 ```csharp
 PHFetchResult fetchResults = PHAsset.FetchAssets (PHAssetMediaType.Image, null);
 ```
 
-The `PHFetchResult` instance would then contain all the `PFAsset` instances representing images. To get the images themselves, you use the `PHImageManager` (or the caching version, `PHCachingImageManager`) to make a request for the image by calling `RequestImageForAsset`. For example, the following code retrieves an image for each asset in a `PHFetchResult` to display in a collection view cell:
+The `PHFetchResult` instance would then contain all the `PHAsset` instances representing images. To get the images themselves, you use the `PHImageManager` (or the caching version, `PHCachingImageManager`) to make a request for the image by calling `RequestImageForAsset`. For example, the following code retrieves an image for each asset in a `PHFetchResult` to display in a collection view cell:
 
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)

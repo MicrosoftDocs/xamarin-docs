@@ -11,7 +11,7 @@ ms.date: 06/11/2019
 
 # Xamarin.Forms Views
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Xamarin.Forms views are the building blocks of cross-platform mobile user interfaces._
 

@@ -234,8 +234,6 @@ The [**SetTimer**](https://github.com/xamarin/xamarin-forms-book-samples/tree/ma
 
 **SetTimer** also demonstrates using the [`DisplayAlert`](xref:Xamarin.Forms.Page.DisplayAlert(System.String,System.String,System.String)) method of `Page` to display an alert box.
 
-
-
 ## Related links
 
 - [Chapter 15 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch15-Apr2016.pdf)

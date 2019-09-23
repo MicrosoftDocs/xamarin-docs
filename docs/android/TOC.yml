@@ -303,6 +303,8 @@
               href: platform/fragments/providing-backwards-compatibility.md
         - name: App Linking
           href: platform/app-linking.md
+        - name: Android 10
+          href: platform/android-10.md
         - name: Android 9 Pie
           href: platform/pie.md
         - name: Android 8 Oreo
@@ -448,6 +450,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/android
         - name: Vibrate
           href: ~/essentials/vibrate.md?context=xamarin/android
+        - name: Xamarin.Essentials release notes
+          href: https://docs.microsoft.com/xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/android
     - name: Data and Cloud Services

@@ -4,8 +4,8 @@ description: "The SQLite.NET PCL NuGet library provides a simple data access mec
 ms.prod: xamarin
 ms.assetid: 79813B09-42D7-47DD-AE71-A605E6B9EF24
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/18/2018
 ---
 
@@ -44,7 +44,7 @@ Once you have the SQLite.NET library available, follow these three steps to use 
     var db = new SQLiteConnection (dbPath);
     ```
 
-	The dbPath variable should be determined according the rules discussed earlier in this document.
+    The dbPath variable should be determined according the rules discussed earlier in this document.
 
 1. **Save Data** - Once you have created a SQLiteConnection object, database commands are executed by calling its methods, such as CreateTable and Insert like this:
 
@@ -131,7 +131,6 @@ Common attributes that you can apply to your classes to control how they are sto
 - **[Ignore]** – Causes SQLite.NET to ignore this property. This is particularly useful for properties that have a type that cannot be stored in the database, or properties that model collections that cannot be resolved automatically be SQLite.
 - **[Unique]** – Ensures that the values in the underlying database column are unique.
 
-
 Most of these attributes are optional, SQLite will use default values for table and column names. You should always specify an integer primary key so that selection and deletion queries can be performed efficiently on your data.
 
 ## More Complex Queries
@@ -144,7 +143,6 @@ The following methods on `SQLiteConnection` can be used to perform other data op
 - **Delete** – Deletes an object using its primary key.
 - **Query\<T>** - Perform an SQL query that returns a number of rows (as objects).
 - **Execute** – Use this method (and not  `Query` ) when you don’t expect rows back from the SQL (such as INSERT, UPDATE and DELETE instructions).
-
 
 ### Getting an object by the primary key
 

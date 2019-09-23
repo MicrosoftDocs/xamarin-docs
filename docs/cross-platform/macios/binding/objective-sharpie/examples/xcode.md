@@ -3,8 +3,8 @@ title: "Real-World Example using an Xcode Project"
 description: "This document describes how to use an Xcode project as a direct input to Objective Sharpie, simplifying the process of creating C# bindings to Objective-C code."
 ms.prod: xamarin
 ms.assetid: 168AA64C-E181-4937-A1F2-AD095B9A36F2
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 01/15/2016
 ---
 

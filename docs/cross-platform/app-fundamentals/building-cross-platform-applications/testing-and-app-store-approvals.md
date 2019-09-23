@@ -3,8 +3,8 @@ title: "Part 6 - Testing and App Store Approvals"
 description: "This document describes how to test a cross-platform application on-device, manage test cases, automate tests, run unit tests, and work through the app submission process."
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
 ---
 
@@ -51,7 +51,6 @@ with external users, there are two challenges:
 
 - **Distribution** – Managing the provisioning process (especially for iOS devices) and getting updated versions of software to the testers.
 - **Feedback** – Collecting information about application usage, and detailed information on any errors that may occur.
-
 
 There are a number of services help to address these issues, by providing
 infrastructure that is built into your application to collect and report on
@@ -174,7 +173,7 @@ might have been missed:
 Apple is famous for being strict about adherence to their Human Interface
 Guidelines as one of the key strengths of their platform is consistency (and the
 perceived increase in usability). Microsoft has taken a similar approach with
-Windows applications implementing the Metro-style UI. The approval process
+Windows applications implementing the [Fluent Design System](https://microsoft.com/design/fluent). The approval process
 for both platforms will involve your app being evaluated for its adherence to
 the relevant design philosophy.
 

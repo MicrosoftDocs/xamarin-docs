@@ -15,7 +15,6 @@ section covers the steps involved with the public distribution of an application
 created with Xamarin.Android via channels such as e-mail, a private web server,
 Google Play, or the Amazon App Store for Android.
 
-
 ## Overview
 
 The final step in the development of a Xamarin.Android application is
@@ -42,7 +41,6 @@ application may be released to users:
 - **Via a Website** &ndash; A Xamarin.Android application can be made available for download on a website, from which users may then install the application by clicking on a link.
 - **By e-mail** &ndash; It is possible for users to install a Xamarin.Android application from their e-mail. The application will be installed when the attachment is opened with an Android-powered device.
 - **Through a Market** &ndash; There are several application marketplaces that exist for distribution, such as  [Google Play](http://play.google.com/) or  [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) .
-
 
 Using an established marketplace is the most common way to publish an
 application as it provides the broadest market reach and the greatest control
@@ -82,7 +80,6 @@ they are and how they work. Google Licensing services are also
 described. Finally, alternate means of distribution are introduced,
 including the use of an HTTP web server, simple e-mail distribution,
 and the Amazon App Store for Android.
-
 
 ## Related Links
 

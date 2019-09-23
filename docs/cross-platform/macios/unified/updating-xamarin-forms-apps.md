@@ -3,8 +3,8 @@ title: "Updating Existing Xamarin.Forms Apps"
 description: "This document describes the steps that must be followed to update a Xamarin.Forms app from the Classic API to the Unified API."
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 
@@ -89,11 +89,11 @@ Change the **App.cs** file so that:
 ```csharp
 public class App : Application // superclass new in 1.3
 {
-	public App ()
-	{
-		// The root page of your application
-		MainPage = new ContentPage {...}; // property new in 1.3
-	}
+    public App ()
+    {
+        // The root page of your application
+        MainPage = new ContentPage {...}; // property new in 1.3
+    }
 ```
 
 We have completely removed the `GetMainPage` method, and instead set the `MainPage` *property* on the `Application` subclass.
@@ -114,14 +114,14 @@ Change the **AppDelegate.cs** file so that:
 public partial class AppDelegate :
     global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate // superclass new in 1.3
 {
-	public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-	{
-		global::Xamarin.Forms.Forms.Init ();
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
+    {
+        global::Xamarin.Forms.Forms.Init ();
 
-		LoadApplication (new App ());  // method is new in 1.3
+        LoadApplication (new App ());  // method is new in 1.3
 
-		return base.FinishedLaunching (app, options);
-	}
+        return base.FinishedLaunching (app, options);
+    }
 }
 ```
 
@@ -138,14 +138,14 @@ ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 public class MainActivity :
     global::Xamarin.Forms.Platform.Android.FormsApplicationActivity // superclass new in 1.3
 {
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		global::Xamarin.Forms.Forms.Init (this, bundle);
+        global::Xamarin.Forms.Forms.Init (this, bundle);
 
-		LoadApplication (new App ()); // method is new in 1.3
-	}
+        LoadApplication (new App ()); // method is new in 1.3
+    }
 }
 ```
 

@@ -134,7 +134,6 @@ The `Source` property of the `VideoPlayer` is bound to the `ListView`. The `Path
 
 As with the first **Select Web Video** page, no item is initially selected from the `ListView`, so you need to select one of the videos before it begins playing.
 
-
 ## Related Links
 
 - [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

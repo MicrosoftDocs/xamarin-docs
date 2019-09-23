@@ -119,7 +119,6 @@ types of notification metadata:
 > with Android 8.0, [notification channels](#notif-chan) are used to
 > control how notifications are presented to the user.
 
-
 ### Expanded layouts
 
 Beginning with Android 4.1, notifications can be configured with
@@ -489,7 +488,6 @@ A notification remains visible until one of three things happens:
 
 For more about updating Android notifications, see
 [Modify a Notification](https://developer.android.com/training/notify-user/managing.html#Updating).
-
 
 ### Starting an activity from a notification
 

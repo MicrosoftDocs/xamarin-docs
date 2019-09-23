@@ -4,8 +4,8 @@ description: "This document describes how to configure a Xamarin.Mac app for pub
 ms.prod: xamarin
 ms.assetid: fea66a34-1581-4cd6-b714-3fbff215a542
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 04/12/2017
 ---
 

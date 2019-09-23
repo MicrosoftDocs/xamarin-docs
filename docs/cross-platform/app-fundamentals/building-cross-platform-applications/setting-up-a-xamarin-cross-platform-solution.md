@@ -3,8 +3,8 @@ title: "Part 3 - Setting Up A Xamarin Cross-Platform Solution"
 description: "This document describes how to set up a cross-platform solution in Xamarin. It discusses various code sharing strategies such as shared projects and .NET Standard."
 ms.prod: xamarin
 ms.assetid: 4139A6C2-D477-C563-C1AB-98CCD0D10A93
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/27/2017
 ---
 
@@ -15,14 +15,11 @@ same solution file format (the Visual Studio **.sln** file format). Solutions
 can be shared across development environments, even when individual projects
 cannot be loaded (such as a Windows project in Visual Studio for Mac).
 
-
-
 When creating a new cross-platform application, the first step is to create a
 blank solution. This section explains what happens next: setting up the projects for
 building cross-platform mobile apps.
 
  <a name="Sharing_Code" />
-
 
 ## Sharing Code
 
@@ -30,7 +27,6 @@ Refer to the [Code Sharing Options](~/cross-platform/app-fundamentals/code-shari
 code-sharing across platforms.
 
  <a name="Shared_Asset_Projects" />
-
 
 ### Shared Projects
 
@@ -41,7 +37,6 @@ and use compiler directives to include different, platform-specific code
 paths.
 
  <a name="Portable_Class_Libraries" />
-
 
 ### Portable Class Libraries (PCL)
 
@@ -57,7 +52,6 @@ targeted.
 
 You can read more about Xamarin's [support for Portable Class Libraries](~/cross-platform/app-fundamentals/pcl.md) and follow the instructions there to see how the [TaskyPortable sample](https://github.com/xamarin/mobile-samples/tree/master/TaskyPortable) works.
 
-
 ### .NET Standard
 
 Introduced in 2016, [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md)
@@ -68,10 +62,7 @@ that can be used across Windows, Xamarin platforms (iOS, Android, Mac), and Linu
 available in each version (from 1.0 to 1.6) are more easily discovered
 and each version is backwards-compatible with lower version numbers.
 
-
-
  <a name="Populating_the_Solution" />
-
 
 ## Populating the Solution
 
@@ -82,9 +73,7 @@ The Xamarin approach is to group code into two project types:
 - **Core project** – Write re-usable code in one place, to be shared across different platforms. Use the principles of encapsulation to hide implementation details wherever possible.
 - **Platform-specific application projects** – Consume the re-usable code with as little coupling as possible. Platform-specific features are added at this level, built on components exposed in the Core project.
 
-
  <a name="Core_Project" />
-
 
 ### Core Project
 
@@ -99,9 +88,7 @@ which could include the following layers:
 - **Service Access Layer** – An optional layer to provide cloud services to the application. Contains code that accesses remote network resources (web services, image downloads, etc) and possibly caching of the results.
 - **Business Layer** – Definition of the Model classes and the Façade or Manager classes that expose functionality to the platform-specific applications.
 
-
  <a name="Platform-Specific_Application_Projects" />
-
 
 ### Platform-Specific Application Projects
 
@@ -114,9 +101,7 @@ The platform-specific projects should implement:
 - **Application Layer** – Platform specific functionality and binding/conversion between the Business Layer objects and the user interface.
 - **User Interface Layer** – Screens, custom user-interface controls, presentation of validation logic.
 
-
 <a name="Example" />
-
 
 ### Example
 
@@ -129,9 +114,7 @@ Android application projects. The Shared Project contains code relating to each 
 
  ![](setting-up-a-xamarin-cross-platform-solution-images/core-solution-example.png "The Shared Project contains code relating to each of the architectural layers (Business, Service, Data and Data Access code)")
 
-
  <a name="Project_References" />
-
 
 ## Project References
 
@@ -146,17 +129,14 @@ user-interface code required to present functionality to the user, as shown in t
 
 ![](setting-up-a-xamarin-cross-platform-solution-images/solution-android.png "The application projects each reference Shared project") ![](setting-up-a-xamarin-cross-platform-solution-images/solution-ios.png "The application projects each reference Shared project")
 
-
 Specific examples of how projects should be structured are given in the case
 studies.
 
  <a name="Adding_Files" />
 
-
 ## Adding Files
 
  <a name="Build_Action" />
-
 
 ### Build Action
 
@@ -170,12 +150,10 @@ list shows the build action for some common file types:
 - **XAML files in Windows projects** – Build Action: Page
 - **Xamarin.Forms XAML files** – Build Action: EmbeddedResource
 
-
 Generally the IDE will detect the file type and suggest the correct build
 action.
 
  <a name="Case_Sensitivity" />
-
 
 ### Case Sensitivity
 

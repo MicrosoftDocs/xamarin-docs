@@ -3,8 +3,8 @@ title: "Creating a New Multiplatform Library for NuGet"
 description: "This document describes how to create a multiplatform library for use with NuGet. This technique is suited for business logic and algorithms that can be expressed entirely in the .NET Base Class library and will thus run on all target platforms without platform-specific code."
 ms.prod: xamarin
 ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
 ---
 
@@ -51,7 +51,6 @@ If you later need platform-specific functionality, [platform-specific projects c
 
    ![](single-codebase-images/create-nuget-package.png "The NuGet package file will be saved in the bin folder either Debug or Release, depending on configuration")
 
-
 ## Verifying the Output
 
 NuGet packages are also ZIP files, so it's possible to inspect the internal structure of the generated package.
@@ -81,7 +80,6 @@ After converting to a Shared Project, visit the **Project Options > NuGet Packag
 [section](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/platform-specific.md)
 and ensure that any required profiles are selected (so that the NuGet continues to be compatible
 with projects it was previously used in).
-
 
 ## Related Links
 

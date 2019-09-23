@@ -3,8 +3,8 @@ title: "Getting Started with F#"
 description: "This document describes how to learn F# and use it to build Xamarin applications with Visual Studio 2019 and Visual Studio for Mac."
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
 ---
 
@@ -26,7 +26,6 @@ In Visual Studio for Mac choose **File > New Solution**. In the **New Project** 
  [![](overview-images/choosefsharp.png "Use the drop-down to the right of the template to choose the language you wish to use")](overview-images/choosefsharp.png#lightbox)
 
 Select your project type and click **Next** to name and create it.
-
 
 You are now ready to start creating some great F# applications!
 
@@ -52,4 +51,3 @@ language, covering all proficiencies. Listed below are a few of our recommendati
 - [Visual F# Code Gallery](http://go.microsoft.com/fwlink/?LinkID=124614)
 - [Visual F# Math/Stats Programming](http://go.microsoft.com/fwlink/?LinkId=235173)
 - [Visual F# Charting](http://go.microsoft.com/fwlink/?LinkId=235176)
-

@@ -4,8 +4,8 @@ description: "This document describes how to work with native and managed except
 ms.prod: xamarin
 ms.assetid: BE4EE969-C075-4B9A-8465-E393556D8D90
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/05/2017
 ---
 
@@ -81,12 +81,12 @@ Which means that it's usually not possible to catch these exceptions in the foll
 
 ```csharp
 try {
-	var dict = new NSMutableDictionary ();
-	dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero);
+    var dict = new NSMutableDictionary ();
+    dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero);
 } catch (Exception ex) {
-	Console.WriteLine (ex);
+    Console.WriteLine (ex);
 } finally {
-	Console.WriteLine ("finally");
+    Console.WriteLine ("finally");
 }
 ```
 
@@ -147,12 +147,12 @@ Code example:
 ```objc
 -(id) setObject: (id) object forKey: (id) key
 {
-	@try {
-		if (key == nil)
-			[NSException raise: @"NSInvalidArgumentException"];
-	} @finally {
-		NSLog (@"This will not be executed");
-	}
+    @try {
+        if (key == nil)
+            [NSException raise: @"NSInvalidArgumentException"];
+    } @finally {
+        NSLog (@"This will not be executed");
+    }
 }
 ```
 
@@ -165,18 +165,18 @@ clause:
 
 ```csharp
 class AppDelegate : UIApplicationDelegate {
-	public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
-	{
-		throw new Exception ("An exception");
-	}
-	static void Main (string [] args)
-	{
-		try {
-			UIApplication.Main (args, null, typeof (AppDelegate));
-		} catch (Exception ex) {
-			Console.WriteLine ("Managed exception caught.");
-		}
-	}
+    public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
+    {
+        throw new Exception ("An exception");
+    }
+    static void Main (string [] args)
+    {
+        try {
+            UIApplication.Main (args, null, typeof (AppDelegate));
+        } catch (Exception ex) {
+            Console.WriteLine ("Managed exception caught.");
+        }
+    }
 }
 ```
 
@@ -242,14 +242,14 @@ is usually code like this:
 ``` objective-c
 void UIApplicationMain ()
 {
-	@try {
-		while (true) {
-			ExecuteRunLoop ();
-		}
-	} @catch (NSException *ex) {
-		NSLog (@"An unhandled exception occured: %@", exc);
-		abort ();
-	}
+    @try {
+        while (true) {
+            ExecuteRunLoop ();
+        }
+    } @catch (NSException *ex) {
+        NSLog (@"An unhandled exception occured: %@", exc);
+        abort ();
+    }
 }
 
 ```
@@ -284,7 +284,7 @@ static extern void objc_msgSend (IntPtr handle, IntPtr selector);
 
 static void DoSomething (NSObject obj)
 {
-	objc_msgSend (obj.Handle, Selector.GetHandle ("doSomething"));
+    objc_msgSend (obj.Handle, Selector.GetHandle ("doSomething"));
 }
 ```
 
@@ -294,11 +294,11 @@ The P/Invoke to objc_msgSend is intercepted, and this is called instead:
 void
 xamarin_dyn_objc_msgSend (id obj, SEL sel)
 {
-	@try {
-		objc_msgSend (obj, sel);
-	} @catch (NSException *ex) {
-		convert_to_and_throw_managed_exception (ex);
-	}
+    @try {
+        objc_msgSend (obj, sel);
+    } @catch (NSException *ex) {
+        convert_to_and_throw_managed_exception (ex);
+    }
 }
 ```
 
@@ -375,16 +375,16 @@ So, to see every time an exception is marshaled, you can do this:
 ``` csharp
 Runtime.MarshalManagedException += (object sender, MarshalManagedExceptionEventArgs args) =>
 {
-	Console.WriteLine ("Marshaling managed exception");
-	Console.WriteLine ("    Exception: {0}", args.Exception);
-	Console.WriteLine ("    Mode: {0}", args.ExceptionMode);
-	
+    Console.WriteLine ("Marshaling managed exception");
+    Console.WriteLine ("    Exception: {0}", args.Exception);
+    Console.WriteLine ("    Mode: {0}", args.ExceptionMode);
+    
 };
 Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCExceptionEventArgs args) =>
 {
-	Console.WriteLine ("Marshaling Objective-C exception");
-	Console.WriteLine ("    Exception: {0}", args.Exception);
-	Console.WriteLine ("    Mode: {0}", args.ExceptionMode);
+    Console.WriteLine ("Marshaling Objective-C exception");
+    Console.WriteLine ("    Exception: {0}", args.Exception);
+    Console.WriteLine ("    Mode: {0}", args.ExceptionMode);
 };
 ```
 
@@ -427,7 +427,6 @@ C function, which then throws any Objective-C exceptions, will still run into
 the old and undefined behavior (this may be improved in the future).
 
 [2]: https://developer.apple.com/reference/foundation/1409609-nssetuncaughtexceptionhandler?language=objc
-
 
 ## Related Links
 

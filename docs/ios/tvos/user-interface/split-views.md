@@ -4,8 +4,8 @@ description: "This document describes how to work with tvOS split views in an ap
 ms.prod: xamarin
 ms.assetid: 21248CFB-5A94-4C19-B223-C72E0DC5F1D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
 ---
 
@@ -46,18 +46,18 @@ The easiest way to work with Split View Controllers in a Xamarin.tvOS app is to 
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Split View Controllers** from the **Toolbox** and drop it on the View: 
 
-	[![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
+    [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
 1. By default, the iOS Designer will install a Navigation Controller and a View Controller in the Master View. If this does not fit your app's requirements, simply delete them.
 1. If you do remove the default Master View, drag a new View Controller onto the design surface: 
 
-	[![](split-views-images/activity02.png "A View Controller")](split-views-images/activity02.png#lightbox)
+    [![](split-views-images/activity02.png "A View Controller")](split-views-images/activity02.png#lightbox)
 1. Control-Click and drag from the Split View Controller to the new Master View Controller. 
 1. Select **Master** from the **Popup Menu**: 
 
-	[![](split-views-images/activity03.png "Select Master from the Popup Menu")](split-views-images/activity03.png#lightbox)
+    [![](split-views-images/activity03.png "Select Master from the Popup Menu")](split-views-images/activity03.png#lightbox)
 1. Design the contents of your Master and Detail Views: 
 
-	[![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
+    [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
 1. Assign **Names** in the **Widget Tab** of the **Properties Pad** to work with your UI controls in C# code.
 1. Save your changes and return to Visual Studio for Mac.
 
@@ -66,21 +66,21 @@ The easiest way to work with Split View Controllers in a Xamarin.tvOS app is to 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Split View Controllers** from the **Toolbox** and drop it on the View: 
 
-	[![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
+    [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
 1. By default, the iOS Designer will add a Navigation Controller and View Controller in the Master View. If this does not fit your app's requirements, simply delete them.
 1. If you do remove the default Master View, drag a new View Controller onto the design surface: 
 
-	[![](split-views-images/activity02-vs.png "A View Controller")](split-views-images/activity02-vs.png#lightbox)
+    [![](split-views-images/activity02-vs.png "A View Controller")](split-views-images/activity02-vs.png#lightbox)
 1. Control-Click and drag from the Split View Controller to the new Master View Controller. 
 1. Select **Master** from the **Popup Menu**: 
 
-	[![](split-views-images/activity03-vs.png "Select Master from the Popup Menu")](split-views-images/activity03-vs.png#lightbox)
+    [![](split-views-images/activity03-vs.png "Select Master from the Popup Menu")](split-views-images/activity03-vs.png#lightbox)
 1. Design the contents of your Master and Detail Views: 
 
-	[![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
+    [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
 1. Assign **Names** in the **Widget Tab** of the **Properties Explorer** to work with your UI controls in C# code.
 1. Save your changes.
-	
+
 -----
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
@@ -122,16 +122,16 @@ In the Split View Controller, override the `ViewDidLoad` method and tie the two 
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// Gain access to master and detail view controllers
-	var masterController = ViewControllers [0] as MasterViewController;
-	var detailController = ViewControllers [1] as DetailViewController;
+    // Gain access to master and detail view controllers
+    var masterController = ViewControllers [0] as MasterViewController;
+    var detailController = ViewControllers [1] as DetailViewController;
 
-	// Wire-up views
-	masterController.SplitViewController = this;
-	masterController.DetailController = detailController;
-	detailController.SplitViewController = this;
+    // Wire-up views
+    masterController.SplitViewController = this;
+    masterController.DetailController = detailController;
+    detailController.SplitViewController = this;
 }
 ```
 
@@ -146,9 +146,9 @@ Optionally, you can show and hide the Master View Controller using the `Preferre
 ```csharp
 // Show hide split view
 if (SplitViewController.DisplayMode == UISplitViewControllerDisplayMode.PrimaryHidden) {
-	SplitViewController.PreferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible;
+    SplitViewController.PreferredDisplayMode = UISplitViewControllerDisplayMode.AllVisible;
 } else {
-	SplitViewController.PreferredDisplayMode = UISplitViewControllerDisplayMode.PrimaryHidden;
+    SplitViewController.PreferredDisplayMode = UISplitViewControllerDisplayMode.PrimaryHidden;
 }
 ```
 
@@ -166,8 +166,6 @@ To get the current presentation state, use the `DisplayMode` property of the Spl
 ## Summary
 
 This article has covered designing and working with Split View Controllers inside of a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

@@ -232,7 +232,7 @@ public class FillRectanglePage : ContentPage
         BitmapExtensions.LoadBitmapResource(typeof(FillRectanglePage),
                                             "SkiaSharpFormsDemos.Media.Banana.jpg");
     public FillRectanglePage ()
-	{
+    {
         Title = "Fill Rectangle";
 
         SKCanvasView canvasView = new SKCanvasView();
@@ -663,4 +663,3 @@ This rectangle source isolates the monkey's head, as shown in these screenshots:
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)
 - [SkiaSharpFormsDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos)
-

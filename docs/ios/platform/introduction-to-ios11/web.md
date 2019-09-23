@@ -4,8 +4,8 @@ description: "This document discusses changes made to WebKit and the Safari Serv
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 09/12/2017
 ---
 
@@ -38,7 +38,6 @@ sfViewController.DismissButtonStyle = SFSafariViewControllerDismissButtonStyle.C
 
 This value can be changed while `SFSafariViewController` is presented.
 
-
 Depending on the content that is displayed inside a Safari View Controller, it might be necessary to ensure that the menu bars don't collapse as the user scrolls. This is enabled by setting the new `BarCollapsedEnabled` property to `false`:
 
 ```csharp
@@ -53,7 +52,6 @@ var sfViewController = new SFSafariViewController(url, config);
 Apple has also made updates to privacy in the Safari View Controller in iOS 11. Now, browsing data such as cookies and local storage only exist on a per-app basis, rather than across all instances of Safari view controller. This keeps user browsing activity private within your app.
 
 Additional features such as drag and drop support for URLs and support for `window.open()` have also been added to `SFSafariViewController` in iOS 11. You can find more information about these new features in [Apple's SFSafariViewController documentation](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller?changes=latest_minor).
-
 
 ## WebKit
 
@@ -101,4 +99,3 @@ config.SetUrlSchemeHandler(new MyHandler(), "xamarin-asset");
 webView = new WKWebView (View.Frame, config);
 webView.LoadRequest (new NSUrlRequest("xamarin-asset://xamarin.com"));
 ```
-

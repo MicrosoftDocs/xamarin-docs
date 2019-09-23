@@ -15,6 +15,9 @@ ms.date: 08/13/2019
 
 XAML Hot Reload plugs into your existing workflow to increase your productivity and save you time. Without XAML Hot Reload, you have to build and deploy your app every time you want to see a XAML change. With Hot Reload, when you save your XAML file the changes are reflected live in your running app. In addition, your navigation state and data will be maintained, enabling you to quickly iterate on your UI without losing your place in the app. Therefore, with XAML Hot Reload, you'll spend less time rebuilding and deploying your apps to validate UI changes.
 
+> [!NOTE]
+> If you're writing a WPF or UWP app, see [XAML Hot Reload for UWP and WPF](/visualstudio/debugger/xaml-hot-reload).
+
 ## System requirements
 
 | IDE/Framework | Version Required |

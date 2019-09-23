@@ -4,8 +4,8 @@ description: "This document describes how to work with CloudKit in Xamarin.iOS. 
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/11/2016
 ---
 
@@ -18,8 +18,8 @@ of anonymity by allowing access to applications with their iCloud IDs without sh
 Developers can focus on their client-side applications and let iCloud eliminate the need to write server-side application logic. CloudKit provides authentication, private and public databases, and structured data and asset storage services.
 
 > [!IMPORTANT]
-> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
-> to help developers properly handle the European Union's General Data 
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/)
+> to help developers properly handle the European Union's General Data
 > Protection Regulation (GDPR).
 
 ## Requirements
@@ -52,25 +52,23 @@ focus on other tasks.
 
 As of this writing, Apple is initially providing CloudKit for free with a high limit on both bandwidth and storage capacity. For larger projects or applications with a large user base, Apple has hinted that an affordable pricing scale will be provided.
 
-
 ## Enabling CloudKit in a Xamarin Application
 
 Before a Xamarin application can utilize the CloudKit Framework, the application must be correctly provisioned as detailed in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) and [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guides
 
 1. Open the project in Visual Studio for Mac or Visual Studio.
 2. In the **Solution Explorer**, open the **Info.plist** file and ensure the **Bundle Identifier** matches the one that was defined in **App ID** created as part of the provisioning set up:
- 
-	[![](intro-to-cloudkit-images/image26a.png "Enter the Bundle Identifier")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
+
+    [![](intro-to-cloudkit-images/image26a.png "Enter the Bundle Identifier")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
 
 3. Scroll down to the bottom of the **Info.plist** file and select **Enabled Background Modes**, **Location Updates** and **Remote Notifications**:
 
- 	[![](intro-to-cloudkit-images/image27a.png "Select Enabled Background Modes, Location Updates and Remote Notifications")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
+    [![](intro-to-cloudkit-images/image27a.png "Select Enabled Background Modes, Location Updates and Remote Notifications")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
 4. Right-click the iOS project in the solution and select **Options**.
 5. Select **iOS Bundle Signing**, select the **Developer Identity** and **Provisioning Profile** created above.
 6. Ensure the  **Entitlements.plist** includes  **Enable iCloud** ,  **Key-value storage** and  **CloudKit** .
 7. Ensure the **Ubiquity Container** exists for the application (as created above). Example: `iCloud.com.your-company.CloudKitAtlas`
 8. Save the changes to the file.
-
 
 With these settings in place, the application is now ready to access the CloudKit Framework APIs.
 
@@ -86,7 +84,6 @@ Before implementing CloudKit in a Xamarin iOS application, this article is going
 6. **Reference** – Provide parent-child relationships between related Records within a given Database.
 7. **Assets** – Allow for file of large, unstructured data to be uploaded to iCloud and associated with a given Record.
 
-
 ### Containers
 
 A given application running on an iOS device is always running along side other applications and services on that device. On the client device, the application is going to be siloed or sandboxed in some way. In some cases, this is a literal sandbox, and in others, the application is simply running in it's own memory space.
@@ -96,7 +93,6 @@ The concept of taking a client application and running it separated from other c
 1. **Security** – One application cannot interfere with other client apps or the OS itself.
 1. **Stability** – If the client application crashes it cannot take out other apps of the OS.
 1. **Privacy** – Each client application has limited access to the personal information stored within the device.
-
 
 CloudKit was designed to provide the same advantages as the above listed, and apply them to working with cloud-based information:
 
@@ -183,7 +179,6 @@ As stated above, `CKRecords` wrap key-value pairs and as such, the following typ
 1. `CKReferences`
 1. `CKAssets`
 
-
 In addition to the single value types, a record can contain a homogenous array of any of the above listed types.
 
 The following code can be used to create a new record and store it in a database:
@@ -219,7 +214,6 @@ Record Identifiers are represented as a tuple, containing both a client provided
 - They are created by the client application.
 - They are fully normalized and represent the specific location of the record.
 - By assigning the Unique ID of a record in a foreign database to the record name, they can be used to bridge local databases that are not stored within CloudKit.
-
 
 When developers create new records, they can choose to pass in a Record Identifier. If a Record Identifier is not specified, a UUID will automatically be created and assigned to the record.
 
@@ -289,13 +283,11 @@ Apple offers two different API sets for working with CloudKit:
 - **Operational API** – Offers every single feature of CloudKit. For more complex applications, this API provides fine-grained control over CloudKit.
 - **Convenience API** – Offers a common, pre-configured subset of CloudKit features. It provides a convenient, easy access solution for including CloudKit functionality in an iOS application.
 
-
 The Convenience API is usually the best choice for most iOS applications and Apple suggests starting with it. The rest of this section will cover the following Convenience API topics:
 
 - Saving a Record.
 - Fetching a Record.
 - Updating a Record.
-
 
 ### Common Setup Code
 
@@ -398,7 +390,6 @@ Three things to note about the above code:
 1. The call is asynchronous and provides a callback routine when the call completes, either with success or failure. If the call fails, an error message will be provided.
 1. CloudKit does not provide local storage/persistence; it is a transfer medium only. So when a request is made to save a Record, it is immediately sent to the iCloud servers.
 
-
 > [!NOTE]
 > Because of the “lossy” nature of mobile network communications, where connections are constantly being dropped or interrupted, one of the first considerations the developer must make when working with CloudKit is error handling.
 
@@ -462,7 +453,6 @@ The more popular an application becomes, the more data in the database and the l
 - **Client views can change** – Because each user has different preferences, the slice of data being displayed can change from user to user and the user's individual view of any given slice can be different.
 - **Client uses queries to focus the viewpoint** – Queries allow the user to view a small subset of a larger dataset that exists within the Cloud.
 
-
 ### Queries
 
 As stated above, queries allow the developer to select a small subset of the larger dataset that exists in the Cloud. Queries are exposed in the CloudKit Framework via the `CKQuery` class.
@@ -473,45 +463,42 @@ A query combines three different things: a Record Type ( `RecordType`), a Predic
 
 CloudKit supports the following types of `NSPredicates` when working with Queries:
 
-
 1. Matching Records where the name is equal to a value stored in a variable:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("name = '{0}'", recordName))
     ```
-   
+
 2. Allows matching to be based on a dynamic key value, so that the key doesn't have to be know at compile time:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("{0} = '{1}'", key, value))
     ```
-    
+
 3. Matching Records where the Record's value is greater than the given value:
-   
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("start > {0}", (NSDate)date))
     ```
 
 4. Matching Records where Record's location is within 100 meters of the given location:
-    
+
+    ```csharp
+    var location = new CLLocation(37.783,-122.404);
+    var predicate = NSPredicate.FromFormat(string.Format("distanceToLocation:fromLocation(Location,{0}) < 100", location));
     ```
-	var location = new CLLocation(37.783,-122.404);
-	var predicate = NSPredicate.FromFormat(string.Format("distanceToLocation:fromLocation(Location,{0}) < 100", location));
-	```
 
 5. CloudKit supports a tokenized search. This call will create two tokens, one for `after` and another for `session`. It will return a Record that contains those two tokens:
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("ALL tokenize({0}, 'Cdl') IN allTokens", "after session"))
     ```
-    
+
 6. CloudKit supports compound predicates joined using the `AND` operator.
-    
-    ```
+
+    ```csharp
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
     ```
-    
-
 
 #### Creating Queries
 
@@ -555,7 +542,6 @@ The way to think about Queries is that they are polls, and are great at slicing 
 - They are bad for network traffic.
 - They are bad for user experience because the information they see is limited by how often the application is polling the database. Users today expect push notifications when something changes.
 
-
 ### Subscriptions
 
 When dealing with large, mostly static datasets, the query should not be performed on the client device, it should run on the server on the client's behalf. The query should run in the background and should be executed after every single record save, whether by the current device or another device touching the same database.
@@ -580,7 +566,6 @@ The above graph shows the typical subscription process as follows:
 3. A second device creates a new Record and saves that record to the Database.
 4. The Database searches through its list of Subscriptions to see if the new Record matches any of their conditions.
 5. If a match is found, the Push Notification is sent to the device that registered the Subscription with information about the Record that caused it to be triggered.
-
 
 With this knowledge in place, let's look at creating Subscriptions in a Xamarin iOS 8 application.
 
@@ -666,7 +651,6 @@ CloudKit provides the following user information to the developer:
 - **Metadata** – The ability to save and retrieve information about users.
 - **Privacy** – All information is handled in a privacy conscious manor. Nothing is exposed unless the user has agreed to it.
 - **Discovery** – Gives users the ability to discover their friends that are using the same application.
-
 
 Next, we will look at these topics in detail.
 
@@ -759,12 +743,10 @@ To recap, there are three different kinds of inputs available for User Discovery
 - **User Email Address** – The user can provide an email address and it can be used for discovery.
 - **Contact Book** – The user's address book can be used to discover users of the application that have the same email address as listed in their contacts.
 
-
 User Discovery will return the following information:
 
 - **User Record ID** - The unique ID of a user in the Public Database.
 - **First and Last Name** - As stored in the Public Database.
-
 
 This information will only be returned for users that have opted-into Discovery.
 
@@ -817,49 +799,48 @@ Prior to deploying the application, the developer can migrate their schema and d
 > [!NOTE]
 > The iOS Simulator works only with the **Development Environment**. When the developer is ready to test an application in a **Production Environment**, a physical iOS device is required.
 
-
 ## Shipping a CloudKit Enabled App
 
 Before shipping an application that uses CloudKit, it will need to be configured to target the **Production CloudKit Environment** or the application will be rejected by Apple.
 
 Do the following:
 
-1. In Visual Studio for Ma, compile the application for **Release** > **iOS Device**: 
+1. In Visual Studio for Ma, compile the application for **Release** > **iOS Device**:
 
-	[![](intro-to-cloudkit-images/shipping01.png "Compile the application for Release")](intro-to-cloudkit-images/shipping01.png#lightbox)
+    [![](intro-to-cloudkit-images/shipping01.png "Compile the application for Release")](intro-to-cloudkit-images/shipping01.png#lightbox)
 
-2. From the **Build** menu, select **Archive**: 
+2. From the **Build** menu, select **Archive**:
 
-	[![](intro-to-cloudkit-images/shipping02.png "Select Archive")](intro-to-cloudkit-images/shipping02.png#lightbox)
+    [![](intro-to-cloudkit-images/shipping02.png "Select Archive")](intro-to-cloudkit-images/shipping02.png#lightbox)
 
-3. The **Archive** will be created and displayed in Visual Studio for Mac: 
+3. The **Archive** will be created and displayed in Visual Studio for Mac:
 
-	[![](intro-to-cloudkit-images/shipping03.png "The Archive will be created and displayed")](intro-to-cloudkit-images/shipping03.png#lightbox)
+    [![](intro-to-cloudkit-images/shipping03.png "The Archive will be created and displayed")](intro-to-cloudkit-images/shipping03.png#lightbox)
 
 4. Start **Xcode**.
-5. From the **Window** menu, select **Organizer**: 
+5. From the **Window** menu, select **Organizer**:
 
-	[![](intro-to-cloudkit-images/shipping04.png "Select Organizer")](intro-to-cloudkit-images/shipping04.png#lightbox)
+    [![](intro-to-cloudkit-images/shipping04.png "Select Organizer")](intro-to-cloudkit-images/shipping04.png#lightbox)
 
-6. Select the application's archive and click the **Export...** button: 
+6. Select the application's archive and click the **Export...** button:
 
-	[![](intro-to-cloudkit-images/shipping05.png "The application's archive")](intro-to-cloudkit-images/shipping05.png#lightbox)
-    
-7. Select a method for export and click the **Next** button: 
+    [![](intro-to-cloudkit-images/shipping05.png "The application's archive")](intro-to-cloudkit-images/shipping05.png#lightbox)
 
-	[![](intro-to-cloudkit-images/shipping06.png "Select a method for export")](intro-to-cloudkit-images/shipping06.png#lightbox)
+7. Select a method for export and click the **Next** button:
 
-8. Select the **Development Team** from the dropdown list and click the **Choose** button: 
+    [![](intro-to-cloudkit-images/shipping06.png "Select a method for export")](intro-to-cloudkit-images/shipping06.png#lightbox)
 
-	[![](intro-to-cloudkit-images/shipping07.png "Select the Development Team from the dropdown list")](intro-to-cloudkit-images/shipping07.png#lightbox)
+8. Select the **Development Team** from the dropdown list and click the **Choose** button:
 
-9. Select **Production** from the dropdown list and click the **Next** button: 
+    [![](intro-to-cloudkit-images/shipping07.png "Select the Development Team from the dropdown list")](intro-to-cloudkit-images/shipping07.png#lightbox)
 
-	[![](intro-to-cloudkit-images/shipping08.png "Select Production from the dropdown list")](intro-to-cloudkit-images/shipping08.png#lightbox)
+9. Select **Production** from the dropdown list and click the **Next** button:
 
-10. Review the setting and click the **Export** button: 
+    [![](intro-to-cloudkit-images/shipping08.png "Select Production from the dropdown list")](intro-to-cloudkit-images/shipping08.png#lightbox)
 
-	[![](intro-to-cloudkit-images/shipping09.png "Review the setting")](intro-to-cloudkit-images/shipping09.png#lightbox)
+10. Review the setting and click the **Export** button:
+
+    [![](intro-to-cloudkit-images/shipping09.png "Review the setting")](intro-to-cloudkit-images/shipping09.png#lightbox)
 
 11. Choose a location to generate the resulting application `.ipa` file.
 
@@ -877,7 +858,6 @@ The following use cases should help the developer decide when to use a specific 
 - **iCloud Drive** – Built on top of the existing iCloud Documents APIs and provides a simple API to sync unstructured data from the file system. It provides a full offline cache on Mac OS X and is great for document centric applications.
 - **iCloud Core Data** – Allows data to be replicated between all of the user's devices. The data is single-user and great for keeping private, structured data in sync.
 - **CloudKit** – Provides public data both structure and bulk and is capable of handling both large dataset and large unstructured files. Its tied to the user's iCloud account and provides client directed data transfer.
-
 
 Keeping these use cases in mind, the developer should pick the correct iCloud technology to provide both the current required application functionality and provide good scalability for future growth.
 

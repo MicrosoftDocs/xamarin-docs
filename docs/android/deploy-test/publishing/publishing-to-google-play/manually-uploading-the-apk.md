@@ -10,12 +10,10 @@ ms.date: 02/15/2018
 
 # Manually Uploading the APK
 
-
 The first time an APK is submitted to Google Play (or if an early 
 version of Xamarin.Android is used) the APK must be manually uploaded 
 through the [Google Play Developer Console](https://play.google.com/apps/publish). 
 This guide explains the steps required for this process. 
-
 
 ## Google Play Developer Console
 
@@ -68,7 +66,6 @@ After the APK is uploaded, it is saved as a draft. It cannot be
 published until more details are provided to Google Play as described
 next.
 
-
 ## Store Listing
 
 Click **Store Listing** in the **Google Play Developer Console** to 
@@ -76,7 +73,6 @@ enter the information that Google Play will display to potentials users
 of the application: 
 
 [![Store Listing dialog](manually-uploading-the-apk-images/07-store-listing-sml.png)](manually-uploading-the-apk-images/07-store-listing.png#lightbox)
-
 
 ### Graphics Assets
 
@@ -89,7 +85,6 @@ All of the promotional assets that were prepared earlier are uploaded in
 this section. Guidance is provided as to what promotional assets must
 be provided and what format they should be provided in.
 
-
 ### Categorization
 
 After the **GRAPHICS ASSETS** section is a **CATEGORIZATION** section, select the application type and category:
@@ -97,7 +92,6 @@ After the **GRAPHICS ASSETS** section is a **CATEGORIZATION** section, select th
 [![Categorization section](manually-uploading-the-apk-images/09-categorization-sml.png)](manually-uploading-the-apk-images/09-categorization.png#lightbox)
 
 Content rating is covered after the next section.
-
 
 ### Contact Details
 
@@ -108,7 +102,6 @@ the application:
 [![Contact Details section](manually-uploading-the-apk-images/10-contact-details-sml.png)](manually-uploading-the-apk-images/10-contact-details.png#lightbox)
 
 It is possible to provide a URL for the privacy policy of the App in the **PRIVACY POLICY** section, as indicated above.
-
 
 ## Content Rating
 
@@ -150,7 +143,6 @@ The items in the Medium maturity list are subjective, as such it is
 possible that a guideline that may seem to dictate a Medium maturity 
 rating may be intense enough to warrant a High maturity rating. 
 
-
 ## Pricing &amp; Distribution
 
 Click **Pricing and Distribution** in the **Google Play Developer
@@ -167,14 +159,12 @@ click **set up a merchant account** and follow the instructions.
 
 [![Pricing and Distribution dialog](manually-uploading-the-apk-images/12-pricing-sml.png)](manually-uploading-the-apk-images/12-pricing.png#lightbox)
 
-
 ### Manage Countries
 
 The next section, **Manage Countries**, provides control over what
 countries an app may be distributed to:
 
 [![Manage countries dialog](manually-uploading-the-apk-images/13-manage-countries-sml.png)](manually-uploading-the-apk-images/13-manage-countries.png#lightbox)
-
 
 ### Other Information
 
@@ -188,7 +178,6 @@ After this section are additional options that may be selected, such as
 opting into **Designed for Families** and distributing the
 app through Google Play for Education.
 
-
 ### Consent
 
 At the bottom of the **Pricing &amp; Distribution** page is the **CONSENT** section.
@@ -201,8 +190,6 @@ and acknowledgement that the application is subject to U.S. export laws:
 There is much more to publishing a Xamarin.Android app than can be covered in this guide.
 For more information about publishing your app in Google Play,
 see [Welcome to the Google Play Developer Console Help Center](https://support.google.com/googleplay/android-developer#topic=3450769).
-
-
 
 ## Google Play Filters
 

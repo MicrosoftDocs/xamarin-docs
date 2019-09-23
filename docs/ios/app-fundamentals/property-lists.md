@@ -4,8 +4,8 @@ description: "This document introduces Visual Studio for Mac's graphical and adv
 ms.prod: xamarin
 ms.assetid: 5E687043-0443-377C-9A12-9C5A05958646
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -27,7 +27,6 @@ Each panel controls different properties, as outlined below:
 - **Advanced Panel** - The advanced panel is the place to specify supported document types, UTIs, and URL types.
 - **Source Panel** - The source panel controls less common properties as well as custom properties for the application.
 
-
 The next three sections investigate the features of each panel in more detail.
 
 ## Application Panel
@@ -41,11 +40,9 @@ Visual Studio for Mac features a graphical interface for editing common `Info.pl
 1. Icons and start-up screens
 1. Maps and Background Modes
 
-
 These are described in more detail in the next sections.
 
  <a name="iOS_Application_Target" />
-
 
 ### iOS Application Target
 
@@ -79,13 +76,9 @@ The **Status Bar Styles** section is a graphical interface for editing an applic
 
  <a name="Icons" />
 
-
 ### Icons, Launch Images, and iTunes Artwork
 
 Information on using icons, images, and artwork in your Info.plist file can be found in the [Working with Images](~/ios/app-fundamentals/images-icons/index.md) guide.
-
-
-
 
 ### Maps Integration and Background Modes
 
@@ -106,7 +99,6 @@ The advanced panel controls the document types and URL schemes that the applicat
  [![](property-lists-images/image34.png "Advanced Panel")](property-lists-images/image34.png#lightbox)
 
  <a name="Document_Types" />
-
 
 ## Document Types
 
@@ -133,8 +125,6 @@ A URL scheme name (also called protocol) is the first part of the URL. For examp
 
  [![](property-lists-images/url.png "Custom URLs")](property-lists-images/url.png#lightbox)
 
-
-
 For more information on implementing custom URL schemes, refer to Apple's [Implementing Custom URL Schemes section of this guide](https://developer.apple.com/library/ios/documentation/iPhone/Conceptual/iPhoneOSProgrammingGuide/AdvancedAppTricks/AdvancedAppTricks.html)
 
 ## Source Panel
@@ -160,7 +150,6 @@ Review Apple’s [App Related Resources](https://developer.apple.com/library/ios
 ## Summary
 
 This article demonstrated using the graphical and advanced .plist editors to edit common app configurations as well as to specify icons and launch images. It also introduced the `Entitlements.plist` for adding and managing app capabilities.
-
 
 ## Related Links
 

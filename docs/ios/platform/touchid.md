@@ -4,8 +4,8 @@ description: "This document describes how to use Touch ID, Apple's biometric fin
 ms.prod: xamarin
 ms.assetid: 4BC8EFD6-52FC-4793-BA69-D6BFF850FE5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
 ---
 
@@ -99,15 +99,15 @@ On the subject of security, it is also extremely important to know that there is
 
 To use Touch ID without keychain by leveraging the Local Authentication API, there are a few functions that we can use. These are detailed below:
 
-*	`CanEvaluatePolicy` – This will simply check to see if the device is capable of accepting Touch ID.
-*	`EvaluatePolicy` – This starts the authentication operation and displays the UI, and returns a `true` or `false` answer.
-*	`DeviceOwnerAuthenticationWithBiometrics` – This is the policy that can be used to show the Touch ID screen. It is worth noting that there is no passcode fallback mechanism here, instead you should implement this fallback in your application to allow users to skip the Touch ID authentication.
+- `CanEvaluatePolicy` – This will simply check to see if the device is capable of accepting Touch ID.
+- `EvaluatePolicy` – This starts the authentication operation and displays the UI, and returns a `true` or `false` answer.
+- `DeviceOwnerAuthenticationWithBiometrics` – This is the policy that can be used to show the Touch ID screen. It is worth noting that there is no passcode fallback mechanism here, instead you should implement this fallback in your application to allow users to skip the Touch ID authentication.
 
 There are a few caveats with using Local Authentication, which are listed below:
 
-*	As with Keychain, it can only be run in the foreground. Calling it on a background thread will cause it to fail.
-*	Keep in mind that the policy evaluation may fail. A passcode button will need to be implemented as a fall back.
-*	You must supply a `localizedReason` to explain why Authentication is needed. This helps to build trust with the user.
+- As with Keychain, it can only be run in the foreground. Calling it on a background thread will cause it to fail.
+- Keep in mind that the policy evaluation may fail. A passcode button will need to be implemented as a fall back.
+- You must supply a `localizedReason` to explain why Authentication is needed. This helps to build trust with the user.
 
 Next, in the section below, we will look at how to implement the API taking these caveats into consideration.
 
@@ -123,16 +123,16 @@ So let’s look at adding some Touch ID Authentication to our application. In th
 2. Double Click on `MainStoryboard.Storyboard` to open the sample in the iOS Designer. With this sample, we want to add a new screen to our application, which will control the authentication. This will go before the current `MasterViewController`.
 3. Drag a new **View Controller** from the **Toolbox** to the **Design Surface**. Set this as the **Root View Controller** by **Ctrl + Drag** from the **Navigation Controller**:
 
-	[![](touchid-images/image4.png "Set the Root View Controller")](touchid-images/image4.png#lightbox)
+    [![](touchid-images/image4.png "Set the Root View Controller")](touchid-images/image4.png#lightbox)
 4. Name the new View Controller `AuthenticationViewController`.
 5. Next, drag a button and place it on the `AuthenticationViewController`. Call this `AuthenticateButton`, and give it the text `Add a Chore`.
 6. Create an event on the `AuthenticateButton` called `AuthenticateMe`.
 7. Create a manual segue from `AuthenticationViewController` by clicking the black bar at the bottom and **Ctrl + Drag** from the bar to the `MasterViewController` and choosing **push** (or **show** if using size classes):
 
-	[![](touchid-images/image5.png "Drag from the bar to the MasterViewController and choosing push or show")](touchid-images/image6.png#lightbox)
+    [![](touchid-images/image5.png "Drag from the bar to the MasterViewController and choosing push or show")](touchid-images/image6.png#lightbox)
 8. Click on the newly created segue and give it the identifier `AuthenticationSegue`, as illustrated below:
 
-	[![](touchid-images/image7.png "Set the segue identifier to AuthenticationSegue")](touchid-images/image7.png#lightbox)
+    [![](touchid-images/image7.png "Set the segue identifier to AuthenticationSegue")](touchid-images/image7.png#lightbox)
 9. Add the following code to `AuthenticationViewController`:
 
     ```csharp

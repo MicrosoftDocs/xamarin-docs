@@ -3,8 +3,8 @@ title: "Workbooks Installation and Requirements"
 description: "This document describes how to download and install Xamarin Workbooks, discussing supported platforms and system requirements."
 ms.prod: xamarin
 ms.assetid: 9D4E10E8-A288-4C6C-9475-02969198C119
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
 ---
 
@@ -47,7 +47,6 @@ ms.date: 06/19/2018
 |Console (.NET Framework)|Supported on Mac and Windows|
 |Console (.NET Core)|Supported on Mac and Windows|
 
-
 ## Reporting Bugs
 
 Please [report issues on GitHub][bugs], and include all of the following information:
@@ -75,7 +74,7 @@ It is very helpful to know details about your Operating System and installed Xam
 
 From the main menu in Workbooks:
 
-* **Help > Copy Version Information**
+- **Help > Copy Version Information**
 
 #### Instructions for Workbooks 1.3 and earlier:
 

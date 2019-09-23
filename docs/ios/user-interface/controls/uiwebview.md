@@ -4,8 +4,8 @@ description: "This document describes the various ways a Xamarin.iOS app can dis
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -22,9 +22,9 @@ iOS 11 introduced new changes to both `WKWebView` and `SFSafariViewController`. 
 `UIWebView` is Apple's legacy way of providing web content in your app. It was released in iOS 2.0, and has been deprecated as of 8.0.
 
 If you plan to support iOS versions earlier than 8.0, you will have to use `UIWebView`. Due to the fact that `UIWebView` is less optimized for performance than the alternatives, it is recommended that you should check the user's iOS version. If it 8.0 or above, using either of the options explain below will create a better user experience.
- 
+
 To add a UIWebView to your Xamarin.iOS app, use the following code:
- 
+
 ```
 webView = new UIWebView (View.Bounds);
 View.AddSubview(webView);
@@ -38,7 +38,6 @@ This produces the following web view:
 [![](uiwebview-images/webview.png "The effect of ScalesPagesToFit")](uiwebview-images/webview.png#lightbox)
 
 For more information on using `UIWebView`, refer to the following recipes:
-
 
 - [Load a Web Page](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_a_web_page)
 - [Load Local Content](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_local_content)
@@ -74,11 +73,11 @@ The [Handle JavaScript Alerts](https://github.com/xamarin/recipes/tree/master/Re
 <a name="safariviewcontroller" />
 
 ## SFSafariViewController
- 
+
  `SFSafariViewController` is the latest way to provide web content from your app and is available in iOS 9 and later. Unlike `UIWebView` or `WKWebView`, `SFSafariViewController` is a View Controller and so cannot be used with other views. You should present `SFSafariViewController` as a new View Controller, in the same way you would present any View Controller.
- 
+
  `SFSafariViewController` is essentially a 'mini safari' that can be embedded into your app. Like WKWebView it uses the same Nitro Javascript Engine, but also provides a range of additional Safari features such as AutoFill, Reader, and the ability to share cookies and data with mobile Safari. Interaction between the user and the `SFSafariViewController` is not accessible to your app. Your app will not have access to any of the default Safari features.
- 
+
 It also, by default, implements a **Done** button, allowing to user to easily return to your app, and forward and back navigation buttons, allowing your user to navigate through a stack of web pages. In addition, it also provides the user with an address bar giving them the peace of mind that they are on the expected web page. The address bar does not allow the user to change the url. 
 
 These implementations cannot be changed, so `SFSafariViewController` is ideal to use as the default browser if your app wants to present a webpage without any customization.

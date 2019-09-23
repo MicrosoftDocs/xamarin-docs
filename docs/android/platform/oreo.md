@@ -32,7 +32,6 @@ device) for testing. It also provides an outline of the new features in
 Android 8.0 Oreo, with links to sample apps that illustrate how to use
 Android Oreo features in Xamarin.Android apps.
 
-
 ## Requirements
 
 The following is required to use Android Oreo features in Xamarin-based
@@ -48,8 +47,6 @@ apps:
 
 - **Android SDK** &ndash; Android SDK 8.0 (API 26) or later must be 
     installed via the Android SDK Manager.
-
-
 
 ## Getting Started
 
@@ -94,8 +91,6 @@ To add Android Oreo support to Visual Studio, do the following:
 For more information about Xamarin support for Android Oreo, see the
 [Xamarin.Android 8.0 release notes](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
 
-
-
 ### Install the Android SDK
 
 To create a project with Xamarin.Android 8.0, you must first use the
@@ -138,8 +133,6 @@ later.
 
 -----
 
-
-
 ### Start a Xamarin.Android Project
 
 Create a new Xamarin.Android project. If you are new to Android
@@ -154,7 +147,6 @@ level of your project to **Android 8.0 (API 26)**. It is
 recommended that you also set your target framework level to API 26 or
 later. For more about configuring Android API level levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
-
 
 ### Configure an Emulator or Device
 
@@ -184,7 +176,6 @@ devices, see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 To create virtual devices without the Android Device Manager,
 follow the steps in the next section.
-
 
 #### Creating Virtual Devices Using avdmanager
 
@@ -272,8 +263,6 @@ or download a system image and flash your device directly. For
 more information about manually updating your device to Android Oreo,
 see [Factory Images for Nexus and Pixel Devices](https://developers.google.com/android/images).
 
-
-
 ## New Features
 
 Android Oreo introduces a variety of new features and capabilities,
@@ -281,8 +270,6 @@ such as notification channels, notification badges, custom fonts in
 XML, downloadable fonts, autofill, and picture-in-picture. The
 following sections highlight these features and provide links to help
 you get started using them in your app.
-
-
 
 ### Notification Channels
 
@@ -302,8 +289,6 @@ local notifications. For a real-world code example, see the
 sample; this sample app manages two channels and sets additional
 notification options.
 
-
-
 ### Notification Badges
 
 Notification badges are small dots that appear over app icons as shown
@@ -322,8 +307,6 @@ For more information about notification badges, see the Android
 Developer
 [Notification Badges](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#Badges)
 topic.
-
-
 
 ### Custom Fonts in XML
 
@@ -360,7 +343,6 @@ fonts as well as style and weight details. For more information, see
 the Android Developer
 [Fonts in XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html)
 topic.
-
 
 ### Downloadable Fonts
 
@@ -404,8 +386,6 @@ For more information about downloading fonts, see the Android Developer
 [Downloadable Fonts](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html)
 topic.
 
-
-
 ### Autofill
 
 The new _Autofill_ framework in Android Oreo makes it easier for users to
@@ -425,8 +405,6 @@ For more information about the new Autofill feature and how to optimize
 your app for autofill, see the Android Developer
 [Autofill Framework](https://developer.android.com/guide/topics/text/autofill.html)
 topic.
-
-
 
 ### Picture in Picture (PIP)
 
@@ -462,8 +440,6 @@ for handheld devices introduced in Oreo. The sample plays a video which
 continues uninterrupted while switching back and forth between display
 modes or other activities.
 
-
-
 ### Other Features
 
 Android Oreo contains many other new features such as the Emoji support
@@ -474,14 +450,11 @@ low-latency audio, For more information about these features, see the
 Android Developer
 [Android Oreo Features and APIs](https://developer.android.com/about/versions/oreo/android-8.0.html) topic.
 
-
-
 ## Behavior Changes
 
 Android Oreo includes a variety of system and API behavior changes that can
 have an impact on the functionality of existing apps. These changes
 are described as follows.
-
 
 ### Background Execution Limits
 
@@ -509,7 +482,6 @@ Android Developer
 [Background Execution Limits](https://developer.android.com/about/versions/oreo/background.html)
 topic.
 
-
 ### Breaking Changes
 
 Apps that target Android Oreo or higher must modify their apps to support
@@ -525,7 +497,6 @@ the following changes, where applicable:
   not work due to new limits placed on services started in the
   background. If you are targeting Android Oreo, you should use
   [PendingIntent.GetBroadcast](xref:Android.App.PendingIntent.GetBroadcast*) instead.  
-
 
 ## Sample Code
 
@@ -563,13 +534,11 @@ advantage of Android Oreo features:
     demonstrates how to use the Location API to get updates about a
     device's location using a bound and started foreground service.
 
-
 ## Video
 
 > [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
 
 **Android 8.0 Oreo development with C#**
-
 
 ## Summary
 
@@ -581,7 +550,6 @@ features. It included links to API documentation and Android Developer
 topics to help you get started in creating apps for Android Oreo. It
 also highlighted the most important Android Oreo behavior changes that
 could impact existing apps.
-
 
 ## Related Links
 

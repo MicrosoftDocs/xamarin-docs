@@ -23,8 +23,8 @@ The built-in mechanism for localizing .NET applications uses [RESX files](https:
 
 There are two samples associated with this document:
 
-* [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization) is a very simple demonstration of the concepts explained. The code snippets shown below are all from this sample.
-* [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized) is a basic working app that uses these localization techniques.
+- [UsingResxLocalization](https://github.com/xamarin/xamarin-forms-samples/tree/master/UsingResxLocalization) is a very simple demonstration of the concepts explained. The code snippets shown below are all from this sample.
+- [TodoLocalized](https://github.com/xamarin/xamarin-forms-samples/tree/master/TodoLocalized) is a basic working app that uses these localization techniques.
 
 #### Shared Projects are not recommended
 
@@ -59,8 +59,8 @@ Choose a meaningful name such as **AppResources** and press **OK**.
 
 Two files will be added to the project:
 
-* **AppResources.resx** file where translatable strings are stored in an XML format.
-* **AppResources.designer.cs** file that declares a partial class to contain references to all the elements created in the RESX XML file.
+- **AppResources.resx** file where translatable strings are stored in an XML format.
+- **AppResources.designer.cs** file that declares a partial class to contain references to all the elements created in the RESX XML file.
 
 The solution tree will show the files as related. The RESX file *should* be edited to add new translatable strings; the **.designer.cs** file should *not* be edited.
 
@@ -76,7 +76,6 @@ Select the **AppResources.resx** file and show the
 **Properties** pad to see where this build tool is configure. The screenshot below
 shows the **Custom Tool: ResXFileCodeGenerator**.
 
-
 # [Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
@@ -91,7 +90,6 @@ To make the strongly-typed string properties `public`, you must manually
 change the configuration to **Custom Tool: PublicResXFileCodeGenerator**,
 as shown in the screenshot below:
 
-
 # [Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-public-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-public.png#lightbox)
@@ -99,7 +97,6 @@ as shown in the screenshot below:
 # [Visual Studio for Mac](#tab/macos)
 
 [![](text-images/xs-resx-internal-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-internal.png#lightbox)
-
 
 [![](text-images/xs-resx-public-sml.png "Properties Pad for AppResources.Resx")](text-images/xs-resx-public.png#lightbox)
 
@@ -119,10 +116,10 @@ discussed in the following sections.
 
 Unfortunately there is no built-in RESX editor in Visual Studio for Mac. Adding new translatable strings requires the addition of a new XML `data` element for each string. Each `data` element can contain the following:
 
-* `name` attribute (required) is the key for this translatable string. It must be a valid C# property name - so no spaces or special characters are allowed.
-* `value` element (required), which is the actual string that is displayed in the application.
-* `comment` element (optional) can contain instructions for the translator that explains how this string is used.
-* `xml:space` attribute (optional) to control how spacing in the string is preserved.
+- `name` attribute (required) is the key for this translatable string. It must be a valid C# property name - so no spaces or special characters are allowed.
+- `value` element (required), which is the actual string that is displayed in the application.
+- `comment` element (optional) can contain instructions for the translator that explains how this string is used.
+- `xml:space` attribute (optional) to control how spacing in the string is preserved.
 
 Some example `data` elements are shown here:
 
@@ -162,14 +159,14 @@ Language-specific resource files must follow a specific naming convention:
 use the same filename as the base resources file (eg. **AppResources**)
 followed by a period (.) and then the language code. Simple examples include:
 
-* **AppResources.fr.resx** - French language translations.
-* **AppResources.es.resx** - Spanish language translations.
-* **AppResources.de.resx** - German language translations.
-* **AppResources.ja.resx** - Japanese language translations.
-* **AppResources.zh-Hans.resx** - Chinese (Simplified) language translations.
-* **AppResources.zh-Hant.resx** - Chinese (Traditional) language translations.
-* **AppResources.pt.resx** - Portuguese language translations.
-* **AppResources.pt-BR.resx** - Brazilian Portuguese language translations.
+- **AppResources.fr.resx** - French language translations.
+- **AppResources.es.resx** - Spanish language translations.
+- **AppResources.de.resx** - German language translations.
+- **AppResources.ja.resx** - Japanese language translations.
+- **AppResources.zh-Hans.resx** - Chinese (Simplified) language translations.
+- **AppResources.zh-Hant.resx** - Chinese (Traditional) language translations.
+- **AppResources.pt.resx** - Portuguese language translations.
+- **AppResources.pt-BR.resx** - Brazilian Portuguese language translations.
 
 The general pattern is to use two-letter language codes, but there are some examples
 (such as Chinese) where a different format is used, and other examples (such as
@@ -285,10 +282,10 @@ to confirm the correct resources are listed (ie. `"UsingResxLocalization.Resx.Ap
 If not, the `AppResources` class will be unable to load its resources.
 Check the following to resolve issues where the resources cannot be found:
 
-* The default namespace for the project matches the root namespace in the **AppResources.Designer.cs** file.
-* If the **AppResources.resx** file is located in a subdirectory, the subdirectory name should be part of the namespace *and* part of the resource identifier.
-* The **AppResources.resx** file has **Build Action: EmbeddedResource**.
-* The **Project Options > Source Code > .NET Naming Policies > Use Visual Studio-style resources names** is ticked. You can untick this if you prefer, however the namespaces used when referencing your RESX resources will need to updated throughout the app.
+- The default namespace for the project matches the root namespace in the **AppResources.Designer.cs** file.
+- If the **AppResources.resx** file is located in a subdirectory, the subdirectory name should be part of the namespace *and* part of the resource identifier.
+- The **AppResources.resx** file has **Build Action: EmbeddedResource**.
+- The **Project Options > Source Code > .NET Naming Policies > Use Visual Studio-style resources names** is ticked. You can untick this if you prefer, however the namespaces used when referencing your RESX resources will need to updated throughout the app.
 
 #### Doesn't work in DEBUG mode (Android only)
 
@@ -731,13 +728,13 @@ namespace UsingResxLocalization
 
 The following bullets explain the important elements in the code above:
 
-* The class is named `TranslateExtension`, but by convention we can refer to is as **Translate** in our markup.
-* The class implements `IMarkupExtension`, which is required by Xamarin.Forms for it to work.
-* `"UsingResxLocalization.Resx.AppResources"` is the resource identifier for our RESX resources. It is comprised of our default namespace, the folder where the resource files are located and the default RESX filename.
-* The `ResourceManager` class is created using `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` to determine the current assembly to load resources from, and cached in the static `ResMgr` field. It's created as a `Lazy` type so that its creation is deferred until it's first used in the `ProvideValue` method.
-* `ci` uses the dependency service to get the user's chosen language from the native operating system.
-* `GetString` is the method that retrieves the actual translated string from the resources files. On the Universal Windows Platform, `ci` will be null because the `ILocalize` interface isn't implemented on those platforms. This is equivalent to calling the `GetString` method with only the first parameter. Instead, the resources framework will automatically recognize the locale and will retrieve the translated string from the appropriate RESX file.
-* Error handling has been included to help debug missing resources by throwing an exception (in `DEBUG` mode only).
+- The class is named `TranslateExtension`, but by convention we can refer to is as **Translate** in our markup.
+- The class implements `IMarkupExtension`, which is required by Xamarin.Forms for it to work.
+- `"UsingResxLocalization.Resx.AppResources"` is the resource identifier for our RESX resources. It is comprised of our default namespace, the folder where the resource files are located and the default RESX filename.
+- The `ResourceManager` class is created using `IntrospectionExtensions.GetTypeInfo(typeof(TranslateExtension)).Assembly)` to determine the current assembly to load resources from, and cached in the static `ResMgr` field. It's created as a `Lazy` type so that its creation is deferred until it's first used in the `ProvideValue` method.
+- `ci` uses the dependency service to get the user's chosen language from the native operating system.
+- `GetString` is the method that retrieves the actual translated string from the resources files. On the Universal Windows Platform, `ci` will be null because the `ILocalize` interface isn't implemented on those platforms. This is equivalent to calling the `GetString` method with only the first parameter. Instead, the resources framework will automatically recognize the locale and will retrieve the translated string from the appropriate RESX file.
+- Error handling has been included to help debug missing resources by throwing an exception (in `DEBUG` mode only).
 
 The following XAML snippet shows how to use the markup extension. There are two steps to make it work:
 
@@ -768,8 +765,8 @@ The following more verbose syntax is also valid for the markup extension:
 
 Although we can handle the translation of the user interface in Xamarin.Forms code, there are some elements that must be done in each platform-specific project. This section will cover how to localize:
 
-* Application Name
-* Images
+- Application Name
+- Images
 
 The sample project includes a localized image called **flag.png**, which is referenced in C# as follows:
 

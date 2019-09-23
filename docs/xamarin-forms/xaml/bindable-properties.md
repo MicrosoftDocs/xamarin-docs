@@ -217,7 +217,6 @@ The `defaultValueCreator` parameter is set to a `Func` that invokes the [`Device
 
 This article provided an introduction to bindable properties, and demonstrated how to create and consume them. A bindable property is a special type of property, where the property's value is tracked by the Xamarin.Forms property system.
 
-
 ## Related Links
 
 - [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)

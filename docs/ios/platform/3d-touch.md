@@ -4,8 +4,8 @@ description: "This article describes how to use 3D Touch gestures introduced wit
 ms.prod: xamarin
 ms.assetid: 806D051E-3791-40F7-9776-4E4D3E56F7F3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/19/2017
 ---
 
@@ -72,9 +72,6 @@ The `MaximumPossibleForce` property returns the highest possible value for the `
 > [!IMPORTANT]
 > Changes in pressure will cause the `TouchesMoved` event to be raised, even if the X/Y coordinates have not changed. Because of this change in behavior, your iOS apps should be prepared for the `TouchesMoved` event to be invoked more often and for the X/Y coordinates to be the same as the last `TouchesMoved` call.
 
-
-
-
 For more information, please see Apple's [TouchCanvas: Using UITouch efficiently and effectively](https://developer.apple.com/library/prerelease/ios/samplecode/TouchCanvas/)
 sample app and [UITouch Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UITouch_Class/).
 
@@ -122,60 +119,60 @@ using CoreGraphics;
 
 namespace DTouch
 {
-	public class PreviewingDelegate : UIViewControllerPreviewingDelegate
-	{
-		#region Computed Properties
-		public MasterViewController MasterController { get; set; }
-		#endregion
+    public class PreviewingDelegate : UIViewControllerPreviewingDelegate
+    {
+        #region Computed Properties
+        public MasterViewController MasterController { get; set; }
+        #endregion
 
-		#region Constructors
-		public PreviewingDelegate (MasterViewController masterController)
-		{
-			// Initialize
-			this.MasterController = masterController;
-		}
+        #region Constructors
+        public PreviewingDelegate (MasterViewController masterController)
+        {
+            // Initialize
+            this.MasterController = masterController;
+        }
 
-		public PreviewingDelegate (NSObjectFlag t) : base(t)
-		{
-		}
+        public PreviewingDelegate (NSObjectFlag t) : base(t)
+        {
+        }
 
-		public PreviewingDelegate (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        public PreviewingDelegate (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		/// Present the view controller for the "Pop" action.
-		public override void CommitViewController (IUIViewControllerPreviewing previewingContext, UIViewController viewControllerToCommit)
-		{
-			// Reuse Peek view controller for details presentation
-			MasterController.ShowViewController(viewControllerToCommit,this);
-		}
+        #region Override Methods
+        /// Present the view controller for the "Pop" action.
+        public override void CommitViewController (IUIViewControllerPreviewing previewingContext, UIViewController viewControllerToCommit)
+        {
+            // Reuse Peek view controller for details presentation
+            MasterController.ShowViewController(viewControllerToCommit,this);
+        }
 
-		/// Create a previewing view controller to be shown at "Peek".
-		public override UIViewController GetViewControllerForPreview (IUIViewControllerPreviewing previewingContext, CGPoint location)
-		{
-			// Grab the item to preview
-			var indexPath = MasterController.TableView.IndexPathForRowAtPoint (location);
-			var cell = MasterController.TableView.CellAt (indexPath);
-			var item = MasterController.dataSource.Objects [indexPath.Row];
+        /// Create a previewing view controller to be shown at "Peek".
+        public override UIViewController GetViewControllerForPreview (IUIViewControllerPreviewing previewingContext, CGPoint location)
+        {
+            // Grab the item to preview
+            var indexPath = MasterController.TableView.IndexPathForRowAtPoint (location);
+            var cell = MasterController.TableView.CellAt (indexPath);
+            var item = MasterController.dataSource.Objects [indexPath.Row];
 
-			// Grab a controller and set it to the default sizes
-			var detailViewController = MasterController.Storyboard.InstantiateViewController ("DetailViewController") as DetailViewController;
-			detailViewController.PreferredContentSize = new CGSize (0, 0);
+            // Grab a controller and set it to the default sizes
+            var detailViewController = MasterController.Storyboard.InstantiateViewController ("DetailViewController") as DetailViewController;
+            detailViewController.PreferredContentSize = new CGSize (0, 0);
 
-			// Set the data for the display
-			detailViewController.SetDetailItem (item);
-			detailViewController.NavigationItem.LeftBarButtonItem = MasterController.SplitViewController.DisplayModeButtonItem;
-			detailViewController.NavigationItem.LeftItemsSupplementBackButton = true;
+            // Set the data for the display
+            detailViewController.SetDetailItem (item);
+            detailViewController.NavigationItem.LeftBarButtonItem = MasterController.SplitViewController.DisplayModeButtonItem;
+            detailViewController.NavigationItem.LeftItemsSupplementBackButton = true;
 
-			// Set the source rect to the cell frame, so everything else is blurred.
-			previewingContext.SourceRect = cell.Frame;
+            // Set the source rect to the cell frame, so everything else is blurred.
+            previewingContext.SourceRect = cell.Frame;
 
-			return detailViewController;
-		}
-		#endregion
-	}
+            return detailViewController;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -190,14 +187,14 @@ From the View Controller that we want to allow the user to **Peek** and **Pop** 
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// Check to see if 3D Touch is available
-	if (TraitCollection.ForceTouchCapability == UIForceTouchCapability.Available) {
-		// Register for Peek and Pop
-		RegisterForPreviewingWithDelegate(new PreviewingDelegate(this), View);
-	}
-	...
+    // Check to see if 3D Touch is available
+    if (TraitCollection.ForceTouchCapability == UIForceTouchCapability.Available) {
+        // Register for Peek and Pop
+        RegisterForPreviewingWithDelegate(new PreviewingDelegate(this), View);
+    }
+    ...
 
 }
 ```
@@ -221,7 +218,6 @@ of your app.
 
 [![](3d-touch-images/quickactions01.png "An example of a Quick Actions menu")](3d-touch-images/quickactions01.png#lightbox)
 
-
 ### Defining Static Quick Actions
 
 If one or more of the Quick Actions required by your app are static and do not need to change, you can define them in the app's `Info.plist` file. Edit this file in an external editor and add the following keys:
@@ -229,26 +225,26 @@ If one or more of the Quick Actions required by your app are static and do not n
 ```xml
 <key>UIApplicationShortcutItems</key>
 <array>
-	<dict>
-		<key>UIApplicationShortcutItemIconType</key>
-		<string>UIApplicationShortcutIconTypeSearch</string>
-		<key>UIApplicationShortcutItemSubtitle</key>
-		<string>Will search for an item</string>
-		<key>UIApplicationShortcutItemTitle</key>
-		<string>Search</string>
-		<key>UIApplicationShortcutItemType</key>
-		<string>com.company.appname.000</string>
-	</dict>
-	<dict>
-		<key>UIApplicationShortcutItemIconType</key>
-		<string>UIApplicationShortcutIconTypeShare</string>
-		<key>UIApplicationShortcutItemSubtitle</key>
-		<string>Will share an item</string>
-		<key>UIApplicationShortcutItemTitle</key>
-		<string>Share</string>
-		<key>UIApplicationShortcutItemType</key>
-		<string>com.company.appname.001</string>
-	</dict>
+    <dict>
+        <key>UIApplicationShortcutItemIconType</key>
+        <string>UIApplicationShortcutIconTypeSearch</string>
+        <key>UIApplicationShortcutItemSubtitle</key>
+        <string>Will search for an item</string>
+        <key>UIApplicationShortcutItemTitle</key>
+        <string>Search</string>
+        <key>UIApplicationShortcutItemType</key>
+        <string>com.company.appname.000</string>
+    </dict>
+    <dict>
+        <key>UIApplicationShortcutItemIconType</key>
+        <string>UIApplicationShortcutIconTypeShare</string>
+        <key>UIApplicationShortcutItemSubtitle</key>
+        <string>Will share an item</string>
+        <key>UIApplicationShortcutItemTitle</key>
+        <string>Share</string>
+        <key>UIApplicationShortcutItemType</key>
+        <string>com.company.appname.001</string>
+    </dict>
 </array>
 ```
 
@@ -294,10 +290,6 @@ Here we are defining two static Quick Action items with the following keys:
 > [!IMPORTANT]
 > Quick Action shortcut items that are set in the `Info.plist` file cannot be accessed with the `Application.ShortcutItems` property. They are only passed in to the `HandleShortcutItem` event handler.
 
-
-
-
-
 ### Identifying Quick Action Items
 
 As you saw above, when you defined your Quick Action items in your app's `Info.plist`, you assigned a string value to the `UIApplicationShortcutItemType` key to identify them.
@@ -309,13 +301,13 @@ using System;
 
 namespace AppSearch
 {
-	public static class ShortcutIdentifier
-	{
-		public const string First = "com.company.appname.000";
-		public const string Second = "com.company.appname.001";
-		public const string Third = "com.company.appname.002";
-		public const string Fourth = "com.company.appname.003";
-	}
+    public static class ShortcutIdentifier
+    {
+        public const string First = "com.company.appname.000";
+        public const string Second = "com.company.appname.001";
+        public const string Third = "com.company.appname.002";
+        public const string Fourth = "com.company.appname.003";
+    }
 }
 ```
 
@@ -334,61 +326,61 @@ using System;
 public UIApplicationShortcutItem LaunchedShortcutItem { get; set; }
 
 public bool HandleShortcutItem(UIApplicationShortcutItem shortcutItem) {
-	var handled = false;
+    var handled = false;
 
-	// Anything to process?
-	if (shortcutItem == null) return false;
+    // Anything to process?
+    if (shortcutItem == null) return false;
 
-	// Take action based on the shortcut type
-	switch (shortcutItem.Type) {
-	case ShortcutIdentifier.First:
-		Console.WriteLine ("First shortcut selected");
-		handled = true;
-		break;
-	case ShortcutIdentifier.Second:
-		Console.WriteLine ("Second shortcut selected");
-		handled = true;
-		break;
-	case ShortcutIdentifier.Third:
-		Console.WriteLine ("Third shortcut selected");
-		handled = true;
-		break;
-	case ShortcutIdentifier.Fourth:
-		Console.WriteLine ("Forth shortcut selected");
-		handled = true;
-		break;
-	}
+    // Take action based on the shortcut type
+    switch (shortcutItem.Type) {
+    case ShortcutIdentifier.First:
+        Console.WriteLine ("First shortcut selected");
+        handled = true;
+        break;
+    case ShortcutIdentifier.Second:
+        Console.WriteLine ("Second shortcut selected");
+        handled = true;
+        break;
+    case ShortcutIdentifier.Third:
+        Console.WriteLine ("Third shortcut selected");
+        handled = true;
+        break;
+    case ShortcutIdentifier.Fourth:
+        Console.WriteLine ("Forth shortcut selected");
+        handled = true;
+        break;
+    }
 
-	// Return results
-	return handled;
+    // Return results
+    return handled;
 }
 
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 {
-	var shouldPerformAdditionalDelegateHandling = true;
+    var shouldPerformAdditionalDelegateHandling = true;
 
-	// Get possible shortcut item
-	if (launchOptions != null) {
-		LaunchedShortcutItem = launchOptions [UIApplication.LaunchOptionsShortcutItemKey] as UIApplicationShortcutItem;
-		shouldPerformAdditionalDelegateHandling = (LaunchedShortcutItem == null);
-	}
+    // Get possible shortcut item
+    if (launchOptions != null) {
+        LaunchedShortcutItem = launchOptions [UIApplication.LaunchOptionsShortcutItemKey] as UIApplicationShortcutItem;
+        shouldPerformAdditionalDelegateHandling = (LaunchedShortcutItem == null);
+    }
 
-	return shouldPerformAdditionalDelegateHandling;
+    return shouldPerformAdditionalDelegateHandling;
 }
 
 public override void OnActivated (UIApplication application)
 {
-	// Handle any shortcut item being selected
-	HandleShortcutItem(LaunchedShortcutItem);
+    // Handle any shortcut item being selected
+    HandleShortcutItem(LaunchedShortcutItem);
 
-	// Clear shortcut after it's been handled
-	LaunchedShortcutItem = null;
+    // Clear shortcut after it's been handled
+    LaunchedShortcutItem = null;
 }
 
 public override void PerformActionForShortcutItem (UIApplication application, UIApplicationShortcutItem shortcutItem, UIOperationHandler completionHandler)
 {
-	// Perform action
-	completionHandler(HandleShortcutItem(shortcutItem));
+    // Perform action
+    completionHandler(HandleShortcutItem(shortcutItem));
 }
 ```
 
@@ -398,7 +390,6 @@ Next, we override the `OnActivated` method and pass any selected Quick Launch it
 
 Finally, if your app was already running, the `PerformActionForShortcutItem` method would be called to handle the Quick Action item so we need to override it and call our `HandleShortcutItem` method here as well.
 
-
 ### Creating Dynamic Quick Action Items
 
 In addition to defining static Quick Action items in your app's `Info.plist` file, you can create dynamic on-the-fly Quick Actions. To define two new dynamic Quick Actions, edit your `AppDelegate.cs` file again and modify the `FinishedLaunching` method to look like the following:
@@ -406,31 +397,31 @@ In addition to defining static Quick Action items in your app's `Info.plist` fil
 ```csharp
 public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
 {
-	var shouldPerformAdditionalDelegateHandling = true;
+    var shouldPerformAdditionalDelegateHandling = true;
 
-	// Get possible shortcut item
-	if (launchOptions != null) {
-		LaunchedShortcutItem = launchOptions [UIApplication.LaunchOptionsShortcutItemKey] as UIApplicationShortcutItem;
-		shouldPerformAdditionalDelegateHandling = (LaunchedShortcutItem == null);
-	}
+    // Get possible shortcut item
+    if (launchOptions != null) {
+        LaunchedShortcutItem = launchOptions [UIApplication.LaunchOptionsShortcutItemKey] as UIApplicationShortcutItem;
+        shouldPerformAdditionalDelegateHandling = (LaunchedShortcutItem == null);
+    }
 
-	// Add dynamic shortcut items
-	if (application.ShortcutItems.Length == 0) {
-		var shortcut3 = new UIMutableApplicationShortcutItem (ShortcutIdentifier.Third, "Play") {
-			LocalizedSubtitle = "Will play an item",
-			Icon = UIApplicationShortcutIcon.FromType(UIApplicationShortcutIconType.Play)
-		};
+    // Add dynamic shortcut items
+    if (application.ShortcutItems.Length == 0) {
+        var shortcut3 = new UIMutableApplicationShortcutItem (ShortcutIdentifier.Third, "Play") {
+            LocalizedSubtitle = "Will play an item",
+            Icon = UIApplicationShortcutIcon.FromType(UIApplicationShortcutIconType.Play)
+        };
 
-		var shortcut4 = new UIMutableApplicationShortcutItem (ShortcutIdentifier.Fourth, "Pause") {
-			LocalizedSubtitle = "Will pause an item",
-			Icon = UIApplicationShortcutIcon.FromType(UIApplicationShortcutIconType.Pause)
-		};
+        var shortcut4 = new UIMutableApplicationShortcutItem (ShortcutIdentifier.Fourth, "Pause") {
+            LocalizedSubtitle = "Will pause an item",
+            Icon = UIApplicationShortcutIcon.FromType(UIApplicationShortcutIconType.Pause)
+        };
 
-		// Update the application providing the initial 'dynamic' shortcut items.
-		application.ShortcutItems = new UIApplicationShortcutItem[]{shortcut3, shortcut4};
-	}
+        // Update the application providing the initial 'dynamic' shortcut items.
+        application.ShortcutItems = new UIApplicationShortcutItem[]{shortcut3, shortcut4};
+    }
 
-	return shouldPerformAdditionalDelegateHandling;
+    return shouldPerformAdditionalDelegateHandling;
 }
 ```
 
@@ -461,8 +452,6 @@ the iPhone 6s and iPhone 6s Plus. It covered adding Pressure Sensitivity
 to an app; using Peek and Pop to quickly display in-app information from the
 current context without navigation; and using Quick Actions to provide
 shortcuts to your app's most commonly used features.
-
-
 
 ## Related Links
 

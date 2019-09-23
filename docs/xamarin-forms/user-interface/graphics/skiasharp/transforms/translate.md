@@ -298,7 +298,6 @@ The `PaintSurface` handler calls the `Translate` method twice, first to translat
 
 Notice that the star maintains the same orientation as it revolves around the center of the page. It doesn't rotate at all. That's a job for a rotate transform.
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

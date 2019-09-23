@@ -4,8 +4,8 @@ description: "This document describes how to populate a table with data in a Xam
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -21,7 +21,6 @@ This guide covers:
 - Adding an Index
 - Adding Headers and Footers
 
-
 <a name="Subclassing_UITableViewSource" />
 
 ## Subclassing UITableViewSource
@@ -34,7 +33,6 @@ There are only two mandatory methods required to make a table display data:
 - **RowsInSection** – return an  [`nint`](~/cross-platform/macios/nativetypes.md) count of the total number of rows of data the table should display.
 - **GetCell** – return a  `UITableCellView` populated with data for the corresponding row index passed to the method.
 
-
 The BasicTable sample file **TableSource.cs** has the simplest possible
 implementation of `UITableViewSource`. You can see in code snippet below that it accepts an array of strings to display in the table and returns a default cell style containing each
 string:
@@ -42,32 +40,32 @@ string:
 ```csharp
 public class TableSource : UITableViewSource {
 
-		string[] TableItems;
-		string CellIdentifier = "TableCell";
+        string[] TableItems;
+        string CellIdentifier = "TableCell";
 
-		public TableSource (string[] items)
-		{
-			TableItems = items;
-		}
+        public TableSource (string[] items)
+        {
+            TableItems = items;
+        }
 
-	    public override nint RowsInSection (UITableView tableview, nint section)
-	    {
-	        return TableItems.Length;
-	    }
+        public override nint RowsInSection (UITableView tableview, nint section)
+        {
+            return TableItems.Length;
+        }
 
-    	public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
-		{
-			UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
-			string item = TableItems[indexPath.Row];
+        public override UITableViewCell GetCell (UITableView tableView, NSIndexPath indexPath)
+        {
+            UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
+            string item = TableItems[indexPath.Row];
 
-			//---- if there are no cells to reuse, create a new one
-			if (cell == null)
-			{ cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
+            //---- if there are no cells to reuse, create a new one
+            if (cell == null)
+            { cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
 
-			cell.TextLabel.Text = item;
+            cell.TextLabel.Text = item;
 
-			return cell;
-		}
+            return cell;
+        }
 }
 ```
 
@@ -97,11 +95,11 @@ screen). To achieve this, there are a few things we need to do. First, let's cre
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 {
-	UIAlertController okAlertController = UIAlertController.Create ("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
-	okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
-	...
+    UIAlertController okAlertController = UIAlertController.Create ("Row Selected", tableItems[indexPath.Row], UIAlertControllerStyle.Alert);
+    okAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+    ...
 
-	tableView.DeselectRow (indexPath, true);
+    tableView.DeselectRow (indexPath, true);
 }
 ```
 
@@ -116,8 +114,8 @@ Add a constructor to your UITableViewSource class which takes a view controller 
 ```csharp
 public TableSource (string[] items, HomeScreen owner)
 {
-	...
-	this.owner = owner;
+    ...
+    this.owner = owner;
 
 }
 ```
@@ -133,20 +131,16 @@ Finally, back in your `RowSelected` method, call `PresentViewController` on the 
 ```csharp
 public override void RowSelected (UITableView tableView, NSIndexPath indexPath)
 {
-	...
-	owner.PresentViewController (okAlertController, true, null);
+    ...
+    owner.PresentViewController (okAlertController, true, null);
 
-	...
+    ...
 }
 ```
 
-
 Now the user can touch a row and an alert will appear:
 
-
-
  [![](populating-a-table-with-data-images/image4.png "The row selected alert")](populating-a-table-with-data-images/image4.png#lightbox)
-
 
 ## Cell Reuse
 
@@ -263,7 +257,6 @@ added or modified to use the `Dictionary<>` :
 - **RowsInSection** – returns the number of rows in a given section.
 - **SectionIndexTitles** – returns the array of strings that will be used to display the index. The sample code returns an array of letters.
 
-
 The updated methods in the sample file **BasicTableIndex/TableSource.cs** look
 like this:
 
@@ -284,7 +277,6 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Indexes are generally only used with the Plain table style.
 
-
 <a name="Adding_Headers_and_Footers" />
 
 ## Adding Headers and Footers
@@ -302,7 +294,6 @@ requires these additional methods:
 - **TitleForHeader** – returns the text to use as the header
 - **TitleForFooter** – returns the text to use as the footer.
 
-
 The updated methods in the sample file
 **BasicTableHeaderFooter/Code/TableSource.cs** look like this:
 
@@ -319,7 +310,6 @@ public override string TitleForFooter (UITableView tableView, nint section)
 
 You can further customize the appearance of the header and footer with a View
 object, using the `GetViewForHeader` and `GetViewForFooter` method overrides on `UITableViewSource`.
-
 
 ## Related Links
 

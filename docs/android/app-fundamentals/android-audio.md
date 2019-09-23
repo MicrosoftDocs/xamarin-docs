@@ -13,7 +13,6 @@ ms.date: 02/28/2018
 
 _The Android OS provides extensive support for multimedia, encompassing both audio and video. This guide focuses on audio in Android and covers playing and recording audio using the built-in audio player and recorder classes, as well as the low-level audio API. It also covers working with Audio events broadcast by other applications, so that developers can build well-behaved applications._
 
-
 ## Overview
 
 Modern mobile devices have adopted functionality that formerly would
@@ -41,7 +40,6 @@ examines working with audio in Android, and covers the following topics
     audio using the `AudioRecord` class and reading directly from
     memory buffers.
 
-
 ## Requirements
 
 This guide requires Android 2.0 (API level 5) or higher. Please note
@@ -50,8 +48,6 @@ that debugging audio on Android must be done on a device.
 It is necessary to request the `RECORD_AUDIO` permissions in **AndroidManifest.XML**:
 
 ![Required permissions section of Android Manifest with RECORD\_AUDIO enabled](android-audio-images/image01.png)
-
-
 
 ## Playing Audio with the MediaPlayer Class
 
@@ -62,8 +58,6 @@ file path. However, `MediaPlayer` is very state-sensitive and calling
 one of its methods in the wrong state will cause an exception to be
 thrown. It's important to interact with `MediaPlayer` in the order
 described below to avoid errors.
-
-
 
 ### Initializing and Playing
 
@@ -84,7 +78,6 @@ Playing audio with `MediaPlayer` requires the following sequence:
    [Start](xref:Android.Media.MediaPlayer.Start) method to
    start the audio playing.
 
-
 The code sample below illustrates this usage:
 
 ```csharp
@@ -101,7 +94,6 @@ public void StartPlayer(String  filePath)
   }
 }
 ```
-
 
 ### Suspending and Resuming Playback
 
@@ -136,8 +128,6 @@ calling the
 player.Release();
 ```
 
-
-
 ## Using the MediaRecorder Class to Record Audio
 
 The corollary to `MediaPlayer` for recording audio in Android is the
@@ -147,7 +137,6 @@ states to get to the point where it can start recording. In
 order to record audio, the `RECORD_AUDIO` permission must be set. For
 instructions on how to set application permissions see
 [Working with AndroidManifest.xml](~/android/platform/android-manifest.md).
-
 
 ### Initializing and Recording
 
@@ -182,7 +171,6 @@ Recording audio with the `MediaRecorder` requires the following steps:
    [Start](xref:Android.Media.MediaRecorder.Start) method
    to start recording.
 
-
 The following code sample illustrates this sequence:
 
 ```csharp
@@ -212,7 +200,6 @@ void RecordAudio (String filePath)
 }
 ```
 
-
 ### Stopping recording
 
 To stop the recording, call the `Stop` method on the `MediaRecorder`:
@@ -220,8 +207,6 @@ To stop the recording, call the `Stop` method on the `MediaRecorder`:
 ```csharp
 recorder.Stop();
 ```
-
-
 
 ### Cleaning up
 
@@ -242,10 +227,7 @@ method:
 recorder.Release();
 ```
 
-
 ## Managing Audio Notifications
-
-
 
 ### The AudioManager Class
 
@@ -255,8 +237,6 @@ events occur. This service also provides access to other audio
 features, such as volume and ringer mode control. The `AudioManager`
 allows an application to handle audio notifications to control audio
 playback.
-
-
 
 ### Managing Audio Focus
 
@@ -288,8 +268,6 @@ audio.
 For more information about audio focus, see
 [Managing Audio Focus](https://developer.android.com/training/managing-audio/audio-focus.html).
 
-
-
 #### Registering the Callback for Audio Focus
 
 Registering the `FocusChangeListener` callback from the
@@ -310,8 +288,6 @@ When the application has finished using the audio resources, it calls
 the `AbandonFocus` method of the `AudioManager`, and again passes in
 the callback. This deregisters the callback and releases the audio
 resources, so that other applications may obtain audio focus.
-
-
 
 #### Requesting Audio Focus
 
@@ -335,7 +311,6 @@ follow:
 5. If the request is denied, no further action is taken. In this case,
     the audio will only play if the request is granted at a later time.
 
-
 The code sample below shows these steps:
 
 ```csharp
@@ -354,7 +329,6 @@ Boolean RequestAudioResources(INotificationReceiver parent)
 }
 ```
 
-
 #### Releasing Audio Focus
 
 When the playback of the track is complete, the `AbandonFocus` method
@@ -362,7 +336,6 @@ on `AudioManager` is invoked. This allows another application to gain
 the audio resources of the device. Other applications will receive a
 notification of this audio focus change if they have registered their
 own listeners.
-
 
 ## Low Level Audio API
 
@@ -377,13 +350,11 @@ approach is preferable. Such scenarios include:
 
 3. Audio streaming.
 
-
 ### AudioTrack Class
 
 The [AudioTrack](xref:Android.Media.AudioTrack) class uses the
 low-level audio APIs for recording, and is the low-level equivalent of
 the `MediaPlayer` class.
-
 
 #### Initializing and Playing
 
@@ -404,7 +375,6 @@ are:
 5. Buffer size &ndash; in bytes.
 
 6. Buffer mode &ndash; streaming or static.
-
 
 After construction, the
 [Play](xref:Android.Media.AudioTrack.Play) method of
@@ -433,7 +403,6 @@ void PlayAudioTrack(byte[] audioBuffer)
 }
 ```
 
-
 #### Pausing and Stopping the Playback
 
 Call the
@@ -452,7 +421,6 @@ terminate the playback permanently:
 audioTrack.Stop();
 ```
 
-
 #### Cleanup
 
 When the `AudioTrack` is no longer needed, its resources must be
@@ -462,14 +430,12 @@ released by calling [Release](xref:Android.Media.AudioTrack.Release):
 audioTrack.Release();
 ```
 
-
 ### The AudioRecord Class
 
 The [AudioRecord](xref:Android.Media.AudioRecord) class is the
 equivalent of `AudioTrack` on the recording side. Like `AudioTrack`, it
 uses memory buffers directly, in place of files and URIs. It requires
 that the `RECORD_AUDIO` permission be set in the manifest.
-
 
 #### Initializing and Recording
 
@@ -492,7 +458,6 @@ in `AudioRecord` are integers. These include:
 5. Audio format &ndash; 8 bit or 16 bit encoding.
 
 6. Buffer size-in bytes
-
 
 Once the `AudioRecord` is constructed, its
 [StartRecording](xref:Android.Media.AudioRecord.StartRecording)
@@ -531,7 +496,6 @@ void RecordAudio()
 }
 ```
 
-
 #### Stopping the Recording
 
 Calling the
@@ -541,7 +505,6 @@ terminates the recording:
 ```csharp
 audRecorder.Stop();
 ```
-
 
 #### Cleanup
 
@@ -553,7 +516,6 @@ method releases all resources associated with it:
 audRecorder.Release();
 ```
 
-
 ## Summary
 
 The Android OS provides a powerful framework for playing, recording and
@@ -563,7 +525,6 @@ explored how to use audio notifications to share the audio
 resources of the device between different applications. Finally, it
 dealt with how to playback and record audio using the low-level APIs,
 which interface directly with memory buffers.
-
 
 ## Related Links
 

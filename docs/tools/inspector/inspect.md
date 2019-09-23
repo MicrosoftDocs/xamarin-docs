@@ -3,8 +3,8 @@ title: "Inspecting Live Applications"
 description: "This document describes how to use the Xamarin Inspector to inspect applications. It also discusses limitations of the Xamarin Inspector tool." 
 ms.prod: xamarin
 ms.assetid: 91B3206E-B2A5-4660-A6E5-B924B8FE69A7
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/19/2018
 ---
 
@@ -71,4 +71,3 @@ values visually.
   [file bugs](~/tools/inspector/install.md#reporting-bugs) to let us know!
 - If inspecting a UI element causes it to change in anyway, please
   [let us know](~/tools/inspector/install.md#reporting-bugs), as this may indicate a bug.
-

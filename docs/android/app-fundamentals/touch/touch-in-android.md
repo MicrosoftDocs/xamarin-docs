@@ -27,7 +27,6 @@ the following values:
    The axis values may be different depending on the device, so the
    previous list does not describe all axis values.
 
-
 The `MotionEvent` object will be passed to an appropriate method in an
 application. There are three ways for a Xamarin.Android application to
 respond to a touch event:
@@ -47,7 +46,6 @@ respond to a touch event:
 - *Override `View.OnTouchEvent`* - All views in Android subclass
    `Android.Views.View`. When a View is touched, Android will call the
    `OnTouchEvent` and pass it a `MotionEvent` object as a parameter.
-
 
 > [!NOTE]
 > Not all Android devices support touch screens. 
@@ -89,8 +87,8 @@ an example of this:
 ```csharp
 public override bool OnTouchEvent(MotionEvent e)
 {
-	// This method is in an Activity
-	return _gestureDetector.OnTouchEvent(e);
+    // This method is in an Activity
+    return _gestureDetector.OnTouchEvent(e);
 }
 ```
 
@@ -112,7 +110,6 @@ This interface provides six methods for the various gestures:
    event has not been performed.
 
 - *OnSingleTapUp* - Called when a single tap occurs.
-
 
 In many cases applications may only be interested in a subset of
 gestures. In this case, applications should extend the class
@@ -170,8 +167,8 @@ in the following snippet:
 GestureLibrary myGestures = GestureLibraries.FromRawResources(this, Resource.Raw.gestures);
 if (!myGestures.Load())
 {
-	// The library didn't load, so close the activity.
-	Finish();
+    // The library didn't load, so close the activity.
+    Finish();
 }
 ```
 
@@ -217,20 +214,20 @@ The following code shows an example of matching a gesture:
 ```csharp
 private void GestureOverlayViewOnGesturePerformed(object sender, GestureOverlayView.GesturePerformedEventArgs gesturePerformedEventArgs)
 {
-	// In this example _gestureLibrary was instantiated in OnCreate
-	IEnumerable<Prediction> predictions = from p in _gestureLibrary.Recognize(gesturePerformedEventArgs.Gesture)
-	orderby p.Score descending
-	where p.Score > 1.0
-	select p;
-	Prediction prediction = predictions.FirstOrDefault();
+    // In this example _gestureLibrary was instantiated in OnCreate
+    IEnumerable<Prediction> predictions = from p in _gestureLibrary.Recognize(gesturePerformedEventArgs.Gesture)
+    orderby p.Score descending
+    where p.Score > 1.0
+    select p;
+    Prediction prediction = predictions.FirstOrDefault();
 
-	if (prediction == null)
-	{
-		Log.Debug(GetType().FullName, "Nothing matched the user's gesture.");
-		return;
-	}
+    if (prediction == null)
+    {
+        Log.Debug(GetType().FullName, "Nothing matched the user's gesture.");
+        return;
+    }
 
-	Toast.MakeText(this, prediction.Name, ToastLength.Short).Show();
+    Toast.MakeText(this, prediction.Name, ToastLength.Short).Show();
 }
 ```
 
@@ -238,8 +235,6 @@ With this done, you should have an understanding of how to use touch
 and gestures in a Xamarin.Android application. Let us now move on to a
 walkthrough and see all of the concepts in a working sample
 application.
-
-
 
 ## Related Links
 

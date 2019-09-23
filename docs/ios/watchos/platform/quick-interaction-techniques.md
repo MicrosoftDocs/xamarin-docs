@@ -4,8 +4,8 @@ description: "This article covers the quick interaction techniques Apple has add
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
 ---
 
@@ -93,7 +93,7 @@ Apple suggest the following when working with Gesture Recognizers in watchOS 3:
 - Some gesture take precedence over other gesture types, such as:
   - Scrolling
   - Force Touch
- 
+
 ### Digital Crown Rotation
 
 By implementing Digital Crown Support in their watchOS 3 apps, a developer can provide increased navigation speed and precision interactions for their users.
@@ -165,7 +165,6 @@ The sign (`+/-`) of the Rotational Delta indicates the direction that the user i
 
 [![](quick-interaction-techniques-images/quick03.png "The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
 
-
 If the user is scrolling up, WatchKit will return positive deltas and if scrolling down, then negative deltas will be returned, no matter what orientation the user is wearing the watch in.
 
 #### Digital Crown Focus
@@ -225,16 +224,16 @@ There are several ways that a user may respond to the Notification:
 
 New for watchOS 3:
 
-* Notification use a similar API across all platforms (iOS, watchOS, tvOS and macOS).
-* Local Notification can be scheduled on the Apple Watch.
-* Background Notification will be routed to the app's Extension if they were scheduled on the Apple Watch.
+- Notification use a similar API across all platforms (iOS, watchOS, tvOS and macOS).
+- Local Notification can be scheduled on the Apple Watch.
+- Background Notification will be routed to the app's Extension if they were scheduled on the Apple Watch.
 
 #### Notification Scheduling and Delivery
 
 Notification from the user's iPhone will be forward to the Apple Watch when the following occurs:
 
-* The iPhone's screen is off.
-* The Apple Watch is being worn and has been unlocked.
+- The iPhone's screen is off.
+- The Apple Watch is being worn and has been unlocked.
 
 In watchOS 3, Local Notifications can be scheduled on the Apple Watch and are only delivered on the watch. It is up the developer to schedule a corresponding iPhone Notification if it is required by the app.
 

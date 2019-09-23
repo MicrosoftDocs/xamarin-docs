@@ -10,7 +10,7 @@ ms.date: 08/06/2019
 ---
 # Xamarin.Forms Frame
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 
 The Xamarin.Forms [`Frame`](xref:Xamarin.Forms.Frame) class is a layout used to wrap a view with a border that can be configured with color, shadow, and other options. Frames are commonly used to create borders around controls but can be used to create more complex UI. For more information, see [Advanced Frame usage](#advanced-frame-usage).
 
@@ -187,5 +187,5 @@ The **outdoors.jpg** image must be added to each platform project, and how this 
 
 ## Related links
 
-* [Frame Demos](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
+* [Frame Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-frame/)
 * [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md)

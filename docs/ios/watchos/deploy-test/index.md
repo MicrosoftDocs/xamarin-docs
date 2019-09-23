@@ -4,8 +4,8 @@ description: "This document describes how to deploy and test watchOS apps built 
 ms.prod: xamarin
 ms.assetid: 98257399-E9B3-4BAB-9204-0E89117DEA6D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/17/2017
 ---
 
@@ -28,7 +28,7 @@ Whether you are deploying to a test Watch, or uploading to the App Store,
   - Check the bundle version numbers match in all projects.
   - Configure the **Entitlements.plist** for App Groups (if required).
 
-* Then follow the instructions to:
+- Then follow the instructions to:
   - [Deploy to an Apple Watch for testing](~/ios/watchos/deploy-test/device.md), or
   - [Upload to the App Store](~/ios/watchos/deploy-test/appstore.md).
 

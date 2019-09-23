@@ -35,7 +35,6 @@ namespace MyProject
 
 Use [James Montemagno's ImageCirclePlugin's base class](https://github.com/jamesmontemagno/ImageCirclePlugin/blob/master/src/ImageCircle/CircleImage.shared.cs) as an example.
 
-
 ## SkiaSharp controls
 
 Currently, SkiaSharp controls are only supported when you're previewing on iOS. They won't render on the Android preview.
@@ -47,6 +46,7 @@ Make sure you have at least Xamarin.Forms 3.6 installed. You can update your Xam
 
 ### Even with `[DesignTimeVisible(true)]`, my custom control isn't rendering properly.
 Custom controls that rely heavily on code-behind or backend data don't always work in the XAML Previewer. You can try:
+
 * Moving the control so it doesn't initialize if [design mode is enabled](index.md#detect-design-mode)
 * Setting up [design time data](design-time-data.md) to show fake data from the backend
 

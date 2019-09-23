@@ -3,8 +3,8 @@ title: "Updating Existing Mac Apps"
 description: "This document describes the steps that must be followed to update a Xamarin.Mac app from the Classic API to the Unified API."
 ms.prod: xamarin
 ms.assetid: 26673CC5-C1E5-4BAC-BEF4-9A386B296FD5
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 
@@ -113,7 +113,7 @@ Until that time, just like the components, you'll need to switch any NuGet Packa
 ## Enabling 64 Bit Builds of Xamarin.Mac Apps
 
 For a Xamarin.Mac mobile application that has been converted to the Unified API, the developer still needs to enable the building of the application for 64 bit machines from the app's Options. Please see the **Enabling 64 Bit Builds of Xamarin.Mac Apps** of the [32/64 bit Platform Considerations](~/cross-platform/macios/32-and-64/index.md) document for detailed instructions on enabling 64 bit builds.
-	
+
 ## Finishing Up
 
 Whether or not you choose to use the automatic or manual method to convert your Xamarin.Mac application from the Classic to the Unified APIs, there are several instances that will require further, manual intervention. Please see our [Tips for Updating Code to the Unified API](~/cross-platform/macios/unified/updating-tips.md) document for known issues and work arounds.

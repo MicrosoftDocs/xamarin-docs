@@ -164,7 +164,6 @@ public class YourAndroidApp : Application {
 }
 ```
 
-
 ## Related Links
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)

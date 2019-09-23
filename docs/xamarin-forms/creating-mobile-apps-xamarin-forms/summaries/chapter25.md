@@ -110,8 +110,6 @@ The [**MultiTabbedColor**](https://github.com/xamarin/xamarin-forms-book-samples
 
 However, this is problematic on iOS. Only a few of the items can be displayed, and there is no good way to give them icons.
 
-
-
 ## Related links
 
 - [Chapter 25 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch25-Apr2016.pdf)

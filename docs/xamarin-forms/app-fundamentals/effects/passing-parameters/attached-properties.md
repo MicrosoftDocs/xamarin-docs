@@ -428,7 +428,6 @@ The `OnElementPropertyChanged` method updates the color or offset of the shadow,
 
 This article has demonstrated using attached properties to pass parameters to an effect, and changing a parameter at runtime. Attached properties can be used to define effect parameters that respond to runtime property changes.
 
-
 ## Related Links
 
 - [Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md)

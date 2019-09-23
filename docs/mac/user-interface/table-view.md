@@ -4,8 +4,8 @@ description: "This article covers working with table views in a Xamarin.Mac appl
 ms.prod: xamarin
 ms.assetid: 3B55B858-4769-4331-966A-7F53B3B7C720
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -35,8 +35,8 @@ A Table View's behavior can be customized by providing a subclass of the Table V
 
 When creating Table Views, Apple suggests the following:
 
-* Allow the user to sort the table by clicking on a Column Headers.
-* Create Column Headers that are nouns or short noun phrases that describe the data being shown in that column.
+- Allow the user to sort the table by clicking on a Column Headers.
+- Create Column Headers that are nouns or short noun phrases that describe the data being shown in that column.
 
 For more information, please see the [Content Views](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
@@ -402,7 +402,6 @@ If you want to allow the user to select a single row, double-click the `Main.sto
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
-
 Next, edit the `ProductTableDelegate.cs` file and add the following method:
 
 ```csharp
@@ -430,7 +429,6 @@ If you want to allow the user to select a multiple rows, double-click the `Main.
 [![](table-view-images/select02.png "The Attribute Inspector")](table-view-images/select02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
-
 
 Next, edit the `ProductTableDelegate.cs` file and add the following method:
 

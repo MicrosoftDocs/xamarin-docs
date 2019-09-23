@@ -51,4 +51,3 @@ The Android SDK Extras are usually not required; but it is useful to be aware of
 ## Further Reading
 The following guide covers these options and goes into more detail about the different packages the SDK manager has avaliable:
 [Android SDK Manager Setup Guide](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)
-

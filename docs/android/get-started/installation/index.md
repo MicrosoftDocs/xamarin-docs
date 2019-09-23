@@ -19,7 +19,6 @@ to configure the Android emulator for debugging, and how to connect a
 physical Android device to your development computer for debugging and
 final testing your app.
 
-
 ## [Windows Installation](~/android/get-started/installation/windows.md)
 
 This guide walks you through the installation steps and configuration

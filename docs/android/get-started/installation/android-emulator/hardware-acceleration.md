@@ -24,6 +24,14 @@ improve the performance of the Android emulator by using special x86
 virtual device images in conjunction with the virtualization features
 of your computer.
 
+| Scenario    | HAXM        | WHPX       | Hypervisor.Framework |
+| ----------- | ----------- | -----------| ----------- |
+| You have an Intel Processor | X | X | X |
+| You have an AMD Processor   |   | X |   |
+| You want to support Hyper-V |   | X |   |
+| You want to support nested Virtualization |   | Limited |   |
+| You want to use technologies like Docker  |   | X | X |
+
 ::: zone pivot="windows"
 
 ## Accelerating Android emulators on Windows
@@ -31,7 +39,7 @@ of your computer.
 The following virtualization technologies are available for
 accelerating the Android emulator:
 
-1. **Microsoft's Hyper-V and the Hypervisor Platform**.
+1. **Microsoft's Hyper-V and the Windows Hypervisor Platform (WHPX)**.
    [Hyper-V](https://docs.microsoft.com/virtualization/hyper-v-on-windows/)
    is a virtualization feature of Windows that makes it possible to run
    virtualized computer systems on a physical host computer.
@@ -39,21 +47,21 @@ accelerating the Android emulator:
 2. **Intel's Hardware Accelerated Execution Manager (HAXM)**.
    HAXM is a virtualization engine for computers running Intel CPUs.
 
-For optimum performance, it is recommended that you use Hyper-V to
-accelerate the Android emulator. If Hyper-V is not available on your
-computer, then HAXM can be used. The Android emulator will
+For the best experience on Windows, it is recommended that you use HAXM to
+accelerate the Android emulator. If HAXM is not available on your
+computer, then Windows Hypervisor Platform (WHPX) can be used. The Android emulator will
 automatically make use of hardware acceleration if the following
 criteria are met:
 
 - Hardware acceleration is available and enabled on your development
-    computer.
+  computer.
 
 - The emulator is running a system image created for
-    an **x86**-based virtual device.
+  an **x86**-based virtual device.
 
 > [!IMPORTANT]
-> You can't run a VM-accelerated emulator inside another VM, such as 
-> a VM hosted by VirtualBox, VMWare, or Docker. You must run the Android 
+> You can't run a VM-accelerated emulator inside another VM, such as
+> a VM hosted by VirtualBox, VMWare, or Docker. You must run the Android
 > emulator [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 For information about launching and debugging with the Android
@@ -76,26 +84,26 @@ to support the Windows Hypervisor Platform:
 
 - Your computer hardware must meet the following requirements:
 
-    - A 64-bit Intel or AMD Ryzen CPU with Second Level Address Translation (SLAT).
-    - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
-    - Minimum of 4-GB memory.
+  - A 64-bit Intel or AMD Ryzen CPU with Second Level Address Translation (SLAT).
+  - CPU support for VM Monitor Mode Extension (VT-c on Intel CPUs).
+  - Minimum of 4-GB memory.
 
 - In your computer's BIOS, the following items must be enabled:
 
-    - Virtualization Technology (may have a different label depending on motherboard manufacturer).
-    - Hardware Enforced Data Execution Prevention.
+  - Virtualization Technology (may have a different label depending on motherboard manufacturer).
+  - Hardware Enforced Data Execution Prevention.
 
 - Your computer must be updated to Windows 10 April 2018 update
-    (build 1803) or later. You can verify that your Windows version
-    is up-to-date by using the following steps: 
+  (build 1803) or later. You can verify that your Windows version
+  is up-to-date by using the following steps:
 
-    1. Enter **About** in the Windows search box. 
-    2. Select **About your PC** in the search results. 
-    3. Scroll down in the **About** dialog to the **Windows specifications** 
-       section. 
-    4. Verify that the **Version** is at least 1803:
+  1. Enter **About** in the Windows search box.
+  2. Select **About your PC** in the search results.
+  3. Scroll down in the **About** dialog to the **Windows specifications**
+      section.
+  4. Verify that the **Version** is at least 1803:
 
-        [![Windows specifications](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
+      [![Windows specifications](hardware-acceleration-images/win/01-about-windows-w10-sml.png)](hardware-acceleration-images/win/01-about-windows-w10.png#lightbox)
 
 To verify that your computer hardware and software is compatible with
 Hyper-V, open a command prompt and type the following command:
@@ -108,7 +116,6 @@ If all listed Hyper-V requirements have a value of **Yes**, then your
 computer can support Hyper-V. For example:
 
 [![Example systeminfo output](hardware-acceleration-images/win/02-systeminfo-w158-sml.png)](hardware-acceleration-images/win/02-systeminfo-w158.png#lightbox)
-
 
 ### Enabling Hyper-V acceleration
 
@@ -136,12 +143,10 @@ to accelerate the Android emulator with Hyper-V:
 
     [![Android SDKs and Tools dialog](hardware-acceleration-images/win/04-sdk-manager-w158-sml.png)](hardware-acceleration-images/win/04-sdk-manager-w158.png#lightbox)
 
-
 When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
 be sure to select an **x86**-based system image. If you use an ARM-based system image,
 the virtual device will not be accelerated and will run slowly.
-
 
 ## Accelerating with HAXM
 
@@ -194,7 +199,6 @@ page. Use the following steps to download and install HAXM:
 
    ![Intel Hardware Accelerated Execution Manager Setup window](hardware-acceleration-images/win/06-haxm-installer.png)
 
-
 When you create a virtual device (see
 [Managing Virtual Devices with the Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)),
 be sure to select an **x86**-based system image. If you use an ARM-based system image,
@@ -220,27 +224,27 @@ accelerating the Android emulator:
    is a feature of macOS 10.10 and later that makes it possible to run
    virtual machines on a Mac.
 
-2. **Intel's Hardware Accelerated Execution Manager (HAXM)**. 
+2. **Intel's Hardware Accelerated Execution Manager (HAXM)**.
    [HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm)
    is a virtualization engine for computers running Intel CPUs.
 
-For optimum performance, it is recommended that you use the Hypervisor
+It is recommended that you use the Hypervisor
 Framework to accelerate the Android emulator. If the Hypervisor
 Framework is not available on your Mac, then HAXM can be used. The
 Android emulator will automatically make use of hardware acceleration
 if the following criteria are met:
 
 - Hardware acceleration is available and enabled on the development
-    computer.
+  computer.
 
 - The emulator is running a system image created for
-    an **x86**-based virtual device.
+  an **x86**-based virtual device.
 
 > [!IMPORTANT]
-> 
-> You can't run a  VM-accelerated emulator inside another VM, 
-> such as a VM  hosted by VirtualBox, VMWare, or Docker. You 
-> must run the Android emulator 
+>
+> You can't run a  VM-accelerated emulator inside another VM,
+> such as a VM  hosted by VirtualBox, VMWare, or Docker. You
+> must run the Android emulator
 > [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 For information about launching and debugging with the Android
@@ -251,7 +255,7 @@ emulator, see
 
 ## Accelerating with the Hypervisor Framework
 
-To use the Android emulator with the Hypervisor Framework, your Mac must 
+To use the Android emulator with the Hypervisor Framework, your Mac must
 meet the following criteria:
 
 - Your Mac must be running macOS 10.10 or later.
@@ -259,8 +263,7 @@ meet the following criteria:
 - Your Mac's CPU must be able to support the Hypervisor Framework.
 
 If your Mac meets these criteria, the Android emulator will
-automatically use the Hypervisor Framework for acceleration (even if
-HAXM is installed). If you are not sure if Hypervisor Framework
+automatically use the Hypervisor Framework for acceleration. If you are not sure if Hypervisor Framework
 is supported on your Mac, see the
 [Troubleshooting](~/android/get-started/installation/android-emulator/troubleshooting.md?tabs=vsmac#hypervisor-issues)
 guide for ways to verify that your Mac supports Hypervisor.
@@ -274,7 +277,7 @@ HAXM to accelerate the Android emulator (described next).
 
 If your Mac does not support the Hypervisor framework (or you are using
 a version of macOS earlier than 10.10), you can use **Intel's Hardware
-Accelerated Execution Manager** 
+Accelerated Execution Manager**
 ([HAXM](https://software.intel.com/articles/intel-hardware-accelerated-execution-manager-intel-haxm))
 to speed up the Android emulator.
 
@@ -322,7 +325,6 @@ install HAXM.
 HAXM installation packages for macOS are available from the
 [Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager)
 page. Use the following steps to download and install HAXM:
-
 
 1. From the Intel website, download the latest
    [HAXM virtualization engine](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/)

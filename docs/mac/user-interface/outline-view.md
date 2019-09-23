@@ -4,8 +4,8 @@ description: "This article covers working with outline views in a Xamarin.Mac ap
 ms.prod: xamarin
 ms.assetid: 043248EE-11DA-4E96-83A3-08824A4F2E01
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -82,10 +82,10 @@ Select the Outline View in the **Interface Hierarchy** and the following propert
 - **Grid Color** - Sets the cell border color.
 - **Background** - Sets the cell background color.
 - **Selection** - Allow you to control how the user can select cells in the table as:
-    - **Multiple** - If `true`, the user can select multiple rows and columns.
-    - **Column** - If `true`,the user can select columns.
-    - **Type Select** - If `true`, the user can type a character to select a row.
-    - **Empty** - If `true`, the user is not required to select a row or column, the table allows for no selection at all.
+  - **Multiple** - If `true`, the user can select multiple rows and columns.
+  - **Column** - If `true`,the user can select columns.
+  - **Type Select** - If `true`, the user can type a character to select a row.
+  - **Empty** - If `true`, the user is not required to select a row or column, the table allows for no selection at all.
 - **Autosave** - The name that the tables format is automatically save under.
 - **Column Information** - If `true`, the order and width of the columns will be automatically saved.
 - **Line Breaks** - Select how the cell handles line breaks.
@@ -152,14 +152,14 @@ Just like any other Cocoa UI control, we need to expose our Outline View and it'
 
 The process is the same for any Outline View element that we want to expose:
 
-1. Switch to the **Assistant Editor** and ensure that the `ViewController.h` file is selected: 
+1. Switch to the **Assistant Editor** and ensure that the `ViewController.h` file is selected:
 
     [![](outline-view-images/edit11.png "Selecting the correct .h file")](outline-view-images/edit11.png#lightbox)
 2. Select the Outline View from the **Interface Hierarchy**, control-click and drag to the `ViewController.h` file.
-3. Create an **Outlet** for the Outline View called `ProductOutline`: 
+3. Create an **Outlet** for the Outline View called `ProductOutline`:
 
     [![](outline-view-images/edit13.png "Configuring an Outlet")](outline-view-images/edit13.png#lightbox)
-4. Create **Outlets** for the tables columns as well called `ProductColumn` and `DetailsColumn`: 
+4. Create **Outlets** for the tables columns as well called `ProductColumn` and `DetailsColumn`:
 
     [![](outline-view-images/edit14.png "Configuring an Outlet")](outline-view-images/edit14.png#lightbox)
 5. Save you changes and return to Visual Studio for Mac to sync with Xcode.
@@ -258,7 +258,7 @@ namespace MacOutlines
             } else {
                 return ((Product)item).Products [childIndex];
             }
-                
+
         }
 
         public override bool ItemExpandable (NSOutlineView outlineView, NSObject item)
@@ -268,7 +268,7 @@ namespace MacOutlines
             } else {
                 return ((Product)item).IsProductGroup;
             }
-        
+
         }
         #endregion
     }
@@ -293,7 +293,7 @@ namespace MacOutlines
 {
     public class ProductOutlineDelegate : NSOutlineViewDelegate
     {
-        #region Constants 
+        #region Constants
         private const string CellIdentifier = "ProdCell";
         #endregion
 
@@ -442,7 +442,6 @@ If you want to allow the user to select a single row, double-click the `Main.sto
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
-
 Next, edit the `ProductOutlineDelegate.cs` file and add the following method:
 
 ```csharp
@@ -464,7 +463,6 @@ If you want to allow the user to select a multiple rows, double-click the `Main.
 [![](outline-view-images/select02.png "The Attribute Inspector")](outline-view-images/select02.png#lightbox)
 
 Save your changes and return to Visual Studio for Mac to sync with Xcode.
-
 
 Next, edit the `ProductOutlineDelegate.cs` file and add the following method:
 
@@ -573,7 +571,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.StringValue;
-            break; 
+            break;
         }
     };
 
@@ -644,7 +642,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.TextField.StringValue;
-            break; 
+            break;
         }
     };
 

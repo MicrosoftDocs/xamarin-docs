@@ -3,8 +3,8 @@ title: "Missing Visual Studio extensions after installation"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 066d36a3-e553-48d6-8769-c972274d7641
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
 ---
 
@@ -40,8 +40,7 @@ In certain situations, the Xamarin installer might automatically un-check the in
 
     If the extensions are properly installed (for version 3.1.228), there will be 60 items in the folder:
 
-
-	![](missing-vs-extensions-images/folder.png "List of 'Xamarin\3.1.228.0' folder contents in Explorer")
+    ![](missing-vs-extensions-images/folder.png "List of 'Xamarin\3.1.228.0' folder contents in Explorer")
 
 2. After you have confirmed that this folder looks correct, tell Visual Studio to try setting up the extensions again:
 

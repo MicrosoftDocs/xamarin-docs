@@ -35,7 +35,7 @@ The following example shows an interface for an API that can be used to retrieve
 ```csharp
 public interface IDeviceOrientationService
 {
-		DeviceOrientation GetOrientation();
+    DeviceOrientation GetOrientation();
 }
 ```
 

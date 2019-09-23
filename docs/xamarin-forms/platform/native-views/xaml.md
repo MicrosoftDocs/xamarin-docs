@@ -482,7 +482,6 @@ The `MySpinner` class exposes `ItemsSource` and `SelectedObject` properties, and
 
 This article demonstrated how to consume native views from Xamarin.Forms XAML files. Properties and event handlers can be set on native views, and they can interact with Xamarin.Forms views.
 
-
 ## Related Links
 
 - [NativeSwitch (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-nativeviews-nativeswitch)

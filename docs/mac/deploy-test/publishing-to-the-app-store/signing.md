@@ -4,8 +4,8 @@ description: "This document describes how to sign a Xamarin.Mac app with a devel
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -23,7 +23,6 @@ To build an app for deployment directly to users (NOT via the Mac App
 Store) set the **Signing Settings** to use the **Developer ID**. Ensure to edit the **Release** configuration.
 
  [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
-
 
 ## Build
 

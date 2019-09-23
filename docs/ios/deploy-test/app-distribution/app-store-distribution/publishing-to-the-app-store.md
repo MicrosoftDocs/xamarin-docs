@@ -4,8 +4,8 @@ description: "This document describes how to configure, build, and publish a Xam
 ms.prod: xamarin
 ms.assetid: DFBCC0BA-D233-4DC4-8545-AFBD3768C3B9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/25/2018
 ---
 # Publishing Xamarin.iOS apps to the App Store
@@ -20,6 +20,7 @@ This guide describes the steps to follow to prepare an app for the App
 Store and send it to Apple for review. In particular, it describes:
 
 > [!div class="checklist"]
+>
 > - Following the App Store Review Guidelines
 > - Setting up an App ID and entitlements
 > - Providing an App Store icon and app icons
@@ -354,12 +355,11 @@ There are several possible ways to use the new property. For example, to output 
        <MtouchFloat32>true</MtouchFloat32>
        <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
        <MtouchLink>SdkOnly</MtouchLink>
-       <MtouchArch>;ARMv7, ARM64</MtouchArch>
+       <MtouchArch>ARMv7, ARM64</MtouchArch>
        <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
        <MtouchTlsProvider>Default</MtouchTlsProvider>
-       <PlatformTarget>x86&</PlatformTarget>
        <BuildIpa>true</BuildIpa>
-       <IpaPackageDir>$(OutputPath</IpaPackageDir>
+       <IpaPackageDir>$(OutputPath)</IpaPackageDir>
     </PropertyGroup>
     ```
 

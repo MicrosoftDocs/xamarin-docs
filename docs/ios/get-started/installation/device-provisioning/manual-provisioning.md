@@ -4,8 +4,8 @@ description: "Once Xamarin.iOS has been successfully installed, the next step in
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 07/15/2017
 ---
 # Manual provisioning for Xamarin.iOS
@@ -222,9 +222,9 @@ The new certificates or provisioning profiles will be available in Visual Studio
 
 Apple provides a selection of special Application Services, also called capabilities, that can be activated for a Xamarin.iOS application. These Application Services must be configured on both the iOS Provisioning Portal when the **App ID** is created and in the **Entitlements.plist** file that is part of the Xamarin.iOS application's project. For information on adding Application Services to your app, refer to the [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide and the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
-* Create an App ID with the required app services.
-* Create a new [provisioning profile](#provisioningprofile) that contains this App ID.
-* Set Entitlements in the Xamarin.iOS Project
+- Create an App ID with the required app services.
+- Create a new [provisioning profile](#provisioningprofile) that contains this App ID.
+- Set Entitlements in the Xamarin.iOS Project
 
 ## Deploying to a device
 
@@ -265,7 +265,6 @@ At this point provisioning should be complete, and the app is ready to be deploy
 
 4. Make sure to set the build configuration to **iPhone** or **iPad**, rather the simulator.
 5. Click **Run** in Visual Studio and view the app running on the device.
-
 
 -----
 

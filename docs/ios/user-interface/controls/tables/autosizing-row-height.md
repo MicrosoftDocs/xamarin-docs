@@ -4,8 +4,8 @@ description: "This document describes how to add to Xamarin.iOS apps table view 
 ms.prod: xamarin
 ms.assetid: CE45A385-D40A-482A-90A0-E8382C2BFFB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -64,21 +64,21 @@ In either our Table View's Datasource (`UITableViewDatasource`) or Source (`UITa
 
 ```csharp
 public string CellID {
-	get { return "GrowCell"; }
+    get { return "GrowCell"; }
 }
 ...
 
 public override UITableViewCell GetCell (UITableView tableView, Foundation.NSIndexPath indexPath)
 {
-	var cell = tableView.DequeueReusableCell (CellID, indexPath) as GrowRowTableCell;
-	var item = Items [indexPath.Row];
+    var cell = tableView.DequeueReusableCell (CellID, indexPath) as GrowRowTableCell;
+    var item = Items [indexPath.Row];
 
-	// Setup
-	cell.Image = UIImage.FromFile(item.ImageName);
-	cell.Title = item.Title;
-	cell.Description = item.Description;
+    // Setup
+    cell.Image = UIImage.FromFile(item.ImageName);
+    cell.Title = item.Title;
+    cell.Description = item.Description;
 
-	return cell;
+    return cell;
 }
 ```
 
@@ -87,14 +87,14 @@ By default, the Table View will be set for Auto-Resizing Row Height. To ensure t
 ```csharp
 public override void ViewWillAppear (bool animated)
 {
-	base.ViewWillAppear (animated);
+    base.ViewWillAppear (animated);
 
-	// Initialize table
-	TableView.DataSource = new GrowRowTableDataSource(this);
-	TableView.Delegate = new GrowRowTableDelegate (this);
-	TableView.RowHeight = UITableView.AutomaticDimension;
-	TableView.EstimatedRowHeight = 40f;
-	TableView.ReloadData ();
+    // Initialize table
+    TableView.DataSource = new GrowRowTableDataSource(this);
+    TableView.Delegate = new GrowRowTableDelegate (this);
+    TableView.RowHeight = UITableView.AutomaticDimension;
+    TableView.EstimatedRowHeight = 40f;
+    TableView.ReloadData ();
 }
 ```
 
@@ -103,7 +103,6 @@ This estimate doesn't have to be exact, just a rough estimate of the average hei
 With this code in place, when the app is run, each row will shrink and grow based on the height of the last Label in the Cell Prototype. For example:
 
 [![](autosizing-row-height-images/table07.png "A sample table run")](autosizing-row-height-images/table07.png#lightbox)
-
 
 ## Related Links
 

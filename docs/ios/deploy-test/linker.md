@@ -4,8 +4,8 @@ description: "This document describes the Xamarin.iOS linker, which is used to e
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/24/2017
 ---
 
@@ -49,16 +49,15 @@ Do the following:
 
 1. Right-click on the **Project Name** in the **Solution Explorer** and select **Properties**:
 
-	![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
+    ![](linker-images/linking01w.png "Right-click on the Project Name in the Solution Explorer and select Properties")
 2. In the **Project Properties**, select **IOS Build**:
 
-	![](linker-images/linking02w.png "Select IOS Build")
+    ![](linker-images/linking02w.png "Select IOS Build")
 3. Follow the instructions below to change the linking options.
 
 -----
 
 The three main options are offered are described below:
-
 
 ### Don't Link
 
@@ -240,7 +239,6 @@ class LinkerSafeAttribute : System.Attribute {}
 ## Custom Linker Configuration
 
 Follow the [instructions for creating a linker configuration file](~/cross-platform/deploy-test/linker.md).
-
 
 ## Related Links
 

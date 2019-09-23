@@ -4,8 +4,8 @@ description: "This document describes how to use alternate app icons in Xamarin.
 ms.prod: xamarin
 ms.assetid: 302fa818-33b9-4ea1-ab63-0b2cb312299a
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/29/2017
 ---
 
@@ -32,15 +32,15 @@ Do the following:
 
 1. Select the required icon images in a folder, select all and drag them to the **Resources** folder in the **Solution Explorer**:
 
-	![](alternate-app-icons-images/icons00.png "Select the icons images from a folder")
+    ![](alternate-app-icons-images/icons00.png "Select the icons images from a folder")
 
 2. When prompted, select **Copy**, **Use the same action for all selected files** and click the **OK** button:
 
-	![](alternate-app-icons-images/icons02.png "The Add File to Folder dialog box")
+    ![](alternate-app-icons-images/icons02.png "The Add File to Folder dialog box")
 
 3. The **Resources** folder should look like the following when completed:
 
-	![](alternate-app-icons-images/icons01.png "The Resources folder should look like this")
+    ![](alternate-app-icons-images/icons01.png "The Resources folder should look like this")
 
 <a name="Modifying-the-Info.plist-File" />
 
@@ -69,34 +69,34 @@ Or like this if opened in a text editor:
 ```xml
 <key>CFBundleIcons</key>
 <dict>
-	<key>CFBundleAlternateIcons</key>
-	<dict>
-		<key>AppIcon2</key>
-		<dict>
-			<key>CFBundleIconFiles</key>
-			<array>
-				<string>100_icon</string>
-				<string>114_icon</string>
-				<string>120_icon</string>
-				<string>144_icon</string>
-				<string>152_icon</string>
-				<string>167_icon</string>
-				<string>180_icon</string>
-				<string>29_icon</string>
-				<string>40_icon</string>
-				<string>50_icon</string>
-				<string>512_icon</string>
-				<string>57_icon</string>
-				<string>58_icon</string>
-				<string>72_icon</string>
-				<string>76_icon</string>
-				<string>80_icon</string>
-				<string>87_icon</string>
-			</array>
-			<key>UIPrerenderedIcon</key>
-			<false/>
-		</dict>
-	</dict>
+    <key>CFBundleAlternateIcons</key>
+    <dict>
+        <key>AppIcon2</key>
+        <dict>
+            <key>CFBundleIconFiles</key>
+            <array>
+                <string>100_icon</string>
+                <string>114_icon</string>
+                <string>120_icon</string>
+                <string>144_icon</string>
+                <string>152_icon</string>
+                <string>167_icon</string>
+                <string>180_icon</string>
+                <string>29_icon</string>
+                <string>40_icon</string>
+                <string>50_icon</string>
+                <string>512_icon</string>
+                <string>57_icon</string>
+                <string>58_icon</string>
+                <string>72_icon</string>
+                <string>76_icon</string>
+                <string>80_icon</string>
+                <string>87_icon</string>
+            </array>
+            <key>UIPrerenderedIcon</key>
+            <false/>
+        </dict>
+    </dict>
 </dict>
 ```
 
@@ -129,7 +129,7 @@ The `AlternateIconName` property of the `UIApplication` class allows the develop
 var name = UIApplication.SharedApplication.AlternateIconName;
 
 if (name != null ) {
-	// Do something with the name
+    // Do something with the name
 }
 ```
 
@@ -138,16 +138,16 @@ The `SetAlternameIconName` property of the `UIApplication` class allows the deve
 ```csharp
 partial void UsePrimaryIcon (Foundation.NSObject sender)
 {
-	UIApplication.SharedApplication.SetAlternateIconName (null, (err) => {
-		Console.WriteLine ("Set Primary Icon: {0}", err);
-	});
+    UIApplication.SharedApplication.SetAlternateIconName (null, (err) => {
+        Console.WriteLine ("Set Primary Icon: {0}", err);
+    });
 }
 
 partial void UseAlternateIcon (Foundation.NSObject sender)
 {
-	UIApplication.SharedApplication.SetAlternateIconName ("AppIcon2", (err) => {
-		Console.WriteLine ("Set Alternate Icon: {0}", err);
-	});
+    UIApplication.SharedApplication.SetAlternateIconName ("AppIcon2", (err) => {
+        Console.WriteLine ("Set Alternate Icon: {0}", err);
+    });
 }
 ```
 
@@ -164,8 +164,6 @@ If the user switches back to the primary icon, an alert like the following will 
 ## Summary
 
 This article has covered adding alternate app icons to a Xamarin.iOS project and using them inside of the app.
-
-
 
 ## Related Links
 

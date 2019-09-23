@@ -4,8 +4,8 @@ description: "This article covers working with the standard AppKit controls such
 ms.prod: xamarin
 ms.assetid: d2593883-d255-431f-9781-75f04d8cecea
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/14/2017
 ---
 
@@ -210,7 +210,6 @@ Select the type of exposure to create and give the **Outlet** or **Action** a **
 
 [![](standard-controls-images/edit13.png "Configuring the Outlet or Action")](standard-controls-images/edit13.png#lightbox)
 
-
 For more information on working with **Outlets** and **Actions**, please see the [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) section of our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentation.
 
 <a name="Synchronizing_Changes_with_Xcode" />
@@ -319,7 +318,6 @@ When the app is run and the Window with the Button is Key and Focused, if the us
 AppKit provides several types of Checkboxes and Radio Button Groups that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
 
 [![](standard-controls-images/buttons02.png "An example of the available checkbox types")](standard-controls-images/buttons02.png#lightbox)
-
 
 Checkboxes and Radio Buttons (exposed via **Outlets**) have a state (like **On** and **Off**), the state can be checked or set with the `State` property against the `NSCellStateValue` enum. For example:
 
@@ -632,7 +630,6 @@ By using Key-Value Coding and Data Binding techniques in your Xamarin.Mac applic
 Key-Value Coding (KVC) is a mechanism for accessing an object’s properties indirectly, using keys (specially formatted strings) to identify properties instead of accessing them through instance variables or accessor methods (`get/set`). By implementing Key-Value Coding compliant accessors in your Xamarin.Mac application, you gain access to other macOS features such as Key-Value Observing (KVO), Data Binding, Core Data, Cocoa bindings, and scriptability.
 
 For more information, please see the [Simple Data Binding](~/mac/app-fundamentals/databinding.md#Simple_Data_Binding) section of our [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md) documentation.
-
 
 <a name="Summary" />
 

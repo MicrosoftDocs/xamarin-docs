@@ -110,8 +110,6 @@ The renderers detect changes to the native control, and then call `SetValueFromR
 
 The [**StepSliderDemo**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter27/StepSliderDemo) sample demonstrates this new slider.
 
-
-
 ## Related links
 
 - [Chapter 27 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch27-Apr2016.pdf)

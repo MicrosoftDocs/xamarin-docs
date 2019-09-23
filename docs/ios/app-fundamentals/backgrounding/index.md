@@ -4,8 +4,8 @@ description: "Background processing or backgrounding is the process of letting a
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 06/05/2018
 ---
 
@@ -30,8 +30,6 @@ In this guide and accompanying walkthroughs, we are going to learn to perform ap
 ## Summary
 
 In this guide, we introduced the different ways of doing background processing in iOS. We covered iOS Application States and examined the role backgrounding plays in the iOS Application Lifecycle. Additionally, we learned how we could register individual tasks or entire applications to operate in the background in iOS. Finally, we reinforced our understanding of backgrounding on iOS by building applications that perform updates in the background.
-
-
 
 ## Related Links
 

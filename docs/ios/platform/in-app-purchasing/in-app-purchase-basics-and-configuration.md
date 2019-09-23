@@ -4,8 +4,8 @@ description: "This document describes in-app purchases in Xamarin.iOS, discussin
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -26,7 +26,6 @@ following setup and configuration:
 - **iOS Provisioning Portal** – Creating a Bundle Identifier and enabling App Store access for your app.
 - **Store Kit** – Adding code to your app for displaying products, purchasing products and restoring transactions.
 - **Custom code** – To track purchases made by customers and provide the products or services they’ve purchased. You may also need implement a server-side process to validate receipts if your products consist of content downloaded from a server (such as books and magazine issues).
-
 
 There are two Store Kit “server environments”:
 
@@ -73,7 +72,6 @@ should be complete before writing any code:
 - **iOS Provisioning Portal** – Ensure your app has a valid App ID (not a wildcard with an asterisk * in it) and has In App Purchasing enabled.
 - **iTunes Connect Application Management** – Add products to your application.
 
-
 ### Apple Developer Account
 
 Building and distributing free apps requires very little configuration in [iTunes Connect](https://itunesconnect.apple.com), however to sell paid apps or in-app purchases requires you to
@@ -92,7 +90,6 @@ your code will fail until Apple has processed your **Contracts, Tax, and Banking
 ### iOS Provisioning Portal
 
 New applications are set up in the **App IDs** section of the **iOS Provisioning Portal**. To create a new App ID, go to the [Member Center of the iOS Provisioning Portal](https://developer.apple.com/membercenter/index.action), navigate to **Certificates, Identifiers, and Profiles** section of the Portal, and click on **Identifiers** under *iOS Apps*. Then, click the "+" on the top right to generate a new App ID.
-
 
 The form for creating new **App IDs**
 
@@ -145,13 +142,12 @@ already added:
 The process to add new products has two steps:
 
 1. Choose the product type: 
-	[![](in-app-purchase-basics-and-configuration-images/image8.png "Choose the product type")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
+    [![](in-app-purchase-basics-and-configuration-images/image8.png "Choose the product type")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
 2. Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
-	[![](in-app-purchase-basics-and-configuration-images/image9.png "Entering the products attributes")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
+    [![](in-app-purchase-basics-and-configuration-images/image9.png "Entering the products attributes")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 The fields required for each in-app purchase product are described
 below:
-
 
 ### Reference Name
 
@@ -196,7 +192,6 @@ There are five types of in-app purchase product you can offer:
 1. **Auto-Renewable Subscriptions** – Just like a real-world magazine subscription, at the end of the subscription period Apple automatically charges the customer again and extends the subscription term, forever or until the customer explicitly cancels it. This is the preferred payment method for Newsstand apps (in fact, apps MUST support this payment method to be approved for Newsstand distribution).
 1. **Free Subscription** – Can only be offered in Newsstand-enabled apps, and allows the customer to access subscription content on all their devices. Free subscriptions never expire.
 1. **Non-Renewing Subscription** – Should be used to sell time-limited access to static content, such as one month’s access to a photo archive.
-
 
  *This document currently covers only the first two product types (Consumable and Non-Consumable).*
 
@@ -247,10 +242,8 @@ number of supported languages. Each language can be added/edited in via a
 popup:
 
  [![](in-app-purchase-basics-and-configuration-images/image12.png "Each language can be added/edited in via a popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
-   
-   
-   
- When you display product information in your app, the localized
+
+When you display product information in your app, the localized
 text is available for you to display via StoreKit. The currency display must
 also be localized to show the correct symbol and decimal formatting – this
 formatting is covered later in the document.
@@ -270,10 +263,8 @@ choose some products to submit with it. The iTunes Connect portal will prompt
 you to do this, as shown in this screenshot:
 
  [![](in-app-purchase-basics-and-configuration-images/image13.png "The iTunes Connect portal will prompt you to submit some products as well")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
-   
-   
-   
- The application and the in-app purchases will be reviewed
+
+The application and the in-app purchases will be reviewed
 together, so that they all get approved at once (so that app doesn’t go into
 the store without any approved products!).
 

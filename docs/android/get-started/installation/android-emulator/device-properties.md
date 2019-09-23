@@ -103,4 +103,3 @@ listed in the **New Device** and **Device Editor** screens:
 
 For more information about these properties, see
 [Hardware Profile Properties](https://developer.android.com/studio/run/managing-avds.html#hpproperties).
-

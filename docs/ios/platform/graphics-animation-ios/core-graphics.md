@@ -4,8 +4,8 @@ description: "This article discusses the Core Graphics iOS frameworks. It shows 
 ms.prod: xamarin
 ms.assetid: 4A30F480-0723-4B8A-9049-7CEB6211304A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -13,7 +13,7 @@ ms.date: 03/18/2017
 
 _This article discusses the Core Graphics iOS frameworks. It shows how to use Core Graphics to draw geometry, images and PDFs._
 
-iOS includes the [*Core Graphics*](https://developer.apple.com/library/prerelease/ios/documentation/CoreGraphics/Reference/CoreGraphics_Framework/index.html) framework to provide low-level drawing support. These frameworks are what enable the rich graphical capabilities within UIKit. 
+iOS includes the [*Core Graphics*](https://developer.apple.com/library/prerelease/ios/documentation/CoreGraphics/Reference/CoreGraphics_Framework/index.html) framework to provide low-level drawing support. These frameworks are what enable the rich graphical capabilities within UIKit.
 
 Core Graphics is a low-level 2D graphics framework that allows drawing device independent graphics. All 2D drawing in UIKit uses Core Graphics internally.
 
@@ -23,7 +23,6 @@ Core Graphics supports drawing in a number of scenarios including:
 - [Drawing images in memory or on screen](#Drawing_Images_and_Text).
 - Creating and drawing to a PDF.
 - Reading and drawing an existing PDF.
-
 
 ## Geometric Space
 
@@ -44,10 +43,10 @@ Every `UIView` has a `Draw` method that is called by the system when it needs to
 ```csharp
 public class TriangleView : UIView
 {
-	public override void Draw (CGRect rect)
-	{
-		base.Draw (rect);
-	}
+    public override void Draw (CGRect rect)
+    {
+        base.Draw (rect);
+    }
 }
 ```
 
@@ -72,25 +71,25 @@ For example, consider the following code snippet:
 ```csharp
 //get graphics context
 using (CGContext g = UIGraphics.GetCurrentContext ()) {
-			
-	//set up drawing attributes
-	g.SetLineWidth (10);
-	UIColor.Blue.SetFill ();
-	UIColor.Red.SetStroke ();
 
-	//create geometry
-	var path = new CGPath ();
+    //set up drawing attributes
+    g.SetLineWidth (10);
+    UIColor.Blue.SetFill ();
+    UIColor.Red.SetStroke ();
 
-	path.AddLines (new CGPoint[]{
-	new CGPoint (100, 200),
-	new CGPoint (160, 100), 
-	new CGPoint (220, 200)});
+    //create geometry
+    var path = new CGPath ();
 
-	path.CloseSubpath ();
+    path.AddLines (new CGPoint[]{
+    new CGPoint (100, 200),
+    new CGPoint (160, 100),
+    new CGPoint (220, 200)});
 
-	//add geometry to graphics context and draw it
-	g.AddPath (path);		
-	g.DrawPath (CGPathDrawingMode.FillStroke);
+    path.CloseSubpath ();
+
+    //add geometry to graphics context and draw it
+    g.AddPath (path);
+    g.DrawPath (CGPathDrawingMode.FillStroke);
 }
 ```
 
@@ -108,7 +107,7 @@ With this line, it first gets the current graphics context to use for drawing. Y
 g.SetLineWidth (10);
 UIColor.Blue.SetFill ();
 UIColor.Red.SetStroke ();
-```	
+```
 
 After getting a graphics context the code sets up some attributes to use when drawing, shown above. In this case the line width, stroke and fill colors are set. Any subsequent drawing will then use these attributes because they are maintained in the graphics context's state.
 
@@ -119,11 +118,11 @@ var path = new CGPath ();
 
 path.AddLines (new CGPoint[]{
 new CGPoint (100, 200),
-new CGPoint (160, 100), 
+new CGPoint (160, 100),
 new CGPoint (220, 200)});
 
 path.CloseSubpath ();
-```	
+```
 
 Once the path is created, it's added to the graphics context so that calling `AddPath` and `DrawPath` respectively can draw it.
 
@@ -146,19 +145,19 @@ Setting the current path as the clipping path constrains all subsequent drawing 
 
 ```csharp
 // the color space determines how Core Graphics interprets color information
-	using (CGColorSpace rgb = CGColorSpace.CreateDeviceRGB()) {
-		CGGradient gradient = new CGGradient (rgb, new CGColor[] {
-		UIColor.Blue.CGColor,
-		UIColor.Yellow.CGColor
-	});
+    using (CGColorSpace rgb = CGColorSpace.CreateDeviceRGB()) {
+        CGGradient gradient = new CGGradient (rgb, new CGColor[] {
+        UIColor.Blue.CGColor,
+        UIColor.Yellow.CGColor
+    });
 
 // draw a linear gradient
-	g.DrawLinearGradient (
-		gradient, 
-		new CGPoint (path.BoundingBox.Left, path.BoundingBox.Top), 
-		new CGPoint (path.BoundingBox.Right, path.BoundingBox.Bottom), 
-		CGGradientDrawingOptions.DrawsBeforeStartLocation);
-	}
+    g.DrawLinearGradient (
+        gradient,
+        new CGPoint (path.BoundingBox.Left, path.BoundingBox.Top),
+        new CGPoint (path.BoundingBox.Right, path.BoundingBox.Bottom),
+        CGGradientDrawingOptions.DrawsBeforeStartLocation);
+    }
 ```
 
 These changes produce a gradient fill as shown below:
@@ -177,7 +176,7 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
 Adding this code before any drawing operations results in dashed strokes 10 units long, with 4 units of spacing between dashes, as shown below:
 
  ![](core-graphics-images/02-dashed-stroke.png "Adding this code before any drawing operations results in dashed strokes")
- 
+
 Note that when using the Unified API in Xamarin.iOS, the array type needs to be an `nfloat`, and also needs to be explicitly cast to Math.PI.
 
 <a name="Drawing_Images_and_Text"/>
@@ -189,11 +188,11 @@ In addition to drawing paths in a view's graphics context, Core Graphics also su
 ```csharp
 public override void Draw (CGRect rect)
 {
-	base.Draw (rect);
+    base.Draw (rect);
 
-	using(CGContext g = UIGraphics.GetCurrentContext ()){
-		g.DrawImage (rect, UIImage.FromFile ("MyImage.png").CGImage);
-	}
+    using(CGContext g = UIGraphics.GetCurrentContext ()){
+        g.DrawImage (rect, UIImage.FromFile ("MyImage.png").CGImage);
+    }
 }
 ```
 
@@ -208,15 +207,15 @@ The graphics context has helper methods to transform the CTM. In this case, `Sca
 ```csharp
 public override void Draw (CGRect rect)
 {
-	base.Draw (rect);
-	
-	using (CGContext g = UIGraphics.GetCurrentContext ()) {
+    base.Draw (rect);
 
-		// scale and translate the CTM so the image appears upright
-		g.ScaleCTM (1, -1);
-		g.TranslateCTM (0, -Bounds.Height);
-		g.DrawImage (rect, UIImage.FromFile ("MyImage.png").CGImage);
-}	
+    using (CGContext g = UIGraphics.GetCurrentContext ()) {
+
+        // scale and translate the CTM so the image appears upright
+        g.ScaleCTM (1, -1);
+        g.TranslateCTM (0, -Bounds.Height);
+        g.DrawImage (rect, UIImage.FromFile ("MyImage.png").CGImage);
+}
 ```
 
 The resulting image is then displayed upright:
@@ -233,26 +232,26 @@ As with paths and images, drawing text with Core Graphics involves the same basi
 ```csharp
 public override void Draw (RectangleF rect)
 {
-	base.Draw (rect);
-	
-	// image drawing code omitted for brevity ...
+    base.Draw (rect);
 
-	// translate the CTM by the font size so it displays on screen
-	float fontSize = 35f;
-	g.TranslateCTM (0, fontSize);
+    // image drawing code omitted for brevity ...
 
-	// set general-purpose graphics state
-	g.SetLineWidth (1.0f);
-	g.SetStrokeColor (UIColor.Yellow.CGColor);
-	g.SetFillColor (UIColor.Red.CGColor);
-	g.SetShadow (new CGSize (5, 5), 0, UIColor.Blue.CGColor);
+    // translate the CTM by the font size so it displays on screen
+    float fontSize = 35f;
+    g.TranslateCTM (0, fontSize);
 
-	// set text specific graphics state
-	g.SetTextDrawingMode (CGTextDrawingMode.FillStroke);
-	g.SelectFont ("Helvetica", fontSize, CGTextEncoding.MacRoman);
+    // set general-purpose graphics state
+    g.SetLineWidth (1.0f);
+    g.SetStrokeColor (UIColor.Yellow.CGColor);
+    g.SetFillColor (UIColor.Red.CGColor);
+    g.SetShadow (new CGSize (5, 5), 0, UIColor.Blue.CGColor);
 
-	// show the text
-	g.ShowText ("Hello Core Graphics");
+    // set text specific graphics state
+    g.SetTextDrawingMode (CGTextDrawingMode.FillStroke);
+    g.SelectFont ("Helvetica", fontSize, CGTextEncoding.MacRoman);
+
+    // show the text
+    g.ShowText ("Hello Core Graphics");
 }
 ```
 
@@ -271,7 +270,6 @@ In addition to drawing to a view's graphics context, Core Graphics supports draw
 - Getting the image from the context
 - Removing the context
 
-
 Unlike the `Draw` method, where the context is supplied by the view, in this case you create the context in one of two ways:
 
 1. By calling `UIGraphics.BeginImageContext` (or `BeginImageContextWithOptions`)
@@ -285,38 +283,38 @@ Once you have an image context, adding drawing code is just like it is in a `UIV
 ```csharp
 UIImage DrawTriangle ()
 {
-	UIImage triangleImage;
+    UIImage triangleImage;
 
-	//push a memory backed bitmap context on the context stack
-	UIGraphics.BeginImageContext (new CGSize (200.0f, 200.0f));
+    //push a memory backed bitmap context on the context stack
+    UIGraphics.BeginImageContext (new CGSize (200.0f, 200.0f));
 
-	//get graphics context
-	using(CGContext g = UIGraphics.GetCurrentContext ()){
+    //get graphics context
+    using(CGContext g = UIGraphics.GetCurrentContext ()){
 
-		//set up drawing attributes
-		g.SetLineWidth(4);
-		UIColor.Purple.SetFill ();
-		UIColor.Black.SetStroke ();
+        //set up drawing attributes
+        g.SetLineWidth(4);
+        UIColor.Purple.SetFill ();
+        UIColor.Black.SetStroke ();
 
-		//create geometry
-		path = new CGPath ();
+        //create geometry
+        path = new CGPath ();
 
-		path.AddLines(new CGPoint[]{
-			new CGPoint(100,200),
-			new CGPoint(160,100), 
-			new CGPoint(220,200)});
+        path.AddLines(new CGPoint[]{
+            new CGPoint(100,200),
+            new CGPoint(160,100),
+            new CGPoint(220,200)});
 
-		path.CloseSubpath();
+        path.CloseSubpath();
 
-		//add geometry to graphics context and draw it
-		g.AddPath(path);
-		g.DrawPath(CGPathDrawingMode.FillStroke);
+        //add geometry to graphics context and draw it
+        g.AddPath(path);
+        g.DrawPath(CGPathDrawingMode.FillStroke);
 
-		//get a UIImage from the context
-		triangleImage = UIGraphics.GetImageFromCurrentImageContext ();
-	}
-	
-	return triangleImage;
+        //get a UIImage from the context
+        triangleImage = UIGraphics.GetImageFromCurrentImageContext ();
+    }
+
+    return triangleImage;
 }
 ```
 
@@ -346,18 +344,18 @@ For example, the following code in a `UIView` subclass reads a PDF from a file i
 ```csharp
 public class PDFView : UIView
 {
-	CGPDFDocument pdfDoc;
+    CGPDFDocument pdfDoc;
 
-	public PDFView ()
-	{
-		//create a CGPDFDocument from file.pdf included in the main bundle
-		pdfDoc = CGPDFDocument.FromFile ("file.pdf");
-	}
-  
-	 public override void Draw (Rectangle rect)
-	{
-		...
-	}
+    public PDFView ()
+    {
+        //create a CGPDFDocument from file.pdf included in the main bundle
+        pdfDoc = CGPDFDocument.FromFile ("file.pdf");
+    }
+
+     public override void Draw (Rectangle rect)
+    {
+        ...
+    }
 }
 ```
 
@@ -366,26 +364,26 @@ The `Draw` method can then use the `CGPDFDocument` to read a page into `CGPDFPag
 ```csharp
 public override void Draw (CGRect rect)
 {
-	base.Draw (rect);
-		
-	//flip the CTM so the PDF will be drawn upright
-	using (CGContext g = UIGraphics.GetCurrentContext ()) {
-		g.TranslateCTM (0, Bounds.Height);
-		g.ScaleCTM (1, -1);
-		
-		// render the first page of the PDF
-		using (CGPDFPage pdfPage = pdfDoc.GetPage (1)) {
-			
-		//get the affine transform that defines where the PDF is drawn
-		CGAffineTransform t = pdfPage.GetDrawingTransform (CGPDFBox.Crop, rect, 0, true);
-		
-		//concatenate the pdf transform with the CTM for display in the view
-		g.ConcatCTM (t);
-		
-		//draw the pdf page
-		g.DrawPDFPage (pdfPage);
-		}
-	}
+    base.Draw (rect);
+
+    //flip the CTM so the PDF will be drawn upright
+    using (CGContext g = UIGraphics.GetCurrentContext ()) {
+        g.TranslateCTM (0, Bounds.Height);
+        g.ScaleCTM (1, -1);
+
+        // render the first page of the PDF
+        using (CGPDFPage pdfPage = pdfDoc.GetPage (1)) {
+
+        //get the affine transform that defines where the PDF is drawn
+        CGAffineTransform t = pdfPage.GetDrawingTransform (CGPDFBox.Crop, rect, 0, true);
+
+        //concatenate the pdf transform with the CTM for display in the view
+        g.ConcatCTM (t);
+
+        //draw the pdf page
+        g.DrawPDFPage (pdfPage);
+        }
+    }
 }
 ```
 
@@ -404,20 +402,19 @@ UIGraphics.BeginPDFContext (data, CGRect.Empty, null);
 
 //start a PDF page
 UIGraphics.BeginPDFPage ();
-       
+
 using (CGContext g = UIGraphics.GetCurrentContext ()) {
-	g.ScaleCTM (1, -1);
-	g.TranslateCTM (0, -25);      
-	g.SelectFont ("Helvetica", 25, CGTextEncoding.MacRoman);
-	g.ShowText ("Hello Core Graphics");
-	}
-	
+    g.ScaleCTM (1, -1);
+    g.TranslateCTM (0, -25);
+    g.SelectFont ("Helvetica", 25, CGTextEncoding.MacRoman);
+    g.ShowText ("Hello Core Graphics");
+    }
+
 //complete a PDF page
 UIGraphics.EndPDFContent ();
 ```
 
 The resulting text is drawn to the PDF, which is then contained in an `NSData` that can be saved, uploaded, emailed, etc.
-
 
 ## Summary
 

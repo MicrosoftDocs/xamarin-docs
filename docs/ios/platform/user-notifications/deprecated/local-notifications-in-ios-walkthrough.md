@@ -4,8 +4,8 @@ description: "In this section we'll walk through how to use local notifications 
 ms.prod: xamarin
 ms.assetid: 32B9C6F0-2BB3-4295-99CB-A75418969A62
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/18/2017
 ---
 
@@ -22,76 +22,73 @@ Let create a simple application that will show local notifications in action. Th
     button on it. When we click on the button, it will create a local notification. After the specified time period has
     elapsed, we will see the notification appear.
 
-
 1. In Visual Studio for Mac, create a new Single View iOS solution and call it `Notifications`.
 1. Open the `Main.storyboard` file, and drag a button onto the View. Name the button **button**, and give it the title **Add Notification**. You may also want to set some [constraints](~/ios/user-interface/designer/designer-auto-layout.md) to the button at this point:  
-	![](local-notifications-in-ios-walkthrough-images/image3.png "Setting some constraints on the button")
+    ![](local-notifications-in-ios-walkthrough-images/image3.png "Setting some constraints on the button")
 1. Edit the `ViewController` class, and add the following event handler to the ViewDidLoad method:
 
     ```csharp
-	button.TouchUpInside += (sender, e) =>
-	{
-	    // create the notification
-	    var notification = new UILocalNotification();
+    button.TouchUpInside += (sender, e) =>
+    {
+        // create the notification
+        var notification = new UILocalNotification();
 
-	    // set the fire date (the date time in which it will fire)
-	    notification.FireDate = NSDate.FromTimeIntervalSinceNow(60);
+        // set the fire date (the date time in which it will fire)
+        notification.FireDate = NSDate.FromTimeIntervalSinceNow(60);
 
-	    // configure the alert
-	    notification.AlertAction = "View Alert";
-	    notification.AlertBody = "Your one minute alert has fired!";
+        // configure the alert
+        notification.AlertAction = "View Alert";
+        notification.AlertBody = "Your one minute alert has fired!";
 
-	    // modify the badge
-	    notification.ApplicationIconBadgeNumber = 1;
+        // modify the badge
+        notification.ApplicationIconBadgeNumber = 1;
 
-	    // set the sound to be the default sound
-	    notification.SoundName = UILocalNotification.DefaultSoundName;
+        // set the sound to be the default sound
+        notification.SoundName = UILocalNotification.DefaultSoundName;
 
-	    // schedule it
-	    UIApplication.SharedApplication.ScheduleLocalNotification(notification);
-	};
-	```
+        // schedule it
+        UIApplication.SharedApplication.ScheduleLocalNotification(notification);
+    };
+    ```
 
-	This code will create a notification that uses a sound, sets the value of the icon badge to 1, and displays an alert to the user.
+    This code will create a notification that uses a sound, sets the value of the icon badge to 1, and displays an alert to the user.
 
 1. Next edit the file `AppDelegate.cs`, first add the following code to
     the `FinishedLaunching` method. We have checked to see if the device is running iOS 8, if so we are **required** to ask
     for the user's permission to receive notifications:
 
     ```csharp
-	if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
-			var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes (
-				UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
-			);
+    if (UIDevice.CurrentDevice.CheckSystemVersion (8, 0)) {
+        var notificationSettings = UIUserNotificationSettings.GetSettingsForTypes (
+            UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound, null
+        );
 
-			application.RegisterUserNotificationSettings (notificationSettings);
-		}
-	```
+        application.RegisterUserNotificationSettings (notificationSettings);
+    }
+    ```
 
 1. Still in `AppDelegate.cs`, add the following method which will be called
     when a notification is received:
 
     ```csharp
-	public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
-	        {
-	            // show an alert
-	            UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
-	            okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
+    public override void ReceivedLocalNotification(UIApplication application, UILocalNotification notification)
+    {
+        // show an alert
+        UIAlertController okayAlertController = UIAlertController.Create(notification.AlertAction, notification.AlertBody, UIAlertControllerStyle.Alert);
+        okayAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, null));
 
-	            UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
+        UIApplication.SharedApplication.KeyWindow.RootViewController.PresentViewController(okayAlertController, true, null);
 
-	            // reset our badge
-	            UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
-	        }
-
-	```
+        // reset our badge
+        UIApplication.SharedApplication.ApplicationIconBadgeNumber = 0;
+    }
+    ```
 
 1. We need to handle the case where the notification was launched because of a local notification. Edit
-        the method `FinishedLaunching` in the `AppDelegate` to include the following snippet of code:
-
+    the method `FinishedLaunching` in the `AppDelegate` to include the following snippet of code:
 
     ```csharp
-	// check for a notification
+    // check for a notification
 
     if (launchOptions != null)
     {
@@ -111,8 +108,7 @@ Let create a simple application that will show local notifications in action. Th
             }
         }
     }
-
-	```
+    ```
 
 1. Finally, run the application. On iOS 8 you will be prompted to allow notifications. Click **OK** and then click the **Add notification** button. After a short pause you should see the alert dialog, as shown in the following screenshots:
 
@@ -123,8 +119,7 @@ Let create a simple application that will show local notifications in action. Th
 ## Summary
 
 This walkthrough showed how to use the various API's for creating and publishing notifications in iOS. It also demonstrated
-    how to update the application icon with a badge to provide some application specific feedback to the user.
-
+how to update the application icon with a badge to provide some application specific feedback to the user.
 
 ## Related Links
 

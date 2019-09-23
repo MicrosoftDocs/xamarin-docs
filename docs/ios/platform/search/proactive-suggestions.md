@@ -4,8 +4,8 @@ description: "This article shows how to use Proactive Suggestions in the Xamarin
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/16/2017
 ---
 
@@ -509,14 +509,14 @@ Would tell the system that the app expects the user to enter a full street addre
 
 The following are a few of the more common types available to the developer in the `UITextContentType` static class:
 
-* `Name`
-* `GivenName`
-* `FamilyName`
-* `Location`
-* `FullStreetAddress`
-* `AddressCityAndState`
-* `TelephoneNumber`
-* `EmailAddress`
+- `Name`
+- `GivenName`
+- `FamilyName`
+- `Location`
+- `FullStreetAddress`
+- `AddressCityAndState`
+- `TelephoneNumber`
+- `EmailAddress`
 
 ### Routing Apps and Locations Suggestions
 
@@ -528,7 +528,6 @@ This section will take a look at consuming Location Suggestions directly from wi
 - To give iOS the ability to learn to suggest the app to the user at appropriate times, based on user engagement.
 
 When the app is started with a MapKit `MKDirectionsRequest` object, it should automatically start giving the user directions to the requested location, or present a UI that makes it easy for the user to start getting directions. For example:
-
 
 ```csharp
 using System;
@@ -603,7 +602,6 @@ For apps that handle media, iOS supports the following behaviors:
 
 By including a simple API call in iOS 10, the developer can create a more engaging lock screen experience for users of the media app. By using the `MPPlayableContentManager` class to manage the media playback, full media controls (like those presented by the Music app) will be presented on the lock screen for the app.
 
-
 ```csharp
 using System;
 using MediaPlayer;
@@ -677,8 +675,6 @@ namespace MonkeyPlayer
 ## Summary
 
 This article has covered Proactive Suggestions and showed how the developer can use them to drive traffic to the Xamarin.iOS app. It covered the step to implement Proactive Suggestions and presented usage guidelines.
-
-
 
 ## Related Links
 

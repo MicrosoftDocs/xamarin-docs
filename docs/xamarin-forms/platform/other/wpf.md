@@ -147,4 +147,3 @@ Title="BoxViewClock" Height="450" Width="800"
 ## Issues
 
 This is a Preview, so you should expect that not everything is production ready. Not all NuGet packages for Xamarin.Forms are ready for WPF, and some features might not be fully working.
-

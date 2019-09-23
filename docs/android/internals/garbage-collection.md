@@ -27,7 +27,6 @@ there are no outstanding references*, or when a scope has exited. The
 GC will run when the minor heap has run out of memory for new
 allocations. If there are no allocations, it will not run.
 
-
 Minor collections are cheap and frequent, and are used to collect 
 recently allocated and dead objects. Minor collections are performed 
 after every few MB of allocated objects. Minor collections may be 
@@ -43,8 +42,6 @@ or by calling
 [GC.Collect (int)](/dotnet/api/system.gc.collect#System_GC_Collect_System_Int32_) 
 with the argument 
 [GC.MaxGeneration](xref:System.GC.MaxGeneration). 
-
-
 
 ## Cross-VM Object Collections
 
@@ -74,7 +71,6 @@ There are three categories of object types.
     [IJavaObject.Handle](xref:Android.Runtime.IJavaObject.Handle) 
     property contains a JNI global reference to the native peer. 
 
-
 There are two types of native peers:
 
 - **Framework peers** : "Normal" Java types which know nothing of
@@ -85,7 +81,6 @@ There are two types of native peers:
     [Android Callable Wrappers](~/android/platform/java-integration/working-with-jni.md)
     which are generated at build time for each Java.Lang.Object
     subclass present within the application.
-
 
 As there are two VMs within a Xamarin.Android process, there are two
 types of garbage collections:
@@ -122,7 +117,6 @@ lifetime of Native peers will be extended beyond what they would
 otherwise live, as the Native peer won't be collectible until both the
 Native peer and the Managed peer are collectible.
 
-
 ## Object Cycles
 
 Peer objects are logically present within both the Android runtime and Mono 
@@ -149,7 +143,6 @@ To shorten object lifetime,
 should be invoked. This will manually "sever" the connection on the 
 object between the two VMs by freeing the global reference, thus 
 allowing the objects to be collected faster. 
-
 
 ## Automatic Collections
 
@@ -219,7 +212,6 @@ GC Bridge implementations:
     stable of the three). This is the bridge that an application should 
     use if the `GC_BRIDGE` pauses are acceptable. 
 
-
 The only way to figure out which GC Bridge works best is by experimenting 
 in an application and analyzing the output. There are two ways to 
 collect the data for benchmarking: 
@@ -236,7 +228,6 @@ collect the data for benchmarking:
     average cost of the objects pointed by each object involved in the 
     bridge process. Sorting this information by size will provide hints 
     as to what is holding the largest amount of extra objects. 
-
 
 To specify which `GC_BRIDGE` option an application should us, pass 
 `bridge-implementation=old`, `bridge-implementation=new` or 
@@ -258,8 +249,6 @@ produce an improvement in performance.
 
 There are multiple ways to help the GC to reduce memory use and collection
 times.
-
-
 
 ### Disposing of Peer instances
 
@@ -289,14 +278,12 @@ dispose of *Java.Lang.Object* subclasses, breaking the mapping between
 the managed callable wrapper and the Java instance. For example, see 
 [Bug 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
-
 > [!NOTE]
 > You must be *extremely* careful when disposing of
 `Java.Lang.Object` subclass instances.
 
 To minimize the possibility of memory corruption, observe the following
 guidelines when calling `Dispose()`.
-
 
 #### Sharing Between Multiple Threads
 
@@ -309,7 +296,6 @@ arguments, they will obtain the *same* instance. Consequently,
 invalidate other threads, which can result in `ArgumentException`s from 
 `JNIEnv.CallVoidMethod()` (among others) because the instance was 
 disposed from another thread. 
-
 
 #### Disposing Bound Java Types
 
@@ -342,7 +328,6 @@ referred to a User peer; here we're using "external" information to
 *know* that the `Drawable` cannot refer to a User peer, and thus the 
 `Dispose()` call is safe. 
 
-
 #### Disposing Other Types 
 
 If the instance refers to a type that isn't a binding of a Java type 
@@ -368,7 +353,6 @@ Button b = FindViewById<Button> (Resource.Id.myButton);
 using (var listener = new MyClickListener ())
     b.SetOnClickListener (listener);
 ```
-
 
 #### Using Explicit Checks to Avoid Exceptions
 
@@ -443,7 +427,6 @@ class MyClass : Java.Lang.Object, ISomeInterface
 }
 ```
 
-
 ### Reduce Referenced Instances
 
 Whenever an instance of a `Java.Lang.Object` type or subclass is 
@@ -457,16 +440,16 @@ Consider the following class:
 ```csharp
 class BadActivity : Activity {
 
-	private List<string> strings;
+    private List<string> strings;
 
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		strings.Value = new List<string> (
-				Enumerable.Range (0, 10000)
-				.Select(v => new string ('x', v % 1000)));
-	}
+        strings.Value = new List<string> (
+                Enumerable.Range (0, 10000)
+                .Select(v => new string ('x', v % 1000)));
+    }
 }
 ```
 
@@ -486,46 +469,45 @@ inherit from Java.Lang.Object:
 ```csharp
 class HiddenReference<T> {
 
-	static Dictionary<int, T> table = new Dictionary<int, T> ();
-	static int idgen = 0;
+    static Dictionary<int, T> table = new Dictionary<int, T> ();
+    static int idgen = 0;
 
-	int id;
+    int id;
 
-	public HiddenReference ()
-	{
-		lock (table) {
-			id = idgen ++;
-		}
-	}
+    public HiddenReference ()
+    {
+        lock (table) {
+            id = idgen ++;
+        }
+    }
 
-	~HiddenReference ()
-	{
-		lock (table) {
-			table.Remove (id);
-		}
-	}
+    ~HiddenReference ()
+    {
+        lock (table) {
+            table.Remove (id);
+        }
+    }
 
-	public T Value {
-		get { lock (table) { return table [id]; } }
-		set { lock (table) { table [id] = value; } }
-	}
+    public T Value {
+        get { lock (table) { return table [id]; } }
+        set { lock (table) { table [id] = value; } }
+    }
 }
 
 class BetterActivity : Activity {
 
-	HiddenReference<List<string>> strings = new HiddenReference<List<string>>();
+    HiddenReference<List<string>> strings = new HiddenReference<List<string>>();
 
-	protected override void OnCreate (Bundle bundle)
-	{
-		base.OnCreate (bundle);
+    protected override void OnCreate (Bundle bundle)
+    {
+        base.OnCreate (bundle);
 
-		strings.Value = new List<string> (
-				Enumerable.Range (0, 10000)
-				.Select(v => new string ('x', v % 1000)));
-	}
+        strings.Value = new List<string> (
+                Enumerable.Range (0, 10000)
+                .Select(v => new string ('x', v % 1000)));
+    }
 }
 ```
-
 
 ## Minor Collections
 
@@ -542,8 +524,6 @@ collection once the duty cycle has ended. Example duty cycles include:
 - The rendering cycle of a single game frame.
 - The whole interaction with a given app dialog (opening, filling, closing) 
 - A group of network requests to refresh/sync app data.
-
-
 
 ## Major Collections
 
@@ -563,8 +543,6 @@ Major collections should only be manually invoked, if ever:
     [Android.App.Activity.OnLowMemory()](xref:Android.App.Activity.OnLowMemory) 
     method. 
 
-
-
 ## Diagnostics
 
 To track when global references are created and destroyed, you can set 
@@ -573,8 +551,6 @@ system property to contain
 [*gref*](~/android/troubleshooting/index.md) 
 and/or 
 [*gc*](~/android/troubleshooting/index.md). 
-
-
 
 ## Configuration
 

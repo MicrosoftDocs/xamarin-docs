@@ -13,8 +13,6 @@ ms.date: 03/01/2018
 
 _This document will provide a high level overview of the new features for developers that were introduced in Android 4.1. These features include: enhanced notifications, updates to Android Beam to share large files, updates to multimedia, peer-to-peer network discovery, animations, new permissions._
 
-
-
 ## Overview
 
 Android 4.1 (API Level 16), also known as "Jelly Bean", was release on July
@@ -34,8 +32,6 @@ have formatted text, action buttons and large images.
 
 Finally several new permissions have been added in Android 4.1.
 
-
-
 ## Requirements
 
 To develop Xamarin.Android applications using Jelly Bean requires
@@ -44,11 +40,7 @@ Android SDK Manager as shown in the following screen shot:
 
 [![Selecting Android 4.1 in the Android SDK Manager](jelly-bean-images/image1.png)](jelly-bean-images/image1.png#lightbox)
 
-
-
 ## What's New
-
-
 
 ### Animations
 
@@ -59,7 +51,6 @@ provided to support these animations:
 - `MakeScaleUpAnimation` – This will create an animation that scales up an activity window from a start position and size on the screen.
 - `MakeThumbnailScaleUpAnimation` – This will create an animation that scales up from a thumbnail image from specified position on the screen.
 - `MakeCustomAnimation` – This creates an animation from resources in the application. There is one animation for when the activity opens and another for when the activity stops.
-
 
 The new `TimeAnimator` class provides an interface `TimeAnimator.ITimeListener` that can notify an application every
 time a frame changes in an animation. For example, consider the following
@@ -87,8 +78,6 @@ animator.Start();
 As the `TimeAnimator` instance is running, it will invoke `ITimeAnimator.ITimeListener`, which will then log the how long the
 animator has been running and how long it as been since the last time the method
 has been invoked.
-
-
 
 ### Application Stack Navigation
 
@@ -119,9 +108,6 @@ stack:
 - `ShouldUpRecreateTask` – This method is used to query if the synthetic back stack must be created to navigate up to a parent activity. Returns  `true` if the synthetic stack must be created. 
 - `FinishAffinity` – Calling this method will finish the current activity and all activities below it in the current task that have the same task affinity.
 - `OnCreateNavigateUpTaskStack` – This method is overridden when it is necessary to have complete control over how the synthetic stack is created.
-
-
-
 
 ### Camera
 
@@ -157,7 +143,6 @@ can occur with a camera, these are defined by the enum `Android.Media.MediaActio
 - `MediaActionSoundType.StartVideoRecording` – This sound is used indicate the start of video recording.
 - `MediaActionSoundType.StopVideoRecording` – This sound will be played to indicate the end of video recording.
 
-
 An example of how to use the `MediaActionSound` class can be seen
 in the following snippet:
 
@@ -176,11 +161,7 @@ button.Click += (sender, args) => mediaActionPlayer.Play(MediaActionSoundType.Sh
 mediaActionPlayer.Release();
 ```
 
-
-
 ### Connectivity
-
-
 
 #### Android Beam
 
@@ -188,8 +169,6 @@ Android Beam is an NFC based technology that allows two Android devices to
 communicate with each other. Android 4.1 provides better support for the
 transfer of large files. When using the new method `NfcAdapter.SetBeamPushUris()` Android will switch between alternate
 transport mechanisms (such as Bluetooth) to achieve a fast transfer speed.
-
-
 
 #### Network Services Discovery
 
@@ -203,16 +182,12 @@ registration and to unregister the service.
 
 To discover services on the network, and implementation of `Nsd.DiscoveryListener` passed to `NsdManager.discoverServices()`.
 
-
-
 #### Network Usage
 
 A new method, `ConnectivityManager.IsActiveNetworkMetered` allows
 a device to check if it is connected to a metered network. This method can be
 used to help manage data usage by accurately informing users that there might be
 expensive charges for data operations.
-
-
 
 #### WiFi Direct Service Discovery
 
@@ -233,9 +208,6 @@ service discovery:
 - `SetDnsSdResponseListeners()` – This method is used to register callbacks to be invoked on receiving a response to discovery requests from Bonjour.
 - `SetUpnpServiceResponseListener()` – This method is used to register callbacks to be invoked on receiving a response to discovery requests Upnp.
 
-
-
-
 ### Content Providers
 
 The `ContentResolver` class has received a new method, `AcquireUnstableContentProvider`. This method allows an application
@@ -249,8 +221,6 @@ when interacting with content providers from other applications – it is less
 likely that buggy code from another application will affect another
 application.
 
-
-
 ### Copy and Paste With Intents
 
 The `Intent` class can now have a `ClipData` object
@@ -263,9 +233,6 @@ following types:
 - **Intent** – Any  `Intent` object.
 - **Uri** – This can be any URI, such as an HTTP bookmark or the URI to a content provider.
 
-
-
-
 ### Isolated Services
 
 An isolated service is a service that runs under its own special process and
@@ -273,7 +240,6 @@ has no permissions of its own. The only communication with the service is when
 starting up the service and binding to it via the Service API. It is possible to
 declare a service as isolated by setting the property `IsolatedProcess="true"` in the `ServiceAttribute` that
 adorns a service class.
-
 
 ### Media
 
@@ -288,7 +254,6 @@ added to support additional audio pre-processing on captured audio:
 - `Android.Media.Audiofx.AutomaticGainControl` – This class is used to normalize the captured signal by boosting or lowering an input signal so that the output signal is constant.
 - `Android.Media.Audiofx.NoiseSuppressor` – This class will remove background noise from the captured signal.
 
-
 Not all devices will support these effects. The method `AudioEffect.IsAvailable` should be called by an application to see
 if the audio effect in question is supported on the device running the
 application.
@@ -302,9 +267,6 @@ where media will be played:
 - `MediaRouter` – This class allows applications to control the routing of media channels from a device to external speakers or other devices.
 - `MediaRouterActionProvider` and  `MediaRouteButton` – These classes help provide a consistent UI for selecting and playing media.
 
-
-
-
 ### Notifications
 
 Android 4.1 allows applications more flexibility and control with displaying
@@ -314,16 +276,13 @@ of new three new style to be set on notifications:
 
 - `Notification.BigPictureStyle` – This is a helper class that will generate notifications that will have an image in them. The following image shows an example of a notification with a big image:
 
-
  [![Example screenshot of a BigPictureStyle notification](jelly-bean-images/image2.png)](jelly-bean-images/image2.png#lightbox)
 
 - `Notification.BigTextStyle` – This is a helper class that will generate notifications that will have multiple lines of text, such as e-mail. An example of this new notification style can be seen in the following screenshot:
 
-
  [![Example screenshot of a BigTextStyle notification](jelly-bean-images/image3.png)](jelly-bean-images/image3.png#lightbox)
 
 - `Notification.InboxStyle` – This is a helper class that will generate notifications that contain a list of strings, such as snippets from an e-mail message, as shown in this screenshot:
-
 
  [![Example screenshot of a Notification.InboxStyle notification](jelly-bean-images/image4.png)](jelly-bean-images/image4.png#lightbox)
 
@@ -338,8 +297,6 @@ The `Notification` class has received new constants that allow a
 developer to specify one of five priority levels for a notification. These can
 be set on a notification using the `Priority` property.
 
-
-
 ### Permissions
 
 The following new permissions have been added:
@@ -350,13 +307,10 @@ The following new permissions have been added:
 - `WRITE_CALL_LOG` - Allows an application to write to the call log on the phone.
 - `WRITE_USER_DICTIONARY` - Allows an application to write to the user's word dictionary.
 
-
 An important change to note `READ_EXTERNAL_STORAGE` – currently
 this permission is automatically granted by Android. Future versions of Android
 will require an application to request this permission before granted the
 permission.
-
-
 
 ## Summary
 
@@ -371,7 +325,6 @@ providers.
 This article then went on to introduce the updates to notifications, and
 discussed some of the new permissions that have been introduced with Android
 4.1
-
 
 ## Related Links
 

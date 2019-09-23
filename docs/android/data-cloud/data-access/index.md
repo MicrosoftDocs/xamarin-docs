@@ -62,7 +62,6 @@ For additional examples of cross-platform data access see our
 [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md)
 case study.
 
-
 ## Related Links
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)

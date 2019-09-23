@@ -4,8 +4,8 @@ description: "This document describes how to index an NSUserActivity, making it 
 ms.prod: xamarin
 ms.assetid: 0B28B284-C7C9-4C0D-A782-D471FBBC4CAE
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
 ---
 
@@ -107,14 +107,14 @@ To respond to the user tapping on a search result (`NSUserActivity`) for our app
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
 {
 
-	// Take action based on the activity type
-	switch (userActivity.ActivityType) {
-	case "com.xamarin.platform":
-		// Restore the state of the app here...
-		break;
-	}
+    // Take action based on the activity type
+    switch (userActivity.ActivityType) {
+    case "com.xamarin.platform":
+        // Restore the state of the app here...
+        break;
+    }
 
-	return true;
+    return true;
 }
 ```
 
@@ -170,8 +170,6 @@ By adopting App Search via `NSUserActivity` in your app, you also get the follow
 - **Handoff** - Since App Search is exposing content, navigation and/or features using the same mechanism as Handoff (`NSUserActivity`), you can easily allow your app's users to start an activity on one device and continue it on another.
 - **Siri Suggestions** - Along with the standard suggestions that Siri Suggestions normally makes, actives from your app can be automatically suggested.
 - **Siri Smart Reminders** - Users will be able to ask Siri to remind them about activities from your app.
-
-
 
 ## Related Links
 

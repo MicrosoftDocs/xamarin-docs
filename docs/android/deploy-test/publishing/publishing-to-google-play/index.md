@@ -21,7 +21,6 @@ and advertise your application, guidelines for rating your application on Google
 Play, and using filters to restrict the deployment of an application to certain
 devices.
 
-
 ## Requirements
 
 To distribute an application through Google Play, a developer account must be
@@ -41,8 +40,6 @@ discussed in another section.
 Google Play is not globally available. Some locations may not be supported
 for the distribution of applications.
 
-
-
 ## Becoming a Publisher
 
 To publish applications on Google play, it is necessary to have a
@@ -55,7 +52,6 @@ publisher account. To sign up for a publisher account follow these steps:
 1. Confirm verification by e-mail.
 1. After the account has been created, it is possible to publish applications using Google Play.
 
-
 Google Play does not support all countries in the world. The most up to date
 lists of countries can be found in the following links:
 
@@ -63,16 +59,12 @@ lists of countries can be found in the following links:
 
 1. [Supported Locations for distribution to Google Play users](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=138294) &ndash; This is a list of all countries where applications may be distributed.
 
-
-
 ### Preparing Promotional Assets
 
 To effectively promote and advertise an application on Google Play,
 Google allows developers to submit promotional assets such as screenshots,
 graphics, and video to be submitted. Google Play will then use those assets to
 advertise and promote the application.
-
-
 
 #### Launcher Icons
 
@@ -85,7 +77,6 @@ list below:
 - **mdpi** (160dpi) &ndash; 48 x 48 px
 - **hdpi** (240dpi) &ndash; 72 x 72 px
 - **xhdpi** (320dpi) &ndash; 96 x 96 px
-
 
 Launcher icons are the first things that a user will see of applications
 on Google Play, so care should be taken to make the launcher icons visually
@@ -104,8 +95,6 @@ Tips for Launcher Icons:
 1. **Use the alpha channel**&ndash; Icons should make use of the
     alpha channel, and should not be full-framed images.
 
-
-
 #### High Resolution Application Icons
 
 Applications on Google Play require a high fidelity version of the
@@ -121,8 +110,6 @@ The [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
 is a helpful tool for creating suitable launcher icons and the
 high-resolution application icon.
 
-
-
 #### Screen Shots
 
 Google play requires a minimum of two and a maximum of eight screen shots for
@@ -134,16 +121,12 @@ The specs for screen shots are:
 1. 24 bit PNG or JPG with no alpha channel
 1. 320w x 480h or 480w x 800h or 480w x 854h. Landscaped images will be cropped.
 
-
-
 #### Promotional Graphic
 
 This is an optional image used by Google Play:
 
 1. It is a 180w x 120h 24 bit PNG or JPG with no alpha channel.
 1. No border in art.
-
-
 
 #### Feature Graphic
 
@@ -154,15 +137,11 @@ alone without an application icon.
 1. All of the important content should be within a frame of 924x500. Pixels outside of this frame may be cropped for stylistic purposes.
 1. This graphic may be scaled down: use large text and keep graphics simple.
 
-
-
 #### Video Link
 
 This is a URL to a YouTube video showcasing the application. The video should
 be 30 seconds to 2 minutes in length and showcase the best parts of your
 application.
-
-
 
 ### Publishing to Google Play
 
@@ -251,7 +230,6 @@ the needed _Client ID_ and _Client secret_.
 
 -----
 
-
 #### Create a Google API Project
 
 First, sign into your
@@ -303,7 +281,6 @@ Click **Save**to save changes. This returns to the **Credentials** page where to
 This JSON file contains the Client ID and Client secret that you can cut
 and paste into the **Sign and Distribute** dialog in the next step.
 
-
 #### Register Google API Access
 
 # [Visual Studio](#tab/windows)
@@ -335,10 +312,10 @@ click **Continue**:
 Next, the **Google Play Track** dialog is presented. Google Play offers
 four possible tracks for uploading your app:
 
-* **Alpha** &ndash; Used for uploading a very early version of the app to a small list of testers.
-* **Beta** &ndash; Used for uploading an early version of the app to a larger list of testers.
-* **Rollout** &ndash; Allows a percentage of users to receive an updated version of the app; this makes it possible to slowly increase the percentage from say, 10% of users and increase it to 100% of users while you iron out bugs.
-* **Production** &ndash; Select this track when the app is ready for full distribution from the Google Play store.
+- **Alpha** &ndash; Used for uploading a very early version of the app to a small list of testers.
+- **Beta** &ndash; Used for uploading an early version of the app to a larger list of testers.
+- **Rollout** &ndash; Allows a percentage of users to receive an updated version of the app; this makes it possible to slowly increase the percentage from say, 10% of users and increase it to 100% of users while you iron out bugs.
+- **Production** &ndash; Select this track when the app is ready for full distribution from the Google Play store.
 
 Choose which Google Play track will be used for uploading the app and
 click **Upload**. If you select **Rollout**, be sure to enter a
@@ -362,7 +339,6 @@ When the upload finishes, completion status is shown in the lower
 left hand corner of Visual Studio:
 
 [![Publishing project completed message](images/vs/11-published-sml.png)](images/vs/11-published.png#lightbox)
-
 
 ### Troubleshooting
 

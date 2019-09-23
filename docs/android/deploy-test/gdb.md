@@ -25,7 +25,6 @@ There are three ways to use `gdb`:
 1. [Debug builds with Fast Deployment disabled](#Debug_Builds_without_Fast_Deployment) .
 1. [Release builds](#Release_Builds) .
 
-
 When things go wrong, please see the
 [Troubleshooting](#Troubleshooting) section.
 
@@ -49,8 +48,8 @@ command line will be printed:
 ```bash
 $ /Library/Frameworks/Mono.framework/Commands/xbuild /t:_Gdb *.csproj
 ...
-	Target _Gdb:
-		"/opt/android/ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gdb" -x "/Users/jon/Development/Projects/Scratch.HelloXamarin20//gdb-symbols/gdb.env"
+    Target _Gdb:
+        "/opt/android/ndk/toolchains/arm-linux-androideabi-4.4.3/prebuilt/darwin-x86/bin/arm-linux-androideabi-gdb" -x "/Users/jon/Development/Projects/Scratch.HelloXamarin20//gdb-symbols/gdb.env"
 ...
 ```
 
@@ -61,7 +60,6 @@ Services and other Android constructs is not supported at this time.
 
 The `_Gdb` target will create a `gdb-symbols` directory
 and copy the contents of your target's `/system/lib` and `$APPDIR/lib` directories there.
-
 
 > [!NOTE]
 > The contents of the `gdb-symbols` directory are tied
@@ -121,7 +119,6 @@ GNU gdb (GDB) 7.3.1-gg2
 ...
 (gdb) c
 ```
-
 
 ### Including `gdbserver` in your app
 

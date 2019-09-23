@@ -3,8 +3,8 @@ title: "Uninstalling Xamarin"
 description: "This document describes how to uninstall Xamarin on both Mac and Windows. It provides specific instructions about uninstalling Mono, Xamarin.Android, Xamarin.iOS, and other tools."
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 04/08/2017
 ---
 
@@ -270,7 +270,6 @@ three-bar menu next to the **Launch** button.
 >
 >This is resolved by running the **Repair** option in the Visual Studio installer, which will re-install the missing components.
 
-
 ## Uninstalling older and unsupported products
 
 <a name="uninstallvs2015"></a>
@@ -368,7 +367,6 @@ This article provided instruction on uninstalling Xamarin completely from a Mac
 through the use of Terminal commands. It also provided instruction on uninstalling Xamarin from
 a Windows machine through the **Programs and Features** option (for Visual Studio 2015
 and earlier), and using the **Visual Studio Installer** for Visual Studio 2017.
-
 
 ## Related Links
 

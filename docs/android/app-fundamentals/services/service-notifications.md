@@ -13,7 +13,6 @@ ms.date: 02/16/2018
 
 _This guide discusses how an Android service may use local notifications to dispatch information to a user._
 
-
 ## Service Notifications Overview
 
 Service notifications allow an app to display information to the user, even if the Android application is not in the foreground. It is possible for a notification to provide actions for the user, such as displaying an Activity from an application. The following code sample demonstrates how a service might dispatch a notification to a user:
@@ -49,7 +48,6 @@ When the user slides down the notification screen from the top, the full notific
 
 ![Notication displayed in notification tray](service-notifications-images/02-fullnotification.png)
 
-
 ## Updating A Notification
 
 To update a notification, the service will republish the notification using the same notification ID. Android will display or update the notification in the status bar as necessary.
@@ -75,7 +73,6 @@ Notification GetNotification(string content, PendingIntent intent)
 ```
 
 More information about notifications is available in the [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md) section of the [Android Notifications](~/android/app-fundamentals/notifications/index.md) guide.
-
 
 ## Related Links
 

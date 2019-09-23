@@ -4,8 +4,8 @@ description: "This document discusses how to link native C libraries into a Xama
 ms.prod: xamarin
 ms.assetid: 1DA80280-E78A-EC4B-8673-C249C8425CF5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/28/2016
 ---
 
@@ -69,7 +69,6 @@ lipo -create -output libMyLibrary.a libMyLibrary-i386.a libMyLibrary-arm64.a lib
 This creates `libMyLibrary.a` which will be a universal (fat) library which
 will be suitable to use for all iOS development targets.
 
-
 ### Missing Required Architecture i386
 
 If you are getting a `does not implement methodSignatureForSelector` or `does not implement doesNotRecognizeSelector` message in your Runtime Output when trying to consume an Objective-C library in the iOS Simulator, your library probably was not compiled for the i386 architecture (see the [Building Universal Native Libraries](#building_native) section above).
@@ -95,7 +94,6 @@ from the Internet or build with Xcode, you would need to do a few things:
 - Bring the Library into your project
 - Configure Xamarin.iOS to link the library
 - Access the methods from the library.
-
 
 To **bring the library into your project**, Select the project
 from the solution explorer and press **Command+Option+a**. Navigate to the
@@ -142,7 +140,6 @@ There are two kinds of native libraries available on iOS:
 
 - Static libraries that you ship with your application.
 
-
 To access methods defined in either one of those, you use [Mono's P/Invoke functionality](https://www.mono-project.com/docs/advanced/pinvoke/) which is the same technology that you
 would use in .NET, which is roughly:
 
@@ -187,11 +184,11 @@ To do this, edit the `Main.CS` file and make it look like the following:
 ```csharp
 static void Main (string[] args)
 {
-	// Load Dylib
-	MonoTouch.ObjCRuntime.Dlfcn.dlopen ("/full/path/to/Animal.dylib", 0);
+    // Load Dylib
+    MonoTouch.ObjCRuntime.Dlfcn.dlopen ("/full/path/to/Animal.dylib", 0);
 
-	// Start application
-	UIApplication.Main (args, null, "AppDelegate");
+    // Start application
+    UIApplication.Main (args, null, "AppDelegate");
 }
 ```
 
@@ -213,4 +210,3 @@ use the special name `__Internal` (note the double underscore characters at the 
 This forces DllImport to look up the symbol of the method that you are
 referencing in the current program, instead of trying to load it from a shared
 library.
-

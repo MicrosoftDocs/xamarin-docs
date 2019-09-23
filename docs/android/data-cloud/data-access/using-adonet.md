@@ -30,7 +30,6 @@ references to your Android project, as shown here:
 
 -----
 
-
 Right-click **References > Edit References...** then click to select
 the required assemblies.
 
@@ -186,7 +185,6 @@ run using one of three methods on an `SqliteCommand` object:
 - **ExecuteScalar** &ndash; Retrieves a single value (for example an
     aggregate).
 
-
 ### EXECUTENONQUERY
 
 `INSERT`, `UPDATE`, and `DELETE` statements will return the number of
@@ -238,7 +236,6 @@ include:
 
 - **HasRows** &ndash; Whether any rows were returned.
 
-
 ### EXECUTESCALAR
 
 Use this for `SELECT` statements that return a single value (such as an
@@ -256,8 +253,6 @@ cast the result depending on the database query. The result could be an
 integer from a `COUNT` query or a string from a single column `SELECT`
 query. Note that this is different to other `Execute` methods that return
 a reader object or a count of the number of rows affected.
-
-
 
 ## Related Links
 

@@ -18,9 +18,9 @@ This iOS platform-specific sets the cursor color of an [`Entry`](xref:Xamarin.Fo
 ```xaml
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core">
-	<StackLayout>
-		<Entry ... ios:Entry.CursorColor="LimeGreen" />
-	</StackLayout>
+    <StackLayout>
+        <Entry ... ios:Entry.CursorColor="LimeGreen" />
+    </StackLayout>
 </ContentPage>
 ```
 

@@ -4,8 +4,8 @@ description: "This document describes how Xamarin.iOS handles 32-bit and 64-bit 
 ms.prod: xamarin
 ms.assetid: 003F25C1-B430-4339-9C95-7DF527EBC699
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 11/25/2015
 ---
 

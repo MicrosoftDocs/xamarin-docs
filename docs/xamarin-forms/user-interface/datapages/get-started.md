@@ -29,9 +29,9 @@ in the code.
 
 Add these Nuget packages to your Xamarin.Forms .NET Standard library and application projects:
 
-* Xamarin.Forms.Pages
-* Xamarin.Forms.Theme.Base
-* A theme implementation Nuget (eg. Xamarin.Forms.Theme.Light)
+- Xamarin.Forms.Pages
+- Xamarin.Forms.Theme.Base
+- A theme implementation Nuget (eg. Xamarin.Forms.Theme.Light)
 
 ## 2. Add Theme Reference
 
@@ -53,7 +53,6 @@ and ensure the theme is merged into the application's resource dictionary:
 > You should also follow the steps to [load theme assemblies (below)](#loadtheme)
 > by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
 > be improved in a future preview release.
-
 
 ## 3. Add a XAML Page
 
@@ -197,9 +196,7 @@ Developers that prefer C# to XAML can create data source bindings too
 SetBinding (TitleProperty, new DataSourceBinding ("title"));
 ```
 
-
 It's a little more work to create themes from scratch but future preview releases will make this easier to do.
-
 
 ## Troubleshooting
 
@@ -229,8 +226,6 @@ var x = typeof(Xamarin.Forms.Themes.DarkThemeResources);
 x = typeof(Xamarin.Forms.Themes.LightThemeResources);
 x = typeof(Xamarin.Forms.Themes.Android.UnderlineEffect);
 ```
-
-
 
 ## Related Links
 

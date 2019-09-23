@@ -4,8 +4,8 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 10/07/2017
 ---
 
@@ -182,7 +182,6 @@ The following APIs have been deprecated in watchOS 3:
 - The `UILocalNotification` class of UIKit has been deprecated and should be replaced with the User Notification framework.
 
 See Apple's [watchOS 2.2 to watchOS 3.0 API Differences](https://developer.apple.com/library/prerelease/content/releasenotes/General/watchOS30APIDiffs/index.html) documentation for a complete list of deprecations and changes.
-
 
 ## Related Links
 

@@ -18,7 +18,6 @@ Nougat, explains how to prepare Xamarin.Android for Android Nougat
 development, and provides links to sample applications that illustrate
 how to use Android Nougat features in Xamarin.Android apps.
 
-
 ## Overview
 
 [Android Nougat](https://developer.android.com/about/versions/nougat/android-7.0.html)
@@ -64,7 +63,6 @@ This article explains how to get started building apps with Android
 Nougat to try out the new features and plan migration or feature work
 to target the new Android Nougat platform.
 
-
 ## Requirements
 
 The following is required to use the new Android Nougat features in
@@ -97,8 +95,6 @@ work reliably with Android Nougat. Because Android Nougat can link only to
 existing apps using libraries such as **Mono.Data.Sqlite.dll** may
 crash when running on Android Nougat if they are not properly rebuilt.
 
-
-
 ## Getting Started
 
 To get started using Android Nougat with Xamarin.Android, you must
@@ -115,7 +111,6 @@ create an Android Nougat project:
 
 Each of these steps is explained in the following sections:
 
-
 ### Install Xamarin Updates
 
 To add Xamarin support for Android Nougat, change the updates channel in
@@ -126,8 +121,6 @@ channel (the Alpha and Beta channels also provide support for Android
 7.x). For information about how to change the
 updates (releases) channel, see
 [Changing the Updates Channel](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel).
-
-
 
 ### Install the Android SDK
 
@@ -160,8 +153,6 @@ later. You must also install the latest **Android SDK Tools**:
     Xamarin > Android Settings**. In Visual Studio for Mac,
     click **Preferences > Projects > SDK Locations > Android**.
 
-
-
 ### Start a Xamarin.Android Project
 
 Create a new Xamarin.Android project. If you are new to Android
@@ -177,13 +168,10 @@ recommended that you set your target framework level to API 24 or
 later. For more about configuring Android API level levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
 
-
 > [!NOTE]
 > Currently you must set the **Minimum Android
 version** to **Android 7.0 (API 24 - Nougat)** to deploy your
 app to Android Nougat devices or emulators.
-
-
 
 ### Configure an Emulator or Device
 
@@ -206,16 +194,12 @@ see [OTA Images for Nexus Devices](https://developers.google.com/android/nexus/o
 
 Note that Nexus 5 devices are not supported by Android Nougat.
 
-
-
 ## New Features
 
 Android Nougat introduces a variety of new features and capabilities,
 such as Multi-window Support, Notifications enhancements, and Data
 Saver. The following sections highlight these features and provide
 links to help you get started using them in your app.
-
-
 
 ### Multi-Window Mode
 
@@ -252,8 +236,6 @@ multiple window user interfaces with your app.
 For more information about multi-window mode, see the
 [Multi-Window Support](https://developer.android.com/guide/topics/ui/multi-window.html).
 
-
-
 ### Enhanced Notifications
 
 Android Nougat introduces a redesigned notification system. It features a
@@ -264,7 +246,6 @@ bundled together as a single group when more than one message is
 received. Also, developers can customize notification views, leverage
 system decorations in notifications, and take advantage of new
 notification templates when generating notifications.
-
 
 #### Direct Reply
 
@@ -322,7 +303,6 @@ the Android
 [Replying to Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#direct)
 topic.
 
-
 #### Bundled Notifications
 
 Android Nougat can group notification messages together (for example, by
@@ -341,7 +321,6 @@ bundled notification groups in Android N, see the Android
 [Bundling Notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#bundle)
 topic.
 
-
 #### Custom Views
 
 Android Nougat makes it possible for you to create
@@ -350,8 +329,6 @@ and expandable layouts. For more information about custom notification
 views in Android Nougat, see the Android
 [Notification Enhancements](https://developer.android.com/about/versions/nougat/android-7.0.html#notification_enhancements)
 topic.
-
-
 
 ### Data Saver
 
@@ -368,8 +345,6 @@ see the Android
 [Optimizing Network Data Usage](https://developer.android.com/training/basics/network-ops/data-saver.html)
 topic.
 
-
-
 ### App Shortcuts
 
 Android 7.1 introduced an *App Shortcuts* feature that makes it possible
@@ -384,7 +359,6 @@ This feature is available only API level 25 or higher.
 For more information about the new App Shortcuts feature in Android 7.1,
 see the Android [App Shortcuts](https://developer.android.com/guide/topics/ui/shortcuts.html)
 topic.
-
 
 ### Sample Code
 
@@ -416,7 +390,6 @@ advantage of Android Nougat features:
     while the device is booted both before and after any user credentials(PIN/Pattern/Password)
     are entered.
 
-
 ## Summary
 
 This article introduced Android Nougat and explained how to install
@@ -424,7 +397,6 @@ and configure the latest tools and packages for Xamarin.Android
 development on Android Nougat. It also provided an overview of the key
 features available in Android Nougat, with links to example source code to
 help you get started in creating apps for Android Nougat.
-
 
 ## Related Links
 

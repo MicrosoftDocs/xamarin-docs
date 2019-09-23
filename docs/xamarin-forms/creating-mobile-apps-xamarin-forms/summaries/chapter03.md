@@ -131,8 +131,6 @@ The [**VariableFormattedText**](https://github.com/xamarin/xamarin-forms-book-sa
 
 The [**NamedFontSizes**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter03/NamedFontSizes) program uses a single `Label` and a `FormattedString` object to display all of the named font sizes for each platform.
 
-
-
 ## Related links
 
 - [Chapter 3 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch03-Apr2016.pdf)

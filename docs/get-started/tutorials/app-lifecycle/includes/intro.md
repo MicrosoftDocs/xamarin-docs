@@ -7,6 +7,7 @@ Before attempting this tutorial, you should have successfully completed the:
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
+>
 > - Respond to an application starting, sleeping, or resuming.
 > - Persist data across lifecycle state changes.
 

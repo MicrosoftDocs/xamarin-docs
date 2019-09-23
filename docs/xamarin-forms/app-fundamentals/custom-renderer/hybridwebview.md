@@ -319,11 +319,11 @@ This functionality is achieved as follows:
 
 In addition, **Info.plist** must be updated to include the following values:
 
-```
+```xml
 <key>NSAppTransportSecurity</key>
 <dict>
-	<key>NSAllowsArbitraryLoads</key>
-	<true/>
+    <key>NSAllowsArbitraryLoads</key>
+    <true/>
 </dict>
 ```
 
@@ -502,7 +502,6 @@ This functionality is achieved as follows:
 ## Summary
 
 This article has demonstrated how to create a custom renderer for a `HybridWebView` custom control, that demonstrates how to enhance the platform-specific web controls to allow C# code to be invoked from JavaScript.
-
 
 ## Related Links
 

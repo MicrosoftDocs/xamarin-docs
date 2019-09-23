@@ -3,8 +3,8 @@ title: "Step 1. Register an app to use Azure Active Directory"
 description: "This document describes how to register an Azure application with Azure Active Directory so that it can be securely accessed by mobile clients."
 ms.prod: xamarin
 ms.assetid: 0B17991A-4573-4F6C-9E86-D4B9D1A47E4D
-author: asb3993
-ms.author: amburns
+author: conceptdev
+ms.author: crdun
 ms.date: 03/23/2017
 ---
 
@@ -45,9 +45,7 @@ ms.date: 03/23/2017
    Web API or Office365, which can be used by mobile application once
    authentication is complete.
 
-	 ![](register-images/05.-configure.jpg "Also, on this screen you can give your mobile application access to Active Directory or add another application like Web API or Office365")
-
-
+   ![](register-images/05.-configure.jpg "Also, on this screen you can give your mobile application access to Active Directory or add another application like Web API or Office365")
 
 ## Related Links
 

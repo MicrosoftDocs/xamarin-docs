@@ -17,8 +17,8 @@ and set platform-specific styles and colors for each platform.
 
 Other options to control the way your Xamarin.Forms iOS app's appearance include:
 
-* Configuring display options in [**Info.plist**](#info-plist)
-* Setting control styles via the [`UIAppearance` API](#uiappearance)
+- Configuring display options in [**Info.plist**](#info-plist)
+- Setting control styles via the [`UIAppearance` API](#uiappearance)
 
 These alternatives are discussed below.
 
@@ -135,8 +135,6 @@ and the customized version (setting `Appearance`) on the right in the
 
 Many iOS user interface controls can have their default colors and other attributes set using
 the [`UIAppearance` API](~/ios/user-interface/ios-ui/introduction-to-the-appearance-api.md).
-
-
 
 ## Related Links
 

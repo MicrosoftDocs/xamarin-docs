@@ -4,8 +4,8 @@ description: "This article covers the new gaming enhancements provided by iOS 9 
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/20/2017
 ---
 
@@ -91,55 +91,55 @@ int input = 15;
 
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	/*
-	If reset is true, clear the output and set reset to false
-	*/
-	var clearRule = GKRule.FromPredicate ((rules) => reset, rules => {
-		output = "";
-		reset = false;
-	});
-	clearRule.Salience = 1;
+    /*
+    If reset is true, clear the output and set reset to false
+    */
+    var clearRule = GKRule.FromPredicate ((rules) => reset, rules => {
+        output = "";
+        reset = false;
+    });
+    clearRule.Salience = 1;
 
-	var fizzRule = GKRule.FromPredicate (mod (3), rules => {
-		output += "fizz";
-	});
-	fizzRule.Salience = 2;
+    var fizzRule = GKRule.FromPredicate (mod (3), rules => {
+        output += "fizz";
+    });
+    fizzRule.Salience = 2;
 
-	var buzzRule = GKRule.FromPredicate (mod (5), rules => {
-		output += "buzz";
-	});
-	buzzRule.Salience = 2;
+    var buzzRule = GKRule.FromPredicate (mod (5), rules => {
+        output += "buzz";
+    });
+    buzzRule.Salience = 2;
 
-	/*
-	This *always* evaluates to true, but is higher Salience, so evaluates after lower-salience items
-	(which is counter-intuitive). Print the output, and reset (thus triggering "ResetRule" next time)
-	*/
-	var outputRule = GKRule.FromPredicate (rules => true, rules => {
-		System.Console.WriteLine(output == "" ? input.ToString() : output);
-		reset = true;
-	});
-	outputRule.Salience = 3;
+    /*
+    This *always* evaluates to true, but is higher Salience, so evaluates after lower-salience items
+    (which is counter-intuitive). Print the output, and reset (thus triggering "ResetRule" next time)
+    */
+    var outputRule = GKRule.FromPredicate (rules => true, rules => {
+        System.Console.WriteLine(output == "" ? input.ToString() : output);
+        reset = true;
+    });
+    outputRule.Salience = 3;
 
-	var rs = new GKRuleSystem ();
-	rs.AddRules (new [] {
-		clearRule,
-		fizzRule,
-		buzzRule,
-		outputRule
-	});
+    var rs = new GKRuleSystem ();
+    rs.AddRules (new [] {
+        clearRule,
+        fizzRule,
+        buzzRule,
+        outputRule
+    });
 
-	for (input = 1; input < 16; input++) {
-		rs.Evaluate ();
-		rs.Reset ();
-	}
+    for (input = 1; input < 16; input++) {
+        rs.Evaluate ();
+        rs.Reset ();
+    }
 }
 
 protected Func<GKRuleSystem, bool> mod(int m)
 {
-	Func<GKRuleSystem,bool> partiallyApplied = (rs) => input % m == 0;
-	return partiallyApplied;
+    Func<GKRuleSystem,bool> partiallyApplied = (rs) => input % m == 0;
+    return partiallyApplied;
 }
 ```
 
@@ -164,175 +164,173 @@ using OpenTK;
 
 namespace FieldBehaviorExplorer
 {
-	public static class FlockRandom
-	{
-		private static GKARC4RandomSource rand = new GKARC4RandomSource ();
+    public static class FlockRandom
+    {
+        private static GKARC4RandomSource rand = new GKARC4RandomSource ();
 
-		static FlockRandom ()
-		{
-			rand.DropValues (769);
-		}
+        static FlockRandom ()
+        {
+            rand.DropValues (769);
+        }
 
-		public static float NextUniform ()
-		{
-			return rand.GetNextUniform ();
-		}
-	}
+        public static float NextUniform ()
+        {
+            return rand.GetNextUniform ();
+        }
+    }
 
-	public class FlockingScene : SKScene
-	{
-		List<Boid> boids = new List<Boid> ();
-		GKComponentSystem componentSystem;
-		GKAgent2D trackingAgent; //Tracks finger on screen
-		double lastUpdateTime = Double.NaN;
-		//Hold on to behavior so it doesn't get GC'ed
-		static GKBehavior flockingBehavior;
-		static GKGoal seekGoal;
+    public class FlockingScene : SKScene
+    {
+        List<Boid> boids = new List<Boid> ();
+        GKComponentSystem componentSystem;
+        GKAgent2D trackingAgent; //Tracks finger on screen
+        double lastUpdateTime = Double.NaN;
+        //Hold on to behavior so it doesn't get GC'ed
+        static GKBehavior flockingBehavior;
+        static GKGoal seekGoal;
 
+        public FlockingScene (CGSize size) : base (size)
+        {
+            AddRandomBoids (20);
 
-		public FlockingScene (CGSize size) : base (size)
-		{
-			AddRandomBoids (20);
+            var scale = 0.4f;
+            //Flocking system
+            componentSystem = new GKComponentSystem (typeof(GKAgent2D));
+            var behavior = DefineFlockingBehavior (boids.Select (boid => boid.Agent).ToArray<GKAgent2D>(), scale);
+            boids.ForEach (boid => {
+                boid.Agent.Behavior = behavior;
+                componentSystem.AddComponent(boid.Agent);
+            });
 
-			var scale = 0.4f;
-			//Flocking system
-			componentSystem = new GKComponentSystem (typeof(GKAgent2D));
-			var behavior = DefineFlockingBehavior (boids.Select (boid => boid.Agent).ToArray<GKAgent2D>(), scale);
-			boids.ForEach (boid => {
-				boid.Agent.Behavior = behavior;
-				componentSystem.AddComponent(boid.Agent);
-			});
+            trackingAgent = new GKAgent2D ();
+            trackingAgent.Position = new Vector2 ((float) size.Width / 2.0f, (float) size.Height / 2.0f);
+            seekGoal = GKGoal.GetGoalToSeekAgent (trackingAgent);
+        }
 
-			trackingAgent = new GKAgent2D ();
-			trackingAgent.Position = new Vector2 ((float) size.Width / 2.0f, (float) size.Height / 2.0f);
-			seekGoal = GKGoal.GetGoalToSeekAgent (trackingAgent);
-		}
+        public override void TouchesBegan (NSSet touches, UIEvent evt)
+        {
+            boids.ForEach(boid => boid.Agent.Behavior.SetWeight(1.0f, seekGoal));
+        }
 
-		public override void TouchesBegan (NSSet touches, UIEvent evt)
-		{
-			boids.ForEach(boid => boid.Agent.Behavior.SetWeight(1.0f, seekGoal));
-		}
+        public override void TouchesEnded (NSSet touches, UIEvent evt)
+        {
+            boids.ForEach (boid => boid.Agent.Behavior.SetWeight (0.0f, seekGoal));
+        }
 
-		public override void TouchesEnded (NSSet touches, UIEvent evt)
-		{
-			boids.ForEach (boid => boid.Agent.Behavior.SetWeight (0.0f, seekGoal));
-		}
+        public override void TouchesMoved (NSSet touches, UIEvent evt)
+        {
+            var touch = (UITouch) touches.First();
+            var loc = touch.LocationInNode (this);
+            trackingAgent.Position = new Vector2((float) loc.X, (float) loc.Y);
+        }
 
-		public override void TouchesMoved (NSSet touches, UIEvent evt)
-		{
-			var touch = (UITouch) touches.First();
-			var loc = touch.LocationInNode (this);
-			trackingAgent.Position = new Vector2((float) loc.X, (float) loc.Y);
-		}
+        private void AddRandomBoids (int count)
+        {
+            var scale = 0.4f;
+            for (var i = 0; i < count; i++) {
+                var b = new Boid (UIColor.Red, this.Size, scale);
+                boids.Add (b);
+                this.AddChild (b);
+            }
+        }
 
+        internal static GKBehavior DefineFlockingBehavior(GKAgent2D[] boidBrains, float scale)
+        {
+            if (flockingBehavior == null) {
+                var flockingGoals = new GKGoal[3];
+                flockingGoals [0] = GKGoal.GetGoalToSeparate (boidBrains, 100.0f * scale, (float)Math.PI * 8.0f);
+                flockingGoals [1] = GKGoal.GetGoalToAlign (boidBrains, 40.0f * scale, (float)Math.PI * 8.0f);
+                flockingGoals [2] = GKGoal.GetGoalToCohere (boidBrains, 40.0f * scale, (float)Math.PI * 8.0f);
 
-		private void AddRandomBoids (int count)
-		{
-			var scale = 0.4f;
-			for (var i = 0; i < count; i++) {
-				var b = new Boid (UIColor.Red, this.Size, scale);
-				boids.Add (b);
-				this.AddChild (b);
-			}
-		}
+                flockingBehavior = new GKBehavior ();
+                flockingBehavior.SetWeight (25.0f, flockingGoals [0]);
+                flockingBehavior.SetWeight (10.0f, flockingGoals [1]);
+                flockingBehavior.SetWeight (10.0f, flockingGoals [2]);
+            }
+            return flockingBehavior;
+        }
 
-		internal static GKBehavior DefineFlockingBehavior(GKAgent2D[] boidBrains, float scale)
-		{
-			if (flockingBehavior == null) {
-				var flockingGoals = new GKGoal[3];
-				flockingGoals [0] = GKGoal.GetGoalToSeparate (boidBrains, 100.0f * scale, (float)Math.PI * 8.0f);
-				flockingGoals [1] = GKGoal.GetGoalToAlign (boidBrains, 40.0f * scale, (float)Math.PI * 8.0f);
-				flockingGoals [2] = GKGoal.GetGoalToCohere (boidBrains, 40.0f * scale, (float)Math.PI * 8.0f);
+        public override void Update (double currentTime)
+        {
+            base.Update (currentTime);
+            if (Double.IsNaN(lastUpdateTime)) {
+                lastUpdateTime = currentTime;
+            }
+            var delta = currentTime - lastUpdateTime;
+            componentSystem.Update (delta);
+        }
+    }
 
-				flockingBehavior = new GKBehavior ();
-				flockingBehavior.SetWeight (25.0f, flockingGoals [0]);
-				flockingBehavior.SetWeight (10.0f, flockingGoals [1]);
-				flockingBehavior.SetWeight (10.0f, flockingGoals [2]);
-			}
-			return flockingBehavior;
-		}
+    public class Boid : SKNode, IGKAgentDelegate
+    {
+        public GKAgent2D Agent { get { return brains; } }
+        public SKShapeNode Sprite { get { return sprite; } }
 
-		public override void Update (double currentTime)
-		{
-			base.Update (currentTime);
-			if (Double.IsNaN(lastUpdateTime)) {
-				lastUpdateTime = currentTime;
-			}
-			var delta = currentTime - lastUpdateTime;
-			componentSystem.Update (delta);
-		}
-	}
+        class BoidSprite : SKShapeNode
+        {
+            public BoidSprite (UIColor color, float scale)
+            {
+                var rot = CGAffineTransform.MakeRotation((float) (Math.PI / 2.0f));
+                var path = new CGPath ();
+                path.MoveToPoint (rot, new CGPoint (10.0, 0.0));
+                path.AddLineToPoint (rot, new CGPoint (0.0, 30.0));
+                path.AddLineToPoint (rot, new CGPoint (10.0, 20.0));
+                path.AddLineToPoint (rot, new CGPoint (20.0, 30.0));
+                path.AddLineToPoint (rot, new CGPoint (10.0, 0.0));
+                path.CloseSubpath ();
 
-	public class Boid : SKNode, IGKAgentDelegate
-	{
-		public GKAgent2D Agent { get { return brains; } }
-		public SKShapeNode Sprite { get { return sprite; } }
+                this.SetScale (scale);
+                this.Path = path;
+                this.FillColor = color;
+                this.StrokeColor = UIColor.White;
 
-		class BoidSprite : SKShapeNode
-		{
-			public BoidSprite (UIColor color, float scale)
-			{
-				var rot = CGAffineTransform.MakeRotation((float) (Math.PI / 2.0f));
-				var path = new CGPath ();
-				path.MoveToPoint (rot, new CGPoint (10.0, 0.0));
-				path.AddLineToPoint (rot, new CGPoint (0.0, 30.0));
-				path.AddLineToPoint (rot, new CGPoint (10.0, 20.0));
-				path.AddLineToPoint (rot, new CGPoint (20.0, 30.0));
-				path.AddLineToPoint (rot, new CGPoint (10.0, 0.0));
-				path.CloseSubpath ();
+            }
+        }
 
-				this.SetScale (scale);
-				this.Path = path;
-				this.FillColor = color;
-				this.StrokeColor = UIColor.White;
+        private GKAgent2D brains;
+        private BoidSprite sprite;
+        private static int boidId = 0;
 
-			}
-		}
+        public Boid (UIColor color, CGSize size, float scale)
+        {
+            brains = BoidBrains (size, scale);
+            sprite = new BoidSprite (color, scale);
+            sprite.Position = new CGPoint(brains.Position.X, brains.Position.Y);
+            sprite.ZRotation = brains.Rotation;
+            sprite.Name = boidId++.ToString ();
 
-		private GKAgent2D brains;
-		private BoidSprite sprite;
-		private static int boidId = 0;
+            brains.Delegate = this;
 
-		public Boid (UIColor color, CGSize size, float scale)
-		{
-			brains = BoidBrains (size, scale);
-			sprite = new BoidSprite (color, scale);
-			sprite.Position = new CGPoint(brains.Position.X, brains.Position.Y);
-			sprite.ZRotation = brains.Rotation;
-			sprite.Name = boidId++.ToString ();
+            this.AddChild (sprite);
+        }
 
-			brains.Delegate = this;
+        private GKAgent2D BoidBrains(CGSize size, float scale)
+        {
+            var brains = new GKAgent2D ();
+            var x = (float) (FlockRandom.NextUniform () * size.Width);
+            var y = (float) (FlockRandom.NextUniform () * size.Height);
+            brains.Position = new Vector2 (x, y);
 
-			this.AddChild (sprite);
-		}
+            brains.Rotation = (float)(FlockRandom.NextUniform () * Math.PI * 2.0);
+            brains.Radius = 30.0f * scale;
+            brains.MaxSpeed = 0.5f;
+            return brains;
+        }
 
-		private GKAgent2D BoidBrains(CGSize size, float scale)
-		{
-			var brains = new GKAgent2D ();
-			var x = (float) (FlockRandom.NextUniform () * size.Width);
-			var y = (float) (FlockRandom.NextUniform () * size.Height);
-			brains.Position = new Vector2 (x, y);
+        [Export ("agentDidUpdate:")]
+        public void AgentDidUpdate (GameplayKit.GKAgent agent)
+        {
+        }
 
-			brains.Rotation = (float)(FlockRandom.NextUniform () * Math.PI * 2.0);
-			brains.Radius = 30.0f * scale;
-			brains.MaxSpeed = 0.5f;
-			return brains;
-		}
-
-		[Export ("agentDidUpdate:")]
-		public void AgentDidUpdate (GameplayKit.GKAgent agent)
-		{
-		}
-
-		[Export ("agentWillUpdate:")]
-		public void AgentWillUpdate (GameplayKit.GKAgent agent)
-		{
-			var brainsIn = (GKAgent2D) agent;
-			sprite.Position = new CGPoint(brainsIn.Position.X, brainsIn.Position.Y);
-			sprite.ZRotation = brainsIn.Rotation;
-			Console.WriteLine ($"{sprite.Name} -> [{sprite.Position}], {sprite.ZRotation}");
-		}
-	}
+        [Export ("agentWillUpdate:")]
+        public void AgentWillUpdate (GameplayKit.GKAgent agent)
+        {
+            var brainsIn = (GKAgent2D) agent;
+            sprite.Position = new CGPoint(brainsIn.Position.X, brainsIn.Position.Y);
+            sprite.ZRotation = brainsIn.Rotation;
+            Console.WriteLine ($"{sprite.Name} -> [{sprite.Position}], {sprite.ZRotation}");
+        }
+    }
 }
 ```
 
@@ -341,25 +339,25 @@ Next, implement this scene in a view controller:
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
-		// Perform any additional setup after loading the view, typically from a nib.
-		this.View = new SKView {
-		ShowsFPS = true,
-		ShowsNodeCount = true,
-		ShowsDrawCount = true
-	};
+    base.ViewDidLoad ();
+        // Perform any additional setup after loading the view, typically from a nib.
+        this.View = new SKView {
+        ShowsFPS = true,
+        ShowsNodeCount = true,
+        ShowsDrawCount = true
+    };
 }
 
 public override void ViewWillLayoutSubviews ()
 {
-	base.ViewWillLayoutSubviews ();
+    base.ViewWillLayoutSubviews ();
 
-	var v = (SKView)View;
-	if (v.Scene == null) {
-		var scene = new FlockingScene (View.Bounds.Size);
-		scene.ScaleMode = SKSceneScaleMode.AspectFill;
-		v.PresentScene (scene);
-	}
+    var v = (SKView)View;
+    if (v.Scene == null) {
+        var scene = new FlockingScene (View.Bounds.Size);
+        scene.ScaleMode = SKSceneScaleMode.AspectFill;
+        v.PresentScene (scene);
+    }
 }
 ```
 
@@ -467,8 +465,6 @@ For more information, please see our [SpriteKit Documentation](~/ios/platform/in
 This article has covered the new Gaming features that iOS 9 provides for your Xamarin.iOS apps.
 It introduced GameplayKit and Model I/O; the major enhancements to Metal; and the
 new features of SceneKit and SpriteKit.
-
-
 
 ## Related Links
 

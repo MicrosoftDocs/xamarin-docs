@@ -4,8 +4,8 @@ description: "This article covers including and managing an image asset in a Xam
 ms.prod: xamarin
 ms.assetid: 7A3F3C94-2578-4F53-9B8E-25714F48BDD6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 05/23/2017
 ---
 
@@ -27,7 +27,7 @@ editor to add the document type and assign image icons to it. For
 example, here is a screenshot showing registration for PDF support:
 
  [![](custom-document-types-images/18.png "The Document Types section under the Advanced tab on the `Info.plist` editor")](custom-document-types-images/18.png#lightbox)
- 
+
 # [Visual Studio](#tab/windows)
 
 To assign these values in Visual Studio, use the **Document Types** section under the **Advanced** tab on the `Info.plist`:
@@ -40,9 +40,7 @@ Click the **Add Document Type** button and fill in the required fields:
 
 -----
 
-
 For more information about document types, see Apple’s [Uniform Type Identifiers Reference](https://developer.apple.com/library/ios/#documentation/Miscellaneous/Reference/UTIRef/Articles/System-DeclaredUniformTypeIdentifiers.html) and [Document Interaction Programming Topics for iOS](https://developer.apple.com/library/ios/#documentation/FileManagement/Conceptual/DocumentInteraction_TopicsForIOS/Introduction/Introduction.html).
-
 
 ## Related Links
 

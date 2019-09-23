@@ -4,8 +4,8 @@ description: "This document provides an introduction to storyboards in Xamarin.i
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/22/2017
 ---
 
@@ -21,7 +21,6 @@ of the application's user interface.
 
 A Storyboard can be created, opened and edited with the Xamarin iOS Designer. This guide will also walkthrough how to use the 
 Designer to create your storyboards while using C# to program the navigation.
-
 
 ## Requirements
 
@@ -104,7 +103,7 @@ user will see first. It is represented by the segue shown below:
 ### Adaptive Segue Types
 
  iOS 8 introduced [Size Classes](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) to allow an iOS storyboard file to work with all available screen sizes, enabling developers to create one UI for all iOS devices. By default, all new Xamarin.iOS applications will use size classes. To use size classes from an older project, refer to the [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guide. 
- 
+
 Any application using Size Classes will also use the new [*Adaptive Segues*](~/ios/user-interface/storyboards/unified-storyboards.md). When using size classes, remember that we aren't directly specifying wether we are using an iPhone or iPad. In other words we are creating one UI that will always look the same, regardless of how much real estate it has to work with. Adaptive Segues work by judging the environment, and determining how best to present content. The Adaptive Segues are shown below: 
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
@@ -119,7 +118,6 @@ Any application using Size Classes will also use the new [*Adaptive Segues*](~/i
 ### Transferring Data with Segues
 
 The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) sample, demonstrates this: 
-
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, 
@@ -287,7 +285,6 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-
 When creating a Storyboard using the Designer, the IDE will automatically add the [[Register]](xref:Foundation.RegisterAttribute) attribute at the top of the `designer.cs` class, and pass in a string identifier, which is identical to the Storyboard ID specified in the previous step. This will link the C# to the relevant scene in the Storyboard.
 
 At some point you might want to add an existing class which was **not** created in the designer. In this case, you would Register this class as normal:
@@ -375,7 +372,6 @@ Before we begin, follow through steps 1 – 8 above. In these steps we create ou
 3. Click on the Segue and give it the *Identifier* `SegueToPink`:
 
     [![](images/namesegue.png "Click on the Segue and give it the Identifier SegueToPink")](images/namesegue.png#lightbox)  
-    
 
 4. Finally, add the following ShouldPerformSegue method to the `MainViewController` class:
 
@@ -524,8 +520,6 @@ When the app is run and the user clicks on the UI element that you created the S
 ## Summary
 
 This article introduces the concept of Storyboards and how they can be beneficial in the development of iOS applications. It discusses scenes, view controllers, views and view hierarchies and how scenes are linked together with different types of Segues.  It also explores instantiating view controllers manually from a storyboard, and creating conditional Segues.
-
-
 
 ## Related Links
 

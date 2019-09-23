@@ -111,7 +111,6 @@ scroll.Scrolled += (object sender, ScrolledEventArgs e) => {
 
 Note that scroll positions may be negative, due to the bounce effect when scrolling at the end of a list.
 
-
 ## Related Links
 
 - [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)

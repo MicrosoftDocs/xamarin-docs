@@ -4,8 +4,8 @@ description: "This document describes the various icons necessary for a watchOS 
 ms.prod: xamarin
 ms.assetid: EE3D45BD-8091-4C04-BA83-371371D8BEB9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 07/26/2018
 ---
 
@@ -13,8 +13,8 @@ ms.date: 07/26/2018
 
 Apple Watch solutions require two sets of icons:
 
-* The iOS app icons that will appear on the iPhone.
-* Apple Watch icons that will be rendered in a circle
+- The iOS app icons that will appear on the iPhone.
+- Apple Watch icons that will be rendered in a circle
   on the watch menu and in notification screens. The watch
   app icon also appears in the [Apple Watch](~/ios/watchos/app-fundamentals/settings.md)
   iOS app.
@@ -95,7 +95,6 @@ You can verify the icons are configured correct by checking
 
 > [!NOTE]
 > Icons cannot have an alpha channel (the app will be rejected during App Store submission if an alpha channel is present). You can check if an alpha channel exists and remove it [using the Preview app on Mac OS X](~/ios/watchos/troubleshooting.md#noalpha).
-
 
 ## Related Links
 

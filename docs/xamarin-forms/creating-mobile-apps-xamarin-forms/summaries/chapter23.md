@@ -186,8 +186,6 @@ The final sample, [**MultiColorSliders**](https://github.com/xamarin/xamarin-for
 
 The program also responds to changes in orientation between portrait and landscape using a [`GridOrientationBehavior`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/GridOrientationBehavior.cs) in the **Xamarin.FormsBook.Toolkit** library.
 
-
-
 ## Related links
 
 - [Chapter 23 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch23-Apr2016.pdf)

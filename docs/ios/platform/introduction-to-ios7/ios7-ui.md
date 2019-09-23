@@ -4,8 +4,8 @@ description: "iOS 7 introduces a plethora of user interface changes. This articl
 ms.prod: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: conceptdev
+ms.author: crdun
 ms.date: 03/21/2017
 ---
 
@@ -50,21 +50,21 @@ In addition to the style change for the new iOS 7 look and feel, alert views no 
 ```csharp
 UIBarButtonItem button = new UIBarButtonItem ("Bar Button", UIBarButtonItemStyle.Plain, (s,e) =>
 {
-	UIAlertView alert = new UIAlertView ("Title", "Message", null, "Cancel", "OK");
+    UIAlertView alert = new UIAlertView ("Title", "Message", null, "Cancel", "OK");
 
-	alert.AddSubview (new UIView () {
-		Frame = new CGRect(50, 50,100, 100),
-		BackgroundColor = UIColor.Green
-	});
+    alert.AddSubview (new UIView () {
+        Frame = new CGRect(50, 50,100, 100),
+        BackgroundColor = UIColor.Green
+    });
 
-	alert.Show ();
+    alert.Show ();
 });
 ```
 
 This produces a standard alert view, with the subview being ignored, as shown below:
 
  ![](ios7-ui-images/alert.png "Sample UIAlertView")
- 
+
  Note: UIAlertView was deprecated in iOS 8. View the [Alert Controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/alertcontroller) recipe on using an Alert View in iOS 8 and above.
 
 ### UISegmentedControl
@@ -148,13 +148,13 @@ These APIs can be used to calculate a view's displacement from the top or bottom
 ```csharp
 public override void ViewDidLayoutSubviews ()
 {
-	base.ViewDidLayoutSubviews ();
+    base.ViewDidLayoutSubviews ();
 
-	if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
-		nfloat displacement_y = this.TopLayoutGuide.Length;
+    if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
+        nfloat displacement_y = this.TopLayoutGuide.Length;
 
-		//load subviews with displacement
-	}
+        //load subviews with displacement
+    }
 
 }
 ```
@@ -188,7 +188,7 @@ Modifying the `UIViewController.EdgesForExtendedLayout` property adjusts for thi
 
 ```csharp
 if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
-	this.EdgesForExtendedLayout = UIRectEdge.None;
+    this.EdgesForExtendedLayout = UIRectEdge.None;
 }
 ```
 
@@ -215,7 +215,7 @@ For example, the following code overrides the `PreferredStatusBarStyle` method o
 ```csharp
 public override UIStatusBarStyle PreferredStatusBarStyle ()
 {
-	return UIStatusBarStyle.LightContent;
+    return UIStatusBarStyle.LightContent;
 }
 ```
 
@@ -228,7 +228,7 @@ To hide the status bar from the view controller’s code, override `PrefersStatu
 ```csharp
 public override bool PrefersStatusBarHidden ()
 {
-	return true;
+    return true;
 }
 ```
 
@@ -248,7 +248,6 @@ The tint color can be applied to images as well when the `RenderingMode` is set 
 
 > [!IMPORTANT]
 > Tint color cannot be set using `UIAppearance`.
-
 
 ### Dynamic Type
 

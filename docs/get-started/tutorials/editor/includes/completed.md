@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`Editor`](xref:Xamarin.Forms.Editor) in XAML.
 > - Respond to the text in the `Editor` changing.
 > - Customize the behavior of the `Editor`.

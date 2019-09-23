@@ -72,7 +72,6 @@ The **Image Blur Experiment** page in the [**SkiaSharpFormsDemos**](https://docs
 
 The code-behind file uses the two `Slider` values to call `SKImageFilter.CreateBlur` for the `SKPaint` object used to display both text and a bitmap:
 
-
 ```csharp
 public partial class ImageBlurExperimentPage : ContentPage
 {
@@ -83,8 +82,8 @@ public partial class ImageBlurExperimentPage : ContentPage
                             "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
 
     public ImageBlurExperimentPage ()
-	{
-		InitializeComponent ();
+    {
+        InitializeComponent ();
     }
 
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
@@ -227,10 +226,10 @@ public partial class DropShadowExperimentPage : ContentPage
 {
     const string TEXT = "Drop Shadow";
 
-	public DropShadowExperimentPage ()
-	{
-		InitializeComponent ();
-	}
+    public DropShadowExperimentPage ()
+    {
+        InitializeComponent ();
+    }
 
     void OnSliderValueChanged(object sender, ValueChangedEventArgs args)
     {

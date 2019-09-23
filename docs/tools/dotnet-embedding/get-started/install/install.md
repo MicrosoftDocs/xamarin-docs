@@ -27,12 +27,12 @@ Now that the NuGet is installed, you can run the tooling by hand.
 - Open a Terminal (macOS) or Command Prompt (Windows)
 - Change directory to your solution root
 - The tooling is installed in:
-    - **./packages/Embeddinator-4000.[VERSION]/tools/objcgen** (Objective-C)
-    - **./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe** (Java/C)
+  - **./packages/Embeddinator-4000.[VERSION]/tools/objcgen** (Objective-C)
+  - **./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe** (Java/C)
 - On macOS, **objcgen** can be run directly.
 - On Windows, **Embeddinator-4000.exe** can be run directly.
 - On macOS, **Embeddinator-4000.exe** needs to be run with **mono**:
-    - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
+  - `mono ./packages/Embeddinator-4000.[VERSION]/tools/Embeddinator-4000.exe`
 
 Each command invocation will need a number of paramaters listed in the platform-specific documentation.
 
@@ -51,9 +51,9 @@ To customize your build with MSbuild targets, first create a **Embeddinator-4000
 
 ```xml
 <Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
-	<Target Name="RunEmbeddinator" AfterTargets="AfterBuild" Inputs="$(OutputPath)/$(AssemblyName).dll" Outputs="$(IntermediateOutputPath)/Embeddinator/$(AssemblyName).framework/$(AssemblyName)">
-		<Exec Command="" />
-	</Target>
+    <Target Name="RunEmbeddinator" AfterTargets="AfterBuild" Inputs="$(OutputPath)/$(AssemblyName).dll" Outputs="$(IntermediateOutputPath)/Embeddinator/$(AssemblyName).framework/$(AssemblyName)">
+        <Exec Command="" />
+    </Target>
 </Project>
 ```
 
@@ -104,3 +104,4 @@ We will essentially set up the same thing, but the menus in Visual Studio 2017 a
 Go to **Project Options > Build Events** and enter the command listed in the platform-specific documentation into the **Post-build event command line** box. For example:
 
 ![.NET Embedding on Windows](images/visualstudiowindows.png)
+ 

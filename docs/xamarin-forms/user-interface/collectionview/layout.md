@@ -523,7 +523,7 @@ CollectionView collectionView = new CollectionView
 
 This code results in a vertical two-column grid, that has a vertical spacing of 20 around each item, and a horizontal spacing of 30 around each item:
 
-[![Screenshot of a CollectionView with item spacing, on iOS and Android](layout-images/vertical-grid-spacing.png "CollectionView item spacing")](layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView item spacing")
+[![Screenshot of a CollectionView with item spacing, on Android](layout-images/vertical-grid-spacing.png "CollectionView item spacing")](layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView item spacing")
 
 ## Item sizing
 

@@ -14,14 +14,14 @@ ms.date: 02/01/2016
 Xamarin.Forms supports all device types available on the supported platforms,
 so in addition to phones, apps can also run on:
 
-* iPads,
-* Android tablets,
-* Windows tablets and desktop computers (running Windows 10).
+- iPads,
+- Android tablets,
+- Windows tablets and desktop computers (running Windows 10).
 
 This page briefly discusses:
 
-* the supported [device types](#Device_Types), and
-* how to [optimize](#optimize) layouts for tablets versus phones.
+- the supported [device types](#Device_Types), and
+- how to [optimize](#optimize) layouts for tablets versus phones.
 
 <a name="Device_Types" />
 
@@ -76,7 +76,6 @@ dimensions in addition to running full-screen.
 
 [![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
-
 <a name="optimize" />
 
 ## Optimizing for Tablet and Desktop
@@ -85,7 +84,6 @@ You can adjust your Xamarin.Forms user interface depending on whether
 a phone or tablet/desktop device is being used. This means you can optimize
 the user-experience for large-screen devices such as tablets and desktop
 computers.
-
 
 ### Device.Idiom
 
@@ -115,8 +113,6 @@ to provide a native iOS experience.
 Review [this Xamarin blog post](https://blog.xamarin.com/bringing-xamarin-forms-apps-to-tablets/)
 to see how you can adapt your user interface so that phones use one
 layout and larger screens can use another (with the `MasterDetailPage`).
-
-
 
 ## Related Links
 
