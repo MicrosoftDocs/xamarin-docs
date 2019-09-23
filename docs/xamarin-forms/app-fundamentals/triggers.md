@@ -183,8 +183,7 @@ A trigger action implementation should:
     criteria are met.
 
 - Optionally expose properties that can be set in the XAML
-    when the trigger is declared (such as `Anchor`, `Scale`, and
-    `Length` in this example).
+    when the trigger is declared. For an example of this, see the `VisualElementPopTriggerAction` class in the accompanying sample application.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
