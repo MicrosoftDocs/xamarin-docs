@@ -215,7 +215,7 @@
     {
       "source_path": "docs/xamarin-forms/platform/plugins.md",
       "redirect_url": "/xamarin/essentials"
-    },	
+    },
     {
       "source_path": "docs/xamarin-forms/platform/gtk.md",
       "redirect_url": "/xamarin/xamarin-forms/platform/other/gtk"
@@ -243,7 +243,7 @@
     {
       "source_path": "docs/xamarin-forms/get-started/index.md",
       "redirect_url": "/xamarin/get-started"
-    },	
+    },
     {
       "source_path": "docs/xamarin-forms/get-started/installation.md",
       "redirect_url": "/xamarin/get-started/installation"
@@ -255,11 +255,11 @@
     {
       "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms/index.md",
       "redirect_url": "/xamarin/get-started"
-    },	
+    },
     {
       "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms/quickstart.md",
       "redirect_url": "/xamarin/get-started/quickstarts/single-page"
-    },	
+    },
     {
       "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms/deepdive.md",
       "redirect_url": "/xamarin/get-started/quickstarts/deepdive"
@@ -271,7 +271,7 @@
     {
       "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/quickstart.md",
       "redirect_url": "/xamarin/get-started/quickstarts/multi-page"
-    },	
+    },
     {
       "source_path": "docs/xamarin-forms/get-started/hello-xamarin-forms-multiscreen/deepdive.md",
       "redirect_url": "/xamarin/get-started/quickstarts/deepdive"
@@ -283,7 +283,7 @@
     {
       "source_path": "docs/cross-platform/get-started/installation/index.md",
       "redirect_url": "/xamarin/get-started/installation"
-    },	
+    },
     {
       "source_path": "docs/cross-platform/get-started/installation/firewall.md",
       "redirect_url": "/xamarin/get-started/installation/firewall"
@@ -291,7 +291,7 @@
     {
       "source_path": "docs/cross-platform/get-started/installation/uninstalling-xamarin.md",
       "redirect_url": "/xamarin/get-started/installation/uninstalling-xamarin"
-    },	
+    },
     {
       "source_path": "docs/cross-platform/get-started/installation/windows-preview.md",
       "redirect_url": "/xamarin/get-started/installation/windows-preview"
@@ -321,240 +321,248 @@
       "redirect_url": "/xamarin/ios/get-started/installation/windows/connecting-to-mac"
     },
     {
-        "source_path": "docs/xamarin-forms/app-fundamentals/navigation/pop-ups.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/pop-ups"
+      "source_path": "docs/xamarin-forms/app-fundamentals/navigation/pop-ups.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/pop-ups"
     },
     {
-        "source_path": "docs/xamarin-forms/app-fundamentals/dependency-service/text-to-speech.md",
-        "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/dependency-service"
+      "source_path": "docs/xamarin-forms/app-fundamentals/dependency-service/text-to-speech.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/dependency-service"
     },
     {
-        "source_path": "docs/xamarin-forms/app-fundamentals/dependency-service/device-orientation.md",
-        "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/dependency-service"
+      "source_path": "docs/xamarin-forms/app-fundamentals/dependency-service/device-orientation.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/dependency-service"
     },
     {
-        "source_path": "docs/xamarin-forms/app-fundamentals/dependency-service/battery-info.md",
-        "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/dependency-service"
+      "source_path": "docs/xamarin-forms/app-fundamentals/dependency-service/battery-info.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/dependency-service"
     },
     {
-        "source_path": "docs/ios/platform/introduction-to-ios11/get-started.md",
-        "redirect_url": "/xamarin/ios/platform/introduction-to-ios11"
+      "source_path": "docs/ios/platform/introduction-to-ios11/get-started.md",
+      "redirect_url": "/xamarin/ios/platform/introduction-to-ios11"
     },
     {
-        "source_path": "docs/xamarin-forms/app-fundamentals/files.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/data/files"
+      "source_path": "docs/xamarin-forms/app-fundamentals/files.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/data/files"
     },
     {
-        "source_path": "docs/xamarin-forms/app-fundamentals/databases.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/data/databases"
+      "source_path": "docs/xamarin-forms/app-fundamentals/databases.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/data/databases"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/walkthrough.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services/introduction"
+      "source_path": "docs/xamarin-forms/data-cloud/walkthrough.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services/introduction"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/consuming/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services"
+      "source_path": "docs/xamarin-forms/data-cloud/consuming/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/consuming/asmx.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services/asmx"
+      "source_path": "docs/xamarin-forms/data-cloud/consuming/asmx.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services/asmx"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/consuming/wcf.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services/wcf"
+      "source_path": "docs/xamarin-forms/data-cloud/consuming/wcf.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services/wcf"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/consuming/rest.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services/rest"
+      "source_path": "docs/xamarin-forms/data-cloud/consuming/rest.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services/rest"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/consuming/azure.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services"
+      "source_path": "docs/xamarin-forms/data-cloud/consuming/azure.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/web-services"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/authentication/azure.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication"
+      "source_path": "docs/xamarin-forms/data-cloud/authentication/azure.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c-mobile-app.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication"
+      "source_path": "docs/xamarin-forms/data-cloud/authentication/azure-ad-b2c-mobile-app.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/sync/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud"
+      "source_path": "docs/xamarin-forms/data-cloud/sync/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/sync/azure-mobile-apps.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud"
+      "source_path": "docs/xamarin-forms/data-cloud/sync/azure-mobile-apps.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/push-notifications/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services"
+      "source_path": "docs/xamarin-forms/data-cloud/push-notifications/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/push-notifications/azure-notification-hub.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-notification-hub"
+      "source_path": "docs/xamarin-forms/data-cloud/push-notifications/azure-notification-hub.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-notification-hub"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/push-notifications/azure.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-notification-hub"
+      "source_path": "docs/xamarin-forms/data-cloud/push-notifications/azure.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-notification-hub"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/storage/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-storage"
+      "source_path": "docs/xamarin-forms/data-cloud/storage/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-storage"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/storage/azure-storage.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-storage"
+      "source_path": "docs/xamarin-forms/data-cloud/storage/azure-storage.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-storage"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/search/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-search"
+      "source_path": "docs/xamarin-forms/data-cloud/search/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-search"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/search/azure-search.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-search"
+      "source_path": "docs/xamarin-forms/data-cloud/search/azure-search.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-search"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/serverless/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services"
+      "source_path": "docs/xamarin-forms/data-cloud/serverless/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/serverless/azure-functions.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-functions"
+      "source_path": "docs/xamarin-forms/data-cloud/serverless/azure-functions.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-functions"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/serverless/azure-signalr.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-signalr"
+      "source_path": "docs/xamarin-forms/data-cloud/serverless/azure-signalr.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-signalr"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/cosmosdb/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services"
+      "source_path": "docs/xamarin-forms/data-cloud/cosmosdb/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/cosmosdb/consuming.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-cosmosdb"
+      "source_path": "docs/xamarin-forms/data-cloud/cosmosdb/consuming.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-services/azure-cosmosdb"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/cosmosdb/authentication.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication/azure-cosmosdb-auth"
+      "source_path": "docs/xamarin-forms/data-cloud/cosmosdb/authentication.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/authentication/azure-cosmosdb-auth"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/introduction"
+      "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/introduction"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/speech-recognition.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/speech-recognition"
+      "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/speech-recognition.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/speech-recognition"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/spell-check.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/spell-check"
+      "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/spell-check.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/spell-check"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/text-translation.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/text-translation"
+      "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/text-translation.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/text-translation"
     },
     {
-        "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/emotion-recognition.md",
-        "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/emotion-recognition"
+      "source_path": "docs/xamarin-forms/data-cloud/cognitive-services/emotion-recognition.md",
+      "redirect_url": "/xamarin/xamarin-forms/data-cloud/azure-cognitive-services/emotion-recognition"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/bouncing-game.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md"
+      "source_path": "docs/graphics-games/cocossharp/bouncing-game.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/bouncing-game.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/ccaction.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccaction.md"
+      "source_path": "docs/graphics-games/cocossharp/ccaction.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccaction.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/ccdrawnode.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md"
+      "source_path": "docs/graphics-games/cocossharp/ccdrawnode.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/ccrendertexture.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccrendertexture.md"
+      "source_path": "docs/graphics-games/cocossharp/ccrendertexture.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccrendertexture.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/ccspritesheet.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccspritesheet.md"
+      "source_path": "docs/graphics-games/cocossharp/ccspritesheet.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccspritesheet.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/cointime.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/cointime.md"
+      "source_path": "docs/graphics-games/cocossharp/cointime.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/cointime.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/content-pipeline/index.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/index.md"
+      "source_path": "docs/graphics-games/cocossharp/content-pipeline/index.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/index.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/content-pipeline/introduction.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md"
+      "source_path": "docs/graphics-games/cocossharp/content-pipeline/introduction.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/content-pipeline/walkthrough.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/walkthrough.md"
+      "source_path": "docs/graphics-games/cocossharp/content-pipeline/walkthrough.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/walkthrough.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/entities.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/entities.md"
+      "source_path": "docs/graphics-games/cocossharp/entities.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/entities.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/fruity-falls.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/fruity-falls.md"
+      "source_path": "docs/graphics-games/cocossharp/fruity-falls.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/fruity-falls.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/index.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md"
+      "source_path": "docs/graphics-games/cocossharp/index.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/math.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/math.md"
+      "source_path": "docs/graphics-games/cocossharp/math.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/math.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/resolutions.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md"
+      "source_path": "docs/graphics-games/cocossharp/resolutions.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/resolutions.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/texture-cache.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/texture-cache.md"
+      "source_path": "docs/graphics-games/cocossharp/texture-cache.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/texture-cache.md"
     },
     {
-        "source_path": "docs/graphics-games/cocossharp/tiled.md",
-        "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/tiled.md"
+      "source_path": "docs/graphics-games/cocossharp/tiled.md",
+      "redirect_url": "https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/tiled.md"
     },
     {
       "source_path": "docs/guides/cross-platform/azure/Resources/poster.pdf/index.md",
       "redirect_url": "https://github.com/xamarin/docs-archive/raw/master/Docs/Azure Mobile Apps/poster.pdf"
     },
     {
-        "source_path": "docs/xamarin-forms/user-interface/themes/index.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
+      "source_path": "docs/xamarin-forms/user-interface/themes/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
     },
     {
-        "source_path": "docs/xamarin-forms/user-interface/themes/light.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
+      "source_path": "docs/xamarin-forms/user-interface/themes/light.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
     },
     {
-        "source_path": "docs/xamarin-forms/user-interface/themes/dark.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
+      "source_path": "docs/xamarin-forms/user-interface/themes/dark.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
     },
     {
-        "source_path": "docs/xamarin-forms/user-interface/themes/custom.md",
-        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
+      "source_path": "docs/xamarin-forms/user-interface/themes/custom.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/theming"
+    },
+    {
+      "source_path": "docs/cross-platform/internals/index.md",
+      "redirect_url": "/xamarin/cross-platform/internals/available-assemblies/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/cross-platform/troubleshooting/questions/visualstudio-2017-rc.md",
+      "redirect_url": "/xamarin/cross-platform/troubleshooting/questions/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/graphics-games/skiasharp/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/graphics/skiasharp/",
+      "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/mac/get-started/installation.md",
+      "redirect_url": "/visualstudio/mac/installation/",
+      "redirect_document_id": false
     }
   ]
 }
-
-
-
-
-
-
-
-
-
-
-
-
