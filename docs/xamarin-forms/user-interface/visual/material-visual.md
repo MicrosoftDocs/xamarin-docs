@@ -48,18 +48,18 @@ Functionally, the material renderers are no different to the default renderers.
 
 After installing the [Xamarin.Forms.Visual.Material](https://www.nuget.org/packages/Xamarin.Forms.Visual.Material/) NuGet package, the material renderers must be initialized in each platform project.
 
-On iOS, this should occur in **AppDelegate.cs** by invoking the `FormsMaterial.Init` method *after* the `Xamarin.Forms.Forms.Init` method:
+On iOS, this should occur in **AppDelegate.cs** by invoking the `Xamarin.Forms.FormsMaterial.Init` method *after* the `Xamarin.Forms.Forms.Init` method:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init();
-FormsMaterial.Init();
+global::Xamarin.Forms.FormsMaterial.Init();
 ```
 
-On Android, this should occur in **MainActivity.cs** by invoking the `FormsMaterial.Init` method *after* the `Xamarin.Forms.Forms.Init` method:
+On Android, this should occur in **MainActivity.cs** by invoking the `Xamarin.Forms.FormsMaterial.Init` method *after* the `Xamarin.Forms.Forms.Init` method:
 
 ```csharp
 global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
-FormsMaterial.Init(this, savedInstanceState);
+global::Xamarin.Forms.FormsMaterial.Init(this, savedInstanceState);
 ```
 
 ## Consume material renderers
