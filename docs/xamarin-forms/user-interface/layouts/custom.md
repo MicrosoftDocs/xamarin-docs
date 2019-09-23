@@ -13,7 +13,7 @@ ms.date: 03/29/2017
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin.Forms defines four layout classes – StackLayout, AbsoluteLayout, RelativeLayout, and Grid, and each arranges its children in a different way. However, sometimes it's necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive WrapLayout class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows._
+_Xamarin.Forms defines five layout classes – StackLayout, AbsoluteLayout, RelativeLayout, Grid, and FlexLayout, and each arranges its children in a different way. However, sometimes it's necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive WrapLayout class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows._
 
 In Xamarin.Forms, all layout classes derive from the [`Layout<T>`](xref:Xamarin.Forms.Layout`1) class and constrain the generic type to [`View`](xref:Xamarin.Forms.View) and its derived types. In turn, the `Layout<T>` class derives from the [`Layout`](xref:Xamarin.Forms.Layout) class, which provides the mechanism for positioning and sizing child elements.
 
@@ -422,7 +422,7 @@ The number of columns in each row depends on the photo size, the screen width, a
 
 - [WrapLayout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Custom Layouts](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
-- [Creating Custom Layouts in Xamarin.Forms (video)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
+- [Creating Custom Layouts in Xamarin.Forms (video)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
 - [Layout\<T>](xref:Xamarin.Forms.Layout`1)
 - [Layout](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)
