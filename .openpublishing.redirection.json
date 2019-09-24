@@ -1,6 +1,10 @@
 {
   "redirections": [
     {
+      "source_path": "docs/cross-platform/get-started/introduction-to-mobile-development.md",
+      "redirect_url": "/xamarin/get-started/what-is-xamarin"
+    },
+    {
       "source_path": "docs/cross-platform/getting-started/index.md",
       "redirect_url": "/xamarin/xamarin-forms/get-started"
     },
