@@ -62,6 +62,8 @@ In the case of the example app MonkeyChat, the data models and processing code s
 
 Do the following:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 1. Start Visual Studio for Mac and open the MonkeyChat app.

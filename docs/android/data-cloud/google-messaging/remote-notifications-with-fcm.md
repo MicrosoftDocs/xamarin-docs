@@ -81,6 +81,8 @@ you specified a package name for the FCM-enabled app. This package name
 also serves as the [*application ID*](./firebase-cloud-messaging.md#fcm-in-action-app-id) that is associated with the [API
 key](firebase-cloud-messaging.md#fcm-in-action-api-key). Configure the app to use this package name:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 1. Open the properties for the **FCMClient** project.

@@ -47,6 +47,8 @@ Profiling is helpful in all types of development, but it is especially crucial i
 
 The Xamarin Profiler provides developers with a way to profile applications from inside Visual Studio for Mac or Visual Studio. The profiler collects and displays information about the app, which can then be used by the developer to analyze an application’s behavior. There are a number of different ways to profile an application with the Xamarin Profiler, namely memory profiling and statistical sampling. These are carried out through the Allocations and Time Profiler instruments respectively.
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 Currently, the Xamarin Profiler can be used to test Xamarin.iOS, Xamarin.Android, and Xamarin.Mac applications on Mac (Via Visual Studio for Mac). The profiler is a separate process from the IDE, and so, in addition to launching from Visual Studio for Mac, it can be used as a standalone application to examine .exe and `.mlpd` files which have been produced from the [mono log profiler](https://www.mono-project.com/docs/debug+profile/profile/profiler/).

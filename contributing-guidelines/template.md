@@ -176,7 +176,7 @@ When the UID contains the special characters \` or \#, the UID value needs to be
 - bulleted
 - list
 
-##### Unordered list with an embedded list
+#### Unordered list with an embedded list
 
 - This
 - bulleted
@@ -207,7 +207,7 @@ You can use a [Markdown table generator tool](http://www.tablesgenerator.com/mar
 
 Use three backticks (\`\`\`) + a language ID to apply language-specific color coding to a code block. Here is the entire list of [GFM language IDs](https://github.com/jmm/gfm-lang-ids/wiki/GitHub-Flavored-Markdown-(GFM)-language-IDs).
 
-##### C&#9839;
+#### C&#9839;
 
 ```c#
 using System;

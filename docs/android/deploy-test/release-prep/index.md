@@ -60,6 +60,8 @@ allow an Android application to be published without one. The `Icon`
 property of the `Application` attribute is used to specify the
 application icon for a Xamarin.Android project.
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 In Visual Studio 2017 and later, specify the application icon through
