@@ -37,6 +37,8 @@ use the [Unified API](~/cross-platform/macios/unified/index.md)
 
 For Xamarin.iOS mobile applications that have been converted to the Unified API, developers must manually update the build settings to target 64-bit:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, double-click the app's project to open the **Project Options** window.

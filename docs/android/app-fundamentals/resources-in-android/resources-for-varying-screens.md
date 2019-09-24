@@ -84,6 +84,8 @@ pixelated.
 
 Supported screen sixes are declared in the **Properites/AndroidManifest.xml** file of the solution:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 [![Android Manifest](resources-for-varying-screens-images/01-android-manifest-sml.w1581.png)](resources-for-varying-screens-images/01-android-manifest.w1581.png#lightbox)

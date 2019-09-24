@@ -14,6 +14,8 @@ ms.date: 06/19/2018
 
 ## Download and Install
 
+<!-- markdownlint-disable MD001 -->
+
 # [Windows](#tab/windows)
 
 1. Check the [requirements](#requirements) below.

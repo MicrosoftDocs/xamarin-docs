@@ -21,6 +21,8 @@ The code-behind file provides code support for the markup. Together, these two f
 
 To begin editing your first XAML file, use Visual Studio or Visual Studio for Mac to create a new Xamarin.Forms solution. (Select the tab below corresponding to your environment.)
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 In Windows, use Visual Studio to select **File > New > Project** from the menu. In the **New Project** dialog, select **Visual C# > Cross Platform** at the left, and then **Mobile App (Xamarin.Forms)** from the list in the center.

@@ -31,6 +31,8 @@ Typically, this means you will have to determine the SHA-1 fingerprint
 for the debug keystore, and then the SHA-1 fingerprint for the keystore
 that is used to sign your application for release.
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 By default the keystore that is used to sign debug versions of a

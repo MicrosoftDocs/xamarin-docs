@@ -110,6 +110,8 @@ What are the benefits of creating a Custom Sticker Experience?
 
 To creating a Custom Sticker Experience, do the following:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 1. Start Visual Studio for Mac.

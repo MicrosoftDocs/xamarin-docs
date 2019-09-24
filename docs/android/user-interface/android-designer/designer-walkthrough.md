@@ -43,6 +43,8 @@ how to modify widgets interactively on the **Design Surface** or
 by using the Designer's **Properties** pane. Finally, you'll see how 
 the design looks when the app runs on a device or emulator.
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 ### Creating a new project

@@ -76,6 +76,8 @@ Select the **AppResources.resx** file and show the
 **Properties** pad to see where this build tool is configure. The screenshot below
 shows the **Custom Tool: ResXFileCodeGenerator**.
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 [![](text-images/vs-resx-internal-sml.png "Properties Window for AppResources.Resx")](text-images/vs-resx-internal.png#lightbox)
