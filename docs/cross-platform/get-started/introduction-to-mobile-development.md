@@ -28,7 +28,7 @@ that the native languages, Objective-C, Swift, Java, and Kotlin, are the only
 choice.
 
 Xamarin allows you develop in C#, with a class library and runtime that works across
-all many platforms, including iOS, Android, and Windows, while still compiling native
+many platforms, including iOS, Android, and Windows, while still compiling native
 (non-interpreted) applications that are performant enough even for demanding games.
 
 Xamarin combines all of the abilities of the native
