@@ -68,6 +68,8 @@ Permissions are added to the  **AndroidManifest.xml** with the `uses-permission`
 <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 ```
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 It is possible to declare the permissions using the tool support built into Visual Studio:

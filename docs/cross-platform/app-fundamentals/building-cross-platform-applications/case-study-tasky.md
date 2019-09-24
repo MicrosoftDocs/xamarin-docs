@@ -575,7 +575,7 @@ The resulting applications look like this on each platform:
 
  <a name="iOS" />
 
-#### iOS
+### iOS
 
 The application uses iOS-standard user interface design, such as the
 ‘add’ button being positioned in the navigation bar and using the built-in **plus (+)** icon. It also uses the default
@@ -586,7 +586,7 @@ The application uses iOS-standard user interface design, such as the
 
  <a name="Android" />
 
-#### Android
+### Android
 
 The Android app uses built-in controls including the built-in layout for rows
 that require a ‘tick’ displayed. The hardware/system back behavior is
@@ -596,7 +596,7 @@ supported in addition to an on-screen back button.
 
  <a name="Windows_Phone" />
 
-#### Windows Phone
+### Windows Phone
 
 The Windows Phone app uses the standard layout, populating the app bar at the bottom
 of the screen instead of a nav bar at the top.

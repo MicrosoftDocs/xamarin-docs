@@ -86,6 +86,8 @@ Once the iTunes Connect record has been created, you will be able to upload new 
 
 First, build your [final distributable](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) in the IDE, then [submit your app to Apple](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) through either the Application Loader, or the archive function in Xcode.
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 ### Create an Archive

@@ -41,6 +41,8 @@ Existing apps will be required to target API level 26 or higher
 beginning in November 2018. For more information, see
 [Improving app security and performance on Google Play for years to come](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 Normally, all three Xamarin.Android API levels are set to the same

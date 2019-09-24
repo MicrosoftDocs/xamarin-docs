@@ -157,6 +157,8 @@ If the user interacts with the Custom Actions (presented below the Notification)
 
 To implement a Custom User Notification UI in a Xamarin.iOS app, do the following:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 1. Open the app's solution in Visual Studio for Mac.

@@ -23,6 +23,8 @@ Follow these steps to create your first Xamarin.Android Wear app:
 
 Create a new **Android Wear Application**:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 [![Creating a new Android Wear Application in the New Project dialog](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)

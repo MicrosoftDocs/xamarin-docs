@@ -31,6 +31,8 @@ The iOS Designer allows developers to visually design an application's user inte
 
 A view controller has two parts: a visual representation in the iOS Designer and an associated C# class:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 [![A view controller in the iOS Designer](introduction-images/1-storyboardwithviewcontroller-vsmac.png "A view controller in the iOS Designer")](introduction-images/1-storyboardwithviewcontroller-vsmac-large.png#lightbox)
