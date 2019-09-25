@@ -207,9 +207,10 @@ With your build settings properly configured and iTunes Connect awaiting your su
     ![Build configuration and platform selection](publishing-to-the-app-store-images/chooseConfig-m157.png "Build configuration and platform selection")
 
 2. From the **Build** menu, select **Archive for Publishing**.
-3. Once the archive has been created, the **Archives** view will be displayed:
+3. Once the archive has been created, the **Archives** view will be displayed. Click **Sign and Distribute...** to open the publishing wizard.
 
-    ![Archives view](publishing-to-the-app-store-images/archives-m157.png "Archives view")
+
+    ![Screenshot of the Sign and Distribute button location in the Archives view.](publishing-to-the-app-store-images/archives-mac.png "Screenshot of the Sign and Distribute button location in the Archives view.")
 
     > [!NOTE]
     > By default the **Archives** view only shows archives for the open
@@ -218,43 +219,19 @@ With your build settings properly configured and iTunes Connect awaiting your su
     > debug information they include can be used to symbolicate crash reports
     > if necessary.
 
-4. Click **Sign and Distribute...** to open the publishing wizard.
-5. Select the **App Store** distribution channel. Click **Next**.
+4. Select the **App Store** distribution channel. Click **Next**.
 
-    ![Distribution channel selection](publishing-to-the-app-store-images/distChannel-m157.png "Distribution channel selection")
+5. Select **Upload** as the destination. Click **Next**.
 
 6. In the **Provisioning profile** window, select your signing identity, app, and provisioning profile. Click **Next**.
 
-    ![Provisioning profile selection](publishing-to-the-app-store-images/provProfileSelect-m157.png "Provisioning profile selection")
+    ![Screenshot of the Provisioning profile wizard page showing a valid signing identity, app, and provisioning profile selection.](publishing-to-the-app-store-images/provProfileSelect-mac.png "Screenshot of the Provisioning profile wizard page with a valid signing identity, app, and provisioning profile selected.")
 
-7. Verify the details of your package and click **Publish** to save an .ipa file for your app:
+7. In the **App Store Connect information** window, select an Apple ID username from the menu and enter [an app-specific password](https://support.apple.com/ht204397). Click **Next**.
 
-    ![App detail verification](publishing-to-the-app-store-images/publish-m157.png "App detail verification")
+    ![Screenshot of the App Store Connect information wizard page showing an Apple ID user name selected.](publishing-to-the-app-store-images/connectInfo-mac.png "Screenshot of the App Store Connect information wizard page showing an Apple ID user name selected.")
 
-8. Once your .ipa has been saved, your app is ready to be uploaded to iTunes Connect.
-
-    ![Ready for submission](publishing-to-the-app-store-images/readyToGo-m157.png "Ready for submission")
-
-9. Click **Open Application Loader** and log in (note that you must [create an app-specific password](https://support.apple.com/ht204397) for your Apple ID).
-
-    > [!NOTE]
-    > For more information about the tool, take a look at [Apple's docs about Application Loader](https://help.apple.com/itc/apploader/#/apdS673accdb).
-
-10. Select **Deliver Your App** and click the **Choose** button:
-
-    ![Select Deliver Your App](publishing-to-the-app-store-images/publishvs01.png "Select Deliver Your App")
-
-11. Select the .ipa file you created above and click the **OK** button.
-12. The Application Loader will validate the file:
-
-    ![The validation screen](publishing-to-the-app-store-images/publishvs02.png "The validation screen")
-
-13. Click the **Next** button and the application will be validated against the App Store:
-
-    ![Validating against the App Store](publishing-to-the-app-store-images/publishvs03.png "Validating against the App Store")
-
-14. Click the **Send** button to send the application to Apple for review.
-15. The Application Loader will inform you when the file has been successfully uploaded.
+8. Verify the details of your package and click **Publish**. After selecting a location to save the .ipa file, the wizard will upload your app to App Store Connect.
 
     > [!NOTE]
     > Apple may reject apps with the **iTunesMetadata.plist** included in the
