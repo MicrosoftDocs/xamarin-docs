@@ -277,7 +277,7 @@ A [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) also supports caching of
 Caching is enabled by default and will store the image locally for 24 hours. To disable caching for a particular image, instantiate the image source as follows:
 
 ```csharp
-image.Source = new UriImageSource { CachingEnabled = false, Uri="http://server.com/image" };
+image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("http://server.com/image") };
 ```
 
 To set a specific cache period (for example, 5 days) instantiate the image source as follows:
