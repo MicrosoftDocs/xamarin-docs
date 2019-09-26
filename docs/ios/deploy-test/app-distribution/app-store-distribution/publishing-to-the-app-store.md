@@ -144,9 +144,39 @@ New Xamarin.iOS projects automatically set up **Debug** and **Release** _build c
 
 15. Click **OK** to save changes to the project properties.
 
-# [Visual Studio](#tab/windows)
+# [Visual Studio 2019](#tab/windows)
 
-1. Make sure that Visual Studio 2019 or Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Make sure that Visual Studio 2019 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Right-click on the **Project Name** in the **Solution Explorer**, select **Properties**.
+3. Navigate to the **iOS Build** tab and set **Configuration** to **Release** and **Platform** to **iPhone**.
+4. To build with a specific iOS SDK, select it from the **SDK Version** list. Otherwise, leave this value at **Default**.
+5. Linking reduces the overall size of your application by stripping out unused code. In most cases, **Linker Behavior** should be set to the default value of **Link Framework SDKs only**. In some situations, such as when using some third-party libraries, it may be necessary to set this value to **Don't Link** to ensure that needed code is not removed. For more information, refer to the [Linking Xamarin.iOS apps](~/ios/deploy-test/linker.md) guide.
+6. Check **Optimize PNG images** to further decrease your application's size.
+7. Debugging should not be enabled, as it will make the build unnecessarily large.
+8. For iOS 11, select one of the device architectures that supports **ARM64**. For more information on building for 64-bit iOS devices, please see the **Enabling 64-Bit Builds of Xamarin.iOS Apps** section of the [32/64-bit platform considerations](~/cross-platform/macios/32-and-64/index.md) documentation.
+9. You may wish to use the **LLVM** compiler to build smaller and faster code. However, this option increases compile times.
+10. Based on your application's needs, you may also wish to adjust the type of **Garbage Collection** being used and set up for **Internationalization**.
+
+    After setting the options described above, your build settings should
+    look similar to this:
+
+    ![iOS Build settings](publishing-to-the-app-store-images/build-w157.png "iOS Build settings")
+
+    Also take a look at ths [iOS build mechanics](~/ios/deploy-test/ios-build-mechanics.md) guide, which further describes build settings.
+
+11. Navigate to the **iOS Bundle Signing** tab. Make sure that **Configuration** is set to **Release**, **Platform** is set to **iPhone**, and that **Manual Provisioning** is selected.
+12. Set **Signing Identity** to **Distribution (Automatic)**.
+13. For **Provisioning Profile**, select the App Store provisioning profile [created above](#create-and-install-an-app-store-provisioning-profile).
+
+    Your project's bundle signing options should now look similar to this:
+
+    ![iOS Bundle Signing settings](publishing-to-the-app-store-images/bundleSigning-w157.png "iOS Bundle Signing settings")
+
+14. Save the build configuration and close it.
+
+# [Visual Studio 2017](#tab/win-vs2017)
+
+1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Right-click on the **Project Name** in the **Solution Explorer**, select **Properties**.
 3. Navigate to the **iOS Build** tab and set **Configuration** to **Release** and **Platform** to **iPhone**.
 4. To build with a specific iOS SDK, select it from the **SDK Version** list. Otherwise, leave this value at **Default**.
@@ -241,13 +271,42 @@ With your build settings properly configured and iTunes Connect awaiting your su
     >
     > For a workaround to this error, take a look at [this post in the Xamarin Forums](https://forums.xamarin.com/discussion/40388/disallowed-paths-itunesmetadata-plist-found-at-when-submitting-to-app-store/p1).
 
-# [Visual Studio](#tab/windows)
+# [Visual Studio 2019](#tab/windows)
 
 > [!NOTE]
-> Visual Studio 2017 does not currently support the **Archive for
-> Publishing** workflow found in Visual Studio for Mac.
+> Publishing to the App Store is supported in Visual Studio 2019 version 16.3 and higher.
 
-1. Make sure that Visual Studio 2019 or Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. Make sure that Visual Studio 2019 is [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+2. Select **Release** from the **Solution Configurations** dropdown, and **iPhone** from the **Solution Platforms** dropdown.
+
+    ![Screenshot of the Visual Studio toolbar showing solution configuration set to release, solution platform set to iPhone, and target set to device.](publishing-to-the-app-store-images/chooseConfig-w157.png "Screenshot of the Visual Studio toolbar showing solution configuration set to release, solution platform set to iPhone, and target set to device.")
+
+3. From the **Build** menu, select **Archive...**. This will open the **Archive Manager** and begin creating an archive.
+
+4. Once the archive has been created, click **Distribute...** to open the publishing wizard.
+
+    ![Screenshot of the distribute button location in the archive manager view.](publishing-to-the-app-store-images/archives-win.png "Screenshot of the distribute button location in the archive manager view.")
+
+5. Select the **App Store** distribution channel.
+
+6. Select your signing identity and provisioning profile. Click **Upload to Store**.
+
+    ![Screenshot of the publishing wizard showing a valid signing identity and provisioning profile selection.](publishing-to-the-app-store-images/provProfileSelect-win.png "Screenshot of the publishing wizard showing a valid signing identity and provisioning profile selection.")
+
+7. Enter your Apple ID and [an app-specific password](https://support.apple.com/ht204397). Click **OK** to begin uploading your app to App Store Connect.
+
+    ![Screenshot of the pop up window to enter your Apple ID and app specific password.](publishing-to-the-app-store-images/connectInfo-win.png "Screenshot of the pop up window to enter your Apple ID and app specific password.")
+
+# [Visual Studio 2017](#tab/win-vs2017)
+
+> [!NOTE]
+> Visual Studio 2017 does not support the full publishing workflow found in Visual Studio for Mac and Visual Studio 2019.
+>
+> The steps below are for Xcode 10.
+>
+> You can still follow the steps below to build an .IPA file, but to deploy to the App Store using Xcode 11 (which is required for iOS 13 support) you should [use Visual Studio for Mac](?tabs=macos#build-and-submit-your-app).
+
+1. Make sure that Visual Studio 2017 has been [paired to a Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. Select **Release** from the Visual Studio 2017 **Solution Configurations** dropdown, and **iPhone** from the **Solution Platforms** dropdown.
 
     ![Build configuration and platform selection](publishing-to-the-app-store-images/chooseConfig-w157.png "Build configuration and platform selection")
@@ -261,6 +320,13 @@ With your build settings properly configured and iTunes Connect awaiting your su
 
 4. To find the .ipa file on the Windows machine, right-click on the Xamarin.iOS project name in the Visual Studio 2019 or Visual Studio 2017 **Solution Explorer** and choose **Open Folder in File Explorer**. Then, in the just-opened Windows **File Explorer**, navigate to the **bin/iPhone/Release** subdirectory. Unless you have [customized the .ipa file output location](#customize-the-ipa-location), it should be in this directory.
 5. To instead view the .ipa file on the Mac build host, right-click the Xamarin.iOS project name in the Visual Studio 2019 or Visual Studio 2017 **Solution Explorer** (on Windows) and select **Show IPA File on Build Server**. This will open a **Finder** window on the Mac build host with the .ipa file selected.
+
+    > [!TIP]
+    >
+    > The following steps are only valid if you're using Xcode 10, and building for iOS 12 and earlier. 
+    >
+    > To deploy to the App Store using Xcode 11 (for iOS 13), you should [use Visual Studio for Mac](?tabs=macos#build-and-submit-your-app) to build and upload your app. **Application Loader** will not be available for Xcode 11.
+
 6. On the Mac build host, open **Application Loader**. In Xcode, select **Xcode > Open Developer Tool > Application Loader**.
 
     > [!NOTE]
@@ -370,4 +436,3 @@ release on the App Store.
 - [Configuring an app in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md)
 - [Application icons in Xamarin.iOS](~/ios/app-fundamentals/images-icons/app-icons.md)
 - [Launch screens for Xamarin.iOS apps](~/ios/app-fundamentals/images-icons/launch-screens.md)
-- [Application Loader documentation (Apple)](https://help.apple.com/itc/apploader/#/apdS673accdb)
