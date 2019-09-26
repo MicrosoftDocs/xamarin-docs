@@ -202,10 +202,6 @@ public UIWindow GetPresentationAnchor (ASAuthorizationController controller) => 
 #endregion
 ```
 
-## Summary
-
-This article introduced Sign In with Apple for iOS.
-
 ## Related links
 
 * [Sign In with Apple Guidelines](https://developer.apple.com/design/human-interface-guidelines/sign-in-with-apple/overview/)
