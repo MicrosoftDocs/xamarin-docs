@@ -425,7 +425,7 @@ The core functionality of `RegistrationIntentService` resides in the
 `OnHandleIntent` method. Let's walk through this code to see how
 it registers our app with GCM.
 
-##### Request a Registration Token
+#### Request a Registration Token
 
 `OnHandleIntent` first calls Google's 
 [InstanceID.GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;)
@@ -454,7 +454,7 @@ catch (Exception e)
     Log.Debug ...
 ```
 
-##### Forward the Registration Token to the App Server
+#### Forward the Registration Token to the App Server
 
 If we get a registration token (that is, no exception was thrown), we 
 call `SendRegistrationToAppServer` to associate the user's registration 
@@ -477,7 +477,7 @@ server. If this boolean is false, `SendRegistrationToAppServer` sends
 the token to the app server &ndash; otherwise, the token was already 
 sent to the app server in a previous call. 
 
-##### Subscribe to the Notification Topic
+#### Subscribe to the Notification Topic
 
 Next, we call our `Subscribe` method to indicate to GCM that 
 we want to subscribe to a notification topic. In `Subscribe`, we 

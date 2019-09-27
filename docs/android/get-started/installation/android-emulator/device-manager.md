@@ -513,6 +513,8 @@ The following sections explain how to diagnose and work around problems
 that may occur when using the Android Device Manager to configure
 virtual devices.
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 ### Android SDK in Non-Standard Location

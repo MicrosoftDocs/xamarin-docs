@@ -112,6 +112,8 @@ Embedded images are also shipped with an application (like local images) but ins
 
 To embed an image in a project, right-click to add new items and select the image/s you wish to add. By default the image will have **Build Action: None**; this needs to be set to **Build Action: EmbeddedResource**.
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 ![](images-images/vs-buildaction.png "Set Build Action: EmbeddedResource")
@@ -275,7 +277,7 @@ A [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) also supports caching of
 Caching is enabled by default and will store the image locally for 24 hours. To disable caching for a particular image, instantiate the image source as follows:
 
 ```csharp
-image.Source = new UriImageSource { CachingEnabled = false, Uri="http://server.com/image" };
+image.Source = new UriImageSource { CachingEnabled = false, Uri = new Uri("http://server.com/image") };
 ```
 
 To set a specific cache period (for example, 5 days) instantiate the image source as follows:

@@ -18,7 +18,7 @@ Projects must reference the **System.Net.Http** assembly.
 >
 > In order to ensure your apps continue to work with these servers and services, **you should update your Xamarin projects with the `NSUrlSession` setting shown below, then re-build and re-deploy your apps** to your users.
 
-### Selecting an HttpClient stack
+## Selecting an HttpClient stack
 
 To adjust the `HttpClient` being used by your app:
 

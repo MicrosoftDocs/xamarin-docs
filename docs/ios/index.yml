@@ -42,7 +42,7 @@ sections:
       href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: iOS 13 preview
+      text: iOS 13
       href: ~/ios/platform/ios13/index.md
 - title: Guides
   items:

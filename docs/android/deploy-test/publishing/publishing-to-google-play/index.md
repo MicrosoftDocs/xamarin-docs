@@ -145,6 +145,8 @@ application.
 
 ### Publishing to Google Play
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 Xamarin Android 7.0 introduces an integrated workflow for publishing

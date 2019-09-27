@@ -11,8 +11,6 @@ ms.date: 08/28/2019
 
 # Dark Mode in Xamarin.iOS
 
-![This API is currently in preview](~/media/shared/preview.png)
-
 Dark Mode is a system-wide option for light and dark themes. iOS users may now choose the theme or allow iOS to dynamically change appearance based on the environment and time of day.
 
 This document introduces dark mode and supporting dark mode in iOS 13 applications.

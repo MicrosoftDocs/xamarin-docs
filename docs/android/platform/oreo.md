@@ -69,6 +69,8 @@ Each of these steps is explained in the following sections:
 
 To add Android Oreo support to Visual Studio, do the following:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 - For Visual Studio 2019, use the [SDK Manager](~/android/get-started/installation/android-sdk.md) to install API level 26.0 or later.

@@ -392,6 +392,8 @@ wrong encoding. ProGuard cannot handle _byte order mark_ (BOM) which
 may be present in text files. If a BOM is present, then ProGuard will 
 exit with the above error. 
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 To prevent this problem, edit the custom configuration file from a text 
