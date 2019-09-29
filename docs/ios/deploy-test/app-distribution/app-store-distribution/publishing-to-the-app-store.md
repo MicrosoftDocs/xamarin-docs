@@ -51,7 +51,7 @@ A couple of things to watch out for when submitting an app:
 1. Make sure the app’s description matches its functionality.
 2. Test that the app doesn’t crash under normal usage. This includes usage on every iOS device it supports.
 
-Also take a look at [App Store-related resources](https://developer.apple.com/app-store/resources/) 
+Also take a look at [App Store-related resources](https://developer.apple.com/app-store/resources/)
 that Apple provides.
 
 ## Set up an App ID and entitlements
@@ -239,7 +239,6 @@ With your build settings properly configured and iTunes Connect awaiting your su
 2. From the **Build** menu, select **Archive for Publishing**.
 3. Once the archive has been created, the **Archives** view will be displayed. Click **Sign and Distribute...** to open the publishing wizard.
 
-
     ![Screenshot of the Sign and Distribute button location in the Archives view.](publishing-to-the-app-store-images/archives-mac.png "Screenshot of the Sign and Distribute button location in the Archives view.")
 
     > [!NOTE]
@@ -323,7 +322,7 @@ With your build settings properly configured and iTunes Connect awaiting your su
 
     > [!TIP]
     >
-    > The following steps are only valid if you're using Xcode 10, and building for iOS 12 and earlier. 
+    > The following steps are only valid if you're using Xcode 10, and building for iOS 12 and earlier.
     >
     > To deploy to the App Store using Xcode 11 (for iOS 13), you should [use Visual Studio for Mac](?tabs=macos#build-and-submit-your-app) to build and upload your app. **Application Loader** will not be available for Xcode 11.
 
