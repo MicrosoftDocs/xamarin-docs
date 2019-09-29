@@ -76,6 +76,19 @@ Right-to-left localization can then be tested by changing the language and regio
 > [!WARNING]
 > Please note that when changing the language and region to a right-to-left locale on iOS, any [`DatePicker`](xref:Xamarin.Forms.DatePicker) views will throw an exception if you do not include the resources required for the locale. For example, when testing an app in Arabic that has a `DatePicker`, ensure that **mideast** is selected in the **Internationalization** section of the **iOS Build** pane.
 
+
+And if you want your app to always be right-to-left regardless of the device settings, you can change the default direction in your code. In AppDelegate.cs in two steps as follows:
+Step one, import the api IntPtr_obj_msgSend, as the first line in your class AppDelegate:
+```cs
+[DllImport(ObjCRuntime.Constants.ObjectiveCLibrary, EntryPoint = "objc_msgSend")]
+internal extern static IntPtr IntPtr_objc_msgSend(IntPtr receiver, IntPtr selector, UISemanticContentAttribute arg1);
+```
+Then (Step two), call it in FinishedLaunching right before calling the base class:
+```cs
+var selector = new ObjCRuntime.Selector("setSemanticContentAttribute:");
+IntPtr_objc_msgSend(UIView.Appearance.Handle, selector.Handle, UISemanticContentAttribute.ForceRightToLeft);
+```
+
 ### Android
 
 The app's **AndroidManifest.xml** file should be updated so that the `<uses-sdk>` node sets the `android:minSdkVersion` attribute to 17, and the `<application>` node sets the `android:supportsRtl` attribute to `true`:
@@ -90,6 +103,11 @@ The app's **AndroidManifest.xml** file should be updated so that the `<uses-sdk>
 ```
 
 Right-to-left localization can then be tested by changing the device/emulator to use the right-to-left language, or by enabling **Force RTL layout direction** in **Settings > Developer Options**.
+
+And if you want your app to always be right-to-left regardless of the device settings, you can change the default direction in your code. In MainActivity.cs as follows:
+```cs
+Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
+```
 
 ### Universal Windows Platform (UWP)
 
