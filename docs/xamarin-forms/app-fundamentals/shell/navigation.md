@@ -297,7 +297,7 @@ The `BackButtonBehavior` class defines the following properties that control bac
 
 - `Command`, of type `ICommand`, which is executed when the back button is pressed.
 - `CommandParameter`, of type `object`, which is the parameter that's passed to the `Command`.
-- `IconOveride`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the icon used for the back button.
+- `IconOverride`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the icon used for the back button.
 - `IsEnabled`, of type `boolean`, indicates whether the back button is enabled. The default value is `true`.
 - `TextOverride`, of type `string`, the text used for the back button.
 
