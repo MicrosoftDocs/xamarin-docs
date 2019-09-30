@@ -25,9 +25,11 @@ To begin editing your first XAML file, use Visual Studio or Visual Studio for Ma
 
 # [Visual Studio](#tab/windows)
 
-In Windows, launch Visual Studio 2019, and in the start window click **Create a new project** to create a new project. In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms)**, and click the **Next** button:
+In Windows, launch Visual Studio 2019, and in the start window click **Create a new project** to create a new project:
 
 ![New Solution Window](get-started-with-xaml-images/win/new-solution-2019.png)
+
+In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms)**, and click the **Next** button:
 
 In the **Configure your new project** window, set the **Project name** to **XamlSamples** (or whatever your prefer), and click the **Create** button.
 
