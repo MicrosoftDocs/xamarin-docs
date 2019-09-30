@@ -35,7 +35,7 @@ In the **Create a new project** window, select **Mobile** in the **Project type*
 
 In the **Configure your new project** window, set the **Project name** to **XamlSamples** (or whatever your prefer), and click the **Create** button.
 
-In the **New Cross Platform App** dialog, click **Blank App**, and click the **OK** button:
+In the **New Cross Platform App** dialog, click **Blank**, and click the **OK** button:
 
 ![New App Dialog](get-started-with-xaml-images/win/new-cross-platform-app.png)
 
