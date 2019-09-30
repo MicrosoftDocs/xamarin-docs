@@ -29,7 +29,9 @@ In Windows, launch Visual Studio 2019, and in the start window click **Create a 
 
 ![New Solution Window](get-started-with-xaml-images/win/new-solution-2019.png)
 
-In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms)**, and click the **Next** button.
+In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms)**, and click the **Next** button:
+
+![New Project Window](get-started-with-xaml-images/win/new-project-2019.png)
 
 In the **Configure your new project** window, set the **Project name** to **XamlSamples** (or whatever your prefer), and click the **Create** button.
 
