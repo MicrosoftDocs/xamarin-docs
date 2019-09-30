@@ -6,7 +6,7 @@ ms.assetid: 9073FA0E-BD5A-4492-8A93-54C466F6EDB9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/10/2018
+ms.date: 09/30/2019
 ---
 
 # Part 1. Getting Started with XAML
@@ -25,17 +25,19 @@ To begin editing your first XAML file, use Visual Studio or Visual Studio for Ma
 
 # [Visual Studio](#tab/windows)
 
-In Windows, use Visual Studio to select **File > New > Project** from the menu. In the **New Project** dialog, select **Visual C# > Cross Platform** at the left, and then **Mobile App (Xamarin.Forms)** from the list in the center.
+In Windows, launch Visual Studio 2019, and in the start window click **Create a new project** to create a new project:
 
-![New Project Dialog](get-started-with-xaml-images/win/newprojectdialog.w157.png)
+![New Solution Window](get-started-with-xaml-images/win/new-solution-2019.png)
 
-Select a location for the solution, give it a name of **XamlSamples** (or whatever you prefer), and press **OK**.
+In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms)** template, and click the **Next** button:
 
-On the next screen, select the **Blank App** template and the **.NET Standard** code-sharing strategy:
+![New Project Window](get-started-with-xaml-images/win/new-project-2019.png)
 
-![New App Dialog](get-started-with-xaml-images/win/newcrossplatformapp.png)
+In the **Configure your new project** window, set the **Project name** to **XamlSamples** (or whatever your prefer), and click the **Create** button.
 
-Press **OK**.
+In the **New Cross Platform App** dialog, click **Blank**, and click the **OK** button:
+
+![New App Dialog](get-started-with-xaml-images/win/new-cross-platform-app.png)
 
 Four projects are created in the solution: the **XamlSamples** .NET Standard library, **XamlSamples.Android**, **XamlSamples.iOS**, and the Universal Windows Platform solution, **XamlSamples.UWP**.
 
@@ -146,9 +148,9 @@ For more interesting visuals, all you need is more interesting XAML.
 
 # [Visual Studio](#tab/windows)
 
-To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** .NET Standard library project and invoke the **Project > Add New Item** menu item. At the left of the **Add New Item** dialog, select **Visual C#** and **Xamarin.Forms**. From the list select **Content Page** (not **Content Page (C#)**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage.xaml**:
+To add other XAML-based `ContentPage` classes to your project, select the **XamlSamples** .NET Standard library project, right-click, and select **Add > New Item...**. In the **Add New Item** dialog, select **Visual C# Items > Xamarin.Forms > Content Page** (not **Content Page (C#)**, which creates a code-only page, or **Content View**, which is not a page). Give the page a name, for example, **HelloXamlPage**:
 
-![Add New Item Dialog](get-started-with-xaml-images/win/addnewitemdialog.w157.png)
+![Add New Item Dialog](get-started-with-xaml-images/win/add-new-item-dialog-2019.png)
 
 # [Visual Studio for Mac](#tab/macos)
 

@@ -41,7 +41,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
     ![](single-page-images/vs/new-solution-2019.png "New Project")
 
-2. In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms** template), and click the **Next** button:
+2. In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms)** template, and click the **Next** button:
 
     ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
 
