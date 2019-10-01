@@ -200,33 +200,31 @@ additionalContent:
         - title: iOS
           links:
             - text: App fundamentals
-              url: ~/android/app-fundamentals/index.md
+              url: ~/ios/app-fundamentals/index.md
             - text: User interface
-              url: ~/android/user-interface/index.md
+              url: ~/ios/user-interface/index.md
             - text: Platform features
-              url: ~/android/platform/index.md
+              url: ~/ios/platform/index.md
             - text: Azure cloud services
-              url: ~/android/data-cloud/index.md
+              url: ~/ios/data-cloud/index.md
             - text: Deployment & testing
-              url: ~/android/deploy-test/index.md
+              url: ~/ios/deploy-test/index.md
             - text: Advanced concepts & internals
-              url: ~/android/internals/index.md
+              url: ~/ios/internals/index.md
             - text: Samples
               url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS
         - title: Mac
           links:
             - text: App fundamentals
-              url: ~/android/app-fundamentals/index.md
+              url: ~/mac/app-fundamentals/index.md
             - text: User interface
-              url: ~/android/user-interface/index.md
+              url: ~/mac/user-interface/index.md
             - text: Platform features
-              url: ~/android/platform/index.md
-            - text: Azure cloud services
-              url: ~/android/data-cloud/index.md
+              url: ~/mac/platform/index.md
             - text: Deployment & testing
-              url: ~/android/deploy-test/index.md
+              url: ~/mac/deploy-test/index.md
             - text: Advanced concepts & internals
-              url: ~/android/internals/index.md
+              url: ~/mac/internals/index.md
             - text: Samples
               url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
 
