@@ -106,5 +106,6 @@ Once the theme is defined on the **MainActivity**, running the application will 
 
 ## Related links
 
+- [Splash screen sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-splashscreen/)]
 - [Android styles and themes documentation](https://developer.android.com/guide/topics/ui/look-and-feel/themes)
 - [Android drawable resource documentation](https://developer.android.com/guide/topics/resources/drawable-resource)
