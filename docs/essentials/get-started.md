@@ -94,3 +94,8 @@ We recommend developers new to Xamarin visit [getting started with Xamarin devel
 Visit the [Xamarin.Essentials GitHub Repository](https://github.com/xamarin/Essentials) to see the current source code, what is coming next, run samples, and clone the repository. Community contributions are welcome!
 
 Browse through the [API documentation](xref:Xamarin.Essentials) for every feature of Xamarin.Essentials.
+
+### Commercial Courses
+
+Learn how to apply every Xamarin.Essentials API in a real world application with the [Getting Started with Xamarin.Essentials in Xamarin.Forms](https://www.pluralsight.com/courses/xamarin-essentials-forms-getting-started) course at [Pluralsight](https://www.pluralsight.com). 
+
