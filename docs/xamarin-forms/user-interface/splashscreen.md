@@ -15,11 +15,11 @@ Applications often have a startup delay while the application completes its init
 
 Xamarin.Forms is initialized on each platform after the application has finished launching:
 
-- On Android, Xamarin.Forms is initialized in the `OnCreate` method of the `MainActivity`.
-- On iOs, Xamarin.Forms is initialized in the `FinishedLaunching` method of the `AppDelegate`.
+- On Android, Xamarin.Forms is initialized in the `OnCreate` method of the `MainActivity` class.
+- On iOs, Xamarin.Forms is initialized in the `FinishedLaunching` method of the `AppDelegate` class.
 - On UWP, Xamarin.Forms is initialized in the `OnLaunched` method of the `App` class.
 
-The splash screen should be shown while the application is loaded but Xamarin.Forms is not called until the application has loaded, which means that the splash screen must be implemented outside of Xamarin.Forms on each platform. The following sections explain how splash screens work on each platform.
+The splash screen should be shown while the application is loading but Xamarin.Forms is not called until the application has fully loaded, which means that the splash screen must be implemented outside of Xamarin.Forms on each platform. The following sections explain how splash screens work on each platform.
 
 ## Xamarin.Forms Android splash screen
 
