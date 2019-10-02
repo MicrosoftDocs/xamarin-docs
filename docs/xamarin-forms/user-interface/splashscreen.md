@@ -1,6 +1,6 @@
 ---
-title: "Xamarin.Forms Android splash screen"
-description: "This article explains how to create a splash screen in a Xamarin.Forms Android application."
+title: "Xamarin.Forms splash screen"
+description: "This article explains how to create a splash screen in a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetId: 338C8F60-90F2-4B3D-BB47-7F846AE8DC6C
 ms.technology: xamarin-forms
@@ -9,103 +9,37 @@ ms.author: jusjohns
 ms.date: 10/1/2019
 ---
 
-# Xamarin.Forms Android splash screen
+# Xamarin.Forms splash screen
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-splashscreen/)
+Applications often have a startup delay while the application completes its initialization process. Developers may want to offer a branded experience, typically called a splash screen, while the application is starting. This article explains how to create splash screens for Xamarin.Forms applications.
 
-Most Android applications have a delay while an application is launched. The default behavior is typically to show a blank screen while the application prepares to launch. However, many developers want to offer a custom launch, or splash screen, experience for their users. This article explains how to configure an Android application to display custom UI during the launch process.
+Xamarin.Forms is initialized on each platform after the application has finished launching:
 
-[![Custom splash screen on Android](splashscreen-images/android-splashscreen-cropped.png)](splashscreen-images/android-splashscreen.png#lightbox)
+- On Android, Xamarin.Forms is initialized in the `OnCreate` method of the `MainActivity`.
+- On iOs, Xamarin.Forms is initialized in the `FinishedLaunching` method of the `AppDelegate`.
+- On UWP, Xamarin.Forms is initialized in the `OnLaunched` method of the `App` class.
 
-> [!NOTE]
-> This article explains how to create a splash screen in the context of a Xamarin.Forms application but the steps followed here are Android platform features and not unique to Xamarin.Forms.
+The splash screen should be shown while the application is loaded but Xamarin.Forms is not called until the application has loaded, which means that the splash screen must be implemented outside of Xamarin.Forms on each platform. The following sections explain how splash screens work on each platform.
 
-## Create a drawable resource
+## Xamarin.Forms Android splash screen
 
-The splash screen will need a drawable resource to display during the launch process. The sample application defines a **splash.xml** file in the **Resources/drawable** folder:
+Creating a splash screen on Android requires creating a splash `Activity` as the `MainLauncher` with a special theme. As soon as the splash `Activity` is started, it launches the main `Activity` with the normal application theme.
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<layer-list xmlns:android="http://schemas.android.com/apk/res/android"
-            android:opacity="opaque">
+For more information about splash screens on Xamarin.Android, see [Xamarin.Android splash screen](~/android/user-interface/splash-screen.md).
 
-  <item android:drawable="@color/colorSplash" />
-  <item>
-    <bitmap android:src="@drawable/xamagon"
-            android:tileMode="disabled"
-            android:gravity="center" />
-  </item>
-  
-</layer-list>
-```
+## Xamarin.Forms iOS splash screen
 
-This file uses a `layer-list` to define layers of drawables. Layer lists are drawn in array order, with the highest index item being drawn last.
+A splash screen on iOS is referred to as a Launch Screen. Creating a Launch Screen on iOS requires creating a Storyboard that defines the UI of the launch screen, and then setting the Storyboard as the Launch Screen in the **Info.plist**.
 
-This `layer-list` instance defines a solid color layer. The `@color/colorSplash` value must be defined in the **Resources/values/colors.xml** file:
+For more information about Launch Screens on Xamarin.iOS, see [Xamarin.iOS Launch Screen](~/ios/app-fundamentalsimages-icons/launch-screens.md).
 
-```xml
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-  ...
-  <color name="colorSplash">#3498DB</color>
-</resources>
-```
+## Xamarin.Forms UWP splash screen
 
-The `layer-list` instance also defines a bitmap image. The sample project includes a file called **xamagon.png** in the **drawable** folder that has a **Build Action** of `AndroidResource`, allowing it to be referenced as a drawable by the **splash.xml** file.
+The concept of a splash screen is supported natively on UWP. The **Package.appxmanifest** contains a **Visual Assets** tab with a **Splash Screen** submenu. The splash screen graphics can be specified in this menu:
 
-For more about drawables on Android, see [Android drawable resource documentation](https://developer.android.com/guide/topics/resources/drawable-resource)
-
-## Create a custom theme
-
-The splash screen will utilize a custom theme during the launch process to display the **splash.xml** drawable. The following style is defined in the **Resources/values/styles.xml** file:
-
-```xml
-...
-<style name="SplashScreen" parent="MainTheme.Base">
-    <item name="android:windowBackground">@drawable/splash</item>
-</style>
-...
-```
-
-This custom style is based on the **MainTheme.Base** theme, but sets the **android:windowBackground** item to reference the custom drawable.
-
-For more about styles and themes on Android, see [Android styles and themes documentation](https://developer.android.com/guide/topics/ui/look-and-feel/themes)
-
-## Apply custom theme to MainActivity
-
-By default, the `MainActivity` class in Xamarin.Forms is the entry point for a Xamarin.Forms application on Android. The `MainActivity` is prefixed with multiple attributes. To specify the custom splash screen theme, the `Theme` attribute should be customized and the `MainLauncher` attribute must be `true`:
-
-```csharp
-[Activity(Label = "FormsSplashDemo",
-        Icon = "@mipmap/icon",
-        Theme = "@style/SplashScreen",
-        MainLauncher = true,
-        ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
-    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
-    {
-        // ...
-    }
-```
-
-The `Theme` attribute references the custom `SplashScreen` style defined earlier in the **styles.xml** file.
-
-Once the application has finished starting up, the temporary `SplashScreen` theme needs to be replaced with the theme used during normal application use. Otherwise the application will use the custom **splash.xml** drawable as its background. In the `OnCreate` method, the normal theme is restored:
-
-```csharp
-protected override void OnCreate(Bundle savedInstanceState)
-{
-    SetTheme(Resource.Style.MainTheme_Base);
-    // ...
-}
-```
-
-> [!NOTE]
-> If `SetTheme` is called after the `base.OnCreate` method call, it will not be applied. Ensure that the normal theme is reset prior to calling `base.OnCreate`.
-
-Once the theme is defined on the **MainActivity**, running the application will display the custom splash screen while the application starts up.
+[![Setting splash screen on UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
 
 ## Related links
 
-- [Splash screen sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-splashscreen/)]
-- [Android styles and themes documentation](https://developer.android.com/guide/topics/ui/look-and-feel/themes)
-- [Android drawable resource documentation](https://developer.android.com/guide/topics/resources/drawable-resource)
+- [Xamarin.Android splash screen](~/android/user-interface/splash-screen.md)
+- [Xamarin.iOS Launch Screen](~/ios/app-fundamentalsimages-icons/launch-screens.md)
