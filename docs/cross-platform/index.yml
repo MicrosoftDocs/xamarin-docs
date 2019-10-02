@@ -58,17 +58,17 @@ sections:
           src: https://docs.microsoft.com/media/common/i_get-started.svg
           href: ~/cross-platform/get-started/index.md
         title: Building Mobile Apps
-      - href: ~/cross-platform/platform
+      - href: ~/cross-platform/platform/index.md
         html: Xamarin supports C#, F#, and the Razor templating engine.
         image:
           src: ~/media/icons/i_app-build.svg
-          href: ~/cross-platform/platform
+          href: ~/cross-platform/platform/index.md
         title: Language Support
-      - href: ~/cross-platform/app-fundamentals/
+      - href: ~/cross-platform/app-fundamentals/index.md
         html: Everything you need to know to build apps.
         image:
           src: ~/media/icons/i_platform.svg
-          href: ~/cross-platform/app-fundamentals/
+          href: ~/cross-platform/app-fundamentals/index.md
         title: Sharing Code
       - href: ~/cross-platform/deploy-test/performance.md
         html: Guidelines for app performance and security.
@@ -76,15 +76,15 @@ sections:
           src: https://docs.microsoft.com/media/common/i_code-performance.svg
           href: ~/cross-platform/deploy-test/performance.md
         title: Performance & Security
-      - href: ~/cross-platform/deploy-test/
+      - href: ~/cross-platform/deploy-test/index.md
         html: Tips for debugging and deployment.
         image:
           src: ~/media/icons/i_deploy-test.svg
-          href: ~/cross-platform/deploy-test/
+          href: ~/cross-platform/deploy-test/index.md
         title: Deployment & Debugging
-      - href: ~/cross-platform/desktop/
+      - href: ~/cross-platform/desktop/index.md
         html: Guidance for .NET desktop developers interested in building mobile apps.
         image:
           src: https://docs.microsoft.com/media/common/i_xplat-code.svg
-          href: ~/cross-platform/desktop/
+          href: ~/cross-platform/desktop/index.md
         title: Desktop Developers
