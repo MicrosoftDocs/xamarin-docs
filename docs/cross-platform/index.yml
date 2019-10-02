@@ -33,7 +33,7 @@ sections:
     - image:
         src: ~/media/icons/i_desktop-phone.svg
       text: Xamarin.Forms
-      href: ~/get-started/quickstarts/index.md
+      href: ~/get-started/quickstarts/index.yml
     - image:
         src: https://docs.microsoft.com/media/common/i_mobileapp.svg
       text: Android
