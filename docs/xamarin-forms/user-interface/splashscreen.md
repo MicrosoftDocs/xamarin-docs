@@ -31,7 +31,7 @@ For more information about splash screens on Xamarin.Android, see [Xamarin.Andro
 
 A splash screen on iOS is referred to as a Launch Screen. Creating a Launch Screen on iOS requires creating a Storyboard that defines the UI of the launch screen, and then setting the Storyboard as the Launch Screen in the **Info.plist**.
 
-For more information about Launch Screens on Xamarin.iOS, see [Xamarin.iOS Launch Screen](~/ios/app-fundamentalsimages-icons/launch-screens.md).
+For more information about Launch Screens on Xamarin.iOS, see [Xamarin.iOS Launch Screen](~/ios/app-fundamentals/images-icons/launch-screens.md).
 
 ## Xamarin.Forms UWP splash screen
 
@@ -42,4 +42,4 @@ The concept of a splash screen is supported natively on UWP. The **Package.appxm
 ## Related links
 
 - [Xamarin.Android splash screen](~/android/user-interface/splash-screen.md)
-- [Xamarin.iOS Launch Screen](~/ios/app-fundamentalsimages-icons/launch-screens.md)
+- [Xamarin.iOS Launch Screen](~/ios/app-fundamentals/images-icons/launch-screens.md)
