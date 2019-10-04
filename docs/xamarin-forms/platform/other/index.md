@@ -11,7 +11,7 @@ ms.date: 10/04/2019
 
 # Xamarin.Forms Other Platforms
 
-Xamarin.Forms supports additional platforms beyond iOS, Android, and Windows.
+Xamarin.Forms supports additional platforms beyond iOS, Android, and Windows. For more information about the support of additional platforms, see [Xamarin.Forms platform support](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
 
 ## [GTK](gtk.md)
 
