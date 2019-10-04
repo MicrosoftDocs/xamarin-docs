@@ -80,7 +80,7 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 
 ### Using vector images in asset catalogs
 
-As of iOS 8, special **Vector** class as been added to **Image Sets** that allows the developer to include a **PDF** formatted vector image in the cassette instead including individual bitmap files at the different resolutions. Using this method, supply a single vector file for the `@1x` resolution (formatted as a vector PDF file) and the `@2x` and `@3x` versions of the file will be generated at compile time and included in the application's bundle.
+As of iOS 8, special **Vector** class has been added to **Image Sets** that allows the developer to include a **PDF** formatted vector image in the cassette instead including individual bitmap files at the different resolutions. Using this method, supply a single vector file for the `@1x` resolution (formatted as a vector PDF file) and the `@2x` and `@3x` versions of the file will be generated at compile time and included in the application's bundle.
 
 # [Visual Studio for Mac](#tab/macos)
 
