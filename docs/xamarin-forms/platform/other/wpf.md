@@ -14,7 +14,7 @@ ms.date: 04/05/2018
 
 ![Preview](~/media/shared/preview.png)
 
-Xamarin.Forms now has preview support for the Windows Presentation Foundation (WPF). This article demonstrates how to add a WPF project to a Xamarin.Forms solution.
+Xamarin.Forms now has preview support for the Windows Presentation Foundation (WPF). WPF is a community-supported platform. This article demonstrates how to add a WPF project to a Xamarin.Forms solution.
 
 Before you start, create a new Xamarin.Forms solution in Visual Studio 2019, or use an existing Xamarin.Forms solution, for example, [**BoxViewClock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock). You can only add WPF apps to a Xamarin.Forms solution in Windows.
 

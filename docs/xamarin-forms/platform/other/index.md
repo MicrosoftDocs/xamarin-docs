@@ -6,7 +6,7 @@ ms.assetid: C713B905-0C98-4442-B5CB-91C384A384DA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/08/2018
+ms.date: 10/04/2019
 ---
 
 # Xamarin.Forms Other Platforms
@@ -15,7 +15,7 @@ Xamarin.Forms supports additional platforms beyond iOS, Android, and Windows.
 
 ## [GTK](gtk.md)
 
-Xamarin.Forms now has preview support for GTK# apps.
+Xamarin.Forms now has preview support for GTK# apps. GTK is a community-supported platform.
 
 ## [Mac](mac.md)
 
@@ -23,8 +23,8 @@ Xamarin.Forms now has preview support for macOS apps.
 
 ## [Tizen](tizen.md)
 
-Tizen .NET enables you to build .NET applications with Xamarin.Forms and the Tizen .NET Framework.
+Tizen .NET enables you to build .NET applications with Xamarin.Forms and the Tizen .NET Framework. Tizen is supported by Samsung.
 
 ## [WPF](wpf.md)
 
-Xamarin.Forms now has preview support for Windows Presentation Foundation (WPF) apps.
+Xamarin.Forms now has preview support for Windows Presentation Foundation (WPF) apps. WPF is a community-supported platform.

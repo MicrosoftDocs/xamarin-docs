@@ -13,7 +13,7 @@ ms.date: 04/10/2018
 
 ![Preview](~/media/shared/preview.png)
 
-Xamarin.Forms now has preview support for GTK# apps. GTK# is a graphical user interface toolkit that links the GTK+ toolkit and a variety of GNOME libraries, allowing the development of fully native GNOME graphics apps using Mono and .NET. This article demonstrates how to add a GTK# project to a Xamarin.Forms solution.
+Xamarin.Forms now has preview support for GTK# apps. GTK# is a community-supported platform. GTK# is a graphical user interface toolkit that links the GTK+ toolkit and a variety of GNOME libraries, allowing the development of fully native GNOME graphics apps using Mono and .NET. This article demonstrates how to add a GTK# project to a Xamarin.Forms solution.
 
 Before you start, create a new Xamarin.Forms solution, or use an existing Xamarin.Forms solution, for example, [**GameOfLife**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife).
 
