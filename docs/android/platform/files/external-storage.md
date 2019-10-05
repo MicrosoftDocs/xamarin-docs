@@ -61,7 +61,7 @@ The parameter for `GetExternalFilesDir()` is a string that specifies an _applica
 For devices that have multiple external storage partitions, each partition will have a directory that is intended for private files. The method `Android.Content.Context.GetExternalFilesDirs(string type)` will return an array of `Java.IO.Files`. Each object will represent a private application-specific directory on all shared/external storage devices where the application can place the files it owns.
 
 > [!IMPORTANT]
-> The exact path to the private exteral storage directory can vary from device to device and between versions of Android. Because of this, apps must not hard code the path to this directory, and instead use the Xamarin.Android APIs, such as `Android.Content.Context.GetExternalFilesDir()`.
+> The exact path to the private external storage directory can vary from device to device and between versions of Android. Because of this, apps must not hard code the path to this directory, and instead use the Xamarin.Android APIs, such as `Android.Content.Context.GetExternalFilesDir()`.
 
 ### Public external files
 
