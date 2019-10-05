@@ -116,7 +116,7 @@ The tab order here is column-based. Therefore, pressing the Tab key navigates th
 
 In addition to setting the tab order of controls, it may be necessary to exclude controls from the tab order. One way of achieving this is by setting the [`IsEnabled`](xref:Xamarin.Forms.VisualElement) property of controls to `false`, because disabled controls are excluded from the tab order.
 
-However, it may be necessary to exclude controls from the tab order even when they aren't disabled. This can be achieved with the `VisualElement.IsTapStop` property, which indicates whether a [`VisualElement`](xref:Xamarin.Forms.VisualElement) is included in tab navigation. Its default value is `true`, and when its value is `false` the control is ignored by the tab-navigation infrastructure, irrespective if a `TabIndex` is set.
+However, it may be necessary to exclude controls from the tab order even when they aren't disabled. This can be achieved with the `VisualElement.IsTabStop` property, which indicates whether a [`VisualElement`](xref:Xamarin.Forms.VisualElement) is included in tab navigation. Its default value is `true`, and when its value is `false` the control is ignored by the tab-navigation infrastructure, irrespective if a `TabIndex` is set.
 
 ## Supported controls
 
