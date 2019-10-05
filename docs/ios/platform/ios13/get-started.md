@@ -21,10 +21,9 @@ APIs released with Xcode 11, for iOS 13. Using the preview requires macOS 10.14.
    [Apple Developer Portal](https://developer.apple.com/download/) or the **App Store**.
 
 2. **Run Xcode 11** – Run Xcode 11 before updating and running Visual
-   Studio for Mac, as it installs some tools that Xamarin requires.
+   Studio for Mac or Visual Studio 2019, as it installs some tools that Xamarin requires.
 
-3. In Visual Studio for Mac, select **Visual Studio > Check for Updates...**, 
-   select the **Stable** channel, and install the available updates.
+3. **Update Visual Studio for Mac and Visual Studio 2019** – Ensure you have the latest stable version of Xamarin.
 
 4. (Optional) **Install iOS 13 on your iOS devices** – For device testing of apps 
    that use APIs introduced with the Xcode 11,
