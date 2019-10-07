@@ -336,15 +336,14 @@ These screenshots show the difference between the two multi
 
 ## EnterActions and ExitActions
 
-Another way to implement changes when a trigger occurs
-    is by adding `EnterActions` and `ExitActions` collections
-    and specifying `TriggerAction<T>` implementations.
+Another way to implement changes when a trigger occurs is by adding `EnterActions` and `ExitActions` collections and specifying `TriggerAction<T>` implementations.
 
-You can provide *both* `EnterActions` and `ExitActions` as
-    well as `Setter`s in a trigger, but be aware that the `Setter`s
-    are called immediately (they do not wait for the `EnterAction`
-    or `ExitAction` to complete). Alternatively you can perform
-    everything in the code and not use `Setter`s at all.
+The [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) collection is used to define an `IList` of [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) objects that will be invoked when the trigger condition is met. The [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) collection is used to define an `IList` of `TriggerAction` objects that will be invoked after the trigger condition is no longer met.
+
+> [!NOTE]
+> The [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) objects defined in the `EnterActions` and `ExitActions` collections are ignored by the [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) class.    
+
+You can provide *both* `EnterActions` and `ExitActions` as  well as `Setter`s in a trigger, but be aware that the `Setter`s are called immediately (they do not wait for the `EnterAction` or `ExitAction` to complete). Alternatively you can perform everything in the code and not use `Setter`s at all.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -358,14 +357,13 @@ You can provide *both* `EnterActions` and `ExitActions` as
             <Trigger.ExitActions>
                 <local:FadeTriggerAction StartsFrom="1" />
             </Trigger.ExitActions>
-                        <!-- You can use both Enter/Exit and Setter together if required -->
+            <!-- You can use both Enter/Exit and Setter together if required -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
 ```
 
-As always, when a class is referenced in XAML you should
-    declare a namespace such as `xmlns:local` as shown here:
+As always, when a class is referenced in XAML you should declare a namespace such as `xmlns:local` as shown here:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -394,9 +392,6 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
-
-Note: `EnterActions` and `ExitActions` are ignored on
-    **Event Triggers**.
 
 ## Related Links
 
