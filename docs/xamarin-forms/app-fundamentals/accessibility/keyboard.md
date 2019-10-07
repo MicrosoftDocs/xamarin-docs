@@ -1,6 +1,6 @@
 ---
 title: "Keyboard Accessibility"
-description: "Rather than using the default tab sequence, it's sometimes necessary to tune the accessibility of your UI by specifying the tab sequence with a combination of the TabIndex and IsTapStop properties."
+description: "Rather than using the default tab sequence, it's sometimes necessary to tune the accessibility of your UI by specifying the tab sequence with a combination of the TabIndex and IsTabStop properties."
 ms.prod: xamarin
 ms.assetid: 8be8f498-558a-4894-a01f-91a0d3ef927e
 ms.technology: xamarin-forms
@@ -120,7 +120,7 @@ However, it may be necessary to exclude controls from the tab order even when th
 
 ## Supported controls
 
-The `TabIndex` and `IsTapStop` properties are supported on the following controls, which accept keyboard input on one or more platforms:
+The `TabIndex` and `IsTabStop` properties are supported on the following controls, which accept keyboard input on one or more platforms:
 
 - [`Button`](xref:Xamarin.Forms.Button)
 - [`DatePicker`](xref:Xamarin.Forms.DatePicker)
