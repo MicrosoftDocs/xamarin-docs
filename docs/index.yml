@@ -137,7 +137,7 @@ additionalContent:
         url: ~/xamarin-forms/platform/index.yml
       - title: Xamarin.Essentials
         summary: Cross-platform APIs for common device features.
-        url: ~/essentials/platform-feature-support.md
+        url: ~/essentials/index.md
       - title: Access a REST web service
         summary: Share code using version control technologies such as Git and TFVC.
         url: ~/xamarin-forms/data-cloud/web-services/rest.md
