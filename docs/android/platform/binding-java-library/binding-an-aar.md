@@ -347,7 +347,7 @@ it in our example app:
 
 Edit the **BindingTest** layout (**Main.axml**) and add an
 `ImageView` to the end of the `LinearLayout` container. This
-`ImageView` displays the image found at **@drawable/monkey**; this
+`ImageView` displays the image found at **\@drawable/monkey**; this
 image will be loaded from the resource section of
 **textanalyzer.aar**:
 
