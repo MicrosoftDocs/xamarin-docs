@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms splash screen"
-description: "This article explains how to create a splash screen in a Xamarin.Forms application."
+description: "This article explains how to create a splash screen for a Xamarin.Forms application."
 ms.prod: xamarin
 ms.assetId: 338C8F60-90F2-4B3D-BB47-7F846AE8DC6C
 ms.technology: xamarin-forms
@@ -13,13 +13,13 @@ ms.date: 10/1/2019
 
 Applications often have a startup delay while the application completes its initialization process. Developers may want to offer a branded experience, typically called a splash screen, while the application is starting. This article explains how to create splash screens for Xamarin.Forms applications.
 
-Xamarin.Forms is initialized on each platform after the application has finished launching:
+Xamarin.Forms is initialized on each platform after the startup routine has completed. Xamarin is initialized:
 
-- On Android, Xamarin.Forms is initialized in the `OnCreate` method of the `MainActivity` class.
-- On iOs, Xamarin.Forms is initialized in the `FinishedLaunching` method of the `AppDelegate` class.
-- On UWP, Xamarin.Forms is initialized in the `OnLaunched` method of the `App` class.
+- In the `OnCreate` method of the `MainActivity` class on Android.
+- In the `FinishedLaunching` method of the `AppDelegate` class on iOS.
+- In the `OnLaunched` method of the `App` class on UWP.
 
-The splash screen should be shown while the application is loading but Xamarin.Forms is not called until the application has fully loaded, which means that the splash screen must be implemented outside of Xamarin.Forms on each platform. The following sections explain how splash screens work on each platform.
+The splash screen should be shown as soon as possible when the application is launched, but Xamarin.Forms is not initialized until late in the startup routine, which means that the splash screen must be implemented outside of Xamarin.Forms on each platform. The following sections explain how to create a splash screens on each platform.
 
 ## Xamarin.Forms Android splash screen
 
@@ -35,7 +35,7 @@ For more information about Launch Screens on Xamarin.iOS, see [Xamarin.iOS Launc
 
 ## Xamarin.Forms UWP splash screen
 
-The concept of a splash screen is supported natively on UWP. The **Package.appxmanifest** contains a **Visual Assets** tab with a **Splash Screen** submenu. The splash screen graphics can be specified in this menu:
+On UWP, the **Package.appxmanifest** contains a **Visual Assets** tab with a **Splash Screen** submenu. The splash screen graphics can be specified in this menu:
 
 [![Setting splash screen on UWP](splashscreen-images/uwp-splashscreen-cropped.png)](splashscreen-images/uwp-splashscreen.png#lightbox)
 
