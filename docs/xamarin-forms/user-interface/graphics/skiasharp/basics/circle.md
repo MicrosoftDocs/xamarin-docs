@@ -21,7 +21,7 @@ The [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin
 
 ![](circle-images/circleexample.png "A blue circle outlined in red")
 
-The [`SimpleCirle`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) page class derives from `ContentPage` and contains two `using` directives for the SkiaSharp namespaces:
+The [`SimpleCircle`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/SimpleCirclePage.cs) page class derives from `ContentPage` and contains two `using` directives for the SkiaSharp namespaces:
 
 ```csharp
 using SkiaSharp;
