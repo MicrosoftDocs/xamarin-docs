@@ -13,13 +13,13 @@ ms.date: 10/1/2019
 
 Applications often have a startup delay while the application completes its initialization process. Developers may want to offer a branded experience, typically called a splash screen, while the application is starting. This article explains how to create splash screens for Xamarin.Forms applications.
 
-Xamarin.Forms is initialized on each platform after the startup routine has completed. Xamarin is initialized:
+Xamarin.Forms is initialized on each platform after the native startup sequence has completed. Xamarin.Forms is initialized:
 
 - In the `OnCreate` method of the `MainActivity` class on Android.
 - In the `FinishedLaunching` method of the `AppDelegate` class on iOS.
 - In the `OnLaunched` method of the `App` class on UWP.
 
-The splash screen should be shown as soon as possible when the application is launched, but Xamarin.Forms is not initialized until late in the startup routine, which means that the splash screen must be implemented outside of Xamarin.Forms on each platform. The following sections explain how to create a splash screens on each platform.
+The splash screen should be shown as soon as possible when the application is launched, but Xamarin.Forms is not initialized until late in the startup sequence, which means that the splash screen must be implemented outside of Xamarin.Forms on each platform. The following sections explain how to create a splash screens on each platform.
 
 ## Xamarin.Forms Android splash screen
 
