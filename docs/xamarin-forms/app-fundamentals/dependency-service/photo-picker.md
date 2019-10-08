@@ -98,10 +98,14 @@ namespace DependencyServiceDemos.iOS
             {
                 // Convert UIImage to .NET Stream object
                 NSData data;
-                if (args.ReferenceUrl.PathExtension == "PNG" || args.ReferenceUrl.PathExtension == "png")
+                if (args.ReferenceUrl.PathExtension.Equals("PNG") || args.ReferenceUrl.PathExtension.Equals("png"))
+                {
                     data = image.AsPNG();
+                }
                 else
+                {
                     data = image.AsJPEG(1);
+                }
                 Stream stream = data.AsStream();
 
                 UnregisterEventHandlers();
