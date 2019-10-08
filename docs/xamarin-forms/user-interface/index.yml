@@ -145,6 +145,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: slider.md
       title: Slider
+    - href: splashscreen.md
+      html: "Learn how to create splash screens for Xamarin.Forms applications."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: splashscreen.md
+      title: Splash Screen
     - href: stepper.md
       html: "Learn how to allow a user to select a numeric value from a range of values with the Stepper control."
       image:
@@ -176,7 +182,7 @@ sections:
         href: text/index.md
       title: Text
     - href: theming.md
-      html: "Learn how to create themes for Xamarin.Forms applications, and change the theme at runtime."    
+      html: "Learn how to create themes for Xamarin.Forms applications, and change the theme at runtime."
       image:
         src: ~/media/icons/i_user-interface.svg
         href: theming.md
