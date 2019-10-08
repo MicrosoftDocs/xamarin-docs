@@ -6,10 +6,12 @@ ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
 author: conceptdev
 ms.author: crdun
-ms.date: 09/06/2018
+ms.date: 10/02/2019
 ---
 
 # Splash Screen
+
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
 
 _An Android app takes some time to start up, especially when the app is first launched on a device. A splash screen may display start up progress to the user or to indicate branding._
 
@@ -36,7 +38,7 @@ an Android application. It covers the following steps:
 ## Requirements
 
 This guide assumes that the application targets Android API level
-15 (Android 4.0.3) or higher. The application must also have the
+21 or higher. The application must also have the
 **Xamarin.Android.Support.v4** and
 **Xamarin.Android.Support.v7.AppCompat** NuGet packages added to the
 project.
@@ -64,10 +66,9 @@ The splash screen will display an XML drawable in the background of the
 splash screen Activity. It is necessary to use a bitmapped image (such
 as a PNG or JPG) for the image to display.
 
-In this guide, we use a
+The sample application defines a drawable called **splash_screen.xml**. This drawable uses a
 [Layer List](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
-to center the splash screen image in the application. The following
-snippet is an example of a `drawable` resource using a `layer-list`:
+to center the splash screen image in the application as shown in the following xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -77,17 +78,24 @@ snippet is an example of a `drawable` resource using a `layer-list`:
   </item>
   <item>
     <bitmap
-        android:src="@drawable/splash"
+        android:src="@drawable/splash_logo"
         android:tileMode="disabled"
         android:gravity="center"/>
   </item>
 </layer-list>
 ```
 
-This `layer-list` will center the splash image **splash.png** on the background specified by the `@color/splash_background` resource. Place this XML file in the **Resources/drawable** folder (for example, **Resources/drawable/splash_screen.xml**).
+This `layer-list` centers the splash image on a background color specified by the `@color/splash_background` resource. The sample application defines this color in the **Resources/values/color.xml** file:
 
-After the splash screen drawable has been created, the next step is to
-create a theme for the splash screen.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  ...
+  <color name="splash_background">#FFFFFF</color>
+</resources>
+```
+
+For more information about `Drawable` objects see the [Google documentation on Android Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable).
 
 ### Implementing a Theme
 
@@ -101,13 +109,15 @@ with a `style` named **MyTheme.Splash**:
   <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
   </style>
 
-  <style name="MyTheme" parent="MyTheme.Base">
+    <style name="MyTheme" parent="MyTheme.Base">
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@drawable/splash_screen</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowNoTitle">true</item>  
+    <item name="android:windowFullscreen">true</item>  
+    <item name="android:windowContentOverlay">@null</item>  
+    <item name="android:windowActionBar">true</item>  
   </style>
 </resources>
 ```
