@@ -43,7 +43,7 @@ The following platform-specific functionality is provided for Xamarin.Forms page
 - Setting the visibility of the home indicator on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Home Indicator Visibility on iOS](page-home-indicator.md).
 - Setting the status bar visibility on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Page Status Bar Visibility on iOS](page-status-bar-visibility.md).
 - Ensuring that page content is positioned on an area of the screen that is safe for all iOS devices. For more information, see [Safe Area Layout Guide on iOS](page-safe-area-layout.md).
-- Setting the presentation style of modal pages on an iPad. For more information, see [iPad Modal Page Presentation Style](ipad-page-presentation-style.md).
+- Setting the presentation style of modal pages. For more information, see [Modal Page Presentation Style](page-presentation-style.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms layouts on iOS:
 
