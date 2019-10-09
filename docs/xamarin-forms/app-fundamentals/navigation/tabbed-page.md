@@ -74,7 +74,7 @@ The following XAML code example shows a [`TabbedPage`](xref:Xamarin.Forms.Tabbed
             xmlns:local="clr-namespace:TabbedPageWithNavigationPage;assembly=TabbedPageWithNavigationPage"
             x:Class="TabbedPageWithNavigationPage.MainPage">
     <local:TodayPage />
-    <NavigationPage Title="Schedule" IconImageSource="schedule.png">
+    <NavigationPage Title="Schedule" Icon="schedule.png">
         <x:Arguments>
             <local:SchedulePage />
         </x:Arguments>
@@ -90,7 +90,7 @@ public class MainPageCS : TabbedPage
   public MainPageCS ()
   {
     var navigationPage = new NavigationPage (new SchedulePageCS ());
-    navigationPage.IconImageSource = "schedule.png";
+    navigationPage.Icon = "schedule.png";
     navigationPage.Title = "Schedule";
 
     Children.Add (new TodayPageCS ());
@@ -153,7 +153,7 @@ The following XAML code example shows a [`TabbedPage`](xref:Xamarin.Forms.Tabbed
   </TabbedPage.Resources>
   <TabbedPage.ItemTemplate>
     <DataTemplate>
-      <ContentPage Title="{Binding Name}" IconImageSource="monkeyicon.png">
+      <ContentPage Title="{Binding Name}" Icon="monkeyicon.png">
         <StackLayout Padding="5, 25">
           <Label Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Center" />
           <Image Source="{Binding PhotoUrl}" WidthRequest="200" HeightRequest="200" />
@@ -209,7 +209,7 @@ public class TabbedPageDemoPageCS : TabbedPage
       ...
 
       var contentPage = new ContentPage {
-        IconImageSource = "monkeyicon.png",
+        Icon = "monkeyicon.png",
         Content = new StackLayout {
           Padding = new Thickness (5, 25),
           Children = {
