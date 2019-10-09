@@ -253,7 +253,7 @@
 #### [Entry Cursor Color](platform/ios/entry-cursor-color.md)
 #### [Entry Font Size](platform/ios/entry-font-size.md)
 #### [Formatting](platform/ios/formatting.md)
-#### [iPad Modal Page Presentation Style](platform/ios/ipad-page-presentation-style.md)
+#### [Modal Page Presentation Style](platform/ios/page-presentation-style.md)
 #### [Large Page Titles](platform/ios/page-large-title.md)
 #### [ListView Group Header Style](platform/ios/listview-group-header-style.md)
 #### [ListView Row Animations](platform/ios/listview-row-animations.md)

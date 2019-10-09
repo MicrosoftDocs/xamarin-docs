@@ -1,6 +1,6 @@
 ---
-title: "iPad Modal Page Presentation Style"
-description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific sets the presentation style of a modal page on an iPad."
+title: "Modal Page Presentation Style on iOS"
+description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific sets the presentation style of a modal page."
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
 ms.technology: xamarin-forms
@@ -9,11 +9,11 @@ ms.author: dabritch
 ms.date: 10/24/2018
 ---
 
-# iPad Modal Page Presentation Style
+# Modal Page Presentation Style on iOS
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-This iOS platform-specific is used to set the presentation style of a modal page on an iPad. It's consumed in XAML by setting the `Page.ModalPresentationStyle` bindable property to a `UIModalPresentationStyle` enumeration value:
+This iOS platform-specific is used to set the presentation style of a modal page. It's consumed in XAML by setting the `Page.ModalPresentationStyle` bindable property to a `UIModalPresentationStyle` enumeration value:
 
 ```xaml
 <ContentPage ...
