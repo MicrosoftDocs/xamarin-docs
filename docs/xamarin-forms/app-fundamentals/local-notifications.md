@@ -21,7 +21,23 @@ Each platform handles the creation, display, and consumption of local notificati
 
 ## Create a cross-platform interface
 
-## Implement notification interface
+The Xamarin.Forms application should be able to create and consume notifications without concern for the underlying platform implementations. The following `INotificationManager` interface defines an API that the application can use to interact with notifications:
+
+```csharp
+public interface INotificationManager
+{
+    event EventHandler NotificationReceived;
+
+    void Initialize();
+
+    int ScheduleNotification(string title, string message);
+
+    void ReceiveNotification(string title, string message);
+}
+```
+
+The interface provides a `NotificationReceived` event that the application can implement to handle incoming notifications. The `Initialize` method should perform any native platform logic needed to prepare the notification system. The `ScheduleNotification` method sends a notification. The `ReceiveNotification` method is called by the underlying platform when a message is received.
+
 
 ## Create Android interface implementation
 
