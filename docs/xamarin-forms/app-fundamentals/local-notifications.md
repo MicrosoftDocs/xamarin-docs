@@ -263,3 +263,8 @@ Android supports more functionality than is used here. For more information, see
 ## Create iOS interface implementation
 
 ## Related links
+
+- Sample project
+- Local Notifications on Android
+- Local Notifications on iOS
+- Xamarin.Forms DependencyService
