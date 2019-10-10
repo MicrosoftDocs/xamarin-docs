@@ -105,6 +105,161 @@ For more information about the Xamarin.Forms Dependency Service, see [`Xamarin.F
 
 ## Create Android interface implementation
 
+For the Xamarin.Forms application to send and receive notifications on Android, the application must provide an implementation of the `INotificationManager`:
+
+```csharp
+using Android.Support.V4.App;
+using Xamarin.Forms;
+using AndroidApp = Android.App.Application;
+
+[assembly: Dependency(typeof(LocalNotifications.Droid.AndroidNotificationManager))]
+namespace LocalNotifications.Droid
+{
+    public class AndroidNotificationManager : INotificationManager
+    {
+        const string channelId = "default";
+        const string channelName = "Default";
+        const string channelDescription = "The default channel for notifications.";
+        const int pendingIntentId = 0;
+
+        public const string TitleKey = "title";
+        public const string MessageKey = "message";
+
+        bool channelInitialized = false;
+        int messageId = -1;
+        NotificationManager manager;
+
+        public event EventHandler NotificationReceived;
+
+        public void Initialize()
+        {
+            CreateNotificationChannel();
+        }
+
+        public int ScheduleNotification(string title, string message)
+        {
+            if(!channelInitialized)
+            {
+                CreateNotificationChannel();
+            }
+
+            messageId++;
+
+            Intent intent = new Intent(AndroidApp.Context, typeof(MainActivity));
+            intent.PutExtra(TitleKey, title);
+            intent.PutExtra(MessageKey, message);
+
+            PendingIntent pendingIntent = PendingIntent.GetActivity(AndroidApp.Context, pendingIntentId, intent, PendingIntentFlags.OneShot);
+
+            NotificationCompat.Builder builder = new NotificationCompat.Builder(AndroidApp.Context, channelId)
+                .SetContentIntent(pendingIntent)
+                .SetContentTitle(title)
+                .SetContentText(message)
+                .SetLargeIcon(BitmapFactory.DecodeResource(AndroidApp.Context.Resources, Resource.Drawable.xamagonBlue))
+                .SetSmallIcon(Resource.Drawable.xamagonBlue)
+                .SetDefaults((int)NotificationDefaults.Sound | (int)NotificationDefaults.Vibrate);
+
+            var notification = builder.Build();
+            manager.Notify(messageId, notification);
+
+            return messageId;
+        }
+
+        public void ReceiveNotification(string title, string message)
+        {
+            var args = new NotificationEventArgs()
+            {
+                Title = title,
+                Message = message,
+            };
+            NotificationReceived?.Invoke(null, args);
+        }
+
+        void CreateNotificationChannel()
+        {
+            manager = (NotificationManager)AndroidApp.Context.GetSystemService(AndroidApp.NotificationService);
+
+            if (Build.VERSION.SdkInt >= BuildVersionCodes.O)
+            {
+                var channelNameJava = new Java.Lang.String(channelName);
+                var channel = new NotificationChannel(channelId, channelNameJava, NotificationImportance.Default)
+                {
+                    Description = channelDescription
+                };
+                manager.CreateNotificationChannel(channel);
+            }
+
+            channelInitialized = true;
+        }
+    }
+}
+```
+
+The `assembly` attribute above the namespace is critical to allow the `DependencyService` to register this implementation of the `INotificationManager` interface.
+
+The Android OS allows applications to define multiple channels for notifications. The `Initialize` method creates a basic channel the sample application will use to send notifications. The `ScheduleNotification` method defines the platform-specific logic required to create and send a notification. Finally, the `ReceiveNotification` method will be called by the Android OS when a message is received, and invokes the event handler.
+
+The `MainActivity` class must detect incoming notifications and notify the `AndroidNotificationManager`. The `MainActivity` class `Activity` attribute should specify a `LaunchMode` value of `LaunchMode.SingleTop`:
+
+```csharp
+[Activity(
+        //...
+        LaunchMode = LaunchMode.SingleTop]
+    public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        // ...
+    }
+```
+
+This mode prevents multiple instances of an `Activity` from being started as long as the application is in the foreground. For more information about `LaunchMode` values, see [Android Activity LaunchMode](https://developer.android.com/guide/topics/manifest/activity-element#lmode).
+
+The rest of the `MainActivity` class is as follows:
+
+```csharp
+public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompatActivity
+    {
+        protected override void OnCreate(Bundle savedInstanceState)
+        {
+            TabLayoutResource = Resource.Layout.Tabbar;
+            ToolbarResource = Resource.Layout.Toolbar;
+
+            base.OnCreate(savedInstanceState);
+
+            global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
+            LoadApplication(new App());
+
+            CreateNotificationFromIntent(Intent);
+        }
+
+        protected override void OnNewIntent(Intent intent)
+        {
+            CreateNotificationFromIntent(intent);
+        }
+
+        private void CreateNotificationFromIntent(Intent intent)
+        {
+            if(intent?.Extras != null)
+            {
+                var title = intent.Extras.GetString(AndroidNotificationManager.TitleKey);
+                var message = intent.Extras.GetString(AndroidNotificationManager.MessageKey);
+
+                DependencyService.Get<INotificationManager>().ReceiveNotification(title, message);
+            }
+        }
+    }
+```
+
+The `CreateNotificationFromIntent` method extracts notification data from the `intent` argument and provides it to the `AndroidNotificationManager` using the `ReceiveNotification` method.
+
+The `CreateNotificationFromIntent` method is called from both the `OnCreate` method and the `OnNewIntent` method:
+
+- When the application is started by a notification data, the `Intent` data will be passed to the `OnCreate` method.
+- If the application is already in the foreground, the `Intent` data will be passed to the `OnNewIntent` method.
+
+Once this functionality is implemented, the Android implementation of the `INotificationManager` is capable of both sending and receiving notifications.
+
+Android supports more functionality than is used here. For more information, see [Notifications in Xamarin.Android](~/xamarin/android/app-fundamentals/notifications/index.md).
+
 ## Create iOS interface implementation
 
 ## Related links
