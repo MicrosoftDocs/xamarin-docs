@@ -20,7 +20,7 @@ Local notifications are alerts sent by applications installed on a mobile device
 Each platform handles the creation, display, and consumption of local notifications differently. This article explains how to create a cross-platform abstraction to send and receive notifications with Xamarin.Forms.
 
 TODO SCREENSHOT
-![]()
+[!["Local notifications application on iOS and Android](local-notifications-images/local-notifications-msg-cropped.png)](local-notifications-images/local-notifications-msg.png#lightbox)
 
 ## Create a cross-platform interface
 
@@ -388,10 +388,13 @@ iOS offers many advanced options for notifications. For more information, see [N
 
 Once both Android and iOS contain a registered implementation of the `INotificationManager` interface, the application can be tested on both platforms. Run the application and click the **Schedule Notification** button to create a notification.
 
-On Android the notification will appear in the **notification area**. When the notification is tapped, the application receives the notification and displays a message below the **Schedule Notification** button. On iOS incoming notifications are automatically received without user input. The application receives the notification and displays a message below the **Schedule Notification** button.
+On Android the notification will appear in the **notification area**. When the notification is tapped, the application receives the notification and displays a message below the **Schedule Notification** button:
 
-TODO SCREENSHOT
-![]()
+!["Local notifications on Android](local-notifications-images/local-notifications-android.png)
+
+On iOS incoming notifications are automatically received without user input. The application receives the notification and displays a message below the **Schedule Notification** button:
+
+!["Local notifications on iOS](local-notifications-images/local-notifications-ios.png)
 
 ## Related links
 
