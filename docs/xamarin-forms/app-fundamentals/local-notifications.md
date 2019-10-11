@@ -26,7 +26,7 @@ TODO SCREENSHOT
 
 ## Create a cross-platform interface
 
-The Xamarin.Forms application should be able to create and consume notifications without concern for the underlying platform implementations. The following `INotificationManager` interface defines an API that the application can use to interact with notifications:
+The Xamarin.Forms application should create and consume notifications without concern for the underlying platform implementations. The following `INotificationManager` interface defines a cross-platform API that the application can use to interact with notifications:
 
 ```csharp
 public interface INotificationManager
@@ -225,7 +225,7 @@ The `MainActivity` class must detect incoming notifications and notify the `Andr
     }
 ```
 
-This mode prevents multiple instances of an `Activity` from being started as long as the application is in the foreground. This may not be appropriate for applications that launch multiple activities in more complex notification scenarios. For more information about `LaunchMode` values, see [Android Activity LaunchMode](https://developer.android.com/guide/topics/manifest/activity-element#lmode).
+This mode prevents multiple instances of an `Activity` from being started as long as the application is in the foreground. This `LaunchMode` may not be appropriate for applications that launch multiple activities in more complex notification scenarios. For more information about `LaunchMode` values, see [Android Activity LaunchMode](https://developer.android.com/guide/topics/manifest/activity-element#lmode).
 
 The `MainActivity` class contains the following methods:
 
@@ -262,7 +262,7 @@ The `CreateNotificationFromIntent` method is called from both the `OnCreate` met
 - When the application is started by a notification data, the `Intent` data will be passed to the `OnCreate` method.
 - If the application is already in the foreground, the `Intent` data will be passed to the `OnNewIntent` method.
 
-Once this functionality is implemented, the Android implementation of the `INotificationManager` is capable of both sending and receiving notifications.
+Once this functionality is implemented, the Android implementation of the `INotificationManager` can send and receive notifications.
 
 Android offers many advanced options for notifications. For more information, see [Notifications in Xamarin.Android](~/android/app-fundamentals/notifications/index.md).
 
@@ -344,11 +344,11 @@ namespace LocalNotifications.iOS
 
 The `assembly` attribute above the namespace is critical to allow the `DependencyService` to register this implementation of the `INotificationManager` interface.
 
-On iOS you must request permission to use notifications before attempting to schedule a notification. The `Initialize` method requests authorization to use local notifications. The `ScheduleNotification` method defines the platform-specific logic required to create and send a notification. Finally, the `ReceiveNotification` method will be called by the iOS when a message is received, and invokes the event handler.
+On iOS, you must request permission to use notifications before attempting to schedule a notification. The `Initialize` method requests authorization to use local notifications. The `ScheduleNotification` method defines the platform-specific logic required to create and send a notification. Finally, the `ReceiveNotification` method will be called by the iOS when a message is received, and invokes the event handler.
 
 ### Handle incoming notifications on iOS
 
-On iOS you must create a delegate that subclasses `UNUserNotificationCenterDelegate` to handle incoming messages. The sample application defines an `iOSNotificationReceiver` class:
+On iOS, you must create a delegate that subclasses `UNUserNotificationCenterDelegate` to handle incoming messages. The sample application defines an `iOSNotificationReceiver` class:
 
 ```csharp
 public class iOSNotificationReceiver : UNUserNotificationCenterDelegate
@@ -382,7 +382,7 @@ public override bool FinishedLaunching(UIApplication app, NSDictionary options)
 }
 ```
 
-Once this functionality is implemented, the iOS implementation of the `INotificationManager` is capable of both sending and receiving notifications.
+Once this functionality is implemented, the iOS implementation of the `INotificationManager` can send and receive notifications.
 
 iOS offers many advanced options for notifications. For more information, see [Notifications in Xamarin.iOS](~/ios/platform/user-notifications/index.md).
 
@@ -390,11 +390,11 @@ iOS offers many advanced options for notifications. For more information, see [N
 
 Once both Android and iOS contain a registered implementation of the `INotificationManager` interface, the application can be tested on both platforms. Run the application and click the **Schedule Notification** button to create a notification.
 
-On Android the notification will appear in the **notification area**. When the notification is tapped, the application receives the notification and displays a message below the **Schedule Notification** button:
+On Android, the notification will appear in the **notification area**. When the notification is tapped, the application receives the notification and displays a message below the **Schedule Notification** button:
 
 !["Local notifications on Android](local-notifications-images/local-notifications-android.png)
 
-On iOS incoming notifications are automatically received without user input. The application receives the notification and displays a message below the **Schedule Notification** button:
+On iOS, incoming notifications are automatically received without user input. The application receives the notification and displays a message below the **Schedule Notification** button:
 
 !["Local notifications on iOS](local-notifications-images/local-notifications-ios.png)
 
