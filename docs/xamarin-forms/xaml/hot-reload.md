@@ -41,7 +41,7 @@ If you make a change that XAML Hot Reload can't reload, it will show you an erro
 ## Known limitations
 
 - You can't add, remove, or rename files or NuGet packages during a XAML Hot Reload session. If you add or remove a file or NuGet package, rebuild and redeploy your app to continue using XAML Hot Reload.
-- Set the linker to **Link None** for the best experience. The **Link SDK only** setting works most of the time, but it may fail in certain cases.
+- Set the linker to **Don't Link** for the best experience. The **Link SDK only** setting works most of the time, but it may fail in certain cases.
 - Debugging on a physical iPhone requires the interpreter to use XAML Hot Reload. Add **--interpreter** to the **Additional mtouch arguments** field in your iOS Build settings to use XAML Hot Reload.
 - Any references created by assigning a control to another field or property using its `x:Name` value won't be reloaded.
 - Updating the visual hierarchy of your Shell application in **AppShell.xaml** can cause issues maintaining the state of your application. Rebuild the app to continue reloading.
