@@ -18,9 +18,11 @@ Refer to the [Installation](installation/index.md) article for an overview of in
 
 Xamarin.Forms applications can be written for the following operating systems:
 
-- iOS 8 or higher
-- Android 5.0 (API 21) or higher ([more details](#android))
+- iOS 9 or higher
+- Android 4.4 (API 19) or higher ([more details](#android))
 - Windows 10 Universal Windows Platform ([more details](#windows10))
+
+However, Android 5.0 (API 21) is recommended as the minimum API. This ensures full compatibility with all the Android support libraries, while still targeting the majority of Android devices.
 
 It is assumed that developers have familiarity with [.NET Standard](~/cross-platform/app-fundamentals/net-standard.md).
 
@@ -37,8 +39,7 @@ The status of these platforms is available on the [Xamarin.Forms GitHub](https:/
 
 You should have the latest Android SDK Tools and Android API platform installed. You can update to the latest versions using the [Android SDK Manager](~/android/get-started/installation/android-sdk.md).
 
-Additionally, the target/compile version for Android projects **must** be set to *Use latest installed platform*. However the minimum version can be set to API 19 so you can continue to support devices
-that use Android 4.4 and newer. These values are set in the **Project Options**:
+Additionally, the target/compile version for Android projects **must** be set to *Use latest installed platform*. However the minimum version can be set to API 19 so you can continue to support devices that use Android 4.4 and newer. These values are set in the **Project Options**:
 
 # [Visual Studio](#tab/windows)
 
