@@ -11,6 +11,8 @@ ms.date: 10/10/2019
 
 # Local notifications in Xamarin.Forms
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
+
 Local notifications are alerts sent by applications installed on a mobile device. Local notifications are often used for features such as:
 
 - Calendar events
@@ -104,7 +106,7 @@ public partial class MainPage : ContentPage
 
 The `MainPage` class constructor uses the Xamarin.Forms `DependencyService` to retrieve a platform-specific instance of the `INotificationManager`. The `OnScheduleClicked` method uses the `INotificationManager` instance to schedule a new event. The `ShowNotification` method is called from the event handler attached to `NotificationReceived`, and will insert a new `Label` into the layout when the event is invoked.
 
-For more information about the Xamarin.Forms Dependency Service, see [`Xamarin.Forms Dependency.Service`](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md).
+For more information about the Xamarin.Forms Dependency Service, see [Xamarin.Forms Dependency.Service](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md).
 
 ## Android interface implementation
 
@@ -398,7 +400,7 @@ On iOS incoming notifications are automatically received without user input. The
 
 ## Related links
 
-- Sample project
-- Local Notifications on Android
-- Local Notifications on iOS
-- Xamarin.Forms DependencyService
+- [Sample project](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/local-notifications)
+- [Notifications in Xamarin.Android](~/android/app-fundamentals/notifications/index.md)
+- [Notifications in Xamarin.iOS](~/ios/platform/user-notifications/index.md)
+- [Xamarin.Forms Dependency.Service](~/xamarin-forms/app-fundamentals/dependency-service/introduction.md)
