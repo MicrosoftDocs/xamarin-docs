@@ -21,8 +21,7 @@ Local notifications are alerts sent by applications installed on a mobile device
 
 Each platform handles the creation, display, and consumption of local notifications differently. This article explains how to create a cross-platform abstraction to send and receive notifications with Xamarin.Forms.
 
-TODO SCREENSHOT
-[!["Local notifications application on iOS and Android](local-notifications-images/local-notifications-msg-cropped.png)](local-notifications-images/local-notifications-msg.png#lightbox)
+[![Local notifications application on iOS and Android](local-notifications-images/local-notifications-msg-cropped.png)](local-notifications-images/local-notifications-msg.png#lightbox)
 
 ## Create a cross-platform interface
 
@@ -61,7 +60,7 @@ Once an interface has been created, it can be implemented in the shared Xamarin.
 </StackLayout>
 ```
 
-The layout contains a 'Label' element with instructions for the user and a `Button` that should schedule a notification when tapped.
+The layout contains a `Label` element with instructions for the user and a `Button` that should schedule a notification when tapped.
 
 The `MainPage` class code-behind handles the sending and receiving of notifications:
 
@@ -82,7 +81,7 @@ public partial class MainPage : ContentPage
         };
     }
 
-    private void OnScheduleClick(object sender, EventArgs e)
+    void OnScheduleClick(object sender, EventArgs e)
     {
         notificationNumber++;
         string title = $"Local Notification #{notificationNumber}";
@@ -90,7 +89,7 @@ public partial class MainPage : ContentPage
         notificationManager.ScheduleNotification(title, message);
     }
 
-    private void ShowNotification(string title, string message)
+    void ShowNotification(string title, string message)
     {
         Device.BeginInvokeOnMainThread(() =>
         {
@@ -206,10 +205,10 @@ namespace LocalNotifications.Droid
 
 The `assembly` attribute above the namespace is critical to allow the `DependencyService` to register this implementation of the `INotificationManager` interface.
 
-The Android OS allows applications to define multiple channels for notifications. The `Initialize` method creates a basic channel the sample application will use to send notifications. The `ScheduleNotification` method defines the platform-specific logic required to create and send a notification. Finally, the `ReceiveNotification` method will be called by the Android OS when a message is received, and invokes the event handler.
+Android allows applications to define multiple channels for notifications. The `Initialize` method creates a basic channel the sample application will use to send notifications. The `ScheduleNotification` method defines the platform-specific logic required to create and send a notification. Finally, the `ReceiveNotification` method will be called by the Android OS when a message is received, and invokes the event handler.
 
 > [!NOTE]
-> The `Application` keyword is defined in two different namespaces so the `AndroidApp` alias is defined in the `using` statements to differentiate.
+> The `Application` class is defined in both the `Xamarin.Forms` and `Android.App` namespaces so the `AndroidApp` alias is defined in the `using` statements to differentiate.
 
 ### Handle incoming notifications on Android
 
@@ -244,7 +243,7 @@ protected override void OnNewIntent(Intent intent)
     CreateNotificationFromIntent(intent);
 }
 
-private void CreateNotificationFromIntent(Intent intent)
+void CreateNotificationFromIntent(Intent intent)
 {
     if(intent?.Extras != null)
     {
@@ -390,13 +389,13 @@ iOS offers many advanced options for notifications. For more information, see [N
 
 Once both Android and iOS contain a registered implementation of the `INotificationManager` interface, the application can be tested on both platforms. Run the application and click the **Schedule Notification** button to create a notification.
 
-On Android, the notification will appear in the **notification area**. When the notification is tapped, the application receives the notification and displays a message below the **Schedule Notification** button:
+On Android, the notification will appear in the notification area. When the notification is tapped, the application receives the notification and displays a message below the **Schedule Notification** button:
 
-!["Local notifications on Android](local-notifications-images/local-notifications-android.png)
+![Local notifications on Android](local-notifications-images/local-notifications-android.png)
 
-On iOS, incoming notifications are automatically received without user input. The application receives the notification and displays a message below the **Schedule Notification** button:
+On iOS, incoming notifications are automatically received by the application without requiring a user input. The application receives the notification and displays a message below the **Schedule Notification** button:
 
-!["Local notifications on iOS](local-notifications-images/local-notifications-ios.png)
+![Local notifications on iOS](local-notifications-images/local-notifications-ios.png)
 
 ## Related links
 
