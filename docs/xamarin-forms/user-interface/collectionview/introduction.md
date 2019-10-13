@@ -19,7 +19,7 @@ ms.date: 07/24/2019
 
 [![Screenshot of a CollectionView vertical grid layout, on iOS and Android](introduction-images/verticalgrid-multipleselection.png "CollectionView vertical grid layout with multiple selection")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "CollectionView vertical grid layout with multiple selection")
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) is available in Xamarin.Forms 4.0. However, it is currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) is available in Xamarin.Forms 4.0. However, it is currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, or to your `App.xaml.cs` on UWP before calling `Forms.Init`:
 
 ```csharp
 Forms.SetFlags("CollectionView_Experimental");
