@@ -83,7 +83,7 @@ ListViews are a popular way to display data in a mobile app. However, they're di
 
 This example will show a ListView of three TextCells in the XAML Previewer. You can change `x:String` to an existing data model in your project.
 
-You can also create an array of data object. For instance if you had a Monkey data object with public properties they could be constructed in design time data.
+You can also create an array of data objects. For example, public properties of a `Monkey` data object can be constructed as design time data:
 
 ```csharp
 namespace Monkeys.Models
