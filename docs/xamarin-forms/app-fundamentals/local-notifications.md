@@ -262,7 +262,7 @@ The `CreateNotificationFromIntent` method extracts notification data from the `i
 
 Android offers many advanced options for notifications. For more information, see [Notifications in Xamarin.Android](~/android/app-fundamentals/notifications/index.md).
 
-## Create iOS interface implementation
+## Create the iOS interface implementation
 
 For the Xamarin.Forms application to send and receive notifications on iOS, the application must provide an implementation of the `INotificationManager`.
 
