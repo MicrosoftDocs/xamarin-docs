@@ -82,7 +82,7 @@ sections:
     - href: local-notifications.md
       html: "Learn how to send and receive local notifications in Xamarin.Forms."
       image:
-        src: https://docs.microsoft.com/media/common/i_mail.svg
+        src: https://docs.microsoft.com/media/common/i_push-notification .svg
         href: local-notifications.md
       title: Local Notifications
     - href: localization/index.md
