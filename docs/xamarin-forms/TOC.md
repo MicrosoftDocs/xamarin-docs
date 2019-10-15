@@ -101,6 +101,7 @@
 #### [Pinch](app-fundamentals/gestures/pinch.md)
 #### [Pan](app-fundamentals/gestures/pan.md)
 #### [Swipe](app-fundamentals/gestures/swipe.md)
+### [Local Notifications](app-fundamentals/local-notifications.md)
 ### [Localization](app-fundamentals/localization/index.md)
 #### [String and Image Localization](app-fundamentals/localization/text.md)
 #### [Right-to-Left Localization](app-fundamentals/localization/right-to-left.md)
