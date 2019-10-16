@@ -378,7 +378,6 @@ namespace CustomRenderer.Droid
             {
                 var formsMap = (CustomMap)e.NewElement;
                 customPins = formsMap.CustomPins;
-                Control.GetMapAsync(this);
             }
         }
 
@@ -394,7 +393,7 @@ namespace CustomRenderer.Droid
 }
 ```
 
-Provided that the custom renderer is attached to a new Xamarin.Forms element, the `OnElementChanged` method calls the `MapView.GetMapAsync` method, which gets the underlying `GoogleMap` that is tied to the view. Once the `GoogleMap` instance is available, the `OnMapReady` override will be invoked. This method registers an event handler for the `InfoWindowClick` event, which fires when the [info window is clicked](#Clicking_on_the_Info_Window), and is unsubscribed from only when the element the renderer is attached to changes. The `OnMapReady` override also calls the `SetInfoWindowAdapter` method to specify that the `CustomMapRenderer` class instance will provide the methods to customize the info window.
+Provided that the custom renderer is attached to a new Xamarin.Forms element, the `OnElementChanged` method retrieves the list of custom pins from the control. Once the `GoogleMap` instance is available, the `OnMapReady` override will be invoked. This method registers an event handler for the `InfoWindowClick` event, which fires when the [info window is clicked](#Clicking_on_the_Info_Window), and is unsubscribed from only when the element the renderer is attached to changes. The `OnMapReady` override also calls the `SetInfoWindowAdapter` method to specify that the `CustomMapRenderer` class instance will provide the methods to customize the info window.
 
 The `CustomMapRenderer` class implements the `GoogleMap.IInfoWindowAdapter` interface to [customize the info window](#Customizing_the_Info_Window). This interface specifies that the following methods must be implemented:
 
