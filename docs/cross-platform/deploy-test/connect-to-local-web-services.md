@@ -114,7 +114,7 @@ SSL errors can be ignored on iOS for local secure web services, when using the m
 In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. This code should be added to the `AppDelegate.FinishedLaunching` method on iOS, prior to the `LoadApplication(new App())` method call.
 
 > [!NOTE]
-> The native network stacks on iOS doesn't hook into the `ServerCertificateValidationCallback`.
+> The native network stacks on iOS don't hook into the `ServerCertificateValidationCallback`.
 
 ### Android
 
