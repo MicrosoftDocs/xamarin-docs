@@ -94,7 +94,7 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 Attempting to invoke a local secure web service from an application running in the iOS simulator or Android emulator will result in a `HttpRequestException` being thrown, even when using the managed network stack on each platform. This is because the local HTTPS development certificate is self-signed, and self-signed certificates aren't trusted by iOS or Android.
 
-Therefore, it's necessary to ignore SSL errors when an application consumes a local secure web service. The mechanisms for accomplishing this are currently different on iOS and Android.
+Therefore, it's necessary to ignore SSL errors when an application consumes a local secure web service. The mechanism for accomplishing this is currently different on iOS and Android.
 
 ### iOS
 
