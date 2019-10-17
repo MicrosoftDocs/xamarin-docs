@@ -7,7 +7,7 @@ ms.technology: xamarin-ios
 ms.custom: xamu-video
 author: conceptdev
 ms.author: crdun
-ms.date: 10/05/2018
+ms.date: 10/16/2019
 ---
 
 # Get Started with Xamarin.iOS
@@ -18,9 +18,10 @@ Xamarin.iOS allows developers to create native iOS applications using the same U
 
 To build for Xamarin.iOS, the following are required:
 
+- the latest version of Visual Studio
 - the latest iOS SDK
 - the latest version of Xcode
-- macOS High Sierra (10.13) and above
+- the minimum version of macOS required by Xcode
 
 The latest version of Xcode can be downloaded from the [iOS Developer Center](https://developer.apple.com/devcenter/ios/index.action#downloads) (login required), or via the Mac App Store:
 

@@ -6,7 +6,7 @@ ms.assetid: eecaf6a5-567c-49b2-ac83-2a195596c5bf
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/01/2019
+ms.date: 10/16/2019
 ---
 # Xamarin.Forms Requirements
 
@@ -65,14 +65,16 @@ Xamarin.Forms apps can be developed on macOS and Windows. However, Windows and V
 
 ## Mac System requirements
 
-You can use Visual Studio for Mac to develop Xamarin.Forms apps on macOS High Sierra (10.13) or newer. To develop iOS apps, we recommend having at least the iOS 10 SDK and Xcode 9 installed.
+You can use Visual Studio for Mac to develop Xamarin.Forms apps on macOS High Sierra (10.13) or newer. To develop iOS apps, we recommend using the latest version of Xcode, iOS, and macOS.
 
 > [!NOTE]
 > Windows apps cannot be developed on macOS.
 
 ## Windows system requirements
 
-Xamarin.Forms apps for iOS and Android can be built on any Windows installation that supports Xamarin development. This requires Visual Studio 2017 or newer running on Windows 7 or higher. A networked Mac is required for iOS development.
+Xamarin.Forms apps for iOS and Android can be built on any Windows installation that supports Xamarin development. For full support of the current platform features, use the latest version of Visual Studio. 
+
+A networked Mac is required for iOS development using the latest version of Xcode and the minimum version of macOS specified by Apple.
 
 <a name="windows10" />
 
@@ -82,7 +84,7 @@ Developing Xamarin.Forms apps for UWP requires:
 
 - Windows 10 (latest version recommended, Fall Creators Update minimum)
 
-- Visual Studio 2019 recommended (Visual Studio 2017 version 15.8 minimum)
+- Visual Studio 2019 recommended
 
 - [Windows 10 SDK](https://dev.windows.com/downloads/windows-10-sdk)
 
