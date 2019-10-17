@@ -22,7 +22,7 @@ Mobile applications running in the iOS simulator or Android emulator can consume
 However, additional work is necessary for an application running in the iOS simulator or Android emulator to consume a local web service that is exposed over HTTPS. For this scenario, the process is as follows:
 
 1. Create a self-signed development certificate on your machine. For more information, see [Create a development certificate](#create-a-development-certificate).
-1. Configure your project to use the managed `HttpClient` network stack for your debug build. For more information, see [Configure your project](#configure-your-project).
+1. Configure your project to use the appropriate `HttpClient` network stack for your debug build. For more information, see [Configure your project](#configure-your-project).
 1. Specify the address of your local machine. For more information, see [Specify the local machine address](#specify-the-local-machine-address).
 1. Bypass the local development certificate security check. For more information, see [Bypass the certificate security check](#bypass-the-certificate-security-check).
 
@@ -61,7 +61,7 @@ However, when an application needs to connect to a secure web service running lo
 
 ### Android
 
-Xamarin applications running on Android can use the managed `HttpClientHandler` network stack, or the native `AndroidClientHandler` network stack. By default, new Android platform projects use the `AndroidClientHandler` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size. For more information about Android network stacks, see [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md).
+Xamarin applications running on Android can use the managed `HttpClient` network stack, or the native `AndroidClientHandler` network stack. By default, new Android platform projects use the `AndroidClientHandler` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size. For more information about Android network stacks, see [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md).
 
 ## Specify the local machine address
 
