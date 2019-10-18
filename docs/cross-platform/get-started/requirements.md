@@ -69,7 +69,7 @@ The Visual Studio 2019 and Visual Studio 2017 installer includes an option to in
 > [!NOTE]
 >
 > - Xamarin for Visual Studio supports Visual Studio 2019 or Visual Studio 2017 (Community, Professional, and Enterprise).
-> - To use the latest Android and iOS SDKs requires the latest version of Visual Studio.
+> - To use the latest Android and iOS SDKs requires the latest version of Visual Studio. For specific version requirements, refer to the  [Xamarin.Android release notes](/xamarin/android/release-notes/) and [Xamarin.iOS release notes](/xamarin/ios/release-notes/).
 > - To develop Xamarin.Forms apps for the Universal Windows Platform (UWP) requires
 >   Windows 10 with Visual Studio 2017. Visual Studio 2019 is recommended.
 
