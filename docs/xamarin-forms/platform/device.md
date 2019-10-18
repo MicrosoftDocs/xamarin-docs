@@ -167,13 +167,17 @@ The [Maps sample](https://github.com/xamarin/xamarin-forms-samples/blob/master/W
 The `Device` class also has a `StartTimer` method which provides a simple way to trigger time-dependent tasks that works in Xamarin.Forms common code, including a .NET Standard library. Pass a `TimeSpan` to set the interval and return `true` to keep the timer running or `false` to stop it after the current invocation.
 
 ```csharp
-Device.StartTimer (new TimeSpan (0, 0, 60), () => {
+Device.StartTimer (new TimeSpan (0, 0, 60), () =>
+{
     // do something every 60 seconds
     return true; // runs again, or false to stop
 });
 ```
 
 If the code inside the timer interacts with the user-interface (such as setting the text of a `Label` or displaying an alert) it should be done inside a `BeginInvokeOnMainThread` expression (see below).
+
+> [!NOTE]
+> The `System.Timers.Timer` and `System.Threading.Timer` classes are .NET Standard alternatives to using the `Device.StartTimer` method.
 
 ## Interact with the UI from background threads
 
