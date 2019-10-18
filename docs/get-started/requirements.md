@@ -65,7 +65,7 @@ Xamarin.Forms apps can be developed on macOS and Windows. However, Windows and V
 
 ## Mac System requirements
 
-You can use Visual Studio for Mac to develop Xamarin.Forms apps on macOS High Sierra (10.13) or newer. To develop iOS apps, we recommend using the latest version of Xcode, iOS, and macOS.
+You can use Visual Studio for Mac to develop Xamarin.Forms apps on macOS High Sierra (10.13) or newer. To develop iOS apps, we recommend using the latest version of Xcode, iOS, and macOS. For specific version requirements, refer to the latest [Xamarin.iOS release notes](/xamarin/ios/release-notes/).
 
 > [!NOTE]
 > Windows apps cannot be developed on macOS.
