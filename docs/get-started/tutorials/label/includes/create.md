@@ -23,7 +23,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of a [`Label`](xref:Xamarin.Forms.Label) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`Label.Text`](xref:Xamarin.Forms.Button.Text) property specifies the text that is displayed, and the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) property specifies that the text will be horizontally centered.
+    This code declaratively defines the user interface for the page, which consists of a [`Label`](xref:Xamarin.Forms.Label) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`Label.Text`](xref:Xamarin.Forms.Button.Text) property specifies the text that is displayed, and the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) property specifies that the text (or to be more precise, the label) will be horizontally centered.
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
