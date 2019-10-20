@@ -72,6 +72,9 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
     [![Screenshot of an Image on iOS and Android](../images/create-image.png "Image view displaying an image")](../images/create-image-large.png#lightbox "Image view displaying an image")
+    
+    > [!IMPORTANT]
+    > If the image is not showing up, read the answer and comments in [this page from StackOverflow](https://stackoverflow.com/questions/47550387/xamarin-forms-images-not-loading-from-remote-url).
 
     > [!NOTE]
     > The [`Image`](xref:Xamarin.Forms.Image) view automatically caches downloaded images for 24 hours. For more information, see [Downloaded image caching](~/xamarin-forms/user-interface/images.md#downloaded-image-caching) in the [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md) guide.
