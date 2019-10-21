@@ -147,7 +147,7 @@ Xamarin.iOS and Xamarin.Android applications can be forced to always use a right
 
 ### iOS
 
-Xamarin.iOS applications can be forced to always use a right-to-left layout, regardless of device settings. This can be accomplished by modifying the **AppDelegate** class as follows:
+Xamarin.iOS applications can be forced to always use a right-to-left layout by modifying the **AppDelegate** class as follows:
 
 1. Declare the `IntPtr_objc_msgSend` function as the first line in your `AppDelegate` class:
 
@@ -173,7 +173,7 @@ For more information about the `IntrPtr_objc_msgSend` method, see [Objective-C s
 
 ### Android
 
-Xamarin.Android applications can be forced to always use a right-to-left layout, regardless of device settings. This can be accomplished by modifying the **MainActivity** class to include the following line:
+Xamarin.Android applications can be forced to always use a right-to-left layout by modifying the **MainActivity** class to include the following line:
 
 ```csharp
 Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
