@@ -101,7 +101,7 @@ In this exercise, you'll modify the application to persist the text from an [`En
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator.
 
-    Enter some text into the [`Entry`](xref:Xamarin.Forms.Entry) and hit the return key. Then, background the application by tapping the Home button to invoke the `OnSleep` method.
+    Enter some text into the [`Entry`](xref:Xamarin.Forms.Entry) and hit the return key. Then, stop debugging to terminate the application using the Stop button in Visual Studio, which will invoke the `OnSleep` method.
 
     Finally, launch the application again from Visual Studio, and the text that was previously entered into the [`Entry`](xref:Xamarin.Forms.Entry) will be restored:
 
