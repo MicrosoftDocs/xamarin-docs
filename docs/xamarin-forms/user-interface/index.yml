@@ -43,6 +43,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: button.md
       title: Button
+    - href: carouselview/index.md
+      html: "Learn how to use a CarouselView to present data in a linear carousel layout."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: collectionview/index.md
+      title: CarouselView
     - href: checkbox.md
       html: "Learn how to set a boolean value using a CheckBox."
       image:
@@ -74,7 +80,7 @@ sections:
         href: datepicker.md
       title: DatePicker
     - href: pop-ups.md
-      html: "Learn how to display dialog boxes that ask users simple questions and guide users through tasks."
+      html: "Learn how to display dialog boxes that ask users simple questions, guide users through tasks, and display prompts."
       image:
         src: ~/media/icons/i_user-interface.svg
         href: pop-ups.md
@@ -133,6 +139,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: progressbar.md
       title: ProgressBar
+    - href: refreshview.md
+      html: "Learn how to use a RefreshView, to provide pull to refresh functionality for scrollable content."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: refreshview.md
+      title: RefreshView
     - href: searchbar.md
       html: "Learn how to initiate a search using the SearchBar control."
       image:

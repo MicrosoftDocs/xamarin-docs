@@ -6,7 +6,7 @@ ms.assetid: CD14EB90-B08C-4E8F-A314-DA0EEC76E647
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/27/2019
+ms.date: 09/25/2019
 ---
 
 # ListView interactivity
@@ -56,7 +56,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 ## Context actions
 
-Often, users will want to take action on an item in a `ListView`. For example, consider a list of emails in the Mail app. On iOS, you can swipe to delete a message::
+Often, users will want to take action on an item in a `ListView`. For example, consider a list of emails in the Mail app. On iOS, you can swipe to delete a message:
 
 ![](interactivity-images/context-default.png "ListView with Context Actions")
 
@@ -183,6 +183,35 @@ The following screenshots show pull-to-refresh after the user has released the p
 
 > [!NOTE]
 > When defining a [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand), the `CanExecute` method of the command can be specified to enable or disable the command.
+
+## Detect scrolling
+
+[`ListView`](xref:Xamarin.Forms.ListView) defines a `Scrolled` event that's fired to indicate that scrolling occurred. The following XAML example shows a `ListView` that sets an event handler for the `Scrolled` event:
+
+```xaml
+<ListView Scrolled="OnListViewScrolled">
+    ...
+</ListView>
+```
+
+The equivalent C# code is:
+
+```csharp
+ListView listView = new ListView();
+listView.Scrolled += OnListViewScrolled;
+```
+
+In this code example, the `OnListViewScrolled` event handler is executed when the `Scrolled` event fires:
+
+```csharp
+void OnListViewScrolled(object sender, ScrolledEventArgs e)
+{
+    Debug.WriteLine("ScrollX: " + e.ScrollX);
+    Debug.WriteLine("ScrollY: " + e.ScrollY);  
+}
+```
+
+The `OnListViewScrolled` event handler outputs the values of the `ScrolledEventArgs` object that accompanies the event.
 
 ## Related links
 

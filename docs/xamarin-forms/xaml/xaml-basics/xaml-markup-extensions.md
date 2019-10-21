@@ -442,8 +442,9 @@ Several markup extensions are intrinsic to XAML and supported in Xamarin.Forms X
 
 - If a property has a non- `null` value by default but you want to set it to  `null`, set it to the `{x:Null}` markup extension.
 - If a property is of type `Type`, you can assign it to a  `Type` object using the markup extension `{x:Type someClass}`.
-- You can define arrays in XAML using the  `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
+- You can define arrays in XAML using the `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
 - The `Binding` markup extension is discussed in [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+- The `RelativeSource` markup extension is discussed in [Relative Bindings](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 ## The ConstraintExpression Markup Extension
 

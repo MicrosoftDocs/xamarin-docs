@@ -1,6 +1,14 @@
 {
   "redirections": [
     {
+      "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/polygon-map-overlay.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/map/polygons"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/polyline-map-overlay.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/map/polygons"
+    },
+    {
       "source_path": "docs/cross-platform/get-started/introduction-to-mobile-development.md",
       "redirect_url": "/xamarin/get-started/what-is-xamarin"
     },

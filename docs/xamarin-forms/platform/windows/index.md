@@ -6,7 +6,7 @@ ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/08/2018
+ms.date: 09/20/2019
 ---
 
 # Windows Platform Features
@@ -28,6 +28,7 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 
 - Detecting reading order from text content in [`Entry`](xref:Xamarin.Forms.Entry), [`Editor`](xref:Xamarin.Forms.Editor), and [`Label`](xref:Xamarin.Forms.Label) instances. For more information, see [InputView Reading Order on Windows](inputview-reading-order.md).
 - Enabling tap gesture support in a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [ListView SelectionMode on Windows](listview-selectionmode.md).
+- Enabling the pull direction of a `RefreshView` to be changed. For more information, see [RefreshView Pull Direction on Windows](refreshview-pulldirection.md).
 - Enabling a [`SearchBar`](xref:Xamarin.Forms.SearchBar) to interact with the spell check engine. For more information, see [SearchBar Spell Check on Windows](searchbar-spell-check.md).
 - Enabling a [`WebView`](xref:Xamarin.Forms.WebView) to display JavaScript alerts in a UWP message dialog. For more information, see [WebView JavaScript Alerts on Windows](webview-javascript-alert.md).
 
@@ -48,7 +49,7 @@ The Xamarin.Forms templates available in Visual Studio contain a Universal Windo
 
 Go to **File > New > Project** in Visual Studio and choose one of the **Cross-Platform > Blank App (Xamarin.Forms)** templates to get started.
 
-Older Xamarin.Forms solutions, or those created on macOS, will not have all the Windows projects listed above (but they need to be manually added). If the Windows platform you wish to target isn't already in your solution, vist the [setup instructions](installation/index.md) to add the desired Windows project type/s.
+Older Xamarin.Forms solutions, or those created on macOS, will not have all the Windows projects listed above (but they need to be manually added). If the Windows platform you wish to target isn't already in your solution, visit the [setup instructions](installation/index.md) to add the desired Windows project type/s.
 
 ## Samples
 

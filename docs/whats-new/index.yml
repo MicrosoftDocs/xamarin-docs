@@ -19,6 +19,12 @@ sections:
     style: cards
     className: cardsB
     items:
+    - href: 2019-10.md
+      html: "What's new in Xamarin docs in October 2019: Xamarin.Forms 4.3 released, and other updates."
+      image:
+        src: https://docs.microsoft.com/media/common/i_article.svg
+        href: 2019-10.md
+      title: October 2019
     - href: 2019-08.md
       html: "What's new in Xamarin docs in August 2019: Xamarin.Forms 4.2 released, user interface updates, and other updates."
       image:

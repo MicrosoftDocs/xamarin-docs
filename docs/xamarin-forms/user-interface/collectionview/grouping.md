@@ -6,12 +6,10 @@ ms.assetid: 7E494245-FDBD-49D6-B7FA-CEF976EB59BB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/24/2019
+ms.date: 09/17/2019
 ---
 
 # Xamarin.Forms CollectionView Grouping
-
-![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CollectionViewDemos)
 
@@ -25,10 +23,11 @@ Large data sets can often become unwieldy when presented in a continually scroll
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
 
-For more information about data templates, see [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
+The following screenshots show a [`CollectionView`](xref:Xamarin.Forms.CollectionView) displaying grouped data:
 
-> [!IMPORTANT]
-> Grouping data with [`CollectionView`](xref:Xamarin.Forms.CollectionView) is currently only supported on iOS.
+[![Screenshot of a grouped data in a CollectionView, on iOS and Android](grouping-images/grouped-data.png "CollectionView with grouped data")](grouping-images/grouped-data-large.png#lightbox "CollectionView with grouped data")
+
+For more information about data templates, see [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md).
 
 ## Group data
 
@@ -198,7 +197,9 @@ The appearance of each group header can be customized by setting the `Collection
 </CollectionView>
 ```
 
-In this example, each group header is set to a [`Label`](xref:Xamarin.Forms.Label) that displays the group name, and that has other appearance properties set.
+In this example, each group header is set to a [`Label`](xref:Xamarin.Forms.Label) that displays the group name, and that has other appearance properties set. The following screenshots show the customized group header:
+
+[![Screenshot of a customized group header in a CollectionView, on iOS and Android](grouping-images/customized-header.png "CollectionView with customized group header")](grouping-images/customized-header-large.png#lightbox "CollectionView with customized group header")
 
 ## Customize the group footer
 
@@ -217,11 +218,15 @@ The appearance of each group footer can be customized by setting the `Collection
 </CollectionView>
 ```
 
-In this example, each group footer is set to a [`Label`](xref:Xamarin.Forms.Label) that displays the number of items in the group.
+In this example, each group footer is set to a [`Label`](xref:Xamarin.Forms.Label) that displays the number of items in the group. The following screenshots show the customized group footer:
+
+[![Screenshot of a customized group footer in a CollectionView, on iOS and Android](grouping-images/customized-footer.png "CollectionView with customized group footer")](grouping-images/customized-footer-large.png#lightbox "CollectionView with customized group footer")
 
 ## Empty groups
 
-When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays grouped data, it will display any groups that are empty. Such groups will be displayed with a group header and footer, indicating that the group is empty.
+When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays grouped data, it will display any groups that are empty. Such groups will be displayed with a group header and footer, indicating that the group is empty. The following screenshots show an empty group:
+
+[![Screenshot of an empty group in a CollectionView, on iOS and Android](grouping-images/empty-group.png "CollectionView with an empty group")](grouping-images/empty-group-large.png#lightbox "CollectionView with an empty group")
 
 > [!NOTE]
 > On iOS 10 and lower, group headers and footers for empty groups may all be displayed at the top of the `CollectionView`.

@@ -28,7 +28,7 @@ When a [`Map`](xref:Xamarin.Forms.Maps.Map) control is rendered by a Xamarin.For
 1. [Customize](#Customizing_the_Map) the map by creating a custom renderer for the map on each platform.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map.md)
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map/index.md)
 
 For information about customizing a map using a custom renderer, see [Customizing a Map Pin](~/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md).
 

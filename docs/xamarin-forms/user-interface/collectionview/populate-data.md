@@ -6,16 +6,14 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/13/2019
+ms.date: 09/20/2019
 ---
 
 # Xamarin.Forms CollectionView Data
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that define the data to be displayed, and its appearance:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) includes the following properties that define the data to be displayed, and its appearance:
 
 - [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource), of type `IEnumerable`, specifies the collection of items to be displayed, and has a default value of `null`.
 - [`ItemTemplate`](xref:Xamarin.Forms.ItemsView.ItemTemplate), of type [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), specifies the template to apply to each item in the collection of items to be displayed.
@@ -73,7 +71,7 @@ By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays items
 
 [![Screenshot of CollectionView containing text items, on iOS and Android](populate-data-images/text.png "Text items in a CollectionView")](populate-data-images/text-large.png#lightbox "Text items in a CollectionView")
 
-For information on how to change the [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, see [Specify a Layout](layout.md). For information on how to define the appearance of each item in the `CollectionView`, see [Define item appearance](#define-item-appearance).
+For information on how to change the [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, see [Xamarin.Forms CollectionView Layout](layout.md). For information on how to define the appearance of each item in the `CollectionView`, see [Define item appearance](#define-item-appearance).
 
 ### Data binding
 
@@ -245,6 +243,45 @@ For more information about data template selectors, see [Create a Xamarin.Forms 
 > [!IMPORTANT]
 > When using [`CollectionView`](xref:Xamarin.Forms.CollectionView), never set the root element of your [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objects to a `ViewCell`. This will result in an exception being thrown because `CollectionView` has no concept of cells.
 
+## Pull to refresh
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) supports pull to refresh functionality through the `RefreshView`, which enables the data being displayed to be refreshed by pulling down on the list of items. The `RefreshView` is a container control that provides pull to refresh functionality to its child, provided that the child supports scrollable content. Therefore, pull to refresh is implemented for a `CollectionView` by setting it as the child of a `RefreshView`:
+
+```xaml
+<RefreshView IsRefreshing="{Binding IsRefreshing}"
+             Command="{Binding RefreshCommand}">
+    <CollectionView ItemsSource="{Binding Animals}">
+        ...
+    </CollectionView>
+</RefreshView>
+```
+
+The equivalent C# code is:
+
+```csharp
+RefreshView refreshView = new RefreshView();
+ICommand refreshCommand = new Command(() =>
+{
+    // IsRefreshing is true
+    // Refresh data here
+    refreshView.IsRefreshing = false;
+});
+refreshView.Command = refreshCommand;
+
+CollectionView collectionView = new CollectionView();
+collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Animals");
+refreshView.Content = collectionView;
+// ...
+```
+
+When the user initiates a refresh, the `ICommand` defined by the `Command` property is executed, which should refresh the items being displayed. A refresh visualization is shown while the refresh occurs, which consists of an animated progress circle:
+
+[![Screenshot of CollectionView pull-to-refresh, on iOS and Android](populate-data-images/pull-to-refresh.png "CollectionView pull-to-refresh")](populate-data-images/pull-to-refresh-large.png#lightbox "CollectionView pull-to-refresh")
+
+The value of the `RefreshView.IsRefreshing` property indicates the current state of the `RefreshView`. When a refresh is triggered by the user, this property will automatically transition to `true`. Once the refresh completes, you should reset the property to `false`.
+
+For more information about `RefreshView`, see [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md).
+
 ## Load data incrementally
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) supports loading data incrementally as users scroll through items. This enables scenarios such as asynchronously loading a page of data from a web service, as the user scrolls. In addition, the point at which more data is loaded is configurable so that users don't see blank space, or are stopped from scrolling.
@@ -298,6 +335,7 @@ void OnCollectionViewRemainingItemsThresholdReached(object sender, EventArgs e)
 ## Related links
 
 - [CollectionView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
+- [Xamarin.Forms RefreshView](~/xamarin-forms/user-interface/refreshview.md)
 - [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 - [Xamarin.Forms Data Templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md)
 - [Create a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md)

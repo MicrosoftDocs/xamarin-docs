@@ -30,7 +30,7 @@ The rendering process can be used to implement platform-specific customizations 
 Each item will now be discussed in turn, to implement a `CustomMap` renderer that displays a native map with a customized pin and a customized view of the pin data on each platform.
 
 > [!NOTE]
-> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map.md).
+> [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
 
 <a name="Creating_the_Custom_Map" />
 
@@ -649,7 +649,7 @@ For more information about customizing a `MapControl` instance, see [Maps and Lo
 
 ## Related Links
 
-- [Maps Control](~/xamarin-forms/user-interface/map.md)
+- [Maps Control](~/xamarin-forms/user-interface/map/index.md)
 - [iOS Maps](~/ios/user-interface/controls/ios-maps/index.md)
 - [Maps API](~/android/platform/maps-and-location/maps/maps-api.md)
 - [Customized Pin (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-map-pin)

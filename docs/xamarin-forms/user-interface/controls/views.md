@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/11/2019
+ms.date: 10/11/2019
 ---
 
 # Xamarin.Forms Views
@@ -58,7 +58,7 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 
 |     |     |
 | --- | --- |
-| [`Map`](xref:Xamarin.Forms.Maps.Map) displays a map. The **Xamarin.Forms.Maps** Nuget package must be installed. Android and Universal Windows Platform require a map authorization key.<br /><br />[API Documentation](xref:Xamarin.Forms.Maps.Map) / [Guide](~/xamarin-forms/user-interface/map.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Map Example](views-images/Map.png "Map Example")](views-images/Map-Large.png#lightbox "Map Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
+| [`Map`](xref:Xamarin.Forms.Maps.Map) displays a map. The **Xamarin.Forms.Maps** Nuget package must be installed. Android and Universal Windows Platform require a map authorization key.<br /><br />[API Documentation](xref:Xamarin.Forms.Maps.Map) / [Guide](~/xamarin-forms/user-interface/map/index.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Map Example](views-images/Map.png "Map Example")](views-images/Map-Large.png#lightbox "Map Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
 |     |     |
 
 ## Views that initiate commands
@@ -75,6 +75,13 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 |     |     |
 | --- | --- |
 | `ImageButton` is a rectangular object that displays an image, and which fires a `Clicked` event when it's been pressed.<br /><br /> [Guide](~/xamarin-forms/user-interface/imagebutton.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![ImageButton Example](views-images/ImageButton.png "ImageButton Example")](views-images/ImageButton-Large.png#lightbox "ImageButton Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) |
+|     |     |
+
+### RefreshView
+
+|     |     |
+| --- | --- |
+| `RefreshView` is a container control that provides pull-to-refresh functionality for scrollable content. The `ICommand` defined by the `Command` property is executed when a refresh is triggered, and the `IsRefreshing` property indicates the current state of the control.<br /><br /> [Guide](~/xamarin-forms/user-interface/refreshview.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![RefreshView Example](views-images/RefreshView.png "RefreshView example")](views-images/RefreshView-Large.png#lightbox "RefreshView Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RefreshViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RefreshViewDemoPage.xaml.cs) |
 |     |     |
 
 ### SearchBar
@@ -171,6 +178,13 @@ These two classes derive from the [`InputView`](xref:Xamarin.Forms.InputView) cl
 |     |     |
 
 ## Views that display collections
+
+### CarouselView
+
+|     |     |
+| --- | --- |
+| [`CarouselView`](xref:Xamarin.Forms.CarouselView) displays a scrollable list of data items. Set the `ItemsSource` property to a collection of objects, and set the `ItemTemplate` property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) object describing how the items are to be formatted. The `CurrentItemChanged` event signals that the currently displayed item has changed, which is available as the `CurrentItem` property.<br /><br />[Guide](~/xamarin-forms/user-interface/carouselview/index.md) / [Sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/) | [![CarouselView Example](views-images/CarouselView.png "CarouselView Example")](views-images/CarouselView-Large.png#lightbox "CarouselView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselViewDemoPage.xaml) |
+|     |     |
 
 ### CollectionView
 

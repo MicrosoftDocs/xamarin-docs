@@ -6,12 +6,10 @@ ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/24/2019
+ms.date: 09/20/2019
 ---
 
 # Xamarin.Forms CollectionView Introduction
-
-![This API is currently pre-release](~/media/shared/preview.png)
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
@@ -19,11 +17,7 @@ ms.date: 07/24/2019
 
 [![Screenshot of a CollectionView vertical grid layout, on iOS and Android](introduction-images/verticalgrid-multipleselection.png "CollectionView vertical grid layout with multiple selection")](introduction-images/verticalgrid-multipleselection-large.png#lightbox "CollectionView vertical grid layout with multiple selection")
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) is available in Xamarin.Forms 4.0. However, it is currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, or to your `App.xaml.cs` on UWP before calling `Forms.Init`:
-
-```csharp
-Forms.SetFlags("CollectionView_Experimental");
-```
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) is available from Xamarin.Forms 4.3.
 
 > [!IMPORTANT]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) is available on iOS and Android, but is only [partially available](https://gist.github.com/hartez/7d0edd4182dbc7de65cebc6c67f72e14) on the Universal Windows Platform.
@@ -54,7 +48,7 @@ While the [`CollectionView`](xref:Xamarin.Forms.CollectionView) and [`ListView`]
 | Caching | `CachingStrategy` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) automatically uses the virtualization provided by the underlying native controls. |
 | Headers and footers | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) can present a header and footer that scroll with the items in the list, via the `Header`, `Footer`, `HeaderTemplate`, and `FooterTemplate` properties. For more information, see [Headers and footers](layout.md#headers-and-footers). |
 | Grouping | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays correctly grouped data by setting its `IsGrouped` property to `true`. Group headers and group footers can be customized by setting the `GroupHeaderTemplate` and `GroupFooterTemplate` properties to  [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objects. For more information, see [Xamarin.Forms CollectionView Grouping](grouping.md). |
-| Pull to refresh | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | Pull to refresh is currently unsupported in `CollectionView`, but will be added in a future release. |
+| Pull to refresh | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | Pull to refresh functionality is supported by setting a [`CollectionView`](xref:Xamarin.Forms.CollectionView) as the child of a `RefreshView`. For more information, see [Pull to refresh](populate-data.md#pull-to-refresh). |
 | Context actions | `ContextActions` | Context actions are currently unsupported in `CollectionView`, but will be added in a future release. |
 | Scrolling | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines `ScrollTo` methods, that scroll items into view. For more information, see [Scrolling](scrolling.md). |
 

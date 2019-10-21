@@ -6,7 +6,7 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
+ms.date: 09/25/2019
 ---
 
 # Xamarin.Forms Shell Search
@@ -206,12 +206,14 @@ The `SearchHandler` class defines the following properties that affect its appea
 
 - `BackgroundColor`, of type `Color`, is the color of the background to the search box text.
 - `CancelButtonColor`, of type `Color`, is the color of the cancel button.
+- `CharacterSpacing`, of type `double`, is the spacing between characters of the `SearchHandler` text.
 - `FontAttributes`, of type `FontAttributes`, indicates if the search box text is italic or bold.
 - `FontFamily`, of type `string`, is the font family used for the search box text.
 - `FontSize`, of type `double`, is the size of the search box text.
 - `HorizontalTextAlignment`, of type `TextAlignment`, is the horizontal alignment of the search box text.
 - `PlaceholderColor`, of type `Color`, is the color of the placeholder search box text.
 - `TextColor`, of type `Color`, is the color of the search box text.
+- `VerticalTextAlignment`, of type `TextAlignment`, is the vertical alignment of the search box text.
 
 ## SearchHandler keyboard
 

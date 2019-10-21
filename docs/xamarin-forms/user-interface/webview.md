@@ -13,7 +13,7 @@ ms.date: 07/19/2019
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
-[`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
+[`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app:
 
 ![In App Browser](webview-images/in-app-browser.png)
 

@@ -25,6 +25,7 @@ The Xamarin.Forms [`DatePicker`](xref:Xamarin.Forms.DatePicker) invokes the plat
 - [`FontAttributes`](xref:Xamarin.Forms.DatePicker.FontAttributes) of type [`FontAttributes`](xref:Xamarin.Forms.FontAttributes), which defaults to [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None).
 - [`FontFamily`](xref:Xamarin.Forms.DatePicker.FontFamily) of type `string`, which defaults to `null`.
 - [`FontSize`](xref:Xamarin.Forms.DatePicker.FontSize) of type `double`, which defaults to -1.0.
+- `CharacterSpacing`, of type `double`, is the spacing between characters of the `DatePicker` text.
 
 The `DatePicker` fires a [`DateSelected`](xref:Xamarin.Forms.DatePicker.DateSelected) event when the user selects a date.
 
@@ -56,7 +57,7 @@ When a `DateTime` value is specified in XAML, the XAML parser uses the `DateTime
             Date="06/21/2018" />
 ```
 
-If the `BindingContext` property of `DatePicker` is set to an instance of a ViewModel containing properties of type `DateTime` named `MinDate`, `MaxDate`, and `SelectedDate` (for example), you can instantiate the `DatePicker` like this:
+If the `BindingContext` property of `DatePicker` is set to an instance of a viewmodel containing properties of type `DateTime` named `MinDate`, `MaxDate`, and `SelectedDate` (for example), you can instantiate the `DatePicker` like this:
 
 ```xaml
 <DatePicker MinimumDate="{Binding MinDate}"
@@ -64,7 +65,7 @@ If the `BindingContext` property of `DatePicker` is set to an instance of a View
             Date="{Binding SelectedDate}" />
 ```
 
-In this example, all three properties are initialized to the corresponding properties in the ViewModel. Because the `Date` property has a binding mode of `TwoWay`, any new date that the user selects is automatically reflected in the ViewModel.
+In this example, all three properties are initialized to the corresponding properties in the viewmodel. Because the `Date` property has a binding mode of `TwoWay`, any new date that the user selects is automatically reflected in the viewmodel.
 
 If the `DatePicker` does not contain a binding on its `Date` property, an application should attach a handler to the `DateSelected` event to be informed when the user selects a new date.
 
