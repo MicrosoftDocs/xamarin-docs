@@ -1,0 +1,53 @@
+---
+title: "Xamarin.Forms Map Geocoding"
+description: "This article explains how to geocode and reverse geocode map data, using the Xamarin.Forms.Maps Geocoder class."
+ms.prod: xamarin
+ms.assetid: DE7DB31A-8921-4614-8B49-DAEF1E7B03B3
+ms.technology: xamarin-forms
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/22/2019
+---
+
+# Xamarin.Forms Map Geocoding
+
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+
+Xamarin.Forms.Maps provides the [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) class, which converts between string addresses and latitude and longitude coordinates that are stored in [`Position`](xref:Xamarin.Forms.Maps.Position) objects.
+
+## Geocode an address
+
+A street address can be geocoded into latitude and longitude coordinates by creating a [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) instance and calling the [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync*) method on the `Geocoder` instance:
+
+```csharp
+using Xamarin.Forms.Maps;
+// ...
+Geocoder geoCoder;
+
+IEnumerable<Position> approximateLocations = await geoCoder.GetPositionsForAddressAsync("Pacific Ave, San Francisco, California");
+Position position = approximateLocations.FirstOrDefault();
+string coordinates = $"{position.Latitude}, {position.Longitude}";
+```
+
+The [`GetPositionsForAddressAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetPositionsForAddressAsync*) method takes a `string` argument that represents the address, and asynchronously returns a collection of [`Position`](xref:Xamarin.Forms.Maps.Position) objects that could represent the address.
+
+## Reverse geocode an address
+
+Latitude and longitude coordinates can be reverse geocoded into a street address by creating a [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) instance and calling the [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync*) method on the `Geocoder` instance:
+
+```csharp
+using Xamarin.Forms.Maps;
+// ...
+Geocoder geoCoder;
+
+Position position = new Position(37.8044866, -122.4324132);
+IEnumerable<string> possibleAddresses = await geoCoder.GetAddressesForPositionAsync(position);
+string address = possibleAddresses.FirstOrDefault();
+```
+
+The [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddressesForPositionAsync*) method takes a [`Position`](xref:Xamarin.Forms.Maps.Position) argument comprised of latitude and longitude coordinates, and asynchronously returns a collection of strings that represent the addresses near the position.
+
+## Related links
+
+- [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Geocoder API](xref:Xamarin.Forms.Maps.Geocoder)

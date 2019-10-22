@@ -143,5 +143,4 @@ The `StrokeColor` and `StrokeWidth` properties are specified to customize the li
 
 ## Related links
 
-- [Sample Map project](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
-- [Xamarin.Forms Map](~/xamarin-forms/user-interface/map/index.md)
+- [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)

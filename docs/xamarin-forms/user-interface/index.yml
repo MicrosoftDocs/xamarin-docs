@@ -115,11 +115,11 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: listview/index.md
       title: ListView
-    - href: map.md
+    - href: map/index.md
       html: "Learn how to use the Map control, including the required platform configuration, and how to populate the map with pins."
       image:
         src: ~/media/icons/i_user-interface.svg
-        href: map.md
+        href: map/index.md
       title: Maps
     - href: menuitem.md
       html: "Learn how to use the MenuItem class to add items to the context menu of ListView cells."
