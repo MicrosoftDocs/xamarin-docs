@@ -38,13 +38,15 @@ These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableP
 
 ## Create a ToolbarItem
 
-A `ToolbarItem` object can be instantiated in XAML. The `Text` and `IconImageSource` properties can be set to determine how the button is displayed in the navigation bar. The following example shows how to instantiate a `ToolbarItem` with some common properties set:
+A `ToolbarItem` object can be instantiated in XAML. The `Text` and `IconImageSource` properties can be set to determine how the button is displayed in the navigation bar. The following example shows how to instantiate a `ToolbarItem` with some common properties set, and add it to a `ContentPage`'s `ToolbarItems` collection:
 
 ```xaml
-<ToolbarItem Text="Example Item"
-             IconImageSource="example_icon.png"
-             Order="Primary"
-             Priority="0" />
+<ContentPage.ToolbarItems>
+    <ToolbarItem Text="Example Item"
+                 IconImageSource="example_icon.png"
+                 Order="Primary"
+                 Priority="0" />
+</ContentPage.ToolbarItems>
 ```
 
 This example will result in a `ToolbarItem` object that has text, an icon and appears first in the primary navigation bar area. A `ToolbarItem` can also be created in code and added to the `ToolbarItems` collection:
