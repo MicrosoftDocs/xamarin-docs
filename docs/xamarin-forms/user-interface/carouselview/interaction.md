@@ -11,7 +11,7 @@ ms.date: 10/14/2019
 
 # Xamarin.Forms CarouselView Interaction
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) defines the following properties that control user interaction:
 
@@ -268,4 +268,4 @@ By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) allows users to mo
 
 ## Related links
 
-- [CarouselView (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/CarouselViewDemos/)
+- [CarouselView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
