@@ -35,7 +35,7 @@ The `Mode` property is the content property of the `RelativeSourceExtension` cla
 
 For more information about Xamarin.Forms markup extensions, see [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md).
 
-## Binding to self
+## Bind to self
 
 The `Self` relative binding mode is used bind a property of an element to another property on the same element:
 
@@ -68,7 +68,7 @@ A common use of this binding mode is set an object's `BindingContext` to a prope
 
 In this example, the `BindingContext` of the page is set to the `DefaultViewModel` property of itself. This property is defined in the code-behind file for the page, and provides a viewmodel instance. The [`ListView`](xref:Xamarin.Forms.ListView) binds to the `Employees` property of the viewmodel.
 
-## Binding to an ancestor
+## Bind to an ancestor
 
 The `FindAncestor` and `FindAncestorBindingContext` relative binding modes are used to bind to parent elements, of a certain type, in the visual tree. The `FindAncestor` mode is used to bind to a parent element, which derives from the [`Element`](xref:Xamarin.Forms.Element) type. The `FindAncestorBindingContext` mode is used to bind to the `BindingContext` of a parent element.
 
@@ -118,7 +118,7 @@ In this example, the `Label.Text` property binds to the `Text` property of the s
 > [!NOTE]
 > The `AncestorLevel` property should be set to 1 to find the ancestor nearest to the binding target element.
 
-## Binding to a templated parent
+## Bind to a templated parent
 
 The `TemplatedParent` relative binding mode is used to bind from within a control template to the runtime object instance to which the template is applied (known as the templated parent). This mode is only applicable if the relative binding is within a control template, and is similar to setting a `TemplateBinding`.
 
