@@ -72,7 +72,6 @@ emulator, see
 
 ## Accelerating with Hyper-V
 
-Hyper-V is the recommended choice for accelerating the Android emulator.
 Before enabling Hyper-V, read the following section to verify
 that your computer supports Hyper-V.
 
