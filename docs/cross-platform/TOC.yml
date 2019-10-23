@@ -108,8 +108,6 @@
           href: deploy-test/connect-to-local-web-services.md
         - name: Custom Linker Configuration
           href: deploy-test/linker.md
-        - name: Installing NUnit 2.6.4 using NuGet
-          href: deploy-test/installing-nunit-using-nuget.md
         - name: Multi Process Debugging
           href: deploy-test/multi-process-debugging.md
     - name: Desktop Developers
