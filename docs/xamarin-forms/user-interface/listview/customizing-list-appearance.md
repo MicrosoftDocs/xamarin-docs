@@ -69,7 +69,7 @@ static PageTypeGroup()
                 new PageModel("Bella", "Desire", new switchCellPage(), "grapefruit.jpg"),
                 new PageModel("Ben", "Chocolate", new switchCellPage(), "grapefruit.jpg")
             }
-        }
+        };
         All = Groups; //set the publicly accessible list
 }
 ```
