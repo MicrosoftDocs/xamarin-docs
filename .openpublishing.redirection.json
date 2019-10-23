@@ -575,6 +575,10 @@
       "source_path": "docs/mac/get-started/installation.md",
       "redirect_url": "/visualstudio/mac/installation/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/cross-platform/deploy-test/installing-nunit-using-nuget.md",
+      "redirect_url": "/xamarin/cross-platform/deploy-test/"
     }
   ]
 }
