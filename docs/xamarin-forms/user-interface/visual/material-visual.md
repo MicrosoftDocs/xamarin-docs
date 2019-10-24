@@ -31,18 +31,18 @@ The process for enabling Xamarin.Forms Material Visual in your application is:
 
 Material Visual currently supports the following controls:
 
+- [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)
 - [`Button`](xref:Xamarin.Forms.Button)
 - `CheckBox`
+- [`DatePicker`](xref:Xamarin.Forms.DatePicker)
+- [`Editor`](xref:Xamarin.Forms.Editor)
 - [`Entry`](xref:Xamarin.Forms.Entry)
 - [`Frame`](xref:Xamarin.Forms.Frame)
-- [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
-- [`DatePicker`](xref:Xamarin.Forms.DatePicker)
-- [`TimePicker`](xref:Xamarin.Forms.TimePicker)
 - [`Picker`](xref:Xamarin.Forms.Picker)
-- [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)
-- [`Editor`](xref:Xamarin.Forms.Editor)
+- [`ProgressBar`](xref:Xamarin.Forms.ProgressBar)
 - [`Slider`](xref:Xamarin.Forms.Slider)
 - [`Stepper`](xref:Xamarin.Forms.Stepper)
+- [`TimePicker`](xref:Xamarin.Forms.TimePicker)
 
 Material controls are realized by material renderers, which apply the Material Design rules. Functionally, material renderers are no different to the default renderers. For more information, see [Customize Material Visual](#customize-material-visual).
 
