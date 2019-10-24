@@ -104,7 +104,7 @@ The main visible differences between the default renderers and material renderer
 > [!NOTE]
 > Material Design components adhere closely to Google's guidelines. As a result, Material Design renderers are biased towards that sizing and behavior. When you require greater control of styles or behavior, you can still create your own [Effect](~/xamarin-forms/app-fundamentals/effects/index.md), [Behavior](~/xamarin-forms/app-fundamentals/behaviors/index.md), or [Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/index.md) to achieve the detail you require.
 
-## Customize Material Visual
+## Customize material visual
 
 The Material Visual NuGet package is a collection of renderers that realize the Xamarin.Forms controls. Customizing Material Visual controls is identical to customizing default controls.
 
