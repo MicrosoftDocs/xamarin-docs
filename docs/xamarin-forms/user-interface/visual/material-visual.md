@@ -44,7 +44,7 @@ Material Visual currently supports the following controls:
 - [`Slider`](xref:Xamarin.Forms.Slider)
 - [`Stepper`](xref:Xamarin.Forms.Stepper)
 
-Material controls are achieved with material renderers, that apply the Material Design rules. Functionally, the material renderers are no different to the default renderers. For more information, see [Customize Material Visual](#customize-material-visual).
+Material controls are realized by material renderers, which apply the Material Design rules. Functionally, material renderers are no different to the default renderers. For more information, see [Customize Material Visual](#customize-material-visual).
 
 ## Initialize material visual
 
@@ -106,17 +106,11 @@ The main visible differences between the default renderers and material renderer
 
 ## Customize Material Visual
 
-The Material Visual package is a collection of custom renderers that affect the appearance of Xamarin.Forms controls. Customizing Material Visual controls is identical to customizing default controls.
+The Material Visual NuGet package is a collection of renderers that realize the Xamarin.Forms controls. Customizing Material Visual controls is identical to customizing default controls.
 
-Effects are recommended when the goal is to customize the appearance of an existing control. If a Material Visual renderer already exists, it is easier to customize the appearance of the control with an effect than it is to subclass the renderer. Using an effect has these advantages:
+Effects are the recommended technique when the goal is to customize an existing control. If a Material Visual renderer exists, it is less work to customize the control with an effect than it is to subclass the renderer. For more information about effects see [Xamarin.Forms effects](~/xamarin-forms/app-fundamentals/effects/index.md).
 
-- Effects are modular and can be applied to any control that supports them.
-- Effects can be applied to a single control.
-- Multiple effects can be added to a single control.
-
-For more information about effects see [Xamarin.Forms effects](~/xamarin-forms/app-fundamentals/effects/index.md).
-
-Custom renderers are recommended when a material renderer does not already exist. The following is a list of Material Visual renderers:
+Custom renderers are the recommended technique when a material renderer does not exist. The following renderer classes are included with Material Visual:
 
 - `MaterialButtonRenderer`
 - `MaterialCheckBoxRenderer`
@@ -131,7 +125,7 @@ Custom renderers are recommended when a material renderer does not already exist
 - `MaterialSliderRenderer`
 - `MaterialStepperRenderer`
 
-Subclassing a material renderer is possible and almost identical to non-material renderers. However, when exporting a renderer that subclasses a material renderer, you must provide a third argument to the `ExportRenderer` method that includes the `VisualMarker.MaterialVisual` type:
+Subclassing a material renderer is almost identical to non-material renderers. However, when exporting a renderer that subclasses a material renderer, you must provide a third argument to the `ExportRenderer` attribute that specifies the `VisualMarker.MaterialVisual` type:
 
 ```csharp
 using Xamarin.Forms.Material.Android;
