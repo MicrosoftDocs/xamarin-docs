@@ -6,7 +6,7 @@ ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/27/2017
+ms.date: 10/24/2019
 ---
 
 # Simple Animations in Xamarin.Forms
@@ -106,8 +106,9 @@ The [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) and [`AnchorY`](xref:X
 Given an [`Image`](xref:Xamarin.Forms.Image) that has been placed at the center of a layout, the following code example demonstrates rotating the image around the center of the layout by setting its [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) property:
 
 ```csharp
-image.AnchorY = (Math.Min (absoluteLayout.Width, absoluteLayout.Height) / 2) / image.Height;
-await image.RotateTo (360, 2000);
+double radius = Math.Min(absoluteLayout.Width, absoluteLayout.Height) / 2;
+image.AnchorY = radius / image.Height;
+await image.RotateTo(360, 2000);
 ```
 
 To rotate the [`Image`](xref:Xamarin.Forms.Image) instance around the center of the layout, the [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) and [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) properties must be set to values that are relative to the width and height of the `Image`. In this example, the center of the `Image` is defined to be at the center of the layout, and so the default `AnchorX` value of 0.5 does not require changing. However, the `AnchorY` property is redefined to be a value from the top of the `Image` to the center point of the layout. This ensures that the `Image` makes a full rotation of 360 degrees around the center point of the layout, as shown in the following screenshots:

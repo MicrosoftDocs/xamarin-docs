@@ -26,10 +26,10 @@ The `RelativeSource` markup extension is supported by the `RelativeSourceExtensi
 
 The `Mode` property should be set to one of the `RelativeBindingSourceMode` enumeration members:
 
-- `TemplatedParent` indicates the element to which the template, in which the bound element exists, is applied. For more information, see [Binding to a templated parent](#bind-to-a-templated-parent).
-- `Self` indicates the element on which the binding is being set, allowing you to bind one property of that element to another property on the same element. For more information, see [Binding to self](#bind-to-self).
-- `FindAncestor` indicates the ancestor in the visual tree of the bound element. This mode should be used to bind to an ancestor control represented by the `AncestorType` property. For more information, see [Binding to an ancestor](#bind-to-an-ancestor).
-- `FindAncestorBindingContext` indicates the `BindingContext` of the ancestor in the visual tree of the bound element. This mode should be used to bind to the `BindingContext` of an ancestor represented by the `AncestorType` property. For more information, see [Binding to an ancestor](#bind-to-an-ancestor).
+- `TemplatedParent` indicates the element to which the template, in which the bound element exists, is applied. For more information, see [Bind to a templated parent](#bind-to-a-templated-parent).
+- `Self` indicates the element on which the binding is being set, allowing you to bind one property of that element to another property on the same element. For more information, see [Bind to self](#bind-to-self).
+- `FindAncestor` indicates the ancestor in the visual tree of the bound element. This mode should be used to bind to an ancestor control represented by the `AncestorType` property. For more information, see [Bind to an ancestor](#bind-to-an-ancestor).
+- `FindAncestorBindingContext` indicates the `BindingContext` of the ancestor in the visual tree of the bound element. This mode should be used to bind to the `BindingContext` of an ancestor represented by the `AncestorType` property. For more information, see [Bind to an ancestor](#bind-to-an-ancestor).
 
 The `Mode` property is the content property of the `RelativeSourceExtension` class. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `Mode=` part of the expression.
 
