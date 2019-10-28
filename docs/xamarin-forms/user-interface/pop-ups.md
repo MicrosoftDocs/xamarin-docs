@@ -95,7 +95,6 @@ The following example shows setting some of the optional arguments:
 
 ```csharp
 string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
-}
 ```
 
 This code limits the number of characters that can be input to 2, and displays the numeric keyboard for user input:
