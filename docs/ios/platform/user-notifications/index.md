@@ -4,8 +4,8 @@ description: "Links to documents that describe the User Notifications framework 
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/01/2016
 ---
 

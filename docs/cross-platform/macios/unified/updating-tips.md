@@ -4,8 +4,8 @@ description: "This document discusses common errors and various tips useful when
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ---
 
 # Tips for Updating Code to the Unified API

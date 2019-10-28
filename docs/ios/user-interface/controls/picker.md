@@ -4,8 +4,8 @@ description: "This document describes how to design and work with picker control
 ms.prod: xamarin
 ms.assetid: A2369EFC-285A-44DD-9E80-EC65BC3DF041
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/14/2018
 ---
 # Picker control in Xamarin.iOS

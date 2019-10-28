@@ -4,8 +4,8 @@ description: "The SQLite.NET PCL NuGet library provides a simple data access mec
 ms.prod: xamarin
 ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
 ---
 # Using SQLite.NET with Android

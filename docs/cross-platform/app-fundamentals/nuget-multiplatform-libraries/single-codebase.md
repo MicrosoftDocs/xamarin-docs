@@ -3,8 +3,8 @@ title: "Creating a New Multiplatform Library for NuGet"
 description: "This document describes how to create a multiplatform library for use with NuGet. This technique is suited for business logic and algorithms that can be expressed entirely in the .NET Base Class library and will thus run on all target platforms without platform-specific code."
 ms.prod: xamarin
 ms.assetid: E7B55354-9BBE-4122-BCE3-3506B79090DD
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 

@@ -3,8 +3,8 @@ title: "Manually Creating NuGet Packages for Xamarin"
 description: "This document contains tips to help build NuGet packages that target the Xamarin platform. It describes NuGet package Xamarin profiles, PCL NuGets with platform dependencies, and links to various open-source samples."
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 

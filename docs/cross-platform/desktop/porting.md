@@ -2,8 +2,8 @@
 ms.assetid: 814857C5-D54E-469F-97ED-EE1CAA0156BB
 title: "Desktop app porting guidance"
 description: "A simple explanation of how to decouple existing Windows Forms or WPF apps to create cross-platform apps to run on macOS, iOS, Android, as well as UWP/Windows 10."
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
 ---
 

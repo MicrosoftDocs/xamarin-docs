@@ -4,8 +4,8 @@ description: "This document discusses how to interact with Objective-C selectors
 ms.prod: xamarin
 ms.assetid: A80904C4-6A89-389B-0487-057AFEB70989
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/12/2017
 ---
 # Objective-C selectors in Xamarin.iOS

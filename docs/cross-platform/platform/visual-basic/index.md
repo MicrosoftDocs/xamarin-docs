@@ -3,8 +3,8 @@ title: "Visual Basic and .NET Standard"
 description: "This guide will explain how Visual Basic can be used to write .NET Standard projects that can be used in solutions targeting Xamarin.iOS and Xamarin.Android."
 ms.prod: xamarin
 ms.assetid: f264c632-8feb-4015-a5e5-cb9c681c787d
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/24/2019
 ---
 

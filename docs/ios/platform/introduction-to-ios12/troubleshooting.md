@@ -4,8 +4,8 @@ description: "This article describes resources that can be used for troubleshoot
 ms.prod: xamarin
 ms.assetid: 24397498-2688-4575-A572-F1B19B1B4EA5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2018
 ---
 # Troubleshooting iOS 12 development with Xamarin

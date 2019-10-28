@@ -3,8 +3,8 @@ title: "Introduction to Portable Class Libraries (PCL)"
 description: "This article introduces Portable Class Library (PCL) projects and walks through creating and consuming PCL projects in Visual Studio for Mac and Visual Studio."
 ms.prod: xamarin
 ms.assetid: 76ba8f7a-9b6e-40f5-9a29-ff1274ece4f2
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/18/2018
 ---
 # Portable Class Libraries (PCL)

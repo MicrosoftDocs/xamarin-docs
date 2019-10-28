@@ -4,8 +4,8 @@ description: "Google Cloud Messaging (GCM) is a service that facilitates messagi
 ms.prod: xamarin
 ms.assetid: DF8EF401-F63D-4BA0-B2C6-B22DF8FD60CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2019
 ---
 

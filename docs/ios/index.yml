@@ -3,8 +3,8 @@ documentType: LandingData
 title: Xamarin.iOS
 metadata:
   description: Xamarin.iOS exposes the complete iOS SDK for .NET developers.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 09/28/2018
   ms.topic: landing-page
   ms.technology: xamarin-ios

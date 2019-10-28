@@ -3,8 +3,8 @@ title: "Objective Sharpie Release History"
 description: "This document describes the release history of Objective Sharpie, the tool used to automate the creation of C# bindings to Objective-C code."
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
 ---
 

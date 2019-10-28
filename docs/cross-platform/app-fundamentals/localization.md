@@ -3,8 +3,8 @@ title: "Application User Interface Localization"
 description: "This document describes the cross-platform concepts of internationalization and localization and examines how they impact application design."
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 

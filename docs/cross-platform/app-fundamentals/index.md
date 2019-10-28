@@ -3,8 +3,8 @@ title: "Sharing Code On Multiple Platforms"
 description: "This document links to various guides that describe techniques for sharing code, including portable class libraries, shared projects, .NET Standard, and NuGet."
 ms.prod: xamarin
 ms.assetid: 7D179ACF-09A6-46EE-B49D-E27AB5F09CD4
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/18/2018
 ---
 # Sharing code on multiple platforms

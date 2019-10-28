@@ -3,8 +3,8 @@ title: "Microsoft Azure Mobile Apps"
 description: "This document links to guides that describe how to build a Xamarin app that is connected to Azure. It discusses working with the Xamarin Azure Component, users, and push notifications."
 ms.prod: xamarin
 ms.assetid: 7B9AA8D9-C181-4C33-8AB0-2F56E4DBFC03
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/02/2017
 ---
 

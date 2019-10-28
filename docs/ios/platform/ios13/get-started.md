@@ -4,8 +4,8 @@ description: "This document describes how to get set up to build iOS 13, iPadOS 
 ms.prod: xamarin
 ms.assetid: 97414545-85D2-433C-9246-63B6763F488A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/01/2019
 ---
 # Get started with iOS 13

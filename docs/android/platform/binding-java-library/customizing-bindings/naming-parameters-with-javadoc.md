@@ -4,8 +4,8 @@ description: "This article explains how to recover parameter names in an Java Bi
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/20/2017
 ---
 
