@@ -6,7 +6,7 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/26/2019
+ms.date: 10/28/2019
 ---
 
 # Xamarin.Forms Label
@@ -64,32 +64,6 @@ Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 
 ```
 
 The result is that characters in the text displayed by the [`Label`](xref:Xamarin.Forms.Label) are spaced `CharacterSpacing` device-independent units apart.
-
-## Padding
-
-Padding represents the space between an element and its child elements, and is used to separate the element from its own content. Padding can be applied to [`Label`](xref:Xamarin.Forms.Label) instances by setting the `Label.Padding` property to a [`Thickness`](xref:Xamarin.Forms.Thickness) value:
-
-```xaml
-<Label Text="Padded text"
-       Padding="20" />
-```
-
-The equivalent C# code is:
-
-```csharp
-Label label = new Label
-{
-    Text = "Padded text",
-    Padding = new Thickness(20)
-};
-```
-
-> [!IMPORTANT]
-> On iOS, when a [`Label`](xref:Xamarin.Forms.Label) is created that sets the `Padding` property, padding will be applied and the padding value can be updated later. However, when a `Label` is created that doesn't set the `Padding` property, attempting to set it later will have no effect.
->
-> On Android and the Universal Windows Platform, the `Padding` property value can be specified when the `Label` is created, or later.
-
-For more information about padding, see [Margins and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 ## Colors
 
@@ -385,6 +359,48 @@ var label = new Label
 The following screenshots show the result of setting the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property to 1.8:
 
 ![Span LineHeight Example](label-images/span-lineheight.png)
+
+## Padding
+
+Padding represents the space between an element and its child elements, and is used to separate the element from its own content. Padding can be applied to [`Label`](xref:Xamarin.Forms.Label) instances by setting the `Label.Padding` property to a [`Thickness`](xref:Xamarin.Forms.Thickness) value:
+
+```xaml
+<Label Padding="10">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum" />
+            <Span Text="dolor sit amet." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+The equivalent C# code is:
+
+```csharp
+FormattedString formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum"
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "dolor sit amet."
+});
+Label label = new Label
+{
+    FormattedText = formattedString,
+    Padding = new Thickness(20)
+};
+```
+
+> [!IMPORTANT]
+> On iOS, when a [`Label`](xref:Xamarin.Forms.Label) is created that sets the `Padding` property, padding will be applied and the padding value can be updated later. However, when a `Label` is created that doesn't set the `Padding` property, attempting to set it later will have no effect.
+>
+> On Android and the Universal Windows Platform, the `Padding` property value can be specified when the `Label` is created, or later.
+
+For more information about padding, see [Margins and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+
 
 ## Hyperlinks
 
