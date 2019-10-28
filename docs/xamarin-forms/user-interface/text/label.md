@@ -154,7 +154,6 @@ The following screenshots show the result of setting the `MaxLines` property to 
 
 ![Label MaxLines Example](label-images/label-maxlines.png)
 
-
 ## Display HTML
 
 The [`Label`](xref:Xamarin.Forms.Label) class has a `TextType` property, which determines whether the `Label` instance should display plain text, or HTML text. This property should be set to one of the members of the `TextType` enumeration:
