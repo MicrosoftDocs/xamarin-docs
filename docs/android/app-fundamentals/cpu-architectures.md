@@ -35,7 +35,7 @@ Deployment** options are enabled, which disable explicit architecture
 selection.
 
 In Visual Studio, right-click on your project under the
-**Solution Explorer** and select **Properties**. Under the **Android Options** 
+**Solution Explorer** and select **Properties**. Under the **Android Options**
 page check the **Packaging properties** section and verify that **Use Shared Runtime** is
 disabled (turning this off allows you to explicitly select which ABIs
 to support). Click the **Advanced** button and, under **Supported architectures**, check the architectures that you want to support:

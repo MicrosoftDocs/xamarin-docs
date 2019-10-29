@@ -11,7 +11,7 @@ ms.date: 03/14/2017
 
 # Introduction to macOS Sierra
 
-With the new macOS Sierra, the developer can take advantage of new APIs that allow the end user to interact with their apps and websites in previously unavailable ways. For example, Apple now allows websites to give customers the option of paying securely via Apple Pay and enhancements to the Metal framework boost an app's graphics and computing potential. 
+With the new macOS Sierra, the developer can take advantage of new APIs that allow the end user to interact with their apps and websites in previously unavailable ways. For example, Apple now allows websites to give customers the option of paying securely via Apple Pay and enhancements to the Metal framework boost an app's graphics and computing potential.
 
 For more information on macOS Sierra, please see Apple's [macOS + Apps](https://developer.apple.com/macos/) documentation.
 
@@ -62,8 +62,8 @@ CloudKit provides a complete UI for sending and accepting shared record invitati
 For more information, please see Apple's [CloudKit Framework Reference](https://developer.apple.com/reference/clockkit) and [CloudKit JS Framework Reference](https://developer.apple.com/reference/cloudkitjs).
 
 > [!IMPORTANT]
-> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/) 
-> to help developers properly handle the European Union's General Data 
+> Apple [provides tools](https://developer.apple.com/support/allowing-users-to-manage-data/)
+> to help developers properly handle the European Union's General Data
 > Protection Regulation (GDPR).
 
 <a name="Safari-App-Extensions-Support" />
@@ -104,7 +104,7 @@ for more information, Pleas see Apple's [CryptoTokenKit Framework Reference](htt
 
 ### Unified Logging
 
-Unified Logging provides the app with a single API for efficient messaging across all levels of the system. With Unified Logging the app has fine-grained control over multiple levels of logging that include privacy controls and activity tracking for easier debugging. 
+Unified Logging provides the app with a single API for efficient messaging across all levels of the system. With Unified Logging the app has fine-grained control over multiple levels of logging that include privacy controls and activity tracking for easier debugging.
 
 Logging provides automatic message correlation when activity tracking and logging are used together.
 

@@ -20,13 +20,13 @@ SQLite, such as `CREATE TABLE`, `INSERT` and `SELECT` statements.
 To use access SQLite via ADO.NET you must add `System.Data` and `Mono.Data.Sqlite`
 references to your Android project, as shown here:
 
-# [Visual Studio](#tab/windows) 
+# [Visual Studio](#tab/windows)
 
-![Android references in Visual Studio](using-adonet-images/image7.png "Android references in Visual Studio") 
+![Android references in Visual Studio](using-adonet-images/image7.png "Android references in Visual Studio")
 
-# [Visual Studio for Mac](#tab/macos) 
+# [Visual Studio for Mac](#tab/macos)
 
-![Android references in Visual Studio for Mac](using-adonet-images/image5.png "Android references in Visual Studio for Mac") 
+![Android references in Visual Studio for Mac](using-adonet-images/image5.png "Android references in Visual Studio for Mac")
 
 -----
 
@@ -172,7 +172,7 @@ public static string DoSomeDataAccess ()
 Because SQLite allows arbitrary SQL commands to be run against the
 data, you can perform whatever `CREATE`, `INSERT`, `UPDATE`, `DELETE`,
 or `SELECT` statements you like. You can read about the SQL commands
-supported by SQLite at the SQLite website. The SQL statements are 
+supported by SQLite at the SQLite website. The SQL statements are
 run using one of three methods on an `SqliteCommand` object:
 
 - **ExecuteNonQuery** &ndash; Typically used for table creation or data

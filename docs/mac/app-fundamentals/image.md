@@ -17,7 +17,7 @@ _This article covers working with images and icons in a Xamarin.Mac application.
 
 When working with C# and .NET in a Xamarin.Mac application, you have access to the same Image and Icon tools that a developer working in *Objective-C* and *Xcode* does.
 
-There are several ways that image assets are used inside a macOS (formerly known as Mac OS X) application. From simply displaying an image as part of your application's UI to, assigning it to a UI control such as a Tool Bar or Source List Item, to providing Icons, Xamarin.Mac makes it easy to add great artwork to your macOS applications in the following ways: 
+There are several ways that image assets are used inside a macOS (formerly known as Mac OS X) application. From simply displaying an image as part of your application's UI to, assigning it to a UI control such as a Tool Bar or Source List Item, to providing Icons, Xamarin.Mac makes it easy to add great artwork to your macOS applications in the following ways:
 
 - **UI elements** - Images can be displayed as backgrounds or as part of your application in a Image View (`NSImageView`).
 - **Button** - Images can be displayed in buttons (`NSButton`).
@@ -36,7 +36,7 @@ In this article, we'll cover the basics of working with Images and Icons in a Xa
 
 When adding an image for use in a Xamarin.Mac application, there are several places and ways that the developer can include image file to the project's source:
 
-- **Main project tree [deprecated]** - Images can be added directly to the projects tree. When calling images stored in the main project tree from code, no folder location is specified. For example: `NSImage image = NSImage.ImageNamed("tags.png");`. 
+- **Main project tree [deprecated]** - Images can be added directly to the projects tree. When calling images stored in the main project tree from code, no folder location is specified. For example: `NSImage image = NSImage.ImageNamed("tags.png");`.
 - **Resources folder [deprecated]** - The special **Resources** folder is for any file that will become part of the Application's Bundle such as Icon, Launch Screen or general Images (or any other image or file the developer wishes to add). When calling images stored in the **Resources** folder from code, just like images stored in the main project tree, no folder location is specified. For example: `NSImage.ImageNamed("tags.png")`.
 - **Custom Folder or Subfolder [deprecated]** - The developer can add a custom folder to the projects source tree and store the images there. The location where the file is added can be nested in a subfolder to further help organize the project. For example, if the Developer added a `Card` folder to the project and a sub folder of `Hearts` to that folder, then store an image **Jack.png** in the `Hearts` folder, `NSImage.ImageNamed("Card/Hearts/Jack.png")` would load the image at runtime.
 - **Asset Catalog Image Sets [preferred]** - Added in OS X El Capitan, **Asset Catalogs Image Sets** contain all the versions or representations of an image that are necessary to support various devices and scale factors for your application. Instead of relying on the image assets filename (**@1x**, **@2x**).
@@ -47,20 +47,20 @@ When adding an image for use in a Xamarin.Mac application, there are several pla
 
 As stated above, an **Asset Catalogs Image Sets** contain all the versions or representations of an image that are necessary to support various devices and scale factors for your application. Instead of relying on the image assets filename (see the Resolution Independent Images and Image Nomenclature above), **Image Sets** use the Asset Editor to specify which image belongs to which device and/or resolution.
 
-1. In the **Solution Pad**, double-click the **Assets.xcassets** file to open it for editing: 
+1. In the **Solution Pad**, double-click the **Assets.xcassets** file to open it for editing:
 
     ![Selecting the Assets.xcassets](image-images/imageset01.png "Selecting the Assets.xcassets")
-2. Right-click on the **Assets List** and select **New Image Set**: 
+2. Right-click on the **Assets List** and select **New Image Set**:
 
     [![Adding a new image set](image-images/imageset02.png "Adding a new image set")](image-images/imageset02-large.png#lightbox)
-3. Select the new image set and the editor will be displayed: 
+3. Select the new image set and the editor will be displayed:
 
     [![Selecting the new image set](image-images/imageset03.png "Selecting the new image set")](image-images/imageset03-large.png#lightbox)
-4. From here we can drag in images for each of the different devices and resolutions required. 
-5. Double-click the new image set's **Name** in the **Assets List** to edit it: 
+4. From here we can drag in images for each of the different devices and resolutions required.
+5. Double-click the new image set's **Name** in the **Assets List** to edit it:
 
     [![Editing the image set name](image-images/imageset04.png "Editing the image set name")](image-images/imageset04-large.png#lightbox)
-    
+
 A special **Vector** class as been added to **Image Sets** that allows us to include a _PDF_ formatted vector image in the casset instead including individual bitmap files at the different resolutions. Using this method, you supply a single vector file for the **@1x** resolution (formatted as a vector PDF file) and the **@2x** and **@3x** versions of the file will be generated at compile time and included in the application's bundle.
 
 [![The image set editor interface](image-images/imageset05.png "The image set editor interface")](image-images/imageset05-large.png#lightbox)
@@ -89,7 +89,7 @@ When working with images in Assets Catalogs there might be times when you want t
 To add a new Assets Catalog to your project:
 
 1. Right-click on the project in the **Solution Pad** and select **Add** > **New File...**
-2. Select **Mac** > **Asset Catalog**, enter a **Name** for the collection and click the **New** button: 
+2. Select **Mac** > **Asset Catalog**, enter a **Name** for the collection and click the **New** button:
 
     ![Adding a new Asset Catalog](image-images/asset01.png "Adding a new Asset Catalog")
 
@@ -102,7 +102,7 @@ From here you can work with the collection in the same way as the default **Asse
 
 Before you can use an Image file in your Xamarin.Mac application (either in C# code or from Interface Builder) it needs to be included in the project's **Resources** folder as a **Bundle Resource**. To add a file to a project, do the following:
 
-1. Right-click on the **Resources** folder in your project in the **Solution Pad** and select **Add** > **Add Files...**: 
+1. Right-click on the **Resources** folder in your project in the **Solution Pad** and select **Add** > **Add Files...**:
 
     ![Adding a file](image-images/add01.png "Adding a file")
 2. From the **Add Files** dialog box, select the images files to add to the project, select `BundleResource` for the **Override build action** and click the **Open** button:
@@ -111,7 +111,7 @@ Before you can use an Image file in your Xamarin.Mac application (either in C# c
 3. If the files are not already in the **Resources** folder, you'll be asked if you want to **Copy**, **Move** or **Link** the files. Pick which every suits your needs, typically that will be **Copy**:
 
     ![Selecting the add action](image-images/add04.png "Selecting the add action")
-4. The new files will be included in the project and read for use: 
+4. The new files will be included in the project and read for use:
 
     ![The new image files added to the Solution Pad](image-images/add03.png "The new image files added to the Solution Pad")
 5. Repeat the process for any image files required.
@@ -149,19 +149,19 @@ Any image resource the you have added to the **Resources** folder in your Xamari
 
 To use an image in interface builder, do the following:
 
-1. Add an image to the **Resources** folder with a **Build Action** of `BundleResource`: 
+1. Add an image to the **Resources** folder with a **Build Action** of `BundleResource`:
 
      ![An image resource in the Solution Pad](image-images/ib00.png "An image resource in the Solution Pad")
-2. Double-click the **Main.storyboard** file to open it for editing in Interface Builder: 
+2. Double-click the **Main.storyboard** file to open it for editing in Interface Builder:
 
      [![Editing the main storyboard](image-images/ib01.png "Editing the main storyboard")](image-images/ib01-large.png#lightbox)
-3. Drag a UI element that takes images onto the design surface (for example, a **Image Toolbar Item**): 
+3. Drag a UI element that takes images onto the design surface (for example, a **Image Toolbar Item**):
 
      ![Editing a toolbar item](image-images/ib02.png "Editing a toolbar item")
-4. Select the Image that you added to the **Resources** folder in the **Image Name** dropdown: 
+4. Select the Image that you added to the **Resources** folder in the **Image Name** dropdown:
 
      [![Selecting an image for a toolbar item](image-images/ib03.png "Selecting an image for a toolbar item")](image-images/ib03-large.png#lightbox)
-5. The selected image will be displayed in the design surface: 
+5. The selected image will be displayed in the design surface:
 
      ![The image being displayed in the Toolbar editor](image-images/ib04.png "The image being displayed in the Toolbar editor")
 6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
@@ -274,7 +274,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
                 break;
             case "Details":
                 DataSource.Products [(int)view.TextField.Tag].Description = view.TextField.StringValue;
-                break; 
+                break;
             }
         };
     }
@@ -381,7 +381,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
             break;
         case "Details":
             prod.Description = view.TextField.StringValue;
-            break; 
+            break;
         }
     };
 

@@ -30,7 +30,7 @@ Linking applications using the Full [Target Framework](~/mac/platform/target-fra
 
 For example, Applications submitted to the macOS App Store must not reference a number of deprecated APIs (such as QTKit), some of which Xamarin.Mac contains bindings of. Even if an applications does not call those bindings, the invocation will exist in the SDK and be rejected.
 
-Platform linking assumes the application and the BCL are linker unsafe and just remove unused code from Xamarin.Mac.dll. 
+Platform linking assumes the application and the BCL are linker unsafe and just remove unused code from Xamarin.Mac.dll.
 
 Any applications not reflecting on Xamarin.Mac.dll types will see a minor startup improvement from the removal of unnecessary types.
 

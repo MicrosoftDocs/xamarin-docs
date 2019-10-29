@@ -10,7 +10,7 @@ ms.date: 11/25/2015
 
 # How can I update NuGet?
 
-NuGet updates, extensions, and add-ins can be found under the **Updates** tab in the **NuGet Package Manager**. Detailed navigation to find the updates in Visual Studio for Mac & Visual Studio is below. 
+NuGet updates, extensions, and add-ins can be found under the **Updates** tab in the **NuGet Package Manager**. Detailed navigation to find the updates in Visual Studio for Mac & Visual Studio is below.
 
 Please note, updates will *only* be shown in these menus if you do not have the latest supported version of NuGet by the IDE installed:
 

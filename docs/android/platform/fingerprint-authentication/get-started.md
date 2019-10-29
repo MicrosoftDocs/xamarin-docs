@@ -22,19 +22,19 @@ To get started, let's first cover how to configure a Xamarin.Android project so 
 
 An Android application must request the `USE_FINGERPRINT` permission in the manifest. The following screenshot shows how to add this permission to the application in Visual Studio:
 
-[![Enabling USE\_FINGERPRINT in the Android Manifest screen](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox) 
+[![Enabling USE\_FINGERPRINT in the Android Manifest screen](get-started-images/fingerprint-01-vs.png)](get-started-images/fingerprint-01-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
 An Android application must request the `USE_FINGERPRINT` permission in the manifest. The following screenshot shows how to add this permission to the application in Visual Studio for Mac:
 
-[![Enabling UseFingerprint in the Android Application screen](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox) 
+[![Enabling UseFingerprint in the Android Application screen](get-started-images/fingerprint-01-xs.png)](get-started-images/fingerprint-01-xs.png#lightbox)
 
 -----
 
 ## Getting an Instance of the FingerprintManager
 
-Next, the application must get an instance of the `FingerprintManager` or the `FingerprintManagerCompat` class. To be compatible with older versions of Android, an Android application should use the compatibility API's found in the Android Support v4 NuGet package. The following snippet demonstrates how to get the appropriate object from the operating system: 
+Next, the application must get an instance of the `FingerprintManager` or the `FingerprintManagerCompat` class. To be compatible with older versions of Android, an Android application should use the compatibility API's found in the Android Support v4 NuGet package. The following snippet demonstrates how to get the appropriate object from the operating system:
 
 ```csharp
 // Using the Android Support Library v4

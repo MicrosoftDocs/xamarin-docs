@@ -48,7 +48,7 @@ For each element of our Cell Prototype, assign a **Name** to expose it to C# cod
 
 [![](autosizing-row-height-images/table05.png "Assign a Name to expose it to C# code")](autosizing-row-height-images/table05.png#lightbox)
 
-Next, add a custom class for the `UITableViewController`, the `UITableView` and the `UITableCell` (Prototype). For example: 
+Next, add a custom class for the `UITableViewController`, the `UITableView` and the `UITableCell` (Prototype). For example:
 
 [![](autosizing-row-height-images/table06.png "Adding a custom class for the UITableViewController, the UITableView and the UITableCell")](autosizing-row-height-images/table06.png#lightbox)
 

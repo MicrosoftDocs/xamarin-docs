@@ -59,7 +59,7 @@ In this equation, you do not want the value of z' becoming zero:
 
 z` = Persp0·x + Persp1·y + Persp2
 
-Consequently, these values have some practical restrictions: 
+Consequently, these values have some practical restrictions:
 
 The `Persp2` cell can either be zero or not zero. If `Persp2` is zero, then z' is zero for the point (0, 0), and that's usually not desirable because that point is very common in two-dimensional graphics. If `Persp2` is not equal to zero, then there is no loss of generality if `Persp2` is fixed at 1. For example, if you determine that `Persp2` should be 5, then you can simply divide all the cells in the matrix by 5, which makes `Persp2` equal to 1, and the result will be the same.
 

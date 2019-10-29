@@ -49,8 +49,8 @@ There are a few workarounds for this issue:
 
 3. Temporarily downgrade back to the Android API Level 21 "L" preview [1]:
 
-    1. Delete the **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21** 
-    2. Extract [1] into **C:\\Users\\&lt;username&gt;\\AppData\\Local\\Android\\android-sdk\\platforms** 
+    1. Delete the **%LOCALAPPDATA%\\Android\\android-sdk\\platforms\\android-21**
+    2. Extract [1] into **C:\\Users\\&lt;username&gt;\\AppData\\Local\\Android\\android-sdk\\platforms**
         to create an **android-L** folder.
 
 # [Visual Studio for Mac](#tab/macos)
@@ -58,7 +58,7 @@ There are a few workarounds for this issue:
 The following error message (or similar) may show up:
 
 ```bash
-/Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets: 
+/Library/Frameworks/Mono.framework/External/xbuild/Xamarin/Android/Xamarin.Android.Common.targets:
 Error: Could not find android.jar for API Level 21.**
 ```
 

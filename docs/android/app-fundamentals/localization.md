@@ -280,7 +280,7 @@ screens that adapt for RTL readers.
 
 The following screenshot shows the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Arabic:
 
-[![Screenshot of Tasky app in Arabic](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox) 
+[![Screenshot of Tasky app in Arabic](localization-images/rtl-ar-sml.png)](localization-images/rtl-ar.png#lightbox)
 
 The next screenshot shows the [localized **Tasky** sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n) in Hebrew:
 
@@ -299,7 +299,7 @@ they are missing).
 
 Refer to Google's
 [Testing on an Android Emulator](https://developer.android.com/guide/topics/resources/localization.html#testing)
-section for instructions on how to set an emulator to a specific 
+section for instructions on how to set an emulator to a specific
 locale using the ADB shell.
 
 ```shell

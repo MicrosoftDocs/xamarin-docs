@@ -67,7 +67,7 @@ The constraints editor pop-up allows us to add and update the multiple constrain
 For editing constraints on the selected view, click the ellipsis to display the popover:
 ![constraints editing popover](designer-auto-layout-images/constraints-popup.png)
 
-On opening the constraints popover it displays any preset constraints on the view. We can set all the spacing constraints selecting **All Sides** from the combobox on top right corner, and select **Clear All** to remove them. 
+On opening the constraints popover it displays any preset constraints on the view. We can set all the spacing constraints selecting **All Sides** from the combobox on top right corner, and select **Clear All** to remove them.
 
 The **W** will set width and **H** will set height constraint. When you check **Aspect Ratio**, the views height and width will be controlled on different screen sizes, the width of the view is used as numerator for the ration, and the height as denominator.
 
@@ -199,7 +199,7 @@ Given the following setting for the Constraint in the iOS Designer:
 
 Instead of instantly updating the attached View in response to Constraint changes, the Auto Layout Engine schedules a _Deferred Layout Pass_ for the near future. During this deferred pass, not only is the given View's Constraint updated, the Constraints for every View in the hierarchy are recalculated and updated to adjust for the new layout.
 
-At any point, you can schedule your own Deferred Layout Pass by calling the `SetNeedsLayout` or `SetNeedsUpdateConstraints` methods of the parent View. 
+At any point, you can schedule your own Deferred Layout Pass by calling the `SetNeedsLayout` or `SetNeedsUpdateConstraints` methods of the parent View.
 
 The Deferred Layout Pass consists of two unique passes through the view hierarchy:
 

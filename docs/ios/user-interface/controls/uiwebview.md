@@ -13,7 +13,7 @@ ms.date: 03/22/2017
 
 Over the lifetime of iOS Apple has released a number of ways for app developers to incorporate web view functionality in their apps. Most users utilize the built-in Safari web browser on their iOS device, and therefore expect that web-view functionality from other apps is consistent with this experience. They expect the same gestures to work, the performance to be on par, and the functionality the same.
 
-In this article, we will explore each of the three Web Views provided by Apple: `UIWebView`, `WKWebview`, and `SFSafariViewController`, their similarities and differences, and how they can be used. 
+In this article, we will explore each of the three Web Views provided by Apple: `UIWebView`, `WKWebview`, and `SFSafariViewController`, their similarities and differences, and how they can be used.
 
 iOS 11 introduced new changes to both `WKWebView` and `SFSafariViewController`. For more information on these, see the [Web changes in iOS 11 guide](~/ios/platform/introduction-to-ios11/web.md) guide.
 
@@ -78,7 +78,7 @@ The [Handle JavaScript Alerts](https://github.com/xamarin/recipes/tree/master/Re
 
  `SFSafariViewController` is essentially a 'mini safari' that can be embedded into your app. Like WKWebView it uses the same Nitro Javascript Engine, but also provides a range of additional Safari features such as AutoFill, Reader, and the ability to share cookies and data with mobile Safari. Interaction between the user and the `SFSafariViewController` is not accessible to your app. Your app will not have access to any of the default Safari features.
 
-It also, by default, implements a **Done** button, allowing to user to easily return to your app, and forward and back navigation buttons, allowing your user to navigate through a stack of web pages. In addition, it also provides the user with an address bar giving them the peace of mind that they are on the expected web page. The address bar does not allow the user to change the url. 
+It also, by default, implements a **Done** button, allowing to user to easily return to your app, and forward and back navigation buttons, allowing your user to navigate through a stack of web pages. In addition, it also provides the user with an address bar giving them the peace of mind that they are on the expected web page. The address bar does not allow the user to change the url.
 
 These implementations cannot be changed, so `SFSafariViewController` is ideal to use as the default browser if your app wants to present a webpage without any customization.
 

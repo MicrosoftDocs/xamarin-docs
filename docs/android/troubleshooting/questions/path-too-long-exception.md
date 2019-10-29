@@ -23,7 +23,7 @@ build:
 On Windows (where the maximum length for a path is
 [260 characters](https://msdn.microsoft.com/library/windows/desktop/aa365247.aspx)),
 a **PathTooLongException** could be produced while building the
-project if a generated path exceeds the maximum length. 
+project if a generated path exceeds the maximum length.
 
 ## Fix
 

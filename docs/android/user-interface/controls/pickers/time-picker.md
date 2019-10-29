@@ -338,7 +338,7 @@ Build and run the app. When you click the **PICK TIME** button, the
 the Activity (in this case, 12-hour AM/PM mode):
 
 [![Time Dialog is displayed in AM/PM mode](time-picker-images/03-am-pm-time-dialog-sml.png)](time-picker-images/03-am-pm-time-dialog.png#lightbox)
-   
+
 When you click **OK** in the `TimePicker` dialog, the handler updates the
 Activity's `TextView` with the chosen time and then exits:
 

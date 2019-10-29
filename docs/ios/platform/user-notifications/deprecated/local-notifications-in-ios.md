@@ -29,8 +29,8 @@ the user. Users may access this by swiping down from the top of the screen:
 iOS makes it fairly simple to create and handle local notifications.
 First, iOS 8 requires applications to ask for the user's permission
 to display notifications. Add the following code to your app before
-attempting to send a local notification - the 
-[attached sample](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications) 
+attempting to send a local notification - the
+[attached sample](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
 places it in the **AppDelegate**'s **FinishedLaunching** method.
 
 ```csharp
@@ -77,7 +77,7 @@ In order play a sound with the icon, set the SoundName property on the notificat
 notification.SoundName = UILocalNotification.DefaultSoundName;
 ```
 
-If the notification sound is longer than 30 seconds, iOS will play the 
+If the notification sound is longer than 30 seconds, iOS will play the
 default sound instead.
 
 > [!IMPORTANT]

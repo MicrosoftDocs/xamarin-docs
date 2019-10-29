@@ -73,8 +73,8 @@ button as shown in the XML below:
   android:layout_height="fill_parent">
 <Button  
   android:id="@+id/myButton"
-  android:layout_width="fill_parent" 
-  android:layout_height="wrap_content" 
+  android:layout_width="fill_parent"
+  android:layout_height="wrap_content"
   android:text="@string/hello"/>
 </LinearLayout>
 ```
@@ -185,14 +185,14 @@ following code.
 protected override void OnCreate (Bundle bundle)
 {
   base.OnCreate (bundle);
-                        
+
   // create a layout
   var rl = new RelativeLayout (this);
 
   // set layout parameters
   var layoutParams = new RelativeLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.FillParent);
   rl.LayoutParameters = layoutParams;
-        
+
   // create TextView control
   var tv = new TextView (this);
 
@@ -202,7 +202,7 @@ protected override void OnCreate (Bundle bundle)
 
   // add TextView to the layout
   rl.AddView (tv);
-        
+
   // set the layout as the content view
   SetContentView (rl);
 }
@@ -233,19 +233,19 @@ shown below:
 protected override void OnCreate (Bundle bundle)
 {
   base.OnCreate (bundle);
-                        
+
   // create a layout
   var rl = new RelativeLayout (this);
 
   // set layout parameters
   var layoutParams = new RelativeLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.FillParent);
   rl.LayoutParameters = layoutParams;
-                        
+
   // get the initial orientation
   var surfaceOrientation = WindowManager.DefaultDisplay.Rotation;
   // create layout based upon orientation
   RelativeLayout.LayoutParams tvLayoutParams;
-                
+
   if (surfaceOrientation == SurfaceOrientation.Rotation0 || surfaceOrientation == SurfaceOrientation.Rotation180) {
     tvLayoutParams = new RelativeLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.WrapContent);
   } else {
@@ -253,15 +253,15 @@ protected override void OnCreate (Bundle bundle)
     tvLayoutParams.LeftMargin = 100;
     tvLayoutParams.TopMargin = 100;
   }
-                        
+
   // create TextView control
   var tv = new TextView (this);
   tv.LayoutParameters = tvLayoutParams;
   tv.Text = "Programmatic layout";
-        
+
   // add TextView to the layout
   rl.AddView (tv);
-        
+
   // set the layout as the content view
   SetContentView (rl);
 }
@@ -297,7 +297,7 @@ public class CodeLayoutActivity : Activity
   TextView _tv;
   RelativeLayout.LayoutParams _layoutParamsPortrait;
   RelativeLayout.LayoutParams _layoutParamsLandscape;
-                
+
   protected override void OnCreate (Bundle bundle)
   {
     // create a layout
@@ -306,28 +306,28 @@ public class CodeLayoutActivity : Activity
 
     // create portrait and landscape layout for the TextView
     _layoutParamsPortrait = new RelativeLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.WrapContent);
-                
+
     _layoutParamsLandscape = new RelativeLayout.LayoutParams (ViewGroup.LayoutParams.FillParent, ViewGroup.LayoutParams.WrapContent);
     _layoutParamsLandscape.LeftMargin = 100;
     _layoutParamsLandscape.TopMargin = 100;
-                        
+
     _tv = new TextView (this);
-                        
+
     if (surfaceOrientation == SurfaceOrientation.Rotation0 || surfaceOrientation == SurfaceOrientation.Rotation180) {
       _tv.LayoutParameters = _layoutParamsPortrait;
     } else {
       _tv.LayoutParameters = _layoutParamsLandscape;
     }
-                        
+
     _tv.Text = "Programmatic layout";
     rl.AddView (_tv);
     SetContentView (rl);
   }
-                
+
   public override void OnConfigurationChanged (Android.Content.Res.Configuration newConfig)
   {
     base.OnConfigurationChanged (newConfig);
-                        
+
     if (newConfig.Orientation == Android.Content.Res.Orientation.Portrait) {
       _tv.LayoutParameters = _layoutParamsPortrait;
       _tv.Text = "Changed to portrait";

@@ -66,7 +66,7 @@ catch
 }
 ```
 
-Notice that the `Stream` object obtained from `GetStreamAsync` is copied into a `MemoryStream`. Android does not allow the `Stream` from `HttpClient` to be processed by the main thread except in asynchronous methods. 
+Notice that the `Stream` object obtained from `GetStreamAsync` is copied into a `MemoryStream`. Android does not allow the `Stream` from `HttpClient` to be processed by the main thread except in asynchronous methods.
 
 The [`SKBitmap.Decode`](xref:SkiaSharp.SKBitmap.Decode(System.IO.Stream)) does a lot of work: The `Stream` object passed to it references a block of memory containing an entire bitmap in one of the common bitmap file formats, generally JPEG, PNG, or GIF. The `Decode` method must determine the format, and then decode the bitmap file into SkiaSharp's own internal bitmap format.
 
@@ -104,14 +104,14 @@ using (Stream stream = await picturePicker.GetImageStreamAsync())
 
 Generally, such code also invalidates the `CanvasView` so that the `PaintSurface` handler can display the new bitmap.
 
-The `SKBitmap` class defines several useful properties, including [`Width`](xref:SkiaSharp.SKBitmap.Width) and [`Height`](xref:SkiaSharp.SKBitmap.Height), that reveal the pixel dimensions of the bitmap, as well as many methods, including methods to create bitmaps, to copy them, and to expose the pixel bits. 
+The `SKBitmap` class defines several useful properties, including [`Width`](xref:SkiaSharp.SKBitmap.Width) and [`Height`](xref:SkiaSharp.SKBitmap.Height), that reveal the pixel dimensions of the bitmap, as well as many methods, including methods to create bitmaps, to copy them, and to expose the pixel bits.
 
 ## Displaying in pixel dimensions
 
-The SkiaSharp [`Canvas`](xref:SkiaSharp.SKCanvas) class defines four `DrawBitmap` methods. These methods allow bitmaps to be displayed in two fundamentally different ways: 
+The SkiaSharp [`Canvas`](xref:SkiaSharp.SKCanvas) class defines four `DrawBitmap` methods. These methods allow bitmaps to be displayed in two fundamentally different ways:
 
 - Specifying an `SKPoint` value (or separate `x` and `y` values) displays the bitmap in its pixel dimensions. The pixels of the bitmap are mapped directly to pixels of the video display.
-- Specifying a rectangle causes the bitmap to be stretched to the size and shape of the rectangle. 
+- Specifying a rectangle causes the bitmap to be stretched to the size and shape of the rectangle.
 
 You display a bitmap in its pixel dimensions using [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,SkiaSharp.SKPoint,SkiaSharp.SKPaint)) with an `SKPoint` parameter or [`DrawBitmap`](xref:SkiaSharp.SKCanvas.DrawBitmap(SkiaSharp.SKBitmap,System.Single,System.Single,SkiaSharp.SKPaint)) with separate `x` and `y` parameters:
 
@@ -185,7 +185,7 @@ The `PaintSurface` handler centers the bitmap by calculating `x` and `y` values 
 
 [![Pixel Dimensions](displaying-images/PixelDimensions.png "Pixel Dimensions")](displaying-images/PixelDimensions-Large.png#lightbox)
 
-If the application wishes to display the bitmap in its upper-left corner, it would simply pass coordinates of (0, 0). 
+If the application wishes to display the bitmap in its upper-left corner, it would simply pass coordinates of (0, 0).
 
 ## A method for loading resource bitmaps
 
@@ -223,7 +223,7 @@ DrawBitmap(SKBitmap bitmap, SKRect source, SKRect dest, SKPaint paint = null)
 
 In both cases, the bitmap is stretched to fill the rectangle named `dest`. In the second method, the `source` rectangle allows you to select a subset of the bitmap. The `dest` rectangle is relative to the output device; the `source` rectangle is relative to the bitmap.
 
-The **Fill Rectangle** page demonstrates the first of these two methods by displaying the same bitmap used in the earlier example in a rectangle the same size as the canvas: 
+The **Fill Rectangle** page demonstrates the first of these two methods by displaying the same bitmap used in the earlier example in a rectangle the same size as the canvas:
 
 ```csharp
 public class FillRectanglePage : ContentPage
@@ -286,11 +286,11 @@ public class UniformScalingPage : ContentPage
 
         canvas.Clear();
 
-        float scale = Math.Min((float)info.Width / bitmap.Width, 
+        float scale = Math.Min((float)info.Width / bitmap.Width,
                                (float)info.Height / bitmap.Height);
         float x = (info.Width - scale * bitmap.Width) / 2;
         float y = (info.Height - scale * bitmap.Height) / 2;
-        SKRect destRect = new SKRect(x, y, x + scale * bitmap.Width, 
+        SKRect destRect = new SKRect(x, y, x + scale * bitmap.Width,
                                            y + scale * bitmap.Height);
 
         canvas.DrawBitmap(bitmap, destRect);
@@ -306,7 +306,7 @@ Turn the phone sideways to see the bitmap stretched to that area:
 
 [![Uniform Scaling landscape](displaying-images/UniformScaling-Landscape.png "Uniform Scaling landscape")](displaying-images/UniformScaling-Landscape-Large.png#lightbox)
 
-The advantage of using this `scale` factor becomes obvious when you want to implement a slightly different algorithm. Suppose you want to preserve the bitmap's aspect ratio but also fill the destination rectangle. The only way this is possible is by cropping part of the image, but you can implement that algorithm simply by changing `Math.Min` to `Math.Max` in the above code. Here's the result: 
+The advantage of using this `scale` factor becomes obvious when you want to implement a slightly different algorithm. Suppose you want to preserve the bitmap's aspect ratio but also fill the destination rectangle. The only way this is possible is by cropping part of the image, but you can implement that algorithm simply by changing `Math.Min` to `Math.Max` in the above code. Here's the result:
 
 [![Uniform Scaling alternative](displaying-images/UniformScaling-Alternative.png "Uniform Scaling alternative")](displaying-images/UniformScaling-Alternative-Large.png#lightbox)
 
@@ -314,7 +314,7 @@ The bitmap's aspect ratio is preserved but areas on the left and right of the bi
 
 ## A versatile bitmap display function
 
-XAML-based programming environments (such as UWP and Xamarin.Forms) have a facility to expand or shrink the size of bitmaps while preserving their aspect ratios. Although SkiaSharp does not include this feature, you can implement it yourself. 
+XAML-based programming environments (such as UWP and Xamarin.Forms) have a facility to expand or shrink the size of bitmaps while preserving their aspect ratios. Although SkiaSharp does not include this feature, you can implement it yourself.
 The `BitmapExtensions` class included in the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) application shows how. The class defines two new `DrawBitmap` methods that perform the aspect ratio calculation. These new methods are extension methods of `SKCanvas`.
 
 The new `DrawBitmap` methods include a parameter of type `BitmapStretch`, an enumeration defined in the **BitmapExtensions.cs** file:
@@ -352,10 +352,10 @@ The first `DrawBitmap` extension function contains a destination rectangle but n
 static class BitmapExtensions
 {
     ···
-    public static void DrawBitmap(this SKCanvas canvas, SKBitmap bitmap, SKRect dest, 
-                                  BitmapStretch stretch, 
-                                  BitmapAlignment horizontal = BitmapAlignment.Center, 
-                                  BitmapAlignment vertical = BitmapAlignment.Center, 
+    public static void DrawBitmap(this SKCanvas canvas, SKBitmap bitmap, SKRect dest,
+                                  BitmapStretch stretch,
+                                  BitmapAlignment horizontal = BitmapAlignment.Center,
+                                  BitmapAlignment vertical = BitmapAlignment.Center,
                                   SKPaint paint = null)
     {
         if (stretch == BitmapStretch.Fill)
@@ -380,7 +380,7 @@ static class BitmapExtensions
                     break;
             }
 
-            SKRect display = CalculateDisplayRect(dest, scale * bitmap.Width, scale * bitmap.Height, 
+            SKRect display = CalculateDisplayRect(dest, scale * bitmap.Width, scale * bitmap.Height,
                                                   horizontal, vertical);
 
             canvas.DrawBitmap(bitmap, display, paint);
@@ -396,7 +396,7 @@ The primary purpose of this method is to calculate a scaling factor named `scale
 static class BitmapExtensions
 {
     ···
-    static SKRect CalculateDisplayRect(SKRect dest, float bmpWidth, float bmpHeight, 
+    static SKRect CalculateDisplayRect(SKRect dest, float bmpWidth, float bmpHeight,
                                        BitmapAlignment horizontal, BitmapAlignment vertical)
     {
         float x = 0;
@@ -472,7 +472,7 @@ static class BitmapExtensions
                     break;
             }
 
-            SKRect display = CalculateDisplayRect(dest, scale * source.Width, scale * source.Height, 
+            SKRect display = CalculateDisplayRect(dest, scale * source.Width, scale * source.Height,
                                                   horizontal, vertical);
 
             canvas.DrawBitmap(bitmap, source, display, paint);
@@ -506,7 +506,7 @@ The first of these two new `DrawBitmap` methods is demonstrated in the **Scaling
             <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
 
-        <skia:SKCanvasView x:Name="canvasView" 
+        <skia:SKCanvasView x:Name="canvasView"
                            Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2"
                            PaintSurface="OnCanvasViewPaintSurface" />
 
@@ -535,7 +535,7 @@ The first of these two new `DrawBitmap` methods is demonstrated in the **Scaling
                Grid.Row="2" Grid.Column="0"
                VerticalOptions="Center" />
 
-        <Picker x:Name="horizontalPicker" 
+        <Picker x:Name="horizontalPicker"
                 Grid.Row="2" Grid.Column="1"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.ItemsSource>
@@ -555,7 +555,7 @@ The first of these two new `DrawBitmap` methods is demonstrated in the **Scaling
                Grid.Row="3" Grid.Column="0"
                VerticalOptions="Center" />
 
-        <Picker x:Name="verticalPicker" 
+        <Picker x:Name="verticalPicker"
                 Grid.Row="3" Grid.Column="1"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.ItemsSource>
@@ -615,7 +615,7 @@ Here are some combinations of options:
 
 [![Scaling Modes](displaying-images/ScalingModes.png "Scaling Modes")](displaying-images/ScalingModes-Large.png#lightbox)
 
-The **Rectangle Subset** page has virtually the same XAML file as **Scaling Modes**, but the code-behind file defines a rectangular subset of the bitmap given by the `SOURCE` field: 
+The **Rectangle Subset** page has virtually the same XAML file as **Scaling Modes**, but the code-behind file defines a rectangular subset of the bitmap given by the `SOURCE` field:
 
 ```csharp
 public partial class ScalingModesPage : ContentPage

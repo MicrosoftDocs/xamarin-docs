@@ -123,7 +123,7 @@ The new `UIGraphicsImageRenderer` class creates a new image context that is capa
 
 The `CreateImage` method of the `UIGraphicsImageRenderer` class is called to create a wide color image and passed a completion handler with the image context to draw into. All of the drawing is done inside of this completion handler as follows:
 
-- The `UIColor.FromDisplayP3` method creates a new fully saturated red color in the wide gamut Display P3 Color Space and it is used to draw the first half of the rectangle. 
+- The `UIColor.FromDisplayP3` method creates a new fully saturated red color in the wide gamut Display P3 Color Space and it is used to draw the first half of the rectangle.
 - The second half of the rectangle is drawn in the normal sRGB fully saturated red color for comparison.
 
 ### Drawing Wide Color in macOS

@@ -78,7 +78,7 @@ To access location services on iOS, you must set the following keys in **Info.pl
   - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) – for using location services at all times
 - iOS 10 and earlier
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – for using location services when the app is in use
-  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – for using location services at all times    
+  - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – for using location services at all times
 
 To support iOS 11 and earlier, you can include all three keys: `NSLocationWhenInUseUsageDescription`, `NSLocationAlwaysAndWhenInUseUsageDescription`, and `NSLocationAlwaysUsageDescription`.
 
@@ -138,7 +138,7 @@ In addition, Android 9 has removed the Apache HTTP client library from the bootc
 ```xml
 <application ...>
     ...
-    <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+    <uses-library android:name="org.apache.http.legacy" android:required="false" />
 </application>
 ```
 
@@ -246,7 +246,7 @@ Maps can also be created in XAML, as shown in this example:
         <maps:Map x:Name="MyMap"
                   Clicked="OnMapClicked"
                   WidthRequest="320"
-                  HeightRequest="200"                  
+                  HeightRequest="200"
                   IsShowingUser="true"
                   MapType="Hybrid" />
     </StackLayout>

@@ -13,7 +13,7 @@ The **MainThread** class allows applications to run code on the main thread of e
 
 ## Background
 
-Most operating systems — including iOS, Android, and the Universal Windows Platform — use a single-threading model for code involving the user interface. This model is necessary to properly serialize user-interface events, including keystrokes and touch input. This thread is often called the _main thread_ or the _user-interface thread_ or the _UI thread_. The disadvantage of this model is that all code that accesses user interface elements must run on the application's main thread. 
+Most operating systems — including iOS, Android, and the Universal Windows Platform — use a single-threading model for code involving the user interface. This model is necessary to properly serialize user-interface events, including keystrokes and touch input. This thread is often called the _main thread_ or the _user-interface thread_ or the _UI thread_. The disadvantage of this model is that all code that accesses user interface elements must run on the application's main thread.
 
 Applications sometimes need to use events that call the event handler on a secondary thread of execution. (The Xamarin.Essentials classes [`Accelerometer`](accelerometer.md), [`Compass`](compass.md), [`Gyroscope`](gyroscope.md), [`Magnetometer`](magnetometer.md), and [`OrientationSensor`](orientation-sensor.md) all might return information on a secondary thread when used with faster speeds.) If the event handler needs to access user-interface elements, it must run that code on the main thread. The **MainThread** class allows the application to run this code on the main thread.
 
@@ -56,10 +56,10 @@ MainThread.BeginInvokeOnMainThread(MyMainThreadCode);
 > [!NOTE]
 > Xamarin.Forms has a method called
 > [`Device.BeginInvokeOnMainThread(Action)`](https://docs.microsoft.com/dotnet/api/xamarin.forms.device.begininvokeonmainthread)
-> that does the same thing as `MainThread.BeginInvokeOnMainThread(Action)`. 
-> While you can use either method in a Xamarin.Forms app, consider whether 
-> or not the calling code has any other need for a dependency on 
-> Xamarin.Forms. If not, `MainThread.BeginInvokeOnMainThread(Action)` 
+> that does the same thing as `MainThread.BeginInvokeOnMainThread(Action)`.
+> While you can use either method in a Xamarin.Forms app, consider whether
+> or not the calling code has any other need for a dependency on
+> Xamarin.Forms. If not, `MainThread.BeginInvokeOnMainThread(Action)`
 > is likely a better option.
 
 ## Determining if Code is Running on the Main Thread

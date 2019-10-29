@@ -70,7 +70,7 @@ Open **Resources/Layout/Main.axml** and insert the following:
           android:layout_height=    "match_parent"
           android:layout_weight=    "1"    />
   </LinearLayout>
-        
+
   <LinearLayout
     android:orientation=    "vertical"
     android:layout_width=    "match_parent"

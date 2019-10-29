@@ -12,7 +12,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 1. In **Solution Explorer**, in the **ButtonTutorial** project, double-click **MainPage.xaml** to open it. Then, in **MainPage.xaml**, remove all of the template code and replace it with the following code:
 
     ```xaml
-    <?xml version="1.0" encoding="utf-8"?>    
+    <?xml version="1.0" encoding="utf-8"?>
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="ButtonTutorial.MainPage">

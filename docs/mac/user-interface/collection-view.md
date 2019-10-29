@@ -195,7 +195,7 @@ Since the Collection View does not include a default cell prototype, the develop
 Do the following:
 
 1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New File...**
-2. Select **Mac** > **View Controller**, give it a name (such as `EmployeeItem` in this example) and click the **New** button to create: 
+2. Select **Mac** > **View Controller**, give it a name (such as `EmployeeItem` in this example) and click the **New** button to create:
 
     ![Adding a new view controller](collection-view-images/proto01.png)
 
@@ -473,13 +473,13 @@ public override NSCollectionViewItem GetItem(NSCollectionView collectionView, NS
 }
 ```
 
-The `MakeItem` method of the Collection View is called to create or return a reusable instance of the `EmployeeItemController` and its `Person` property is set to item being displayed in the requested cell. 
+The `MakeItem` method of the Collection View is called to create or return a reusable instance of the `EmployeeItemController` and its `Person` property is set to item being displayed in the requested cell.
 
 The `EmployeeItemController` must be registered with the Collection View Controller beforehand using the following code:
 
 ```csharp
 EmployeeCollection.RegisterClassForItem(typeof(EmployeeItemController), "EmployeeCell");
-``` 
+```
 
 The **Identifier** (`EmployeeCell`) used in the `MakeItem` call _must_ match the name of the View Controller that was registered with the Collection View. This step will be covered in detail below.
 
@@ -499,7 +499,7 @@ using AppKit;
 namespace MacCollectionNew
 {
     /// <summary>
-    /// Collection view delegate handles user interaction with the elements of the 
+    /// Collection view delegate handles user interaction with the elements of the
     /// collection view for the Flow-Based layout type.
     /// </summary>
     public class CollectionViewDelegate : NSCollectionViewDelegateFlowLayout
@@ -558,7 +558,7 @@ namespace MacCollectionNew
         #endregion
     }
 }
-``` 
+```
 
 The `ItemsSelected` and `ItemsDeselected` methods are overridden and used to set or clear the `PersonSelected` property of the View Controller that is handling the Collection View when the user selects or deselects an item. This will be shown in detail below.
 
@@ -612,7 +612,7 @@ namespace MacCollectionNew
 
         #region Computed Properties
         /// <summary>
-        /// Gets or sets the datasource that provides the data to display in the 
+        /// Gets or sets the datasource that provides the data to display in the
         /// Collection View.
         /// </summary>
         /// <value>The datasource.</value>

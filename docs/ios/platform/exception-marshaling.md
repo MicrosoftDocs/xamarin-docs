@@ -17,7 +17,7 @@ Both managed code and Objective-C have support for runtime exceptions
 (try/catch/finally clauses).
 
 However, their implementations are different, which means that the
-runtime libraries (the Mono runtime and the Objective-C runtime libraries) 
+runtime libraries (the Mono runtime and the Objective-C runtime libraries)
 have problems when they have to handle exceptions and then run code written in
 other languages.
 
@@ -48,7 +48,7 @@ Consider the following code example:
 
 ``` csharp
 var dict = new NSMutableDictionary ();
-dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero); 
+dict.LowLevelSetObject (IntPtr.Zero, IntPtr.Zero);
 ```
 
 This will throw an Objective-C NSInvalidArgumentException in native code:
@@ -138,7 +138,7 @@ is like this:
 
 Here, the only managed frames are frames 8-10, but the managed exception is
 thrown in frame 0. This means that the Mono runtime must unwind the native
-frames 0-7, which causes a problem equivalent to the problem discussed above: 
+frames 0-7, which causes a problem equivalent to the problem discussed above:
 although the Mono runtime will unwind the native frames, it won't execute any Objective-C `@catch` or
 `@finally` clauses.
 
@@ -188,7 +188,7 @@ the stack when the managed exception is thrown:
 
 ```
  0: TestApp                 ExceptionMarshaling.IOS.AppDelegate:FinishedLaunching (UIKit.UIApplication,Foundation.NSDictionary)
- 1: TestApp                 (wrapper runtime-invoke) <Module>:runtime_invoke_bool__this___object_object (object,intptr,intptr,intptr) 
+ 1: TestApp                 (wrapper runtime-invoke) <Module>:runtime_invoke_bool__this___object_object (object,intptr,intptr,intptr)
  2: libmonosgen-2.0.dylib   mono_jit_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
  3: libmonosgen-2.0.dylib   do_runtime_invoke(method=<unavailable>, obj=<unavailable>, params=<unavailable>, exc=<unavailable>, error=<unavailable>)
  4: libmonosgen-2.0.dylib   mono_runtime_invoke [inlined] mono_runtime_invoke_checked(method=<unavailable>, obj=<unavailable>, params=<unavailable>, error=0xbff45758)
@@ -267,7 +267,7 @@ for a higher macOS version). Calling such selectors will throw an
 eventually causes the process to crash.
 
 To summarize, having either the Objective-C runtime or the Mono runtime unwind
-frames that they are not programmed to handle can lead to undefined behaviors, 
+frames that they are not programmed to handle can lead to undefined behaviors,
 such as crashes, memory leaks, and other types of unpredictable (mis)behaviors.
 
 ## Solution
@@ -367,7 +367,7 @@ available:
 - `ThrowManagedException`: Convert the Objective-C exception to a managed
   exception and throw the managed exception. This is the default on watchOS.
 - `Abort`: Abort the process.
-- `Disable`:Disables the exception interception, so it doesn't make sense to set this value in the event handler, 
+- `Disable`:Disables the exception interception, so it doesn't make sense to set this value in the event handler,
   but once the event is raised, it's too late to disable it. In any case if set, it will abort the process.
 
 So, to see every time an exception is marshaled, you can do this:
@@ -378,7 +378,7 @@ Runtime.MarshalManagedException += (object sender, MarshalManagedExceptionEventA
     Console.WriteLine ("Marshaling managed exception");
     Console.WriteLine ("    Exception: {0}", args.Exception);
     Console.WriteLine ("    Mode: {0}", args.ExceptionMode);
-    
+
 };
 Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCExceptionEventArgs args) =>
 {

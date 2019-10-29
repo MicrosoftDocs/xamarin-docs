@@ -54,7 +54,7 @@ Xamarin-based apps:
     automatically installed as part of the **Mobile development with .NET**
     workload.
 
-- **Android SDK** &ndash; Android SDK API 28 or later must be 
+- **Android SDK** &ndash; Android SDK API 28 or later must be
     installed via the Android SDK Manager.
 
 ## Getting started
@@ -63,7 +63,7 @@ To get started developing Android Pie apps with Xamarin.Android, you
 must download and install the latest tools and SDK packages before you
 can create your first Android Pie project:
 
-1. Visual Studio 2019 is recommended. If you are using Visual Studio 2017, 
+1. Visual Studio 2019 is recommended. If you are using Visual Studio 2017,
    update to [Visual Studio 2017 version 15.8](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes)
    or later. If you are using Visual Studio for Mac, update to
    [Visual Studio 2017 for Mac version 7.6](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes) or later.
@@ -148,15 +148,15 @@ the latest Android devices, while others are designed to further
 enhance the Android user experience:
 
 - **Display Cutout Support** &ndash; Provides APIs to find the
-    location and shape of the _cutout_ at the top of the screen on 
+    location and shape of the _cutout_ at the top of the screen on
     newer Android devices.
 
 - **Notification Enhancements** &ndash; Notification messages can
     now display images, and a new `Person` class is used to simplify
     conversation participants.
 
-- **Indoor Positioning** &ndash; Platform support for the 
-    WiFi Round-Trip-Time protocol, which makes it possible for apps to 
+- **Indoor Positioning** &ndash; Platform support for the
+    WiFi Round-Trip-Time protocol, which makes it possible for apps to
     use WiFi devices for navigation in indoor settings.
 
 - **Multi-Camera Support** &ndash; Offers the capability to access
@@ -184,13 +184,13 @@ following values:
     &ndash; The window is never allowed to overlap with the cutout area.
 
 - [LayoutInDisplayCutoutModeShortEdges](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_SHORT_EDGES)
-    &ndash; The window is allowed to extend into the cutout area but only on the short edges of the screen. 
+    &ndash; The window is allowed to extend into the cutout area but only on the short edges of the screen.
 
 - [LayoutInDisplayCutoutModeDefault](https://developer.android.com/reference/android/view/WindowManager.LayoutParams.html#LAYOUT_IN_DISPLAY_CUTOUT_MODE_DEFAULT)
     &ndash; The window is allowed to extend into the cutout area if the cutout is contained within a system bar.
 
 For example, to prevent the app window from overlapping with the cutout
-area, set the layout cutout mode to *never*: 
+area, set the layout cutout mode to *never*:
 
 ```csharp
 Window.Attributes.LayoutInDisplayCutoutMode =
@@ -220,7 +220,7 @@ be used to display content. You can use this information to retrieve
 the location and shape of the cutout so that your app does not attempt
 to display content in this non-functional area.
 
-For more information about the new cutout features in Android P, see 
+For more information about the new cutout features in Android P, see
 [Display cutout support](https://developer.android.com/about/versions/pie/android-9.0#cutout).
 
 ### Notifications enhancements
@@ -245,7 +245,7 @@ messaging experience:
     identifying people involved in a conversation (including their
     avatars and URIs).
 
-- Notifications can now display images. 
+- Notifications can now display images.
 
 The following example illustrates how to use the new APIs to generate a
 notification that contains an image. In the following screenshots, a
@@ -335,7 +335,7 @@ Many newer Android devices have dual-front and/or dual-back cameras
 that are useful for such features as stereo vision, enhanced visual
 effects, and improved zoom capability. Android P introduces a new
 [Multi-Camera](https://developer.android.com/about/versions/pie/android-9.0#camera)
-API that makes it possible for your app to use a *logical camera* 
+API that makes it possible for your app to use a *logical camera*
 (or *logical multi-camera*) that is backed by two or more physical cameras.
 To determine if the device supports a logical multi camera, you can
 look at the capabilities of each camera on the device to see if it
@@ -347,7 +347,7 @@ Android Pie also includes a new
 class that can be used to help reduce delays during initial capture and
 eliminate the need to start and start the camera stream.
 
-For more information about Multi-Camera support in Android P, see 
+For more information about Multi-Camera support in Android P, see
 [Multi-camera support and camera updates](https://developer.android.com/about/versions/pie/android-9.0#camera).
 
 ### Other features
@@ -364,8 +364,8 @@ In addition, Android Pie supports several other new features:
     Efficiency Image File Format) images.
 
 - The [JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html) has been
-    enhanced to more intelligently handle network-related jobs. The new 
-    [GetNetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) method 
+    enhanced to more intelligently handle network-related jobs. The new
+    [GetNetwork](https://developer.android.com/reference/android/app/job/JobParameters#getNetwork%28%29) method
     of the [JobParameters](https://developer.android.com/reference/android/app/job/JobParameters) class
     returns the best network for performing any network requests for a given job.
 

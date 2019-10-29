@@ -33,7 +33,7 @@ To adjust the `HttpClient` being used by your app:
 
 ### NSUrlSession
 
-The `NSURLSession`-based handler is based on the native `NSURLSession` framework available in iOS 7 and newer. 
+The `NSURLSession`-based handler is based on the native `NSURLSession` framework available in iOS 7 and newer.
 **This is the recommended setting.**
 
 #### Pros
@@ -101,7 +101,7 @@ SSL (Secure Socket Layer) and its successor, TLS (Transport Layer Security), pro
 > The upcoming Xamarin.Mac 4.8 release will only support macOS 10.9 or higher.
 > Previous versions of Xamarin.Mac supported macOS 10.7 or higher, but
 > these older macOS versions lack sufficient TLS infrastructure to support
-> TLS 1.2. To target macOS 10.7 or macOS 10.8, use Xamarin.Mac 4.6 or 
+> TLS 1.2. To target macOS 10.7 or macOS 10.8, use Xamarin.Mac 4.6 or
 > earlier.
 
 ## App Transport Security

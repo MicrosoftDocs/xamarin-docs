@@ -11,8 +11,8 @@ ms.date: 02/06/2018
 # Xamarin.Android Spinner
 
 [`Spinner`](xref:Android.Widget.Spinner)
-is a widget that presents a drop-down list for selecting items. This 
-guide explains how to create a simple app that displays a list of 
+is a widget that presents a drop-down list for selecting items. This
+guide explains how to create a simple app that displays a list of
 choices in a Spinner, followed by modifications that display other
 values associated with the selected choice.
 
@@ -175,7 +175,7 @@ associated with some kind of data used by your app. Because `Spinner`
 does not work directly with key/value pairs, you must store the
 key/value pair separately, populate the `Spinner` with key values, then
 use the position of the selected key in the Spinner to look up the
-associated data value. 
+associated data value.
 
 In the following steps, the **HelloSpinner** app is modified to display
 the mean temperature for the selected planet:

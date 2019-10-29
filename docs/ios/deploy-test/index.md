@@ -34,7 +34,7 @@ device using iTunes.
 
 ## [Provisioning](provisioning/index.md)
 
-This set of guides covers code signing and provisioning essentials such as working with property lists, and how to provision your app for application services. 
+This set of guides covers code signing and provisioning essentials such as working with property lists, and how to provision your app for application services.
 
 ## [Wireless Deployment](wireless-deployment.md)
 

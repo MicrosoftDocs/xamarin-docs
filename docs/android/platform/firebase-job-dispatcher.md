@@ -15,16 +15,16 @@ _This guide discusses how to schedule background work using the Firebase Job Dis
 
 ## Overview
 
-One of the best ways to keep an Android application responsive to the user is to ensure that complex or long running work is performed in the background. However, it is important that background work will not negatively impact the user's experience with the device. 
+One of the best ways to keep an Android application responsive to the user is to ensure that complex or long running work is performed in the background. However, it is important that background work will not negatively impact the user's experience with the device.
 
 For example, a background job might poll a website every three or four minutes to query for changes to a particular dataset. This seems benign, however it would have a disastrous impact on battery life. The application will repeatedly wake up the device, elevate the CPU to a higher power state, power up the radios, make the network requests, and then processing the results. It gets worse because the device will not immediately power down and return to the low-power idle state. Poorly scheduled background work may inadvertently keep the device in a state with unnecessary and excessive power requirements. This seemingly innocent activity (polling a website) will render the device unusable in a relatively short period of time.
 
-Android provides the following APIs to help with performing work in the background but by themselves they are not sufficient for intelligent job scheduling. 
+Android provides the following APIs to help with performing work in the background but by themselves they are not sufficient for intelligent job scheduling.
 
 - **[Intent Services](~/android/app-fundamentals/services/creating-a-service/intent-services.md)** &ndash; Intent Services are great for performing the work, however they provide no way to schedule work.
-- **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** &ndash; These APIs only allow work to be scheduled but provide no way to actually perform the work. Also, the AlarmManager only allows time based constraints, which means raise an alarm at a certain time or after a certain period of time has elapsed. 
-- **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)** &ndash; The JobSchedule is a great API that works with the operating system to schedule jobs. However, it is only available for those Android apps that target API level 21 or higher. 
-- **[Broadcast Receivers](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; An Android app can setup broadcast receivers to perform work in response to system-wide events or Intents. However, broadcast receivers don't provide any control over when  the job should be run. Also changes in the Android operating system will restrict when broadcast receivers will work, or the kinds of work that they can respond to. 
+- **[AlarmManager](https://developer.android.com/reference/android/app/AlarmManager.html)** &ndash; These APIs only allow work to be scheduled but provide no way to actually perform the work. Also, the AlarmManager only allows time based constraints, which means raise an alarm at a certain time or after a certain period of time has elapsed.
+- **[JobScheduler](https://developer.android.com/reference/android/app/job/JobScheduler.html)** &ndash; The JobSchedule is a great API that works with the operating system to schedule jobs. However, it is only available for those Android apps that target API level 21 or higher.
+- **[Broadcast Receivers](~/android/app-fundamentals/broadcast-receivers.md)** &ndash; An Android app can setup broadcast receivers to perform work in response to system-wide events or Intents. However, broadcast receivers don't provide any control over when  the job should be run. Also changes in the Android operating system will restrict when broadcast receivers will work, or the kinds of work that they can respond to.
 
 There are two key features to efficiently performing background work (sometimes referred to as a _background job_ or a _job_):
 
@@ -35,16 +35,16 @@ The Firebase Job Dispatcher is a library from Google that provides a fluent API 
 
 - A `Firebase.JobDispatcher.JobService` is an abstract class that must be extended with the logic that will run in the background job.
 - A `Firebase.JobDispatcher.JobTrigger` declares when the job should be started. This is typically expressed as a window of time, for example, wait at least 30 seconds before starting the job, but run the job within 5 minutes.
-- A `Firebase.JobDispatcher.RetryStrategy` contains information about what should be done when a job fails to execute properly. The retry strategy specifies how long to wait before trying to run the job again. 
+- A `Firebase.JobDispatcher.RetryStrategy` contains information about what should be done when a job fails to execute properly. The retry strategy specifies how long to wait before trying to run the job again.
 - A `Firebase.JobDispatcher.Constraint` is an optional value that describes a condition that must be met before the job can run, such as the device is on an unmetered network or charging.
 - The `Firebase.JobDispatcher.Job` is an API that unifies the previous APIs in to a unit-of-work that can be scheduled by the `JobDispatcher`. The `Job.Builder` class is used to instantiate a `Job`.
 - A `Firebase.JobDispatcher.JobDispatcher` uses the previous three APIs to schedule the work with the operating system and to provide a way to cancel jobs, if necessary.
 
 To schedule work with the Firebase Job Dispatcher, a Xamarin.Android application must encapsulate the code in a type that extends the `JobService` class. `JobService` has three lifecycle methods that can be called during the lifetime of the job:
 
-- **`bool OnStartJob(IJobParameters parameters)`** &ndash; This method is where the work will occur and should always be implemented. It runs on the main thread. This method will return `true` if there is work remaining, or `false` if the work is done. 
+- **`bool OnStartJob(IJobParameters parameters)`** &ndash; This method is where the work will occur and should always be implemented. It runs on the main thread. This method will return `true` if there is work remaining, or `false` if the work is done.
 - **`bool OnStopJob(IJobParameters parameters)`** &ndash; This is called when the job is stopped for some reason. It should return `true` if the job should be rescheduled for later.
-- **`JobFinished(IJobParameters parameters, bool needsReschedule)`** &ndash; This method is called when the `JobService` has finished any asynchronous work. 
+- **`JobFinished(IJobParameters parameters, bool needsReschedule)`** &ndash; This method is called when the `JobService` has finished any asynchronous work.
 
 To schedule a job, the application will instantiate a `JobDispatcher` object. Then, a `Job.Builder` is used to create a `Job` object, which is provided to the `JobDispatcher` which will try and schedule the job to run.
 
@@ -62,10 +62,10 @@ After adding the Firebase Job Dispatcher library, create a `JobService` class an
 
 ### Creating a JobService
 
-All work performed by the Firebase Job Dispatcher library must be done in a type that extends the `Firebase.JobDispatcher.JobService` abstract class. Creating a `JobService` is very similar to creating a `Service` with the Android framework: 
+All work performed by the Firebase Job Dispatcher library must be done in a type that extends the `Firebase.JobDispatcher.JobService` abstract class. Creating a `JobService` is very similar to creating a `Service` with the Android framework:
 
 1. Extend the `JobService` class
-2. Decorate the subclass with the `ServiceAttribute`. Although not strictly required, it is recommended to explicitly set the `Name` parameter to help with debugging the `JobService`. 
+2. Decorate the subclass with the `ServiceAttribute`. Although not strictly required, it is recommended to explicitly set the `Name` parameter to help with debugging the `JobService`.
 3. Add an `IntentFilter` to declare the `JobService` in the **AndroidManifest.xml**. This will also help the Firebase Job Dispatcher library locate and invoke the `JobService`.
 
 The following code is an example of the simplest `JobService` for an application, using the TPL to asynchronously perform some work:
@@ -82,7 +82,7 @@ public class DemoJob : JobService
         Task.Run(() =>
         {
             // Work is happening asynchronously (code omitted)
-                       
+
         });
 
         // Return true because of the asynchronous work
@@ -100,7 +100,7 @@ public class DemoJob : JobService
 
 ### Creating a FirebaseJobDispatcher
 
-Before any work can be scheduled, it is necessary to create a `Firebase.JobDispatcher.FirebaseJobDispatcher` object. The `FirebaseJobDispatcher` is responsible for scheduling a `JobService`. The following code snippet is one way to create an instance of the `FirebaseJobDispatcher`: 
+Before any work can be scheduled, it is necessary to create a `Firebase.JobDispatcher.FirebaseJobDispatcher` object. The `FirebaseJobDispatcher` is responsible for scheduling a `JobService`. The following code snippet is one way to create an instance of the `FirebaseJobDispatcher`:
 
  ```csharp
 // This is the "Java" way to create a FirebaseJobDispatcher object
@@ -108,9 +108,9 @@ IDriver driver = new GooglePlayDriver(context);
 FirebaseJobDispatcher dispatcher = new FirebaseJobDispatcher(driver);
 ```
 
-In the previous code snippet, the `GooglePlayDriver` is class that helps the `FirebaseJobDispatcher` interact with some of the scheduling APIs in Google Play Services on the device. The parameter `context` is any Android `Context`, such as an Activity. Currently the `GooglePlayDriver` is the only `IDriver` implementation in the Firebase Job Dispatcher library. 
+In the previous code snippet, the `GooglePlayDriver` is class that helps the `FirebaseJobDispatcher` interact with some of the scheduling APIs in Google Play Services on the device. The parameter `context` is any Android `Context`, such as an Activity. Currently the `GooglePlayDriver` is the only `IDriver` implementation in the Firebase Job Dispatcher library.
 
-The Xamarin.Android binding for the Firebase Job Dispatcher provides an extension method to create a `FirebaseJobDispatcher` from the `Context`: 
+The Xamarin.Android binding for the Firebase Job Dispatcher provides an extension method to create a `FirebaseJobDispatcher` from the `Context`:
 
 ```csharp
 FirebaseJobDispatcher dispatcher = context.CreateJobDispatcher();
@@ -120,7 +120,7 @@ Once the `FirebaseJobDispatcher` has been instantiated, it is possible to create
 
 ### Creating a Firebase.JobDispatcher.Job with the Job.Builder
 
-The `Firebase.JobDispatcher.Job` class is responsible for encapsulating the meta-data necessary to run a `JobService`. A`Job` contains information such as any constraint that must be met before the job can run, if the `Job` is recurring, or any triggers that will cause the job to be run.  As a bare minimum, a `Job` must have a _tag_ (a unique string that identifies the job to the `FirebaseJobDispatcher`) and the type of the `JobService` that should be run. The Firebase Job Dispatcher will instantiate the `JobService` when it is time to run the job.  A `Job` is created by using an instance of the `Firebase.JobDispatcher.Job.JobBuilder` class. 
+The `Firebase.JobDispatcher.Job` class is responsible for encapsulating the meta-data necessary to run a `JobService`. A`Job` contains information such as any constraint that must be met before the job can run, if the `Job` is recurring, or any triggers that will cause the job to be run.  As a bare minimum, a `Job` must have a _tag_ (a unique string that identifies the job to the `FirebaseJobDispatcher`) and the type of the `JobService` that should be run. The Firebase Job Dispatcher will instantiate the `JobService` when it is time to run the job.  A `Job` is created by using an instance of the `Firebase.JobDispatcher.Job.JobBuilder` class.
 
 The following code snippet is the simplest example of how to create a `Job` using the Xamarin.Android binding:
 
@@ -153,7 +153,7 @@ The value returned by `FirebaseJobDispatcher.Schedule` will be one of the follow
 
 - `FirebaseJobDispatcher.ScheduleResultSuccess` &ndash; The `Job` was successfully scheduled.
 - `FirebaseJobDispatcher.ScheduleResultUnknownError` &ndash; Some unknown problem occurred which prevented the `Job` from being scheduled.
-- `FirebaseJobDispatcher.ScheduleResultNoDriverAvailable` &ndash; An invalid `IDriver` was used or the `IDriver` was somehow unavailable. 
+- `FirebaseJobDispatcher.ScheduleResultNoDriverAvailable` &ndash; An invalid `IDriver` was used or the `IDriver` was somehow unavailable.
 - `FirebaseJobDispatcher.ScheduleResultUnsupportedTrigger` &ndash; The `Trigger` was not supported.
 - `FirebaseJobDispatcher.ScheduleResultBadService` &ndash; The service is not configured correctly or is unavailable.
 
@@ -162,9 +162,9 @@ The value returned by `FirebaseJobDispatcher.Schedule` will be one of the follow
 It is possible to customize a job. Examples of how a job may be customized include the following:
 
 - [Passing Parameters to a Job](#Passing_Parameters_to_a_Job) &ndash; A `Job` may require additional values to perform its work, for example downloading a file.
-- [Set Constraints](#Setting_Constraints) &ndash; It may be necessary to only run a job when certain conditions are met. For example, only run a `Job` when the device is charging. 
+- [Set Constraints](#Setting_Constraints) &ndash; It may be necessary to only run a job when certain conditions are met. For example, only run a `Job` when the device is charging.
 - [Specify when a `Job` should run](#Setting_Job_Triggers) &ndash; The Firebase Job Dispatcher allows applications to specify a time when the job should run.  
-- [Declare a retry strategy for failed jobs](#Setting_a_RetryStrategy) &ndash; A _retry strategy_ provides guidance to the `FirebaseJobDispatcher` on what to do with `Jobs` that fail to complete. 
+- [Declare a retry strategy for failed jobs](#Setting_a_RetryStrategy) &ndash; A _retry strategy_ provides guidance to the `FirebaseJobDispatcher` on what to do with `Jobs` that fail to complete.
 
 Each of these topics will be discussed more in the following sections.
 
@@ -191,9 +191,9 @@ The `Bundle` is accessed from the `IJobParameters.Extras` property on the `OnSta
 public override bool OnStartJob(IJobParameters jobParameters)
 {
     int position = jobParameters.Extras.GetInt(FibonacciPositionKey, DEFAULT_VALUE);
-    
+
     // rest of code omitted
-} 
+}
 ```
 
 <a name="Setting_Constraints" />
@@ -206,7 +206,7 @@ Constraints can help reduces costs or battery drain on the device. The `Firebase
 - `Constraint.OnAnyNetwork` &ndash; Run the job on whatever network the device is connected to. If specified along with `Constraint.OnUnmeteredNetwork`, this value will take priority.
 - `Constraint.DeviceCharging` &ndash; Run the job only when the device is charging.
 
-Constraints are set with the `Job.Builder.SetConstraint` method: 
+Constraints are set with the `Job.Builder.SetConstraint` method:
 
 ```csharp
 Job myJob = dispatcher.NewJobBuilder()
@@ -217,9 +217,9 @@ Job myJob = dispatcher.NewJobBuilder()
 
 <a name="Setting_Job_Triggers" />
 
-The `JobTrigger` provides guidance to the operating system about when the job should start. A `JobTrigger` has an _executing window_ that defines a scheduled time for when the `Job` should run. The execution window has a _start window_ value and an _end window_ value. The start window is the number of seconds that the device should wait before running the job and the end window value is the maximum number of seconds to wait before running the `Job`. 
+The `JobTrigger` provides guidance to the operating system about when the job should start. A `JobTrigger` has an _executing window_ that defines a scheduled time for when the `Job` should run. The execution window has a _start window_ value and an _end window_ value. The start window is the number of seconds that the device should wait before running the job and the end window value is the maximum number of seconds to wait before running the `Job`.
 
-A `JobTrigger` can be created with the `Firebase.Jobdispatcher.Trigger.ExecutionWindow` method.  For example `Trigger.ExecutionWindow(15,60)` means that the job should run between 15 and 60 seconds from when it is scheduled. The `Job.Builder.SetTrigger` method is used to 
+A `JobTrigger` can be created with the `Firebase.Jobdispatcher.Trigger.ExecutionWindow` method.  For example `Trigger.ExecutionWindow(15,60)` means that the job should run between 15 and 60 seconds from when it is scheduled. The `Job.Builder.SetTrigger` method is used to
 
 ```csharp
 JobTrigger myTrigger = Trigger.ExecutionWindow(15,60);
@@ -235,7 +235,7 @@ The default `JobTrigger` for a job is represented by the value `Trigger.Now`, wh
 
 #### Setting a RetryStrategy
 
-The `Firebase.JobDispatcher.RetryStrategy` is used to specify how much of a delay a device should use before trying to re-run a failed job. A `RetryStrategy` has a _policy_, which defines what time-base algorithm will be used to re-schedule the failed job, and an execution window that specifies a window in which the job should be scheduled. This _rescheduling window_ is defined by two values. The first value is the number of seconds to wait before rescheduling the job (the _initial backoff_ value), and the second number is the maximum number of seconds before the job must run (the _maximum backoff_ value). 
+The `Firebase.JobDispatcher.RetryStrategy` is used to specify how much of a delay a device should use before trying to re-run a failed job. A `RetryStrategy` has a _policy_, which defines what time-base algorithm will be used to re-schedule the failed job, and an execution window that specifies a window in which the job should be scheduled. This _rescheduling window_ is defined by two values. The first value is the number of seconds to wait before rescheduling the job (the _initial backoff_ value), and the second number is the maximum number of seconds before the job must run (the _maximum backoff_ value).
 
 The two types of retry policies are identified by these int values:
 
@@ -245,8 +245,8 @@ The two types of retry policies are identified by these int values:
 It is possible to define a custom `RetryStrategy` with the `FirebaseJobDispatcher.NewRetryStrategy` method. It takes three parameters:
 
 1. `int policy` &ndash; The _policy_ is one of the previous `RetryStrategy` values, `RetryStrategy.RetryPolicyLinear`, or `RetryStrategy.RetryPolicyExponential`.
-2. `int initialBackoffSeconds` &ndash; The _initial backoff_ is a delay, in seconds, that is required before trying to run the job again. The default value for this is 30 seconds. 
-3. `int maximumBackoffSeconds` &ndash; The _maximum backoff_ value declares the maximum number of seconds to delay before trying to run the job again. The default value is 3600 seconds. 
+2. `int initialBackoffSeconds` &ndash; The _initial backoff_ is a delay, in seconds, that is required before trying to run the job again. The default value for this is 30 seconds.
+3. `int maximumBackoffSeconds` &ndash; The _maximum backoff_ value declares the maximum number of seconds to delay before trying to run the job again. The default value is 3600 seconds.
 
 ```csharp
 RetryStrategy retry = dispatcher.NewRetryStrategy(RetryStrategy.RetryPolicyLinear, initialBackoffSeconds, maximumBackoffSet);
@@ -263,7 +263,7 @@ Job myJob = dispatcher.NewJobBuilder()
 It is possible to cancel all the jobs that have been scheduled, or just a single job using the `FirebaseJobDispatcher.CancelAll()` method or the `FirebaseJobDispatcher.Cancel(string)` method:
 
 ```csharp
-int cancelResult = dispatcher.CancelAll(); 
+int cancelResult = dispatcher.CancelAll();
 
 // to cancel a single job:
 

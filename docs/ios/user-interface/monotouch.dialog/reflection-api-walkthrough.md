@@ -30,8 +30,8 @@ code as necessary.
 Using the Reflection API is as simple as:
 
 1. Creating a class decorated with MT.D attributes.
-1. Creating a  `BindingContext` instance, passing it an instance of the above class. 
-1. Creating a  `DialogViewController` , passing it the  `BindingContext’s` `RootElement` . 
+1. Creating a  `BindingContext` instance, passing it an instance of the above class.
+1. Creating a  `DialogViewController` , passing it the  `BindingContext’s` `RootElement` .
 
 Let’s look at an example to illustrate how to use the Reflection API. In
 this example, we’ll build a simple data entry screen as shown below:
@@ -51,13 +51,13 @@ public class Expense
 
     [Entry("Enter expense name")]
     public string Name;
-        
+
     [Section("Expense Details")]
   
     [Caption("Description")]
     [Entry]
     public string Details;
-        
+
     [Checkbox]
     public bool IsApproved = true;
 }
@@ -97,16 +97,16 @@ as the `RootViewController` of the window, as shown below:
 UIWindow window;
 
 public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-{   
+{
     window = new UIWindow (UIScreen.MainScreen.Bounds);
-            
+
     var expense = new Expense ();
     var bctx = new BindingContext (null, expense, "Create a task");
     var dvc = new DialogViewController (bctx.Root);
-            
+
     window.RootViewController = dvc;
     window.MakeKeyAndVisible ();
-            
+
     return true;
 }
 ```
@@ -142,7 +142,7 @@ public enum Category
     Lodging,
     Books
 }
-        
+
 public class Expense
 {
     …

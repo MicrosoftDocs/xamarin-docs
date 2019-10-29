@@ -56,9 +56,9 @@ namespace iOSTenThree
 
 When the `RequestReview()` method is called in a shipping app that the user has installed from the App Store, iOS 10 will handle the entire rating and review process for the developer. Again, because this process is governed by App Store policy, an alert may or may not be displayed.
 
-## Linking to an App Store Product Page 
+## Linking to an App Store Product Page
 
-In addition to the new `RequestReview` method, the developer can still provide a deep link to the app's product page in the App Store from within an app. By appending `action=write-review` to the end of the product page URL, a page will be opened where the user can write a review of the app automatically. 
+In addition to the new `RequestReview` method, the developer can still provide a deep link to the app's product page in the App Store from within an app. By appending `action=write-review` to the end of the product page URL, a page will be opened where the user can write a review of the app automatically.
 
 ## Summary
 

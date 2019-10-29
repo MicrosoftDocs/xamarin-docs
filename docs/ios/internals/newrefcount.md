@@ -31,7 +31,7 @@ Xamarin.iOS 7.2.1 and above features a enhanced preview of our new reference cou
 
 **Classic API:**
 
-To enable this new Reference Counting System, check the **Use the reference counting extension** checkbox found in the **Advanced** tab of your project's **iOS Build options**, as shown below: 
+To enable this new Reference Counting System, check the **Use the reference counting extension** checkbox found in the **Advanced** tab of your project's **iOS Build options**, as shown below:
 
 [![](newrefcount-images/image1.png "Enable the new Reference Counting System")](newrefcount-images/image1.png#lightbox)
 
@@ -74,18 +74,18 @@ class MyTableSource : UITableViewSource {
 ```
 
 Without the reference count extension this code would crash because `cell`
-becomes collectible, and so its `TouchDown` delegate, which will translate 
+becomes collectible, and so its `TouchDown` delegate, which will translate
 into a dangling pointer.
 
 The reference count extension ensures the managed object stays alive and prevents
 its collection, provided the native object is retained by native code.
 
-The new system also removes the need for *most* private backing fields used in 
-bindings - which is the default approach to keep instance alive. 
-The managed linker is smart enough to remove all those *unneeded* fields from 
+The new system also removes the need for *most* private backing fields used in
+bindings - which is the default approach to keep instance alive.
+The managed linker is smart enough to remove all those *unneeded* fields from
 applications using the new reference count extension.
 
-This means that each managed object instances consume less memory than before. 
-It also solves a related problem where some backing fields would hold references that 
-were not needed anymore by the Objective-C runtime, making it hard to reclaim 
+This means that each managed object instances consume less memory than before.
+It also solves a related problem where some backing fields would hold references that
+were not needed anymore by the Objective-C runtime, making it hard to reclaim
 some memory.

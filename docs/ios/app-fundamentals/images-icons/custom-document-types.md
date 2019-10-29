@@ -18,7 +18,7 @@ If a Xamarin.iOS app supports loading a particular document type, the developer 
  [![](custom-document-types-images/17.png "An example of document type icons")](custom-document-types-images/17.png#lightbox)
 
 The developer can add document type information for a file format the app is capable of opening by including dictionary entries for the `CFBundleTypeName` string and `LSItemContentTypes` array in the app's `Info.plist`. The icons for the document type go in the `CFBundleTypeIconFiles` array. If a document icon isn't provided, iOS will derive one from the app icon.
-Icons can be supplied for several sizes, optimized for the various device resolutions. 
+Icons can be supplied for several sizes, optimized for the various device resolutions.
 
 # [Visual Studio for Mac](#tab/macos)
 

@@ -32,7 +32,7 @@ scanner may have been tampered with outside of the application.
 
 ## A Sample Authentication Callback Handler
 
-The following class is an example of a minimal `FingerprintManager.AuthenticationCallback` implementation: 
+The following class is an example of a minimal `FingerprintManager.AuthenticationCallback` implementation:
 
 ```csharp
 class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
@@ -48,14 +48,14 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 
     public override void OnAuthenticationSucceeded(FingerprintManagerCompat.AuthenticationResult result)
     {
-        if (result.CryptoObject.Cipher != null) 
+        if (result.CryptoObject.Cipher != null)
         {
             try
             {
                 // Calling DoFinal on the Cipher ensures that the encryption worked.
                 byte[] doFinalResult = result.CryptoObject.Cipher.DoFinal(SECRET_BYTES);
-    
-                // No errors occurred, trust the results.              
+
+                // No errors occurred, trust the results.
             }
             catch (BadPaddingException bpe)
             {
@@ -96,11 +96,11 @@ class MyAuthCallbackSample : FingerprintManagerCompat.AuthenticationCallback
 
 The `OnAuthenticationError` and `OnAuthenticationHelp` callbacks each receive an integer indicating what the problem was. The following section explains each of the possible help or error codes. The two callbacks serve similar purposes &ndash; to inform the application that fingerprint authentication has failed. How they differ is in severity. `OnAuthenticationHelp` is a user recoverable error, such as swiping the fingerprint too fast; `OnAuthenticationError` is more a severe error, such as a damaged fingerprint scanner.
 
-Note that `OnAuthenticationError` will be invoked when the fingerprint scan is cancelled via the `CancellationSignal.Cancel()` message. The `errMsgId` parameter will have the value of 5 (`FingerprintState.ErrorCanceled`). Depending on the requirements, an implementation of the `AuthenticationCallbacks` may treat this situation differently than the other errors. 
+Note that `OnAuthenticationError` will be invoked when the fingerprint scan is cancelled via the `CancellationSignal.Cancel()` message. The `errMsgId` parameter will have the value of 5 (`FingerprintState.ErrorCanceled`). Depending on the requirements, an implementation of the `AuthenticationCallbacks` may treat this situation differently than the other errors.
 
-`OnAuthenticationFailed` is invoked when the fingerprint was successfully scanned but did not match any fingerprint enrolled with the device. 
+`OnAuthenticationFailed` is invoked when the fingerprint was successfully scanned but did not match any fingerprint enrolled with the device.
 
-## Help Codes and Error Message Ids 
+## Help Codes and Error Message Ids
 
 A list and description of the error codes and help codes may be found in the [Android SDK documentation](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) for the FingerprintManager class. Xamarin.Android represents these values with the `Android.Hardware.Fingerprints.FingerprintState` enum:
 

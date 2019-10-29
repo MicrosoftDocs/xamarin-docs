@@ -15,10 +15,10 @@ You may see an error of this form:
 
 > System.Exception: Failed to marshal the Objective-C object ... Could not find an existing managed instance for this object ...
 
-API changes in iOS 9 require that a callback constructor be used when calling unmanaged code, as the underlying API now expects it. Use the following line to add the callback constructor to the class: 
+API changes in iOS 9 require that a callback constructor be used when calling unmanaged code, as the underlying API now expects it. Use the following line to add the callback constructor to the class:
 
-`public foo (IntPtr handle) : base (handle)` 
+`public foo (IntPtr handle) : base (handle)`
 
 ### Next Steps
 
-For further assistance, to contact us, or if this issue remains even after utilizing the above information, please see [What support options are available for Xamarin?](~/cross-platform/troubleshooting/support-options.md) for information on contact options, suggestions, as well as how to file a new bug if needed. 
+For further assistance, to contact us, or if this issue remains even after utilizing the above information, please see [What support options are available for Xamarin?](~/cross-platform/troubleshooting/support-options.md) for information on contact options, suggestions, as well as how to file a new bug if needed.

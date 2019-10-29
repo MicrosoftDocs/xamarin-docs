@@ -21,24 +21,24 @@ over-and-over again.
 The sample code accompanying this document demonstrates built-in products –
 the Product IDs are hardcoded into the application because they are tightly
 coupled to the code that ‘unlocks’ the feature after payment. The purchasing
-process can be visualized like this:   
-   
-[![The purchasing process visualization](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)     
-   
- The basic workflow is:   
-   
+process can be visualized like this:
+
+[![The purchasing process visualization](purchasing-consumable-products-images/image26.png)](purchasing-consumable-products-images/image26.png#lightbox)
+
+ The basic workflow is:
+
  1. The app adds an `SKPayment` to the queue. If required the user will be prompted for
-their Apple ID, and asked to confirm the payment.   
-   
+their Apple ID, and asked to confirm the payment.
+
  2. StoreKit sends the
-request to the server for processing.   
-   
+request to the server for processing.
+
  3. When the transaction is
-complete, the server responds with a transaction receipt.   
-   
+complete, the server responds with a transaction receipt.
+
  4. The `SKPaymentTransactionObserver` subclass receives the receipt and
-processes it.   
-   
+processes it.
+
  5. The application enables the product (by updating `NSUserDefaults` or some other mechanism), and then calls
 StoreKit’s `FinishTransaction`.
 
@@ -51,16 +51,16 @@ The [InAppPurchaseSample code](https://docs.microsoft.com/samples/xamarin/ios-sa
 ‘in-game currency’ (called “monkey credits”). The sample shows how to
 implement two in-app purchase products to allow the user to buy as many
 “monkey credits” as they wish – in a real application there would also be
-some way of spending them!   
+some way of spending them!
 
 The application is shown in these
 screenshots – each purchase adds more “monkey credits” to the user’s
-balance:   
+balance:
 
- [![Each purchase adds more monkey credits to the users balance](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)   
+ [![Each purchase adds more monkey credits to the users balance](purchasing-consumable-products-images/image27.png)](purchasing-consumable-products-images/image27.png#lightbox)
 
 The interactions between custom classes, StoreKit and the App Store look
-like this:   
+like this:
 
  [![The interactions between custom classes, StoreKit and the App Store](purchasing-consumable-products-images/image28.png)](purchasing-consumable-products-images/image28.png#lightbox)
 
@@ -78,7 +78,7 @@ NSObject succeededObserver, failedObserver;
 The constructor will also create the `SKProductsRequestDelegate`
 subclass ( `InAppPurchaseManager`) that in turn creates and registers
 the `SKPaymentTransactionObserver`
-( `CustomPaymentObserver`).   
+( `CustomPaymentObserver`).
 
 The first part of
 processing an in-app purchase transaction is to handle the button press when the
@@ -137,7 +137,7 @@ public void PurchaseProduct(string appStoreProductId)
 Adding the payment to the queue is an asynchronous operation. The application
 regains control while StoreKit processes the transaction and sends it to
 Apple’s servers. It is at this point that iOS will verify the user is logged
-in to the App Store and prompt her for an Apple ID and password if required.   
+in to the App Store and prompt her for an Apple ID and password if required.
 
 Assuming the user successfully authenticates with the App Store
 and agrees to the transaction, the `SKPaymentTransactionObserver`
@@ -291,7 +291,7 @@ uses it.
 
 The StoreKit payment queue will store and forward purchase requests if
 possible, so the effect of a network outage will vary depending on when the
-network failed during the purchase process.   
+network failed during the purchase process.
 
 If an error does
 occur during a transaction, the `SKPaymentTransactionObserver`
@@ -353,14 +353,14 @@ Applications may detect and respond to specific error codes, or handle them in t
 ## Handling Restrictions
 
 The **Settings > General > Restrictions** feature of iOS
-allows users to lock certain features of their device.   
+allows users to lock certain features of their device.
 
 You
 can query whether the user is allowed to make in-app purchases via the `SKPaymentQueue.CanMakePayments` method. If this returns false then
 the user cannot access in-app purchasing. StoreKit will automatically display an
 error message to the user if a purchase is attempted. By checking this value
 your application can instead hide the purchase buttons or take some other action
-to help the user.   
+to help the user.
 
 In the `InAppPurchaseManager.cs`
 file the `CanMakePayments` method wraps the StoreKit function like
@@ -374,9 +374,9 @@ public bool CanMakePayments()
 ```
 
 To test this method, use the **Restrictions** feature of iOS to
-disable **In-App Purchases**:   
+disable **In-App Purchases**:
 
- [![Use the Restrictions feature of iOS to disable In-App Purchases](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)   
+ [![Use the Restrictions feature of iOS to disable In-App Purchases](purchasing-consumable-products-images/image31.png)](purchasing-consumable-products-images/image31.png#lightbox)
 
 This example code from `ConsumableViewController` reacts to `CanMakePayments` returning false by displaying **AppStore Disabled** text on the disabled buttons.
 
@@ -395,18 +395,18 @@ if (iap.CanMakePayments()) {
 ```
 
 The application looks like this when the **In-App Purchases**
-feature is restricted – the purchase buttons are disabled.   
+feature is restricted – the purchase buttons are disabled.
 
- [![The application looks like this when the In-App Purchases feature is restricted  the purchase buttons are disabled](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)   
+ [![The application looks like this when the In-App Purchases feature is restricted  the purchase buttons are disabled](purchasing-consumable-products-images/image32.png)](purchasing-consumable-products-images/image32.png#lightbox)
 
 Product information can still be requested when `CanMakePayments` is
 false, so the app can still retrieve and display prices. This means if we
 removed the `CanMakePayments` check from the code the purchase
 buttons would still be active, however when a purchase is attempted the user
 will see a message that **In-app purchases are not allowed**
-(generated by StoreKit when the payment queue is accessed):   
+(generated by StoreKit when the payment queue is accessed):
 
- [![In-app purchases are not allowed](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)   
+ [![In-app purchases are not allowed](purchasing-consumable-products-images/image33.png)](purchasing-consumable-products-images/image33.png#lightbox)
 
 Real-world applications may take a different approach to handling the
 restriction, such as hiding the buttons altogether and perhaps offering a more

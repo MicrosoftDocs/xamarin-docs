@@ -35,7 +35,7 @@ The Keychain can’t decrypt the keychain item by itself; instead it is done in 
 First your application should query into the Keychain to see if a password exists. If it doesn’t exist, you may need to prompt for a password so the user isn’t continually asked. If the password needs to be updated, prompt the user for a new password and pass in the updated value to the keychain.
 
 > [!NOTE]
-> After using a secret retrieved from the Keychain, all references to the 
+> After using a secret retrieved from the Keychain, all references to the
 > data should be purged from memory. Never assign it to a global variable.
 
 ## Keychain ACL and Touch ID

@@ -60,7 +60,7 @@ to their type into these subdirectories: images will go in the
 -----
 
 There are two ways to access these resources in a Xamarin.Android
-application: *programmatically* in code and *declaratively* in 
+application: *programmatically* in code and *declaratively* in
 XML using a special XML syntax.
 
 These resources are called *Default Resources* and are used by all

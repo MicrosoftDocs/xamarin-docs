@@ -30,8 +30,8 @@ To create a new App Group, do the following:
 1. Visit Apple's [iOS Developer Center](https://developer.apple.com/account/), open your **Account** and log in.
 2. Select **Certificates, IDs & Profiles**.
 3. Under **Identifiers** select **App Groups** and click the **+** button to create a new group.
-4. Enter a **Name** and an **Identifier** for the new group and click the **Continue** button: 
-   
+4. Enter a **Name** and an **Identifier** for the new group and click the **Continue** button:
+
     ![Add App Group details](app-groups-capabilities-images/image52.png)
 
 5. Click the **Register** button to create the group and the **Done** to return to the list of registered App Groups.

@@ -88,11 +88,11 @@ Once a control has been included in the User Interface, use the **Constraint edi
 
 [![](standard-controls-images/edit04.png "Setting the constraints")](standard-controls-images/edit04.png#lightbox)
 
-Use the **Red I-Beams** around the outside of the **Autoresizing** box to _stick_ a control to a given (x,y) location. For example: 
+Use the **Red I-Beams** around the outside of the **Autoresizing** box to _stick_ a control to a given (x,y) location. For example:
 
 [![](standard-controls-images/edit05.png "Editing a constraint")](standard-controls-images/edit05.png#lightbox)
 
-Specifies that the selected control (in the **Hierarchy View** & **Interface Editor**) will be stuck to the top and right location of the Window or View as it is resized or moved. 
+Specifies that the selected control (in the **Hierarchy View** & **Interface Editor**) will be stuck to the top and right location of the Window or View as it is resized or moved.
 
 Other elements of the editor control properties such as Height and Width:
 
@@ -206,7 +206,7 @@ Control-drag from the AppKit control onto the give `.h` file to start creating a
 
 [![](standard-controls-images/edit12.png "Dragging to create an Outlet or Action")](standard-controls-images/edit12.png#lightbox)
 
-Select the type of exposure to create and give the **Outlet** or **Action** a **Name**: 
+Select the type of exposure to create and give the **Outlet** or **Action** a **Name**:
 
 [![](standard-controls-images/edit13.png "Configuring the Outlet or Action")](standard-controls-images/edit13.png#lightbox)
 
@@ -262,7 +262,7 @@ You normally will never need to open the `SplitViewController.designer.cs` yours
 
 ## Working with Buttons
 
-AppKit provides several types of button that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
+AppKit provides several types of button that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
 [![](standard-controls-images/buttons01.png "An example of the different button types")](standard-controls-images/buttons01.png#lightbox)
 
@@ -315,7 +315,7 @@ When the app is run and the Window with the Button is Key and Focused, if the us
 
 ## Working with Checkboxes and Radio Buttons
 
-AppKit provides several types of Checkboxes and Radio Button Groups that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
+AppKit provides several types of Checkboxes and Radio Button Groups that can be used in your User Interface Design. For more information, please see the [Buttons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsButtons.html#//apple_ref/doc/uid/20000957-CH48-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
 [![](standard-controls-images/buttons02.png "An example of the available checkbox types")](standard-controls-images/buttons02.png#lightbox)
 
@@ -366,7 +366,7 @@ You can use the `Tag` property to see which radio button was selected.
 
 ## Working with Menu Controls
 
-AppKit provides several types of Menu Controls that can be used in your User Interface Design. For more information, please see the [Menu Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlswithMenus.html#//apple_ref/doc/uid/20000957-CH100-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
+AppKit provides several types of Menu Controls that can be used in your User Interface Design. For more information, please see the [Menu Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlswithMenus.html#//apple_ref/doc/uid/20000957-CH100-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
 [![](standard-controls-images/menu01.png "Example menu controls")](standard-controls-images/menu01.png#lightbox)
 
@@ -415,12 +415,12 @@ Please see the [Databases and ComboBoxes](~/mac/app-fundamentals/databases.md#Da
 
 The following methods are available to adjust the Menu Control's appearance:
 
-- `HasVerticalScroller` - If `true`, the control will display a vertical scrollbar. 
+- `HasVerticalScroller` - If `true`, the control will display a vertical scrollbar.
 - `VisibleItems` - Adjust the number of items displayed when the control is opened. The default value is five (5).
 - `IntercellSpacing` - Adjust the amount of space around a given item by providing a `NSSize` where the `Width` specifies the left and right margins and the `Height` specifies the space before and after an item.
 - `ItemHeight` - Specifies the height of each item in the list.
 
-For Drop-Down types of `NSPopupButtons`, the first Menu Item provides the title for the control. For Example: 
+For Drop-Down types of `NSPopupButtons`, the first Menu Item provides the title for the control. For Example:
 
 [![](standard-controls-images/menu02.png "An example menu control")](standard-controls-images/menu02.png#lightbox)
 
@@ -472,7 +472,7 @@ For more information on working with Menus and Menu Controls, please see our [Me
 
 ## Working with Selection Controls
 
-AppKit provides several types of Selection Controls that can be used in your User Interface Design. For more information, please see the [Selection Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsSelection.html#//apple_ref/doc/uid/20000957-CH49-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
+AppKit provides several types of Selection Controls that can be used in your User Interface Design. For more information, please see the [Selection Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsSelection.html#//apple_ref/doc/uid/20000957-CH49-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
 [![](standard-controls-images/select01.png "Example selection controls")](standard-controls-images/select01.png#lightbox)
 
@@ -517,7 +517,7 @@ The `NSDatePicker` has the following properties for working directly with Date a
 
 ## Working with Indicator Controls
 
-AppKit provides several types of Indicator Controls that can be used in your User Interface Design. For more information, please see the [Indicator Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsIndicators.html#//apple_ref/doc/uid/20000957-CH50-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
+AppKit provides several types of Indicator Controls that can be used in your User Interface Design. For more information, please see the [Indicator Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsIndicators.html#//apple_ref/doc/uid/20000957-CH50-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
 [![](standard-controls-images/level01.png "Example indicator controls")](standard-controls-images/level01.png#lightbox)
 
@@ -548,7 +548,7 @@ Calling the `StopAnimation` method will stop the animation.
 
 ## Working with Text Controls
 
-AppKit provides several types of Text Controls that can be used in your User Interface Design. For more information, please see the [Text Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsText.html#//apple_ref/doc/uid/20000957-CH51-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/). 
+AppKit provides several types of Text Controls that can be used in your User Interface Design. For more information, please see the [Text Controls](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsText.html#//apple_ref/doc/uid/20000957-CH51-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
 [![](standard-controls-images/text01.png "Example text controls")](standard-controls-images/text01.png#lightbox)
 
@@ -593,16 +593,16 @@ A popover is a transient UI element that provides functionality that is directly
 To create a popover, do the following:
 
 1. Open the `.storyboard` file of the window that you want to add a popover to by double-clicking it in the **Solution Explorer**
-2. Drag a **View Controller** from the **Library Inspector** onto the **Interface Editor**: 
+2. Drag a **View Controller** from the **Library Inspector** onto the **Interface Editor**:
 
     [![](standard-controls-images/content02.png "Selecting a View Controller from the Library")](standard-controls-images/content02.png#lightbox)
-3. Define the size and the layout of the **Custom View**: 
+3. Define the size and the layout of the **Custom View**:
 
     [![](standard-controls-images/content04.png "Editing the layout")](standard-controls-images/content04.png#lightbox)
-4. Control-click and drag from the source of the popup onto the **View Controller**: 
+4. Control-click and drag from the source of the popup onto the **View Controller**:
 
     [![](standard-controls-images/content05.png "Dragging to create a segue")](standard-controls-images/content05.png#lightbox)
-5. Select **Popover** from the popup menu: 
+5. Select **Popover** from the popup menu:
 
     [![](standard-controls-images/content06.png "Setting the segue type")](standard-controls-images/content06.png#lightbox)
 6. Save your changes and return to Visual Studio for Mac to sync with Xcode.

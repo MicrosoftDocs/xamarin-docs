@@ -13,17 +13,17 @@ ms.date: 03/29/2017
 While iOS and macOS have historically supported both 32 and 64-bit apps,
 Apple has gradually deprecated 32-bit support.
 
-As of iOS 11, 32-bit apps will no longer launch, and 
+As of iOS 11, 32-bit apps will no longer launch, and
 [all submissions to the App Store must support 64-bit](https://developer.apple.com/news/?id=06282017b).
 
-Starting in January 2018, [new apps submitted to the Mac App Store 
+Starting in January 2018, [new apps submitted to the Mac App Store
 must support 64-bit](https://developer.apple.com/news/?id=06282017a), and
 existing apps must be updated by June 2018.
 
 Xamarin's Classic API (`XamMac.dll` and `monotouch.dll`) supported only
-32-bit applications. However, new Xamarin.iOS and Xamarin.Mac applications 
-use the [Unified API](~/cross-platform/macios/unified/index.md) 
-(`Xamarin.iOS` and `Xamarin.Mac`) by default, and can therefore target both 
+32-bit applications. However, new Xamarin.iOS and Xamarin.Mac applications
+use the [Unified API](~/cross-platform/macios/unified/index.md)
+(`Xamarin.iOS` and `Xamarin.Mac`) by default, and can therefore target both
 32 and 64-bit, as necessary.
 
 ## iOS
@@ -45,7 +45,7 @@ For Xamarin.iOS mobile applications that have been converted to the Unified API,
 2. Select **iOS Build**.
 3. For the iPhone Simulator, in the **Supported architectures** dropdown, select either **x86\_64** or **i386 + x86\_64**:
 
-   [![Setting Supported architectures to x86\_64 or i386 + x86\_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox) 
+   [![Setting Supported architectures to x86\_64 or i386 + x86\_64](Images/Image01.png "Setting Supported architectures to x86\_64 or i386 + x86\_64")](Images/Image01-large.png#lightbox)
 
 4. For physical devices, select one of the available **ARM64** combinations:
 
@@ -58,12 +58,12 @@ For Xamarin.iOS mobile applications that have been converted to the Unified API,
 
 1. In the **Solution Explorer**, right-click the app's project and select **Properties**.
 2. Select **iOS Build**.
-3. For the iPhone Simulator, set **Supported architectures** to either **x86\_64** or **i386 + x86\_64**: 
+3. For the iPhone Simulator, set **Supported architectures** to either **x86\_64** or **i386 + x86\_64**:
 
    [![Setting Supported architectures to x86_64 or i386 + x86\_64](Images/VS02.png "Setting Supported architectures to x86_64 or i386 + x86\_64")](Images/VS02-large.png#lightbox)
 
 4. For physical devices, select one of the available **ARM64** combinations:
-    
+
    [![Setting Supported architectures to one of the ARM64 combinations](Images/VS01.png "Setting Supported architectures to one of the ARM64 combinations")](Images/VS01-large.png#lightbox)
 
 5. Save your changes.
@@ -71,7 +71,7 @@ For Xamarin.iOS mobile applications that have been converted to the Unified API,
 
 -----
 
-ARMv7s is supported only by the A6 processor included in the iPhone 5 (or greater). ARMv7 code is faster and smaller than the ARMv6, only works with the iPhone 3GS and later, and is required by Apple when targeting the iPad or a minimum iOS version of 5.0. ARMv6 works on all devices but is no longer supported by the compiler shipped with Xcode 4.5 and later. 
+ARMv7s is supported only by the A6 processor included in the iPhone 5 (or greater). ARMv7 code is faster and smaller than the ARMv6, only works with the iPhone 3GS and later, and is required by Apple when targeting the iPad or a minimum iOS version of 5.0. ARMv6 works on all devices but is no longer supported by the compiler shipped with Xcode 4.5 and later.
 
 ARM64 is required to support iOS 8 on iPhone 6 or other 64-bit devices and will be required by Apple when submitting new or updating exiting applications in the iTunes App Store.
 
@@ -90,10 +90,10 @@ Targeting both 32-bit and 64-bit architectures will significantly increase the s
 ## Mac
 
 > [!IMPORTANT]
-> Starting in January 2018, all new Mac apps submitted to the 
-> Mac App Store must support 64-bit. Existing Mac App Store apps and their 
-> updates must support 64-bit starting in June 2018. See 
-> [Apple's announcment](https://developer.apple.com/news/?id=06282017a) 
+> Starting in January 2018, all new Mac apps submitted to the
+> Mac App Store must support 64-bit. Existing Mac App Store apps and their
+> updates must support 64-bit starting in June 2018. See
+> [Apple's announcment](https://developer.apple.com/news/?id=06282017a)
 > and [a guide that describes how to update your Xamarin.Mac apps to 64-bit](~/cross-platform/macios/32-and-64/mac-64-bit.md).
 
 Most modern Mac computers support both 32-bit and 64-bit
@@ -132,7 +132,7 @@ For Mac, this is the preferred mode of operation as most
 ### Enabling 64-bit builds of Xamarin.Mac apps
 
 For information about building a 64-bit app using Xamarin.Mac,
-please see the [Updating Xamarin.Mac Unified applications to 64-bit](~/cross-platform/macios/32-and-64/mac-64-bit.md) 
+please see the [Updating Xamarin.Mac Unified applications to 64-bit](~/cross-platform/macios/32-and-64/mac-64-bit.md)
 guide.
 
 ## Related links

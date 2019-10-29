@@ -23,7 +23,7 @@ Install the latest tools from the Tools folder in the SDK manager:
 
 ## Android Platform(s)
 
-Install the "SDK Platform" for the Android versions you've set as minimum & target. 
+Install the "SDK Platform" for the Android versions you've set as minimum & target.
 
 Examples:
 

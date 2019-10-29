@@ -111,17 +111,17 @@ To add a new window, do the following:
 2. Drag a new **View Controller** into the Design Surface:
 
     [![](dialog-images/new01.png "Selecting a View Controller from the Library")](dialog-images/new01.png#lightbox)
-3. In the **Identity Inspector**, enter `CustomDialogController` for the **Class Name**: 
+3. In the **Identity Inspector**, enter `CustomDialogController` for the **Class Name**:
 
     [![](dialog-images/new02.png "Setting the class name")](dialog-images/new02.png#lightbox)
 4. Switch back to Visual Studio for Mac, allow it to sync with Xcode and create the `CustomDialogController.h` file.
-5. Return to Xcode and design your interface: 
+5. Return to Xcode and design your interface:
 
     [![](dialog-images/new03.png "Designing the UI in Xcode")](dialog-images/new03.png#lightbox)
-6. Create a **Modal Segue** from the Main Window of your app to the new View Controller by control-dragging from the UI element that will open the dialog to the dialog's window. Assign the **Identifier** `ModalSegue`: 
+6. Create a **Modal Segue** from the Main Window of your app to the new View Controller by control-dragging from the UI element that will open the dialog to the dialog's window. Assign the **Identifier** `ModalSegue`:
 
     [![](dialog-images/new06.png "A modal segue")](dialog-images/new06.png#lightbox)
-7. Wire-up any **Actions** and **Outlets**: 
+7. Wire-up any **Actions** and **Outlets**:
 
     [![](dialog-images/new04.png "Configuring an Action")](dialog-images/new04.png#lightbox)
 8. Save your changes and return to Visual Studio for Mac to sync with Xcode.
@@ -251,7 +251,7 @@ For more information about using windows in a Xamarin.Mac application, please se
 
 ## Creating a Custom Sheet
 
-A _Sheet_ is a modal dialog that is attached to a given document window, preventing users from interacting with the window until they dismiss the dialog. A Sheet is attached to the window from which it emerges and only one sheet can be open for a window at any one time. 
+A _Sheet_ is a modal dialog that is attached to a given document window, preventing users from interacting with the window until they dismiss the dialog. A Sheet is attached to the window from which it emerges and only one sheet can be open for a window at any one time.
 
 To create a Custom Sheet in Xamarin.Mac, let's do the following:
 
@@ -262,13 +262,13 @@ To create a Custom Sheet in Xamarin.Mac, let's do the following:
 3. Design your user interface:
 
     [![](dialog-images/sheet01.png "The UI design")](dialog-images/sheet01.png#lightbox)
-4. Create a **Sheet Segue** from your Main Window to the new View Controller: 
+4. Create a **Sheet Segue** from your Main Window to the new View Controller:
 
     [![](dialog-images/sheet02.png "Selecting the Sheet segue type")](dialog-images/sheet02.png#lightbox)
-5. In the **Identity Inspector**, name the View Controller's **Class** `SheetViewController`: 
+5. In the **Identity Inspector**, name the View Controller's **Class** `SheetViewController`:
 
     [![](dialog-images/sheet03.png "Setting the class name")](dialog-images/sheet03.png#lightbox)
-6. Define any needed **Outlets** and **Actions**: 
+6. Define any needed **Outlets** and **Actions**:
 
     [![](dialog-images/sheet04.png "Defining the required Outlets and Actions")](dialog-images/sheet04.png#lightbox)
 7. Save your changes and return to Visual Studio for Mac to sync.
@@ -459,7 +459,7 @@ namespace MacWindows
                 // Release memory
                 source.RemoveFromParentViewController ();
             }
-        
+
         }
         #endregion
 
@@ -531,9 +531,9 @@ namespace SourceWriter
         #region Computed Properties
         [Export("DefaultLanguage")]
         public int DefaultLanguage {
-            get { 
+            get {
                 var value = LoadInt ("DefaultLanguage", 0);
-                return value; 
+                return value;
             }
             set {
                 WillChangeValue ("DefaultLanguage");
@@ -584,7 +584,7 @@ namespace SourceWriter
                 return (int)number;
             }
         }
-            
+
         public void SaveInt(string key, int value, bool sync) {
             NSUserDefaults.StandardUserDefaults.SetInt(value, key);
             if (sync) NSUserDefaults.StandardUserDefaults.Synchronize ();
@@ -703,7 +703,7 @@ namespace SourceWriter
         {
         }
         #endregion
-        
+
         ...
 ```
 
@@ -711,7 +711,7 @@ namespace SourceWriter
 
 ### Wiring Preferences to Preference Views
 
-Next, connect Preference class to UI elements on the Preference Window and Views created above. In Interface Builder, select a Preference View Controller and switch to the **Identity Inspector**, create a custom class for the controller: 
+Next, connect Preference class to UI elements on the Preference Window and Views created above. In Interface Builder, select a Preference View Controller and switch to the **Identity Inspector**, create a custom class for the controller:
 
 [![](dialog-images/prefs12.png "The Identity Inspector")](dialog-images/prefs12.png#lightbox)
 
@@ -785,7 +785,7 @@ public void ConfigureEditor() {
     ...
 
 }
-``` 
+```
 
 You need to call the configuration method when the Window is first opened to make sure it conforms to the user's preferences:
 
@@ -851,7 +851,7 @@ namespace SourceWriter
         #region Override Methods
         public override bool WindowShouldClose (Foundation.NSObject sender)
         {
-            
+
             // Apply any changes to open windows
             App.UpdateWindowPreferences();
 
@@ -946,7 +946,7 @@ The `RunModal ()` method displays the Open Dialog and allow the user to select f
 
 The Open Dialog returns the user's selected files or directories as an array of URLs in the `URL` property.
 
-If we run the program and select the **Open...** item from the **File** menu, the following is displayed: 
+If we run the program and select the **Open...** item from the **File** menu, the following is displayed:
 
 [![](dialog-images/dialog03.png "An open dialog box")](dialog-images/dialog03.png#lightbox)
 

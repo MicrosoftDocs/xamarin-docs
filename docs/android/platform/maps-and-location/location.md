@@ -82,7 +82,7 @@ permissions will be listed under **Required Permissions**:
 
 [![Screenshot of the Android Manifest Required Permissions settings](location-images/location-01-xs.png)](location-images/location-01-xs.png#lightbox)
 
-Setting either of these permissions tells Android that your application needs permission from the user in order to access to the location providers. Devices that run API level 22 (Android 5.1) or lower will ask the user to grant these permissions each time the app is installed. On devices running API level 23 (Android 6.0) or higher, the app should perform a run-time permission check before making a request of the location provider. 
+Setting either of these permissions tells Android that your application needs permission from the user in order to access to the location providers. Devices that run API level 22 (Android 5.1) or lower will ask the user to grant these permissions each time the app is installed. On devices running API level 23 (Android 6.0) or higher, the app should perform a run-time permission check before making a request of the location provider.
 
 > [!NOTE]
 >Note: Setting `ACCESS_FINE_LOCATION` implies access to both coarse and
@@ -99,7 +99,7 @@ This snippet is an example of how to check that an app has permission for the `A
 }
 else
 {
-    // The app does not have permission ACCESS_FINE_LOCATION 
+    // The app does not have permission ACCESS_FINE_LOCATION
 }
 ```
 
@@ -172,7 +172,7 @@ public class MainActivity: AppCompatActivity
 {
     FusedLocationProviderClient fusedLocationProviderClient;
 
-    protected override void OnCreate(Bundle bundle) 
+    protected override void OnCreate(Bundle bundle)
     {
         fusedLocationProviderClient = LocationServices.GetFusedLocationProviderClient(this);
     }
@@ -198,7 +198,7 @@ async Task GetLastLocationFromDevice()
     }
     else
     {
-        // Do something with the location 
+        // Do something with the location
         Log.Debug("Sample", "The latitude is " + location.Latitude);
     }
 }
@@ -348,7 +348,7 @@ life and creates a better experience for the user.
 
 ### Responding to updates from the LocationManager
 
-Once an application has requested updates from the `LocationManager`, it can receive information from the Service by implementing the [`ILocationListener`](xref:Android.Locations.ILocationListener) interface. This interface provides four methods for listening to the location Service and the location provider, `OnLocationChanged`. The System will call `OnLocationChanged` when the user's location changes enough to qualify as a location change according to the Criteria set when requesting location updates. 
+Once an application has requested updates from the `LocationManager`, it can receive information from the Service by implementing the [`ILocationListener`](xref:Android.Locations.ILocationListener) interface. This interface provides four methods for listening to the location Service and the location provider, `OnLocationChanged`. The System will call `OnLocationChanged` when the user's location changes enough to qualify as a location change according to the Criteria set when requesting location updates.
 
 The following code shows the methods in the  `ILocationListener` interface:
 
@@ -357,22 +357,22 @@ public class MainActivity : AppCompatActivity, ILocationListener
 {
     TextView latitude;
     TextView longitude;
-    
+
     public void OnLocationChanged (Location location)
     {
         // called when the location has been updated.
     }
-    
+
     public OnProviderDisabled(string locationProvider)
     {
         // called when the user disables the provider
     }
-    
+
     public OnProviderEnabled(string locationProvider)
     {
         // called when the user enables the provider
     }
-    
+
     public OnStatusChanged(string locationProvider, Availability status, Bundle extras)
     {
         // called when the status of the provider changes (there are a variety of reasons for this)
@@ -408,7 +408,7 @@ The following code shows how to get the best available provider and use
 it when requesting location updates:
 
 ```csharp
-Criteria locationCriteria = new Criteria();   
+Criteria locationCriteria = new Criteria();
 locationCriteria.Accuracy = Accuracy.Coarse;
 locationCriteria.PowerRequirement = Power.Medium;
 

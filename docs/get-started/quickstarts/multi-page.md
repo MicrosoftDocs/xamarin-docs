@@ -72,7 +72,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
     }
     ```
 
-    This class defines a `Note` model that will store data about each note in the application.    
+    This class defines a `Note` model that will store data about each note in the application.
 
     Save the changes to **Note.cs** by pressing **CTRL+S**, and close the file.
 
@@ -265,7 +265,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
             }
         }
     }
-    ```    
+    ```
 
     This code defines the functionality for the `NotesPage`. When the page appears, the `OnAppearing` method is executed, which populates the [`ListView`](xref:Xamarin.Forms.ListView) with any notes that have been retrieved from the local application data folder. When the [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) is pressed the `OnNoteAddedClicked` event handler is executed. This method navigates to the `NoteEntryPage`, setting the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `NoteEntryPage` to a new `Note` instance. When an item in the `ListView` is selected the `OnListViewItemSelected` event handler is executed. This method navigates to the `NoteEntryPage`, setting the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `NoteEntryPage` to the selected `Note` instance. For more information about navigation, see [Navigation](deepdive.md#navigation) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
@@ -548,7 +548,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
             }
         }
     }
-    ```    
+    ```
 
     This code defines the functionality for the `NotesPage`. When the page appears, the `OnAppearing` method is executed, which populates the [`ListView`](xref:Xamarin.Forms.ListView) with any notes that have been retrieved from the local application data folder. When the [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) is pressed the `OnNoteAddedClicked` event handler is executed. This method navigates to the `NoteEntryPage`, setting the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `NoteEntryPage` to a new `Note` instance. When an item in the `ListView` is selected the `OnListViewItemSelected` event handler is executed. This method navigates to the `NoteEntryPage`, setting the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `NoteEntryPage` to the selected `Note` instance. For more information about navigation, see [Navigation](deepdive.md#navigation) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 

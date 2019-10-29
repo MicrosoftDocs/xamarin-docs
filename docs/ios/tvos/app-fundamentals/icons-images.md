@@ -27,7 +27,7 @@ Creating captivating icons and imagery are a critical part of developing an imme
 
 ## Launch Image
 
-The Launch Image is the first thing that is displayed when your Xamarin.tvOS app is initially started on the Apple TV, and as such, every tvOS app must supply a Launch Image. 
+The Launch Image is the first thing that is displayed when your Xamarin.tvOS app is initially started on the Apple TV, and as such, every tvOS app must supply a Launch Image.
 
 The Launch Image appears quickly and gives the impression that your app is fast and responsive. The Apple TV will replace the Launch Image with the first screen of your app shortly there after.
 
@@ -50,13 +50,13 @@ Apple makes the following suggestions for designing your app's Launch Image:
 
 To set the Launch Image for your tvOS project, please do the following:
 
-1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
+1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing:
 
     [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
-2. In the **Asset Editor**, click on the `LaunchImages` asset: 
+2. In the **Asset Editor**, click on the `LaunchImages` asset:
 
     [![](icons-images-images/asset02.png "The LaunchImages asset")](icons-images-images/asset02.png#lightbox)
-3. Click on the **1x Apple TV** entry and select the Launch Image or optionally drag a new image in from the file system: 
+3. Click on the **1x Apple TV** entry and select the Launch Image or optionally drag a new image in from the file system:
 
     [![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
 4. Save your changes.
@@ -155,16 +155,16 @@ Apple provides the following suggestions for creating your App Icons:
 
 To set the App Icons required for your tvOS project, please do the following:
 
-1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
+1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing:
 
     [![](icons-images-images/asset01.png "The Assets.xcassets fileg")](icons-images-images/asset01.png#lightbox)
-2. In the **Asset Editor**, expand the `App Icon & Top Shelf Image` asset: 
+2. In the **Asset Editor**, expand the `App Icon & Top Shelf Image` asset:
 
     [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
-3. Next, Expand the `App Icon - Small` asset: 
+3. Next, Expand the `App Icon - Small` asset:
 
     [![](icons-images-images/asset05.png "Expand the App Icon - Small asset")](icons-images-images/asset05.png#lightbox)
-4. Then expand the `Back` asset and click on the `Contents` entry: 
+4. Then expand the `Back` asset and click on the `Contents` entry:
 
     [![](icons-images-images/asset06.png "Then expand the Back asset")](icons-images-images/asset06.png#lightbox)
 5. Click on the **1x Apple TV entry** and select an image file.
@@ -198,13 +198,13 @@ Apple provides the following suggestions for creating your Top Shelf Images:
 
 To set the Top Shelf Image required for your tvOS project, please do the following:
 
-1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing: 
+1. In the **Solution Explorer**, double-click `Assets.xcassets` to open it for editing:
 
     [![](icons-images-images/asset01.png "The Assets.xcassets file")](icons-images-images/asset01.png#lightbox)
-2. In the **Asset Editor**, expand the `App Icon & Top Shelf Image` asset: 
+2. In the **Asset Editor**, expand the `App Icon & Top Shelf Image` asset:
 
     [![](icons-images-images/asset04.png "Expand the Top Shelf Image asset")](icons-images-images/asset04.png#lightbox)
-3. Click on the `Top Shelf Image` asset: 
+3. Click on the `Top Shelf Image` asset:
 
     [![](icons-images-images/asset07.png "The Top Shelf Image asset")](icons-images-images/asset07.png#lightbox)
 4. Click on the **1x Apple TV entry** and select an image file.
@@ -298,10 +298,10 @@ As stated above, all tvOS apps require a [Launch Image](#Launch-Image), and [App
 
 Do the following:
 
-1. In the **Solution Explorer**, double-click the `Info.plist` to open it for editing: 
+1. In the **Solution Explorer**, double-click the `Info.plist` to open it for editing:
 
     [![](icons-images-images/info01.png "The Info.plist file")](icons-images-images/info01.png#lightbox)
-2. In the **Info.Plist Editor**, select the Assets Catalog (configured above in the [Setting the App Icons](#Setting-the-App-Icons) section) for the **App Icons**: 
+2. In the **Info.Plist Editor**, select the Assets Catalog (configured above in the [Setting the App Icons](#Setting-the-App-Icons) section) for the **App Icons**:
 
     [![](icons-images-images/info02.png "The Info.Plist Editor")](icons-images-images/info02.png#lightbox)
 3. Next, select the Assets Catalog (configured above in the [Setting the Launch Image](#Setting-the-Launch-Image) section) for the **Launch Images**.

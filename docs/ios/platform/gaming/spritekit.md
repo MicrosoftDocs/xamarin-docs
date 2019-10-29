@@ -29,7 +29,7 @@ SpriteKit makes creating such a physics body possible with a single line of code
 
 ## Alpha Threshold
 
-In addition to simply setting the `PhysicsBody` property directly to the geometry derived from the texture, applications can set and alpha threshold to control how the geometry is derived. 
+In addition to simply setting the `PhysicsBody` property directly to the geometry derived from the texture, applications can set and alpha threshold to control how the geometry is derived.
 
 The alpha threshold defines the minimum alpha value a pixel must have to be included in the resulting physics body. For example, the following code results in a slightly different physics body:
 

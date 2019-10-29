@@ -98,7 +98,7 @@ use a later version of the Android SDK Tools package, you must install
 the Xamarin Android SDK Manager plugin for Visual Studio (available
 from the Visual Studio Marketplace). This is necessary because Google's
 standalone SDK Manager was deprecated in version 25.2.3 of the Android
-SDK Tools package. 
+SDK Tools package.
 
 For more information about using the Xamarin Android SDK Manager, see
 [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
@@ -121,7 +121,7 @@ A significant improvement in performance when developing on x86 based computers 
 For more information about the Android Emulator, Hyper-V, and HAXM, please see [Hardware Acceleration for Emulator Performance](~/android/get-started/installation/android-emulator/hardware-acceleration.md) guide.
 
 > [!NOTE]
-> On versions of Windows prior to Windows 10 April 2018 Update, HAXM is not compatible with Hyper-V. In this scenario it is necessary 
+> On versions of Windows prior to Windows 10 April 2018 Update, HAXM is not compatible with Hyper-V. In this scenario it is necessary
 to either [disable Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) or to use the slower emulator images that do not have the x86 optimizations.
 
 <a name="device" />
@@ -161,7 +161,7 @@ locations, how to launch the SDK Manager to install additional Android
 SDK components, how to setup an Android device or emulator, and how to
 start building your first application.
 
-The next step is to have a look at the 
+The next step is to have a look at the
 [Hello, Android](~/android/get-started/hello-android/index.md)
 tutorials to learn how to create a working Xamarin.Android app.
 

@@ -21,7 +21,7 @@ With iOS 10 and watchOS 3, several new APIs have been added that work with both 
 
 ## PassKit Framework Enhancements
 
-In iOS 10, the PassKit framework has been expanded to support Apple Pay outside of `UIKit` and to allow card issuers to present their cards from within their apps. 
+In iOS 10, the PassKit framework has been expanded to support Apple Pay outside of `UIKit` and to allow card issuers to present their cards from within their apps.
 
 ### Supporting Apple Pay Outside of UIKit
 

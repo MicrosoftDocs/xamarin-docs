@@ -58,7 +58,7 @@ Auto Backup can be configured to disable specific content from backing up. You c
 
 # [iOS](#tab/ios)
 
-When developing on the **iOS simulator**, enable the **Keychain** entitlement and add a keychain access group for the application's bundle identifier. 
+When developing on the **iOS simulator**, enable the **Keychain** entitlement and add a keychain access group for the application's bundle identifier.
 
 Open the **Entitlements.plist** in the iOS project and find the **Keychain** entitlement and enable it. This will automatically add the application's identifier as a group.
 

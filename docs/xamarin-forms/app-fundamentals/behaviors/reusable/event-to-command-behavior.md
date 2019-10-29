@@ -127,7 +127,7 @@ public class EventToCommandBehavior : BehaviorBase<View>
       resolvedParameter = Converter.Convert (eventArgs, typeof(object), null, null);
     } else {
       resolvedParameter = eventArgs;
-    }        
+    }
 
     if (Command.CanExecute (resolvedParameter)) {
       Command.Execute (resolvedParameter);

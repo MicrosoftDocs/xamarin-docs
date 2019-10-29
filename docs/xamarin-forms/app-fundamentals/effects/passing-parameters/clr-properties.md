@@ -47,7 +47,7 @@ public class ShadowEffect : RoutingEffect
   public float DistanceY { get; set; }
 
   public ShadowEffect () : base ("MyCompany.LabelShadowEffect")
-  {            
+  {
   }
 }
 ```

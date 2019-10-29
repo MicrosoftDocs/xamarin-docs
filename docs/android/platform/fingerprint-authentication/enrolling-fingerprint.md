@@ -21,7 +21,7 @@ To enroll a fingerprint, you must have an Android device or an emulator running 
 
 The use of the Android Debug Bridge (ADB) requires familiarity with the command prompt, and the **adb** executable must be in the PATH of your Bash, PowerShell, or Command Prompt environment.
 
-## Configuring a Screen Lock and Enrolling a Fingerprint 
+## Configuring a Screen Lock and Enrolling a Fingerprint
 
 To setup a screen lock, perform the following steps:
 
@@ -29,7 +29,7 @@ To setup a screen lock, perform the following steps:
 
     ![Location of Screen lock selection on the Security screen](enrolling-fingerprint-images/testing-01.png)
 
-2. The next screen that appears will allow you select and configure one of the screen lock security methods: 
+2. The next screen that appears will allow you select and configure one of the screen lock security methods:
 
     ![Select Swipe, Pattern, PIN, or Password](enrolling-fingerprint-images/testing-02.png)
 
@@ -43,11 +43,11 @@ To setup a screen lock, perform the following steps:
 
     [![Sequence of screenshots for adding a fingerprint to the device](enrolling-fingerprint-images/testing-04-sml.png)](enrolling-fingerprint-images/testing-04.png#lightbox)
 
-5. In the final screen you are prompted to place your finger on the fingerprint scanner: 
+5. In the final screen you are prompted to place your finger on the fingerprint scanner:
 
     ![Screen that prompts you to put your finger on the sensor](enrolling-fingerprint-images/testing-05.png)
 
-    If you are using an Android device, complete the process by touching a finger to the scanner. 
+    If you are using an Android device, complete the process by touching a finger to the scanner.
 
 ### Simulating a Fingerprint Scan on the Emulator
 
@@ -71,6 +71,6 @@ After the fingerprint scan is complete, Android will notify you that the fingerp
 
 ![Screen displaying Fingerprint added!](enrolling-fingerprint-images/testing-06.png)
 
-## Summary 
+## Summary
 
-This guide covered how to setup a screen lock and enroll a fingerprint on an Android device or in an Android emulator. 
+This guide covered how to setup a screen lock and enroll a fingerprint on an Android device or in an Android emulator.

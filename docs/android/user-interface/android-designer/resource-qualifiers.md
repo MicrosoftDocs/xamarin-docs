@@ -141,7 +141,7 @@ information about target framework version, see
 
 The set of widgets available in the toolbox is determined by the target
 framework version of the project. This is also true for the properties
-available in the **Properties Window**. The available list of widgets 
+available in the **Properties Window**. The available list of widgets
 is *not* determined by the value selected in the **Version** selector of
 the toolbar. For example, if you set the target version of the project
 to Android 4.4, you can still select Android 6.0 in the toolbar version
@@ -274,7 +274,7 @@ about target framework version, see
 
 The set of widgets available in the toolbox is determined by the target
 framework version of the project. This is also true for the properties
-available in the **Property Pad**. The available list of widgets 
+available in the **Property Pad**. The available list of widgets
 is *not* determined by the value selected in the **Version** selector of
 the toolbar. For example, if you set the target version of the project
 to Android 4.4, you can still select Android 6.0 in the toolbar version

@@ -30,7 +30,7 @@ These steps describe how to add CoreML to an iOS project. Refer to the [Mars Hab
 
 ### 1. Add the CoreML model to the project
 
-Add a CoreML model (a file with the **.mlmodel** extension) to the **Resources** directory of the project. 
+Add a CoreML model (a file with the **.mlmodel** extension) to the **Resources** directory of the project.
 
 In the model file's properties, its **Build action** is set to **CoreMLModel**. This means that it will be compiled into an **.mlmodelc** file when the application is built.
 

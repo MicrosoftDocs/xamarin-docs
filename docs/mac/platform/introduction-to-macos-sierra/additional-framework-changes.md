@@ -96,7 +96,7 @@ For more information, please see Apple's [Foundation Release Notes for OS X v10.
 
 The following enhancement have been made to the GameKit Framework for macOS Sierra:
 
-- The **Game Center App** has been deprecated and removed from macOS. If the app uses GameKit, it _must_ present its own interface to display GameKit features such as leaderboards, etc. 
+- The **Game Center App** has been deprecated and removed from macOS. If the app uses GameKit, it _must_ present its own interface to display GameKit features such as leaderboards, etc.
 - A new iCloud-only account type has been implemented by the [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) class.
 - The new [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) class provides a generalized solution for managing persistent data storage on Game Center. `GKGameSession` maintains a list of players and the app is responsible form implementing how and when participant date is stored, retrieved or exchanged between players. In many instances Game Sessions can replace existing turn-based matches, real-time matches or persistent game save methods.
 

@@ -60,7 +60,7 @@ This setting can be found in **Project Options > Build > iOS Build** tab:
 
 ## Update Xamarin.Mac to TLS 1.2
 
-In Visual Studio for Mac, to enable TLS 1.2 in a Xamarin.Mac app, update the 
+In Visual Studio for Mac, to enable TLS 1.2 in a Xamarin.Mac app, update the
 **HttpClient Implementation** option in **Project Options > Build > Mac Build**:
 
 [![Configure HttpClient in Visual Studio for Mac](transport-layer-security-images/macos-mac-sml.png)](transport-layer-security-images/macos-mac.png#lightbox)

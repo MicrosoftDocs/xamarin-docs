@@ -10,15 +10,15 @@ ms.date: 02/02/2018
 
 # Packaging Wear Apps
 
-Android Wear apps are packaged with a full Android app for 
-distribution on Google Play. 
+Android Wear apps are packaged with a full Android app for
+distribution on Google Play.
 
 ## Automatic Packaging
 
-Starting with Xamarin Android 5.0, your Wear app is automatically 
-packaged as a resource in your Handheld app when you create a project 
-reference from the Handheld project to the Wear project. You can use 
-the following steps to create this association: 
+Starting with Xamarin Android 5.0, your Wear app is automatically
+packaged as a resource in your Handheld app when you create a project
+reference from the Handheld project to the Wear project. You can use
+the following steps to create this association:
 
 # [Visual Studio](#tab/windows)
 
@@ -55,7 +55,7 @@ the following steps to create this association:
 4. In the **Edit References** dialog, enable your Wear project (click
    to add a check mark), then click **OK**.
 
-5. Change the package name for your Wear project so that it matches 
+5. Change the package name for your Wear project so that it matches
    the package name of the Handheld project (the package name can be
    changed under **Project Options > Android Application**).
 
@@ -66,7 +66,7 @@ Wear app does not match the package name of the Handheld app. For
 example:
 
 ```shell
-Error XA5211: Embedded wear app package name differs from handheld 
+Error XA5211: Embedded wear app package name differs from handheld
 app package name (com.companyname.mywearapp != com.companyname.myapp). (XA5211)
 ```
 
@@ -82,10 +82,10 @@ The assembly that the Wear app project generates is not used as an
 assembly reference in the Handheld (Phone) project. Instead, the build
 process does the following:
 
-- Verifies that the package names match. 
+- Verifies that the package names match.
 
-- Generates XML and adds it to the Handheld project to 
-    associate it with the Wear app. For example: 
+- Generates XML and adds it to the Handheld project to
+    associate it with the Wear app. For example:
 
     ```xml
     <!-- Handheld (Phone) Project.csproj -->
@@ -96,13 +96,13 @@ process does the following:
     </ProjectReference>
     ```
 
-- Adds the Wear app as a **raw** resource to the Handheld project. 
+- Adds the Wear app as a **raw** resource to the Handheld project.
 
 ## Manual Packaging
 
-You can write Android Wear apps in Xamarin.Android before version 5.0, 
-but you must follow these manual packaging instructions to distribute 
-the app: 
+You can write Android Wear apps in Xamarin.Android before version 5.0,
+but you must follow these manual packaging instructions to distribute
+the app:
 
 1. Ensure that your Wearable project and Handheld (Phone) projects
    have the same version number and package name.
@@ -133,5 +133,5 @@ the app:
         android:resource="@xml/wearable_app_desc"/>
     ```
 
-See also the Android Developer site's 
+See also the Android Developer site's
 [manual packging instructions](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually).

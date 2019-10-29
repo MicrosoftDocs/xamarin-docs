@@ -17,7 +17,7 @@ and fix any performance bottlenecks, excessive memory usage issues, or
 inefficient use of network resources. Two profiler tools are available
 to serve this purpose:
 
-- Xamarin Profiler 
+- Xamarin Profiler
 - Android Profiler in Android Studio
 
 This guide introduces the Xamarin Profiler and provides detailed
@@ -31,15 +31,15 @@ from within the IDE. For more information about using the Xamarin
 Profiler, see [Xamarin Profiler](~/tools/profiler/index.md).
 
 > [!NOTE]
-> You must be a [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) 
-> subscriber to unlock the Xamarin Profiler feature in either Visual Studio Enterprise 
+> You must be a [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/)
+> subscriber to unlock the Xamarin Profiler feature in either Visual Studio Enterprise
 > on Windows or Visual Studio for Mac.
 
 ## Android Studio Profiler
 
-Android Studio 3.0 and later includes an Android Profiler tool. You can 
+Android Studio 3.0 and later includes an Android Profiler tool. You can
 use the Android Profiler to measure the performance of a Xamarin Android
-app built with Visual Studio &ndash; without the need for a Visual 
+app built with Visual Studio &ndash; without the need for a Visual
 Studio Enterprise license. However, unlike the Xamarin Profiler, the
 Android Profiler is not integrated with Visual Studio and can only be
 used to profile an Android application package (APK) that has been built
@@ -78,8 +78,8 @@ app is built and profiled using Android Profiler:
     ![Starting the profiler from the Android Studio launch screen](profiling-images/vswin/03-android-studio.png)
 
 5. In the **Select APK File** dialog, navigate to the APK that you
-    built and copied earlier. Select the APK and click **OK**: 
-    
+    built and copied earlier. Select the APK and click **OK**:
+
     ![Selecting the APK in the Select APK File dialog](profiling-images/vswin/04-select-apk-dialog.png)
 
 6. Android Studio will load the APK and dissassembles **classes.dex**:
@@ -142,7 +142,7 @@ app is built and profiled using Android Profiler:
 
 ### Using the Android Profiler
 
-Detailed information for using the Android Profiler is included in 
+Detailed information for using the Android Profiler is included in
 the [Android Studio documentation](https://developer.android.com/studio/profile/android-profiler.html).
 The following topics will be of interest to Xamarin Android developers:
 

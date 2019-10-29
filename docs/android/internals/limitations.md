@@ -66,7 +66,7 @@ E/AndroidRuntime(31766):        at android.app.ActivityThread.handleCreateServic
 E/AndroidRuntime(31766):        ... 10 more
 ```
 
-The workaround is to declare a default constructor, adorn it with the `ExportAttribute`,  and set the [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString): 
+The workaround is to declare a default constructor, adorn it with the `ExportAttribute`,  and set the [`ExportAttribute.SuperStringArgument`](xref:Java.Interop.ExportAttribute.SuperArgumentsString):
 
 ```csharp
 [Service]
@@ -103,7 +103,7 @@ Generic C# classes are only partially supported. The following limitations exist
     ```csharp
     public class Example : Java.Lang.Object
     {
-        
+
         // Invalid; generates XA4207
         [Export]
         public static void Method<T>(T value)

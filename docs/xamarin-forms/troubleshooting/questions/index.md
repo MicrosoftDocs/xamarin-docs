@@ -18,7 +18,7 @@ This guide uses the Xamarin.Forms .NET Standard library template as an example, 
 Xamarin.Forms doesn't currently support visual designers for XAML files.
 
 ## [Android build error: The "LinkAssemblies" task failed unexpectedly](android-linkassemblies-error.md)
-You may see an error message `The "LinkAssemblies" task failed unexpectedly` when building a Xamarin.Android project that uses Forms. This happens when the linker is active (typically on a *Release* build to reduce the size of the app package); and it occurs because the Android targets aren't updated to the latest framework. 
+You may see an error message `The "LinkAssemblies" task failed unexpectedly` when building a Xamarin.Android project that uses Forms. This happens when the linker is active (typically on a *Release* build to reduce the size of the app package); and it occurs because the Android targets aren't updated to the latest framework.
 
 ## ["Why does my Xamarin.Forms.Maps Android project fail with COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR?"](maps-compiletodalvik-error.md)
 This error may be seen in the Error pad of Visual Studio for Mac or in the Build Output window of Visual Studio; in Android projects using Xamarin.Forms.Maps. It is most commonly resolved by increasing the Java Heap Size for your Xamarin.Android project.

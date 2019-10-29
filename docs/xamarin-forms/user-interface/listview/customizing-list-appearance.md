@@ -173,7 +173,7 @@ ListView HeaderList = new ListView()
 In XAML:
 
 ```xaml
-<ListView x:Name="HeaderList" 
+<ListView x:Name="HeaderList"
           Header="Header"
           Footer="Footer">
     ...

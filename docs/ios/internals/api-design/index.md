@@ -20,7 +20,7 @@ At the core of Xamarin.iOS, there is an interop engine that bridges
 the C# world with the Objective-C world, as well as bindings for the
 iOS C-based APIs like CoreGraphics and [OpenGL ES](#opengles).
 
-The low-level runtime to communicate with Objective-C code is in 
+The low-level runtime to communicate with Objective-C code is in
 [MonoTouch.ObjCRuntime](#objcruntime). On top of this,
 bindings for [Foundation](#foundation), CoreFoundation, and
 [UIKit](#uikit) are provided.

@@ -15,9 +15,9 @@ _New features available to developers using Xamarin for tvOS 11_
 
 Access new tvOS 11 features in Xamarin.tvOS apps:
 
-- Right-to-left language support 
+- Right-to-left language support
 - Focus support for SceneKit and SpriteKit
-- Safe area layout guides 
+- Safe area layout guides
 - Plain button style, which can more easily be styled
 - Layered images with support for interactive focus
 - Custom animations coordinated with focus interactions

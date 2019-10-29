@@ -86,7 +86,7 @@ This sample shows how to use the `Environment` class to access the Documents fol
 
 ```csharp
 var documents =
- Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments); 
+ Environment.GetFolderPath (Environment.SpecialFolder.MyDocuments);
 var filename = Path.Combine (documents, "Write.txt");
 File.WriteAllText(filename, "Write this text into a file");
 ```

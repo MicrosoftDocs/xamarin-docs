@@ -140,7 +140,7 @@ for this Activity. This is discussed in more detail in the
 This app collects phone numbers (that the user has translated on the
 first screen) and passes them to the second screen. The phone numbers
 are stored as a list of strings. To support lists (and Intents, which
-are used later), add the following `using` directives to the top of 
+are used later), add the following `using` directives to the top of
 **MainActivity.cs**:
 
 ```csharp
@@ -160,14 +160,14 @@ public class MainActivity : Activity
 }
 ```
 
-In the `MainActivity` class, add the following code to register the 
+In the `MainActivity` class, add the following code to register the
 **Translation History** button (place this line after the `translateButton` declaration):
 
 ```csharp
 Button translationHistoryButton = FindViewById<Button> (Resource.Id.TranslationHistoryButton);
 ```
 
-Add the following code to the end of the `OnCreate` method to wire up 
+Add the following code to the end of the `OnCreate` method to wire up
 the **Translation History** button:
 
 ```csharp
@@ -326,14 +326,14 @@ public class MainActivity : Activity
 }
 ```
 
-In the `MainActivity` class, add the following code to register the 
+In the `MainActivity` class, add the following code to register the
 **TranslationHistory History** button (place this line after the `TranslationHistoryButton` declaration):
 
 ```csharp
 Button translationHistoryButton = FindViewById<Button> (Resource.Id.TranslationHistoryButton);
 ```
 
-Add the following code to the end of the `OnCreate` method to wire up 
+Add the following code to the end of the `OnCreate` method to wire up
 the **Translation History** button:
 
 ```csharp

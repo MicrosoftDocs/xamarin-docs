@@ -454,7 +454,7 @@ Therefore, the `Position` property of the `VideoPlayer` can be bound to the `Pos
         <video:PositionSlider Grid.Row="2"
                               Margin="10, 0, 10, 10"
                               BindingContext="{x:Reference videoPlayer}"
-                              Duration="{Binding Duration}"           
+                              Duration="{Binding Duration}"
                               Position="{Binding Position}">
             <video:PositionSlider.Triggers>
                 <DataTrigger TargetType="video:PositionSlider"

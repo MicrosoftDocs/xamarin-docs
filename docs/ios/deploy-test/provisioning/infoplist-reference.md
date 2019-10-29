@@ -11,56 +11,56 @@ ms.date: 01/18/2017
 
 # Info.plist Reference for Xamarin.iOS
 
-For more information on working with Info.Plist keys please refer to the [Working with Security and Privacy](~/ios/app-fundamentals/security-privacy.md) guide. 
+For more information on working with Info.Plist keys please refer to the [Working with Security and Privacy](~/ios/app-fundamentals/security-privacy.md) guide.
 
-## Location 
+## Location
 
-Accessing the user's location also requires modifications to Info.plist. The following keys relating to location data should be set: 
+Accessing the user's location also requires modifications to Info.plist. The following keys relating to location data should be set:
 
-- **NSLocationWhenInUseUsageDescription** - For when you are accessing the user's location while they are interacting with your app. 
+- **NSLocationWhenInUseUsageDescription** - For when you are accessing the user's location while they are interacting with your app.
 - **NSLocationAlwaysUsageDescription** - For when your app accesses the user's location in the background.
 
-## Photos 
+## Photos
 
 NSPhotoLibraryUsageDescription  
 
-## Contacts 
+## Contacts
 
-NSContactsUsageDescription 
+NSContactsUsageDescription
 
-## Calendar data 
-    
-NSCalendarsUsageDescription 
+## Calendar data
 
-## Reminder data 
-    
-NSRemindersUsageDescription 
+NSCalendarsUsageDescription
 
-## Bluetooth peripherals 
-    
-NSBluetoothPeripheralUsageDescription 
+## Reminder data
 
-## Microphone 
+NSRemindersUsageDescription
 
-NSMicrophoneUsageDescription 
+## Bluetooth peripherals
 
-## Camera 
-    
-NSCameraUsageDescription 
+NSBluetoothPeripheralUsageDescription
+
+## Microphone
+
+NSMicrophoneUsageDescription
+
+## Camera
+
+NSCameraUsageDescription
 
 ## Reading HealthKit  
 
-NSHealthShareUsageDescription 
+NSHealthShareUsageDescription
 
-NSHealthUpdateUsageDescription 
+NSHealthUpdateUsageDescription
 
-## Background modes 
-    
-UIBackgroundModes 
+## Background modes
 
-## HomeKit 
+UIBackgroundModes
 
-NSHomeKitUsageDescription 
+## HomeKit
+
+NSHomeKitUsageDescription
 
 ## Related Links
 

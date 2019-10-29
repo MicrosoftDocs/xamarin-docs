@@ -73,10 +73,10 @@ The first change to the storyboard is deleting the existing Detail view and
 replacing it with a UITableViewController. Follow these steps:
 
 1. Select the bar at the bottom of the View Controller and delete it.
-2. Drag a **Navigation Controller** and a **Table View Controller** onto the Storyboard from the Toolbox. 
-3. Create a segue from the Root View Controller to the second Table View Controller that was just added. To create the segue, Control+drag *from the Detail cell* to the newly added UITableViewController. Choose the option  **Show** under  **Segue Selection**. 
-4. Select the new segue you created and give it an identifier to reference this segue in code. Click on the segue and enter `TaskSegue` for the  **Identifier** in the  **Properties Pad**, like this:    
-  [![Naming segue in property panel](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox) 
+2. Drag a **Navigation Controller** and a **Table View Controller** onto the Storyboard from the Toolbox.
+3. Create a segue from the Root View Controller to the second Table View Controller that was just added. To create the segue, Control+drag *from the Detail cell* to the newly added UITableViewController. Choose the option  **Show** under  **Segue Selection**.
+4. Select the new segue you created and give it an identifier to reference this segue in code. Click on the segue and enter `TaskSegue` for the  **Identifier** in the  **Properties Pad**, like this:
+  [![Naming segue in property panel](creating-tables-in-a-storyboard-images/image16a-sml.png)](creating-tables-in-a-storyboard-images/image16a.png#lightbox)
 
 5. Next, configure the two Table Views by selecting them and using the Properties Pad. Make sure to select View and not View Controller – you can use the Document Outline to help with selection.
 
@@ -84,7 +84,7 @@ replacing it with a UITableViewController. Follow these steps:
 
     [![Setting the Content property to dynamic prototypes](creating-tables-in-a-storyboard-images/image17a.png)](creating-tables-in-a-storyboard-images/image17a.png#lightbox)
 
-7. Change the new **UITableViewController** to be  **Content: Static Cells**. 
+7. Change the new **UITableViewController** to be  **Content: Static Cells**.
 
 8. The new UITableViewController must have its class name and
 identifier set. Select the View Controller and type _TaskDetailViewController_ for the **Class** in the **Properties Pad** – this will create a new `TaskDetailViewController.cs` file in the Solution Pad. Enter the **StoryboardID** as _detail_, as illustrated in the example below. This will be
@@ -114,10 +114,10 @@ Next, you'll need to create a button that will add new tasks, as illustrated bel
 
 [![bar button item in the navigation bar](creating-tables-in-a-storyboard-images/image23-sml.png)](creating-tables-in-a-storyboard-images/image23.png#lightbox)
 
-Do the following: 
+Do the following:
 
 - Drag a **Bar Button Item** from the Toolbox to the _right hand side of the navigation bar_.
-- In the **Properties Pad**, under **Bar Button Item** select  **Identifier: Add** (to make it a *+* plus button). 
+- In the **Properties Pad**, under **Bar Button Item** select  **Identifier: Add** (to make it a *+* plus button).
 - Give it a Name so that it can be identified in code at a later stage. Note that you will need to give the Root View Controller a Class Name (for example **ItemViewController**) to allow you to set the Bar button item's name.
 
 #### TaskDetail View Controller
@@ -132,7 +132,7 @@ The steps to build the complete layout are:
 
 Select the table view and open the **Property Pad**. Update the following properties:
 
-- **Sections**: _2_ 
+- **Sections**: _2_
 - **Style**: _Grouped_
 - **Separator**: _None_
 - **Selection**: _No Selection_
@@ -149,7 +149,7 @@ For each cell open the **Properties Pad** and set:
 
 In the second section, set **Rows** to _1_ and grab the bottom resize handle of the cell to make it taller.
 
-- **Set the Identifier**: to a unique value (eg. “save”). 
+- **Set the Identifier**: to a unique value (eg. “save”).
 - **Set the Background**:  _Clear Color_ .
 - Drag two buttons onto the cell and set their titles appropriately (i.e. _Save_ and _Delete_), as illustrated below:
 
@@ -186,7 +186,7 @@ public class Chores {
   }
 ```
 
-Next, create a `RootTableSource` class that inherits from `UITableViewSource`. 
+Next, create a `RootTableSource` class that inherits from `UITableViewSource`.
 
 The difference between this and a non-Storyboard table view is that the `GetView` method doesn’t need to instantiate any cells – `theDequeueReusableCell` method will always return an instance of the prototype cell (with matching identifier).
 
@@ -211,7 +211,7 @@ public override nint RowsInSection(UITableView tableview, nint section)
 
 public override UITableViewCell GetCell(UITableView tableView, NSIndexPath indexPath)
 {
-  // in a Storyboard, Dequeue will ALWAYS return a cell, 
+  // in a Storyboard, Dequeue will ALWAYS return a cell,
   var cell = tableView.DequeueReusableCell(cellIdentifier);
   // now set the properties as normal
   cell.TextLabel.Text = tableItems[indexPath.Row].Name;
@@ -334,7 +334,7 @@ the detail view. To instantiate a view from a storyboard use the `InstantiateVie
 for that view - in this example that will be 'detail':
 
 ```csharp
-public void CreateTask () 
+public void CreateTask ()
     {
       // first, add the task to the underlying data
       var newId = chores[chores.Count - 1].Id + 1;
@@ -361,9 +361,9 @@ this:
 
 The example demonstrates:
 
-- Creating a table with Prototype Content where cells are defined for re-use to display lists of data. 
-- Creating a table with Static Content to build an input form. This included changing the table style and adding sections, cells and UI controls. 
-- How to create a segue and override the  `PrepareForSegue` method to notify the target view of any parameters it requires. 
+- Creating a table with Prototype Content where cells are defined for re-use to display lists of data.
+- Creating a table with Static Content to build an input form. This included changing the table style and adding sections, cells and UI controls.
+- How to create a segue and override the  `PrepareForSegue` method to notify the target view of any parameters it requires.
 - Loading storyboard views directly with the  `Storyboard.InstantiateViewController` method.
 
 ## Related Links

@@ -28,7 +28,7 @@ The [FingerprintManager](https://developer.android.com/reference/android/hardwar
 The `FingerprintManager.Authenticate` method is used by an Android application to start the fingerprint scanner. The following snippet is an example of how to invoke it using the Support Library compatibility APIs:
 
 ```csharp
-// context is any Android.Content.Context instance, typically the Activity 
+// context is any Android.Content.Context instance, typically the Activity
 FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(context);
 fingerprintManager.Authenticate(FingerprintManager.CryptoObject crypto,
                                 int flags,
@@ -42,9 +42,9 @@ This guide will discuss how to use the `FingerprintManager` APIs to enhance an A
 
 ## Requirements
 
-Fingerprint Authentication requires Android 6.0 (API level 23) or higher and a device with a fingerprint scanner. 
+Fingerprint Authentication requires Android 6.0 (API level 23) or higher and a device with a fingerprint scanner.
 
-A fingerprint must already be enrolled with the device for each user that is to be authenticated. This involves setting up a screen lock that uses a password, PIN, swipe pattern, or facial recognition. It is possible to simulate some of the fingerprint authentication functionality in an Android Emulator.  For more information on these two topics, please see the [Enrolling a Fingerprint](enrolling-fingerprint.md) section. 
+A fingerprint must already be enrolled with the device for each user that is to be authenticated. This involves setting up a screen lock that uses a password, PIN, swipe pattern, or facial recognition. It is possible to simulate some of the fingerprint authentication functionality in an Android Emulator.  For more information on these two topics, please see the [Enrolling a Fingerprint](enrolling-fingerprint.md) section.
 
 ## Related Links
 

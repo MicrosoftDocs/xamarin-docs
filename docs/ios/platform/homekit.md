@@ -50,21 +50,21 @@ Do the following:
 1. Log into the [Apple Developer Portal](https://developer.apple.com).
 2. Click on **Certificates, Identifiers & Profiles**.
 3. If you haven't already done so, click on **Identifiers** and create an ID for your app (e.g. `com.company.appname`), else edit your existing ID.
-4. Ensure that the **HomeKit** service has been checked for the given ID: 
+4. Ensure that the **HomeKit** service has been checked for the given ID:
 
     [![](homekit-images/provision01.png "Enable the HomeKit service for the given ID")](homekit-images/provision01.png#lightbox)
 5. Save your changes.
-6. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for your app: 
+6. Click on **Provisioning Profiles** > **Development** and create a new development provisioning profile for your app:
 
     [![](homekit-images/provision02.png "Create a new development provisioning profile for the app")](homekit-images/provision02.png#lightbox)
 7. Either download and install the new provisioning profile or use Xcode to download and install the profile.
-8. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created: 
+8. Edit your Xamarin.iOS project options and ensure that you are using the provisioning profile that you just created:
 
     [![](homekit-images/provision03.png "Select provisioning profile just created")](homekit-images/provision03.png#lightbox)
-9. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile: 
+9. Next, edit your **Info.plist** file and ensure that you are using the App ID that was used to create the provisioning profile:
 
     [![](homekit-images/provision04.png "Set the App ID ")](homekit-images/provision04.png#lightbox)
-10. Finally, edit your **Entitlements.plist** file and ensure that the **HomeKit** entitlement has been selected: 
+10. Finally, edit your **Entitlements.plist** file and ensure that the **HomeKit** entitlement has been selected:
 
     [![](homekit-images/provision05.png "Enable the HomeKit entitlement")](homekit-images/provision05.png#lightbox)
 11. Save the changes to all files.
@@ -85,7 +85,7 @@ Apple provides the HomeKit Accessory Simulator as a separate download from Xcode
 Do the following:
 
 1. In a web browser, visit [Downloads for Apple Developers](https://developer.apple.com/download/more/?name=for%20Xcode)
-2. Download the **Additional Tools for Xcode xxx** (where xxx is the version of Xcode that you have installed): 
+2. Download the **Additional Tools for Xcode xxx** (where xxx is the version of Xcode that you have installed):
 
     [![](homekit-images/simulator01.png "Download the Additional Tools for Xcode")](homekit-images/simulator01.png#lightbox)
 3. Open the disk image and install the tools in your **Applications** directory.
@@ -96,22 +96,22 @@ With the HomeKit Accessory Simulator installed, virtual accessories can be creat
 
 To start the HomeKit Accessory Simulator and create a few virtual accessories, do the following:
 
-1. From the Applications folder, start the HomeKit Accessory Simulator: 
+1. From the Applications folder, start the HomeKit Accessory Simulator:
 
     [![](homekit-images/simulator02.png "The HomeKit Accessory Simulator")](homekit-images/simulator02.png#lightbox)
-2. Click the **+** button and select **New Accessory...**: 
+2. Click the **+** button and select **New Accessory...**:
 
     [![](homekit-images/simulator03.png "Add a new accessory")](homekit-images/simulator03.png#lightbox)
-3. Fill out the information about the new accessory and click the **Finish** button: 
+3. Fill out the information about the new accessory and click the **Finish** button:
 
     [![](homekit-images/simulator04.png "Fill out the information about the new accessory")](homekit-images/simulator04.png#lightbox)
-4. Click the **Add Service..** button, and select a service type from the dropdown: 
+4. Click the **Add Service..** button, and select a service type from the dropdown:
 
     [![](homekit-images/simulator05.png "Select a service type from the dropdown")](homekit-images/simulator05.png#lightbox)
-5. Provide a **Name** for the service and click the **Finish** button: 
+5. Provide a **Name** for the service and click the **Finish** button:
 
     [![](homekit-images/simulator06.png "Enter a Name for the service")](homekit-images/simulator06.png#lightbox)
-6. You can provide optional characteristics for a service by clicking the **Add Characteristic** button and configuring the required settings: 
+6. You can provide optional characteristics for a service by clicking the **Add Characteristic** button and configuring the required settings:
 
     [![](homekit-images/simulator07.png "Configuring the required settings")](homekit-images/simulator07.png#lightbox)
 7. Repeat the steps above to create one of each type of virtual home automation device that HomeKit supports.
@@ -129,10 +129,10 @@ To set this key, do the following:
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. At the bottom of the screen, switch to the **Source** view.
 3. Add a new **Entry** to the list.
-4. From the dropdown list, select **Privacy - HomeKit Usage Description**: 
+4. From the dropdown list, select **Privacy - HomeKit Usage Description**:
 
     [![](homekit-images/info02.png "Select Privacy - HomeKit Usage Description")](homekit-images/info02.png#lightbox)
-5. Enter a description for why the app wants to access the user's HomeKit database: 
+5. Enter a description for why the app wants to access the user's HomeKit database:
 
     [![](homekit-images/info03.png "Enter a description")](homekit-images/info03.png#lightbox)
 6. Save the changes to the file.

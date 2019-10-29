@@ -21,7 +21,7 @@ your existing iOS app, you can do that.   Or if you want to link it
 with a native C++ library, you can also do that.   Or consume .NET
 code from Java.
 
-.NET Embedding is based on the [Embeddinator-4000](https://github.com/mono/Embeddinator-4000) 
+.NET Embedding is based on the [Embeddinator-4000](https://github.com/mono/Embeddinator-4000)
 open source project.
 
 ## Environments and Languages

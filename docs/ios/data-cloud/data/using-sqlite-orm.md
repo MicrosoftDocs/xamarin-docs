@@ -154,7 +154,7 @@ var existingItem = db.Get<Stock>(3);
 
 ### Selecting an object using Linq
 
-Methods that return collections support IEnumerable\<T> so you can use Linq to query or sort the contents of a table. 
+Methods that return collections support IEnumerable\<T> so you can use Linq to query or sort the contents of a table.
 The following code shows an example using Linq to filter out all entries that begin with the letter “A”:
 
 ```csharp

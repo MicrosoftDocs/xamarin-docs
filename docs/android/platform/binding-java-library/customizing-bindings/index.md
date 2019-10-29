@@ -18,24 +18,24 @@ _You can customize an Xamarin.Android binding by editing the metadata that contr
 Xamarin.Android automates much of the binding process; however, in some
 cases manual modification is required to address the following issues:
 
-- Resolving build errors caused by missing types, obfuscated types, 
-    duplicate names, class visibility issues, and other situations that 
-    cannot be resolved by the Xamarin.Android tooling. 
+- Resolving build errors caused by missing types, obfuscated types,
+    duplicate names, class visibility issues, and other situations that
+    cannot be resolved by the Xamarin.Android tooling.
 
-- Changing the mapping that Xamarin.Android uses to bind the Android 
+- Changing the mapping that Xamarin.Android uses to bind the Android
     API to different types in C# (for example, many developers prefer to map
     Java `int` constants to C# `enum` constants).
 
-- Removing unused types that do not need to be bound. 
+- Removing unused types that do not need to be bound.
 
-- Adding types that have no counterpart in the underlying Java API. 
+- Adding types that have no counterpart in the underlying Java API.
 
 You can make some or all of these changes by modifying the metadata
 that controls the binding process.
 
 ## Guides
 
-The following guides describe the metadata that controls the binding process and 
+The following guides describe the metadata that controls the binding process and
 explain how to modify this metadata to address these issues:
 
 - [Java Bindings Metadata](~/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata.md)

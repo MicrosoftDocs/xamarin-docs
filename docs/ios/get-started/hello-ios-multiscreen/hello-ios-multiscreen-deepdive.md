@@ -120,7 +120,7 @@ Root view controller, like we did in the Phoneword app:
 ### Additional navigation options
 
 The navigation controller is a common way of handling navigation in
-iOS, but it is not the only option. For example, a 
+iOS, but it is not the only option. For example, a
 [Tab Bar Controller](~/ios/user-interface/controls/creating-tabbed-applications.md)
 can split an application into different functional areas and a
 [Split view controller](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/split_view/use_split_view_to_show_two_controllers)

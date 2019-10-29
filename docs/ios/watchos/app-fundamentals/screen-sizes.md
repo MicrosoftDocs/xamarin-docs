@@ -80,7 +80,7 @@ bool large = WKInterfaceDevice.CurrentDevice.ScreenBounds.Size.Width > 136.0;
 // Load image depending on screen size
 using (var image = UIImage.FromBundle (large ? "42mm-Walkway" : "38mm-Walkway"))
 {
-   myImage.SetImage (image); 
+   myImage.SetImage (image);
 }
 ```
 

@@ -59,7 +59,7 @@ You should successfully complete the [previous quickstart](database.md) before a
                                            Android={StaticResource AndroidNavigationBarColor}}" />
                  <Setter Property="BarTextColor"
                         Value="{OnPlatform iOS={StaticResource iOSNavigationBarTextColor},
-                                           Android={StaticResource AndroidNavigationBarTextColor}}" />           
+                                           Android={StaticResource AndroidNavigationBarTextColor}}" />
             </Style>
 
             <Style TargetType="{x:Type ContentPage}"
@@ -200,7 +200,7 @@ You should successfully complete the [previous quickstart](database.md) before a
                                            Android={StaticResource AndroidNavigationBarColor}}" />
                  <Setter Property="BarTextColor"
                         Value="{OnPlatform iOS={StaticResource iOSNavigationBarTextColor},
-                                           Android={StaticResource AndroidNavigationBarTextColor}}" />           
+                                           Android={StaticResource AndroidNavigationBarTextColor}}" />
             </Style>
 
             <Style TargetType="{x:Type ContentPage}"

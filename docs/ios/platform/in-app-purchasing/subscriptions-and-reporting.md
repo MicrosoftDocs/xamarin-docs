@@ -15,16 +15,16 @@ ms.date: 03/18/2017
 
 Non-renewing subscriptions are intended for products that represent the sale
 of a service with a time restriction (such as one week’s access to a
-navigation application or time-limited access to a data archive).   
-   
+navigation application or time-limited access to a data archive).
+
 Key differences between non-renewing subscriptions and other product
 types:
 
-- The product definition in iTunes Connect does not include the term. The application code must be able to infer the validity period from the Product ID. 
-- They can be purchased multiple times (like a consumable product). Applications are required to manage the subscription term/expiry and renewal, and prevent the user from buying overlapping subscriptions. 
-- The purchases are not supported by the StoreKit Restore function. If the subscription should be available across all a user’s devices, the application will have to design and implement this feature in conjunction with a remote server. Applications are also responsible for backing-up the subscription status for cases when a device is backed-up then restored-from-backup. 
+- The product definition in iTunes Connect does not include the term. The application code must be able to infer the validity period from the Product ID.
+- They can be purchased multiple times (like a consumable product). Applications are required to manage the subscription term/expiry and renewal, and prevent the user from buying overlapping subscriptions.
+- The purchases are not supported by the StoreKit Restore function. If the subscription should be available across all a user’s devices, the application will have to design and implement this feature in conjunction with a remote server. Applications are also responsible for backing-up the subscription status for cases when a device is backed-up then restored-from-backup.
 - Implementation Overview
-- Non-Renewing Subscriptions should normally be implemented using the Server-Delivered workflow and managed like Consumable products. 
+- Non-Renewing Subscriptions should normally be implemented using the Server-Delivered workflow and managed like Consumable products.
 
 ## About Free Subscriptions
 
@@ -62,8 +62,8 @@ The In-App Purchase Shared Secret must be used in the JSON request when
 verifying auto-renewable subscriptions on your server. The shared secret is
 created/accessed via iTunes Connect.
 
-From the iTunes Connect home page select **My Apps**:   
-   
+From the iTunes Connect home page select **My Apps**:
+
  [![](subscriptions-and-reporting-images/image2.png "Select My Apps")](subscriptions-and-reporting-images/image2.png#lightbox)  
 
 Select an application and click on the **In-App Purchases** tab:
@@ -71,10 +71,10 @@ Select an application and click on the **In-App Purchases** tab:
 [![](subscriptions-and-reporting-images/image6.png "Click on the In-App Purchases tab")](subscriptions-and-reporting-images/image6.png#lightbox)
 
 From the bottom of the page, select **View or generate a shared secret**:
-   
+
  [![](subscriptions-and-reporting-images/image40.png "Select View or generate a shared secret")](subscriptions-and-reporting-images/image40.png#lightbox)
 
- [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)   
+ [![](subscriptions-and-reporting-images/image41.png "Generate a shared secret")](subscriptions-and-reporting-images/image41.png#lightbox)
 
 To use the shared secret, include it in the JSON payload that is sent to
 Apple’s servers when validating an in-app purchase receipt for an
@@ -118,7 +118,7 @@ documentation for other error codes.
 You’ll get back multiple transactions – the original purchase transaction
 plus a separate transaction for each period of time the subscription was
 renewed. You need to track the start dates and terms to understand what the
-validity period is.   
+validity period is.
 
 The SKPaymentTransaction object does NOT
 include the subscription term – you should use a different Product ID for each
@@ -134,20 +134,20 @@ times while testing in the sandbox.
 
 ## Reporting
 
-iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com)) provides:   
-   
+iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com)) provides:
+
  **Sales and Trends** – Displays details of app downloads, updates and in-app
-purchases.   
-   
+purchases.
+
  **Payments and Financial Reports** – Details
 the income earned by your apps as well as listing payments that have been made
 to you and how much you are owed.
 
-An example Sales and Trends report is shown below:   
+An example Sales and Trends report is shown below:
 
- [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)   
-   
+ [![](subscriptions-and-reporting-images/image42.png "An example Sales and Trends report")](subscriptions-and-reporting-images/image42.png#lightbox)
+
  There’s also an  [**ITC Connect Mobile**iOS app (iTunes link)](https://itunes.apple.com/us/app/itunes-connect-mobile/id376771144?mt=8).
-iPhone screenshots for some of the statistics available are shown here:   
-   
+iPhone screenshots for some of the statistics available are shown here:
+
  [![](subscriptions-and-reporting-images/image43.png "iPhone screenshots for some of the statistics available")](subscriptions-and-reporting-images/image43.png#lightbox)

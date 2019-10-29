@@ -163,13 +163,13 @@ To implement a Custom User Notification UI in a Xamarin.iOS app, do the followin
 
 1. Open the app's solution in Visual Studio for Mac.
 2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **Add New Project**.
-3. Select **iOS** > **Extensions** > **Notification Content Extensions** and click the **Next** button: 
+3. Select **iOS** > **Extensions** > **Notification Content Extensions** and click the **Next** button:
 
     [![](advanced-user-notifications-images/notify01.png "Select Notification Content Extensions")](advanced-user-notifications-images/notify01.png#lightbox)
-4. Enter a **Name** for the extension and click the **Next** button: 
+4. Enter a **Name** for the extension and click the **Next** button:
 
     [![](advanced-user-notifications-images/notify02.png "Enter a Name for the extension")](advanced-user-notifications-images/notify02.png#lightbox)
-5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button: 
+5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button:
 
     [![](advanced-user-notifications-images/notify03.png "Adjust the Project Name and/or Solution Name")](advanced-user-notifications-images/notify03.png#lightbox)
 
@@ -245,7 +245,7 @@ The system needs to be informed on how to find the app's Notification Content Ex
 1. Double-click the Extension's `Info.plist` file in the **Solution Pad** to open it for editing.
 2. Switch to the **Source** view.
 3. Expand the `NSExtension` key.
-4. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite): 
+4. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite):
 
     [![](advanced-user-notifications-images/customui02.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02.png#lightbox)
 5. Save your changes.
@@ -254,7 +254,7 @@ The system needs to be informed on how to find the app's Notification Content Ex
 
 1. Double-click the Extension's `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Expand the `NSExtension` key.
-3. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite): 
+3. Add the `UNNotificationExtensionCategory` key as type **String** with the value of the category the Extension belongs to (in this example `event-invite):
 
     [![](advanced-user-notifications-images/customui02w.png "Add the UNNotificationExtensionCategory key")](advanced-user-notifications-images/customui02w.png#lightbox)
 4. Save your changes.

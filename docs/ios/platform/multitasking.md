@@ -183,7 +183,7 @@ public void NewEntry() {
 #endregion
 ```
 
-First, we override the `CanBecomeFirstResponder` property and return `true` so the View or View Controller can receive keyboard input. 
+First, we override the `CanBecomeFirstResponder` property and return `true` so the View or View Controller can receive keyboard input.
 
 Next, we override the `KeyCommands` property and create a new `UIKeyCommand` for the **Command-N** keystroke. When the keystroke is activated, we call the `NewEntry` method (that we expose to iOS 9 using the `Export` command) to perform the requested action.
 

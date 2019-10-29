@@ -11,7 +11,7 @@ ms.date: 09/10/2019
 
 # Setup Sign In with Apple for Xamarin.Forms
 
-This guide covers the series of steps needed to setup your cross-platform applications to take advanced of Sign In with Apple. While the Apple setup is straight forward in the Apple Developer Portal, additional steps are necessary to create a secure relationship between your Android and Apple. 
+This guide covers the series of steps needed to setup your cross-platform applications to take advanced of Sign In with Apple. While the Apple setup is straight forward in the Apple Developer Portal, additional steps are necessary to create a secure relationship between your Android and Apple.
 
 ## Apple developer setup
 

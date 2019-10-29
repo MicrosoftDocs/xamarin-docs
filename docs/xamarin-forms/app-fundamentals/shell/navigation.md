@@ -62,7 +62,7 @@ Routes can be defined on `FlyoutItem`, `Tab`, and `ShellContent` objects, throug
                       Route="bears" />
     </FlyoutItem>
     <ShellContent ...
-                  Route="about" />                  
+                  Route="about" />
     ...
 </Shell>
 ```
@@ -306,10 +306,10 @@ All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.Bi
 The `BackButtonBehavior` class can be consumed by setting the `Shell.BackButtonBehavior` attached property to a `BackButtonBehavior` object:
 
 ```xaml
-<ContentPage ...>    
+<ContentPage ...>
     <Shell.BackButtonBehavior>
         <BackButtonBehavior Command="{Binding BackCommand}"
-                            IconOverride="back.png" />   
+                            IconOverride="back.png" />
     </Shell.BackButtonBehavior>
     ...
 </ContentPage>

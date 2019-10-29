@@ -10,16 +10,16 @@ ms.date: 02/15/2018
 
 # Adding a Second Toolbar
 
-## Overview 
+## Overview
 
-The `Toolbar` can do more than replace the action bar &ndash; it can be 
-used multiple times within an Activity, it can be customized for 
-placement anywhere on the screen, and it can be configured to span only 
-a partial width of the screen. The examples below illustrate how to 
-create a second `Toolbar` and place it at the bottom of the screen. 
-This `Toolbar` implements **Copy**, **Cut**, and **Paste** menu items. 
+The `Toolbar` can do more than replace the action bar &ndash; it can be
+used multiple times within an Activity, it can be customized for
+placement anywhere on the screen, and it can be configured to span only
+a partial width of the screen. The examples below illustrate how to
+create a second `Toolbar` and place it at the bottom of the screen.
+This `Toolbar` implements **Copy**, **Cut**, and **Paste** menu items.
 
-## Define the Second Toolbar 
+## Define the Second Toolbar
 
 Edit the layout file **Main.axml** and replace its contents with
 with the following XML:
@@ -53,9 +53,9 @@ with the following XML:
 </RelativeLayout>
 ```
 
-This XML adds a second `Toolbar` to the bottom of the screen with an 
-empty `ImageView` filling the middle of the screen. The height of this 
-`Toolbar` is set to the height of an action bar: 
+This XML adds a second `Toolbar` to the bottom of the screen with an
+empty `ImageView` filling the middle of the screen. The height of this
+`Toolbar` is set to the height of an action bar:
 
 ```xml
 android:minHeight="?android:attr/actionBarSize"
@@ -75,38 +75,38 @@ Notice that this `Toolbar` is based on a different theme
 &ndash; it isn't bound to the Activity's window decor or to the theme
 used in the first `Toolbar`.
 
-Edit **Resources/values/styles.xml** and add the following accent color 
-to the style definition: 
+Edit **Resources/values/styles.xml** and add the following accent color
+to the style definition:
 
 ```xml
 <item name="android:colorAccent">#C7A935</item>
 ```
 
-This gives the bottom toolbar a dark amber color. Building and running 
-the app displays a blank second toolbar at the bottom of the screen: 
+This gives the bottom toolbar a dark amber color. Building and running
+the app displays a blank second toolbar at the bottom of the screen:
 
 [![Screenshot of app with yellow second toolbar at the bottom of the screen](adding-a-second-toolbar-images/01-second-toolbar-sml.png)](adding-a-second-toolbar-images/01-second-toolbar.png#lightbox)
 
-## Add Edit Menu Items 
+## Add Edit Menu Items
 
-This section explains how to add edit menu items to the bottom 
-`Toolbar`. 
+This section explains how to add edit menu items to the bottom
+`Toolbar`.
 
-To add menu items to a secondary `Toolbar`: 
+To add menu items to a secondary `Toolbar`:
 
-1. Add menu icons to the `mipmap-` folders of the app 
+1. Add menu icons to the `mipmap-` folders of the app
     project (if required).
 
-2. Define the contents of the menu items by adding an additional 
-    menu resource file to **Resources/menu**. 
+2. Define the contents of the menu items by adding an additional
+    menu resource file to **Resources/menu**.
 
-3. In the Activity's `OnCreate` method, find the `Toolbar` 
+3. In the Activity's `OnCreate` method, find the `Toolbar`
     (by calling `FindViewById`) and inflate the `Toolbar`'s menus.
 
-4. Implement a click handler in `OnCreate` for the new menu items. 
+4. Implement a click handler in `OnCreate` for the new menu items.
 
-The following sections demonstrate this process in detail: **Cut**, 
-**Copy**, and **Paste** menu items are added to the bottom `Toolbar`. 
+The following sections demonstrate this process in detail: **Cut**,
+**Copy**, and **Paste** menu items are added to the bottom `Toolbar`.
 
 ### Define the Edit Menu Resource
 
@@ -135,14 +135,14 @@ the contents with the following XML:
 </menu>
 ```
 
-This XML creates the **Cut**, **Copy**, and **Paste** menu items (using 
-icons that were added to the `mipmap-` folders in 
+This XML creates the **Cut**, **Copy**, and **Paste** menu items (using
+icons that were added to the `mipmap-` folders in
 [Replacing the Action Bar](~/android/user-interface/controls/tool-bar/replacing-the-action-bar.md)).
 
 ### Inflate the Menus
 
-At the end of the `OnCreate` method in **MainActivity.cs**, add the 
-following lines of code: 
+At the end of the `OnCreate` method in **MainActivity.cs**, add the
+following lines of code:
 
 ```csharp
 var editToolbar = FindViewById<Toolbar>(Resource.Id.edit_toolbar);
@@ -153,26 +153,26 @@ editToolbar.MenuItemClick += (sender, e) => {
 };
 ```
 
-This code locates the `edit_toolbar` view defined in **Main.axml**, 
-sets its title to **Editing**, and inflates its menu items (defined in 
-**edit_menus.xml**). It defines a menu click handler that displays a 
-toast to indicate which editing icon was tapped. 
+This code locates the `edit_toolbar` view defined in **Main.axml**,
+sets its title to **Editing**, and inflates its menu items (defined in
+**edit_menus.xml**). It defines a menu click handler that displays a
+toast to indicate which editing icon was tapped.
 
-Build and run the app. When the app runs, the text and icons added 
-above will appear as shown here: 
+Build and run the app. When the app runs, the text and icons added
+above will appear as shown here:
 
 [![Diagram of bottom Toolbar with Cut, Copy, and Paste icons](adding-a-second-toolbar-images/02-bottom-toolbar-sml.png)](adding-a-second-toolbar-images/02-bottom-toolbar.png#lightbox)
 
-Tapping the **Cut** menu icon causes the following toast to be 
-displayed: 
+Tapping the **Cut** menu icon causes the following toast to be
+displayed:
 
 [![Screenshot of Toast indicating that the Cut menu icon was tapped](adding-a-second-toolbar-images/03-bottom-tapped-sml.png)](adding-a-second-toolbar-images/03-bottom-tapped.png#lightbox)
 
-Tapping menu items on either toolbar displays the resulting toasts: 
+Tapping menu items on either toolbar displays the resulting toasts:
 
 [![Screenshots of Toasts for Save, Copy, and Paste menu items being tapped](adding-a-second-toolbar-images/04-menu-action-sml.png)](adding-a-second-toolbar-images/04-menu-action.png#lightbox)
 
-## The Up Button 
+## The Up Button
 
 Most Android apps rely on the **Back** button for app navigation;
 pressing the **Back** button takes the user to the previous screen.
@@ -181,7 +181,7 @@ easy for users to navigate "up" to the app's main screen. When the user
 selects the **Up** button, the user moves up to a higher level in the
 app hierarchy &ndash; that is, the app pops the user back multiple
 activities in the back stack rather than popping back to the
-previously-visited Activity. 
+previously-visited Activity.
 
 To enable the **Up** button in a second activity that uses a `Toolbar`
 as its action bar, call the `SetDisplayHomeAsUpEnabled` and
@@ -195,13 +195,13 @@ ActionBar.SetDisplayHomeAsUpEnabled (true);
 ActionBar.SetHomeButtonEnabled (true);
 ```
 
-The [Support v7 Toolbar](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar) 
-code sample demonstrates the **Up** button in action. This sample 
-(which uses the AppCompat library described next) implements a second 
-activity that uses the Toolbar **Up** button for hierarchical 
-navigation back to the previous activity. In this example, the 
-`DetailActivity` home button enables the **Up** button by making the 
-following `SupportActionBar` method calls: 
+The [Support v7 Toolbar](https://docs.microsoft.com/samples/xamarin/monodroid-samples/supportv7-appcompat-toolbar)
+code sample demonstrates the **Up** button in action. This sample
+(which uses the AppCompat library described next) implements a second
+activity that uses the Toolbar **Up** button for hierarchical
+navigation back to the previous activity. In this example, the
+`DetailActivity` home button enables the **Up** button by making the
+following `SupportActionBar` method calls:
 
 ```csharp
 SetSupportActionBar (toolbar);
@@ -216,10 +216,10 @@ as shown in the screenshot:
 
 [![Screenshot example of an Up button left arrow in the toolbar](adding-a-second-toolbar-images/05-up-button-sml.png)](adding-a-second-toolbar-images/05-up-button.png#lightbox)
 
-Tapping this **Up** button causes the app to return to `MainActivity`. 
-In a more complex app with multiple levels of hierarchy, tapping this 
-button would return the user to the next highest level in the app 
-rather than to the previous screen. 
+Tapping this **Up** button causes the app to return to `MainActivity`.
+In a more complex app with multiple levels of hierarchy, tapping this
+button would return the user to the next highest level in the app
+rather than to the previous screen.
 
 ## Related Links
 

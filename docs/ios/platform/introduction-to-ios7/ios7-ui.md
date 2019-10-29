@@ -150,7 +150,7 @@ public override void ViewDidLayoutSubviews ()
 {
     base.ViewDidLayoutSubviews ();
 
-    if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
+    if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
         nfloat displacement_y = this.TopLayoutGuide.Length;
 
         //load subviews with displacement
@@ -187,7 +187,7 @@ Because full-screen content is the default, applications configured for iOS 6 wi
 Modifying the `UIViewController.EdgesForExtendedLayout` property adjusts for this behavior. We can specify that the view not fill any edges, so our view will avoid displaying content in the space occupied by navigation or toolbars (at every orientation):
 
 ```csharp
-if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) { 
+if (UIDevice.CurrentDevice.CheckSystemVersion (7, 0)) {
     this.EdgesForExtendedLayout = UIRectEdge.None;
 }
 ```

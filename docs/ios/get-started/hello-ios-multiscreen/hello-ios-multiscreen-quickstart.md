@@ -91,7 +91,7 @@ handles to make the new **Button** the same width as the **Call Button**:
     ![](hello-ios-multiscreen-quickstart-images/14new.png "The CallHistoryController.cs file in the Solution Pad")
 
 13. Double-click on the **CallHistoryController.cs** file to open it and replace the contents with the following code:
-    
+
     ```csharp
     using System;
     using Foundation;

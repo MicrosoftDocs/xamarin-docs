@@ -354,8 +354,8 @@ This document discussed the different CPU architectures that an Android
 application may run on. It introduced the Application Binary Interface
 and how it is used by Android to support disparate CPU architectures.
 It then went on to discuss how to specify ABI support in a
-Xamarin.Android application and highlighted the issues that arise 
-when using Xamarin.Android applications on an `armeabi-v7a` device that 
+Xamarin.Android application and highlighted the issues that arise
+when using Xamarin.Android applications on an `armeabi-v7a` device that
 are intended only for `armeabi`.
 
 ## Related Links

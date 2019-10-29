@@ -43,19 +43,19 @@ scheme for maps supports several other options.
 The code above used the geo scheme to create a URI. This URI scheme
 supports several formats, as listed below:
 
-- `geo:latitude,longitude` &ndash; Opens the maps application 
-    centered at a lat/lon. 
+- `geo:latitude,longitude` &ndash; Opens the maps application
+    centered at a lat/lon.
 
-- `geo:latitude,longitude?z=zoom` &ndash; Opens the maps application 
+- `geo:latitude,longitude?z=zoom` &ndash; Opens the maps application
     centered at a lat/lon and zoomed to the specified level. The zoom level
     can range from 1 to 23: 1 displays the entire Earth and 23 is the
     closest zoom level.
 
-- `geo:0,0?q=my+street+address` &ndash; Opens the maps application to 
-    the location of a street address. 
+- `geo:0,0?q=my+street+address` &ndash; Opens the maps application to
+    the location of a street address.
 
-- `geo:0,0?q=business+near+city` &ndash; Opens the maps application 
-    and displays the annotated search results. 
+- `geo:0,0?q=business+near+city` &ndash; Opens the maps application
+    and displays the annotated search results.
 
 The versions of the URI that take a query (namely the street address or
 search terms) use Google's geocoder service to retrieve the location
@@ -106,7 +106,7 @@ As you can see, there are several parameters supported, as listed below:
 - `yaw` &ndash; Center-of-view of street view panorama, measured
     clockwise in degrees from North.
 
-- `zoom` &ndash; Zoom multiplier for street view panorama, where 
+- `zoom` &ndash; Zoom multiplier for street view panorama, where
     1.0 = normal zoom, 2.0 = zoomed 2x, 3.0 = zoomed 4x, etc.
 
 - `mz` &ndash; The map zoom level that will be used when going to the

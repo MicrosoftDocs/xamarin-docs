@@ -30,7 +30,7 @@ The iOS App Store has had a complete redesign, which not only allows users to ef
 ## App Icon Updates
 
 > [!NOTE]
-> App icons should now be delivered by an _Asset Catalog_. 
+> App icons should now be delivered by an _Asset Catalog_.
 
 For information on using asset catalogs refer to the [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) guide. For help with migrating icons from an Info.plist to an Asset catalog, see the [Migrating from Info.plist to Asset Catalogs](~/ios/app-fundamentals/images-icons/app-icons.md) guide.
 

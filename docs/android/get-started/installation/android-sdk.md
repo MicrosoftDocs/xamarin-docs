@@ -40,7 +40,7 @@ To use the Xamarin Android SDK Manager, you will need the following:
   Studio 2017 version 15.7 or later is required.
 
 - Visual Studio Tools for Xamarin version 4.10.0 or later
-  (installed as part of the **Mobile development with .NET** workload). 
+  (installed as part of the **Mobile development with .NET** workload).
 
 The Xamarin Android SDK Manager also requires the Java Development Kit
 (which is automatically installed with Xamarin.Android). There are
@@ -55,13 +55,13 @@ several JDK alternatives to choose from:
     if you are developing specifically for API level 23 or earlier.
 
 - If you are using Visual Studio 15.8 Preview 5 or later, you can try
-    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) 
+    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md)
     rather than JDK 8.
 
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
 
-## SDK Manager 
+## SDK Manager
 
 To start the SDK Manager in Visual Studio, click **Tools > Android >
 Android SDK Manager**:
@@ -85,9 +85,9 @@ be configured correctly before the **Platforms** and **Tools** tabs
 will function properly. You may need to set the location of the Android
 SDK for one or more of the following reasons:
 
-1. The Android SDK Manager was unable to locate the Android SDK. 
+1. The Android SDK Manager was unable to locate the Android SDK.
 
-2. You have installed the Android SDK in a alternate (non-default) location. 
+2. You have installed the Android SDK in a alternate (non-default) location.
 
 To set the location of the Android SDK, click the ellipsis (&hellip;)
 button to the far right of **Android SDK Location**. This opens the
@@ -140,7 +140,7 @@ levels, see
 
 When all components of a platform are installed, a checkmark appears next
 to the platform name. If not all components of a platform are
-installed, the box for that platform is filled. 
+installed, the box for that platform is filled.
 You can expand a platform to see its components (and which components
 are installed) by clicking the **+** box to the left of the platform.
 Click **-** to unexpand the component listing for a platform.
@@ -217,7 +217,7 @@ several JDK alternatives to choose from:
 > [!IMPORTANT]
 > Xamarin.Android does not support JDK 9.
 
-## SDK Manager 
+## SDK Manager
 
 To start the SDK Manager in Visual Studio for Mac, click **Tools > SDK Manager**:
 
@@ -245,7 +245,7 @@ green checkmark icon next to the path:
 [![Screenshot of the Locations tab](android-sdk-images/mac/03-locations-tab-m75-sml.png)](android-sdk-images/mac/03-locations-tab-m75.png#lightbox)
 
 Click the **Reset to Defaults** button to cause the SDK Manager to look
-for the SDK, NDK, and JDK at their default locations. 
+for the SDK, NDK, and JDK at their default locations.
 
 Typically, you use the **Locations** tab to modify the location of the
 Android SDK and/or the Java JDK. You do not need to install the NDK to
@@ -292,7 +292,7 @@ levels, see [Understanding Android API Levels](~/android/app-fundamentals/androi
 
 When all components of a platform are installed, a checkmark appears next
 to the platform name. If not all components of a platform are
-installed, the box for that platform is filled. 
+installed, the box for that platform is filled.
 You can expand a platform to see its components (and which components
 are installed) by clicking the **arrow** to the left of the platform.
 Click **down arrow** to unexpand the component listing for a platform.

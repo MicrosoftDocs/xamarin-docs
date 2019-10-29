@@ -21,13 +21,13 @@ These methods are generally used for rendering bitmaps that form part of user-in
 
 `DrawBitmapNinePatch` is a special case of `DrawBitmapLattice` but it is the easier of the two methods to use and understand.
 
-## The nine-patch display 
+## The nine-patch display
 
 Conceptually, [`DrawBitmapNinePatch`](xref:SkiaSharp.SKCanvas.DrawBitmapNinePatch(SkiaSharp.SKBitmap,SkiaSharp.SKRectI,SkiaSharp.SKRect,SkiaSharp.SKPaint)) divides a bitmap into nine rectangles:
 
 ![Nine Patch](segmented-images/NinePatch.png "Nine Patch")
 
-The rectangles at the four corners are displayed in their pixel sizes. As the arrows indicate, the other areas on the edges of the bitmap are stretched horizontally or vertically to the area of the destination rectangle. The rectangle in the center is stretched both horizontally and vertically. 
+The rectangles at the four corners are displayed in their pixel sizes. As the arrows indicate, the other areas on the edges of the bitmap are stretched horizontally or vertically to the area of the destination rectangle. The rectangle in the center is stretched both horizontally and vertically.
 
 If there is not enough space in the destination rectangle to display even the four corners in their pixel dimensions, then they are scaled down to the available size and nothing but the four corners are displayed.
 
@@ -114,7 +114,7 @@ SKRectI centerRect = new SKRectI(150, 150, 350, 350);
 
 ## The lattice display
 
-The two `DrawBitmapLattice` methods are similar to `DrawBitmapNinePatch`, but they are generalized for any number of horizontal or vertical divisions. These divisions are defined by arrays of integers corresponding to pixels. 
+The two `DrawBitmapLattice` methods are similar to `DrawBitmapNinePatch`, but they are generalized for any number of horizontal or vertical divisions. These divisions are defined by arrays of integers corresponding to pixels.
 
 The [`DrawBitmapLattice`](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,System.Int32[],System.Int32[],SkiaSharp.SKRect,SkiaSharp.SKPaint)) method with parameters for these arrays of integers does not seem to work. The [`DrawBitmapLattice`](xref:SkiaSharp.SKCanvas.DrawBitmapLattice(SkiaSharp.SKBitmap,SkiaSharp.SKLattice,SkiaSharp.SKRect,SkiaSharp.SKPaint)) method with a parameter of type `SKLattice` does work, and that's the one used in the samples shown below.
 
@@ -163,7 +163,7 @@ public class LatticeNinePatchPage : ContentPage
         SKLattice lattice = new SKLattice();
         lattice.XDivs = new int[] { 100, 400 };
         lattice.YDivs = new int[] { 100, 400 };
-        lattice.Flags = new SKLatticeFlags[9]; 
+        lattice.Flags = new SKLatticeFlags[9];
 
         canvas.DrawBitmapLattice(bitmap, lattice, info.Rect);
     }
@@ -218,7 +218,7 @@ The `XDivs` and `YDivs` arrays are somewhat different, causing the display to be
 
 In the iOS and Android images on the left, only the smaller circles are rendered in their pixel sizes. Everything else is stretched.
 
-The **Lattice Display** page generalizes the creation of the `Flags` array, allowing you to experiment with `XDivs` and `YDivs` more easily. In particular, you'll want to see what happens when you set the first element of the `XDivs` or `YDivs` array to 0. 
+The **Lattice Display** page generalizes the creation of the `Flags` array, allowing you to experiment with `XDivs` and `YDivs` more easily. In particular, you'll want to see what happens when you set the first element of the `XDivs` or `YDivs` array to 0.
 
 ## Related links
 

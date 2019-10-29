@@ -39,7 +39,7 @@ If you are using the iOS Designer to create your UI, the Activity Indicator can 
 
 Use the `StartAnimating()` and `StopAnimating()` methods to start and stop the activity indicator animation.
 
-Set the `HidesWhenStopped` property to `true` to make the activity indicator disappear after `StopAnimating()` has been called. This is set to `true` by default. At any point you can see if the Activity Indicator is running its spinning animation by checking the `IsAnimating` property. 
+Set the `HidesWhenStopped` property to `true` to make the activity indicator disappear after `StopAnimating()` has been called. This is set to `true` by default. At any point you can see if the Activity Indicator is running its spinning animation by checking the `IsAnimating` property.
 
 ### Managing Activity Indicator Appearances
 
@@ -101,5 +101,5 @@ progressBar = new UIProgressView(UIProgressViewStyle.Default)
                 ProgressTintColor = UIColor.Cyan,
                 TrackImage = UIImage.FromBundle("TrackImage"),
                 TrackTintColor = UIColor.Magenta
-            }; 
+            };
 ```

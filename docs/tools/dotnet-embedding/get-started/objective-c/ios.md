@@ -91,7 +91,7 @@ Open **ViewController.m**, and replace the contents with:
 @end
 ```
 
-.NET Embedding does not currently support bitcode on iOS, which is enabled for some Xcode project templates. 
+.NET Embedding does not currently support bitcode on iOS, which is enabled for some Xcode project templates.
 
 Disable it in your project settings:
 

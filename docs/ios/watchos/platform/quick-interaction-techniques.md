@@ -29,13 +29,13 @@ The following are a few examples of typical quick interactions on the Apple Watc
 
 To achieve these goals, an app on the Apple Watch must be:
 
-- **Glanceable** - Which means that with a quick glance the user should be able to get the information that they need. 
+- **Glanceable** - Which means that with a quick glance the user should be able to get the information that they need.
 - **Actionable** - Which means users should be able to make quick, well-informed decisions.
 - **Responsive** - Which means the user should never wait to receive the info that they need or to achieve the action they desire.
 
 ### Quick Interactions Length
 
-Because of the glanceable nature of Apple Watch apps, Apple suggests that the ideal length of a quick interaction should be two seconds or less. As a result of this two second limit, the developer will need to spend a considerable amount of time both designing and implementing an Apple Watch app. 
+Because of the glanceable nature of Apple Watch apps, Apple suggests that the ideal length of a quick interaction should be two seconds or less. As a result of this two second limit, the developer will need to spend a considerable amount of time both designing and implementing an Apple Watch app.
 
 ## New watchOS 3 Features and APIs
 
@@ -43,7 +43,7 @@ Apple has added several new features and APIs to WatchKit to assist the develope
 
 - watchOS 3 provides access to new kinds of user input such as:
   - Gesture Recognizers
-  - Digital Crown rotation 
+  - Digital Crown rotation
 - watchOS 3 provides new ways of displaying and updating information, such as:
   - Enhanced Table navigation
   - New User Notification framework support
@@ -169,7 +169,7 @@ If the user is scrolling up, WatchKit will return positive deltas and if scrolli
 
 #### Digital Crown Focus
 
-Just like any other interface elements, the Digital Crown has the concept of Focus. This Focus can be shifted away from the Digital Crown to other interface elements based on how the user is interacting with the watch. 
+Just like any other interface elements, the Digital Crown has the concept of Focus. This Focus can be shifted away from the Digital Crown to other interface elements based on how the user is interacting with the watch.
 
 For example, any of the following controls could steal the Focus of the Digital Crown:
 
@@ -256,7 +256,7 @@ From this point, working with either the SpriteKit or SceneKit scenes works the 
 
 ## Actionable Complications
 
-In watchOS 2, Apple introduced Complications for 3rd party apps. In watchOS 3, Apple has expanded the abilities that a developer can include in a WatchKit Complication. 
+In watchOS 2, Apple introduced Complications for 3rd party apps. In watchOS 3, Apple has expanded the abilities that a developer can include in a WatchKit Complication.
 
 Additionally, more of the built in watch faces can now include Complications and existing watch faces that already supported Complications can now included even more Complications.
 
@@ -315,7 +315,7 @@ Where this specifically becomes an issue is when the watch app is doing any type
 4. Some time later, the transaction completes and the app displays a purchase conformation.
 5. The user drops their wrist and disengages with the app.
 
-From the time the user taps the buy button until the transaction is completed, they have their wrist raised looking at a loading indicator. To solve this situation, Apple suggests that the developer should present instant feedback to the user instead of showing a loading indicator. 
+From the time the user taps the buy button until the transaction is completed, they have their wrist raised looking at a loading indicator. To solve this situation, Apple suggests that the developer should present instant feedback to the user instead of showing a loading indicator.
 
 Using Apple's suggested model, take a look at the same quick interaction again:
 

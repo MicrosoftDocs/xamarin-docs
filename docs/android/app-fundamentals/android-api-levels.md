@@ -168,7 +168,7 @@ information:
     run on.
 
 - The *minimum* Android API level that an Android device must
-    have to run your app. 
+    have to run your app.
 
 These settings are used to ensure that the functionality needed to run
 the app correctly is available on the Android device at installation
@@ -203,8 +203,8 @@ see [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
 
 The *Target Framework* (also known as `compileSdkVersion`) is the
 specific Android framework version (API level) that your app is
-compiled for at build time. This setting specifies what APIs your 
-app *expects* to use when it runs, but it has no effect on which APIs 
+compiled for at build time. This setting specifies what APIs your
+app *expects* to use when it runs, but it has no effect on which APIs
 are actually available to your app when it is installed. As a result,
 changing the Target Framework setting does not change runtime behavior.
 
@@ -322,7 +322,7 @@ breaking it (this is how Android provides forward compatibility).
 
 The Target Framework and the Target Android version, while having very
 similar names, are not the same thing. The Target Framework setting
-communicates target API level information to Xamarin.Android for use 
+communicates target API level information to Xamarin.Android for use
 at *compile time*, while the Target Android version communicates target
 API level information to Android for use at *run time* (when the app is
 installed and running on a device).
@@ -420,8 +420,8 @@ In this example, our app's Target Framework is set to **Android 5.0
 4.1 (API Level 16)**. Because `SetCategory` is available in API level
 `Android.OS.BuildVersionCodes.Lollipop` and later, this example code
 will call `SetCategory` only when it is actually available &ndash; it
-will *not* attempt to call `SetCategory` when the API level 
-is 16, 17, 18, 19, or 20. The functionality is reduced on these earlier 
+will *not* attempt to call `SetCategory` when the API level
+is 16, 17, 18, 19, or 20. The functionality is reduced on these earlier
 Android versions only to the extent that notifications are not sorted properly
 (because they are not categorized by type), yet the notifications are
 still published to alert the user. Our app still works, but its
@@ -479,7 +479,7 @@ That is because there is no **Build > Android Application** page:
 The Minimum Android version and Target Android version settings are
 not available because the resulting library is not a stand-alone app &ndash;
 the library could be run on any Android version, depending on the app
-that it is packaged with. You can specify how the library is to 
+that it is packaged with. You can specify how the library is to
 be *compiled*, but you can't predict which platform API level the library
 will be run on. With this in mind, the following best practices should
 be observed when consuming or creating libraries:
@@ -506,8 +506,8 @@ range of Android versions.
 
 This guide explained how Android API levels are used to manage app
 compatibility across different versions of Android. It provided
-detailed steps for configuring the 
-Xamarin.Android *Target Framework*, *Minimum Android version*, 
+detailed steps for configuring the
+Xamarin.Android *Target Framework*, *Minimum Android version*,
 and *Target Android version* project
 settings. It provided instructions for using the Android SDK Manager to
 install SDK packages, included examples of how to write code to deal

@@ -15,13 +15,13 @@ and support 32 and 64-bit applications with the same binary. The Unified
 API is used by default in new Xamarin.iOS and Xamarin.Mac projects.
 
 > [!IMPORTANT]
-> The Xamarin Classic API, which preceded the Unified API, has been 
-> deprecated. 
+> The Xamarin Classic API, which preceded the Unified API, has been
+> deprecated.
 >
 > - The last version of Xamarin.iOS to support the Classic API
 >   (monotouch.dll) was Xamarin.iOS 9.10.
 > - Xamarin.Mac still supports the Classic API, but it is no longer
->   updated. Since it is deprecated, developers should move their 
+>   updated. Since it is deprecated, developers should move their
 >   applications to the Unified API.
 
 ## Updating Classic API-based Apps

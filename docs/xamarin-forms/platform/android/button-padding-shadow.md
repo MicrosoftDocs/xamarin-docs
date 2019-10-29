@@ -22,7 +22,7 @@ This Android platform-specific controls whether Xamarin.Forms buttons use the de
         ...
         <Button ...
                 android:Button.UseDefaultPadding="true"
-                android:Button.UseDefaultShadow="true" />         
+                android:Button.UseDefaultShadow="true" />
     </StackLayout>
 </ContentPage>
 ```

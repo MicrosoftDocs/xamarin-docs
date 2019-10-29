@@ -272,7 +272,7 @@ The `OnImageTapped` event handler is executed in response to an [`Image`](xref:X
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CarouselViewDemos.Views.HorizontalTemplateLayoutRTLPage"
              Title="Horizontal layout (RTL FlowDirection)"
-             FlowDirection="RightToLeft">    
+             FlowDirection="RightToLeft">
     <CarouselView ItemsSource="{Binding Monkeys}">
         ...
     </CarouselView>

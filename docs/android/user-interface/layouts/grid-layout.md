@@ -31,7 +31,7 @@ The following XML adds several `TextView` controls to a *GridLayout*.
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"    
+        android:layout_height="match_parent"
         android:rowCount="2"
         android:columnCount="2">
      <TextView
@@ -69,7 +69,7 @@ like this:
 ```xml
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"    
+        android:layout_height="match_parent"
         android:rowCount="2"
         android:columnCount="2"
         android:orientation="vertical">
@@ -95,7 +95,7 @@ the orientation.
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"    
+        android:layout_height="match_parent"
         android:rowCount="2"
         android:columnCount="2">
      <TextView
@@ -145,7 +145,7 @@ that provides spacing between the `TextViews`.
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"    
+        android:layout_height="match_parent"
         android:rowCount="3"
         android:columnCount="2"
         android:orientation="vertical">
@@ -157,22 +157,22 @@ that provides spacing between the `TextViews`.
      <TextView
             android:text="Cell 1"
             android:textSize="14dip"
-            android:layout_row="0"        
+            android:layout_row="0"
             android:layout_column="1" />
      <Space
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_width="50dp"         
-            android:layout_height="50dp" />    
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
      <TextView
             android:text="Cell 2"
             android:textSize="14dip"
-            android:layout_row="2"        
+            android:layout_row="2"
             android:layout_column="0" />
      <TextView
             android:text="Cell 3"
             android:textSize="14dip"
-            android:layout_row="2"        
+            android:layout_row="2"
             android:layout_column="1" />
 </GridLayout>
 ```
@@ -193,7 +193,7 @@ and rows. For example, say we add another row containing a button to the `GridLa
 <?xml version="1.0" encoding="utf-8"?>
 <GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"    
+        android:layout_height="match_parent"
         android:rowCount="4"
         android:columnCount="2"
         android:orientation="vertical">
@@ -205,26 +205,26 @@ and rows. For example, say we add another row containing a button to the `GridLa
      <TextView
             android:text="Cell 1"
             android:textSize="14dip"
-            android:layout_row="0"        
+            android:layout_row="0"
             android:layout_column="1" />
      <Space
             android:layout_row="1"
             android:layout_column="0"
-            android:layout_width="50dp"        
-            android:layout_height="50dp" />   
+            android:layout_width="50dp"
+            android:layout_height="50dp" />
      <TextView
             android:text="Cell 2"
             android:textSize="14dip"
-            android:layout_row="2"        
+            android:layout_row="2"
             android:layout_column="0" />
      <TextView
             android:text="Cell 3"
-            android:textSize="14dip"        
-            android:layout_row="2"        
+            android:textSize="14dip"
+            android:layout_row="2"
             android:layout_column="1" />
      <Button
             android:id="@+id/myButton"
-            android:text="@string/hello"        
+            android:text="@string/hello"
             android:layout_row="3"
             android:layout_column="0" />
 </GridLayout>
@@ -241,7 +241,7 @@ span two columns by setting its columnspan like this:
 ```xml
 <Button
     android:id="@+id/myButton"
-    android:text="@string/hello"       
+    android:text="@string/hello"
     android:layout_row="3"
     android:layout_column="0"
     android:layout_columnSpan="2" />

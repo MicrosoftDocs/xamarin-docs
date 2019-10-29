@@ -23,12 +23,12 @@ and connected to your PC or Mac.
 
 ## Debug Application
 
-Once a device is connected to your computer, debugging a 
-Xamarin.Android application is done in the same way as any other 
-Xamarin product or .NET application. Ensure that the **Debug** 
-configuration and the external device is selected in the IDE, this will 
-ensure that the necessary debug symbols are available and that the IDE 
-can connect to the running application: 
+Once a device is connected to your computer, debugging a
+Xamarin.Android application is done in the same way as any other
+Xamarin product or .NET application. Ensure that the **Debug**
+configuration and the external device is selected in the IDE, this will
+ensure that the necessary debug symbols are available and that the IDE
+can connect to the running application:
 
 # [Visual Studio](#tab/windows)
 
@@ -38,11 +38,11 @@ Next, a breakpoint is set in the code:
 
 ![Breakpoint set at line of code](debug-on-device-images/image2-vs.png)
 
-Once the device has been selected, Xamarin.Android will connect to the 
-device, deploy the application, and then run it. When the breakpoint is 
-reached, the debugger will stop the application, allowing the 
-application to be debugged in a fashion similar to any other C# 
-application: 
+Once the device has been selected, Xamarin.Android will connect to the
+device, deploy the application, and then run it. When the breakpoint is
+reached, the debugger will stop the application, allowing the
+application to be debugged in a fashion similar to any other C#
+application:
 
 ![Breakpoint reached](debug-on-device-images/image3-vs.png)
 
@@ -54,11 +54,11 @@ Next, a breakpoint is set in the code:
 
 ![Breakpoint set at line of code](debug-on-device-images/image2-xs.png)
 
-Once the device has been selected, Xamarin.Android will connect to the 
-device, deploy the application, and then run it. When the breakpoint is 
-reached, the debugger will stop the application, allowing the 
-application to be debugged in a fashion similar to any other C# 
-application: 
+Once the device has been selected, Xamarin.Android will connect to the
+device, deploy the application, and then run it. When the breakpoint is
+reached, the debugger will stop the application, allowing the
+application to be debugged in a fashion similar to any other C#
+application:
 
 ![Breakpoint reached](debug-on-device-images/image3-xs.png)
 

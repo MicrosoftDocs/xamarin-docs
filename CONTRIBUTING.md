@@ -29,7 +29,7 @@ To make corrections and small updates - you can click the **Edit** button on any
 
 ### Big changes or new content
 
-For large contributions and new content, [open an issue](https://github.com/MicrosoftDocs/xamarin-docs/issues) describing the article you wish to write and how it relates to existing content. The content inside the docs folder is organized into sections that are organized by product area (e.g. android and ios). Try to determine the correct folder for your new content. 
+For large contributions and new content, [open an issue](https://github.com/MicrosoftDocs/xamarin-docs/issues) describing the article you wish to write and how it relates to existing content. The content inside the docs folder is organized into sections that are organized by product area (e.g. android and ios). Try to determine the correct folder for your new content.
 
 **Get feedback on your proposal via the issue before starting to write.**
 
@@ -69,4 +69,4 @@ Below is a short list of guiding rules that you should keep in mind when you are
 - **DO** blog and tweet (or whatever) about your contributions, frequently!
 
 > [!NOTE]
-> You might notice that some of the topics are not currently following all the guidelines specified here and on the [style guide](contributing-guidelines/template.md) as well. We're working towards achieving consistency throughout the site. 
+> You might notice that some of the topics are not currently following all the guidelines specified here and on the [style guide](contributing-guidelines/template.md) as well. We're working towards achieving consistency throughout the site.

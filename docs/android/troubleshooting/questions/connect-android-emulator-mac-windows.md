@@ -53,7 +53,7 @@ virtual machine, use the following steps:
     the Terminal window to quit the `nc` commands once you're done
     using the emulator.
 
-    (Option 1 is usually easier than Option 2, especially if **System Preferences > Security & Privacy > Firewall** is switched on.) 
+    (Option 1 is usually easier than Option 2, especially if **System Preferences > Security & Privacy > Firewall** is switched on.)
 
     _Option 2_: Use
     [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
@@ -100,7 +100,7 @@ If you have enabled _Remote Login_ on the Mac, then you can use `ssh` port forwa
     odd-numbered emulator port on the Mac's loopback interface
     (`127.0.0.1:5555` in this example):
 
-    ```cmd 
+    ```cmd
     C:\> ssh -L localhost:15555:127.0.0.1:5555 mac-username@ip-address-of-the-mac
     ```
 

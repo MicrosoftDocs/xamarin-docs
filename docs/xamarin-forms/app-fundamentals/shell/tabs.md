@@ -238,7 +238,7 @@ In a Shell application, every [`ContentPage`](xref:Xamarin.Forms.ContentPage) ob
 <Shell xmlns="http://xamarin.com/schemas/2014/forms"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:views="clr-namespace:Xaminals.Views"
-       x:Class="Xaminals.AppShell">    
+       x:Class="Xaminals.AppShell">
     <TabBar>
         <Tab Title="Domestic"
              Icon="paw.png">
@@ -252,7 +252,7 @@ In a Shell application, every [`ContentPage`](xref:Xamarin.Forms.ContentPage) ob
         <ShellContent Title="Monkeys"
                       Icon="monkey.png"
                       ContentTemplate="{DataTemplate views:MonkeysPage}" />
-    </TabBar>    
+    </TabBar>
 </Shell>
 ```
 

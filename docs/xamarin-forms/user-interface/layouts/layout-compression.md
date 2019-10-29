@@ -37,7 +37,7 @@ This button is specified as a custom control with the following XAML view hierar
     <StackLayout>
         <StackLayout ...>
             <AbsoluteLayout ...>
-                <Button ... />    
+                <Button ... />
                 <Image ... />
                 <Image ... />
                 <BoxView ... />
@@ -46,7 +46,7 @@ This button is specified as a custom control with the following XAML view hierar
             </AbsoluteLayout>
         </StackLayout>
         <Label ... />
-    </StackLayout>    
+    </StackLayout>
 </ContentView>
 ```
 
@@ -66,7 +66,7 @@ In XAML, layout compression can be enabled by setting the `CompressedLayout.IsHe
 ```xaml
 <StackLayout CompressedLayout.IsHeadless="true">
   ...
-</StackLayout>   
+</StackLayout>
 ```
 
 Alternatively, it can be enabled in C# by specifying the layout instance as the first argument to the `CompressedLayout.SetIsHeadless` method:

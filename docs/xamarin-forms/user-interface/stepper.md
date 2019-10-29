@@ -115,7 +115,7 @@ The **Basic Stepper XAML** page is functionally the same as **Basic Stepper Code
         <Label x:Name="_displayLabel"
                Text="(uninitialized)"
                HorizontalOptions="Center"
-               VerticalOptions="CenterAndExpand" />        
+               VerticalOptions="CenterAndExpand" />
     </StackLayout>
 </ContentPage>
 ```

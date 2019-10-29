@@ -42,15 +42,15 @@ Android provides two different API's for creating 2D graphics. One is a
 high level declarative approach and the other a programmatic low-level
 API:
 
-- **Drawable Resources** &ndash; These are used to create custom graphics 
-    either programmatically or (more typically) by embedding drawing 
-    instructions in XML files. Drawable resources are typically defined 
-    as XML files that contain instructions or actions for Android to 
-    render a 2D graphic. 
+- **Drawable Resources** &ndash; These are used to create custom graphics
+    either programmatically or (more typically) by embedding drawing
+    instructions in XML files. Drawable resources are typically defined
+    as XML files that contain instructions or actions for Android to
+    render a 2D graphic.
 
-- **Canvas** &ndash; this is a low level API that involves drawing 
-    directly on an underlying bitmap. It provides very fine-grained 
-    control over what is displayed. 
+- **Canvas** &ndash; this is a low level API that involves drawing
+    directly on an underlying bitmap. It provides very fine-grained
+    control over what is displayed.
 
 In addition to these 2D graphics techniques, Android also provides
 several different ways to create animations:
@@ -485,7 +485,7 @@ Property animators are a new API that was introduced in Android 3.0.
 They provide a more extensible API that can be used to animate any
 property on any object.
 
-All property animations are created by instances of the 
+All property animations are created by instances of the
 [Animator](xref:Android.Animation.Animator)
 subclass. Applications do not directly use this class, instead they use
 one of it's subclasses:
@@ -528,7 +528,7 @@ the scope of this topic.)
 #### Using the ValueAnimator
 
 There are two parts to any animation: calculating animated values and
-then setting those values on properties on some object. 
+then setting those values on properties on some object.
 [ValueAnimator](xref:Android.Animation.ValueAnimator)
 will only calculate the values, but it will not operate on objects
 directly. Instead, objects will be updated inside event handlers that
@@ -585,7 +585,7 @@ this step for us.
 
 The API for `ObjectAnimator` is very similar to the API for
 `ViewAnimator`, but requires that you provide the object and the name
-of the property to update. The following example shows an example 
+of the property to update. The following example shows an example
 of using `ObjectAnimator`:
 
 ```csharp
@@ -659,8 +659,8 @@ This article introduced a lot of new concepts and API's to help add
 some graphics to an Android application. First it discussed the various
 2D graphics API's and demonstrated how Android allows applications to
 draw directly to the screen using a Canvas object. We also saw some
-alternate techniques that allow graphics to be declaratively 
-created using XML files. Then we went on to discuss the old and new 
+alternate techniques that allow graphics to be declaratively
+created using XML files. Then we went on to discuss the old and new
 API's for creating animations in Android.
 
 ## Related Links

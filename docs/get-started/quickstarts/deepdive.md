@@ -243,7 +243,7 @@ The following XAML code shows an example of using a [`StackLayout`](xref:Xamarin
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Notes.NoteEntryPage"
              Title="Note Entry">
-    ...    
+    ...
     <StackLayout Margin="{StaticResource PageMargin}">
         <Editor Placeholder="Enter your note"
                 Text="{Binding Text}"
@@ -251,7 +251,7 @@ The following XAML code shows an example of using a [`StackLayout`](xref:Xamarin
         <Grid>
             ...
         </Grid>
-    </StackLayout>    
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -316,7 +316,7 @@ protected override async void OnAppearing()
 
     listView.ItemsSource = await App.Database.GetNotesAsync();
 }
-```    
+```
 
 This code populates the [`ListView`](xref:Xamarin.Forms.ListView) with any notes stored in the database.
 
@@ -492,7 +492,7 @@ The `OnPlatform` markup extensions allow you to customize UI appearance on a per
                                        Android={StaticResource AndroidNavigationBarColor}}" />
              <Setter Property="BarTextColor"
                     Value="{OnPlatform iOS={StaticResource iOSNavigationBarTextColor},
-                                       Android={StaticResource AndroidNavigationBarTextColor}}" />           
+                                       Android={StaticResource AndroidNavigationBarTextColor}}" />
         </Style>
         ...
     </Application.Resources>

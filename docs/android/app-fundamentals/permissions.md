@@ -19,7 +19,7 @@ Permissions are declared in the **AndroidManifest.xml** by the application devel
 - For apps that targeted Android 5.1 (API level 22) or lower, the permission request occurred when the app was installed. If the user did not grant the permissions, then the app would not be installed. Once the app is installed, there is no way to revoke the permissions except by uninstalling the app.
 - Starting in Android 6.0 (API level 23), users were given more control over permissions; they can grant or revoke permissions as long as the app is installed on the device. This screenshot shows the permission settings for the Google Contacts app. It lists the various permissions and allows the user to enable or disable permissions:
 
-![Sample Permissions screen](permissions-images/01-permissions-check.png) 
+![Sample Permissions screen](permissions-images/01-permissions-check.png)
 
 Android apps must check at run-time to see if they have permission to access a protected resource. If the app does not have permission, then it must make requests using the new APIs provided by the Android SDK for the user to grant the permissions. Permissions are divided into two categories:
 
@@ -31,9 +31,9 @@ Android apps must check at run-time to see if they have permission to access a p
 
 Dangerous permissions are further sub-divided into [_permission groups_](https://developer.android.com/guide/topics/permissions/requesting.html#perm-groups). A permission group will hold permissions that are logically related. When the user grants permission to one member of a permission group, Android automatically grants permission to all members of that group. For example, the [`STORAGE`](https://developer.android.com/reference/android/Manifest.permission_group.html#STORAGE) permission group holds both the `WRITE_EXTERNAL_STORAGE` and `READ_EXTERNAL_STORAGE` permissions. If the user grants permission to `READ_EXTERNAL_STORAGE`, then the `WRITE_EXTERNAL_STORAGE` permission is automatically granted at the same time.
 
-Before requesting one or more permissions, it is a best practice to provide a rationale as to why the app requires the permission before requesting the permission. Once the user understands the rationale, the app can request permission from the user. By understanding the rationale, the user can make an informed decision if they wish to grant the permission and understand the repercussions if they do not. 
+Before requesting one or more permissions, it is a best practice to provide a rationale as to why the app requires the permission before requesting the permission. Once the user understands the rationale, the app can request permission from the user. By understanding the rationale, the user can make an informed decision if they wish to grant the permission and understand the repercussions if they do not.
 
-The whole workflow of checking and requesting permissions is known as a _run-time permissions_ check, and can be summarized in the following diagram: 
+The whole workflow of checking and requesting permissions is known as a _run-time permissions_ check, and can be summarized in the following diagram:
 
 [![Run-time permission check flow chart](permissions-images/02-permissions-workflow-sml.png)](permissions-images/02-permissions-workflow.png#lightbox)
 
@@ -61,7 +61,7 @@ Apps that target Android 6.0 or higher cannot assume that because the user grant
 
 ### Declaring Permissions in the Manifest
 
-Permissions are added to the  **AndroidManifest.xml** with the `uses-permission` element. For example, if an application is to locate the position of the device, it requires fine and course location permissions. The following two elements are added to the manifest: 
+Permissions are added to the  **AndroidManifest.xml** with the `uses-permission` element. For example, if an application is to locate the position of the device, it requires fine and course location permissions. The following two elements are added to the manifest:
 
 ```xml
 <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
@@ -101,12 +101,12 @@ It is possible to declare the permissions using the tool support built into Visu
 3. Select any permissions your application needs from the **Required permissions** list and click **OK**:
 
     [![Example CAMERA permissions selected](permissions-images/03-select-permission-xs-sml.png)](permissions-images/03-select-permission-xs.png#lightbox)
-    
+
 -----
 
-Xamarin.Android will automatically add some permissions at build time to Debug builds. This will make debugging the application easier. In particular, two notable permissions are `INTERNET` and `READ_EXTERNAL_STORAGE`. These automatically-set permissions will not appear to be enabled in the **Required permissions** list. Release builds, however, use only the permissions that are explicitly set in the **Required permissions** list. 
+Xamarin.Android will automatically add some permissions at build time to Debug builds. This will make debugging the application easier. In particular, two notable permissions are `INTERNET` and `READ_EXTERNAL_STORAGE`. These automatically-set permissions will not appear to be enabled in the **Required permissions** list. Release builds, however, use only the permissions that are explicitly set in the **Required permissions** list.
 
-For apps that target Android 5.1(API level 22) or lower, there is nothing more that needs to be done. Apps that will run on Android 6.0 (API 23 level 23) or higher should proceed on to the next section on how to perform run time permission checks. 
+For apps that target Android 5.1(API level 22) or lower, there is nothing more that needs to be done. Apps that will run on Android 6.0 (API 23 level 23) or higher should proceed on to the next section on how to perform run time permission checks.
 
 ### Runtime Permission Checks in Android 6.0
 
@@ -115,14 +115,14 @@ The `ContextCompat.CheckSelfPermission`  method (available with the Android Supp
 - **`Permission.Granted`** &ndash; The specified permission has been granted.
 - **`Permission.Denied`** &ndash; The specified permission has not been granted.
 
-This code snippet is an example of how to check for the Camera permission in an Activity: 
+This code snippet is an example of how to check for the Camera permission in an Activity:
 
 ```csharp
-if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.Camera) == (int)Permission.Granted) 
+if (ContextCompat.CheckSelfPermission(this, Manifest.Permission.Camera) == (int)Permission.Granted)
 {
     // We have permission, go ahead and use the camera.
-} 
-else 
+}
+else
 {
     // Camera permission is not granted. If necessary display rationale & request.
 }
@@ -132,7 +132,7 @@ It is a best practice to inform the user as to why a permission is necessary for
 
 The `ActivityCompat.ShouldShowRequestPermissionRationale` method is used to determine if the rationale should be shown to the user. This method will return `true` if the rationale for a given permission should be displayed. This screenshot shows an example of a Snackbar displayed by an application that explains why the app needs to know the location of the device:
 
-![Rationale for location](permissions-images/07-rationale-snackbar.png) 
+![Rationale for location](permissions-images/07-rationale-snackbar.png)
 
 If the user grants the permission, the `ActivityCompat.RequestPermissions(Activity activity, string[] permissions, int requestCode)` method should be called. This method requires the following parameters:
 
@@ -143,7 +143,7 @@ If the user grants the permission, the `ActivityCompat.RequestPermissions(Activi
 This code snippet is an example of the two methods that were discussed. First, a check is made to determine if the permission rationale should be shown. If the rationale is to be shown, then a Snackbar is displayed with the rationale. If the user clicks **OK** in the Snackbar, then the app will request the permissions. If the user does not accept the rationale, then the app should not proceed to request permissions. If the rationale is not shown, then the Activity will request the permission:
 
 ```csharp
-if (ActivityCompat.ShouldShowRequestPermissionRationale(this, Manifest.Permission.AccessFineLocation)) 
+if (ActivityCompat.ShouldShowRequestPermissionRationale(this, Manifest.Permission.AccessFineLocation))
 {
     // Provide an additional rationale to the user if the permission was not granted
     // and the user would benefit from additional context for the use of the permission.
@@ -151,17 +151,17 @@ if (ActivityCompat.ShouldShowRequestPermissionRationale(this, Manifest.Permissio
     Log.Info(TAG, "Displaying camera permission rationale to provide additional context.");
 
     var requiredPermissions = new String[] { Manifest.Permission.AccessFineLocation };
-    Snackbar.Make(layout, 
+    Snackbar.Make(layout,
                    Resource.String.permission_location_rationale,
                    Snackbar.LengthIndefinite)
-            .SetAction(Resource.String.ok, 
+            .SetAction(Resource.String.ok,
                        new Action<View>(delegate(View obj) {
                            ActivityCompat.RequestPermissions(this, requiredPermissions, REQUEST_LOCATION);
-                       }    
+                       }
             )
     ).Show();
 }
-else 
+else
 {
     ActivityCompat.RequestPermissions(this, new String[] { Manifest.Permission.Camera }, REQUEST_LOCATION);
 }
@@ -171,12 +171,12 @@ else
 
 ![Permssion Dialog](permissions-images/08-location-permission-dialog.png)
 
-After the user is finished, Android will return the results to the Activity via a callback method, `OnRequestPermissionResult`. This method is a part of the interface  `ActivityCompat.IOnRequestPermissionsResultCallback` which must be implemented by the Activity. This interface has a single method, `OnRequestPermissionsResult`, which will be invoked by Android to inform the Activity of the user's choices. If the user has granted the permission, then the app can go ahead and use the protected resource. An example of how to implement `OnRequestPermissionResult` is shown below: 
+After the user is finished, Android will return the results to the Activity via a callback method, `OnRequestPermissionResult`. This method is a part of the interface  `ActivityCompat.IOnRequestPermissionsResultCallback` which must be implemented by the Activity. This interface has a single method, `OnRequestPermissionsResult`, which will be invoked by Android to inform the Activity of the user's choices. If the user has granted the permission, then the app can go ahead and use the protected resource. An example of how to implement `OnRequestPermissionResult` is shown below:
 
 ```csharp
 public override void OnRequestPermissionsResult(int requestCode, string[] permissions, Permission[] grantResults)
 {
-    if (requestCode == REQUEST_LOCATION) 
+    if (requestCode == REQUEST_LOCATION)
     {
         // Received permission result for camera permission.
         Log.Info(TAG, "Received response for Location permission request.");
@@ -185,15 +185,15 @@ public override void OnRequestPermissionsResult(int requestCode, string[] permis
         if ((grantResults.Length == 1) && (grantResults[0] == Permission.Granted)) {
             // Location permission has been granted, okay to retrieve the location of the device.
             Log.Info(TAG, "Location permission has now been granted.");
-            Snackbar.Make(layout, Resource.String.permission_available_camera, Snackbar.LengthShort).Show();            
-        } 
-        else 
+            Snackbar.Make(layout, Resource.String.permission_available_camera, Snackbar.LengthShort).Show();
+        }
+        else
         {
             Log.Info(TAG, "Location permission was NOT granted.");
             Snackbar.Make(layout, Resource.String.permissions_not_granted, Snackbar.LengthShort).Show();
         }
-    } 
-    else 
+    }
+    else
     {
         base.OnRequestPermissionsResult(requestCode, permissions, grantResults);
     }

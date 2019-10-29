@@ -108,7 +108,7 @@ with direct calls on the dialog object. The `DialogFragment` API
 provides each instance with a `Show()` method that is used to display a
 Fragment. There are two ways to get rid of a Fragment:
 
-- Call `DialogFragment.Dismiss()` on the  `DialogFragment` instance. 
+- Call `DialogFragment.Dismiss()` on the  `DialogFragment` instance.
 
 - Display another `DialogFragment`.
 
@@ -145,10 +145,10 @@ public class MyDialogFragment : DialogFragment
     public override View OnCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState)
-        
+
         var view = inflater.Inflate(Resource.Layout.dialog_fragment_layout, container, false);
         var textView = view.FindViewById<TextView>(Resource.Id.dialog_text_view);
-            
+
         view.FindViewById<Button>(Resource.Id.dialog_button).Click += delegate
             {
                 textView.Text = "You clicked the button " + _clickCount++ + " times.";
@@ -220,7 +220,7 @@ public class AlertDialogFragment : DialogFragment
 
 To help manage preferences, the Fragments API provides the
 `PreferenceFragment` subclass. The `PreferenceFragment` is similar to
-the [PreferenceActivity](xref:Android.Preferences.PreferenceActivity) &ndash; 
+the [PreferenceActivity](xref:Android.Preferences.PreferenceActivity) &ndash;
 it will show a hierarchy of preferences to the user in a
 Fragment. As the user interacts with the preferences, they will be
 automatically saved to

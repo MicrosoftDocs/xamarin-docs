@@ -44,7 +44,7 @@ public class DemoIntentService: IntentService
 }
 ```
 
-Work is sent to an `IntentService` by instantiating an `Intent` and then calling the [`StartService`](xref:Android.Content.Context.StartService*) method with that Intent as a parameter. The Intent will be passed to the service as a parameter in the `OnHandleIntent` method. This code snippet is an example of sending a work request to an Intent: 
+Work is sent to an `IntentService` by instantiating an `Intent` and then calling the [`StartService`](xref:Android.Content.Context.StartService*) method with that Intent as a parameter. The Intent will be passed to the service as a parameter in the `OnHandleIntent` method. This code snippet is an example of sending a work request to an Intent:
 
 ```csharp
 // This code might be called from within an Activity, for example in an event

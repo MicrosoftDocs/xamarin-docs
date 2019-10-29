@@ -17,13 +17,13 @@ fastlane is an open source project, created to simplify the confusing and often 
 - [produce](https://github.com/fastlane/fastlane/tree/master/produce#readme) – Creates and app in iTunes Connect and the Developer Portal (often known as AppID). It also includes support for App Groups and application services.
 - [pem](https://github.com/fastlane/fastlane/tree/master/pem#readme) – Creates and manages Push Notification Provisioning Profiles.
 - [gym](https://github.com/fastlane/fastlane/tree/master/gym#readme) – This can be used to build and sign an iOS application. (Xamarin apps already use MSBuild to build, sign, and archive apps)
-- [cert](https://github.com/fastlane/fastlane/tree/master/cert#readme) – Creates and manages code signing certificates 
+- [cert](https://github.com/fastlane/fastlane/tree/master/cert#readme) – Creates and manages code signing certificates
 - [sigh](https://github.com/fastlane/fastlane/tree/master/sigh#readme) – Creates and manages provisioning profiles
 - [match](https://github.com/fastlane/fastlane/tree/master/match#readme) – Creates and maintains certificates and profiles and stores them in a git repository so that they can be synced across a development team.
 
-fastlane can be used in different ways: through terminal commands, through file based means, or by using environment variables for continuous integration builds. 
+fastlane can be used in different ways: through terminal commands, through file based means, or by using environment variables for continuous integration builds.
 
-This guide deals specifically with setting up a device for development with iOS apps, and focuses on the **cert**, **sigh** and **match** utilities. 
+This guide deals specifically with setting up a device for development with iOS apps, and focuses on the **cert**, **sigh** and **match** utilities.
 
 The content provided can be used as a springboard to aid with app distribution, including fully automating the process on a continuous integration server. However, it's important to note that fastlane is a 3rd party who make tools to support Xcode projects and therefore some tools or commands such as `fastlane init` may not work as expected with csproj files. For more information on using fastlane, additional tools, or releasing for Android using fastlane, refer to [https://fastlane.tools/](https://fastlane.tools/)
 
@@ -37,10 +37,10 @@ The content provided can be used as a springboard to aid with app distribution, 
     error: command line tools are already installed, use "Software Update" to install updates
     ```
 
-2. Download the fastlane tools from [https://download.fastlane.tools](https://download.fastlane.tools). 
+2. Download the fastlane tools from [https://download.fastlane.tools](https://download.fastlane.tools).
 
     > [!NOTE]
-    > It is possible to install fastlane tools from Homebrew using `brew cask install fastlane` or via Rubygems (2.0 or above) using `sudo gem install fastlane –NV`. However using the installer will ensure that the correct dependencies are available. 
+    > It is possible to install fastlane tools from Homebrew using `brew cask install fastlane` or via Rubygems (2.0 or above) using `sudo gem install fastlane –NV`. However using the installer will ensure that the correct dependencies are available.
 
 3. Install fastlane by unzipping the file, and double-click on the `install` executable. If you get an error advising that the file "can't be opened because it is from an unidentified developer", press OK and do the following:
     - Control + Click on the `install` executable. This will display the dialog below:
@@ -53,7 +53,7 @@ The content provided can be used as a springboard to aid with app distribution, 
 
    ![](images/fastlane-image13.png "The Terminal prompt")
 
-5. Run `which fastlane` before using fastlane for the first time. The path should look like the following: 
+5. Run `which fastlane` before using fastlane for the first time. The path should look like the following:
 
     ```bash
     /Users/[user]/.fastlane/bin
@@ -68,7 +68,7 @@ The content provided can be used as a springboard to aid with app distribution, 
     open ~/.bash_profile
     ```
 
-7. Add the following PATH environment variable, and save it: 
+7. Add the following PATH environment variable, and save it:
 
     ```bash
     export PATH="$HOME/.fastlane/bin:$PATH"

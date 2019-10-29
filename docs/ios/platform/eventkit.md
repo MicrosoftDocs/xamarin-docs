@@ -22,8 +22,8 @@ stores. Access to the calendars and calendar events has been available since iOS
 
 In this guide we’re going to cover:
 
-- **EventKit Basics** – This will introduce the fundamental pieces of EventKit via the major classes and provides an understanding of their usage. This section is required reading before tackling the next part of the document. 
-- **Common Tasks** – The common tasks section is intended to be a quick reference on how to do common things such as; enumerating calendars, creating, saving and retrieving calendar events and reminders, as well as using the built-in controllers for creating and modifying calendar events. This section need not be read front-to-back, as it’s meant to be a reference for particular tasks. 
+- **EventKit Basics** – This will introduce the fundamental pieces of EventKit via the major classes and provides an understanding of their usage. This section is required reading before tackling the next part of the document.
+- **Common Tasks** – The common tasks section is intended to be a quick reference on how to do common things such as; enumerating calendars, creating, saving and retrieving calendar events and reminders, as well as using the built-in controllers for creating and modifying calendar events. This section need not be read front-to-back, as it’s meant to be a reference for particular tasks.
 
 All tasks in this guide are available in the companion sample
 application:
@@ -87,7 +87,7 @@ public class App
     {
             current = new App();
     }
-    protected App () 
+    protected App ()
     {
             eventStore = new EKEventStore ( );
     }
@@ -119,12 +119,12 @@ example, the following coded will request access to calendar event data and show
 an alert view if the request was not granted.
 
 ```csharp
-App.Current.EventStore.RequestAccess (EKEntityType.Event, 
+App.Current.EventStore.RequestAccess (EKEntityType.Event,
     (bool granted, NSError e) => {
             if (granted)
                     //do something here
             else
-                    new UIAlertView ( "Access Denied", 
+                    new UIAlertView ( "Access Denied",
 "User Denied Access to Calendar Data", null,
 "ok", null).Show ();
             } );
@@ -191,7 +191,7 @@ To enumerate the calendars that the user has configured on the device, call `Get
 calendars (either reminders or events) that you wish to receive:
 
 ```csharp
-EKCalendar[] calendars = 
+EKCalendar[] calendars =
 App.Current.EventStore.GetCalendars ( EKEntityType.Event );
 ```
 
@@ -218,7 +218,7 @@ Then, to launch it: instantiate it, give it a reference to the `EventStore`, wir
 it, and then display it using `PresentViewController`:
 
 ```csharp
-EventKitUI.EKEventEditViewController eventController = 
+EventKitUI.EKEventEditViewController eventController =
         new EventKitUI.EKEventEditViewController ();
 
 // set the controller's event store - it needs to know where/how to save the event

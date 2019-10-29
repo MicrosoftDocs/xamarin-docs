@@ -301,7 +301,7 @@ public class EventToCommandBehavior : BindableBehavior<View>
             _eventInfo = events.FirstOrDefault(e => e.Name == EventName);  
             if (_eventInfo == null)  
                 throw new ArgumentException(string.Format(  
-                        "EventToCommand: Can't find any event named '{0}' on attached type",   
+                        "EventToCommand: Can't find any event named '{0}' on attached type",
                         EventName));  
 
             AddEventHandler(_eventInfo, AssociatedObject, OnFired);  
@@ -340,7 +340,7 @@ The `EventToCommandBehavior` is particularly useful for attaching a command to a
 ```xaml
 <ListView>  
     <ListView.Behaviors>  
-        <behaviors:EventToCommandBehavior             
+        <behaviors:EventToCommandBehavior
             EventName="ItemTapped"  
             Command="{Binding OrderDetailCommand}"  
             EventArgsConverter="{StaticResource ItemTappedEventArgsConverter}" />  

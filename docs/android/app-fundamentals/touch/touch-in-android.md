@@ -48,7 +48,7 @@ respond to a touch event:
    `OnTouchEvent` and pass it a `MotionEvent` object as a parameter.
 
 > [!NOTE]
-> Not all Android devices support touch screens. 
+> Not all Android devices support touch screens.
 
 Adding the following tag to your manifest file causes Google Play to
 only display your app to those devices that are touch enabled:
@@ -150,7 +150,7 @@ Gesture Tool allows you create a gesture by drawing on the screen and
 assigning a name. After the gestures are created they are saved in a
 binary file on the SD card of your device. This file needs to be
 retrieved from the device, and then packaged with an application in the
-folder /Resources/raw. This file can be retrieved from the emulator using 
+folder /Resources/raw. This file can be retrieved from the emulator using
 the Android Debug Bridge. The following example shows copying the
 file from a Galaxy Nexus to the Resource directory of an application:
 

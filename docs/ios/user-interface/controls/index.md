@@ -55,7 +55,7 @@ iOS provides two main ways to  indicate progress in your app: Activity Indicator
 
 ## [Search Bars](searchbar.md)
 
-The UISearchBar is used to search through a list of values. 
+The UISearchBar is used to search through a list of values.
 
 ## [Sliders, Switches, and Segmented Controls](slider-switch-segmented-controls.md)
 

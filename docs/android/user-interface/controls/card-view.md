@@ -315,7 +315,7 @@ In this diagram, `cardCornerRadius` is set to a more rounded 10dp and
 You can use `CardView` on versions of Android earlier than Android 5.0
 Lollipop. Because `CardView` is part of the Android v7 support library,
 you can use `CardView` with Android 2.1 (API level 7) and higher.
-However, you must install the `Xamarin.Android.Support.v7.CardView` package 
+However, you must install the `Xamarin.Android.Support.v7.CardView` package
 as described in [Requirements](#requirements), above.
 
 `CardView` exhibits slightly different behavior on devices before

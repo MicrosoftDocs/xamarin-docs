@@ -168,7 +168,7 @@ public class TouchEffect : PlatformEffect
         }
     }
     ...
-}    
+}
 ```
 
 The `OnPointerPressed` handler invokes the effect event by calling the `onTouchAction` field in the `CommonHandler` method:

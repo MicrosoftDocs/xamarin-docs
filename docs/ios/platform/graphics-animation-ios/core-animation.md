@@ -106,12 +106,12 @@ These animations happen implicitly by specifying property changes in an `NSActio
 pt = imgView.Center;
 
 UIView.Animate (
-  duration: 2, 
-  delay: 0, 
-  options: UIViewAnimationOptions.CurveEaseInOut | 
+  duration: 2,
+  delay: 0,
+  options: UIViewAnimationOptions.CurveEaseInOut |
     UIViewAnimationOptions.Autoreverse,
   animation: () => {
-    imgView.Center = new CGPoint (View.Bounds.GetMaxX () 
+    imgView.Center = new CGPoint (View.Bounds.GetMaxX ()
       - imgView.Frame.Width / 2, pt.Y);},
   completion: () => {
     imgView.Center = pt; }

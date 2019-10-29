@@ -44,7 +44,7 @@ Tips for creating NuGet packages that work with the Xamarin platform.
 
 ## [Use C/C++ Libraries in Cross-Platform Xamarin Projects](~/cross-platform/cpp/index.md)
 
-This technique allows you to decouple the evolution of your C/C++ libraries, a C# binding in a NuGet, and 
-your Xamarin applications. Functionality is provided by the native-platform C/C++ library, but all 
-platform-specific code is isolated from the final Xamarin application(s), allowing the highest-possible 
-performance with no code duplication. 
+This technique allows you to decouple the evolution of your C/C++ libraries, a C# binding in a NuGet, and
+your Xamarin applications. Functionality is provided by the native-platform C/C++ library, but all
+platform-specific code is isolated from the final Xamarin application(s), allowing the highest-possible
+performance with no code duplication.

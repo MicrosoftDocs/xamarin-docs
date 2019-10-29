@@ -133,7 +133,7 @@ The second example calls [`ResetMatrix`](xref:SkiaSharp.SKCanvas.ResetMatrix). T
 
 The third example saves the state of the `SKCanvas` object with a call to [`Save`](xref:SkiaSharp.SKCanvas.Save) and then restores the state with a call to [`Restore`](xref:SkiaSharp.SKCanvas.Restore). This is the most versatile way to manipulate transforms for a series of drawing operations. These `Save` and `Restore` calls function like a stack: You can call `Save` multiple times, and then call `Restore` in reverse sequence to return to previous states. The `Save` method returns an integer, and you can pass that integer to [`RestoreToCount`](xref:SkiaSharp.SKCanvas.RestoreToCount*) to effectively call `Restore` multiple times. The [`SaveCount`](xref:SkiaSharp.SKCanvas.SaveCount) property returns the number of states currently saved on the stack.
 
-You can also use the [`SKAutoCanvasRestore`](xref:SkiaSharp.SKAutoCanvasRestore) class for restoring the canvas state. The constructor of this class is intended to be called in a `using` statement; the canvas state is automatically restored at the end of the `using` block. 
+You can also use the [`SKAutoCanvasRestore`](xref:SkiaSharp.SKAutoCanvasRestore) class for restoring the canvas state. The constructor of this class is intended to be called in a `using` statement; the canvas state is automatically restored at the end of the `using` block.
 
 However, you don't have to worry about transforms carrying over from one call of the `PaintSurface` handler to the next. Each new call to `PaintSurface` delivers a fresh `SKCanvas` object with default transforms.
 

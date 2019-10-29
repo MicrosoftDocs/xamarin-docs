@@ -52,13 +52,13 @@ To maintain high performance on Apple Watch, a watch app using Background Runnin
 To enable Background Running, do the following:
 
 1. In the **Solution Explorer**, double-click the Watch Extension's companion iPhone app's `Info.plist` file to open it for editing.
-2. Switch to the **Source** view: 
+2. Switch to the **Source** view:
 
     [![](workout-apps-images/plist01.png "The Source view")](workout-apps-images/plist01.png#lightbox)
-3. Add a new key called `WKBackgroundModes` and set the **Type** to `Array`: 
+3. Add a new key called `WKBackgroundModes` and set the **Type** to `Array`:
 
     [![](workout-apps-images/plist02.png "Add a new key called WKBackgroundModes")](workout-apps-images/plist02.png#lightbox)
-4. Add a new item to the array with the **Type** of `String` and a value of `workout-processing`: 
+4. Add a new item to the array with the **Type** of `String` and a value of `workout-processing`:
 
     [![](workout-apps-images/plist03.png "Add a new item to the array with the Type of String and a value of workout-processing")](workout-apps-images/plist03.png#lightbox)
 5. Save the changes to the file.
@@ -89,7 +89,7 @@ Before an app can request authorization, it needs to be configured to access Hea
 Do the following:
 
 1. In the **Solution Explorer**, double-click the `Entitlements.plist` file to open it for editing.
-2. Scroll to the bottom and check **Enable HealthKit**: 
+2. Scroll to the bottom and check **Enable HealthKit**:
 
     [![](workout-apps-images/auth01.png "Check Enable HealthKit")](workout-apps-images/auth01.png#lightbox)
 3. Save the changes to the file.
@@ -111,7 +111,7 @@ var configuration = new HKWorkoutConfiguration () {
 };
 ```
 
-### Creating a Workout Session Delegate 
+### Creating a Workout Session Delegate
 
 To handle the events that can occur during a Workout Session, the app will need to create a Workout Session Delegate instance. Add a new class to the project and base it off of the `HKWorkoutSessionDelegate` class. For the example of an outdoor run, it could look like the following:
 
@@ -205,7 +205,7 @@ namespace MonkeyWorkout.MWWatchExtension
 }
 ```
 
-This class creates several events that will be raised as the state of the Workout Session changes (`DidChangeToState`) and if the Workout Session fails (`DidFail`). 
+This class creates several events that will be raised as the state of the Workout Session changes (`DidChangeToState`) and if the Workout Session fails (`DidFail`).
 
 ### Creating a Workout Session
 
@@ -314,7 +314,7 @@ private void ObserveHealthKitSamples ()
         var quantitySample = sample as HKQuantitySample;
         ActiveEnergyBurned += quantitySample.Quantity.GetDoubleValue (HKUnit.Joule);
       }
-      
+
       // Update User Interface
       ...
     }
@@ -322,13 +322,13 @@ private void ObserveHealthKitSamples ()
 
   // Start Query
   HealthStore.ExecuteQuery (queryActiveEnergyBurned);
-                                        
+
 }
 ```
 
 It creates a predicate to set the starting date that it wants to get data for using the `GetPredicateForSamples` method. It creates a set of devices to pull HealthKit information from using the `GetPredicateForObjectsFromDevices` method, in this case the local Apple Watch only (`HKDevice.LocalDevice`). The two predicates are combined into a Compound Predicate (`NSCompoundPredicate`) using the `CreateAndPredicate` method.
 
-A new `HKAnchoredObjectQuery` is created for the data point desired (in this case `HKQuantityTypeIdentifier.ActiveEnergyBurned` for the Active Energy Burned data point), no limit is imposed on the amount of data returned (`HKSampleQuery.NoLimit`) and an update handler is defined to handle data being return to the app from HealthKit. 
+A new `HKAnchoredObjectQuery` is created for the data point desired (in this case `HKQuantityTypeIdentifier.ActiveEnergyBurned` for the Active Energy Burned data point), no limit is imposed on the amount of data returned (`HKSampleQuery.NoLimit`) and an update handler is defined to handle data being return to the app from HealthKit.
 
 The update handler will be called any time new data is delivered to the app for the given data point. If no error is returned, the app can safely read the data, make any required calculations and update its UI as required.
 
@@ -548,7 +548,7 @@ public List<HKWorkoutEvent> WorkoutEvents { get; set; } = new List<HKWorkoutEven
 
 private void SaveWorkoutSession ()
 {
-  // Build required workout quantities 
+  // Build required workout quantities
   var energyBurned = HKQuantity.FromQuantity (HKUnit.Joule, ActiveEnergyBurned);
   var distance = HKQuantity.FromQuantity (HKUnit.Mile, MilesRun);
 
@@ -557,12 +557,12 @@ private void SaveWorkoutSession ()
   metadata.Add (new NSString ("HKMetadataKeyIndoorWorkout"), new NSString ("NO"));
 
   // Create workout
-  var workout = HKWorkout.Create (HKWorkoutActivityType.Running, 
-                                  WorkoutSession.StartDate, 
-                                  NSDate.Now, 
-                                  WorkoutEvents.ToArray (), 
-                                  energyBurned, 
-                                  distance, 
+  var workout = HKWorkout.Create (HKWorkoutActivityType.Running,
+                                  WorkoutSession.StartDate,
+                                  NSDate.Now,
+                                  WorkoutEvents.ToArray (),
+                                  energyBurned,
+                                  distance,
                                   metadata);
 
   // Save to HealthKit
@@ -861,7 +861,7 @@ namespace MonkeyWorkout.MWWatchExtension
     #region Constructors
     public ExtensionDelegate ()
     {
-      
+
     }
     #endregion
 
@@ -901,7 +901,7 @@ namespace MonkeyWorkout.MWWatchExtension
         // Handle the session ending
         ...
       };
-      
+
       RunDelegate.ReachedMileGoal += (miles) => {
         // Handle the reaching a session goal
         ...
@@ -1015,7 +1015,7 @@ namespace MonkeyWorkout.MWWatchExtension
 
       // Start Query
       HealthStore.ExecuteQuery (QueryActiveEnergyBurned);
-                                            
+
     }
 
     private void StopObservingHealthKitSamples ()
@@ -1026,7 +1026,7 @@ namespace MonkeyWorkout.MWWatchExtension
 
     private void ResumeObservingHealthkitSamples ()
     {
-      // Resume current queries 
+      // Resume current queries
       HealthStore.ExecuteQuery (QueryActiveEnergyBurned);
     }
 
@@ -1050,12 +1050,12 @@ namespace MonkeyWorkout.MWWatchExtension
       metadata.Add (new NSString ("HKMetadataKeyIndoorWorkout"), new NSString ("NO"));
 
       // Create workout
-      var workout = HKWorkout.Create (HKWorkoutActivityType.Running, 
-                                      WorkoutSession.StartDate, 
-                                      NSDate.Now, 
-                                      WorkoutEvents.ToArray (), 
-                                      energyBurned, 
-                                      distance, 
+      var workout = HKWorkout.Create (HKWorkoutActivityType.Running,
+                                      WorkoutSession.StartDate,
+                                      NSDate.Now,
+                                      WorkoutEvents.ToArray (),
+                                      energyBurned,
+                                      distance,
                                       metadata);
 
       // Save to HealthKit

@@ -493,7 +493,7 @@ namespace CustomRenderer.UWP
             {
                 listView.SelectionMode = ListViewSelectionMode.Single;
                 listView.IsItemClickEnabled = false;
-                listView.ItemsSource = ((NativeListView)e.NewElement).Items;             
+                listView.ItemsSource = ((NativeListView)e.NewElement).Items;
                 listView.ItemTemplate = App.Current.Resources["ListViewItemTemplate"] as Windows.UI.Xaml.DataTemplate;
                 // Subscribe
                 listView.SelectionChanged += OnSelectedItemChanged;

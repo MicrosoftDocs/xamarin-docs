@@ -25,10 +25,10 @@ APIs released with Xcode 11, for iOS 13. Using the preview requires macOS 10.14.
 
 3. **Update Visual Studio for Mac and Visual Studio 2019** – Ensure you have the latest stable version of Xamarin.
 
-4. (Optional) **Install iOS 13 on your iOS devices** – For device testing of apps 
+4. (Optional) **Install iOS 13 on your iOS devices** – For device testing of apps
    that use APIs introduced with the Xcode 11,
    registered Apple developers can [download](https://developer.apple.com/download)
-   and install the operating system on their devices. 
+   and install the operating system on their devices.
 
    > [!TIP]
    > Even if your app does not use any new APIs, be sure to build it with

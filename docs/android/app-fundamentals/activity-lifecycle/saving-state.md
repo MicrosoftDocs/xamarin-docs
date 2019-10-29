@@ -26,13 +26,13 @@ the screen of `MainActivity` is displayed:
 
 ### Viewing State Transitions
 
-Each method in this sample writes to the IDE application output window 
+Each method in this sample writes to the IDE application output window
 to indicate activity state. (To open the output window in Visual Studio,
 type **CTRL-ALT-O**; to open the output window in Visual Studio for Mac,
 click **View > Pads > Application Output**.)
 
-When the app first starts, the output window displays the state changes 
-of *Activity A*: 
+When the app first starts, the output window displays the state changes
+of *Activity A*:
 
 ```shell
 [ActivityLifecycle.MainActivity] Activity A - OnCreate
@@ -40,9 +40,9 @@ of *Activity A*:
 [ActivityLifecycle.MainActivity] Activity A - OnResume
 ```
 
-When we click the **Start Activity B** 
+When we click the **Start Activity B**
 button, we see *Activity A* pause and stop while *Activity B* goes
-through its state changes: 
+through its state changes:
 
 ```shell
 [ActivityLifecycle.MainActivity] Activity A - OnPause
@@ -52,13 +52,13 @@ through its state changes:
 [ActivityLifecycle.MainActivity] Activity A - OnStop
 ```
 
-As a result, *Activity B* is started and displayed in place of 
-*Activity A*: 
+As a result, *Activity B* is started and displayed in place of
+*Activity A*:
 
 [![Activity B screen](saving-state-images/02-activity-b-sml.png)](saving-state-images/02-activity-b.png#lightbox)
 
-When we click the **Back** button, *Activity B* is destroyed and 
-*Activity A* is resumed: 
+When we click the **Back** button, *Activity B* is destroyed and
+*Activity A* is resumed:
 
 ```shell
 [ActivityLifecycle.SecondActivity] Activity B - OnPause
@@ -71,18 +71,18 @@ When we click the **Back** button, *Activity B* is destroyed and
 
 ### Adding a Click Counter
 
-Next, we're going to change the application so that we have a button 
-that counts and displays the number of times it is clicked. First, 
+Next, we're going to change the application so that we have a button
+that counts and displays the number of times it is clicked. First,
 let's add a `_counter` instance variable to `MainActivity`:
 
 ```csharp
 int _counter = 0;
 ```
 
-Next, let's edit the **Resource/layout/Main.axml** layout file and 
-add a new `clickButton` that displays the number of times the user 
-has clicked the button. The resulting **Main.axml** should resemble 
-the following: 
+Next, let's edit the **Resource/layout/Main.axml** layout file and
+add a new `clickButton` that displays the number of times the user
+has clicked the button. The resulting **Main.axml** should resemble
+the following:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -120,7 +120,7 @@ clickbutton.Click += (object sender, System.EventArgs e) =>
 } ;
 ```
 
-When we build and run the app again, a new button appears that increments 
+When we build and run the app again, a new button appears that increments
 and displays the value of `_counter` on each click:
 
 [![Add touch count](saving-state-images/03-touched-sml.png)](saving-state-images/03-touched.png#lightbox)
@@ -129,9 +129,9 @@ But when we rotate the device to landscape mode, this count is lost:
 
 [![Rotating to landscape sets the count back to zero](saving-state-images/05-rotate-nosave-sml.png)](saving-state-images/05-rotate-nosave.png#lightbox)
 
-Examining the application output, we see that *Activity A* 
-was paused, stopped, destroyed, recreated, restarted, then resumed 
-during the rotation from portrait to landscape mode: 
+Examining the application output, we see that *Activity A*
+was paused, stopped, destroyed, recreated, restarted, then resumed
+during the rotation from portrait to landscape mode:
 
 ```shell
 [ActivityLifecycle.MainActivity] Activity A - OnPause
@@ -144,7 +144,7 @@ during the rotation from portrait to landscape mode:
 ```
 
 Because *Activity A* is destroyed and recreated again when the
-device is rotated, its instance state is lost. Next, we will 
+device is rotated, its instance state is lost. Next, we will
 add code to save and restore the instance state.
 
 ### Adding Code to Preserve Instance State
@@ -164,14 +164,14 @@ protected override void OnSaveInstanceState (Bundle outState)
     Log.Debug(GetType().FullName, "Activity A - Saving instance state");
 
     // always call the base implementation!
-    base.OnSaveInstanceState (outState);    
+    base.OnSaveInstanceState (outState);
 }
 ```
 
-When *Activity A* is recreated and resumed, Android passes this 
-`Bundle` back into our `OnCreate` method. Let's add code to `OnCreate` 
-to restore the `_counter` value from the passed-in `Bundle`. Add the 
-following code just before the line where `clickbutton` is defined: 
+When *Activity A* is recreated and resumed, Android passes this
+`Bundle` back into our `OnCreate` method. Let's add code to `OnCreate`
+to restore the `_counter` value from the passed-in `Bundle`. Add the
+following code just before the line where `clickbutton` is defined:
 
 ```csharp
 if (bundle != null)

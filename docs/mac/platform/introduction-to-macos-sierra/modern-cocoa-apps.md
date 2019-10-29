@@ -158,7 +158,7 @@ public override void ViewWillAppear ()
 }
 ```
 
-This effect is typically used for _Shoebox Applications_ (one window apps) like Maps, Calendar, Notes and System Preferences. 
+This effect is typically used for _Shoebox Applications_ (one window apps) like Maps, Calendar, Notes and System Preferences.
 
 <a name="Using-Accessory-View-Controllers" />
 
@@ -173,13 +173,13 @@ The Accessory View controller will automatically be blurred and resized by the s
 To add an Accessory View Controller, do the following:
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing.
-2. Drag a **Custom View Controller** into the Window's hierarchy: 
+2. Drag a **Custom View Controller** into the Window's hierarchy:
 
     [![](modern-cocoa-apps-images/content05.png "Adding a new Custom View Controller")](modern-cocoa-apps-images/content05.png#lightbox)
-3. Layout the Accessory View's UI: 
+3. Layout the Accessory View's UI:
 
     [![](modern-cocoa-apps-images/content06.png "Designing the new view")](modern-cocoa-apps-images/content06.png#lightbox)
-4. Expose the Accessory View as an **Outlet** and any other **Actions** or **Outlets** for its UI: 
+4. Expose the Accessory View as an **Outlet** and any other **Actions** or **Outlets** for its UI:
 
     [![](modern-cocoa-apps-images/content07.png "Adding the required OUtlet")](modern-cocoa-apps-images/content07.png#lightbox)
 5. Save the changes.
@@ -297,7 +297,7 @@ namespace MacModern
 
             // Display
             controller.ShowWindow (this);
-        } 
+        }
         #endregion
     }
 }
@@ -491,7 +491,7 @@ namespace MacModern
         {
             base.UpdateLayer ();
 
-            // Draw view 
+            // Draw view
             Layer.BackgroundColor = NSColor.Red.CGColor;
         }
         #endregion
@@ -566,7 +566,7 @@ namespace MacModern
         {
             // Return required pasteboard writer
             ...
-            
+
             // Pasteboard writer failed
             return null;
         }
@@ -728,7 +728,7 @@ The static `NSTableViewRowAction.FromStyle` is used to create a new Table Row Ac
 
 <a name="Scroll-View-Enhancements" />
 
-## Scroll View Enhancements 
+## Scroll View Enhancements
 
 When using a Scroll View (`NSScrollView`) directly, or as part of another control (such as `NSTableView`), the contents of the Scroll View can slide under the Title and Tool Bar areas in a Xamarin.Mac app using a Modern Look and Views.
 
@@ -755,9 +755,9 @@ For more information, please see Apple's [Internationalization and Localization 
 
 <a name="Implementing-Base-Internationalization" />
 
-### Implementing Base Internationalization 
+### Implementing Base Internationalization
 
-By implementing Base Internationalization, the developer can provide a single Storyboard file to represent the app's UI and separate out all of the user-facing strings. 
+By implementing Base Internationalization, the developer can provide a single Storyboard file to represent the app's UI and separate out all of the user-facing strings.
 
 When the developer is creating the initial Storyboard file (or files) that define the app's User Interface, they will be built in the Base Internationalization (the language that the developer speaks).
 
@@ -860,7 +860,7 @@ namespace MacModern
     public partial class ViewController : NSViewController
     {
         ...
-    
+
         #region Override Methods
         public override void ViewWillAppear ()
         {

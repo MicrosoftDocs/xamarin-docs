@@ -11,7 +11,7 @@ ms.date: 02/06/2018
 # Custom Button
 
 In this section, you will create a button with a custom image instead
-of text, using the [`Button`](xref:Android.Widget.Button) widget 
+of text, using the [`Button`](xref:Android.Widget.Button) widget
 and an XML file that defines three different images to use for the
 different button states. When the button is pressed, a short message
 will be displayed.

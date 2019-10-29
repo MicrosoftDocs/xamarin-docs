@@ -61,7 +61,7 @@ The **Compiled Color Selector** page demonstrates using compiled bindings betwee
             <Slider Value="{Binding Luminosity}" />
             <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}" />
         </StackLayout>
-    </StackLayout>    
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -150,7 +150,7 @@ Careful structuring of `x:DataType` attributes can therefore lead to a page usin
         <Slider Value="{Binding Luminosity}" />
         <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}" />
     </StackLayout>
-</StackLayout>   
+</StackLayout>
 ```
 
 The root [`StackLayout`](xref:Xamarin.Forms.StackLayout) sets the `x:DataType` attribute to be the `HslColorViewModel` type, indicating that any binding expression in the root `StackLayout` view hierarchy will be compiled. However, the inner `StackLayout` redefines the `x:DataType` attribute to `null` with the `x:Null` markup expression. Therefore, the binding expressions within the inner `StackLayout` use classic bindings. Only the [`BoxView`](xref:Xamarin.Forms.BoxView), within the root `StackLayout` view hierarchy, uses compiled bindings.

@@ -104,7 +104,7 @@ all: consoleapp.exe
 
 consoelapp.exe: consoleapp.cs Makefile
     mcs -g -r:$(XAMMAC_PATH)/Xamarin.Mac.dll consoleapp.cs
-    
+
 run: consoleapp.exe
     MONO_PATH=$(XAMMAC_PATH) DYLD_LIBRARY_PATH=$(DYLD) mono --debug consoleapp.exe $(COMMAND)
 

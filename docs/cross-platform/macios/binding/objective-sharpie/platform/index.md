@@ -25,4 +25,4 @@ Objective Sharpie lets you use these libraries with the `-framework` option.
 ## [**Verify**](verify.md)
 
 Objective Sharpie add `Verify` attributes to signal that you need to
-manually inspect and update the generated binding. 
+manually inspect and update the generated binding.

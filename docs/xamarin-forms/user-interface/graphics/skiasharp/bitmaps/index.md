@@ -11,7 +11,7 @@ ms.date: 07/17/2018
 
 # SkiaSharp bitmaps
 
-A bitmap is a rectangular array of data corresponding to the pixels of a display device. The area of graphics programming associated with bitmaps is sometimes called _raster graphics_ (named after the scan lines of early video displays) in contrast to the _vector graphics_ of lines and curves. 
+A bitmap is a rectangular array of data corresponding to the pixels of a display device. The area of graphics programming associated with bitmaps is sometimes called _raster graphics_ (named after the scan lines of early video displays) in contrast to the _vector graphics_ of lines and curves.
 
 The article **[Bitmap Basics in SkiaSharp](../basics/bitmaps.md)** described some of the fundamentals of loading and displaying bitmaps. These articles expand on the concepts in that introductory article:
 

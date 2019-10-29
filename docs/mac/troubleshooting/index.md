@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 03/27/2018
 ---
 
-# Xamarin.Mac troubleshooting 
+# Xamarin.Mac troubleshooting
 
 _Documents in this section cover features specific to troubleshooting with Xamarin.Mac._
 

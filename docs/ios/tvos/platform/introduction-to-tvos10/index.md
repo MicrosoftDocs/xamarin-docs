@@ -13,7 +13,7 @@ ms.date: 03/16/2017
 
 _This article introduces all of the new and modified APIs and features available in tvOS 10 for Xamarin.tvOS developers._
 
-With the new tvOS 10 SDK Apple has included new APIs and services that enable the developer to create new categories of apps and features. 
+With the new tvOS 10 SDK Apple has included new APIs and services that enable the developer to create new categories of apps and features.
 
 For more information on tvOS 10, please see Apple's [tvOS + Apps](https://developer.apple.com/tvos/) documentation.
 

@@ -73,7 +73,7 @@ namespace MonoGame3D
                     effect.EnableDefaultLighting ();
                     effect.PreferPerPixelLighting = true;
 
-                    effect.World = Matrix.Identity; 
+                    effect.World = Matrix.Identity;
                     var cameraLookAtVector = Vector3.Zero;
                     var cameraUpVector = Vector3.UnitZ;
 
@@ -177,7 +177,7 @@ namespace MonoGame3D
 
             DrawGround ();
 
-            float aspectRatio = 
+            float aspectRatio =
                 graphics.PreferredBackBufferWidth / (float)graphics.PreferredBackBufferHeight;
             robot.Draw (cameraPosition, aspectRatio);
 
@@ -192,7 +192,7 @@ namespace MonoGame3D
             effect.View = Matrix.CreateLookAt (
                 cameraPosition, cameraLookAtVector, cameraUpVector);
 
-            float aspectRatio = 
+            float aspectRatio =
                 graphics.PreferredBackBufferWidth / (float)graphics.PreferredBackBufferHeight;
             float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
             float nearClipPlane = 1;
@@ -261,7 +261,7 @@ protected override void Update(GameTime gameTime)
 }
 ```
 
-Of course, at this point the angle field does nothing – we need to write code to use it. We’ll modify the `Draw` method so that we can calculate the world `Matrix` in a dedicated method: 
+Of course, at this point the angle field does nothing – we need to write code to use it. We’ll modify the `Draw` method so that we can calculate the world `Matrix` in a dedicated method:
 
 ```csharp
 public void Draw(Vector3 cameraPosition, float aspectRatio)
@@ -322,7 +322,7 @@ The result of running this code results in the robot moving in a circle:
 
 ## Matrix Multiplication
 
-The code above rotates the robot by creating a `Matrix` in the `GetWorldMatrix` method. The `Matrix` struct contains 16 float values which can be used to translate (set position), rotate, and scale (set size). When we assign the `effect.World` property, we are telling the underlying rendering system how to position, size, and orient whatever we happen to be drawing (a `Model` or geometry from vertices). 
+The code above rotates the robot by creating a `Matrix` in the `GetWorldMatrix` method. The `Matrix` struct contains 16 float values which can be used to translate (set position), rotate, and scale (set size). When we assign the `effect.World` property, we are telling the underlying rendering system how to position, size, and orient whatever we happen to be drawing (a `Model` or geometry from vertices).
 
 Fortunately, the `Matrix` struct includes a number of methods which simplify the creation of common types of matrices. The first used in the code above is `Matrix.CreateTranslation`. The mathematical term *translation* refers to an operation which results in a point (or in our case a model) moving from one location to another without any other modification (such as rotating or resizing). The function takes an X, Y, and Z value for translation. If we view our scene from top-down, our `CreateTranslation` method (in isolation) performs the following:
 
@@ -424,7 +424,7 @@ namespace MonoGame3D
 }
 ```
 
-The code above is very similar to the code from `Game1` and `Robot` which assign the matrices on `BasicEffect`. 
+The code above is very similar to the code from `Game1` and `Robot` which assign the matrices on `BasicEffect`.
 
 Now we can integrate the new `Camera` class into our existing projects. First, we’ll modify the `Robot` class to take a `Camera` instance in its `Draw` method, which will eliminate a lot of duplicate code. Replace the `Robot.Draw` method with the following:
 
@@ -618,9 +618,9 @@ This results in the `Camera` viewing the world straight-on. Notice that the init
 
 ### Creating an angle Variable
 
-The `lookAtVector` variable controls the angle that our camera is viewing. Currently it is fixed to view down the negative Y axis, and slightly tilted down (from the `-.5f` Z value). We’ll create an `angle` variable which will be used to adjust the `lookAtVector` property. 
+The `lookAtVector` variable controls the angle that our camera is viewing. Currently it is fixed to view down the negative Y axis, and slightly tilted down (from the `-.5f` Z value). We’ll create an `angle` variable which will be used to adjust the `lookAtVector` property.
 
-In earlier sections of this walkthrough we showed that matrices can be used to rotate how objects are drawn. We can also use matrices to rotate vectors like the `lookAtVector` using the `Vector3.Transform` method. 
+In earlier sections of this walkthrough we showed that matrices can be used to rotate how objects are drawn. We can also use matrices to rotate vectors like the `lookAtVector` using the `Vector3.Transform` method.
 
 Add an `angle` field and modify the `ViewMatrix` property as follows:
 
@@ -664,7 +664,7 @@ If the user is touching on the left third then we’ll adjust the `angle` value 
 First, add a using statement to qualify the `TouchPanel` and `TouchCollection` classes in `Camera.cs`:
 
 ```csharp
-using Microsoft.Xna.Framework.Input.Touch; 
+using Microsoft.Xna.Framework.Input.Touch;
 ```
 
 Next, modify the `Update` method to read the touch panel and adjust the `angle` and `position` variables appropriately:

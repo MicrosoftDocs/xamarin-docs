@@ -10,13 +10,13 @@ ms.date: 02/22/2018
 
 # Updating Xamarin.Mac Unified applications to 64-bit
 
-As of January 2018, Apple requires that new 
-[Mac App Store submissions target 64-bit](https://developer.apple.com/news/?id=06282017a). 
+As of January 2018, Apple requires that new
+[Mac App Store submissions target 64-bit](https://developer.apple.com/news/?id=06282017a).
 Apps already available on the Mac App Store must be updated to target 64-bit by
 June 2018.
 
-The **File** > **New** Xamarin.Mac project template creates 64-bit 
-applications by default, so any recently created apps are already 64-bit 
+The **File** > **New** Xamarin.Mac project template creates 64-bit
+applications by default, so any recently created apps are already 64-bit
 compatible and will not require any changes.
 
 ## Targeting 64-bit
@@ -51,12 +51,12 @@ frameworks — have not been updated to 64-bit.
 #### Example error resulting from a dynamically-linked third-party dependency that does not target 64-bit:
 
 ```console
-ld : warning : ignoring file PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary, 
-file was built for i386 which is not the architecture being linked (x86_64): 
-PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary 
+ld : warning : ignoring file PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary,
+file was built for i386 which is not the architecture being linked (x86_64):
+PATH/ThirdPartyLibrary.framework/ThirdPartyLibrary
 ```
 
-This error could be followed at runtime by `dlopen` returning `IntPtr.Zero` 
+This error could be followed at runtime by `dlopen` returning `IntPtr.Zero`
 instead of an expected handle.
 
 #### Example error resulting from a statically-linked third-party dependency that does not target 64-bit:
@@ -65,8 +65,8 @@ instead of an expected handle.
 Undefined symbols for architecture x86_64:
   "_LibraryFunction", referenced from:
      -u command line option
-ld: symbol(s) not found for architecture x86_64 
+ld: symbol(s) not found for architecture x86_64
 ```
 
-To build and run successfully, update these dependencies to 64-bit and 
+To build and run successfully, update these dependencies to 64-bit and
 recompile your app.

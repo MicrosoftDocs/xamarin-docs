@@ -62,7 +62,7 @@ code scheme* in the
 By expanding this version code scheme to eight digits, it is possible
 to include some ABI information into the version code that will ensure
 that Google Play will distribute the correct APK to a device. The
-following list explains this eight digit version code format 
+following list explains this eight digit version code format
 (indexed from left to right):
 
 - **Index 0** (red in diagram below) &ndash; An integer for the ABI:
@@ -78,7 +78,7 @@ following list explains this eight digit version code format
   - 3 &ndash; large
   - 4 &ndash; xlarge
 
-- **Index 5-7** (green in diagram below) &ndash; A unique number for the version code. 
+- **Index 5-7** (green in diagram below) &ndash; A unique number for the version code.
     This is set by the developer. It should increase for each public release of the application.
 
 The following diagram illustrates the position of each code described

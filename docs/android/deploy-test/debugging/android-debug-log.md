@@ -24,7 +24,7 @@ The **Debug Log** tool provides a way to view log output while debugging an
 app through Visual Studio. The debug log supports the following devices:
 
 - Physical Android phones, tablets, and wearables.
-- An Android Virtual device running on the Android Emulator. 
+- An Android Virtual device running on the Android Emulator.
 
 > [!NOTE]
 > The **Debug Log** tool does not work with Xamarin Live Player.
@@ -109,8 +109,8 @@ The following screenshot illustrates the various parts of the **Debug Tool** win
 
 - **Reconnect** &ndash; Reconnects to the device and refreshes the log entry display.
 
-- **Add Marker** &ndash; Inserts a marker message (such as `--- Marker N ---`) 
-    after the latest log entry, where _N_ is a counter that starts from 1 and 
+- **Add Marker** &ndash; Inserts a marker message (such as `--- Marker N ---`)
+    after the latest log entry, where _N_ is a counter that starts from 1 and
     increments by 1 as new markers are added.
 
 When the Debug Log tool window is displayed, use the device pull-down
@@ -146,8 +146,8 @@ $ adb logcat
 
 # [Visual Studio for Mac](#tab/macos)
 
-Another option is to view the debug log via the command line. Open a 
-Terminal window and navigate to the Android SDK platform-tools folder 
+Another option is to view the debug log via the command line. Open a
+Terminal window and navigate to the Android SDK platform-tools folder
 (typically, the SDK platform-tools folder is located at
 **/Users/username/Library/Developer/Xamarin/android-sdk-macosx/platform-tools**).
 
@@ -170,9 +170,9 @@ messages.
 
 ## Writing to the Debug Log
 
-Messages can be written to the **Debug Log** by using the methods of the 
+Messages can be written to the **Debug Log** by using the methods of the
 [Android.Util.Log](xref:Android.Util.Log) class.
-For example: 
+For example:
 
 ```csharp
 string tag = "myapp";
@@ -223,14 +223,14 @@ also contains the name of the application package:
 ^I.*ActivityManager.*Starting: Intent
 ```
 
-This is the line which corresponds to the start of an activity, and *most* 
+This is the line which corresponds to the start of an activity, and *most*
 (but not all) of the following messages should relate to the application.
 
-Notice that every message contains the process identifier (pid) of 
-the process generating the message. In the above `ActivityManager` 
-message, process `12944` generated the message. To determine which 
-process is the process of the application being debugged, look for the 
-**mono.MonoRuntimeProvider** message: 
+Notice that every message contains the process identifier (pid) of
+the process generating the message. In the above `ActivityManager`
+message, process `12944` generated the message. To determine which
+process is the process of the application being debugged, look for the
+**mono.MonoRuntimeProvider** message:
 
 ```shell
 I/ActivityThread(  602): Pub TouchTest.TouchTest.__mono_init__: mono.MonoRuntimeProvider

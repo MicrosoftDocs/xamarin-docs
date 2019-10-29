@@ -22,7 +22,7 @@ different Android devices. Each one of these configurations is created
 as a _virtual device_. In this guide, you will learn how to launch the
 emulator from Visual Studio and run your app in a virtual device. For
 information about configuring the Android Emulator and creating new
-virtual devices, see 
+virtual devices, see
 [Android Emulator Setup](~/android/get-started/installation/android-emulator/index.md).
 
 ## Using a Pre-Configured Virtual Device
@@ -37,9 +37,9 @@ the device drop-down menu. For example, in the following Visual Studio
 
 - **VisualStudio\_android-23\_arm\_tablet**
 
-- **VisualStudio\_android-23\_x86\_phone** 
+- **VisualStudio\_android-23\_x86\_phone**
 
-- **VisualStudio\_android-23\_x86\_tablet** 
+- **VisualStudio\_android-23\_x86\_tablet**
 
 [![Virtual devices](debug-on-emulator-images/win/01-virtual-devices-sml.png)](debug-on-emulator-images/win/01-virtual-devices.png#lightbox)
 
@@ -151,7 +151,7 @@ To access this feature, you will need the following:
 - Android SDK Tools version 26.1.1 or later
 
 When the above-listed versions of the emulator and SDK tools are
-installed, the Quick Boot feature is enabled by default. 
+installed, the Quick Boot feature is enabled by default.
 
 The first cold boot of the virtual device takes place without a speed
 improvement because a snapshot has not yet been created:
@@ -179,7 +179,7 @@ This guide explained the process for configuring the Android
 Emulator to run and test Xamarin.Android apps. It described the steps
 for launching the emulator using pre-configured virtual devices, and it
 provided the steps for deploying an application to the emulator from
-Visual Studio. 
+Visual Studio.
 
 For more information about using the Android Emulator, see
 the following Android Developer topics:

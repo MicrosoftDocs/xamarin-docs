@@ -25,7 +25,7 @@ These steps will work for any iOS project that uses the MSBuild build engine on 
         CopyIpa
         </CreateIpaDependsOn>
     </PropertyGroup>
-    
+
     <Target Name="CopyIpa"
             Condition="'$(OutputType)' == 'Exe'
             And '$(ComputedPlatform)' == 'iPhone'

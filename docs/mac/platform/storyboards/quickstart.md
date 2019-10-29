@@ -77,7 +77,7 @@ We'll add a Button to the Inspector and a View Controller to the Design Surface.
 
 [![](quickstart-images/qs14.png "Dragging to create a new segue")](quickstart-images/qs14.png#lightbox)
 
-From the popup menu, we'll select **Popover**: 
+From the popup menu, we'll select **Popover**:
 
 [![](quickstart-images/qs15.png "Selecting the segue type")](quickstart-images/qs15.png#lightbox)
 
@@ -117,7 +117,7 @@ If we save our changes, return to Visual Studio for Mac, run the app and select 
 
 You might notice that this doesn't look like a standard macOS app Preference Dialog Window. To fix this, include two image files in the Xamarin.Mac app's `Resources` folder in the **Solution Explorer** and return to Xcode's Interface Builder.
 
-Select the Tab View Controller and switch its **Style** to **Toolbar**: 
+Select the Tab View Controller and switch its **Style** to **Toolbar**:
 
 [![](quickstart-images/qs23.png "Setting the tab bar style")](quickstart-images/qs23.png#lightbox)
 

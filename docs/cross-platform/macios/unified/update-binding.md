@@ -194,7 +194,7 @@ Do the following:
 
 1. Start Visual Studio for Mac.
 2. Select **File** > **New** > **Solution...**
-3. In the New Solution Dialog Box, select **iOS** > **Unified API** > **iOS Binding Project**: 
+3. In the New Solution Dialog Box, select **iOS** > **Unified API** > **iOS Binding Project**:
 
     [![](update-binding-images/image01new.png "In the New Solution Dialog Box, select iOS / Unified API / iOS Binding Project")](update-binding-images/image01new.png#lightbox)
 4. On 'Configure your new project' dialog enter a **Name** for the new binding project and click the **OK** button.

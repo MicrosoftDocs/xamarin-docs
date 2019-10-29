@@ -82,33 +82,33 @@ The first step in displaying a `DatePickerDialog` is to subclass
 interface:
 
 ```csharp
-public class DatePickerFragment : DialogFragment, 
+public class DatePickerFragment : DialogFragment,
                                   DatePickerDialog.IOnDateSetListener
 {
     // TAG can be any string of your choice.
     public static readonly string TAG = "X:" + typeof (DatePickerFragment).Name.ToUpper();
-    
+
     // Initialize this value to prevent NullReferenceExceptions.
     Action<DateTime> _dateSelectedHandler = delegate { };
-    
+
     public static DatePickerFragment NewInstance(Action<DateTime> onDateSelected)
     {
         DatePickerFragment frag = new DatePickerFragment();
         frag._dateSelectedHandler = onDateSelected;
         return frag;
     }
-    
+
     public override Dialog OnCreateDialog(Bundle savedInstanceState)
     {
         DateTime currently = DateTime.Now;
-        DatePickerDialog dialog = new DatePickerDialog(Activity, 
-                                                       this, 
-                                                       currently.Year, 
+        DatePickerDialog dialog = new DatePickerDialog(Activity,
+                                                       this,
+                                                       currently.Year,
                                                        currently.Month - 1,
                                                        currently.Day);
         return dialog;
     }
-    
+
     public void OnDateSet(DatePicker view, int year, int monthOfYear, int dayOfMonth)
     {
         // Note: monthOfYear is a value between 0 and 11, not 1 and 12!
@@ -130,9 +130,9 @@ object and initialize it with the current date and the callback object
 (which is the current instance of the `DatePickerFragment`).
 
 > [!NOTE]
-> Be aware that the value of the month 
-> when `IOnDateSetListener.OnDateSet` is invoked is in the 
-> range of 0 to 11, and not 1 to 12. The day of the month 
+> Be aware that the value of the month
+> when `IOnDateSetListener.OnDateSet` is invoked is in the
+> range of 0 to 11, and not 1 to 12. The day of the month
 > will be in the range of 1 to 31 (depending on which month was selected).
 
 ### Showing the DatePickerFragment

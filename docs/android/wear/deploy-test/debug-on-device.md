@@ -45,14 +45,14 @@ an Android phone (for more information, see
 
 ## Debugging over Bluetooth
 
-If your Wear device does not have a USB port, you can deploy the app to 
-the Wear device over Bluetooth by routing the app's debug output to an 
-Android phone that is connected to your computer. 
+If your Wear device does not have a USB port, you can deploy the app to
+the Wear device over Bluetooth by routing the app's debug output to an
+Android phone that is connected to your computer.
 
 ### Prepare Your Phone
 
 Use the following steps to prepare your phone for making Bluetooth
-connections to the Wear device: 
+connections to the Wear device:
 
 1. If you have not already done so, set up your phone for Xamarin.Android development
     as explained in
@@ -66,8 +66,8 @@ connections to the Wear device:
 
 Use the following steps to connect your Wear device to your Phone:
 
-1. On the phone that will act as Bluetooth intermediary (configured above), 
-    start the Android Wear app. 
+1. On the phone that will act as Bluetooth intermediary (configured above),
+    start the Android Wear app.
 
 2. Tap the **Settings** icon.
 
@@ -79,7 +79,7 @@ Use the following steps to connect your Wear device to your Phone:
     Target: connected
     ```
 
-4. Connect the phone to your computer over USB. On your computer, 
+4. Connect the phone to your computer over USB. On your computer,
     enter the following commands:
 
     ```shell
@@ -87,16 +87,16 @@ Use the following steps to connect your Wear device to your Phone:
     adb connect 127.0.0.1:4444
     ```
 
-    If port 4444 is not available, you can use any other available port 
-    to which you have access. 
+    If port 4444 is not available, you can use any other available port
+    to which you have access.
 
     > [!NOTE]
     > If you restart Visual Studio or Visual Studio for Mac,
     > you must run these commands again to setup a connection to the Wear
     > device.
 
-5. When the Wear device prompts you, confirm that you are allowing 
-    **ADB Debugging**. In the Android Wear app, you should 
+5. When the Wear device prompts you, confirm that you are allowing
+    **ADB Debugging**. In the Android Wear app, you should
     see the status change to:
 
     ```
@@ -119,8 +119,8 @@ At this point, you can deploy your app to the Wear device.
 
 ### Taking screenshots
 
-You can take a screenshot of the Wear device by entering the following 
-command: 
+You can take a screenshot of the Wear device by entering the following
+command:
 
 ```shell
 adb -s 127.0.0.1:4444 shell screencap -p /sdcard/DCIM/screencap.png
@@ -155,20 +155,20 @@ adb -s 127.0.0.1:4444 uninstall com.xamarin.weartest
 ```
 
 For more information about debugging Android Wear devices over
-Bluetooth, see 
+Bluetooth, see
 [Debugging over Bluetooth](https://developer.android.com/training/wearables/apps/bt-debugging.html).
 
 ## Debugging a Wear app with a companion phone app
 
 Android Wear apps are packaged with a companion Android phone app for
 distribution on Google Play (for more information, see
-[Working with Packaging](~/android/wear/deploy-test/packaging.md)). 
+[Working with Packaging](~/android/wear/deploy-test/packaging.md)).
 However, you still develop the Wear app and its companion app
 separately. When you release your app through the Google Play Store,
 the Wear app will be packaged with the companion app and automatically
 installed if possible.
 
-To debug the Wear app with a companion app: 
+To debug the Wear app with a companion app:
 
 1. Build and deploy the companion app to the phone.
 

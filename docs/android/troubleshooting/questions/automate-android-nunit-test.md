@@ -21,17 +21,17 @@ When you create a **Unit Test App (Android)** project in Visual Studio
 project will not automatically run your tests by default.
 To run NUnit tests on a target device, you can create an
 [Android.App.Instrumentation](xref:Android.App.Instrumentation)
-subclass that is started by using the following command: 
+subclass that is started by using the following command:
 
 ```shell
-adb shell am instrument 
+adb shell am instrument
 ```
 
 The following steps explain this process:
 
-1. Create a new file called **TestInstrumentation.cs**: 
+1. Create a new file called **TestInstrumentation.cs**:
 
-    ```cs 
+    ```cs
     using System;
     using System.Reflection;
     using Android.App;
@@ -80,7 +80,7 @@ The following steps explain this process:
 
 4. Use the following command to run the unit tests. Replace
     `PACKAGE_NAME` with the app's package name (the package name can be
-    found in the app's `/manifest/@package` attribute located 
+    found in the app's `/manifest/@package` attribute located
     in **AndroidManifest.xml**):
 
     ```shell

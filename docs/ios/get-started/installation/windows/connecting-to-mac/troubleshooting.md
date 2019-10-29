@@ -27,9 +27,9 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
 ## Troubleshooting Remote Login
 
 > [!IMPORTANT]
-> These troubleshooting steps are primarily intended for problems that happen during the initial setup on a new system.  If you had previously been using the connection successfully in a particular environment and then the connection suddenly or intermittently stops working, you can (in most cases) skip straight to checking if any of the following helps: 
+> These troubleshooting steps are primarily intended for problems that happen during the initial setup on a new system.  If you had previously been using the connection successfully in a particular environment and then the connection suddenly or intermittently stops working, you can (in most cases) skip straight to checking if any of the following helps:
 >
-> - Kill the leftover processes as described below under [Errors due to existing Build Host Processes](#errors). 
+> - Kill the leftover processes as described below under [Errors due to existing Build Host Processes](#errors).
 > - Clear the agents as described under [Clearing the Broker, IDB, Build, and Designer Agents](#clearing), and then use a wired internet connection and connect directly via the IP address as described under [Couldn't connect to MacBuildHost.local. Please try again.](#tryagain).  
 > If none of those options fix the issue, then please follow the instructions in [step 9](#stepnine) to file a new bug report.
 
@@ -68,7 +68,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
     ```
     ping 10.1.8.95
     ```
-    
+
     If the ping fails, then the Mac is not _routable_ from the Windows computer. That problem will need to be solved at the level of the local area network configuration between the 2 computers. Ensure that both machines are on the same Local Network.
 
 8. Next, test if the `ssh` client from OpenSSH can connect successfully to the Mac from Windows. One way to install this program is to install [Git for Windows](https://git-for-windows.github.io/). You can then start a **Git Bash** command prompt and attempt to `ssh` in to the Mac with your username and IP address:
@@ -84,7 +84,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
     ```bash
     ssh amyb@10.1.8.95 'ls'
     ```
-    
+
     This should list the contents of your home directory on the Mac. If the `ls` command works correctly but the Visual Studio connection still fails, you can check the [Known Issues and Limitations](#knownissues) section about complications specific to Xamarin. If none of those match your problem, please file a new bug report on Developer Community by going to **Help > Send Feedback > Report a problem** in Visual Studio and attach the logs described under [Check the Verbose Log Files](#verboselogs).
 
 10. If **step 8 fails**, you can run the following command in Terminal on the Mac to see if the SSH server is accepting _any_ connections:
@@ -92,7 +92,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
     ```bash
     ssh localhost
     ```
-    
+
 11. If step 8 fails but **step 10 succeeds**, then the problem is most likely that port 22 on the Mac build host is not accessible from Windows due to the network configuration. Possible configuration issues include:
 
     - The OS X firewall settings are disallowing the connection. Be sure to double-check step 3.
@@ -185,7 +185,7 @@ If your log files show a problem during the "Installing", "Uploading", or "Start
     ```bash
     open "$HOME/Library/Caches/Xamarin"
     ```
-    
+
 2. Control-click the **XMA** folder and select **Move to Trash**:
 
     [![](troubleshooting-images/troubleshooting-image8.png "Move the XMA folder to Trash")](troubleshooting-images/troubleshooting-image8.png#lightbox)
@@ -195,7 +195,7 @@ If your log files show a problem during the "Installing", "Uploading", or "Start
     ```
     del %localappdata%\Temp\Xamarin\XMA
     ```
-    
+
 ### Warning Messages
 
 This section discusses a few messages that can appear in the Output windows and logs that you can usually ignore.

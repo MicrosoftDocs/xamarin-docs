@@ -139,7 +139,7 @@ In addition, Android 9 has removed the Apache HTTP client library from the bootc
 ```xml
 <application ...>
    ...
-   <uses-library android:name="org.apache.http.legacy" android:required="false" />    
+   <uses-library android:name="org.apache.http.legacy" android:required="false" />
 </application>
 ```
 
@@ -388,7 +388,7 @@ mapFrag.GetMapAsync(this);
 ...
 
 public void OnMapReady(GoogleMap map)
-{   
+{
     map.MoveCamera(CameraUpdateFactory.ZoomIn());
 }
 ```

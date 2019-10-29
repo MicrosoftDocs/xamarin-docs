@@ -15,7 +15,7 @@ is a layout widget used to display items in a horizontally scrolling
 list and positions the current selection at the center of the view.
 
 > [!IMPORTANT]
-> This widget was deprecated in Android 4.1 (API level 16). 
+> This widget was deprecated in Android 4.1 (API level 16).
 
 In this tutorial, you'll create a gallery of photos and then display a toast
 message each time a gallery item is selected.

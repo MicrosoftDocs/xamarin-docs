@@ -72,7 +72,7 @@ For example, in the following code we capture this event and present a
 
 ```csharp
 Switch s = FindViewById<Switch> (Resource.Id.monitored_switch);
-           
+
 s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs e) {
     var toast = Toast.MakeText (this, "Your answer is " +
         (e.IsChecked ?  "correct" : "incorrect"), ToastLength.Short);

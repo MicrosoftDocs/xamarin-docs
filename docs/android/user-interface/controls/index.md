@@ -20,7 +20,7 @@ methods in C#. The following sections introduce the most common
 Android user interface controls and explain how to incorporate them
 into Xamarin.Android apps.
 
-## [Action Bar](~/android/user-interface/controls/action-bar.md) 
+## [Action Bar](~/android/user-interface/controls/action-bar.md)
 
 `ActionBar` is a toolbar that displays the activity title,
 navigation interfaces, and other interactive items. Typically, the
@@ -90,7 +90,7 @@ do not include hardware buttons for **Home**, **Back**, and **Menu**.
 
 ## [Pickers](~/android/user-interface/controls/pickers/index.md)
 
-*Pickers* are UI elements that allow the user to pick a date or a 
+*Pickers* are UI elements that allow the user to pick a date or a
 time by using dialogs that are provided by Android.
 
 ![Example Picker](images/picker.png)
@@ -111,7 +111,7 @@ A `RatingBar` is a UI element that displays a rating in stars.
 ## [Spinner](~/android/user-interface/controls/spinner.md)
 
 `Spinner` is a UI element that provides a quick way to select one
-value from a set. It is simmilar to a drop-down list. 
+value from a set. It is simmilar to a drop-down list.
 
 ![Example Spinner](images/spinner.png)
 
@@ -139,7 +139,7 @@ action bar.
 
 ![Example Toolbar](images/toolbar.png)
 
-## [ViewPager](~/android/user-interface/controls/view-pager/index.md) 
+## [ViewPager](~/android/user-interface/controls/view-pager/index.md)
 
 The `ViewPager` is a layout manager that allows the user to flip left
 and right through pages of data.

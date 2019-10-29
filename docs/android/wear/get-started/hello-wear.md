@@ -35,18 +35,18 @@ Create a new **Android Wear Application**:
 
 -----
 
-This template automatically includes the **Xamarin Android Wearable 
-Library** NuGet (and dependencies) so you'll have access to 
-Wear-specific widgets. If you don't see the Wear template, review the 
-[Installation and Setup](~/android/wear/get-started/installation.md) guide to 
-double-check that you have installed a supported Android SDK. 
+This template automatically includes the **Xamarin Android Wearable
+Library** NuGet (and dependencies) so you'll have access to
+Wear-specific widgets. If you don't see the Wear template, review the
+[Installation and Setup](~/android/wear/get-started/installation.md) guide to
+double-check that you have installed a supported Android SDK.
 
 ### 2. Choose the correct **Target Framework**
 
 # [Visual Studio](#tab/windows)
 
-Ensure that **Minimum Android to target** is set to **Android 5.0 
-(Lollipop)** or later: 
+Ensure that **Minimum Android to target** is set to **Android 5.0
+(Lollipop)** or later:
 
 [![Setting the Target Framework to Android 5.0 in Visual Studio](hello-wear-images/vs/target-framework-sml.png)](hello-wear-images/vs/target-framework.png#lightbox)
 
@@ -63,8 +63,8 @@ For more information on setting the target framework, see
 
 ### 3. Edit the **Main.axml** layout
 
-Configure the layout to contain a `TextView` and a `Button` for the 
-sample: 
+Configure the layout to contain a `TextView` and a `Button` for the
+sample:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -107,8 +107,8 @@ android:layout_height="match_parent">
 
 ### 4. Edit the **MainActivity.cs** source
 
-Add the code to increment a counter and display it whenever the button 
-is clicked: 
+Add the code to increment a counter and display it whenever the button
+is clicked:
 
 ```csharp
 [Activity (Label = "WearTest", MainLauncher = true, Icon = "@drawable/icon")]
@@ -144,7 +144,7 @@ Smartwatch, You can run the app on an emulator. For information about
 debugging Wear apps on an emulator, see
 [Debug Android Wear on an Emulator](~/android/wear/deploy-test/debug-on-emulator.md).
 
-If you have an Android Wear device such as an Android Wear Smartwatch, 
+If you have an Android Wear device such as an Android Wear Smartwatch,
 You can run the app on the device instead of using an emulator. For
 more information about debugging on a Wear device,
 see [Debug on a Wear Device](~/android/wear/deploy-test/debug-on-device.md).
@@ -167,7 +167,7 @@ deploy the app to the emulator or device.
 -----
 
 You may see a **Just a minute...** message (or some other interstitial
-screen) at first: 
+screen) at first:
 
 ![Watch emulator displays Just a minute ...](hello-wear-images/please-wait.png)
 

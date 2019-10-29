@@ -144,7 +144,7 @@ The following XAML shows an example of the `TemplatedParent` relative binding mo
             </Frame>
         </ControlTemplate>
     </ContentPage.Resources>
-    <StackLayout>        
+    <StackLayout>
         <controls:CardView BorderColor="DarkGray"
                            CardTitle="John Doe"
                            CardDescription="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla elit dolor, convallis non interdum."

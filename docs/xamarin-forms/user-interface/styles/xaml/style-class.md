@@ -43,7 +43,7 @@ The following example shows three [`BoxView`](xref:Xamarin.Forms.BoxView) style 
                     Value="Start" />
             <Setter Property="CornerRadius"
                     Value="10" />
-        </Style>    
+        </Style>
 
         <Style TargetType="BoxView"
                Class="Circle">
@@ -64,7 +64,7 @@ The following example shows three [`BoxView`](xref:Xamarin.Forms.BoxView) style 
                ApplyToDerivedTypes="true">
             <Setter Property="Rotation"
                     Value="45" />
-        </Style>        
+        </Style>
     </ContentPage.Resources>
 </ContentPage>
 ```
@@ -185,7 +185,7 @@ The following example shows three [`BoxView`](xref:Xamarin.Forms.BoxView) instan
         ...
     </ContentPage.Resources>
     <StackLayout Margin="20">
-        <BoxView StyleClass="Separator" />       
+        <BoxView StyleClass="Separator" />
         <BoxView WidthRequest="100"
                  HeightRequest="100"
                  HorizontalOptions="Center"
@@ -193,7 +193,7 @@ The following example shows three [`BoxView`](xref:Xamarin.Forms.BoxView) instan
         <BoxView HorizontalOptions="Center"
                  StyleClass="Circle" />
     </StackLayout>
-</ContentPage>    
+</ContentPage>
 ```
 
 In this example, the first [`BoxView`](xref:Xamarin.Forms.BoxView) is styled to be a line separator, while the third `BoxView` is circular. The second `BoxView` has two style classes applied to it, which give it rounded corners and rotate it 45 degrees:

@@ -13,9 +13,9 @@ ms.date: 06/14/2017
 
 _With iOS 8, Apple has provided a plethora of new frameworks and APIs to excite and delight developers. In this guide we will introduce these new APIs and see how iOS 8 can benefit both developers and users._
 
-iOS 7 visually changed the entire iOS user interface from what users and developers had come to expect, right from the first iPhone OS. IOS 8 continues  with this by providing many frameworks for developers, which allows users to control almost every aspect of their life straight from their iPhone. For example health and fitness can be analyzed with *HealthKit*, passcodes are obsolescent with biometric authentication using *LocalAuthentication*, *App extensions* open up a communication channel between 3rd party apps, and *HomeKit* allows the ability to turn your house into a Home of the Future. 
+iOS 7 visually changed the entire iOS user interface from what users and developers had come to expect, right from the first iPhone OS. IOS 8 continues  with this by providing many frameworks for developers, which allows users to control almost every aspect of their life straight from their iPhone. For example health and fitness can be analyzed with *HealthKit*, passcodes are obsolescent with biometric authentication using *LocalAuthentication*, *App extensions* open up a communication channel between 3rd party apps, and *HomeKit* allows the ability to turn your house into a Home of the Future.
 
-If iOS 7 was about delighting users, iOS 8 focuses on delighting developers with a whole range of these tasty new tools. 
+If iOS 7 was about delighting users, iOS 8 focuses on delighting developers with a whole range of these tasty new tools.
 
 This guide introduces the new APIs for Xamarin.iOS developers.  
 
@@ -45,7 +45,7 @@ The diagram below shows the basic hierarchy of the configuration of HomeKit acce
 
 ![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
 
-To get started with HomeKit, developers will need to make sure that their provisioning profile has the HomeKit service selected. Apple has also provided developers with a HomeKit simulator add-in for Xcode. This can be found in the [Apple Developer Center](https://developer.apple.com/downloads/index.action), under `Hardware IO Tools for Xcode`. 
+To get started with HomeKit, developers will need to make sure that their provisioning profile has the HomeKit service selected. Apple has also provided developers with a HomeKit simulator add-in for Xcode. This can be found in the [Apple Developer Center](https://developer.apple.com/downloads/index.action), under `Hardware IO Tools for Xcode`.
 
 For more information, please see our [HomeKit](~/ios/platform/homekit.md) guide.
 
@@ -80,7 +80,7 @@ For more information on using App Extensions in Xamarin, refer to the [Introduct
 
 ### Touch ID
 
-Touch ID was introduced in iOS 7 as a means of authenticating the user—similar to a passcode. However, it was limited to unlocking the device, using the App Store, using iTunes, and authenticating the iCloud keychain only 
+Touch ID was introduced in iOS 7 as a means of authenticating the user—similar to a passcode. However, it was limited to unlocking the device, using the App Store, using iTunes, and authenticating the iCloud keychain only
 
 There are now two ways to use Touch ID as an authentication mechanism in iOS 8 applications using the Local Authentication API. It is currently not possible to use Local Authentication to authenticate remotely.
 

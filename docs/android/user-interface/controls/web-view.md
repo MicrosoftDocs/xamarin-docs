@@ -70,7 +70,7 @@ public class HelloWebViewClient : WebViewClient
 
 When `ShouldOverrideUrlLoading` returns `false`, it signals to Android
 that the current `WebView` instance handled the request and that no
-further action is necessary. 
+further action is necessary.
 
 If you are targeting API level 24 or later, use the overload of
 `ShouldOverrideUrlLoading` that takes an `IWebResourceRequest` for

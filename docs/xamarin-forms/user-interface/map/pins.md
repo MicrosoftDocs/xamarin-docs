@@ -40,7 +40,7 @@ A [`Pin`](xref:Xamarin.Forms.Maps.Pin) can be added to a [`Map`](xref:Xamarin.Fo
      <maps:Map x:Name="map"
                IsShowingUser="True"
                MoveToLastRegionOnLayoutChange="False"
-               HeightRequest="100"                  
+               HeightRequest="100"
                WidthRequest="960"
                VerticalOptions="FillAndExpand">
          <x:Arguments>
@@ -231,7 +231,7 @@ The appearance of each item in the `IEnumerable` collection can be chosen at run
                               Address="{Binding Address}"
                               Label="Xamarin!" />
                 </DataTemplate>
-            </local:MapItemTemplateSelector.XamarinTemplate>    
+            </local:MapItemTemplateSelector.XamarinTemplate>
         </local:MapItemTemplateSelector>
     </ContentPage.Resources>
 

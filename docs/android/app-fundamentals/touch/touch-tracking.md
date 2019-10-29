@@ -183,7 +183,7 @@ public override bool OnTouchEvent(MotionEvent args)
             break;
         // ...
     }
-    // ...        
+    // ...
 }
 ```
 
@@ -221,7 +221,7 @@ public override bool OnTouchEvent(MotionEvent args)
             inProgressPolylines.Remove(id);
             break;
     }
-    // ...        
+    // ...
 }
 ```
 
@@ -256,7 +256,7 @@ public override bool OnTouchEvent(MotionEvent args)
             break;
         // ...
     }
-    // ...        
+    // ...
 }
 ```
 

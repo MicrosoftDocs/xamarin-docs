@@ -10,7 +10,7 @@ ms.date: 02/16/2018
 
 # Creating a CryptoObject
 
-The integrity of the fingerprint authentication results is important to an application &ndash; it is how the application knows the identity of the user. It is theoretically possible for third-party malware to intercept and tamper with the results returned by the fingerprint scanner. This section will discuss one technique for preserving the validity of the fingerprint results. 
+The integrity of the fingerprint authentication results is important to an application &ndash; it is how the application knows the identity of the user. It is theoretically possible for third-party malware to intercept and tamper with the results returned by the fingerprint scanner. This section will discuss one technique for preserving the validity of the fingerprint results.
 
 The `FingerprintManager.CryptoObject` is a wrapper around the Java cryptography APIs and is used by the `FingerprintManager` to protect the integrity of the authentication request. Typically, a `Javax.Crypto.Cipher` object is the mechanism for encrypting the results of the fingerprint scanner. The `Cipher` object itself will use a key that is created by the application using the Android keystore APIs.
 
@@ -96,9 +96,9 @@ public class CryptoObjectHelper
 
 The sample code will create a new `Cipher` for each `CryptoObject`, using a key that was created by the application. The key is identified by the `KEY_NAME` variable that was set in the beginning of the `CryptoObjectHelper` class. The method `GetKey` will try and retrieve the key using the Android Keystore APIs. If the key does not exist, then the method `CreateKey` will create a new key for the application.
 
-The cipher is instantiated with a call to `Cipher.GetInstance`, taking a _transformation_ (a string value that tells the cipher how to encrypt and decrypt data). The call to `Cipher.Init` will complete the initialization of the cipher by providing a key from the application. 
+The cipher is instantiated with a call to `Cipher.GetInstance`, taking a _transformation_ (a string value that tells the cipher how to encrypt and decrypt data). The call to `Cipher.Init` will complete the initialization of the cipher by providing a key from the application.
 
-It is important to realize that there are some situations where Android may invalidate the key: 
+It is important to realize that there are some situations where Android may invalidate the key:
 
 - A new fingerprint has been enrolled with the device.
 - There are no fingerprints enrolled with the device.
@@ -111,7 +111,7 @@ The next section will discuss how to create the key and store it on the device.
 
 ## Creating a Secret Key
 
-The `CryptoObjectHelper` class uses the Android [`KeyGenerator`](xref:Javax.Crypto.KeyGenerator) to create a key and store it on the device. The `KeyGenerator` class can create the key, but needs some meta-data about the type of key to create. This information is provided by an instance of the [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) class. 
+The `CryptoObjectHelper` class uses the Android [`KeyGenerator`](xref:Javax.Crypto.KeyGenerator) to create a key and store it on the device. The `KeyGenerator` class can create the key, but needs some meta-data about the type of key to create. This information is provided by an instance of the [`KeyGenParameterSpec`](https://developer.android.com/reference/android/security/keystore/KeyGenParameterSpec.html) class.
 
 A `KeyGenerator` is instantiated using the `GetInstance` factory method. The sample code uses the [_Advanced Encryption Standard_](https://en.wikipedia.org/wiki/Advanced_Encryption_Standard) (_AES_) as the encryption algorithm. AES will break the data up into blocks of a fixed size and encrypt each of those blocks.
 
@@ -119,31 +119,31 @@ Next, a `KeyGenParameterSpec` is created using the `KeyGenParameterSpec.Builder`
 
 - The name of the key.
 - The key must be valid for both encrypting and decrypting.
-- In the sample code the  `BLOCK_MODE` is set to _Cipher Block Chaining_ (`KeyProperties.BlockModeCbc`), meaning that each block is XORed with the previous block (creating dependencies between each block). 
+- In the sample code the  `BLOCK_MODE` is set to _Cipher Block Chaining_ (`KeyProperties.BlockModeCbc`), meaning that each block is XORed with the previous block (creating dependencies between each block).
 - The `CryptoObjectHelper` uses [_Public Key Cryptography Standard #7_](https://tools.ietf.org/html/rfc2315) (_PKCS7_) to generate the bytes that will pad out the blocks to ensure that they are all of the same size.
 - `SetUserAuthenticationRequired(true)` means that user authentication is required before the key can be used.
 
-Once the `KeyGenParameterSpec` is created, it is used to initialize the `KeyGenerator`, which will generate a key and  securely store it on the device. 
+Once the `KeyGenParameterSpec` is created, it is used to initialize the `KeyGenerator`, which will generate a key and  securely store it on the device.
 
 ## Using the CryptoObjectHelper
 
-Now that the sample code has encapsulated much of the logic for creating a `CryptoWrapper` into the `CryptoObjectHelper` class, let's revisit the code from the start of this guide and use the `CryptoObjectHelper` to create the Cipher and start a fingerprint scanner: 
+Now that the sample code has encapsulated much of the logic for creating a `CryptoWrapper` into the `CryptoObjectHelper` class, let's revisit the code from the start of this guide and use the `CryptoObjectHelper` to create the Cipher and start a fingerprint scanner:
 
 ```csharp
 protected void FingerPrintAuthenticationExample()
 {
     const int flags = 0; /* always zero (0) */
-    
+
     CryptoObjectHelper cryptoHelper = new CryptoObjectHelper();
     cancellationSignal = new Android.Support.V4.OS.CancellationSignal();
-    
+
     // Using the Support Library classes for maximum reach
     FingerprintManagerCompat fingerPrintManager = FingerprintManagerCompat.From(this);
-    
+
     // AuthCallbacks is a C# class defined elsewhere in code.
     FingerprintManagerCompat.AuthenticationCallback authenticationCallback = new MyAuthCallbackSample(this);
 
-    // Here is where the CryptoObjectHelper builds the CryptoObject. 
+    // Here is where the CryptoObjectHelper builds the CryptoObject.
     fingerprintManager.Authenticate(cryptohelper.BuildCryptoObject(), flags, cancellationSignal, authenticationCallback, null);
 }
 ```

@@ -26,7 +26,7 @@ Xamarin.iOS 11 and later support the tvOS 11 SDK that ships with Apple's Xcode 9
 
 To build tvOS apps with Xamarin:
 
-1. **Install the latest Xcode** – [Download the latest version of Xcode](https://developer.apple.com/xcode/download/) and install it. Without Xcode installed, it will not be possible to build Xamarin apps. 
+1. **Install the latest Xcode** – [Download the latest version of Xcode](https://developer.apple.com/xcode/download/) and install it. Without Xcode installed, it will not be possible to build Xamarin apps.
 2. **Run Xcode** – After installing Xcode, start it once before updating and running Visual Studio for Mac. Xcode will install some tools that Xamarin requires.
 3. **Install the latest stable Xamarin release** - Update to the latest [stable Xamarin release](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel).
 

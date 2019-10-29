@@ -19,7 +19,7 @@ The best way to become familiar with mask filters is by experimenting with these
 
 ![Blur Example](mask-filters-images/MaskFilterExample.png "Blur Example")
 
-That's the only mask filter feature described in this article. The next article on [**SkiaSharp image filters**](image-filters.md) also describes a blur effect that you might prefer to this one. 
+That's the only mask filter feature described in this article. The next article on [**SkiaSharp image filters**](image-filters.md) also describes a blur effect that you might prefer to this one.
 
 The static [`SKMaskFilter.CreateBlur`](xref:SkiaSharp.SKMaskFilter.CreateBlur(SkiaSharp.SKBlurStyle,System.Single)) method has the following syntax:
 
@@ -47,14 +47,14 @@ The **Mask Blur Experiment** page in the [**SkiaSharpFormsDemos**](https://docs.
              xmlns:skiaforms="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.MaskBlurExperimentPage"
              Title="Mask Blur Experiment">
-    
+
     <StackLayout>
         <skiaforms:SKCanvasView x:Name="canvasView"
                                 VerticalOptions="FillAndExpand"
                                 PaintSurface="OnCanvasViewPaintSurface" />
 
-        <Picker x:Name="blurStylePicker" 
-                Title="Filter Blur Style" 
+        <Picker x:Name="blurStylePicker"
+                Title="Filter Blur Style"
                 Margin="10, 0"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged">
             <Picker.ItemsSource>
@@ -92,7 +92,7 @@ public partial class MaskBlurExperimentPage : ContentPage
     const string TEXT = "Blur My Text";
 
     SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(
-                            typeof(MaskBlurExperimentPage), 
+                            typeof(MaskBlurExperimentPage),
                             "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
 
     public MaskBlurExperimentPage ()
@@ -158,7 +158,7 @@ Here's the program running on iOS, Android, and the Universal Windows Platform (
 
 You'll notice that only the edges of the bitmap are affected by the blur. The `SKMaskFilter` class is not the correct effect to use if you want to blur an entire bitmap image. For that you'll want to use the [`SKImageFilter`](xref:SkiaSharp.SKImageFilter) class as described in the next article on [**SkiaSharp image filters**](image-filters.md).
 
-The text is blurred more with increasing values of the `sigma` argument. In experimenting with this program, you'll notice that for a particular `sigma` value, the blur is more extreme on the Windows 10 desktop. This difference occurs because the pixel density is lower on a desktop monitor than on mobile devices, and hence the text height in pixels is lower. The `sigma` value is proportional to a blur extent in pixels, so for a given `sigma` value, the effect is more extreme on lower resolution displays. In a production application, you'll probably want to calculate a `sigma` value that is proportional to the size of the graphic. 
+The text is blurred more with increasing values of the `sigma` argument. In experimenting with this program, you'll notice that for a particular `sigma` value, the blur is more extreme on the Windows 10 desktop. This difference occurs because the pixel density is lower on a desktop monitor than on mobile devices, and hence the text height in pixels is lower. The `sigma` value is proportional to a blur extent in pixels, so for a given `sigma` value, the effect is more extreme on lower resolution displays. In a production application, you'll probably want to calculate a `sigma` value that is proportional to the size of the graphic.
 
 Try several values before settling on a blur level that looks the best for your application. For example, in the **Mask Blur Experiment** page, try setting `sigma` like this:
 
@@ -175,9 +175,9 @@ All the screenshots so far have shown blur created with the `SKBlurStyle.Normal`
 
 [![Mask Blur Experiment](mask-filters-images/MaskBlurExperiment.png "Mask Blur Experiment")](mask-filters-images/MaskBlurExperiment-Large.png#lightbox)
 
-The iOS screenshot shows the `Solid` style: The text characters are still present as solid black strokes, and the blur is added to the outside of these text characters. 
+The iOS screenshot shows the `Solid` style: The text characters are still present as solid black strokes, and the blur is added to the outside of these text characters.
 
-The Android screenshot in the middle shows the `Outer` style: The character strokes themselves are eliminated (as is the bitmap) and the blur surrounds the empty space where the text characters once appeared. 
+The Android screenshot in the middle shows the `Outer` style: The character strokes themselves are eliminated (as is the bitmap) and the blur surrounds the empty space where the text characters once appeared.
 
 The UWP screenshot on the right shows the `Inner` style. The blur is restricted to the area normally occupied by the text characters.
 

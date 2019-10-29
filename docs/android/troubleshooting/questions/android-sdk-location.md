@@ -20,15 +20,15 @@ Settings** to view and set the Android SDK location:
 
 The default location for each path is as follows:
 
-- Java Development Kit Location: 
+- Java Development Kit Location:
 
     **C:\\Program Files\\Java\\jdk1.8.0_131**
 
-- Android SDK Location: 
+- Android SDK Location:
 
     **C:\\Program Files (x86)\\Android\\android-sdk**
 
-- Android NDK Location: 
+- Android NDK Location:
 
     **C:\\ProgramData\\Microsoft\\AndroidNDK64\\android-ndk-r13b**
 
@@ -55,15 +55,15 @@ tab to view and set the SDK location:
 
 The default location for each path is as follows:
 
-- Android SDK Location: 
+- Android SDK Location:
 
     **~/Library/Developer/Xamarin/android-sdk-macosx**
 
-- Android NDK Location: 
+- Android NDK Location:
 
     **~/Library/Developer/Xamarin/android-ndk/android-ndk-r14b**
 
-- Java SDK (JDK) Location: 
+- Java SDK (JDK) Location:
 
     **/usr**
 

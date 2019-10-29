@@ -225,7 +225,7 @@ namespace Core
 }
 ```
 
-Save the changes to the **PhoneTranslator.cs** file by clicking 
+Save the changes to the **PhoneTranslator.cs** file by clicking
 **File > Save** (or by pressing **CTRL+S**), then close the file.
 
 ## Wire up the user interface
@@ -297,7 +297,7 @@ translateButton.Click += (sender, e) =>
 
 Save your work by selecting **File > Save All** (or by
 pressing **CTRL-SHIFT-S**) and build the application by selecting
-**Build > Rebuild Solution** (or by pressing **CTRL-SHIFT-B**). 
+**Build > Rebuild Solution** (or by pressing **CTRL-SHIFT-B**).
 
 If there are errors, go through the previous steps and correct any
 mistakes until the application builds successfully. If you get a
@@ -368,7 +368,7 @@ is the layout file for the screen when it is viewed in the Android Designer:
 [![Open Main.axml](hello-android-quickstart-images/xs/05-open-layout-sml.png)](hello-android-quickstart-images/xs/05-open-layout.png#lightbox)
 
 Select the **Hello World, Click Me!** **Button** on the design
-surface and press the **Delete** key to remove it. 
+surface and press the **Delete** key to remove it.
 
 From the **Toolbox** (the area on the right), enter `text` into the search field and drag a **Text (Large)** widget onto the design surface (the area in the center):
 
@@ -407,7 +407,7 @@ With the **Button** selected on the design surface, you can use the
 
 Drag a **TextView** from the **Toolbox** to the design surface and place it under the **Button** widget. With the **TextView** selected, set the `id` property of the **TextView** to `@+id/TranslatedPhoneWord` and change the `text` to an empty string:
 
-[![Set the properties on the text view.](hello-android-quickstart-images/xs/12-textview-properties-sml.png)](hello-android-quickstart-images/xs/12-textview-properties.png#lightbox)    
+[![Set the properties on the text view.](hello-android-quickstart-images/xs/12-textview-properties-sml.png)](hello-android-quickstart-images/xs/12-textview-properties.png#lightbox)
 
 Save your work by pressing **&#8984; + S**.
 

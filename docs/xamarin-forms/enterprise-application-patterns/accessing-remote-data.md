@@ -74,7 +74,7 @@ public async Task<ObservableCollection<CatalogItem>> GetCatalogAsync()
 
     CatalogRoot catalog = await _requestProvider.GetAsync<CatalogRoot>(uri);  
     ...  
-    return catalog?.Data.ToObservableCollection();            
+    return catalog?.Data.ToObservableCollection();
 }
 ```
 
@@ -91,7 +91,7 @@ public async Task<TResult> GetAsync<TResult>(string uri, string token = 
     await HandleResponse(response);  
     string serialized = await response.Content.ReadAsStringAsync();  
 
-    TResult result = await Task.Run(() =>   
+    TResult result = await Task.Run(() =>
         JsonConvert.DeserializeObject<TResult>(serialized, _serializerSettings));  
 
     return result;  
@@ -111,7 +111,7 @@ private HttpClient CreateHttpClient(string token = "")
 
     if (!string.IsNullOrEmpty(token))  
     {  
-        httpClient.DefaultRequestHeaders.Authorization =   
+        httpClient.DefaultRequestHeaders.Authorization =
             new AuthenticationHeaderValue("Bearer", token);  
     }  
     return httpClient;  
@@ -139,7 +139,7 @@ public async Task<IActionResult> Items(
 
     itemsOnPage = ComposePicUri(itemsOnPage);  
     var model = new PaginatedItemsViewModel<CatalogItem>(  
-        pageIndex, pageSize, totalItems, itemsOnPage);             
+        pageIndex, pageSize, totalItems, itemsOnPage);
 
     return Ok(model);  
 }
@@ -165,7 +165,7 @@ private async Task ReCalculateTotalAsync()
     ...  
     await _basketService.UpdateBasketAsync(new CustomerBasket  
     {  
-        BuyerId = userInfo.UserId,   
+        BuyerId = userInfo.UserId,
         Items = BasketItems.ToList()  
     }, authToken);  
 }
@@ -322,7 +322,7 @@ FFImageLoading's `CachedImage` control is a replacement for the Xamarin.Forms [`
 ```xaml
 <ffimageloading:CachedImage
     Grid.Row="0"
-    Source="{Binding PictureUri}"     
+    Source="{Binding PictureUri}"
     Aspect="AspectFill">
     <ffimageloading:CachedImage.LoadingPlaceholder>
         <OnPlatform x:TypeArguments="ImageSource">

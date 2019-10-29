@@ -15,26 +15,26 @@ _This article explains how to recover parameter names in an Java Binding Project
 
 ## Overview
 
-When binding an existing Java library, some metadata about the bound 
-API is lost. In particular the names of parameters to methods. 
-Parameter names will appear as `p0`, `p1`, etc. This is because the 
-Java `.class` files do not preserve the parameter names that were used 
-in the Java source code. 
+When binding an existing Java library, some metadata about the bound
+API is lost. In particular the names of parameters to methods.
+Parameter names will appear as `p0`, `p1`, etc. This is because the
+Java `.class` files do not preserve the parameter names that were used
+in the Java source code.
 
-A Xamarin.Android Java binding project can provide the parameter names 
-if it has access to the Javadoc HTML from the original library. 
+A Xamarin.Android Java binding project can provide the parameter names
+if it has access to the Javadoc HTML from the original library.
 
 ## Integrating Javadoc HTML into a Java Binding Project
 
-Integrating the Javadoc HTML into a Java Binding project is a manual 
-process consisting of the following steps: 
+Integrating the Javadoc HTML into a Java Binding project is a manual
+process consisting of the following steps:
 
 1. Download the Javadoc for the library
 2. Edit the `.csproj` file and add a `<JavaDocPaths>` property:
 3. Clean and rebuild the project
 
-Once this is done, the original Java parameter names should be present 
-in the APIs bound by a Java Binding Project. 
+Once this is done, the original Java parameter names should be present
+in the APIs bound by a Java Binding Project.
 
 > [!NOTE]
 > There is a great deal of variance in the JavaDoc
@@ -44,5 +44,5 @@ properly named.
 
 ## Summary
 
-This article covered how use Javadoc in a Java Binding Project to 
-provide meaning parameter names for bound APIs. 
+This article covered how use Javadoc in a Java Binding Project to
+provide meaning parameter names for bound APIs.

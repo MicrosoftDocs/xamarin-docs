@@ -45,7 +45,7 @@ iOS 10 makes the following enhancements to the Core Image framework:
 
 - The developer can now process images in a color space outside of the Core Image context's working color space by converting in and out of the color space before and after processing.
 - For iOS devices that use the A8 or A9 CPUs, the RAW image format is now supported. Core Image now provides support for decoding RAW images from either the built-in iSight camera or from a 3rd party camera. Use the `FilterWithImageData` or `FilterWithImageURL` methods of the [CIFilter](xref:CoreImage.CIFilter) class to process RAW images.
-- Several rendering performance enhancements have been made to `UIImage` rendering (when backed by Core Image image stores) in `UIImageView` objects. 
+- Several rendering performance enhancements have been made to `UIImage` rendering (when backed by Core Image image stores) in `UIImageView` objects.
 - `UIImage` objects tagged wide-gamut will render as wide-gamut color in `UIImageView` objects on iOS devices that support wide color.
 - Core Image kernel code can now request specific pixel output formats.
 - The `ImageWithExtent` method of the [CIFilter](xref:CoreImage.CIFilter) class can be used to insert custom processing into the filter operation. Core Image will invoke the given callback between filters when processing an image for output or display.
@@ -77,7 +77,7 @@ The following enhancements have been made to the Foundation framework for iOS 10
 
 The following enhancements have been made to the GameKit framework in iOS 10:
 
-- The **Game Center App** has been deprecated and removed from iOS. If the app uses GameKit, it _must_ present its own interface to display GameKit features such as leaderboards, etc. 
+- The **Game Center App** has been deprecated and removed from iOS. If the app uses GameKit, it _must_ present its own interface to display GameKit features such as leaderboards, etc.
 - A new iCloud-only account type has been implemented by the [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) class.
 - The new [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) class provides a generalized solution for managing persistent data storage on Game Center. `GKGameSession` maintains a list of players and the app is responsible for implementing how and when participant date is stored, retrieved or exchanged between players. In many instances Game Sessions can replace existing turn-based matches, real-time matches or persistent game save methods.
 

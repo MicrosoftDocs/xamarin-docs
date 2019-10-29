@@ -84,7 +84,7 @@ The *FragmentManager* knows about all of the Fragments that are
 attached to an Activity and provides two methods to help find these
 Fragments:
 
-- **FindFragmentById** &ndash; This method will find a Fragment 
+- **FindFragmentById** &ndash; This method will find a Fragment
     by using the ID that was specified in the layout file or the container
     ID when the Fragment was added as part of a transaction.
 

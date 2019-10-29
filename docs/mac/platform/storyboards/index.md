@@ -33,7 +33,7 @@ As stated above, a Storyboard defines all of the UI for a given app broken down 
 
 [![](images/intro02.png "An example view controller")](images/intro02.png#lightbox)
 
-Each Scene represents a given View and View Controller Pair with a set of lines (called Segues) that connect each Scene in the UI, thus showing their relationships. Some Segues define how one View Controller contains one or more child Views or View Controllers. Other Segues, define transitions between View Controller (such as displaying a popover or dialog box). 
+Each Scene represents a given View and View Controller Pair with a set of lines (called Segues) that connect each Scene in the UI, thus showing their relationships. Some Segues define how one View Controller contains one or more child Views or View Controllers. Other Segues, define transitions between View Controller (such as displaying a popover or dialog box).
 
 [![](images/intro03.png "A sample segue")](images/intro03.png#lightbox)
 
@@ -49,7 +49,7 @@ View Controllers define the relationships between a given View of information wi
 
 In this way, each View Controller is a self-contained, reusable pairing of both the information's visual representation (View) and the logic to present and control that information.
 
-Within a given Scene, you can do all of the things that would normally have been handled by individual `.xib` files: 
+Within a given Scene, you can do all of the things that would normally have been handled by individual `.xib` files:
 
 - Place subviews and controls (such as buttons and text boxes).
 - Define element positions and auto layout constraints.
@@ -77,7 +77,7 @@ At Design time (when layout out the UI in Xcode's Interface Builder), each eleme
   - **View Controller** - That define the relationships between Views and the data that support them.
   - **Views and Subviews** - The actual elements that make up the user interface.
   - **Containment Segues** - That define the parent-child relationships between Scenes.
-- **Presentation Segues** - That define individual presentation modes. 
+- **Presentation Segues** - That define individual presentation modes.
 
 By defining each element in this way, it allows for the lazy-loading of each element only as it is needed during runtime. In macOS, the entire process was designed to allow the developer to create complex, flexible User Interfaces that require a bare minimum of backing code to make them work, all while being as efficient with system resources as possible.
 
@@ -91,7 +91,7 @@ In the [Storyboard Quick Start](~/mac/platform/storyboards/quickstart.md) guide,
 
 ## Working with Storyboards
 
-This section covers the in-depth details of [Working with Storyboards](~/mac/platform/storyboards/indepth.md) in a Xamarin.Mac app. We take an in-depth look at Scenes and how they are composed of View Controllers and View. Then, we'll take a look at how Scenes are tied together with Segues. Finally, we'll take a look at working with custom Segue types. 
+This section covers the in-depth details of [Working with Storyboards](~/mac/platform/storyboards/indepth.md) in a Xamarin.Mac app. We take an in-depth look at Scenes and how they are composed of View Controllers and View. Then, we'll take a look at how Scenes are tied together with Segues. Finally, we'll take a look at working with custom Segue types.
 
 <a name="Complex-Storyboard-Example" />
 

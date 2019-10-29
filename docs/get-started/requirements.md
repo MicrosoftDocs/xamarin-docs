@@ -72,7 +72,7 @@ You can use Visual Studio for Mac to develop Xamarin.Forms apps on macOS High Si
 
 ## Windows system requirements
 
-Xamarin.Forms apps for iOS and Android can be built on any Windows installation that supports Xamarin development. For full support of the current platform features, use the latest version of Visual Studio. 
+Xamarin.Forms apps for iOS and Android can be built on any Windows installation that supports Xamarin development. For full support of the current platform features, use the latest version of Visual Studio.
 
 A networked Mac is required for iOS development using the latest version of Xcode and the minimum version of macOS specified by Apple.
 

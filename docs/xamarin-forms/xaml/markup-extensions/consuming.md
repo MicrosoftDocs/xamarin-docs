@@ -229,7 +229,7 @@ This is how the navigation menu in `MainPage` in the **Markup Extensions** progr
                           Command="{Binding NavigateCommand}"
                           CommandParameter="{x:Type local:ArrayDemoPage}" />
 
-                ···                          
+                ···
 
         </TableRoot>
     </TableView>
@@ -368,12 +368,12 @@ The **x:Array Demo** page shows how to use `x:Array` to add items to a `ListView
             <DataTemplate>
                 <ViewCell>
                     <BoxView Color="{Binding}"
-                             Margin="3" />    
+                             Margin="3" />
                 </ViewCell>
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>
-</ContentPage>        
+</ContentPage>
 ```
 
 The `ViewCell` creates a simple `BoxView` for each color entry:
@@ -444,7 +444,7 @@ The **x:Null Demo** page illustrates one scenario when `x:Null` might be conveni
             <Label Text="Text 5" />
         </StackLayout>
     </ContentPage.Content>
-</ContentPage>   
+</ContentPage>
 ```
 
 Then you discover that for one of the `Label` elements, you want all the property settings in the implicit `Style` except for the `FontFamily`, which you want to be the default value. You could define another `Style` for that purpose but a simpler approach is simply to set the `FontFamily` property of the particular `Label` to `x:Null`, as demonstrated in the center `Label`.

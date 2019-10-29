@@ -73,7 +73,7 @@ void ReleaseDesignerOutlets ()
 }
 ```
 
-However, in iOS 6, it is no longer necessary to call `ReleaseDesignerOutlets`.   
+However, in iOS 6, it is no longer necessary to call `ReleaseDesignerOutlets`.
 
 For cleanup code, iOS 6 applications should use `DidReceiveMemoryWarning`. However, code that
 calls `Dispose` should be used sparingly and only for memory

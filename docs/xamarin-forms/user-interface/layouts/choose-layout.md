@@ -90,7 +90,7 @@ The following XAML shows how to create a [`Grid`](xref:Xamarin.Forms.Grid) with 
     <Grid.ColumnDefinitions>
         <ColumnDefinition Width="Auto" />
         <ColumnDefinition />
-    </Grid.ColumnDefinitions>    
+    </Grid.ColumnDefinitions>
     <Label Text="Column 0, Row 0"
            Width="200" />
     <Label Grid.Column="1"

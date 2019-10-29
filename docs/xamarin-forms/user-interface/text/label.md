@@ -400,7 +400,6 @@ Label label = new Label
 
 For more information about padding, see [Margins and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-
 ## Hyperlinks
 
 The text displayed by [`Label`](xref:Xamarin.Forms.Label) and [`Span`](xref:Xamarin.Forms.Span) instances can be turned into hyperlinks with the following approach:

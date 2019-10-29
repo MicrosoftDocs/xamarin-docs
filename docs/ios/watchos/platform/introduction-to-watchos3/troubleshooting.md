@@ -83,7 +83,7 @@ As of watchOS 3, SSL/TLS connections security is being strictly enforced by Appl
 
 ## Snapshots
 
-WatchKit apps that have not adopted the new `HandelBackgroundTask` API will no longer receive periodic updates in watchOS 3. 
+WatchKit apps that have not adopted the new `HandelBackgroundTask` API will no longer receive periodic updates in watchOS 3.
 
 ## WatchKit
 

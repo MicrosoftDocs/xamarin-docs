@@ -20,7 +20,7 @@ Use `UIAlertControllerStyle` to indicate the type of alert to display. These ale
 - **UIAlertControllerStyleActionSheet**
   - Pre-iOS 8 this would have been a UIActionSheet
 - **UIAlertControllerStyleAlert**
-  - Pre-iOS 8 this would have been UIAlertView 
+  - Pre-iOS 8 this would have been UIAlertView
 
 There are three necessary steps to take when creating an Alert Controller:
 

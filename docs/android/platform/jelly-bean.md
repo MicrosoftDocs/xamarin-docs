@@ -105,7 +105,7 @@ stack:
 - `OnNavigateUp` – By overriding this method it is possible to perform a custom action when the **Up** button is pressed.
 - `NavigateUpTo` – Calling this method will cause the application to navigate from the current activity to the activity specified by a given intent.
 - `ParentActivityIntent` – This is used to obtain an Intent that will launch the parent activity of the current activity.
-- `ShouldUpRecreateTask` – This method is used to query if the synthetic back stack must be created to navigate up to a parent activity. Returns  `true` if the synthetic stack must be created. 
+- `ShouldUpRecreateTask` – This method is used to query if the synthetic back stack must be created to navigate up to a parent activity. Returns  `true` if the synthetic stack must be created.
 - `FinishAffinity` – Calling this method will finish the current activity and all activities below it in the current task that have the same task affinity.
 - `OnCreateNavigateUpTaskStack` – This method is overridden when it is necessary to have complete control over how the synthetic stack is created.
 

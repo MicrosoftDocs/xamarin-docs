@@ -4,8 +4,8 @@ The following command line to specify a Release build of the solution **SOLUTION
 - On the Mac, using **xbuild**:
 
   ```
-  xbuild /p:Configuration="Release" \ 
-         /p:Platform="iPhone" \ 
+  xbuild /p:Configuration="Release" \
+         /p:Platform="iPhone" \
          /p:IpaPackageDir="$HOME/Builds" \
          /t:Build MyProject.sln
   ```
@@ -15,9 +15,9 @@ The **xbuild** command is typically found in the directory **/Library/Frameworks
 - On Windows, using **msbuild**:
 
   ```
-  msbuild /p:Configuration="Release" 
-          /p:Platform="iPhone" 
-          /p:IpaPackageDir="%USERPROFILE%\Builds" 
+  msbuild /p:Configuration="Release"
+          /p:Platform="iPhone"
+          /p:IpaPackageDir="%USERPROFILE%\Builds"
           /p:ServerAddress="192.168.1.3" /p:ServerUser="macuser"  
           /t:Build MyProject.sln
   ```

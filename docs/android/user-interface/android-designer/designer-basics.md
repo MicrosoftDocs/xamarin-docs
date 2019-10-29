@@ -102,9 +102,9 @@ The **Designer Toolbar** provides access to the following features:
 - **Alternative Layout Selector** &ndash; Allows you to select from
     different layout versions.
 
-- **Device Selector** &ndash; Defines a set of qualifiers 
+- **Device Selector** &ndash; Defines a set of qualifiers
     (such as screen size, resolution, and keyboard availability)
-    associated with a particular device. You can also add and 
+    associated with a particular device. You can also add and
     delete new devices.
 
 - **Android Version Selector** &ndash; The Android version that the
@@ -265,7 +265,7 @@ as explained next.
 For greater navigational ease when working with long XML files, the
 **Source** pane supports the Visual Studio scrollbar (as seen on the
 right in the previous screenshot). For more information about the
-scrollbar, see 
+scrollbar, see
 [How to Track Your Code by Customizing the Scrollbar](https://msdn.microsoft.com/library/dn237345.aspx).
 
 ### Autocompletion
@@ -304,7 +304,7 @@ filtering action that each provides.
 ## Properties pane
 
 The Designer supports the editing of widget properties through the
-**Properties** pane: 
+**Properties** pane:
 
 ![Screenshot of the Properties window](designer-basics-images/vs/08-property-pad.png)
 

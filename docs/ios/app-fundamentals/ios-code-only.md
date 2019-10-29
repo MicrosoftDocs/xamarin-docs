@@ -299,7 +299,7 @@ For example, let's edit the `CustomViewController` to create a login screen wher
 
 ### Adding the text fields
 
-First, remove the button and event handler that was added in the [Initializing the View](#initializing-the-view) section. 
+First, remove the button and event handler that was added in the [Initializing the View](#initializing-the-view) section.
 
 Add a control for the username by creating and initializing a `UITextField` and then adding it to the view hierarchy, as shown below:
 

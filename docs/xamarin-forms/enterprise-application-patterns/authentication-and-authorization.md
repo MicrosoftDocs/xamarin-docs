@@ -73,7 +73,7 @@ public void ConfigureServices(IServiceCollection services)
 {  
     ...  
     services.AddIdentityServer(x => x.IssuerUri = "null")  
-        .AddSigningCredential(Certificate.Get())                 
+        .AddSigningCredential(Certificate.Get())
         .AddAspNetIdentity<ApplicationUser>()  
         .AddConfigurationStore(builder =>  
             builder.UseSqlServer(connectionString, options =>  
@@ -257,7 +257,7 @@ public string CreateAuthorizationRequest()
     // Dictionary with values for the authorize request
     var dic = new Dictionary<string, string>();
     dic.Add("client_id", GlobalSetting.Instance.ClientId);
-    dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
+    dic.Add("client_secret", GlobalSetting.Instance.ClientSecret);
     dic.Add("response_type", "code id_token");
     dic.Add("scope", "openid profile basket orders locations marketing offline_access");
     dic.Add("redirect_uri", GlobalSetting.Instance.IdentityCallback);
@@ -269,7 +269,7 @@ public string CreateAuthorizationRequest()
     var currentCSRFToken = Guid.NewGuid().ToString("N");
     dic.Add("state", currentCSRFToken);
 
-    var authorizeUri = authorizeRequest.Create(dic); 
+    var authorizeUri = authorizeRequest.Create(dic);
     return authorizeUri;
 }
 
@@ -350,7 +350,7 @@ This method invokes the `CreateLogoutRequest` method in the `IdentityService` cl
 public string CreateLogoutRequest(string token)  
 {  
     ...  
-    return string.Format("{0}?id_token_hint={1}&post_logout_redirect_uri={2}",   
+    return string.Format("{0}?id_token_hint={1}&post_logout_redirect_uri={2}",
         GlobalSetting.Instance.LogoutEndpoint,  
         token,  
         GlobalSetting.Instance.LogoutCallback);  
@@ -425,7 +425,7 @@ protected virtual void ConfigureAuth(IApplicationBuilder app)
         ScopeName = "basket",  
         RequireHttpsMetadata = false  
     });  
-} 
+}
 ```
 
 This method ensures that the API can only be accessed with a valid access token. The middleware validates the incoming token to ensure that it's sent from a trusted issuer, and validates that the token is valid to be used with the API that receives it. Therefore, browsing to the ordering or basket controller will return a 401 (unauthorized) HTTP status code, indicating that an access token is required.
@@ -450,7 +450,7 @@ Similarly, the access token must be included when sending data to an IdentitySer
 var authToken = Settings.AuthAccessToken;  
 await _basketService.UpdateBasketAsync(new CustomerBasket  
 {  
-    BuyerId = userInfo.UserId,   
+    BuyerId = userInfo.UserId,
     Items = BasketItems.ToList()  
 }, authToken);
 ```

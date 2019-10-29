@@ -36,7 +36,7 @@ In such cases, the generator overrides the [`isEqual:`](https://developer.apple.
 
 ### Exceptions support
 
-Passing `--nativeexception` as an argument to `objcgen` will convert managed exceptions into Objective-C exceptions that can be caught and processed. 
+Passing `--nativeexception` as an argument to `objcgen` will convert managed exceptions into Objective-C exceptions that can be caught and processed.
 
 ### Comparison
 
@@ -211,9 +211,9 @@ The conversion uses the following formula:
 TimeInterval = DateTimeObjectTicks - NSDateReferenceDateTicks / TicksPerSecond
 ```
 
-In this formula: 
+In this formula:
 
-- `NSDateReferenceDateTicks` is calculated based on the `NSDate` reference date of 00:00:00 UTC on 1 January 2001: 
+- `NSDateReferenceDateTicks` is calculated based on the `NSDate` reference date of 00:00:00 UTC on 1 January 2001:
 
     ```csharp
     new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;
@@ -231,9 +231,9 @@ The conversion from `NSDate` to `DateTime` uses the following formula:
 DateTimeTicks = NSDateTimeIntervalSinceReferenceDate * TicksPerSecond + NSDateReferenceDateTicks
 ```
 
-In this formula: 
+In this formula:
 
-- `NSDateReferenceDateTicks` is calculated based on the `NSDate` reference date of 00:00:00 UTC on 1 January 2001: 
+- `NSDateReferenceDateTicks` is calculated based on the `NSDate` reference date of 00:00:00 UTC on 1 January 2001:
 
     ```csharp
     new DateTime (year:2001, month:1, day:1, hour:0, minute:0, second:0, kind:DateTimeKind.Utc).Ticks;

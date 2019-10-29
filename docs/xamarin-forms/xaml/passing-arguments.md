@@ -103,7 +103,7 @@ The [`Color`](xref:Xamarin.Forms.Color) structure defines a number of factory me
       <x:Arguments>
         <x:Int32>192</x:Int32>
         <x:Int32>75</x:Int32>
-        <x:Int32>150</x:Int32>                        
+        <x:Int32>150</x:Int32>
         <x:Int32>128</x:Int32>
       </x:Arguments>
     </Color>

@@ -19,9 +19,9 @@ A Split View Controller presents and manages a Master and Detail View Controller
 
 ## About Split View Controllers
 
-As stated above, a Split View Controller manages a Master and Detail View Controller that are presented side-by-side, with the Master being the smaller view on the left, the Detail the larger on the right. 
+As stated above, a Split View Controller manages a Master and Detail View Controller that are presented side-by-side, with the Master being the smaller view on the left, the Detail the larger on the right.
 
-Additionally, the Master View Controller can been hidden or shown as required: 
+Additionally, the Master View Controller can been hidden or shown as required:
 
 [![](split-views-images/intro02.png "The Master View Controller hidden")](split-views-images/intro02.png#lightbox)
 
@@ -44,18 +44,18 @@ The easiest way to work with Split View Controllers in a Xamarin.tvOS app is to 
 # [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
-1. Drag a **Split View Controllers** from the **Toolbox** and drop it on the View: 
+1. Drag a **Split View Controllers** from the **Toolbox** and drop it on the View:
 
     [![](split-views-images/activity01.png "A Split View Controller")](split-views-images/activity01.png#lightbox)
 1. By default, the iOS Designer will install a Navigation Controller and a View Controller in the Master View. If this does not fit your app's requirements, simply delete them.
-1. If you do remove the default Master View, drag a new View Controller onto the design surface: 
+1. If you do remove the default Master View, drag a new View Controller onto the design surface:
 
     [![](split-views-images/activity02.png "A View Controller")](split-views-images/activity02.png#lightbox)
-1. Control-Click and drag from the Split View Controller to the new Master View Controller. 
-1. Select **Master** from the **Popup Menu**: 
+1. Control-Click and drag from the Split View Controller to the new Master View Controller.
+1. Select **Master** from the **Popup Menu**:
 
     [![](split-views-images/activity03.png "Select Master from the Popup Menu")](split-views-images/activity03.png#lightbox)
-1. Design the contents of your Master and Detail Views: 
+1. Design the contents of your Master and Detail Views:
 
     [![](split-views-images/activity04.png "Example layout")](split-views-images/activity04.png#lightbox)
 1. Assign **Names** in the **Widget Tab** of the **Properties Pad** to work with your UI controls in C# code.
@@ -64,18 +64,18 @@ The easiest way to work with Split View Controllers in a Xamarin.tvOS app is to 
 # [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
-1. Drag a **Split View Controllers** from the **Toolbox** and drop it on the View: 
+1. Drag a **Split View Controllers** from the **Toolbox** and drop it on the View:
 
     [![](split-views-images/activity01-vs.png "A Split View Controller")](split-views-images/activity01-vs.png#lightbox)
 1. By default, the iOS Designer will add a Navigation Controller and View Controller in the Master View. If this does not fit your app's requirements, simply delete them.
-1. If you do remove the default Master View, drag a new View Controller onto the design surface: 
+1. If you do remove the default Master View, drag a new View Controller onto the design surface:
 
     [![](split-views-images/activity02-vs.png "A View Controller")](split-views-images/activity02-vs.png#lightbox)
-1. Control-Click and drag from the Split View Controller to the new Master View Controller. 
-1. Select **Master** from the **Popup Menu**: 
+1. Control-Click and drag from the Split View Controller to the new Master View Controller.
+1. Select **Master** from the **Popup Menu**:
 
     [![](split-views-images/activity03-vs.png "Select Master from the Popup Menu")](split-views-images/activity03-vs.png#lightbox)
-1. Design the contents of your Master and Detail Views: 
+1. Design the contents of your Master and Detail Views:
 
     [![](split-views-images/activity04.png "Content layout")](split-views-images/activity04.png#lightbox)
 1. Assign **Names** in the **Widget Tab** of the **Properties Explorer** to work with your UI controls in C# code.

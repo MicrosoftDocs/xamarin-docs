@@ -211,7 +211,7 @@ The **Switch Indicators** page demonstrates how it can be used to display the va
                                         <Setter Property="Text" Value="Indubitably!" />
                                         <Setter Property="FontAttributes" Value="Italic, Bold" />
                                         <Setter Property="TextColor" Value="Green" />
-                                    </Style>                                    
+                                    </Style>
                                 </local:BoolToObjectConverter.TrueObject>
 
                                 <local:BoolToObjectConverter.FalseObject>
@@ -450,7 +450,7 @@ The **RGB Color Selector** page instantiates `DoubleToIntConverter` in its resou
             </Label>
         </StackLayout>
     </StackLayout>
-</ContentPage>    
+</ContentPage>
 ```
 
 The values of the `Red` and `Green` properties are displayed with a `Binding` markup extension. The `Blue` property, however, instantiates the `Binding` class to demonstrate how an explicit `double` value can be set to `ConverterParameter` property.

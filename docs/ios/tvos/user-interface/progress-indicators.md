@@ -40,7 +40,7 @@ Apple has the following suggestions for working with activity indicators:
   while it is being displayed.
 - **Describe the task being processed** - Just displaying the activity
   indicator by itself isn't enough; the user needs to be informed about the
-  process on which they are waiting. Include a meaningful label (usually a 
+  process on which they are waiting. Include a meaningful label (usually a
   single, complete sentence) that clearly defines the task.
 
 ## About progress bars
@@ -69,35 +69,35 @@ to add it to the app's UI using the iOS Designer.
    open it for editing.
 
 2. Drag an **Activity Indicator** from the **Toolbox** and drop it on the
-   view: 
+   view:
 
     ![An activity indicator](progress-indicators-images/activity01.png "An
      activity indicator")
 
 3. In the **Widget** tab of the **Properties Pad**, you can adjust several
    properties of the activity indicator such as its **Style**,
-   **Behavior**, and **Name**: 
+   **Behavior**, and **Name**:
 
     ![The Widget tab for an activity
     indicator](progress-indicators-images/activity02.png "The Widget tab for
     an activity indicator")
-    
+
     The **Name** determines the name of the property that represents the
     activity indicator in C# code.
 
-4. Drag a **Progress View** from the **Toolbox** and drop it on the view: 
+4. Drag a **Progress View** from the **Toolbox** and drop it on the view:
 
     ![A progress view](progress-indicators-images/activity03.png "A progress
     view")
 
 5. In the **Widget** tab of the **Property Explorer**, you can adjust
    several properties of the progress view such as its **Style**,
-   **Progress** (percent complete), and **Name**: 
+   **Progress** (percent complete), and **Name**:
 
     ![The Widget tab for a progress
     view](progress-indicators-images/activity04.png "The Widget tab for a
     progress view")
-    
+
     The **Name** determines the name of the property that represents the
     progress view in C# code.
 
@@ -105,18 +105,18 @@ to add it to the app's UI using the iOS Designer.
 
 # [Visual Studio](#tab/windows)
 
-1. In the **Solution Explorer**, double-click the **Main.storyboard** file 
+1. In the **Solution Explorer**, double-click the **Main.storyboard** file
    and open it for editing.
 
 2. Drag an **Activity Indicator** from the **Toolbox** and drop it on the
-   view: 
+   view:
 
     ![An activity indicator](progress-indicators-images/activity01-vs.png
     "An activity indicator")
 
 3. In the **Widget** tab of the **Properties Explorer**, you can adjust
    several properties of the activity indicator such as its **Style**,
-   **Behavior**, and **Name**: 
+   **Behavior**, and **Name**:
 
     ![The Widget tab for an activity
     indicator](progress-indicators-images/activity02-vs.png "The Widget tab
@@ -125,19 +125,19 @@ to add it to the app's UI using the iOS Designer.
     The **Name** determines the name of the property that represents
     the activity indicator in C# code.
 
-4. Drag a **Progress View** from the **Toolbox** and drop it on the view: 
+4. Drag a **Progress View** from the **Toolbox** and drop it on the view:
 
    ![A progress view](progress-indicators-images/activity03-vs.png "A
    progress view")
 
 5. In the **Widget** tab of the **Property Explorer**, you can adjust
    several properties of the progress view such as its **Style**,
-   **Progress** (percent complete), and **Name**: 
+   **Progress** (percent complete), and **Name**:
 
     ![The Widget tab for a progress
     view](progress-indicators-images/activity04-vs.png "The Widget tab for a
     progress view")
-    
+
     The **Name** determines the name of the property that represents the
     progress view in C# code.
 
@@ -146,7 +146,7 @@ to add it to the app's UI using the iOS Designer.
 -----
 
 For more information on working with storyboards, please see our [Hello,
-tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
+tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
 ## Working with activity indicators
 
@@ -158,7 +158,7 @@ its `IsAnimating` property. If the `HidesWhenStopped` property is `true`,
 the activity indicator will automatically be hidden when its animation is
 stopped.
 
-You can use the following code to start the animation: 
+You can use the following code to start the animation:
 
 ```csharp
 ActivityIndicator.StartAnimating();
@@ -178,7 +178,7 @@ ActivityIndicator.StopAnimating();
 ## Working with progress bars
 
 Again, a progress bar should be used any time your app is executing a long
-running task of a known duration. 
+running task of a known duration.
 
 The `Progress` property is used to set the amount of the task that has been
 completed from 0% to 100% (0.0 to 1.0). Use the `ProgressTintColor` property

@@ -42,7 +42,7 @@ Adding Live Reload to existing mobile apps can be done in three steps:
 2. Add the **Xamarin.LiveReload** NuGet package:
 
     a. **.NET Standard** – Install the **Xamarin.LiveReload** NuGet into your .NET Standard 2.0 library. This does not need to be installed in your platform projects. Ensure that the **Package source** is set to **All**.
-    
+
     b. **Shared Projects** – Install the **Xamarin.LiveReload** NuGet into all platform projects (such as Android, iOS, UWP, etc.). Ensure that the **Package source** is set to **All**.
 
     [![Add Xamarin Live Reload NuGet with NuGet Package Manager](images/addlivereloadnuget.w157-sml.png)](images/addlivereloadnuget.w157.png#lightbox)
@@ -58,7 +58,7 @@ public partial class App : Application
         #if DEBUG
         LiveReload.Init();
         #endif
-        
+
         InitializeComponent();
         MainPage = new MainPage();
     }
@@ -73,24 +73,24 @@ Compile and deploy your application. Once the app is the deployed, open a XAML f
 
 Live Reload works with changes to any XAML file. Changes to C# or adding/removing NuGet packages requires a new build and deploy to take effect.
 
-## Frequently Asked Questions 
-### Is Xamarin Live Reload available on Visual Studio for Mac? 
+## Frequently Asked Questions
+### Is Xamarin Live Reload available on Visual Studio for Mac?
 
 No, preview release of Xamarin Live Reload is only available for Visual Studio 2017.
 
-### Does this work with all libraries, such as Prism? 
+### Does this work with all libraries, such as Prism?
 
 Because your app is compiled, Live Reload works with all libraries, such as Prism, and third-party control libraries, such as Telerik, Infragistics, Syncfusion, ArcGIS, GrapeCity, and other control vendors.
 
-### What changes does Live Reload redeploy? 
+### What changes does Live Reload redeploy?
 
-Live Reload only applies changes made to XAML or CSS. If you make changes to a C# file, a recompile will be required. 
+Live Reload only applies changes made to XAML or CSS. If you make changes to a C# file, a recompile will be required.
 
-### What platforms are supported? 
+### What platforms are supported?
 
 Live Reload works on any platform supported by Xamarin.Forms, including Android, iOS, and UWP.
 
-### Does this work on emulators, simulators, and physical devices? 
+### Does this work on emulators, simulators, and physical devices?
 
 Yes, Live Reload works with all valid deployment targets, including Android emulators, iOS simulators, and physical devices. Deployment to a device requires that the device and computer be on the same Wi-Fi network.
 
@@ -98,9 +98,9 @@ Yes, Live Reload works with all valid deployment targets, including Android emul
 
 If you are debugging to an Android emulator or iOS simulator, Live Reload uses localhost to communicate. If you wish to deploy to a device, the device and computer need to be on the same Wi-Fi network. In scenarios where this is not possible, you can [configure your own Live Reload server](#live-reload-server), which will enable you to Live Reload, regardless of network connectivity settings.
 
-### Does it require debugging the app? 
+### Does it require debugging the app?
 
-No. In fact, you can even start all your supported application targets (Android, iOS, and UWP) on any number of devices or simulators/emulators and see them all update at once. 
+No. In fact, you can even start all your supported application targets (Android, iOS, and UWP) on any number of devices or simulators/emulators and see them all update at once.
 
 ## Limitations
 
@@ -110,8 +110,8 @@ No. In fact, you can even start all your supported application targets (Android,
 ## Known Issues
 
 * Only supported in Visual Studio.
-* Linking must be set to **Don't Link** or **Link Framework SDKs Only** 
-* Reloading app-wide resources (i.e. **App.xaml** or shared resource dictionaries), app navigation is reset. 
+* Linking must be set to **Don't Link** or **Link Framework SDKs Only**
+* Reloading app-wide resources (i.e. **App.xaml** or shared resource dictionaries), app navigation is reset.
 * Reloading of ContentView currently requires reloading the containing page.
 * Elements containing AutomationId may cause a reload failure.
 * Editing XAML while debugging UWP may cause a runtime crash. Workaround: Use **Start without Debugging (Ctrl + F5)** instead of **Start Debugging (F5)**.
@@ -126,7 +126,7 @@ No. In fact, you can even start all your supported application targets (Android,
 
 * **XLR002**: *Live Reload requires at least the 'MqttHostname' property when building from the command line. Alternatively, set 'EnableLiveReload' to 'false' to disable the feature.*
 
-  The properties required by Live Reload are not available when building from the command line (or in continuous integration), and must therefore be provided explicitly. 
+  The properties required by Live Reload are not available when building from the command line (or in continuous integration), and must therefore be provided explicitly.
 
 * **XLR003**: *Live Reload nuget package requires installing the Xamarin Live Reload Visual Studio extension.*
 
@@ -153,7 +153,7 @@ These cases are all solved by building and deploying the app again.
 If you have an older preview and you have problems uninstalling it, follow these steps:
 
 1. Delete the folder **C:\Program Files (x86)\Microsoft Visual Studio\Preview\Enterprise\Common7\IDE\Extensions\Xamarin\LiveReload** (NOTE: replace "Enterprise" with your installed edition, and "Preview" with "2017" if you installed to a stable VS)
-2. Open a **Developer command prompt** for that Visual Studio and run `devenv /updateconfiguration`. 
+2. Open a **Developer command prompt** for that Visual Studio and run `devenv /updateconfiguration`.
 
 ## Tips & Tricks
 

@@ -29,13 +29,13 @@ You can also copy/paste the exact command from the package's NuGet page. Example
 
     `[PackageName] version:*`
 
-### Examples 
+### Examples
 
-- Lists all Xamarin.Forms packages: 
+- Lists all Xamarin.Forms packages:
 
     `Xamarin.Forms version:`
 
-- Lists all Xamarin.Forms 1.4.x packages: 
+- Lists all Xamarin.Forms 1.4.x packages:
 
     `Xamarin.Forms version:1.4`
 

@@ -303,7 +303,7 @@ The following code example demonstrates a Xamarin.Forms page that consumes subcl
         <Label Text="Subclassed Native Views Demo" FontAttributes="Bold" HorizontalOptions="Center" />
         <StackLayout Orientation="Horizontal">
           <Label Text="You have chosen:" />
-          <Label Text="{Binding SelectedFruit}" />      
+          <Label Text="{Binding SelectedFruit}" />
         </StackLayout>
         <iosLocal:MyUIPickerView ItemsSource="{Binding Fruits}"
             SelectedItem="{Binding SelectedFruit, Mode=TwoWay, UpdateSourceEventName=SelectedItemChanged}" />

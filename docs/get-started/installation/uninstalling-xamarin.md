@@ -100,7 +100,7 @@ The Java SDK (JDK) does not need to be uninstalled, as it is already pre package
 
 > [!WARNING]
 > There are other applications outside of Visual Studio for Mac that also use Android AVD and these additional android components, such as Android Studio.
-> Removing this directory may cause projects to break in Android Studio. 
+> Removing this directory may cause projects to break in Android Studio.
 
 To remove any Android AVDs and additional Android components, use the following command:
 
@@ -280,7 +280,7 @@ To uninstall Visual Studio 2015 completely, use [the support answer on visualstu
 
 Xamarin can be uninstalled from a Windows machine through **Control Panel**. Navigate to **Programs and Features** or **Programs > Uninstall a Program** as illustrated below:
 
- [![](uninstalling-xamarin-images/image3.png "Navigate to Programs and Features or Programs  Uninstall a Program as illustrated here")](uninstalling-xamarin-images/image3.png#lightbox) 
+ [![](uninstalling-xamarin-images/image3.png "Navigate to Programs and Features or Programs  Uninstall a Program as illustrated here")](uninstalling-xamarin-images/image3.png#lightbox)
 
 From the Control Panel, uninstall any of the following that are present:
 
@@ -292,37 +292,37 @@ From the Control Panel, uninstall any of the following that are present:
 
 In Explorer, delete any remaining files from the Xamarin Visual Studio extension folders (all versions, including both Program Files and Program Files (x86)):
 
-``` 
+```
 C:\Program Files*\Microsoft Visual Studio 1*.0\Common7\IDE\Extensions\Xamarin
 ```
 
 Delete Visual Studio's MEF component cache directory, which should be located in the following location:
 
-``` 
+```
 %LOCALAPPDATA%\Microsoft\VisualStudio\1*.0\ComponentModelCache
 ```
 
 Check in the **VirtualStore** directory to see if Windows might have stored any overlay files for the **Extensions\Xamarin** or **ComponentModelCache** directories there:
 
-``` 
+```
 %LOCALAPPDATA%\VirtualStore
 ```
 
 Open the registry editor (regedit) and look for the following key:
 
-``` 
+```
 HKEY_LOCAL_MACHINE\SOFTWARE\Wow6432Node\Microsoft\Windows\CurrentVersion\SharedDlls
 ```
 
 Find and delete any entries that match this pattern:
 
-``` 
+```
 C:\Program Files*\Microsoft Visual Studio 1*.0\Common7\IDE\Extensions\Xamarin
 ```
 
 Look for this key:
 
-``` 
+```
 HKEY_CURRENT_USER\Software\Microsoft\VisualStudio\1*.0\ExtensionManager\PendingDeletions
 ```
 
@@ -339,9 +339,9 @@ Open an administrator cmd.exe command prompt, and then run the `devenv /setup` a
 
 ### Uninstall Xamarin Studio on Windows
 
-Xamarin Studio is uninstalled from a Windows machine through **Control Panel**. Navigate to **Programs and Features** or **Programs > Uninstall a Program** 
+Xamarin Studio is uninstalled from a Windows machine through **Control Panel**. Navigate to **Programs and Features** or **Programs > Uninstall a Program**
 
-To uninstall Xamarin Studio, find **Xamarin Studio 5.x.x** in the list of programs and click the **Uninstall** button. 
+To uninstall Xamarin Studio, find **Xamarin Studio 5.x.x** in the list of programs and click the **Uninstall** button.
 
 ### Uninstall Xamarin Studio on Mac
 

@@ -22,7 +22,7 @@ for Mac, you can use the following steps to achieve this:
 
 1. Create an Xcode iOS app with the same bundle ID as the one in your
    Xamarin app.
-   
+
     - You can find your Xamarin.iOS project's bundle identifier by
     opening the **Info.plist** file:
 
@@ -58,7 +58,7 @@ for Mac, you can use the following steps to achieve this:
 
 You might have to make a small change to the Xamarin.iOS app every time you
 launch. Otherwise, Visual Studio for Mac will detect that the app doesn't
-need to be built *and* is already installed, and it won't reinstall it over 
+need to be built *and* is already installed, and it won't reinstall it over
 the Xcode dummy app.
 
 ## Alternative - using lldb

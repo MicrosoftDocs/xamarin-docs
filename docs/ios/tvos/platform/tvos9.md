@@ -129,13 +129,13 @@ For more information, please see Apple's [Apple TV Markup Language Reference](ht
 
 Unlike iOS or OS X, the Apple TV does not have a touchscreen or mouse that allow the user to directly select and interact with an app or its content. Instead they user the new Siri Remote or a Bluetooth Game Controller to navigate an app's User Interface. For more information, please see our [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) documentation.
 
-Additionally, the overall user experience is drastically different than iOS or Mac apps that tend to be single user experiences. With the Apple TV, user experiences tend to be more social in nature, where several people may be sitting on the couch interacting with a single app and each other. To design a successful Apple TV app experience (either a new app or porting an existing one), these changes must be taken into consideration. 
+Additionally, the overall user experience is drastically different than iOS or Mac apps that tend to be single user experiences. With the Apple TV, user experiences tend to be more social in nature, where several people may be sitting on the couch interacting with a single app and each other. To design a successful Apple TV app experience (either a new app or porting an existing one), these changes must be taken into consideration.
 
 <a name="Summary" />
 
 ### Working with Focus and Parallax Images
 
-As stated above, users of your Xamarin.tvOS app will not be interacting with it's interface directly as with iOS where they tap images on the device's screen, but indirectly from across the room using the Siri Remote. To present and handle this user interaction, the Apple TV uses a Focus based model. 
+As stated above, users of your Xamarin.tvOS app will not be interacting with it's interface directly as with iOS where they tap images on the device's screen, but indirectly from across the room using the Siri Remote. To present and handle this user interaction, the Apple TV uses a Focus based model.
 
 As focus changes, subtle animations and effects (such as the Parallax Effect on images) are used to clearly identify the User Interface item that currently has focus.
 

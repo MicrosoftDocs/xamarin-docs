@@ -117,7 +117,7 @@ When the currently displayed item changes, the `Position` property will be set t
 The following XAML example shows a [`CarouselView`](xref:Xamarin.Forms.CarouselView) that uses an event handler to respond to the `Position` property changing:
 
 ```xaml
-<CarouselView ItemsSource="{Binding Monkeys}"              
+<CarouselView ItemsSource="{Binding Monkeys}"
               PositionChanged="OnPositionChanged">
     ...
 </CarouselView>

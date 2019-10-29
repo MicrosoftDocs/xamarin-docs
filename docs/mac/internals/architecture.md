@@ -78,7 +78,7 @@ class MyViewController : UIViewController{
 ```objc
 @interface MyViewController : UIViewController
  - (void)myFunc;
-@end 
+@end
 
 @implementation MyViewController
 - (void)myFunc {

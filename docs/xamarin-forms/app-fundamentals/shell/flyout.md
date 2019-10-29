@@ -26,7 +26,7 @@ By default, Shell applications have a hamburger icon which, when pressed, opens 
 ```xaml
 <Shell ...
        FlyoutIcon="flyouticon.png">
-    ...       
+    ...
 </Shell>
 ```
 
@@ -105,7 +105,7 @@ Alternatively, the flyout header appearance can be defined by setting the `Shell
                    FontAttributes="Bold"
                    HorizontalTextAlignment="Center"
                    VerticalTextAlignment="Center" />
-        </Grid>            
+        </Grid>
     </DataTemplate>
 </Shell.FlyoutHeaderTemplate>
 ```
@@ -287,7 +287,7 @@ By setting the `FlyoutItem.FlyoutDisplayOptions` property to `AsMultipleItems`, 
 
     <ShellContent Title="About"
                   Icon="info.png"
-                  ContentTemplate="{DataTemplate views:AboutPage}" />    
+                  ContentTemplate="{DataTemplate views:AboutPage}" />
 </Shell>
 ```
 
@@ -385,14 +385,14 @@ Menu items can be optionally added to the flyout, and each menu item is represen
 
 ```xaml
 <Shell ...>
-    ...            
+    ...
     <MenuItem Text="Random"
               IconImageSource="random.png"
               Command="{Binding RandomPageCommand}" />
     <MenuItem Text="Help"
               IconImageSource="help.png"
               Command="{Binding HelpCommand}"
-              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />    
+              CommandParameter="https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell" />
 </Shell>
 ```
 

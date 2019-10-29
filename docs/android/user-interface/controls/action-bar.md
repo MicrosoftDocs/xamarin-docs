@@ -53,7 +53,7 @@ inflate in our `Fragment` subclass like this:
 
 ```csharp
 class SampleTabFragment: Fragment
-{           
+{
     public override View OnCreateView (LayoutInflater inflater,
         ViewGroup container, Bundle savedInstanceState)
     {
@@ -63,7 +63,7 @@ class SampleTabFragment: Fragment
             Resource.Layout.Tab, container, false);
 
         var sampleTextView =
-            view.FindViewById<TextView> (Resource.Id.sampleTextView);            
+            view.FindViewById<TextView> (Resource.Id.sampleTextView);
         sampleTextView.Text = "sample fragment text";
 
         return view;
@@ -76,7 +76,7 @@ The event argument passed in the `TabSelected` event is of type
 can use to add the fragment as shown below:
 
 ```csharp
-tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {             
+tab.TabSelected += delegate(object sender, ActionBar.TabEventArgs e) {
     e.FragmentTransaction.Add (Resource.Id.fragmentContainer,
         new SampleTabFragment ());
 };
@@ -146,9 +146,9 @@ item and then use the SetShareIntent method to set the
 ```csharp
 public override bool OnCreateOptionsMenu (IMenu menu)
 {
-    MenuInflater.Inflate (Resource.Menu.ActionBarMenu, menu);       
+    MenuInflater.Inflate (Resource.Menu.ActionBarMenu, menu);
 
-    var shareMenuItem = menu.FindItem (Resource.Id.shareMenuItem);           
+    var shareMenuItem = menu.FindItem (Resource.Id.shareMenuItem);
     var shareActionProvider =
        (ShareActionProvider)shareMenuItem.ActionProvider;
     shareActionProvider.SetShareIntent (CreateIntent ());
@@ -167,7 +167,7 @@ Intent CreateIntent ()
 {  
     var sendPictureIntent = new Intent (Intent.ActionSend);
     sendPictureIntent.SetType ("image/*");
-    var uri = Android.Net.Uri.FromFile (GetFileStreamPath ("monkey.png"));          
+    var uri = Android.Net.Uri.FromFile (GetFileStreamPath ("monkey.png"));
     sendPictureIntent.PutExtra (Intent.ExtraStream, uri);
     return sendPictureIntent;
 }

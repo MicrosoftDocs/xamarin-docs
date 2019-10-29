@@ -106,7 +106,7 @@ element is like the HTML `<table>` element;
 [`TableRow`](xref:Android.Widget.TableRow)
 is like a `<tr>` element; but for the cells, you can use any kind
 of [`View`](xref:Android.Views.View)
-element. In this example, a 
+element. In this example, a
 [`TextView`](xref:Android.Widget.TextView)
 is used for each cell. In between
 some of the rows, there is also a basic

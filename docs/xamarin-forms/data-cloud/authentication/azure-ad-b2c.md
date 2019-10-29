@@ -172,7 +172,7 @@ public partial class LoginPage : ContentPage
                 .WithPrompt(Prompt.SelectAccount)
                 .WithParentActivityOrWindow(App.UIParent)
                 .ExecuteAsync();
-    
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)

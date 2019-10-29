@@ -67,7 +67,7 @@ The possible qualifiers are listed below for reference:
 - **Language** &ndash; The two-letter
   [ISO 639-1 language code](https://en.wikipedia.org/wiki/ISO_639-1) and
   optionally followed by the two-letter
-  [ISO-3166-alpha-2 region code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2). 
+  [ISO-3166-alpha-2 region code](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2).
   If both qualifiers are provided, then they are separated by an
   `-r`. For example, to target French-speaking locales then the
   qualifier of `fr` is used. To target French-Canadian locales, the
@@ -78,8 +78,8 @@ The possible qualifiers are listed below for reference:
   [Country names and code elements](https://www.iso.org/iso-3166-country-codes.html).
 
 - **Smallest Width** &ndash; Specifies the smallest screen width the
-  application is meant to execute on. Covered in more detail in 
-  [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
+  application is meant to execute on. Covered in more detail in
+  [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md).
   Available in API level 13 (Android 3.2) and above. For example, the qualifier
   `sw320dp` is used to target devices whose height and width is at least
   320dp.
@@ -88,23 +88,23 @@ The possible qualifiers are listed below for reference:
   format w*N*dp, where *N* is the width in density independent pixels.
   This value may change as the user rotates the device. Covered in more
   detail in
-  [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
+  [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md).
   Available in API level 13 (Android 3.2) and above. Example: the
   qualifier w720dp is used to target devices that have a width of least
   720dp.
 
 - **Available Height** &ndash; The minimum height of the screen in the
   format h*N*dp, where *N* is the height in dp. This value may change as
-  the user rotates the device. Covered in more detail in 
-  [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
+  the user rotates the device. Covered in more detail in
+  [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md).
   Available in API
   level 13 (Android 3.2) and above. For example, the qualifier h720dp
   is used to target devices that have a height of least 720dp
 
 - **Screen Size** &ndash; This qualifier is a generalization of the
   screen size that these resources are for. It is covered in more
-  detail in 
-  [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md). 
+  detail in
+  [Creating Resources for Varying Screens](~/android/app-fundamentals/resources-in-android/resources-for-varying-screens.md).
   Possible values are `small`, `normal`, `large`, and `xlarge`. Added
   in API level 9 (Android 2.3/Android 2.3.1/Android 2.3.2)
 

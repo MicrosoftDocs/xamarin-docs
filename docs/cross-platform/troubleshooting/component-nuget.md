@@ -12,7 +12,7 @@ ms.date: 04/18/2018
 # Updating component references to NuGet
 
 > [!IMPORTANT]
-> The Component Store has been discontinued as of May 15, 2018 (this closure was 
+> The Component Store has been discontinued as of May 15, 2018 (this closure was
 > originally [announced](https://blog.xamarin.com/hello-nuget-new-home-xamarin-components/) in November 2017).
 >
 > Xamarin Components are no longer supported in Visual Studio, and should be replaced by
@@ -27,7 +27,7 @@ A list of popular Xamarin [plugins and libraries](https://github.com/xamarin/Xam
 
 ## Manually removing component references
 
-The 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project. 
+The 15.6 release of Visual Studio and 7.4 release of Visual Studio for Mac no longer support components in your project.
 
 # [Visual Studio](#tab/windows)
 
@@ -37,7 +37,7 @@ If you load a project into Visual Studio, the following dialog is displayed, exp
 
 To remove a component from your project:
 
-1. Open the **.csproj** file. To do this, right-click on the project name and select **Unload Project**. 
+1. Open the **.csproj** file. To do this, right-click on the project name and select **Unload Project**.
 
 2. Right-click again on the unloaded project and select **Edit {your-project-name}.csproj**.
 

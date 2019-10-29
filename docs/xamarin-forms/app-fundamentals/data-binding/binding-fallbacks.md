@@ -26,7 +26,7 @@ The **MonkeyDetail** page illustrates setting the [`FallbackValue`](xref:Xamarin
 
 ```xaml
 <Label Text="{Binding Population, FallbackValue='Population size unknown'}"
-       ... />   
+       ... />
 ```
 
 The binding on the [`Label`](xref:Xamarin.Forms.Label) defines a [`FallbackValue`](xref:Xamarin.Forms.BindingBase.FallbackValue) value that will be set on the target if the binding source can't be resolved. Therefore, the value defined by the `FallbackValue` property will be displayed if the `Population` property doesn't exist on the bound object. Notice that here the `FallbackValue` property value is delimited by single-quote (apostrophe) characters.

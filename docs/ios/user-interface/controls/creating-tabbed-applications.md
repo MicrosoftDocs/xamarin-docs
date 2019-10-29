@@ -33,7 +33,7 @@ The `UITabBarController` supports tabbed application development
 by the following:
 
 - Allowing multiple controllers to be added to it.
-- Providing a tabbed user interface, via the  `UITabBar` class, to allow a user to switch between controllers and their views. 
+- Providing a tabbed user interface, via the  `UITabBar` class, to allow a user to switch between controllers and their views.
 
 Controllers are added to the `UITabBarController` via its `ViewControllers` property, which is a `UIViewController`
 array. The `UITabBarController` itself handles loading the proper
@@ -83,9 +83,9 @@ appropriate view controller.
 To implement the `UITabBarController` we need to do the
 following:
 
-1. Set the base class of  `TabController` to  `UITabBarController` . 
-1. Create  `UIViewController` instances to add to the  `TabController` . 
-1. Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` . 
+1. Set the base class of  `TabController` to  `UITabBarController` .
+1. Create  `UIViewController` instances to add to the  `TabController` .
+1. Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` .
 
 Add the following code to the `TabController` class to achieve
 these steps:
@@ -144,16 +144,16 @@ public partial class AppDelegate : UIApplicationDelegate
 {
     UIWindow window;
     TabController tabController;
-    
+
     public override bool FinishedLaunching (UIApplication app, NSDictionary options)
     {
         window = new UIWindow (UIScreen.MainScreen.Bounds);
-        
+
         tabController = new TabController ();
         window.RootViewController = tabController;
-        
+
         window.MakeKeyAndVisible ();
-        
+
         return true;
     }
 }
@@ -277,7 +277,7 @@ In this example We’ll need a Storyboard to hold our View Controllers. To add a
 
 - When the New File dialog appears, navigate to **iOS > Empty iPhone Storyboard**.
 
-Let's call this new Storyboard **MainStoryboard** , as illustrated below: 
+Let's call this new Storyboard **MainStoryboard** , as illustrated below:
 
 [![](creating-tabbed-applications-images/new-file-dialog.png "Add a MainStoryboard file to the project")](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
@@ -359,7 +359,7 @@ Delete these new View controllers by selecting the black bar at the bottom and p
 
 In our Storyboard, we can use Segues to handle the transitions between the TabBarController and our View Controllers. After interacting with the Initial View, we want to load it into the TabBarController presented to the user. Let's set this up in the designer.
 
-**Ctrl-Click** and **Drag** from the button to the TabBarController. On mouse-up, a context menu will appear. We want to use a modal segue. 
+**Ctrl-Click** and **Drag** from the button to the TabBarController. On mouse-up, a context menu will appear. We want to use a modal segue.
 
 To set up each of our tabs, **Ctrl-Click** from the TabBarController to each of our View Controllers in order from one to three, and select the Relationship **Tab** from the context menu, as illustrated below:
 

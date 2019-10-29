@@ -225,7 +225,7 @@ directory of your project:
 
     [![Setting the build action to GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
 
-    > [!NOTE] 
+    > [!NOTE]
     > If the **GoogleServicesJson** build action is not shown, save and close the solution, then reopen it.
 
 # [Visual Studio for Mac](#tab/macos)

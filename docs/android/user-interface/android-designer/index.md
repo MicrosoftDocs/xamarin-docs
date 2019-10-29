@@ -37,8 +37,8 @@ explains the following:
 4. How to add widgets.
 5. How to edit properties.
 6. How to work with various resources and device configurations.
-7. How to modify a user interface for alternative views such as landscape and portrait. 
-8. How to handle conflicts that may arise when working with alternative views. 
+7. How to modify a user interface for alternative views such as landscape and portrait.
+8. How to handle conflicts that may arise when working with alternative views.
 9. How to use Material Design tools to build Material Design-compliant apps.
 
 ## Sections

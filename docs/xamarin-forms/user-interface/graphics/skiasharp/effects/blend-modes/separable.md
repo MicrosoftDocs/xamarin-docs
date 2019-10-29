@@ -17,9 +17,9 @@ As you saw in the article [**SkiaSharp Porter-Duff blend modes**](porter-duff.md
 
 ![Primary Colors](separable-images/SeparableSample.png "Primary Colors")
 
-## Lighten and darken two ways 
+## Lighten and darken two ways
 
-It is common to have a bitmap that is somewhat too dark or too light. You can use separable blend modes to lighten or darken the imabe.  Indeed, two of the separable blend modes in the [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) enumeration are named `Lighten` and `Darken`. 
+It is common to have a bitmap that is somewhat too dark or too light. You can use separable blend modes to lighten or darken the imabe.  Indeed, two of the separable blend modes in the [`SKBlendMode`](xref:SkiaSharp.SKBlendMode) enumeration are named `Lighten` and `Darken`.
 
 These two modes are demonstrated in the **Lighten and Darken** page. The XAML file instantiates two `SKCanvasView` objects and two `Slider` views:
 
@@ -147,22 +147,22 @@ The following table shows all the separable blend modes with brief explanations 
 | Blend Mode   | No change | Operation |
 | ------------ | --------- | --------- |
 | `Plus`       | Black     | Lightens by adding colors: Sc + Dc |
-| `Modulate`   | White     | Darkens by multiplying colors: Sc·Dc | 
+| `Modulate`   | White     | Darkens by multiplying colors: Sc·Dc |
 | `Screen`     | Black     | Complements product of complements: Sc + Dc &ndash; Sc·Dc |
 | `Overlay`    | Gray      | Inverse of `HardLight` |
 | `Darken`     | White     | Minimum of colors: min(Sc, Dc) |
 | `Lighten`    | Black     | Maximum of colors: max(Sc, Dc) |
 | `ColorDodge` | Black     | Brightens destination based on source |
-| `ColorBurn`  | White     | Darkens destination based on source | 
+| `ColorBurn`  | White     | Darkens destination based on source |
 | `HardLight`  | Gray      | Similar to effect of harsh spotlight |
-| `SoftLight`  | Gray      | Similar to effect of soft spotlight | 
-| `Difference` | Black     | Subtracts the darker from the lighter: Abs(Dc &ndash; Sc) | 
+| `SoftLight`  | Gray      | Similar to effect of soft spotlight |
+| `Difference` | Black     | Subtracts the darker from the lighter: Abs(Dc &ndash; Sc) |
 | `Exclusion`  | Black     | Similar to `Difference` but lower contrast |
 | `Multiply`   | White     | Darkens by multiplying colors: Sc·Dc |
 
 More detailed algorithms can be found in the W3C [**Compositing and Blending Level 1**](https://www.w3.org/TR/compositing-1/) specification and the Skia [**SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference), although the notation in these two sources is not the same. Keep in mind that `Plus` is commonly regarded as a Porter-Duff blend mode, and `Modulate` is not part of the W3C specification.
 
-If the source is transparent, then for all the separable blend modes except `Modulate`, the blend mode has no effect. As you've seen earlier, the `Modulate` blend mode incorporates the alpha channel in the multiplication. Otherwise, `Modulate` has the same effect as `Multiply`. 
+If the source is transparent, then for all the separable blend modes except `Modulate`, the blend mode has no effect. As you've seen earlier, the `Modulate` blend mode incorporates the alpha channel in the multiplication. Otherwise, `Modulate` has the same effect as `Multiply`.
 
 Notice the two modes named `ColorDodge` and `ColorBurn`. The words _dodge_ and _burn_ originated in photographic darkroom practices. An enlarger makes a photographic print by shining light through a negative. With no light, the print is white. The print gets darker as more light falls on the print for a longer period of time. Print-makers often used a hand or small object to block some of the light from falling on a certain part of the print, making that area lighter. This is known as _dodging_. Conversely, opaque material with a hole in it (or hands blocking most of the light) could be used to direct more light in a particular spot to darken it, called _burning_.
 
@@ -176,7 +176,7 @@ Image-processing application programs often allow dodging and burning to be rest
 
 ## Exploring the separable blend modes
 
-The **Separable Blend Modes** page allows you to examine all the separable blend modes. It displays a bitmap destination and a colored rectangle source using one of the blend modes. 
+The **Separable Blend Modes** page allows you to examine all the separable blend modes. It displays a bitmap destination and a colored rectangle source using one of the blend modes.
 
 The XAML file defines a `Picker` (to select the blend mode) and four sliders. The first three sliders let you set the red, green, and blue components of the source. The fourth slider is intended to override those values by setting a gray shade. The individual sliders are not identified, but colors indicate their function:
 
@@ -259,7 +259,7 @@ public partial class SeparableBlendModesPage : ContentPage
 {
     SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(
                         typeof(SeparableBlendModesPage),
-                        "SkiaSharpFormsDemos.Media.Banana.jpg"); 
+                        "SkiaSharpFormsDemos.Media.Banana.jpg");
 
     public SeparableBlendModesPage()
     {
@@ -371,7 +371,7 @@ public class PrimaryColorsPage : ContentPage
         SKPoint center = new SKPoint(info.Rect.MidX, info.Rect.MidY);
         float radius = Math.Min(info.Width, info.Height) / 4;
         float distance = 0.8f * radius;     // from canvas center to circle center
-        SKPoint center1 = center + 
+        SKPoint center1 = center +
             new SKPoint(distance * (float)Math.Cos(9 * Math.PI / 6),
                         distance * (float)Math.Sin(9 * Math.PI / 6));
         SKPoint center2 = center +
@@ -385,7 +385,7 @@ public class PrimaryColorsPage : ContentPage
         {
             if (!isSubtractive)
             {
-                paint.BlendMode = SKBlendMode.Plus; 
+                paint.BlendMode = SKBlendMode.Plus;
                 System.Diagnostics.Debug.WriteLine(paint.BlendMode);
 
                 paint.Color = SKColors.Red;

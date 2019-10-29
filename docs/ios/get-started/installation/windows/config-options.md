@@ -47,7 +47,7 @@ Xamarin.iOS development:
   project is open in Visual Studio 2019 or Visual Studio 2017.
 - **Show iOS Simulator** – On the Mac build host, brings the iOS Simulator
   to the front. Enabled when an iOS project is open in Visual Studio 2019 or Visual Studio 2017.
-- **Device Log** – Brings up a window that allows you to inspect device 
+- **Device Log** – Brings up a window that allows you to inspect device
   logs. Enabled when an iOS project is open in Visual Studio 2019 or Visual Studio 2017.
 - **Show IPA File on Build Server** – Opens a window on the Mac build
   host, showing the location of the .ipa file for the app. Enabled after
@@ -67,14 +67,14 @@ your next build will target a physical device or a simulator.
 To make sure this drop-down menu is visible on the Standard toolbar:
 
 - In Visual Studio 2019 or Visual Studio 2017, click the down arrow at the right edge of the Standard toolbar.
-- Choose **Add or Remove Buttons** 
+- Choose **Add or Remove Buttons**
 - Make sure the **Solution Platforms** item is checked:
 
 ![Enabling the Solution Platforms drop-down
 menu](config-options-images/solution-platforms-enable.png "Enabling the Solution Platforms
 drop-down menu")
 
-With an iOS project open, the **Standard** and **iOS** toolbars should now 
+With an iOS project open, the **Standard** and **iOS** toolbars should now
 resemble the following screenshot:
 
 ![Standard and iOS toolbars](config-options-images/toolbars.png "Standard and iOS toolbars")

@@ -17,15 +17,15 @@ Let us start with an example. The following is a complete Json file that can
 be passed into JsonElement.
 
 ```json
-{     
+{
     "title": "Json Sample",
-    "sections": [ 
+    "sections": [
         {
             "header": "Booleans",
             "footer": "Slider or image-based",
             "id": "first-section",
             "elements": [
-                { 
+                {
                     "type": "boolean",
                     "caption": "Demo of a Boolean",
                     "value": true
@@ -385,7 +385,7 @@ represent the application bundle directory. For example `"~/favorite.png"` will 
 bundle file. For example:
 
 ```json
-{ 
+{
     "type": "boolean",
     "caption": "Demo of a Boolean",
     "value": true
@@ -550,7 +550,7 @@ any format supported by the .NET DateTime.Parse function. Example:
         "type": "time",
         "caption": "Time",
         "value": "11:23"
-    }                       
+    }
 ]
 ```
 
@@ -565,6 +565,6 @@ the contents of a specified URL, either local or remote using the `"html"` type.
 {
     "type": "html",
     "caption": "Miguel's blog",
-    "url": "https://tirania.org/blog" 
+    "url": "https://tirania.org/blog"
 }
 ```

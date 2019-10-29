@@ -153,7 +153,7 @@ void DrawGround()
     effect.View = Matrix.CreateLookAt (
         cameraPosition, cameraLookAtVector, cameraUpVector);
 
-    float aspectRatio = 
+    float aspectRatio =
         graphics.PreferredBackBufferWidth / (float)graphics.PreferredBackBufferHeight;
     float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
     float nearClipPlane = 1;
@@ -269,7 +269,7 @@ void DrawGround()
     effect.View = Matrix.CreateLookAt (
         cameraPosition, cameraLookAtVector, cameraUpVector);
 
-    float aspectRatio = 
+    float aspectRatio =
         graphics.PreferredBackBufferWidth / (float)graphics.PreferredBackBufferHeight;
     float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
     float nearClipPlane = 1;

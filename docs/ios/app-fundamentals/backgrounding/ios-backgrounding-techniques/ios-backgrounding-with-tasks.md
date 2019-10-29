@@ -76,7 +76,7 @@ double timeRemaining = UIApplication.SharedApplication.BackgroundTimeRemaining;
 
 ### Avoiding App Termination With Expiration Handlers
 
-In addition to giving access to the `BackgroundTimeRemaining` property, iOS provides a graceful way to handle background time expiration through an **Expiration Handler**. This is an optional block of code that will get executed when the time allotted for a task is about to expire. Code in the Expiration Handler calls `EndBackgroundTask` and passes in the task ID, which indicates that the app is behaving well and prevents iOS from terminating the app even if the task runs out of time. `EndBackgroundTask` must be called within the expiration handler, as well as in the normal course of execution. 
+In addition to giving access to the `BackgroundTimeRemaining` property, iOS provides a graceful way to handle background time expiration through an **Expiration Handler**. This is an optional block of code that will get executed when the time allotted for a task is about to expire. Code in the Expiration Handler calls `EndBackgroundTask` and passes in the task ID, which indicates that the app is behaving well and prevents iOS from terminating the app even if the task runs out of time. `EndBackgroundTask` must be called within the expiration handler, as well as in the normal course of execution.
 
 The expiration handler is expressed as an anonymous function using a lambda expression, as illustrated below:
 
@@ -86,7 +86,7 @@ Task.Factory.StartNew( () => {
     //expirationHandler only called if background time allowed exceeded
     var taskId = UIApplication.SharedApplication.BeginBackgroundTask(() => {
         Console.WriteLine("Exhausted time");
-        UIApplication.SharedApplication.EndBackgroundTask(taskId); 
+        UIApplication.SharedApplication.EndBackgroundTask(taskId);
     });
     while(myFlag == true)
     {

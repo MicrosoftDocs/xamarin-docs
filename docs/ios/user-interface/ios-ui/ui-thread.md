@@ -77,7 +77,7 @@ async partial void button2_TouchUpInside (UIButton sender)
     await Task.Delay(2000);
     label1.Text = "2 more seconds passed";
     await Task.Delay(1000);
-    new UIAlertView("Async method complete", "This method", 
+    new UIAlertView("Async method complete", "This method",
                null, "Cancel", null)
         .Show();
     label1.Text = "async method completed";

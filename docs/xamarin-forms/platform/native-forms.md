@@ -342,7 +342,7 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
     if (rootFrame == null)
     {
-        ...      
+        ...
         // Place the frame in the current Window
         Window.Current.Content = rootFrame;
 

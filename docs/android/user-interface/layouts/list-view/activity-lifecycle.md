@@ -39,7 +39,7 @@ disposed of in `OnStop`).
 
 It's important to remember that configuration changes &ndash; especially
 screen rotation and keyboard visibility &ndash; can cause the current
-activity to be destroyed and re-created (unless you specify otherwise using 
+activity to be destroyed and re-created (unless you specify otherwise using
 the `ConfigurationChanges` attribute). This means that under
 normal conditions, rotating a device will cause a `ListView` and
 `Adapter` to be re-created and (unless you have written code in

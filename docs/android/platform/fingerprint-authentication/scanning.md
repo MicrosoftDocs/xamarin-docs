@@ -12,11 +12,11 @@ ms.date: 02/23/2016
 
 Now that we have seen how to prepare a Xamarin.Android application to use fingerprint authentication, let's return to the  `FingerprintManager.Authenticate` method, and discuss its place in the Android 6.0 fingerprint authentication. A quick overview of the workflow for fingerprint authentication is described in this list:
 
-1. Invoke `FingerprintManager.Authenticate`, passing a `CryptoObject` and a `FingerprintManager.AuthenticationCallback` instance. The `CryptoObject` is used to ensure that the fingerprint authentication result was not tampered with. 
+1. Invoke `FingerprintManager.Authenticate`, passing a `CryptoObject` and a `FingerprintManager.AuthenticationCallback` instance. The `CryptoObject` is used to ensure that the fingerprint authentication result was not tampered with.
 2. Subclass the [FingerprintManager.AuthenticationCallback](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.AuthenticationCallback.html) class. An instance of this class will be provided to `FingerprintManager` when fingerprint authentication starts. When the fingerprint scanner is finished, it will invoke one of the callback methods on this class.
-3. Write code to update the UI to let the user know that the device has started the fingerprint scanner and is waiting for user interaction. 
+3. Write code to update the UI to let the user know that the device has started the fingerprint scanner and is waiting for user interaction.
 4. When the fingerprint scanner is done, Android will return results to the application by invoking a method on the `FingerprintManager.AuthenticationCallback` instance that was provided in the previous step.
-5. The application will inform the user of the fingerprint authentication results and react to the results as appropriate. 
+5. The application will inform the user of the fingerprint authentication results and react to the results as appropriate.
 
 The following code snippet is an example of a method in an Activity that will start scanning for fingerprints:
 
@@ -26,13 +26,13 @@ protected void FingerPrintAuthenticationExample()
     const int flags = 0; /* always zero (0) */
 
     // CryptoObjectHelper is described in the previous section.
-    CryptoObjectHelper cryptoHelper = new CryptoObjectHelper();    
-    
-    // cancellationSignal can be used to manually stop the fingerprint scanner. 
+    CryptoObjectHelper cryptoHelper = new CryptoObjectHelper();
+
+    // cancellationSignal can be used to manually stop the fingerprint scanner.
     cancellationSignal = new Android.Support.V4.OS.CancellationSignal();
-    
+
     FingerprintManagerCompat fingerprintManager = FingerprintManagerCompat.From(this);
-    
+
     // AuthenticationCallback is a base class that will be covered later on in this guide.
     FingerprintManagerCompat.AuthenticationCallback authenticationCallback = new MyAuthCallbackSample(this);
 
@@ -44,7 +44,7 @@ protected void FingerPrintAuthenticationExample()
 Let's discuss each of these parameters in the `Authenticate` method in a bit more detail:
 
 - The first parameter is a _crypto_ object that the fingerprint scanner will use to help authenticate the results of a fingerprint scan. This object may be `null`, in which case the application has to blindly trust that nothing has tampered with the fingerprint results. It is recommended that a `CryptoObject` be instantiated and provided to the `FingerprintManager` rather than null. [Creating a CryptObject](~/android/platform/fingerprint-authentication/creating-a-cryptoobject.md) will explain in detail how to instantiate a `CryptoObject` based on a `Cipher`.
-- The second parameter is always zero. The Android documentation identifies this as set of flags and is most likely reserved for future use. 
+- The second parameter is always zero. The Android documentation identifies this as set of flags and is most likely reserved for future use.
 - The third parameter, `cancellationSignal` is an object used to turn off the fingerprint scanner and cancel the current request. This is an [Android CancellationSignal](https://developer.android.com/reference/android/os/CancellationSignal.html), and not a type from the .NET framework.
 - The fourth parameter is mandatory and is a class that subclasses the `AuthenticationCallback` abstract class. Methods on this class will be invoked to signal to clients when the `FingerprintManager` has finished and what the results are. As there is a lot to understand about implementing the `AuthenticationCallback`, it will be covered in [it's own section](~/android/platform/fingerprint-authentication/fingerprint-authentication-callbacks.md).
 - The fifth parameter is an optional `Handler` instance. If a `Handler` object is provided, the `FingerprintManager` will use the `Looper` from that object when processing the messages from the fingerprint hardware. Typically, one does not need to provide a `Handler`, the FingerprintManager will use the `Looper` from the application.

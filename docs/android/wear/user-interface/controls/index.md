@@ -15,10 +15,10 @@ regular Android apps, including `Button`, `TextView`, and image
 drawables. Layout controls including `ScrollView`, `LinearLayout`, and
 `RelativateLayout` can also be used.
 
-This page links to the Android-Wear-specific controls from the 
-[wearable UI library](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary) 
-available in Xamarin projects via the 
-[Wearable Support](https://www.nuget.org/packages/Xamarin.Android.Wear/) 
+This page links to the Android-Wear-specific controls from the
+[wearable UI library](https://developer.android.com/training/wearables/apps/layouts.html#UiLibrary)
+available in Xamarin projects via the
+[Wearable Support](https://www.nuget.org/packages/Xamarin.Android.Wear/)
 NuGet package. These controls include the following:
 
 - **GridViewPager** &ndash; Create a two-dimensional navigation

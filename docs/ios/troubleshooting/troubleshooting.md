@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 05/22/2018
 ---
 
-# Troubleshooting Tips for Xamarin.iOS 
+# Troubleshooting Tips for Xamarin.iOS
 
 ## Xamarin.iOS cannot resolve System.ValueTuple
 
@@ -517,7 +517,7 @@ trace that looks like this:
 application directory. Such assemblies may exists since Apple iOS simulator
 adds and updates files but never deletes them. If this happens then the easiest
 solution is to select "Reset and Content and Settings..." from the simulator
-menu.   
+menu.
 
 > [!WARNING]
 > This will remove all files, applications

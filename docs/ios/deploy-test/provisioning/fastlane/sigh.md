@@ -147,7 +147,7 @@ The following options can be used to give additional support when using sigh:
     ```bash
     fastlane sigh -c "Amy cert"
     ```
-    
+
     Where `Amy cert` is the Code Signing Identity name.
 
 ## Related Links

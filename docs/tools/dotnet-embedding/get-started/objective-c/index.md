@@ -34,7 +34,7 @@ You can install [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/ma
 Follow these [instructions](~/tools/dotnet-embedding/get-started/install/install.md) to install and configure .NET Embedding for your project.
 
 A sample command invocation is listed in the [macOS](~/tools/dotnet-embedding/get-started/objective-c/macos.md)
-and 
+and
 [iOS](~/tools/dotnet-embedding/get-started/objective-c/ios.md) getting started guides.
 
 ## Platforms

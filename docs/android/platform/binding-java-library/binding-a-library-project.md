@@ -38,25 +38,25 @@ creating a binding for a Java .JAR or .AAR file.
 
 ## Walkthrough
 
-To use an Android library project in a Xamarin.Android Java Binding 
-project it is first necessary to build the Android library project in 
-Eclipse. The following screenshot shows an example of one Android 
-library project after compilation: 
+To use an Android library project in a Xamarin.Android Java Binding
+project it is first necessary to build the Android library project in
+Eclipse. The following screenshot shows an example of one Android
+library project after compilation:
 
 [![Example library project in Eclipse](binding-a-library-project-images/build-lib-in-eclipse.png)](binding-a-library-project-images/build-lib-in-eclipse.png#lightbox)
 
-Notice that the source code from the Android library project has been 
-compiled to a temporary .JAR file named 
-**android-mapviewballoons.jar**, and that the resources have been copied 
-to the **bin/res/crunch** folder. 
+Notice that the source code from the Android library project has been
+compiled to a temporary .JAR file named
+**android-mapviewballoons.jar**, and that the resources have been copied
+to the **bin/res/crunch** folder.
 
-Once the Android library project has been compiled in Eclipse, it can 
-then be bound using a Xamarin.Android Java Binding project. First a 
-.ZIP file must be created which contains the **bin** and **res** 
+Once the Android library project has been compiled in Eclipse, it can
+then be bound using a Xamarin.Android Java Binding project. First a
+.ZIP file must be created which contains the **bin** and **res**
 folders of the Android library project. It is important that you remove
 the intervening **crunch** subdirectory so that the resources
-reside in **bin/res**. The following screenshot shows 
-the contents of one such .ZIP file: 
+reside in **bin/res**. The following screenshot shows
+the contents of one such .ZIP file:
 
 [![Contents of Android library project .zip](binding-a-library-project-images/contents-of-zip-file.png)](binding-a-library-project-images/contents-of-zip-file.png#lightbox)
 
@@ -68,11 +68,11 @@ project, as shown in the following screenshot:
 Notice that the Build Action of the .ZIP file has been
 automatically set to **LibraryProjectZip**.
 
-If there are any .JAR files that are required by the Android library 
-project, they should be added to the **Jars** folder of the Java 
-Binding Library project and the **Build Action** set to 
-**ReferenceJar**. An example of this can be seen in the screenshot 
-below: 
+If there are any .JAR files that are required by the Android library
+project, they should be added to the **Jars** folder of the Java
+Binding Library project and the **Build Action** set to
+**ReferenceJar**. An example of this can be seen in the screenshot
+below:
 
 [![Build action set to ReferenceJar](binding-a-library-project-images/set-to-referencejar.png)](binding-a-library-project-images/set-to-referencejar.png#lightbox)
 
@@ -80,12 +80,12 @@ Once these steps are complete, the Xamarin.Android Java Binding project can
 be used as described earlier on in this document.
 
 > [!NOTE]
-> Compiling the Android library projects in other IDEs is not supported at this time. Other IDEs may not create the same directory structure or files in the **bin** folder as Eclipse. 
+> Compiling the Android library projects in other IDEs is not supported at this time. Other IDEs may not create the same directory structure or files in the **bin** folder as Eclipse.
 
 ## Summary
 
-In this article, we walked through the process of binding an Android 
-library project. We built the Android library project in Eclipse, then 
-we created a zip file from the **bin** and **res** folders of the 
-Android library project. Next, we used this zip to create a 
-Xamarin.Android Java Binding project. 
+In this article, we walked through the process of binding an Android
+library project. We built the Android library project in Eclipse, then
+we created a zip file from the **bin** and **res** folders of the
+Android library project. Next, we used this zip to create a
+Xamarin.Android Java Binding project.

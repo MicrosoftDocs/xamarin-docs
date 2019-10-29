@@ -48,7 +48,7 @@ command in your terminal:
 defaults write com.xamarin.Workbooks WebKitDeveloperExtras -bool true
 ```
 
-and then restart Xamarin Workbooks. Once you do so, you should see **Inspect Element** 
+and then restart Xamarin Workbooks. Once you do so, you should see **Inspect Element**
 appear in your right-click context menu, and a new **Developer** pane
 will be available in Workbooks preferences. This option allows you to choose if you want
 the developer tools opened at startup:

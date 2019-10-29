@@ -33,19 +33,19 @@ Google Play server keeps the private key internally.
 An application that has implemented Google Licensing makes a request to a
 service hosted by the Google Play application on the device. Google Play then
 sends this request on to the Google Licensing server, which responds with the
-license status: 
+license status:
 
 [![Licensing server workflow diagram](google-licensing-services-images/gp-licensing-service-overview.png)](google-licensing-services-images/gp-licensing-service-overview.png#lightbox)
 
-The above diagram illustrates this workflow: 
+The above diagram illustrates this workflow:
 
-- The application provides the package name, a *nonce* (a 
-    cryptographic authenticator) that is used to validate server 
-    response, and a callback that can handle the response 
-    asynchronously. 
+- The application provides the package name, a *nonce* (a
+    cryptographic authenticator) that is used to validate server
+    response, and a callback that can handle the response
+    asynchronously.
 
-- Google Play provides information such as the Google account and the 
-    device itself, such as the IMSI number. 
+- Google Play provides information such as the Google account and the
+    device itself, such as the IMSI number.
 
 Google Licensing service is also a key component of APK expansion files
 (which are discussed later in this document). APK expansion files utilize Google

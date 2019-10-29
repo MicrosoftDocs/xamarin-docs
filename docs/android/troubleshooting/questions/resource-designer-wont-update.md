@@ -28,4 +28,4 @@ A bug in Xamarin.Studio 5.1 previously corrupted .csproj files by partially or c
 
 ### If this does not solve the problem
 
-After experimenting with these elements, you may notice that after adding back the elements and rebuilding the project, the Resource.designer.cs file would update, but then you might still have to close and re-open the solution to get code completion to recognize the new types contained in Resource.designer.cs. 
+After experimenting with these elements, you may notice that after adding back the elements and rebuilding the project, the Resource.designer.cs file would update, but then you might still have to close and re-open the solution to get code completion to recognize the new types contained in Resource.designer.cs.

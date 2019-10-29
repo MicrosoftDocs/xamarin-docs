@@ -66,13 +66,13 @@ To solve this issue, the `lipo` command line tool can be used to merge two or mo
 The follow step are required to embed a framework in a Xamarin.iOS or Xamarin.Mac project using Native References:
 
 1. Create a new or open an existing Xamarin.iOS, Xamarin.Mac or Binding project.
-2. In the **Solution Explorer**, right-click on the project name and select **Add** > **Add Native Reference**: 
+2. In the **Solution Explorer**, right-click on the project name and select **Add** > **Add Native Reference**:
 
     [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
-3. From the **Open** dialog box, select the name of the Native Framework that you want to embed and click the **Open** button: 
+3. From the **Open** dialog box, select the name of the Native Framework that you want to embed and click the **Open** button:
 
     [![](native-references-images/ref02.png "Select the name of the Native Framework to embed and click the Open button")](native-references-images/ref02.png#lightbox)
-4. The framework will be added to the project's tree: 
+4. The framework will be added to the project's tree:
 
     [![](native-references-images/ref03.png "The framework will be added to the projects tree")](native-references-images/ref03.png#lightbox)
 
@@ -86,7 +86,7 @@ Internally Xamarin.iOS may take advantage of this feature to link with the Mono 
 
 Extensions will link with the Mono runtime as a framework, because all extensions require iOS 8.0.
 
-Apps that don’t have extensions and apps that target iOS 
+Apps that don’t have extensions and apps that target iOS
 
 <a name="Summary" />
 

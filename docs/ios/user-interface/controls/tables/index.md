@@ -17,10 +17,10 @@ For those working on cross-platform applications with Xamarin.Android, the UITab
 
 These articles will take a comprehensive look at working with tables, including:
 
-- **Table parts** – Introducing and explaining the visual elements of the  `UITableView` control. 
-- **Displaying data in tables** – Demonstrating how to create and populate a table, use different table and cell styles and avoid memory issues by recycling cell objects. 
-- **Advanced usage** – Building custom cells and using the editing features of the UITableView class. 
-- **Creating a table visually** – Using the Xamarin Designer for iOS to create a table-driven interface with a Storyboard. 
+- **Table parts** – Introducing and explaining the visual elements of the  `UITableView` control.
+- **Displaying data in tables** – Demonstrating how to create and populate a table, use different table and cell styles and avoid memory issues by recycling cell objects.
+- **Advanced usage** – Building custom cells and using the editing features of the UITableView class.
+- **Creating a table visually** – Using the Xamarin Designer for iOS to create a table-driven interface with a Storyboard.
 
 ## Contents
 

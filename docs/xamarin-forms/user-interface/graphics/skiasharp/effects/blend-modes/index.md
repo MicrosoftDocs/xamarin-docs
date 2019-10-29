@@ -71,7 +71,7 @@ BackgroundColor = Color.Red;
 
 You'll see this red background behind your SkiaSharp graphics because the SkiaSharp canvas itself is transparent.
 
-The article [**SkiaSharp Transparency**](../../basics/transparency.md) showed some basic techniques in using transparency to arrange multiple graphics in a composite image. The blend modes go beyond that, but transparency remains crucial to the blend modes. 
+The article [**SkiaSharp Transparency**](../../basics/transparency.md) showed some basic techniques in using transparency to arrange multiple graphics in a composite image. The blend modes go beyond that, but transparency remains crucial to the blend modes.
 
 ## [SkiaSharp Porter-Duff blend modes](porter-duff.md)
 

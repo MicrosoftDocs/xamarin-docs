@@ -182,7 +182,7 @@ The Xamarin Profiler is composed of five sections as illustrated below:
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Profiler sections in Visual Studio for Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox) 
+[![Profiler sections in Visual Studio for Mac](images/profiler-mac-sml.png)](images/profiler-mac.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -204,7 +204,7 @@ At the top of the profiler is the allocations chart, which displays the amount o
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Allocations Instrument](images/allocations1.png)](images/allocations1.png#lightbox) 
+[![Allocations Instrument](images/allocations1.png)](images/allocations1.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -214,11 +214,11 @@ At the top of the profiler is the allocations chart, which displays the amount o
 
 There are different data views in the Allocations instrument, which allow developers to analyze how their application is using and freeing memory. These views are described below:
 
-- **Allocations** – This displays a list of all allocations and groups them by class name. This provides a great overview of classes and methods being used, how often they are used, and the collective size of the classes used. Double clicking on a class will show the memory allocated : 
+- **Allocations** – This displays a list of all allocations and groups them by class name. This provides a great overview of classes and methods being used, how often they are used, and the collective size of the classes used. Double clicking on a class will show the memory allocated :
 
 # [Visual Studio for Mac](#tab/macos)
 
-  [![Allocations Tab](images/allocations3.png)](images/allocations3.png#lightbox) 
+  [![Allocations Tab](images/allocations3.png)](images/allocations3.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -234,7 +234,7 @@ The Inspector view for Allocations provides options for filtering and grouping o
 
 # [Visual Studio for Mac](#tab/macos)
 
-  [![Call Tree Tab](images/allocations2.png)](images/allocations2.png#lightbox) 
+  [![Call Tree Tab](images/allocations2.png)](images/allocations2.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -242,11 +242,11 @@ The Inspector view for Allocations provides options for filtering and grouping o
 
 -----
 
-- **Snapshots** – This pane displays information about memory snapshots. To generate these while profiling a live application, click the _Camera_ button in the toolbar at each point that you'd like to see what memory is retained and released. You can then click each snapshot to explore what is happening under the hood. Note that snapshots can only be taken when live profiling an app. 
+- **Snapshots** – This pane displays information about memory snapshots. To generate these while profiling a live application, click the _Camera_ button in the toolbar at each point that you'd like to see what memory is retained and released. You can then click each snapshot to explore what is happening under the hood. Note that snapshots can only be taken when live profiling an app.
 
 # [Visual Studio for Mac](#tab/macos)
 
-  [![Snapshots Tab](images/allocations4.png)](images/allocations4.png#lightbox) 
+  [![Snapshots Tab](images/allocations4.png)](images/allocations4.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -262,15 +262,15 @@ The plot chart, as shown in the screenshot below, displays the number of samples
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Time Profiler Instrument](images/time1.png)](images/time1.png#lightbox) 
+[![Time Profiler Instrument](images/time1.png)](images/time1.png#lightbox)
 
-[![Time Profiler Instrument – Samples List](images/time3.png)](images/time3.png#lightbox) 
+[![Time Profiler Instrument – Samples List](images/time3.png)](images/time3.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![Time Profiler Instrument](images/time1-vs.png)](images/time1-vs.png#lightbox) 
+[![Time Profiler Instrument](images/time1-vs.png)](images/time1-vs.png#lightbox)
 
-[![Time Profiler Instrument – Samples List](images/time3-vs.png)](images/time3-vs.png#lightbox) 
+[![Time Profiler Instrument – Samples List](images/time3-vs.png)](images/time3-vs.png#lightbox)
 
 -----
 
@@ -278,11 +278,11 @@ The plot chart, as shown in the screenshot below, displays the number of samples
 
 # [Visual Studio for Mac](#tab/macos)
 
-  [![Time Profiler Instrument – Call Tree](images/time2.png)](images/time2.png#lightbox) 
+  [![Time Profiler Instrument – Call Tree](images/time2.png)](images/time2.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-  [![Time Profiler Instrument – Call Tree](images/time2-vs.png)](images/time2-vs.png#lightbox) 
+  [![Time Profiler Instrument – Call Tree](images/time2-vs.png)](images/time2-vs.png#lightbox)
 
 -----
 
@@ -292,11 +292,11 @@ Through the use of C# and F# managed code, it can be quite common, and unfortuna
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Cycles Instrument](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox) 
+[![Cycles Instrument](images/cycles.m751-sml.png)](images/cycles.m751.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![Cycles Instrument](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox) 
+[![Cycles Instrument](images/cycles-vs-sml.png)](images/cycles-vs.png#lightbox)
 
 -----
 
@@ -308,11 +308,11 @@ If you profile an app with any other configuration, you will be presented with t
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![Profiling Error Dialog](images/image001.png)](images/image001.png#lightbox) 
+[![Profiling Error Dialog](images/image001.png)](images/image001.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-[![Profiling Error Dialog](images/image1vs.png)](images/image1vs.png#lightbox) 
+[![Profiling Error Dialog](images/image1vs.png)](images/image1vs.png#lightbox)
 
 -----
 

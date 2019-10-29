@@ -122,7 +122,7 @@ Note that **In-App Purchase** will be automatically enabled in the Services list
 
 Create
 Development and Production Provisioning Profiles as you normally would,
-selecting the App ID that you’ve set up for In-App Purchasing. Refer to the [iOS Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) and [Publishing to the App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) guides 
+selecting the App ID that you’ve set up for In-App Purchasing. Refer to the [iOS Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) and [Publishing to the App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) guides
 for more information.
 
 ## iTunes Connect
@@ -141,9 +141,9 @@ already added:
 
 The process to add new products has two steps:
 
-1. Choose the product type: 
-    [![](in-app-purchase-basics-and-configuration-images/image8.png "Choose the product type")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox) 
-2. Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions: 
+1. Choose the product type:
+    [![](in-app-purchase-basics-and-configuration-images/image8.png "Choose the product type")](in-app-purchase-basics-and-configuration-images/image8.png#lightbox)
+2. Enter the product’s attributes, including the Product Id, pricing tier and localized descriptions:
     [![](in-app-purchase-basics-and-configuration-images/image9.png "Entering the products attributes")](in-app-purchase-basics-and-configuration-images/image9.png#lightbox)
 
 The fields required for each in-app purchase product are described
@@ -241,7 +241,7 @@ In iTunes Connect you can enter different Name and Description text for any
 number of supported languages. Each language can be added/edited in via a
 popup:
 
- [![](in-app-purchase-basics-and-configuration-images/image12.png "Each language can be added/edited in via a popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)   
+ [![](in-app-purchase-basics-and-configuration-images/image12.png "Each language can be added/edited in via a popup")](in-app-purchase-basics-and-configuration-images/image12.png#lightbox)
 
 When you display product information in your app, the localized
 text is available for you to display via StoreKit. The currency display must
@@ -262,7 +262,7 @@ new app, or the functionality has been added to an existing one) you must also
 choose some products to submit with it. The iTunes Connect portal will prompt
 you to do this, as shown in this screenshot:
 
- [![](in-app-purchase-basics-and-configuration-images/image13.png "The iTunes Connect portal will prompt you to submit some products as well")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)   
+ [![](in-app-purchase-basics-and-configuration-images/image13.png "The iTunes Connect portal will prompt you to submit some products as well")](in-app-purchase-basics-and-configuration-images/image13.png#lightbox)
 
 The application and the in-app purchases will be reviewed
 together, so that they all get approved at once (so that app doesn’t go into

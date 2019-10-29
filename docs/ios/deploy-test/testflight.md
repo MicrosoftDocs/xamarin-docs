@@ -222,7 +222,7 @@ You can now start to prepare invitations and add up to 2000 external testers thr
 
 If you have a large number of external testers, you can use the **Import File** link to import a `CSV` file with the following format per line:
 
-``` 
+```
 first name, last name, email address
 ```
 

@@ -58,11 +58,11 @@ To use the Android Device Manager, you will need the following items:
   is not already installed: **C:\\Program Files (x86)\\Android\\android-sdk**.
 
 - The following packages must be installed (via the
-  [Android SDK Manager](~/android/get-started/installation/android-sdk.md)): 
+  [Android SDK Manager](~/android/get-started/installation/android-sdk.md)):
   - **Android SDK Tools version 26.1.1** or later
   - **Android SDK Platform-Tools 27.0.1** or later
-  - **Android SDK Build-Tools 27.0.3** or later 
-  - **Android Emulator 27.2.7** or later. 
+  - **Android SDK Build-Tools 27.0.3** or later
+  - **Android Emulator 27.2.7** or later.
 
   These packages should be displayed with **Installed** status as seen in
   the following screenshot:
@@ -294,9 +294,9 @@ To use the Android Device Manager, you will need the following items:
   [Setting up the Android SDK for Xamarin.Android](~/android/get-started/installation/android-sdk.md)).
 
 - The following packages must be installed (via the
-  [Android SDK Manager](~/android/get-started/installation/android-sdk.md)): 
+  [Android SDK Manager](~/android/get-started/installation/android-sdk.md)):
   - **SDK tools version 26.1.1** or later
-  - **Android SDK Platform-Tools 28.0.1** or later 
+  - **Android SDK Platform-Tools 28.0.1** or later
   - **Android SDK Build-Tools 26.0.3** or later
 
   These packages should be displayed with **Installed** status as seen in

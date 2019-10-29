@@ -27,7 +27,7 @@ This guide assumes a familiarity with the contents covered in the [Getting Start
 
 This section describes how the iOS Designer facilitates creating a user interface and connecting it to code.
 
-The iOS Designer allows developers to visually design an application's user interface. As outlined in the [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) guide, a storyboard describes the screens (view controllers) that make up an app, the interface elements (views) placed on those view controllers, and the app's overall navigation flow. 
+The iOS Designer allows developers to visually design an application's user interface. As outlined in the [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) guide, a storyboard describes the screens (view controllers) that make up an app, the interface elements (views) placed on those view controllers, and the app's overall navigation flow.
 
 A view controller has two parts: a visual representation in the iOS Designer and an associated C# class:
 
@@ -47,7 +47,7 @@ A view controller has two parts: a visual representation in the iOS Designer and
 
 -----
 
-In its default state, a view controller doesn't provide any functionality; it must be populated with controls. These controls are placed in the view controller's view, the rectangular area that contains all of the screen's content. Most view controllers contain common controls such as buttons, labels, and text fields, as illustrated in the following screenshot, which shows a view controller containing a button: 
+In its default state, a view controller doesn't provide any functionality; it must be populated with controls. These controls are placed in the view controller's view, the rectangular area that contains all of the screen's content. Most view controllers contain common controls such as buttons, labels, and text fields, as illustrated in the following screenshot, which shows a view controller containing a button:
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -279,7 +279,7 @@ The bottom toolbar provides a way to select the device, orientation, and zoom us
 
 #### Device and orientation
 
-When expanded, the bottom toolbar displays all devices, orientations, and/or adaptations applicable to the current document. Clicking them changes the view displayed on the design surface. 
+When expanded, the bottom toolbar displays all devices, orientations, and/or adaptations applicable to the current document. Clicking them changes the view displayed on the design surface.
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -295,7 +295,7 @@ Note that selecting a device and orientation changes only how the iOS Designer p
 
 When [size classes](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) are [enabled](~/ios/user-interface/storyboards/unified-storyboards.md#enabling-size-classes), the **Edit Traits** button will appear in the expanded bottom toolbar.  Clicking the **Edit Traits** button displays options for creating an interface variation based on the size class represented by the selected device and orientation. Consider the following examples:
 
-- If **iPhone SE** / **Portrait**, is selected, the popover will provide options to create an interface variation for the compact width, regular height size class. 
+- If **iPhone SE** / **Portrait**, is selected, the popover will provide options to create an interface variation for the compact width, regular height size class.
 - If **iPad Pro 9.7"** / **Landscape** / **Full Screen** is selected, the popover will provide options to create an interface variation for the regular width, regular height size class.
 
 # [Visual Studio for Mac](#tab/macos)
@@ -419,7 +419,7 @@ Once an event handler has been specified, a method of the same name must be adde
 
 [![An unrecognized selector exception](introduction-images/20-unrecognizedselector-vsmac.png "An unrecognized selector exception")](introduction-images/20-unrecognizedselector-vsmac-large.png#lightbox)
 
-Note that after an event handler has been specified in the **Properties Pad**, the iOS Designer will immediately open the corresponding code file and offer to insert the method declaration. 
+Note that after an event handler has been specified in the **Properties Pad**, the iOS Designer will immediately open the corresponding code file and offer to insert the method declaration.
 
 # [Visual Studio](#tab/windows)
 
@@ -471,7 +471,7 @@ After making edits in Xcode Interface Builder, save the file and return to Visua
 
 The iOS Designer supports creating, editing, and managing .xib files. These are XML files that respresent single, custom views which can be added to an application's view hierarchy. A .xib file generally represents the interface for a single view or screen in an application, whereas a storyboard represents many screens and the transitions between them.
 
-There are many opinions about which solution – .xib files, storyboards, or code – works best for creating and maintaining a user interface. In reality, there is no perfect solution, and it's always worth considering the best tool for the job at hand. That said, .xib files are generally most powerful when used to represent a custom view needed in multiple places in an app, such as a custom table view cell. 
+There are many opinions about which solution – .xib files, storyboards, or code – works best for creating and maintaining a user interface. In reality, there is no perfect solution, and it's always worth considering the best tool for the job at hand. That said, .xib files are generally most powerful when used to represent a custom view needed in multiple places in an app, such as a custom table view cell.
 
 More documentation about using .xib files can be found in the following recipes:
 

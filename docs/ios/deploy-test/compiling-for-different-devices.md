@@ -15,7 +15,7 @@ The build properties of your executable can be configured from the Project's **i
 
 # [Visual Studio for Mac](#tab/macos)
 
-[![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png#lightbox) 
+[![](compiling-for-different-devices-images/image1.png "The Projects iOS Build properties page")](compiling-for-different-devices-images/image1.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -36,7 +36,7 @@ Visual Studio for Mac lets you configure two important properties related to the
 
 The iOS **SDK version** option lets you use different
 versions of an Apple published SDK, this directs Xamarin.iOS to the compilers,
-linkers and libraries it should reference during your build. 
+linkers and libraries it should reference during your build.
 
 The **Deployment Target** setting is used to select the minimum
 required version of the operating system on which your application will run. This is set in your Project's Info.plist file. You should pick the

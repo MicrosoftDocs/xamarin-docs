@@ -20,7 +20,7 @@ This C# extension method is an example of how to start a foreground service. On 
 public static void StartForegroundServiceCompat<T>(this Context context, Bundle args = null) where T : Service
 {
     var intent = new Intent(context, typeof(T));
-    if (args != null) 
+    if (args != null)
     {
         intent.PutExtras(args);
     }
@@ -45,9 +45,9 @@ Once a foreground service has started, it must register itself with Android by i
 - An integer value that is unique within the application to identify the service.
 - A `Notification` object that Android will display in the status bar for as long as the service is running.
 
-Android will display the notification in the status bar for as long as the service is running. The notification, at minimum, will provide a visual cue to the user that the service is running. Ideally, the notification should provide the user with a shortcut to the application or possibly some action buttons to control the application. An example of this is a music player &ndash; the notification that is displayed may have buttons to pause/play music, to rewind to the previous song, or to skip to the next song. 
+Android will display the notification in the status bar for as long as the service is running. The notification, at minimum, will provide a visual cue to the user that the service is running. Ideally, the notification should provide the user with a shortcut to the application or possibly some action buttons to control the application. An example of this is a music player &ndash; the notification that is displayed may have buttons to pause/play music, to rewind to the previous song, or to skip to the next song.
 
-This code snippet is an example of registering a service as a foreground service:   
+This code snippet is an example of registering a service as a foreground service:
 
 ```csharp
 // This is any integer value unique to the application.
@@ -87,7 +87,7 @@ More information about notifications is available in the [Local Notifications](~
 
 A service can de-list itself as a foreground service by calling the method `StopForeground`. `StopForeground` will not stop the service, but it will remove the notification icon and signals Android that this service can be shut down if necessary.
 
-The status bar notification that is displayed can also be removed by passing `true` to the method: 
+The status bar notification that is displayed can also be removed by passing `true` to the method:
 
 ```csharp
 StopForeground(true);

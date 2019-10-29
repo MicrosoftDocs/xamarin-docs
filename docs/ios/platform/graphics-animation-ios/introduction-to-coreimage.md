@@ -55,7 +55,7 @@ face. `CIFaceFeature` has the following properties:
 
 - HasMouthPosition – Whether a mouth was detected for this face.
 - HasLeftEyePosition – Whether the left eye was detected for this face.
-- HasRightEyePosition – Whether the right eye was detected for this face. 
+- HasRightEyePosition – Whether the right eye was detected for this face.
 - MouthPosition – The coordinates of the mouth for this face.
 - LeftEyePosition – The coordinates of the left eye for this face.
 - RightEyePosition – The coordinates of the right eye for this face.
@@ -240,7 +240,7 @@ scroll through the list to see all the filters and their parameters.
 
 Each filter listed has been exposed as a class in Xamarin.iOS, so you can also
 explore the Xamarin.iOS.CoreImage API in the Assembly Browser or using
-auto-complete in either Visual Studio for Mac or Visual Studio. 
+auto-complete in either Visual Studio for Mac or Visual Studio.
 
 ## Summary
 

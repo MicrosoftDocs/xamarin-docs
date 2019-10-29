@@ -381,7 +381,7 @@ Features of Wallet include:
 Passes can be added to Wallet in the following ways:
 
 - **Conduit Apps** – These do not manipulate passes directly, they simply load pass files
-and present the user with the option of adding them to Wallet. 
+and present the user with the option of adding them to Wallet.
 
 - **Companion Apps** – These are written by providers to distribute passes and offer
 additional functionality to browse or edit them. Xamarin.iOS applications have
@@ -649,7 +649,7 @@ notification because PKPassLibrary is not a singleton.
 
 ## Server Processing
 
-A detailed discussion of building a server application to support PassKit is 
+A detailed discussion of building a server application to support PassKit is
 beyond the scope of this introductory article.
 
 See [dotnet-passbook](https://github.com/tomasmcguinness/dotnet-passbook)

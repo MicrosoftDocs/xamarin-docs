@@ -265,7 +265,7 @@ namespace FormsVideoLibrary.UWP
             }
 
             base.Dispose(disposing);
-        }        
+        }
         ···
     }
 }

@@ -11,7 +11,7 @@ ms.date: 09/20/2019
 
 # Multiple windows for iPad
 
-iOS 13 now supports side-by-side windows for the same app on iPad. This enables new experiences and drag-and-drop interactions between windows. This document shows you how to setup your application to support this feature, and introduces these new features. 
+iOS 13 now supports side-by-side windows for the same app on iPad. This enables new experiences and drag-and-drop interactions between windows. This document shows you how to setup your application to support this feature, and introduces these new features.
 
 ## Project Configuration
 

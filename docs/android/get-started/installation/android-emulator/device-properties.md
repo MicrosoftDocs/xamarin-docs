@@ -23,7 +23,7 @@ The **Android Device Manager** supports the editing of individual
 Android virtual device profile properties. The **New Device** and
 **Device Edit** screens list the properties of the virtual device in
 the first column, with the corresponding values of each property in the
-second column (as seen in this example): 
+second column (as seen in this example):
 
 [![Example New Device screen](device-properties-images/win/01-new-device-editor-sml.png)](device-properties-images/win/01-new-device-editor.png#lightbox)
 
@@ -63,7 +63,7 @@ The **Android Device Manager** supports the editing of individual
 Android virtual device profile properties. The **New Device** and
 **Device Edit** screens list the properties of the virtual device in
 the first column, with the corresponding values of each property in the
-second column (as seen in this example): 
+second column (as seen in this example):
 
 [![Example New Device screen](device-properties-images/mac/01-new-device-editor-sml.png)](device-properties-images/mac/01-new-device-editor.png#lightbox)
 

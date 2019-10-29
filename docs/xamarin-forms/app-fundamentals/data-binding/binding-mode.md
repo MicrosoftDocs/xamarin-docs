@@ -628,7 +628,7 @@ Almost everything else is handled in the **SampleSettingsPage.xaml** file. The `
                             <Label Text="{Binding FriendlyName}"
                                    FontSize="24"
                                    VerticalOptions="Center" />
-                        </StackLayout>                        
+                        </StackLayout>
                     </ViewCell>
                 </DataTemplate>
             </ListView.ItemTemplate>

@@ -21,7 +21,7 @@ Unlike a bound service, there is no communication channel between a "pure" start
 - `OnStartCommand` &ndash; Called for each request to start the service, either in response to a call to `StartService` or a restart by the system. This is where the service can begin any long-running task. The method returns a  `StartCommandResult` value that indicates how or if the system should handle restarting the service after a shutdown due to low memory. This call takes place on the main thread. This method is described in more detail below.
 - `OnDestroy` &ndash; This method is called when the Service is being destroyed. It is used to perform any final clean up required.
 
-The important method for a started service is the `OnStartCommand` method. It will be invoked each time the service receives a request to do some work. The following code snippet is an example of `OnStartCommand`: 
+The important method for a started service is the `OnStartCommand` method. It will be invoked each time the service receives a request to do some work. The following code snippet is an example of `OnStartCommand`:
 
 ```csharp
 public override StartCommandResult OnStartCommand (Android.Content.Intent intent, StartCommandFlags flags, int startId)
@@ -38,7 +38,7 @@ The first parameter is an `Intent` object containing the meta-data about the wor
 - `StartCommandFlag.Redelivery` &ndash; This means that the `Intent` is a re-delivery of a previous `Intent`. This value is provided when the service had returned `StartCommandResult.RedeliverIntent` but was stopped before it could be properly shut down.
 -`StartCommandFlag.Retry` &dash; This value is received when a previous `OnStartCommand` call failed and Android is trying to start the service again with the same intent as the previous failed attempt.
 
-Finally, the third parameter is an integer value that is unique to the application that identifies the request. It is possible that multiple callers may invoke the same service object. This value is used to associate a request to stop a service with a given request to start a service. It will be discussed in more detail in the section [Stopping the Service](#Stopping_the_Service). 
+Finally, the third parameter is an integer value that is unique to the application that identifies the request. It is possible that multiple callers may invoke the same service object. This value is used to associate a request to stop a service with a given request to start a service. It will be discussed in more detail in the section [Stopping the Service](#Stopping_the_Service).
 
 The value `StartCommandResult` is returned by the service as a suggestion to Android on what to do if the service is killed due to resource constraints. There are three possible values for `StartCommandResult`:
 
@@ -48,7 +48,7 @@ The value `StartCommandResult` is returned by the service as a suggestion to And
 
 There is a fourth value for `StartCommandResult` &ndash; `StartCommandResult.ContinuationMask`. This value is returned by `OnStartCommand` and it describes how Android will continue the service it has killed. This value isn't typically used to start a service.
 
-The key lifecycle events of a started service are shown in this diagram: 
+The key lifecycle events of a started service are shown in this diagram:
 
 ![A diagram showing the order in which the lifecycle methods are called](started-services-images/started-service-01.png "A diagram showing the order in which the lifecycle methods are called.")
 
@@ -56,7 +56,7 @@ The key lifecycle events of a started service are shown in this diagram:
 
 ## Stopping the Service
 
-A started service will keep running indefinitely; Android will keep the service running as long as there are sufficient system resources. Either the client must stop the service, or the service may stop itself when it is done its work. There are two ways to stop a service: 
+A started service will keep running indefinitely; Android will keep the service running as long as there are sufficient system resources. Either the client must stop the service, or the service may stop itself when it is done its work. There are two ways to stop a service:
 
 - **[Android.Content.Context.StopService()](xref:Android.Content.Context.StopService*)** &ndash; A client (such as an Activity) can request a service stop by calling the `StopService` method:
 

@@ -16,7 +16,7 @@ Xamarin.iOS supports database access APIs such as:
 - ADO.NET framework.
 - SQLite-NET 3rd party library.
 
-This guide provides a high-level overview of databases in general before describing how to set up ADO.NET and SQLite.NET to access SQLite databases in your Xamarin.iOS applications. 
+This guide provides a high-level overview of databases in general before describing how to set up ADO.NET and SQLite.NET to access SQLite databases in your Xamarin.iOS applications.
 
 The majority of the code in this document is completely cross-platform and will run on iOS or Android without modification. There are two sample apps discussed:
 

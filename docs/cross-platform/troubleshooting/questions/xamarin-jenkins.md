@@ -19,7 +19,7 @@ The exception to this is for issues that can be isolated to particular bugs in X
 
 ## Setup Jenkins with Xamarin
 
-While as noted above Jenkins issues aren't supported directly by our team; the [Using Jenkins with Xamarin](~/tools/ci/jenkins-walkthrough.md) guide can be used to set up a Jenkins CI server that's integrated with Xamarin. 
+While as noted above Jenkins issues aren't supported directly by our team; the [Using Jenkins with Xamarin](~/tools/ci/jenkins-walkthrough.md) guide can be used to set up a Jenkins CI server that's integrated with Xamarin.
 
 ## Fixes for common issues
 
@@ -29,7 +29,7 @@ The error message for this issue is something like this:
 
 > error XA5205: The Android SDK Directory could not be found. Please set via /p:AndroidSdkDirectory
 
-Your options for setting the SDK location may vary depending on the exact Jenkins Android plugin you're using; a good place to look for how to set this is in the plugin guide. For example; the [Android Emulator Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) automatically looks for the SDK, but if it can't find it; the location can also be set via the Jenkins System Configuration page for that plugin. 
+Your options for setting the SDK location may vary depending on the exact Jenkins Android plugin you're using; a good place to look for how to set this is in the plugin guide. For example; the [Android Emulator Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) automatically looks for the SDK, but if it can't find it; the location can also be set via the Jenkins System Configuration page for that plugin.
 
 ## Deprecated Errors
 
@@ -43,6 +43,6 @@ The error messages for this issue are typically something like
 
 or
 
-> Error: The Starter Edition of Xamarin.iOS does not support building outside of Xamarin Studio 
+> Error: The Starter Edition of Xamarin.iOS does not support building outside of Xamarin Studio
 
 The most common cause of this scenario is the use of Jenkins by logging in with a user account not associated with your Xamarin license. The simplest way of resolving this, is to install Jenkins as an app directly via the user account. That process and some additional considerations are described here: [https://forums.xamarin.com/discussion/comment/99397/#Comment_99397](https://forums.xamarin.com/discussion/comment/99397/#Comment_99397)

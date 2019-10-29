@@ -70,7 +70,7 @@ Create an XML file named `list_item.xml` and save it inside the
     android:padding="10dp"
     android:textSize="16sp"
     android:textColor="#000">
-</TextView> 
+</TextView>
 ```
 
 This file defines a simple

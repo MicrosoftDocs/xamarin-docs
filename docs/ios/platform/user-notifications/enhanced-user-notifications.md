@@ -42,8 +42,8 @@ A Xamarin.iOS app has two types of User Notifications that it is able to send:
 
 The Local Notifications that an iOS app can send have the following features and attributes:
 
-- They are sent by apps that are local on the user's device. 
-- They are can be configured to use either time or location based triggers. 
+- They are sent by apps that are local on the user's device.
+- They are can be configured to use either time or location based triggers.
 - The app schedules the notification with the user's device and it is displayed when the trigger condition is met.
 - When the user interacts with a notification, the app will receive a callback.
 
@@ -100,9 +100,9 @@ The User Notification framework provides the following:
 - Enhanced management of both pending and delivered notifications including the ability to remove or update notifications.
 - Adds the ability to do in-app presentation of notifications.
 - Adds the ability to schedule and handle notifications from within App Extensions.
-- Adds new extension point for the notifications themselves. 
+- Adds new extension point for the notifications themselves.
 
-The new User Notification framework provides a unified notification API across the multiple of the platforms that Apple supports including: 
+The new User Notification framework provides a unified notification API across the multiple of the platforms that Apple supports including:
 
 - **iOS** - Full support to manage and schedule notifications.
 - **tvOS** - Adds the ability to badge app icons for local and remote notifications.
@@ -145,8 +145,8 @@ Additionally, a user can always change the notification privileges for an app at
 // Get current notification settings
 UNUserNotificationCenter.Current.GetNotificationSettings ((settings) => {
     var alertsAllowed = (settings.AlertSetting == UNNotificationSetting.Enabled);
-});    
-``` 
+});
+```
 
 ### Configuring the Remote Notifications Environment
 
@@ -159,11 +159,11 @@ To provide the required entitlement, do the following:
 # [Visual Studio for Mac](#tab/macos)
 
 1. Double-click the `Entitlements.plist` file in the **Solution Pad** to open it for editing.
-2. Switch to the **Source** view: 
+2. Switch to the **Source** view:
 
     [![](enhanced-user-notifications-images/setup01.png "The Source view")](enhanced-user-notifications-images/setup01.png#lightbox)
 3. Click the **+** button to add a new key.
-4. Enter `aps-environment` for the **Property**, leave the **Type** as `String` and enter either `development` or `production` for the **Value**: 
+4. Enter `aps-environment` for the **Property**, leave the **Type** as `String` and enter either `development` or `production` for the **Value**:
 
     [![](enhanced-user-notifications-images/setup02.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
 5. Save the changes to the file.
@@ -172,7 +172,7 @@ To provide the required entitlement, do the following:
 
 1. Double-click the `Entitlements.plist` file in the **Solution Explorer** to open it for editing.
 2. Click the **+** button to add a new key.
-3. Enter `aps-environment` for the **Property**, leave the **Type** as `String` and enter either `development` or `production` for the **Value**: 
+3. Enter `aps-environment` for the **Property**, leave the **Type** as `String` and enter either `development` or `production` for the **Value**:
 
     [![](enhanced-user-notifications-images/setup02w.png "The aps-environment Property")](enhanced-user-notifications-images/setup02.png#lightbox)
 4. Save the changes to the file.
@@ -201,7 +201,7 @@ For more information, please see Apple's [Local and Remote Notification Programm
 
 ## Notification Delivery
 
-With the app fully registered and the required permissions requested from and granted by the user, the app is now ready to send and receive notifications. 
+With the app fully registered and the required permissions requested from and granted by the user, the app is now ready to send and receive notifications.
 
 ### Providing Notification Content
 
@@ -300,7 +300,7 @@ namespace MonkeyNotification
 }
 ```
 
-This code is simply writing out the contents of the `UNNotification` to the Application Output and asking the system to display the standard Alert for the notification. 
+This code is simply writing out the contents of the `UNNotification` to the Application Output and asking the system to display the standard Alert for the notification.
 
 If the app wanted to display the notification itself when it was in the foreground, and not use the system defaults, pass `None` to the completion handler. Example:
 
@@ -409,10 +409,10 @@ var actions = new UNNotificationAction [] { action };
 var intentIDs = new string [] { };
 var categoryOptions = new UNNotificationCategoryOptions [] { };
 var category = UNNotificationCategory.FromIdentifier (categoryID, actions, intentIDs, UNNotificationCategoryOptions.None);
-    
+
 // Register category
 var categories = new UNNotificationCategory [] { category };
-UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotificationCategory>(categories)); 
+UNUserNotificationCenter.Current.SetNotificationCategories (new NSSet<UNNotificationCategory>(categories));
 ```
 
 When creating a new `UNNotificationAction`, it is assigned a unique ID and the title that will appear on the button. By default, the Action will be created as a Background Action, however options can be supplied to adjust the Action's behavior (for example setting it to be a Foreground Action).
@@ -515,7 +515,7 @@ The `UserText` property holds the value of any user text input. The `Notificatio
 
 ## Working with Service Extensions
 
-When working with Remote Notifications, _Service Extensions_ provide a way to enable end-to-end encryption inside of the Notification Payload. Service Extensions are a non-User Interface extension (available in iOS 10) that run in the background with the main purpose of augmenting or replacing the visible content of a Notification before it is presented to the user. 
+When working with Remote Notifications, _Service Extensions_ provide a way to enable end-to-end encryption inside of the Notification Payload. Service Extensions are a non-User Interface extension (available in iOS 10) that run in the background with the main purpose of augmenting or replacing the visible content of a Notification before it is presented to the user.
 
 [![](enhanced-user-notifications-images/extension01.png "Service Extension overview")](enhanced-user-notifications-images/extension01.png#lightbox)
 
@@ -534,15 +534,15 @@ To implement a Service Extension in a Xamarin.iOS app, do the following:
 
 1. Open the app's solution in Visual Studio for Mac.
 2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **Add New Project**.
-3. Select **iOS** > **Extensions** > **Notification Service Extensions** and click the **Next** button: 
+3. Select **iOS** > **Extensions** > **Notification Service Extensions** and click the **Next** button:
 
     [![](enhanced-user-notifications-images/extension02.png "Select Notification Service Extensions")](enhanced-user-notifications-images/extension02.png#lightbox)
-4. Enter a **Name** for the extension and click the **Next** button: 
+4. Enter a **Name** for the extension and click the **Next** button:
 
     [![](enhanced-user-notifications-images/extension03.png "Enter a Name for the extension")](enhanced-user-notifications-images/extension03.png#lightbox)
-5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button: 
+5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button:
 
-    [![](enhanced-user-notifications-images/extension04.png "Adjust the Project Name and/or Solution Name")](enhanced-user-notifications-images/extension04.png#lightbox) 
+    [![](enhanced-user-notifications-images/extension04.png "Adjust the Project Name and/or Solution Name")](enhanced-user-notifications-images/extension04.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
@@ -556,7 +556,7 @@ To implement a Service Extension in a Xamarin.iOS app, do the following:
 -----
 
 > [!IMPORTANT]
-> The Bundle Identifier for the service extension should match the Bundle Identifier of the main app with `.appnameserviceextension` appended to the end. For example, if the main app had a Bundle Identifier of  `com.xamarin.monkeynotify`, the service extension should have a Bundle Identifier of `com.xamarin.monkeynotify.monkeynotifyserviceextension`. This should automatically be set when the extension is added to the solution. 
+> The Bundle Identifier for the service extension should match the Bundle Identifier of the main app with `.appnameserviceextension` appended to the end. For example, if the main app had a Bundle Identifier of  `com.xamarin.monkeynotify`, the service extension should have a Bundle Identifier of `com.xamarin.monkeynotify.monkeynotifyserviceextension`. This should automatically be set when the extension is added to the solution.
 
 There is one main class in the Notification Service Extension that will need to be modified to provide the required functionality. For example:
 
@@ -634,24 +634,24 @@ using UserNotification;
 
 namespace myApp {
     public class NotificationService : UNNotificationServiceExtension {
-    
+
         public override void DidReceiveNotificationRequest(UNNotificationRequest request, contentHandler) {
             // Decrypt payload
             var decryptedBody = Decrypt(Request.Content.UserInfo["encrypted-content"]);
-            
+
             // Modify Notification body
             var newContent = new UNMutableNotificationContent();
             newContent.Body = decryptedBody;
-            
+
             // Present to user
             contentHandler(newContent);
         }
-        
+
         public override void TimeWillExpire() {
             // Handle out-of-time fallback event
             ...
         }
-        
+
     }
 }
 ```

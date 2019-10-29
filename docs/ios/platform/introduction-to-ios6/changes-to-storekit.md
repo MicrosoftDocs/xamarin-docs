@@ -110,7 +110,7 @@ You can implement a version check to determine which code to run, as shown here:
 if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
     // do iOS6+ stuff, using SKStoreProductViewController as shown above
 } else {
-    // don't do stuff requiring iOS 6.0, use the old syntax 
+    // don't do stuff requiring iOS 6.0, use the old syntax
     // (which will take the user out of your app)
     var nsurl = new NSUrl("http://itunes.apple.com/us/app/angry-birds/id343200656?mt=8");
     UIApplication.SharedApplication.OpenUrl (nsurl);
@@ -206,8 +206,8 @@ Consumable or Subscriptions). Advantages of using Apple’s hosting service
 include:
 
 - Save hosting & bandwidth costs.
-- Probably more scalable than whatever server host you are currently using. 
-- Less code to write, since you don’t have to build any server-side processing. 
+- Probably more scalable than whatever server host you are currently using.
+- Less code to write, since you don’t have to build any server-side processing.
 - Background downloading is implemented for you.
 
 Note: testing hosted in-app purchase content in iOS Simulator is not
@@ -352,7 +352,7 @@ the menu to begin:
 
 ![](changes-to-storekit-images/image13.png "Choose Archiven")
 
-The content package will then appear in the archive as shown below. 
+The content package will then appear in the archive as shown below.
 The archive type and icon show this line is an **In-App Purchase
 Content Archive**. Click **Validate…** to check our
 content package for errors without actually performing the upload.
@@ -588,7 +588,7 @@ public void SaveDownload (SKDownload download)
     // targetfolder will be "/Documents/com.xamarin.storekitdoc.montouchimages/" or something like that
     if (!System.IO.Directory.Exists (targetfolder))
         System.IO.Directory.CreateDirectory (targetfolder);
-    foreach (var file in System.IO.Directory.EnumerateFiles 
+    foreach (var file in System.IO.Directory.EnumerateFiles
              (System.IO.Path.Combine(download.ContentUrl.Path, "Contents"))) { // Contents directory is the default in .PKG files
         var fileName = file.Substring (file.LastIndexOf ("/") + 1);
         var newFilePath = System.IO.Path.Combine(targetfolder, fileName);

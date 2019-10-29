@@ -110,7 +110,7 @@ In addition to displaying `string` data in the search results, the appearance of
 
 ```xaml
 <ContentPage ...
-             xmlns:controls="clr-namespace:Xaminals.Controls">    
+             xmlns:controls="clr-namespace:Xaminals.Controls">
     <Shell.SearchHandler>
         <controls:MonkeySearchHandler Placeholder="Enter search term"
                                       ShowsResults="true">

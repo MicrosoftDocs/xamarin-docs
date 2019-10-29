@@ -13,7 +13,7 @@ ms.date: 03/09/2018
 
 ## About the Android Support Libraries
 
-Google has created support libraries to make new features available to older versions of Android. In general, Support Libraries are given a version number in their name, which is the lowest Android API Level they are compatible with (eg: Support-v4 can only be used on API Level 4 and higher. More info in this [Stack Overflow discussion](https://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)). 
+Google has created support libraries to make new features available to older versions of Android. In general, Support Libraries are given a version number in their name, which is the lowest Android API Level they are compatible with (eg: Support-v4 can only be used on API Level 4 and higher. More info in this [Stack Overflow discussion](https://stackoverflow.com/questions/9926403/android-support-package-compatibility-library-use-v4-or-v13)).
 
 Two of the support libraries: `Support-v4` and `Support-v13` can not be used together in the same app, that is, they are mutually exclusive. This is because `Support-v13` actually contains all of the types and implementation of `Support-v4`. If you try and reference both in the same project you will encounter duplicate type errors.
 

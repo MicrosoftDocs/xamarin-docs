@@ -78,7 +78,7 @@ Here are the 14 Porter-Duff modes as defined in SkiaSharp. The table shows how t
 | `DstATop`  |             | Destination  | X      |
 | `Xor`      | X           |              | X      |
 | `Plus`     | X           | Sum          | X      |
-| `Modulate` |             | Product      |        | 
+| `Modulate` |             | Product      |        |
 
 These blend modes are symmetrical. The source and destination can be exchanged and all the modes are still available.
 
@@ -124,7 +124,7 @@ class PorterDuffCanvasView : SKCanvasView
 }
 ```
 
-The instance constructor has a parameter of type `SKBlendMode`. It saves this parameter in a field. 
+The instance constructor has a parameter of type `SKBlendMode`. It saves this parameter in a field.
 
 ```csharp
 class PorterDuffCanvasView : SKCanvasView
@@ -313,11 +313,11 @@ The code-behind file loads the two bitmaps that it needs and handles the `Clicke
 public partial class BrickWallCompositingPage : ContentPage
 {
     SKBitmap monkeyBitmap = BitmapExtensions.LoadBitmapResource(
-        typeof(BrickWallCompositingPage), 
+        typeof(BrickWallCompositingPage),
         "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
 
     SKBitmap matteBitmap = BitmapExtensions.LoadBitmapResource(
-        typeof(BrickWallCompositingPage), 
+        typeof(BrickWallCompositingPage),
         "SkiaSharpFormsDemos.Media.SeatedMonkeyMatte.png");
 
     int step = 0;
@@ -343,7 +343,7 @@ public partial class BrickWallCompositingPage : ContentPage
 
         canvasView.InvalidateSurface();
     }
-    
+
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {
         SKImageInfo info = args.Info;
@@ -413,7 +413,7 @@ The blend mode is `SKBlendMode.DstIn`, which means that the destination will be 
 
 [![Brick-Wall Compositing Step 2](porter-duff-images/BrickWallCompositing2.png "Brick-Wall Compositing Step 2")](porter-duff-images/BrickWallCompositing2-Large.png#lightbox)
 
-The background has been removed. 
+The background has been removed.
 
 The next step is to draw a rectangle that resembles a sidewalk that the monkey is sitting on. The appearance of this sidewalk is based on a composition of two shaders: a solid color shader and a Perlin noise shader:
 
@@ -509,7 +509,7 @@ The result is shown in brackets with the alpha channel and the RGB color separat
 | `Clear`    | [0, 0]    |
 | `Src`      | [Sa, Sc]  |
 | `Dst`      | [Da, Dc]  |
-| `SrcOver`  | [Sa + Da·(1 – Sa), Sc + Dc·(1 – Sa) | 
+| `SrcOver`  | [Sa + Da·(1 – Sa), Sc + Dc·(1 – Sa) |
 | `DstOver`  | [Da + Sa·(1 – Da), Dc + Sc·(1 – Da) |
 | `SrcIn`    | [Sa·Da, Sc·Da] |
 | `DstIn`    | [Da·Sa, Dc·Sa] |
@@ -519,7 +519,7 @@ The result is shown in brackets with the alpha channel and the RGB color separat
 | `DstATop`  | [Sa, Dc·Sa + Sc·(1 – Da)] |
 | `Xor`      | [Sa + Da – 2·Sa·Da, Sc·(1 – Da) + Dc·(1 – Sa)] |
 | `Plus`     | [Sa + Da, Sc + Dc] |
-| `Modulate` | [Sa·Da, Sc·Dc] | 
+| `Modulate` | [Sa·Da, Sc·Dc] |
 
 These operations are easier to analyze when **Da** and **Sa** are either 0 or 1. For example, for the default `SrcOver` mode, if **Sa** is 0, then **Sc** is also 0, and the result is **[Da, Dc]**, the destination alpha and color. If **Sa** is 1, then the result is **[Sa, Sc]**, the source alpha and color, or **[1, Sc]**.
 
@@ -573,9 +573,9 @@ The **Porter-Duff Transparency** page allows you to examine how the Porter-Duff 
 </ContentPage>
 ```
 
-The code-behind file fills two rectangles of the same size using a linear gradient. The destination gradient is from the upper right to the lower left. It is brownish in the upper-right corner but then towards the center begins fading to transparent, and is transparent in the lower-left corner. 
+The code-behind file fills two rectangles of the same size using a linear gradient. The destination gradient is from the upper right to the lower left. It is brownish in the upper-right corner but then towards the center begins fading to transparent, and is transparent in the lower-left corner.
 
-The source rectangle has a gradient from the upper left to the lower right. The upper-left corner is bluish but again fades to transparent, and is transparent in the lower-right corner. 
+The source rectangle has a gradient from the upper left to the lower right. The upper-left corner is bluish but again fades to transparent, and is transparent in the lower-right corner.
 
 ```csharp
 public partial class PorterDuffTransparencyPage : ContentPage
@@ -621,7 +621,7 @@ public partial class PorterDuffTransparencyPage : ContentPage
             paint.Shader = SKShader.CreateLinearGradient(
                                 new SKPoint(rect.Left, rect.Top),
                                 new SKPoint(rect.Right, rect.Bottom),
-                                new SKColor[] { new SKColor(0x00, 0x80, 0xC0), 
+                                new SKColor[] { new SKColor(0x00, 0x80, 0xC0),
                                                 new SKColor(0x00, 0x80, 0xC0, 0) },
                                 new float[] { 0.4f, 0.6f },
                                 SKShaderTileMode.Clamp);
@@ -740,7 +740,7 @@ You can also use Porter-Duff modes and partially transparent gradients for trans
              xmlns:skia="clr-namespace:SkiaSharp.Views.Forms;assembly=SkiaSharp.Views.Forms"
              x:Class="SkiaSharpFormsDemos.Effects.GradientTransitionsPage"
              Title="Gradient Transitions">
-    
+
     <StackLayout>
         <skia:SKCanvasView x:Name="canvasView"
                            VerticalOptions="FillAndExpand"
@@ -755,11 +755,11 @@ You can also use Porter-Duff modes and partially transparent gradients for trans
                               StringFormat='Progress = {0:F2}'}"
                HorizontalTextAlignment="Center" />
 
-        <Picker x:Name="transitionPicker" 
-                Title="Transition" 
+        <Picker x:Name="transitionPicker"
+                Title="Transition"
                 Margin="10"
                 SelectedIndexChanged="OnPickerSelectedIndexChanged" />
-        
+
     </StackLayout>
 </ContentPage>
 ```
@@ -813,7 +813,7 @@ The code-behind file creates three `SKPaint` objects. The `paint0` object doesn'
 
 If the `progress` value is 0, then the `positions` array contains the values -0.1 and 0. SkiaSharp will adjust that first value to be equal to 0, which means that the gradient is black only at 0 and transparent otherwise. When `progress` is 0.5, then the array contains the values 0.45 and 0.55. The gradient is black from 0 to 0.45, then transitions to transparent, and is fully transparent from 0.55 to 1. When `progress` is 1, the `positions` array is 1 and 1.1, which means the gradient is black from 0 to 1.
 
-The `colors` and `position` arrays are both used in the three methods of `SKShader` that create a gradient. Only one of these shaders is created based on the `Picker` selection: 
+The `colors` and `position` arrays are both used in the three methods of `SKShader` that create a gradient. Only one of these shaders is created based on the `Picker` selection:
 
 ```csharp
 public partial class GradientTransitionsPage : ContentPage

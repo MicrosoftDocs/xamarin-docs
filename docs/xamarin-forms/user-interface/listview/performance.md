@@ -61,17 +61,17 @@ During virtualization the cell will have its binding context updated, and so if 
 public class CustomCell : ViewCell
 {
     Image image = null;
-    
+
     public CustomCell ()
     {
         image = new Image();
         View = image;
     }
-    
+
     protected override void OnBindingContextChanged ()
     {
         base.OnBindingContextChanged ();
-        
+
         var item = BindingContext as ImageItem;
         if (item != null) {
             image.Source = item.ImageUrl;

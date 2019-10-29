@@ -31,7 +31,7 @@ reading and/or writing calendar data.
 
 ## Using the Calendar Contract
 
-Once you set the permissions, you can interact with calendar data 
+Once you set the permissions, you can interact with calendar data
 by using the `CalendarContract` class. This class provides a data model
 that applications can use when they interact with the calendar
 provider. The `CalendarContract` allows applications to resolve the
@@ -139,7 +139,7 @@ string[] sourceColumns = {
     CalendarContract.Calendars.InterfaceConsts.AccountName };
 
 int[] targetResources = {
-    Resource.Id.calDisplayName, Resource.Id.calAccountName };      
+    Resource.Id.calDisplayName, Resource.Id.calAccountName };
 
 SimpleCursorAdapter adapter = new SimpleCursorAdapter (this,
     Resource.Layout.CalListItem, cursor, sourceColumns, targetResources);
@@ -232,7 +232,7 @@ int[] targetResources = {
 var adapter = new SimpleCursorAdapter (this, Resource.Layout.EventListItem,
     cursor, sourceColumns, targetResources);
 
-adapter.ViewBinder = new ViewBinder ();       
+adapter.ViewBinder = new ViewBinder ();
 ListAdapter = adapter;
 ```
 
@@ -250,7 +250,7 @@ milliseconds to a date string, as shown in the following implementation:
 
 ```csharp
 class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
-{    
+{
     public bool SetViewValue (View view, Android.Database.ICursor cursor,
         int columnIndex)
     {
@@ -266,7 +266,7 @@ class ViewBinder : Java.Lang.Object, SimpleCursorAdapter.IViewBinder
             return true;
         }
         return false;
-    }    
+    }
 }
 ```
 

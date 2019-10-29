@@ -37,15 +37,15 @@ Android Oreo features in Xamarin.Android apps.
 The following is required to use Android Oreo features in Xamarin-based
 apps:
 
-- **Visual Studio** &ndash; If you are using Windows, version 15.5 
+- **Visual Studio** &ndash; If you are using Windows, version 15.5
     or later of Visual Studio is required.  If you are using
-    a Mac, Visual Studio for Mac version 7.2.0 is 
+    a Mac, Visual Studio for Mac version 7.2.0 is
     required.
 
 - **Xamarin.Android** &ndash; Xamarin.Android 8.0 or later must
     be installed and configured with Visual Studio.
 
-- **Android SDK** &ndash; Android SDK 8.0 (API 26) or later must be 
+- **Android SDK** &ndash; Android SDK 8.0 (API 26) or later must be
     installed via the Android SDK Manager.
 
 ## Getting Started
@@ -320,7 +320,7 @@ following:
 1. Create a **Resources/font** folder.
 
 2. Copy your font files (example, **.ttf** and **.otf** files) to
-   **Resources/font**. 
+   **Resources/font**.
 
 3. If necessary, rename each font file so that it adheres to the
    Android file naming conventions (i.e., use only lowercase *a-z*,
@@ -360,9 +360,9 @@ When your app needs a font, you create a `FontsRequest` object
 `FontsContract` method to download the font. The following steps
 describe the font download process in more detail:
 
-1. Instantiate a [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) object. 
+1. Instantiate a [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) object.
 
-2. Subclass and instantiate 
+2. Subclass and instantiate
     [FontsContract.FontRequestCallback](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html).
 
 3. Implement the [FontRequestCallback.OnTypeFaceRetrieved](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRetrieved%28android.graphics.Typeface%29)  method, which is used to
@@ -372,7 +372,7 @@ describe the font download process in more detail:
     take place during the font request process.
 
 5. Call the [FontsContract.RequestFonts](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) method
-    to retrieve the font from the font provider. 
+    to retrieve the font from the font provider.
 
 When you call the `RequestFonts` method, it first checks to see if the
 font is locally cached (from a previous call to `RequestFont`). If it
@@ -382,7 +382,7 @@ invoking your `OnTypeFaceRetrieved` method.
 
 The [Downloadable Fonts](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts)
 sample demonstrates how to use the Downloadable Fonts feature
-introduced in Android Oreo. 
+introduced in Android Oreo.
 
 For more information about downloading fonts, see the Android Developer
 [Downloadable Fonts](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html)
@@ -506,7 +506,7 @@ Several Xamarin.Android samples are available to show you how to take
 advantage of Android Oreo features:
 
 - [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels)
-    demonstrates how to use the new Notification Channels system introduced in Android 
+    demonstrates how to use the new Notification Channels system introduced in Android
     Oreo. This sample manages two notifications channels: one with default importance
     and the other with high importance.
 
@@ -517,7 +517,7 @@ advantage of Android Oreo features:
     display modes or other activities.
 
 - [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework)
-    demonstrates the use of the Autofill Framework. It includes implementations of client Activities with views that 
+    demonstrates the use of the Autofill Framework. It includes implementations of client Activities with views that
     should be autofilled, and a Service that can provide autofill data to client Activities.
 
 - [Downloadable Fonts](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts)
@@ -525,7 +525,7 @@ advantage of Android Oreo features:
     described earlier.
 
 - [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat)
-    demonstrates usage of EmojiCompat support library. You can use this library to prevent your app from 
+    demonstrates usage of EmojiCompat support library. You can use this library to prevent your app from
     showing missing emoji characters as "tofu" characters.
 
 - [Location Updates Pending Intent](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent)

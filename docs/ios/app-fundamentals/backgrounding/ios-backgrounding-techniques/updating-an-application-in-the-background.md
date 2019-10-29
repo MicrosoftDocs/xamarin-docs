@@ -78,7 +78,7 @@ Applications using Background Fetch can make calls to update the UI from the bac
 
 In the sample code above, we let the OS decide how often to fetch new content by setting the minimum fetch interval to `BackgroundFetchIntervalMinimum`. iOS offers three options for the fetch interval:
 
-1. `BackgroundFetchIntervalNever` - Tell the system to never fetch new content. Use this to turn off fetching in certain situations, such as when the user is not signed in. This is the default value for the fetch interval. 
+1. `BackgroundFetchIntervalNever` - Tell the system to never fetch new content. Use this to turn off fetching in certain situations, such as when the user is not signed in. This is the default value for the fetch interval.
 1. `BackgroundFetchIntervalMinimum` - Let the system decide how often to fetch based on user patterns, battery life, data usage, and the needs of other applications.
 1. `BackgroundFetchIntervalCustom` - If you know how often an application's content gets updated, you can specify a "sleep" interval after every fetch, during which the application will be prevented from fetching new content. Once that interval is up, the system will determine when to fetch content.
 

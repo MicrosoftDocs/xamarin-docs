@@ -28,7 +28,7 @@ public enum Category
     Lodging,
     Books
 }
-        
+
 public class Expense
 {
     [Section("Expense Entry")]
@@ -40,7 +40,7 @@ public class Expense
     [Caption("Description")]
     [Entry]
     public string Details;
-        
+
     [Checkbox]
     public bool IsApproved = true;
     [Caption("Category")]
@@ -59,8 +59,8 @@ table creation. It then provides an abstraction on top of that API that allows
 for a declarative object binding syntax that makes it even easier. As such,
 there are two APIs available in MT.D:
 
-- **Low-level Elements API** – The  *Elements API* is based on creating a hierarchal tree of elements that represent screens and their components. The Elements API gives developers the most flexibility and control in creating UIs. Additionally, the Elements API has advanced support for declarative definition via JSON, which allows for both incredibly fast declaration, as well as dynamic UI generation from a server. 
-- **High-Level Reflection API** – Also known as the  *Binding*  *API* , in which classes are annotated with UI hints and then MT.D automatically creates screens based on the objects and provides a binding between what is displayed (and optionally edited) on screen, and the underlying object backing. The example above illustrated the use of the Reflection API. This API doesn’t provide the fine-grained control that the elements API does, but it reduces complexity even further by automatically building out the element hierarchy based on class attributes. 
+- **Low-level Elements API** – The  *Elements API* is based on creating a hierarchal tree of elements that represent screens and their components. The Elements API gives developers the most flexibility and control in creating UIs. Additionally, the Elements API has advanced support for declarative definition via JSON, which allows for both incredibly fast declaration, as well as dynamic UI generation from a server.
+- **High-Level Reflection API** – Also known as the  *Binding*  *API* , in which classes are annotated with UI hints and then MT.D automatically creates screens based on the objects and provides a binding between what is displayed (and optionally edited) on screen, and the underlying object backing. The example above illustrated the use of the Reflection API. This API doesn’t provide the fine-grained control that the elements API does, but it reduces complexity even further by automatically building out the element hierarchy based on class attributes.
 
 MT.D comes packed with a large set of built in UI elements for screen
 creation, but it also recognizes the need for customized elements and advanced
@@ -75,9 +75,9 @@ support.
 This article will take a comprehensive look at working with MT.D,
 including:
 
-- **MT.D Components** – This will focus on understanding the classes that make up MT.D to enable getting up to speed quickly. 
-- **Elements Reference** – A comprehensive list of the built-in elements of MT.D. 
-- **Advanced Usage** – This covers advanced features such as pull-to-refresh, search, background image loading, using LINQ to build out element hierarchies, and creating custom elements, cells, and controllers for use with MT.D. 
+- **MT.D Components** – This will focus on understanding the classes that make up MT.D to enable getting up to speed quickly.
+- **Elements Reference** – A comprehensive list of the built-in elements of MT.D.
+- **Advanced Usage** – This covers advanced features such as pull-to-refresh, search, background image loading, using LINQ to build out element hierarchies, and creating custom elements, cells, and controllers for use with MT.D.
 
 ## Setting up MT.D
 
@@ -149,7 +149,7 @@ the screenshot below shows a table on the left with a cell containing the title
 of the detail screen on the right, “Dessert”, along with the value of the
 selected desert.
 
- [![](images/image4.png "This screenshot shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert")](images/image4.png#lightbox) 
+ [![](images/image4.png "This screenshot shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert")](images/image4.png#lightbox)
  [![](images/image5.png "This screenshot below shows a table on the left with a cell containing the title of the detail screen on the right, Dessert, along with the value of the selected desert")](images/image5.png#lightbox)
 
 Root elements can also be used inside Sections to trigger loading a new
@@ -235,7 +235,7 @@ code:
 
 ```csharp
 var element = new EntryElement (task.Name, "Enter task description", task.Description);
-                
+
 var taskElement = new RootElement (task.Name) {
     new Section () { element },
     new Section () { new DateElement ("Due Date", task.DueDate) },
@@ -285,7 +285,7 @@ and the string value on the right side of the cell.
 To use a `StringElement` as a button, provide a delegate.
 
 ```csharp
-new StringElement ("Click me", () => { 
+new StringElement ("Click me", () => {
     new UIAlertView("Tapped", "String Element Tapped", null, "ok", null).Show();
 });
 ```
@@ -318,7 +318,7 @@ hidden.
 It is initialized with three values:
 
 - The caption for the entry that will be shown to the user.
-- Placeholder text (this is the greyed-out text that provides a hint to the user). 
+- Placeholder text (this is the greyed-out text that provides a hint to the user).
 - The value of the text.
 
 The placeholder and value can be null. However, the caption is required.
@@ -462,7 +462,7 @@ public class SampleOwnerDrawnElement : OwnerDrawnElement
         UIColor.White.SetFill();
         context.FillRect(bounds);
 
-        UIColor.Black.SetColor();   
+        UIColor.Black.SetColor();
         view.DrawString(this.Text, new RectangleF(10, 15, bounds.Width - 20, bounds.Height - 30), UIFont.BoldSystemFontOfSize(14.0f), UILineBreakMode.TailTruncation);
     }
 
@@ -568,10 +568,10 @@ var rootElement = new RootElement("Image Loader") {
 };
 ```
 
-The ImageLoader class exposes a Purge method that you can call when you want to release all 
-of the images that are currently cached in memory. The current code has a cache for 50 images. 
-If you want to use a different cache size (for instance, if you are expecting the images to be 
-too large that 50 images would be too much), you can just create instances of ImageLoader and 
+The ImageLoader class exposes a Purge method that you can call when you want to release all
+of the images that are currently cached in memory. The current code has a cache for 50 images.
+If you want to use a different cache size (for instance, if you are expecting the images to be
+too large that 50 images would be too much), you can just create instances of ImageLoader and
 pass the number of images you want to keep in the cache.
 
 ## Using LINQ to Create Element Hierarchy
@@ -673,8 +673,8 @@ methods, as shown in the example below:
 class SpiffyDialogViewController : DialogViewController {
     UIImage image;
 
-    public SpiffyDialogViewController (RootElement root, bool pushing, UIImage image) 
-        : base (root, pushing) 
+    public SpiffyDialogViewController (RootElement root, bool pushing, UIImage image)
+        : base (root, pushing)
     {
         this.image = image;
     }

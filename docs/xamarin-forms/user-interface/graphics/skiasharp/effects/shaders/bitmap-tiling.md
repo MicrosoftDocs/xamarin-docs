@@ -346,7 +346,7 @@ An `SKMatrix` value is created to scale the image to half its original size:
 
 [![Stone Wall](bitmap-tiling-images/StoneWall.png "Stone Wall")](bitmap-tiling-images/StoneWall-Large.png#lightbox)
 
-Does the transform operate on the original bitmap used in the `CreateBitmap` method? Or does it transform the resultant array of tiles? 
+Does the transform operate on the original bitmap used in the `CreateBitmap` method? Or does it transform the resultant array of tiles?
 
 An easy way to answer this question is to include a rotation as part of the transform:
 
@@ -483,9 +483,9 @@ public class CenteredTilesPage : ContentPage
         {
             // ... but use them to create a translate transform
             SKMatrix matrix = SKMatrix.MakeTranslation(x, y);
-            paint.Shader = SKShader.CreateBitmap(bitmap, 
-                                                 SKShaderTileMode.Repeat, 
-                                                 SKShaderTileMode.Repeat, 
+            paint.Shader = SKShader.CreateBitmap(bitmap,
+                                                 SKShaderTileMode.Repeat,
+                                                 SKShaderTileMode.Repeat,
                                                  matrix);
 
             // Use that tiled bitmap pattern to fill a circle
@@ -630,12 +630,12 @@ public class ChainLinkFencePage : ContentPage
 
         canvas.Clear();
 
-        canvas.DrawBitmap(monkeyBitmap, info.Rect, BitmapStretch.UniformToFill, 
+        canvas.DrawBitmap(monkeyBitmap, info.Rect, BitmapStretch.UniformToFill,
                             BitmapAlignment.Center, BitmapAlignment.Start);
 
         using (SKPaint paint = new SKPaint())
         {
-            paint.Shader = SKShader.CreateBitmap(tileBitmap, 
+            paint.Shader = SKShader.CreateBitmap(tileBitmap,
                                                  SKShaderTileMode.Repeat,
                                                  SKShaderTileMode.Repeat,
                                                  SKMatrix.MakeRotationDegrees(45));
@@ -653,9 +653,9 @@ Notice that the shader is rotated 45 degrees so it is oriented like a real chain
 
 You can animate an entire bitmap-tile pattern by animating the matrix transform. Perhaps you want the pattern to move horizontally or vertically or both. You can do that by creating a translation transform based on the shifting coordinates.
 
-It's also possible to draw on a small bitmap, or to manipulate the bitmap's pixel bits at the rate of 60 times a second. That bitmap can then be used for tiling, and the entire tiled pattern can seem to be animated. 
+It's also possible to draw on a small bitmap, or to manipulate the bitmap's pixel bits at the rate of 60 times a second. That bitmap can then be used for tiling, and the entire tiled pattern can seem to be animated.
 
-The **Animated Bitmap Tile** page demonstrates this approach. A bitmap is instantiated as a field to be 64-pixels square. The constructor calls `DrawBitmap` to give it an initial appearance. If the `angle` field is zero (as it is when the method is first called), then the bitmap contains two lines crossed as an X. The lines are made long enough to always reach to the edge of the bitmap regardless of the `angle` value: 
+The **Animated Bitmap Tile** page demonstrates this approach. A bitmap is instantiated as a field to be 64-pixels square. The constructor calls `DrawBitmap` to give it an initial appearance. If the `angle` field is zero (as it is when the method is first called), then the bitmap contains two lines crossed as an X. The lines are made long enough to always reach to the edge of the bitmap regardless of the `angle` value:
 
 ```csharp
 public class AnimatedBitmapTilePage : ContentPage
@@ -674,7 +674,7 @@ public class AnimatedBitmapTilePage : ContentPage
         // Initialize bitmap prior to animation
         DrawBitmap();
 
-        // Create SKCanvasView 
+        // Create SKCanvasView
         canvasView = new SKCanvasView();
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         Content = canvasView;

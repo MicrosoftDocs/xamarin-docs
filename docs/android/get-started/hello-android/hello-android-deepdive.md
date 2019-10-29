@@ -419,7 +419,7 @@ lifecycle methods in the diagram above to perform some important tasks:
 - **OnCreate** &ndash; Creates views, initializes variables, and
     performs other prep work that must be done before the user sees the
     Activity. This method is called only once when the Activity is
-    loaded into memory. 
+    loaded into memory.
 
 - **OnResume** &ndash; Performs any tasks that must happen every
     time the Activity returns to the device screen.
@@ -511,10 +511,10 @@ start programming them to respond to user interaction.
 
 ### Responding to user interaction
 
-In Android, the `Click` event listens for the user's touch. In this 
-app, the `Click` event is handled with a lambda, but a delegate or a 
-named event handler could be used instead. The final 
-**TranslateButton** code resembled the following: 
+In Android, the `Click` event listens for the user's touch. In this
+app, the `Click` event is handled with a lambda, but a delegate or a
+named event handler could be used instead. The final
+**TranslateButton** code resembled the following:
 
 ```csharp
 translateButton.Click += (sender, e) =>

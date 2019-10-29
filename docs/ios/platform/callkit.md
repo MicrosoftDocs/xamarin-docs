@@ -629,7 +629,7 @@ Provider = new CXProvider (Configuration);
 Provider.SetDelegate (this, null);
 ```
 
-When using CallKit, the app will no longer create and handle its own audio sessions, instead it will need to configure and use an audio session that the System will create and handle for it. 
+When using CallKit, the app will no longer create and handle its own audio sessions, instead it will need to configure and use an audio session that the System will create and handle for it.
 
 If this were a real app, the `DidActivateAudioSession` method would be used to start the call with a pre-configured `AVAudioSession` that the System provided:
 
@@ -691,7 +691,7 @@ namespace MonkeyCall
             // Found?
             if (handle == null) {
                 // No, report to system
-                Console.WriteLine ("Unable to get call handle from URL: {0}", url); 
+                Console.WriteLine ("Unable to get call handle from URL: {0}", url);
                 return false;
             } else {
                 // Yes, start call and inform system
@@ -866,12 +866,12 @@ If the user taps an entry from the Recents list (in the Phone app), for example,
 
 [![](callkit-images/callkit08.png "Receiving a Start Call Intent")](callkit-images/callkit08.png#lightbox)
 
-1. The app will create a _Start Call Action_ based on the Start Call Intent that it received from the System. 
+1. The app will create a _Start Call Action_ based on the Start Call Intent that it received from the System.
 2. The app will use the `CXCallController` to request the Start Call Action from the system.
 3. If the System accepts the Action, it will be returned to the app via the `XCProvider` delegate.
 4. The app starts the outgoing call with its Communication Network.
 
-For more information on Intents, please see our [Intents and Intents UI Extensions](~/ios/platform/sirikit/understanding-sirikit.md) documentation. 
+For more information on Intents, please see our [Intents and Intents UI Extensions](~/ios/platform/sirikit/understanding-sirikit.md) documentation.
 
 ### The outgoing call lifecycle
 
@@ -1019,7 +1019,7 @@ public void EndCall (ActiveCall call)
 }
 ```
 
-If creates a `CXEndCallAction` with the UUID of the call to end, bundles it in a `CXTransaction` that is sent to the System using the `RequestTransaction` method of the `CXCallController` class. 
+If creates a `CXEndCallAction` with the UUID of the call to end, bundles it in a `CXTransaction` that is sent to the System using the `RequestTransaction` method of the `CXCallController` class.
 
 ## Additional CallKit details
 
@@ -1038,11 +1038,11 @@ An app can make the following types of customizations:
 
 - Display a localized name.
 - Enable video call support.
-- Customize the buttons on the In-Call UI by presenting its own template image icon. User interaction with custom buttons is sent directly to the app to be processed. 
+- Customize the buttons on the In-Call UI by presenting its own template image icon. User interaction with custom buttons is sent directly to the app to be processed.
 
 ### Action errors
 
-iOS 10 VOIP apps using CallKit need to handle Actions failing gracefully and keep the user informed of the Action state at all times. 
+iOS 10 VOIP apps using CallKit need to handle Actions failing gracefully and keep the user informed of the Action state at all times.
 
 Take the following example into consideration:
 
@@ -1076,7 +1076,7 @@ public class ProviderDelegate : CXProviderDelegate
         // Create update to describe the incoming call and caller
         var update = new CXCallUpdate ();
         update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
-    
+
         // Report incoming call to system
         Provider.ReportNewIncomingCall (uuid, update, (error) => {
             // Was the call accepted
@@ -1128,21 +1128,21 @@ To implement a Call Directory Extension in a Xamarin.iOS app, do the following:
 
 1. Open the app's solution in Visual Studio for Mac.
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.
-3. Select **iOS** > **Extensions** > **Call Directory Extensions** and click the **Next** button: 
+3. Select **iOS** > **Extensions** > **Call Directory Extensions** and click the **Next** button:
 
     [![](callkit-images/calldir01.png "Creating a new Call Directory Extension")](callkit-images/calldir01.png#lightbox)
-4. Enter a **Name** for the extension and click the **Next** button: 
+4. Enter a **Name** for the extension and click the **Next** button:
 
     [![](callkit-images/calldir02.png "Entering a name for the extension")](callkit-images/calldir02.png#lightbox)
-5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button: 
+5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button:
 
-    [![](callkit-images/calldir03.png "Creating the project")](callkit-images/calldir03.png#lightbox) 
+    [![](callkit-images/calldir03.png "Creating the project")](callkit-images/calldir03.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
 1. Open the app's solution in Visual Studio.
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.
-3. Select **iOS** > **Extensions** > **Call Directory Extensions** and click the **Next** button: 
+3. Select **iOS** > **Extensions** > **Call Directory Extensions** and click the **Next** button:
 
     [![](callkit-images/calldir01w.png "Creating a new Call Directory Extension")](callkit-images/calldir01.png#lightbox)
 4. Enter a **Name** for the extension and click the **OK** button

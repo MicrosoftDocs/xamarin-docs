@@ -23,7 +23,7 @@ This Android platform-specific is used to control the elevation, or Z-order, of 
         <Grid>
             <Button Text="Button Beneath BoxView" />
             <BoxView Color="Red" Opacity="0.2" HeightRequest="50" />
-        </Grid>        
+        </Grid>
         <Grid Margin="0,20,0,0">
             <Button Text="Button Above BoxView - Click Me" android:VisualElement.Elevation="10"/>
             <BoxView Color="Red" Opacity="0.2" HeightRequest="50" />

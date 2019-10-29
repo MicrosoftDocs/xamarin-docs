@@ -27,7 +27,7 @@ In your application, add a reference to **Azure Active Directory
 > [!IMPORTANT]
 > Note: Azure ADAL 3.0 is currently a preview
 and there may be breaking changes before the final version
-is released. 
+is released.
 
 ![](graph-images/06.-adal-nuget-package.jpg "Add a reference to Azure Active Directory Authentication Library (Azure ADAL)")
 

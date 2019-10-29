@@ -73,7 +73,7 @@ The Speech Recognition API can be used on any iOS device running iOS 10 and in m
 
 Apple has included an Availability API to determine if a given language is available for translation at the current moment. The app should use this API instead of testing for internet connectivity itself directly.
 
-As noted above in the Keyboard Dictation section, speech recognition requires the transmission and temporary storage of data on Apple's servers over the internet, and as such, the app _must_ request the user's permission to perform recognition by including the `NSSpeechRecognitionUsageDescription` key in its `Info.plist` file and calling the `SFSpeechRecognizer.RequestAuthorization` method. 
+As noted above in the Keyboard Dictation section, speech recognition requires the transmission and temporary storage of data on Apple's servers over the internet, and as such, the app _must_ request the user's permission to perform recognition by including the `NSSpeechRecognitionUsageDescription` key in its `Info.plist` file and calling the `SFSpeechRecognizer.RequestAuthorization` method.
 
 Based on the source of the audio being used for Speech Recognition, other changes to the app's `Info.plist` file may be required. Please see our [Security and Privacy Enhancements](~/ios/app-fundamentals/security-privacy.md) documentation for details.
 
@@ -97,13 +97,13 @@ To provide the required `NSSpeechRecognitionUsageDescription` key in the `Info.p
 # [Visual Studio for Mac](#tab/macos)
 
 1. Double-click the `Info.plist` file to open it for editing.
-2. Switch to the **Source** view: 
+2. Switch to the **Source** view:
 
     [![](speech-images/speech02.png "The Source view")](speech-images/speech02.png#lightbox)
-3. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
+3. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example:
 
     [![](speech-images/speech03.png "Adding NSSpeechRecognitionUsageDescription")](speech-images/speech03.png#lightbox)
-4. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
+4. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example:
 
     [![](speech-images/speech04.png "Adding NSMicrophoneUsageDescription")](speech-images/speech04.png#lightbox)
 5. Save the changes to the file.
@@ -111,10 +111,10 @@ To provide the required `NSSpeechRecognitionUsageDescription` key in the `Info.p
 # [Visual Studio](#tab/windows)
 
 1. Double-click the `Info.plist` file to open it for editing.
-2. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
+2. Click on **Add New Entry**, enter `NSSpeechRecognitionUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example:
 
     [![](speech-images/speech03w.png "Adding NSSpeechRecognitionUsageDescription")](speech-images/speech03w.png#lightbox)
-3. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example: 
+3. If the app will be handling live audio transcription, it will also require a Microphone Usage Description. Click on **Add New Entry**, enter `NSMicrophoneUsageDescription` for the **Property**, `String` for the **Type** and a **Usage Description** as the **Value**. For example:
 
     [![](speech-images/speech04w.png "Adding NSMicrophoneUsageDescription")](speech-images/speech04w.png#lightbox)
 4. Save the changes to the file.
@@ -175,7 +175,7 @@ namespace MonkeyTalk
 
 The `RequestAuthorization` method of the `SFSpeechRecognizer` class will request permission from the user to access speech recognition using the reason that the developer provided in the `NSSpeechRecognitionUsageDescription` key of the `Info.plist` file.
 
-A `SFSpeechRecognizerAuthorizationStatus` result is returned to the `RequestAuthorization` method's callback routine that can be used to take action based on the user's permission. 
+A `SFSpeechRecognizerAuthorizationStatus` result is returned to the `RequestAuthorization` method's callback routine that can be used to take action based on the user's permission.
 
 > [!IMPORTANT]
 > Apple suggests waiting until the user has started an action in the app that requires speech recognition before requesting this permission.
@@ -389,7 +389,7 @@ Apple has the following suggestion for being transparent and respecting the user
 
 ## Summary
 
-This article has presented the new Speech API and showed how to implement it in a Xamarin.iOS app to support continuous speech recognition and transcribe speech (from live or recorded audio streams) into text. 
+This article has presented the new Speech API and showed how to implement it in a Xamarin.iOS app to support continuous speech recognition and transcribe speech (from live or recorded audio streams) into text.
 
 ## Related Links
 

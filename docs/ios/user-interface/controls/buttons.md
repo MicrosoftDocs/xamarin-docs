@@ -40,7 +40,7 @@ A `UIButton` can be created with only a few lines of code.
   For more information about the different button types, take a look at:
   
   - The [Custom button types](#custom-button-types) section of this document
-  - The [Button types](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/create_different_types_of_buttons) 
+  - The [Button types](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/create_different_types_of_buttons)
     recipe
   - Apple's [iOS Human Interface Guidelines](https://developer.apple.com/design/human-interface-guidelines/ios/controls/buttons/).
 
@@ -111,7 +111,7 @@ button.SetTitleColor(UIColor.White, UIControlState.Normal);
 button.SetTitleShadowColor(UIColor.Black, UIControlState.Normal);
 ```
 
-The following code sets the button title to an attributed (stylized) string 
+The following code sets the button title to an attributed (stylized) string
 for `UIControlState.Normal` and `UIControlState.Highlighted`:
 
 ```csharp

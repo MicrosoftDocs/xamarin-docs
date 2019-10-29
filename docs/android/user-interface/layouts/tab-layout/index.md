@@ -13,29 +13,29 @@ ms.date: 05/08/2017
 
 ## Overview
 
-Tabs are a popular user interface pattern in mobile applications 
-because of their simplicity and usability. They provide a consistent, 
-easy way to navigate between various screens in an application. Android 
-has several API's for tabbed interfaces: 
+Tabs are a popular user interface pattern in mobile applications
+because of their simplicity and usability. They provide a consistent,
+easy way to navigate between various screens in an application. Android
+has several API's for tabbed interfaces:
 
-- **ActionBar** &ndash; This is part of a new set of API's that was 
-    introduced in Android 3.0 (API level 11) with goal of providing a 
-    consistent navigation and view-switching interface. It has been 
-    back ported to Android 2.2 (API level 8) with the 
-    [Android Support Library v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/). 
+- **ActionBar** &ndash; This is part of a new set of API's that was
+    introduced in Android 3.0 (API level 11) with goal of providing a
+    consistent navigation and view-switching interface. It has been
+    back ported to Android 2.2 (API level 8) with the
+    [Android Support Library v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/).
 
-- **PagerTabStrip** &ndash; Indicates the current, next, and previous pages 
-    of a `ViewPager`. `ViewPager` is available only via 
+- **PagerTabStrip** &ndash; Indicates the current, next, and previous pages
+    of a `ViewPager`. `ViewPager` is available only via
     [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/).
-     For more information about `PagerTabStrip`, see 
+     For more information about `PagerTabStrip`, see
     [ViewPager](~/android/user-interface/controls/view-pager/index.md).
 
-- **Toolbar** &ndash; `Toolbar` is a newer and more flexible action 
+- **Toolbar** &ndash; `Toolbar` is a newer and more flexible action
     bar component that replaces `ActionBar`. `Toolbar` is available in
-    Android 5.0 Lollipop or later, and it is also available for older versions of Android via the 
-    [Android Support Library v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) NuGet package. 
+    Android 5.0 Lollipop or later, and it is also available for older versions of Android via the
+    [Android Support Library v7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/) NuGet package.
     `Toolbar` is currently the recommended action bar component to use in Android apps.
-    For more information, see [Toolbar](~/android/user-interface/controls/tool-bar/index.md). 
+    For more information, see [Toolbar](~/android/user-interface/controls/tool-bar/index.md).
 
 ## Related Links
 

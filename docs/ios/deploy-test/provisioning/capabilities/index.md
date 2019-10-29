@@ -41,7 +41,7 @@ These capabilities can be used with Xamarin.iOS projects. The full list of servi
 
 Capabilities can be enabled either through Visual Studio for Mac and Visual Studio 2019, or manually in the Apple Developer Portal. Certain capabilities such as Wallet, Apple Pay, and iCloud require additional configuration of the App IDs.
 
-This guide explains how to enable each of these App Services in your application automatically in Visual Studio and manually through the developer center, including any additional setup that may be required. 
+This guide explains how to enable each of these App Services in your application automatically in Visual Studio and manually through the developer center, including any additional setup that may be required.
 
 ## Adding App Services
 
@@ -52,16 +52,16 @@ This section explains how to use Visual Studio's automatic provisioning or the D
 > [!IMPORTANT]
 > Not all capabilities can be added and managed with Automatic Provisioning. The following list contains the supported capabilities:
 >
->- HealthKit 
->- HomeKit 
->- Personal VPN 
->- Wireless Accessory Configuration 
->- Inter-App Audio 
->- SiriKit 
->- Hotspot 
->- Network Extensions 
+>- HealthKit
+>- HomeKit
+>- Personal VPN
+>- Wireless Accessory Configuration
+>- Inter-App Audio
+>- SiriKit
+>- Hotspot
+>- Network Extensions
 >- NFC Tag Reading
->- Multipath 
+>- Multipath
 >
 >Push Notifications, Game Center, In-App Purchase, Maps, Keychain Sharing, Associated Domains, and Data Protection capabilities are not currently supported. To add these capabilities, use manual provisioning and follow the steps in the [Developer Center](#devcenter) section.
 

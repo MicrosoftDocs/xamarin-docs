@@ -10,9 +10,9 @@ ms.date: 03/21/2017
 
 # Publishing to the Amazon App Store
 
-The Amazon Mobile App Distribution Program enables mobile app 
-developers to publish their applications on Amazon. This section 
-briefly covers the Amazon App Store for Android. 
+The Amazon Mobile App Distribution Program enables mobile app
+developers to publish their applications on Amazon. This section
+briefly covers the Amazon App Store for Android.
 
 [![Amazon App Store screen](publishing-to-amazon-images/amazon-app-store.png)](publishing-to-amazon-images/amazon-app-store.png#lightbox)
 
@@ -22,9 +22,9 @@ Distribution Portal.
 
 ## Submitting Apps: Binary Info
 
-Submitting an application to the Amazon App Store is a similar process 
-to submitting an application to Google Play. Applications distributed 
-by Amazon require the following assets: 
+Submitting an application to the Amazon App Store is a similar process
+to submitting an application to Google Play. Applications distributed
+by Amazon require the following assets:
 
 - **Icon** &ndash;   This is a 114 x 114 .png file with a transparent background. It is required.
 - **Thumbnail** &ndash;   This is a larger version of the icon above. It is 512 x 512 pixels with a transparent background. This icon is also mandatory.

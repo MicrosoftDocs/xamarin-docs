@@ -86,7 +86,7 @@ If you have the source to the library, you'll need to compile and bundle it for 
 ### Linking Your Library
 
 Any third-party library that you consume needs to be statically linked with
-your application. 
+your application.
 
 If you wanted to statically link the library "libMyLibrary.a" that you got
 from the Internet or build with Xcode, you would need to do a few things:

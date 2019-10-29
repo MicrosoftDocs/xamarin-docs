@@ -344,7 +344,7 @@ namespace WalkingGame
 
         public void Update(GameTime gameTime)
         {
-            double secondsIntoAnimation = 
+            double secondsIntoAnimation =
                 timeIntoAnimation.TotalSeconds + gameTime.ElapsedGameTime.TotalSeconds;
 
             double remainder = secondsIntoAnimation % Duration.TotalSeconds;
@@ -397,7 +397,7 @@ public Rectangle CurrentRectangle
             }
         }
 
-        // If no frame was found, then try the last frame, 
+        // If no frame was found, then try the last frame,
         // just in case timeIntoAnimation somehow exceeds Duration
         if (currentFrame == null)
         {

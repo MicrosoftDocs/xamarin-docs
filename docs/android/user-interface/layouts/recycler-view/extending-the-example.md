@@ -43,7 +43,7 @@ occurs in the sample app, the following sequence takes place:
 
 3. The activity's item-click handler responds to the item-click event.
 
-First, an event handler member called `ItemClick` is added to the 
+First, an event handler member called `ItemClick` is added to the
 `PhotoAlbumAdapter` class definition:
 
 ```csharp
@@ -65,7 +65,7 @@ void OnItemClick (object sender, int position)
 
 Next, a line of code is needed to register the `OnItemClick` handler
 with `PhotoAlbumAdapter`. A good place to do this is immediately after
-`PhotoAlbumAdapter` is created: 
+`PhotoAlbumAdapter` is created:
 
 ```csharp
 mAdapter = new PhotoAlbumAdapter (mPhotoAlbum);
@@ -74,9 +74,9 @@ mAdapter.ItemClick += OnItemClick;
 ```
 
 In this basic example, handler registration takes place in the main
-activity's `OnCreate` method, but a production app might 
+activity's `OnCreate` method, but a production app might
 register the handler in `OnResume` and unregister it in `OnPause`
-&ndash; see [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md) 
+&ndash; see [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 for more information.
 
 `PhotoAlbumAdapter` will now call `OnItemClick` when it receives an item-click
@@ -194,7 +194,7 @@ app with this code, tapping the **Random Pick** button does not result
 in a display change because the `RecyclerView` is not aware of the
 change to the data source.
 
-To keep `RecyclerView` updated after the data source changes, 
+To keep `RecyclerView` updated after the data source changes,
 the **Random Pick** click handler must be modified to
 call the adapter's `NotifyItemChanged` method for each item in the
 collection that has changed (in this case, two items have changed: the

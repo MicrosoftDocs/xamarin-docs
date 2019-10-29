@@ -23,8 +23,8 @@ This doesn't need to be limited to non-UI code. Bindings can expose user interfa
 
 You'll find a plethora of information on our documentation site to help ease the transition to Xamarin, showing how to integrate C# code with what you already know. Some highlights to get you started include:
 
-- [C# Primer for Objective-C Developers](primer.md) - A short primer for Objective-C developers looking to move to Xamarin and the C# language. 
-- [Walkthrough: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md) - A step-by-step walkthrough for reusing existing Objective-C code in a Xamarin.iOS application. 
+- [C# Primer for Objective-C Developers](primer.md) - A short primer for Objective-C developers looking to move to Xamarin and the C# language.
+- [Walkthrough: Binding an Objective-C Library](~/ios/platform/binding-objective-c/walkthrough.md) - A step-by-step walkthrough for reusing existing Objective-C code in a Xamarin.iOS application.
 
 ## Binding Objective-C
 

@@ -382,7 +382,7 @@ namespace FormsVideoLibrary.UWP
                 ···
                 SetSource();
                 SetAutoPlay();
-                ···    
+                ···
             }
         }
 

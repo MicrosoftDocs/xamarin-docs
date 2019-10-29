@@ -44,9 +44,9 @@ To create a multi-screen application with MonoTouch.Dialog, we need to:
 
 1. Create a `UINavigationController.`
 1. Create a `DialogViewController.`
-1. Add the `DialogViewController` as the root of the  `UINavigationController.` 
+1. Add the `DialogViewController` as the root of the  `UINavigationController.`
 1. Add a `RootElement` to the  `DialogViewController.`
-1. Add `Sections` and  `Elements` to the  `RootElement.` 
+1. Add `Sections` and  `Elements` to the  `RootElement.`
 
 ### Using A UINavigationController
 
@@ -58,7 +58,7 @@ work with MonoTouch.Dialog, we add a `DialogViewController` to the `UINavigation
 public override bool FinishedLaunching (UIApplication app, NSDictionary options)
 {
     _window = new UIWindow (UIScreen.MainScreen.Bounds);
-            
+
     _rootElement = new RootElement ("To Do List"){new Section ()};
 
     // code to create screens with MT.D will go here …
@@ -67,7 +67,7 @@ public override bool FinishedLaunching (UIApplication app, NSDictionary options)
     _nav = new UINavigationController (_rootVC);
     _window.RootViewController = _nav;
     _window.MakeKeyAndVisible ();
-            
+
     return true;
 }
 ```
@@ -107,11 +107,11 @@ When we created the `RootElement` earlier, we passed it a single `Section` insta
 to accomplish this in the event handler for the button:
 
 ```csharp
-_addButton.Clicked += (sender, e) => {                
+_addButton.Clicked += (sender, e) => {
     ++n;
-                
+
     var task = new Task{Name = "task " + n, DueDate = DateTime.Now};
-                
+
     var taskElement = new RootElement (task.Name) {
         new Section () {
             new EntryElement (task.Name, "Enter task description", task.Description)
@@ -130,13 +130,13 @@ class:
 
 ```csharp
 public class Task
-{   
+{
     public Task ()
     {
     }
-      
+
     public string Name { get; set; }
-        
+
     public string Description { get; set; }
 
     public DateTime DueDate { get; set; }

@@ -65,7 +65,7 @@ public class HelloActivity : Activity
 ```
 
 > [!NOTE]
-> Don't forget the `[Register]` attribute. For details, see 
+> Don't forget the `[Register]` attribute. For details, see
 > [Limitations](#current-limitations-on-android).
 
 Build the project. The resulting assembly will be saved in `bin/Debug/hello-from-csharp.dll`.
@@ -189,8 +189,8 @@ android {
 }
 ```
 
-You can also take a look at an [Android Studio test 
-project](https://github.com/mono/Embeddinator-4000/blob/master/tests/android/app/build.gradle) for more details. 
+You can also take a look at an [Android Studio test
+project](https://github.com/mono/Embeddinator-4000/blob/master/tests/android/app/build.gradle) for more details.
 
 If you are wanting to use Android Studio 2.3.x stable, you will have to enable the deprecated Jack toolchain:
 

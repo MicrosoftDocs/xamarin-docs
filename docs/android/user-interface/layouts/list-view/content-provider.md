@@ -15,7 +15,7 @@ ContentProviders allow you to access data exposed by other applications
 (including Android system data like contacts, media and calendar
 information).
 
-The preferred way to access a ContentProvider is with a CursorLoader using 
+The preferred way to access a ContentProvider is with a CursorLoader using
 the LoaderManager. LoaderManager was introduced in Android 3.0
 (API Level 11, Honeycomb) to move blocking tasks off the main thread,
 and using a CursorLoader allows the data to be loaded in a thread

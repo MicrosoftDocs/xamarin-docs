@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 04/03/2018
 ---
 
-# Can I use a Mac VM with Xamarin? 
+# Can I use a Mac VM with Xamarin?
 
 ## Mac Hardware
 Yes; be careful to follow Apple's terms of use.

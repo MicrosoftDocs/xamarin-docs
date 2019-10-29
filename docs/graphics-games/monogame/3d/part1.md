@@ -36,7 +36,7 @@ Before moving on we should verify that the project opens and deploys correctly. 
 
 ## Including the XNBs in the game project
 
-The .xnb file format is a standard extension for built content (content which has been created by the [MonoGame Pipeline Tool](http://www.monogame.net/documentation/?page=Pipeline)). All built content has a source file (which is an .fbx file in the case of our model) and a destination file (an .xnb file). The .fbx format is a common 3D model format which can be created by applications such as [Maya](https://www.autodesk.com/products/maya/overview) and [Blender](https://www.blender.org/). 
+The .xnb file format is a standard extension for built content (content which has been created by the [MonoGame Pipeline Tool](http://www.monogame.net/documentation/?page=Pipeline)). All built content has a source file (which is an .fbx file in the case of our model) and a destination file (an .xnb file). The .fbx format is a common 3D model format which can be created by applications such as [Maya](https://www.autodesk.com/products/maya/overview) and [Blender](https://www.blender.org/).
 
 The `Model` class can be constructed by loading an .xnb file from a disk that contains 3D geometry data.   This .xnb file is created through a content project. Monogame templates automatically include a content project (with the extension .mgcp) in our Content folder. For a detailed discussion on the MonoGame Pipeline tool, see the [Content Pipeline guide](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/content-pipeline/introduction.md).
 
@@ -48,7 +48,7 @@ The two files should be part of our project now:
 
 ![Solution explorer content folder with xnb files](part1-images/xnbsinxs.png)
 
-Visual Studio for Mac may not automatically set the build action for newly-added XNBs. 
+Visual Studio for Mac may not automatically set the build action for newly-added XNBs.
 For iOS, right-click on each of the files and select **Build Action->BundleResource**. For Android, right-click on each of the files and select **Build Action->AndroidAsset**.
 
 ## Rendering a 3D model
@@ -103,7 +103,7 @@ public class Game1 : Game
         {
             // "Effect" refers to a shader. Each mesh may
             // have multiple shaders applied to it for more
-            // advanced visuals. 
+            // advanced visuals.
             foreach (BasicEffect effect in mesh.Effects)
             {
                 // We could set up custom lights, but this
@@ -131,12 +131,12 @@ public class Game1 : Game
 
                 // We want the aspect ratio of our display to match
                 // the entire screen's aspect ratio:
-                float aspectRatio = 
+                float aspectRatio =
                     graphics.PreferredBackBufferWidth / (float)graphics.PreferredBackBufferHeight;
                 // Field of view measures how wide of a view our camera has.
                 // Increasing this value means it has a wider view, making everything
                 // on screen smaller. This is conceptually the same as "zooming out".
-                // It also 
+                // It also
                 float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
                 // Anything closer than this will not be drawn (will be clipped)
                 float nearClipPlane = 1;
@@ -167,7 +167,7 @@ The `Model` class is the core class for performing 3D rendering from content fil
 
 The `Model` class itself does not directly have variables for positioning since a single model instance can be rendered in multiple locations, as we’ll show later in this guide.
 
-Each `Model` is composed of one or more `ModelMesh` instances, which are exposed through the `Meshes` property. Although we may consider a `Model` as a single game object (such as a robot or a car), each `ModelMesh` can be drawn with different `BasicEffect` values. For example, individual mesh parts may represent the legs of a robot or the wheels on a car, and we may assign the `BasicEffect` values to make the wheels spin or the legs move. 
+Each `Model` is composed of one or more `ModelMesh` instances, which are exposed through the `Meshes` property. Although we may consider a `Model` as a single game object (such as a robot or a car), each `ModelMesh` can be drawn with different `BasicEffect` values. For example, individual mesh parts may represent the legs of a robot or the wheels on a car, and we may assign the `BasicEffect` values to make the wheels spin or the legs move.
 
 ### BasicEffect Class
 
@@ -184,7 +184,7 @@ The `World` property can be used to adjust the position, rotation, and scale of 
 ```csharp
 // Z is up, so changing Z to 3 moves the object up 3 units:
 var modelPosition = new Vector3 (0, 0, 3);
-effect.World = Matrix.CreateTranslation (modelPosition); 
+effect.World = Matrix.CreateTranslation (modelPosition);
 ```
 
 This code results in the object being moved up by 3 world units:
@@ -232,7 +232,7 @@ void DrawModel(Vector3 modelPosition)
             var cameraUpVector = Vector3.UnitZ;
             effect.View = Matrix.CreateLookAt (
                 cameraPosition, cameraLookAtVector, cameraUpVector);
-            float aspectRatio = 
+            float aspectRatio =
                 graphics.PreferredBackBufferWidth / (float)graphics.PreferredBackBufferHeight;
             float fieldOfView = Microsoft.Xna.Framework.MathHelper.PiOver4;
             float nearClipPlane = 1;

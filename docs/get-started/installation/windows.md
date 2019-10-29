@@ -41,7 +41,7 @@ platform apps.
 
 ### iOS
 
-For more detailed information, see the [Installing Xamarin.iOS on Windows](~/ios/get-started/installation/windows/index.md) guide. 
+For more detailed information, see the [Installing Xamarin.iOS on Windows](~/ios/get-started/installation/windows/index.md) guide.
 
 1. [Install Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation)
 2. [Connect Visual Studio to your Mac build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md)

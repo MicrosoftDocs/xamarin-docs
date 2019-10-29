@@ -17,14 +17,14 @@ Color filters can translate colors in a bitmap (or other image) to other colors 
 
 ![Color Filters Example](color-filters-images/ColorFiltersExample.png "Color Filters Example")
 
-To use a color filter, set the [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) property of `SKPaint` to an object of type [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) created by one of the static methods in that class. This article demonstrates: 
+To use a color filter, set the [`ColorFilter`](xref:SkiaSharp.SKPaint.ColorFilter) property of `SKPaint` to an object of type [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) created by one of the static methods in that class. This article demonstrates:
 
 - a color transform created with the [`CreateColorMatrix`](xref:SkiaSharp.SKColorFilter.CreateColorMatrix*) method.
 - a color table created with the [`CreateTable`](xref:SkiaSharp.SKColorFilter.CreateTable*) method.
 
 ## The color transform
 
-The color transform involves using a matrix to modify colors. Like most 2D graphics systems, SkiaSharp uses matrices mostly for transforming coordinate points as iscussed in the article [**Matrix Transforms in SkiaSharp**](../transforms/matrix.md). The [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) also supports matrix transforms, but the matrix transforms RGB colors. Some familiarity with matrix concepts is necessary to understand these color transforms. 
+The color transform involves using a matrix to modify colors. Like most 2D graphics systems, SkiaSharp uses matrices mostly for transforming coordinate points as iscussed in the article [**Matrix Transforms in SkiaSharp**](../transforms/matrix.md). The [`SKColorFilter`](xref:SkiaSharp.SKColorFilter) also supports matrix transforms, but the matrix transforms RGB colors. Some familiarity with matrix concepts is necessary to understand these color transforms.
 
 The color-transform matrix has a dimension of four rows and five columns:
 
@@ -35,7 +35,7 @@ The color-transform matrix has a dimension of four rows and five columns:
 | M41 M42 M43 M44 M45 |
 </pre>
 
-It transforms a RGB source color (R, G, B, A) to the destination color (R', G', B', A'). 
+It transforms a RGB source color (R, G, B, A) to the destination color (R', G', B', A').
 
 In preparation for the matrix multiplication, the source color is converted to a 5×1 matrix:
 
@@ -63,13 +63,13 @@ The 4×5 matrix is multiplied by the 5×1 matrix, and the product is a 4×1 matr
 
 Here are the separate formulas for R', G', B', and A':
 
-`R' = M11·R + M12·G + M13·B + M14·A + M15` 
+`R' = M11·R + M12·G + M13·B + M14·A + M15`
 
-`G' = M21·R + M22·G + M23·B + M24·A + M25` 
+`G' = M21·R + M22·G + M23·B + M24·A + M25`
 
-`B' = M31·R + M32·G + M33·B + M34·A + M35` 
+`B' = M31·R + M32·G + M33·B + M34·A + M35`
 
-`A' = M41·R + M42·G + M43·B + M44·A + M45` 
+`A' = M41·R + M42·G + M43·B + M44·A + M45`
 
 Most of the matrix consists of multiplicative factors that are generally in the range of 0 to 2. However, the last column (M15 through M45) contains values that are added in the formulas. These values generally range from 0 to 255. The results are clamped between the values of 0 and 255.
 
@@ -84,7 +84,7 @@ The identity matrix is:
 
 This causes no change to the colors. The transform formulas are:
 
-`R' = R` 
+`R' = R`
 
 `G' = G`
 
@@ -158,7 +158,7 @@ public class GrayScaleMatrixPage : ContentPage
 }
 ```
 
-The `DrawBitmap` method used in this code is from the **BitmapExtension.cs** file included with the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample. 
+The `DrawBitmap` method used in this code is from the **BitmapExtension.cs** file included with the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) sample.
 
 Here's the result running on iOS, Android, and Universal Windows Platform:
 
@@ -239,7 +239,7 @@ In the second method, each of four color components can have a separate color ta
 
 If you want to set one of the arguments to the second `CreateTable` method to a color table that contains the values 0 through 255 in sequence, you can use `null` instead. Very often the `CreateTable` call has a `null` first argument for the alpha channel.
 
-In the section on **Posterization** in the article on [Accessing SkiaSharp bitmap pixel bits](../bitmaps/pixel-bits.md#posterization), you saw how to modify the individual pixel bits of a bitmap to reduce its color resolution. This is a technique called _posterization_. 
+In the section on **Posterization** in the article on [Accessing SkiaSharp bitmap pixel bits](../bitmaps/pixel-bits.md#posterization), you saw how to modify the individual pixel bits of a bitmap to reduce its color resolution. This is a technique called _posterization_.
 
 You can also posterize a bitmap with a color table. The constructor of the **Posterize Table** page creates a color table that maps its index to a byte with the bottom 6 bits set to zero:
 
@@ -290,7 +290,7 @@ The program chooses to use this color table only for the green and blue channels
 
 [![Posterize Table](color-filters-images/PosterizeTable.png "Posterize Table")](color-filters-images/PosterizeTable-Large.png#lightbox)
 
-You can use various color tables for the different color channels for various effects. 
+You can use various color tables for the different color channels for various effects.
 
 ## Related links
 

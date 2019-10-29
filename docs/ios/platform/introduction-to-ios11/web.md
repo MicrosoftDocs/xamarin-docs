@@ -57,11 +57,11 @@ Additional features such as drag and drop support for URLs and support for `wind
 
 `WKWebView` was introduced as part of WebKit in iOS 8 as a means of displaying web content to your user. It's much more customizable than `SFSafariViewController`, allowing you to create your own navigation and user interface.
 
-Apple has introduced three main improvements for `WKWebView` with iOS 11: 
+Apple has introduced three main improvements for `WKWebView` with iOS 11:
 
 - The ability to manage cookies
 - Content filtering
-- Custom resource loading. 
+- Custom resource loading.
 
 Cookie management is done through the new [`WKHttpCookieStore`](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) class, which allows you to add and delete cookies, to get all the cookies stored in a WKWebView, and to observe the cookie store for changes.
 
@@ -74,7 +74,7 @@ public class MyHandler : NSObject, IWKUrlSchemeHandler {
 
     [Export("webView:startURLSchemeTask:")]
     public void StartUrlSchemeTask(WKWebView webView, IWKUrlSchemeTask urlSchemeTask){
-        
+
         // Implement a IWKUrlSchemeTask here
         var response = new NSUrlResponse(urlSchemeTask.Request.Url, "text/html", ContentLength, null);
         urlSchemeTask.DidReceiveResponse(response);
@@ -88,7 +88,7 @@ public class MyHandler : NSObject, IWKUrlSchemeHandler {
     }
 
 }
-``` 
+```
 
 Once the handler has been implemented, use it to set the `SetUrlSchemeHandler` property on the `WKWebViewConfiguration`. Then, load the URL of something that uses the custom scheme:
 

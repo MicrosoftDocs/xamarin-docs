@@ -60,7 +60,7 @@ Several app settings need to be configured when using Azure Functions:
 
 ### Security considerations
 
-**Never** store your P8 key inside of your application code. Application code is easy to download and disassemble. 
+**Never** store your P8 key inside of your application code. Application code is easy to download and disassemble.
 
 It is also considered a bad practice to use a `WebView` to host the authentication flow, and to intercept URL Navigation events to obtain the authorization code. At this time there is currently no fully secure way to handle Sign In with Apple on non iOS13+ devices without hosting some code on a server to handle the token exchange. We recommend hosting the authorization url generation code on a server so you can cache the state and validate it when Apple issues a POST callback to your server.
 

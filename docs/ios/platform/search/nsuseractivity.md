@@ -56,7 +56,7 @@ to make your content searchable.
 
 ## Creating Activity Type Identifiers
 
-Before you can create a Search Activity, you'll need to create an _Activity Type Identifier_ to identify it. The Activity Type Identifier is a short string added to the `NSUserActivityTypes` array of the app's **Info.plist** file used to uniquely identify a given User Activity Type. There will be one entry in the array for each activity that the app supports and exposes to App Search. 
+Before you can create a Search Activity, you'll need to create an _Activity Type Identifier_ to identify it. The Activity Type Identifier is a short string added to the `NSUserActivityTypes` array of the app's **Info.plist** file used to uniquely identify a given User Activity Type. There will be one entry in the array for each activity that the app supports and exposes to App Search.
 
 Apple suggests using a reverse-DNS-style notation for the Activity Type Identifier to avoid collisions. For example: `com.company-name.appname.activity` for specific app based activities or `com.company-name.activity` for activities that can run across multiple apps.
 

@@ -73,10 +73,10 @@ With the icon designed and saved out to the required file sizes and names, Visua
 
 Do the following:
 
-1. In the **Solution Pad**, open **Assets.xcassets** > **AppIcons.appiconset**: 
+1. In the **Solution Pad**, open **Assets.xcassets** > **AppIcons.appiconset**:
 
     ![Editing the AppIcon.appiconset](app-icon-images/intro01.png "Editing the AppIcon.appiconset")
-2. For each icon size required, click the icon and select the corresponding image file that were created above: 
+2. For each icon size required, click the icon and select the corresponding image file that were created above:
 
     [![Selecting an icon image](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png#lightbox)
 3. Save your changes.
@@ -88,7 +88,7 @@ Once the `AppIcon.appiconset` file has been built, it will need to assign it to 
 Do the following:
 
 1. Double-click the **Info.plist** in the **Solution Pad** to open the **Project Options**.
-2. In the **Mac OS X Application Target** section and click the **App Icons** to select the `AppIcon.appiconset` file: 
+2. In the **Mac OS X Application Target** section and click the **App Icons** to select the `AppIcon.appiconset` file:
 
     [![Setting the icon set](app-icon-images/icon01.png "Setting the icon set")](app-icon-images/icon01-large.png#lightbox)
 3. Save the changes.

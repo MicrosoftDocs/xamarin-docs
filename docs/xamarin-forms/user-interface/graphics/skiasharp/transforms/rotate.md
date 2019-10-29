@@ -33,7 +33,7 @@ Rotation is clockwise for increasing angles. (Although rotation on the Cartesian
 
 The transform formulas for rotation are more complex than those for translate and scale. For an angle of α, the transform formulas are:
 
-x' = x•cos(α) – y•sin(α)   
+x' = x•cos(α) – y•sin(α)
 
 y` = x•sin(α) + y•cos(α)
 

@@ -253,7 +253,7 @@ After a minute or so, the new API project is automatically generated and
 linked to your Google Play Developer Console account.
 
 The next step is to create an OAuth Client for the app (if one has not
-already been created). When users request access to their private 
+already been created). When users request access to their private
 data using your app, your OAuth Client ID is used to authenticate your app.
 Click **Create OAuth Client** to create a new OAuth client:
 

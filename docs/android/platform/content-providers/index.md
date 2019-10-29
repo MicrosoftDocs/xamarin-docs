@@ -18,7 +18,7 @@ _The Android operating system uses content providers to facilitate access to sha
 A *ContentProvider* encapsulates a data repository and provides an API to access
 it. The provider exists as part of an Android application that usually also
 provides a UI for displaying/managing the data. The key benefit of using a content
-provider is enabling other applications to easily access the encapsulated 
+provider is enabling other applications to easily access the encapsulated
 data using a provider client object (called a *ContentResolver*). Together, a content
 provider and content resolver offer a consistent inter-application API for data
 access that is simple to build and consume. Any application can choose to use

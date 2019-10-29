@@ -86,7 +86,7 @@ namespace FormsVideoLibrary.Droid
 {
     public class VideoPlayerRenderer : ViewRenderer<VideoPlayer, ARelativeLayout>
     {
-        ···    
+        ···
         void SetSource()
         {
             isPrepared = false;

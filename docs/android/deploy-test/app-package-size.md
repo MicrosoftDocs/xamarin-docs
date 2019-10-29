@@ -65,8 +65,8 @@ Things are handled slightly differently for debug builds. When redeploying
 repeatedly to a device, an application needs to be as fast as possible, so we
 optimize debug packages for speed of deployment rather than size.
 
-Android is relatively slow to copy and install a package, so we want 
-the package size to be as small as possible. As we discussed above, one possible 
+Android is relatively slow to copy and install a package, so we want
+the package size to be as small as possible. As we discussed above, one possible
 way to minimize package size is via the linker. However, linking is slow and we
 generally want to deploy only the parts of the application that have changed
 since the last deployment. To accomplish this, we separate our application from

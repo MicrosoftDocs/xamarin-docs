@@ -28,15 +28,15 @@ tool.
 
 ## Installation
 
-On a Mac, `mtouch` is bundled with Xamarin.iOS. It can be found in the 
+On a Mac, `mtouch` is bundled with Xamarin.iOS. It can be found in the
 following directory:
 
 **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**
 
-To make `mtouch` convenient to use, add its parent directory to your 
+To make `mtouch` convenient to use, add its parent directory to your
 system's `PATH` environment variable.  
 
-For example, to do this in Bash, add the following line to the end of your 
+For example, to do this in Bash, add the following line to the end of your
 **~/.bash_profile** file:
 
 ```bash
@@ -44,11 +44,11 @@ export PATH=$PATH:/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin
 ```
 
 > [!WARNING]
-> To use `mtouch`, do not rely on the existence of **/Developer/MonoTouch/usr/bin**, 
-> a symbolic link that points to 
+> To use `mtouch`, do not rely on the existence of **/Developer/MonoTouch/usr/bin**,
+> a symbolic link that points to
 > **/Library/Frameworks/Xamarin.iOS.framework/Versions/Current/bin**. This
 > symbolic link exists only to maintain compatibility with older MonoTouch
-> releases that were not installed in **/Library/Frameworks/...**, and it 
+> releases that were not installed in **/Library/Frameworks/...**, and it
 > may disappear in a future release.
 
 ## Building
@@ -94,12 +94,12 @@ Launching on the simulator is very simple once you have an application
 bundle:
 
 ```bash
-$ mtouch --sdkroot /Applications/Xcode.app -launchsim Hello.app 
+$ mtouch --sdkroot /Applications/Xcode.app -launchsim Hello.app
 ```
 
 If the `--sdkroot` flag is not set it will defaults to xcode-select path and result in the following warning:
 
-> eg: warning MT0061: No Xcode.app specified (using --sdkroot), using the system Xcode as reported by 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer 
+> eg: warning MT0061: No Xcode.app specified (using --sdkroot), using the system Xcode as reported by 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer
 
 The command line above will produce some output like this:
 
@@ -137,7 +137,7 @@ $ mtouch —sdkroot /Applications/Xcode.app -installdev=MyApp.app
 
 If the `--sdkroot` flag is not set it will defaults to xcode-select path and result in the following warning:
 
-> eg: warning MT0061: No Xcode.app specified (using --sdkroot), using the system Xcode as reported by 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer 
+> eg: warning MT0061: No Xcode.app specified (using --sdkroot), using the system Xcode as reported by 'xcode-select --print-path': /Applications/Xcode.app/Contents/Developer
 
 These steps are typically performed by Visual Studio for Mac.
 
@@ -145,4 +145,3 @@ These steps are typically performed by Visual Studio for Mac.
 
 See the [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) manual page for details on the other command line
 options.
-

@@ -80,7 +80,7 @@ performance and memory usage of an Android app.
 ## [Preparing an Application for Release](~/android/deploy-test/release-prep/index.md)
 
 After an application has been coded and tested, it is necessary to
-prepare a package for distribution. The first task in preparing 
+prepare a package for distribution. The first task in preparing
 this package is to build the application for release, which mainly entails
 setting some application attributes.
 

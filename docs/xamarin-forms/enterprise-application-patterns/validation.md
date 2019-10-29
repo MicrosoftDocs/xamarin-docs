@@ -124,13 +124,13 @@ For validation to occur, validation rules must be added to the `Validations` col
 ```csharp
 private void AddValidations()  
 {  
-    _userName.Validations.Add(new IsNotNullOrEmptyRule<string>   
-    {   
-        ValidationMessage = "A username is required."   
+    _userName.Validations.Add(new IsNotNullOrEmptyRule<string>
+    {
+        ValidationMessage = "A username is required."
     });  
-    _password.Validations.Add(new IsNotNullOrEmptyRule<string>   
-    {   
-        ValidationMessage = "A password is required."   
+    _password.Validations.Add(new IsNotNullOrEmptyRule<string>
+    {
+        ValidationMessage = "A password is required."
     });  
 }
 ```
@@ -267,7 +267,7 @@ public static class LineColorBehavior
         }  
         else  
         {  
-            var entryLineColorEffectToRemove =   
+            var entryLineColorEffectToRemove =
                     view.Effects.FirstOrDefault(e => e is EntryLineColorEffect);  
             if (entryLineColorEffectToRemove != null)  
             {  
@@ -383,11 +383,11 @@ The [`Entry`](xref:Xamarin.Forms.Entry) control also has a [`DataTrigger`](xref:
 <Entry Text="{Binding UserName.Value, Mode=TwoWay}">  
     ...  
     <Entry.Triggers>  
-        <DataTrigger   
+        <DataTrigger
             TargetType="Entry"  
             Binding="{Binding UserName.IsValid}"  
             Value="False">  
-            <Setter Property="behaviors:LineColorBehavior.LineColor"   
+            <Setter Property="behaviors:LineColorBehavior.LineColor"
                     Value="{StaticResource ErrorColor}" />  
         </DataTrigger>  
     </Entry.Triggers>  

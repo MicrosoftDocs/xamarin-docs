@@ -15,14 +15,14 @@ _This article discusses how to use maps and location with Xamarin.Android. It co
 
 ## Maps Overview
 
-Mapping technologies are a ubiquitous complement to mobile devices. 
-Desktop computers and laptops don't tend to have location awareness 
-built-in. On the other hand, mobile devices use such applications to 
-locate devices and to display changing location information. Android 
-has powerful, built-in technology that displays location data on 
-maps using location hardware that may be available on the device. This 
-article covers a spectrum of what the maps applications under 
-Xamarin.Android have to offer, including: 
+Mapping technologies are a ubiquitous complement to mobile devices.
+Desktop computers and laptops don't tend to have location awareness
+built-in. On the other hand, mobile devices use such applications to
+locate devices and to display changing location information. Android
+has powerful, built-in technology that displays location data on
+maps using location hardware that may be available on the device. This
+article covers a spectrum of what the maps applications under
+Xamarin.Android have to offer, including:
 
 - Using the built-in maps application to quickly add mapping functionality.
 - Working with the Maps API to control a map's display.

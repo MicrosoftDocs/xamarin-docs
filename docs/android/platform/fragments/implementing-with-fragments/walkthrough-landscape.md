@@ -83,7 +83,7 @@ First, add an instance variable at the top of the `TitlesFragment` class:
 bool showingTwoFragments;
 ```
 
-Then, add the following code snippet to  `OnActivityCreated` to initialize the variable: 
+Then, add the following code snippet to  `OnActivityCreated` to initialize the variable:
 
 ```csharp
 var quoteContainer = Activity.FindViewById(Resource.Id.playquote_container);

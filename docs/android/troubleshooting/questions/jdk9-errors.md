@@ -36,8 +36,8 @@ Building with JDK Version `9.0.4` is not supported. Please install JDK version `
 
 To resolve these errors, you must install JDK 8 (1.8) as explained in
 [How do I update the Java Development Kit (JDK) version?](~/android/troubleshooting/questions/update-jdk.md).
-Alternately, you can install the 
-[Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md) 
+Alternately, you can install the
+[Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md)
 The Microsoft Mobile OpenJDK will eventually replace JDK 8 for Xamarin.Android development.
 
 ## Checking the JDK Version
@@ -61,17 +61,17 @@ Java HotSpot(TM) 64-Bit Server VM (build 9.0.4+11, mixed mode)
 If JDK 9 or later is installed, you must install Java JDK 8 (1.8) or
 the Microsoft Mobile OpenJDK Preview. For information about how to
 install JDK 8, see
-[How do I update the Java Development Kit (JDK) version?](~/android/troubleshooting/questions/update-jdk.md). 
+[How do I update the Java Development Kit (JDK) version?](~/android/troubleshooting/questions/update-jdk.md).
 For information about how to install the Microsoft Mobile OpenJDK, see
 [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md).
 
 Note that you do not have to uninstall a later version of the JDK;
 however, you must ensure that Xamarin is using JDK 8 rather than a
-later JDK version. In Visual Studio, click 
-**Tools > Options > Xamarin > Android Settings**. 
+later JDK version. In Visual Studio, click
+**Tools > Options > Xamarin > Android Settings**.
 If **Java Development Kit Location** is not set
-to a JDK 8 location (such as **C:\\Program Files\\Java\\jdk1.8.0_111**), 
-click **Change** and set it to the location where JDK 8 is installed. 
+to a JDK 8 location (such as **C:\\Program Files\\Java\\jdk1.8.0_111**),
+click **Change** and set it to the location where JDK 8 is installed.
 In Visual Studio for Mac, navigate
 to **Preferences > Projects > SDK Locations > Android > Java SDK
 (JDK)** and click **Browse** to update this path.
@@ -88,5 +88,5 @@ JDK 8 (1.8). For information about how to install JDK 8, see
 
 If you have installed JDK 9, ensure that the following path is not set on
 your `PATH` environment variable as it will still point to JDK 9:
-`C:\ProgramData\Oracle\Java\javapath`. After removing it, `java-version` at a 
+`C:\ProgramData\Oracle\Java\javapath`. After removing it, `java-version` at a
 command line should show JDK 8.

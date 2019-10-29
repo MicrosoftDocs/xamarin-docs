@@ -41,8 +41,8 @@ Objective-C would.
 
 There are a handful of third-party Objective-C APIs that do not consume an
 `NSString`, but instead consume a C string (a "*char*"). In those cases,
-you can still use the C# string data type, but you must use the 
-[[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md) 
+you can still use the C# string data type, but you must use the
+[[PlainString]](~/cross-platform/macios/binding/objective-c-libraries.md)
 attribute to inform the binding generator that this string
 should not be marshaled as an `NSString`, but instead as a C string.
 

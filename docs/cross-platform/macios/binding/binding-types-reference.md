@@ -30,9 +30,9 @@ interface MyType : [Protocol1, Protocol2] {
 }
 ```
 
-Every interface in your contract definition that has the 
-[`[BaseType]`](#BaseTypeAttribute) attribute that declares the base type for 
-the generated object. In the above declaration a `MyType` class C# type will 
+Every interface in your contract definition that has the
+[`[BaseType]`](#BaseTypeAttribute) attribute that declares the base type for
+the generated object. In the above declaration a `MyType` class C# type will
 be generated that binds to an Objective-C type called `MyType`.
 
 If you specify any types after the typename (in the sample above `Protocol1`
@@ -60,7 +60,7 @@ interface UITextField : UITextInput {
 ```
 
 You can control many other aspects of the code generation by applying other
-attributes to the interface as well as configuring the [`[BaseType]`](#BaseTypeAttribute) 
+attributes to the interface as well as configuring the [`[BaseType]`](#BaseTypeAttribute)
 attribute.
 
 ### Generating events
@@ -137,15 +137,15 @@ return the value from the `MakeDecision` function.
 
 The binding generator supports generating events and properties that link a
 class like `UIScrollView` with its `UIScrollViewDelegate` (well call these the Model
-class), this is done by annotating your [`[BaseType]`](#BaseTypeAttribute) 
-definition with the `Events` and `Delegates` parameters (described below). 
-In addition to annotating the [`[BaseType]`](#BaseTypeAttribute) with those 
+class), this is done by annotating your [`[BaseType]`](#BaseTypeAttribute)
+definition with the `Events` and `Delegates` parameters (described below).
+In addition to annotating the [`[BaseType]`](#BaseTypeAttribute) with those
 parameters it is necessary to inform the generator of a few more components.
 
 For events that take more than one parameter (in Objective-C the convention
 is that the first parameter in a delegate class is the instance of the sender
 object) you must provide the name that you would like for the generated
-`EventArgs` class to be. This is done with the [`[EventArgs]`](#EventArgsAttribute) 
+`EventArgs` class to be. This is done with the [`[EventArgs]`](#EventArgsAttribute)
 attribute on the method declaration in your Model class. For example:
 
 ```csharp
@@ -192,10 +192,10 @@ The above will create a `UIScrollViewCondition` delegate with the signature
 that was shown above, and if the user does not provide an implementation, the
 return value will be true.
 
-In addition to the [`[DefaultValue]`](#DefaultValueAttribute) attribute, 
-you can also use the [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute) 
+In addition to the [`[DefaultValue]`](#DefaultValueAttribute) attribute,
+you can also use the [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)
 attribute that directs the generator to return the value of the specified
-parameter in the call or the [`[NoDefaultValue]`](#NoDefaultValueAttribute) 
+parameter in the call or the [`[NoDefaultValue]`](#NoDefaultValueAttribute)
 parameter that instructs the generator that there is no default value.
 
 <a name="BaseTypeAttribute" />
@@ -249,7 +249,7 @@ a companion `BardodeScannerDelegate` class. The `BarcodeScanner` class would
 typically have a `Delegate` property that you would assign an instance of
 `BarcodeScannerDelegate` to, while this works, you might want to expose to your
 users a C#-like style event interface, and in those cases you would use the
-`Events` and `Delegates` properties of the [`[BaseType]`](#BaseTypeAttribute) 
+`Events` and `Delegates` properties of the [`[BaseType]`](#BaseTypeAttribute)
 attribute.
 
 These properties are always set together and must have the same number of
@@ -357,7 +357,7 @@ The above example is found on a library that would extend instances of
 
 To bind those, you can use the [`[Category]`](#CategoryAttribute) attribute on
 an interface definition.   When using the [`[Category]`](#CategoryAttribute) attribute, the
-meaning of the [`[BaseType]`](#BaseTypeAttribute) attribute changes from being 
+meaning of the [`[BaseType]`](#BaseTypeAttribute) attribute changes from being
 used to specify the base class to extend, to being the type to extend.
 
 The following shows how the `UIView` extensions are bound and turned
@@ -426,8 +426,8 @@ We will issue a warning (BI1117) whenever we find a [`[Static]`](#StaticAttribut
 ### StaticAttribute
 
 When this attribute is applied to a class it will just generate a static
-class, one that does not derive from `NSObject`, so the 
-[`[BaseType]`](#BaseTypeAttribute) attribute is ignored. Static classes are 
+class, one that does not derive from `NSObject`, so the
+[`[BaseType]`](#BaseTypeAttribute) attribute is ignored. Static classes are
 used to host C public variables that you want to expose.
 
 For example:
@@ -860,7 +860,7 @@ implicitly or explicitly.
 
 While you bind existing Objective-C types that have been declared as adopting
 a protocol, you will want to inline the protocol directly. To do this, merely
-declare your protocol as an interface without any [`[BaseType]`](#BaseTypeAttribute) 
+declare your protocol as an interface without any [`[BaseType]`](#BaseTypeAttribute)
 attribute and list the protocol in the list of base interfaces for your interface.
 
 Example:
@@ -994,7 +994,7 @@ by default `[ForcedType (owns: true)]`. The owns parameter is used to follow
 the [Ownership Policy](https://developer.apple.com/library/content/documentation/CoreFoundation/Conceptual/CFMemoryMgmt/Concepts/Ownership.html)
 for **Core Foundation** objects.
 
-The `[ForcedTypeAttribute]` is only valid on parameters, properties, 
+The `[ForcedTypeAttribute]` is only valid on parameters, properties,
 and return value.
 
 <a name="BindAsAttribute" />
@@ -1326,8 +1326,8 @@ public class ExportAttribute : Attribute {
 }
 ```
 
-The [selector](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Selector.html) 
-represents the name of the underlying Objective-C method or property that is 
+The [selector](https://developer.apple.com/library/content/documentation/General/Conceptual/DevPedia-CocoaCore/Selector.html)
+represents the name of the underlying Objective-C method or property that is
 being bound.
 
 #### ExportAttribute.ArgumentSemantic
@@ -1373,7 +1373,7 @@ Properties flagged with the Field attribute can be of the following types:
 * `System.IntPtr`
 * Enums
 
-Setters are not supported for [enums backed by NSString constants](#enum-attributes), 
+Setters are not supported for [enums backed by NSString constants](#enum-attributes),
 but they can be manually bound if needed.
 
 Example:
@@ -2087,7 +2087,7 @@ methods on it will throw an exception).
 
 If the object passed was not created, or if there was
 already an outstanding managed representation of the object,
-the forced dispose does not take place. 
+the forced dispose does not take place.
 
 ## Property attributes
 
@@ -2234,8 +2234,8 @@ If no `null` value is present then an `ArgumentNullException` will be thrown.
 ## Global attributes
 
 Global attributes are either applied using the `[assembly:]` attribute modifier
-like the [`[LinkWithAttribute]`](#LinkWithAttribute) or can be used anywhere, 
-like the [`[Lion]`](#SinceAndLionAttributes) and [`[Since]`](#SinceAndLionAttributes) 
+like the [`[LinkWithAttribute]`](#LinkWithAttribute) or can be used anywhere,
+like the [`[Lion]`](#SinceAndLionAttributes) and [`[Since]`](#SinceAndLionAttributes)
 attributes.
 
 <a name="LinkWithAttribute" />
@@ -2458,7 +2458,7 @@ and tools can be developed to give user suggestions on how to improve
 ### RequiresSuperAttribute
 
 This is a specialized subclass of the `[Advice]` attribute that can be used
-to hint to the developer that overriding a method **requires** a call to 
+to hint to the developer that overriding a method **requires** a call to
 the base (overridden) method.
 
 This corresponds to `clang` [`__attribute__((objc_requires_super))`](https://clang.llvm.org/docs/AttributeReference.html#objc-requires-super)

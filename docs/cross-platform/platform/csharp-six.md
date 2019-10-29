@@ -62,7 +62,7 @@ class MyClass
 `using static` does not make public `const` fields, such as `Math.PI` and `Math.E`, directly accessible:
 
 ```csharp
-for (var angle = 0.0; angle <= Math.PI * 2.0; angle += Math.PI / 8) ... 
+for (var angle = 0.0; angle <= Math.PI * 2.0; angle += Math.PI / 8) ...
 //PI is const, not static, so requires Math.PI
 ```
 

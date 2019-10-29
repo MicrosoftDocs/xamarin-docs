@@ -20,7 +20,7 @@ The [sample program](https://github.com/xamarin/recipes/tree/master/Recipes/cros
 
 There are no F# templates for UrhoSharp yet available, so to create your own UrhoSharp project you can either start with the [sample](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/urho/urho-fsharp/HelloWorldUrhoFsharp) or follow these steps:
 
-1. From Visual Studio for Mac, create a new **Solution**. Choose **iOS > App > Single View App** and select **F#** as the implementation language. 
+1. From Visual Studio for Mac, create a new **Solution**. Choose **iOS > App > Single View App** and select **F#** as the implementation language.
 1. Delete the **Main.storyboard** file. Open the **Info.plist** file and in the **iPhone / iPod Deployment Info** pane, delete the `Main` string in the **Main Interface** dropdown.
 1. Delete the **ViewController.fs** file as well.
 
@@ -45,9 +45,9 @@ open Urho.Gui
 open Urho.iOS
 
 type HelloWorld(o : ApplicationOptions) =
-    inherit Urho.Application(o) 
+    inherit Urho.Application(o)
 
-override this.Start() = 
+override this.Start() =
         let cache = this.ResourceCache
         let helloText = new Text()
 
@@ -59,14 +59,14 @@ override this.Start() =
         let f = cache.GetFont("Fonts/Anonymous Pro.ttf")
 
         helloText.SetFont(f, 30) |> ignore
-                  
+
         this.UI.Root.AddChild(helloText)
-            
+
 ```
 
-The code is very straightforward. It uses the `Urho.Gui.Text` class to display a center-aligned string with a certain font and color size. 
+The code is very straightforward. It uses the `Urho.Gui.Text` class to display a center-aligned string with a certain font and color size.
 
-Before this code can run, though, UrhoSharp must be initialized. 
+Before this code can run, though, UrhoSharp must be initialized.
 
 Open the AppDelegate.fs file and modify the `FinishedLaunching` method as follows:
 
@@ -85,10 +85,10 @@ type AppDelegate () =
 
     override this.FinishedLaunching (app, options) =
         let o = ApplicationOptions.Default
-     
+
         let g = new HelloWorld(o)
         g.Run() |> ignore
-       
+
         true
 ```
 

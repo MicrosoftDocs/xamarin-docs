@@ -349,7 +349,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
     ![](single-page-images/vsmac/choose-template.png "Choose a Template")
 
-3. In the **Configure your Blank Forms app** dialog, name the new app **Notes**, ensure that the **Use .NET Standard** radio button is selected, and click the **Next** button:    
+3. In the **Configure your Blank Forms app** dialog, name the new app **Notes**, ensure that the **Use .NET Standard** radio button is selected, and click the **Next** button:
 
     ![](single-page-images/vsmac/configure-app.png "Configure the Forms Application")
 

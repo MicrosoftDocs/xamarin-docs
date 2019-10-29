@@ -36,10 +36,10 @@ The following snippet is an example of the contents of **api.xml**:
 <api>
     <package name="android">
         <class abstract="false" deprecated="not deprecated" extends="java.lang.Object"
-            extends-generic-aware="java.lang.Object" 
-            final="true" 
-            name="Manifest" 
-            static="false" 
+            extends-generic-aware="java.lang.Object"
+            final="true"
+            name="Manifest"
+            static="false"
             visibility="public">
             <constructor deprecated="not deprecated" final="false"
                 name="Manifest" static="false" type="android.Manifest"
@@ -68,28 +68,28 @@ mapping files when creating the binding assembly
 These XML mapping files may be found in the **Transforms** folder of
 the project:
 
-- **MetaData.xml** &ndash; Allows changes to be made to the final API, 
-    such as changing the namespace of the generated binding. 
+- **MetaData.xml** &ndash; Allows changes to be made to the final API,
+    such as changing the namespace of the generated binding.
 
-- **EnumFields.xml** &ndash; Contains the mapping between Java `int` 
-    constants and C# `enums` . 
+- **EnumFields.xml** &ndash; Contains the mapping between Java `int`
+    constants and C# `enums` .
 
-- **EnumMethods.xml** &ndash; Allows changing method parameters and 
-    return types from Java `int` constants to C# `enums` . 
+- **EnumMethods.xml** &ndash; Allows changing method parameters and
+    return types from Java `int` constants to C# `enums` .
 
 The **MetaData.xml** file is the most import of these files as it
 allows general-purpose changes to the binding such as:
 
-- Renaming namespaces, classes, methods, or fields so they follow 
-    .NET conventions. 
+- Renaming namespaces, classes, methods, or fields so they follow
+    .NET conventions.
 
-- Removing namespaces, classes, methods, or fields that aren't 
-    needed. 
+- Removing namespaces, classes, methods, or fields that aren't
+    needed.
 
-- Moving classes to different namespaces. 
+- Moving classes to different namespaces.
 
-- Adding additional support classes to make the design of the binding 
-    follow .NET framework patterns. 
+- Adding additional support classes to make the design of the binding
+    follow .NET framework patterns.
 
 Lets move on to discuss **Metadata.xml** in more detail.
 
@@ -118,15 +118,15 @@ The following is an example of a **Metadata.xml** file:
 ```xml
 <metadata>
     <!-- Normalize the namespace for .NET -->
-    <attr path="/api/package[@name='com.evernote.android.job']" 
+    <attr path="/api/package[@name='com.evernote.android.job']"
         name="managedName">Evernote.AndroidJob</attr>
 
-    <!-- Don't  need these packages for the Xamarin binding/public API --> 
+    <!-- Don't  need these packages for the Xamarin binding/public API -->
     <remove-node path="/api/package[@name='com.evernote.android.job.v14']" />
     <remove-node path="/api/package[@name='com.evernote.android.job.v21']" />
 
     <!-- Change a parameter name from the generic p0 to a more meaningful one. -->
-    <attr path="/api/package[@name='com.evernote.android.job']/class[@name='JobManager']/method[@name='forceApi']/parameter[@name='p0']" 
+    <attr path="/api/package[@name='com.evernote.android.job']/class[@name='JobManager']/method[@name='forceApi']/parameter[@name='p0']"
         name="name">api</attr>
 </metadata>
 ```
@@ -171,8 +171,8 @@ ignore a Java type and not bind it. This is done by adding a
 ### Renaming Members
 
 Renaming members cannot be done by directly editing the **api.xml**
-file because Xamarin.Android requires the original Java 
-Native Interface (JNI) names. Therefore, the `//class/@name` attribute 
+file because Xamarin.Android requires the original Java
+Native Interface (JNI) names. Therefore, the `//class/@name` attribute
 cannot be altered; if it is, the binding will not work.
 
 Consider the case where we want to rename a type, `android.Manifest`.
@@ -180,7 +180,7 @@ To accomplish this, we might try to directly edit **api.xml** and
 rename the class like so:
 
 ```xml
-<attr path="/api/package[@name='android']/class[@name='Manifest']" 
+<attr path="/api/package[@name='android']/class[@name='Manifest']"
     name="name">NewName</attr>
 ```
 
@@ -203,7 +203,7 @@ is necessary to set the `managedName` attribute as shown in this
 example:
 
 ```xml
-<attr path="/api/package[@name='android']/class[@name='Manifest']" 
+<attr path="/api/package[@name='android']/class[@name='Manifest']"
     name="managedName">NewName</attr>
 ```
 
@@ -236,7 +236,7 @@ for the `EventArgs` subclass:
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
     interface[@name='NavigationManager.Listener']/
-    method[@name='on2DSignNextManeuver']" 
+    method[@name='on2DSignNextManeuver']"
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
 
@@ -265,7 +265,7 @@ parameter. For example to change the name of the Java class `MyClass`
 to `NewClassName`:
 
 ```xml
-<attr path="/api/package[@name='com.my.application']/class[@name='MyClass']" 
+<attr path="/api/package[@name='com.my.application']/class[@name='MyClass']"
     name="managedName">NewClassName</attr>
 ```
 
@@ -274,7 +274,7 @@ method `java.lang.object.toString` to
 `Java.Lang.Object.NewManagedName`:
 
 ```xml
-<attr path="/api/package[@name='java.lang']/class[@name='Object']/method[@name='toString']" 
+<attr path="/api/package[@name='java.lang']/class[@name='Object']/method[@name='toString']"
     name="managedName">NewMethodName</attr>
 ```
 
@@ -292,14 +292,14 @@ which results in the error message **Error CS0535:
 'DE.Neom.Neoreadersdk.Resolution' does not implement interface member
 'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. The following
 snippet demonstrates how to change the paramter type of the generated C#
-method from a `DE.Neom.Neoreadersdk.Resolution` to a `Java.Lang.Object`: 
+method from a `DE.Neom.Neoreadersdk.Resolution` to a `Java.Lang.Object`:
 
 ```xml
 <attr path="/api/package[@name='de.neom.neoreadersdk']/
     class[@name='Resolution']/
     method[@name='compareTo' and count(parameter)=1 and
     parameter[1][@type='de.neom.neoreadersdk.Resolution']]/
-    parameter[1]" name="managedType">Java.Lang.Object</attr> 
+    parameter[1]" name="managedType">Java.Lang.Object</attr>
 ```
 
 ### managedReturn
@@ -313,7 +313,7 @@ type of the `append` method is changed from `SpannableStringBuilder` to
 ```xml
 <attr path="/api/package[@name='android.text']/
     class[@name='SpannableStringBuilder']/
-    method[@name='append']" 
+    method[@name='append']"
     name="managedReturn">Java.Lang.IAppendable</attr>
 ```
 
@@ -321,7 +321,7 @@ type of the `append` method is changed from `SpannableStringBuilder` to
 
 Tools that obfuscate Java libraries may interfere with the
 Xamarin.Android Binding Generator and its ability to generate C#
-wrapper classes. Characteristics of obfuscated classes include: 
+wrapper classes. Characteristics of obfuscated classes include:
 
 - The class name includes a **$**, i.e. **a$.class**
 - The class name is entirely compromised of lower case characters, i.e. **a.class**
@@ -329,7 +329,7 @@ wrapper classes. Characteristics of obfuscated classes include:
 This snippet is an example of how to generate an "un-obfuscated" C# type:
 
 ```xml
-<attr path="/api/package[@name='{package_name}']/class[@name='{name}']" 
+<attr path="/api/package[@name='{package_name}']/class[@name='{name}']"
     name="obfuscated">false</attr>
 ```
 
@@ -345,12 +345,12 @@ to "remove" the .NET properties by setting the `propertyName` to an
 empty string:
 
 ```xml
-<attr path="/api/package[@name='org.java_websocket.handshake']/class[@name='HandshakeImpl1Client']/method[@name='setResourceDescriptor' 
-    and count(parameter)=1 
-    and parameter[1][@type='java.lang.String']]" 
+<attr path="/api/package[@name='org.java_websocket.handshake']/class[@name='HandshakeImpl1Client']/method[@name='setResourceDescriptor'
+    and count(parameter)=1
+    and parameter[1][@type='java.lang.String']]"
     name="propertyName"></attr>
-<attr path="/api/package[@name='org.java_websocket.handshake']/class[@name='HandshakeImpl1Client']/method[@name='getResourceDescriptor' 
-    and count(parameter)=0]" 
+<attr path="/api/package[@name='org.java_websocket.handshake']/class[@name='HandshakeImpl1Client']/method[@name='getResourceDescriptor'
+    and count(parameter)=0]"
     name="propertyName"></attr>
 ```
 
@@ -367,7 +367,7 @@ when the method is mapped to an event. The value can be `true` or
 <attr path="/api/package[@name='android.app']/
     interface[@name='TimePickerDialog.OnTimeSetListener']/
     method[@name='onTimeSet']/
-    parameter[@name='view']" 
+    parameter[@name='view']"
     name="sender">true</ attr>
 ```
 
@@ -381,25 +381,25 @@ Java method so that it's corresponding C# wrapper is `public`:
 <!-- Change the visibility of a class -->
 <attr path="/api/package[@name='namespace']/class[@name='ClassName']" name="visibility">public</attr>
 
-<!-- Change the visibility of a method --> 
+<!-- Change the visibility of a method -->
 <attr path="/api/package[@name='namespace']/class[@name='ClassName']/method[@name='MethodName']" name="visibility">public</attr>
 ```
 
 ## EnumFields.xml and EnumMethods.xml
 
-There are cases where Android libraries use integer constants to 
-represent states that are passed to properties or methods of the 
-libraries. In many cases, it is useful to bind these integer constants 
-to enums in C#. To facilitate this mapping, use the **EnumFields.xml** 
-and **EnumMethods.xml** files in your binding project. 
+There are cases where Android libraries use integer constants to
+represent states that are passed to properties or methods of the
+libraries. In many cases, it is useful to bind these integer constants
+to enums in C#. To facilitate this mapping, use the **EnumFields.xml**
+and **EnumMethods.xml** files in your binding project.
 
 ### Defining an Enum using EnumFields.xml
 
-The **EnumFields.xml** file contains the mapping between Java `int` 
-constants and C# `enums`. Let's take the following example of a C# enum 
-being created for a set of `int` constants: 
+The **EnumFields.xml** file contains the mapping between Java `int`
+constants and C# `enums`. Let's take the following example of a C# enum
+being created for a set of `int` constants:
 
-```xml 
+```xml
 <mapping jni-class="com/skobbler/ngx/map/realreach/SKRealReachSettings" clr-enum-type="Skobbler.Ngx.Map.RealReach.SKMeasurementUnit">
     <field jni-name="UNIT_SECOND" clr-name="Second" value="0" />
     <field jni-name="UNIT_METER" clr-name="Meter" value="1" />
@@ -407,12 +407,12 @@ being created for a set of `int` constants:
 </mapping>
 ```
 
-Here we have taken the Java class `SKRealReachSettings` and defined a 
-C# enum called `SKMeasurementUnit` in the namespace 
-`Skobbler.Ngx.Map.RealReach`. The `field` entries defines the name of 
-the Java constant (example `UNIT_SECOND`), the name of the enum entry 
-(example `Second`), and the integer value represented by both 
-entities (example `0`). 
+Here we have taken the Java class `SKRealReachSettings` and defined a
+C# enum called `SKMeasurementUnit` in the namespace
+`Skobbler.Ngx.Map.RealReach`. The `field` entries defines the name of
+the Java constant (example `UNIT_SECOND`), the name of the enum entry
+(example `Second`), and the integer value represented by both
+entities (example `0`).
 
 ### Defining Getter/Setter Methods using EnumMethods.xml
 
@@ -437,8 +437,8 @@ The first `method` line maps the return value of the Java
 second `method` line maps the first parameter of the
 `setMeasurementUnit` to the same enum.
 
-With all of these changes in place, you can use the follow code in 
-Xamarin.Android to set the `MeasurementUnit`: 
+With all of these changes in place, you can use the follow code in
+Xamarin.Android to set the `MeasurementUnit`:
 
 ```csharp
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;

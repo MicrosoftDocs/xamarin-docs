@@ -155,9 +155,9 @@ of the typical processing scenarios are covered by the intrinsic
 scripts. This list of the intrinsic scripts describes the current
 scripts in Xamarin.Android:
 
-- [ScriptIntrinsic3DLUT](xref:Android.Renderscripts.ScriptIntrinsic3DLUT) &ndash; Converts RGB to RGBA using a 3D lookup table. 
+- [ScriptIntrinsic3DLUT](xref:Android.Renderscripts.ScriptIntrinsic3DLUT) &ndash; Converts RGB to RGBA using a 3D lookup table.
 
-- [ScriptIntrinsicBLAS](https://developer.android.com/reference/android/renderscript/ScriptIntrinsicBLAS.html) &ndash; Provideshigh performance Renderscript APIs to [BLAS](http://www.netlib.org/blas/). The BLAS (Basic Linear Algebra Subprograms) are routines that provide standard building blocks for performing basic vector and matrix operations. 
+- [ScriptIntrinsicBLAS](https://developer.android.com/reference/android/renderscript/ScriptIntrinsicBLAS.html) &ndash; Provideshigh performance Renderscript APIs to [BLAS](http://www.netlib.org/blas/). The BLAS (Basic Linear Algebra Subprograms) are routines that provide standard building blocks for performing basic vector and matrix operations.
 
 - [ScriptIntrinsicBlend](xref:Android.Renderscripts.ScriptIntrinsicBlend) &ndash; Blends two Allocations together.
 

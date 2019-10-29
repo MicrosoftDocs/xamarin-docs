@@ -42,7 +42,7 @@ These include:
 
 1. **Intents Extension** - Verifies the users responses, confirms the app can handle the request and actually performs the task to fulfill the user's request.
 2. **Intents UI Extension** - *Optional*, provides a custom UI to the responses in the Siri Environment and can bring the apps UI and branding into Siri to enrich the user's experience.
-3. **App** - Provides the App with User specific vocabularies to assist Siri in working with it. 
+3. **App** - Provides the App with User specific vocabularies to assist Siri in working with it.
 
 All of these elements and the steps to include them in the app will be covered in detail in the sections below.
 
@@ -50,7 +50,7 @@ All of these elements and the steps to include them in the app will be covered i
 
 SiriKit is built on Extensions, however, before adding any Extensions to the app, there are a few things that the developer needs to do to help with the adoption of SiriKit.
 
-### Moving Common Shared Code 
+### Moving Common Shared Code
 
 First, the developer can move some of the common code that will be shared between the app and the extensions into either _Shared Projects_, _Portable Class Libraries (PCLs)_ or _Native Libraries_.
 
@@ -67,20 +67,20 @@ Do the following:
 # [Visual Studio for Mac](#tab/macos)
 
 1. Start Visual Studio for Mac and open the MonkeyChat app.
-2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **New Project...**: 
+2. Right-click on the Solution Name in the **Solution Pad** and select **Add** > **New Project...**:
 
     [![](implementing-sirikit-images/prep01.png "Add a new project")](implementing-sirikit-images/prep01.png#lightbox)
-3. Select **iOS** > **Library** > **Class Library** and click the **Next** button: 
+3. Select **iOS** > **Library** > **Class Library** and click the **Next** button:
 
     [![](implementing-sirikit-images/prep02.png "Select Class Library")](implementing-sirikit-images/prep02.png#lightbox)
-4. Enter `MonkeyChatCommon` for the **Name** and click the **Create** button: 
+4. Enter `MonkeyChatCommon` for the **Name** and click the **Create** button:
 
     [![](implementing-sirikit-images/prep03.png "Enter MonkeyChatCommon for the Name")](implementing-sirikit-images/prep03.png#lightbox)
-5. Right-click on the **References** folder of the main app in the **Solution Explorer** and select **Edit References...**. Check the **MonkeyChatCommon** project and click the **OK** button: 
+5. Right-click on the **References** folder of the main app in the **Solution Explorer** and select **Edit References...**. Check the **MonkeyChatCommon** project and click the **OK** button:
 
     [![](implementing-sirikit-images/prep05.png "Check the MonkeyChatCommon project")](implementing-sirikit-images/prep05.png#lightbox)
 6. In the **Solution Explorer**, drag the common shared code from the main app to the Native Library.
-7. In the case of MonkeyChat, drag the **DataModels** and **Processors** folders from the main app into the Native Library: 
+7. In the case of MonkeyChat, drag the **DataModels** and **Processors** folders from the main app into the Native Library:
 
     [![](implementing-sirikit-images/prep06.png "The DataModels and Processors folders in the Solution Explorer")](implementing-sirikit-images/prep06.png#lightbox)
 
@@ -88,11 +88,11 @@ Do the following:
 
 1. Start Visual Studio and open the MonkeyChat app.
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **New Project...**.
-3. Select **Visual C#** > **Shared Project** and click the **Next** button: 
+3. Select **Visual C#** > **Shared Project** and click the **Next** button:
 
     [![](implementing-sirikit-images/prep02.w157-sml.png "Select Class Library")](implementing-sirikit-images/prep02.w157.png#lightbox)
 4. Enter `MonkeyChatCommon` for the **Name** and click the **Create** button.
-5. Right-click on the **References** folder of the main app in the **Solution Explorer** and select **Edit References...**. Check the **MonkeyChatCommon** project and click the **OK** button: 
+5. Right-click on the **References** folder of the main app in the **Solution Explorer** and select **Edit References...**. Check the **MonkeyChatCommon** project and click the **OK** button:
 
     [![](implementing-sirikit-images/prep05w.png "Check the MonkeyChatCommon project")](implementing-sirikit-images/prep05w.png#lightbox)
 6. In the **Solution Explorer**, drag the common shared code from the main app to the Shared Project.
@@ -163,12 +163,12 @@ Do the following:
 
 1. Double-click the `Entitlements.plist` file in the **Solution Explorer** to open it for editing.
 2. Switch to the **Source** tab.
-3. Add the `com.apple.developer.siri` **Property**, set the **Type** to `Boolean` and the **Value** to `Yes`: 
+3. Add the `com.apple.developer.siri` **Property**, set the **Type** to `Boolean` and the **Value** to `Yes`:
 
     [![](implementing-sirikit-images/setup01.png "Add the com.apple.developer.siri Property")](implementing-sirikit-images/setup01.png#lightbox)
 4. Save the changes to the file.
 5. Double-click the **Project File** in the **Solution Explorer** to open it for editing.
-6. Select **iOS Bundle Signing** and ensure that the `Entitlements.plist` file is selected in the **Custom Entitlements** field: 
+6. Select **iOS Bundle Signing** and ensure that the `Entitlements.plist` file is selected in the **Custom Entitlements** field:
 
     [![](implementing-sirikit-images/setup02.png "Select the Entitlements.plist file in the Custom Entitlements field")](implementing-sirikit-images/setup02.png#lightbox)
 7. Click the **OK** button to save the changes.
@@ -176,7 +176,7 @@ Do the following:
 # [Visual Studio](#tab/windows)
 
 1. Double-click the `Entitlements.plist` file in the **Solution Explorer** to open it for editing.
-2. Add the `com.apple.developer.siri` **Property**, set the **Type** to `Boolean` and the **Value** to `Yes`: 
+2. Add the `com.apple.developer.siri` **Property**, set the **Type** to `Boolean` and the **Value** to `Yes`:
 
     [![](implementing-sirikit-images/setup01w.png "Add the com.apple.developer.siri Property")](implementing-sirikit-images/setup01w.png#lightbox)
 3. Save the changes to the file.
@@ -209,7 +209,7 @@ Do the following on your Mac:
 3. Select **Provisioning Profiles** and select **App IDs**, then click the **+** button.
 4. Enter a **Name** for the new Profile.
 5. Enter a **Bundle ID** following Apple’s naming recommendation.
-6. Scroll down to the **App Services** section, select **SiriKit** and click the **Continue** button: 
+6. Scroll down to the **App Services** section, select **SiriKit** and click the **Continue** button:
 
     [![](implementing-sirikit-images/setup03.png "Select SiriKit")](implementing-sirikit-images/setup03.png#lightbox)
 7. Verify all of the settings, then **Submit** the App ID.
@@ -219,21 +219,21 @@ Do the following on your Mac:
 11. Enter a **Profile Name** using Apple’s naming suggestions, then click **Continue**.
 12. Start Xcode.
 13. From the Xcode menu select **Preferences…**
-14. Select **Accounts**, then click the **View Details…** button: 
+14. Select **Accounts**, then click the **View Details…** button:
 
     [![](implementing-sirikit-images/setup04.png "Select Accounts")](implementing-sirikit-images/setup04.png#lightbox)
-15. Click the **Download All Profiles** Button in the lower left hand corner: 
+15. Click the **Download All Profiles** Button in the lower left hand corner:
 
     [![](implementing-sirikit-images/setup05.png "Download All Profiles")](implementing-sirikit-images/setup05.png#lightbox)
 16. Ensure that the **Provisioning Profile** created above has been installed in Xcode.
 17. Open the project to add SiriKit support to in Visual Studio for Mac.
 18. Double-click the `Info.plist` file in the **Solution Explorer**.
-19. Ensure that the **Bundle Identifier** matches the one created in Apple's Developer Portal above: 
+19. Ensure that the **Bundle Identifier** matches the one created in Apple's Developer Portal above:
 
     [![](implementing-sirikit-images/setup06.png "The Bundle Identifier")](implementing-sirikit-images/setup06.png#lightbox)
 20. In the **Solution Explorer**, select the **Project**.
 21. Right-click the project and select **Options**.
-22. Select **iOS Bundle Signing**, select the **Signing Identity** and **Provisioning Profile** created above: 
+22. Select **iOS Bundle Signing**, select the **Signing Identity** and **Provisioning Profile** created above:
 
     [![](implementing-sirikit-images/setup07.png "Select the Signing Identity and Provisioning Profile")](implementing-sirikit-images/setup07.png#lightbox)
 23. Click the **OK** button to save the changes.
@@ -602,19 +602,19 @@ To add an Intents Extension to the solution, do the following:
 # [Visual Studio for Mac](#tab/macos)
 
 1. Right-click on the **Solution Name** in the **Solution Pad** and select **Add** > **Add New Project...**.
-2. From the dialog box select **iOS** > **Extensions** > **Intent Extension** and click the **Next** button: 
+2. From the dialog box select **iOS** > **Extensions** > **Intent Extension** and click the **Next** button:
 
     [![](implementing-sirikit-images/intents05.png "Select Intent Extension")](implementing-sirikit-images/intents05.png#lightbox)
-3. Next enter a **Name** for the Intent Extension and click the **Next** button: 
+3. Next enter a **Name** for the Intent Extension and click the **Next** button:
 
     [![](implementing-sirikit-images/intents06.png "Enter a Name for the Intent Extension")](implementing-sirikit-images/intents06.png#lightbox)
-4. Finally, click the **Create** button to add the Intent Extension to the apps solution: 
+4. Finally, click the **Create** button to add the Intent Extension to the apps solution:
 
     [![](implementing-sirikit-images/intents07.png "Add the Intent Extension to the apps solution")](implementing-sirikit-images/intents07.png#lightbox)
-5. In the **Solution Explorer**, right-click on the **References** folder of the newly created Intent Extension. Check the name of the common shared code library project (that the app created above) and click the **OK** button: 
+5. In the **Solution Explorer**, right-click on the **References** folder of the newly created Intent Extension. Check the name of the common shared code library project (that the app created above) and click the **OK** button:
 
     [![](implementing-sirikit-images/intents08.png "Select the name of the common shared code library project")](implementing-sirikit-images/intents08.png#lightbox)
-    
+
 # [Visual Studio](#tab/windows)
 
 1. Right-click on the **Solution Name** in the **Solution Explorer** and select **Add** > **Add New Project...**.
@@ -625,7 +625,7 @@ To add an Intents Extension to the solution, do the following:
 4. In the **Solution Explorer**, right-click on the **References** folder of the newly-created Intents Extension and choose **Add > Reference**. Check the name of the common shared code library project (that the app created above) and click the **OK** button:
 
     [![](implementing-sirikit-images/intents08w.png "Select the name of the common shared code library project")](implementing-sirikit-images/intents08w.png#lightbox)
-    
+
 -----
 
 Repeat these steps for the number of Intent Extensions (based on [Architecting the App for Extensions](#architecting-the-app-for-extensions) section above) that the app will require.
@@ -863,26 +863,26 @@ To add an Intents UI Extension to the solution, do the following:
 # [Visual Studio for Mac](#tab/macos)
 
 1. Right-click on the **Solution Name** in the **Solution Pad** and select **Add** > **Add New Project...**.
-2. From the dialog box select **iOS** > **Extensions** > **Intent UI Extension** and click the **Next** button: 
+2. From the dialog box select **iOS** > **Extensions** > **Intent UI Extension** and click the **Next** button:
 
     [![](implementing-sirikit-images/intents11.png "Select Intent UI Extension")](implementing-sirikit-images/intents11.png#lightbox)
-3. Next enter a **Name** for the Intent Extension and click the **Next** button: 
+3. Next enter a **Name** for the Intent Extension and click the **Next** button:
 
     [![](implementing-sirikit-images/intents12.png "Enter a Name for the Intent Extension")](implementing-sirikit-images/intents12.png#lightbox)
-4. Finally, click the **Create** button to add the Intent Extension to the apps solution: 
+4. Finally, click the **Create** button to add the Intent Extension to the apps solution:
 
     [![](implementing-sirikit-images/intents13.png "Add the Intent Extension to the apps solution")](implementing-sirikit-images/intents13.png#lightbox)
-5. In the **Solution Explorer**, right-click on the **References** folder of the newly created Intent Extension. Check the name of the common shared code library project (that the app created above) and click the **OK** button: 
+5. In the **Solution Explorer**, right-click on the **References** folder of the newly created Intent Extension. Check the name of the common shared code library project (that the app created above) and click the **OK** button:
 
     [![](implementing-sirikit-images/intents14.png "Select the name of the common shared code library project")](implementing-sirikit-images/intents14.png#lightbox)
-    
+
 # [Visual Studio](#tab/windows)
 
 1. Right-click on the **Solution Name** in the **Solution Explorer** and select **Add** > **Add New Project...**
 2. From the dialog box select **iOS** > **Extensions** > **Intent UI Extension** and click the **Next** button.
 3. Next enter a **Name** for the Intent Extension and click the **OK** button.
 4. In the **Solution Explorer**, right-click on the **References** folder of the newly created Intent Extension. Check the name of the common shared code library project (that the app created above) and click the **OK** button.
-    
+
 -----
 
 ### Configuring the Info.plist

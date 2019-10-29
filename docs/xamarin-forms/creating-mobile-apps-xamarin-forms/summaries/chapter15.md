@@ -219,7 +219,7 @@ The [`DatePicker`](xref:Xamarin.Forms.DatePicker) and [`TimePicker`](xref:Xamari
 - [`Date`](xref:Xamarin.Forms.DatePicker.Date) of type `DateTime`, initialized to `DateTime.Today`
 - [`Format`](xref:Xamarin.Forms.DatePicker.Format) of type `string`, the .NET formatting string initialized to "d", the short date pattern, resulting in a date display like "7/20/1969" in the US.
 
-You can set the `DateTime` properties in XAML by expressing the properties as property elements and using the culture-invariant short-date format ("7/20/1969").   
+You can set the `DateTime` properties in XAML by expressing the properties as property elements and using the culture-invariant short-date format ("7/20/1969").
 
 The [**DaysBetweenDates**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter15/DaysBetweenDates) sample calculates the number of days between two dates selected by the user.
 

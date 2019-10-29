@@ -127,12 +127,12 @@ _addButton.Clicked += (sender, e) => {
 
     if (description != null) {
         description.Caption = task.Name;
-        description.Value = task.Description;       
+        description.Value = task.Description;
     }
 
     var duedate = taskElement ["task-duedate"] as DateElement;
 
-    if (duedate != null) {                
+    if (duedate != null) {
         duedate.DateValue = task.DueDate;
     }
     _rootElement [0].Add (taskElement);

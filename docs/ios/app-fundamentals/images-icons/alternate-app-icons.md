@@ -102,7 +102,7 @@ Or like this if opened in a text editor:
 
 <a name="Managing-the-Apps-Icon" />
 
-## Managing the App's Icon 
+## Managing the App's Icon
 
 With the icon images included in the Xamarin.iOS project and the **Info.plist** file correctly configured, the developer can use one of many new features added to iOS 10.3 to control the app's icon.
 

@@ -25,11 +25,11 @@ The HSL color model was discussed in the article [**Integrating with Xamarin.For
 
 The Hue represents the dominant wavelength of the color. Hue values range from 0 to 360 and cycle through the additive and subtractive primaries: Red is the value 0, yellow is 60, green is 120, cyan is 180, blue is 240, magenta is 300, and the cycle goes back to red at 360.
 
-If there is no dominant color &mdash; for example, the color is white or black or a gray shade &mdash; then the Hue is undefined and usually set to 0. 
+If there is no dominant color &mdash; for example, the color is white or black or a gray shade &mdash; then the Hue is undefined and usually set to 0.
 
 The Saturation values can range from 0 to 100 and indicate the purity of the color. A Saturation value of 100 is the purest color while values lower than 100 cause the color to become more grayish. A Saturation value of 0 results in a shade of gray.
 
-The Luminosity (or Lightness) value indicates how bright the color is. A Luminosity value of 0 is black regardless of the other settings. Similarly, a Luminosity value of 100 is white. 
+The Luminosity (or Lightness) value indicates how bright the color is. A Luminosity value of 0 is black regardless of the other settings. Similarly, a Luminosity value of 100 is white.
 
 The HSL value (0, 100, 50) is the RGB value (FF, 00, 00), which is pure red. The HSL value (180, 100, 50) is the RGB value (00, FF, FF), pure cyan. As the Saturation is decreased, the dominant color component is decreased and the other components are increased. At a Saturation level of 0, all the components are the same and the color is a gray shade. Decrease the Luminosity to go to black; increase the Luminosity to go to white.
 
@@ -41,8 +41,8 @@ Like the other blend modes, the four non-separable blend modes involve a destina
 | ------------ | ---------------------- | --------------------------- |
 | `Hue`        | Hue                    | Saturation and Luminosity   |
 | `Saturation` | Saturation             | Hue and Luminosity          |
-| `Color`      | Hue and Saturation     | Luminosity                  | 
-| `Luminosity` | Luminosity             | Hue and Saturation          | 
+| `Color`      | Hue and Saturation     | Luminosity                  |
+| `Luminosity` | Luminosity             | Hue and Saturation          |
 
 See the W3C [**Compositing and Blending Level 1**](https://www.w3.org/TR/compositing-1/) specification for the algorithms.
 
@@ -171,7 +171,7 @@ public partial class NonSeparableBlendModesPage : ContentPage
 }
 ```
 
-Notice that the program does not display the HSL color value as selected by the three sliders. Instead, it creates a color value from those sliders and then uses the [`ToHsl`](xref:SkiaSharp.SKColor.ToHsl*) method to obtain the Hue, Saturation, and Luminosity values. This is because the `FromHsl` method converts an HSL color to an RGB color, which is stored internally in the `SKColor` structure. The `ToHsl` method converts from RGB to HSL, but the result will not always be the original value. 
+Notice that the program does not display the HSL color value as selected by the three sliders. Instead, it creates a color value from those sliders and then uses the [`ToHsl`](xref:SkiaSharp.SKColor.ToHsl*) method to obtain the Hue, Saturation, and Luminosity values. This is because the `FromHsl` method converts an HSL color to an RGB color, which is stored internally in the `SKColor` structure. The `ToHsl` method converts from RGB to HSL, but the result will not always be the original value.
 
 For example, `FromHsl` converts the HSL value (180, 50, 0) to the RGB color (0, 0, 0) because the `Luminosity` is zero. The `ToHsl` method converts the RGB color (0, 0, 0) to the HSL color (0, 0, 0) because the Hue and Saturation values are irrelevant. When using this program, it is better that you see the representation of the HSL color that the program is using rather than the one you specified with the sliders.
 
@@ -187,7 +187,7 @@ The `SKBlendModes.Saturation` blend mode combines the Saturation level of the so
 
 You can use this blend mode to increase the color Saturation of a dull image, or you can decrease the Saturation down to zero (as in the iOS screenshot at the left) for a resultant image composed of only gray shades.
 
-The `SKBlendModes.Color` blend mode retains the Luminosity of the destination but uses the Hue and Saturation of the source. Again, that implies that any setting of the Luminosity slider somewhere between the extremes should work. 
+The `SKBlendModes.Color` blend mode retains the Luminosity of the destination but uses the Hue and Saturation of the source. Again, that implies that any setting of the Luminosity slider somewhere between the extremes should work.
 
 [![Non-Separable Blend Modes - Color](non-separable-images/NonSeparableBlendModes-Color.png "Non-Separable Blend Modes - Color")](non-separable-images/NonSeparableBlendModes-Color-Large.png#lightbox)
 
@@ -213,7 +213,7 @@ It's possible to create a matte that encompasses just the banana. This is also a
 
 Aside from the black banana shape, the rest of the bitmap is transparent.
 
-The **Blue Banana** page uses that matte to alter the Hue and Saturation of the banana that the monkey is holding, but to change nothing else in the image. 
+The **Blue Banana** page uses that matte to alter the Hue and Saturation of the banana that the monkey is holding, but to change nothing else in the image.
 
 In the following `BlueBananaPage` class, the **Banana.jpg** bitmap is loaded as a field. The constructor loads the **BananaMatte.png** bitmap as the `matteBitmap` object, but it does not retain that object beyond the constructor. Instead, a third bitmap named `blueBananaBitmap` is created. The `matteBitmap` is drawn on `blueBananaBitmap` followed by an `SKPaint` with its `Color` set to blue and its `BlendMode` set to `SKBlendMode.SrcIn`. The `blueBananaBitmap` remains mostly transparent but with a solid pure blue image of the banana:
 
@@ -269,9 +269,9 @@ public class BlueBananaPage : ContentPage
         using (SKPaint paint = new SKPaint())
         {
             paint.BlendMode = SKBlendMode.Color;
-            canvas.DrawBitmap(blueBananaBitmap, 
-                              info.Rect, 
-                              BitmapStretch.Uniform, 
+            canvas.DrawBitmap(blueBananaBitmap,
+                              info.Rect,
+                              BitmapStretch.Uniform,
                               paint: paint);
         }
     }

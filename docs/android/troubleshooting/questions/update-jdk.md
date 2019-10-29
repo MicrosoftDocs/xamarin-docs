@@ -20,12 +20,12 @@ Xamarin.Android uses the Java Development Kit (JDK) to integrate with
 the Android SDK for building Android apps and running the Android
 designer. The latest versions of the Android SDK (API 24 and higher)
 require JDK 8 (1.8). Alternately, you can install the
-[Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). 
+[Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md).
 The Microsoft Mobile OpenJDK will eventually replace JDK 8 for Xamarin.Android
 development.
 
 To update to the Microsoft Mobile OpenJDK, see
-[Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md). 
+[Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md).
 To update to JDK 8, follow these steps:
 
 # [Visual Studio](#tab/windows)
@@ -63,7 +63,7 @@ Be sure to restart Visual Studio after updating the location.
     ![Running the JDK installer on macOS](update-jdk-images/image5.png)
 
 Mac OS will automatically set the new JDK version as the default by
-updating **/System/Library/Frameworks/JavaVM.framework/Versions/Current**. 
+updating **/System/Library/Frameworks/JavaVM.framework/Versions/Current**.
 You can then double-check that the **Java SDK (JDK)** location is set to
 the expected default of **/usr** under **Visual Studio for Mac > Preferences >
 Projects > SDK Locations > Android > Locations > Java SDK (JDK) Location**:

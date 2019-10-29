@@ -37,7 +37,7 @@ There are two supported Target Framework types that can be selected when using t
 - **Xamarin.Mac Mobile Framework** - This is the same tuned .NET framework used by Xamarin.iOS and Xamarin.Android supporting a subset of the full **Desktop** framework. This is the recommended framework because it provides smaller average binaries due to superior linking behavior.
 - **Xamarin.Mac .NET 4.5 Framework** - This framework is again, a subset of the **Desktop** framework. However, it trims off far less of the full **Desktop** framework than the **Mobile** framework and should _"just work"_ with most NuGet Packages or 3rd party libraries. This allows the developer to consume standard **Desktop** assemblies while still using a supported framework, but this option produces larger application bundles. This is the recommended framework where 3rd party .NET assemblies are being used that are not compatible with the **Xamarin.Mac Mobile Framework**. For a list of supported assemblies, please see our [Assemblies](~/cross-platform/internals/available-assemblies.md) documentation.
 
-For detailed information on Target Frameworks and the implications of selecting a specific target for your Xamarin.Mac application, please see our [Target Frameworks](~/mac/platform/target-framework.md) documentation. 
+For detailed information on Target Frameworks and the implications of selecting a specific target for your Xamarin.Mac application, please see our [Target Frameworks](~/mac/platform/target-framework.md) documentation.
 
 The tool basically automates all the steps outlined in the **Update Manually** section presented below and is the suggested method of converting an existing Xamarin.Mac project to the Unified API.
 
@@ -91,11 +91,11 @@ Remove the **MonoMac** prefix from namespaces in `using` statements or wherever 
 
 ### 5. Fix Method Overrides
 
-Some `AppKit` methods have had their signature changed to use the new [native types](~/cross-platform/macios/nativetypes.md) (such as `nint`). If custom subclasses override these methods the signatures will no longer match and will result in errors. Fix these method overrides by changing the subclass to match the new signature using native types. 
+Some `AppKit` methods have had their signature changed to use the new [native types](~/cross-platform/macios/nativetypes.md) (such as `nint`). If custom subclasses override these methods the signatures will no longer match and will result in errors. Fix these method overrides by changing the subclass to match the new signature using native types.
 
 ## Considerations
 
-The following considerations should be taken into account when converting an existing Xamarin.Mac project from the Classic API to the new Unified API if that app relies on one or more Component or NuGet Package. 
+The following considerations should be taken into account when converting an existing Xamarin.Mac project from the Classic API to the new Unified API if that app relies on one or more Component or NuGet Package.
 
 ### Components
 
@@ -103,7 +103,7 @@ Any component that you have included in your application will also need to be up
 
 ### NuGet Support
 
-While we contributed changes to NuGet to work with the Unified API support, there has not been a new release of NuGet, so we are evaluating how to get NuGet to recognize the new APIs. 
+While we contributed changes to NuGet to work with the Unified API support, there has not been a new release of NuGet, so we are evaluating how to get NuGet to recognize the new APIs.
 
 Until that time, just like the components, you'll need to switch any NuGet Package you have included in your project to a version that supports the Unified APIs and do a clean build afterwards.
 

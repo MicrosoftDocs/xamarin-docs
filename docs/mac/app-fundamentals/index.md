@@ -37,7 +37,7 @@ This article covers working with images and icons in a Xamarin.Mac application. 
 
 ## [Data binding and key-value coding](~/mac/app-fundamentals/databinding.md)
 
-This article covers using key-value coding and key-value observing to allow for data binding to UI elements in Xcode's Interface Builder. Using this technique, you greatly reduce the amount of C# code that needs to be written for your Xamarin.Mac application. 
+This article covers using key-value coding and key-value observing to allow for data binding to UI elements in Xcode's Interface Builder. Using this technique, you greatly reduce the amount of C# code that needs to be written for your Xamarin.Mac application.
 
 ## [Working with databases](~/mac/app-fundamentals/databases.md)
 

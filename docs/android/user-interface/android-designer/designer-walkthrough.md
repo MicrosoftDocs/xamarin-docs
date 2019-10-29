@@ -39,8 +39,8 @@ create a user interface for an example color browser app. The color
 browser app presents a list of colors, their names, and their RGB
 values. You'll learn how to add widgets to the **Design Surface** as
 well as how to lay out these widgets visually. After that, you'll learn
-how to modify widgets interactively on the **Design Surface** or 
-by using the Designer's **Properties** pane. Finally, you'll see how 
+how to modify widgets interactively on the **Design Surface** or
+by using the Designer's **Properties** pane. Finally, you'll see how
 the design looks when the app runs on a device or emulator.
 
 <!-- markdownlint-disable MD001 -->
@@ -50,7 +50,7 @@ the design looks when the app runs on a device or emulator.
 ### Creating a new project
 
 The first step is to create a new Xamarin.Android project. Launch
-Visual Studio, click **New Project...**, and choose 
+Visual Studio, click **New Project...**, and choose
 the **Visual C\# > Android > Android App (Xamarin)** template.
 Name the new app **DesignerWalkthrough** and click **OK**.
 
@@ -220,19 +220,19 @@ the template.
 
 2. In **Properties**, enter *src* in the search box.
 
-3. Click the small square to the right of the **Src** property setting 
+3. Click the small square to the right of the **Src** property setting
     and select **Reset**:
 
 [![Clear the ImageView src setting](designer-walkthrough-images/vs/22-clear-img-src-w158-sml.png)](designer-walkthrough-images/vs/22-clear-img-src-w158.png#lightbox)
 
-This removes `android:src="@android:drawable/ic_menu_gallery"` from the 
+This removes `android:src="@android:drawable/ic_menu_gallery"` from the
 source XML for that `ImageView`.
 
 ### Adding a ListView container
 
 Now that the **list_item** layout is defined, the next step is to add a
 `ListView` to the Main layout. This `ListView` will contain a list of
-**list_item**. 
+**list_item**.
 
 In the **Solution Explorer**, open
 **Resources/layout/activity_main.axml**. In the **ToolBox**, locate the
@@ -539,14 +539,14 @@ the template.
 
 [![Clear the ImageView src setting](designer-walkthrough-images/xs/23-clear-src-m75-sml.png)](designer-walkthrough-images/xs/23-clear-src-m75.png#lightbox)
 
-This removes `android:src="@android:drawable/ic_menu_gallery"` from the 
+This removes `android:src="@android:drawable/ic_menu_gallery"` from the
 source XML for that `ImageView`.
 
 ### Adding a ListView container
 
 Now that the **list_item** layout is defined, the next step is to add a
 `ListView` to the Main layout. This `ListView` will contain a list of
-**list_item**. 
+**list_item**.
 
 In the **Solution Explorer**, open **Resources/layout/Main.axml**.
 Click the `Button` widget (if any) and delete it. In the **ToolBox**,

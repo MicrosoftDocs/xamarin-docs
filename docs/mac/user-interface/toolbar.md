@@ -17,7 +17,7 @@ Xamarin.Mac developers working with Visual Studio for Mac have access to the sam
 
 Toolbars in macOS are added to the top section of a window and provide easy access to commands related to its functionality. Toolbars can be hidden, shown, or customized by an application's users, and they can present toolbar items in various ways.
 
-This article covers the basics of working with toolbars and toolbar items in a Xamarin.Mac application. 
+This article covers the basics of working with toolbars and toolbar items in a Xamarin.Mac application.
 
 Before continuing, read through the [Hello, Mac](~/mac/get-started/hello-mac.md) article — specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections — as it covers key concepts and techniques that will be used throughout this guide.
 
@@ -33,15 +33,15 @@ Toolbars provide an easy way for your application's users to quickly access impo
 
 Toolbars can display items in three ways:
 
-1. **Icon and Text** 
+1. **Icon and Text**
 
      ![A toolbar with icons and text](toolbar-images/info02.png "A toolbar with icons and text")
 
-2. **Icon Only** 
+2. **Icon Only**
 
      ![An icon-only toolbar](toolbar-images/info03.png "An icon-only toolbar")
 
-3. **Text Only** 
+3. **Text Only**
 
      ![A text-only toolbar](toolbar-images/info04.png "A text-only toolbar")
 
@@ -75,17 +75,17 @@ To expose UI elements to C# code through outlets and actions, the Xamarin.Mac ap
 
 1. Open the app's storyboard in Xcode's Interface Builder.
 2. Select the window controller on the design surface.
-3. Switch to the **Identity Inspector** and enter "WindowController" as the **Class Name**: 
+3. Switch to the **Identity Inspector** and enter "WindowController" as the **Class Name**:
 
-    [![Setting a custom class name for the window controller](toolbar-images/windowcontroller01.png "Setting a custom class name for the window controller")](toolbar-images/windowcontroller01-large.png#lightbox) 
+    [![Setting a custom class name for the window controller](toolbar-images/windowcontroller01.png "Setting a custom class name for the window controller")](toolbar-images/windowcontroller01-large.png#lightbox)
 
 4. Save your changes and return to Visual Studio for Mac to sync.
-5. A **WindowController.cs** file will be added to your project in the **Solution Pad** in Visual Studio for Mac: 
+5. A **WindowController.cs** file will be added to your project in the **Solution Pad** in Visual Studio for Mac:
 
     ![Selecting WindowController.cs in the Solution Pad](toolbar-images/windowcontroller02.png "Selecting WindowController.cs in the Solution Pad")
 
 6. Reopen the storyboard in Xcode's Interface Builder.
-7. The **WindowController.h** file will be available for use: 
+7. The **WindowController.h** file will be available for use:
 
     [![The WindowController.h file](toolbar-images/windowcontroller03.png "The WindowController.h file")](toolbar-images/windowcontroller03-large.png#lightbox)
 
@@ -112,7 +112,7 @@ The following properties are available:
 5. **Size** - Sets the size of the toolbar
 6. **Autosave** - If selected, the application will persist a user's toolbar configuration changes across application launches.
 
-Select the **Autosave** option and leave all the other properties at their default settings. 
+Select the **Autosave** option and leave all the other properties at their default settings.
 
 After opening the toolbar in the **Interface Hierarchy**, bring up the customization dialog by selecting a toolbar item:
 
@@ -130,11 +130,11 @@ The following toolbar items can be added:
 - **Separator Toolbar Item** - A visible separator between two or more toolbar items, for grouping
 - **Customize Toolbar Item** - Allows users to customize the toolbar
 - **Print Toolbar Item** - Allows users to print the open document
-- **Show Colors Toolbar Item** - Displays the standard system color picker: 
+- **Show Colors Toolbar Item** - Displays the standard system color picker:
 
      ![The system color picker](toolbar-images/edit07.png "The system color picker")
 
-- **Show Font Toolbar Item** - Displays the standard system font dialog: 
+- **Show Font Toolbar Item** - Displays the standard system font dialog:
 
      ![The font selector](toolbar-images/edit08.png "The font selector")
 
@@ -147,7 +147,7 @@ To add an item to a toolbar, select the toolbar in the **Interface Hierarchy** a
 
 ![The Allowed Toolbar Items in the toolbar customization dialog](toolbar-images/add01.png "The Allowed Toolbar Items in the toolbar customization dialog")
 
-To make sure that a new item is part of the default toolbar, drag it to the **Default Toolbar Items** area: 
+To make sure that a new item is part of the default toolbar, drag it to the **Default Toolbar Items** area:
 
 ![Reordering a toolbar item by dragging](toolbar-images/add02.png "Reordering a toolbar item by dragging")
 
@@ -167,7 +167,7 @@ The following properties are available:
 - **Selectable** - If checked, the item will act like an on/off button.
 
 > [!IMPORTANT]
-> Add an item to the **Allowed Toolbar Items** area but not the default toolbar to provide customization options for users. 
+> Add an item to the **Allowed Toolbar Items** area but not the default toolbar to provide customization options for users.
 
 ### Adding other UI controls to a toolbar
 
@@ -194,7 +194,7 @@ Save the document, return to Visual Studio for Mac to sync with Xcode, run the a
 Using an **Image Toolbar Item**, any bitmap image added to the **Resources** folder (and given a build action of **Bundle Resource**) can be displayed on the toolbar as an icon:
 
 1. In Visual Studio for Mac, in the **Solution Pad**, right-click the **Resources** folder and select **Add** > **Add Files**.
-2. From the **Add Files** dialog box, navigate to the desired images, select them and click the **Open** button: 
+2. From the **Add Files** dialog box, navigate to the desired images, select them and click the **Open** button:
 
     [![Selecting images to add](toolbar-images/edit11.png "Selecting images to add")](toolbar-images/edit11-large.png#lightbox)
 
@@ -206,23 +206,23 @@ Using an **Image Toolbar Item**, any bitmap image added to the **Resources** fol
 
 5. Select the toolbar in the **Interface Hierarchy** and click one of its items to open the customization dialog.
 
-6. Drag an **Image Toolbar Item** from the **Library Inspector** to the toolbar's **Allowed Toolbar Items** area: 
+6. Drag an **Image Toolbar Item** from the **Library Inspector** to the toolbar's **Allowed Toolbar Items** area:
 
     ![An Image Toolbar Item added to the Allowed Toolbar Items area](toolbar-images/edit14.png "An Image Toolbar Item added to the Allowed Toolbar Items area")
 
-7. In the **Attributes Inspector**, select the image that was just added in Visual Studio for Mac: 
+7. In the **Attributes Inspector**, select the image that was just added in Visual Studio for Mac:
 
     ![Setting a custom image for a toolbar item](toolbar-images/edit15.png "Setting a custom image for a toolbar item")
 
-8. Set the **Label** to "Trash" and the **Palette Label** to "Erase Document": 
+8. Set the **Label** to "Trash" and the **Palette Label** to "Erase Document":
 
     ![Setting the toolbar item Label and Palette Label](toolbar-images/edit16.png "Setting the toolbar item Label and Palette Label")
 
-9. Drag a **Separator Toolbar Item** from the **Library Inspector** to the toolbar's **Allowed Toolbar Items** area: 
+9. Drag a **Separator Toolbar Item** from the **Library Inspector** to the toolbar's **Allowed Toolbar Items** area:
 
     [![A Separator Toolbar Item added to the Allowed Toolbar Items area](toolbar-images/edit17.png "A Separator Toolbar Item added to the Allowed Toolbar Items area")](toolbar-images/edit17-large.png#lightbox)
 
-10. Drag the separator item and the "Trash" item to the **Default Toolbar Items** area and set the order of the toolbar items from left to right as follows (Colors, Fonts, Separator, Trash, Flexible Space, Print): 
+10. Drag the separator item and the "Trash" item to the **Default Toolbar Items** area and set the order of the toolbar items from left to right as follows (Colors, Fonts, Separator, Trash, Flexible Space, Print):
 
     ![The default toolbar items](toolbar-images/edit18.png "The default toolbar items")
 
@@ -241,16 +241,16 @@ To access a toolbar or toolbar item in code, it must be attached to an outlet or
 
     [![Using the Identity Inspector to set a custom class for the window controller](toolbar-images/edit20a.png "Using the Identity Inspector to set a custom class for the window controller")](toolbar-images/edit20a-large.png#lightbox)
 
-3. Next, select the toolbar item in the **Interface Hierarchy**: 
+3. Next, select the toolbar item in the **Interface Hierarchy**:
 
     ![Selecting the toolbar item in the Interface Hierarchy](toolbar-images/edit20.png "Selecting the toolbar item in the Interface Hierarchy")  
 
 4. Open the **Assistant View**, select the **WindowController.h** file, and control-drag from the toolbar item to the **WindowController.h** file.
-5. Set the **Connection** type to **Action**, enter "trashDocument" for the **Name**, and click the **Connect** button: 
+5. Set the **Connection** type to **Action**, enter "trashDocument" for the **Name**, and click the **Connect** button:
 
     [![Configuring an action for a toolbar item](toolbar-images/edit23.png "Configuring an action for a toolbar item")](toolbar-images/edit23-large.png#lightbox)
 
-6. Expose the **Text View** as an outlet called "documentEditor" in the **ViewController.h** file: 
+6. Expose the **Text View** as an outlet called "documentEditor" in the **ViewController.h** file:
 
     [![Configuring an outlet for the text view](toolbar-images/edit24.png "Configuring an outlet for the text view")](toolbar-images/edit24-large.png#lightbox)
 
@@ -285,7 +285,7 @@ Notice that the **Trash** toolbar item can now be used to delete text.
 
 To disable an item on a toolbar, create a custom `NSToolbarItem` class and override the `Validate` method. Then, in Interface Builder, assign the custom type to the item that you want to enable/disable.
 
-To create a custom `NSToolbarItem` class, right-click on the project and select **Add** > **New File...**. Select **General** > **Empty Class**, enter "ActivatableItem" for the **Name**, and click the **New** button: 
+To create a custom `NSToolbarItem` class, right-click on the project and select **Add** > **New File...**. Select **General** > **Empty Class**, enter "ActivatableItem" for the **Name**, and click the **New** button:
 
 ![Adding an empty class in Visual Studio for Mac](toolbar-images/custom01.png "Adding an empty class in Visual Studio for Mac")
 

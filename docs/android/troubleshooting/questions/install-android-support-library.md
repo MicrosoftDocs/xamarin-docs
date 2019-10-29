@@ -11,7 +11,7 @@ ms.date: 02/16/2018
 
 # How can I manually install the Android Support libraries required by the Xamarin.Android.Support packages?
 
-## Example steps for Xamarin.Android.Support.v4 
+## Example steps for Xamarin.Android.Support.v4
 
 # [Visual Studio](#tab/windows)
 
@@ -150,7 +150,7 @@ MD5 hash from the previous MD5 hash calculating step. For example:
 
 **$HOME/.local/share/Xamarin/zips/F16A3455987DBAE5783F058F19F7FCDF.zip**
 
-(Optional) Unzip the file into: 
+(Optional) Unzip the file into:
 
 **$HOME/.local/share/Xamarin/Xamarin.Android.Support.v4/23.4.0.0/content/**
 

@@ -18,7 +18,7 @@ Xamarin.
 
 ## [Introduction to watchOS 4](introduction-to-watchos4.md)
 
-This document provides a high-level overview of features added and 
+This document provides a high-level overview of features added and
 updated in watchOS 4.
 
 ## [Introduction to watchOS 3](introduction-to-watchos3/index.md)

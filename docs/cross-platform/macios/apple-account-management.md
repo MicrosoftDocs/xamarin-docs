@@ -48,7 +48,7 @@ You must have an Apple Developer account to use this feature. More information o
 
     ![Apple Developer Account options](apple-account-management-images/image1.png)
 
-2. Press the **+** button to display the sign in dialog, as depicted below: 
+2. Press the **+** button to display the sign in dialog, as depicted below:
 
     ![fastlane dialog.](apple-account-management-images/image2.png)
 
@@ -88,7 +88,7 @@ You must have an Apple Developer account to use this feature. More information o
 
 ## Managing Signing Identities and Provisioning Profiles
 
-The team details dialog displays a list of Signing Identities, organized by type. The **Status** column advises you if the certificate is: 
+The team details dialog displays a list of Signing Identities, organized by type. The **Status** column advises you if the certificate is:
 
 - **Valid** – The signing identity (both the certificate and the private key) is installed on your machine and it has not expired.
 

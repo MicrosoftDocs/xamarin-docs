@@ -10,8 +10,8 @@ ms.date: 06/06/2017
 
 # Android Beam
 
-Android Beam is a Near Field Communication (NFC) technology introduced in 
-Android 4.0 that allows applications to share information over NFC when 
+Android Beam is a Near Field Communication (NFC) technology introduced in
+Android 4.0 that allows applications to share information over NFC when
 in close proximity.
 
 [![Diagram illustrating two devices in close proximity sharing information](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)

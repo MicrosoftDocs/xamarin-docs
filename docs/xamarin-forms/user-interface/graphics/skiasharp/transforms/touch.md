@@ -23,7 +23,7 @@ All the samples shown here use the Xamarin.Forms touch-tracking effect presented
 
 ## Dragging and Translation
 
-One of the most important applications of matrix transforms is touch processing. A single [`SKMatrix`](xref:SkiaSharp.SKMatrix) value can consolidate a series of touch operations. 
+One of the most important applications of matrix transforms is touch processing. A single [`SKMatrix`](xref:SkiaSharp.SKMatrix) value can consolidate a series of touch operations.
 
 For single-finger dragging, the `SKMatrix` value performs translation. This is demonstrated in the **Bitmap Dragging** page. The XAML file instantiates an `SKCanvasView` in a Xamarin.Forms `Grid`. A `TouchEffect` object has been added to the `Effects` collection of that `Grid`:
 
@@ -34,7 +34,7 @@ For single-finger dragging, the `SKMatrix` value performs translation. This is d
              xmlns:tt="clr-namespace:TouchTracking"
              x:Class="SkiaSharpFormsDemos.Transforms.BitmapDraggingPage"
              Title="Bitmap Dragging">
-    
+
     <Grid BackgroundColor="White">
         <skia:SKCanvasView x:Name="canvasView"
                            PaintSurface="OnCanvasViewPaintSurface" />
@@ -102,7 +102,7 @@ public partial class BitmapDraggingPage : ContentPage
     {
         // Convert Xamarin.Forms point to pixels
         Point pt = args.Location;
-        SKPoint point = 
+        SKPoint point =
             new SKPoint((float)(canvasView.CanvasSize.Width * pt.X / canvasView.Width),
                         (float)(canvasView.CanvasSize.Height * pt.Y / canvasView.Height));
 
@@ -227,7 +227,7 @@ public partial class BitmapScalingPage : ContentPage
                             !float.IsNaN(scaleY) && !float.IsInfinity(scaleY))
                         {
                             // If something bad hasn't happened, calculate a scale and translation matrix
-                            SKMatrix scaleMatrix = 
+                            SKMatrix scaleMatrix =
                                 SKMatrix.MakeScale(scaleX, scaleY, pivotPoint.X, pivotPoint.Y);
 
                             SKMatrix.PostConcat(ref matrix, scaleMatrix);
@@ -451,10 +451,10 @@ The [**TouchManipulationPage.xaml**](https://github.com/xamarin/xamarin-forms-sa
                 4
             </Picker.SelectedIndex>
         </Picker>
-        
+
         <Grid BackgroundColor="White"
               Grid.Row="1">
-            
+
             <skia:SKCanvasView x:Name="canvasView"
                                PaintSurface="OnCanvasViewPaintSurface" />
             <Grid.Effects>

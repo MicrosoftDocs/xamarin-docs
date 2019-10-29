@@ -280,7 +280,7 @@ This is a **warning** that Element `E` is not generated as its name conflicts wi
 
 ### EM1053: Target `E` is not supported for Xamarin.iOS and Xamarin.Mac. Only the `framework` option is considered supported and should be used.
 
-This is a **warning** that target `E` is considered unsupported for Xamarin.iOS and Xamarin.Mac use cases. 
+This is a **warning** that target `E` is considered unsupported for Xamarin.iOS and Xamarin.Mac use cases.
 
 Consumption of static or dynamic .NET Embedding libraries may require additional work steps or tweaks, and should be avoided in most use cases.
 

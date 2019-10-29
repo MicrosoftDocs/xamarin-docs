@@ -12,8 +12,8 @@ ms.date: 02/05/2018
 
 ## Overview
 
-Xamarin.Android 4.10 introduced partial support for using `gdb` 
-by using the `_Gdb` MSBuild target. 
+Xamarin.Android 4.10 introduced partial support for using `gdb`
+by using the `_Gdb` MSBuild target.
 
 > [!NOTE]
 > `gdb` support requires that the
@@ -189,7 +189,7 @@ app instances. This will not work on pre-Android v4.0 targets.
 ### `mono_pmip` doesn't work
 
 The `mono_pmip` function (useful for
-[obtaining managed stack frames](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb)) 
+[obtaining managed stack frames](https://www.mono-project.com/docs/debug+profile/debug/#debugging-with-gdb))
 is exported from `libmonosgen-2.0.so`, which the `_Gdb` target does not
 currently pull down. (This will be fixed in a future release.)
 

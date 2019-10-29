@@ -140,7 +140,7 @@ To consume this .DLL in your Xamarin.Android app, you must first add
 a reference to the Bindings Library. Use the following steps:
 
 1. We're creating this app in the same Solution as the Bindings
-    Library to simplify this walkthrough. (The app 
+    Library to simplify this walkthrough. (The app
     that consumes the Bindings Library could also reside in a
     different Solution.) Create a new Xamarin.Android app: right-click
     the Solution and select **Add New Project**. Name the new project

@@ -13,7 +13,7 @@ ms.date: 03/31/2017
 
 If you need to set any runtime environment variables for Mono, they can be set in the **Project Options > Run > General** page.
 
-Note: Garbage Collection environment variables for SGen (MONO\_GC\_PARAMS) set this way will only be used when launching from Xamarin Studio. If you launch the app from the device, the settings for Sgen will be ignored. 
+Note: Garbage Collection environment variables for SGen (MONO\_GC\_PARAMS) set this way will only be used when launching from Xamarin Studio. If you launch the app from the device, the settings for Sgen will be ignored.
 
 To permanently set an environment variable for an app, you need to add this as an additional mtouch argument (for all relevant configurations):
 

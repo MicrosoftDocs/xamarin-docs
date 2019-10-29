@@ -16,7 +16,7 @@ ms.date: 06/13/2019
 > The Xamarin Live Player Preview has ended. The app is no longer available. The instructions below are provided for customers continuing to use the preview with Visual Studio 2017..
 
 > [!TIP]
-> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or 
+> You can use the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio 2019 or
 > Visual Studio for Mac to view your screen designs as you edit them.
 
 This article explains the limitations of Live Player, and some common problems with steps to correct them.
@@ -79,7 +79,7 @@ paired successfully.
 
 - Check that both the device and computer are on the same Wi-Fi network.
 - The network may be tightly secured (such as some corporate networks), blocking the ports needed by Xamarin Live Player. The following ports are required for the Xamarin Live Player:
-  - 37847 – Internal network access 
+  - 37847 – Internal network access
   - 8090 – External network access
 
 ## Manually Configure Device

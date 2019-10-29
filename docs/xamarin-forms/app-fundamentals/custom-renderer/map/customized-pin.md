@@ -554,7 +554,7 @@ namespace CustomRenderer.UWP
                     mapIcon.Location = snPoint;
                     mapIcon.NormalizedAnchorPoint = new Windows.Foundation.Point(0.5, 1.0);
 
-                    nativeMap.MapElements.Add(mapIcon);                    
+                    nativeMap.MapElements.Add(mapIcon);
                 }
             }
         }

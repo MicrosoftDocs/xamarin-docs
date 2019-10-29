@@ -45,7 +45,7 @@ for the discontinued Google GUI-based managers:
     [Xamarin Android SDK Manager](~/android/get-started/installation/android-sdk.md)
     instead of the legacy Google SDK Manager.
 
-- To create and configure Android Virtual Devices, use 
+- To create and configure Android Virtual Devices, use
     the [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md)
     instead of the legacy Google Emulator Manager.
 

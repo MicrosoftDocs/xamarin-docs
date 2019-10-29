@@ -69,7 +69,7 @@ A typical Layout Constraint can be expressed simply as a linear expression. Take
 Which would be converted to the following line of C# code using Layout Anchors:
 
 ```csharp
-PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Active = true; 
+PurpleView.LeadingAnchor.ConstraintEqualTo (OrangeView.TrailingAnchor, 10).Active = true;
 ```
 
 Where the parts of the C# code correspond to the given parts of the equation as follows:
@@ -131,7 +131,7 @@ For example, to create both a leading and a trailing constraint in the Visual Fo
 
 ```csharp
 // Get views being constrained
-var views = new NSMutableDictionary (); 
+var views = new NSMutableDictionary ();
 views.Add (new NSString ("orangeView"), OrangeView);
 
 // Define format and assemble constraints

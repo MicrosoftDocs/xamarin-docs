@@ -117,8 +117,8 @@ or **Run Item**.
 The test runner allows you to see which tests are registered and select
 individually which tests can be executed.
 
-[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox) 
-[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox) 
+[![](touch.unit-images/02-sml.png "The list of registered tests")](touch.unit-images/02.png#lightbox)
+[![](touch.unit-images/03-sml.png "An individual text")](touch.unit-images/03.png#lightbox)
 
 [![](touch.unit-images/04-sml.png "The run results")](touch.unit-images/04.png#lightbox)
 

@@ -16,7 +16,7 @@ _This section shows how to implement local notifications in Xamarin.Android. It 
 
 Android provides two system-controlled areas for displaying
 notification icons and notification information to the user. When a
-notification is first published, its icon is displayed in 
+notification is first published, its icon is displayed in
 the *notification area*, as shown in the following screenshot:
 
 ![Example notification area on a device](local-notifications-images/01-notification-shade.png)
@@ -147,7 +147,7 @@ notifications:
     text. In expanded mode, displays the text and an image.
 
 [Beyond the Basic Notification](#beyond-the-basic-notification) (later
-in this article) explains how to create *Big Text*, *Inbox*, and *Image* 
+in this article) explains how to create *Big Text*, *Inbox*, and *Image*
 notifications.
 
 <a name="notif-chan"></a>
@@ -491,7 +491,7 @@ For more about updating Android notifications, see
 
 ### Starting an activity from a notification
 
-In Android, it's common for a notification to be associated with 
+In Android, it's common for a notification to be associated with
 an *action* &ndash; an activity that's launched when the user taps the
 notification. This activity can reside in another application or even
 in another task. To add an action to a notification, you create a
@@ -714,7 +714,7 @@ to reveal the entire notification message:
 ![Expanded Big Text notification](local-notifications-images/16-big-text-expanded.png)
 
 This expanded layout format also includes summary text at the bottom of
-the notification. The maximum height of the *Big Text* notification 
+the notification. The maximum height of the *Big Text* notification
 is 256 dp.
 
 To create a *Big Text* notification, you instantiate a
@@ -1125,10 +1125,10 @@ if (Android.OS.Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.Lollipop) {
 ```
 
 In this example, the app's **Target Framework** is set to Android 5.0
-and the **Minimum Android Version** is set to 
-**Android 4.1 (API Level 16)**. Because `SetCategory` is available in API 
-level 21 and later, this example code will call `SetCategory` only when it 
-is available &ndash; it will not call `SetCategory` when the API level is 
+and the **Minimum Android Version** is set to
+**Android 4.1 (API Level 16)**. Because `SetCategory` is available in API
+level 21 and later, this example code will call `SetCategory` only when it
+is available &ndash; it will not call `SetCategory` when the API level is
 less than 21.
 
 ### Lock screen visibility

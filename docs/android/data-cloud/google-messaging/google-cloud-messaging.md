@@ -228,7 +228,7 @@ describe the steps required to complete this process:
 
     [![Creating XamarinGCM project](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png#lightbox)
 
-2. Next, enter the package name for your app (in this example, 
+2. Next, enter the package name for your app (in this example,
     the package name is **com.xamarin.gcmexample**) and click **Continue to
     Choose and configure services**:
 

@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 06/07/2016
 ---
 
-# tvOS in Xamarin – Internals 
+# tvOS in Xamarin – Internals
 
 ## [Assemblies](~/ios/tvos/internals/assemblies.md)
 

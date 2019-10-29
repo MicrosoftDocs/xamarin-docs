@@ -11,10 +11,10 @@ ms.date: 09/13/2016
 
 # Visual Design Updates in iOS 11
 
-In iOS 11, Apple introduced new visual changes including updates to the navigation bar, search bar, and table views. In addition improvements have been made to allow for more flexibility over margins and full screen content. These changes are covered in this guide. 
+In iOS 11, Apple introduced new visual changes including updates to the navigation bar, search bar, and table views. In addition improvements have been made to allow for more flexibility over margins and full screen content. These changes are covered in this guide.
 
-For information specifically about designing for iPhone X, watch 
-Apple's [Designing for iPhone X](https://developer.apple.com/videos/play/fall2017/801/) 
+For information specifically about designing for iPhone X, watch
+Apple's [Designing for iPhone X](https://developer.apple.com/videos/play/fall2017/801/)
 video.
 
 ## UIKit

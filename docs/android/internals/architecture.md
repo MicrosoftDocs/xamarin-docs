@@ -105,7 +105,7 @@ resource: emulators allow only 2000 global references to exist at a
 time, while most hardware allows over 52,000 global references to exist
 at a time.
 
-To track when global references are created and destroyed, you 
+To track when global references are created and destroyed, you
 can set the
 [debug.mono.log](~/android/troubleshooting/index.md)
 system property to contain

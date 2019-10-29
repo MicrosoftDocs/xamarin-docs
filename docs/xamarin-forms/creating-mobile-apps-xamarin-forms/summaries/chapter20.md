@@ -13,7 +13,7 @@ ms.date: 07/18/2018
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter20)
 
-> [!NOTE] 
+> [!NOTE]
 > Notes on this page indicate areas where Xamarin.Forms has diverged from the material presented in the book.
 
  A graphical user interface must respond to user-input events sequentially. This implies that all processing of user-input events must occur in a single thread, often called the *main thread* or the *UI thread*.

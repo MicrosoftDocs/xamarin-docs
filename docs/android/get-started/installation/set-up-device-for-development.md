@@ -136,7 +136,7 @@ To install the drivers on Windows 7:
 
 ### Installing Unverified Drivers in Windows 8
 
-Extra steps may be required to install an unverified driver in 
+Extra steps may be required to install an unverified driver in
 Windows 8. The following steps describe how to install the drivers for a Galaxy
 Nexus:
 

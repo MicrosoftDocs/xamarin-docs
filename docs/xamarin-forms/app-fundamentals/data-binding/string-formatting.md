@@ -166,7 +166,7 @@ This approach is shown in the **Better Color Selector** sample, which uses the s
             <Label Text="{Binding Luminosity, StringFormat='Luminosity = {0:F2}'}" />
         </StackLayout>
     </StackLayout>
-</ContentPage>    
+</ContentPage>
 ```
 
 There are now three pairs of `Slider` and `Label` elements that are bound to the same source property in the `HslColorViewModel` object. The only difference is that `Label` has a `StringFormat` property to display each `Slider` value.

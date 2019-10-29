@@ -55,7 +55,7 @@ To find out more about provisioning an iOS app, the [Device Provisioning](~/ios/
 
 ### Explicit App ID and Provisioning Profile
 
-The creation of an explicit **App ID** and an appropriate **Provisioning Profile** is done within Apple’s [iOS Dev Center](https://developer.apple.com/devcenter/ios/index.action). 
+The creation of an explicit **App ID** and an appropriate **Provisioning Profile** is done within Apple’s [iOS Dev Center](https://developer.apple.com/devcenter/ios/index.action).
 
 Your current **App IDs** are listed within the [Certificates, Identifiers & Profiles](https://developer.apple.com/account/ios/identifiers/bundle/bundleList.action) section of the Dev Center. Often, this list will show **ID** values of `*`, indicating that the **App ID** - **Name** can be used with any number of suffixes. Such *Wildcard App IDs* cannot be used with Health Kit.
 
@@ -134,7 +134,7 @@ The Health Kit datastore is a private, user-specific datastore that is shared am
 
 Health Kit data is limited to Apple specified types. These types are strictly defined: some, such as blood type, are limited to the particular values of an Apple supplied enumeration, while others combine a magnitude with a unit of measure (such as grams, calories, and liters). Even data that share a compatible unit of measure are distinguished by their `HKObjectType`; for instance, the type system will catch a mistaken attempt to store an `HKQuantityTypeIdentifier.NumberOfTimesFallen` value to a field expecting an `HKQuantityTypeIdentifier.FlightsClimbed` even though both use the `HKUnit.Count` unit of measure.
 
-The types storable in the Health Kit datastore are all subclasses of `HKObjectType`. `HKCharacteristicType` objects store Biological Sex, Blood Type, and Date of Birth. More common though, are `HKSampleType` objects, which represent data that is sampled at a specific time or over a period of time. 
+The types storable in the Health Kit datastore are all subclasses of `HKObjectType`. `HKCharacteristicType` objects store Biological Sex, Blood Type, and Date of Birth. More common though, are `HKSampleType` objects, which represent data that is sampled at a specific time or over a period of time.
 
 [![](healthkit-images/image08.png "HKSampleType objects chart")](healthkit-images/image08.png#lightbox)
 
@@ -142,7 +142,7 @@ The types storable in the Health Kit datastore are all subclasses of `HKObjectTy
 
 [![](healthkit-images/image09.png "The large majority of data in Health Kit are of type HKQuantityType and store their data in HKQuantitySample objects")](healthkit-images/image09.png#lightbox)
 
-`HKQuantityType` types range from `HKQuantityTypeIdentifier.ActiveEnergyBurned` to `HKQuantityTypeIdentifier.StepCount`. 
+`HKQuantityType` types range from `HKQuantityTypeIdentifier.ActiveEnergyBurned` to `HKQuantityTypeIdentifier.StepCount`.
 
 <a name="requesting-permission" />
 
@@ -179,8 +179,8 @@ private void ValidateAuthorization ()
         var typesToWrite = new NSSet (new [] { heartRateType });
         var typesToRead = new NSSet ();
         healthKitStore.RequestAuthorizationToShare (
-                typesToWrite, 
-                typesToRead, 
+                typesToWrite,
+                typesToRead,
                 ReactToHealthCarePermissions);
 }
 
@@ -262,7 +262,7 @@ namespace HKWork
                 public event GenericEventHandler<String> ErrorMessageChanged;
                 public event GenericEventHandler<Double> HeartRateStored;
 
-                public bool Enabled { 
+                public bool Enabled {
                         get { return enabled; }
                         set {
                                 if (enabled != value) {
@@ -286,7 +286,7 @@ namespace HKWork
 
                         return quantity;
                 }
-                        
+
                 public void StoreHeartRate(HKQuantity quantity)
                 {
                         var bpm = HKUnit.Count.UnitDividedBy (HKUnit.Minute);
@@ -309,7 +309,7 @@ namespace HKWork
                                                         ErrorMessageChanged(this, new GenericEventArgs<string>("Save failed"));
                                                 }
                                                 if (error != null) {
-                                                        //If there's some kind of error, disable 
+                                                        //If there's some kind of error, disable
                                                         Enabled = false;
                                                         ErrorMessageChanged (this, new GenericEventArgs<string>(error.ToString()));
                                                 }
@@ -324,19 +324,19 @@ namespace HKWork
 
 The first section is boilerplate code for creating generic events and handlers. The initial portion of the `HeartRateModel` class is also boilerplate for creating a thread-safe singleton object.
 
-Then, `HeartRateModel` exposes 3 events: 
+Then, `HeartRateModel` exposes 3 events:
 
-- `EnabledChanged` - Indicates that heart rate storage has been enabled or disabled (note that storage is initially disabled). 
-- `ErrorMessageChanged` - For this sample app, we have a very simple error-handling model: a string with the last error . 
+- `EnabledChanged` - Indicates that heart rate storage has been enabled or disabled (note that storage is initially disabled).
+- `ErrorMessageChanged` - For this sample app, we have a very simple error-handling model: a string with the last error .
 - `HeartRateStored` - Raised when a heart rate is stored in the Health Kit database.
 
 Note that the whenever these events are fired, it is done via `NSObject.InvokeOnMainThread()`, which allows subscribers to update the UI. Alternatively, the events could be documented as being raised on background threads and the responsibility of ensuring compatibility could be left to their handlers. Thread considerations are important in Health Kit applications because many of the functions, such as the permission request, are asynchronous and execute their callbacks on non-main threads.
 
-The Heath Kit specific code in `HeartRateModel` is in the two functions `HeartRateInBeatsPerMinute()` and `StoreHeartRate()`. 
+The Heath Kit specific code in `HeartRateModel` is in the two functions `HeartRateInBeatsPerMinute()` and `StoreHeartRate()`.
 
-`HeartRateInBeatsPerMinute()` converts its argument into a strongly-typed Health Kit `HKQuantity`. The type of the quantity is that specified by the `HKQuantityTypeIdentifierKey.HeartRate` and the units of the quantity are `HKUnit.Count` divided by `HKUnit.Minute` (in other words, the unit is *beats per minute*). 
+`HeartRateInBeatsPerMinute()` converts its argument into a strongly-typed Health Kit `HKQuantity`. The type of the quantity is that specified by the `HKQuantityTypeIdentifierKey.HeartRate` and the units of the quantity are `HKUnit.Count` divided by `HKUnit.Minute` (in other words, the unit is *beats per minute*).
 
-The `StoreHeartRate()` function takes an `HKQuantity` (in the sample app, one created by `HeartRateInBeatsPerMinute()` ). To validate its data, it uses the `HKQuantity.IsCompatible()` method, which returns `true` if the object’s units can be converted into the units in the argument. If the quantity was created with `HeartRateInBeatsPerMinute()` this will obviously return `true`, but it would also return `true` if the quantity were created as, for instance, *Beats Per Hour*. More commonly, `HKQuantity.IsCompatible()` can be used to validate mass, distance, and energy which the user or a device might input or display in one system of measurement (such as Imperial units) but which might be stored in another system (such as metric units). 
+The `StoreHeartRate()` function takes an `HKQuantity` (in the sample app, one created by `HeartRateInBeatsPerMinute()` ). To validate its data, it uses the `HKQuantity.IsCompatible()` method, which returns `true` if the object’s units can be converted into the units in the argument. If the quantity was created with `HeartRateInBeatsPerMinute()` this will obviously return `true`, but it would also return `true` if the quantity were created as, for instance, *Beats Per Hour*. More commonly, `HKQuantity.IsCompatible()` can be used to validate mass, distance, and energy which the user or a device might input or display in one system of measurement (such as Imperial units) but which might be stored in another system (such as metric units).
 
 Once the compatibility of the quantity has been validated, the `HKQuantitySample.FromType()` factory method is used to create a strongly-typed `heartRateSample` object. `HKSample` objects have a start and end date; for instantaneous readings, these values should be the same, as they are in the example. The sample also does not set any key-value data in its `HKMetadata` argument, but one could use code such as the following code to specify sensor location:
 
@@ -391,9 +391,9 @@ The iOS Simulator does not support Health Kit. Debugging must be done on a physi
 Attach a properly-provisioned iOS 8 development device to your system. Select it as the deployment target in Visual Studio for Mac and from the menu choose **Run > Debug**.
 
 > [!IMPORTANT]
-> Mistakes relating to provisioning will surface at this point. To troubleshoot errors, review the Creating and Provisioning a Health Kit App section above. The components are: 
+> Mistakes relating to provisioning will surface at this point. To troubleshoot errors, review the Creating and Provisioning a Health Kit App section above. The components are:
 >
-> - **iOS Dev Center** - Explicit App ID & Health Kit enabled Provisioning Profile. 
+> - **iOS Dev Center** - Explicit App ID & Health Kit enabled Provisioning Profile.
 > - **Project Options** - Bundle Identifier (explicit App ID) & Provisioning Profile.
 > - **Source code** - Entitlements.plist & Info.plist
 
@@ -413,7 +413,7 @@ Double-click the **Home** button on your device and open Health app. Click the *
 
 Reading data from the Health Kit database is very similar to writing data: one specifies the types of data one is trying to access, requests authorization, and if that authorization is granted, the data are available, with automatic conversion to compatible units of measure.
 
-There are a number of more sophisticated query functions which allow predicate-based queries and queries that perform updates when relevant data is updated. 
+There are a number of more sophisticated query functions which allow predicate-based queries and queries that perform updates when relevant data is updated.
 
 Developers of Health Kit applications should review the Health Kit section of Apple’s [App Review Guidelines](https://developer.apple.com/app-store/review/guidelines/#healthkit).
 
@@ -423,9 +423,9 @@ As of the writing of this article, there is currently no equivalent to Health Ki
 
 ## Summary
 
-In this article we've seen how Health Kit allows applications to store, retrieve, and share health related information, while also providing a standard Health app that allows the user access and control over this data. 
+In this article we've seen how Health Kit allows applications to store, retrieve, and share health related information, while also providing a standard Health app that allows the user access and control over this data.
 
-We have also seen how privacy, security, and data integrity are overriding concerns for health-related information and apps using Health Kit must deal with the increase in complexity in application management aspects (provisioning), coding (Health Kit’s type system), and user experience (user control of permissions via system dialogs and Health app). 
+We have also seen how privacy, security, and data integrity are overriding concerns for health-related information and apps using Health Kit must deal with the increase in complexity in application management aspects (provisioning), coding (Health Kit’s type system), and user experience (user control of permissions via system dialogs and Health app).
 
 Finally, we've taking a look at a simple implementation of Health Kit using the included sample app that writes heartbeat data to the Health Kit store and has an asynchronous-aware design.
 

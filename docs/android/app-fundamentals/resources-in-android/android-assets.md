@@ -33,7 +33,7 @@ came from an asset!".
 Visual Studio should have set the **Build Action** for this file to
 **AndroidAsset**:
 
-![Setting the build action to AndroidAsset](android-assets-images/asset-properties-vs.png) 
+![Setting the build action to AndroidAsset](android-assets-images/asset-properties-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -64,7 +64,7 @@ protected override void OnCreate (Bundle bundle)
 
     // Create a new TextView and set it as our view
     TextView tv = new TextView (this);
-    
+
     // Read the contents of our asset
     string content;
     AssetManager assets = this.Assets;

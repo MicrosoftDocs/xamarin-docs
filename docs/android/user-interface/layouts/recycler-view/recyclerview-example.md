@@ -15,7 +15,7 @@ To understand how `RecyclerView` works in a typical application, this
 topic explores the
 [RecyclerViewer](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-recyclerviewer) sample
 app, a simple code example that uses `RecyclerView` to display a large
-collection of photos: 
+collection of photos:
 
 [![Two screenshots of a RecyclerView app that uses CardViews to display photos](recyclerview-example-images/01-recyclerviewer-sml.png)](recyclerview-example-images/01-recyclerviewer.png#lightbox)
 
@@ -120,14 +120,14 @@ This code does the following:
 
 1. Instantiates the `PhotoAlbum` data source.
 
-2. Passes the photo album data source to the constructor of the adapter, 
-   `PhotoAlbumAdapter` (which is defined later in this guide). 
+2. Passes the photo album data source to the constructor of the adapter,
+   `PhotoAlbumAdapter` (which is defined later in this guide).
    Note that it is considered a best practice to pass the data
-   source as a parameter to the constructor of the adapter. 
+   source as a parameter to the constructor of the adapter.
 
 3. Gets the `RecyclerView` from the layout.
 
-4. Plugs the adapter into the `RecyclerView` instance by calling 
+4. Plugs the adapter into the `RecyclerView` instance by calling
    the `RecyclerView` `SetAdapter` method as shown above.
 
 ### Layout Manager
@@ -501,7 +501,7 @@ scrolling is horizontal rather than vertical:
 By changing only one line of code, it is possible to modify the
 photo-viewing app to use a different layout with different behavior.
 Notice that neither the adapter code nor the layout XML had to be
-modified to change the layout style. 
+modified to change the layout style.
 
 In the next topic,
 [Extending the RecyclerView Example](~/android/user-interface/layouts/recycler-view/extending-the-example.md),

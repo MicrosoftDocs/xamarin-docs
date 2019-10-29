@@ -60,7 +60,7 @@ tvOS 10 makes the following enhancements to the Core Image framework:
 
 - The `ImageWithExtent` method of the [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) class can be used to insert custom processing into the filter operation. Core Image will invoke the given callback between filters when processing an image for output or display.
 - The app can now process images in a color space outside of the Core Image context's working color space by converting in and out of the color space before and after processing.
-- Several rendering performance enhancements have been made to `UIImage` rendering (when backed by Core Image image stores) in `UIImageView` objects. 
+- Several rendering performance enhancements have been made to `UIImage` rendering (when backed by Core Image image stores) in `UIImageView` objects.
 - `UIImage` objects tagged wide-gamut will render as wide-gamut color in `UIImageView` objects on iOS devices that support wide color.
 - Core Image kernel code can now request specific pixel output formats.
 

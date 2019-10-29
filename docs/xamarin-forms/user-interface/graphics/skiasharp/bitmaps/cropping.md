@@ -71,7 +71,7 @@ class CroppingRectangle
             Rect = rect;
         }
     }
-    
+
     public SKRect Rect { set; get; }
     ···
 }
@@ -100,7 +100,7 @@ class CroppingRectangle
 }
 ```
 
-This array is used in the following method, which is called `HitTest`. The `SKPoint` parameter is a point corresponding to a finger touch or a mouse click. The method returns an index (0, 1, 2, or 3) corresponding to the corner that the finger or mouse pointer touched, within a distance given by the `radius` parameter: 
+This array is used in the following method, which is called `HitTest`. The `SKPoint` parameter is a point corresponding to a finger touch or a mouse click. The method returns an index (0, 1, 2, or 3) corresponding to the corner that the finger or mouse pointer touched, within a distance given by the `radius` parameter:
 
 ```csharp
 class CroppingRectangle
@@ -113,7 +113,7 @@ class CroppingRectangle
         for (int index = 0; index < corners.Length; index++)
         {
             SKPoint diff = point - corners[index];
-                
+
             if ((float)Math.Sqrt(diff.X * diff.X + diff.Y * diff.Y) < radius)
             {
                 return index;
@@ -263,7 +263,7 @@ class PhotoCropperCanvasView : SKCanvasView
 
         canvas.Clear(SKColors.Gray);
 
-        // Calculate rectangle for displaying bitmap 
+        // Calculate rectangle for displaying bitmap
         float scale = Math.Min((float)info.Width / bitmap.Width, (float)info.Height / bitmap.Height);
         float x = (info.Width - scale * bitmap.Width) / 2;
         float y = (info.Height - scale * bitmap.Height) / 2;
@@ -322,7 +322,7 @@ class PhotoCropperCanvasView : SKCanvasView
     CroppingRectangle croppingRect;
     SKMatrix inverseBitmapMatrix;
 
-    // Touch tracking 
+    // Touch tracking
     TouchEffect touchEffect = new TouchEffect();
     struct TouchPoint
     {
@@ -376,7 +376,7 @@ class PhotoCropperCanvasView : SKCanvasView
                 if (touchPoints.ContainsKey(args.Id))
                 {
                     TouchPoint touchPoint = touchPoints[args.Id];
-                    croppingRect.MoveCorner(touchPoint.CornerIndex, 
+                    croppingRect.MoveCorner(touchPoint.CornerIndex,
                                             bitmapLocation - touchPoint.Offset);
                     InvalidateSurface();
                 }
@@ -420,10 +420,10 @@ class PhotoCropperCanvasView : SKCanvasView
         get
         {
             SKRect cropRect = croppingRect.Rect;
-            SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width, 
+            SKBitmap croppedBitmap = new SKBitmap((int)cropRect.Width,
                                                   (int)cropRect.Height);
             SKRect dest = new SKRect(0, 0, cropRect.Width, cropRect.Height);
-            SKRect source = new SKRect(cropRect.Left, cropRect.Top, 
+            SKRect source = new SKRect(cropRect.Left, cropRect.Top,
                                        cropRect.Right, cropRect.Bottom);
 
             using (SKCanvas canvas = new SKCanvas(croppedBitmap))
@@ -540,12 +540,12 @@ The **PhotoPuzzlePage1.xaml** file consists of a `Button`:
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="SkiaSharpFormsDemos.Bitmaps.PhotoPuzzlePage1"
              Title="Photo Puzzle">
-    
+
     <Button Text="Pick a photo from your library"
-            VerticalOptions="CenterAndExpand" 
+            VerticalOptions="CenterAndExpand"
             HorizontalOptions="CenterAndExpand"
             Clicked="OnPickButtonClicked"/>
-    
+
 </ContentPage>
 ```
 
@@ -579,7 +579,7 @@ The method then navigates to `PhotoPuzzlePage2`, passing to the constuctor the s
 
 It's possible that the photo selected from the library is not oriented as it appeared in the photo library, but is rotated or upside-down. (This is particularly a problem with iOS devices.) For that reason, `PhotoPuzzlePage2` allows you to rotate the image to a desired orientation. The XAML file contains three buttons labeled **90&#x00B0; Right** (meaning clockwise), **90&#x00B0; Left** (counterclockwise), and **Done**.
 
-The code-behind file implements the bitmap-rotation logic shown in the article **[Creating and Drawing on SkiaSharp Bitmaps](drawing.md#rotating-bitmaps)**. The user can rotate the image 90 degrees clockwise or counter-clockwise any number of times: 
+The code-behind file implements the bitmap-rotation logic shown in the article **[Creating and Drawing on SkiaSharp Bitmaps](drawing.md#rotating-bitmaps)**. The user can rotate the image 90 degrees clockwise or counter-clockwise any number of times:
 
 ```csharp
 public partial class PhotoPuzzlePage2 : ContentPage
@@ -755,7 +755,7 @@ Pressing the **Randomize** button mixes up all the tiles:
 
 [![Photo Puzzle 2](cropping-images/PhotoPuzzle2.png "Photo Puzzle 2")](cropping-images/PhotoPuzzle2-Large.png#lightbox)
 
-Now you can put them back in the correct order. Any tiles in the same row or column as the blank square can be tapped to move them into the blank square. 
+Now you can put them back in the correct order. Any tiles in the same row or column as the blank square can be tapped to move them into the blank square.
 
 ## Related links
 

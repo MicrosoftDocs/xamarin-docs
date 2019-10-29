@@ -47,7 +47,7 @@ First, let's create a new `SourceListItem` class to hold the data for our Source
 
 [![](source-list-images/source01.png "Adding an empty class")](source-list-images/source01.png#lightbox)
 
-Make the `SourceListItem.cs` file look like the following: 
+Make the `SourceListItem.cs` file look like the following:
 
 ```csharp
 using System;
@@ -127,9 +127,9 @@ namespace MacOutlines
 
         public object Current
         {
-            get 
-            { 
-                try 
+            get
+            {
+                try
                 {
                     return _items[_position];
                 }
@@ -314,7 +314,7 @@ namespace MacOutlines
             if (item == null) {
                 return Items [(int)childIndex];
             } else {
-                return ((SourceListItem)item) [(int)childIndex]; 
+                return ((SourceListItem)item) [(int)childIndex];
             }
         }
 
@@ -339,7 +339,7 @@ namespace MacOutlines
                 index += item.Count + 1;
             }
 
-            // Not found 
+            // Not found
             return null;
         }
         #endregion
@@ -496,7 +496,7 @@ namespace MacOutlines
             this.Delegate = new SourceListDelegate (this);
 
         }
-        
+
         public void AddItem(SourceListItem item) {
             if (Data != null) {
                 Data.Items.Add (item);
@@ -568,8 +568,8 @@ public override void AwakeFromNib ()
     library.AddItem ("Music", "album.png");
     SourceList.AddItem (library);
 
-    // Add Rotation 
-    var rotation = new SourceListItem ("Rotation"); 
+    // Add Rotation
+    var rotation = new SourceListItem ("Rotation");
     rotation.AddItem ("View Rotation", "redo.png");
     SourceList.AddItem (rotation);
 

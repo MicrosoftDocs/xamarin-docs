@@ -15,7 +15,7 @@ _This page contains some tips to help build NuGet packages that target the Xamar
 > [!NOTE]
 > Xamarin Studio 6.2 (and Visual Studio for Mac) includes the ability to
 > _automatically_ generate NuGet packages from PCL, .NET Standard, or
-> Shared Projects. Refer to the 
+> Shared Projects. Refer to the
 > [Multiplatform Libraries for Code Sharing](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 > guide for more details.
 
@@ -95,5 +95,5 @@ Some open-source examples that you can refer to:
 
 ## Related Links
 
-- [Nugetizer-3000 Automated Nuget Creation](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
+- [Nugetizer-3000 Automated Nuget Creation](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)
 - [Including a NuGet in your Project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

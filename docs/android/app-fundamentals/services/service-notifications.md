@@ -19,21 +19,21 @@ Service notifications allow an app to display information to the user, even if t
 
 ```csharp
 [Service]
-public class MyService: Service 
+public class MyService: Service
 {
     // A notification requires an id that is unique to the application.
     const int NOTIFICATION_ID = 9000;
-    
+
     public override StartCommandResult OnStartCommand(Intent intent, StartCommandFlags flags, int startId)
     {
         // Code omitted for clarity - here is where the service would do something.
-    
+
         // Work has finished, now dispatch anotification to let the user know.
         Notification.Builder notificationBuilder = new Notification.Builder(this)
             .SetSmallIcon(Resource.Drawable.ic_notification_small_icon)
             .SetContentTitle(Resources.GetString(Resource.String.notification_content_title))
             .SetContentText(Resources.GetString(Resource.String.notification_content_text));
-        
+
         var notificationManager = (NotificationManager)GetSystemService(NotificationService);
         notificationManager.Notify(NOTIFICATION_ID, notificationBuilder.Build());
     }
@@ -52,7 +52,7 @@ When the user slides down the notification screen from the top, the full notific
 
 To update a notification, the service will republish the notification using the same notification ID. Android will display or update the notification in the status bar as necessary.
 
-```csharp 
+```csharp
 void UpdateNotification(string content)
 {
    var notification = GetNotification(content, pendingIntent);

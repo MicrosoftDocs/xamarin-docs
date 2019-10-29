@@ -17,7 +17,7 @@ Use Visual Studio for Mac's native debugging support for debugging C# and other 
 languages code and use [LLDB](https://lldb.llvm.org/tutorial.html) when you need to debug C, C++ or Objective C codethat you might be linking with your Xamarin.iOS project.
 
 > [!NOTE]
-> When you compile applications in Debug mode, Xamarin.iOS will generate 
+> When you compile applications in Debug mode, Xamarin.iOS will generate
 > slower and much larger applications as every line of code must be
 > instrumented. Before releasing, make sure that you do a Release build.
 

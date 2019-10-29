@@ -81,7 +81,7 @@ What kind of process the service will run in depends on the value of the `Proces
 - **Private Process** &ndash; A private process is one that is only
     available to the application that started it. To identify a process
     as private, its name must start with a **:** (semi-colon). The
-    service depicted in the previous code snippet and screenshot is a private 
+    service depicted in the previous code snippet and screenshot is a private
     process. The following code snippet is an example of the
     `ServiceAttribute`:
 
@@ -110,7 +110,7 @@ What kind of process the service will run in depends on the value of the `Proces
     with no special permissions of its own. To run a service in an
     isolated process, the `IsolatedProcess` property of the
     `ServiceAttribute` is set to `true` as shown in this code snippet:
-    
+
     ```csharp
     [Service(Name = "com.xamarin.TimestampService",
              IsolatedProcess= true,

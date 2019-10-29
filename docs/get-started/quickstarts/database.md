@@ -37,7 +37,7 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
 2. In **Solution Explorer**, select the **Notes** project, right-click and select **Manage NuGet Packages...**:
 
-    ![](database-images/vs/add-nuget-packages.png "Add NuGet Packages")    
+    ![](database-images/vs/add-nuget-packages.png "Add NuGet Packages")
 
 3. In the **NuGet Package Manager**, select the **Browse** tab, search for the **sqlite-net-pcl** NuGet package, select it, and click the **Install** button to add it to the project:
 
@@ -207,7 +207,7 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
         listView.ItemsSource = await App.Database.GetNotesAsync();
     }
-    ```    
+    ```
 
     This code populates the [`ListView`](xref:Xamarin.Forms.ListView) with any notes stored in the database.
 
@@ -233,7 +233,7 @@ You should successfully complete the [previous quickstart](multi-page.md) before
           await App.Database.DeleteNoteAsync(note);
           await Navigation.PopAsync();
       }
-      ```    
+      ```
 
       The `NoteEntryPage` stores a `Note` instance, which represents a single note, in the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the page. When the `OnSaveButtonClicked` event handler is executed, the `Note` instance is saved to the database and the application navigates back to the previous page. When the `OnDeleteButtonClicked` event handler is executed, the `Note` instance is deleted from the database and the application navigates back to the previous page.
 
@@ -254,7 +254,7 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
 2. In the **Solution Pad**, select the **Notes** project, right-click and select **Add > Add NuGet Packages...**:
 
-    ![](database-images/vsmac/add-nuget-packages.png "Add NuGet Packages")    
+    ![](database-images/vsmac/add-nuget-packages.png "Add NuGet Packages")
 
 3. In the **Add Packages** window, search for the **sqlite-net-pcl** NuGet package, select it, and click the **Add Package** button to add it to the project:
 
@@ -424,7 +424,7 @@ You should successfully complete the [previous quickstart](multi-page.md) before
 
         listView.ItemsSource = await App.Database.GetNotesAsync();
     }
-    ```    
+    ```
 
     This code populates the [`ListView`](xref:Xamarin.Forms.ListView) with any notes stored in the database.
 
@@ -450,7 +450,7 @@ You should successfully complete the [previous quickstart](multi-page.md) before
           await App.Database.DeleteNoteAsync(note);
           await Navigation.PopAsync();
       }
-      ```    
+      ```
 
       The `NoteEntryPage` stores a `Note` instance, which represents a single note, in the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the page. When the `OnSaveButtonClicked` event handler is executed, the `Note` instance is saved to the database and the application navigates back to the previous page. When the `OnDeleteButtonClicked` event handler is executed, the `Note` instance is deleted from the database and the application navigates back to the previous page.
 

@@ -44,7 +44,7 @@ On your Mac build host, the following components should be installed:
 
 ## Connecting a Device
 
-In order to deploy and debug wirelessly on your device, you must pair your iOS device or Apple TV with Xcode on your Mac. Once paired, you can select it from the device target list in Visual Studio. 
+In order to deploy and debug wirelessly on your device, you must pair your iOS device or Apple TV with Xcode on your Mac. Once paired, you can select it from the device target list in Visual Studio.
 
 The following pairing process should only need to happen once per device. Xcode will retain the connection settings.
 
@@ -73,11 +73,11 @@ The following pairing process should only need to happen once per device. Xcode 
 
 When a device is connected wirelessly and ready to be used for deployment, it shows up in the device target list, as if the device were connected through USB.
 
-To test on a physical device, the device must be [provisioned](~/ios/get-started/installation/device-provisioning/index.md). Make sure to do this before attempting to deploy to a device. 
+To test on a physical device, the device must be [provisioned](~/ios/get-started/installation/device-provisioning/index.md). Make sure to do this before attempting to deploy to a device.
 
 To deploy to an iOS or tvOS device, use the following steps:
 
-1. Ensure that your deployment machine and target device are on the same wireless network. 
+1. Ensure that your deployment machine and target device are on the same wireless network.
 
 2. Select your device from the target device list and run the application.
 
@@ -89,7 +89,7 @@ Wireless debugging is automatically enabled after wireless deployment, so you ca
 
 1. Always ensure that your iOS device or Apple TV are connected to the same network as your Mac.
 
-2. If the device does not show in Visual Studio, check Xcode's **Devices and Simulators** window. 
+2. If the device does not show in Visual Studio, check Xcode's **Devices and Simulators** window.
 
     - If Xcode **does not** show your device as connected, try to [pair](#pair) your device again.
 
