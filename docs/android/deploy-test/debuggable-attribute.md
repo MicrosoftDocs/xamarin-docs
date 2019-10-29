@@ -25,4 +25,4 @@ Note that the value of the `android:debuggable` attribute does NOT necessarily d
 
 ## Related Links
 
-- [Debuggable apps in the Android market](http://labs.mwrinfosecurity.com/blog/2011/07/07/debuggable-apps-in-android-market/)
+- [Debuggable apps in the Android market](https://labs.f-secure.com/archive/debuggable-apps-in-android-market/)

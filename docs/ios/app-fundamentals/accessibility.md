@@ -169,4 +169,4 @@ accessibility settings.
 
 - [Cross-platform Accessibility](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS Accessibility (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)
+- [iOS VoiceOver](https://www.apple.com/accessibility/ios/voiceover/)

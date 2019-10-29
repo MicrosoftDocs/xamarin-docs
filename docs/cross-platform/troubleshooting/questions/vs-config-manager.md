@@ -23,4 +23,4 @@ Some templates that are generated with a referenced library project will already
 > [!NOTE]
 > Greyed out boxes are handled automatically, and shouldn't need any changes.
 
-Screencast of these steps: [http://screencast.com/t/zLoQOpEn](http://screencast.com/t/zLoQOpEn)
+Screencast of these steps: [https://screencast.com/t/zLoQOpEn](https://screencast.com/t/zLoQOpEn)

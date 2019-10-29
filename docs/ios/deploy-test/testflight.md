@@ -13,7 +13,7 @@ ms.date: 03/19/2017
 
 _TestFlight is now owned by Apple, and is the primary way to beta test your Xamarin.iOS apps. This article will guide you through all steps of the TestFlight Process – from uploading your app, to working with iTunes Connect._
 
-Beta testing is an integral part of the software development cycle, and there are many cross-platform applications offering to streamline this process such as [HockeyApp](http://hockeyapp.net/features/), [Applause](http://www.applause.com/mobile-app-testing), and of course Google Play’s Native App Beta Testing for Android apps. This document focuses on Apple’s TestFlight.
+Beta testing is an integral part of the software development cycle, and there are many cross-platform applications offering to streamline this process such as [HockeyApp](https://hockeyapp.net/features/), [Applause](https://www.applause.com/mobile-app-testing), and of course Google Play’s Native App Beta Testing for Android apps. This document focuses on Apple’s TestFlight.
 
 TestFlight is Apple’s beta testing service for iOS apps, and is accessible only through [iTunes Connect](https://itunesconnect.apple.com/). It is currently available for iOS 8.0 apps and above. TestFlight allows for beta testing with both internal and external users, and due to a Beta app review for the latter, ensures a much easier process in your final review when publishing to the App Store.
 
@@ -126,7 +126,7 @@ First, build your [final distributable](~/ios/deploy-test/app-distribution/app-s
  The [Building the Distributable](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md) guide has instructions for both of these options.
 
 ### Submitting your Build
- To submit your app to Apple, you will have to move to your Build Host and use the Application Loader program, which is installed as part of Xcode. For more information on accessing the Application Loader, see to Apple's [Access Application Loader](http://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) guide.
+ To submit your app to Apple, you will have to move to your Build Host and use the Application Loader program, which is installed as part of Xcode. For more information on accessing the Application Loader, see to Apple's [Access Application Loader](https://help.apple.com/itc/apploader/#/apdATD1E927-D1E1A1303-D1E927A1126) guide.
 
 Once opened, select the **Deliver Your App** option, and upload the zip or `.ipa` file created above. The Application Loader will validate and upload your build to iTunes Connect.
 

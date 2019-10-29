@@ -97,7 +97,7 @@ if ([intCollection [0] isEqual:@42])
 
 Depending on the type of your indexer, indexed or keyed subscripting will be generated where appropriate.
 
-This [article](http://nshipster.com/object-subscripting/) is a great introduction to subscripting.
+This [article](https://nshipster.com/object-subscripting/) is a great introduction to subscripting.
 
 ## Main differences with .NET
 

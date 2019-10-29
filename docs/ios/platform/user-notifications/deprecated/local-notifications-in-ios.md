@@ -158,5 +158,5 @@ to notifications by overriding the `ReceivedLocalNotification` method or the `Re
 - [Local notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/localnotifications)
 - [Local and Push Notifications for Developers](https://developer.apple.com/notifications/)
 - [Local and Push Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/)
-- [UIApplication](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIApplication)
-- [UILocalNotification](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UILocalNotification)
+- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
+- [UILocalNotification](https://docs.microsoft.com/dotnet/api/uikit.UILocalNotification)

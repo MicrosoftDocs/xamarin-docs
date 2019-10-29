@@ -148,7 +148,7 @@ Reported causes:
 
 - **Limitation** – This error can appear if the Mac build host is connected to a router that has no access to the internet (or if the Mac is using a DNS server that times out when asked for the reverse-DNS lookup of the Windows computer). Visual Studio will take roughly 30 seconds to retrieve the SSH fingerprint and eventually fail to connect.
 
-    **Possible workaround**: Add "UseDNS no" to the **sshd\_config** file. Be sure to read about this SSH setting before changing it. See for example [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](http://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option).
+    **Possible workaround**: Add "UseDNS no" to the **sshd\_config** file. Be sure to read about this SSH setting before changing it. See for example [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](https://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option).
 
     The following steps describe one way to change the setting. You will need to be logged in to an administrator account on the Mac to complete the steps.
 

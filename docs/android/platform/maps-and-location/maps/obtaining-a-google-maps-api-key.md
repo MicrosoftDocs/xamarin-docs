@@ -212,4 +212,4 @@ Finally, add this API key to the **AndroidManifest.XML** file of your Xamarin.An
 
 - [Google APIs Console](https://code.google.com/apis/console/)
 - [The Google Maps API Key](https://developers.google.com/maps/documentation/android/start#the_google_maps_api_key)
-- [keytool](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html.)
+- [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html.)

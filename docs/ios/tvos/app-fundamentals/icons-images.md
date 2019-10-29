@@ -100,7 +100,7 @@ It is important to remember to include a _Safe Zone_ border into each layer that
 tvOS works with Layered Images in the following formats:
 
 - **CAR Files** - This is a proprietary Asset Catalog format created by Apple. You do not create CAR files directly, they are created at compile time from any LSR files and included in your app bundle.
-- **LSR Images** - This is a proprietary image format created by Apple. Use the [Parallax Exporter Adobe Photoshop Plugin](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) or the [Parallax Previewer](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to create and preview Layered Images in the LSR format.
+- **LSR Images** - This is a proprietary image format created by Apple. Use the [Parallax Exporter Adobe Photoshop Plugin](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) or the [Parallax Previewer](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to create and preview Layered Images in the LSR format.
 - **Assets.xcassets** - From two (2) to five (5) standard `.png` formatted images included in an Asset Catalog that will be compiled into a CAR or LSR formatted Layered Image at compile time.
 - **LCR Files** - This is a proprietary file format created by Apple. LCR files are intended to be used as additional content downloaded from one of your content servers. LCR file should never be included in your app bundle. LCR files are generated from LSR or Photoshop files using the `layerutil` command line tool included with Xcode.
 
@@ -108,7 +108,7 @@ tvOS works with Layered Images in the following formats:
 
 ### The Parallax Previewer
 
-Apple created the [Parallax Previewer](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to preview and created Layered Images required for App Icons and optional Focusable Items. The previewer shows every layer that forms the completed Layered Image:
+Apple created the [Parallax Previewer](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to preview and created Layered Images required for App Icons and optional Focusable Items. The previewer shows every layer that forms the completed Layered Image:
 
 [![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
 

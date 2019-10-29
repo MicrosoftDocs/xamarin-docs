@@ -27,7 +27,7 @@ The code in a Shared Project can contain compiler directives that will enable or
 
 A Shared Project does not get compiled on its own, it exists purely as a grouping of source code files that can be included in other projects. When referenced by another project, the code is effectively compiled as *part* of that project. Shared Projects cannot reference any other project type (including other Shared Projects).
 
-Note that Android application projects cannot reference other Android application projects - for example, an Android unit test project cannot reference an Android application project. For more information about this limitation, see this [forum discussion](http://forums.xamarin.com/discussion/comment/98092/).
+Note that Android application projects cannot reference other Android application projects - for example, an Android unit test project cannot reference an Android application project. For more information about this limitation, see this [forum discussion](https://forums.xamarin.com/discussion/comment/98092/).
 
 # [Visual Studio for Mac](#tab/macos)
 

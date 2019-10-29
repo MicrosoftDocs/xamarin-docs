@@ -20,7 +20,7 @@ such as large type, high contrast, zoom in, screen reading
 Desktop and mobile platforms like iOS, Android, and Windows provide
 built in APIs that help developers build accessible apps, such as
 [Google TalkBack](https://play.google.com/store/apps/details?id=com.google.android.marvin.talkback) and
-[Apple's VoiceOver](http://www.apple.com/accessibility/ios/voiceover/).
+[Apple's VoiceOver](https://www.apple.com/accessibility/ios/voiceover/).
 
 ## Platform-Specific APIs
 
@@ -38,7 +38,7 @@ by each platform:
 
 Follow these tips to ensure that your apps are accessible to
 the widest audience possible. Check out the [Android Accessibility Testing Checklist](https://developer.android.com/training/accessibility/testing.html)
-and [Apple's Accessibility page](http://www.apple.com/accessibility/)
+and [Apple's Accessibility page](https://www.apple.com/accessibility/)
 for additional information.
 
 ### Support large fonts and high contrast

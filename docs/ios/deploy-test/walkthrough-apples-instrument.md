@@ -86,7 +86,7 @@ fixing the code:
 The improved code is available in the [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) in the
 **after** solution in Visual Studio for Mac.
 
-This community blog about [Xamarin.iOS Garbage Collection](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+This community blog about [Xamarin.iOS Garbage Collection](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
 is a useful reference for dealing with memory issues with Xamarin.iOS.
 
 ## Summary
@@ -99,4 +99,4 @@ Finally, the application was re-examined to verify the problem was corrected.
 ## Related Links
 
 - [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
-- [Xamarin.iOS Garbage Collection (blog post)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS Garbage Collection (blog post)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

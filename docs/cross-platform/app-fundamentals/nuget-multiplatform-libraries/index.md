@@ -22,7 +22,7 @@ The Nugetizer 3000 is included with Visual Studio for Mac &ndash; look for the *
 
 # [Visual Studio](#tab/windows)
 
-To use the Nugetizer 3000 in Visual Studio, please [download and run the VSIX installer](http://bit.ly/nugetizer-2017).
+To use the Nugetizer 3000 in Visual Studio, please [download and run the VSIX installer](https://bit.ly/nugetizer-2017).
 
 -----
 

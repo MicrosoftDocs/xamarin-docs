@@ -22,7 +22,7 @@ customized on a per-project basis.
 ## New Android designer properties and corresponding Java options
 
 The following property names correspond to the indicated java
-[command-line option](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
+[command-line option](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
 
 - **AndroidDesignerJavaRendererMinMemory** -Xms
 

@@ -209,7 +209,7 @@ $APP/lib/libtwo.so # from the armeabi-v7a directory in the apk
 In other words, no `libone.so` is installed. This will cause
 problems, as `libone.so` is not present for the application to load
 at run time. This behavior, while unexpected, has been logged as a bug and
-reclassified as "[working as intended](http://code.google.com/p/android/issues/detail?id=9089)."
+reclassified as "[working as intended](https://code.google.com/p/android/issues/detail?id=9089)."
 
 Consequently, when targeting Android versions prior to 4.0, it is necessary
 to provide *all* native libraries for *each* ABI that the
@@ -254,7 +254,7 @@ Unfortunately, this behavior is order dependent, as described in the
 following document -
 [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both
 armeabi and armeabi-v7a is included in
-apk](http://code.google.com/p/android/issues/detail?id=25321).
+apk](https://code.google.com/p/android/issues/detail?id=25321).
 
 The native libraries are processed "in order" (as listed by, for
 example, unzip), and the *first match* is extracted. Since the `.apk`
@@ -362,5 +362,5 @@ are intended only for `armeabi`.
 
 - [ABI for the ARM Architecture (PDF)](http://infocenter.arm.com/help/topic/com.arm.doc.ihi0036b/IHI0036B_bsabi.pdf)
 - [Android NDK](https://developer.android.com/tools/sdk/ndk/index.html)
-- [Issue 9089:Nexus One - Won't load ANY native libraries from armeabi if there's at least one library at armeabi-v7a](http://code.google.com/p/android/issues/detail?id=9089)
-- [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](http://code.google.com/p/android/issues/detail?id=25321)
+- [Issue 9089:Nexus One - Won't load ANY native libraries from armeabi if there's at least one library at armeabi-v7a](https://code.google.com/p/android/issues/detail?id=9089)
+- [Issue 24321: Galaxy Nexus 4.0.2 uses armeabi native code when both armeabi and armeabi-v7a is included in apk](https://code.google.com/p/android/issues/detail?id=25321)

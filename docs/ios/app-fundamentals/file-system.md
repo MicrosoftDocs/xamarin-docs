@@ -151,7 +151,7 @@ var filename = Path.Combine (documents, "account.json");
 File.WriteAllText(filename, json);
 ```
 
-For more information about working with json data in a .NET application, see Json.NET's [documentation](http://www.newtonsoft.com/json/help).
+For more information about working with json data in a .NET application, see Json.NET's [documentation](https://www.newtonsoft.com/json/help).
 
 ## Special considerations
 

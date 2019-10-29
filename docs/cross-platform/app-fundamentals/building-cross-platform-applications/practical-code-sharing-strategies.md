@@ -24,7 +24,7 @@ Android, iOS and Mac.
 ### SQLite
 
 SQLite is an open-source database implementation. The source and
-documentation can be found at [SQLite.org](http://www.sqlite.org/). SQLite support is available on each mobile
+documentation can be found at [SQLite.org](https://www.sqlite.org/). SQLite support is available on each mobile
 platform:
 
 - **iOS** – Built in to the operating system.
@@ -460,7 +460,7 @@ Both the iOS and Android syntax requires a ‘context’ class to be
 available which means the code needs to pass this object into any methods that
 require a callback on the UI thread.
 
-To make UI thread calls in shared code, follow the [IDispatchOnUIThread example](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (courtesy of [@follesoe](http://jonas.follesoe.no/)). Declare and program
+To make UI thread calls in shared code, follow the [IDispatchOnUIThread example](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (courtesy of [@follesoe](https://twitter.com/follesoe)). Declare and program
 to an `IDispatchOnUIThread` interface in the shared code and then
 implement the platform-specific classes as shown here:
 

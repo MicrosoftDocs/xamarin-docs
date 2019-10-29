@@ -329,7 +329,7 @@ The following steps can be used to further reduce the application executable siz
 
 Android apps can also be split into a separate APK for each ABI ("architecture").
 Learn more in this blog post:
-[How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+[How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/).
 
 <a name="optimizeimages" />
 

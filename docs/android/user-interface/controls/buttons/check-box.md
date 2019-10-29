@@ -41,4 +41,4 @@ Run it.
 > [!TIP]
 > If you need to change the state yourself (such as when loading a saved [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference), use the [`Checked`](xref:Android.Widget.CompoundButton.Checked) property setter or [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle) method.
 
-*Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the* [*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+*Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the* [*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/).

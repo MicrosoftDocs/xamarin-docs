@@ -60,15 +60,15 @@ A complete summary of all Application Lifecycle Management (ALM) features of Vis
 
 #### Git
 
-[Git](http://git-scm.com) is a popular open source version control solution that was originally developed to manage the source code for the Linux kernel. It is a very fast, flexible system that is popular with software projects of all sizes. It easily scales from single developers with poor Internet access to large teams that span the globe. Git also makes branching very easy, which in turn can encourage parallel streams of development with minimal risk.
+[Git](https://git-scm.com) is a popular open source version control solution that was originally developed to manage the source code for the Linux kernel. It is a very fast, flexible system that is popular with software projects of all sizes. It easily scales from single developers with poor Internet access to large teams that span the globe. Git also makes branching very easy, which in turn can encourage parallel streams of development with minimal risk.
 
-Git can operate entirely through web browsers, or [GUI clients](http://git-scm.com/downloads/guis) that run on Linux, Mac OSX, and Windows. It is free for public repositories; private repositories require a [paid plan](https://github.com/pricing).
+Git can operate entirely through web browsers, or [GUI clients](https://git-scm.com/downloads/guis) that run on Linux, Mac OSX, and Windows. It is free for public repositories; private repositories require a [paid plan](https://github.com/pricing).
 
-Current versions of Visual Studio for Windows and Mac provide native support for Git. Microsoft provides a [downloadable extension for Git](http://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) for older versions of Visual Studio. As noted above, Azure DevOps and TFS can use Git for version control instead of TFVC.
+Current versions of Visual Studio for Windows and Mac provide native support for Git. Microsoft provides a [downloadable extension for Git](https://visualstudiogallery.msdn.microsoft.com/abafc7d6-dcaa-40f4-8a5e-d6724bdb980c) for older versions of Visual Studio. As noted above, Azure DevOps and TFS can use Git for version control instead of TFVC.
 
 #### Subversion
 
-[Subversion](http://subversion.apache.org) (SVN) is a popular, open source version control system that has been in use since 2000. SVN runs on all modern versions of OS X, Windows, FreeBSD, Linux, and Unix. Visual Studio for Mac has native support for SVN. There are third party extensions that bring SVN support to Visual Studio.
+[Subversion](https://subversion.apache.org) (SVN) is a popular, open source version control system that has been in use since 2000. SVN runs on all modern versions of OS X, Windows, FreeBSD, Linux, and Unix. Visual Studio for Mac has native support for SVN. There are third party extensions that bring SVN support to Visual Studio.
 
 ### Continuous Integration Environments
 

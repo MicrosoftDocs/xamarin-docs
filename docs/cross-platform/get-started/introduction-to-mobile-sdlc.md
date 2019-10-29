@@ -221,10 +221,10 @@ This allows developers a potentially larger yet more complex distribution
 channel for their applications. [Google Play](https://play.google.com/store?hl=en) is Google’s official app store, but there are
 many others. A few popular ones are:
 
-1. [AppBrain](http://www.appbrain.com/)
-1. [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
-1. [Handango](http://www.handango.com/)
-1. [GetJar](http://www.getjar.com/)
+1. [AppBrain](https://www.appbrain.com/)
+1. [Amazon App Store for Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1. [Handango](https://www.handango.com/)
+1. [GetJar](https://www.getjar.com/)
 
 #### UWP
 

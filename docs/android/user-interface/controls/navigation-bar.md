@@ -77,5 +77,5 @@ tv.SystemUiVisibilityChange +=
 ## Related Links
 
 - [SystemUIVisibilityDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Introducing Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

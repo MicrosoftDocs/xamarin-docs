@@ -301,7 +301,7 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-For more information on registering classes and methods, refer to the [Type Registrar](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) documentation.
+For more information on registering classes and methods, refer to the [Type Registrar](https://docs.microsoft.com/xamarin/ios/internals/registrar) documentation.
 
 The last step in this class is to wire up the button and the transition to the pink view controller. We'll instantiate the `PinkViewController` from the Storyboard; then, we will program a push segue with `PushViewController`, as illustrated by the example code below:
 

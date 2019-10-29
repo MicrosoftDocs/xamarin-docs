@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This guide walks through uploading a Xamarin.Mac app for publication to the Mac App Store._
 
-Applications are submitted for Mac App Store approval via [iTunes Connect](http://itunesconnect.apple.com/).
+Applications are submitted for Mac App Store approval via [iTunes Connect](https://itunesconnect.apple.com/).
 
 1. Choose a **macOS App** to create: 
 

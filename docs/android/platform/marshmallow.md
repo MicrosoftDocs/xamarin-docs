@@ -333,7 +333,7 @@ For more information about this feature, see
 ### Material Design Support Library
 
 Android Lollipop introduced
-[Material Design](http://www.google.com/design/spec/material-design/introduction.html)
+[Material Design](https://www.google.com/design/spec/material-design/introduction.html)
 as a new design language to refresh the Android experience (see
 [Material Theme](~/android/user-interface/material-theme.md) for
 information about using material design in Xamarin.Android apps). With
@@ -389,7 +389,7 @@ This sample demonstrates the following features of the Design library:
 - Snackbar
 
 For more information about the Design library, see
-[Android Design Support Library](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html)
+[Android Design Support Library](https://android-developers.googleblog.com/2015/05/android-design-support-library.html)
 in the Android Developer's blog.
 
 ### Additional Library Updates

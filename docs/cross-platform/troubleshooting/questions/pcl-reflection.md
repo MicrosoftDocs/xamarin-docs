@@ -12,5 +12,5 @@ ms.date: 07/27/2018
 
 Microsoft developed a new Reflection API for use in Portable Class Libraries. If you have some existing Reflection code that you want to move to a PCL, it might not work. More information:
 
-- [Evolving the Reflection API](http://blogs.msdn.com/b/dotnet/archive/2012/08/28/evolving-the-reflection-api.aspx)
+- [Evolving the Reflection API](https://devblogs.microsoft.com/dotnet/evolving-the-reflection-api/)
 - [StackOverflow: Portable Class library and reflection](https://stackoverflow.com/questions/14061291/portable-class-library-and-reflection)

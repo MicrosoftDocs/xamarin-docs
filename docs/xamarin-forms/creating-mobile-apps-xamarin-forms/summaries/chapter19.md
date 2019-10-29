@@ -128,7 +128,7 @@ Generally an application obtains user interaction with a `ListView` by attaching
 
 ### A collection of ViewModels
 
-To explore this, the [**SchoolOfFineArts**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) library creates several classes based on an [XML data file](http://xamarin.github.io/xamarin-forms-book-samples/SchoolOfFineArt/students.xml) and images of fictitious students at this fictitious school.
+To explore this, the [**SchoolOfFineArts**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Libraries/SchoolOfFineArt) library creates several classes based on an [XML data file](https://xamarin.github.io/xamarin-forms-book-samples/SchoolOfFineArt/students.xml) and images of fictitious students at this fictitious school.
 
 The [`Student`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/SchoolOfFineArt/SchoolOfFineArt/Student.cs) class derives from [`ViewModelBase`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/SchoolOfFineArt/SchoolOfFineArt/ViewModelBase.cs). The [`StudentBody`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/SchoolOfFineArt/SchoolOfFineArt/StudentBody.cs) class is a collection of `Student` objects and also derives from `ViewModelBase`. The [`SchoolViewModel`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/SchoolOfFineArt/SchoolOfFineArt/SchoolViewModel.cs) downloads the XML file and assembles all the objects.
 

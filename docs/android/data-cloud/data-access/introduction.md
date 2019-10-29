@@ -47,13 +47,13 @@ Because SQLite is designed to be small and fast, there are some caveats on its u
 - Only table RENAME and ADDCOLUMN are supported. You cannot perform other modifications to your schema.
 - Views are read-only.
 
-You can learn more about SQLite on the website - [SQLite.org](http://SQLite.org) - however all the information you need to use SQLite with Xamarin is contained in this document and associated samples. The SQLite database engine has been supported in Android since Android 2.
+You can learn more about SQLite on the website - [SQLite.org](https://SQLite.org) - however all the information you need to use SQLite with Xamarin is contained in this document and associated samples. The SQLite database engine has been supported in Android since Android 2.
 Although not covered in this chapter, SQLite is also available for use on Windows Phone and Windows applications.
 
 ## Windows and Windows Phone
 
 SQLite can also be used on Windows platforms, although those platforms are not covered in this document.
-Read more in the [Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) and [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) case studies, and review [Tim Heuer’s blog](http://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
+Read more in the [Tasky](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) and [Tasky Pro](~/cross-platform/app-fundamentals/building-cross-platform-applications/case-study-tasky.md) case studies, and review [Tim Heuer’s blog](https://timheuer.com/blog/archive/2012/06/28/seeding-your-metro-style-app-with-sqlite-database.aspx).
 
 ## Related Links
 

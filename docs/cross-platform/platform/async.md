@@ -95,7 +95,7 @@ public async Task<int> DownloadHomepage()
 {
     var httpClient = new HttpClient(); // Xamarin supports HttpClient!
 
-    Task<string> contentsTask = httpClient.GetStringAsync("http://xamarin.com"); // async method!
+    Task<string> contentsTask = httpClient.GetStringAsync("https://visualstudio.microsoft.com/xamarin"); // async method!
 
     // await! control returns to the caller and the task continues to run on another thread
     string contents = await contentsTask;
@@ -196,4 +196,4 @@ This document has given an overview of the new language keywords and examples fo
 - [Await, and UI, and deadlocks! Oh my!](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
 - [Processing tasks as they complete)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
 - [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx)
-- [Asynchrony in C# 5 (Eric Lippert's blog) – about the introduction of the keywords](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)
+- [Asynchrony in C# 5 (Eric Lippert's blog) – about the introduction of the keywords](https://blogs.msdn.microsoft.com/ericlippert/2010/11/11/asynchrony-in-c-5-part-six-whither-async/)

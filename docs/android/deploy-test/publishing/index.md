@@ -40,7 +40,7 @@ application may be released to users:
 
 - **Via a Website** &ndash; A Xamarin.Android application can be made available for download on a website, from which users may then install the application by clicking on a link.
 - **By e-mail** &ndash; It is possible for users to install a Xamarin.Android application from their e-mail. The application will be installed when the attachment is opened with an Android-powered device.
-- **Through a Market** &ndash; There are several application marketplaces that exist for distribution, such as  [Google Play](http://play.google.com/) or  [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) .
+- **Through a Market** &ndash; There are several application marketplaces that exist for distribution, such as  [Google Play](https://play.google.com/) or  [Amazon App Store for Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&node=2350149011) .
 
 Using an established marketplace is the most common way to publish an
 application as it provides the broadest market reach and the greatest control

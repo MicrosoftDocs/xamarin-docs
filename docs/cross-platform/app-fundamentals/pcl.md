@@ -63,7 +63,7 @@ This includes profiles that are combinations of:
 
 You can read more about the different profiles' capabilities on
 [Microsoft’s website](https://msdn.microsoft.com/library/gg597391(v=vs.110).aspx)
-and see another community member's [PCL profile summary](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY)
+and see another community member's [PCL profile summary](https://portablelibraryprofiles.stephencleary.com/)
 which includes supported framework info and other notes.
 
 **Benefits**

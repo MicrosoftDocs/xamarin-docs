@@ -187,7 +187,7 @@ Project Options->iPhone Application
 
 Ensure that you are using the latest version of Visual Studio for Mac and Xamarin.iOS
 
-If the issue is still present, please [file a bug](http://monodevelop.com/Developers#Reporting_Bugs), attaching the **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log** log files.
+If the issue is still present, please [file a bug](https://monodevelop.com/Developers#Reporting_Bugs), attaching the **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log** log files.
 
 If all else fails, you can try removing the code completion cache so that it
 is regenerated:
@@ -494,7 +494,7 @@ This means that you have XCode 4 installed.   In XCode 4, the tool
 ibtool was removed, it is no longer possible to edit your XIB files with a
 standalone tool.
 
-If you want to use Interface Builder, install [XCode series 3](http://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792), available from Apple's web site.
+If you want to use Interface Builder, install [XCode series 3](https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792), available from Apple's web site.
 
 ## "Can't create display binding for mime type: application/vnd.apple-interface-builder"
 

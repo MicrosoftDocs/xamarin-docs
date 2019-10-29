@@ -74,7 +74,7 @@ your CommonMark text may be reformatted.
 
 Please note that due to the CommonMark extension we use to enable YAML metadata in
 workbook files, `---` is reserved for that purpose. If you wish to create
-[thematic breaks](http://spec.commonmark.org/0.27/#thematic-break) in your text,
+[thematic breaks](https://spec.commonmark.org/0.27/#thematic-break) in your text,
 you should use `***` or `___` instead. Such breaks should be avoided in Workbooks 1.2
 and earlier due to a bug during save.
 

@@ -74,4 +74,4 @@ callable wrappers, and discussed options for porting Java code to C#.
 - [Binding a Java Library](~/android/platform/binding-java-library/index.md)
 - [Working with JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Sharpen](https://github.com/slluis/sharpen)
-- [Java Native Interface](http://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)
+- [Java Native Interface](https://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)

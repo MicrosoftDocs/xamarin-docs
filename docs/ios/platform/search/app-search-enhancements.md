@@ -88,7 +88,7 @@ For more information on working with searches in a Xamarin.iOS app, please see o
 
 ## Visualization of Validation Results
 
-Apple's [App Search API Validation Tool](https://search.developer.apple.com/appsearch-validation-tool) now displays a visual representation of a website's markup and deep-linking (including markup such as defined at [Schema.org](http://schema.org/)) when preforming tests.
+Apple's [App Search API Validation Tool](https://search.developer.apple.com/appsearch-validation-tool) now displays a visual representation of a website's markup and deep-linking (including markup such as defined at [Schema.org](https://schema.org/)) when preforming tests.
 
 By using the Validation Tool, a developer can see the information that the Applebot Web Crawler has indexed for the site such as title, description, URL and any other supported elements.
 

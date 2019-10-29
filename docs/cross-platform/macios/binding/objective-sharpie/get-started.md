@@ -58,7 +58,7 @@ you can use in Xamarin apps.
 > must absolutely pass it the correct clang compiler command line arguments
 > in order to ensure proper parsing. This is because the Objective Sharpie
 > parsing phase is simply a tool [implemented against the clang libtooling
-> API](http://clang.llvm.org/docs/LibTooling.html).
+> API](https://clang.llvm.org/docs/LibTooling.html).
 
 This means that Objective Sharpie has the full power of Clang
 (the C/Objective-C/C++ compiler that actually compiles the native library

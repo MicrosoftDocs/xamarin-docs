@@ -167,7 +167,7 @@ A last-straw solution would be to use an older version of Xamarin.Mac, one that 
 
 <a name="MM0099" />
 
-#### MM0099: Internal error {0}. Please file a bug report with a test case (http://bugzilla.xamarin.com).
+#### MM0099: Internal error {0}. Please file a bug report with a test case (https://bugzilla.xamarin.com).
 
 <a name="MM0114" />
 

@@ -79,7 +79,7 @@ Android callable wrappers (ACW) are required whenever the Android
 runtime (ART) needs to invoke managed code; these wrappers are required
 because there is no way to register classes with ART at runtime.
 (Specifically, the
-[DefineClass](http://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/functions.html#wp15986)
+[DefineClass](https://docs.oracle.com/javase/6/docs/technotes/guides/jni/spec/functions.html#wp15986)
 JNI function is not supported by the Android runtime. Android callable
 wrappers thus make up for the lack of runtime type registration
 support.)
@@ -857,11 +857,11 @@ hooked up to `ManagedAdder.Add`?
 
 Java `native` methods are registered with the Java (the Android
 runtime) runtime through the
-[JNI RegisterNatives function](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp17734).
+[JNI RegisterNatives function](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp17734).
 `RegisterNatives` takes an array of structures containing the Java
 method name, the JNI Type Signature, and a function pointer to invoke
 that follows
-[JNI calling convention](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/design.html#wp715).
+[JNI calling convention](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/design.html#wp715).
 The function pointer must be a function that takes two pointer
 arguments followed by the method parameters. The Java
 `ManagedAdder.n_add` method must be implemented through a function
@@ -1388,7 +1388,7 @@ the JNI Function Types section) not all `IntPtr`s returned from
 [JNIEnv.GetMethodID](xref:Android.Runtime.JNIEnv.GetMethodID*)
 returns an `IntPtr`, but it doesn't return an object reference, it
 returns a `jmethodID`. Consult the
-[JNI function documentation](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html)
+[JNI function documentation](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html)
 for details.
 
 Local references are created by *most* reference-creating methods.
@@ -1901,7 +1901,7 @@ where `*` is the return type of the method.
 
 ## JNI Type Signatures
 
-[JNI Type Signatures](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/types.html#wp16432)
+[JNI Type Signatures](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/types.html#wp16432)
 are [JNI Type References](#_JNI_Type_References) (though not simplified
 type references), except for methods. With methods, the JNI Type
 Signature is an open parenthesis `'('`, followed by the type references
@@ -2050,11 +2050,11 @@ the same simplified type reference, `"java/lang/Class"`.
 [Android.Runtime.JNIEnv](xref:Android.Runtime.JNIEnv)
 is managed wrapper for the Jave Native Interface (JNI). JNI Functions
 are declared within the
-[Java Native Interface Specification](http://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html),
+[Java Native Interface Specification](https://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html),
 though the methods have been changed to remove the explicit `JNIEnv*`
 parameter and `IntPtr` is used instead of `jobject`, `jclass`,
 `jmethodID`, etc. For example, consider the
-[JNI NewObject function](http://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp4517):
+[JNI NewObject function](https://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp4517):
 
 ```csharp
 jobject NewObjectA(JNIEnv *env, jclass clazz, jmethodID methodID, jvalue *args);
@@ -2132,5 +2132,5 @@ unbound Java cases with Mono for Android.
 
 ## Related links
 
-- [Java Native Interface Specification](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/jniTOC.html)
-- [Java Native Interface Functions](http://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html)
+- [Java Native Interface Specification](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/jniTOC.html)
+- [Java Native Interface Functions](https://download.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html)

@@ -178,7 +178,7 @@ This will force your application to run the garbage collector every second. Re-r
 
 The next step is to report the issue to Xamarin so the binding can be fixed for future releases. If you are a business or enterprise license holder, open a ticket at 
 
-[http://xamarin.com/support](http://xamarin.com/support)
+[visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 Otherwise, search for an existing issue:
 

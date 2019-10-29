@@ -14,7 +14,7 @@ ms.date: 03/19/2017
 _Xamarin.iOS applications can be debugged with the built-in debugger in Visual Studio for Mac or Visual Studio._
 
 Use Visual Studio for Mac's native debugging support for debugging C# and other managed
-languages code and use [LLDB](http://lldb.llvm.org/tutorial.html) when you need to debug C, C++ or Objective C codethat you might be linking with your Xamarin.iOS project.
+languages code and use [LLDB](https://lldb.llvm.org/tutorial.html) when you need to debug C, C++ or Objective C codethat you might be linking with your Xamarin.iOS project.
 
 > [!NOTE]
 > When you compile applications in Debug mode, Xamarin.iOS will generate 
@@ -224,7 +224,7 @@ Crash logs and the output of the Console class will be sent to the iPhone
 console. You can access this console with Xcode using the "Organizer" and
 selecting your device from the organizer.
 
-Alternatively, if you do not want to start up Xcode, you can use the Apple's [iPhone Configuration Utility](http://www.apple.com/support/iphone/enterprise/) to directly access the console. This
+Alternatively, if you do not want to start up Xcode, you can use the Apple's [iPhone Configuration Utility](https://www.apple.com/support/iphone/enterprise/) to directly access the console. This
 has the added bonus that you can access the console logs from a Windows machine
 if you are debugging a problem in the field.
 

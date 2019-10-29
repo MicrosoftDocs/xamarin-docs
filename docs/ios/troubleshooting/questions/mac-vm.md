@@ -20,4 +20,4 @@ No; Apple's terms of use do not permit this usage.
 ### See Also
 
 - [Apple Legal](https://www.apple.com/legal/)
-- [Software License Agreement for OS X Yosemite](http://images.apple.com/legal/sla/docs/OSX10103.pdf)
+- [Software License Agreement for OS X Yosemite](https://images.apple.com/legal/sla/docs/OSX10103.pdf)

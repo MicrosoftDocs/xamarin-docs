@@ -18,9 +18,6 @@ networks from a single API without having to manage authentication. It includes
 a system provided view controller for composing posts as well as an abstraction
 that allows consuming each social network’s API over HTTP.
 
-> [!IMPORTANT]
-> For a cross-platform API to connect to various social networks, see the [Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) component in the Xamarin Component Store.
-
 ## Connecting to Twitter
 
 ### Twitter Account Settings

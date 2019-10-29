@@ -11,7 +11,7 @@ ms.date: 03/23/2017
 
 _This guide will discuss the steps involved with using TeamCity to compile mobile applications and then submit them to Xamarin Test Cloud._
 
-As discussed in the [Introduction to Continuous Integration](~/tools/ci/intro-to-ci.md) guide, continuous integration (CI) is a useful practice when developing quality mobile applications. There are many viable options for continuous integration server software; this guide will focus on [TeamCity](http://www.jetbrains.com/teamcity/) from JetBrains.
+As discussed in the [Introduction to Continuous Integration](~/tools/ci/intro-to-ci.md) guide, continuous integration (CI) is a useful practice when developing quality mobile applications. There are many viable options for continuous integration server software; this guide will focus on [TeamCity](https://www.jetbrains.com/teamcity/) from JetBrains.
 
 There are several different permutations of a TeamCity installation. The following is a list of some of these:
 
@@ -25,7 +25,7 @@ Of the previous scenarios, running TeamCity under a user account on OS X is the 
 
 There are several steps involved with setting up TeamCity:
 
-- **Installing TeamCity** – The installation of TeamCity is not covered in this guide. This guide assumes that TeamCity is installed and running under a user account. Instructions on [installing TeamCity](http://confluence.jetbrains.com/display/TCD8/Installation) can be found in the [TeamCity 8 documentation](http://confluence.jetbrains.com/display/TCD8/TeamCity+Documentation) by JetBrains.
+- **Installing TeamCity** – The installation of TeamCity is not covered in this guide. This guide assumes that TeamCity is installed and running under a user account. Instructions on [installing TeamCity](https://confluence.jetbrains.com/display/TCD8/Installation) can be found in the [TeamCity 8 documentation](https://confluence.jetbrains.com/display/TCD8/TeamCity+Documentation) by JetBrains.
 
 - **Preparing the Build Server** – This step involves installing the necessary software, tools, and certificates required to build mobile applications and prepare them for distribution.
 
@@ -79,7 +79,7 @@ The build script can be as simple as a Powershell file (on Windows) or a bash sc
 
 - [**psake**](https://github.com/psake/psake) – this is a Windows Powershell library for building software
 
-- [**FAKE**](http://fsharp.github.io/FAKE/) – this is a DSL based in F# which makes it possible to utilize existing .NET libraries if necessary.
+- [**FAKE**](https://fsharp.github.io/FAKE/) – this is a DSL based in F# which makes it possible to utilize existing .NET libraries if necessary.
 
 Which scripting language is used depends on your preferences and requirements. The [TaskyPro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) example contains an example of using Rake as a [build script](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
 
@@ -207,4 +207,4 @@ Then we covered how to create a project in TeamCity that will queue a build each
 
 - [Preparing Xamarin.Android Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest)
 - [Preparing Xamarin.iOS Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
-- [Installing and Configuring TeamCity](http://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)
+- [Installing and Configuring TeamCity](https://confluence.jetbrains.com/display/TCD8/Installing+and+Configuring+the+TeamCity+Server)

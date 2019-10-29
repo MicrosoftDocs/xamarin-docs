@@ -113,7 +113,7 @@ These are code generation errors.
 |XA4106|The registrar cannot marshal the return value for structure '{0}' in signature for method '{1}'.|
 |XA4107|The registrar cannot marshal the parameter of type '{0}' in signature for method '{1}'.|
 |XA4108|The registrar cannot get the ObjectiveC type for managed type '{0}'.|
-|XA4109|Failed to compile the generated registrar code. Please file a [bug report](http://bugzilla.xamarin.com).|
+|XA4109|Failed to compile the generated registrar code. Please file a [bug report](https://bugzilla.xamarin.com).|
 |XA4110|The registrar cannot marshal the out parameter of type '{0}' in signature for method '{1}'.|
 |XA4111|The registrar cannot build a signature for type '{0}' in method '{1}'.|
 |XA4200|Can only generate ACW's for 'claas' types.|
@@ -133,8 +133,8 @@ These are code generation errors.
 |Error Code|Description|
 |--- |--- |
 |XA5101|Missing '{0}' compiler. Please install Android NDK.|
-|XA5102|Conversion from assembly to native code failed. Please file a [bug report](http://bugzilla.xamarin.com).|
-|XA5103|Failed to compile the file '{0}'. Please file a [bug report](http://bugzilla.xamarin.com).|
+|XA5102|Conversion from assembly to native code failed. Please file a [bug report](https://bugzilla.xamarin.com).|
+|XA5103|Failed to compile the file '{0}'. Please file a [bug report](https://bugzilla.xamarin.com).|
 |XA5201|Native linking failed. Please review user flags provided to gcc: {0}|
 |XA5202|Native linking failed. Please review the build log.|
 |XA5303|Native linking warning: {0}.|

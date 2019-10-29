@@ -151,7 +151,7 @@ For applications that you publish, it is easy to find the **Apple ID** in iTunes
 
 Apple provides a dynamic search API to query all the products in the App
 Store, iTunes, and the iBookstore. Information on how to access the search API
-can be found in [Apple's Affiliate Resources](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), although the API is exposed to
+can be found in [Apple's Affiliate Resources](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), although the API is exposed to
 anyone (not just registered affiliates). The resulting JSON can be parsed to
 discover the `trackId` that is the Apple ID to use with `SKStoreProductViewController`.
 
@@ -160,17 +160,17 @@ and artwork URLs that can be used to render the product in your app.
 
 Here are some examples:
 
-- **iBooks app** – [http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Dot and the Kangaroo iBook** – [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **iBooks app** – [https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Dot and the Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### Enterprise Partner Feed
 
 Apple provides approved partners with a complete data dump of all their
 products, in the form of downloadable database-ready flat files. If you qualify
-for access to the [Enterprise Partner Feed](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html),
+for access to the [Enterprise Partner Feed](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html),
 then the Apple ID for any product can be found in that dataset.
 
-Many users of the Enterprise Partner Feed are members of the [Affiliate Program](http://www.apple.com/itunes/affiliates) that allows commissions to be earned on product sales. `SKStoreProductViewController` does not support Affiliate IDs (at the
+Many users of the Enterprise Partner Feed are members of the [Affiliate Program](https://www.apple.com/itunes/affiliates) that allows commissions to be earned on product sales. `SKStoreProductViewController` does not support Affiliate IDs (at the
 time of writing).
 
 ### Direct Product Links
@@ -670,7 +670,7 @@ functionality.
 - [In-App Purchasing](~/ios/platform/in-app-purchasing/index.md)
 - [StoreKit Framework Reference](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [SKStoreProductViewController Class Reference](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
-- [iTunes Search API Reference](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
+- [iTunes Search API Reference](https://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [SKDownload](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)

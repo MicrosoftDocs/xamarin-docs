@@ -12,7 +12,7 @@ ms.date: 03/21/2017
 # Xamarin.iOS API Design
 
 In addition to the core Base Class Libraries that are part of Mono,
-[Xamarin.iOS](http://www.xamarin.com/iOS) ships with bindings for
+[Xamarin.iOS](~/ios/index.yml) ships with bindings for
 various iOS APIs to allow developers to create native iOS
 applications with Mono.
 

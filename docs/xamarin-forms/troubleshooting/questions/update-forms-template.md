@@ -37,5 +37,5 @@ This guide uses the Xamarin.Forms .NET Standard library template as an example, 
 
 7. Copy the new zipped-up template folder into the new "Mobile Apps" directory.
 
-8. Download the NuGet package that matches the version from step 3. For example, [http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](http://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (see also [https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)), and copy it into the appropriate subfolder of the Xamarin Visual Studio extensions folder:
+8. Download the NuGet package that matches the version from step 3. For example, [https://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529](https://nuget.org/api/v2/package/Xamarin.Forms/2.1.0.6529) (see also [https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file](https://stackoverflow.com/questions/8597375/how-to-get-the-url-of-a-nupkg-file)), and copy it into the appropriate subfolder of the Xamarin Visual Studio extensions folder:
     > `C:\Program Files (x86)\Microsoft Visual Studio 14.0\Common7\IDE\Extensions\Xamarin\Xamarin\[Xamarin Version]\Packages`

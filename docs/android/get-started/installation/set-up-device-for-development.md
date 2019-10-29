@@ -90,7 +90,7 @@ Android SDK in following location on a Windows computer:
 
 Google Nexus devices (with the exception of the Galaxy Nexus) require
 the Google USB Driver. The driver for the Galaxy Nexus is
-[distributed by Samsung](http://www.samsung.com/us/support/downloads/).
+[distributed by Samsung](https://www.samsung.com/us/support/downloads/).
 All other Android devices should use the
 [USB driver from their respective manufacturer](https://developer.android.com/tools/extras/oem-usb.html#Drivers).
 
@@ -238,7 +238,7 @@ connect the device to a computer using either USB or WiFi.
 
 - [Android Debug Bridge](https://developer.android.com/tools/help/adb.html)
 - [Using Hardware Devices](https://developer.android.com/tools/device.html)
-- [Samsung Driver Downloads](http://www.samsung.com/us/support/downloads/)
+- [Samsung Driver Downloads](https://www.samsung.com/us/support/downloads/)
 - [OEM USB Drivers](https://developer.android.com/tools/extras/oem-usb.html#Drivers)
 - [Google USB Driver](https://developer.android.com/sdk/win-usb.html)
-- [XDA Developers : Windows 8 - ADB/fastboot driver problem solved](http://forum.xda-developers.com/showthread.php?t=1583801)
+- [XDA Developers : Windows 8 - ADB/fastboot driver problem solved](https://forum.xda-developers.com/showthread.php?t=1583801)

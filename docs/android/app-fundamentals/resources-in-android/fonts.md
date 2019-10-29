@@ -149,7 +149,7 @@ textView1.Typeface = typeface;
 
 Instead of packaging fonts as an application resource, Android can download fonts from a remote source. This will have the desirable effect of reducing the size of the APK.
 
-Fonts are downloaded with the assistance of a  _font provider_. This is a specialized content provider that manages the downloading and caching of fonts to all applications on the device. Android 8.0 includes a font provider to download fonts from the [Google Font Repository](http://fonts.google.com). This default font provider is backported to API level 14 with the Android Support Library v26.
+Fonts are downloaded with the assistance of a  _font provider_. This is a specialized content provider that manages the downloading and caching of fonts to all applications on the device. Android 8.0 includes a font provider to download fonts from the [Google Font Repository](https://fonts.google.com). This default font provider is backported to API level 14 with the Android Support Library v26.
 
 When an app makes a request for a font, the font provider will first check to see if the font is already on the device. If not, it will then attempt to download the font. If the font cannot be downloaded, then Android will use the default system font. Once the font has been downloaded, it is available to all applications on the device, not just the app that made the initial request.
 

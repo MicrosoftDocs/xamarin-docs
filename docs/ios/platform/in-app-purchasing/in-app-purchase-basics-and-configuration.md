@@ -63,7 +63,7 @@ different price tier in different markets.
 ## Configuration
 
 Before writing any in-app purchasing code you must do some set-up work in
-iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) and the iOS Provisioning Portal ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
+iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com)) and the iOS Provisioning Portal ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
 
 These three steps
 should be complete before writing any code:

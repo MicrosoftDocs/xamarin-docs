@@ -168,7 +168,7 @@ navigate back through the page history:
 
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+[*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/).
 
 ## Related Links
 

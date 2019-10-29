@@ -511,7 +511,7 @@ If so, there are two possible causes for this:
     For example, the .apk only contains armeabi-v7a binaries, and the
     target device only supports armeabi.
 
-2. An [Android bug](http://code.google.com/p/android/issues/detail?id=21670). If
+2. An [Android bug](https://code.google.com/p/android/issues/detail?id=21670). If
     this is the case, uninstall the app, cross your fingers, and
     reinstall the app.
 

@@ -54,7 +54,7 @@ basic code example), see
 ## Walkthrough
 
 In the following walkthrough, we'll create a Bindings Library for 
-[Picasso](http://square.github.io/picasso/), a popular Android .JAR 
+[Picasso](https://square.github.io/picasso/), a popular Android .JAR 
 that provides image loading and caching functionality. We will use the 
 following steps to bind **picasso-2.x.x.jar** to create a new .NET 
 assembly that we can use in a Xamarin.Android project: 

@@ -552,7 +552,7 @@ A last-straw solution would be to use an older version of Xamarin.iOS, one that 
 
 <a name="MT0099" />
 
-### MT0099: Internal error *. Please file a bug report with a test case (http://bugzilla.xamarin.com).
+### MT0099: Internal error *. Please file a bug report with a test case (https://bugzilla.xamarin.com).
 
 This error message is reported when an internal consistency check in Xamarin.iOS fails.
 
@@ -560,7 +560,7 @@ This usually indicates a bug in Xamarin.iOS; please file a new issue on [github]
 
 <a name="MT0100" />
 
-### MT0100: Invalid assembly build target: '*'. Please file a bug report with a test case (http://bugzilla.xamarin.com).
+### MT0100: Invalid assembly build target: '*'. Please file a bug report with a test case (https://bugzilla.xamarin.com).
 
 This error message is reported when an internal consistency check in Xamarin.iOS fails.
 

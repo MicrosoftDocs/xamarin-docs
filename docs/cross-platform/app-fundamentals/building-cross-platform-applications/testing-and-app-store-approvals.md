@@ -81,7 +81,7 @@ running Touch.Unit.
 
 There is an open-source equivalent of Touch.Unit for Android called
 Andr.Unit. You can download it from [github](https://github.com/spouliot/Andr.Unit) and read
-about the tool on [@spouliot's blog](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
+about the tool on [@spouliot's blog](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
 ## App Store Approvals
 

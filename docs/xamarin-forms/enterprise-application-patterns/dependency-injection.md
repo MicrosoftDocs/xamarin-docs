@@ -52,7 +52,7 @@ There are several advantages to using a dependency injection container:
 
 In the context of a Xamarin.Forms app that uses MVVM, a dependency injection container will typically be used for registering and resolving view models, and for registering services and injecting them into view models.
 
-There are many dependency injection containers available, with the eShopOnContainers mobile app using Autofac to manage the instantiation of view model and service classes in the app. Autofac facilitates building loosely coupled apps, and provides all of the features commonly found in dependency injection containers, including methods to register type mappings and object instances, resolve objects, manage object lifetimes, and inject dependent objects into constructors of objects that it resolves. For more information about Autofac, see [Autofac](http://autofac.readthedocs.io/en/latest/index.html) on readthedocs.io.
+There are many dependency injection containers available, with the eShopOnContainers mobile app using Autofac to manage the instantiation of view model and service classes in the app. Autofac facilitates building loosely coupled apps, and provides all of the features commonly found in dependency injection containers, including methods to register type mappings and object instances, resolve objects, manage object lifetimes, and inject dependent objects into constructors of objects that it resolves. For more information about Autofac, see [Autofac](https://autofac.readthedocs.io/en/latest/index.html) on readthedocs.io.
 
 In Autofac, the `IContainer` interface provides the dependency injection container. Figure 3-1 shows the dependencies when using this container, which instantiates an `IOrderService` object and injects it into the `ProfileViewModel` class.
 
@@ -135,7 +135,7 @@ _container = builder.Build();
 Invoking the `Build` method on the `ContainerBuilder` instance builds a new dependency injection container that contains the registrations that have been made.
 
 > [!TIP]
-> Consider an `IContainer` as being immutable. While Autofac provides an `Update` method to update registrations in an existing container, calling this method should be avoided where possible. There are risks to modifying a container after it's been built, particularly if the container has been used. For more information, see [Consider a Container as Immutable](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) on readthedocs.io.
+> Consider an `IContainer` as being immutable. While Autofac provides an `Update` method to update registrations in an existing container, calling this method should be avoided where possible. There are risks to modifying a container after it's been built, particularly if the container has been used. For more information, see [Consider a Container as Immutable](https://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) on readthedocs.io.
 
 <a name="resolution" />
 
@@ -185,7 +185,7 @@ The first time that the `INavigationService` interface is resolved, the containe
 > [!NOTE]
 > The SingleInstance scope disposes created objects when the container is disposed.
 
-Autofac includes additional instance scopes. For more information, see [Instance Scope](http://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html) on readthedocs.io.
+Autofac includes additional instance scopes. For more information, see [Instance Scope](https://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html) on readthedocs.io.
 
 ## Summary
 

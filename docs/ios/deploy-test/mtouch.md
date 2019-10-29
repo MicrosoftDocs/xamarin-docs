@@ -146,6 +146,3 @@ These steps are typically performed by Visual Studio for Mac.
 See the [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) manual page for details on the other command line
 options.
 
-## Related Links
-
-- [mtouch(1)](http://iosapi.xamarin.com/?link=man%3amtouch(1))

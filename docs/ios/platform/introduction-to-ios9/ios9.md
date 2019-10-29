@@ -23,7 +23,7 @@ _Even if you don't plan to add iOS 9 features to your app straight away, you sho
 When the first iOS 9 betas appeared, we identified two issues with older versions of
 Xamarin that manifested as older apps being unable to start on iOS 9.
 
-These two issues (as [detailed on our forums](http://forums.xamarin.com/discussion/comment/131529/#Comment_131529)) were:
+These two issues (as [detailed on our forums](https://forums.xamarin.com/discussion/comment/131529/#Comment_131529)) were:
 
 - Apps build for iOS 8 or earlier not being able to start on 32-bit devices (including apps built with the [Unified API](~/cross-platform/macios/unified/index.md)).
 - P/Invoke failing with the full path is not specified.

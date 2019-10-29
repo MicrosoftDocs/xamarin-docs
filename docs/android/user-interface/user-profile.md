@@ -127,5 +127,5 @@ in Android, and it offers an additional level of device personalization.
 ## Related Links
 
 - [ContactsProviderDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/contactsproviderdemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Introducing Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

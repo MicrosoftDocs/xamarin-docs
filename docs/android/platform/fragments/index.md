@@ -97,4 +97,3 @@ covered in more detail in the documents of this section.
 - [Honeycomb Gallery (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
 - [Fragments](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Support Package](https://developer.android.com/sdk/compatibility-library.html)
-- [MOTODEV Webinar: Introducing Fragments](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

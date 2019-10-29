@@ -115,7 +115,7 @@ requires that all applications specify a content rating. Click the
 All applications on Google Play must be rated according to the Google
 Play ratings system. In addition to the content rating, all
 applications must adhere to Google's
-[Developer Content Policy](http://www.android.com/us/developer-content-policy.html).
+[Developer Content Policy](https://www.android.com/us/developer-content-policy.html).
 
 The following lists the four levels in the Google Play rating system 
 and provides some guidelines as features or content that would require 
@@ -182,7 +182,7 @@ app through Google Play for Education.
 
 At the bottom of the **Pricing &amp; Distribution** page is the **CONSENT** section.
 This is a mandatory section and is used to declare that the application
-meets the [Android Content Guidelines](http://www.android.com/market/terms/developer-content-policy.html#hl=us)
+meets the [Android Content Guidelines](https://www.android.com/market/terms/developer-content-policy.html#hl=us)
 and acknowledgement that the application is subject to U.S. export laws:
 
 [![Consent section](manually-uploading-the-apk-images/15-consent-sml.png)](manually-uploading-the-apk-images/15-consent.png#lightbox)

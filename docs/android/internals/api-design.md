@@ -283,7 +283,7 @@ therefore be passed as runnables directly.
 ### Inner Classes
 
 Java has two different types of
-[nested classes](http://download.oracle.com/javase/tutorial/java/javaOO/nested.html):
+[nested classes](https://download.oracle.com/javase/tutorial/java/javaOO/nested.html):
 static nested classes and non-static classes.
 
 Java static nested classes are identical to C# nested types.

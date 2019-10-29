@@ -67,7 +67,7 @@ To decompile an Android library open the **.JAR** file with the Java
 decompiler. If the library is an **.AAR** file, it is necessary to
 extract the file **classes.jar** from the archive file. The following
 is a sample screenshot of using JD-GUI to analyze the
-[Picasso](http://square.github.io/picasso/) JAR:
+[Picasso](https://square.github.io/picasso/) JAR:
 
 ![Using the Java Decompiler to analyze picasso-2.5.2.jar](troubleshooting-bindings-images/troubleshoot-bindings-01.png)
 

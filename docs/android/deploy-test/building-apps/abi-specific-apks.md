@@ -51,7 +51,7 @@ cover the following topics:
 
 At the end of this guide is a walkthrough that will demonstrate how to
 script these steps using
-[Rake](http://martinfowler.com/articles/rake.html).
+[Rake](https://martinfowler.com/articles/rake.html).
 
 ### Creating the Version Code for the APK
 
@@ -240,7 +240,7 @@ of these folders with their contents:
 implemented in one of many different build systems. Although we don't
 have a pre-written example, it should also be possible with
 [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) or
-[Fake](http://fsharp.github.io/FAKE/).
+[Fake](https://fsharp.github.io/FAKE/).
 
 ## Summary
 
