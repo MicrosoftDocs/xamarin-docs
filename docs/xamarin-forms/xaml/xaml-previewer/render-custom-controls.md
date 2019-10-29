@@ -42,13 +42,16 @@ Currently, SkiaSharp controls are only supported when you're previewing on iOS. 
 ## Troubleshooting
 
 ### Check your Xamarin.Forms version
+
 Make sure you have at least Xamarin.Forms 3.6 installed. You can update your Xamarin.Forms version on NuGet.
 
 ### Even with `[DesignTimeVisible(true)]`, my custom control isn't rendering properly.
+
 Custom controls that rely heavily on code-behind or backend data don't always work in the XAML Previewer. You can try:
 
 * Moving the control so it doesn't initialize if [design mode is enabled](index.md#detect-design-mode)
 * Setting up [design time data](design-time-data.md) to show fake data from the backend
 
 ### The XAML Previewer shows the error "Custom Controls aren't rendering properly"
+
 Try cleaning and rebuilding your project, or closing and reopening the XAML file.

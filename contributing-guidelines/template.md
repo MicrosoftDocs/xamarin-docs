@@ -84,8 +84,11 @@ If your heading finishes with a `#` character, you need to add an extra `#` char
 Second-level headings will generate the on-page TOC that appears in the "In this article" section underneath the on-page title.
 
 ### Third-level heading
+
 #### Fourth-level heading
+
 ##### Fifth level heading
+
 ###### Sixth-level heading
 
 ## Text styling

@@ -152,6 +152,7 @@ notifications.
 
 <a name="notif-chan"></a>
 <a name="notification-channels"></a>
+
 ## Notification channels
 
 Beginning with Android 8.0 (Oreo), you can use the *notification

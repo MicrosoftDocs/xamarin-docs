@@ -184,6 +184,7 @@ The following table outlines accuracy per platform:
 <a name="calculate-distance" />
 
 ## Detecting Mock Locations
+
 Some devices may return a mock location from the provider or by an application that provides mock locations. You can detect this by using the `IsFromMockProvider` on any [`Location`](xref:Xamarin.Essentials.Location).
 
 ```csharp

@@ -75,6 +75,7 @@ Before you begin debugging any application, always ensure that the configuration
 -----
 
 ## Start Debugging
+
 To start debugging, select the target device or similar in your IDE:
 
 # [Visual Studio for Mac](#tab/macos)

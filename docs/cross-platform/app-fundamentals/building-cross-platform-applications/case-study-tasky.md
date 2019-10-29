@@ -504,6 +504,7 @@ All references to the PCL library are through the `TaskItemManager` class.
  <a name="Windows_Phone_App" />
 
 ## Windows Phone App
+
 The complete Windows Phone project:
 
  ![](case-study-tasky-images/taskywp7-solution.png "Windows Phone App The complete Windows Phone project")

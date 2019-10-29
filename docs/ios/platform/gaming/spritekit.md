@@ -18,6 +18,7 @@ SpriteKit, the 2D graphics framework from Apple, has some interesting new featur
 SpriteKit includes a 2D, rigid body physics API. Every sprite has an associated physics body (`SKPhysicsBody`) that defines the physics properties such as mass and friction, as well as the geometry of the body in the physics world.
 
 ## Creating a Physics Body from a Texture
+
 SpriteKit now supports deriving the physics body of a sprite from its texture. This makes it easy to implement collisions that look more natural.
 
 For example, notice in the following collision how the banana and monkey collide nearly at the surface of each image:

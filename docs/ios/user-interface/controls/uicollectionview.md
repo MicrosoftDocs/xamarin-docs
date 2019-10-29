@@ -160,6 +160,7 @@ As with other parts of iOS, such as `UITableView` and `MKMapView`, `UICollection
 - **Number of items per section** – Returned from  `GetItemsCount` method.
 
 ### UICollectionViewController
+
 For convenience, the `UICollectionViewController` class is
 available.This is automatically configured to be both the delegate, which is
 discussed in the next section, and data source for its `UICollectionView` view.

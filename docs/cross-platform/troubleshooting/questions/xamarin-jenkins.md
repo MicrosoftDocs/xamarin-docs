@@ -37,6 +37,7 @@ Your options for setting the SDK location may vary depending on the exact Jenkin
 > This issue has been resolved in recent versions of Xamarin. However, if the issue occurs on the latest version of the software, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
 
 ### Jenkins reports an invalid Xamarin license
+
 The error messages for this issue are typically something like
 
 > XA9008 error: Building from command line requires a business license

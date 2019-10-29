@@ -23,6 +23,7 @@ Xamarin Live Reload enables you to **make changes to your XAML and see them refl
 * [Xamarin.Forms 3.0.0 or above](https://www.nuget.org/packages/Xamarin.Forms/).
 
 ## Getting Started
+
 ### 1. Install Xamarin Live Reload from the Visual Studio Marketplace
 
 Xamarin Live Reload is distributed via the Visual Studio Marketplace. To install the extension, visit the [Xamarin Live Reload page on the Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=Xamarin.XamarinLiveReload) website and click **Download**.
@@ -74,6 +75,7 @@ Compile and deploy your application. Once the app is the deployed, open a XAML f
 Live Reload works with changes to any XAML file. Changes to C# or adding/removing NuGet packages requires a new build and deploy to take effect.
 
 ## Frequently Asked Questions 
+
 ### Is Xamarin Live Reload available on Visual Studio for Mac? 
 
 No, preview release of Xamarin Live Reload is only available for Visual Studio 2017.

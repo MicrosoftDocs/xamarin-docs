@@ -137,6 +137,7 @@ Views laid out by `RelativeLayout` have two options for specifying their size:
 `HeightRequest` and `WidthRequest` specify the intended height and width of the view, but may be overridden by layouts as needed. `WidthConstraint` and `HeightConstraint` support setting the height and width as a value relative to the layout's or another view's properties, or as a constant value.
 
 ## Exploring a Complex Layout
+
 Each of the layouts have strengths and weaknesses for creating particular layouts. Throughout this series of layout articles, a sample app has been created with the same page layout implemented using three different layouts.
 
 Consider the following XAML:

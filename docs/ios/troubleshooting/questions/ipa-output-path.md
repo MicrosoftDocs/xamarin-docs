@@ -12,6 +12,7 @@ ms.date: 03/21/2017
 # Can I change the output path of the IPA file?
 
 ## For Cycle 7 and higher
+
 Yes, you can use customized MSBuild targets to achieve this. The easiest option is probably to copy the `.ipa` file after it has been built.
 
 These steps will work for any iOS project that uses the MSBuild build engine on either Mac or Windows. (Note: all Unified API projects use the MSBuild build engine.)

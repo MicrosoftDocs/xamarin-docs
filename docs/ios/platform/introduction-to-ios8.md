@@ -56,9 +56,11 @@ HealthKit is a framework introduced in iOS 8 that provides a centralized, coordi
 For more information on using this in your Xamarin.iOS app, refer to the [Introduction to HealthKit](~/ios/platform/healthkit.md) guide.
 
 ## Extending iPhone Functionality
+
 With iOS8, developers are being given much more control over who can use their app, and increased capability for more open communication between third party apps. Features such as App Extensions and Document Picker open a world of possibilities for how applications can be used in Apple’s ecosystem.
 
 ### App Extensions
+
 App Extensions, to oversimplify, are a way for third party apps to communicate with one another. To maintain high security standards and to uphold the integrity of the sandboxed apps, this communication doesn’t happen directly between applications. Instead, it is carried out by an *Extension* in the middle.
 
 The first step in creating an App Extension is to define the correct extension point—this is important in ensuring the behavior and availability of the correct APIs. To create an App Extension in Visual Studio for Mac, add it to an existing application by adding a new project to your solution.
@@ -105,6 +107,7 @@ Handoff works with iOS 8 and Yosemite, and requires an iCloud account to be logg
 For more information, please see our [Handoff](~/ios/platform/handoff.md) guide.
 
 ## Unified Storyboards
+
 iOS 8 includes a new simpler to use mechanism for creating the user interface—the unified storyboard. With a single storyboard to cover all of the different hardware screen sizes, fast and responsive views can be created in a true "design once, use many" style.
 
 Prior to iOS8, developers used `UIInterfaceOrientation` to distinguish between portrait and landscape modes, and `UIInterfaceIdiom` to distinguish between iOS devices. In iOS8 it is no longer necessary to create separate storyboards for iPhone and iPad devices—orientation and device are determined by using *Size Classes*.
@@ -121,6 +124,7 @@ If the two concepts are used together, the result is a 2 x 2 grid that defines t
 For more information about size classes, refer to the [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md).
 
 ## Photo Kit
+
 Photo Kit is a new framework that allows applications to query the system image library and create custom user interfaces to view and modify its contents. It includes a number of classes that represent image and video assets, as well as collections of assets such as albums and folders.
 
 For more information, please see our [PhotoKit](~/ios/platform/photokit.md) guide.
@@ -144,11 +148,13 @@ Sprite Kit, the 2D game framework from Apple, has some interesting new features 
 For more information, please see our [SpriteKit](~/ios/platform/gaming/spritekit.md) documentation.
 
 ## Other Changes
+
 As well as the major changes in iOS 8 that are described above, Apple has additionally updated many existing frameworks. These are detailed below:
 
 - **[Core Image](https://developer.apple.com/library/prerelease/ios/documentation/GraphicsImaging/Reference/CoreImagingRef/index.html#//apple_ref/doc/uid/TP40001171)** – Apple has expanded upon its image processing framework by adding better support for the detection of rectangular regions, and QR codes inside images. Mike Bluestein explores this in his blog post entitled [Image Detection in iOS 8](https://blog.xamarin.com/image-detection-in-ios-8/)
 
 ## Deprecated APIs
+
 With all the improvements made in iOS 8, a number of APIs have deprecated. Some of these are detailed below.
 
 - **[UIApplication](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIApplication_Class/index.html#//apple_ref/occ/cl/UIApplication)** – The methods and properties used for registering remote notifications have deprecated. These are registerForRemoteNotificationTypes and enabledRemoteNotificationTypes.
@@ -157,6 +163,7 @@ With all the improvements made in iOS 8, a number of APIs have deprecated. Some 
 - **[UISearchDisplayController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UISearchDisplayController_Class/index.html#//apple_ref/occ/cl/UISearchDisplayController)** – This has been replaced by UISearchController in iOS8.
 
 ## Summary
+
 In this article we looked at some of the new features introduced by Apple in iOS 8.
 
 ## Related Links

@@ -43,4 +43,5 @@ You can workaround the issue by removing the `<CodesignEntitlements>` flag from 
 5. Reload the project and you should be able to deploy to the simulator.
 
 ### Next Steps
+
 For further assistance, to contact us, or if this issue remains even after utilizing the above information, please see [What support options are available for Xamarin?](~/cross-platform/troubleshooting/support-options.md) for information on contact options, suggestions, as well as how to file a new bug if needed.

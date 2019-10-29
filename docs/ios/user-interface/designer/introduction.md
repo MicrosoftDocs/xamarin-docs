@@ -338,6 +338,7 @@ These controls adjust the zoom on the design surface. They do not affect the use
 Use the **Properties Pad** to edit the identity, visual styles, accessibility, and behavior of a control. The following screenshot illustrates the **Properties Pad** options for a button:
 
 [![The Properties Pad for a button](introduction-images/17-buttonpropertiespad-vsmac.png "The Properties Pad for a button")](introduction-images/17-buttonpropertiespad-vsmac-large.png#lightbox)
+
 #### Properties Pad sections
 
 The **Properties Pad** contains three sections:

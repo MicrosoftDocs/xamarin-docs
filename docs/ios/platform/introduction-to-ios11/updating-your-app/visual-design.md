@@ -28,6 +28,7 @@ barItem.LargeContentSizeImage = UIImage.FromBundle("AccessibleImage");
 ```
 
 ### Navigation Bar
+
 iOS 11 introduced new functionality to make navigation bar titles easier to read. Apps can display this larger title by assigning the `PrefersLargeTitles` property to true:
 
 ```csharp

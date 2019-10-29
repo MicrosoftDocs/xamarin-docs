@@ -149,6 +149,7 @@ This is currently a known issue, relating to bug [#53906](https://bugzilla.xamar
 This is because 2 factor authentication is enabled on your account. Make sure that you are using the latest stable version of Visual Studio for Mac
 
 ### Failed to create new certificate
+
 "You have reached the limit for certificates of this type"
 
 ![certificate limit dialog](apple-account-management-images/image10.png)

@@ -24,6 +24,7 @@ The following classes will be created for this app:
 ## 1. Create the Android project
 
 Create a new Xamarin.Android project called **FragmentSample**.
+
 # [Visual Studio](#tab/windows)
 
 [![Create a new Xamarin.Android project](./walkthrough-images/01-newproject.w157-sml.png)](./walkthrough-images/01-newproject.w157.png#lightbox)

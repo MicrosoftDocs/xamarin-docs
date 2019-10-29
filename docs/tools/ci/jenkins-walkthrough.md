@@ -292,6 +292,7 @@ Polling SCM is a popular trigger because it provides quick feedback when a devel
 Periodic builds are often used to create a version of the application that can be distributed to testers. For example, a periodic build might be scheduled for Friday evening so that members of the QA team can test the work of the previous week.
 
 ### Compiling a Xamarin.iOS Applications
+
 Xamarin.iOS projects can be compiled at the command line using `xbuild` or `msbuild`. The shell command will execute in the context of the user account that is running Jenkins. It is important that the user account has access to the provisioning profile so that the application can be properly packaged for distribution. It is possible to add this shell command to the job configuration page.
 
 Scroll down to the **Build** section. Click the **Add build step** button and select **Execute shell**, as illustrated by the following screenshot:

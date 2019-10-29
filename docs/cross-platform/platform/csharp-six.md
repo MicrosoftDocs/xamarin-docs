@@ -32,7 +32,9 @@ Visual Studio for Mac users can check if they have Mono 4 (or newer) installed b
 **About Visual Studio for Mac > Visual Studio for Mac > Show Details**.
 
 ## Less Boilerplate
+
 ### using static
+
 Enumerations, and certain classes such as `System.Math`, are primarily holders of static values and functions. In C# 6, you can import all static members of a type with a single `using static` statement. Compare a typical trigonometric function in C# 5 and C# 6:
 
 ```csharp
@@ -88,6 +90,7 @@ class Program
 The previous example demonstrates the difference in behavior: the extension method `Enumerable.Where` is associated with the array, while the static method `String.Join` can be called without reference to the `String` type.
 
 ### nameof Expressions
+
 Sometimes, you want to refer to the name you’ve given a variable or field. In C# 6, `nameof(someVariableOrFieldOrType)` will return the string `"someVariableOrFieldOrType"`. For instance, when throwing an `ArgumentException` you’re very likely to want to name which argument is invalid:
 
 ```csharp
@@ -118,6 +121,7 @@ var myLabelNew.SetBinding (Label.TextProperty, nameof(ReactiveType.StringField))
 The two calls to `SetBinding` are passing identical values: `nameof(ReactiveType.StringField)` is `"StringField"`, not `"ReactiveType.StringField"` as you might initially expect.
 
 ## Null-conditional Operator
+
 Earlier updates to C# introduced the concepts of nullable types and the null-coalescing operator `??` to reduce the amount of boilerplate code when handling nullable values. C# 6 continues this theme with the "null-conditional operator" `?.`. When used on an object on the right-hand side of an expression, the null-conditional operator returns the member value if the object is not `null` and `null` otherwise:
 
 ```csharp
@@ -151,6 +155,7 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
 ```
 
 ## String Interpolation
+
 The `String.Format` function has traditionally used indices as placeholders in the format string, e.g., `String.Format("Expected: {0} Received: {1}.", expected, received`). Of course, adding a new value has always involved an annoying little task of counting up arguments, renumbering placeholders, and inserting the new argument in the right sequence in the argument list.
 
 C# 6's new string interpolation feature greatly improves upon `String.Format`. Now, you can directly name variables in a string prefixed with a `$`. For instance:

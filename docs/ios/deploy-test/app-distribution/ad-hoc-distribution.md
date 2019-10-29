@@ -74,6 +74,7 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 <a name="createappid" />
 
 ### Create an App ID
+
 As with any other Provisioning Profile you create, an App ID will be required to identify the App that will be distributed to the user's device. If you haven't already created this, follow the steps below to create one:
 
 1. In the [Apple Developer Center](https://developer.apple.com/account/overview.action) browse to the *Certificate, Identifiers and Profiles* section. Select **App IDs** under **Identifiers**.
@@ -140,6 +141,7 @@ When you are ready to do a final build of a Xamarin.iOS application, select the 
 5. Click the **OK** button to save the changes.
 
 # [Visual Studio](#tab/windows)
+
  In Visual Studio, do the following:
 
 1. Right-click the project name in the **Solution Explorer** and select **Properties** to open it for edit.

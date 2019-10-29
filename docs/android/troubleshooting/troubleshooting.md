@@ -270,6 +270,7 @@ I/monodroid-gref(27679): -g- grefc 1952 gwrefc 259 handle 0x4066df10/G from take
 ```
 
 ## Object is still alive, as handle != null
+
 ## wref turned back into a gref
 
 ```shell
@@ -279,6 +280,7 @@ I/monodroid-gref(27679): -w- grefc 1930 gwrefc 38 handle 0xde68f95f/W from take_
 ```
 
 ## Object is dead, as handle == null
+
 ## wref is freed, no new gref created
 
 ```shell

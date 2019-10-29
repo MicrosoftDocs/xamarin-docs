@@ -16,6 +16,7 @@ ms.date: 09/12/2019
 The Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) class is used to present scrollable lists, which can be customized through the use of `ViewCell` elements. A `ViewCell` element can display text and images, indicate a true/false state, and receive user input.
 
 ## Built in Cells
+
 Xamarin.Forms comes with built-in cells that work for many applications:
 
 - [`TextCell`](#textcell) controls are used for displaying text with an optional second line for detail text.
@@ -61,6 +62,7 @@ The following screenshot shows `ImageCell` items with customized color propertie
 !["Customized ImageCell Example"](customizing-cell-appearance-images/image-cell-custom.png "Customized ImageCell Example")
 
 ## Custom Cells
+
 Custom cells allow you to create cell layouts that aren't supported by the built-in cells. For example, you may want to present a cell with two labels that have equal weight. A `TextCell` would be insufficient because the `TextCell` has one label that is smaller. Most cell customizations add additional read-only data (such as additional labels, images or other display information).
 
 All custom cells must derive from [`ViewCell`](xref:Xamarin.Forms.ViewCell), the same base class that all of the built-in cell types use.
@@ -72,6 +74,7 @@ The following screenshot shows an example of a custom cell:
 !["Custom Cell Example"](customizing-cell-appearance-images/custom-cell.png "Custom Cell Example")
 
 ### XAML
+
 The custom cell shown in the previous screenshot can be created with the following XAML:
 
 ```xaml
