@@ -31,4 +31,4 @@ Effects can invoke events. This article shows how to create an event that implem
 
 ## [Reusable RoundEffect](reusable-roundeffect.md)
 
-The RoundEffect article shows how to create an effect that can render any control deriving from the `VisualElement` class as a circle. This effect can be used to create circular images, circular buttons, or other circular controls.
+RoundEffect is a reusable effect that can be applied to any control deriving from VisualElement to render the control as a circle. This effect can be used to create circular images, circular buttons, or other circular controls.
