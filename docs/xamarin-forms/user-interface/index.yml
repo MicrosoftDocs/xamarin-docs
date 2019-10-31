@@ -120,7 +120,7 @@ sections:
       image:
         src: ~/media/icons/i_user-interface.svg
         href: map/index.md
-      title: Maps
+      title: Map
     - href: menuitem.md
       html: "Learn how to use the MenuItem class to add items to the context menu of ListView cells."
       image:

@@ -39,10 +39,7 @@ A [`Pin`](xref:Xamarin.Forms.Maps.Pin) can be added to a [`Map`](xref:Xamarin.Fo
              xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
      <maps:Map x:Name="map"
                IsShowingUser="True"
-               MoveToLastRegionOnLayoutChange="False"
-               HeightRequest="100"                  
-               WidthRequest="960"
-               VerticalOptions="FillAndExpand">
+               MoveToLastRegionOnLayoutChange="False">
          <x:Arguments>
              <maps:MapSpan>
                  <x:Arguments>
@@ -75,10 +72,7 @@ A [`Pin`](xref:Xamarin.Forms.Maps.Pin) can be added to a [`Map`](xref:Xamarin.Fo
 </ContentPage>
 ```
 
-This XAML creates a [`Map`](xref:Xamarin.Forms.Maps.Map) object that shows the region that is specified by the [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) object. The `MapSpan` object is centered on the latitude and longitude represented by a [`Position`](xref:Xamarin.Forms.Maps.Position) object, which extends 0.01 latitude and longitude degrees. A [`Pin`](xref:Xamarin.Forms.Maps.Pin) object is added to the [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) collection, and drawn on the `Map` at the location specified by its [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) property. For information about passing arguments in XAML to objects that lack default constructors, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md).
-
-> [!NOTE]
-> The [`Position`](xref:Xamarin.Forms.Maps.Position) struct defines read only [`Latitude`](xref:Xamarin.Forms.Maps.Position.Latitude) and [`Longitude`](xref:Xamarin.Forms.Maps.Position.Longitude) properties, both of type `double`. When creating a `Position` object via its constructor, the latitude value will be clamped between -90.0 and 90.0, and the longitude value will be clamped between -180.0 and 180.0.
+This XAML creates a [`Map`](xref:Xamarin.Forms.Maps.Map) object that shows the region that is specified by the [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) object. The `MapSpan` object is centered on the latitude and longitude represented by a [`Position`](xref:Xamarin.Forms.Maps.Position) object, which extends 0.01 latitude and longitude degrees. A [`Pin`](xref:Xamarin.Forms.Maps.Pin) object is added to the [`Map.Pins`](xref:Xamarin.Forms.Maps.Pin) collection, and drawn on the `Map` at the location specified by its [`Position`](xref:Xamarin.Forms.Maps.Pin.Position) property. For information about the [`Position`](xref:Xamarin.Forms.Maps.Position) struct, see [Map Position and Distance](position-distance.md). For information about passing arguments in XAML to objects that lack default constructors, see [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md).
 
 The equivalent C# code is:
 
@@ -114,7 +108,7 @@ By default, when a [`Pin`](xref:Xamarin.Forms.Maps.Pin) is tapped its informatio
 
 Tapping elsewhere on the map closes the information window.
 
-The [`Pin`](xref:Xamarin.Forms.Maps.Pin) class defines a `MarkerClicked` event, which is fired when a `Pin` is tapped. It's not necessary to handle this event to display the information window. Instead, this event should only be handled when there's a requirement to be notified that a specific pin has been tapped.
+The [`Pin`](xref:Xamarin.Forms.Maps.Pin) class defines a `MarkerClicked` event, which is fired when a `Pin` is tapped. It's not necessary to handle this event to display the information window. Instead, this event should be handled when there's a requirement to be notified that a specific pin has been tapped.
 
 The [`Pin`](xref:Xamarin.Forms.Maps.Pin) class also defines a `InfoWindowClicked` event that's fired when an information window is tapped. This event should be handled when there's a requirement to be notified that a specific information window has been tapped.
 
@@ -185,7 +179,6 @@ A [`Map`](xref:Xamarin.Forms.Maps.Map) can be populated with pins by using data 
     <Grid>
         ...
         <maps:Map x:Name="map"
-                  MoveToLastRegionOnLayoutChange="false"
                   ItemsSource="{Binding Locations}">
             <maps:Map.ItemTemplate>
                 <DataTemplate>
@@ -206,7 +199,7 @@ The appearance of each item in the `IEnumerable` collection is defined by settin
 
 The following screenshots show a [`Map`](xref:Xamarin.Forms.Maps.Map) displaying a [`Pin`](xref:Xamarin.Forms.Maps.Pin) collection using data binding:
 
-[![Screenshot of map with data bound pins, on iOS and Android](map-images/pins-itemssource.png "Map with data bound pins")](map-images/pins-itemssource-large.png#lightbox "Map with data bound pins")
+[![Screenshot of map with data bound pins, on iOS and Android](pins-images/pins-itemsource.png "Map with data bound pins")](pins-images/pins-itemsource-large.png#lightbox "Map with data bound pins")
 
 ### Choose item appearance at runtime
 

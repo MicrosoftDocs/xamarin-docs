@@ -13,7 +13,7 @@ ms.date: 10/22/2019
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-Xamarin.Forms.Maps provides the [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) class, which converts between string addresses and latitude and longitude coordinates that are stored in [`Position`](xref:Xamarin.Forms.Maps.Position) objects.
+The [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) namespace provides a [`Geocoder`](xref:Xamarin.Forms.Maps.Geocoder) class, which converts between string addresses and latitude and longitude coordinates that are stored in [`Position`](xref:Xamarin.Forms.Maps.Position) objects. For more information about the [`Position`](xref:Xamarin.Forms.Maps.Position) struct, see [Map Position and Distance](position-distance.md).
 
 ## Geocode an address
 
@@ -50,4 +50,5 @@ The [`GetAddressesForPositionAsync`](xref:Xamarin.Forms.Maps.Geocoder.GetAddress
 ## Related links
 
 - [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
+- [Xamarin.Forms Map Position and Distance](position-distance.md)
 - [Geocoder API](xref:Xamarin.Forms.Maps.Geocoder)
