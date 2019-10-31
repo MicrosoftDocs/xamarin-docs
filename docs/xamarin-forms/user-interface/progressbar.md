@@ -52,7 +52,7 @@ ProgressBar progressBar = new ProgressBar { Progress = 0.5f };
 The `ProgressColor` property defines the inner bar color when the `Progress` property is greater than zero. The following example shows how to instantiate a `ProgressBar` in XAML with the `ProgressColor` property set:
 
 ```xaml
-<ProgressBar OnColor="Orange" />
+<ProgressBar ProgressColor="Orange" />
 ```
 
 The `ProgressColor` property can also be set when creating a `ProgressBar` in code:
