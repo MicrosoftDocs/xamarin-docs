@@ -85,7 +85,7 @@ to center the splash screen image in the application as shown in the following x
 </layer-list>
 ```
 
-This `layer-list` centers the splash image on a background color specified by the `@color/splash_background` resource. The sample application defines this color in the **Resources/values/color.xml** file:
+This `layer-list` centers the splash image on a background color specified by the `@color/splash_background` resource. The sample application defines this color in the **Resources/values/colors.xml** file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
