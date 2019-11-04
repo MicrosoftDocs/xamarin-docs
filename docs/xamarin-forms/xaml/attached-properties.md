@@ -45,7 +45,7 @@ public static readonly BindableProperty HasShadowProperty =
 
 This creates an attached property named `HasShadow`, of type `bool`. The property is owned by the `ShadowEffect` class, and has a default value of `false`. The naming convention for attached properties is that the attached property identifier must match the property name specified in the `CreateAttached` method, with "Property" appended to it. Therefore, in the example above, the attached property identifier is `HasShadowProperty`.
 
-For more information about creating bindable properties, including parameters that can be specified during creation, see [Creating and Consuming a Bindable Property](~/xamarin-forms/xaml/bindable-properties.md#consuming-bindable-property).
+For more information about creating bindable properties, including parameters that can be specified during creation, see [Create a bindable property](~/xamarin-forms/xaml/bindable-properties.md#consume-a-bindable-property).
 
 ### Create accessors
 
@@ -128,7 +128,7 @@ For more information about styles, see [Styles](~/xamarin-forms/user-interface/s
 
 ## Advanced scenarios
 
-When creating an attached property, there are a number of optional parameters that can be set to enable advanced attached property scenarios. This includes detecting property changes, validating property values, and coercing property values. For more information, see [Advanced Scenarios](~/xamarin-forms/xaml/bindable-properties.md#advanced).
+When creating an attached property, there are a number of optional parameters that can be set to enable advanced attached property scenarios. This includes detecting property changes, validating property values, and coercing property values. For more information, see [Advanced scenarios](~/xamarin-forms/xaml/bindable-properties.md#advanced-scenarios).
 
 ## Related links
 

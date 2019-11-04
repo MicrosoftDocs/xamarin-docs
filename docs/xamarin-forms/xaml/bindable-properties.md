@@ -59,11 +59,11 @@ This creates a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instanc
 Optionally, when creating a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance, the following parameters can be specified:
 
 - The binding mode. This is used to specify the direction in which property value changes will propagate. In the default binding mode, changes will propagate from the *source* to the *target*.
-- A validation delegate that will be invoked when the property value is set. For more information, see [Validation Callbacks](#validation).
-- A property changed delegate that will be invoked when the property value has changed. For more information, see [Detecting Property Changes](#propertychanges).
+- A validation delegate that will be invoked when the property value is set. For more information, see [Validation callbacks](#validation-callbacks).
+- A property changed delegate that will be invoked when the property value has changed. For more information, see [Detect property changes](#detect-property-changes).
 - A property changing delegate that will be invoked when the property value will change. This delegate has the same signature as the property changed delegate.
-- A coerce value delegate that will be invoked when the property value has changed. For more information, see [Coerce Value Callbacks](#coerce).
-- A `Func` that's used to initialize a default property value. For more information, see [Creating a Default Value with a Func](#defaultfunc).
+- A coerce value delegate that will be invoked when the property value has changed. For more information, see [Coerce value callbacks](#coerce-value-callbacks).
+- A `Func` that's used to initialize a default property value. For more information, see [Create a default value with a Func](#create-a-default-value-with-a-func).
 
 ### Create accessors
 
