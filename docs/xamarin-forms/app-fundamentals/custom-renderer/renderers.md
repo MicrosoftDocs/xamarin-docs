@@ -88,7 +88,7 @@ The following table lists the renderer and native control classes that implement
 |[`Switch`](xref:Xamarin.Forms.Switch)|SwitchRenderer|UISwitch|Switch|SwitchCompat|ToggleSwitch|
 |[`TableView`](xref:Xamarin.Forms.TableView)|TableViewRenderer|UITableView|ListView||ListView|
 |[`TimePicker`](xref:Xamarin.Forms.TimePicker)|TimePickerRenderer|UITextField|EditText||TimePicker|
-|[`WebView`](xref:Xamarin.Forms.WebView)|WebViewRenderer|UIWebView|WebView||WebView|
+|[`WebView`](xref:Xamarin.Forms.WebView)|WebViewRenderer (WkWebViewRenderer on iOS)|WkWebView|WebView||WebView|
 
 ## Cells
 

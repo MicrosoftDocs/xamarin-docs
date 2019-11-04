@@ -6,7 +6,7 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
+ms.date: 11/04/2019
 ---
 
 # Xamarin.Forms WebView
@@ -398,15 +398,17 @@ When the `Reload` method is invoked the `ReloadRequested` event is fired, indica
 
 ## Performance
 
-The popular web browsers now adopt technologies like hardware accelerated rendering and JavaScript compilation. On iOS, by default, the Xamarin.Forms `WebView` is implemented by the `UIWebView` class, and many of these technologies are unavailable in this implementation. However, an application can opt-in to using the iOS `WkWebView` class to implement the Xamarin.Forms `WebView`, which supports faster browsing. This can be achieved by adding the following code to the **AssemblyInfo.cs** file in the iOS platform project for the application:
-
-```csharp
-// Opt-in to using WkWebView instead of UIWebView.
-[assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
-```
+Popular web browsers adopt technologies like hardware accelerated rendering and JavaScript compilation. Prior to Xamarin.Forms 4.4, the Xamarin.Forms `WebView` was implemented on iOS by the `UIWebView` class. However, many of these technologies were unavailable in this implementation. Therefore, since Xamarin.Forms 4.4, the Xamarin.Forms `WebView` is implemented on iOS by the `WkWebView` class, which supports faster browsing.
 
 > [!NOTE]
 > On iOS, the `WkWebViewRenderer` has a constructor overload that accepts a `WkWebViewConfiguration` argument. This enables the renderer to be configured on creation.
+
+An application can return to using the iOS `UIWebView` class to implement the Xamarin.Forms `WebView`, for compatibility reasons. This can be achieved by adding the following code to the **AssemblyInfo.cs** file in the iOS platform project for the application:
+
+```csharp
+// Opt-in to using UIWebView instead of WkWebView.
+[assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
+```
 
 `WebView` on Android by default is about as fast as the built-in browser.
 
