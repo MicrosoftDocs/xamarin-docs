@@ -255,7 +255,7 @@ The following example shows how to disable vertical scrolling:
 ```xaml
 <Shell ...
        FlyoutVerticalScrollMode="Disabled"
-
+    ...
 </Shell>
 ```
 
