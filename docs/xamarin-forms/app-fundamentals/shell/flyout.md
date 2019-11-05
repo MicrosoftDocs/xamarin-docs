@@ -244,7 +244,7 @@ In addition, the `FlyoutItem` class exposes the following overridable methods:
 
 ## Flyout vertical scroll
 
-By default, a flyout can be scrolled vertically if the flyout items don't fit in the flyout. However, this behavior can be changed by setting the `Shell.FlyoutVerticalScrollMode` bindable property to one of the `ScrollMode` enumeration members:
+By default, a flyout can be scrolled vertically when the flyout items don't fit in the flyout. This behavior can be changed by setting the `Shell.FlyoutVerticalScrollMode` bindable property to one of the `ScrollMode` enumeration members:
 
 - `Disabled` – indicates that vertical scrolling will be disabled.
 - `Enabled` – indicates that vertical scrolling will be enabled.
