@@ -6,7 +6,7 @@ ms.assetid: 4A6FAE5A-848F-4CE0-BFA1-22A6309B5225
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2019
+ms.date: 11/05/2019
 ---
 
 # Simple Animations in Xamarin.Forms
@@ -19,6 +19,8 @@ The [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class provides the fol
 
 - [`TranslateTo`](xref:Xamarin.Forms.ViewExtensions.TranslateTo(Xamarin.Forms.VisualElement,System.Double,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`TranslationX`](xref:Xamarin.Forms.VisualElement.TranslationX) and [`TranslationY`](xref:Xamarin.Forms.VisualElement.TranslationY) properties of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) animates the [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
+- `ScaleXTo` animates the [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
+- `ScaleYTo` animates the [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`RelScaleTo`](xref:Xamarin.Forms.ViewExtensions.RelScaleTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) applies an animated incremental increase or decrease to the [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) animates the [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
 - [`RelRotateTo`](xref:Xamarin.Forms.ViewExtensions.RelRotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) applies an animated incremental increase or decrease to the [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) property of a [`VisualElement`](xref:Xamarin.Forms.VisualElement).
@@ -58,6 +60,9 @@ The following screenshots show the rotation in progress on each platform:
 
 ![](simple-images/rotateto.png "Rotation Animation")
 
+> [!NOTE]
+> In addition to the [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) method, there are also [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) and [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) methods, which animate the [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) and [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY) properties, respectively.
+
 ### Relative Rotation
 
 The following code example demonstrates using the [`RelRotateTo`](xref:Xamarin.Forms.ViewExtensions.RelRotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) method to incrementally increase or decrease the [`Rotation`](xref:Xamarin.Forms.VisualElement.Rotation) property of an [`Image`](xref:Xamarin.Forms.Image):
@@ -87,7 +92,7 @@ The following screenshots show the scaling in progress on each platform:
 ![](simple-images/scaleto.png "Scaling Animation")
 
 > [!NOTE]
-> The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class also defines [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) and [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) properties, which can scale the `VisualElement` differently in the horizontal and vertical directions. These properties can be animated with the [`Animation`](xref:Xamarin.Forms.Animation) class. For more information, see [Custom Animations in Xamarin.Forms](custom.md).
+> In addition to the [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) method, there are also `ScaleXTo` and `ScaleYTo` methods, which animate the [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) and [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) properties, respectively.
 
 ### Relative Scaling
 
