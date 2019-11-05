@@ -47,7 +47,7 @@ Each of these steps is explained below:
 
 Visual Studio 2019 is recommended for building Android 10 apps using Xamarin.
 
-If you are using Visual Studio 2019, update to Visual Studio 2019 version 16.3 or later (for instructions, see [Update Visual Studio 2019 to the most recent release](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). On macOS, update to Visual Studio 2019 for Mac 8.3 or later (for instructions, see [Update Visual Studio 2019 for Mac to the most recent release](https://docs.microsoft.com/en-us/visualstudio/mac/update)).
+If you are using Visual Studio 2019, update to Visual Studio 2019 version 16.3 or later (for instructions, see [Update Visual Studio 2019 to the most recent release](https://docs.microsoft.com/visualstudio/install/update-visual-studio)). On macOS, update to Visual Studio 2019 for Mac 8.3 or later (for instructions, see [Update Visual Studio 2019 for Mac to the most recent release](https://docs.microsoft.com/visualstudio/mac/update)).
 
 ### Install the Android SDK
 
@@ -58,15 +58,15 @@ To create a project with Xamarin.Android 10.0, you must first use the Android SD
 
     ![Android SDK Manager Repository Selection](~/android/platform/android-10-images/sdkrepository.png)
 
-3. Install the **Android 10 SDK Platform** packages, which are listed as **Android SDK Platform 29** in the **Platforms** tab (for more information about using the SDK Manager, see [Android SDK setup](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-sdk)):
+3. Install the **Android 10 SDK Platform** packages, which are listed as **Android SDK Platform 29** in the **Platforms** tab (for more information about using the SDK Manager, see [Android SDK setup](https://docs.microsoft.com/xamarin/android/get-started/installation/android-sdk)):
 
     ![Android SDK Manager Platform Tab](~/android/platform/android-10-images/sdkplatforms.png)
 
 ### Create a Xamarin.Android project
 
-Create a new Xamarin.Android project. If you are new to Android development with Xamarin, see [Hello, Android](https://docs.microsoft.com/en-us/xamarin/android/get-started/hello-android/index) to learn about creating Xamarin.Android projects.
+Create a new Xamarin.Android project. If you are new to Android development with Xamarin, see [Hello, Android](https://docs.microsoft.com/xamarin/android/get-started/hello-android/index) to learn about creating Xamarin.Android projects.
 
-When you create an Android project, you must configure the version settings to target Android 10.0 or later. For example, to target your project for Android 10, you must configure the target Android API level of your project to **Android 10.0 (API 29)**. This includes both your **Target Framework Version** and **Target Android SDK Version** to API 29 or later. For more information about configuring Android API levels, see [Understanding Android API Levels.](https://docs.microsoft.com/en-us/xamarin/android/app-fundamentals/android-api-levels)
+When you create an Android project, you must configure the version settings to target Android 10.0 or later. For example, to target your project for Android 10, you must configure the target Android API level of your project to **Android 10.0 (API 29)**. This includes both your **Target Framework Version** and **Target Android SDK Version** to API 29 or later. For more information about configuring Android API levels, see [Understanding Android API Levels.](https://docs.microsoft.com/xamarin/android/app-fundamentals/android-api-levels)
 
 ![Xamarin.Android Target Framework](~/android/platform/android-10-images/targetframework.png)
 
@@ -74,7 +74,7 @@ When you create an Android project, you must configure the version settings to t
 
 If you are using a physical device such as a Pixel, you can download the Android 10 update by going to the `System` > `System update` > `Check for update` in your phone's settings. If you'd prefer to flash your device, please see the instructions on flashing a [Factory Image](https://developers.google.com/android/images) or [OTA Image](https://developers.google.com/android/ota) to your device.
 
-If you are using an emulator, create a virtual device for API level 29 and select an x86-based image. For information about using the Android Device Manager to create and manage virtual devices, see [Managing Virtual Devices with the Android Device Manager.](https://docs.microsoft.com/en-us/xamarin/android/get-started/installation/android-emulator/device-manager) For information about using the Android Emulator for testing and debugging, see [Debugging on the Android Emulator.](https://docs.microsoft.com/en-us/xamarin/android/deploy-test/debugging/debug-on-emulator)
+If you are using an emulator, create a virtual device for API level 29 and select an x86-based image. For information about using the Android Device Manager to create and manage virtual devices, see [Managing Virtual Devices with the Android Device Manager.](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager) For information about using the Android Emulator for testing and debugging, see [Debugging on the Android Emulator.](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator)
 
 ## New features
 
