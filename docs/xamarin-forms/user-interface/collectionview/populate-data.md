@@ -64,15 +64,15 @@ collectionView.ItemsSource = new string[]
 };
 ```
 
-> [!IMPORTANT]
-> If the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is required to refresh as items are added, removed, or changed in the underlying collection, the underlying collection should be an `IEnumerable` collection that sends property change notifications, such as `ObservableCollection`.
+> [!WARNING]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) will throw an exception if its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) is updated off the UI thread.
 
 By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays items in a vertical list, as shown in the following screenshots:
 
 [![Screenshot of CollectionView containing text items, on iOS and Android](populate-data-images/text.png "Text items in a CollectionView")](populate-data-images/text-large.png#lightbox "Text items in a CollectionView")
 
-> [!WARNING]
-> [`CollectionView`](xref:Xamarin.Forms.CollectionView) will throw an exception if its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) is updated off the UI thread.
+> [!IMPORTANT]
+> If the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is required to refresh as items are added, removed, or changed in the underlying collection, the underlying collection should be an `IEnumerable` collection that sends property change notifications, such as `ObservableCollection`.
 
 For information on how to change the [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, see [Xamarin.Forms CollectionView Layout](layout.md). For information on how to define the appearance of each item in the `CollectionView`, see [Define item appearance](#define-item-appearance).
 
