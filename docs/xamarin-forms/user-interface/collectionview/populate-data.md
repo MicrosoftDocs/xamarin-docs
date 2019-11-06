@@ -71,6 +71,9 @@ By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays items
 
 [![Screenshot of CollectionView containing text items, on iOS and Android](populate-data-images/text.png "Text items in a CollectionView")](populate-data-images/text-large.png#lightbox "Text items in a CollectionView")
 
+> [!WARNING]
+> [`CollectionView`](xref:Xamarin.Forms.CollectionView) will throw an exception if its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) is updated off the UI thread.
+
 For information on how to change the [`CollectionView`](xref:Xamarin.Forms.CollectionView) layout, see [Xamarin.Forms CollectionView Layout](layout.md). For information on how to define the appearance of each item in the `CollectionView`, see [Define item appearance](#define-item-appearance).
 
 ### Data binding
