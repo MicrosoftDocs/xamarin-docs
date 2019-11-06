@@ -37,7 +37,7 @@ productDirectory:
       - url: ~/xamarin-forms/xaml/index.yml
         text: Xamarin.Forms XAML
       - url: ~/xamarin-forms/index.yml
-        text: Platform docs
+        text: All Xamarin.Forms docs
   - title: Android
     imageSrc: https://docs.microsoft.com/media/logos/logo_android.svg
     links:
@@ -46,7 +46,7 @@ productDirectory:
       - url: ~/android/platform/android-10.md
         text: Android 10
       - url: ~/android/index.yml
-        text: Platform docs
+        text: All Android docs
   - title: iOS
     imageSrc: https://docs.microsoft.com/media/common/i_web-apps.svg
     links:
@@ -55,14 +55,14 @@ productDirectory:
       - url: ~/ios/platform/ios13/index.md
         text: iOS 13
       - url: ~/ios/index.yml
-        text: Platform docs
+        text: All iOS docs
   - title: Mac
     imageSrc: https://docs.microsoft.com/media/common/i_xplat-code.svg
     links:
       - url: ~/mac/get-started/hello-mac.md
         text: Build a Mac app
       - url: ~/mac/index.yml
-        text: Platform docs
+        text: All Mac docs
 
 conceptualContent:
   title: Get started with Xamarin.Forms
