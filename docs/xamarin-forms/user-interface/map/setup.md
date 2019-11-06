@@ -244,7 +244,7 @@ In addition, if your application needs to access the user's location, you must e
 
 #### Release builds
 
-UWP release builds use .NET native compilation to compile the application directly to native code. However, a consequence of this is that the renderer for the [`Map`](xref:Xamarin.Forms.Forms.Map) control on UWP may be linked out of the executable. This can be fixed by using a UWP-specific overload of the `Forms.Init` method in **App.xaml.cs**:
+UWP release builds use .NET native compilation to compile the application directly to native code. However, a consequence of this is that the renderer for the [`Map`](xref:Xamarin.Forms.Maps.Map) control on UWP may be linked out of the executable. This can be fixed by using a UWP-specific overload of the `Forms.Init` method in **App.xaml.cs**:
 
 ```csharp
 var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };
