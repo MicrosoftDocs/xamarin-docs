@@ -6,7 +6,7 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/31/2019
+ms.date: 11/06/2019
 ---
 
 # Xamarin.Forms Map Initialization and Configuration
@@ -38,6 +38,8 @@ On the Universal Windows Platform (UWP), this should occur in **MainPage.xaml.cs
 ```csharp
 Xamarin.FormsMaps.Init("INSERT_AUTHENTICATION_TOKEN_HERE");
 ```
+
+For information about the authentication token required on UWP, see [Universal Windows Platform](#universal-windows-platform).
 
 Once the NuGet package has been added and the initialization method called inside each application, `Xamarin.Forms.Maps` APIs can be used in the shared code project.
 
@@ -239,6 +241,20 @@ In addition, if your application needs to access the user's location, you must e
       <DeviceCapability Name="location"/>
     </Capabilities>
     ```
+
+#### Release builds
+
+UWP release builds use .NET native compilation to compile the application directly to native code. However, a consequence of this is that the renderer for the [`Map`](xref:Xamarin.Forms.Maps.Map) control on UWP may be linked out of the executable. This can be fixed by using a UWP-specific overload of the `Forms.Init` method in **App.xaml.cs**:
+
+```csharp
+var assembliesToInclude = new [] { typeof(Xamarin.Forms.Maps.UWP.MapRenderer).GetTypeInfo().Assembly };
+Xamarin.Forms.Forms.Init(e, assembliesToInclude);
+```
+
+This code passes the assembly in which the `Xamarin.Forms.Maps.UWP.MapRenderer` class resides, to the `Forms.Init` method. This ensures that the assembly isn't linked out of the executable by the .NET native compilation process.
+
+> [!IMPORTANT]
+> Failure to do this will result in the [`Map`](xref:Xamarin.Forms.Maps.Map) control not appearing when running a release build.
 
 ## Related links
 
