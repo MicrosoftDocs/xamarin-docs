@@ -32,6 +32,7 @@ While the [`CollectionView`](xref:Xamarin.Forms.CollectionView) and [`ListView`]
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) automatically utilizes the virtualization provided by the underlying native controls.
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) reduces the API surface of [`ListView`](xref:Xamarin.Forms.ListView). Many properties and events from [`ListView`](xref:Xamarin.Forms.ListView) are not present in `CollectionView`.
 - [`CollectionView`](xref:Xamarin.Forms.CollectionView) does not include built-in separators.
+- [`CollectionView`](xref:Xamarin.Forms.CollectionView) will throw an exception if its [`ItemsSource`](xref:Xamarin.Forms.ItemsView.ItemsSource) is updated off the UI thread.
 
 ## Move from ListView to CollectionView
 
