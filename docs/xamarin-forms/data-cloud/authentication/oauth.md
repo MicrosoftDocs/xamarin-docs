@@ -6,7 +6,7 @@ ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2017
+ms.date: 11/07/2019
 ---
 
 # Authenticate Users with an Identity Provider
@@ -254,6 +254,16 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 ```
 
 The `FindAccountsForService` method returns an `IEnumerable` collection of `Account` objects, with the first item in the collection being set as the matched account.
+
+## Troubleshooting
+
+- On Android, if you receive a toast notification when you close the browser after authentication, and want to stop the toast notification, add the following code to the Android project after initializing Xamarin.Auth:
+
+```csharp
+Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+```
+
+- On Android, if the browser doesn't close automatically, a temporary work around is to downgrade the Xamarin.Auth package to version 1.5.0.3. Then, add the [PCL Crypto v2.0.147](https://www.nuget.org/packages/PCLCrypto/2.0.147) to the Android project.
 
 ## Summary
 
