@@ -255,6 +255,15 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 
 The `FindAccountsForService` method returns an `IEnumerable` collection of `Account` objects, with the first item in the collection being set as the matched account.
 
+## Troubleshooting
+
+- On Android, If after authentication, on closing the browser you get a toast notification and you want to get rid of it. Go to the Android project and after initializing the Xamarin.Auth, add this line of code:
+
+```csharp
+Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+```
+- On Android, if the browser doesn't close automatically, a temporary workarround will be to downgrade the Xamarin.Auth package to version 1.5.0.3 (On Android Only). Then, add this package "PCL Crypto 2.0.147" to the Android project.
+
 ## Summary
 
 This article explained how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application. Xamarin.Auth provides the `OAuth2Authenticator` and `OAuth2Request` classes that are used by Xamarin.Forms applications to consume identity providers such as Google, Microsoft, Facebook, and Twitter.
