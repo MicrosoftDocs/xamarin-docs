@@ -4,8 +4,8 @@ description: "This article explains how to use Xamarin.Auth to manage the authen
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
-author: davidbritch, damiendoumer
-ms.author: dabritch, damiendoumer
+author: davidbritch
+ms.author: dabritch
 ms.date: 11/07/2019
 ---
 
@@ -257,12 +257,13 @@ The `FindAccountsForService` method returns an `IEnumerable` collection of `Acco
 
 ## Troubleshooting
 
-- On Android, If after authentication, on closing the browser you get a toast notification and you want to get rid of it. Go to the Android project and after initializing the Xamarin.Auth, add this line of code:
+- On Android, if you receive a toast notification when you close the browser after authentication, and want to stop the toast notification, add the following code to the Android project after initializing Xamarin.Auth:
 
 ```csharp
 Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
 ```
-- On Android, if the browser doesn't close automatically, a temporary workarround will be to downgrade the Xamarin.Auth package to version 1.5.0.3 (On Android Only). Then, add this package "PCL Crypto 2.0.147" to the Android project.
+
+- On Android, if the browser doesn't close automatically, a temporary work around is to downgrade the Xamarin.Auth package to version 1.5.0.3. Then, add the [PCL Crypto v2.0.147](https://www.nuget.org/packages/PCLCrypto/2.0.147) to the Android project.
 
 ## Summary
 
