@@ -13,41 +13,23 @@ ms.date: 11/07/2019
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 
-The Xamarin.Forms TabbedPage consists of a list of tabs and a larger detail area, with each tab loading content into the detail area. The following screenshots show a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) on iOS and Android:
+The Xamarin.Forms [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) consists of a list of tabs and a larger detail area, with each tab loading content into the detail area. The following screenshots show a `TabbedPage` on iOS and Android:
 
 [![Screenshot of a TabbedPage containing three tabs, on iOS and Android](tabbed-page-images/tabbedpage-today.png "TabbedPage with three tabs")](tabbed-page-images/tabbedpage-today-large.png#lightbox "TabbedPage with three tabs")
 
-A tab can have text and an icon on both platforms:
-
-![Screenshot of a tab components, on iOS and Android](tabbed-page-images/tabbedpage-components.png "TabbedPage tab components")
-
-The layout of a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), and its tabs, is dependent on the platform.
-
-On iOS, the list of tabs appears at the bottom of the screen, and the detail area is above. Each tab consists of a title and an icon, which should be a PNG file with an alpha channel. In portrait orientation, tab bar icons appear above tab titles. In landscape orientation, icons and titles appear side by side. In addition, a regular or compact tab bar may be displayed, depending on the device and orientation. If there are more than five tabs, a **More** tab will appear, which can be used to access the additional tabs. For information about icon requirements, see [Tab Bar Icon Size](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/custom-icons#tab-bar-icon-size) on developer.apple.com. For information about loading images in a Xamarin.Forms application, see [Working with Images](~/xamarin-forms/user-interface/images.md).
+On iOS, the list of tabs appears at the bottom of the screen, and the detail area is above. Each tab consists of a title and an icon, which should be a PNG file with an alpha channel. In portrait orientation, tab bar icons appear above tab titles. In landscape orientation, icons and titles appear side by side. In addition, a regular or compact tab bar may be displayed, depending on the device and orientation. If there are more than five tabs, a **More** tab will appear, which can be used to access the additional tabs. For information about icon requirements, see [Tab Bar Icon Size](https://developer.apple.com/design/human-interface-guidelines/ios/icons-and-images/custom-icons#tab-bar-icon-size) on developer.apple.com.
 
 > [!TIP]
 > The `TabbedRenderer` for iOS has an overridable `GetIcon` method that can be used to load tab icons from a specified source. This override makes it possible to use SVG images as icons on a `TabbedPage`. In addition, selected and unselected versions of an icon can be provided.
 
-On Android, the list of tabs appears at the top of the screen by default, and the detail area is below. Each tab consists of a title and an icon, which should be a PNG file with an alpha channel. However, the tab list can be moved to the bottom of the screen with a platform-specific. For information about icon requirements, see [Tabs](https://material.io/components/tabs/#) on material.io and [Support different pixel densities](https://developer.android.com/training/multiscreen/screendensities) on developer.android.com. For information about moving to the tab list to the bottom of the screen, see [Setting TabbedPage Toolbar Placement and Color](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
+On Android, the list of tabs appears at the top of the screen, and the detail area is below. Each tab consists of a title and an icon, which should be a PNG file with an alpha channel. However, the tabs can be moved to the bottom of the screen with a platform-specific. For information about icon requirements, see [Tabs](https://material.io/components/tabs/#) on material.io and [Support different pixel densities](https://developer.android.com/training/multiscreen/screendensities) on developer.android.com. For information about moving the tabs to the bottom of the screen, see [Setting TabbedPage Toolbar Placement and Color](~/xamarin-forms/platform/android/tabbedpage-toolbar-placement-color.md).
 
 > [!TIP]
 > The `TabbedPageRenderer` for Android AppCompat has an overridable `GetIconDrawable` method that can be used to load tab icons from a custom `Drawable`. This override makes it possible to use SVG images as icons on a `TabbedPage`, and works with both top and bottom tab bars. Alternatively, the overridable `SetTabIcon` method can be used to load tab icons from a custom `Drawable` for top tab bars.
 
 On the Universal Windows Platform (UWP), the list of tabs appears at the top of the screen, and the details area is below. Each tab consists of a title. However, icons can be added to each tab with a platform-specific. For more information, see [TabbedPage Icons on Windows](~/xamarin-forms/platform/windows/tabbedpage-icons.md).
 
-> [!WARNING]
-> In a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), each [`Page`](xref:Xamarin.Forms.Page) object is created when the `TabbedPage` is constructed. This can lead to a poor user experience, particularly if the `TabbedPage` is the root page of the application. However, Xamarin.Forms Shell enables pages accessed through a tab bar to be created on demand, in response to navigation. For more information, see [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
-
 ## Create a TabbedPage
-
-[`TabbedPage`](xref:Xamarin.Forms.TabbedPage) defines the following properties:
-
-- [`BarBackgroundColor`](xref:Xamarin.Forms.TabbedPage.BarBackgroundColor), of type [`Color`](xref:Xamarin.Forms.Color), the background color of the tab bar.
-- [`BarTextColor`](xref:Xamarin.Forms.TabbedPage.BarTextColor), of type [`Color`](xref:Xamarin.Forms.Color), the color of text on the tab bar.
-- [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor), of type [`Color`](xref:Xamarin.Forms.Color), the color of the tab when it's selected.
-- [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor), of type [`Color`](xref:Xamarin.Forms.Color), the color of the tab when it's unselected.
-
-All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be the targets of data bindings.
 
 Two approaches can be used to create a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 
@@ -59,9 +41,21 @@ With both approaches, the [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) will dis
 > [!IMPORTANT]
 > It's recommended that a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) should be populated with [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) and [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances only. This will help to ensure a consistent user experience across all platforms.
 
+In addition, [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) defines the following properties:
+
+- [`BarBackgroundColor`](xref:Xamarin.Forms.TabbedPage.BarBackgroundColor), of type [`Color`](xref:Xamarin.Forms.Color), the background color of the tab bar.
+- [`BarTextColor`](xref:Xamarin.Forms.TabbedPage.BarTextColor), of type [`Color`](xref:Xamarin.Forms.Color), the color of text on the tab bar.
+- [`SelectedTabColor`](xref:Xamarin.Forms.TabbedPage.SelectedTabColor), of type [`Color`](xref:Xamarin.Forms.Color), the color of the tab when it's selected.
+- [`UnselectedTabColor`](xref:Xamarin.Forms.TabbedPage.UnselectedTabColor), of type [`Color`](xref:Xamarin.Forms.Color), the color of the tab when it's unselected.
+
+All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be the targets of data bindings.
+
+> [!WARNING]
+> In a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), each [`Page`](xref:Xamarin.Forms.Page) object is created when the `TabbedPage` is constructed. This can lead to a poor user experience, particularly if the `TabbedPage` is the root page of the application. However, Xamarin.Forms Shell enables pages accessed through a tab bar to be created on demand, in response to navigation. For more information, see [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+
 ## Populate a TabbedPage with a Page collection
 
-A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) can be populated with a collection of child [`Page`](xref:Xamarin.Forms.Page) objects, such as a collection of [`ContentPage`](xref:Xamarin.Forms.ContentPage) objects. This is achieved by adding the `Page` objects to the [`Children`](xref:Xamarin.Forms.MultiPage`1.Children*) collection. This is accomplished in XAML as follows:
+A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) can be populated with a collection of child [`Page`](xref:Xamarin.Forms.Page) objects, such as a collection of [`ContentPage`](xref:Xamarin.Forms.ContentPage) objects. This is achieved by adding the `Page` objects to the [`TabbedPage.Children`](xref:Xamarin.Forms.MultiPage`1.Children*) collection. This is accomplished in XAML as follows:
 
 ```xaml
 <TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -77,7 +71,8 @@ A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) can be populated with a collecti
 </TabbedPage>
 ```
 
-The [`Children`](xref:Xamarin.Forms.MultiPage`1.Children*) property of the [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1) class, from which [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) derives, is the `ContentProperty` of `MultiPage<T>`. Therefore, in XAML it's not necessary to explicitly assign the [`Page`](xref:Xamarin.Forms.Page) objects to the `Children` property.
+> [!NOTE]
+> The [`Children`](xref:Xamarin.Forms.MultiPage`1.Children*) property of the [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1) class, from which [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) derives, is the `ContentProperty` of `MultiPage<T>`. Therefore, in XAML it's not necessary to explicitly assign the [`Page`](xref:Xamarin.Forms.Page) objects to the `Children` property.
 
 The equivalent C# code is:
 
@@ -96,11 +91,8 @@ public class MainPageCS : TabbedPage
 }
 ```
 
-In this example, the [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) is populated with two child [`Page`](xref:Xamarin.Forms.Page) objects. The first child is a
-[`ContentPage`](xref:Xamarin.Forms.ContentPage) object, and the second tab is a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) containing a `ContentPage` object.
-
-> [!NOTE]
-> The [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) does not support UI virtualization. Therefore, performance may be affected if the `TabbedPage` contains too many child elements.
+In this example, the [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) is populated with two [`Page`](xref:Xamarin.Forms.ContentPage) objects. The first child is a
+[`ContentPage`](xref:Xamarin.Forms.ContentPage) object, and the second child is a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) containing a `ContentPage` object.
 
 The following screenshots show a [`ContentPage`](xref:Xamarin.Forms.ContentPage) object in a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage):
 
@@ -110,14 +102,14 @@ Selecting another tab displays the [`ContentPage`](xref:Xamarin.Forms.ContentPag
 
 [![Screenshot of a TabbedPage containing tabs, on iOS and Android](tabbed-page-images/tabbedpage-week.png "TabbedPage with tabs")](tabbed-page-images/tabbedpage-week-large.png#lightbox "TabbedPage with tabs")
 
-In this case, the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) object. For information about the layout of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), see [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md).
+On the **Schedule** tab, the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) object.
 
 > [!WARNING]
 > While a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) can be placed in a  [`TabbedPage`](xref:Xamarin.Forms.TabbedPage), it's not recommended to place a `TabbedPage` into a `NavigationPage`. This is because, on iOS, a `UITabBarController` always acts as a wrapper for the `UINavigationController`. For more information, see [Combined View Controller Interfaces](https://developer.apple.com/library/ios/documentation/WindowsViews/Conceptual/ViewControllerCatalog/Chapters/CombiningViewControllers.html) in the iOS Developer Library.
 
 ## Navigate within a tab
 
-Navigation can be performed within a tab, provided that the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) object. This is achieved by invoking the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object:
+Navigation can be performed within a tab, provided that the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) object. This is acomplished by invoking the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object:
 
 ```csharp
 await Navigation.PushAsync (new UpcomingAppointmentsPage ());
@@ -239,7 +231,8 @@ Selecting another tab displays the [`ContentPage`](xref:Xamarin.Forms.ContentPag
 
 ## Related links
 
-- [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
 - [TabbedPageWithNavigationPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpagewithnavigationpage)
 - [TabbedPage (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-tabbedpage)
-- [TabbedPage](xref:Xamarin.Forms.TabbedPage)
+- [Hierarchical Navigation](~/xamarin-forms/app-fundamentals/navigation/hierarchical.md)
+- [Page Varieties](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf)
+- [TabbedPage API](xref:Xamarin.Forms.TabbedPage)
