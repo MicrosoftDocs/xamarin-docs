@@ -77,7 +77,7 @@ A [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) can be populated with a collecti
 </TabbedPage>
 ```
 
-The [`Children`](xref:Xamarin.Forms.MultiPage`1.Children*) property of the [`MultiPage<T>`](Xamarin.Forms.MultiPage`1) class, from which [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) derives, is the `ContentProperty` of `MultiPage<T>`. Therefore, in XAML it's not necessary to explicitly assign the [`Page`](xref:Xamarin.Forms.Page) objects to the `Children` property.
+The [`Children`](xref:Xamarin.Forms.MultiPage`1.Children*) property of the [`MultiPage<T>`](xref:Xamarin.Forms.MultiPage`1) class, from which [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) derives, is the `ContentProperty` of `MultiPage<T>`. Therefore, in XAML it's not necessary to explicitly assign the [`Page`](xref:Xamarin.Forms.Page) objects to the `Children` property.
 
 The equivalent C# code is:
 
@@ -232,8 +232,6 @@ public class TabbedPageDemoPageCS : TabbedPage
 ```
 
 In this example, each tab consists of a [`ContentPage`](xref:Xamarin.Forms.ContentPage) object that uses [`Image`](xref:Xamarin.Forms.Image) and [`Label`](xref:Xamarin.Forms.Label) objects to display data for the tab:
-
-![](tabbed-page-images/tab3.png "Populating a TabbedPage with a Template")
 
 [![Screenshot of a templated TabbedPage, on iOS and Android](tabbed-page-images/tabbedpage-template.png "Templated TabbedPage")](tabbed-page-images/tabbedpage-template-large.png#lightbox "Templated TabbedPage")
 
