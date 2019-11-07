@@ -109,7 +109,7 @@ On the **Schedule** tab, the [`ContentPage`](xref:Xamarin.Forms.ContentPage) obj
 
 ## Navigate within a tab
 
-Navigation can be performed within a tab, provided that the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) object. This is acomplished by invoking the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object:
+Navigation can be performed within a tab, provided that the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object is wrapped in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) object. This is accomplished by invoking the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method on the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property of the [`ContentPage`](xref:Xamarin.Forms.ContentPage) object:
 
 ```csharp
 await Navigation.PushAsync (new UpcomingAppointmentsPage ());
