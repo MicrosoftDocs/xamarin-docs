@@ -4,9 +4,9 @@ description: "This article explains how to use Xamarin.Auth to manage the authen
 ms.prod: xamarin
 ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/19/2017
+author: davidbritch, damiendoumer
+ms.author: dabritch, damiendoumer
+ms.date: 11/07/2019
 ---
 
 # Authenticate Users with an Identity Provider
