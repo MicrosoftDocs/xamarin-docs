@@ -66,7 +66,8 @@ In all three cases, the custom easing function should return 0 for an argument o
 A custom easing function can be defined as a method that takes a `double` argument, and returns a `double` result, as demonstrated in the following code example:
 
 ```csharp
-await image.TranslateTo(0, 200, 2000, CustomEase);
+Func<double, double> CustomEaseFunc = CustomEase;
+await image.TranslateTo(0, 200, 2000, CustomEaseFunc);
 
 double CustomEase (double t)
 {
@@ -82,7 +83,7 @@ A custom easing function can also be defined as a `Func<double, double>`, as dem
 
 ```csharp
 Func<double, double> CustomEase = t => 9 * t * t * t - 13.5 * t * t + 5.5 * t;
-await image.TranslateTo(0, 200, 2000, CustomEase));
+await image.TranslateTo(0, 200, 2000, CustomEase);
 ```
 
 The `CustomEase` `Func` represents an easing function that starts off fast, slows down and reverses course, and then reverses course again to accelerate quickly towards the end. Therefore, while the overall movement of the [`Image`](xref:Xamarin.Forms.Image) instance is downwards, it also temporarily reverses course halfway through the animation.
