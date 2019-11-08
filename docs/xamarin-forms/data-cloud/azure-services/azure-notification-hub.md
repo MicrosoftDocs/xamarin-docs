@@ -296,7 +296,7 @@ public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsAppCompa
         global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
         LoadApplication(new App());
 
-        if (IsPlayServiceAvailable() == false)
+        if (!IsPlayServiceAvailable())
         {
             throw new Exception("This device does not have Google Play Services and cannot receive push notifications.");
         }
