@@ -33,7 +33,7 @@ var system = new System.Drawing.Point(x, y);
 // Convert to CoreGraphics.CGPoint, Android.Graphics.Point, and Windows.Foundation.Point
 var platform = system.ToPlatformPoint();
 
-// Back to System.Drawing.Size
+// Back to System.Drawing.Point
 var system2 = platform.ToSystemPoint();
 ```
 
@@ -57,7 +57,7 @@ var system = new System.Drawing.Rectangle(x, y, width, height);
 // Convert to CoreGraphics.CGRect, Android.Graphics.Rect, and Windows.Foundation.Rect
 var platform = system.ToPlatformRectangle();
 
-// Back to System.Drawing.Size
+// Back to System.Drawing.Rectangle
 var system2 = platform.ToSystemRectangle();
 ```
 
