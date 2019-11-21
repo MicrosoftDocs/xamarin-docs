@@ -73,17 +73,17 @@ Unless you need to write platform-specific code, the shared **XamlSamples** .NET
 
 Within the **XamlSamples** .NET Standard library are a pair of files with the following names:
 
-- **App.xaml**, the XAML file; and
-- **App.xaml.cs**, a C# *code-behind* file associated with the XAML file.
+- *App.xaml*, the XAML file.
+- *App.xaml.cs*, a C# *code-behind* file associated with the XAML file.
 
 You'll need to click the arrow next to **App.xaml** to see the code-behind file.
 
-Both **App.xaml** and **App.xaml.cs** contribute to a class named `App` that derives from `Application`. Most other classes with XAML files contribute to a class that derives from `ContentPage`; those files use XAML to define the visual contents of an entire page. This is true of the other two files in the **XamlSamples** project:
+Both *App.xaml* and *App.xaml.cs* contribute to a class named `App` that derives from `Application`. Most other classes with XAML files contribute to a class that derives from `ContentPage`; those files use XAML to define the visual contents of an entire page. This is true of the other two files in the **XamlSamples** project:
 
-- **MainPage.xaml**, the XAML file; and
-- **MainPage.xaml.cs**, the C# code-behind file.
+- *MainPage.xaml*, the XAML file.
+- *MainPage.xaml.cs*, the C# code-behind file.
 
-The **MainPage.xaml** file looks like this (although the formatting might be a little different):
+The *MainPage.xaml* file looks like this (although the formatting might be a little different):
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -113,7 +113,7 @@ The `x:Class` attribute specifies a fully qualified .NET class name: the `MainPa
 
 The `x:Class` attribute can only appear in the root element of a XAML file to define a derived C# class. This is the only new class defined in the XAML file. Everything else that appears in the XAML file is instead simply instantiated from existing classes and initialized.
 
-The **MainPage.xaml.cs** file looks like this (aside from unused `using` directives):
+The *MainPage.xaml.cs* file looks like this (aside from unused `using` directives):
 
 ```csharp
 using Xamarin.Forms;
@@ -132,7 +132,7 @@ namespace XamlSamples
 
 The `MainPage` class derives from `ContentPage`, but notice the `partial` class definition. This suggests that there should be another partial class definition for `MainPage`, but where is it? And what is that `InitializeComponent` method?
 
-When Visual Studio builds the project, it parses the XAML file to generate a C# code file. If you look in the **XamlSamples\XamlSamples\obj\Debug** directory, you’ll find a file named **XamlSamples.MainPage.xaml.g.cs**. The ‘g’ stands for generated. This is the other partial class definition of `MainPage` that contains the definition of the `InitializeComponent` method called from the `MainPage` constructor. These two partial `MainPage` class definitions can then be compiled together. Depending on whether the XAML is compiled or not, either the XAML file or a binary form of the XAML file is embedded in the executable.
+When Visual Studio builds the project, it parses the XAML file to generate a C# code file. If you look in the *XamlSamples\XamlSamples\obj\Debug* directory, you’ll find a file named *XamlSamples.MainPage.xaml.g.cs*. The ‘g’ stands for generated. This is the other partial class definition of `MainPage` that contains the definition of the `InitializeComponent` method called from the `MainPage` constructor. These two partial `MainPage` class definitions can then be compiled together. Depending on whether the XAML is compiled or not, either the XAML file or a binary form of the XAML file is embedded in the executable.
 
 At runtime, code in the particular platform project calls a `LoadApplication` method, passing to it a new instance of the `App` class in the .NET Standard library. The `App` class constructor instantiates `MainPage`. The constructor of that class calls `InitializeComponent`, which then calls the `LoadFromXaml` method that extracts the XAML file (or its compiled binary) from the .NET Standard library. `LoadFromXaml` initializes all the objects defined in the XAML file, connects them all together in parent-child relationships, attaches event handlers defined in code to events set in the XAML file, and sets the resultant tree of objects as the content of the page.
 
@@ -160,11 +160,11 @@ To add other XAML-based `ContentPage` classes to your project, select the **Xaml
 
 -----
 
-Two files are added to the project, **HelloXamlPage.xaml** and the code-behind file **HelloXamlPage.xaml.cs**.
+Two files are added to the project, *HelloXamlPage.xaml* and the code-behind file *HelloXamlPage.xaml.cs*.
 
 ## Setting Page Content
 
-Edit the **HelloXamlPage.xaml** file so that the only tags are those for `ContentPage` and `ContentPage.Content`:
+Edit the *HelloXamlPage.xaml* file so that the only tags are those for `ContentPage` and `ContentPage.Content`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -241,9 +241,9 @@ In these cases, the digit is repeated to form the value. For example, #CF3 is th
 
 ## Page Navigation
 
-When you run the **XamlSamples** program, the `MainPage` is displayed. To see the new `HelloXamlPage` you can either set that as the new startup page in the **App.xaml.cs** file, or navigate to the new page from `MainPage`.
+When you run the **XamlSamples** program, the `MainPage` is displayed. To see the new `HelloXamlPage` you can either set that as the new startup page in the *App.xaml.cs* file, or navigate to the new page from `MainPage`.
 
-To implement navigation, first change code in the **App.xaml.cs** constructor so that a `NavigationPage` object is created:
+To implement navigation, first change code in the *App.xaml.cs* constructor so that a `NavigationPage` object is created:
 
 ```csharp
 public App()
@@ -253,7 +253,7 @@ public App()
 }
 ```
 
-In the **MainPage.xaml.cs** constructor, you can create a simple `Button` and use the event handler to navigate to `HelloXamlPage`:
+In the *MainPage.xaml.cs* constructor, you can create a simple `Button` and use the event handler to navigate to `HelloXamlPage`:
 
 ```csharp
 public MainPage()
