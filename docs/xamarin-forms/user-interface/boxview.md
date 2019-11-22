@@ -39,7 +39,7 @@ Typically you'll set the following properties of `BoxView`:
 - [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) to set the width of the `BoxView` in device-independent units.
 - [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) to set the height of the `BoxView`.
 
-The `Color` property is of type `Color`; the property can be set to any `Color` value, including the 141 static read-only fields of named colors ranging alphabetically from `AliceBlue` to `YellowGreen`.
+The `Color` property is of type `Color`; the property can be set to any `Color` value, including the 140 static read-only fields of named colors ranging alphabetically from `AliceBlue` to `YellowGreen`.
 
 The `CornerRadius` property is of type [`CornerRadius`](xref:Xamarin.Forms.CornerRadius); the property can be set to a single `double` uniform corner radius value, or a `CornerRadius` structure defined by four `double` values that are applied to the top left, top right, bottom left, and bottom right of the `BoxView`.
 
