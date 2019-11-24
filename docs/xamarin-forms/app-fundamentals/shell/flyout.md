@@ -336,7 +336,7 @@ Because `Shell.ItemTemplate` is an attached property, different templates can be
 
 
 ### Default Template for FlyoutItems and MenuItems
-Shell uses the following template internally for its default implementation. This is a great starting point if all you want to do is make small tweaks to the existing layouts. This also demonstrates the Visual Statement Manager features of the flyout items. This same template can also be used for MenuItems
+Shell uses the following template internally for its default implementation. This is a great starting point if all you want to do is make small tweaks to the existing layouts. This also demonstrates the Visual State Manager features of the flyout items. This same template can also be used for MenuItems
 
 ```xaml
 <DataTemplate x:Key="FlyoutTemplates">
