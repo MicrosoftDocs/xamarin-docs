@@ -3,6 +3,7 @@ title: "What is Xamarin?"
 description: "This article introduces Xamarin and related libraries."
 ms.prod: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
+ms.custom: video
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/16/2019
@@ -98,3 +99,9 @@ The following guides will help you build your first app using Xamarin:
 - [Get started with Xamarin.Android](~/android/index.yml)
 - [Get started with Xamarin.iOS](~/ios/index.yml)
 - [Get started with Xamarin.Mac](~/mac/index.yml)
+
+## Related video
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/What-is-Xamarin-1-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
