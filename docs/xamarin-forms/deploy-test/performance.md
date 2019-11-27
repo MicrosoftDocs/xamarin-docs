@@ -6,7 +6,7 @@ ms.assetid: 0be84c56-6698-448d-be5a-b4205f1caa9f
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/01/2019
+ms.date: 11/27/2019
 ---
 
 # Improve Xamarin.Forms App Performance
@@ -152,6 +152,29 @@ To obtain the best possible layout performance, follow these guidelines:
 - Don't update any [`Label`](xref:Xamarin.Forms.Label) instances more frequently than required, as the change of size of the label can result in the entire screen layout being re-calculated.
 - Don't set the [`Label.VerticalTextAlignment`](xref:Xamarin.Forms.Label.VerticalTextAlignment) property unless required.
 - Set the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) of any [`Label`](xref:Xamarin.Forms.Label) instances to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode.NoWrap) whenever possible.
+
+## Use asynchronous programming
+
+The overall responsiveness of your application can be enhanced, and performance bottlenecks avoided, by using asynchronous programming. In .NET, the [Task-based Asynchronous Pattern (TAP)](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap) is the recommended design pattern for asynchronous operations. However, incorrect use of the TAP can result in an unperformant application. Therefore, the following practices are recommended when using the TAP:
+
+- Call an asynchronous version of an API, if it's available. This will keep the UI thread unblocked, which will help to improve the user's experience with the application.
+- Avoid creating `async void` methods, and instead create `async Task` methods. These enable easier error-handling, composability and testability. The exception to this guideline is asynchronous event handlers, which must return `void`. For more information, see [Avoid Async Void](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#avoid-async-void).
+- Don't mix blocking and asynchronous code by calling the `Task.Wait`, `Task.Result`, or `GetAwaiter().GetResult` method, as it can result in deadlocks. However, if this guideline must be violated, the preferred approach is to call the `GetAwaiter().GetResult` method because it preserves the task exceptions. For more information, see [Async All the Way](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#async-all-the-way) and [Task Exception Handling in .NET 4.5](https://devblogs.microsoft.com/pfxteam/task-exception-handling-in-net-4-5/).
+- Use the `ConfigureAwait` method whenever possible, to create context-free code. Context-free code has better performance for mobile applications and is a useful technique for avoiding deadlocks when working with a partially async codebase. For more information, see [Configure Context](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#configure-context).
+- Understand the task lifecycle, which is represented by the `TaskStatus` enumeration. For more information, see [The meaning of TaskStatus](https://devblogs.microsoft.com/pfxteam/the-meaning-of-taskstatus/) and [Task status](/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap#task-status).
+- Learn about asynchronous exception handling. Unhandled exceptions that are thrown by code that's running in a task are propagated back to the calling thread, except in certain scenarios. For more information, see [Exception handling (Task Parallel Library)](/dotnet/standard/parallel-programming/exception-handling-task-parallel-library).
+- Use *continuation tasks* for functionality such as handling exceptions thrown by the previous asynchronous operation, and cancelling a continuation either before it starts or while it is running. For more information, see [Chaining Tasks by Using Continuous Tasks](/dotnet/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks).
+- Use the Task Parallel Library (TPL) Dataflow library in scenarios such as processing data as it becomes available, or when you have multiple operations that must communicate with each other asynchronously. For more information, see [Dataflow (Task Parallel Library)](/dotnet/standard/parallel-programming/dataflow-task-parallel-library).
+- Execute intensive synchronous CPU operations on the thread pool with the `Task.Run` method. This method is a shortcut for the `TaskFactory.StartNew` method, with the most optimal arguments set. For more information, see [Task.Run](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskrun).
+- Use the `Task.WhenAll` method to asynchronously wait for multiple asynchronous operations to finish, rather than individually `await` a series of asynchronous operations. For more information, see [Task.WhenAll](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).
+- Use the `Task.WhenAny` method to asynchronously wait for one of multiple asynchronous operations to finish. For more information, see [Task.WhenAny](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskwhenall).
+- Use the `Task.Delay` method to produce a `Task` object that finishes after the specified time. This is useful for scenarios such as polling for data, and delaying handling user input for a predetermined time. For more information, see [Task.Delay](/dotnet/standard/asynchronous-programming-patterns/consuming-the-task-based-asynchronous-pattern#taskdelay).
+- `async` constructors aren't allowed. Instead, use lifecycle events or separate initialization logic to correctly `await` any initialization. For more information, see [Async Constructors](https://blog.stephencleary.com/2013/01/async-oop-2-constructors.html) on blog.stephencleary.com.
+- Use the lazy task pattern to avoid waiting for asynchronous operations to complete during application startup. For more information, see [AsyncLazy](https://devblogs.microsoft.com/pfxteam/asynclazyt/).
+- Asynchronous operations that update UI elements should perform the update on the UI thread, to avoid exceptions being thrown. However, updates to the `ListView.ItemsSource` property will automatically be marshalled to the UI thread, as will any properties that are updated via data binding. For information about determining if code is running on the UI thread, see [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
+- Create a task wrapper for existing asynchronous operations, that don't use the TAP, by creating `TaskCompletionSource<T>` objects. Such objects gain the benefits of `Task` programmability, and enable you to control the lifetime and completion of the associated `Task`. For more information, see [The Nature of TaskCompletionSource](https://devblogs.microsoft.com/pfxteam/the-nature-of-taskcompletionsourcetresult/).
+- `ICommand` implementations that invoke asynchronous operations should use an asynchronous `ICommand` implementation. This ensures that any exceptions in the asynchronous command logic can be handled. For more information, see [Async Programming: Patterns for Asynchronous MVVM Applications: Commands](/archive/msdn-magazine/2014/april/async-programming-patterns-for-asynchronous-mvvm-applications-commands).
+- Return a `Task` object, instead of returning an awaited `Task` object, when there's no need to process the result of an asynchronous operation. This is more performant due to less context switching being performed.
 
 ## Choose a dependency injection container carefully
 
