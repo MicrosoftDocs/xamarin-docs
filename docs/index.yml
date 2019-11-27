@@ -19,7 +19,7 @@ highlightedContent:
     itemType: overview
     url: ~/get-started/what-is-xamarin.md
   - title: What's new in Xamarin docs
-    itemType: get-started
+    itemType: whats-new
     url: ~/whats-new/index.yml
   - title: Improve your mobile development skills
     itemType: learn
@@ -132,7 +132,7 @@ additionalContent:
       - title: Use XAML & data-binding
         summary: Use the MVVM pattern to show data in your UI.
         url: ~/xamarin-forms/xaml/xaml-basics/index.md
-      - title: Expose platform-specific features 
+      - title: Expose platform-specific features
         summary: Use Android- or iOS-specific features in Xamarin.Forms apps.
         url: ~/xamarin-forms/platform/index.yml
       - title: Xamarin.Essentials
