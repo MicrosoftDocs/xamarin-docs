@@ -127,8 +127,8 @@ Complete the following steps to configure the Android application to receive and
     1. Xamarin.Azure.NotificationHubs.Android.
 1. Copy the `google-services.json` file that you downloaded during FCM setup to the project and set the Build Action to `GoogleServicesJson`.
 1. [Configure AndroidManifest.xml to communicate with Firebase](#configure-android-manifest).
-1. [Register the application with Firebase and Azure Notification Hub using a `FirebaseInstanceIdService`](#register-using-a-custom-firebaseinstanceidservice).
 1. [Override FirebaseMessagingService to handle messages](#override-firebasemessagingservice-to-handle-messages).
+1. [Add incoming notifications to Xamarin.Forms UI](#add-incoming-notifications-to-the-xamarinforms-ui).
 
 > [!NOTE]
 > The **GoogleServicesJson** build action is part of the **Xamarin.GooglePlayServices.Base** NuGet package. Visual Studio 2019 sets the available Build Actions during startup. If you do not see **GoogleServicesJson** as a Build Action, restart Visual Studio 2019 after installing the NuGet packages.
