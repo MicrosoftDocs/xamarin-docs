@@ -423,7 +423,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
     Hub = new SBNotificationHub(AppConstants.ListenConnectionString, AppConstants.NotificationHubName);
 
     // update registration with Azure Notification Hub
-    Hub.UnregisterAllAsync(deviceToken, (error) =>
+    Hub.UnregisterAll(deviceToken, (error) =>
     {
         if (error != null)
         {
@@ -432,7 +432,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
         }
 
         var tags = new NSSet(AppConstants.SubscriptionTags.ToArray());
-        Hub.RegisterNativeAsync(deviceToken, tags, (errorCallback) =>
+        Hub.RegisterNative(deviceToken, tags, (errorCallback) =>
         {
             if (errorCallback != null)
             {
@@ -441,7 +441,7 @@ public override void RegisteredForRemoteNotifications(UIApplication application,
         });
 
         var templateExpiration = DateTime.Now.AddDays(120).ToString(System.Globalization.CultureInfo.CreateSpecificCulture("en-US"));
-        Hub.RegisterTemplateAsync(deviceToken, "defaultTemplate", AppConstants.APNTemplateBody, templateExpiration, tags, (errorCallback) =>
+        Hub.RegisterTemplate(deviceToken, "defaultTemplate", AppConstants.APNTemplateBody, templateExpiration, tags, (errorCallback) =>
         {
             if (errorCallback != null)
             {
