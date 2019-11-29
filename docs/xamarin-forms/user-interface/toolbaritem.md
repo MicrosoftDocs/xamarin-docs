@@ -145,10 +145,10 @@ public class ViewModel : INotifyPropertyChanged
     
     public ViewModel()
     {
-        ToolbarTappedCommand = new Command((_) =>
+        ToolbarTappedCommand = new Command(() =>
         {
             // your command behavior here
-        }, (_) => Enabled);
+        }, () => Enabled);
         // ...
     }
 ```
