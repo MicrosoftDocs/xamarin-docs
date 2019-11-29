@@ -25,13 +25,13 @@ The `MenuItem` class defines the following properties:
 * [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) is an `object` that specifies the parameter that should be passed to the `Command`.
 * [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) is an `ImageSource` value that defines the display icon.
 * [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive) is a `bool` value that indicates whether the `MenuItem` removes its associated UI element from the list.
-* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) is a `bool` value that determines whether this object responds to user input.
+* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) is a `bool` value that indicates whether this object responds to user input.
 * [`Text`](xref:Xamarin.Forms.MenuItem.Text) is a `string` value that specifies the display text.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects so the `MenuItem` instance can be the target of data bindings.
 
 > [!NOTE]
-> The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) bindable property is read-only. To manipulate the enabled/disabled state of a `ToolbarItem`, bind the `Command` property to a class that implements `ICommand` and implement the Command's `canExecute` parameter as a delegate that returns `true` or `false`.
+> The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) bindable property is read-only. To manipulate the enabled/disabled state of a `MenuItem`, bind the `Command` property to a class that implements `ICommand` and implement the Command's `canExecute` parameter as a delegate that returns `true` or `false`. For an example, see [Enable or Disable a MenuItem](#enable-or-disable-a-menuitem) below.
 
 ## Create a MenuItem
 
@@ -210,6 +210,55 @@ On iOS, the context menu is activated by swiping on a list item. The context men
 On UWP, the context menu is activated by right-clicking on a list item. The context menu is displayed near the cursor as a vertical list.
 
 !["Screenshot of context menu on UWP"](menuitem-images/menuitem-uwp.png "Screenshot of context menu on UWP")
+
+## Enable or Disable a MenuItem
+
+To manipulate whether a `MenuItem` can respond to user interaction, use the bound `Command` property's `canExecute` delegate to return `true` or `false`.
+
+For example, for a `MenuItem` defined in XAML such as:
+
+```xaml
+<MenuItem Text="Add"
+          IconImageSource="icon.png"
+          Command="{Binding AddCommand}" />
+```
+
+Do not bind to the `IsEnabled` property, in order to ensure control of the default state of the `MenuItem`.
+
+In the view model, implement the `AddCommand` with a `canExecute` delegate returning the value of a `bool` property called `Enabled`:
+
+```csharp
+public ViewModel : INotifyPropertyChanged
+{
+    public Command AddCommand { get; set; }
+    
+    // ...
+    
+    public ViewModel()
+    {
+        AddCommand = new Command(() =>
+            {
+                // your execute action code here
+            },
+            () => Enabled);
+    }
+    
+    // ...
+    
+    private bool _enabled; // default value is false
+    public bool Enabled
+    {
+        get => _enabled;
+        set
+        {
+            _enabled = value;
+            AddCommand.ChangeCanExecute();
+        }
+    }
+}
+```
+
+To ensure that the menu item is enabled by default, make sure that `Enabled` initially returns `true`. 
 
 ## Related links
 
