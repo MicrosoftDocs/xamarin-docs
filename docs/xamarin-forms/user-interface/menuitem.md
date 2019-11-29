@@ -30,6 +30,9 @@ The `MenuItem` class defines the following properties:
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects so the `MenuItem` instance can be the target of data bindings.
 
+> [!NOTE]
+> The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) bindable property is read-only. To manipulate the enabled/disabled state of a `ToolbarItem`, bind the `Command` property to a class that implements `ICommand` and implement the Command's `CanExecute` functionality.
+
 ## Create a MenuItem
 
 `MenuItem` objects can be used within a context menu on a `ListView` object's items. The most common pattern is to create `MenuItem` objects within a `ViewCell` instance, which is used as the `DataTemplate` object for the `ListView`s `ItemTemplate`. When the `ListView` object is populated it will create each item using the `DataTemplate`, exposing the `MenuItem` choices when the context menu is activated for an item.
