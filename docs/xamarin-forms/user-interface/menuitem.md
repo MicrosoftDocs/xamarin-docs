@@ -31,7 +31,7 @@ The `MenuItem` class defines the following properties:
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects so the `MenuItem` instance can be the target of data bindings.
 
 > [!NOTE]
-> The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) bindable property is read-only. To manipulate the enabled/disabled state of a `ToolbarItem`, bind the `Command` property to a class that implements `ICommand` and implement the Command's `CanExecute` functionality.
+> The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) bindable property is read-only. To manipulate the enabled/disabled state of a `ToolbarItem`, bind the `Command` property to a class that implements `ICommand` and implement the Command's `canExecute` parameter to a delegate that returns `true` or `false`.
 
 ## Create a MenuItem
 
