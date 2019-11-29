@@ -245,7 +245,7 @@ public ViewModel : INotifyPropertyChanged
     
     // ...
     
-    private bool _enabled; // default value is false
+    private bool _enabled; // default value is false, state will initially be disabled
     public bool Enabled
     {
         get => _enabled;
