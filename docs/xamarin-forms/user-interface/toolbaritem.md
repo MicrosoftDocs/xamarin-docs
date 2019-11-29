@@ -112,7 +112,7 @@ When the `Order` property is set to `Secondary`, behavior varies across platform
 > [!WARNING]
 > Icon behavior in `ToolbarItem` objects that have their `Order` property set to `Secondary` is inconsistent across platforms. Avoid setting the `IconImageSource` property on items that appear in the secondary menu.
 
-## Enable or Disable a ToolbarItem
+## Enable or disable a ToolbarItem
 
 The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) property inherited from [`MenuItem`](xref:Xamarin.Forms.MenuItem) is read-only, and should not be used to manipulate the enabled or disabled state of a `ToolbarItem`. Instead, use the `CanExecute` functionality of the command bound to the `Command` property of the `ToolbarItem`.
 
