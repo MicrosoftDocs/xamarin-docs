@@ -124,7 +124,7 @@ For example, create a `ToolbarItem` on a `ContentPage` and bind its `Command` pr
 </ContentPage.ToolbarItems>
 ```
 
-In the view model, when implementing the `Command`, set a delegate for its `canExecute` parameter to a property returning `bool` indicating whether to enable (`true`) or disable (`false`) the `ToolbarItem`:
+In the view model, when implementing the `Command`, set a delegate for its `canExecute` parameter to return a `bool` property indicating whether to enable (`true`) or disable (`false`) the `ToolbarItem`:
 
 ```csharp
 public class ViewModel : INotifyPropertyChanged
