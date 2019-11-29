@@ -120,7 +120,7 @@ For example, create a `ToolbarItem` on a `ContentPage` and bind its `Command` pr
 
 ```xaml
 <ContentPage.ToolbarItems>
-    <ToolbarItem Command="{Binding ToolbarTappedCommand}" Icon="enabled" />
+    <ToolbarItem Command="{Binding ToolbarTappedCommand}" Icon="icon.png" />
 </ContentPage.ToolbarItems>
 ```
 
