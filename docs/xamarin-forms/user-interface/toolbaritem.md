@@ -112,6 +112,49 @@ When the `Order` property is set to `Secondary`, behavior varies across platform
 > [!WARNING]
 > Icon behavior in `ToolbarItem` objects that have their `Order` property set to `Secondary` is inconsistent across platforms. Avoid setting the `IconImageSource` property on items that appear in the secondary menu.
 
+## Enable or Disable a ToolbarItem
+
+The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) property inherited from [`MenuItem`](xref:Xamarin.Forms.MenuItem) is read-only, and should not be used to manipulate the enabled or disabled state of a `ToolbarItem`. Instead, use the `CanExecute` functionality of the command bound to the `Command` property of the `ToolbarItem`.
+
+For example, create a `ToolbarItem` on a `ContentPage` and bind its `Command` property in XAML:
+
+```xaml
+<ContentPage.ToolbarItems>
+    <ToolbarItem Command="{Binding ToolbarTappedCommand}" Icon="enabled" />
+</ContentPage.ToolbarItems>
+```
+
+In the view model, when implementing the `Command`, set a delegate for its `canExecute` parameter to a property returning `bool` indicating whether to enable (`true`) or disable (`false`) the `ToolbarItem`:
+
+```csharp
+public class ViewModel : INotifyPropertyChanged
+{
+//...
+    public ICommand ToolbarTappedCommand { get; set; }
+    
+    private bool _enabled;
+    public bool Enabled
+    {
+        get => _enabled;
+        set
+        {
+            _enabled = value;
+            ToolbarTappedCommand.ChangeCanExecute();
+        }
+    }
+    
+    public ViewModel()
+    {
+        ToolbarTappedCommand = new Command((_) =>
+        {
+            // your command behavior here
+        }, (_) => Enabled);
+        // ...
+    }
+```
+
+The `Enabled` property's default return value of `false` will initially set the `ToolbarItem` as disabled.
+
 ## Related links
 
 * [ToolbarItem Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-toolbaritem/)
