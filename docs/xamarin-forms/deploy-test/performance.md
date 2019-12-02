@@ -174,7 +174,7 @@ asynchronous-mvvm-applications-commands).
 ### UI
 
 - Call an asynchronous version of an API, if it's available. This will keep the UI thread unblocked, which will help to improve the user's experience with the application.
-- Asynchronous operations that update UI elements should perform the update on the UI thread, to avoid exceptions being thrown. However, updates to the `ListView.ItemsSource` property will automatically be marshaled to the UI thread, as will any control properties that are updated via data binding. For information about determining if code is running on the UI thread, see [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
+- Update UI elements with data from asynchronous operations on the UI thread, to avoid exceptions being thrown. However, updates to the `ListView.ItemsSource` property will automatically be marshaled to the UI thread, as will any control properties that are updated via data binding. For information about determining if code is running on the UI thread, see [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
 
 ### Error handling
 
@@ -183,7 +183,7 @@ asynchronous-mvvm-applications-commands).
 - Don't mix blocking and asynchronous code by calling the `Task.Wait`, `Task.Result`, or `GetAwaiter().GetResult` methods, as they can result in deadlock occurring. However, if this guideline must be violated, the preferred approach is to call the `GetAwaiter().GetResult` method because it preserves the task exceptions. For more information, see [Async All the Way](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#async-all-the-way) and [Task Exception Handling in .NET 4.5](https://devblogs.microsoft.com/pfxteam/task-exception-handling-in-net-4-5/).
 - Use the `ConfigureAwait` method whenever possible, to create context-free code. Context-free code has better performance for mobile applications and is a useful technique for avoiding deadlock when working with a partially asynchronous codebase. For more information, see [Configure Context](/archive/msdn-magazine/2013/march/async-await-best-practices-in-asynchronous-programming#configure-context).
 - Use *continuation tasks* for functionality such as handling exceptions thrown by the previous asynchronous operation, and canceling a continuation either before it starts or while it is running. For more information, see [Chaining Tasks by Using Continuous Tasks](/dotnet/standard/parallel-programming/chaining-tasks-by-using-continuation-tasks).
-- `ICommand` implementations that invoke asynchronous operations should use an asynchronous `ICommand` implementation. This ensures that any exceptions in the asynchronous command logic can be handled. For more information, see [Async Programming: Patterns for Asynchronous MVVM Applications: Commands](/archive/msdn-magazine/2014/april/async-programming-patterns-for-asynchronous-mvvm-applications-commands).
+- Use an asynchronous `ICommand` implementation to invoke asynchronous operations from an `ICommand`. This ensures that any exceptions in the asynchronous command logic can be handled. For more information, see [Async Programming: Patterns for Asynchronous MVVM Applications: Commands](/archive/msdn-magazine/2014/april/async-programming-patterns-for-asynchronous-mvvm-applications-commands).
 
 ## Choose a dependency injection container carefully
 
