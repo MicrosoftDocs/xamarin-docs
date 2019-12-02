@@ -30,8 +30,8 @@ Visual Studio for Mac and Visual Studio to enable profiling from within the IDE.
 
 Download the install package for your platform:
 
-- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac.pkg)
-- [**Windows**](https://dl.xamarin.com/profiler/profiler-windows.msi)
+- [**macOS**](https://dl.xamarin.com/profiler/profiler-mac-1.6.10-15.pkg)
+- [**Windows**](https://dl.xamarin.com/profiler/XamarinProfiler.Windows.Installer.1.6.10-15.msi)
 
 Once downloaded, launch the installer to add the Xamarin Profiler to your system.
 
@@ -336,5 +336,5 @@ In this guide we looked at what profiling is and how it is advantageous to the d
 
 ## Related Links
 
-- [Memory and Performance Best Practices](~/cross-platform/deploy-test/memory-perf-best-practices.md)
-- [Release Notes](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/profiler/preview/index.md)
+- [Memory and performance best practices](~/cross-platform/deploy-test/memory-perf-best-practices.md)
+- [Release notes](/xamarin/tools/profiler/release-notes/)
