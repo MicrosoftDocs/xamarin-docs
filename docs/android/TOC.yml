@@ -619,8 +619,8 @@
           href: troubleshooting/resolving-library-installation-errors.md
         - name: Changes to the Android SDK Tooling
           href: troubleshooting/sdk-cli-tooling-changes.md
-        - name: Xamarin.Android Errors Reference
-          href: troubleshooting/errors.md
+        - name: Xamarin.Android errors and warnings reference
+          href: /xamarin/android/errors-and-warnings/
     - name: Wear
       href: wear/index.md
       items:
