@@ -310,7 +310,7 @@ By default, when an animated GIF is loaded it will not be played. This is becaus
 Therefore, when an animated GIF is loaded it will not be played until the `IsAnimationPlaying` property is set to `true`. Playback can then be stopped by setting the `IsAnimationPlaying` property to `false`. Note that this property has no effect when displaying a non-GIF image source.
 
 > [!NOTE]
-> On UWP, animated GIF support requires a minimum of Windows 10 Anniversary Update (version 1607).
+> On UWP, animated GIF support requires a minimum release of Windows 10 Anniversary Update (version 1607).
 
 ## Icons and splash screens
 
