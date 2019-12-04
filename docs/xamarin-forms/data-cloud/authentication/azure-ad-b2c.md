@@ -100,7 +100,7 @@ public static class Constants
 
 The Microsoft Authentication Library (MSAL) NuGet package must be added to the shared, .NET Standard project, and the platform projects in a Xamarin.Forms solution. MSAL includes a `PublicClientApplicationBuilder` class that constructs an object adhering to the `IPublicClientApplication` interface. MSAL utilizes `With` clauses to supply additional parameters to the constructor and authentication methods.
 
-In the sample project, the code behind for **App.xaml** defines static properties named `AuthenticationClient` and `UIParent`, and instantiates the `AuthenticationClient` object in the constructor. The `WithIosKeychainSecurityGroup` clause provides a security group name for iOS applications. The `WithB2CAuthority` clause provides the default **Authority**, or policy, that will be used to authenticate users. The following example demonstrates how to instantiate the `PublicClientApplication`:
+In the sample project, the code behind for **App.xaml** defines static properties named `AuthenticationClient` and `UIParent`, and instantiates the `AuthenticationClient` object in the constructor. The `WithIosKeychainSecurityGroup` clause provides a security group name for iOS applications. The `WithB2CAuthority` clause provides the default **Authority**, or policy, that will be used to authenticate users. The `WithRedirectUri` clause tells the Azure Notification Hubs instance which Redirect URI to use if multiple are specified. The following example demonstrates how to instantiate the `PublicClientApplication`:
 
 ```csharp
 public partial class App : Application
@@ -116,6 +116,7 @@ public partial class App : Application
         AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
             .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
             .WithB2CAuthority(Constants.AuthoritySignin)
+            .WithRedirectUri($"msal{Constants.ClientId}://auth")
             .Build();
 
         MainPage = new NavigationPage(new LoginPage());
@@ -123,6 +124,9 @@ public partial class App : Application
 
     ...
 ```
+
+> [!NOTE]
+> If your Azure Notification Hubs instance only has one Redirect URI defined, the `AuthenticationClient` instance may work without specifying the Redirect URI with the `WithRedirectUri` clause. However, you should always specify this value in case your Azure configuration expands to support other clients or authentication methods.
 
 The `OnAppearing` event handler in the **LoginPage.xaml.cs** code behind calls `AcquireTokenSilentAsync` to refresh the authentication token for users that have logged in before. The authentication process redirects to the `LogoutPage` if successful and does nothing on failure. The following example shows the silent reauthentication process in `OnAppearing`:
 
