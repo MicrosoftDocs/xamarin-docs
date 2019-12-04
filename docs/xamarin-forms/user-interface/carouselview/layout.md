@@ -18,8 +18,6 @@ ms.date: 10/14/2019
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) defines the following properties that control layout:
 
 - [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout), of type `LinearItemsLayout`, specifies the layout to be used.
-- [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemsView.ItemSizingStrategy), of type [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy), specifies the item measure strategy to be used.
-- `NumberOfSideItems`, of type `int`, the number of visible items adjacent to the current item. The default value is 0.
 - `PeekAreaInsets`, of type [`Thickness`](xref:Xamarin.Forms.Thickness), specifies how much to make adjacent items partially visible by.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
@@ -186,32 +184,6 @@ CarouselView carouselView = new CarouselView
 ```
 
 The result is that adjacent items are partially exposed on screen.
-
-## Fully visible adjacent items
-
-By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) displays one item at a time. However, this behavior can be changed by setting the `NumberOfSideItems` property to an integer that represents the number of items to display adjacent to the current item. The following XAML shows an example of setting this property:
-
-```xaml
-<CarouselView ItemsSource="{Binding Monkeys}"
-              NumberOfSideItems="1">
-    ...
-</CarouselView>
-```
-
-The equivalent C# code is:
-
-```csharp
-CarouselView carouselView = new CarouselView
-{
-    ...
-    NumberOfSideItems = 1
-};
-```
-
-This example results in one adjacent item being displayed on each side of the current item.
-
-> [!NOTE]
-> When setting the `NumberOfSideItems` property, any `PeekAreaInsets` value is still applied.
 
 ## Item spacing
 
