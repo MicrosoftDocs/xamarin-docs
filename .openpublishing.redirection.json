@@ -579,6 +579,10 @@
     {
       "source_path": "docs/cross-platform/deploy-test/installing-nunit-using-nuget.md",
       "redirect_url": "/xamarin/cross-platform/deploy-test/"
+    },
+    {
+      "source_path": "docs/android/troubleshooting/errors.md",
+      "redirect_url": "/xamarin/android/errors-and-warnings/"
     }
   ]
 }

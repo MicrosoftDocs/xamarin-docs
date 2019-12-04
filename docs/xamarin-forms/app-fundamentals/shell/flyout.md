@@ -345,8 +345,71 @@ This example displays the title of each `FlyoutItem` object in italics:
 
 [![Screenshot of templated FlyoutItem objects, on iOS and Android](flyout-images/flyoutitem-templated.png "Shell templated FlyoutItem objects")](flyout-images/flyoutitem-templated-large.png#lightbox "Shell templated FlyoutItem objects")
 
+
+Because `Shell.ItemTemplate` is an attached property, different templates can be attached to specific `FlyoutItem` objects.
+
 > [!NOTE]
 > Shell provides the `Title` and `FlyoutIcon` properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `ItemTemplate`.
+
+
+### Default Template for FlyoutItems and MenuItems
+Shell uses the following template internally for its default implementation. This is a great starting point if all you want to do is make small tweaks to the existing layouts. This also demonstrates the Visual State Manager features of the flyout items. This same template can also be used for MenuItems
+
+```xaml
+<DataTemplate x:Key="FlyoutTemplates">
+    <Grid HeightRequest="{x:OnPlatform Android=50}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding FlyoutIcon}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
+            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        </Image>
+        <Label VerticalOptions="Center"
+                Text="{Binding Title}"
+                FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                FontAttributes="Bold" Grid.Column="1">
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="#D2000000" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.TextColor>
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="20, 0, 0, 0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.Margin>
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="sans-serif-medium" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+    </Grid>
+</DataTemplate>
+```
 
 ## FlyoutItem tab order
 
@@ -461,7 +524,7 @@ This example attaches the Shell-level `MenuItemTemplate` to each `MenuItem` obje
 [![Screenshot of templated MenuItem objects, on iOS and Android](flyout-images/menuitem-templated.png "Shell templated MenuItem objects")](flyout-images/menuitem-templated-large.png#lightbox "Shell templated MenuItem objects")
 
 > [!NOTE]
-> Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`.`
+> Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`. You can also use `Title` in place of `Text` and `Icon` in place of `IconImageSource` which will let you reuse the same template for Menu Items and Flyout Items
 
 Because `Shell.MenuItemTemplate` is an attached property, different templates can be attached to specific `MenuItem` objects:
 
@@ -500,6 +563,10 @@ Because `Shell.MenuItemTemplate` is an attached property, different templates ca
     </MenuItem>
 </Shell>
 ```
+
+
+> [!NOTE]
+> The same template used for [Flyout Items](#default-template-for-flyoutitems-and-menuitems) can also be used for Menu Items.
 
 This example attaches the Shell-level `MenuItemTemplate` to the first `MenuItem` object, and attaches the inline `MenuItemTemplate` to the second `MenuItem`.
 

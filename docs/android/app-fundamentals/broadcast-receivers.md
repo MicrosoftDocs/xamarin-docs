@@ -107,19 +107,19 @@ public class MainActivity: Activity
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        receiver = new MySampleBroadcastReceiver()
+        receiver = new MySampleBroadcastReceiver();
 
         // Code omitted for clarity
     }
 
-    protected override OnResume() 
+    protected override void OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
 
-    protected override OnPause() 
+    protected override void OnPause() 
     {
         UnregisterReceiver(receiver);
         // Code omitted for clarity

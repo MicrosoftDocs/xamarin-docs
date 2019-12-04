@@ -220,6 +220,7 @@ The appearance of each item in the `IEnumerable` collection can be chosen at run
             </local:MapItemTemplateSelector.DefaultTemplate>
             <local:MapItemTemplateSelector.XamarinTemplate>
                 <DataTemplate>
+                    <!-- Change the property values, or the properties that are bound to. -->
                     <maps:Pin Position="{Binding Position}"
                               Address="{Binding Address}"
                               Label="Xamarin!" />
@@ -254,6 +255,9 @@ public class MapItemTemplateSelector : DataTemplateSelector
 ```
 
 The `MapItemTemplateSelector` class defines `DefaultTemplate` and `XamarinTemplate` [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) properties that are set to different data templates. The `OnSelectTemplate` method returns the `XamarinTemplate`, which displays "Xamarin" as a label when a `Pin` is tapped, when the item has an address that contains "San Francisco". When the item doesn't have an address that contains "San Francisco", the `OnSelectTemplate` method returns the `DefaultTemplate`.
+
+> [!NOTE]
+> A use case for this functionality is binding properties of sub-classed [`Pin`](xref:Xamarin.Forms.Maps.Pin) objects to different properties, based on the `Pin` sub-type.
 
 For more information about data template selectors, see [Creating a Xamarin.Forms DataTemplateSelector](~/xamarin-forms/app-fundamentals/templates/data-templates/selector.md).
 

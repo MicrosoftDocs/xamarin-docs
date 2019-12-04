@@ -29,7 +29,7 @@ in general (with a basic code example), see
 [Binding a Java Library](~/android/platform/binding-java-library/index.md).
 
 > [!IMPORTANT]
-> A binding project can only include one .AAR file. If the .AAR dependencies on other .AAR, then those dependencies should be contained in their own binding project and then referenced. See [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
+> A binding project can only include one .AAR file. If the .AAR depends on other .AAR, then those dependencies should be contained in their own binding project and then referenced. See [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
 
 ## Walkthrough
 

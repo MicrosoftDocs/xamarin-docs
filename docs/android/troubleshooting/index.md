@@ -33,7 +33,7 @@ Libraries or Google Play services.
 Starting in 26.0.1 of the Android SDK Tools, Google has removed the
 existing AVD and SDK managers in favour of new command line tooling.
 
-## [Xamarin.Android Errors Reference](~/android/troubleshooting/errors.md)
+## [Xamarin.Android Errors Reference](/xamarin/android/errors-and-warnings/)
 
 An errors reference guide, showing the most common errors you may
-experience when using Xamarin.Android in Xamarin Studio
+experience when using Xamarin.Android in Visual Studio
