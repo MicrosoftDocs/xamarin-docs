@@ -39,7 +39,7 @@ The [`Aspect`](xref:Xamarin.Forms.Image.Aspect) property determines how the imag
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - Clips the image so that it fills the display area while preserving the aspect (ie. no distortion).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on whether the image is wide or tall.
 
-Images can be loaded from a [local file](#local-images), an [embedded resource](#embedded-images), [downloaded](#downloading-images), or loaded from a stream. In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
+Images can be loaded from a [local file](#local-images), an [embedded resource](#embedded-images), [downloaded](#download-images), or loaded from a stream. In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
 ## Local images
 
@@ -296,7 +296,7 @@ Built-in caching makes it very easy to support scenarios like scrolling lists of
 
 ## Animated GIFs
 
-Xamarin.Forms includes support for displaying small, animated GIFs. This is accomplished by setting the [`Image.Source`](xref:Xamarin.Forms.Image.Source) property to an animated GIF:
+Xamarin.Forms includes support for displaying small, animated GIFs. This is accomplished by setting the [`Image.Source`](xref:Xamarin.Forms.Image.Source) property to an animated GIF file:
 
 ```xaml
 <Image Source="demo.gif" />
@@ -305,12 +305,12 @@ Xamarin.Forms includes support for displaying small, animated GIFs. This is acco
 > [!IMPORTANT]
 > While the animated GIF support in Xamarin.Forms includes the ability to download files, it does not support caching or streaming animated GIFs.
 
-The [`Image`](xref:Xamarin.Forms.Image) view has a property named `IsAnimationPlaying`, of type `bool`, that controls whether an animated GIF is playing or stopped, This property is backed by a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) object, which means that it can be the target of a data binding, and styled.
+By default, when an animated GIF is loaded it will not be played. This is because the `IsAnimationPlaying` property, that controls whether an animated GIF is playing or stopped, has a default value of `false`. This property, of type `bool`, is backed by a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) object, which means that it can be the target of a data binding, and styled.
 
-By default, the `IsAnimationPlaying` property is set to `false`. Therefore, when an animated GIF is loaded it will not be played until the `IsAnimationPlaying` property is set to `true`. Playback can then be stopped by setting the `IsAnimationPlaying` property to `false`.
+Therefore, when an animated GIF is loaded it will not be played until the `IsAnimationPlaying` property is set to `true`. Playback can then be stopped by setting the `IsAnimationPlaying` property to `false`. Note that this property has no effect when displaying a non-GIF image source.
 
 > [!NOTE]
-> The `IsAnimatingPlaying` property has no effect when displaying a non-GIF image source.
+> On UWP, animated GIF support requires a minimum of Windows 10 Anniversary Update (version 1607).
 
 ## Icons and splash screens
 
