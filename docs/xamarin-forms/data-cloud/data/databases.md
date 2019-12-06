@@ -19,16 +19,210 @@ The SQLite database engine allows Xamarin.Forms applications to load and save ob
 
 Integrate SQLite.NEt into mobile apps by following these steps:
 
-1. Install the **sqlite-net-pcl** Nuget package
-1. Create a database access class
-1. Store and retrieve data
-1. Configure advanced features
+1. Install the **sqlite-net-pcl** NuGet package.
+1. Configure app constants.
+1. Create a database access class.
+1. Store and retrieve data.
+1. Configure advanced features.
 
 ## Install SQLite Nuget packages
 
+Use the NuGet package manager to search for **sqlite-net-pcl" and add the latest version to the shared code project.
+
+There are a number of NuGet packages with similar names. The correct package has these attributes:
+
+- **Created by:** Frank A. Krueger
+- **Id:** sqlite-net-pcl
+- **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+
+> [!NOTE]
+> Despite the package name, use the **sqlite-net-pcl** NuGet package even in .NET Standard projects.
+
+## Configure app constants
+
+The sample project includes a **Constants.cs** file that provides common configuration data:
+
+```csharp
+public static class Constants
+{
+    public const string DatabaseFilename = "TodoSQLite.db3";
+
+    public const SQLite.SQLiteOpenFlags Flags =
+        // open the database in read/write mode
+        SQLite.SQLiteOpenFlags.ReadWrite |
+        // create the database if it doesn't exist
+        SQLite.SQLiteOpenFlags.Create |
+        // enable multi-threaded database access
+        SQLite.SQLiteOpenFlags.SharedCache;
+
+    public static string DatabasePath
+    {
+        get
+        {
+            var basePath = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);
+            return Path.Combine(basePath, DatabaseFilename);
+        }
+    }
+}
+```
+
+For more information about `SQLiteOpenFlags`, see [SQLite open flags](#sqlite-open-flags).
+
 ## Create a database access class
 
+A database wrapper class provides an abstraction to the rest of the application. This centralizes query logic and simplifies the management of database initialization, making it easier to refactor or expand data operations as the application grows.
+
+The Todo app defines the following `TodoItemDatabase` class:
+
+```csharp
+public class TodoItemDatabase
+{
+    static readonly Lazy<SQLiteAsyncConnection> lazyInitializer = new Lazy<SQLiteAsyncConnection>(() =>
+    {
+        return new SQLiteAsyncConnection(Constants.DatabasePath, Constants.Flags);
+    });
+
+    static SQLiteAsyncConnection Database => lazyInitializer.Value;
+    static bool initialized = false;
+
+    public TodoItemDatabase()
+    {
+        InitializeAsync().SafeFireAndForget(false);
+    }
+
+    async Task InitializeAsync()
+    {
+        if (!initialized)
+        {
+            if (!Database.TableMappings.Any(m => m.MappedType.Name == typeof(TodoItem).Name))
+            {
+                await Database.CreateTablesAsync(CreateFlags.None, typeof(TodoItem)).ConfigureAwait(false);
+                initialized = true;
+            }
+        }
+    }
+
+    public Task<List<TodoItem>> GetItemsAsync()
+    {
+        return Database.Table<TodoItem>().ToListAsync();
+    }
+
+    public Task<List<TodoItem>> GetItemsNotDoneAsync()
+    {
+        return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+    }
+
+    public Task<TodoItem> GetItemAsync(int id)
+    {
+        return Database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
+    }
+
+    public Task<int> SaveItemAsync(TodoItem item)
+    {
+        if (item.ID != 0)
+        {
+            return Database.UpdateAsync(item);
+        }
+        else
+        {
+            return Database.InsertAsync(item);
+        }
+    }
+
+    public Task<int> DeleteItemAsync(TodoItem item)
+    {
+        return Database.DeleteAsync(item);
+    }
+}
+```
+
+### Lazy initialization
+
+The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it is first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information about the `Lazy` class, see [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1).
+
+The database connection is a static field. This ensures that a single database connection is used for the life of the app, which improves performance.
+
+The `InitializeAsync` method is responsible for checking if a table already exists for storing `TodoItem` objects. This method will automatically create the table if it does not exist.
+
+### SQLite open flags
+
+The sample app database is initilized with three `SQLiteOpenFlag` enum values:
+
+- `SQLiteOpenFlags.ReadWrite`: Allows the database connection to read and write data.
+- `SQLiteOpenFlags.Create`: Allows the database file to be automatically created if it doesn't already exist.
+- `SQLiteOpenFlags.SharedCache`: Allows multi-threaded access to the database.
+
+You may need to specify different flags depending on how your database will be used. For more information about `SQLiteOpenFlags`, see [Opening A New Database Connection](https://www.sqlite.org/c3ref/open.html).
+
+### The SafeFireAndForget extension method
+
+When the `TodoItemDatabase` class is instantiated, it must initialize the database connection, which is an asynchronous process. However:
+
+- Class constructors cannot be asynchronous.
+- An async method that is not awaited will not throw exceptions.
+- Using the `Wait` method blocks the thread _and_ swallows exceptions.
+
+In order to start the asynchronous initialization, avoid blocking execution, and have the opportunity to catch exceptions, the sample application uses an extension method called `SafeFireAndForget`. The `SafeFireAndForget` extension method is defined on the `Task` class:
+
+```csharp
+public static class TaskExtensions
+{
+    // NOTE: Async void is intentional here. This provides a way
+    // to call an async method from the constructor while
+    // communicating intent to fire and forget, and allow
+    // handling of exceptions
+    public static async void SafeFireAndForget(this Task task,
+        bool returnToCallingContext,
+        Action<Exception> onException = null)
+    {
+        try
+        {
+            await task.ConfigureAwait(returnToCallingContext);
+        }
+
+        // if the provided action is not null, catch and
+        // pass the thrown exception
+        catch (Exception ex) when (onException != null)
+        {
+            onException(ex);
+        }
+    }
+}
+```
+
+The `SafeFireAndForget` method awaits the asynchronous execution and allows developers to attach an `Action` that is called if an exception is thrown.
+
+For more information, see [Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+
 ## Store and retrieve data in Xamarin.Forms
+
+The `TodoItemDatabase` includes methods for the four types of data manipulation: create, read, edit and delete. The Xamarin.Forms `App` class exposes an instance of the `TodoItemDatabase` class:
+
+```csharp
+public static TodoItemDatabase Database
+{
+    get
+    {
+        if (database == null)
+        {
+            database = new TodoItemDatabase();
+        }
+        return database;
+    }
+}
+```
+
+This property allows Xamarin.Forms components to call data retrieval and manipulation methods on the `Database` instance in response to user interaction. For example:
+
+```csharp
+var saveButton = new Button { Text = "Save" };
+saveButton.Clicked += async (sender, e) =>
+{
+    var todoItem = (TodoItem)BindingContext;
+    await App.Database.SaveItemAsync(todoItem);
+    await Navigation.PopAsync();
+};
+```
 
 ## Configure advanced features
 
@@ -38,112 +232,10 @@ Integrate SQLite.NEt into mobile apps by following these steps:
 
 ### Use Polly
 
-
-
-
-
-
-## Overview
-
-Xamarin.Forms applications can use the [SQLite.NET PCL NuGet](https://www.nuget.org/packages/sqlite-net-pcl/) package to incorporate database operations into shared code by referencing the `SQLite` classes that ship in the NuGet. Database operations can be defined in the .NET Standard library project of the Xamarin.Forms solution.
-
-The accompanying [sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo) is a simple Todo-list application. The following screenshots show how the sample appears on each platform:
-
-[![Xamarin.Forms database example screenshots](databases-images/todo-list-sml.png "TodoList First Page Screenshots")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots") [![Xamarin.Forms database example screenshots](databases-images/todo-list-sml.png "TodoList First Page Screenshots")](databases-images/todo-list.png#lightbox "TodoList First Page Screenshots")
-
-<a name="Using_SQLite_with_PCL" />
-
-## Using SQLite
-
-To add SQLite support to a Xamarin.Forms .NET Standard library, use NuGet's search function to find **sqlite-net-pcl** and install the latest package:
-
-![Add NuGet SQLite.NET PCL Package](databases-images/vs2017-sqlite-pcl-nuget.png "Add NuGet SQLite.NET PCL Package")
-
-There are a number of NuGet packages with similar names, the correct package has these attributes:
-
-- **Created by:** Frank A. Krueger
-- **Id:** sqlite-net-pcl
-- **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
-
-> [!NOTE]
-> Despite the package name, use the **sqlite-net-pcl** NuGet package even in .NET Standard projects.
-
-Once the reference has been added, add a property to the `App` class that returns a local file path for storing the database:
-
-```csharp
-static TodoItemDatabase database;
-
-public static TodoItemDatabase Database
-{
-  get
-  {
-    if (database == null)
-    {
-      database = new TodoItemDatabase(
-        Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "TodoSQLite.db3"));
-    }
-    return database;
-  }
-}
-```
-
-The `TodoItemDatabase` constructor, which takes the path for the database file as an argument, is shown below:
-
-```csharp
-public TodoItemDatabase(string dbPath)
-{
-  database = new SQLiteAsyncConnection(dbPath);
-  database.CreateTableAsync<TodoItem>().Wait();
-}
-```
-
-The advantage of exposing the database as a singleton is that a single database connection is created that's kept open while the application runs, therefore avoiding the expense of opening and closing the database file each time a database operation is performed.
-
-The remainder of the `TodoItemDatabase` class contains SQLite queries that run cross-platform. Example query code is shown below (more details on the syntax can be found in [Using SQLite.NET with Xamarin.iOS](~/ios/data-cloud/data/using-sqlite-orm.md).
-
-```csharp
-public Task<List<TodoItem>> GetItemsAsync()
-{
-  return database.Table<TodoItem>().ToListAsync();
-}
-
-public Task<List<TodoItem>> GetItemsNotDoneAsync()
-{
-  return database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-}
-
-public Task<TodoItem> GetItemAsync(int id)
-{
-  return database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
-}
-
-public Task<int> SaveItemAsync(TodoItem item)
-{
-  if (item.ID != 0)
-  {
-    return database.UpdateAsync(item);
-  }
-  else {
-    return database.InsertAsync(item);
-  }
-}
-
-public Task<int> DeleteItemAsync(TodoItem item)
-{
-  return database.DeleteAsync(item);
-}
-```
-
-> [!NOTE]
-> The advantage of using the asynchronous SQLite.Net API is that database operations are moved to background threads. In addition, there's no need to write additional concurrency handling code because the API takes care of it.
-
-## Summary
-
-Xamarin.Forms supports database-driven applications using the SQLite database engine, which makes it possible to load and save objects in shared code.
-
-This article focused on **accessing** a SQLite database using Xamarin.Forms. For more information on working with SQLite.Net itself, refer to the [SQLite.NET on Android](~/android/data-cloud/data-access/using-sqlite-orm.md) or [SQLite.NET on iOS](~/ios/data-cloud/data/using-sqlite-orm.md) documentation.
-
 ## Related Links
 
-- [Todo Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
-- [Xamarin.Forms Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms)
+- Sample application
+- SQLite Nuget package
+- SQLite documentation
+- Task-Asynchronous Pattern (TAP)
+- Lazy initialization
