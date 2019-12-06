@@ -66,13 +66,21 @@ public static class Constants
 }
 ```
 
-For more information about `SQLiteOpenFlags`, see [SQLite open flags](#sqlite-open-flags).
+The constants file specifies three `SQLiteOpenFlag` enum values used to initialize the database:
+
+- `SQLiteOpenFlags.ReadWrite`: Allows the database connection to read and write data. This value can be changed to create a readonly connection.
+- `SQLiteOpenFlags.Create`: Allows the database file to be automatically created if it doesn't already exist.
+- `SQLiteOpenFlags.SharedCache`: Allows multi-threaded access to the database.
+
+You may need to specify different flags depending on how your database will be used. For more information about `SQLiteOpenFlags`, see [Opening A New Database Connection](https://www.sqlite.org/c3ref/open.html).
 
 ## Create a database access class
 
-A database wrapper class provides an abstraction to the rest of the application. This centralizes query logic and simplifies the management of database initialization, making it easier to refactor or expand data operations as the application grows.
+A database wrapper class provides an abstraction to the rest of the app. This class centralizes query logic and simplifies the management of database initialization, making it easier to refactor or expand data operations as the app grows. The Todo app defines a `TodoItemDatabase` class for this purpose.
 
-The Todo app defines the following `TodoItemDatabase` class:
+### Lazy initialization
+
+The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it is first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information about the `Lazy` class, see [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1).
 
 ```csharp
 public class TodoItemDatabase
@@ -102,57 +110,13 @@ public class TodoItemDatabase
         }
     }
 
-    public Task<List<TodoItem>> GetItemsAsync()
-    {
-        return Database.Table<TodoItem>().ToListAsync();
-    }
-
-    public Task<List<TodoItem>> GetItemsNotDoneAsync()
-    {
-        return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
-    }
-
-    public Task<TodoItem> GetItemAsync(int id)
-    {
-        return Database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
-    }
-
-    public Task<int> SaveItemAsync(TodoItem item)
-    {
-        if (item.ID != 0)
-        {
-            return Database.UpdateAsync(item);
-        }
-        else
-        {
-            return Database.InsertAsync(item);
-        }
-    }
-
-    public Task<int> DeleteItemAsync(TodoItem item)
-    {
-        return Database.DeleteAsync(item);
-    }
+    //...
 }
 ```
 
-### Lazy initialization
-
-The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it is first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information about the `Lazy` class, see [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1).
-
 The database connection is a static field. This ensures that a single database connection is used for the life of the app, which improves performance.
 
-The `InitializeAsync` method is responsible for checking if a table already exists for storing `TodoItem` objects. This method will automatically create the table if it does not exist.
-
-### SQLite open flags
-
-The sample app database is initilized with three `SQLiteOpenFlag` enum values:
-
-- `SQLiteOpenFlags.ReadWrite`: Allows the database connection to read and write data.
-- `SQLiteOpenFlags.Create`: Allows the database file to be automatically created if it doesn't already exist.
-- `SQLiteOpenFlags.SharedCache`: Allows multi-threaded access to the database.
-
-You may need to specify different flags depending on how your database will be used. For more information about `SQLiteOpenFlags`, see [Opening A New Database Connection](https://www.sqlite.org/c3ref/open.html).
+The `InitializeAsync` method is responsible for checking if a table already exists for storing `TodoItem` objects. This method automatically creates the table if it does not exist.
 
 ### The SafeFireAndForget extension method
 
@@ -194,9 +158,52 @@ The `SafeFireAndForget` method awaits the asynchronous execution and allows deve
 
 For more information, see [Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
 
-## Store and retrieve data in Xamarin.Forms
+### Data manipulation methods
 
-The `TodoItemDatabase` includes methods for the four types of data manipulation: create, read, edit and delete. The Xamarin.Forms `App` class exposes an instance of the `TodoItemDatabase` class:
+The `TodoItemDatabase` class includes methods for the four types of data manipulation: create, read, edit and delete. The SQLite.NET library provides a simple Object Relational Map (ORM) that allows you to store and retrieve objects without writing SQL statements.
+
+```csharp
+public static class TodoItemDatabase {
+
+    // ...
+
+    public Task<List<TodoItem>> GetItemsAsync()
+    {
+        return Database.Table<TodoItem>().ToListAsync();
+    }
+
+    public Task<List<TodoItem>> GetItemsNotDoneAsync()
+    {
+        return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
+    }
+
+    public Task<TodoItem> GetItemAsync(int id)
+    {
+        return Database.Table<TodoItem>().Where(i => i.ID == id).FirstOrDefaultAsync();
+    }
+
+    public Task<int> SaveItemAsync(TodoItem item)
+    {
+        if (item.ID != 0)
+        {
+            return Database.UpdateAsync(item);
+        }
+        else
+        {
+            return Database.InsertAsync(item);
+        }
+    }
+
+    public Task<int> DeleteItemAsync(TodoItem item)
+    {
+        return Database.DeleteAsync(item);
+    }
+}
+```
+
+## Accessing the database in Xamarin.Forms
+
+The Xamarin.Forms `App` class exposes an instance of the `TodoItemDatabase` class:
 
 ```csharp
 public static TodoItemDatabase Database
@@ -224,18 +231,49 @@ saveButton.Clicked += async (sender, e) =>
 };
 ```
 
-## Configure advanced features
+## Advanced configuration
 
-### ConfigureAwait
+SQLite provides a robust API with more features than are covered in this article and the sample app. The following sections cover features that are important for scalability.
 
-### Copy or backup a database
+For more information, see [SQLite Documentation](https://www.sqlite.org/docs.html).
 
-### Use Polly
+### Write-Ahead Logging
+
+By default, SQLite uses a traditional rollback journal. A copy of the unchanged database content is written into a separate rollback file, then the changes are written directly to the database file. The COMMIT occurs when the rollback journal is deleted.
+
+Write-Ahead Logging (WAL) writes changes into a separate WAL file first. A COMMIT is a special record appended to the WAL file, which allows multiple transactions to occur in a single WAL file. A WAL file is merged back into the database file in a special operation called a **checkpoint**.
+
+WAL can be significantly faster for local database scenarios because readers and writers do not block each other, allowing read and write operations to be concurrent. However, WAL mode does not allow changes to the **page size**, adds additional file associations to the database, and adds the extra **checkpointing** operation.
+
+To enable WAL in SQLite.NET, call the `EnableWriteAheadLoggingAsync` method on the `SQLiteAsyncConnection` instance:
+
+```csharp
+await Database.EnableWriteAheadLoggingAsync();
+```
+
+For more information, see [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html).
+
+### Copying a database
+
+There are several cases where it may be necessary to copy a SQLite database:
+
+- A database has shipped with your application but must be copied or moved to writeable storage on the mobile device.
+- You need to make a backup or copy of the database.
+- You need to version, move or rename the database file.
+
+In general, moving, renaming or copying a database file is the same process as any other file type with a few additional considerations:
+
+- All database connections should be closed before attempting to move the database file.
+- If you use [Write-Ahead Logging](#write-ahead-logging), SQLite will create a Shared Memory Access (.shm) file and a (Write Ahead Log) (.wal) file. Ensure that you apply any changes to these files as well.
+
+For more information, see [File Handling in Xamarin.Forms](~/xamarin-forms/data-coud/data/files.md).
 
 ## Related Links
 
-- Sample application
-- SQLite Nuget package
-- SQLite documentation
-- Task-Asynchronous Pattern (TAP)
-- Lazy initialization
+- [Todo sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
+- [SQLite.NET Nuget package](https://www.nuget.org/packages/sqlite-net-pcl/)
+- [SQLite documentation](https://www.sqlite.org/docs.html)
+- [Using SQLite with Android](~/xamarin/android/data-cloud/data-access/using-sqlite-orm.md)
+- [Using SQLite with iOS](~/xamarin/ios/data-cloud/data/using-sqlite-orm.md)
+- [Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+- [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1)
