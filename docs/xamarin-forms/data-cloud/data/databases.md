@@ -4,9 +4,9 @@ description: "Xamarin.Forms supports database-driven applications using the SQLi
 ms.prod: xamarin
 ms.assetid: F687B24B-7DF0-4F8E-A21A-A9BB507480EB
 ms.technology: xamarin-forms
-author: davidbritch
-ms.author: dabritch
-ms.date: 06/21/2018
+author: profexorgeek
+ms.author: jusjohns
+ms.date: 12/05/2019
 ---
 
 # Xamarin.Forms Local Databases
