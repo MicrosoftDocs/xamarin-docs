@@ -11,8 +11,6 @@ ms.date: 08/13/2019
 
 # XAML Hot Reload for Xamarin.Forms (Preview)
 
-![Preview feature](~/media/shared/preview.png)
-
 XAML Hot Reload plugs into your existing workflow to increase your productivity and save you time. Without XAML Hot Reload, you have to build and deploy your app every time you want to see a XAML change. With Hot Reload, when you save your XAML file the changes are reflected live in your running app. In addition, your navigation state and data will be maintained, enabling you to quickly iterate on your UI without losing your place in the app. Therefore, with XAML Hot Reload, you'll spend less time rebuilding and deploying your apps to validate UI changes.
 
 > [!NOTE]
@@ -22,8 +20,8 @@ XAML Hot Reload plugs into your existing workflow to increase your productivity 
 
 | IDE/Framework | Version Required |
 |------|------------------|
-|Visual Studio 2019 | 16.3 or greater
-Visual Studio 2019 for Mac | 8.3 or greater
+|Visual Studio 2019 | 16.4 or greater
+Visual Studio 2019 for Mac | 8.4 or greater
 Xamarin.Forms | 4.1 or greater
 
 ## Use XAML Hot Reload for Xamarin.Forms
