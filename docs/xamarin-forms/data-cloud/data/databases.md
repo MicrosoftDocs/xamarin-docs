@@ -19,13 +19,13 @@ The SQLite database engine allows Xamarin.Forms applications to load and save ob
 
 Integrate SQLite.NEt into mobile apps by following these steps:
 
-1. Install the **sqlite-net-pcl** NuGet package.
-1. Configure app constants.
-1. Create a database access class.
-1. Store and retrieve data.
-1. Configure advanced features.
+1. [Install the NuGet package](#install-the-sqlite-nuget-package).
+1. [Configure constants](#configure-app-constants).
+1. [Create a database access class](#create-a-database-access-class).
+1. [Access data in Xamarin.Forms](#access-data-in-xamarin-forms).
+1. [Advanced configuration](#advanced-configuration).
 
-## Install SQLite Nuget packages
+## Install the SQLite NuGet package
 
 Use the NuGet package manager to search for **sqlite-net-pcl" and add the latest version to the shared code project.
 
@@ -201,7 +201,7 @@ public static class TodoItemDatabase {
 }
 ```
 
-## Accessing the database in Xamarin.Forms
+## Access data in Xamarin.Forms
 
 The Xamarin.Forms `App` class exposes an instance of the `TodoItemDatabase` class:
 
