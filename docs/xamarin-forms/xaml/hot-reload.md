@@ -40,7 +40,7 @@ If you make a change that XAML Hot Reload can't reload, it will show you an erro
 
 - You can't add, remove, or rename files or NuGet packages during a XAML Hot Reload session. If you add or remove a file or NuGet package, rebuild and redeploy your app to continue using XAML Hot Reload.
 - Set the linker to **Don't Link** for the best experience. The **Link SDK only** setting works most of the time, but it may fail in certain cases.
-- Debugging on a physical iPhone requires the interpreter to use XAML Hot Reload. Add **--interpreter** to the **Additional mtouch arguments** field in your iOS Build settings to use XAML Hot Reload.
+- Debugging on a physical iPhone requires the interpreter to use XAML Hot Reload. To do this, open the project settings, select the iOS Build tab, and ensure **Enable the Mono interpreter** setting is enabled. You may need to change the **Platform** option at the top of the property page to **iPhone**.
 - Any references created by assigning a control to another field or property using its `x:Name` value won't be reloaded.
 - Updating the visual hierarchy of your Shell application in **AppShell.xaml** can cause issues maintaining the state of your application. Rebuild the app to continue reloading.
 - XAML Hot Reload can't reload C# code, including event handlers, custom controls, page code-behind, and additional classes.
@@ -56,6 +56,6 @@ If you were part of the private preview, your XAML Hot Reload extension will be 
   - Ensure you are on the latest version of the IDE.
   - Set your Android or iOS Linker settings to **Don't Link** in the project's build settings.
 - If nothing happens upon saving your XAML file, ensure that Hot Reload is enabled in the IDE.
-- If you're debugging on a physical iPhone and your app becomes unresponsive, check that the interpreter is enabled. To turn it on, add **--interpreter** to the **Additional mtouch arguments** field in your iOS Build settings.
+- If you're debugging on a physical iPhone and your app becomes unresponsive, check that the interpreter is enabled. To turn it on, open the project settings, select the iOS Build tab, and check the **Enable the Mono interpreter** setting.
 
 To report a bug, use the feedback tool at the **Help** > **Send Feedback** > **Report a Problem** menu on Windows, and the **Help** > **Report a Problem** menu on a Mac.
