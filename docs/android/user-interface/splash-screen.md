@@ -109,7 +109,7 @@ with a `style` named **MyTheme.Splash**:
   <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
   </style>
 
-    <style name="MyTheme" parent="MyTheme.Base">
+  <style name="MyTheme" parent="MyTheme.Base">
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
