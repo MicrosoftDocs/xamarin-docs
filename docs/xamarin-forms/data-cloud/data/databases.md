@@ -66,11 +66,18 @@ public static class Constants
 }
 ```
 
-The constants file specifies three `SQLiteOpenFlag` enum values used to initialize the database:
+The constants file specifies default `SQLiteOpenFlag` enum values used to initialize the database connection. The `SQLiteOpenFlag` enum supports these values:
 
-- `SQLiteOpenFlags.ReadWrite`: Allows the database connection to read and write data. This value can be changed to create a readonly connection.
-- `SQLiteOpenFlags.Create`: Allows the database file to be automatically created if it doesn't already exist.
-- `SQLiteOpenFlags.SharedCache`: Allows multi-threaded access to the database.
+- `Create`: The connection will automatically create the database file if it doesn't exist.
+- `FullMutex`: The connection is opened in serialized threading mode.
+- `NoMutex`: The connection is opened in multi-threading mode.
+- `PrivateCache`: The connection will not participate in the shared cache, even if it is enabled.
+- `ReadWrite`: The connection can read and write data
+- `SharedCache`: The connection will participate in the shared cache, if it is enabled.
+- `ProtectionComplete`: The file is encrypted and inaccessible while the device is locked.
+- `ProtectionCompleteUnlessOpen`: The file is encrypted until it is opened but is then accessible even if the user locks the device.
+- `ProtectionCompleteUntilFirstUserAuthentication`: The file is encrypted until after the user has booted and unlocked the device.
+- `ProtectionNone`: The database file is not encrypted.
 
 You may need to specify different flags depending on how your database will be used. For more information about `SQLiteOpenFlags`, see [Opening A New Database Connection](https://www.sqlite.org/c3ref/open.html).
 
