@@ -32,7 +32,7 @@ Use the Nuget package manager to search for **sqlite-net-pcl" and add the latest
 There are a number of Nuget packages with similar names. The correct package has these attributes:
 
 - **Created by:** Frank A. Krueger
-- **Id:** sqlite-net-pcl
+- **ID:** sqlite-net-pcl
 - **Nuget link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
@@ -71,13 +71,13 @@ The constants file specifies default `SQLiteOpenFlag` enum values used to initia
 - `Create`: The connection will automatically create the database file if it doesn't exist.
 - `FullMutex`: The connection is opened in serialized threading mode.
 - `NoMutex`: The connection is opened in multi-threading mode.
-- `PrivateCache`: The connection will not participate in the shared cache, even if it is enabled.
+- `PrivateCache`: The connection will not participate in the shared cache, even if it's enabled.
 - `ReadWrite`: The connection can read and write data
-- `SharedCache`: The connection will participate in the shared cache, if it is enabled.
+- `SharedCache`: The connection will participate in the shared cache, if it's enabled.
 - `ProtectionComplete`: The file is encrypted and inaccessible while the device is locked.
-- `ProtectionCompleteUnlessOpen`: The file is encrypted until it is opened but is then accessible even if the user locks the device.
+- `ProtectionCompleteUnlessOpen`: The file is encrypted until it's opened but is then accessible even if the user locks the device.
 - `ProtectionCompleteUntilFirstUserAuthentication`: The file is encrypted until after the user has booted and unlocked the device.
-- `ProtectionNone`: The database file is not encrypted.
+- `ProtectionNone`: The database file isn't encrypted.
 
 You may need to specify different flags depending on how your database will be used. For more information about `SQLiteOpenFlags`, see [Opening A New Database Connection](https://www.sqlite.org/c3ref/open.html).
 
@@ -87,7 +87,7 @@ A database wrapper class provides an abstraction to the rest of the app. This cl
 
 ### Lazy initialization
 
-The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it is first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information about the `Lazy` class, see [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1).
+The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it's first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information about the `Lazy` class, see [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1).
 
 ```csharp
 public class TodoItemDatabase
@@ -121,16 +121,16 @@ public class TodoItemDatabase
 }
 ```
 
-The database connection is a static field. This ensures that a single database connection is used for the life of the app, which improves performance.
+The database connection is a static field which ensures that a single database connection is used for the life of the app, improving performance.
 
-The `InitializeAsync` method is responsible for checking if a table already exists for storing `TodoItem` objects. This method automatically creates the table if it does not exist.
+The `InitializeAsync` method is responsible for checking if a table already exists for storing `TodoItem` objects. This method automatically creates the table if it doesn't exist.
 
 ### The SafeFireAndForget extension method
 
 When the `TodoItemDatabase` class is instantiated, it must initialize the database connection, which is an asynchronous process. However:
 
 - Class constructors cannot be asynchronous.
-- An async method that is not awaited will not throw exceptions.
+- An async method that isn't awaited will not throw exceptions.
 - Using the `Wait` method blocks the thread _and_ swallows exceptions.
 
 In order to start the asynchronous initialization, avoid blocking execution, and have the opportunity to catch exceptions, the sample application uses an extension method called `SafeFireAndForget`. The `SafeFireAndForget` extension method is defined on the `Task` class:
@@ -167,7 +167,7 @@ For more information, see [Task-based asynchronous pattern (TAP)](https://docs.m
 
 ### Data manipulation methods
 
-The `TodoItemDatabase` class includes methods for the four types of data manipulation: create, read, edit and delete. The SQLite.NET library provides a simple Object Relational Map (ORM) that allows you to store and retrieve objects without writing SQL statements.
+The `TodoItemDatabase` class includes methods for the four types of data manipulation: create, read, edit, and delete. The SQLite.NET library provides a simple Object Relational Map (ORM) that allows you to store and retrieve objects without writing SQL statements.
 
 ```csharp
 public static class TodoItemDatabase {
@@ -250,7 +250,7 @@ By default, SQLite uses a traditional rollback journal. A copy of the unchanged 
 
 Write-Ahead Logging (WAL) writes changes into a separate WAL file first. A COMMIT is a special record appended to the WAL file, which allows multiple transactions to occur in a single WAL file. A WAL file is merged back into the database file in a special operation called a **checkpoint**.
 
-WAL can be significantly faster for local database scenarios because readers and writers do not block each other, allowing read and write operations to be concurrent. However, WAL mode does not allow changes to the **page size**, adds additional file associations to the database, and adds the extra **checkpointing** operation.
+WAL can be faster for local databases because readers and writers do not block each other, allowing read and write operations to be concurrent. However, WAL mode doesn't allow changes to the **page size**, adds additional file associations to the database, and adds the extra **checkpointing** operation.
 
 To enable WAL in SQLite.NET, call the `EnableWriteAheadLoggingAsync` method on the `SQLiteAsyncConnection` instance:
 
@@ -266,9 +266,9 @@ There are several cases where it may be necessary to copy a SQLite database:
 
 - A database has shipped with your application but must be copied or moved to writeable storage on the mobile device.
 - You need to make a backup or copy of the database.
-- You need to version, move or rename the database file.
+- You need to version, move, or rename the database file.
 
-In general, moving, renaming or copying a database file is the same process as any other file type with a few additional considerations:
+In general, moving, renaming, or copying a database file is the same process as any other file type with a few additional considerations:
 
 - All database connections should be closed before attempting to move the database file.
 - If you use [Write-Ahead Logging](#write-ahead-logging), SQLite will create a Shared Memory Access (.shm) file and a (Write Ahead Log) (.wal) file. Ensure that you apply any changes to these files as well.
