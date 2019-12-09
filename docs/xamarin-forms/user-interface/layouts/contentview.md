@@ -94,17 +94,17 @@ The custom control UI uses a `ContentView` as the root element for the `CardView
             ...>
         <Grid>
             ...
-            <Frame BorderColor="{Binding BorderColor}"
-                   BackgroundColor="{Binding IconBackgroundColor}"
+            <Frame BorderColor="{Binding BorderColor, FallbackValue='Black'}"
+                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue='Grey'}"
                    ...>
                 <Image Source="{Binding IconImageSource}"
                        .. />
             </Frame>
-            <Label Text="{Binding CardTitle}"
+            <Label Text="{Binding CardTitle, FallbackValue='Card Title'}"
                    ... />
-            <BoxView BackgroundColor="{Binding BorderColor}"
+            <BoxView BackgroundColor="{Binding BorderColor, FallbackValue='Black'}"
                      ... />
-            <Label Text="{Binding CardDescription}"
+            <Label Text="{Binding CardDescription, FallbackValue='Card description text.'}"
                    ... />
         </Grid>
     </Frame>
@@ -114,6 +114,9 @@ The custom control UI uses a `ContentView` as the root element for the `CardView
 The `ContentView` element sets the `x:Name` property to **this**, which can be used to access the object bound to the `CardView` instance. Elements in the layout set bindings on their properties to values defined on the bound object.
 
 For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+
+> [!NOTE]
+> The `FallbackValue` property provides a default value in case the binding is `null`. This also allows the XAML designer in Visual Studio for Mac to render the `CardView` control.
 
 ## Instantiate a custom control
 
