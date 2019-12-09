@@ -116,7 +116,7 @@ The `ContentView` element sets the `x:Name` property to **this**, which can be u
 For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
 > [!NOTE]
-> The `FallbackValue` property provides a default value in case the binding is `null`. This also allows the XAML designer in Visual Studio to render the `CardView` control.
+> The `FallbackValue` property provides a default value in case the binding is `null`. This also allows the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/) in Visual Studio to render the `CardView` control.
 
 ## Instantiate a custom control
 
