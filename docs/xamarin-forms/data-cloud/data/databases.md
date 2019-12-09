@@ -19,24 +19,24 @@ The SQLite database engine allows Xamarin.Forms applications to load and save ob
 
 Integrate SQLite.NEt into mobile apps by following these steps:
 
-1. [Install the NuGet package](#install-the-sqlite-nuget-package).
+1. [Install the Nuget package](#install-the-sqlite-nuget-package).
 1. [Configure constants](#configure-app-constants).
 1. [Create a database access class](#create-a-database-access-class).
 1. [Access data in Xamarin.Forms](#access-data-in-xamarinforms).
 1. [Advanced configuration](#advanced-configuration).
 
-## Install the SQLite NuGet package
+## Install the SQLite Nuget package
 
-Use the NuGet package manager to search for **sqlite-net-pcl" and add the latest version to the shared code project.
+Use the Nuget package manager to search for **sqlite-net-pcl" and add the latest version to the shared code project.
 
-There are a number of NuGet packages with similar names. The correct package has these attributes:
+There are a number of Nuget packages with similar names. The correct package has these attributes:
 
 - **Created by:** Frank A. Krueger
 - **Id:** sqlite-net-pcl
-- **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Nuget link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
-> Despite the package name, use the **sqlite-net-pcl** NuGet package even in .NET Standard projects.
+> Despite the package name, use the **sqlite-net-pcl** Nuget package even in .NET Standard projects.
 
 ## Configure app constants
 
