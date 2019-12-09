@@ -6,7 +6,7 @@ ms.assetid: BF1CF23A-3BC9-4226-92E6-DAEEB91422F1
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/12/2018
+ms.date: 12/03/2019
 ---
 
 # Xamarin.Forms Custom Renderers
@@ -41,18 +41,14 @@ A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) is a view that display
 
 A Xamarin.Forms [`ViewCell`](xref:Xamarin.Forms.ViewCell) is a cell that can be added to a [`ListView`](xref:Xamarin.Forms.ListView) or [`TableView`](xref:Xamarin.Forms.TableView), which contains a developer-defined view. This article demonstrates how to create a custom renderer for a `ViewCell` that's hosted inside a Xamarin.Forms `ListView` control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
 
+## [Customizing a WebView](hybridwebview.md)
+
+A Xamarin.Forms [`WebView`](xref:Xamarin.Forms.WebView) is a view that displays web and HTML content in your app. This article explains how to create a custom renderer that extends the `WebView` to allow C# code to be invoked from JavaScript.
+
 ## [Implementing a View](view.md)
 
 Xamarin.Forms custom user interfaces controls should derive from the [`View`](xref:Xamarin.Forms.View) class, which is used to place layouts and controls on the screen. This article demonstrates how to create a custom renderer for a Xamarin.Forms custom control that's used to display a preview video stream from the device's camera.
 
-## [Implementing a HybridWebView](hybridwebview.md)
-
-This article demonstrates how to create a custom renderer for a `HybridWebView` custom control, which demonstrates how to enhance the platform-specific web controls to allow C# code to be invoked from JavaScript.
-
 ## [Implementing a video player](video-player/index.md)
 
 This article shows how to write renderers to implement a custom `VideoPlayer` control that can play videos from the web, videos embedded as application resources, or videos stored in the video library on the user's device. Several techniques are demonstrated, including implementing methods and read-only bindable properties.
-
-## Related Links
-
-- [Effects](~/xamarin-forms/app-fundamentals/effects/index.md)
