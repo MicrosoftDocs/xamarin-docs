@@ -27,7 +27,7 @@ Integrate SQLite.NEt into mobile apps by following these steps:
 
 ## Install the SQLite Nuget package
 
-Use the Nuget package manager to search for **sqlite-net-pcl" and add the latest version to the shared code project.
+Use the Nuget package manager to search for **sqlite-net-pcl** and add the latest version to the shared code project.
 
 There are a number of Nuget packages with similar names. The correct package has these attributes:
 
@@ -72,7 +72,7 @@ The constants file specifies default `SQLiteOpenFlag` enum values used to initia
 - `FullMutex`: The connection is opened in serialized threading mode.
 - `NoMutex`: The connection is opened in multi-threading mode.
 - `PrivateCache`: The connection will not participate in the shared cache, even if it's enabled.
-- `ReadWrite`: The connection can read and write data
+- `ReadWrite`: The connection can read and write data.
 - `SharedCache`: The connection will participate in the shared cache, if it's enabled.
 - `ProtectionComplete`: The file is encrypted and inaccessible while the device is locked.
 - `ProtectionCompleteUnlessOpen`: The file is encrypted until it's opened but is then accessible even if the user locks the device.
@@ -87,7 +87,7 @@ A database wrapper class provides an abstraction to the rest of the app. This cl
 
 ### Lazy initialization
 
-The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it's first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information about the `Lazy` class, see [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1).
+The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it's first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information, see [Lazy&lt;T&gt; Class](https://docs.microsoft.com/dotnet/api/system.lazy-1).
 
 ```csharp
 public class TodoItemDatabase
