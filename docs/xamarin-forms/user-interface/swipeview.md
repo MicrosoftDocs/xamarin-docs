@@ -172,7 +172,7 @@ The following example shows a `SwipeItemView` object in the `LeftItems` collecti
 </SwipeView>
 ```
 
-In this example, the `SwipeItemView` comprises a [`StackLayout`](xref:Xamarin.Forms.StackLayout) containing an [`Entry`](xref:Xamarin.Forms.Object) and a [`Label`](xref:Xamarin.Forms.Label). After the user enters input into the `Entry`, the rest of the `SwipeViewItem` can be tapped which executes the `ICommand` defined by the `SwipeItemView.Command` property.
+In this example, the `SwipeItemView` comprises a [`StackLayout`](xref:Xamarin.Forms.StackLayout) containing an [`Entry`](xref:Xamarin.Forms.Entry) and a [`Label`](xref:Xamarin.Forms.Label). After the user enters input into the `Entry`, the rest of the `SwipeViewItem` can be tapped which executes the `ICommand` defined by the `SwipeItemView.Command` property.
 
 ## Swipe direction
 
