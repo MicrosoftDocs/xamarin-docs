@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/11/2019
+ms.date: 12/10/2019
 ---
 
 # Xamarin.Forms Views
@@ -89,6 +89,13 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 |     |     |
 | --- | --- |
 | [`SearchBar`](xref:Xamarin.Forms.SearchBar) displays an area for the user to type a text string, and a button (or a keyboard key) that signals the application to perform a search. The [`Text`](xref:Xamarin.Forms.SearchBar.Text) property provides access to the text, and the [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) event indicates that the button has been pressed.<br /><br />[API Documentation](xref:Xamarin.Forms.SearchBar) / [Guide](~/xamarin-forms/user-interface/searchbar.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/) | [![SearchBar Example](views-images/SearchBar.png "SearchBar Example")](views-images/SearchBar-Large.png#lightbox "SearchBar Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) |
+|     |     |
+
+### SwipeView
+
+|     |     |
+| --- | --- |
+| `SwipeView` is a container control that wraps around an item of content, and provides context menu items that are revealed by a swipe gesture. Each menu item is represented by a `SwipeItem`, which has a `Command` property that excutes an `ICommand` when the item is tapped.<br /><br /> [Guide](~/xamarin-forms/user-interface/swipeview.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![SwipeView Example](views-images/SwipeView.png "SwipeView example")](views-images/SwipeView-Large.png#lightbox "SwipeView Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) |
 |     |     |
 
 ## Views for setting values
