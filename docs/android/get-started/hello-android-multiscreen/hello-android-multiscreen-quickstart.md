@@ -133,7 +133,7 @@ namespace Phoneword
 In this class, you're creating a `ListActivity` and populating it
 programmatically, so you don't need to create a new layout file
 for this Activity. This is discussed in more detail in the
-[Hello, Android Multiscreen Deep Dive](~/android/get-started/hello-android/hello-android-multiscreen-deepdive.md).
+[Hello, Android Multiscreen Deep Dive](~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-deepdive.md).
 
 ### Adding a list
 
