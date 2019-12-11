@@ -55,7 +55,7 @@ In addition, the `SwipeView.GetSwipeTransitionMode` method can be used to return
 
 The result is that a specified `SwipeTransitionMode` value is applied to the `SwipeView`, which controls the transition that's used when opening the `SwipeView`:
 
-[![Screenshot of SwipeView SwipeTransitionModes, on Android](swipeview-swipetransitionmode-images/swiptransitionmode.png "SwipeTransitionModes on Android")](swipeview-swipetransitionmode-images/swipetransitionmode-large.png#lightbox "SwipeTransitionModes on Android")
+[![Screenshot of SwipeView SwipeTransitionModes, on Android](swipeview-swipetransitionmode-images/swipetransitionmode.png "SwipeTransitionModes on Android")](swipeview-swipetransitionmode-images/swipetransitionmode-large.png#lightbox "SwipeTransitionModes on Android")
 
 ## Related links
 
