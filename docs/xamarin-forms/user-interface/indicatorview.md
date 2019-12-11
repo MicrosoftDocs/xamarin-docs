@@ -1,6 +1,6 @@
 ---
 title: "Xamarin.Forms IndicatorView"
-description: "The IndicatorView is a control that displays indicators that represent the number of items, and current position, in a collection."
+description: "The IndicatorView is a control that displays indicators that represent the number of items, and current position, in a CarouselView."
 ms.prod: xamarin
 ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
 ms.technology: xamarin-forms
@@ -15,7 +15,7 @@ ms.date: 12/11/2019
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/)
 
-The `IndicatorView` is a control that displays indicators that represent the number of items, and current position, in a collection. The `IndicatorView` is typically used to display indicators for each item in a `CarouselView`:
+The `IndicatorView` is a control that displays indicators that represent the number of items, and current position, in a `CarouselView`:
 
 [![Screenshot of a CarouselView and IndicatorView, on iOS and Android](indicatorview-images/circles.png "IndicatorView circles")](indicatorview-images/circles-large.png#lightbox "IndicatorView circles")
 
@@ -27,18 +27,18 @@ Forms.SetFlags("IndicatorView_Experimental");
 
 `IndicatorView` defines the following properties:
 
-- `IndicatorsShape`, of type `IndicatorShape`, the shape to render on the indicator.
-- `IndicatorLayout`, of type `Layout<View>`,  . This property is the content property of the `IndicatorView` class, and therefore does not need to be explicitly set.
-- `Position`, of type `int`, the current selected indicator index. This property uses a `TwoWay` binding.
 - `Count`, of type `int`, the number of indicators.
-- `MaximumVisible`, of type `int`, the maximum number of visible indicators. The default value is `int.MaxValue`.
-- `IndicatorTemplate`, of type `DataTemplate`, the template to render on the indicator.
-- `HideSingle`, of type `bool`.
+- `HideSingle`, of type `bool`, determines whether to hide the indicator when there's only one. The default value is `true`.
 - `IndicatorColor`, of type `Color`, the color of the indicators.
-- `SelectedIndicatorColor`, of type `Color`, the color of the indicator that shows the selected item.
 - `IndicatorSize`, of type `double`, the size of the indicators. The default value is 6.0.
-- `ItemsSource`, of type `IEnumerable`.
-- `ItemsSourceBy`, of type `VisualElement`.
+- `IndicatorLayout`, of type `Layout<View>`,  . This property is the content property of the `IndicatorView` class, and therefore does not need to be explicitly set.
+- `IndicatorTemplate`, of type `DataTemplate`, the template to render on the indicator.
+- `IndicatorsShape`, of type `IndicatorShape`, the shape to render for each indicator.
+- `ItemsSource`, of type `IEnumerable`, the collection that indicators will be displayed for. Note that this property will automatically be set when the `ItemsSourceBy` property is set.
+- `ItemsSourceBy`, of type `VisualElement`, the `CarouselView` object to display indicators for.
+- `MaximumVisible`, of type `int`, the maximum number of visible indicators. The default value is `int.MaxValue`.
+- `Position`, of type `int`, the current selected indicator index. This property uses a `TwoWay` binding.
+- `SelectedIndicatorColor`, of type `Color`, the color of the indicator that shows the selected item.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
@@ -51,48 +51,18 @@ The following example shows how to instantiate an `IndicatorView` in XAML:
     <CarouselView x:Name="carouselView"
                   ItemsSource="{Binding Monkeys}">
         <CarouselView.ItemTemplate>
-            <DataTemplate>
-                <StackLayout>
-                    <Frame HasShadow="True"
-                           BorderColor="DarkGray"
-                           CornerRadius="5"
-                           Margin="20"
-                           HeightRequest="300"
-                           HorizontalOptions="Center"
-                           VerticalOptions="CenterAndExpand">
-                        <StackLayout>
-                            <Label Text="{Binding Name}"
-                                   FontAttributes="Bold"
-                                   FontSize="Large"
-                                   HorizontalOptions="Center"
-                                   VerticalOptions="Center" />
-                            <Image Source="{Binding ImageUrl}"
-                                   Aspect="AspectFill"
-                                   HeightRequest="150"
-                                   WidthRequest="150"
-                                   HorizontalOptions="Center" />
-                            <Label Text="{Binding Location}"
-                                   HorizontalOptions="Center" />
-                            <Label Text="{Binding Details}"
-                                   FontAttributes="Italic"
-                                   HorizontalOptions="Center"
-                                   MaxLines="5"
-                                   LineBreakMode="TailTruncation" />
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-            </DataTemplate>
+            <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
     <IndicatorView ItemsSourceBy="carouselView"
-                   Margin="0,0,0,40"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
+                   Margin="0,0,0,40"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-In this example, the `IndicatorView` is rendered beneath the `CarouselView`, with an indicator for each item in the `CarouselView`. The `IndicatorView` is populated with data by setting the `ItemsSourceBy` property to the name of the `CarouselView` object.
+In this example, the `IndicatorView` is rendered beneath the `CarouselView`, with an indicator for each item in the `CarouselView`. The `IndicatorView` is populated with data by setting the `ItemsSourceBy` property to the `CarouselView` object. Setting this property results in the `Position` property binding to the `CarouselView.Position` property, and the `ItemsSource` property binding to the `CarouselView.ItemsSource` property.
 
 Each indicator is light gray, while the indicator that represents the currently displayed item in the `CarouselView` is dark gray.
 

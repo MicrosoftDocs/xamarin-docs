@@ -104,7 +104,7 @@ sections:
         href: imagebutton.md
       title: ImageButton
     - href: indicatorview.md
-      html: "Learn how to use the IndicatorView control to display indicators that represent the number of items, and current position, in a collection."
+      html: "Learn how to use the IndicatorView control to display indicators that represent the number of items, and current position, in a CarouselView."
       image:
         src: ~/media/icons/i_user-interface.svg
         href: indicatorview.md
