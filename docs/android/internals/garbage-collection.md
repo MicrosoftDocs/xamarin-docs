@@ -234,16 +234,17 @@ may find it necessary to set this option to **Old**. Also, you may
 choose to use the more stable **Old** option if **Tarjan** does not 
 produce an improvement in performance.
 
-To specify which `GC_BRIDGE` option an application should us, pass 
+To specify which `GC_BRIDGE` option an application should use, pass 
 `bridge-implementation=old`, `bridge-implementation=new` or 
 `bridge-implementation=tarjan` to the `MONO_GC_PARAMS` environment 
-variable. This is accomplished by adding a new file to your project with a **Build action** of `AndroidEnvironment`. For example: 
+variable. This is accomplished by adding a new file to your project 
+with a **Build action** of `AndroidEnvironment`. For example: 
 
 ```shell
 MONO_GC_PARAMS=bridge-implementation=tarjan
 ```
 
-For more information about configuring the `AndroidEnvironment`, see [Configuration](#configuration).
+For more information, see [Configuration](#configuration).
 
 <a name="Helping_the_GC" />
 
