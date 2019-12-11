@@ -6,7 +6,7 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/10/2019
+ms.date: 12/11/2019
 ---
 
 # Xamarin.Forms SwipeView
@@ -44,6 +44,9 @@ The `SwipeView` class also defines four events:
 - `CloseRequested` is fired when the swipe items are closed.
 
 In addition, `SwipeView` defines a `Close` method, which closes the swipe items.
+
+> [!NOTE]
+> `SwipeView` has a platform-specific on iOS and Android, that controls the transition that's used when opening a `SwipeView`. For more information, see [SwipeView Swipe Transition Mode on iOS](~/xamarin-forms/platform/ios/swipeview-swipetransitionmode.md) and [SwipeView Swipe Transition Mode on Android](~/xamarin-forms/platform/android/swipeview-swipetransitionmode.md).
 
 ## Create a SwipeView
 
