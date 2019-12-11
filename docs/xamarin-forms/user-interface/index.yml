@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 08/07/2019
+  ms.date: 12/10/2019
 abstract:
   description: Learn about creating user interfaces with Xamarin.Forms.
 sections:
@@ -175,6 +175,12 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: styles/index.md
       title: Styles
+    - href: swipeview.md
+      html: "Learn how to use a SwipeView, to provide context menu items that are revealed by a swipe gesture."
+      image:
+        src: ~/media/icons/i_user-interface.svg
+        href: swipeview.md
+      title: SwipeView
     - href: switch.md
       html: "Learn how to set a boolean value using a Switch."
       image:
