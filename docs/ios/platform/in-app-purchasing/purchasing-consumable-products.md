@@ -99,7 +99,7 @@ that the transaction succeeded, in this case by updating the displayed
 balance:
 
 ```csharp
-priceObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
+succeededObserver = NSNotificationCenter.DefaultCenter.AddObserver (InAppPurchaseManager.InAppPurchaseManagerTransactionSucceededNotification,
 (notification) => {
    balanceLabel.Text = CreditManager.Balance() + " monkey credits";
 });
