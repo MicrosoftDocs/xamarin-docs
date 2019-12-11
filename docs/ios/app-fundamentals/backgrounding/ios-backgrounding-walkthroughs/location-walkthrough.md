@@ -75,10 +75,7 @@ This walkthrough explains some key backgrounding concepts, including registering
     > [!IMPORTANT]
     > iOS 8 (and greater) also requires an entry in the **Info.plist** file to show the user as part of the authorization request.
 
-1. Add a key `NSLocationAlwaysUsageDescription`
-or `NSLocationWhenInUseUsageDescription` with a
-string that will be displayed to the user in the alert
-that requests location data access.
+1. Add **Info.plist** keys for the permission types the app requires – `NSLocationAlwaysUsageDescription`, `NSLocationWhenInUseUsageDescription`, and/or `NSLocationAlwaysAndWhenInUseUsageDescription` – with a string that will be displayed to the user in the alert that requests location data access.
 
 1. iOS 9 requires that when using `AllowsBackgroundLocationUpdates` the **Info.plist** includes the key `UIBackgroundModes` with the value `location`. If you have completed step 2 of this walkthrough, this should already been in your Info.plist file.
 
