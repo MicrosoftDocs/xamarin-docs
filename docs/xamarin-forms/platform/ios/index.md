@@ -6,7 +6,7 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/22/2019
+ms.date: 12/11/2019
 ---
 
 # iOS platform features in Xamarin.Forms
@@ -33,6 +33,7 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 - Setting the separator style on a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [ListView Separator Style on iOS](listview-separator-style.md).
 - Controlling when item selection occurs in a [`Picker`](xref:Xamarin.Forms.Picker). For more information, see [Picker Item Selection on iOS](picker-selection.md).
 - Enabling the [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) property to be set by tapping on a position on the [`Slider`](xref:Xamarin.Forms.Slider) bar, rather than by having to drag the `Slider` thumb. For more information, see [Slider Thumb Tap on iOS](slider-thumb.md).
+- Controlling the transition that's used when opening a `SwipeView`. For more information, see [SwipeView Swipe Transition Mode](swipeview-swipetransitionmode.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms pages on iOS:
 
