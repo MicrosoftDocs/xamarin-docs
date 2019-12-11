@@ -76,3 +76,4 @@ character `*` can be included multiple times within a "type fullname" pattern.
 
 - [Linking on iOS](~/ios/deploy-test/linker.md)
 - [Linking on Android](~/android/deploy-test/linker.md)
+- [Linker GitHub repo with examples](https://github.com/mono/linker)
