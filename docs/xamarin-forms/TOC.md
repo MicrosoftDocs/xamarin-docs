@@ -173,6 +173,7 @@
 ### [Graphics with SkiaSharp](user-interface/graphics/skiasharp/index.md)
 ### [Images](user-interface/images.md)
 ### [ImageButton](user-interface/imagebutton.md)
+### [IndicatorView](user-interface/indicatorview.md)
 ### Layouts
 #### [Overview](user-interface/layouts/index.yml)
 #### [Choose a Layout](user-interface/layouts/choose-layout.md)
