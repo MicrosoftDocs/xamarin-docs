@@ -33,7 +33,7 @@ The following concepts will be covered:
 Xamarin.Mac application development requires:
 
 - A Mac computer running macOS High Sierra (10.13) or higher.
-- [Xcode 9 or higher](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
+- [Xcode 10 or higher](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 - The latest version of [Xamarin.Mac and Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation/).
 
 To run an application built with Xamarin.Mac, you will need:
