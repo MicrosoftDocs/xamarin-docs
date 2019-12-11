@@ -56,4 +56,3 @@ the notification drawer it starts up a second Activity.
 ## Related links
 
 - [Local Notifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
-- [Remote Notifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)
