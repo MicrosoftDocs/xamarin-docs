@@ -126,7 +126,7 @@ Common attributes that you can apply to your classes to control how they are sto
 - **[PrimaryKey]** – This attribute can be applied to an integer property to force it to be the underlying table’s primary key. Composite primary keys are not supported.
 - **[AutoIncrement]** – This attribute will cause an integer property’s value to be auto-increment for each new object inserted into the database
 - **[Column(name)]** – Supplying the optional  `name` parameter will override the default value of the underlying database column’s name (which is the same as the property).
-- **[Table(name)]** – Marks the class as being able to be stored in an underlying SQLite table. Specifying the optional name parameter will override the default value of the underlying database table’s name (which is the same as the class name).
+- **[Table(name)]** – Marks the class as being able to be stored in an underlying SQLite table with the name specified.
 - **[MaxLength(value)]** – Restrict the length of a text property, when a database insert is attempted. Consuming code should validate this prior to inserting the object as this attribute is only ‘checked’ when a database insert or update operation is attempted.
 - **[Ignore]** – Causes SQLite.NET to ignore this property. This is particularly useful for properties that have a type that cannot be stored in the database, or properties that model collections that cannot be resolved automatically be SQLite.
 - **[Unique]** – Ensures that the values in the underlying database column are unique.

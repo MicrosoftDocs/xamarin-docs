@@ -158,9 +158,7 @@ they are stored in the underlying database include:
     name (which is the same as the property).
 
 - **[Table(name)]** &ndash; Marks the class as being able to be
-    stored in an underlying SQLite table. Specifying the optional name
-    parameter will override the default value of the underlying
-    database table's name (which is the same as the class name).
+    stored in an underlying SQLite table with the name specified.
 
 - **[MaxLength(value)]** &ndash; Restrict the length of a text
     property, when a database insert is attempted. Consuming code
