@@ -6,7 +6,7 @@ ms.assetid: C025AB53-05CC-49BA-9815-75D6DF9E40B7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/15/2017
+ms.date: 12/04/2019
 ---
 
 # Images in Xamarin.Forms
@@ -19,7 +19,7 @@ Images are a crucial part of application navigation, usability, and branding. Xa
 
 Platform-specific images are also required for icons and splash screens; these need to be configured on a per-platform basis.
 
-## Displaying Images
+## Display images
 
 Xamarin.Forms uses the [`Image`](xref:Xamarin.Forms.Image) view to display images on a page. It has two important properties:
 
@@ -39,9 +39,9 @@ The [`Aspect`](xref:Xamarin.Forms.Image.Aspect) property determines how the imag
 - [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - Clips the image so that it fills the display area while preserving the aspect (ie. no distortion).
 - [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - Letterboxes the image (if required) so that the entire image fits into the display area, with blank space added to the top/bottom or sides depending on whether the image is wide or tall.
 
-Images can be loaded from a [local file](#local-images), an [embedded resource](#embedded-images), or [downloaded](#downloading-images). In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
+Images can be loaded from a [local file](#local-images), an [embedded resource](#embedded-images), [downloaded](#download-images), or loaded from a stream. In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
-## Local Images
+## Local images
 
 Image files can be added to each application project and referenced from Xamarin.Forms shared code. This method of distributing images is required when images are platform-specific, such as when using different resolutions on different platforms, or slightly different designs.
 
@@ -80,7 +80,7 @@ image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("
 > To use the same image filename across all platforms the name must be valid on all platforms. Android drawables have naming restrictions – only lowercase letters, numbers, underscore, and period are allowed – and for cross-platform compatibility this must be followed on all the other platforms too. The example filename **waterfront.png**
 follows the rules, but examples of invalid filenames include "water front.png", "WaterFront.png", "water-front.png", and "wåterfront.png".
 
-### Native Resolutions (Retina and High-DPI)
+### Native resolutions (retina and high-DPI)
 
 iOS, Android, and UWP include support for different image resolutions, where the operating system chooses the appropriate image at runtime based on the device's capabilities. Xamarin.Forms uses the native platforms' APIs for loading local images, so it automatically supports alternate resolutions if the files are correctly named and located in the project.
 
@@ -94,19 +94,20 @@ Android alternate resolution images should be placed in [specially-named directo
 
 UWP image file names [can be suffixed with `.scale-xxx` before the file extension](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), where `xxx` is the percentage of scaling applied to the asset, e.g. **myimage.scale-200.png**. Images can then be referred to in code or XAML without the scale modifier, e.g. just **myimage.png**. The platform will select the nearest appropriate asset scale based on the display's current DPI.
 
-### Additional Controls that Display Images
+### Additional controls that display images
 
 Some controls have properties that display an image, such as:
 
-- [`Page`](xref:Xamarin.Forms.Page) - Any page type that derives from `Page` has [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) and [`BackgroundImageSource`](xref:Xamarin.Forms.Page.BackgroundImageSource) properties, which can be assigned a file, embedded resource, URI, or stream. Under certain circumstances, such as when a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is displaying a [`ContentPage`](xref:Xamarin.Forms.ContentPage), the icon will be displayed if supported by the platform.
+- [`Button`](xref:Xamarin.Forms.Button) has an [`ImageSource`](xref:Xamarin.Forms.Button.ImageSource) property that can be set to a bitmap image to be displayed on the `Button`. For more information, see [Using bitmaps with buttons](~/xamarin-forms/user-interface/button.md#using-bitmaps-with-buttons).
+- [`ImageButton`](xref:Xamarin.Forms.Button) has a [`Source`](xref:Xamarin.Forms.ImageButton.Source) property that can be set to the image to display in the `ImageButton`. For more information, see [Setting the image source](~/xamarin-forms/user-interface/imagebutton.md#setting-the-image-source).
+- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) has an [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) property that can be set to an image that's loaded from a file, embedded resource, URI, or stream.
+- [`ImageCell`](xref:Xamarin.Forms.ImageCell) has an [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) property that can be set to an image retrieved from a file, embedded resource, URI, or stream.
+- [`Page`](xref:Xamarin.Forms.Page). Any page type that derives from `Page` has [`IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) and [`BackgroundImageSource`](xref:Xamarin.Forms.Page.BackgroundImageSource) properties, which can be assigned a file, embedded resource, URI, or stream. Under certain circumstances, such as when a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is displaying a [`ContentPage`](xref:Xamarin.Forms.ContentPage), the icon will be displayed if supported by the platform.
 
   > [!IMPORTANT]
   > On iOS, the [`Page.IconImageSource`](xref:Xamarin.Forms.Page.IconImageSource) property can't be populated from an image in an asset catalog image set. Instead, load icon images for the `Page.IconImageSource` property from a file, embedded resource, URI, or stream.
 
-- [`ToolbarItem`](xref:Xamarin.Forms.ToolbarItem) - Has an [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) property that can be set to an image that's loaded from a file, embedded resource, URI, or stream.
-- [`ImageCell`](xref:Xamarin.Forms.ImageCell) - Has an [`ImageSource`](xref:Xamarin.Forms.ImageCell.ImageSource) property that can be set to an image retrieved from a file, embedded resource, URI, or stream.
-
-## Embedded Images
+## Embedded images
 
 Embedded images are also shipped with an application (like local images) but instead of having a copy of the image in each application's file structure the image file is embedded in the assembly as a resource. This method of distributing images is recommended when identical images are used on each platform, and is particularly suited to creating components, as the image is bundled with the code.
 
@@ -161,7 +162,7 @@ The following screenshots show the result of displaying an embedded image on eac
 
 [![ResourceImageSource](images-images/resource-sml.png "Sample Application Displaying an Embedded Image")](images-images/resource.png#lightbox "Sample Application Displaying an Embedded Image")
 
-### Using XAML
+### XAML
 
 Because there is no built-in type converter from `string` to `ResourceImageSource`, these types of images cannot be natively loaded by XAML. Instead, a simple custom XAML markup extension can be written to load images using a **Resource ID** specified in XAML:
 
@@ -205,9 +206,9 @@ To use this extension add a custom `xmlns` to the XAML, using the correct namesp
 </ContentPage>
 ```
 
-### Troubleshooting Embedded Images
+### Troubleshoot embedded images
 
-#### Debugging Code
+#### Debug code
 
 Because it is sometimes difficult to understand why a particular image resource isn't being loaded, the following debug code can be added temporarily to an application to help confirm the resources are correctly configured. It will output all known resources embedded in the given assembly to the **Console** to help debug resource loading issues.
 
@@ -222,7 +223,7 @@ foreach (var res in assembly.GetManifestResourceNames())
 }
 ```
 
-#### Images Embedded in Other Projects
+#### Images embedded in other projects
 
 By default, the `ImageSource.FromResource` method only looks for images in the same assembly as the code calling the `ImageSource.FromResource` method. Using the debug code above you can determine which assemblies contain a specific resource by changing the `typeof()` statement to a `Type` known to be in each assembly.
 
@@ -232,7 +233,7 @@ However, the source assembly being searched for an embedded image can be specifi
 var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
 ```
 
-## Downloading Images
+## Download images
 
 Images can be automatically downloaded for display, as shown in the following XAML:
 
@@ -267,7 +268,7 @@ The following screenshots show the result of displaying a remote image on each p
 
 [![Downloaded ImageSource](images-images/download-sml.png "Sample Application Displaying a Downloaded Image")](images-images/download.png#lightbox "Sample Application Displaying a Downloaded Image")
 
-### Downloaded Image Caching
+### Downloaded image caching
 
 A [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) also supports caching of downloaded images, configured through the following properties:
 
@@ -293,6 +294,25 @@ webImage.Source = new UriImageSource
 
 Built-in caching makes it very easy to support scenarios like scrolling lists of images, where you can set (or bind) an image in each cell and let the built-in cache take care of re-loading the image when the cell is scrolled back into view.
 
+## Animated GIFs
+
+Xamarin.Forms includes support for displaying small, animated GIFs. This is accomplished by setting the [`Image.Source`](xref:Xamarin.Forms.Image.Source) property to an animated GIF file:
+
+```xaml
+<Image Source="demo.gif" />
+```
+
+> [!IMPORTANT]
+> While the animated GIF support in Xamarin.Forms includes the ability to download files, it does not support caching or streaming animated GIFs.
+
+By default, when an animated GIF is loaded it will not be played. This is because the `IsAnimationPlaying` property, that controls whether an animated GIF is playing or stopped, has a default value of `false`. This property, of type `bool`, is backed by a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) object, which means that it can be the target of a data binding, and styled.
+
+Therefore, when an animated GIF is loaded it will not be played until the `IsAnimationPlaying` property is set to `true`. Playback can then be stopped by setting the `IsAnimationPlaying` property to `false`. Note that this property has no effect when displaying a non-GIF image source.
+
+> [!NOTE]
+> On Android, animated GIF support requires that your application is using fast renderers, and won't work if you've opted into using the legacy renderers.
+> On UWP, animated GIF support requires a minimum release of Windows 10 Anniversary Update (version 1607).
+
 ## Icons and splash screens
 
 While not related to the [`Image`](xref:Xamarin.Forms.Image) view, application icons and splash screens are also an important use of images in Xamarin.Forms projects.
@@ -311,13 +331,7 @@ Only iOS and UWP applications require a splash screen (also called a startup scr
 
 Refer to the documentation for [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md) and [Splash screens](/windows/uwp/launch-resume/splash-screens/) on the Windows Dev Center.
 
-## Summary
-
-Xamarin.Forms offers a number of different ways to include images in a cross-platform application, allowing for the same image to be used across platforms or for platform-specific images to be specified. Downloaded images are also automatically cached, automating a common coding scenario.
-
-Application icon and splash screen images are set-up and configured as for non-Xamarin.Forms applications - follow the same guidance used for platform-specific apps.
-
-## Related Links
+## Related links
 
 - [WorkingWithImages (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages)
 - [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md)

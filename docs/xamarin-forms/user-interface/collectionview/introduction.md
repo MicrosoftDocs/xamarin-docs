@@ -6,7 +6,7 @@ ms.assetid: 5C08F687-B9E6-4CE4-8726-F287F6D0B6A7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
+ms.date: 12/11/2019
 ---
 
 # Xamarin.Forms CollectionView Introduction
@@ -50,7 +50,7 @@ While the [`CollectionView`](xref:Xamarin.Forms.CollectionView) and [`ListView`]
 | Headers and footers | `Header`, `HeaderElement`, `HeaderTemplate`, `Footer`, `FooterElement`, `FooterTemplate` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) can present a header and footer that scroll with the items in the list, via the `Header`, `Footer`, `HeaderTemplate`, and `FooterTemplate` properties. For more information, see [Headers and footers](layout.md#headers-and-footers). |
 | Grouping | `GroupDisplayBinding`, `GroupHeaderTemplate`, `GroupShortNameBinding`, `IsGroupingEnabled` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays correctly grouped data by setting its `IsGrouped` property to `true`. Group headers and group footers can be customized by setting the `GroupHeaderTemplate` and `GroupFooterTemplate` properties to  [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) objects. For more information, see [Xamarin.Forms CollectionView Grouping](grouping.md). |
 | Pull to refresh | `IsPullToRefreshEnabled`, `IsRefreshing`, `RefreshAllowed`, `RefreshCommand`, `RefreshControlColor`, `BeginRefresh()`, `EndRefresh()` | Pull to refresh functionality is supported by setting a [`CollectionView`](xref:Xamarin.Forms.CollectionView) as the child of a `RefreshView`. For more information, see [Pull to refresh](populate-data.md#pull-to-refresh). |
-| Context actions | `ContextActions` | Context actions are currently unsupported in `CollectionView`, but will be added in a future release. |
+| Context menu items | `ContextActions` | Context menu items are supported by setting a `SwipeView` as the root view in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) that defines the appearance of each item of data in the [`CollectionView`](xref:Xamarin.Forms.CollectionView). For more information, see [Context menus](populate-data.md#context-menus). |
 | Scrolling | `ScrollTo()` | [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines `ScrollTo` methods, that scroll items into view. For more information, see [Scrolling](scrolling.md). |
 
 ## Related links

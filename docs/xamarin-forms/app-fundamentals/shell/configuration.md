@@ -6,7 +6,7 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2019
+ms.date: 12/05/2019
 ---
 
 # Xamarin.Forms Shell Page Configuration
@@ -80,6 +80,21 @@ Alternatively, the color properties can be set with a XAML style:
 ```
 
 For more information about XAML styles, see [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md).
+
+## Enable navigation bar shadow
+
+The `Shell` class defines the `NavBarHasShadow` attached property, of type `bool`, that controls whether the navigation bar has a shadow. By default the value of the property is `false`.
+
+While this property can be set on a subclassed `Shell` object, it can also be set on any pages that want to enable the navigation bar shadow. For example, the following XAML shows enabling the navigation bar shadow from a [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.NavBarHasShadow="true">
+    ...
+</ContentPage>
+```
+
+This results in the navigation bar shadow being enabled.
 
 ## Disable the navigation bar
 

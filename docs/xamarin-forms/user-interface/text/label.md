@@ -185,11 +185,9 @@ Alternatively, for greater readability the HTML can be inlined in a `CDATA` sect
 
 ```xaml
 <Label TextType="Html">
-    <x:String>
-        <![CDATA[
-        This is <strong style="color:red">HTML</strong> text.
-        ]]>
-    </x:String>
+    <![CDATA[
+    This is <strong style="color:red">HTML</strong> text.
+    ]]>
 </Label>
 ```
 

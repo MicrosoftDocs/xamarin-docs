@@ -6,7 +6,7 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/28/2019
+ms.date: 11/04/2019
 ---
 
 # Fonts in Xamarin.Forms
@@ -216,7 +216,7 @@ You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#i
 Font icons can be displayed by Xamarin.Forms applications by specifying the font icon data in a `FontImageSource` object. This class, which derives from the [`ImageSource`](xref:Xamarin.Forms.ImageSource) class, has the following properties:
 
 - `Glyph` – the unicode character value of the font icon, specified as a `string`.
-- `Size` – a `double` value that indicates the size, in device-independent units, of the rendered font icon. The default value is 30.
+- `Size` – a `double` value that indicates the size, in device-independent units, of the rendered font icon. The default value is 30. In addition, this property can be set to a named font size.
 - `FontFamily` – a `string` representing the font family to which the font icon belongs.
 - `Color` – an optional [`Color`](xref:Xamarin.Forms.Color) value to be used when displaying the font icon.
 

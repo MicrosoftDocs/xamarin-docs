@@ -6,7 +6,7 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/12/2019
+ms.date: 11/04/2019
 ---
 
 # Xamarin.Forms SearchBar
@@ -80,6 +80,9 @@ SearchBar searchBar = new SearchBar
 The following screenshot shows the resulting `SearchBar` control:
 
 [![Screenshot of customized SearchBar on iOS and Android](searchbar-images/device-searchbars-styled-cropped.png "Customized SearchBar on iOS and Android")](searchbar-images/device-searchbars-styled.png#lightbox "Customized SearchBar on iOS and Android")
+
+> [!NOTE]
+> On iOS, the `SearchBarRenderer` class contains an overridable `UpdateCancelButton` method. This method controls when the cancel button appears, and can be overridden in a custom renderer. For more information about custom renderers, see [Xamarin.Forms Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## Perform a search with event handlers
 

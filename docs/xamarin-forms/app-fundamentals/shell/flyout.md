@@ -6,7 +6,7 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
+ms.date: 11/05/2019
 ---
 
 # Xamarin.Forms Shell Flyout
@@ -241,6 +241,23 @@ In addition, the `FlyoutItem` class exposes the following overridable methods:
 - `OnTabStopPropertyChanged`, that's called whenever the `IsTabStop` property changes.
 - `TabIndexDefaultValueCreator`, returns an `int`, and is called to set the default value of the `TabIndex` property.
 - `TabStopDefaultValueCreator`, returns a `bool`, and is called to set the default value of the `TabStop` property.
+
+## Flyout vertical scroll
+
+By default, a flyout can be scrolled vertically when the flyout items don't fit in the flyout. This behavior can be changed by setting the `Shell.FlyoutVerticalScrollMode` bindable property to one of the `ScrollMode` enumeration members:
+
+- `Disabled` – indicates that vertical scrolling will be disabled.
+- `Enabled` – indicates that vertical scrolling will be enabled.
+- `Auto` – indicates that vertical scrolling will be enabled if the flyout items don't fit in the flyout. This is the default value of the `Shell.FlyoutVerticalScrollMode` property.
+
+The following example shows how to disable vertical scrolling:
+
+```xaml
+<Shell ...
+       FlyoutVerticalScrollMode="Disabled"
+    ...
+</Shell>
+```
 
 ## Flyout display options
 
