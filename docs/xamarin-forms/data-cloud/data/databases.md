@@ -13,11 +13,11 @@ ms.date: 12/05/2019
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
 
-The SQLite database engine allows Xamarin.Forms applications to load and save objects in shared code. The sample application uses a SQLite database table to store todo items. This article describes how to use SQLite.Net in shared code to store and retrieve information in a local database.
+The SQLite database engine allows Xamarin.Forms applications to load and save data objects in shared code. The sample application uses a SQLite database table to store todo items. This article describes how to use SQLite.Net in shared code to store and retrieve information in a local database.
 
 [![Screenshots of the Todolist app on iOS and Android](databases-images/todo-list-sml.png)](databases-images/todo-list.png#lightbox "Todolist app on iOS and Android")
 
-Integrate SQLite.NEt into mobile apps by following these steps:
+Integrate SQLite.NET into mobile apps by following these steps:
 
 1. [Install the Nuget package](#install-the-sqlite-nuget-package).
 1. [Configure constants](#configure-app-constants).
@@ -66,7 +66,7 @@ public static class Constants
 }
 ```
 
-The constants file specifies default `SQLiteOpenFlag` enum values used to initialize the database connection. The `SQLiteOpenFlag` enum supports these values:
+The constants file specifies default `SQLiteOpenFlag` enum values that are used to initialize the database connection. The `SQLiteOpenFlag` enum supports these values:
 
 - `Create`: The connection will automatically create the database file if it doesn't exist.
 - `FullMutex`: The connection is opened in serialized threading mode.
@@ -79,11 +79,11 @@ The constants file specifies default `SQLiteOpenFlag` enum values used to initia
 - `ProtectionCompleteUntilFirstUserAuthentication`: The file is encrypted until after the user has booted and unlocked the device.
 - `ProtectionNone`: The database file isn't encrypted.
 
-You may need to specify different flags depending on how your database will be used. For more information about `SQLiteOpenFlags`, see [Opening A New Database Connection](https://www.sqlite.org/c3ref/open.html).
+You may need to specify different flags depending on how your database will be used. For more information about `SQLiteOpenFlags`, see [Opening A New Database Connection](https://www.sqlite.org/c3ref/open.html) on sqlite.org.
 
 ## Create a database access class
 
-A database wrapper class provides an abstraction to the rest of the app. This class centralizes query logic and simplifies the management of database initialization, making it easier to refactor or expand data operations as the app grows. The Todo app defines a `TodoItemDatabase` class for this purpose.
+A database wrapper class abstracts the data access layer from the rest of the app. This class centralizes query logic and simplifies the management of database initialization, making it easier to refactor or expand data operations as the app grows. The Todo app defines a `TodoItemDatabase` class for this purpose.
 
 ### Lazy initialization
 
@@ -121,7 +121,7 @@ public class TodoItemDatabase
 }
 ```
 
-The database connection is a static field which ensures that a single database connection is used for the life of the app, improving performance.
+The database connection is a static field which ensures that a single database connection is used for the life of the app. Using a persistent, static connection offers better performance than opening and closing connections multiple times during a single app session.
 
 The `InitializeAsync` method is responsible for checking if a table already exists for storing `TodoItem` objects. This method automatically creates the table if it doesn't exist.
 
@@ -133,7 +133,7 @@ When the `TodoItemDatabase` class is instantiated, it must initialize the databa
 - An async method that isn't awaited will not throw exceptions.
 - Using the `Wait` method blocks the thread _and_ swallows exceptions.
 
-In order to start the asynchronous initialization, avoid blocking execution, and have the opportunity to catch exceptions, the sample application uses an extension method called `SafeFireAndForget`. The `SafeFireAndForget` extension method is defined on the `Task` class:
+In order to start the asynchronous initialization, avoid blocking execution, and have the opportunity to catch exceptions, the sample application uses an extension method called `SafeFireAndForget`. The `SafeFireAndForget` extension method provides additional functionality to the `Task` class:
 
 ```csharp
 public static class TaskExtensions
@@ -161,9 +161,9 @@ public static class TaskExtensions
 }
 ```
 
-The `SafeFireAndForget` method awaits the asynchronous execution and allows developers to attach an `Action` that is called if an exception is thrown.
+The `SafeFireAndForget` method awaits the asynchronous execution of the provided `Task` object, and allows you to attach an `Action` that is called if an exception is thrown.
 
-For more information, see [Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
+For more information, see [Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap).
 
 ### Data manipulation methods
 
@@ -181,6 +181,7 @@ public static class TodoItemDatabase {
 
     public Task<List<TodoItem>> GetItemsNotDoneAsync()
     {
+        // SQL queries are also possible
         return Database.QueryAsync<TodoItem>("SELECT * FROM [TodoItem] WHERE [Done] = 0");
     }
 
@@ -242,15 +243,15 @@ saveButton.Clicked += async (sender, e) =>
 
 SQLite provides a robust API with more features than are covered in this article and the sample app. The following sections cover features that are important for scalability.
 
-For more information, see [SQLite Documentation](https://www.sqlite.org/docs.html).
+For more information, see [SQLite Documentation](https://www.sqlite.org/docs.html) on sqlite.org.
 
 ### Write-Ahead Logging
 
 By default, SQLite uses a traditional rollback journal. A copy of the unchanged database content is written into a separate rollback file, then the changes are written directly to the database file. The COMMIT occurs when the rollback journal is deleted.
 
-Write-Ahead Logging (WAL) writes changes into a separate WAL file first. A COMMIT is a special record appended to the WAL file, which allows multiple transactions to occur in a single WAL file. A WAL file is merged back into the database file in a special operation called a **checkpoint**.
+Write-Ahead Logging (WAL) writes changes into a separate WAL file first. A COMMIT is a special record, appended to the WAL file, which allows multiple transactions to occur in a single WAL file. A WAL file is merged back into the database file in a special operation called a _checkpoint_.
 
-WAL can be faster for local databases because readers and writers do not block each other, allowing read and write operations to be concurrent. However, WAL mode doesn't allow changes to the **page size**, adds additional file associations to the database, and adds the extra **checkpointing** operation.
+WAL can be faster for local databases because readers and writers do not block each other, allowing read and write operations to be concurrent. However, WAL mode doesn't allow changes to the _page size_, adds additional file associations to the database, and adds the extra _checkpointing_ operation.
 
 To enable WAL in SQLite.NET, call the `EnableWriteAheadLoggingAsync` method on the `SQLiteAsyncConnection` instance:
 
@@ -258,7 +259,7 @@ To enable WAL in SQLite.NET, call the `EnableWriteAheadLoggingAsync` method on t
 await Database.EnableWriteAheadLoggingAsync();
 ```
 
-For more information, see [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html).
+For more information, see [SQLite Write-Ahead Logging](https://www.sqlite.org/wal.html) on sqlite.org.
 
 ### Copying a database
 
