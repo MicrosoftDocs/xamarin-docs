@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This guide walks through uploading a Xamarin.Mac app for publication to the Mac App Store._
 
-Applications are submitted for Mac App Store approval via [iTunes Connect](https://itunesconnect.apple.com/).
+Applications are submitted for Mac App Store approval via [iTunes Connect](https://itunesconnect.apple.com/). You will also need the [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) tool from the App Store.
 
 1. Choose a **macOS App** to create: 
 
@@ -72,38 +72,23 @@ package file:
 
     [![](uploading-images/image76.png "The acceptance notification")](uploading-images/image76.png#lightbox)
 
-9. Start Application Loader and ensure to be logged in with the Apple ID.
-Choose **Deliver Your App** to proceed: 
+9. Start **Transporter** and login with your Apple ID, then choose **ADD APP**:
 
-    [![](uploading-images/image77.png "The Application Loader interface")](uploading-images/image77.png#lightbox)
+    [![](uploading-images/transporter01-sml.png "The Application Loader interface")](uploading-images/transporter01.png#lightbox)
 
-10. Select from the list of applications in **Ready to Upload
-Binary** status and click **Next**: 
+    Follow the instructions to upload your app package to iTunes Connect.
 
-    [![](uploading-images/image78.png "Selecting the app to load")](uploading-images/image78.png#lightbox)
-
-11. Review the application metadata and click **Choose...** to find the package file: 
-
-    [![](uploading-images/image79.png "Reviewing the app metadata")](uploading-images/image79.png#lightbox)
-
-12. Find the package file that was built in Visual Studio for Mac using the App Store build configuration: 
-
-    [![](uploading-images/image80.png "Selecting the file to upload")](uploading-images/image80.png#lightbox)
-
-13. Press **Send**: 
-
-    [![](uploading-images/image81.png "Sending the app")](uploading-images/image81.png#lightbox)
-
-14. The package will be validated and any errors reported. Fix these errors and re-upload. When the upload is successfully completed, the app will be automatically submitted for review by the App Store team: 
-
-    [![](uploading-images/image82.png "An example of upload errors")](uploading-images/image82.png#lightbox)
+    > [!NOTE]
+    > [**Transporter**](https://apps.apple.com/us/app/transporter/id1450874784?mt=12) replaces 
+    > the **Application Loader** tool that was used with Xcode 10 and earlier.
+    > Application Loader is no longer available in Xcode 11 or newer.
 
 When the application has been approved, it will be available for download or purchase from the Mac App Store.
 
 ## Related Links
 
 - [Installation](~//mac/get-started/installation.md)
-- [Hello, Mac sample](~//mac/get-started/hello-mac.md)
+- [Hello, Mac sample](~/mac/get-started/hello-mac.md)
 - [Distribute your apps on the Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Tools Guide : Code Signing Your App](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
 - [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/)

@@ -212,7 +212,6 @@ Android application.
 ## Related Links
 
 - [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md)
-- [Activities and Intents](https://university.xamarin.com/classes#4)
 - [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Google Digital Assets Links](https://developers.google.com/digital-asset-links/)
 - [Statement List Generator and Tester](https://developers.google.com/digital-asset-links/tools/generator)
