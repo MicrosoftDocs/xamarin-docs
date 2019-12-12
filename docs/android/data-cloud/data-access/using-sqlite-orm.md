@@ -153,9 +153,8 @@ they are stored in the underlying database include:
     property's value to be auto-increment for each new object inserted
     into the database
 
-- **[Column(name)]** &ndash; Supplying the optional `name` parameter
-    will override the default value of the underlying database column's
-    name (which is the same as the property).
+- **[Column(name)]** &ndash; The `name` parameter
+    sets the underlying database column's name.
 
 - **[Table(name)]** &ndash; Marks the class as being able to be
     stored in an underlying SQLite table with the name specified.
@@ -174,8 +173,7 @@ they are stored in the underlying database include:
 - **[Unique]** &ndash; Ensures that the values in the underlying
     database column are unique.
 
-Most of these attributes are optional, SQLite will use default values
-for table and column names. You should always specify an integer
+Most of these attributes are optional. You should always specify an integer
 primary key so that selection and deletion queries can be performed
 efficiently on your data.
 
