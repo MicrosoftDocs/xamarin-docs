@@ -52,7 +52,7 @@ public class CryptoObjectHelper
         Cipher cipher = Cipher.GetInstance(TRANSFORMATION);
         try
         {
-            cipher.Init(CipherMode.EncryptMode | CipherMode.DecryptMode, key);
+            cipher.Init(CipherMode.EncryptMode, key);
         } catch(KeyPermanentlyInvalidatedException e)
         {
             _keystore.DeleteEntry(KEY_NAME);
