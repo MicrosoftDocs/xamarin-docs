@@ -287,11 +287,12 @@ possible solution in this situation is to change the return type of the
 method.
 
 For example, the Bindings Generator believes that the Java method
-`de.neom.neoreadersdk.resolution.compareTo()` should return an `int`,
+`de.neom.neoreadersdk.resolution.compareTo()` should return an `int` and take `Object` as parameters,
 which results in the error message **Error CS0535:
 'DE.Neom.Neoreadersdk.Resolution' does not implement interface member
-'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. The following
-snippet demonstrates how to change the paramter type of the generated C#
+'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. 
+The following
+snippet demonstrates how to change the first parameter's type of the generated C#
 method from a `DE.Neom.Neoreadersdk.Resolution` to a `Java.Lang.Object`: 
 
 ```xml
