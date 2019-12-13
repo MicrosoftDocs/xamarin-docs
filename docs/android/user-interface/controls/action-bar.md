@@ -183,5 +183,3 @@ article contains the full source of this example, illustrating its use.
 
 - [Hello Tabs ICS (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
 - [ShareActionProvider Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
-- [Introducing Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)
