@@ -828,9 +828,7 @@ the following:
 
 ```shell
 Assertion: should not be reached at /Users/.../external/mono/mono/mini/tramp-x86.c:124
-Fatal signal 6 (SIGABRT), code -6 in tid 4051 (amarin.bug56111)
+Fatal signal 6 (SIGABRT), code -6 in tid 4051 (Xamarin.bug56111)
 ```
 
-This is a known issue as reported in
-[56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111). The
-workaround is to disable LLVM.
+This is a known issue – the workaround is to disable LLVM.
