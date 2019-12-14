@@ -208,9 +208,9 @@ On UWP, the context menu is activated by right-clicking on a list item. The cont
 
 !["Screenshot of context menu on UWP"](menuitem-images/menuitem-uwp.png "Screenshot of context menu on UWP")
 
-## Enable or disable a MenuItem
+## Enable or disable a MenuItem dynamically
 
-To manipulate whether a `MenuItem` can respond to user interaction, use the bound `Command` property's `canExecute` delegate to return `true` or `false`.
+To dynamically manipulate whether a `MenuItem` can respond to user interaction, use the bound `Command` property's `canExecute` delegate to return `true` or `false`.
 
 For example, for a `MenuItem` defined in XAML such as:
 
