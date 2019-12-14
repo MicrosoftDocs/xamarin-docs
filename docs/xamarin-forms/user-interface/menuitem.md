@@ -30,9 +30,6 @@ The `MenuItem` class defines the following properties:
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects so the `MenuItem` instance can be the target of data bindings.
 
-> [!NOTE]
-> The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) bindable property is read-only. To manipulate the enabled/disabled state of a `MenuItem`, bind the `Command` property to a class that implements `ICommand` and implement the Command's `canExecute` parameter as a delegate that returns `true` or `false`. For an example, see [Enable or disable a MenuItem](#enable-or-disable-a-menuitem) below.
-
 ## Create a MenuItem
 
 `MenuItem` objects can be used within a context menu on a `ListView` object's items. The most common pattern is to create `MenuItem` objects within a `ViewCell` instance, which is used as the `DataTemplate` object for the `ListView`s `ItemTemplate`. When the `ListView` object is populated it will create each item using the `DataTemplate`, exposing the `MenuItem` choices when the context menu is activated for an item.
@@ -223,7 +220,7 @@ For example, for a `MenuItem` defined in XAML such as:
           Command="{Binding AddCommand}" />
 ```
 
-Do not bind to the `IsEnabled` property, in order to ensure control of the default state of the `MenuItem`.
+Do not bind to the `IsEnabled` property if you are using the `Command` property to enable/disable the `MenuItem`, in order to ensure control of the state of the `MenuItem`.
 
 In the view model, implement the `AddCommand` with a `canExecute` delegate returning the value of a `bool` property called `Enabled`:
 
@@ -258,7 +255,7 @@ public ViewModel : INotifyPropertyChanged
 }
 ```
 
-To ensure that the menu item is enabled by default, make sure that `Enabled` initially returns `true`. 
+To ensure that the menu item is enabled by default in this example, make sure that `Enabled` initially returns `true`. 
 
 ## Related links
 
