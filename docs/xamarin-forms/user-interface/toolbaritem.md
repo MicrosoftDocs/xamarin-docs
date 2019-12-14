@@ -114,7 +114,7 @@ When the `Order` property is set to `Secondary`, behavior varies across platform
 
 ## Enable or disable a ToolbarItem
 
-The [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) property inherited from [`MenuItem`](xref:Xamarin.Forms.MenuItem) is read-only, and should not be used to manipulate the enabled or disabled state of a `ToolbarItem`. Instead, use the `CanExecute` functionality of the command bound to the `Command` property of the `ToolbarItem`.
+To manipulate whether a `ToolbarItem` can respond to user interaction, use the bound `Command` property's `canExecute` delegate to return `true` or `false`.
 
 For example, create a `ToolbarItem` on a `ContentPage` and bind its `Command` property in XAML:
 
@@ -153,7 +153,7 @@ public class ViewModel : INotifyPropertyChanged
     }
 ```
 
-The `Enabled` property's default return value of `false` will initially set the `ToolbarItem` as disabled.
+In this example, the `Enabled` property's default return value of `false` will initially set the `ToolbarItem` as disabled. Setting it to an initial value of `true` will initially enable the `ToolbarItem`.
 
 ## Related links
 
