@@ -112,9 +112,9 @@ When the `Order` property is set to `Secondary`, behavior varies across platform
 > [!WARNING]
 > Icon behavior in `ToolbarItem` objects that have their `Order` property set to `Secondary` is inconsistent across platforms. Avoid setting the `IconImageSource` property on items that appear in the secondary menu.
 
-## Enable or disable a ToolbarItem
+## Enable or disable a ToolbarItem dynamically
 
-To manipulate whether a `ToolbarItem` can respond to user interaction, use the bound `Command` property's `canExecute` delegate to return `true` or `false`.
+To dynamically manipulate whether a `ToolbarItem` can respond to user interaction, use the bound `Command` property's `canExecute` delegate to return `true` or `false`.
 
 For example, create a `ToolbarItem` on a `ContentPage` and bind its `Command` property in XAML:
 
