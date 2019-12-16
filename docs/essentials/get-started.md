@@ -14,7 +14,7 @@ Xamarin.Essentials provides a single cross-platform API that works with any iOS,
 
 ## Installation
 
-Xamarin.Essentials is available as a NuGet package that can be added to any existing or new project using Visual Studio.
+Xamarin.Essentials is available as a NuGet package and is included in every new project in Visual Studio. It can alo be added to any existing using Visual Studio with the follow steps.
 
 1. Download and install [Visual Studio](https://visualstudio.microsoft.com/) with the [Visual Studio tools for Xamarin](~/get-started/installation/index.md).
 
