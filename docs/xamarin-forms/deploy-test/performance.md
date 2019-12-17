@@ -177,7 +177,7 @@ The overall responsiveness of your application can be enhanced, and performance 
 - Update UI elements with data from asynchronous operations on the UI thread, to avoid exceptions being thrown. However, updates to the `ListView.ItemsSource` property will automatically be marshaled to the UI thread. For information about determining if code is running on the UI thread, see [Xamarin.Essentials: MainThread](~/essentials/main-thread.md?content=xamarin/xamarin-forms).
 
     > [!IMPORTANT]
-    > Any control properties that are updated via data binding will be automatically marsheled to the UI thread.
+    > Any control properties that are updated via data binding will be automatically marshaled to the UI thread.
 
 ### Error handling
 
