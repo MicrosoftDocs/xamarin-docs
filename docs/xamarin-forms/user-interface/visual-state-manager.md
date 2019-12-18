@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/07/2018
+ms.date: 12/18/2019
 ---
 
 # The Xamarin.Forms Visual State Manager
@@ -28,7 +28,7 @@ The Xamarin.Forms Visual State Manager defines one visual state group named "Com
 - "Disabled"
 - "Focused"
 
-This visual state group is supported for all classes that derive from [`VisualElement`](xref:Xamarin.Forms.VisualElement), which is the base class for [`View`](xref:Xamarin.Forms.View) and [`Page`](xref:Xamarin.Forms.Page). 
+This visual state group is supported for all classes that derive from [`VisualElement`](xref:Xamarin.Forms.VisualElement), which is the base class for [`View`](xref:Xamarin.Forms.View) and [`Page`](xref:Xamarin.Forms.Page).
 
 You can also define your own visual state groups and visual states, as this article will demonstrate.
 
@@ -131,7 +131,7 @@ The next step is to include a pair of tags for every visual state in that group.
 
             <VisualState x:Name="Focused">
                 <VisualState.Setters>
-    
+
                 </VisualState.Setters>
             </VisualState>
 
@@ -206,7 +206,7 @@ Markup similar to this is the basis of the **VSM on View** page in the **[VsmDem
         <Entry>
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
-                    
+
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor" Value="Lime" />
@@ -250,7 +250,7 @@ Notice that the second `Entry` also has a `DataTrigger` as part of its `Trigger`
 
 [![VSM on View: Disabled](vsm-images/VsmOnViewDisabled.png "VSM on view - disabled")](vsm-images/VsmOnViewDisabled-Large.png#lightbox)
 
-The current visual state is "Disabled" so the background of the second `Entry` is pink on the iOS and Android screens. The UWP implementation of `Entry` does not allow setting the background color when the `Entry` is disabled. 
+The current visual state is "Disabled" so the background of the second `Entry` is pink on the iOS and Android screens. The UWP implementation of `Entry` does not allow setting the background color when the `Entry` is disabled.
 
 When you enter some text into the third `Entry`, the second `Entry` switches into the "Normal" state, and the background is now lime:
 
@@ -260,7 +260,7 @@ When you touch the second `Entry`, it gets the input focus. It switches to the "
 
 [![VSM on View: Focused](vsm-images/VsmOnViewFocused.png "VSM on view - focused")](vsm-images/VsmOnViewFocused-Large.png#lightbox)
 
-Notice that the `Entry` does not retain the lime background when it gets the input focus. As the Visual State Manager switches between the visual states, the properties set by the previous state are unset. Keep in mind that the visual states are mutually exclusive. The "Normal" state does not mean solely that the `Entry` is enabled. It means that the `Entry` is enabled and does not have input focus. 
+Notice that the `Entry` does not retain the lime background when it gets the input focus. As the Visual State Manager switches between the visual states, the properties set by the previous state are unset. Keep in mind that the visual states are mutually exclusive. The "Normal" state does not mean solely that the `Entry` is enabled. It means that the `Entry` is enabled and does not have input focus.
 
 If you want the `Entry` to have a lime background in the "Focused" state, add another `Setter` to that visual state:
 
@@ -277,7 +277,7 @@ In order for these `Setter` objects to work properly, a `VisualStateGroup` must 
 
 ```xaml
 <VisualState x:Name="Normal" />
-``` 
+```
 
 ### Visual State Manager markup in a style
 
@@ -289,7 +289,7 @@ Here's the existing implicit `Style` for the `Entry` elements in the **VSM On Vi
 <Style TargetType="Entry">
     <Setter Property="Margin" Value="20, 0" />
     <Setter Property="FontSize" Value="18" />
-</Style> 
+</Style>
 ```
 
 Add `Setter` tags for the `VisualStateManager.VisualStateGroups` attached bindable property:
@@ -301,7 +301,7 @@ Add `Setter` tags for the `VisualStateManager.VisualStateGroups` attached bindab
     <Setter Property="VisualStateManager.VisualStateGroups">
 
     </Setter>
-</Style> 
+</Style>
 ```
 
 The content property for `Setter` is `Value`, so the value of the `Value` property can be specified directly within those tags. That property is of type `VisualStateGroupList`:
@@ -315,7 +315,7 @@ The content property for `Setter` is `Value`, so the value of the `Value` proper
 
         </VisualStateGroupList>
     </Setter>
-</Style> 
+</Style>
 ```
 
 Within those tags you can include one of more `VisualStateGroup` objects:
@@ -331,7 +331,7 @@ Within those tags you can include one of more `VisualStateGroup` objects:
             </VisualStateGroup>
         </VisualStateGroupList>
     </Setter>
-</Style> 
+</Style>
 ```
 
 The remainder of the VSM markup is the same as before.
@@ -384,7 +384,7 @@ Here's the **VSM in Style** page showing the complete VSM markup:
         <Label Text="Normal Entry:" />
 
         <Entry />
-        
+
         <Label Text="Entry with VSM: " />
 
         <Entry>
@@ -411,6 +411,19 @@ Now all the `Entry` views on this page respond the same way to their visual stat
 
 [![VSM in Style](vsm-images/VsmInStyle.png "VSM in style")](vsm-images/VsmInStyle-Large.png#lightbox)
 
+## Visual states in Xamarin.Forms
+
+The following table lists the visual states that are defined in Xamarin.Forms:
+
+| Class | States | More Information |
+| ----- | ------ | ---------------- |
+| `Button` | `Pressed` | [Button visual states](~/xamarin-forms/user-interface/button.md#button-visual-states) |
+| `CollectionView` | `Normal` | [Change selected item color](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
+| `ImageButton` | `Pressed` | [ImageButton visual states](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
+| `VisualElement` | `Normal` `Disabled` `Focused` | [The common states](#the-common-states) |
+
+Each of these states can be accessed through the visual state group named `CommonStates`.
+
 ## Defining your own visual states
 
 Every class that derives from `VisualElement` supports the three common states "Normal", "Focused", and "Disabled". Internally, the [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) class detects when it's becoming enabled or disabled, or focused or unfocused, and calls the static [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) method:
@@ -433,7 +446,7 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
              x:Class="VsmDemos.VsmValidationPage"
              Title="VSM Validation">
     <StackLayout Padding="10, 10">
-        
+
         <Label Text="Enter a U.S. phone number:"
                FontSize="Large" />
 
@@ -446,7 +459,7 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
                Text="Phone number must be of the form 555-555-5555, and not begin with a 0 or 1">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup Name="ValidityStates">
-                    
+
                     <VisualState Name="Valid">
                         <VisualState.Setters>
                             <Setter Property="TextColor" Value="Transparent" />
@@ -454,7 +467,7 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
                     </VisualState>
 
                     <VisualState Name="Invalid" />
-                    
+
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
         </Label>
@@ -467,7 +480,7 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
                 HorizontalOptions="Center">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup Name="ValidityStates">
-                    
+
                     <VisualState Name="Valid" />
 
                     <VisualState Name="Invalid">
@@ -475,7 +488,7 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
                             <Setter Property="IsEnabled" Value="False" />
                         </VisualState.Setters>
                     </VisualState>
-                    
+
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
         </Button>
@@ -483,7 +496,7 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
 </ContentPage>
 ```
 
-VSM markup is attached to the second `Label` (named `helpLabel`) and the `Button` (named `submitButton`). There are two mutually-exclusive states, named "Valid" and "Invalid". Notice that each of the two "ValidationState" groups contains `VisualState` tags for both "Valid" and "Invalid", although one of them is empty in each case. 
+VSM markup is attached to the second `Label` (named `helpLabel`) and the `Button` (named `submitButton`). There are two mutually-exclusive states, named "Valid" and "Invalid". Notice that each of the two "ValidationState" groups contains `VisualState` tags for both "Valid" and "Invalid", although one of them is empty in each case.
 
 If the `Entry` does not contain a valid phone number, then the current state is "Invalid", and so the second `Label` is visible and the `Button` is disabled:
 
@@ -520,7 +533,7 @@ public partial class VsmValidationPage : ContentPage
 }
 ```
 
-Notice also that the `GoToState` method is called from the constructor to initialize the state. There should always be a current state. But nowhere in the code is there any reference to the name of the visual state group, although it's referenced in the XAML as "ValidationStates" for purposes of clarity. 
+Notice also that the `GoToState` method is called from the constructor to initialize the state. There should always be a current state. But nowhere in the code is there any reference to the name of the visual state group, although it's referenced in the XAML as "ValidationStates" for purposes of clarity.
 
 Notice that the code-behind file must take account of every object on the page that is affected by these visual states, and to call `VisualStateManager.GoToState` for each of these objects. In this example, it's only two objects (the `Label` and the `Button`), but it could be several more.
 
@@ -532,7 +545,7 @@ It might be tempting to consider deriving a class from `Entry` and perhaps defin
 
 ## Using the Visual State Manager for adaptive layout
 
-A Xamarin.Forms application running on a phone can usually be viewed in a portrait or landscape aspect ratio, and a Xamarin.Forms program running on the desktop can be resized to assume many different sizes and aspect ratios. A well-designed application might display its content differently for these various page or window form factors. 
+A Xamarin.Forms application running on a phone can usually be viewed in a portrait or landscape aspect ratio, and a Xamarin.Forms program running on the desktop can be resized to assume many different sizes and aspect ratios. A well-designed application might display its content differently for these various page or window form factors.
 
 This technique is sometimes known as _adaptive layout_. Because adaptive layout solely involves a program's visuals, it is an ideal application of the Visual State Manager.
 
@@ -546,7 +559,7 @@ In landscape mode, the array of buttons might be moved to one side, and displaye
 
 From top to bottom, the program is running on the Universal Windows Platform, Android, and iOS.
 
-The **VSM Adaptive Layout** page in the [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) sample defines a group named "OrientationStates" with two visual states named "Portrait" and "Landscape". (A more complex approach might be based on several different page or window widths.) 
+The **VSM Adaptive Layout** page in the [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos) sample defines a group named "OrientationStates" with two visual states named "Portrait" and "Landscape". (A more complex approach might be based on several different page or window widths.)
 
 VSM markup occurs in four places in the XAML file. The `StackLayout` named `mainStack` contains both the menu and the content, which is an `Image` element. This `StackLayout` should have a vertical orientation in portrait mode and a horizontal orientation in landscape mode:
 
@@ -573,11 +586,11 @@ VSM markup occurs in four places in the XAML file. The `StackLayout` named `main
                 </VisualState>
             </VisualStateGroup>
         </VisualStateManager.VisualStateGroups>
-        
+
         <ScrollView x:Name="menuScroll">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup Name="OrientationStates">
-                    
+
                     <VisualState Name="Portrait">
                         <VisualState.Setters>
                             <Setter Property="Orientation" Value="Horizontal" />
@@ -591,7 +604,7 @@ VSM markup occurs in four places in the XAML file. The `StackLayout` named `main
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
-            
+
             <StackLayout x:Name="menuStack">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup Name="OrientationStates">
@@ -639,15 +652,15 @@ VSM markup occurs in four places in the XAML file. The `StackLayout` named `main
                 <Button Text="Banana"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="Banana.jpg" />
-                
+
                 <Button Text="Face Palm"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="FacePalm.jpg" />
-                
+
                 <Button Text="Monkey"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="monkey.png" />
-                
+
                 <Button Text="Seated Monkey"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="SeatedMonkey.jpg" />
