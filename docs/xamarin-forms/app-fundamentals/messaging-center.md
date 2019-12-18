@@ -78,6 +78,9 @@ MessagingCenter.Subscribe<MainPage, string>(this, "Hi", async (sender, arg) =>
 
 In this example, the [`Subscribe`](xref:Xamarin.Forms.MessagingCenter.Subscribe*) method subscribes to `Hi` messages that are sent by the `MainPage` type, whose payload data is a `string`. A callback delegate is executed in response to receiving such a message, that displays the payload data in an alert.
 
+> [!IMPORTANT]
+> The delegate that's executed by the `Subscribe` method will be executed on the same thread that publishes the message using the `Send` method.
+
 ## Unsubscribe from a message
 
 Subscribers can unsubscribe from messages they no longer want to receive. This is achieved with one of the [`MessagingCenter.Unsubscribe`](xref:Xamarin.Forms.MessagingCenter.Unsubscribe*) overloads:
