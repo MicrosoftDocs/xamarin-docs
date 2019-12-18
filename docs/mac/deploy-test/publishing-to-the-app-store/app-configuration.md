@@ -43,7 +43,7 @@ The **Mac Build** section of the **Project Options** dialog allows the developer
 
  [![Editing the build settings](app-configuration-images/config03.png "Editing the build settings")](app-configuration-images/config03-large.png#lightbox)
 
-## Related Links
+## Related links
 
 - [Installation](/visualstudio/mac/installation/)
 - [Hello, Mac sample](~/mac/get-started/hello-mac.md)
