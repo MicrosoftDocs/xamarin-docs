@@ -48,8 +48,9 @@ A simple trigger can be expressed purely in XAML, adding
 <Entry Placeholder="enter name">
     <Entry.Triggers>
         <Trigger TargetType="Entry"
-             Property="IsFocused" Value="True">
+                 Property="IsFocused" Value="True">
             <Setter Property="BackgroundColor" Value="Yellow" />
+            <!-- multiple Setters elements are allowed -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -89,6 +90,7 @@ Triggers can also be added to a `Style` declaration
                 <Trigger TargetType="Entry"
                          Property="IsFocused" Value="True">
                     <Setter Property="BackgroundColor" Value="Yellow" />
+                    <!-- multiple Setters elements are allowed -->
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -128,6 +130,7 @@ The example below uses the data binding syntax
                                        Path=Text.Length}"
                      Value="0">
             <Setter Property="IsEnabled" Value="False" />
+            <!-- multiple Setters elements are allowed -->
         </DataTrigger>
     </Button.Triggers>
 </Button>
@@ -233,8 +236,7 @@ Here's an example of a trigger for a button that binds to
                                    Path=Text.Length}"
                                Value="0" />
     </MultiTrigger.Conditions>
-
-  <Setter Property="IsEnabled" Value="False" />
+    <Setter Property="IsEnabled" Value="False" />
     <!-- multiple Setter elements are allowed -->
 </MultiTrigger>
 ```
