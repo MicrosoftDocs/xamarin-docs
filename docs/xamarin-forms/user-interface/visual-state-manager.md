@@ -418,9 +418,9 @@ The following table lists the visual states that are defined in Xamarin.Forms:
 | Class | States | More Information |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Button visual states](~/xamarin-forms/user-interface/button.md#button-visual-states) |
-| `CollectionView` | `Normal` | [Change selected item color](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
+| `CollectionView` | `Selected` | [Change selected item color](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
 | `ImageButton` | `Pressed` | [ImageButton visual states](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
-| `VisualElement` | `Normal` `Disabled` `Focused` | [The common states](#the-common-states) |
+| `VisualElement` | `Normal`, `Disabled`, `Focused` | [The common states](#the-common-states) |
 
 Each of these states can be accessed through the visual state group named `CommonStates`.
 
