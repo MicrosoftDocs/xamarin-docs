@@ -32,6 +32,9 @@ This article, and accompanying sample application, demonstrates a Todo list appl
 
 For more information about Azure Cosmos DB, see the [Azure Cosmos DB Documentation](/azure/cosmos-db/).
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 ## Setup
 
 The process for integrating an Azure Cosmos DB document database into a Xamarin.Forms application is as follows:

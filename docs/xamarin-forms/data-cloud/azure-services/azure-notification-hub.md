@@ -25,6 +25,9 @@ Integrate Azure Notification Hubs into mobile apps by following these steps:
 1. [Test notifications using the Azure Notification Hub](#test-notifications-in-the-azure-portal).
 1. [Create a backend application to send notifications](#create-a-notification-dispatcher).
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 ## Set up Push Notification Services and Azure Notification Hub
 
 Integrating Azure Notification Hubs with a Xamarin.Forms mobile app is similar to integrating Azure Notification Hubs with a Xamarin native application. Set up an **FCM application** by following the Firebase Console steps in [Push notifications to Xamarin.Android using Azure Notification Hubs](/azure/notification-hubs/xamarin-notification-hubs-push-notifications-android-gcm#create-a-firebase-project-and-enable-firebase-cloud-messaging). Complete the following steps using the Xamarin.Android tutorial:

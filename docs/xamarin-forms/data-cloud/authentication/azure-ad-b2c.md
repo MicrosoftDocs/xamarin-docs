@@ -21,15 +21,17 @@ Azure Active Directory B2C (ADB2C) is an identity management service for consume
 
 The process for integrating the Azure Active Directory B2C identity management service into a mobile application is as follows:
 
-1. Create an Azure Active Directory B2C tenant
-1. Register your mobile application with the Azure Active Directory B2C tenant
-1. Create policies for sign-up and sign-in, and forgot password user flows
+1. Create an Azure Active Directory B2C tenant.
+1. Register your mobile application with the Azure Active Directory B2C tenant.
+1. Create policies for sign-up and sign-in, and forgot password user flows.
 1. Use the Microsoft Authentication Library (MSAL) to start an authentication workflow with your Azure Active Directory B2C tenant.
 
 > [!NOTE]
-> Azure Active Directory B2C supports multiple identity providers including Microsoft, GitHub, Facebook, Twitter and more. For more information on Azure Active Directory B2C capabilities, see [Azure Active Directory B2C Documentation](/azure/active-directory-b2c/).
->
-> Microsoft Authentication Library supports multiple application architectures and platforms. For information about MSAL capabilities, see [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) on GitHub.
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
+Azure Active Directory B2C supports multiple identity providers including Microsoft, GitHub, Facebook, Twitter and more. For more information on Azure Active Directory B2C capabilities, see [Azure Active Directory B2C Documentation](/azure/active-directory-b2c/).
+
+Microsoft Authentication Library supports multiple application architectures and platforms. For information about MSAL capabilities, see [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) on GitHub.
 
 ## Configure an Azure Active Directory B2C tenant
 

@@ -33,6 +33,9 @@ Search queries and filter queries can be used separately or together. When used 
 
 Azure Search also supports retrieving suggestions based on search input. For more information, see [Suggestion Queries](#suggestions).
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 ## Setup
 
 The process for integrating Azure Search into a Xamarin.Forms application is as follows:
