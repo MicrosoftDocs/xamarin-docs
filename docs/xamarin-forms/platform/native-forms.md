@@ -291,9 +291,9 @@ public sealed partial class MainPage : Page
         this.Content = formsPage.CreateFrameworkElement();
         
         SizeChanged += (sender, args) =>
-		{
-				formsPage.Layout(new Rectangle(0, 0, args.NewSize.Width, args.NewSize.Height));
-		};
+        {
+            formsPage.Layout(new Rectangle(0, 0, args.NewSize.Width, args.NewSize.Height));
+        };
     }
     ...
 }
