@@ -287,7 +287,13 @@ public sealed partial class MainPage : Page
         this.NavigationCacheMode = NavigationCacheMode.Enabled;
         Instance = this;
         FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
-        this.Content = new Notes.UWP.Views.NotesPage().CreateFrameworkElement();
+        var formsPage = new Notes.UWP.Views.NotesPage();
+        this.Content = formsPage.CreateFrameworkElement();
+        
+        SizeChanged += (sender, args) =>
+		{
+				formsPage.Layout(new Rectangle(0, 0, args.NewSize.Width, args.NewSize.Height));
+		};
     }
     ...
 }
@@ -299,6 +305,7 @@ The `MainPage` constructor performs the following tasks:
 - A reference to the `MainPage` class is stored in the `static` `Instance` field. This is to provide a mechanism for other classes to call methods defined in the `MainPage` class.
 - The `FolderPath` property is initialized to a path on the device where note data will be stored.
 - The `NotesPage` class, which is a Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page defined in XAML, is constructed and converted to a `FrameworkElement` using the `CreateFrameworkElement` extension method, and then set as the content of the `MainPage` class.
+- The SizeChanged event is subscribed to so that the `NotesPage` laypout can be adjusted to the new window size when the UWP window is resized.
 
 Once the `MainPage` constructor has executed, the UI defined in the Xamarin.Forms `NotesPage` class will be displayed, as shown in the following screenshot:
 
