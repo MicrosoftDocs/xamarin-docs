@@ -9,7 +9,7 @@ metadata:
   ms.assetid: 7D34BF92-6326-40F5-B34B-18B03F293B34
   author: davidbritch
   ms.author: dabritch
-  ms.date: 09/10/2019
+  ms.date: 12/17/2019
 abstract:
   description: Welcome to what's new in Xamarin docs.
 sections:
@@ -19,6 +19,12 @@ sections:
     style: cards
     className: cardsB
     items:
+    - href: 2019-12.md
+      html: "What's new in Xamarin docs in December 2019: Xamarin.Forms 4.4 released, and other updates."
+      image:
+        src: https://docs.microsoft.com/media/common/i_article.svg
+        href: 2019-12.md
+      title: December 2019
     - href: 2019-10.md
       html: "What's new in Xamarin docs in October 2019: Xamarin.Forms 4.3 released, and other updates."
       image:

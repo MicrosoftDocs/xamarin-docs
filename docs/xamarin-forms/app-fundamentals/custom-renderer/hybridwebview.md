@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 12/03/2019
 ---
 
-# Customizing a HybridWebView
+# Customizing a WebView
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-hybridwebview)
 

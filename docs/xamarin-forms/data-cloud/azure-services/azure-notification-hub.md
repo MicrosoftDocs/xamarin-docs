@@ -6,7 +6,7 @@ ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 05/23/2019
+ms.date: 11/27/2019
 ---
 
 # Send and receive push notifications with Azure Notification Hubs and Xamarin.Forms

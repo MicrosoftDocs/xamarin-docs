@@ -6,7 +6,7 @@ ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/17/2019
+ms.date: 12/04/2019
 ---
 
 # Authenticate Users with Azure Active Directory B2C
@@ -176,7 +176,7 @@ public partial class LoginPage : ContentPage
                 .WithPrompt(Prompt.SelectAccount)
                 .WithParentActivityOrWindow(App.UIParent)
                 .ExecuteAsync();
-    
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)
