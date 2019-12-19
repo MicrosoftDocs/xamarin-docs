@@ -49,6 +49,30 @@ public class LauncherTest
 }
 ```
 
+### Additional Platform Setup
+
+# [Android](#tab/android)
+
+No additional setup.
+
+# [iOS](#tab/ios)
+
+Starting in iOS 9, Apple started to enforce what schemes an application can query for. To specify which schemes you would like to use, you must specify `LSApplicationQueriesSchemes` in your `Info.plist` file.
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>lyft</string>  
+    <string>fb</string>
+</array>
+```
+
+# [UWP](#tab/uwp)
+
+No additional setup.
+
+-----
+
 ## Files
 
 This features enables an app to request other apps to open and view a file. Xamarin.Essentials will automatically detect the file type (MIME) and request the file to be opened.
