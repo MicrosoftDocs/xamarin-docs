@@ -109,11 +109,11 @@ sections:
         src: ~/media/icons/i_user-interface.svg
         href: indicatorview.md
       title: IndicatorView
-    - href: layouts/index.md
+    - href: layouts/index.yml
       html: "Learn how to organize content using the layout controls and features in Xamarin.Forms"
       image:
         src: ~/media/icons/i_user-interface.svg
-        href: layouts/index.md
+        href: layouts/index.yml
       title: Layouts
     - href: listview/index.md
       html: "Learn how to present lists of data using the ListView control."

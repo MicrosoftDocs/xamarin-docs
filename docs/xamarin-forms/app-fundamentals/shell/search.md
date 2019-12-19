@@ -6,7 +6,7 @@ ms.assetid: F8F9471D-6771-4D23-96C0-2B79473A06D4
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
+ms.date: 12/18/2019
 ---
 
 # Xamarin.Forms Shell Search
@@ -176,8 +176,11 @@ For more information about data templates, see [Xamarin.Forms Data Templates](~/
 When a `SearchHandler` is added at the top of a page, by default the search box is visible and fully expanded. However, this behavior can be changed by setting the `SearchHandler.SearchBoxVisibility` property to one of the `SearchBoxVisibility` enumeration members:
 
 - `Hidden` – the search box is not visible or accessible.
-- `Collapsible` – the search box is hidden until the user performs an action to reveal it.
-- `Expanded` – the search box is visible and fully expanded.
+- `Collapsible` – the search box is hidden until the user performs an action to reveal it. On iOS the search box is revealed by vertically bouncing the page content, and on Android the search box is revealed by tapping the question mark icon.
+- `Expanded` – the search box is visible and fully expanded. This is the default value of the `SearchHandler.SearchBoxVisibility` property.
+
+> [!IMPORTANT]
+> On iOS, a collapsible search box requires iOS 11 or greater.
 
 The following example shows to how to hide the search box:
 
@@ -185,7 +188,7 @@ The following example shows to how to hide the search box:
 <ContentPage ...
              xmlns:controls="clr-namespace:Xaminals.Controls">
     <Shell.SearchHandler>
-        <controls:MonkeySearchHandler SearchBoxVisibility="Hidden"
+        <controls:AnimalSearchHandler SearchBoxVisibility="Hidden"
                                       ... />
     </Shell.SearchHandler>
     ...
