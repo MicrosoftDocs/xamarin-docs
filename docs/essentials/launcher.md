@@ -57,7 +57,7 @@ No additional setup.
 
 # [iOS](#tab/ios)
 
-Starting in iOS 9, Apple started to enforce what schemes an application can query for. To specify which schemes you would like to use, you must specify `LSApplicationQueriesSchemes` in your `Info.plist` file.
+In iOS 9 and greater, Apple enforces what schemes an application can query for. To specify which schemes you would like to use, you must specify `LSApplicationQueriesSchemes` in your `Info.plist` file.
 
 ```
 <key>LSApplicationQueriesSchemes</key>
