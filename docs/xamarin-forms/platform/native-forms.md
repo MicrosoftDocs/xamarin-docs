@@ -277,8 +277,10 @@ By default, the native `App` class launches the `MainPage` class as the first pa
 ```csharp
 public sealed partial class MainPage : Page
 {
+    NotesPage notesPage;
+    NoteEntryPage noteEntryPage;
+    
     public static MainPage Instance;
-
     public static string FolderPath { get; private set; }
 
     public MainPage()
@@ -287,15 +289,11 @@ public sealed partial class MainPage : Page
         this.NavigationCacheMode = NavigationCacheMode.Enabled;
         Instance = this;
         FolderPath = Path.Combine(System.Environment.GetFolderPath(System.Environment.SpecialFolder.LocalApplicationData));
-        var formsPage = new Notes.UWP.Views.NotesPage();
-        this.Content = formsPage.CreateFrameworkElement();
-        
-        SizeChanged += (sender, args) =>
-        {
-            formsPage.Layout(new Rectangle(0, 0, args.NewSize.Width, args.NewSize.Height));
-        };
-    }
-    ...
+        notesPage = new Notes.UWP.Views.NotesPage();
+        this.Content = notesPage.CreateFrameworkElement();
+        // ...        
+    } 
+    // ...
 }
 ```
 
@@ -305,7 +303,6 @@ The `MainPage` constructor performs the following tasks:
 - A reference to the `MainPage` class is stored in the `static` `Instance` field. This is to provide a mechanism for other classes to call methods defined in the `MainPage` class.
 - The `FolderPath` property is initialized to a path on the device where note data will be stored.
 - The `NotesPage` class, which is a Xamarin.Forms [`ContentPage`](xref:Xamarin.Forms.ContentPage)-derived page defined in XAML, is constructed and converted to a `FrameworkElement` using the `CreateFrameworkElement` extension method, and then set as the content of the `MainPage` class.
-- The SizeChanged event is subscribed to so that the `NotesPage` laypout can be adjusted to the new window size when the UWP window is resized.
 
 Once the `MainPage` constructor has executed, the UI defined in the Xamarin.Forms `NotesPage` class will be displayed, as shown in the following screenshot:
 
@@ -325,10 +322,11 @@ The `static` `MainPage.Instance` field allows the `MainPage.NavigateToNoteEntryP
 ```csharp
 public void NavigateToNoteEntryPage(Note note)
 {
-    this.Frame.Navigate(new NoteEntryPage
+    noteEntryPage = new Notes.UWP.Views.NoteEntryPage
     {
         BindingContext = note
-    });
+    };
+    this.Frame.Navigate(noteEntryPage);
 }
 ```
 
@@ -338,24 +336,45 @@ Navigation in UWP is typically performed with the `Frame.Navigate` method, which
 
 When the `NoteEntryPage` is displayed, tapping the back arrow will pop the `FrameworkElement` for the `NoteEntryPage` from the in-app back stack, returning the user to the `FrameworkElement` for the `NotesPage` class.
 
-### Enable back navigation support
+### Enable page resizing support
 
-On UWP, applications must enable back navigation for all hardware and software back buttons, across different device form factors. This can be accomplished by registering an event handler for the `BackRequested` event, which can be performed in the `OnLaunched` method in the native `App` class:
+When the UWP application window is resized, the Xamarin.Forms content should also be resized. This is accomplished by registering an event handler for the `Loaded` event, in the `MainPage` constructor:
 
 ```csharp
-protected override void OnLaunched(LaunchActivatedEventArgs e)
+public MainPage()
 {
-    Frame rootFrame = Window.Current.Content as Frame;
+    // ...
+    this.Loaded += OnMainPageLoaded;
+    // ...
+}
+```
 
-    if (rootFrame == null)
+The `Loaded` event fires when the page is laid out, rendered, and ready for interaction, and executes the `OnMainPageLoaded` method in response:
+
+```csharp
+void OnMainPageLoaded(object sender, RoutedEventArgs e)
+{
+    this.Frame.SizeChanged += (o, args) =>
     {
-        ...      
-        // Place the frame in the current Window
-        Window.Current.Content = rootFrame;
+        if (noteEntryPage != null)
+            noteEntryPage.Layout(new Xamarin.Forms.Rectangle(0, 0, args.NewSize.Width, args.NewSize.Height));
+        else
+            notesPage.Layout(new Xamarin.Forms.Rectangle(0, 0, args.NewSize.Width, args.NewSize.Height));
+    };
+}
+```
 
-        SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
-    }
-    ...
+The `OnMainPageLoaded` method registers an anonymous event handler for the `Frame.SizeChanged` event, which is raised when either the `ActualHeight` or the `ActualWidth` properties change on the `Frame`. In response, the Xamarin.Forms content for the active page is resized by calling the `Layout` method.
+
+### Enable back navigation support
+
+On UWP, applications must enable back navigation for all hardware and software back buttons, across different device form factors. This can be accomplished by registering an event handler for the `BackRequested` event, which can be performed in the `MainPage` constructor:
+
+```csharp
+public MainPage()
+{
+    // ...
+    SystemNavigationManager.GetForCurrentView().BackRequested += OnBackRequested;
 }
 ```
 
@@ -369,13 +388,14 @@ void OnBackRequested(object sender, BackRequestedEventArgs e)
     {
         e.Handled = true;
         rootFrame.GoBack();
+        noteEntryPage = null;
     }
 }
 ```
 
 The `OnBackRequested` event handler calls the `GoBack` method on the root frame of the application and sets the `BackRequestedEventArgs.Handled` property to `true` to mark the event as handled. Failure to mark the event as handled could result in the event being ignored.
 
-The application chooses whether to show a back button on the title bar. This is achieved by setting the `AppViewBackButtonVisibility` property to one of the `AppViewBackButtonVisibility` enumeration values:
+The application chooses whether to show a back button on the title bar. This is achieved by setting the `AppViewBackButtonVisibility` property to one of the `AppViewBackButtonVisibility` enumeration values, in the `App` class:
 
 ```csharp
 void OnNavigated(object sender, NavigationEventArgs e)
