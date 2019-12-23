@@ -321,7 +321,7 @@ Setting icons and splash screens for Xamarin.Forms apps is done in each of the a
 
 ## Icons
 
-See the [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md), [Google Iconography](https://developer.android.com/design/style/iconography.html), and [Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) for more information on creating these application resources.
+See the [iOS Working with Images](~/ios/app-fundamentals/images-icons/index.md), [Google Iconography](https://developer.android.com/design/style/iconography.html), and [UWP Guidelines for tile and icon assets](/windows/uwp/controls-and-patterns/tiles-and-notifications-app-assets/) for more information on creating these application resources.
 
 In addition, font icons can be displayed by the [`Image`](xref:Xamarin.Forms.Image) view by specifying the font icon data in a `FontImageSource` object. For more information, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons) in the [Fonts](~/xamarin-forms/user-interface/text/fonts.md) guide.
 
