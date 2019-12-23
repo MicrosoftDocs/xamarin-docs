@@ -1,6 +1,10 @@
 {
   "redirections": [
     {
+      "source_path": "docs/ios/platform/touchid.md",
+      "redirect_url": "/xamarin/ios/platform/touch-id-face-id"
+    },
+    {
       "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/polygon-map-overlay.md",
       "redirect_url": "/xamarin/xamarin-forms/user-interface/map/polygons"
     },

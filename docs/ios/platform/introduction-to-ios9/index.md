@@ -137,7 +137,7 @@ In iOS 9, Apple has enhanced the Keychain to provide a new encryption key type f
 - Access Control List entropy (using the Application Password option) for app-provided keychain item encryption.
 - Support for generating and using keys inside the secure enclave (via the `kSecAttrTokenIDSecureEnclave` attribute).
 
-For more information, please see our [Introduction to Touch ID](~/ios/platform/touchid.md) documentation.
+For more information, please see [Touch ID and Face ID in Xamarin.iOS](~/ios/platform/touch-id-face-id.md).
 
 ## Right-to-Left Language Support
 

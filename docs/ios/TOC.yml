@@ -453,8 +453,8 @@
           href: platform/textkit.md
         - name: 3D Touch
           href: platform/3d-touch.md
-        - name: Touch ID
-          href: platform/touchid.md
+        - name: Touch ID and Face ID
+          href: platform/touch-id-face-id.md
         - name: User Notifications Framework
           items: 
             - name: Overview
