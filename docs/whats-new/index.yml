@@ -1,141 +1,70 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Xamarin Documentation What's New?
+### YamlMime:Landing
+
+title: Xamarin documentation - what's new?
+summary: "Welcome to what's new in Xamarin docs."
+
 metadata:
-  title: Xamarin Documentation What's New?
+  title: Xamarin documentation - what's new?
   description: What's new in Xamarin docs.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 7D34BF92-6326-40F5-B34B-18B03F293B34
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/17/2019
-abstract:
-  description: Welcome to what's new in Xamarin docs.
-sections:
-- title: What's new?
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: 2019-12.md
-      html: "What's new in Xamarin docs in December 2019: Xamarin.Forms 4.4 released, and other updates."
-      image:
-        src: https://docs.microsoft.com/media/common/i_article.svg
-        href: 2019-12.md
-      title: December 2019
-    - href: 2019-10.md
-      html: "What's new in Xamarin docs in October 2019: Xamarin.Forms 4.3 released, and other updates."
-      image:
-        src: https://docs.microsoft.com/media/common/i_article.svg
-        href: 2019-10.md
-      title: October 2019
-    - href: 2019-08.md
-      html: "What's new in Xamarin docs in August 2019: Xamarin.Forms 4.2 released, user interface updates, and other updates."
-      image:
-        src: https://docs.microsoft.com/media/common/i_article.svg
-        href: 2019-08.md
-      title: August 2019
-    - href: 2019-07.md
-      html: "What's new in Xamarin docs in July 2019: Xamarin.Forms 4.1 released, data & cloud services updates, and other updates."
-      image:
-        src: https://docs.microsoft.com/media/common/i_article.svg
-        href: 2019-07.md
-      title: July 2019
-    - href: 2019-06.md
-      html: "What's new in Xamarin docs in June 2019: Xamarin.Forms 4.0 released, data & cloud services updates, API docs now on docs.microsoft.com."
-      image:
-        src: https://docs.microsoft.com/media/common/i_article.svg
-        href: 2019-06.md
-      title: June 2019
-    - href: 2019-03.md
-      html: "What's new in Xamarin docs in March 2019: new getting started example and 12 new tutorials, Xamarin.Forms 3.6, and Xamarin.Forms 3.5."
-      image:
-        src: https://docs.microsoft.com/media/common/i_article.svg
-        href: 2019-03.md
-      title: March 2019
-- title: Open source contributions
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md
-      html: If you are interested in contributing to Xamarin content, start with this contributor guide.
-      image:
-        src: https://docs.microsoft.com/media/common/i_library.svg
-        href: https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md
-      title: Contributor Guide
-    - href: https://github.com/MicrosoftDocs/xamarin-docs
-      html: If you have any content suggestions or ideas, open a new issue in the docs GitHub repo.
-      image:
-        src: https://docs.microsoft.com/media/common/i_feedback.svg
-        href: https://github.com/MicrosoftDocs/xamarin-docs
-      title: Xamarin Docs GitHub Repo
-    - href: https://github.com/xamarin/Xamarin.Forms-api-docs
-      html: If you want to contribute to the Xamarin.Forms API docs, you can do so at the Xamarin.Forms API docs repo.
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
-        href: https://github.com/xamarin/Xamarin.Forms-api-docs
-      title: Xamarin.Forms API Docs GitHub Repo
-    - href: https://github.com/xamarin/apple-api-docs
-      html: If you want to contribute to the Xamarin.iOS or Xamarin.Mac API docs, you can do so at the Xamarin.iOS and Xamarin.Mac API docs repo.
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
-        href: https://github.com/xamarin/apple-api-docs
-      title: Xamarin.iOS and Mac API Docs GitHub Repo
-    - href: https://github.com/xamarin/android-api-docs
-      html: If you want to contribute to the Xamarin.Android API docs, you can do so at the Xamarin.Android API docs repo.
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
-        href: https://github.com/xamarin/android-api-docs
-      title: Xamarin.Android API Docs GitHub Repo
-    - href: https://github.com/mono/skiasharp-api-docs
-      html: If you want to contribute to the SkiaSharp API docs, you can do so at the SkiaSharp API docs repo.
-      image:
-        src: https://docs.microsoft.com/media/common/i_api-reference.svg
-        href: https://github.com/mono/skiasharp-api-docs
-      title: SkiaSharp API Docs GitHub Repo
-- title: Product release notes
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
-      html: View the release notes for Xamarin.Forms.
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_xamarin.svg
-        href: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
-      title: Xamarin.Forms
-    - href: https://docs.microsoft.com/xamarin/essentials/release-notes/
-      html: View the release notes for Xamarin.Essentials.
-      image:
-        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
-        href: https://docs.microsoft.com/xamarin/essentials/release-notes/
-      title: Xamarin.Essentials
-    - href: https://docs.microsoft.com/xamarin/ios/release-notes/
-      html: View the release notes for Xamarin.iOS.
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_ios.svg
-        href: https://docs.microsoft.com/xamarin/ios/release-notes/
-      title: Xamarin.iOS
-    - href: https://docs.microsoft.com/xamarin/android/release-notes/
-      html: View the release notes for Xamarin.Android.
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_android.svg
-        href: https://docs.microsoft.com/xamarin/android/release-notes/
-      title: Xamarin.Android
-    - href: https://docs.microsoft.com/xamarin/mac/release-notes/
-      html: View the release notes for Xamarin.Mac.
-      image:
-        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
-        href: https://docs.microsoft.com/xamarin/mac/release-notes/
-      title: Xamarin.Mac
-    - href: https://docs.microsoft.com/xamarin/tools/
-      html: View the release notes for Xamarin tools, including <a href="https://docs.microsoft.com/xamarin/tools/dotnet-embedding/release-notes/">.NET Embedding</a>, <a href="https://docs.microsoft.com/xamarin/tools/inspector/release-notes/">Inspector and Workbooks</a>, <a href="https://docs.microsoft.com/xamarin/tools/ios-simulator/release-notes/">Remoted iOS Simulator for Windows</a>, and <a href="https://docs.microsoft.com/xamarin/tools/profiler/release-notes/">Profiler</a>.
-      image:
-        src: https://docs.microsoft.com/media/common/i_tools.svg
-        href: https://docs.microsoft.com/xamarin/tools/
-      title: Tools
+  ms.date: 12/20/2019
+
+landingContent:
+  - title: "What's new?"
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: December 2019
+            url: 2019-12.md
+          - text: October 2019
+            url: 2019-10.md
+          - text: August 2019
+            url: 2019-08.md
+          - text: July 2019
+            url: 2019-07.md
+          - text: June 2019
+            url: 2019-06.md
+          - text: March 2019
+            url: 2019-03.md
+
+  - title: "Open source contributions"
+    linkLists:
+      - linkListType: overview
+        links:
+          - text: Xamarin docs repository
+            url: https://github.com/MicrosoftDocs/xamarin-docs
+          - text: Contributor guide
+            url: https://github.com/MicrosoftDocs/xamarin-docs/blob/live/CONTRIBUTING.md
+      - linkListType: reference
+        links:
+          - text: Xamarin.Forms API docs repository
+            url: https://github.com/xamarin/Xamarin.Forms-api-docs
+          - text: Xamarin.iOS and Mac API docs repository
+            url: https://github.com/xamarin/apple-api-docs
+          - text: Xamarin.Android API docs repository
+            url: https://github.com/xamarin/android-api-docs
+          - text: SkiaSharp API docs repository
+            url: https://github.com/mono/skiasharp-api-docs
+
+  - title: "Related pages"
+    linkLists:
+      - linkListType: whats-new
+        links:
+          - text: .NET docs updates
+            url: https://docs.microsoft.com/dotnet/whats-new/
+          - text: Xamarin.Forms release notes
+            url: https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/
+          - text: Xamarin.Essentials release notes
+            url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+          - text: Xamarin.iOS release notes
+            url: https://docs.microsoft.com/xamarin/ios/release-notes/
+          - text: Xamarin.Android release notes
+            url: https://docs.microsoft.com/xamarin/android/release-notes/
+          - text: Xamarin.Mac release notes
+            url: https://docs.microsoft.com/xamarin/mac/release-notes/
+          - text: Xamarin tools release notes
+            url: https://docs.microsoft.com/xamarin/tools/
