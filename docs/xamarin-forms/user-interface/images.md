@@ -68,12 +68,14 @@ var image = new Image { Source = "waterfront.jpg" };
 
 The following screenshots show the result of displaying a local image on each platform:
 
-[![Local ImageSource](images-images/local-sml.png "Sample Application Displaying a Local Image")](images-images/local.png#lightbox "Sample Application Displaying a Local Image")
+[![Sample application displaying a local image](images-images/local-sml.png)](images-images/local.png#lightbox)
 
 For more flexibility the `Device.RuntimePlatform` property can be used to select a different image file or path for some or all platforms, as shown in this code example:
 
 ```csharp
-image.Source = Device.RuntimePlatform == Device.Android ? ImageSource.FromFile("waterfront.jpg") : ImageSource.FromFile("Images/waterfront.jpg");
+image.Source = Device.RuntimePlatform == Device.Android 
+                ? ImageSource.FromFile("waterfront.jpg") 
+                : ImageSource.FromFile("Images/waterfront.jpg");
 ```
 
 > [!IMPORTANT]
@@ -90,7 +92,7 @@ Prior to iOS 9, retina versions of the image could be placed in the **Resources*
 
 Android alternate resolution images should be placed in [specially-named directories](https://developer.android.com/guide/practices/screens_support.html) in the Android project, as shown in the following screenshot:
 
-[![Android Multiple-Resolution Image Location](images-images/xs-highdpisolution-sml.png "Android Multiple-Resolution Image Location")](images-images/xs-highdpisolution.png#lightbox "Android Multiple-Resolution Image Location")
+[![Android multiple-resolution image location](images-images/xs-highdpisolution-sml.png)](images-images/xs-highdpisolution.png#lightbox)
 
 UWP image file names [can be suffixed with `.scale-xxx` before the file extension](https://docs.microsoft.com/windows/uwp/app-resources/images-tailored-for-scale-theme-contrast), where `xxx` is the percentage of scaling applied to the asset, e.g. **myimage.scale-200.png**. Images can then be referred to in code or XAML without the scale modifier, e.g. just **myimage.png**. The platform will select the nearest appropriate asset scale based on the display's current DPI.
 
@@ -117,7 +119,7 @@ To embed an image in a project, right-click to add new items and select the imag
 
 # [Visual Studio](#tab/windows)
 
-![](images-images/vs-buildaction.png "Set Build Action: EmbeddedResource")
+[![Set build action to embedded resource](images-images/vs-buildaction-sml.png)](images-images/vs-buildaction.png#lightbox)
 
 The **Build Action** can be viewed and changed in the
 **Properties** window for a file.
@@ -141,7 +143,7 @@ for this project with the filename, using a period (.) between each value.
 This ID can be edited in the **Properties** pad,
 but for these examples the value **WorkingWithImages.beach.jpg** will be used.
 
-![](images-images/xs-embeddedproperties.png "EmbeddedResource Properties Pad")
+[![Embedded resource properties pad](images-images/xs-embeddedproperties-sml.png)](images-images/xs-embeddedproperties.png#lightbox)
 
 -----
 
@@ -150,7 +152,11 @@ If you place embedded images into folders within your project, the folder names 
 The code to load an embedded image simply passes the **Resource ID** to the [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) method as shown below:
 
 ```csharp
-var embeddedImage = new Image { Source = ImageSource.FromResource("WorkingWithImages.beach.jpg", typeof(EmbeddedImages).GetTypeInfo().Assembly) };
+var embeddedImage = new Image { 
+      Source = ImageSource.FromResource(
+        "WorkingWithImages.beach.jpg", 
+        typeof(EmbeddedImages).GetTypeInfo().Assembly
+      ) };
 ```
 
 > [!NOTE]
@@ -160,7 +166,7 @@ Currently there is no implicit conversion for resource identifiers. Instead, you
 
 The following screenshots show the result of displaying an embedded image on each platform:
 
-[![ResourceImageSource](images-images/resource-sml.png "Sample Application Displaying an Embedded Image")](images-images/resource.png#lightbox "Sample Application Displaying an Embedded Image")
+[![Sample application displaying an embedded image](images-images/resource-sml.png)](images-images/resource.png#lightbox)
 
 ### XAML
 
@@ -230,7 +236,8 @@ By default, the `ImageSource.FromResource` method only looks for images in the s
 However, the source assembly being searched for an embedded image can be specified as an argument to the `ImageSource.FromResource` method:
 
 ```csharp
-var imageSource = ImageSource.FromResource("filename.png", typeof(MyClass).GetTypeInfo().Assembly);
+var imageSource = ImageSource.FromResource("filename.png", 
+            typeof(MyClass).GetTypeInfo().Assembly);
 ```
 
 ## Download images
@@ -253,7 +260,10 @@ Images can be automatically downloaded for display, as shown in the following XA
 The equivalent C# code is as follows:
 
 ```csharp
-var webImage = new Image { Source = ImageSource.FromUri(new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")) };
+var webImage = new Image { 
+     Source = ImageSource.FromUri(
+        new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")
+     ) };
 ```
 
 The [`ImageSource.FromUri`](xref:Xamarin.Forms.ImageSource.FromUri(System.Uri)) method requires a `Uri` object, and returns a new [`UriImageSource`](xref:Xamarin.Forms.UriImageSource) that reads from the `Uri`.
@@ -266,7 +276,7 @@ webImage.Source = "https://xamarin.com/content/images/pages/forms/example-app.pn
 
 The following screenshots show the result of displaying a remote image on each platform:
 
-[![Downloaded ImageSource](images-images/download-sml.png "Sample Application Displaying a Downloaded Image")](images-images/download.png#lightbox "Sample Application Displaying a Downloaded Image")
+[![Sample application displaying a downloaded image](images-images/download-sml.png)](images-images/download.png#lightbox)
 
 ### Downloaded image caching
 
