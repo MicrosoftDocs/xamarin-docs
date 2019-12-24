@@ -22,7 +22,7 @@ A street address can be geocoded into latitude and longitude coordinates by crea
 ```csharp
 using Xamarin.Forms.Maps;
 // ...
-Geocoder geoCoder;
+Geocoder geoCoder = new Geocoder();
 
 IEnumerable<Position> approximateLocations = await geoCoder.GetPositionsForAddressAsync("Pacific Ave, San Francisco, California");
 Position position = approximateLocations.FirstOrDefault();
@@ -38,7 +38,7 @@ Latitude and longitude coordinates can be reverse geocoded into a street address
 ```csharp
 using Xamarin.Forms.Maps;
 // ...
-Geocoder geoCoder;
+Geocoder geoCoder = new Geocoder();
 
 Position position = new Position(37.8044866, -122.4324132);
 IEnumerable<string> possibleAddresses = await geoCoder.GetAddressesForPositionAsync(position);
