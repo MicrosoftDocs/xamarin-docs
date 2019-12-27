@@ -45,6 +45,8 @@ The `FontSize` property can be set to a double value, for instance:
 label.FontSize = 24;
 ```
 
+The size value is measured in device independent units. For more information, see [Units of Measurement](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
+
 Xamarin.Forms also defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumeration that represent specific font sizes. For more information about named font sizes, see [Named font sizes](#named-font-sizes).
 
 <a name="FontAttributes" />
@@ -128,6 +130,8 @@ Xamarin.Forms defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) 
 | `Title` | 28 | 24 | 24 |
 | `Subtitle` | 22 | 16 | 20 |
 | `Caption` | 12 | 12 | 12 |
+
+The size values are measured in device independent units. For more information, see [Units of Measurement](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
 
 Named font sizes can be set through both XAML and code. In addition, the `Device.GetNamedSize` method can be called to return a `double` that represents the named font size:
 
