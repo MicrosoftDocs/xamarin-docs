@@ -173,4 +173,4 @@
         - name: Updating Component References to NuGet
           href: troubleshooting/component-nuget.md
     - name: Samples
-      href: samples/index.yml
+      href: samples/index.md
