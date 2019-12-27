@@ -6,7 +6,7 @@ ms.assetid: 07D13195-3A0D-4C95-ACF0-143A9084973C
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 05/23/2019
+ms.date: 11/27/2019
 ---
 
 # Send and receive push notifications with Azure Notification Hubs and Xamarin.Forms
@@ -24,6 +24,9 @@ Integrate Azure Notification Hubs into mobile apps by following these steps:
 1. [Configure the native iOS project for push notifications](#configure-ios-for-notifications).
 1. [Test notifications using the Azure Notification Hub](#test-notifications-in-the-azure-portal).
 1. [Create a backend application to send notifications](#create-a-notification-dispatcher).
+
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
 
 ## Set up Push Notification Services and Azure Notification Hub
 

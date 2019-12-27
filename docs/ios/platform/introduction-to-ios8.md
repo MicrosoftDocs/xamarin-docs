@@ -88,7 +88,7 @@ Firstly, it aids the existing Keychain services through the use of new Keychain 
 
 Secondly, LocalAuthentication provides two methods to authenticate your application locally. Developers should use `CanEvaluatePolicy` to determine if the device is capable of accepting Touch ID, and then `EvaluatePolicy` to start the authentication operation.
 
-For more information on Touch ID and to learn how to integrate it into a Xamarin.iOS application, refer to the [Introduction To TouchID](~/ios/platform/touchid.md) guides.
+For more information on Touch ID and to learn how to integrate it into a Xamarin.iOS application, see [Touch ID and Face ID in Xamarin.iOS](~/ios/platform/touch-id-face-id.md) guides.
 
 ### Document Picker
 
@@ -167,5 +167,5 @@ In this article we looked at some of the new features introduced by Apple in iOS
 - [Introduction to the Document Picker](~/ios/platform/document-picker.md)
 - [Introduction to HealthKit](~/ios/platform/healthkit.md)
 - [Introduction to Manual Camera Controls](~/ios/user-interface/controls/intro-to-manual-camera-controls.md)
-- [Introduction to TouchID](~/ios/platform/touchid.md)
+- [Touch ID and Face ID with Xamarin.iOS](~/ios/platform/touch-id-face-id.md)
 - [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)

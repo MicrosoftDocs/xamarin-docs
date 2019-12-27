@@ -17,7 +17,7 @@ users, Apple recommends that they code-sign it with their Developer ID so that i
 Read more about [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/) and [Distributing Outside the Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) on Apple’s
 website.
 
-## Code Signing Options
+## Code signing options
 
 To build an app for deployment directly to users (NOT via the Mac App
 Store) set the **Signing Settings** to use the **Developer ID**. Ensure to edit the **Release** configuration.
@@ -42,7 +42,7 @@ for installation.
 
  [![](signing-images/image59.png "Selecting the app package in Finder")](signing-images/image59.png#lightbox)
 
-## Related Links
+## Related links
 
 - [Installation](~//mac/get-started/installation.md)
 - [Hello, Mac sample](~//mac/get-started/hello-mac.md)

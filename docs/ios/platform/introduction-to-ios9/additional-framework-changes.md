@@ -128,7 +128,7 @@ Apple included the following changes to the [Local Authentication](xref:LocalAut
 - The ability to use _Authentication Context_ in Keychain calls and support for evaluating Keychain Access control lists.
 - The ability to cancel a user prompt from code.
 
-Please see our [Introduction to Touch ID](~/ios/platform/touchid.md) documentation for more information on working with Touch ID in Xamarin.iOS.
+For more information, see [Touch ID and Face ID with Xamarin.iOS](~/ios/platform/touch-id-face-id.md).
 
 ### LAContext Changes
 

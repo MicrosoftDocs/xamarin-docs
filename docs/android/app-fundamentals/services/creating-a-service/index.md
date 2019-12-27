@@ -84,7 +84,7 @@ The most basic way to start a service in Android is to dispatch an `Intent` whic
     ```
 
 - **Implicit Intent** &ndash; This type of Intent loosely identifies
-    the of action that the user wishes to perform, but the exact service to
+    the type of action that the user wishes to perform, but the exact service to
     complete that action is unknown. An implicit Intent can be thought
     of as a letter that is addressed "To Whom It May Concern...".
     Android will examine the contents of the Intent, and determine if

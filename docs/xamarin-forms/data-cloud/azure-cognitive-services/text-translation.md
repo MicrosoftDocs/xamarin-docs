@@ -24,6 +24,9 @@ The Translator API has two components:
 
 This article focuses on translating text from one language to another using the Translator Text API.
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 An API key must be obtained to use the Translator Text API. This can be obtained at [How to sign up for the Microsoft Translator Text API](/azure/cognitive-services/translator/translator-text-how-to-signup/).
 
 For more information about the Microsoft Translator Text API, see [Translator Text API Documentation](/azure/cognitive-services/translator/).

@@ -85,7 +85,7 @@ package file:
 
 When the application has been approved, it will be available for download or purchase from the Mac App Store.
 
-## Related Links
+## Related links
 
 - [Installation](~//mac/get-started/installation.md)
 - [Hello, Mac sample](~/mac/get-started/hello-mac.md)

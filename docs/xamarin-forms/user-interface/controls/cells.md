@@ -17,7 +17,7 @@ _Xamarin.Forms cells can be added to ListViews and TableViews._
 
 A *cell* is a specialized element used for items in a table and describes how each item in a list should be rendered. The [`Cell`](xref:Xamarin.Forms.Cell) class derives from [`Element`](xref:Xamarin.Forms.Element), from which [`VisualElement`](xref:Xamarin.Forms.Element) also derives. A cell is not itself a visual element; it is instead a template for creating a visual element.
 
-`Cell` is used exclusively with [`ListView`](views.md#listView) and [`TableView`](views.md#tableView) controls. To learn how to use and customize cells, refer to the [`ListView`](~/xamarin-forms/user-interface/listview/index.md) and [`TableView`](~/xamarin-forms/user-interface/tableview.md) documentation.
+`Cell` is used exclusively with [`ListView`](views.md#listview) and [`TableView`](views.md#tableview) controls. To learn how to use and customize cells, refer to the [`ListView`](~/xamarin-forms/user-interface/listview/index.md) and [`TableView`](~/xamarin-forms/user-interface/tableview.md) documentation.
 
 ## Cells
 

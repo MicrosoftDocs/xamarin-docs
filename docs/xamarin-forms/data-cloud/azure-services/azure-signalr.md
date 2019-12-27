@@ -16,6 +16,9 @@ ASP.NET Core SignalR is an application model that simplifies the process of addi
 
 This article and sample show how to combine Azure SignalR Service and Azure Functions with Xamarin.Forms, to deliver real-time messages to connected clients.
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 ## Create an Azure SignalR Service and Azure Functions App
 
 The sample application comprises three key components: an Azure SignalR Service hub, an Azure Functions instance with two functions, and a mobile application that can send and receive messages. These components interact as follows:
@@ -26,7 +29,7 @@ The sample application comprises three key components: an Azure SignalR Service 
 1. The **Talk** function passes the incoming message to the SignalR hub.
 1. The SignalR hub broadcasts the message to all connected mobile application instances, including the original sender.
 
-> [!NOTE]
+> [!IMPORTANT]
 > The **Negotiate** and **Talk** functions in the sample application can be run locally using Visual Studio 2019 and the Azure runtime tools. However, the Azure SignalR Service cannot be emulated locally and it's difficult to expose locally-hosted Azure Functions to physical or virtual devices for testing. It's recommended that you deploy the Azure Functions to an Azure Functions App instance as this allows cross-platform testing. For deployment details, see [Deploy Azure Functions with Visual Studio 2019](#deploy-azure-functions-with-visual-studio-2019).
 
 ### Create an Azure SignalR Service
