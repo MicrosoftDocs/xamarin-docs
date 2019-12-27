@@ -80,6 +80,6 @@ Enterprise architecture guidance for building apps using containers on Azure.
     :::column-end:::
 :::row-end:::
 
-## All Samples
+## All samples
 
 For the complete set of Xamarin cross-platform sample apps and code demos, see [All Xamarin samples](https://docs.microsoft.com/samples/browse/?products=xamarin).

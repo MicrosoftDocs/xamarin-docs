@@ -415,7 +415,7 @@
 #### [Android build error: The "LinkAssemblies" task failed unexpectedly](troubleshooting/questions/android-linkassemblies-error.md)
 #### [Why does my Xamarin.Forms.Maps Android project fail with COMPILETODALVIK : UNEXPECTED TOP-LEVEL ERROR?](troubleshooting/questions/maps-compiletodalvik-error.md)
 ## [Release notes](https://docs.microsoft.com/xamarin/xamarin-forms/release-notes/)
-## [Samples](samples/index.yml)
+## [Samples](samples/index.md)
 ## [Creating Mobile Apps with Xamarin.Forms Book](creating-mobile-apps-xamarin-forms/index.md)
 ## [Enterprise Application Patterns eBook](enterprise-application-patterns/index.md)
 ## [SkiaSharp Graphics in Xamarin.Forms](user-interface/graphics/skiasharp/index.md)
