@@ -131,7 +131,7 @@ Xamarin.Forms defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) 
 | `Subtitle` | 22 | 16 | 20 |
 | `Caption` | 12 | 12 | 12 |
 
-The size value is measured in device independent units. For more information, see [Units of Measurement](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
+The size values are measured in device independent units. For more information, see [Units of Measurement](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
 
 Named font sizes can be set through both XAML and code. In addition, the `Device.GetNamedSize` method can be called to return a `double` that represents the named font size:
 
