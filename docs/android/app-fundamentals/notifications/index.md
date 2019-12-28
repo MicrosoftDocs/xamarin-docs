@@ -42,7 +42,7 @@ the notification drawer it starts up a second Activity.
  Android notifications. It includes a design considerations section
  that helps you design your notifications so that they conform to the
  guidelines of the Android user interface. It provides more background
- information about preserviing navigation when starting an Activity,
+ information about preserving navigation when starting an Activity,
  and it explains how to display progress in a notification and control
  media playback on the Lock Screen.
 
