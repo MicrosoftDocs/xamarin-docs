@@ -136,7 +136,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 This time, the `DrawCircle` call fills the circle using the new properties of the `SKPaint` object.
 
-Here's the program running on iOS, Android, and the Universal Windows Platform:
+Here's the program running on iOS and Android:
 
 [![](circle-images/simplecircle-small.png "Triple screenshot of the Simple Circle page")](circle-images/simplecircle-large.png#lightbox "Triple screenshot of the Simple Circle page")
 

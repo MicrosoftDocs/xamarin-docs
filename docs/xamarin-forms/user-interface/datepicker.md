@@ -175,7 +175,7 @@ public partial class MainPage : ContentPage
 }
 ```
 
-When the sample is first run, both `DatePicker` views are initialized to today's date. The following screenshot shows the program running on iOS, Android, and the Universal Windows Platform:
+When the sample is first run, both `DatePicker` views are initialized to today's date. The following screenshot shows the program running on iOS and Android:
 
 [![Days Between Dates Start](datepicker-images/DaysBetweenDatesStart.png "Days Between Dates Start")](datepicker-images/DaysBetweenDatesStart-Large.png#lightbox "Days Between Dates Start")
 
