@@ -44,4 +44,10 @@ Since we cannot generate accurate nullability annotations in the header files an
 
 Currently .NET Embedding does not support bitcode on iOS, which is enabled for some Xcode project templates. This will have to be disabled to successfully link generated frameworks.
 
+* For iOS, bitcode is optional to submit apps to Apple's AppStore. Xamarin.iOS does not support it for iOS since the generated bitcode is “inline assembly”. This provides no benefit on the iOS platform because it can’t be optimized server-side, but makes binaries larger and build times longer.
+
+* For tvOS and watchOS, bitcode is required for submitting apps to Apple's AppStore. Xamarin.iOS supports bitcode on tvOS (as "inline assembly") and watchOS (as "LLVM/IR") to fulfill this requirement.
+
+* For macOS, bitcode support is currently not required, nor supported by Xamarin.Mac.
+
 ![Bitcode Option](images/ios-bitcode-option.png)
