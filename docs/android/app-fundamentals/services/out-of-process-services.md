@@ -285,7 +285,7 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
 Once the service connection and the intent are created, it is possible for the client to call `BindService` and initiate the binding process:
 
 ```csharp
-IServiceConnection serviceConnection = new TimestampServiceConnection(this);
+TimestampServiceConnection serviceConnection = new TimestampServiceConnection(this);
 BindActivity(serviceToStart, serviceConnection, Bind.AutoCreate);
 ```
 
