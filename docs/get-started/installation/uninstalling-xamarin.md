@@ -195,7 +195,7 @@ The script contains most of the commands that are found in the article. There ar
 
 To run the script:
 
-1. Right-click on [this link to `uninstall-vsmac.sh`](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) and select **Save As…** to save the file on your Mac.
+1. Right-click on [this link to **uninstall-vsmac.sh**](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) and save/download the file to your Mac.
 
 2. Open **Terminal** and change the working directory to where the script was downloaded:
 
