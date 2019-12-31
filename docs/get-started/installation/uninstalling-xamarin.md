@@ -1,5 +1,5 @@
 ---
-title: "Uninstalling Xamarin"
+title: "Uninstall Xamarin"
 description: "This document describes how to uninstall Xamarin on both Mac and Windows. It provides specific instructions about uninstalling Mono, Xamarin.Android, Xamarin.iOS, and other tools."
 ms.prod: xamarin
 ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
@@ -8,7 +8,7 @@ ms.author: crdun
 ms.date: 04/08/2017
 ---
 
-# Uninstalling Xamarin
+# Uninstall Xamarin
 
 This guide explains how to remove Xamarin from macOS or from Visual Studio on Windows.
 
@@ -183,39 +183,42 @@ rm -rf "~/Library/Preferences/Visual Studio/"
 
 ### Using the Uninstall Script
 
-This uninstall script allows you to uninstall Visual Studio for Mac and its associated Xamarin components in one go.
+> [!TIP]
+> Before executing any script you download, please read through the commands to understand what changes are being made to your computer.
 
-The script contains most of the commands that are found in the article. There are two main omissions from the script and are not included due to possible external dependencies:
+[This uninstall script](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) allows you to uninstall Visual Studio for Mac and its associated Xamarin components in one go.
+
+The script contains most of the commands that are found in the article. There are two main omissions from the script and are not included due to possible external dependencies (other apps may be using Mono or the Android tools):
 
 - Uninstalling Mono
 - Uninstalling Android AVD
 
-To run the script, do the following steps:
+To run the script:
 
-1. Right-click on the script and select Save As… to save the file on your Mac.
+1. Right-click on [this link to `uninstall-vsmac.sh`](https://raw.githubusercontent.com/MicrosoftDocs/visualstudio-docs/master/mac/resources/uninstall-vsmac.sh) and select **Save As…** to save the file on your Mac.
 
 2. Open **Terminal** and change the working directory to where the script was downloaded:
 
-    ```
+    ```bash
     cd /location/of/file
     ```
 
 3. Make the script executable and the run it with **sudo**:
 
-    ```
-    chmod +x ./xamarin_uninstall.sh
-    sudo ./xamarin_uninstall.sh
+    ```bash
+    chmod +x ./uninstall-vsmac.sh
+    sudo ./uninstall-vsmac.sh
     ```
 
-4. Finally, delete the uninstall script.
+4. Delete the uninstall script.
 
-At this point, Xamarin should be uninstalled from your computer.
+Visual Studio for Mac and Xamarin tools should now be uninstalled from your computer.
 
 <a name="uninstallwindows" />
 
 ## Uninstalling Xamarin on Windows
 
-Xamarin has been supported on the following:
+Xamarin has been supported on these IDEs:
 
 - [Visual Studio 2019 and Visual Studio 2017](#uninstallvs2017)
 - [Visual Studio 2015](#uninstallvs2015)
