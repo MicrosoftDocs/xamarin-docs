@@ -282,14 +282,17 @@ public class SearchResultsViewController : UITableViewController
     MKMapView map;
 
     public List<MKMapItem> MapItems { get; set; }
-
+    
+    #region Constractor
     public SearchResultsViewController (MKMapView map)
     {
         this.map = map;
 
         MapItems = new List<MKMapItem> ();
     }
-
+    #endregion 
+    
+    #region Override Methods
     public override nint RowsInSection (UITableView tableView, nint section)
     {
         return MapItems.Count;
@@ -319,7 +322,9 @@ public class SearchResultsViewController : UITableViewController
 
         DismissViewController (false, null);
     }
-
+    #endregion
+    
+    #region Methods
     public void Search (string forSearchString)
     {
         // create search request
@@ -340,6 +345,7 @@ public class SearchResultsViewController : UITableViewController
         });
 
     }
+    #endregion
 }
 ```
 
