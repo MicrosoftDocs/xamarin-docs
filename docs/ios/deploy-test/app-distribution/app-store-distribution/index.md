@@ -85,7 +85,7 @@ As with any other Provisioning Profile you create, an App ID is required to iden
 3. The App prefix should be already set as your Team ID, and cannot be changed. Select either an Explicit or Wildcard App ID, and enter a Bundle ID in a reverse DNS format like:
     - **Explicit**: com.[DomainName].[AppName]
     - **Wildcard**:com.[DomainName].*
-4. Select any [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) that the app requires.
+4. Select any [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) that the app requires.
 5. Click the **Continue** button and following the on screen instructions to create the new App ID.
 
 ### Creating a Provisioning Profile
