@@ -1112,4 +1112,4 @@
     - name: Release Notes
       href: https://docs.microsoft.com/xamarin/ios/release-notes/
     - name: Samples
-      href: samples/index.yml
+      href: samples/index.md
