@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/16/2019
-no-loc: [Xamarin, Xamarin.Forms, Xamarin.Android, Xamarin.Essentials, Xamarin.iOS, Xamarin.Mac]
+no-loc: [Xamarin, "Xamarin.Forms", "Xamarin.Android", "Xamarin.Essentials", "Xamarin.iOS", "Xamarin.Mac"]
 ---
 # Xamarin.Forms Requirements
 
