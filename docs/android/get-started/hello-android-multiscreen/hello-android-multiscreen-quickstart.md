@@ -353,7 +353,7 @@ should resemble the following code:
 translateButton.Click += (sender, e) =>
 {
     // Translate user's alphanumeric phone number to numeric
-    translatedNumber = PhonewordTranslator.ToNumber(phoneNumberText.Text);
+    translatedNumber = Core.PhonewordTranslator.ToNumber(phoneNumberText.Text);
     if (string.IsNullOrWhiteSpace(translatedNumber))
     {
         translatedPhoneWord.Text = "";
