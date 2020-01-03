@@ -15,6 +15,8 @@ XAML Hot Reload plugs into your existing workflow to increase your productivity 
 
 > [!NOTE]
 > If you're writing a WPF or UWP app, see [XAML Hot Reload for UWP and WPF](/visualstudio/debugger/xaml-hot-reload).
+>
+> XAML Hot Reload for Xamarin.Forms does _not_ currently work for Xamarin.Forms UWP projects.
 
 ## System requirements
 
@@ -44,6 +46,7 @@ If you make a change that XAML Hot Reload can't reload, it will show you an erro
 - Any references created by assigning a control to another field or property using its `x:Name` value won't be reloaded.
 - Updating the visual hierarchy of your Shell application in **AppShell.xaml** can cause issues maintaining the state of your application. Rebuild the app to continue reloading.
 - XAML Hot Reload can't reload C# code, including event handlers, custom controls, page code-behind, and additional classes.
+- Does _not_ work on other Xamarin.Forms-supported platforms (such as mac OS or UWP).
 
 ## Migrate from the private preview
 
