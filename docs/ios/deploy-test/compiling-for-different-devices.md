@@ -32,11 +32,15 @@ Visual Studio for Mac lets you configure two important properties related to the
 
 The iOS **SDK version** option lets you use different
 versions of an Apple published SDK, this directs Xamarin.iOS to the compilers,
-linkers and libraries it should reference during your build. 
+linkers and libraries it should reference during your build. Right-click on the project and choose **Options**, then **iOS Build** in the options window:
+
+[![Choose the SDK version on the options window](compiling-for-different-devices-images/sdk-version-sml.png)](compiling-for-different-devices-images/sdk-version.png#lightbox)
 
 The **Deployment Target** setting is used to select the minimum
-required version of the operating system on which your application will run. This is set in your Project's Info.plist file. You should pick the
+required version of the operating system on which your application will run. This is set in your project's **Info.plist** file. You should pick the
 minimum version that has all the APIs that you need to run your application.
+
+[![Set the deployment target in the Info.plist file](compiling-for-different-devices-images/deployment-target-sml.png)](compiling-for-different-devices-images/deployment-target.png#lightbox)
 
 In general, the Xamarin.iOS API exposes all the methods available in the latest
 version of the SDK, and when necessary, we provide convenience properties that
