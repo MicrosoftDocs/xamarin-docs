@@ -587,6 +587,10 @@
     {
       "source_path": "docs/android/troubleshooting/errors.md",
       "redirect_url": "/xamarin/android/errors-and-warnings/"
+    },
+    {
+      "source_path": "docs/ios/user-interface/controls/uiwebview.md",
+      "redirect_url": "/xamarin/ios/user-interface/controls/webview/"
     }
   ]
 }

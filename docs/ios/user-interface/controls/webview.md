@@ -1,6 +1,6 @@
 ---
 title: "Web Views in Xamarin.iOS"
-description: "This document describes the various ways a Xamarin.iOS app can display web content. It discusses UIWebView, WKWebView, SFSafariViewController, Safari, and app transport security."
+description: "This document describes the various ways a Xamarin.iOS app can display web content. It discusses WKWebView, SFSafariViewController, Safari, and app transport security."
 ms.prod: xamarin
 ms.assetid: 84886CF4-2B2B-4540-AD92-7F0B791952D1
 ms.technology: xamarin-ios
@@ -13,35 +13,7 @@ ms.date: 03/22/2017
 
 Over the lifetime of iOS Apple has released a number of ways for app developers to incorporate web view functionality in their apps. Most users utilize the built-in Safari web browser on their iOS device, and therefore expect that web-view functionality from other apps is consistent with this experience. They expect the same gestures to work, the performance to be on par, and the functionality the same.
 
-In this article, we will explore each of the three Web Views provided by Apple: `UIWebView`, `WKWebview`, and `SFSafariViewController`, their similarities and differences, and how they can be used. 
-
 iOS 11 introduced new changes to both `WKWebView` and `SFSafariViewController`. For more information on these, see the [Web changes in iOS 11 guide](~/ios/platform/introduction-to-ios11/web.md) guide.
-
-## UIWebView
-
-`UIWebView` is Apple's legacy way of providing web content in your app. It was released in iOS 2.0, and has been deprecated as of 8.0.
-
-If you plan to support iOS versions earlier than 8.0, you will have to use `UIWebView`. Due to the fact that `UIWebView` is less optimized for performance than the alternatives, it is recommended that you should check the user's iOS version. If it 8.0 or above, using either of the options explain below will create a better user experience.
-
-To add a UIWebView to your Xamarin.iOS app, use the following code:
-
-```
-webView = new UIWebView (View.Bounds);
-View.AddSubview(webView);
-
-var url = "https://xamarin.com"; // NOTE: https secure request
-webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
-```
-
-This produces the following web view:
-
-[![](uiwebview-images/webview.png "The effect of ScalesPagesToFit")](uiwebview-images/webview.png#lightbox)
-
-For more information on using `UIWebView`, refer to the following recipes:
-
-- [Load a Web Page](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_a_web_page)
-- [Load Local Content](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_local_content)
-- [Load Non-Web Documents](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/load_non-web_documents)
 
 ## WKWebView
 
@@ -52,25 +24,19 @@ For more information on using `UIWebView`, refer to the following recipes:
 The code below can be used to launch a `WKWebView` in your Xamarin.iOS app:
 
 ```csharp
-    WKWebView webView = new WKWebView(View.Frame, new WKWebViewConfiguration());
-    View.AddSubview(webView);
+WKWebView webView = new WKWebView(View.Frame, new WKWebViewConfiguration());
+View.AddSubview(webView);
 
-    var url = new NSUrl("https://xamarin.com");
-    var request = new NSUrlRequest(url);
-    webView.LoadRequest(request);
+var url = new NSUrl("https://docs.microsoft.com");
+var request = new NSUrlRequest(url);
+webView.LoadRequest(request);
 ```
 
-This produces the following web view:
+It is important to note that `WKWebView` is in the `WebKit` namespace, so you will have to add this using directive to the top of your class.
 
-[![](uiwebview-images/wkwebview.png "An example web view without ScalesPagesToFit")](uiwebview-images/wkwebview.png#lightbox)
+`WKWebView` can also be used in Xamarin.Mac apps, and you should use it if you are creating a cross-platform Mac/iOS app.
 
-It is important to note that `WKWebView` is in the WebKit namespace, so you will have to add this using directive to the top of your class.
-
-`WKWebView` can also be used within Xamarin.Mac apps, and you therefore may want to consider using it if you are creating a cross-platform Mac/iOS app.
-
-The [Handle JavaScript Alerts](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/handle_javascript_alerts) recipe also provides information on using WKWebView with Javascript
-
-<a name="safariviewcontroller" />
+The [Handle JavaScript Alerts](https://github.com/xamarin/recipes/tree/master/Recipes/ios/content_controls/web_view/handle_javascript_alerts) recipe also provides information on using WKWebView with Javascript.
 
 ## SFSafariViewController
 
@@ -92,22 +58,21 @@ PresentViewController(sfViewController, true, null);
 
 This produces the following web view:
 
-[![](uiwebview-images/sfsafariviewcontroller.png "An example web view with SFSafariViewController")](uiwebview-images/sfsafariviewcontroller.png#lightbox)
+[![An example web view with SFSafariViewController](webview-images/sfsafariviewcontroller.png)](webview-images/sfsafariviewcontroller.png#lightbox)
 
 ## Safari
 
 It is also possible to open the mobile Safari app from within your app, by using the code below:
 
 ```csharp
-var url = new NSUrl("https://xamarin.com");
+var url = new NSUrl("https://docs.microsoft.com");
 
 UIApplication.SharedApplication.OpenUrl(url);
-
 ```
 
 This produces the following web view:
 
-[![](uiwebview-images/safari.png "A web page presented in Safari")](uiwebview-images/safari.png#lightbox)
+[![A web page presented in Safari](webview-images/safari.png)](webview-images/safari.png#lightbox)
 
 Navigating users away from your app to Safari should generally always be avoided. Most users will not expect navigation outside of your application, so if you navigate away from your app, users may never return it, essentially killing engagement.
 
@@ -118,6 +83,30 @@ iOS 9 improvements allow the user to easily return to your app through a back bu
 App Transport Security, or *ATS* was introduced by Apple in iOS 9 to ensure that all internet communications conform to secure connection best practices.
 
 For more information on ATS, including how to implement it in your app, refer to the [App Transport Security](~/ios/app-fundamentals/ats.md) guide.
+
+## UIWebView (deprecated)
+
+> [!IMPORTANT]
+> [Apple's `UIWebView` documentation](https://developer.apple.com/documentation/uikit/uiwebview) indicates that the control
+> is deprecated. All apps should use [`WKWebKit`](#wkwebview) instead.
+
+`UIWebView` is Apple's legacy way of providing web content in your app. It was released in iOS 2.0, and has been deprecated as of 8.0.
+
+If you plan to support iOS versions earlier than 8.0, you will have to use `UIWebView`. Due to the fact that `UIWebView` is less optimized for performance than the alternatives, it is recommended that you should check the user's iOS version. If it 8.0 or above, using either of the options explain below will create a better user experience.
+
+To add a UIWebView to your Xamarin.iOS app, use the following code:
+
+```csharp
+webView = new UIWebView (View.Bounds);
+View.AddSubview(webView);
+
+var url = "https://docs.microsoft.com"; // NOTE: https secure request
+webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
+```
+
+This produces the following web view:
+
+[![The effect of ScalesPagesToFit](webview-images/webview.png)](webview-images/webview.png#lightbox)
 
 ## Related Links
 
