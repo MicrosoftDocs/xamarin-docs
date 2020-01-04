@@ -17,7 +17,7 @@ Most applications have some requirement to save data on the device locally. Unle
 
 ## [iCloud](~/ios/data-cloud/introduction-to-icloud.md)
 
-The iCloud storage API in iOS 5 allows applications to save user documents and application-specific data to a central location and access those items from all the user's devices.
+The iCloud storage API allows applications to save user documents and application-specific data to a central location and access those items from all the user's devices.
 
 ## [CloudKit](~/ios/data-cloud/intro-to-cloudkit.md)
 
