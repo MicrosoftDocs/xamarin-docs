@@ -39,6 +39,7 @@ Icon Guide:
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
 | [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
 | [App Information](app-information.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
+| [App Theme](app-theme.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ✔ | ❌ |
 | [Barometer](barometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
 | [Battery](battery.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ⚠ | ⚠ |
 | [Clipboard](clipboard.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
@@ -60,6 +61,7 @@ Icon Guide:
 | [Maps](maps.md?content=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
 | [Open Browser](open-browser.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
 | [Orientation Sensor](orientation-sensor.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
+| [Permissions](permissions.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ⚠ | ✔ | ✔ | ✔ |
 | [Phone Dialer](phone-dialer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
 | [Platform Extensions](platform-extensions.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
 | [Preferences](preferences.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |

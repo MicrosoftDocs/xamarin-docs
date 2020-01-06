@@ -4,7 +4,7 @@ description: "The ColorConverters class in Xamarin.Essentials provides several h
 ms.assetid: B10428D6-89E2-4714-A39F-7E6E626391B2
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 03/13/2019
+ms.date: 01/06/2020
 ---
 
 # Xamarin.Essentials: Color Converters
@@ -28,7 +28,7 @@ When working with `System.Drawing.Color` you can use the built in converters of 
 ```csharp
 var blueHex = ColorConverters.FromHex("#3498db");
 var blueHsl = ColorConverters.FromHsl(204, 70, 53);
-var blueUInt = ColorConverers.FromUInt(3447003);
+var blueUInt = ColorConverters.FromUInt(3447003);
 ```
 
 ## Using Color Extensions
@@ -44,12 +44,13 @@ var blueWithAlpha = blue.MultiplyAlpha(.5f);
 
 There are several other extension methods including:
 
-- ToUInt
+- GetComplementary
 - MultiplyAlpha
-- WithHue
+- ToUInt
 - WithAlpha
-- WithSaturation
+- WithHue
 - WithLuminosity
+- WithSaturation
 
 ## Using Platform Extensions
 

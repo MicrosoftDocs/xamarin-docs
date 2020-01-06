@@ -4,7 +4,7 @@ description: "This document describes the Clipboard class in Xamarin.Essentials,
 ms.assetid: C52AE99A-0FB3-425D-9106-3DA5777FEFA0
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 02/12/2019
+ms.date: 01/06/2020
 ms.custom: video
 ---
 
@@ -40,6 +40,24 @@ To read text from the **Clipboard**:
 
 ```csharp
 var text = await Clipboard.GetTextAsync();
+```
+
+Whenever any of the clipboard's content has changed an event is triggered:
+
+```csharp
+public class ClipboardTest
+{
+    public ClipboardTest()
+    {
+        // Register for clipboard changes, be sure to unsubscribe when needed
+        Clipboard.ClipboardContentChanged += OnClipboardContentChanged;
+    }
+
+    void OnClipboardContentChanged(object sender, EventArgs    e)
+    {
+        Console.WriteLine($"Last clipboard change at {DateTime.UtcNow:T}";);
+    }
+}
 ```
 
 > [!TIP]
