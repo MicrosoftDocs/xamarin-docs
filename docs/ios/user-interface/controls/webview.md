@@ -90,7 +90,7 @@ For more information on ATS, including how to implement it in your app, refer to
 > `UIWebView` is deprecated. Apps using this control will [not be accepted into the 
 > App Store as of April 2020, and existing apps need to remove it by December 2020](https://developer.apple.com/news/?id=12232019b).
 > 
-> [Apple's `UIWebView` documentation](https://developer.apple.com/documentation/uikit/uiwebview) suggests apps should use [`WKWebKit`](#wkwebview) instead.
+> [Apple's `UIWebView` documentation](https://developer.apple.com/documentation/uikit/uiwebview) suggests apps should use [`WKWebView`](#wkwebview) instead.
 
 `UIWebView` is Apple's legacy way of providing web content in your app. It was released in iOS 2.0, and has been deprecated as of 8.0.
 
