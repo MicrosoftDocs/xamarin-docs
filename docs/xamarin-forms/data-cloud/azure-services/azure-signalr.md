@@ -226,7 +226,7 @@ public async Task ConnectAsync()
 ```
 
 > [!NOTE]
-> The SignalR client uses `System.Text.Json` to serialize and deserialize JSON by default. Data serialized with other libraries, such as Newtonsoft, may fail to be deserialized by the SignalR client. The `HubConnection` instance in the sample project includes a call to `AddNewtonsoftJsonProtocol` to specify the JSON serializer. This method is defined in a special Nuget package called **Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson** that must be included in the project. If you are using `System.Text.Json` to serialize/deserialize JSON data, this method and Nuget package should not be used.
+> The SignalR service uses `System.Text.Json` to serialize and deserialize JSON by default. Data serialized with other libraries, such as Newtonsoft, may fail to be deserialized by the SignalR service. The `HubConnection` instance in the sample project includes a call to `AddNewtonsoftJsonProtocol` to specify the JSON serializer. This method is defined in a special Nuget package called **Microsoft.AspNetCore.SignalR.Protocols.NewtonsoftJson** that must be included in the project. If you are using `System.Text.Json` to serialize/deserialize JSON data, this method and Nuget package should not be used.
 
 The `AddNewMessage` method is bound as the event handler in the `ConnectAsync` message as shown in the previous code. When a message is received, the `AddNewMessage` method is called with the message data provided as a `JObject`. The `AddNewMessage` method converts the `JObject` to an instance of the `Message` class and then invokes the handler for `NewMessageReceived` if one has been bound. The following code shows the `AddNewMessage` method:
 
