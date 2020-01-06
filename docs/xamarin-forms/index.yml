@@ -211,7 +211,7 @@ conceptualContent:
           url: ~/xamarin-forms/internals/sourcelink.md
           itemType: concept
       footerLink:
-        url: ~/xamarin-forms/internals/index.yml
+        url: ~/xamarin-forms/internals/index.md
         text: See more
 
 additionalContent:

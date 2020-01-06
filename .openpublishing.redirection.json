@@ -591,6 +591,10 @@
     {
       "source_path": "docs/ios/user-interface/controls/uiwebview.md",
       "redirect_url": "/xamarin/ios/user-interface/controls/webview/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/internals/net-standard.md",
+      "redirect_url": "/xamarin/cross-platform/app-fundamentals/net-standard/"
     }
   ]
 }

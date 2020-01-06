@@ -178,7 +178,7 @@ additionalContent:
             - text: Deployment & testing
               url: ~/xamarin-forms/deploy-test/index.yml
             - text: Advanced concepts & internals
-              url: ~/xamarin-forms/internals/index.yml
+              url: ~/xamarin-forms/internals/index.md
             - text: Samples
               url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms
         - title: Android
