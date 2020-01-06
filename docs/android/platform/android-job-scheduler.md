@@ -38,7 +38,7 @@ The Android Job Scheduler is a framework built in to the Android operating syste
 
 To schedule work with the Android Job Scheduler, a Xamarin.Android application must encapsulate the code in a class that extends the `JobService` class. `JobService` has three lifecycle methods that can be called during the lifetime of the job:
 
-- **bool OnStartJob(JobParameters parameters)** &ndash; This method is called by the `JobScheduler` to perform work, and runs on the main thread of the application. It is the responsibility of the `JobService` to asynchronously perform the work and  `true` if there is work remaining, or `false` if the work is done.
+- **bool OnStartJob(JobParameters parameters)** &ndash; This method is called by the `JobScheduler` to perform work, and runs on the main thread of the application. It is the responsibility of the `JobService` to asynchronously perform the work and return `true` if there is work remaining, or `false` if the work is done.
     
     When the `JobScheduler` calls this method, it will request and retain a wakelock from Android for the duration of the job. When the job is finished, it is the responsibility of the `JobService` to tell the `JobScheduler` of this fact by call the `JobFinished` method (described next).
 
