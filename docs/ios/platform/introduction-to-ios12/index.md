@@ -4,8 +4,8 @@ description: "This document provides a high-level description of some iOS 12 API
 ms.prod: xamarin
 ms.assetid: 99EA7090-315D-493C-87D3-26AB73D9E1A9
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/08/2018
 ---
 # Introduction to iOS 12

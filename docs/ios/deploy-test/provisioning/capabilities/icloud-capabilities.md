@@ -4,8 +4,8 @@ description: "Adding capabilities to an application often requires additional pr
 ms.prod: xamarin
 ms.assetid: 3CBAC982-D8DE-48DD-97CD-32B551D9DB85
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
 ---
 
@@ -89,7 +89,7 @@ To create a new App ID and add a container to it, do the following:
     ![Select container screen](icloud-capabilities-images/image34.png)
 
 10. Confirm the Container assignments, and press **Assign**.
- 
+
 This App ID can now be used to generate, or to re-generate, a new provisioning profile, as described in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide. 
 
 For more information on using iCloud, refer to the following guides:
@@ -99,7 +99,7 @@ For more information on using iCloud, refer to the following guides:
 * [Introduction to Document Picker](~/ios/platform/document-picker.md)
 
 ## Next Steps
- 
+
 The list below describes additional steps that may need to be taken:
 
 * Use the framework namespace in your app.

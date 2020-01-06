@@ -4,8 +4,8 @@ description: "This walkthrough provides a step-by-step explanation of how to use
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/31/2018
 ---
 
@@ -39,7 +39,6 @@ are generated from FCM messages that you enter into the Firebase
 Console Notifications GUI.
 
 ## Requirements
-
 
 It will be helpful to familiarize yourself with the [different types of messages](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) that can be sent by Firebase Cloud Messaging. The payload of the message will determine how a client app will receive and process the message.
 
@@ -81,6 +80,8 @@ In [Firebase Cloud Messaging](~/android/data-cloud/google-messaging/firebase-clo
 you specified a package name for the FCM-enabled app. This package name
 also serves as the [*application ID*](./firebase-cloud-messaging.md#fcm-in-action-app-id) that is associated with the [API
 key](firebase-cloud-messaging.md#fcm-in-action-api-key). Configure the app to use this package name:
+
+<!-- markdownlint-disable MD001 -->
 
 # [Visual Studio](#tab/windows)
 
@@ -249,7 +250,6 @@ merged/generated **AndroidManifest.xml** that resides at
 automatically adds any permissions and other FCM elements that are
 needed for connection to FCM servers.
 
-
 ## Check for Google Play Services and create a notification channel
 
 Google recommends that Android apps check for the presence of the
@@ -281,7 +281,6 @@ following XML:
 This `TextView` will be used to display messages that indicate whether
 Google Play Services is installed. Save the changes to **Main.axml**.
 
-
 Edit **MainActivity.cs** and add the following instance variables
  to the `MainActivity` class:
 
@@ -297,7 +296,6 @@ public class MainActivity : AppCompatActivity
 ```
 
 The variables `CHANNEL_ID` and `NOTIFICATION_ID` will be used in the method [`CreateNotificationChannel`](#create-notification-channel-code) that will be added to `MainActivity` later on in this walkthrough.
-
 
 In the following example, the `OnCreate` method will verify that Google
 Play Services is available before the app attempts to use FCM services.
@@ -389,7 +387,6 @@ is installed on your device (for more information, see
 Also verify that you have added the
 **Xamarin.Google.Play.Services.Base** package to your **FCMClient**
 project as explained earlier.
-
 
 ## Add the instance ID receiver
 
@@ -593,7 +590,6 @@ fired, the `click_action` field of the notification message must be set
 to that `Intent` (the launcher `Intent` is used when no `click_action`
 is specified).
 
-
 ## Background notifications
 
 Build and run the **FCMClient** app. The **Log Token** button is displayed:
@@ -662,7 +658,6 @@ of the app (in this example, `41590732`), and the **collapse_key** is
 set to its package name (**com.xamarin.fcmexample**).
 If you do not receive a message, try deleting the **FCMClient** app on
 the device (or emulator) and repeat the above steps.
-
 
 > [!NOTE]
 > If you force-close the app, FCM will stop delivering
@@ -854,7 +849,6 @@ Log.Debug(TAG, "Notification Message Body: " + body);
 > your debugging session may or may not hit these breakpoints because of
 > how FCM delivers messages.
 
-
 ### Send another message
 
 Uninstall the app, rebuild it, run it again, and follow these steps to
@@ -879,7 +873,6 @@ send another message:
 6. The incoming message is logged to the IDE output window:
 
     [![Message body printed to output window](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
-
 
 ### Add a local notification sender
 
@@ -957,9 +950,9 @@ notification will appear in the notification area.
 
 When an app is in the background, the [payload of the message](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) will determine how the message is handled:
 
-* **Notification** &ndash; messages will be sent to the **system tray**. A local notification will appear there. When the user taps on the notification the app will launch.
-* **Data** &ndash; messages will be handled by `OnMessageReceived`.
-* **Both** &ndash; messages that have both a notification and data payload will be delivered to the system tray. When the app launches, the data payload will appear in the `Extras` of the `Intent` that was used to start the app.
+- **Notification** &ndash; messages will be sent to the **system tray**. A local notification will appear there. When the user taps on the notification the app will launch.
+- **Data** &ndash; messages will be handled by `OnMessageReceived`.
+- **Both** &ndash; messages that have both a notification and data payload will be delivered to the system tray. When the app launches, the data payload will appear in the `Extras` of the `Intent` that was used to start the app.
 
 In this example, if the app is backgrounded, `SendNotification` will run if the message has a data payload. Otherwise, a background notification (illustrated earlier in this walkthrough) will be launched.
 
@@ -992,7 +985,6 @@ When you open the notification, you should see the last message that
 was sent from the Firebase Console Notifications GUI:
 
 [![Foreground notification shown with foreground icon](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
-
 
 ## Disconnecting from FCM
 
@@ -1027,7 +1019,6 @@ This method call deletes the instance ID and the data associated
 with it. As a result, the periodic sending of FCM data to the device is
 halted.
 
-
 ## Troubleshooting
 
 The following describe issues and workarounds that may arise when using
@@ -1061,7 +1052,6 @@ how to subscribe to topic messages, and it provided an example
 implementation of a message listener service that is used to receive
 and display remote notifications while the app is running in the
 foreground.
-
 
 ## Related links
 

@@ -4,8 +4,8 @@ description: "This guide explores setting up the Xamarin.iOS environment for use
 ms.prod: xamarin
 ms.assetid: A25AE660-B145-465F-9CCE-8D82BFD614C6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
 ---
 
@@ -47,9 +47,8 @@ transaction does not go through Apple at all, instead, it goes through a Payment
 ## Using a Payment Processor Platform
 
 One of the fundamental parts of Apple Pay is the processing of payments. While it
-is possible to do this yourself, it requires significant knowledge of cryptography
-- as detailed in Apple’s [Payment Processing
-guide](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html).
+is possible to do this yourself, it requires significant knowledge of
+cryptography - as detailed in Apple’s [Payment Processing guide](https://developer.apple.com/library/ios/ApplePay_Guide/ProcessPayment.html).
 Payment processing platforms, on the other hand, handle these operations for you, allowing you
 to concentrate on building your app.
 
@@ -88,7 +87,6 @@ New to iOS 10, the developer can incorporate Apple Pay directly into their websi
 ### PassKit Framework Enhancements
 
 In iOS 10, the PassKit framework has been expanded to support Apple Pay outside of `UIKit` and to allow card issuers to present their own cards from within their apps.
-
 
 #### Supporting Apple Pay Outside of UIKit
 

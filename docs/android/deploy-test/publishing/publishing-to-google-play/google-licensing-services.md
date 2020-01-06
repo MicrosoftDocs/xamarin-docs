@@ -3,8 +3,8 @@ title: "Google Licensing Services"
 ms.prod: xamarin
 ms.assetid: E96BDCC3-454A-A797-5819-905E2BB1AC41
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/20/2017
 ---
 
@@ -51,7 +51,6 @@ Google Licensing service is also a key component of APK expansion files
 (which are discussed later in this document). APK expansion files utilize Google
 Licensing services to obtain the URLs of the expansion files that will be
 downloaded.
-
 
 ## Requirements
 

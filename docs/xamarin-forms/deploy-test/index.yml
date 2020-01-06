@@ -1,63 +1,44 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Xamarin.Forms Deployment and Testing
+### YamlMime:Landing
+
+title: Xamarin.Forms deployment and testing
+summary: Learn how to stabilize and publish Xamarin.Forms applications.
+
 metadata:
-  title: Xamarin.Forms Deployment and Testing
-  description: Learn how to stabilize and publish Xamarin.Forms applications. This includes tuning performance, and automating testing with Xamarin.UITest and App Center.
+  title: Xamarin.Forms deployment and testing
+  description: Learn how to stabilize and publish Xamarin.Forms applications. This includes tuning performance, and automating testing with Xamarin.UITest and Visual Studio App Center.
   ms.topic: landing-page
   ms.prod: xamarin
   ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/23/2019
-abstract:
-  description: Learn how to stabilize and publish Xamarin.Forms applications. This includes tuning performance, and automating testing with Xamarin.UITest and App Center.
-sections:
-- title: Testing
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: performance.md
-      html: "Learn how to performance tune Xamarin.Forms applications."
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-performance.svg
-        href: performance.md
-      title: Improve App Performance
-    - href: /appcenter/test-cloud/
-      html: "Learn how to automate mobile application testing by running tests on hundreds of unique devices hosted in a Microsoft data center."
-      image:
-        src: https://docs.microsoft.com/media/common/i_test.svg
-        href: /appcenter/test-cloud/
-      title: Automate Testing with Visual Studio App Center
-- title: Deployment
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: ~/ios/deploy-test/app-distribution/index.md
-      html: "Learn how iOS apps can be distributed through Apple's App Store, in-house, and through ad-hoc channels."
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_ios.svg
-        href: ~/ios/deploy-test/app-distribution/index.md
-      title: Publish iOS apps
-    - href: ~/android/deploy-test/publishing/index.md
-      html: "Learn how Android apps can be distributed through channels such as email, a private web server, Google Play, of the Amazon App Store for Android."
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_android.svg
-        href: ~/android/deploy-test/publishing/index.md
-      title: Publish Android apps
-    - href: /windows/uwp/packaging/
-      html: "Learn how UWP apps can be distributed through the Microsoft store, side loading the app package directly to a device, or via Web Install."
-      image:
-        src: https://docs.microsoft.com/media/logos/logo_Windows.svg
-        href: /windows/uwp/packaging/
-      title: Publish Universal Windows Platform apps
-    - href: ~/mac/deploy-test/publishing-to-the-app-store/index.md
-      html: "Learn how Mac apps can be distributed via the Mac App Store, or directly."
-      image:
-        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
-        href: ~/mac/deploy-test/publishing-to-the-app-store/index.md
-      title: Publish Mac apps
+  ms.date: 01/03/2020
+
+landingContent:
+  - title: Testing
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Improve app performance
+            url: performance.md
+          - text: Automate testing with Visual Studio App Center
+            url: /appcenter/test-cloud/
+
+  - title: Deployment
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Publish iOS apps
+            url: ~/ios/deploy-test/app-distribution/index.md
+          - text: Publish Android apps
+            url: ~/android/deploy-test/publishing/index.md
+          - text: Publish Universal Windows Platform apps
+            url: /windows/uwp/packaging/
+
+  - title: Microsoft Learn modules
+    linkLists:
+      - linkListType: learn
+        links:
+          - text: Introduction to App Center
+            url: /learn/modules/intro-to-app-center/
+          - text: Prepare to publish your Xamarin app
+            url: /learn/modules/prepare-to-publish-your-xamarin-application/

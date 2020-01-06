@@ -372,10 +372,10 @@ public partial class SaveFileFormatsPage : ContentPage
     SKBitmap bitmap = BitmapExtensions.LoadBitmapResource(typeof(SaveFileFormatsPage),
         "SkiaSharpFormsDemos.Media.MonkeyFace.png");
 
-	public SaveFileFormatsPage ()
-	{
-		InitializeComponent ();
-	}
+    public SaveFileFormatsPage ()
+    {
+        InitializeComponent ();
+    }
 
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {

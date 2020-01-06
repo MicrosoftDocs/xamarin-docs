@@ -4,8 +4,8 @@ description: "The Wallet app allows iOS users to store digital passes on their d
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2018
 ---
 
@@ -91,7 +91,6 @@ app by the layout and top edge of the pass:
 - **Coupon** – perforated along the top.
 - **Generic** – same as Store Card, rounded top.
 
-
 The five pass types are shown in this screenshot (in order: coupon, generic,
 store card, boarding pass and event ticket):
 
@@ -129,7 +128,7 @@ pieces of information in every pass are:
 There is a large number of other JSON keys in each Pass, an example of which
 is shown below:
 
-``` 
+```
 {
    "passTypeIdentifier":"com.xamarin.passkitdoc.banana",  //Type Identifier (iOS Provisioning Portal)
    "formatVersion":1,                                     //Always 1 (for now)
@@ -244,12 +243,10 @@ Provisioning Portal. The steps to sign the pass are:
 1. Use the certificate to sign the  `manifest.json` file and write the result to a file called  `signature` .
 1. ZIP the everything up and give the resulting file a `.pkpass` file extension.
 
-
 Because your private key is required to sign the pass, this process should
 only be done on a secure server that you control. DO NOT distribute your keys to
 try and generate passes in an application.
 
- 
 ## Configuration and Setup
 
 This section contains instructions to help setup your provisioning details
@@ -274,7 +271,6 @@ The first step is to set up a Pass Type ID for each different _type_ of pass to 
 2. Provide a **Description** (name) and **Identifier** (unique string) for the Pass. Note that all Pass Type IDs must begin with the string `pass.` In this example we use `pass.com.xamarin.coupon.banana` :
   [![](passkit-images/register.png "Provide a Description and Identifier")](passkit-images/register.png#lightbox)
 
-
 3. Confirm the Pass ID by pressing the **Register** button.
 
 #### Generate A Certificate
@@ -288,13 +284,11 @@ To create a new Certificate for this Pass Type ID, do the following:
 
     [![](passkit-images/cert-dist.png "Select Create Certificate")](passkit-images/cert-dist.png#lightbox)
 
-
 2. Follow the steps to create a Certificate Signing Request (CSR).
   
 3. Press the **Continue** button on the developer portal and upload the CSR to generate your certificate.
 
 4. Download the certificate and double-click on it to install it in your keychain.
-
 
 Now that we have created a certificate for this Pass Type ID, the next
 section describes how to build a pass manually.
@@ -313,7 +307,6 @@ on the simulator or a device. The steps to create a pass are:
 - Sign manifest.json with the downloaded certificate .p12 file.
 - ZIP the directory’s contents and rename with .pkpass extension.
 
-
 There are some source files in the [sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/passkit) for this article that can be
 used to generate a pass. Use the files in the `CouponBanana.raw`
 directory of the CreateAPassManually directory. The following files are
@@ -324,7 +317,7 @@ present:
 Open pass.json and edit the JSON. You must at least update the `passTypeIdentifier` and `teamIdentifer` to match your
 Apple Developer account.
 
-```csharp
+```json
 "passTypeIdentifier" : "pass.com.xamarin.coupon.banana",
 "teamIdentifier" : "?????????",
 ```
@@ -332,7 +325,7 @@ Apple Developer account.
 You must then calculate the hashes for each file and create the `manifest.json` file. It will look something like this when you’re
 done:
 
-```csharp
+```json
 {
   "icon@2x.png" : "30806547dcc6ee084a90210e2dc042d5d7d92a41",
   "icon.png" : "87e9ffb203beb2cce5de76113f8e9503aeab6ecc",
@@ -387,10 +380,10 @@ Features of Wallet include:
 
 Passes can be added to Wallet in the following ways:
 
-* **Conduit Apps** – These do not manipulate passes directly, they simply load pass files
+- **Conduit Apps** – These do not manipulate passes directly, they simply load pass files
 and present the user with the option of adding them to Wallet. 
 
-* **Companion Apps** – These are written by providers to distribute passes and offer
+- **Companion Apps** – These are written by providers to distribute passes and offer
 additional functionality to browse or edit them. Xamarin.iOS applications have
 complete access to the PassKit API to create and manipulate passes. Passes can
 then be added to Wallet using the `PKAddPassesViewController`. This
@@ -407,7 +400,6 @@ include:
 - **Safari** – Recognizes the pass Content-Type when a pass URL link is clicked.
 - **Other custom apps** – Any app that receive attachments or open links (social media clients, mail readers, etc).
 
-
 This screenshot shows how **Mail** in iOS 6 recognizes a
 pass attachment and (when touched) offers to **Add** it to
 Wallet.
@@ -422,7 +414,6 @@ recognized by:
 - **File extension** - .pkpass
 - **MIME Type** - application/vnd.apple.pkpass
 - **UTI** – com.apple.pkpass
-
 
 The basic operation of a conduit application is to retrieve the pass file and
 call PassKit’s `PKAddPassesViewController` to give the user the
@@ -464,7 +455,6 @@ Under the Wallet section, select the **Enable Wallet** option
 
 ![](passkit-images/image32.png "Enable wallet entitlement")
 
-
 The default option is for your app to allow all pass types. However, it is possible to restrict your app and only allow a subset of team pass types. To enable this select the **Allow subset of team pass types** and enter the pass type identifier of the subset that you wish to allow.
 
 # [Visual Studio](#tab/windows)
@@ -492,7 +482,7 @@ options.
 
 If you experience this error when deploying:
 
-```csharp
+```
 Installation failed: Your code signing/provisioning profiles are not correctly configured (error: 0xe8008016)
 ```
 

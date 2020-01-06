@@ -4,8 +4,8 @@ description: "Xamarin.Android supports several CPU architectures, including 32-b
 ms.prod: xamarin
 ms.assetid: D4BC889D-9164-49BB-9B7B-F6C4E4E109F1
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2019
 ---
 
@@ -23,7 +23,6 @@ Interface* (ABI). Each ABI defines how this machine code is expected to
 interact with Android at run time.
 For more information about how this works, see
 [Multi-Core Devices &amp; Xamarin.Android](~/android/deploy-test/multicore-devices.md).
-
 
 ## How to Specify Supported Architectures
 
@@ -62,7 +61,6 @@ check the ABIs for the architectures that you want to support:
 [![Selecting armeabi and armeabi-v7a](cpu-architectures-images/xs/01-abi-selections-sml.png)](cpu-architectures-images/xs/01-abi-selections.png#lightbox)
 
 -----
-
 
 Xamarin.Android supports the following architectures:
 
@@ -104,7 +102,7 @@ to create a separate APK for each supported architecture.
 You do not have to select **arm64-v8a** or **x86_64** to
 target 64-bit devices; 64-bit support is not required to run
 your app on 64-bit hardware. For example, 64-bit ARM devices (such as
-the [Nexus 9](http://www.google.com/nexus/9/)) can run apps configured for
+the [Nexus 9](https://www.google.com/nexus/9/)) can run apps configured for
 `armeabi-v7a`. The primary advantage of enabling 64-bit support is to
 make it possible for your app to address more memory.
 

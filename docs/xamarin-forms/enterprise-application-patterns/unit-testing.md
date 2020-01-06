@@ -221,7 +221,6 @@ The behavior of an object under test can be isolated by replacing dependent obje
 
 Testing models and view models from MVVM applications is identical to testing any other classes, and the same tools and techniques can be used.
 
-
 ## Related Links
 
 - [Download eBook (2Mb PDF)](https://aka.ms/xamarinpatternsebook)

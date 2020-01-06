@@ -4,8 +4,8 @@ description: "This article walks through the installation steps and configuratio
 ms.prod: xamarin
 ms.assetid: 3BB395FA-0545-4024-A18F-98CF5E9CA55F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 
@@ -49,7 +49,6 @@ so that you're ready to build and test Android Wear apps:
 
 These steps are described in the following sections.
 
-
 ### Install Android SDK and tools 
 
 Launch the **Android SDK Manager**: 
@@ -64,12 +63,11 @@ Launch the **Android SDK Manager**:
 
 -----
 
-
 Ensure that you have the following Android SDK and tools installed:
 
-* Android SDK Tools v 24.0.0 or higher, and
-* Android 4.4W (API20), or
-* Android 5.0.1 (API21) or higher.
+- Android SDK Tools v 24.0.0 or higher, and
+- Android 4.4W (API20), or
+- Android 5.0.1 (API21) or higher.
 
 If you do not have the latest SDK and tools installed, download the 
 required SDK tools *and* the API bits (you may need to scroll a bit to 
@@ -85,12 +83,10 @@ find them &ndash; the API selection is shown below):
 
 -----
 
-
 ## Configuration
 
 Before you can use test your app, you must configure an Android Wear 
 emulator or an actual Android Wear device. 
-
 
 ### Android Wear Emulator
 
@@ -110,7 +106,6 @@ Wear Android Virtual Device (AVD) using the **Google Emulator Manager**:
 For more information about setting up an Android Wear emulator, see
 [Debug Android Wear on an Emulator](~/android/wear/deploy-test/debug-on-emulator.md).
 
-
 ### Android Wear Device
 
 If you have an Android Wear device such as an Android Wear Smartwatch,
@@ -118,12 +113,10 @@ You can debug the app on this device instead of using an emulator. For
 information about developing with a Wear device, see
 [Debug on a Wear Device](~/android/wear/deploy-test/debug-on-device.md).
 
-
 ## Create Your First Android Wear App
 
 Follow the [Hello, Wear](~/android/wear/get-started/hello-wear.md) 
 instructions to build your first watch app.
-
 
 ## Packaging Your App
 
@@ -138,7 +131,6 @@ can easily ship your apps to Google Play.
 
 To learn more about packaging Wear apps, see
 [Working with Packaging](~/android/wear/deploy-test/packaging.md).
-
 
 ## Related Links
 

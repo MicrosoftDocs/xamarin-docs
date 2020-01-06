@@ -4,8 +4,8 @@ description: "This document describes various framework changes introduced with 
 ms.prod: xamarin
 ms.assetid: FE93796E-F699-4B14-B37D-D39F9D48E81E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -14,7 +14,6 @@ ms.date: 03/17/2017
 _This article covers additional, minor changes or enhancements to existing frameworks for watchOS 3._
 
 In addition to the major changes to iOS, Apple has made modifications and improvements to several existing frameworks in watchOS 3.
-
 
 ## Core Data
 
@@ -28,14 +27,12 @@ The following enhancements have be made to the Core Data framework for watch OS 
 
 For more information, please see Apple's [Core Data Framework Reference](https://developer.apple.com/reference/coredata).
 
-
 ## Core Motion
 
 The following enhancements have be made to the Core Motion framework for watch OS 3:
 
 - The new Device Motion event uses the accelerometer and gyroscope to provide motion and orientation updates. The app can register for this update (at rates of up to 100Hz).
 - The new Pedometer event enables fast, real-time notifications when the user pauses and resumes running. Use the [CMPedometer](https://developer.apple.com/reference/coremotion/cmpedometer) to register for foreground or background pedometer events.
-
 
 ## Foundation
 
@@ -47,7 +44,6 @@ The following enhancements have be made to the Foundation framework for watch OS
 - Use the new [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) class to format localized measurements for displaying to the end user.
 - Use the new [NSUnit](https://developer.apple.com/reference/foundation/nsunit) and [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) classes for representing specific UOMs.
 
-
 ## HealthKit
 
 The following enhancements have be made to the HealthKit framework for watch OS 3:
@@ -55,7 +51,6 @@ The following enhancements have be made to the HealthKit framework for watch OS 
 - Use the new [HKWorkoutConfiguration](https://developer.apple.com/reference/healthkit/hkworkoutconfiguration) class to specify the `ActivityType` and `LocationType` of a workout.
 - The new [HKWheelchairUseObject](https://developer.apple.com/reference/healthkit/hkwheelchairuseobject) and the `WheelchairUse` method of the [HKHealthStore](https://developer.apple.com/reference/healthkit/hkhealthstore) class have been added for working with wheelchair related health data.
 - New metadata keys have been added for weather types (such as `HKWeatherConditionClear` and `HKWeatherConditionCloudy`) and workout types (such as `HKWorkoutActivityTypeFlexibility` and `HKWorkoutActivityTypeWheelchairRunPace`) have been added.
-
 
 ## HomeKit
 
@@ -65,7 +60,6 @@ The following enhancements have be made to the HomeKit framework for watch OS 3:
 - Added several new services and characteristics.
 - Added more context and configuration of the accessories of primary services and link services.
 
-
 ## PassKit
 
 The following enhancements have be made to the PassKit framework for watch OS 3:
@@ -73,14 +67,12 @@ The following enhancements have be made to the PassKit framework for watch OS 3:
 - Expands the framework to support secure, in-app payments on the Apple Watch of both physical goods and services.
 - The following classes are now available: [PKPayment](https://developer.apple.com/reference/passkit/pkpayment), [PKPaymentMethod](https://developer.apple.com/reference/passkit/pkpaymentmethod), [PKPaymentRequest](https://developer.apple.com/reference/passkit/pkpaymentrequest) and [PKPaymentToken](https://developer.apple.com/reference/passkit/pkpaymenttoken)
 
-
 ## UIKit
 
 The following enhancements have be made to the UIKit framework for watch OS 3:
 
 - To support Dynamic Type in labels, text fields and text boxes use the new `PreferredFontForTextStyle` method of the `UIFont` class.
 - The `ColorWithDisplayP3` method was added to support Wide Color.
-
 
 ## Related Links
 

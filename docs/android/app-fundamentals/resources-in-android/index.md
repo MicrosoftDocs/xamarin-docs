@@ -4,15 +4,14 @@ description: "This article introduces the concept of Android resources in Xamari
 ms.prod: xamarin
 ms.assetid: C0DCC856-FA36-04CD-443F-68D26075649E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/01/2018
 ---
 
 # Android Resources
 
 _This article introduces the concept of Android resources in Xamarin.Android and will document how to use them. It covers how to use resources in your Android application to support application localization, and multiple devices including varying screen sizes and densities._
-
 
 ## Overview
 
@@ -49,7 +48,7 @@ Resources is created, along with some subdirectories:
 In the image above, the application resources are organized according
 to their type into these subdirectories: images will go in the
 **drawable** directory; views go in the **layout** subdirectory, etc.
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Resources folder and contents](images/resources-folder-xs.png)
@@ -57,7 +56,7 @@ to their type into these subdirectories: images will go in the
 In the image above, the application resources are organized according
 to their type into these subdirectories: images will go in the
 **mipmap** directory; views go in the **layout** subdirectory, etc.
- 
+
 -----
 
 There are two ways to access these resources in a Xamarin.Android
@@ -96,7 +95,6 @@ This article will take a comprehensive look at using resources and cover the fol
 
 - **Localization** &ndash; Using resources to support the different
    regions an application may be used.
-
 
 ## Related Links
 

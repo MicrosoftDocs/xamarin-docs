@@ -4,8 +4,8 @@ description: "The Cardview widget is a UI component that presents text and image
 ms.prod: xamarin
 ms.assetid: CF12FE85-D03A-4E64-95D2-D7115061A500
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -79,7 +79,6 @@ see [Setting Up an Android 5.0 Project](~/android/platform/lollipop.md).
 For more information about installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
 
-
 ## Introducing CardView
 
 The default `CardView` resembles a white card with minimally rounded
@@ -126,7 +125,6 @@ easier to see. For more information about theming Android 5.0 apps, see
 [Material Theme](~/android/user-interface/material-theme.md). In
 the next section, we'll learn how to customize `CardView` for an
 application.
-
 
 ## Customizing CardView
 
@@ -225,7 +223,6 @@ arranged vertically, you can also arrange them horizontally (see
 [Creating a Custom View Style](~/android/user-interface/material-theme.md#customview)
 for an example screenshot).
 
-
 ### CardView Layout Options
 
 `CardView` layouts can be customized by setting one or more attributes
@@ -241,7 +238,6 @@ Note that these attributes (except for background
 color) accept a dimension value, which is a decimal number followed by
 the unit. For example, `11.5dp` specifies 11.5 density-independent
 pixels.
-
 
 #### Padding
 
@@ -274,8 +270,6 @@ For example, if `contentPadding` were sufficiently increased in the photo
 viewing app, the `CardView` would crop both the image and the text shown
 on the card.
 
-
-
 #### Elevation
 
 `CardView` offers two elevation attributes to control its elevation and,
@@ -299,7 +293,6 @@ The `cardMaxElevation` setting is useful for when your app changes
 elevation dynamically &ndash; it prevents the shadow from extending
 past the limit that you define with this setting.
 
-
 #### Corner Radius and Background Color
 
 `CardView` offers attributes that you can use to control its
@@ -316,7 +309,6 @@ These attributes are explained as follows:
 
 In this diagram, `cardCornerRadius` is set to a more rounded 10dp and
 `cardBackgroundColor` is set to `"#FFFFCC"` (light yellow).
-
 
 ## Compatibility
 
@@ -357,7 +349,6 @@ layout:
 For more information about maintaining compatibility with earlier versions of Android, see
 [Maintaining Compatibility](https://developer.android.com/training/material/compatibility.html).
 
-
 ## Summary
 
 This guide introduced the new `CardView` widget included in Android
@@ -368,7 +359,6 @@ corner roundness, content padding, and background color. It listed the
 how to use `CardView` on Android devices earlier than Android 5.0
 Lollipop. For more information about `CardView`, see the
 [CardView class reference](https://developer.android.com/reference/android/support/v7/widget/CardView.html).
-
 
 ## Related Links
 

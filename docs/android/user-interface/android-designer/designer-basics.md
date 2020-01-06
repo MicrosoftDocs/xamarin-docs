@@ -4,8 +4,8 @@ description: "This topic introduces Xamarin.Android Designer features, explains 
 ms.prod: xamarin
 ms.assetid: 48B20C9A-B2A2-AE82-76B2-A3C1E5A4050D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2018
 ---
 
@@ -14,7 +14,6 @@ ms.date: 09/05/2018
 _This topic introduces Xamarin.Android Designer features, explains how
 to launch the Designer, describes the Design Surface, and details how
 to use the Properties pane to edit widget properties._
-
 
 # [Visual Studio](#tab/windows)
 
@@ -166,7 +165,6 @@ provides several options:
 - **Delete**, **Copy**, and **Cut** &ndash; operations that apply to the
     right-clicked `TextView`.
 
-
 ### Zoom controls
 
 The **Design Surface** supports zooming via several controls as shown:
@@ -270,7 +268,6 @@ right in the previous screenshot). For more information about the
 scrollbar, see 
 [How to Track Your Code by Customizing the Scrollbar](https://msdn.microsoft.com/library/dn237345.aspx).
 
-
 ### Autocompletion
 
 When you begin to type the name of an attribute for a widget, you can
@@ -303,8 +300,6 @@ while clicking the **Framework Resources** button on the right
 restricts the list to display resources available from the framework.
 These buttons toggle on or off: you can click them again to disable the
 filtering action that each provides.
-
-
 
 ## Properties pane
 
@@ -354,7 +349,6 @@ example illustrates the resource selector for the `Src` property of an
 Clicking the blank square to the right of the `Src` property opens the
 **Select Resource** dialog with a list of resources ranging from colors
 (as shown above) to drawables.
-
 
 ### Boolean property references
 
@@ -449,7 +443,6 @@ the resize handles do not appear:
 
 ![No resize handles](designer-basics-images/vs/20-no-resize-handles.png)
 
-
 ## Document Outline
 
 The **Document Outline** displays the widget hierarchy of the layout.
@@ -471,9 +464,6 @@ the **Design Surface** as well as from the **Design Surface** to the
 Outline** displays the context menu for that item (the same context
 menu that appears when you right-click that same widget on the **Design
 Surface**).
-
-
-
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -714,7 +704,6 @@ a small text field icon. You can click on it if you wish to enter the
 value manually.
 
 [![Example of setting boolean properties](designer-basics-images/xs/12-boolean-sml.png)](designer-basics-images/xs/12-boolean.png#lightbox)
-
 
 ## Grouped properties
 

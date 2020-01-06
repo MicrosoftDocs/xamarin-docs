@@ -4,7 +4,7 @@ description: "This document links to various guides that describe Xamarin.Essent
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/22/2019
+ms.date: 08/27/2019
 ---
 
 # Xamarin.Essentials
@@ -58,6 +58,10 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 ## [Troubleshooting](troubleshooting.md?context=xamarin/xamarin-forms)
 
 Find help if you are running into issues.
+
+## [Release Notes](https://docs.microsoft.com/xamarin/essentials/release-notes/)
+
+Find full release notes for each release of Xamarin.Essentials.
 
 ## [API Documentation](xref:Xamarin.Essentials)
 

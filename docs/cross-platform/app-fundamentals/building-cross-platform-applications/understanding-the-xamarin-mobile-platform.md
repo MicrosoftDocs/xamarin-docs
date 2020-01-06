@@ -3,8 +3,8 @@ title: "Part 1 – Understanding the Xamarin Mobile Platform"
 description: "This document describes the Xamarin platform at a high level, looking at the compilation process, platform SDK access, code sharing, user interface creation, visual designers, and more."
 ms.prod: xamarin
 ms.assetid: FBCEF258-D3D8-A420-79ED-3AAB4A7308E4
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -37,7 +37,6 @@ platform:
 - **Android** – C# is compiled to IL and packaged with MonoVM + JIT’ing. Unused classes in the framework are stripped out during linking. The application runs side-by-side with Java/ART (Android runtime) and interacts with the native types via JNI (see  [Xamarin.Android Limitations](~/android/internals/limitations.md) ).
 - **Windows** – C# is compiled to IL and executed by the built-in runtime, and does not require Xamarin tools. Designing Windows applications following Xamarin’s guidance makes it simpler to re-use the code on iOS and Android.
   Note that the Universal Windows Platform also has a **.NET Native** option which behaves similarly to Xamarin.iOS' AOT compilation.
-
 
 The linker documentation for [Xamarin.iOS](~/ios/deploy-test/linker.md) and [Xamarin.Android](~/android/deploy-test/linker.md) provides more
 information about this part of the compilation process.

@@ -3,8 +3,8 @@ title: "User Profile"
 ms.prod: xamarin
 ms.assetid: 6BB01F75-5E98-49A1-BBA0-C2680905C59D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2018
 ---
 
@@ -127,5 +127,5 @@ in Android, and it offers an additional level of device personalization.
 ## Related Links
 
 - [ContactsProviderDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/contactsproviderdemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Introducing Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

@@ -4,8 +4,8 @@ description: "This document describes updates to Core ML available as part of iO
 ms.prod: xamarin
 ms.assetid: 408E752C-2C78-4B20-8B43-A6B89B7E6D1B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/15/2018
 ---
 # Core ML 2 in Xamarin.iOS

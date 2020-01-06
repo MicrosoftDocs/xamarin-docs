@@ -6,7 +6,7 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
+ms.date: 12/04/2019
 ---
 
 # Xamarin.Forms Button
@@ -145,11 +145,11 @@ It is possible for an application to respond to `Button` taps without handling t
 
 This approach is particularly suitable in connection with data-binding, and particularly when implementing the Model-View-ViewModel (MVVM) architecture. These topics are discussed in the articles [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md), [From Data Bindings to MVVM](~/xamarin-forms/xaml/xaml-basics/data-bindings-to-mvvm.md), and [MVVM](~/xamarin-forms/enterprise-application-patterns/mvvm.md).
 
-In an MVVM application, the ViewModel defines properties of type `ICommand` that are then connected to the XAML `Button` elements with data bindings. Xamarin.Forms also defines [`Command`]((xref:Xamarin.Forms.Command)) and [`Command<T>`](xref:Xamarin.Forms.Command`1) classes that implement the `ICommand` interface and assist the ViewModel in defining properties of type `ICommand`.
+In an MVVM application, the viewmodel defines properties of type `ICommand` that are then connected to the XAML `Button` elements with data bindings. Xamarin.Forms also defines [`Command`](xref:Xamarin.Forms.Command) and [`Command<T>`](xref:Xamarin.Forms.Command`1) classes that implement the `ICommand` interface and assist the viewmodel in defining properties of type `ICommand`.
 
 Commanding is described in greater detail in the article [**The Command Interface**](~/xamarin-forms/app-fundamentals/data-binding/commanding.md) but the **Basic Button Command** page in the [**ButtonDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-buttondemos) sample shows the basic approach.
 
-The `CommandDemoViewModel` class is a very simple ViewModel that defines a property of type `double` named `Number`, and two properties of type `ICommand` named `MultiplyBy2Command` and `DivideBy2Command`:
+The `CommandDemoViewModel` class is a very simple viewmodel that defines a property of type `double` named `Number`, and two properties of type `ICommand` named `MultiplyBy2Command` and `DivideBy2Command`:
 
 ```csharp
 class CommandDemoViewModel : INotifyPropertyChanged
@@ -225,7 +225,7 @@ As the two `Button` elements are tapped, the commands are executed, and the numb
 
 [![Basic Button Command](button-images/BasicButtonCommand.png "Basic Button Command")](button-images/BasicButtonCommand-Large.png#lightbox)
 
-The advantage of this approach over `Clicked` handlers is that all the logic involving the functionality of this page is located in the ViewModel rather than the code-behind file, achieving a better separation of the user interface from the business logic.
+The advantage of this approach over `Clicked` handlers is that all the logic involving the functionality of this page is located in the viewmodel rather than the code-behind file, achieving a better separation of the user interface from the business logic.
 
 It is also possible for the `Command` objects to control the enabling and disabling of the `Button` elements. For example, suppose you want to limit the range of number values between 2<sup>10</sup> and 2<sup>&ndash;10</sup>. You can add another  function to the constructor (called the `canExecute` argument) that returns `true` if the `Button` should be enabled. Here's the modification to the `CommandDemoViewModel` constructor:
 
@@ -404,7 +404,7 @@ The result is that the `Label` only rotates while a finger is in contact with th
 
 [![Press and Release Button](button-images/PressAndReleaseButton.png "Press and Release Button")](button-images/PressAndReleaseButton-Large.png)
 
-This kind of behavior has applications for games: A finger held on a `Button` might make an on screen object move in a particular direction.
+This kind of behavior has applications for games: A finger held on a `Button` might make an on-screen object move in a particular direction.
 
 <a name="button-appearance" />
 
@@ -420,6 +420,7 @@ The `Button` inherits or defines several properties that affect its appearance:
 - [`FontAttributes`](xref:Xamarin.Forms.Button.FontAttributes) indicates if the text is italic or bold
 - [`BorderWidth`](xref:Xamarin.Forms.Button.BorderWidth) is the width of the border
 - [`CornerRadius`](xref:Xamarin.Forms.Button.CornerRadius) is the corner radius of the `Button`
+- `CharacterSpacing` is the spacing between characters of the `Button` text
 
 > [!NOTE]
 > The `Button` class also has [`Margin`](xref:Xamarin.Forms.View.Margin) and [`Padding`](xref:Xamarin.Forms.Button.Padding) properties that control the layout behavior of the `Button`. For more information, see [Margin and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
@@ -747,6 +748,9 @@ Here's the program running on iOS, Android, and the UWP:
 The `Button` class defines an [`ImageSource`](xref:Xamarin.Forms.Button.Image) property that allows you to display a bitmap image on the `Button`, either alone or in combination with text. You can also specify how the text and image are arranged.
 
 The `ImageSource` property is of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), which means that the bitmaps can be loaded from a file, embedded resource, URI, or stream.
+
+> [!NOTE]
+> While a `Button` can load an animated GIF, it will only display the first frame of the GIF.
 
 Each platform supported by Xamarin.Forms allows images to be stored in multiple sizes for different pixel resolutions of the various devices that the application might run on. These multiple bitmaps are named or stored in such a way that the operating system can pick the best match for the device's video display resolution.
 

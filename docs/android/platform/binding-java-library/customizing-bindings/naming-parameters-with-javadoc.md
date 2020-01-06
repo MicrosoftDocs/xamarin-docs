@@ -4,15 +4,14 @@ description: "This article explains how to recover parameter names in an Java Bi
 ms.prod: xamarin
 ms.assetid: 59E8EF16-1322-486A-BB16-353804B77356
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/20/2017
 ---
 
 # Naming Parameters With Javadoc
 
 _This article explains how to recover parameter names in an Java Binding Project by using Javadoc generated from the Java project._
-
 
 ## Overview
 
@@ -37,16 +36,13 @@ process consisting of the following steps:
 Once this is done, the original Java parameter names should be present 
 in the APIs bound by a Java Binding Project. 
 
-
 > [!NOTE]
 > There is a great deal of variance in the JavaDoc
 output. The .JAR binding toolchain does not support every single
 possible permutation and consequently some parameter may not be
 properly named.
 
-
 ## Summary
 
 This article covered how use Javadoc in a Java Binding Project to 
 provide meaning parameter names for bound APIs. 
-

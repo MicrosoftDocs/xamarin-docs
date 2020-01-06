@@ -4,15 +4,14 @@ description: "This article covers creating the images required for a Xamarin.Mac
 ms.prod: xamarin
 ms.assetid: 675b9405-d9a7-49f0-94ad-417f10a71d11
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
 # Application icon for Xamarin.Mac apps
 
 _This article covers creating the images required for a Xamarin.Mac application's icon, bundling the images into a .icns file, and including the icon in the Xamarin.Mac project._
-
 
 ## Overview
 
@@ -22,11 +21,9 @@ A great Icon should convey the main purpose of a Xamarin.Mac app and hint experi
 
 ![The AppIcon.appiconset editor](app-icon-images/intro01.png "The AppIcon.appiconset editor")
 
-
 ## Application icon
 
 A great Icon should convey the main purpose of a Xamarin.Mac app and hint experience the user should expect when using an app. Every macOS app must include several sizes of its Icon for display in the Finder, Dock, Launchpad, and other locations throughout the computer.
-
 
 ## Designing the icon
 
@@ -43,7 +40,6 @@ Apple suggests the following tips when designing an application's icon:
 - Don’t use replicas of Apple icons in the icons.
 
 Please read the [App Icon Gallery](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Gallery.html#//apple_ref/doc/uid/20000957-CH88-SW1) and [Designing App Icons](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/Designing.html#//apple_ref/doc/uid/20000957-CH87-SW1) sections of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/) before designing a Xamarin.Mac app's icon.
-
 
 ## Required image sizes and filenames
 
@@ -71,7 +67,6 @@ To ensure that the icon looks great in all the places that users see it, provide
 
 For more information, see Apple's [Provide High-Resolution Versions of All App Graphics Resources](https://developer.apple.com/library/mac/documentation/GraphicsAnimation/Conceptual/HighResolutionOSX/Optimizing/Optimizing.html#//apple_ref/doc/uid/TP40012302-CH7-SW3) documentation.
 
-
 ## Packaging the icon resources
 
 With the icon designed and saved out to the required file sizes and names, Visual Studio for Mac makes it easy to assign them to the image assets for use in Xamarin.Mac.
@@ -80,12 +75,11 @@ Do the following:
 
 1. In the **Solution Pad**, open **Assets.xcassets** > **AppIcons.appiconset**: 
 
-	![Editing the AppIcon.appiconset](app-icon-images/intro01.png "Editing the AppIcon.appiconset")
+    ![Editing the AppIcon.appiconset](app-icon-images/intro01.png "Editing the AppIcon.appiconset")
 2. For each icon size required, click the icon and select the corresponding image file that were created above: 
 
-	[![Selecting an icon image](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png#lightbox)
+    [![Selecting an icon image](app-icon-images/intro02.png "Selecting an icon image")](app-icon-images/intro02-large.png#lightbox)
 3. Save your changes.
-
 
 ## Using the icon
 
@@ -96,18 +90,16 @@ Do the following:
 1. Double-click the **Info.plist** in the **Solution Pad** to open the **Project Options**.
 2. In the **Mac OS X Application Target** section and click the **App Icons** to select the `AppIcon.appiconset` file: 
 
-	[![Setting the icon set](app-icon-images/icon01.png "Setting the icon set")](app-icon-images/icon01-large.png#lightbox)
+    [![Setting the icon set](app-icon-images/icon01.png "Setting the icon set")](app-icon-images/icon01-large.png#lightbox)
 3. Save the changes.
 
 When the app is run, the new icon will be displayed in the dock:
 
 ![An example of an app icon in the macOS dock](app-icon-images/icon04.png "An example of an app icon in the macOS dock")
 
-
 ## Summary
 
 This article has taken a detailed look at working with Images required to create an macOS app Icon, packaging an Icon and including an Icon in a Xamarin.Mac project.
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This topic explains how to define resources that will be used only
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
 ---
 
@@ -17,7 +17,6 @@ language-qualified string resource. A string resource can be defined as
 the default, with other alternative resources defined to be used for
 additional languages. All resource types can be qualified, including
 the layout itself._
-
 
 # [Visual Studio](#tab/windows)
 
@@ -74,7 +73,6 @@ open the project.
 When you click the **UI Mode** pull-down menu, a list of modes is
 displayed, such as **Normal**, **Car Dock**, **Desk Dock**,
 **Television**, **Appliance**, and **Watch**:
-
 
 [![UI Mode menu](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
@@ -155,8 +153,6 @@ you will still be limited to the widgets that are available in Android
 For more information about resource types, see
 [Android Resources](~/android/app-fundamentals/resources-in-android/index.md).
 
-
-
 # [Visual Studio for Mac](#tab/macos)
 
 ## Resource qualifier options
@@ -224,7 +220,6 @@ For more information about Android UI modes, see
 [UiModeManager](xref:Android.App.UiModeManager).
 For information about **Left to Right** and **Right to Left** options,
 see [LayoutDirection](xref:Android.Util.LayoutDirection).
-
 
 ## Action Bar settings
 

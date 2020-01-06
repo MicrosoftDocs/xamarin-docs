@@ -4,15 +4,14 @@ description: "This guide discusses how an Android service may use local notifica
 ms.prod: xamarin
 ms.assetid: 6C06FDE7-6385-40EF-AC7C-8EFB54E29F45
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
 # Service Notifications
 
 _This guide discusses how an Android service may use local notifications to dispatch information to a user._
-
 
 ## Service Notifications Overview
 
@@ -49,7 +48,6 @@ When the user slides down the notification screen from the top, the full notific
 
 ![Notication displayed in notification tray](service-notifications-images/02-fullnotification.png)
 
-
 ## Updating A Notification
 
 To update a notification, the service will republish the notification using the same notification ID. Android will display or update the notification in the status bar as necessary.
@@ -75,7 +73,6 @@ Notification GetNotification(string content, PendingIntent intent)
 ```
 
 More information about notifications is available in the [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md) section of the [Android Notifications](~/android/app-fundamentals/notifications/index.md) guide.
-
 
 ## Related Links
 

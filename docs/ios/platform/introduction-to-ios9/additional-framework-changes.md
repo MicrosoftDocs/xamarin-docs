@@ -4,8 +4,8 @@ description: "This document describes additional framework changes introduced in
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -51,9 +51,6 @@ The new _CloudKit Web Services_ framework provides  a JavaScript library (CloudK
 > [!IMPORTANT]
 > Before you can access, present or update content from a CloudKit database using CloudKit JS, you must have previously defined that database's schema.
 
-
-
-
 For more information, please see the following documents:
 
 - [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) - Our introduction to using CloudKit in a Xamarin.iOS app.
@@ -75,8 +72,8 @@ Apple included the following changes to the Foundation framework in iOS 9:
 
 The following changes have been made to the [NSBundle](xref:Foundation.NSBundle) class for iOS 9:
 
-* `GetPreservationPriorityForTag (NSString tag)` - Gets the current preservation priority for resources with the given tag. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
-* `SetPreservationPriorityForTag (double priority, NSSet tags)` - Sets the current preservation priority for resources with the given tags. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
+- `GetPreservationPriorityForTag (NSString tag)` - Gets the current preservation priority for resources with the given tag. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
+- `SetPreservationPriorityForTag (double priority, NSSet tags)` - Sets the current preservation priority for resources with the given tags. Valid values are in the range `0.0` to `1.0`, resources with the lowest priority will be purged first.
 
 For more information, please see Apple's [NSBundle Reference](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSBundle_Class/index.html#//apple_ref/occ/cl/NSBundle).
 
@@ -106,9 +103,9 @@ Use the `LowPowerModeEnabled` property of the [NSProcessInfo](xref:Foundation.NS
 ```csharp
 // Is the device in low power mode?
 if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
-	// Reduce activity to conserve energy...
+    // Reduce activity to conserve energy...
 } else {
-	// Return to normal activity...
+    // Return to normal activity...
 }
 ```
 
@@ -131,7 +128,7 @@ Apple included the following changes to the [Local Authentication](xref:LocalAut
 - The ability to use _Authentication Context_ in Keychain calls and support for evaluating Keychain Access control lists.
 - The ability to cancel a user prompt from code.
 
-Please see our [Introduction to Touch ID](~/ios/platform/touchid.md) documentation for more information on working with Touch ID in Xamarin.iOS.
+For more information, see [Touch ID and Face ID with Xamarin.iOS](~/ios/platform/touch-id-face-id.md).
 
 ### LAContext Changes
 
@@ -258,8 +255,6 @@ To correct this situation, use Auto Layout and Size Classes to pin the width of 
 ### New UITextInputAssistantItem Class
 
 Use the new `UITextInputAssistantItem` class to layout Bar Button Groups in a _Shortcut Bar_. The Shortcut Bar is a new area that is available in the soft keyboard to provide typing shortcuts.
-
-
 
 ## Related Links
 

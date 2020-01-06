@@ -4,8 +4,8 @@ description: "This article describes the RequestReview method that Apple added t
 ms.prod: xamarin
 ms.assetid: 6408e707-b7dc-4557-b931-16a4d79b8930
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -32,22 +32,22 @@ using UIKit;
 
 namespace iOSTenThree
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate
-	{
-		...
+    [Register ("AppDelegate")]
+    public class AppDelegate : UIApplicationDelegate
+    {
+        ...
 
-		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
-		{
-			// Request a review from the user
-			SKStoreReviewController.RequestReview ();
+        public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
+        {
+            // Request a review from the user
+            SKStoreReviewController.RequestReview ();
 
-			return true;
-		}
-		
-		...
-		
-	}
+            return true;
+        }
+
+        ...
+
+    }
 }
 ```
 
@@ -63,8 +63,6 @@ In addition to the new `RequestReview` method, the developer can still provide a
 ## Summary
 
 This article has covered the RequestReview method that Apple added to iOS 10 and how to implement it in Xamarin.iOS.
-
-
 
 ## Related Links
 

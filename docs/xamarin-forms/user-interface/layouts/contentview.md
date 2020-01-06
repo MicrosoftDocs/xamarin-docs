@@ -11,7 +11,7 @@ ms.date: 08/14/2019
 
 # Xamarin.Forms ContentView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 
 The Xamarin.Forms [`ContentView`](xref:Xamarin.Forms.ContentView) class is a type of `Layout` that contains a single child element and is typically used to create custom, reusable controls. The `ContentView` class inherits from [`TemplatedView`](xref:Xamarin.Forms.TemplatedView). This article, and associated sample, explain how to create a custom `CardView` control based on the `ContentView` class.
 
@@ -94,17 +94,17 @@ The custom control UI uses a `ContentView` as the root element for the `CardView
             ...>
         <Grid>
             ...
-            <Frame BorderColor="{Binding BorderColor}"
-                   BackgroundColor="{Binding IconBackgroundColor}"
+            <Frame BorderColor="{Binding BorderColor, FallbackValue='Black'}"
+                   BackgroundColor="{Binding IconBackgroundColor, FallbackValue='Grey'}"
                    ...>
                 <Image Source="{Binding IconImageSource}"
                        .. />
             </Frame>
-            <Label Text="{Binding CardTitle}"
+            <Label Text="{Binding CardTitle, FallbackValue='Card Title'}"
                    ... />
-            <BoxView BackgroundColor="{Binding BorderColor}"
+            <BoxView BackgroundColor="{Binding BorderColor, FallbackValue='Black'}"
                      ... />
-            <Label Text="{Binding CardDescription}"
+            <Label Text="{Binding CardDescription, FallbackValue='Card description text.'}"
                    ... />
         </Grid>
     </Frame>
@@ -114,6 +114,9 @@ The custom control UI uses a `ContentView` as the root element for the `CardView
 The `ContentView` element sets the `x:Name` property to **this**, which can be used to access the object bound to the `CardView` instance. Elements in the layout set bindings on their properties to values defined on the bound object.
 
 For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+
+> [!NOTE]
+> The `FallbackValue` property provides a default value in case the binding is `null`. This also allows the [XAML Previewer](~/xamarin-forms/xaml/xaml-previewer/index.md) in Visual Studio to render the `CardView` control.
 
 ## Instantiate a custom control
 
@@ -200,7 +203,7 @@ For more information about control templates, see [Xamarin.Forms Control Templat
 
 ## Related links
 
-* [ContentView sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentview/)
+* [ContentView sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md).
 * [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)

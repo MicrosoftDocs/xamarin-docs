@@ -4,8 +4,8 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: CB9C1EC8-6008-43AD-977E-976AE7C73DD8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -78,8 +78,6 @@ To find out more, please see our [Additional Framework Changes](~/ios/tvos/platf
 ## Deprecated APIs
 
 No APIs or frameworks were deprecated by tvOS 10. See Apple's [tvOS 10 API Differences](https://developer.apple.com/library/prerelease/content/releasenotes/General/tvOS10APIDiffs/index.html) documentation for a complete list of API modifications.
-
-
 
 ## Related Links
 

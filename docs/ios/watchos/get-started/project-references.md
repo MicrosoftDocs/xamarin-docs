@@ -4,8 +4,8 @@ description: "This document describes the relationship between an iOS app, a wat
 ms.prod: xamarin
 ms.assetid: C366E062-C33D-406A-B3FF-CBE82E5D1E7E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
 ---
 
@@ -31,12 +31,9 @@ View the references by double-clicking on the References
 
   ![](project-references-images/catalog-reference2.png "iPhone app references Watch App")
 
-
 - The **Watch App Extension** does not reference either of the other projects
 
   ![](project-references-images/catalog-reference3.png "Watch App Extension does not reference the other projects")
-
-
 
 ## Bundle Identifiers
 
@@ -90,4 +87,3 @@ This screenshot is the **Watch App's** Info.plist file.
 
 The deployment target for the Watch App can be
   different from the Watch Extension and iOS App.
-

@@ -3,8 +3,8 @@ title: "Binding Native Frameworks"
 description: "This document describes how to use Objective Sharpie's -framework option to create a binding to a library distributed as a framework."
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
 ---
 

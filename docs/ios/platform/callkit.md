@@ -4,8 +4,8 @@ description: "This article covers the new CallKit API that Apple released in iOS
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
 ---
 # CallKit in Xamarin.iOS
@@ -96,118 +96,118 @@ using Foundation;
 
 namespace MonkeyCall
 {
-	public class ActiveCall
-	{
-		#region Private Variables
-		private bool isConnecting;
-		private bool isConnected;
-		private bool isOnhold;
-		#endregion
+    public class ActiveCall
+    {
+        #region Private Variables
+        private bool isConnecting;
+        private bool isConnected;
+        private bool isOnhold;
+        #endregion
 
-		#region Computed Properties
-		public NSUuid UUID { get; set; }
-		public bool isOutgoing { get; set; }
-		public string Handle { get; set; }
-		public DateTime StartedConnectingOn { get; set;}
-		public DateTime ConnectedOn { get; set;}
-		public DateTime EndedOn { get; set; }
+        #region Computed Properties
+        public NSUuid UUID { get; set; }
+        public bool isOutgoing { get; set; }
+        public string Handle { get; set; }
+        public DateTime StartedConnectingOn { get; set;}
+        public DateTime ConnectedOn { get; set;}
+        public DateTime EndedOn { get; set; }
 
-		public bool IsConnecting {
-			get { return isConnecting; }
-			set {
-				isConnecting = value;
-				if (isConnecting) StartedConnectingOn = DateTime.Now;
-				RaiseStartingConnectionChanged ();
-			}
-		}
+        public bool IsConnecting {
+            get { return isConnecting; }
+            set {
+                isConnecting = value;
+                if (isConnecting) StartedConnectingOn = DateTime.Now;
+                RaiseStartingConnectionChanged ();
+            }
+        }
 
-		public bool IsConnected {
-			get { return isConnected; }
-			set {
-				isConnected = value;
-				if (isConnected) {
-					ConnectedOn = DateTime.Now;
-				} else {
-					EndedOn = DateTime.Now;
-				}
-				RaiseConnectedChanged ();
-			}
-		}
+        public bool IsConnected {
+            get { return isConnected; }
+            set {
+                isConnected = value;
+                if (isConnected) {
+                    ConnectedOn = DateTime.Now;
+                } else {
+                    EndedOn = DateTime.Now;
+                }
+                RaiseConnectedChanged ();
+            }
+        }
 
-		public bool IsOnHold {
-			get { return isOnhold; }
-			set {
-				isOnhold = value;
-			}
-		}
-		#endregion
+        public bool IsOnHold {
+            get { return isOnhold; }
+            set {
+                isOnhold = value;
+            }
+        }
+        #endregion
 
-		#region Constructors
-		public ActiveCall ()
-		{
-		}
+        #region Constructors
+        public ActiveCall ()
+        {
+        }
 
-		public ActiveCall (NSUuid uuid, string handle, bool outgoing)
-		{
-			// Initialize
-			this.UUID = uuid;
-			this.Handle = handle;
-			this.isOutgoing = outgoing;
-		}
-		#endregion
+        public ActiveCall (NSUuid uuid, string handle, bool outgoing)
+        {
+            // Initialize
+            this.UUID = uuid;
+            this.Handle = handle;
+            this.isOutgoing = outgoing;
+        }
+        #endregion
 
-		#region Public Methods
-		public void StartCall (ActiveCallbackDelegate completionHandler)
-		{
-			// Simulate the call starting successfully
-			completionHandler (true);
+        #region Public Methods
+        public void StartCall (ActiveCallbackDelegate completionHandler)
+        {
+            // Simulate the call starting successfully
+            completionHandler (true);
 
-			// Simulate making a starting and completing a connection
-			DispatchQueue.MainQueue.DispatchAfter (new DispatchTime(DispatchTime.Now, 3000), () => {
-				// Note that the call is starting
-				IsConnecting = true;
+            // Simulate making a starting and completing a connection
+            DispatchQueue.MainQueue.DispatchAfter (new DispatchTime(DispatchTime.Now, 3000), () => {
+                // Note that the call is starting
+                IsConnecting = true;
 
-				// Simulate pause before connecting
-				DispatchQueue.MainQueue.DispatchAfter (new DispatchTime (DispatchTime.Now, 1500), () => {
-					// Note that the call has connected
-					IsConnecting = false;
-					IsConnected = true;
-				});
-			});
-		}
+                // Simulate pause before connecting
+                DispatchQueue.MainQueue.DispatchAfter (new DispatchTime (DispatchTime.Now, 1500), () => {
+                    // Note that the call has connected
+                    IsConnecting = false;
+                    IsConnected = true;
+                });
+            });
+        }
 
-		public void AnswerCall (ActiveCallbackDelegate completionHandler)
-		{
-			// Simulate the call being answered
-			IsConnected = true;
-			completionHandler (true);
-		}
+        public void AnswerCall (ActiveCallbackDelegate completionHandler)
+        {
+            // Simulate the call being answered
+            IsConnected = true;
+            completionHandler (true);
+        }
 
-		public void EndCall (ActiveCallbackDelegate completionHandler)
-		{
-			// Simulate the call ending
-			IsConnected = false;
-			completionHandler (true);
-		}
-		#endregion
+        public void EndCall (ActiveCallbackDelegate completionHandler)
+        {
+            // Simulate the call ending
+            IsConnected = false;
+            completionHandler (true);
+        }
+        #endregion
 
-		#region Events
-		public delegate void ActiveCallbackDelegate (bool successful);
-		public delegate void ActiveCallStateChangedDelegate (ActiveCall call);
+        #region Events
+        public delegate void ActiveCallbackDelegate (bool successful);
+        public delegate void ActiveCallStateChangedDelegate (ActiveCall call);
 
-		public event ActiveCallStateChangedDelegate StartingConnectionChanged;
-		internal void RaiseStartingConnectionChanged ()
-		{
-			if (this.StartingConnectionChanged != null) this.StartingConnectionChanged (this);
-		}
+        public event ActiveCallStateChangedDelegate StartingConnectionChanged;
+        internal void RaiseStartingConnectionChanged ()
+        {
+            if (this.StartingConnectionChanged != null) this.StartingConnectionChanged (this);
+        }
 
-		public event ActiveCallStateChangedDelegate ConnectedChanged;
-		internal void RaiseConnectedChanged ()
-		{
-			if (this.ConnectedChanged != null) this.ConnectedChanged (this);
-		}
-		#endregion
-	}
+        public event ActiveCallStateChangedDelegate ConnectedChanged;
+        internal void RaiseConnectedChanged ()
+        {
+            if (this.ConnectedChanged != null) this.ConnectedChanged (this);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -224,51 +224,51 @@ using Intents;
 
 namespace MonkeyCall
 {
-	public static class StartCallRequest
-	{
-		public static string URLScheme {
-			get { return "monkeycall"; }
-		}
+    public static class StartCallRequest
+    {
+        public static string URLScheme {
+            get { return "monkeycall"; }
+        }
 
-		public static string ActivityType {
-			get { return INIntentIdentifier.StartAudioCall.GetConstant ().ToString (); }
-		}
+        public static string ActivityType {
+            get { return INIntentIdentifier.StartAudioCall.GetConstant ().ToString (); }
+        }
 
-		public static string CallHandleFromURL (NSUrl url)
-		{
-			// Is this a MonkeyCall handle?
-			if (url.Scheme == URLScheme) {
-				// Yes, return host
-				return url.Host;
-			} else {
-				// Not handled
-				return null;
-			}
-		}
+        public static string CallHandleFromURL (NSUrl url)
+        {
+            // Is this a MonkeyCall handle?
+            if (url.Scheme == URLScheme) {
+                // Yes, return host
+                return url.Host;
+            } else {
+                // Not handled
+                return null;
+            }
+        }
 
-		public static string CallHandleFromActivity (NSUserActivity activity)
-		{
-			// Is this a start call activity?
-			if (activity.ActivityType == ActivityType) {
-				// Yes, trap any errors
-				try {
-					// Get first contact
-					var interaction = activity.GetInteraction ();
-					var startAudioCallIntent = interaction.Intent as INStartAudioCallIntent;
-					var contact = startAudioCallIntent.Contacts [0];
+        public static string CallHandleFromActivity (NSUserActivity activity)
+        {
+            // Is this a start call activity?
+            if (activity.ActivityType == ActivityType) {
+                // Yes, trap any errors
+                try {
+                    // Get first contact
+                    var interaction = activity.GetInteraction ();
+                    var startAudioCallIntent = interaction.Intent as INStartAudioCallIntent;
+                    var contact = startAudioCallIntent.Contacts [0];
 
-					// Get the person handle
-					return contact.PersonHandle.Value;
-				} catch {
-					// Error, report null
-					return null;
-				}
-			} else {
-				// Not handled
-				return null;
-			}
-		}
-	}
+                    // Get the person handle
+                    return contact.PersonHandle.Value;
+                } catch {
+                    // Error, report null
+                    return null;
+                }
+            } else {
+                // Not handled
+                return null;
+            }
+        }
+    }
 }
 ```
 
@@ -286,103 +286,103 @@ using CallKit;
 
 namespace MonkeyCall
 {
-	public class ActiveCallManager
-	{
-		#region Private Variables
-		private CXCallController CallController = new CXCallController ();
-		#endregion
+    public class ActiveCallManager
+    {
+        #region Private Variables
+        private CXCallController CallController = new CXCallController ();
+        #endregion
 
-		#region Computed Properties
-		public List<ActiveCall> Calls { get; set; }
-		#endregion
+        #region Computed Properties
+        public List<ActiveCall> Calls { get; set; }
+        #endregion
 
-		#region Constructors
-		public ActiveCallManager ()
-		{
-			// Initialize
-			this.Calls = new List<ActiveCall> ();
-		}
-		#endregion
+        #region Constructors
+        public ActiveCallManager ()
+        {
+            // Initialize
+            this.Calls = new List<ActiveCall> ();
+        }
+        #endregion
 
-		#region Private Methods
-		private void SendTransactionRequest (CXTransaction transaction)
-		{
-			// Send request to call controller
-			CallController.RequestTransaction (transaction, (error) => {
-				// Was there an error?
-				if (error == null) {
-					// No, report success
-					Console.WriteLine ("Transaction request sent successfully.");
-				} else {
-					// Yes, report error
-					Console.WriteLine ("Error requesting transaction: {0}", error);
-				}
-			});
-		}
-		#endregion
+        #region Private Methods
+        private void SendTransactionRequest (CXTransaction transaction)
+        {
+            // Send request to call controller
+            CallController.RequestTransaction (transaction, (error) => {
+                // Was there an error?
+                if (error == null) {
+                    // No, report success
+                    Console.WriteLine ("Transaction request sent successfully.");
+                } else {
+                    // Yes, report error
+                    Console.WriteLine ("Error requesting transaction: {0}", error);
+                }
+            });
+        }
+        #endregion
 
-		#region Public Methods
-		public ActiveCall FindCall (NSUuid uuid)
-		{
-			// Scan for requested call
-			foreach (ActiveCall call in Calls) {
-				if (call.UUID.Equals(uuid)) return call;
-			}
+        #region Public Methods
+        public ActiveCall FindCall (NSUuid uuid)
+        {
+            // Scan for requested call
+            foreach (ActiveCall call in Calls) {
+                if (call.UUID.Equals(uuid)) return call;
+            }
 
-			// Not found
-			return null;
-		}
+            // Not found
+            return null;
+        }
 
-		public void StartCall (string contact)
-		{
-			// Build call action
-			var handle = new CXHandle (CXHandleType.Generic, contact);
-			var startCallAction = new CXStartCallAction (new NSUuid (), handle);
+        public void StartCall (string contact)
+        {
+            // Build call action
+            var handle = new CXHandle (CXHandleType.Generic, contact);
+            var startCallAction = new CXStartCallAction (new NSUuid (), handle);
 
-			// Create transaction
-			var transaction = new CXTransaction (startCallAction);
+            // Create transaction
+            var transaction = new CXTransaction (startCallAction);
 
-			// Inform system of call request
-			SendTransactionRequest (transaction);
-		}
+            // Inform system of call request
+            SendTransactionRequest (transaction);
+        }
 
-		public void EndCall (ActiveCall call)
-		{
-			// Build action
-			var endCallAction = new CXEndCallAction (call.UUID);
+        public void EndCall (ActiveCall call)
+        {
+            // Build action
+            var endCallAction = new CXEndCallAction (call.UUID);
 
-			// Create transaction
-			var transaction = new CXTransaction (endCallAction);
+            // Create transaction
+            var transaction = new CXTransaction (endCallAction);
 
-			// Inform system of call request
-			SendTransactionRequest (transaction);
-		}
+            // Inform system of call request
+            SendTransactionRequest (transaction);
+        }
 
-		public void PlaceCallOnHold (ActiveCall call)
-		{
-			// Build action
-			var holdCallAction = new CXSetHeldCallAction (call.UUID, true);
+        public void PlaceCallOnHold (ActiveCall call)
+        {
+            // Build action
+            var holdCallAction = new CXSetHeldCallAction (call.UUID, true);
 
-			// Create transaction
-			var transaction = new CXTransaction (holdCallAction);
+            // Create transaction
+            var transaction = new CXTransaction (holdCallAction);
 
-			// Inform system of call request
-			SendTransactionRequest (transaction);
-		}
+            // Inform system of call request
+            SendTransactionRequest (transaction);
+        }
 
-		public void RemoveCallFromOnHold (ActiveCall call)
-		{
-			// Build action
-			var holdCallAction = new CXSetHeldCallAction (call.UUID, false);
+        public void RemoveCallFromOnHold (ActiveCall call)
+        {
+            // Build action
+            var holdCallAction = new CXSetHeldCallAction (call.UUID, false);
 
-			// Create transaction
-			var transaction = new CXTransaction (holdCallAction);
+            // Create transaction
+            var transaction = new CXTransaction (holdCallAction);
 
-			// Inform system of call request
-			SendTransactionRequest (transaction);
-		}
-		#endregion
-	}
+            // Inform system of call request
+            SendTransactionRequest (transaction);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -400,196 +400,196 @@ using UIKit;
 
 namespace MonkeyCall
 {
-	public class ProviderDelegate : CXProviderDelegate
-	{
-		#region Computed Properties
-		public ActiveCallManager CallManager { get; set;}
-		public CXProviderConfiguration Configuration { get; set; }
-		public CXProvider Provider { get; set; }
-		#endregion
+    public class ProviderDelegate : CXProviderDelegate
+    {
+        #region Computed Properties
+        public ActiveCallManager CallManager { get; set;}
+        public CXProviderConfiguration Configuration { get; set; }
+        public CXProvider Provider { get; set; }
+        #endregion
 
-		#region Constructors
-		public ProviderDelegate (ActiveCallManager callManager)
-		{
-			// Save connection to call manager
-			CallManager = callManager;
+        #region Constructors
+        public ProviderDelegate (ActiveCallManager callManager)
+        {
+            // Save connection to call manager
+            CallManager = callManager;
 
-			// Define handle types
-			var handleTypes = new [] { (NSNumber)(int)CXHandleType.PhoneNumber };
+            // Define handle types
+            var handleTypes = new [] { (NSNumber)(int)CXHandleType.PhoneNumber };
 
-			// Get Image Template
-			var templateImage = UIImage.FromFile ("telephone_receiver.png");
+            // Get Image Template
+            var templateImage = UIImage.FromFile ("telephone_receiver.png");
 
-			// Setup the initial configurations
-			Configuration = new CXProviderConfiguration ("MonkeyCall") {
-				MaximumCallsPerCallGroup = 1,
-				SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
-				IconTemplateImageData = templateImage.AsPNG(),
-				RingtoneSound = "musicloop01.wav"
-			};
+            // Setup the initial configurations
+            Configuration = new CXProviderConfiguration ("MonkeyCall") {
+                MaximumCallsPerCallGroup = 1,
+                SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
+                IconTemplateImageData = templateImage.AsPNG(),
+                RingtoneSound = "musicloop01.wav"
+            };
 
-			// Create a new provider
-			Provider = new CXProvider (Configuration);
+            // Create a new provider
+            Provider = new CXProvider (Configuration);
 
-			// Attach this delegate
-			Provider.SetDelegate (this, null);
+            // Attach this delegate
+            Provider.SetDelegate (this, null);
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Override Methods
-		public override void DidReset (CXProvider provider)
-		{
-			// Remove all calls
-			CallManager.Calls.Clear ();
-		}
+        #region Override Methods
+        public override void DidReset (CXProvider provider)
+        {
+            // Remove all calls
+            CallManager.Calls.Clear ();
+        }
 
-		public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)
-		{
-			// Create new call record
-			var activeCall = new ActiveCall (action.CallUuid, action.CallHandle.Value, true);
+        public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)
+        {
+            // Create new call record
+            var activeCall = new ActiveCall (action.CallUuid, action.CallHandle.Value, true);
 
-			// Monitor state changes
-			activeCall.StartingConnectionChanged += (call) => {
-				if (call.isConnecting) {
-					// Inform system that the call is starting
-					Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
-				}
-			};
+            // Monitor state changes
+            activeCall.StartingConnectionChanged += (call) => {
+                if (call.isConnecting) {
+                    // Inform system that the call is starting
+                    Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
+                }
+            };
 
-			activeCall.ConnectedChanged += (call) => {
-				if (call.isConnected) {
-					// Inform system that the call has connected
-					provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
-				}
-			};
+            activeCall.ConnectedChanged += (call) => {
+                if (call.isConnected) {
+                    // Inform system that the call has connected
+                    provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
+                }
+            };
 
-			// Start call
-			activeCall.StartCall ((successful) => {
-				// Was the call able to be started?
-				if (successful) {
-					// Yes, inform the system
-					action.Fulfill ();
+            // Start call
+            activeCall.StartCall ((successful) => {
+                // Was the call able to be started?
+                if (successful) {
+                    // Yes, inform the system
+                    action.Fulfill ();
 
-					// Add call to manager
-					CallManager.Calls.Add (activeCall);
-				} else {
-					// No, inform system
-					action.Fail ();
-				}
-			});
-		}
+                    // Add call to manager
+                    CallManager.Calls.Add (activeCall);
+                } else {
+                    // No, inform system
+                    action.Fail ();
+                }
+            });
+        }
 
-		public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallAction action)
-		{
-			// Find requested call
-			var call = CallManager.FindCall (action.CallUuid);
+        public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallAction action)
+        {
+            // Find requested call
+            var call = CallManager.FindCall (action.CallUuid);
 
-			// Found?
-			if (call == null) {
-				// No, inform system and exit
-				action.Fail ();
-				return;
-			}
+            // Found?
+            if (call == null) {
+                // No, inform system and exit
+                action.Fail ();
+                return;
+            }
 
-			// Attempt to answer call
-			call.AnswerCall ((successful) => {
-				// Was the call successfully answered?
-				if (successful) {
-					// Yes, inform system
-					action.Fulfill ();
-				} else {
-					// No, inform system
-					action.Fail ();
-				}
-			});
-		}
+            // Attempt to answer call
+            call.AnswerCall ((successful) => {
+                // Was the call successfully answered?
+                if (successful) {
+                    // Yes, inform system
+                    action.Fulfill ();
+                } else {
+                    // No, inform system
+                    action.Fail ();
+                }
+            });
+        }
 
-		public override void PerformEndCallAction (CXProvider provider, CXEndCallAction action)
-		{
-			// Find requested call
-			var call = CallManager.FindCall (action.CallUuid);
+        public override void PerformEndCallAction (CXProvider provider, CXEndCallAction action)
+        {
+            // Find requested call
+            var call = CallManager.FindCall (action.CallUuid);
 
-			// Found?
-			if (call == null) {
-				// No, inform system and exit
-				action.Fail ();
-				return;
-			}
+            // Found?
+            if (call == null) {
+                // No, inform system and exit
+                action.Fail ();
+                return;
+            }
 
-			// Attempt to answer call
-			call.EndCall ((successful) => {
-				// Was the call successfully answered?
-				if (successful) {
-					// Remove call from manager's queue
-					CallManager.Calls.Remove (call);
+            // Attempt to answer call
+            call.EndCall ((successful) => {
+                // Was the call successfully answered?
+                if (successful) {
+                    // Remove call from manager's queue
+                    CallManager.Calls.Remove (call);
 
-					// Yes, inform system
-					action.Fulfill ();
-				} else {
-					// No, inform system
-					action.Fail ();
-				}
-			});
-		}
+                    // Yes, inform system
+                    action.Fulfill ();
+                } else {
+                    // No, inform system
+                    action.Fail ();
+                }
+            });
+        }
 
-		public override void PerformSetHeldCallAction (CXProvider provider, CXSetHeldCallAction action)
-		{
-			// Find requested call
-			var call = CallManager.FindCall (action.CallUuid);
+        public override void PerformSetHeldCallAction (CXProvider provider, CXSetHeldCallAction action)
+        {
+            // Find requested call
+            var call = CallManager.FindCall (action.CallUuid);
 
-			// Found?
-			if (call == null) {
-				// No, inform system and exit
-				action.Fail ();
-				return;
-			}
+            // Found?
+            if (call == null) {
+                // No, inform system and exit
+                action.Fail ();
+                return;
+            }
 
-			// Update hold status
-			call.isOnHold = action.OnHold;
+            // Update hold status
+            call.isOnHold = action.OnHold;
 
-			// Inform system of success
-			action.Fulfill ();
-		}
+            // Inform system of success
+            action.Fulfill ();
+        }
 
-		public override void TimedOutPerformingAction (CXProvider provider, CXAction action)
-		{
-			// Inform user that the action has timed out
-		}
+        public override void TimedOutPerformingAction (CXProvider provider, CXAction action)
+        {
+            // Inform user that the action has timed out
+        }
 
-		public override void DidActivateAudioSession (CXProvider provider, AVFoundation.AVAudioSession audioSession)
-		{
-			// Start the calls audio session here
-		}
+        public override void DidActivateAudioSession (CXProvider provider, AVFoundation.AVAudioSession audioSession)
+        {
+            // Start the calls audio session here
+        }
 
-		public override void DidDeactivateAudioSession (CXProvider provider, AVFoundation.AVAudioSession audioSession)
-		{
-			// End the calls audio session and restart any non-call
-			// related audio
-		}
-		#endregion
+        public override void DidDeactivateAudioSession (CXProvider provider, AVFoundation.AVAudioSession audioSession)
+        {
+            // End the calls audio session and restart any non-call
+            // related audio
+        }
+        #endregion
 
-		#region Public Methods
-		public void ReportIncomingCall (NSUuid uuid, string handle)
-		{
-			// Create update to describe the incoming call and caller
-			var update = new CXCallUpdate ();
-			update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
+        #region Public Methods
+        public void ReportIncomingCall (NSUuid uuid, string handle)
+        {
+            // Create update to describe the incoming call and caller
+            var update = new CXCallUpdate ();
+            update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
 
-			// Report incoming call to system
-			Provider.ReportNewIncomingCall (uuid, update, (error) => {
-				// Was the call accepted
-				if (error == null) {
-					// Yes, report to call manager
-					CallManager.Calls.Add (new ActiveCall (uuid, handle, false));
-				} else {
-					// Report error to user here
-					Console.WriteLine ("Error: {0}", error);
-				}
-			});
-		}
-		#endregion
-	}
+            // Report incoming call to system
+            Provider.ReportNewIncomingCall (uuid, update, (error) => {
+                // Was the call accepted
+                if (error == null) {
+                    // Yes, report to call manager
+                    CallManager.Calls.Add (new ActiveCall (uuid, handle, false));
+                } else {
+                    // Report error to user here
+                    Console.WriteLine ("Error: {0}", error);
+                }
+            });
+        }
+        #endregion
+    }
 }
 ```
 
@@ -612,10 +612,10 @@ These values get bundled into a `CXProviderConfiguration` that will be used to c
 ```csharp
 // Setup the initial configurations
 Configuration = new CXProviderConfiguration ("MonkeyCall") {
-	MaximumCallsPerCallGroup = 1,
-	SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
-	IconTemplateImageData = templateImage.AsPNG(),
-	RingtoneSound = "musicloop01.wav"
+    MaximumCallsPerCallGroup = 1,
+    SupportedHandleTypes = new NSSet<NSNumber> (handleTypes),
+    IconTemplateImageData = templateImage.AsPNG(),
+    RingtoneSound = "musicloop01.wav"
 };
 ```
 
@@ -636,7 +636,7 @@ If this were a real app, the `DidActivateAudioSession` method would be used to s
 ```csharp
 public override void DidActivateAudioSession (CXProvider provider, AVFoundation.AVAudioSession audioSession)
 {
-	// Start the call's audio session here...
+    // Start the call's audio session here...
 }
 ```
 
@@ -645,8 +645,8 @@ It would also use the `DidDeactivateAudioSession` method to finalize and release
 ```csharp
 public override void DidDeactivateAudioSession (CXProvider provider, AVFoundation.AVAudioSession audioSession)
 {
-	// End the calls audio session and restart any non-call
-	// releated audio
+    // End the calls audio session and restart any non-call
+    // releated audio
 }
 ```
 
@@ -664,61 +664,61 @@ using System;
 
 namespace MonkeyCall
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate
-	{
-		#region Constructors
-		public override UIWindow Window { get; set; }
-		public ActiveCallManager CallManager { get; set; }
-		public ProviderDelegate CallProviderDelegate { get; set; }
-		#endregion
+    [Register ("AppDelegate")]
+    public class AppDelegate : UIApplicationDelegate
+    {
+        #region Constructors
+        public override UIWindow Window { get; set; }
+        public ActiveCallManager CallManager { get; set; }
+        public ProviderDelegate CallProviderDelegate { get; set; }
+        #endregion
 
-		#region Override Methods
-		public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
-		{
-			// Initialize the call handlers
-			CallManager = new ActiveCallManager ();
-			CallProviderDelegate = new ProviderDelegate (CallManager);
+        #region Override Methods
+        public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
+        {
+            // Initialize the call handlers
+            CallManager = new ActiveCallManager ();
+            CallProviderDelegate = new ProviderDelegate (CallManager);
 
-			return true;
-		}
+            return true;
+        }
 
-		public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
-		{
-			// Get handle from url
-			var handle = StartCallRequest.CallHandleFromURL (url);
+        public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
+        {
+            // Get handle from url
+            var handle = StartCallRequest.CallHandleFromURL (url);
 
-			// Found?
-			if (handle == null) {
-				// No, report to system
-				Console.WriteLine ("Unable to get call handle from URL: {0}", url); 
-				return false;
-			} else {
-				// Yes, start call and inform system
-				CallManager.StartCall (handle);
-				return true;
-			}
-		}
+            // Found?
+            if (handle == null) {
+                // No, report to system
+                Console.WriteLine ("Unable to get call handle from URL: {0}", url); 
+                return false;
+            } else {
+                // Yes, start call and inform system
+                CallManager.StartCall (handle);
+                return true;
+            }
+        }
 
-		public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
-		{
-			var handle = StartCallRequest.CallHandleFromActivity (userActivity);
+        public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
+        {
+            var handle = StartCallRequest.CallHandleFromActivity (userActivity);
 
-			// Found?
-			if (handle == null) {
-				// No, report to system
-				Console.WriteLine ("Unable to get call handle from User Activity: {0}", userActivity);
-				return false;
-			} else {
-				// Yes, start call and inform system
-				CallManager.StartCall (handle);
-				return true;
-			}
-		}
+            // Found?
+            if (handle == null) {
+                // No, report to system
+                Console.WriteLine ("Unable to get call handle from User Activity: {0}", userActivity);
+                return false;
+            } else {
+                // Yes, start call and inform system
+                CallManager.StartCall (handle);
+                return true;
+            }
+        }
 
-		...
-		#endregion
-	}
+        ...
+        #endregion
+    }
 }
 ```
 
@@ -749,21 +749,21 @@ For example, in the `CXProviderDelegate`:
 ```csharp
 public void ReportIncomingCall (NSUuid uuid, string handle)
 {
-	// Create update to describe the incoming call and caller
-	var update = new CXCallUpdate ();
-	update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
+    // Create update to describe the incoming call and caller
+    var update = new CXCallUpdate ();
+    update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
 
-	// Report incoming call to system
-	Provider.ReportNewIncomingCall (uuid, update, (error) => {
-		// Was the call accepted
-		if (error == null) {
-			// Yes, report to call manager
-			CallManager.Calls.Add (new ActiveCall (uuid, handle, false));
-		} else {
-			// Report error to user here
-			Console.WriteLine ("Error: {0}", error);
-		}
-	});
+    // Report incoming call to system
+    Provider.ReportNewIncomingCall (uuid, update, (error) => {
+        // Was the call accepted
+        if (error == null) {
+            // Yes, report to call manager
+            CallManager.Calls.Add (new ActiveCall (uuid, handle, false));
+        } else {
+            // Report error to user here
+            Console.WriteLine ("Error: {0}", error);
+        }
+    });
 }
 ```
 
@@ -784,27 +784,27 @@ For example, in the `CXProviderDelegate`:
 ```csharp
 public override void PerformAnswerCallAction (CXProvider provider, CXAnswerCallAction action)
 {
-	// Find requested call
-	var call = CallManager.FindCall (action.CallUuid);
+    // Find requested call
+    var call = CallManager.FindCall (action.CallUuid);
 
-	// Found?
-	if (call == null) {
-		// No, inform system and exit
-		action.Fail ();
-		return;
-	}
+    // Found?
+    if (call == null) {
+        // No, inform system and exit
+        action.Fail ();
+        return;
+    }
 
-	// Attempt to answer call
-	call.AnswerCall ((successful) => {
-		// Was the call successfully answered?
-		if (successful) {
-			// Yes, inform system
-			action.Fulfill ();
-		} else {
-			// No, inform system
-			action.Fail ();
-		}
-	});
+    // Attempt to answer call
+    call.AnswerCall ((successful) => {
+        // Was the call successfully answered?
+        if (successful) {
+            // Yes, inform system
+            action.Fulfill ();
+        } else {
+            // No, inform system
+            action.Fail ();
+        }
+    });
 }
 ```
 
@@ -825,30 +825,30 @@ For example, in the `CXProviderDelegate`:
 ```csharp
 public override void PerformEndCallAction (CXProvider provider, CXEndCallAction action)
 {
-	// Find requested call
-	var call = CallManager.FindCall (action.CallUuid);
+    // Find requested call
+    var call = CallManager.FindCall (action.CallUuid);
 
-	// Found?
-	if (call == null) {
-		// No, inform system and exit
-		action.Fail ();
-		return;
-	}
+    // Found?
+    if (call == null) {
+        // No, inform system and exit
+        action.Fail ();
+        return;
+    }
 
-	// Attempt to answer call
-	call.EndCall ((successful) => {
-		// Was the call successfully answered?
-		if (successful) {
-			// Remove call from manager's queue
-			CallManager.Calls.Remove (call);
+    // Attempt to answer call
+    call.EndCall ((successful) => {
+        // Was the call successfully answered?
+        if (successful) {
+            // Remove call from manager's queue
+            CallManager.Calls.Remove (call);
 
-			// Yes, inform system
-			action.Fulfill ();
-		} else {
-			// No, inform system
-			action.Fail ();
-		}
-	});
+            // Yes, inform system
+            action.Fulfill ();
+        } else {
+            // No, inform system
+            action.Fail ();
+        }
+    });
 }
 ```
 
@@ -890,30 +890,30 @@ private CXCallController CallController = new CXCallController ();
 
 private void SendTransactionRequest (CXTransaction transaction)
 {
-	// Send request to call controller
-	CallController.RequestTransaction (transaction, (error) => {
-		// Was there an error?
-		if (error == null) {
-			// No, report success
-			Console.WriteLine ("Transaction request sent successfully.");
-		} else {
-			// Yes, report error
-			Console.WriteLine ("Error requesting transaction: {0}", error);
-		}
-	});
+    // Send request to call controller
+    CallController.RequestTransaction (transaction, (error) => {
+        // Was there an error?
+        if (error == null) {
+            // No, report success
+            Console.WriteLine ("Transaction request sent successfully.");
+        } else {
+            // Yes, report error
+            Console.WriteLine ("Error requesting transaction: {0}", error);
+        }
+    });
 }
 
 public void StartCall (string contact)
 {
-	// Build call action
-	var handle = new CXHandle (CXHandleType.Generic, contact);
-	var startCallAction = new CXStartCallAction (new NSUuid (), handle);
+    // Build call action
+    var handle = new CXHandle (CXHandleType.Generic, contact);
+    var startCallAction = new CXStartCallAction (new NSUuid (), handle);
 
-	// Create transaction
-	var transaction = new CXTransaction (startCallAction);
+    // Create transaction
+    var transaction = new CXTransaction (startCallAction);
 
-	// Inform system of call request
-	SendTransactionRequest (transaction);
+    // Inform system of call request
+    SendTransactionRequest (transaction);
 }
 ```
 
@@ -924,18 +924,18 @@ The request to start an outgoing VOIP call can come from several different sourc
 ```csharp
 public override bool ContinueUserActivity (UIApplication application, NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
 {
-	var handle = StartCallRequest.CallHandleFromActivity (userActivity);
+    var handle = StartCallRequest.CallHandleFromActivity (userActivity);
 
-	// Found?
-	if (handle == null) {
-		// No, report to system
-		Console.WriteLine ("Unable to get call handle from User Activity: {0}", userActivity);
-		return false;
-	} else {
-		// Yes, start call and inform system
-		CallManager.StartCall (handle);
-		return true;
-	}
+    // Found?
+    if (handle == null) {
+        // No, report to system
+        Console.WriteLine ("Unable to get call handle from User Activity: {0}", userActivity);
+        return false;
+    } else {
+        // Yes, start call and inform system
+        CallManager.StartCall (handle);
+        return true;
+    }
 }
 ```
 
@@ -946,38 +946,38 @@ The `PerformStartCallAction` method of the [ProviderDelegate Class](#the-provide
 ```csharp
 public override void PerformStartCallAction (CXProvider provider, CXStartCallAction action)
 {
-	// Create new call record
-	var activeCall = new ActiveCall (action.CallUuid, action.CallHandle.Value, true);
+    // Create new call record
+    var activeCall = new ActiveCall (action.CallUuid, action.CallHandle.Value, true);
 
-	// Monitor state changes
-	activeCall.StartingConnectionChanged += (call) => {
-		if (call.IsConnecting) {
-			// Inform system that the call is starting
-			Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
-		}
-	};
+    // Monitor state changes
+    activeCall.StartingConnectionChanged += (call) => {
+        if (call.IsConnecting) {
+            // Inform system that the call is starting
+            Provider.ReportConnectingOutgoingCall (call.UUID, call.StartedConnectingOn.ToNSDate());
+        }
+    };
 
-	activeCall.ConnectedChanged += (call) => {
-		if (call.IsConnected) {
-			// Inform system that the call has connected
-			Provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
-		}
-	};
+    activeCall.ConnectedChanged += (call) => {
+        if (call.IsConnected) {
+            // Inform system that the call has connected
+            Provider.ReportConnectedOutgoingCall (call.UUID, call.ConnectedOn.ToNSDate ());
+        }
+    };
 
-	// Start call
-	activeCall.StartCall ((successful) => {
-		// Was the call able to be started?
-		if (successful) {
-			// Yes, inform the system
-			action.Fulfill ();
+    // Start call
+    activeCall.StartCall ((successful) => {
+        // Was the call able to be started?
+        if (successful) {
+            // Yes, inform the system
+            action.Fulfill ();
 
-			// Add call to manager
-			CallManager.Calls.Add (activeCall);
-		} else {
-			// No, inform system
-			action.Fail ();
-		}
-	});
+            // Add call to manager
+            CallManager.Calls.Add (activeCall);
+        } else {
+            // No, inform system
+            action.Fail ();
+        }
+    });
 }
 ```
 
@@ -993,29 +993,29 @@ private CXCallController CallController = new CXCallController ();
 
 private void SendTransactionRequest (CXTransaction transaction)
 {
-	// Send request to call controller
-	CallController.RequestTransaction (transaction, (error) => {
-		// Was there an error?
-		if (error == null) {
-			// No, report success
-			Console.WriteLine ("Transaction request sent successfully.");
-		} else {
-			// Yes, report error
-			Console.WriteLine ("Error requesting transaction: {0}", error);
-		}
-	});
+    // Send request to call controller
+    CallController.RequestTransaction (transaction, (error) => {
+        // Was there an error?
+        if (error == null) {
+            // No, report success
+            Console.WriteLine ("Transaction request sent successfully.");
+        } else {
+            // Yes, report error
+            Console.WriteLine ("Error requesting transaction: {0}", error);
+        }
+    });
 }
 
 public void EndCall (ActiveCall call)
 {
-	// Build action
-	var endCallAction = new CXEndCallAction (call.UUID);
+    // Build action
+    var endCallAction = new CXEndCallAction (call.UUID);
 
-	// Create transaction
-	var transaction = new CXTransaction (endCallAction);
+    // Create transaction
+    var transaction = new CXTransaction (endCallAction);
 
-	// Inform system of call request
-	SendTransactionRequest (transaction);
+    // Inform system of call request
+    SendTransactionRequest (transaction);
 }
 ```
 
@@ -1071,32 +1071,32 @@ public class ProviderDelegate : CXProviderDelegate
 {
 ...
 
-	public void ReportIncomingCall (NSUuid uuid, string handle)
-	{
-		// Create update to describe the incoming call and caller
-		var update = new CXCallUpdate ();
-		update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
-	
-		// Report incoming call to system
-		Provider.ReportNewIncomingCall (uuid, update, (error) => {
-			// Was the call accepted
-			if (error == null) {
-				// Yes, report to call manager
-				CallManager.Calls.Add (new ActiveCall (uuid, handle, false));
-			} else {
-				// Report error to user here
-				if (error.Code == (int)CXErrorCodeIncomingCallError.CallUuidAlreadyExists) {
-					// Handle duplicate call ID
-				} else if (error.Code == (int)CXErrorCodeIncomingCallError.FilteredByBlockList) {
-					// Handle call from blocked user
-				} else if (error.Code == (int)CXErrorCodeIncomingCallError.FilteredByDoNotDisturb) {
-					// Handle call while in do-not-disturb mode
-				} else {
-					// Handle unknown error
-				}
-			}
-		});
-	}
+    public void ReportIncomingCall (NSUuid uuid, string handle)
+    {
+        // Create update to describe the incoming call and caller
+        var update = new CXCallUpdate ();
+        update.RemoteHandle = new CXHandle (CXHandleType.Generic, handle);
+    
+        // Report incoming call to system
+        Provider.ReportNewIncomingCall (uuid, update, (error) => {
+            // Was the call accepted
+            if (error == null) {
+                // Yes, report to call manager
+                CallManager.Calls.Add (new ActiveCall (uuid, handle, false));
+            } else {
+                // Report error to user here
+                if (error.Code == (int)CXErrorCodeIncomingCallError.CallUuidAlreadyExists) {
+                    // Handle duplicate call ID
+                } else if (error.Code == (int)CXErrorCodeIncomingCallError.FilteredByBlockList) {
+                    // Handle call from blocked user
+                } else if (error.Code == (int)CXErrorCodeIncomingCallError.FilteredByDoNotDisturb) {
+                    // Handle call while in do-not-disturb mode
+                } else {
+                    // Handle unknown error
+                }
+            }
+        });
+    }
 
 }
 ```
@@ -1130,13 +1130,13 @@ To implement a Call Directory Extension in a Xamarin.iOS app, do the following:
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.
 3. Select **iOS** > **Extensions** > **Call Directory Extensions** and click the **Next** button: 
 
-	[![](callkit-images/calldir01.png "Creating a new Call Directory Extension")](callkit-images/calldir01.png#lightbox)
+    [![](callkit-images/calldir01.png "Creating a new Call Directory Extension")](callkit-images/calldir01.png#lightbox)
 4. Enter a **Name** for the extension and click the **Next** button: 
 
-	[![](callkit-images/calldir02.png "Entering a name for the extension")](callkit-images/calldir02.png#lightbox)
+    [![](callkit-images/calldir02.png "Entering a name for the extension")](callkit-images/calldir02.png#lightbox)
 5. Adjust the **Project Name** and/or **Solution Name** if required and click the **Create** button: 
 
-	[![](callkit-images/calldir03.png "Creating the project")](callkit-images/calldir03.png#lightbox) 
+    [![](callkit-images/calldir03.png "Creating the project")](callkit-images/calldir03.png#lightbox) 
 
 # [Visual Studio](#tab/windows)
 
@@ -1144,7 +1144,7 @@ To implement a Call Directory Extension in a Xamarin.iOS app, do the following:
 2. Right-click on the Solution Name in the **Solution Explorer** and select **Add** > **Add New Project**.
 3. Select **iOS** > **Extensions** > **Call Directory Extensions** and click the **Next** button: 
 
-	[![](callkit-images/calldir01w.png "Creating a new Call Directory Extension")](callkit-images/calldir01.png#lightbox)
+    [![](callkit-images/calldir01w.png "Creating a new Call Directory Extension")](callkit-images/calldir01.png#lightbox)
 4. Enter a **Name** for the extension and click the **OK** button
 
 -----
@@ -1159,87 +1159,87 @@ using CallKit;
 
 namespace MonkeyCallDirExtension
 {
-	[Register ("CallDirectoryHandler")]
-	public class CallDirectoryHandler : CXCallDirectoryProvider, ICXCallDirectoryExtensionContextDelegate
-	{
-		#region Constructors
-		protected CallDirectoryHandler (IntPtr handle) : base (handle)
-		{
-			// Note: this .ctor should not contain any initialization logic.
-		}
-		#endregion
+    [Register ("CallDirectoryHandler")]
+    public class CallDirectoryHandler : CXCallDirectoryProvider, ICXCallDirectoryExtensionContextDelegate
+    {
+        #region Constructors
+        protected CallDirectoryHandler (IntPtr handle) : base (handle)
+        {
+            // Note: this .ctor should not contain any initialization logic.
+        }
+        #endregion
 
-		#region Override Methods
-		public override void BeginRequest (CXCallDirectoryExtensionContext context)
-		{
-			context.Delegate = this;
+        #region Override Methods
+        public override void BeginRequest (CXCallDirectoryExtensionContext context)
+        {
+            context.Delegate = this;
 
-			if (!AddBlockingPhoneNumbers (context)) {
-				Console.WriteLine ("Unable to add blocking phone numbers");
-				var error = new NSError (new NSString ("CallDirectoryHandler"), 1, null);
-				context.CancelRequest (error);
-				return;
-			}
+            if (!AddBlockingPhoneNumbers (context)) {
+                Console.WriteLine ("Unable to add blocking phone numbers");
+                var error = new NSError (new NSString ("CallDirectoryHandler"), 1, null);
+                context.CancelRequest (error);
+                return;
+            }
 
-			if (!AddIdentificationPhoneNumbers (context)) {
-				Console.WriteLine ("Unable to add identification phone numbers");
-				var error = new NSError (new NSString ("CallDirectoryHandler"), 2, null);
-				context.CancelRequest (error);
-				return;
-			}
+            if (!AddIdentificationPhoneNumbers (context)) {
+                Console.WriteLine ("Unable to add identification phone numbers");
+                var error = new NSError (new NSString ("CallDirectoryHandler"), 2, null);
+                context.CancelRequest (error);
+                return;
+            }
 
-			context.CompleteRequest (null);
-		}
-		#endregion
+            context.CompleteRequest (null);
+        }
+        #endregion
 
-		#region Private Methods
-		private bool AddBlockingPhoneNumbers (CXCallDirectoryExtensionContext context)
-		{
-			// Retrieve phone numbers to block from data store. For optimal performance and memory usage when there are many phone numbers,
-			// consider only loading a subset of numbers at a given time and using autorelease pool(s) to release objects allocated during each batch of numbers which are loaded.
-			//
-			// Numbers must be provided in numerically ascending order.
+        #region Private Methods
+        private bool AddBlockingPhoneNumbers (CXCallDirectoryExtensionContext context)
+        {
+            // Retrieve phone numbers to block from data store. For optimal performance and memory usage when there are many phone numbers,
+            // consider only loading a subset of numbers at a given time and using autorelease pool(s) to release objects allocated during each batch of numbers which are loaded.
+            //
+            // Numbers must be provided in numerically ascending order.
 
-			long [] phoneNumbers = { 14085555555, 18005555555 };
+            long [] phoneNumbers = { 14085555555, 18005555555 };
 
-			foreach (var phoneNumber in phoneNumbers)
-				context.AddBlockingEntry (phoneNumber);
+            foreach (var phoneNumber in phoneNumbers)
+                context.AddBlockingEntry (phoneNumber);
 
-			return true;
-		}
+            return true;
+        }
 
-		private bool AddIdentificationPhoneNumbers (CXCallDirectoryExtensionContext context)
-		{
-			// Retrieve phone numbers to identify and their identification labels from data store. For optimal performance and memory usage when there are many phone numbers,
-			// consider only loading a subset of numbers at a given time and using autorelease pool(s) to release objects allocated during each batch of numbers which are loaded.
-			//
-			// Numbers must be provided in numerically ascending order.
+        private bool AddIdentificationPhoneNumbers (CXCallDirectoryExtensionContext context)
+        {
+            // Retrieve phone numbers to identify and their identification labels from data store. For optimal performance and memory usage when there are many phone numbers,
+            // consider only loading a subset of numbers at a given time and using autorelease pool(s) to release objects allocated during each batch of numbers which are loaded.
+            //
+            // Numbers must be provided in numerically ascending order.
 
-			long [] phoneNumbers = { 18775555555, 18885555555 };
-			string [] labels = { "Telemarketer", "Local business" };
+            long [] phoneNumbers = { 18775555555, 18885555555 };
+            string [] labels = { "Telemarketer", "Local business" };
 
-			for (var i = 0; i < phoneNumbers.Length; i++) {
-				long phoneNumber = phoneNumbers [i];
-				string label = labels [i];
-				context.AddIdentificationEntry (phoneNumber, label);
-			}
+            for (var i = 0; i < phoneNumbers.Length; i++) {
+                long phoneNumber = phoneNumbers [i];
+                string label = labels [i];
+                context.AddIdentificationEntry (phoneNumber, label);
+            }
 
-			return true;
-		}
-		#endregion
+            return true;
+        }
+        #endregion
 
-		#region Public Methods
-		public void RequestFailed (CXCallDirectoryExtensionContext extensionContext, NSError error)
-		{
-			// An error occurred while adding blocking or identification entries, check the NSError for details.
-			// For Call Directory error codes, see the CXErrorCodeCallDirectoryManagerError enum.
-			//
-			// This may be used to store the error details in a location accessible by the extension's containing app, so that the
-			// app may be notified about errors which occurred while loading data even if the request to load data was initiated by
-			// the user in Settings instead of via the app itself.
-		}
-		#endregion
-	}
+        #region Public Methods
+        public void RequestFailed (CXCallDirectoryExtensionContext extensionContext, NSError error)
+        {
+            // An error occurred while adding blocking or identification entries, check the NSError for details.
+            // For Call Directory error codes, see the CXErrorCodeCallDirectoryManagerError enum.
+            //
+            // This may be used to store the error details in a location accessible by the extension's containing app, so that the
+            // app may be notified about errors which occurred while loading data even if the request to load data was initiated by
+            // the user in Settings instead of via the app itself.
+        }
+        #endregion
+    }
 }
 ```
 

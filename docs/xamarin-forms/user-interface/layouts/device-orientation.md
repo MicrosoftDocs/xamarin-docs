@@ -220,7 +220,6 @@ Note the following:
 
 - `outerStack` is adjusted to present the image and controls as a horizontal or vertical stack depending on orientation, to best take advantage of the available space.
 
-
 ### AbsoluteLayout
 
 Consider the following application, displayed in portrait:
@@ -272,7 +271,6 @@ Note the following:
 
 - Because of the way the page has been laid out, there is no need for procedural code to introduce responsiveness.
 - The `ScrollView` is being used to allow the label to be visible even when the height of the screen is less than the sum of the fixed heights of the buttons and the image.
-
 
 ### RelativeLayout
 
@@ -466,7 +464,6 @@ protected override void OnSizeAllocated (double width, double height){
 Note the following:
 
 - Because of the way the page has been laid out, there is a method to change the grid placement of the controls.
-
 
 ## Related Links
 

@@ -6,7 +6,7 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2018
+ms.date: 09/26/2019
 ---
 
 # Xamarin.Forms Editor
@@ -83,6 +83,26 @@ var editor = new Editor { ... MaxLength = 10 };
 ```
 
 A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Editor`](xref:Xamarin.Forms.Editor), indicates that there is no effective limit on the number of characters that may be entered.
+
+### Character spacing
+
+Character spacing can be applied to an [`Editor`](xref:Xamarin.Forms.Editor) by setting the `Editor.CharacterSpacing` property to a `double` value:
+
+```xaml
+<Editor ...
+        CharacterSpacing="10" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Editor editor = new editor { CharacterSpacing = 10 };
+```
+
+The result is that characters in the text displayed by the [`Editor`](xref:Xamarin.Forms.Editor) are spaced `CharacterSpacing` device-independent units apart.
+
+> [!NOTE]
+> The `CharacterSpacing` property value is applied to the text displayed by the `Text` and `Placeholder` properties.
 
 ### Auto-Sizing an Editor
 
@@ -351,7 +371,6 @@ Title="Editor Demo">
     </ContentPage.Content>
 </ContentPage>
 ```
-
 
 ## Related Links
 

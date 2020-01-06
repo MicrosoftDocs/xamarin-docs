@@ -4,15 +4,14 @@ description: "This walkthrough demonstrates how to use local notifications in Xa
 ms.prod: xamarin
 ms.assetid: D8C6C9E2-3282-49D1-A2F6-78A4F3306E29
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/16/2018
 ---
 
 # Walkthrough - Using local notifications in Xamarin.Android
 
 _This walkthrough demonstrates how to use local notifications in Xamarin.Android applications. It demonstrates the basics of creating and publishing a local notification. When the user clicks the notification in the notification area, it starts up a second Activity._
-
 
 ## Overview
 
@@ -37,7 +36,6 @@ not familiar with creating Xamarin.Android projects, see
 [Hello, Android](~/android/get-started/hello-android/hello-android-quickstart.md).)
 
 Edit the resource file **values/Strings.xml** so that it contains two extra string resources that will be used when it is time to create the notification channel:
-
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -116,7 +114,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 ### Define the notification ID
 
 We will need a unique ID for our notification and notification channel. Let's edit
@@ -191,7 +188,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 ### Create a second activity
 
 Now we need to create another activity that Android will display when
@@ -253,7 +249,6 @@ We must also create a resource layout for **SecondActivity**. Add a new
 </LinearLayout>
 ```
 
-
 ### Add a notification icon
 
 Finally, add a small icon that will appear in the notification area
@@ -263,7 +258,6 @@ to your project or create your own custom icon. Name the icon file
 **ic\_stat\_button\_click.png** and copy it to the
 **Resources/drawable** folder. Remember to use **Add > Existing Item
 ...** to include this icon file in your project.
-
 
 ### Run the application
 
@@ -294,7 +288,6 @@ refer to. There is a lot more to notifications than we have shown here,
 so if you want more information, take a look at
 [Google's documentation on notifications](https://developer.android.com/guide/topics/ui/notifiers/notifications.html).
 
-
 ## Summary
 
 This walkthrough used `NotificationCompat.Builder` to create and
@@ -302,7 +295,6 @@ display notifications. It showed a basic example of how to start up a
 second Activity as a way to respond to user interaction with the
 notification, and it demonstrated the transfer of data from the first
 Activity to the second Activity.
-
 
 ## Related Links
 

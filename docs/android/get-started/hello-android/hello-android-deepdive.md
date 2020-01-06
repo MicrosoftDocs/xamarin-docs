@@ -6,8 +6,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: EF0E110B-20EA-43F6-9476-1A0F41AFD298
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
 ---
 
@@ -194,7 +194,6 @@ The items are summarized in the table below:
     such as images and bitmaps.
 
 - **mipmap** &ndash; The mipmap directory holds drawable files for different launcher icon densities. In the default template, the drawable directory houses the application icon file, **Icon.png**.
-
 
 ::: zone pivot="windows"
 
@@ -622,7 +621,7 @@ approaches to generating custom app artwork:
 
 ::: zone pivot="windows"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html)
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html)
     &ndash; A web-based, in-browser generator for all types of Android
     icons, with links to other useful community tools. It works best in
     Google Chrome.
@@ -630,17 +629,17 @@ approaches to generating custom app artwork:
 - Visual Studio &ndash; You can use this to create a simple icon set
     for your app directly in the IDE.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; High-quality prebuilt
+- [Glyphish](https://www.glyphish.com/) &ndash; High-quality prebuilt
     icon sets for free download and purchase.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; Choose from a variety of
+- [Fiverr](https://www.fiverr.com/) &ndash; Choose from a variety of
     designers to create an icon set for you, starting at $5. Can be hit
     or miss but a good resource if you need icons designed on the fly.
 
 ::: zone-end
 ::: zone pivot="macos"
 
-- [Android Asset Studio](http://romannurik.github.io/AndroidAssetStudio/index.html)
+- [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/index.html)
     &ndash; A web-based, in-browser generator for all types of Android
     icons, with links to other useful community tools. It works best in
     Google Chrome.
@@ -650,15 +649,15 @@ approaches to generating custom app artwork:
     and more. This is the app that was used to design the Xamarin App Icons
     and Launch Images set. Sketch 3 is available on the App Store and
     costs about $80. You can try out the free
-    [Sketch Tool](http://bohemiancoding.com/sketch/tool/) as well.
+    [Sketch Tool](https://bohemiancoding.com/sketch/tool/) as well.
 
-- [Pixelmator](http://www.pixelmator.com/) &ndash; A versatile image
+- [Pixelmator](https://www.pixelmator.com/) &ndash; A versatile image
     editing app for Mac that costs about $30.
 
-- [Glyphish](http://www.glyphish.com/) &ndash; High-quality prebuilt
+- [Glyphish](https://www.glyphish.com/) &ndash; High-quality prebuilt
     icon sets for free download and purchase.
 
-- [Fiverr](http://www.fiverr.com/) &ndash; Choose from a variety of
+- [Fiverr](https://www.fiverr.com/) &ndash; Choose from a variety of
     designers to create an icon set for you, starting at $5. Can be hit
     or miss but a good resource if you need icons designed on the fly.
 

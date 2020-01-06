@@ -3,8 +3,8 @@ title: "Real-world example using CocoaPods"
 description: "This document demonstrates how to use Objective Sharpie to automatically generate the C# binding definitions from a CocoaPod."
 ms.prod: xamarin
 ms.assetid: 233B781D-5841-4250-9F63-0585231D2112
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
 ---
 

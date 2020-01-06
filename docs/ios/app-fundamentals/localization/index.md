@@ -4,8 +4,8 @@ description: "This document describes iOS localization features and how to use t
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/28/2017
 ---
 
@@ -202,9 +202,9 @@ The syntax for localized string values is:
 
 You should escape the following characters in strings:
 
-* `\"` quote
-* `\\` backslash
-* `\n` newline
+- `\"` quote
+- `\\` backslash
+- `\n` newline
 
 This is an example **es/Localizable.strings** (ie. Spanish) file from the sample:
 

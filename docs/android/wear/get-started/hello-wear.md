@@ -4,8 +4,8 @@ description: "Create your first Android Wear app and run it on a Wear emulator o
 ms.prod: xamarin
 ms.assetid: 86BCD0E7-E9DC-40F1-9B44-887BC51BB48D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/10/2018
 ---
 
@@ -23,6 +23,8 @@ Follow these steps to create your first Xamarin.Android Wear app:
 
 Create a new **Android Wear Application**:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 [![Creating a new Android Wear Application in the New Project dialog](hello-wear-images/vs/new-solution-sml.w157.png)](hello-wear-images/vs/new-solution.w157.png#lightbox)
@@ -32,7 +34,6 @@ Create a new **Android Wear Application**:
 [![Creating a new Android Wear Application in the New Solution dialog](hello-wear-images/xs/new-solution-sml.png)](hello-wear-images/xs/new-solution.png#lightbox)
 
 -----
-
 
 This template automatically includes the **Xamarin Android Wearable 
 Library** NuGet (and dependencies) so you'll have access to 
@@ -59,7 +60,6 @@ Ensure the target framework is set to **Android 5.0 (Lollipop)** or later:
 
 For more information on setting the target framework, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
-
 
 ### 3. Edit the **Main.axml** layout
 
@@ -149,7 +149,6 @@ You can run the app on the device instead of using an emulator. For
 more information about debugging on a Wear device,
 see [Debug on a Wear Device](~/android/wear/deploy-test/debug-on-device.md).
 
-
 ### 6. Run the Android Wear app
 
 The Android Wear device should appear in the device pulldown menu. Be
@@ -188,7 +187,6 @@ see the count increment with each tap:
 
 [![Screenshot of Wear app after 3 clicks](hello-wear-images/mainactivity-counts.png)](hello-wear-images/mainactivity-counts.png#lightbox)
 
-
 ## Next Steps
 
 Check out the [Wear samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android+wear) including
@@ -196,7 +194,6 @@ Android Wear apps with companion Phone apps.
 
 When you are ready to distribute your app, see
 [Working with Packaging](~/android/wear/deploy-test/packaging.md).
-
 
 ## Related Links
 

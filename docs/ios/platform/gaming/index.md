@@ -4,8 +4,8 @@ description: "This article covers the new gaming enhancements provided by iOS 9 
 ms.prod: xamarin
 ms.assetid: 958D38FD-9240-482E-9A42-D6671ED8F2B0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -189,7 +189,6 @@ namespace FieldBehaviorExplorer
         static GKBehavior flockingBehavior;
         static GKGoal seekGoal;
 
-
         public FlockingScene (CGSize size) : base (size)
         {
             AddRandomBoids (20);
@@ -224,7 +223,6 @@ namespace FieldBehaviorExplorer
             var loc = touch.LocationInNode (this);
             trackingAgent.Position = new Vector2((float) loc.X, (float) loc.Y);
         }
-
 
         private void AddRandomBoids (int count)
         {
@@ -467,8 +465,6 @@ For more information, please see our [SpriteKit Documentation](~/ios/platform/in
 This article has covered the new Gaming features that iOS 9 provides for your Xamarin.iOS apps.
 It introduced GameplayKit and Model I/O; the major enhancements to Metal; and the
 new features of SceneKit and SpriteKit.
-
-
 
 ## Related Links
 

@@ -2,6 +2,8 @@
   href: index.yml
   expanded: true
   items:
+    - name: What is Xamarin
+      href: what-is-xamarin.md
     - name: Requirements
       href: requirements.md
     - name: Installation
@@ -76,8 +78,6 @@
           href: ~/cross-platform/desktop/index.md
         - name: Java developers
           href: ~/android/get-started/java-developers.md
-        - name: Swift developers
-          href: ~/ios/get-started/objective-c-developers/index.md
         - name: Objective-C developers
           href: ~/ios/get-started/objective-c-developers/index.md
         - name: Azure

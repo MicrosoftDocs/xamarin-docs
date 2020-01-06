@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Use the NuGet Package Manager to add SQLite.NET to a Xamarin.Forms project.
 > - Create the data access classes.
 > - Consume the data access classes.

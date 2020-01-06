@@ -3,8 +3,8 @@ title: "Getting started with Objective-C"
 description: "This document describes how get started using .NET Embedding with Objective-C. It discusses requirements, installing .NET Embedding from NuGet, and supported platforms."
 ms.prod: xamarin
 ms.assetid: 4ABC0247-B608-42D4-89CB-D2E598097142
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
 ---
 
@@ -16,16 +16,17 @@ This is the getting started page for Objective-C, which covers the basics for al
 
 To use .NET Embedding with Objective-C, you'll need a Mac running:
 
-* macOS 10.12 (Sierra) or later
-* Xcode 8.3.2 or later
-* [Mono 5.0](https://www.mono-project.com/download/)
+- macOS 10.12 (Sierra) or later
+- Xcode 8.3.2 or later
+- [Mono 5.0](https://www.mono-project.com/download/)
 
 You can install [Visual Studio for Mac](https://visualstudio.microsoft.com/vs/mac/) to edit and compile your C# code.
 
 > [!NOTE]
-> * Earlier versions of macOS, Xcode, and Mono _might_ work, but are
+>
+> - Earlier versions of macOS, Xcode, and Mono _might_ work, but are
 >   untested and unsupported
-> * Code generation can be done on Windows, but it is only possible to
+> - Code generation can be done on Windows, but it is only possible to
 >   compile it on a Mac computer where Xcode is installed
 
 ## Installing .NET Embedding from NuGet
@@ -56,12 +57,12 @@ Support for tvOS is analogous to how iOS works, by just using tvOS projects in t
 
 ## Further reading
 
-* [.NET Embedding features specific to Objective-C](~/tools/dotnet-embedding/objective-c/index.md)
-* [Best Practices for Objective-C](~/tools/dotnet-embedding/objective-c/best-practices.md)
-* [.NET Embedding Limitations](~/tools/dotnet-embedding/limitations.md)
-* [Contributing to the open source project](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [Error codes and descriptions](~/tools/dotnet-embedding/errors.md)
-* [Target platforms](~/tools/dotnet-embedding/objective-c/platforms.md)
+- [.NET Embedding features specific to Objective-C](~/tools/dotnet-embedding/objective-c/index.md)
+- [Best Practices for Objective-C](~/tools/dotnet-embedding/objective-c/best-practices.md)
+- [.NET Embedding Limitations](~/tools/dotnet-embedding/limitations.md)
+- [Contributing to the open source project](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+- [Error codes and descriptions](~/tools/dotnet-embedding/errors.md)
+- [Target platforms](~/tools/dotnet-embedding/objective-c/platforms.md)
 
 ## Related links
 

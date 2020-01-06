@@ -4,8 +4,8 @@ description: "This document describes how to work with collection views in a tvO
 ms.prod: xamarin
 ms.assetid: 5125C4C7-2DDF-4C19-A362-17BB2B079178
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -59,9 +59,9 @@ Before calling either of these methods, you must register the class, Storyboard 
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
 {
-	// Initialize
-	RegisterClassForCell (typeof(CityCollectionViewCell), CityViewDatasource.CardCellId);
-	...
+    // Initialize
+    RegisterClassForCell (typeof(CityCollectionViewCell), CityViewDatasource.CardCellId);
+    ...
 }
 ```
 
@@ -92,81 +92,77 @@ Let's do the following:
 
 # [Visual Studio for Mac](#tab/macos)
 
-	
 1. Start a new **Single View tvOS App** in Visual Studio for Mac.
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it in the iOS Designer.
 1. Add a Image View, a Label and a Button to the existing view and configure them to look like the following: 
 
-	[![](collection-views-images/collection02.png "Sample layout")](collection-views-images/collection02.png#lightbox)
+    [![](collection-views-images/collection02.png "Sample layout")](collection-views-images/collection02.png#lightbox)
 1. Assign a **Name** to the Image View and the Label in the **Widget Tab** of the **Properties Explorer**. For example: 
 
-	[![](collection-views-images/collection03.png "Setting the name")](collection-views-images/collection03.png#lightbox)
+    [![](collection-views-images/collection03.png "Setting the name")](collection-views-images/collection03.png#lightbox)
 1. Next, drag a Collection View Controller onto the Storyboard: 
 
-	[![](collection-views-images/collection04.png "A Collection View Controller")](collection-views-images/collection04.png#lightbox)
+    [![](collection-views-images/collection04.png "A Collection View Controller")](collection-views-images/collection04.png#lightbox)
 1. Control-drag from the Button to the Collection View Controller and select **Push** from the popup: 
 
-	[![](collection-views-images/collection05.png "Select Push from the popup")](collection-views-images/collection05.png#lightbox)
+    [![](collection-views-images/collection05.png "Select Push from the popup")](collection-views-images/collection05.png#lightbox)
 1. When the app is run, this will make the Collection View be show whenever the user clicks the Button.
 1. Select the Collection View and enter the following values in the **Layout Tab** of the **Properties Explorer**: 
 
-	[![](collection-views-images/collection06.png "The Properties Explorer")](collection-views-images/collection06.png#lightbox)
+    [![](collection-views-images/collection06.png "The Properties Explorer")](collection-views-images/collection06.png#lightbox)
 1. This controls the size of the individual cells and the borders between the cells and the outer edge of the Collection View.
 1. Select the Collection View Controller and set its class to `CityCollectionViewController` in the **Widget Tab**: 
 
-	[![](collection-views-images/collection07.png "Set the class to CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
+    [![](collection-views-images/collection07.png "Set the class to CityCollectionViewController")](collection-views-images/collection07.png#lightbox)
 1. Select the Collection View and set its class to `CityCollectionView` in the **Widget Tab**: 
 
-	[![](collection-views-images/collection08.png "Set the class to CityCollectionView")](collection-views-images/collection08.png#lightbox)
+    [![](collection-views-images/collection08.png "Set the class to CityCollectionView")](collection-views-images/collection08.png#lightbox)
 1. Select the Collection View Cell and set its class to `CityCollectionViewCell` in the **Widget Tab**: 
 
-	[![](collection-views-images/collection09.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
+    [![](collection-views-images/collection09.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09.png#lightbox)
 1. In the **Widget Tab** ensure that the **Layout** is `Flow` and the **Scroll Direction** is `Vertical` for the Collection View: 
 
-	[![](collection-views-images/collection10.png "The Widget Tab")](collection-views-images/collection10.png#lightbox)
+    [![](collection-views-images/collection10.png "The Widget Tab")](collection-views-images/collection10.png#lightbox)
 1. Select the Collection View Cell and set its **Identity** to `CityCell` in the **Widget Tab**: 
 
-	[![](collection-views-images/collection11.png "Set the Identity to CityCell")](collection-views-images/collection11.png#lightbox)
+    [![](collection-views-images/collection11.png "Set the Identity to CityCell")](collection-views-images/collection11.png#lightbox)
 1. Save your changes.
-	
 
 # [Visual Studio](#tab/windows)
 
-	
 1. Start a new **Single View tvOS App** in Visual Studio.
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it in the iOS Designer.
 1. Add a Image View, a Label and a Button to the existing view and configure them to look like the following: 
 
-	[![](collection-views-images/collection02vs.png "Configure the layout")](collection-views-images/collection02vs.png#lightbox)
+    [![](collection-views-images/collection02vs.png "Configure the layout")](collection-views-images/collection02vs.png#lightbox)
 1. Assign a **Name** to the Image View and the Label in the **Widget Tab** of the **Properties Explorer**. For example: 
 
-	[![](collection-views-images/collection03vs.png "The Properties Explorer")](collection-views-images/collection03vs.png#lightbox)
+    [![](collection-views-images/collection03vs.png "The Properties Explorer")](collection-views-images/collection03vs.png#lightbox)
 1. Next, drag a Collection View Controller onto the Storyboard: 
 
-	[![](collection-views-images/collection04vs.png "A Collection View Controller")](collection-views-images/collection04vs.png#lightbox)
+    [![](collection-views-images/collection04vs.png "A Collection View Controller")](collection-views-images/collection04vs.png#lightbox)
 1. Control-drag from the Button to the Collection View Controller and select **Push** from the popup: 
 
-	[![](collection-views-images/collection05vs.png "Select Push from the popup")](collection-views-images/collection05vs.png#lightbox)
+    [![](collection-views-images/collection05vs.png "Select Push from the popup")](collection-views-images/collection05vs.png#lightbox)
 1. When the app is run, this will make the Collection View be show whenever the user clicks the Button.
 1. Select the Collection View and in the **Layout Tab** of the **Properties Explorer** enter the **Width** as _361_ and **Height** as _256_ 
 1. This controls the size of the individual cells and the borders between the cells and the outer edge of the Collection View.
 1. Select the Collection View Controller and set its class to `CityCollectionViewController` in the **Widget Tab**: 
 
-	[![](collection-views-images/collection07vs.png "Set the class to CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
+    [![](collection-views-images/collection07vs.png "Set the class to CityCollectionViewController")](collection-views-images/collection07vs.png#lightbox)
 1. Select the Collection View and set its class to `CityCollectionView` in the **Widget Tab**: 
 
-	[![](collection-views-images/collection08vs.png "Set the class to CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
+    [![](collection-views-images/collection08vs.png "Set the class to CityCollectionView")](collection-views-images/collection08vs.png#lightbox)
 1. Select the Collection View Cell and set its class to `CityCollectionViewCell` in the **Widget Tab**: 
 
-	[![](collection-views-images/collection09vs.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
+    [![](collection-views-images/collection09vs.png "Set the class to CityCollectionViewCell")](collection-views-images/collection09vs.png#lightbox)
 1. In the **Widget Tab** ensure that the **Layout** is `Flow` and the **Scroll Direction** is `Vertical` for the Collection View: 
 
-	[![](collection-views-images/collection10vs.png "Tthe Widget Tab")](collection-views-images/collection10vs.png#lightbox)
+    [![](collection-views-images/collection10vs.png "Tthe Widget Tab")](collection-views-images/collection10vs.png#lightbox)
 1. Select the Collection View Cell and set its **Identity** to `CityCell` in the **Widget Tab**: 
 
-	[![](collection-views-images/collection11vs.png "Set the Identity to CityCell")](collection-views-images/collection11vs.png#lightbox)
+    [![](collection-views-images/collection11vs.png "Set the Identity to CityCell")](collection-views-images/collection11vs.png#lightbox)
 1. Save your changes.
-	
 
 -----
 
@@ -193,24 +189,24 @@ using System;
 
 namespace tvCollection
 {
-	public class CityInfo
-	{
-		#region Computed Properties
-		public string ImageFilename { get; set; }
-		public string Title { get; set; }
-		public bool CanSelect{ get; set; }
-		#endregion
+    public class CityInfo
+    {
+        #region Computed Properties
+        public string ImageFilename { get; set; }
+        public string Title { get; set; }
+        public bool CanSelect{ get; set; }
+        #endregion
 
-		#region Constructors
-		public CityInfo (string filename, string title, bool canSelect)
-		{
-			// Initialize
-			this.ImageFilename = filename;
-			this.Title = title;
-			this.CanSelect = canSelect;
-		}
-		#endregion
-	}
+        #region Constructors
+        public CityInfo (string filename, string title, bool canSelect)
+        {
+            // Initialize
+            this.ImageFilename = filename;
+            this.Title = title;
+            this.CanSelect = canSelect;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -226,46 +222,46 @@ using CoreGraphics;
 
 namespace tvCollection
 {
-	public partial class CityCollectionViewCell : UICollectionViewCell
-	{
-		#region Private Variables
-		private CityInfo _city;
-		#endregion
+    public partial class CityCollectionViewCell : UICollectionViewCell
+    {
+        #region Private Variables
+        private CityInfo _city;
+        #endregion
 
-		#region Computed Properties
-		public UIImageView CityView { get ; set; }
-		public UILabel CityTitle { get; set; }
+        #region Computed Properties
+        public UIImageView CityView { get ; set; }
+        public UILabel CityTitle { get; set; }
 
-		public CityInfo City {
-			get { return _city; }
-			set {
-				_city = value;
-				CityView.Image = UIImage.FromFile (City.ImageFilename);
-				CityView.Alpha = (City.CanSelect) ? 1.0f : 0.5f;
-				CityTitle.Text = City.Title;
-			}
-		}
-		#endregion
+        public CityInfo City {
+            get { return _city; }
+            set {
+                _city = value;
+                CityView.Image = UIImage.FromFile (City.ImageFilename);
+                CityView.Alpha = (City.CanSelect) ? 1.0f : 0.5f;
+                CityTitle.Text = City.Title;
+            }
+        }
+        #endregion
 
-		#region Constructors
-		public CityCollectionViewCell (IntPtr handle) : base (handle)
-		{
-			// Initialize
-			CityView = new UIImageView(new CGRect(22, 19, 320, 171));
-			CityView.AdjustsImageWhenAncestorFocused = true;
-			AddSubview (CityView);
+        #region Constructors
+        public CityCollectionViewCell (IntPtr handle) : base (handle)
+        {
+            // Initialize
+            CityView = new UIImageView(new CGRect(22, 19, 320, 171));
+            CityView.AdjustsImageWhenAncestorFocused = true;
+            AddSubview (CityView);
 
-			CityTitle = new UILabel (new CGRect (22, 209, 320, 21)) {
-				TextAlignment = UITextAlignment.Center,
-				TextColor = UIColor.White,
-				Alpha = 0.0f
-			};
-			AddSubview (CityTitle);
-		}
-		#endregion
-	
+            CityTitle = new UILabel (new CGRect (22, 209, 320, 21)) {
+                TextAlignment = UITextAlignment.Center,
+                TextColor = UIColor.White,
+                Alpha = 0.0f
+            };
+            AddSubview (CityTitle);
+        }
+        #endregion
+    
 
-	}
+    }
 }
 ```
 
@@ -282,7 +278,6 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 ```
 
 For more information on Navigation and Focus, please see our [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) and [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) documentation.
-
 
 <a name="The-Collection-View-Data-Provider" />
 
@@ -302,84 +297,84 @@ using ObjCRuntime;
 
 namespace tvCollection
 {
-	public class CityViewDatasource : UICollectionViewDataSource
-	{
-		#region Application Access
-		public static AppDelegate App {
-			get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-		}
-		#endregion
+    public class CityViewDatasource : UICollectionViewDataSource
+    {
+        #region Application Access
+        public static AppDelegate App {
+            get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+        }
+        #endregion
 
-		#region Static Constants
-		public static NSString CardCellId = new NSString ("CityCell");
-		#endregion
+        #region Static Constants
+        public static NSString CardCellId = new NSString ("CityCell");
+        #endregion
 
-		#region Computed Properties
-		public List<CityInfo> Cities { get; set; } = new List<CityInfo>();
-		public CityCollectionView ViewController { get; set; }
-		#endregion
+        #region Computed Properties
+        public List<CityInfo> Cities { get; set; } = new List<CityInfo>();
+        public CityCollectionView ViewController { get; set; }
+        #endregion
 
-		#region Constructors
-		public CityViewDatasource (CityCollectionView controller)
-		{
-			// Initialize
-			this.ViewController = controller;
-			PopulateCities ();
-		}
-		#endregion
+        #region Constructors
+        public CityViewDatasource (CityCollectionView controller)
+        {
+            // Initialize
+            this.ViewController = controller;
+            PopulateCities ();
+        }
+        #endregion
 
-		#region Public Methods
-		public void PopulateCities() {
+        #region Public Methods
+        public void PopulateCities() {
 
-			// Clear existing cities
-			Cities.Clear();
+            // Clear existing cities
+            Cities.Clear();
 
-			// Add new cities
-			Cities.Add(new CityInfo("City01.jpg", "Houses by Water", false));
-			Cities.Add(new CityInfo("City02.jpg", "Turning Circle", true));
-			Cities.Add(new CityInfo("City03.jpg", "Skyline at Night", true));
-			Cities.Add(new CityInfo("City04.jpg", "Golden Gate Bridge", true));
-			Cities.Add(new CityInfo("City05.jpg", "Roads by Night", true));
-			Cities.Add(new CityInfo("City06.jpg", "Church Domes", true));
-			Cities.Add(new CityInfo("City07.jpg", "Mountain Lights", true));
-			Cities.Add(new CityInfo("City08.jpg", "City Scene", false));
-			Cities.Add(new CityInfo("City09.jpg", "House in Winter", true));
-			Cities.Add(new CityInfo("City10.jpg", "By the Lake", true));
-			Cities.Add(new CityInfo("City11.jpg", "At the Dome", true));
-			Cities.Add(new CityInfo("City12.jpg", "Cityscape", true));
-			Cities.Add(new CityInfo("City13.jpg", "Model City", true));
-			Cities.Add(new CityInfo("City14.jpg", "Taxi, Taxi!", true));
-			Cities.Add(new CityInfo("City15.jpg", "On the Sidewalk", true));
-			Cities.Add(new CityInfo("City16.jpg", "Midnight Walk", true));
-			Cities.Add(new CityInfo("City17.jpg", "Lunchtime Cafe", true));
-			Cities.Add(new CityInfo("City18.jpg", "Coffee Shop", true));
-			Cities.Add(new CityInfo("City19.jpg", "Rustic Tavern", true));
-		}
-		#endregion
+            // Add new cities
+            Cities.Add(new CityInfo("City01.jpg", "Houses by Water", false));
+            Cities.Add(new CityInfo("City02.jpg", "Turning Circle", true));
+            Cities.Add(new CityInfo("City03.jpg", "Skyline at Night", true));
+            Cities.Add(new CityInfo("City04.jpg", "Golden Gate Bridge", true));
+            Cities.Add(new CityInfo("City05.jpg", "Roads by Night", true));
+            Cities.Add(new CityInfo("City06.jpg", "Church Domes", true));
+            Cities.Add(new CityInfo("City07.jpg", "Mountain Lights", true));
+            Cities.Add(new CityInfo("City08.jpg", "City Scene", false));
+            Cities.Add(new CityInfo("City09.jpg", "House in Winter", true));
+            Cities.Add(new CityInfo("City10.jpg", "By the Lake", true));
+            Cities.Add(new CityInfo("City11.jpg", "At the Dome", true));
+            Cities.Add(new CityInfo("City12.jpg", "Cityscape", true));
+            Cities.Add(new CityInfo("City13.jpg", "Model City", true));
+            Cities.Add(new CityInfo("City14.jpg", "Taxi, Taxi!", true));
+            Cities.Add(new CityInfo("City15.jpg", "On the Sidewalk", true));
+            Cities.Add(new CityInfo("City16.jpg", "Midnight Walk", true));
+            Cities.Add(new CityInfo("City17.jpg", "Lunchtime Cafe", true));
+            Cities.Add(new CityInfo("City18.jpg", "Coffee Shop", true));
+            Cities.Add(new CityInfo("City19.jpg", "Rustic Tavern", true));
+        }
+        #endregion
 
-		#region Override Methods
-		public override nint NumberOfSections (UICollectionView collectionView)
-		{
-			return 1;
-		}
+        #region Override Methods
+        public override nint NumberOfSections (UICollectionView collectionView)
+        {
+            return 1;
+        }
 
-		public override nint GetItemsCount (UICollectionView collectionView, nint section)
-		{
-			return Cities.Count;
-		}
+        public override nint GetItemsCount (UICollectionView collectionView, nint section)
+        {
+            return Cities.Count;
+        }
 
-		public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
-		{
-			var cityCell = (CityCollectionViewCell)collectionView.DequeueReusableCell (CardCellId, indexPath);
-			var city = Cities [indexPath.Row];
+        public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
+        {
+            var cityCell = (CityCollectionViewCell)collectionView.DequeueReusableCell (CardCellId, indexPath);
+            var city = Cities [indexPath.Row];
 
-			// Initialize city
-			cityCell.City = city;
+            // Initialize city
+            cityCell.City = city;
 
-			return cityCell;
-		}
-		#endregion
-	}
+            return cityCell;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -397,13 +392,13 @@ public List<CityInfo> Cities { get; set; } = new List<CityInfo>();
 
 public void PopulateCities() {
 
-	// Clear existing cities
-	Cities.Clear();
+    // Clear existing cities
+    Cities.Clear();
 
-	// Add new cities
-	Cities.Add(new CityInfo("City01.jpg", "Houses by Water", false));
-	Cities.Add(new CityInfo("City02.jpg", "Turning Circle", true));
-	...
+    // Add new cities
+    Cities.Add(new CityInfo("City01.jpg", "Houses by Water", false));
+    Cities.Add(new CityInfo("City02.jpg", "Turning Circle", true));
+    ...
 }
 ```
 
@@ -412,7 +407,7 @@ Then we override the `NumberOfSections` method and return the number of sections
 ```csharp
 public override nint NumberOfSections (UICollectionView collectionView)
 {
-	return 1;
+    return 1;
 }
 ```
 
@@ -421,7 +416,7 @@ Next, we return the number of items in our collection using the following code:
 ```csharp
 public override nint GetItemsCount (UICollectionView collectionView, nint section)
 {
-	return Cities.Count;
+    return Cities.Count;
 }
 ```
 
@@ -430,13 +425,13 @@ Finally, we dequeue a reusable cell when the Collection View request with the fo
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
 {
-	var cityCell = (CityCollectionViewCell)collectionView.DequeueReusableCell (CardCellId, indexPath);
-	var city = Cities [indexPath.Row];
+    var cityCell = (CityCollectionViewCell)collectionView.DequeueReusableCell (CardCellId, indexPath);
+    var city = Cities [indexPath.Row];
 
-	// Initialize city
-	cityCell.City = city;
+    // Initialize city
+    cityCell.City = city;
 
-	return cityCell;
+    return cityCell;
 }
 ```
 
@@ -466,7 +461,6 @@ This defines the property and sets the default city that will initially be shown
 
 Next, add a new `CityViewDelegate` class to the project and make it look like the following:
 
-
 ```csharp
 using System;
 using System.Collections.Generic;
@@ -476,46 +470,46 @@ using CoreGraphics;
 
 namespace tvCollection
 {
-	public class CityViewDelegate : UICollectionViewDelegateFlowLayout
-	{
-		#region Application Access
-		public static AppDelegate App {
-			get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-		}
-		#endregion
+    public class CityViewDelegate : UICollectionViewDelegateFlowLayout
+    {
+        #region Application Access
+        public static AppDelegate App {
+            get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+        }
+        #endregion
 
-		#region Constructors
-		public CityViewDelegate ()
-		{
-		}
-		#endregion
+        #region Constructors
+        public CityViewDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override CGSize GetSizeForItem (UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
-		{
-			return new CGSize (361, 256);
-		}
+        #region Override Methods
+        public override CGSize GetSizeForItem (UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
+        {
+            return new CGSize (361, 256);
+        }
 
-		public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath indexPath)
-		{
-			if (indexPath == null) {
-				return false;
-			} else {
-				var controller = collectionView as CityCollectionView;
-				return controller.Source.Cities[indexPath.Row].CanSelect;
-			}
-		}
+        public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath indexPath)
+        {
+            if (indexPath == null) {
+                return false;
+            } else {
+                var controller = collectionView as CityCollectionView;
+                return controller.Source.Cities[indexPath.Row].CanSelect;
+            }
+        }
 
-		public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
-		{
-			var controller = collectionView as CityCollectionView;
-			App.SelectedCity = controller.Source.Cities [indexPath.Row];
+        public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
+        {
+            var controller = collectionView as CityCollectionView;
+            App.SelectedCity = controller.Source.Cities [indexPath.Row];
 
-			// Close Collection
-			controller.ParentController.DismissViewController(true,null);
-		}
-		#endregion
-	}
+            // Close Collection
+            controller.ParentController.DismissViewController(true,null);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -526,7 +520,7 @@ Next, we return the size for the individual items using this code:
 ```csharp
 public override CGSize GetSizeForItem (UICollectionView collectionView, UICollectionViewLayout layout, NSIndexPath indexPath)
 {
-	return new CGSize (361, 256);
+    return new CGSize (361, 256);
 }
 ```
 
@@ -535,12 +529,12 @@ Then, we decide if a given cell can get focus using the following code:
 ```csharp
 public override bool CanFocusItem (UICollectionView collectionView, NSIndexPath indexPath)
 {
-	if (indexPath == null) {
-		return false;
-	} else {
-		var controller = collectionView as CityCollectionView;
-		return controller.Source.Cities[indexPath.Row].CanSelect;
-	}
+    if (indexPath == null) {
+        return false;
+    } else {
+        var controller = collectionView as CityCollectionView;
+        return controller.Source.Cities[indexPath.Row].CanSelect;
+    }
 }
 ```
 
@@ -551,11 +545,11 @@ Finally, we respond to the user selecting an item with the following code:
 ```csharp
 public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
 {
-	var controller = collectionView as CityCollectionView;
-	App.SelectedCity = controller.Source.Cities [indexPath.Row];
+    var controller = collectionView as CityCollectionView;
+    App.SelectedCity = controller.Source.Cities [indexPath.Row];
 
-	// Close Collection
-	controller.ParentController.DismissViewController(true,null);
+    // Close Collection
+    controller.ParentController.DismissViewController(true,null);
 }
 ```
 
@@ -574,56 +568,56 @@ using UIKit;
 
 namespace tvCollection
 {
-	public partial class CityCollectionView : UICollectionView
-	{
-		#region Application Access
-		public static AppDelegate App {
-			get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-		}
-		#endregion
+    public partial class CityCollectionView : UICollectionView
+    {
+        #region Application Access
+        public static AppDelegate App {
+            get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+        }
+        #endregion
 
-		#region Computed Properties
-		public CityViewDatasource Source {
-			get { return DataSource as CityViewDatasource;}
-		}
+        #region Computed Properties
+        public CityViewDatasource Source {
+            get { return DataSource as CityViewDatasource;}
+        }
 
-		public CityCollectionViewController ParentController { get; set;}
-		#endregion
+        public CityCollectionViewController ParentController { get; set;}
+        #endregion
 
-		#region Constructors
-		public CityCollectionView (IntPtr handle) : base (handle)
-		{
-			// Initialize
-			RegisterClassForCell (typeof(CityCollectionViewCell), CityViewDatasource.CardCellId);
-			DataSource = new CityViewDatasource (this);
-			Delegate = new CityViewDelegate ();
-		}
-		#endregion
+        #region Constructors
+        public CityCollectionView (IntPtr handle) : base (handle)
+        {
+            // Initialize
+            RegisterClassForCell (typeof(CityCollectionViewCell), CityViewDatasource.CardCellId);
+            DataSource = new CityViewDatasource (this);
+            Delegate = new CityViewDelegate ();
+        }
+        #endregion
 
-		#region Override Methods
-		public override nint NumberOfSections ()
-		{
-			return 1;
-		}
+        #region Override Methods
+        public override nint NumberOfSections ()
+        {
+            return 1;
+        }
 
-		public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
-		{
-			var previousItem = context.PreviouslyFocusedView as CityCollectionViewCell;
-			if (previousItem != null) {
-				Animate (0.2, () => {
-					previousItem.CityTitle.Alpha = 0.0f;
-				});
-			}
+        public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
+        {
+            var previousItem = context.PreviouslyFocusedView as CityCollectionViewCell;
+            if (previousItem != null) {
+                Animate (0.2, () => {
+                    previousItem.CityTitle.Alpha = 0.0f;
+                });
+            }
 
-			var nextItem = context.NextFocusedView as CityCollectionViewCell;
-			if (nextItem != null) {
-				Animate (0.2, () => {
-					nextItem.CityTitle.Alpha = 1.0f;
-				});
-			}
-		}
-		#endregion
-	}
+            var nextItem = context.NextFocusedView as CityCollectionViewCell;
+            if (nextItem != null) {
+                Animate (0.2, () => {
+                    nextItem.CityTitle.Alpha = 1.0f;
+                });
+            }
+        }
+        #endregion
+    }
 }
 ```
 
@@ -631,7 +625,7 @@ First, we provide a shortcut to access our `AppDelegate`:
 
 ```csharp
 public static AppDelegate App {
-	get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+    get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
 }
 ```
 
@@ -639,7 +633,7 @@ Next, we provide a shortcut to the Collection View's Data Source and a property 
 
 ```csharp
 public CityViewDatasource Source {
-	get { return DataSource as CityViewDatasource;}
+    get { return DataSource as CityViewDatasource;}
 }
 
 public CityCollectionViewController ParentController { get; set;}
@@ -650,10 +644,10 @@ Then, we use the following code to initialize the Collection View and assign our
 ```csharp
 public CityCollectionView (IntPtr handle) : base (handle)
 {
-	// Initialize
-	RegisterClassForCell (typeof(CityCollectionViewCell), CityViewDatasource.CardCellId);
-	DataSource = new CityViewDatasource (this);
-	Delegate = new CityViewDelegate ();
+    // Initialize
+    RegisterClassForCell (typeof(CityCollectionViewCell), CityViewDatasource.CardCellId);
+    DataSource = new CityViewDatasource (this);
+    Delegate = new CityViewDelegate ();
 }
 ```
 
@@ -662,24 +656,23 @@ Finally, we want the title under the image to only be visible when the user has 
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
 {
-	var previousItem = context.PreviouslyFocusedView as CityCollectionViewCell;
-	if (previousItem != null) {
-		Animate (0.2, () => {
-			previousItem.CityTitle.Alpha = 0.0f;
-		});
-	}
+    var previousItem = context.PreviouslyFocusedView as CityCollectionViewCell;
+    if (previousItem != null) {
+        Animate (0.2, () => {
+            previousItem.CityTitle.Alpha = 0.0f;
+        });
+    }
 
-	var nextItem = context.NextFocusedView as CityCollectionViewCell;
-	if (nextItem != null) {
-		Animate (0.2, () => {
-			nextItem.CityTitle.Alpha = 1.0f;
-		});
-	}
+    var nextItem = context.NextFocusedView as CityCollectionViewCell;
+    if (nextItem != null) {
+        Animate (0.2, () => {
+            nextItem.CityTitle.Alpha = 1.0f;
+        });
+    }
 }
 ```
 
 We set the transparence of the previous item losing focus to zero (0) and the transparence of the next item gain focus to 100%. These transition get animated as well.
-
 
 ## Configuring the Collection View Controller
 
@@ -697,30 +690,30 @@ using UIKit;
 
 namespace tvCollection
 {
-	public partial class CityCollectionViewController : UICollectionViewController
-	{
-		#region Computed Properties
-		public CityCollectionView Collection {
-			get { return CollectionView as CityCollectionView; }
-		}
-		#endregion
+    public partial class CityCollectionViewController : UICollectionViewController
+    {
+        #region Computed Properties
+        public CityCollectionView Collection {
+            get { return CollectionView as CityCollectionView; }
+        }
+        #endregion
 
-		#region Constructors
-		public CityCollectionViewController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructors
+        public CityCollectionViewController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void AwakeFromNib ()
-		{
-			base.AwakeFromNib ();
+        #region Override Methods
+        public override void AwakeFromNib ()
+        {
+            base.AwakeFromNib ();
 
-			// Save link to controller
-			Collection.ParentController = this;
-		}
-		#endregion
-	}
+            // Save link to controller
+            Collection.ParentController = this;
+        }
+        #endregion
+    }
 }
 
 ```
@@ -739,44 +732,44 @@ using tvCollection;
 
 namespace MySingleView
 {
-	public partial class ViewController : UIViewController
-	{
-		#region Application Access
-		public static AppDelegate App {
-			get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
-		}
-		#endregion
+    public partial class ViewController : UIViewController
+    {
+        #region Application Access
+        public static AppDelegate App {
+            get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
+        }
+        #endregion
 
-		#region Constructors
-		public ViewController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructors
+        public ViewController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
-			// Perform any additional setup after loading the view, typically from a nib.
-		}
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
+            // Perform any additional setup after loading the view, typically from a nib.
+        }
 
-		public override void ViewWillAppear (bool animated)
-		{
-			base.ViewWillAppear (animated);
+        public override void ViewWillAppear (bool animated)
+        {
+            base.ViewWillAppear (animated);
 
-			// Update image with the currently selected one
-			CityView.Image = UIImage.FromFile(App.SelectedCity.ImageFilename);
-			BackgroundView.Image = CityView.Image;
-			CityTitle.Text = App.SelectedCity.Title;
-		}
+            // Update image with the currently selected one
+            CityView.Image = UIImage.FromFile(App.SelectedCity.ImageFilename);
+            BackgroundView.Image = CityView.Image;
+            CityTitle.Text = App.SelectedCity.Title;
+        }
 
-		public override void DidReceiveMemoryWarning ()
-		{
-			base.DidReceiveMemoryWarning ();
-			// Release any cached data, images, etc that aren't in use.
-		}
-		#endregion
-	}
+        public override void DidReceiveMemoryWarning ()
+        {
+            base.DidReceiveMemoryWarning ();
+            // Release any cached data, images, etc that aren't in use.
+        }
+        #endregion
+    }
 }
 ```
 
@@ -785,12 +778,12 @@ The following code initially displays the selected item from the `SelectedCity` 
 ```csharp
 public override void ViewWillAppear (bool animated)
 {
-	base.ViewWillAppear (animated);
+    base.ViewWillAppear (animated);
 
-	// Update image with the currently selected one
-	CityView.Image = UIImage.FromFile(App.SelectedCity.ImageFilename);
-	BackgroundView.Image = CityView.Image;
-	CityTitle.Text = App.SelectedCity.Title;
+    // Update image with the currently selected one
+    CityView.Image = UIImage.FromFile(App.SelectedCity.ImageFilename);
+    BackgroundView.Image = CityView.Image;
+    CityTitle.Text = App.SelectedCity.Title;
 }
 ```
 
@@ -820,14 +813,11 @@ One of the key features of using a Collection View is the ability to create cust
 
 Recently added to Collection Views for iOS 9 was the ability to easily allow the reordering of items in the collection. Again, since tvOS 9 is a subset of iOS 9, this is done them same way. Please see our [Collection View Changes](~/ios/user-interface/controls/uicollectionview.md) document for more details.
 
-
 <a name="Summary" />
 
 ## Summary
 
 This article has covered designing and working with Collection Views inside of a Xamarin.tvOS app. First, it discussed all of the elements that make up the Collection View. Next, it showed how to design and implement a Collection View using a Storyboard. Finally, is provided links to information on creating custom layouts and reordering items.
-
-
 
 ## Related Links
 

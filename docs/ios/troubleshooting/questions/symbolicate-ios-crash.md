@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CB8607B9-FFDA-4617-8210-8E43EC512588
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/09/2018
 ---
 
@@ -42,6 +42,5 @@ the following directory:
 
 ## See also
 
-- [Symbolicating iOS Crash Files (Xamarin.iOS)](http://jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
+- [Symbolicating iOS Crash Files (Xamarin.iOS)](https://www.jmillerdev.net/symbolicating-ios-crash-files-xamarin-ios/)
 - [Demystifying iOS Application Crash Logs](https://www.raywenderlich.com/23704/demystifying-ios-application-crash-logs)
-

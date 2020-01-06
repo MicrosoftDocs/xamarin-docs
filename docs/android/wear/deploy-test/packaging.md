@@ -3,8 +3,8 @@ title: "Packaging Wear Apps"
 ms.prod: xamarin
 ms.assetid: E32DD855-78DD-46F8-B234-4EAC0756BDA2
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
 ---
 
@@ -61,7 +61,6 @@ the following steps to create this association:
 
 -----
 
-
 Note that you will get an **XA5211** error if the package name of the
 Wear app does not match the package name of the Handheld app. For
 example:
@@ -99,42 +98,40 @@ process does the following:
 
 - Adds the Wear app as a **raw** resource to the Handheld project. 
 
-
 ## Manual Packaging
 
 You can write Android Wear apps in Xamarin.Android before version 5.0, 
 but you must follow these manual packaging instructions to distribute 
 the app: 
 
-1. Ensure that your Wearable project and Handheld (Phone) 	projects
+1. Ensure that your Wearable project and Handheld (Phone) projects
    have the same version number and package name.
 
 2. Manually build the Wearable project as a **Release** build.
 
 3. Manually add the release **.APK** from step (2) into the
-   **Resources/raw** directory 	of the Handheld (Phone) project.
+   **Resources/raw** directory of the Handheld (Phone) project.
 
 4. Manually add a new XML resource
-   **Resources/xml/wearable_app_desc.xml** 	in the Handheld project
+   **Resources/xml/wearable_app_desc.xml** in the Handheld project
    which refers to Wearable **APK** from step (3):
 
-	```xml
-	<wearableApp package="wearable.app.package.name">
-		<versionCode>1</versionCode>
-		<versionName>1.0</versionName>
-		<rawPathResId>NAME_OF_APK_FROM_STEP_3</rawPathResId>
-	</wearableApp>
-	```
+    ```xml
+    <wearableApp package="wearable.app.package.name">
+        <versionCode>1</versionCode>
+        <versionName>1.0</versionName>
+        <rawPathResId>NAME_OF_APK_FROM_STEP_3</rawPathResId>
+    </wearableApp>
+    ```
 
-5. Manually add a `<meta-data />` element to the Handheld 	project's
-   **AndroidManifest.xml** `<application>` element 	that refers to the
+5. Manually add a `<meta-data />` element to the Handheld     project's
+   **AndroidManifest.xml** `<application>` element     that refers to the
    new XML resource:
 
-	```xml
-	<meta-data android:name="com.google.android.wearable.beta.app"
-		android:resource="@xml/wearable_app_desc"/>
-	```
+    ```xml
+    <meta-data android:name="com.google.android.wearable.beta.app"
+        android:resource="@xml/wearable_app_desc"/>
+    ```
 
 See also the Android Developer site's 
 [manual packging instructions](https://developer.android.com/training/wearables/apps/packaging.html#PackageManually).
-

@@ -35,7 +35,7 @@
 
     Set breakpoints in the two event handlers and tap on items in the [`ListView`](xref:Xamarin.Forms.ListView). Note that the [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event is only fired when a new item is selected in the [`ListView`](xref:Xamarin.Forms.ListView), whereas the [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) event is fired each time an item is tapped.
 
-    For more information about item selection and taps, see [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps) in the [ListView Interactivity](~/xamarin-forms/user-interface/listview/interactivity.md) guide.
+    For more information about item selection and taps, see [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps) in the [ListView Interactivity](~/xamarin-forms/user-interface/listview/interactivity.md) guide.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -74,4 +74,4 @@
 
     Set breakpoints in the two event handlers and tap on items in the [`ListView`](xref:Xamarin.Forms.ListView). Note that the [`ItemSelected`](xref:Xamarin.Forms.ListView.ItemSelected) event is only fired when a new item is selected in the [`ListView`](xref:Xamarin.Forms.ListView), whereas the [`ItemTapped`](xref:Xamarin.Forms.ListView.ItemTapped) event is fired each time an item is tapped.
 
-    For more information about item selection and taps, see [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection--taps) in the [ListView Interactivity](~/xamarin-forms/user-interface/listview/interactivity.md) guide.
+    For more information about item selection and taps, see [Selection & Taps](~/xamarin-forms/user-interface/listview/interactivity.md#selection-and-taps)

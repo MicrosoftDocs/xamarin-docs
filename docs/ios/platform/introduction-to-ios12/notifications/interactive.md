@@ -4,8 +4,8 @@ description: "With iOS 12, it is possible to create interactive user interfaces 
 ms.prod: xamarin
 ms.assetid: E3562E1B-E0EF-4C99-9F51-59DE22AFDE46
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
 ---
 # Interactive notification user interfaces in Xamarin.iOS

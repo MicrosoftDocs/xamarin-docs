@@ -4,8 +4,8 @@ description: "This document describes how to determine the location for a SQLite
 ms.prod: xamarin
 ms.assetid: E5582F4B-AD74-420F-9E6D-B07CFB420B3A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
 ---
 
@@ -59,7 +59,6 @@ lock (locker){
 ```
 
 All database access (reads, writes, updates, etc) should be wrapped with the same lock. Care must be taken to avoid a deadlock situation by ensuring that the work inside the lock clause is kept simple and does not call out to other methods that may also take a lock!
-
 
 ## Related Links
 

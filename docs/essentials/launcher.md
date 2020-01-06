@@ -44,16 +44,40 @@ public class LauncherTest
 {
     public async Task<bool> OpenRideShareAsync()
     {
-		return await Launcher.TryOpenAsync("lyft://ridetype?id=lyft_line");
+        return await Launcher.TryOpenAsync("lyft://ridetype?id=lyft_line");
     }
 }
 ```
+
+### Additional Platform Setup
+
+# [Android](#tab/android)
+
+No additional setup.
+
+# [iOS](#tab/ios)
+
+In iOS 9 and greater, Apple enforces what schemes an application can query for. To specify which schemes you would like to use, you must specify `LSApplicationQueriesSchemes` in your `Info.plist` file.
+
+```
+<key>LSApplicationQueriesSchemes</key>
+<array>
+    <string>lyft</string>  
+    <string>fb</string>
+</array>
+```
+
+# [UWP](#tab/uwp)
+
+No additional setup.
+
+-----
 
 ## Files
 
 This features enables an app to request other apps to open and view a file. Xamarin.Essentials will automatically detect the file type (MIME) and request the file to be opened.
 
-Here is a sample of writing text to disk and and requesting it be opened:
+Here is a sample of writing text to disk and requesting it be opened:
 
 ```csharp
 var fn = "File.txt";

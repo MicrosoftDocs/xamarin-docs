@@ -4,8 +4,8 @@ description: "This document describes how to read near field communication tags 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
 ---
 
@@ -143,7 +143,6 @@ The parameters for the `NFCNdefReaderSession` constructor are as follows:
 - `queue` – The queue that callbacks are handled on. It can be `null`, in which case be sure to use the `DispatchQueue.MainQueue` when updating user interface controls (as shown in the sample).
 - `invalidateAfterFirstRead` – When `true`, the scan stops after the first successful scan; when `false` scanning will continue and multiple results returned until the scan is cancelled or the 60 second timeout is reached.
 
-
 ### 3. Cancel the scanning session
 
 The user can cancel the scanning session via a system-provided
@@ -166,7 +165,6 @@ be called.
 CoreNFC enables your app to read data from NFC tags. It supports
 reading a variety of tag formats (NDEF types 1 through 5), but does
 not support writing or formatting.
-
 
 ## Related Links
 

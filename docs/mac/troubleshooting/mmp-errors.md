@@ -5,8 +5,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5B26339F-A202-4E41-9229-D0BC9E77868E
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2018
 ---
 
@@ -120,7 +120,7 @@ This usually indicates a bug in Xamarin.Mac; please file a bug report at [https:
 
 <a name="MM0073" />
 
-#### MM0073: Xamarin.Mac * does not support a deployment target of * (the minimum is *). Please select a newer deployment target in your project's Info.plist.
+#### MM0073: Xamarin.Mac \* does not support a deployment target of \* (the minimum is \*). Please select a newer deployment target in your project's Info.plist.
 
 The minimum deployment target is the one specified in the error message; please select a newer deployment target in the project's Info.plist.
 
@@ -128,7 +128,7 @@ If updating the deployment target is not possible, then please use an older vers
 
 <a name="MM0074" />
 
-#### MM0074: Xamarin.Mac * does not support a deployment target of * (the maximum is *). Please select an older deployment target in your project's Info.plist or upgrade to a newer version of Xamarin.Mac.
+#### MM0074: Xamarin.Mac \* does not support a deployment target of \* (the maximum is \*). Please select an older deployment target in your project's Info.plist or upgrade to a newer version of Xamarin.Mac.
 
 Xamarin.Mac does not support setting the minimum deployment target to a higher version than the version this particular version of Xamarin.Mac was built for.
 
@@ -147,7 +147,7 @@ Please select an older minimum deployment target in the project's Info.plist, or
 
 <a name="MM0091" />
 
-#### MM0091: This version of Xamarin.Mac requires the * SDK (shipped with Xcode *). Either upgrade Xcode to get the required header files or use the dynamic registrar or set the managed linker behaviour to Link Platform or Link Framework SDKs Only (to try to avoid the new APIs).
+#### MM0091: This version of Xamarin.Mac requires the \* SDK (shipped with Xcode \*). Either upgrade Xcode to get the required header files or use the dynamic registrar or set the managed linker behaviour to Link Platform or Link Framework SDKs Only (to try to avoid the new APIs).
 
 Xamarin.Mac requires the header files, from the SDK version specified in the error message, to build your application with the static registrar. The recommended way to fix this error is to upgrade Xcode to get the required SDK, this will include all the required header files. If you have multiple versions of Xcode installed, or want to use an Xcode in a non-default location, make sure to set the correct Xcode location in your IDE's preferences.
 
@@ -167,7 +167,7 @@ A last-straw solution would be to use an older version of Xamarin.Mac, one that 
 
 <a name="MM0099" />
 
-#### MM0099: Internal error {0}. Please file a bug report with a test case (http://bugzilla.xamarin.com).
+#### MM0099: Internal error {0}. Please file a bug report with a test case (https://bugzilla.xamarin.com).
 
 <a name="MM0114" />
 
@@ -199,7 +199,7 @@ When running `--runregistrar`, the assembly list should include the product asse
 
 <a name="MM0132" />
 
-#### MM0132: Unknown optimization: *. Valid values are: *
+#### MM0132: Unknown optimization: \*. Valid values are: \*
 
 The specified optimization was not recognized.
 
@@ -333,7 +333,7 @@ As a last-straw solution, use an older version of Xamarin.Mac that does not requ
 
 <a name="MM2009" />
 
-#### MM2009: Referenced by {0}.{1}     ** This message is related to MM2006 **
+#### MM2009: Referenced by {0}.{1}     \*\* This message is related to MM2006 \*\*
 
 <a name="MM2010" />
 
@@ -345,7 +345,7 @@ As a last-straw solution, use an older version of Xamarin.Mac that does not requ
 
 <a name="MM2012" />
 
-#### MM2012: Only first {0} of {1} "Referenced by" warnings shown. ** This message related to 2009 **
+#### MM2012: Only first {0} of {1} "Referenced by" warnings shown. \*\* This message related to 2009 \*\*
 
 <a name="MM2013" />
 
@@ -353,7 +353,7 @@ As a last-straw solution, use an older version of Xamarin.Mac that does not requ
 
 <a name="MM2014" />
 
-#### MM2014: Xamarin.Mac Extensions do not support linking. Request for linking will be ignored. ** This message is obsolete in XM 3.6+ **
+#### MM2014: Xamarin.Mac Extensions do not support linking. Request for linking will be ignored. \*\* This message is obsolete in XM 3.6+ \*\*
 
 <!-- 2015 used by mtouch -->
 
@@ -391,7 +391,7 @@ See https://docs.microsoft.com/cpp/dotnet/mixed-native-and-managed-assemblies fo
 
 <a name="MM2106" />
 
-#### MM2106: Could not optimize the call to BlockLiteral.SetupBlock[Unsafe] in * at offset * because *.
+#### MM2106: Could not optimize the call to BlockLiteral.SetupBlock[Unsafe] in \* at offset \* because \*.
 
 The linker reports this warning when it can't optimize a call to `BlockLiteral.SetupBlock` or `Block.SetupBlockUnsafe`.
 
@@ -636,9 +636,9 @@ argument in the project's Mac Build options.
 <a name="MM8026" />
 
 #### MM8026: * is not supported when the dynamic registrar has been linked away.
- 
+
 This usually indicates a bug in Xamarin.Mac, because the dynamic registrar should not be linked away if it's needed. Please file a bug at [https://bugzilla.xamarin.com](https://bugzilla.xamarin.com/enter_bug.cgi?product=iOS).
- 
+
 It's possible to force the linker to keep the dynamic registrar by adding
 `--optimize=-remove-dynamic-registrar` to the additional mmp arguments in
 the project's Mac Build options.

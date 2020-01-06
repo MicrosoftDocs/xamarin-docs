@@ -4,8 +4,8 @@ description: "This document describes how to work with navigation bars in a tvOS
 ms.prod: xamarin
 ms.assetid: 74E396B7-87F0-46F7-BC6C-827DB8884C97
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -29,39 +29,36 @@ The easiest way to work with Navigation Bars in a Xamarin.tvOS app is to add the
 # [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, double-click `Main.storyboard` file and open it for editing.
-1. Drag a **Navigation Bar** from the **Toolbox** and drop it on the View at the top of the screen: 
+1. Drag a **Navigation Bar** from the **Toolbox** and drop it on the View at the top of the screen:
 
-	[![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
-1. Double-click on the **Navigation Bar** to select to **Navigation Item**. In the **Widget** tab of the **Properties Pad**, you can set the **Title**: 
+    [![](navigation-bars-images/navbar02.png "A Navigation Bar")](navigation-bars-images/navbar02.png#lightbox)
+1. Double-click on the **Navigation Bar** to select to **Navigation Item**. In the **Widget** tab of the **Properties Pad**, you can set the **Title**:
 
-	[![](navigation-bars-images/navbar03.png "Set the Title")](navigation-bars-images/navbar03.png#lightbox)
-1. Next, you can add one or more **Bar Button Items** to either end of the bar: 
+    [![](navigation-bars-images/navbar03.png "Set the Title")](navigation-bars-images/navbar03.png#lightbox)
+1. Next, you can add one or more **Bar Button Items** to either end of the bar:
 
-	[![](navigation-bars-images/navbar04.png "A Bar Button Item")](navigation-bars-images/navbar04.png#lightbox)
-1. Finally, wire-up the **Bar Button Items** to Actions in the **Events** tab of the **Properties Explorer**: 
+    [![](navigation-bars-images/navbar04.png "A Bar Button Item")](navigation-bars-images/navbar04.png#lightbox)
+1. Finally, wire-up the **Bar Button Items** to Actions in the **Events** tab of the **Properties Explorer**:
 
-	[![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
+    [![](navigation-bars-images/navbar05.png "A Bar Button Item Action")](navigation-bars-images/navbar05.png#lightbox)
 1. Save your changes.
-
 
 # [Visual Studio](#tab/windows)
 
-
 1. In the **Solution Explorer**, double-click `Main.storyboard` file and open it for editing.
-1. Drag a **Navigation Bar** from the **Toolbox** and drop it on the View at the top of the screen: 
+1. Drag a **Navigation Bar** from the **Toolbox** and drop it on the View at the top of the screen:
 
-	[![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
-1. Double-click on the **Navigation Bar** to select to **Navigation Item**. In the **Widget** tab of the **Properties Explorer**, you can set the **Title**: 
+    [![](navigation-bars-images/navbar02-vs.png "A Navigation Bar")](navigation-bars-images/navbar02-vs.png#lightbox)
+1. Double-click on the **Navigation Bar** to select to **Navigation Item**. In the **Widget** tab of the **Properties Explorer**, you can set the **Title**:
 
-	[![](navigation-bars-images/navbar03-vs.png "Set the Title")](navigation-bars-images/navbar03-vs.png#lightbox)
-1. Next, you can add one or more **Bar Button Items** to either end of the bar: 
+    [![](navigation-bars-images/navbar03-vs.png "Set the Title")](navigation-bars-images/navbar03-vs.png#lightbox)
+1. Next, you can add one or more **Bar Button Items** to either end of the bar:
 
-	[![](navigation-bars-images/navbar04-vs.png "A Bar Button Items")](navigation-bars-images/navbar04-vs.png#lightbox)
-1. Finally, wire-up the **Bar Button Items** to Actions in the **Events** tab of the **Properties Explorer**: 
+    [![](navigation-bars-images/navbar04-vs.png "A Bar Button Items")](navigation-bars-images/navbar04-vs.png#lightbox)
+1. Finally, wire-up the **Bar Button Items** to Actions in the **Events** tab of the **Properties Explorer**:
 
-	[![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
+    [![](navigation-bars-images/navbar05-vs.png "A Bar Button Item Actions")](navigation-bars-images/navbar05-vs.png#lightbox)
 1. Save your changes.
-
 
 -----
 
@@ -77,59 +74,57 @@ using UIKit;
 
 namespace MySingleView
 {
-	public partial class ViewController : UIViewController
-	{
-		#region Constructors
-		public ViewController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class ViewController : UIViewController
+    {
+        #region Constructors
+        public ViewController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
-			// Perform any additional setup after loading the view, typically from a nib.
-		}
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
+            // Perform any additional setup after loading the view, typically from a nib.
+        }
 
-		public override void DidReceiveMemoryWarning ()
-		{
-			base.DidReceiveMemoryWarning ();
-			// Release any cached data, images, etc that aren't in use.
-		}
-		#endregion
+        public override void DidReceiveMemoryWarning ()
+        {
+            base.DidReceiveMemoryWarning ();
+            // Release any cached data, images, etc that aren't in use.
+        }
+        #endregion
 
-		#region Custom Actions
-		partial void ShowFirstHotel (UIBarButtonItem sender) {
-			// Change background image
-			HotelImage.Image = UIImage.FromFile("Motel01.jpg");
-		}
+        #region Custom Actions
+        partial void ShowFirstHotel (UIBarButtonItem sender) {
+            // Change background image
+            HotelImage.Image = UIImage.FromFile("Motel01.jpg");
+        }
 
-		partial void ShowSecondHotel (UIBarButtonItem sender) {
-			// Change background image
-			HotelImage.Image = UIImage.FromFile("Motel02.jpg");
-		}
+        partial void ShowSecondHotel (UIBarButtonItem sender) {
+            // Change background image
+            HotelImage.Image = UIImage.FromFile("Motel02.jpg");
+        }
 
-		partial void ShowThirdHotel (UIBarButtonItem sender) {
-			// Change background image
-			HotelImage.Image = UIImage.FromFile("Motel03.jpg");
-		}
-		#endregion
-	}
+        partial void ShowThirdHotel (UIBarButtonItem sender) {
+            // Change background image
+            HotelImage.Image = UIImage.FromFile("Motel03.jpg");
+        }
+        #endregion
+    }
 }
 ```
 
 As long as a button's `Enabled` property is `true` and it is not covered by another control or view, it can be made the in-focus item using the Siri Remote.
 
-For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
+For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Summary" />
 
 ## Summary
 
 This article has covered designing and working with Navigation Bars inside of a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

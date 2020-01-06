@@ -260,7 +260,7 @@ public string CreateAuthorizationRequest()
     dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
     dic.Add("response_type", "code id_token");
     dic.Add("scope", "openid profile basket orders locations marketing offline_access");
-    dic.Add("redirect_uri", GlobalSetting.Instance.IdentityCallback);
+    dic.Add("redirect_uri", GlobalSetting.Instance.Callback);
     dic.Add("nonce", Guid.NewGuid().ToString("N"));
     dic.Add("code_challenge", CreateCodeChallenge());
     dic.Add("code_challenge_method", "S256");
@@ -472,7 +472,6 @@ For more information about how the eShopOnContainers mobile app makes web reques
 There are many approaches to integrating authentication and authorization into a Xamarin.Forms app that communicates with an ASP.NET MVC web application. The eShopOnContainers mobile app performs authentication and authorization with a containerized identity microservice that uses IdentityServer 4. IdentityServer is an open source OpenID Connect and OAuth 2.0 framework for ASP.NET Core that integrates with ASP.NET Core Identity to perform bearer token authentication.
 
 The mobile app requests security tokens from IdentityServer, either for authenticating a user or for accessing a resource. When accessing a resource, an access token must be included in the request to APIs that require authorization. IdentityServer's middleware validates incoming access tokens to ensure that they are sent from a trusted issuer, and that they are valid to be used with the API that receives them.
-
 
 ## Related Links
 

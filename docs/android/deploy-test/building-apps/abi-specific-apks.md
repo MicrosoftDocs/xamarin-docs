@@ -4,16 +4,14 @@ description: "This document will discuss how to build an APK that will target a 
 ms.prod: xamarin
 ms.assetid: D21B195B-4530-4EB2-8704-5C4349A2CDD8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
 ---
 
 # Building ABI-Specific APKs
 
 _This document will discuss how to build an APK that will target a single ABI using Xamarin.Android._
-
-
 
 ## Overview
 
@@ -26,14 +24,13 @@ configurations. There are some situations where creating multiple APKs
 can be useful, such as:
 
 - **Reduce the size of the APK** - Google Play imposes a 100MB size
-   limit on APK files. Creating device specific APK's can reduce the
-   size of the APK as you only need to supply a subset of assets and
-   resources for the application.
+  limit on APK files. Creating device specific APK's can reduce the
+  size of the APK as you only need to supply a subset of assets and
+  resources for the application.
 
 - **Support different CPU architectures** - If your application has
-   shared libraries for specific CPU's, you can distribute only the
-   shared libraries for that CPU.
-
+  shared libraries for specific CPU's, you can distribute only the
+  shared libraries for that CPU.
 
 Multiple APKs can complicate distribution - a problem that is addressed
 by Google Play. Google Play will ensure that the correct APK is
@@ -52,12 +49,9 @@ cover the following topics:
 1. Build the application using the  **AndroidManifest.XML** from the previous step.
 1. Prepare the APK for release by signing and zip-aligning it.
 
-
 At the end of this guide is a walkthrough that will demonstrate how to
 script these steps using
-[Rake](http://martinfowler.com/articles/rake.html).
-
-
+[Rake](https://martinfowler.com/articles/rake.html).
 
 ### Creating the Version Code for the APK
 
@@ -72,17 +66,17 @@ following list explains this eight digit version code format
 (indexed from left to right):
 
 - **Index 0** (red in diagram below) &ndash; An integer for the ABI:
-    - 1 &ndash; `armeabi`
-    - 2 &ndash; `armeabi-v7a`
-    - 6 &ndash; `x86`
+  - 1 &ndash; `armeabi`
+  - 2 &ndash; `armeabi-v7a`
+  - 6 &ndash; `x86`
 
 - **Index 1-2** (orange in diagram below) &ndash; The minimum API level supported by the application.
 
 - **Index 3-4** (blue in diagram below) &ndash; The screen sizes supported:
-    - 1 &ndash; small
-    - 2 &ndash; normal
-    - 3 &ndash; large
-    - 4 &ndash; xlarge
+  - 1 &ndash; small
+  - 2 &ndash; normal
+  - 3 &ndash; large
+  - 4 &ndash; xlarge
 
 - **Index 5-7** (green in diagram below) &ndash; A unique number for the version code. 
     This is set by the developer. It should increase for each public release of the application.
@@ -91,7 +85,6 @@ The following diagram illustrates the position of each code described
 in the above list:
 
 [![Diagram of eight-digit version code format, coded by color](abi-specific-apks-images/image00.png)](abi-specific-apks-images/image00.png#lightbox)
-
 
 Google Play will ensure that the correct APK is delivered to the device
 based on the `versionCode` and APK configuration. The APK with the
@@ -118,13 +111,11 @@ version codes would be:
 - 21423457 - The ABI is  `armeabi-v7a` ; targetting API level 14; normal &amp; large screens; with a version name of 457.
 - 61923500 - The ABI is  `x86` ; targetting API level 19; normal &amp; large screens; with a version name of 500.
 
-
 Maintaining these version codes manually can be a significant burden on
 the developer. The process of calculating the correct
 `android:versionCode` and then building the APK's should be automated.
 An example of how to do so will be covered in the walkthrough at the
 end of this document.
-
 
 ### Create A Temporary AndroidManifest.XML
 
@@ -139,8 +130,6 @@ typically involves taking a copy of the Android manifest used during
 development, modifying it, and then using that modify manifest during
 the build process.
 
-
-
 ### Compiling the APK
 
 Building the APK per ABI is best accomplished by using either `xbuild` or `msbuild` as shown in the following sample command line:
@@ -152,34 +141,32 @@ Building the APK per ABI is best accomplished by using either `xbuild` or `msbui
 The following list explains each command line parameter:
 
 - `/t:Package` &ndash; Creates an Android APK that is signed using
-    the debug keystore
+  the debug keystore
 
 - `/p:AndroidSupportedAbis=<TARGET_ABI>` &ndash; This the ABI to
-    target. Must one of `armeabi`, `armeabi-v7a`, or `x86`
+  target. Must one of `armeabi`, `armeabi-v7a`, or `x86`
 
 - `/p:IntermediateOutputPath=obj.<TARGET_ABI>/` &ndash; This is the
-    directory that will hold the intermediate files that are created as
-    a part of the build. If necessary, Xamarin.Android will create a
-    directory named after the ABI, such as `obj.armeabi-v7a`. It is
-    recommended to use one folder for each ABI as this will prevent
-    issues that make result with files "leaking" from one
-    build to another. Notice that this value is terminated with a
-    directory separator (a `/` in the case of OS X).
+  directory that will hold the intermediate files that are created as
+  a part of the build. If necessary, Xamarin.Android will create a
+  directory named after the ABI, such as `obj.armeabi-v7a`. It is
+  recommended to use one folder for each ABI as this will prevent
+  issues that make result with files "leaking" from one
+  build to another. Notice that this value is terminated with a
+  directory separator (a `/` in the case of OS X).
 
 - `/p:AndroidManifest` &ndash; This property specifies the path to
-    the **AndroidManifest.XML** file that will be used during the build.
+  the **AndroidManifest.XML** file that will be used during the build.
 
 - `/p:OutputPath=bin.<TARGET_ABI>` &ndash; This is the directory that
-    will house the final APK. Xamarin.Android will create a directory
-    named after the ABI, for example `bin.armeabi-v7a`.
+  will house the final APK. Xamarin.Android will create a directory
+  named after the ABI, for example `bin.armeabi-v7a`.
 
 - `/p:Configuration=Release` &ndash; Perform a Release build of the
-    APK. Debug builds may not be uploaded to Google Play.
+  APK. Debug builds may not be uploaded to Google Play.
 
 - `<CS_PROJ FILE>` &ndash; This is the path to the `.csproj` file for
-    the Xamarin.Android project.
-
-
+  the Xamarin.Android project.
 
 ### Sign and Zipalign The APK
 
@@ -199,7 +186,6 @@ run on a device. This is the format of the command line to use:
 zipalign -f -v 4 <SIGNED_APK_TO_ZIPALIGN> <PATH/TO/ZIP_ALIGNED.APK>
 ```
 
-
 ## Automating APK Creation With Rake
 
 The sample project
@@ -211,7 +197,6 @@ the following ABI's:
 - armeabi
 - armeabi-v7a
 - x86
-
 
 The [rakefile](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb)
 in the sample project performs each of the steps that were described in
@@ -234,7 +219,6 @@ the previous sections:
 1. [Zipalign](https://github.com/xamarin/monodroid-samples/blob/master/OneABIPerAPK/Rakefile.rb#L67)
    the APK.
 
-
 To build all of the APKs for the application, run the `build` Rake task
 from the command line:
 
@@ -251,14 +235,12 @@ of these folders with their contents:
 
 [![Locations of platform-specific folders containing xamarin.helloworld.apk](abi-specific-apks-images/image01.png)](abi-specific-apks-images/image01.png#lightbox)
 
-
 > [!NOTE]
 > The build process outlined in this guide may be
 implemented in one of many different build systems. Although we don't
 have a pre-written example, it should also be possible with
 [Powershell](https://technet.microsoft.com/scriptcenter/powershell.aspx) / [psake](https://github.com/psake/psake) or
-[Fake](http://fsharp.github.io/FAKE/).
-
+[Fake](https://fsharp.github.io/FAKE/).
 
 ## Summary
 
@@ -267,8 +249,6 @@ that target a specify ABI. It also discussed one possible scheme for
 creating `android:versionCodes` that will identify the CPU architecture
 that the APK is intended for. The walkthrough included a sample project
 that has it's build scripted using Rake.
-
-
 
 ## Related Links
 

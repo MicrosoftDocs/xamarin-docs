@@ -158,8 +158,6 @@ As Xamarin.Forms processes the binding path, it installs a `PropertyChanged` han
 
 If a property in the binding path does not implement `INotifyPropertyChanged`, any changes to that property will be ignored. Some changes could entirely invalidate the binding path, so you should use this technique only when the string of properties and sub-properties never become invalid.
 
-
-
 ## Related Links
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

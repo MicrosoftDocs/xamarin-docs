@@ -4,8 +4,8 @@ description: "How to implement Google Maps API v2 features in your Xamarin.Andro
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/07/2018
 ---
 
@@ -29,7 +29,6 @@ Android API v2 is part of
 A Xamarin.Android app must meet some mandatory prerequisites before
 it is possible to use the Google Maps Android API.
 
-
 ## Google Maps API prerequisites
 
 Several steps need to be taken before you can use the Maps API, including:
@@ -40,14 +39,12 @@ Several steps need to be taken before you can use the Maps API, including:
 - [Specify the required permissions](#declare-permissions)
 - [Optionally, Create an emulator with the Google APIs](#create-emulator-with-google-api)
 
-
 ### <a name="obtain-maps-key" />Obtain a Google Maps API Key
 
 The first step is to get a Google Maps API key (note that you cannot
 reuse an API key from the legacy Google Maps v1 API). For information about
 how to obtain and use the API key with Xamarin.Android, see
 [Obtaining A Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
-
 
 ### <a name="install-gps-sdk" /> Install the Google Play Services SDK
 
@@ -162,7 +159,6 @@ The following snippet is an example of the settings that must be added to **Andr
     <!-- Necessary for apps that target Android 9.0 or higher -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
-
     <!-- Permission to receive remote notifications from Google Play Services -->
     <!-- Notice here that we have the package name of our application as a prefix on the permissions. -->
     <uses-permission android:name="<PACKAGE NAME>.permission.MAPS_RECEIVE" />
@@ -171,7 +167,6 @@ The following snippet is an example of the settings that must be added to **Andr
     <!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
 
     <application android:label="@string/app_name">
         <!-- Put your Google Maps V2 API Key here. -->
@@ -185,11 +180,9 @@ The following snippet is an example of the settings that must be added to **Andr
 
 In addition to requesting the permissions **AndroidManifest.XML**, an app must also perform runtime permission checks for the  `ACCESS_COARSE_LOCATION` and the `ACCESS_FINE_LOCATION` permissions. See the [Xamarin.Android Permissions](~/android/app-fundamentals/permissions.md) guide for more information about performing run-time permission checks.
 
-
 ### <a name="create-emulator-with-google-api" />Create an Emulator with Google APIs
 
 In the event that a physical Android device with Google Play services is not installed, it is possible to create an emulator image for development. For more information see the [Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-
 
 ## The GoogleMap Class
 
@@ -308,7 +301,6 @@ API:
 - **None** - This map does not load any tiles, it is rendered as an
    empty grid.
 
-
 The image below shows three of the different types of maps, from
 left-to-right (normal, hybrid, terrain):
 
@@ -324,7 +316,6 @@ public void OnMapReady(GoogleMap map)
     map.MapType = GoogleMap.MapTypeHybrid;
 }
 ```
-
 
 ### <a name="googlemap_object" />GoogleMap properties
 
@@ -445,7 +436,6 @@ the preceding code:
 
 [![Example Google Map showing a specified location with a tilted viewing angle](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
 
-
 ### Drawing on the Map
 
 The Android Maps API provides API's for drawing the following items on a map:
@@ -456,7 +446,6 @@ The Android Maps API provides API's for drawing the following items on a map:
 
 - **Lines, Polygons, and Circles** - These are APIs that allow Activities to add shapes to a map.
 
-
 #### Markers
 
 The Maps API provides a
@@ -465,7 +454,6 @@ class which encapsulates all of the data about a single location on a
 map. By default the Marker class uses a standard icon provided by Google Maps. It is
 possible to customize the appearance of a marker and to respond to user
 clicks.
-
 
 ##### Adding a Marker
 
@@ -492,7 +480,6 @@ user taps on the marker. The following screenshot shows what this
 marker looks like:
 
 [![Example Google Map with a marker and an info window for Vimy Ridge](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
-
 
 ##### Customizing A Marker
 
@@ -604,7 +591,6 @@ The following screenshot shows this overlay on a map:
 
 [![Example map with an overlayed image of a polar bear](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
 
-
 #### Lines, Circles, and Polygons
 
 There are three simple types of geometric figures that can be added to a map:
@@ -615,7 +601,6 @@ There are three simple types of geometric figures that can be added to a map:
 - **Circle** - This will draw a circle on the map.
 
 - **Polygon** - This is a closed shape for marking areas on a map.
-
 
 ##### Polylines
 
@@ -654,7 +639,6 @@ circleOptions.InvokeRadius (1000);
 googleMap.AddCircle (circleOptions);
 ```
 
-
 ##### Polygons
 
 `Polygon`s are similar to `Polyline`s, however they are not open
@@ -678,7 +662,6 @@ rectOptions.Add(new LatLng(37.35, -122.2));
 googleMap.AddPolygon(rectOptions);
 ```
 
-
 ## Responding to user events
 
 There are three types of interactions a user may have with a map:
@@ -690,7 +673,6 @@ There are three types of interactions a user may have with a map:
 - **Info Window Click** - The user has clicked on an info window.
 
 Each of these events will be discussed in more detail below.
-
 
 ### Marker click events
 
@@ -704,7 +686,6 @@ contains two properties:
 
 - `Marker` &ndash; This property is a reference to the marker
    that raised the `MarkerClick` event.
-
 
 This code snippet shows an example of a `MarkerClick` that will change
 the camera position to a new location on the map:
@@ -733,7 +714,6 @@ void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickE
 }
 ```
 
-
 ### Marker Drag events
 
 This event is raised when the user wishes to drag the marker. By
@@ -760,7 +740,6 @@ for a draggable marker:
 Each of the `EventArgs` contains a single property called `P0` that is a
 reference to the `Marker` object being dragged.
 
-
 ### Info Window Click events
 
 Only one info window can be displayed at a time. When the user clicks
@@ -785,7 +764,6 @@ Recall that an info window is a static `View` which is rendered as an
 image on the map. Any widgets such as buttons, check boxes, or text
 views that are placed inside the info window will be inert and cannot
 respond to any of their integral user events.
-
 
 ## Related Links
 

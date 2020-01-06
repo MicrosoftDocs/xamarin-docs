@@ -1,92 +1,62 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
+
 title: Xamarin.Mac
+summary: "Xamarin.Mac exposes the complete macOS SDK for .NET developers to build native Mac applications using C#."
+
 metadata:
-  description: Xamarin.Mac exposes the complete macOS SDK for .NET developers.
-  author: conceptdev
-  ms.author: crdun
-  ms.date: 07/27/2018
+  title: Xamarin.Mac
+  description: "Xamarin.Mac exposes the complete macOS SDK for .NET developers to build native Mac applications using C#."
+  author: davidortinau
+  ms.author: daortin
+  ms.date: 08/27/2019
   ms.topic: landing-page
   ms.technology: xamarin-mac
-abstract:
-  description: Xamarin.Mac exposes the complete macOS SDK for .NET developers. Build fully native apps in Visual Studio for Mac.
-  menu:
-    items:
-    - href: ~/mac/samples/index.yml
-      text: Mac Samples
-    - href: https://docs.microsoft.com/xamarin/mac/release-notes/
-      text: Release Notes
-    - href: https://developer.apple.com/documentation/
-      text: Apple's Developer Documentation
-    - href: /visualstudio/mac/
-      text: Visual Studio for Mac
-sections:
-- title: Get Started
-  items:
-  - type: paragraph
-    text: Learn how to build your first Mac app with Xamarin and C#.
-  - type: list
-    style: icon48
-    items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: Setup
-      href: ~/mac/get-started/installation.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
-      text: Hello, Mac
-      href: ~/mac/get-started/hello-mac.md
-- title: Guides
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: ~/mac/get-started/index.md
-      html: Tutorials to get you up and running with Xamarin.Mac. Make sure everything is installed correctly, and build your first Mac apps.
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/mac/get-started/index.md
-      title: Getting Started
-    - href: ~/mac/app-fundamentals/
-      html: Everything you need to know to build Mac apps, such as working with files, images, databases, and more.
-      image:
-        src: ~/media/icons/i_app-build.svg
-        href: ~/mac/app-fundamentals/
-      title: Application Fundamentals
-    - href: ~/mac/user-interface
-      html: Learn about the complete set of user interface controls available for macOS in AppKit.
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: ~/mac/user-interface/
-      title: User Interface
-    - href: ~/mac/platform/
-      html: Working with Mac platform features, such as Storyboards, OpenTK, and the newest features in macOS.
-      image:
-        src: ~/media/icons/i_platform.svg
-        href: ~/mac/platform/
-      title: Platform Features
-    - href: ~/mac/deploy-test/
-      html: Instructions for building and deploying your apps to the App Store, and tips for testing them beforehand!
-      image:
-        src: ~/media/icons/i_deploy-test.svg
-        href: ~/mac/deploy-test/
-      title: Deployment and Testing
-    - href: ~/mac/internals/
-      html: Additional information about Xamarin.Mac internals and assistance with features like accessibility.
-      image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-        href: ~/mac/internals/
-      title: Advanced Concepts & Internals
-- title: Reference
-  items:
-  - type: list
-    style: cards
-    className: cardsD
-    items:
-    - title: API
-      html: <p><a href="https://docs.microsoft.com/dotnet/api/AppKit">Mac API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0">Base Class Library</a></p>
-    - title: Samples
-      html: <p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac">Mac Samples</a></p>
 
-    
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Get started
+    linkLists: 
+      - linkListType: quickstart
+        links: 
+          - text: Hello, Mac
+            url: ~/mac/get-started/hello-mac.md
+      - linkListType: download
+        links: 
+          - text: Xamarin.Mac samples
+            url: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Mac
+          - text: Visual Studio for Mac
+            url: /visualstudio/mac/installation/
+
+  # Card
+  - title: Build Mac apps
+    linkLists: 
+      - linkListType: concept
+        links: 
+          - text: Application fundamentals
+            url: ~/mac/app-fundamentals/index.md
+          - text: User interface controls
+            url: ~/mac/user-interface/index.md
+          - text: Mac platform features
+            url: ~/mac/platform/index.md
+          - text: Advanced concepts and internals
+            url: ~/mac/internals/index.md
+      - linkListType: deploy
+        links: 
+          - text: Publish to the Mac App Store
+            url: ~/mac/deploy-test/publishing-to-the-app-store/index.md
+
+  # Card
+  - title: Search APIs and releases
+    linkLists: 
+      - linkListType: reference
+        links: 
+          - text: Xamarin.Mac API docs
+            url: https://docs.microsoft.com/dotnet/api/?view=xamarin-mac-sdk-14
+          - text: Base Class Library available in Xamarin.Mac
+            url: https://docs.microsoft.com/dotnet/api/?view=xamarinmac-3.0
+          - text: Xamarin.Mac release notes
+            url: https://docs.microsoft.com/xamarin/mac/release-notes/  
+          - text: Apple's developer documentation    
+            url: https://developer.apple.com/documentation/

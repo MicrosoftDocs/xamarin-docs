@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`StackLayout`](xref:Xamarin.Forms.StackLayout) in XAML.
 > - Specify the orientation of the `StackLayout`.
 > - Control child view alignment and expansion within the `StackLayout`.

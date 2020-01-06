@@ -4,8 +4,8 @@ description: "This article covers the Light and Dark UI Themes that Apple has ad
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -97,9 +97,6 @@ Additionally, Trait Collections have the following features in tvOS 10:
 > [!IMPORTANT]
 > The Xamarin.tvOS Early Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection` yet. Full support will be added in a future release.
 
-
-
-
 <a name="Customizing-Appearance-Based-on-Theme" />
 
 ### Customizing Appearance Based on Theme
@@ -178,22 +175,22 @@ To enable Trait Collection support, do the following:
 
 Apple has added the following abilities when editing tvOS Storyboards in Interface Builder:
 
-* The developer can specify different variations of User Interface elements based on UI theme in the **Attribute Inspector**:
+- The developer can specify different variations of User Interface elements based on UI theme in the **Attribute Inspector**:
 
-  * Several properties now have a **+** beside them which can be clicked to add a UI theme specific version:
+  - Several properties now have a **+** beside them which can be clicked to add a UI theme specific version:
 
     [![](user-interface-styles-images/theme08.png "Add a UI theme specific version")](user-interface-styles-images/theme08.png#lightbox)
 
-  * The developer can specify a new property or click the **x** button to remove it:
+  - The developer can specify a new property or click the **x** button to remove it:
 
     [![](user-interface-styles-images/theme09.png "Specify a new property or click the x button to remove it")](user-interface-styles-images/theme09.png#lightbox)
-* The developer can preview a UI design in either the Light or Dark theme from within Interface Builder:
+- The developer can preview a UI design in either the Light or Dark theme from within Interface Builder:
 
-  * The bottom of the Design Surface allows the developer to switch the current UI theme:
+  - The bottom of the Design Surface allows the developer to switch the current UI theme:
 
     [![](user-interface-styles-images/theme10.png "The bottom of the Design Surface")](user-interface-styles-images/theme10.png#lightbox)
 
-  * The new theme will be displayed in Interface Builder and any Trait Collection specific adjustments will be displayed:
+  - The new theme will be displayed in Interface Builder and any Trait Collection specific adjustments will be displayed:
 
     [![](user-interface-styles-images/theme11.png "The theme displayed in Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
 
@@ -204,8 +201,6 @@ Additionally, the tvOS Simulator now has a keyboard shortcut to allow the develo
 ## Summary
 
 This article has covered the Light and Dark UI Themes that Apple has added to tvOS 10 and how to implement them in a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

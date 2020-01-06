@@ -4,8 +4,8 @@ description: "Collection Views allow content to be displayed using arbitrary lay
 ms.prod: xamarin
 ms.assetid: F4B85F25-0CB5-4FEA-A3B5-D22FCDC81AE4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -50,7 +50,6 @@ each of these views:
 - `SelectedBackgroundView` – Cells have built in support for selection. This view is used to visually denote that a cell is selected. It is rendered just below the  `ContentView` when a cell is selected.
 - `BackgroundView` – Cells can also display a background, which is presented by the  `BackgroundView` . This view is rendered beneath the  `SelectedBackgroundView` .
 
-
 By setting the `ContentView` such that it is smaller than the `BackgroundView` and `SelectedBackgroundView`, the `BackgroundView` can be used to visually frame the content, while the `SelectedBackgroundView` will be displayed when a cell is selected,
 as shown below:
 
@@ -93,7 +92,6 @@ public class AnimalCell : UICollectionViewCell
 
  <a name="Supplementary_Views" />
 
-
 ## Supplementary Views
 
 Supplementary Views are views that present information associated with each
@@ -131,7 +129,6 @@ any views, making their appearance fully customizable.
 
  <a name="Decoration_Views" />
 
-
 ## Decoration Views
 
 Decoration Views are purely visual views that can be displayed in a `UICollectionView`. Unlike Cells and Supplementary Views, they are
@@ -152,7 +149,6 @@ background view that scrolls with the content in the `UICollectionView`, as show
     }
   }
  ```
-
 
 ## Data Source
 
@@ -216,7 +212,6 @@ in the animal class and returned for display to the `UICollectionView`.
 
  <a name="Delegate" />
 
-
 ### Delegate
 
 The `UICollectionView` class uses a delegate of type `UICollectionViewDelegate` to support interaction with content in the `UICollectionView`. This allows control of:
@@ -225,12 +220,10 @@ The `UICollectionView` class uses a delegate of type `UICollectionViewDelegate` 
 - **Cell Highlighting** – Determines if a cell is currently being touched.
 - **Cell Menus** – Menu displayed for a cell in response to a long press gesture.
 
-
 As with the data source, the `UICollectionViewController` is
 configured by default to be the delegate for the `UICollectionView`.
 
  <a name="Cell_HighLighting" />
-
 
 #### Cell HighLighting
 
@@ -260,7 +253,6 @@ public override void ItemUnhighlighted (UICollectionView collectionView, NSIndex
 
  <a name="Disabling_Selection" />
 
-
 #### Disabling Selection
 
 Selection is enabled by default in `UICollectionView`. To disable
@@ -287,7 +279,6 @@ false.
 
  <a name="Cell_Menus" />
 
-
 #### Cell Menus
 
 Each Cell in a `UICollectionView` is capable of showing a menu
@@ -298,13 +289,11 @@ menu on a cell:
 1. Override  `CanPerformAction` and return true for every action that the item can perform, which will be any of cut, copy or paste.
 1. Override  `PerformAction` to perform the edit, copy of paste operation.
 
-
 The following screenshot show the menu when a cell is long pressed:
 
  [![](uicollectionview-images/04a-menu.png "This screenshot show the menu when a cell is long pressed")](uicollectionview-images/04a-menu.png#lightbox)
 
  <a name="Layout" />
-
 
 ## Layout
 
@@ -317,7 +306,6 @@ layouts.
 
  <a name="Layout_Basics" />
 
-
 ### Layout Basics
 
 Layouts in a `UICollectionView` are defined in a class that
@@ -327,9 +315,7 @@ responsible for creating the layout attributes for every item in the `UICollecti
 - Use the built-in  `UICollectionViewFlowLayout` .
 - Provide a custom layout by inheriting from  `UICollectionViewLayout` .
 
-
  <a name="Flow_Layout" />
-
 
 ### Flow Layout
 
@@ -341,13 +327,11 @@ To use a flow layout:
 
 - Create an instance of  `UICollectionViewFlowLayout` :
 
-
 ```csharp
 var layout = new UICollectionViewFlowLayout ();
 ```
 
 - Pass the instance to the constructor of the  `UICollectionView` :
-
 
 ```csharp
 simpleCollectionViewController = new SimpleCollectionViewController (layout);
@@ -360,7 +344,6 @@ rearranging the content appropriately, as shown below:
  [![](uicollectionview-images/05-layout-orientation.png "Example of the orientation changes")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
  <a name="Section_Inset" />
-
 
 #### Section Inset
 
@@ -380,7 +363,6 @@ This results in spacing around the section as shown below:
 
  <a name="Subclassing_UICollectionViewFlowLayout" />
 
-
 #### Subclassing UICollectionViewFlowLayout
 
 In edition to using `UICollectionViewFlowLayout` directly, it can
@@ -398,7 +380,6 @@ requires:
 - Overriding  `ShouldInvalidateLayoutForBoundsChange` , returning true so that when bounds of the  `UICollectionView` changes, the layout of the cells will be recalculated. This is used in this case ensure the code for transformation applied to the centermost cell will be applied during scrolling.
 - Overriding  `TargetContentOffset` to make the centermost cell snap to the center of the  `UICollectionView` as scrolling stops.
 - Overriding  `LayoutAttributesForElementsInRect` to return an array of  `UICollectionViewLayoutAttributes` . Each  `UICollectionViewLayoutAttribute` contains information on how to layout the particular item, including properties such as its  `Center` ,  `Size` ,  `ZIndex` and  `Transform3D` .
-
 
 The following code shows such an implementation:
 
@@ -471,7 +452,6 @@ namespace SimpleCollectionView
 
  <a name="Custom_Layout" />
 
-
 ### Custom Layout
 
 In addition to using `UICollectionViewFlowLayout`, layouts can
@@ -483,7 +463,6 @@ The key methods to override are:
 - `CollectionViewContentSize` – Returns the size of the area used to display content.
 - `LayoutAttributesForElementsInRect` – As with the UICollectionViewFlowLayout example shown earlier, this method is used to provide information to the  `UICollectionView` regarding how to layout each item. However, unlike the  `UICollectionViewFlowLayout` , when creating a custom layout, you can position items however you choose.
 
-
 For example, the same content could be presented in a circular layout as
 shown below:
 
@@ -494,9 +473,7 @@ layout, to a horizontal scrolling layout, and subsequently to this circular
 layout requires only the layout class provided to the `UICollectionView` be changed. Nothing in the `UICollectionView`, its delegate or data source code changes at
 all.
 
-
 ## Changes in iOS 9
-
 
 In iOS 9, the collection view (`UICollectionView`) now supports drag reordering
 of items out of the box by adding a new default gesture recognizer and several new supporting methods.
@@ -552,6 +529,7 @@ Select the Collection View (It may be easiest to do this from the document outli
 [![](uicollectionview-images/quick04.png "Set the Collection View sizes")](uicollectionview-images/quick04.png#lightbox)
 
 Next, edit the default Cell:
+
 - Change its background color to blue
 - Add a label to act as the title for the cell
 - Set the reuse identifier to **cell**
@@ -1121,7 +1099,6 @@ namespace CollectionView
       var end = unionRects.Count;
       List<UICollectionViewLayoutAttributes> attrs = new List<UICollectionViewLayoutAttributes> ();
 
-
       for (int i = 0; i < end; i++) {
         if (rect.IntersectsWith(unionRects[i])) {
           begin = i * (int)unionSize;
@@ -1314,7 +1291,6 @@ The following changes or additions have been made to the `UICollectionViewContro
 - `GetTargetContentOffset` – Used to get the offset of a given collection view item.
 - `GetTargetIndexPathForMove` – Gets the `indexPath` of a given item for a drag operation.
 - `MoveItem` – Moves the order of a given item in the list.
-
 
 ### UICollectionViewDataSource
 

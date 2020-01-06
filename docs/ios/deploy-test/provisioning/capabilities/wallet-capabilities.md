@@ -4,8 +4,8 @@ description: "Adding capabilities to an application often requires additional pr
 ms.prod: xamarin
 ms.assetid: BD9475E6-F586-488C-93D4-8A2A1629B99B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
 ---
 
@@ -49,13 +49,12 @@ This App ID can now be used to generate, or to re-generate, a new provisioning p
 
 ![Using newly created App ID to create provisioning profile](wallet-capabilities-images/image20.png)
 
-
 For more information on using Wallet refer to the following guides:
 
 * [Introduction to PassKit](~/ios/platform/passkit.md)
- 
+
 ## Next Steps
- 
+
 The list below describes additional steps that may need to be taken:
 
 * Use the framework namespace in your app.

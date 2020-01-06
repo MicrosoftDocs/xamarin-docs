@@ -6,7 +6,7 @@ ms.assetid: 318D81DB-E456-4E44-B083-36A27DBD9523
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
+ms.date: 11/06/2019
 ---
 
 # Xamarin.Forms Shell Tabs
@@ -96,6 +96,10 @@ This implicit conversion automatically wraps the [`ContentPage`](xref:Xamarin.Fo
 Tab titles and icons are set on each `Tab` object, and displayed on the bottom tabs:
 
 [![Screenshot of a Shell two page app with bottom tabs, on iOS and Android](tabs-images/two-page-app-bottom-tabs.png "Shell two page app with bottom tabs")](tabs-images/two-page-app-bottom-tabs-large.png#lightbox "Shell two page app with bottom tabs")
+
+When there are more than five tabs, a **More** tab will appear, which can be used to access the additional tabs:
+
+[![Screenshot of a Shell app with a More tab, on iOS and Android](tabs-images/more-tabs.png "Shell app with More tab")](tabs-images/more-tabs-large.png#lightbox "Shellapp with More tabs")
 
 Alternatively, Shell's implicit conversion operators can be used to remove the `ShellContent` and `Tab` objects from the previous example:
 

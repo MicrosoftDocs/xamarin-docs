@@ -4,8 +4,8 @@ description: "This article covers the target frameworks (Base Class Libraries) a
 ms.prod: xamarin
 ms.assetid: AF21BE16-3F92-4121-AB4C-D51AC863D92D
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
 ---
 
@@ -48,7 +48,6 @@ You should **Clean** and then **Rebuild** your Xamarin.Mac project after switchi
 ## Summary
 
 This article has briefly covered the different types of Target Frameworks (Base Class Libraries) available to a Xamarin.Mac application and when each type of framework should be used.
-
 
 ## Related Links
 

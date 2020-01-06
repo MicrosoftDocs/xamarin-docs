@@ -8,7 +8,8 @@
       "monikers": [],
       "moniker_ranges": [],
       "xref_query_tags": [
-        "/dotnet"
+        "/dotnet",
+        "/uwp/api"
       ],
       "open_to_public_contributors": true,
       "type_mapping": {
@@ -54,5 +55,8 @@
     "pdf": {
       "template_folder": "_themes.pdf"
     }
+  },
+  "docs_build_engine": {
+    "name": "docfx_v3"
   }
-}
+ }

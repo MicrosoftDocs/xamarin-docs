@@ -4,8 +4,8 @@ description: "This document describe's fastlane's sigh command, which is used to
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -149,7 +149,6 @@ The following options can be used to give additional support when using sigh:
     ```
     
     Where `Amy cert` is the Code Signing Identity name.
-
 
 ## Related Links
 

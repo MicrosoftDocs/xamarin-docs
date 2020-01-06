@@ -4,8 +4,8 @@ description: "This document gives an overview of the distribution techniques tha
 ms.prod: xamarin
 ms.assetid: 341D36DB-BB07-FA94-BCC9-5F8C0B18C179
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -15,9 +15,7 @@ _This document gives an overview of the distribution techniques that are availab
 
 Once an Xamarin.iOS app has been developed, the next step in the software development lifecycle is to distribute the app to users, as shown in the highlighted section of the diagram below:
 
-
 [![](images/publishingdiagram.png "After the iOS app has been developed, the next step is to distribute the app to users, as shown in the highlighted section of this diagram")](images/publishingdiagram.png#lightbox)
-
 
 Apple provides the following ways to distribute an iOS application, which are supported by Xamarin.iOS:
 

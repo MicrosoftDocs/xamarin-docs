@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A6FE770B-A19A-4BF8-95E9-2CF880D4AFC5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
@@ -18,7 +18,6 @@ is automatically included in a debug build, but must be set manually
 for a release build. This is because the Internet permission is used to
 allow a debugger to attach to the process, as described for
 "DebugSymbols" [here](~/android/deploy-test/building-apps/build-process.md).
-
 
 ## Fix
 

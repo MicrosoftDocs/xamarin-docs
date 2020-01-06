@@ -4,8 +4,8 @@ description: "This document provides a walkthrough of how to use location inform
 ms.prod: xamarin
 ms.assetid: F8EEA0FD-5614-47FE-ADAC-80A5BCA6EB5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -16,7 +16,6 @@ In this example, we are going to build an iOS Location application that prints i
 This walkthrough explains some key backgrounding concepts, including registering an app as a background-necessary application, suspending UI updates when the app is backgrounded, and working with the `WillEnterBackground` and `WillEnterForeground` `AppDelegate` methods.
 
 ## Application set up
-
 
 1. First, create a new **iOS > App > Single View Application (C#)**. Call it _Location_ and ensure that both iPad and iPhone have been selected.
 
@@ -76,13 +75,9 @@ This walkthrough explains some key backgrounding concepts, including registering
     > [!IMPORTANT]
     > iOS 8 (and greater) also requires an entry in the **Info.plist** file to show the user as part of the authorization request.
 
-1. Add a key `NSLocationAlwaysUsageDescription`
-or `NSLocationWhenInUseUsageDescription` with a
-string that will be displayed to the user in the alert
-that requests location data access.
+1. Add **Info.plist** keys for the permission types the app requires – `NSLocationAlwaysUsageDescription`, `NSLocationWhenInUseUsageDescription`, and/or `NSLocationAlwaysAndWhenInUseUsageDescription` – with a string that will be displayed to the user in the alert that requests location data access.
 
 1. iOS 9 requires that when using `AllowsBackgroundLocationUpdates` the **Info.plist** includes the key `UIBackgroundModes` with the value `location`. If you have completed step 2 of this walkthrough, this should already been in your Info.plist file.
-
 
 1. Inside the `LocationManager` class, create a method called `StartLocationUpdates` with the following code. This code shows the how to start receiving location updates from the   `CLLocationManager`:
 
@@ -200,7 +195,6 @@ public override void ViewDidLoad ()
 }
 ```
 
-
 Now, when the application is run, it should look something like this:
 
 [![](location-walkthrough-images/image5.png "An example app run")](location-walkthrough-images/image5.png#lightbox)
@@ -276,7 +270,6 @@ UIApplication.Notifications.ObserveDidBecomeActive ((sender, args) => {
 Now the UI will begin updating when the application is first started, and resume updating any time the app comes back into the foreground.
 
 In this walkthrough, we built a well-behaved, background-aware iOS application that prints location data to both the screen and the application output window.
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This guide introduces the Xamarin Designer for iOS. It demonstrate
 ms.prod: xamarin
 ms.assetid: E7045E41-0DEF-416B-BCDB-52502350F61C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 01/31/2018
 ---
 
@@ -30,6 +30,8 @@ This section describes how the iOS Designer facilitates creating a user interfac
 The iOS Designer allows developers to visually design an application's user interface. As outlined in the [Introduction to Storyboards](~/ios/user-interface/storyboards/index.md) guide, a storyboard describes the screens (view controllers) that make up an app, the interface elements (views) placed on those view controllers, and the app's overall navigation flow. 
 
 A view controller has two parts: a visual representation in the iOS Designer and an associated C# class:
+
+<!-- markdownlint-disable MD001 -->
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -189,7 +191,7 @@ The iOS Designer has six primary sections:
 To add a control to an interface, drag it from the **Toolbox** and drop it on the design surface. When adding or positioning a control, vertical and horizontal guidelines highlight commonly-used layout positions such as vertical center, horizontal center, and margins:
 
 # [Visual Studio for Mac](#tab/macos)
- 
+
 ![On the design surface, guidelines highlight commonly-used layout positions](introduction-images/9-layoutguides-vsmac.png "On the design surface, guidelines highlight commonly-used layout positions")
 
 # [Visual Studio](#tab/windows)
@@ -215,7 +217,7 @@ A context menu is available both on the design surface and in the **Document Out
 ### Constraints toolbar
 
 # [Visual Studio for Mac](#tab/macos)
- 
+
 [![The contraints toolbar](introduction-images/11-constraintstoolbar-vsmac.png "The constraints toolbar")](introduction-images/11-constraintstoolbar-vsmac-large.png#lightbox)
 
 # [Visual Studio](#tab/windows)
@@ -311,7 +313,7 @@ When [size classes](~/ios/user-interface/storyboards/unified-storyboards.md#size
 The design surface supports zooming via several controls:
 
 # [Visual Studio for Mac](#tab/macos)
- 
+
 ![The zoom controls in the bottom toolbar](introduction-images/16-zoomcontrols-vsmac.png "The zoom controls in the bottom toolbar")
 
 # [Visual Studio](#tab/windows)

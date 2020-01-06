@@ -3,8 +3,8 @@ title: "GridViewPager"
 ms.prod: xamarin
 ms.assetid: A1CDD5F0-049B-4DFA-A268-8A875D26A675
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
 ---
 
@@ -23,10 +23,10 @@ The layout XML looks like this:
 
 ```xml
 <android.support.wearable.view.GridViewPager xmlns:android="http://schemas.android.com/apk/res/android"
-	android:id="@+id/pager"
-	android:layout_width="match_parent"
-	android:layout_height="match_parent"
-	android:keepScreenOn="true" />
+    android:id="@+id/pager"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:keepScreenOn="true" />
 ```
 
 Create a
@@ -45,8 +45,6 @@ Wire up the adapter as shown:
 ```csharp
 pager.Adapter = new SimpleGridPagerAdapter (this, FragmentManager);
 ```
-
-
 
 ## Related Links
 

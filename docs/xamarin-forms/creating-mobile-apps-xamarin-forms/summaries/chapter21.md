@@ -122,8 +122,6 @@ The 3D coordinate system implied by Xamarin.Forms is left-handed. If you point t
 
 Also, for any of the three axis, if you point your left-hand thumb in the direction of increasing values, then the curve of your fingers indicates the direction of rotation for positive rotating angles.
 
-
-
 ## Related links
 
 - [Chapter 21 full text (PDF)](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch21-Apr2016.pdf)

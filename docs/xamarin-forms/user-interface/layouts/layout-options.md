@@ -151,8 +151,6 @@ Each [`Label`](xref:Xamarin.Forms.Label) occupies the same amount of space withi
 
 This article explained the effect that each [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions) structure value has on the alignment and expansion of a view, relative to its parent. The `Start`, `Center`, `End`, and `Fill` fields are used to define the view's alignment within the parent layout, and the `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, and `FillAndExpand` fields are used to define the alignment preference, and to determine whether the view will occupy more space, if available, within a [`StackLayout`](xref:Xamarin.Forms.StackLayout).
 
-
-
 ## Related Links
 
 - [LayoutOptions (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layoutoptions)

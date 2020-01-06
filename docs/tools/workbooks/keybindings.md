@@ -3,8 +3,8 @@ title: "Xamarin Workbooks Editor Keyboard Shortcuts"
 description: "This document describes keyboard shortcuts available for use in the Xamarin Workbooks editor. In particular, it looks at various ways the Return key is used."
 ms.prod: xamarin
 ms.assetid: 6375A371-3215-4A7C-B97B-A19E58BE96D6
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
 ---
 

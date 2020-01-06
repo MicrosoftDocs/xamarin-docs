@@ -4,8 +4,8 @@ description: "This document describes how to work with tab bar controllers in a 
 ms.prod: xamarin
 ms.assetid: 99A2D7C6-0324-4DE5-B6E9-D39D0BAD8370
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -54,55 +54,55 @@ Each Category (Tab) in the Tab Bar is represented by a Tab Bar Item (`UITabBarIt
 The easiest way to work with Tab Bars in a Xamarin.tvOS app is to add them to the app's UI using the iOS Designer.
 
 # [Visual Studio for Mac](#tab/macos)
-	
+
 1. Start a new Xamarin.tvOS app and select **tvOS** > **App** > **Tabbed App**: 
 
-	[![](tab-bars-images/tab02.png "Select Tabbed App")](tab-bars-images/tab02.png#lightbox)
+    [![](tab-bars-images/tab02.png "Select Tabbed App")](tab-bars-images/tab02.png#lightbox)
 1. Follow all of the prompts to create a new Xamarin.tvOS Solution.
 1. In the **Solution Pad**, double-click the `Main.storyboard` file and open it for editing.
 1. To change the **Icon** or **Title** for a given Category, select the **Tab Bar Item** for the **View Controller** in the **Document Outline**:
 
-	[![](tab-bars-images/tab03a.png "The Tab Bar Item for the View Controller in the Document Outline")](tab-bars-images/tab03a.png#lightbox)
+    [![](tab-bars-images/tab03a.png "The Tab Bar Item for the View Controller in the Document Outline")](tab-bars-images/tab03a.png#lightbox)
 1. Then set the required properties in the **Widget Tab** of the **Properties Explorer**: 
 
-	[![](tab-bars-images/tab03.png "The Widget Tab")](tab-bars-images/tab03.png#lightbox)
+    [![](tab-bars-images/tab03.png "The Widget Tab")](tab-bars-images/tab03.png#lightbox)
 1. To add a new Category (Tab), drop a **View Controller** onto your design surface: 
 
-	[![](tab-bars-images/tab04.png "A View Controller")](tab-bars-images/tab04.png#lightbox)
+    [![](tab-bars-images/tab04.png "A View Controller")](tab-bars-images/tab04.png#lightbox)
 1. Control-click and drag from the **Tab View Controller** to the new **View Controller**.
 1. From the popup, select **view controllers** to add the new view as a Tab (Category): 
 
-	[![](tab-bars-images/tab05.png "Select Tab")](tab-bars-images/tab05.png#lightbox)
+    [![](tab-bars-images/tab05.png "Select Tab")](tab-bars-images/tab05.png#lightbox)
 1. Design the layout of the UI for each Caterogies content area as normal, by adding UI elements in the iOS Designer.
 1. Expose any required events to work with your UI controls in C# code.
 1. Name any UI controls that you want to expose in C# code.
 1. Save your changes.
 
 # [Visual Studio](#tab/windows)
-	
+
 1. Start a new Xamarin.tvOS app and select **tvOS** > **App** > **Tabbed App**: 
 
-	[![](tab-bars-images/tab02vs.png "Select Tabbed App")](tab-bars-images/tab02vs.png#lightbox)
+    [![](tab-bars-images/tab02vs.png "Select Tabbed App")](tab-bars-images/tab02vs.png#lightbox)
 1. Follow all of the prompts to create a new Xamarin.tvOS Solution.
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. To change the **Icon** or **Title** for a given Category, select the **Tab Bar Item** for the **View Controller** in the **Document Outline**:
 
-	[![](tab-bars-images/tab03avs.png "The View Controller in the Document Outline")](tab-bars-images/tab03avs.png#lightbox)
+    [![](tab-bars-images/tab03avs.png "The View Controller in the Document Outline")](tab-bars-images/tab03avs.png#lightbox)
 1. Then set the required properties in the **Widget Tab** of the **Properties Explorer**: 
 
-	[![](tab-bars-images/tab03vs.png "The Widget Tab")](tab-bars-images/tab03vs.png#lightbox)
+    [![](tab-bars-images/tab03vs.png "The Widget Tab")](tab-bars-images/tab03vs.png#lightbox)
 1. To add a new Category (Tab), drag a **View Controller** from the **Toolbox** and drop it onto your design surface: 
 
-	[![](tab-bars-images/tab04vs.png "A View Controller")](tab-bars-images/tab04vs.png#lightbox)
+    [![](tab-bars-images/tab04vs.png "A View Controller")](tab-bars-images/tab04vs.png#lightbox)
 1. Control-click and drag from the **Tab View Controller** to the new **View Controller**.
 1. From the popup, select **view controllers** to add the new view as a Tab (Category): 
 
-	[![](tab-bars-images/tab05vs.png "Select Tab")](tab-bars-images/tab05vs.png#lightbox)
+    [![](tab-bars-images/tab05vs.png "Select Tab")](tab-bars-images/tab05vs.png#lightbox)
 1. Design the layout of the UI for each Caterogies content area as normal, by adding UI elements in iOS Designer.
 1. Expose any required events to work with your UI controls in C# code.
 1. Name any UI controls that you want to expose in C# code.
 1. Save your changes.
-	
+
 -----
 
 > [!IMPORTANT]
@@ -115,7 +115,6 @@ For more information on working with Storyboards, please see our [Hello, tvOS Qu
 ## Working with Tab Bars
 
 Use the `Items` property of the `UITabBar` to access the collection of `UITabBarItems` it contains as a zero (0) indexed array. The `SelectedItem` property will return the currently selected Tab (Category) as a `UITabBarItem`.
-
 
 <a name="Working-with-Tab-Bar-Items" />
 
@@ -139,9 +138,6 @@ Use the `Title` property of the `UITabBarItem` to change the title and the `Imag
 ## Summary
 
 This article has covered designing and working with Tab Bar Controller inside of a Xamarin.tvOS app.
-
-
-
 
 ## Related Links
 

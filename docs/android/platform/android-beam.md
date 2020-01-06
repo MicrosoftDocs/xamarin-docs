@@ -3,8 +3,8 @@ title: "Android Beam"
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/06/2017
 ---
 
@@ -38,13 +38,11 @@ Android supports two ways of setting messages with Android Beam:
     are in range. It supports scenarios where the message may vary
     based upon what’s happening in the application.
 
-
 In either case, to send data with Android Beam, an application sends an
 `NdefMessage`, packaging the data in several `NdefRecords`. Let’s
 take a look at the key points that must be addressed before we can
 trigger Android Beam. First, we’ll work with the callback style of
 creating an `NdefMessage`.
-
 
 ## Creating a Message
 
@@ -87,7 +85,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-
 ## Receiving a Message
 
 On the receiving side, the system invokes an Intent with the
@@ -104,10 +101,8 @@ screenshot below, see the [Android Beam demo](https://docs.microsoft.com/samples
 
 [![Example screenshots from the Android Beam demo](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
-
-
 ## Related Links
 
 - [Android Beam Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Introducing Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

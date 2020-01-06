@@ -5,8 +5,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/22/2018
 ---
 
@@ -21,7 +21,6 @@ This error occurs due to an incompatibility with Visual Studio.
 - **Visual Studio 2017 Update 2** (version 15.2 or newer) is only compatible with the **System.ValueTuple NuGet 4.3.1** or newer .
 
 Please choose the correct System.ValueTuple NuGet that corresponds with your Visual Studio 2017 installation.
-
 
 ## Receiving 'Error Retrieving Update Information' Error Message
 
@@ -173,7 +172,6 @@ This happens when you do all of the following:
 1. Use Mac OS X Leopard (10.5)
 1. Run your app within the simulator.
 
-
 The problem is that Mono is picking up the OS X `libsqlite3.dylib`, not the iPhoneSimulator's `libsqlite3.dylib` file. Your app *will* work on the
 device, but just not your simulator.
 
@@ -189,7 +187,7 @@ Project Options->iPhone Application
 
 Ensure that you are using the latest version of Visual Studio for Mac and Xamarin.iOS
 
-If the issue is still present, please [file a bug](http://monodevelop.com/Developers#Reporting_Bugs), attaching the **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log** log files.
+If the issue is still present, please [file a bug](https://monodevelop.com/Developers#Reporting_Bugs), attaching the **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log** log files.
 
 If all else fails, you can try removing the code completion cache so that it
 is regenerated:
@@ -264,8 +262,6 @@ restarting Visual Studio for Mac, and send the results to us.
 1. Disable "Beam Sync" using the "Quartz Debug" developer tool (which you can find using Spotlight), and check whether the source editor performance is restored to normal.
 1. Try repeating step (1) with Beam Sync still disabled.
 1. If the editor hangs for more than a few seconds, try to run "killall -QUIT [Visual Studio for Mac]" in a terminal while it is hung. It may be difficult to time the kill command to happen while the editor is hung, but it's essential to do so, because the command forces Mono to write stack traces of all threads to the MD log, which we can use to discover what state the threads are in while the XS is hung.
-
-
 
 Please attach the XS logs, **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log**
 (in older versions of XS/MonoDevelop, just send **~/Library/Logs/MonoDevelop-(3.0|2.8|2.6)/MonoDevelop.log**).
@@ -387,7 +383,6 @@ The current release of Xamarin.iOS and Visual Studio for Mac fail when the proje
 or the directory where the solution or project are stored contain spaces.
 To fix this:
 
-
 - Make sure that neither your project or the directory where it is stored contains a space.
 - In your project "Main Settings" make sure that the Project Name does not contain any spaces.
 
@@ -421,11 +416,9 @@ Follow these steps:
 
 This exception is caused by one of three things:
 
-
 1. You have provided a Selector to the Objective-C runtime without applying the corresponding [Export] attribute to a method
 1. You have enabled full linking and not applied the [Preserve] attribute to the [Export]ed method.
 1. You have applied the [Export] attribute to a private method in an inherited type.
-
 
 ## MainWindow.xib.designer.cs file is not updated
 
@@ -501,7 +494,7 @@ This means that you have XCode 4 installed.   In XCode 4, the tool
 ibtool was removed, it is no longer possible to edit your XIB files with a
 standalone tool.
 
-If you want to use Interface Builder, install [XCode series 3](http://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792), available from Apple's web site.
+If you want to use Interface Builder, install [XCode series 3](https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792), available from Apple's web site.
 
 ## "Can't create display binding for mime type: application/vnd.apple-interface-builder"
 
@@ -554,7 +547,6 @@ When attempting to update the software and this error message appears, please e-
 This issue can manifest in several forms, and doesn't always produce a consistent error. If the application contains a .xib, check to make sure the **Build Action** on the .xib is set to **InterfaceDefinition**. This is the default build action for .xibs.
 
 To check the build action, right click on the .xib file and choose **Build Action**.
-
 
 ## System.NotSupportedException: No data is available for encoding 437
 

@@ -4,8 +4,8 @@ description: "How to use the Switch widget in a Xamarin.Android application"
 ms.prod: xamarin
 ms.assetid: 6E1F3324-EC41-454A-AEC0-0208813C7E50
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/29/2018
 ---
 
@@ -46,8 +46,6 @@ default to ON and read NO/YES instead of OFF/ON, we can set the
         android:textOff="NO" />
 ```
 
-
-
 ## Providing a Title
 
 The `Switch` widget also supports including a text label by setting the
@@ -81,7 +79,6 @@ s.CheckedChange += delegate(object sender, CompoundButton.CheckedChangeEventArgs
     toast.Show ();
 };
 ```
-
 
 ## Related Links
 

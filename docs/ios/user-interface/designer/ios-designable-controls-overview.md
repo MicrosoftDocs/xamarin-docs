@@ -4,8 +4,8 @@ description: "The Xamarin Designer for iOS supports rendering custom controls cr
 ms.prod: xamarin
 ms.assetid: D8F07D63-B006-4050-9D1B-AC6FCDA71B99
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -13,11 +13,11 @@ ms.date: 03/22/2017
 
 _The Xamarin Designer for iOS supports rendering custom controls created in your project or referenced from external sources like the Xamarin Component Store._
 
-The Xamarin Designer for iOS is a powerful tool for visualizing an application's user interface and provides 
-	WYSIWYG editing support for most iOS views and view controllers. Your app may also contain custom controls
-	that extend the ones built into iOS. If these custom controls are written with a few guidelines in mind,
-	they can also be rendered by the iOS Designer, providing an even richer editing experience. This document
-	takes a look at those guidelines.
+The Xamarin Designer for iOS is a powerful tool for visualizing an application's user interface and provides
+WYSIWYG editing support for most iOS views and view controllers. Your app may also contain custom controls
+that extend the ones built into iOS. If these custom controls are written with a few guidelines in mind,
+they can also be rendered by the iOS Designer, providing an even richer editing experience. This document
+takes a look at those guidelines.
 
 ## Requirements
 
@@ -41,7 +41,6 @@ A property declared by a custom control will appear in the property panel if the
 1. The property has an  [ExportAttribute](xref:Foundation.ExportAttribute) as well as a  [BrowsableAttribute](xref:System.ComponentModel.BrowsableAttribute) set to True.
 1. The property type is a numeric type, enumeration type, string, bool, [SizeF](xref:System.Drawing.SizeF), [UIColor](xref:UIKit.UIColor), or [UIImage](xref:UIKit.UIImage). This list of supported types may be expanded in the future.
 
-
 The property may also be decorated with a [DisplayNameAttribute](xref:System.ComponentModel.DisplayNameAttribute) to specify the label that is displayed for it in the property panel.
 
 ## Initialization
@@ -51,17 +50,16 @@ For `UIViewController` subclasses, you should use the [ViewDidLoad](xref:UIKit.U
 For `UIView` and other `NSObject` subclasses, the [AwakeFromNib](xref:Foundation.NSObject.AwakeFromNib) method
 is the recommended place to perform initialization of your custom control after it is loaded from the layout file. This is because any custom properties set in the property panel will not be set when the control's constructor is run, but they will be set before `AwakeFromNib` is called:
 
-
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
 public class CustomView : UIView {
 
-	public CustomView (IntPtr handle) : base (handle) { }
+    public CustomView (IntPtr handle) : base (handle) { }
 
-	public override void AwakeFromNib ()
-	{
-		// Initialize the view here.
-	}
+    public override void AwakeFromNib ()
+    {
+        // Initialize the view here.
+    }
 }
 ```
 
@@ -71,24 +69,24 @@ If the control is also designed to be created directly from code, you may want t
 [Register ("CustomView"), DesignTimeVisible (true)]
 public class CustomView : UIView {
 
-	public CustomView (IntPtr handle) : base (handle) { }
+    public CustomView (IntPtr handle) : base (handle) { }
 
-	public CustomView ()
-	{
-		// Called when created from code.
-		Initialize ();
-	}
+    public CustomView ()
+    {
+        // Called when created from code.
+        Initialize ();
+    }
 
-	public override void AwakeFromNib ()
-	{
-		// Called when loaded from xib or storyboard.
-		Initialize ();
-	}
+    public override void AwakeFromNib ()
+    {
+        // Called when loaded from xib or storyboard.
+        Initialize ();
+    }
 
-	void Initialize ()
-	{
-		// Common initialization code here.
-	}
+    void Initialize ()
+    {
+        // Common initialization code here.
+    }
 }
 ```
 
@@ -99,29 +97,29 @@ Care should be taken on when and where to initialize designable properties in a 
 ```csharp
 [Register ("CustomView"), DesignTimeVisible (true)]
 public class CustomView : UIView {
-	
-	[Export ("Counter"), Browsable (true)]
-	public int Counter {get; set;}
 
-	public CustomView (IntPtr handle) : base (handle) { }
+    [Export ("Counter"), Browsable (true)]
+    public int Counter {get; set;}
 
-	public CustomView ()
-	{
-		// Called when created from code.
-		Initialize ();
-	}
+    public CustomView (IntPtr handle) : base (handle) { }
 
-	public override void AwakeFromNib ()
-	{
-		// Called when loaded from xib or storyboard.
-		Initialize ();
-	}
+    public CustomView ()
+    {
+        // Called when created from code.
+        Initialize ();
+    }
 
-	void Initialize ()
-	{
-		// Common initialization code here.
-		Counter = 0;
-	}
+    public override void AwakeFromNib ()
+    {
+        // Called when loaded from xib or storyboard.
+        Initialize ();
+    }
+
+    void Initialize ()
+    {
+        // Common initialization code here.
+        Counter = 0;
+    }
 }
 ```
 
@@ -132,7 +130,6 @@ The `CustomView` component exposes a `Counter` property that can be set by the d
 - The  `AwakeFromNib` method is executed and a call is made to the component's  `Initialize` method.
 - Inside  `Initialize` the value of the  `Counter` property is being reset to zero (0).
 
-
 To fix the above situation, either initialize the `Counter` property elsewhere (such as in the component's constructor) or don't override the `AwakeFromNib` method and call `Initialize` if the component requires no further initialization outside of what is currently being handled by its constructors.
 
 ## Design Mode
@@ -142,7 +139,6 @@ On the design surface, a custom control must adhere to a few restrictions:
 - App bundle resources are not available in design mode. Images are available when loaded through  [UIImage methods](xref:UIKit.UIImage) .
 - Asynchronous operations, such as web requests, should not be performed in design mode. The design surface does not support animation or any other asynchronous updates to the control's UI.
 
-
 A custom control can implement [IComponent](xref:System.ComponentModel.IComponent) and use the [DesignMode](xref:System.ComponentModel.ISite.DesignMode) property to check if it is on the design
 surface. In this example, the label will display "Design Mode" on the design surface and "Runtime" at runtime:
 
@@ -150,22 +146,22 @@ surface. In this example, the label will display "Design Mode" on the design sur
 [Register ("DesignerAwareLabel")]
 public class DesignerAwareLabel : UILabel, IComponent {
 
-	#region IComponent implementation
+    #region IComponent implementation
 
-	public ISite Site { get; set; }
-	public event EventHandler Disposed;
+    public ISite Site { get; set; }
+    public event EventHandler Disposed;
 
-	#endregion
+    #endregion
 
-	public DesignerAwareLabel (IntPtr handle) : base (handle) { }
+    public DesignerAwareLabel (IntPtr handle) : base (handle) { }
 
-	public override void AwakeFromNib ()
-	{
-		if (Site != null && Site.DesignMode)
-			Text = "Design Mode";
-		else
-			Text = "Runtime";
-	}
+    public override void AwakeFromNib ()
+    {
+        if (Site != null && Site.DesignMode)
+            Text = "Design Mode";
+        else
+            Text = "Runtime";
+    }
 }
 ```
 
@@ -179,16 +175,16 @@ the control's constructor has run and before `AwakeFromNib` is called.
 A control that meets the above requirements will be displayed in the toolbox and rendered on the surface.
 If a control is not rendered, check for bugs in the control or one of its dependencies.
 
-The design surface can often catch exceptions thrown by individual controls while continuing to 
-render other controls. The faulty control is replaced with a red placeholder, and you can view the 
+The design surface can often catch exceptions thrown by individual controls while continuing to
+render other controls. The faulty control is replaced with a red placeholder, and you can view the
 exception trace by clicking on the exclamation icon:
 
  ![](ios-designable-controls-overview-images/exception-box.png "A faulty control as red placeholder and the exception details")
 
-If debug symbols are available for the control, the trace will have file names and line numbers. 
+If debug symbols are available for the control, the trace will have file names and line numbers.
 Double clicking a line in the stack trace will jump to that line in the source code.
 
-If the designer can't isolate the faulty control, a warning message will appear 
+If the designer can't isolate the faulty control, a warning message will appear
 at the top of the design surface:
 
  ![](ios-designable-controls-overview-images/info-bar.png "A warning message at the top of the design surface")

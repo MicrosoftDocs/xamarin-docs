@@ -3,8 +3,8 @@ title: "Creating A Fragment"
 ms.prod: xamarin
 ms.assetid: F2997242-BC29-1440-7F1A-CFC447CD73FA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/07/2018
 ---
 
@@ -29,7 +29,6 @@ public override View OnCreateView(LayoutInflater inflater, ViewGroup container, 
 The code above will inflate the view
 `Resource.Layout.Example_Fragment`, and add it as a child view to the
 `ViewGroup` container.
-
 
 > [!NOTE]
 > Fragment sub-classes must have a public default no argument constructor.
@@ -127,7 +126,6 @@ OR
 <fragment class="Com.Example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />
 ```
 
-
 ## Fragment Lifecycle
 
 Fragments have their own lifecycle that is somewhat independent of, but
@@ -138,7 +136,6 @@ are paused. The following diagram outlines the lifecycle of the
 Fragment.
 
 [![Flow diagram illustrating the Fragment lifecycle](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
-
 
 ### Fragment Creation Lifecycle Methods
 
@@ -198,7 +195,6 @@ of a Fragment as it is being created:
     excessive battery drain, though, and an application should minimize
     their use to preserve battery life.
 
-
 ### Fragment Destruction Lifecycle Methods
 
 The next list explains the lifecycle methods that are called as a Fragment
@@ -235,7 +231,6 @@ is being destroyed:
     hierarchy of the Fragment no longer exists, and all resources that
     are used by the Fragment should be released at this point.
 
-
 ### Using SetRetainInstance
 
 It is possible for a Fragment to specify that it should not be
@@ -247,7 +242,6 @@ happens, then all callback methods will be invoked except the
 `OnCreate` and `OnDestroy` lifecycle callbacks. This process is
 illustrated in the lifecycle diagram shown above (by the green dotted
 lines).
-
 
 ## Fragment State Management
 
@@ -300,7 +294,6 @@ Since the `EditText` control has an `id` assigned, the Fragment
 automatically saves the data in the widget when `OnSaveInstanceState`
 is called.
 
-
 ### Bundle Limitations
 
 Although using `OnSaveInstanceState` makes it easy to save transient
@@ -311,7 +304,6 @@ data, use of this method has some limitations:
 
 - When the Bundle is used to save data, that data is serialized. This
    can lead to processing delays.
-
 
 ## Contributing to the Menu
 

@@ -24,15 +24,15 @@ You can assign a trigger directly to a control, or add it to
 
 There are four types of trigger:
 
-* [Property Trigger](#property) - occurs when a property on a control
+- [Property Trigger](#property) - occurs when a property on a control
     is set to a particular value.
 
-* [Data Trigger](#data) - uses data binding to trigger based on
+- [Data Trigger](#data) - uses data binding to trigger based on
     the properties of another control.
 
-* [Event Trigger](#event) - occurs when an event occurs on the control.
+- [Event Trigger](#event) - occurs when an event occurs on the control.
 
-* [Multi Trigger](#multi) - allows multiple trigger conditions to be
+- [Multi Trigger](#multi) - allows multiple trigger conditions to be
     set before an action occurs.
 
 <a name="property" />
@@ -48,8 +48,9 @@ A simple trigger can be expressed purely in XAML, adding
 <Entry Placeholder="enter name">
     <Entry.Triggers>
         <Trigger TargetType="Entry"
-             Property="IsFocused" Value="True">
+                 Property="IsFocused" Value="True">
             <Setter Property="BackgroundColor" Value="Yellow" />
+            <!-- multiple Setters elements are allowed -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
@@ -57,18 +58,18 @@ A simple trigger can be expressed purely in XAML, adding
 
 The important parts of the trigger's declaration are:
 
-* **TargetType** - the control type that the trigger applies to.
+- **TargetType** - the control type that the trigger applies to.
 
-* **Property** - the property on the control that is monitored.
+- **Property** - the property on the control that is monitored.
 
-* **Value** - the value, when it occurs for the monitored property,
+- **Value** - the value, when it occurs for the monitored property,
     that causes the trigger to activate.
 
-* **Setter** - a collection of `Setter` elements can be added
+- **Setter** - a collection of `Setter` elements can be added
     and when the trigger condition is met. You must specify
     the `Property` and `Value` to set.
 
-* **EnterActions and ExitActions** (not shown) - are written in
+- **EnterActions and ExitActions** (not shown) - are written in
     code and can be used in
     addition to (or instead of) `Setter` elements. They
     are [described below](#enterexit).
@@ -89,6 +90,7 @@ Triggers can also be added to a `Style` declaration
                 <Trigger TargetType="Entry"
                          Property="IsFocused" Value="True">
                     <Setter Property="BackgroundColor" Value="Yellow" />
+                    <!-- multiple Setters elements are allowed -->
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -128,6 +130,7 @@ The example below uses the data binding syntax
                                        Path=Text.Length}"
                      Value="0">
             <Setter Property="IsEnabled" Value="False" />
+            <!-- multiple Setters elements are allowed -->
         </DataTrigger>
     </Button.Triggers>
 </Button>
@@ -173,18 +176,17 @@ The class itself implements `TriggerAction` which means it should
 
 A trigger action implementation should:
 
-* Implement the generic `TriggerAction<T>` class, with the generic
+- Implement the generic `TriggerAction<T>` class, with the generic
     parameter corresponding with the type of control the trigger
     will be applied to. You can use superclasses such as `VisualElement`
     to write trigger actions that work with a variety of controls,
     or specify a control type like `Entry`.
 
-* Override the `Invoke` method - this is called whenever the trigger
+- Override the `Invoke` method - this is called whenever the trigger
     criteria are met.
 
-* Optionally expose properties that can be set in the XAML
-    when the trigger is declared (such as `Anchor`, `Scale`, and
-    `Length` in this example).
+- Optionally expose properties that can be set in the XAML
+    when the trigger is declared. For an example of this, see the `VisualElementPopTriggerAction` class in the accompanying sample application.
 
 ```csharp
 public class NumericValidationTriggerAction : TriggerAction<Entry>
@@ -198,8 +200,7 @@ public class NumericValidationTriggerAction : TriggerAction<Entry>
 }
 ```
 
-The properties exposed by the trigger action can be set
-    in the XAML declaration as follows:
+The event trigger can then be consumed from XAML:
 
 ```xaml
 <EventTrigger Event="TextChanged">
@@ -235,8 +236,7 @@ Here's an example of a trigger for a button that binds to
                                    Path=Text.Length}"
                                Value="0" />
     </MultiTrigger.Conditions>
-
-  <Setter Property="IsEnabled" Value="False" />
+    <Setter Property="IsEnabled" Value="False" />
     <!-- multiple Setter elements are allowed -->
 </MultiTrigger>
 ```
@@ -293,10 +293,10 @@ To use this converter in a multi trigger, first add it
 The XAML is shown below. Note the following differences
     from the first multi trigger example:
 
-* The button has `IsEnabled="false"` set by default.
-* The multi trigger conditions use the converter to
+- The button has `IsEnabled="false"` set by default.
+- The multi trigger conditions use the converter to
     turn the `Text.Length` value into a `boolean`.
-* When all the conditions are `true`, the setter
+- When all the conditions are `true`, the setter
     makes the button's `IsEnabled` property `true`.
 
 ```xaml
@@ -338,15 +338,14 @@ These screenshots show the difference between the two multi
 
 ## EnterActions and ExitActions
 
-Another way to implement changes when a trigger occurs
-    is by adding `EnterActions` and `ExitActions` collections
-    and specifying `TriggerAction<T>` implementations.
+Another way to implement changes when a trigger occurs is by adding `EnterActions` and `ExitActions` collections and specifying `TriggerAction<T>` implementations.
 
-You can provide *both* `EnterActions` and `ExitActions` as
-    well as `Setter`s in a trigger, but be aware that the `Setter`s
-    are called immediately (they do not wait for the `EnterAction`
-    or `ExitAction` to complete). Alternatively you can perform
-    everything in the code and not use `Setter`s at all.
+The [`EnterActions`](xref:Xamarin.Forms.TriggerBase.EnterActions) collection is used to define an `IList` of [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) objects that will be invoked when the trigger condition is met. The [`ExitActions`](xref:Xamarin.Forms.TriggerBase.ExitActions) collection is used to define an `IList` of `TriggerAction` objects that will be invoked after the trigger condition is no longer met.
+
+> [!NOTE]
+> The [`TriggerAction`](xref:Xamarin.Forms.TriggerAction) objects defined in the `EnterActions` and `ExitActions` collections are ignored by the [`EventTrigger`](xref:Xamarin.Forms.EventTrigger) class.    
+
+You can provide *both* `EnterActions` and `ExitActions` as  well as `Setter`s in a trigger, but be aware that the `Setter`s are called immediately (they do not wait for the `EnterAction` or `ExitAction` to complete). Alternatively you can perform everything in the code and not use `Setter`s at all.
 
 ```xaml
 <Entry Placeholder="enter job title">
@@ -360,14 +359,13 @@ You can provide *both* `EnterActions` and `ExitActions` as
             <Trigger.ExitActions>
                 <local:FadeTriggerAction StartsFrom="1" />
             </Trigger.ExitActions>
-                        <!-- You can use both Enter/Exit and Setter together if required -->
+            <!-- You can use both Enter/Exit and Setter together if required -->
         </Trigger>
     </Entry.Triggers>
 </Entry>
 ```
 
-As always, when a class is referenced in XAML you should
-    declare a namespace such as `xmlns:local` as shown here:
+As always, when a class is referenced in XAML you should declare a namespace such as `xmlns:local` as shown here:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -380,27 +378,21 @@ The `FadeTriggerAction` code is shown below:
 ```csharp
 public class FadeTriggerAction : TriggerAction<VisualElement>
 {
-    public FadeTriggerAction() {}
-
     public int StartsFrom { set; get; }
 
-    protected override void Invoke (VisualElement visual)
+    protected override void Invoke(VisualElement sender)
     {
-            visual.Animate("", new Animation( (d)=>{
-                var val = StartsFrom==1 ? d : 1-d;
-                visual.BackgroundColor = Color.FromRgb(1, val, 1);
-
-            }),
-            length:1000, // milliseconds
-            easing: Easing.Linear);
+        sender.Animate("FadeTriggerAction", new Animation((d) =>
+        {
+            var val = StartsFrom == 1 ? d : 1 - d;
+            // so i was aiming for a different color, but then i liked the pink :)
+            sender.BackgroundColor = Color.FromRgb(1, val, 1);
+        }),
+        length: 1000, // milliseconds
+        easing: Easing.Linear);
     }
 }
 ```
-
-Note: `EnterActions` and `ExitActions` are ignored on
-    **Event Triggers**.
-
-
 
 ## Related Links
 

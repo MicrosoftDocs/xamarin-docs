@@ -3,8 +3,8 @@ title: "Cross-Platform Performance"
 description: "This document describes various techniques that can be used to improve the performance of a mobile application. It discusses the Profiler, IDisposable resource, weak references, the SGen garbage collector, size reduction techniques, and more."
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 
@@ -170,7 +170,6 @@ The `handler` field maintains the reference to the anonymous method, and is used
 
 Lazy initialization can be used to defer the creation of an object until it's first used. This technique is primarily used to improve performance, avoid computation, and reduce memory requirements.
 
-
 Consider using lazy initialization for objects that are expensive to create in this two scenarios:
 
 - The application might not use the object.
@@ -243,8 +242,6 @@ Long running operations should also support cancellation. For example, continuin
 
 > [!IMPORTANT]
 > The `CancellationTokenSource` class implements the `IDisposable` interface, and so the `CancellationTokenSource.Dispose` method should be invoked once the `CancellationTokenSource` instance is finished with.
-
-
 
 For more information, see [Async Support Overview](~/cross-platform/platform/async.md).
 
@@ -332,7 +329,7 @@ The following steps can be used to further reduce the application executable siz
 
 Android apps can also be split into a separate APK for each ABI ("architecture").
 Learn more in this blog post:
-[How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+[How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/).
 
 <a name="optimizeimages" />
 

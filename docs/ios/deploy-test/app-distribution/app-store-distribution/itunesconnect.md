@@ -4,8 +4,8 @@ description: "This article covers the steps required to setup and maintain a Xam
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -197,7 +197,7 @@ This section of the iTunes Connect Application Record provides the unique ID of 
 ### App Icon
 
 > [!IMPORTANT]
->  App Icons are no longer submitted through iTunes Connect. They must be submitted through the **AppIcon** image set in your project's **Assets.xcassets** file. For more information, see the [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) guide.
+> App Icons are no longer submitted through iTunes Connect. They must be submitted through the **AppIcon** image set in your project's **Assets.xcassets** file. For more information, see the [App Store Icon](~/ios/app-fundamentals/images-icons/app-store-icon.md) guide.
 
 The App Icon is the face of your application to your users, so it must be memorable and display well at a small size. Memorable icons are clean, simple, and immediately recognizable.
 
@@ -302,7 +302,6 @@ Do the following in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
     [![](itunesconnect-images/review02.png "Editing release information in iTunes Connect")](itunesconnect-images/review02.png#lightbox)
 7. Click the **Save** button at the top of the screen to save your changes.
 
-
 ## Maintaining Pricing Information
 
 If you plan on releasing your application for sale, you'll need to set the sales price by selecting one of Apple's available pricing tiers and the date that the given pricing goes into effect. For example, as of the time of this writing, the **Tier 1** pricing looks like the following:
@@ -317,7 +316,7 @@ Check this box if you want your application to be offered at a discount to educa
 
 An application that is set up as a **Custom Business to Business Application** will only be available to the **Volume Purchase Program** customers that you specify in iTunes Connect, and it will only be available in the applicable territories (for example, U.S. Volume Purchase Program customers must use the U.S. App Store Volume Purchase Program for Business).
 
-Custom Business to Business applications will not be available to educational institutions or general App Store customers. To learn more about the *App Store Volume Purchase Program for Business*, visit Apple's [Frequently Asked Questions](http://vpp.itunes.apple.com/faq) page. To learn more about how your customers can sign up for the **Volume Purchase Program**, visit Apple's [Deployment Programs](http://enroll.vpp.itunes.apple.com) page.
+Custom Business to Business applications will not be available to educational institutions or general App Store customers. To learn more about the *App Store Volume Purchase Program for Business*, visit Apple's [Frequently Asked Questions](https://vpp.itunes.apple.com/faq) page. To learn more about how your customers can sign up for the **Volume Purchase Program**, visit Apple's [Deployment Programs](https://enroll.vpp.itunes.apple.com) page.
 
 ### Editing Pricing Information in iTunes Connect
 

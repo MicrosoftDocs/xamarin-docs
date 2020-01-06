@@ -4,8 +4,8 @@ description: "How to launch the built-in Maps application from within your Xamar
 ms.prod: xamarin
 ms.assetid: 929EACB8-8950-50E1-093C-43FB5F1F1CD5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
 ---
 
@@ -20,7 +20,6 @@ When you use the maps application, the map will not be part of your
 application. Instead, your application will launch the maps application
 and load the map externally. The next section examines how to use
 Xamarin.Android to launch maps like the one above.
-
 
 ## Creating the Intent
 
@@ -38,7 +37,6 @@ StartActivity (mapIntent);
 This code is all that is needed to launch the map shown in the previous
 screenshot. In addition to specifying latitude and longitude, the URI
 scheme for maps supports several other options.
-
 
 ## Geo URI Scheme
 
@@ -59,7 +57,6 @@ supports several formats, as listed below:
 - `geo:0,0?q=business+near+city` &ndash; Opens the maps application 
     and displays the annotated search results. 
 
-
 The versions of the URI that take a query (namely the street address or
 search terms) use Google's geocoder service to retrieve the location
 that is then displayed on the map. For example, the URI
@@ -67,11 +64,8 @@ that is then displayed on the map. For example, the URI
 
 [![Example screenshot showing Google Maps with a search term](maps-application-images/02-mapsearch.png)](maps-application-images/02-mapsearch.png#lightbox)
 
-
-
 For more information about geo URI schemes, see
 [Show a location on a map](https://developer.android.com/guide/components/intents-common.html#Maps).
-
 
 ## Street View
 
@@ -117,7 +111,6 @@ As you can see, there are several parameters supported, as listed below:
 
 - `mz` &ndash; The map zoom level that will be used when going to the
     maps application from the street view.
-
 
 Working with the built-in maps application or the street view is an
 easy way to quickly add mapping support. However, Android's Maps API

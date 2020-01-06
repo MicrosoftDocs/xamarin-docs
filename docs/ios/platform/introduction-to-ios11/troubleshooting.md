@@ -4,8 +4,8 @@ description: "This article describes resources that can be used for troubleshoot
 ms.prod: xamarin
 ms.assetid: A90493BF-5298-4A5D-A5D5-8A8FCD078FF7
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/31/2017
 ---
 
@@ -21,4 +21,4 @@ If you think you have found a bug in Xamarin.iOS, report the issue [on GitHub](h
 
 ## Forums and StackOverflow
 
-For answers to specific questions about using or implementing a specific iOS 11 feature in Xamarin.iOS, the Xamarin [iOS Forum](http://forums.xamarin.com/categories/ios) provides a wealth of information. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) is another good source of users-helping-users information.
+For answers to specific questions about using or implementing a specific iOS 11 feature in Xamarin.iOS, the Xamarin [iOS Forum](https://forums.xamarin.com/categories/ios) provides a wealth of information. [StackOverflow](https://stackoverflow.com/search?tab=newest&q=xamarin) is another good source of users-helping-users information.

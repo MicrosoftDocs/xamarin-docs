@@ -4,15 +4,14 @@ description: "C# code in Xamarin.Android calls Java libraries through bindings, 
 ms.prod: xamarin
 ms.assetid: 27CB3C16-33F3-F580-E2C0-968005A7E02E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
 # Java Bindings Metadata
 
 _C# code in Xamarin.Android calls Java libraries through bindings, which are a mechanism that abstracts the low-level details that are specified in Java Native Interface (JNI). Xamarin.Android provides a tool that generates these bindings. This tooling lets the developer control how a binding is created by using metadata, which allows procedures such as modifying namespaces and renaming members. This document discusses how metadata works, summarizes the attributes that metadata supports, and explains how to resolve binding problems by modifying this metadata._
-
 
 ## Overview
 
@@ -94,7 +93,6 @@ allows general-purpose changes to the binding such as:
 
 Lets move on to discuss **Metadata.xml** in more detail.
 
-
 ## Metadata.xml Transform File
 
 As we've already learned, the file **Metadata.xml** is used by the
@@ -111,9 +109,9 @@ metadata spec include a path attribute to identify the node to which
 the rule is to be applied. The rules are applied in the following
 order:
 
-* **add-node** &ndash; Appends a child node to the node specified by the path attribute.
-* **attr** &ndash; Sets the value of an attribute of the element specified by the path attribute.
-* **remove-node** &ndash; Removes nodes matching a specified XPath.
+- **add-node** &ndash; Appends a child node to the node specified by the path attribute.
+- **attr** &ndash; Sets the value of an attribute of the element specified by the path attribute.
+- **remove-node** &ndash; Removes nodes matching a specified XPath.
 
 The following is an example of a **Metadata.xml** file:
 
@@ -144,8 +142,6 @@ the Java API's:
 
 - `parameter` &ndash; Identify a parameter for a method. e.g. `/parameter[@name='p0']`
 
-
-
 ### Adding Types
 
 The `add-node` element will tell the Xamarin.Android binding project to
@@ -161,7 +157,6 @@ constructor and a single field:
     </class>
 </add-node>
 ```
-
 
 ### Removing Types
 
@@ -237,15 +232,13 @@ NavigationManager.2DSignNextManueverEventArgs
 This is not a legal C# class name. To correct this problem, the binding
 author must use the `argsType` attribute and provide a valid C# name
 for the `EventArgs` subclass:
- 
+
 ```xml
 <attr path="/api/package[@name='com.someapp.android.mpa.guidance']/
     interface[@name='NavigationManager.Listener']/
     method[@name='on2DSignNextManeuver']" 
     name="argsType">NavigationManager.TwoDSignNextManueverEventArgs</attr>
 ```
-
- 
 
 ## Supported Attributes
 
@@ -294,11 +287,12 @@ possible solution in this situation is to change the return type of the
 method.
 
 For example, the Bindings Generator believes that the Java method
-`de.neom.neoreadersdk.resolution.compareTo()` should return an `int`,
+`de.neom.neoreadersdk.resolution.compareTo()` should return an `int` and take `Object` as parameters,
 which results in the error message **Error CS0535:
 'DE.Neom.Neoreadersdk.Resolution' does not implement interface member
-'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. The following
-snippet demonstrates how to change the paramter type of the generated C#
+'Java.Lang.IComparable.CompareTo(Java.Lang.Object)'**. 
+The following
+snippet demonstrates how to change the first parameter's type of the generated C#
 method from a `DE.Neom.Neoreadersdk.Resolution` to a `Java.Lang.Object`: 
 
 ```xml
@@ -330,8 +324,8 @@ Tools that obfuscate Java libraries may interfere with the
 Xamarin.Android Binding Generator and its ability to generate C#
 wrapper classes. Characteristics of obfuscated classes include: 
 
-* The class name includes a **$**, i.e. **a$.class**
-* The class name is entirely compromised of lower case characters, i.e. **a.class**
+- The class name includes a **$**, i.e. **a$.class**
+- The class name is entirely compromised of lower case characters, i.e. **a.class**
 
 This snippet is an example of how to generate an "un-obfuscated" C# type:
 
@@ -451,7 +445,6 @@ Xamarin.Android to set the `MeasurementUnit`:
 realReachSettings.MeasurementUnit = SKMeasurementUnit.Second;
 ```
 
-
 ## Summary
 
 This article discussed how Xamarin.Android uses metadata to transform
@@ -460,8 +453,6 @@ changes that are possible using *Metadata.xml*, it examined the
 limitations encountered when renaming members and it presented the list
 of supported XML attributes, describing when each attribute should be
 used.
-
-
 
 ## Related Links
 

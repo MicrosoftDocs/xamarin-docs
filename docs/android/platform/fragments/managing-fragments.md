@@ -3,8 +3,8 @@ title: "Managing Fragments"
 ms.prod: xamarin
 ms.assetid: 02C5E8F0-32EF-4FD9-DC8B-04650E20722C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/07/2018
 ---
 
@@ -78,7 +78,6 @@ fragmentTx.AddToBackStack(null);
 fragmentTx.Commit();
 ```
 
-
 ## Communicating with Fragments
 
 The *FragmentManager* knows about all of the Fragments that are
@@ -107,7 +106,6 @@ find Fragments:
 var emailList = FragmentManager.FindFragmentById<EmailListFragment>(Resource.Id.email_list_fragment);
 emailList.SomeCustomMethod(parameter1, parameter2);
 ```
-
 
 ### Communicating with the Activity
 

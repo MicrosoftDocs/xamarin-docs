@@ -4,7 +4,7 @@ title: "Use C/C++ libraries with Xamarin"
 description: "Visual Studio for Mac can be used to build and integrate cross-platform C/C++ code into mobile apps for Android and iOS, using Xamarin and C#. This article explains how to set up and debug a C++ project in a Xamarin app."
 author: mikeparker104
 ms.author: miparker
-ms.date: 12/17/2018
+ms.date: 11/07/2019
 ---
 # Use C/C++ libraries with Xamarin
 
@@ -27,7 +27,7 @@ Ultimately the code must compile and run successfully on all target platforms th
 ## High-level approach
 
 The illustration below represents the four-stage approach used to transform C/C++ source code into a cross-platform Xamarin library that is shared via NuGet and then is consumed in a Xamarin.Forms app.
- 
+
 ![High-level approach for using C/C++ with Xamarin](images/cpp-steps.jpg)
 
 The 4 stages are:
@@ -41,7 +41,7 @@ The 4 stages are:
 
 The goal of this stage is to create native libraries that can be called by the C# wrapper. This may or may not be relevant depending on your situation. The many tools and processes that can be brought to bear in this common scenario are beyond the scope of this article. Key considerations are keeping the C/C++ codebase in sync with any native wrapper code, sufficient unit testing, and build automation. 
 
-The libraries in the walk-through were created using Visual Studio Code with an accompanying shell script. An extended version of this walk-through can be found in the [Mobile CAT GitHub repository](https://github.com/xamarin/mobcat/blob/dev/samples/cpp_with_xamarin/) that discusses this part of the sample in greater depth. The native libraries are being treated as a third-party dependency in this case however this stage is illustrated for context.
+The libraries in the walk-through were created using Visual Studio Code with an accompanying shell script. An extended version of this walk-through can be found in the [Mobile CAT GitHub repository](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) that discusses this part of the sample in greater depth. The native libraries are being treated as a third-party dependency in this case however this stage is illustrated for context.
 
 For simplicity, the walkthrough targets only a subset of architectures. For iOS, it uses the lipo utility to create a single fat binary from the individual architecture-specific binaries. Android will use dynamic binaries with a .so extension and iOS will use a static fat binary with a .a extension. 
 
@@ -65,7 +65,7 @@ The final step is to reference and use the NuGet package from a Xamarin.Forms ap
 
 Once the feed is configured, the package needs to be referenced from each project in the cross-platform Xamarin.Forms app. ‘The bait-and-switch trick’ provides identical interfaces, so the native library functionality can be called using code defined in a single location.
 
-The source code repository contains a [list of further reading](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up) that includes articles on how to set up a private NuGet feed on Azure DevOps and how to push the package to that feed. While requiring a little more setup time than a local directory, this type of feed is better in a team development environment.
+The source code repository contains a [list of further reading](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up) that includes articles on how to set up a private NuGet feed on Azure DevOps and how to push the package to that feed. While requiring a little more setup time than a local directory, this type of feed is better in a team development environment.
 
 ## Walk-through
 
@@ -86,7 +86,7 @@ In order to follow along, the developer will need:
 
 The native library functionality is based on the example from [Walkthrough: Creating and Using a Static Library (C++)](https://docs.microsoft.com/cpp/windows/walkthrough-creating-and-using-a-static-library-cpp?view=vs-2017).
 
-This walkthrough skips the first stage, building the native libraries, since the library is provided as a third-party dependency in this scenario. The precompiled native libraries are included alongside the [sample code](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin) or can be [downloaded](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) directly.
+This walkthrough skips the first stage, building the native libraries, since the library is provided as a third-party dependency in this scenario. The precompiled native libraries are included alongside the [sample code](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin) or can be [downloaded](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) directly.
 
 ### Working with the native library
 
@@ -122,11 +122,11 @@ extern "C" {
 }
 ```
 
-It will be these wrapper functions that are used on the [Xamarin](https://visualstudio.microsoft.com/xamarin/) side.
+It will be these wrapper functions that are used on the [Xamarin](https://visualstudio.microsoft.com/xamarin/) side.
 
 ## Wrapping the native library (Stage 2)
 
-This stage requires the [precompiled libraries](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin/Sample/Artefacts) described in the [previous section](##creating-the-native-libraries-stage-1).
+This stage requires the [precompiled libraries](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin/Sample/Artefacts) described in the [previous section](#creating-the-native-libraries-stage-1).
 
 ### Creating the Visual Studio solution
 
@@ -275,7 +275,7 @@ Now, write the C# code to call the native library. The goal is to hide any under
         {
             public MyMathFuncsSafeHandle() : base(true) { }
 
-            public IntPtr Ptr => this.handle;
+            public IntPtr Ptr => handle;
 
             protected override bool ReleaseHandle()
             {
@@ -400,7 +400,7 @@ Now, write the C# code to call the native library. The goal is to hide any under
 1. Replace the **TODO** line:
 
     ```csharp
-    MyMathFuncsWrapper.DisposeMyMathFuncs(this);
+    MyMathFuncsWrapper.DisposeMyMathFuncs(handle);
     ```
 
 #### Writing the MyMathFuncs class
@@ -772,4 +772,4 @@ This article explained how to create a Xamarin.Forms app that uses native librar
 
 ### Further Reading
 
-[Articles relating to the content of this post](https://github.com/xamarin/mobcat/tree/master/samples/cpp_with_xamarin#wrapping-up)
+[Articles relating to the content of this post](https://github.com/xamcat/mobcat-samples/tree/master/cpp_with_xamarin#wrapping-up)

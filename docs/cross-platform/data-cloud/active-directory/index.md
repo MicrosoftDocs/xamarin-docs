@@ -3,13 +3,12 @@ title: "Microsoft Azure Active Directory"
 description: "This document describes how to use Azure Active Directory to authenticate users in mobile applications built with Xamarin."
 ms.prod: xamarin
 ms.assetid: 0A74766A-B583-47AF-986C-FEA8F5CBF9CD
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
 # Microsoft Azure Active Directory
-
 
 Azure Active Directory allows developers to secure
   resources such as files, links, and Web APIs,
@@ -37,4 +36,3 @@ Once you have added Active Directory authentication
 
 Learn how to access the [Graph API](~/cross-platform/data-cloud/active-directory/graph.md)
   using Xamarin (also covered in our [blog](https://blog.xamarin.com/authenticate-xamarin-mobile-apps-using-azure-active-directory/)).
-

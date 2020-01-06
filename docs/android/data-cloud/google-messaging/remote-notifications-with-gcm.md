@@ -4,8 +4,8 @@ description: "This walkthrough provides a step-by-step explanation of how to use
 ms.prod: xamarin
 ms.assetid: 4FC3C774-EF93-41B2-A81E-C6A08F32C09B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2019
 ---
 
@@ -261,7 +261,6 @@ Play Store (or enable it in the device's system settings). Because we
 want to run this check when the client app starts, we'll add a call to 
 this method at the end of `OnCreate`. 
 
-
 Next, replace the `OnCreate` method with the following code:
 
 ```csharp
@@ -314,7 +313,6 @@ get back a registration token from GCM.
 
 Add a new file called **RegistrationIntentService.cs** and replace the
 template code with the following:
-
 
 ```csharp
 using System;
@@ -427,8 +425,7 @@ The core functionality of `RegistrationIntentService` resides in the
 `OnHandleIntent` method. Let's walk through this code to see how
 it registers our app with GCM.
 
-
-##### Request a Registration Token
+#### Request a Registration Token
 
 `OnHandleIntent` first calls Google's 
 [InstanceID.GetToken](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID.html#getToken&#40;java.lang.String,%20java.lang.String&#41;)
@@ -457,7 +454,7 @@ catch (Exception e)
     Log.Debug ...
 ```
 
-##### Forward the Registration Token to the App Server
+#### Forward the Registration Token to the App Server
 
 If we get a registration token (that is, no exception was thrown), we 
 call `SendRegistrationToAppServer` to associate the user's registration 
@@ -480,8 +477,7 @@ server. If this boolean is false, `SendRegistrationToAppServer` sends
 the token to the app server &ndash; otherwise, the token was already 
 sent to the app server in a previous call. 
 
-
-##### Subscribe to the Notification Topic
+#### Subscribe to the Notification Topic
 
 Next, we call our `Subscribe` method to indicate to GCM that 
 we want to subscribe to a notification topic. In `Subscribe`, we 
@@ -507,7 +503,6 @@ server.)
 
 For information about GCM topic messaging on the server side, see Google's 
 [Send Messaging to Topics](https://developers.google.com/cloud-messaging/topic-messaging). 
-
 
 #### Implement an Instance ID Listener Service
 
@@ -551,7 +546,6 @@ system and that it can receive GCM registration token (also called
 The `OnTokenRefresh` method in our service starts the `RegistrationIntentService`
 so that it can intercept the new registration token.
 
-
 #### Test Registration with GCM
 
 Let's completely rebuild and run the app. If you successfully receive a 
@@ -578,7 +572,6 @@ notifications. After we implement this service, we'll create a test
 program to send messages to GCM so that we can see if our implementation 
 works correctly. 
 
-
 #### Add a Notification Icon
 
 Let's first add a small icon that will appear in the notification
@@ -588,7 +581,6 @@ create your own custom icon. We'll name the icon file
 **ic_stat_button_click.png** and copy it to the **Resources/drawable**
 folder. Remember to use **Add > Existing Item ...** to include this
 icon file in your project.
-
 
 #### Implement a GCM Listener Service
 
@@ -667,7 +659,6 @@ For more information about using `Notification.Builder`
 and `NotificationManager`, see
 [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md).
 
-
 #### Declare the Receiver in the Manifest
 
 Before we can receive messages from GCM, we must declare the GCM listener in the 
@@ -705,14 +696,12 @@ Alternatively, you can decorate `GcmListenerService` with these
 attributes rather than specifying them in XML; here we specify them in 
 **AndroidManifest.xml** so that the code samples are easier to follow. 
 
-
 ### Create a Message Sender to Test the App
 
 Let's add a C# desktop console application project to the Solution and 
 call it **MessageSender**. We'll use this console application to 
 simulate an application server &ndash; it will send notification 
 messages to **ClientApp** via GCM. 
-
 
 #### Add the Json.NET Package
 
@@ -728,7 +717,6 @@ it in the project:
 
 [![Installing the Json.NET package](remote-notifications-with-gcm-images/4-add-json.net-sml.png)](remote-notifications-with-gcm-images/4-add-json.net.png#lightbox)
 
-
 #### Add a Reference to System.Net.Http
 
 We'll also need to add a reference to `System.Net.Http` so that we can 
@@ -736,7 +724,6 @@ instantiate an `HttpClient` for sending our test message to GCM. In the
 **MessageSender** project, Right-click **References > Add Reference** 
 and scroll down until you see **System.Net.Http**. Put a check mark 
 next to **System.Net.Http** and click **OK**. 
-
 
 #### Implement Code that Sends a Test Message
 
@@ -815,8 +802,6 @@ GCM, in turn, forwards this message to your client app. Let's
 build **MessageSender** and open a console window where we can
 run it from the command line.
 
-
-
 ### Try It!
 
 Now we're ready to test our client app. If you're using an emulator or 
@@ -883,7 +868,6 @@ be manually restarted. For more information about this Android policy, see
 and this 
 [stack overflow post](https://stackoverflow.com/questions/5051687/broadcastreceiver-not-receiving-boot-completed/19856267#19856267). 
 
- 
 ## Summary
 
 This walkthrough detailed the steps for implementing remote 
@@ -897,7 +881,6 @@ registration token, and how to implement a GCM listener service that
 receives and processes remote notification messages. Finally, we 
 implemented a command-line test program to send test notifications to 
 our client app through GCM. 
-
 
 ## Related Links
 

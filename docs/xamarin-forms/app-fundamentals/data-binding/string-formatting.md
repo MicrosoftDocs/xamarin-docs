@@ -179,7 +179,6 @@ Another approach is more general: You can write a *binding value converter* as d
 
 The next article, however, explores the [**Binding Path**](binding-path.md) in more detail, and show how you can use it to reference sub-properties and items in collections.
 
-
 ## Related Links
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)

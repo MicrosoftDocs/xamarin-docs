@@ -3,8 +3,8 @@ title: "Providing Backwards Compatibility with the Android Support Package"
 ms.prod: xamarin
 ms.assetid: 7511D2F8-2B4F-4200-C74E-E967153B2E8D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/12/2017
 ---
 
@@ -25,7 +25,6 @@ that enables devices running Android 1.6 (API level 4) to Android
 > Android Support Package. None of the other Fragment subclasses, such as 
 > the `PreferenceFragment,` are supported in the Android Support Package. 
 > They will not work in pre-Android 3.0 applications. 
-
 
 ## Adding the Support Package
 
@@ -76,7 +75,6 @@ fragmentTx.Commit();
 With these changes in place, it will be possible to run a 
 Fragment-based application on Android 1.6 or 2.x as well as on 
 Honeycomb and Ice Cream Sandwich. 
-
 
 ## Related Links
 

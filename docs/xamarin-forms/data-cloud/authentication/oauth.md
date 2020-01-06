@@ -6,7 +6,7 @@ ms.assetid: D44745D5-77BB-4596-9B8C-EC75C259157C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/19/2017
+ms.date: 11/07/2019
 ---
 
 # Authenticate Users with an Identity Provider
@@ -53,7 +53,7 @@ The application makes an authentication request to Google using the `OAuth2Authe
 
 A Google API Console project must be created to integrate Google sign-in with a Xamarin.Forms application. This can be accomplished as follows:
 
-1. Go to the [Google API Console](http://console.developers.google.com) website, and sign in with Google account credentials.
+1. Go to the [Google API Console](https://console.developers.google.com) website, and sign in with Google account credentials.
 1. From the project drop-down, select an existing project, or create a new one.
 1. In the sidebar under "API Manager", select **Credentials**, then select the **OAuth consent screen tab**. Choose an **Email address**, specify a **Product name shown to users**, and press **Save**.
 1. In the **Credentials** tab, select the **Create credentials** drop-down list, and choose **OAuth client ID**.
@@ -83,7 +83,7 @@ var authenticator = new OAuth2Authenticator(
 
 The `OAuth2Authenticator` class requires a number of parameters, which are as follows:
 
-- **Client ID** – this identifies the client that is making the request, and can be retrieved from the project in the [Google API Console](http://console.developers.google.com).
+- **Client ID** – this identifies the client that is making the request, and can be retrieved from the project in the [Google API Console](https://console.developers.google.com).
 - **Client Secret** – this should be `null` or `string.Empty`.
 - **Scope** – this identifies the API access being requested by the application, and the value informs the consent screen that is shown to the user. For more information about scopes, see [Authorizing API request](https://developers.google.com/+/web/api/rest/oauth) on Google's website.
 - **Authorize URL** – this identifies the URL where the authorization code will be obtained from.
@@ -145,7 +145,7 @@ On iOS, a custom URL scheme is registered in **Info.plist**, as shown in the fol
 
 ![](oauth-images/info-plist.png "URL Scheme Registration")
 
-The **Identifier** value can be anything, and the **Role** value must be set to **Viewer**. The **Url Schemes** value, which begins with `com.googleusercontent.apps`, can be obtained from the iOS client id for the project on [Google API Console](http://console.developers.google.com).
+The **Identifier** value can be anything, and the **Role** value must be set to **Viewer**. The **Url Schemes** value, which begins with `com.googleusercontent.apps`, can be obtained from the iOS client id for the project on [Google API Console](https://console.developers.google.com).
 
 When the identity provider completes the authorization request, it redirects to the application's redirect URL. Because the URL uses a custom scheme it results in iOS launching the application, passing in the URL as a launch parameter, where it's processed by the `OpenUrl` override of the application's `AppDelegate` class, which is shown in the following code example:
 
@@ -192,7 +192,7 @@ public class CustomUrlSchemeInterceptorActivity : Activity
 }
 ```
 
-The `DataSchemes` property of the [`IntentFilter`](xref:Android.App.IntentFilterAttribute) must be set to the reversed client identifier that's obtained from the Android client id for the project on [Google API Console](http://console.developers.google.com).
+The `DataSchemes` property of the [`IntentFilter`](xref:Android.App.IntentFilterAttribute) must be set to the reversed client identifier that's obtained from the Android client id for the project on [Google API Console](https://console.developers.google.com).
 
 The `OnCreate` method converts the received URL from an `Android.Net.Url` to a .NET `Uri`, before processing the redirect URL with the `OnPageLoading` method of a public `OAuth2Authenticator` object. This causes Xamarin.Auth to close the web browser tab, and parse the received OAuth data.
 
@@ -239,6 +239,9 @@ For more information, see [Calling a Google API](https://developers.google.com/i
 
 Xamarin.Auth securely stores `Account` objects in an account store so that applications do not always have to re-authenticate users. The `AccountStore` class is responsible for storing account information, and is backed by Keychain services in iOS, and the `KeyStore` class in Android.
 
+> [!IMPORTANT]
+> The `AccountStore` class in Xamarin.Auth has been deprecated, and the Xamarin.Essentials `SecureStorage` class should be used instead. For more information, see [Migrating from AccountStore to Xamarin.Essentials SecureStorage](https://github.com/xamarin/Xamarin.Auth/wiki/Migrating-from-AccountStore-to-Xamarin.Essentials-SecureStorage).
+
 The following code example shows how an `Account` object is securely saved:
 
 ```csharp
@@ -255,10 +258,19 @@ var account = AccountStore.Create ().FindAccountsForService (Constants.AppName).
 
 The `FindAccountsForService` method returns an `IEnumerable` collection of `Account` objects, with the first item in the collection being set as the matched account.
 
+## Troubleshooting
+
+- On Android, if you receive a toast notification when you close the browser after authentication, and want to stop the toast notification, add the following code to the Android project after initializing Xamarin.Auth:
+
+```csharp
+Xamarin.Auth.CustomTabsConfiguration.CustomTabsClosingMessage = null;
+```
+
+- On Android, if the browser doesn't close automatically, a temporary work around is to downgrade the Xamarin.Auth package to version 1.5.0.3. Then, add the [PCL Crypto v2.0.147](https://www.nuget.org/packages/PCLCrypto/2.0.147) to the Android project.
+
 ## Summary
 
 This article explained how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application. Xamarin.Auth provides the `OAuth2Authenticator` and `OAuth2Request` classes that are used by Xamarin.Forms applications to consume identity providers such as Google, Microsoft, Facebook, and Twitter.
-
 
 ## Related Links
 

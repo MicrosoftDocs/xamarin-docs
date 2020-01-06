@@ -4,8 +4,8 @@ description: "This section shows how to implement local notifications in Xamarin
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/16/2018
 ---
 # Local notifications on Android
@@ -118,7 +118,6 @@ types of notification metadata:
 > 5.0 and are not available in earlier versions of Android. Beginning
 > with Android 8.0, [notification channels](#notif-chan) are used to
 > control how notifications are presented to the user.
-
 
 ### Expanded layouts
 
@@ -489,7 +488,6 @@ A notification remains visible until one of three things happens:
 
 For more about updating Android notifications, see
 [Modify a Notification](https://developer.android.com/training/notify-user/managing.html#Updating).
-
 
 ### Starting an activity from a notification
 

@@ -3,8 +3,8 @@ title: "Unified API for Xamarin.iOS and Xamarin.Mac"
 description: "This document links to various guides that describe Xamarin's Unified API. Linked content provides an overview of the Unified API and discusses how to migrate existing projects."
 ms.prod: xamarin
 ms.assetid: 14311617-1BC2-42CC-AF3F-9F97733EE2D0
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2018
 ---
 
@@ -47,4 +47,3 @@ project from the Classic API to the Unified API
 ## [Tips for Updating Code to the Unified API](updating-tips.md)
 
 Various tips that can be helpful when updating to the Unified API
-

@@ -4,8 +4,8 @@ description: "This document describes EventKit and how to use it in Xamarin.iOS.
 ms.prod: xamarin
 ms.assetid: 00E88629-357D-1FCD-4FCE-1330D5D9D32C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -24,7 +24,6 @@ In this guide we’re going to cover:
 
 - **EventKit Basics** – This will introduce the fundamental pieces of EventKit via the major classes and provides an understanding of their usage. This section is required reading before tackling the next part of the document. 
 - **Common Tasks** – The common tasks section is intended to be a quick reference on how to do common things such as; enumerating calendars, creating, saving and retrieving calendar events and reminders, as well as using the built-in controllers for creating and modifying calendar events. This section need not be read front-to-back, as it’s meant to be a reference for particular tasks. 
-
 
 All tasks in this guide are available in the companion sample
 application:
@@ -453,7 +452,6 @@ App.Current.EventStore.FetchReminders (
 
 This document gave an overview of both the important pieces of the EventKit framework, and a number of the most common tasks. However, the EventKit framework is very large and powerful, and includes features that haven’t been introduced here, such as: batch updates, configuring alarms, configuring recurrence on events, registering and listening for changes on the calendar database, setting GeoFences and more.  For more information see
 Apple’s [Calendar and Reminders Programming Guide](https://developer.apple.com/library/prerelease/ios/#documentation/DataManagement/Conceptual/EventKitProgGuide/Introduction/Introduction.html).
-
 
 ## Related Links
 

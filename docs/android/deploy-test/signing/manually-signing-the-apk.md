@@ -3,13 +3,12 @@ title: "Manually Signing the APK"
 ms.prod: xamarin
 ms.assetid: 08549E1C-7F04-4D20-9E7A-794B9D09FD12
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
 # Manually Signing the APK
-
 
 After the application has been built for release, the APK must be signed prior to distribution so that it can be run on an Android device. This process is typically handled with the IDE, however there are some situations where it is necessary to sign the APK manually, at the command line. The following steps are involved with signing an APK:
 
@@ -28,8 +27,6 @@ After the application has been built for release, the APK must be signed prior t
 
 The order of the steps is important and is dependent on which tool used to sign the APK. When using **apksigner**, it is important to first **zipalign** the application, and then to sign it with **apksigner**.  If it is necessary to use **jarsigner** to sign the APK, then it is important to first sign the APK and then run **zipalign**. 
 
-
-
 ## Prerequisites
 
 This guide will focus on using **apksigner** from the Android SDK build
@@ -39,8 +36,6 @@ built.
 Applications that are built using an older version of the Android SDK
 Build Tools must use **jarsigner** as described in 
 [Sign the APK with jarsigner](#Sign_the_APK_with_jarsigner) below.
-
-
 
 ## Create a Private Keystore
 
@@ -70,8 +65,6 @@ submit a new application. Then the old application would have to be
 removed from Google Play. Likewise, if this new keystore is compromised
 or publicly distributed, then it is possible for unofficial or
 malicious versions of an application to be distributed.
-
-
 
 ### Create a New Keystore
 
@@ -126,7 +119,6 @@ the &ndash; `list` option:
 $ keytool -list -keystore xample.keystore
 ```
 
-
 ## Zipalign the APK
 
 Before signing an APK with **apksigner**, it is important to first optimize the file using the **zipalign** tool from the Android SDK. **zipalign** will restructure the resources in an APK along 4-byte boundaries. This alignment allows Android to quickly load the resources from the APK, increasing the performance of the application and potentially reducing memory use. Xamarin.Android will conduct a run-time check to determine if the APK has been zipaligned. If the APK is not zipaligned, then the application will not run.
@@ -136,7 +128,6 @@ The follow command will use the signed APK and produce a signed, zipaligned APK 
 ```shell
 $ zipalign -f -v 4 mono.samples.helloworld-unsigned.apk helloworld.apk
 ```
-
 
 ## Sign the APK
 
@@ -162,7 +153,6 @@ See [Google's documentation](https://developer.android.com/studio/command-line/a
 > [!NOTE]
 > According to [Google issue 62696222](https://issuetracker.google.com/issues/62696222), **apksigner** is "missing" from the Android SDK. The workaround for this is to install the Android SDK build tools v25.0.3 and use that version of **apksigner**.  
 
-
 <a name="Sign_the_APK_with_jarsigner" />
 
 ### Sign the APK with jarsigner
@@ -180,8 +170,6 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 
 > [!NOTE]
 > When using **jarsigner**, it is important to sign the APK _first_, and then to use **zipalign**.  
-
-
 
 ## Related Links
 

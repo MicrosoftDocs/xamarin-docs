@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`Image`](xref:Xamarin.Forms.Image) in XAML.
 > - Customize the `Image` appearance.
 > - Display a local image file from each platform project.

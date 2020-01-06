@@ -50,13 +50,11 @@ ensure that the dependencies remain on compatible versions. Other packages
 that you have added to your project may also be updated individually as long as they 
 do not cause the Android support packages to update.
 
-
 > [!NOTE]
 > If you are using Xamarin.Forms 2.3.4 or higher **and** your Android project's 
 target/compile version is set to Android 7.0 (API 24) or higher, then the hard 
 dependencies mentioned above no longer apply and you may update the support packages 
 independently of the Xamarin.Forms package.
-
 
 ### Fix: Remove all packages, and re-add Xamarin.Forms
 

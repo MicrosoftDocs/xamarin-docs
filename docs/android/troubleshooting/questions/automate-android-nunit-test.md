@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: EA3CFCC4-2D2E-49D6-A26C-8C0706ACA045
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2018
 ---
 
@@ -14,7 +14,7 @@ ms.date: 03/29/2018
 > [!NOTE]
 > This guide explains how to automate an Android
 NUnit test project, not a Xamarin.UITest project. Xamarin.UITest guides
-can be found [here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+can be found [here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest).
 
 When you create a **Unit Test App (Android)** project in Visual Studio
 (or **Android Unit Test** project in Visual Studio for Mac), this
@@ -103,7 +103,6 @@ to run unit tests, see the Android Developer
 [Running tests with ADB](https://developer.android.com/studio/test/command-line.html#RunTestsDevice)
 topic.
 
-
 > [!NOTE]
 > With the
 [Xamarin.Android 5.0](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/android/xamarin.android_5/xamarin.android_5.1/index.md#Android_Callable_Wrapper_Naming)
@@ -117,4 +116,3 @@ to generate a readable ACW/class name.
 _The ACW name must be used in the `adb` command above_.
 Renaming/refactoring the C# class will thus require modifying the
 `RunTests` command to use the correct ACW name.
-

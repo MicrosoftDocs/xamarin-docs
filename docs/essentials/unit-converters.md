@@ -31,29 +31,29 @@ var celcius = UnitConverters.FahrenheitToCelsius(32.0);
 
 Here is a list of available conversions:
 
-* FahrenheitToCelsius
-* CelsiusToFahrenheit
-* CelsiusToKelvin
-* KelvinToCelsius
-* MilesToMeters
-* MilesToKilometers
-* KilometersToMiles
-* DegreesToRadians
-* RadiansToDegrees
-* DegreesPerSecondToRadiansPerSecond
-* RadiansPerSecondToDegreesPerSecond
-* DegreesPerSecondToHertz
-* RadiansPerSecondToHertz
-* HertzToDegreesPerSecond
-* HertzToRadiansPerSecond
-* KilopascalsToHectopascals
-* HectopascalsToKilopascals
-* KilopascalsToPascals
-* HectopascalsToPascals
-* AtmospheresToPascals
-* PascalsToAtmospheres
-* CoordinatesToMiles
-* CoordinatesToKilometers
+- FahrenheitToCelsius
+- CelsiusToFahrenheit
+- CelsiusToKelvin
+- KelvinToCelsius
+- MilesToMeters
+- MilesToKilometers
+- KilometersToMiles
+- DegreesToRadians
+- RadiansToDegrees
+- DegreesPerSecondToRadiansPerSecond
+- RadiansPerSecondToDegreesPerSecond
+- DegreesPerSecondToHertz
+- RadiansPerSecondToHertz
+- HertzToDegreesPerSecond
+- HertzToRadiansPerSecond
+- KilopascalsToHectopascals
+- HectopascalsToKilopascals
+- KilopascalsToPascals
+- HectopascalsToPascals
+- AtmospheresToPascals
+- PascalsToAtmospheres
+- CoordinatesToMiles
+- CoordinatesToKilometers
 
 ## API
 

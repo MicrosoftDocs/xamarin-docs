@@ -3,8 +3,8 @@ title: "Objective Sharpie Release History"
 description: "This document describes the release history of Objective Sharpie, the tool used to automate the creation of C# bindings to Objective-C code."
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
 ---
 
@@ -137,4 +137,3 @@ Minor bug fixes.
 [Download v1.1.1](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.1.pkg)
 
 1.1.1 was the first major release after 1.5 years of internal use and development at Xamarin following the initial preview of Objective Sharpie in April 2013. This release is the first to be generally considered stable and usable for a wide variety of native libraries, featuring a new Clang backend.
-

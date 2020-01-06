@@ -6,7 +6,7 @@ ms.assetid: a150f2d1-06f8-4aed-ab4e-7a847d69f103
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/07/2017
+ms.date: 11/04/2019
 ---
 
 # Dependency Injection
@@ -52,9 +52,9 @@ There are several advantages to using a dependency injection container:
 
 In the context of a Xamarin.Forms app that uses MVVM, a dependency injection container will typically be used for registering and resolving view models, and for registering services and injecting them into view models.
 
-There are many dependency injection containers available, with the eShopOnContainers mobile app using Autofac to manage the instantiation of view model and service classes in the app. Autofac facilitates building loosely coupled apps, and provides all of the features commonly found in dependency injection containers, including methods to register type mappings and object instances, resolve objects, manage object lifetimes, and inject dependent objects into constructors of objects that it resolves. For more information about Autofac, see [Autofac](http://autofac.readthedocs.io/en/latest/index.html) on readthedocs.io.
+There are many dependency injection containers available, with the eShopOnContainers mobile app using TinyIoC to manage the instantiation of view model and service classes in the app. TinyIoC was chosen after evaluating a number of different containers, and features superior performance on mobile platforms when compared to the majority of the well-known containers. It facilitates building loosely coupled apps, and provides all of the features commonly found in dependency injection containers, including methods to register type mappings, resolve objects, manage object lifetimes, and inject dependent objects into constructors of objects that it resolves. For more information about TinyIoC, see [TinyIoC](https://github.com/grumpydev/TinyIoC/wiki) on github.com.
 
-In Autofac, the `IContainer` interface provides the dependency injection container. Figure 3-1 shows the dependencies when using this container, which instantiates an `IOrderService` object and injects it into the `ProfileViewModel` class.
+In TinyIoC, the `TinyIoCContainer` type provides the dependency injection container. Figure 3-1 shows the dependencies when using this container, which instantiates an `IOrderService` object and injects it into the `ProfileViewModel` class.
 
 ![](dependency-injection-images/dependencyinjection.png "Dependencies example when using dependency injection")
 
@@ -82,60 +82,33 @@ There are two ways of registering types and objects in the container through cod
 > [!TIP]
 > Dependency injection containers are not always suitable. Dependency injection introduces additional complexity and requirements that might not be appropriate or useful to small apps. If a class does not have any dependencies, or is not a dependency for other types, it might not make sense to put it in the container. In addition, if a class has a single set of dependencies that are integral to the type and will never change, it might not make sense to put it in the container.
 
-The registration of types that require dependency injection should be performed in a single method in an app, and this method should be invoked early in the app's lifecycle to ensure that the app is aware of the dependencies between its classes. In the eShopOnContainers mobile app this is performed by the `ViewModelLocator` class, which builds the `IContainer` object and is the only class in the app that holds a reference to that object. The following code example shows how the eShopOnContainers mobile app declares the `IContainer` object in the `ViewModelLocator` class:
+The registration of types that require dependency injection should be performed in a single method in an app, and this method should be invoked early in the app's lifecycle to ensure that the app is aware of the dependencies between its classes. In the eShopOnContainers mobile app this is performed by the `ViewModelLocator` class, which builds the `TinyIoCContainer` object and is the only class in the app that holds a reference to that object. The following code example shows how the eShopOnContainers mobile app declares the `TinyIoCContainer` object in the `ViewModelLocator` class:
 
 ```csharp
-private static IContainer _container;
+private static TinyIoCContainer _container;
 ```
 
-Types and instances are registered in the `RegisterDependencies` method in the `ViewModelLocator` class. This is achieved by first creating a `ContainerBuilder` instance, which is demonstrated in the following code example:
+Types are registered in the `ViewModelLocator` constructor. This is achieved by first creating a `TinyIoCContainer` instance, which is demonstrated in the following code example:
 
 ```csharp
-var builder = new ContainerBuilder();
+_container = new TinyIoCContainer();
 ```
 
-Types and instances are then registered with the `ContainerBuilder` object, and the following code example demonstrates the most common form of type registration:
+Types are then registered with the `TinyIoCContainer` object, and the following code example demonstrates the most common form of type registration:
 
 ```csharp
-builder.RegisterType<RequestProvider>().As<IRequestProvider>();
+_container.Register<IRequestProvider, RequestProvider>();
 ```
 
-The `RegisterType` method shown here maps an interface type to a concrete type. It tells the container to instantiate a `RequestProvider` object when it instantiates an object that requires an injection of an `IRequestProvider` through a constructor.
+The `Register` method shown here maps an interface type to a concrete type. By default, each interface registration is configured as a singleton so that every dependent object receives the same shared instance. Therefore, only a single `RequestProvider` instance will exist in the container, which is shared by objects that require an injection of an `IRequestProvider` through a constructor.
 
 Concrete types can also be registered directly without a mapping from an interface type, as shown in the following code example:
 
 ```csharp
-builder.RegisterType<ProfileViewModel>();
+_container.Register<ProfileViewModel>();
 ```
 
-When the `ProfileViewModel` type is resolved, the container will inject its required dependencies.
-
-Autofac also allows instance registration, where the container is responsible for maintaining a reference to a singleton instance of a type. For example, the following code example shows how the eShopOnContainers mobile app registers the concrete type to use when a `ProfileViewModel` instance requires an `IOrderService` instance:
-
-```csharp
-builder.RegisterType<OrderService>().As<IOrderService>().SingleInstance();
-```
-
-The `RegisterType` method shown here maps an interface type to a concrete type. The `SingleInstance` method configures the registration so that every dependent object receives the same shared instance. Therefore, only a single `OrderService` instance will exist in the container, which is shared by objects that require an injection of an `IOrderService` through a constructor.
-
-Instance registration can also be performed with the `RegisterInstance` method, which is demonstrated in the following code example:
-
-```csharp
-builder.RegisterInstance(new OrderMockService()).As<IOrderService>();
-```
-
-The `RegisterInstance` method shown here creates a new `OrderMockService` instance and registers it with the container. Therefore, only a single `OrderMockService` instance exists in the container, which is shared by objects that require an injection of an `IOrderService` through a constructor.
-
-Following type and instance registration, the `IContainer` object must be built, which is demonstrated in the following code example:
-
-```csharp
-_container = builder.Build();
-```
-
-Invoking the `Build` method on the `ContainerBuilder` instance builds a new dependency injection container that contains the registrations that have been made.
-
-> [!TIP]
-> Consider an `IContainer` as being immutable. While Autofac provides an `Update` method to update registrations in an existing container, calling this method should be avoided where possible. There are risks to modifying a container after it's been built, particularly if the container has been used. For more information, see [Consider a Container as Immutable](http://docs.autofac.org/en/latest/best-practices/#consider-a-container-as-immutable) on readthedocs.io.
+By default, each concrete class registration is configured as a multi-instance so that every dependent object receives a new instance. Therefore, when the `ProfileViewModel` is resolved, a new instance will be created and the container will inject its required dependencies.
 
 <a name="resolution" />
 
@@ -149,21 +122,21 @@ Generally, when a type is resolved, one of three things happens:
 1. If the type has been registered as a singleton, the container returns the singleton instance. If this is the first time the type is called for, the container creates it if required, and maintains a reference to it.
 1. If the type hasn't been registered as a singleton, the container returns a new instance, and doesn't maintain a reference to it.
 
-The following code example shows how the `RequestProvider` type that was previously registered with Autofac can be resolved:
+The following code example shows how the `RequestProvider` type that was previously registered with TinyIoC can be resolved:
 
 ```csharp
-var requestProvider = _container.Resolve<IRequestProvider>();
+var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-In this example, Autofac is asked to resolve the concrete type for the `IRequestProvider` type, along with any dependencies. Typically, the `Resolve` method is called when an instance of a specific type is required. For information about controlling the lifetime of resolved objects, see [Managing the Lifetime of Resolved Objects](#managing_the_lifetime_of_resolved_objects).
+In this example, TinyIoC is asked to resolve the concrete type for the `IRequestProvider` type, along with any dependencies. Typically, the `Resolve` method is called when an instance of a specific type is required. For information about controlling the lifetime of resolved objects, see [Managing the Lifetime of Resolved Objects](#managing_the_lifetime_of_resolved_objects).
 
 The following code example shows how the eShopOnContainers mobile app instantiates view model types and their dependencies:
 
 ```csharp
-var viewModel = _container.Resolve(viewModelType);
+var viewModel = _container.Resolve(viewModelType);
 ```
 
-In this example, Autofac is asked to resolve the view model type for a requested view model, and the container will also resolve any dependencies. When resolving the `ProfileViewModel` type, the dependency to resolve is an `IOrderService` object. Therefore, Autofac first constructs an `OrderService` object and then passes it to the constructor of the `ProfileViewModel` class. For more information about how the eShopOnContainers mobile app constructs view models and associates them to views, see [Automatically Creating a View Model with a View Model Locator](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+In this example, TinyIoC is asked to resolve the view model type for a requested view model, and the container will also resolve any dependencies. When resolving the `ProfileViewModel` type, the dependencies to resolve are an `ISettingsService` object and an `IOrderService` object. Because interface registrations were used when registering the `SettingsService` and `OrderService` classes, TinyIoC returns singleton instances for the `SettingsService` and `OrderService` classes and then passes them to the constructor of the `ProfileViewModel` class. For more information about how the eShopOnContainers mobile app constructs view models and associates them to views, see [Automatically Creating a View Model with a View Model Locator](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
 
 > [!NOTE]
 > Registering and resolving types with a container has a performance cost because of the container's use of reflection for creating each type, especially if dependencies are being reconstructed for each page navigation in the app. If there are many or deep dependencies, the cost of creation can increase significantly.
@@ -172,27 +145,24 @@ In this example, Autofac is asked to resolve the view model type for a requested
 
 ## Managing the Lifetime of Resolved Objects
 
-After registering a type, the default behavior for Autofac is to create a new instance of the registered type each time the type is resolved, or when the dependency mechanism injects instances into other classes. In this scenario, the container doesn't hold a reference to the resolved object. However, when registering an instance, the default behavior for Autofac is to manage the lifetime of the object as a singleton. Therefore, the instance remains in scope while the container is in scope, and is disposed when the container goes out of scope and is garbage collected, or when code explicitly disposes the container.
+After registering a type using a concrete class registration, the default behavior for TinyIoC is to create a new instance of the registered type each time the type is resolved, or when the dependency mechanism injects instances into other classes. In this scenario, the container doesn't hold a reference to the resolved object. However, when registering a type using interface registration, the default behavior for TinyIoC is to manage the lifetime of the object as a singleton. Therefore, the instance remains in scope while the container is in scope, and is disposed when the container goes out of scope and is garbage collected, or when code explicitly disposes the container.
 
-An Autofac instance scope can be used to specify the singleton behavior for an object that Autofac creates from a registered type. Autofac instance scopes manage the object lifetimes instantiated by the container. The default instance scope for the `RegisterType` method is the `InstancePerDependency` scope. However, the `SingleInstance` scope can be used with the `RegisterType` method, so that the container creates or returns a singleton instance of a type when calling the `Resolve` method. The following code example shows how Autofac is instructed to create a singleton instance of the `NavigationService` class:
+The default TinyIoC registration behavior can be overridden using the fluent `AsSingleton` and `AsMultiInstance` API methods. For example, the `AsSingleton` method can be used with the `Register` method, so that the container creates or returns a singleton instance of a type when calling the `Resolve` method. The following code example shows how TinyIoC is instructed to create a singleton instance of the `LoginViewModel` class:
 
 ```csharp
-builder.RegisterType<NavigationService>().As<INavigationService>().SingleInstance();
+_container.Register<LoginViewModel>().AsSingleton();
 ```
 
-The first time that the `INavigationService` interface is resolved, the container creates a new `NavigationService` object and maintains a reference to it. On any subsequent resolutions of the `INavigationService` interface, the container returns a reference to the `NavigationService` object that was previously created.
+The first time the `LoginViewModel` type is resolved, the container creates a new `LoginViewModel` object and maintains a reference to it. On any subsequent resolutions of the `LoginViewModel`, the container returns a reference to the `LoginViewModel` object that was previously created.
 
 > [!NOTE]
-> The SingleInstance scope disposes created objects when the container is disposed.
-
-Autofac includes additional instance scopes. For more information, see [Instance Scope](http://autofac.readthedocs.io/en/latest/lifetime/instance-scope.html) on readthedocs.io.
+> Types that are registered as singletons are disposed when the container is disposed.
 
 ## Summary
 
 Dependency injection enables decoupling of concrete types from the code that depends on these types. It typically uses a container that holds a list of registrations and mappings between interfaces and abstract types, and the concrete types that implement or extend these types.
 
-Autofac facilitates building loosely coupled apps, and provides all of the features commonly found in dependency injection containers, including methods to register type mappings and object instances, resolve objects, manage object lifetimes, and inject dependent objects into constructors of objects it resolves.
-
+TinyIoC is a lightweight container that features superior performance on mobile platforms when compared to the majority of the well-known containers. It facilitates building loosely coupled apps, and provides all of the features commonly found in dependency injection containers, including methods to register type mappings, resolve objects, manage object lifetimes, and inject dependent objects into constructors of objects it resolves.
 
 ## Related Links
 

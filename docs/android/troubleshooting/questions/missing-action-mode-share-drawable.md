@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5814069C-FC43-41DE-B5A5-024D05E59929
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
@@ -19,7 +19,8 @@ ms.date: 03/09/2018
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 
-*Note*: If you manually install this via Package Manager Console, make sure you also install the same version of Xamarin.Android.Support.v4
+> [!NOTE]
+> If you manually install this via Package Manager Console, make sure you also install the same version of Xamarin.Android.Support.v4
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v4/](https://www.nuget.org/packages/Xamarin.Android.Support.v4/)
 
@@ -28,4 +29,3 @@ Stack Overflow Reference: [https://stackoverflow.com/questions/26431676/appcompa
 ## See Also
 
 - [Which Android SDK packages should I install?](~/android/troubleshooting/questions/install-android-sdk-packages.md)
-

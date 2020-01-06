@@ -3,8 +3,8 @@ title: "Architecture"
 ms.prod: xamarin
 ms.assetid: 7DC22A08-808A-DC0C-B331-2794DD1F9229
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 
@@ -44,7 +44,6 @@ For more information on how the Android classes communicate with the
 Android Runtime classes see the
 [API Design](~/android/internals/api-design.md) document.
 
-
 ## Application Packages
 
 Android application packages are ZIP containers with a *.apk* file
@@ -63,7 +62,6 @@ and layout as normal Android packages, with the following additions:
     *cannot be relied upon* in Release builds. They do not exist as
     distinct filesystem entries, and they have no usable location.
 
-
 - Native libraries containing the Mono runtime are present within the
     *.apk* . A Xamarin.Android application must contain native
     libraries for the desired/targeted Android architectures, e.g.
@@ -71,11 +69,8 @@ and layout as normal Android packages, with the following additions:
     cannot run on a platform unless it contains the appropriate runtime
     libraries.
 
-
 Xamarin.Android applications also contain *Android Callable Wrappers*
 to allow Android to call into managed code.
-
-
 
 ## Android Callable Wrappers
 
@@ -86,7 +81,6 @@ to allow Android to call into managed code.
   overridden and Java interfaces can be implemented. See the
   [Java Integration Overview](~/android/platform/java-integration/index.md)
   doc for more.
-
 
 <a name="Managed_Callable_Wrappers" />
 
@@ -132,8 +126,6 @@ safety, only `Dispose()` of instances which have been allocated via
 and not cached instances which may cause accidental instance sharing
 between threads.
 
-
-
 ## Managed Callable Wrapper Subclasses
 
 Managed callable wrapper subclasses are where all the "interesting"
@@ -158,7 +150,6 @@ Unlike managed callable wrappers, *great care* should be taken before
 disposing of such instances, as *Dispose()*-ing of the instance will
 break the mapping between the Java instance (an instance of an Android
 Callable Wrapper) and the managed instance.
-
 
 ### Java Activation
 
@@ -328,8 +319,6 @@ Only *Dispose()* of managed callable wrapper subclasses when you know
 that the Java object will not be used anymore, or the subclass contains
 no instance data and a *(IntPtr, JniHandleOwnership)* constructor has
 been provided.
-
-
 
 ## Application Startup
 

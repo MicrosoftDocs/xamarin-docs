@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7B6752BB-8E4C-4690-B275-7E425A051F45
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2018
 ---
 
@@ -59,7 +59,7 @@ virtual machine, use the following steps:
     [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
     to redirect TCP packets from port `5555` (or any other port you
     like) on the
-    [Shared Networking](http://kb.parallels.com/en/4948) interface to
+    [Shared Networking](https://kb.parallels.com/en/4948) interface to
     the odd-numbered port on the loopback interface (`127.0.0.1:5555`
     in this example):
 
@@ -74,7 +74,7 @@ virtual machine, use the following steps:
     the name of the special *NAT device* for the *Shared Networking*
     mode in VMWare Fusion. The appropriate network interface in
     Parallels is likely
-    [vnic0](http://download.parallels.com/doc/psbm/en/Parallels_Server_Bare_Metal_Users_Guide/29258.htm).
+    [vnic0](https://download.parallels.com/doc/psbm/en/Parallels_Server_Bare_Metal_Users_Guide/29258.htm).
 
 5. Connect to the emulator from the Windows machine:
 
@@ -139,6 +139,5 @@ suite for Xamarin, so it could break in the future.
 If you notice that the technique no longer works, or if you notice any
 other mistakes in the document, feel free to add to the discussion on
 the following forum thread:
-[http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
+[http://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm](https://forums.xamarin.com/discussion/33702/android-emulator-from-host-device-inside-windows-vm).
 Thanks!
-

@@ -4,8 +4,8 @@ description: "Once Xamarin.iOS has been successfully installed, the next step in
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
 ---
@@ -34,7 +34,7 @@ You must also be paired to a Mac build host that has the following:
 
 ## Enabling Automatic Signing
 
-Before you start the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a the prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
+Before you start the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
 
 > [!IMPORTANT]
 > Before you begin, make sure to sign in to either [iTunes Connect](https://itunesconnect.apple.com/) or [appleid.apple.com](https://appleid.apple.com) to check that you have accepted the latest Apple account policies. If prompted, complete the steps to accept any new account agreements from Apple. If you don't accept the privacy agreement from May 2018, you'll see one of the following alerts when trying to provision your device:
@@ -95,13 +95,13 @@ To automatically sign your app for deployment on an iOS device, do the following
 
 When automatic signing has been enabled, Visual Studio for Mac will update these artifacts if necessary when any of the following things happen:
 
-* An iOS device is plugged into your Mac
-    - This automatically checks to see if the device is registered on the Apple Developer Portal. If it isn’t, it will add it and generate a new provisioning profile that contains it.
-* The Bundle ID of your app is changed
-    - This updates the app ID. A new provisioning profile containing this app ID is created.
-* A supported capability is enabled in the Entitlements.plist file.
-    - This capability will be added to the app ID and a new provisioning profile with the updated app ID is generated.
-    - Not all capabilities are currently supported. For more information on the ones that are supported, check out the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide.
+- An iOS device is plugged into your Mac
+  - This automatically checks to see if the device is registered on the Apple Developer Portal. If it isn’t, it will add it and generate a new provisioning profile that contains it.
+- The Bundle ID of your app is changed
+  - This updates the app ID. A new provisioning profile containing this app ID is created.
+- A supported capability is enabled in the Entitlements.plist file.
+  - This capability will be added to the app ID and a new provisioning profile with the updated app ID is generated.
+  - Not all capabilities are currently supported. For more information on the ones that are supported, check out the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide.
 
 ## Wildcard App IDs
 

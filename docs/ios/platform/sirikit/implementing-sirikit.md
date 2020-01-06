@@ -4,8 +4,8 @@ description: "This document describes the steps required to implement SiriKit su
 ms.prod: xamarin
 ms.assetid: 20FFB981-EB10-48BA-BF79-40F37F0291EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/03/2018
 ---
 
@@ -46,7 +46,6 @@ These include:
 
 All of these elements and the steps to include them in the app will be covered in detail in the sections below.
 
-
 ## Preparing the App
 
 SiriKit is built on Extensions, however, before adding any Extensions to the app, there are a few things that the developer needs to do to help with the adoption of SiriKit.
@@ -62,6 +61,8 @@ By moving this common code into a Shared Project, PCL or Native Library it makes
 In the case of the example app MonkeyChat, the data models and processing code such as network and database access will be moved into a Native Library.
 
 Do the following:
+
+<!-- markdownlint-disable MD001 -->
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -151,7 +152,6 @@ If choosing to create a separate Intent Extension for each Intent, the developer
 To help choose between the two options, see if any of the Intents naturally belong together. For example, an app that made audio and video calls might want to include both of those Intents in a single Intent Extension as they are handling similar tasks and could provide the most code reuse.
 
 For any Intent or group of Intents that don't fit into an existing group, create a new Intent Extension in the app's solution to contain them.
-
 
 ### Setting the Required Entitlements
 
@@ -261,7 +261,6 @@ Edit the app's `Info.plist` file and add the `NSSiriUsageDescription` key with a
 
 Call the `RequestSiriAuthorization` method of the `INPreferences` class when the app first starts. Edit the `AppDelegate.cs` class and make the `FinishedLaunching` method look like the following:
 
-
 ```csharp
 using Intents;
 ...
@@ -283,7 +282,6 @@ public override bool FinishedLaunching (UIApplication application, NSDictionary 
             break;
         }
     });
-
 
     return true;
 }
@@ -679,7 +677,6 @@ If the app optionally requires that the user be logged on to the device to use a
 
 -----
 
-
 For a complete list of available Intent Domains, please see Apple's [Intent Domains Reference](https://developer.apple.com/library/prerelease/content/documentation/Intents/Conceptual/SiriIntegrationGuide/SiriDomains.html#//apple_ref/doc/uid/TP40016875-CH9-SW2).
 
 ### Configuring the Main Class
@@ -738,7 +735,6 @@ In the case of the example MonkeyChat app, the Intent Extension will require a o
 Additionally, MonkeyChat requires content for the body of the message. If the user has not provided this, Siri needs to prompt the user for the content.
 
 The Intent Extension will need to gracefully handle each of these cases.
-
 
 ```csharp
 [Export ("resolveRecipientsForSearchForMessages:withCompletion:")]
@@ -805,7 +801,6 @@ For more information, please see our [The Confirm Stage Reference](~/ios/platfor
 ### Processing the Intent
 
 This is the point where the Intent Extension actually performs the task to fulfill the user's request and pass the results back to Siri so the user can be informed.
-
 
 ```csharp
 public void HandleSendMessage (INSendMessageIntent intent, Action<INSendMessageIntentResponse> completion)
@@ -1059,9 +1054,6 @@ Apple suggests that the developer take the following considerations into account
 ## Summary
 
 This article has covered SiriKit and shown how it can be added to the Xamarin.iOS apps to provide services that are accessible to the user using Siri and the Maps app on an iOS device.
-
-
-
 
 ## Related Links
 

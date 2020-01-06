@@ -3,8 +3,8 @@ title: "RadioButton"
 ms.prod: xamarin
 ms.assetid: 3C32EA3F-D917-C988-72C5-A17354DA791E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -17,7 +17,6 @@ and
 [`RadioButton`](xref:Android.Widget.RadioButton)
 widgets. When either radio button is pressed, a toast message will be
 displayed.
-
 
 Open the **Resources/layout/Main.axml** file and add two
 [`RadioButton`](xref:Android.Widget.RadioButton)s, nested in
@@ -98,4 +97,4 @@ Run the application.
 *Portions of this page are modifications based on work created and
 shared by the Android Open Source Project and used according to
 terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/). 
+[*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/). 

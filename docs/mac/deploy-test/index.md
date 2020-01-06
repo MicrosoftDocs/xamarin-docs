@@ -4,8 +4,8 @@ description: "This document links to various guides that describe how to deploy 
 ms.prod: xamarin
 ms.assetid: 2FF314C7-D926-9FEC-57A6-F421A0ED3A46
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 02/17/2018
 ---
 

@@ -3,12 +3,12 @@ title: "Populating a Xamarin.Android ListView With Data"
 ms.prod: xamarin
 ms.assetid: AC4F95C8-EC3F-D960-7D44-8D55D0E4F1B6
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2017
 ---
 
-# Populating a Xamarin.Android ListView With Data
+# Populating a Xamarin.Android ListView with data
 
 To add rows to a `ListView` you need to add it to your layout and
 implement an `IListAdapter` with methods that the `ListView` calls to
@@ -37,12 +37,10 @@ public class HomeScreen : ListActivity {
        items = new string[] { "Vegetables","Fruits","Flower Buds","Legumes","Bulbs","Tubers" };
        ListAdapter = new ArrayAdapter<String>(this, Android.Resource.Layout.SimpleListItem1, items);
    }
-   protected override void OnListItemClick(ListView l, View v, int position, long id)
 }
 ```
 
-
-### Handling Row Clicks
+### Handling row clicks
 
 Usually a `ListView` will also allow the user to touch a row to perform
 some action (such as playing a song, or calling a contact, or showing
@@ -63,7 +61,6 @@ protected override void OnListItemClick(ListView l, View v, int position, long i
 Now the user can touch a row and a `Toast` alert will appear:
 
 [![Screenshot of Toast that appears when a row is touched](populating-images/basictable2.png)](populating-images/basictable2.png#lightbox)
-
 
 ## Implementing a ListAdapter
 
@@ -120,8 +117,7 @@ public class HomeScreenAdapter : BaseAdapter<string> {
 }
 ```
 
-
-### Using a Custom Adapter
+### Using a custom adapter
 
 Using the custom adapter is similar to the built-in `ArrayAdapter`,
 passing in a `context` and the `string[]` of values to display:
@@ -133,8 +129,7 @@ ListAdapter = new HomeScreenAdapter(this, items);
 Because this example uses the same row layout (`SimpleListItem1`) the
 resulting application will look identical to the previous example.
 
-
-### Row View Re-Use
+### Row view re-Use
 
 In this example there are only six items. Since the screen can fit
 eight, no row re-use required. When displaying hundreds or thousands of
@@ -173,8 +168,7 @@ and `BindView` which enforce row re-use by separating the
 responsibilities of `GetView` into two methods. There is a
 `CursorAdapter` example later in the document.
 
-
-## Enabling Fast Scrolling
+## Enabling fast scrolling
 
 Fast Scrolling helps the user to scroll through long lists by providing
 an additional 'handle' that acts as a scroll bar to directly access
@@ -189,8 +183,7 @@ Causing the fast scrolling handle to appear is as simple as setting the
 ListView.FastScrollEnabled = true;
 ```
 
-
-### Adding a Section Index
+### Adding a section index
 
 A section index provides additional feedback for users when they are
 fast-scrolling through a long list &ndash; it shows which 'section'
@@ -214,7 +207,6 @@ adapter:
 
 - **GetSectionForPosition** &ndash; Returns the section index to be
     displayed for a given row.
-
 
 The example `SectionIndex/HomeScreenAdapter.cs` file implements those
 methods, and some additional code in the constructor. The constructor
@@ -275,9 +267,7 @@ not have a table section for every letter, so instead of "z"
 mapping to 26, it may map to 25 or 24, or whatever section index
 "z" should map to.
 
-
-
-## Related Links
+## Related links
 
 - [BasicTableAndroid (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableandroid)
 - [BasicTableAdapter (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/basictableadapter)

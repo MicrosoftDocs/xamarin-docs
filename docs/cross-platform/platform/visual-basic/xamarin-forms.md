@@ -3,8 +3,8 @@ title: "Xamarin.Forms using Visual Basic.NET"
 description: "Xamarin.Forms project template can be modified to use Visual Basic for the main assembly, effectively allowing you to build cross-platform mobile apps using VB.NET."
 ms.prod: xamarin
 ms.assetid: da4b4ba9-9205-47dc-8bae-23272ede2c50
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/24/2019
 ---
 # Xamarin.Forms using Visual Basic.NET
@@ -12,6 +12,8 @@ ms.date: 04/24/2019
 Xamarin does not support Visual Basic directly - follow the instructions on
 this page to create a C# Xamarin.Forms solution and then replace the
 .NET Standard C# project with Visual Basic.
+
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 
 [![Create a Xamarin.Forms solution and then replace the .NET Standard project with Visual Basic](xamarin-forms-images/hero-sml.png)](xamarin-forms-images/hero.png#lightbox)
 
@@ -132,5 +134,5 @@ on where you can use Visual Basic:
 
 ## Related Links
 
-- [XamarinFormsVB (sample)](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)
+- [XamarinFormsVB (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-xamarinformsvb/)
 - [Cross-Platform Development with the .NET Framework](https://docs.microsoft.com/dotnet/standard/cross-platform/)

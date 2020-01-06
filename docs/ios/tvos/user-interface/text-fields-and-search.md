@@ -4,8 +4,8 @@ description: "This document describes how to work with text and search fields in
 ms.prod: xamarin
 ms.assetid: 9EE63CA6-2F31-4EE0-AAE5-82E18CFAC06C
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -25,7 +25,7 @@ This document will cover the details of working with Text and Search Fields in a
 
 ## About Text and Search Fields
 
-As stated above, if required, your Xamarin.tvOS can present one or more Text Fields to collect small amounts of text from the user using an on-screen (or optional bluetooth keyboard depending on the version of tvOS the user has installed). 
+As stated above, if required, your Xamarin.tvOS can present one or more Text Fields to collect small amounts of text from the user using an on-screen (or optional bluetooth keyboard depending on the version of tvOS the user has installed).
 
 Additionally, if your app presents large amounts of content to the user (such as a music, movies or a picture collection), you might want to include a Search Field that allows the user to enter a small amount of text to filter the list of available items.
 
@@ -54,7 +54,7 @@ Whenever the user clicks on a Text Field in the User Interface, a linear on-scre
 
 [![](text-fields-and-search-images/keyboard01.png "The Siri Remote keyboard")](text-fields-and-search-images/keyboard01.png#lightbox)
 
-If there is more than one Text Field on the current view, a **Next** button will automatically be displayed to take the user to the next Text Field. A **Done** button will be displayed for the last Text Field that will end text entry and return the user to the previous screen. 
+If there is more than one Text Field on the current view, a **Next** button will automatically be displayed to take the user to the next Text Field. A **Done** button will be displayed for the last Text Field that will end text entry and return the user to the previous screen.
 
 At any time, the user can also press the **Menu** button on the Siri Remote to end text entry and again return to the previous screen.
 
@@ -91,40 +91,42 @@ The easiest way to work with Text Fields in a Xamarin.tvOS app is to add them to
 
 Do the following:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 1. In the **Solution Pad**, double-click the `Main.storyboard` file to open it for editing.
-1. Drag one or more **Text Fields** int the design surface onto a View: 
+1. Drag one or more **Text Fields** int the design surface onto a View:
 
-	[![](text-fields-and-search-images/text02.png "A Text Field")](text-fields-and-search-images/text02.png#lightbox)
-1. Select the **Text Fields** and give each a unique **Name** in the **Widget** tab of the **Properties Pad**: 
+    [![](text-fields-and-search-images/text02.png "A Text Field")](text-fields-and-search-images/text02.png#lightbox)
+1. Select the **Text Fields** and give each a unique **Name** in the **Widget** tab of the **Properties Pad**:
 
-	[![](text-fields-and-search-images/text03.png "The Widget tab of the Properties Pad")](text-fields-and-search-images/text03.png#lightbox)
-1. In the **Text Field** section, you can define elements such as the **Placeholder** hint and default **Value**: 
+    [![](text-fields-and-search-images/text03.png "The Widget tab of the Properties Pad")](text-fields-and-search-images/text03.png#lightbox)
+1. In the **Text Field** section, you can define elements such as the **Placeholder** hint and default **Value**:
 
-	[![](text-fields-and-search-images/text04.png "The Text Field section")](text-fields-and-search-images/text04.png#lightbox)
-1. Scroll down to define properties such as **Spell Checking**, **Capitalization** and the default **Keyboard Type**: 
+    [![](text-fields-and-search-images/text04.png "The Text Field section")](text-fields-and-search-images/text04.png#lightbox)
+1. Scroll down to define properties such as **Spell Checking**, **Capitalization** and the default **Keyboard Type**:
 
-	[![](text-fields-and-search-images/text05.png "Spell Checking, Capitalization and the default Keyboard Type")](text-fields-and-search-images/text05.png#lightbox) 
+    [![](text-fields-and-search-images/text05.png "Spell Checking, Capitalization and the default Keyboard Type")](text-fields-and-search-images/text05.png#lightbox)
 1. Save the changes to your Storyboard.
-	
+
 # [Visual Studio](#tab/windows)
-	
+
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing.
-1. Drag one or more **Text Fields** int the design surface onto a View: 
+1. Drag one or more **Text Fields** int the design surface onto a View:
 
-	[![](text-fields-and-search-images/text02-vs.png "A Text Field")](text-fields-and-search-images/text02-vs.png#lightbox)
-1. Select the **Text Fields** and give each a unique **Name** in the **Widget** tab of the **Properties Explorer**: 
+    [![](text-fields-and-search-images/text02-vs.png "A Text Field")](text-fields-and-search-images/text02-vs.png#lightbox)
+1. Select the **Text Fields** and give each a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
-	[![](text-fields-and-search-images/text03-vs.png "The Widget tab")](text-fields-and-search-images/text03-vs.png#lightbox)
-1. In the **Text Field** section, you can define elements such as the **Placeholder** hint and default **Value**: 
+    [![](text-fields-and-search-images/text03-vs.png "The Widget tab")](text-fields-and-search-images/text03-vs.png#lightbox)
+1. In the **Text Field** section, you can define elements such as the **Placeholder** hint and default **Value**:
 
-	[![](text-fields-and-search-images/text04-vs.png "The Text Field section")](text-fields-and-search-images/text04-vs.png#lightbox)
-1. Scroll down to define properties such as **Spell Checking**, **Capitalization** and the default **Keyboard Type**: 
+    [![](text-fields-and-search-images/text04-vs.png "The Text Field section")](text-fields-and-search-images/text04-vs.png#lightbox)
+1. Scroll down to define properties such as **Spell Checking**, **Capitalization** and the default **Keyboard Type**:
 
-	[![](text-fields-and-search-images/text05-vs.png "Spell Checking, Capitalization and the default Keyboard Type")](text-fields-and-search-images/text05-vs.png#lightbox) 
+    [![](text-fields-and-search-images/text05-vs.png "Spell Checking, Capitalization and the default Keyboard Type")](text-fields-and-search-images/text05-vs.png#lightbox)
 1. Save the changes to your Storyboard.
-	
+
 -----
 
 In code, you can get or set the value of a Text Field using its `Text` property:
@@ -144,41 +146,41 @@ The easiest way to work with Search Fields in a Xamarin.tvOS app is to add them 
 Do the following:
 
 # [Visual Studio for Mac](#tab/macos)
-	
+
 1. In the **Solution Pad**, double-click the `Main.storyboard` file to open it for editing.
-1. Drag a new Collection View Controller to the Storyboard to present the results of the user's search: 
+1. Drag a new Collection View Controller to the Storyboard to present the results of the user's search:
 
-	[![](text-fields-and-search-images/search02.png "A Collection View Controller")](text-fields-and-search-images/search02.png#lightbox)
-1. In the **Widget** tab of the **Properties Pad**, use `SearchResultsViewController` for the **Class** and `SearchResults` for the **Storyboard ID**: 
+    [![](text-fields-and-search-images/search02.png "A Collection View Controller")](text-fields-and-search-images/search02.png#lightbox)
+1. In the **Widget** tab of the **Properties Pad**, use `SearchResultsViewController` for the **Class** and `SearchResults` for the **Storyboard ID**:
 
-	[![](text-fields-and-search-images/search03.png "The Widget tab")](text-fields-and-search-images/search03.png#lightbox)
+    [![](text-fields-and-search-images/search03.png "The Widget tab")](text-fields-and-search-images/search03.png#lightbox)
 1. Select the **Cell Prototype** on the design surface.
-1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultCell` for the **Class** and `ImageCell` for the **Identifier**: 
+1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultCell` for the **Class** and `ImageCell` for the **Identifier**:
 
-	[![](text-fields-and-search-images/search04.png "The Widget tab")](text-fields-and-search-images/search04.png#lightbox)
-1. Layout the design of the **Cell Prototype** and expose each element with a unique **Name** in the **Widget** tab of the **Properties Explorer**: 
+    [![](text-fields-and-search-images/search04.png "The Widget tab")](text-fields-and-search-images/search04.png#lightbox)
+1. Layout the design of the **Cell Prototype** and expose each element with a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
-	[![](text-fields-and-search-images/search05.png "Layout the design of the Cell Prototype")](text-fields-and-search-images/search05.png#lightbox)
+    [![](text-fields-and-search-images/search05.png "Layout the design of the Cell Prototype")](text-fields-and-search-images/search05.png#lightbox)
 1. Save the changes to your Storyboard.
-	
+
 # [Visual Studio](#tab/windows)
-	
+
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing.
-1. Drag a new Collection View Controller to the Storyboard to present the results of the user's search: 
+1. Drag a new Collection View Controller to the Storyboard to present the results of the user's search:
 
-	[![](text-fields-and-search-images/seach02-vs.png "A Collection View Controller")](text-fields-and-search-images/seach02-vs.png#lightbox)
-1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultsViewController` for the **Class** and `SearchResults` for the **Storyboard ID**: 
+    [![](text-fields-and-search-images/seach02-vs.png "A Collection View Controller")](text-fields-and-search-images/seach02-vs.png#lightbox)
+1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultsViewController` for the **Class** and `SearchResults` for the **Storyboard ID**:
 
-	[![](text-fields-and-search-images/search03-vs.png "The Widget tab")](text-fields-and-search-images/search03-vs.png#lightbox)
+    [![](text-fields-and-search-images/search03-vs.png "The Widget tab")](text-fields-and-search-images/search03-vs.png#lightbox)
 1. Select the **Cell Prototype** on the design surface.
-1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultCell` for the **Class** and `ImageCell` for the **Identifier**: 
+1. In the **Widget** tab of the **Properties Explorer**, use `SearchResultCell` for the **Class** and `ImageCell` for the **Identifier**:
 
-	[![](text-fields-and-search-images/search04-vs.png "The Widget tab")](text-fields-and-search-images/search04-vs.png#lightbox)
-1. Layout the design of the **Cell Prototype** and expose each element with a unique **Name** in the **Widget** tab of the **Properties Explorer**: 
+    [![](text-fields-and-search-images/search04-vs.png "The Widget tab")](text-fields-and-search-images/search04-vs.png#lightbox)
+1. Layout the design of the **Cell Prototype** and expose each element with a unique **Name** in the **Widget** tab of the **Properties Explorer**:
 
-	[![](text-fields-and-search-images/search05-vs.png "Layout the design of the Cell Prototype")](text-fields-and-search-images/search05-vs.png#lightbox)
+    [![](text-fields-and-search-images/search05-vs.png "Layout the design of the Cell Prototype")](text-fields-and-search-images/search05-vs.png#lightbox)
 1. Save the changes to your Storyboard.
-	
+
 -----
 
 <a name="Provide-a-Data-Model" />
@@ -187,13 +189,13 @@ Do the following:
 
 # [Visual Studio for Mac](#tab/macos)
 
-Next, you will need to provide a class to act as the Data Model for the results that the user will be searching for. In the **Solution Explorer**, right-click the Project Name and select **Add** > **New File...** > **General** > **Empty Class** and provide a **Name**: 
+Next, you will need to provide a class to act as the Data Model for the results that the user will be searching for. In the **Solution Explorer**, right-click the Project Name and select **Add** > **New File...** > **General** > **Empty Class** and provide a **Name**:
 
 [![](text-fields-and-search-images/search06.png "Select Empty Class and provide a Name")](text-fields-and-search-images/search06.png#lightbox)
 
 # [Visual Studio](#tab/windows)
 
-Next, you will need to provide a class to act as the Data Model for the results that the user will be searching for. In the **Solution Explorer**, right-click the Project Name and select **Add** > **New Item...** > **Apple** > **Misc** > **Class** and provide a **Name**: 
+Next, you will need to provide a class to act as the Data Model for the results that the user will be searching for. In the **Solution Explorer**, right-click the Project Name and select **Add** > **New Item...** > **Apple** > **Misc** > **Class** and provide a **Name**:
 
 [![](text-fields-and-search-images/search06-vs.png "Select Class and provide a Name")](text-fields-and-search-images/search06-vs.png#lightbox)
 
@@ -207,24 +209,24 @@ using Foundation;
 
 namespace tvText
 {
-	public class PictureInformation : NSObject
-	{
-		#region Computed Properties
-		public string Title { get; set;}
-		public string ImageName { get; set;}
-		public string Keywords { get; set;}
-		#endregion
+    public class PictureInformation : NSObject
+    {
+        #region Computed Properties
+        public string Title { get; set;}
+        public string ImageName { get; set;}
+        public string Keywords { get; set;}
+        #endregion
 
-		#region Constructors
-		public PictureInformation (string title, string imageName, string keywords)
-		{
-			// Initialize
-			this.Title = title;
-			this.ImageName = imageName;
-			this.Keywords = keywords;
-		}
-		#endregion
-	}
+        #region Constructors
+        public PictureInformation (string title, string imageName, string keywords)
+        {
+            // Initialize
+            this.Title = title;
+            this.ImageName = imageName;
+            this.Keywords = keywords;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -241,47 +243,47 @@ using UIKit;
 
 namespace tvText
 {
-	public partial class SearchResultViewCell : UICollectionViewCell
-	{
-		#region Private Variables
-		private PictureInformation _pictureInfo = null;
-		#endregion
+    public partial class SearchResultViewCell : UICollectionViewCell
+    {
+        #region Private Variables
+        private PictureInformation _pictureInfo = null;
+        #endregion
 
-		#region Computed Properties
-		public PictureInformation PictureInfo {
-			get { return _pictureInfo; }
-			set {
-				_pictureInfo = value;
-				UpdateUI ();
-			}
-		}
-		#endregion
+        #region Computed Properties
+        public PictureInformation PictureInfo {
+            get { return _pictureInfo; }
+            set {
+                _pictureInfo = value;
+                UpdateUI ();
+            }
+        }
+        #endregion
 
-		#region Constructors
-		public SearchResultViewCell (IntPtr handle) : base (handle)
-		{
-			// Initialize
-			UpdateUI ();
-		}
-		#endregion
+        #region Constructors
+        public SearchResultViewCell (IntPtr handle) : base (handle)
+        {
+            // Initialize
+            UpdateUI ();
+        }
+        #endregion
 
-		#region Private Methods
-		private void UpdateUI ()
-		{
-			// Anything to process?
-			if (PictureInfo == null) return;
+        #region Private Methods
+        private void UpdateUI ()
+        {
+            // Anything to process?
+            if (PictureInfo == null) return;
 
-			try {
-				Picture.Image = UIImage.FromBundle (PictureInfo.ImageName);
-				Picture.AdjustsImageWhenAncestorFocused = true;
-				Title.Text = PictureInfo.Title;
-				TextColor = UIColor.LightGray;
-			} catch {
-				// Ignore errors if view isn't fully loaded
-			}
-		}
-		#endregion
-	}
+            try {
+                Picture.Image = UIImage.FromBundle (PictureInfo.ImageName);
+                Picture.AdjustsImageWhenAncestorFocused = true;
+                Title.Text = PictureInfo.Title;
+                TextColor = UIColor.LightGray;
+            } catch {
+                // Ignore errors if view isn't fully loaded
+            }
+        }
+        #endregion
+    }
 
 }
 ```
@@ -302,144 +304,144 @@ using System.Collections.Generic;
 
 namespace tvText
 {
-	public partial class SearchResultsViewController : UICollectionViewController , IUISearchResultsUpdating
+    public partial class SearchResultsViewController : UICollectionViewController , IUISearchResultsUpdating
     {
-		#region Constants
-		public const string CellID = "ImageCell";
-		#endregion
+        #region Constants
+        public const string CellID = "ImageCell";
+        #endregion
 
-		#region Private Variables
-		private string _searchFilter = "";
-		#endregion
+        #region Private Variables
+        private string _searchFilter = "";
+        #endregion
 
-		#region Computed Properties
-		public List<PictureInformation> AllPictures { get; set;}
-		public List<PictureInformation> FoundPictures { get; set; }
-		public string SearchFilter {
-			get { return _searchFilter; }
-			set {
-				_searchFilter = value.ToLower();
-				FindPictures ();
-				CollectionView?.ReloadData ();
-			}
-		}
-		#endregion
+        #region Computed Properties
+        public List<PictureInformation> AllPictures { get; set;}
+        public List<PictureInformation> FoundPictures { get; set; }
+        public string SearchFilter {
+            get { return _searchFilter; }
+            set {
+                _searchFilter = value.ToLower();
+                FindPictures ();
+                CollectionView?.ReloadData ();
+            }
+        }
+        #endregion
 
-		#region Constructors
-		public SearchResultsViewController (IntPtr handle) : base (handle)
+        #region Constructors
+        public SearchResultsViewController (IntPtr handle) : base (handle)
         {
-			// Initialize
-			this.AllPictures = new List<PictureInformation> ();
-			this.FoundPictures = new List<PictureInformation> ();
-			PopulatePictures ();
-			FindPictures ();
+            // Initialize
+            this.AllPictures = new List<PictureInformation> ();
+            this.FoundPictures = new List<PictureInformation> ();
+            PopulatePictures ();
+            FindPictures ();
 
         }
-		#endregion
+        #endregion
 
-		#region Private Methods
-		private void PopulatePictures ()
-		{
-			// Clear list
-			AllPictures.Clear ();
+        #region Private Methods
+        private void PopulatePictures ()
+        {
+            // Clear list
+            AllPictures.Clear ();
 
-			// Add images
-			AllPictures.Add (new PictureInformation ("Antipasta Platter","Antipasta","cheese,grapes,tomato,coffee,meat,plate"));
-			AllPictures.Add (new PictureInformation ("Cheese Plate", "CheesePlate", "cheese,plate,bread"));
-			AllPictures.Add (new PictureInformation ("Coffee House", "CoffeeHouse", "coffee,people,menu,restaurant,cafe"));
-			AllPictures.Add (new PictureInformation ("Computer and Expresso", "ComputerExpresso", "computer,coffee,expresso,phone,notebook"));
-			AllPictures.Add (new PictureInformation ("Hamburger", "Hamburger", "meat,bread,cheese,tomato,pickle,lettus"));
-			AllPictures.Add (new PictureInformation ("Lasagna Dinner", "Lasagna", "salad,bread,plate,lasagna,pasta"));
-			AllPictures.Add (new PictureInformation ("Expresso Meeting", "PeopleExpresso", "people,bag,phone,expresso,coffee,table,tablet,notebook"));
-			AllPictures.Add (new PictureInformation ("Soup and Sandwich", "SoupAndSandwich", "soup,sandwich,bread,meat,plate,tomato,lettus,egg"));
-			AllPictures.Add (new PictureInformation ("Morning Coffee", "TabletCoffee", "tablet,person,man,coffee,magazine,table"));
-			AllPictures.Add (new PictureInformation ("Evening Coffee", "TabletMagCoffee", "tablet,magazine,coffee,table"));
-		}
+            // Add images
+            AllPictures.Add (new PictureInformation ("Antipasta Platter","Antipasta","cheese,grapes,tomato,coffee,meat,plate"));
+            AllPictures.Add (new PictureInformation ("Cheese Plate", "CheesePlate", "cheese,plate,bread"));
+            AllPictures.Add (new PictureInformation ("Coffee House", "CoffeeHouse", "coffee,people,menu,restaurant,cafe"));
+            AllPictures.Add (new PictureInformation ("Computer and Expresso", "ComputerExpresso", "computer,coffee,expresso,phone,notebook"));
+            AllPictures.Add (new PictureInformation ("Hamburger", "Hamburger", "meat,bread,cheese,tomato,pickle,lettus"));
+            AllPictures.Add (new PictureInformation ("Lasagna Dinner", "Lasagna", "salad,bread,plate,lasagna,pasta"));
+            AllPictures.Add (new PictureInformation ("Expresso Meeting", "PeopleExpresso", "people,bag,phone,expresso,coffee,table,tablet,notebook"));
+            AllPictures.Add (new PictureInformation ("Soup and Sandwich", "SoupAndSandwich", "soup,sandwich,bread,meat,plate,tomato,lettus,egg"));
+            AllPictures.Add (new PictureInformation ("Morning Coffee", "TabletCoffee", "tablet,person,man,coffee,magazine,table"));
+            AllPictures.Add (new PictureInformation ("Evening Coffee", "TabletMagCoffee", "tablet,magazine,coffee,table"));
+        }
 
-		private void FindPictures ()
-		{
-			// Clear list
-			FoundPictures.Clear ();
+        private void FindPictures ()
+        {
+            // Clear list
+            FoundPictures.Clear ();
 
-			// Scan each picture for a match
-			foreach (PictureInformation picture in AllPictures) {
-				if (SearchFilter == "") {
-					// If no search term, everything matches
-					FoundPictures.Add (picture);
-				} else if (picture.Title.Contains (SearchFilter) || picture.Keywords.Contains (SearchFilter)) {
-					// If the search term is in the title or keywords, we've found a match
-					FoundPictures.Add (picture);
-				}
-			}
-		}
-		#endregion
+            // Scan each picture for a match
+            foreach (PictureInformation picture in AllPictures) {
+                if (SearchFilter == "") {
+                    // If no search term, everything matches
+                    FoundPictures.Add (picture);
+                } else if (picture.Title.Contains (SearchFilter) || picture.Keywords.Contains (SearchFilter)) {
+                    // If the search term is in the title or keywords, we've found a match
+                    FoundPictures.Add (picture);
+                }
+            }
+        }
+        #endregion
 
-		#region Override Methods
-		public override nint NumberOfSections (UICollectionView collectionView)
-		{
-			// Only one section in this collection
-			return 1;
-		}
+        #region Override Methods
+        public override nint NumberOfSections (UICollectionView collectionView)
+        {
+            // Only one section in this collection
+            return 1;
+        }
 
-		public override nint GetItemsCount (UICollectionView collectionView, nint section)
-		{
-			// Return the number of matching pictures
-			return FoundPictures.Count;
-		}
+        public override nint GetItemsCount (UICollectionView collectionView, nint section)
+        {
+            // Return the number of matching pictures
+            return FoundPictures.Count;
+        }
 
-		public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
-		{
-			// Get a new cell and return it
-			var cell = collectionView.DequeueReusableCell (CellID, indexPath);
-			return (UICollectionViewCell)cell;
-		}
+        public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
+        {
+            // Get a new cell and return it
+            var cell = collectionView.DequeueReusableCell (CellID, indexPath);
+            return (UICollectionViewCell)cell;
+        }
 
-		public override void WillDisplayCell (UICollectionView collectionView, UICollectionViewCell cell, NSIndexPath indexPath)
-		{
-			// Grab the cell
-			var currentCell = cell as SearchResultViewCell;
-			if (currentCell == null)
-				throw new Exception ("Expected to display a `SearchResultViewCell`.");
+        public override void WillDisplayCell (UICollectionView collectionView, UICollectionViewCell cell, NSIndexPath indexPath)
+        {
+            // Grab the cell
+            var currentCell = cell as SearchResultViewCell;
+            if (currentCell == null)
+                throw new Exception ("Expected to display a `SearchResultViewCell`.");
 
-			// Display the current picture info in the cell
-			var item = FoundPictures [indexPath.Row];
-			currentCell.PictureInfo = item;
-		}
+            // Display the current picture info in the cell
+            var item = FoundPictures [indexPath.Row];
+            currentCell.PictureInfo = item;
+        }
 
-		public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
-		{
-			// If this Search Controller was presented as a modal view, close
-			// it before continuing
-			// DismissViewController (true, null);
+        public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
+        {
+            // If this Search Controller was presented as a modal view, close
+            // it before continuing
+            // DismissViewController (true, null);
 
-			// Grab the picture being selected and report it
-			var picture = FoundPictures [indexPath.Row];
-			Console.WriteLine ("Selected: {0}", picture.Title);
-		}
+            // Grab the picture being selected and report it
+            var picture = FoundPictures [indexPath.Row];
+            Console.WriteLine ("Selected: {0}", picture.Title);
+        }
 
-		public void UpdateSearchResultsForSearchController (UISearchController searchController)
-		{
-			// Save the search filter and update the Collection View
-			SearchFilter = searchController.SearchBar.Text ?? string.Empty;
-		}
+        public void UpdateSearchResultsForSearchController (UISearchController searchController)
+        {
+            // Save the search filter and update the Collection View
+            SearchFilter = searchController.SearchBar.Text ?? string.Empty;
+        }
 
-		public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
-		{
-			var previousItem = context.PreviouslyFocusedView as SearchResultViewCell;
-			if (previousItem != null) {
-				UIView.Animate (0.2, () => {
-					previousItem.TextColor = UIColor.LightGray;
-				});
-			}
+        public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
+        {
+            var previousItem = context.PreviouslyFocusedView as SearchResultViewCell;
+            if (previousItem != null) {
+                UIView.Animate (0.2, () => {
+                    previousItem.TextColor = UIColor.LightGray;
+                });
+            }
 
-			var nextItem = context.NextFocusedView as SearchResultViewCell;
-			if (nextItem != null) {
-				UIView.Animate (0.2, () => {
-					nextItem.TextColor = UIColor.Black;
-				});
-			}
-		}
-		#endregion
+            var nextItem = context.NextFocusedView as SearchResultViewCell;
+            if (nextItem != null) {
+                UIView.Animate (0.2, () => {
+                    nextItem.TextColor = UIColor.Black;
+                });
+            }
+        }
+        #endregion
     }
 }
 ```
@@ -465,12 +467,12 @@ private string _searchFilter = "";
 public List<PictureInformation> AllPictures { get; set;}
 public List<PictureInformation> FoundPictures { get; set; }
 public string SearchFilter {
-	get { return _searchFilter; }
-	set {
-		_searchFilter = value.ToLower();
-		FindPictures ();
-		CollectionView?.ReloadData ();
-	}
+    get { return _searchFilter; }
+    set {
+        _searchFilter = value.ToLower();
+        FindPictures ();
+        CollectionView?.ReloadData ();
+    }
 }
 ```
 
@@ -479,19 +481,19 @@ When the `SearchFilter` is changed, the list of matching items is updated and th
 ```csharp
 private void FindPictures ()
 {
-	// Clear list
-	FoundPictures.Clear ();
+    // Clear list
+    FoundPictures.Clear ();
 
-	// Scan each picture for a match
-	foreach (PictureInformation picture in AllPictures) {
-		if (SearchFilter == "") {
-			// If no search term, everything matches
-			FoundPictures.Add (picture);
-		} else if (picture.Title.Contains (SearchFilter) || picture.Keywords.Contains (SearchFilter)) {
-			// If the search term is in the title or keywords, we've found a match
-			FoundPictures.Add (picture);
-		}
-	}
+    // Scan each picture for a match
+    foreach (PictureInformation picture in AllPictures) {
+        if (SearchFilter == "") {
+            // If no search term, everything matches
+            FoundPictures.Add (picture);
+        } else if (picture.Title.Contains (SearchFilter) || picture.Keywords.Contains (SearchFilter)) {
+            // If the search term is in the title or keywords, we've found a match
+            FoundPictures.Add (picture);
+        }
+    }
 }
 ```
 
@@ -500,8 +502,8 @@ The value of the `SearchFilter` will be updated (which will update the Results C
 ```csharp
 public void UpdateSearchResultsForSearchController (UISearchController searchController)
 {
-	// Save the search filter and update the Collection View
-	SearchFilter = searchController.SearchBar.Text ?? string.Empty;
+    // Save the search filter and update the Collection View
+    SearchFilter = searchController.SearchBar.Text ?? string.Empty;
 }
 ```
 
@@ -510,12 +512,12 @@ The `PopulatePictures` method initially populates the collection of available it
 ```csharp
 private void PopulatePictures ()
 {
-	// Clear list
-	AllPictures.Clear ();
+    // Clear list
+    AllPictures.Clear ();
 
-	// Add images
-	AllPictures.Add (new PictureInformation ("Antipasta Platter","Antipasta","cheese,grapes,tomato,coffee,meat,plate"));
-	...
+    // Add images
+    AllPictures.Add (new PictureInformation ("Antipasta Platter","Antipasta","cheese,grapes,tomato,coffee,meat,plate"));
+    ...
 }
 ```
 
@@ -526,14 +528,14 @@ The `NumberOfSections` and `GetItemsCount` methods provide the number of matched
 ```csharp
 public override nint NumberOfSections (UICollectionView collectionView)
 {
-	// Only one section in this collection
-	return 1;
+    // Only one section in this collection
+    return 1;
 }
 
 public override nint GetItemsCount (UICollectionView collectionView, nint section)
 {
-	// Return the number of matching pictures
-	return FoundPictures.Count;
+    // Return the number of matching pictures
+    return FoundPictures.Count;
 }
 ```
 
@@ -542,9 +544,9 @@ The `GetCell` method returns a new **Prototype Cell** (based on the `CellID` def
 ```csharp
 public override UICollectionViewCell GetCell (UICollectionView collectionView, NSIndexPath indexPath)
 {
-	// Get a new cell and return it
-	var cell = collectionView.DequeueReusableCell (CellID, indexPath);
-	return (UICollectionViewCell)cell;
+    // Get a new cell and return it
+    var cell = collectionView.DequeueReusableCell (CellID, indexPath);
+    return (UICollectionViewCell)cell;
 }
 ```
 
@@ -553,14 +555,14 @@ The `WillDisplayCell` method is called prior to the Cell being displayed so it c
 ```csharp
 public override void WillDisplayCell (UICollectionView collectionView, UICollectionViewCell cell, NSIndexPath indexPath)
 {
-	// Grab the cell
-	var currentCell = cell as SearchResultViewCell;
-	if (currentCell == null)
-		throw new Exception ("Expected to display a `SearchResultViewCell`.");
+    // Grab the cell
+    var currentCell = cell as SearchResultViewCell;
+    if (currentCell == null)
+        throw new Exception ("Expected to display a `SearchResultViewCell`.");
 
-	// Display the current picture info in the cell
-	var item = FoundPictures [indexPath.Row];
-	currentCell.PictureInfo = item;
+    // Display the current picture info in the cell
+    var item = FoundPictures [indexPath.Row];
+    currentCell.PictureInfo = item;
 }
 ```
 
@@ -569,19 +571,19 @@ The `DidUpdateFocus` method provides visual feedback to the user as they highlig
 ```csharp
 public override void DidUpdateFocus (UIFocusUpdateContext context, UIFocusAnimationCoordinator coordinator)
 {
-	var previousItem = context.PreviouslyFocusedView as SearchResultViewCell;
-	if (previousItem != null) {
-		UIView.Animate (0.2, () => {
-			previousItem.TextColor = UIColor.LightGray;
-		});
-	}
+    var previousItem = context.PreviouslyFocusedView as SearchResultViewCell;
+    if (previousItem != null) {
+        UIView.Animate (0.2, () => {
+            previousItem.TextColor = UIColor.LightGray;
+        });
+    }
 
-	var nextItem = context.NextFocusedView as SearchResultViewCell;
-	if (nextItem != null) {
-		UIView.Animate (0.2, () => {
-			nextItem.TextColor = UIColor.Black;
-		});
-	}
+    var nextItem = context.NextFocusedView as SearchResultViewCell;
+    if (nextItem != null) {
+        UIView.Animate (0.2, () => {
+            nextItem.TextColor = UIColor.Black;
+        });
+    }
 }
 ```
 
@@ -590,13 +592,13 @@ Finally, the `ItemSelected` method handles the user selecting an item  (clicking
 ```csharp
 public override void ItemSelected (UICollectionView collectionView, NSIndexPath indexPath)
 {
-	// If this Search Controller was presented as a modal view, close
-	// it before continuing
-	// DismissViewController (true, null);
+    // If this Search Controller was presented as a modal view, close
+    // it before continuing
+    // DismissViewController (true, null);
 
-	// Grab the picture being selected and report it
-	var picture = FoundPictures [indexPath.Row];
-	Console.WriteLine ("Selected: {0}", picture.Title);
+    // Grab the picture being selected and report it
+    var picture = FoundPictures [indexPath.Row];
+    Console.WriteLine ("Selected: {0}", picture.Title);
 }
 ```
 
@@ -608,7 +610,7 @@ For more information on Collection Views, please see our [Working with Collectio
 
 ### Presenting the Search Field
 
-There are two main ways that a Search Field (and its associated on-screen keyboard and search results) can be presented to the user in tvOS: 
+There are two main ways that a Search Field (and its associated on-screen keyboard and search results) can be presented to the user in tvOS:
 
 - **Modal Dialog View** - The Search Field can be presented over the current View and View Controller as a full screen modal dialog view. This is usually done in response to the user clicking a Button or other UI element. The dialog is dismissed when the user selects an item from the search results.
 - **View Contents** - The Search Field is a direct part of a given View. For example, as the contents of a Search Tab in a Tab View Controller.
@@ -621,73 +623,73 @@ using UIKit;
 
 namespace tvText
 {
-	public partial class SecondViewController : UIViewController
-	{
-		#region Constants
-		public const string SearchResultsID = "SearchResults";
-		#endregion
+    public partial class SecondViewController : UIViewController
+    {
+        #region Constants
+        public const string SearchResultsID = "SearchResults";
+        #endregion
 
-		#region Computed Properties
-		public SearchResultsViewController ResultsController { get; set;}
-		#endregion
+        #region Computed Properties
+        public SearchResultsViewController ResultsController { get; set;}
+        #endregion
 
-		#region Constructors
-		public SecondViewController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructors
+        public SecondViewController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Private Methods
-		public void ShowSearchController ()
-		{
-			// Build an instance of the Search Results View Controller from the Storyboard
-			ResultsController = Storyboard.InstantiateViewController (SearchResultsID) as SearchResultsViewController;
-			if (ResultsController == null)
-				throw new Exception ("Unable to instantiate a SearchResultsViewController.");
+        #region Private Methods
+        public void ShowSearchController ()
+        {
+            // Build an instance of the Search Results View Controller from the Storyboard
+            ResultsController = Storyboard.InstantiateViewController (SearchResultsID) as SearchResultsViewController;
+            if (ResultsController == null)
+                throw new Exception ("Unable to instantiate a SearchResultsViewController.");
 
-			// Create an initialize a new search controller
-			var searchController = new UISearchController (ResultsController) {
-				SearchResultsUpdater = ResultsController,
-				HidesNavigationBarDuringPresentation = false
-			};
+            // Create an initialize a new search controller
+            var searchController = new UISearchController (ResultsController) {
+                SearchResultsUpdater = ResultsController,
+                HidesNavigationBarDuringPresentation = false
+            };
 
-			// Set any required search parameters
-			searchController.SearchBar.Placeholder = "Enter keyword (e.g. coffee)";
+            // Set any required search parameters
+            searchController.SearchBar.Placeholder = "Enter keyword (e.g. coffee)";
 
-			// The Search Results View Controller can be presented as a modal view
-			// PresentViewController (searchController, true, null);
+            // The Search Results View Controller can be presented as a modal view
+            // PresentViewController (searchController, true, null);
 
-			// Or in the case of this sample, the Search View Controller is being
-			// presented as the contents of the Search Tab directly. Use either one
-			// or the other method to display the Search Controller (not both).
-			var container = new UISearchContainerViewController (searchController);
-			var navController = new UINavigationController (container);
-			AddChildViewController (navController);
-			View.Add (navController.View);
-		}
-		#endregion
+            // Or in the case of this sample, the Search View Controller is being
+            // presented as the contents of the Search Tab directly. Use either one
+            // or the other method to display the Search Controller (not both).
+            var container = new UISearchContainerViewController (searchController);
+            var navController = new UINavigationController (container);
+            AddChildViewController (navController);
+            View.Add (navController.View);
+        }
+        #endregion
 
-		#region Override Methods
-		public override void ViewDidLoad ()
-		{
-			base.ViewDidLoad ();
+        #region Override Methods
+        public override void ViewDidLoad ()
+        {
+            base.ViewDidLoad ();
 
-			// If the Search Controller is being displayed as the content
-			// of the search tab, include it here.
-			ShowSearchController ();
-		}
+            // If the Search Controller is being displayed as the content
+            // of the search tab, include it here.
+            ShowSearchController ();
+        }
 
-		public override void ViewDidAppear (bool animated)
-		{
-			base.ViewDidAppear (animated);
+        public override void ViewDidAppear (bool animated)
+        {
+            base.ViewDidAppear (animated);
 
-			// If the Search Controller is being presented as a modal view,
-			// call it here to display it over the contents of the Search
-			// tab.
-			// ShowSearchController ();
-		}
-		#endregion
-	}
+            // If the Search Controller is being presented as a modal view,
+            // call it here to display it over the contents of the Search
+            // tab.
+            // ShowSearchController ();
+        }
+        #endregion
+    }
 }
 ```
 
@@ -702,30 +704,30 @@ Next, the `ShowSearchController` method creates a new Search View Collection Con
 ```csharp
 public void ShowSearchController ()
 {
-	// Build an instance of the Search Results View Controller from the Storyboard
-	ResultsController = Storyboard.InstantiateViewController (SearchResultsID) as SearchResultsViewController;
-	if (ResultsController == null)
-		throw new Exception ("Unable to instantiate a SearchResultsViewController.");
+    // Build an instance of the Search Results View Controller from the Storyboard
+    ResultsController = Storyboard.InstantiateViewController (SearchResultsID) as SearchResultsViewController;
+    if (ResultsController == null)
+        throw new Exception ("Unable to instantiate a SearchResultsViewController.");
 
-	// Create an initialize a new search controller
-	var searchController = new UISearchController (ResultsController) {
-		SearchResultsUpdater = ResultsController,
-		HidesNavigationBarDuringPresentation = false
-	};
+    // Create an initialize a new search controller
+    var searchController = new UISearchController (ResultsController) {
+        SearchResultsUpdater = ResultsController,
+        HidesNavigationBarDuringPresentation = false
+    };
 
-	// Set any required search parameters
-	searchController.SearchBar.Placeholder = "Enter keyword (e.g. coffee)";
+    // Set any required search parameters
+    searchController.SearchBar.Placeholder = "Enter keyword (e.g. coffee)";
 
-	// The Search Results View Controller can be presented as a modal view
-	// PresentViewController (searchController, true, null);
+    // The Search Results View Controller can be presented as a modal view
+    // PresentViewController (searchController, true, null);
 
-	// Or in the case of this sample, the Search View Controller is being
-	// presented as the contents of the Search Tab directly. Use either one
-	// or the other method to display the Search Controller (not both).
-	var container = new UISearchContainerViewController (searchController);
-	var navController = new UINavigationController (container);
-	AddChildViewController (navController);
-	View.Add (navController.View);
+    // Or in the case of this sample, the Search View Controller is being
+    // presented as the contents of the Search Tab directly. Use either one
+    // or the other method to display the Search Controller (not both).
+    var container = new UISearchContainerViewController (searchController);
+    var navController = new UINavigationController (container);
+    AddChildViewController (navController);
+    View.Add (navController.View);
 }
 ```
 
@@ -743,21 +745,21 @@ Finally, and again based on the presentation type, either the `ViewDidLoad` or `
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// If the Search Controller is being displayed as the content
-	// of the search tab, include it here.
-	ShowSearchController ();
+    // If the Search Controller is being displayed as the content
+    // of the search tab, include it here.
+    ShowSearchController ();
 }
 
 public override void ViewDidAppear (bool animated)
 {
-	base.ViewDidAppear (animated);
+    base.ViewDidAppear (animated);
 
-	// If the Search Controller is being presented as a modal view,
-	// call it here to display it over the contents of the Search
-	// tab.
-	// ShowSearchController ();
+    // If the Search Controller is being presented as a modal view,
+    // call it here to display it over the contents of the Search
+    // tab.
+    // ShowSearchController ();
 }
 ```
 
@@ -776,8 +778,6 @@ At any time, the user can switch Focus to an item in the search results and clic
 ## Summary
 
 This article has covered designing and working with Text and Search Fields inside of a Xamarin.tvOS app. It showed how to create Text and Search Collection contents in the Interface Designer and it showed to two different ways that a Search Field could be presented to the user in tvOS.
-
-
 
 ## Related Links
 

@@ -3,8 +3,8 @@ title: "Xamarin Live Player Visual Studio configuration"
 description: "This document describes how to use the Xamarin Live Player to make live edits to a running application."
 ms.prod: xamarin
 ms.assetid: 5DDF9203-8826-4B04-93F5-B8D07EDE3873
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
 ---
 

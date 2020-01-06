@@ -4,8 +4,8 @@ description: "This section includes a variety of articles that cover working wit
 ms.prod: xamarin
 ms.assetid: 0AB8CC07-11E4-0D75-4119-AED1A1252424
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -28,7 +28,6 @@ There are several ways that image assets are used inside an iOS app. From simply
 
 There are several considerations that should be taken into account when creating image assets for an iOS app, as well as several places where those assets will be used. Each of these have an affect on not only how many image assets will be required, but how those assets are created. The following topics cover the types of images assets that will be required, how those assets are included in the application's bundle and how the image assets are consumed to provide the required functionality:
 
-
 ## [Displaying an Image](~/ios/app-fundamentals/images-icons/displaying-an-image.md)
 
 This article covers including an image asset in a Xamarin.iOS app and displaying that image either by using C# code or by assigning it to a control in the iOS Designer.
@@ -46,7 +45,6 @@ Apple has added several enhancements to iOS 10.3 that allow an app to manage its
 - `AlternateIconName` - Returns the name of the alternate icon currently selected or `null` if using the primary icon.
 - `SetAlternameIconName` - Use this method to switch the app's icon to the given alternate icon.
 
-
 ## [Launch Screens](~/ios/app-fundamentals/images-icons/launch-screens.md)
 
 This article covers using a special type of Storyboard to provide a universal Launch Screen for every iOS device size and resolution.
@@ -54,8 +52,6 @@ This article covers using a special type of Storyboard to provide a universal La
 ## [Custom Document Types](~/ios/app-fundamentals/images-icons/custom-document-types.md)
 
 This article covers including and managing an image asset in a Xamarin.iOS app to be used as a Custom Document Type Icon.
-
-
 
 ## Related Links
 

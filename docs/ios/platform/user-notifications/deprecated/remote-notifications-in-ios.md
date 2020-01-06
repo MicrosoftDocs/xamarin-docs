@@ -4,8 +4,8 @@ description: "This document describes how to work with push notifications in iOS
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -38,7 +38,6 @@ Push notification must observe the following rules that are dictated by the arch
 - **256 byte Message Limit** - The entire message size of the notification must not exceed 256 bytes.
 - **No Receipt Confirmation** - APNS does not provide the sender with any notification that a message made it to the intended recipient. If the device is unreachable and multiple sequential notifications are sent, all notifications except the most recent will be lost. Only the most recent notification will be delivered to the device.
 - **Each application requires a secure certificate** - Communication with APNS must be done over SSL.
-
 
 ## Creating and Using Certificates
 
@@ -199,10 +198,9 @@ This section introduce the key concepts surrounding push notifications in iOS. I
     essential to APNS. Finally this document finished up with a discussion on how application servers can use the *Feedback Services* to
     stop tracking expired device tokens.
 
-
 ## Related Links
 
 - [Notifications - Demonstrating Local and remote notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)
 - [Local and Push Notifications for Developers](https://developer.apple.com/notifications/)
-- [UIApplication](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIApplication)
-- [UIRemoteNotificationType](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIRemoteNotificationType)
+- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
+- [UIRemoteNotificationType](https://docs.microsoft.com/dotnet/api/uikit.UIRemoteNotificationType)

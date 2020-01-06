@@ -9,6 +9,7 @@ Before attempting this tutorial, you should have successfully completed the:
 In this tutorial, you learn how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) in XAML.
 > - Populate the `ListView` with data.
 > - Respond to `ListView` items being selected.

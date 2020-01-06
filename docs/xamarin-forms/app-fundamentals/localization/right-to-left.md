@@ -141,6 +141,46 @@ Xamarin.Forms right-to-left localization currently has a number of limitations:
 - [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property is not inherited by [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) children.
 - [`ContextActions`](xref:Xamarin.Forms.Cell.ContextActions) text alignment is controlled by the device locale, rather than the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
 
+## Force right-to-left layout
+
+Xamarin.iOS and Xamarin.Android applications can be forced to always use a right-to-left layout, regardless of device settings, by modifying the respective platform projects.
+
+### iOS
+
+Xamarin.iOS applications can be forced to always use a right-to-left layout by modifying the **AppDelegate** class as follows:
+
+1. Declare the `IntPtr_objc_msgSend` function as the first line in your `AppDelegate` class:
+
+   ```csharp
+   [System.Runtime.InteropServices.DllImport(ObjCRuntime.Constants.ObjectiveCLibrary, EntryPoint = "objc_msgSend")]
+   internal extern static IntPtr IntPtr_objc_msgSend(IntPtr receiver, IntPtr selector, UISemanticContentAttribute arg1);
+   ```
+
+1. Call the `IntPtr_objc_msgSend` function from the `FinishedLaunching` method, before returning from the `FinshedLaunching` method:
+
+   ```csharp
+   bool result = base.FinishedLaunching(app, options);
+
+   ObjCRuntime.Selector selector = new ObjCRuntime.Selector("setSemanticContentAttribute:");
+   IntPtr_objc_msgSend(UIView.Appearance.Handle, selector.Handle, UISemanticContentAttribute.ForceRightToLeft);
+
+   return result;
+   ```
+
+This approach is useful for applications that always require a right-to-left layout, and removes the requirement to set the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+
+For more information about the `IntrPtr_objc_msgSend` method, see [Objective-C selectors in Xamarin.iOS](~/ios/internals/objective-c-selectors.md).
+
+### Android
+
+Xamarin.Android applications can be forced to always use a right-to-left layout by modifying the **MainActivity** class to include the following line:
+
+```csharp
+Window.DecorView.LayoutDirection = LayoutDirection.Rtl;
+```
+
+This approach is useful for applications that always require a right-to-left layout, and removes the requirement to set the [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property.
+
 ## Right to left language support with Xamarin.University
 
 > [!VIDEO https://youtube.com/embed/f2lQ5yw3iiU]

@@ -167,7 +167,7 @@ Normally, the path fill type should affect only fills and not strokes, but the t
 
 [![](fill-types-images/fivepointedstar-small.png "Triple screenshot of the Five-Pointed Star page")](fill-types-images/fivepointedstar-large.png#lightbox "Triple screenshot of the Five-Pointed Star page")
 
-The Android and UWP screenshots show the typical even-odd and winding effects, but the order of the stroke and fill also affects the results.
+The Android screenshot show the typical even-odd and winding effects, but the order of the stroke and fill also affects the results.
 
 The winding algorithm is dependent on the direction that lines are drawn. Usually when you're creating a path, you can control that direction as you specify that lines are drawn from one point to another. However, the `SKPath` class also defines methods like `AddRect` and `AddCircle` that draw entire contours. To control how these objects are drawn, the methods include a parameter of type [`SKPathDirection`](xref:SkiaSharp.SKPathDirection), which has two members:
 
@@ -219,7 +219,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 It's an interesting image created with a minimum of code:
 
 [![](fill-types-images/overlappingcircles-small.png "Triple screenshot of the Overlapping Circles page")](fill-types-images/overlappingcircles-large.png#lightbox "Triple screenshot of the Overlapping Circles page")
-
 
 ## Related Links
 

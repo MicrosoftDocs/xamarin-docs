@@ -33,7 +33,7 @@ A [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) can be applied to the 
 When a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) is created and assigned to these types, any existing appearance is replaced with the appearance defined in the `ControlTemplate`. In addition, as well as setting appearance by using the `ControlTemplate` property, control templates can also be applied by using styles to further expand theme ability.
 
 > [!NOTE]
->  *What are the `TemplatedPage` and `TemplatedView` types?* `TemplatedPage` is the base class for `ContentPage`, and is the most basic page type provided by Xamarin.Forms. Unlike `ContentPage`, `TemplatedPage` does not have a `Content` property. Therefore, content can't be directly added to a `TemplatedPage` instance. Instead, content is added by setting the control template for the `TemplatedPage` instance. Similarly, `TemplatedView` is the base class for `ContentView`. Unlike `ContentView`, `TemplatedView` does not have a `Content` property. Therefore, content can't be directly added to a `TemplatedView` instance. Instead, content is added by setting the control template for the `TemplatedView` instance.
+> *What are the `TemplatedPage` and `TemplatedView` types?* `TemplatedPage` is the base class for `ContentPage`, and is the most basic page type provided by Xamarin.Forms. Unlike `ContentPage`, `TemplatedPage` does not have a `Content` property. Therefore, content can't be directly added to a `TemplatedPage` instance. Instead, content is added by setting the control template for the `TemplatedPage` instance. Similarly, `TemplatedView` is the base class for `ContentView`. Unlike `ContentView`, `TemplatedView` does not have a `Content` property. Therefore, content can't be directly added to a `TemplatedView` instance. Instead, content is added by setting the control template for the `TemplatedView` instance.
 
 Control templates can be created in XAML and in C#:
 
@@ -46,7 +46,6 @@ Choosing where to define a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplat
 - [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) instances defined at the application-level can be applied to pages throughout the application.
 
 Control templates lower in the view hierarchy take precedence over those defined higher up. For example, a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) named `DarkTheme` that's defined at the page-level will take precedence over an identically named template defined at the application-level. Therefore, a control template that defines a theme to be applied to each page in an application should be defined at the application-level.
-
 
 ## Related Links
 

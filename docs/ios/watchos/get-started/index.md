@@ -4,8 +4,8 @@ description: "This document links to various guides that describe how to get sta
 ms.prod: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
 ---
 
@@ -26,4 +26,3 @@ that are specially configured for watchOS solutions.
 ## [Hello, Watch](~/ios/watchos/get-started/hello-watch.md)
 
 Build your first watchOS app using C# and Xamarin.
-

@@ -5,8 +5,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5AC61C00-0FF6-4C2D-80E7-D67A3EE30A5A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2018
 ---
 
@@ -87,7 +87,6 @@ previous version of the Android SDK from the
 You can still use the original GUI by running the **android** program
 inside your **tools** folder as long as you are on **Android SDK
 Tools** version **25.2.5** or lower.
-
 
 ## Related Links
 

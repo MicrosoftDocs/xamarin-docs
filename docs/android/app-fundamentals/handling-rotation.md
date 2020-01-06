@@ -4,15 +4,14 @@ description: "This topic describes how to handle device orientation changes in X
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
 # Handling Rotation
 
 _This topic describes how to handle device orientation changes in Xamarin.Android. It covers how to work with the Android resource system to automatically load resources for a particular device orientation as well as how to programmatically handle orientation changes._
-
 
 ## Overview
 
@@ -38,7 +37,6 @@ This guide examines the following orientation topics:
     programmatically as well as how to handle orientation changes
     manually.
 
-
 ## Handling Rotation Declaratively with Layouts
 
 By including files in folders that follow naming conventions, Android
@@ -50,7 +48,6 @@ This includes support for:
 
 - *Drawable Resources* &ndash; Specifying which drawables are loaded
     for each orientation.
-
 
 ### Layout Resources
 
@@ -87,7 +84,6 @@ If the device is rotated to landscape orientation, the Activity's
 inflated, as shown in the screenshot below:
 
 [![Same screen but in landscape orientation](handling-rotation-images/01-sml.png)](handling-rotation-images/01.png#lightbox)
-
 
 #### Orientation-Specific Layouts
 
@@ -134,7 +130,6 @@ demonstrates the new XML loading, as shown below:
 
 [![Portrait and landscape screenshots printing the portrait mode](handling-rotation-images/02.png)](handling-rotation-images/02.png#lightbox)
 
-
 ### Drawable Resources
 
 During rotation, Android treats drawable resources similarly to layout
@@ -162,7 +157,6 @@ orientation, as shown below:
 
 [![Different version of Monkey.png shown in portrait and landscape modes](handling-rotation-images/03.png)](handling-rotation-images/03.png#lightbox)
 
-
 ## Handling Rotation Programmatically
 
 Sometimes we define layouts in code. This can happen for a variety of
@@ -170,7 +164,6 @@ reasons, including technical limitations, developer preference, etc.
 When we add controls programmatically, an application must manually
 account for device orientation, which is handled automatically when we
 use XML resources.
-
 
 ### Adding Controls in Code
 
@@ -226,7 +219,6 @@ results in the application displaying the `TextView` as shown:
 
 [![Increment counter button shown in both portrait and landscape modes](handling-rotation-images/04.png)](handling-rotation-images/04.png#lightbox)
 
-
 ### Detecting Orientation in Code
 
 If an application tries to load a different user interface for each
@@ -280,7 +272,6 @@ left of the screen, automatically animating to the new layout, when
 rotated to landscape, as shown here:
 
 [![View state is preserved across portrait and landscape modes](handling-rotation-images/05.png)](handling-rotation-images/05.png#lightbox)
-
 
 ### Preventing Activity Restart
 
@@ -358,7 +349,6 @@ orientation changes. The code still uses the `surfaceOrientartion` in
 When we run the application, Android loads the user interface changes
 as device rotation occurs, and does not restart the Activity.
 
-
 ## Preventing Activity Restart for Declarative Layouts
 
 Activity restarts caused by device rotation can also be prevented if we
@@ -371,7 +361,6 @@ programmatic layout. Simply set `ConfigurationChanges` in the
 `ActivityAttribute`, as we did in the `CodeLayoutActivity` earlier. Any
 code that does need to run for the orientation change can again be
 implemented in the `OnConfigurationChanged` method.
-
 
 ## Maintaining State During Orientation Changes
 
@@ -392,7 +381,6 @@ For more information on persisting state in Android, refer to the
 [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 guide.
 
-
 ## Summary
 
 This article covered how to use Android's built-in capabilities to work
@@ -401,11 +389,9 @@ system to create orientation aware applications. Then it presented how
 to add controls in code as well as how to handle orientation changes
 manually.
 
-
-
 ## Related Links
 
 - [Rotation Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-rotationdemo)
 - [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Handling Runtime Changes](https://developer.android.com/guide/topics/resources/runtime-changes.html)
-- [Fast Screen Orientation Change](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)
+- [Fast Screen Orientation Change](https://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)

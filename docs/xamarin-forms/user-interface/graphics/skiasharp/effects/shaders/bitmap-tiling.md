@@ -458,14 +458,14 @@ public class CenteredTilesPage : ContentPage
                         typeof(CenteredTilesPage),
                         "SkiaSharpFormsDemos.Media.monkey.png");
 
-	public CenteredTilesPage ()
-	{
+    public CenteredTilesPage ()
+    {
         Title = "Centered Tiles";
 
         SKCanvasView canvasView = new SKCanvasView();
         canvasView.PaintSurface += OnCanvasViewPaintSurface;
         Content = canvasView;
-	}
+    }
 
     void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     {

@@ -11,8 +11,6 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms CollectionView Selection
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that control item selection:
@@ -253,7 +251,7 @@ Therefore, when the [`CollectionView`](xref:Xamarin.Forms.CollectionView) appear
 
 [![Screenshot of a CollectionView vertical list with multiple pre-selection, on iOS and Android](selection-images/multiple-pre-selection.png "CollectionView vertical list with multiple pre-selection")](selection-images/multiple-pre-selection-large.png#lightbox "CollectionView vertical list with multiple pre-selection")
 
-## Clearing selections
+## Clear selections
 
 The [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) and [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) properties can be cleared by setting them, or the objects they bind to, to `null`.
 

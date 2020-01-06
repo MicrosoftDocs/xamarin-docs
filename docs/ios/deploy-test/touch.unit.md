@@ -4,8 +4,8 @@ description: "This document provides an overview of how to unit test a Xamarin.i
 ms.prod: xamarin
 ms.assetid: BD959779-3239-79B6-5289-3A9ECDFBD973
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -138,7 +138,7 @@ which tests are being executed and their current status.
 
 NUnitLite is a modified version of the NUnit called [Touch.Unit](https://github.com/xamarin/Touch.Unit)
 project. It is a lightweight testing framework for .NET, based on the
-ideas in [NUnit](http://nunit.com/) and providing a subset of its features.
+ideas in [NUnit](https://nunit.com/) and providing a subset of its features.
 It uses minimal resources and will run on resource-restricted platforms such as
 those used in embedded and mobile development. The NUnitLite API is available to you in
 Xamarin.iOS. With the basic skeleton provided by the unit test template, your

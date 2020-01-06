@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Display an alert, to ask the user to make a choice.
 > - Display an action sheet, to guide the user through a task.
 

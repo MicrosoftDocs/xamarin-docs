@@ -4,8 +4,8 @@ description: "This document discusses common errors and various tips useful when
 ms.prod: xamarin
 ms.assetid: 8DD34D21-342C-48E9-97AA-1B649DD8B61F
 ms.date: 03/29/2017
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ---
 
 # Tips for Updating Code to the Unified API
@@ -48,68 +48,68 @@ Save the file, reboot Visual Studio for Mac, and do a clean & rebuild of your pr
 ## Useful Tips
 
 After using the migration tool, you may still get some
-	compiler errors requiring manual intervention.
-	Some things that might need to be manually fixed include:
+compiler errors requiring manual intervention.
+Some things that might need to be manually fixed include:
 
-* Comparing `enum`s might require an `(int)` cast.
+- Comparing `enum`s might require an `(int)` cast.
 
-* `NSDictionary.IntValue` now returns an `nint`, there is
-	an `Int32Value` which can be used instead.
+- `NSDictionary.IntValue` now returns an `nint`, there is
+  an `Int32Value` which can be used instead.
 
-* `nfloat` and `nint` types cannot be marked `const`;
-	`static readonly nint` is a reasonable alternative.
+- `nfloat` and `nint` types cannot be marked `const`;
+  `static readonly nint` is a reasonable alternative.
 
-* Things that used to be directly in the `MonoTouch.`
-	namespace are now generally in the `ObjCRuntime.`
-	namespace (e.g.: `MonoTouch.Constants.Version` is now `ObjCRuntime.Constants.Version`).
+- Things that used to be directly in the `MonoTouch.`
+  namespace are now generally in the `ObjCRuntime.`
+  namespace (e.g.: `MonoTouch.Constants.Version` is now `ObjCRuntime.Constants.Version`).
 
-* Code that serializes objects may break when attempting
-	to serialize `nint` and `nfloat` types. Be sure to
-	check your serialization code works as expected after migration.
+- Code that serializes objects may break when attempting
+  to serialize `nint` and `nfloat` types. Be sure to
+  check your serialization code works as expected after migration.
 
-* Sometimes the automated tool misses code inside
-	`#if #else` conditional compiler directives. In this case
-	you'll need to make the fixes manually (see the common errors
-	below).
+- Sometimes the automated tool misses code inside
+  `#if #else` conditional compiler directives. In this case
+  you'll need to make the fixes manually (see the common errors
+  below).
 
-* Manually exported methods using `[Export]` may not be automatically
-	fixed by the migration tool, for example in
-	this code snippert you must manually update the return type
-	to `nfloat`:
+- Manually exported methods using `[Export]` may not be automatically
+  fixed by the migration tool, for example in
+  this code snippert you must manually update the return type
+  to `nfloat`:
 
-	```csharp
-	[Export("tableView:heightForRowAtIndexPath:")]
-	public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
-	```
+  ```csharp
+  [Export("tableView:heightForRowAtIndexPath:")]
+  public nfloat HeightForRow(UITableView tableView, NSIndexPath indexPath)
+  ```
 
-* The Unified API does not provide an implicit conversion between NSDate
- 	and .NET DateTime because it's not a lossless conversion. To prevent
- 	errors related to `DateTimeKind.Unspecified` convert the .NET `DateTime`
- 	to local or UTC before casting to `NSDate`.
+- The Unified API does not provide an implicit conversion between NSDate
+  and .NET DateTime because it's not a lossless conversion. To prevent
+  errors related to `DateTimeKind.Unspecified` convert the .NET `DateTime`
+  to local or UTC before casting to `NSDate`.
 
-* Objective-C category methods are now generated as extension
- 	methods in the Unified API. For example, code that previously
- 	used `UIView.DrawString` would now reference
- 	`NSString.DrawString` in the Unified API.
+- Objective-C category methods are now generated as extension
+  methods in the Unified API. For example, code that previously
+  used `UIView.DrawString` would now reference
+  `NSString.DrawString` in the Unified API.
 
-* Code using AVFoundation classes with `VideoSettings` should change
- 	to use the `WeakVideoSettings` property. This requires a `Dictionary`,
- 	which is available as a property on the settings classes, for example:
+- Code using AVFoundation classes with `VideoSettings` should change
+  to use the `WeakVideoSettings` property. This requires a `Dictionary`,
+  which is available as a property on the settings classes, for example:
 
-	```csharp
-	vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
-	```
+  ```csharp
+  vidrec.WeakVideoSettings = new AVVideoSettings() { ... }.Dictionary;
+  ```
 
-* The NSObject `.ctor(IntPtr)` constructor has been changed from public
- 	to protected ([to prevent improper use](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
+- The NSObject `.ctor(IntPtr)` constructor has been changed from public
+  to protected ([to prevent improper use](~/cross-platform/macios/unified/overview.md#NSObject_ctor)).
 
-* `NSAction` has been [replaced](~/cross-platform/macios/unified/overview.md#NSAction)
- 	with the standard .NET `Action`. Some simple (single parameter) delegates
- 	have also been replaced with `Action<T>`.
+- `NSAction` has been [replaced](~/cross-platform/macios/unified/overview.md#NSAction)
+  with the standard .NET `Action`. Some simple (single parameter) delegates
+  have also been replaced with `Action<T>`.
 
 Finally, refer to the [Classic v Unified API differences](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
- 	to look up changes to APIs in your code. Searching [this page](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
- 	will help find Classic APIs and what they've been updated to.
+to look up changes to APIs in your code. Searching [this page](https://github.com/xamarin/release-notes-archive/blob/master/release-notes/ios/api_changes/classic-vs-unified-8.6.0/index.md)
+will help find Classic APIs and what they've been updated to.
 
 > [!NOTE]
 > The `MonoTouch.Dialog` namespace remains the same
@@ -168,7 +168,7 @@ Fix: When the return type is changed to `nint`, cast the return value to `nint`.
 ```csharp
 public override nint NumberOfSections (UITableView tableView)
 {
-	return (nint)navItems.Count;
+    return (nint)navItems.Count;
 }
 ```
 
@@ -176,13 +176,13 @@ public override nint NumberOfSections (UITableView tableView)
 
 Fix: Correct spelling to `AddEllipseInRect`. Other name changes include:
 
-* Change 'Color.Black' to `NSColor.Black`.
-* Change MapKit 'AddAnnotation' to `AddAnnotations`.
-* Change AVFoundation 'DataUsingEncoding' to `Encode`.
-* Change AVFoundation 'AVMetadataObject.TypeQRCode' to `AVMetadataObjectType.QRCode`.
-* Change AVFoundation 'VideoSettings' to `WeakVideoSettings`.
-* Change PopViewControllerAnimated to `PopViewController`.
-* Change CoreGraphics 'CGBitmapContext.SetRGBFillColor' to `SetFillColor`.
+- Change 'Color.Black' to `NSColor.Black`.
+- Change MapKit 'AddAnnotation' to `AddAnnotations`.
+- Change AVFoundation 'DataUsingEncoding' to `Encode`.
+- Change AVFoundation 'AVMetadataObject.TypeQRCode' to `AVMetadataObjectType.QRCode`.
+- Change AVFoundation 'VideoSettings' to `WeakVideoSettings`.
+- Change PopViewControllerAnimated to `PopViewController`.
+- Change CoreGraphics 'CGBitmapContext.SetRGBFillColor' to `SetFillColor`.
 
 **Error CS0546: cannot override because `MapKit.MKAnnotation.Coordinate' does not have an overridable set accessor (CS0546)**
 
@@ -190,10 +190,10 @@ When creating a custom annotation by subclassing MKAnnotation the Coordinate fie
 
 [Fix](https://forums.xamarin.com/discussion/comment/109505/#Comment_109505):
 
-* Add a field to keep track of the coordinate
-* return this field in the getter of the Coordinate property
-* Override the SetCoordinate method and set your field
-* Call SetCoordinate in your ctor with the passed in coordinate parameter
+- Add a field to keep track of the coordinate
+- return this field in the getter of the Coordinate property
+- Override the SetCoordinate method and set your field
+- Call SetCoordinate in your ctor with the passed in coordinate parameter
 
 It should look similar to the following:
 

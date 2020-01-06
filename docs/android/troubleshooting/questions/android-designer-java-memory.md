@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/02/2018
 ---
 
@@ -22,14 +22,13 @@ customized on a per-project basis.
 ## New Android designer properties and corresponding Java options
 
 The following property names correspond to the indicated java
-[command-line option](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
+[command-line option](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
 
 - **AndroidDesignerJavaRendererMinMemory** -Xms
 
 - **AndroidDesignerJavaRendererMaxMemory** -Xmx
 
 - **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
-
 
 # [Visual Studio](#tab/windows)
 
@@ -121,4 +120,3 @@ The following property names correspond to the indicated java
 10. Restart Visual Studio for Mac and reopen your solution.
 
 -----
-

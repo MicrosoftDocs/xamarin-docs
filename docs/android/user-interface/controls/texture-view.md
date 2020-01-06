@@ -3,8 +3,8 @@ title: "Xamarin.Android TextureView"
 ms.prod: xamarin
 ms.assetid: DD1F3D68-5DD8-4644-8A13-08AE7719DE30
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2017
 ---
 
@@ -88,10 +88,8 @@ the camera, both the `android.permission.CAMERA` permission and the
 `android.hardware.camera` feature must be set in the
 **AndroidManifest.xml**.
 
-
-
 ## Related Links
 
 - [TextureViewDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/textureviewdemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
+- [Introducing Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
 - [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

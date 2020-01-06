@@ -4,8 +4,8 @@ description: "This guide introduces iOS Auto Layout and describes how to use the
 ms.prod: xamarin
 ms.assetid: CAC7A715-55BB-45E2-BB6D-2168D36D428F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -40,8 +40,7 @@ The default iOS Designer configuration has constraint mode enabled. However, sho
 1. Click on an empty space on the design surface. This deselects any elements and brings up the properties for the Storyboard document.
 1. Check or uncheck the **Use Autolayout** checkbox in the property panel:
 
-	![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
-
+    ![](designer-auto-layout-images/image01.png "The Use Autolayout checkbox in the property panel")
 
 By default, no constraints are created or visible on the surface. Instead, they are automatically inferred from the frame information at compile time. To add constraints, we need to select an element on the design surface and add constraints to it. We can do that using the **Constraint Toolbar**.
 
@@ -61,10 +60,24 @@ The constraints toolbar has been updated and now consists of two main parts:
   - In Constraint editing mode this button adjusts the constraints to match the element frame.
   - In Frame editing mode this button adjusts the element frame to match the position the constraints are defining.
 
+## Constraints editing popover
+
+The constraints editor pop-up allows us to add and update the multiple constraints at once for a select view. We can create multiple spacing, aspect ratio, and alignment constraints, such as align a view to the left edges of two views.
+
+For editing constraints on the selected view, click the ellipsis to display the popover:
+![constraints editing popover](designer-auto-layout-images/constraints-popup.png)
+
+On opening the constraints popover it displays any preset constraints on the view. We can set all the spacing constraints selecting **All Sides** from the combobox on top right corner, and select **Clear All** to remove them. 
+
+The **W** will set width and **H** will set height constraint. When you check **Aspect Ratio**, the views height and width will be controlled on different screen sizes, the width of the view is used as numerator for the ration, and the height as denominator.
+
+![constraints spacing](designer-auto-layout-images/constraints-spacing.png)
+
+Four combo boxes for spacing constraints lists the neighboring views to anchor the constraint
 
 ## Surface-Based Constraint Editing
 
-In the previous section, we learned to add default constraints and remove constraints using the Constraints Toolbar. For more fine-tuned constraint editing, we can interact with constraints directly on the design surface. This section introduces the basics of surface-based constraint editing, including pin-spacing controls, drop areas, and working with different types of constraints.
+For more fine-tuned constraint editing, we can interact with constraints directly on the design surface. This section introduces the basics of surface-based constraint editing, including pin-spacing controls, drop areas, and working with different types of constraints.
 
 ### Creating Constraints
 
@@ -84,8 +97,6 @@ Note the three dashed green lines across the other two buttons. The green lines 
 
 > [!IMPORTANT]
 > Layout guides are special types of constraint targets that allow us to create top and bottom constraints that take into account the presence of system bars, such as status bars or toolbars. One of the main uses is to have an app compatible between iOS 6 and iOS 7 since the newest version has the container view extending below the status bar. For more information on the top layout guide, refer to the [Apple documentation](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/transitionguide/AppearanceCustomization.html#//apple_ref/doc/uid/TP40013174-CH15-SW2).
-
-
 
 The next three sections introduce working with different types of constraints.
 
@@ -126,7 +137,6 @@ Several types of issues can arise when using constraints:
 - **Conflicting constraints** — This happens when multiple constraints force the element to have conflicting values for an attribute and the constraint engine is unable to reconcile them.
 - **Underconstrained items** — An element’s properties (location + size) must be entirely covered by its set of constraints and intrinsic sizes for the constraints to be valid. If these values are ambiguous, the item is said to be underconstrained.
 - **Frame misplacement** — This occurs when an element’s frame and its set of constraints define two different resulting rectangles.
-
 
 This section elaborates on the three issues listed above, and provides details on how to handle them.
 
@@ -169,10 +179,10 @@ To access a Constraint in code, you first have to expose it in the iOS Designer 
 1. Create the Constraint as normal (using any of the methods listed above).
 2. In the **Document Outline Explorer**, find the desired Constraint and select it:
 
-	[![](designer-auto-layout-images/modify01.png "The Document Outline Explorer")](designer-auto-layout-images/modify01.png#lightbox)
+    [![](designer-auto-layout-images/modify01.png "The Document Outline Explorer")](designer-auto-layout-images/modify01.png#lightbox)
 3. Next, assign a **Name** to the Constraint in the **Widget** tab of the **Properties Explorer**:
 
-	[![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
+    [![](designer-auto-layout-images/modify02.png "The Widget Tab")](designer-auto-layout-images/modify02.png#lightbox)
 4. Save your changes.
 
 With the above changes in place, you can access the Constraint in code and modify its properties. For example, you can use the following to set the height of the attached View to zero:

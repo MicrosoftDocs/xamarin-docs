@@ -3,8 +3,8 @@ title: "Azure Active Directory"
 description: "This document describes the steps that must be followed to allow a mobile app to authenticate with Azure Active Directory."
 ms.prod: xamarin
 ms.assetid: 70B3C2AB-CB4D-420C-9CFA-20CCFA0E3C78
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -33,7 +33,6 @@ Examples of different services you can access include:
 - Web API
 - Office365
 
-
 ## Conclusion
 
 Using the steps above you can authenticate your mobile apps against
@@ -41,8 +40,6 @@ Using the steps above you can authenticate your mobile apps against
   Authentication Library (ADAL) makes it much
   easier with fewer lines of code, while keeping most
   of the code the same and thus making it shareable across platforms.
-
-
 
 ## Related Links
 

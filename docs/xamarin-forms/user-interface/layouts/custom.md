@@ -13,7 +13,7 @@ ms.date: 03/29/2017
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 
-_Xamarin.Forms defines four layout classes – StackLayout, AbsoluteLayout, RelativeLayout, and Grid, and each arranges its children in a different way. However, sometimes it's necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive WrapLayout class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows._
+_Xamarin.Forms defines five layout classes – StackLayout, AbsoluteLayout, RelativeLayout, Grid, and FlexLayout, and each arranges its children in a different way. However, sometimes it's necessary to organize page content using a layout not provided by Xamarin.Forms. This article explains how to write a custom layout class, and demonstrates an orientation-sensitive WrapLayout class that arranges its children horizontally across the page, and then wraps the display of subsequent children to additional rows._
 
 In Xamarin.Forms, all layout classes derive from the [`Layout<T>`](xref:Xamarin.Forms.Layout`1) class and constrain the generic type to [`View`](xref:Xamarin.Forms.View) and its derived types. In turn, the `Layout<T>` class derives from the [`Layout`](xref:Xamarin.Forms.Layout) class, which provides the mechanism for positioning and sizing child elements.
 
@@ -69,8 +69,8 @@ The process for creating a custom layout is as follows:
 1. Override the [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) method to invoke the [`Measure`](xref:Xamarin.Forms.VisualElement.Measure(System.Double,System.Double,Xamarin.Forms.MeasureFlags)) method on all the layout's children, and return a requested size for the layout. For more information, see [Overriding the OnMeasure Method](#onmeasure).
 1. Override the [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) method to invoke the [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) method on all the layout's children. Failure to invoke the [`Layout`](xref:Xamarin.Forms.VisualElement.Layout(Xamarin.Forms.Rectangle)) method on each child in a layout will result in the child never receiving a correct size or position, and hence the child will not become visible on the page. For more information, see [Overriding the LayoutChildren Method](#layoutchildren).
 
-  > [!NOTE]
->  When enumerating children in the [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) and [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) overrides, skip any child whose [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) property is set to `false`. This will ensure that the custom layout won't leave space for invisible children.
+    > [!NOTE]
+    > When enumerating children in the [`OnMeasure`](xref:Xamarin.Forms.VisualElement.OnMeasure(System.Double,System.Double)) and [`LayoutChildren`](xref:Xamarin.Forms.Layout.LayoutChildren(System.Double,System.Double,System.Double,System.Double)) overrides, skip any child whose [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) property is set to `false`. This will ensure that the custom layout won't leave space for invisible children.
 
 1. [*optional*] Override the [`InvalidateLayout`](xref:Xamarin.Forms.Layout.InvalidateLayout) method to be notified when children are added to or removed from the layout. For more information, see [Overriding the InvalidateLayout Method](#invalidatelayout).
 1. [*optional*] Override the [`OnChildMeasureInvalidated`](xref:Xamarin.Forms.Layout.OnChildMeasureInvalidated) method to be notified when one of the layout's children changes size. For more information, see [Overriding the OnChildMeasureInvalidated Method](#onchildmeasureinvalidated).
@@ -422,7 +422,7 @@ The number of columns in each row depends on the photo size, the screen width, a
 
 - [WrapLayout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-customlayout-wraplayout)
 - [Custom Layouts](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter26.md)
-- [Creating Custom Layouts in Xamarin.Forms (video)](https://evolve.xamarin.com/session/56e20f83bad314273ca4d81c)
+- [Creating Custom Layouts in Xamarin.Forms (video)](https://www.youtube.com/watch?v=sxjOqNZFhKU)
 - [Layout\<T>](xref:Xamarin.Forms.Layout`1)
 - [Layout](xref:Xamarin.Forms.Layout)
 - [VisualElement](xref:Xamarin.Forms.VisualElement)

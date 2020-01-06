@@ -4,8 +4,8 @@ description: "This guide will discuss the differences between a system app and a
 ms.prod: xamarin
 ms.assetid: 0113143B-7D8D-4C4C-B2F5-B966A2E7CE1F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
 ---
 
@@ -94,14 +94,11 @@ system app.
 4. **Copy the APK file to /system/app** &ndash; The final step is
    to copy the APK file to the **/system/app** folder on the ROM.
 
-
 ## Summary
 
 This guide discussed the difference between a _system app_ and a _user
 app_, and explained how to install a Xamarin.Android application as a
 system app.
-
-
 
 ## Related Links
 

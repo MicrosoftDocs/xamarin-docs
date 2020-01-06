@@ -4,15 +4,14 @@ description: "Xamarin.Android ProGuard is a Java class file shrinker, optimizer,
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
 # ProGuard
 
 _Xamarin.Android ProGuard is a Java class file shrinker, optimizer, and pre-verifier. It detects and removes unused code, analyzes and optimizes bytecode. This guide explains how ProGuard works, how to enable it in your project, and how to configure it. It also provides several examples of ProGuard configurations._
-
 
 ## Overview
 
@@ -50,8 +49,6 @@ Each of these steps is *optional*. As will be explained in the next
 section, Xamarin.Android ProGuard uses only a subset of these 
 steps. 
 
-
-
 ## ProGuard in Xamarin.Android
 
 The Xamarin.Android ProGuard configuration does not obfuscate the 
@@ -72,8 +69,6 @@ two separate steps:
 
 Each of these steps is described next.
 
-
-
 ### Linker Step
 
 The Xamarin.Android linker employs static analysis of your application 
@@ -91,14 +86,10 @@ expect ProGuard to run on. (For more information about linking
 in Xamarin.Android, see 
 [Linking on Android](~/android/deploy-test/linker.md).)
 
-
-
 ### ProGuard Step
 
 After the linker step completes successfully, ProGuard is run to remove 
 unused Java bytecode. This is the step that optimizes the APK. 
-
-
 
 ## Using ProGuard
 
@@ -106,8 +97,6 @@ To use ProGuard in your app project, you must first enable ProGuard.
 Next, you can either let the Xamarin.Android build process use a default 
 ProGuard configuration file, or you can create your own custom 
 configuration file for ProGuard to use. 
-
-
 
 ### Enabling ProGuard
 
@@ -119,10 +108,9 @@ Use the following steps to enable ProGuard in your app project:
 
     [![Select Release configuration](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
-2. Enable ProGuard by checking the **Enable ProGuard** option under the 
-    **Packaging** tab of **Properties > Android Options**: 
+2. Choose **ProGuard** from the **Code shrinker** drop-down list on the **Properties > Android Options** window: 
 
-    [![Enable Proguard option selected](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)
+    [![Proguard code shrinker selected](proguard-images/03-enable-proguard-shrinker-sml.png)](proguard-images/03-enable-proguard-shrinker.png#lightbox)
 
 For most Xamarin.Android apps, the default ProGuard configuration file 
 supplied by Xamarin.Android will be sufficient to remove all (and only)
@@ -201,7 +189,6 @@ Activities, and Fragments. For more information about using
 the `[Register]` custom attribute, see 
 [Working with JNI](~/android/platform/java-integration/working-with-jni.md).
 
-
 ### ProGuard Options
 
 ProGuard offers a number of options that you can configure to provide 
@@ -210,7 +197,6 @@ finer control over its operation. The
 provides complete reference documentation for the use of ProGuard. 
 
 Xamarin.Android supports the following ProGuard options: 
-
 
 - [Input/Output Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#iooptions)
 
@@ -242,8 +228,6 @@ The following options are *ignored* by Xamarin.Android:
 
 - [Preverification Options](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/manual/usage.html#preverificationoptions)
 
-
-
 ## ProGuard and Android Nougat
 
 If you are trying to use ProGuard against Android 7.0 or later, you 
@@ -258,8 +242,6 @@ For more information about updating the default Android SDK `proguard.jar`, see 
 
 You can find all versions of ProGuard at the 
 [SourceForge page](https://sourceforge.net/projects/proguard/files/). 
-
-
 
 ## Example ProGuard Configurations
 
@@ -338,7 +320,6 @@ public static <fields>;
 The following sections explain how ProGuard runs during
 a Xamarin.Android **Release** build.
 
-
 ### What command is ProGuard running?
 
 ProGuard is simply a `.jar` provided with the Android SDK. Thus, it 
@@ -410,6 +391,8 @@ wrong encoding. ProGuard cannot handle _byte order mark_ (BOM) which
 may be present in text files. If a BOM is present, then ProGuard will 
 exit with the above error. 
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 To prevent this problem, edit the custom configuration file from a text 
@@ -427,13 +410,11 @@ text editor that allows you to omit the BOM.
 
 -----
 
-
 ### Other Issues
 
 The ProGuard 
 [Troubleshooting](https://stuff.mit.edu/afs/sipb/project/android/sdk/android-sdk-linux/tools/proguard/docs/index.html#manual/troubleshooting.html) 
 page discusses common issues you may encounter (and solutions) when using ProGuard.
-
 
 ## Summary
 
@@ -442,7 +423,6 @@ enable it in your app project, and how to configure it. It provided
 example ProGuard configurations, and it described solutions to common 
 problems. For more information about the ProGuard tool and Android, see 
 [Shrink Your Code and Resources](https://developer.android.com/tools/help/proguard.html). 
-
 
 ## Related Links
 

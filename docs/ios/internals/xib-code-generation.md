@@ -4,17 +4,17 @@ description: "This document describes how Xamarin.iOS generates code to map .xib
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
 # .xib Code Generation in Xamarin.iOS
 
 > [!IMPORTANT]
->  This document explains Visual Studio for Mac's integration with Xcode's Interface Builder only,
-as Actions and Outlets are not used in the Xamarin Designer for iOS. For more information on the iOS Designer,
-please review the [iOS Designer](~/ios/user-interface/designer/index.md) document.
+> This document explains Visual Studio for Mac's integration with Xcode's Interface Builder only,
+> as Actions and Outlets are not used in the Xamarin Designer for iOS. For more information on the iOS Designer,
+> please review the [iOS Designer](~/ios/user-interface/designer/index.md) document.
 
 The Apple Interface Builder tool ("IB") can be used to design user
 interfaces visually. The interface definitions created by IB are saved in **.xib** files. Widgets and other objects in **.xib** files may be given a "class identity",
@@ -118,7 +118,6 @@ the partial methods is twofold:
 offer to autocomplete the signatures of all non-implemented partial methods.
 2. The partial method signatures have an attribute applied that exposes them to the Objective-C world,
 so they can get handled as the corresponding action.
-
 
 If you wish, you may ignore the partial method, and implement the action by
 applying the attribute to a different method, or let it fall through to a base

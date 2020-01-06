@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: C0F923D2-300E-DB9D-F390-9FA71B22DFD6
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ---
 # Creating a Xamarin.iOS application using the Reflection API
 
@@ -32,7 +32,6 @@ Using the Reflection API is as simple as:
 1. Creating a class decorated with MT.D attributes.
 1. Creating a  `BindingContext` instance, passing it an instance of the above class. 
 1. Creating a  `DialogViewController` , passing it the  `BindingContext’s` `RootElement` . 
-
 
 Let’s look at an example to illustrate how to use the Reflection API. In
 this example, we’ll build a simple data entry screen as shown below:
@@ -165,14 +164,12 @@ rows corresponding to the enumeration, as shown below:
 
  <a name="Summary" />
 
-
 ## Summary
 
 This article presented a walkthrough of the Reflection API. We showed how to
 add attributes to a class to control what is displayed. We also discussed how to
 use a `BindingContext` to bind data from a class to the element
 hierarchy that is created, as well as how to use MT.D with a `UINavigationController`.
-
 
 ## Related links
 

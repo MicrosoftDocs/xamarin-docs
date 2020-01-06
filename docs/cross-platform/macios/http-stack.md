@@ -3,8 +3,8 @@ title: "HttpClient and SSL/TLS Implementation Selector for iOS/macOS"
 description: "The HttpClient stack and SSL/TLS implementation selector determines the HttpClient and SSL/TLS implementation that will be used by your Xamarin iOS, tvOS, or macOS app."
 ms.prod: xamarin
 ms.assetid: 12101297-BB04-4410-85F0-A0D41B7E6591
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 04/20/2018
 ---
 # HttpClient and SSL/TLS implementation selector for iOS/macOS
@@ -18,7 +18,7 @@ Projects must reference the **System.Net.Http** assembly.
 >
 > In order to ensure your apps continue to work with these servers and services, **you should update your Xamarin projects with the `NSUrlSession` setting shown below, then re-build and re-deploy your apps** to your users.
 
-### Selecting an HttpClient stack
+## Selecting an HttpClient stack
 
 To adjust the `HttpClient` being used by your app:
 

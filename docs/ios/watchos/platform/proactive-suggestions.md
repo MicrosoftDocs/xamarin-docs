@@ -4,8 +4,8 @@ description: "This article shows how to use Proactive Suggestions in a watchOS 3
 ms.prod: xamarin
 ms.assetid: 10CC9F16-963C-44F1-8B98-F09FB2310DFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -13,9 +13,7 @@ ms.date: 03/17/2017
 
 _This article shows how to use Proactive Suggestions in a watchOS 3 app to drive engagement by allowing the system to proactively present helpful information automatically to the user._
 
-
 New to watchOS 3, Proactive Suggestions present news ways for users to engage with a Xamarin.iOS app by proactively present helpful information automatically to the user at appropriate times.
-
 
 ## About Proactive Suggestions
 
@@ -295,7 +293,6 @@ This section will take a look at consuming Location Suggestions directly from wi
 
 When the app is started with a MapKit `MKDirectionsRequest` object, it should automatically start giving the user directions to the requested location, or present a UI that makes it easy for the user to start getting directions. For example:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -305,29 +302,29 @@ using CoreLocation;
 
 namespace MonkeyChat
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
-	{
-		...
-		
-		public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
-		{
-			if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
-				var request = new MKDirectionsRequest (url);
-				var coordinate = request.Destination?.Placemark.Location?.Coordinate;
-				var address = request.Destination.Placemark.AddressDictionary;
-				if (coordinate.IsValid()) {
-					var geocoder = new CLGeocoder ();
-					geocoder.GeocodeAddress (address, (place, err) => {
-						// Handle the display of the address
+    [Register ("AppDelegate")]
+    public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
+    {
+        ...
 
-					});
-				}
-			}
+        public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
+        {
+            if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
+                var request = new MKDirectionsRequest (url);
+                var coordinate = request.Destination?.Placemark.Location?.Coordinate;
+                var address = request.Destination.Placemark.AddressDictionary;
+                if (coordinate.IsValid()) {
+                    var geocoder = new CLGeocoder ();
+                    geocoder.GeocodeAddress (address, (place, err) => {
+                        // Handle the display of the address
 
-			return true;
-		}
-	}		
+                    });
+                }
+            }
+
+            return true;
+        }
+    }
 }
 ```
 
@@ -348,8 +345,8 @@ New in watchOS 3, the app can be sent an address that does not have geo-coordina
 ```csharp
 var geocoder = new CLGeocoder();
 geocoder.GeocodeAddress(address, (place, err)=> {
-	// Handle the display of the address
-	
+    // Handle the display of the address
+
 });
 
 ```
@@ -357,7 +354,6 @@ geocoder.GeocodeAddress(address, (place, err)=> {
 ## Summary
 
 This article has covered Proactive Suggestions and showed how the developer can use them to drive traffic to a Xamarin.iOS app for watchOS. It covered the step to implement Proactive Suggestions and presented usage guidelines.
-
 
 ## Related Links
 

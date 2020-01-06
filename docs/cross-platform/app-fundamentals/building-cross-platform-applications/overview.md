@@ -3,8 +3,8 @@ title: "Building Cross Platform Applications Overview"
 description: "This document provides a high-level overview of building cross-platform applications. It discusses the value of C#, design patterns such as MVC/MVVM, and native UIs."
 ms.prod: xamarin
 ms.assetid: E442EEFB-FA9C-40E9-9668-5A3F915C8400
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -63,11 +63,9 @@ components that provide common services across all these systems such as:
 1. [NuGet packages](https://nuget.org) that are compatible with Xamarin projects, such as [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/),
 1. Using .NET framework features for networking, web services, IO and more.
 
-
 Some of these components are implemented in the *Tasky* case study.
 
  <a name="Separate_Reusable_Code_into_a_Core_Library" />
-
 
 ## Separate Reusable Code into a Core Library
 
@@ -76,7 +74,6 @@ By following the principle of separation of responsibility by layering your appl
  ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
 
  <a name="Case_Studies" />
-
 
 ## Case Studies
 

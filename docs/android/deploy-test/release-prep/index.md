@@ -3,8 +3,8 @@ title: "Preparing an Application for Release"
 ms.prod: xamarin
 ms.assetid: 9C8145B3-FCF1-4649-8C6A-49672DDA4159
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2018
 ---
 
@@ -59,6 +59,8 @@ specify an application icon. Some application marketplaces will not
 allow an Android application to be published without one. The `Icon`
 property of the `Application` attribute is used to specify the
 application icon for a Xamarin.Android project.
+
+<!-- markdownlint-disable MD001 -->
 
 # [Visual Studio](#tab/windows)
 
@@ -147,7 +149,6 @@ the *ProGuard* tool from the Android SDK, which removes unused *Java
 bytecode*. The build process first uses the Xamarin.Android linker to
 optimize the app at the managed code (C#) level, and then it later uses
 ProGuard (if enabled) to optimize the APK at the Java bytecode level.
-
 
 ### Configure the Linker
 
@@ -392,7 +393,6 @@ default. To use the LLVM compiler, the **AOT Compilation** option must
 first be enabled (on the
 [Packaging Properties](#Set_Packaging_Properties) page).
 
-
 > [!NOTE]
 > The **LLVM Optimizing Compiler** option requires an Enterprise license.  
 
@@ -528,17 +528,17 @@ The **Solution List** displays all solutions having at least one
 archived project. The **Solution List** includes the following
 sections:
 
-* **Current Solution** &ndash; Displays the current solution. Note that this area may be empty if the current solution does not have an existing archive.
-* **All Archives** &ndash; Displays all solutions that have an archive.
-* **Search** text box (at the top) &ndash; Filters the solutions listed in the **All Archives** list according to the search string entered in the text box.
+- **Current Solution** &ndash; Displays the current solution. Note that this area may be empty if the current solution does not have an existing archive.
+- **All Archives** &ndash; Displays all solutions that have an archive.
+- **Search** text box (at the top) &ndash; Filters the solutions listed in the **All Archives** list according to the search string entered in the text box.
 
 The **Archives List** displays the list of all archives for the
 selected solution. The **Archives List** includes the following
 sections:
 
-* **Selected solution name** &ndash; Displays the name of the solution selected in the **Solution List**. All information shown in the **Archives List** refers to this selected solution.
-* **Platforms Filter** &ndash; This field makes it possible to filter archives by platform type (such as iOS or Android).
-* **Archive Items** &ndash; List of archives for the selected solution. Each item in this list includes the project name, creation date, and platform. It can also show additional information such as the progress when an item is being archived or published.
+- **Selected solution name** &ndash; Displays the name of the solution selected in the **Solution List**. All information shown in the **Archives List** refers to this selected solution.
+- **Platforms Filter** &ndash; This field makes it possible to filter archives by platform type (such as iOS or Android).
+- **Archive Items** &ndash; List of archives for the selected solution. Each item in this list includes the project name, creation date, and platform. It can also show additional information such as the progress when an item is being archived or published.
 
 The **Details Panel** displays additional information about each
 archive. It also allows the user to start the Distribution workflow or
@@ -562,9 +562,9 @@ distribution channels. On the first run, two choices are presented:
 
 It is possible to choose one of the following distribution channels:
 
-* **Ad-Hoc** &ndash; Saves a signed APK to disk that can be sideloaded to Android devices. Continue to [Signing the App Package](~/android/deploy-test/signing/index.md) to learn how to create an Android signing identity, create a new signing certificate for Android applications, and publish an _ad hoc_ version of the app to disk. This is a good way to create an APK for testing.
+- **Ad-Hoc** &ndash; Saves a signed APK to disk that can be sideloaded to Android devices. Continue to [Signing the App Package](~/android/deploy-test/signing/index.md) to learn how to create an Android signing identity, create a new signing certificate for Android applications, and publish an _ad hoc_ version of the app to disk. This is a good way to create an APK for testing.
 
-* **Google Play** &ndash; Publishes a signed APK to Google Play. Continue to [Publishing to Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) to learn how to sign and publish an APK in the Google Play store.
+- **Google Play** &ndash; Publishes a signed APK to Google Play. Continue to [Publishing to Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md) to learn how to sign and publish an APK in the Google Play store.
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -598,7 +598,6 @@ From here, it is possible to select the distribution channel:
     signing certificate for Android applications, and publish an
     &ldquo;ad hoc&rdquo; version of the app to disk. This is a good way
     to create an APK for testing.
-
 
 - **Google Play** &ndash; Publishes a signed APK to Google Play.
     Continue to

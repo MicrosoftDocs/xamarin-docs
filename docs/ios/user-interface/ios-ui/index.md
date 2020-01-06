@@ -4,8 +4,8 @@ description: "This document links to guides that describe how to build user inte
 ms.prod: xamarin
 ms.assetid: 1BB46561-F503-491E-A27C-7878E7EBE00B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
 ---
 
@@ -31,7 +31,3 @@ This article covers the new types of haptic feedback available in iOS 10 and how
 ## [Working with the UI Thread](~/ios/user-interface/ios-ui/ui-thread.md)
 
 Your code should only make changes to user interface controls from the main (or UI) thread. Any UI updates that occur on a different thread (such as a callback or background thread) may not get rendered to the screen, or could even cause a crash.
-
-
-
-

@@ -4,8 +4,8 @@ description: "PCL case study: How can I resolve problems related to System.Diagn
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.date: 04/17/2018
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ---
 # PCL case study: How can I resolve problems related to System.Diagnostics.Tracing for the Microsoft TPL Dataflow NuGet package?
 
@@ -86,7 +86,6 @@ Mac (Mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/xbuild
 Windows: `C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.5\Facades\System.Diagnostics.Tracing.dll`
 
 Mac (Mono): `/Library/Frameworks/Mono.framework/Versions/Current/lib/mono/4.5/Facades/System.Diagnostics.Tracing.dll`
-
 
 ### Will it help if I manually add a reference to the "System.Diagnostics.Tracing" facade assembly?
 

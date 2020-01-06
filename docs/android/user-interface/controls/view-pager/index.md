@@ -4,8 +4,8 @@ description: "ViewPager is a layout manager that lets you implement gestural nav
 ms.prod: xamarin
 ms.assetid: D42896C0-DE7C-4818-B171-CB2D5E5DD46A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement gestural navigation with ViewPager, with and without Fragments. It also describes how to add page indicators using PagerTitleStrip and PagerTabStrip._
 
- 
 ## Overview
 
 A common scenario in app development is the need to provide users with 
@@ -54,11 +53,10 @@ This guide demonstrates both approaches:
     that help with page navigation.
 
 - In [Viewpager with Fragments](~/android/user-interface/controls/view-pager/viewpager-and-fragments.md), a
-    slightly more complex [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-treepager) 
+    slightly more complex [FlashCardPager](https://docs.microsoft.com/samples/xamarin/monodroid-samples/userinterface-flashcardpager) 
     app is developed to demonstrate how to use `ViewPager` 
     with `Fragment`s to build an app that presents math 
     problems as flash cards and responds to user input. 
-
 
 ## Requirements
 
@@ -67,7 +65,6 @@ To use `ViewPager` in your app project, you must install the
 package. For more information about installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough). 
 
- 
 ## Architecture
 
 Three components are used for implementing gestural navigation
@@ -79,8 +76,6 @@ with `ViewPager`:
 
 Each of these components is summarized below.
 
-
-
 ### ViewPager
 
 `ViewPager` is a layout manager that displays a collection of `View`s one 
@@ -90,7 +85,6 @@ screenshot below demonstrates a `ViewPager` making the transition from
 one image to the next in response to a user gesture: 
 
 [![Closeup of TreePager app displaying a transition between Views](images/02-transition-sml.png)](images/02-transition.png#lightbox)
-
 
 ### Adapter
 
@@ -105,8 +99,6 @@ to provide the appropriate `View` to display:
 
 In this particular example, each `View` is constructed from a tree 
 image and a tree name before it is passed to the `ViewPager`. 
-
-
 
 ### Pager Indicator
 
@@ -130,8 +122,6 @@ while `PagerTitleStrip` does not (as shown in these screenshots):
 This guide demonstrates how to immplement `ViewPager`, adapter, and 
 indicator app components and integrate them to support gestural 
 navigation. 
-
-
 
 ## Related Links
 

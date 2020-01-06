@@ -6,16 +6,16 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
+ms.date: 11/04/2019
 ---
 
 # Xamarin.Forms WebView
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
-[`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
+[`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app:
 
-![](webview-images/in-app-browser.png "In App Browser")
+![In App Browser](webview-images/in-app-browser.png)
 
 ## Content
 
@@ -100,7 +100,7 @@ htmlSource.Html = @"<html><body>
 browser.Source = htmlSource;
 ```
 
-![](webview-images/html-string.png "WebView Displaying HTML String")
+![WebView Displaying HTML String](webview-images/html-string.png)
 
 In the above code, `@` is used to mark the HTML as a string literal, meaning all the usual escape characters are ignored.
 
@@ -142,7 +142,7 @@ To display local content using a `WebView`, you'll need to open the HTML file li
 
 The following screenshots show the result of displaying local content on each platform:
 
-![](webview-images/local-content.png "WebView Displaying Local Content")
+![WebView Displaying Local Content](webview-images/local-content.png)
 
 Although the first page has been loaded, the `WebView` has no knowledge of where the HTML came from. That is a problem when dealing with pages that reference local resources. Examples of when that might happen include when local pages link to each other, a page makes use of a separate JavaScript file, or a page links to a CSS stylesheet.  
 
@@ -171,11 +171,11 @@ On iOS, the web content should be located in the project's root directory or **R
 
 # [Visual Studio](#tab/windows)
 
-![](webview-images/ios-vs.png "Local Files on iOS")
+![Local Files on iOS](webview-images/ios-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![](webview-images/ios-xs.png "Local Files on iOS")
+![Local Files on iOS](webview-images/ios-xs.png)
 
 -----
 
@@ -201,11 +201,11 @@ On Android, place HTML, CSS, and images in the Assets folder with build action *
 
 # [Visual Studio](#tab/windows)
 
-![](webview-images/android-vs.png "Local Files on Android")
+![Local Files on Android](webview-images/android-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
-![](webview-images/android-xs.png "Local Files on Android")
+![Local Files on Android](webview-images/android-xs.png)
 
 -----
 
@@ -277,14 +277,14 @@ Start by creating the page for the browser view:
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WebViewSample.InAppBrowserXaml"
              Title="Browser">
-	<StackLayout Margin="20">
-		<StackLayout Orientation="Horizontal">
-			<Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="OnBackButtonClicked" />
-			<Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="OnForwardButtonClicked" />
-		</StackLayout>
-		<!-- WebView needs to be given height and width request within layouts to render. -->
-		<WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" />
-	</StackLayout>
+    <StackLayout Margin="20">
+        <StackLayout Orientation="Horizontal">
+            <Button Text="Back" HorizontalOptions="StartAndExpand" Clicked="OnBackButtonClicked" />
+            <Button Text="Forward" HorizontalOptions="EndAndExpand" Clicked="OnForwardButtonClicked" />
+        </StackLayout>
+        <!-- WebView needs to be given height and width request within layouts to render. -->
+        <WebView x:Name="webView" WidthRequest="1000" HeightRequest="1000" />
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -323,7 +323,7 @@ public partial class InAppBrowserXaml : ContentPage
 
 That's it!
 
-![](webview-images/in-app-browser.png "WebView Navigation Buttons")
+![WebView Navigation Buttons](webview-images/in-app-browser.png)
 
 ## Events
 
@@ -354,11 +354,11 @@ If you anticipate using webpages that take a long time to load, consider using t
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="WebViewSample.LoadingLabelXaml"
              Title="Loading Demo">
-	<StackLayout>
-		<!--Loading label should not render by default.-->
-		<Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
-		<WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
-	</StackLayout>
+    <StackLayout>
+        <!--Loading label should not render by default.-->
+        <Label x:Name="labelLoading" Text="Loading..." IsVisible="false" />
+        <WebView HeightRequest="1000" WidthRequest="1000" Source="http://www.xamarin.com" Navigated="webviewNavigated" Navigating="webviewNavigating" />
+    </StackLayout>
 </ContentPage>
 ```
 
@@ -378,11 +378,11 @@ void webviewNavigated(object sender, WebNavigatedEventArgs e)
 
 This results in the following output (loading):
 
-![](webview-images/loading-start.png "WebView Navigating Event Example")
+![WebView Navigating Event Example](webview-images/loading-start.png)
 
 Finished Loading:
 
-![](webview-images/loading-end.png "WebView Navigated Event Example")
+![WebView Navigating Event Example](webview-images/loading-end.png)
 
 ## Reloading content
 
@@ -398,15 +398,17 @@ When the `Reload` method is invoked the `ReloadRequested` event is fired, indica
 
 ## Performance
 
-The popular web browsers now adopt technologies like hardware accelerated rendering and JavaScript compilation. On iOS, by default, the Xamarin.Forms `WebView` is implemented by the `UIWebView` class, and many of these technologies are unavailable in this implementation. However, an application can opt-in to using the iOS `WkWebView` class to implement the Xamarin.Forms `WebView`, which supports faster browsing. This can be achieved by adding the following code to the **AssemblyInfo.cs** file in the iOS platform project for the application:
-
-```csharp
-// Opt-in to using WkWebView instead of UIWebView.
-[assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
-```
+Popular web browsers adopt technologies like hardware accelerated rendering and JavaScript compilation. Prior to Xamarin.Forms 4.4, the Xamarin.Forms `WebView` was implemented on iOS by the `UIWebView` class. However, many of these technologies were unavailable in this implementation. Therefore, since Xamarin.Forms 4.4, the Xamarin.Forms `WebView` is implemented on iOS by the `WkWebView` class, which supports faster browsing.
 
 > [!NOTE]
 > On iOS, the `WkWebViewRenderer` has a constructor overload that accepts a `WkWebViewConfiguration` argument. This enables the renderer to be configured on creation.
+
+An application can return to using the iOS `UIWebView` class to implement the Xamarin.Forms `WebView`, for compatibility reasons. This can be achieved by adding the following code to the **AssemblyInfo.cs** file in the iOS platform project for the application:
+
+```csharp
+// Opt-in to using UIWebView instead of WkWebView.
+[assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
+```
 
 `WebView` on Android by default is about as fast as the built-in browser.
 

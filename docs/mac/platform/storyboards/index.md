@@ -4,8 +4,8 @@ description: "This article provides an introduction to working with Storyboards 
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -106,7 +106,6 @@ The SourceWriter code has been fully commented and, where available, links have 
 ## Summary
 
 This article has taken a quick look at working with Storyboards in a Xamarin.Mac app. We saw how to create a new app using storyboards and how to define a user interface. We also saw how to navigate between different windows and view states using segues.
-
 
 ## Related Links
 

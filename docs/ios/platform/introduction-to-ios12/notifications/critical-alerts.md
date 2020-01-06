@@ -4,8 +4,8 @@ description: "This document describes how to use critical alerts with Xamarin.iO
 ms.prod: xamarin
 ms.assetid: 75742257-081D-44F4-B49E-FB807DF85262
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
 ---
 # Critical alerts in Xamarin.iOS

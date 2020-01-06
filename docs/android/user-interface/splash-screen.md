@@ -4,15 +4,16 @@ description: "An Android app takes some time to start up, especially when the ap
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
-ms.date: 09/06/2018
+author: davidortinau
+ms.author: daortin
+ms.date: 10/02/2019
 ---
 
 # Splash Screen
 
-_An Android app takes some time to start up, especially when the app is first launched on a device. A splash screen may display start up progress to the user or to indicate branding._
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen)
 
+_An Android app takes some time to start up, especially when the app is first launched on a device. A splash screen may display start up progress to the user or to indicate branding._
 
 ## Overview
 
@@ -34,11 +35,10 @@ an Android application. It covers the following steps:
 
 [![Example Xamarin logo splash screen followed by app screen](splash-screen-images/splashscreen-01-sml.png)](splash-screen-images/splashscreen-01.png#lightbox)
 
-
 ## Requirements
 
 This guide assumes that the application targets Android API level
-15 (Android 4.0.3) or higher. The application must also have the
+21 or higher. The application must also have the
 **Xamarin.Android.Support.v4** and
 **Xamarin.Android.Support.v7.AppCompat** NuGet packages added to the
 project.
@@ -46,7 +46,6 @@ project.
 All of the code and XML in this guide may be found in the
 [SplashScreen](https://docs.microsoft.com/samples/xamarin/monodroid-samples/splashscreen) sample project for this
 guide.
-
 
 ## Implementing A Splash Screen
 
@@ -61,17 +60,15 @@ branded drawable, performs any initializations, and starts up any
 tasks. Once the app has bootstrapped, the splash screen Activity starts
 the main Activity and removes itself from the application back stack.
 
-
 ### Creating a Drawable for the Splash Screen
 
 The splash screen will display an XML drawable in the background of the
 splash screen Activity. It is necessary to use a bitmapped image (such
 as a PNG or JPG) for the image to display.
 
-In this guide, we use a
+The sample application defines a drawable called **splash_screen.xml**. This drawable uses a
 [Layer List](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
-to center the splash screen image in the application. The following
-snippet is an example of a `drawable` resource using a `layer-list`:
+to center the splash screen image in the application as shown in the following xml:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -81,18 +78,24 @@ snippet is an example of a `drawable` resource using a `layer-list`:
   </item>
   <item>
     <bitmap
-        android:src="@drawable/splash"
+        android:src="@drawable/splash_logo"
         android:tileMode="disabled"
         android:gravity="center"/>
   </item>
 </layer-list>
 ```
 
-This `layer-list` will center the splash image **splash.png** on the background specified by the `@color/splash_background` resource. Place this XML file in the **Resources/drawable** folder (for example, **Resources/drawable/splash_screen.xml**).
+This `layer-list` centers the splash image on a background color specified by the `@color/splash_background` resource. The sample application defines this color in the **Resources/values/colors.xml** file:
 
-After the splash screen drawable has been created, the next step is to
-create a theme for the splash screen.
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+  ...
+  <color name="splash_background">#FFFFFF</color>
+</resources>
+```
 
+For more information about `Drawable` objects see the [Google documentation on Android Drawable](https://developer.android.com/reference/android/graphics/drawable/Drawable).
 
 ### Implementing a Theme
 
@@ -111,8 +114,10 @@ with a `style` named **MyTheme.Splash**:
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">
     <item name="android:windowBackground">@drawable/splash_screen</item>
-    <item name="android:windowNoTitle">true</item>
-    <item name="android:windowFullscreen">true</item>
+    <item name="android:windowNoTitle">true</item>  
+    <item name="android:windowFullscreen">true</item>  
+    <item name="android:windowContentOverlay">@null</item>  
+    <item name="android:windowActionBar">true</item>  
   </style>
 </resources>
 ```
@@ -125,7 +130,6 @@ layout, you can use `windowContentOverlay` rather than
 `windowBackground` in your style definition. In this case, you must
 also modify the **splash_screen.xml** drawable so that it displays an
 emulation of your UI.
-
 
 ### Create a Splash Activity
 
@@ -283,7 +287,6 @@ To add a splash screen for landscape mode, use the following steps:
 
     [![Rotation of splash screen to landscape mode](splash-screen-images/landscape-splash-sml.png)](splash-screen-images/landscape-splash.png#lightbox)
 
-
 Note that the use of a landscape-mode splash screen does not always
 provide a seamless experience. By default, Android launches the app in
 portrait mode and transitions it to landscape mode even if the device
@@ -297,13 +300,11 @@ specified in the splash Activity's flags. The best way to work around
 this limitation is to create a single splash screen image that renders
 correctly in both portrait and landscape modes.
 
-
 ## Summary
 
 This guide discussed one way to implement a splash screen in a
 Xamarin.Android application; namely, applying a custom theme to the
 launch activity.
-
 
 ## Related Links
 

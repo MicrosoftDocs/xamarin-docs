@@ -4,8 +4,8 @@ description: "This document describes how to work with buttons in a tvOS app bui
 ms.prod: xamarin
 ms.assetid: DA6EF400-A4E3-4245-A0D4-F2398CAE2C9B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/07/2017
 ---
 
@@ -58,44 +58,39 @@ The easiest way to work with buttons in a Xamarin.tvOS app is to add them to the
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Button** from the **Library** and drop it on the View: 
 
-	[![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
+    [![](buttons-images/storyboard01.png "A button")](buttons-images/storyboard01.png#lightbox)
 1. In the **Properties Explorer**, you can adjust several properties of the button such as its **Title** and **Text Color**: 
 
-	[![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
+    [![](buttons-images/storyboard02.png "Button properties")](buttons-images/storyboard02.png#lightbox)
 1. Next, switch to the **Events Tab** and wire-up an **Event** from the **Button** and call it `ButtonPressed`: 
 
-	[![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
+    [![](buttons-images/storyboard03.png "The Events Tab")](buttons-images/storyboard03.png#lightbox)
 1. You will be automatically switched to the `ViewController.cs` view where you can place the new Action in your code using the **Up** and **Down** arrow keys: 
 
-	[![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
+    [![](buttons-images/storyboard04.png "Placing a new Action in code")](buttons-images/storyboard04.png#lightbox)
 1. Press the **Enter** to select the location: 
 
-	[![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
+    [![](buttons-images/storyboard05.png "The code editor")](buttons-images/storyboard05.png#lightbox)
 1. Save the changes to all files.
-
 
 # [Visual Studio](#tab/windows)
 
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file and open it for editing.
 1. Drag a **Button** from the **Library** and drop it on the View: 
 
-	[![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
+    [![](buttons-images/storyboard01vs.png "A button")](buttons-images/storyboard01vs.png#lightbox)
 1. In the **Properties Explorer**, you can adjust several properties of the button such as its **Title** and **Text Color**: 
 
-	[![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
+    [![](buttons-images/storyboard02vs.png "The Properties Explorer")](buttons-images/storyboard02vs.png#lightbox)
 1. Next, switch to the **Events Tab** and wire-up an **Event** from the **Button** and call it `ButtonPressed`: 
 
-	[![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
+    [![](buttons-images/storyboard03vs.png "The Events Tab")](buttons-images/storyboard03vs.png#lightbox)
 1. Save the changes to all files.
 
-
-
 Edit your View Controller (example `ViewController.cs`) file and add the following code to handle the button being selected:
-
 
 ```
 
@@ -124,9 +119,6 @@ As long as a button's `Enabled` property is `true` and it is not covered by anot
 > [!IMPORTANT]
 > While it is possible to assign actions such as `TouchUpInside` to a `UIButton` in the iOS Designer when creating an **Event Handler**, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use the default **Action Type** when creating **Actions** for tvOS user interface elements.
 
-
-
-
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
 <a name="Buttons-and-Code" />
@@ -140,8 +132,8 @@ var button = new UIButton(UIButtonType.System);
 button.Frame = new CGRect (25, 25, 300, 150);
 button.SetTitle ("Hello", UIControlState.Normal);
 button.AllEvents += (sender, e) => {
-	// Do something when the button is clicked
-	...
+    // Do something when the button is clicked
+    ...
 };
 View.AddSubview (button);
 ```
@@ -171,8 +163,8 @@ Next, use the `AllEvents` event to see when the user has clicked the button. Exa
 
 ```csharp
 button.AllEvents += (sender, e) => {
-	// Do something when the button is clicked
-	...
+    // Do something when the button is clicked
+    ...
 };
 ```
 
@@ -184,9 +176,6 @@ View.AddSubview (button);
 
 > [!IMPORTANT]
 > While it is possible to assign actions such as `TouchUpInside` to a `UIButton`, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use events such as **AllEvents** or **PrimaryActionTriggered**.
-
-
-
 
 <a name="Styling-a-Button" />
 
@@ -257,8 +246,6 @@ Use the `TintColor` property to set a color tint that is applied to both the tit
 ## Summary
 
 This article has covered designing and working with buttons inside of a Xamarin.tvOS app. It showed how to work with buttons in the iOS Designer and how to create buttons in C# code. Finally, it showed how to modify a button's title and change its style and appearance.
-
-
 
 ## Related Links
 

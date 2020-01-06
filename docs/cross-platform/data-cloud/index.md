@@ -3,8 +3,8 @@ title: "Microsoft Azure and Xamarin"
 description: "This document links to documentation about Connected Services in Visual Studio for Mac, Azure Mobile Apps, Active Directory Authentication, and WebAPI."
 ms.prod: xamarin
 ms.assetid: 7b9aa8d9-c181-4c33-8ab0-2f56e4dbfc04
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 10/09/2017
 ---
 
@@ -47,7 +47,6 @@ Microsoft's Web API exposes a REST-like interface
   and build a WebAPI-based app to connect to Xamarin
   apps.
 
-
 ### [Introduction To Web Services](~/cross-platform/data-cloud/web-services/index.md)
 
 This tutorial introduces how to integrate REST, WCF and SOAP web service
@@ -70,7 +69,6 @@ incorporated into Xamarin apps:
 
 - [eShop](https://github.com/dotnet-architecture/eShopOnContainers) – sample for the [Architecture series](https://www.microsoft.com/net/learn/architecture) of ebooks.
 - [MyDriving](https://azure.microsoft.com/campaigns/mydriving/) – Azure + IoT sample from Build 2016.
-
 
 ## Related Links
 

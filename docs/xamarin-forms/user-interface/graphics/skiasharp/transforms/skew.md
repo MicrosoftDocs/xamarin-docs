@@ -69,7 +69,7 @@ Values of the `xSkew` argument shift the bottom of the text right for positive v
 
 [![](skew-images/skewexperiment-small.png "Triple screenshot of the Skew Experiment page")](skew-images/skewexperiment-large.png#lightbox "Triple screenshot of the Skew Experiment page")
 
-If the `xSkew` value is the negative of the `ySkew` value, the result is rotation, but also scaled somewhat as the UWP display indicates.
+If the `xSkew` value is the negative of the `ySkew` value, the result is rotation, but also scaled somewhat.
 
 The transform formulas are as follows:
 
@@ -244,7 +244,6 @@ canvas.Translate(-xText, -yText - textBounds.Bottom);
 Now the shadow extends from the bottom of those descenders:
 
 [![](skew-images/skewshadowtext3-small.png "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")](skew-images/skewshadowtext3-large.png#lightbox "Triple screenshot of the Skew Shadow Text page with adjustments for descenders")
-
 
 ## Related Links
 

@@ -3,8 +3,8 @@ title: "Xamarin Live Player App"
 description: "This document describes the Xamarin Live Player app, which can be used to preview code changes live on device. It discusses setup, samples, logs, settings, managing devices, and more."
 ms.prod: xamarin
 ms.assetid: A7EB73C1-38D7-46C5-9AF6-4C571C168BE7
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
 ---
 
@@ -94,4 +94,3 @@ If you experience any issues see [limitations and troubleshooting](~/tools/live-
 ## Related Links
 
 - [Troubleshooting](~/tools/live-player/troubleshooting.md)
-

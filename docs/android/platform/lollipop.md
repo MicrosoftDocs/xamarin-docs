@@ -4,8 +4,8 @@ description: "This article provides a high level overview of the new features in
 ms.prod: xamarin
 ms.assetid: 1CE99CFE-FAAC-49FC-AEDC-1A21FC6E946E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -63,7 +63,6 @@ covered in this article:
     example, scheduling tasks to take place when the device is plugged in
     and charging.
 
-
 ## Requirements
 
 The following is required to use the new Android 5.0 features in
@@ -84,7 +83,6 @@ Xamarin-based apps:
 You can continue to use
 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html)
 if you are developing specifically for API level 23 or earlier.
-
 
 ## Setting Up an Android 5.0 Project
 
@@ -173,7 +171,6 @@ that exploit techniques unique to the previous Dalvik runtime, which may not
 work under ART. For more information about these changes, 
 see [Verifying App Behavior on the Android Runtime (ART)](https://developer.android.com/guide/practices/verifying-apps-art.html).
 
-
 ### Notification Changes
 
 Notifications have changed significantly in Android 5.0:
@@ -244,7 +241,6 @@ app: the `Theme.Material` dark theme (the default), the
 For more about using Material Theme features in Xamarin.Android apps, see 
 [Material Theme](~/android/user-interface/material-theme.md).
 
-
 ## Animations
 
 Android 5.0 provides touch feedback animations, activity transition
@@ -252,7 +248,6 @@ animations, and view state transition animations to make app interfaces
 more intuitive to use. Also, Android 5.0 apps can use *reveal effect*
 animations to hide or reveal views. You can use *curved motion* settings
 to configure how quickly or slowly animations are rendered.
-
 
 ### Touch Feedback Animations
 
@@ -277,7 +272,6 @@ time.
 
 For more on touch feedback animations in Android 5.0, 
 see [Customize Touch Feedback](https://developer.android.com/training/material/animations.html#Touch).
-
 
 ### Activity Transition Animations
 
@@ -335,7 +329,6 @@ Shared element transitions support multiple types of animations, such as:
 For more about activity transition animations in Android 5.0, see 
 [Customize Activity Transitions](https://developer.android.com/training/material/animations.html#Transitions).
 
-
 ### View State Transition Animations
 
 Android 5.0 makes it possible for animations to run when the state of a
@@ -352,7 +345,6 @@ following techniques:
 
 For more about view state transition animations in 
 Android 5.0, see [Animate View State Changes](https://developer.android.com/training/material/animations.html#ViewState).
-
 
 ### Reveal Effect
 
@@ -374,7 +366,6 @@ shrink to hide the view rather than enlarge to reveal the view.
 
 For more information on the Android 5.0 reveal effect in, 
 see [Use the Reveal Effect](https://developer.android.com/training/material/animations.html#Reveal).
-
 
 ### Curved Motion
 
@@ -398,7 +389,6 @@ takes place. `PathInterpolator` is an interpolator that traverses animation path
 according to specified control points and motion curves. For more information about 
 how to specify curved motion settings in Android 5.0, 
 see [Use Curved Motion](https://developer.android.com/training/material/animations.html#CurvedMotion).
-
 
 ## View Shadows & Elevation
 
@@ -424,7 +414,6 @@ can set through a `ViewPropertyAnimator` method call.
 For more about view shadows in Android 5.0, 
 see [Defining Shadows and Clipping Views](https://developer.android.com/training/material/shadows-clipping.html).
 
-
 ## Color Features
 
 Android 5.0 provides two new features for managing color in apps:
@@ -435,7 +424,6 @@ Android 5.0 provides two new features for managing color in apps:
 - *Prominent color extraction* makes it possible for you to dynamically
     customize your app's color theme to coordinate with the color palette of
     a displayed image.
-
 
 ### Drawable Tinting
 
@@ -461,7 +449,6 @@ set to a light gray:
 
 For more about drawable tinting in Android 5.0, 
 see [Drawable Tinting](https://developer.android.com/training/material/drawables.html#DrawableTint).
-
 
 ### Prominent Color Extraction
 
@@ -498,7 +485,6 @@ extracted from the image.
 For more about color extraction in Android 5.0, 
 see [Extracting Prominent Colors from an Image](https://developer.android.com/training/material/drawables.html#ColorExtract).
 
-
 ## New UI Widgets
 
 Android 5.0 introduces two new UI widgets:
@@ -518,7 +504,6 @@ screenshots:
 The screenshot on the left is an example of `RecyclerView` as used in an
 email app, and the screenshot on the right is an example of `CardView`
 as used in a travel reservation app.
-
 
 ### RecyclerView
 
@@ -553,7 +538,6 @@ in this sequence of screenshots:
 For more about `RecyclerView`, 
 see [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md).
 
-
 ### CardView
 
 `CardView` is a simple view that simulates a floating card with rounded
@@ -568,7 +552,6 @@ background color is set via the `cardBackgroundColor` attribute.
 
 For more about `CardView`, 
 see [CardView](~/android/user-interface/controls/card-view.md).
-
 
 ## Enhanced Notifications
 
@@ -629,7 +612,6 @@ presented when the device is in *Do not disturb* mode.
 For detailed information about creating and launching notifications
 with the latest Android 5.0 features, see
 [Local Notifications](~/android/app-fundamentals/notifications/local-notifications.md).
-
 
 ## New APIs
 
@@ -780,8 +762,6 @@ If you are new to Xamarin Android development, read
 to help you get started with Xamarin.Android.
 [Hello, Android](~/android/get-started/hello-android/index.md) is an
 excellent introduction for learning how to create Android projects.
-
-
 
 ## Related Links
 

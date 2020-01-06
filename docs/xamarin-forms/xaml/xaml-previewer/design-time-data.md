@@ -83,11 +83,50 @@ ListViews are a popular way to display data in a mobile app. However, they're di
 
 This example will show a ListView of three TextCells in the XAML Previewer. You can change `x:String` to an existing data model in your project.
 
-Refer to [James Montemagno's Hanselman.Forms app](https://github.com/jamesmontemagno/Hanselman.Forms/blob/vnext/src/Hanselman/Views/Podcasts/PodcastDetailsPage.xaml#L26-L47) for a more complex example.
+You can also create an array of data objects. For example, public properties of a `Monkey` data object can be constructed as design time data:
+
+```csharp
+namespace Monkeys.Models
+{
+    public class Monkey
+    {
+        public string Name { get; set; }
+        public string Location { get; set; }
+    }
+}
+```
+
+To use the class in XAML you will need to import the namespace in the root node:
+
+```xaml
+xmlns:models="clr-namespace:Monkeys.Models"
+```
+
+```xaml
+<StackLayout>
+    <ListView ItemsSource="{Binding Items}">
+        <d:ListView.ItemsSource>
+            <x:Array Type="{x:Type models:Monkey}">
+                <models:Monkey Name="Baboon" Location="Africa and Asia"/>
+                <models:Monkey Name="Capuchin Monkey" Location="Central and South America"/>
+                <models:Monkey Name="Blue Monkey" Location="Central and East Africa"/>
+            </x:Array>
+        </d:ListView.ItemsSource>
+        <ListView.ItemTemplate>
+            <DataTemplate x:DataType="models:Monkey">
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Location}" />
+            </DataTemplate>
+        </ListView.ItemTemplate>
+    </ListView>
+</StackLayout>
+```
+
+The benefit here is that you can bind to the actual model that you plan to use.
 
 ## Alternative: Hardcode a static ViewModel
 
-If you don't want to add design time data to individual controls, you can set up a mock data store to bind to your page. Refer to James Montemagno's [blog post on adding design-time data](http://motzcod.es/post/143702671962/xamarinforms-xaml-previewer-design-time-data) to see how to bind to a static ViewModel in XAML.
+If you don't want to add design time data to individual controls, you can set up a mock data store to bind to your page. Refer to James Montemagno's [blog post on adding design-time data](https://montemagno.com/xamarin-forms-design-time-data-tips-best-practices/) to see how to bind to a static ViewModel in XAML.
 
 ## Troubleshooting
 

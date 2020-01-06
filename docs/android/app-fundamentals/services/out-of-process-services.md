@@ -4,8 +4,8 @@ description: "Generally, all components in an Android application will run in th
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -28,9 +28,9 @@ In general, it is not necessary for an application to implement a remote service
 
 In many ways, binding to a service running in another process is the same as [binding to a local service](~/android/app-fundamentals/services/creating-a-service/bound-services.md). The client will invoke `BindService` to bind (and start, if necessary) the service. An `Android.OS.IServiceConnection` object will be created to manage the connection between the client and the service. If the client successfully binds to the service, then Android will return an object via the `IServiceConnection` that can be used to invoke methods on the service. The client then interacts with the service using this object. To review, here are the steps to bind to a service:
 
-* **Create an Intent** &ndash; An explicit intent must be used to binding to the service.
-* **Implement and Instantiate an `IServiceConnection` object** &ndash; The `IServiceConnection` object acts as an intermediary between the client and the service.  It is responsible for monitoring the connection between client and server.
-* **Invoke the `BindService` method** &ndash; Calling `BindService` will dispatch the intent and the service connection created in the previous steps to Android, which will take care of starting the service and establishing communication between client and service.
+- **Create an Intent** &ndash; An explicit intent must be used to binding to the service.
+- **Implement and Instantiate an `IServiceConnection` object** &ndash; The `IServiceConnection` object acts as an intermediary between the client and the service.  It is responsible for monitoring the connection between client and server.
+- **Invoke the `BindService` method** &ndash; Calling `BindService` will dispatch the intent and the service connection created in the previous steps to Android, which will take care of starting the service and establishing communication between client and service.
 
 The need to cross process boundaries does introduce extra complexity: the communication is one-way (client to server) and the client can't directly invoke methods on the service class. Recall that when a service is running the same process as the client, Android provides an `IBinder` object which may allow for  two-way communication. This is not the case with service running in its own process. A client communicates with a remote service with the help of the `Android.OS.Messenger` class.
 
@@ -63,9 +63,9 @@ Although it is possible to use implicit intents with apps that target older Andr
 
 As described above, the fact that a service is running in its own process means that some different APIs are involved. As a quick overview, here are the steps to bind with and consume a remote service:  
 
-* **Create the `Service` subclass** &ndash; Subclass the `Service` type and implement the lifecycle methods for a bound service. It is also necessary to set meta-data that will inform Android that the service is to run in its own process.
-* **Implement a `Handler`** &ndash; The `Handler` is responsible for analyzing the client requests, extracting any parameters that were passed from the client, and invoking the appropriate methods on the service.
-* **Instantiate a `Messenger`** &ndash; As described above, each `Service` must maintain an instance of the `Messenger` class that will route client requests to the `Handler` that was created in the previous step.
+- **Create the `Service` subclass** &ndash; Subclass the `Service` type and implement the lifecycle methods for a bound service. It is also necessary to set meta-data that will inform Android that the service is to run in its own process.
+- **Implement a `Handler`** &ndash; The `Handler` is responsible for analyzing the client requests, extracting any parameters that were passed from the client, and invoking the appropriate methods on the service.
+- **Instantiate a `Messenger`** &ndash; As described above, each `Service` must maintain an instance of the `Messenger` class that will route client requests to the `Handler` that was created in the previous step.
 
 A service that is meant to run in its own process is, fundamentally, still a bound service. The service class will extend the base `Service` class and is decorated with the `ServiceAttribute` containing the meta-data that Android needs to bundle in the Android manifest. To begin with, the following properties of the `ServiceAttribute` that are important to an out-of-process service:
 
@@ -144,12 +144,12 @@ Once the `ServiceAttribute` has been set, the service needs to implement a `Hand
 
 ### Implementing a Handler
 
-To process client requests, the service must implement a `Handler` and override the `HandleMessage` methodThis is the method takes a `Message` instance which encapsulates the method call from the client and translates that call into some action or task that the service will perform. The `Message` object exposes a property called `What` which is an integer value, the meaning of which is shared between the client and the service and relates to some task that the service is to perform for the client.
+To process client requests, the service must implement a `Handler` and override the `HandleMessage` method. This is the method takes a `Message` instance which encapsulates the method call from the client and translates that call into some action or task that the service will perform. The `Message` object exposes a property called `What` which is an integer value, the meaning of which is shared between the client and the service and relates to some task that the service is to perform for the client.
 
 The following code snippet from the sample application shows one example of `HandleMessage`. In this example, there are two actions that a client can request of the service:
 
-* The first action is a _Hello, World_ message, the client has sent a simple message to the service.
-* The second action will invoke a method on the service and retrieve a string, in this case the string is a message that returns what time the service started and how long it has been running:
+- The first action is a _Hello, World_ message, the client has sent a simple message to the service.
+- The second action will invoke a method on the service and retrieve a string, in this case the string is a message that returns what time the service started and how long it has been running:
 
 ```csharp
 public class TimestampRequestHandler : Android.OS.Handler
@@ -164,7 +164,7 @@ public class TimestampRequestHandler : Android.OS.Handler
         switch (messageType)
         {
             case Constants.SAY_HELLO_TO_TIMESTAMP_SERVICE:
-                // The client as sent a simple Hello, say in the Android Log.
+                // The client has sent a simple Hello, say in the Android Log.
                 break;
 
             case Constants.GET_UTC_TIMESTAMP:
@@ -257,7 +257,7 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
     {
         Log.Debug(TAG, $"OnServiceConnected {name.ClassName}");
 
-        IsConnected = service != null
+        IsConnected = service != null;
         Messenger = new Messenger(service);
 
         if (IsConnected)
@@ -285,8 +285,8 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
 Once the service connection and the intent are created, it is possible for the client to call `BindService` and initiate the binding process:
 
 ```csharp
-IServiceConnection serviceConnection = new TimestampServiceConnection(this);
-BindActivity(serviceToStart, serviceConnection, Bind.AutoCreate);
+var serviceConnection = new TimestampServiceConnection(this);
+BindService(serviceToStart, serviceConnection, Bind.AutoCreate);
 ```
 
 After the client has successfully bound to the service and the `Messenger` is available, it is possible for the client to send `Messages` to the service.
@@ -326,7 +326,6 @@ msg.Data = serviceParameters;
 
 messenger.Send(msg);
 ```
-
 
 > [!NOTE]
 > In general, a `Message` should not have a payload larger than 1MB. The size limit may vary according the version of Android and on any proprietary changes the vendor might have made to their implementation of the Android Open Source Project (AOSP) that is bundled with the device.
@@ -399,10 +398,10 @@ Permissions can be identified by the `Permission` property of the `ServiceAttrib
 
 There are four different permission levels that Android provides:
 
-* **normal** &ndash; This is the default permission level. It is used to identify low-risk permissions that can be automatically granted by Android to clients that request it. The user does not have to explicitly grant these permissions, but the permissions can be viewed in the app settings.
-* **signature** &ndash; This is a special category of permission that will be granted automatically by Android to applications that are all signed with the same certificate. This permission is designed to make it easily for an application developer to share components or data between their apps without bothering the user for constant approvals.
-* **signatureOrSystem** &ndash; This is very similar to the **signature** permissions described above. In addition to being automatically granted to apps that are signed by the same certificate, this permission will also be granted to apps that are signed the same certificate that was used to sign the apps installed with the Android system image. This permission is typically only used by Android ROM developers to allow their applications to work with third party apps. It is not commonly used by apps that are meant general distribution for the public at large.
-* **dangerous** &ndash; Dangerous permissions are those that could cause problems for the user. For this reason, **dangerous** permissions must be explicitly approved by the user.
+- **normal** &ndash; This is the default permission level. It is used to identify low-risk permissions that can be automatically granted by Android to clients that request it. The user does not have to explicitly grant these permissions, but the permissions can be viewed in the app settings.
+- **signature** &ndash; This is a special category of permission that will be granted automatically by Android to applications that are all signed with the same certificate. This permission is designed to make it easily for an application developer to share components or data between their apps without bothering the user for constant approvals.
+- **signatureOrSystem** &ndash; This is very similar to the **signature** permissions described above. In addition to being automatically granted to apps that are signed by the same certificate, this permission will also be granted to apps that are signed the same certificate that was used to sign the apps installed with the Android system image. This permission is typically only used by Android ROM developers to allow their applications to work with third party apps. It is not commonly used by apps that are meant general distribution for the public at large.
+- **dangerous** &ndash; Dangerous permissions are those that could cause problems for the user. For this reason, **dangerous** permissions must be explicitly approved by the user.
 
 Because `signature` and `normal` permissions are automatically granted at installed time by Android, it is crucial that APK hosting the service be installed **before** the APK containing the client. If the client is installed first, Android will not grant the permissions. In this case, it will be necessary to uninstall the client APK, install the service APK, and then re-install the client APK.
 
@@ -500,7 +499,6 @@ To view the permissions that an application has been granted, open the Android S
 ## Summary
 
 This guide was an advanced discussion about how to run an Android service in a remote process. The differences between a local and a remote service was explained, along with some reasons why a remote service can be helpful to stability and performance of an Android app. After explaining how to implement a remote service and how a client can communicate with the service, the guide went on to provide one way to limit access to the service from only authorized clients.
-
 
 ## Related Links
 

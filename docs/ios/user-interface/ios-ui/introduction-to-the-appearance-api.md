@@ -4,8 +4,8 @@ description: "iOS lets you apply visual property settings at a static class leve
 ms.prod: xamarin
 ms.assetid: C1727F0C-82B1-D085-D46F-C6383FF04B16
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/15/2018
 ---
 

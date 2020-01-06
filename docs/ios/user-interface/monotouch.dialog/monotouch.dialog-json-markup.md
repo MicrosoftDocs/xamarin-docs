@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 59F3E18C-3A73-69B8-DA5E-21B19B9DFB98
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ---
 
 # MonoTouch.Dialog Json Markup
@@ -89,7 +89,6 @@ var theBoolean = jsonElement ["the-boolean"] as BooleanElement;
 
  <a name="Root_Element_Syntax" />
 
-
 ## Root Element Syntax
 
 The Root element contains the following values:
@@ -97,12 +96,10 @@ The Root element contains the following values:
 - `title`
 - `sections` (optional)
 
-
 The root element can appear inside a section as an element to create a nested
 controller. In that case, the extra property `"type"` must be set to `"root"`
 
  <a name="url" />
-
 
 ### url
 
@@ -113,7 +110,6 @@ the user interface from the server based on what the user taps.
 
  <a name="group" />
 
-
 ### group
 
 If set, this sets the groupname for the root element. Group names are used to
@@ -123,20 +119,17 @@ the value of a radio button.
 
  <a name="radioselected" />
 
-
 ### radioselected
 
 Identifies the radio item that is selected in nested elements
 
  <a name="title" />
 
-
 ### title
 
 If present, it will be the title used for the RootElement
 
  <a name="type" />
-
 
 ### type
 
@@ -145,13 +138,11 @@ used to nest controllers).
 
  <a name="sections" />
 
-
 ### sections
 
 This is a Json array with individual sections
 
  <a name="Section_Syntax" />
-
 
 ## Section Syntax
 
@@ -161,9 +152,7 @@ The section contains:
 - `footer` (optional)
 - `elements` array
 
-
  <a name="header" />
-
 
 ### header
 
@@ -171,13 +160,11 @@ If present, the header text is displayed as a caption of the section.
 
  <a name="footer" />
 
-
 ### footer
 
 If present, the footer is displayed at the bottom of the section.
 
  <a name="elements" />
-
 
 ### elements
 
@@ -189,12 +176,10 @@ and `"value"`. These are the list of supported elements:
 - `entry` lines (regular or password)
 - `boolean` values (using switches or images)
 
-
 String elements can be used as buttons by providing a method to invoke when
 the user taps on either the cell or the accessory,
 
  <a name="Rendering_Elements" />
-
 
 ## Rendering Elements
 
@@ -258,7 +243,6 @@ examples:
 
  <a name="accessory" />
 
-
 ### accessory
 
 Determines the kind of accessory to be shown in your rendering element, the
@@ -268,11 +252,9 @@ possible values are:
 - `detail-disclosure`
 - `disclosure-indicator`
 
-
 If the value is not present, no accessory is shown
 
  <a name="background" />
-
 
 ### background
 
@@ -283,7 +265,6 @@ can be a color specified using the color syntax.
 
  <a name="caption" />
 
-
 ### caption
 
 The main string to be shown on the rendering element. The font and color can
@@ -293,13 +274,11 @@ property.
 
  <a name="color_and_detailcolor" />
 
-
 ### color and detailcolor
 
 The color to be used for the main text or the detailed text.
 
  <a name="detailfont_and_font" />
-
 
 ### detailfont and font
 
@@ -310,9 +289,7 @@ The following are valid font specifications:
 - "Helvetica"
 - "Helvetica-14"
 
-
  <a name="linebreak" />
-
 
 ### linebreak
 
@@ -325,13 +302,11 @@ Determines how lines are broken up. The possible values are:
 - `tail-truncation`
 - `word-wrap`
 
-
 Both `character-wrap` and `word-wrap` can be used
 together with the `"lines"` property set to zero to turn the
 rendering element into a multi-line element.
 
  <a name="ontap_and_onaccessorytap" />
-
 
 ### ontap and onaccessorytap
 
@@ -358,14 +333,12 @@ class Foo {
 
  <a name="lines" />
 
-
 ### lines
 
 If this is set to zero, it will make the element auto-size depending on
 the content of the strings contained. For this to work, you must also set the `"linebreak"` property to `"character-wrap"` or `"word-wrap"`.
 
  <a name="style" />
-
 
 ### style
 
@@ -378,9 +351,7 @@ The possible values are:
 - `"value2"`
 - `"subtitle"` : text with a subtitle.
 
-
  <a name="subtitle" />
-
 
 ### subtitle
 
@@ -389,13 +360,11 @@ This does both with a single entry.
 
  <a name="textcolor" />
 
-
 ### textcolor
 
 The color to use for the text.
 
  <a name="value" />
-
 
 ### value
 
@@ -404,7 +373,6 @@ this is affected by the `"style"` setting. The font and color can be
 customized by setting the `"detailfont"` and `"detailcolor"`.
 
  <a name="Boolean_Elements" />
-
 
 ## Boolean Elements
 
@@ -434,7 +402,6 @@ bundle file. For example:
 
  <a name="type" />
 
-
 ### type
 
 Type can be set to either `"boolean"` or `"checkbox"`. If set to boolean it will use a UISlider or images (if
@@ -446,7 +413,6 @@ summarize the results with a count of all the booleans (or checkboxes) that
 belong to the same group.
 
  <a name="Entry_Elements" />
-
 
 ## Entry Elements
 
@@ -484,14 +450,12 @@ the `"value"` is set to the initial value to set the entry to. The `"placeholder
 
  <a name="autocorrect" />
 
-
 ### autocorrect
 
 Determines the auto-correction style to use for the entry. The possible
 values are true or false (or the strings `"yes"` and `"no"`).
 
  <a name="capitalization" />
-
 
 ### capitalization
 
@@ -502,16 +466,13 @@ The capitalization style to use for the entry. The possible values are:
 - `sentences`
 - `words`
 
-
  <a name="caption" />
-
 
 ### caption
 
 The caption to use for the entry
 
  <a name="keyboard" />
-
 
 ### keyboard
 
@@ -527,16 +488,13 @@ The keyboard type to use for data entry. The possible values are:
 - `twitter`
 - `url`
 
-
  <a name="placeholder" />
-
 
 ### placeholder
 
 The hint text that is shown when the entry has an empty value.
 
  <a name="return-key" />
-
 
 ### return-key
 
@@ -554,16 +512,13 @@ The label used for the return key. The possible values are:
 - `send`
 - `yahoo`
 
-
  <a name="value" />
-
 
 ### value
 
 The initial value for the entry
 
  <a name="Radio_Elements" />
-
 
 ## Radio Elements
 
@@ -573,7 +528,6 @@ Additionally, if a value is set for the `"group"` property, this
 radio button belongs to that group.
 
  <a name="Date_and_Time_Elements" />
-
 
 ## Date and Time Elements
 
@@ -601,7 +555,6 @@ any format supported by the .NET DateTime.Parse function. Example:
 ```
 
  <a name="Html/Web_Element" />
-
 
 ## Html/Web Element
 

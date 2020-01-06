@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A9CB8CA8-8A6D-405E-B84C-A16CE452C0F7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -171,7 +171,6 @@ Studio for Mac to find the correct version number. Look for the
 
 -----
 
-
 ## Additional references
 
 - [Bug 43245](https://bugzilla.xamarin.com/show_bug.cgi?id=43245) –
@@ -191,4 +190,3 @@ after utilizing the above information, please see
 Xamarin?](~/cross-platform/troubleshooting/support-options.md) for
 information on contact options, suggestions, as well as how to file a
 new bug if needed.
-

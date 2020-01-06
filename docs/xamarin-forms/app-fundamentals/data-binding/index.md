@@ -6,7 +6,7 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/23/2018
+ms.date: 09/27/2019
 ---
 
 # Xamarin.Forms Data Binding
@@ -30,7 +30,7 @@ One of the two objects involved in a data binding is almost always an element th
 - Another `View` derivative, usually on the same page.
 - An object in a code file.
 
-In demonstration programs such as those in the [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) sample, data bindings between two `View` derivatives are often shown for purposes of clarity and simplicity. However, the same principles can be applied to data bindings between a `View` and other objects. When an application is built using the Model-View-ViewModel (MVVM) architecture, the class with underlying data is often called a ViewModel.
+In demonstration programs such as those in the [**DataBindingDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos) sample, data bindings between two `View` derivatives are often shown for purposes of clarity and simplicity. However, the same principles can be applied to data bindings between a `View` and other objects. When an application is built using the Model-View-ViewModel (MVVM) architecture, the class with underlying data is often called a viewmodel.
 
 Data bindings are explored in the following series of articles:
 
@@ -54,6 +54,10 @@ Dive deeper into the `Path` property of the data binding to access sub-propertie
 
 Use binding value converters to alter values within the data binding.
 
+## [Relative Bindings](relative-bindings.md)
+
+Use relative bindings to set the binding source relative to the position of the binding target.
+
 ## [Binding Fallbacks](binding-fallbacks.md)
 
 Make data bindings more robust by defining fallback values to use if the binding process fails.
@@ -66,7 +70,7 @@ Implement the `Command` property with data bindings.
 
 Use compiled bindings to improve data binding performance.
 
-## Related Links
+## Related links
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [Data binding chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter16.md)

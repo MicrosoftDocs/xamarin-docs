@@ -150,9 +150,9 @@ On Android, to set the text that screen readers will read for the toggle button 
 
 ```xml
 <resources>
-	    <string name="app_name">Xamarin Forms Control Gallery</string>
-	    <string name="btnMDPAutomationID_open">Open Side Menu message</string>
-	    <string name="btnMDPAutomationID_close">Close Side Menu message</string>
+    <string name="app_name">Xamarin Forms Control Gallery</string>
+    <string name="btnMDPAutomationID_open">Open Side Menu message</string>
+    <string name="btnMDPAutomationID_close">Close Side Menu message</string>
 </resources>
 ```
 

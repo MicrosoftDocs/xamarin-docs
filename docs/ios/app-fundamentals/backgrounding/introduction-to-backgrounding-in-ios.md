@@ -4,8 +4,8 @@ description: "This document describes backgrounding in iOS: application states, 
 ms.prod: xamarin
 ms.assetid: E214F2C7-E74E-46C7-B5BA-080B30D61250
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/24/2018
 ---
 
@@ -16,7 +16,6 @@ iOS regulates background processing very tightly, and offers three approaches to
 - **Register a Background Task** - If an application needs to complete an important task, it can ask iOS not to interrupt the task when the application moves into the background. For example, an application might need to finish logging in a user, or finish downloading a large file.
 - **Register as a Background-Necessary Application** - An app can register as a specific type of application that has known, specific backgrounding requirements, such as  *Audio* ,  *VoIP* ,  *External Accessory* ,  *Newsstand* , and  *Location* . These applications are allowed continuous background processing privileges as long as they are performing tasks that are within the parameters of the registered application type.
 - **Enable Background Updates** - Applications can trigger background updates with  *Region Monitoring* or by listening for  *Significant Location Changes* . As of iOS 7, applications can also register to update content in the background using  *Background Fetch* or  *Remote Notifications* .
-
 
 ## Application States and Application Delegate Methods
 
@@ -33,7 +32,6 @@ The iOS application lifecycle is a collection of application states and methods 
 - **Suspended** - If the application does not have any code to run in the background, or if all code has completed, the app will be  *Suspended* by the OS. A suspended application's process is kept alive, but the application is unable to execute any code in this state.
 - **Return to Not Running/Termination (Rare)** - Occasionally, the application's process is destroyed, and the application returns to the  *Not Running* state. This happens in low-memory situations, or if the user manually terminates the application.
 
-
 Since the introduction of multitasking support, iOS rarely terminates idle applications, and instead keeps their processes *Suspended* in memory. Keeping an application's process alive ensures that the application launches quickly the next time the user opens it. It also means applications can move freely from the *Suspended* state back into the *Backgrounded* state without drawing on system resources. iOS 7 exploits this feature with new APIs that enable applications to pause background tasks when the device goes to sleep, update content directly from the background without user interaction, and more. We will cover the new APIs in [iOS Backgrounding Techniques](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md).
 
 ## Application Lifecycle Methods
@@ -45,7 +43,6 @@ When an app changes state, iOS notifies the application through event methods in
 - `DidEnterBackground` - Called when the app enters the backgrounded state, this method gives an application about five seconds to prepare for possible termination. Use this time to save user data and tasks, and remove sensitive information from the screen.
 - `WillEnterForeground` - When a user returns to a backgrounded or suspended application, and launches it into the foreground,  `WillEnterForeground` gets called. This is the time to prepare the app to take the foreground by rehydrating any state saved during  `DidEnterBackground` .  `OnActivated` will be called immediately after this method completes.
 - `WillTerminate` - The application is shut down, and its process is destroyed. This method only gets called if multitasking is not available on the device or the OS version, if memory is low, or if the user manually terminates a backgrounded application. Note that suspended applications that get terminated will not call  `WillTerminate` .
-
 
 The following diagram illustrates how the application states and lifecycle methods fit together:
 
@@ -66,8 +63,6 @@ Using the App Switcher, users can scroll through snapshots of all backgrounded a
 > [!IMPORTANT]
 > The App Switcher does not show a difference between backgrounded and suspended applications.
 
-
-
 ### Background App Refresh Settings
 
 iOS 7 increases user control over the Application Lifecycle by allowing users to opt out of backgrounding for applications [registered for background processing](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/registering-applications-to-run-in-background.md). *This does not prevent applications from running background tasks*.
@@ -79,4 +74,3 @@ Users can change this setting by navigating to **Settings > General > Background
 Developers can check the Background Refresh Application status with the `BackgroundRefreshStatus` API. For an example, refer to the [Check Background Refresh Setting recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
 
 We've covered the basics of the iOS Application Lifecycle, and features for controlling the Application Lifecycle. Next, let's see the iOS Application Lifecycle in action.
-

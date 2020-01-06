@@ -3,8 +3,8 @@ title: "F# Samples for Xamarin"
 description: "F# can be used to build Xamarin applications. This document links to various iOS, Mac, and Xamarin.Forms sample Xamarin app projects written in F#."
 ms.prod: xamarin
 ms.assetid: 8A355636-DE60-45BC-B988-1967755FDD28
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 
@@ -35,4 +35,3 @@ have been ported to F#. These links take you to the github location for each cha
 - [Chapter 6. Button clicks](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter06/FS)
 - [Chapter 7. XAML vs. code](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter07/FS/CodePlusXaml)
 - [Chapter 8. Code and XAML in harmony](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter08/FS/XamlKeypad)
-

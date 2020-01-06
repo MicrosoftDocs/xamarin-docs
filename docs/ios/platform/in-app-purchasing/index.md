@@ -4,8 +4,8 @@ description: "This document describes how to sell digital products and services 
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -38,17 +38,17 @@ To support In-App Purchasing you must use Xamarin.iOS 5.0 or newer with Xcode 7 
 
 ## Contents
 
-* [In-App Purchase Basics and Configuration](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
+- [In-App Purchase Basics and Configuration](~/ios/platform/in-app-purchasing/in-app-purchase-basics-and-configuration.md)
 
-* [StoreKit Overview and Retrieving Product Information](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
+- [StoreKit Overview and Retrieving Product Information](~/ios/platform/in-app-purchasing/store-kit-overview-and-retreiving-product-information.md)
 
-* [Purchasing Consumable Products](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
+- [Purchasing Consumable Products](~/ios/platform/in-app-purchasing/purchasing-consumable-products.md)
 
-* [Purchasing Non-Consumable Products](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
+- [Purchasing Non-Consumable Products](~/ios/platform/in-app-purchasing/purchasing-non-consumable-products.md)
 
-* [Transactions and Verification](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
+- [Transactions and Verification](~/ios/platform/in-app-purchasing/transactions-and-verification.md)
 
-* [Subscriptions and Reporting](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
+- [Subscriptions and Reporting](~/ios/platform/in-app-purchasing/subscriptions-and-reporting.md)
 
 ## Summary
 
@@ -61,7 +61,6 @@ Xamarin.iOS. It has covered:
 - **Store Kit** – Explanation of the classes used to build in-app purchase features.
 - **Coding your app for purchasing** – Examples of how to build in-app purchase into a Xamarin.iOS app.
 - **Reporting** – Overview of the statistics available via iTunes Connect.
-
 
 ## Related Links
 

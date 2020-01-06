@@ -6,7 +6,7 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2018
+ms.date: 09/25/2019
 ---
 
 # Xamarin.Forms Entry
@@ -84,6 +84,26 @@ var entry = new Entry { ... MaxLength = 10 };
 
 A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Entry`](xref:Xamarin.Forms.Entry), indicates that there is no effective limit on the number of characters that may be entered.
 
+### Character spacing
+
+Character spacing can be applied to an [`Entry`](xref:Xamarin.Forms.Entry) by setting the `Entry.CharacterSpacing` property to a `double` value:
+
+```xaml
+<Entry ...
+       CharacterSpacing="10" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Entry entry = new Entry { CharacterSpacing = 10 };
+```
+
+The result is that characters in the text displayed by the [`Entry`](xref:Xamarin.Forms.Entry) are spaced `CharacterSpacing` device-independent units apart.
+
+> [!NOTE]
+> The `CharacterSpacing` property value is applied to the text displayed by the `Text` and `Placeholder` properties.
+
 ### Password Fields
 
 `Entry` provides the `IsPassword` property. When `IsPassword` is `true`, the contents of the field will be presented as black circles:
@@ -100,7 +120,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true };
 ```
 
-![](entry-images/password.png "Entry IsPassword Example")
+![Entry IsPassword Example](entry-images/password.png)
 
 Placeholders may be used with instances of `Entry` that are configured as password fields:
 
@@ -116,7 +136,7 @@ In C#:
 var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 ```
 
-![](entry-images/passwordplaceholder.png "Entry IsPassword and Placeholder Example")
+![Entry IsPassword and Placeholder Example](entry-images/passwordplaceholder.png)
 
 ### Setting the Cursor Position and Text Selection Length
 
@@ -143,6 +163,30 @@ var entry = new Entry { Text = "Cursor position and selection length set", Curso
 ```
 
 The default value of the [`SelectionLength`](xref:Xamarin.Forms.Entry.SelectionLength) property is 0, which indicates that no text is selected.
+
+### Displaying a Clear Button
+
+The `ClearButtonVisibility` property can be used to control whether an [`Entry`](xref:Xamarin.Forms.Entry) displays a clear button, which enables the user to clear the text. This property should be set to a `ClearButtonVisibility` enumeration member:
+
+- `Never` indicates that a clear button will never be displayed. This is the default value for the `Entry.ClearButtonVisibility` property.
+- `WhileEditing` indicates that a clear button will be displayed in the [`Entry`](xref:Xamarin.Forms.Entry), while it has focus and text.
+
+The following example shows setting the property in XAML:
+
+```xaml
+<Entry Text="Xamarin.Forms"
+       ClearButtonVisibility="WhileEditing" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearButtonVisibility.WhileEditing };
+```
+
+The following screenshots show an [`Entry`](xref:Xamarin.Forms.Entry) with the clear button enabled:
+
+![Screenshot of an Entry with a clear button, on iOS and Android](entry-images/entry-clear-button.png)
 
 ### Customizing the Keyboard
 
@@ -289,7 +333,7 @@ var entry = new Entry();
 entry.TextColor = Color.Green;
 ```
 
-![](entry-images/textcolor.png "Entry TextColor Example")
+![Entry TextColor Example](entry-images/textcolor.png)
 
 Note that the placeholder is not affected by the specified `TextColor`.
 
@@ -306,7 +350,7 @@ var entry = new Entry();
 entry.BackgroundColor = Color.FromHex("#2c3e50");
 ```
 
-![](entry-images/textbackgroundcolor.png "Entry BackgroundColor Example")
+![Entry BackgroundColor Example](entry-images/textbackgroundcolor.png)
 
 Be careful to make sure that the background and text colors you choose are usable on each platform and don't obscure any placeholder text.
 
@@ -372,7 +416,6 @@ and C#:
 var entry = new Entry ();
 entry.TextChanged += Entry_TextChanged;
 ```
-
 
 ## Related Links
 

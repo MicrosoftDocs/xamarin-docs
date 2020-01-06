@@ -4,8 +4,8 @@ description: "This document describes the Natural Language Framework. Introduced
 ms.prod: xamarin
 ms.assetid: 126C8764-F873-4EB9-98A3-D82AB5689111
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/20/2018
 ---
 # Using the Natural Language framework with Xamarin.iOS

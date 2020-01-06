@@ -4,8 +4,8 @@ description: "This article covers the enhancements Apple has made to App Search 
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
 ---
 
@@ -39,13 +39,13 @@ For more information on implementing deep-linking in a Xamarin.iOS app, please s
 
 By implementing the new [CSSearchQuery](https://developer.apple.com/reference/corespotlight/cssearchquery) class, an app can provide Spotlight's search and matching rule technology to find content inside of itself, without the user having to leave the app (similar to how the Mail, Messages and Notes app work).
 
-Typically, apps that support `CSSearchQuery` will not need to maintain their own, separate search index. 
+Typically, apps that support `CSSearchQuery` will not need to maintain their own, separate search index.
 
 ## Search Continuation
 
 In iOS 9, Apple introduced the Search APIs (such as Core Spotlight, `NSUserActivity` and web markup) to provide deep-liking of content within an app to allow users to search for that content using both the Spotlight and Safari search interfaces. See our [New Search APIs](~/ios/platform/search/index.md) documentation for more details.
 
-In iOS 10 Apple builds upon this feature by allowing the user to start a search in Spotlight	or Safari, then continue the search when they open an app. 
+In iOS 10 Apple builds upon this feature by allowing the user to start a search in Spotlight or Safari, then continue the search when they open an app.
 
 To implement this feature, edit the app's `Info.plist` file, add the `CoreSpotlightContinuation` key of type **Boolean** and set its value to `YES`:
 
@@ -68,14 +68,14 @@ public override bool ContinueUserActivity (UIApplication application, NSUserActi
     // Take action based on the activity type
     switch (userActivity.ActivityType) {
     case "com.xamarin.platform":
-    	// Restore the state of the app here...
-    	break;
+        // Restore the state of the app here...
+        break;
     default:
-    	if (userActivity.ActivityType == CSSearchQuery.ContinuationActionType) {
-    		var search = userActivity.UserInfo.KeyForValue(CSSearchQuery.QueryString);
-    		// Continue user's search here...
-    	}
-    	break;
+        if (userActivity.ActivityType == CSSearchQuery.ContinuationActionType) {
+            var search = userActivity.UserInfo.KeyForValue(CSSearchQuery.QueryString);
+            // Continue user's search here...
+        }
+        break;
     }
 
     return true;
@@ -88,7 +88,7 @@ For more information on working with searches in a Xamarin.iOS app, please see o
 
 ## Visualization of Validation Results
 
-Apple's [App Search API Validation Tool](https://search.developer.apple.com/appsearch-validation-tool) now displays a visual representation of a website's markup and deep-linking (including markup such as defined at [Schema.org](http://schema.org/)) when preforming tests.
+Apple's [App Search API Validation Tool](https://search.developer.apple.com/appsearch-validation-tool) now displays a visual representation of a website's markup and deep-linking (including markup such as defined at [Schema.org](https://schema.org/)) when preforming tests.
 
 By using the Validation Tool, a developer can see the information that the Applebot Web Crawler has indexed for the site such as title, description, URL and any other supported elements.
 
@@ -110,8 +110,6 @@ See our [Message App Integration](~/ios/platform/message-app-integration/index.m
 ## Summary
 
 This article has covered the enhancements Apple has made to App Search in iOS 10 and how to implement them in Xamarin.iOS.
-
-
 
 ## Related Links
 

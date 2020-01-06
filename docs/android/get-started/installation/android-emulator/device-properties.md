@@ -5,8 +5,8 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 3E33C136-8042-4184-A40C-3200D8CD99CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2018
 ---
 
@@ -103,4 +103,3 @@ listed in the **New Device** and **Device Editor** screens:
 
 For more information about these properties, see
 [Hardware Profile Properties](https://developer.android.com/studio/run/managing-avds.html#hpproperties).
-

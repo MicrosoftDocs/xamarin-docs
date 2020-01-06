@@ -4,15 +4,14 @@ description: "Xamarin.Android has several Android API level settings that determ
 ms.prod: xamarin
 ms.assetid: 58CB7B34-3140-4BEB-BE2E-209928C1878C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
 ---
 
 # Understanding Android API levels
 
 _Xamarin.Android has several Android API level settings that determine your app's compatibility with multiple versions of Android. This guide explains what these settings mean, how to configure them, and what effect they have on your app at run time._
-
 
 ## Quick start
 
@@ -41,6 +40,8 @@ will require that new apps target API level 26 (Android 8.0) or higher.
 Existing apps will be required to target API level 26 or higher
 beginning in November 2018. For more information, see
 [Improving app security and performance on Google Play for years to come](https://android-developers.googleblog.com/2017/12/improving-app-security-and-performance.html).
+
+<!-- markdownlint-disable MD001 -->
 
 # [Visual Studio](#tab/windows)
 
@@ -104,7 +105,6 @@ early as API Level 14:
 
 -----
 
-
 If your app supports multiple Android versions, your code must include
 runtime checks to ensure that your app works with the Minimum Android
 version setting (see
@@ -112,8 +112,6 @@ version setting (see
 details). If you are consuming or creating a library, see
 [API Levels and Libraries](#libraries) below for best practices in
 configuring API level settings for libraries.
-
-
 
 ## Android versions and API levels
 
@@ -123,7 +121,6 @@ the *API Level*. Therefore, each Android version corresponds to a
 single Android API Level. Because users install apps on older as well
 as the most recent versions of Android, real-world Android apps must be
 designed to work with multiple Android API levels.
-
 
 ### Android versions
 
@@ -153,7 +150,6 @@ your app will run consistently and reliably on so many different
 versions of Android? Android's API levels can help you manage this
 problem.
 
-
 ### Android API levels
 
 Each Android device runs at exactly *one* API level &ndash; this API
@@ -181,7 +177,6 @@ example, if the API level of an Android device is lower than the
 minimum API level that you specify for your app, the Android device
 will prevent the user from installing your app.
 
-
 ## Project API level settings
 
 The following sections explain how to use the SDK Manager to prepare
@@ -189,7 +184,6 @@ your development environment for the API levels you want to target,
 followed by detailed explanations of how to configure *Target
 Framework*, *Minimum Android version*, and *Target Android version*
 settings in Xamarin.Android.
-
 
 ### Android SDK platforms
 
@@ -257,7 +251,6 @@ menu to the right of **Target framework** as shown above.
 
 -----
 
-
 <a name="minimum" />
 
 ### Minimum Android Version
@@ -285,7 +278,6 @@ include explicit runtime checks to ensure that your app uses newer APIs
 only on devices that are recent enough to support them.
 [Runtime Checks for Android Versions](#runtimechecks), later in this
 guide, explains how to add these runtime checks to your code.
-
 
 # [Visual Studio](#tab/windows)
 
@@ -315,7 +307,6 @@ Minimum Android version will be the same as the Target Framework
 setting.
 
 -----
-
 
 <a name="target" />
 
@@ -379,7 +370,6 @@ Android Version and the Target Framework. That is:
 For more information about SDK levels, see the Android Developer
 [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html)
 documentation.
-
 
 <a name="runtimechecks" />
 
@@ -512,7 +502,6 @@ small and well-established subset of the total API surface area. Doing
 so helps to ensure that your library can be used safely across a wider
 range of Android versions.
 
-
 ## Summary
 
 This guide explained how Android API levels are used to manage app
@@ -527,7 +516,6 @@ levels when creating or consuming Android libraries. It also provided a
 comprehensive list that relates API levels to Android version numbers
 (such as Android 4.4), Android version names (such as Kitkat), and
 Xamarin.Android build version codes.
-
 
 ## Related Links
 

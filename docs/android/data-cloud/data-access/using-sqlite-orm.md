@@ -4,8 +4,8 @@ description: "The SQLite.NET PCL NuGet library provides a simple data access mec
 ms.prod: xamarin
 ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
 ---
 # Using SQLite.NET with Android
@@ -72,7 +72,6 @@ The *DataAccess_Basic* sample code for this document looks like this
 when running on Android. The code illustrates how to perform simple
 SQLite.NET operations and shows the results in as text in the
 application's main window.
-
 
 **Android**
 
@@ -154,14 +153,11 @@ they are stored in the underlying database include:
     property's value to be auto-increment for each new object inserted
     into the database
 
-- **[Column(name)]** &ndash; Supplying the optional `name` parameter
-    will override the default value of the underlying database column's
-    name (which is the same as the property).
+- **[Column(name)]** &ndash; The `name` parameter
+    sets the underlying database column's name.
 
 - **[Table(name)]** &ndash; Marks the class as being able to be
-    stored in an underlying SQLite table. Specifying the optional name
-    parameter will override the default value of the underlying
-    database table's name (which is the same as the class name).
+    stored in an underlying SQLite table with the name specified.
 
 - **[MaxLength(value)]** &ndash; Restrict the length of a text
     property, when a database insert is attempted. Consuming code
@@ -177,9 +173,7 @@ they are stored in the underlying database include:
 - **[Unique]** &ndash; Ensures that the values in the underlying
     database column are unique.
 
-
-Most of these attributes are optional, SQLite will use default values
-for table and column names. You should always specify an integer
+Most of these attributes are optional. You should always specify an integer
 primary key so that selection and deletion queries can be performed
 efficiently on your data.
 
@@ -202,7 +196,6 @@ The following methods on `SQLiteConnection` can be used to perform other data op
 - **Execute** &ndash; Use this method (and not `Query`) when you
     don't expect rows back from the SQL (such as INSERT, UPDATE and
     DELETE instructions).
-
 
 ### Getting an object by the primary key
 

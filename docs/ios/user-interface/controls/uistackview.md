@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 20246E87-2A49-438A-9BD7-756A1B50A617
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -88,47 +88,47 @@ public int Rating { get; set;} = 0;
 
 partial void IncreaseRating (Foundation.NSObject sender) {
 
-	// Maximum of 5 "stars"
-	if (++Rating > 5 ) {
-		// Abort
-		Rating = 5;
-		return;
-	}
+    // Maximum of 5 "stars"
+    if (++Rating > 5 ) {
+        // Abort
+        Rating = 5;
+        return;
+    }
 
-	// Create new rating icon and add it to stack
-	var icon = new UIImageView (new UIImage("icon.png"));
-	icon.ContentMode = UIViewContentMode.ScaleAspectFit;
-	RatingView.AddArrangedSubview(icon);
+    // Create new rating icon and add it to stack
+    var icon = new UIImageView (new UIImage("icon.png"));
+    icon.ContentMode = UIViewContentMode.ScaleAspectFit;
+    RatingView.AddArrangedSubview(icon);
 
-	// Animate stack
-	UIView.Animate(0.25, ()=>{
-		// Adjust stack view
-		RatingView.LayoutIfNeeded();
-	});
+    // Animate stack
+    UIView.Animate(0.25, ()=>{
+        // Adjust stack view
+        RatingView.LayoutIfNeeded();
+    });
 
 }
 
 partial void DecreaseRating (Foundation.NSObject sender) {
 
-	// Minimum of zero "stars"
-	if (--Rating < 0) {
-		// Abort
-		Rating =0;
-		return;
-	}
+    // Minimum of zero "stars"
+    if (--Rating < 0) {
+        // Abort
+        Rating =0;
+        return;
+    }
 
-	// Get the last subview added
-	var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
+    // Get the last subview added
+    var icon = RatingView.ArrangedSubviews[RatingView.ArrangedSubviews.Length-1];
 
-	// Remove from stack and screen
-	RatingView.RemoveArrangedSubview(icon);
-	icon.RemoveFromSuperview();
+    // Remove from stack and screen
+    RatingView.RemoveArrangedSubview(icon);
+    icon.RemoveFromSuperview();
 
-	// Animate stack
-	UIView.Animate(0.25, ()=>{
-		// Adjust stack view
-		RatingView.LayoutIfNeeded();
-	});
+    // Animate stack
+    UIView.Animate(0.25, ()=>{
+        // Adjust stack view
+        RatingView.LayoutIfNeeded();
+    });
 }
 ```
 
@@ -259,8 +259,8 @@ Layout changes can be animated by placing them within an Animation Block, for ex
 ```csharp
 // Animate stack
 UIView.Animate(0.25, ()=>{
-	// Adjust stack view
-	RatingView.LayoutIfNeeded();
+    // Adjust stack view
+    RatingView.LayoutIfNeeded();
 });
 ```
 
@@ -272,8 +272,6 @@ This article has covered the new `UIStackView` control (for iOS 9) to manage a s
 subviews in either a horizontally or vertically arranged stack in a Xamarin.iOS app.
 It began with a simple example of using Stack Views to create a UI, and finished
 with a more detailed look at Stack Views and their properties and features.
-
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This document describes how to display alerts in Xamarin.iOS by us
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -18,16 +18,16 @@ Unlike the classes it replaced, which are subclasses of UIView, UIAlertControlle
 Use `UIAlertControllerStyle` to indicate the type of alert to display. These alerts types are:
 
 - **UIAlertControllerStyleActionSheet**
-  * Pre-iOS 8 this would have been a UIActionSheet
+  - Pre-iOS 8 this would have been a UIActionSheet
 - **UIAlertControllerStyleAlert**
-  * Pre-iOS 8 this would have been UIAlertView 
+  - Pre-iOS 8 this would have been UIAlertView 
 
 There are three necessary steps to take when creating an Alert Controller:
 
 - Create and configure the Alert with a:
-  * title
-  * message
-  * preferredStyle
+  - title
+  - message
+  - preferredStyle
 
 - (Optional) Add a text field
 - Add the Required actions

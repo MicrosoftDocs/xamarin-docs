@@ -4,8 +4,8 @@ description: "This document describes how to sign a Xamarin.Mac app with a devel
 ms.prod: xamarin
 ms.assetid: cf7b733b-e08f-4f56-a233-264b29ee4c97
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -17,13 +17,12 @@ users, Apple recommends that they code-sign it with their Developer ID so that i
 Read more about [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/) and [Distributing Outside the Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) on Apple’s
 website.
 
-## Code Signing Options
+## Code signing options
 
 To build an app for deployment directly to users (NOT via the Mac App
 Store) set the **Signing Settings** to use the **Developer ID**. Ensure to edit the **Release** configuration.
 
  [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
-
 
 ## Build
 
@@ -43,7 +42,7 @@ for installation.
 
  [![](signing-images/image59.png "Selecting the app package in Finder")](signing-images/image59.png#lightbox)
 
-## Related Links
+## Related links
 
 - [Installation](~//mac/get-started/installation.md)
 - [Hello, Mac sample](~//mac/get-started/hello-mac.md)

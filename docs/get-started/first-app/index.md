@@ -42,15 +42,37 @@ Follow these steps along with the video above:
 
 5. Wait until the NuGet packages are restored (a "Restore completed" message will appear in the status bar).
 
-6. Launch Android emulator by pressing the debug button (or the **Debug > Start Debugging** menu item).
+6. New Visual Studio 2019 installations won't have an Android emulator configured. Click the dropdown arrow on the **Debug** button and choose **Create Android Emulator** to launch the emulator creation screen:
 
-7. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackLayout>`:
+    ![Create Android Emulator dropdown](images/win-2019/debug-dropdown.png)
+
+7. In the emulator creation screen, use the default settings and click the **Create** button:
+
+    [![Android emulator creation screen](images/win-2019/create-emulator-sml.png)](images/win-2019/create-emulator.png#lightbox)
+
+8. Creating an emulator will return you to the Device Manager window. Click the **Start** button to launch the new emulator:
+
+    ![Android emulator in the Device Manager](images/win-2019/start-emulator.png)
+
+9. Visual Studio 2019 should now show the name of the new emulator on the **Debug** button:
+
+    ![Android emulator name on the Debug button](images/win-2019/debug-emulator-name.png)
+
+10. Click the **Debug** button to build and deploy the application to the Android emulator:
+
+    ![Android emulator displaying the application](images/win-2019/android-emulator.png)
+
+## Customize the application
+
+The application can be customized to add interactive functionality. Perform the following steps to add user interaction to the application:
+
+1. Edit **MainPage.xaml**, adding this XAML before the end of the `</StackLayout>`:
 
     ```xaml
     <Button Text="Click Me" Clicked="Button_Clicked" />
     ```
 
-8. Edit **MainPage.xaml.cs**, adding this code to the end of the class:
+2. Edit **MainPage.xaml.cs**, adding this code to the end of the class:
 
     ```csharp
     int count = 0;
@@ -61,16 +83,16 @@ Follow these steps along with the video above:
     }
     ```
 
-9. Debug the app on Android:
+3. Debug the app on Android:
 
     ![Android app](images/win/07-sml.png)
 
-    > [!TIP]
-    > It is possible to build and debug the iOS app from Visual Studio with a
-    > networked Mac computer. Refer to the [setup instructions](~/ios/get-started/installation/windows/index.md)
-    > for more information.
+> [!NOTE]
+> The sample application includes the additional interactive functionality that is not covered in the video.
 
 ## Build an iOS app in Visual Studio 2019
+
+It's possible to build and debug the iOS app from Visual Studio with a networked Mac computer. Refer to the [setup instructions](~/ios/get-started/installation/windows/index.md) for more information.
 
 This video covers the process of building and testing an iOS app using Visual Studio 2019 on Windows:
 
@@ -186,5 +208,5 @@ You can download the completed code from the [samples gallery](https://docs.micr
 ## Next Steps
 
 - [Single Page Quickstart](~/get-started/quickstarts/single-page.md) &ndash; Build a more functional app.
-- [Xamarin.Forms Samples](~/xamarin-forms/samples/index.yml) &ndash; Download and run code examples and sample apps.
+- [Xamarin.Forms Samples](~/xamarin-forms/samples/index.md) &ndash; Download and run code examples and sample apps.
 - [Creating Mobile Apps ebook](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md) &ndash; In-depth chapters that teach Xamarin.Forms development, available as a PDF and including hundreds of additional samples.

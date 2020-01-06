@@ -4,8 +4,8 @@ description: "RecyclerView is a view group for displaying collections; it is des
 ms.prod: xamarin
 ms.assetid: 91EF0BD2-3306-47E1-9B39-627A1787762F
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/03/2018
 ---
 
@@ -44,7 +44,6 @@ to implement item-view click, and how to refresh `RecyclerView` when
 its underlying data changes. This guide assumes that you are familiar
 with Xamarin.Android development.
 
-
 ### Requirements
 
 Although `RecyclerView` is often associated with Android 5.0
@@ -59,7 +58,6 @@ applications:
 - Your app project must include the **Xamarin.Android.Support.v7.RecyclerView**
    package. For more information about installing NuGet packages, see
    [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough).
-
 
 ### Overview
 
@@ -97,7 +95,6 @@ between `ListView` and `RecyclerView`:
     remove. `ListView` animations require some additional effort
     on the part of the app developer.
 
-
 ### Sections
 
 #### [RecyclerView Parts and Functionality](~/android/user-interface/layouts/recycler-view/parts-and-functionality.md)
@@ -121,7 +118,6 @@ This topic adds additional code to the example app presented in
 to demonstrate how to handle item-click events and update `RecyclerView` when the
 underlying data source changes.
 
-
 ### Summary
 
 This guide introduced the Android `RecyclerView` widget; it explained
@@ -137,7 +133,6 @@ of data source changes.
 
 For more information about `RecyclerView`, see the
 [RecyclerView class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.html).
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This article helps you get started using in using Xamarin.Android 
 ms.prod: xamarin
 ms.assetid: E4D6F183-98D2-460A-9D65-937639A899E0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -18,7 +18,6 @@ Marshmallow, explains how to prepare Xamarin.Android for Android
 Marshmallow development, and provides links to sample applications that 
 illustrate how to make use of new Android Marshmallow features in 
 Xamarin.Android apps. 
-
 
 ## Overview
 
@@ -118,7 +117,6 @@ You can continue to use
 [JDK 1.7](https://www.oracle.com/technetwork/java/javase/downloads/jdk7-downloads-1880260.html) 
 if you are developing specifically for API level 23 or earlier. 
 
-
 ## Getting Started
 
 To get started using Android Marshmallow with Xamarin.Android, you must 
@@ -136,14 +134,12 @@ create an Android Marshmallow project:
 
 Each of these steps is explained in the following sections:
 
-
 ### Install Xamarin Updates
 
 To update Xamarin so that it includes support for Android 6.0 
 Marshmallow, change the update channel to **Stable** and install 
 all updates. For more information about installing updates from the updates 
 channel, see [Change the Updates Channel](https://github.com/xamarin/recipes/tree/master/Recipes/cross-platform/ide/change_updates_channel). 
-
 
 ### Install the Android 6.0 SDK
 
@@ -166,8 +162,6 @@ For more information about using the Android SDK Manager to install the
 Android 6.0 SDK, see
 [SDK Manager](https://developer.android.com/tools/help/sdk-manager.html).
 
-
-
 ### Start a Xamarin.Android Project
 
 Create a new Xamarin.Android project. If you are new to Android 
@@ -180,8 +174,6 @@ settings to target Android 6.0 MarshMallow. To target your project for Marshmall
 must configure your project for **API level 23 (Xamarin.Android v6.0 Support)**. 
 For more about configuring Android API level levels, see 
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
-
-
 
 ### Configure an Emulator or Device
 
@@ -201,8 +193,6 @@ install a preview image of Android Marshmallow. For more information about
 updating your device to Android Marshmallow, see
 [Hardware System Images](https://developer.android.com/preview/download.html#images).
 
-
-
 ## New Features
 
 Many of the changes introduced in Android Marshmallow are focused on 
@@ -211,8 +201,6 @@ fixing bugs. However, Marshmallow also introduced some extensive
 changes to the fundamentals of the Android platform. The following 
 sections highlight these enhancements and provide links to help you get 
 started in using the new Android Marshmallow features in your app. 
-
-
 
 ### Runtime Permissions
 
@@ -245,8 +233,6 @@ For more information about the new runtime permissions features
 in Android Marshmallow, see 
 [Working with System Permissions](https://developer.android.com/preview/features/runtime-permissions.html).
 
-
-
 ### Authentication Enhancements
 
 Android Marshmallow includes two authentication enhancements that help eliminate
@@ -259,7 +245,6 @@ the need for passwords:
 
 The links and sample apps described next can help you become familiar
 with these new features.
-
 
 #### Fingerprint Authentication
 
@@ -281,8 +266,6 @@ To use this sample app:
 Note that this sample app requires a device with a fingerprint reader.
 This app does not store your fingerprint (or your password).
 
-
-
 #### Voice Interactions
 
 The new Voice Interactions feature introduced in Android Marshmallow allows users of
@@ -295,8 +278,6 @@ for more details (including code examples) about implementing Voice Interactions
 A sample app is available that illustrates how to use the Voice Interaction API
 in a Xamarin.Android app:
 [Voice Interactions](https://github.com/jamesmontemagno/MarshmallowSamples/tree/master/VoiceInteractions).
-
-
 
 #### Confirm Credential
 
@@ -318,8 +299,6 @@ To use this sample app:
 
 1. Setup a secure lock screen on your device (**Secure > Security > Screenlock**).
 2. Tap the **Purchase** button and confirm the secure lock screen credentials.
-
-
 
 ### Chrome Custom Tabs
 
@@ -351,12 +330,10 @@ To take advantage of this feature in your Xamarin.Android app, download and inst
 For more information about this feature, see
 [Chrome Custom Tabs](https://developer.chrome.com/multidevice/android/customtabs).
 
-
-
 ### Material Design Support Library
 
 Android Lollipop introduced
-[Material Design](http://www.google.com/design/spec/material-design/introduction.html)
+[Material Design](https://www.google.com/design/spec/material-design/introduction.html)
 as a new design language to refresh the Android experience (see
 [Material Theme](~/android/user-interface/material-theme.md) for
 information about using material design in Xamarin.Android apps). With
@@ -405,7 +382,6 @@ Xamarin provides a sample app that demos the new Android Design library
 on Xamarin.Android &ndash; [Cheesesquare](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android50-cheesesquare).
 This sample demonstrates the following features of the Design library:
 
-
 - Collapsing toolbar
 - Floating action button
 - View anchoring
@@ -413,9 +389,8 @@ This sample demonstrates the following features of the Design library:
 - Snackbar
 
 For more information about the Design library, see
-[Android Design Support Library](http://android-developers.blogspot.co.at/2015/05/android-design-support-library.html)
+[Android Design Support Library](https://android-developers.googleblog.com/2015/05/android-design-support-library.html)
 in the Android Developer's blog.
-
 
 ### Additional Library Updates
 
@@ -442,7 +417,6 @@ preview-release NuGet packages:
     (including easier navigation for custom apps) to the Android Wear 
     platform. 
 
-
 ## Summary
 
 This article introduced Android Marshmallow and explained
@@ -450,7 +424,6 @@ how to install and configure the latest tools and packages for
 Xamarin.Android development on Marshmallow. It also provided an
 overview of the most exciting new Android Marshmallow features for
 Xamarin.Android development.
-
 
 ## Related Links
 

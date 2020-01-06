@@ -3,8 +3,8 @@ title: "Started Services with Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: 8CC3A850-4CD2-4F93-98EE-AF3470794000
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -37,7 +37,7 @@ The first parameter is an `Intent` object containing the meta-data about the wor
 
 - `StartCommandFlag.Redelivery` &ndash; This means that the `Intent` is a re-delivery of a previous `Intent`. This value is provided when the service had returned `StartCommandResult.RedeliverIntent` but was stopped before it could be properly shut down.
 -`StartCommandFlag.Retry` &dash; This value is received when a previous `OnStartCommand` call failed and Android is trying to start the service again with the same intent as the previous failed attempt.
- 
+
 Finally, the third parameter is an integer value that is unique to the application that identifies the request. It is possible that multiple callers may invoke the same service object. This value is used to associate a request to stop a service with a given request to start a service. It will be discussed in more detail in the section [Stopping the Service](#Stopping_the_Service). 
 
 The value `StartCommandResult` is returned by the service as a suggestion to Android on what to do if the service is killed due to resource constraints. There are three possible values for `StartCommandResult`:

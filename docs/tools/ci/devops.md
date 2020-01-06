@@ -1,8 +1,8 @@
 ---
 title: "DevOps with Xamarin"
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 manager: crdun
 ms.workload:
   - "xamarin"

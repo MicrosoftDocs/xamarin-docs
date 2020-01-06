@@ -4,8 +4,8 @@ description: "This document describes how to use Siri Shortcuts in iOS 12. It di
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/08/2018
 ---
 # Siri Shortcuts in Xamarin.iOS
@@ -365,24 +365,24 @@ created by Xcode.
 
 - Configure your system to use Xcode 10 Command Line Tools:
 
-    > [!WARNING]
-    > Updating the selected Command Line Tools impacts all installed
-    > versions of Xcode on your system. When you are done using the Soup
-    > Chef sample app, be sure to revert this setting to its original
-    > configuration.
+  > [!WARNING]
+  > Updating the selected Command Line Tools impacts all installed
+  > versions of Xcode on your system. When you are done using the Soup
+  > Chef sample app, be sure to revert this setting to its original
+  > configuration.
 
-    - In Xcode, choose **Xcode > Preferences > Locations** and set
-    **Command Line Tools** to the most current Xcode 10 installation
-    available on your system.
+  - In Xcode, choose **Xcode > Preferences > Locations** and set
+  **Command Line Tools** to the most current Xcode 10 installation
+  available on your system.
 
 - In the terminal, `cd` to the **OrderSoupIntentStaticLib** directory.
 
 - Type `make`, which builds:
 
-    - The static library, **libOrderSoupIntentStaticLib.a**
-    - In the **bo** output directory, C# bindings definitions:
-        - **ApiDefinitions.cs**
-        - **StructsAndEnums.cs**
+  - The static library, **libOrderSoupIntentStaticLib.a**
+  - In the **bo** output directory, C# bindings definitions:
+    - **ApiDefinitions.cs**
+    - **StructsAndEnums.cs**
 
 The **OrderSoupIntentBindings** project, which relies on this static library
 and its associated bindings definitions, builds these items automatically.
@@ -855,15 +855,15 @@ extensions. For example: **group.com.yourcompanyname.SoupChef**
 - Create three App IDs: one for the app itself, one for the Intents
 extension, and one for the Intents UI extension. For example:
 
-    - App: **com.yourcompanyname.SoupChef**
-        - To this App ID, assign the SiriKit and **App Groups**
-        capabilities.
+  - App: **com.yourcompanyname.SoupChef**
+    - To this App ID, assign the SiriKit and **App Groups**
+      capabilities.
 
-    - Intents extension: **com.yourcompanyname.SoupChef.Intents**
-        - To this App ID, assign the **App Groups** capability.
+  - Intents extension: **com.yourcompanyname.SoupChef.Intents**
+    - To this App ID, assign the **App Groups** capability.
 
-    - Intents UI extension: **com.yourcompanyname.SoupChef.Intentsui**
-        - This App ID needs no special capabilities.
+  - Intents UI extension: **com.yourcompanyname.SoupChef.Intentsui**
+    - This App ID needs no special capabilities.
 
 - After creating the above App IDs, edit the **App Groups** capability
 assigned to the app and the Intents extension, specifying the specific
@@ -884,18 +884,18 @@ In Visual Studio for Mac or Visual Studio 2017, do the following:
 Intents extension, and Intents UI extension **Bundle Identifier** to the App
 IDs defined above:
 
-    - App: **com.yourcompanyname.SoupChef**
-    - Intents Extension: **com.yourcompanyname.SoupChef.Intents**
-    - Intents UI Extension: **com.yourcompanyname.SoupChef.Intentsui**
+  - App: **com.yourcompanyname.SoupChef**
+  - Intents Extension: **com.yourcompanyname.SoupChef.Intents**
+  - Intents UI Extension: **com.yourcompanyname.SoupChef.Intentsui**
 
 - Update the **Entitlements.plist** file for the **SoupChef** project:
-    - For the **App Groups** capability, set the group to the new app group
-    created above (in the example above, it was
-    **group.com.yourcompanyname.SoupChef**).
-    - Make sure that **SiriKit** is enabled.
+  - For the **App Groups** capability, set the group to the new app group
+  created above (in the example above, it was
+  **group.com.yourcompanyname.SoupChef**).
+  - Make sure that **SiriKit** is enabled.
 
 - Update the **Entitlements.plist** file for the **SoupChefIntents** project:
-    - For the **App Groups** capability, set the group to the new app group
+  - For the **App Groups** capability, set the group to the new app group
     created above (in the example above, it was **group.com.yourcompanyname.SoupChef**).
 
 - Finally, open **NSUserDefaultsHelper.cs**. Set the `AppGroup` variable

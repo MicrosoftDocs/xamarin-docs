@@ -4,8 +4,8 @@ description: "This guide introduces location-awareness in Android applications a
 ms.prod: xamarin
 ms.assetid: 0008682B-6CEF-0C1D-3200-56ECF58F5D3C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/22/2018
 ---
 
@@ -105,11 +105,10 @@ else
 
 Apps must be tolerant of the scenario where the user will not grant permission (or has revoked the permission) and have a way to gracefully deal with that situation. Please see the [Permissions guide](~/android/app-fundamentals/permissions.md) for more details on implementing run-time permission checks in Xamarin.Android.
 
-
 ## Using the fused location provider
 
 The fused location provider is the preferred way for Android applications to receive location updates from the device because it will efficiently select the location provider during run time to provide the best location information in a battery-efficient fashion. For example, a user walking around outdoors gets the best location reading with GPS. If the user then walks indoors, where GPS works poorly (if at all), the fused location provider may automatically switch to WiFi, which works better indoors.
- 
+
 The fused location provider API provides a variety of other tools to
 empower location-aware applications, including geofencing and activity
 monitoring. In this section, we are going to focus on the basics of
@@ -426,18 +425,18 @@ else
 ```
 
 > [!NOTE]
->  If the user has disabled all location providers,
-`GetBestProvider` will return `null`. To see how this code works on a
-real device, be sure to enable GPS, Wi-Fi, and cellular networks under
-**Google Settings > Location > Mode** as shown in this screenshot:
-
-[![Settings Location Mode screen on an Android phone](location-images/location-02.png)](location-images/location-02.png#lightbox)
-
-The screenshot below demonstrates the location application running using `GetBestProvider`:
-
-[![GetBestProvider app displaying latitude, longitude, and provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
-
-Keep in mind that `GetBestProvider` does not change the provider dynamically. Rather, it determines the best available provider once during the Activity lifecycle. If the provider status changes after it has been set, the application will require additional code in the `ILocationListener` methods &ndash; `OnProviderEnabled`, `OnProviderDisabled`, and `OnStatusChanged` &ndash; to handle every possibility related to the provider switch.
+> If the user has disabled all location providers,
+> `GetBestProvider` will return `null`. To see how this code works on a
+> real device, be sure to enable GPS, Wi-Fi, and cellular networks under
+> **Google Settings > Location > Mode** as shown in this screenshot:
+>
+> [![Settings Location Mode screen on an Android phone](location-images/location-02.png)](location-images/location-02.png#lightbox)
+>
+> The screenshot below demonstrates the location application running using `GetBestProvider`:
+>
+> [![GetBestProvider app displaying latitude, longitude, and provider](location-images/location-03.png)](location-images/location-03.png#lightbox)
+>
+> Keep in mind that `GetBestProvider` does not change the provider dynamically. Rather, it determines the best available provider once during the Activity lifecycle. If the provider status changes after it has been set, the application will require additional code in the `ILocationListener` methods &ndash; `OnProviderEnabled`, `OnProviderDisabled`, and `OnStatusChanged` &ndash; to handle every possibility related to the provider switch.
 
 ## Summary
 

@@ -4,8 +4,8 @@ description: "This topic describes Designer features that make it easier for dev
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
 ---
 
@@ -77,7 +77,6 @@ spacing, enter the size and offset (in dp) into the **Size** and
 
 When you change these configuration values, they are saved in the layout
 XML file and reused when you open the layout again.
-
 
 ## Theme Editor
 
@@ -223,9 +222,6 @@ Material Design Grid, and it explained how to use the Theme Editor to
 create new custom themes that conform to Material Design guidelines.
 For more information about Xamarin.Android support for Material Design,
 see [Material Theme](~/android/user-interface/material-theme.md).
-
-
-
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -406,7 +402,6 @@ The following screenshot illustrates the **Color Picker**:
 
 [![Color Picker](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
-
 In this example, the **Background** color can be changed to any
 value through various means:
 
@@ -463,7 +458,6 @@ yet been saved. At this point, you can do one of the following:
 - Press **&#8984; + S** to save your changes to a new theme
     called **Custom**.
 
-
 ## Summary
 
 This topic described the Material Design features available in the
@@ -477,7 +471,6 @@ Material Design, see
 [Material Theme](~/android/user-interface/material-theme.md).
 
 -----
-
 
 ## Related Links
 

@@ -3,8 +3,8 @@ title: "Unified API Overview"
 description: "Xamarin's Unified API makes it possible to share code between Mac and iOS and support 32 and 64-bit applications with the same binary."
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -17,6 +17,7 @@ API is used by default in new Xamarin.iOS and Xamarin.Mac projects.
 > [!IMPORTANT]
 > The Xamarin Classic API, which preceded the Unified API, has been 
 > deprecated. 
+>
 > - The last version of Xamarin.iOS to support the Classic API
 >   (monotouch.dll) was Xamarin.iOS 9.10.
 > - Xamarin.Mac still supports the Classic API, but it is no longer

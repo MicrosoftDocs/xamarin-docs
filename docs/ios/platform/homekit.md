@@ -4,8 +4,8 @@ description: "HomeKit is Apple's framework for controlling home automation devic
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -261,7 +261,6 @@ You should also monitor the Home Manager’s `DidAddHome` and `DidRemoveHome` ev
 
 > [!IMPORTANT]
 > The `AlertView.PresentOKAlert` method used in the sample code above is a helper class in the HomeKitIntro application that makes working with the iOS Alerts easier.
-
 
 ## Finding New Accessories
 
@@ -700,8 +699,6 @@ For more information about the new features of HomeKit in iOS 9, please see Appl
 ## Summary
 
 This article has introduced Apple's HomeKit home automation framework. It showed how to setup and configure test devices using the HomeKit Accessory Simulator and how to create a simple Xamarin.iOS app to discover, communicate with and control home automation devices using HomeKit.
-
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This document describes how to display images in Xamarin.iOS. It c
 ms.prod: xamarin
 ms.assetid: 67CA8DB6-769D-42BB-A137-3AF933789FE1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/13/2018
 ---
 # Displaying images with Xamarin.iOS
@@ -44,7 +44,6 @@ Files placed in the **Resources** directory are treated differently from regular
 
 - Storing the images configured in the application’s properties, such as the default start-up images and application icons.
 - Storing other images and files separately from the code, so they’re easier to manage (subdirectories are preserved when the Resources directory contents are copied).
-
 
 The **Resources** directory is especially useful in a library project, since the code can assume that those images will be copied into the root of the consuming application, making it easier to write shared code libraries that require image, sound, video, XML or other files.
 

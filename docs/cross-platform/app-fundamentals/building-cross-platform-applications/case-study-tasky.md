@@ -3,8 +3,8 @@ title: "Cross-Platform App Case Study: Tasky"
 description: "This document describes how the Tasky Portable sample application was designed and built as a cross-platform mobile application. It discusses the app's requirements, interface, data model, core functionality, implementation, and more."
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -575,7 +575,7 @@ The resulting applications look like this on each platform:
 
  <a name="iOS" />
 
-#### iOS
+### iOS
 
 The application uses iOS-standard user interface design, such as the
 ‘add’ button being positioned in the navigation bar and using the built-in **plus (+)** icon. It also uses the default
@@ -586,7 +586,7 @@ The application uses iOS-standard user interface design, such as the
 
  <a name="Android" />
 
-#### Android
+### Android
 
 The Android app uses built-in controls including the built-in layout for rows
 that require a ‘tick’ displayed. The hardware/system back behavior is
@@ -596,7 +596,7 @@ supported in addition to an on-screen back button.
 
  <a name="Windows_Phone" />
 
-#### Windows Phone
+### Windows Phone
 
 The Windows Phone app uses the standard layout, populating the app bar at the bottom
 of the screen instead of a nav bar at the top.

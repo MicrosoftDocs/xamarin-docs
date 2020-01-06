@@ -4,8 +4,8 @@ description: "Firebase Cloud Messaging (FCM) is a service that facilitates messa
 ms.prod: xamarin
 ms.assetid: E5314D7F-2AAC-40DA-BEBA-27C834F078DD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/31/2018
 ---
 
@@ -101,7 +101,6 @@ to your Xamarin.Android project as explained in
 The following sections explain how these credentials are used when
 client apps communicate with app servers through FCM.
 
-
 <a name="registration" />
 
 ### Registration with FCM
@@ -135,8 +134,6 @@ server, it can send a request to the app server to delete the
 registration token. If the client app is uninstalled from a device, FCM
 detects this and automatically notifies the app server to delete the
 registration token.
-
-
 
 ### Downstream messaging
 
@@ -194,7 +191,6 @@ obtains a registration token as explained earlier):
 For more information about Firebase topic messaging, see Google's
 [Topic Messaging on Android](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging).
 
-
 <a name="setup_fcm" />
 
 ## Setting up Firebase Cloud Messaging
@@ -250,8 +246,6 @@ For a detailed example of how to add **google-services.json** to an app
 project to receive FCM push notification messages on Android, see
 [Remote Notifications with FCM](~/android/data-cloud/google-messaging/remote-notifications-with-fcm.md).
 
-
-
 ## For further reading
 
 - Google's [Firebase Cloud Messaging](https://firebase.google.com/docs/cloud-messaging/)
@@ -275,7 +269,6 @@ authorize messaging between app servers and client apps. It illustrated
 the registration and downstream messaging scenarios, and it detailed
 the steps for registering your app with FCM to use FCM
 services.
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This document describes the purpose of the Xamarin.Mac registrar a
 ms.prod: xamarin
 ms.assetid: 7CAAA6B7-D654-4AD3-BAEC-9DD01210978A
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
 ---
 

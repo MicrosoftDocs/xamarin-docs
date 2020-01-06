@@ -4,8 +4,8 @@ description: "This document describes how Xamarin.iOS developers can test their 
 ms.prod: xamarin
 ms.assetid: A5CE2ECF-8057-49ED-8393-EB0C5977FE4C
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 07/16/2018
 ---
 # Free provisioning for Xamarin.iOS apps

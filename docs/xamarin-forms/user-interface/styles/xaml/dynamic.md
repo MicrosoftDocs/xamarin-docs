@@ -79,8 +79,8 @@ public partial class DynamicStylesPage : ContentPage
 
 When the `OnButtonClicked` event handler is executed, `searchBarStyle` will switch between `blueSearchBarStyle` and `greenSearchBarStyle`. This results in the appearance shown in the following screenshots:
 
-[![](dynamic-images/dynamic-style-blue.png "Blue Dynamic Style Example")](dynamic-images/dynamic-style-blue-large.png#lightbox "Blue Dynamic Style Example")
-[![](dynamic-images/dynamic-style-green.png "Green Dynamic Style Example")](dynamic-images/dynamic-style-green-large.png#lightbox "Green Dynamic Style Example")
+[![Blue Dynamic Style Example](dynamic-images/dynamic-style-blue.png)](dynamic-images/dynamic-style-blue-large.png#lightbox)
+[![Green Dynamic Style Example](dynamic-images/dynamic-style-green.png)](dynamic-images/dynamic-style-green-large.png#lightbox)
 
 The following code example demonstrates the equivalent page in C#:
 
@@ -158,8 +158,8 @@ The [`SearchBar`](xref:Xamarin.Forms.SearchBar) instances use the `StaticResourc
 
 In the code-behind file, the constructor creates a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) entry with the key `searchBarStyle`, as per the previous example that demonstrated dynamic styles. When the `OnButtonClicked` event handler is executed, `searchBarStyle` will switch between `blueSearchBarStyle` and `greenSearchBarStyle`. This results in the appearance shown in the following screenshots:
 
-[![](dynamic-images/dynamic-style-inheritance-blue.png "Blue Dynamic Style Inheritance Example")](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox "Blue Dynamic Style Inheritance Example")
-[![](dynamic-images/dynamic-style-inheritance-green.png "Green Dynamic Style Inheritance Example")](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox "Green Dynamic Style Inheritance Example")
+[![Blue Dynamic Style Inheritance Example](dynamic-images/dynamic-style-inheritance-blue.png)](dynamic-images/dynamic-style-inheritance-blue-large.png#lightbox)
+[![Green Dynamic Style Inheritance Example](dynamic-images/dynamic-style-inheritance-green.png)](dynamic-images/dynamic-style-inheritance-green-large.png#lightbox)
 
 The following code example demonstrates the equivalent page in C#:
 

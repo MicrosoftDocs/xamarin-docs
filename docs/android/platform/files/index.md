@@ -4,8 +4,8 @@ description: "This guide will explain file access in Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: FC1CFC58-B799-4DD6-8ED1-DE36B0E56856
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/23/2018
 ---
 
@@ -69,7 +69,6 @@ To maximize code sharing, Xamarin.Android apps (or Xamarin.Forms apps targeting 
 | `MyPictures` | **_INTERNAL\_STORAGE_/Pictures** |
 | `MyVideos` | **_INTERNAL\_STORAGE_/Videos** |
 | `Personal` | **_INTERNAL\_STORAGE_** |
-
 
 ### Reading or Writing to files on internal storage
 

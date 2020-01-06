@@ -4,15 +4,14 @@ description: "If you are a Java developer, you are well on your way to leveragin
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
 ---
 
 # Xamarin for Java Developers
 
 _If you are a Java developer, you are well on your way to leveraging your skills and existing code on the Xamarin platform while reaping the code reuse benefits of C#. You will find that C# syntax is very similar to Java syntax, and that both languages provide very similar features. In addition, you'll discover features unique to C# that will make your development life easier._
-
 
 ## Overview
 
@@ -88,7 +87,6 @@ However, there are many differences between Java and C#. For example:
     the reserved words `from`, `select`, and `where` to write queries
     against collections in a way that is similar to database queries.
 
-
 Of course, there are many more differences between C# and Java than can
 be covered in this article. Also, both Java and C# continue to
 evolve (for example, Java 8, which is not yet in the Android toolchain,
@@ -132,7 +130,6 @@ help you to write better code in less time:
     The language-level support of this feature makes async programming
     easy to implement and less error-prone.
 
-
 Finally, Xamarin allows you to
 [leverage existing Java assets](#interop) via a technology known as
 *binding*. You can call your existing Java code, frameworks, and
@@ -148,8 +145,6 @@ The following sections outline the basic "getting started" differences
 between C# and Java; a later section describes the object-oriented
 differences between these languages.
 
-
-
 ### Libraries vs. Assemblies
 
 Java typically packages related classes in **.jar** files. In C# and
@@ -162,7 +157,6 @@ code (IL) that is just-in-time compiled at runtime.
 For more information about assemblies, see the
 [Assemblies and the Global Assembly Cache](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/)
 topic.
-
 
 ### Packages vs. Namespaces
 
@@ -177,7 +171,6 @@ namespace WeatherApp
 {
     ...
 ```
-
 
 ### Importing Types
 
@@ -218,8 +211,6 @@ using System.Threading.Tasks;
 These statements import functionality from the `System`, `Android.App`,
 `Android.Content`, etc. namespaces.
 
-
-
 ### Generics
 
 Both Java and C# support *generics*, which are placeholders that let
@@ -253,7 +244,6 @@ For more information about generics, see the
 Note that there are some limitations in Xamarin.Android support for
 generic C# classes; for more information, see
 [Limitations](~/android/internals/limitations.md).
-
 
 <a name="oopfeatures" />
 
@@ -302,8 +292,6 @@ However, there are also some important differences:
     automatically call the base-class destructor &ndash; in contrast to
     Java where an explicit call to `super.finalize` is used.)
 
-
-
 ### Class Inheritance
 
 To extend a class in Java, you use the `extends` keyword. To extend a
@@ -344,7 +332,6 @@ class name with `final`.
 For more about C# class definitions, see the
 [Classes](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) and
 [Inheritance](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance) topics.
-
 
 <a name="properties" />
 
@@ -398,8 +385,6 @@ For more information about C# properties, see the
 [Properties](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/properties)
 topic.
 
-
-
 ### Calling Base Class Methods
 
 To call a base-class constructor in C#, you use a colon (`:`) followed
@@ -415,7 +400,7 @@ app:
 public class PictureLayout : ViewGroup
 {
     ...
-    public class PictureLayout (Context context)
+    public PictureLayout (Context context)
            : base (context)
     {
         ...
@@ -446,8 +431,6 @@ In this case, the `OnCreate` method defined by the derived class
 (`MainActivity`) calls the `OnCreate` method of the base class
 (`Activity`).
 
-
-
 ### Access Modifiers
 
 Java and C# both support the `public`, `private`, and `protected`
@@ -464,8 +447,6 @@ access modifiers. However, C# supports two additional access modifiers:
 For more information about C# access modifiers, see the
 [Access Modifiers](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
 topic.
-
-
 
 ### Virtual and Override Methods
 
@@ -495,7 +476,6 @@ declare virtual methods and override them:
 For more information about C#'s support for polymorphism, see the
 [Polymorphism](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism)
 topic.
-
 
 <a name="lambdas" />
 
@@ -548,7 +528,6 @@ click events take place.
 For more information about C# and lambda expressions, see the
 [Lambda Expressions](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)
 topic.
-
 
 <a name="events" />
 
@@ -640,7 +619,6 @@ Xamarin.Android code), and you spend more time thinking about the
 business logic of your application and less time wading through
 syntactical overhead.
 
-
 <a name="async" />
 
 ## Asynchronous Programming
@@ -674,7 +652,6 @@ place in a background task.
 
 In the following example, a button click event handler causes an asynchronous
 operation to download an image from the web:
-
 
 ```csharp
 downloadButton.Click += downloadAsync;
@@ -715,7 +692,6 @@ For more information about Xamarin support of asynchronous programming
 features, see
 [Async Support Overview](~/cross-platform/platform/async.md).
 
-
 <a name="keywords" />
 
 ## Keyword Differences
@@ -737,7 +713,6 @@ counterpart in C#, as listed in this table:
 |`T...`|[params T](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/params)|Specifies a method parameter that takes a variable number of arguments.|
 |`super`|[base](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/base)|Used to access members of the parent class from within a derived class.|
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Wraps a critical section of code with lock acquisition and release.|
-
 
 Also, there are many keywords that are unique to C# and have no
 counterpart in Java. Xamarin.Android code often makes use of the
@@ -771,7 +746,6 @@ are reading through Xamarin.Android
 |[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|References the value that client code wants to assign to a property.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Allows a method to be overridden in a derived class.|
 
-
 <a name="interop" />
 
 ## Interoperating with Existing Java Code
@@ -791,8 +765,6 @@ applications via two techniques:
 
 For more information about these techniques, see
 [Java Integration Overview](~/android/platform/java-integration/index.md).
-
-
 
 ## For Further Reading
 
@@ -816,8 +788,6 @@ can help you build your first Xamarin.Android application and further
 advance your understanding of the fundamentals of Android application
 development with Xamarin.
 
-
-
 ## Summary
 
 This article provided an introduction to the Xamarin.Android C#
@@ -833,7 +803,6 @@ delegates, and the C# event handling system. It included tables of
 important C# keywords, explained how to interoperate with existing Java
 libraries, and provided links to related documentation for further
 study.
-
 
 ## Related Links
 

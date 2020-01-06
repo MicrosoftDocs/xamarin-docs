@@ -4,8 +4,8 @@ description: "This article takes a deeper look at the User Notifications framewo
 ms.prod: xamarin
 ms.assetid: 4E0C60AE-6F54-4098-8FA0-AADF9AC86805
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/03/2018
 ---
 # Advanced user notifications in Xamarin.iOS
@@ -157,6 +157,8 @@ If the user interacts with the Custom Actions (presented below the Notification)
 
 To implement a Custom User Notification UI in a Xamarin.iOS app, do the following:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio for Mac](#tab/macos)
 
 1. Open the app's solution in Visual Studio for Mac.
@@ -196,7 +198,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {
@@ -304,7 +305,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {
@@ -543,7 +543,6 @@ using Foundation;
 using UIKit;
 using UserNotifications;
 using UserNotificationsUI;
-
 
 namespace MonkeyChatNotifyExtension
 {

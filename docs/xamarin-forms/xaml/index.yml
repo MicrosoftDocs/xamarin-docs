@@ -1,6 +1,8 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
+
 title: eXtensible Application Markup Language (XAML)
+summary: Learn how to use XAML to define Xamarin.Forms user interfaces.
+
 metadata:
   title: eXtensible Application Markup Language (XAML)
   description: Learn how to use XAML to define Xamarin.Forms user interfaces.
@@ -9,127 +11,57 @@ metadata:
   ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
   author: davidbritch
   ms.author: dabritch
-  ms.date: 07/31/2019
-abstract:
-  description: Learn how to use XAML to define Xamarin.Forms user interfaces.
-sections:
-- title: Get Started
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: xaml-basics/index.md
-      html: "Learn the basics of developing Xamarin.Forms user interfaces with XAML."
-      image:
-        src: https://docs.microsoft.com/media/common/i_overview.svg
-        href: xaml-basics/index.md
-      title: Basics
-    - href: xaml-controls.md
-      html: "Learn about the Xamarin.Forms views that can be referenced from XAML files."
-      image:
-        src: https://docs.microsoft.com/media/common/i_form.svg
-        href: xaml-controls.md
-      title: Controls
-    - href: xamlc.md
-      html: "Learn how to compile XAML directly into intermediate language with the XAML compiler."
-      image:
-        src: https://docs.microsoft.com/media/common/i_build.svg
-        href: xamlc.md
-      title: Compilation
-    - href: markup-extensions/index.md
-      html: "Learn about XAML markup extensions, which allow element attributes to be set from sources other than literal text strings."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: markup-extensions/index.md
-      title: Markup Extensions
-- title: Tooling
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: hot-reload.md
-      html: "Learn how to use XAML Hot Reload to quickly validate UI changes."
-      image:
-        src: ~/media/icons/i_quickstart-3.svg
-        href: hot-reload.md
-      title: Hot Reload
-    - href: toolbox.md
-      html: "Learn how to use the XAML toolbox to drag Xamarin.Forms controls and layouts into the XAML editor."
-      image:
-        src: https://docs.microsoft.com/media/common/i_tools.svg
-        href: toolbox.md
-      title: Toolbox
-    - href: xaml-previewer/index.md
-      html: "Learn how to use the XAML previewer, to see a live preview of a page side-by-side with its XAML markup."
-      image:
-        src: https://docs.microsoft.com/media/common/i_responsive.svg
-        href: xaml-previewer/index.md
-      title: Previewer
-- title: Namespaces
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: namespaces.md
-      html: "Learn about the XAML namespace syntax, and how to declare a XAML namespace to access a type."
-      image:
-        src: https://docs.microsoft.com/media/common/i_namespace.svg
-        href: namespaces.md
-      title: Namespaces
-    - href: custom-namespace-schemas.md
-      html: "Learn how to create XAML custom namespace schemas, which specify a mapping between a custom URL and one or more CLR namespaces."
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-blocks.svg
-        href: custom-namespace-schemas.md
-      title: Custom Namespace Schemas
-    - href: custom-prefix.md
-      html: "Learn how to specify a recommended prefix to associate with a XAML namespace, for XAML usage."
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-automate.svg
-        href: custom-prefix.md
-      title: Namespace Recommended Prefixes
-- title: Additional Capabilities
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: bindable-properties.md
-      html: "Learn how to create bindable properties, and how to consume them from XAML."
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-edit.svg
-        href: bindable-properties.md
-      title: Bindable Properties
-    - href: attached-properties.md
-      html: "Learn how to create attached properties, and how to consume them from XAML."
-      image:
-        src: https://docs.microsoft.com/media/common/i_code-samples.svg
-        href: attached-properties.md
-      title: Attached Properties
-    - href: resource-dictionaries.md
-      html: "Learn how to create XAML resources, and reuse them throughout a Xamarin.Forms application."
-      image:
-        src: https://docs.microsoft.com/media/common/i_reference.svg
-        href: resource-dictionaries.md
-      title: Resource Dictionaries
-    - href: passing-arguments.md
-      html: "Learn how to use XAML to pass arguments to constructors, to call factory methods, and to specify the type of a generic argument."
-      image:
-        src: https://docs.microsoft.com/media/common/i_learn-about.svg
-        href: passing-arguments.md
-      title: Passing Arguments
-    - href: field-modifiers.md
-      html: "Learn about XAML field modifiers, which specify the access level for generated fields for named XAML elements."
-      image:
-        src: ~/media/icons/i_xaml-forms.svg
-        href: field-modifiers.md
-      title: Field Modifiers
-    - href: runtime-load.md
-      html: "Learn how to load and parse XAML at runtime."
-      image:
-        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-        href: runtime-load.md
-      title: Load XAML at Runtime
+  ms.date: 12/27/2019
+
+landingContent:
+  - title: Get started
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Basics
+            url: xaml-basics/index.md
+          - text: Controls
+            url: xaml-controls.md
+          - text: Compilation
+            url: xamlc.md
+          - text: Markup extensions
+            url: markup-extensions/index.md
+
+  - title: Tooling
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Hot reload
+            url: hot-reload.md
+          - text: Toolbox
+            url: toolbox.md
+          - text: Previewer
+            url: xaml-previewer/index.md
+
+  - title: Namespaces
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Namespaces
+            url: namespaces.md
+          - text: Custom namespace schemas
+            url: custom-namespace-schemas.md
+          - text: Namespace recommended prefixes
+            url: custom-prefix.md
+
+  - title: Additional capabilities
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Bindable properties
+            url: bindable-properties.md
+          - text: Attached properties
+            url: attached-properties.md
+          - text: Resource dictionaries
+            url: resource-dictionaries.md
+          - text: Passing arguments
+            url: passing-arguments.md
+          - text: Field modifiers
+            url: field-modifiers.md
+          - text: Load XAML at runtime
+            url: runtime-load.md

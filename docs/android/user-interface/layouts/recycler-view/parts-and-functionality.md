@@ -4,13 +4,12 @@ description: "An overview of the RecyclerView layout manager, adapter, and view 
 ms.prod: xamarin
 ms.assetid: 54F999BE-2732-4BC7-A466-D17373961C48
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/13/2018
 ---
 
 # RecyclerView Parts and Functionality
-
 
 `RecyclerView` handles some tasks internally (such as the scrolling
 and recycling of views), but it is essentially a manager that
@@ -92,10 +91,9 @@ classes; for more information about these classes, see
 and
 [RecyclerView.ItemAnimator](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html).
 
-
 <a name="recycling" />
 
-### How View Recycling Works
+## How View Recycling Works
 
 `RecyclerView` does not allocate an item view for every item in
 your data source. Instead, it allocates only the number of item views
@@ -134,10 +132,8 @@ item-layout file, it also creates a corresponding view holder. The view
 holder uses `FindViewById` to get references to the views inside the
 inflated item-layout file. These references are used to load new data
 into the views every time the layout is recycled to show new data.
- 
 
-
-### The Layout Manager
+## The Layout Manager
 
 The layout manager is responsible for positioning items in the
 `RecyclerView` display; it determines the presentation type (a list
@@ -175,8 +171,7 @@ predefined layout manager by default.
 For more information about the layout manager, see the
 [RecyclerView.LayoutManager class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.LayoutManager.html).
 
-
-### The View Holder
+## The View Holder
 
 The view holder is a class that you define for caching view
 references. The adapter uses these view references to bind each view to
@@ -194,8 +189,7 @@ A detailed example of a `ViewHolder` implementation is presented in
 For more information about `RecyclerView.ViewHolder`, see the
 [RecyclerView.ViewHolder class reference](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ViewHolder.html).
 
-
-### The Adapter
+## The Adapter
 
 Most of the "heavy-lifting" of the `RecyclerView` integration code
 takes place in the adapter. `RecyclerView` requires that you provide
@@ -233,11 +227,9 @@ When you implement an adapter, you must override the following
 - **`ItemCount`** &ndash; Returns the number of items in the data source.
 
 The layout manager calls these methods while it is positioning items
-within the `RecyclerView`. 
+within the `RecyclerView`.
 
-
-
-### Notifying RecyclerView of Data Changes
+## Notifying RecyclerView of Data Changes
 
 `RecyclerView` does not automatically update its display when the
 contents of its data source changes; the adapter must notify
@@ -281,7 +273,6 @@ In the next topic,
 [A Basic RecyclerView Example](~/android/user-interface/layouts/recycler-view/recyclerview-example.md),
 an example app is implemented to demonstrate real code examples of the parts and functionality
 outlined above.
-
 
 ## Related Links
 

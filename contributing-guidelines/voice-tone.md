@@ -3,6 +3,7 @@
 Developers will be reading your documents to learn Xamarin, and to use it in their regular work.
 Your goal is to create useful documentation that helps the reader on their journey. Our guidelines
 help with that. Our style guide contains four recommendations:
+
 - [Use a Conversational Tone](#use-a-conversational-tone)
 - [Write in Second Person](#write-in-2nd-person)
 - [Use Active Voice](#use-active-voice)

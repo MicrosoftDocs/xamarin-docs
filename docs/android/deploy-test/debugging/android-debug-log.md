@@ -4,8 +4,8 @@ description: "How to use the debug log to debug Xamarin.Android applications."
 ms.prod: xamarin
 ms.assetid: 01A715FE-9E9D-9B85-8A59-6568D8A09CA5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
 ---
 
@@ -32,7 +32,6 @@ app through Visual Studio. The debug log supports the following devices:
 The **Debug Log** does not display log messages that are generated
 while the app is running standalone on the device (i.e., while it is
 disconnected from Visual Studio).
-
 
 ## Accessing the Debug Log from Visual Studio
 
@@ -69,7 +68,6 @@ Tool** window:
 - **Search Box** &ndash; Enter search strings in this box to filter for a subset
     of log entries.
 
-
 When the **Debug Log** tool window is displayed, use the device pull-down
 menu to choose the Android device to monitor:
 
@@ -82,7 +80,6 @@ starts device logging. Note that an Android project must be loaded
 before any devices will appear in the device selector. If the device
 does not appear in the device selector, verify that it is available in
 the Visual Studio device drop-down menu next to the **Start** button.
-
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -131,7 +128,6 @@ the Visual Studio device drop-down menu next to the **Start** button.
 
 -----
 
-
 ## Accessing from the Command Line
 
 # [Visual Studio](#tab/windows)
@@ -164,7 +160,6 @@ $ ./adb logcat
 
 -----
 
-
 If more than one device is attached, the device must be explicitly
 identified. For example **adb -d logcat** displays the log of the only
 physical device connected, while **adb -e logcat** shows the log of the
@@ -172,7 +167,6 @@ only emulator running.
 
 More commands can be found by entering **adb** and reading the help
 messages.
-
 
 ## Writing to the Debug Log
 

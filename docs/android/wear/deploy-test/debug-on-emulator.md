@@ -4,8 +4,8 @@ description: "These articles explain how to debug a Xamarin.Android Wear applica
 ms.prod: xamarin
 ms.assetid: 225684B2-3122-4E3B-A028-A3A400976D31
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2018
 ---
 
@@ -37,7 +37,6 @@ use the Wear **x86** CPU/ABI as seen in this example:
 
 [![Example Wear virtual device configuration](debug-on-emulator-images/01-wear-avd-example-sml.png)](debug-on-emulator-images/01-wear-avd-example.png#lightbox)
 
-
 ## Launch The Wear Virtual Device 
 
 After you have created an Android Wear virtual device, you can choose
@@ -61,8 +60,7 @@ first. The watch emulator can take a while to start up:
 The emulator may be left running; it is not necessary to shut it down
 and restart it each time the app is run.
 
- 
 ## Summary
- 
+
 This guide explained how to configure the Android Emulator for Wear
 development and launch a Wear virtual device for debugging.

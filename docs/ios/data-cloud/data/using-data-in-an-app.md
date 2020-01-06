@@ -4,8 +4,8 @@ description: "This document describes the DataAccess_Adv sample, which demonstra
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
 ---
 
@@ -33,7 +33,6 @@ There are a couple of read operations in the sample:
 
 - Reading the list
 - Reading individual records
-
 
 The two methods in the `StockDatabase` class are:
 
@@ -76,8 +75,6 @@ public int SaveStock (Stock item)
 }
 ```
 
-
-
 Real world applications will usually require some validation
 (such as required fields, minimum lengths or other business rules).
 Good cross-platform applications implement as much of the validation
@@ -107,8 +104,7 @@ accessing it. Because SQLite is a standard file format that is used on many plat
 there are a number of tools available to create an SQLite database file:
 
 - **SQLite Manager Firefox Extension** – Works on Mac and Windows and produces files that are compatible with iOS and Android.
-- **Command Line** – See  [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
-
+- **Command Line** – See  [www.sqlite.org/sqlite.html](https://www.sqlite.org/sqlite.html) .
 
 When creating a database file for distribution with your app, take care with the
 naming of tables and columns to ensure they match what your code expects, especially
@@ -132,7 +128,6 @@ if (!File.Exists (Database.DatabaseFilePath))
 ```
 
 Any data access code (whether ADO.NET or using SQLite.NET) that executes after this has completed will have access to the pre-populated data.
-
 
 ## Related Links
 

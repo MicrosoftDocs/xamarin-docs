@@ -4,8 +4,8 @@ description: "This guide provides troubleshooting steps for issues that may be e
 ms.prod: xamarin
 ms.assetid: A1508A15-1997-4562-B537-E4A9F3DD1F06
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -20,23 +20,22 @@ _This guide provides troubleshooting steps for issues that may be encountered us
 
 The log files can be located by browsing to **Help &gt; Xamarin &gt; Zip Logs** in Visual Studio.
 
-
 ## Where's the Xamarin Build Host App?
 
 The Xamarin Build Host from older versions of Xamarin.iOS is no longer required. Visual Studio now automatically deploys the agent over Remote Login and runs it in the background. There is no additional app that will run on either the Mac or Windows machines.
-
 
 ## Troubleshooting Remote Login
 
 > [!IMPORTANT]
 > These troubleshooting steps are primarily intended for problems that happen during the initial setup on a new system.  If you had previously been using the connection successfully in a particular environment and then the connection suddenly or intermittently stops working, you can (in most cases) skip straight to checking if any of the following helps: 
-> * Kill the leftover processes as described below under [Errors due to existing Build Host Processes](#errors). 
-> * Clear the agents as described under [Clearing the Broker, IDB, Build, and Designer Agents](#clearing), and then use a wired internet connection and connect directly via the IP address as described under [Couldn't connect to MacBuildHost.local. Please try again.](#tryagain).  
+>
+> - Kill the leftover processes as described below under [Errors due to existing Build Host Processes](#errors). 
+> - Clear the agents as described under [Clearing the Broker, IDB, Build, and Designer Agents](#clearing), and then use a wired internet connection and connect directly via the IP address as described under [Couldn't connect to MacBuildHost.local. Please try again.](#tryagain).  
 > If none of those options fix the issue, then please follow the instructions in [step 9](#stepnine) to file a new bug report.
 
 1. Check that you have compatible Xamarin.iOS versions installed on your Mac. To do this with Visual Studio 2017 ensure that you are on the **Stable** distribution channel in Visual Studio for Mac. In Visual Studio 2015 and earlier make sure that you are on the same distribution channel on both IDEs.
-    * In Visual Studio for Mac, go to **Visual Studio for Mac > Check for Updates...** to view or change the **Update channel**.
-    * In Visual Studio 2015 and earlier, check the distribution channel under **Tools > Options > Xamarin > Other**.
+    - In Visual Studio for Mac, go to **Visual Studio for Mac > Check for Updates...** to view or change the **Update channel**.
+    - In Visual Studio 2015 and earlier, check the distribution channel under **Tools > Options > Xamarin > Other**.
 
 2. Make sure that **Remote Login** is enabled on the Mac. Set access for **Only these users**, and make sure your Mac user is included in the list or group:
 
@@ -59,7 +58,6 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
     For example, from the screenshot below, the account name will be **amyb** and not **Amy Burns**:
 
     [![](troubleshooting-images/troubleshooting-image5a.png "Getting the account name from the Terminal app")](troubleshooting-images/troubleshooting-image5a.png#lightbox)
-
 
 6. Check that the IP address you are using for the Mac is correct. You can find the IP address under **System Preferences > Sharing > Remote Login** on the Mac.
 
@@ -150,7 +148,7 @@ Reported causes:
 
 - **Limitation** – This error can appear if the Mac build host is connected to a router that has no access to the internet (or if the Mac is using a DNS server that times out when asked for the reverse-DNS lookup of the Windows computer). Visual Studio will take roughly 30 seconds to retrieve the SSH fingerprint and eventually fail to connect.
 
-    **Possible workaround**: Add "UseDNS no" to the **sshd\_config** file. Be sure to read about this SSH setting before changing it. See for example [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](http://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option).
+    **Possible workaround**: Add "UseDNS no" to the **sshd\_config** file. Be sure to read about this SSH setting before changing it. See for example [unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option](https://unix.stackexchange.com/questions/56941/what-is-the-point-of-sshd-usedns-option).
 
     The following steps describe one way to change the setting. You will need to be logged in to an administrator account on the Mac to complete the steps.
 
@@ -371,7 +369,6 @@ If you are troubleshooting a build problem and want to make sure the behavior is
 2. Control-click the **mtbs** folder and select **Move to Trash**:
 
     [![](troubleshooting-images/troubleshooting-image9.png "Move the mtbs folder to Trash")](troubleshooting-images/troubleshooting-image9.png#lightbox)
-
 
 ## Related Links
 

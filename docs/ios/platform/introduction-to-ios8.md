@@ -4,8 +4,8 @@ description: "With iOS 8, Apple has provided a plethora of new frameworks and AP
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
 ---
 
@@ -44,7 +44,7 @@ With HomeKit, third-party apps and Siri can discover accessories and add them to
 The diagram below shows the basic hierarchy of the configuration of HomeKit accessories:
 
 ![](introduction-to-ios8-images/image1.png "This diagram shows the basic hierarchy of the configuration of HomeKit accessories")
- 
+
 To get started with HomeKit, developers will need to make sure that their provisioning profile has the HomeKit service selected. Apple has also provided developers with a HomeKit simulator add-in for Xcode. This can be found in the [Apple Developer Center](https://developer.apple.com/downloads/index.action), under `Hardware IO Tools for Xcode`. 
 
 For more information, please see our [HomeKit](~/ios/platform/homekit.md) guide.
@@ -66,7 +66,7 @@ The first step in creating an App Extension is to define the correct extension p
 In the **New Project** dialog navigate to **C#** > **iOS** > **Unified API** > **Extensions**, as illustrated in the screenshot below:
 
 ![](introduction-to-ios8-images/image2.png "Creating a new extension")
- 
+
 The New Project dialog provides seven new project templates for creating App Extensions, and are discussed below. Notice that many of the extensions relate to other new APIs in iOS, such as Document Picker:
 
 - **Action** – This allows developers to create unique custom action buttons allowing users to performs certain tasks
@@ -88,7 +88,7 @@ Firstly, it aids the existing Keychain services through the use of new Keychain 
 
 Secondly, LocalAuthentication provides two methods to authenticate your application locally. Developers should use `CanEvaluatePolicy` to determine if the device is capable of accepting Touch ID, and then `EvaluatePolicy` to start the authentication operation.
 
-For more information on Touch ID and to learn how to integrate it into a Xamarin.iOS application, refer to the [Introduction To TouchID](~/ios/platform/touchid.md) guides.
+For more information on Touch ID and to learn how to integrate it into a Xamarin.iOS application, see [Touch ID and Face ID in Xamarin.iOS](~/ios/platform/touch-id-face-id.md) guides.
 
 ### Document Picker
 
@@ -117,7 +117,7 @@ Every device is defined by a Size Class, in both the vertical and the horizontal
 If the two concepts are used together, the result is a 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations, as seen in the following diagram:
 
 ![](introduction-to-ios8-images/image3.png "A diagram representing the 2 x 2 grid that defines the different possible sizes that can be used in both the differing orientations")
- 
+
 For more information about size classes, refer to the [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md).
 
 ## Photo Kit
@@ -159,8 +159,6 @@ With all the improvements made in iOS 8, a number of APIs have deprecated. Some 
 ## Summary
 In this article we looked at some of the new features introduced by Apple in iOS 8.
 
-
-
 ## Related Links
 
 - [UIKitEnhancements (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-uikitenhancements)
@@ -169,5 +167,5 @@ In this article we looked at some of the new features introduced by Apple in iOS
 - [Introduction to the Document Picker](~/ios/platform/document-picker.md)
 - [Introduction to HealthKit](~/ios/platform/healthkit.md)
 - [Introduction to Manual Camera Controls](~/ios/user-interface/controls/intro-to-manual-camera-controls.md)
-- [Introduction to TouchID](~/ios/platform/touchid.md)
+- [Touch ID and Face ID with Xamarin.iOS](~/ios/platform/touch-id-face-id.md)
 - [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)
