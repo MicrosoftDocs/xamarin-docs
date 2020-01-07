@@ -23,7 +23,7 @@ Add a reference to Xamarin.Essentials in your class:
 using Xamarin.Essentials;
 ```
 
-## Obtaining Theme Information:
+## Obtaining Theme Information
 
 The requested application theme can be detected with the following API:
 
