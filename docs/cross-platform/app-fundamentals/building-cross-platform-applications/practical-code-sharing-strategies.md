@@ -188,7 +188,7 @@ string filePath = Path.Combine (
         Environment.GetFolderPath (Environment.SpecialFolder.Personal),
         "MyFile.txt");
 System.IO.File.WriteAllText (filePath, "Contents of text file");
-Console.WriteLine (System.IO.ReadAllText (filePath));
+Console.WriteLine (System.IO.File.ReadAllText (filePath));
 ```
 
 Refer to the Xamarin.iOS [Working with the File System](~/ios/app-fundamentals/file-system.md) document for more information on iOS-specific filesystem
