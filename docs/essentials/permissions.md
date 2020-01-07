@@ -136,26 +136,26 @@ public async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permissi
 The Permissions API was created to be flexible and extensible for applications that require additional validation or permissions that aren't included in Xamarin.Essentials. Create a new class that inherits from `BasePermission` and implement the required abstract methods. Then 
 
 ```csharp
-    public class MyPermission : BasePermission
+public class MyPermission : BasePermission
+{
+    // This method checks if current status of the permission
+    public override Task<PermissionStatus> CheckStatusAsync()
     {
-        // This method checks if current status of the permission
-        public override Task<PermissionStatus> CheckStatusAsync()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        // This method is optional and a PermissionException is often thrown if a permission is not declared
-        public override void EnsureDeclared()
-        {
-            throw new System.NotImplementedException();
-        }
-
-        // Requests the user to accept or deny a permission
-        public override Task<PermissionStatus> RequestAsync()
-        {
-            throw new System.NotImplementedException();
-        }
+        throw new System.NotImplementedException();
     }
+
+    // This method is optional and a PermissionException is often thrown if a permission is not declared
+    public override void EnsureDeclared()
+    {
+        throw new System.NotImplementedException();
+    }
+
+    // Requests the user to accept or deny a permission
+    public override Task<PermissionStatus> RequestAsync()
+    {
+        throw new System.NotImplementedException();
+    }
+}
 ```
 
 When implementing a permission in a specific platform, the `BasePlatformPermission` class can be inherited from. This provides additional platform helpers methods to automatically check the declarations.
@@ -172,7 +172,7 @@ Read more on the [Permissions in Xamarin.Android](https://docs.microsoft.com/xam
 
 Permissions must have a matching string in the `Info.plist` file. Once a permission is requested and denied a pop up will no longer appear if you request the permission a second time. You must prompt your user to manually adjust the setting in the applications settings screen in iOS.
 
-Read more on the [iOS Security and Privacy Features])https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy) documentation.
+Read more on the [iOS Security and Privacy Features](https://docs.microsoft.com/xamarin/ios/app-fundamentals/security-privacy) documentation.
 
 # [UWP](#tab/uwp)
 
