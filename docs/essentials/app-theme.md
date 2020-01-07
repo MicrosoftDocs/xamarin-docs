@@ -57,9 +57,9 @@ Unspecified will always be returned on versions of iOS older than 13.0
 
 # [UWP](#tab/uwp)
 
- By default your app runs using the theme set by the user in Windows settings (Settings > Personalization > Colors > Choose your default app mode). You can set the app's RequestedTheme property to override the user default and specify which theme is used.
+By default your app runs using the theme set by the user in Windows settings (**Settings > Personalization > Colors > Choose your default app mode**). You can set the app's RequestedTheme property to override the user default and specify which theme is used.
 
- You can read more on the [https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme](UWP Requested Theme Documentation).
+You can read more on the [https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme](UWP Requested Theme Documentation).
 
 --------------
 
