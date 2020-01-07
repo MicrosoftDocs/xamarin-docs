@@ -122,15 +122,15 @@ No. In fact, you can even start all your supported application targets (Android,
 
 * **XLR001**: *The current project references 'Xamarin.LiveReload' NuGet package version '[VERSION]' but the Xamarin Live Reload extension requires version '[VERSION]'.*
 
-  In order to allow rapid iteration and evolution of the Live Reload feature, the nuget package and the Visual Studio extension must match exactly. Update your nuget package to the same version of the extension you have installed.
+  In order to allow rapid iteration and evolution of the Live Reload feature, the NuGet package and the Visual Studio extension must match exactly. Update your NuGet package to the same version of the extension you have installed.
 
 * **XLR002**: *Live Reload requires at least the 'MqttHostname' property when building from the command line. Alternatively, set 'EnableLiveReload' to 'false' to disable the feature.*
 
   The properties required by Live Reload are not available when building from the command line (or in continuous integration), and must therefore be provided explicitly. 
 
-* **XLR003**: *Live Reload nuget package requires installing the Xamarin Live Reload Visual Studio extension.*
+* **XLR003**: *Live Reload NuGet package requires installing the Xamarin Live Reload Visual Studio extension.*
 
-  Attempted to build a project that references the Live Reload nuget package but the Visual Extension is not installed.  
+  Attempted to build a project that references the Live Reload NuGet package but the Visual Extension is not installed.  
 
 * *Exception while loading assemblies: System.IO.FileNotFoundException: Could not load assembly 'Xamarin.Live.Reload, Version=0.3.27.0, Culture=neutral, PublicKeyToken='.*
 

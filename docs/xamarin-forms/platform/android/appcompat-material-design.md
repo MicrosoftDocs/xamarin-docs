@@ -25,7 +25,7 @@ Android version of your Xamarin.Forms apps.
 ### 1. Update Xamarin.Forms
 
 Ensure the solution is using Xamarin.Forms 2.0 or newer. Update the Xamarin.Forms
-  Nuget package to 2.0 if required.
+  NuGet package to 2.0 if required.
 
 ### 2. Check Android version
 

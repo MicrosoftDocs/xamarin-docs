@@ -233,7 +233,7 @@ The Isolated Storage APIs are not available in [Portable Class Libraries](~/cros
 
 ### Cross-platform file access in PCLs
 
-There is also a PCL-compatible Nuget – [PCLStorage](https://www.nuget.org/packages/PCLStorage/) –
+There is also a PCL-compatible NuGet – [PCLStorage](https://www.nuget.org/packages/PCLStorage/) –
 that facilities cross-platform file access for Xamarin-supported platforms and
 the latest Windows APIs.
 
@@ -253,7 +253,7 @@ The .NET Framework provides a few different classes for accessing network resour
 
 The `HttpClient` class in the `System.Net.Http` namespace is available in
 Xamarin.iOS, Xamarin.Android, and most Windows platforms. There is a
-[Microsoft HTTP Client Library Nuget](https://www.nuget.org/packages/Microsoft.Net.Http/)
+[Microsoft HTTP Client Library NuGet](https://www.nuget.org/packages/Microsoft.Net.Http/)
 that can be used to bring this API into Portable Class Libraries
 (and Windows Phone 8 Silverlight).
 

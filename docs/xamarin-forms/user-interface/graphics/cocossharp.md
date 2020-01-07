@@ -26,7 +26,7 @@ touch input, playing audio, and managing content. This guide explains how to add
 CocosSharp to a Xamarin.Forms application. It covers the following:
 
 - [What is CocosSharp?](#what)
-- [Adding the CocosSharp Nuget packages](#nuget)
+- [Adding the CocosSharp NuGet packages](#nuget)
 - [Walkthrough: Adding CocosSharp to a Xamarin.Forms app](#add)
 
 <a name="what" />
@@ -51,14 +51,14 @@ More detailed information can be found in the [CocosSharp section](https://githu
 
 <a name="nuget" />
 
-## Adding the CocosSharp Nuget packages
+## Adding the CocosSharp NuGet packages
 
 Before using CocosSharp, developers need to make a few additions to their Xamarin.Forms project.
 This guide assumes a Xamarin.Forms project with an iOS, Android, and .NET Standard library project.
 All of the code will be written in the .NET Standard library project; however, libraries must be added to the iOS and Android projects.
 
-The CocosSharp Nuget package contains all of the objects needed to create CocosSharp objects.
-The CocosSharp.Forms nuget package includes the `CocosSharpView` class, which is used to host CocosSharp in Xamarin.Forms.
+The CocosSharp NuGet package contains all of the objects needed to create CocosSharp objects.
+The CocosSharp.Forms NuGet package includes the `CocosSharpView` class, which is used to host CocosSharp in Xamarin.Forms.
 Add the **CocosSharp.Forms** NuGet and **CocosSharp** will be automatically added as well.
 To do this, right-click on the **Packages** folder in the .NET Standard library project
 and select **Add Packages...**. Enter the search term
