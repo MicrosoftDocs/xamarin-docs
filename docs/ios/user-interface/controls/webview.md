@@ -17,7 +17,7 @@ iOS 11 introduced new changes to both `WKWebView` and `SFSafariViewController`. 
 
 ## WKWebView
 
-`WKWebView` was introduced in iOS 8 allowing app developers to implement a web browsing interface similar to that of mobile Safari. This is due, in part, to the fact that `WKWebView` uses the Nitro Javascript engine, the same engine used by mobile Safari. `WKWebView` should always be used over UIWebView were possible due to the [increased performance](http://blog.initlabs.com/post/100113463211/wkwebview-vs-uiwebview),built in user-friendly gestures, and the ease of interaction between the web page and your app.
+`WKWebView` was introduced in iOS 8 allowing app developers to implement a web browsing interface similar to that of mobile Safari. This is due, in part, to the fact that `WKWebView` uses the Nitro Javascript engine, the same engine used by mobile Safari. `WKWebView` should always be used over UIWebView where possible due to the [increased performance](http://blog.initlabs.com/post/100113463211/wkwebview-vs-uiwebview),built in user-friendly gestures, and the ease of interaction between the web page and your app.
   
 `WKWebView` can be added to your app in an almost identical way to UIWebView, however as the developer you have much more control over the UI/UX and functionality. Creating and displaying the web view object will display the requested page, however you can control how the view is presented, how the user can navigate, and how the user exits the view.  
 
