@@ -14,7 +14,7 @@ ms.date: 09/25/2017
 _Reading Near Field Communication (NFC) tags using iOS 11_
 
 CoreNFC is a new framework in iOS 11 that provides access to the
-_Near Field Communication_ (NFC) radio to read tags from within apps. It works on iPhone 6, 6 Plus, 7, 7 Plus, 8, 8 Plus, and X (Iphone 6, 6 Plus works only for NFC payments not NFC tags).
+_Near Field Communication_ (NFC) radio to read tags from within apps. CoreNFC works on iPhone 7, 7 Plus, 8, 8 Plus, and X (while iPhone 6 and iPhone 6 Plus models have NFC payment functionality, they do not support CoreNFC).
 
 The NFC tag reader in iOS devices supports all NFC tag types 1 through 5 that
 contain _NFC Data Exchange Format_ (NDEF) information.
