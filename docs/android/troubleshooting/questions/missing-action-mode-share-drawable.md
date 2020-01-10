@@ -15,7 +15,7 @@ ms.date: 03/09/2018
 
 2. Ensure that you are compiling your application with compileSdkVersion set to 21. You can optionally set the targetSdkVersion to 21 as well.
 
-3. If you require a previous version such as API 19, please download the respective version found on the Nuget page:
+3. If you require a previous version such as API 19, please download the respective version found on the NuGet page:
 
 [https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 

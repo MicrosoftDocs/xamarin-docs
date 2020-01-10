@@ -26,7 +26,7 @@
     - name: First App
       href: first-app/index.md
     - name: Quickstarts
-      href: quickstarts/index.yml
+      href: quickstarts/index.md
       expanded: true
       items:
         - name: File > New
@@ -70,11 +70,7 @@
     - name: Learn about Xamarin
       expanded: true
       items:
-        - name: Native apps
-          href: ~/cross-platform/get-started/introduction-to-mobile-development.md
         - name: .NET developers
-          href: ~/cross-platform/desktop/index.md
-        - name: ASP.NET developers
           href: ~/cross-platform/desktop/index.md
         - name: Java developers
           href: ~/android/get-started/java-developers.md

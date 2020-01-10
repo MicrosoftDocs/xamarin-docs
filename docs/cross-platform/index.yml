@@ -16,17 +16,17 @@ metadata:
 landingContent:
   # Card
   - title: Build cross-platform apps
-    linkLists: 
+    linkLists:
       - linkListType: get-started
-        links: 
+        links:
           - text: Requirements
             url: ~/cross-platform/get-started/requirements.md
           - text: Xamarin.Forms
-            url: ~/get-started/quickstarts/index.yml
+            url: ~/get-started/quickstarts/index.md
           - text: .NET Standard
             url: ~/cross-platform/app-fundamentals/net-standard.md
       - linkListType: how-to-guide
-        links: 
+        links:
           - text: App development lifecycle
             url: ~/cross-platform/get-started/introduction-to-mobile-sdlc.md
           - text: Walkthrough
@@ -34,9 +34,9 @@ landingContent:
 
 # Card
   - title: Language support
-    linkLists: 
+    linkLists:
       - linkListType: concept
-        links: 
+        links:
           - text: Overview
             url: ~/cross-platform/platform/index.md
           - text: C#
@@ -50,9 +50,9 @@ landingContent:
 
   # Card
   - title: Performance & security
-    linkLists: 
+    linkLists:
       - linkListType: concept
-        links: 
+        links:
           - text: Xamarin.Forms performance
             url: /xamarin/xamarin-forms/deploy-test/performance?context=xamarin/cross-platform
           - text: Android performance
@@ -66,13 +66,13 @@ landingContent:
 
   # Card
   - title: Deployment & debugging
-    linkLists: 
+    linkLists:
       - linkListType: concept
-        links: 
+        links:
           - text: Custom linker configuration
             url: ~/cross-platform/deploy-test/linker.md
       - linkListType: how-to-guide
-        links: 
+        links:
           - text: Connect to local web services
             url: ~/cross-platform/deploy-test/connect-to-local-web-services.md
           - text: Multi-process debugging
@@ -80,9 +80,9 @@ landingContent:
 
   # Card
   - title: Desktop developers
-    linkLists: 
+    linkLists:
       - linkListType: concept
-        links: 
+        links:
           - text: App lifecycle comparison
             url: ~/cross-platform/desktop/lifecycle.md
           - text: UI controls comparison

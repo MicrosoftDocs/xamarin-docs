@@ -19,24 +19,24 @@ The SQLite database engine allows Xamarin.Forms applications to load and save da
 
 Integrate SQLite.NET into mobile apps by following these steps:
 
-1. [Install the Nuget package](#install-the-sqlite-nuget-package).
+1. [Install the NuGet package](#install-the-sqlite-nuget-package).
 1. [Configure constants](#configure-app-constants).
 1. [Create a database access class](#create-a-database-access-class).
 1. [Access data in Xamarin.Forms](#access-data-in-xamarinforms).
 1. [Advanced configuration](#advanced-configuration).
 
-## Install the SQLite Nuget package
+## Install the SQLite NuGet package
 
-Use the Nuget package manager to search for **sqlite-net-pcl** and add the latest version to the shared code project.
+Use the NuGet package manager to search for **sqlite-net-pcl** and add the latest version to the shared code project.
 
-There are a number of Nuget packages with similar names. The correct package has these attributes:
+There are a number of NuGet packages with similar names. The correct package has these attributes:
 
 - **Created by:** Frank A. Krueger
 - **ID:** sqlite-net-pcl
-- **Nuget link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]
-> Despite the package name, use the **sqlite-net-pcl** Nuget package even in .NET Standard projects.
+> Despite the package name, use the **sqlite-net-pcl** NuGet package even in .NET Standard projects.
 
 ## Configure app constants
 
@@ -279,7 +279,7 @@ For more information, see [File Handling in Xamarin.Forms](~/xamarin-forms/data-
 ## Related Links
 
 - [Todo sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/todo)
-- [SQLite.NET Nuget package](https://www.nuget.org/packages/sqlite-net-pcl/)
+- [SQLite.NET NuGet package](https://www.nuget.org/packages/sqlite-net-pcl/)
 - [SQLite documentation](https://www.sqlite.org/docs.html)
 - [Using SQLite with Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Using SQLite with iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
