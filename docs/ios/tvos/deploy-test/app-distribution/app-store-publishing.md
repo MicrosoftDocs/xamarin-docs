@@ -86,7 +86,7 @@ Do the following in Visual Studio for Mac:
 5. Select and configure the entitlements required for you Xamarin.tvOS app so that they match the setup you performed above when you defined the App ID.
 6. Save the changes to the `Entitlements.plist` file.
 
-For detailed instructions, please see our [Provisioning for Application Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) documentation. While this document was written for iOS, the same steps are used to provision a Xamarin.tvOS app.
+For detailed instructions, please see our [Provisioning for Application Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) documentation. While this document was written for iOS, the same steps are used to provision a Xamarin.tvOS app.
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 

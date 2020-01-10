@@ -4,6 +4,7 @@ description: "This article examines the fundamentals of application development 
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
+ms.custom: video
 ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316
 ms.technology: xamarin-forms
 author: davidbritch
@@ -535,3 +536,9 @@ Alternatively, [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creat
 - [Getting Started Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started)
 - [Xamarin.Forms API reference](xref:Xamarin.Forms)
 - [Free Self-Guided Learning (video)](https://university.xamarin.com/self-guided/)
+
+## Related video
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -6,7 +6,7 @@ ms.assetid: 7B542872-B3D1-49B3-B15E-0E98F53C1F6E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/17/2019
+ms.date: 12/18/2019
 ---
 
 # Xamarin.Forms ScrollView
@@ -42,11 +42,18 @@ ms.date: 09/17/2019
 In C#:
 
 ```csharp
-var scroll = new ScrollView();
-Content = scroll;
-var stack = new StackLayout();
-stack.Children.Add(new BoxView { BackgroundColor = Color.Red,    HeightRequest = 600, WidthRequest = 600 });
-stack.Children.Add(new Entry());
+public class ScrollingDemoCode : ContentPage
+{
+    public ScrollingDemoCode()
+    {
+        StackLayout stackLayout = new StackLayout();
+        stackLayout.Children.Add(new BoxView { BackgroundColor = Color.Red, HeightRequest = 600, WidthRequest = 150 });
+        stackLayout.Children.Add(new Entry());
+        ScrollView scrollView = new ScrollView();
+        scrollView.Content = stackLayout;
+        Content = scrollView;
+    }
+}
 ```
 
 Before the user scrolls down, only the `BoxView` is visible:

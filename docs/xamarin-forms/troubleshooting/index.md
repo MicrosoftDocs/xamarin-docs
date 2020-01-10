@@ -17,7 +17,7 @@ _Common error conditions and how to resolve them_
 ## Error: "Unable to find a version of Xamarin.Forms compatible with..."
 
 The following errors can appear in the **Package Console** window
-when updating all the Nuget packages in a Xamarin.Forms solution or in
+when updating all the NuGet packages in a Xamarin.Forms solution or in
 a Xamarin.Forms Android app project:
 
 ```csharp
@@ -32,7 +32,7 @@ Unable to find a version of 'Xamarin.Forms' that is compatible with 'Xamarin.And
 ### What causes this error?
 
 Visual Studio for Mac (or Visual Studio) may indicate that updates are available
-for the Xamarin.Forms Nuget packge *and all its dependencies*. In Xamarin
+for the Xamarin.Forms NuGet packge *and all its dependencies*. In Xamarin
 Studio, the solution's **Packages** node might look like this (the version
 numbers might be different):
 
@@ -61,7 +61,7 @@ independently of the Xamarin.Forms package.
 If the **Xamarin.Android.Support** packages have been updated to incompatible
 versions, the simplest fix is to:
 
-1. Manually delete all the Nuget packages in the Android project, then
+1. Manually delete all the NuGet packages in the Android project, then
 2. Re-add the **Xamarin.Forms** package.
 
 This will automatically download the *correct* versions of the other packages.

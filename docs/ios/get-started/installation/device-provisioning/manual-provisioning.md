@@ -178,9 +178,10 @@ To manually create a provisioning profile for development, do this:
 8. Press **Download** to download the provisioning profile onto a Mac:
 
     [![](manual-provisioning-images/provisioning-profile06.png "Download the provisioning profile")](manual-provisioning-images/provisioning-profile06.png#lightbox)
-9. Double-click on the file to install the provisioning profile in Xcode. Note that Xcode might not show any visual clues that it has installed the profile except for opening. This can be verified by browsing to **Xcode > Preferences > Accounts**. Select your Apple ID and click **View Details...**. Your new provisioning profile should be listed, as illustrated below:
 
-      [![](manual-provisioning-images/provisioning-profile07.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
+9. Double-click on the file to install the provisioning profile in Xcode. Note that Xcode might not show any visual clues that it has installed the profile except for opening. This can be verified by browsing to **Xcode > Window > Devices and Simulators**. Right-click on your device and select **Show Provisioning Profiles**...
+
+      [![](manual-provisioning-images/provisioning-profile07-sml.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
 After the provisioning profile has been successfully created it may be necessary to refresh Xcode so that all the development certificates are available to Visual Studio for Mac and Visual Studio.
 
@@ -197,7 +198,8 @@ Visual Studio for Mac and Visual Studio. To update and download any certificates
 3. Choose  **Xcode Menu > Preferences...**
 4. Click the  **Accounts** tab.
 5. Select a team and click the  **Download Manual Profiles** button:
-    [![](manual-provisioning-images/selectteam1.png "Downloading Manual profiles")](manual-provisioning-images/selectteam1.png#lightbox)
+
+    [![Downloading Manual profiles](manual-provisioning-images/selectteam1.png)](manual-provisioning-images/selectteam1.png#lightbox)
 
 6. Quit Xcode.
 7. Start Visual Studio for Mac or Visual Studio.
@@ -215,8 +217,6 @@ The new certificates or provisioning profiles will be available in Visual Studio
 > It may be necessary to stop and restart Visual Studio before it will see any new or modified certificates or profiles updated by Xcode.
 
 -----
-
-<a name="appservices" />
 
 ## Provisioning for application services
 
@@ -238,11 +238,11 @@ At this point provisioning should be complete, and the app is ready to be deploy
 1. Plug the device in to a Mac.
 2. In the project's **Info.plist**, make sure the Bundle Identifier matches the App ID (unless the App ID is a wildcard):
 
-   ![](manual-provisioning-images/deploydevice01xs.png "Entering an Identifier")
+   ![Entering an Identifier](manual-provisioning-images/deploydevice01xs.png)
 
 3. Right-click on the project to view the Project Options dialog and browse to **Build > iOS Bundle Signing**. From the drop-down list next to both the **Signing Identity** and **Provisioning Profile**, verify that Visual Studio for Mac can see the correct profiles, and select a specific identity & profile:
 
-   ![](manual-provisioning-images/deploydevice02xs.png "Select a specific identity & profile")
+   ![Select a specific identity & profile](manual-provisioning-images/deploydevice02xs.png)
 
    If this is set to **Automatic**, Visual Studio for Mac will select the identity and profile based on the Bundle ID that was set in step #2.
 
@@ -257,7 +257,7 @@ At this point provisioning should be complete, and the app is ready to be deploy
 1. Plug the device in to the Mac build host.
 2. In the project's **Info.plist**, make sure the Bundle Identifier matches the App ID:
 
-   ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")
+   ![Entering an Identifier](manual-provisioning-images/servicevs01.png)
 
 3. Right-click on the project to view the Project Options dialog, and browse to **Build > iOS Bundle Signing**. From the drop-down list next to both the **Signing Identity** and **Provisioning Profile** verify that Visual Studio can see the correct profiles, and select a specific identity & profile.
 

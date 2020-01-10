@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/11/2019
+ms.date: 12/13/2019
 ---
 
 # Xamarin.Forms Views
@@ -58,7 +58,7 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 
 |     |     |
 | --- | --- |
-| [`Map`](xref:Xamarin.Forms.Maps.Map) displays a map. The **Xamarin.Forms.Maps** Nuget package must be installed. Android and Universal Windows Platform require a map authorization key.<br /><br />[API Documentation](xref:Xamarin.Forms.Maps.Map) / [Guide](~/xamarin-forms/user-interface/map/index.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Map Example](views-images/Map.png "Map Example")](views-images/Map-Large.png#lightbox "Map Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
+| [`Map`](xref:Xamarin.Forms.Maps.Map) displays a map. The **Xamarin.Forms.Maps** NuGet package must be installed. Android and Universal Windows Platform require a map authorization key.<br /><br />[API Documentation](xref:Xamarin.Forms.Maps.Map) / [Guide](~/xamarin-forms/user-interface/map/index.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps/) | [![Map Example](views-images/Map.png "Map Example")](views-images/Map-Large.png#lightbox "Map Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MapDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MapDemoPage.xaml) |
 |     |     |
 
 ## Views that initiate commands
@@ -89,6 +89,13 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 |     |     |
 | --- | --- |
 | [`SearchBar`](xref:Xamarin.Forms.SearchBar) displays an area for the user to type a text string, and a button (or a keyboard key) that signals the application to perform a search. The [`Text`](xref:Xamarin.Forms.SearchBar.Text) property provides access to the text, and the [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) event indicates that the button has been pressed.<br /><br />[API Documentation](xref:Xamarin.Forms.SearchBar) / [Guide](~/xamarin-forms/user-interface/searchbar.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-searchbardemos/) | [![SearchBar Example](views-images/SearchBar.png "SearchBar Example")](views-images/SearchBar-Large.png#lightbox "SearchBar Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SearchBarDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SearchBarDemoPage.xaml.cs) |
+|     |     |
+
+### SwipeView
+
+|     |     |
+| --- | --- |
+| `SwipeView` is a container control that wraps around an item of content, and provides context menu items that are revealed by a swipe gesture. Each menu item is represented by a `SwipeItem`, which has a `Command` property that executes an `ICommand` when the item is tapped.<br /><br /> [Guide](~/xamarin-forms/user-interface/swipeview.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![SwipeView Example](views-images/SwipeView.png "SwipeView example")](views-images/SwipeView-Large.png#lightbox "SwipeView Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/SwipeViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/SwipeViewDemoPage.xaml.cs) |
 |     |     |
 
 ## Views for setting values
@@ -139,16 +146,12 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 
 These two classes derive from the [`InputView`](xref:Xamarin.Forms.InputView) class, which defines the [`Keyboard`](xref:Xamarin.Forms.InputView.Keyboard) property.
 
-<a name="entry" />
-
 ### Entry
 
 |     |     |
 | --- | --- |
 | [`Entry`](xref:Xamarin.Forms.Entry) allows the user to enter and edit a single line of text. The text is available as the [`Text`](xref:Xamarin.Forms.Entry.Text) property, and the [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) and [`Completed`](xref:Xamarin.Forms.Entry.Completed) events are fired when the text changes or the user signals completion by tapping the enter key.<br /><br />Use an [`Editor`](#editor) for entering and editing multiple lines of text.<br /><br />[API Documentation](xref:Xamarin.Forms.Entry) / [Guide](~/xamarin-forms/user-interface/text/entry.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-text) | [![Entry Example](views-images/Entry.png "Entry Example")](views-images/Entry-Large.png#lightbox "Entry Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/EntryDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/EntryDemoPage.xaml) |
 |     |     |
-
-<a name="editor" />
 
 ### Editor
 
@@ -159,16 +162,12 @@ These two classes derive from the [`InputView`](xref:Xamarin.Forms.InputView) cl
 
 ## Views to indicate activity
 
-<a name="activityindicator" />
-
 ### ActivityIndicator
 
 |     |     |
 | --- | --- |
 | [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator) uses an animation to show that the application is engaged in a lengthy activity without giving any indication of progress. The [`IsRunning`](xref:Xamarin.Forms.ActivityIndicator.IsRunning) property controls the animation.<br /><br />If the activity's progress is known, use a [`ProgressBar`](#progressbar) instead.<br /><br />[API Documentation](xref:Xamarin.Forms.ActivityIndicator) / [Guide](~/xamarin-forms/user-interface/activityindicator.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-activityindicatordemos/) | [![ActivityIndicator Example](views-images/ActivityIndicator.png "ActivityIndicator Example")](views-images/ActivityIndicator-Large.png#lightbox "ActivityIndicator Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ActivityIndicatorDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ActivityIndicatorDemoPage.xaml) |
 |     |     |
-
-<a name="progressbar" />
 
 ### ProgressBar
 
@@ -193,7 +192,12 @@ These two classes derive from the [`InputView`](xref:Xamarin.Forms.InputView) cl
 | [`CollectionView`](xref:Xamarin.Forms.CollectionView) displays a scrollable list of selectable data items, using different layout specifications. It aims to provide a more flexible, and performant alternative to [`ListView`](xref:Xamarin.Forms.ListView). Set the `ItemsSource` property to a collection of objects, and set the `ItemTemplate` property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) object describing how the items are to be formatted. The `SelectionChanged` event signals that a selection has been made, which is available as the `SelectedItem` property.<br /><br />[Guide](~/xamarin-forms/user-interface/collectionview/index.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/) | [![CollectionView Example](views-images/CollectionView.png "CollectionView Example")](views-images/CollectionView-Large.png#lightbox "CollectionView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CollectionViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CollectionViewDemoPage.xaml) |
 |     |     |
 
-<a name="listView" />
+### IndicatorView
+
+|     |     |
+| --- | --- |
+| `IndicatorView` displays indicators that represent the number of items in a `CarouselView`. Set the `ItemsSourceBy` property to the `CarouselView` object to display indicators for. <br /><br />[Guide](~/xamarin-forms/user-interface/indicatorview.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-indicatorviewdemos/) | [![IndicatorView Example](views-images/IndicatorView.png "IndicatorView Example")](views-images/IndicatorView-Large.png#lightbox "IndicatorView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/IndicatorViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/IndicatorViewDemoPage.xaml) |
+|     |     |
 
 ### ListView
 
@@ -206,10 +210,8 @@ These two classes derive from the [`InputView`](xref:Xamarin.Forms.InputView) cl
 
 |     |     |
 | --- | --- |
-| [`Picker`](xref:Xamarin.Forms.Picker) displays a selected item from a list of text strings, and allows selecting that item when the view is tapped. Set the [`Items`](xref:Xamarin.Forms.Picker.Items) property to a list of strings, or the [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property to a collection of objects. The [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) event is fired when an item is selected.<br /><br />The `Picker` displays the list of items only when it's selected. Use a [`ListView`](#listView) or [`TableView`](#tableView) for a scrollable list that remains on the page.<br /><br />[API Documentation](xref:Xamarin.Forms.Picker) / [Guide](~/xamarin-forms/user-interface/picker/index.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo) | [![Picker Example](views-images/Picker.png "Picker Example")](views-images/Picker-Large.png#lightbox "Picker Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
+| [`Picker`](xref:Xamarin.Forms.Picker) displays a selected item from a list of text strings, and allows selecting that item when the view is tapped. Set the [`Items`](xref:Xamarin.Forms.Picker.Items) property to a list of strings, or the [`ItemsSource`](xref:Xamarin.Forms.Picker.ItemsSource) property to a collection of objects. The [`SelectedIndexChanged`](xref:Xamarin.Forms.Picker.SelectedIndexChanged) event is fired when an item is selected.<br /><br />The `Picker` displays the list of items only when it's selected. Use a [`ListView`](#listview) or [`TableView`](#tableview) for a scrollable list that remains on the page.<br /><br />[API Documentation](xref:Xamarin.Forms.Picker) / [Guide](~/xamarin-forms/user-interface/picker/index.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-pickerdemo) | [![Picker Example](views-images/Picker.png "Picker Example")](views-images/Picker-Large.png#lightbox "Picker Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/PickerDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/PickerDemoPage.xaml.cs) |
 |     |     |
-
-<a name="tableView" />
 
 ### TableView
 

@@ -44,7 +44,7 @@ Information about a keystore is obtained by running the `keytool`
 command from the JDK. This tool is typically found in the Java bin
 directory:
 
-**C:\\Program Files (x86)\\Java\\jdk[VERSION]\\bin\\keytool.exe**
+**C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_[VERSION]\\bin\\keytool.exe**
 
 # [Visual Studio for Mac](#tab/macos)
 

@@ -9,15 +9,13 @@ ms.author: daortin
 ms.date: 04/12/2017
 ---
 
-# Provisioning Profiles for Xamarin.Mac apps
+# Provisioning profiles for Xamarin.Mac apps
 
 Provisioning profiles allow a developer to incorporate several macOS (formerly known as Mac OS X) specific features (such as iCloud and Push Notifications) into their Xamarin.Mac apps. They must create, download and install a Mac Provisioning Profile for each application they are developing that use these features.
 
 [![](profiles-images/certif13.png "The Apple Provisioning Portal")](profiles-images/certif13.png#lightbox)
 
-<a name="Development_Provisioning_Profile" />
-
-## Development Provisioning Profile
+## Development provisioning profile
 
 A Development Provisioning Profile allows a Mac App Store-targeted app to be tested on the specific computers that have been set-up in the profile. This is particularly relevant when using macOS features like iCloud and Push Notifications.
 
@@ -56,9 +54,7 @@ Do the following:
 
 A new Development Provisioning Profile will need to be created for each new app or when a new computer is being added to test on.
 
-<a name="Production_Provisioning_Profile" />
-
-## Production Provisioning Profile
+## Production provisioning profile
 
 Production provisioning profiles are required to build a package for
 submission to the Mac App Store.
@@ -89,7 +85,7 @@ Do the following:
 
 If the developer ever changes the features being used by an App ID (eg. enabling iCloud or push notifications) then they should re-create the provision profiles for that App ID.
 
-## Related Links
+## Related links
 
 - [Installation](~//mac/get-started/installation.md)
 - [Hello, Mac sample](~//mac/get-started/hello-mac.md)

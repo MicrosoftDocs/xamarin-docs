@@ -27,11 +27,11 @@ in the code.
 
 ## 1. Add NuGet Packages
 
-Add these Nuget packages to your Xamarin.Forms .NET Standard library and application projects:
+Add these NuGet packages to your Xamarin.Forms .NET Standard library and application projects:
 
 - Xamarin.Forms.Pages
 - Xamarin.Forms.Theme.Base
-- A theme implementation Nuget (eg. Xamarin.Forms.Theme.Light)
+- A theme implementation NuGet (eg. Xamarin.Forms.Theme.Light)
 
 ## 2. Add Theme Reference
 
@@ -150,7 +150,7 @@ The above steps should result in a working data page:
 
 [![](get-started-images/demo-sml.png "DataPages Sample Application")](get-started-images/demo.png#lightbox "DataPages Sample Application")
 
-This works because the pre-built style **"Events"** exists in the Light Theme Nuget package
+This works because the pre-built style **"Events"** exists in the Light Theme NuGet package
 and has styles defined that match the data source (eg. "title", "image", "presenter").
 
 The "Events" `StyleClass` is built to display the `ListDataPage` control
@@ -165,7 +165,7 @@ The inherited style can be overridden by specifying a
 template and using data source bindings. The XAML below declares
 a custom template for each row using the new `ListItemControl`
 and `{p:DataSourceBinding}`
-syntax which is included in the **Xamarin.Forms.Pages** Nuget:
+syntax which is included in the **Xamarin.Forms.Pages** NuGet:
 
 ```xaml
 <p:ListDataPage.DefaultItemTemplate>

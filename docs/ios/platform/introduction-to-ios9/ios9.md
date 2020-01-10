@@ -52,9 +52,9 @@ Nugets you are using to address the two issues mentioned above.
 These issues are fixed simply by re-building your app with the
 latest Stable release of Xamarin.iOS.
 
-Similarly, Component vendors and Nuget authors are **not** required to submit
+Similarly, Component vendors and NuGet authors are **not** required to submit
 new builds just to fix the two issues mentioned above. However, if any a
-Component or Nuget uses `UICollectionView` or load views from **Xib** files, an update
+Component or NuGet uses `UICollectionView` or load views from **Xib** files, an update
 *may* be required to address the iOS 9 compatibility issues mentioned below.
 
 <a name="compat" />

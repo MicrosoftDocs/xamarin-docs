@@ -226,7 +226,7 @@
             - name: Text Input
               href: user-interface/controls/text-input.md
             - name: Web Views
-              href: user-interface/controls/uiwebview.md
+              href: user-interface/controls/webview.md
         - name: Programmatic Layout Constraints
           href: user-interface/programmatic-layout-constraints.md
         - name: MonoTouch.Dialog
@@ -453,8 +453,8 @@
           href: platform/textkit.md
         - name: 3D Touch
           href: platform/3d-touch.md
-        - name: Touch ID
-          href: platform/touchid.md
+        - name: Touch ID and Face ID
+          href: platform/touch-id-face-id.md
         - name: User Notifications Framework
           items: 
             - name: Overview
@@ -1112,4 +1112,4 @@
     - name: Release Notes
       href: https://docs.microsoft.com/xamarin/ios/release-notes/
     - name: Samples
-      href: samples/index.yml
+      href: samples/index.md

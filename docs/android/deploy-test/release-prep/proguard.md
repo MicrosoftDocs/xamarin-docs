@@ -108,10 +108,9 @@ Use the following steps to enable ProGuard in your app project:
 
     [![Select Release configuration](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
-2. Enable ProGuard by checking the **Enable ProGuard** option under the 
-    **Packaging** tab of **Properties > Android Options**: 
+2. Choose **ProGuard** from the **Code shrinker** drop-down list on the **Properties > Android Options** window: 
 
-    [![Enable Proguard option selected](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)
+    [![Proguard code shrinker selected](proguard-images/03-enable-proguard-shrinker-sml.png)](proguard-images/03-enable-proguard-shrinker.png#lightbox)
 
 For most Xamarin.Android apps, the default ProGuard configuration file 
 supplied by Xamarin.Android will be sufficient to remove all (and only)

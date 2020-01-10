@@ -239,6 +239,9 @@ For more information, see [Calling a Google API](https://developers.google.com/i
 
 Xamarin.Auth securely stores `Account` objects in an account store so that applications do not always have to re-authenticate users. The `AccountStore` class is responsible for storing account information, and is backed by Keychain services in iOS, and the `KeyStore` class in Android.
 
+> [!IMPORTANT]
+> The `AccountStore` class in Xamarin.Auth has been deprecated, and the Xamarin.Essentials `SecureStorage` class should be used instead. For more information, see [Migrating from AccountStore to Xamarin.Essentials SecureStorage](https://github.com/xamarin/Xamarin.Auth/wiki/Migrating-from-AccountStore-to-Xamarin.Essentials-SecureStorage).
+
 The following code example shows how an `Account` object is securely saved:
 
 ```csharp

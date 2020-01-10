@@ -6,7 +6,7 @@ ms.assetid: 62CAEB63-0800-44F4-9B8C-EE632138C2F5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/19/2018
+ms.date: 12/04/2019
 ---
 
 # Xamarin.Forms Button
@@ -748,6 +748,9 @@ Here's the program running on iOS, Android, and the UWP:
 The `Button` class defines an [`ImageSource`](xref:Xamarin.Forms.Button.Image) property that allows you to display a bitmap image on the `Button`, either alone or in combination with text. You can also specify how the text and image are arranged.
 
 The `ImageSource` property is of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), which means that the bitmaps can be loaded from a file, embedded resource, URI, or stream.
+
+> [!NOTE]
+> While a `Button` can load an animated GIF, it will only display the first frame of the GIF.
 
 Each platform supported by Xamarin.Forms allows images to be stored in multiple sizes for different pixel resolutions of the various devices that the application might run on. These multiple bitmaps are named or stored in such a way that the operating system can pick the best match for the device's video display resolution.
 

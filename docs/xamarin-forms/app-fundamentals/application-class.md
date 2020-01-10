@@ -4,6 +4,7 @@ description: "This article explains features of the default App class, which inc
 ms.prod: xamarin
 ms.assetid: 421F8294-1944-46A4-8459-D2BD5AAABC9D
 ms.technology: xamarin-forms
+ms.custom: video
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
@@ -238,3 +239,9 @@ public sealed partial class MainPage
 Note that `Forms.Init()` must be called from **App.xaml.cs** in the UWP project.
 
 For more information, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md), which includes steps to add a UWP project to an existing Xamarin.Forms solution that doesn't target UWP.
+
+## Related video
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -54,6 +54,6 @@ Since they are no longer needed, we have Disabled/Delisted the following Compone
 - Google Play Services (JellyBean)
 - Google Play Services (KitKat)
 
-The existing _Google Play Services (ICS)_ Component/Nuget has been renamed to _Google Play Services_ and will be kept up to date going forward. All projects referencing one of the Disabled/Delisted packages should be updated to use this one.
+The existing _Google Play Services (ICS)_ Component/NuGet has been renamed to _Google Play Services_ and will be kept up to date going forward. All projects referencing one of the Disabled/Delisted packages should be updated to use this one.
 
 The disabled Components still exist and should be restorable for projects they are still referenced in, to avoid breaking them. Similarly the delisted NuGet packages still exist and can be restored. They will not be updated going forward.

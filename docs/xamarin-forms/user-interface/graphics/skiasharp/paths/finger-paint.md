@@ -48,7 +48,7 @@ The [**FingerPaintPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/
 
 Attaching the `TouchEffect` directly to the `SKCanvasView` does not work under all platforms.
 
-The  [**FingerPaintPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/FingerPaintPage.xaml.cs) code-behind file defines two collections for storing the `SKPath` objects, as well as an `SKPaint` object for rendering these paths:
+The  [**FingerPaintPage.xaml.cs**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/FingerPaintPage.xaml.cs) code-behind file defines two collections for storing the `SKPath` objects, as well as an `SKPaint` object for rendering these paths:
 
 ```csharp
 public partial class FingerPaintPage : ContentPage

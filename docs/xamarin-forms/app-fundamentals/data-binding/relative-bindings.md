@@ -6,7 +6,7 @@ ms.assetid: CC64BB1D-8303-46B1-94B6-4EF2F20317A8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/30/2019
+ms.date: 12/04/2019
 ---
 
 # Xamarin.Forms Relative Bindings
@@ -18,7 +18,7 @@ Relative bindings provide the ability to set the binding source relative to the 
 The `RelativeSource` markup extension is supported by the `RelativeSourceExtension` class, which defines the following properties:
 
 - `Mode`, of type `RelativeBindingSourceMode`, describes the location of the binding source relative to the position of the binding target.
-- `AncestorLevel`, of type `int`, an optional ancestor level to look for, when the `Mode` property is `FindAncestor`.
+- `AncestorLevel`, of type `int`, an optional ancestor level to look for, when the `Mode` property is `FindAncestor`. An `AncestorLevel` of `n` skips `n-1` instances of the `AncestorType`.
 - `AncestorType`, of type `Type`, the type of ancestor to look for, when the `Mode` property is `FindAncestor`.
 
 > [!NOTE]
@@ -76,6 +76,9 @@ The `FindAncestor` and `FindAncestorBindingContext` relative binding modes are u
 > The `AncestorType` property must be set to a `Type` when using the `FindAncestor` and `FindAncestorBindingContext` relative binding modes, otherwise a `XamlParseException` is thrown.
 
 If the `Mode` property isn't explicitly set, setting the `AncestorType` property to a type that derives from [`Element`](xref:Xamarin.Forms.Element) will implicitly set the `Mode` property to `FindAncestor`. Similarly, setting the `AncestorType` property to a type that does not derive from `Element` will implicitly set the `Mode` property to `FindAncestorBindingContext`.
+
+> [!NOTE]
+> Relative bindings that use the `FindAncestorBindingContext` mode will be reapplied when the `BindingContext` of any ancestors change.
 
 The following XAML shows an example where the `Mode` property will be implicitly set to `FindAncestorBindingContext`:
 

@@ -24,7 +24,7 @@ The **General** tab contains four fields that must be entered to generate a NuGe
 
 [![](metadata-images/metadata-general-sml.png "NuGet package required metadata window")](metadata-images/metadata-general.png#lightbox)
 
-- **ID** – The package identifier, which should be unique within Nuget.org (or wherever the package will be distributed). Follow this [guidance](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) and only use characters that are valid in a URL (no spaces, and avoid most special characters).
+- **ID** – The package identifier, which should be unique within NuGet.org (or wherever the package will be distributed). Follow this [guidance](https://docs.microsoft.com/nuget/create-packages/creating-a-package#choosing-a-unique-package-identifier-and-setting-the-version-number) and only use characters that are valid in a URL (no spaces, and avoid most special characters).
 - **Version** – Choose a version number consistent with [NuGet's versioning rules](https://docs.microsoft.com/nuget/create-packages/dependency-versions).
 - **Authors** – Comma-separated list of names.
 - **Description** – Overview of the package's features which is displayed when users are selecting the package.

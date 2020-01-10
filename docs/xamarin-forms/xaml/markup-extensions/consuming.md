@@ -6,7 +6,7 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/27/2019
+ms.date: 12/04/2019
 ---
 
 # Consuming XAML Markup Extensions
@@ -562,8 +562,8 @@ The `FontImage` markup extension is supported by the `FontImageExtension` class,
 
 - `FontFamily` of type `string`, the font family to which the font icon belongs.
 - `Glyph` of type `string`, the unicode character value of the font icon.
-- `Color` of type `Color`, the color to be used when displaying the font icon.
-- `Size` of type `double`, the size, in device-independent units, of the rendered font icon.
+- `Color` of type [`Color`](xref:Xamarin.Forms.Color), the color to be used when displaying the font icon.
+- `Size` of type `double`, the size, in device-independent units, of the rendered font icon. The default value is 30. In addition, this property can be set to a named font size.
 
 > [!NOTE]
 > The XAML parser allows the `FontImageExtension` class to be abbreviated as `FontImage`.

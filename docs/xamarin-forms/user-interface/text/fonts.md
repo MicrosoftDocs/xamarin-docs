@@ -6,7 +6,7 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/28/2019
+ms.date: 11/04/2019
 ---
 
 # Fonts in Xamarin.Forms
@@ -44,6 +44,8 @@ The `FontSize` property can be set to a double value, for instance:
 ```csharp
 label.FontSize = 24;
 ```
+
+The size value is measured in device independent units. For more information, see [Units of Measurement](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
 
 Xamarin.Forms also defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumeration that represent specific font sizes. For more information about named font sizes, see [Named font sizes](#named-font-sizes).
 
@@ -129,6 +131,8 @@ Xamarin.Forms defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) 
 | `Subtitle` | 22 | 16 | 20 |
 | `Caption` | 12 | 12 | 12 |
 
+The size values are measured in device independent units. For more information, see [Units of Measurement](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
+
 Named font sizes can be set through both XAML and code. In addition, the `Device.GetNamedSize` method can be called to return a `double` that represents the named font size:
 
 ```csharp
@@ -193,8 +197,6 @@ new Label
 > [!NOTE]
 > Note that the font file name and font name may be different. To discover the font name on Windows, right-click the .ttf file and select **Preview**. The font name can then be determined from the preview window.
 
-The common code for the application is now complete. Platform-specific phone dialer code will now be implemented as a [DependencyService](~/xamarin-forms/app-fundamentals/dependency-service/index.md).
-
 ### XAML
 
 You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) in XAML to render a custom font:
@@ -216,7 +218,7 @@ You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#i
 Font icons can be displayed by Xamarin.Forms applications by specifying the font icon data in a `FontImageSource` object. This class, which derives from the [`ImageSource`](xref:Xamarin.Forms.ImageSource) class, has the following properties:
 
 - `Glyph` – the unicode character value of the font icon, specified as a `string`.
-- `Size` – a `double` value that indicates the size, in device-independent units, of the rendered font icon. The default value is 30.
+- `Size` – a `double` value that indicates the size, in device-independent units, of the rendered font icon. The default value is 30. In addition, this property can be set to a named font size.
 - `FontFamily` – a `string` representing the font family to which the font icon belongs.
 - `Color` – an optional [`Color`](xref:Xamarin.Forms.Color) value to be used when displaying the font icon.
 

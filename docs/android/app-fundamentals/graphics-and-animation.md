@@ -245,7 +245,7 @@ To see what this would look like, run the *AnimationsDemo* project and
 select the Shape Drawable item from the main menu. We should see
 something similar to the following screenshot:
 
-![Textview with a custom background, drawable with a gradient and rounded corners](graphics-and-animation-images/image1.png)
+[![Textview with a custom background, drawable with a gradient and rounded corners](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
 
 For more details about the XML elements and syntax of Drawable
 Resources, consult
@@ -305,7 +305,7 @@ instructions. For example:
 
 #### Drawing with the Canvas API
 
-Let's see an example of the Canvas API in action. The following code
+Here's an example of the Canvas API in action. The following code
 snippet shows how to draw a view:
 
 ```csharp
@@ -341,7 +341,7 @@ included with the source code for this article. By starting up the
 application and selecting the Drawing item from the main menu, we
 should a screen similar to the following:
 
-![Screen with red paint and green paint objects](graphics-and-animation-images/image3.png)
+[![Screen with red paint and green paint objects](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
 ## Animation
 

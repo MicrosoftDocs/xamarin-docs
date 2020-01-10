@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/19/2019
+ms.date: 11/04/2019
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
 
@@ -367,6 +367,7 @@ The following CSS properties are supported by Xamarin.Forms (in the **Values** c
 |`font-style`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `TimePicker`, `Span`|`bold` \| `italic` \| `initial` |`font-style: bold;`|
 |`height`|`VisualElement`|_double_ \| `initial` |`min-height: 250;`|
 |`justify-content`|`FlexLayout`| `start` \| `center` \| `end` \| `spacebetween` \| `spacearound` \| `spaceevenly` \| `flex-start` \| `flex-end` \| `space-between` \| `space-around` \| `initial`|`justify-content: flex-end;`|
+|`letter-spacing`|`Button`, `DatePicker`, `Editor`, `Entry`, `Label`, `Picker`, `SearchBar`, `SearchHandler`, `Span`, `TimePicker`|_double_ \| `initial`|`letter-spacing: 2.5;`|
 |`line-height`|`Label`, `Span`|_double_ \| `initial` |`line-height: 1.8;`|
 |`margin`|`View`|_thickness_ \| `initial` |`margin: 6 12;`|
 |`margin-left`|`View`|_thickness_ \| `initial` |`margin-left: 3;`|
@@ -403,6 +404,8 @@ The following properties are currently unsupported:
 - Shorthand properties, such as `font`, and `border`.
 
 In addition, there's no `inherit` value and so inheritance isn't supported. Therefore you can't, for example, set the `font-size` property on a layout and expect all the [`Label`](xref:Xamarin.Forms.Label) instances in the layout to inherit the value. The one exception is the `direction` property, which has a default value of `inherit`.
+
+Targeting `Span` elements has a known issue preventing spans from being the target of CSS styles by both element and name (using the `#` symbol). The `Span` element derives from `GestureElement`, which does not have the `StyleClass` property so spans do not support CSS class targeting. For more information, see [Not able to apply CSS styling to Span control](https://github.com/xamarin/Xamarin.Forms/issues/5979).
 
 ### Xamarin.Forms specific properties
 

@@ -260,7 +260,7 @@ public string CreateAuthorizationRequest()
     dic.Add("client_secret", GlobalSetting.Instance.ClientSecret); 
     dic.Add("response_type", "code id_token");
     dic.Add("scope", "openid profile basket orders locations marketing offline_access");
-    dic.Add("redirect_uri", GlobalSetting.Instance.IdentityCallback);
+    dic.Add("redirect_uri", GlobalSetting.Instance.Callback);
     dic.Add("nonce", Guid.NewGuid().ToString("N"));
     dic.Add("code_challenge", CreateCodeChallenge());
     dic.Add("code_challenge_method", "S256");

@@ -238,16 +238,18 @@ different requirements for specifying the file location:
 The following code uses conditional compilation to ensure the `DatabaseFilePath` is correct for each platform:
 
 ```csharp
-public static string DatabaseFilePath {
-        get {
-    var filename = "TodoDatabase.db3";
+public static string DatabaseFilePath
+{
+    get
+    {
+        var filename = "TodoDatabase.db3";
 #if SILVERLIGHT
-    // Windows Phone 8
-    var path = filename;
+        // Windows Phone 8
+        var path = filename;
 #else
 
 #if __ANDROID__
-    string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal); ;
+        string libraryPath = Environment.GetFolderPath(Environment.SpecialFolder.Personal);
 #else
 #if __IOS__
         // we need to put in /Library/ on iOS5.1 to meet Apple's iCloud terms
@@ -259,9 +261,10 @@ public static string DatabaseFilePath {
         string libraryPath = Windows.Storage.ApplicationData.Current.LocalFolder.Path;
 #endif
 #endif
-        var path = Path.Combine (libraryPath, filename);
+        var path = Path.Combine(libraryPath, filename);
 #endif
         return path;
+    }
 }
 ```
 

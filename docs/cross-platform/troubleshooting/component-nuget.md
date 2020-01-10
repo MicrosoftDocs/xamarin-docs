@@ -145,7 +145,7 @@ To update your solution, delete the **Component** entry from the solution:
 
 The NuGet package will remain listed in the **Packages** node and your
 app will compile and run as usual. In future, updates to this package
-will be performed via the **Nuget** update feature:
+will be performed via the **NuGet** update feature:
 
 ![Update NuGet package](component-nuget-images/nuget-update-sml.png)
 
