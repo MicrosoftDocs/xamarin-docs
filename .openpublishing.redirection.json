@@ -595,6 +595,22 @@
     {
       "source_path": "docs/xamarin-forms/internals/net-standard.md",
       "redirect_url": "/xamarin/cross-platform/app-fundamentals/net-standard/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/introduction.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/creating.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
     }
   ]
 }

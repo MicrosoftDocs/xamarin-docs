@@ -174,10 +174,10 @@ In this example, the [`Frame`](xref:Xamarin.Forms.Frame), which is the root elem
 
 [![Screenshot of a TemplatedParent mode relative binding, on iOS and Android](relative-bindings-images/templatedparent-relative-binding.png "TemplatedParent relative binding mode")](relative-bindings-images/templatedparent-relative-binding-large.png#lightbox "TemplatedParent relative binding mode")
 
-For more information about control templates, see [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+For more information about control templates, see [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## Related links
 
 - [Data Binding Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/databindingdemos)
 - [XAML Markup Extensions](~/xamarin-forms/xaml/markup-extensions/index.md)
-- [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+- [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md)

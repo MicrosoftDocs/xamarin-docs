@@ -56,14 +56,14 @@ These classes derive from [`Layout`](xref:Xamarin.Forms.Layout), which defines [
 
 |     |     |
 | --- | --- |
-| [`TemplatedView`](xref:Xamarin.Forms.TemplatedView) displays content with a control template, and is the base class for [`ContentView`](#contentView).<br /><br />[API Documentation](xref:Xamarin.Forms.TemplatedView) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md) | [![TemplatedView Example](layouts-images/TemplatedView.png "TemplatedView Example")](layouts-images/TemplatedView.png#lightbox "TemplatedView Example") |
+| [`TemplatedView`](xref:Xamarin.Forms.TemplatedView) displays content with a control template, and is the base class for [`ContentView`](#contentView).<br /><br />[API Documentation](xref:Xamarin.Forms.TemplatedView) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedView Example](layouts-images/TemplatedView.png "TemplatedView Example")](layouts-images/TemplatedView.png#lightbox "TemplatedView Example") |
 |     |     |
 
 ### ContentPresenter
 
 |     |     |
 | --- | --- |
-| [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) is a layout manager for templated views, used within a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) to mark where the content that is to be presented appears.<br /><br />[API Documentation](xref:Xamarin.Forms.ContentPresenter) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md) | [![ContentPresenter Example](layouts-images/ContentPresenter.png "ContentPresenter Example")](layouts-images/ContentPresenter.png#lightbox "ContentPresenter Example") |
+| [`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter) is a layout manager for templated views, used within a [`ControlTemplate`](xref:Xamarin.Forms.ControlTemplate) to mark where the content that is to be presented appears.<br /><br />[API Documentation](xref:Xamarin.Forms.ContentPresenter) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![ContentPresenter Example](layouts-images/ContentPresenter.png "ContentPresenter Example")](layouts-images/ContentPresenter.png#lightbox "ContentPresenter Example") |
 |     |     |
 
 ## Layouts with Multiple Children

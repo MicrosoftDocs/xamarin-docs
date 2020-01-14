@@ -22,7 +22,7 @@ Common usages for this are things such as authentication dialogs, prompts and to
 3. `ContentPresenter`
 4. `TemplateBinding`
 
-But it's important to know that these are _not_ serving the same purpose in Xamarin.Forms. For more information on this feature, check out the [documentation page](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+But it's important to know that these are _not_ serving the same purpose in Xamarin.Forms. For more information on this feature, check out the [documentation page](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## XAML
 

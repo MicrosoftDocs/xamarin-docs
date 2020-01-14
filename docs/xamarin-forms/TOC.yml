@@ -323,17 +323,11 @@
             - name: Custom Renderers
               href: app-fundamentals/shell/customrenderers.md
         - name: Templates
-          href: app-fundamentals/templates/index.md
           items:
+            - name: Overview
+              href: app-fundamentals/templates/index.md
             - name: Control Templates
-              href: app-fundamentals/templates/control-templates/index.md
-              items:
-                - name: Introduction
-                  href: app-fundamentals/templates/control-templates/introduction.md
-                - name: Control Template Creation
-                  href: app-fundamentals/templates/control-templates/creating.md
-                - name: Template Bindings
-                  href: app-fundamentals/templates/control-templates/template-binding.md
+              href: app-fundamentals/templates/control-template.md
             - name: Data Templates
               href: app-fundamentals/templates/data-templates/index.md
               items:
