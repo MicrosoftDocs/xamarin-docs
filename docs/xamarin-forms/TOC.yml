@@ -644,6 +644,8 @@
               href: platform/ios/named-font-size-scaling.md
             - name: Cell Background Color
               href: platform/ios/cell-background-color.md
+            - name: DatePicker Item Selection
+              href: platform/ios/datepicker-selection.md
             - name: Entry Cursor Color
               href: platform/ios/entry-cursor-color.md
             - name: Entry Font Size
@@ -684,6 +686,8 @@
               href: platform/ios/slider-thumb.md
             - name: SwipeView Swipe Transition Mode
               href: platform/ios/swipeview-swipetransitionmode.md
+            - name: TimePicker Item Selection
+              href: platform/ios/timepicker-selection.md
             - name: VisualElement Blur
               href: platform/ios/visualelement-blur.md
             - name: VisualElement Drop Shadows
