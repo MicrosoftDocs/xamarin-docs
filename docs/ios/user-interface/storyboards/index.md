@@ -24,7 +24,7 @@ Designer to create your storyboards while using C# to program the navigation.
 
 ## Requirements
 
-Storyboards can be used with the iOS Designer in Visual Studio for Mac or with Visual Studio 2017 with the Xamarin workloads installed.
+Storyboards can be used with Xcode, the iOS Designer in Visual Studio for Mac, and Visual Studio 2019 with the Xamarin workloads installed.
 
 ## What is a Storyboard?
 
@@ -201,13 +201,9 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
 
 -----
 
-## Creating a Storyboard with the iOS Designer
+## Creating a Storyboard with Xcode
 
-A Storyboard can be created using the Xamarin Designer for iOS, which has been integrated seamlessly with Visual Studio for Mac and Visual Studio.
-
-To get started using the iOS Designer to create storyboards, follow the [Hello, iOS Multiscreen](~/ios/get-started/hello-ios-multiscreen/index.md) guide. In this walkthrough you will explore navigation between View Controllers using Segues, and how to handle events on your controls.
-
-## Instantiate Storyboards Manually
+A Storyboard can be created and modified using Xcode for use in your iOS apps developed with Visual Studio for Mac.
 
 Storyboards totally replace individual XIB files in your project, however
 individual view controllers in a Storyboard can still be instantiated using `Storyboard.InstantiateViewController`.
@@ -220,37 +216,35 @@ ourselves.
 The screenshot below shows two view controllers on our design surface with no segue between them. The next section will walk 
 through how that transition can be set up in code.
 
- [![](images/viewcontrollerspink.png "This screenshot shows two view controllers on the design surface with no segue between them")](images/viewcontrollerspink.png#lightbox)
-
 1. Add an _Empty iPhone Storyboard_ to an existing project project:
+
+    [![](images/add-storyboard2.png "Adding storyboard")](images/add-storyboard2.png#lightbox)
+
+2. Right-click the Storyboard file and select **Open With > Xcode Interface Builder** to open it in Xcode.
+
+3. In Xcode, open the Library (via **View > Show Library** or *Shift + Command + L*) to show a list of objects which can be added to the Storyboard. Add a `Navigation Controller` to the Storyboard by dragging the object from the list onto the Storyboard. By default, the `Navigation Controller` will provide two screens; the screen on the right is a `TableViewController` which we will be replacing with a simpler view, so it can be removed by clicking the view and pressing the Delete key. 
+
+    [![](images/add-navigation-controller.png "Adding a NavigationController from the Library")](images/add-navigation-controller.png#lightbox)
+
+4. This View Controller will have its own custom class, and it also needs its own Storyboard ID. When clicking on the box above this newly added view, there will be three icons, the leftmost of which represents the View Controller for the view. By selecting this icon, you can then set the class and ID values on the right pane's identity tab. Set these values to `MainViewController` and make certain to check `Use Storyboard ID`.
+
+    [![](images/identity-panel.png "Setting the MainViewController in the identity panel")](images/identity-panel.png#lightbox)
+
+5. Using the Library again, drag a View Controller onto the screen. This will be set as the root view controller. Holding the Control key, click and drag from the Navigation Controller on the left to the newly added View Controller on the right, and click *root view controller* in the menu.
     
-    [![](images/add-storyboard1.png "Adding storyboard")](images/add-storyboard1.png#lightbox)
+    [![](images/add-view-controller.png "Adding a NavigationController from the Library and setting the MainViewController as a Root View Controller")](images/add-view-controller.png#lightbox)
 
-2. Double click on the newly created storyboard to open it, and add a new **Navigation Controller** to the design surface. As the Navigation Controller is UI-less, by default it will come with a Root View Controller, as illustrated below:
-
-    [![](images/uinavigationcontroller.png "View Controllers with Segues")](images/uinavigationcontroller.png#lightbox)
-
-3. Select the _View Controller_ by clicking on the black bar at the bottom. In the Designer's **Property Pad**, under **Identity** we can specify a custom class as well as a unique ID for the View Controller. Set the **class name** and **Storyboard ID** to `MainViewController`.
-
-    [![](images/identitypanelnew.png "Specify custom class")](images/identitypanelnew.png#lightbox)
-
-4. Later, we will need to instantiate our view controllers from the storyboard, and will use the Storyboard ID to reference them in our code. Setting the Restoration ID to match the Storyboard ID ensures that the view controller gets recreated correctly if the state needs to be restored.
-
-5. We currently only have one view controller. Drag another view controller onto the design surface. In the **Property Pad**, under Identity, set the class and Storyboard ID to `PinkViewController`, as illustrated below:
-
-    [![](images/pinkvcnew.png "The Property Pad")](images/pinkvcnew.png#lightbox)
+6. This app will navigate to another view, so add one more view to the Storyboard, just as before. We will call this a `PinkViewController`, and those values can be set in the same manner as with the `MainViewController`.
     
-    The IDE will create these custom classes for the view controllers. These can be viewed in the **Solution Pad**, as illustrated in the screenshot below:
-    
-    [![](images/solution-pad.png "Solution Pad")](images/solution-pad.png#lightbox)
+    [![](images/add-additional-view-controller.png "Adding an additional View Controller")](images/add-additional-view-controller.png#lightbox)
 
-6. In the `PinkViewController`, select the view by clicking towards the center of the controller's frame. In the Properties Pad, under View change the **Background** to Magenta:
-    
-    [![](images/pinkcontroller.png "Set Background color")](images/pinkcontroller.png#lightbox)
+7. Since View Controller will have a pink background, that property can be set in the attributes panel using the dropdown next to `Background`.
 
-7. Finally, drag a button from the **ToolBox** onto the `MainViewController`. In the Properties Pad, give it the name `PinkButton` and the Title GoToPink, as illustrated below:
+    [![](images/set-pink-background.png "Adding an additional View Controller")](images/set-pink-background.png#lightbox)
 
-    [![](images/pinkbutton.png "Set Button Name")](images/pinkbutton.png#lightbox)
+8. Because we want the `MainViewController` to navigate to the `PinkViewController`, the former will need a button to interact with. Using the Library we can add a button to the `MainViewController`.
+
+    [![](images/add-button.png "Adding a Button to the MainViewController")](images/add-button.png#lightbox)
 
 The storyboard is complete, but if we deploy the project now, we will get a blank screen. That's because we still need to tell the IDE to use our storyboard, and to set up a root view controller to serve as the first view. Normally this can be done through our Project Options, as shown above. However in this example we will achieved the same result in code, by adding the following to the **AppDelegate**:
 
@@ -268,6 +262,7 @@ public partial class AppDelegate : UIApplicationDelegate
             initialViewController = Storyboard.InstantiateInitialViewController () as UIViewController;
 
             window.RootViewController = initialViewController;
+            window.AddSubview(initialViewController.View);
             window.MakeKeyAndVisible ();
             return true;
         }
@@ -285,9 +280,7 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-When creating a Storyboard using the Designer, the IDE will automatically add the [[Register]](xref:Foundation.RegisterAttribute) attribute at the top of the `designer.cs` class, and pass in a string identifier, which is identical to the Storyboard ID specified in the previous step. This will link the C# to the relevant scene in the Storyboard.
-
-At some point you might want to add an existing class which was **not** created in the designer. In this case, you would Register this class as normal:
+When creating a Storyboard using Xcode, the IDE will automatically add the [[Register]](xref:Foundation.RegisterAttribute) attribute at the top of the `designer.cs` class, and pass in a string identifier, which is identical to the Storyboard ID specified in the previous step. This will link the C# to the relevant scene in the Storyboard.
 
 ```csharp
 [Register ("MainViewController")]
