@@ -92,6 +92,9 @@ For more information on ATS, including how to implement it in your app, refer to
 > 
 > [Apple's `UIWebView` documentation](https://developer.apple.com/documentation/uikit/uiwebview) suggests apps should use [`WKWebView`](#wkwebview) instead.
 
+> [!IMPORTANT]
+> If you are looking for resources in regard to the `UIWebView` deprecation warning (ITMS-90809) while using Xamarin.Forms, please refer to the [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) documentation.
+
 `UIWebView` is Apple's legacy way of providing web content in your app. It was released in iOS 2.0, and has been deprecated as of 8.0.
 
 To add a UIWebView to your Xamarin.iOS app, use the following code:
