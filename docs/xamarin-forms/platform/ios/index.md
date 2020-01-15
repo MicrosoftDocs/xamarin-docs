@@ -22,6 +22,7 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 - Blur support for any [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Blur on iOS](visualelement-blur.md).
 - Disabling legacy color mode on a supported [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Legacy Color Mode on iOS](legacy-color-mode.md).
 - Enabling a drop shadow on a [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Drop Shadows on iOS](visualelement-drop-shadow.md).
+- Enabling a [`VisualElement`](xref:Xamarin.Forms.VisualElement) object to become the first responder to touch events. For more information, see [VisualElement First Responder](visualelement-first-responder.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms views on iOS:
 

@@ -694,6 +694,8 @@
               href: platform/ios/visualelement-drop-shadow.md
             - name: VisualElement Legacy Color Mode
               href: platform/ios/legacy-color-mode.md
+            - name: VisualElement First Responder
+              href: platform/ios/visualelement-first-responder.md              
         - name: Windows
           items:
             - name: Overview
