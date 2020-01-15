@@ -151,7 +151,14 @@ The Android implementation uses the technique described in the [**Select an Imag
 ```csharp
 public class MainActivity : FormsAppCompatActivity
 {
-    ...
+    internal static MainActivity Instance { get; private set; }  
+
+    protected override void OnCreate(Bundle savedInstanceState)
+    {
+        // ... 
+        Instance = this;
+    }
+    // ...
     // Field, property, and method for Picture Picker
     public static readonly int PickImageId = 1000;
 
