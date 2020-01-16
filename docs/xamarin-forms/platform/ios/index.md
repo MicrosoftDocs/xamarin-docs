@@ -48,6 +48,7 @@ The following platform-specific functionality is provided for Xamarin.Forms page
 - Setting the status bar visibility on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Page Status Bar Visibility on iOS](page-status-bar-visibility.md).
 - Ensuring that page content is positioned on an area of the screen that is safe for all iOS devices. For more information, see [Safe Area Layout Guide on iOS](page-safe-area-layout.md).
 - Setting the presentation style of modal pages. For more information, see [Modal Page Presentation Style](page-presentation-style.md).
+- Setting the translucency mode of the tab bar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). For more information, see [TabbedPage Translucent TabBar on iOS](tabbedpage-translucent-tabbar.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms layouts on iOS:
 

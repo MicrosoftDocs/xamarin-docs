@@ -686,6 +686,8 @@
               href: platform/ios/slider-thumb.md
             - name: SwipeView Swipe Transition Mode
               href: platform/ios/swipeview-swipetransitionmode.md
+            - name: TabbedPage Translucent TabBar
+              href: platform/ios/tabbedpage-translucent-tabbar.md
             - name: TimePicker Item Selection
               href: platform/ios/timepicker-selection.md
             - name: VisualElement Blur
@@ -695,7 +697,7 @@
             - name: VisualElement Legacy Color Mode
               href: platform/ios/legacy-color-mode.md
             - name: VisualElement First Responder
-              href: platform/ios/visualelement-first-responder.md              
+              href: platform/ios/visualelement-first-responder.md
         - name: Windows
           items:
             - name: Overview
