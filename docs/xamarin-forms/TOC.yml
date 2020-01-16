@@ -702,6 +702,8 @@
           items:
             - name: Overview
               href: platform/windows/index.md
+            - name: Default Image Directory
+              href: platform/windows/default-image-directory.md
             - name: InputView Reading Order
               href: platform/windows/inputview-reading-order.md
             - name: ListView SelectionMode
