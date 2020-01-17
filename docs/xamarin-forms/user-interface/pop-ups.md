@@ -6,7 +6,7 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/25/2019
+ms.date: 01/17/2020
 ---
 
 # Display Pop-ups
@@ -90,14 +90,15 @@ The full argument list for the `DisplayPromptAsync` method is:
 - `placeholder`, of type `string`, is the placeholder text to display in the prompt. This is an optional argument, whose default value is `null`.
 - `maxLength`, of type `int`, is the maximum length of the user response. This is an optional argument, whose default value is -1.
 - `keyboard`, of type `Keyboard`, is the keyboard type to use for the user response. This is an optional argument, whose default value is `Keyboard.Default`.
+- `initialValue`, of type `string`, is a pre-defined response that will be displayed, and which can be edited. This is an optional argument, whose default value is an empty `string`.
 
 The following example shows setting some of the optional arguments:
 
 ```csharp
-string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", maxLength: 2, keyboard: Keyboard.Numeric);
+string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialValue: "10", maxLength: 2, keyboard: Keyboard.Numeric);
 ```
 
-This code limits the number of characters that can be input to 2, and displays the numeric keyboard for user input:
+This code displays a predefined response of 10, limits the number of characters that can be input to 2, and displays the numeric keyboard for user input:
 
 [![Screenshot of a modal prompt, on iOS and Android](pop-ups-images/keyboard-prompt.png "Modal prompt")](pop-ups-images/keyboard-prompt-large.png#lightbox "Modal prompt")
 
