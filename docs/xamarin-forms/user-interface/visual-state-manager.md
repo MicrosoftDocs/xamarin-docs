@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/18/2019
+ms.date: 01/21/2020
 ---
 
 # The Xamarin.Forms Visual State Manager
@@ -16,7 +16,7 @@ ms.date: 12/18/2019
 
 _Use the Visual State Manager to make changes to XAML elements based on visual states set from code._
 
-The Visual State Manager (VSM) is new in Xamarin.Forms 3.0. The VSM provides a structured way to make visual changes to the user interface from code. In most cases, the user interface of the application is defined in XAML, and this XAML includes markup describing how the Visual State Manager affects the visuals of the user interface.
+The Visual State Manager (VSM) provides a structured way to make visual changes to the user interface from code. In most cases, the user interface of the application is defined in XAML, and this XAML includes markup describing how the Visual State Manager affects the visuals of the user interface.
 
 The VSM introduces the concept of _visual states_. A Xamarin.Forms view such as a `Button` can have several different visual appearances depending on its underlying state &mdash; whether it's disabled, or pressed, or has input focus. These are the button's states.
 
@@ -37,7 +37,7 @@ You can also define your own visual state groups and visual states, as this arti
 
 ## The common states
 
-The Visual State Manager allows you to include sections in your XAML file that can change the visual appearance of a view if the view is normal, or disabled, or has the input focus. These are known as the _common states_.
+The Visual State Manager allows you to include markup in your XAML file that can change the visual appearance of a view if the view is normal, or disabled, or has the input focus. These are known as the _common states_.
 
 For example, suppose you have an `Entry` view on your page, and you want the visual appearance of the `Entry` to change in the following ways:
 
@@ -198,27 +198,21 @@ Markup similar to this is the basis of the **VSM on View** page in the **[VsmDem
         </StackLayout.Resources>
 
         <Label Text="Normal Entry:" />
-
         <Entry />
-
         <Label Text="Entry with VSM: " />
-
         <Entry>
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup x:Name="CommonStates">
-
                     <VisualState x:Name="Normal">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor" Value="Lime" />
                         </VisualState.Setters>
                     </VisualState>
-
                     <VisualState x:Name="Focused">
                         <VisualState.Setters>
                             <Setter Property="FontSize" Value="36" />
                         </VisualState.Setters>
                     </VisualState>
-
                     <VisualState x:Name="Disabled">
                         <VisualState.Setters>
                             <Setter Property="BackgroundColor" Value="Pink" />
@@ -236,9 +230,7 @@ Markup similar to this is the basis of the **VSM on View** page in the **[VsmDem
                 </DataTrigger>
             </Entry.Triggers>
         </Entry>
-
         <Label Text="Entry to enable 2nd Entry:" />
-
         <Entry x:Name="entry3"
                Text=""
                Placeholder="Type something to enable 2nd Entry" />
@@ -351,20 +343,17 @@ Here's the **VSM in Style** page showing the complete VSM markup:
                 <Setter Property="VisualStateManager.VisualStateGroups">
                     <VisualStateGroupList>
                         <VisualStateGroup x:Name="CommonStates">
-
                             <VisualState x:Name="Normal">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="Lime" />
                                 </VisualState.Setters>
                             </VisualState>
-
                             <VisualState x:Name="Focused">
                                 <VisualState.Setters>
                                     <Setter Property="FontSize" Value="36" />
                                     <Setter Property="BackgroundColor" Value="Lime" />
                                 </VisualState.Setters>
                             </VisualState>
-
                             <VisualState x:Name="Disabled">
                                 <VisualState.Setters>
                                     <Setter Property="BackgroundColor" Value="Pink" />
@@ -382,11 +371,8 @@ Here's the **VSM in Style** page showing the complete VSM markup:
         </StackLayout.Resources>
 
         <Label Text="Normal Entry:" />
-
         <Entry />
-
         <Label Text="Entry with VSM: " />
-
         <Entry>
             <Entry.Triggers>
                 <DataTrigger TargetType="Entry"
@@ -397,9 +383,7 @@ Here's the **VSM in Style** page showing the complete VSM markup:
                 </DataTrigger>
             </Entry.Triggers>
         </Entry>
-
         <Label Text="Entry to enable 2nd Entry:" />
-
         <Entry x:Name="entry3"
                Text=""
                Placeholder="Type something to enable 2nd Entry" />
@@ -444,69 +428,62 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VsmDemos.VsmValidationPage"
-             Title="VSM Validation">
+             Title="VSM with Setter TargetName">
     <StackLayout Padding="10, 10">
-
         <Label Text="Enter a U.S. phone number:"
                FontSize="Large" />
-
-        <Entry Placeholder="555-555-5555"
+        <Entry x:Name="entry"
+               Placeholder="555-555-5555"
                FontSize="Large"
                Margin="30, 0, 0, 0"
                TextChanged="OnTextChanged" />
-
         <Label x:Name="helpLabel"
                Text="Phone number must be of the form 555-555-5555, and not begin with a 0 or 1">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup Name="ValidityStates">
-
                     <VisualState Name="Valid">
                         <VisualState.Setters>
-                            <Setter Property="TextColor" Value="Transparent" />
+                            <Setter Property="TextColor"
+                                    Value="Transparent" />
+                            <Setter TargetName="entry"
+                                    Property="Entry.BackgroundColor"
+                                    Value="Lime" />
                         </VisualState.Setters>
                     </VisualState>
-
-                    <VisualState Name="Invalid" />
-
+                    <VisualState Name="Invalid">
+                        <VisualState.Setters>
+                            <Setter TargetName="entry"
+                                    Property="Entry.BackgroundColor"
+                                    Value="Pink" />
+                            <Setter TargetName="submitButton"
+                                    Property="Button.IsEnabled"
+                                    Value="False" />
+                        </VisualState.Setters>
+                    </VisualState>
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
         </Label>
-
         <Button x:Name="submitButton"
                 Text="Submit"
                 FontSize="Large"
                 Margin="0, 20"
                 VerticalOptions="Center"
-                HorizontalOptions="Center">
-            <VisualStateManager.VisualStateGroups>
-                <VisualStateGroup Name="ValidityStates">
-
-                    <VisualState Name="Valid" />
-
-                    <VisualState Name="Invalid">
-                        <VisualState.Setters>
-                            <Setter Property="IsEnabled" Value="False" />
-                        </VisualState.Setters>
-                    </VisualState>
-
-                </VisualStateGroup>
-            </VisualStateManager.VisualStateGroups>
-        </Button>
+                HorizontalOptions="Center" />
     </StackLayout>
 </ContentPage>
 ```
 
-VSM markup is attached to the second `Label` (named `helpLabel`) and the `Button` (named `submitButton`). There are two mutually-exclusive states, named "Valid" and "Invalid". Notice that each of the two "ValidationState" groups contains `VisualState` tags for both "Valid" and "Invalid", although one of them is empty in each case.
+VSM markup is attached to the second `Label` (named `helpLabel`). There are two mutually-exclusive states, named "Valid" and "Invalid", with each state containing `VisualState` tags.
 
-If the `Entry` does not contain a valid phone number, then the current state is "Invalid", and so the second `Label` is visible and the `Button` is disabled:
+If the `Entry` does not contain a valid phone number, then the current state is "Invalid", and so the `Entry` has a pink background, the second `Label` is visible, and the `Button` is disabled:
 
 [![VSM Validation: Invalid State](vsm-images/VsmValidationInvalid.png "VSM validation - invalid")](vsm-images/VsmValidationInvalid-Large.png#lightbox)
 
-When a valid phone number is entered, then the current state becomes "Valid". The second `Entry` disappears and the `Button` is now enabled:
+When a valid phone number is entered, then the current state becomes "Valid". The `Entry` gets a lime background, the second `Label` disappears, and the `Button` is now enabled:
 
 [![VSM Validation: Valid State](vsm-images/VsmValidationValid.png "VSM validation - valid")](vsm-images/VsmValidationValid-Large.png#lightbox)
 
-The code-behind file is reponsible for handling the `TextChanged` event from the `Entry`. The handler uses a regular expression to determine if the input string is valid or not. The method in the code-behind file named `GoToState` calls the static `VisualStateManager.GoToState` method for both `helpLabel` and `submitButton`:
+The code-behind file is responsible for handling the `TextChanged` event from the `Entry`. The handler uses a regular expression to determine if the input string is valid or not. The method in the code-behind file named `GoToState` calls the static `VisualStateManager.GoToState` method for `helpLabel`:
 
 ```csharp
 public partial class VsmValidationPage : ContentPage
@@ -528,18 +505,15 @@ public partial class VsmValidationPage : ContentPage
     {
         string visualState = isValid ? "Valid" : "Invalid";
         VisualStateManager.GoToState(helpLabel, visualState);
-        VisualStateManager.GoToState(submitButton, visualState);
     }
 }
 ```
 
 Notice also that the `GoToState` method is called from the constructor to initialize the state. There should always be a current state. But nowhere in the code is there any reference to the name of the visual state group, although it's referenced in the XAML as "ValidationStates" for purposes of clarity.
 
-Notice that the code-behind file must take account of every object on the page that is affected by these visual states, and to call `VisualStateManager.GoToState` for each of these objects. In this example, it's only two objects (the `Label` and the `Button`), but it could be several more.
+Notice that the code-behind file only needs to take account of the object on the page that defines the visual states, and to call `VisualStateManager.GoToState` for this object. This is because the visual states target multiple objects on the page.
 
-You might wonder: If the code-behind file must reference every object on the page that is affected by these visual states, why can't the code-behind file simply access the objects directly? It surely could. However, the advantage of using the VSM is that you can control how visual elements react to different state entirely in XAML, which keeps all of the UI design in one location. This avoids setting visual appearance by accessing visual elements directly from the code-behind.
-
-It might be tempting to consider deriving a class from `Entry` and perhaps defining a property that you can set to an external validation function. The class that derives from `Entry` can then call the `VisualStateManager.GoToState` method. This scheme would work fine, but only if the `Entry` were the only object affected by the different visual states. In this example, a `Label` and a `Button` are also be affected. There is no way for VSM markup attached to an `Entry` to control other objects on the page, and no way for VSM markup attached to these other objects to reference a change in visual state from another object.
+You might wonder: If the code-behind file must reference the object on the page that defines the visual states, why can't the code-behind file simply access this and other objects directly? It surely could. However, the advantage of using the VSM is that you can control how visual elements react to different state entirely in XAML, which keeps all of the UI design in one location. This avoids setting visual appearance by accessing visual elements directly from the code-behind.
 
 <a name="adaptive-layout" />
 
@@ -572,13 +546,11 @@ VSM markup occurs in four places in the XAML file. The `StackLayout` named `main
     <StackLayout x:Name="mainStack">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroup Name="OrientationStates">
-
                 <VisualState Name="Portrait">
                     <VisualState.Setters>
                         <Setter Property="Orientation" Value="Vertical" />
                     </VisualState.Setters>
                 </VisualState>
-
                 <VisualState Name="Landscape">
                     <VisualState.Setters>
                         <Setter Property="Orientation" Value="Horizontal" />
@@ -590,13 +562,11 @@ VSM markup occurs in four places in the XAML file. The `StackLayout` named `main
         <ScrollView x:Name="menuScroll">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup Name="OrientationStates">
-
                     <VisualState Name="Portrait">
                         <VisualState.Setters>
                             <Setter Property="Orientation" Value="Horizontal" />
                         </VisualState.Setters>
                     </VisualState>
-
                     <VisualState Name="Landscape">
                         <VisualState.Setters>
                             <Setter Property="Orientation" Value="Vertical" />
@@ -608,13 +578,11 @@ VSM markup occurs in four places in the XAML file. The `StackLayout` named `main
             <StackLayout x:Name="menuStack">
                 <VisualStateManager.VisualStateGroups>
                     <VisualStateGroup Name="OrientationStates">
-
                         <VisualState Name="Portrait">
                             <VisualState.Setters>
                                 <Setter Property="Orientation" Value="Horizontal" />
                             </VisualState.Setters>
                         </VisualState>
-
                         <VisualState Name="Landscape">
                             <VisualState.Setters>
                                 <Setter Property="Orientation" Value="Vertical" />
@@ -628,14 +596,12 @@ VSM markup occurs in four places in the XAML file. The `StackLayout` named `main
                         <Setter Property="VisualStateManager.VisualStateGroups">
                             <VisualStateGroupList>
                                 <VisualStateGroup Name="OrientationStates">
-
                                     <VisualState Name="Portrait">
                                         <VisualState.Setters>
                                             <Setter Property="HorizontalOptions" Value="CenterAndExpand" />
                                             <Setter Property="Margin" Value="10, 5" />
                                         </VisualState.Setters>
                                     </VisualState>
-
                                     <VisualState Name="Landscape">
                                         <VisualState.Setters>
                                             <Setter Property="VerticalOptions" Value="CenterAndExpand" />
@@ -652,15 +618,12 @@ VSM markup occurs in four places in the XAML file. The `StackLayout` named `main
                 <Button Text="Banana"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="Banana.jpg" />
-
                 <Button Text="Face Palm"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="FacePalm.jpg" />
-
                 <Button Text="Monkey"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="monkey.png" />
-
                 <Button Text="Seated Monkey"
                         Command="{Binding SelectedCommand}"
                         CommandParameter="SeatedMonkey.jpg" />
