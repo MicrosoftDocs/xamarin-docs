@@ -25,7 +25,7 @@ The `Shell` class defines the following attached properties that can be used to 
 - `TitleColor`, of type `Color`, that defines the color used for the title of the current page.
 - `UnselectedColor`, of type `Color`, that defines the color used for unselected text and icons in the Shell chrome.
 
-All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings, and styled using XAML styles. In addition, the properties can be set using Cascading Style Sheets (CSS). For more information, see [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
+All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which mean that the properties can be targets of data bindings, and styled using XAML styles. In addition, the properties can be set using Cascading Style Sheets (CSS). For more information, see [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
 > [!NOTE]
 > There are also properties that enable tab colors to be defined. For more information, see [Tab appearance](tabs.md#tab-appearance).

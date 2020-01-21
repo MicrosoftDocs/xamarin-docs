@@ -32,7 +32,7 @@ The process for creating a bindable property is as follows:
 1. Create a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance with one of the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create*) method overloads.
 1. Define property accessors for the [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance.
 
-Note that all [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instances must be created on the UI thread. This means that only code that runs on the UI thread can get or set the value of a bindable property. However, `BindableProperty` instances can be accessed from other threads by marshaling to the UI thread with the [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method.
+All [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instances must be created on the UI thread. This means that only code that runs on the UI thread can get or set the value of a bindable property. However, `BindableProperty` instances can be accessed from other threads by marshaling to the UI thread with the [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method.
 
 ### Create a property
 

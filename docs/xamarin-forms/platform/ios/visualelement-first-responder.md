@@ -38,7 +38,7 @@ Button button = new Button { Text = "OK" };
 button.On<iOS>().SetCanBecomeFirstResponder(true);
 ```
 
-The `VisualElement.On<iOS>` method specifies that this platform-specific will only run on iOS. The `VisualElement.SetCanBecomeFirstResponder` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to set the `VisualElement` to become the first responder for touch events. In addition, the `VisualElement.CanBecomeFirstResponder` method can be used to return whether the `VisualElement` is the the first responder to touch events.
+The `VisualElement.On<iOS>` method specifies that this platform-specific will only run on iOS. The `VisualElement.SetCanBecomeFirstResponder` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to set the `VisualElement` to become the first responder for touch events. In addition, the `VisualElement.CanBecomeFirstResponder` method can be used to return whether the `VisualElement` is the first responder to touch events.
 
 The result is that a [`VisualElement`](xref:Xamarin.Forms.VisualElement) can become the first responder for touch events, rather than the page containing the element. This enables scenarios such as chat applications not dismissing a keyboard when a [`Button`](xref:Xamarin.Forms.Button) is tapped.
 
