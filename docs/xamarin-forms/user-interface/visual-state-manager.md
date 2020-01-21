@@ -1,5 +1,5 @@
 ---
-title: "The Xamarin.Forms Visual State Manager"
+title: "Xamarin.Forms Visual State Manager"
 description: "Use the Visual State Manager to make changes to XAML elements based on visual states set from code."
 ms.prod: xamarin
 ms.assetid: 17296F14-640D-484B-A24C-A4E9B7013E4F
@@ -10,7 +10,7 @@ ms.author: dabritch
 ms.date: 01/21/2020
 ---
 
-# The Xamarin.Forms Visual State Manager
+# Xamarin.Forms Visual State Manager
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
 
@@ -422,28 +422,21 @@ Interestingly, the name of the visual state group "CommonStates" is not explicit
 
 If you want to implement your own visual states, you'll need to call `VisualStateManager.GoToState` from code. Most often you'll make this call from the code-behind file of your page class.
 
-The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to use the Visual State Manager in connection with input validation. The XAML file consists of two `Label` elements, an `Entry`, and `Button`:
+The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to use the Visual State Manager in connection with input validation. The XAML file consists of a `StackLayout`, two `Label` elements, an `Entry`, and a `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="VsmDemos.VsmValidationPage"
-             Title="VSM with Setter TargetName">
-    <StackLayout Padding="10, 10">
-        <Label Text="Enter a U.S. phone number:"
-               FontSize="Large" />
-        <Entry x:Name="entry"
-               Placeholder="555-555-5555"
-               FontSize="Large"
-               Margin="30, 0, 0, 0"
-               TextChanged="OnTextChanged" />
-        <Label x:Name="helpLabel"
-               Text="Phone number must be of the form 555-555-5555, and not begin with a 0 or 1">
+             Title="VSM Validation">
+    <StackLayout x:Name="stackLayout"
+                 Padding="10, 10">
             <VisualStateManager.VisualStateGroups>
                 <VisualStateGroup Name="ValidityStates">
                     <VisualState Name="Valid">
                         <VisualState.Setters>
-                            <Setter Property="TextColor"
+                            <Setter TargetName="helpLabel"
+                                    Property="Label.TextColor"
                                     Value="Transparent" />
                             <Setter TargetName="entry"
                                     Property="Entry.BackgroundColor"
@@ -462,7 +455,15 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateManager.VisualStateGroups>
-        </Label>
+        <Label Text="Enter a U.S. phone number:"
+               FontSize="Large" />
+        <Entry x:Name="entry"
+               Placeholder="555-555-5555"
+               FontSize="Large"
+               Margin="30, 0, 0, 0"
+               TextChanged="OnTextChanged" />
+        <Label x:Name="helpLabel"
+               Text="Phone number must be of the form 555-555-5555, and not begin with a 0 or 1" />
         <Button x:Name="submitButton"
                 Text="Submit"
                 FontSize="Large"
@@ -473,7 +474,7 @@ The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/sampl
 </ContentPage>
 ```
 
-VSM markup is attached to the second `Label` (named `helpLabel`). There are two mutually-exclusive states, named "Valid" and "Invalid", with each state containing `VisualState` tags.
+VSM markup is attached to the `StackLayout` (named `stackLayout`). There are two mutually-exclusive states, named "Valid" and "Invalid", with each state containing `VisualState` tags.
 
 If the `Entry` does not contain a valid phone number, then the current state is "Invalid", and so the `Entry` has a pink background, the second `Label` is visible, and the `Button` is disabled:
 
@@ -483,14 +484,14 @@ When a valid phone number is entered, then the current state becomes "Valid". Th
 
 [![VSM Validation: Valid State](vsm-images/VsmValidationValid.png "VSM validation - valid")](vsm-images/VsmValidationValid-Large.png#lightbox)
 
-The code-behind file is responsible for handling the `TextChanged` event from the `Entry`. The handler uses a regular expression to determine if the input string is valid or not. The method in the code-behind file named `GoToState` calls the static `VisualStateManager.GoToState` method for `helpLabel`:
+The code-behind file is responsible for handling the `TextChanged` event from the `Entry`. The handler uses a regular expression to determine if the input string is valid or not. The method in the code-behind file named `GoToState` calls the static `VisualStateManager.GoToState` method for `stackLayout`:
 
 ```csharp
 public partial class VsmValidationPage : ContentPage
 {
-    public VsmValidationPage ()
+    public VsmValidationPage()
     {
-        InitializeComponent ();
+        InitializeComponent();
 
         GoToState(false);
     }
@@ -504,14 +505,14 @@ public partial class VsmValidationPage : ContentPage
     void GoToState(bool isValid)
     {
         string visualState = isValid ? "Valid" : "Invalid";
-        VisualStateManager.GoToState(helpLabel, visualState);
+        VisualStateManager.GoToState(stackLayout, visualState);
     }
 }
 ```
 
 Notice also that the `GoToState` method is called from the constructor to initialize the state. There should always be a current state. But nowhere in the code is there any reference to the name of the visual state group, although it's referenced in the XAML as "ValidationStates" for purposes of clarity.
 
-Notice that the code-behind file only needs to take account of the object on the page that defines the visual states, and to call `VisualStateManager.GoToState` for this object. This is because the visual states target multiple objects on the page.
+Notice that the code-behind file only needs to take account of the object on the page that defines the visual states, and to call `VisualStateManager.GoToState` for this object. This is because both visual states target multiple objects on the page.
 
 You might wonder: If the code-behind file must reference the object on the page that defines the visual states, why can't the code-behind file simply access this and other objects directly? It surely could. However, the advantage of using the VSM is that you can control how visual elements react to different state entirely in XAML, which keeps all of the UI design in one location. This avoids setting visual appearance by accessing visual elements directly from the code-behind.
 
