@@ -35,7 +35,7 @@ You can also define your own visual state groups and visual states, as this arti
 > [!NOTE]
 > Xamarin.Forms developers familiar with [triggers](~/xamarin-forms/app-fundamentals/triggers.md) are aware that triggers can also make changes to visuals in the user interface based on changes in a view's properties or the firing of events. However, using triggers to deal with various combinations of these changes can become quite confusing. Historically, the Visual State Manager was introduced in Windows XAML-based environments to alleviate the confusion resulting from combinations of visual states. With the VSM, the visual states within a visual state group are always mutually exclusive. At any time, only one state in each group is the current state.
 
-## The common states
+## Common states
 
 The Visual State Manager allows you to include markup in your XAML file that can change the visual appearance of a view if the view is normal, or disabled, or has the input focus. These are known as the _common states_.
 
@@ -404,11 +404,74 @@ The following table lists the visual states that are defined in Xamarin.Forms:
 | `Button` | `Pressed` | [Button visual states](~/xamarin-forms/user-interface/button.md#button-visual-states) |
 | `CollectionView` | `Selected` | [Change selected item color](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
 | `ImageButton` | `Pressed` | [ImageButton visual states](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
-| `VisualElement` | `Normal`, `Disabled`, `Focused` | [The common states](#the-common-states) |
+| `VisualElement` | `Normal`, `Disabled`, `Focused` | [Common states](#common-states) |
 
 Each of these states can be accessed through the visual state group named `CommonStates`.
 
-## Defining your own visual states
+## Set state on multiple elements
+
+In the previous examples visual states were attached to and operated on single elements. However, a visual state can also set properties on other elements within the same scope. This avoids having to repeat visual states on each element the state operates on.
+
+The [`Setter`](xref:Xamarin.Forms.Setter) type has a `TargetName` property, of type `string`, which represents the target element that the `Setter` for a visual state will manipulate. When the `TargetName` property is defined, the `Setter` sets the `Property` of the element defined in `TargetName` to `Value`:
+
+```xaml
+<Setter TargetName="label"
+        Property="Label.TextColor"
+        Value="Red" />
+```
+
+In this example, a `Label` named `label` will have its `TextColor` property set to `Red`. When setting the `TargetName` property you must specify the full path to the property in `Property`. Therefore, to set the `TextColor` property on a `Label`, `Property` is specified as `Label.TextColor`.
+
+> [!NOTE]
+> Any property referenced by a `Setter` object must be backed by a bindable property.
+
+The **VSM with Setter TargetName** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to set state on multiple elements, from a single visual state. The XAML file consists of a `StackLayout` containing a `Label` element, an `Entry`, and a `Button`:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="VsmDemos.VsmSetterTargetNamePage"
+             Title="VSM with Setter TargetName">
+    <StackLayout Margin="10">
+        <Label Text="What is the capital of France?" />
+        <Entry x:Name="entry"
+               Placeholder="Enter answer" />
+        <Button Text="Reveal answer">
+            <VisualStateManager.VisualStateGroups>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal" />
+                    <VisualState x:Name="Pressed">
+                        <VisualState.Setters>
+                            <Setter Property="Scale"
+                                    Value="0.8" />
+                            <Setter TargetName="entry"
+                                    Property="Entry.Text"
+                                    Value="Paris" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateManager.VisualStateGroups>
+        </Button>
+    </StackLayout>
+</ContentPage>
+```
+
+VSM markup is attached to the `StackLayout`. There are two mutually-exclusive states, named "Normal" and "Pressed", with each state containing `VisualState` tags.
+
+The "Normal" state is active when the `Button` isn't pressed, and a response to the question can be entered:
+
+[![VSM Setter TargetName: Normal State](vsm-images/VsmSetterTargetNameNormal.png "VSM setter targetname - normal")](vsm-images/VsmSetterTargetNameNormal-Large.png#lightbox)
+
+However, the "Pressed" state becomes active when the `Button` is pressed:
+
+[![VSM Setter TargetName: Pressed State](vsm-images/VsmSetterTargetNamePressed.png "VSM setter targetname - pressed")](vsm-images/VsmSetterTargetNamePressed-Large.png#lightbox)
+
+The "Pressed" `VisualState` specifies that when the `Button` is pressed, its `Scale` property will be changed from its default value of 1 to 0.8. In addition, the `Entry` named `entry` will have its `Text` property set to Paris. Therefore, the overall effect is that when the `Button` is pressed it's rescaled to be slightly smaller and the `Entry` displays Paris. Then, when the `Button` is released it's rescaled to its default value of 1 and the `Entry` displays any previously entered text.
+
+> [!IMPORTANT]
+> Property paths are currently unsupported when specifying the `TargetName` property.
+
+## Define your own visual states
 
 Every class that derives from `VisualElement` supports the three common states "Normal", "Focused", and "Disabled". Internally, the [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) class detects when it's becoming enabled or disabled, or focused or unfocused, and calls the static [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) method:
 
@@ -422,7 +485,7 @@ Interestingly, the name of the visual state group "CommonStates" is not explicit
 
 If you want to implement your own visual states, you'll need to call `VisualStateManager.GoToState` from code. Most often you'll make this call from the code-behind file of your page class.
 
-The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to use the Visual State Manager in connection with input validation. The XAML file consists of a `StackLayout`, two `Label` elements, an `Entry`, and a `Button`:
+The **VSM Validation** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to use the Visual State Manager in connection with input validation. The XAML file consists of a `StackLayout` containing two `Label` elements, an `Entry`, and a `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -518,7 +581,7 @@ You might wonder: If the code-behind file must reference the object on the page 
 
 <a name="adaptive-layout" />
 
-## Using the Visual State Manager for adaptive layout
+## Use the Visual State Manager for adaptive layout
 
 A Xamarin.Forms application running on a phone can usually be viewed in a portrait or landscape aspect ratio, and a Xamarin.Forms program running on the desktop can be resized to assume many different sizes and aspect ratios. A well-designed application might display its content differently for these various page or window form factors.
 
