@@ -410,9 +410,9 @@ Each of these states can be accessed through the visual state group named `Commo
 
 ## Set state on multiple elements
 
-In the previous examples visual states were attached to and operated on single elements. However, a visual state can also set properties on other elements within the same scope. This avoids having to repeat visual states on each element the state operates on.
+In the previous examples, visual states were attached to and operated on single elements. However, it's also possible to create visual states that are attached to a single element, but that set properties on other elements within the same scope. This avoids having to repeat visual states on each element the states operate on.
 
-The [`Setter`](xref:Xamarin.Forms.Setter) type has a `TargetName` property, of type `string`, which represents the target element that the `Setter` for a visual state will manipulate. When the `TargetName` property is defined, the `Setter` sets the `Property` of the element defined in `TargetName` to `Value`:
+The [`Setter`](xref:Xamarin.Forms.Setter) type has a `TargetName` property, of type `string`, that represents the target element that the `Setter` for a visual state will manipulate. When the `TargetName` property is defined, the `Setter` sets the `Property` of the element defined in `TargetName` to `Value`:
 
 ```xaml
 <Setter TargetName="label"
@@ -425,7 +425,7 @@ In this example, a `Label` named `label` will have its `TextColor` property set 
 > [!NOTE]
 > Any property referenced by a `Setter` object must be backed by a bindable property.
 
-The **VSM with Setter TargetName** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to set state on multiple elements, from a single visual state. The XAML file consists of a `StackLayout` containing a `Label` element, an `Entry`, and a `Button`:
+The **VSM with Setter TargetName** page in the **[VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)** sample shows how to set state on multiple elements, from a single visual state group. The XAML file consists of a `StackLayout` containing a `Label` element, an `Entry`, and a `Button`:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -462,14 +462,14 @@ The "Normal" state is active when the `Button` isn't pressed, and a response to 
 
 [![VSM Setter TargetName: Normal State](vsm-images/VsmSetterTargetNameNormal.png "VSM setter targetname - normal")](vsm-images/VsmSetterTargetNameNormal-Large.png#lightbox)
 
-However, the "Pressed" state becomes active when the `Button` is pressed:
+The "Pressed" state becomes active when the `Button` is pressed:
 
 [![VSM Setter TargetName: Pressed State](vsm-images/VsmSetterTargetNamePressed.png "VSM setter targetname - pressed")](vsm-images/VsmSetterTargetNamePressed-Large.png#lightbox)
 
-The "Pressed" `VisualState` specifies that when the `Button` is pressed, its `Scale` property will be changed from its default value of 1 to 0.8. In addition, the `Entry` named `entry` will have its `Text` property set to Paris. Therefore, the overall effect is that when the `Button` is pressed it's rescaled to be slightly smaller and the `Entry` displays Paris. Then, when the `Button` is released it's rescaled to its default value of 1 and the `Entry` displays any previously entered text.
+The "Pressed" `VisualState` specifies that when the `Button` is pressed, its `Scale` property will be changed from its default value of 1 to 0.8. In addition, the `Entry` named `entry` will have its `Text` property set to Paris. Therefore, the result is that when the `Button` is pressed it's rescaled to be slightly smaller, and the `Entry` displays Paris. Then, when the `Button` is released it's rescaled to its default value of 1 ,and the `Entry` displays any previously entered text.
 
 > [!IMPORTANT]
-> Property paths are currently unsupported when specifying the `TargetName` property.
+> Property paths are currently unsupported in `Setter` elements that specify the `TargetName` property.
 
 ## Define your own visual states
 
