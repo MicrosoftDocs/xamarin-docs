@@ -162,7 +162,7 @@ Validation callbacks are provided with a value, and should return `true` if the 
 A `static` coerce value callback method can be registered with a bindable property by specifying the `coerceValue` parameter for the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) method. The specified callback method will be invoked when the value of the bindable property changes.
 
 > [!IMPORTANT]
-> The `BindableObject` type has a `CoerceValue` method that can be called to coerce the value of its `BindableProperty` argument, by invoking its coerce value callback.
+> The `BindableObject` type has a `CoerceValue` method that can be called to force a reevaluation of the value of its `BindableProperty` argument, by invoking its coerce value callback.
 
 Coerce value callbacks are used to force a reevaluation of a bindable property when the value of the property changes. For example, a coerce value callback can be used to ensure that the value of one bindable property is not greater than the value of another bindable property.
 

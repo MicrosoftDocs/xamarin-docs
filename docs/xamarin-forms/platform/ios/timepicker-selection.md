@@ -1,5 +1,5 @@
 ---
-title: "TimePicker Item Selection on iOS"
+title: "TimePicker item selection on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls when item selection occurs in a TimePicker."
 ms.prod: xamarin
 ms.assetid: 554AC877-8698-4B8C-A676-80DD64305A06
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/15/2020
 ---
 
-# TimePicker Item Selection on iOS
+# TimePicker item selection on iOS
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
@@ -57,7 +57,7 @@ switch (timePicker.On<iOS>().UpdateMode())
 
 The result is that a specified `UpdateMode` is applied to the [`TimePicker`](xref:Xamarin.Forms.TimePicker), which controls when item selection occurs:
 
-[![](timepicker-selection-images/timepicker-updatemode.png "TimePicker UpdateMode Platform-Specific")](timepicker-selection-images/timepicker-updatemode-large.png#lightbox "TimePicker UpdateMode Platform-Specific")
+[![Screenshot of TimePicker update modes](timepicker-selection-images/timepicker-updatemode.png "TimePicker UpdateMode Platform-Specific")](timepicker-selection-images/timepicker-updatemode-large.png#lightbox "TimePicker UpdateMode Platform-Specific")
 
 ## Related links
 

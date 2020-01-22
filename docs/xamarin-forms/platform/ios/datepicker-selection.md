@@ -1,5 +1,5 @@
 ---
-title: "DatePicker Item Selection on iOS"
+title: "DatePicker item selection on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that controls when item selection occurs in a DatePicker."
 ms.prod: xamarin
 ms.assetid: 847E69D1-6AE0-4E82-B9C8-919E009C2014
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/15/2020
 ---
 
-# DatePicker Item Selection on iOS
+# DatePicker item selection on iOS
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
@@ -58,7 +58,7 @@ switch (datePicker.On<iOS>().UpdateMode())
 
 The result is that a specified `UpdateMode` is applied to the [`DatePicker`](xref:Xamarin.Forms.DatePicker), which controls when item selection occurs:
 
-[![](datepicker-selection-images/datepicker-updatemode.png "DatePicker UpdateMode Platform-Specific")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "DatePicker UpdateMode Platform-Specific")
+[![Screenshot of DatePicker update modes](datepicker-selection-images/datepicker-updatemode.png "DatePicker UpdateMode Platform-Specific")](datepicker-selection-images/datepicker-updatemode-large.png#lightbox "DatePicker UpdateMode Platform-Specific")
 
 ## Related links
 

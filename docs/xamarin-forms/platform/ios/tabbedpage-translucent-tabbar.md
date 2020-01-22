@@ -1,5 +1,5 @@
 ---
-title: "TabbedPage Translucent TabBar on iOS"
+title: "TabbedPage translucent tab bar on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that sets the translucency mode of the tab bar on a TabbedPage."
 ms.prod: xamarin
 ms.assetid: 9581AE81-9557-47AD-8B07-25A1AC5F055B
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/16/2020
 ---
 
-# TabbedPage Translucent TabBar on iOS
+# TabbedPage translucent tab bar on iOS
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 

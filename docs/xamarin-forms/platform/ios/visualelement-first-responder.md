@@ -1,5 +1,5 @@
 ---
-title: "VisualElement First Responder on iOS"
+title: "VisualElement first responder on iOS"
 description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that enables a VisualElement object to become the first responder to touch events."
 ms.prod: xamarin
 ms.assetid: 3A77BA02-B87A-44EC-AC51-9D3130EF314C
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 01/15/2020
 ---
 
-# VisualElement First Responder on iOS
+# VisualElement first responder on iOS
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
