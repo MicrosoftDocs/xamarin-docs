@@ -14,11 +14,15 @@
               items:
                 - name: Installing Xamarin Previews (Windows)
                   href: ~/get-started/installation/windows-preview.md
+                - name: Uninstalling Xamarin from Visual Studio
+                  href: installation/uninstalling-xamarin.md
             - name: Installing Visual Studio for Mac
               href: /visualstudio/mac/installation/
               items:
                 - name: Installing Xamarin Previews (Mac)
                   href: /visualstudio/mac/update/
+                - name: Uninstalling Visual Studio for Mac
+                  href: /visualstudio/mac/uninstall
             - name: Xamarin Firewall Configuration Instructions
               href: ~/get-started/installation/firewall.md
             - name: Uninstalling Xamarin
