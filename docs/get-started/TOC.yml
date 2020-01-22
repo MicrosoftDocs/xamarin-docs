@@ -4,8 +4,6 @@
   items:
     - name: What is Xamarin
       href: what-is-xamarin.md
-    - name: Requirements
-      href: requirements.md
     - name: Installation
       href: installation/index.md
       items:
@@ -23,6 +21,8 @@
           href: installation/firewall.md
         - name: Uninstalling Xamarin
           href: installation/uninstalling-xamarin.md
+    - name: Target platforms
+      href: target-platforms.md          
     - name: First App
       href: first-app/index.md
     - name: Quickstarts

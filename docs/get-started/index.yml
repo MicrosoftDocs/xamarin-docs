@@ -20,8 +20,8 @@ landingContent:
         links:
           - text: What is Xamarin?
             url: ~/get-started/what-is-xamarin.md
-          - text: Requirements
-            url: requirements.md
+          - text: Supported platforms
+            url: supported-platforms.md
       - linkListType: how-to-guide
         links:
           - text: Installation

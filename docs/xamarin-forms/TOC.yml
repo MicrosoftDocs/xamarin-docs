@@ -6,8 +6,6 @@
       items:
         - name: What is Xamarin.Forms
           href: ~/get-started/what-is-xamarin-forms.md
-        - name: Requirements
-          href: ~/get-started/requirements.md
         - name: Installation
           href: ~/get-started/installation/index.md
           items:
@@ -25,6 +23,8 @@
               href: ~/get-started/installation/firewall.md
             - name: Uninstalling Xamarin
               href: ~/get-started/installation/uninstalling-xamarin.md
+        - name: Supported platforms
+          href: ~/get-started/supported-platforms.md
         - name: First App
           href: ~/get-started/first-app/index.md
         - name: Quickstarts
