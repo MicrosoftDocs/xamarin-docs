@@ -25,8 +25,6 @@
                   href: /visualstudio/mac/uninstall
             - name: Xamarin Firewall Configuration Instructions
               href: ~/get-started/installation/firewall.md
-            - name: Uninstalling Xamarin
-              href: ~/get-started/installation/uninstalling-xamarin.md
         - name: Supported platforms
           href: ~/get-started/supported-platforms.md
         - name: First App

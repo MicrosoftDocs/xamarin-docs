@@ -14,8 +14,8 @@ ms.date: 01/22/2020
 Xamarin.Forms applications can be written for the following operating systems:
 
 - iOS 9 or higher.
-- Android 4.4 (API 19) or higher ([more details](#android)). However, Android 5.0 (API 21) is recommended as the minimum API. This ensures full compatibility with all the Android support libraries, while still targeting the majority of Android devices.
-- Windows 10 Universal Windows Platform ([more details](#windows10)).
+- Android 4.4 (API 19) or higher ([more details](#android-platform-support)). However, Android 5.0 (API 21) is recommended as the minimum API. This ensures full compatibility with all the Android support libraries, while still targeting the majority of Android devices.
+- Windows 10 Universal Windows Platform.
 
 Xamarin.Forms apps for iOS, Android, and the Universal Windows Platform (UWP) can be built in Visual Studio. However, a networked Mac is required for iOS development using the latest version of Xcode and the minimum version of macOS specified by Apple. For more information, see [Windows requirements](~/cross-platform/get-started/requirements.md#windows-requirements).
 

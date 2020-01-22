@@ -23,8 +23,8 @@
               href: /visualstudio/mac/uninstall
         - name: Xamarin Firewall Configuration Instructions
           href: installation/firewall.md
-    - name: Target platforms
-      href: target-platforms.md
+    - name: Supported platforms
+      href: supported-platforms.md
     - name: First App
       href: first-app/index.md
     - name: Quickstarts

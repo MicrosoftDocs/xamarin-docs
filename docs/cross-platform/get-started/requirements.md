@@ -97,7 +97,7 @@ Specific [installation](~/get-started/installation/index.md) instructions for ea
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
 There's also additional information about
-[Xamarin.Forms requirements & supported platforms](~/get-started/requirements.md).
+[Xamarin.Forms supported platforms](~/get-started/supported-platforms.md).
 
 ## Related links
 
