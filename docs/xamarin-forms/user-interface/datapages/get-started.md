@@ -127,8 +127,7 @@ file is being loaded from a URL.
 
 **JSON data**
 
-An example of the JSON data from the [demo source](http://demo3143189.mockable.io/sessions)
-is shown below:
+An example of the JSON data from the demo source is shown below:
 
 ```json
 [{
