@@ -38,7 +38,6 @@ To automatically migrate to AndroidX, your project must:
 
 - Target Android API version 29 or greater.
 - Use Xamarin.Forms version 4.5 or greater.
-- Be using Support Libraries directly or via a dependency.
 
 Once you have confirmed these settings in your project, build the Android app in Visual Studio 2019. During the build process, the Intermediate Language (IL) is inspected and Support Library dependencies and bindings are swapped with AndroidX dependencies. If your application has all of the AndroidX dependencies required to build, you will notice no differences in the build process.
 
@@ -66,19 +65,6 @@ Once the missing packages are resolved, rebuilding the project loads the missing
 
 > [!NOTE]
 > If your project, and project dependencies, do not reference Android Support Libraries, the migration process does nothing and is not executed.
-
-## Manual Migration in Xamarin.Forms
-
-It is possible to manually target AndroidX in your Xamarin.Forms application. You must:
-
-- Include the **Xamarin.AndroidX.Migration** NuGet package in your Android project.
-- Use Xamarin.Forms version 4.5 or greater.
-- Be using Support Libraries directly or via a dependency.
-
-Once the **Xamarin.AndroidX.Migration** package is installed, the process is identical to [Automatic Migration in Xamarin.Forms](#automatic-migration-in-xamarinforms).
-
-> [!NOTE]
-> This migration method is only necessary if you want to target API versions below 29.
 
 ## Related links
 
