@@ -41,7 +41,7 @@ this problem a number of services offer the ability to remotely control many
 different devices so that applications can be installed and tested without
 needing to directly invest in lots of hardware.
 
-App Center Test offers an easy way to test iOS and Android applications on hundreds of different devices. For more information, see [Preparing Xamarin.Android Apps](https://docs.microsoft.com/en-gb/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) and [Preparing Xamarin.iOS apps](https://docs.microsoft.com/en-gb/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
+App Center Test offers an easy way to test iOS and Android applications on hundreds of different devices. For more information, see [Preparing Xamarin.Android Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) and [Preparing Xamarin.iOS apps](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ### Test Management
 
