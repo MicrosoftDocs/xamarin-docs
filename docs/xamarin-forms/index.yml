@@ -32,10 +32,10 @@ productDirectory:
     - title: Get started
       imageSrc: https://docs.microsoft.com//media/common/i_get-started.svg
       links:
-        - url: ~/get-started/requirements.md
-          text: Requirements
         - url: ~/get-started/installation/index.md
           text: Installation
+        - url: ~/get-started/supported-platforms.md
+          text: Supported platforms         
         - url: ~/get-started/first-app/index.md
           text: Build your first app
     - title: Follow tutorials
