@@ -81,7 +81,7 @@ The build script can be as simple as a Powershell file (on Windows) or a bash sc
 
 - [**FAKE**](https://fsharp.github.io/FAKE/) – this is a DSL based in F# which makes it possible to utilize existing .NET libraries if necessary.
 
-Which scripting language is used depends on your preferences and requirements. The [TaskyPro-Calabash](https://github.com/xamarin/test-cloud-samples/tree/master/TaskyPro/TaskyPro-Calabash) example contains an example of using Rake as a [build script](https://github.com/xamarin/test-cloud-samples/blob/master/TaskyPro/TaskyPro-Calabash/Rakefile).
+Which scripting language is used depends on your preferences and requirements.
 
 > [!NOTE]
 > It is possible to use an XML based build system such as MSBuild or NAnt, but these lack the expressiveness and maintainability of a DSL that is dedicated to building software.
