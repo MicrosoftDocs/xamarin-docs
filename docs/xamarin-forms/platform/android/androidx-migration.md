@@ -35,11 +35,45 @@ In a Xamarin.Forms app, the jar dependencies must be migrated to AndroidX simila
 To automatically migrate to AndroidX, your project must:
 
 - Target Android API version 29 or greater.
-- Use Xamarin.Froms version 4.5 or greater.
+- Use Xamarin.Forms version 4.5 or greater.
 - Be using Support Libraries directly or via a depedency.
 
+Once you have confirmed these settings in your project, build the Android app in Visual Studio 2019. During the build process, the bytecode will be inspected and Support Library dependencies and bindings will be swapped with AndroidX dependencies. If your application has all of the AndroidX dependencies required to build, you will notice no differences in the build process.
+
+If AndroidX dependencies are detected that are not part of the project, a build error will be reported that indicates which AndroidX packages are missing. This is a build error example:
+
+```
+Could not find 37 Android X assemblies, make sure to install the following NuGet packages:
+- Xamarin.AndroidX.Lifecycle.LiveData
+- Xamarin.AndroidX.Browser
+- Xamarin.Google.Android.Material
+- Xamarin.AndroidX.Legacy.Supportv4
+You can also copy and paste the following snippit into your .csproj file:
+ <PackageReference Include="Xamarin.AndroidX.Lifecycle.LiveData" Version="2.1.0-rc1" />
+ <PackageReference Include="Xamarin.AndroidX.Browser" Version="1.0.0-rc1" />
+ <PackageReference Include="Xamarin.Google.Android.Material" Version="1.0.0-rc1" />
+ <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-rc1" />
+```
+
+The missing NuGet packages can either be installed  via the NuGet Package Manager in Visual Studio 2019, or installed by editing your Android .csproj file to include the `PackageReference` XML items listed in the error.
+
+Once the missing packages are resolved, rebuilding the project should load the missing packages and your project will compiled using AndroidX instead of Support Library dependencies.
+
+> [!NOTE]
+> If your project, and project dependencies, do not reference Android Support Libraries, the migration process does nothing and will not be executed.
 
 ## Manual Migration in Xamarin.Forms
+
+It is possible to manually target AndroidX in your Xamarin.Forms application. You must:
+
+- Include the **Xamarin.AndroidX.Migration** NuGet package in your Android project.
+- Use Xamarin.Forms version 4.5 or greater.
+- Be using Support Libraries directly or via a dependency.
+
+Once the **Xamarin.AndroidX.Migration** package is installed, the process is identical to [Automatic Migration in Xamarin.Forms](#automatic-migration-in-xamarin-forms).
+
+> [!NOTE]
+> This migration method is only necessary if you want to target API versions below 29.
 
 ## Related links
 
