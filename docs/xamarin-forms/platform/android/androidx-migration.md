@@ -17,18 +17,20 @@ AndroidX replaces the Android Support Library. This article explains why Android
 
 The Android Support Library was created to provide newer features on older versions of Android. It is a compatibility layer that allows developers to use functionality that may not exist on all versions of the Android operating system and have graceful fallbacks for older versions. The Support Library also includes convenience and helper classes, debugging and utility tools, and sophisticated classes that depend on other Support Library classes to function.
 
-While the Support Library was originally a single binary, it has grown and evolved into a suite of libraries which are almost essential for modern app development. These are some commonly used features from the Support Library:
+While the Support Library was originally a single binary, it has grown and evolved into a suite of libraries, which are almost essential for modern app development. These are some commonly used features from the Support Library:
 
 - The `Fragment` support class.
 - The `RecyclerView`, used for managing long lists.
 - Multidex support for apps with over 65,536 methods.
 - The `ActivityCompat` class.
 
-AndroidX is a replacement for the Support Library, which is no longer maintained. AndroidX is a redesigned library that uses semantic versioning, clearer package names, and better support for common application architecture patterns. AndroidX version 1.0.0 is binary equivalent to Support Library version 28.0.0. All new library development will occur in the AndroidX library. For a complete list of class mappings from Support Library to AndroidX, see [Support Library class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) on developer.android.com.
+AndroidX is a replacement for the Support Library, which is no longer maintained - all new library development will occur in the AndroidX library. AndroidX is a redesigned library that uses semantic versioning, clearer package names, and better support for common application architecture patterns. AndroidX version 1.0.0 is the binary equivalent to Support Library version 28.0.0. For a complete list of class mappings from Support Library to AndroidX, see [Support Library class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) on developer.android.com.
 
-With AndroidX, Google created a migration process called the Jetifier. The Jetifier inspects the jar bytecode during the build process and remaps Support Library references, both in app code and in dependencies, to their AndroidX equivalent.
+Google created a migration process called the Jetifier with AndroidX. The Jetifier inspects the jar bytecode during the build process and remaps Support Library references, both in app code and in dependencies, to their AndroidX equivalent.
 
 In a Xamarin.Forms app, the jar dependencies must be migrated to AndroidX similar to an Android Java app. However, the Xamarin bindings must also be migrated to point to the correct, underlying jar files. Xamarin.Forms added support for automatic AndroidX migration in version 4.5.
+
+For more information about AndroidX, see [AndroidX overview](https://developer.android.com/jetpack/androidx) on developer.android.com.
 
 ## Automatic Migration in Xamarin.Forms
 
@@ -36,17 +38,17 @@ To automatically migrate to AndroidX, your project must:
 
 - Target Android API version 29 or greater.
 - Use Xamarin.Forms version 4.5 or greater.
-- Be using Support Libraries directly or via a depedency.
+- Be using Support Libraries directly or via a dependency.
 
-Once you have confirmed these settings in your project, build the Android app in Visual Studio 2019. During the build process, the Intermediate Language (IL) will be inspected and Support Library dependencies and bindings will be swapped with AndroidX dependencies. If your application has all of the AndroidX dependencies required to build, you will notice no differences in the build process.
+Once you have confirmed these settings in your project, build the Android app in Visual Studio 2019. During the build process, the Intermediate Language (IL) is inspected and Support Library dependencies and bindings are swapped with AndroidX dependencies. If your application has all of the AndroidX dependencies required to build, you will notice no differences in the build process.
 
 > [!NOTE]
 > You must keep the references to the Support Library in your project. These are used to compile the application before the migration process inspects the resulting IL and transforms the dependencies.
 
-If AndroidX dependencies are detected that are not part of the project, a build error will be reported that indicates which AndroidX packages are missing. This is a build error example:
+If AndroidX dependencies are detected that are not part of the project, a build error is reported that indicates which AndroidX packages are missing. An example build error:
 
 ```
-Could not find 37 Android X assemblies, make sure to install the following NuGet packages:
+Could not find 37 AndroidX assemblies, make sure to install the following NuGet packages:
 - Xamarin.AndroidX.Lifecycle.LiveData
 - Xamarin.AndroidX.Browser
 - Xamarin.Google.Android.Material
@@ -60,10 +62,10 @@ You can also copy and paste the following snippit into your .csproj file:
 
 The missing NuGet packages can either be installed  via the NuGet Package Manager in Visual Studio 2019, or installed by editing your Android .csproj file to include the `PackageReference` XML items listed in the error.
 
-Once the missing packages are resolved, rebuilding the project should load the missing packages and your project will compiled using AndroidX instead of Support Library dependencies.
+Once the missing packages are resolved, rebuilding the project loads the missing packages and your project is compiled using AndroidX instead of Support Library dependencies.
 
 > [!NOTE]
-> If your project, and project dependencies, do not reference Android Support Libraries, the migration process does nothing and will not be executed.
+> If your project, and project dependencies, do not reference Android Support Libraries, the migration process does nothing and is not executed.
 
 ## Manual Migration in Xamarin.Forms
 
