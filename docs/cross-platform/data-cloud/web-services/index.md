@@ -165,7 +165,7 @@ Generally, platform-specific classes for consuming web services should be limite
 
 ### ServiceStack
 
-Another option for calling web services is the [Service Stack](https://www.servicestack.net/) library. For example, the following code shows how to use Service Stack’s `IServiceClient.GetAsync` method to issue a service request:
+Another option for calling web services is the [Service Stack](https://servicestack.net) library. For example, the following code shows how to use Service Stack’s `IServiceClient.GetAsync` method to issue a service request:
 
 ```csharp
 client.GetAsync<CustomersResponse>("",

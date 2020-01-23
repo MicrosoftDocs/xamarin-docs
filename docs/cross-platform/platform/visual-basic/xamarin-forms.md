@@ -126,7 +126,7 @@ As stated on the [Portable Visual Basic.NET page](~/cross-platform/platform/visu
 Xamarin does not support the Visual Basic language. This means there are some limitations
 on where you can use Visual Basic:
 
-- XAML pages cannot be included in the Visual Basic project - the code-behind generator can only build C#. It is possible to include XAML in a separate, referenced, C# portable class library and use databinding to populate the XAML files via Visual Basic models (an example of this is included in the [sample](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB/XamlPages)).
+- XAML pages cannot be included in the Visual Basic project - the code-behind generator can only build C#. It is possible to include XAML in a separate, referenced, C# portable class library and use databinding to populate the XAML files via Visual Basic models (an example of this is included in the [sample](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/XamarinFormsVB)).
 
 - Custom Renderers cannot be written in Visual Basic, they must be written in C# in the native platform projects.
 
