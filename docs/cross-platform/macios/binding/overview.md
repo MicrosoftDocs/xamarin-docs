@@ -99,7 +99,7 @@ It is possible to use the [[Register]](xref:Foundation.RegisterAttribute) attrib
 together to manually bind new (previously unbound) Objective-C types.
 
 First, find a type that you wish to bind. For discussion purposes (and
-simplicity), we'll bind the [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (which has already been bound in [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); the implementation below
+simplicity), we'll bind the [NSEnumerator](https://developer.apple.com/documentation/foundation/nsenumerator) type (which has already been bound in [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); the implementation below
 is just for example purposes).
 
 Second, we need to create the C# type. We'll likely want to place this into a

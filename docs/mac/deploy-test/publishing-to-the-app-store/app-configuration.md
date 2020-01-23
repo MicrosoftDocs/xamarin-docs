@@ -48,4 +48,4 @@ The **Mac Build** section of the **Project Options** dialog allows the developer
 - [Installation](/visualstudio/mac/installation/)
 - [Hello, Mac sample](~/mac/get-started/hello-mac.md)
 - [Distribute your apps on the Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [Developer ID and GateKeeper](https://developer.apple.com/developer-id/)

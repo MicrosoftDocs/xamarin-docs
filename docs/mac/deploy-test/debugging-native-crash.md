@@ -13,7 +13,7 @@ ms.date: 10/19/2016
 
 ## Overview
 
-Sometimes programming errors can cause crashes in the native Objective-C runtime. Unlike C# exceptions, these don't point to a specific line in your code you can look to fix. Sometimes they can be trivial to find and fix, and other times they can be extremely difficult to track down. 
+Sometimes programming errors can cause crashes in the native Objective-C runtime. Unlike C# exceptions, these don't point to a specific line in your code you can look to fix. Sometimes they can be trivial to find and fix, and other times they can be extremely difficult to track down.
 
 Let's walk through a few real native crash examples and take a look.
 
@@ -158,40 +158,40 @@ This guide will help you track down bugs of this nature if they crop up, correct
 
 ### Locating
 
-In almost every case with bugs of this nature, the primary symptom is native crashes, normally with something similar to `mono_sigsegv_signal_handler`, or `_sigtrap` in the top frames of the stack. Cocoa is attempting to call back into your C# code, hitting a garbage collected object, and crashing. However, not every crash with these symbols is caused by a binding issue like this, you’ll need to do some additional digging to confirm this is the problem. 
+In almost every case with bugs of this nature, the primary symptom is native crashes, normally with something similar to `mono_sigsegv_signal_handler`, or `_sigtrap` in the top frames of the stack. Cocoa is attempting to call back into your C# code, hitting a garbage collected object, and crashing. However, not every crash with these symbols is caused by a binding issue like this, you’ll need to do some additional digging to confirm this is the problem.
 
 What makes these bugs difficult to track down is that they only occur **after** a garbage collection has disposed of the object in question. If you believe you’ve hit one of these bugs, add the following code somewhere in your startup sequence:
 
 ```csharp
-new System.Threading.Thread (() => 
+new System.Threading.Thread (() =>
 {
     while (true) {
          System.Threading.Thread.Sleep (1000);
          GC.Collect ();
     }
-}).Start (); 
+}).Start ();
 ```
 
 This will force your application to run the garbage collector every second. Re-run your application and try to reproduce the bug. If you crash immediately, or consistently instead of randomly, you are on the right track.
 
 ### Reporting
 
-The next step is to report the issue to Xamarin so the binding can be fixed for future releases. If you are a business or enterprise license holder, open a ticket at 
+The next step is to report the issue to Xamarin so the binding can be fixed for future releases. If you are a business or enterprise license holder, open a ticket at
 
 [visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 Otherwise, search for an existing issue:
 
-- Check the [Xamarin.Mac Forums](https://forums.xamarin.com/categories/mac)
+- Check the [Xamarin.Mac Forums](https://forums.xamarin.com/categories/xamarin-mac)
 - Search the [issue repository](https://github.com/xamarin/xamarin-macios/issues)
 - Before switching to GitHub issues, Xamarin issues were tracked on [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Please search there for matching issues.
 - If you cannot find a matching issue, please file a new issue in the [GitHub issue repository](https://github.com/xamarin/xamarin-macios/issues/new).
 
-GitHub issues are all public. It’s not possible to hide comments or attachments. 
+GitHub issues are all public. It’s not possible to hide comments or attachments.
 
 Please include as much of the following as possible:
 
-- A simple example reproducing the issue. This is **invaluable** where possible. 
+- A simple example reproducing the issue. This is **invaluable** where possible.
 - The full stack trace of the crash.
 - The C# code surrounding the crash.   
 
@@ -255,4 +255,4 @@ expensive and unnecessary in those cases.
 
 Thus, we'd don't set up those try / catches for you. For places where you code
 does non-trivial things (beyond say returning a booleans or simple math), you
-can try catch yourself. 
+can try catch yourself.

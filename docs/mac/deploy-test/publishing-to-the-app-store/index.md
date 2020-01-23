@@ -61,4 +61,4 @@ This guide walks through uploading a Xamarin.Mac app for publication to the Mac 
 
 - [Installation](/visualstudio/mac/installation/)
 - [Hello, Mac sample](~/mac/get-started/hello-mac.md)
-- [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [Developer ID and GateKeeper](https://developer.apple.com/developer-id/)

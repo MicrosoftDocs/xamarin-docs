@@ -85,7 +85,7 @@ The `OAuth2Authenticator` class requires a number of parameters, which are as fo
 
 - **Client ID** – this identifies the client that is making the request, and can be retrieved from the project in the [Google API Console](https://console.developers.google.com).
 - **Client Secret** – this should be `null` or `string.Empty`.
-- **Scope** – this identifies the API access being requested by the application, and the value informs the consent screen that is shown to the user. For more information about scopes, see [Authorizing API request](https://developers.google.com/+/web/api/rest/oauth) on Google's website.
+- **Scope** – this identifies the API access being requested by the application, and the value informs the consent screen that is shown to the user. For more information about scopes, see [Authorize requests](https://developers.google.com/docs/api/how-tos/authorizing) on Google's website.
 - **Authorize URL** – this identifies the URL where the authorization code will be obtained from.
 - **Redirect URL** – this identifies the URL where the response will be sent. The value of this parameter must match one of the values that appears in the **Credentials** tab for the project in the [Google Developers Console](https://console.developers.google.com/).
 - **AccessToken Url** – this identifies the URL used to request access tokens after an authorization code is obtained.

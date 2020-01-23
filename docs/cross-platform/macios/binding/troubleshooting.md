@@ -39,15 +39,15 @@ If you run into a case where passing in `null` throws an `ArgumentNullException`
 
 Your feedback is important to us. If you find any problems with Xamarin.Mac:
 
-- Check the [Xamarin.Mac Forums](https://forums.xamarin.com/categories/mac)
-- Search the [issue repository](https://github.com/xamarin/xamarin-macios/issues) 
+- Check the [Xamarin.Mac Forums](https://forums.xamarin.com/categories/xamarin-mac)
+- Search the [issue repository](https://github.com/xamarin/xamarin-macios/issues)
 - Before switching to GitHub issues, Xamarin issues were tracked on [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Please search there for matching issues.
 - If you cannot find a matching issue, please file a new issue in the [GitHub issue repository](https://github.com/xamarin/xamarin-macios/issues/new).
 
-GitHub issues are all public. It’s not possible to hide comments or attachments. 
+GitHub issues are all public. It’s not possible to hide comments or attachments.
 
 Please include as much of the following as possible:
 
-- A simple example reproducing the issue. This is **invaluable** where possible. 
+- A simple example reproducing the issue. This is **invaluable** where possible.
 - The full stack trace of the crash.
 - The C# code surrounding the crash.

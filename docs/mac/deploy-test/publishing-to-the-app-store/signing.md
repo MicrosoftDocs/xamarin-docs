@@ -14,7 +14,7 @@ ms.date: 03/14/2017
 If the developer plans to distribute an app directly to macOS
 users, Apple recommends that they code-sign it with their Developer ID so that it can be installed on macOS systems with **GateKeeper** enabled. If the app has not been signed, **GateKeeper** will prevent users from installing with an alert message (they can bypass this restricting by holding down the Control key while launching).
 
-Read more about [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/) and [Distributing Outside the Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) on Apple’s
+Read more about [Developer ID and GateKeeper](https://developer.apple.com/developer-id/) and [Distributing Outside the Mac App Store](https://developer.apple.com/library/content/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html) on Apple’s
 website.
 
 ## Code signing options
@@ -48,4 +48,4 @@ for installation.
 - [Hello, Mac sample](~//mac/get-started/hello-mac.md)
 - [Distribute your apps on the Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
 - [Tools Guide : Code Signing Your App](https://developer.apple.com/library/mac/#documentation/ToolsLanguages/Conceptual/OSXWorkflowGuide/CodeSigning/CodeSigning.html)
-- [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [Developer ID and GateKeeper](https://developer.apple.com/developer-id/)
