@@ -105,4 +105,4 @@ system app.
 - [Publishing an Application](~/android/deploy-test/publishing/index.md)
 - [CPU Architectures](~/android/app-fundamentals/cpu-architectures.md)
 - [BLUETOOTH_PRIVILEGED](https://developer.android.com/reference/android/Manifest.permission.html#BLUETOOTH_PRIVILEGED)
-- [ABI Management](https://developer.android.com/ndk~/abis.html)
+- [ABI Management](https://developer.android.com/ndk/guides/abis)
