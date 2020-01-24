@@ -80,7 +80,7 @@ landingContent:
           - text: Apple Pay
             url: ~/ios/platform/apple-pay.md
           - text: ARKit
-            url: ~/ios/platform/
+            url: ~/ios/platform/introduction-to-ios11/arkit/index.md
           - text: Graphics and animation
             url: ~/ios/platform/graphics-animation-ios/index.md
           - text: PassKit
@@ -137,7 +137,7 @@ landingContent:
           - text: Overview
             url: ~/ios/deploy-test/index.md
           - text: App distribution
-            url: ~/ios/deploy-test/app-distribution.md
+            url: ~/ios/deploy-test/app-distribution/index.md
           - text: Code signing and provisioning
             url: ~/ios/deploy-test/provisioning/index.md
           - text: Compiling for different devices
