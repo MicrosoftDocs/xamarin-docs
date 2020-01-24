@@ -55,7 +55,7 @@ How to use ContactsUI view controllers and properties.
 UI control suite available in watchOS.
     :::column-end:::
     :::column:::
-[![tvOS UI Catalog](images/tvosui.png)](https://docs.microsoft.com/xamarin/ios-samples/tvos-uicatalog/)
+[![tvOS UI Catalog](images/tvosui.png)](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog/)
 
 ### [tvOS UI Catalog](https://docs.microsoft.com/samples/xamarin/ios-samples/tvos-uicatalog/)
 

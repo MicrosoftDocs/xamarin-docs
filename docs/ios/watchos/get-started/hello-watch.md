@@ -164,6 +164,5 @@ When the Simulator launches, press the button to increment the label.
 
 ## Related Links
 
-- [Getting Started (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-gettingstarted)
 - [Setup and Installation](~/ios/watchos/get-started/installation.md)
 - [First Watch App video](https://blog.xamarin.com/your-first-watch-kit-app/)

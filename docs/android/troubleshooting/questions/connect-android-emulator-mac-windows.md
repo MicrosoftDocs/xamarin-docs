@@ -35,8 +35,7 @@ virtual machine, use the following steps:
     The odd-numbered port is the one used to connect to `adb`. See also
     [https://developer.android.com/tools/devices/emulator.html#emulatornetworking](https://developer.android.com/tools/devices/emulator.html#emulatornetworking).
 
-4. _Option 1_: Use
-    [`nc`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/nc.1.html)
+4. _Option 1_: Use `nc`
     to forward inbound TCP packets received externally on port 5555 (or
     any other port you like) to the odd-numbered port on the loopback
     interface (**127.0.0.1 5555** in this example), and to forward the
@@ -53,10 +52,9 @@ virtual machine, use the following steps:
     the Terminal window to quit the `nc` commands once you're done
     using the emulator.
 
-    (Option 1 is usually easier than Option 2, especially if **System Preferences > Security & Privacy > Firewall** is switched on.) 
+    (Option 1 is usually easier than Option 2, especially if **System Preferences > Security & Privacy > Firewall** is switched on.)
 
-    _Option 2_: Use
-    [`pfctl`](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man8/pfctl.8.html)
+    _Option 2_: Use `pfctl`
     to redirect TCP packets from port `5555` (or any other port you
     like) on the
     [Shared Networking](https://kb.parallels.com/en/4948) interface to
@@ -100,7 +98,7 @@ If you have enabled _Remote Login_ on the Mac, then you can use `ssh` port forwa
     odd-numbered emulator port on the Mac's loopback interface
     (`127.0.0.1:5555` in this example):
 
-    ```cmd 
+    ```cmd
     C:\> ssh -L localhost:15555:127.0.0.1:5555 mac-username@ip-address-of-the-mac
     ```
 

@@ -135,7 +135,7 @@ Cons:
 
 When attempting to connect to the internet, either directly or from a web view in iOS 9, you might get an error in the form:
 
-> App Transport Security has blocked a cleartext HTTP (http://www.-the-blocked-domain.com) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.
+> App Transport Security has blocked a cleartext HTTP (`http://www.-the-blocked-domain.com`) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.
 
 In iOS9, App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and your app. Additionally, ATS requires communication using the `HTTPS` protocol and high-level API communication to be encrypted using TLS version 1.2 with forward secrecy.
 
