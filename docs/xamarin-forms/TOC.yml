@@ -602,6 +602,8 @@
           items:
             - name: Overview
               href: platform/android/index.md
+            - name: AndroidX Migration
+              href: platform/android/androidx-migration.md
             - name: AppCompat & Material Design
               href: platform/android/appcompat-material-design.md
             - name: Button Padding and Shadows
