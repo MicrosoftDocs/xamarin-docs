@@ -35,7 +35,7 @@ This page contains additional information and workarounds for issues you may enc
     **Missing Icon Error** if you attempt to submit to the App Store.
     This icon should be 87x87 pixels (29 units for **@3x** Retina screens). You
     cannot fix this in Visual Studio for Mac - either edit the image asset in Xcode or manually
-    edit the **Contents.json** file (to match [this sample](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+    edit the **Contents.json** file.
 
 - If the Watch Extension Project's **Info.plist > WKApp Bundle ID** is not [correctly
     set](~/ios/watchos/get-started/project-references.md)

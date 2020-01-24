@@ -237,8 +237,6 @@ For iOS applications, Apple currently defines the following genres and genre IDs
 
 [!include[](~/ios/includes/table-appstore.md)]
 
-For more information, please see Apple's [Genre IDs Appendix](https://www.apple.com/itunes/affiliates/resources/documentation/genre-mapping.html) documentation.
-
 ### softwareSupportedDeviceIds
 
 Use the `softwareSupportedDeviceIds` key to tell iTunes what iOS devices this iOS application supports. Example:

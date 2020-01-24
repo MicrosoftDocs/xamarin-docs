@@ -10,7 +10,7 @@ ms.author: daortin
 ms.date: 05/22/2018
 ---
 
-# Troubleshooting Tips for Xamarin.iOS 
+# Troubleshooting Tips for Xamarin.iOS
 
 ## Xamarin.iOS cannot resolve System.ValueTuple
 
@@ -494,7 +494,7 @@ This means that you have XCode 4 installed.   In XCode 4, the tool
 ibtool was removed, it is no longer possible to edit your XIB files with a
 standalone tool.
 
-If you want to use Interface Builder, install [XCode series 3](https://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792), available from Apple's web site.
+If you want to use Interface Builder, install XCode series 3, available from Apple's web site.
 
 ## "Can't create display binding for mime type: application/vnd.apple-interface-builder"
 
@@ -531,7 +531,7 @@ This can happen when application names include a '.' (dot) in their name.
 This is forbidden as the executable name in CFBundleExecutable - even if it can
 works in many other cases (like devices).
 
- *"The value should not include any extension on the name."- [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+"The value should not include any extension on the name."
 
 ## Error: "Custom attribute type 0x43 is not supported" when double clicking .xib files
 
