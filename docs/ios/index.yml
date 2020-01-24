@@ -16,7 +16,7 @@ metadata:
 landingContent:
   - title: Getting started
     linkLists:
-      - linkListType: get-started
+      - linkListType: concept
         links:
           - text: Get started with Xamarin.iOS
             url: ~/ios/get-started/index.md
@@ -35,8 +35,6 @@ landingContent:
         links:
           - text: Accessibility
             url: ~/ios/app-fundamentals/accessibility.md
-          - text: App transport security
-            url: ~/ios/app-fundamentals/ats.md
           - text: Backgrounding
             url: ~/ios/app-fundamentals/backgrounding/index.md
           - text: Exception marshaling
@@ -53,6 +51,8 @@ landingContent:
             url: ~/ios/app-fundamentals/security-privacy.md
           - text: Touch
             url: ~/ios/app-fundamentals/touch/index.md
+          - text: See more >
+            url: ~/ios/app-fundamentals/index.md
 
   - title: User interface
     linkLists:
@@ -75,8 +75,6 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Overview
-            url: ~/ios/platform/index.md
           - text: Apple Pay
             url: ~/ios/platform/apple-pay.md
           - text: ARKit
@@ -95,6 +93,8 @@ landingContent:
             url: ~/ios/platform/3d-touch.md
           - text: Touch ID and Face ID
             url: ~/ios/platform/touch-id-face-id.md
+          - text: See more >
+            url: ~/ios/platform/index.md
 
   - title: Xamarin.Essentials
     linkLists:
@@ -134,8 +134,6 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Overview
-            url: ~/ios/deploy-test/index.md
           - text: App distribution
             url: ~/ios/deploy-test/app-distribution/index.md
           - text: Code signing and provisioning
@@ -154,6 +152,8 @@ landingContent:
             url: ~/ios/deploy-test/touch.unit.md
           - text: Wireless deployment
             url: ~/ios/deploy-test/wireless-deployment.md
+          - text: See more >
+            url: ~/ios/deploy-test/index.md
 
   - title: Advanced concepts & internals
     linkLists:
@@ -184,8 +184,6 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Overview
-            url: ~/ios/watchos/index.md
           - text: Getting started
             url: ~/ios/watchos/get-started/index.md
           - text: Application fundamentals
@@ -205,8 +203,6 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Overview
-            url: ~/ios/tvos/index.md
           - text: Getting started
             url: ~/ios/tvos/get-started/index.md
           - text: Application fundamentals
