@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: EAEF7341-7A00-4439-9FAF-43882637BEF8
 ms.technology: xamarin-android
 ms.custom: video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/06/2018
 ---
 
@@ -32,24 +32,21 @@ device) for testing. It also provides an outline of the new features in
 Android 8.0 Oreo, with links to sample apps that illustrate how to use
 Android Oreo features in Xamarin.Android apps.
 
-
 ## Requirements
 
 The following is required to use Android Oreo features in Xamarin-based
 apps:
 
--   **Visual Studio** &ndash; If you are using Windows, version 15.5 
+- **Visual Studio** &ndash; If you are using Windows, version 15.5 
     or later of Visual Studio is required.  If you are using
     a Mac, Visual Studio for Mac version 7.2.0 is 
     required.
 
--   **Xamarin.Android** &ndash; Xamarin.Android 8.0 or later must
+- **Xamarin.Android** &ndash; Xamarin.Android 8.0 or later must
     be installed and configured with Visual Studio.
 
--   **Android SDK** &ndash; Android SDK 8.0 (API 26) or later must be 
+- **Android SDK** &ndash; Android SDK 8.0 (API 26) or later must be 
     installed via the Android SDK Manager.
-
-
 
 ## Getting Started
 
@@ -72,6 +69,8 @@ Each of these steps is explained in the following sections:
 
 To add Android Oreo support to Visual Studio, do the following:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
 - For Visual Studio 2019, use the [SDK Manager](~/android/get-started/installation/android-sdk.md) to install API level 26.0 or later.
@@ -93,8 +92,6 @@ To add Android Oreo support to Visual Studio, do the following:
 
 For more information about Xamarin support for Android Oreo, see the
 [Xamarin.Android 8.0 release notes](https://docs.microsoft.com/xamarin/android/release-notes/8/8.0/).
-
-
 
 ### Install the Android SDK
 
@@ -138,8 +135,6 @@ later.
 
 -----
 
-
-
 ### Start a Xamarin.Android Project
 
 Create a new Xamarin.Android project. If you are new to Android
@@ -154,7 +149,6 @@ level of your project to **Android 8.0 (API 26)**. It is
 recommended that you also set your target framework level to API 26 or
 later. For more about configuring Android API level levels, see
 [Understanding Android API Levels](~/android/app-fundamentals/android-api-levels.md).
-
 
 ### Configure an Emulator or Device
 
@@ -185,7 +179,6 @@ devices, see
 To create virtual devices without the Android Device Manager,
 follow the steps in the next section.
 
-
 #### Creating Virtual Devices Using avdmanager
 
 To use **avdmanager** to create a new virtual device, follow these
@@ -193,7 +186,7 @@ steps:
 
 # [Visual Studio](#tab/windows)
 
-1.  Open a Command Prompt window and set `JAVA_HOME` to the location of
+1. Open a Command Prompt window and set `JAVA_HOME` to the location of
     the Java SDK on your computer. For a typical Xamarin installation,
     you can use the following command:
 
@@ -201,7 +194,7 @@ steps:
     setx JAVA_HOME "C:\Program Files\Java\jdk1.8.0_131"
     ```
 
-2.  Add the location of the Android SDK `bin` folder to your `PATH`.
+2. Add the location of the Android SDK `bin` folder to your `PATH`.
     For a typical Xamarin installation, you can use the following
     command:
 
@@ -209,7 +202,7 @@ steps:
     setx PATH "%PATH%;C:\Program Files (x86)\Android\android-sdk\tools\bin"
     ```
 
-3.  Close the Command Prompt window and open a new Command Prompt
+3. Close the Command Prompt window and open a new Command Prompt
     window. Create a new virtual device by using the
     [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
     command. For example, to create an AVD named **AVD-Oreo-8.0** using
@@ -219,7 +212,7 @@ steps:
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-4.  When you are prompted with **Do you wish to create a custom
+4. When you are prompted with **Do you wish to create a custom
     hardware profile
     [no]** you can enter **no** and accept the default hardware
     profile. If you say **yes**, **avdmanager** will prompt you with a
@@ -232,7 +225,7 @@ included in the device pull-down menu:
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  Open a **Terminal** window and change to the location of the
+1. Open a **Terminal** window and change to the location of the
     Android SDK tools directory on your Mac. For a typical Xamarin
     installation, you can use the following command:
 
@@ -240,7 +233,7 @@ included in the device pull-down menu:
     cd ~/Library/Developer/Xamarin/android-sdk-macosx/tools/bin
     ```
 
-2.  Create a new virtual device by using the
+2. Create a new virtual device by using the
     [avdmanager](https://developer.android.com/studio/command-line/avdmanager.html)
     command. For example, to create an AVD named **AVD-Oreo-8.0** using
     the x86 system image for API level 26, use the following command:
@@ -249,7 +242,7 @@ included in the device pull-down menu:
     avdmanager create avd -n AVD-Oreo-8.0 -k "system-images;android-26;google_apis;x86"
     ```
 
-3.  When you are prompted with **Do you wish to create a custom
+3. When you are prompted with **Do you wish to create a custom
     hardware profile
     [no]** you can enter **no** and accept the default hardware
     profile. If you say **yes**, **avdmanager** will prompt you with a
@@ -272,8 +265,6 @@ or download a system image and flash your device directly. For
 more information about manually updating your device to Android Oreo,
 see [Factory Images for Nexus and Pixel Devices](https://developers.google.com/android/images).
 
-
-
 ## New Features
 
 Android Oreo introduces a variety of new features and capabilities,
@@ -281,8 +272,6 @@ such as notification channels, notification badges, custom fonts in
 XML, downloadable fonts, autofill, and picture-in-picture. The
 following sections highlight these features and provide links to help
 you get started using them in your app.
-
-
 
 ### Notification Channels
 
@@ -302,8 +291,6 @@ local notifications. For a real-world code example, see the
 sample; this sample app manages two channels and sets additional
 notification options.
 
-
-
 ### Notification Badges
 
 Notification badges are small dots that appear over app icons as shown
@@ -322,8 +309,6 @@ For more information about notification badges, see the Android
 Developer
 [Notification Badges](https://developer.android.com/guide/topics/ui/notifiers/notifications.html#Badges)
 topic.
-
-
 
 ### Custom Fonts in XML
 
@@ -361,7 +346,6 @@ the Android Developer
 [Fonts in XML](https://developer.android.com/guide/topics/ui/look-and-feel/fonts-in-xml.html)
 topic.
 
-
 ### Downloadable Fonts
 
 Beginning with Android Oreo, apps can request fonts from a provider rather
@@ -376,18 +360,18 @@ When your app needs a font, you create a `FontsRequest` object
 `FontsContract` method to download the font. The following steps
 describe the font download process in more detail:
 
-1.  Instantiate a [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) object. 
+1. Instantiate a [FontRequest](https://developer.android.com/reference/android/provider/FontRequest.html) object. 
 
-2.  Subclass and instantiate 
+2. Subclass and instantiate 
     [FontsContract.FontRequestCallback](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html).
 
-3.  Implement the [FontRequestCallback.OnTypeFaceRetrieved](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRetrieved%28android.graphics.Typeface%29)  method, which is used to
+3. Implement the [FontRequestCallback.OnTypeFaceRetrieved](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRetrieved%28android.graphics.Typeface%29)  method, which is used to
     handle completion of the font request.
 
-4.  Implement the [FontRequestCallback.OnTypeFaceRequestFailed](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRequestFailed%28int%29) method, which is used to inform your app of any errors that
+4. Implement the [FontRequestCallback.OnTypeFaceRequestFailed](https://developer.android.com/reference/android/provider/FontsContract.FontRequestCallback.html#onTypefaceRequestFailed%28int%29) method, which is used to inform your app of any errors that
     take place during the font request process.
 
-5.  Call the [FontsContract.RequestFonts](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) method
+5. Call the [FontsContract.RequestFonts](https://developer.android.com/reference/android/provider/FontsContract.html#requestFonts(android.content.Context,%20android.provider.FontRequest,%20android.os.Handler,%20android.os.CancellationSignal,%20android.provider.FontsContract.FontRequestCallback)) method
     to retrieve the font from the font provider. 
 
 When you call the `RequestFonts` method, it first checks to see if the
@@ -403,8 +387,6 @@ introduced in Android Oreo.
 For more information about downloading fonts, see the Android Developer
 [Downloadable Fonts](https://developer.android.com/guide/topics/ui/look-and-feel/downloadable-fonts.html)
 topic.
-
-
 
 ### Autofill
 
@@ -425,8 +407,6 @@ For more information about the new Autofill feature and how to optimize
 your app for autofill, see the Android Developer
 [Autofill Framework](https://developer.android.com/guide/topics/text/autofill.html)
 topic.
-
-
 
 ### Picture in Picture (PIP)
 
@@ -449,11 +429,11 @@ you use to initialize and update an Activity in PIP mode (for example,
 the Activity's preferred aspect ratio). The following new PIP methods
 were added to `Activity` in Android Oreo:
 
--   [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29)
+- [EnterPictureInPictureMode](https://developer.android.com/reference/android/app/Activity.html#enterPictureInPictureMode%28android.app.PictureInPictureParams%29)
     &ndash; puts the Activity in PIP mode. The Activity is placed in the corner of the screen, and the rest of the screen is
     filled with the previous Activity that was on the screen.
 
--   [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29)
+- [SetPictureInPictureParams](https://developer.android.com/reference/android/app/Activity.html#setPictureInPictureParams%28android.app.PictureInPictureParams%29)
     &ndash; Updates the Activity's PIP configuration settings (for example, a change in aspect ratio).
 
 The [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture)
@@ -461,8 +441,6 @@ sample demonstrates basic usage of the Picture-in-Picture (PiP) mode
 for handheld devices introduced in Oreo. The sample plays a video which
 continues uninterrupted while switching back and forth between display
 modes or other activities.
-
-
 
 ### Other Features
 
@@ -474,14 +452,11 @@ low-latency audio, For more information about these features, see the
 Android Developer
 [Android Oreo Features and APIs](https://developer.android.com/about/versions/oreo/android-8.0.html) topic.
 
-
-
 ## Behavior Changes
 
 Android Oreo includes a variety of system and API behavior changes that can
 have an impact on the functionality of existing apps. These changes
 are described as follows.
-
 
 ### Background Execution Limits
 
@@ -492,13 +467,13 @@ could impair the performance of a video-intensive app running in the
 foreground. As a result, Android Oreo places the following restrictions on
 apps that are not directly interacting with the user:
 
-1.  **Background Service Limitations** &ndash; When an app is running
+1. **Background Service Limitations** &ndash; When an app is running
     in the background, it has a window of several minutes in which it is
     still allowed to create and use services. At the end of that window,
     Android stops the app's background service and treats it as
     being _idle_.
 
-2.  **Broadcast Limitations** &ndash; Android 7.0 (API 25) placed limitations
+2. **Broadcast Limitations** &ndash; Android 7.0 (API 25) placed limitations
     on broadcasts that an app registers to receive. Android Oreo makes
     these limitations more stringent. For example, Android Oreo apps can no
     longer register broadcast receivers for implicit broadcasts in their
@@ -508,7 +483,6 @@ For more information about the new background execution limits, see the
 Android Developer
 [Background Execution Limits](https://developer.android.com/about/versions/oreo/background.html)
 topic.
-
 
 ### Breaking Changes
 
@@ -526,50 +500,47 @@ the following changes, where applicable:
   background. If you are targeting Android Oreo, you should use
   [PendingIntent.GetBroadcast](xref:Android.App.PendingIntent.GetBroadcast*) instead.  
 
-
 ## Sample Code
 
 Several Xamarin.Android samples are available to show you how to take
 advantage of Android Oreo features:
 
--   [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels)
+- [NotificationsChannels](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-notificationchannels)
     demonstrates how to use the new Notification Channels system introduced in Android 
     Oreo. This sample manages two notifications channels: one with default importance
     and the other with high importance.
 
--   [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture)
+- [PictureInPicture](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-pictureinpicture)
     demonstrates basic usage of the Picture-in-Picture (PiP) mode for
     handheld devices introduced in Oreo. The sample plays a video which
     continues uninterrupted while switching back and forth between
     display modes or other activities.
 
--   [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework)
+- [AutofillFramework](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-autofillframework)
     demonstrates the use of the Autofill Framework. It includes implementations of client Activities with views that 
     should be autofilled, and a Service that can provide autofill data to client Activities.
 
--   [Downloadable Fonts](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts)
+- [Downloadable Fonts](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-downloadablefonts)
     provides an example of how to use the Downloadable Fonts feature
     described earlier.
 
--   [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat)
+- [EmojiCompat](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-emojicompat)
     demonstrates usage of EmojiCompat support library. You can use this library to prevent your app from 
     showing missing emoji characters as "tofu" characters.
 
--   [Location Updates Pending Intent](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent)
+- [Location Updates Pending Intent](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdpendintent)
     illustrates usage of the Location API to get updates about a
     device's location using a `PendingIntent`.
 
--   [Location Updates Foreground Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice)
+- [Location Updates Foreground Service](https://docs.microsoft.com/samples/xamarin/monodroid-samples/android-o-androidplaylocation-locupdfgservice)
     demonstrates how to use the Location API to get updates about a
     device's location using a bound and started foreground service.
-
 
 ## Video
 
 > [!VIDEO https://youtube.com/embed/OuvEcaMO-Ho]
 
 **Android 8.0 Oreo development with C#**
-
 
 ## Summary
 
@@ -581,7 +552,6 @@ features. It included links to API documentation and Android Developer
 topics to help you get started in creating apps for Android Oreo. It
 also highlighted the most important Android Oreo behavior changes that
 could impact existing apps.
-
 
 ## Related Links
 

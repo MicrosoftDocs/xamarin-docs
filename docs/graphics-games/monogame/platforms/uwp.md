@@ -51,7 +51,6 @@ Once Visual Studio finishes creating the template, we can run it to see the empt
 
 The numbers in the corners provide diagnostic information. This information can be removed  by deleting the code in `App.xaml.cs` in the `DEBUG` block in the `OnLaunched` method:
 
-
 ```csharp
 protected override void OnLaunched(LaunchActivatedEventArgs e)
 {
@@ -99,13 +98,13 @@ To load a `Texture2D` from file:
 1. Change the **Copy to Output Directory** to **Copy if Newer**.
 1. Add the following code to your game’s Initialize method to load a `Texture2D`:
 
-	```csharp
-	Texture2D texture;
-	using (var stream = System.IO.File.OpenRead("Content/YourPngName.png"))
-	{
-	    texture = Texture2D.FromStream(graphics.GraphicsDevice, stream);
-	}
-	```
+    ```csharp
+    Texture2D texture;
+    using (var stream = System.IO.File.OpenRead("Content/YourPngName.png"))
+    {
+        texture = Texture2D.FromStream(graphics.GraphicsDevice, stream);
+    }
+    ```
 
 For more information on using a `Texture2D`, see the [Intro to MonoGame guide](~/graphics-games/monogame/introduction/index.md).
 

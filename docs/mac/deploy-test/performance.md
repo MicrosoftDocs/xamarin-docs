@@ -4,8 +4,8 @@ description: "This document provides some performance considerations for Xamarin
 ms.prod: xamarin
 ms.assetid: 54B07DED-FDF2-49B2-A5FB-3A9357E65922
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/10/2017
 ---
 
@@ -55,7 +55,6 @@ Desktop applications often process large quantities of data and it is very easy 
 Whenever possible, use [async](~/cross-platform/platform/async.md) and threads to prevent blocking the UI.
 
 For long running operations consider using [NSProgressIndicator](https://docs.microsoft.com/samples/xamarin/mac-samples/progressbarexample) or other options noted in Apple’s [HIG](https://developer.apple.com/macos/human-interface-guidelines/indicators/progress-indicators/) to notify users.
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This document describes, at a high level, Xamarin's interaction wi
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9951F980-2C6C-47C0-8A35-A78F06C20BEB
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
 ---
 
@@ -31,13 +31,10 @@ The error message for this issue is something like this:
 
 Your options for setting the SDK location may vary depending on the exact Jenkins Android plugin you're using; a good place to look for how to set this is in the plugin guide. For example; the [Android Emulator Plugin](https://wiki.jenkins-ci.org/display/JENKINS/Android+Emulator+Plugin#AndroidEmulatorPlugin-Systemconfiguration) automatically looks for the SDK, but if it can't find it; the location can also be set via the Jenkins System Configuration page for that plugin. 
 
-
 ## Deprecated Errors
 
 > [!IMPORTANT]
 > This issue has been resolved in recent versions of Xamarin. However, if the issue occurs on the latest version of the software, please file a [new bug](~/cross-platform/troubleshooting/questions/howto-file-bug.md) with your full versioning information and full build log output.
-
-
 
 ### Jenkins reports an invalid Xamarin license
 The error messages for this issue are typically something like

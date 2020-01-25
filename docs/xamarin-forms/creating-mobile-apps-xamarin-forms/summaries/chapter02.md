@@ -33,14 +33,12 @@ With the Xamarin platform installed, you can create a new Xamarin.Forms solution
 > [!NOTE]
 > Portable Class Libraries have been replaced by .NET Standard libraries. All the sample code from the book has been converted to use .NET standard libraries.
 
-This sample demonstrates a Xamarin.Forms solution created in Visual Studio with no modifications. The solution consists of six projects:
+This sample demonstrates a Xamarin.Forms solution created in Visual Studio with no modifications. The solution consists of four projects:
 
 - [**Hello**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello), a Portable Class Library (PCL) shared by the other projects
 - [**Hello.Droid**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Droid), an application project for Android
 - [**Hello.iOS**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.iOS), an application project for iOS
 - [**Hello.UWP**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.UWP), an application project for the Universal Windows Platform (Windows 10 and Windows 10 Mobile)
-- [**Hello.Windows**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.Windows), an application project for Windows 8.1
-- [**Hello.WinPhone**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter02/Hello/Hello/Hello.WinPhone), an application project for Windows Phone 8.1
 
 > [!NOTE]
 > Xamarin.Forms no longer supports Windows 8.1, Windows Phone 8.1, or Windows 10 Mobile, but Xamarin.Forms applications do run on the Windows 10 desktop.

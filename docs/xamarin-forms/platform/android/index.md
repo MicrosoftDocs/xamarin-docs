@@ -6,12 +6,12 @@ ms.assetid: E24168F3-0138-4814-86EA-B467F6B8A545
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/07/2018
+ms.date: 12/11/2019
 ---
 
 # Android Platform Features
 
-Developing Xamarin.Forms applications for Android requires Visual Studio. The [requirements page](~/get-started/requirements.md) contains more information about the pre-requisites.
+Developing Xamarin.Forms applications for Android requires Visual Studio. The [supported platforms page](~/get-started/supported-platforms.md) contains more information about the pre-requisites.
 
 ## Platform-specifics
 
@@ -28,8 +28,13 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 - Setting the input method editor options for the soft keyboard for an [`Entry`](xref:Xamarin.Forms.Entry). For more information, see [Entry Input Method Editor Options on Android](entry-ime-options.md).
 - Enabling a drop shadow on a `ImageButton`. For more information, see [ImageButton Drop Shadows on Android](imagebutton-drop-shadow.md).
 - Enabling fast scrolling in a [`ListView`](xref:Xamarin.Forms.ListView) For more information, see [ListView Fast Scrolling on Android](listview-fast-scrolling.md).
+- Controlling the transition that's used when opening a `SwipeView`. For more information, see [SwipeView Swipe Transition Mode](swipeview-swipetransitionmode.md).
 - Controlling whether a [`WebView`](xref:Xamarin.Forms.WebView) can display mixed content. For more information, see [WebView Mixed Content on Android](webview-mixed-content.md).
 - Enabling zoom on a [`WebView`](xref:Xamarin.Forms.WebView). For more information, see [WebView Zoom on Android](webview-zoom-controls.md).
+
+The following platform-specific functionality is provided for Xamarin.Forms cells on Android:
+
+- Enabling [`ViewCell`](xref:Xamarin.Forms.ViewCell) context actions legacy mode, so that the context actions menu is not updated when the selected item in a [`ListView`](xref:Xamarin.Forms.ListView) changes. For more information, see [ViewCell Context Actions on Android](viewcell-context-actions.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms pages on Android:
 

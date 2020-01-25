@@ -4,8 +4,8 @@ description: "This guide introduces Renderscript and explains how to use the int
 ms.prod: xamarin
 ms.assetid: 378793C7-5E3E-40E6-ABEE-BEAEF64E6A47
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -23,11 +23,11 @@ performance API based on
 that will run on CPUs, GPUs, or DSPs, Renderscript is well suited for
 Android apps that may need to perform any of the following:
 
-* Graphics
-* Image Processing
-* Encryption
-* Signal Processing
-* Mathematical Routines
+- Graphics
+- Image Processing
+- Encryption
+- Signal Processing
+- Mathematical Routines
 
 Renderscript will use `clang` and compile the scripts to LLVM byte code
 which is bundled into the APK. When the app is run for the first time,
@@ -112,7 +112,6 @@ of the
 class. The `Script` class is used to set parameters for a Renderscript,
 set the appropriate `Allocations`, and run the Renderscript. There are
 two `Script` subclasses in the Android SDK:
-
 
 - **`Android.Renderscripts.ScriptIntrinsic`** &ndash; Some of the more
   common Renderscript tasks are bundled in the Android SDK and are
@@ -264,8 +263,6 @@ and how it works in an Android application. It described some of the
 key components in Renderscript and the difference between _user
 scripts_ and _instrinsic scripts_. Finally, this guide discussed the
 steps in using an intrinsic script in a Xamarin.Android application.
-
-
 
 ## Related Links
 

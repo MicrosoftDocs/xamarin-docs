@@ -4,8 +4,8 @@ description: "This document describes iCloud and its use in Xamarin.iOS applicat
 ms.prod: xamarin
 ms.assetid: C6F3B87C-C195-4434-EF14-D66E63894F09
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/09/2016
 ---
 
@@ -48,9 +48,9 @@ Applications must be configured to use iCloud both in the [Apple Provisioning Po
 
 To correctly configure an application to access iCloud:
 
--   **Find your TeamID** - login to  [developer.apple.com](https://developer.apple.com) and visit the  **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( **A93A5CM278** for example) - this forms part of the "container identifier".
+- **Find your TeamID** - login to  [developer.apple.com](https://developer.apple.com) and visit the  **Member Center > Your Account > Developer Account Summary** to get your Team ID (or Individual ID for single developers). It will be a 10 character string ( **A93A5CM278** for example) - this forms part of the "container identifier".
 
--   **Create a new App ID** - To create an App ID, follow the steps outlined in the  [Provisioning for Store Technologies section of the Device Provisioning guide](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md), and be sure to check **iCloud** as an allowed service:
+- **Create a new App ID** - To create an App ID, follow the steps outlined in the  [Provisioning for Store Technologies section of the Device Provisioning guide](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md), and be sure to check **iCloud** as an allowed service:
 
  [![](introduction-to-icloud-images/icloud-sml.png "Check iCloud as an allowed service")](introduction-to-icloud-images/icloud.png#lightbox)
 
@@ -67,7 +67,6 @@ Select and turn on the **Documents & Data** option.
 - **You must use a device to test iCloud** - it will not work on the Simulator.
 In fact, you really need two or more devices all signed in with the same Apple
 ID to see iCloud in action.
-
 
 ## Key-Value Storage
 
@@ -100,8 +99,6 @@ propagated.
 This screenshot shows the sample in use. When change notifications are
 received from iCloud they are printed in the scrolling text view at the bottom
 of the screen and updated in the input fields.
-
-
 
  [![](introduction-to-icloud-images/icloud-kv-arrows.png "The flow of messages between devices")](introduction-to-icloud-images/icloud-kv-arrows.png#lightbox)
 
@@ -415,8 +412,8 @@ void LoadDocument (NSMetadataQuery metadataQuery)
 
 ### Displaying iCloud Documents
 
-Displaying a UIDocument shouldn't be any different to any other model class
-- properties are displayed in UI controls, possibly edited by the user and
+Displaying a UIDocument shouldn't be any different to any other model class -
+properties are displayed in UI controls, possibly edited by the user and
 then written back to the model.
 
 In the example **iCloudUIDoc\MonkeyDocumentViewController.cs** displays the
@@ -496,8 +493,6 @@ application data in the **Documents** directory.
 
  [![](introduction-to-icloud-images/icloudstorage.png "Managing iCloud Documents workflow")](introduction-to-icloud-images/icloudstorage.png#lightbox)
 
-
-
 Users will also receive different warnings when they attempt to remove an
 iCloud-enabled application from their device, to inform them of the status of
 iCloud documents related to that application.
@@ -536,8 +531,6 @@ UIDocument example showed how more complex data can be stored and synchronized
 across multiple devices via iCloud.
 
 Finally it included a brief discussion on how the addition of iCloud Backup should influence your application design.
-
-
 
 ## Related Links
 

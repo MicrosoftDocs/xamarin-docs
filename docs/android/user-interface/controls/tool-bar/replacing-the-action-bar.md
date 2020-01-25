@@ -3,8 +3,8 @@ title: "Replacing the Action Bar"
 ms.prod: xamarin
 ms.assetid: 5341D28E-B203-478D-8464-6FAFDC3A4110
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/27/2018
 ---
 
@@ -21,24 +21,22 @@ offers a significant upgrade over the default action bar.
 
 To replace an app's default action bar with a `Toolbar`: 
 
-1.  Create a new custom theme and modify the app's properties so that it 
+1. Create a new custom theme and modify the app's properties so that it 
     uses this new theme. 
 
-2.  Disable the `windowActionBar` attribute in the custom theme and 
+2. Disable the `windowActionBar` attribute in the custom theme and 
     enable the `windowNoTitle` attribute.
 
-3.  Define a layout for the `Toolbar`.
+3. Define a layout for the `Toolbar`.
 
-4.  Include the `Toolbar` layout in the Activity's **Main.axml** layout 
+4. Include the `Toolbar` layout in the Activity's **Main.axml** layout 
     file. 
 
-5.  Add code to the Activity's `OnCreate` method to locate the `Toolbar`
+5. Add code to the Activity's `OnCreate` method to locate the `Toolbar`
     and call `SetActionBar` to install the `ToolBar` as the action bar.
 
 The following sections explain this process in detail. A simple app is 
 created and its action bar is replaced with a customized `Toolbar`. 
-
-
 
 ## Start an App Project
 
@@ -53,8 +51,6 @@ is built and run, it displays the default action bar as seen in this
 screenshot:
 
 [![Screenshot of default action bar](replacing-the-action-bar-images/01-before-sml.png)](replacing-the-action-bar-images/01-before.png#lightbox)
-
-
 
 ## Create a Custom Theme
 
@@ -89,7 +85,7 @@ disabled:
 
 An olive-green `colorPrimary` setting is used for the background 
 color of the toolbar: 
- 
+
 ```xml
 <item name="android:colorPrimary">#5A8622</item>
 ```
@@ -106,8 +102,6 @@ app uses the `MyTheme` custom theme:
 
 For more information about applying a custom theme to an app, see 
 [Using Custom Themes](~/android/user-interface/material-theme.md#customtheme). 
-
-
 
 ## Define a Toolbar Layout
 
@@ -154,8 +148,6 @@ android:theme="@android:style/ThemeOverlay.Material.Dark.ActionBar"
 This setting is used so that menu items contrast with the darker 
 background color.
 
-
-
 ## Include the Toolbar Layout
 
 Edit the layout file **Resources/layout/Main.axml** and replace
@@ -175,8 +167,6 @@ its contents with the following XML:
 This layout includes the `Toolbar` defined in **toolbar.xml** and 
 uses a `RelativeLayout` to specify that the `Toolbar` is to be 
 placed at the very top of the UI (above the button). 
-
-
 
 ## Find and Activate the Toolbar
 
@@ -211,7 +201,6 @@ the remainder of the app.
 If an exception occurs while running the app, see the
 [Troubleshooting](#troubleshooting) section below.
 
- 
 ## Add Menu Items 
 
 In this section, menus are added to the `Toolbar`. The upper right area 
@@ -221,23 +210,21 @@ activity or it can perform an action on behalf of the entire app.
 
 To add menus to the `Toolbar`: 
 
-1.  Add menu icons (if required) to the `mipmap-` folders of 
+1. Add menu icons (if required) to the `mipmap-` folders of 
     the app project. Google provides a set of free menu icons on the 
     [Material icons](https://design.google.com/icons/) page. 
 
-2.  Define the contents of the menu items by adding a new menu resource 
+2. Define the contents of the menu items by adding a new menu resource 
     file under **Resources/menu**. 
 
-3.  Implement the `OnCreateOptionsMenu` method of the Activity &ndash; 
+3. Implement the `OnCreateOptionsMenu` method of the Activity &ndash; 
     this method inflates the menu items. 
 
-4.  Implement the `OnOptionsItemSelected` method of the Activity 
+4. Implement the `OnOptionsItemSelected` method of the Activity 
     &ndash; this method performs an action when a menu item is tapped. 
 
 The following sections demonstrate this process in detail by adding
 **Edit** and **Save** menu items to the customized `Toolbar`. 
-
-
 
 ### Install Menu Icons
 
@@ -247,7 +234,6 @@ project. Download
 unzip, and copy the contents of the extracted *mipmap-* folders to
 the project *mipmap-* folders under **ToolbarFun/Resources** and
 include each added icon file in the project.
-
 
 ### Define a Menu Resource
 
@@ -277,13 +263,13 @@ and replace its contents with the following XML:
 
 This XML creates three menu items:
 
--   An **Edit** menu item that uses the `ic_action_content_create.png` 
+- An **Edit** menu item that uses the `ic_action_content_create.png` 
     icon (a pencil). 
 
--   A **Save** menu item that uses the `ic_action_content_save.png` 
+- A **Save** menu item that uses the `ic_action_content_save.png` 
     icon (a diskette). 
 
--   A **Preferences** menu item that does not have an icon.
+- A **Preferences** menu item that does not have an icon.
 
 The `showAsAction` attributes of the **Edit** and **Save** menu 
 items are set to `ifRoom` &ndash; this setting causes these menu 
@@ -291,7 +277,6 @@ items to appear in the `Toolbar` if there is sufficient room for
 them to be displayed. The **Preferences** menu item sets 
 `showAsAction` to `never` &ndash; this causes the **Preferences** 
 menu to appear in the *overflow* menu (three vertical dots). 
-
 
 ### Implement OnCreateOptionsMenu
 
@@ -310,8 +295,6 @@ specify the menu resource for an activity. In this method, the
 **top_menus.xml** resource is inflated into the passed `menu`. This 
 code causes the new **Edit**, **Save**, and **Preferences** menu 
 items to appear in the `Toolbar`. 
-
-
 
 ### Implement OnOptionsItemSelected
 
@@ -353,7 +336,6 @@ and **Save**:
 For more information about Android menus, see the Android Developer 
 [Menus](https://developer.android.com/guide/topics/ui/menus.html) 
 topic. 
- 
 
 ## Troubleshooting
 
@@ -378,7 +360,6 @@ the custom theme is added to `<application>` (in
 [Apply the Custom Theme](#apply-the-custom-theme). In addition,
 this error may be caused if the `Toolbar` layout or custom theme 
 is not configured properly.
-
 
 ## Related Links
 

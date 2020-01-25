@@ -4,8 +4,8 @@ description: "This article discusses the support for tvOS in Xcode 9 and Xamarin
 ms.prod: xamarin
 ms.assetid: 0819DC93-A46B-49DC-A566-8E27CAE1B829
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 02/02/2018
 ---
 

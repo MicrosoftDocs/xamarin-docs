@@ -4,8 +4,8 @@ description: "Android 3.0 introduced Fragments, showing how to support more flex
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
 ---
 
@@ -70,10 +70,9 @@ Fragments.
 This guide contains comprehensive coverage about how to use Fragments,
 including:
 
--   **Creating Fragments** – How to create a basic Fragment and key methods that must be implemented.
--   **Fragment Management and Transactions** – How to manipulate Fragments at run time.
--   **Android Support Package** – How to use the libraries that allow Fragments to be used on older versions of Android.
-
+- **Creating Fragments** – How to create a basic Fragment and key methods that must be implemented.
+- **Fragment Management and Transactions** – How to manipulate Fragments at run time.
+- **Android Support Package** – How to use the libraries that allow Fragments to be used on older versions of Android.
 
 ## Requirements
 
@@ -93,10 +92,8 @@ It is possible to use Fragments in older versions of Android by using the
 Android Support Package and Xamarin.Android 4.2 or higher. How to do this is
 covered in more detail in the documents of this section.
 
-
 ## Related Links
 
 - [Honeycomb Gallery (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
 - [Fragments](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Support Package](https://developer.android.com/sdk/compatibility-library.html)
-- [MOTODEV Webinar: Introducing Fragments](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

@@ -4,8 +4,8 @@ description: "This document describes how to debug exceptions that originate in 
 ms.prod: xamarin
 ms.assetid: B0C0CE31-2737-4969-8EA5-D39D3333E9C2
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
 ---
 
@@ -13,7 +13,7 @@ ms.date: 10/19/2016
 
 ## Overview
 
-Sometimes programming errors can cause crashes in the native Objective-C runtime. Unlike C# exceptions, these don't point to a specific line in your code you can look to fix. Sometimes they can be trivial to find and fix, and other times they can be extremely difficult to track down. 
+Sometimes programming errors can cause crashes in the native Objective-C runtime. Unlike C# exceptions, these don't point to a specific line in your code you can look to fix. Sometimes they can be trivial to find and fix, and other times they can be extremely difficult to track down.
 
 Let's walk through a few real native crash examples and take a look.
 
@@ -27,17 +27,17 @@ Here is the first few lines of a crash in a simple test application (this inform
 2014-10-15 16:18:02.378 NSOutlineViewHottness[79111:1304993] *** Assertion failure in -[NSTableView _uncachedRectHeightOfRow:], /SourceCache/AppKit/AppKit-1343.13/TableView.subproj/NSTableView.m:1855
 2014-10-15 16:18:02.378 NSOutlineViewHottness[79111:1304993] NSTableView variable rowHeight error: The value must be > 0 for row 0, but the delegate <NSOutlineViewHottness_HotnessViewDelegate: 0xaa01860> gave -1.000.
 2014-10-15 16:18:02.381 NSOutlineViewHottness[79111:1304993] (
-	0   CoreFoundation                      0x91888343 __raiseError + 195
-	1   libobjc.A.dylib                     0x9a5e6a2a objc_exception_throw + 276
-	2   CoreFoundation                      0x918881ca +[NSException raise:format:arguments:] + 138
-	3   Foundation                          0x950742b1 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 118
-	4   AppKit                              0x975db476 -[NSTableView _uncachedRectHeightOfRow:] + 373
-	5   AppKit                              0x975db2f8 -[_NSTableRowHeightStorage _uncachedRectHeightOfRow:] + 143
-	6   AppKit                              0x975db206 -[_NSTableRowHeightStorage _cacheRowHeights] + 167
-	7   AppKit                              0x975db130 -[_NSTableRowHeightStorage _createRowHeightsArray] + 226
-	8   AppKit                              0x975b5851 -[_NSTableRowHeightStorage _ensureRowHeights] + 73
-	9   AppKit                              0x975b5790 -[_NSTableRowHeightStorage computeTableHeightForNumberOfRows:] + 89
-	10  AppKit                              0x975b4c38 -[NSTableView _totalHeightOfTableView] + 220
+  0   CoreFoundation                      0x91888343 __raiseError + 195
+  1   libobjc.A.dylib                     0x9a5e6a2a objc_exception_throw + 276
+  2   CoreFoundation                      0x918881ca +[NSException raise:format:arguments:] + 138
+  3   Foundation                          0x950742b1 -[NSAssertionHandler handleFailureInMethod:object:file:lineNumber:description:] + 118
+  4   AppKit                              0x975db476 -[NSTableView _uncachedRectHeightOfRow:] + 373
+  5   AppKit                              0x975db2f8 -[_NSTableRowHeightStorage _uncachedRectHeightOfRow:] + 143
+  6   AppKit                              0x975db206 -[_NSTableRowHeightStorage _cacheRowHeights] + 167
+  7   AppKit                              0x975db130 -[_NSTableRowHeightStorage _createRowHeightsArray] + 226
+  8   AppKit                              0x975b5851 -[_NSTableRowHeightStorage _ensureRowHeights] + 73
+  9   AppKit                              0x975b5790 -[_NSTableRowHeightStorage computeTableHeightForNumberOfRows:] + 89
+  10  AppKit                              0x975b4c38 -[NSTableView _totalHeightOfTableView] + 220
 ```
 
 The lines prefixed with numbers is the native stack trace. From that you can see the crash occurred somewhere inside `NSTableView` handling the row heights. Then `NSAssertionHandler` fires an `NSException (objc_exception_throw)` and we see the Assertion failure:
@@ -52,7 +52,7 @@ Once you see this, it’s pretty clear that some `NSOutlineViewDelegate` method 
 ```csharp
 public override nfloat GetRowHeight (NSTableView tableView, nint row)
 {
-	return -1;
+    return -1;
 }
 ```
 
@@ -158,40 +158,40 @@ This guide will help you track down bugs of this nature if they crop up, correct
 
 ### Locating
 
-In almost every case with bugs of this nature, the primary symptom is native crashes, normally with something similar to `mono_sigsegv_signal_handler`, or `_sigtrap` in the top frames of the stack. Cocoa is attempting to call back into your C# code, hitting a garbage collected object, and crashing. However, not every crash with these symbols is caused by a binding issue like this, you’ll need to do some additional digging to confirm this is the problem. 
+In almost every case with bugs of this nature, the primary symptom is native crashes, normally with something similar to `mono_sigsegv_signal_handler`, or `_sigtrap` in the top frames of the stack. Cocoa is attempting to call back into your C# code, hitting a garbage collected object, and crashing. However, not every crash with these symbols is caused by a binding issue like this, you’ll need to do some additional digging to confirm this is the problem.
 
 What makes these bugs difficult to track down is that they only occur **after** a garbage collection has disposed of the object in question. If you believe you’ve hit one of these bugs, add the following code somewhere in your startup sequence:
 
 ```csharp
-new System.Threading.Thread (() => 
+new System.Threading.Thread (() =>
 {
     while (true) {
          System.Threading.Thread.Sleep (1000);
          GC.Collect ();
     }
-}).Start (); 
+}).Start ();
 ```
 
 This will force your application to run the garbage collector every second. Re-run your application and try to reproduce the bug. If you crash immediately, or consistently instead of randomly, you are on the right track.
 
 ### Reporting
 
-The next step is to report the issue to Xamarin so the binding can be fixed for future releases. If you are a business or enterprise license holder, open a ticket at 
+The next step is to report the issue to Xamarin so the binding can be fixed for future releases. If you are a business or enterprise license holder, open a ticket at
 
-[http://xamarin.com/support](http://xamarin.com/support)
+[visualstudio.microsoft.com/vs/support/](https://visualstudio.microsoft.com/vs/support/)
 
 Otherwise, search for an existing issue:
 
-- Check the [Xamarin.Mac Forums](https://forums.xamarin.com/categories/mac)
+- Check the [Xamarin.Mac Forums](https://forums.xamarin.com/categories/xamarin-mac)
 - Search the [issue repository](https://github.com/xamarin/xamarin-macios/issues)
 - Before switching to GitHub issues, Xamarin issues were tracked on [Bugzilla](https://bugzilla.xamarin.com/describecomponents.cgi). Please search there for matching issues.
 - If you cannot find a matching issue, please file a new issue in the [GitHub issue repository](https://github.com/xamarin/xamarin-macios/issues/new).
 
-GitHub issues are all public. It’s not possible to hide comments or attachments. 
+GitHub issues are all public. It’s not possible to hide comments or attachments.
 
 Please include as much of the following as possible:
 
-- A simple example reproducing the issue. This is **invaluable** where possible. 
+- A simple example reproducing the issue. This is **invaluable** where possible.
 - The full stack trace of the crash.
 - The C# code surrounding the crash.   
 
@@ -204,8 +204,8 @@ For simple cases where there is only a single instance of the object, change the
 ```csharp
 void AddObject ()
 {
-	item.View = new MyView ();
-	...
+    item.View = new MyView ();
+    ...
 }
 ```
 
@@ -217,9 +217,9 @@ static NSObject view;
 
 void AddObject ()
 {
- 	view = new MyView ();
- 	item.View = view;
-	...
+    view = new MyView ();
+    item.View = view;
+    ...
 }
 ```
 
@@ -231,9 +231,9 @@ static HashSet<NSObject> collection = new HashSet<NSObject> ();
 
 void AddObject ()
 {
- 	item.View = new MyView ();
-	collection.Add (item.View );
-	...
+    item.View = new MyView ();
+    collection.Add (item.View );
+    ...
 }
 ```
 
@@ -255,5 +255,4 @@ expensive and unnecessary in those cases.
 
 Thus, we'd don't set up those try / catches for you. For places where you code
 does non-trivial things (beyond say returning a booleans or simple math), you
-can try catch yourself. 
-
+can try catch yourself.

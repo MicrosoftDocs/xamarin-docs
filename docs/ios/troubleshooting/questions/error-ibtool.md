@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: A804EBC4-2BBF-4A98-A4E8-A455DB2E8A17
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
 ---
 
@@ -58,4 +58,3 @@ After this change, you will need to update the storyboard and `.xib` files to us
 ### Next Steps
 
 For further assistance, to contact us, or if this issue remains even after utilizing the above information, please see [What support options are available for Xamarin?](~/cross-platform/troubleshooting/support-options.md) for information on contact options, suggestions, as well as how to file a new bug if needed. 
-

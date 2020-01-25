@@ -6,12 +6,12 @@ ms.assetid: 4604DCB5-83DA-458A-8B02-6508A740BE0E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/24/2019
+ms.date: 09/20/2019
 ---
 
 # Xamarin.Forms Shell Introduction
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell reduces the complexity of mobile application development by providing the fundamental features that most mobile applications require, including:
 
@@ -23,7 +23,15 @@ Xamarin.Forms Shell reduces the complexity of mobile application development by 
 In addition, Shell applications benefit from an increased rendering speed, and reduced memory consumption.
 
 > [!IMPORTANT]
-> Xamarin.Forms Shell is only available on iOS and Android. Existing iOS and Android applications can adopt Shell and benefit immediately from navigation, performance, and extensibility improvements.
+> Existing applications can adopt Shell and benefit immediately from navigation, performance, and extensibility improvements.
+
+## Platform support
+
+Xamarin.Forms Shell is fully available on iOS and Android, but only partially available on the Universal Windows Platform (UWP). In addition, Shell is currently experimental on UWP and can only be used by adding the following line of code to the `App` class in your UWP project, before calling `Forms.Init`:
+
+```csharp
+global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
+```
 
 ## Shell navigation experience
 
@@ -48,4 +56,4 @@ Within each tab, additional [`ContentPage`](xref:Xamarin.Forms.ContentPage) obje
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

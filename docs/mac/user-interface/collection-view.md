@@ -4,8 +4,8 @@ description: "This article describes working with collection views in a Xamarin.
 ms.prod: xamarin
 ms.assetid: 6EE32256-5948-4AE4-8133-6D0B3F4173E8
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/24/2017
 ---
 
@@ -48,133 +48,133 @@ using AppKit;
 
 namespace MacDatabinding
 {
-	[Register("PersonModel")]
-	public class PersonModel : NSObject
-	{
-		#region Private Variables
-		private string _name = "";
-		private string _occupation = "";
-		private bool _isManager = false;
-		private NSMutableArray _people = new NSMutableArray();
-		#endregion
+    [Register("PersonModel")]
+    public class PersonModel : NSObject
+    {
+        #region Private Variables
+        private string _name = "";
+        private string _occupation = "";
+        private bool _isManager = false;
+        private NSMutableArray _people = new NSMutableArray();
+        #endregion
 
-		#region Computed Properties
-		[Export("Name")]
-		public string Name {
-			get { return _name; }
-			set {
-				WillChangeValue ("Name");
-				_name = value;
-				DidChangeValue ("Name");
-			}
-		}
+        #region Computed Properties
+        [Export("Name")]
+        public string Name {
+            get { return _name; }
+            set {
+                WillChangeValue ("Name");
+                _name = value;
+                DidChangeValue ("Name");
+            }
+        }
 
-		[Export("Occupation")]
-		public string Occupation {
-			get { return _occupation; }
-			set {
-				WillChangeValue ("Occupation");
-				_occupation = value;
-				DidChangeValue ("Occupation");
-			}
-		}
+        [Export("Occupation")]
+        public string Occupation {
+            get { return _occupation; }
+            set {
+                WillChangeValue ("Occupation");
+                _occupation = value;
+                DidChangeValue ("Occupation");
+            }
+        }
 
-		[Export("isManager")]
-		public bool isManager {
-			get { return _isManager; }
-			set {
-				WillChangeValue ("isManager");
-				WillChangeValue ("Icon");
-				_isManager = value;
-				DidChangeValue ("isManager");
-				DidChangeValue ("Icon");
-			}
-		}
+        [Export("isManager")]
+        public bool isManager {
+            get { return _isManager; }
+            set {
+                WillChangeValue ("isManager");
+                WillChangeValue ("Icon");
+                _isManager = value;
+                DidChangeValue ("isManager");
+                DidChangeValue ("Icon");
+            }
+        }
 
-		[Export("isEmployee")]
-		public bool isEmployee {
-			get { return (NumberOfEmployees == 0); }
-		}
+        [Export("isEmployee")]
+        public bool isEmployee {
+            get { return (NumberOfEmployees == 0); }
+        }
 
-		[Export("Icon")]
-		public NSImage Icon
-		{
-			get
-			{
-				if (isManager)
-				{
-					return NSImage.ImageNamed("IconGroup");
-				}
-				else
-				{
-					return NSImage.ImageNamed("IconUser");
-				}
-			}
-		}
+        [Export("Icon")]
+        public NSImage Icon
+        {
+            get
+            {
+                if (isManager)
+                {
+                    return NSImage.ImageNamed("IconGroup");
+                }
+                else
+                {
+                    return NSImage.ImageNamed("IconUser");
+                }
+            }
+        }
 
-		[Export("personModelArray")]
-		public NSArray People {
-			get { return _people; }
-		}
+        [Export("personModelArray")]
+        public NSArray People {
+            get { return _people; }
+        }
 
-		[Export("NumberOfEmployees")]
-		public nint NumberOfEmployees {
-			get { return (nint)_people.Count; }
-		}
-		#endregion
+        [Export("NumberOfEmployees")]
+        public nint NumberOfEmployees {
+            get { return (nint)_people.Count; }
+        }
+        #endregion
 
-		#region Constructors
-		public PersonModel ()
-		{
-		}
+        #region Constructors
+        public PersonModel ()
+        {
+        }
 
-		public PersonModel (string name, string occupation)
-		{
-			// Initialize
-			this.Name = name;
-			this.Occupation = occupation;
-		}
+        public PersonModel (string name, string occupation)
+        {
+            // Initialize
+            this.Name = name;
+            this.Occupation = occupation;
+        }
 
-		public PersonModel (string name, string occupation, bool manager)
-		{
-			// Initialize
-			this.Name = name;
-			this.Occupation = occupation;
-			this.isManager = manager;
-		}
-		#endregion
+        public PersonModel (string name, string occupation, bool manager)
+        {
+            // Initialize
+            this.Name = name;
+            this.Occupation = occupation;
+            this.isManager = manager;
+        }
+        #endregion
 
-		#region Array Controller Methods
-		[Export("addObject:")]
-		public void AddPerson(PersonModel person) {
-			WillChangeValue ("personModelArray");
-			isManager = true;
-			_people.Add (person);
-			DidChangeValue ("personModelArray");
-		}
+        #region Array Controller Methods
+        [Export("addObject:")]
+        public void AddPerson(PersonModel person) {
+            WillChangeValue ("personModelArray");
+            isManager = true;
+            _people.Add (person);
+            DidChangeValue ("personModelArray");
+        }
 
-		[Export("insertObject:inPersonModelArrayAtIndex:")]
-		public void InsertPerson(PersonModel person, nint index) {
-			WillChangeValue ("personModelArray");
-			_people.Insert (person, index);
-			DidChangeValue ("personModelArray");
-		}
+        [Export("insertObject:inPersonModelArrayAtIndex:")]
+        public void InsertPerson(PersonModel person, nint index) {
+            WillChangeValue ("personModelArray");
+            _people.Insert (person, index);
+            DidChangeValue ("personModelArray");
+        }
 
-		[Export("removeObjectFromPersonModelArrayAtIndex:")]
-		public void RemovePerson(nint index) {
-			WillChangeValue ("personModelArray");
-			_people.RemoveObject (index);
-			DidChangeValue ("personModelArray");
-		}
+        [Export("removeObjectFromPersonModelArrayAtIndex:")]
+        public void RemovePerson(nint index) {
+            WillChangeValue ("personModelArray");
+            _people.RemoveObject (index);
+            DidChangeValue ("personModelArray");
+        }
 
-		[Export("setPersonModelArray:")]
-		public void SetPeople(NSMutableArray array) {
-			WillChangeValue ("personModelArray");
-			_people = array;
-			DidChangeValue ("personModelArray");
-		}
-		#endregion
-	}
+        [Export("setPersonModelArray:")]
+        public void SetPeople(NSMutableArray array) {
+            WillChangeValue ("personModelArray");
+            _people = array;
+            DidChangeValue ("personModelArray");
+        }
+        #endregion
+    }
 }
 ```
 
@@ -197,26 +197,26 @@ Do the following:
 1. In the **Solution Explorer**, right-click on the project name and select **Add** > **New File...**
 2. Select **Mac** > **View Controller**, give it a name (such as `EmployeeItem` in this example) and click the **New** button to create: 
 
-	![Adding a new view controller](collection-view-images/proto01.png)
+    ![Adding a new view controller](collection-view-images/proto01.png)
 
-	This will add an `EmployeeItem.cs`, `EmployeeItemController.cs` and `EmployeeItemController.xib` file to the project's solution.
+    This will add an `EmployeeItem.cs`, `EmployeeItemController.cs` and `EmployeeItemController.xib` file to the project's solution.
 3. Double-click the `EmployeeItemController.xib` file to open it for editing in Xcode's Interface Builder.
 4. Add an `NSBox`, `NSImageView` and two `NSLabel` controls to the View and lay them out as follows:
 
-	![Designing the layout of the cell prototype](collection-view-images/proto02.png)
+    ![Designing the layout of the cell prototype](collection-view-images/proto02.png)
 5. Open the **Assistant Editor** and create an **Outlet** for the `NSBox` so that it can be used to indicate the selection state of a cell:
 
-	![Exposing the NSBox in an Outlet](collection-view-images/proto03.png)
+    ![Exposing the NSBox in an Outlet](collection-view-images/proto03.png)
 6. Return to the **Standard Editor** and select the Image View.
 7. In the **Binding Inspector**, select **Bind To** > **File's Owner** and enter a **Model Key Path** of `self.Person.Icon`:
 
-	![Binding the Icon](collection-view-images/proto04.png)
+    ![Binding the Icon](collection-view-images/proto04.png)
 8. Select the first Label and in the **Binding Inspector**, select **Bind To** > **File's Owner** and enter a **Model Key Path** of `self.Person.Name`:
 
-	![Binding the name](collection-view-images/proto05.png)
+    ![Binding the name](collection-view-images/proto05.png)
 9. Select the second Label and in the **Binding Inspector**, select **Bind To** > **File's Owner** and enter a **Model Key Path** of `self.Person.Occupation`:
 
-	![Binding the occupation](collection-view-images/proto06.png)
+    ![Binding the occupation](collection-view-images/proto06.png)
 10. Save the changes to the `.xib` file and return to Visual Studio to sync the changes.
 
 Edit the `EmployeeItemController.cs` file and make it look like the following:
@@ -230,112 +230,112 @@ using AppKit;
 
 namespace MacCollectionNew
 {
-	/// <summary>
-	/// The Employee item controller handles the display of the individual items that will
-	/// be displayed in the collection view as defined in the associated .XIB file.
-	/// </summary>
-	public partial class EmployeeItemController : NSCollectionViewItem
-	{
-		#region Private Variables
-		/// <summary>
-		/// The person that will be displayed.
-		/// </summary>
-		private PersonModel _person;
-		#endregion
+    /// <summary>
+    /// The Employee item controller handles the display of the individual items that will
+    /// be displayed in the collection view as defined in the associated .XIB file.
+    /// </summary>
+    public partial class EmployeeItemController : NSCollectionViewItem
+    {
+        #region Private Variables
+        /// <summary>
+        /// The person that will be displayed.
+        /// </summary>
+        private PersonModel _person;
+        #endregion
 
-		#region Computed Properties
-		// strongly typed view accessor
-		public new EmployeeItem View
-		{
-			get
-			{
-				return (EmployeeItem)base.View;
-			}
-		}
+        #region Computed Properties
+        // strongly typed view accessor
+        public new EmployeeItem View
+        {
+            get
+            {
+                return (EmployeeItem)base.View;
+            }
+        }
 
-		/// <summary>
-		/// Gets or sets the person.
-		/// </summary>
-		/// <value>The person that this item belongs to.</value>
-		[Export("Person")]
-		public PersonModel Person
-		{
-			get { return _person; }
-			set
-			{
-				WillChangeValue("Person");
-				_person = value;
-				DidChangeValue("Person");
-			}
-		}
+        /// <summary>
+        /// Gets or sets the person.
+        /// </summary>
+        /// <value>The person that this item belongs to.</value>
+        [Export("Person")]
+        public PersonModel Person
+        {
+            get { return _person; }
+            set
+            {
+                WillChangeValue("Person");
+                _person = value;
+                DidChangeValue("Person");
+            }
+        }
 
-		/// <summary>
-		/// Gets or sets the color of the background for the item.
-		/// </summary>
-		/// <value>The color of the background.</value>
-		public NSColor BackgroundColor {
-			get { return Background.FillColor; }
-			set { Background.FillColor = value; }
-		}
+        /// <summary>
+        /// Gets or sets the color of the background for the item.
+        /// </summary>
+        /// <value>The color of the background.</value>
+        public NSColor BackgroundColor {
+            get { return Background.FillColor; }
+            set { Background.FillColor = value; }
+        }
 
-		/// <summary>
-		/// Gets or sets a value indicating whether this <see cref="T:MacCollectionNew.EmployeeItemController"/> is selected.
-		/// </summary>
-		/// <value><c>true</c> if selected; otherwise, <c>false</c>.</value>
-		/// <remarks>This also changes the background color based on the selected state
-		/// of the item.</remarks>
-		public override bool Selected
-		{
-			get
-			{
-				return base.Selected;
-			}
-			set
-			{
-				base.Selected = value;
+        /// <summary>
+        /// Gets or sets a value indicating whether this <see cref="T:MacCollectionNew.EmployeeItemController"/> is selected.
+        /// </summary>
+        /// <value><c>true</c> if selected; otherwise, <c>false</c>.</value>
+        /// <remarks>This also changes the background color based on the selected state
+        /// of the item.</remarks>
+        public override bool Selected
+        {
+            get
+            {
+                return base.Selected;
+            }
+            set
+            {
+                base.Selected = value;
 
-				// Set background color based on the selection state
-				if (value) {
-					BackgroundColor = NSColor.DarkGray;
-				} else {
-					BackgroundColor = NSColor.LightGray;
-				}
-			}
-		}
-		#endregion
+                // Set background color based on the selection state
+                if (value) {
+                    BackgroundColor = NSColor.DarkGray;
+                } else {
+                    BackgroundColor = NSColor.LightGray;
+                }
+            }
+        }
+        #endregion
 
-		#region Constructors
-		// Called when created from unmanaged code
-		public EmployeeItemController(IntPtr handle) : base(handle)
-		{
-			Initialize();
-		}
+        #region Constructors
+        // Called when created from unmanaged code
+        public EmployeeItemController(IntPtr handle) : base(handle)
+        {
+            Initialize();
+        }
 
-		// Called when created directly from a XIB file
-		[Export("initWithCoder:")]
-		public EmployeeItemController(NSCoder coder) : base(coder)
-		{
-			Initialize();
-		}
+        // Called when created directly from a XIB file
+        [Export("initWithCoder:")]
+        public EmployeeItemController(NSCoder coder) : base(coder)
+        {
+            Initialize();
+        }
 
-		// Call to load from the XIB/NIB file
-		public EmployeeItemController() : base("EmployeeItem", NSBundle.MainBundle)
-		{
-			Initialize();
-		}
+        // Call to load from the XIB/NIB file
+        public EmployeeItemController() : base("EmployeeItem", NSBundle.MainBundle)
+        {
+            Initialize();
+        }
 
-		// Added to support loading from XIB/NIB
-		public EmployeeItemController(string nibName, NSBundle nibBundle) : base(nibName, nibBundle) {
+        // Added to support loading from XIB/NIB
+        public EmployeeItemController(string nibName, NSBundle nibBundle) : base(nibName, nibBundle) {
 
-			Initialize();
-		}
+            Initialize();
+        }
 
-		// Shared initialization code
-		void Initialize()
-		{
-		}
-		#endregion
-	}
+        // Shared initialization code
+        void Initialize()
+        {
+        }
+        #endregion
+    }
 }
 ```
 
@@ -346,21 +346,21 @@ The `BackgroundColor` property is a shortcut to the `NSBox` control's `FillColor
 ```csharp
 public override bool Selected
 {
-	get
-	{
-		return base.Selected;
-	}
-	set
-	{
-		base.Selected = value;
+    get
+    {
+        return base.Selected;
+    }
+    set
+    {
+        base.Selected = value;
 
-		// Set background color based on the selection state
-		if (value) {
-			BackgroundColor = NSColor.DarkGray;
-		} else {
-			BackgroundColor = NSColor.LightGray;
-		}
-	}
+        // Set background color based on the selection state
+        if (value) {
+            BackgroundColor = NSColor.DarkGray;
+        } else {
+            BackgroundColor = NSColor.LightGray;
+        }
+    }
 }
 ```
 
@@ -380,80 +380,80 @@ using Foundation;
 
 namespace MacCollectionNew
 {
-	/// <summary>
-	/// Collection view data source provides the data for the collection view.
-	/// </summary>
-	public class CollectionViewDataSource : NSCollectionViewDataSource
-	{
-		#region Computed Properties
-		/// <summary>
-		/// Gets or sets the parent collection view.
-		/// </summary>
-		/// <value>The parent collection view.</value>
-		public NSCollectionView ParentCollectionView { get; set; }
+    /// <summary>
+    /// Collection view data source provides the data for the collection view.
+    /// </summary>
+    public class CollectionViewDataSource : NSCollectionViewDataSource
+    {
+        #region Computed Properties
+        /// <summary>
+        /// Gets or sets the parent collection view.
+        /// </summary>
+        /// <value>The parent collection view.</value>
+        public NSCollectionView ParentCollectionView { get; set; }
 
-		/// <summary>
-		/// Gets or sets the data that will be displayed in the collection.
-		/// </summary>
-		/// <value>A collection of PersonModel objects.</value>
-		public List<PersonModel> Data { get; set; } = new List<PersonModel>();
-		#endregion
+        /// <summary>
+        /// Gets or sets the data that will be displayed in the collection.
+        /// </summary>
+        /// <value>A collection of PersonModel objects.</value>
+        public List<PersonModel> Data { get; set; } = new List<PersonModel>();
+        #endregion
 
-		#region Constructors
-		/// <summary>
-		/// Initializes a new instance of the <see cref="T:MacCollectionNew.CollectionViewDataSource"/> class.
-		/// </summary>
-		/// <param name="parent">The parent collection that this datasource will provide data for.</param>
-		public CollectionViewDataSource(NSCollectionView parent)
-		{
-			// Initialize
-			ParentCollectionView = parent;
+        #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:MacCollectionNew.CollectionViewDataSource"/> class.
+        /// </summary>
+        /// <param name="parent">The parent collection that this datasource will provide data for.</param>
+        public CollectionViewDataSource(NSCollectionView parent)
+        {
+            // Initialize
+            ParentCollectionView = parent;
 
-			// Attach to collection view
-			parent.DataSource = this;
+            // Attach to collection view
+            parent.DataSource = this;
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Override Methods
-		/// <summary>
-		/// Gets the number of sections.
-		/// </summary>
-		/// <returns>The number of sections.</returns>
-		/// <param name="collectionView">The parent Collection view.</param>
-		public override nint GetNumberOfSections(NSCollectionView collectionView)
-		{
-			// There is only one section in this view
-			return 1;
-		}
+        #region Override Methods
+        /// <summary>
+        /// Gets the number of sections.
+        /// </summary>
+        /// <returns>The number of sections.</returns>
+        /// <param name="collectionView">The parent Collection view.</param>
+        public override nint GetNumberOfSections(NSCollectionView collectionView)
+        {
+            // There is only one section in this view
+            return 1;
+        }
 
-		/// <summary>
-		/// Gets the number of items in the given section.
-		/// </summary>
-		/// <returns>The number of items.</returns>
-		/// <param name="collectionView">The parent Collection view.</param>
-		/// <param name="section">The Section number to count items for.</param>
-		public override nint GetNumberofItems(NSCollectionView collectionView, nint section)
-		{
-			// Return the number of items
-			return Data.Count;
-		}
+        /// <summary>
+        /// Gets the number of items in the given section.
+        /// </summary>
+        /// <returns>The number of items.</returns>
+        /// <param name="collectionView">The parent Collection view.</param>
+        /// <param name="section">The Section number to count items for.</param>
+        public override nint GetNumberofItems(NSCollectionView collectionView, nint section)
+        {
+            // Return the number of items
+            return Data.Count;
+        }
 
-		/// <summary>
-		/// Gets the item for the give section and item index.
-		/// </summary>
-		/// <returns>The item.</returns>
-		/// <param name="collectionView">The parent Collection view.</param>
-		/// <param name="indexPath">Index path specifying the section and index.</param>
-		public override NSCollectionViewItem GetItem(NSCollectionView collectionView, NSIndexPath indexPath)
-		{
-			var item = collectionView.MakeItem("EmployeeCell", indexPath) as EmployeeItemController;
-			item.Person = Data[(int)indexPath.Item];
+        /// <summary>
+        /// Gets the item for the give section and item index.
+        /// </summary>
+        /// <returns>The item.</returns>
+        /// <param name="collectionView">The parent Collection view.</param>
+        /// <param name="indexPath">Index path specifying the section and index.</param>
+        public override NSCollectionViewItem GetItem(NSCollectionView collectionView, NSIndexPath indexPath)
+        {
+            var item = collectionView.MakeItem("EmployeeCell", indexPath) as EmployeeItemController;
+            item.Person = Data[(int)indexPath.Item];
 
-			return item;
-		}
-		#endregion
-	}
+            return item;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -466,10 +466,10 @@ The `GetItem` method is called whenever a new cell is required and looks like th
 ```csharp
 public override NSCollectionViewItem GetItem(NSCollectionView collectionView, NSIndexPath indexPath)
 {
-	var item = collectionView.MakeItem("EmployeeCell", indexPath) as EmployeeItemController;
-	item.Person = Data[(int)indexPath.Item];
+    var item = collectionView.MakeItem("EmployeeCell", indexPath) as EmployeeItemController;
+    item.Person = Data[(int)indexPath.Item];
 
-	return item;
+    return item;
 }
 ```
 
@@ -498,65 +498,65 @@ using AppKit;
 
 namespace MacCollectionNew
 {
-	/// <summary>
-	/// Collection view delegate handles user interaction with the elements of the 
-	/// collection view for the Flow-Based layout type.
-	/// </summary>
-	public class CollectionViewDelegate : NSCollectionViewDelegateFlowLayout
-	{
-		#region Computed Properties
-		/// <summary>
-		/// Gets or sets the parent view controller.
-		/// </summary>
-		/// <value>The parent view controller.</value>
-		public ViewController ParentViewController { get; set; }
-		#endregion
+    /// <summary>
+    /// Collection view delegate handles user interaction with the elements of the 
+    /// collection view for the Flow-Based layout type.
+    /// </summary>
+    public class CollectionViewDelegate : NSCollectionViewDelegateFlowLayout
+    {
+        #region Computed Properties
+        /// <summary>
+        /// Gets or sets the parent view controller.
+        /// </summary>
+        /// <value>The parent view controller.</value>
+        public ViewController ParentViewController { get; set; }
+        #endregion
 
-		#region Constructors
-		/// <summary>
-		/// Initializes a new instance of the <see cref="T:MacCollectionNew.CollectionViewDelegate"/> class.
-		/// </summary>
-		/// <param name="parentViewController">Parent view controller.</param>
-		public CollectionViewDelegate(ViewController parentViewController)
-		{
-			// Initialize
-			ParentViewController = parentViewController;
-		}
-		#endregion
+        #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:MacCollectionNew.CollectionViewDelegate"/> class.
+        /// </summary>
+        /// <param name="parentViewController">Parent view controller.</param>
+        public CollectionViewDelegate(ViewController parentViewController)
+        {
+            // Initialize
+            ParentViewController = parentViewController;
+        }
+        #endregion
 
-		#region Override Methods
-		/// <summary>
-		/// Handles one or more items being selected.
-		/// </summary>
-		/// <param name="collectionView">The parent Collection view.</param>
-		/// <param name="indexPaths">The Index paths of the items being selected.</param>
-		public override void ItemsSelected(NSCollectionView collectionView, NSSet indexPaths)
-		{
-			// Dereference path
-			var paths = indexPaths.ToArray<NSIndexPath>();
-			var index = (int)paths[0].Item;
+        #region Override Methods
+        /// <summary>
+        /// Handles one or more items being selected.
+        /// </summary>
+        /// <param name="collectionView">The parent Collection view.</param>
+        /// <param name="indexPaths">The Index paths of the items being selected.</param>
+        public override void ItemsSelected(NSCollectionView collectionView, NSSet indexPaths)
+        {
+            // Dereference path
+            var paths = indexPaths.ToArray<NSIndexPath>();
+            var index = (int)paths[0].Item;
 
-			// Save the selected item
-			ParentViewController.PersonSelected = ParentViewController.Datasource.Data[index];
+            // Save the selected item
+            ParentViewController.PersonSelected = ParentViewController.Datasource.Data[index];
 
-		}
+        }
 
-		/// <summary>
-		/// Handles one or more items being deselected.
-		/// </summary>
-		/// <param name="collectionView">The parent Collection view.</param>
-		/// <param name="indexPaths">The Index paths of the items being deselected.</param>
-		public override void ItemsDeselected(NSCollectionView collectionView, NSSet indexPaths)
-		{
-			// Dereference path
-			var paths = indexPaths.ToArray<NSIndexPath>();
-			var index = paths[0].Item;
+        /// <summary>
+        /// Handles one or more items being deselected.
+        /// </summary>
+        /// <param name="collectionView">The parent Collection view.</param>
+        /// <param name="indexPaths">The Index paths of the items being deselected.</param>
+        public override void ItemsDeselected(NSCollectionView collectionView, NSSet indexPaths)
+        {
+            // Dereference path
+            var paths = indexPaths.ToArray<NSIndexPath>();
+            var index = paths[0].Item;
 
-			// Clear selection
-			ParentViewController.PersonSelected = null;
-		}
-		#endregion
-	}
+            // Clear selection
+            ParentViewController.PersonSelected = null;
+        }
+        #endregion
+    }
 }
 ``` 
 
@@ -573,13 +573,13 @@ Do the following:
 1. Double-click the `Main.Storyboard` file in the **Solution Explorer** to open it for editing in Xcode's Interface Builder.
 2. Drag a Collection View into the Main View and resize it to fill the View:
 
-	![Adding a Collection View to the layout](collection-view-images/collection01.png)
+    ![Adding a Collection View to the layout](collection-view-images/collection01.png)
 3. With the Collection View selected, use the Constraint Editor to pin it to the View when it is resized:
 
-	![Adding constraints](collection-view-images/collection02.png)
+    ![Adding constraints](collection-view-images/collection02.png)
 4. Ensure that the Collection View is selected in the **Design Surface** (and not the **Bordered Scroll View** or **Clip View** that contains it), switch to the **Assistant Editor** and create an **Outlet** for the collection view:
 
-	![Adding constraints](collection-view-images/collection03.png)
+    ![Adding constraints](collection-view-images/collection03.png)
 5. Save the changes and return to Visual Studio to sync.
 
 <a name="Bringing-it-all-Together"/>
@@ -600,134 +600,134 @@ using CoreGraphics;
 
 namespace MacCollectionNew
 {
-	/// <summary>
-	/// The View controller controls the main view that houses the Collection View.
-	/// </summary>
-	public partial class ViewController : NSViewController
-	{
-		#region Private Variables
-		private PersonModel _personSelected;
-		private bool shouldEdit = true;
-		#endregion
+    /// <summary>
+    /// The View controller controls the main view that houses the Collection View.
+    /// </summary>
+    public partial class ViewController : NSViewController
+    {
+        #region Private Variables
+        private PersonModel _personSelected;
+        private bool shouldEdit = true;
+        #endregion
 
-		#region Computed Properties
-		/// <summary>
-		/// Gets or sets the datasource that provides the data to display in the 
-		/// Collection View.
-		/// </summary>
-		/// <value>The datasource.</value>
-		public CollectionViewDataSource Datasource { get; set; }
+        #region Computed Properties
+        /// <summary>
+        /// Gets or sets the datasource that provides the data to display in the 
+        /// Collection View.
+        /// </summary>
+        /// <value>The datasource.</value>
+        public CollectionViewDataSource Datasource { get; set; }
 
-		/// <summary>
-		/// Gets or sets the person currently selected in the collection view.
-		/// </summary>
-		/// <value>The person selected or <c>null</c> if no person is selected.</value>
-		[Export("PersonSelected")]
-		public PersonModel PersonSelected
-		{
-			get { return _personSelected; }
-			set
-			{
-				WillChangeValue("PersonSelected");
-				_personSelected = value;
-				DidChangeValue("PersonSelected");
-				RaiseSelectionChanged();
-			}
-		}
-		#endregion
+        /// <summary>
+        /// Gets or sets the person currently selected in the collection view.
+        /// </summary>
+        /// <value>The person selected or <c>null</c> if no person is selected.</value>
+        [Export("PersonSelected")]
+        public PersonModel PersonSelected
+        {
+            get { return _personSelected; }
+            set
+            {
+                WillChangeValue("PersonSelected");
+                _personSelected = value;
+                DidChangeValue("PersonSelected");
+                RaiseSelectionChanged();
+            }
+        }
+        #endregion
 
-		#region Constructors
-		/// <summary>
-		/// Initializes a new instance of the <see cref="T:MacCollectionNew.ViewController"/> class.
-		/// </summary>
-		/// <param name="handle">Handle.</param>
-		public ViewController(IntPtr handle) : base(handle)
-		{
-		}
-		#endregion
+        #region Constructors
+        /// <summary>
+        /// Initializes a new instance of the <see cref="T:MacCollectionNew.ViewController"/> class.
+        /// </summary>
+        /// <param name="handle">Handle.</param>
+        public ViewController(IntPtr handle) : base(handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		/// <summary>
-		/// Called after the view has finished loading from the Storyboard to allow it to
-		/// be configured before displaying to the user.
-		/// </summary>
-		public override void ViewDidLoad()
-		{
-			base.ViewDidLoad();
+        #region Override Methods
+        /// <summary>
+        /// Called after the view has finished loading from the Storyboard to allow it to
+        /// be configured before displaying to the user.
+        /// </summary>
+        public override void ViewDidLoad()
+        {
+            base.ViewDidLoad();
 
-			// Initialize Collection View
-			ConfigureCollectionView();
-			PopulateWithData();
-		}
-		#endregion
+            // Initialize Collection View
+            ConfigureCollectionView();
+            PopulateWithData();
+        }
+        #endregion
 
-		#region Private Methods
-		/// <summary>
-		/// Configures the collection view.
-		/// </summary>
-		private void ConfigureCollectionView()
-		{
-			EmployeeCollection.RegisterClassForItem(typeof(EmployeeItemController), "EmployeeCell");
+        #region Private Methods
+        /// <summary>
+        /// Configures the collection view.
+        /// </summary>
+        private void ConfigureCollectionView()
+        {
+            EmployeeCollection.RegisterClassForItem(typeof(EmployeeItemController), "EmployeeCell");
 
-			// Create a flow layout
-			var flowLayout = new NSCollectionViewFlowLayout()
-			{
-				ItemSize = new CGSize(150, 150),
-				SectionInset = new NSEdgeInsets(10, 10, 10, 20),
-				MinimumInteritemSpacing = 10,
-				MinimumLineSpacing = 10
-			};
-			EmployeeCollection.WantsLayer = true;
+            // Create a flow layout
+            var flowLayout = new NSCollectionViewFlowLayout()
+            {
+                ItemSize = new CGSize(150, 150),
+                SectionInset = new NSEdgeInsets(10, 10, 10, 20),
+                MinimumInteritemSpacing = 10,
+                MinimumLineSpacing = 10
+            };
+            EmployeeCollection.WantsLayer = true;
 
-			// Setup collection view
-			EmployeeCollection.CollectionViewLayout = flowLayout;
-			EmployeeCollection.Delegate = new CollectionViewDelegate(this);
+            // Setup collection view
+            EmployeeCollection.CollectionViewLayout = flowLayout;
+            EmployeeCollection.Delegate = new CollectionViewDelegate(this);
 
-		}
+        }
 
-		/// <summary>
-		/// Populates the Datasource with data and attaches it to the collection view.
-		/// </summary>
-		private void PopulateWithData()
-		{
-			// Make datasource
-			Datasource = new CollectionViewDataSource(EmployeeCollection);
+        /// <summary>
+        /// Populates the Datasource with data and attaches it to the collection view.
+        /// </summary>
+        private void PopulateWithData()
+        {
+            // Make datasource
+            Datasource = new CollectionViewDataSource(EmployeeCollection);
 
-			// Build list of employees
-			Datasource.Data.Add(new PersonModel("Craig Dunn", "Documentation Manager", true));
-			Datasource.Data.Add(new PersonModel("Amy Burns", "Technical Writer"));
-			Datasource.Data.Add(new PersonModel("Joel Martinez", "Web & Infrastructure"));
-			Datasource.Data.Add(new PersonModel("Kevin Mullins", "Technical Writer"));
-			Datasource.Data.Add(new PersonModel("Mark McLemore", "Technical Writer"));
-			Datasource.Data.Add(new PersonModel("Tom Opgenorth", "Technical Writer"));
-			Datasource.Data.Add(new PersonModel("Larry O'Brien", "API Docs Manager", true));
-			Datasource.Data.Add(new PersonModel("Mike Norman", "API Documentor"));
+            // Build list of employees
+            Datasource.Data.Add(new PersonModel("Craig Dunn", "Documentation Manager", true));
+            Datasource.Data.Add(new PersonModel("Amy Burns", "Technical Writer"));
+            Datasource.Data.Add(new PersonModel("Joel Martinez", "Web & Infrastructure"));
+            Datasource.Data.Add(new PersonModel("Kevin Mullins", "Technical Writer"));
+            Datasource.Data.Add(new PersonModel("Mark McLemore", "Technical Writer"));
+            Datasource.Data.Add(new PersonModel("Tom Opgenorth", "Technical Writer"));
+            Datasource.Data.Add(new PersonModel("Larry O'Brien", "API Docs Manager", true));
+            Datasource.Data.Add(new PersonModel("Mike Norman", "API Documentor"));
 
-			// Populate collection view
-			EmployeeCollection.ReloadData();
-		}
-		#endregion
+            // Populate collection view
+            EmployeeCollection.ReloadData();
+        }
+        #endregion
 
-		#region Events
-		/// <summary>
-		/// Selection changed delegate.
-		/// </summary>
-		public delegate void SelectionChangedDelegate();
+        #region Events
+        /// <summary>
+        /// Selection changed delegate.
+        /// </summary>
+        public delegate void SelectionChangedDelegate();
 
-		/// <summary>
-		/// Occurs when selection changed.
-		/// </summary>
-		public event SelectionChangedDelegate SelectionChanged;
+        /// <summary>
+        /// Occurs when selection changed.
+        /// </summary>
+        public event SelectionChangedDelegate SelectionChanged;
 
-		/// <summary>
-		/// Raises the selection changed event.
-		/// </summary>
-		internal void RaiseSelectionChanged() {
-			// Inform caller
-			if (this.SelectionChanged != null) SelectionChanged();
-		}
-		#endregion
-	}
+        /// <summary>
+        /// Raises the selection changed event.
+        /// </summary>
+        internal void RaiseSelectionChanged() {
+            // Inform caller
+            if (this.SelectionChanged != null) SelectionChanged();
+        }
+        #endregion
+    }
 }
 ```
 
@@ -757,10 +757,10 @@ This example uses the default flow layout so it creates an instance of the `NSCo
 ```csharp
 var flowLayout = new NSCollectionViewFlowLayout()
 {
-	ItemSize = new CGSize(150, 150),
-	SectionInset = new NSEdgeInsets(10, 10, 10, 20),
-	MinimumInteritemSpacing = 10,
-	MinimumLineSpacing = 10
+    ItemSize = new CGSize(150, 150),
+    SectionInset = new NSEdgeInsets(10, 10, 10, 20),
+    MinimumInteritemSpacing = 10,
+    MinimumLineSpacing = 10
 };
 ```
 
@@ -779,15 +779,15 @@ The `PopulateWithData` method creates a new instance of the `CollectionViewDataS
 ```csharp
 private void PopulateWithData()
 {
-	// Make datasource
-	Datasource = new CollectionViewDataSource(EmployeeCollection);
+    // Make datasource
+    Datasource = new CollectionViewDataSource(EmployeeCollection);
 
-	// Build list of employees
-	Datasource.Data.Add(new PersonModel("Craig Dunn", "Documentation Manager", true));
-	...
+    // Build list of employees
+    Datasource.Data.Add(new PersonModel("Craig Dunn", "Documentation Manager", true));
+    ...
 
-	// Populate collection view
-	EmployeeCollection.ReloadData();
+    // Populate collection view
+    EmployeeCollection.ReloadData();
 }
 ```
 
@@ -796,11 +796,11 @@ The `ViewDidLoad` method is overridden and calls the `ConfigureCollectionView` a
 ```csharp
 public override void ViewDidLoad()
 {
-	base.ViewDidLoad();
+    base.ViewDidLoad();
 
-	// Initialize Collection View
-	ConfigureCollectionView();
-	PopulateWithData();
+    // Initialize Collection View
+    ConfigureCollectionView();
+    PopulateWithData();
 }
 ```
 

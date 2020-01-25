@@ -3,8 +3,8 @@ title: "Using Data in an Android App"
 ms.prod: xamarin
 ms.assetid: D5932AEB-0B6E-4F37-8B32-9BE4775AEE85
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/08/2018
 ---
 
@@ -36,8 +36,8 @@ guide for more information on the UI controls.
 
 There are a couple of read operations in the sample:
 
--  Reading the list
--  Reading individual records
+- Reading the list
+- Reading individual records
 
 The two methods in the `StockDatabase` class are:
 
@@ -112,11 +112,11 @@ to a writable directory before accessing it. Because SQLite is a
 standard file format that is used on many platforms, there are a number
 of tools available to create an SQLite database file:
 
--   **SQLite Manager Firefox Extension** &ndash; Works on Mac and Windows
+- **SQLite Manager Firefox Extension** &ndash; Works on Mac and Windows
     and produces files that are compatible with iOS and Android.
 
--   **Command Line** &ndash; See
-    [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
+- **Command Line** &ndash; See
+    [www.sqlite.org/sqlite.html](https://www.sqlite.org/sqlite.html) .
 
 When creating a database file for distribution with your app, take care
 with the naming of tables and columns to ensure they match what your
@@ -163,7 +163,6 @@ public class YourAndroidApp : Application {
     }
 }
 ```
-
 
 ## Related Links
 

@@ -11,7 +11,7 @@ ms.date: 06/05/2019
 
 # Xamarin.Forms DependencyService Registration and Resolution
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 
 When using the Xamarin.Forms [`DependencyService`](xref:Xamarin.Forms.DependencyService) to invoke native platform functionality, platform implementations must be registered with the `DependencyService`, and then resolved from shared code to invoke them.
 
@@ -63,13 +63,13 @@ The following example shows using the [`Register`](xref:Xamarin.Forms.Dependency
 [Register("AppDelegate")]
 public partial class AppDelegate : global::Xamarin.Forms.Platform.iOS.FormsApplicationDelegate
 {
-		public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-		{
-				global::Xamarin.Forms.Forms.Init();
-				LoadApplication(new App());
-				DependencyService.Register<IDeviceOrientationService, DeviceOrientationService>();
-				return base.FinishedLaunching(app, options);
-		}
+    public override bool FinishedLaunching(UIApplication app, NSDictionary options)
+    {
+        global::Xamarin.Forms.Forms.Init();
+        LoadApplication(new App());
+        DependencyService.Register<IDeviceOrientationService, DeviceOrientationService>();
+        return base.FinishedLaunching(app, options);
+    }
 }
 ```
 
@@ -160,7 +160,7 @@ When an application finishes using a platform implementation that implements `ID
 ITextToSpeechService service = DependencyService.Get<ITextToSpeechService>(DependencyFetchTarget.NewInstance);
 using (service as IDisposable)
 {
-		await service.SpeakAsync("Hello world");
+    await service.SpeakAsync("Hello world");
 }
 ```
 
@@ -170,5 +170,5 @@ For more information about calling an object's `Dispose` method, see [Using obje
 
 ## Related links
 
-- [DependencyService Demos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/DependencyService)
+- [DependencyService Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/dependencyservice/)
 - [Dependency resolution in Xamarin.Forms](~/xamarin-forms/internals/dependency-resolution.md)

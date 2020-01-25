@@ -4,8 +4,8 @@ description: "This document describes how to get set up to build iOS 12, tvOS 12
 ms.prod: xamarin
 ms.assetid: 6C0F0133-1A5F-408B-8BCA-BDCA313A55C2
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/19/2018
 ---
 # Get started with iOS 12, tvOS 12, and watchOS 5

@@ -4,8 +4,8 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: 4D71BBD9-B948-4B59-9AF5-F199C51CBEB3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -63,7 +63,6 @@ These new, object-oriented frameworks provide the following:
 
 For more information, see our [Contacts and Contacts UI](~/ios/platform/contacts.md) documentation.
 
-
 ## New Search APIs
 
 Search has been expanded in iOS 9 to provide great new ways to access information inside of your Xamarin.iOS app. Using the new Search APIs, you can make your app's content searchable through Spotlight and Safari search results, Handoff and Siri Reminders and Suggestions. This allows users quick access to activities and information deep within your app.
@@ -79,7 +78,6 @@ The Stack View control ([UIStackView](xref:UIKit.UIStackView) leverages the powe
 By using Stack View control, the amount of work required to layout a user interface is greatly reduced. The layout of all subviews attached to a Stack View are managed automatically based on developer defined properties such as axis, distribution, alignment and spacing.
 
 For more information, please see our [Introduction to Stack View](~/ios/user-interface/controls/uistackview.md) documentation.
-
 
 ## Collection View Changes
 
@@ -120,12 +118,12 @@ With iOS 9, Apple is extending Extension support by providing several new _Exten
 - **New Audio Unit Extension Point** – Use this Extension Point to provide audio effects, musical instruments, sound generators, etc. for use within  other Audio Unit host apps (such as GarageBand). This Extension Point also allows you to sell _Audio Units_ (audio plug-ins) on the App Store.
 - **New Index Maintenance Extension Point** — Use this Extension Point to support reindexing of app data without requiring an app relaunch.
 - **New Network Extension Points** (these require special permission from Apple):
-	- **App Proxy Provider Extension** — Use this Extension Point to implement a custom transparent client-side network proxy.
-	- **Filter Data Provider / Filter Control Provider Extension** - Use these Extension Points to implement dynamic network content filtering on-device.
-	- **Packet Tunnel Provider Extension** — Use this Extension Point to implement a custom VPN tunneling protocol client-side.
+  - **App Proxy Provider Extension** — Use this Extension Point to implement a custom transparent client-side network proxy.
+  - **Filter Data Provider / Filter Control Provider Extension** - Use these Extension Points to implement dynamic network content filtering on-device.
+  - **Packet Tunnel Provider Extension** — Use this Extension Point to implement a custom VPN tunneling protocol client-side.
 - **New Safari Extension Points**:
-	- **Content Blocking Extension** — Use this Extension Point to define a list of blocked content that will not be displayed when the user is browsing the web.
-	- **Shared Links Extension** — Use this Extension Point to enable viewing of your app's content in Safari's Shared Links.
+  - **Content Blocking Extension** — Use this Extension Point to define a list of blocked content that will not be displayed when the user is browsing the web.
+  - **Shared Links Extension** — Use this Extension Point to enable viewing of your app's content in Safari's Shared Links.
 
 For more information, please see our [Introduction to Extensions](~/ios/platform/extensions.md) and Apple's [App Extension Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214) documentation.
 
@@ -139,8 +137,7 @@ In iOS 9, Apple has enhanced the Keychain to provide a new encryption key type f
 - Access Control List entropy (using the Application Password option) for app-provided keychain item encryption.
 - Support for generating and using keys inside the secure enclave (via the `kSecAttrTokenIDSecureEnclave` attribute).
 
-For more information, please see our [Introduction to Touch ID](~/ios/platform/touchid.md) documentation.
-
+For more information, please see [Touch ID and Face ID in Xamarin.iOS](~/ios/platform/touch-id-face-id.md).
 
 ## Right-to-Left Language Support
 
@@ -151,8 +148,6 @@ In iOS 9, Apple has made presenting a flipped user interface easier than ever by
 - The ability to flip an image programmatically by using the [FlipsForRightToLeftLayoutDirection](xref:UIKit.UIImage.FlipsForRightToLeftLayoutDirection) property of the [UIImage](xref:UIKit.UIImage) class.
 
 For more information, please see Apple's [Supporting Right-to-Left Languages](https://developer.apple.com/library/prerelease/ios/documentation/MacOSX/Conceptual/BPInternational/SupportingRight-To-LeftLanguages/SupportingRight-To-LeftLanguages.html#//apple_ref/doc/uid/10000171i-CH17) documentation.
-
-
 
 ## Additional Framework Changes
 
@@ -204,8 +199,6 @@ Also check out the iOS portions of these samples (companion Mac OS X versions co
 
 - [AgentsCatalog](https://github.com/xamarin/mac-ios-samples/tree/master/AgentsCatalog)
 - [MetalKitEssentials](https://github.com/xamarin/mac-ios-samples/tree/master/MetalKitEssentials)
-
-
 
 ## Related Links
 

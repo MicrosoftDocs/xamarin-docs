@@ -4,7 +4,7 @@ description: "The Share class in Xamarin.Essentials enables an application to sh
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 04/02/2019
+ms.date: 08/20/2019
 ms.custom: video
 ---
 
@@ -54,35 +54,9 @@ User interface to share to external application that appears when request is mad
 
 ![Share](images/share.png)
 
-## Platform Differences
-
-# [Android](#tab/android)
-
-* `Subject` property is used for desired subject of a message.
-
-# [iOS](#tab/ios)
-
-* `Subject` not used.
-* `Title` not used.
-
-# [UWP](#tab/uwp)
-
-* `Title` will default to Application Name if not set.
-* `Subject` not used.
-
------
-
 ## Files
 
-![Preview feature](~/media/shared/preview.png)
-
-Sharing files is available as an experimental preview in Xamarin.Essentials version 1.1.0. This features enables an app to share files to other applications on the device. To enable this feature set the following property in your app's startup code:
-
-```csharp
-ExperimentalFeatures.Enable(ExperimentalFeatures.ShareFileRequest);
-```
-
-After the feature enabled any file can be shared. Xamarin.Essentials will automatically detect the file type (MIME) and request a share. Each platform may only support specific file extensions.
+This features enables an app to share files to other applications on the device. Xamarin.Essentials will automatically detect the file type (MIME) and request a share. Each platform may only support specific file extensions.
 
 Here is a sample of writing text to disk and sharing it to other apps:
 
@@ -97,6 +71,24 @@ await Share.RequestAsync(new ShareFileRequest
     File = new ShareFile(file)
 });
 ```
+
+## Platform Differences
+
+# [Android](#tab/android)
+
+- `Subject` property is used for desired subject of a message.
+
+# [iOS](#tab/ios)
+
+- `Subject` not used.
+- `Title` not used.
+
+# [UWP](#tab/uwp)
+
+- `Title` will default to Application Name if not set.
+- `Subject` not used.
+
+-----
 
 ## API
 

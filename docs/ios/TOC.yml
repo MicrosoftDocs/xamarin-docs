@@ -226,7 +226,7 @@
             - name: Text Input
               href: user-interface/controls/text-input.md
             - name: Web Views
-              href: user-interface/controls/uiwebview.md
+              href: user-interface/controls/webview.md
         - name: Programmatic Layout Constraints
           href: user-interface/programmatic-layout-constraints.md
         - name: MonoTouch.Dialog
@@ -244,12 +244,18 @@
       items: 
         - name: Overview
           href: platform/index.md
-        - name: iOS 13 preview
+        - name: iOS 13
           items:
             - name: Introduction to iOS 13
               href: platform/ios13/index.md
             - name: Get started
               href: platform/ios13/get-started.md
+            - name: Dark Mode
+              href: platform/ios13/dark-mode.md
+            - name: Sign In with Apple
+              href: platform/ios13/sign-in.md
+            - name: Multiple windows for iPad
+              href: platform/ios13/multi-window-ipad.md
             - name: Troubleshooting
               href: platform/ios13/troubleshooting/index.md
         - name: iOS 12
@@ -447,8 +453,8 @@
           href: platform/textkit.md
         - name: 3D Touch
           href: platform/3d-touch.md
-        - name: Touch ID
-          href: platform/touchid.md
+        - name: Touch ID and Face ID
+          href: platform/touch-id-face-id.md
         - name: User Notifications Framework
           items: 
             - name: Overview
@@ -559,6 +565,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/ios
         - name: Vibrate
           href: ~/essentials/vibrate.md?context=xamarin/ios
+        - name: Xamarin.Essentials release notes
+          href: https://docs.microsoft.com/xamarin/essentials/release-notes/
         - name: Troubleshooting
           href: ~/essentials/troubleshooting.md?context=xamarin/ios
     - name: Data and Cloud Services
@@ -604,23 +612,24 @@
       items: 
         - name: Overview
           href: deploy-test/index.md
-        - name: App Distribution
-          href: deploy-test/app-distribution/index.md
+        - name: App distribution
           items: 
-            - name: App Store Distribution
+            - name: Overview
+              href: deploy-test/app-distribution/index.md
+            - name: App Store distribution
               href: deploy-test/app-distribution/app-store-distribution/index.md
               items: 
-                - name: Configuring your App in iTunes Connect
+                - name: Configuring your app in iTunes Connect
                   href: deploy-test/app-distribution/app-store-distribution/itunesconnect.md
                 - name: Publishing to the App Store
                   href: deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md
-            - name: In-House (Enterprise) Distribution
+            - name: In-House (enterprise) distribution
               href: deploy-test/app-distribution/in-house-distribution.md
-            - name: Ad Hoc Distribution
+            - name: Ad-hoc distribution
               href: deploy-test/app-distribution/ad-hoc-distribution.md
-            - name: The iTunesMetadata.plist File
+            - name: The iTunesMetadata.plist file
               href: deploy-test/app-distribution/itunesmetadata.md
-            - name: IPA Support
+            - name: IPA support
               href: deploy-test/app-distribution/ipa-support.md
         - name: Code Signing and Provisioning
           href: deploy-test/provisioning/index.md
@@ -829,6 +838,8 @@
               href: troubleshooting/questions/exception-marshal-obj-c.md
             - name: "Runtime error– The assembly mscorlib.dll was not found or could not be loaded"
               href: troubleshooting/questions/error-mscorlib-not-found.md
+            - name: "Compile error– Can not encode offset X in resulting scattered relocation"
+              href: troubleshooting/questions/error-encode-offset-scattered-relocation.md
             - name: IPA file is 0 bytes
               href: troubleshooting/questions/ipa-zero-bytes.md
             - name: "IBTool Error– The operation couldn’t be completed."
@@ -1102,4 +1113,4 @@
     - name: Release Notes
       href: https://docs.microsoft.com/xamarin/ios/release-notes/
     - name: Samples
-      href: samples/index.yml
+      href: samples/index.md

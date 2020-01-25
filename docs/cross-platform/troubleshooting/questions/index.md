@@ -3,8 +3,8 @@ title: "General Frequently Asked Questions"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
 ---
 
@@ -28,7 +28,7 @@ NuGet updates, extensions, and add-ins can be found under the **Updates** tab in
 ### [How do I downgrade a NuGet package?](nuget-package-downgrade.md)
 Visual Studio for Mac & Visual Studio both have features for selecting older versions of packages and installing them automatically; similar to how updating packages works.
 
-### [Missing packages error after updating Nuget packages](nuget-packages-missing.md)
+### [Missing packages error after updating NuGet packages](nuget-packages-missing.md)
 This issue has mainly been reported on Xamarin.Forms sample app solutions, but the potential for this issue can happen on any project that uses NuGet packages.
 
 ### [Unifying Google Play Services Components and NuGet](gps-components-nuget.md)
@@ -36,7 +36,6 @@ There used to be several Google Play Services Components and NuGet packages, but
 
 ### [Where are the components stored on my machine?](component-storage.md)
 Whenever you install a Xamarin component into an App project, it gets placed in the two locations listed in this guide.
-
 
 ## Troubleshooting
 ### [Where can I find my version information and logs?](version-logs.md)
@@ -50,4 +49,3 @@ Jenkins is an open-source CI suite; because of this many issues that are directl
 
 ### [What project settings are required for the debugger?](debugger-settings.md)
 In order for the debugger to work as expected (hit breakpoints, display debug logs, etc.), developer instrumentation and debug information display must both be enabled. This guide details how to find and activate these settings.
-

@@ -4,8 +4,8 @@ description: "This document describes how to use System.Data and Mono.Data.Sqlit
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
 ---
 
@@ -13,11 +13,11 @@ ms.date: 11/25/2015
 
 Xamarin.iOS 8.10 adds support for [System.Data](xref:System.Data), including the `Mono.Data.Sqlite.dll` ADO.NET provider. Support includes the addition of the following [assemblies](~/cross-platform/internals/available-assemblies.md):
 
--  `System.Data.dll`
--  `System.Data.Service.Client.dll`
--  `System.Transactions.dll`
--  `Mono.Data.Tds.dll`
--  `Mono.Data.Sqlite.dll`
+- `System.Data.dll`
+- `System.Data.Service.Client.dll`
+- `System.Transactions.dll`
+- `Mono.Data.Tds.dll`
+- `Mono.Data.Sqlite.dll`
 
 <a name="Example" />
 
@@ -107,7 +107,6 @@ class Demo {
 > [!IMPORTANT]
 > As mentioned in the code sample above, it is bad practice to embed strings in SQL commands because it makes your code vulnerable to [SQL injection](https://en.wikipedia.org/wiki/SQL_injection).
 
-
 ### Using Command Parameters
 
 The following code shows how to use command parameters
@@ -141,13 +140,12 @@ Both **System.Data** and **Mono.Data.Sqlite** are missing some functionality.
 
 Functionality missing from **System.Data.dll** consists of:
 
--  Anything requiring  [System.CodeDom](xref:System.CodeDom) (e.g.  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
--  XML config file support (e.g.  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
--   [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depends on XML config file support)
--   [System.Data.OleDb](xref:System.Data.OleDb)
--   [System.Data.Odbc](xref:System.Data.Odbc)
--  The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
-
+- Anything requiring  [System.CodeDom](xref:System.CodeDom) (e.g.  [System.Data.TypedDataSetGenerator](xref:System.Data.TypedDataSetGenerator) )
+- XML config file support (e.g.  [System.Data.Common.DbProviderConfigurationHandler](xref:System.Data.Common.DbProviderConfigurationHandler) )
+- [System.Data.Common.DbProviderFactories](xref:System.Data.Common.DbProviderFactories) (depends on XML config file support)
+- [System.Data.OleDb](xref:System.Data.OleDb)
+- [System.Data.Odbc](xref:System.Data.Odbc)
+- The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
 
 <a name="Mono.Data.Sqlite" />
 
@@ -170,4 +168,3 @@ anything using [DataTable](xref:System.Data.DataTable) is unlikely to work.
 ## Data Binding
 
 Data Binding is not supported at this time.
-

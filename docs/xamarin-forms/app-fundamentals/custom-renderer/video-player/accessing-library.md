@@ -381,8 +381,6 @@ namespace FormsVideoLibrary.UWP
 
 For each platform, the video begins playing almost immediately after the video source is set because the file is on the device and doesn't need to be downloaded.
 
-
-
 ## Related Links
 
 - [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

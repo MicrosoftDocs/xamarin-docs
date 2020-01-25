@@ -3,8 +3,8 @@ title: "Customizing a ListView's Appearance"
 ms.prod: xamarin
 ms.assetid: B09AD282-2C4F-D71E-6806-9B1EF05C2CD4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2018
 ---
 
@@ -13,7 +13,6 @@ ms.date: 04/26/2018
 The appearance of a ListView is dictated by the layout of the rows being
 displayed. To change the appearance of a `ListView`, use a
 different row layout.
-
 
 ## Built-in Row Views
 
@@ -107,8 +106,6 @@ configured for two lines (SimpleExpandableListItem2) and the child view
 can be configured for one line (SimpleExpandableListItem1), or both
 group view and child view can have the same number of lines. 
 
-
-
 ## Accessories
 
 Rows can have accessories added to the right of the view to
@@ -143,7 +140,6 @@ selection mode with `SingleChoice` accessories and the `Checked` or
 `Multiple` mode with the `MultipleChoice` style. The selection mode is
 controlled by the `ChoiceMode` property of the `ListView`.
 
-
 ### Handling API Level
 
 Earlier versions of Xamarin.Android implemented enumerations as integer
@@ -171,7 +167,6 @@ lv.ChoiceMode = 1; // Single
 //lv.ChoiceMode = 3; // MultipleModal
 */
 ```
-
 
 ### Selecting Items Programmatically
 
@@ -208,7 +203,6 @@ for (var i = 0; i < sparseArray.Size(); i++ )
 Console.WriteLine();
 ```
 
-
 ## Creating Custom Row Layouts
 
 The four built-in row views are very simple. To display more complex
@@ -221,35 +215,33 @@ colors, fonts and layout.
 
 This example differs from the previous examples in a number of ways:
 
--  Inherits from `Activity` , not `ListActivity` . You can customize
+- Inherits from `Activity` , not `ListActivity` . You can customize
    rows for any `ListView` , however other controls can also be
    included in an `Activity` layout (such as a heading, buttons or
    other user interface elements). This example adds a heading above
    the `ListView` to illustrate.
 
--  Requires an AXML layout file for the screen; in the previous
+- Requires an AXML layout file for the screen; in the previous
    examples the `ListActivity` does not require a layout file. This
    AXML contains a `ListView` control declaration.
 
--  Requires an AXML layout file to render each row. This AXML file
+- Requires an AXML layout file to render each row. This AXML file
    contains the text and image controls with custom font and color
    settings.
 
--  Uses an optional custom selector XML file to set the appearance of
+- Uses an optional custom selector XML file to set the appearance of
    the row when it is selected.
 
--  The `Adapter` implementation returns a custom layout from the
+- The `Adapter` implementation returns a custom layout from the
    `GetView` override.
 
--  `ItemClick` must be declared differently (an event handler is
+- `ItemClick` must be declared differently (an event handler is
    attached to `ListView.ItemClick` rather than an overriding
    `OnListItemClick` in `ListActivity`).
-
 
 These changes are detailed below, starting with creating the activity's
 view and the custom row view and then covering the modifications to the
 Adapter and Activity to render them.
-
 
 ### Adding a ListView to an Activity Layout
 
@@ -287,7 +279,6 @@ here:
 The benefit of using an `Activity` with a custom layout (instead of a
 `ListActivity`) lies in being able to add additional controls to the
 screen, such as the heading `TextView` in this example.
-
 
 ### Creating a Custom Row Layout
 
@@ -342,7 +333,6 @@ images (especially if they have to be loaded over the network). See
 Google's article for more information on addressing scrolling
 performance issues.
 
-
 ### Referencing a Custom Row View
 
 The implementation of the custom adapter example is in
@@ -387,7 +377,6 @@ public class HomeScreenAdapter : BaseAdapter<TableItem> {
 }
 ```
 
-
 ### Referencing the Custom ListView in the Activity
 
 Because the `HomeScreen` class now inherits from `Activity`, a
@@ -427,8 +416,6 @@ void OnListItemClick(object sender, AdapterView.ItemClickEventArgs e)
 The resulting screen looks like this:
 
 [![Screenshot of the resulting CustomRowView](customizing-appearance-images/customrowview.png)](customizing-appearance-images/customrowview.png#lightbox)
-
-
 
 ### Customizing the Row Selector Color
 
@@ -481,8 +468,6 @@ this:
 
 [![A selected row in orange, with Toast message displaying name of selected row](customizing-appearance-images/customselectcolor.png)](customizing-appearance-images/customselectcolor.png#lightbox)
 
-
-
 ### Preventing Flickering on Custom Layouts
 
 Android attempts to improve the performance of `ListView` scrolling by
@@ -492,8 +477,6 @@ you should also set the `android:cacheColorHint` property on the
 color value as your custom row layout's background). Failure to
 include this hint could result in a 'flicker' as the user scrolls
 through a list with custom row background colors.
-
-
 
 ## Related Links
 

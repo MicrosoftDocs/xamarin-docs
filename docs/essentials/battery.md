@@ -157,7 +157,6 @@ public class EnergySaverTest
 
 If the energy-saver status changes to `On`, the application should stop performing background processing. If the status changes to `Unknown` or `Off`, the application can resume background processing.
 
-
 ## Platform Differences
 
 # [Android](#tab/android)
@@ -166,12 +165,12 @@ No platform differences.
 
 # [iOS](#tab/ios)
 
-* Device must be used to test APIs. 
-* Only will return `AC` or `Battery` for `PowerSource`.
+- Device must be used to test APIs. 
+- Only will return `AC` or `Battery` for `PowerSource`.
 
 # [UWP](#tab/uwp)
 
-* Only will return `AC` or `Battery` for `PowerSource`.
+- Only will return `AC` or `Battery` for `PowerSource`.
 
 -----
 

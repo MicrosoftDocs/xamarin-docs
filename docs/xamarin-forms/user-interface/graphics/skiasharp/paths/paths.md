@@ -48,7 +48,7 @@ The `R` stands for *relative*. These methods have the same syntax as the corresp
 
 A contour ends with another call to `MoveTo` or `RMoveTo`, which begins a new contour, or a call to `Close`, which closes the contour. The `Close` method automatically appends a straight line from the current point to the first point of the contour, and marks the path as closed, which means that it will be rendered without any stroke caps.
 
-The difference between open and closed contours is illustrated in the **Two Triangle Contours** page, which uses an `SKPath` object with two contours to render two triangles. The first contour is open and the second is closed. Here's the [`TwoTriangleContoursPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/TwoTriangleContoursPage.cs) class:
+The difference between open and closed contours is illustrated in the **Two Triangle Contours** page, which uses an `SKPath` object with two contours to render two triangles. The first contour is open and the second is closed. Here's the [`TwoTriangleContoursPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/TwoTriangleContoursPage.cs) class:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -120,7 +120,7 @@ Just as the appearance of the start and end of a line is defined by a stroke cap
 - `Round` for a rounded join
 - `Bevel` for a chopped-off join
 
-The **Stroke Joins** page shows these three stroke joins with code similar to the **Stroke Caps** page. This is the `PaintSurface` event handler in the [`StrokeJoinsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeJoinsPage.cs) class:
+The **Stroke Joins** page shows these three stroke joins with code similar to the **Stroke Caps** page. This is the `PaintSurface` event handler in the [`StrokeJoinsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeJoinsPage.cs) class:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -189,7 +189,6 @@ Here's the program running:
 [![](paths-images/strokejoins-small.png "Triple screenshot of the Stroke Joins page")](paths-images/strokejoins-large.png#lightbox "Triple screenshot of the Stroke Joins page")
 
 The miter join consists of a sharp point where the lines connect. When two lines join at a small angle, the miter join can become quite long. To prevent excessively long miter joins, the length of the miter join is limited by the value of the [`StrokeMiter`](xref:SkiaSharp.SKPaint.StrokeMiter) property of `SKPaint`. A miter join that exceeds this length is chopped off to become a bevel join.
-
 
 ## Related Links
 

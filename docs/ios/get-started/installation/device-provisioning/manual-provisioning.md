@@ -4,8 +4,8 @@ description: "Once Xamarin.iOS has been successfully installed, the next step in
 ms.prod: xamarin
 ms.assetid: E26ACC94-F4A5-4FF5-B7D4-BE596745A665
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 07/15/2017
 ---
 # Manual provisioning for Xamarin.iOS
@@ -178,9 +178,10 @@ To manually create a provisioning profile for development, do this:
 8. Press **Download** to download the provisioning profile onto a Mac:
 
     [![](manual-provisioning-images/provisioning-profile06.png "Download the provisioning profile")](manual-provisioning-images/provisioning-profile06.png#lightbox)
-9. Double-click on the file to install the provisioning profile in Xcode. Note that Xcode might not show any visual clues that it has installed the profile except for opening. This can be verified by browsing to **Xcode > Preferences > Accounts**. Select your Apple ID and click **View Details...**. Your new provisioning profile should be listed, as illustrated below:
 
-      [![](manual-provisioning-images/provisioning-profile07.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
+9. Double-click on the file to install the provisioning profile in Xcode. Note that Xcode might not show any visual clues that it has installed the profile except for opening. This can be verified by browsing to **Xcode > Window > Devices and Simulators**. Right-click on your device and select **Show Provisioning Profiles**...
+
+      [![](manual-provisioning-images/provisioning-profile07-sml.png "Viewing the profile in Xcode")](manual-provisioning-images/provisioning-profile07.png#lightbox)
 
 After the provisioning profile has been successfully created it may be necessary to refresh Xcode so that all the development certificates are available to Visual Studio for Mac and Visual Studio.
 
@@ -192,15 +193,16 @@ Certificates and provisioning profiles that have been created in the Apple Devel
 it may be necessary to download them so they that they can be accessed by
 Visual Studio for Mac and Visual Studio. To update and download any certificates created in the Apple Developer portal, do the following:
 
-1.   Quit Visual Studio for Mac or Visual Studio.
-2.   Start Xcode.
-3.   Choose  **Xcode Menu > Preferences...**
-4.   Click the  **Accounts** tab.
-5.   Select a team and click the  **Download Manual Profiles** button:
-    [![](manual-provisioning-images/selectteam1.png "Downloading Manual profiles")](manual-provisioning-images/selectteam1.png#lightbox)
+1. Quit Visual Studio for Mac or Visual Studio.
+2. Start Xcode.
+3. Choose  **Xcode Menu > Preferences...**
+4. Click the  **Accounts** tab.
+5. Select a team and click the  **Download Manual Profiles** button:
 
-6.   Quit Xcode.
-7.  Start Visual Studio for Mac or Visual Studio.
+    [![Downloading Manual profiles](manual-provisioning-images/selectteam1.png)](manual-provisioning-images/selectteam1.png#lightbox)
+
+6. Quit Xcode.
+7. Start Visual Studio for Mac or Visual Studio.
 
 The new certificates or provisioning profiles will be available in Visual Studio for Mac or Visual Studio and ready to use.
 
@@ -216,15 +218,13 @@ The new certificates or provisioning profiles will be available in Visual Studio
 
 -----
 
-<a name="appservices" />
-
 ## Provisioning for application services
 
 Apple provides a selection of special Application Services, also called capabilities, that can be activated for a Xamarin.iOS application. These Application Services must be configured on both the iOS Provisioning Portal when the **App ID** is created and in the **Entitlements.plist** file that is part of the Xamarin.iOS application's project. For information on adding Application Services to your app, refer to the [Introduction to Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide and the [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
-* Create an App ID with the required app services.
-* Create a new [provisioning profile](#provisioningprofile) that contains this App ID.
-* Set Entitlements in the Xamarin.iOS Project
+- Create an App ID with the required app services.
+- Create a new [provisioning profile](#provisioningprofile) that contains this App ID.
+- Set Entitlements in the Xamarin.iOS Project
 
 ## Deploying to a device
 
@@ -238,11 +238,11 @@ At this point provisioning should be complete, and the app is ready to be deploy
 1. Plug the device in to a Mac.
 2. In the project's **Info.plist**, make sure the Bundle Identifier matches the App ID (unless the App ID is a wildcard):
 
-   ![](manual-provisioning-images/deploydevice01xs.png "Entering an Identifier")
+   ![Entering an Identifier](manual-provisioning-images/deploydevice01xs.png)
 
 3. Right-click on the project to view the Project Options dialog and browse to **Build > iOS Bundle Signing**. From the drop-down list next to both the **Signing Identity** and **Provisioning Profile**, verify that Visual Studio for Mac can see the correct profiles, and select a specific identity & profile:
 
-   ![](manual-provisioning-images/deploydevice02xs.png "Select a specific identity & profile")
+   ![Select a specific identity & profile](manual-provisioning-images/deploydevice02xs.png)
 
    If this is set to **Automatic**, Visual Studio for Mac will select the identity and profile based on the Bundle ID that was set in step #2.
 
@@ -257,7 +257,7 @@ At this point provisioning should be complete, and the app is ready to be deploy
 1. Plug the device in to the Mac build host.
 2. In the project's **Info.plist**, make sure the Bundle Identifier matches the App ID:
 
-   ![](manual-provisioning-images/servicevs01.png "Entering an Identifier")
+   ![Entering an Identifier](manual-provisioning-images/servicevs01.png)
 
 3. Right-click on the project to view the Project Options dialog, and browse to **Build > iOS Bundle Signing**. From the drop-down list next to both the **Signing Identity** and **Provisioning Profile** verify that Visual Studio can see the correct profiles, and select a specific identity & profile.
 
@@ -265,7 +265,6 @@ At this point provisioning should be complete, and the app is ready to be deploy
 
 4. Make sure to set the build configuration to **iPhone** or **iPad**, rather the simulator.
 5. Click **Run** in Visual Studio and view the app running on the device.
-
 
 -----
 

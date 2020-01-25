@@ -4,8 +4,8 @@ description: "This guide introduces the various fastlane tools that can be used 
 ms.prod: xamarin
 ms.assetid: 8202C57D-22FF-4224-A5B1-AAEF12B7C106
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -74,8 +74,7 @@ The content provided can be used as a springboard to aid with app distribution, 
     export PATH="$HOME/.fastlane/bin:$PATH"
     ```
 
-8.  Run `which fastlane` again, to confirm the path looks like `/Users/[user]/.fastlane/bin`
-
+8. Run `which fastlane` again, to confirm the path looks like `/Users/[user]/.fastlane/bin`
 
 ## Updating fastlane
 
@@ -83,11 +82,9 @@ fastlane is a very active open source project that regularly pushes new releases
 
 [![](images/fastlane-image0.png "The fast lane update prompt")](images/fastlane-image0.png#lightbox)
 
-
 To update to a new version of fastlane, download the latest package from [here](https://download.fastlane.tools) and double-click on the install package to run it:
 
 [![](images/fastlane-image0a.png "Running the install package")](images/fastlane-image0a.png#lightbox)
-
 
 ## Contents
 

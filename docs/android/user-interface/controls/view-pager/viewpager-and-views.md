@@ -4,8 +4,8 @@ description: "ViewPager is a layout manager that lets you implement gestural nav
 ms.prod: xamarin
 ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -13,7 +13,6 @@ ms.date: 03/01/2018
 
 _ViewPager is a layout manager that lets you implement gestural navigation. Gestural navigation allows the user to swipe left and right to step through pages of data. This guide explains how to implement a swipeable UI with ViewPager and PagerTabStrip, using Views as the data pages (a subsequent guide covers how to use Fragments for the pages)._
 
- 
 ## Overview
 
 This guide is a walkthrough that provides a step-by-step demonstration 
@@ -33,8 +32,6 @@ app illustrated in this walkthrough does not require the use of
 back and forth between different images, the implementation can be kept 
 simpler by using standard Android views and layouts. 
 
-
-
 ## Start an App Project
 
 Create a new Android project called **TreePager** (see
@@ -45,11 +42,9 @@ installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 
 Find and install **Android Support Library v4**: 
 
-[![Screenshot of Support v4 Nuget selected in the NuGet Package Manager](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
+[![Screenshot of Support v4 NuGet selected in the NuGet Package Manager](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 This will also install any additional packages reaquired by **Android Support Library v4**.
-
-
 
 ## Add an Example Data Source
 
@@ -81,8 +76,6 @@ Download this source file (or copy and paste the code into a new
 unzip the [image files](https://github.com/xamarin/monodroid-samples/blob/master/UserInterface/TreePager/Resources/tree-images.zip?raw=true) into your 
 **Resources/drawable** folder and include them in the project. 
 
-
-
 ## Create a ViewPager Layout
 
 Open **Resources/layout/Main.axml** and replace its contents with the following XML:
@@ -104,7 +97,6 @@ because `ViewPager` is packaged in a support library. `ViewPager` is
 available only from 
 [Android Support Library v4](https://www.nuget.org/packages/Xamarin.Android.Support.v4/);
 it is not available in the Android SDK. 
-
 
 ## Set up ViewPager
 
@@ -128,11 +120,11 @@ protected override void OnCreate(Bundle bundle)
 
 This code does the following:
 
-1.  Sets the view from the **Main.axml** layout resource.
+1. Sets the view from the **Main.axml** layout resource.
 
-2.  Retrieves a reference to the `ViewPager` from the layout.
+2. Retrieves a reference to the `ViewPager` from the layout.
 
-3.  Instantiates a new `TreeCatalog` as the data source.
+3. Instantiates a new `TreeCatalog` as the data source.
 
 When you build and run this code, you should see a display that 
 resembles the following screenshot: 
@@ -143,7 +135,6 @@ At this point, the `ViewPager` is empty because it is lacking an
 adapter for accessing the content in **TreeCatalog**. In the next 
 section, a **PagerAdapter** is created to connect the `ViewPager` to 
 the **TreeCatalog**. 
-
 
 ## Create the Adapter
 
@@ -160,15 +151,15 @@ and loads it into the pages for the `ViewPager` to display.
 
 When you implement a `PagerAdapter`, you must override the following:
 
--   **InstantiateItem** &ndash; Creates the page (`View`) for a given 
+- **InstantiateItem** &ndash; Creates the page (`View`) for a given 
     position and adds it to the `ViewPager`'s collection of views. 
 
--   **DestroyItem** &ndash; Removes a page from a given position.
+- **DestroyItem** &ndash; Removes a page from a given position.
 
--   **Count** &ndash; Read-only property that returns the number of 
+- **Count** &ndash; Read-only property that returns the number of 
     views (pages) available. 
 
--   **IsViewFromObject** &ndash; Determines whether a page is
+- **IsViewFromObject** &ndash; Determines whether a page is
     associated with a specific key object. (This object is created
     by the `InstantiateItem` method.) In this example, the key object
     is the `TreeCatalog` data object.
@@ -217,8 +208,6 @@ This code stubs out the essential `PagerAdapter` implementation. In the
 following sections, each of these methods is replaced with working 
 code. 
 
-
-
 ### Implement the Constructor
 
 When the app instantiates the `TreePagerAdapter`, it supplies a context 
@@ -240,8 +229,6 @@ public TreePagerAdapter (Context context, TreeCatalog treeCatalog)
 The purpose of this constructor is to store the context and 
 `TreeCatalog` instance that the `TreePagerAdapter` will use. 
 
-
-
 ### Implement Count
 
 The `Count` implementation is relatively simple: it returns the number of
@@ -256,8 +243,6 @@ public override int Count
 
 The `NumTrees` property of `TreeCatalog` returns the number of trees
 (number of pages) in the data set.
-
-
 
 ### Implement InstantiateItem
 
@@ -281,27 +266,25 @@ public override Java.Lang.Object InstantiateItem (View container, int position)
 
 This code does the following:
 
-1.  Instantiates a new `ImageView` to display the tree image
+1. Instantiates a new `ImageView` to display the tree image
     at the specified position. The app's `MainActivity` is the context 
     that will be passed to the `ImageView` constructor.
 
-2.  Sets the `ImageView` resource to the `TreeCatalog` image
+2. Sets the `ImageView` resource to the `TreeCatalog` image
     resource ID at the specified position.
 
-3.  Casts the passed container `View` to a `ViewPager` reference.
+3. Casts the passed container `View` to a `ViewPager` reference.
     Note that you must use `JavaCast<ViewPager>()` to properly
     perform this cast (this is needed so that Android performs
     a runtime-checked type conversion).
 
-4.  Adds the instantiated `ImageView` to the `ViewPager` and returns
+4. Adds the instantiated `ImageView` to the `ViewPager` and returns
     the `ImageView` to the caller.
 
 When the `ViewPager` displays the image at `position`, it displays this 
 `ImageView`. Initially, `InstantiateItem` is called twice to populate 
 the first two pages with views. As the user scrolls, it is called again 
 to maintain views just behind and ahead of the currently displayed item. 
-
-
 
 ### Implement DestroyItem
 
@@ -326,13 +309,11 @@ public override void DestroyItem(View container, int position, Java.Lang.Object 
 
 This code does the following:
 
-1.  Casts the passed container `View` into a `ViewPager` reference.
+1. Casts the passed container `View` into a `ViewPager` reference.
 
-2.  Casts the passed Java object (`view`) into a C# `View` (`view as View`);
+2. Casts the passed Java object (`view`) into a C# `View` (`view as View`);
 
-3.  Removes the view from the `ViewPager`. 
-
-
+3. Removes the view from the `ViewPager`. 
 
 ### Implement IsViewFromObject
 
@@ -363,7 +344,6 @@ public override bool IsViewFromObject(View view, Java.Lang.Object obj)
 }
 ```
 
-
 ## Add the Adapter to the ViewPager
 
 Now that the `TreePagerAdapter` is implemented, it's time to add it to the
@@ -386,8 +366,6 @@ as shown on the left in the next screenshot. Swipe left to see more
 tree views, then swipe right to move back through the tree catalog: 
 
 [![Screenshots of TreePager app swiping through tree images](viewpager-and-views-images/03-example-views-sml.png)](viewpager-and-views-images/03-example-views.png#lightbox)
-
-
 
 ## Add a Pager Indicator
 
@@ -429,8 +407,6 @@ adapter. When you build and run the app, you should see the empty
 
 [![Closeup screenshot of an empty PagerTabStrip](viewpager-and-views-images/04-empty-pagetabstrip-cap-sml.png)](viewpager-and-views-images/04-empty-pagetabstrip-cap.png#lightbox)
 
-
-
 ### Display a Title
 
 To add a title to each page tab, implement the `GetPageTitleFormatted` 
@@ -457,8 +433,6 @@ should see the tree name at the top of the screen without an underline:
 You can swipe back and forth to view each captioned tree image in the 
 catalog. 
 
-
-
 ### PagerTitleStrip Variation
 
 `PagerTitleStrip` is very similar to `PagerTabStrip` except that 
@@ -471,8 +445,6 @@ and run the app again to see how it looks with `PagerTitleStrip`:
 Note that the underline is removed when you convert to 
 `PagerTitleStrip`. 
 
-
- 
 ## Summary
 
 This walkthrough provided a step-by-step example of how to build a 
@@ -483,7 +455,6 @@ that connects the `ViewPager` to the data source. To help the user
 navigate through the data set, instructions were included that explain 
 how to add a `PagerTabStrip` or `PagerTitleStrip` to display the image 
 caption at the top of each page. 
-
 
 ## Related Links
 

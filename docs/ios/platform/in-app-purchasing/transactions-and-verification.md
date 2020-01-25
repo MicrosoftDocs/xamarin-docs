@@ -4,8 +4,8 @@ description: "This document describes how to allow for the restoration of past p
 ms.prod: xamarin
 ms.assetid: 84EDD2B9-3FAA-B3C7-F5E8-C1E5645B7C77
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -19,9 +19,9 @@ This functionality allows a customer to add the product to additional devices or
 to restore the product to the same device after being wiped clean or removing
 and re-installing the app. The following product types are restorable:
 
--  Non-consumable products
--  Auto-renewable subscriptions
--  Free subscriptions
+- Non-consumable products
+- Auto-renewable subscriptions
+- Free subscriptions
 
 The restore process should update the records you keep on the device to
 fulfill your products. The customer can choose to restore at any time, on any of

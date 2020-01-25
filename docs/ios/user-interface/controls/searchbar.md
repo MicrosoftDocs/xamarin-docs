@@ -4,16 +4,16 @@ description: "This document describes how to use search bars in Xamarin.iOS. It 
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
 ---
 
 # Search Bars in Xamarin.iOS
 
-The UISearchBar is used to search through a list of values. 
+The UISearchBar is used to search through a list of values.
 
-It contains three main components: 
+It contains three main components:
 
 - A field used to enter text. Users can utilize this to enter their search term.
 - A clear button, to remove any text from the search field.
@@ -34,7 +34,7 @@ And then place it. The example below shows how to place it in the navigation bar
 ```csharp
 NavigationItem.TitleView = searchBar;
 
-\\or
+// or
 
 TableView.TableHeaderView = searchBar;
 ```
@@ -80,10 +80,10 @@ These properties are explained below:
 - **Text, Placeholder, Prompt** – These properties are used to suggest and instruct how users should use the search bar. For example, if your app displayed a list of stores you could use the prompt property to advise that users can "Enter a city, story name, or Zip Code"
 - **Search Style** – You can set the search bar to either be **Prominent** or **Minimal**. Using the prominent will tint everything else on screen, except for the search bar, causing the focus to be drawn to the search bar. The minimal style search bar will blend in with its surroundings.
 - **Capabilities** – Enabling these properties only displays the UI element. The functionality must be implemented for these by raising the correct event as detailed in the [Search Bar API docs](xref:UIKit.UISearchBar)
-    - Shows Search Results / Bookmarks button – Shows a Search Results or Bookmarks icon on the search bar
-    - Shows Cancel button – Allows users to exit out of the search function. It is recommended that this is selected.
-    - Shows Scope Bar – This allows users to limit the scope of their search. For example, when searching in the music app the user can select whether they want to search Apple Music or their Library for a particular song or artist. To display various options, add an array of titles to the **ScopeBarTitles** property.
-    ![Search bar scope titles](searchbar-images/image4.png)
+  - Shows Search Results / Bookmarks button – Shows a Search Results or Bookmarks icon on the search bar
+  - Shows Cancel button – Allows users to exit out of the search function. It is recommended that this is selected.
+  - Shows Scope Bar – This allows users to limit the scope of their search. For example, when searching in the music app the user can select whether they want to search Apple Music or their Library for a particular song or artist. To display various options, add an array of titles to the **ScopeBarTitles** property.
+  ![Search bar scope titles](searchbar-images/image4.png)
 
 - **Text behavior** – These options are used to address how the user input is formatted when they are typing. Capitalization will set the start of each word or sentence, or every character as upper case. Correction and Spell Checking with prompt the user with suggested spellings of words as they type.
 - **Keyboard** – Controls the keyboard style displayed for the input, and therefore what keys are available on the keyboard. This includes Number Pad, Phone Pad, Email, URL along with other options.

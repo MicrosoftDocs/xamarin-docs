@@ -3,8 +3,8 @@ title: "How Content Providers Work"
 ms.prod: xamarin
 ms.assetid: B9E2EF89-7EBE-45F5-1ED9-7D2C70BE792C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -26,7 +26,6 @@ underlying SQL. Queries are done via a Uri using constants to reference
 column names (to reduce dependencies on the underlying data structure),
 and an `ICursor` is returned for the consuming code to iterate over.
 
-
 ## Consuming a ContentProvider
 
 `ContentProviders` expose their functionality through a Uri that is
@@ -37,8 +36,6 @@ easy to bind to the data. Android's built-in `ContentProviders` all
 provide convenience classes with constants that reference the data
 structure in the
 [`Android.Providers`](xref:Android.Provider) namespace.
-
-
 
 ### Built-In Providers
 
@@ -61,8 +58,6 @@ Android offers access to a wide range of system and user data using `ContentProv
   predictive text input.
 
 - *Voicemail* &ndash; history of voicemail messages.
-
-
 
 ## Classes Overview
 
@@ -108,12 +103,11 @@ The purpose of each class is described below:
 The `ContentProvider` API allows consumers to perform a variety of
 operations on the data, such as:
 
--  Query data to return lists or individual records.
--  Modify individual records.
--  Add new records.
--  Delete records.
+- Query data to return lists or individual records.
+- Modify individual records.
+- Add new records.
+- Delete records.
 
 This document contains an example that uses a system-provided
 `ContentProvider`, as well as a simple read-only example that
 implements a custom `ContentProvider`.
-

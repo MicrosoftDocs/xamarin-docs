@@ -4,8 +4,8 @@ description: "Adding capabilities to an application often requires additional pr
 ms.prod: xamarin
 ms.assetid: 0A61220B-BBAC-492B-9D3B-578986E64064
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
 ---
 
@@ -15,9 +15,9 @@ _Adding capabilities to an application often requires additional provisioning se
 
 An App Group allows different applications (or an application and its extensions) to access a shared file storage location. App Groups can be used for data like:
 
-*	[Apple Watch Settings](~/ios/watchos/app-fundamentals/settings.md)
-*	[Shared NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
-*	[Shared Files](~/ios/watchos/app-fundamentals/parent-app.md#files)
+* [Apple Watch Settings](~/ios/watchos/app-fundamentals/settings.md)
+* [Shared NSUserDefaults](~/ios/app-fundamentals/user-defaults.md)
+* [Shared Files](~/ios/watchos/app-fundamentals/parent-app.md#files)
 
 ## Configure a new App Group
 
@@ -68,7 +68,7 @@ Do the following:
 12. Repeat these steps for any Apps (or Extensions) that will be using the App Group.
 
 ## Next Steps
- 
+
 The list below describes additional steps that may need to be taken:
 
 * Use the framework namespace in your app.

@@ -25,7 +25,7 @@ The quickstart walks through how to store data in a local SQLite.NET database. T
 [![](database-images/screenshots1-sml.png "Notes Page")](database-images/screenshots1.png#lightbox "Notes Page")
 [![](database-images/screenshots2-sml.png "Note Entry Page")](database-images/screenshots2.png#lightbox "Note Entry Page")
 
-### Prerequisites
+## Prerequisites
 
 You should successfully complete the [previous quickstart](multi-page.md) before attempting this quickstart. Alternatively, download the [previous quickstart sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-notes-multipage/) and use it as the starting point for this quickstart.
 

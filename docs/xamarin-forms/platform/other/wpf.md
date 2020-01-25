@@ -16,6 +16,9 @@ ms.date: 04/05/2018
 
 Xamarin.Forms now has preview support for the Windows Presentation Foundation (WPF). This article demonstrates how to add a WPF project to a Xamarin.Forms solution.
 
+> [!IMPORTANT]
+> Xamarin.Forms support for WPF is provided by the community. For more information, see [Xamarin.Forms Platform Support](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
+
 Before you start, create a new Xamarin.Forms solution in Visual Studio 2019, or use an existing Xamarin.Forms solution, for example, [**BoxViewClock**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock). You can only add WPF apps to a Xamarin.Forms solution in Windows.
 
 ## Add a WPF project to a Xamarin.Forms app with Xamarin.University
@@ -30,7 +33,7 @@ Follow these instructions to add a WPF app that will run on the Windows 7, 8, an
 
 1. In Visual Studio 2019, right-click on the solution name in the **Solution Explorer** and choose **Add > New Project...**.
 
-2. In the **New Project** window, at the left select **Visual C#** and **Windows Classic Desktop**. In the list of project types, choose **WPF App (.NET Framework)**. 
+2. In the **New Project** window, at the left select **Visual C#** and **Windows Classic Desktop**. In the list of project types, choose **WPF App (.NET Framework)**.
 
 3. Type a name for the project with a **WPF** extension, for example, **BoxViewClock.WPF**. Click the **Browse** button, select the **BoxViewClock** folder, and press **Select Folder**. This will put the WPF project in the same directory as the other projects in the solution.
 
@@ -48,7 +51,7 @@ Follow these instructions to add a WPF app that will run on the Windows 7, 8, an
 
 6. Right click the solution name in the **Solution Explorer** and select **Manage NuGet Packages for Solution**. Select the **Update** tab and the **Xamarin.Forms** package. Select all the projects and update them to the same Xamarin.Forms version:
 
-    ![Update the NuGet package](wpf-images/update-nuget-package.png "Update the NuGet package") 
+    ![Update the NuGet package](wpf-images/update-nuget-package.png "Update the NuGet package")
 
 7. In the WPF project, right-click on **References**. In the **Reference Manager** dialog, select **Projects** at the left, and check the checkbox adjacent to the **BoxViewClock** project:
 
@@ -73,7 +76,7 @@ Follow these instructions to add a WPF app that will run on the Windows 7, 8, an
             mc:Ignorable="d"
             Title="BoxViewClock" Height="450" Width="800">
         <Grid>
-        
+
         </Grid>
     </wpf:FormsApplicationPage>
     ```
@@ -91,7 +94,7 @@ Follow these instructions to add a WPF app that will run on the Windows 7, 8, an
     Forms.Init();
     LoadApplication(new BoxViewClock.App());
     ```
-    
+
     Except for comments and unused `using` directives, the complete **MainWindows.xaml.cs** file should look like this:
 
     ```csharp
@@ -147,4 +150,3 @@ Title="BoxViewClock" Height="450" Width="800"
 ## Issues
 
 This is a Preview, so you should expect that not everything is production ready. Not all NuGet packages for Xamarin.Forms are ready for WPF, and some features might not be fully working.
-

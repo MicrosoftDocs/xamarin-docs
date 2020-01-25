@@ -253,7 +253,6 @@ For more information about data binding, see [Data Binding Basics](~/xamarin-for
 
 This article demonstrated how to navigate to modal pages. A modal page encourages users to complete a self-contained task that cannot be navigated away from until the task is completed or cancelled.
 
-
 ## Related Links
 
 - [Page Navigation](https://developer.xamarin.com/r/xamarin-forms/book/chapter24.pdf)

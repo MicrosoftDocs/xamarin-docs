@@ -4,7 +4,7 @@ description: "Xamarin.Essentials provides a single cross-platform API that works
 ms.assetid: 63FA28A5-6F52-4CB7-AF39-8DF7B436B5A4
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 07/10/2019
+ms.date: 08/20/2019
 ---
 
 # Platform Support
@@ -20,55 +20,53 @@ Xamarin.Essentials supports the following platforms and operating systems:
 | watchOS | 4.0 or higher |
 | UWP | 10.0.16299.0 or higher |
 
-**Note:**
-
-* Tizen is officially supported by the Samsung development team.
-* tvOS & watchOS have limited API coverage, please see the feature guide for more information.
-* Tizen, tvOS, & watchOS are currently in preview and available in Xamarin.Essentials 1.3-pre
+> [!NOTE]
+>
+> * Tizen is officially supported by the Samsung development team.
+> * tvOS & watchOS have limited API coverage, please see the feature guide for more information.
 
 ## Feature Support
 
-Xamarin.Essentials always tries to bring features to every platform, however sometimes there are limitations based on the device. Below is a a guide of what features are supported on each platform.
+Xamarin.Essentials always tries to bring features to every platform, however sometimes there are limitations based on the device. Below is a guide of what features are supported on each platform.
 
 Icon Guide:
 
-* ✔ - Full supported
-* ⚠ - Limited supported
-* ❌ - Not supported
+* ![Full Support](~/media/shared/yes.png "Full Support") - Full support
+* ![Limited Support](~/media/shared/warn.png "Limited Support") - Limited support
+* ![Not Supported](~/media/shared/no.png "Not supported") - Not supported
 
 | Feature | Android | iOS | UWP | watchOS | tvOS | Tizen |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [App Information](app-information.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Barometer](barometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [Battery](battery.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ⚠ | ⚠ |
-| [Clipboard](clipboard.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
-| [Color Converters](color-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Compass](compass.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Connectivity](connectivity.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Detect Shake](detect-shake.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Device Display Information](device-display.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
-| [Device Information](device-information.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Email](email.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [File System Helpers](file-system-helpers.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Flashlight](flashlight.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Geocoding](geocoding.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Geolocation](geolocation.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Gyroscope](gyroscope.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [Launcher](launcher.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Magnetometer](magnetometer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [MainThread](main-thread.md?content=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Maps](maps.md?content=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [Open Browser](open-browser.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Orientation Sensor](orientation-sensor.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| [Phone Dialer](phone-dialer.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Platform Extensions](platform-extensions.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Preferences](preferences.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Secure Storage](secure-storage.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Share](share.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [SMS](sms.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| [Text-to-Speech](text-to-speech.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Unit Converters](unit-converters.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Version Tracking](version-tracking.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| [Vibrate](vibrate.md?context=xamarin/xamarin-forms) | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-
+| [Accelerometer](accelerometer.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [App Information](app-information.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Barometer](barometer.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Battery](battery.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS limited support](~/media/shared/warn.png "tvOS limited support") | ![Tizen limited support](~/media/shared/warn.png "Tizen limited support") | 
+| [Clipboard](clipboard.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen not supported](~/media/shared/no.png "Tizen not supported") | 
+| [Color Converters](color-converters.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Compass](compass.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Connectivity](connectivity.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Detect Shake](detect-shake.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Device Display Information](device-display.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen not supported](~/media/shared/no.png "Tizen not supported") | 
+| [Device Information](device-information.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Email](email.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [File System Helpers](file-system-helpers.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Flashlight](flashlight.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Geocoding](geocoding.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Geolocation](geolocation.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Gyroscope](gyroscope.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Launcher](launcher.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Magnetometer](magnetometer.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [MainThread](main-thread.md?content=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Maps](maps.md?content=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Open Browser](open-browser.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Orientation Sensor](orientation-sensor.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Phone Dialer](phone-dialer.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Platform Extensions](platform-extensions.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Preferences](preferences.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Secure Storage](secure-storage.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Share](share.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [SMS](sms.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Text-to-Speech](text-to-speech.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Unit Converters](unit-converters.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Version Tracking](version-tracking.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS supported](~/media/shared/yes.png "watchOS supported") | ![tvOS supported](~/media/shared/yes.png "tvOS supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") | 
+| [Vibrate](vibrate.md?context=xamarin/xamarin-forms) | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ![UWP supported](~/media/shared/yes.png "UWP supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen supported](~/media/shared/yes.png "Tizen supported") |

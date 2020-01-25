@@ -4,8 +4,8 @@ description: "This document describes where to look to find Xamarin version info
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: CF386485-EAB0-4B9E-AA17-CB1B6462E505
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -14,26 +14,26 @@ ms.date: 03/29/2017
 ## Outline
 
 - [Version information](#version-information)
-    - Windows version information
-    - Mac version information
-    - Android SDK Tools, Platform-tools, Build-tools
+  - Windows version information
+  - Mac version information
+  - Android SDK Tools, Platform-tools, Build-tools
 - [IDE and installer logs](#ide-and-installer-logs)
-    - [Windows logs](#windows-logs)
-        - Xamarin Studio
-        - Xamarin for Visual Studio
-        - Xamarin Universal installer
-        - Individual `.msi` installers, verbose logs
-        - Visual Studio startup, verbose logs
-    - [Mac logs](#mac-logs)
-        - Build host
-    - Visual Studio for Mac
-        - Xamarin Studio
-        - Xamarin installer
+  - [Windows logs](#windows-logs)
+    - Xamarin Studio
+    - Xamarin for Visual Studio
+    - Xamarin Universal installer
+    - Individual `.msi` installers, verbose logs
+    - Visual Studio startup, verbose logs
+  - [Mac logs](#mac-logs)
+    - Build host
+  - Visual Studio for Mac
+    - Xamarin Studio
+    - Xamarin installer
 - [Verbose build output](#verbose-build-output-logs)
 - [Debug logs for Xamarin.Android and Xamarin.iOS apps](#debug-logs-for-xamarin-apps)
-    - Android `adb` logcat logs
-    - iOS simulator logs (on Mac)
-    - iOS device logs (on Mac)
+  - Android `adb` logcat logs
+  - iOS simulator logs (on Mac)
+  - iOS device logs (on Mac)
 
 ## <a id="version-information" name="version-information" />Version information
 
@@ -133,13 +133,13 @@ These are the logs from the `XamarinInstaller.dmg` installer.
 
 ## <a id="verbose-build-output-logs" name="verbose-build-output-logs" />Verbose build output
 
-1.  Enable [diagnostic MSBuild output](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output).
+1. Enable [diagnostic MSBuild output](~/android/troubleshooting/troubleshooting.md#Diagnostic_MSBuild_Output).
 
-2.  For iOS apps, also enable **verbose mtouch output** by adding `-v -v -v -v` under **Project Properties > iOS Build > General (tab) > Additional Options > Additional mtouch arguments**.
+2. For iOS apps, also enable **verbose mtouch output** by adding `-v -v -v -v` under **Project Properties > iOS Build > General (tab) > Additional Options > Additional mtouch arguments**.
 
-3.  Clean and rebuild the project.
+3. Clean and rebuild the project.
 
-4.  Copy and paste the build output from the IDE into a text file.
+4. Copy and paste the build output from the IDE into a text file.
      - Visual Studio (Windows): **View > Output > Show output from: Build**
      - Visual Studio for Mac: **View > Pads > Errors > Build Output (tab)**
 
@@ -177,9 +177,9 @@ See also the [Android Debug Log](~/android/deploy-test/debugging/android-debug-l
 
 ### <a id="ios-simulator-logs" name="ios-simulator-logs" />iOS simulator logs (on Mac)
 
-* To access the system log, select **Debug > Open System Log...** in the iOS Simulator app.
+- To access the system log, select **Debug > Open System Log...** in the iOS Simulator app.
 
-* To view crash reports from the simulator, open Console.app and navigate to `~/Library/Logs > DiagnosticReports`.
+- To view crash reports from the simulator, open Console.app and navigate to `~/Library/Logs > DiagnosticReports`.
 
 ### <a id="ios-device-logs" name="ios-device-logs" />iOS device logs (on Mac)
 

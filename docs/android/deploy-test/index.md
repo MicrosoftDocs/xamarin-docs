@@ -4,8 +4,8 @@ description: "This section includes guides that explain how to test an applicati
 ms.prod: xamarin
 ms.assetid: 568C0B85-EFF3-AF6F-5605-95055193D367
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 
@@ -14,7 +14,6 @@ ms.date: 04/25/2018
 This section includes guides that explain how to test an application,
 optimize its performance, prepare it for release, sign it with a
 certificate, and publish it to an app store.
-
 
 ## [Application Package Sizes](app-package-size.md)
 
@@ -77,7 +76,6 @@ amount of memory consumed by an application.
 
 This guide explains how to use profiler tools to examine the
 performance and memory usage of an Android app.
-
 
 ## [Preparing an Application for Release](~/android/deploy-test/release-prep/index.md)
 

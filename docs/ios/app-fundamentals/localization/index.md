@@ -4,8 +4,8 @@ description: "This document describes iOS localization features and how to use t
 ms.prod: xamarin
 ms.assetid: DFD9EB4A-E536-18E4-C8FD-679BA9C836D8
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/28/2017
 ---
 
@@ -186,7 +186,7 @@ There can be a number of different **.strings** files in each language directory
 - **Localizable.strings** – the main list of localized text.
 - **InfoPlist.strings** – certain specific keys are allowed in this file to
   translate things such as the application name.
-- **<storyboard-name>.strings** – optional file that contains translations
+- **\<storyboard-name>.strings** – optional file that contains translations
   for user interface elements in a storyboard.
 
 The **Build Action** for these files should be **Bundle Resource**.
@@ -202,9 +202,9 @@ The syntax for localized string values is:
 
 You should escape the following characters in strings:
 
-* `\"` quote
-* `\\` backslash
-* `\n` newline
+- `\"` quote
+- `\\` backslash
+- `\n` newline
 
 This is an example **es/Localizable.strings** (ie. Spanish) file from the sample:
 

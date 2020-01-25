@@ -26,10 +26,9 @@ This is most commonly resolved by increasing the Java Heap Size for your Xamarin
 
 ## Visual Studio for Mac
 
-1.  Right-click the Android project & open the project options.
-2.  Go to **Build -> Android Build -> Advanced**
-3.  In the Java heap size text box enter 1G.
-4.  Rebuild the project.  
+1. Right-click the Android project & open the project options.
+2. Go to **Build -> Android Build -> Advanced**
+3. In the Java heap size text box enter 1G.
+4. Rebuild the project.  
 
 ![Screenshot of the Visual Studio for Mac Project Options](maps-compiletodalvik-error-images/xsjavaheap.png "Android Build Options in Visual Studio for Mac")
-

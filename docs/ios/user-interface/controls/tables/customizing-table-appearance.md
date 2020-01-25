@@ -4,8 +4,8 @@ description: "This document describes how to customize a table's appearance in X
 ms.prod: xamarin
 ms.assetid: 8A83DE38-0028-CB61-66F9-0FB9DE552286
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -19,11 +19,10 @@ the `UITableViewSource`’s `GetCell` method.
 
 There are four built-in styles:
 
--  **Default** – supports a `UIImageView`.
--  **Subtitle** – supports a `UIImageView` and subtitle.
--  **Value1** – right aligned subtitle, supports a `UIImageView`.
--  **Value2** – title is right-aligned and subtitle is left-aligned (but no image).
-
+- **Default** – supports a `UIImageView`.
+- **Subtitle** – supports a `UIImageView` and subtitle.
+- **Value1** – right aligned subtitle, supports a `UIImageView`.
+- **Value2** – title is right-aligned and subtitle is left-aligned (but no image).
 
 These screenshots show how each style appears:
 
@@ -52,11 +51,10 @@ cell.ImageView.Image = UIImage.FromFile("Images/" + tableItems[indexPath.Row].Im
 
 Cells can have the following accessories added to the right of the view:
 
--   **Checkmark** – can be used to indicate multiple-selection in a table.
--   **DetailButton** – responds to touch independently of the rest of the cell, allowing it to perform a different function to touching the cell itself (such as opening a popup or new window that is not part of a `UINavigationController` stack).
--   **DisclosureIndicator** – normally used to indicate that touching the cell will open another view.
--   **DetailDisclosureButton** – a combination of the `DetailButton` and `DisclosureIndicator`.
-
+- **Checkmark** – can be used to indicate multiple-selection in a table.
+- **DetailButton** – responds to touch independently of the rest of the cell, allowing it to perform a different function to touching the cell itself (such as opening a popup or new window that is not part of a `UINavigationController` stack).
+- **DisclosureIndicator** – normally used to indicate that touching the cell will open another view.
+- **DetailDisclosureButton** – a combination of the `DetailButton` and `DisclosureIndicator`.
 
 This is what they look like:
 
@@ -128,10 +126,9 @@ subclass that defines a custom layout of `UILabel`s and a `UIImage` with differe
 
 The custom cell class consists of only three methods:
 
--   **Constructor** – creates the UI controls and sets the custom style properties (eg. font face, size and colors).
--   **UpdateCell** – a method for  `UITableView.GetCell` to use to set the cell’s properties.
--   **LayoutSubviews** – set the location of the UI controls. In the example every cell has the same layout, but a more complex cell (particularly those with varying sizes) might need different layout positions depending on the content being displayed.
-
+- **Constructor** – creates the UI controls and sets the custom style properties (eg. font face, size and colors).
+- **UpdateCell** – a method for  `UITableView.GetCell` to use to set the cell’s properties.
+- **LayoutSubviews** – set the location of the UI controls. In the example every cell has the same layout, but a more complex cell (particularly those with varying sizes) might need different layout positions depending on the content being displayed.
 
 The complete sample code in **CellCustomTable > CustomVegeCell.cs** follows:
 
@@ -189,8 +186,6 @@ public override UITableViewCell GetCell (UITableView tableView, NSIndexPath inde
     return cell;
 }
 ```
-
-
 
 ## Related Links
 

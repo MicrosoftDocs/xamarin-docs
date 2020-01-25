@@ -4,8 +4,8 @@ description: "This document describes how to use the debugger in Visual Studio f
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -14,11 +14,10 @@ ms.date: 03/19/2017
 _Xamarin.iOS applications can be debugged with the built-in debugger in Visual Studio for Mac or Visual Studio._
 
 Use Visual Studio for Mac's native debugging support for debugging C# and other managed
-languages code and use [LLDB](http://lldb.llvm.org/tutorial.html) when you need to debug C, C++ or Objective C codethat you might be linking with your Xamarin.iOS project.
-
+languages code and use [LLDB](https://lldb.llvm.org/tutorial.html) when you need to debug C, C++ or Objective C codethat you might be linking with your Xamarin.iOS project.
 
 > [!NOTE]
-> When you compile applications in Debug mode, Xamarin.iOS will generate 
+> When you compile applications in Debug mode, Xamarin.iOS will generate
 > slower and much larger applications as every line of code must be
 > instrumented. Before releasing, make sure that you do a Release build.
 
@@ -52,13 +51,13 @@ You can view all the breakpoints that have been set in your code by going to the
 [![](debugging-in-xamarin-ios-images/image0a.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0a.png#lightbox)
 
  If the Breakpoints pad does not display automatically, you can make it visible by selecting _View > Debug Windows > Breakpoints_
- 
+
 # [Visual Studio](#tab/windows)
 
 [![](debugging-in-xamarin-ios-images/image0.png "The Breakpoints pad")](debugging-in-xamarin-ios-images/image0.png#lightbox)
 
  If the Breakpoints pad does not display automatically, you can make it visible by selecting _Debug > Windows > Breakpoints_
- 
+
 -----
 
 Before you begin debugging any application, always ensure that the configuration is set to **Debug**, as this contains a helpful set of tools to support debugging such as breakpoints, using data visualizers, and viewing the call stack:
@@ -88,8 +87,6 @@ To start debugging, select the target device or similar in your IDE:
 
 -----
 
-
-
 Then deploy your application by pressing the  **Play** button.
 
 When you hit a breakpoint, the code will be highlighted yellow:
@@ -108,15 +105,13 @@ You can also set rules dictating the circumstances under which a breakpoint shou
 
 To set a conditional breakpoint, access the  **Breakpoint Properties window**, which can be done in two ways:
 
-
 - To add a new conditional breakpoint, right-click on the editor margin, to the left of the line number for the code you wish to set a breakpoint on, and select New Breakpoint:
 
-	[![](debugging-in-xamarin-ios-images/image4.png "Select New Breakpoint")](debugging-in-xamarin-ios-images/image4.png#lightbox)
+  [![](debugging-in-xamarin-ios-images/image4.png "Select New Breakpoint")](debugging-in-xamarin-ios-images/image4.png#lightbox)
 
 - To add a condition to an existing breakpoint, right-click on the breakpoint and select  **Breakpoint Properties** or in the  **Breakpoints Pad** select the properties button illustrated below:
 
-	[![](debugging-in-xamarin-ios-images/image5.png "The Breakpoints Pad")](debugging-in-xamarin-ios-images/image5.png#lightbox)
-
+  [![](debugging-in-xamarin-ios-images/image5.png "The Breakpoints Pad")](debugging-in-xamarin-ios-images/image5.png#lightbox)
 
 You can then enter the condition under which you want to breakpoint to occur:
 
@@ -223,16 +218,14 @@ support debugging.
 
 <a name="Accessing_the_Console" />
 
-
 ## Accessing the Console
 
 Crash logs and the output of the Console class will be sent to the iPhone
 console. You can access this console with Xcode using the "Organizer" and
 selecting your device from the organizer.
 
-Alternatively, if you do not want to start up Xcode, you can use the Apple's [iPhone Configuration Utility](http://www.apple.com/support/iphone/enterprise/) to directly access the console. This
-has the added bonus that you can access the console logs from a Windows machine
-if you are debugging a problem in the field.
+Alternatively, if you do not want to start up Xcode, you can use the Apple's iPhone Configuration Utility to directly access the console. This
+has the added bonus that you can access the console logs from a Windows machine if you are debugging a problem in the field.
 
 For Visual Studio users, there are a few logs available in the Output window, but you
 should switch over to your Mac for more thorough and detailed logs.
@@ -240,7 +233,6 @@ should switch over to your Mac for more thorough and detailed logs.
 -----
 
 <a name="Debugging_Mono's_Class_Libraries" />
-
 
 ## Debugging Mono's Class Libraries
 
@@ -252,7 +244,6 @@ the hood.
 
 Since this feature consumes more memory during debugging, this is turned off
 by default.
-
 
 To enable this feature, make sure the **Debug project code only; do not step into framework code** option is deselected under the _Visual Studio for Mac > Preferences > Debugger_ menu as illustrated below:
 
@@ -268,7 +259,6 @@ To debug the class libraries in Visual Studio, you must disable **Just My Code**
 
 Once you do this, you can start your application and single step into any of
 Mono's core class libraries.
-
 
 ## Related Links
 

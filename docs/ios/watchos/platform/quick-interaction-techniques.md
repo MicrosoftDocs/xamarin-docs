@@ -4,8 +4,8 @@ description: "This article covers the quick interaction techniques Apple has add
 ms.prod: xamarin
 ms.assetid: 26697F68-AF7E-4A36-988F-85E2674A4DD1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -42,12 +42,12 @@ Because of the glanceable nature of Apple Watch apps, Apple suggests that the id
 Apple has added several new features and APIs to WatchKit to assist the developer in adding quick interactions to their Apple Watch apps:
 
 - watchOS 3 provides access to new kinds of user input such as:
-	- Gesture Recognizers
-	- Digital Crown rotation 
+  - Gesture Recognizers
+  - Digital Crown rotation 
 - watchOS 3 provides new ways of displaying and updating information, such as:
-	- Enhanced Table navigation
-	- New User Notification framework support
-	- SpriteKit and SceneKit integration
+  - Enhanced Table navigation
+  - New User Notification framework support
+  - SpriteKit and SceneKit integration
 
 By implementing these new features, the developer can ensure that their watchOS 3 app is Glanceable, Actionable and Responsive.
 
@@ -58,11 +58,11 @@ If the developer has implemented Gesture Recognizers in iOS, they should be very
 watchOS 3 will support the four following Gesture Recognizers:
 
 - Discrete gestures types:
-	- The Swipe Gesture (`WKSwipeGestureRecognizer`).
-	- The Tap Gesture (`WKTapGestureRecognizer`).
+  - The Swipe Gesture (`WKSwipeGestureRecognizer`).
+  - The Tap Gesture (`WKTapGestureRecognizer`).
 - Continuous gesture types:
-	- The Pan Gesture (`WKPanGestureRecognizer`).
-	- The Long-Press Gesture (`WKLongPressGestureRecognizer`).
+  - The Pan Gesture (`WKPanGestureRecognizer`).
+  - The Long-Press Gesture (`WKLongPressGestureRecognizer`).
 
 To implement one of the new Gesture Recognizers, simply drag it onto a design surface in the iOS Designer in Visual Studio for Mac and configure its properties.
 
@@ -91,9 +91,9 @@ Apple suggest the following when working with Gesture Recognizers in watchOS 3:
 - Add the Gesture Recognizers to Group Elements instead of individual Controls. Since the Apple Watch has a smaller physical screen size, Group Elements tend to be bigger and easier targets for the user to hit. Also, the Gesture Recognizers can conflict with built in gestures already in the native UI Controls.
 - Set dependency relationships in the watch app's Storyboard.
 - Some gesture take precedence over other gesture types, such as:
-	- Scrolling
-	- Force Touch
- 
+  - Scrolling
+  - Force Touch
+
 ### Digital Crown Rotation
 
 By implementing Digital Crown Support in their watchOS 3 apps, a developer can provide increased navigation speed and precision interactions for their users.
@@ -132,28 +132,28 @@ using Foundation;
 
 namespace MonkeyWatch.MonkeySeeExtension
 {
-	public class CrownDelegate : WKCrownDelegate
-	{
-		#region Computed Properties
-		public double AccumulatedRotations { get; set;}
-		#endregion
+  public class CrownDelegate : WKCrownDelegate
+  {
+    #region Computed Properties
+    public double AccumulatedRotations { get; set;}
+    #endregion
 
-		#region Constructors
-		public CrownDelegate ()
-		{
-		}
-		#endregion
+    #region Constructors
+    public CrownDelegate ()
+    {
+    }
+    #endregion
 
-		#region Override Methods
-		public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
-		{
-			base.CrownDidRotate (crownSequencer, rotationalDelta);
+    #region Override Methods
+    public override void CrownDidRotate (WKCrownSequencer crownSequencer, double rotationalDelta)
+    {
+      base.CrownDidRotate (crownSequencer, rotationalDelta);
 
-			// Accumulate rotations
-			AccumulatedRotations += rotationalDelta;
-		}
-		#endregion
-	}
+      // Accumulate rotations
+      AccumulatedRotations += rotationalDelta;
+    }
+    #endregion
+  }
 }
 ```
 
@@ -164,7 +164,6 @@ Apple has left it up to the developer to determine how the rotation counts corre
 The sign (`+/-`) of the Rotational Delta indicates the direction that the user is turning the Digital Crown:
 
 [![](quick-interaction-techniques-images/quick03.png "The sign of the Rotational Delta indicates the direction that the user is turning the Digital Crown")](quick-interaction-techniques-images/quick03.png#lightbox)
-
 
 If the user is scrolling up, WatchKit will return positive deltas and if scrolling down, then negative deltas will be returned, no matter what orientation the user is wearing the watch in.
 
@@ -220,21 +219,21 @@ There are several ways that a user may respond to the Notification:
 - For a well defined and presented Notification, the user will do nothing and simply dismiss the Notification.
 - They might also tap of the Notification to launch the watchOS app.
 - For a Notification that supports Custom Actions, the user might select one of the custom actions. These can either be:
-	- **Foreground Actions** - These launch the app to perform the action.
-	- **Background Actions** - Were always routed to the iPhone in watchOS 2 but can be routed to the watchApp in watchOS 3.
+  - **Foreground Actions** - These launch the app to perform the action.
+  - **Background Actions** - Were always routed to the iPhone in watchOS 2 but can be routed to the watchApp in watchOS 3.
 
 New for watchOS 3:
 
-* Notification use a similar API across all platforms (iOS, watchOS, tvOS and macOS).
-* Local Notification can be scheduled on the Apple Watch.
-* Background Notification will be routed to the app's Extension if they were scheduled on the Apple Watch.
+- Notification use a similar API across all platforms (iOS, watchOS, tvOS and macOS).
+- Local Notification can be scheduled on the Apple Watch.
+- Background Notification will be routed to the app's Extension if they were scheduled on the Apple Watch.
 
 #### Notification Scheduling and Delivery
 
 Notification from the user's iPhone will be forward to the Apple Watch when the following occurs:
 
-* The iPhone's screen is off.
-* The Apple Watch is being worn and has been unlocked.
+- The iPhone's screen is off.
+- The Apple Watch is being worn and has been unlocked.
 
 In watchOS 3, Local Notifications can be scheduled on the Apple Watch and are only delivered on the watch. It is up the developer to schedule a corresponding iPhone Notification if it is required by the app.
 

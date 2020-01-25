@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: F136AAE0-C6D2-4B0F-8F8C-7A6A94877266
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/30/2018
 ---
 
@@ -23,7 +23,7 @@ Install the latest tools from the Tools folder in the SDK manager:
 
 ## Android Platform(s)
 
-Install the "SDK Platform" for the Android versions you've set as minimum & target. 
+Install the "SDK Platform" for the Android versions you've set as minimum & target.
 
 Examples:
 
@@ -47,8 +47,3 @@ emulators from Google. For more information, see
 
 ## Extras
 The Android SDK Extras are usually not required; but it is useful to be aware of them since they may be required depending on your use case.
-
-## Further Reading
-The following guide covers these options and goes into more detail about the different packages the SDK manager has avaliable:
-[Android SDK Manager Setup Guide](http://www.themethodology.net/2015/02/android-sdk-manager-setup-for.html?m=1)
-

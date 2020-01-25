@@ -3,8 +3,8 @@ title: "Binding types reference guide"
 description: "This reference guide describes various attributes and concepts that are necessary to understand when creating C# bindings to Objective-C libraries."
 ms.prod: xamarin
 ms.assetid: C6618E9D-07FA-4C84-D014-10DAC989E48D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/06/2018
 ---
 
@@ -62,7 +62,6 @@ interface UITextField : UITextInput {
 You can control many other aspects of the code generation by applying other
 attributes to the interface as well as configuring the [`[BaseType]`](#BaseTypeAttribute) 
 attribute.
-
 
 ### Generating events
 
@@ -271,7 +270,6 @@ public interface UIAccelerometerDelegate {
 }
 ```
 
-
 #### BaseType.KeepRefUntil
 
 If you apply this attribute when new instances of this class are created, the
@@ -302,6 +300,15 @@ public interface UIActionSheetDelegate {
 }
 ```
 
+<a name="DesignatedDefaultCtorAttribute" />
+
+### DesignatedDefaultCtorAttribute
+
+When this attribute is applied to the interface definition it will generate
+a `[DesignatedInitializer]` attribute on the default (generated) constructor,
+which maps to the `init` selector.
+
+<a name="DisableDefaultCtorAttribute" />
 
 ### DisableDefaultCtorAttribute
 
@@ -311,6 +318,7 @@ the generator from producing the default constructor.
 Use this attribute when you need the object to be initialized with one of the
 other constructors in the class.
 
+<a name="PrivateDefaultCtorAttribute" />
 
 ### PrivateDefaultCtorAttribute
 
@@ -384,10 +392,10 @@ This will lead to an **incorrect** Category C# interface definition:
 [BaseType (typeof (FooObject))]
 interface FooObject_Extensions {
 
-	// Incorrect Interface definition
-	[Static]
-	[Export ("boolMethod:")]
-	bool BoolMethod (NSRange range);
+    // Incorrect Interface definition
+    [Static]
+    [Export ("boolMethod:")]
+    bool BoolMethod (NSRange range);
 }
 ```
 
@@ -405,9 +413,9 @@ The recommendation to avoid this is to inline the `BoolMethod` definition inside
 [BaseType (typeof (NSObject))]
 interface FooObject {
 
-	[Static]
-	[Export ("boolMethod:")]
-	bool BoolMethod (NSRange range);
+    [Static]
+    [Export ("boolMethod:")]
+    bool BoolMethod (NSRange range);
 }
 ```
 
@@ -663,7 +671,6 @@ It then exposes the following in the `UIImagePickerController` class:
 public event EventHandler<UIImagePickerImagePickedEventArgs> FinishedPickingImage { add; remove; }
 ```
 
-
 ### EventNameAttribute
 
 This attribute is used to allow the generator to change the name of an event
@@ -871,12 +878,10 @@ interface Robot : SpeakProtocol {
 }
 ```
 
-
 ## Member definitions
 
 The attributes in this section are applied to individual members of a type:
 properties and method declarations.
-
 
 ### AlignAttribute
 
@@ -895,7 +900,6 @@ public interface GLKBaseEffect {
     Vector4 ConstantColor { [Align (16)] get; set;  }
 }
 ```
-
 
 ### AppearanceAttribute
 
@@ -979,9 +983,9 @@ To comply with the header description and avoid the `InvalidCastException`, the
 [BaseType (typeof (NSObject), Name="NSURLSession")]
 interface NSUrlSession {
 
-	[Export ("downloadTaskWithRequest:")]
-	[return: ForcedType]
-	NSUrlSessionDownloadTask CreateDownloadTask (NSUrlRequest request);
+    [Export ("downloadTaskWithRequest:")]
+    [return: ForcedType]
+    NSUrlSessionDownloadTask CreateDownloadTask (NSUrlRequest request);
 }
 ```
 
@@ -1237,6 +1241,18 @@ Use this property to customize the name of the generated
 async methods.   The default is to use the name of the method
 and append the text "Async", you can use this to change this default.
 
+<a name="DesignatedInitializerAttribute" />
+
+### DesignatedInitializerAttribute
+
+When this attribute is applied to a constructor it will generate the same
+`[DesignatedInitializer]` in the final platform assembly. This is to help
+the IDE indicate which constructor should be used in subclasses.
+
+This should map to Objective-C/clang use of `__attribute__((objc_designated_initializer))`.
+
+<a name="DisableZeroCopyAttribute" />
+
 ### DisableZeroCopyAttribute
 
 This attribute is applied to string parameters or string properties and
@@ -1262,6 +1278,7 @@ The following shows two such properties in Objective-C:
 @property(nonatomic,assign) NSString *name2;
 ```
 
+<a name="DisposeAttribute" />
 
 ### DisposeAttribute
 
@@ -1429,7 +1446,6 @@ Currently only a few `objc_msgSend` signatures are supported (you will find out
 if a signature isn't supported when native linking of an app that uses the
 binding fails with a missing monotouch_*_objc_msgSend* symbol), but more can be
 added at request.
-
 
 ### NewAttribute
 
@@ -1740,7 +1756,6 @@ Additionally this attribute is propagated to the generated code, so that
 the Xamarin.iOS runtime knows it must retain the object upon returning to
 Objective-C from such a function.
 
-
 ### SealedAttribute
 
 Instructs the generator to flag the generated method as sealed. If this
@@ -1755,7 +1770,6 @@ attributes are used).
 When the `[Static]` attribute is applied to a method or property, this generates a
 static method or property. If this attribute is not specified, then the
 generator produces an instance method or property.
-
 
 ### TransientAttribute
 
@@ -1847,16 +1861,59 @@ interface XyzPanel {
 }
 ```
 
+When the `[Wrap]` attribute is applied on a method inside a type decorated
+with a `[Category]` attribute, you need to include `This` as
+the first argument since an extension method is being generated. For example:
+
+```csharp
+[Wrap ("Write (This, image, options?.Dictionary, out error)")]
+bool Write (CIImage image, CIImageRepresentationOptions options, out NSError error);
+```
+
 The members generated by `[Wrap]` are not `virtual` by default, if you need a `virtual` member you can set to `true` the optional `isVirtual` parameter.
 
 ```csharp
 [BaseType (typeof (NSObject))]
 interface FooExplorer {
-	[Export ("fooWithContentsOfURL:")]
-	void FromUrl (NSUrl url);
+    [Export ("fooWithContentsOfURL:")]
+    void FromUrl (NSUrl url);
 
-	[Wrap ("FromUrl (NSUrl.FromString (url))", isVirtual: true)]
-	void FromUrl (string url);
+    [Wrap ("FromUrl (NSUrl.FromString (url))", isVirtual: true)]
+    void FromUrl (string url);
+}
+```
+
+`[Wrap]` can also be used directly in property getters and setters.
+This allows to have full control on them and adjust the code as needed.
+For example, consider the following API definition that uses smart enums:
+
+```csharp
+// Smart enum.
+enum PersonRelationship {
+        [Field (null)]
+        None,
+
+        [Field ("FMFather", "__Internal")]
+        Father,
+
+        [Field ("FMMother", "__Internal")]
+        Mother
+}
+```
+
+Interface definition:
+
+```csharp
+// Property definition.
+
+[Export ("presenceType")]
+NSString _PresenceType { get; set; }
+
+PersonRelationship PresenceType {
+    [Wrap ("PersonRelationshipExtensions.GetValue (_PresenceType)")]
+    get;
+    [Wrap ("_PresenceType = value.GetConstant ()")]
+    set;
 }
 ```
 
@@ -1977,7 +2034,6 @@ public class RetainAttribute {
 }
 ```
 
-
 ### RetainListAttribute
 
 Instructs the generator to keep a managed reference to the parameter or
@@ -1998,7 +2054,6 @@ If the value of `doAdd` is true, then the parameter is added to the
 class to the API.
 
 For an example see [foundation.cs](https://github.com/mono/maccore/blob/master/src/foundation.cs) and [NSNotificationCenter.cs](https://github.com/mono/maccore/blob/master/src/Foundation/NSNotificationCenter.cs)
-
 
 ### TransientAttribute
 
@@ -2034,7 +2089,6 @@ If the object passed was not created, or if there was
 already an outstanding managed representation of the object,
 the forced dispose does not take place. 
 
-
 ## Property attributes
 
 <a name="NotImplementedAttribute" />
@@ -2064,7 +2118,7 @@ interface MyString {
     string Value {
         get;
 
-	[NotImplemented ("Not available on MyString, use MyMutableString to set")]
+    [NotImplemented ("Not available on MyString, use MyMutableString to set")]
         set;
     }
 }
@@ -2093,15 +2147,15 @@ Example:
 ```csharp
 enum NSRunLoopMode {
 
-	[DefaultEnumValue]
-	[Field ("NSDefaultRunLoopMode")]
-	Default,
+    [DefaultEnumValue]
+    [Field ("NSDefaultRunLoopMode")]
+    Default,
 
-	[Field ("NSRunLoopCommonModes")]
-	Common,
+    [Field ("NSRunLoopCommonModes")]
+    Common,
 
-	[Field (null)]
-	Other = 1000
+    [Field (null)]
+    Other = 1000
 }
 ```
 
@@ -2148,13 +2202,13 @@ You can use this attribute to associate the error domain with the enum itself.
 Example:
 
 ```csharp
-	[Native]
-	[ErrorDomain ("AVKitErrorDomain")]
-	public enum AVKitError : nint {
-		None = 0,
-		Unknown = -1000,
-		PictureInPictureStartFailed = -1001
-	}
+[Native]
+[ErrorDomain ("AVKitErrorDomain")]
+public enum AVKitError : nint {
+    None = 0,
+    Unknown = -1000,
+    PictureInPictureStartFailed = -1001
+}
 ```
 
 You can then call the extension method `GetDomain` to get the domain constant of
@@ -2400,6 +2454,14 @@ better API.
 
 The information from this attribute is shown in the documentation
 and tools can be developed to give user suggestions on how to improve
+
+### RequiresSuperAttribute
+
+This is a specialized subclass of the `[Advice]` attribute that can be used
+to hint to the developer that overriding a method **requires** a call to 
+the base (overridden) method.
+
+This corresponds to `clang` [`__attribute__((objc_requires_super))`](https://clang.llvm.org/docs/AttributeReference.html#objc-requires-super)
 
 ### ZeroCopyStringsAttribute
 

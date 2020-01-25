@@ -4,8 +4,8 @@ description: "This article covers the major new APIs introduced in iOS 7, includ
 ms.prod: xamarin
 ms.assetid: 2C33018F-D64A-4BAA-A34E-082EF311D162
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -23,23 +23,22 @@ iOS 7 augments the animation support in UIKit, allowing applications to do thing
 
  `UIView` now supports animating property changes with a spring effect. To add this, call either the `AnimateNotify` or `AnimateNotifyAsync` method, passing in values for the spring damping ratio and the initial spring velocity, as described below:
 
--  `springWithDampingRatio` – A value between 0 and 1, where the oscillation increases for smaller value.
--  `initialSpringVelocity` – The initial spring velocity as a percentage of the total animation distance per second.
-
+- `springWithDampingRatio` – A value between 0 and 1, where the oscillation increases for smaller value.
+- `initialSpringVelocity` – The initial spring velocity as a percentage of the total animation distance per second.
 
 The following code produces a spring effect when the image view’s center changes:
 
 ```csharp
 void AnimateWithSpring ()
-{ 
-	float springDampingRatio = 0.25f;
-	float initialSpringVelocity = 1.0f;
-	
-	UIView.AnimateNotify (3.0, 0.0, springDampingRatio, initialSpringVelocity, 0, () => {
-	
-		imageView.Center = new CGPoint (imageView.Center.X, 400);	
-			
-	}, null);
+{
+    float springDampingRatio = 0.25f;
+    float initialSpringVelocity = 1.0f;
+
+    UIView.AnimateNotify (3.0, 0.0, springDampingRatio, initialSpringVelocity, 0, () => {
+
+        imageView.Center = new CGPoint (imageView.Center.X, 400);
+
+    }, null);
 }
 ```
 
@@ -56,25 +55,25 @@ For example, the following code snippet creates a keyframe animation to animate 
 ```csharp
 void AnimateViewWithKeyframes ()
 {
-	var initialTransform = imageView.Transform;
-	var initialCeneter = imageView.Center;
+    var initialTransform = imageView.Transform;
+    var initialCeneter = imageView.Center;
 
-	// can now use keyframes directly on UIView without needing to drop directly into Core Animation
+    // can now use keyframes directly on UIView without needing to drop directly into Core Animation
 
-	UIView.AnimateKeyframes (2.0, 0, UIViewKeyframeAnimationOptions.Autoreverse, () => {
-		UIView.AddKeyframeWithRelativeStartTime (0.0, 0.5, () => { 
-			imageView.Center = new CGPoint (200, 200);
-		});
+    UIView.AnimateKeyframes (2.0, 0, UIViewKeyframeAnimationOptions.Autoreverse, () => {
+        UIView.AddKeyframeWithRelativeStartTime (0.0, 0.5, () => {
+            imageView.Center = new CGPoint (200, 200);
+        });
 
-		UIView.AddKeyframeWithRelativeStartTime (0.5, 0.5, () => { 
-			imageView.Transform = CGAffineTransform.MakeRotation ((float)Math.PI / 2);
-		});
-	}, (finished) => {
-		imageView.Center = initialCeneter;
-		imageView.Transform = initialTransform;
+        UIView.AddKeyframeWithRelativeStartTime (0.5, 0.5, () => {
+            imageView.Transform = CGAffineTransform.MakeRotation ((float)Math.PI / 2);
+        });
+    }, (finished) => {
+        imageView.Center = initialCeneter;
+        imageView.Transform = initialTransform;
 
-		AnimateWithSpring ();
-	});
+        AnimateWithSpring ();
+    });
 }
 ```
 
@@ -92,20 +91,18 @@ The API is declarative in nature. You declare how the physics interactions behav
 
 There are several different primitive behaviors available to trigger complex interactions, including:
 
--  `UIAttachmentBehavior` – Attaches two dynamic items such that they move together, or attaches a dynamic item to an attachment point.
--  `UICollisionBehavior` – Allows dynamic items to participate in collisions.
--  `UIDynamicItemBehavior` – Specifies a general set of properties to apply to dynamic items, such as elasticity, density and friction.
--  `UIGravityBehavior` - Applies gravity to a dynamic item, causing items to accelerate in the gravitational direction.
--  `UIPushBehavior` – Applies force to a dynamic item.
--  `UISnapBehavior` – Allows a dynamic item to snap to a position with a spring effect.
-
+- `UIAttachmentBehavior` – Attaches two dynamic items such that they move together, or attaches a dynamic item to an attachment point.
+- `UICollisionBehavior` – Allows dynamic items to participate in collisions.
+- `UIDynamicItemBehavior` – Specifies a general set of properties to apply to dynamic items, such as elasticity, density and friction.
+- `UIGravityBehavior` - Applies gravity to a dynamic item, causing items to accelerate in the gravitational direction.
+- `UIPushBehavior` – Applies force to a dynamic item.
+- `UISnapBehavior` – Allows a dynamic item to snap to a position with a spring effect.
 
 Although there are many primitives, the general process for adding physics-based interactions to a view using UIKit Dynamics is consistent across behaviors:
 
-1.  Create a dynamic animator.
-1.  Create behavior(s).
-1.  Add behaviors to the dynamic animator.
-
+1. Create a dynamic animator.
+1. Create behavior(s).
+1. Add behaviors to the dynamic animator.
 
 ### Dynamics Example
 
@@ -121,8 +118,8 @@ We’ll work in the `ViewDidLoad` method for this example. First, add a `UIImage
 image = UIImage.FromFile ("monkeys.jpg");
 
 imageView = new UIImageView (new CGRect (new CGPoint (View.Center.X - image.Size.Width / 2, 0), image.Size)) {
-					Image =  image
-				}
+                    Image =  image
+                }
 
 View.AddSubview (imageView);
 ```
@@ -152,7 +149,7 @@ dynAnimator.AddBehavior (gravity);
 
 This results in the image animating downward with gravity, as illustrated below:
 
-![](images/gravity2.png "The starting image location") 
+![](images/gravity2.png "The starting image location")
 ![](images/gravity3.png "The ending image location")
 
 Since there is nothing constraining the boundaries of the screen, the image view simply falls off the bottom. To constrain the view so that the image collides with the edges of the screen, we can add a `UICollisionBehavior`. We'll cover this in the next section.
@@ -166,23 +163,23 @@ Modify the code to include the `UICollisionBehavior`:
 ```csharp
 using (image = UIImage.FromFile ("monkeys.jpg")) {
 
-	imageView = new UIImageView (new CGRect (new CGPoint (View.Center.X - image.Size.Width / 2, 0), image.Size)) {
-		Image =  image
-	};
+    imageView = new UIImageView (new CGRect (new CGPoint (View.Center.X - image.Size.Width / 2, 0), image.Size)) {
+        Image =  image
+    };
 
-	View.AddSubview (imageView);
+    View.AddSubview (imageView);
 
-	// 1. create the dynamic animator
-	dynAnimator = new UIDynamicAnimator (this.View);
+    // 1. create the dynamic animator
+    dynAnimator = new UIDynamicAnimator (this.View);
 
-	// 2. create behavior(s)
-	var gravity = new UIGravityBehavior (imageView);
-	var collision = new UICollisionBehavior (imageView) {
-		TranslatesReferenceBoundsIntoBoundary = true
-	};
+    // 2. create behavior(s)
+    var gravity = new UIGravityBehavior (imageView);
+    var collision = new UICollisionBehavior (imageView) {
+        TranslatesReferenceBoundsIntoBoundary = true
+    };
 
-	// 3. add behaviors(s) to the dynamic animator
-	dynAnimator.AddBehaviors (gravity, collision);
+    // 3. add behaviors(s) to the dynamic animator
+    dynAnimator.AddBehaviors (gravity, collision);
 }
 ```
 
@@ -202,7 +199,7 @@ Adding a `UIDynamicItemBehavior` follows the same steps as with the other behavi
 
 ```csharp
 var dynBehavior = new UIDynamicItemBehavior (dynItems) {
-	Elasticity = 0.7f
+    Elasticity = 0.7f
 };
 ```
 
@@ -226,10 +223,9 @@ For more information, please see our [TextKit](~/ios/platform/textkit.md)
 
 iOS 7 changes when and how background work is performed. Task completion in iOS 7 no longer keeps applications awake when tasks are running in the background, and applications are woken for background processing in a non-contiguous manner. iOS 7 also adds three new APIs for updating applications with new content in the background:
 
--  Background Fetch – Allows applications to update content in the background at regular intervals.
--  Remote Notifications - Allows applications to update content when receiving a push notification. The notifications can be either silent or can display a banner on the lock screen.
--  Background Transfer Service – Allows uploading and downloading of data, such as large files, without a fixed time limit.
-
+- Background Fetch – Allows applications to update content in the background at regular intervals.
+- Remote Notifications - Allows applications to update content when receiving a push notification. The notifications can be either silent or can display a banner on the lock screen.
+- Background Transfer Service – Allows uploading and downloading of data, such as large files, without a fixed time limit.
 
 For more details about the new multitasking capabilities, see the iOS sections of the Xamarin [Backgrounding guide](~/ios/app-fundamentals/backgrounding/index.md).
 

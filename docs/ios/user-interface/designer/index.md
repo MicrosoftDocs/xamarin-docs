@@ -4,8 +4,8 @@ description: "This document describes how to use the Xamarin Designer for iOS to
 ms.prod: xamarin
 ms.assetid: E35EFB69-EBBA-40E3-ADBE-CB8016F17127
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/31/2018
 ---
 

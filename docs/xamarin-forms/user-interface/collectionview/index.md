@@ -6,12 +6,10 @@ ms.assetid: 2BC9B223-2D5C-4B09-849C-B9D578954557
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 07/24/2019
 ---
 
 # Xamarin.Forms CollectionView
-
-![](~/media/shared/preview.png "This API is currently pre-release")
 
 ## [Introduction](introduction.md)
 
@@ -36,3 +34,7 @@ In [`CollectionView`](xref:Xamarin.Forms.CollectionView), an empty view can be s
 ## [Scrolling](scrolling.md)
 
 When a user swipes to initiate a scroll, the end position of the scroll can be controlled so that items are fully displayed. In addition, [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines two [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) methods, that programmatically scroll items into view. One of the overloads scrolls the item at the specified index into view, while the other scrolls the specified item into view.
+
+## [Grouping](grouping.md)
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) can display correctly grouped data by setting its `IsGrouped` property to `true`.

@@ -3,8 +3,8 @@ title: "Transport Layer Security (TLS) 1.2"
 description: "This document describes how to enabling TLS 1.2 for Xamarin.iOS, Xamarin.Android, and Xamarin.Mac projects. It demonstrates how to do so in both Visual Studio 2019 and Visual Studio for Mac."
 ms.prod: xamarin
 ms.assetid: 399F71C6-16A4-4ABC-B30D-AF17D066A5FA
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 04/20/2018
 ---
 # Transport Layer Security (TLS) 1.2
@@ -13,7 +13,7 @@ Using the latest version of [_Transport Layer Security_ (TLS)](https://en.wikipe
 is important to ensure application network communications are secure.
 
 > [!WARNING]
-> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2.  Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
+> **April, 2018** – Due to increased security requirements, including PCI compliance, major cloud providers and web servers are expected to stop supporting TLS versions older than 1.2. Xamarin projects created in previous versions of Visual Studio default to use older versions of TLS.
 >
 > In order to ensure your apps continue to work with these servers and services, **you should update your Xamarin projects to use the settings below, then re-build and re-deploy your apps** to your users.
 

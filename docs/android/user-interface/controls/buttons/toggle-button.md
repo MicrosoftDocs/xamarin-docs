@@ -3,8 +3,8 @@ title: "ToggleButton"
 ms.prod: xamarin
 ms.assetid: 9ADA8FCF-63ED-897A-DD56-D7D86535A92C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -64,7 +64,6 @@ which it is.
 
 Run the application.
 
-
 > [!TIP]
 > If you need to change the state yourself (such as
 > when loading a saved
@@ -74,7 +73,6 @@ Run the application.
 > property setter or
 > [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle)
 > method.
-
 
 ## Related Links
 

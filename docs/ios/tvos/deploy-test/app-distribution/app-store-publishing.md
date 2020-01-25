@@ -4,8 +4,8 @@ description: "This document describes how to publish an app to the Apple TV App 
 ms.prod: xamarin
 ms.assetid: 52448C93-DC19-40FA-BF8C-608AE680FF49
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -20,7 +20,6 @@ The process of submitting an application to the Apple TV App Store involves:
 3. Using this profile to build your app.
 4. Submitting your app through  *iTunes Connect*.
 
-
 In this article we will cover all the steps needed to provision, build, and submit an app for Apple TV App Store distribution.
 
 <a name="Before_you_Submit" />
@@ -34,7 +33,6 @@ A couple of things to watch out for when submitting an app are:
 
 1. Make sure the app’s description matches the functionality included in the app.
 2. Test that the app doesn’t crash under normal usage. This includes usage on every Apple TV device you support.
-
 
 Apple also maintains a list of Apple TV App Store submission tips. You can read these at [Distributing on the App Store](https://developer.apple.com/appstore/resources/submission/tips.html).
 
@@ -88,7 +86,7 @@ Do the following in Visual Studio for Mac:
 5. Select and configure the entitlements required for you Xamarin.tvOS app so that they match the setup you performed above when you defined the App ID.
 6. Save the changes to the `Entitlements.plist` file.
 
-For detailed instructions, please see our [Provisioning for Application Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) documentation. While this document was written for iOS, the same steps are used to provision a Xamarin.tvOS app.
+For detailed instructions, please see our [Provisioning for Application Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) documentation. While this document was written for iOS, the same steps are used to provision a Xamarin.tvOS app.
 
 <a name="Setting_the_Apps_Icons_and_Launch_Screens" />
 
@@ -107,16 +105,15 @@ deploy the app. However, for Apple TV App Store distribution, only certificate a
 
 Provisioning involves the following steps using Apple's web based iOS Provisioning Portal:
 
-1.  Select **Provisioning** > **Distribution**.
-2.  Click the **+** button and select the type of Distribution Profile that you want to create as **Apple TV App Store**.
-3.  Select **App ID** from the dropdown list that you want to create a Distribution Profile for.
-4.  Select certificate required to sign the application.
-5.  Enter a **Name** for the new **Distribution Profile** and generate the profile.
-6.  Refresh the list of available profiles in Xcode.
-7.  Select the Distribution Provisioning Profile in Visual Studio for the **App Store** _Build Configuration_.
+1. Select **Provisioning** > **Distribution**.
+2. Click the **+** button and select the type of Distribution Profile that you want to create as **Apple TV App Store**.
+3. Select **App ID** from the dropdown list that you want to create a Distribution Profile for.
+4. Select certificate required to sign the application.
+5. Enter a **Name** for the new **Distribution Profile** and generate the profile.
+6. Refresh the list of available profiles in Xcode.
+7. Select the Distribution Provisioning Profile in Visual Studio for the **App Store** _Build Configuration_.
 
 For detailed instructions, please see the [Creating a Distribution Profile](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) and [Selecting a Distribution Profile in a Xamarin.iOS Project](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile). Again, both of these documents are specific to iOS but the same technique is used for tvOS apps.
-
 
 <a name="Setting_the_Build_Configuration_for_your_Application" />
 
@@ -133,7 +130,6 @@ Do the following:
 5. Apple also required that tvOS apps use bitcode. Again under the **Release** configuration, add `--bitcode=asmonly` to the **Additional mtouch arguments** box.
 6. The **Optimize PNG image files for iOS** checkbox should be checked as this will help to further decrease your app's deliverable size.
 7. Debugging should *not* be enabled as it will make the build unnecessarily larger.
-
 
 <a name="Building_and_Submitting_the_Distributable" />
 
@@ -185,7 +181,6 @@ With your distribution build created and archived, you are now ready to submit y
 
 With the distribution build completed, you are ready to submit your iOS application to Apple for review and release on the App Store.
 
-
 The archive workflow in Visual Studio for Mac will open Application Loader automatically, once you have saved the `.ipa`:
 
 1. Select *Deliver Your App* and click the *Choose* button:
@@ -221,7 +216,6 @@ If you are having issues submitting your Xamarin.tvOS app to the Apple TV App St
 ## Summary
 
 This article presented a step-by-step guide to configuring, building, and submitting an app for Apple TV App Store publication. First, it covered the steps needed to create and install a distribution provisioning profile. Next, it walked through how to use Visual Studio for Mac to create a distribution build. Finally, it showed you how to use iTunes Connect and the Xcode Archive Tool to submit an application to the Apple TV App Store.
-
 
 ## Related Links
 

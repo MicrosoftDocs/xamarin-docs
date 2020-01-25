@@ -20,4 +20,3 @@ Common Language Runtime (CLR) properties can be used to define effect parameters
 ## [Passing Effect Parameters as Attached Properties](attached-properties.md)
 
 Attached properties can be used to define effect parameters that respond to runtime property changes. This article demonstrates using attached properties to pass parameters to an effect, and changing a parameter at runtime.
-

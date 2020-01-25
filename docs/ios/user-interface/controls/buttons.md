@@ -4,8 +4,8 @@ description: "The UIButton class is used to represent various different styles o
 ms.prod: xamarin
 ms.assetid: 304229E5-8FA8-41BD-8563-D19E1D2A0296
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2018
 ---
 
@@ -146,4 +146,3 @@ respectively):
 For more information about working with custom buttons, refer to the
 [Use an image for a button](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/buttons/use_an_image_for_a_button)
 recipe.
-

@@ -16,7 +16,7 @@ ms.date: 05/07/2018
 
 _Use FlexLayout for stacking or wrapping a collection of child views._
 
-The Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) is new in Xamarin.Forms version 3.0. It is based on the CSS [Flexible Box Layout Module](http://www.w3.org/TR/css-flexbox-1/), commonly known as _flex layout_ or _flex-box_, so called because it includes many flexible options to arrange children within the layout.
+The Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) is new in Xamarin.Forms version 3.0. It is based on the CSS [Flexible Box Layout Module](https://www.w3.org/TR/css-flexbox-1/), commonly known as _flex layout_ or _flex-box_, so called because it includes many flexible options to arrange children within the layout.
 
 `FlexLayout` is similar to the Xamarin.Forms [`StackLayout`](~/xamarin-forms/user-interface/layouts/stack-layout.md) in that it can arrange its children horizontally and vertically in a stack. However, the `FlexLayout` is also capable of wrapping its children if there are too many to fit in a single row or column, and also has many options for orientation, alignment, and adapting to various screen sizes.
 
@@ -185,7 +185,7 @@ Here's the program running, progressively scrolled from top to bottom:
 
 ### Page layout with FlexLayout
 
-There is a standard layout in web design called the [_holy grail_](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) because it's a layout format that is very desirable, but often hard to realize with perfection. The layout consists of a header at the top of the page and a footer at the bottom, both extending to the full width of the page. Occupying the center of the page is the main content, but often with a columnar menu to the left of the content and supplementary information (sometimes called an _aside_ area) at the right. [Section 5.4.1 of the CSS Flexible Box Layout specification](http://www.w3.org/TR/css-flexbox-1/#order-accessibility) describes how the holy grail layout can be realized with a flex box.
+There is a standard layout in web design called the [_holy grail_](https://en.wikipedia.org/wiki/Holy_grail_(web_design)) because it's a layout format that is very desirable, but often hard to realize with perfection. The layout consists of a header at the top of the page and a footer at the bottom, both extending to the full width of the page. Occupying the center of the page is the main content, but often with a columnar menu to the left of the content and supplementary information (sometimes called an _aside_ area) at the right. [Section 5.4.1 of the CSS Flexible Box Layout specification](https://www.w3.org/TR/css-flexbox-1/#order-accessibility) describes how the holy grail layout can be realized with a flex box.
 
 The **Holy Grail Layout** page of the **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** sample shows a simple implementation of this layout using one `FlexLayout` nested in another. Because this page is designed for a phone in portrait mode, the areas to the left and right of the content area are only 50 pixels wide:
 
@@ -256,7 +256,7 @@ Three attached bindable properties are demonstrated in this program:
 
 ### Catalog items with FlexLayout
 
-The **Catalog Items** page in the **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** sample is similar to [Example 1 in Section 1.1 of the CSS Flex Layout Box specification](http://www.w3.org/TR/css-flexbox-1/#overview) except that it displays a horizontally scrollable series of pictures and descriptions of three monkeys:
+The **Catalog Items** page in the **[FlexLayoutDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-flexlayoutdemos)** sample is similar to [Example 1 in Section 1.1 of the CSS Flex Layout Box specification](https://www.w3.org//TR/css-flexbox-1/#overview) except that it displays a horizontally scrollable series of pictures and descriptions of three monkeys:
 
 [![The Catalog Items Page](flex-layout-images/CatalogItems.png "The Catalog Items Page")](flex-layout-images/CatalogItems-Large.png#lightbox)
 

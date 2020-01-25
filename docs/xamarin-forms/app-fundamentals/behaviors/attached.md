@@ -124,7 +124,6 @@ At runtime, the `OnAttachBehaviorChanged` method will be executed when the value
 
 This article demonstrated how to create and consume attached behaviors. Attached behaviors are `static` classes with one or more attached properties.
 
-
 ## Related Links
 
 - [Attached Behaviors (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/behaviors-attachednumericvalidationbehavior)

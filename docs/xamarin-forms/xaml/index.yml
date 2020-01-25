@@ -1,0 +1,67 @@
+### YamlMime:Landing
+
+title: eXtensible Application Markup Language (XAML)
+summary: Learn how to use XAML to define Xamarin.Forms user interfaces.
+
+metadata:
+  title: eXtensible Application Markup Language (XAML)
+  description: Learn how to use XAML to define Xamarin.Forms user interfaces.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: CD30EECC-8AC1-4CF5-A4FE-348420A6231E
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 12/27/2019
+
+landingContent:
+  - title: Get started
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Basics
+            url: xaml-basics/index.md
+          - text: Controls
+            url: xaml-controls.md
+          - text: Compilation
+            url: xamlc.md
+          - text: Markup extensions
+            url: markup-extensions/index.md
+
+  - title: Tooling
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Hot reload
+            url: hot-reload.md
+          - text: Toolbox
+            url: toolbox.md
+          - text: Previewer
+            url: xaml-previewer/index.md
+
+  - title: Namespaces
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Namespaces
+            url: namespaces.md
+          - text: Custom namespace schemas
+            url: custom-namespace-schemas.md
+          - text: Namespace recommended prefixes
+            url: custom-prefix.md
+
+  - title: Additional capabilities
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Bindable properties
+            url: bindable-properties.md
+          - text: Attached properties
+            url: attached-properties.md
+          - text: Resource dictionaries
+            url: resource-dictionaries.md
+          - text: Passing arguments
+            url: passing-arguments.md
+          - text: Field modifiers
+            url: field-modifiers.md
+          - text: Load XAML at runtime
+            url: runtime-load.md

@@ -4,8 +4,8 @@ description: "General User Experience (UX) coverage including User Interface (UI
 ms.prod: xamarin
 ms.assetid: 8CF80705-B36A-42D6-B66B-52BC8586FA5A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
 ---
 
@@ -64,8 +64,6 @@ This article covers designing and working with Table Views and Table View Contro
 ## [Working with Text and Search Fields](~/ios/tvos/user-interface/text-fields-and-search.md)
 
 This article covers designing and working with Text and Search Fields inside of a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

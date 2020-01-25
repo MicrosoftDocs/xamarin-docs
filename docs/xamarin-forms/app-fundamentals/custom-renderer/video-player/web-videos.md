@@ -514,10 +514,6 @@ To reference one of these other movies, you can replace the explicit URL in the 
 
 Alternatively, you can set the `Source` property from a video file in a `ListView`, as described in the next article, [Binding Video Sources to the Player](source-bindings.md).
 
-
-
-
-
 ## Related Links
 
 - [Video Player Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-videoplayerdemos)

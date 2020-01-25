@@ -5,8 +5,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 7DCF0985-F77D-4A68-AC54-10C9846E189A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
 ---
 
@@ -14,7 +14,6 @@ ms.date: 08/29/2018
 
 _This article explains how to resolve Java Development Kit (JDK) 9 or
 later errors in Xamarin.Android._
-
 
 ## Overview
 
@@ -32,7 +31,7 @@ JDK later than JDK 8, you will get an explicit error indicating that
 this version of JDK is not supported. For example:
 
 ```shell
-Building with JDK Version `9.0.4` is not supported. Please install JDK version `1.8.0`. See https://aka.ms/xamarin/jdk9-errors	
+Building with JDK Version `9.0.4` is not supported. Please install JDK version `1.8.0`. See https://aka.ms/xamarin/jdk9-errors
 ```
 
 To resolve these errors, you must install JDK 8 (1.8) as explained in
@@ -40,7 +39,6 @@ To resolve these errors, you must install JDK 8 (1.8) as explained in
 Alternately, you can install the 
 [Microsoft Mobile OpenJDK Preview](~/android/get-started/installation/openjdk.md) 
 The Microsoft Mobile OpenJDK will eventually replace JDK 8 for Xamarin.Android development.
-
 
 ## Checking the JDK Version
 

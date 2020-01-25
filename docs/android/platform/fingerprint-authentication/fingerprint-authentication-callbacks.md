@@ -3,8 +3,8 @@ title: "Responding to Authentication Callbacks"
 ms.prod: xamarin
 ms.assetid: 6533AFC9-1A1C-4897-A154-4D4ECFE27761
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/06/2017
 ---
 
@@ -16,17 +16,16 @@ one method of `FingerprintManager.AuthenticationCallback` on the UI
 thread. An Android application must provide its own handler which
 extends this abstract class, implementing all the following methods:
 
-* **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Called when there is an unrecoverable error. There is nothing more an application or user can do to correct the situation except possibly try again.
-* **`OnAuthenticationFailed()`** &ndash; This method is invoked when a fingerprint has been detected but not recognized by the device.
-* **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Called when there is a recoverable error, such as the finger being swiped to fast over the scanner.
-* **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; This is called when a fingerprint has been recognized.
+- **`OnAuthenticationError(int errorCode, ICharSequence errString)`** &ndash; Called when there is an unrecoverable error. There is nothing more an application or user can do to correct the situation except possibly try again.
+- **`OnAuthenticationFailed()`** &ndash; This method is invoked when a fingerprint has been detected but not recognized by the device.
+- **`OnAuthenticationHelp(int helpMsgId, ICharSequence helpString)`** &ndash; Called when there is a recoverable error, such as the finger being swiped to fast over the scanner.
+- **`OnAuthenticationSucceeded(FingerprintManagerCompati.AuthenticationResult result)`** &ndash; This is called when a fingerprint has been recognized.
 
 If a `CryptoObject` was used when calling `Authenticate`, it is
 recommended to call `Cipher.DoFinal` in `OnAuthenticationSuccessful`.
 `DoFinal` will throw an exception if the cipher was tampered with or
 improperly initialized, indicating that the result of the fingerprint
 scanner may have been tampered with outside of the application.
-
 
 > [!NOTE]
 > It is recommended to keep the callback class relatively light weight and free of application specific logic. The callbacks should act as a "traffic cop" between the Android application and the results from the fingerprint scanner.
@@ -105,55 +104,29 @@ Note that `OnAuthenticationError` will be invoked when the fingerprint scan is c
 
 A list and description of the error codes and help codes may be found in the [Android SDK documentation](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html#FINGERPRINT_ACQUIRED_GOOD) for the FingerprintManager class. Xamarin.Android represents these values with the `Android.Hardware.Fingerprints.FingerprintState` enum:
 
+- **`AcquiredGood`** &ndash; (value 0) The image acquired was good.
 
--   **`AcquiredGood`** &ndash; (value 0) The image acquired was good.
+- **`AcquiredImagerDirty`** &ndash; (value 3) The fingerprint image was too noisy due to suspected or detected dirt on the sensor. For example, it's reasonable to return this after multiple `AcquiredInsufficient` or actual detection of dirt on the sensor (stuck pixels, swaths, etc.). The user is expected to take action to clean the sensor when this is returned.
 
+- **`AcquiredInsufficient`** &ndash; (value 2) The fingerprint image was too noisy to process due to a detected condition (i.e. dry skin) or a possibly dirty sensor (See `AcquiredImagerDirty`.
 
--   **`AcquiredImagerDirty`** &ndash; (value 3) The fingerprint image was too noisy due to suspected or detected dirt on the sensor. For example, it's reasonable to return this after multiple `AcquiredInsufficient` or actual detection of dirt on the sensor (stuck pixels, swaths, etc.). The user is expected to take action to clean the sensor when this is returned.
+- **`AcquiredPartial`** &ndash; (value 1) Only a partial fingerprint image was detected. During enrollment, the user should be informed on what needs to happen to resolve this problem, e.g., &ldquo;press firmly on sensor.&rdquo;
 
+- **`AcquiredTooFast`** &ndash; (value 5) The fingerprint image was incomplete due to quick motion. While mostly appropriate for linear array sensors, this could also happen if the finger was moved during acquisition. The user should be asked to move the finger slower (linear) or leave the finger on the sensor longer.
 
--   **`AcquiredInsufficient`** &ndash; (value 2) The fingerprint image was too noisy to process due to a detected condition (i.e. dry skin) or a possibly dirty sensor (See `AcquiredImagerDirty`.
+- **`AcquiredToSlow`** &ndash; (value 4) The fingerprint image was unreadable due to lack of motion. This is most appropriate for linear array sensors that require a swipe motion.
 
+- **`ErrorCanceled`** &ndash; (value 5) The operation was canceled because the fingerprint sensor is unavailable. For example, this may happen when the user is switched, the device is locked, or another pending operation prevents or disables it.
 
+- **`ErrorHwUnavailable`** &ndash; (value 1) The hardware is unavailable. Try again later.
 
--   **`AcquiredPartial`** &ndash; (value 1) Only a partial fingerprint image was detected. During enrollment, the user should be informed on what needs to happen to resolve this problem, e.g., &ldquo;press firmly on sensor.&rdquo;
+- **`ErrorLockout`** &ndash; (value 7) The operation was canceled because the API is locked out due to too many attempts.
 
+- **`ErrorNoSpace`** &ndash; (value 4) Error state returned for operations like enrollment; the operation cannot be completed because there's not enough storage remaining to complete the operation.
 
+- **`ErrorTimeout`** &ndash; (value 3) Error state returned when the current request has been running too long. This is intended to prevent programs from waiting for the fingerprint sensor indefinitely. The timeout is platform and sensor-specific, but is generally about 30 seconds.
 
--   **`AcquiredTooFast`** &ndash; (value 5) The fingerprint image was incomplete due to quick motion. While mostly appropriate for linear array sensors, this could also happen if the finger was moved during acquisition. The user should be asked to move the finger slower (linear) or leave the finger on the sensor longer.
-
-
-
-
--   **`AcquiredToSlow`** &ndash; (value 4) The fingerprint image was unreadable due to lack of motion. This is most appropriate for linear array sensors that require a swipe motion.
-
-
-
--   **`ErrorCanceled`** &ndash; (value 5) The operation was canceled because the fingerprint sensor is unavailable. For example, this may happen when the user is switched, the device is locked, or another pending operation prevents or disables it.
-
-
-
--   **`ErrorHwUnavailable`** &ndash; (value 1) The hardware is unavailable. Try again later.
-
-
-
-
--   **`ErrorLockout`** &ndash; (value 7) The operation was canceled because the API is locked out due to too many attempts.
-
-
-
-
--   **`ErrorNoSpace`** &ndash; (value 4) Error state returned for operations like enrollment; the operation cannot be completed because there's not enough storage remaining to complete the operation.
-
-
-
--   **`ErrorTimeout`** &ndash; (value 3) Error state returned when the current request has been running too long. This is intended to prevent programs from waiting for the fingerprint sensor indefinitely. The timeout is platform and sensor-specific, but is generally about 30 seconds.
-
-
-
--   **`ErrorUnableToProcess`** &ndash; (value 2) Error state returned when the sensor was unable to process the current image.
-
-
+- **`ErrorUnableToProcess`** &ndash; (value 2) Error state returned when the sensor was unable to process the current image.
 
 ## Related Links
 

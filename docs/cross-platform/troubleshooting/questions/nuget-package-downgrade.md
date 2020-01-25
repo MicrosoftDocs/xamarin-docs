@@ -3,8 +3,8 @@ title: "How do I downgrade a NuGet package?"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 2375F833-A630-471E-B8E9-5AD2CB81F264
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
 ---
 
@@ -30,6 +30,7 @@ You can also copy/paste the exact command from the package's NuGet page. Example
     `[PackageName] version:*`
 
 ### Examples 
+
 - Lists all Xamarin.Forms packages: 
 
     `Xamarin.Forms version:`
@@ -38,4 +39,5 @@ You can also copy/paste the exact command from the package's NuGet page. Example
 
     `Xamarin.Forms version:1.4`
 
-*Note: If you add a space between `version:` & the version number, the search will behave as though no version was specified.*
+> [!NOTE]
+> If you add a space between `version:` & the version number, the search will behave as though no version was specified.

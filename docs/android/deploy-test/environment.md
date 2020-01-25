@@ -3,8 +3,8 @@ title: "Xamarin.Android Environment"
 ms.prod: xamarin
 ms.assetid: 67BFD4E1-276C-4B9F-9BD8-A5218D2BD529
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
 ---
 
@@ -56,7 +56,6 @@ Xamarin.Android supports the `XA_HTTP_CLIENT_HANDLER_TYPE` variable,
 which may be set either via `adb shell setprop debug.mono.env` or via
 the `$(AndroidEnvironment)` Build action.
 
-
 ### `XA_HTTP_CLIENT_HANDLER_TYPE`
 
 The assembly-qualified type which must inherit from
@@ -83,16 +82,16 @@ Xamarin.Android supports the following system properties, which may be
 set either via `adb shell setprop` or via the `$(AndroidEnvironment)`
 Build action.
 
-* `debug.mono.debug`
-* `debug.mono.env`
-* `debug.mono.gc`
-* `debug.mono.log`
-* `debug.mono.max_grefc`
-* `debug.mono.profile`
-* `debug.mono.runtime_args`
-* `debug.mono.trace`
-* `debug.mono.wref`
-* `XA_HTTP_CLIENT_HANDLER_TYPE`
+- `debug.mono.debug`
+- `debug.mono.env`
+- `debug.mono.gc`
+- `debug.mono.log`
+- `debug.mono.max_grefc`
+- `debug.mono.profile`
+- `debug.mono.runtime_args`
+- `debug.mono.trace`
+- `debug.mono.wref`
+- `XA_HTTP_CLIENT_HANDLER_TYPE`
 
 ### `debug.mono.debug`
 
@@ -117,19 +116,19 @@ This is equivalent to having the `debug.mono.log` system property contain `gc`.
 Controls which additional information Xamarin.Android will log to `adb logcat`.
 It is a comma-separated string (`,`), containing one of the following values:
 
-* `all`: Print out *all* messages. This is seldom a good idea, as it includes
-    `lref` messages.
-* `assembly`: Print out `.apk` and assembly parsing messages.
-* `gc`: Print out GC-related messages.
-* `gref`: Print out JNI Global Reference messages.
-* `lref`: Print out JNI Local Reference messages.  
-    *Note*: This will *really* spam `adb logcat`.  
-    In Xamarin.Android 5.1, this will also create a `.__override__/lrefs.txt`
-    file, which can get *gigantic*.  
-    Avoid.
-* `timing`: Print out some method timing information. This will also create
-    the files `.__override__/methods.txt` and `.__override__/counters.txt`.
-
+- `all`: Print out *all* messages. This is seldom a good idea, as it includes
+  `lref` messages.
+- `assembly`: Print out `.apk` and assembly parsing messages.
+- `gc`: Print out GC-related messages.
+- `gref`: Print out JNI Global Reference messages.
+- `lref`: Print out JNI Local Reference messages.
+  > [!NOTE]
+  > This will *really* spam `adb logcat`.
+  > In Xamarin.Android 5.1, this will also create a `.__override__/lrefs.txt`
+  > file, which can get *gigantic*.
+  > Avoid.
+- `timing`: Print out some method timing information. This will also create
+  the files `.__override__/methods.txt` and `.__override__/counters.txt`.
 
 ### `debug.mono.max_grefc`
 
@@ -171,10 +170,10 @@ and including adding additional error conditions).
 The `debug.mono.wref` system property allows overriding the default detected
 JNI Weak Reference mechanism. There are two supported values:
 
-* `jni`: Use JNI weak references, as created by `JNIEnv::NewWeakGlobalRef()`
-    and destroyed by `JNIEnv::DeleteWeakGlobalREf()`.
-* `java`: Use JNI Global references which reference
-    `java.lang.WeakReference` instances.
+- `jni`: Use JNI weak references, as created by `JNIEnv::NewWeakGlobalRef()`
+  and destroyed by `JNIEnv::DeleteWeakGlobalREf()`.
+- `java`: Use JNI Global references which reference
+  `java.lang.WeakReference` instances.
 
 `java` is used, by default, up through API-7 and on API-19 (Kit Kat) with
 ART enabled. (API-8 added `jni` references, and ART *broke* `jni` references.)
@@ -197,13 +196,11 @@ XA_HTTP_CLIENT_HANDLER_TYPE=Xamarin.Android.Net.AndroidClientHandler
 > The underlying Android device must support TLS 1.2.
 Android 5.0 and later support TLS 1.2
 
-
 ## Example
 
 ```shell
 ## Comments are lines which start with '#'
 ## Blank lines are ignored.
-
 
 ## Enable GREF messages to `adb logcat`
 debug.mono.log=gref
@@ -211,8 +208,6 @@ debug.mono.log=gref
 ## Clear out a Mono environment variable to decrease logging
 MONO_LOG_LEVEL=
 ```
-
-
 
 ## Related Links
 

@@ -3,8 +3,8 @@ title: "Specialized Fragment Classes"
 ms.prod: xamarin
 ms.assetid: 7A0AEB2C-EE77-63BF-652A-DA049B691C64
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/08/2018
 ---
 
@@ -14,17 +14,15 @@ The Fragments API provides other subclasses that encapsulate some of
 the more common functionality found in applications. These subclasses
 are:
 
--   **ListFragment** &ndash; This Fragment is used to display a list of
+- **ListFragment** &ndash; This Fragment is used to display a list of
     items bound to a datasource such as an array or a cursor.
 
--   **DialogFragment** &ndash; This Fragment is used as a wrapper
+- **DialogFragment** &ndash; This Fragment is used as a wrapper
     around a dialog. The Fragment will display the dialog on top of its
     Activity.
 
--   **PreferenceFragment** &ndash; This Fragment is used to show
+- **PreferenceFragment** &ndash; This Fragment is used to show
     Preference objects as lists.
-
-
 
 ## The ListFragment
 
@@ -34,7 +32,6 @@ Fragment. The image below shows a `ListFragment` running on a tablet
 and a phone:
 
 [![Screenshots of ListFragment on a tablet and on a phone](specialized-fragment-classes-images/intro-screenshot-sml.png)](specialized-fragment-classes-images/intro-screenshot.png#lightbox)
-
 
 ### Binding Data With The ListAdapter
 
@@ -59,8 +56,6 @@ When setting the `ListAdapter`, it is important to use the
 `ListFragment.ListAdapter` property, and not the `ListView.ListAdapter`
 property. Using `ListView.ListAdapter` will cause important
 initialization code to be skipped.
-
-
 
 ### Responding to User Selection
 
@@ -96,8 +91,6 @@ In the code above, when the user selects an item in the `ListFragment`,
 a new Fragment is displayed in the hosting Activity, showing more
 details about the item that was selected.
 
-
-
 ## DialogFragment
 
 The *DialogFragment* is a Fragment that is used to display a dialog
@@ -115,9 +108,9 @@ with direct calls on the dialog object. The `DialogFragment` API
 provides each instance with a `Show()` method that is used to display a
 Fragment. There are two ways to get rid of a Fragment:
 
--  Call `DialogFragment.Dismiss()` on the  `DialogFragment` instance. 
+- Call `DialogFragment.Dismiss()` on the  `DialogFragment` instance. 
 
--  Display another `DialogFragment`.
+- Display another `DialogFragment`.
 
 To create a `DialogFragment`, a class inherits from
 `Android.App.DialogFragment,` and then overrides one of the following
@@ -128,8 +121,6 @@ two methods:
 - **OnCreateDialog** &ndash; This creates a custom dialog. It is
   typically used to show an *AlertDialog*. When overriding this
   method, it is not necessary to override `OnCreateView` .
-
-
 
 ### A Simple DialogFragment
 
@@ -171,7 +162,6 @@ public class MyDialogFragment : DialogFragment
 }
 ```
 
-
 ### Displaying a Fragment
 
 Like all Fragments, a `DialogFragment` is displayed in the context of a
@@ -193,14 +183,12 @@ public void ShowDialog()
 }
 ```
 
-
 ### Dismissing a Fragment
 
 Calling `Dismiss()` on an instance of a `DialogFragment` causes a
 Fragment to be removed from the Activity and commits that transaction.
 The standard Fragment lifecycle methods that are involved with the
 destruction of a Fragment will be called.
-
 
 ### Alert Dialog
 
@@ -228,8 +216,6 @@ public class AlertDialogFragment : DialogFragment
 }
 ```
 
-
-
 ## PreferenceFragment
 
 To help manage preferences, the Fragments API provides the
@@ -244,7 +230,6 @@ deal with preferences in applications. The following picture shows an
 example of a `PreferenceFragment`:
 
 [![Example PreferencesFragment with inline, dialog, and launch preferences](specialized-fragment-classes-images/preferences-dialog.png)](specialized-fragment-classes-images/preferences-dialog.png#lightbox)
-
 
 ### Create A Preference Fragment from a Resource
 
@@ -319,8 +304,6 @@ public class PrefFragment : PreferenceFragment
     }
 }
 ```
-
-
 
 ### Querying Activities to Create a Preference Fragment
 

@@ -4,8 +4,8 @@ description: "This article shows how to use a helper class to control the playba
 ms.prod: xamarin
 ms.assetid: E0305572-DC64-48BB-BD97-0A5096E6CA04
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -28,8 +28,6 @@ You can use the `AVAudioPlayer` to do the following:
 ## Playing Sounds in tvOS
 
 Because tvOS supports the same Audio Toolbox classes as iOS, please see our iOS [Playing Sound with AVAudioPlayer](https://github.com/xamarin/recipes/tree/master/Recipes/ios/media/sound/avaudioplayer) documentation for the full details of playing audio in a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

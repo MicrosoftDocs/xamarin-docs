@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ---
 
 # Introduction to MonoTouch.Dialog for Xamarin.iOS
@@ -59,9 +59,8 @@ table creation. It then provides an abstraction on top of that API that allows
 for a declarative object binding syntax that makes it even easier. As such,
 there are two APIs available in MT.D:
 
--   **Low-level Elements API** – The  *Elements API* is based on creating a hierarchal tree of elements that represent screens and their components. The Elements API gives developers the most flexibility and control in creating UIs. Additionally, the Elements API has advanced support for declarative definition via JSON, which allows for both incredibly fast declaration, as well as dynamic UI generation from a server. 
--   **High-Level Reflection API** – Also known as the  *Binding*  *API* , in which classes are annotated with UI hints and then MT.D automatically creates screens based on the objects and provides a binding between what is displayed (and optionally edited) on screen, and the underlying object backing. The example above illustrated the use of the Reflection API. This API doesn’t provide the fine-grained control that the elements API does, but it reduces complexity even further by automatically building out the element hierarchy based on class attributes. 
-
+- **Low-level Elements API** – The  *Elements API* is based on creating a hierarchal tree of elements that represent screens and their components. The Elements API gives developers the most flexibility and control in creating UIs. Additionally, the Elements API has advanced support for declarative definition via JSON, which allows for both incredibly fast declaration, as well as dynamic UI generation from a server. 
+- **High-Level Reflection API** – Also known as the  *Binding*  *API* , in which classes are annotated with UI hints and then MT.D automatically creates screens based on the objects and provides a binding between what is displayed (and optionally edited) on screen, and the underlying object backing. The example above illustrated the use of the Reflection API. This API doesn’t provide the fine-grained control that the elements API does, but it reduces complexity even further by automatically building out the element hierarchy based on class attributes. 
 
 MT.D comes packed with a large set of built in UI elements for screen
 creation, but it also recognizes the need for customized elements and advanced
@@ -76,9 +75,9 @@ support.
 This article will take a comprehensive look at working with MT.D,
 including:
 
--   **MT.D Components** – This will focus on understanding the classes that make up MT.D to enable getting up to speed quickly. 
--   **Elements Reference** – A comprehensive list of the built-in elements of MT.D. 
--   **Advanced Usage** – This covers advanced features such as pull-to-refresh, search, background image loading, using LINQ to build out element hierarchies, and creating custom elements, cells, and controllers for use with MT.D. 
+- **MT.D Components** – This will focus on understanding the classes that make up MT.D to enable getting up to speed quickly. 
+- **Elements Reference** – A comprehensive list of the built-in elements of MT.D. 
+- **Advanced Usage** – This covers advanced features such as pull-to-refresh, search, background image loading, using LINQ to build out element hierarchies, and creating custom elements, cells, and controllers for use with MT.D. 
 
 ## Setting up MT.D
 
@@ -98,11 +97,10 @@ pieces of MT.D.
 
 MT.D builds screens using the following four parts:
 
--  **DialogViewController**
--  **RootElement**
--  **Section**
--  **Element**
-
+- **DialogViewController**
+- **RootElement**
+- **Section**
+- **Element**
 
 ### DialogViewController
 
@@ -319,10 +317,9 @@ hidden.
 
 It is initialized with three values:
 
--  The caption for the entry that will be shown to the user.
--  Placeholder text (this is the greyed-out text that provides a hint to the user). 
--  The value of the text.
-
+- The caption for the entry that will be shown to the user.
+- Placeholder text (this is the greyed-out text that provides a hint to the user). 
+- The value of the text.
 
 The placeholder and value can be null. However, the caption is required.
 
@@ -333,11 +330,10 @@ time to the keyboard type style desired for the data entry. This can be used to
 configure the keyboard using the values of `UIKeyboardType` as listed
 below:
 
--  Numeric
--  Phone
--  Url
--  Email
-
+- Numeric
+- Phone
+- Url
+- Email
 
 ### Boolean Element
 
@@ -500,7 +496,7 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-For more information on using JSON with MT.D, see the [JSON Element Walkthrough](http://docs.xamarin.com/guides/ios/user_interface/monotouch.dialog/json_element_walkthrough) tutorial.
+For more information on using JSON with MT.D, see the [JSON Element Walkthrough](https://docs.microsoft.com/xamarin/ios/user-interface/monotouch.dialog/json-element-walkthrough) tutorial.
 
 ## Other Features
 
@@ -540,10 +536,9 @@ the visible fields and shows those to the user. The `DialogViewController` expos
 initiate, terminate or trigger a new filter operation on the results. These
 methods are listed below:
 
--  `StartSearch`
--  `FinishSearch`
--  `PerformFilter`
-
+- `StartSearch`
+- `FinishSearch`
+- `PerformFilter`
 
 The system is extensible, so you can alter this behavior if you want.
 
@@ -714,7 +709,7 @@ suited for web pages and desktop applications do not map directly to the iPhone
 interaction model.
 
 If you want to do data validation, you should do this when the user triggers
-an action with the data entered. For example a <span class="ui">Done</span> or <span class="ui">Next</span> button on the top toolbar, or some `StringElement` used as a button to go to the next stage.
+an action with the data entered. For example a **Done** or **Next** button on the top toolbar, or some `StringElement` used as a button to go to the next stage.
 
 This is where you would perform basic input validation, and perhaps more
 complicated validation like checking for the validity of a user/password
@@ -731,7 +726,6 @@ components that comprise MT.D. It also showed the wide array of elements and
 table customizations supported by MT.D and discussed how MT.D can be extended
 with custom elements. Additionally it explained the JSON support in MT.D that
 allows creating elements dynamically from JSON.
-
 
 ## Related Links
 

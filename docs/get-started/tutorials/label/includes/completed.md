@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`Label`](xref:Xamarin.Forms.Label) in XAML.
 > - Change the appearance of the `Label`.
 > - Present text, in a single `Label`, that has multiple formats.

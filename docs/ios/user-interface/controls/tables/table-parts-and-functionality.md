@@ -4,8 +4,8 @@ description: "This document describes the various pieces of a UITableView in iOS
 ms.prod: xamarin
 ms.assetid: B4139C8B-28F2-4C0F-297F-BF5432C5A915
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -14,11 +14,11 @@ ms.date: 03/22/2017
 A UITableView can have a ‘grouped’ or ‘plain’ style, and consists of
 the following parts:
 
--  [Section Header](#Section_Header)
--  [Cells](#Cells) (or rows, if you prefer)
--  [Section Footer](#Section_Footer)
--  [Index](#Index)
--  [Editing mode](#Edit_Features) (includes ‘swipe to delete’ and drag handles to change row order) 
+- [Section Header](#Section_Header)
+- [Cells](#Cells) (or rows, if you prefer)
+- [Section Footer](#Section_Footer)
+- [Index](#Index)
+- [Editing mode](#Edit_Features) (includes ‘swipe to delete’ and drag handles to change row order) 
 
 These screenshots show how section rows, headers, footers, edit controls and the index are displayed.
 
@@ -69,7 +69,6 @@ There are a couple of different editing features available:
 
 The remainder of this document shows how to implement all these UITableView
 features with Xamarin.iOS.
-
 
 ## Classes Overview
 

@@ -3,8 +3,8 @@ title: "Auto Complete for Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: D4C8CA49-8369-35B7-798D-B147FDC24185
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/31/2018
 ---
 
@@ -52,7 +52,6 @@ The [`TextView`](xref:Android.Widget.TextView)
 is a label that introduces the
 [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 widget.
-
 
 ## Tutorial
 
@@ -186,8 +185,6 @@ Run the application. As you type, you should see something like this:
 
 [![Example auto-complete screenshot listing names that contain "ca"](auto-complete-images/helloautocomplete.png)](auto-complete-images/helloautocomplete.png#lightbox)
 
-
-
 ## More Information
 
 Note that using a hard-coded string array is not a recommended design
@@ -227,17 +224,13 @@ string[] countries = Resources.GetStringArray (Resource.array.countries_array);
 var adapter = new ArrayAdapter<String> (this, Resource.layout.list_item, countries);
 ```
 
-
 ### References
 
--   [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Xamarin.Android sample project for the `AutoCompleteTextView`.
--   [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
--   [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
+- [AutoCompleteTextView Recipe](https://github.com/xamarin/recipes/tree/master/Recipes/android/controls/autocomplete_text_view/add_an_autocomplete_text_input) &ndash; Xamarin.Android sample project for the `AutoCompleteTextView`
+- [`ArrayAdapter`](xref:Android.Widget.ArrayAdapter)
+- [`AutoCompleteTextView`](xref:Android.Widget.AutoCompleteTextView)
 
-*Portions of this page are modifications based on work created and
-shared by the Android Open Source Project and used according to terms
-described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/) *. This tutorial
-is based on the*
-[*Android Auto Complete tutorial*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)
-*.*
+_Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](https://creativecommons.org/licenses/by/2.5/).
+This tutorial is based on the
+[Android Auto Complete tutorial*](https://developer.android.com/resources/tutorials/views/hello-autocomplete.html)._

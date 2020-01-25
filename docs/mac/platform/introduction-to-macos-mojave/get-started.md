@@ -4,8 +4,8 @@ description: "This document describes how to get set up to build macOS Mojave ap
 ms.prod: xamarin
 ms.assetid: E9A7B68A-E164-4C5C-86AC-B2A3E7A30DA1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2018
 ---
 # Get started with macOS Mojave

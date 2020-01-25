@@ -4,8 +4,8 @@ description: "This article shows how to use Proactive Suggestions in the Xamarin
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -36,7 +36,7 @@ In addition to setting the `Latitude` and `Longitude` of the address component p
 
 ## Web Markup Based Suggestions
 
-iOS 9 added to ability to include structured data markup in the website that enriches the content that users see in Spotlight and Safari search results (see [Search with Web Markup](~/ios/platform/search/web-markup.md)). iOS 10 adds the ability to include location-based markup (such as [PostalAddress](http://schema.org/PostalAddress) as defined by [Schema.org](http://schema.org/)) to further enhance the user's experience. For example, if a users views a location marked page on the website, the system can suggest the same location when they open Maps.
+iOS 9 added to ability to include structured data markup in the website that enriches the content that users see in Spotlight and Safari search results (see [Search with Web Markup](~/ios/platform/search/web-markup.md)). iOS 10 adds the ability to include location-based markup (such as [PostalAddress](https://schema.org/PostalAddress) as defined by [Schema.org](https://schema.org/)) to further enhance the user's experience. For example, if a users views a location marked page on the website, the system can suggest the same location when they open Maps.
 
 ## Text Based Suggestions
 
@@ -341,54 +341,54 @@ using Intents;
 
 namespace MonkeyNotification
 {
-	public class DonateInteraction
-	{
-		#region Constructors
-		public DonateInteraction ()
-		{
-		}
-		#endregion
+  public class DonateInteraction
+  {
+    #region Constructors
+    public DonateInteraction ()
+    {
+    }
+    #endregion
 
-		#region Public Methods
-		public void SendMessageIntent (string text, INPerson from, INPerson[] to)
-		{
+    #region Public Methods
+    public void SendMessageIntent (string text, INPerson from, INPerson[] to)
+    {
 
-			// Create App Activity
-			var activity = new NSUserActivity ("com.xamarin.message");
+      // Create App Activity
+      var activity = new NSUserActivity ("com.xamarin.message");
 
-			// Define details
-			var info = new NSMutableDictionary ();
-			info.Add (new NSString ("message"), new NSString (text));
+      // Define details
+      var info = new NSMutableDictionary ();
+      info.Add (new NSString ("message"), new NSString (text));
 
-			// Populate Activity
-			activity.Title = "Sent MonkeyChat Message";
-			activity.UserInfo = info;
+      // Populate Activity
+      activity.Title = "Sent MonkeyChat Message";
+      activity.UserInfo = info;
 
-			// Enable capabilities
-			activity.EligibleForSearch = true;
-			activity.EligibleForHandoff = true;
-			activity.EligibleForPublicIndexing = true;
+      // Enable capabilities
+      activity.EligibleForSearch = true;
+      activity.EligibleForHandoff = true;
+      activity.EligibleForPublicIndexing = true;
 
-			// Inform system of Activity
-			activity.BecomeCurrent ();
+      // Inform system of Activity
+      activity.BecomeCurrent ();
 
-			// Create message Intent
-			var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);
+      // Create message Intent
+      var intent = new INSendMessageIntent (to, text, "", "MonkeyChat", from);
 
-			// Create Intent Reaction
-			var response = new INSendMessageIntentResponse (INSendMessageIntentResponseCode.Success, activity);
+      // Create Intent Reaction
+      var response = new INSendMessageIntentResponse (INSendMessageIntentResponseCode.Success, activity);
 
-			// Create interaction
-			var interaction = new INInteraction (intent, response);
+      // Create interaction
+      var interaction = new INInteraction (intent, response);
 
-			// Donate interaction to the system
-			interaction.DonateInteraction ((err) => {
-				// Handle donation error
-				...
-			});
-		}
-		#endregion
-	}
+      // Donate interaction to the system
+      interaction.DonateInteraction ((err) => {
+        // Handle donation error
+        ...
+      });
+    }
+    #endregion
+  }
 }
 ```
 
@@ -415,8 +415,8 @@ Finally, the system is notification of the Interaction:
 ```csharp
 // Donate interaction to the system
 interaction.DonateInteraction ((err) => {
-	// Handle donation error
-	...
+  // Handle donation error
+  ...
 });
 ```
 
@@ -444,29 +444,29 @@ Some Schema.org background:
 - There are over 500 schemas representing various concepts available.
 - By implementing it on the website, the developer can acquire some of the benefits of using `NSUserActivity` in a native app.
 
-The schemas are arranged in a tree like structure, where specific types such as *Restaurant*, inherit from more generic types such as *Local Business*. For more information, please see [Schema.org](http://schema.org).
+The schemas are arranged in a tree like structure, where specific types such as *Restaurant*, inherit from more generic types such as *Local Business*. For more information, please see [Schema.org](https://schema.org).
 
 For example, if the web page included the following data:
 
-```xml
-<script type="application/ld+json>
+```html
+<script type="application/ld+json">
 {
-	"@context":"http://schema.org",
-	"@type":"Restaurant",
-	"telephone":"(415) 781-1111",
-	"url":"https://www.yanksing.com",
-	"address":{
-		"@type":"PostalAddress",
-		"streetAddress":"101 Spear St",
-		"addressLocality":"San Francisco",
-		"postalCode":"94105",
-		"addressRegion":"CA"
-	},
-	"aggregateRating":{
-		"@type":"AggregateRating",
-		"ratingValue":"3.5",
-		"reviewCount":"2022"
-	}
+  "@context":"http://schema.org",
+  "@type":"Restaurant",
+  "telephone":"(415) 781-1111",
+  "url":"https://www.yanksing.com",
+  "address":{
+    "@type":"PostalAddress",
+    "streetAddress":"101 Spear St",
+    "addressLocality":"San Francisco",
+    "postalCode":"94105",
+    "addressRegion":"CA"
+  },
+  "aggregateRating":{
+    "@type":"AggregateRating",
+    "ratingValue":"3.5",
+    "reviewCount":"2022"
+  }
 }
 </script>
 ```
@@ -509,14 +509,14 @@ Would tell the system that the app expects the user to enter a full street addre
 
 The following are a few of the more common types available to the developer in the `UITextContentType` static class:
 
-* `Name`
-* `GivenName`
-* `FamilyName`
-* `Location`
-* `FullStreetAddress`
-* `AddressCityAndState`
-* `TelephoneNumber`
-* `EmailAddress`
+- `Name`
+- `GivenName`
+- `FamilyName`
+- `Location`
+- `FullStreetAddress`
+- `AddressCityAndState`
+- `TelephoneNumber`
+- `EmailAddress`
 
 ### Routing Apps and Locations Suggestions
 
@@ -529,7 +529,6 @@ This section will take a look at consuming Location Suggestions directly from wi
 
 When the app is started with a MapKit `MKDirectionsRequest` object, it should automatically start giving the user directions to the requested location, or present a UI that makes it easy for the user to start getting directions. For example:
 
-
 ```csharp
 using System;
 using Foundation;
@@ -539,29 +538,29 @@ using CoreLocation;
 
 namespace MonkeyChat
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
-	{
-		...
-		
-		public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
-		{
-			if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
-				var request = new MKDirectionsRequest (url);
-				var coordinate = request.Destination?.Placemark.Location?.Coordinate;
-				var address = request.Destination.Placemark.AddressDictionary;
-				if (coordinate.IsValid()) {
-					var geocoder = new CLGeocoder ();
-					geocoder.GeocodeAddress (address, (place, err) => {
-						// Handle the display of the address
+  [Register ("AppDelegate")]
+  public class AppDelegate : UIApplicationDelegate, IUISplitViewControllerDelegate
+  {
+    ...
+    
+    public override bool OpenUrl (UIApplication app, NSUrl url, NSDictionary options)
+    {
+      if (MKDirectionsRequest.IsDirectionsRequestUrl (url)) {
+        var request = new MKDirectionsRequest (url);
+        var coordinate = request.Destination?.Placemark.Location?.Coordinate;
+        var address = request.Destination.Placemark.AddressDictionary;
+        if (coordinate.IsValid()) {
+          var geocoder = new CLGeocoder ();
+          geocoder.GeocodeAddress (address, (place, err) => {
+            // Handle the display of the address
 
-					});
-				}
-			}
+          });
+        }
+      }
 
-			return true;
-		}
-	}		
+      return true;
+    }
+  }    
 }
 ```
 
@@ -582,8 +581,8 @@ New in iOS 10, the app can be sent an address that does not have geo-coordinates
 ```csharp
 var geocoder = new CLGeocoder();
 geocoder.GeocodeAddress(address, (place, err)=> {
-	// Handle the display of the address
-	
+  // Handle the display of the address
+  
 });
 
 ```
@@ -597,12 +596,11 @@ For apps that handle media, iOS supports the following behaviors:
 - iOS promotes apps that the user is likely to use based on their previous behavior.
 - Suggestions related to the app will be presented in Spotlight and the Today View.
 - If the app meets one of the following triggers, it might be elevated to a lock screen suggestion:
-	- After plugging in headphones or a Bluetooth device makes a connection.
-	- After getting in a car.
-	- After arriving at home or work. 
+  - After plugging in headphones or a Bluetooth device makes a connection.
+  - After getting in a car.
+  - After arriving at home or work. 
 
 By including a simple API call in iOS 10, the developer can create a more engaging lock screen experience for users of the media app. By using the `MPPlayableContentManager` class to manage the media playback, full media controls (like those presented by the Music app) will be presented on the lock screen for the app.
-
 
 ```csharp
 using System;
@@ -611,74 +609,72 @@ using UIKit;
 
 namespace MonkeyPlayer
 {
-	public class PlayableContentDelegate : MPPlayableContentDelegate
-	{
-		#region Constructors
-		public PlayableContentDelegate ()
-		{
-		}
-		#endregion
+  public class PlayableContentDelegate : MPPlayableContentDelegate
+  {
+    #region Constructors
+    public PlayableContentDelegate ()
+    {
+    }
+    #endregion
 
-		#region Override methods
-		public override void InitiatePlaybackOfContentItem (MPPlayableContentManager contentManager, Foundation.NSIndexPath indexPath, Action<Foundation.NSError> completionHandler)
-		{
-			// Access the media item to play
-			var item = LoadMediaItem (indexPath);
+    #region Override methods
+    public override void InitiatePlaybackOfContentItem (MPPlayableContentManager contentManager, Foundation.NSIndexPath indexPath, Action<Foundation.NSError> completionHandler)
+    {
+      // Access the media item to play
+      var item = LoadMediaItem (indexPath);
 
-			// Populate the lock screen
-			PopulateNowPlayingItem (item);
+      // Populate the lock screen
+      PopulateNowPlayingItem (item);
 
-			// Prep item to be played
-			var status = PreparePlayback (item);
+      // Prep item to be played
+      var status = PreparePlayback (item);
 
-			// Call completion handler
-			completionHandler (null);
-		}
-		#endregion
+      // Call completion handler
+      completionHandler (null);
+    }
+    #endregion
 
-		#region Public Methods
-		public MPMediaItem LoadMediaItem (Foundation.NSIndexPath indexPath)
-		{
-			var item = new MPMediaItem ();
+    #region Public Methods
+    public MPMediaItem LoadMediaItem (Foundation.NSIndexPath indexPath)
+    {
+      var item = new MPMediaItem ();
 
-			// Load item from media store
-			...
+      // Load item from media store
+      ...
 
-			return item;
-		}
+      return item;
+    }
 
-		public void PopulateNowPlayingItem (MPMediaItem item)
-		{
-			// Get Info Center and album art
-			var infoCenter = MPNowPlayingInfoCenter.DefaultCenter;
-			var albumArt = (item.Artwork == null) ? new MPMediaItemArtwork (UIImage.FromFile ("MissingAlbumArt.png")) : item.Artwork;
+    public void PopulateNowPlayingItem (MPMediaItem item)
+    {
+      // Get Info Center and album art
+      var infoCenter = MPNowPlayingInfoCenter.DefaultCenter;
+      var albumArt = (item.Artwork == null) ? new MPMediaItemArtwork (UIImage.FromFile ("MissingAlbumArt.png")) : item.Artwork;
 
-			// Populate Info Center
-			infoCenter.NowPlaying.Title = item.Title;
-			infoCenter.NowPlaying.Artist = item.Artist;
-			infoCenter.NowPlaying.AlbumTitle = item.AlbumTitle;
-			infoCenter.NowPlaying.PlaybackDuration = item.PlaybackDuration;
-			infoCenter.NowPlaying.Artwork = albumArt;
-		}
+      // Populate Info Center
+      infoCenter.NowPlaying.Title = item.Title;
+      infoCenter.NowPlaying.Artist = item.Artist;
+      infoCenter.NowPlaying.AlbumTitle = item.AlbumTitle;
+      infoCenter.NowPlaying.PlaybackDuration = item.PlaybackDuration;
+      infoCenter.NowPlaying.Artwork = albumArt;
+    }
 
-		public bool PreparePlayback (MPMediaItem item)
-		{
-			// Prepare media item for playback
-			...
+    public bool PreparePlayback (MPMediaItem item)
+    {
+      // Prepare media item for playback
+      ...
 
-			// Return results
-			return true;
-		}
-		#endregion
-	}
+      // Return results
+      return true;
+    }
+    #endregion
+  }
 }
 ```
 
 ## Summary
 
 This article has covered Proactive Suggestions and showed how the developer can use them to drive traffic to the Xamarin.iOS app. It covered the step to implement Proactive Suggestions and presented usage guidelines.
-
-
 
 ## Related Links
 

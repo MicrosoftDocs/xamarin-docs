@@ -5,8 +5,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 124E4953-4DFA-42B0-BCFC-3227508FE4A6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -21,10 +21,10 @@ _This article covers know issues you might encounter while working with Xamarin'
 The current release of Xamarin's tvOS support has the following known issues:
 
 - **Mono Framework** – Mono 4.3 Cryptography.ProtectedData fails to decrypt data from Mono 4.2. As a result, NuGet packages will fail to restore with the error `Data unprotection failed` when a protected NuGet source is configured.
-	- **Workaround** – In Visual Studio for Mac you will need to add back any NuGet package sources that use password authentication before re-attempting to restore the packages.
+  - **Workaround** – In Visual Studio for Mac you will need to add back any NuGet package sources that use password authentication before re-attempting to restore the packages.
 - **Visual Studio for Mac w/ F# Add-in** – Error when creating an F# Android template on Windows. This should still function correctly on Mac.
 - **Xamarin.Mac** – When running the Xamarin.Mac unified template project with the target Framework set to `Unsupported`, the popup `Could not connect to the debugger` may appear.
-	- **Potential Workaround** – Downgrade the Mono framework version available in our Stable channel.
+  - **Potential Workaround** – Downgrade the Mono framework version available in our Stable channel.
 - **Xamarin Visual Studio & Xamarin.iOS** – When deploying WatchKit applications in Visual studio, the error `The file ‘bin\iPhoneSimulator\Debug\WatchKitApp1WatchKitApp.app\WatchKitApp1WatchKitApp’ does not exist` may appear.
 
 Please report any bugs you find on [GitHub](https://github.com/xamarin/xamarin-macios/issues/new).
@@ -42,7 +42,7 @@ To solve this issue, do the following:
 1. In Visual Studio for Mac, right-click on your Xamarin.tvOS Project File in the **Solution Explorer** and select **Options**.
 2. Select **tvOS Build** and ensure that you are on the **Release** configuration: 
 
-	[![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
+    [![](troubleshooting-images/ts01.png "Select tvOS Build options")](troubleshooting-images/ts01.png#lightbox)
 3. Add `--bitcode=asmonly` to the **Additional mtouch arguments** field and click the **OK** button.
 4. Rebuild your app in the **Release** configuration.
 
@@ -110,7 +110,7 @@ If this occurs, edit your `Info.plist` file and ensure that it has the  followin
 ```xml
 <key>UIRequiredDeviceCapabilities</key>
 <array>
-	<string>arm64</string>
+  <string>arm64</string>
 </array>
 ```
 
@@ -140,7 +140,6 @@ or
 Game Controllers can be used to enhance gameplay and provide a sense of immersion in a game. They can also be used to control the standard Apple TV interface so the user doesn't have to switch between the remote and the controller.
 
 If you are submitting a Xamarin.tvOS app with Game Controller support to the Apple TV App store and you are getting an error message in the form of:
-
 
 _We have discovered one or more issues with your recent delivery for “app name”. Your delivery was successful, but you may wish to correct the following issues in your next delivery:_
 
@@ -195,8 +194,6 @@ To the following path:
 Note that the profile number in the path must match the profile number of the PCL.
 
 With this file in place, you should be able to successfully add the PCL file to the Xamarin.tvOS project.
-
-
 
 ## Related Links
 

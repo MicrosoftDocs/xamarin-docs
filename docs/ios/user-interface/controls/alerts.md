@@ -4,8 +4,8 @@ description: "This document describes how to display alerts in Xamarin.iOS by us
 ms.prod: xamarin
 ms.assetid: 61C671E9-3757-4052-86E4-28640025A34A
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -18,17 +18,17 @@ Unlike the classes it replaced, which are subclasses of UIView, UIAlertControlle
 Use `UIAlertControllerStyle` to indicate the type of alert to display. These alerts types are:
 
 - **UIAlertControllerStyleActionSheet**
-	* Pre-iOS 8 this would have been a UIActionSheet
+  - Pre-iOS 8 this would have been a UIActionSheet
 - **UIAlertControllerStyleAlert**
-	* Pre-iOS 8 this would have been UIAlertView 
+  - Pre-iOS 8 this would have been UIAlertView 
 
 There are three necessary steps to take when creating an Alert Controller:
 
 - Create and configure the Alert with a:
-	* title
-	* message
-	* preferredStyle
-	
+  - title
+  - message
+  - preferredStyle
+
 - (Optional) Add a text field
 - Add the Required actions
 - Present the View Controller
@@ -42,14 +42,14 @@ The code to display a simple alert is as follows:
 ```csharp
 okayButton.TouchUpInside += (sender, e) => {
 
-	//Create Alert
-	var okAlertController = UIAlertController.Create ("Title", "The message", UIAlertControllerStyle.Alert);
+    //Create Alert
+    var okAlertController = UIAlertController.Create ("Title", "The message", UIAlertControllerStyle.Alert);
 
-	//Add Action
-	okAlertController.AddAction (UIAlertAction.Create ("OK", UIAlertActionStyle.Default, null));
+    //Add Action
+    okAlertController.AddAction (UIAlertAction.Create ("OK", UIAlertActionStyle.Default, null));
 
-	// Present Alert
-	PresentViewController (okAlertController, true, null);
+    // Present Alert
+    PresentViewController (okAlertController, true, null);
 };
 ```
 
@@ -60,15 +60,15 @@ Displaying an alert with multiple options, is done in a similar fashion but add 
 ```csharp
 okayCancelButton.TouchUpInside += ((sender, e) => {
 
-	//Create Alert
-	var okCancelAlertController = UIAlertController.Create("Alert Title", "Choose from two buttons", UIAlertControllerStyle.Alert);
+    //Create Alert
+    var okCancelAlertController = UIAlertController.Create("Alert Title", "Choose from two buttons", UIAlertControllerStyle.Alert);
 
-	//Add Actions
-	okCancelAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, alert => Console.WriteLine ("Okay was clicked")));
-	okCancelAlertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, alert => Console.WriteLine ("Cancel was clicked")));
+    //Add Actions
+    okCancelAlertController.AddAction(UIAlertAction.Create("OK", UIAlertActionStyle.Default, alert => Console.WriteLine ("Okay was clicked")));
+    okCancelAlertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, alert => Console.WriteLine ("Cancel was clicked")));
 
-	//Present Alert
-	PresentViewController(okCancelAlertController, true, null);
+    //Present Alert
+    PresentViewController(okCancelAlertController, true, null);
 });
 ```
 
@@ -81,26 +81,26 @@ Buttons are added to the alert with the `AddAction` method:
 ```csharp
 actionSheetButton.TouchUpInside += ((sender, e) => {
 
-	// Create a new Alert Controller
-	UIAlertController actionSheetAlert = UIAlertController.Create("Action Sheet", "Select an item from below", UIAlertControllerStyle.ActionSheet);
+    // Create a new Alert Controller
+    UIAlertController actionSheetAlert = UIAlertController.Create("Action Sheet", "Select an item from below", UIAlertControllerStyle.ActionSheet);
 
-	// Add Actions
-	actionSheetAlert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default, (action) => Console.WriteLine ("Item One pressed.")));
+    // Add Actions
+    actionSheetAlert.AddAction(UIAlertAction.Create("OK",UIAlertActionStyle.Default, (action) => Console.WriteLine ("Item One pressed.")));
 
-	actionSheetAlert.AddAction(UIAlertAction.Create("custom button 1",UIAlertActionStyle.Default, (action) => Console.WriteLine ("Item Two pressed.")));
+    actionSheetAlert.AddAction(UIAlertAction.Create("custom button 1",UIAlertActionStyle.Default, (action) => Console.WriteLine ("Item Two pressed.")));
 
-	actionSheetAlert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel, (action) => Console.WriteLine ("Cancel button pressed.")));
+    actionSheetAlert.AddAction(UIAlertAction.Create("Cancel",UIAlertActionStyle.Cancel, (action) => Console.WriteLine ("Cancel button pressed.")));
 
-	// Required for iPad - You must specify a source for the Action Sheet since it is
-	// displayed as a popover
-	UIPopoverPresentationController presentationPopover = actionSheetAlert.PopoverPresentationController;
-	if (presentationPopover!=null) {
-		presentationPopover.SourceView = this.View;
-		presentationPopover.PermittedArrowDirections = UIPopoverArrowDirection.Up;
-	}
+    // Required for iPad - You must specify a source for the Action Sheet since it is
+    // displayed as a popover
+    UIPopoverPresentationController presentationPopover = actionSheetAlert.PopoverPresentationController;
+    if (presentationPopover!=null) {
+        presentationPopover.SourceView = this.View;
+        presentationPopover.PermittedArrowDirections = UIPopoverArrowDirection.Up;
+    }
 
-	// Display the alert
-	this.PresentViewController(actionSheetAlert,true,null);
+    // Display the alert
+    this.PresentViewController(actionSheetAlert,true,null);
 });
 ```
 

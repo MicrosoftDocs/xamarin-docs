@@ -3,8 +3,8 @@ title: "Android Gallery control"
 ms.prod: xamarin
 ms.assetid: 3112E68A-7853-B147-90A6-6295CA2C4CB5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
 ---
 
@@ -184,6 +184,6 @@ Run the application. It should look like the screenshot below:
 - [`Gallery`](xref:Android.Widget.Gallery)
 - [`ImageView`](xref:Android.Widget.ImageView)
 
-*Portions of this page are modifications based on work created and shared by the 
-Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+_Portions of this page are modifications based on work created and shared by the
+Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](https://creativecommons.org/licenses/by/2.5/)._

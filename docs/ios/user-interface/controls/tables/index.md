@@ -4,8 +4,8 @@ description: "This document links to various guides that describe how to display
 ms.prod: xamarin
 ms.assetid: 04DF47DD-4E17-75D7-AC7C-8CF4A574CD21
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 01/06/2016
 ---
 
@@ -17,10 +17,10 @@ For those working on cross-platform applications with Xamarin.Android, the UITab
 
 These articles will take a comprehensive look at working with tables, including:
 
--   **Table parts** – Introducing and explaining the visual elements of the  `UITableView` control. 
--   **Displaying data in tables** – Demonstrating how to create and populate a table, use different table and cell styles and avoid memory issues by recycling cell objects. 
--   **Advanced usage** – Building custom cells and using the editing features of the UITableView class. 
--   **Creating a table visually** – Using the Xamarin Designer for iOS to create a table-driven interface with a Storyboard. 
+- **Table parts** – Introducing and explaining the visual elements of the  `UITableView` control. 
+- **Displaying data in tables** – Demonstrating how to create and populate a table, use different table and cell styles and avoid memory issues by recycling cell objects. 
+- **Advanced usage** – Building custom cells and using the editing features of the UITableView class. 
+- **Creating a table visually** – Using the Xamarin Designer for iOS to create a table-driven interface with a Storyboard. 
 
 ## Contents
 
@@ -31,11 +31,11 @@ These articles will take a comprehensive look at working with tables, including:
  [Customizing a Table's Appearance](~/ios/user-interface/controls/tables/customizing-table-appearance.md)
 
  [Editing](~/ios/user-interface/controls/tables/editing.md)
- 
+
  [Row Actions](~/ios/user-interface/controls/tables/row-action.md)
 
  [Creating Tables in a Storyboard](~/ios/user-interface/controls/tables/creating-tables-in-a-storyboard.md)
- 
+
  [Auto-Sizing Row Height](~/ios/user-interface/controls/tables/autosizing-row-height.md)
 
 ## Related Links

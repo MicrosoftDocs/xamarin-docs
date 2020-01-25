@@ -4,8 +4,8 @@ description: "This document describes techniques that can be used to improve per
 ms.prod: xamarin
 ms.assetid: 02b1f628-52d9-49de-8479-f2696546ca3f
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 01/29/2016
 ---
 
@@ -27,7 +27,7 @@ class Container : UIView
 {
     public void Poke ()
     {
-	// Call this method to poke this object
+    // Call this method to poke this object
     }
 }
 
@@ -57,10 +57,10 @@ The unmanaged `MyView` object will have a `GCHandle` pointing to the managed obj
 
 In circumstances where a contained object keeps a link to its container, there are several options available to deal with the circular reference:
 
--  Manually break the cycle by setting the link to the container to `null`.
--  Manually remove the contained object from the container.
--  Call `Dispose` on the objects.
--  Avoid the circular reference keeping a weak reference to the container. For more information about weak references.
+- Manually break the cycle by setting the link to the container to `null`.
+- Manually remove the contained object from the container.
+- Call `Dispose` on the objects.
+- Avoid the circular reference keeping a weak reference to the container. For more information about weak references.
 
 ### Using WeakReferences
 
@@ -73,7 +73,7 @@ class Container : UIView
 {
     public void Poke ()
     {
-	    // Call this method to poke this object
+        // Call this method to poke this object
     }
 }
 
@@ -128,15 +128,15 @@ Consider the following code, which uses `WeakReference <T>`:
 
 ```csharp
 public class MyFooDelegate : FooDelegate {
-	WeakReference<MyViewController> controller;
-	public MyFooDelegate (MyViewController ctrl) => controller = new WeakReference<MyViewController> (ctrl);
-	public void CallDoSomething ()
-	{
-		MyViewController ctrl;
-		if (controller.TryGetTarget (out ctrl)) {
-			ctrl.DoSomething ();
-		}
-	}
+    WeakReference<MyViewController> controller;
+    public MyFooDelegate (MyViewController ctrl) => controller = new WeakReference<MyViewController> (ctrl);
+    public void CallDoSomething ()
+    {
+        MyViewController ctrl;
+        if (controller.TryGetTarget (out ctrl)) {
+            ctrl.DoSomething ();
+        }
+    }
 }
 ```
 
@@ -144,9 +144,9 @@ Equivalent code using `[Weak]` is far more concise:
 
 ```csharp
 public class MyFooDelegate : FooDelegate {
-	[Weak] MyViewController controller;
-	public MyFooDelegate (MyViewController ctrl) => controller = ctrl;
-	public void CallDoSomething () => controller.DoSomething ();
+    [Weak] MyViewController controller;
+    public MyFooDelegate (MyViewController ctrl) => controller = ctrl;
+    public void CallDoSomething () => controller.DoSomething ();
 }
 ```
 
@@ -157,33 +157,33 @@ pattern:
 ```csharp
 public class MyViewController : UIViewController
 {
-	WKWebView webView;
+    WKWebView webView;
 
-	protected MyViewController (IntPtr handle) : base (handle) { }
+    protected MyViewController (IntPtr handle) : base (handle) { }
 
-	public override void ViewDidLoad ()
-	{
-		base.ViewDidLoad ();
-		webView = new WKWebView (View.Bounds, new WKWebViewConfiguration ());
-		webView.UIDelegate = new UIDelegate (this);
-		View.AddSubview (webView);
-	}
+    public override void ViewDidLoad ()
+    {
+        base.ViewDidLoad ();
+        webView = new WKWebView (View.Bounds, new WKWebViewConfiguration ());
+        webView.UIDelegate = new UIDelegate (this);
+        View.AddSubview (webView);
+    }
 }
 
 public class UIDelegate : WKUIDelegate
 {
-	[Weak] MyViewController controller;
+    [Weak] MyViewController controller;
 
-	public UIDelegate (MyViewController ctrl) => controller = ctrl;
+    public UIDelegate (MyViewController ctrl) => controller = ctrl;
 
-	public override void RunJavaScriptAlertPanel (WKWebView webView, string message, WKFrameInfo frame, Action completionHandler)
-	{
-		var msg = $"Hello from: {controller.Title}";
-		var alertController = UIAlertController.Create (null, msg, UIAlertControllerStyle.Alert);
-		alertController.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
-		controller.PresentViewController (alertController, true, null);
-		completionHandler ();
-	}
+    public override void RunJavaScriptAlertPanel (WKWebView webView, string message, WKFrameInfo frame, Action completionHandler)
+    {
+        var msg = $"Hello from: {controller.Title}";
+        var alertController = UIAlertController.Create (null, msg, UIAlertControllerStyle.Alert);
+        alertController.AddAction (UIAlertAction.Create ("Ok", UIAlertActionStyle.Default, null));
+        controller.PresentViewController (alertController, true, null);
+        completionHandler ();
+    }
 }
 ```
 
@@ -228,11 +228,11 @@ class MyChild : UIView
 For more information about releasing strong references, see
 [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).
 There's also a good discussion in this blog post:
-[Xamarin.iOS, the garbage collector and me](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me).
+[Xamarin.iOS, the garbage collector and me](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me).
 
 ### More information
 
-For more information, see [Rules to Avoid Retain Cycles](http://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) on Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) on StackOverflow, and [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) on StackOverflow.
+For more information, see [Rules to Avoid Retain Cycles](https://www.cocoawithlove.com/2009/07/rules-to-avoid-retain-cycles.html) on Cocoa With Love, [Is this a bug in MonoTouch GC](https://stackoverflow.com/questions/13058521/is-this-a-bug-in-monotouch-gc) on StackOverflow, and [Why can't MonoTouch GC kill managed objects with refcount > 1?](https://stackoverflow.com/questions/13064669/why-cant-monotouch-gc-kill-managed-objects-with-refcount-1) on StackOverflow.
 
 ## Optimize table views
 

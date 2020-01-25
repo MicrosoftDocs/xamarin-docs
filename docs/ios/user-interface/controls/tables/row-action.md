@@ -4,8 +4,8 @@ description: "This guide demonstrates how to create custom swipe actions for tab
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
 ---
 
@@ -18,7 +18,7 @@ _This guide demonstrates how to create custom swipe actions for table rows with 
 iOS provides two ways to perform actions on a table: `UISwipeActionsConfiguration`
 and `UITableViewRowAction`.
 
-`UISwipeActionsConfiguration` was introduced in iOS 11 and is used to define a set of actions that should take place when the user swipes _in either direction_ on a row in a table view. This behavior is similar to that of the native Mail.app 
+`UISwipeActionsConfiguration` was introduced in iOS 11 and is used to define a set of actions that should take place when the user swipes _in either direction_ on a row in a table view. This behavior is similar to that of the native Mail.app
 
 The `UITableViewRowAction` class is used to define an action that will take
 place when the user swipes left horizontally on a row in a table view.
@@ -27,12 +27,11 @@ button by default. By attaching multiple instances of the `UITableViewRowAction`
 class to a `UITableView`, multiple custom actions can be defined, each with its
 own text, formatting and behavior.
 
-
 ## UISwipeActionsConfiguration
 
 There are a three steps required to implement swipe actions with `UISwipeActionsConfiguration`:
 
-1. Override `GetLeadingSwipeActionsConfiguration` and/or `GetTrailingSwipeActionsConfiguration` methods. These methods return a `UISwipeActionsConfiguration`. 
+1. Override `GetLeadingSwipeActionsConfiguration` and/or `GetTrailingSwipeActionsConfiguration` methods. These methods return a `UISwipeActionsConfiguration`.
 2. Instantiate the `UISwipeActionsConfiguration` to be returned. This class takes an array of `UIContextualAction`.
 3. Create a `UIContextualAction`.
 
@@ -40,25 +39,24 @@ These are explained in greater detail in the following sections.
 
 ### 1. Implementing the SwipeActionsConfigurations methods
 
-`UITableViewController` (and also `UITableViewSource` and `UITableViewDelegate`) contain two methods: `GetLeadingSwipeActionsConfiguration` and `GetTrailingSwipeActionsConfiguration`, that are used to implement a set of swipe actions on a table view row. The leading swipe action refers to a swipe from the left hand side of the screen in a left-to-right language and from the right hand side of the screen in a right-to-left language. 
+`UITableViewController` (and also `UITableViewSource` and `UITableViewDelegate`) contain two methods: `GetLeadingSwipeActionsConfiguration` and `GetTrailingSwipeActionsConfiguration`, that are used to implement a set of swipe actions on a table view row. The leading swipe action refers to a swipe from the left hand side of the screen in a left-to-right language and from the right hand side of the screen in a right-to-left language.
 
 The following example (from the [TableSwipeActions](https://docs.microsoft.com/samples/xamarin/ios-samples/tableswipeactions) sample) demonstrates implementing the leading swipe configuration. Two actions are created from the contextual actions, which are explained [below](#create-uicontextualaction). These actions are then passed in to a newly initialized [`UISwipeActionsConfiguration`](#create-uiswipeactionsconfigurations), which is used as the return value.
-
 
 ```csharp
 public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(UITableView tableView, NSIndexPath indexPath)
 {
-	//UIContextualActions
-	var definitionAction = ContextualDefinitionAction(indexPath.Row);
-	var flagAction = ContextualFlagAction(indexPath.Row);
+    //UIContextualActions
+    var definitionAction = ContextualDefinitionAction(indexPath.Row);
+    var flagAction = ContextualFlagAction(indexPath.Row);
 
-	//UISwipeActionsConfiguration
-	var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction });
-	
-	leadingSwipe.PerformsFirstActionWithFullSwipe = false;
-	
-	return leadingSwipe;
-}  
+    //UISwipeActionsConfiguration
+    var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualAction[] { flagAction, definitionAction });
+
+    leadingSwipe.PerformsFirstActionWithFullSwipe = false;
+
+    return leadingSwipe;
+}
 ```
 
 <a name="create-uiswipeactionsconfigurations" />
@@ -94,22 +92,22 @@ To initialize an action you must provide a `UIContextualActionStyle`, a title, a
 ```csharp
 public UIContextualAction ContextualFlagAction(int row)
 {
-	var action = UIContextualAction.FromContextualActionStyle
-					(UIContextualActionStyle.Normal,
-						"Flag",
-						(FlagAction, view, success) => {
-							var alertController = UIAlertController.Create($"Report {words[row]}?", "", UIAlertControllerStyle.Alert);
-							alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null)); 
-							alertController.AddAction(UIAlertAction.Create("Yes", UIAlertActionStyle.Destructive, null));
-							PresentViewController(alertController, true, null);
-							
-							success(true);
-						});
+    var action = UIContextualAction.FromContextualActionStyle
+                    (UIContextualActionStyle.Normal,
+                        "Flag",
+                        (FlagAction, view, success) => {
+                            var alertController = UIAlertController.Create($"Report {words[row]}?", "", UIAlertControllerStyle.Alert);
+                            alertController.AddAction(UIAlertAction.Create("Cancel", UIAlertActionStyle.Cancel, null));
+                            alertController.AddAction(UIAlertAction.Create("Yes", UIAlertActionStyle.Destructive, null));
+                            PresentViewController(alertController, true, null);
 
-	action.Image = UIImage.FromFile("feedback.png");
-	action.BackgroundColor = UIColor.Blue;
+                            success(true);
+                        });
 
-	return action;
+    action.Image = UIImage.FromFile("feedback.png");
+    action.BackgroundColor = UIColor.Blue;
+
+    return action;
 }
 ```
 
@@ -120,7 +118,7 @@ Once the contextual actions have been created, they can use to initialize the `U
 ## UITableViewRowAction
 
 To define one or more custom row actions for a `UITableView`, you will need to
-create an instance of the `UITableViewDelegate` class and override the 
+create an instance of the `UITableViewDelegate` class and override the
 `EditActionsForRow` method. For example:
 
 ```csharp
@@ -132,36 +130,36 @@ using UIKit;
 
 namespace BasicTable
 {
-	public class TableDelegate : UITableViewDelegate
-	{
-		#region Constructors
-		public TableDelegate ()
-		{
-		}
+    public class TableDelegate : UITableViewDelegate
+    {
+        #region Constructors
+        public TableDelegate ()
+        {
+        }
 
-		public TableDelegate (IntPtr handle) : base (handle)
-		{
-		}
+        public TableDelegate (IntPtr handle) : base (handle)
+        {
+        }
 
-		public TableDelegate (NSObjectFlag t) : base (t)
-		{
-		}
+        public TableDelegate (NSObjectFlag t) : base (t)
+        {
+        }
 
-		#endregion
+        #endregion
 
-		#region Override Methods
-		public override UITableViewRowAction[] EditActionsForRow (UITableView tableView, NSIndexPath indexPath)
-		{
-			UITableViewRowAction hiButton = UITableViewRowAction.Create (
-				UITableViewRowActionStyle.Default,
-				"Hi",
-				delegate {
-					Console.WriteLine ("Hello World!");
-				});
-			return new UITableViewRowAction[] { hiButton };
-		}
-		#endregion
-	}
+        #region Override Methods
+        public override UITableViewRowAction[] EditActionsForRow (UITableView tableView, NSIndexPath indexPath)
+        {
+            UITableViewRowAction hiButton = UITableViewRowAction.Create (
+                UITableViewRowActionStyle.Default,
+                "Hi",
+                delegate {
+                    Console.WriteLine ("Hello World!");
+                });
+            return new UITableViewRowAction[] { hiButton };
+        }
+        #endregion
+    }
 }
 ```
 
@@ -187,8 +185,6 @@ the **Hi** button will be displayed instead of the **Delete** button that is dis
 
 If the user taps the **Hi** button, `Hello World!` will be written out to the
 console in Visual Studio for Mac or Visual Studio when the application is run in the debug mode.
-
-
 
 ## Related Links
 

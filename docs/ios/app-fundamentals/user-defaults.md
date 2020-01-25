@@ -4,15 +4,14 @@ description: "This article covers working with NSUserDefaults to save default se
 ms.prod: xamarin
 ms.assetid: DAE7FFC4-B8C9-4D9E-886A-9B2388452EEB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2016
 ---
 
 # Working with User Defaults in Xamarin.iOS
 
 _This article covers working with NSUserDefault to save default settings in a Xamarin.iOS App or Extension._
-
 
 The `NSUserDefaults` class provides a way for iOS Apps and Extensions to programmatically interact with the system-wide Defaults System. By using the Defaults System, the user can configure an app's behavior or styling to meet their preferences (based on the design of the app). For example, to present data in Metric vs Imperial measurements or select a given UI Theme.
 
@@ -124,14 +123,11 @@ plist.SetBool(useHeader, "UseHeader");
 > [!IMPORTANT]
 > When your App first executes, `NSUserDefaults` reads the keys and values from the app's User Defaults Database and caches them to memory to avoid opening and reading the database each time a value is required.
 
-
-
 <a name="Summary" />
 
 ## Summary
 
 This article has covered the `NSUserDefaults` class and how it can be used to provide a set of options that the end user can use to configure your Xamarin.iOS App. Additionally, it covered using App Groups to communicate between an extension and its Parent App or between apps in a group.
-
 
 ## Related Links
 

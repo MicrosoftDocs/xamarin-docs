@@ -4,15 +4,14 @@ description: "This guide discusses how to add fingerprint authentication, introd
 ms.prod: xamarin
 ms.assetid: 6742D874-4988-4516-A946-D5C714B20A10
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
 # Fingerprint Authentication
 
 _This guide discusses how to add fingerprint authentication, introduced in Android 6.0, to a Xamarin.Android application._
-
 
 ## Fingerprint Authentication Overview
 
@@ -22,9 +21,9 @@ The FingerprintManager APIs target devices with a fingerprint scanner and are ru
 
 The [FingerprintManager](https://developer.android.com/reference/android/hardware/fingerprint/FingerprintManager.html) (and its Support Library counterpart, [FingerprintManagerCompat](https://developer.android.com/reference/android/support/v4/hardware/fingerprint/FingerprintManagerCompat.html)) is the primary class for using the fingerprint scanning hardware. This class is an Android SDK wrapper around the system level service that manages interactions with the hardware itself. It is responsible for starting the fingerprint scanner and for responding to feedback from the scanner. This class has a fairly straightforward interface with only three members:
 
-* **`Authenticate`** &ndash; This method will initialize the hardware scanner and start the service in the background, waiting for the user to scan their fingerprint.
-* **`EnrolledFingerprints`** &ndash; This property will return `true` if the user has registered one or more fingerprints with the device.
-* **`HardwareDetected`** &ndash; This property is used to determine if the device supports fingerprint scanning.
+- **`Authenticate`** &ndash; This method will initialize the hardware scanner and start the service in the background, waiting for the user to scan their fingerprint.
+- **`EnrolledFingerprints`** &ndash; This property will return `true` if the user has registered one or more fingerprints with the device.
+- **`HardwareDetected`** &ndash; This property is used to determine if the device supports fingerprint scanning.
 
 The `FingerprintManager.Authenticate` method is used by an Android application to start the fingerprint scanner. The following snippet is an example of how to invoke it using the Support Library compatibility APIs:
 
@@ -46,11 +45,6 @@ This guide will discuss how to use the `FingerprintManager` APIs to enhance an A
 Fingerprint Authentication requires Android 6.0 (API level 23) or higher and a device with a fingerprint scanner. 
 
 A fingerprint must already be enrolled with the device for each user that is to be authenticated. This involves setting up a screen lock that uses a password, PIN, swipe pattern, or facial recognition. It is possible to simulate some of the fingerprint authentication functionality in an Android Emulator.  For more information on these two topics, please see the [Enrolling a Fingerprint](enrolling-fingerprint.md) section. 
-
-
-
-
-
 
 ## Related Links
 

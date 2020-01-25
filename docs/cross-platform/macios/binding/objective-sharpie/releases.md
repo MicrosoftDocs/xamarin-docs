@@ -3,8 +3,8 @@ title: "Objective Sharpie Release History"
 description: "This document describes the release history of Objective Sharpie, the tool used to automate the creation of C# bindings to Objective-C code."
 ms.prod: xamarin
 ms.assetid: 1F4A1BE1-7205-43F4-89D0-6C8672F52598
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2017
 ---
 
@@ -52,8 +52,6 @@ ms.date: 10/11/2017
 * For Xcode projects that build a framework product, parse that product instead of intermediate product targets as non-framework targets in an Xcode project may still have ambiguities which cannot be automatically resolved.
 
 ## 2.1.6 (March 17, 2015)
-
-[Download v2.1.6](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.6.pkg)
 
 * Fixed binary operator expression binding: the left-hand side of the expression was incorrectly swapped with the right-hand (e.g. `1 << 0` was incorrectly bound as `0 << 1`). Thanks to Adam Kemp for noticing this!
 * Fixed an issue with `NSInteger` and `NSUInteger` being bound as `int` and `uint` instead of `nint` and `nuint` on i386; `-DNS_BUILD_32_LIKE_64` is now passed to Clang to make parsing `objc/NSObjCRuntime.h` work as expected on i386.
@@ -137,4 +135,3 @@ Minor bug fixes.
 [Download v1.1.1](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-1.1.1.pkg)
 
 1.1.1 was the first major release after 1.5 years of internal use and development at Xamarin following the initial preview of Objective Sharpie in April 2013. This release is the first to be generally considered stable and usable for a wide variety of native libraries, featuring a new Clang backend.
-

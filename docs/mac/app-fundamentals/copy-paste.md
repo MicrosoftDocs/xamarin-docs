@@ -4,8 +4,8 @@ description: "This article covers working with the pasteboard to provide copy an
 ms.prod: xamarin
 ms.assetid: 7E9C99FB-B7B4-4C48-B20F-84CB48543083
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -45,14 +45,14 @@ Do the following:
 1. Start Visual Studio for Mac and click the **New Project...** link.
 2. Select **Mac** > **App** > **Cocoa App**, then click the **Next** button: 
 
-	[![Creating a new Cocoa app project](copy-paste-images/sample01.png "Creating a new Cocoa app project")](copy-paste-images/sample01-large.png#lightbox)
+    [![Creating a new Cocoa app project](copy-paste-images/sample01.png "Creating a new Cocoa app project")](copy-paste-images/sample01-large.png#lightbox)
 3. Enter `MacCopyPaste` for the **Project Name** and keep everything else as default. Click Next: 
 
-	[![Setting the name of the project](copy-paste-images/sample01a.png "Setting the name of the project")](copy-paste-images/sample01a-large.png#lightbox)
+    [![Setting the name of the project](copy-paste-images/sample01a.png "Setting the name of the project")](copy-paste-images/sample01a-large.png#lightbox)
 
 4. Click the **Create** button: 
 
-	[![Confirming the new project settings](copy-paste-images/sample02.png "Confirming the new project settings")](copy-paste-images/sample02-large.png#lightbox)
+    [![Confirming the new project settings](copy-paste-images/sample02.png "Confirming the new project settings")](copy-paste-images/sample02-large.png#lightbox)
 
 ### Add an NSDocument
 
@@ -72,98 +72,98 @@ using ObjCRuntime;
 
 namespace MacCopyPaste
 {
-	[Register("ImageDocument")]
-	public class ImageDocument : NSDocument
-	{
-		#region Computed Properties
-		public NSImageView ImageView {get; set;}
+    [Register("ImageDocument")]
+    public class ImageDocument : NSDocument
+    {
+        #region Computed Properties
+        public NSImageView ImageView {get; set;}
 
-		public ImageInfo Info { get; set; } = new ImageInfo();
+        public ImageInfo Info { get; set; } = new ImageInfo();
 
-		public bool ImageAvailableOnPasteboard {
-			get {
-				// Initialize the pasteboard
-				NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
-				Class [] classArray  = { new Class ("NSImage") };
+        public bool ImageAvailableOnPasteboard {
+            get {
+                // Initialize the pasteboard
+                NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
+                Class [] classArray  = { new Class ("NSImage") };
 
-				// Check to see if an image is on the pasteboard
-				return pasteboard.CanReadObjectForClasses (classArray, null);
-			}
-		}
-		#endregion
+                // Check to see if an image is on the pasteboard
+                return pasteboard.CanReadObjectForClasses (classArray, null);
+            }
+        }
+        #endregion
 
-		#region Constructor
-		public ImageDocument ()
-		{
-		}
-		#endregion
+        #region Constructor
+        public ImageDocument ()
+        {
+        }
+        #endregion
 
-		#region Public Methods
-		[Export("CopyImage:")]
-		public void CopyImage(NSObject sender) {
+        #region Public Methods
+        [Export("CopyImage:")]
+        public void CopyImage(NSObject sender) {
 
-			// Grab the current image
-			var image = ImageView.Image;
+            // Grab the current image
+            var image = ImageView.Image;
 
-			// Anything to process?
-			if (image != null) {
-				// Get the standard pasteboard
-				var pasteboard = NSPasteboard.GeneralPasteboard;
+            // Anything to process?
+            if (image != null) {
+                // Get the standard pasteboard
+                var pasteboard = NSPasteboard.GeneralPasteboard;
 
-				// Empty the current contents
-				pasteboard.ClearContents();
+                // Empty the current contents
+                pasteboard.ClearContents();
 
-				// Add the current image to the pasteboard
-				pasteboard.WriteObjects (new NSImage[] {image});
+                // Add the current image to the pasteboard
+                pasteboard.WriteObjects (new NSImage[] {image});
 
-				// Save the custom data class to the pastebaord
-				pasteboard.WriteObjects (new ImageInfo[] { Info });
+                // Save the custom data class to the pastebaord
+                pasteboard.WriteObjects (new ImageInfo[] { Info });
 
-				// Using a Pasteboard Item
-				NSPasteboardItem item = new NSPasteboardItem();
-				string[] writableTypes = {"public.text"};
+                // Using a Pasteboard Item
+                NSPasteboardItem item = new NSPasteboardItem();
+                string[] writableTypes = {"public.text"};
 
-				// Add a data provier to the item
-				ImageInfoDataProvider dataProvider = new ImageInfoDataProvider (Info.Name, Info.ImageType);
-				var ok = item.SetDataProviderForTypes (dataProvider, writableTypes);
+                // Add a data provier to the item
+                ImageInfoDataProvider dataProvider = new ImageInfoDataProvider (Info.Name, Info.ImageType);
+                var ok = item.SetDataProviderForTypes (dataProvider, writableTypes);
 
-				// Save to pasteboard
-				if (ok) {
-					pasteboard.WriteObjects (new NSPasteboardItem[] { item });
-				}
-			}
+                // Save to pasteboard
+                if (ok) {
+                    pasteboard.WriteObjects (new NSPasteboardItem[] { item });
+                }
+            }
 
-		}
+        }
 
-		[Export("PasteImage:")]
-		public void PasteImage(NSObject sender) {
+        [Export("PasteImage:")]
+        public void PasteImage(NSObject sender) {
 
-			// Initialize the pasteboard
-			NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
-			Class [] classArray  = { new Class ("NSImage") };
+            // Initialize the pasteboard
+            NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
+            Class [] classArray  = { new Class ("NSImage") };
 
-			bool ok = pasteboard.CanReadObjectForClasses (classArray, null);
-			if (ok) {
-				// Read the image off of the pasteboard
-				NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray, null);
-				NSImage image = (NSImage)objectsToPaste[0];
+            bool ok = pasteboard.CanReadObjectForClasses (classArray, null);
+            if (ok) {
+                // Read the image off of the pasteboard
+                NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray, null);
+                NSImage image = (NSImage)objectsToPaste[0];
 
-				// Display the new image
-				ImageView.Image = image;
-			}
+                // Display the new image
+                ImageView.Image = image;
+            }
 
-			Class [] classArray2 = { new Class ("ImageInfo") };
-			ok = pasteboard.CanReadObjectForClasses (classArray2, null);
-			if (ok) {
-				// Read the image off of the pasteboard
-				NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray2, null);
-				ImageInfo info = (ImageInfo)objectsToPaste[0];
+            Class [] classArray2 = { new Class ("ImageInfo") };
+            ok = pasteboard.CanReadObjectForClasses (classArray2, null);
+            if (ok) {
+                // Read the image off of the pasteboard
+                NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray2, null);
+                ImageInfo info = (ImageInfo)objectsToPaste[0];
 
-			}
+            }
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }
 ```
 
@@ -173,14 +173,14 @@ The following code provides a property to test for the existence of image data o
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
-	get {
-		// Initialize the pasteboard
-		NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
-		Class [] classArray  = { new Class ("NSImage") };
+    get {
+        // Initialize the pasteboard
+        NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
+        Class [] classArray  = { new Class ("NSImage") };
 
-		// Check to see if an image is on the pasteboard
-		return pasteboard.CanReadObjectForClasses (classArray, null);
-	}
+        // Check to see if an image is on the pasteboard
+        return pasteboard.CanReadObjectForClasses (classArray, null);
+    }
 }
 ```
 
@@ -190,36 +190,36 @@ The following code copies an image from the attached image view into the default
 [Export("CopyImage:")]
 public void CopyImage(NSObject sender) {
 
-	// Grab the current image
-	var image = ImageView.Image;
+    // Grab the current image
+    var image = ImageView.Image;
 
-	// Anything to process?
-	if (image != null) {
-		// Get the standard pasteboard
-		var pasteboard = NSPasteboard.GeneralPasteboard;
+    // Anything to process?
+    if (image != null) {
+        // Get the standard pasteboard
+        var pasteboard = NSPasteboard.GeneralPasteboard;
 
-		// Empty the current contents
-		pasteboard.ClearContents();
+        // Empty the current contents
+        pasteboard.ClearContents();
 
-		// Add the current image to the pasteboard
-		pasteboard.WriteObjects (new NSImage[] {image});
+        // Add the current image to the pasteboard
+        pasteboard.WriteObjects (new NSImage[] {image});
 
-		// Save the custom data class to the pastebaord
-		pasteboard.WriteObjects (new ImageInfo[] { Info });
+        // Save the custom data class to the pastebaord
+        pasteboard.WriteObjects (new ImageInfo[] { Info });
 
-		// Using a Pasteboard Item
-		NSPasteboardItem item = new NSPasteboardItem();
-		string[] writableTypes = {"public.text"};
+        // Using a Pasteboard Item
+        NSPasteboardItem item = new NSPasteboardItem();
+        string[] writableTypes = {"public.text"};
 
-		// Add a data provider to the item
-		ImageInfoDataProvider dataProvider = new ImageInfoDataProvider (Info.Name, Info.ImageType);
-		var ok = item.SetDataProviderForTypes (dataProvider, writableTypes);
+        // Add a data provider to the item
+        ImageInfoDataProvider dataProvider = new ImageInfoDataProvider (Info.Name, Info.ImageType);
+        var ok = item.SetDataProviderForTypes (dataProvider, writableTypes);
 
-		// Save to pasteboard
-		if (ok) {
-			pasteboard.WriteObjects (new NSPasteboardItem[] { item });
-		}
-	}
+        // Save to pasteboard
+        if (ok) {
+            pasteboard.WriteObjects (new NSPasteboardItem[] { item });
+        }
+    }
 
 }
 ```
@@ -230,27 +230,27 @@ And the following code pastes an image from the default pasteboard and displays 
 [Export("PasteImage:")]
 public void PasteImage(NSObject sender) {
 
-	// Initialize the pasteboard
-	NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
-	Class [] classArray  = { new Class ("NSImage") };
+    // Initialize the pasteboard
+    NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
+    Class [] classArray  = { new Class ("NSImage") };
 
-	bool ok = pasteboard.CanReadObjectForClasses (classArray, null);
-	if (ok) {
-		// Read the image off of the pasteboard
-		NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray, null);
-		NSImage image = (NSImage)objectsToPaste[0];
+    bool ok = pasteboard.CanReadObjectForClasses (classArray, null);
+    if (ok) {
+        // Read the image off of the pasteboard
+        NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray, null);
+        NSImage image = (NSImage)objectsToPaste[0];
 
-		// Display the new image
-		ImageView.Image = image;
-	}
+        // Display the new image
+        ImageView.Image = image;
+    }
 
-	Class [] classArray2 = { new Class ("ImageInfo") };
-	ok = pasteboard.CanReadObjectForClasses (classArray2, null);
-	if (ok) {
-		// Read the image off of the pasteboard
-		NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray2, null);
-		ImageInfo info = (ImageInfo)objectsToPaste[0]
-	}
+    Class [] classArray2 = { new Class ("ImageInfo") };
+    ok = pasteboard.CanReadObjectForClasses (classArray2, null);
+    if (ok) {
+        // Read the image off of the pasteboard
+        NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray2, null);
+        ImageInfo info = (ImageInfo)objectsToPaste[0]
+    }
 }
 ```
 
@@ -283,110 +283,110 @@ using AppKit;
 
 namespace MacCopyPaste
 {
-	public partial class ImageWindow : NSWindow
-	{
-		#region Private Variables
-		ImageDocument document;
-		#endregion
+    public partial class ImageWindow : NSWindow
+    {
+        #region Private Variables
+        ImageDocument document;
+        #endregion
 
-		#region Computed Properties
-		[Export ("Document")]
-		public ImageDocument Document {
-			get {
-				return document;
-			}
-			set {
-				WillChangeValue ("Document");
-				document = value;
-				DidChangeValue ("Document");
-			}
-		}
+        #region Computed Properties
+        [Export ("Document")]
+        public ImageDocument Document {
+            get {
+                return document;
+            }
+            set {
+                WillChangeValue ("Document");
+                document = value;
+                DidChangeValue ("Document");
+            }
+        }
 
-		public ViewController ImageViewController {
-			get { return ContentViewController as ViewController; }
-		}
+        public ViewController ImageViewController {
+            get { return ContentViewController as ViewController; }
+        }
 
-		public NSImage Image {
-			get {
-				return ImageViewController.Image;
-			}
-			set {
-				ImageViewController.Image = value;
-			}
-		}
-		#endregion
+        public NSImage Image {
+            get {
+                return ImageViewController.Image;
+            }
+            set {
+                ImageViewController.Image = value;
+            }
+        }
+        #endregion
 
-		#region Constructor
-		public ImageWindow (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructor
+        public ImageWindow (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void AwakeFromNib ()
-		{
-			base.AwakeFromNib ();
+        #region Override Methods
+        public override void AwakeFromNib ()
+        {
+            base.AwakeFromNib ();
 
-			// Create a new document instance
-			Document = new ImageDocument ();
+            // Create a new document instance
+            Document = new ImageDocument ();
 
-			// Attach to image view
-			Document.ImageView = ImageViewController.ContentView;
-		}
-		#endregion
+            // Attach to image view
+            Document.ImageView = ImageViewController.ContentView;
+        }
+        #endregion
 
-		#region Public Methods
-		public void CopyImage (NSObject sender)
-		{
-			Document.CopyImage (sender);
-		}
+        #region Public Methods
+        public void CopyImage (NSObject sender)
+        {
+            Document.CopyImage (sender);
+        }
 
-		public void PasteImage (NSObject sender)
-		{
-			Document.PasteImage (sender);
-		}
+        public void PasteImage (NSObject sender)
+        {
+            Document.PasteImage (sender);
+        }
 
-		public void ImageOne (NSObject sender)
-		{
-			// Load image
-			Image = NSImage.ImageNamed ("Image01.jpg");
+        public void ImageOne (NSObject sender)
+        {
+            // Load image
+            Image = NSImage.ImageNamed ("Image01.jpg");
 
-			// Set image info
-			Document.Info.Name = "city";
-			Document.Info.ImageType = "jpg";
-		}
+            // Set image info
+            Document.Info.Name = "city";
+            Document.Info.ImageType = "jpg";
+        }
 
-		public void ImageTwo (NSObject sender)
-		{
-			// Load image
-			Image = NSImage.ImageNamed ("Image02.jpg");
+        public void ImageTwo (NSObject sender)
+        {
+            // Load image
+            Image = NSImage.ImageNamed ("Image02.jpg");
 
-			// Set image info
-			Document.Info.Name = "theater";
-			Document.Info.ImageType = "jpg";
-		}
+            // Set image info
+            Document.Info.Name = "theater";
+            Document.Info.ImageType = "jpg";
+        }
 
-		public void ImageThree (NSObject sender)
-		{
-			// Load image
-			Image = NSImage.ImageNamed ("Image03.jpg");
+        public void ImageThree (NSObject sender)
+        {
+            // Load image
+            Image = NSImage.ImageNamed ("Image03.jpg");
 
-			// Set image info
-			Document.Info.Name = "keyboard";
-			Document.Info.ImageType = "jpg";
-		}
+            // Set image info
+            Document.Info.Name = "keyboard";
+            Document.Info.ImageType = "jpg";
+        }
 
-		public void ImageFour (NSObject sender)
-		{
-			// Load image
-			Image = NSImage.ImageNamed ("Image04.jpg");
+        public void ImageFour (NSObject sender)
+        {
+            // Load image
+            Image = NSImage.ImageNamed ("Image04.jpg");
 
-			// Set image info
-			Document.Info.Name = "trees";
-			Document.Info.ImageType = "jpg";
-		}
-		#endregion
-	}
+            // Set image info
+            Document.Info.Name = "trees";
+            Document.Info.ImageType = "jpg";
+        }
+        #endregion
+    }
 }
 ```
 
@@ -400,12 +400,12 @@ private ImageDocument _document;
 
 [Export ("Document")]
 public ImageDocument Document {
-	get { return _document; }
-	set {
-		WillChangeValue ("Document");
-		_document = value;
-		DidChangeValue ("Document");
-	}
+    get { return _document; }
+    set {
+        WillChangeValue ("Document");
+        _document = value;
+        DidChangeValue ("Document");
+    }
 }
 ```
 
@@ -415,16 +415,16 @@ We also expose the Image from the image well we added to our UI in Xcode with th
 
 ```csharp
 public ViewController ImageViewController {
-	get { return ContentViewController as ViewController; }
+    get { return ContentViewController as ViewController; }
 }
 
 public NSImage Image {
-	get {
-		return ImageViewController.Image;
-	}
-	set {
-		ImageViewController.Image = value;
-	}
+    get {
+        return ImageViewController.Image;
+    }
+    set {
+        ImageViewController.Image = value;
+    }
 }
 ```
 
@@ -433,13 +433,13 @@ When the Main Window is loaded and displayed, we create an instance of our `Imag
 ```csharp
 public override void AwakeFromNib ()
 {
-	base.AwakeFromNib ();
+    base.AwakeFromNib ();
 
-	// Create a new document instance
-	Document = new ImageDocument ();
+    // Create a new document instance
+    Document = new ImageDocument ();
 
-	// Attach to image view
-	Document.ImageView = ImageViewController.ContentView;
+    // Attach to image view
+    Document.ImageView = ImageViewController.ContentView;
 }
 ```
 
@@ -447,11 +447,11 @@ Finally, in response to the user clicking on the copy and paste toolbar items, w
 
 ```csharp
 partial void CopyImage (NSObject sender) {
-	Document.CopyImage(sender);
+    Document.CopyImage(sender);
 }
 
 partial void PasteImage (Foundation.NSObject sender) {
-	Document.PasteImage(sender);
+    Document.PasteImage(sender);
 }
 ```
 
@@ -467,15 +467,15 @@ public int UntitledWindowCount { get; set;} =1;
 
 [Export ("newDocument:")]
 void NewDocument (NSObject sender) {
-	// Get new window
-	var storyboard = NSStoryboard.FromName ("Main", null);
-	var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
+    // Get new window
+    var storyboard = NSStoryboard.FromName ("Main", null);
+    var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
 
-	// Display
-	controller.ShowWindow(this);
+    // Display
+    controller.ShowWindow(this);
 
-	// Set the title
-	controller.Window.Title = (++UntitledWindowCount == 1) ? "untitled" : string.Format ("untitled {0}", UntitledWindowCount);
+    // Set the title
+    controller.Window.Title = (++UntitledWindowCount == 1) ? "untitled" : string.Format ("untitled {0}", UntitledWindowCount);
 }
 ```
 
@@ -487,46 +487,46 @@ To enable the **Cut**, **Copy** and **Paste** menu items, edit the **AppDelegate
 [Export("copy:")]
 void CopyImage (NSObject sender)
 {
-	// Get the main window
-	var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
+    // Get the main window
+    var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 
-	// Anything to do?
-	if (window == null)
-		return;
+    // Anything to do?
+    if (window == null)
+        return;
 
-	// Copy the image to the clipboard
-	window.Document.CopyImage (sender);
+    // Copy the image to the clipboard
+    window.Document.CopyImage (sender);
 }
 
 [Export("cut:")]
 void CutImage (NSObject sender)
 {
-	// Get the main window
-	var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
+    // Get the main window
+    var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 
-	// Anything to do?
-	if (window == null)
-		return;
+    // Anything to do?
+    if (window == null)
+        return;
 
-	// Copy the image to the clipboard
-	window.Document.CopyImage (sender);
+    // Copy the image to the clipboard
+    window.Document.CopyImage (sender);
 
-	// Clear the existing image
-	window.Image = null;
+    // Clear the existing image
+    window.Image = null;
 }
 
 [Export("paste:")]
 void PasteImage (NSObject sender)
 {
-	// Get the main window
-	var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
+    // Get the main window
+    var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
 
-	// Anything to do?
-	if (window == null)
-		return;
+    // Anything to do?
+    if (window == null)
+        return;
 
-	// Paste the image from the clipboard
-	window.Document.PasteImage (sender);
+    // Paste the image from the clipboard
+    window.Document.PasteImage (sender);
 }
 ```
 
@@ -552,59 +552,59 @@ using AppKit;
 
 namespace MacCopyPaste
 {
-	public class EditMenuDelegate : NSMenuDelegate
-	{
-		#region Override Methods
-		public override void MenuWillHighlightItem (NSMenu menu, NSMenuItem item)
-		{
-		}
+    public class EditMenuDelegate : NSMenuDelegate
+    {
+        #region Override Methods
+        public override void MenuWillHighlightItem (NSMenu menu, NSMenuItem item)
+        {
+        }
 
-		public override void NeedsUpdate (NSMenu menu)
-		{
-			// Get list of menu items
-			NSMenuItem[] Items = menu.ItemArray ();
+        public override void NeedsUpdate (NSMenu menu)
+        {
+            // Get list of menu items
+            NSMenuItem[] Items = menu.ItemArray ();
 
-			// Get the key window and determine if the required images are available
-			var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
-			var hasImage = (window != null) && (window.Image != null);
-			var hasImageOnPasteboard = (window != null) && window.Document.ImageAvailableOnPasteboard;
+            // Get the key window and determine if the required images are available
+            var window = NSApplication.SharedApplication.KeyWindow as ImageWindow;
+            var hasImage = (window != null) && (window.Image != null);
+            var hasImageOnPasteboard = (window != null) && window.Document.ImageAvailableOnPasteboard;
 
-			// Process every item in the menu
-			foreach(NSMenuItem item in Items) {
-				// Take action based on the menu title
-				switch (item.Title) {
-				case "Cut":
-				case "Copy":
-				case "Delete":
-					// Only enable if there is an image in the view
-					item.Enabled = hasImage;
-					break;
-				case "Paste":
-					// Only enable if there is an image on the pasteboard
-					item.Enabled = hasImageOnPasteboard;
-					break;
-				default:
-					// Only enable the item if it has a sub menu
-					item.Enabled = item.HasSubmenu;
-					break;
-				}
-			}
-		}
-		#endregion
-	}
+            // Process every item in the menu
+            foreach(NSMenuItem item in Items) {
+                // Take action based on the menu title
+                switch (item.Title) {
+                case "Cut":
+                case "Copy":
+                case "Delete":
+                    // Only enable if there is an image in the view
+                    item.Enabled = hasImage;
+                    break;
+                case "Paste":
+                    // Only enable if there is an image on the pasteboard
+                    item.Enabled = hasImageOnPasteboard;
+                    break;
+                default:
+                    // Only enable the item if it has a sub menu
+                    item.Enabled = item.HasSubmenu;
+                    break;
+                }
+            }
+        }
+        #endregion
+    }
 }
 ```
 
 Again, we get the current, topmost window and use its `ImageDocument` class instance to see if the required image data exists. Then we use the `MenuWillHighlightItem` method to enable or disable each item based on this state.
 
 Edit the **AppDelegate.cs** file and make the `DidFinishLaunching` method look like the following:
- 
+
 ```csharp
 public override void DidFinishLaunching (NSNotification notification)
 {
-	// Disable automatic item enabling on the Edit menu
-	EditMenu.AutoEnablesItems = false;
-	EditMenu.Delegate = new EditMenuDelegate ();
+    // Disable automatic item enabling on the Edit menu
+    EditMenu.AutoEnablesItems = false;
+    EditMenu.Delegate = new EditMenuDelegate ();
 }
 ```
 
@@ -734,27 +734,27 @@ For example, the following code checks to see if an `NSImage` exists in the gene
 [Export("PasteImage:")]
 public void PasteImage(NSObject sender) {
 
-	// Initialize the pasteboard
-	NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
-	Class [] classArray  = { new Class ("NSImage") };
+    // Initialize the pasteboard
+    NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
+    Class [] classArray  = { new Class ("NSImage") };
 
-	bool ok = pasteboard.CanReadObjectForClasses (classArray, null);
-	if (ok) {
-		// Read the image off of the pasteboard
-		NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray, null);
-		NSImage image = (NSImage)objectsToPaste[0];
+    bool ok = pasteboard.CanReadObjectForClasses (classArray, null);
+    if (ok) {
+        // Read the image off of the pasteboard
+        NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray, null);
+        NSImage image = (NSImage)objectsToPaste[0];
 
-		// Display the new image
-		ImageView.Image = image;
-	}
+        // Display the new image
+        ImageView.Image = image;
+    }
 
-	Class [] classArray2 = { new Class ("ImageInfo") };
-	ok = pasteboard.CanReadObjectForClasses (classArray2, null);
-	if (ok) {
-		// Read the image off of the pasteboard
-		NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray2, null);
-		ImageInfo info = (ImageInfo)objectsToPaste[0];
-			}
+    Class [] classArray2 = { new Class ("ImageInfo") };
+    ok = pasteboard.CanReadObjectForClasses (classArray2, null);
+    if (ok) {
+        // Read the image off of the pasteboard
+        NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray2, null);
+        ImageInfo info = (ImageInfo)objectsToPaste[0];
+            }
 }
 ```
 
@@ -777,14 +777,14 @@ For example, the following code determines if the general pasteboard contains a 
 
 ```csharp
 public bool ImageAvailableOnPasteboard {
-	get {
-		// Initialize the pasteboard
-		NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
-		Class [] classArray  = { new Class ("NSImage") };
+    get {
+        // Initialize the pasteboard
+        NSPasteboard pasteboard = NSPasteboard.GeneralPasteboard;
+        Class [] classArray  = { new Class ("NSImage") };
 
-		// Check to see if an image is on the pasteboard
-		return pasteboard.CanReadObjectForClasses (classArray, null);
-	}
+        // Check to see if an image is on the pasteboard
+        return pasteboard.CanReadObjectForClasses (classArray, null);
+    }
 }
 ```
 
@@ -815,109 +815,109 @@ using Foundation;
 
 namespace MacCopyPaste
 {
-	[Register("ImageInfo")]
-	public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboardReading
-	{
-		#region Computed Properties
-		[Export("name")]
-		public string Name { get; set; }
+    [Register("ImageInfo")]
+    public class ImageInfo : NSObject, INSCoding, INSPasteboardWriting, INSPasteboardReading
+    {
+        #region Computed Properties
+        [Export("name")]
+        public string Name { get; set; }
 
-		[Export("imageType")]
-		public string ImageType { get; set; }
-		#endregion
+        [Export("imageType")]
+        public string ImageType { get; set; }
+        #endregion
 
-		#region Constructors
-		[Export ("init")]
-		public ImageInfo ()
-		{
-		}
-		
-		public ImageInfo (IntPtr p) : base (p)
+        #region Constructors
+        [Export ("init")]
+        public ImageInfo ()
+        {
+        }
+        
+        public ImageInfo (IntPtr p) : base (p)
         {
         }
 
-		[Export ("initWithCoder:")]
-		public ImageInfo(NSCoder decoder) {
+        [Export ("initWithCoder:")]
+        public ImageInfo(NSCoder decoder) {
 
-			// Decode data
-			NSString name = decoder.DecodeObject("name") as NSString;
-			NSString type = decoder.DecodeObject("imageType") as NSString;
+            // Decode data
+            NSString name = decoder.DecodeObject("name") as NSString;
+            NSString type = decoder.DecodeObject("imageType") as NSString;
 
-			// Save data
-			Name = name.ToString();
-			ImageType = type.ToString ();
-		}
-		#endregion
+            // Save data
+            Name = name.ToString();
+            ImageType = type.ToString ();
+        }
+        #endregion
 
-		#region Public Methods
-		[Export ("encodeWithCoder:")]
-		public void EncodeTo (NSCoder encoder) {
+        #region Public Methods
+        [Export ("encodeWithCoder:")]
+        public void EncodeTo (NSCoder encoder) {
 
-			// Encode data
-			encoder.Encode(new NSString(Name),"name");
-			encoder.Encode(new NSString(ImageType),"imageType");
-		}
+            // Encode data
+            encoder.Encode(new NSString(Name),"name");
+            encoder.Encode(new NSString(ImageType),"imageType");
+        }
 
-		[Export ("writableTypesForPasteboard:")]
-		public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) {
-			string[] writableTypes = {"com.xamarin.image-info", "public.text"};
-			return writableTypes;
-		}
+        [Export ("writableTypesForPasteboard:")]
+        public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) {
+            string[] writableTypes = {"com.xamarin.image-info", "public.text"};
+            return writableTypes;
+        }
 
-		[Export ("pasteboardPropertyListForType:")]
-		public virtual NSObject GetPasteboardPropertyListForType (string type) {
+        [Export ("pasteboardPropertyListForType:")]
+        public virtual NSObject GetPasteboardPropertyListForType (string type) {
 
-			// Take action based on the requested type
-			switch (type) {
-			case "com.xamarin.image-info":
-				return NSKeyedArchiver.ArchivedDataWithRootObject(this);
-			case "public.text":
-				return new NSString(string.Format("{0}.{1}", Name, ImageType));
-			}
+            // Take action based on the requested type
+            switch (type) {
+            case "com.xamarin.image-info":
+                return NSKeyedArchiver.ArchivedDataWithRootObject(this);
+            case "public.text":
+                return new NSString(string.Format("{0}.{1}", Name, ImageType));
+            }
 
-			// Failure, return null
-			return null;
-		}
+            // Failure, return null
+            return null;
+        }
 
-		[Export ("readableTypesForPasteboard:")]
-		public static string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard){
-			string[] readableTypes = {"com.xamarin.image-info", "public.text"};
-			return readableTypes;
-		}
+        [Export ("readableTypesForPasteboard:")]
+        public static string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard){
+            string[] readableTypes = {"com.xamarin.image-info", "public.text"};
+            return readableTypes;
+        }
 
-		[Export ("readingOptionsForType:pasteboard:")]
-		public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, NSPasteboard pasteboard) {
+        [Export ("readingOptionsForType:pasteboard:")]
+        public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, NSPasteboard pasteboard) {
 
-			// Take action based on the requested type
-			switch (type) {
-			case "com.xamarin.image-info":
-				return NSPasteboardReadingOptions.AsKeyedArchive;
-			case "public.text":
-				return NSPasteboardReadingOptions.AsString;
-			}
+            // Take action based on the requested type
+            switch (type) {
+            case "com.xamarin.image-info":
+                return NSPasteboardReadingOptions.AsKeyedArchive;
+            case "public.text":
+                return NSPasteboardReadingOptions.AsString;
+            }
 
-			// Default to property list
-			return NSPasteboardReadingOptions.AsPropertyList;
-		}
+            // Default to property list
+            return NSPasteboardReadingOptions.AsPropertyList;
+        }
 
-		[Export ("initWithPasteboardPropertyList:ofType:")]
-		public NSObject InitWithPasteboardPropertyList (NSObject propertyList, string type) {
+        [Export ("initWithPasteboardPropertyList:ofType:")]
+        public NSObject InitWithPasteboardPropertyList (NSObject propertyList, string type) {
 
-			// Take action based on the requested type
-			switch (type) {
-			case "com.xamarin.image-info":
-				return new ImageInfo();
-			case "public.text":
-				return new ImageInfo();
-			}
+            // Take action based on the requested type
+            switch (type) {
+            case "com.xamarin.image-info":
+                return new ImageInfo();
+            case "public.text":
+                return new ImageInfo();
+            }
 
-			// Failure, return null
-			return null;
-		}
-		#endregion
-	}
+            // Failure, return null
+            return null;
+        }
+        #endregion
+    }
 }
-	
+    
 ```
 
 In the following sections we'll take a detailed look at this class.
@@ -959,13 +959,13 @@ public ImageInfo ()
 [Export ("initWithCoder:")]
 public ImageInfo(NSCoder decoder) {
 
-	// Decode data
-	NSString name = decoder.DecodeObject("name") as NSString;
-	NSString type = decoder.DecodeObject("imageType") as NSString;
+    // Decode data
+    NSString name = decoder.DecodeObject("name") as NSString;
+    NSString type = decoder.DecodeObject("imageType") as NSString;
 
-	// Save data
-	Name = name.ToString();
-	ImageType = type.ToString ();
+    // Save data
+    Name = name.ToString();
+    ImageType = type.ToString ();
 }
 ```
 
@@ -984,8 +984,8 @@ First, we need to tell the pasteboard what data type representations that the cu
 ```csharp
 [Export ("writableTypesForPasteboard:")]
 public virtual string[] GetWritableTypesForPasteboard (NSPasteboard pasteboard) {
-	string[] writableTypes = {"com.xamarin.image-info", "public.text"};
-	return writableTypes;
+    string[] writableTypes = {"com.xamarin.image-info", "public.text"};
+    return writableTypes;
 }
 ```
 
@@ -999,16 +999,16 @@ Next, we need to create the object in the requested format that actually gets wr
 [Export ("pasteboardPropertyListForType:")]
 public virtual NSObject GetPasteboardPropertyListForType (string type) {
 
-	// Take action based on the requested type
-	switch (type) {
-	case "com.xamarin.image-info":
-		return NSKeyedArchiver.ArchivedDataWithRootObject(this);
-	case "public.text":
-		return new NSString(string.Format("{0}.{1}", Name, ImageType));
-	}
+    // Take action based on the requested type
+    switch (type) {
+    case "com.xamarin.image-info":
+        return NSKeyedArchiver.ArchivedDataWithRootObject(this);
+    case "public.text":
+        return new NSString(string.Format("{0}.{1}", Name, ImageType));
+    }
 
-	// Failure, return null
-	return null;
+    // Failure, return null
+    return null;
 }
 ```
 
@@ -1018,9 +1018,9 @@ For the `public.text` type, we are returning a simple, formatted `NSString` obje
 [Export ("encodeWithCoder:")]
 public void EncodeTo (NSCoder encoder) {
 
-	// Encode data
-	encoder.Encode(new NSString(Name),"name");
-	encoder.Encode(new NSString(ImageType),"imageType");
+    // Encode data
+    encoder.Encode(new NSString(Name),"name");
+    encoder.Encode(new NSString(ImageType),"imageType");
 }
 ```
 
@@ -1031,7 +1031,7 @@ Optionally, we can include the following method to define any options when writi
 ```csharp
 [Export ("writingOptionsForType:pasteboard:"), CompilerGenerated]
 public virtual NSPasteboardWritingOptions GetWritingOptionsForType (string type, NSPasteboard pasteboard) {
-	return NSPasteboardWritingOptions.WritingPromised;
+    return NSPasteboardWritingOptions.WritingPromised;
 }
 ```
 
@@ -1059,8 +1059,8 @@ First, we need to tell the pasteboard what data type representations that the cu
 ```csharp
 [Export ("readableTypesForPasteboard:")]
 public static string[] GetReadableTypesForPasteboard (NSPasteboard pasteboard){
-	string[] readableTypes = {"com.xamarin.image-info", "public.text"};
-	return readableTypes;
+    string[] readableTypes = {"com.xamarin.image-info", "public.text"};
+    return readableTypes;
 }
 ```
 
@@ -1072,16 +1072,16 @@ Next, we need to tell the pasteboard _how_ each of the UTI types will be read us
 [Export ("readingOptionsForType:pasteboard:")]
 public static NSPasteboardReadingOptions GetReadingOptionsForType (string type, NSPasteboard pasteboard) {
 
-	// Take action based on the requested type
-	switch (type) {
-	case "com.xamarin.image-info":
-		return NSPasteboardReadingOptions.AsKeyedArchive;
-	case "public.text":
-		return NSPasteboardReadingOptions.AsString;
-	}
+    // Take action based on the requested type
+    switch (type) {
+    case "com.xamarin.image-info":
+        return NSPasteboardReadingOptions.AsKeyedArchive;
+    case "public.text":
+        return NSPasteboardReadingOptions.AsString;
+    }
 
-	// Default to property list
-	return NSPasteboardReadingOptions.AsPropertyList;
+    // Default to property list
+    return NSPasteboardReadingOptions.AsPropertyList;
 }
 ```
 
@@ -1093,14 +1093,14 @@ Finally, we need to add the following method to read the other UTI data represen
 [Export ("initWithPasteboardPropertyList:ofType:")]
 public NSObject InitWithPasteboardPropertyList (NSObject propertyList, string type) {
 
-	// Take action based on the requested type
-	switch (type) {
-	case "public.text":
-		return new ImageInfo();
-	}
+    // Take action based on the requested type
+    switch (type) {
+    case "public.text":
+        return new ImageInfo();
+    }
 
-	// Failure, return null
-	return null;
+    // Failure, return null
+    return null;
 }
 ```
 
@@ -1118,9 +1118,9 @@ NSArray classArray = NSArray.FromIntPtrs (classArrayPtrs);
 ok = bool_objc_msgSend_IntPtr_IntPtr (pasteboard.Handle, Selector.GetHandle ("canReadObjectForClasses:options:"), classArray.Handle, IntPtr.Zero);
 
 if (ok) {
-	// Read the image off of the pasteboard
-	NSObject [] objectsToPaste = NSArray.ArrayFromHandle<Foundation.NSObject>(IntPtr_objc_msgSend_IntPtr_IntPtr (pasteboard.Handle, Selector.GetHandle ("readObjectsForClasses:options:"), classArray.Handle, IntPtr.Zero));
-	ImageInfo info = (ImageInfo)objectsToPaste[0];
+    // Read the image off of the pasteboard
+    NSObject [] objectsToPaste = NSArray.ArrayFromHandle<Foundation.NSObject>(IntPtr_objc_msgSend_IntPtr_IntPtr (pasteboard.Handle, Selector.GetHandle ("readObjectsForClasses:options:"), classArray.Handle, IntPtr.Zero));
+    ImageInfo info = (ImageInfo)objectsToPaste[0];
 }
 ```
 
@@ -1141,57 +1141,57 @@ using Foundation;
 
 namespace MacCopyPaste
 {
-	[Register("ImageInfoDataProvider")]
-	public class ImageInfoDataProvider : NSPasteboardItemDataProvider
-	{
-		#region Computed Properties
-		public string Name { get; set;}
-		public string ImageType { get; set;}
-		#endregion
+    [Register("ImageInfoDataProvider")]
+    public class ImageInfoDataProvider : NSPasteboardItemDataProvider
+    {
+        #region Computed Properties
+        public string Name { get; set;}
+        public string ImageType { get; set;}
+        #endregion
 
-		#region Constructors
-		[Export ("init")]
-		public ImageInfoDataProvider ()
-		{
-		}
+        #region Constructors
+        [Export ("init")]
+        public ImageInfoDataProvider ()
+        {
+        }
 
-		public ImageInfoDataProvider (string name, string imageType)
-		{
-			// Initialize
-			this.Name = name;
-			this.ImageType = imageType;
-		}
+        public ImageInfoDataProvider (string name, string imageType)
+        {
+            // Initialize
+            this.Name = name;
+            this.ImageType = imageType;
+        }
 
-		protected ImageInfoDataProvider (NSObjectFlag t){
-		}
+        protected ImageInfoDataProvider (NSObjectFlag t){
+        }
 
-		protected internal ImageInfoDataProvider (IntPtr handle){
+        protected internal ImageInfoDataProvider (IntPtr handle){
 
-		}
-		#endregion
+        }
+        #endregion
 
-		#region Override Methods
-		[Export ("pasteboardFinishedWithDataProvider:")]
-		public override void FinishedWithDataProvider (NSPasteboard pasteboard)
-		{
-			
-		}
+        #region Override Methods
+        [Export ("pasteboardFinishedWithDataProvider:")]
+        public override void FinishedWithDataProvider (NSPasteboard pasteboard)
+        {
+            
+        }
 
-		[Export ("pasteboard:item:provideDataForType:")]
-		public override void ProvideDataForType (NSPasteboard pasteboard, NSPasteboardItem item, string type)
-		{
+        [Export ("pasteboard:item:provideDataForType:")]
+        public override void ProvideDataForType (NSPasteboard pasteboard, NSPasteboardItem item, string type)
+        {
 
-			// Take action based on the type
-			switch (type) {
-			case "public.text":
-				// Encode the data to string 
-				item.SetStringForType(string.Format("{0}.{1}", Name, ImageType),type);
-				break;
-			}
+            // Take action based on the type
+            switch (type) {
+            case "public.text":
+                // Encode the data to string 
+                item.SetStringForType(string.Format("{0}.{1}", Name, ImageType),type);
+                break;
+            }
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }
 ```
 
@@ -1204,13 +1204,13 @@ Use the `ProvideDataForType` method to provide the data that will be wrapped in 
 public override void ProvideDataForType (NSPasteboard pasteboard, NSPasteboardItem item, string type)
 {
 
-	// Take action based on the type
-	switch (type) {
-	case "public.text":
-		// Encode the data to string 
-		item.SetStringForType(string.Format("{0}.{1}", Name, ImageType),type);
-		break;
-	}
+    // Take action based on the type
+    switch (type) {
+    case "public.text":
+        // Encode the data to string 
+        item.SetStringForType(string.Format("{0}.{1}", Name, ImageType),type);
+        break;
+    }
 
 }
 ```
@@ -1233,7 +1233,7 @@ var ok = item.SetDataProviderForTypes (dataProvider, writableTypes);
 
 // Save to pasteboard
 if (ok) {
-	pasteboard.WriteObjects (new NSPasteboardItem[] { item });
+    pasteboard.WriteObjects (new NSPasteboardItem[] { item });
 }
 ```
 
@@ -1248,30 +1248,28 @@ Class [] classArray  = { new Class ("NSImage") };
 
 bool ok = pasteboard.CanReadObjectForClasses (classArray, null);
 if (ok) {
-	// Read the image off of the pasteboard
-	NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray, null);
-	NSImage image = (NSImage)objectsToPaste[0];
+    // Read the image off of the pasteboard
+    NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray, null);
+    NSImage image = (NSImage)objectsToPaste[0];
 
-	// Do something with data
-	...
+    // Do something with data
+    ...
 }
-			
+            
 Class [] classArray2 = { new Class ("ImageInfo") };
 ok = pasteboard.CanReadObjectForClasses (classArray2, null);
 if (ok) {
-	// Read the image off of the pasteboard
-	NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray2, null);
-	
-	// Do something with data
-	...
+    // Read the image off of the pasteboard
+    NSObject [] objectsToPaste = pasteboard.ReadObjectsForClasses (classArray2, null);
+    
+    // Do something with data
+    ...
 }
 ```
 
 ## Summary
 
 This article has taken a detailed look at working with the pasteboard in a Xamarin.Mac application to support copy and paste operations. First, it introduced a simple example to get you familiar with standard pasteboards operations. Next, it took a detailed look at the pasteboard and how to read and write data from it. Finally, it looked at using a custom data type to support the copying and pasting of complex data types within an app.
-
-
 
 ## Related Links
 

@@ -530,7 +530,6 @@ This 3D rotation is surrounded with several 2D transforms to move the center of 
 
 [![](3d-rotation-images/animatedrotation3d-small.png "Triple screenshot of the Animated Rotation 3D page")](3d-rotation-images/animatedrotation3d-large.png#lightbox "Triple screenshot of the Animated Rotation 3D page")
 
-
 ## Related Links
 
 - [SkiaSharp APIs](https://docs.microsoft.com/dotnet/api/skiasharp)

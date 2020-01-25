@@ -4,8 +4,8 @@ description: "This document describes minor changes and enhancements made to exi
 ms.prod: xamarin
 ms.assetid: F771640A-F92E-4954-82D5-2D720434971E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -50,7 +50,7 @@ For more information, please see Apple's [Core Data Framework Reference](https:/
 
 tvOS 10 includes the following enhancements to the Core graphics framework:
 
-- The new [CGColorConverterRef](https://developer.apple.com/reference/coregraphics/cgcolorconverterref) class can be used to perform a series of color conversions.
+- The new CGColorConverterRef class can be used to perform a series of color conversions.
 
 <a name="Core-Image-Enhancements" />
 
@@ -60,7 +60,7 @@ tvOS 10 makes the following enhancements to the Core Image framework:
 
 - The `ImageWithExtent` method of the [CIFilter](https://developer.apple.com/reference/coreimage/cifilter) class can be used to insert custom processing into the filter operation. Core Image will invoke the given callback between filters when processing an image for output or display.
 - The app can now process images in a color space outside of the Core Image context's working color space by converting in and out of the color space before and after processing.
-- Several rendering performance enhancements have been made to `UIImage` rendering (when backed by Core Image image stores) in `UIImageView` objects. 
+- Several rendering performance enhancements have been made to `UIImage` rendering (when backed by Core Image image stores) in `UIImageView` objects.
 - `UIImage` objects tagged wide-gamut will render as wide-gamut color in `UIImageView` objects on iOS devices that support wide color.
 - Core Image kernel code can now request specific pixel output formats.
 
@@ -154,7 +154,7 @@ The following enhancements have been made to the SceneKit framework in tvOS 10:
 - SceneKit interprets color component values in a linear RGB color space for all shader types.
 - Since SceneKit reads and adjust for color profile information in texture images, use Asset Catalogs for all images to ensure this information is provided.
 - Both linear color space rendering and wide-color can be disabled by specifying the `SCNDisableLinearSpaceRendering` and `SCNDisableWideGamut` keys in the app's `Info.plist`.
-- Build arbitrary polygon primates (either loaded from files or generated programmatically) to specify geometry with the new [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) class.
+- Build arbitrary polygon primates (either loaded from files or generated programmatically) to specify geometry with the new [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon) class.
 
 <a name="SpriteKit-Enhancements" />
 
@@ -189,8 +189,6 @@ The following enhancements have been made to the UIKit framework in tvOS 10:
 - The `OpenURL` method of the `UIApplication` class is called asynchronously now supports a Completion Handler that is called after the open has completed.
 - Initiate CloudKit sharing and modify its properties using the new `UICloudSharingController` and `UICloudSharingControllerDelegate` classes.
 - Take advantage of prefetched cells to improve the scrolling experience of `UICollectionViews` with the new `UICollectionViewDataSourcePrefetching` delegate.
-
-
 
 ## Related Links
 

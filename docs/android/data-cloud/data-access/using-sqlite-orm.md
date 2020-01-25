@@ -4,8 +4,8 @@ description: "The SQLite.NET PCL NuGet library provides a simple data access mec
 ms.prod: xamarin
 ms.assetid: 3447B7EE-A320-489E-AF02-E5721097760A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
 ---
 # Using SQLite.NET with Android
@@ -30,14 +30,14 @@ To include the SQLite.NET library in a Xamarin app, add the following NuGet pack
 
 Once you have the SQLite.NET library available, follow these three steps to use it to access a database:
 
-1.  **Add a using statement** &ndash; Add the following statement to the C#
+1. **Add a using statement** &ndash; Add the following statement to the C#
     files where data access is required:
 
     ```csharp
     using SQLite;
     ```
 
-2.  **Create a Blank Database** &ndash; A database reference can be
+2. **Create a Blank Database** &ndash; A database reference can be
     created by passing the file path the SQLiteConnection class
     constructor. You do not need to check if the file already exists
     &ndash; it will automatically be created if required, otherwise the
@@ -49,7 +49,7 @@ Once you have the SQLite.NET library available, follow these three steps to use 
     var db = new SQLiteConnection (dbPath);
     ```
 
-3.  **Save Data** &ndash; Once you have created a SQLiteConnection
+3. **Save Data** &ndash; Once you have created a SQLiteConnection
     object, database commands are executed by calling its methods, such
     as CreateTable and Insert like this:
 
@@ -58,7 +58,7 @@ Once you have the SQLite.NET library available, follow these three steps to use 
     db.Insert (newStock); // after creating the newStock object
     ```
 
-4.  **Retrieve Data** &ndash; To retrieve an object (or a list of
+4. **Retrieve Data** &ndash; To retrieve an object (or a list of
     objects) use the following syntax:
 
     ```csharp
@@ -73,7 +73,6 @@ when running on Android. The code illustrates how to perform simple
 SQLite.NET operations and shows the results in as text in the
 application's main window.
 
-
 **Android**
 
 ![Android SQLite.NET sample](using-sqlite-orm-images/image3.png "Android SQLite.NET sample")
@@ -82,11 +81,11 @@ The following code sample shows an entire database interaction using
 the SQLite.NET library to encapsulate the underlying database access.
 It shows:
 
-1.  Creating the database file
+1. Creating the database file
 
-2.  Inserting some data by creating objects and then saving them
+2. Inserting some data by creating objects and then saving them
 
-3.  Querying the data
+3. Querying the data
 
 You'll need to include these namespaces:
 
@@ -146,40 +145,35 @@ same name as the property in the class.
 Common attributes that you can apply to your classes to control how
 they are stored in the underlying database include:
 
--   **[PrimaryKey]** &ndash; This attribute can be applied to an
+- **[PrimaryKey]** &ndash; This attribute can be applied to an
     integer property to force it to be the underlying table's primary
     key. Composite primary keys are not supported.
 
--   **[AutoIncrement]** &ndash; This attribute will cause an integer
+- **[AutoIncrement]** &ndash; This attribute will cause an integer
     property's value to be auto-increment for each new object inserted
     into the database
 
--   **[Column(name)]** &ndash; Supplying the optional `name` parameter
-    will override the default value of the underlying database column's
-    name (which is the same as the property).
+- **[Column(name)]** &ndash; The `name` parameter
+    sets the underlying database column's name.
 
--   **[Table(name)]** &ndash; Marks the class as being able to be
-    stored in an underlying SQLite table. Specifying the optional name
-    parameter will override the default value of the underlying
-    database table's name (which is the same as the class name).
+- **[Table(name)]** &ndash; Marks the class as being able to be
+    stored in an underlying SQLite table with the name specified.
 
--   **[MaxLength(value)]** &ndash; Restrict the length of a text
+- **[MaxLength(value)]** &ndash; Restrict the length of a text
     property, when a database insert is attempted. Consuming code
     should validate this prior to inserting the object as this
     attribute is only 'checked' when a database insert or update
     operation is attempted.
 
--   **[Ignore]** &ndash; Causes SQLite.NET to ignore this property.
+- **[Ignore]** &ndash; Causes SQLite.NET to ignore this property.
     This is particularly useful for properties that have a type that
     cannot be stored in the database, or properties that model
     collections that cannot be resolved automatically by SQLite.
 
--   **[Unique]** &ndash; Ensures that the values in the underlying
+- **[Unique]** &ndash; Ensures that the values in the underlying
     database column are unique.
 
-
-Most of these attributes are optional, SQLite will use default values
-for table and column names. You should always specify an integer
+Most of these attributes are optional. You should always specify an integer
 primary key so that selection and deletion queries can be performed
 efficiently on your data.
 
@@ -187,22 +181,21 @@ efficiently on your data.
 
 The following methods on `SQLiteConnection` can be used to perform other data operations:
 
--   **Insert** &ndash; Adds a new object to the database.
+- **Insert** &ndash; Adds a new object to the database.
 
--   **Get&lt;T&gt;** &ndash; Attempts to retrieve an object using the
+- **Get&lt;T&gt;** &ndash; Attempts to retrieve an object using the
     primary key.
 
--   **Table&lt;T&gt;** &ndash; Returns all the objects in the table.
+- **Table&lt;T&gt;** &ndash; Returns all the objects in the table.
 
--   **Delete** &ndash; Deletes an object using its primary key.
+- **Delete** &ndash; Deletes an object using its primary key.
 
--   **Query&lt;T&gt;** &ndash; Perform an SQL query that returns a number of
+- **Query&lt;T&gt;** &ndash; Perform an SQL query that returns a number of
     rows (as objects).
 
--   **Execute** &ndash; Use this method (and not `Query`) when you
+- **Execute** &ndash; Use this method (and not `Query`) when you
     don't expect rows back from the SQL (such as INSERT, UPDATE and
     DELETE instructions).
-
 
 ### Getting an object by the primary key
 
@@ -281,7 +274,7 @@ steps. If the call to `SqliteConnection.SetConfig` produces a SQLite
 exception such as `library used incorrectly`, then you must use the
 following workaround:
 
-1.  Link to the native **libsqlite.so** library so that the
+1. Link to the native **libsqlite.so** library so that the
    `sqlite3_shutdown` and `sqlite3_initialize` APIs are made
     available to the app:
 
@@ -293,7 +286,7 @@ following workaround:
     internal static extern int sqlite3_initialize();
     ```
 
-2.  At the very beginning of the `OnCreate` method, add this code
+2. At the very beginning of the `OnCreate` method, add this code
     to shutdown SQLite, configure it for **Serialized** mode, and
     reinitialize SQLite:
 

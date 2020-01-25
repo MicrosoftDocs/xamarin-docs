@@ -3,8 +3,8 @@ title: "Creating a Service"
 ms.prod: xamarin
 ms.assetid: A78A55E7-FB5C-4C42-8E3E-939B5E98F9EB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/03/2018
 ---
 
@@ -12,8 +12,8 @@ ms.date: 05/03/2018
 
 Xamarin.Android services must obey two inviolable rules of Android services:
 
-* They must extend the [`Android.App.Service`](xref:Android.App.Service).
-* They must be decorated with the [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
+- They must extend the [`Android.App.Service`](xref:Android.App.Service).
+- They must be decorated with the [`Android.App.ServiceAttribute`](xref:Android.App.ServiceAttribute).
 
 Another requirement of Android services is that they must be registered in the **AndroidManifest.xml** and given a unique name. Xamarin.Android will automatically register the service in the manifest at build time with the necessary XML attribute.
 
@@ -70,7 +70,7 @@ The next step is to examine how to start a service and then move on to examine h
 
 The most basic way to start a service in Android is to dispatch an `Intent` which contains meta-data to help identify which service should be started. There are two different styles of Intents that can be used to start a service:
 
--   **Explicit Intent** &ndash; An _explicit Intent_ will identify
+- **Explicit Intent** &ndash; An _explicit Intent_ will identify
     exactly what service should be used to complete a given action. An
     explicit Intent can be thought of as a letter that has a specific
     address; Android will route the intent to the service that is
@@ -83,8 +83,8 @@ The most basic way to start a service in Android is to dispatch an `Intent` whic
     downloadIntent.data = Uri.Parse(fileToDownload);
     ```
 
--   **Implicit Intent** &ndash; This type of Intent loosely identifies
-    the of action that the user wishes to perform, but the exact service to
+- **Implicit Intent** &ndash; This type of Intent loosely identifies
+    the type of action that the user wishes to perform, but the exact service to
     complete that action is unknown. An implicit Intent can be thought
     of as a letter that is addressed "To Whom It May Concern...".
     Android will examine the contents of the Intent, and determine if
@@ -113,7 +113,6 @@ Where possible, applications should use explicit Intents to start a service. An 
 
 How the Intent is dispatched depends on the type of service and will be discussed in more detail later in the guides specific to each type of service.
 
-
 ### Creating an Intent Filter for Implicit Intents
 
 To associate a service with an implicit Intent, an Android app must provide some meta-data to identify the capabilities of the service. This meta-data is provided by  _intent filters_. Intent filters contain some information, such as an action or a type of data, that must be present in an Intent to start a service. In Xamarin.Android, the intent filter is registered in **AndroidManifest.xml** by decorating a service with the [`IntentFilterAttribute`](xref:Android.App.IntentFilterAttribute). For example, the following code adds an intent filter with an associated action of `com.xamarin.DemoService`:
@@ -137,7 +136,6 @@ This results in an entry being included in the **AndroidManifest.xml** file &nda
 ```
 
 With the basics of a Xamarin.Android service out of the way, let's examine the different subtypes of services in more detail.
-
 
 ## Related Links
 

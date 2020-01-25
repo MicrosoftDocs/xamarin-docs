@@ -5,11 +5,11 @@ ms.topic: article
 ms.prod: xamarin
 ms.assetid: 8C823FEE-A6F6-4C31-9EB6-E51407A2FD8E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
 ---
- 
+
 # Profiling Android Apps
 
 Before deploying your app to an app store, it's important to identify
@@ -17,13 +17,12 @@ and fix any performance bottlenecks, excessive memory usage issues, or
 inefficient use of network resources. Two profiler tools are available
 to serve this purpose:
 
--  Xamarin Profiler 
--  Android Profiler in Android Studio
+- Xamarin Profiler 
+- Android Profiler in Android Studio
 
 This guide introduces the Xamarin Profiler and provides detailed
 information for getting started with using the Android Profiler.
 
- 
 ## Xamarin Profiler
 
 The Xamarin Profiler is a standalone application that is integrated
@@ -35,7 +34,7 @@ Profiler, see [Xamarin Profiler](~/tools/profiler/index.md).
 > You must be a [Visual Studio Enterprise](https://visualstudio.microsoft.com/vs/compare/) 
 > subscriber to unlock the Xamarin Profiler feature in either Visual Studio Enterprise 
 > on Windows or Visual Studio for Mac.
- 
+
 ## Android Studio Profiler
 
 Android Studio 3.0 and later includes an Android Profiler tool. You can 
@@ -54,19 +53,19 @@ screenshots below, the Xamarin Forms
 [XamagonXuzzle](https://docs.microsoft.com/samples/xamarin/mobile-samples/liveplayer-xamagonxuzzlelp/)
 app is built and profiled using Android Profiler:
 
-1.  In the Android project build options, disable **Use Shared
+1. In the Android project build options, disable **Use Shared
     Runtime**. This ensures that the Android application package (APK)
     is built without a dependency on the shared development-time Mono
     runtime.
 
     ![Disabling Use Shared Runtime](profiling-images/vswin/01-turn-off-shared-runtime.png)
 
-2.  Build the app for **Debug** and deploy it to a physical device or
+2. Build the app for **Debug** and deploy it to a physical device or
     emulator. This causes a signed **Debug** version of the APK to be built.
     For the **XamagonXuzzle** example, the resulting APK is named
     **com.companyname.XamagonXuzzle-Signed.apk**.
 
-3.  Open the project folder and navigate to **bin/Debug**. In this
+3. Open the project folder and navigate to **bin/Debug**. In this
     folder, locate the **Signed.apk** version of the app and copy it
     to a conveniently-accessible place (such as the desktop). In the following
     screenshot, the APK **com.companyname.XamagonXuzzle-Signed.apk** is located
@@ -74,31 +73,31 @@ app is built and profiled using Android Profiler:
 
     [![Location of the debug signed APK file](profiling-images/vswin/02-locating-the-debug-apk-sml.png)](profiling-images/vswin/02-locating-the-debug-apk.png#lightbox)
 
-4.  Launch Android Studio and select **Profile or debug APK**:
+4. Launch Android Studio and select **Profile or debug APK**:
 
     ![Starting the profiler from the Android Studio launch screen](profiling-images/vswin/03-android-studio.png)
 
-5.  In the **Select APK File** dialog, navigate to the APK that you
+5. In the **Select APK File** dialog, navigate to the APK that you
     built and copied earlier. Select the APK and click **OK**: 
     
     ![Selecting the APK in the Select APK File dialog](profiling-images/vswin/04-select-apk-dialog.png)
 
-6.  Android Studio will load the APK and dissassembles **classes.dex**:
+6. Android Studio will load the APK and dissassembles **classes.dex**:
 
     ![Setting up the APK](profiling-images/vswin/05-setting-up-the-apk.png)
 
-7.  After the APK is loaded, Android Studio displays the following
+7. After the APK is loaded, Android Studio displays the following
     project screen for the APK. Right-click the app name in the tree
     view on the left and select **Open Module Settings**:
 
     [![Location of Open Module Settings menu item](profiling-images/vswin/06-open-module-settings-sml.png)](profiling-images/vswin/06-open-module-settings.png#lightbox)
 
-8.  Navigate to **Project Settings > Modules**, select the **-Signed** node
+8. Navigate to **Project Settings > Modules**, select the **-Signed** node
     of the app, then click **&lt;No SDK&gt;**:
 
     [![Navigating to the SDK setting](profiling-images/vswin/07-project-settings-modules-sml.png)](profiling-images/vswin/07-project-settings-modules.png#lightbox)
 
-9.  In the **Module SDK** pull-down menu, select the Android SDK level
+9. In the **Module SDK** pull-down menu, select the Android SDK level
     that was used to build the app (in this example, API level 26 was
     used to build **XamagonXuzzle**):
 
@@ -141,20 +140,19 @@ app is built and profiled using Android Profiler:
 
     [![CPU usage when RANDOMIZE button is tapped](profiling-images/vswin/14-tap-randomize-sml.png)](profiling-images/vswin/14-tap-randomize.png#lightbox)
 
-
 ### Using the Android Profiler
 
 Detailed information for using the Android Profiler is included in 
 the [Android Studio documentation](https://developer.android.com/studio/profile/android-profiler.html).
 The following topics will be of interest to Xamarin Android developers:
 
--   [CPU Profiler](https://developer.android.com/studio/profile/cpu-profiler.html)
+- [CPU Profiler](https://developer.android.com/studio/profile/cpu-profiler.html)
     &ndash; Explains how to inspect the app's CPU usage and thread activity in real-time.
 
--   [Memory Profiler](https://developer.android.com/studio/profile/memory-profiler.html)
+- [Memory Profiler](https://developer.android.com/studio/profile/memory-profiler.html)
     &ndash; Displays a real-time graph of the app's memory usage, and
     includes a button to record memory allocations for analysis.
 
--   [Network Profiler](https://developer.android.com/studio/profile/network-profiler.html)
+- [Network Profiler](https://developer.android.com/studio/profile/network-profiler.html)
     &ndash; Displays real-time network activity of data sent and
     received by the app.

@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9D2AA00F-1EBD-40AA-87BF-0D7418E4B9EA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
 ---
 
@@ -25,4 +25,3 @@ Xamarin.iOS & the Apple SDK (Xcode) will have the default location when the loca
 
 - Xcode: `/Applications/Xcode.app`
 - Xamarin.iOS (Visual Studio for Mac): `/Library/Frameworks/Xamarin.iOS.framework/Versions/Current`
-

@@ -4,8 +4,8 @@ description: "A third option for using Java in a Xamarin.Android application is 
 ms.prod: xamarin
 ms.assetid: 39E528BD-010F-47FC-BE48-8E7848E30454
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/05/2016
 ---
 
@@ -34,8 +34,8 @@ exist in both languages and that require some parity between the two.
 
 An example of when an automated code conversion tool makes sense can be seen
 in the [ngit](https://github.com/mono/ngit) project.
-Ngit is a port of the Java project [jgit](http://eclipse.org/).
-Jgit itself is a Java implementation of the [Git](http://git-scm.com/) source code management
+Ngit is a port of the Java project [jgit](https://eclipse.org/).
+Jgit itself is a Java implementation of the [Git](https://git-scm.com/) source code management
 system. To generate C# code from Java, the ngit programmers use a custom
 automated system to extract the Java code from jgit, apply some patches to
 accommodate the conversion process, and then run Sharpen, which generates the C#

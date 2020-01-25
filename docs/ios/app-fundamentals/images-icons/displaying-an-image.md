@@ -4,8 +4,8 @@ description: "This article covers including an image asset in a Xamarin.iOS app 
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/24/2018
 ---
 # Displaying an image in Xamarin.iOS
@@ -28,14 +28,14 @@ To create a new image set and add images to it, do the following:
 
 1. In the **Solution Explorer**, double-click the `Assets.xcassets` file to open it for editing:
 
-	![](displaying-an-image-images/imageset01.png "The Assets.xcassets in the Solution Explorer")
+    ![](displaying-an-image-images/imageset01.png "The Assets.xcassets in the Solution Explorer")
 2. Right-click on the **Assets List** and select **New Image Set**:
 
-	![](displaying-an-image-images/imageset02.png "Adding a New Image Set")
+    ![](displaying-an-image-images/imageset02.png "Adding a New Image Set")
 3. Select the new image set and the editor will be displayed:
 
-	![](displaying-an-image-images/imageset03.png "The Image Set editor")
-4. From here, drag in images for each of the different devices and resolutions required. 
+    ![](displaying-an-image-images/imageset03.png "The Image Set editor")
+4. From here, drag in images for each of the different devices and resolutions required.
 5. Double-click the new image set's **Name** in the **Assets List** to edit it: ![](displaying-an-image-images/imageset04.png "Editing the new image set's Name")
 
 When using an **Image Set** in the iOS Designer, simply select the set's name from the dropdown list in the Property Editor:
@@ -46,11 +46,11 @@ When using an **Image Set** in the iOS Designer, simply select the set's name fr
 
 1. Open the Asset Catalog from the **Solution Explorer**, and in the top left corner, click the **Plus** button:
 
-	![](displaying-an-image-images/asset5.png "Click the Plus button")
+    ![](displaying-an-image-images/asset5.png "Click the Plus button")
 
-2. Select **Add Image Set** and the Image Set editor will be displayed for the new image set. From here, drag in images for each of the different devices and resolutions required. 
+2. Select **Add Image Set** and the Image Set editor will be displayed for the new image set. From here, drag in images for each of the different devices and resolutions required.
 
-	![](displaying-an-image-images/asset7.png "The image set editor")
+    ![](displaying-an-image-images/asset7.png "The image set editor")
 
 ### Renaming an image set
 
@@ -58,13 +58,13 @@ To rename an Image Set, do the following:
 
 1. In the **Solution Explorer**, double-click the **Asset Catalog** file to open it for editing:
 
-	![](displaying-an-image-images/rename01.png "The Asset Catalog in the Solution Explorer")
+    ![](displaying-an-image-images/rename01.png "The Asset Catalog in the Solution Explorer")
 2. Select the **Image Set** to rename:
 
-	![](displaying-an-image-images/rename02.png "Select the Image Set to rename")
+    ![](displaying-an-image-images/rename02.png "Select the Image Set to rename")
 3. In the **Properties Explorer**, scroll to the bottom and select **Name**(under the **Misc** section):
 
-	![](displaying-an-image-images/rename03.png "Select Name under the Misc section")
+    ![](displaying-an-image-images/rename03.png "Select Name under the Misc section")
 4. Enter a new **Name** for the **Image Set** and save the changes.
 
 -----
@@ -80,7 +80,7 @@ MonkeyImage.Image = UIImage.FromBundle ("PurpleMonkey");
 
 ### Using vector images in asset catalogs
 
-As of iOS 8, special **Vector** class as been added to **Image Sets** that allows the developer to include a **PDF** formatted vector image in the cassette instead including individual bitmap files at the different resolutions. Using this method, supply a single vector file for the `@1x` resolution (formatted as a vector PDF file) and the `@2x` and `@3x` versions of the file will be generated at compile time and included in the application's bundle.
+As of iOS 8, special **Vector** class has been added to **Image Sets** that allows the developer to include a **PDF** formatted vector image in the cassette instead including individual bitmap files at the different resolutions. Using this method, supply a single vector file for the `@1x` resolution (formatted as a vector PDF file) and the `@2x` and `@3x` versions of the file will be generated at compile time and included in the application's bundle.
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -143,9 +143,9 @@ To use a Template Image completely from code, do the following:
 
 ```csharp
 if (MyIcon.Image != null) {
-	var mutableImage = MyIcon.Image.ImageWithRenderingMode (UIImageRenderingMode.AlwaysTemplate);
-	MyIcon.Image = mutableImage;
-	MyIcon.TintColor = UIColor.Red;
+    var mutableImage = MyIcon.Image.ImageWithRenderingMode (UIImageRenderingMode.AlwaysTemplate);
+    MyIcon.Image = mutableImage;
+    MyIcon.TintColor = UIColor.Red;
 }
 ```
 
@@ -153,9 +153,9 @@ Because the `RenderMode` property of a `UIImage` is read only, use the `ImageWit
 
 There are three possibly settings for `UIImage.RenderMode` via the `UIImageRenderingMode` enum:
 
-* `AlwaysOriginal` - Forces the image to be rendered as the original source image file without any changes.
-* `AlwaysTemplate` - Forces the image to be rendered as a Template Image by colorizing the pixels with the specified `Tint` color.
-* `Automatic` -  Either renders the image as a Template or Original based on the environment that it is used in. For example, if the image is used in a `UIToolBar`, `UINavigationBar`, `UITabBar` or `UISegmentControl` it will be treated as a Template.
+- `AlwaysOriginal` - Forces the image to be rendered as the original source image file without any changes.
+- `AlwaysTemplate` - Forces the image to be rendered as a Template Image by colorizing the pixels with the specified `Tint` color.
+- `Automatic` -  Either renders the image as a Template or Original based on the environment that it is used in. For example, if the image is used in a `UIToolBar`, `UINavigationBar`, `UITabBar` or `UISegmentControl` it will be treated as a Template.
 
 ## Adding new assets collections
 
@@ -168,14 +168,14 @@ To add a new Assets Catalog to the project:
 1. Right-click on the **Project Name** in the **Solution Explorer** and select **Add** > **New File...**
 2. Select **iOS** > **Asset Catalog**, enter a **Name** for the collection and click the **New** button:
 
-	![](displaying-an-image-images/asset01.png "Creating a new Asset Catalog")
+    ![](displaying-an-image-images/asset01.png "Creating a new Asset Catalog")
 
 # [Visual Studio](#tab/windows)
 
 1. In the Solution Explorer, right-click on **Asset Catalogs** folder, and select **Add > New Asset Catalog**.
 2. Give it a name and click **Add**:
 
-	![](displaying-an-image-images/asset1.png "Creating a new Asset Catalog")
+    ![](displaying-an-image-images/asset1.png "Creating a new Asset Catalog")
 
 -----
 
@@ -187,7 +187,7 @@ In addition to using images to support an app, iOS also uses images with app con
 
 ### FromBundle
 
-The `FromBundle` method call is a synchronous (blocking) call that has a number of image loading and management features built-in, such as caching support and automatic handling of image files for various resolutions.  
+The `FromBundle` method call is a synchronous (blocking) call that has a number of image loading and management features built-in, such as caching support and automatic handling of image files for various resolutions.
 
 The following example shows how to set the image of a `UITabBarItem` on a `UITabBar`:
 
@@ -222,17 +222,17 @@ Do the following to display it on a Storyboard:
 1. Double-click the `Main.storyboard` file in the **Solution Explorer** to open it for editing in the iOS Designer.
 2. Select an **Image View** from the **Toolbox**:
 
-	 ![](displaying-an-image-images/display02.png "Select an Image View from the Toolbox")
+     ![](displaying-an-image-images/display02.png "Select an Image View from the Toolbox")
 3. Drag the Image View onto the design surface and position and size it as required:
 
-	![](displaying-an-image-images/display03.png "A new Image View on the Design Surface")
+    ![](displaying-an-image-images/display03.png "A new Image View on the Design Surface")
 4. In the **Widget** section of the **Property Explorer** select the desired **Image** asset to be displayed:
 
-	![](displaying-an-image-images/display04.png "Select the desired Image asset to be displayed")
+    ![](displaying-an-image-images/display04.png "Select the desired Image asset to be displayed")
 5. In the **View** section, use the **Mode** to control how the image will be resized when the **Image View** is resized.
 6. With the **Image View** selected, click it again to add **Constraints**:
 
-	![](displaying-an-image-images/display05.png "Adding Constraints")
+    ![](displaying-an-image-images/display05.png "Adding Constraints")
 7. Drag the "T" shaped handle on each edge of the **Image View** to the corresponding side of the screen to "pin" the image to the sides. In this way, the **Image View** will shrink and grow as the screen is resized.
 8. Save the changes to the Storyboard.
 
@@ -245,17 +245,17 @@ Do the following to display it on a Storyboard:
 1. Double-click the `Main.storyboard` file in the **Solution Explorer** to open it for editing in the iOS Designer.
 2. Select an **Image View** from the **Toolbox**:
 
-	 ![](displaying-an-image-images/display02vs.png "Select an Image View from the Toolbox")
+     ![](displaying-an-image-images/display02vs.png "Select an Image View from the Toolbox")
 3. Drag the Image View onto the design surface and position and size it as required:
 
-	![](displaying-an-image-images/display03vs.png "A new Image View on the Design Surface")
+    ![](displaying-an-image-images/display03vs.png "A new Image View on the Design Surface")
 4. In the **Widget** section of the **Property Explorer** select the desired **Image** asset to be displayed:
 
-	![](displaying-an-image-images/display04vs.png "Select the desired Image asset to be displayed")
+    ![](displaying-an-image-images/display04vs.png "Select the desired Image asset to be displayed")
 5. In the **View** section, use the **Mode** to control how the image will be resized when the **Image View** is resized.
 6. With the **Image View** selected, click it again to add **Constraints**:
 
-	![](displaying-an-image-images/display05vs.png "Adding Constraints")
+    ![](displaying-an-image-images/display05vs.png "Adding Constraints")
 7. Drag the "T" shaped handle on each edge of the **Image View** to the corresponding side of the screen to "pin" the image to the sides. In this way, the **Image View** will shrink and grow as the screen is resized.
 8. Save the changes to the Storyboard.
 

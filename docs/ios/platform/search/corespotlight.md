@@ -4,8 +4,8 @@ description: "This document describes how to use Core Spotlight in a Xamarin.iOS
 ms.prod: xamarin
 ms.assetid: 1374914C-0F63-41BF-BD97-EBCEE86E57B1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -37,10 +37,10 @@ var item = new CSSearchableItem ("1", "products", attributes);
 
 // Index item
 CSSearchableIndex.DefaultSearchableIndex.Index (new CSSearchableItem[]{ item }, (error) => {
-	// Successful?
-	if (error !=null) {
-		Console.WriteLine(error.LocalizedDescription);
-	}
+    // Successful?
+    if (error !=null) {
+        Console.WriteLine(error.LocalizedDescription);
+    }
 });
 ```
 
@@ -59,19 +59,19 @@ public override bool ContinueUserActivity (UIApplication application,
    NSUserActivity userActivity, UIApplicationRestorationHandler completionHandler)
 {
 
-	// Take action based on the activity type
-	switch (userActivity.ActivityType) {
-	case "com.xamarin.platform":
-		// Restore the state of the app here...
-		break;
-	default:
-		if (userActivity.ActivityType == CSSearchableItem.ActionType.ToString ()) {
-			// Display content for searchable item...
-		}
-		break;
-	}
+    // Take action based on the activity type
+    switch (userActivity.ActivityType) {
+    case "com.xamarin.platform":
+        // Restore the state of the app here...
+        break;
+    default:
+        if (userActivity.ActivityType == CSSearchableItem.ActionType.ToString ()) {
+            // Display content for searchable item...
+        }
+        break;
+    }
 
-	return true;
+    return true;
 }
 ```
 
@@ -99,10 +99,10 @@ First, you can delete an item by its identifier, for example:
 ```csharp
 // Delete Items by ID
 CSSearchableIndex.DefaultSearchableIndex.Delete(new string[]{"1","16"},(error) => {
-	// Successful?
-	if (error !=null) {
-		Console.WriteLine(error.LocalizedDescription);
-	}
+    // Successful?
+    if (error !=null) {
+        Console.WriteLine(error.LocalizedDescription);
+    }
 });
 ```
 
@@ -111,10 +111,10 @@ Next, you can delete a group of index items by their domain name. For example:
 ```csharp
 // Delete by Domain Name
 CSSearchableIndex.DefaultSearchableIndex.DeleteWithDomain(new string[]{"domain-name"},(error) => {
-	// Successful?
-	if (error !=null) {
-		Console.WriteLine(error.LocalizedDescription);
-	}
+    // Successful?
+    if (error !=null) {
+        Console.WriteLine(error.LocalizedDescription);
+    }
 });
 ```
 
@@ -123,12 +123,13 @@ Finally, you can delete all Index Items with the following code:
 ```csharp
 // Delete all index items
 CSSearchableIndex.DefaultSearchableIndex.DeleteAll((error) => {
-	// Successful?
-	if (error !=null) {
-		Console.WriteLine(error.LocalizedDescription);
-	}
+    // Successful?
+    if (error !=null) {
+        Console.WriteLine(error.LocalizedDescription);
+    }
 });
 ```
+
 ## Additional Core Spotlight Features
 
 Core Spotlight has the following features that help to keep the index accurate
@@ -137,8 +138,6 @@ and up-to-date:
 - **Batch Update Support** – If your app needs to create or modify a large group of indexes at the same time, the entire batch can be sent to the `Index` method of the `CSSearchableIndex` class in one call.
 - **Respond to Index Changes** – Using the `CSSearchableIndexDelegate` your app can respond to changes and notifications from the searchable index.
 - **Apply Data Protection** – Using the data protection classes, you can implement security on the items that you add to the searchable index using Core Spotlight.
-
-
 
 ## Related Links
 

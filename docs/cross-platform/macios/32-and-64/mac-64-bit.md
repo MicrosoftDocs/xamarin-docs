@@ -3,8 +3,8 @@ title: "Updating Xamarin.Mac Unified applications to 64-bit"
 description: "This guide describes how to update your Xamarin.Mac applications to target 64-bit. It also provides examples of the kinds of errors that may be encountered when making this change."
 ms.prod: xamarin
 ms.assetid: C3810A74-539C-4FFB-B47F-68CA5F7BCDAD
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/22/2018
 ---
 
@@ -70,4 +70,3 @@ ld: symbol(s) not found for architecture x86_64
 
 To build and run successfully, update these dependencies to 64-bit and 
 recompile your app.
-

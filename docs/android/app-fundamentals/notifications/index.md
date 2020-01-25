@@ -3,8 +3,8 @@ title: "Notifications in Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: 2E54F1D0-45F4-43A7-B3A3-4F483B7150CB
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -23,7 +23,7 @@ notification and discuss the APIs involved with creating and
 displaying a notification.
 
 ## [Walkthrough - using local notifications in Xamarin.Android](local-notifications-walkthrough.md)  
- 
+
 This walkthrough covers how to use local notifications in a 
 Xamarin.Android application. It demonstrates the basics of creating and 
 publishing a notification. When the user clicks on the notification in 
@@ -42,7 +42,7 @@ the notification drawer it starts up a second Activity.
  Android notifications. It includes a design considerations section
  that helps you design your notifications so that they conform to the
  guidelines of the Android user interface. It provides more background
- information about preserviing navigation when starting an Activity,
+ information about preserving navigation when starting an Activity,
  and it explains how to display progress in a notification and control
  media playback on the Lock Screen.
 
@@ -56,4 +56,3 @@ the notification drawer it starts up a second Activity.
 ## Related links
 
 - [Local Notifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/localnotifications)
-- [Remote Notifications (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/remotenotifications)

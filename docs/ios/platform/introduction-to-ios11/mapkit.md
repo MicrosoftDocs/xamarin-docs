@@ -4,8 +4,8 @@ description: "This document describes new MapKit features in iOS 11: grouping ma
 ms.prod: xamarin
 ms.assetid: 304AE5A3-518F-422F-BE24-92D62CE30F34
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/30/2017
 ---
 
@@ -253,7 +253,6 @@ button.Layer.CornerRadius = 5;
 button.TranslatesAutoresizingMaskIntoConstraints = false;
 View.AddSubview(button); // constraints omitted for simplicity
 ```
-
 
 ## Related Links
 

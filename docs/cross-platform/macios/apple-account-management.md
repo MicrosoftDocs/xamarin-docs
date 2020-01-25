@@ -3,8 +3,8 @@ title: "Apple Account Management"
 description: "This document describes how to use the Apple account management features in Visual Studio for Mac and Visual Studio 2019."
 ms.prod: xamarin
 ms.assetid: 71388B83-699B-4E42-8CBF-8557A4A3CABF
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
 ---
 
@@ -16,8 +16,8 @@ Authentication of your Apple ID is performed on the command line with [fastlane]
 
 The Apple Account dialog allows you to do the following:
 
-* **Create and Manage Certificates**
-* **Create and Manage Provisioning Profiles**
+- **Create and Manage Certificates**
+- **Create and Manage Provisioning Profiles**
 
 Information on how to do this is described in this guide.
 
@@ -53,7 +53,7 @@ You must have an Apple Developer account to use this feature. More information o
     ![fastlane dialog.](apple-account-management-images/image2.png)
 
 3. Enter your Apple ID and Password and click the **Sign In** button. This will save your credentials in the secure Keychain on this machine. [fastlane](~/ios/deploy-test/provisioning/fastlane/index.md) is used to handle your credentials securely and pass them to Apple's developer portal.
- 
+
 4. Select **Always Allow** on the alert dialog to allow Visual Studio to use your credentials :
 
     ![Always allow alert dialog](apple-account-management-images/image4.png)
@@ -79,25 +79,24 @@ You must have an Apple Developer account to use this feature. More information o
     ![username and password dialog](apple-account-management-images/prov1a.png)
 
 1. Once your account has been added successfully, you'll see your Apple ID and any teams that your Apple ID is part of.
- 
+
 1. Select any team and press the **View Details…** button. This will display a list of all Signing Identities and Provisioning Profiles that are installed on your machine:
 
     ![username and password dialog](apple-account-management-images/prov2.png)
 
 -----
 
-
 ## Managing Signing Identities and Provisioning Profiles
 
 The team details dialog displays a list of Signing Identities, organized by type. The **Status** column advises you if the certificate is: 
 
-* **Valid** – The signing identity (both the certificate and the private key) is installed on your machine and it has not expired.
+- **Valid** – The signing identity (both the certificate and the private key) is installed on your machine and it has not expired.
 
-* **Not in Keychain** – There is a valid signing identity on Apple's server. To install this on your machine, it must be exported from another machine. You cannot download the signing identity from the Apple Developer Portal as it will not contain the private key.
+- **Not in Keychain** – There is a valid signing identity on Apple's server. To install this on your machine, it must be exported from another machine. You cannot download the signing identity from the Apple Developer Portal as it will not contain the private key.
 
-* **Private key is missing** – A Certificate with no private key is installed in the keychain.
+- **Private key is missing** – A Certificate with no private key is installed in the keychain.
 
-* **Expired** – The Certificate is expired. You should remove this from your keychain.
+- **Expired** – The Certificate is expired. You should remove this from your keychain.
 
   ![team details dialog information](apple-account-management-images/image7.png)
 
@@ -143,7 +142,7 @@ This is currently a known issue, relating to bug [#53906](https://bugzilla.xamar
 
 ### If you are experiencing issues logging in your account, please try the following:
 
-* Open the keychain application and under Category select *Passwords*. Search for `deliver.`, and delete all entries.
+- Open the keychain application and under Category select *Passwords*. Search for `deliver.`, and delete all entries.
 
 ### "Error Adding Account. Please Sign in with an app-specific password"
 
@@ -158,4 +157,4 @@ The maximum number of certificates allowed have been generated. To fix this, bro
 
 ## Known Issues
 
-* Distribution provisioning profiles by default will target App Store. In House or Ad Hoc profiles should be created manually.
+- Distribution provisioning profiles by default will target App Store. In House or Ad Hoc profiles should be created manually.

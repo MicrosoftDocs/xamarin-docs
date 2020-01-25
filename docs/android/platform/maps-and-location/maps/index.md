@@ -4,8 +4,8 @@ description: "This article discusses how to use maps and location with Xamarin.A
 ms.prod: xamarin
 ms.assetid: 425E0ED2-5380-6EBE-7059-256B6E9128B8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
 ---
 
@@ -24,9 +24,9 @@ maps using location hardware that may be available on the device. This
 article covers a spectrum of what the maps applications under 
 Xamarin.Android have to offer, including: 
 
--  Using the built-in maps application to quickly add mapping functionality.
--  Working with the Maps API to control a map's display.
--  Using a variety of techniques to add graphical overlays.
+- Using the built-in maps application to quickly add mapping functionality.
+- Working with the Maps API to control a map's display.
+- Using a variety of techniques to add graphical overlays.
 
 The topics in this section cover a wide range of mapping features.
 First, they explain how to leverage Android's built-in maps application
@@ -35,7 +35,6 @@ discuss how to use the Maps API to incorporate mapping features
 directly within an application, covering both how to control the
 position and display of a map, as well as how to add graphical
 overlays.
-
 
 ## Related Links
 

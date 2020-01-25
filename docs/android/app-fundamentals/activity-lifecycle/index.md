@@ -4,8 +4,8 @@ description: "Activities are a fundamental building block of Android application
 ms.prod: xamarin
 ms.assetid: 05B34788-F2D2-4347-B66B-40AFD7B1D167
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/28/2018
 ---
 
@@ -43,10 +43,9 @@ possibly even underlying OS instability.
 
 This chapter examines the activity lifecycle in detail, including:
 
--  Activity States
--  Lifecycle Methods
--  Retaining the State of an Application
-
+- Activity States
+- Lifecycle Methods
+- Retaining the State of an Application
 
 This section also includes a
 [walkthrough](~/android/app-fundamentals/activity-lifecycle/saving-state.md)
@@ -74,7 +73,7 @@ states an Activity can go through during its lifetime:
 
 These states can be broken into 4 main groups as follows:
 
-1.  *Active or Running* &ndash; Activities are considered active or running
+1. *Active or Running* &ndash; Activities are considered active or running
     if they are in the foreground, also known as the top of the
     activity stack. This is considered the highest priority activity in
     Android, and as such will only be killed by the OS in extreme
@@ -82,7 +81,7 @@ These states can be broken into 4 main groups as follows:
     is available on the device as this could cause the UI to become
     unresponsive.
 
-1.  *Paused* &ndash; When the device goes to sleep, or an activity is still
+1. *Paused* &ndash; When the device goes to sleep, or an activity is still
     visible but partially hidden by a new, non-full-sized or
     transparent activity, the activity is considered paused. Paused
     activities are still alive, that is, they maintain all state and
@@ -92,7 +91,7 @@ These states can be broken into 4 main groups as follows:
     activity will satisfy the resource requirements needed to keep the
     Active/Running Activity stable and responsive.
 
-1.  *Stopped/Backgrounded* &ndash; Activities that are completely obscured by
+1. *Stopped/Backgrounded* &ndash; Activities that are completely obscured by
     another activity are considered stopped or in the background.
     Stopped activities still try to retain their state and member
     information for as long as possible, but stopped activities are
@@ -100,12 +99,11 @@ These states can be broken into 4 main groups as follows:
     such, the OS will kill activities in this state first to satisfy
     the resource requirements of higher priority activities.
 
-1.  *Restarted* &ndash; It is possible for an activity that is anywhere
+1. *Restarted* &ndash; It is possible for an activity that is anywhere
     from paused to stopped in the lifecycle to be removed from memory
     by Android. If the user navigates back to the activity it must be
     restarted, restored to its previously saved state, and then
     displayed to the user.
-
 
 ### Activity Re-Creation in Response to Configuration Changes
 
@@ -207,12 +205,11 @@ The system calls
 when the Activity is ready to start interacting with the user.
 Activities should override this method to perform tasks such as:
 
--  Ramping up frame rates (a common task in game development)
--  Starting animations
--  Listening for GPS updates
--  Display any relevant alerts or dialogs
--  Wire up external event handlers
-
+- Ramping up frame rates (a common task in game development)
+- Starting animations
+- Listening for GPS updates
+- Display any relevant alerts or dialogs
+- Wire up external event handlers
 
 As an example, the following code snippet shows how to initialize the camera:
 
@@ -240,17 +237,17 @@ is called when the system is about to put the activity into the
 background or when the activity becomes partially obscured. Activities
 should override this method if they need to:
 
--   Commit unsaved changes to persistent data
+- Commit unsaved changes to persistent data
 
--   Destroy or clean up other objects consuming resources
+- Destroy or clean up other objects consuming resources
 
--   Ramp down frame rates and pausing animations
+- Ramp down frame rates and pausing animations
 
--   Unregister external event handlers or notification handlers (i.e.
+- Unregister external event handlers or notification handlers (i.e.
     those that are tied to a service). This must be done to prevent
     Activity memory leaks.
 
--   Likewise, if the Activity has displayed any dialogs or alerts, they
+- Likewise, if the Activity has displayed any dialogs or alerts, they
     must be cleaned up with the `.Dismiss()` method.
 
 As an example, the following code snippet will release the camera, as
@@ -272,9 +269,8 @@ public void OnPause()
 
 There are two possible lifecycle methods that will be called after `OnPause`:
 
-1.  `OnResume` will be called if the Activity is to be returned to the foreground.
-1.  `OnStop` will be called if the Activity is being placed in the background.
-
+1. `OnResume` will be called if the Activity is to be returned to the foreground.
+1. `OnStop` will be called if the Activity is being placed in the background.
 
 #### OnStop
 
@@ -282,10 +278,9 @@ There are two possible lifecycle methods that will be called after `OnPause`:
 is called when the activity is no longer visible to the user. This
 happens when one of the following occurs:
 
--  A new activity is being started and is covering up this activity.
--  An existing activity is being brought to the foreground.
--  The activity is being destroyed.
-
+- A new activity is being started and is covering up this activity.
+- An existing activity is being brought to the foreground.
+- The activity is being destroyed.
 
 `OnStop` may not always be called in low-memory situations, such as
 when Android is starved for resources and cannot properly background
@@ -514,23 +509,22 @@ state using the bundle provided to `OnCreate`.
 For an example of saving state using a `Bundle`, refer to the
 [Walkthrough - Saving the Activity state](saving-state.md).
 
-
 #### Bundle Limitations
 
 Although `OnSaveInstanceState` makes it easy to save transient
 data, it has some limitations:
 
--   It is not called in all cases. For example, pressing **Home** or
+- It is not called in all cases. For example, pressing **Home** or
     **Back** to exit an Activity will not result in
     `OnSaveInstanceState` being called.
 
--   The bundle passed into `OnSaveInstanceState` is not designed for
+- The bundle passed into `OnSaveInstanceState` is not designed for
     large objects, such as images. In the case of large objects, saving
     the object from
     [OnRetainNonConfigurationInstance](xref:Android.App.Activity.OnRetainNonConfigurationInstance)
     is preferable, as discussed below.
 
--   Data saved by using the bundle is serialized, which can lead to
+- Data saved by using the bundle is serialized, which can lead to
     delays.
 
 Bundle state is useful for simple data that doesn't use much memory,
@@ -541,7 +535,6 @@ gets saved in an object as needed. The next section introduces
 `OnRetainNonConfigurationInstance` as a way of preserving more complex
 data types through configuration changes.
 
-
 ### Persisting Complex Data
 
 In addition to persisting data in the bundle, Android also supports
@@ -551,11 +544,11 @@ and returning an instance of a `Java.Lang.Object` that contains the
 data to persist. There are two primary benefits of using
 `OnRetainNonConfigurationInstance` to save state:
 
--   The object returned from `OnRetainNonConfigurationInstance`
+- The object returned from `OnRetainNonConfigurationInstance`
     performs well with larger, more complex data types because memory
     retains this object.
 
--   The `OnRetainNonConfigurationInstance` method is called on demand,
+- The `OnRetainNonConfigurationInstance` method is called on demand,
     and only when needed. This is more economical than using a manual
     cache.
 
@@ -712,7 +705,6 @@ that an activity may go through during its lifetime, as well as the
 lifecycle methods that are associated with those states. Next, guidance
 was provided as to what kind of logic should be performed in each of
 these methods.
-
 
 ## Related Links
 

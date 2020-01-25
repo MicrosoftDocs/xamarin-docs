@@ -3,8 +3,8 @@ documentType: LandingData
 title: Xamarin.Android
 metadata:
   description: Xamarin.Android exposes the complete Android SDK for .NET developers.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 07/27/2018
   ms.topic: landing-page
   ms.technology: xamarin-android
@@ -12,14 +12,14 @@ abstract:
   description: Xamarin.Android exposes the complete Android SDK for .NET developers. Build fully native Android apps using C# or F# in Visual Studio.
   menu:
     items:
-    - href: ~/android/samples/
+    - href: ~/android/samples/index.md
       text: Android Samples
     - href: https://docs.microsoft.com/xamarin/android/release-notes/
       text: Release Notes
     - href: https://developers.google.com/
       text: Googles's Developer Documentation
     - href: /visualstudio/
-      text: Visual Studio 
+      text: Visual Studio
 sections:
 - title: Get Started
   items:
@@ -42,8 +42,8 @@ sections:
       href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
     - image:
         src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: Android Pie
-      href: ~/android/platform/pie.md
+      text: Android 10
+      href: ~/android/platform/android-10.md
 - title: Guides
   items:
   - type: list
@@ -56,23 +56,23 @@ sections:
         src: https://docs.microsoft.com/media/common/i_get-started.svg
         href: ~/android/get-started/index.md
       title: Getting Started
-    - href: ~/android/app-fundamentals/
+    - href: ~/android/app-fundamentals/index.md
       html: Everything you need to know to build Android apps, such as working with files, images, databases, and more.
       image:
         src: ~/media/icons/i_app-build.svg
-        href: ~/android/app-fundamentals/
+        href: ~/android/app-fundamentals/index.md
       title: Application Fundamentals
-    - href: ~/android/user-interface
+    - href: ~/android/user-interface/index.md
       html: Learn about the complete set of user interface control widgets available for Android.
       image:
         src: ~/media/icons/i_user-interface.svg
-        href: ~/android/user-interface/
+        href: ~/android/user-interface/index.md
       title: User Interface
-    - href: ~/android/platform/
+    - href: ~/android/platform/index.md
       html: Working with Android platform features, such as fingerprint authentication, and the newest features in Android 8.0 Oreo.
       image:
         src: ~/media/icons/i_platform.svg
-        href: ~/android/platform/
+        href: ~/android/platform/index.md
       title: Platform Features
     - href: ~/essentials/index.md?context=xamarin/android
       html: Cross-platform APIs for mobile applications.
@@ -80,29 +80,29 @@ sections:
         src: https://docs.microsoft.com/media/common/i_multi-connect.svg
         href: ~/essentials/index.md?context=xamarin/android
       title: Xamarin.Essentials
-    - href: ~/android/data-cloud/
+    - href: ~/android/data-cloud/index.md
       html: Local and remote data storage and retrieval, and other cloud-based services.
       image:
         src: ~/media/icons/i_data-cloud.svg
-        href: ~/android/data-cloud/
+        href: ~/android/data-cloud/index.md
       title: Data & Cloud Services
-    - href: ~/android/deploy-test/
+    - href: ~/android/deploy-test/index.md
       html: Instructions for building and deploying your apps to Google Play, and tips for testing them beforehand!
       image:
         src: ~/media/icons/i_deploy-test.svg
-        href: ~/android/deploy-test/
+        href: ~/android/deploy-test/index.md
       title: Deployment and Testing
-    - href: ~/android/internals/
+    - href: ~/android/internals/index.md
       html: Additional information about Xamarin.Android internals and assistance with features like localization and accessibility.
       image:
         src: https://docs.microsoft.com/media/common/i_advanced.svg
-        href: ~/android/internals/
+        href: ~/android/internals/index.md
       title: Advanced Concepts & Internals
-    - href: ~/android/wear/
+    - href: ~/android/wear/index.md
       html: Building apps for Android Wear.
       image:
         src: ~/media/icons/i_android-wear.svg
-        href: ~/android/wear/
+        href: ~/android/wear/index.md
       title: Android Wear
 - title: Reference
   items:

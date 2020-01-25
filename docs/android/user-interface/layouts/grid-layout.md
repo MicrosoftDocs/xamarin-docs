@@ -3,8 +3,8 @@ title: "GridLayout"
 ms.prod: xamarin
 ms.assetid: B69A4BF5-9CFB-443A-9F7B-062D1E498F61
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -22,7 +22,6 @@ be in. This way, the *GridLayout* is able to position views in the grid
 without requiring that any intermediate views provide a table structure, such as
 seen in the table rows used in the TableLayout. By maintaining a flat hierarchy, *GridLayout* is able to more swiftly layout its child views. Let’s take
 a look at an example to illustrate what this concept actually means in code.
-
 
 ## Creating a Grid Layout
 
@@ -59,8 +58,6 @@ This results in the following user interface when run in an application:
 
  [![Screenshot of GridLayoutDemo app displaying four cells](grid-layout-images/01-gridlayout.png)](grid-layout-images/01-gridlayout.png#lightbox)
 
-
-
 ## Specifying Orientation
 
 Notice in the XML above, each `TextView` does not specify a row or
@@ -87,8 +84,6 @@ in each column, instead of left to right, as shown below:
 This results in the following user interface at runtime:
 
  [![Screenshot of GridLayoutDemo with cells positioned in vertical orientation](grid-layout-images/02-gridlayout.png)](grid-layout-images/02-gridlayout.png#lightbox)
-
-
 
 ### Specifying Explicit Position
 
@@ -125,8 +120,6 @@ the orientation.
             android:layout_column="1"  />
 </GridLayout>
 ```
-
-
 
 ### Specifying spacing
 
@@ -190,8 +183,6 @@ This XML creates spacing in the `GridLayout` as shown below:
 
 The benefit of using the new `Space` view is that it allows for
 spacing and doesn’t require us to set attributes on every child view.
-
-
 
 ### Spanning Columns and Rows
 
@@ -261,9 +252,6 @@ to the layout we had earlier, with the button added to the bottom of the `GridLa
 
  [![Screenshot of GridLayoutDemo with button spanning both columns](grid-layout-images/05-gridlayout.png)](grid-layout-images/05-gridlayout.png#lightbox)
 
-
 ## Related Links
 
-- [GridLayoutDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/platformfeatures-ics-samples-gridlayoutdemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)
+- [GridLayoutDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)

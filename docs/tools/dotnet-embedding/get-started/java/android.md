@@ -3,8 +3,8 @@ title: "Getting started with Android"
 description: "This document describes how to get started using .NET Embedding with Android. It discusses installing .NET Embedding, creating an Android library project, using generated output in an Android Studio project, and other considerations."
 ms.prod: xamarin
 ms.assetid: 870F0C18-A794-4C5D-881B-64CC78759E30
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/28/2018
 ---
 
@@ -12,15 +12,15 @@ ms.date: 03/28/2018
 
 In addition to the requirements from the [Getting started with Java](~/tools/dotnet-embedding/get-started/java/index.md) guide you'll also need:
 
-* [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) or later
-* [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
+- [Xamarin.Android 7.5](https://visualstudio.microsoft.com/xamarin/) or later
+- [Android Studio 3.x](https://developer.android.com/studio/index.html) with Java 1.8
 
 As an overview, we will:
 
-* Create a C# Android Library project
-* Install .NET Embedding via NuGet
-* Run .NET Embedding on the Android library assembly
-* Use the generated AAR file in a Java project in Android Studio
+- Create a C# Android Library project
+- Install .NET Embedding via NuGet
+- Run .NET Embedding on the Android library assembly
+- Use the generated AAR file in a Java project in Android Studio
 
 ## Create an Android Library Project
 
@@ -155,17 +155,17 @@ Upon launching your app:
 
 Note what happened here:
 
-* We have a C# class, `HelloActivity`, that subclasses Java
-* We have Android Resource files
-* We used these from Java in Android Studio
+- We have a C# class, `HelloActivity`, that subclasses Java
+- We have Android Resource files
+- We used these from Java in Android Studio
 
 For this sample to work, all the following are set up in the final APK:
 
-* Xamarin.Android is configured on application start
-* .NET assemblies included in **assets/assemblies**
-* **AndroidManifest.xml** modifications for your C# activities, etc.
-* Android resources and assets from .NET libraries
-* [Android Callable Wrappers](~/android/platform/java-integration/android-callable-wrappers.md) for any `Java.Lang.Object` subclass
+- Xamarin.Android is configured on application start
+- .NET assemblies included in **assets/assemblies**
+- **AndroidManifest.xml** modifications for your C# activities, etc.
+- Android resources and assets from .NET libraries
+- [Android Callable Wrappers](~/android/platform/java-integration/android-callable-wrappers.md) for any `Java.Lang.Object` subclass
 
 If you are looking for an additional walkthrough, check out the following
 video, which demonstrates embedding Charles Petzold's
@@ -222,8 +222,8 @@ public class ViewSubclass : TextView
 }
 ```
 
-* `[Register]` is required to map to a desired Java package name
-* `[Export]` is required to make a method visible to Java
+- `[Register]` is required to map to a desired Java package name
+- `[Export]` is required to make a method visible to Java
 
 We can use `ViewSubclass` in Java like so:
 
@@ -242,18 +242,18 @@ Embedding a single assembly is straightforward; however, it is much more likely 
 
 This causes a dilemma, since .NET Embedding needs to include many types of files into the final AAR such as:
 
-* Android assets
-* Android resources
-* Android native libraries
-* Android java source
+- Android assets
+- Android resources
+- Android native libraries
+- Android java source
 
 You most likely do not want to include these files from the Android support library or Google Play Services into your AAR, but would rather use the official version from Google in Android Studio.
 
 Here is the recommended approach:
 
-* Pass .NET Embedding any assembly that you own (have source for) and want to call from Java
-* Pass .NET Embedding any assembly that you need Android assets, native libraries, or resources from
-* Add Java dependencies like the Android support library or Google Play Services in Android Studio
+- Pass .NET Embedding any assembly that you own (have source for) and want to call from Java
+- Pass .NET Embedding any assembly that you need Android assets, native libraries, or resources from
+- Add Java dependencies like the Android support library or Google Play Services in Android Studio
 
 So your command might be:
 
@@ -276,11 +276,11 @@ dependencies {
 
 ## Further reading
 
-* [Callbacks on Android](~/tools/dotnet-embedding/android/callbacks.md)
-* [Preliminary Android Research](~/tools/dotnet-embedding/android/index.md)
-* [.NET Embedding Limitations](~/tools/dotnet-embedding/limitations.md)
-* [Contributing to the open source project](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
-* [Error codes and descriptions](~/tools/dotnet-embedding/errors.md)
+- [Callbacks on Android](~/tools/dotnet-embedding/android/callbacks.md)
+- [Preliminary Android Research](~/tools/dotnet-embedding/android/index.md)
+- [.NET Embedding Limitations](~/tools/dotnet-embedding/limitations.md)
+- [Contributing to the open source project](https://github.com/mono/Embeddinator-4000/blob/master/Contributing.md)
+- [Error codes and descriptions](~/tools/dotnet-embedding/errors.md)
 
 ## Related links
 

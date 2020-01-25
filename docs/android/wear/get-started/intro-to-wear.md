@@ -4,15 +4,14 @@ description: "With the introduction of Google's Android Wear, you are no longer 
 ms.prod: xamarin
 ms.assetid: EAEF99F0-8FBE-47E4-8644-E7244CFAF464
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
 # Introduction to Android Wear
 
 _With the introduction of Google's Android Wear, you are no longer restricted to just phones and tablets when it comes to developing great Android apps. Xamarin.Android's support for Android Wear makes it possible for you to run C# code on your wrist! This introduction provides a basic overview of Android Wear, describes its key features, and offers an overview of the features available in Android Wear 2.0. It lists some of the more popular Android Wear devices, and it provides links to essential Google Android Wear documentation for further reading._
-
 
 ## Overview
 
@@ -32,7 +31,6 @@ Wear-specific UI controls. Xamarin.Android 5.0 and later also includes
 functionality for packaging your Wear apps. NuGet packages are also
 available for Android Wear 2.0 as described later in this guide.
 
-
 ## Android Wear Basics
 
 Android Wear has a user interface paradigm that differs from that of 
@@ -44,15 +42,12 @@ depend upon a handheld companion app, they need some way to communicate
 with handheld apps. The following sections describe these usage 
 scenarios and outline the essential Android Wear features. 
 
-
-
 ### Usage Scenarios
 
 The first version of Android Wear was focused primarily on extending 
 current handheld applications with enhanced notifications and syncing 
 data between the handheld app and the wearable app. Therefore,
 these scenarios are relatively straightforward to implement.
-
 
 #### Wearable Notifications
 
@@ -67,8 +62,6 @@ style cards or voice input. The
 sample provides example code that demonstrates how to send a list 
 of notifications to an Android Wear device. 
 
-
-
 #### Companion Applications
 
 Another strategy is to create a complete application that runs natively 
@@ -77,8 +70,6 @@ example of this approach is the
 [Quiz](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-quiz) sample app, which demonstrates 
 how to create a quiz that runs on a handheld device and asks quiz
 questions on the wearable device. 
-
-
 
 ### User Interface
 
@@ -102,8 +93,6 @@ action buttons to the Wear user interface. For more about Android Wear
 2.0 user interface elements, see the Android 
 [Anatomy](https://www.google.com/design/spec-wear/system-overview/anatomy.html) 
 topic. 
-
-
 
 ### Communications
 
@@ -135,8 +124,6 @@ This service will be automatically instantiated by Android Wear.
 The [FindMyPhone](https://docs.microsoft.com/samples/xamarin/monodroid-samples/wear-findmyphonesample) sample
 illustrates how to implement a `WearableListenerService`.
 
-
-
 ### Deployment
 
 Each wearable app is deployed with its own APK file embedded inside the 
@@ -146,35 +133,33 @@ versions of Xamarin.Android earlier than version 5.0.
 [Working with Packaging](~/android/wear/deploy-test/packaging.md) 
 explains deployment in more detail. 
 
-
-
 ## Going Further 
 
 The best way to become familiar with Android Wear is to build and test
 your first app. The following list provides a recommended reading
 order to help you get up to speed quickly:
 
-1.  [Setup & Installation](~/android/wear/get-started/installation.md) provides 
+1. [Setup & Installation](~/android/wear/get-started/installation.md) provides 
     detailed instructions for installing and configuring your development 
     environment for building Xamarin.Android Wear apps. 
 
-2.  After you have installed the required packages and configured an 
+2. After you have installed the required packages and configured an 
     emulator or device, see 
     [Hello, Wear](~/android/wear/get-started/hello-wear.md) for 
     step-by-step instructions that explain how to create a small 
     Android Wear project that handles button clicks and displays a 
     click counter on the Wear device. 
 
-3.  [Deployment & Testing](~/android/wear/deploy-test/index.md) provides
+3. [Deployment & Testing](~/android/wear/deploy-test/index.md) provides
     more detailed information about configuring and deploying to emulators
     and devices, including instructions on how to deploy your app to a
     Wear device via Bluetooth.
 
-4.  [Working with Screen Sizes](~/android/wear/screen-sizes.md) 
+4. [Working with Screen Sizes](~/android/wear/screen-sizes.md) 
     explains how to preview and optimize your user interface for the various 
     available screen sizes on Wear devices. 
 
-5.  [Working with Packaging](~/android/wear/deploy-test/packaging.md) 
+5. [Working with Packaging](~/android/wear/deploy-test/packaging.md) 
     describes the steps for manually packaging Wear apps for distribution 
     on Google Play.
 
@@ -185,8 +170,6 @@ provides step-by-step instructions and example code for developing a
 stripped down digital watch face service, followed by more code that 
 enhances it to an analog-style watch face with extra features. 
 
-
-
 ## Android Wear 2.0
 
 Android Wear 2.0 introduces a variety of new features and capabilities,
@@ -196,8 +179,6 @@ build standalone apps that work independently of handheld apps. The new
 *wrist gestures* capability enables one-handed interactions with your
 app. The following sections highlight these features and provide links
 to help you get started with using them in your app.
-
-
 
 ### Install Wear 2.0 Packages
 
@@ -215,14 +196,12 @@ the **Xamarin.GooglePlayServices.Wearable** NuGet:
 
 [![Xamarin.GooglePlayServices.Wearable](intro-to-wear-images/gpsw-nuget-sml.png "Install the Xamarin.GooglePlayServices.Wearable NuGet")](intro-to-wear-images/gpsw-nuget.png#lightbox)
 
-
 ### Key Features of Wear 2.0
 
 Android Wear 2.0 is the biggest update to Android Wear since its 
 initial launch in 2014. The following sections highlight the key 
 features of Android Wear 2.0, and links are provided to help you get 
 started using these new features in your app. 
-
 
 #### Complications
 
@@ -237,8 +216,6 @@ statistics:
 For more about complications, see the Android 
 [Watch Face Complications](https://developer.android.com/wear/preview/features/complications.html) 
 topic. 
-
-
 
 #### Navigation and Action Drawers 
 
@@ -255,8 +232,6 @@ Android
 [Wear Navigation and Actions](https://developer.android.com/wear/preview/features/ui-nav-actions.html) 
 topic. 
 
-
-
 #### Curved Layouts 
 
 Wear 2.0 introduces new features for displaying curved layouts on round 
@@ -271,8 +246,6 @@ see the Android
 [WearableRecyclerView](https://developer.android.com/reference/android/support/wearable/view/WearableRecyclerView.html) 
 API documentation. 
 
-
-
 #### Standalone Apps 
 
 Android Wear 2.0 apps can work independently of handheld apps. This means
@@ -282,21 +255,18 @@ the wearable device. For more information about this feature,
 see the Android [Standalone Apps](https://developer.android.com/wear/preview/features/standalone-apps.html)
 topic.
 
-
-
 #### Wrist Gestures 
 
 Wrist gestures make it possible for users to interact with your app 
 without using the touch screen &ndash; users can respond to the app 
 with a single hand. Two wrist gestures are supported: 
 
--   Flick wrist out
--   Flick wrist in
+- Flick wrist out
+- Flick wrist in
 
 For more information, see the Android 
 [Wrist Gestures](https://developer.android.com/wear/preview/features/gestures.html) 
 topic. 
-
 
 There are many more Wear 2.0 features such as inline actions, smart 
 reply, remote input, expanded notifications, and a new bridging mode 
@@ -304,31 +274,25 @@ for notifications. For more information about the new Wear 2.0 features,
 see the Android 
 [API Overview](https://developer.android.com/wear/preview/api-overview.html). 
 
-
-
 ## Devices
 
 Here are some examples of the devices that can run Android Wear:
 
-* [Motorola 360](https://moto360.motorola.com/)
-* [LG G Watch](http://www.lg.com/us/smart-watches/lg-W100-g-watch)
-* [LG G Watch R](http://www.lg.com/us/smartwatch/g-watch-r)
-* [Samsung Gear Live](http://www.samsung.com/global/microsite/gear/gearlive_design.html)
-* [Sony SmartWatch 3](http://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
-* [ASUS ZenWatch](http://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
-
-
+- [Motorola 360](https://moto360.motorola.com/)
+- [LG G Watch](https://www.lg.com/us/smart-watches/lg-W100-g-watch)
+- [LG G Watch R](https://www.lg.com/us/smartwatch/g-watch-r)
+- [Samsung Gear Live](https://www.samsung.com/global/microsite/gear/gearlive_design.html)
+- [Sony SmartWatch 3](https://www.sonymobile.com/global-en/products/smartwear/smartwatch-3-swr50/)
+- [ASUS ZenWatch](https://www.asus.com/us/Phones/ASUS_ZenWatch_WI500Q/)
 
 ## Further Reading
 
 Check out Google's Android Wear documentation:
 
-* [About Android Wear](http://www.android.com/wear/)
-* [Android Wear App Design](https://developer.android.com/design/wear/index.html)
-* [android.support.wearable library](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
-* [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
-
-
+- [About Android Wear](https://www.android.com/wear/)
+- [Android Wear App Design](https://developer.android.com/design/wear/index.html)
+- [android.support.wearable library](https://developer.android.com/reference/android/support/wearable/view/package-summary.html)
+- [Android Wear 2.0](https://developer.android.com/wear/preview/index.html)
 
 ## Summary
 
@@ -338,7 +302,6 @@ introduced in Android Wear 2.0. It provided links to essential reading
 to help developers get started with Xamarin.Android Wear development,
 and it listed examples of some of the Android Wear devices currently on
 the market.
-
 
 ## Related Links
 

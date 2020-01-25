@@ -4,8 +4,8 @@ description: "This document links to guides that describe various concepts neces
 ms.prod: xamarin
 ms.assetid: 5A36B3A7-F197-4AC3-A40D-B2C49362FF06
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 12/17/2015
 ---
 

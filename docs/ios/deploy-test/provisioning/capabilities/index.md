@@ -4,8 +4,8 @@ description: "Adding capabilities to an application often requires additional pr
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
 ---
 
@@ -16,28 +16,28 @@ _Adding capabilities to an application often requires additional provisioning se
 Apple provides developers with _capabilities_, often known as _app services_, as a means of extending functionality and widening the scope of what iOS apps can do. The capabilities allow developers to add a deeper integration of platform features to their application, such as: the ability to have monetary transactions initiated from the app, additional device services such as Siri, and more.
 These capabilities can be used with Xamarin.iOS projects. The full list of services is described below:
 
-* App Groups
-* Associated Domains
-* Data Protection
-* Game Center
-* HealthKit
-* HomeKit
-* Wireless Accessory Configuration
-* iCloud
-* In-App Purchase
-* Inter-App Audio
-* Apple Pay
-* Wallet
-* Push Notification
-* Personal VPN
-* Siri
-* Maps
-* Background Modes
-* Keychain Sharing
-* Network Extensions
-* Hotspot Configuration
-* Multipath
-* NFC Tag Reading
+- App Groups
+- Associated Domains
+- Data Protection
+- Game Center
+- HealthKit
+- HomeKit
+- Wireless Accessory Configuration
+- iCloud
+- In-App Purchase
+- Inter-App Audio
+- Apple Pay
+- Wallet
+- Push Notification
+- Personal VPN
+- Siri
+- Maps
+- Background Modes
+- Keychain Sharing
+- Network Extensions
+- Hotspot Configuration
+- Multipath
+- NFC Tag Reading
 
 Capabilities can be enabled either through Visual Studio for Mac and Visual Studio 2019, or manually in the Apple Developer Portal. Certain capabilities such as Wallet, Apple Pay, and iCloud require additional configuration of the App IDs.
 
@@ -52,16 +52,16 @@ This section explains how to use Visual Studio's automatic provisioning or the D
 > [!IMPORTANT]
 > Not all capabilities can be added and managed with Automatic Provisioning. The following list contains the supported capabilities:
 >
->* HealthKit 
->* HomeKit 
->* Personal VPN 
->* Wireless Accessory Configuration 
->* Inter-App Audio 
->* SiriKit 
->* Hotspot 
->* Network Extensions 
->* NFC Tag Reading
->* Multipath 
+>- HealthKit 
+>- HomeKit 
+>- Personal VPN 
+>- Wireless Accessory Configuration 
+>- Inter-App Audio 
+>- SiriKit 
+>- Hotspot 
+>- Network Extensions 
+>- NFC Tag Reading
+>- Multipath 
 >
 >Push Notifications, Game Center, In-App Purchase, Maps, Keychain Sharing, Associated Domains, and Data Protection capabilities are not currently supported. To add these capabilities, use manual provisioning and follow the steps in the [Developer Center](#devcenter) section.
 
@@ -80,8 +80,8 @@ Capabilities are added to the **Entitlements.plist** in Visual Studio for Mac. T
     ![Add capabilities to entitlements.plist file](images/image17.png)
 
     Selecting a capability does two things:
-    * Adds that feature to your App ID
-    * Adds the entitlement key/value pair to your Entitlements.plist file.
+    - Adds that feature to your App ID
+    - Adds the entitlement key/value pair to your Entitlements.plist file.
 
     Visual Studio for Mac will advise you when these tasks have been carried out by displaying the following success message:
 
@@ -103,11 +103,10 @@ Capabilities are added to the **Entitlements.plist**. To add capabilities in Vis
 
     Saving the **Entitlement.plist** does two things:
 
-    * Adds that feature to your App ID
-    * Adds the entitlement key/value pair to your Entitlements.plist file.
+    - Adds that feature to your App ID
+    - Adds the entitlement key/value pair to your Entitlements.plist file.
 
 -----
-
 
 <a name="devcenter" />
 
@@ -141,7 +140,6 @@ Using the developer center is a two step process that requires creating an App I
     ![App ID confirmation](images/image9.png)
 
 9. Click **Register** and then **Done**. The newly created App ID should display in the iOS App IDs list.
-
 
 <a name="provisioningprofile" />
 
@@ -191,8 +189,8 @@ Now create a provisioning profile that contains this App ID. Follow the steps be
 
 Once a Capability has been enabled on the server side, there is still work that needs to be done to allow your app to use the functionality. The list below describes additional steps that may need to be taken:
 
-*	Use the framework namespace in your app.
-*	Add the required entitlements to your App. Information on the entitlements required and how to add them is detailed in the [Introduction to Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
+- Use the framework namespace in your app.
+- Add the required entitlements to your App. Information on the entitlements required and how to add them is detailed in the [Introduction to Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guide.
 
 <a name="troubleshooting" />
 

@@ -1,90 +1,91 @@
-### YamlMime:YamlDocument
-documentType: LandingData
-title: Cross-Platform Guidance
-metadata:
-  description: Cross-platform guidance for mobile developers.
-  author: conceptdev
-  ms.author: crdun
-  ms.date: 04/25/2018
-  ms.topic: landing-page
-abstract:
-  description: Xamarin provides a cross-platform development solution for mobile, tablet, and desktop applications. This section covers details that apply no matter which platforms you're targetting.
-  menu:
-    items:
-    - href: ~/cross-platform/samples/index.yml
-      text: Xamarin Samples
-    - href: /visualstudio/
-      text: Visual Studio
-    - href: /visualstudio/mac/
-      text: Visual Studio for Mac
+### YamlMime:Landing
 
-sections:
-- title: Get Started
-  items:
-  - type: paragraph
-    text: Learn how to build your first apps with Xamarin and C#, for Android, iOS, macOS, UWP, and more.
-  - type: list
-    style: icon48
-    items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: Requirements
-      href: ~/cross-platform/get-started/requirements.md
-    - image:
-        src: ~/media/icons/i_desktop-phone.svg
-      text: Xamarin.Forms
-      href: ~/get-started/quickstarts/index.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Android
-      href: ~/android/get-started/hello-android/hello-android-quickstart
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: iOS
-      href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_xplat-code.svg
-      text: Mac
-      href: ~/mac/get-started/hello-mac.md
-- title: Guides
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-      - href: ~/cross-platform/get-started/index.md
-        html: Introduction to mobile app development with Xamarin.
-        image:
-          src: https://docs.microsoft.com/media/common/i_get-started.svg
-          href: ~/cross-platform/get-started/index.md
-        title: Building Mobile Apps
-      - href: ~/cross-platform/platform
-        html: Xamarin supports C#, F#, and the Razor templating engine.
-        image:
-          src: ~/media/icons/i_app-build.svg
-          href: ~/cross-platform/platform
-        title: Language Support
-      - href: ~/cross-platform/app-fundamentals/
-        html: Everything you need to know to build apps.
-        image:
-          src: ~/media/icons/i_platform.svg
-          href: ~/cross-platform/app-fundamentals/
-        title: Sharing Code
-      - href: ~/cross-platform/deploy-test/performance.md
-        html: Guidelines for app performance and security.
-        image:
-          src: https://docs.microsoft.com/media/common/i_code-performance.svg
-          href: ~/cross-platform/deploy-test/performance.md
-        title: Performance & Security
-      - href: ~/cross-platform/deploy-test/
-        html: Tips for debugging and deployment.
-        image:
-          src: ~/media/icons/i_deploy-test.svg
-          href: ~/cross-platform/deploy-test/
-        title: Deployment & Debugging
-      - href: ~/cross-platform/desktop/
-        html: Guidance for .NET desktop developers interested in building mobile apps.
-        image:
-          src: https://docs.microsoft.com/media/common/i_xplat-code.svg
-          href: ~/cross-platform/desktop/
-        title: Desktop Developers
+title: Cross-platform guidance
+summary: "Xamarin provides a cross-platform development solution for mobile, tablet, and desktop applications. This section covers details that apply no matter which platforms you're targeting."
+
+metadata:
+  title: Cross-platform guidance
+  description: "Xamarin provides a cross-platform development solution for mobile, tablet, and desktop applications. This section covers details that apply no matter which platforms you're targeting."
+  author: davidortinau
+  ms.author: daortin
+  ms.date: 12/23/2019
+  ms.topic: landing-page
+
+# linkListType: architecture | concept | deploy | download | get-started | how-to-guide | learn | overview | quickstart | reference | tutorial | video | whats-new
+
+landingContent:
+  # Card
+  - title: Build cross-platform apps
+    linkLists:
+      - linkListType: get-started
+        links:
+          - text: Requirements
+            url: ~/cross-platform/get-started/requirements.md
+          - text: Xamarin.Forms
+            url: ~/get-started/quickstarts/index.md
+          - text: .NET Standard
+            url: ~/cross-platform/app-fundamentals/net-standard.md
+      - linkListType: how-to-guide
+        links:
+          - text: App development lifecycle
+            url: ~/cross-platform/get-started/introduction-to-mobile-sdlc.md
+          - text: Walkthrough
+            url: ~/cross-platform/app-fundamentals/building-cross-platform-applications/index.md
+
+# Card
+  - title: Language support
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Overview
+            url: ~/cross-platform/platform/index.md
+          - text: C#
+            url: ~/cross-platform/platform/csharp-six.md
+          - text: F#
+            url: ~/cross-platform/platform/fsharp/index.md
+          - text: Visual Basic
+            url: ~/cross-platform/platform/visual-basic/index.md
+          - text: Razor HTML templates
+            url: ~/cross-platform/platform/razor-html-templates/index.md
+
+  # Card
+  - title: Performance & security
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Xamarin.Forms performance
+            url: /xamarin/xamarin-forms/deploy-test/performance?context=xamarin/cross-platform
+          - text: Android performance
+            url: /xamarin/android/deploy-test/performance?context=xamarin/cross-platform
+          - text: iOS performance
+            url: /xamarin/ios/deploy-test/performance?context=xamarin/cross-platform
+          - text: Mac performance
+            url: /xamarin/mac/deploy-test/performance?context=xamarin/cross-platform
+          - text: Transport Layer Security (TLS) 1.2
+            url: ~/cross-platform/app-fundamentals/transport-layer-security.md
+
+  # Card
+  - title: Deployment & debugging
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Custom linker configuration
+            url: ~/cross-platform/deploy-test/linker.md
+      - linkListType: how-to-guide
+        links:
+          - text: Connect to local web services
+            url: ~/cross-platform/deploy-test/connect-to-local-web-services.md
+          - text: Multi-process debugging
+            url: ~/cross-platform/deploy-test/multi-process-debugging.md
+
+  # Card
+  - title: Desktop developers
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: App lifecycle comparison
+            url: ~/cross-platform/desktop/lifecycle.md
+          - text: UI controls comparison
+            url: ~/cross-platform/desktop/controls/index.md
+          - text: Porting guidance
+            url: ~/cross-platform/desktop/porting.md

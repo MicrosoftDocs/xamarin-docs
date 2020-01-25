@@ -4,8 +4,8 @@ description: "This document describes how to set up an ARKit app in Xamarin.iOS,
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/01/2017
 ---
 
@@ -54,33 +54,33 @@ You then need to subclass the `ArkitApp` class and override the `Start` method. 
 
 The ARKit/UrhoSharp sample loads an animated character with textures and plays the animation, with the following implementation:
 
-    ```csharp
-    public class MutantDemo : ArkitApp
+```csharp
+public class MutantDemo : ArkitApp
+{
+    [Preserve]
+    public MutantDemo(ApplicationOptions opts) : base(opts) { }
+
+    Node mutantNode;
+
+    protected override void Start()
     {
-        [Preserve]
-        public MutantDemo(ApplicationOptions opts) : base(opts) { }
+        base.Start ();
 
-        Node mutantNode;
+        // Mutant
+        mutantNode = Scene.CreateChild();
+        mutantNode.Rotation = new Quaternion(x: 0, y:15, z:0);
+        mutantNode.Position = new Vector3(0, -1f, 2f); /*two meters away*/
+        mutantNode.SetScale(0.5f);
 
-        protected override void Start()
-        {
-            base.Start ();
+        var mutant = mutantNode.CreateComponent<AnimatedModel>();
+        mutant.Model = ResourceCache.GetModel("Models/Mutant.mdl");
+        mutant.Material = ResourceCache.GetMaterial("Materials/mutant_M.xml");
 
-            // Mutant
-            mutantNode = Scene.CreateChild();
-            mutantNode.Rotation = new Quaternion(x: 0, y:15, z:0);
-            mutantNode.Position = new Vector3(0, -1f, 2f); /*two meters away*/
-            mutantNode.SetScale(0.5f);
-
-            var mutant = mutantNode.CreateComponent<AnimatedModel>();
-            mutant.Model = ResourceCache.GetModel("Models/Mutant.mdl");
-            mutant.Material = ResourceCache.GetMaterial("Materials/mutant_M.xml");
-
-            var animation = mutantNode.CreateComponent<AnimationController>();
-            animation.Play("Animations/Mutant_HipHop1.ani", 0, true, 0.2f);
-        }
+        var animation = mutantNode.CreateComponent<AnimationController>();
+        animation.Play("Animations/Mutant_HipHop1.ani", 0, true, 0.2f);
     }
-    ```
+}
+```
 
 And that is really all that you have to do at this point to have your 3D content displayed in augmented reality.
 
@@ -109,14 +109,12 @@ The simplest way to do it is to insert a `RenderPathCommand` into the main `Rend
 
 However, we are faced with two problems to blend these two worlds together:
 
-
 1. On iOS, GPU Textures must have a resolution that is a power of two, but the frames that we will get from the camera do not have resolution that are a power of two, for example: 1280x720.
 2. The frames are encoded in [YUV](https://en.wikipedia.org/wiki/YUV) format, represented by two images - luma and chroma.
 
 The YUV frames come in two different resolutions.  a 1280x720 image representing luminance (basically a gray scale image) and much smaller 640x360 for the chrominance component:
 
 ![Image demonstrating combining Y and UV components](urhosharp-images/image3.png)
-
 
 To draw a full colored image using OpenGL ES we have to write a small shader that takes luminance (Y component) and chrominance (UV planes) from the texture slots.  In UrhoSharp they have names - “sDiffMap” and “sNormalMap”  and convert them into RGB format:
 
@@ -160,7 +158,6 @@ CameraNode.Position = new Vector3(row.X, row.Y, -row.Z);
 ```
 
 We use `-row.Z` because ARKit uses a right-handed coordinate system.
-
 
 ### Plane detection
 
@@ -212,7 +209,6 @@ UrhoSharp [runs on all major operating systems](~/graphics-games/urhosharp/platf
 HoloLens is one of the most exciting platforms it runs on.   This means that you can easily switch between iOS and HoloLens to build awesome Augmented Reality applications using UrhoSharp.
 
 You can find the MutantDemo source at [github.com/EgorBo/ARKitXamarinDemo](https://github.com/EgorBo/ARKitXamarinDemo).
-
 
 ## Related Links
 

@@ -3,8 +3,8 @@ title: "Getting Started with the Xamarin Workbooks SDK"
 description: "This document describes how to get started with the Xamarin Workbooks SDK, which can be used to develop integrations for Xamarin Workbooks."
 ms.prod: xamarin
 ms.assetid: FAED4445-9F37-46D8-B408-E694060969B9
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
 ---
 
@@ -139,8 +139,8 @@ InteractiveAgent.RepresentationManager.AddProvider<PlotModel> (
 
 > [!NOTE]
 > These APIs give you a quick way to get up and running, but we would not
-  recommend shipping an entire integration only using them&mdash;they provide very
-  little control over how your types are processed by the client.
+> recommend shipping an entire integration only using them&mdash;they provide very
+> little control over how your types are processed by the client.
 
 With the representation registered, your integration is ready to ship!
 

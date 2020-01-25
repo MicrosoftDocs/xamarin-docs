@@ -4,38 +4,31 @@ description: "This document describes how to get set up to build iOS 13, iPadOS 
 ms.prod: xamarin
 ms.assetid: 97414545-85D2-433C-9246-63B6763F488A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/01/2019
 ---
 # Get started with iOS 13
-
-![Preview feature](~/media/shared/preview.png)
 
 This document describes how to start building Xamarin apps that call
 APIs released with Xcode 11, for iOS 13. Using the preview requires macOS 10.14.4 (Mojave) or newer.
 
 ## Download and install
 
-1. **Install Xcode 11 beta** –
+1. **Install Xcode 11** –
    Registered Apple developers can download and install the latest version
-   of the Xcode 11 beta from the
+   of the Xcode 11 from the
    [Apple Developer Portal](https://developer.apple.com/download/) or the **App Store**.
 
-2. **Run Xcode 11 beta** – Run Xcode 11 before updating and running Visual
-   Studio for Mac, as it installs some tools that Xamarin requires.
+2. **Run Xcode 11** – Run Xcode 11 before updating and running Visual
+   Studio for Mac or Visual Studio 2019, as it installs some tools that Xamarin requires.
 
-3. In Visual Studio for Mac, select **Visual Studio > Check for Updates...**, 
-   select the **Xcode 11 Previews** channel, and install the available updates.
+3. **Update Visual Studio for Mac and Visual Studio 2019** – Ensure you have the latest stable version of Xamarin.
 
-4. In Visual Studio for Mac, select **Visual Studio > Preferences > Projects > SDK Locations > Apple** and select **Xcode-beta.app**.
-
-5. (Optional) If evaluating this preview using _Xcode 11 beta 3_, you must enable linking. Right-click your project, navigate to **Options > iOS Build > Linker behavior** and set the linker behavior value to **Link Framework SDKs Only**. This workaround will not be necessary in a future preview.
-
-6. (Optional) **Install iOS 13 on your iOS devices** – For device testing of apps 
+4. (Optional) **Install iOS 13 on your iOS devices** – For device testing of apps 
    that use APIs introduced with the Xcode 11,
    registered Apple developers can [download](https://developer.apple.com/download)
-   and install the operating system on their devices. Because iOS is in beta, be careful installing it on your primary device.
+   and install the operating system on their devices. 
 
    > [!TIP]
    > Even if your app does not use any new APIs, be sure to build it with
@@ -53,4 +46,4 @@ APIs released with Xcode 11, for iOS 13. Using the preview requires macOS 10.14.
 ## Related links
 
 - [Download Xcode](https://developer.apple.com/download/)
-- [Xamarin.iOS preview release notes](/xamarin/ios/release-notes/12/12.99)
+- [Xamarin.iOS release notes](/xamarin/ios/release-notes/13/13.0)

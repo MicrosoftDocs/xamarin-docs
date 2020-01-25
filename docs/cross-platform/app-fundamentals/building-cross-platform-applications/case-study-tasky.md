@@ -3,8 +3,8 @@ title: "Cross-Platform App Case Study: Tasky"
 description: "This document describes how the Tasky Portable sample application was designed and built as a cross-platform mobile application. It discusses the app's requirements, interface, data model, core functionality, implementation, and more."
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -31,9 +31,9 @@ cycle.
 
 The first step in designing an application is to identify desired features. These can be high-level goals or detailed use cases. Tasky has straightforward functional requirements:
 
--  View a list of tasks
--  Add, edit and delete tasks
--  Set a task’s status to ‘done’
+- View a list of tasks
+- Add, edit and delete tasks
+- Set a task’s status to ‘done’
 
 You should consider your use of platform-specific features.  Can Tasky take advantage of iOS geofencing or Windows
 Phone Live Tiles? Even if you don't use platform-specific features in the first version, you should plan ahead to make sure your business & data layers can accommodate them.
@@ -134,7 +134,7 @@ whether to a database, flat files or other mechanism. The Tasky data layer
 consists of two parts: the SQLite-NET library and the custom code added to wire
 it up.
 
-Tasky relies on the Sqlite-net nuget package (published by Frank Kreuger) to embed SQLite-NET code that provides an Object-Relational Mapping
+Tasky relies on the Sqlite-net NuGet package (published by Frank Kreuger) to embed SQLite-NET code that provides an Object-Relational Mapping
 (ORM) database interface. The `TaskItemDatabase` class inherits from `SQLiteConnection` and
 adds the required Create, Read, Update, Delete (CRUD) methods to read and write
 data to SQLite. It is a simple boilerplate implementation of generic CRUD
@@ -382,9 +382,9 @@ methods must exist in the class where the `MonoTouch.Dialog.BindingContext` is c
 
 The User Interface Layer consists of the following classes:
 
-1.   **AppDelegate** – Contains calls to the Appearance API to style the fonts and colors used in the application. Tasky is a simple application so there are no other initialization tasks running in  `FinishedLaunching` .
-2.   **Screens** –  subclasses of `UIViewController` that define each screen and its behavior. Screens tie together the UI with Application Layer classes and the common API ( `TaskItemManager` ). In this example the screens are created in code, but they could have been designed using Xcode’s Interface Builder or the storyboard designer.
-3.   **Images** – Visual elements are an important part of every application. Tasky has splash screen and icon images, which for iOS must be supplied in regular and Retina resolution.
+1. **AppDelegate** – Contains calls to the Appearance API to style the fonts and colors used in the application. Tasky is a simple application so there are no other initialization tasks running in  `FinishedLaunching` .
+2. **Screens** –  subclasses of `UIViewController` that define each screen and its behavior. Screens tie together the UI with Application Layer classes and the common API ( `TaskItemManager` ). In this example the screens are created in code, but they could have been designed using Xcode’s Interface Builder or the storyboard designer.
+3. **Images** – Visual elements are an important part of every application. Tasky has splash screen and icon images, which for iOS must be supplied in regular and Retina resolution.
 
  <a name="Home_Screen" />
 
@@ -399,8 +399,8 @@ a collection of `TaskItem` objects for display.
 The two main methods related to displaying and interacting with the task list
 are:
 
-1.   **PopulateTable** – Uses the Business Layer’s  `TaskManager.GetTasks` method to retrieve a collection of  `TaskItem` objects to display.
-2.   **Selected** – When a row is touched, displays the task in a new screen.
+1. **PopulateTable** – Uses the Business Layer’s  `TaskManager.GetTasks` method to retrieve a collection of  `TaskItem` objects to display.
+2. **Selected** – When a row is touched, displays the task in a new screen.
 
  <a name="Task_Details_Screen" />
 
@@ -422,9 +422,9 @@ class, because this is where the `MonoTouch.Dialog.BindingContext` is
 created. The following `HomeScreen` methods support the Task Details
 screen:
 
-1.   **ShowTaskDetails** – Creates a  `MonoTouch.Dialog.BindingContext` to render a screen. It creates the input screen using reflection to retrieve property names and types from the  `TaskDialog` class. Additional information, such as the watermark text for the input boxes, is implemented with attributes on the properties.
-2.   **SaveTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It is called when  **Save** is pressed, and uses a  `MonoTouch.Dialog.BindingContext` to retrieve the user-entered data before saving the changes using  `TaskItemManager` .
-3.   **DeleteTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It uses  `TaskItemManager` to delete the data using the primary key (ID property).
+1. **ShowTaskDetails** – Creates a  `MonoTouch.Dialog.BindingContext` to render a screen. It creates the input screen using reflection to retrieve property names and types from the  `TaskDialog` class. Additional information, such as the watermark text for the input boxes, is implemented with attributes on the properties.
+2. **SaveTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It is called when  **Save** is pressed, and uses a  `MonoTouch.Dialog.BindingContext` to retrieve the user-entered data before saving the changes using  `TaskItemManager` .
+3. **DeleteTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It uses  `TaskItemManager` to delete the data using the primary key (ID property).
 
  <a name="Android_App" />
 
@@ -458,7 +458,7 @@ Similar to the iOS version we looked at earlier, the Application Layer in the
 Android version contains platform-specific classes required to ‘bind’ the
 objects exposed by the Core to the UI.
 
- **TaskListAdapter** – to display a List<T> of objects
+ **TaskListAdapter** – to display a List\<T> of objects
 we need to implement an adapter to display custom
 objects in a `ListView`. The adapter controls which layout is used for each item
 in the list – in this case the code uses an Android built-in layout `SimpleListItemChecked`.
@@ -548,8 +548,8 @@ document).
 XAML has a unique data-binding capability that can be declared in markup and
 reduce the amount of code required to display objects:
 
-1.   **Pages** – XAML files and their codebehind define the user interface and reference the ViewModels and the PCL project to display and collect data.
-2.   **Images** – Splash screen, background and icon images are a key part of the user interface.
+1. **Pages** – XAML files and their codebehind define the user interface and reference the ViewModels and the PCL project to display and collect data.
+2. **Images** – Splash screen, background and icon images are a key part of the user interface.
 
  <a name="MainPage" />
 
@@ -575,7 +575,7 @@ The resulting applications look like this on each platform:
 
  <a name="iOS" />
 
-#### iOS
+### iOS
 
 The application uses iOS-standard user interface design, such as the
 ‘add’ button being positioned in the navigation bar and using the built-in **plus (+)** icon. It also uses the default
@@ -586,7 +586,7 @@ The application uses iOS-standard user interface design, such as the
 
  <a name="Android" />
 
-#### Android
+### Android
 
 The Android app uses built-in controls including the built-in layout for rows
 that require a ‘tick’ displayed. The hardware/system back behavior is
@@ -596,7 +596,7 @@ supported in addition to an on-screen back button.
 
  <a name="Windows_Phone" />
 
-#### Windows Phone
+### Windows Phone
 
 The Windows Phone app uses the standard layout, populating the app bar at the bottom
 of the screen instead of a nav bar at the top.

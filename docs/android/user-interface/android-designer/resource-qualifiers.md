@@ -4,8 +4,8 @@ description: "This topic explains how to define resources that will be used only
 ms.prod: xamarin
 ms.assetid: 2111C18A-3EDA-3787-25E1-3869FF4BE441
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
 ---
 
@@ -17,7 +17,6 @@ language-qualified string resource. A string resource can be defined as
 the default, with other alternative resources defined to be used for
 additional languages. All resource types can be qualified, including
 the layout itself._
-
 
 # [Visual Studio](#tab/windows)
 
@@ -31,10 +30,10 @@ ellipsis icon to the right of the **Landscape** mode button:
 This dialog presents pull-down menus for the following resource
 qualifiers:
 
--   **Language** &ndash; Displays available language resources
+- **Language** &ndash; Displays available language resources
     and offers an option to add new language/region resources.
 
--   **UI Mode** &ndash; Lists display modes (such as **Car Dock**
+- **UI Mode** &ndash; Lists display modes (such as **Car Dock**
     and **Desk Dock**) as well as layout directions.
 
 Each of these pull-down menus opens new dialog boxes where you
@@ -75,7 +74,6 @@ When you click the **UI Mode** pull-down menu, a list of modes is
 displayed, such as **Normal**, **Car Dock**, **Desk Dock**,
 **Television**, **Appliance**, and **Watch**:
 
-
 [![UI Mode menu](resource-qualifiers-images/vs/12-ui-mode-sml.png)](resource-qualifiers-images/vs/12-ui-mode.png#lightbox)
 
 Below this list are the night modes **Not Night** and **Night**,
@@ -100,14 +98,14 @@ paintbrush (Theme Editor) icon:
 This icon opens a dialog popover that provides a way to select from one of
 three Action Bar modes:
 
--   **Standard** &ndash; Consists of either a logo or an icon and title text
+- **Standard** &ndash; Consists of either a logo or an icon and title text
     with an optional subtitle.
 
--   **List** &ndash; List navigation mode. Instead of static title text, this
+- **List** &ndash; List navigation mode. Instead of static title text, this
     mode presents a list menu for navigation within the activity (that is,
     it can be presented to the user as a dropdown list).
 
--   **Tabs** &ndash; Tab navigation mode. Instead of static title text,
+- **Tabs** &ndash; Tab navigation mode. Instead of static title text,
     this mode presents a series of tabs for navigation within the
     activity.
 
@@ -155,8 +153,6 @@ you will still be limited to the widgets that are available in Android
 For more information about resource types, see
 [Android Resources](~/android/app-fundamentals/resources-in-android/index.md).
 
-
-
 # [Visual Studio for Mac](#tab/macos)
 
 ## Resource qualifier options
@@ -169,10 +165,10 @@ ellipsis icon to the right of the **Landscape** mode button:
 This dialog presents pull-down menus for the following resource
 qualifiers:
 
--   **Language** &ndash; Displays available language resources
+- **Language** &ndash; Displays available language resources
     and offers an option to add new language/region resources.
 
--   **UI Mode** &ndash; Lists display modes (such as **Car Dock**
+- **UI Mode** &ndash; Lists display modes (such as **Car Dock**
     and **Desk Dock**) as well as layout directions.
 
 Each of these pull-down menus opens new dialog boxes where you
@@ -225,7 +221,6 @@ For more information about Android UI modes, see
 For information about **Left to Right** and **Right to Left** options,
 see [LayoutDirection](xref:Android.Util.LayoutDirection).
 
-
 ## Action Bar settings
 
 The **Action bar settings** icon is available to the left of the
@@ -236,14 +231,14 @@ paintbrush (Theme Editor) icon:
 This icon opens a dialog popover that provides a way to select from one of
 three Action Bar modes:
 
--   **Standard** &ndash; Consists of either a logo or icon and title text
+- **Standard** &ndash; Consists of either a logo or icon and title text
     with an optional subtitle.
 
--   **List** &ndash; List navigation mode. Instead of static title text, this
+- **List** &ndash; List navigation mode. Instead of static title text, this
     mode presents a list menu for navigation within the activity (that is,
     it can be presented to the user as a dropdown list).
 
--   **Tabs** &ndash; Tab navigation mode. Instead of static title text,
+- **Tabs** &ndash; Tab navigation mode. Instead of static title text,
     this mode presents a series of tabs for navigation within the
     activity.
 

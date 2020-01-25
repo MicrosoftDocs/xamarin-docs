@@ -4,8 +4,8 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/07/2017
 ---
 
@@ -16,17 +16,17 @@ _This article introduces all of the new and modified APIs and features available
 This document will cover the following topics:
 
 - [What's New in watchOS 3](#Whats-New-in-watchOS-3)
-	- [Apple Pay Enhancements](#Apple-Pay-Enhancements) adds support for in-app payments on the Apple Watch.
-	- [Background Tasks](#Background-Tasks) give the app the ability to update its information in the background so it is ready when the user needs it.
-	- [Complications Enhancements](#Complications-Enhancements) have been made for watchOS 3 that provide new features for the apps.
-	- [Newly Available Frameworks](#Newly-Available-Frameworks) have exposed for the watchOS apps.
-	- [Proactive Suggestions](#Proactive-Suggestions) allows the app to proactively show information to the user.
-	* Several [Security and Privacy Enhancements](#Security-and-Privacy-Enhancements) have been made to watchOS 3.
-	- [Snapshots and Dock](#Snapshots-and-Dock) provide the user with quick access to the app watchOS apps.
-	- [User Notifications](#User-Notifications) provides both local and remote notifications to the user.
-	* Several [Watch Connectivity Framework Enhancements](#Watch-Connectivity-Framework-Enhancements) have been made in watchOS 3.
-	* Several [WatchKit Framework Enhancements](#WatchKit-Framework-Enhancements) have been made in watchOS 3.
-	- [Workout App Enhancements](#Workout-App-Enhancements) gives new abilities to the workout related Apple Watch apps.
+  - [Apple Pay Enhancements](#Apple-Pay-Enhancements) adds support for in-app payments on the Apple Watch.
+  - [Background Tasks](#Background-Tasks) give the app the ability to update its information in the background so it is ready when the user needs it.
+  - [Complications Enhancements](#Complications-Enhancements) have been made for watchOS 3 that provide new features for the apps.
+  - [Newly Available Frameworks](#Newly-Available-Frameworks) have exposed for the watchOS apps.
+  - [Proactive Suggestions](#Proactive-Suggestions) allows the app to proactively show information to the user.
+  - Several [Security and Privacy Enhancements](#Security-and-Privacy-Enhancements) have been made to watchOS 3.
+  - [Snapshots and Dock](#Snapshots-and-Dock) provide the user with quick access to the app watchOS apps.
+  - [User Notifications](#User-Notifications) provides both local and remote notifications to the user.
+  - Several [Watch Connectivity Framework Enhancements](#Watch-Connectivity-Framework-Enhancements) have been made in watchOS 3.
+  - Several [WatchKit Framework Enhancements](#WatchKit-Framework-Enhancements) have been made in watchOS 3.
+  - [Workout App Enhancements](#Workout-App-Enhancements) gives new abilities to the workout related Apple Watch apps.
 - [Additional Framework Changes](#Additional-Framework-Changes) have been made throughout watchOS 3.
 - [Deprecated APIs](#Deprecated-APIs) in watchOS 3.
 
@@ -74,7 +74,7 @@ Additionally, Complications provide the following benefits:
 - The user can quickly launch the app by tapping on the Complication directly from a watch face.
 - Having one of the app's Complications on the watch face causes the system to keep the app in a ready-to-launch state where it attempts to launch the app in the background, keep it in memory and gives it extra time to update.
 - Complications are guaranteed at least 50 push updates per day.
-- When the app includes Complications, it will be featured in the Apple Watch Face Gallery (see Apple's [Adding Complications to the Gallery](https://developer.apple.com/documentation/clockkit/adding_complications_to_the_gallery) documentation for more information).
+- When the app includes Complications, it will be featured in the Apple Watch Face Gallery.
 
 In watchOS 3, the ClockKit framework now includes several new templates for extra large complications such as [CLKComplicationTemplateExtraLargeColumnsText](https://developer.apple.com/reference/clockkit/clkcomplicationtemplateextralargecolumnstext) and [CLKComplicationTemplateExtraLargeRingImage](https://developer.apple.com/reference/clockkit/clkcomplicationtemplateextralargeringimage). Additionally, to create localizable text, use new methods of the [CLKTextProvider](https://developer.apple.com/reference/clockkit/clktextprovider) class.
 
@@ -182,7 +182,6 @@ The following APIs have been deprecated in watchOS 3:
 - The `UILocalNotification` class of UIKit has been deprecated and should be replaced with the User Notification framework.
 
 See Apple's [watchOS 2.2 to watchOS 3.0 API Differences](https://developer.apple.com/library/prerelease/content/releasenotes/General/watchOS30APIDiffs/index.html) documentation for a complete list of deprecations and changes.
-
 
 ## Related Links
 

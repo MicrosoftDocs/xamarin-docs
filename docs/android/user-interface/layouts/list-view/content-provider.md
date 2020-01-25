@@ -3,8 +3,8 @@ title: "Using a ContentProvider"
 ms.prod: xamarin
 ms.assetid: 251F7557-328D-0132-F39D-595920A28B87
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -24,4 +24,3 @@ before being bound to a ListView for display.
 Refer to
 [Intro to ContentProviders](~/android/platform/content-providers/index.md)
 for more information.
-

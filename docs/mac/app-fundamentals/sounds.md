@@ -4,8 +4,8 @@ description: "This document describes how to play sound with AVAudioPlayer in a 
 ms.prod: xamarin
 ms.assetid: 4A683A94-F75D-4EAF-8497-E9443653250B
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 10/19/2016
 ---
 

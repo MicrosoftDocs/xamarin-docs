@@ -4,8 +4,8 @@ description: "This article covers the Light and Dark UI Themes that Apple has ad
 ms.prod: xamarin
 ms.assetid: 8BC37683-AD9E-45CD-BE40-96965618AD1D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -43,12 +43,12 @@ To opt-in to Light and Dark theme support, do the following:
 
 1. In the **Solution Explorer**, double-click the `Info.plist` file to open it for editing.
 2. Select the **Source** view (from the bottom of the editor).
-3. Add a new key and call it `UIUserInterfaceStyle`: 
+3. Add a new key and call it `UIUserInterfaceStyle`:
 
-	[![](user-interface-styles-images/theme03.png "The UIUserInterfaceStyle key")](user-interface-styles-images/theme03.png#lightbox)
-4. Leave the type set to `String` and enter a value of `Automatic`: 
+    [![](user-interface-styles-images/theme03.png "The UIUserInterfaceStyle key")](user-interface-styles-images/theme03.png#lightbox)
+4. Leave the type set to `String` and enter a value of `Automatic`:
 
-	[![](user-interface-styles-images/theme04.png "Enter Automatic")](user-interface-styles-images/theme04.png#lightbox)
+    [![](user-interface-styles-images/theme04.png "Enter Automatic")](user-interface-styles-images/theme04.png#lightbox)
 5. Save the changes to the file.
 
 There are three possible values for the `UIUserInterfaceStyle` key:
@@ -90,15 +90,12 @@ The new `UserInterfaceStyle` property of the `UITraitCollection` class can be us
 - **Unspecified** - The View has not been displayed to screen yet, so the current UI theme is unknown.
 
 Additionally, Trait Collections have the following features in tvOS 10:
- 
+
 - The Appearance proxy can be customized based on the `UserInterfaceStyle` of a given `UITraitCollection` to change things such as images or item colors based on theme.
 - A tvOS app can handle Trait Collection changes by overriding the `TraitCollectionDidChange` method of a `UIView` or `UIViewController` class.
 
 > [!IMPORTANT]
 > The Xamarin.tvOS Early Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection` yet. Full support will be added in a future release.
-
-
-
 
 <a name="Customizing-Appearance-Based-on-Theme" />
 
@@ -131,10 +128,10 @@ For example:
 ```csharp
 public override void TraitCollectionDidChange (UITraitCollection previousTraitCollection)
 {
-	base.TraitCollectionDidChange (previousTraitCollection);
-	
-	// Take action based on the Light or Dark theme
-	...
+    base.TraitCollectionDidChange (previousTraitCollection);
+
+    // Take action based on the Light or Dark theme
+    ...
 }
 ```
 
@@ -165,37 +162,37 @@ In tvOS 10, an app's Storyboard can be set to respond to Trait Collections and m
 
 To enable Trait Collection support, do the following:
 
-1. Right-click on the Storyboard file in the **Solution Explorer** and select **Open With** > **Xcode Interface Builder**: 
+1. Right-click on the Storyboard file in the **Solution Explorer** and select **Open With** > **Xcode Interface Builder**:
 
-	[![](user-interface-styles-images/theme05.png "Open With Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox) 
-2. To enable Trait Collection support, switch to the **File Inspector** and check the **Use Trait Variations** property in the **Interface Builder Document** section: 
+    [![](user-interface-styles-images/theme05.png "Open With Xcode Interface Builder")](user-interface-styles-images/theme05.png#lightbox)
+2. To enable Trait Collection support, switch to the **File Inspector** and check the **Use Trait Variations** property in the **Interface Builder Document** section:
 
-	[![](user-interface-styles-images/theme06.png "Enable Trait Collection support")](user-interface-styles-images/theme06.png#lightbox)
-3. Confirm the change to use Trait Variations: 
+    [![](user-interface-styles-images/theme06.png "Enable Trait Collection support")](user-interface-styles-images/theme06.png#lightbox)
+3. Confirm the change to use Trait Variations:
 
-	[![](user-interface-styles-images/theme07.png "The use Trait Variations alert")](user-interface-styles-images/theme07.png#lightbox)
+    [![](user-interface-styles-images/theme07.png "The use Trait Variations alert")](user-interface-styles-images/theme07.png#lightbox)
 4. Save the changes to the Storyboard file.
 
 Apple has added the following abilities when editing tvOS Storyboards in Interface Builder:
 
-* The developer can specify different variations of User Interface elements based on UI theme in the **Attribute Inspector**:
-	
-	* Several properties now have a **+** beside them which can be clicked to add a UI theme specific version: 
+- The developer can specify different variations of User Interface elements based on UI theme in the **Attribute Inspector**:
 
-		[![](user-interface-styles-images/theme08.png "Add a UI theme specific version")](user-interface-styles-images/theme08.png#lightbox) 
-	
-	* The developer can specify a new property or click the **x** button to remove it: 
+  - Several properties now have a **+** beside them which can be clicked to add a UI theme specific version:
 
-		[![](user-interface-styles-images/theme09.png "Specify a new property or click the x button to remove it")](user-interface-styles-images/theme09.png#lightbox)
-* The developer can preview a UI design in either the Light or Dark theme from within Interface Builder:
-	
-	* The bottom of the Design Surface allows the developer to switch the current UI theme: 
+    [![](user-interface-styles-images/theme08.png "Add a UI theme specific version")](user-interface-styles-images/theme08.png#lightbox)
 
-		[![](user-interface-styles-images/theme10.png "The bottom of the Design Surface")](user-interface-styles-images/theme10.png#lightbox)
-		
-	* The new theme will be displayed in Interface Builder and any Trait Collection specific adjustments will be displayed: 
+  - The developer can specify a new property or click the **x** button to remove it:
 
-		[![](user-interface-styles-images/theme11.png "The theme displayed in Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
+    [![](user-interface-styles-images/theme09.png "Specify a new property or click the x button to remove it")](user-interface-styles-images/theme09.png#lightbox)
+- The developer can preview a UI design in either the Light or Dark theme from within Interface Builder:
+
+  - The bottom of the Design Surface allows the developer to switch the current UI theme:
+
+    [![](user-interface-styles-images/theme10.png "The bottom of the Design Surface")](user-interface-styles-images/theme10.png#lightbox)
+
+  - The new theme will be displayed in Interface Builder and any Trait Collection specific adjustments will be displayed:
+
+    [![](user-interface-styles-images/theme11.png "The theme displayed in Interface Builder")](user-interface-styles-images/theme11.png#lightbox)
 
 Additionally, the tvOS Simulator now has a keyboard shortcut to allow the developer to quickly switch between the Light and Dark themes when debugging a tvOS app. Use the **Command-Shift-D** keyboard sequence to toggle between Light and Dark.
 
@@ -204,8 +201,6 @@ Additionally, the tvOS Simulator now has a keyboard shortcut to allow the develo
 ## Summary
 
 This article has covered the Light and Dark UI Themes that Apple has added to tvOS 10 and how to implement them in a Xamarin.tvOS app.
-
-
 
 ## Related Links
 

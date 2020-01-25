@@ -15,4 +15,3 @@ App Preview Videos are in the following sizes and resolutions:
 |iPad|2048 x 1536 (4:3)|1200 x 900|900 x 1200|
 |iPhone 6|1334 x 750|1334 x 750|750 x 1334|
 |iPhone 6 Plus|2208 x 1242 (Rendered Pixels)1920 x 1080 (Physical Pixels)|1920 x 1080|1080 x 1920|
-

@@ -14,11 +14,9 @@ ms.date: 12/01/2017
 ![](~/media/shared/preview.png "This API is currently in preview")
 
 > [!IMPORTANT]
-> DataPages requires a
-[Xamarin.Forms Theme](~/xamarin-forms/user-interface/themes/index.md) reference to render.
+> DataPages requires a Xamarin.Forms Theme reference to render. This involves installing the [Xamarin.Forms.Theme.Base](https://www.nuget.org/packages/Xamarin.Forms.Theme.Base/) NuGet package into your project, followed by either the [Xamarin.Forms.Theme.Light](https://www.nuget.org/packages/Xamarin.Forms.Theme.Light/) or [Xamarin.Forms.Theme.Dark](https://www.nuget.org/packages/Xamarin.Forms.Theme.Dark/) NuGet packages.
 
-
-The Xamarin.Forms DataPages Nuget includes a number of controls that can
+The Xamarin.Forms DataPages NuGet includes a number of controls that can
 take advantage of data source binding.
 
 To use these controls in XAML, ensure the namespace has been included,
@@ -68,7 +66,6 @@ The `HeroImage` control has four properties:
 
 ![](controls-images/heroimage-light-ios.png "HeroImage Control on iOS") ![](controls-images/heroimage-dark-ios.png "HeroImage Control on iOS")
 
-
 <a name="listitem" />
 
 ### ListItem
@@ -106,7 +103,6 @@ both the Light and Dark themes:
 **iOS**
 
 ![](controls-images/listitem-light-ios.png "ListItem Control on iOS") ![](controls-images/listitem-dark-ios.png "ListItem Control on iOS")
-
 
 ## Custom Control Example
 
@@ -319,7 +315,6 @@ template, using the resources defined above:
       VerticalOptions="End"
       Style="{ StaticResource CardViewTextStyle }"
     />
-
 
     <!-- CARDVIEW DETAIL -->
     <Label

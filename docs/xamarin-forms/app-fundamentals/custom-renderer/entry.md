@@ -208,7 +208,6 @@ The call to the base class's `OnElementChanged` method instantiates a `TextBox` 
 
 This article has demonstrated how to create a custom control renderer for the Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) control, enabling developers to override the default native rendering with their own platform-specific rendering. Custom renderers provide a powerful approach to customizing the appearance of Xamarin.Forms controls. They can be used for small styling changes or sophisticated platform-specific layout and behavior customization.
 
-
 ## Related Links
 
 - [CustomRendererEntry (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/customrenderers-entry)

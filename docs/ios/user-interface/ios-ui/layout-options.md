@@ -4,8 +4,8 @@ description: "This document describes different ways to lay out user interfaces 
 ms.prod: xamarin
 ms.assetid: D8180FEC-F300-42C0-B029-66803E0C1A5F
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -13,10 +13,10 @@ ms.date: 03/21/2017
 
 There are two different mechanisms for controlling the layout when a view is resized or rotated:
 
--  **Autosizing** – The Autosizing inspector in the designer provides a way to set the `AutoresizingMask` properties. 
+- **Autosizing** – The Autosizing inspector in the designer provides a way to set the `AutoresizingMask` properties. 
 This will let a control be anchored to the edges of their container and/or fix their size. Autosizing works in all 
 versions of iOS. This is described in more detail below
--  **Auto Layout** – A feature, introduced in iOS 6 that allows fine-grained control over the relationships of the UI controls. 
+- **Auto Layout** – A feature, introduced in iOS 6 that allows fine-grained control over the relationships of the UI controls. 
 It will allow control of the positions of elements relative to other elements on the design surface. This topic is 
 covered in more detail in the  [Auto Layout with the Xamarin iOS Designer](~/ios/user-interface/designer/designer-auto-layout.md) guide.
 
@@ -44,7 +44,6 @@ textfield1.Frame = new RectangleF(15, 277, 79, 27);
 textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleRightMargin | UIViewAutoresizing.FlexibleBottomMargin;
 ```
 
-
 To test the Autosizing settings, enable different **Supported Device Orientations** in the 
 project’s options:
 
@@ -58,7 +57,6 @@ textfield1.AutoresizingMask = UIViewAutoresizing.FlexibleWidth;
 imageview1.AutoresizingMask = UIViewAutoresizing.FlexibleTopMargin | UIViewAutoresizing.FlexibleLeftMargin;
 ```
 
-
 We can also adjust the controls using the Designer. Selecting the struts as exhibited below will cause the image to stay 
 right-aligned without being clipped off the bottom of the view:
 
@@ -71,10 +69,6 @@ These screenshots show how the controls resize or reposition themselves when the
 Notice that the text view and text field both stretch to keep the same left and right margins, due to the `FlexibleWidth` 
 setting. The image has the top and left margin flexible, which means it preserves the bottom and right margins – keeping 
 the image in view when the screen is rotated. Complex layouts typically require a combination of these settings on every visible control to keep the user-interface consistent and to prevent controls from overlapping when the view’s bounds change (due to rotation or other resizing event).
-
-
-
-
 
 ## Related Links
 

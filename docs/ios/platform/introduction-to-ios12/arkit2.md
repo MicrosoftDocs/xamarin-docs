@@ -4,18 +4,18 @@ description: "This document describes updates to ARKit in iOS 12. It focuses on 
 ms.prod: xamarin
 ms.assetid: af758092-1523-4ab7-aa53-c37a81fb156a
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 08/22/2018
 ---
 # ARKit 2 in Xamarin.iOS
 
 ARKit has matured considerably since its introduction last year in iOS 11. First and foremost, you can now detect vertical as well as horizontal planes, which greatly improves the practicality of indoor augmented reality experiences. In addition, there are new capabilities:
 
-* Recognizing reference images and objects as the junction between the real world and digital imagery
-* A new lighting mode that simulates real-world lighting
-* The ability to share and persist AR environments
-* A new file format preferred for storing AR content
+- Recognizing reference images and objects as the junction between the real world and digital imagery
+- A new lighting mode that simulates real-world lighting
+- The ability to share and persist AR environments
+- A new file format preferred for storing AR content
 
 ## Recognizing reference objects
 
@@ -25,11 +25,11 @@ One showcase feature in ARKit 2 is the ability to recognize reference images and
 
 The [Scanning and Detecting 3D Objects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) sample is a port of an [Apple project](https://developer.apple.com/documentation/arkit/scanning_and_detecting_3d_objects?language=objc) that demonstrates:
 
-* Application state management using [`NSNotification`](xref:Foundation.NSNotification) objects
-* Custom visualization
-* Complex gestures
-* Object scanning
-* Storing an [`ARReferenceObject`](xref:ARKit.ARReferenceObject)
+- Application state management using [`NSNotification`](xref:Foundation.NSNotification) objects
+- Custom visualization
+- Complex gestures
+- Object scanning
+- Storing an [`ARReferenceObject`](xref:ARKit.ARReferenceObject)
 
 Scanning a reference object is battery- and processor- intensive and older devices will often have trouble achieving stable tracking.
 
@@ -37,17 +37,17 @@ Scanning a reference object is battery- and processor- intensive and older devic
 
 This application uses a state machine that transitions between the following states:
 
-* `AppState.StartARSession`
-* `AppState.NotReady`
-* `AppState.Scanning`
-* `AppState.Testing`
+- `AppState.StartARSession`
+- `AppState.NotReady`
+- `AppState.Scanning`
+- `AppState.Testing`
 
 And additionally uses an embedded set of states and transitions when in `AppState.Scanning`:
 
-* `Scan.ScanState.Ready`
-* `Scan.ScanState.DefineBoundingBox`
-* `Scan.ScanState.Scanning`
-* `Scan.ScanState.AdjustingOrigin`
+- `Scan.ScanState.Ready`
+- `Scan.ScanState.DefineBoundingBox`
+- `Scan.ScanState.Scanning`
+- `Scan.ScanState.AdjustingOrigin`
 
 The app uses a reactive architecture that posts state-transition notifications to [`NSNotificationCenter`](xref:Foundation.NSNotificationCenter) and subscribes to these notifications. The setup looks like this snippet from `ViewController.cs`:
 
@@ -115,9 +115,9 @@ The app shows the low-level “point cloud” of the object contained within a b
 
 This point cloud is available to developers in the [`ARFrame.RawFeaturePoints`](xref:ARKit.ARFrame.RawFeaturePoints) property. Visualizing the point cloud efficiently can be a tricky problem. Iterating over the points, then creating and placing a new SceneKit node for each point would kill the frame rate. Alternatively, if done asynchronously, there would be a lag. The sample maintains performance with a three-part strategy:
 
-* Using unsafe code to pin the data in place and interpret the data as a raw buffer of bytes.
-* Converting that raw buffer into an [`SCNGeometrySource`](xref:SceneKit.SCNGeometrySource) and creating a “template” [`SCNGeometryElement`](xref:SceneKit.SCNGeometryElement) object.
-* Rapidly “stitching together” the raw data and the template using [`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
+- Using unsafe code to pin the data in place and interpret the data as a raw buffer of bytes.
+- Converting that raw buffer into an [`SCNGeometrySource`](xref:SceneKit.SCNGeometrySource) and creating a “template” [`SCNGeometryElement`](xref:SceneKit.SCNGeometryElement) object.
+- Rapidly “stitching together” the raw data and the template using [`SCNGeometry.Create(SCNGeometrySource[], SCNGeometryElement[])`](xref:SceneKit.SCNGeometry.Create(SceneKit.SCNGeometrySource[],SceneKit.SCNGeometryElement[]))
 
 ```csharp
 internal static SCNGeometry CreateVisualization(NVector3[] points, UIColor color, float size)
@@ -245,11 +245,11 @@ The second interesting thing being done in relation to gestures is the way that 
 
 Now, you can use any of the following as the basis for a mixed-reality experience:
 
-* Only the device accelerometer ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration), iOS 11)
-* Faces ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), iOS 11)
-* Reference Images ([`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration), iOS 12)
-* Scanning 3D objects ([`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration), iOS 12)
-* Visual inertial odometry ([`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration), improved in iOS 12)
+- Only the device accelerometer ([`AROrientationTrackingConfiguration`](xref:ARKit.AROrientationTrackingConfiguration), iOS 11)
+- Faces ([`ARFaceTrackingConfiguration`](xref:ARKit.ARFaceTrackingConfiguration), iOS 11)
+- Reference Images ([`ARImageTrackingConfiguration`](xref:ARKit.ARImageTrackingConfiguration), iOS 12)
+- Scanning 3D objects ([`ARObjectScanningConfiguration`](xref:ARKit.ARObjectScanningConfiguration), iOS 12)
+- Visual inertial odometry ([`ARWorldTrackingConfiguration`](xref:ARKit.ARWorldTrackingConfiguration), improved in iOS 12)
 
 `AROrientationTrackingConfiguration`, discussed in [this blog post and F# sample](https://github.com/lobrien/FSharp_Face_AR), is the most limited and provides a poor mixed-reality experience, as it only places digital objects in relation to the device's motion, without trying to tie the device and screen into the real world.
 
@@ -278,8 +278,8 @@ configuration.TrackingImages = referenceImages;
 
 There are two interesting aspects to this configuration:
 
-* It's efficient and can be used with a potentially large number of reference images
-* The digital imagery is anchored to the image, even if that image moves in the real world (for example, if the cover of a book is recognized, it will track the book as it is pulled off the shelf, laid down, etc.).
+- It's efficient and can be used with a potentially large number of reference images
+- The digital imagery is anchored to the image, even if that image moves in the real world (for example, if the cover of a book is recognized, it will track the book as it is pulled off the shelf, laid down, etc.).
 
 The `ARObjectScanningConfiguration` was discussed [previously](#recognizing-reference-objects) and is a developer-centric configuration for scanning 3D objects. It is highly processor and battery intensive and should not be used in end-user applications. The sample [Scanning and Detecting 3D Objects](https://docs.microsoft.com/samples/xamarin/ios-samples/ios12-scanninganddetecting3dobjects) demonstrates the use of this configuration.
 
@@ -293,8 +293,8 @@ ARKit 2 supports "environmental texturing" that uses captured imagery to estimat
 
 In order to use environmental texturing:
 
-* Your [`SCNMaterial`](xref:SceneKit.SCNMaterial) objects must use [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) and assign a value in the range of 0 to 1 for [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) and [`Roughness.Contents`](xref:SceneKit.SCNMaterialProperty.Contents) and
-* Your tracking configuration must set [`EnvironmentTexturing`](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing) = [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic) :
+- Your [`SCNMaterial`](xref:SceneKit.SCNMaterial) objects must use [`SCNLightingModel.PhysicallyBased`](xref:SceneKit.SCNLightingModel.PhysicallyBased) and assign a value in the range of 0 to 1 for [`Metalness.Contents`](xref:SceneKit.SCNMaterial.Metalness) and [`Roughness.Contents`](xref:SceneKit.SCNMaterialProperty.Contents) and
+- Your tracking configuration must set [`EnvironmentTexturing`](xref:ARKit.ARWorldTrackingConfiguration.EnvironmentTexturing) = [`AREnvironmentTexturing.Automatic`](xref:ARKit.AREnvironmentTexturing.Automatic) :
 
 ```csharp
 var sphere = SCNSphere.Create(0.33F);
@@ -313,7 +313,6 @@ var configuration = new ARWorldTrackingConfiguration
 ```
 
 Although the perfectly reflective texture shown in the preceding code snippet is fun in a sample, environmental texturing is probably better used with restraint lest it trigger an "uncanny valley" response (the texture is only an estimate based on what the camera recorded).
-
 
 ### Shared and persistent AR experiences
 

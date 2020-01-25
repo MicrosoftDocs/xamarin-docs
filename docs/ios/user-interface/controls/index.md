@@ -4,8 +4,8 @@ description: "This document links to guides that describe the various iOS user i
 ms.prod: xamarin
 ms.assetid: C00EA232-ADCC-42AD-BF86-B526414A21C6
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -77,9 +77,9 @@ Accepting user text input is accomplished with the `UITextField` for single-line
 
 iOS applications using a tab-navigation UI are built using the UITabBarController class. In this article we’ll walk through how to set up a tabbed application that contains several controllers and views. We’ll then examine how to load a UITabBarController when it is not the root controller, such as after a login screen.
 
-## [Web Views](uiwebview.md)
+## [Web Views](webview.md)
 
-In this article, we will explore each of the three Web Views provided by Apple: `UIWebView`, `WKWebview`, and `SFSafariViewController`, their similarities and differences, and how they can be used.
+In this article, we will explore the web views provided by Apple–`WKWebview` and `SFSafariViewController`–their similarities and differences, and how they can be used.
 
 ## Related Links
 

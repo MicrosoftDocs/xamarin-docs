@@ -4,8 +4,8 @@ description: "This article covers working with Handoff in a Xamarin.iOS app to t
 ms.prod: xamarin
 ms.assetid: 405F966A-4085-4621-AA15-33D663AD15CD
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -627,8 +627,6 @@ This article has given an introduction to the Handoff framework used to continue
 User Activity between multiple of the user's Apple devices. Next, it showed how
 to enable and implement Handoff in a Xamarin.iOS app. Finally, it discussed the
 different types of Handoff continuations available and the Handoff best practices.
-
-
 
 ## Related Links
 

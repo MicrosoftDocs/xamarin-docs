@@ -82,7 +82,6 @@ App information is taken from the `Package.appxmanifest` for the following field
 - **PackageName**: `Name` on the `Identity` node
 - **VersionString** – `Version` on the `Identity` node
 
-
 --------------
 
 ## API

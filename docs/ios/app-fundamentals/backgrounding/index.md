@@ -4,8 +4,8 @@ description: "Background processing or backgrounding is the process of letting a
 ms.prod: xamarin
 ms.assetid: F377440C-C5D9-4267-85D8-2C816E3A0300
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
 ---
 
@@ -21,17 +21,15 @@ In this guide and accompanying walkthroughs, we are going to learn to perform ap
 
 ## Contents
 
-1.  [Introduction to Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
-1.  [Application Lifecycle Demo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
-1.  [iOS Backgrounding Techniques](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
-1.  [Walkthroughs: Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
-1.  [iOS Backgrounding Guidance](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
+1. [Introduction to Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/introduction-to-backgrounding-in-ios.md)
+1. [Application Lifecycle Demo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md)
+1. [iOS Backgrounding Techniques](~/ios/app-fundamentals/backgrounding/ios-backgrounding-techniques/index.md)
+1. [Walkthroughs: Backgrounding in iOS](~/ios/app-fundamentals/backgrounding/ios-backgrounding-walkthroughs/index.md)
+1. [iOS Backgrounding Guidance](~/ios/app-fundamentals/backgrounding/ios-backgrounding-guidance.md)
 
 ## Summary
 
 In this guide, we introduced the different ways of doing background processing in iOS. We covered iOS Application States and examined the role backgrounding plays in the iOS Application Lifecycle. Additionally, we learned how we could register individual tasks or entire applications to operate in the background in iOS. Finally, we reinforced our understanding of backgrounding on iOS by building applications that perform updates in the background.
-
-
 
 ## Related Links
 

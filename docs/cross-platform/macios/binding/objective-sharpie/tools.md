@@ -3,8 +3,8 @@ title: "Objective Sharpie Tools & Commands"
 description: "This document provides an overview of the tools included with Objective Sharpie and the command-line arguments to use with them."
 ms.prod: xamarin
 ms.assetid: A84E209B-8932-4CC1-BAD1-7FD51F798A97
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 10/05/2015
 ---
 
@@ -12,18 +12,12 @@ ms.date: 10/05/2015
 
 _Overview of the tools included with Objective Sharpie, and the command line arguments to use them._
 
-<style type="text/css">
-.terminal-blue { color: rgb(10,96,254); }
-.terminal-green { color: rgb(12,156,26); }
-.terminal-magenta { color: rgb(152,12,103); }
-</style>
-
-
 Once Objective Sharpie is successfully [installed](~/cross-platform/macios/binding/objective-sharpie/get-started.md),
-open a terminal and familiarize yourself with the <em>commands</em>
+open a terminal and familiarize yourself with the *commands*
 Objective Sharpie has to offer:
 
-<pre>$ <b>sharpie -help</b>
+```
+$ sharpie -help
 usage: sharpie [OPTIONS] TOOL [TOOL_OPTIONS]
 
 Options:
@@ -49,7 +43,8 @@ Available Tools:
   bind               Create a Xamarin C# binding to Objective-C APIs
   update             Update to the latest release of Objective Sharpie
   verify-docs        Show cross reference documentation for [Verify] attributes
-  docs               Open the Objective Sharpie online documentation</pre>
+  docs               Open the Objective Sharpie online documentation
+```
 
 Objective Sharpie provides the following tools:
 
@@ -64,7 +59,8 @@ Objective Sharpie provides the following tools:
 
 To get help on a specific Objective Sharpie tool, enter the name of the tool and the `-help` option. For example, `sharpie xcode -help` returns the following output:
 
-<pre>$ <b>sharpie xcode -help</b>
+```
+$ sharpie xcode -help
 usage: sharpie xcode [OPTIONS]
 
 Options:
@@ -72,18 +68,21 @@ Options:
   -v, -verbose     Be verbose with output
 
 Xcode Options:
-  -sdks            List all available Xcode SDKs. Pass -verbose for more details.</pre>
+  -sdks            List all available Xcode SDKs. Pass -verbose for more details.
+```
 
 Before we can start the binding process, we need to get information about our current installed SDKs by entering the following command into the Terminal `sharpie xcode -sdks`. Your output may differ depending on which version(s) of Xcode you have installed. Objective Sharpie looks for SDKs installed in any `Xcode*.app` under the `/Applications` directory:
 
-<pre>$ <b>sharpie xcode -sdks</b>
-<span class="terminal-blue">sdk:</span> appletvos9.0    <span class="terminal-green">arch:</span> arm64
-<span class="terminal-blue">sdk:</span> iphoneos9.1     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> iphoneos9.0     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> iphoneos8.4     <span class="terminal-green">arch:</span> arm64   armv7
-<span class="terminal-blue">sdk:</span> macosx10.11     <span class="terminal-green">arch:</span> x86_64  i386
-<span class="terminal-blue">sdk:</span> macosx10.10     <span class="terminal-green">arch:</span> x86_64  i386
-<span class="terminal-blue">sdk:</span> watchos2.0      <span class="terminal-green">arch:</span> armv7</pre>
+```
+$ sharpie xcode -sdks
+sdk: appletvos9.0    arch: arm64
+sdk: iphoneos9.1     arch: arm64   armv7
+sdk: iphoneos9.0     arch: arm64   armv7
+sdk: iphoneos8.4     arch: arm64   armv7
+sdk: macosx10.11     arch: x86_64  i386
+sdk: macosx10.10     arch: x86_64  i386
+sdk: watchos2.0      arch: armv7
+```
 
 From the above, we can see that we have the `iphoneos9.1` SDK installed on our
 machine and it has `arm64` architecture support. We will be using this value

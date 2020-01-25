@@ -4,8 +4,8 @@ description: "This article describes the User Notifications framework introduced
 ms.prod: xamarin
 ms.assetid: 4E1FF652-28F0-4566-B383-9D12664401A4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2017
 ---
 
@@ -73,7 +73,7 @@ Some examples of Remote Notifications include:
 There are two types of Remote Notifications available to a iOS app:
 
 - **User Facing** - These are displayed to the user on the device.
-- **Silent Updates** - These provide a mechanism to update the contents of an iOS app in the background. When a Silent Update is received, the app can reach out to the remove servers pull down the latest content.
+- **Silent Updates** - These provide a mechanism to update the contents of an iOS app in the background. When a Silent Update is received, the app can reach out to the remote servers to pull down the latest content.
 
 For more information, please see Apple's [Local and Remote Notification Programming Guide](https://developer.apple.com/documentation/usernotifications) documentation.
 
@@ -354,7 +354,6 @@ UNUserNotificationCenter.Current.RemoveDeliveredNotifications (requests);
 ### Updating an Existing Notification
 
 To update an existing Notification, simply create a new notification with the desired parameters modified (such as a new trigger time) and add it to the system with the same Request Identifier as the Notification that needs to be modified. Example:
-
 
 ```csharp
 using UserNotifications;
@@ -662,8 +661,6 @@ This code decrypts the encrypted content from the `encrypted-content` key, creat
 ## Summary
 
 This article has covered all of the ways that Users Notification have been enhanced by iOS 10. It presented the new User Notification framework and how to use it in a Xamarin.iOS app or App Extension.
-
-
 
 ## Related Links
 

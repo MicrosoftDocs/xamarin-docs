@@ -4,8 +4,8 @@ description: "This article covers several tips, features and techniques a develo
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -36,24 +36,24 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainWindowController : NSWindowController
-	{
-		#region Constructor
-		public MainWindowController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class MainWindowController : NSWindowController
+    {
+        #region Constructor
+        public MainWindowController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void WindowDidLoad ()
-		{
-			base.WindowDidLoad ();
+        #region Override Methods
+        public override void WindowDidLoad ()
+        {
+            base.WindowDidLoad ();
 
-			// Set window to use Full Size Content View
-			Window.StyleMask = NSWindowStyle.FullSizeContentView;
-		}
-		#endregion
-	}
+            // Set window to use Full Size Content View
+            Window.StyleMask = NSWindowStyle.FullSizeContentView;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -80,35 +80,35 @@ using Foundation;
 
 namespace MacModern
 {
-	public partial class ViewController : NSViewController
-	{
-		#region Computed Properties
-		public NSLayoutConstraint topConstraint { get; set; }
-		#endregion
+    public partial class ViewController : NSViewController
+    {
+        #region Computed Properties
+        public NSLayoutConstraint topConstraint { get; set; }
+        #endregion
 
-		...
+        ...
 
-		#region Override Methods
-		public override void UpdateViewConstraints ()
-		{
-			// Has the constraint already been set?
-			if (topConstraint == null) {
-				// Get the top anchor point
-				var contentLayoutGuide = ItemTitle.Window?.ContentLayoutGuide as NSLayoutGuide;
-				var topAnchor = contentLayoutGuide.TopAnchor;
+        #region Override Methods
+        public override void UpdateViewConstraints ()
+        {
+            // Has the constraint already been set?
+            if (topConstraint == null) {
+                // Get the top anchor point
+                var contentLayoutGuide = ItemTitle.Window?.ContentLayoutGuide as NSLayoutGuide;
+                var topAnchor = contentLayoutGuide.TopAnchor;
 
-				// Found?
-				if (topAnchor != null) {
-					// Assemble constraint and activate it
-					topConstraint = topAnchor.ConstraintEqualToAnchor (topAnchor, 20);
-					topConstraint.Active = true;
-				}
-			}
+                // Found?
+                if (topAnchor != null) {
+                    // Assemble constraint and activate it
+                    topConstraint = topAnchor.ConstraintEqualToAnchor (topAnchor, 20);
+                    topConstraint.Active = true;
+                }
+            }
 
-			base.UpdateViewConstraints ();
-		}
-		#endregion
-	}
+            base.UpdateViewConstraints ();
+        }
+        #endregion
+    }
 }
 ```
 
@@ -151,10 +151,10 @@ The Streamlined Toolbar is enabled by overriding the `ViewWillAppear` method of 
 ```csharp
 public override void ViewWillAppear ()
 {
-	base.ViewWillAppear ();
+    base.ViewWillAppear ();
 
-	// Enable streamlined Toolbars
-	View.Window.TitleVisibility = NSWindowTitleVisibility.Hidden;
+    // Enable streamlined Toolbars
+    View.Window.TitleVisibility = NSWindowTitleVisibility.Hidden;
 }
 ```
 
@@ -175,13 +175,13 @@ To add an Accessory View Controller, do the following:
 1. In the **Solution Explorer**, double-click the `Main.storyboard` file to open it for editing.
 2. Drag a **Custom View Controller** into the Window's hierarchy: 
 
-	[![](modern-cocoa-apps-images/content05.png "Adding a new Custom View Controller")](modern-cocoa-apps-images/content05.png#lightbox)
+    [![](modern-cocoa-apps-images/content05.png "Adding a new Custom View Controller")](modern-cocoa-apps-images/content05.png#lightbox)
 3. Layout the Accessory View's UI: 
 
-	[![](modern-cocoa-apps-images/content06.png "Designing the new view")](modern-cocoa-apps-images/content06.png#lightbox)
+    [![](modern-cocoa-apps-images/content06.png "Designing the new view")](modern-cocoa-apps-images/content06.png#lightbox)
 4. Expose the Accessory View as an **Outlet** and any other **Actions** or **Outlets** for its UI: 
 
-	[![](modern-cocoa-apps-images/content07.png "Adding the required OUtlet")](modern-cocoa-apps-images/content07.png#lightbox)
+    [![](modern-cocoa-apps-images/content07.png "Adding the required OUtlet")](modern-cocoa-apps-images/content07.png#lightbox)
 5. Save the changes.
 6. Return to Visual Studio for Mac to sync the changes.
 
@@ -194,32 +194,32 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainWindowController : NSWindowController
-	{
-		#region Constructor
-		public MainWindowController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class MainWindowController : NSWindowController
+    {
+        #region Constructor
+        public MainWindowController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void WindowDidLoad ()
-		{
-			base.WindowDidLoad ();
+        #region Override Methods
+        public override void WindowDidLoad ()
+        {
+            base.WindowDidLoad ();
 
-			// Create a title bar accessory view controller and attach
-			// the view created in Interface Builder
-			var accessoryView = new NSTitlebarAccessoryViewController ();
-			accessoryView.View = AccessoryViewGoBar;
+            // Create a title bar accessory view controller and attach
+            // the view created in Interface Builder
+            var accessoryView = new NSTitlebarAccessoryViewController ();
+            accessoryView.View = AccessoryViewGoBar;
 
-			// Set the location and attach the accessory view to the
-			// titlebar to be displayed
-			accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
-			Window.AddTitlebarAccessoryViewController (accessoryView);
+            // Set the location and attach the accessory view to the
+            // titlebar to be displayed
+            accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
+            Window.AddTitlebarAccessoryViewController (accessoryView);
 
-		}
-		#endregion
-	}
+        }
+        #endregion
+    }
 }
 ```
 
@@ -262,44 +262,44 @@ using Foundation;
 
 namespace MacModern
 {
-	[Register ("AppDelegate")]
-	public class AppDelegate : NSApplicationDelegate
-	{
-		#region Computed Properties
-		public int NewDocumentNumber { get; set; } = 0;
-		#endregion
+    [Register ("AppDelegate")]
+    public class AppDelegate : NSApplicationDelegate
+    {
+        #region Computed Properties
+        public int NewDocumentNumber { get; set; } = 0;
+        #endregion
 
-		#region Constructors
-		public AppDelegate ()
-		{
-		}
-		#endregion
+        #region Constructors
+        public AppDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void DidFinishLaunching (NSNotification notification)
-		{
-			// Insert code here to initialize your application
-		}
+        #region Override Methods
+        public override void DidFinishLaunching (NSNotification notification)
+        {
+            // Insert code here to initialize your application
+        }
 
-		public override void WillTerminate (NSNotification notification)
-		{
-			// Insert code here to tear down your application
-		}
-		#endregion
+        public override void WillTerminate (NSNotification notification)
+        {
+            // Insert code here to tear down your application
+        }
+        #endregion
 
-		#region Custom Actions
-		[Export ("newDocument:")]
-		public void NewDocument (NSObject sender)
-		{
-			// Get new window
-			var storyboard = NSStoryboard.FromName ("Main", null);
-			var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
+        #region Custom Actions
+        [Export ("newDocument:")]
+        public void NewDocument (NSObject sender)
+        {
+            // Get new window
+            var storyboard = NSStoryboard.FromName ("Main", null);
+            var controller = storyboard.InstantiateControllerWithIdentifier ("MainWindow") as NSWindowController;
 
-			// Display
-			controller.ShowWindow (this);
-		} 
-		#endregion
-	}
+            // Display
+            controller.ShowWindow (this);
+        } 
+        #endregion
+    }
 }
 ```
 
@@ -314,73 +314,73 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainWindowController : NSWindowController
-	{
-		#region Application Access
-		/// <summary>
-		/// A helper shortcut to the app delegate.
-		/// </summary>
-		/// <value>The app.</value>
-		public static AppDelegate App {
-			get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
-		}
-		#endregion
+    public partial class MainWindowController : NSWindowController
+    {
+        #region Application Access
+        /// <summary>
+        /// A helper shortcut to the app delegate.
+        /// </summary>
+        /// <value>The app.</value>
+        public static AppDelegate App {
+            get { return (AppDelegate)NSApplication.SharedApplication.Delegate; }
+        }
+        #endregion
 
-		#region Constructor
-		public MainWindowController (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructor
+        public MainWindowController (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Public Methods
-		public void SetDefaultDocumentTitle ()
-		{
-			// Is this the first document?
-			if (App.NewDocumentNumber == 0) {
-				// Yes, set title and increment
-				Window.Title = "Untitled";
-				++App.NewDocumentNumber;
-			} else {
-				// No, show title and count
-				Window.Title = $"Untitled {App.NewDocumentNumber++}";
-			}
-		}
-		#endregion
+        #region Public Methods
+        public void SetDefaultDocumentTitle ()
+        {
+            // Is this the first document?
+            if (App.NewDocumentNumber == 0) {
+                // Yes, set title and increment
+                Window.Title = "Untitled";
+                ++App.NewDocumentNumber;
+            } else {
+                // No, show title and count
+                Window.Title = $"Untitled {App.NewDocumentNumber++}";
+            }
+        }
+        #endregion
 
-		#region Override Methods
-		public override void WindowDidLoad ()
-		{
-			base.WindowDidLoad ();
+        #region Override Methods
+        public override void WindowDidLoad ()
+        {
+            base.WindowDidLoad ();
 
-			// Prefer Tabbed Windows
-			Window.TabbingMode = NSWindowTabbingMode.Preferred;
-			Window.TabbingIdentifier = "Main";
+            // Prefer Tabbed Windows
+            Window.TabbingMode = NSWindowTabbingMode.Preferred;
+            Window.TabbingIdentifier = "Main";
 
-			// Set default window title
-			SetDefaultDocumentTitle ();
+            // Set default window title
+            SetDefaultDocumentTitle ();
 
-			// Set window to use Full Size Content View
-			// Window.StyleMask = NSWindowStyle.FullSizeContentView;
+            // Set window to use Full Size Content View
+            // Window.StyleMask = NSWindowStyle.FullSizeContentView;
 
-			// Create a title bar accessory view controller and attach
-			// the view created in Interface Builder
-			var accessoryView = new NSTitlebarAccessoryViewController ();
-			accessoryView.View = AccessoryViewGoBar;
+            // Create a title bar accessory view controller and attach
+            // the view created in Interface Builder
+            var accessoryView = new NSTitlebarAccessoryViewController ();
+            accessoryView.View = AccessoryViewGoBar;
 
-			// Set the location and attach the accessory view to the
-			// titlebar to be displayed
-			accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
-			Window.AddTitlebarAccessoryViewController (accessoryView);
+            // Set the location and attach the accessory view to the
+            // titlebar to be displayed
+            accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
+            Window.AddTitlebarAccessoryViewController (accessoryView);
 
-		}
+        }
 
-		public override void GetNewWindowForTab (NSObject sender)
-		{
-			// Ask app to open a new document window
-			App.NewDocument (this);
-		}
-		#endregion
-	}
+        public override void GetNewWindowForTab (NSObject sender)
+        {
+            // Ask app to open a new document window
+            App.NewDocument (this);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -399,8 +399,8 @@ And the following override method adds a plus button to the Tab Bar that will cr
 ```csharp
 public override void GetNewWindowForTab (NSObject sender)
 {
-	// Ask app to open a new document window
-	App.NewDocument (this);
+    // Ask app to open a new document window
+    App.NewDocument (this);
 }
 ```
 
@@ -436,10 +436,10 @@ Another important step when using Layer Backed Views in a Xamarin.Mac app is set
 ```csharp
 public override void ViewWillAppear ()
 {
-	base.ViewWillAppear ();
+    base.ViewWillAppear ();
 
-	// Set the content redraw policy
-	View.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
+    // Set the content redraw policy
+    View.LayerContentsRedrawPolicy = NSViewLayerContentsRedrawPolicy.OnSetNeedsDisplay;
 }
 ```
 
@@ -462,40 +462,40 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainView : NSView
-	{
-		#region Computed Properties
-		public override bool WantsLayer {
-			get { return true; }
-		}
+    public partial class MainView : NSView
+    {
+        #region Computed Properties
+        public override bool WantsLayer {
+            get { return true; }
+        }
 
-		public override bool WantsUpdateLayer {
-			get { return true; }
-		}
-		#endregion
+        public override bool WantsUpdateLayer {
+            get { return true; }
+        }
+        #endregion
 
-		#region Constructor
-		public MainView (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+        #region Constructor
+        public MainView (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void DrawRect (CoreGraphics.CGRect dirtyRect)
-		{
-			base.DrawRect (dirtyRect);
+        #region Override Methods
+        public override void DrawRect (CoreGraphics.CGRect dirtyRect)
+        {
+            base.DrawRect (dirtyRect);
 
-		}
+        }
 
-		public override void UpdateLayer ()
-		{
-			base.UpdateLayer ();
+        public override void UpdateLayer ()
+        {
+            base.UpdateLayer ();
 
-			// Draw view 
-			Layer.BackgroundColor = NSColor.Red.CGColor;
-		}
-		#endregion
-	}
+            // Draw view 
+            Layer.BackgroundColor = NSColor.Red.CGColor;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -517,27 +517,27 @@ using AppKit;
 
 namespace MacModern
 {
-	public partial class MainView : NSView, INSDraggingSource, INSDraggingDestination
-	{
-		#region Constructor
-		public MainView (IntPtr handle) : base (handle)
-		{
-		}
-		#endregion
+    public partial class MainView : NSView, INSDraggingSource, INSDraggingDestination
+    {
+        #region Constructor
+        public MainView (IntPtr handle) : base (handle)
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override void MouseDragged (NSEvent theEvent)
-		{
-			// Create group of string to be dragged
-			var string1 = new NSDraggingItem ((NSString)"Item 1");
-			var string2 = new NSDraggingItem ((NSString)"Item 2");
-			var string3 = new NSDraggingItem ((NSString)"Item 3");
+        #region Override Methods
+        public override void MouseDragged (NSEvent theEvent)
+        {
+            // Create group of string to be dragged
+            var string1 = new NSDraggingItem ((NSString)"Item 1");
+            var string2 = new NSDraggingItem ((NSString)"Item 2");
+            var string3 = new NSDraggingItem ((NSString)"Item 3");
 
-			// Drag a cluster of items
-			BeginDraggingSession (new [] { string1, string2, string3 }, theEvent, this);
-		}
-		#endregion
-	}
+            // Drag a cluster of items
+            BeginDraggingSession (new [] { string1, string2, string3 }, theEvent, this);
+        }
+        #endregion
+    }
 }
 ```
 
@@ -553,25 +553,25 @@ using AppKit;
 
 namespace MacModern
 {
-	public class ContentsTableDataSource: NSTableViewDataSource
-	{
-		#region Constructors
-		public ContentsTableDataSource ()
-		{
-		}
-		#endregion
+    public class ContentsTableDataSource: NSTableViewDataSource
+    {
+        #region Constructors
+        public ContentsTableDataSource ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override INSPasteboardWriting GetPasteboardWriterForRow (NSTableView tableView, nint row)
-		{
-			// Return required pasteboard writer
-			...
-			
-			// Pasteboard writer failed
-			return null;
-		}
-		#endregion
-	}
+        #region Override Methods
+        public override INSPasteboardWriting GetPasteboardWriterForRow (NSTableView tableView, nint row)
+        {
+            // Return required pasteboard writer
+            ...
+            
+            // Pasteboard writer failed
+            return null;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -592,24 +592,24 @@ To accomplish this in code, create a custom class for the element (such as `NSBu
 ```csharp
 public override void MouseDown (NSEvent theEvent)
 {
-	var shouldCallSuper = false;
+    var shouldCallSuper = false;
 
-	Window.TrackEventsMatching (NSEventMask.LeftMouseUp, 2000, NSRunLoop.NSRunLoopEventTracking, (NSEvent evt, ref bool stop) => {
-		// Handle event as normal
-		stop = true;
-		shouldCallSuper = true;
-	});
+    Window.TrackEventsMatching (NSEventMask.LeftMouseUp, 2000, NSRunLoop.NSRunLoopEventTracking, (NSEvent evt, ref bool stop) => {
+        // Handle event as normal
+        stop = true;
+        shouldCallSuper = true;
+    });
 
-	Window.TrackEventsMatching(NSEventMask.LeftMouseDragged, 2000, NSRunLoop.NSRunLoopEventTracking, (NSEvent evt, ref bool stop) => {
-		// Pass drag event to window
-		stop = true;
-		Window.PerformWindowDrag (evt);
-	});
+    Window.TrackEventsMatching(NSEventMask.LeftMouseDragged, 2000, NSRunLoop.NSRunLoopEventTracking, (NSEvent evt, ref bool stop) => {
+        // Pass drag event to window
+        stop = true;
+        Window.PerformWindowDrag (evt);
+    });
 
-	// Call super to handle mousedown
-	if (shouldCallSuper) {
-		base.MouseDown (theEvent);
-	}
+    // Call super to handle mousedown
+    if (shouldCallSuper) {
+        base.MouseDown (theEvent);
+    }
 }
 ```
 
@@ -642,26 +642,26 @@ using AppKit;
 
 namespace MacModern
 {
-	public class ContentsTableDelegate : NSTableViewDelegate
-	{
-		#region Constructors
-		public ContentsTableDelegate ()
-		{
-		}
-		#endregion
+    public class ContentsTableDelegate : NSTableViewDelegate
+    {
+        #region Constructors
+        public ContentsTableDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
-		{
-			// Build new view
-			var view = new NSView ();
-			...
+        #region Override Methods
+        public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
+        {
+            // Build new view
+            var view = new NSView ();
+            ...
 
-			// Return the view representing the item to display
-			return view;
-		}
-		#endregion
-	}
+            // Return the view representing the item to display
+            return view;
+        }
+        #endregion
+    }
 }
 ```
 
@@ -675,49 +675,49 @@ using AppKit;
 
 namespace MacModern
 {
-	public class ContentsTableDelegate : NSTableViewDelegate
-	{
-		#region Constructors
-		public ContentsTableDelegate ()
-		{
-		}
-		#endregion
+    public class ContentsTableDelegate : NSTableViewDelegate
+    {
+        #region Constructors
+        public ContentsTableDelegate ()
+        {
+        }
+        #endregion
 
-		#region Override Methods
-		public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
-		{
-			// Build new view
-			var view = new NSView ();
-			...
+        #region Override Methods
+        public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tableColumn, nint row)
+        {
+            // Build new view
+            var view = new NSView ();
+            ...
 
-			// Return the view representing the item to display
-			return view;
-		}
+            // Return the view representing the item to display
+            return view;
+        }
 
-		public override NSTableViewRowAction [] RowActions (NSTableView tableView, nint row, NSTableRowActionEdge edge)
-		{
-			// Take action based on the edge
-			if (edge == NSTableRowActionEdge.Trailing) {
-				// Create row actions
-				var editAction = NSTableViewRowAction.FromStyle (NSTableViewRowActionStyle.Regular, "Edit", (action, rowNum) => {
-					// Handle row being edited
-					...
-				});
+        public override NSTableViewRowAction [] RowActions (NSTableView tableView, nint row, NSTableRowActionEdge edge)
+        {
+            // Take action based on the edge
+            if (edge == NSTableRowActionEdge.Trailing) {
+                // Create row actions
+                var editAction = NSTableViewRowAction.FromStyle (NSTableViewRowActionStyle.Regular, "Edit", (action, rowNum) => {
+                    // Handle row being edited
+                    ...
+                });
 
-				var deleteAction = NSTableViewRowAction.FromStyle (NSTableViewRowActionStyle.Destructive, "Delete", (action, rowNum) => {
-					// Handle row being deleted
-					...
-				});
+                var deleteAction = NSTableViewRowAction.FromStyle (NSTableViewRowActionStyle.Destructive, "Delete", (action, rowNum) => {
+                    // Handle row being deleted
+                    ...
+                });
 
-				// Return actions
-				return new [] { editAction, deleteAction };
-			} else {
-				// No matching actions
-				return null;
-			}
-		}
-		#endregion
-	}
+                // Return actions
+                return new [] { editAction, deleteAction };
+            } else {
+                // No matching actions
+                return null;
+            }
+        }
+        #endregion
+    }
 }
 ```
 
@@ -815,17 +815,17 @@ Prior to macOS Sierra, controls  created in code would not be mirrored automatic
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.ViewDidLoad ();
+    base.ViewDidLoad ();
 
-	// Setting a button's mirroring based on the layout direction
-	var button = new NSButton ();
-	if (button.UserInterfaceLayoutDirection == NSUserInterfaceLayoutDirection.LeftToRight) {
-		button.Alignment = NSTextAlignment.Right;
-		button.ImagePosition = NSCellImagePosition.ImageLeft;
-	} else {
-		button.Alignment = NSTextAlignment.Left;
-		button.ImagePosition = NSCellImagePosition.ImageRight;
-	}
+    // Setting a button's mirroring based on the layout direction
+    var button = new NSButton ();
+    if (button.UserInterfaceLayoutDirection == NSUserInterfaceLayoutDirection.LeftToRight) {
+        button.Alignment = NSTextAlignment.Right;
+        button.ImagePosition = NSCellImagePosition.ImageLeft;
+    } else {
+        button.Alignment = NSTextAlignment.Left;
+        button.ImagePosition = NSCellImagePosition.ImageRight;
+    }
 }
 ```
 
@@ -835,8 +835,8 @@ macOS Sierra adds several new convenience constructors (via the static `CreateBu
 
 ```csharp
 var button2 = NSButton.CreateButton (myTitle, myImage, () => {
-	// Take action when the button is pressed
-	...
+    // Take action when the button is pressed
+    ...
 });
 ```
 
@@ -857,22 +857,22 @@ using Foundation;
 
 namespace MacModern
 {
-	public partial class ViewController : NSViewController
-	{
-		...
-	
-		#region Override Methods
-		public override void ViewWillAppear ()
-		{
-			base.ViewWillAppear ();
+    public partial class ViewController : NSViewController
+    {
+        ...
+    
+        #region Override Methods
+        public override void ViewWillAppear ()
+        {
+            base.ViewWillAppear ();
 
-			// Apply the Dark Interface Appearance
-			View.Window.Appearance = NSAppearance.GetAppearance (NSAppearance.NameVibrantDark);
+            // Apply the Dark Interface Appearance
+            View.Window.Appearance = NSAppearance.GetAppearance (NSAppearance.NameVibrantDark);
 
-			...
-		}
-		#endregion
-	}
+            ...
+        }
+        #endregion
+    }
 }
 ```
 
@@ -946,8 +946,6 @@ Apple has included several user-facing features in macOS Sierra that allow the d
 ## Summary
 
 This article has covered several tips, features and techniques a developer can use to build a modern macOS app in Xamarin.Mac.
-
-
 
 ## Related Links
 

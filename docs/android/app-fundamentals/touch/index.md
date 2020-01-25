@@ -4,8 +4,8 @@ description: "Touch screens on many of today's devices allow users to quickly an
 ms.prod: xamarin
 ms.assetid: 61874769-978A-4562-9B2A-7FFD45F58B38
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -27,15 +27,13 @@ This guide follows a similar format for each operating system: first, the platfo
 
 ## Sections
 
--  [Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Walkthrough: Using Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
--  [Multi-Touch tracking](touch-tracking.md)
+- [Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Walkthrough: Using Touch in Android](~/android/app-fundamentals/touch/android-touch-walkthrough.md)
+- [Multi-Touch tracking](touch-tracking.md)
 
 ## Summary
 
 In this guide we examined touch in Android. For both operating systems, we learned how to enable touch and how to respond to the touch events. Next, we learned about gestures and some of the gesture recognizers that both Android and iOS provide to handle some of the more common scenarios. We examined how to create custom gestures and implement them in applications. A walkthrough demonstrated the concepts and APIs for each operating system in action, and you also saw how to track individual fingers.
-
-
 
 ## Related Links
 

@@ -4,8 +4,8 @@ description: "This document discusses how to use progress and activity indicator
 ms.prod: xamarin
 ms.assetid: 7AA887E4-51F7-4867-82C5-A8D2EA48AE07
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
 ---
 
@@ -41,7 +41,6 @@ Use the `StartAnimating()` and `StopAnimating()` methods to start and stop the a
 
 Set the `HidesWhenStopped` property to `true` to make the activity indicator disappear after `StopAnimating()` has been called. This is set to `true` by default. At any point you can see if the Activity Indicator is running its spinning animation by checking the `IsAnimating` property. 
 
-
 ### Managing Activity Indicator Appearances
 
 The `UIActivityIndicatorViewStyle` enumeration can be passed as a parameter when instantiating the Activity Indicator. You can use this to set the visual style to `Gray`, `White`, or `WhiteLarge`, for example:
@@ -72,7 +71,6 @@ You can also add a Progress Bar to your UI when using the iOS Designer. Search f
 The following properties can be adjusted on the properties pad:
 
 ![Properties Pad](progress-activity-indicator-images/progress-indicator3.png)
-
 
 ### Managing Progress Bar Behavior
 
@@ -105,6 +103,3 @@ progressBar = new UIProgressView(UIProgressViewStyle.Default)
                 TrackTintColor = UIColor.Magenta
             }; 
 ```
-
-
-

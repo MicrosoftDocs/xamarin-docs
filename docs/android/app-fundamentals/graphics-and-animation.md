@@ -4,8 +4,8 @@ description: "Android provides a very rich and diverse framework for supporting 
 ms.prod: xamarin
 ms.assetid: 80086318-6FE4-4711-9A71-5C8F8C28C754
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -42,38 +42,37 @@ Android provides two different API's for creating 2D graphics. One is a
 high level declarative approach and the other a programmatic low-level
 API:
 
--   **Drawable Resources** &ndash; These are used to create custom graphics 
+- **Drawable Resources** &ndash; These are used to create custom graphics 
     either programmatically or (more typically) by embedding drawing 
     instructions in XML files. Drawable resources are typically defined 
     as XML files that contain instructions or actions for Android to 
     render a 2D graphic. 
 
--   **Canvas** &ndash; this is a low level API that involves drawing 
+- **Canvas** &ndash; this is a low level API that involves drawing 
     directly on an underlying bitmap. It provides very fine-grained 
     control over what is displayed. 
 
 In addition to these 2D graphics techniques, Android also provides
 several different ways to create animations:
 
--   **Drawable Animations** &ndash; Android also supports
+- **Drawable Animations** &ndash; Android also supports
     frame-by-frame animations known as *Drawable Animation*. This is
     the simplest animation API. Android sequentially loads and displays
     Drawable resources in sequence (much like a cartoon).
 
--   **View Animations** &ndash; *View Animations* are the original
+- **View Animations** &ndash; *View Animations* are the original
     animation API's in Android and are available in all versions of
     Android. This API is limited in that it will only work with View
     objects and can only perform simple transformations on those Views.
     View animations are typically defined in XML files found in the
     `/Resources/anim` folder.
 
--   **Property Animations** &ndash; Android 3.0 introduced a new set of
+- **Property Animations** &ndash; Android 3.0 introduced a new set of
     animation API's known as *Property Animations*. These new API's
     introduced an extensible and flexible system that can be used to
     animate the properties of any object, not just View objects. This
     flexibility allows animations to be encapsulated in distinct
     classes that will make code sharing easier.
-
 
 View Animations are more suitable for applications that must support
 the older pre-Android 3.0 API's (API level 11). Otherwise applications
@@ -85,7 +84,6 @@ preference should be given to Property Animations, as it is a more
 flexible API to work with. Property Animations allow for animation
 logic to be encapsulated in distinct classes that makes code sharing
 easier and simplifies code maintenance.
-
 
 ## Accessibility
 
@@ -102,8 +100,6 @@ descriptions for pictorial elements of the UI.
 Refer to
 [Google's Accessibility Guide](https://developer.android.com/guide/topics/ui/accessibility/) for
 more information on how to utilize Android's accessibility APIs.
-
-
 
 ## 2D Graphics
 
@@ -128,7 +124,6 @@ will change based on calculations related to the value of the slider.
 Let's examine Drawable Resources first. They are simpler and cover the
 most common custom drawing cases.
 
-
 ### Drawable Resources
 
 Drawable Resources are defined in an XML file in the directory
@@ -138,31 +133,31 @@ At runtime, an Android application will load these resources and use
 the instructions contained in these XML files to create 2D graphics.
 Android defines several different types of Drawable Resources:
 
--   [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)
+- [ShapeDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape)
     &ndash; This is a Drawable object that draws a primitive geometric shape
     and applies a limited set of graphical effects on that shape. They
     are very useful for things such as customizing Buttons or setting
     the background of TextViews. We will see an example of how to use a
     `ShapeDrawable` later in this article.
 
--   [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList)
+- [StateListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#StateList)
     &ndash; This is a Drawable Resource that will change appearance based on
     the state of a widget/control. For example, a button may change its
     appearance depending on whether it is pressed or not.
 
--   [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
+- [LayerDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LayerList)
     &ndash; This Drawable Resource that will stack several other drawables one
     on top of another. An example of a *LayerDrawable* is shown in the
     following screenshot:
 
     ![LayerDrawable example](graphics-and-animation-images/image1.png)
 
--   [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition)
+- [TransitionDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Transition)
     &ndash; This is a *LayerDrawable* but with one difference. A
     *TransitionDrawable* is able to animate one layer showing up over
     top another.
 
--   [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList)
+- [LevelListDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#LevelList)
     &ndash; This is very similar to a *StateListDrawable* in that it will
     display an image based on certain conditions. However, unlike a
     *StateListDrawable*, the *LevelListDrawable* displays an image
@@ -171,17 +166,17 @@ Android defines several different types of Drawable Resources:
     of the WiFi signal changes, the drawable that is displayed will
     change accordingly.
 
--   [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)
+- [ScaleDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Scale)/[ClipDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Clip)
     &ndash; As their name implies, these Drawables provide both scaling and
     clipping functionality. The *ScaleDrawable* will scale another
     Drawable, while the *ClipDrawable* will clip another Drawable.
 
--   [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset)
+- [InsetDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Inset)
     &ndash; This Drawable will apply insets on the sides of another Drawable
     resource. It is used when a View needs a background that is smaller
     than the View's actual bounds.
 
--   XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap)
+- XML [BitmapDrawable](https://developer.android.com/guide/topics/resources/drawable-resource.html#Bitmap)
     &ndash; This file is a set of instructions, in XML, that are to be
     performed on an actual bitmap. Some actions that Android can
     perform are tiling, dithering, and anti-aliasing. One of the very
@@ -250,12 +245,11 @@ To see what this would look like, run the *AnimationsDemo* project and
 select the Shape Drawable item from the main menu. We should see
 something similar to the following screenshot:
 
-![Textview with a custom background, drawable with a gradient and rounded corners](graphics-and-animation-images/image1.png)
+[![Textview with a custom background, drawable with a gradient and rounded corners](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
 
 For more details about the XML elements and syntax of Drawable
 Resources, consult
 [Google's documentation](https://developer.android.com/guide/topics/resources/drawable-resource.html#Shape).
-
 
 ### Using the Canvas Drawing API
 
@@ -311,7 +305,7 @@ instructions. For example:
 
 #### Drawing with the Canvas API
 
-Let's see an example of the Canvas API in action. The following code
+Here's an example of the Canvas API in action. The following code
 snippet shows how to draw a view:
 
 ```csharp
@@ -347,8 +341,7 @@ included with the source code for this article. By starting up the
 application and selecting the Drawing item from the main menu, we
 should a screen similar to the following:
 
-![Screen with red paint and green paint objects](graphics-and-animation-images/image3.png)
-
+[![Screen with red paint and green paint objects](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
 ## Animation
 
@@ -358,23 +351,22 @@ stand out. The best animations are the ones that users don't notice
 because they feel natural. Android provides the following three API's
 for animations:
 
--   **View Animation** &ndash; This is the original API. These
+- **View Animation** &ndash; This is the original API. These
     animations are tied to a specific View and can perform simple
     transformations on the contents of the View. Because of it's
     simplicity, this API still useful for things like alpha animations,
     rotations, and so forth.
 
--   **Property Animation** &ndash; Property animations were introduced
+- **Property Animation** &ndash; Property animations were introduced
     in Android 3.0. They enable an application to animate almost
     anything. Property animations can be used to change any property of
     any object, even if that object is not visible on the screen.
 
--   **Drawable Animation** &ndash; This a special Drawable resource
+- **Drawable Animation** &ndash; This a special Drawable resource
     that is used to apply a very simple animation effect to layouts.
 
 In general, property animation is the preferred system to use as it is
 more flexible and offers more features.
-
 
 ### View Animations
 
@@ -390,15 +382,15 @@ The animation XML files will be stored in the `/Resources/anim`
 directory of a Xamarin.Android project. This file must have one of the
 following elements as the root element :
 
--   `alpha` &ndash; A fade-in or fade-out animation.
+- `alpha` &ndash; A fade-in or fade-out animation.
 
--   `rotate` &ndash; A rotation animation.
+- `rotate` &ndash; A rotation animation.
 
--   `scale` &ndash; A resizing animation.
+- `scale` &ndash; A resizing animation.
 
--   `translate` &ndash; A horizontal and/or vertical motion.
+- `translate` &ndash; A horizontal and/or vertical motion.
 
--   `set` &ndash; A container that may hold one or more of the other
+- `set` &ndash; A container that may hold one or more of the other
     animation elements.
 
 By default, all animations in an XML file will be applied
@@ -411,14 +403,13 @@ to be accelerated, repeated, or decelerated. The Android framework
 provides several interpolators out of the box, such as (but not limited
 to):
 
--   `AccelerateInterpolator` / `DecelerateInterpolator` &ndash; these
+- `AccelerateInterpolator` / `DecelerateInterpolator` &ndash; these
     interpolators increase or decrease the rate of change in an
     animation.
 
--   `BounceInterpolator` &ndash; the change bounces at the end.
+- `BounceInterpolator` &ndash; the change bounces at the end.
 
--   `LinearInterpolator` &ndash; the rate of changes is constant.
-
+- `LinearInterpolator` &ndash; the rate of changes is constant.
 
 The following XML shows an example of an animation file that combines
 some of these elements:
@@ -488,7 +479,6 @@ myImage.StartAnimation(myAnimation);
 Now that we have a fundamental understanding of how View Animations
 work, lets move to Property Animations.
 
-
 ### Property Animations
 
 Property animators are a new API that was introduced in Android 3.0.
@@ -500,35 +490,34 @@ All property animations are created by instances of the
 subclass. Applications do not directly use this class, instead they use
 one of it's subclasses:
 
--   [ValueAnimator](xref:Android.Animation.ValueAnimator) &ndash;
+- [ValueAnimator](xref:Android.Animation.ValueAnimator) &ndash;
     This class is the most important class in the entire property
     animation API. It calculates the values of properties that need to
     be changed. The `ViewAnimator` does not directly update those
     values; instead, it raises events that can be used to update
     animated objects.
 
--   [ObjectAnimator](xref:Android.Animation.ObjectAnimator)
+- [ObjectAnimator](xref:Android.Animation.ObjectAnimator)
     &ndash; This class is a subclass of `ValueAnimator` . It is meant
     to simplify the process of animating objects by accepting a target
     object and property to update.
 
--   [AnimationSet](xref:Android.Animation.AnimatorSet)
+- [AnimationSet](xref:Android.Animation.AnimatorSet)
     &ndash; This class is responsible for orchestrating how animations
     run in relation to one another. Animations may run simultaneously,
     sequentially, or with a specified delay between them.
-
 
 *Evaluators* are special classes that are used by animators to
 calculate the new values during an animation. Out of the box, Android
 provides the following evaluators:
 
--   [IntEvaluator](xref:Android.Animation.IntEvaluator)
+- [IntEvaluator](xref:Android.Animation.IntEvaluator)
      &ndash; Calculates values for integer properties.
 
--   [FloatEvaluator](xref:Android.Animation.FloatEvaluator)
+- [FloatEvaluator](xref:Android.Animation.FloatEvaluator)
      &ndash; Calculates values for float properties.
 
--   [ArgbEvaluator](xref:Android.Animation.ArgbEvaluator)
+- [ArgbEvaluator](xref:Android.Animation.ArgbEvaluator)
     &ndash; Calculates values for colour properties.
 
 If the property that is being animated is not a `float`, `int` or
@@ -549,9 +538,9 @@ several properties to be updated from one animated value.
 You obtain an instance of `ValueAnimator` by calling one of the
 following factory methods:
 
--  `ValueAnimator.OfInt`
--  `ValueAnimator.OfFloat`
--  `ValueAnimator.OfObject`
+- `ValueAnimator.OfInt`
+- `ValueAnimator.OfFloat`
+- `ValueAnimator.OfObject`
 
 Once that is done, the `ValueAnimator` instance must have its duration
 set, and then it can be started. The following example shows how to
@@ -611,7 +600,6 @@ animator.Start();
 As you can see from the previous code snippet, `ObjectAnimator` can
 reduce and simplify the code that is necessary to animate an object.
 
-
 ### Drawable Animations
 
 The final animation API is the Drawable Animation API. Drawable
@@ -665,7 +653,6 @@ protected override void OnCreate(Bundle bundle)
 At this point we have covered the foundations of the animation APIs
 available in an Android application.
 
-
 ## Summary
 
 This article introduced a lot of new concepts and API's to help add
@@ -676,13 +663,11 @@ alternate techniques that allow graphics to be declaratively
 created using XML files. Then we went on to discuss the old and new 
 API's for creating animations in Android.
 
-
-
 ## Related Links
 
 - [Animation Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/animationdemo)
 - [Animation and Graphics](https://developer.android.com/guide/topics/graphics/index.html)
-- [Using Animations to Bring your Mobile Apps to Life](http://youtu.be/ikSk_ILg3d0)
+- [Using Animations to Bring your Mobile Apps to Life](https://youtu.be/ikSk_ILg3d0)
 - [AnimationDrawable](xref:Android.Graphics.Drawables.AnimationDrawable)
 - [Canvas](xref:Android.Graphics.Canvas)
 - [Object Animator](xref:Android.Animation.ObjectAnimator)

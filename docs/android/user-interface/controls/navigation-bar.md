@@ -3,8 +3,8 @@ title: "Xamarin.Android Navigation Bar"
 ms.prod: xamarin
 ms.assetid: 6023DB7E-9E72-4B90-A96A-11BC297B8A3D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/01/2017
 ---
 
@@ -22,10 +22,9 @@ Several new flags are available that control the visibility of the Navigation
 Bar and its controls, as well as the visibility of the System Bar that was
 introduced in Android 3. The flags are defined in the `Android.View.View` class and are listed below:
 
--   `SystemUiFlagVisible` &ndash; Makes the Navigation Bar visible. 
--   `SystemUiFlagLowProfile` &ndash; Dims out controls in the Navigation Bar. 
--   `SystemUiFlagHideNavigation` &ndash; Hides the Navigation Bar. 
-
+- `SystemUiFlagVisible` &ndash; Makes the Navigation Bar visible.
+- `SystemUiFlagLowProfile` &ndash; Dims out controls in the Navigation Bar.
+- `SystemUiFlagHideNavigation` &ndash; Hides the Navigation Bar.
 
 These flags can be applied to any view in the view hierarchy by setting
 the `SystemUiVisibility` property. If multiple views have this property
@@ -46,17 +45,17 @@ var tv = FindViewById<TextView> (Resource.Id.systemUiFlagTextView);
 var lowProfileButton = FindViewById<Button>(Resource.Id.lowProfileButton);
 var hideNavButton = FindViewById<Button> (Resource.Id.hideNavigation);
 var visibleButton = FindViewById<Button> (Resource.Id.visibleButton);
-           
+
 lowProfileButton.Click += delegate {
     tv.SystemUiVisibility =
         (StatusBarVisibility)View.SystemUiFlagLowProfile;
 };
-           
+
 hideNavButton.Click += delegate {
     tv.SystemUiVisibility =
        (StatusBarVisibility)View.SystemUiFlagHideNavigation;        
 };
-           
+
 visibleButton.Click += delegate {
     tv.SystemUiVisibility = (StatusBarVisibility)View.SystemUiFlagVisible;
 }
@@ -75,10 +74,6 @@ tv.SystemUiVisibilityChange +=
   };
 ```
 
-
-
 ## Related Links
 
 - [SystemUIVisibilityDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/systemuivisibilitydemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

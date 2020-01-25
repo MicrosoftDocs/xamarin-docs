@@ -3,8 +3,8 @@ title: "Creating A Fragment"
 ms.prod: xamarin
 ms.assetid: F2997242-BC29-1440-7F1A-CFC447CD73FA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/07/2018
 ---
 
@@ -30,7 +30,6 @@ The code above will inflate the view
 `Resource.Layout.Example_Fragment`, and add it as a child view to the
 `ViewGroup` container.
 
-
 > [!NOTE]
 > Fragment sub-classes must have a public default no argument constructor.
 
@@ -38,10 +37,10 @@ The code above will inflate the view
 
 There are two ways that a Fragment may be hosted inside an Activity:
 
--   **Declaratively** &ndash; Fragments can be used declaratively
+- **Declaratively** &ndash; Fragments can be used declaratively
     within `.axml` layout files by using the `<Fragment>` tag.
 
--   **Programmatically** &ndash; Fragments can also be instantiated
+- **Programmatically** &ndash; Fragments can also be instantiated
     dynamically by using the `FragmentManager` class's API.
 
 Programmatic usage via the `FragmentManager` class will be discussed
@@ -83,9 +82,9 @@ the Activity to which it is attached.
 
 Each Fragment must be assigned a unique identifier:
 
--  **android:id** &ndash; As with other UI elements in a layout file, this is a unique ID.
+- **android:id** &ndash; As with other UI elements in a layout file, this is a unique ID.
 
--  **android:tag** &ndash; This attribute is a unique string.
+- **android:tag** &ndash; This attribute is a unique string.
 
 If neither of the previous two methods is used, then the Fragment will
 assume the ID of the container view. In the following example where
@@ -127,7 +126,6 @@ OR
 <fragment class="Com.Example.DetailsFragment" android:id="@+id/fragment_content" android:layout_width="match_parent" android:layout_height="match_parent" />
 ```
 
-
 ## Fragment Lifecycle
 
 Fragments have their own lifecycle that is somewhat independent of, but
@@ -139,13 +137,12 @@ Fragment.
 
 [![Flow diagram illustrating the Fragment lifecycle](creating-a-fragment-images/fragment-lifecycle.png)](creating-a-fragment-images/fragment-lifecycle.png#lightbox)
 
-
 ### Fragment Creation Lifecycle Methods
 
 The list below shows the flow of the various callbacks in the lifecycle
 of a Fragment as it is being created:
 
--   **`OnInflate()`** &ndash; Called when the Fragment is being created
+- **`OnInflate()`** &ndash; Called when the Fragment is being created
     as part of a view layout. This may be called immediately after the
     Fragment is created declaratively from an XML layout file. The
     Fragment is not associated with its Activity yet, but the
@@ -154,14 +151,14 @@ of a Fragment as it is being created:
     parsing the **AttributeSet** and for saving the attributes that
     might be used later by the Fragment.
 
--   **`OnAttach()`** &ndash; Called after the Fragment is associated
+- **`OnAttach()`** &ndash; Called after the Fragment is associated
     with the Activity. This is the first method to be run when the
     Fragment is ready to be used. In general, Fragments should not
     implement a constructor or override the default constructor. Any
     components that are required for the Fragment should be initialized
     in this method.
 
--   **`OnCreate()`** &ndash; Called by the Activity to create the
+- **`OnCreate()`** &ndash; Called by the Activity to create the
     Fragment. When this method is called, the view hierarchy of the
     hosting Activity may not be completely instantiated, so the
     Fragment should not rely on any parts of the Activity's view
@@ -174,23 +171,23 @@ of a Fragment as it is being created:
     method may be skipped if **SetRetainInstance(true)** is called.
     This alternative will be described in more detail below.
 
--   **`OnCreateView()`** &ndash; Creates the view for the Fragment.
+- **`OnCreateView()`** &ndash; Creates the view for the Fragment.
     This method is called once the Activity's **OnCreate()** method is
     complete. At this point, it is safe to interact with the view
     hierarchy of the Activity. This method should return the view that
     will be used by the Fragment.
 
--   **`OnActivityCreated()`** &ndash; Called after
+- **`OnActivityCreated()`** &ndash; Called after
     **Activity.OnCreate** has been completed by the hosting Activity.
     Final tweaks to the user interface should be performed at this
     time.
 
--   **`OnStart()`** &ndash; Called after the containing Activity has
+- **`OnStart()`** &ndash; Called after the containing Activity has
     been resumed. This makes the Fragment visible to the user. In many
     cases, the Fragment will contain code that would otherwise be in
     the **OnStart()** method of an Activity.
 
--   **`OnResume()`** &ndash; This is the last method called before the
+- **`OnResume()`** &ndash; This is the last method called before the
     user can interact with the Fragment. An example of the kind of code
     that should be performed in this method would be enabling features
     of a device that the user may interact with, such as the camera
@@ -198,13 +195,12 @@ of a Fragment as it is being created:
     excessive battery drain, though, and an application should minimize
     their use to preserve battery life.
 
-
 ### Fragment Destruction Lifecycle Methods
 
 The next list explains the lifecycle methods that are called as a Fragment
 is being destroyed:
 
--   **`OnPause()`** &ndash; The user is no longer able to interact with
+- **`OnPause()`** &ndash; The user is no longer able to interact with
     the Fragment. This situation exists because some other Fragment
     operation is modifying this Fragment, or the hosting Activity is
     paused. It is possible that the Activity hosting this Fragment
@@ -213,15 +209,15 @@ is being destroyed:
     becomes active, it's the first indication that the user is leaving
     the Fragment. The Fragment should save any changes.
 
--   **`OnStop()`** &ndash; The Fragment is no longer visible. The host
+- **`OnStop()`** &ndash; The Fragment is no longer visible. The host
     Activity may be stopped, or a Fragment operation is modifying it in
     the Activity. This callback serves the same purpose as **Activity.OnStop**.
 
--   **`OnDestroyView()`** &ndash; This method is called to clean up
+- **`OnDestroyView()`** &ndash; This method is called to clean up
     resources associated with the view. This is called when the view
     associated with the Fragment has been destroyed.
 
--   **`OnDestroy()`** &ndash; This method is called when the Fragment
+- **`OnDestroy()`** &ndash; This method is called when the Fragment
     is no longer in use. It is still associated with the Activity, but
     the Fragment is no longer functional. This method should release
     any resources that are in use by the Fragment, such as a
@@ -230,11 +226,10 @@ is being destroyed:
     **SetRetainInstance(true)** is called. This
     alternative will be described in more detail below.
 
--   **`OnDetach()`** &ndash; This method is called just before the
+- **`OnDetach()`** &ndash; This method is called just before the
     Fragment is no longer associated with the Activity. The view
     hierarchy of the Fragment no longer exists, and all resources that
     are used by the Fragment should be released at this point.
-
 
 ### Using SetRetainInstance
 
@@ -247,7 +242,6 @@ happens, then all callback methods will be invoked except the
 `OnCreate` and `OnDestroy` lifecycle callbacks. This process is
 illustrated in the lifecycle diagram shown above (by the green dotted
 lines).
-
 
 ## Fragment State Management
 
@@ -300,18 +294,16 @@ Since the `EditText` control has an `id` assigned, the Fragment
 automatically saves the data in the widget when `OnSaveInstanceState`
 is called.
 
-
 ### Bundle Limitations
 
 Although using `OnSaveInstanceState` makes it easy to save transient
 data, use of this method has some limitations:
 
--  If the Fragment is not added to the back stack, then its state will
+- If the Fragment is not added to the back stack, then its state will
    not be restored when the user presses the **Back** button.
 
--  When the Bundle is used to save data, that data is serialized. This
+- When the Bundle is used to save data, that data is serialized. This
    can lead to processing delays.
-
 
 ## Contributing to the Menu
 

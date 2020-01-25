@@ -4,8 +4,8 @@ description: "With iOS 12, a notification content extension can add, remove, and
 ms.prod: xamarin
 ms.assetid: 6B34AD78-5117-42D0-B6E7-C8B4B453EAFF
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
 ---
 # Dynamic notification action buttons in Xamarin.iOS

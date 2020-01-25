@@ -4,8 +4,8 @@ description: "This document describes watchOS text input in Xamarin. It discusse
 ms.prod: xamarin
 ms.assetid: E9CDF1DE-4233-4C39-99A9-C0AA643D314D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -42,13 +42,13 @@ The following code snippet presents three pre-defined
 var suggest = new string[] {"Get groceries", "Buy gas", "Post letter"};
 
 PresentTextInputController (suggest, WatchKit.WKTextInputMode.AllowEmoji, (result) => {
-	// action when the "text input" is complete
-	if (result != null && result.Count > 0) {
+    // action when the "text input" is complete
+    if (result != null && result.Count > 0) {
     // this only works if result is a text response (Plain or AllowEmoji)
-		enteredText = result.GetItem<NSObject>(0).ToString();
-		Console.WriteLine (enteredText);
-		// do something, such as myLabel.SetText(enteredText);
-	}
+        enteredText = result.GetItem<NSObject>(0).ToString();
+        Console.WriteLine (enteredText);
+        // do something, such as myLabel.SetText(enteredText);
+    }
 });
 ```
 
@@ -93,12 +93,12 @@ To take the user directly to the dictation screen without
 
 ```csharp
 PresentTextInputController (new string[0], WatchKit.WKTextInputMode.Plain, (result) => {
-	// action when the "text input" is complete
-	if (result != null && result.Count > 0) {
-		dictatedText = result.GetItem<NSObject>(0).ToString();
-		Console.WriteLine (dictatedText);
-		// do something, such as myLabel.SetText(dictatedText);
-	}
+    // action when the "text input" is complete
+    if (result != null && result.Count > 0) {
+        dictatedText = result.GetItem<NSObject>(0).ToString();
+        Console.WriteLine (dictatedText);
+        // do something, such as myLabel.SetText(dictatedText);
+    }
 });
 ```
 
@@ -110,8 +110,6 @@ When the user is speaking, the watch screen displays
 
 Once they press the **Done** button the text will
   be returned.
-
-
 
 ## Related Links
 

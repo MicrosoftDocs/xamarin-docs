@@ -51,8 +51,6 @@ Use the XAML markup extensions defined in Xamarin.Forms.
 
 Write your own custom XAML markup extensions.
 
-
-
 ## Related Links
 
 - [Markup Extensions (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)

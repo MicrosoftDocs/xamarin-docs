@@ -95,10 +95,10 @@ public partial class MaskBlurExperimentPage : ContentPage
                             typeof(MaskBlurExperimentPage), 
                             "SkiaSharpFormsDemos.Media.SeatedMonkey.jpg");
 
-	public MaskBlurExperimentPage ()
-	{
-		InitializeComponent ();
-	}
+    public MaskBlurExperimentPage ()
+    {
+        InitializeComponent ();
+    }
 
     void OnPickerSelectedIndexChanged(object sender, EventArgs args)
     {

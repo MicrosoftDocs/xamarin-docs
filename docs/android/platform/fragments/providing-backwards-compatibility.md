@@ -3,8 +3,8 @@ title: "Providing Backwards Compatibility with the Android Support Package"
 ms.prod: xamarin
 ms.assetid: 7511D2F8-2B4F-4200-C74E-E967153B2E8D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/12/2017
 ---
 
@@ -26,7 +26,6 @@ that enables devices running Android 1.6 (API level 4) to Android
 > the `PreferenceFragment,` are supported in the Android Support Package. 
 > They will not work in pre-Android 3.0 applications. 
 
-
 ## Adding the Support Package
 
 The Android Support Package is not automatically added to a 
@@ -45,23 +44,23 @@ After these steps have been performed, it becomes possible to use
 Fragments in earlier versions of Android. The Fragment APIs will work 
 the same now in these earlier versions, with the following exceptions: 
 
--   **Change the minimum Android Version** &ndash; The application no 
+- **Change the minimum Android Version** &ndash; The application no 
     longer needs to target Android 3.0 or higher, as shown below: 
 
     [![Screenshot of Minimum Android target being set under Android Manifest](providing-backwards-compatibility-images/03-sml.png)](providing-backwards-compatibility-images/03.png#lightbox)
 
--   **Extend FragmentActivity** &ndash; The Activities that are hosting 
+- **Extend FragmentActivity** &ndash; The Activities that are hosting 
     Fragments must now inherit from 
     `Android.Support.V4.App.FragmentActivity` , and not from 
     `Android.App.Activity` . 
 
--   **Update Namespaces** &ndash; Classes that inherit from 
+- **Update Namespaces** &ndash; Classes that inherit from 
     `Android.App.Fragment` must now inherit from 
     `Android.Support.V4.App.Fragment` . Remove the using statement " 
     `using Android.App;` " at the top of the source code file and 
     replace it with " `using Android.Support.V4.App` ". 
 
--   **Use SupportFragmentManager** &ndash; 
+- **Use SupportFragmentManager** &ndash; 
     `Android.Support.V4.App.FragmentActivity` exposes a 
     `SupportingFragmentManager` property that must be used to get a 
     reference to the `FragmentManager` . For example: 
@@ -76,7 +75,6 @@ fragmentTx.Commit();
 With these changes in place, it will be possible to run a 
 Fragment-based application on Android 1.6 or 2.x as well as on 
 Honeycomb and Ice Cream Sandwich. 
-
 
 ## Related Links
 

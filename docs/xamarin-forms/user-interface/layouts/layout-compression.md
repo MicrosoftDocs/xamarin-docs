@@ -113,7 +113,6 @@ The sample application contains a page extracted from a real application. Withou
 
 Layout compression removes specified layouts from the visual tree in an attempt to improve page rendering performance. The performance benefit that this delivers varies depending on the complexity of a page, the version of the operating system being used, and the device on which the application is running. However, the biggest performance gains will be seen on older devices.
 
-
 ## Related Links
 
 - [Creating a Custom Layout](~/xamarin-forms/user-interface/layouts/custom.md)

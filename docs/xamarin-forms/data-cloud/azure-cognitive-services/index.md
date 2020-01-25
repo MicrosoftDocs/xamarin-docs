@@ -17,7 +17,7 @@ Microsoft Cognitive Services are a set of APIs, SDKs, and services available to 
 
 ## [Speech Recognition](speech-recognition.md)
 
-The Microsoft Speech API is a cloud-based API that provides algorithms to process spoken language. This article explains how to use the Microsoft Speech Recognition REST API to convert audio to text in a Xamarin.Forms application.
+Azure Speech Service is a cloud-based API that provides algorithms to process spoken language. This article explains how to use the Azure Speech Service to transcribe speech to text in a Xamarin.Forms application.
 
 ## [Spell Check](spell-check.md)
 
@@ -27,6 +27,6 @@ Bing Spell Check performs contextual spell checking for text, providing inline s
 
 The Microsoft Translator API can be used to translate speech and text through a REST API. This article explains how to use the Microsoft Translator Text API to translate text from one language to another in a Xamarin.Forms application.
 
-## [Emotion Recognition](emotion-recognition.md)
+## [Perceived Emotion Recognition](emotion-recognition.md)
 
 The Face API takes a facial expression in an image as an input, and returns data that includes confidence levels across a set of emotions for each face in the image. This article explains how to use the Face API to recognize emotion, to rate a Xamarin.Forms application.

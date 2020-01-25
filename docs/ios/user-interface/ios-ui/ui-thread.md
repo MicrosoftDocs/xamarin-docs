@@ -4,8 +4,8 @@ description: "This document describes how to work with the UI Thread in Xamarin.
 ms.prod: xamarin
 ms.assetid: 98762ACA-AD5A-4E1E-A536-7AF3BE36D77E
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -35,7 +35,6 @@ While debugging Xamarin.iOS applications, an error will be thrown if your code a
 
  <a name="Background_Thread_Example" />
 
-
 ## Background Thread Example
 
 Here is an example that attempts to access a user interface control (a `UILabel`) from a background thread using a simple thread:
@@ -59,7 +58,6 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 You won’t need to use this for the remainder of the examples in this document, but it is an important concept to remember when your app makes network requests, uses the notification center or other methods that require a completion-handler that will run on another thread.
 
  <a name="Async_Await_Example" />
-
 
 ## Async/Await Example
 
@@ -87,7 +85,6 @@ async partial void button2_TouchUpInside (UIButton sender)
 ```
 
 If an async method is called from a background thread (not the main UI thread) then `InvokeOnMainThread` would still be required.
-
 
 ## Related Links
 

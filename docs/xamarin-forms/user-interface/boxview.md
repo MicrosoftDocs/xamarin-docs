@@ -163,6 +163,7 @@ Finally, you can draw a vertical line on one side of a paragraph of text by encl
     </Label>
 </StackLayout>
 ```
+
 <a name="listingcolors" />
 
 ## Listing Colors with BoxView
@@ -589,6 +590,7 @@ public partial class MainPage : ContentPage
     }
 }
 ```
+
 <a name="analogclock" />
 
 ## Creating an Analog Clock
@@ -776,7 +778,6 @@ The second hand is treated a little differently: An animation easing function is
 ## Conclusion
 
 The `BoxView` might seem simple at first, but as you've seen, it can be quite versatile, and can almost reproduce visuals that are normally possible only with vector graphics. For more sophisticated graphics, consult [Using SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
-
 
 ## Related Links
 

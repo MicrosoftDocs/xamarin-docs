@@ -4,8 +4,8 @@ description: "This document describes how to build a user interface in a Xamarin
 ms.prod: xamarin
 ms.assetid: 2B3E45FA-C30F-D708-0E8F-3EE02BD1A867
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
 ---
 

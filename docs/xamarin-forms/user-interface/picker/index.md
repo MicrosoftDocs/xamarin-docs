@@ -24,6 +24,7 @@ The Xamarin.Forms [`Picker`](xref:Xamarin.Forms.Picker) displays a short list of
 - [`FontAttributes`](xref:Xamarin.Forms.Picker.FontAttributes) of type [`FontAttributes`](xref:Xamarin.Forms.FontAttributes), which defaults to [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None).
 - [`FontFamily`](xref:Xamarin.Forms.Picker.FontFamily) of type `string`, which defaults to `null`.
 - [`FontSize`](xref:Xamarin.Forms.Picker.FontSize) of type `double`, which defaults to -1.0.
+- `CharacterSpacing`, of type `double`, is the spacing between characters of the item displayed by the `Picker`.
 
 All of the properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be targets of data bindings. The [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) and [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) properties have a default binding mode of [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay), which means that they can be targets of data bindings in an application that uses the [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architecture. For information about setting font properties, see [Fonts](~/xamarin-forms/user-interface/text/fonts.md).
 

@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 62FAF21C-8090-4AF3-9D88-05A4CFCAFFDC
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/02/2018
 ---
 
@@ -22,7 +22,7 @@ customized on a per-project basis.
 ## New Android designer properties and corresponding Java options
 
 The following property names correspond to the indicated java
-[command-line option](http://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
+[command-line option](https://docs.oracle.com/javase/7/docs/technotes/tools/windows/java.html)
 
 - **AndroidDesignerJavaRendererMinMemory** -Xms
 
@@ -30,24 +30,23 @@ The following property names correspond to the indicated java
 
 - **AndroidDesignerJavaRendererPermSize** -XX:MaxPermSize
 
-
 # [Visual Studio](#tab/windows)
 
-1.  Open your solution in Visual Studio.
+1. Open your solution in Visual Studio.
 
-2.  Select each Android project one-by-one in the Solution Explorer and
+2. Select each Android project one-by-one in the Solution Explorer and
     click [Show All Files](https://docs.microsoft.com/previous-versions/visualstudio/visual-studio-2008/4afxey9h(v=vs.90))
     twice on each project. You can skip projects that do not contain
     any `.axml` layout files. This step will ensure that each project
     directory contains a `.csproj.user` file.
 
-3.  Quit Visual Studio.
+3. Quit Visual Studio.
 
-4.  Locate the `.csproj.user` file for each of the projects from step 2.
+4. Locate the `.csproj.user` file for each of the projects from step 2.
 
-5.  Edit each `.csproj.user` file in a text editor.
+5. Edit each `.csproj.user` file in a text editor.
 
-6.  Add any or all of the new Android designer memory properties within
+6. Add any or all of the new Android designer memory properties within
     a `<PropertyGroup>` element. You can use an existing
     `<PropertyGroup>` or create a new one. Here's a complete example
     `.csproj.user` file that includes all 3 attributes set to their
@@ -67,22 +66,22 @@ The following property names correspond to the indicated java
     </Project>
     ```
 
-7.  Save and close all of the updated `.csproj.user` files.
+7. Save and close all of the updated `.csproj.user` files.
 
-8.  Restart Visual Studio and reopen your solution.
+8. Restart Visual Studio and reopen your solution.
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  Open your solution in Visual Studio for Mac to ensure the solution
+1. Open your solution in Visual Studio for Mac to ensure the solution
     directory contains a `.userprefs` file.
 
-2.  Quit Visual Studio for Mac.
+2. Quit Visual Studio for Mac.
 
-3.  Locate the `.userprefs` file in the solution directory.
+3. Locate the `.userprefs` file in the solution directory.
 
-4.  Edit the `.userprefs` file in a text editor.
+4. Edit the `.userprefs` file in a text editor.
 
-5.  Locate the existing XML element with the following format. The last
+5. Locate the existing XML element with the following format. The last
     part of this element name will match the name of your project:
     "AndroidApplication1" in this example:
 
@@ -90,12 +89,12 @@ The following property names correspond to the indicated java
     <MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >
     ```
 
-6.  If the `<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >`
+6. If the `<MonoDevelop.Ide.ItemProperties.AndroidApplication1 ... >`
     element does not exist, create it anywhere within the enclosing
     `<Properties>` element. Be sure to replace "AndroidApplication1"
     with the name of your project.
 
-7.  Add any or all of the new Android designer memory properties as
+7. Add any or all of the new Android designer memory properties as
     attributes on the element. Here's a complete example `.userprefs`
     file that includes all 3 attributes set to their default values:
 
@@ -111,14 +110,13 @@ The following property names correspond to the indicated java
     </Properties>
     ```
 
-8.  Repeat steps 5-7 for each Android project in the solution that
+8. Repeat steps 5-7 for each Android project in the solution that
     contains any `.axml` layout files. (That is, add one
     `<MonoDevelop.Ide.ItemProperties.ProjectName>` element for each
     project.)
 
-9.  Save and close the `.userprefs` file.
+9. Save and close the `.userprefs` file.
 
 10. Restart Visual Studio for Mac and reopen your solution.
 
 -----
-

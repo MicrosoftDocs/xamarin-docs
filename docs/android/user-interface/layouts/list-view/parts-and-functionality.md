@@ -3,8 +3,8 @@ title: "ListView Parts and Functionality"
 ms.prod: xamarin
 ms.assetid: ABA40FED-FF68-C0B0-BC43-C748CEE585D8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2017
 ---
 
@@ -32,7 +32,6 @@ show how Fast Scrolling and Section Index are rendered:
 The elements that make up a `ListView` are described in
 more detail below:
 
-
 ## Rows
 
 Each row has its own `View`. The view can be either one of the built-in
@@ -41,13 +40,11 @@ use the same view layout or they can all be different. There are
 examples in this document of using built-in layouts and others
 explaining how to define custom layouts.
 
-
 ## Adapter
 
 The `ListView` control requires an `Adapter` to supply the formatted
 `View` for each row. Android has built-in Adapters and Views that can
 be used, or custom classes can be created.
-
 
 ## Fast Scrolling
 
@@ -56,14 +53,12 @@ enabled to help the user navigate to any part of the list. The
 fast-scrolling 'scroll bar' can be optionally enabled (and customized
 in API level 11 and higher).
 
-
 ## Section Index
 
 While scrolling through long lists, the optional section index provides
 the user with feedback on what part of the list they are currently
 viewing. It is only appropriate on long lists, typically in conjunction
 with fast scrolling.
-
 
 ## Classes Overview
 
@@ -95,4 +90,3 @@ The purpose of each class is described below:
 This document contains simple examples that use an `ArrayAdapter` as
 well as more complex examples that require custom implementations of
 `BaseAdapter` or `CursorAdapter`.
-

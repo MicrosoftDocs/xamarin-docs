@@ -4,8 +4,8 @@ description: "This section discusses how to use a Broadcast Receiver."
 ms.prod: xamarin
 ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/20/2018
 ---
 
@@ -57,7 +57,7 @@ public class SampleReceiver : BroadcastReceiver
 ```
 
 When Xamarin.Android compiles the class, it will also update the AndroidManifest with the necessary meta-data to register the receiver. For a statically-registered broadcast receiver, the `Enabled` properly must be set to `true`, otherwise Android will not be able to create an instance of the receiver.
- 
+
 The `Exported` property controls whether the broadcast receiver can receive messages from outside the application. If the property is not explicitly set, the default value of the property is determined by Android based on if there are any intent-filters associated with the broadcast receiver. If there is at least one intent-filter for the broadcast receiver then Android will assume that the `Exported` property is `true`. If there are no intent-filters associated with the broadcast receiver, then Android will assume that the value is `false`. 
 
 The `OnReceive` method receives a reference to the `Intent` that was dispatched to the broadcast receiver. This makes is possible for the sender of the intent to pass values to the broadcast receiver.
@@ -77,6 +77,9 @@ public class MyBootReceiver : BroadcastReceiver
     }
 }
 ```
+
+> [!NOTE]
+> In Android 8.0 (API 26 and above), [Google placed limitations](https://developer.android.com/about/versions/oreo/background) on what apps can do while users aren't directly interacting with them. These limitations affect background services and implicit broadcast receivers such as `Android.Content.Intent.ActionBootCompleted`. Because of these limitations, you might have difficulties registering a `Boot Completed` broadcast receiver on newer versions of Android. If this is the case, note that these restrictions do not apply to foreground services, which can be called from your broadcast receiver.
 
 It is also possible to create an intent filter that will respond to custom intents. Consider the following example: 
 
@@ -107,19 +110,19 @@ public class MainActivity: Activity
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        receiver = new MySampleBroadcastReceiver()
+        receiver = new MySampleBroadcastReceiver();
 
         // Code omitted for clarity
     }
 
-    protected override OnResume() 
+    protected override void OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
 
-    protected override OnPause() 
+    protected override void OnPause() 
     {
         UnregisterReceiver(receiver);
         // Code omitted for clarity

@@ -31,6 +31,9 @@ This article, and accompanying sample application, demonstrates uploading image 
 
 For more information about Azure Storage, see [Introduction to Storage](https://azure.microsoft.com/documentation/articles/storage-introduction/).
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 ## Introduction to Blob Storage
 
 Blob storage consists of three components, which are shown in the following diagram:

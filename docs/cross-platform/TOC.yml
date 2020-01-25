@@ -1,16 +1,14 @@
-- name: Cross-Platform
+- name: Cross-platform
   href: index.yml
   expanded: true
   items:
-    - name: Building Mobile Apps
+    - name: Build mobile apps
       href: get-started/index.md
       expanded: true
       items:
         - name: Requirements
           displayName: System requirements
           href: get-started/requirements.md
-        - name: What is Xamarin?
-          href: get-started/introduction-to-mobile-development.md
         - name: Mobile software development lifecycle
           href: get-started/introduction-to-mobile-sdlc.md
         - name: Walkthrough building a cross-platform app
@@ -18,62 +16,62 @@
           items:
             - name: Overview
               href: app-fundamentals/building-cross-platform-applications/overview.md
-            - name: Part 1 - Understanding the Xamarin Mobile Platform
+            - name: Part 1 - Understanding the Xamarin mobile platform
               href: app-fundamentals/building-cross-platform-applications/understanding-the-xamarin-mobile-platform.md
             - name: Part 2 - Architecture
               href: app-fundamentals/building-cross-platform-applications/architecture.md
-            - name: Part 3 - Setting Up A Xamarin Cross Platform Solution
+            - name: Part 3 - Setting up a Xamarin cross platform solution
               href: app-fundamentals/building-cross-platform-applications/setting-up-a-xamarin-cross-platform-solution.md
-            - name: Part 4 - Dealing with Multiple Platforms
+            - name: Part 4 - Dealing with multiple platforms
               href: app-fundamentals/building-cross-platform-applications/platform-divergence-abstraction-divergent-implementation.md
-            - name: Part 5 - Practical Code Sharing Strategies
+            - name: Part 5 - Practical code sharing strategies
               href: app-fundamentals/building-cross-platform-applications/practical-code-sharing-strategies.md
-            - name: Part 6 - Testing and App Store Approvals
+            - name: Part 6 - Testing and App Store approvals
               href: app-fundamentals/building-cross-platform-applications/testing-and-app-store-approvals.md
-            - name: "Case Study: Tasky"
+            - name: "Case study: Tasky"
               href: app-fundamentals/building-cross-platform-applications/case-study-tasky.md
-    - name: Sharing Code
+    - name: Sharing code
       href: app-fundamentals/index.md
       items:
         - name: Overview
           href: app-fundamentals/code-sharing.md
         - name: .NET Standard
           href: app-fundamentals/net-standard.md
-        - name: Shared Projects
+        - name: Shared projects
           href: app-fundamentals/shared-projects.md
         - name: Portable Class Libraries (PCL)
           href: app-fundamentals/pcl.md
-        - name: NuGet Multiplatform Library Projects
+        - name: NuGet multiplatform library projects
           displayName: Nugetizer 3000
           href: app-fundamentals/nuget-multiplatform-libraries/index.md
           items:
-            - name: Existing Library Projects
+            - name: Existing library projects
               href: app-fundamentals/nuget-multiplatform-libraries/existing-library.md
-            - name: New Multiplatform Library
+            - name: New multiplatform library
               href: app-fundamentals/nuget-multiplatform-libraries/single-codebase.md
-            - name: New Platform-Specific Libraries
+            - name: New platform-specific libraries
               href: app-fundamentals/nuget-multiplatform-libraries/platform-specific.md
-            - name: Metadata Guide
+            - name: Metadata guide
               href: app-fundamentals/nuget-multiplatform-libraries/metadata.md
-        - name: NuGet Packages (Manual)
+        - name: NuGet packages (manual)
           href: app-fundamentals/nuget-manual.md
-        - name: Use C/C++ Libraries in Cross-Platform Apps
+        - name: Use C/C++ libraries in cross-platform apps
           href: cpp/index.md
-    - name: Language Support
+    - name: Language support
       href: platform/index.md
       items:
         - name: C#
           items:
-            - name: Async Support Overview
+            - name: Async support overview
               href: platform/async.md
-            - name: C# 6 Language Features
+            - name: C# 6 language features
               href: platform/csharp-six.md
         - name: F#
           href: platform/fsharp/index.md
           items:
-            - name: Getting Started
+            - name: Get started
               href: platform/fsharp/overview.md
-            - name: F# Samples
+            - name: F# samples
               href: platform/fsharp/samples.md
         - name: Visual Basic
           href: platform/visual-basic/index.md
@@ -82,19 +80,21 @@
               href: platform/visual-basic/native-apps.md
             - name: Xamarin.Forms
               href: platform/visual-basic/xamarin-forms.md
-        - name: Razor HTML Templates
+        - name: Razor HTML templates
           href: platform/razor-html-templates/index.md
-    - name: Performance & Security
+    - name: Performance & security
       href: deploy-test/performance.md
       items:
         - name: Performance
           href: deploy-test/memory-perf-best-practices.md
           items:
-            - name: Android Performance
+            - name: Xamarin.Forms performance
+              href: ~/xamarin-forms/deploy-test/performance.md?context=xamarin/cross-platform
+            - name: Android performance
               href: ~/android/deploy-test/performance.md?context=xamarin/cross-platform
-            - name: iOS Performance
+            - name: iOS performance
               href: ~/ios/deploy-test/performance.md?context=xamarin/cross-platform
-            - name: Mac Performance
+            - name: Mac performance
               href: ~/mac/deploy-test/performance.md?context=xamarin/cross-platform
         - name: Transport Layer Security (TLS)
           href: app-fundamentals/transport-layer-security.md
@@ -103,19 +103,17 @@
               href: ~/android/app-fundamentals/http-stack.md?context=xamarin/cross-platform
             - name: iOS and Mac
               href: ~/cross-platform/macios/http-stack.md?context=xamarin/cross-platform
-    - name: Deployment & Debugging
+    - name: Deployment & debugging
       href: deploy-test/index.md
       items:
-        - name: Connect to Local Web Services
+        - name: Connect to local web services
           href: deploy-test/connect-to-local-web-services.md
-        - name: Custom Linker Configuration
+        - name: Custom linker configuration
           href: deploy-test/linker.md
-        - name: Installing NUnit 2.6.4 using NuGet
-          href: deploy-test/installing-nunit-using-nuget.md
-        - name: Multi Process Debugging
+        - name: Multi process debugging
           href: deploy-test/multi-process-debugging.md
-    - name: Desktop Developers
-      displayName: Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP Developers
+    - name: Desktop developers
+      displayName: Windows Forms (WinForms), Windows Presentation Foundation (WPF), and UWP developers
       href: desktop/index.md
       items:
         - name: App lifecycle comparison
@@ -132,7 +130,7 @@
     - name: Troubleshooting
       href: troubleshooting/index.md
       items:
-        - name: Frequently Asked Questions
+        - name: Frequently asked questions
           displayName: FAQ
           href: troubleshooting/questions/index.md
           items:
@@ -175,4 +173,4 @@
         - name: Updating Component References to NuGet
           href: troubleshooting/component-nuget.md
     - name: Samples
-      href: samples/index.yml
+      href: samples/index.md

@@ -839,7 +839,7 @@ public class ReflectionGradientPage : ContentPage
     const string TEXT = "Reflection";
 
     public ReflectionGradientPage ()
-	{
+    {
         Title = "Reflection Gradient";
 
         SKCanvasView canvasView = new SKCanvasView();

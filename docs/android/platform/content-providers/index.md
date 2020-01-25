@@ -4,15 +4,14 @@ description: "The Android operating system uses content providers to facilitate 
 ms.prod: xamarin
 ms.assetid: 6E1810AA-EB70-9AD0-1B32-D9418908CC97
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
 # Intro to ContentProviders
 
 _The Android operating system uses content providers to facilitate access to shared data such as media files, contacts and calendar information. This article introduces the ContentProvider class, and provides two examples of how to use it._
-
 
 ## Content Providers Overview
 
@@ -59,8 +58,6 @@ special uses like custom search and copy/paste).
 
 The topics in this section provide some simple examples of consuming
 and writing `ContentProvider` code.
-
-
 
 ## Related Links
 

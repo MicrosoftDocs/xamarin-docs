@@ -4,8 +4,8 @@ description: "How to use RelativeLayout in a Xamarin.Android application"
 ms.prod: xamarin
 ms.assetid: AFD9C849-02C3-E728-BC78-77A563612BC5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/29/2018
 ---
 
@@ -117,6 +117,6 @@ Run the application. You should see the following layout:
 - [`EditText`](xref:Android.Widget.EditText)
 - [`Button`](xref:Android.Widget.Button)
 
-*Portions of this page are modifications based on work created and shared by the
-Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+_Portions of this page are modifications based on work created and shared by the
+Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](https://creativecommons.org/licenses/by/2.5/)._

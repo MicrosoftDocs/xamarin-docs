@@ -45,7 +45,7 @@ The letters are commands that build an `SKPath` object: `M` indicates a `MoveTo`
 "M0-100L58.8 90.9-95.1-30.9 95.1-30.9-58.8 80.9Z"
 ```
 
-The syntax of SVG path data is formally documented in [Section 8.3 of the SVG specification](http://www.w3.org/TR/SVG11/paths.html#PathData). Here is a summary:
+The syntax of SVG path data is formally documented in [Section 8.3 of the SVG specification](https://www.w3.org/TR/SVG11/paths.html#PathData). Here is a summary:
 
 ## **MoveTo**
 
@@ -423,7 +423,6 @@ public class PrettyAnalogClockPage : ContentPage
 Something special is done with the second hand, however. Because the clock is updated every 16 milliseconds, the `Millisecond` property of the `DateTime` value can potentially be used to animate a sweep second hand instead of one that moves in discrete jumps from second to second. But this code does not allow the movement to be smooth. Instead, it uses the Xamarin.Forms [`SpringIn`](xref:Xamarin.Forms.Easing.SpringIn) and [`SpringOut`](xref:Xamarin.Forms.Easing.SpringOut) animation easing functions for a different kind of movement. These easing functions cause the second hand to move in a jerkier manner &mdash; pulling back a little before it moves, and then slightly over-shooting its destination, an effect that unfortunately can't be reproduced in these static screenshots:
 
 [![](path-data-images/prettyanalogclock-small.png "Triple screenshot of the Pretty Analog Clock page")](path-data-images/prettyanalogclock-large.png#lightbox "Triple screenshot of the Pretty Analog Clock page")
-
 
 ## Related Links
 

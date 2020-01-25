@@ -4,8 +4,8 @@ description: "This article describes how to configure Visual Studio 2019 for Xam
 ms.prod: xamarin
 ms.assetid: 22D82244-890D-4325-B3CC-C0AC49130BCA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/16/2018
 ---
 

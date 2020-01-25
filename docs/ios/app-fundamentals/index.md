@@ -4,8 +4,8 @@ description: "This document links to various guides that describe concepts found
 ms.prod: xamarin
 ms.assetid: 608403AE-B09F-4D9C-8F59-F9DE9F0B1CF1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/21/2017
 ---
 # Xamarin.iOS application fundamentals

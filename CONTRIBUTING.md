@@ -4,7 +4,7 @@ Thank you for your interest in contributing to the Xamarin documentation!
 
 This page covers the basic process for updating content in the [Xamarin documentation](https://docs.microsoft.com/xamarin).
 
-* [Contributor License Agreement](LICENSE)
+- [Contributor License Agreement](LICENSE)
 
 ## Process for contributing
 
@@ -24,10 +24,8 @@ To make corrections and small updates - you can click the **Edit** button on any
 
 6. The maintainers will merge your PR once feedback has been applied and your change looks good. It will appear on docs.microsoft.com soon after.
 
-
 > [!NOTE]
 > If your PR is addressing an existing issue, add the `Fixes #Issue_Number` keyword to the commit message or PR description, so the issue can be automatically closed when the PR is merged. For more information, see [Closing issues via commit messages](https://help.github.com/articles/closing-issues-via-commit-messages/).
-
 
 ### Big changes or new content
 
@@ -37,15 +35,17 @@ For large contributions and new content, [open an issue](https://github.com/Micr
 
 If it's a new topic, you can use the [template file](../contributing-guidelines/template.md) as your starting point. It contains the writing guidelines and also explains the metadata required for each article, such as author information.
 
-For images and other static resources, add them to the subfolder called **<mypage>-images**. If you are creating a new folder for content, add an images folder to the new folder.
+For images and other static resources, add them to the subfolder called **\<mypage>-images**. If you are creating a new folder for content, add an images folder to the new folder.
 
 #### Example structure
 
-    docs
-      /android
-          mypage.md
-          /mypage-images
-              some-image.png
+```
+docs
+    /android
+        mypage.md
+        /mypage-images
+            some-image.png
+```
 
 Be sure to follow the proper Markdown syntax. See the [style guide](../contributing-guidelines/template.md) for more information.
 
@@ -70,5 +70,3 @@ Below is a short list of guiding rules that you should keep in mind when you are
 
 > [!NOTE]
 > You might notice that some of the topics are not currently following all the guidelines specified here and on the [style guide](contributing-guidelines/template.md) as well. We're working towards achieving consistency throughout the site. 
-
-

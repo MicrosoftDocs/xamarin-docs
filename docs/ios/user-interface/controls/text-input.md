@@ -4,8 +4,8 @@ description: "This document describes text input in a Xamarin.iOS app. It discus
 ms.prod: xamarin
 ms.assetid: 03A7F1DC-017D-4501-91FD-82C78272CDB1
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -23,7 +23,6 @@ Once you have named the outlet and saved the Storyboard file, Visual Studio for 
 
  <a name="UITextField" />
 
-
 ## UITextField
 
 The `UITextField` control is most often used to accept a single line of text input such as a username or password. Some of the options available for customizing the control are shown here:
@@ -32,16 +31,15 @@ The `UITextField` control is most often used to accept a single line of text inp
 
 These controls are explained below:
 
--  **Placeholder** – This is optional. If set, it is displayed when the text field is empty, usually to explain to the user what input is expected.
--  **Clear Button** – This controls when the standard clear button (the grey circle with (X)) appears in the text field, as a way for the user to clear text quickly. It can be permanently hidden, permanently visible, or shown, depending on whether or not the field is being edited.
--  **Min Font Size** and  **Adjust to Fit** – Allows the font size to be adjusted automatically to fit longer text and prevent truncation, but limited to no smaller than the specified size.
--  **Capitalization** – Whether to automatically capitalize words, sentences or all input.
--  **Correction** – Whether spell checking and suggestions are enabled.
--  **Keyboard** – Controls the keyboard style displayed for the input, and therefore what keys are available on the keyboard. This includes Number Pad, Phone Pad, Email, URL along with other options.
--  **Appearance** – Controls the appearance style of the keyboard and will be either dark or light themed.
--  **Return Key** – Change the label on the Return key to better reflect what action will be taken. Supported values include Go, Join, Next, Route, Done, and Search.
--  **Secure** – Identifies whether the input is masked (such as for a Password input).
-
+- **Placeholder** – This is optional. If set, it is displayed when the text field is empty, usually to explain to the user what input is expected.
+- **Clear Button** – This controls when the standard clear button (the grey circle with (X)) appears in the text field, as a way for the user to clear text quickly. It can be permanently hidden, permanently visible, or shown, depending on whether or not the field is being edited.
+- **Min Font Size** and  **Adjust to Fit** – Allows the font size to be adjusted automatically to fit longer text and prevent truncation, but limited to no smaller than the specified size.
+- **Capitalization** – Whether to automatically capitalize words, sentences or all input.
+- **Correction** – Whether spell checking and suggestions are enabled.
+- **Keyboard** – Controls the keyboard style displayed for the input, and therefore what keys are available on the keyboard. This includes Number Pad, Phone Pad, Email, URL along with other options.
+- **Appearance** – Controls the appearance style of the keyboard and will be either dark or light themed.
+- **Return Key** – Change the label on the Return key to better reflect what action will be taken. Supported values include Go, Join, Next, Route, Done, and Search.
+- **Secure** – Identifies whether the input is masked (such as for a Password input).
 
 If a UITextField called `textfield1` has been added to a screen with the designer, you can set or change its properties in C# as follows:
 
@@ -67,7 +65,6 @@ View.Add(textfield1);
 
  <a name="UITextView" />
 
-
 ## UITextView
 
 The `UITextView` control can be used to display read-only text or to accept multiple-line text input. It has many of the same options as the `UITextField` (such as Capitalization, Correction, etc).
@@ -76,9 +73,8 @@ The `UITextView` control can be used to display read-only text or to accept mult
 
 Specific properties include:
 
--  **Behavior** – Whether the text is editable or read-only.
--  **Detection** – Detects and converts the inputted data into clickable elements such as phone numbers that can trigger a call, addresses that become links to Maps, URLs that open in Safari or dates and times that become events in Calendar.
-
+- **Behavior** – Whether the text is editable or read-only.
+- **Detection** – Detects and converts the inputted data into clickable elements such as phone numbers that can trigger a call, addresses that become links to Maps, URLs that open in Safari or dates and times that become events in Calendar.
 
 If a UITextView has been added to a screen with the designer, you can set or change its properties like this:
 
@@ -87,8 +83,6 @@ textview1.Text = "Lorem ipsum..."; // lots of text can go here
 textview1.Editable = true;
 textview1.DataDetectorTypes = UIDataDetectorType.PhoneNumber | UIDataDetectorType.Link;
 ```
-
-
 
 ## Related Links
 

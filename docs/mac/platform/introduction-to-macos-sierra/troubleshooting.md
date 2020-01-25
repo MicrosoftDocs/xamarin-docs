@@ -4,8 +4,8 @@ description: "This document provides several troubleshooting tips for working wi
 ms.prod: xamarin
 ms.assetid: 323DD5EE-87CE-48E4-B234-1CF61B45A019
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/22/2016
 ---
 

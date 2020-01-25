@@ -3,8 +3,8 @@ title: "Part 6 - Testing and App Store Approvals"
 description: "This document describes how to test a cross-platform application on-device, manage test cases, automate tests, run unit tests, and work through the app submission process."
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -41,8 +41,7 @@ this problem a number of services offer the ability to remotely control many
 different devices so that applications can be installed and tested without
 needing to directly invest in lots of hardware.
 
-[App Center Test](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) offers an easy way
-to test iOS and Android applications on hundreds of different devices.
+App Center Test offers an easy way to test iOS and Android applications on hundreds of different devices. For more information, see [Preparing Xamarin.Android Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) and [Preparing Xamarin.iOS apps](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ### Test Management
 
@@ -51,7 +50,6 @@ with external users, there are two challenges:
 
 - **Distribution** – Managing the provisioning process (especially for iOS devices) and getting updated versions of software to the testers.
 - **Feedback** – Collecting information about application usage, and detailed information on any errors that may occur.
-
 
 There are a number of services help to address these issues, by providing
 infrastructure that is built into your application to collect and report on
@@ -82,7 +80,7 @@ running Touch.Unit.
 
 There is an open-source equivalent of Touch.Unit for Android called
 Andr.Unit. You can download it from [github](https://github.com/spouliot/Andr.Unit) and read
-about the tool on [@spouliot's blog](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
+about the tool on [@spouliot's blog](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
 ## App Store Approvals
 
@@ -174,7 +172,7 @@ might have been missed:
 Apple is famous for being strict about adherence to their Human Interface
 Guidelines as one of the key strengths of their platform is consistency (and the
 perceived increase in usability). Microsoft has taken a similar approach with
-Windows applications implementing the Metro-style UI. The approval process
+Windows applications implementing the [Fluent Design System](https://microsoft.com/design/fluent). The approval process
 for both platforms will involve your app being evaluated for its adherence to
 the relevant design philosophy.
 

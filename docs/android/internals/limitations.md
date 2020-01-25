@@ -3,8 +3,8 @@ title: "Xamarin.Android vs. Desktop - Differences in the Mono Runtime"
 ms.prod: xamarin
 ms.assetid: F953F9B4-3596-8B3A-A8E4-8219B5B9F7CA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 
@@ -80,13 +80,11 @@ class MyIntentService : IntentService {
 }
 ```
 
-
 ### Generic C# classes
 
 Generic C# classes are only partially supported. The following limitations exist:
 
-
--   Generic types may not use `[Export]` or `[ExportField`]. Attempting
+- Generic types may not use `[Export]` or `[ExportField`]. Attempting
     to do so will generate an `XA4207` error.
 
     ```csharp
@@ -100,7 +98,7 @@ Generic C# classes are only partially supported. The following limitations exist
     }
     ```
 
--   Generic methods may not use `[Export]` or `[ExportField]`:
+- Generic methods may not use `[Export]` or `[ExportField]`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -115,7 +113,7 @@ Generic C# classes are only partially supported. The following limitations exist
     }
     ```
 
--   `[ExportField]` may not be used on methods which return `void`:
+- `[ExportField]` may not be used on methods which return `void`:
 
     ```csharp
     public class Example : Java.Lang.Object
@@ -128,7 +126,7 @@ Generic C# classes are only partially supported. The following limitations exist
     }
     ```
 
--   Instances of Generic types _must not_ be created from Java code.
+- Instances of Generic types _must not_ be created from Java code.
     They can only safely be created from managed code:
 
     ```csharp

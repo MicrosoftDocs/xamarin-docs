@@ -2,8 +2,8 @@
   href: index.yml
   expanded: true
   items:
-    - name: Requirements
-      href: requirements.md
+    - name: What is Xamarin
+      href: what-is-xamarin.md
     - name: Installation
       href: installation/index.md
       items:
@@ -12,19 +12,23 @@
           items:
             - name: Installing Xamarin Previews (Windows)
               href: installation/windows-preview.md
+            - name: Uninstalling Xamarin from Visual Studio
+              href: installation/uninstalling-xamarin.md
         - name: Installing Visual Studio for Mac
           href: /visualstudio/mac/installation/
           items:
             - name: Installing Xamarin Previews (Mac)
               href: /visualstudio/mac/update/
+            - name: Uninstalling Visual Studio for Mac
+              href: /visualstudio/mac/uninstall
         - name: Xamarin Firewall Configuration Instructions
           href: installation/firewall.md
-        - name: Uninstalling Xamarin
-          href: installation/uninstalling-xamarin.md
+    - name: Supported platforms
+      href: supported-platforms.md
     - name: First App
       href: first-app/index.md
     - name: Quickstarts
-      href: quickstarts/index.yml
+      href: quickstarts/index.md
       expanded: true
       items:
         - name: File > New
@@ -68,16 +72,10 @@
     - name: Learn about Xamarin
       expanded: true
       items:
-        - name: Native apps
-          href: ~/cross-platform/get-started/introduction-to-mobile-development.md
         - name: .NET developers
-          href: ~/cross-platform/desktop/index.md
-        - name: ASP.NET developers
           href: ~/cross-platform/desktop/index.md
         - name: Java developers
           href: ~/android/get-started/java-developers.md
-        - name: Swift developers
-          href: ~/ios/get-started/objective-c-developers/index.md
         - name: Objective-C developers
           href: ~/ios/get-started/objective-c-developers/index.md
         - name: Azure

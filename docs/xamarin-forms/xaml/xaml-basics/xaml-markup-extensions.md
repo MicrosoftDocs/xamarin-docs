@@ -296,7 +296,7 @@ Here’s the final complete XAML file with three buttons accessing six shared va
 
 The screenshots verify the consistent styling, and the platform-dependent styling:
 
-[![](xaml-markup-extensions-images/sharedresources.png "Styled Controls")](xaml-markup-extensions-images/sharedresources-large.png#lightbox "Styled Controls")
+[![Styled Controls](xaml-markup-extensions-images/sharedresources.png)](xaml-markup-extensions-images/sharedresources-large.png#lightbox)
 
 Although it is most common to define the `Resources` collection at the top of the page, keep in mind that the `Resources` property is defined by `VisualElement`, and you can have `Resources` collections on other elements on the page. For example, try adding one to the `StackLayout` in this example:
 
@@ -434,16 +434,17 @@ Both these namespace declarations are included in the **StaticConstantsPage** sa
 
 The size of the resultant `BoxView` relative to the screen is platform-dependent:
 
- [![](xaml-markup-extensions-images/staticconstants.png "Controls using x:Static Markup Extension")](xaml-markup-extensions-images/staticconstants-large.png#lightbox "Controls using x:Static Markup Extension")
+[![Controls using x:Static Markup Extension](xaml-markup-extensions-images/staticconstants.png)](xaml-markup-extensions-images/staticconstants-large.png#lightbox)
 
 ## Other Standard Markup Extensions
 
 Several markup extensions are intrinsic to XAML and supported in Xamarin.Forms XAML files. Some of these are not used very often but are essential when you need them:
 
--  If a property has a non- `null` value by default but you want to set it to  `null`, set it to the `{x:Null}` markup extension.
--  If a property is of type `Type`, you can assign it to a  `Type` object using the markup extension `{x:Type someClass}`.
--  You can define arrays in XAML using the  `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
+- If a property has a non- `null` value by default but you want to set it to  `null`, set it to the `{x:Null}` markup extension.
+- If a property is of type `Type`, you can assign it to a  `Type` object using the markup extension `{x:Type someClass}`.
+- You can define arrays in XAML using the `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
 - The `Binding` markup extension is discussed in [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+- The `RelativeSource` markup extension is discussed in [Relative Bindings](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 ## The ConstraintExpression Markup Extension
 
@@ -550,13 +551,11 @@ Perhaps the most important lesson you should take from this sample is the syntax
 
 Here’s the program running:
 
-[![](xaml-markup-extensions-images/relativelayout.png "Relative Layout using Constraints")](xaml-markup-extensions-images/relativelayout-large.png#lightbox "Relative Layout using Constraints")
+[![Relative Layout using Constraints](xaml-markup-extensions-images/relativelayout.png)](xaml-markup-extensions-images/relativelayout-large.png#lightbox)
 
 ## Summary
 
 The XAML markup extensions shown here provide important support for XAML files. But perhaps the most valuable XAML markup extension is `Binding`, which is covered in the next part of this series, [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-
 
 ## Related Links
 

@@ -3,8 +3,8 @@ title: "Overview of Objective-C Bindings"
 description: "This document provides an overview of different ways to create C# bindings for Objective-C code, including command-line bindings, binding projects, and Objective Sharpie. It also discusses how binding works."
 ms.prod: xamarin
 ms.assetid: 9EE288C5-8952-C5A9-E542-0BD847300EC6
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
 ---
 
@@ -48,7 +48,6 @@ works by passing the C# API definitions that you've created by hand
 (or using Objective Sharpie) to the command line tool (`btouch-native` for
 iOS or `bmac-native` for Mac).
 
-
 The general syntax for invoking these tools is:
 
 ```csharp
@@ -65,7 +64,6 @@ The above command will generate the file `cocos2d.dll` in the current
 directory, and it will contain the fully bound library that you can use in your
 project. This is the tool that Visual Studio for Mac uses to create your bindings if you use a
 binding project (described [below](#bindingproject)).
-
 
 <a name="bindingproject" />
 
@@ -101,7 +99,7 @@ It is possible to use the [[Register]](xref:Foundation.RegisterAttribute) attrib
 together to manually bind new (previously unbound) Objective-C types.
 
 First, find a type that you wish to bind. For discussion purposes (and
-simplicity), we'll bind the [NSEnumerator](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSEnumerator_Class/Reference/Reference.html) type (which has already been bound in [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); the implementation below
+simplicity), we'll bind the [NSEnumerator](https://developer.apple.com/documentation/foundation/nsenumerator) type (which has already been bound in [Foundation.NSEnumerator](xref:Foundation.NSEnumerator); the implementation below
 is just for example purposes).
 
 Second, we need to create the C# type. We'll likely want to place this into a

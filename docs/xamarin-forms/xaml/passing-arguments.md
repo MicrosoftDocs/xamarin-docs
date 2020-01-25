@@ -86,7 +86,7 @@ The number of elements within the `x:Arguments` tag, and the types of these elem
 
 The following screenshots show the result of calling each [`Color`](xref:Xamarin.Forms.Color) constructor with the specified argument values:
 
-![](passing-arguments-images/passing-arguments.png "BoxView.Color specified with x:Arguments")
+![BoxView.Color specified with x:Arguments](passing-arguments-images/passing-arguments.png)
 
 <a name="factory_methods" />
 
@@ -136,7 +136,7 @@ The number of elements within the `x:Arguments` tag, and the types of these elem
 
 The following screenshots show the result of calling each [`Color`](xref:Xamarin.Forms.Color) factory method with the specified argument values:
 
-![](passing-arguments-images/factory-methods.png "BoxView.Color specified with x:FactoryMethod and x:Arguments")
+![BoxView.Color specified with x:FactoryMethod and x:Arguments](passing-arguments-images/factory-methods.png)
 
 <a name="generic_type_arguments" />
 
@@ -163,7 +163,6 @@ The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class and
 ## Summary
 
 This article demonstrated using the XAML attributes that can be used to pass arguments to non-default constructors, to call factory methods, and to specify the type of a generic argument.
-
 
 ## Related Links
 

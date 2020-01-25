@@ -6,12 +6,12 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/23/2019
+ms.date: 11/05/2019
 ---
 
 # Xamarin.Forms Shell Flyout
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 The flyout is the root menu for a Shell application, and is accessible through an icon or by swiping from the side of the screen. The flyout consists of an optional header, flyout items, and optional menu items:
 
@@ -126,6 +126,32 @@ The following example shows how to collapse the flyout header as the user scroll
 </Shell>
 ```
 
+## Flyout background image
+
+The flyout can have an optional background image, which appears beneath the flyout header and behind any flyout items and menu items. The background image can be specified by setting the `FlyoutBackgroundImage` bindable property, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), to a file, embedded resource, URI, or stream.
+
+The aspect ratio of the background image can be configured by setting the `FlyoutBackgroundImageAspect` bindable property, of type [`Aspect`](xref:Xamarin.Forms.Aspect), to one of the `Aspect` enumeration members:
+
+- [`AspectFill`](xref:Xamarin.Forms.Aspect.AspectFill) - clips the image so that it fills the display area while preserving the aspect ratio.
+- [`AspectFit`](xref:Xamarin.Forms.Aspect.AspectFit) - letterboxes the image, if required, so that the image fits into the display area, with blank space added to the top/bottom or sides depending on whether the image is wide or tall.
+- [`Fill`](xref:Xamarin.Forms.Aspect.Fill) - stretches the image to completely and exactly fill the display area. This may result in image distortion.
+
+By default, the `FlyoutBackgroundImageAspect` property will be set to `AspectFit`.
+
+The following example shows setting these properties:
+
+```xaml
+<Shell ...
+       FlyoutBackgroundImage="photo.jpg"
+       FlyoutBackgroundImageAspect="AspectFill">
+    ...
+</Shell>
+```
+
+This results in a background image appearing in the flyout:
+
+![Screenshot of a flyout background image](flyout-images/flyout-backgroundimage.png "Flyout background image")
+
 ## Flyout items
 
 When the navigation pattern for an application includes a flyout, the subclassed `Shell` object must contain one or more `FlyoutItem` objects, with each `FlyoutItem` object representing an item on the flyout. Each `FlyoutItem` object should be a child of the `Shell` object.
@@ -216,6 +242,23 @@ In addition, the `FlyoutItem` class exposes the following overridable methods:
 - `TabIndexDefaultValueCreator`, returns an `int`, and is called to set the default value of the `TabIndex` property.
 - `TabStopDefaultValueCreator`, returns a `bool`, and is called to set the default value of the `TabStop` property.
 
+## Flyout vertical scroll
+
+By default, a flyout can be scrolled vertically when the flyout items don't fit in the flyout. This behavior can be changed by setting the `Shell.FlyoutVerticalScrollMode` bindable property to one of the `ScrollMode` enumeration members:
+
+- `Disabled` – indicates that vertical scrolling will be disabled.
+- `Enabled` – indicates that vertical scrolling will be enabled.
+- `Auto` – indicates that vertical scrolling will be enabled if the flyout items don't fit in the flyout. This is the default value of the `Shell.FlyoutVerticalScrollMode` property.
+
+The following example shows how to disable vertical scrolling:
+
+```xaml
+<Shell ...
+       FlyoutVerticalScrollMode="Disabled"
+    ...
+</Shell>
+```
+
 ## Flyout display options
 
 The `FlyoutDisplayOptions` enumeration defines the following members:
@@ -302,8 +345,71 @@ This example displays the title of each `FlyoutItem` object in italics:
 
 [![Screenshot of templated FlyoutItem objects, on iOS and Android](flyout-images/flyoutitem-templated.png "Shell templated FlyoutItem objects")](flyout-images/flyoutitem-templated-large.png#lightbox "Shell templated FlyoutItem objects")
 
+
+Because `Shell.ItemTemplate` is an attached property, different templates can be attached to specific `FlyoutItem` objects.
+
 > [!NOTE]
 > Shell provides the `Title` and `FlyoutIcon` properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `ItemTemplate`.
+
+
+### Default Template for FlyoutItems and MenuItems
+Shell uses the following template internally for its default implementation. This is a great starting point if all you want to do is make small tweaks to the existing layouts. This also demonstrates the Visual State Manager features of the flyout items. This same template can also be used for MenuItems
+
+```xaml
+<DataTemplate x:Key="FlyoutTemplates">
+    <Grid HeightRequest="{x:OnPlatform Android=50}">
+        <VisualStateManager.VisualStateGroups>
+            <VisualStateGroupList>
+                <VisualStateGroup x:Name="CommonStates">
+                    <VisualState x:Name="Normal">
+                    </VisualState>
+                    <VisualState x:Name="Selected">
+                        <VisualState.Setters>
+                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                        </VisualState.Setters>
+                    </VisualState>
+                </VisualStateGroup>
+            </VisualStateGroupList>
+        </VisualStateManager.VisualStateGroups>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
+            <ColumnDefinition Width="*"></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Image Source="{Binding FlyoutIcon}"
+            VerticalOptions="Center"
+            HorizontalOptions="Center"
+            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
+            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        </Image>
+        <Label VerticalOptions="Center"
+                Text="{Binding Title}"
+                FontSize="{x:OnPlatform Android=14, iOS=Small}"
+                FontAttributes="Bold" Grid.Column="1">
+            <Label.TextColor>
+                <OnPlatform x:TypeArguments="Color">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="#D2000000" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.TextColor>
+            <Label.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="20, 0, 0, 0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.Margin>
+            <Label.FontFamily>
+                <OnPlatform x:TypeArguments="x:String">
+                    <OnPlatform.Platforms>
+                        <On Platform="Android" Value="sans-serif-medium" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Label.FontFamily>
+        </Label>
+    </Grid>
+</DataTemplate>
+```
 
 ## FlyoutItem tab order
 
@@ -418,7 +524,7 @@ This example attaches the Shell-level `MenuItemTemplate` to each `MenuItem` obje
 [![Screenshot of templated MenuItem objects, on iOS and Android](flyout-images/menuitem-templated.png "Shell templated MenuItem objects")](flyout-images/menuitem-templated-large.png#lightbox "Shell templated MenuItem objects")
 
 > [!NOTE]
-> Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`.`
+> Shell provides the [`Text`](xref:Xamarin.Forms.MenuItem.Text) and [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `MenuItemTemplate`. You can also use `Title` in place of `Text` and `Icon` in place of `IconImageSource` which will let you reuse the same template for Menu Items and Flyout Items
 
 Because `Shell.MenuItemTemplate` is an attached property, different templates can be attached to specific `MenuItem` objects:
 
@@ -458,8 +564,12 @@ Because `Shell.MenuItemTemplate` is an attached property, different templates ca
 </Shell>
 ```
 
+
+> [!NOTE]
+> The same template used for [Flyout Items](#default-template-for-flyoutitems-and-menuitems) can also be used for Menu Items.
+
 This example attaches the Shell-level `MenuItemTemplate` to the first `MenuItem` object, and attaches the inline `MenuItemTemplate` to the second `MenuItem`.
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

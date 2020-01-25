@@ -4,8 +4,8 @@ description: "This document describes accessibility in iOS, discussing various p
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/18/2016
 ---
 
@@ -86,7 +86,6 @@ UIAccessibility.PostNotification (
     someControl);  // someControl gets focus
 ```
 
-
 ## Accessibility and Localization
 
 Accessibility properties like the label and hint can be
@@ -146,7 +145,6 @@ other configuration options.
 Follow these [VoiceOver instructions](https://developer.apple.com/library/ios/technotes/TestingAccessibilityOfiOSApps/TestAccessibilityonYourDevicewithVoiceOver/TestAccessibilityonYourDevicewithVoiceOver.html)
 to test accessibility on iOS devices.
 
-
 ## Simulator Testing
 
 When testing in the simulator, the **Accessibility Inspector**
@@ -167,10 +165,8 @@ While the inspector is visible, use the "X" icon at the top-left
 to temporarily show and hide the overlay and enable/disable
 accessibility settings.
 
-
-
 ## Related Links
 
 - [Cross-platform Accessibility](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS Accessibility (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)
+- [iOS VoiceOver](https://www.apple.com/accessibility/ios/voiceover/)

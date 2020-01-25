@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 417D84FB-1BA9-4DB9-A683-66E960BA3D0D
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 04/03/2018
 ---
 
@@ -34,4 +34,3 @@ But it's worth noting that you don't need a `.xcarchive` to submit to the App St
 In fact, you can even just zip up the `.app` bundle (that's signed with an App Store Distribution Profile), and submit that `.zip` file to the app store.
 
 In either case, you can use the Application Loader app to submit the app (rather than Xcode).
-

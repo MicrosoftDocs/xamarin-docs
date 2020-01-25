@@ -3,8 +3,8 @@ title: "Working with Screen Sizes in Xamarin.Android and Wear OS"
 ms.prod: xamarin
 ms.assetid: 77831169-C663-4D42-B742-B8B556B1DA4B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 
@@ -51,7 +51,6 @@ selected at run-time:
 
 ![Files shown under Resources/layout](screen-sizes-images/solution.png)
 
-
 ### BoxInsetLayout
 
 Rather than build different layouts for each screen type, you can also
@@ -61,7 +60,6 @@ This
 [Google example](https://developer.android.com/training/wearables/ui/layouts.html#same-layout)
 shows how to use the `BoxInsetLayout` to use the same layout on both
 rectangular and round screens.
-
 
 ## Wear UI Designer
 
@@ -77,7 +75,6 @@ The design surface in rectangular style is shown here:
 The design surface in round style is shown here:
 
 ![Design surface in round style](screen-sizes-images/design-round.png)
-
 
 ## Wear Simulator
 
@@ -99,4 +96,3 @@ It will render like this for a round screen:
 
 [Fullscreen apps for Android Wear](https://www.youtube.com/watch?v=naf_WbtFAlY) from
 [developers.google.com](https://www.youtube.com/channel/UC_x5XG1OV2P6uZZ5FSM9Ttw).
-

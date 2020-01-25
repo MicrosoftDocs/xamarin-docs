@@ -4,8 +4,8 @@ description: "How to obtain a Google Maps API key for adding maps functionality 
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
 ---
 
@@ -19,10 +19,9 @@ Maps Android API key v1 will not work.
 
 Obtaining a Maps API v2 key involves the following steps:
 
-1.  Retrieve the SHA-1 fingerprint of the keystore that is used to sign the application.
-2.  Create a project in the Google APIs console.
-3.  Obtaining the API key.
-
+1. Retrieve the SHA-1 fingerprint of the keystore that is used to sign the application.
+2. Create a project in the Google APIs console.
+3. Obtaining the API key.
 
 ## Obtaining your Signing Key Fingerprint
 
@@ -31,6 +30,8 @@ SHA-1 fingerprint of the keystore that is used to sign the application.
 Typically, this means you will have to determine the SHA-1 fingerprint
 for the debug keystore, and then the SHA-1 fingerprint for the keystore
 that is used to sign your application for release.
+
+<!-- markdownlint-disable MD001 -->
 
 # [Visual Studio](#tab/windows)
 
@@ -43,7 +44,7 @@ Information about a keystore is obtained by running the `keytool`
 command from the JDK. This tool is typically found in the Java bin
 directory:
 
-**C:\\Program Files (x86)\\Java\\jdk[VERSION]\\bin\\keytool.exe**
+**C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_[VERSION]\\bin\\keytool.exe**
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -59,7 +60,6 @@ directory:
 **/System/Library/Java/JavaVirtualMachines/[VERSION].jdk/Contents/Home/bin/keytool**
 
 -----
-
 
 Run keytool using the following command (using the file paths shown
 above):
@@ -86,7 +86,6 @@ keytool -list -v -keystore /Users/[USERNAME]/.local/share/Xamarin/Mono\ for\ And
 ```
 
 -----
-
 
 ### Production Keys
 
@@ -213,4 +212,4 @@ Finally, add this API key to the **AndroidManifest.XML** file of your Xamarin.An
 
 - [Google APIs Console](https://code.google.com/apis/console/)
 - [The Google Maps API Key](https://developers.google.com/maps/documentation/android/start#the_google_maps_api_key)
-- [keytool](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html.)
+- [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html.)

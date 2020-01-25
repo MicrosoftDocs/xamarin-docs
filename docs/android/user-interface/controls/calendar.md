@@ -3,13 +3,12 @@ title: "Xamarin.Android Calendar"
 ms.prod: xamarin
 ms.assetid: 78666541-CA14-4CD8-A94A-A9621C57813E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
 # Xamarin.Android Calendar
-
 
 ## Calendar API
 
@@ -21,7 +20,6 @@ attendees, and reminders. By using the calendar provider in your
 application, data you add through the API will appear in the built-in
 calendar app that comes with Android 4.
 
-
 ## Adding Permissions
 
 When working with the new calendar APIs in your application, the first
@@ -31,10 +29,9 @@ manifest. The permissions you need to add are
 `android.permission.WRITE_CALENDAR`, depending on whether you are
 reading and/or writing calendar data.
 
-
 ## Using the Calendar Contract
 
-Once you set the permissions, you can interact with calendar data 
+Once you set the permissions, you can interact with calendar data
 by using the `CalendarContract` class. This class provides a data model
 that applications can use when they interact with the calendar
 provider. The `CalendarContract` allows applications to resolve the
@@ -45,7 +42,6 @@ a calendar's name and ID, or an event's start and end date.
 Let's look at an example that uses the Calendar API. In this example,
 we'll examine how to enumerate calendars and their events, as well as
 how to add a new event to a calendar.
-
 
 ## Listing Calendars
 
@@ -161,8 +157,6 @@ Here's a screenshot showing the end result, with the calendar info
 displayed in the `ListView`:
 
 [![CalendarDemo running in emulator, displaying two calendar entries](calendar-images/11-calendar.png)](calendar-images/11-calendar.png#lightbox)
-
-
 
 ## Listing Calendar Events
 
@@ -280,8 +274,6 @@ This displays a list of events as shown below:
 
 [![Screenshot of example app displaying three calendar events](calendar-images/12-events.png)](calendar-images/12-events.png#lightbox)
 
-
-
 ## Adding a Calendar Event
 
 We've seen how to read calendar data. Now let's see how to add an
@@ -289,11 +281,10 @@ event to a calendar. For this to work, be sure to include the
 `android.permission.WRITE_CALENDAR` permission we mentioned earlier. To
 add an event to a calendar, we will:
 
-1.  Create a  `ContentValues` instance.
-1.  Use keys from the  `CalendarContract.Events.InterfaceConsts` class to populate the  `ContentValues` instance.
-1.  Set the time zones for the event start and end times.
-1.  Use a  `ContentResolver` to insert the event data into the calendar.
-
+1. Create a  `ContentValues` instance.
+1. Use keys from the  `CalendarContract.Events.InterfaceConsts` class to populate the  `ContentValues` instance.
+1. Set the time zones for the event start and end times.
+1. Use a  `ContentResolver` to insert the event data into the calendar.
 
 The code below illustrates these steps:
 
@@ -356,9 +347,6 @@ As you can see, Android allows powerful and easy access to retrieve and
 persist calendar data, allowing applications to seamlessly integrate
 calendar capabilities.
 
-
 ## Related Links
 
 - [Calendar Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

@@ -3,8 +3,8 @@ title: "Xamarin.Android Spinner"
 ms.prod: xamarin
 ms.assetid: 004089E9-7C1D-2285-765A-B69143091F2A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -258,4 +258,4 @@ Run the application; the toast should look like this:
 
 *Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+[*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/).

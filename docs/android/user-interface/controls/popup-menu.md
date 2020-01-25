@@ -4,8 +4,8 @@ description: "How to add a popup menu that is anchored to a particular view."
 ms.prod: xamarin
 ms.assetid: 1C58E12B-4634-4691-BF59-D5A3F6B0E6F7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/31/2018
 ---
 
@@ -18,7 +18,6 @@ button. When the user taps the button, a three-item popup menu is
 displayed:
 
 [![Example of an app with a button and three-item pop-up menu](popup-menu-images/01-app-example-sml.png)](popup-menu-images/01-app-example.png#lightbox)
-
 
 ## Creating a Popup Menu
 
@@ -71,7 +70,6 @@ showPopupMenu.Click += (s, arg) => {
 };
 ```
 
-
 ## Handling Menu Events
 
 When the user selects a menu item, the
@@ -98,8 +96,6 @@ showPopupMenu.Click += (s, arg) => {
     menu.Show ();
 };
 ```
-
-
 
 ## Related Links
 

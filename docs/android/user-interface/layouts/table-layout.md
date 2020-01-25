@@ -3,8 +3,8 @@ title: "Xamarin.Android TableLayout"
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -135,16 +135,12 @@ Run the application. You should see the following:
 
 [![Example screenshot of TableLayout app displaying multiple table rows](table-layout-images/helloviews3.png)](table-layout-images/helloviews3.png#lightbox)
 
-
-
 ## References
 
--   [`TableLayout`](xref:Android.Widget.TableLayout) 
+- [`TableLayout`](xref:Android.Widget.TableLayout)
+- [`TableRow`](xref:Android.Widget.TableRow)
+- [`TextView`](xref:Android.Widget.TextView)
 
--   [`TableRow`](xref:Android.Widget.TableRow) 
-
--   [`TextView`](xref:Android.Widget.TextView) 
-
-*Portions of this page are modifications based on work created and shared by the
-Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+_Portions of this page are modifications based on work created and shared by the
+Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](https://creativecommons.org/licenses/by/2.5/)._

@@ -4,13 +4,11 @@ description: "This section contains troubleshooting tips for Xamarin functionali
 ms.prod: xamarin
 ms.assetid: 00DE8C33-1407-45C0-A0C7-32AF1E490034
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/12/2019
 ---
 # Troubleshooting tips for iOS 13 and Xamarin.iOS
-
-![Preview feature](~/media/shared/preview.png)
 
 ## Updating to Xcode 11 stops the simulator from launching
 
@@ -26,6 +24,7 @@ Until there is a [fix](https://github.com/xamarin/xamarin-macios/issues/6216), t
 
 > [!NOTE]
 > These steps assume you have two Xcode applications:
+>
 > - **Xcode11-beta1.app** – The beta version which does not work with simulators and Visual Studio for Mac.
 > - **Xcode102.app** – A stable version of Xcode 10. Yours might also be called **Xcode.app**.
 >

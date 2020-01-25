@@ -4,8 +4,8 @@ description: "This document describes how to build and test Xamarin.iOS applicat
 ms.prod: xamarin
 ms.assetid: bf3c779f-959f-428d-babb-428f363f7e4e
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2018
 ---
 
@@ -29,7 +29,7 @@ There are a few requirements that must be adhered to when developing for iOS in 
 There are a number of configuration options available, so you can decide which works best for your development needs. These are listed below:
 
 - Use a Mac as your main development machine and run a Windows virtual machine with Visual Studio installed. We recommend using
-VM software such as [Parallels](http://www.parallels.com/products/desktop/) or [VMWare](http://www.vmware.com/products/fusion/) .
+VM software such as [Parallels](https://www.parallels.com/products/desktop/) or [VMWare](https://www.vmware.com/products/fusion/) .
 - Use a Mac just as a build host. In this scenario it would be connected to the same network as a Windows machine with
 the [necessary](~/get-started/installation/windows.md#installation) tools installed.
 

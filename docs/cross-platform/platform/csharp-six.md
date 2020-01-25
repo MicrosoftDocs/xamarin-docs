@@ -4,8 +4,8 @@ description: "Version 6 of the C# language continues to evolve the language to h
 ms.prod: xamarin
 ms.assetid: 4B4E41A8-68BA-4E2B-9539-881AC19971B
 ms.custom: xamu-video
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -185,15 +185,18 @@ class Program
     }
 }
 ```
+
 results in:
 
-    The value is       1.00.
-    The value is       2.00.
-    The value is       3.00.
-    The value is       4.00.
-    The value is      12.00.
-    The value is 123,456.00.
-    Minimum is 1.00.
+```
+The value is       1.00.
+The value is       2.00.
+The value is       3.00.
+The value is       4.00.
+The value is      12.00.
+The value is 123,456.00.
+Minimum is 1.00.
+```
 
 String interpolation is syntactic sugar for `String.Format`: it cannot be used with `@""` string literals and is not compatible with `const`, even if no placeholders are used:
 
@@ -332,4 +335,3 @@ The C# language continues to evolve to make developers more productive while als
 ## Related Links
 
 - [New Language Features in C# 6](https://github.com/dotnet/roslyn/wiki/New-Language-Features-in-C%23-6)
-

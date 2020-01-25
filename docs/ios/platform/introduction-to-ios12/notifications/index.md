@@ -4,8 +4,8 @@ description: "This document links to guides that describe how to use  various no
 ms.prod: xamarin
 ms.assetid: 137C719D-6D97-4D5B-9877-F6F35BF85FF0
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/04/2018
 ---
 # Notifications in iOS 12

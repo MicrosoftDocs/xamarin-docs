@@ -15,10 +15,10 @@ ms.date: 11/07/2017
 
 Xamarin.Forms includes several classes derived from [`Layout<View>`](xref:Xamarin.Forms.Layout`1):
 
-* `StackLayout`,
-* `Grid`,
-* `AbsoluteLayout`, and
-* `RelativeLayout`.
+- `StackLayout`,
+- `Grid`,
+- `AbsoluteLayout`, and
+- `RelativeLayout`.
 
 This chapter describes how to create your own classes that derive from `Layout<View>`.
 
@@ -111,7 +111,7 @@ Infinite constraints indicate that the requested size should reflect the element
 
 The [**ExploreChildSize**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/ExploreChildSizes) displays constraint and size request information for a simple layout.
 
-## Deriving from Layout<View>
+## Deriving from Layout\<View>
 
 A custom layout class derives from `Layout<View>`. It has two responsibilities:
 
@@ -187,8 +187,6 @@ The [**UnitCube**](https://github.com/xamarin/xamarin-forms-book-samples/tree/ma
 
 A `Layout<T>` derivative can call `LayoutTo` rather than `Layout` to animate the layout. The [`AnimatedCartesianLayout`](https://github.com/xamarin/xamarin-forms-book-samples/blob/master/Libraries/Xamarin.FormsBook.Toolkit/Xamarin.FormsBook.Toolkit/AnimatedCartesianLayout.cs) class does this, and the
 [**AnimatedUnitCube**](https://github.com/xamarin/xamarin-forms-book-samples/tree/master/Chapter26/AnimatedUnitCube) sample demonstrates it.
-
-
 
 ## Related links
 

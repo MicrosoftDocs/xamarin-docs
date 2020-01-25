@@ -33,7 +33,7 @@ The appearance of the starts and ends of lines is called a *line cap* or, in Ski
 - `Square`
 - `Round`
 
-These are best illustrated with a sample program. The **SkiaSharp Lines and Paths** section of the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) program begins with a page titled **Stroke Caps** based on the [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/StrokeCapsPage.cs) class. This page defines a `PaintSurface` event handler that loops through the three members of the `SKStrokeCap` enumeration, displaying both the name of the enumeration member and drawing a line using that stroke cap:
+These are best illustrated with a sample program. The **SkiaSharp Lines and Paths** section of the [**SkiaSharpFormsDemos**](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/skiasharpforms-demos) program begins with a page titled **Stroke Caps** based on the [`StrokeCapsPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/StrokeCapsPage.cs) class. This page defines a `PaintSurface` event handler that loops through the three members of the `SKStrokeCap` enumeration, displaying both the name of the enumeration member and drawing a line using that stroke cap:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -105,7 +105,7 @@ The `points` parameter is an array of `SKPoint` values and `mode` is a member of
 - `Lines` to connect each pair of points
 - `Polygon` to connect all consecutive points
 
-The **Multiple Lines** page demonstrates this method. The [**MultipleLinesPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/MultipleLinesPage.xaml) file instantiates two `Picker` views that let you select a member of the `SKPointMode` enumeration and a member of the `SKStrokeCap` enumeration:
+The **Multiple Lines** page demonstrates this method. The [**MultipleLinesPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/MultipleLinesPage.xaml) file instantiates two `Picker` views that let you select a member of the `SKPointMode` enumeration and a member of the `SKStrokeCap` enumeration:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -227,12 +227,11 @@ The screenshots show a variety of `Picker` selections:
 
 The iPhone at the left shows how the `SKPointMode.Points` enumeration member causes `DrawPoints` to render each of the points in the `SKPoint` array as a square if the line cap is `Butt` or `Square`. Circles are rendered if the line cap is `Round`.
 
-When you instead use `SKPointMode.Lines`, as shown on the Android screen in the center, the `DrawPoints` method draws a line between each pair of `SKPoint` values, using the specified line cap, in this case `Round`.
+The Android screenshot shows the result of the `SKPointMode.Lines`. The `DrawPoints` method draws a line between each pair of `SKPoint` values, using the specified line cap, in this case `Round`.
 
-The UWP screenshot shows the result of the `SKPointMode.Polygon` value. A line is drawn between the successive points in the array, but if you look very closely, you'll see that these lines are not connected. Each of these separate lines starts and ends with the specified line cap. If you select the `Round` caps, the lines might appear to be connected, but they're really not connected.
+When you instead use `SKPointMode.Polygon`, a line is drawn between the successive points in the array, but if you look very closely, you'll see that these lines are not connected. Each of these separate lines starts and ends with the specified line cap. If you select the `Round` caps, the lines might appear to be connected, but they're really not connected.
 
 Whether lines are connected or not connected is a crucial aspect of working with graphics paths.
-
 
 ## Related Links
 

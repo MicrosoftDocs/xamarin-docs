@@ -4,8 +4,8 @@ description: "This document provides an overview of watchOS, describing the appl
 ms.prod: xamarin
 ms.assetid: 99c316d6-6707-40f6-bec9-801d05888759
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
 ---
 
@@ -137,7 +137,6 @@ Generally, it’s easier to develop your text and layout design
 
 Read more about [working with screen sizes](~/ios/watchos/app-fundamentals/screen-sizes.md).
 
-
 ## Limitations of watchOS
 
 There are some limitations of watchOS to be aware of when developing watchOS apps:
@@ -160,17 +159,15 @@ Some other known limitations / frequently asked questions:
 
 - The APIs that allow the Watch to control iTunes on the connected phone are private.
 
-
 ## Further Reading
 
 Check out the documentation from Apple:
 
-* [Developing for Watch Kit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html#//apple_ref/doc/uid/TP40014969-CH8-SW1)
+- [Developing for Watch Kit](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/index.html#//apple_ref/doc/uid/TP40014969-CH8-SW1)
 
-* [Watch Kit Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
+- [Watch Kit Programming Guide](https://developer.apple.com/library/prerelease/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/DesigningaWatchKitApp.html)
 
-* [Apple Watch Human Interface Guidelines](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
-
+- [Apple Watch Human Interface Guidelines](https://developer.apple.com/library/prerelease/ios/documentation/UserExperience/Conceptual/WatchHumanInterfaceGuidelines/index.html#//apple_ref/doc/uid/TP40014992-CH3-SW1)
 
 ## Related Links
 

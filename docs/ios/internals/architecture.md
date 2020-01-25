@@ -4,8 +4,8 @@ description: "This document describes Xamarin.iOS at a low level, discussing how
 ms.prod: xamarin
 ms.assetid: F40F2275-17DA-4B4D-9678-618FF25C6803
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -119,7 +119,7 @@ of how this is done:
     -(void)myFunc;
 @end
 
-@implementation	MyViewController {}
+@implementation MyViewController {}
 
     -(void) myFunc
     {
@@ -138,7 +138,6 @@ The required `[Export]` attribute contains a string, which is the selector used 
 generated Objective-C class.
 
 There are two types of registrars used in Xamarin.iOS – dynamic and static:
-
 
 - **Dynamic registrars** – The dynamic registrar does the registration of all types in
 your assembly at runtime. It does this by using functions provided by
@@ -174,7 +173,6 @@ linked into your final executable so your app knows how to get off the ground.
 At this point our app has started up, Mono is running, we are in managed code
 and we know how to call native code and be called back. The next thing we need
 to do is to actually start adding controls and make the app interactive.
-
 
 ## Generator
 
@@ -230,13 +228,12 @@ Once the Xamarin.iOS.dll has been created, mtouch will bundle all the components
 At a high level, it achieves this by executing the following
 tasks:
 
--   Create an app bundle structure.
--   Copy in your managed assemblies.
--   If linking is enabled, run the managed linker to optimize your assemblies by
+- Create an app bundle structure.
+- Copy in your managed assemblies.
+- If linking is enabled, run the managed linker to optimize your assemblies by
 ripping unused parts out.
--   AOT compilation.
--   Create a native executable, which outputs a series of static libraries (one for each assembly) that are linked into the native executable, so that the native executable consists of the launcher code, the registrar code (if static), and all the outputs from the AOT compiler
-
+- AOT compilation.
+- Create a native executable, which outputs a series of static libraries (one for each assembly) that are linked into the native executable, so that the native executable consists of the launcher code, the registrar code (if static), and all the outputs from the AOT compiler
 
 For more detailed information on the linker and how it is
 used, refer to the [Linker](~/ios/deploy-test/linker.md) guide.

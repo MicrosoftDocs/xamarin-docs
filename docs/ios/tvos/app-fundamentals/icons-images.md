@@ -4,8 +4,8 @@ description: "This document describes how to work with icons and images in a tvO
 ms.prod: xamarin
 ms.assetid: A2DA4347-0563-4C72-A8D7-5B9DE9E28712
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -74,9 +74,6 @@ Layered Images contain from two (2) to five (5) separate layers that are combine
 > [!IMPORTANT]
 > Layered Images are required for your app's icons and are optional for other [Focusable Items](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) (such as the Top Shelf Image). However, Apple suggests using Layered Images for any image that can get focus in your app.
 
-
-
-
 Apple makes the following suggestions for designing your Layered Images:
 
 - **Make the Background Layer Opaque** - Your background layer (layer 1) **must** be opaque or you'll get an error when you try to use the Layered Image on Apple TV. All other layers can contain multiple levels of transparency to enhance the 3D effect.
@@ -103,7 +100,7 @@ It is important to remember to include a _Safe Zone_ border into each layer that
 tvOS works with Layered Images in the following formats:
 
 - **CAR Files** - This is a proprietary Asset Catalog format created by Apple. You do not create CAR files directly, they are created at compile time from any LSR files and included in your app bundle.
-- **LSR Images** - This is a proprietary image format created by Apple. Use the [Parallax Exporter Adobe Photoshop Plugin](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) or the [Parallax Previewer](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to create and preview Layered Images in the LSR format.
+- **LSR Images** - This is a proprietary image format created by Apple. Use the [Parallax Exporter Adobe Photoshop Plugin](https://itunespartner.apple.com/assets/downloads/ParallaxExporter_Apps.zip) or the [Parallax Previewer](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to create and preview Layered Images in the LSR format.
 - **Assets.xcassets** - From two (2) to five (5) standard `.png` formatted images included in an Asset Catalog that will be compiled into a CAR or LSR formatted Layered Image at compile time.
 - **LCR Files** - This is a proprietary file format created by Apple. LCR files are intended to be used as additional content downloaded from one of your content servers. LCR file should never be included in your app bundle. LCR files are generated from LSR or Photoshop files using the `layerutil` command line tool included with Xcode.
 
@@ -111,7 +108,7 @@ tvOS works with Layered Images in the following formats:
 
 ### The Parallax Previewer
 
-Apple created the [Parallax Previewer](http://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to preview and created Layered Images required for App Icons and optional Focusable Items. The previewer shows every layer that forms the completed Layered Image:
+Apple created the [Parallax Previewer](https://itunespartner.apple.com/assets/downloads/Parallax%20Previewer.dmg) to preview and created Layered Images required for App Icons and optional Focusable Items. The previewer shows every layer that forms the completed Layered Image:
 
 [![](icons-images-images/layered03.png "The Parallax Previewer")](icons-images-images/layered03.png#lightbox)
 
@@ -140,9 +137,6 @@ Every app must supply both a small and a large version of its App Icon. The smal
 
 > [!IMPORTANT]
 > Your App Icons must be provided as **Layered Images**. Please see the [Layered Image](#Layered-Images) section above for more details.
-
-
-
 
 Apple provides the following suggestions for creating your App Icons:
 

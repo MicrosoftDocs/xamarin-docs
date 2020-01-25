@@ -3,7 +3,8 @@ When building iOS apps in Visual Studio and the Mac Build agent, the .app bundle
 
 To use this functionality, add the`CopyAppBundle` property to the .csproj under the property group you wish to apply this functionality to. For example, the following example shows how to copy the .app bundle back to the Windows computer for a **Debug** build targeting the **iPhoneSimulator**:
 
-    <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
-        <CopyAppBundle>true</CopyAppBundle>
-    </PropertyGroup>
-
+```xml
+<PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <CopyAppBundle>true</CopyAppBundle>
+</PropertyGroup>
+```

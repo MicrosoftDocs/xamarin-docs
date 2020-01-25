@@ -11,7 +11,7 @@ ms.date: 01/12/2016
 
 # Xamarin.Forms Pages
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/en-us/samples/xamarin/xamarin-forms-samples/formsgallery/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery/)
 
 _Xamarin.Forms Pages represent cross-platform mobile application screens._
 
@@ -64,7 +64,7 @@ Xamarin.Forms supports the following page types:
 
 |     |     |
 | --- | --- |
-| [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage) displays full-screen content with a control template, and is the base class for [`ContentPage`](#contentPage).<br /><br />[API Documentation](xref:Xamarin.Forms.TemplatedPage) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md) | [![TemplatedPage Example](pages-images/TemplatedPage.png "TemplatedPage Example")](pages-images/TemplatedPage.png "TemplatedPage Example") |
+| [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage) displays full-screen content with a control template, and is the base class for [`ContentPage`](#contentPage).<br /><br />[API Documentation](xref:Xamarin.Forms.TemplatedPage) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedPage Example](pages-images/TemplatedPage.png "TemplatedPage Example")](pages-images/TemplatedPage.png "TemplatedPage Example") |
 |     |     |
 
 ## Related Links

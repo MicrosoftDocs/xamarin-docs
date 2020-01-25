@@ -4,8 +4,8 @@ description: "This document describes how to work with various application icons
 ms.prod: xamarin
 ms.assetid: B7791574-4A0F-4CB6-8C18-36D40B5C91EB
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/22/2017
 ---
 
@@ -13,9 +13,9 @@ ms.date: 05/22/2017
 
 The following topics will be covered in detail:
 
-* [Application, Spotlight and Settings Icons](#icon-types) - The different types of icons required for an iOS app.
-* [Managing Icons with Asset Catalogs](#managing) - Managing application icons using Asset Catalogs.
-* [iTunes Artwork](#itunes) - Supplying the required iTunes Artwork for the Ad-Hoc method of delivering your application.
+- [Application, Spotlight and Settings Icons](#icon-types) - The different types of icons required for an iOS app.
+- [Managing Icons with Asset Catalogs](#managing) - Managing application icons using Asset Catalogs.
+- [iTunes Artwork](#itunes) - Supplying the required iTunes Artwork for the Ad-Hoc method of delivering your application.
 
 <a name="icon-types" />
 
@@ -93,7 +93,7 @@ The following image asset sizes and resolutions will be needed to support all of
  4. Uses the same images and sizes as the Spotlight Icon.
  5. Uses the same size icons as the iPhone.
  6. Only supported with Asset Catalog Image Sets.
- 
+
  For more information about icons, please see Apple's [Icon and Image Sizes](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) documentation.
 
 <a name="managing" />
@@ -102,39 +102,48 @@ The following image asset sizes and resolutions will be needed to support all of
 
 For icons, a special `AppIcon` image set can be added to the `Assets.xcassets` file in the app's project. All version of the image required to support all resolutions are included in the _xcasset_ and grouped together. A special editor in Visual Studio for Mac allows the developer to include and setup these images graphically.
 
-To use an Asset Catalog, do the following:
+To use an Asset Catalog, follow these steps:
 
 # [Visual Studio for Mac](#tab/macos)
 
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
-2. Scroll down to the **App Icons** section.
-3. From the **Source** dropdown list, ensure **AppIcon** is selected: 
+2. Scroll down to the **iPhone Icons** section.
+3. Click the **Migrate to Asset Catalog** button:
 
     ![](app-icons-images/migrate01.png "Ensure AppIcon is selected")
+
 4. From the **Solution Explorer**, double-click the `Assets.xcassets` file to open it for editing: 
 
     ![](app-icons-images/asset01.png "The Assets.xcassets file in the Solution Explorer")
+
 5. Select `AppIcon` from the list of assets to display the `Icon Editor`:
 
     ![](app-icons-images/asset02.png "The AppIcon editor")
+
 6. Either click on given icon type and select an image file for the required type/size or drag in an image from a folder and drop it on the desired size.
 7. Click the **Open** button to include the image in the project and set it in the xcasset.
 8. Repeat for all images required.
 
 # [Visual Studio](#tab/windows)
 
-1. Double-click the **Info.plist** file in the **Solution Explorer**:
+1. Double-click the **Info.  ** file in the **Solution Explorer**:
 
     ![](app-icons-images/icon01w.png "Select Info.plist")
+
 2. Click on the **Visual Assets** tab and click on the **Use Asset Catalog** button under **App Icons**: 
 
     ![](app-icons-images/icon02w.png "Select the Visual Assets tab")
+
+    If there is no button, but instead a drop-down list, then an Asset Catalog has already been added to this project.
+
 3. From the **Solution Explorer**, expand the **Asset Catalog** folder: 
 
     ![](app-icons-images/image009.png "Expand the Asset Catalog folder")
+
 4. Double-click the **Media** file to open it in the editor: 
 
     ![](app-icons-images/image010.png "Open the Media file in the editor")
+
 5. Under the **Properties Explorer** the developer can select the different types and sizes of icons required.
 6. Click on given icon type and select an image file for the required type/size.
 7. Click the **Open** button to include the image in the project and set it in the xcasset.
@@ -143,36 +152,6 @@ To use an Asset Catalog, do the following:
 -----
 
 This is the preferred method of including and managing image assets that will be used to provide Application, Spotlight and Settings icons for an app.
-
-### Migrating from Info.plist to Asset Catalogs
-
-For an existing Xamarin.iOS app using the `Info.plist` file to manage it's icons, it is highly suggested that the developer switch it over to use the `AppIcons` Image Asset inside the `Assets.xcassets`.
-
-Do the following:
-
-# [Visual Studio for Mac](#tab/macos)
-
-1. Double-Click the `Info.plist` file in the **Solution Explorer** to open it for editing.
-2. Scroll down to the **App Icons** section.
-3. From the **Source** dropdown list, select **Migrate to Asset Catalogs**: 
-
-    ![](app-icons-images/migrate02.png "Select Migrate to Asset Catalogs")
-4. Any existing Icons defined in the `Info.plist` file will be migrated to a `AppIcons` Image Set added to `Assets.xcassets`: 
-
-     ![](app-icons-images/migrate03.png "The AppIcons Image Set in the Assets.xcassets")
-
-# [Visual Studio](#tab/windows)
-
-1. Double-Click the `Info.plist` file in the **Solution Explorer** to open it for editing.
-2. Click on the iPhone Icons section: 
-
-    ![](app-icons-images/image007.png "Rhe iPhone Icons editor")
-3. Scroll down to the **Icons** section.
-4. From the **Asset Catalog** dropdown list, select **Use Asset Catalogs**.
-5. Any existing Icons defined in the `Info.plist` file will be migrated to a `Images` set added to `Assets.xcassets`.
-6. Save the changes to the `Info.plist` file.
-
------
 
 <a name="itunes" />
 

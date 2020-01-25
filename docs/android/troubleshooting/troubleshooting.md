@@ -4,23 +4,21 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
 ---
 
 # Troubleshooting Tips
-
 
 ## Getting Diagnostic Information
 
 Xamarin.Android has a few places to look when tracking down various bugs.
 These include:
 
-1.  Diagnostic MSBuild output.
-2.  Device deployment logs.
-3.  Android Debug Log Output.
-
+1. Diagnostic MSBuild output.
+2. Device deployment logs.
+3. Android Debug Log Output.
 
 <a name="Diagnostic_MSBuild_Output" />
 
@@ -31,46 +29,38 @@ building and may contain some package deployment information.
 
 To enable diagnostic MSBuild output within Visual Studio:
 
-1.  Click  **Tools > Options...**
-2.  In the left-hand tree view, select  **Projects and Solutions > Build and Run**
-3.  In the right-hand panel, set the MSBuild build output verbosity dropdown to Diagnostic
-4.  Click **OK**
-5.  Clean and rebuild your package.
-6.  Diagnostic output is visible within the Output panel.
-
+1. Click  **Tools > Options...**
+2. In the left-hand tree view, select  **Projects and Solutions > Build and Run**
+3. In the right-hand panel, set the MSBuild build output verbosity dropdown to Diagnostic
+4. Click **OK**
+5. Clean and rebuild your package.
+6. Diagnostic output is visible within the Output panel.
 
 To enable diagnostic MSBuild output within Visual Studio for Mac/OS X:
 
-1.  Click  **Visual Studio for Mac > Preferences...**
-2.  In the left-hand tree view, select  **Projects > Build**
-3.  In the right-hand panel, set the Log verbosity drop-down to Diagnostic
-4.  Click **OK**
-5.  Restart Visual Studio for Mac
-6.  Clean and rebuild your package.
-7.  Diagnostic output is visible within the Errors Pad (**View > Pads > Errors** ), by clicking the Build Output button.
-
-
-
+1. Click  **Visual Studio for Mac > Preferences...**
+2. In the left-hand tree view, select  **Projects > Build**
+3. In the right-hand panel, set the Log verbosity drop-down to Diagnostic
+4. Click **OK**
+5. Restart Visual Studio for Mac
+6. Clean and rebuild your package.
+7. Diagnostic output is visible within the Errors Pad (**View > Pads > Errors** ), by clicking the Build Output button.
 
 ## Device Deployment Logs
 
 To enable device deployment logging within Visual Studio:
 
-1.  **Tools > Options...**>
-2.  In the left-hand tree view, select  **Xamarin > Android Settings**
-3.  In the right-hand panel, enable the [X]  **extension debug logging (writes monodroid.log to your desktop)** check box.
-4.  Log messages are written to the monodroid.log file on your desktop.
-
+1. **Tools > Options...**>
+2. In the left-hand tree view, select  **Xamarin > Android Settings**
+3. In the right-hand panel, enable the [X]  **extension debug logging (writes monodroid.log to your desktop)** check box.
+4. Log messages are written to the monodroid.log file on your desktop.
 
 Visual Studio for Mac always writes device deployment logs. FInding them is
 slightly more difficult; a *AndroidUtils* log file is created for every
 day + time that a deployment occurs, for example: **AndroidTools-2012-10-24_12-35-45.log**.
 
--  On Windows, log files are written to  `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`.
--  On OS X, log files are written to  `$HOME/Library/Logs/XamarinStudio-{VERSION}`.
-
-
-
+- On Windows, log files are written to  `%LOCALAPPDATA%\XamarinStudio-{VERSION}\Logs`.
+- On OS X, log files are written to  `$HOME/Library/Logs/XamarinStudio-{VERSION}`.
 
 ## Android Debug Log Output
 
@@ -89,46 +79,67 @@ System properties are read during process startup, and thus must be
 either set before the application is launched or the application must
 be restarted after the system properties are changed.
 
-
-
 ### Xamarin.Android System Properties
 
 Xamarin.Android supports the following system properties:
 
--   *debug.mono.debug*: If a non-empty string, this is equivalent to
-    `*mono-debug*`.
+- *debug.mono.debug*: If a non-empty string, this is equivalent to
+  `*mono-debug*`.
 
--   *debug.mono.env*: A pipe-separated ('*|*') list of environment
-    variables to export during application startup, *before* mono has
-    been initialized. This allows setting environment variables that
-    control mono logging.
+- *debug.mono.env*: A pipe-separated ('*|*') list of environment
+  variables to export during application startup, *before* mono has
+  been initialized. This allows setting environment variables that
+  control mono logging.
 
-    - *Note*: Since the value is '*|*'-separated, the value must have
-      an extra level of quoting, as the \`*adb shell*\` command will
-      remove a set of quotes.
+  > [!NOTE]
+  > Since the value is '*|*'-separated, the value must have
+  > an extra level of quoting, as the \`*adb shell*\` command will
+  > remove a set of quotes.
 
-    - *Note*: Android system property values can be no longer than 92
-      characters in length.
+  > [!NOTE]
+  > Android system property values can be no longer than 92
+  > characters in length.
 
-    - Example:
+  Example:
 
-            adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+  ```
+  adb shell setprop debug.mono.env "'MONO_LOG_LEVEL=info|MONO_LOG_MASK=asm'"
+  ```
 
--   *debug.mono.log*: A comma-separated ('*,*') list of components that
-    should print additional messages to the Android Debug Log. By
-    default, nothing is set. Components include:
+- *debug.mono.log*: A comma-separated ('*,*') list of components that
+  should print additional messages to the Android Debug Log. By
+  default, nothing is set. Components include:
 
-    -   *all*: Print all messages
-    -   *gc*: Print GC-related messages.
-    -   *gref*: Print (weak, global) reference allocation and deallocation messages.
-    -   *lref*: Print local reference allocation and deallocation messages.
+  - *all*: Print all messages
+  - *gc*: Print GC-related messages.
+  - *gref*: Print (weak, global) reference allocation and deallocation messages.
+  - *lref*: Print local reference allocation and deallocation messages.
 
-    *Note*: these are *extremely* verbose. Do not enable unless you really need to.
+  > [!NOTE]
+  > These are *extremely* verbose. Do not enable unless you really need to.
 
--   *debug.mono.trace*: Allows setting the [mono --trace](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`
-    setting.
+- *debug.mono.trace*: Allows setting the [mono --trace](http://docs.go-mono.com/?link=man%3amono(1))`=PROPERTY_VALUE`
+  setting.
 
+## Deleting `bin` and `obj`
 
+Xamarin.Android has suffered in the past from a situation such as:
+
+- You encounter a strange build or runtime error.
+- You `Clean`, `Rebuild`, or manually delete your `bin` and `obj` directories.
+- The problem goes away.
+
+We are heavily invested into fixing problems such as these due to their impact on developer productivity.
+
+If a problem such as this happens to you:
+
+1. Make a mental note. What was the last action that got your project into this state?
+1. Save your current build log. Try building again, and record a [diagnostic build log](#diagnostic-msbuild-output).
+1. Submit a [bug report][bug].
+
+Before deleting your `bin` and `obj` directories, zip them up and save them for later diagnosis if needed. You can probably merely `Clean` your Xamarin.Android application project to get things working again.
+
+[bug]: https://github.com/xamarin/xamarin-android/wiki/Submitting-Bugs,-Feature-Requests,-and-Pull-Requests
 
 ## Xamarin.Android cannot resolve System.ValueTuple
 
@@ -139,7 +150,6 @@ This error occurs due to an incompatibility with Visual Studio.
 - **Visual Studio 2017 Update 2** (version 15.2 or newer) is only compatible with the **System.ValueTuple NuGet 4.3.1** (or newer).
 
 Please choose the correct System.ValueTuple NuGet that corresponds with your Visual Studio 2017 installation.
-
 
 ## GC Messages
 
@@ -181,8 +191,6 @@ bridge processing code (which deals with the Java VM). The world is *not* paused
 the more time that the `bridge` collections will take, and the
 larger the `total` time spent collecting will be.
 
-
-
 ## Global Reference Messages
 
 To enable Global Reference loggig (GREF) logging, the *debug.mono.log*
@@ -201,10 +209,11 @@ at a time. Hardware has a much higher limit of 52000 global references. The
 lower limit can be problematic when running applications on the emulator, so
 knowing *where* the instance came from can be very useful.
 
- *Note*: the global reference count is internal to Xamarin.Android,
-and does not (and cannot) include global references taken out by other native
-libraries loaded into the process. Use the global reference count as an
-estimate.
+> [!NOTE]
+> The global reference count is internal to Xamarin.Android,
+> and does not (and cannot) include global references taken out by other native
+> libraries loaded into the process. Use the global reference count as an
+> estimate.
 
 ```shell
 I/monodroid-gref(12405): +g+ grefc 108 gwrefc 0 obj-handle 0x40517468/L -> new-handle 0x40517468/L from    at Java.Lang.Object.RegisterInstance(IJavaObject instance, IntPtr value, JniHandleOwnership transfer)
@@ -228,11 +237,10 @@ I/monodroid-gref(27679): -w- grefc 1915 gwrefc 294 handle 0xde691aaf/W from take
 
 There are four messages of consequence:
 
--  Global reference creation: these are the lines that start with  *+g+* , and will provide a stack trace for the creating code path.
--  Global reference destruction: these are the lines that start with  *-g-* , and may provide a stack trace for the code path disposing of the global reference. If the GC is disposing of the gref, no stack trace will be provided.
--  Weak global reference creation: these are the lines that start with  *+w+* .
--  Weak global reference destruction: these are lines that start with  *-w-* .
-
+- Global reference creation: these are the lines that start with  *+g+* , and will provide a stack trace for the creating code path.
+- Global reference destruction: these are the lines that start with  *-g-* , and may provide a stack trace for the code path disposing of the global reference. If the GC is disposing of the gref, no stack trace will be provided.
+- Weak global reference creation: these are the lines that start with  *+w+* .
+- Weak global reference destruction: these are lines that start with  *-w-* .
 
 In all messages, The *grefc* value is the count of global references
 that Xamarin.Android has created, while the *grefwc* value is the count
@@ -299,14 +307,10 @@ You can query both the GREF and WREF counts by querying the `JniRuntime` object.
 
 `Java.Interop.JniRuntime.CurrentRuntime.WeakGlobalReferenceCount` - Weak Reference Count
 
-
-
 ## Android Debug Logs
 
 The [Android Debug Logs](~/android/deploy-test/debugging/android-debug-log.md) may provide additional context regarding any runtime errors you're
 seeing.
-
-
 
 ## Floating-Point performance is terrible!
 
@@ -333,8 +337,6 @@ If your app requires decent floating-point performance (e.g. games), you
 should enable the *armeabi-v7a* ABI. You may want to only support the *armeabi-v7a* runtime, though this means that older devices which only
 support *armeabi* will be unable to run your app.
 
-
-
 ## Could not locate Android SDK
 
 There are 2 downloads available from Google for the Android SDK for Windows.
@@ -345,8 +347,6 @@ Xamarin.Android where the SDK is in Visual Studio by going to
 **Tools > Options > Xamarin > Android Settings**:
 
 [![Android SDK Location in Xamarin Android Settings](troubleshooting-images/01.png)](troubleshooting-images/01.png#lightbox)
-
-
 
 ## IDE does not display target device
 
@@ -375,14 +375,12 @@ properly. If the **adb start-server** command doesn't print out which
 port it's starting on, please exit the HTC Sync software and try
 restarting the adb server.
 
-
 ## The specified task executable "keytool" could not be run
 
 This means that your PATH does not contain the directory where the Java
 SDK's bin directory is located. Check that you followed those steps
 from the
 [Installation](~/android/get-started/installation/index.md) guide.
-
 
 ## monodroid.exe or aresgen.exe exited with code 1
 
@@ -406,23 +404,19 @@ emulator -partition-size 512 -avd MonoDroid
 Ensure you use the correct simulator name, i.e.
 [the name you used when configuring the simulator](~/android/get-started/installation/windows.md#device).
 
-
 ## INSTALL\_FAILED\_INVALID\_APK when installing a package
 
 Android package names *must* contain a period ('*.*'). Edit your package name so that it contains a period.
 
--   Within Visual Studio:
-    -   Right click your project > Properties
-    -   Click the Android Manifest tab on the left.
-    -   Update the Package name field.
-        -   If you see the message &ldquo;No AndroidManifest.xml found. Click to add one.&rdquo;, click the link and then update the Package name field.
--   Within Visual Studio for Mac:
-    -   Right click your project > Options.
-    -   Navigate to the Build / Android Application section.
-    -   Change the Package name field to contain a '.'.
-
-
-
+- Within Visual Studio:
+  - Right click your project > Properties
+  - Click the Android Manifest tab on the left.
+  - Update the Package name field.
+    - If you see the message &ldquo;No AndroidManifest.xml found. Click to add one.&rdquo;, click the link and then update the Package name field.
+- Within Visual Studio for Mac:
+  - Right click your project > Options.
+  - Navigate to the Build / Android Application section.
+  - Change the Package name field to contain a '.'.
 
 ## INSTALL\_FAILED\_MISSING\_SHARED\_LIBRARY when installing a package
 
@@ -447,22 +441,19 @@ For example, adding an assembly reference to
 *Mono.Android.GoogleMaps.dll* will implicitly add a `<uses-library/>`
 for the Google Maps shared library.
 
-
-
 ## INSTALL\_FAILED\_UPDATE\_INCOMPATIBLE when installing a package
 
 Android packages have three requirements:
 
--   They must contain a '.' (see previous entry)
--   They must have a unique string package name (hence the reverse-tld convention seen in Android app names, e.g. com.android.chrome for the Chrome app)
--   When upgrading packages, the package must have the same signing key.
+- They must contain a '.' (see previous entry)
+- They must have a unique string package name (hence the reverse-tld convention seen in Android app names, e.g. com.android.chrome for the Chrome app)
+- When upgrading packages, the package must have the same signing key.
 
 Thus, imagine this scenario:
 
-1.  You build & deploy your app as a Debug app
-2.  You change the signing key, e.g. to use as a Release app (or because you don't like the default-provided Debug signing key)
-3.  You install your app without removing it first, e.g. Debug > Start Without Debugging within Visual Studio
-
+1. You build & deploy your app as a Debug app
+2. You change the signing key, e.g. to use as a Release app (or because you don't like the default-provided Debug signing key)
+3. You install your app without removing it first, e.g. Debug > Start Without Debugging within Visual Studio
 
 When this happens, package installation will fail with a
 INSTALL\_FAILED\_UPDATE\_INCOMPATIBLE error, because the package name
@@ -476,7 +467,6 @@ E/PackageManager(  146): Package [PackageName] signatures do not match the previ
 
 To fix this error, completely remove the application from your device
 before re-installing.
-
 
 ## INSTALL\_FAILED\_UID\_CHANGED when installing a package
 
@@ -503,8 +493,6 @@ $ adb uninstall @PACKAGE_NAME@
 **DO NOT USE** `adb uninstall -k`, as this will *preserve* application data,
 and thus preserve the conflicting UID on the target device.
 
-
-
 ## Release apps fail to launch on device
 
 Does the Android Debug Log output will contain a message similar to:
@@ -519,11 +507,11 @@ E/AndroidRuntime( 1710):        at java.lang.Runtime.loadLibrary(Runtime.java:36
 
 If so, there are two possible causes for this:
 
-1.  The .apk doesn't provide an ABI that the target device supports.
+1. The .apk doesn't provide an ABI that the target device supports.
     For example, the .apk only contains armeabi-v7a binaries, and the
     target device only supports armeabi.
 
-2.  An [Android bug](http://code.google.com/p/android/issues/detail?id=21670). If
+2. An [Android bug](https://code.google.com/p/android/issues/detail?id=21670). If
     this is the case, uninstall the app, cross your fingers, and
     reinstall the app.
 
@@ -554,7 +542,7 @@ generally set to &ldquo;Any CPU&rdquo; or &ldquo;x86&rdquo;. You will
 need to remove this environment variable from your machine before
 MSBuild can function:
 
--   Control Panel > System > Advanced > Environment Variables
+- Control Panel > System > Advanced > Environment Variables
 
 Restart Visual Studio or Visual Studio for Mac and try to rebuild. Things
 should now work as expected.
@@ -564,7 +552,6 @@ should now work as expected.
 Xamarin.Android 4.x doesn't properly marshal nested generic types
 properly. For example, consider the following C\# code using
 [SimpleExpandableListAdapter](xref:Android.Widget.SimpleExpandableListAdapter):
-
 
 ```csharp
 // BAD CODE; DO NOT USE
@@ -594,7 +581,6 @@ mAdapter = new SimpleExpandableListAdapter (
         new int[] { Android.Resource.Id.Text1, Android.Resource.Id.Text2 }
 );
 ```
-
 
 The problem is that Xamarin.Android incorrectly marshals nested generic
 types. The `List<IDictionary<string, object>>` is being marshaled to a
@@ -659,7 +645,6 @@ using (var groupData = new JavaList<IDictionary<string, object>> ()) {
 
 [This will be fixed in a future release](https://bugzilla.xamarin.com/show_bug.cgi?id=5401).
 
-
 ## Unexpected NullReferenceExceptions
 
 Occasionally the
@@ -695,7 +680,6 @@ from your process similar to:
 ```shell
 E/dalvikvm(  123): VM aborting
 ```
-
 
 ## Abort due to Global Reference Exhaustion
 
@@ -781,7 +765,6 @@ E/dalvikvm(  602): Excessive JNI global references (2001)
 E/dalvikvm(  602): VM aborting
 ```
 
-
 In the above example (which, incidentally, comes from
 [bug 685215](https://bugzilla.novell.com/show_bug.cgi?id=685215)) the
 problem is that too many Android.Graphics.Point instances are being
@@ -800,7 +783,6 @@ thing to consider.
 You can enable
 [GREF Logging](~/android/troubleshooting/index.md)
 to see when GREFs are created and how many exist.
-
 
 ## Abort due to JNI type mismatch
 
@@ -826,17 +808,16 @@ project.
 
 ### In Release build, MissingMethodException occurs for dynamic code at run time.
 
--   It is likely that your application project does not have references
-    to System.Core.dll, Microsoft.CSharp.dll or Mono.CSharp.dll. Make
-    sure those assemblies are referenced.
+- It is likely that your application project does not have references
+  to System.Core.dll, Microsoft.CSharp.dll or Mono.CSharp.dll. Make
+  sure those assemblies are referenced.
 
-    -   Keep in mind that dynamic code always costs. If you need efficient code, consider not using dynamic code.
+  - Keep in mind that dynamic code always costs. If you need efficient code, consider not using dynamic code.
 
--   In the first preview, those assemblies were excluded unless types
-    in each assembly are explicitly used by the application code. See
-    the following for a workaround:
-    [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
-
+- In the first preview, those assemblies were excluded unless types
+  in each assembly are explicitly used by the application code. See
+  the following for a workaround:
+  [http://lists.ximian.com/pipermail/mo...il/009798.html](http://lists.ximian.com/pipermail/monodroid/2012-April/009798.html)
 
 ## Projects built with AOT+LLVM crash on x86 devices
 
@@ -847,9 +828,7 @@ the following:
 
 ```shell
 Assertion: should not be reached at /Users/.../external/mono/mono/mini/tramp-x86.c:124
-Fatal signal 6 (SIGABRT), code -6 in tid 4051 (amarin.bug56111)
+Fatal signal 6 (SIGABRT), code -6 in tid 4051 (Xamarin.bug56111)
 ```
 
-This is a known issue as reported in
-[56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111). The
-workaround is to disable LLVM.
+This is a known issue – the workaround is to disable LLVM.

@@ -4,8 +4,8 @@ description: "How to use the EditText widget to accept user input."
 ms.prod: xamarin
 ms.assetid: E513BCBC-438E-15E8-B83A-4B768A8E8B32
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
 ---
 
@@ -54,7 +54,7 @@ method in **MainActivity.cs**:
 EditText edittext = FindViewById<EditText>(Resource.Id.edittext);
 edittext.KeyPress += (object sender, View.KeyEventArgs e) => {
     e.Handled = false;
-    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter) 
+    if (e.Event.Action == KeyEventActions.Down && e.KeyCode == Keycode.Enter)
     {
         Toast.MakeText(this, edittext.Text, ToastLength.Short).Show();
         e.Handled = true;
@@ -88,8 +88,7 @@ press the **Enter** key, the toast will be displayed as shown on the right:
 
 [![Examples of entering text into EditText](edit-text-images/edit-text-sml.png)](edit-text-images/edit-text.png#lightbox)
 
-*Portions of this page are modifications based on work created and* [*shared by the Android Open Source Project*](http://code.google.com/policies.html) *and used according to terms described in the* [*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/) *. This tutorial is based on the* [*Android Form Stuff tutorial*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
-
+*Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the* [*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/) *. This tutorial is based on the* [*Android Form Stuff tutorial*](https://developer.android.com/resources/tutorials/views/hello-formstuff.html) *.*
 
 ## Related Links
 

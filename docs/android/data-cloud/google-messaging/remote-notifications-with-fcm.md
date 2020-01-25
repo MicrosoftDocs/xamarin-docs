@@ -4,8 +4,8 @@ description: "This walkthrough provides a step-by-step explanation of how to use
 ms.prod: xamarin
 ms.assetid: 4D7C5F46-C997-49F6-AFDA-6763E68CDC90
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/31/2018
 ---
 
@@ -25,11 +25,11 @@ Firebase Console, and subscribes to topic messages:
 
 The following topic areas will be explored:
 
-1.  Background Notifications
+1. Background Notifications
 
-2.  Topic Messages
+2. Topic Messages
 
-3.  Foreground Notifications
+3. Foreground Notifications
 
 During this walkthrough, you will incrementally add functionality to
 **FCMClient** and run it on a device or emulator to understand how it
@@ -39,7 +39,6 @@ are generated from FCM messages that you enter into the Firebase
 Console Notifications GUI.
 
 ## Requirements
-
 
 It will be helpful to familiarize yourself with the [different types of messages](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) that can be sent by Firebase Cloud Messaging. The payload of the message will determine how a client app will receive and process the message.
 
@@ -82,11 +81,13 @@ you specified a package name for the FCM-enabled app. This package name
 also serves as the [*application ID*](./firebase-cloud-messaging.md#fcm-in-action-app-id) that is associated with the [API
 key](firebase-cloud-messaging.md#fcm-in-action-api-key). Configure the app to use this package name:
 
+<!-- markdownlint-disable MD001 -->
+
 # [Visual Studio](#tab/windows)
 
-1.  Open the properties for the **FCMClient** project.
+1. Open the properties for the **FCMClient** project.
 
-2.  In the **Android Manifest** page, set the package name.
+2. In the **Android Manifest** page, set the package name.
 
 In the following example, the package name is set to `com.xamarin.fcmexample`:
 
@@ -97,9 +98,9 @@ While you are updating the **Android Manifest**, also check to be sure that the
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  Open the properties for the **FCMClient** project.
+1. Open the properties for the **FCMClient** project.
 
-2.  In the **Android Application** page, set the package name.
+2. In the **Android Application** page, set the package name.
 
 In the following example, the package name is set to `com.xamarin.fcmexample`:
 
@@ -122,21 +123,21 @@ version 29.0.0.2 or later.
 
 # [Visual Studio](#tab/windows)
 
-1.  In Visual Studio, right-click **References > Manage NuGet Packages ...**.
+1. In Visual Studio, right-click **References > Manage NuGet Packages ...**.
 
-2.  Click the **Browse** tab and search for **Xamarin.GooglePlayServices.Base**.
+2. Click the **Browse** tab and search for **Xamarin.GooglePlayServices.Base**.
 
-3.  Install this package into the **FCMClient** project:
+3. Install this package into the **FCMClient** project:
 
     [![Installing Google Play Services Base](remote-notifications-with-fcm-images/02-google-play-services-vs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  In Visual Studio for Mac, right-click **Packages > Add Packages...**.
+1. In Visual Studio for Mac, right-click **Packages > Add Packages...**.
 
-2.  Search for **Xamarin.GooglePlayServices.Base**.
+2. Search for **Xamarin.GooglePlayServices.Base**.
 
-3.  Install this package into the **FCMClient** project:
+3. Install this package into the **FCMClient** project:
 
     [![Installing Google Play Services Base](remote-notifications-with-fcm-images/02-google-play-services-xs-sml.png)](remote-notifications-with-fcm-images/02-google-play-services-xs.png#lightbox)
 
@@ -168,21 +169,21 @@ application cannot receive messages from FCM servers.
 
 # [Visual Studio](#tab/windows)
 
-1.  In Visual Studio, right-click **References > Manage NuGet Packages ...**.
+1. In Visual Studio, right-click **References > Manage NuGet Packages ...**.
 
 2. Search for **Xamarin.Firebase.Messaging**.
 
-3.  Install this package into the **FCMClient** project:
+3. Install this package into the **FCMClient** project:
 
     [![Installing Xamarin Firebase Messaging](remote-notifications-with-fcm-images/03-firebase-messaging-vs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-vs.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  In Visual Studio for Mac, right-click **Packages > Add Packages...**.
+1. In Visual Studio for Mac, right-click **Packages > Add Packages...**.
 
-2.  Search for **Xamarin.Firebase.Messaging**.
+2. Search for **Xamarin.Firebase.Messaging**.
 
-3.  Install this package into the **FCMClient** project:
+3. Install this package into the **FCMClient** project:
 
     [![Installing Xamarin Firebase Messaging](remote-notifications-with-fcm-images/03-firebase-messaging-xs-sml.png)](remote-notifications-with-fcm-images/03-firebase-messaging-xs.png#lightbox)
 
@@ -211,15 +212,15 @@ directory of your project:
 
 # [Visual Studio](#tab/windows)
 
-1.  Copy **google-services.json** to the project folder.
+1. Copy **google-services.json** to the project folder.
 
-2.  Add **google-services.json** to the app project (click **Show All Files** in
+2. Add **google-services.json** to the app project (click **Show All Files** in
     the **Solution Explorer**, right click **google-services.json**, then
     select **Include in Project**).
 
-3.  Select **google-services.json** in the **Solution Explorer** window.
+3. Select **google-services.json** in the **Solution Explorer** window.
 
-4.  In the **Properties** pane, set the **Build Action** to
+4. In the **Properties** pane, set the **Build Action** to
     **GoogleServicesJson**:
 
     [![Setting the build action to GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-vs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-vs.png#lightbox)
@@ -229,13 +230,13 @@ directory of your project:
 
 # [Visual Studio for Mac](#tab/macos)
 
-1.  Copy **google-services.json** to the project folder.
+1. Copy **google-services.json** to the project folder.
 
-2.  Add **google-services.json** to the app project.
+2. Add **google-services.json** to the app project.
 
-3.  Right-click **google-services.json**.
+3. Right-click **google-services.json**.
 
-4.  Set the **Build Action** to **GoogleServicesJson**:
+4. Set the **Build Action** to **GoogleServicesJson**:
 
     [![Setting the build action to GoogleServicesJson](remote-notifications-with-fcm-images/04-google-services-json-xs-sml.png)](remote-notifications-with-fcm-images/04-google-services-json-xs.png#lightbox)
 
@@ -248,7 +249,6 @@ merged/generated **AndroidManifest.xml** that resides at
 **obj/Debug/android/AndroidManifest.xml**. This merge process
 automatically adds any permissions and other FCM elements that are
 needed for connection to FCM servers.
-
 
 ## Check for Google Play Services and create a notification channel
 
@@ -281,7 +281,6 @@ following XML:
 This `TextView` will be used to display messages that indicate whether
 Google Play Services is installed. Save the changes to **Main.axml**.
 
-
 Edit **MainActivity.cs** and add the following instance variables
  to the `MainActivity` class:
 
@@ -297,7 +296,6 @@ public class MainActivity : AppCompatActivity
 ```
 
 The variables `CHANNEL_ID` and `NOTIFICATION_ID` will be used in the method [`CreateNotificationChannel`](#create-notification-channel-code) that will be added to `MainActivity` later on in this walkthrough.
-
 
 In the following example, the `OnCreate` method will verify that Google
 Play Services is available before the app attempts to use FCM services.
@@ -390,7 +388,6 @@ Also verify that you have added the
 **Xamarin.Google.Play.Services.Base** package to your **FCMClient**
 project as explained earlier.
 
-
 ## Add the instance ID receiver
 
 The next step is to add a service that extends `FirebaseInstanceIdService` to handle the creation, rotation, and updating of [Firebase registration tokens](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md#fcm-in-action-registration-token). The `FirebaseInstanceIdService` service is required for FCM to be able to send messages to the device. When the `FirebaseInstanceIdService` service is added to the client app, the app will automatically receive FCM messages and display them as notifications whenever the app is backgrounded.
@@ -418,15 +415,15 @@ elements into the `<application>` section:
 
 This XML does the following:
 
--   Declares a `FirebaseInstanceIdReceiver` implementation that
+- Declares a `FirebaseInstanceIdReceiver` implementation that
     provides a [unique identifier](https://developers.google.com/instance-id/) for
     each app instance. This receiver also authenticates and authorizes
     actions.
 
--   Declares an internal `FirebaseInstanceIdInternalReceiver`
+- Declares an internal `FirebaseInstanceIdInternalReceiver`
     implementation that is used to start services securely.
 
--   The [app ID](./firebase-cloud-messaging.md#fcm-in-action-app-id) is stored in the **google-services.json** file that was [added to the project](#add-googleplayservices-json). The Xamarin.Android Firebase bindings will replace the token `${applicationId}` with the app ID; no additional code is required by the client app to provide the app ID.
+- The [app ID](./firebase-cloud-messaging.md#fcm-in-action-app-id) is stored in the **google-services.json** file that was [added to the project](#add-googleplayservices-json). The Xamarin.Android Firebase bindings will replace the token `${applicationId}` with the app ID; no additional code is required by the client app to provide the app ID.
 
 The `FirebaseInstanceIdReceiver` is a `WakefulBroadcastReceiver` that
 receives `FirebaseInstanceId` and `FirebaseMessaging` events and delivers
@@ -438,11 +435,11 @@ The work of registering the application with FCM is handled by the custom
 `FirebaseInstanceIdService` service that you provide.
 `FirebaseInstanceIdService` performs the following steps:
 
-1.  Uses the [Instance ID API](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID)
+1. Uses the [Instance ID API](https://developers.google.com/android/reference/com/google/android/gms/iid/InstanceID)
     to generate security tokens that authorize the client app to access
     FCM and the app server. In return, the app gets back a [registration token](~/android/data-cloud/google-messaging/firebase-cloud-messaging.md#fcm-in-action-registration-token) from FCM.
 
-2.  Forwards the registration token to the app server if the app
+2. Forwards the registration token to the app server if the app
     server requires it.
 
 Add a new file called **MyFirebaseIIDService.cs** and replace its
@@ -490,13 +487,13 @@ Log.Debug(TAG, "Refreshed token: " + refreshedToken);
 `OnTokenRefresh` is invoked infrequently: it is used to update the token
 under the following circumstances:
 
--   When the app is installed or uninstalled.
+- When the app is installed or uninstalled.
 
--   When the user deletes app data.
+- When the user deletes app data.
 
--   When the app erases the Instance ID.
+- When the app erases the Instance ID.
 
--   When the security of the token has been compromised.
+- When the security of the token has been compromised.
 
 According to Google's
 [Instance ID](https://developers.google.com/instance-id/guides/android-implementation)
@@ -593,7 +590,6 @@ fired, the `click_action` field of the notification message must be set
 to that `Intent` (the launcher `Intent` is used when no `click_action`
 is specified).
 
-
 ## Background notifications
 
 Build and run the **FCMClient** app. The **Log Token** button is displayed:
@@ -662,7 +658,6 @@ of the app (in this example, `41590732`), and the **collapse_key** is
 set to its package name (**com.xamarin.fcmexample**).
 If you do not receive a message, try deleting the **FCMClient** app on
 the device (or emulator) and repeat the above steps.
-
 
 > [!NOTE]
 > If you force-close the app, FCM will stop delivering
@@ -760,23 +755,23 @@ succeeded** in the IDE output window:
 
 Use the following steps to send a topic message:
 
-1.  In the Firebase Console, click **NEW MESSAGE**.
+1. In the Firebase Console, click **NEW MESSAGE**.
 
-2.  On the **Compose message** page, enter the message text and select
+2. On the **Compose message** page, enter the message text and select
     **Topic**.
 
-3.  In the **Topic** pull-down menu, select the built-in topic,
+3. In the **Topic** pull-down menu, select the built-in topic,
     **news**:
 
     [![Selecting the news topic](remote-notifications-with-fcm-images/16-topic-message-sml.png)](remote-notifications-with-fcm-images/16-topic-message.png#lightbox)
 
-4.  On the Android device (or emulator), background the app by tapping
+4. On the Android device (or emulator), background the app by tapping
     the Android **Overview** button and touching the home screen.
 
-5.  When the device is ready, click **SEND MESSAGE** in the Firebase
+5. When the device is ready, click **SEND MESSAGE** in the Firebase
     Console.
 
-6.  Check the IDE output window to see **/topics/news** in the log output:
+6. Check the IDE output window to see **/topics/news** in the log output:
 
     [![Message from /topic/news is shown](remote-notifications-with-fcm-images/17-message-arrived-sml.png)](remote-notifications-with-fcm-images/17-message-arrived.png#lightbox)
 
@@ -854,32 +849,30 @@ Log.Debug(TAG, "Notification Message Body: " + body);
 > your debugging session may or may not hit these breakpoints because of
 > how FCM delivers messages.
 
-
 ### Send another message
 
 Uninstall the app, rebuild it, run it again, and follow these steps to
 send another message:
 
-1.  In the Firebase Console, click **NEW MESSAGE**.
+1. In the Firebase Console, click **NEW MESSAGE**.
 
-2.  On the **Compose message** page, enter the message text and select
+2. On the **Compose message** page, enter the message text and select
     **Single device**.
 
-3.  Copy the token string from the IDE output window and paste it into
+3. Copy the token string from the IDE output window and paste it into
     the **FCM registration token** field of the Firebase Console as
     before.
 
-4.  Ensure that the app is running in the foreground, then click **SEND
+4. Ensure that the app is running in the foreground, then click **SEND
     MESSAGE** in the Firebase Console:
 
     [![Sending another message from the Console](remote-notifications-with-fcm-images/19-hello-again-sml.png)](remote-notifications-with-fcm-images/19-hello-again.png#lightbox)
 
-5.  When the **Review message** dialog is displayed, click **SEND**.
+5. When the **Review message** dialog is displayed, click **SEND**.
 
-6.  The incoming message is logged to the IDE output window:
+6. The incoming message is logged to the IDE output window:
 
     [![Message body printed to output window](remote-notifications-with-fcm-images/20-logged-message.png)](remote-notifications-with-fcm-images/20-logged-message.png#lightbox)
-
 
 ### Add a local notification sender
 
@@ -957,9 +950,9 @@ notification will appear in the notification area.
 
 When an app is in the background, the [payload of the message](https://firebase.google.com/docs/cloud-messaging/concept-options#notifications_and_data_messages) will determine how the message is handled:
 
-* **Notification** &ndash; messages will be sent to the **system tray**. A local notification will appear there. When the user taps on the notification the app will launch.
-* **Data** &ndash; messages will be handled by `OnMessageReceived`.
-* **Both** &ndash; messages that have both a notification and data payload will be delivered to the system tray. When the app launches, the data payload will appear in the `Extras` of the `Intent` that was used to start the app.
+- **Notification** &ndash; messages will be sent to the **system tray**. A local notification will appear there. When the user taps on the notification the app will launch.
+- **Data** &ndash; messages will be handled by `OnMessageReceived`.
+- **Both** &ndash; messages that have both a notification and data payload will be delivered to the system tray. When the app launches, the data payload will appear in the `Extras` of the `Intent` that was used to start the app.
 
 In this example, if the app is backgrounded, `SendNotification` will run if the message has a data payload. Otherwise, a background notification (illustrated earlier in this walkthrough) will be launched.
 
@@ -968,16 +961,16 @@ In this example, if the app is backgrounded, `SendNotification` will run if the 
 Uninstall the app, rebuild it, run it again, then use the following
 steps to send the last message:
 
-1.  In the Firebase Console, click **NEW MESSAGE**.
+1. In the Firebase Console, click **NEW MESSAGE**.
 
-2.  On the **Compose message** page, enter the message text and
+2. On the **Compose message** page, enter the message text and
     select **Single device**.
 
-3.  Copy the token string from the IDE output window and paste
+3. Copy the token string from the IDE output window and paste
     it into the **FCM registration token** field of the Firebase
     Console as before.
 
-4.  Ensure that the app is running in the foreground, then click **SEND
+4. Ensure that the app is running in the foreground, then click **SEND
     MESSAGE** in the Firebase Console:
 
     [![Sending the foreground message](remote-notifications-with-fcm-images/21-console-fg-msg-sml.png)](remote-notifications-with-fcm-images/21-console-fg-msg.png#lightbox)
@@ -992,7 +985,6 @@ When you open the notification, you should see the last message that
 was sent from the Firebase Console Notifications GUI:
 
 [![Foreground notification shown with foreground icon](remote-notifications-with-fcm-images/23-foreground-msg-sml.png)](remote-notifications-with-fcm-images/23-foreground-msg.png#lightbox)
-
 
 ## Disconnecting from FCM
 
@@ -1027,7 +1019,6 @@ This method call deletes the instance ID and the data associated
 with it. As a result, the periodic sending of FCM data to the device is
 halted.
 
-
 ## Troubleshooting
 
 The following describe issues and workarounds that may arise when using
@@ -1061,7 +1052,6 @@ how to subscribe to topic messages, and it provided an example
 implementation of a message listener service that is used to receive
 and display remote notifications while the app is running in the
 foreground.
-
 
 ## Related links
 

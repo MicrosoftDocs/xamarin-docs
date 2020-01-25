@@ -11,7 +11,7 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms Shell Navigation
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 Xamarin.Forms Shell includes a URI-based navigation experience that uses routes to navigate to any page in the application, without having to follow a set navigation hierarchy. In addition, it also provides the ability to navigate backwards without having to visit all of the pages on the navigation stack.
 
@@ -86,7 +86,7 @@ about
 To navigate to the `ShellContent` object for the `dogs` route, the absolute route URI is `//animals/domestic/dogs`. Similarly, to navigate to the `ShellContent` object for the `about` route, the absolute route URI is `//about`.
 
 > [!IMPORTANT]
-> Duplicate route names are permitted. However, duplicate routes are not permitted. An `ArgumentException` will be thrown on application startup if a duplicate route is detected.
+> An `ArgumentException` will be thrown on application startup if a duplicate route is detected. This exception will also be thrown if two or more routes at the same level in the hierarchy share a route name.
 
 #### Register page routes
 
@@ -118,7 +118,7 @@ Routing.RegisterRoute("elephants/details", typeof(ElephantDetailPage));
 This example enables contextual page navigation, where navigating to the `details` route from the page for the `monkeys` route displays the `MonkeyDetailPage`. Similarly, navigating to the `details` route from the page for the `elephants` route displays the `ElephantDetailPage`.
 
 > [!IMPORTANT]
-> Currently, duplicate route names are permitted when using the `Routing.RegisterRoute` method, with the duplicate registration overwriting the previous registration.
+> An `ArgumentException` will be thrown if the `Routing.RegisterRoute` method attempts to register the same route to two or more different types.
 
 ## Perform navigation
 
@@ -297,7 +297,7 @@ The `BackButtonBehavior` class defines the following properties that control bac
 
 - `Command`, of type `ICommand`, which is executed when the back button is pressed.
 - `CommandParameter`, of type `object`, which is the parameter that's passed to the `Command`.
-- `IconOveride`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the icon used for the back button.
+- `IconOverride`, of type [`ImageSource`](xref:Xamarin.Forms.ImageSource), the icon used for the back button.
 - `IsEnabled`, of type `boolean`, indicates whether the back button is enabled. The default value is `true`.
 - `TextOverride`, of type `string`, the text used for the back button.
 
@@ -334,4 +334,4 @@ The `Command` property is set to an `ICommand` to be executed when the back butt
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)

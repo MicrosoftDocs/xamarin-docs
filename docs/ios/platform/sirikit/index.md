@@ -4,8 +4,8 @@ description: "This article shows how to use SiriKit in a Xamarin.iOS app to prov
 ms.prod: xamarin
 ms.assetid: 84E5681A-F557-4967-AA99-F831169157AA
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -33,10 +33,6 @@ This article covers the key concepts that will be required for working with Siri
 ## [Implementing SiriKit](~/ios/platform/sirikit/implementing-sirikit.md)
 
 This article covers the steps required to implement SiriKit support in a Xamarin.iOS apps. The developer should read the Understanding SiriKit Concepts guide above before attempting to add SiriKit support to an app, as key concepts are covered that will be required for successful implementation.
-
-
-
-
 
 ## Related Links
 

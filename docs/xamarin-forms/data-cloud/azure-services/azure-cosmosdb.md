@@ -32,6 +32,9 @@ This article, and accompanying sample application, demonstrates a Todo list appl
 
 For more information about Azure Cosmos DB, see the [Azure Cosmos DB Documentation](/azure/cosmos-db/).
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 ## Setup
 
 The process for integrating an Azure Cosmos DB document database into a Xamarin.Forms application is as follows:
@@ -221,7 +224,6 @@ The `DeleteDatabaseAsync` method specifies a `Uri` argument that represents the 
 ## Summary
 
 This article explained how to use the Azure Cosmos DB .NET Standard client library to integrate an Azure Cosmos DB document database into a Xamarin.Forms application. An Azure Cosmos DB document database is a NoSQL database that provides low latency access to JSON documents, offering a fast, highly available, scalable database service for applications that require seamless scale and global replication.
-
 
 ## Related Links
 

@@ -3,8 +3,8 @@ title: "Cross-Platform Performance"
 description: "This document describes various techniques that can be used to improve the performance of a mobile application. It discusses the Profiler, IDisposable resource, weak references, the SGen garbage collector, size reduction techniques, and more."
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 
@@ -170,7 +170,6 @@ The `handler` field maintains the reference to the anonymous method, and is used
 
 Lazy initialization can be used to defer the creation of an object until it's first used. This technique is primarily used to improve performance, avoid computation, and reduce memory requirements.
 
-
 Consider using lazy initialization for objects that are expensive to create in this two scenarios:
 
 - The application might not use the object.
@@ -244,8 +243,6 @@ Long running operations should also support cancellation. For example, continuin
 > [!IMPORTANT]
 > The `CancellationTokenSource` class implements the `IDisposable` interface, and so the `CancellationTokenSource.Dispose` method should be invoked once the `CancellationTokenSource` instance is finished with.
 
-
-
 For more information, see [Async Support Overview](~/cross-platform/platform/async.md).
 
 <a name="sgen" />
@@ -259,9 +256,9 @@ Managed languages such as C# use garbage collection to reclaim memory that is al
 
 SGen utilizes one of three heaps to allocate space for objects:
 
--  **The Nursery** – This is where new small objects are allocated. When the nursery runs out of space, a minor garbage collection will occur. Any live objects will be moved to the major heap.
--  **Major Heap** – This is where long running objects are kept. If there is not enough memory in the major heap, then a major garbage collection will occur. If a major garbage collection fails to free up enough memory then SGen will ask the system for more memory.
--  **Large Object Space** – This is where objects that require more than 8000 bytes are kept. Large objects will not start out in the nursery, but instead will be allocated in this heap.
+- **The Nursery** – This is where new small objects are allocated. When the nursery runs out of space, a minor garbage collection will occur. Any live objects will be moved to the major heap.
+- **Major Heap** – This is where long running objects are kept. If there is not enough memory in the major heap, then a major garbage collection will occur. If a major garbage collection fails to free up enough memory then SGen will ask the system for more memory.
+- **Large Object Space** – This is where objects that require more than 8000 bytes are kept. Large objects will not start out in the nursery, but instead will be allocated in this heap.
 
 One of the advantages of SGen is that the time it takes to perform a minor garbage collection is proportional to the number of new live objects that were created since the last minor garbage collection. This will reduce the impact of garbage collection on the performance of an application, as these minor garbage collections will take less time than a major garbage collection. Major garbage collections will still occur, but less frequently.
 
@@ -304,16 +301,16 @@ The following screenshot shows the linker options in Visual Studio for Mac for a
 
 The linker provides three different settings to control its behavior:
 
--  **Don’t Link** – No unused types and methods will be removed by the linker. For performance reasons, this is the default setting for debug builds.
--  **Link Framework SDKs/SDK Assemblies Only** – This setting will only reduce the size of those assemblies that are shipped by Xamarin. User code will be unaffected.
--  **Link All Assemblies** – This is a more aggressive optimization that will target the SDK assemblies and user code. For bindings this will remove unused backing fields and make each instance (or bound objects) lighter, consuming less memory.
+- **Don’t Link** – No unused types and methods will be removed by the linker. For performance reasons, this is the default setting for debug builds.
+- **Link Framework SDKs/SDK Assemblies Only** – This setting will only reduce the size of those assemblies that are shipped by Xamarin. User code will be unaffected.
+- **Link All Assemblies** – This is a more aggressive optimization that will target the SDK assemblies and user code. For bindings this will remove unused backing fields and make each instance (or bound objects) lighter, consuming less memory.
 
 The *Link All Assemblies* should be used with caution as it may break the application in unexpected ways. The static analysis that is performed by the linker may not correctly identify all of the code that is required, resulting in too much code being removed from the compiled application. This situation will manifest itself only at runtime when the application crashes. Because of this it is important to thoroughly test an application after changing the linker behavior.
 
 If testing does reveal that the linker has incorrectly removed a class or method it is possible to mark types or methods that are not statically referenced but are required by the application by using one of the following attributes:
 
--  `Xamarin.iOS.Foundation.PreserveAttribute` – This attribute is for Xamarin.iOS projects.
--  `Android.Runtime.PreserveAttribute` – This attribute is for Xamarin.Android projects.
+- `Xamarin.iOS.Foundation.PreserveAttribute` – This attribute is for Xamarin.iOS projects.
+- `Android.Runtime.PreserveAttribute` – This attribute is for Xamarin.Android projects.
 
 For instance, it may be necessary to preserve the default constructors of types that are dynamically instantiated. Also, the use of XML serialization may require that the properties of types are preserved.
 
@@ -332,7 +329,7 @@ The following steps can be used to further reduce the application executable siz
 
 Android apps can also be split into a separate APK for each ABI ("architecture").
 Learn more in this blog post:
-[How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+[How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/).
 
 <a name="optimizeimages" />
 

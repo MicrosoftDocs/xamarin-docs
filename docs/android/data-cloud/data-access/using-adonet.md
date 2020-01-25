@@ -3,8 +3,8 @@ title: "Using ADO.NET with Android"
 ms.prod: xamarin
 ms.assetid: F6ABCEF1-951E-40D8-9EA9-DD79123C2650
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/08/2018
 ---
 
@@ -29,7 +29,6 @@ references to your Android project, as shown here:
 ![Android references in Visual Studio for Mac](using-adonet-images/image5.png "Android references in Visual Studio for Mac") 
 
 -----
-
 
 Right-click **References > Edit References...** then click to select
 the required assemblies.
@@ -104,9 +103,9 @@ using Mono.Data.Sqlite;
 
 The following code sample shows an entire database interaction:
 
-1.  Creating the database file
-2.  Inserting some data
-3.  Querying the data
+1. Creating the database file
+2. Inserting some data
+3. Querying the data
 
 These operations would typically appear in multiple places throughout
 your code, for example you may create the database file and tables when
@@ -176,16 +175,15 @@ or `SELECT` statements you like. You can read about the SQL commands
 supported by SQLite at the SQLite website. The SQL statements are 
 run using one of three methods on an `SqliteCommand` object:
 
--   **ExecuteNonQuery** &ndash; Typically used for table creation or data
+- **ExecuteNonQuery** &ndash; Typically used for table creation or data
     insertion. The return value for some operations is the number of
     rows affected, otherwise it's -1.
 
--   **ExecuteReader** &ndash; Used when a collection of rows should be
+- **ExecuteReader** &ndash; Used when a collection of rows should be
     returned as a `SqlDataReader`.
 
--   **ExecuteScalar** &ndash; Retrieves a single value (for example an
+- **ExecuteScalar** &ndash; Retrieves a single value (for example an
     aggregate).
-
 
 ### EXECUTENONQUERY
 
@@ -234,10 +232,9 @@ The `ExecuteReader` method returns a `SqliteDataReader` object. In addition
 to the `Read` method shown in the example, other useful properties
 include:
 
--   **RowsAffected** &ndash; Count of the rows affected by the query.
+- **RowsAffected** &ndash; Count of the rows affected by the query.
 
--   **HasRows** &ndash; Whether any rows were returned.
-
+- **HasRows** &ndash; Whether any rows were returned.
 
 ### EXECUTESCALAR
 
@@ -256,8 +253,6 @@ cast the result depending on the database query. The result could be an
 integer from a `COUNT` query or a string from a single column `SELECT`
 query. Note that this is different to other `Execute` methods that return
 a reader object or a count of the number of rows affected.
-
-
 
 ## Related Links
 

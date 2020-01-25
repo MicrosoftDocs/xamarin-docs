@@ -4,8 +4,8 @@ description: "This document introduces the localization features of the Android 
 ms.prod: xamarin
 ms.assetid: D1277939-A1E8-468E-B136-820D816AF853
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -36,13 +36,13 @@ code and a locale code, separated by an underscore. For reference, here is a [li
 
 Common examples include:
 
-* `en_US` for English (United States)
-* `es_ES` for Spanish (Spain)
-* `ja_JP` for Japanese (Japan)
-* `zh_CN` for Chinese (China)
-* `zh_TW` for Chinese (Taiwan)
-* `pt_PT` for Portuguese (Portugal)
-* `pt_BR` for Portuguese (Brazil)
+- `en_US` for English (United States)
+- `es_ES` for Spanish (Spain)
+- `ja_JP` for Japanese (Japan)
+- `zh_CN` for Chinese (China)
+- `zh_TW` for Chinese (Taiwan)
+- `pt_PT` for Portuguese (Portugal)
+- `pt_BR` for Portuguese (Brazil)
 
 ### LOCALE_CHANGED
 
@@ -54,7 +54,7 @@ attribute on the activity, like this:
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
-		ConfigurationChanges = ConfigChanges.Locale | ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    ConfigurationChanges = ConfigChanges.Locale | ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 ```
 
 <a name="basics" />
@@ -75,10 +75,10 @@ Android's localization strategy has the following key parts:
 
 Android applications manage most content in resource folders, such as:
 
-* **layout** - contains AXML layout files.
-* **drawable** - contains images and other drawable resources.
-* **values** - contains strings.
-* **raw** - contains data files.
+- **layout** - contains AXML layout files.
+- **drawable** - contains images and other drawable resources.
+- **values** - contains strings.
+- **raw** - contains data files.
 
 Most developers are already familiar with the use of **dpi** suffixes
 on the **drawable** directory to provide multiple versions of an image,
@@ -119,12 +119,12 @@ an example of the default (English) strings file for the example:
 
 ```xml
 <resources>
-	<string name="app_name">TaskyL10n</string>
-	<string name="taskadd">Add Task</string>
-	<string name="taskname">Name</string>
-	<string name="tasknotes">Notes</string>
-	<string name="taskdone">Done</string>
-	<string name="taskcancel">Cancel</string>
+    <string name="app_name">TaskyL10n</string>
+    <string name="taskadd">Add Task</string>
+    <string name="taskname">Name</string>
+    <string name="tasknotes">Notes</string>
+    <string name="taskdone">Done</string>
+    <string name="taskcancel">Cancel</string>
 </resources>
 ```
 
@@ -136,12 +136,12 @@ name (**Strings.xml**) that contains the translations:
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-	<string name="app_name">TaskyLeon</string>
-	<string name="taskadd">agregar tarea</string>
-	<string name="taskname">Nombre</string>
-	<string name="tasknotes">Notas</string>
-	<string name="taskdone">Completo</string>
-	<string name="taskcancel">Cancelar</string>
+    <string name="app_name">TaskyLeon</string>
+    <string name="taskadd">agregar tarea</string>
+    <string name="taskname">Nombre</string>
+    <string name="tasknotes">Notas</string>
+    <string name="taskdone">Completo</string>
+    <string name="taskcancel">Cancelar</string>
 </resources>
 ```
 
@@ -158,13 +158,13 @@ resource IDs (some other attributes have been omitted):
 
 ```xml
 <TextView
-	android:id="@+id/NameLabel"
-	android:text="@string/taskname"
-	... />
+    android:id="@+id/NameLabel"
+    android:text="@string/taskname"
+    ... />
 <CheckBox
-	android:id="@+id/chkDone"
-	android:text="@string/taskdone"
-	... />
+    android:id="@+id/chkDone"
+    android:text="@string/taskdone"
+    ... />
 ```
 
 ### GetText Method
@@ -181,8 +181,8 @@ var cancelText = Resources.GetText (Resource.String.taskcancel);
 Android string resources also let you create *quantity strings* which
 allow translators to provide different translations for different quantities, such as:
 
-* "There is 1 task left."
-* "There are 2 tasks still to do."
+- "There is 1 task left."
+- "There are 2 tasks still to do."
 
 (rather than a generic "There are n task(s) left").
 
@@ -208,17 +208,17 @@ are required).
 
 ```csharp
 var translated = Resources.GetQuantityString (
-					Resource.Plurals.numberOfTasks, taskcount, taskcount);`
+                    Resource.Plurals.numberOfTasks, taskcount, taskcount);`
 ```
 
 Valid `quantity` switches are:
 
-* zero
-* one
-* two
-* few
-* many
-* other
+- zero
+- one
+- two
+- few
+- many
+- other
 
 They're described in more detail in the [Android docs](https://developer.android.com/guide/topics/resources/string-resource.html#Plurals).
 If a given language does not require 'special' handling, those `quantity` strings
@@ -238,7 +238,6 @@ one, **flag.png**, has localized copies in other directories.
 
 ![Screenshot of multiple drawable folders, each containing one or more localized .png files](localization-images/drawable.png)
 
-
 #### Other Resource Types
 
 You can also provide other types of alternative, language-specific
@@ -248,7 +247,7 @@ languages, for example you could create a layout specifically for
 German that allows for very long text labels.
 
 Android 4.2 introduced support for
-[right to left (RTL) languages](http://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html)
+[right to left (RTL) languages](https://android-developers.blogspot.fr/2013/03/native-rtl-support-in-android-42.html)
 if you set the application setting `android:supportsRtl="true"`. The
 resource qualifier `"ldrtl"` can be included in a directory name to
 contain custom layouts that are designed for RTL display.
@@ -257,7 +256,6 @@ For more information on resource directory naming and fallback, refer
 to the Android docs for
 [providing alternative resources](https://developer.android.com/guide/topics/resources/providing-resources.html#AlternativeResources).
 
-
 ### App name
 
 The application name is easy to localize by using a `@string/id` in for the
@@ -265,14 +263,14 @@ The application name is easy to localize by using a `@string/id` in for the
 
 ```csharp
 [Activity (Label = "@string/app_name", MainLauncher = true, Icon="@drawable/launcher",
-	ConfigurationChanges =  ConfigChanges.Orientation | ConfigChanges.Locale)]
+    ConfigurationChanges =  ConfigChanges.Orientation | ConfigChanges.Locale)]
 ```
 
 ### Right-to-Left (RTL) Languages
 
 Android 4.2 and newer provides full support for RTL layouts, described
 in detail in the
-[Native RTL Support blog](http://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
+[Native RTL Support blog](https://android-developers.blogspot.dk/2013/03/native-rtl-support-in-android-42.html).
 
 When using Android 4.2 (API level 17) and newer, alignment values can be
 specified with `start` and `end` instead of `left` and `right` (for
@@ -316,15 +314,12 @@ To test on a device, change the language in the **Settings** app.
 > Make a note of the icons and location of the menu items so
 > that you can revert the language to the original setting.
 
-
 ## Summary
 
 This article covers the basics of localizing Android applications using
 the built-in resource handling. You can learn more about i18n and L10n
 for iOS, Android and cross-platform (including Xamarin.Forms) apps in
 [this cross-platform guide](~/cross-platform/app-fundamentals/localization.md).
-
-
 
 ## Related Links
 

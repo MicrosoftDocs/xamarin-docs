@@ -3,8 +3,8 @@ title: "Manually Creating NuGet Packages for Xamarin"
 description: "This document contains tips to help build NuGet packages that target the Xamarin platform. It describes NuGet package Xamarin profiles, PCL NuGets with platform dependencies, and links to various open-source samples."
 ms.prod: xamarin
 ms.assetid: a5964686-5fc6-4280-b087-7ba27cc1c8bf
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -27,14 +27,14 @@ but does not include the target framework names used by Xamarin.
 
 The main Xamarin target frameworks in use today are:
 
-* **MonoAndroid** - Xamarin.Android
-* **Xamarin.iOS** - Xamarin.iOS [Unified API](~/cross-platform/macios/unified/index.md) (supports 64-bit)
-* **Xamarin.Mac** - Xamarin.Mac's mobile profile, which is equivalent
+- **MonoAndroid** - Xamarin.Android
+- **Xamarin.iOS** - Xamarin.iOS [Unified API](~/cross-platform/macios/unified/index.md) (supports 64-bit)
+- **Xamarin.Mac** - Xamarin.Mac's mobile profile, which is equivalent
   to the Xamarin.iOS and Xamarin.Android API surface.
 
 There is also a target for the older iOS [Classic API](~/cross-platform/macios/unified/index.md):
 
-* **MonoTouch** - iOS Classic API
+- **MonoTouch** - iOS Classic API
 
 A **.nuspec** file that targeted all these would look something like:
 
@@ -78,11 +78,11 @@ and they certainly can't access platform-specific code. These 3rd-party links
 discuss different approaches for creating NuGet packages that use PCL
 and native APIs to provide compatibility for Xamarin and other platforms:
 
-- [How to Make Portable Class Libraries Work for You](http://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
-- [The Bait and Switch PCL Trick](http://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
-- [Creating a NuGet PCL that works with Xamarin.iOS](http://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
+- [How to Make Portable Class Libraries Work for You](https://blogs.msdn.com/b/dsplaisted/archive/2012/08/27/how-to-make-portable-class-libraries-work-for-you.aspx)
+- [The Bait and Switch PCL Trick](https://log.paulbetts.org/the-bait-and-switch-pcl-trick/)
+- [Creating a NuGet PCL that works with Xamarin.iOS](https://www.jimbobbennett.io/creating-a-nuget-pcl-that-works-with-xamarin-ios/)
 
-This external [list of PCL Profiles with their NuGet target name](http://embed.plnkr.co/03ck2dCtnJogBKHJ9EjY)
+This external [list of PCL Profiles with their NuGet target name](https://portablelibraryprofiles.stephencleary.com)
 is also a useful reference.
 
 ## Examples
@@ -95,5 +95,5 @@ Some open-source examples that you can refer to:
 
 ## Related Links
 
-- [Nugetizer-3000 Automated Nuget Creation](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
+- [Nugetizer-3000 Automated NuGet Creation](~/cross-platform/app-fundamentals/nuget-multiplatform-libraries/index.md)       
 - [Including a NuGet in your Project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)

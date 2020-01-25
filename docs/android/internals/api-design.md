@@ -3,8 +3,8 @@ title: "Xamarin.Android API Design Principles"
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 # Xamarin.Android API Design Principles
@@ -17,47 +17,45 @@ At the core of Xamarin.Android there is an interop engine that bridges
 the C# world with the Java world and provides developers with access to
 the Java APIs from C# or other .NET languages.
 
-
 ## Design Principles
 
 These are some of our design principles for the Xamarin.Android binding
 
--  Conform to the  [.NET Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
+- Conform to the  [.NET Framework Design Guidelines](https://docs.microsoft.com/dotnet/standard/design-guidelines/).
 
--  Allow developers to subclass Java classes.
+- Allow developers to subclass Java classes.
 
--  Subclass should work with C# standard constructs.
+- Subclass should work with C# standard constructs.
 
--  Derive from an existing class.
+- Derive from an existing class.
 
--  Call base constructor to chain.
+- Call base constructor to chain.
 
--  Overriding methods should be done with C#'s override system.
+- Overriding methods should be done with C#'s override system.
 
--  Make common Java tasks easy, and hard Java tasks possible.
+- Make common Java tasks easy, and hard Java tasks possible.
 
--  Expose JavaBean properties as C# properties.
+- Expose JavaBean properties as C# properties.
 
--  Expose a strongly typed API:
+- Expose a strongly typed API:
 
-    - Increase type-safety.
+  - Increase type-safety.
 
-    - Minimize runtime errors.
+  - Minimize runtime errors.
 
-    - Get IDE intellisense on return types.
+  - Get IDE intellisense on return types.
 
-    - Allows for IDE popup documentation.
+  - Allows for IDE popup documentation.
 
--  Encourage in-IDE exploration of the APIs:
+- Encourage in-IDE exploration of the APIs:
 
-    - Utilize Framework Alternatives to Minimize Java Classlib exposure.
+  - Utilize Framework Alternatives to Minimize Java Classlib exposure.
 
-    - Expose C# delegates (lambdas, anonymous methods and System.Delegate)
-instead of single-method interfaces when appropriate and applicable.
+  - Expose C# delegates (lambdas, anonymous methods and System.Delegate)
+    instead of single-method interfaces when appropriate and applicable.
 
-    - Provide a mechanism to call arbitrary Java libraries (
-      [Android.Runtime.JNIEnv](xref:Android.Runtime.JNIEnv)).
-
+  - Provide a mechanism to call arbitrary Java libraries (
+    [Android.Runtime.JNIEnv](xref:Android.Runtime.JNIEnv)).
 
 ## Assemblies
 
@@ -71,9 +69,7 @@ The bindings to the Android platform are contained in the
 for consuming Android APIs and communicating with the Android runtime
 VM.
 
-
 ## Binding Design
-
 
 ### Collections
 
@@ -82,21 +78,21 @@ provide lists, sets, and maps. We expose these elements using the
 [System.Collections.Generic](xref:System.Collections.Generic)
 interfaces in our binding. The fundamental mappings are:
 
--   [java.util.Set<E>](https://developer.android.com/reference/java/util/Set.html) maps to
-    system type [ICollection<T>](xref:System.Collections.Generic.ICollection`1),
-    helper class [Android.Runtime.JavaSet<T>](xref:Android.Runtime.JavaSet`1).
+- [java.util.Set\<E>](https://developer.android.com/reference/java/util/Set.html) maps to
+  system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
+  helper class [Android.Runtime.JavaSet\<T>](xref:Android.Runtime.JavaSet`1).
 
--   [java.util.List<E>](https://developer.android.com/reference/java/util/List.html) maps to
-    system type [IList<T>](xref:System.Collections.Generic.IList`1),
-    helper class [Android.Runtime.JavaList<T>](xref:Android.Runtime.JavaList`1).
+- [java.util.List\<E>](https://developer.android.com/reference/java/util/List.html) maps to
+  system type [IList\<T>](xref:System.Collections.Generic.IList`1),
+  helper class [Android.Runtime.JavaList\<T>](xref:Android.Runtime.JavaList`1).
 
--   [java.util.Map<K,V>](https://developer.android.com/reference/java/util/Map.html) maps to
-    system type [IDictionary<TKey,TValue>](xref:System.Collections.Generic.IDictionary`2),
-    helper class [Android.Runtime.JavaDictionary<K,V>](xref:Android.Runtime.JavaDictionary`2).
+- [java.util.Map<K,V>](https://developer.android.com/reference/java/util/Map.html) maps to
+  system type [IDictionary<TKey,TValue>](xref:System.Collections.Generic.IDictionary`2),
+  helper class [Android.Runtime.JavaDictionary<K,V>](xref:Android.Runtime.JavaDictionary`2).
 
--   [java.util.Collection<E>](https://developer.android.com/reference/java/util/Collection.html) maps to
-    system type [ICollection<T>](xref:System.Collections.Generic.ICollection`1),
-    helper class [Android.Runtime.JavaCollection<T>](xref:Android.Runtime.JavaCollection`1).
+- [java.util.Collection\<E>](https://developer.android.com/reference/java/util/Collection.html) maps to
+  system type [ICollection\<T>](xref:System.Collections.Generic.ICollection`1),
+  helper class [Android.Runtime.JavaCollection\<T>](xref:Android.Runtime.JavaCollection`1).
 
 We have provided helper classes to facilitate faster copyless
 marshaling of these types. When possible, we recommend using these
@@ -139,25 +135,22 @@ if (goodSource.Count != 4) // false
     throw new InvalidOperationException ("should not be reached.");
 ```
 
-
 ### Properties
 
 Java methods are transformed into properties, when appropriate:
 
--  The Java method pair `T getFoo()` and `void setFoo(T)` are
-   transformed into the `Foo` property. Example:
-   [Activity.Intent](xref:Android.App.Activity.Intent).
+- The Java method pair `T getFoo()` and `void setFoo(T)` are
+  transformed into the `Foo` property. Example:
+  [Activity.Intent](xref:Android.App.Activity.Intent).
 
--  The Java method `getFoo()` is transformed into the read-only Foo
-   property. Example:
-   [Context.PackageName](xref:Android.Content.Context.PackageName).
+- The Java method `getFoo()` is transformed into the read-only Foo
+  property. Example:
+  [Context.PackageName](xref:Android.Content.Context.PackageName).
 
--  Set-only properties are not generated.
+- Set-only properties are not generated.
 
--  Properties are *not* generated if the property type would be an
-   array.
-
-
+- Properties are *not* generated if the property type would be an
+  array.
 
 ### Events and Listeners
 
@@ -218,7 +211,6 @@ event-registration method:
    `Listener` , e.g.
    [View.OnClick *Listener*](xref:Android.Views.View.IOnClickListener).
 
-
 Furthermore, if the Listener interface method has a return type of
 **boolean** instead of **void**, then the generated *EventArgs*
 subclass will contain a *Handled* property. The value of the *Handled*
@@ -259,7 +251,6 @@ implementing the listener interface on a subclass of
 [Java.Lang.Object](xref:Java.Lang.Object) or any other wrapped
 Java object, such as an Android activity.
 
-
 ### Runnables
 
 Java utilizes the
@@ -289,11 +280,10 @@ We left the
 of replacing them since several types implement the interface and can
 therefore be passed as runnables directly.
 
-
 ### Inner Classes
 
 Java has two different types of
-[nested classes](http://download.oracle.com/javase/tutorial/java/javaOO/nested.html):
+[nested classes](https://download.oracle.com/javase/tutorial/java/javaOO/nested.html):
 static nested classes and non-static classes.
 
 Java static nested classes are identical to C# nested types.
@@ -328,17 +318,17 @@ An example derivation of an inner class is CubeWallpaper.CubeEngine:
 
 ```csharp
 class CubeWallpaper : WallpaperService {
-        public override WallpaperService.Engine OnCreateEngine ()
-        {
-                return new CubeEngine (this);
-        }
+    public override WallpaperService.Engine OnCreateEngine ()
+    {
+        return new CubeEngine (this);
+    }
 
-        class CubeEngine : WallpaperService.Engine {
-                public CubeEngine (CubeWallpaper s)
-                        : base (s)
-                {
-                }
+    class CubeEngine : WallpaperService.Engine {
+        public CubeEngine (CubeWallpaper s)
+                : base (s)
+        {
         }
+    }
 }
 ```
 
@@ -379,9 +369,9 @@ constants. The *Parcelable* interface methods are placed into the
 The *Parcelable* interface constants are placed into the
 [Android.OS.ParcelableConsts](xref:Android.OS.ParcelableConsts)
 type. The nested
-[android.os.Parcelable.ClassLoaderCreator&lt;T>](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html)
+[android.os.Parcelable.ClassLoaderCreator\<T>](https://developer.android.com/reference/android/os/Parcelable.ClassLoaderCreator.html)
 and
-[android.os.Parcelable.Creator&lt;T>](https://developer.android.com/reference/android/os/Parcelable.Creator.html)
+[android.os.Parcelable.Creator\<T>](https://developer.android.com/reference/android/os/Parcelable.Creator.html)
 types are currently not bound due to limitations in our generics
 support; if they were supported, they would be present as the
 *Android.OS.IParcelableClassLoaderCreator* and
@@ -393,10 +383,10 @@ interface.
 
 > [!NOTE]
 > Beginning with Xamarin.Android 1.9, Java interface
-constants are _duplicated_ in an effort to simplify porting Java
-code. This helps to improve porting Java code that relies on
-[android provider](https://developer.android.com/reference/android/provider/package-summary.html)
-interface constants.
+> constants are _duplicated_ in an effort to simplify porting Java
+> code. This helps to improve porting Java code that relies on
+> [android provider](https://developer.android.com/reference/android/provider/package-summary.html)
+> interface constants.
 
 In addition to the above types, there are four further changes:
 
@@ -411,7 +401,6 @@ In addition to the above types, there are four further changes:
    implemented interfaces.
 
 1. The *Consts* type is now obsolete.
-
 
 For the *android.os.Parcelable* interface, this means that there will
 now be an
@@ -460,7 +449,6 @@ Finally, types with a *Consts* suffix such as
 introduced InterfaceConsts nested types. They will be removed in
 Xamarin.Android 3.0.
 
-
 ## Resources
 
 Images, layout descriptions, binary blobs and string dictionaries can
@@ -475,21 +463,23 @@ For example, a sample Android app that contains a user interface layout
 and some icons ( `drawable-*/icon.png`) would keep its resources in the
 "Resources" directory of the application:
 
-    Resources/
-        drawable-hdpi/
-            icon.png
+```
+Resources/
+    drawable-hdpi/
+        icon.png
 
-        drawable-ldpi/
-            icon.png
+    drawable-ldpi/
+        icon.png
 
-        drawable-mdpi/
-            icon.png
+    drawable-mdpi/
+        icon.png
 
-        layout/
-            main.axml
+    layout/
+        main.axml
 
-        values/
-            strings.xml
+    values/
+        strings.xml
+```
 
 The native Android APIs do not operate directly with filenames, but
 instead operate on resource IDs. When you compile an Android
@@ -520,7 +510,6 @@ You would then use `Resource.Drawable.icon` to reference the
 `drawable/icon.png` file, or `Resource.Layout.main` to reference the
 `layout/main.xml` file, or `Resource.String.first_string` to reference
 the first string in the dictionary file `values/strings.xml`.
-
 
 ## Constants and Enumerations
 

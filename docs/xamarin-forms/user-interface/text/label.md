@@ -6,7 +6,7 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2019
+ms.date: 10/28/2019
 ---
 
 # Xamarin.Forms Label
@@ -43,10 +43,27 @@ var bothLabel = new Label { Text = "This is underlined text with strikethrough."
 
 The following screenshots show the `TextDecorations` enumeration members applied to [`Label`](xref:Xamarin.Forms.Label) instances:
 
-![](label-images/label-textdecorations.png "Labels with Text Decorations")
+![Labels with Text Decorations](label-images/label-textdecorations.png)
 
 > [!NOTE]
 > Text decorations can also be applied to [`Span`](xref:Xamarin.Forms.Span) instances. For more information about the `Span` class, see [Formatted Text](#Formatted_Text).
+
+## Character spacing
+
+Character spacing can be applied to [`Label`](xref:Xamarin.Forms.Label) instances by setting the `Label.CharacterSpacing` property to a `double` value:
+
+```xaml
+<Label Text="Character spaced text"
+       CharacterSpacing="10" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 };
+```
+
+The result is that characters in the text displayed by the [`Label`](xref:Xamarin.Forms.Label) are spaced `CharacterSpacing` device-independent units apart.
 
 ## Colors
 
@@ -86,7 +103,7 @@ public partial class LabelPage : ContentPage
 
 The following screenshots show the result of setting the `TextColor` property:
 
-![](label-images/textcolor.png "Label TextColor Example")
+![Label TextColor Example](label-images/textcolor.png)
 
 For more information about colors, see [Colors](~/xamarin-forms/user-interface/colors.md).
 
@@ -107,11 +124,12 @@ Labels can be set to handle text that can't fit on one line in one of several wa
 - **TailTruncation** &ndash; shows the beginning of the text, truncating the end.
 - **WordWrap** &ndash; wraps text at the word boundary.
 
-## Displaying a specific number of lines
+## Display a specific number of lines
 
 The number of lines displayed by a [`Label`](xref:Xamarin.Forms.Label) can be specified by setting the `Label.MaxLines` property to a `int` value:
 
-- When `MaxLines` is 0, the `Label` respects the value of the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property to either show just one line, possibly truncated, or all lines with all text.
+- When `MaxLines` is -1, which is its default value, the `Label` respects the value of the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property to either show just one line, possibly truncated, or all lines with all text.
+- When `MaxLines` is 0, the `Label` isn't displayed.
 - When `MaxLines` is 1, the result is identical to setting the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode), [`HeadTruncation`](xref:Xamarin.Forms.LineBreakMode), [`MiddleTruncation`](xref:Xamarin.Forms.LineBreakMode), or [`TailTruncation`](xref:Xamarin.Forms.LineBreakMode). However, the `Label` will respect the value of the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property with regard to placement of an ellipsis, if applicable.
 - When `MaxLines` is greater than 1, the `Label` will display up to the specified number of lines, while respecting the value of the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property with regard to placement of an ellipsis, if applicable. However, setting the `MaxLines` property to a value greater than 1 has no effect if the [`LineBreakMode`](xref:Xamarin.Forms.Label.LineBreakMode) property is set to [`NoWrap`](xref:Xamarin.Forms.LineBreakMode).
 
@@ -135,7 +153,52 @@ var label =
 
 The following screenshots show the result of setting the `MaxLines` property to 2, when the text is long enough to occupy more than 2 lines:
 
-![](label-images/label-maxlines.png "Label MaxLines Example")
+![Label MaxLines Example](label-images/label-maxlines.png)
+
+## Display HTML
+
+The [`Label`](xref:Xamarin.Forms.Label) class has a `TextType` property, which determines whether the `Label` instance should display plain text, or HTML text. This property should be set to one of the members of the `TextType` enumeration:
+
+- `Text` indicates that the `Label` will display plain text, and is the default value of the `Label.TextType` property.
+- `Html` indicates that the `Label` will display HTML text.
+
+Therefore, [`Label`](xref:Xamarin.Forms.Label) instances can display HTML by setting the `Label.TextType` property to `Html`, and the `Label.Text` property to a HTML string:
+
+```csharp
+Label label = new Label
+{
+    Text = "This is <strong style=\"color:red\">HTML</strong> text.",
+    TextType = TextType.Html
+};
+```
+
+In the example above, the double quote characters in the HTML have to be escaped using the `\` symbol.
+
+In XAML, HTML strings can become unreadable due to additionally escaping the `<` and `>` symbols:
+
+```xaml
+<Label Text="This is &lt;strong style=&quot;color:red&quot;&gt;HTML&lt;/strong&gt; text."
+       TextType="Html"  />
+```
+
+Alternatively, for greater readability the HTML can be inlined in a `CDATA` section:
+
+```xaml
+<Label TextType="Html">
+    <![CDATA[
+    This is <strong style="color:red">HTML</strong> text.
+    ]]>
+</Label>
+```
+
+In this example, the `Label.Text` property is set to the HTML string that's inlined in the `CDATA` section. This works because the `Text` property is the `ContentProperty` for the `Label` class.
+
+The following screenshots show a [`Label`](xref:Xamarin.Forms.Label) displaying HTML:
+
+![Screenshots of a Label displaying HTML, on iOS and Android](label-images/label-html.png)
+
+> [!IMPORTANT]
+> Displaying HTML in a [`Label`](xref:Xamarin.Forms.Label) is limited to the HTML tags that are supported by the underlying platform.
 
 <a name="Formatted_Text" />
 
@@ -146,6 +209,7 @@ Labels expose a [`FormattedText`](xref:Xamarin.Forms.Label.FormattedText) proper
 The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.FormattedString), which comprises one or more [`Span`](xref:Xamarin.Forms.Span) instances, set via the [`Spans`](xref:Xamarin.Forms.FormattedString.Spans) property. The following `Span` properties can be used to set visual appearance:
 
 - [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor) – the color of the span background.
+- `CharacterSpacing`, of type `double`, is the spacing between characters of the `Span` text.
 - [`Font`](xref:Xamarin.Forms.Span.Font) – the font for the text in the span.
 - [`FontAttributes`](xref:Xamarin.Forms.Span.FontAttributes) – the font attributes for the text in the span.
 - [`FontFamily`](xref:Xamarin.Forms.Span.FontFamily) – the font family to which the font for the text in the span belongs.
@@ -157,10 +221,12 @@ The `FormattedText` property is of type [`FormattedString`](xref:Xamarin.Forms.F
 - [`TextColor`](xref:Xamarin.Forms.Span.TextColor) – the color for the text in the span.
 - `TextDecorations` - the decorations to apply to the text in the span. For more information, see [Text Decorations](#text-decorations).
 
-> [!NOTE]
-> The [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor), [`Text`](xref:Xamarin.Forms.Span.Text), and [`Text`](xref:Xamarin.Forms.Span.Text) bindable properties have a default binding mode of [`OneWay`](xref:Xamarin.Forms.BindingMode). For more information about this binding mode, see [The Default Binding Mode](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) in the [Binding Mode](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) guide.
+The [`BackgroundColor`](xref:Xamarin.Forms.Span.BackgroundColor), [`Text`](xref:Xamarin.Forms.Span.Text), and [`Text`](xref:Xamarin.Forms.Span.Text) bindable properties have a default binding mode of [`OneWay`](xref:Xamarin.Forms.BindingMode). For more information about this binding mode, see [The Default Binding Mode](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md#the-default-binding-mode) in the [Binding Mode](~/xamarin-forms/app-fundamentals/data-binding/binding-mode.md) guide.
 
 In addition, the [`GestureRecognizers`](xref:Xamarin.Forms.GestureElement.GestureRecognizers) property can be used to define a collection of gesture recognizers that will respond to gestures on the [`Span`](xref:Xamarin.Forms.Span).
+
+> [!NOTE]
+> It's not possible to display HTML in a [`Span`](xref:Xamarin.Forms.Span).
 
 The following XAML example demonstrates a `FormattedText` property that consists of three [`Span`](xref:Xamarin.Forms.Span) instances:
 
@@ -218,13 +284,14 @@ Note that a [`Span`](xref:Xamarin.Forms.Span) can also respond to any gestures t
 
 The following screenshots show the result of setting the `FormattedString` property to three `Span` instances:
 
-![](label-images/formattedtext.png "Label FormattedText Example")
+![Label FormattedText Example](label-images/formattedtext.png)
 
 ## Line height
 
 The vertical height of a [`Label`](xref:Xamarin.Forms.Label) and a [`Span`](xref:Xamarin.Forms.Span) can be customized by setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property or [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) to a `double` value. On iOS and Android these values are multipliers of the original line height, and on the Universal Windows Platform (UWP) the `Label.LineHeight` property value is a multiplier of the label font size.
 
 > [!NOTE]
+>
 > - On iOS, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) and [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) properties change the line height of text that fits on a single line, and text that wraps onto multiple lines.
 > - On Android, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) and [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) properties only change the line height of text that wraps onto multiple lines.
 > - On UWP, the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property changes the line height of text that wraps onto multiple lines, and the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property has no effect.
@@ -249,7 +316,7 @@ var label =
 
 The following screenshots show the result of setting the [`Label.LineHeight`](xref:Xamarin.Forms.Label.LineHeight) property to 1.8:
 
-![](label-images/label-lineheight.png "Label LineHeight Example")
+![Label LineHeight Example](label-images/label-lineheight.png)
 
 The following XAML example demonstrates setting the [`LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property on a [`Span`](xref:Xamarin.Forms.Span):
 
@@ -289,7 +356,48 @@ var label = new Label
 
 The following screenshots show the result of setting the [`Span.LineHeight`](xref:Xamarin.Forms.Span.LineHeight) property to 1.8:
 
-![](label-images/span-lineheight.png "Span LineHeight Example")
+![Span LineHeight Example](label-images/span-lineheight.png)
+
+## Padding
+
+Padding represents the space between an element and its child elements, and is used to separate the element from its own content. Padding can be applied to [`Label`](xref:Xamarin.Forms.Label) instances by setting the `Label.Padding` property to a [`Thickness`](xref:Xamarin.Forms.Thickness) value:
+
+```xaml
+<Label Padding="10">
+    <Label.FormattedText>
+        <FormattedString>
+            <Span Text="Lorem ipsum" />
+            <Span Text="dolor sit amet." />
+        </FormattedString>
+    </Label.FormattedText>
+</Label>
+```
+
+The equivalent C# code is:
+
+```csharp
+FormattedString formattedString = new FormattedString();
+formattedString.Spans.Add(new Span
+{
+  Text = "Lorem ipsum"
+});
+formattedString.Spans.Add(new Span
+{
+  Text = "dolor sit amet."
+});
+Label label = new Label
+{
+    FormattedText = formattedString,
+    Padding = new Thickness(20)
+};
+```
+
+> [!IMPORTANT]
+> On iOS, when a [`Label`](xref:Xamarin.Forms.Label) is created that sets the `Padding` property, padding will be applied and the padding value can be updated later. However, when a `Label` is created that doesn't set the `Padding` property, attempting to set it later will have no effect.
+>
+> On Android and the Universal Windows Platform, the `Padding` property value can be specified when the `Label` is created, or later.
+
+For more information about padding, see [Margins and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 ## Hyperlinks
 
@@ -332,22 +440,18 @@ The code-behind for the XAML page contains the `TapCommand` implementation:
 ```csharp
 public partial class MainPage : ContentPage
 {
-    public ICommand TapCommand => new Command<string>(OpenBrowser);
+    // Launcher.OpenAsync is provided by Xamarin.Essentials.
+    public ICommand TapCommand => new Command<string>(async (url) => await Launcher.OpenAsync(url));
 
     public MainPage()
     {
         InitializeComponent();
         BindingContext = this;
     }
-
-    void OpenBrowser(string url)
-    {
-        Device.OpenUri(new Uri(url));
-    }
 }
 ```
 
-The `TapCommand` executes the `OpenBrowser` method, passing the [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) property value as a parameter. In turn, this method calls the [`Device.OpenUri`](xref:Xamarin.Forms.Device.OpenUri*) method to open the URL in a web browser. Therefore, the overall effect is that when the hyperlink is tapped on the page, a web browser appears and the URL associated with the hyperlink is navigated to.
+The `TapCommand` executes the `Launcher.OpenAsync` method, passing the [`TapGestureRecognizer.CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) property value as a parameter. The `Launcher.OpenAsync` method is provided by Xamarin.Essentials, and opens the URL in a web browser. Therefore, the overall effect is that when the hyperlink is tapped on the page, a web browser appears and the URL associated with the hyperlink is navigated to.
 
 ### Creating a reusable hyperlink class
 
@@ -373,13 +477,14 @@ public class HyperlinkSpan : Span
         TextColor = Color.Blue;
         GestureRecognizers.Add(new TapGestureRecognizer
         {
-            Command = new Command(() => Device.OpenUri(new Uri(Url)))
+            // Launcher.OpenAsync is provided by Xamarin.Essentials.
+            Command = new Command(async () => await Launcher.OpenAsync(Url))
         });
     }
 }
 ```
 
-The `HyperlinkSpan` class defines a `Url` property, and associated [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), and the constructor sets the hyperlink appearance and the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) that will respond when the hyperlink is tapped. When a `HyperlinkSpan` is tapped, the `TapGestureRecognizer` will respond by executing the [`Device.OpenUri`](xref:Xamarin.Forms.Device.OpenUri*) method to open the URL, specified by the `Url` property, in a web browser.
+The `HyperlinkSpan` class defines a `Url` property, and associated [`BindableProperty`](xref:Xamarin.Forms.BindableProperty), and the constructor sets the hyperlink appearance and the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) that will respond when the hyperlink is tapped. When a `HyperlinkSpan` is tapped, the `TapGestureRecognizer` will respond by executing the `Launcher.OpenAsync` method to open the URL, specified by the `Url` property, in a web browser.
 
 The `HyperlinkSpan` class can be consumed by adding an instance of the class to the XAML:
 

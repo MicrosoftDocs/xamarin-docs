@@ -4,8 +4,8 @@ description: "This document provides an introduction to storyboards in Xamarin.i
 ms.prod: xamarin
 ms.assetid: A3339BD2-9F56-7965-25F5-4B7C991EB775
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -21,7 +21,6 @@ of the application's user interface.
 
 A Storyboard can be created, opened and edited with the Xamarin iOS Designer. This guide will also walkthrough how to use the 
 Designer to create your storyboards while using C# to program the navigation.
-
 
 ## Requirements
 
@@ -82,21 +81,21 @@ There are different types of transitions, each giving control over how a new vie
 it interacts with other view controllers in the Storyboard. These are explained below. It is also possible to subclass a segue 
 object to implement a custom transition:
 
--  **Show / Push** – A push segue adds the view controller to the navigation stack. It assumes the view controller originating the 
+- **Show / Push** – A push segue adds the view controller to the navigation stack. It assumes the view controller originating the 
 push is part of the same navigation controller as the view controller that is being added to the stack. This does the same 
 thing as  `pushViewController` , and is generally used when there is some relationship between the data on the screens. Using the 
 push segue gives you the luxury of having a navigation bar with a back button and title added to each view on the stack, allowing 
 drill down navigation through the view hierarchy.
--  **Modal** – A modal segue create a relationship between any two view controllers in your project, with the option of an 
+- **Modal** – A modal segue create a relationship between any two view controllers in your project, with the option of an 
 animated transition being shown. The child view controller will completely obscure the parent view controller when brought into 
 view. Unlike a push segue, which adds a back button for us; when using a modal segue  `DismissViewController` must be used in 
 order to return to the previous view controller.
--  **Custom** – Any custom segue can be created as a subclass of `UIStoryboardSegue`.
--  **Unwind** – An unwind segue can be used to navigate back through a push or modal segue – for example, by dismissing the 
+- **Custom** – Any custom segue can be created as a subclass of `UIStoryboardSegue`.
+- **Unwind** – An unwind segue can be used to navigate back through a push or modal segue – for example, by dismissing the 
 modally-presented view controller. In addition to this, you can unwind through not only one, but a series of push and modal 
 segues and go back multiple steps in your navigation hierarchy with a single unwind action. To understand how to use an unwind 
 segue in the iOS, read the  [Creating Unwind Segues](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) recipe.
--  **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the 
+- **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the 
 user will see first. It is represented by the segue shown below:  
 
     [![](images/sourcelesssegue.png "A sourceless segue")](images/sourcelesssegue.png#lightbox)
@@ -104,7 +103,7 @@ user will see first. It is represented by the segue shown below:
 ### Adaptive Segue Types
 
  iOS 8 introduced [Size Classes](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) to allow an iOS storyboard file to work with all available screen sizes, enabling developers to create one UI for all iOS devices. By default, all new Xamarin.iOS applications will use size classes. To use size classes from an older project, refer to the [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guide. 
- 
+
 Any application using Size Classes will also use the new [*Adaptive Segues*](~/ios/user-interface/storyboards/unified-storyboards.md). When using size classes, remember that we aren't directly specifying wether we are using an iPhone or iPad. In other words we are creating one UI that will always look the same, regardless of how much real estate it has to work with. Adaptive Segues work by judging the environment, and determining how best to present content. The Adaptive Segues are shown below: 
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
@@ -119,7 +118,6 @@ Any application using Size Classes will also use the new [*Adaptive Segues*](~/i
 ### Transferring Data with Segues
 
 The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) sample, demonstrates this: 
-
 
 ```csharp
 public override void PrepareForSegue (UIStoryboardSegue segue, 
@@ -172,12 +170,14 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (See below), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window and then makes the window visible on the screen.
 
 3. In the `AppDelegate`, override the default `Window` method, with the following code to implement the window property:
-        
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 # [Visual Studio](#tab/windows)
 
 1. Create a new Storyboard file by right-clicking on the project to **Add > New File > iOS > Empty Storyboard**, as illustrated below: 
@@ -192,11 +192,13 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
 
 3. In the `AppDelegate`, override the default `Window` method, with the following code to implement the window property:
 
-        public override UIWindow Window {
-            get;
-            set;
-            }
-            
+    ```csharp
+    public override UIWindow Window {
+        get;
+        set;
+    }
+    ```
+
 -----
 
 ## Creating a Storyboard with the iOS Designer
@@ -283,7 +285,6 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-
 When creating a Storyboard using the Designer, the IDE will automatically add the [[Register]](xref:Foundation.RegisterAttribute) attribute at the top of the `designer.cs` class, and pass in a string identifier, which is identical to the Storyboard ID specified in the previous step. This will link the C# to the relevant scene in the Storyboard.
 
 At some point you might want to add an existing class which was **not** created in the designer. In this case, you would Register this class as normal:
@@ -300,7 +301,7 @@ public MainViewController (IntPtr handle) : base (handle)
 }
 ```
 
-For more information on registering classes and methods, refer to the [Type Registrar](http://docs.xamarin.com/guides/ios/advanced_topics/registrar/) documentation.
+For more information on registering classes and methods, refer to the [Type Registrar](https://docs.microsoft.com/xamarin/ios/internals/registrar) documentation.
 
 The last step in this class is to wire up the button and the transition to the pink view controller. We'll instantiate the `PinkViewController` from the Storyboard; then, we will program a push segue with `PushViewController`, as illustrated by the example code below:
 
@@ -371,7 +372,6 @@ Before we begin, follow through steps 1 – 8 above. In these steps we create ou
 3. Click on the Segue and give it the *Identifier* `SegueToPink`:
 
     [![](images/namesegue.png "Click on the Segue and give it the Identifier SegueToPink")](images/namesegue.png#lightbox)  
-    
 
 4. Finally, add the following ShouldPerformSegue method to the `MainViewController` class:
 
@@ -520,8 +520,6 @@ When the app is run and the user clicks on the UI element that you created the S
 ## Summary
 
 This article introduces the concept of Storyboards and how they can be beneficial in the development of iOS applications. It discusses scenes, view controllers, views and view hierarchies and how scenes are linked together with different types of Segues.  It also explores instantiating view controllers manually from a storyboard, and creating conditional Segues.
-
-
 
 ## Related Links
 

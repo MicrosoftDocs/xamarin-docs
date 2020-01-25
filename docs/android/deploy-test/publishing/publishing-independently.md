@@ -3,8 +3,8 @@ title: "Publishing Independently"
 ms.prod: xamarin
 ms.assetid: 6FB4DEF2-01AD-C5FE-0950-CE1BF088A9C6
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -19,21 +19,20 @@ publishing methods and the licensing levels of Xamarin.Android.
 A number of licenses are available for development, deployment, and
 distribution of Xamarin.Android apps:
 
--   **Visual Studio Community** &ndash; For students, small teams, and
+- **Visual Studio Community** &ndash; For students, small teams, and
     OSS developers who use Windows.
 
--   **Visual Studio Professional** &ndash; For individual developers or
+- **Visual Studio Professional** &ndash; For individual developers or
     small teams (Windows only). This license offers a standard or cloud
     subscription and no usage restrictions.
 
--   **Visual Studio Enterprise** &ndash; For teams of any size (Windows
+- **Visual Studio Enterprise** &ndash; For teams of any size (Windows
     only). This license includes enterprise capabilities, a standard or
     cloud subscription.
 
 Visit the [visualstudio.com](https://visualstudio.microsoft.com/xamarin/) to download the
 Community Edition or to learn more about purchasing the Professional
 and Enterprise editions.
-
 
 ## Allow Installation from Unknown Sources
 
@@ -46,11 +45,8 @@ Security**, as shown in the following diagram:
 
 [![Security settings screen](publishing-independently-images/settings.png)](publishing-independently-images/settings.png#lightbox)
 
-
 > [!IMPORTANT]
 > Some network providers might prevent the installation of applications from unknown sources, regardless of this setting.
-
-
 
 ## Publishing by E-Mail
 
@@ -66,7 +62,6 @@ against piracy or unauthorized distribution. It is best reserved for
 situations where the recipients of the application are few, and they
 are trusted not to distribute the application.
 
-
 ## Publishing by Web
 
 It is possible to distribute an application by a web server. This is
@@ -75,14 +70,13 @@ providing a download link to users. When an Android-powered device
 browses to a link and then downloads the application, that application
 will automatically be installed once the download is complete.
 
-
 ## Manually Installing an APK
 
 Manual installation is a third option for installing applications. To effect
 a manual installation of an application:
 
-1.   **Distribute a copy of the APK to user** &ndash; For example, this copy may be distributed on a CD or USB flash drive.
-1.   **(The user) installs the application on an Android device**  &ndash; Use the command-line *Android Debug Bridge* (**adb**) tool. **adb** is a versatile command-line tool that enables communication with either an emulator instance or an Android-powered device. The Android SDK includes **adb**; it can be found in the directory **<sdk>/platform-tools/**.
+1. **Distribute a copy of the APK to user** &ndash; For example, this copy may be distributed on a CD or USB flash drive.
+1. **(The user) installs the application on an Android device**  &ndash; Use the command-line *Android Debug Bridge* (**adb**) tool. **adb** is a versatile command-line tool that enables communication with either an emulator instance or an Android-powered device. The Android SDK includes **adb**; it can be found in the directory **\<sdk>/platform-tools/**.
 
 The Android device must be connected with a USB cable to the computer.
 Windows computers might also require additional USB drivers from the

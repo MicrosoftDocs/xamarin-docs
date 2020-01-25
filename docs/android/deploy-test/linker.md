@@ -3,8 +3,8 @@ title: "Linking on Android"
 ms.prod: xamarin
 ms.assetid: 3528E195-AA74-90AF-B5F3-3B65FB4F0BB8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2018
 ---
 
@@ -26,8 +26,6 @@ For example, the [Hello, Android](https://docs.microsoft.com/samples/xamarin/mon
 
 Linking results in a package that is 30% the size of the original
 (unlinked) package in 1.2.0, and 18% of the unlinked package in 4.0.1.
-
-
 
 ## Control
 
@@ -52,16 +50,14 @@ public class MyActivity {
 }
 ```
 
-
 ### Linker Behavior
 
 The primary mechanism for controlling the linker is the **Linker Behavior** (*Linking* in Visual Studio)
 drop-down within the **Project Options** dialog box. There are three options:
 
-1.  **Don't Link** (*None* in Visual Studio)
-1.  **Link SDK Assemblies** (*Sdk Assemblies Only*)
-1.  **Link All Assemblies** (*Sdk and User Assemblies*)
-
+1. **Don't Link** (*None* in Visual Studio)
+1. **Link SDK Assemblies** (*Sdk Assemblies Only*)
+1. **Link All Assemblies** (*Sdk and User Assemblies*)
 
 The **Don't Link** option turns off the linker; the above "Release
 without Linking" application size example used this behavior. This is useful for
@@ -97,19 +93,18 @@ E/mono    (17755):   at Android.App.Activity.n_OnCreate_Landroid_os_Bundle_ (Int
 E/mono    (17755):   at (wrapper dynamic-method) object:95bb4fbe-bef8-4e5b-8e99-ca83a5d7a124 (intptr,intptr,intptr)
 ```
 
-
 ### Preserving Code
 
 The linker will sometimes remove code that you want to
 preserve. For example:
 
--   You might have code that you call dynamically via
+- You might have code that you call dynamically via
     `System.Reflection.MemberInfo.Invoke`.
 
--   If you instantiate types dynamically, you may want to preserve the
+- If you instantiate types dynamically, you may want to preserve the
     default constructor of your types.
 
--   If you use XML serialization, you may want to preserve the
+- If you use XML serialization, you may want to preserve the
     properties of your types.
 
 In these cases, you can use the
@@ -181,8 +176,6 @@ In the above examples, the `Preserve` attribute is declared in the
 attribute in any namespace because the linker looks up this attribute
 by type name.
 
-
-
 ### falseflag
 
 If the [Preserve] attribute can't be used, it is often useful to provide a
@@ -208,8 +201,6 @@ class MyActivity {
 }
 ```
 
-
-
 ### linkskip
 
 It is possible to specify that a set of user-provided assemblies should not
@@ -221,7 +212,6 @@ be linked at all, while allowing other user assemblies to be skipped with the *L
 </PropertyGroup>
 ```
 
-
 ### LinkDescription
 
 The [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
@@ -230,36 +220,32 @@ The [`@(LinkDescription)`](~/android/deploy-test/building-apps/build-process.md)
 file. Custom linker configuration files may be required to preserve
 `internal` or `private` members that need to be preserved.
 
-
-
 ### Custom Attributes
 
 When an assembly is linked, the following custom attribute types will be
 removed from all members:
 
--  System.ObsoleteAttribute
--  System.MonoDocumentationNoteAttribute
--  System.MonoExtensionAttribute
--  System.MonoInternalNoteAttribute
--  System.MonoLimitationAttribute
--  System.MonoNotSupportedAttribute
--  System.MonoTODOAttribute
--  System.Xml.MonoFIXAttribute
-
+- System.ObsoleteAttribute
+- System.MonoDocumentationNoteAttribute
+- System.MonoExtensionAttribute
+- System.MonoInternalNoteAttribute
+- System.MonoLimitationAttribute
+- System.MonoNotSupportedAttribute
+- System.MonoTODOAttribute
+- System.Xml.MonoFIXAttribute
 
 When an assembly is linked, the following custom attribute types will be
 removed from all members in Release builds:
 
--  System.Diagnostics.DebuggableAttribute
--  System.Diagnostics.DebuggerBrowsableAttribute
--  System.Diagnostics.DebuggerDisplayAttribute
--  System.Diagnostics.DebuggerHiddenAttribute
--  System.Diagnostics.DebuggerNonUserCodeAttribute
--  System.Diagnostics.DebuggerStepperBoundaryAttribute
--  System.Diagnostics.DebuggerStepThroughAttribute
--  System.Diagnostics.DebuggerTypeProxyAttribute
--  System.Diagnostics.DebuggerVisualizerAttribute
-
+- System.Diagnostics.DebuggableAttribute
+- System.Diagnostics.DebuggerBrowsableAttribute
+- System.Diagnostics.DebuggerDisplayAttribute
+- System.Diagnostics.DebuggerHiddenAttribute
+- System.Diagnostics.DebuggerNonUserCodeAttribute
+- System.Diagnostics.DebuggerStepperBoundaryAttribute
+- System.Diagnostics.DebuggerStepThroughAttribute
+- System.Diagnostics.DebuggerTypeProxyAttribute
+- System.Diagnostics.DebuggerVisualizerAttribute
 
 ## Related Links
 

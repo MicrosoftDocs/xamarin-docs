@@ -361,5 +361,5 @@ There are a number of limitations to be aware of when displaying a [`View`](xref
 - [PassingData (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-passingdata)
 - [LoginFlow (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-loginflow)
 - [TitleView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-titleview)
-- [How to Create a Sign In Screen Flow in Xamarin.Forms video](https://university.xamarin.com/lightninglectures/how-to-create-a-sign-in-screen-flow-in-xamarinforms)
+- [How to Create a Sign In Screen Flow in Xamarin.Forms video](https://www.youtube.com/watch?v=qKQ7pyyG1fo)
 - [NavigationPage](xref:Xamarin.Forms.NavigationPage)

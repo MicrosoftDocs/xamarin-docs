@@ -4,13 +4,12 @@ description: "Adding item-click event handlers to the RecyclerView example app."
 ms.prod: xamarin
 ms.assetid: 707EE1CE-C164-485B-944C-82C6795E8A24
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/13/2018
 ---
 
 # Extending the RecyclerView Example
-
 
 The basic app described in
 [A Basic RecyclerView Example](~/android/user-interface/layouts/recycler-view/recyclerview-example.md)
@@ -22,7 +21,6 @@ change (or be changed by the app), and the contents of the display
 must remain consistent with these changes. In the following sections,
 you'll learn how to handle item-click events and update `RecyclerView`
 when the underlying data source changes.
-
 
 ### Handling Item-Click Events
 
@@ -37,13 +35,13 @@ explain how the basic photo-viewing app is modified to report which
 photograph had been touched by the user. When an item-click event
 occurs in the sample app, the following sequence takes place:
 
-1.  The photograph's `CardView` detects the item-click event and
+1. The photograph's `CardView` detects the item-click event and
     notifies the adapter.
 
-2.  The adapter forwards the event (with item position information)
+2. The adapter forwards the event (with item position information)
     to the activity's item-click handler.
 
-3.  The activity's item-click handler responds to the item-click event.
+3. The activity's item-click handler responds to the item-click event.
 
 First, an event handler member called `ItemClick` is added to the 
 `PhotoAlbumAdapter` class definition:
@@ -234,7 +232,6 @@ making the two calls to `NotifyItemChanged`, but doing so would force
 `RecyclerView` to refresh the entire collection even though only two
 items in the collection had changed. Calling `NotifyItemChanged` is
 significantly more efficient than calling `NotifyDataSetChanged`.
-
 
 ## Related Links
 

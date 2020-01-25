@@ -3,8 +3,8 @@ title: "Binding Native Frameworks"
 description: "This document describes how to use Objective Sharpie's -framework option to create a binding to a library distributed as a framework."
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
 ---
 
@@ -14,9 +14,11 @@ Sometimes a native library is distributed as a [framework](https://developer.app
 
 For example, binding the [Adobe Creative SDK Framework](https://creativesdk.adobe.com/downloads.html) for iOS is straightforward:
 
-<pre>$ <b>sharpie bind \
+```
+$ sharpie bind \
     -framework AdobeCreativeSDKFoundation.framework \
-    -sdk iphoneos8.1</b></pre>
+    -sdk iphoneos8.1
+```
 
 In some cases, a framework will specify an **Info.plist** which indicates against which SDK the framework should be compiled. If this information exists and no explicit `-sdk` option is passed, Objective Sharpie will infer it from the framework's **Info.plist** (either the `DTSDKName` key or a combination of the `DTPlatformName` and `DTPlatformVersion` keys).
 
@@ -27,8 +29,10 @@ bind arguments are identical to the `-framework` shorthand above.
 Of special importance is the `-F .` framework search path provided to clang
 (note the space and period, which are required as part of the command).
 
-<pre>$ <b>sharpie bind \
+```
+$ sharpie bind \
     -sdk iphoneos8.1 \
     AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
     -scope AdobeCreativeSDKFoundation.framework/Headers \
-    -c -F .</b></pre>
+    -c -F .
+```

@@ -1,0 +1,192 @@
+### YamlMime:Landing
+
+title: Xamarin.Forms user interface
+summary: Learn about creating user interfaces with Xamarin.Forms.
+
+metadata:
+  title: Xamarin.Forms user interface
+  description: Learn about creating user interfaces with Xamarin.Forms.
+  ms.topic: landing-page
+  ms.prod: xamarin
+  ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 12/30/2019
+
+landingContent:
+  - title: Controls reference
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Overview
+            url: controls/index.md
+          - text: Pages
+            url: controls/pages.md
+          - text: Layouts
+            url: controls/layouts.md
+          - text: Views
+            url: controls/views.md
+          - text: Cells
+            url: controls/cells.md
+          - text: Common properties, methods and events
+            url: controls/common-properties.md
+          - text: Third-party controls
+            url: controls/thirdparty.md
+
+  - title: Views for presentation
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: BoxView
+            url: boxview.md
+          - text: Image
+            url: images.md
+          - text: Label
+            url: text/label.md
+          - text: Map
+            url: map/index.md
+          - text: WebView
+            url: webview.md
+
+  - title: Views that initiate commands
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Button
+            url: button.md
+          - text: ImageButton
+            url: imagebutton.md
+          - text: RefreshView
+            url: refreshview.md
+          - text: SearchBar
+            url: searchbar.md
+          - text: SwipeView
+            url: swipeview.md
+
+  - title: Views for setting values
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: CheckBox
+            url: checkbox.md
+          - text: DatePicker
+            url: datepicker.md
+          - text: Slider
+            url: slider.md
+          - text: Stepper
+            url: stepper.md
+          - text: Switch
+            url: switch.md
+          - text: TimePicker
+            url: timepicker.md
+
+  - title: Views for editing text
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Editor
+            url: text/editor.md
+          - text: Entry
+            url: text/entry.md
+
+  - title: Views to indicate activity
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: ActivityIndicator
+            url: activityindicator.md
+          - text: ProgressBar
+            url: progressbar.md
+
+  - title: Views that display collections
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: CarouselView
+            url: carouselview/index.md
+          - text: CollectionView
+            url: collectionview/index.md
+          - text: IndicatorView
+            url: indicatorview.md
+          - text: ListView
+            url: listview/index.md
+          - text: Picker
+            url: picker/index.md
+          - text: TableView
+            url: tableview.md
+
+  - title: Additional controls
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: MenuItem
+            url: menuitem.md
+          - text: ToolbarItem
+            url: toolbaritem.md
+
+  - title: User interface concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Animation
+            url: animation/index.md
+          - text: Colors
+            url: colors.md
+          - text: Display pop-ups
+            url: pop-ups.md
+          - text: Fonts
+            url: text/fonts.md
+          - text: Graphics with SkiaSharp
+            url: graphics/skiasharp/index.md
+          - text: Splash screen
+            url: splashscreen.md
+          - text: Styles
+            url: styles/index.md
+          - text: Theming
+            url: theming.md
+          - text: Visual
+            url: visual/index.md
+          - text: Visual State Manager
+            url: visual-state-manager.md
+
+  - title: Layouts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Choose a layout
+            url: layouts/choose-layout.md
+          - text: AbsoluteLayout
+            url: layouts/absolute-layout.md
+          - text: ContentView
+            url: layouts/contentview.md
+          - text: FlexLayout
+            url: layouts/flex-layout.md
+          - text: Frame
+            url: layouts/frame.md
+          - text: Grid
+            url: layouts/grid.md
+          - text: RelativeLayout
+            url: layouts/relative-layout.md
+          - text: ScrollView
+            url: layouts/scroll-view.md
+          - text: StackLayout
+            url: layouts/stack-layout.md
+
+  - title: Layout concepts
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Bindable layouts
+            url: layouts/bindable-layouts.md
+          - text: Custom layout
+            url: layouts/custom.md
+          - text: Device orientation
+            url: layouts/device-orientation.md
+          - text: LayoutOptions
+            url: layouts/layout-options.md
+          - text: Layout compression
+            url: layouts/layout-compression.md
+          - text: Margin and padding
+            url: layouts/margin-and-padding.md
+          - text: Tablet and desktop layout
+            url: layouts/tablet.md

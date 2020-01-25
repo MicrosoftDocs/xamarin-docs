@@ -4,15 +4,14 @@ description: "This guide introduces and explains how to use the ActionBar APIs t
 ms.prod: xamarin
 ms.assetid: B7E60AAF-BDA5-4305-9000-675F0438734D
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
 # Tabbed Layouts with the ActionBar
 
 _This guide introduces and explains how to use the ActionBar APIs to create a tabbed user interface in a Xamarin.Android application._
-
 
 ## Overview
 
@@ -32,8 +31,6 @@ that you should use instead of `ActionBar` (`Toolbar` was designed to
 replace `ActionBar`). For more information, see
 [Toolbar](~/android/user-interface/controls/tool-bar/index.md). 
 
-
-
 ## Requirements
 
 Any Xamarin.Android application that targets API level 11 (Android 3.0) 
@@ -46,8 +43,6 @@ Some of the ActionBar APIs have been back ported to API level 7
 which is made available to Xamarin.Android apps via the
 [Xamarin Android Support Library - V7](https://www.nuget.org/packages/Xamarin.Android.Support.v7.AppCompat/)
 package.
-
-
 
 ## Introducing Tabs in the ActionBar
 
@@ -74,14 +69,14 @@ that implements the ActionBar.ITabListener interface. This interface
 provides three callback methods that Android will invoke when the state 
 of the tab changes: 
 
--  **OnTabSelected** - This method is called when the user selects the
+- **OnTabSelected** - This method is called when the user selects the
    tab. It should display the fragment.
 
--  **OnTabReselected** - This method is called when the tab is already
+- **OnTabReselected** - This method is called when the tab is already
    selected but is selected again by the user. This callback is
    typically used to refresh/update the displayed fragment.
 
--  **OnTabUnselected** - This method is called when the user selects
+- **OnTabUnselected** - This method is called when the user selects
    another tab. This callback is used to save the state in the
    displayed fragment before it disappears.
 
@@ -90,11 +85,9 @@ Xamarin.Android wraps the `ActionBar.ITabListener` with events on the
 more of these events. There are three events (one for each method in 
 `ActionBar.ITabListener`) that an action bar tab will raise: 
 
--  TabSelected
--  TabReselected
--  TabUnselected
-
-
+- TabSelected
+- TabReselected
+- TabUnselected
 
 ### Adding Tabs to the ActionBar
 
@@ -124,7 +117,6 @@ Activity:
 4. Add the tab that was created in the previous step to the
    `ActionBar`.
 
-
 The following code is one example of using these steps to add tabs to 
 an application that uses event handlers to respond to state changes: 
 
@@ -152,7 +144,6 @@ protected override void OnCreate(Bundle bundle)
 }
 ```
 
-
 #### Event Handlers vs ActionBar.ITabListener
 
 Applications should use event handlers and `ActionBar.ITabListener` for 
@@ -169,8 +160,6 @@ performance to create a custom class that implements
 `ActionBar.ITabListener`, and sharing a single instance of the class. 
 This will reduce the number of GREF's that a Xamarin.Android 
 application is using. 
-
-
 
 ### Backwards Compatibility for Older Devices
 
@@ -235,7 +224,6 @@ public class MainActivity : ActionBarActivity, ActionBar.ITabListener
 }
 ```
 
-
 ## Summary
 
 In this guide we discussed how to create a tabbed user interface in a 
@@ -244,7 +232,6 @@ ActionBar and how an Activity can interact with tab events via the
 `ActionBar.ITabListener` interface. We also saw how the Android Support 
 Library v7 AppCompat package backports the ActionBar tabs to older 
 versions of Android. 
-
 
 ## Related Links
 

@@ -3,8 +3,8 @@ title: "Xamarin.Android LinearLayout"
 ms.prod: xamarin
 ms.assetid: B49D129C-AF24-3C5A-C833-5A34AFBB2442
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/07/2018
 ---
 
@@ -154,13 +154,11 @@ document for more about how
 [`LinearLayout`](xref:Android.Widget.LinearLayout)
 handles the `android:layout_weight` attribute.
 
-
 ## References
 
--   [`LinearLayout`](xref:Android.Widget.LinearLayout) 
--   [`TextView`](xref:Android.Widget.TextView) 
+- [`LinearLayout`](xref:Android.Widget.LinearLayout)
+- [`TextView`](xref:Android.Widget.TextView)
 
-*Portions of this page are modifications based on work created and shared by the
-Android Open Source Project and used according to terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
-
+_Portions of this page are modifications based on work created and shared by the
+Android Open Source Project and used according to terms described in the
+[Creative Commons 2.5 Attribution License](https://creativecommons.org/licenses/by/2.5/)._

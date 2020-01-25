@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/22/2019
+ms.date: 10/16/2019
 ---
 
 # Connect to Local Web Services from iOS Simulators and Android Emulators
@@ -22,7 +22,7 @@ Mobile applications running in the iOS simulator or Android emulator can consume
 However, additional work is necessary for an application running in the iOS simulator or Android emulator to consume a local web service that is exposed over HTTPS. For this scenario, the process is as follows:
 
 1. Create a self-signed development certificate on your machine. For more information, see [Create a development certificate](#create-a-development-certificate).
-1. Configure your project to use the managed `HttpClient` network stack for your debug build. For more information, see [Configure your project](#configure-your-project).
+1. Configure your project to use the appropriate `HttpClient` network stack for your debug build. For more information, see [Configure your project](#configure-your-project).
 1. Specify the address of your local machine. For more information, see [Specify the local machine address](#specify-the-local-machine-address).
 1. Bypass the local development certificate security check. For more information, see [Bypass the certificate security check](#bypass-the-certificate-security-check).
 
@@ -32,13 +32,13 @@ Each item will be discussed in turn.
 
 Installing the .NET Core SDK installs the ASP.NET Core HTTPS development certificate to the local user certificate store. However, while the certificate has been installed, it's not trusted. To trust the certificate, perform the following one-time step to run the dotnet `dev-certs` tool:
 
-```console
+```dotnetcli
 dotnet dev-certs https --trust
 ```
 
 The following command provides help on the `dev-certs` tool:
 
-```console
+```dotnetcli
 dotnet dev-certs https --help
 ```
 
@@ -61,9 +61,7 @@ However, when an application needs to connect to a secure web service running lo
 
 ### Android
 
-Xamarin applications running on Android can use the managed `HttpClientHandler` network stack, or the native `AndroidClientHandler` network stack. By default, new Android platform projects use the `AndroidClientHandler` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size.
-
-However, when an application needs to connect to a secure web service running locally, for developer testing, it's easier to use the managed network stack. Therefore it's recommended to set debug emulator build profiles to use the managed network stack, and release build profiles to use the native network stack. Each network stack can be set programmatically or via a selector in the project options. For more information, see [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md).
+Xamarin applications running on Android can use the managed `HttpClient` network stack, or the native `AndroidClientHandler` network stack. By default, new Android platform projects use the `AndroidClientHandler` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size. For more information about Android network stacks, see [HttpClient Stack and SSL/TLS Implementation selector for Android](~/android/app-fundamentals/http-stack.md).
 
 ## Specify the local machine address
 
@@ -96,7 +94,11 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 Attempting to invoke a local secure web service from an application running in the iOS simulator or Android emulator will result in a `HttpRequestException` being thrown, even when using the managed network stack on each platform. This is because the local HTTPS development certificate is self-signed, and self-signed certificates aren't trusted by iOS or Android.
 
-Therefore, it's necessary to ignore SSL errors when an application consumes a local secure web service. This can be accomplished, when using the managed network stack, by setting the `ServicePointManager.ServerCertificateValidationCallback` property to a callback that ignores the result of the certificate security check for the local HTTPS development certificate:
+Therefore, it's necessary to ignore SSL errors when an application consumes a local secure web service. The mechanism for accomplishing this is currently different on iOS and Android.
+
+### iOS
+
+SSL errors can be ignored on iOS for local secure web services, when using the managed network stack, by setting the `ServicePointManager.ServerCertificateValidationCallback` property to a callback that ignores the result of the certificate security check for the local HTTPS development certificate:
 
 ```csharp
 #if DEBUG
@@ -109,10 +111,30 @@ Therefore, it's necessary to ignore SSL errors when an application consumes a lo
 #endif
 ```
 
-In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. This code should be added to the `AppDelegate.FinishedLaunching` method on iOS and the `MainActivity.OnCreate` method on Android, prior to the `LoadApplication(new App())` method call.
+In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. This code should be added to the `AppDelegate.FinishedLaunching` method on iOS, prior to the `LoadApplication(new App())` method call.
 
 > [!NOTE]
-> The native network stacks on iOS and Android don't hook into the `ServerCertificateValidationCallback`.
+> The native network stacks on iOS don't hook into the `ServerCertificateValidationCallback`.
+
+### Android
+
+SSL errors can be ignored on Android for local secure web services, when using both the managed and native `AndroidClientHandler` network stacks, by setting the `ServerCertificateCustomValidationCallback` property on a `HttpClientHandler` object to a callback that ignores the result of the certificate security check for the local HTTPS development certificate:
+
+```csharp
+public HttpClientHandler GetInsecureHandler()
+{
+    var handler = new HttpClientHandler();
+    handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
+    {
+        if (cert.Issuer.Equals("CN=localhost"))
+            return true;
+        return errors == System.Net.Security.SslPolicyErrors.None;
+    };
+    return handler;
+}
+```
+
+In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. The resulting `HttpClientHandler` object should be passed as an argument to the `HttpClient` constructor.
 
 ## Related links
 

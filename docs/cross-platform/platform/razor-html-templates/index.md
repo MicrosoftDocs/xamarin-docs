@@ -3,8 +3,8 @@ title: "Building HTML views using Razor Templates"
 description: " Using a full-screen webpage to render HTML can be a simple and effective way to render complex formatting in a cross-platform way, especially if you already have the HTML, JavaScript and CSS from a website project."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 07/24/2018
 ---
 
@@ -36,7 +36,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadHtmlString(html, NSBundle.MainBundle.BundleUrl);
 ```
 
-See the [iOS UIWebView](http://docs.xamarin.com/recipes/ios/content_controls/web_view/) recipes for more details on using the UIWebView control.
+See the [iOS UIWebView](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/content_controls/web_view) recipes for more details on using the UIWebView control.
 
 ### Android
 
@@ -53,7 +53,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8", null);
 ```
 
-See the [Android WebView](http://docs.xamarin.com/recipes/android/controls/webview/) recipes for more details on using the WebView control.
+See the [Android WebView](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/controls/webview) recipes for more details on using the WebView control.
 
 ### Specifying the Base Directory
 
@@ -162,7 +162,7 @@ and then set the client on the web view:
 webView.SetWebViewClient (new HybridWebViewClient ());
 ```
 
-### Calling JavaScript from C#
+### Calling JavaScript from C\#
 
 In addition to telling a web view to load a new HTML page, C# code can also run JavaScript within the currently displayed page. Entire JavaScript code blocks can be created using C# strings and executed, or you can craft method calls to JavaScript already available on the page via `script` tags.
 
@@ -188,11 +188,10 @@ webView.EvaluateJavascript (js);
 
 This section has introduced the features of the web view controls on both Android and iOS that let us build hybrid applications with Xamarin, including:
 
--  The ability to load HTML from strings generated in code,
--  The ability to reference local files (CSS, JavaScript, Images or other HTML files),
--  The ability to intercept navigation requests in C# code,
--  The ability to call JavaScript from C# code.
-
+- The ability to load HTML from strings generated in code,
+- The ability to reference local files (CSS, JavaScript, Images or other HTML files),
+- The ability to intercept navigation requests in C# code,
+- The ability to call JavaScript from C# code.
 
 The next section introduces Razor, which makes it easy to create the HTML to use in hybrid apps.
 
@@ -223,15 +222,14 @@ A simple Razor template ( **RazorView.cshtml**) is shown below.
 
 Notice the following differences from a regular HTML file:
 
--  The `@` symbol has special meaning in Razor templates – it indicates that the following expression is C# to be evaluated.
+- The `@` symbol has special meaning in Razor templates – it indicates that the following expression is C# to be evaluated.
 - `@model` directive always appears as the first line of a Razor template file.
--  The `@model` directive should be followed by a Type. In this example a simple string is being passed to the template, but this could be any custom class.
--  When `@Model` is referenced throughout the template, it provides a reference to the object passed to the template when it is generated (in this example it will be a string).
--  The IDE will automatically generate partial class for templates (files with the **.cshtml** extension). You can view this code but it should not be edited.
+- The `@model` directive should be followed by a Type. In this example a simple string is being passed to the template, but this could be any custom class.
+- When `@Model` is referenced throughout the template, it provides a reference to the object passed to the template when it is generated (in this example it will be a string).
+- The IDE will automatically generate partial class for templates (files with the **.cshtml** extension). You can view this code but it should not be edited.
  ![RazorView.cshtml](images/image6_125x34.png)
  The partial class is named RazorView to match the .cshtml template file name. It is this name that is used to refer to the template in C# code.
 - `@using` statements can also be included at the top of a Razor template to include additional namespaces.
-
 
 The final HTML output can then be generated with the following C# code. Note that we specify the Model to be a string “Hello World” which will be incorporated into the rendered template output.
 
@@ -375,8 +373,6 @@ This section explains how to use build your own hybrid application using the sol
 - **iOS > App > WebView Application**
 - **ASP.NET MVC Project**
 
-
-
 The **New Solution** window looks like this for iPhone and Android projects - the solution description on the right highlights support for the Razor templating engine.
 
  ![Creating iPhone and Android solutions](images/image13_1139x959.png)
@@ -391,11 +387,10 @@ The templates give you ready-to-go application infrastructure to load a Razor te
 
 The important parts of the solution are:
 
--  Static content such as the  **style.css** file.
--  Razor .cshtml template files like  **RazorView.cshtml** .
--  Model classes that are referenced in the Razor templates such as  **ExampleModel.cs** .
--  The platform-specific class that creates the web view and renders the template, such as the  `MainActivity` on Android and the  `iPhoneHybridViewController` on iOS.
-
+- Static content such as the  **style.css** file.
+- Razor .cshtml template files like  **RazorView.cshtml** .
+- Model classes that are referenced in the Razor templates such as  **ExampleModel.cs** .
+- The platform-specific class that creates the web view and renders the template, such as the  `MainActivity` on Android and the  `iPhoneHybridViewController` on iOS.
 
 The following section explains how the projects work.
 
@@ -461,7 +456,7 @@ var parameters = System.Web.HttpUtility.ParseQueryString(resources[1]);
 
 After handling the URL, the method aborts the navigation so that the web view does not attempt to finish navigating to the custom URL.
 
-#### Manipulating the template from C#
+#### Manipulating the template from C\#
 
 Communication to a rendered HTML web view from C# is done by calling JavaScript in the web view. On iOS, this is done by calling `EvaluateJavascript` on the UIWebView:
 
@@ -487,9 +482,8 @@ The web views in the template can easily be augmented with platform-specific con
 
 The [RazorTodo](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo) repository contains two separate solutions to show the differences between a completely HTML-driven app and an app that combines HTML with native controls:
 
--  **RazorTodo** - Completely HTML-driven app using Razor templates.
--  **RazorNativeTodo** - Uses native list view controls for iOS and Android but displays the edit screen with HTML and Razor.
-
+- **RazorTodo** - Completely HTML-driven app using Razor templates.
+- **RazorNativeTodo** - Uses native list view controls for iOS and Android but displays the edit screen with HTML and Razor.
 
 These Xamarin apps run on both iOS and Android, utilizing Portable Class Libraries (PCLs) to share common code such as the database and model classes. Razor **.cshtml** templates can also be included in the PCL so they’re easily shared across platforms.
 
@@ -501,9 +495,8 @@ The **RazorTodo** app uses HTML Razor templates for the list and edit views. Thi
 
 The **RazorNativeTodo** app uses an HTML Razor template for the edit view, but implements a native scrolling list on each platform. This provides a number of benefits including:
 
--  Performance - the native scrolling controls use virtualization to ensure fast, smooth scrolling even with very long lists of data.
--  Native experience - platform-specific UI elements are easily enabled, such as the fast-scrolling index support in iOS and Android.
-
+- Performance - the native scrolling controls use virtualization to ensure fast, smooth scrolling even with very long lists of data.
+- Native experience - platform-specific UI elements are easily enabled, such as the fast-scrolling index support in iOS and Android.
 
 A key benefit of building hybrid apps with Xamarin is that you can start with a completely HTML-driven user interface (like the first sample) and then add platform-specific functionality when required (as the second sample shows). The native list screens and HTML Razor edit screens on both iOS and Android are shown below.
 
@@ -520,5 +513,5 @@ Finally it introduced the RazorTodo samples which demonstrate how to combine web
 ### Related Links
 
 - [RazorTodo Sample](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
-- [MVC 3 - Razor View Engine (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
-- [Introduction to ASP.NET Web Programming Using the Razor Syntax (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)
+- [MVC 3 - Razor View Engine (Microsoft)](https://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
+- [Introduction to ASP.NET Web Programming Using the Razor Syntax (Microsoft)](https://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)

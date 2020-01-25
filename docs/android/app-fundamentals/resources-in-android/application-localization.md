@@ -3,8 +3,8 @@ title: "Application Localization and String Resources"
 ms.prod: xamarin
 ms.assetid: 374A9DA6-1853-8B98-6954-7FE3F591C07C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
 ---
 
@@ -48,13 +48,13 @@ resources by providing the resource ID for the string:
 # [Visual Studio](#tab/windows)
 
 ![Resource strings for three languages](application-localization-images/02-resource-strings-vs.png)
- 
+
 # [Visual Studio for Mac](#tab/macos)
 
 ![Resource strings for three languages](application-localization-images/02-resource-strings-xs.png)
- 
+
 -----
- 
+
 ## Localizing Android Apps
 
 Read the [Introduction to Localization](~/cross-platform/app-fundamentals/localization.md)
@@ -63,8 +63,6 @@ for tips and guidance on localizing mobile apps.
 The [Localizing Android Apps](~/android/app-fundamentals/localization.md) guide contains
 more specific examples on how to translate strings and localize images using
 Xamarin.Android.
-
-
 
 ## Related Links
 

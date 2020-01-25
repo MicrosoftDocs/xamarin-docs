@@ -3,8 +3,8 @@ title: "Objective Sharpie Features"
 description: "This document links to various guides that help describe Objective Sharpie, how to use it, and the output that it generates."
 ms.prod: xamarin
 ms.assetid: 9A17A2C6-AFFD-41E2-BE9B-9BC1AA57E1E1
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
 ---
 

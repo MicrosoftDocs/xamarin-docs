@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: FE66A82A-6C05-4646-BC52-E806F5DC606C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
@@ -37,8 +37,8 @@ So, the `Xamarin.Android.Support.v4` NuGet package now contains the following lo
 
 If your app is targeting API Level 13 (Gingerbread 3.2) or higher:
 
-*   `Xamarin.Android.Support.v13` NuGet will automatically be added as a dependency
-*   The _type-forwarded_ `Xamarin.Android.Support.v4.dll` will be referenced in the project
+* `Xamarin.Android.Support.v13` NuGet will automatically be added as a dependency
+* The _type-forwarded_ `Xamarin.Android.Support.v4.dll` will be referenced in the project
 
 If your app is targeting anything lower than API Level 13, you will get the normal `Xamarin.Android.Support.v4.dll` binding referenced in your project.
 

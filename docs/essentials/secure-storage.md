@@ -123,7 +123,6 @@ To remove all keys, call:
 SecureStorage.RemoveAll();
 ```
 
-
 ## Platform Implementation Specifics
 
 # [Android](#tab/android)
@@ -152,13 +151,13 @@ In some cases KeyChain data is synchronized with iCloud, and uninstalling the ap
 
 Encrypted values are stored in `ApplicationData.Current.LocalSettings`, inside a container with a name of **[YOUR-APP-ID].xamarinessentials**.
 
-**SecureStorage** uses the [Preferences](preferences.md) API and follows the same data persistence outlined in the [Preferences](preferences.md#persistence) documentation.
+**SecureStorage** uses the [Preferences](preferences.md) API and follows the same data persistence outlined in the [Preferences](preferences.md#persistence) documentation. It also uses `LocalSettings` which has a restriction that the name of each setting can be 255 characters in length at most. Each setting can be up to 8K bytes in size and each composite setting can be up to 64K bytes in size.
 
 -----
 
 ## Limitations
 
-This API is intended to store small amounts of text.  Performance may be slow if you try to use it to store large amounts of text.
+This API is intended to store small amounts of text.  Performance may be slow if you try to use it to store large amounts of text. 
 
 ## API
 

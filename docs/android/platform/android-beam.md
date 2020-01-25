@@ -3,15 +3,15 @@ title: "Android Beam"
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/06/2017
 ---
 
 # Android Beam
 
-Android Beam is a Near Field Communication (NFC) technology introduced in 
-Android 4.0 that allows applications to share information over NFC when 
+Android Beam is a Near Field Communication (NFC) technology introduced in
+Android 4.0 that allows applications to share information over NFC when
 in close proximity.
 
 [![Diagram illustrating two devices in close proximity sharing information](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
@@ -26,25 +26,23 @@ device, an Intent is invoked containing the message data.
 
 Android supports two ways of setting messages with Android Beam:
 
--   `SetNdefPushMessage` - Before Android Beam is initiated, an
+- `SetNdefPushMessage` - Before Android Beam is initiated, an
     application can call SetNdefPushMessage to specify an NdefMessage
     to push over NFC, and the Activity that is pushing it. This
     mechanism is best used when a message doesn’t change while an
     application is in use.
 
--   `SetNdefPushMessageCallback` - When Android Beam is initiated, an
+- `SetNdefPushMessageCallback` - When Android Beam is initiated, an
     application can handle a callback to create an NdefMessage. This
     mechanism allows for message creation to be delayed until devices
     are in range. It supports scenarios where the message may vary
     based upon what’s happening in the application.
-
 
 In either case, to send data with Android Beam, an application sends an
 `NdefMessage`, packaging the data in several `NdefRecords`. Let’s
 take a look at the key points that must be addressed before we can
 trigger Android Beam. First, we’ll work with the callback style of
 creating an `NdefMessage`.
-
 
 ## Creating a Message
 
@@ -87,7 +85,6 @@ public NdefRecord CreateMimeRecord (String mimeType, byte [] payload)
 }
 ```
 
-
 ## Receiving a Message
 
 On the receiving side, the system invokes an Intent with the
@@ -104,10 +101,6 @@ screenshot below, see the [Android Beam demo](https://docs.microsoft.com/samples
 
 [![Example screenshots from the Android Beam demo](android-beam-images/24.png)](android-beam-images/24.png#lightbox)
 
-
-
 ## Related Links
 
 - [Android Beam Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

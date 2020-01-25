@@ -4,8 +4,8 @@ description: "We have covered the theory behind saving state in the Activity Lif
 ms.prod: xamarin
 ms.assetid: A6090101-67C6-4BDD-9416-F2FB74805A87
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -68,6 +68,7 @@ When we click the **Back** button, *Activity B* is destroyed and
 [ActivityLifecycle.SecondActivity] Activity B - OnStop
 [ActivityLifecycle.SecondActivity] Activity B - OnDestroy
 ```
+
 ### Adding a Click Counter
 
 Next, we're going to change the application so that we have a button 

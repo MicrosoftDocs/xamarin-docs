@@ -3,8 +3,8 @@ title: "Using the Contacts ContentProvider"
 ms.prod: xamarin
 ms.assetid: 21C5D1B4-3783-6090-33AB-78A484E65925
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/22/2018
 ---
 
@@ -45,16 +45,13 @@ There are three ways to create a cursor from the Uri:
    This class can be accessed in older versions of Android using the v4
    compatibility library.
 
-
 Each of these methods has the same basic set of inputs:
 
--  **Uri** &ndash; The fully qualified name of the  `ContentProvider` .
--  **Projection** &ndash; Specification of which columns to select for the cursor.
--  **Selection** &ndash; Similar to a SQL  `WHERE` clause.
--  **SelectionArgs** &ndash; Parameters to be substituted in the Selection.
--  **SortOrder** &ndash; Columns to sort by.
-
-
+- **Uri** &ndash; The fully qualified name of the  `ContentProvider` .
+- **Projection** &ndash; Specification of which columns to select for the cursor.
+- **Selection** &ndash; Similar to a SQL  `WHERE` clause.
+- **SelectionArgs** &ndash; Parameters to be substituted in the Selection.
+- **SortOrder** &ndash; Columns to sort by.
 
 ## Creating Inputs for a Query
 
@@ -79,14 +76,10 @@ string[] projection = {
 For this example, the `selection`, `selectionArgs` and `sortOrder` will be ignored
 by setting them to `null`.
 
-
-
 ## Creating a Cursor from a Content Provider Uri
 
 Once the parameter objects have been created, they can be used in one
 of the following three ways:
-
-
 
 ### Using a Managed Query
 
@@ -98,8 +91,6 @@ var cursor = activity.ManagedQuery(uri, projection, null, null, null);
 ```
 
 This cursor will be managed by Android so you do not need to close it.
-
-
 
 ### Using ContentResolver
 
@@ -123,8 +114,6 @@ Alternatively, you can call `StartManagingCursor()` and
 automatically deactivated and re-queried when Activities are stopped
 and restarted.
 
-
-
 ### Using CursorLoader
 
 Applications built for Android 3.0 (API Level 11) or newer should use
@@ -142,8 +131,6 @@ configuration change) rather that reload the data again.
 
 Earlier Android versions can also use the `CursorLoader` class by using the
 [v4 support libraries](https://developer.android.com/tools/support-library/index.html).
-
-
 
 ## Displaying the Cursor Data with a Custom Adapter
 
@@ -231,8 +218,6 @@ variety of system data including the user's photos, videos and music.
 Some data types require special permissions to be requested in the
 project's **AndroidManifest.xml**.
 
-
-
 ## Displaying the Cursor Data with a SimpleCursorAdapter
 
 The cursor could also be displayed with a `SimpleCursorAdapter`
@@ -257,7 +242,6 @@ listView.Adapter = adapter;
 Refer to the
 [ListViews and Adapters](~/android/user-interface/layouts/list-view/index.md)
 for further information on implementing `SimpleCursorAdapter`.
-
 
 ## Related Links
 

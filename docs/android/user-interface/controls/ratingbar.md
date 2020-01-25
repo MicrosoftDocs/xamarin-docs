@@ -4,8 +4,8 @@ description: "How to add a RatingBar widget to an Android activity."
 ms.prod: xamarin
 ms.assetid: d7a1f9bb-926d-4f93-9e8e-0fa933e330e7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
 ---
 
@@ -17,20 +17,20 @@ rating, with the [`RatingBar`](xref:Android.Widget.RatingBar) widget.
 
 ![Example of a RatingBar](ratingbar-images/01-ratingbar.png)
 
-
 ## Creating a RatingBar
 
 1. Open the **Resource/layout/Main.axml** file and add the
    [`RatingBar`](xref:Android.Widget.RatingBar)
    element (inside the [`LinearLayout`](xref:Android.Widget.LinearLayout)):
 
-    ```xml
-    <RatingBar android:id="@+id/ratingbar"
+   ```xml
+   <RatingBar android:id="@+id/ratingbar"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:numStars="5"
             android:stepSize="1.0"/>
-    ```
+   ```
+
    The `android:numStars` attribute defines how many stars to display
    for the rating bar. The `android:stepSize` attribute defines the
    granularity for each star (for example, a value of `0.5` would allow
@@ -55,5 +55,4 @@ rating, with the [`RatingBar`](xref:Android.Widget.RatingBar) widget.
     sets a rating. In this case, a simple [`Toast`](xref:Android.Widget.Toast)
     message displays the new rating.
 
-3.  Run the application.
-
+3. Run the application.

@@ -4,8 +4,8 @@ description: "This document describes how to wirelessly deploy a Xamarin.iOS app
 ms.prod: xamarin
 ms.assetid: 5AB4C5A9-4FBB-4DCB-BD72-0022D5439E65
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
 ---
@@ -91,9 +91,9 @@ Wireless debugging is automatically enabled after wireless deployment, so you ca
 
 2. If the device does not show in Visual Studio, check Xcode's **Devices and Simulators** window. 
 
-    * If Xcode **does not** show your device as connected, try to [pair](#pair) your device again.
+    - If Xcode **does not** show your device as connected, try to [pair](#pair) your device again.
 
-    * If Xcode does show the device as connected, try restarting Visual Studio and your device.
+    - If Xcode does show the device as connected, try restarting Visual Studio and your device.
 
 3. If you have not yet done so, you will need to [provision](~/ios/get-started/installation/device-provisioning/index.md) your device.
 

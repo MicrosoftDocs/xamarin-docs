@@ -296,7 +296,7 @@ If you need to preserve the aspect ratio of the graphical objects, you'll want t
 - Scale the object based on the minimum of the horizontal and vertical page dimensions divided by the graphical object dimensions.
 - Translate the center of the scaled object to the center of the page.
 
-The [`IsotropicScalingPage`](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) performs these steps in reverse order before displaying the star:
+The [`IsotropicScalingPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/IsotropicScalingPage.cs) performs these steps in reverse order before displaying the star:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -338,7 +338,6 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 The code also displays the star 10 more times, each time decreasing the scaling factor by 10% and progressively changing the color from red to blue:
 
 [![](scale-images/isotropicscaling-small.png "Triple screenshot of the Isotropic Scaling page")](scale-images/isotropicscaling-large.png#lightbox "Triple screenshot of the Isotropic Scaling page")
-
 
 ## Related Links
 

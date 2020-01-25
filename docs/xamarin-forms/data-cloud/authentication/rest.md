@@ -30,7 +30,7 @@ Basic authentication is the simplest authentication mechanism supported by HTTP,
 ![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
 
 > [!NOTE]
-> Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the <code>Authorization</code> header can easily be decoded if the HTTP traffic is captured by an attacker.
+> Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the `Authorization` header can easily be decoded if the HTTP traffic is captured by an attacker.
 
 ## Specifying Basic Authentication in a Web Request
 
@@ -74,7 +74,7 @@ Then when a request is made to a web service operation the request is signed wit
 
 The REST service should decorate each action with the `[BasicAuthentication]` attribute. This attribute is used to parse the `Authorization` header and determine if the base64 encoded credentials are valid by comparing them against values stored in *Web.config*. While this approach is suitable for a sample service, it requires extending for a public-facing web service.
 
-In the basic authentication module used by IIS, users are authenticated against their Windows credentials. Therefore, users must have accounts on the server's domain. However, the Basic authentication model can be configured to allow custom authentication, where user accounts are authenticated against an external source, such as a database. For more information see [Basic Authentication in ASP.NET Web API](http://www.asp.net/web-api/overview/security/basic-authentication) on the ASP.NET website.
+In the basic authentication module used by IIS, users are authenticated against their Windows credentials. Therefore, users must have accounts on the server's domain. However, the Basic authentication model can be configured to allow custom authentication, where user accounts are authenticated against an external source, such as a database. For more information see [Basic Authentication in ASP.NET Web API](https://www.asp.net/web-api/overview/security/basic-authentication) on the ASP.NET website.
 
 > [!NOTE]
 > Basic authentication was not designed to manage logging out. Therefore, the standard basic authentication approach for logging out is to end the session.

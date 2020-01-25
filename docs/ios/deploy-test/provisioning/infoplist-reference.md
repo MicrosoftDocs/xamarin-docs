@@ -4,8 +4,8 @@ description: "This document describes various key/value pairs that can be set in
 ms.prod: xamarin
 ms.assetid: 944DFDB5-ADBA-4D6E-984C-5AEC19A1CC57
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 01/18/2017
 ---
 
@@ -17,8 +17,8 @@ For more information on working with Info.Plist keys please refer to the [Workin
 
 Accessing the user's location also requires modifications to Info.plist. The following keys relating to location data should be set: 
 
-* **NSLocationWhenInUseUsageDescription** - For when you are accessing the user's location while they are interacting with your app. 
-* **NSLocationAlwaysUsageDescription** - For when your app accesses the user's location in the background.
+- **NSLocationWhenInUseUsageDescription** - For when you are accessing the user's location while they are interacting with your app. 
+- **NSLocationAlwaysUsageDescription** - For when your app accesses the user's location in the background.
 
 ## Photos 
 
@@ -61,7 +61,6 @@ UIBackgroundModes
 ## HomeKit 
 
 NSHomeKitUsageDescription 
-
 
 ## Related Links
 

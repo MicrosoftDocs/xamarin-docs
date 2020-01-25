@@ -6,7 +6,7 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/10/2019
+ms.date: 12/04/2019
 ---
 
 # Consuming XAML Markup Extensions
@@ -23,19 +23,21 @@ XAML markup extensions help enhance the power and flexibility of XAML by allowin
 - [`OnPlatform`](#onplatform) – customize UI appearance on a per-platform basis.
 - [`OnIdiom`](#onidiom) – customize UI appearance based on the idiom of the device the application is running on.
 - [`DataTemplate`](#datatemplate-markup-extension) - converts a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
+- [`FontImage`](#fontimage-markup-extension) - display a font icon in any view that can display an `ImageSource`.
 
 Additional XAML markup extensions have historically been supported by other XAML implementations, and are also supported by Xamarin.Forms. These are described more fully in other articles:
 
-- `StaticResource` &ndash; reference objects from a resource dictionary, as described in the article  [**Resource Dictionaries**](~/xamarin-forms/xaml/resource-dictionaries.md).
-- `DynamicResource` &ndash; respond to changes in objects in a resource dictionary, as described in the article [**Dynamic Styles**](~/xamarin-forms/user-interface/styles/dynamic.md).
-- `Binding` &ndash; establish a link between properties of two objects, as described in the article [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
-- `TemplateBinding` &ndash; performs data binding from a control template, as discussed in the article [**Binding from a Control Template**](~/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md).
+- `StaticResource` - reference objects from a resource dictionary, as described in the article  [**Resource Dictionaries**](~/xamarin-forms/xaml/resource-dictionaries.md).
+- `DynamicResource` - respond to changes in objects in a resource dictionary, as described in the article [**Dynamic Styles**](~/xamarin-forms/user-interface/styles/dynamic.md).
+- `Binding` - establish a link between properties of two objects, as described in the article [**Data Binding**](~/xamarin-forms/app-fundamentals/data-binding/index.md).
+- `TemplateBinding` - performs data binding from a control template, as discussed in the article [**Xamarin.Forms control templates**](~/xamarin-forms/app-fundamentals/templates/control-template.md).
+- `RelativeSource` - sets the binding source relative to the position of the binding target, as discussed in the article [Relative Bindings](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 The [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout makes use of the custom markup extension [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). This markup extension is described in the article [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
 
 <a name="static" />
 
-## x:Static Markup Extension
+## x:Static markup extension
 
 The `x:Static` markup extension is supported by the [`StaticExtension`](xref:Xamarin.Forms.Xaml.StaticExtension) class. The class has a single property named [`Member`](xref:Xamarin.Forms.Xaml.StaticExtension.Member) of type `string` that you set to the name of a public constant, static property, static field, or enumeration member.
 
@@ -141,7 +143,7 @@ Here's the sample running:
 
 <a name="reference" />
 
-## x:Reference Markup Extension
+## x:Reference markup extension
 
 The `x:Reference` markup extension is supported by the [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) class. The class has a single property named [`Name`](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) of type `string` that you set to the name of an element on the page that has been given a name with `x:Name`. This `Name` property is the content property of `ReferenceExtension`, so `Name=` is not required when `x:Reference` appears in curly braces.
 
@@ -185,7 +187,7 @@ Both `x:Reference` expressions use the abbreviated version of the `ReferenceExte
 
 <a name="type" />
 
-## x:Type Markup Extension
+## x:Type markup extension
 
 The `x:Type` markup extension is the XAML equivalent of the C# [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) keyword. It is supported by the [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) class, which defines one property named [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) of type `string` that is set to a class or structure name. The `x:Type` markup extension returns the [`System.Type`](xref:System.Type) object of that class or structure. `TypeName` is the content property of `TypeExtension`, so `TypeName=` is not required when `x:Type` appears with curly braces.
 
@@ -323,7 +325,7 @@ The method that is executed when a `Button` is pressed creates a new instance of
 
 <a name="array" />
 
-## x:Array Markup Extension
+## x:Array markup extension
 
 The `x:Array` markup extension allows you to define an array in markup. It is supported by the [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) class, which defines two properties:
 
@@ -400,7 +402,7 @@ When defining arrays of common types like strings or numbers, use the tags liste
 
 <a name="null" />
 
-## x:Null Markup Extension
+## x:Null markup extension
 
 The `x:Null` markup extension is supported by the [`NullExtension`](xref:Xamarin.Forms.Xaml.NullExtension) class. It has no properties and is simply the XAML equivalent of the C# [`null`](/dotnet/csharp/language-reference/keywords/null/) keyword.
 
@@ -455,7 +457,7 @@ Notice that four of the `Label` elements have a serif font, but the center `Labe
 
 <a name="onplatform" />
 
-## OnPlatform Markup Extension
+## OnPlatform markup extension
 
 The `OnPlatform` markup extension allows you to customize UI appearance on a per-platform basis. It provides the same functionality as the [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) and [`On`](xref:Xamarin.Forms.On) classes, but with a more concise representation.
 
@@ -475,7 +477,7 @@ The `OnPlatform` markup extension is supported by the [`OnPlatformExtension`](xr
 > [!NOTE]
 > The XAML parser allows the [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) class to be abbreviated as `OnPlatform`.
 
-The `Default` property is the content property of `OnPlatformExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `Default=` part of the expression provided that it's the first argument.
+The `Default` property is the content property of `OnPlatformExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `Default=` part of the expression provided that it's the first argument. If the `Default` property isn't set, it will default to the [`BindableProperty.DefaultValue`](xref:Xamarin.Forms.BindableProperty.DefaultValue) property value, provided that the markup extension is targeting a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty).
 
 > [!IMPORTANT]
 > The XAML parser expects that values of the correct type will be provided to properties consuming the `OnPlatform` markup extension. If type conversion is necessary, the `OnPlatform` markup extension will attempt to perform it using the default converters provided by Xamarin.Forms. However, there are some type conversions that can't be performed by the default converters and in these cases the `Converter` property should be set to an `IValueConverter` implementation.
@@ -497,7 +499,7 @@ Here's the program running:
 
 <a name="onidiom" />
 
-## OnIdiom Markup Extension
+## OnIdiom markup extension
 
 The `OnIdiom` markup extension allows you to customize UI appearance based on the idiom of the device the application is running on. It's supported by the [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) class, which defines the following properties:
 
@@ -533,7 +535,7 @@ Here's the program running:
 
 [![OnIdiom Demo](consuming-images/onidiomdemo-small.png "OnIdiom Demo")](consuming-images/onidiomdemo-large.png#lightbox "OnIdiom Demo")
 
-## DataTemplate Markup Extension
+## DataTemplate markup extension
 
 The `DataTemplate` markup extension allows you to convert a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). It's supported by the `DataTemplateExtension` class, which defines a `TypeName` property, of type `string`, that is set to the name of the type to be converted into a `DataTemplate`. The `TypeName` property is the content property of `DataTemplateExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `TypeName=` part of the expression.
 
@@ -551,6 +553,37 @@ A typical usage of this markup extension is in a Shell application, as shown in 
 In this example, `MonkeysPage` is converted from a [`ContentPage`](xref:Xamarin.Forms.ContentPage) to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which is set as the value of the `ShellContent.ContentTemplate` property. This ensures that `MonkeysPage` is only created when navigation to the page occurs, rather than at application startup.
 
 For more information about Shell applications, see [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+
+## FontImage markup extension
+
+The `FontImage` markup extension allows you to display a font icon in any view that can display an `ImageSource`. It provides the same functionality as the `FontImageSource` class, but with a more concise representation.
+
+The `FontImage` markup extension is supported by the `FontImageExtension` class, which defines the following properties:
+
+- `FontFamily` of type `string`, the font family to which the font icon belongs.
+- `Glyph` of type `string`, the unicode character value of the font icon.
+- `Color` of type [`Color`](xref:Xamarin.Forms.Color), the color to be used when displaying the font icon.
+- `Size` of type `double`, the size, in device-independent units, of the rendered font icon. The default value is 30. In addition, this property can be set to a named font size.
+
+> [!NOTE]
+> The XAML parser allows the `FontImageExtension` class to be abbreviated as `FontImage`.
+
+The `Glyph` property is the content property of `FontImageExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `Glyph=` part of the expression provided that it's the first argument.
+
+The **FontImage Demo** page shows how to use the `FontImage` markup extension:
+
+```xaml
+<Image BackgroundColor="#D1D1D1"
+       Source="{FontImage &#xf30c;, FontFamily={OnPlatform iOS=Ionicons, Android=ionicons.ttf#}, Size=44}" />
+```
+
+In this example, the abbreviated version of the `FontImageExtension` class name is used to display an XBox icon, from the Ionicons font family, in an [`Image`](xref:Xamarin.Forms.Image). The expression also uses the `OnPlatform` markup extension to specify different `FontFamily` property values on iOS and Android. In addition, the `Glyph=` part of the expression is eliminated, and the markup extension properties that are set are separated by commas. Note that while the unicode character for the icon is `\uf30c`, it has to be escaped in XAML and so becomes `&#xf30c;`.
+
+Here's the program running:
+
+[![Screenshot of the FontImage markup extension](consuming-images/fontimagedemo.png "FontImage Demo")](consuming-images/fontimagedemo-large.png#lightbox "FontImage Demo")
+
+For information about displaying font icons by specifying the font icon data in a `FontImageSource` object, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
 ## Define Your Own Markup Extensions
 

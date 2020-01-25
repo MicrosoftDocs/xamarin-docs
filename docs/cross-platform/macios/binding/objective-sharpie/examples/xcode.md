@@ -3,8 +3,8 @@ title: "Real-World Example using an Xcode Project"
 description: "This document describes how to use an Xcode project as a direct input to Objective Sharpie, simplifying the process of creating C# bindings to Objective-C code."
 ms.prod: xamarin
 ms.assetid: 168AA64C-E181-4937-A1F2-AD095B9A36F2
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
 ---
 
@@ -16,10 +16,11 @@ New in version 3.0, Objective Sharpie supports Xcode projects as input. These pr
 
 Before Objective Sharpie attempts to parse the project and header files, it must build it. Projects often have build phases that will correctly structure header files for external consumption and integration, so it is best to always build the full project before attempting to bind it.
 
-<pre>$ <b>git clone https://github.com/facebook/pop.git</b>
+```
+$ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
-   <em>(more git clone output)</em>
+   (more git clone output)
 
-$ <b>cd pop</b>
-$ <b>sharpie bind pop.xcodeproj -sdk iphoneos9.0</b></pre>
-
+$ cd pop
+$ sharpie bind pop.xcodeproj -sdk iphoneos9.0
+```

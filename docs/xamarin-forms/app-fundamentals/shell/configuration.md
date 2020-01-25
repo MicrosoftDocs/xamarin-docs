@@ -6,12 +6,12 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2019
+ms.date: 12/05/2019
 ---
 
 # Xamarin.Forms Shell Page Configuration
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
 The `Shell` class defines attached properties that can be used to configure the appearance of pages in Xamarin.Forms Shell applications. This includes setting page colors, disabling the navigation bar, disabling the tab bar, and displaying views in the navigation bar.
 
@@ -81,6 +81,21 @@ Alternatively, the color properties can be set with a XAML style:
 
 For more information about XAML styles, see [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md).
 
+## Enable navigation bar shadow
+
+The `Shell` class defines the `NavBarHasShadow` attached property, of type `bool`, that controls whether the navigation bar has a shadow. By default the value of the property is `false`.
+
+While this property can be set on a subclassed `Shell` object, it can also be set on any pages that want to enable the navigation bar shadow. For example, the following XAML shows enabling the navigation bar shadow from a [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.NavBarHasShadow="true">
+    ...
+</ContentPage>
+```
+
+This results in the navigation bar shadow being enabled.
+
 ## Disable the navigation bar
 
 The `Shell` class defines the `NavBarIsVisible` attached property, of type `bool`, that controls if the navigation bar is visible when a page is presented. By default the value of the property is `true`.
@@ -145,6 +160,6 @@ Because the [`Layout`](xref:Xamarin.Forms.Layout) class derives from the [`View`
 
 ## Related links
 
-- [Xaminals (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/Xaminals/)
+- [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 - [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md)
 - [Xamarin.Forms CSS Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties)

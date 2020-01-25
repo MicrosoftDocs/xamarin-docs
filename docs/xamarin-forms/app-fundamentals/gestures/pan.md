@@ -44,9 +44,6 @@ void OnPanUpdated (object sender, PanUpdatedEventArgs e)
 }
 ```
 
-> [!NOTE]
-> Correct panning on Android requires the [Xamarin.Forms 2.1.0-pre1 NuGet package](https://www.nuget.org/packages/Xamarin.Forms/2.1.0.6501-pre1) at a minimum.
-
 ## Creating a pan container
 
 This section contains a generalized helper class that performs freeform panning, which is typically suited to navigating within images or maps. Handling the pan gesture to perform this operation requires some math to transform the user interface. This math is used to pan only within the bounds of the wrapped user interface element. The following code example shows the `PanContainer` class:
@@ -142,7 +139,7 @@ This method updates the viewable content of the wrapped user interface element, 
 When panning content in an element that does not occupy the full screen, the height and width of the viewport can be obtained from the element's [`Height`](xref:Xamarin.Forms.VisualElement.Height) and [`Width`](xref:Xamarin.Forms.VisualElement.Width) properties.
 
 > [!NOTE]
-> Displaying high-resolution images can greatly increase an app's memory footprint. Therefore, they should only be created when required and should be released as soon as the app no longer requires them. For more information, see [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#optimizeimages).
+> Displaying high-resolution images can greatly increase an app's memory footprint. Therefore, they should only be created when required and should be released as soon as the app no longer requires them. For more information, see [Optimize Image Resources](~/xamarin-forms/deploy-test/performance.md#optimize-image-resources).
 
 ## Related Links
 

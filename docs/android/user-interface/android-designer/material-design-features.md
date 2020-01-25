@@ -4,8 +4,8 @@ description: "This topic describes Designer features that make it easier for dev
 ms.prod: xamarin
 ms.assetid: AC55E1B2-C239-4019-B0C3-A16F6CF0D6E0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
 ---
 
@@ -31,11 +31,11 @@ familiar with Material Design, see the
 
 In this guide, we'll have a look at the following Designer features:
 
--   *Material Grid* &ndash; An overlay on the Design Surface that shows
+- *Material Grid* &ndash; An overlay on the Design Surface that shows
     a grid, spacing, and keylines to help you place layout widgets
     according to Material Design guidelines.
 
--   *Theme Editor* &ndash; A small color resource editor that lets you
+- *Theme Editor* &ndash; A small color resource editor that lets you
     set color information for a subset of a theme. For example, you can
     preview and modify Material colors such as `colorPrimary`,
     `colorPrimaryDark`, and `colorAccent`.
@@ -53,11 +53,11 @@ of the Designer:
 When you click the Material Design Grid icon, the Designer displays an
 overlay on the Design Surface that includes the following elements:
 
--   Keylines (orange lines)
+- Keylines (orange lines)
 
--   Spacing (green areas)
+- Spacing (green areas)
 
--   A grid (blue lines)
+- A grid (blue lines)
 
 These elements can be seen in the previous screenshot. Each of these
 overlay items is configurable. When you click the ellipsis next to the
@@ -77,7 +77,6 @@ spacing, enter the size and offset (in dp) into the **Size** and
 
 When you change these configuration values, they are saved in the layout
 XML file and reused when you open the layout again.
-
 
 ## Theme Editor
 
@@ -101,17 +100,17 @@ we are using the `Default Theme`):
 When you select a color on the left, the right-hand panel provides the
 following tabs to help you edit that color:
 
--   **Inherit** &ndash; Displays a style inheritance diagram for the
+- **Inherit** &ndash; Displays a style inheritance diagram for the
     selected color and lists the resolved color and color
     code assigned to that theme color.
 
--   **Color Picker** &ndash; Lets you change the selected color
+- **Color Picker** &ndash; Lets you change the selected color
     to any arbitrary value.
 
--   **Material Palette** &ndash; Lets you change the selected color
+- **Material Palette** &ndash; Lets you change the selected color
     to a value that conforms to Material Design.
 
--   **Resources** &ndash; Lets you change the selected color
+- **Resources** &ndash; Lets you change the selected color
     to one of the other existing color resources in the theme.
 
 Let's look at each one of these tabs in detail.
@@ -138,11 +137,11 @@ The following screenshot illustrates the **Color Picker**:
 In this example, the **Background** color can be changed to any
 value through various means:
 
--   Clicking a color directly.
--   Entering hue, saturation, and brightness values.
--   Entering RGB (red, green, blue) values in decimal.
--   Setting the alpha (opacity) for the selected color.
--   Entering the hexadecimal color code directly.
+- Clicking a color directly.
+- Entering hue, saturation, and brightness values.
+- Entering RGB (red, green, blue) values in decimal.
+- Setting the alpha (opacity) for the selected color.
+- Entering the hexadecimal color code directly.
 
 The color you choose in the Color Picker is *not* restricted to
 Material Design guidelines or to the set of available color resources.
@@ -205,10 +204,10 @@ The **Background** color in the Designer has changed to the new color
 selection, but this change has not yet been saved. At this point,
 you can do one of the following:
 
--   Click **Discard Changes** to discard the new color choice (or choices)
+- Click **Discard Changes** to discard the new color choice (or choices)
     and revert the theme to its original state.
 
--   Press <kbd>CTRL+S</kbd> to save your changes to the currently theme.
+- Press <kbd>CTRL+S</kbd> to save your changes to the currently theme.
 
 In the following example, <kbd>CTRL+S</kbd> was pressed so that the changes
 were saved to **AppTheme**:
@@ -224,26 +223,23 @@ create new custom themes that conform to Material Design guidelines.
 For more information about Xamarin.Android support for Material Design,
 see [Material Theme](~/android/user-interface/material-theme.md).
 
-
-
-
 # [Visual Studio for Mac](#tab/macos)
 
 In this guide, we'll a have a look at the following Designer features:
 
--   *Material Design Grid* &ndash; An overlay on the Design Surface
+- *Material Design Grid* &ndash; An overlay on the Design Surface
     that shows a grid, spacing, and keylines to help you place layout
     widgets according to Material Design guidelines.
 
--   *Material Design Color Palette* &ndash; A Property Pad dialog that
+- *Material Design Color Palette* &ndash; A Property Pad dialog that
     assists you in choosing a color from the official Material Design
     palette.
 
--   *Typographic Scale* &ndash; A Property Pad dialog that provides you
+- *Typographic Scale* &ndash; A Property Pad dialog that provides you
     with a choice of Material Design-compliant settings for the
     `textAppearance` property of text fields.
 
--   *Theme Editor* &ndash; A small color resource editor that lets you
+- *Theme Editor* &ndash; A small color resource editor that lets you
     set color information for a subset of a theme. For example, you can
     preview and modify Material colors such as `colorPrimary`,
     `colorPrimaryDark`, and `colorAccent`.
@@ -261,11 +257,11 @@ of the Designer:
 When you click the Material Design Grid icon, the Designer displays an
 overlay on the Design Surface that includes the following elements:
 
--   Keylines (orange lines)
+- Keylines (orange lines)
 
--   Spacing (green areas)
+- Spacing (green areas)
 
--   A grid (blue lines)
+- A grid (blue lines)
 
 These elements can be seen in the following screenshot:
 
@@ -372,17 +368,17 @@ we are using the `Default Theme`):
 When you select a color on the left, the right-hand panel provides the
 following tabs to help you edit that color:
 
--   **Inherit** &ndash; Displays a style inheritance diagram for the
+- **Inherit** &ndash; Displays a style inheritance diagram for the
     selected color and lists the resolved color and color
     code assigned to that theme color.
 
--   **Color Picker** &ndash; Lets you change the selected color
+- **Color Picker** &ndash; Lets you change the selected color
     to any arbitrary value.
 
--   **Material Palette** &ndash; Lets you change the selected color
+- **Material Palette** &ndash; Lets you change the selected color
     to a value that conforms to Material Design.
 
--   **Resources** &ndash; Lets you change the selected color
+- **Resources** &ndash; Lets you change the selected color
     to one of the other existing color resources in the theme.
 
 Let's look at each one of these tabs in detail.
@@ -406,15 +402,14 @@ The following screenshot illustrates the **Color Picker**:
 
 [![Color Picker](material-design-features-images/xs/14-color-picker-sml.png)](material-design-features-images/xs/14-color-picker.png#lightbox)
 
-
 In this example, the **Background** color can be changed to any
 value through various means:
 
--   Clicking a color directly.
--   Entering hue, saturation, and brightness values.
--   Entering RGB (red, green, blue) values in decimal.
--   Setting the alpha (opacity) for the selected color.
--   Entering the hexadecimal color code directly.
+- Clicking a color directly.
+- Entering hue, saturation, and brightness values.
+- Entering RGB (red, green, blue) values in decimal.
+- Setting the alpha (opacity) for the selected color.
+- Entering the hexadecimal color code directly.
 
 The color you choose in the Color Picker is *not* restricted to
 Material Design guidelines or to the set of available color resources.
@@ -457,12 +452,11 @@ message, *The current theme has unsaved changes*:
 The color change in the Designer has been made, but this change has not
 yet been saved. At this point, you can do one of the following:
 
--   Click **Discard Changes** to discard the new color choice (or choices)
+- Click **Discard Changes** to discard the new color choice (or choices)
     and revert the theme to its original state.
 
--   Press **&#8984; + S** to save your changes to a new theme
+- Press **&#8984; + S** to save your changes to a new theme
     called **Custom**.
-
 
 ## Summary
 
@@ -477,7 +471,6 @@ Material Design, see
 [Material Theme](~/android/user-interface/material-theme.md).
 
 -----
-
 
 ## Related Links
 

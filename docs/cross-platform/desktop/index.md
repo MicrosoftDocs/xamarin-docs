@@ -2,8 +2,8 @@
 ms.assetid: 65F6A634-9CB0-4BB8-A013-7CA0334F6100
 title: "Cross-Platform for Desktop Developers"
 description: "This document links to various guides that describe Xamarin.Forms for WPF and Windows Forms developers. The linked content explores application lifecycle, UI controls, porting guidance, and samples."
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2017
 ---
 

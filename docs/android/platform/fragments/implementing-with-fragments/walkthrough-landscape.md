@@ -4,8 +4,8 @@ ms.prod: xamarin
 ms.topic: tutorial
 ms.assetid: 444A894D-5197-4726-934F-79BA80A71CB0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/26/2018
 ---
 
@@ -150,7 +150,6 @@ public class TitlesFragment : ListFragment
         {
             selectedPlayId = savedInstanceState.GetInt("current_play_id", 0);
         }
-
 
         var quoteContainer = Activity.FindViewById(Resource.Id.playquote_container);
         showingTwoFragments = quoteContainer != null &&

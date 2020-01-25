@@ -4,8 +4,8 @@ description: "How to sign the Android Application Package (APK) for publication"
 ms.prod: xamarin
 ms.assetid: 8E3EFBB2-F8AD-C126-5F32-7FD140791E53
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/02/2018
 ---
 
@@ -113,7 +113,6 @@ key in the following location:
 
 **~/Library/Developer/Xamarin/Keystore/chimp/chimp.keystore**
 
-
 > [!NOTE]
 > Be sure to back up the resulting keystore file and password in a
 > safe place &ndash; it is not included in the Solution. If you lose your
@@ -169,7 +168,6 @@ app, **MyApp.MyApp.apk**:
 
 # [Visual Studio for Mac](#tab/macos)
 
-
 As seen here, a new certificate was added to the key store. To publish
 an app on Google Play, click **Cancel** and go to
 [Publishing to Google Play](~/android/deploy-test/publishing/publishing-to-google-play/index.md).
@@ -209,8 +207,6 @@ and try it out before distribution. See
 for more information about publishing an *ad-hoc* APK.
 
 -----
-
-
 
 ## Next Steps
 

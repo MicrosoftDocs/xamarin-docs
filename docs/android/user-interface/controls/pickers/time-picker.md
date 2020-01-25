@@ -4,8 +4,8 @@ description: "Selecting a time using TimePickerDialog and DialogFragment"
 ms.prod: xamarin
 ms.assetid: EB4E8206-E8AD-9F04-AC1C-82AC9364A9DD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -221,7 +221,7 @@ explained in the next section.
 Dialog instantiation method, and the `OnTimeSet` handler method
 required by `TimePickerDialog.IOnTimeSetListener`.
 
--   `TimePickerFragment` is a subclass of `DialogFragment`. It also
+- `TimePickerFragment` is a subclass of `DialogFragment`. It also
     implements the `TimePickerDialog.IOnTimeSetListener` interface (that
     is, it supplies the required `OnTimeSet` method):
 
@@ -229,7 +229,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     public class TimePickerFragment : DialogFragment, TimePickerDialog.IOnTimeSetListener
     ```
 
--   `TAG` is initialized for logging purposes (*MyTimePickerFragment*
+- `TAG` is initialized for logging purposes (*MyTimePickerFragment*
     can be changed to whatever string you want to use). The
     `timeSelectedHandler` Action is initialized to an empty delegate to
     prevent null reference exceptions:
@@ -239,7 +239,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     Action<DateTime> timeSelectedHandler = delegate { };
     ```
 
--   The `NewInstance` factory method is called to instantiate a new
+- The `NewInstance` factory method is called to instantiate a new
     `TimePickerFragment`. This method takes an `Action<DateTime>` handler that
     is invoked when the user clicks the **OK** button in the
     `TimePickerDialog`:
@@ -253,7 +253,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     }
     ```
 
--   When the fragment is to be displayed, Android calls the `DialogFragment`
+- When the fragment is to be displayed, Android calls the `DialogFragment`
     method [OnCreateDialog](xref:Android.App.DialogFragment.OnCreateDialog*).
     This method creates a new `TimePickerDialog`
     object and initializes it with the Activity, the callback object
@@ -271,7 +271,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
     }
     ```
 
--   When the user changes the time setting in the `TimePicker` dialog,
+- When the user changes the time setting in the `TimePicker` dialog,
     the `OnTimeSet` method is invoked. `OnTimeSet` creates a `DateTime`
     object using the current date and merges in the time (hour and
     minute) selected by the user:
@@ -283,8 +283,7 @@ required by `TimePickerDialog.IOnTimeSetListener`.
         DateTime selectedTime = new DateTime(currentTime.Year, currentTime.Month, currentTime.Day, hourOfDay, minute, 0);
     ```
 
-
--   This `DateTime` object is passed to the `timeSelectedHandler` that
+- This `DateTime` object is passed to the `timeSelectedHandler` that
     is registered with the `TimePickerFragment` object at creation
     time. `OnTimeSet` invokes this handler to update the Activity's
     time display to the selected time (this handler is implemented in

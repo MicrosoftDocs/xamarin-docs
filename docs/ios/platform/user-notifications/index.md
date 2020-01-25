@@ -4,8 +4,8 @@ description: "Links to documents that describe the User Notifications framework 
 ms.prod: xamarin
 ms.assetid: 223FCE25-A3E6-4255-BCFC-0E3136F4E987
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 09/01/2016
 ---
 
@@ -30,4 +30,4 @@ This article takes a deeper look at the new User Notifications framework and how
 - [iOS 10 Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS+iOS10)
 - [UserNotifications Framework Reference](https://developer.apple.com/reference/usernotifications)
 - [UserNotificationsUI](https://developer.apple.com/reference/usernotificationsui)
-- [Local and Remote Notification Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/Introduction.html)
+- [Local and Remote Notification Programming Guide](https://developer.apple.com/documentation/usernotifications)

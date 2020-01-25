@@ -3,8 +3,8 @@ title: "Getting Started with F#"
 description: "This document describes how to learn F# and use it to build Xamarin applications with Visual Studio 2019 and Visual Studio for Mac."
 ms.prod: xamarin
 ms.assetid: 1A0E627D-A4C1-4F95-BAED-76A0E40B9054
-author: asb3993
-ms.author: amburns
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 
@@ -14,7 +14,7 @@ ms.date: 03/24/2017
 
 F# is included by default in Visual Studio for Mac.
 
-On Windows, you must install standalone F# compiler tools, per the instructions on [the FSharp.org site](http://fsharp.org/use/windows/).
+On Windows, you must install standalone F# compiler tools, per the instructions on [the FSharp.org site](https://fsharp.org/use/windows/).
 
 ## Creating an F&#35; Project
 
@@ -26,7 +26,6 @@ In Visual Studio for Mac choose **File > New Solution**. In the **New Project** 
  [![](overview-images/choosefsharp.png "Use the drop-down to the right of the template to choose the language you wish to use")](overview-images/choosefsharp.png#lightbox)
 
 Select your project type and click **Next** to name and create it.
-
 
 You are now ready to start creating some great F# applications!
 
@@ -47,9 +46,8 @@ Check out the [list of samples](~/cross-platform/platform/fsharp/samples.md) to 
 There is a plethora of information online for getting up to speed with the F#
 language, covering all proficiencies. Listed below are a few of our recommendations:
 
--  [F# Software Foundation](http://fsharp.org)
--  [Visual F# Development Portal](http://go.microsoft.com/fwlink/?LinkID=234174)
--  [Visual F# Code Gallery](http://go.microsoft.com/fwlink/?LinkID=124614)
--  [Visual F# Math/Stats Programming](http://go.microsoft.com/fwlink/?LinkId=235173)
--  [Visual F# Charting](http://go.microsoft.com/fwlink/?LinkId=235176)
-
+- [F# Software Foundation](https://fsharp.org)
+- [Visual F# Development Portal](https://go.microsoft.com/fwlink/?LinkID=234174)
+- [Visual F# Code Gallery](https://go.microsoft.com/fwlink/?LinkID=124614)
+- [Visual F# Math/Stats Programming](https://go.microsoft.com/fwlink/?LinkId=235173)
+- [Visual F# Charting](https://go.microsoft.com/fwlink/?LinkId=235176)

@@ -5,8 +5,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: D82EC193-2CB7-44C3-8688-0CEBDF60C3D6
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/02/2016
 ---
 
@@ -26,7 +26,6 @@ the call history.
 In the second part of this document, you will review what you've built
 and discusses architecture, navigation, and other new Android concepts
 that are encountered along the way.
-
 
 ## Related Links
 

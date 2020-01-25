@@ -4,8 +4,8 @@ description: "This document describes how to create create generic subclasses of
 ms.prod: xamarin
 ms.assetid: BB99EBD7-308A-C865-1829-4DFFDB1BBCA4
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -18,23 +18,23 @@ subclasses of `NSObject`, for example [UIView](xref:UIKit.UIView):
 
 ```csharp
 class Foo<T> : UIView {
-	public Foo (CGRect x) : base (x) {}
-	public override void Draw (CoreGraphics.CGRect rect)
-	{
-		Console.WriteLine ("T: {0}. Type: {1}", typeof (T), GetType ().Name);
-	}
+    public Foo (CGRect x) : base (x) {}
+    public override void Draw (CoreGraphics.CGRect rect)
+    {
+        Console.WriteLine ("T: {0}. Type: {1}", typeof (T), GetType ().Name);
+    }
 }
 ```
 
 Since objects that subclass `NSObject` are registered with
 the Objective-C runtime there are some limitations as to what
 is possible with generic subclasses of `NSObject` types.
-	
+
 ## Considerations for generic subclasses of NSObject
 
 This document details the limitations in the limited
 support for generic subclasses of `NSObjects`.
-	
+
 ### Generic Type Arguments in Member Signatures
 
 All generic type arguments in a member signature exposed to
@@ -45,10 +45,10 @@ Objective-C must have an `NSObject` constraint.
 ```csharp
 class Generic<T> : NSObject where T: NSObject
 {
-	[Export ("myMethod:")]
-	public void MyMethod (T value)
-	{
-	}
+    [Export ("myMethod:")]
+    public void MyMethod (T value)
+    {
+    }
 }
 ```
 
@@ -62,10 +62,10 @@ it).
 ```csharp
 class Generic<T> : NSObject
 {
-	[Export ("myMethod:")]
-	public void MyMethod (T value)
-	{
-	}
+    [Export ("myMethod:")]
+    public void MyMethod (T value)
+    {
+    }
 }
 ```
 
@@ -79,12 +79,12 @@ type of the generic type `T`.
 ```csharp
 class Generic<T> : NSObject
 {
-	T storage;
+    T storage;
 
-	[Export ("myMethod:")]
-	public void MyMethod (NSObject value)
-	{
-	}
+    [Export ("myMethod:")]
+    public void MyMethod (NSObject value)
+    {
+    }
 }
 ```
 
@@ -97,18 +97,18 @@ member signature.
 ```csharp
 class Generic<T, U> : NSObject where T: NSObject
 {
-	[Export ("myMethod:")]
-	public void MyMethod (T value)
-	{
-		Console.WriteLine (typeof (U));
-	}
+    [Export ("myMethod:")]
+    public void MyMethod (T value)
+    {
+        Console.WriteLine (typeof (U));
+    }
 }
 ```
 
 **Reason**: the `T` parameter in the Objective-C exported
 `MyMethod` is constrained to be an `NSObject`, the unconstrained
 type `U` is not part of the signature.
-	
+
 ### Instantiations of Generic Types from Objective-C
 
 Instantiation of generic types from Objective-C is not
@@ -118,12 +118,12 @@ a xib or a storyboard.
 Consider this class definition, which exposes a constructor
 that takes an `IntPtr` (the Xamarin.iOS way of constructing a C#
 object from a native Objective-C instance):
-	
+
 ```csharp
 class Generic<T> : NSObject where T : NSObject
 {
-	public Generic () {}
-	public Generic (IntPtr ptr) : base (ptr) {}
+    public Generic () {}
+    public Generic (IntPtr ptr) : base (ptr) {}
 }
 ```
 
@@ -137,12 +137,12 @@ to create.
 
 This problem can be worked around by creating a specialized
 subclass of the generic type. For example:
-	
+
 ```csharp
 class Generic<T> : NSObject where T : NSObject
 {
-	public Generic () {}
-	public Generic (IntPtr ptr) : base (ptr) {}
+    public Generic () {}
+    public Generic (IntPtr ptr) : base (ptr) {}
 }
 
 class GenericUIView : Generic<UIView>
@@ -162,10 +162,10 @@ The following code will not compile:
 ```csharp
 class MyClass : NSObject
 {
-	[Export ("myMethod")]
-	public void MyMethod<T> (T argument)
-	{
-	}
+    [Export ("myMethod")]
+    public void MyMethod<T> (T argument)
+    {
+    }
 }
 ```
 
@@ -178,14 +178,14 @@ An alternative is to create a specialized method and export that instead:
 ```csharp
 class MyClass : NSObject
 {
-	[Export ("myMethod")]
-	public void MyUIViewMethod (UIView argument)
-	{
-		MyMethod<UIView> (argument);
-	}
-	public void MyMethod<T> (T argument)
-	{
-	}
+    [Export ("myMethod")]
+    public void MyUIViewMethod (UIView argument)
+    {
+        MyMethod<UIView> (argument);
+    }
+    public void MyMethod<T> (T argument)
+    {
+    }
 }
 ```
 
@@ -199,13 +199,13 @@ Example of an unsupported scenario:
 ```csharp
 class Generic<T> : NSObject where T : NSObject
 {
-	[Export ("myMethod:")]
-	public static void MyMethod ()
-	{
-	}
+    [Export ("myMethod:")]
+    public static void MyMethod ()
+    {
+    }
 
-	[Export ("myProperty")]
-	public static T MyProperty { get; set; }
+    [Export ("myProperty")]
+    public static T MyProperty { get; set; }
 }
 ```
 
@@ -226,23 +226,23 @@ The alternative in this case is to create a specialized subclass:
 ```csharp
 class GenericUIView : Generic<UIView>
 {
-	[Export ("myUIViewMethod")]
-	public static void MyUIViewMethod ()
-	{
-		MyMethod ();
-	}
+    [Export ("myUIViewMethod")]
+    public static void MyUIViewMethod ()
+    {
+        MyMethod ();
+    }
 
-	[Export ("myProperty")]
-	public static UIView MyUIViewProperty {
-		get { return MyProperty; }
-		set { MyProperty = value; }
-	}
+    [Export ("myProperty")]
+    public static UIView MyUIViewProperty {
+        get { return MyProperty; }
+        set { MyProperty = value; }
+    }
 }
 
 class Generic<T> : NSObject where T : NSObject
 {
-	public static void MyMethod () {}
-	public static T MyProperty { get; set; }
+    public static void MyMethod () {}
+    public static T MyProperty { get; set; }
 }
 ```
 
@@ -250,6 +250,5 @@ class Generic<T> : NSObject where T : NSObject
 
 The static registrar can't resolve an exported member in a generic
 type at build time as it usually does, it has to be looked up at
-runtime. This means	that invoking such a method from Objective-C
+runtime. This means    that invoking such a method from Objective-C
 is slightly slower than invoking members from non-generic classes.
-

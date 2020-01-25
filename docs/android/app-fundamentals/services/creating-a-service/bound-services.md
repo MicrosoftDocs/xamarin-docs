@@ -4,8 +4,8 @@ description: "Bound services are Android services that provide a client-server i
 ms.prod: xamarin
 ms.assetid: 809ECE88-EF08-4E9A-B389-A2DC08C51A6E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/04/2018
 ---
 
@@ -17,9 +17,9 @@ _Bound services are Android services that provide a client-server interface that
 
 Services that provide a client-server interface for clients to directly interact with the service are referred to as  _bound services_.  There can be multiple clients connected to a single instance of a service at the same time. The bound service and the client are isolated from each other. Instead, Android provides a series of intermediate objects that manage the state of the connection between the two. This state is maintained by an object that implements the [`Android.Content.IServiceConnection`](xref:Android.Content.IServiceConnection) interface.  This object is created by the client and passed as a parameter to the [`BindService`](xref:Android.Content.Context.BindService*) method. The `BindService` is available on any [`Android.Content.Context`](xref:Android.Content.Context) object (such as an Activity). It is a request to the Android operating system to start up the service and bind a client to it. There are three ways to a client may bind to a service using the `BindService` method:
 
-* **A service binder** &ndash; A service binder is a class that implements the [`Android.OS.IBinder`](xref:Android.OS.IBinder) interface. Most applications will not implement this interface directly, instead they will extend the [`Android.OS.Binder`](xref:Android.OS.Binder) class. This is the most common approach and is suitable for when the service and the client exist in the same process.
-* **Using a Messenger** &ndash; This technique is suitable for when the service might exist in a separate process. Instead, service requests are marshalled between the client and service via an [`Android.OS.Messenger`](xref:Android.OS.Messenger). An [`Android.OS.Handler`](xref:Android.OS.Handler) is created in the service which will handle the `Messenger` requests. This will be covered in another guide.
-* **Using Android Interface Definition Language (AIDL)** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) is an advanced technique that will not be covered in this guide.
+- **A service binder** &ndash; A service binder is a class that implements the [`Android.OS.IBinder`](xref:Android.OS.IBinder) interface. Most applications will not implement this interface directly, instead they will extend the [`Android.OS.Binder`](xref:Android.OS.Binder) class. This is the most common approach and is suitable for when the service and the client exist in the same process.
+- **Using a Messenger** &ndash; This technique is suitable for when the service might exist in a separate process. Instead, service requests are marshalled between the client and service via an [`Android.OS.Messenger`](xref:Android.OS.Messenger). An [`Android.OS.Handler`](xref:Android.OS.Handler) is created in the service which will handle the `Messenger` requests. This will be covered in another guide.
+- **Using Android Interface Definition Language (AIDL)** &ndash; [AIDL](https://developer.android.com/guide/components/aidl) is an advanced technique that will not be covered in this guide.
 
 Once a client has been bound to a service, communication between the two is occurs via `Android.OS.IBinder` object.  This object is responsible for the interface that will allow the client to interact with the service. It is not necessary for each Xamarin.Android application to implement this interface from scratch, the Android SDK provides the [`Android.OS.Binder`](xref:Android.OS.Binder) class which takes care of most of the code required with marshalling the object between the client and the service.
 
@@ -49,10 +49,10 @@ Each of these steps will be discussed in the following sections in more detail.
 To create a service using Xamarin.Android, it is necessary to subclass `Service` and to adorn the class with the [`ServiceAttribute`](xref:Android.App.ServiceAttribute). The attribute is used by the Xamarin.Android build tools to properly register the service in the app's **AndroidManifest.xml** file
 Much like an activity, a bound service has it's own lifecycle and callback methods associated with the significant events in it's lifecycle. The following list is an example of some of the more common callback methods that a service will implement:
 
-* `OnCreate` &ndash; This method is invoked by Android as it is instantiating the service. It is used to initialize any variables or objects that are required by the service during it's lifetime. This method is optional.
-* `OnBind` &ndash; This method must be implemented by all bound services. It is invoked when the first client tries to connect to the service. It will return an instance of `IBinder` so that the client may interact with the service. As long as the service is running, the `IBinder` object will be used to fulfill any future client requests to bind to the service.
-* `OnUnbind` &ndash; This method is called when all bound clients have unbound. By returning  `true` from this method, the service will later call `OnRebind` with the intent passed to `OnUnbind` when new clients bind to it. You would do this when a service continues running after it has been unbound. This would happen if the recently unbound service were also a started service, and  `StopService` or  `StopSelf` hadn’t been called. In such a scenario,  `OnRebind` allows the intent to be retrieved. The default returns  `false` , which does nothing. Optional.
-* `OnDestroy` &ndash; This method is called when Android is destroying the service. Any necessary cleanup, such as releasing resources, should be performed in this method. Optional.
+- `OnCreate` &ndash; This method is invoked by Android as it is instantiating the service. It is used to initialize any variables or objects that are required by the service during it's lifetime. This method is optional.
+- `OnBind` &ndash; This method must be implemented by all bound services. It is invoked when the first client tries to connect to the service. It will return an instance of `IBinder` so that the client may interact with the service. As long as the service is running, the `IBinder` object will be used to fulfill any future client requests to bind to the service.
+- `OnUnbind` &ndash; This method is called when all bound clients have unbound. By returning  `true` from this method, the service will later call `OnRebind` with the intent passed to `OnUnbind` when new clients bind to it. You would do this when a service continues running after it has been unbound. This would happen if the recently unbound service were also a started service, and  `StopService` or  `StopSelf` hadn’t been called. In such a scenario,  `OnRebind` allows the intent to be retrieved. The default returns  `false` , which does nothing. Optional.
+- `OnDestroy` &ndash; This method is called when Android is destroying the service. Any necessary cleanup, such as releasing resources, should be performed in this method. Optional.
 
 The key lifecycle events of a bound service are shown in this diagram:
 
@@ -228,9 +228,9 @@ The `OnServiceDisconnected` method is only invoked when the connection between a
 
 To use a bound service, a client (such as an Activity) must instantiate an object that implements `Android.Content.IServiceConnection` and invoke the `BindService` method. `BindService` will return `true` if the service is bound to, `false` if it is not. The `BindService` method takes three parameters:
 
-* **An `Intent`** &ndash; The Intent should explicitly identify which service to connect to.
-* **An `IServiceConnection` Object** &ndash; This object is an intermediary that provides callback methods to notify the client when the bound service is started  and stopped.
-* **[`Android.Content.Bind`](xref:Android.Content.Bind)
+- **An `Intent`** &ndash; The Intent should explicitly identify which service to connect to.
+- **An `IServiceConnection` Object** &ndash; This object is an intermediary that provides callback methods to notify the client when the bound service is started  and stopped.
+- **[`Android.Content.Bind`](xref:Android.Content.Bind)
  enum** &ndash; This parameter is a set of flags are used by the system to when bind the object. The most commonly used value is [`Bind.AutoCreate`](xref:Android.Content.Bind.AutoCreate), which will automatically start the service if it isn't already running.
 
 The following Code snippet is an example of how to start a bound service in an Activity using an explicit intent:
@@ -282,7 +282,6 @@ This particular example allow an activity to invoke methods on the service itsel
 // In this example the Activity is only talking to a friend, i.e. the IGetTimestamp interface provided by the Binder.
 string currentTimestamp = serviceConnection.Binder.GetFormattedTimestamp()
 ```
-
 
 ## Related Links
 

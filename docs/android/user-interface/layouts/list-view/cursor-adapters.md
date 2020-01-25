@@ -3,8 +3,8 @@ title: "Using CursorAdapters"
 ms.prod: xamarin
 ms.assetid: 60DE467E-A5DA-4420-52E5-D86AD1678FE6
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/25/2017
 ---
 
@@ -23,7 +23,6 @@ Cursor adapters provide a high-performance way to scroll through long lists
 of data that are stored in SQLite. The consuming code must define an SQL query
 in a `Cursor` object and then describe how to create and
 populate the views for each row.
-
 
 ## Creating an SQLite Database
 
@@ -70,7 +69,6 @@ integer in the `RawQuery` that makes up the cursor. Refer to the
 [Android docs](xref:Android.Widget.CursorAdapter)
 for further information.
 
-
 ### Creating the Cursor
 
 The examples use a `RawQuery` to turn an SQL query into a `Cursor`
@@ -100,7 +98,6 @@ cursor.Close();
 Once an application has a SQLite database available and has created a
 cursor object as shown, it can utilize either a `SimpleCursorAdapter`
 or a subclass of `CusorAdapter` to display rows in a `ListView`.
-
 
 ## Using SimpleCursorAdapter
 
@@ -148,7 +145,6 @@ values to display controls, it does not allow you to change other
 aspects of the row layout (for example, showing/hiding controls or
 changing properties).
 
-
 ## Subclassing CursorAdapter
 
 A `CursorAdapter` subclass has the same performance benefits as the
@@ -177,7 +173,6 @@ re-use. This is in contrast to a regular adapter where it’s possible
 to ignore the `convertView` parameter of the `BaseAdapter.GetView`
 method.
 
-
 ### Implementing the CursorAdapter
 
 The code in **CursorTableAdapter/HomeScreenCursorAdapter.cs** contains
@@ -205,7 +200,6 @@ public class HomeScreenCursorAdapter : CursorAdapter {
 }
 ```
 
-
 ### Assigning the CursorAdapter
 
 In the `Activity` that will display the `ListView`, create the cursor
@@ -226,8 +220,6 @@ listView.Adapter = (IListAdapter)new HomeScreenCursorAdapter(this, cursor, false
 
 The `OnDestroy` method contains the `StopManagingCursor` method call
 described previously.
-
-
 
 ## Related Links
 

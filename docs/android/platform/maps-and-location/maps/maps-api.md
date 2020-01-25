@@ -4,8 +4,8 @@ description: "How to implement Google Maps API v2 features in your Xamarin.Andro
 ms.prod: xamarin
 ms.assetid: C0589878-2D04-180E-A5B9-BB41D5AF6E02
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/07/2018
 ---
 
@@ -19,9 +19,9 @@ The Maps API is suitable for cases where you want to maintain more
 control over the mapping experience. Things that are possible with the
 Maps API include:
 
--  Programmatically changing the viewpoint of the map.
--  Adding and customizing markers.
--  Annotating a map with overlays.
+- Programmatically changing the viewpoint of the map.
+- Adding and customizing markers.
+- Annotating a map with overlays.
 
 Unlike the now-deprecated Google Maps Android API v1, Google Maps
 Android API v2 is part of
@@ -29,17 +29,15 @@ Android API v2 is part of
 A Xamarin.Android app must meet some mandatory prerequisites before
 it is possible to use the Google Maps Android API.
 
-
 ## Google Maps API prerequisites
 
 Several steps need to be taken before you can use the Maps API, including:
 
--  [Obtain a Maps API key](#obtain-maps-key)
--  [Install the Google Play Services SDK](#install-gps-sdk)
--  [Install the Xamarin.GooglePlayServices.Maps package from NuGet](#install-gpsmaps-nuget)
--  [Specify the required permissions](#declare-permissions)
--  [Optionally, Create an emulator with the Google APIs](#create-emulator-with-google-api)
-
+- [Obtain a Maps API key](#obtain-maps-key)
+- [Install the Google Play Services SDK](#install-gps-sdk)
+- [Install the Xamarin.GooglePlayServices.Maps package from NuGet](#install-gpsmaps-nuget)
+- [Specify the required permissions](#declare-permissions)
+- [Optionally, Create an emulator with the Google APIs](#create-emulator-with-google-api)
 
 ### <a name="obtain-maps-key" />Obtain a Google Maps API Key
 
@@ -47,7 +45,6 @@ The first step is to get a Google Maps API key (note that you cannot
 reuse an API key from the legacy Google Maps v1 API). For information about
 how to obtain and use the API key with Xamarin.Android, see
 [Obtaining A Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
-
 
 ### <a name="install-gps-sdk" /> Install the Google Play Services SDK
 
@@ -96,28 +93,28 @@ this package had been installed previously, click **Update**.):
 
 Notice that the following dependency packages are also installed:
 
--   **Xamarin.GooglePlayServices.Base**
--   **Xamarin.GooglePlayServices.Basement**
--   **Xamarin.GooglePlayServices.Tasks**
+- **Xamarin.GooglePlayServices.Base**
+- **Xamarin.GooglePlayServices.Basement**
+- **Xamarin.GooglePlayServices.Tasks**
 
 ### <a name="declare-permissions" /> Specify the required permissions
 
 Apps must identify the hardware and permission requirements in order to use the Google Maps API.  Some permissions are automatically granted by the Google Play Services SDK, and it is not necessary for a developer to explicitly add them to **AndroidManfest.XML**:
 
--  **Access to the Network State** &ndash; The Maps API must be able to check
+- **Access to the Network State** &ndash; The Maps API must be able to check
    if it can download the map tiles.
 
--  **Internet Access** &ndash; Internet access is necessary to download the
+- **Internet Access** &ndash; Internet access is necessary to download the
    map tiles and communicate with the Google Play Servers for API
    access.
 
 The following permissions and features must be specified in the
 **AndroidManifest.XML** for the Google Maps Android API:
 
--  **OpenGL ES v2** &ndash; The application must declare the requirement for
+- **OpenGL ES v2** &ndash; The application must declare the requirement for
    OpenGL ES v2.
 
--  **Google Maps API Key** &ndash; The API key is used to confirm that the
+- **Google Maps API Key** &ndash; The API key is used to confirm that the
    application is registered and authorized to use Google Play
    Services. See
    [Obtaining a Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md)
@@ -125,15 +122,15 @@ The following permissions and features must be specified in the
 
 - **Request the legacy Apache HTTP client** &ndash; Apps that target Android 9.0 (API level 28) or above must specify that the legacy Apache HTTP client is an optional library to use.
 
--  **Access to the Google Web-based Services** &ndash; The application needs
+- **Access to the Google Web-based Services** &ndash; The application needs
    permissions to access Google's web services that back the Android
    Maps API.
 
--  **Permissions for Google Play Services Notifications** &ndash; The
+- **Permissions for Google Play Services Notifications** &ndash; The
    application must be granted permission to receive remote
    notifications from Google Play Services.
 
--  **Access to Location Providers** &ndash; These are optional permissions.
+- **Access to Location Providers** &ndash; These are optional permissions.
    They will allow the `GoogleMap` class to display the location of the
    device on the map.
 
@@ -162,7 +159,6 @@ The following snippet is an example of the settings that must be added to **Andr
     <!-- Necessary for apps that target Android 9.0 or higher -->
     <uses-library android:name="org.apache.http.legacy" android:required="false" />
 
-
     <!-- Permission to receive remote notifications from Google Play Services -->
     <!-- Notice here that we have the package name of our application as a prefix on the permissions. -->
     <uses-permission android:name="<PACKAGE NAME>.permission.MAPS_RECEIVE" />
@@ -171,7 +167,6 @@ The following snippet is an example of the settings that must be added to **Andr
     <!-- These are optional, but recommended. They will allow Maps to use the My Location provider. -->
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
-
 
     <application android:label="@string/app_name">
         <!-- Put your Google Maps V2 API Key here. -->
@@ -185,11 +180,9 @@ The following snippet is an example of the settings that must be added to **Andr
 
 In addition to requesting the permissions **AndroidManifest.XML**, an app must also perform runtime permission checks for the  `ACCESS_COARSE_LOCATION` and the `ACCESS_FINE_LOCATION` permissions. See the [Xamarin.Android Permissions](~/android/app-fundamentals/permissions.md) guide for more information about performing run-time permission checks.
 
-
 ### <a name="create-emulator-with-google-api" />Create an Emulator with Google APIs
 
 In the event that a physical Android device with Google Play services is not installed, it is possible to create an emulator image for development. For more information see the [Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
-
 
 ## The GoogleMap Class
 
@@ -200,25 +193,25 @@ class is the main API that a Xamarin.Android application will use to
 display and interact with a Google Maps for Android. This class has the
 following responsibilities:
 
--  Interacting with Google Play services to authorize the application
+- Interacting with Google Play services to authorize the application
    with the Google web service.
 
--  Downloading, caching, and displaying the map tiles.
+- Downloading, caching, and displaying the map tiles.
 
--  Displaying UI controls such as pan and zoom to the user.
+- Displaying UI controls such as pan and zoom to the user.
 
--  Drawing markers and geometric shapes on maps.
+- Drawing markers and geometric shapes on maps.
 
 The `GoogleMap` is added to an Activity in one of two ways:
 
--  **MapFragment** - The
+- **MapFragment** - The
    [MapFragment](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment)
    is a specialized Fragment that acts as host for the `GoogleMap`
    object. The `MapFragment` requires Android API level 12 or higher.
    Older versions of Android can use the
    [SupportMapFragment](https://developers.google.com/android/reference/com/google/android/gms/maps/SupportMapFragment).  This guide will focus on using the `MapFragment` class.
 
--  **MapView** - The
+- **MapView** - The
    [MapView](https://developers.google.com/android/reference/com/google/android/gms/maps/MapView)
    is a specialized View subclass, which can act as a host for a
    `GoogleMap` object. Users of this class must forward all of the
@@ -239,7 +232,7 @@ The following screenshot is an example of a simple `MapFragment`:
 Similar to other Fragment classes, there are two ways to add a
 `MapFragment` to an Activity:
 
--   **Declaratively** - The `MapFragment` can be added via the XML
+- **Declaratively** - The `MapFragment` can be added via the XML
     layout file for the Activity. The following XML snippet shows an
     example of how to use the `fragment` element:
 
@@ -252,7 +245,7 @@ Similar to other Fragment classes, there are two ways to add a
               class="com.google.android.gms.maps.MapFragment" />
     ```
 
--   **Programmatically** - The `MapFragment` can be programmatically instantiated using the [`MapFragment.NewInstance`](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) method and then added to an Activity. This snippet shows the simplest way to instantiate a `MapFragment` object and add to an Activity:
+- **Programmatically** - The `MapFragment` can be programmatically instantiated using the [`MapFragment.NewInstance`](https://developers.google.com/android/reference/com/google/android/gms/maps/MapFragment.html#newInstance()) method and then added to an Activity. This snippet shows the simplest way to instantiate a `MapFragment` object and add to an Activity:
 
     ```csharp
         var mapFrag = MapFragment.NewInstance();
@@ -267,6 +260,7 @@ Similar to other Fragment classes, there are two ways to add a
 The `MapFragment.GetMapAsync` method is used to initialize the [`GoogleMap`](#googlemap_object) that is hosted by the fragment and obtain a reference to the map object that is hosted by the `MapFragment`. This method takes an object that implements the `IOnMapReadyCallback` interface.
 
 This interface has a single method, `IMapReadyCallback.OnMapReady(MapFragment map)` that will be invoked when it is possible for the app to interact with the `GoogleMap` object. The following code snippet shows how an Android Activity can initialize a `MapFragment` and implement the `IOnMapReadyCallback` interface:
+
 ```csharp
 public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 {
@@ -293,20 +287,19 @@ public class MapWithMarkersActivity : AppCompatActivity, IOnMapReadyCallback
 There are five different types of maps available from the Google Maps
 API:
 
--  **Normal** - This is the default map type. It shows roads and
+- **Normal** - This is the default map type. It shows roads and
    important natural features along with some artificial points of
    interest (such as buildings and bridges).
 
--  **Satellite** - This map shows satellite photography.
+- **Satellite** - This map shows satellite photography.
 
--  **Hybrid** - This map shows satellite photography and road maps.
+- **Hybrid** - This map shows satellite photography and road maps.
 
--  **Terrain** - This primarily shows topographical features with some
+- **Terrain** - This primarily shows topographical features with some
    roads.
 
--  **None** - This map does not load any tiles, it is rendered as an
+- **None** - This map does not load any tiles, it is rendered as an
    empty grid.
-
 
 The image below shows three of the different types of maps, from
 left-to-right (normal, hybrid, terrain):
@@ -323,7 +316,6 @@ public void OnMapReady(GoogleMap map)
     map.MapType = GoogleMap.MapTypeHybrid;
 }
 ```
-
 
 ### <a name="googlemap_object" />GoogleMap properties
 
@@ -444,17 +436,15 @@ the preceding code:
 
 [![Example Google Map showing a specified location with a tilted viewing angle](maps-api-images/image06-sml.png)](maps-api-images/image06.png#lightbox)
 
-
 ### Drawing on the Map
 
 The Android Maps API provides API's for drawing the following items on a map:
 
--  **Markers** - These are special icons that are used to identify a single location on a map.
+- **Markers** - These are special icons that are used to identify a single location on a map.
 
--  **Overlays** - This is an image that can be used to identify a collection of locations or area on the map.
+- **Overlays** - This is an image that can be used to identify a collection of locations or area on the map.
 
--  **Lines, Polygons, and Circles** - These are APIs that allow Activities to add shapes to a map.
-
+- **Lines, Polygons, and Circles** - These are APIs that allow Activities to add shapes to a map.
 
 #### Markers
 
@@ -464,7 +454,6 @@ class which encapsulates all of the data about a single location on a
 map. By default the Marker class uses a standard icon provided by Google Maps. It is
 possible to customize the appearance of a marker and to respond to user
 clicks.
-
 
 ##### Adding a Marker
 
@@ -492,7 +481,6 @@ marker looks like:
 
 [![Example Google Map with a marker and an info window for Vimy Ridge](maps-api-images/image07-sml.png)](maps-api-images/image07.png#lightbox)
 
-
 ##### Customizing A Marker
 
 It is possible to customize the icon used by the marker by calling the
@@ -504,19 +492,19 @@ object containing the data necessary to render the icon. The
 class provides some helper methods to simplify the creation of a
 `BitmapDescriptor`. The following list introduces some of these methods:
 
--   `DefaultMarker(float colour)` &ndash; Use the default Google Maps
+- `DefaultMarker(float colour)` &ndash; Use the default Google Maps
     marker, but change the colour.
 
--   `FromAsset(string assetName)` &ndash; Use a custom icon from the
+- `FromAsset(string assetName)` &ndash; Use a custom icon from the
     specified file in the Assets folder.
 
--   `FromBitmap(Bitmap image)` &ndash; Use the specified bitmap as the
+- `FromBitmap(Bitmap image)` &ndash; Use the specified bitmap as the
     icon.
 
--   `FromFile(string fileName)` &ndash; Create the custom icon from the
+- `FromFile(string fileName)` &ndash; Create the custom icon from the
     file at the specified path.
 
--   `FromResource(int resourceId)` &ndash; Create a custom icon from
+- `FromResource(int resourceId)` &ndash; Create a custom icon from
     the specified resource.
 
 The following code snippet shows an example of creating a cyan coloured
@@ -548,13 +536,13 @@ It is possible to customize the info window by implementing the
 [GoogleMap.IInfoWindowAdapter](https://developers.google.com/android/reference/com/google/android/gms/maps/GoogleMap.InfoWindowAdapter)
 interface. There are two important methods on this interface:
 
--  `public View GetInfoWindow(Marker marker)` &ndash; This method is called
+- `public View GetInfoWindow(Marker marker)` &ndash; This method is called
    to get a custom info window for a marker. If it returns `null` ,
    then the default window rendering will be used. If this method
    returns a View, then that View will be placed inside the info window
    frame.
 
--  `public View GetInfoContents(Marker marker)` &ndash; This method will
+- `public View GetInfoContents(Marker marker)` &ndash; This method will
    only be called if GetInfoWindow returns `null` . This method can
    return a `null` value if the default rendering of the info window
    contents is to be used. Otherwise, this method should return a View
@@ -603,18 +591,16 @@ The following screenshot shows this overlay on a map:
 
 [![Example map with an overlayed image of a polar bear](maps-api-images/image09-sml.png)](maps-api-images/image09.png#lightbox)
 
-
 #### Lines, Circles, and Polygons
 
 There are three simple types of geometric figures that can be added to a map:
 
--  **Polyline** - This is a series of connected line segments. It can
+- **Polyline** - This is a series of connected line segments. It can
    mark a path on a map or create a geometric shape.
 
--  **Circle** - This will draw a circle on the map.
+- **Circle** - This will draw a circle on the map.
 
--  **Polygon** - This is a closed shape for marking areas on a map.
-
+- **Polygon** - This is a closed shape for marking areas on a map.
 
 ##### Polylines
 
@@ -653,7 +639,6 @@ circleOptions.InvokeRadius (1000);
 googleMap.AddCircle (circleOptions);
 ```
 
-
 ##### Polygons
 
 `Polygon`s are similar to `Polyline`s, however they are not open
@@ -677,33 +662,30 @@ rectOptions.Add(new LatLng(37.35, -122.2));
 googleMap.AddPolygon(rectOptions);
 ```
 
-
 ## Responding to user events
 
 There are three types of interactions a user may have with a map:
 
--  **Marker Click** - The user clicks on a marker.
+- **Marker Click** - The user clicks on a marker.
 
--  **Marker Drag** - The user has long-clicked on a mparger
+- **Marker Drag** - The user has long-clicked on a mparger
 
--  **Info Window Click** - The user has clicked on an info window.
+- **Info Window Click** - The user has clicked on an info window.
 
 Each of these events will be discussed in more detail below.
-
 
 ### Marker click events
 
 The `MarkerClicked` event is raised when the user taps on a marker. This event accepts a `GoogleMap.MarkerClickEventArgs` object as a parameter. This class
 contains two properties:
 
--  `GoogleMap.MarkerClickEventArgs.Handled` &ndash; This property should be
+- `GoogleMap.MarkerClickEventArgs.Handled` &ndash; This property should be
    set to `true` to indicate that the event handler has consumed the
    event. If this is set to `false` then the default behaviour will
    occur in addition to the custom behaviour of the event handler.
 
--  `Marker` &ndash; This property is a reference to the marker
+- `Marker` &ndash; This property is a reference to the marker
    that raised the `MarkerClick` event.
-
 
 This code snippet shows an example of a `MarkerClick` that will change
 the camera position to a new location on the map:
@@ -732,7 +714,6 @@ void MapOnMarkerClick(object sender, GoogleMap.MarkerClickEventArgs markerClickE
 }
 ```
 
-
 ### Marker Drag events
 
 This event is raised when the user wishes to drag the marker. By
@@ -747,18 +728,17 @@ marker will remain in place.
 The following list describes the various events that will be raised
 for a draggable marker:
 
--   `GoogleMap.MarkerDragStart(object sender, GoogleMap.MarkerDragStartEventArgs e)` &ndash;
+- `GoogleMap.MarkerDragStart(object sender, GoogleMap.MarkerDragStartEventArgs e)` &ndash;
     This event is raised when the user first drags the marker.
 
--   `GoogleMap.MarkerDrag(object sender, GoogleMap.MarkerDragEventArgs e)` &ndash;
+- `GoogleMap.MarkerDrag(object sender, GoogleMap.MarkerDragEventArgs e)` &ndash;
     This event is raised as the marker is being dragged.
 
--   `GoogleMap.MarkerDragEnd(object sender, GoogleMap.MarkerDragEndEventArgs e)` &ndash;
+- `GoogleMap.MarkerDragEnd(object sender, GoogleMap.MarkerDragEndEventArgs e)` &ndash;
     This event is raised when the user is finished dragging the marker.
 
 Each of the `EventArgs` contains a single property called `P0` that is a
 reference to the `Marker` object being dragged.
-
 
 ### Info Window Click events
 
@@ -784,7 +764,6 @@ Recall that an info window is a static `View` which is rendered as an
 image on the map. Any widgets such as buttons, check boxes, or text
 views that are placed inside the info window will be inert and cannot
 respond to any of their integral user events.
-
 
 ## Related Links
 

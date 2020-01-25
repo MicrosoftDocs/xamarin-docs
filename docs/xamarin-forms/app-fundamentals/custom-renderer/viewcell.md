@@ -63,6 +63,7 @@ public class NativeCell : ViewCell
   }
 }
 ```
+
 The `NativeCell` class is created in the .NET Standard library project and defines the API for the custom cell. The custom cell exposes `Name`, `Category`, and `ImageFilename` properties that can be displayed through data binding. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
 <a name="Consuming_the_Custom_Cell" />
@@ -140,7 +141,7 @@ public class NativeCellPageCS : ContentPage
 }
 ```
 
-A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control is used to display a list of data, which is populated through the [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property. The [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy attempts to minimize the `ListView` memory footprint and execution speed by recycling list cells. For more information, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#cachingstrategy).
+A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control is used to display a list of data, which is populated through the [`ItemSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property. The [`RecycleElement`](xref:Xamarin.Forms.ListViewCachingStrategy.RecycleElement) caching strategy attempts to minimize the `ListView` memory footprint and execution speed by recycling list cells. For more information, see [Caching Strategy](~/xamarin-forms/user-interface/listview/performance.md#caching-strategy).
 
 Each row in the list contains three items of data – a name, a category, and an image filename. The layout of each row in the list is defined by the `DataTemplate` that's referenced through the [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) bindable property. The `DataTemplate` defines that each row of data in the list will be a `NativeCell` that displays its `Name`, `Category`, and `ImageFilename` properties through data binding. For more information about the `ListView` control, see [ListView](~/xamarin-forms/user-interface/listview/index.md).
 
@@ -567,7 +568,6 @@ The `DataTemplate` specifies the controls used to display the contents of the ce
 ## Summary
 
 This article has demonstrated how to create a custom renderer for a [`ViewCell`](xref:Xamarin.Forms.ViewCell) that's hosted inside a Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
-
 
 ## Related Links
 

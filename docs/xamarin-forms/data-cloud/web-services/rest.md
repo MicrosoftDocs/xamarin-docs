@@ -29,7 +29,7 @@ Web service APIs that adhere to REST are called RESTful APIs, and are defined us
 - HTTP methods, such as GET, POST, PUT, PATCH, or DELETE.
 - A media type for the data, such as JavaScript Object Notation (JSON).
 
-RESTful web services typically use JSON messages to return data to the client. JSON is a text-based data-interchange format that produces compact payloads, which results in reduced bandwidth requirements when sending data. The sample application uses the open source [NewtonSoft JSON.NET library](http://www.newtonsoft.com/json) to serialize and deserialize messages.
+RESTful web services typically use JSON messages to return data to the client. JSON is a text-based data-interchange format that produces compact payloads, which results in reduced bandwidth requirements when sending data. The sample application uses the open source [NewtonSoft JSON.NET library](https://www.newtonsoft.com/json) to serialize and deserialize messages.
 
 The simplicity of REST has helped make it the primary method for accessing web services in mobile applications.
 
@@ -71,7 +71,7 @@ The routing table contains a route template, and when the Web API framework rece
 - To find the action, Web API looks at the HTTP method and looks at controller actions that are decorated with the same HTTP method as an attribute.
 - The *{id}* placeholder variable is mapped to an action parameter.
 
-The REST service uses basic authentication. For more information see [Authenticating a RESTful web service](~/xamarin-forms/data-cloud/authentication/rest.md). For more information about ASP.NET Web API routing, see [Routing in ASP.NET Web API](http://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) on the ASP.NET website. For more information about building the REST service using ASP.NET Core, see [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/).
+The REST service uses basic authentication. For more information see [Authenticating a RESTful web service](~/xamarin-forms/data-cloud/authentication/rest.md). For more information about ASP.NET Web API routing, see [Routing in ASP.NET Web API](https://www.asp.net/web-api/overview/web-api-routing-and-actions/routing-in-aspnet-web-api) on the ASP.NET website. For more information about building the REST service using ASP.NET Core, see [Creating Backend Services for Native Mobile Applications](/aspnet/core/mobile/native-mobile-backend/).
 
 The `HttpClient` class is used to send and receive requests over HTTP. It provides functionality for sending HTTP requests and receiving HTTP responses from a URI identified resource. Each request is sent as an asynchronous operation. For more information about asynchronous operations, see [Async Support Overview](~/cross-platform/platform/async.md).
 
@@ -168,6 +168,7 @@ public async Task SaveTodoItemAsync (TodoItem item, bool isNewItem = false)
   ...
 }
 ```
+
 The operation of the `PutAsync` method is identical to the `PostAsync` method that's used for creating data in the web service. However, the possible responses sent from the web service differ.
 
 The REST service sends an HTTP status code in the `HttpResponseMessage.IsSuccessStatusCode` property, to indicate whether the HTTP request succeeded or failed. The common responses for this operation are:

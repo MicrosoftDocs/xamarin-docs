@@ -3,8 +3,8 @@ title: "Using Native Libraries"
 ms.prod: xamarin
 ms.assetid: 7AA6CEC8-C09E-BBDA-FDD6-E40559143548
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/09/2018
 ---
 
@@ -24,9 +24,8 @@ Note that since Android supports multiple Application Binary Interfaces
 (ABIs), Xamarin.Android must know which ABI the native library is built for.
 There are two ways this can be done:
 
-1.  Path "sniffing"
-1.  By using an  `AndroidNativeLibrary/Abi` element within the project file
-
+1. Path "sniffing"
+1. By using an  `AndroidNativeLibrary/Abi` element within the project file
 
 With path sniffing, the parent directory name of the native library is used
 to specify the ABI that the library targets. Thus, if you add `lib/armeabi/libfoo.so` to the project, then the ABI will be
@@ -56,12 +55,10 @@ To debug native C++ code in your project, follow these steps:
 
 1. Double-click project **Properties** and select the **Android Options** page.
 2. Scroll down to **Debugging options**.
-3. In the **Debugger** dropdown menu, select **C++** (instead of the default **.Net (Xamarin)**).
+3. In the **Debugger** dropdown menu, select **C++** (instead of the default **.NET (Xamarin)**).
 
 Visual Studio C++ developers can see the [SanAngeles_NativeDebug](https://docs.microsoft.com/samples/xamarin/monodroid-samples/sanangeles-ndk)
 sample to try debugging C++ from Visual Studio 2019 or Visual Studio 2017 with Xamarin; and refer to our [blog post](https://blog.xamarin.com/build-and-debug-c-libraries-in-xamarin-android-apps-with-visual-studio-2015/) for more information.
-
-
 
 ## Related Links
 

@@ -1,6 +1,7 @@
 Congratulations on completing this tutorial, where you learned how to:
 
 > [!div class="checklist"]
+>
 > - Create a Xamarin.Forms [`Button`](xref:Xamarin.Forms.Button) in XAML.
 > - Respond to the `Button` being tapped.
 > - Change the appearance of the `Button`.

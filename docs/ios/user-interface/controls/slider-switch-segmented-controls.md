@@ -4,8 +4,8 @@ description: "This document discusses slides, switches, and segmented controls i
 ms.prod: xamarin
 ms.assetid: 85BF0EC8-E581-49CD-B9E7-98BE4C5A0F6B
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -77,7 +77,6 @@ switch1.On = true;
 ```
 
  <a name="Segmented_Controls" />
-
 
 ## Segmented Controls
 

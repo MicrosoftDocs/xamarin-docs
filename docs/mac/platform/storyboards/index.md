@@ -4,8 +4,8 @@ description: "This article provides an introduction to working with Storyboards 
 ms.prod: xamarin
 ms.assetid: F37BA503-0B25-489F-80A8-58C493291A55
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -74,9 +74,9 @@ When using Presentation Segues, you can override the `PrepareForSegue` method of
 At Design time (when layout out the UI in Xcode's Interface Builder), each element of the app's UI is broken down into it's constituent items:
 
 - **Scenes** - Which are composed of:
-	- **View Controller** - That define the relationships between Views and the data that support them.
-	- **Views and Subviews** - The actual elements that make up the user interface.
-	- **Containment Segues** - That define the parent-child relationships between Scenes.
+  - **View Controller** - That define the relationships between Views and the data that support them.
+  - **Views and Subviews** - The actual elements that make up the user interface.
+  - **Containment Segues** - That define the parent-child relationships between Scenes.
 - **Presentation Segues** - That define individual presentation modes. 
 
 By defining each element in this way, it allows for the lazy-loading of each element only as it is needed during runtime. In macOS, the entire process was designed to allow the developer to create complex, flexible User Interfaces that require a bare minimum of backing code to make them work, all while being as efficient with system resources as possible.
@@ -106,7 +106,6 @@ The SourceWriter code has been fully commented and, where available, links have 
 ## Summary
 
 This article has taken a quick look at working with Storyboards in a Xamarin.Mac app. We saw how to create a new app using storyboards and how to define a user interface. We also saw how to navigate between different windows and view states using segues.
-
 
 ## Related Links
 

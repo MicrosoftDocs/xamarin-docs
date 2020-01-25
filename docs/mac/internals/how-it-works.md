@@ -4,8 +4,8 @@ description: "This document describes the internal workings of Xamarin.Mac. In p
 ms.prod: xamarin
 ms.assetid: C2053ABB-6DBF-4233-AEEA-B72FC6A81FE1
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 05/25/2017
 ---
 
@@ -155,4 +155,3 @@ Here are some more detailed explanations of how things work internally:
 - [Theading Fundamentals](~/ios/app-fundamentals/threading.md)
 - [Delegates, Protocols, and Events](~/ios/app-fundamentals/delegates-protocols-and-events.md)
 - [About `newrefcount`](~/ios/internals/newrefcount.md)
-

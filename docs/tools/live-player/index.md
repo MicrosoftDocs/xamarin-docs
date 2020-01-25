@@ -3,8 +3,8 @@ title: "Xamarin Live Player for Xamarin.Forms"
 description: "This document discusses the Xamarin Live Player for Xamarin.Forms, describing installation, the Xamarin Live Player app, samples to use with Xamarin Live Player, limitations, and troubleshooting."
 ms.prod: xamarin
 ms.assetid: 19B1F126-866E-4672-92D2-BE2B70ACF0F1
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2019
 ---
 

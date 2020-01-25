@@ -4,8 +4,8 @@ description: "This document links to the Xamarin API reference documentation, a 
 ms.prod: xamarin
 ms.assetid: 4C1669A4-C12B-9C49-4A39-9046576D10DC
 ms.technology: xamarin-ios
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
 ---
 

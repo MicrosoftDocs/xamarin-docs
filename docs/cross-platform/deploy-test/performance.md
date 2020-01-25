@@ -3,8 +3,8 @@ title: "Performance and Security"
 description: "This document links to various guides that describe techniques for improving performance in Xamarin.iOS, Xamarin.Android, and Xamarin.Mac applications."
 ms.prod: xamarin
 ms.assetid: 3E0886A7-B0ED-44CC-8DE3-5B274FBBE2E5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2017
 ---
 # Performance and Security

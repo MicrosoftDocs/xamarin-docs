@@ -3,8 +3,8 @@ title: "Custom Button"
 ms.prod: xamarin
 ms.assetid: C523D41E-5855-248D-079D-6B12B74B7617
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -50,7 +50,6 @@ file now represents a single drawable resource and when referenced
 by a [`Button`](xref:Android.Widget.Button)
 for its background, the image displayed will change based on these
 three states.
-
 
 > [!NOTE]
 > The order of the `<item>` elements is important. When
@@ -100,8 +99,7 @@ is clicked.
 
 Now run the application.
 
-
 *Portions of this page are modifications based on work created and
 shared by the Android Open Source Project and used according to
 terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+[*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/).

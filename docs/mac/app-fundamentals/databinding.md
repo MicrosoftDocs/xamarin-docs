@@ -4,8 +4,8 @@ description: "This article covers using key-value coding and key-value observing
 ms.prod: xamarin
 ms.assetid: 72594395-0737-4894-8819-3E1802864BE7
 ms.technology: xamarin-mac
-author: lobrien
-ms.author: laobri
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -31,7 +31,7 @@ You may want to take a look at the [Exposing C# classes / methods to Objective-C
 
 Key-value coding (KVC) is a mechanism for accessing an object’s properties indirectly, using keys (specially formatted strings) to identify properties instead of accessing them through instance variables or accessor methods (`get/set`). By implementing key-value coding compliant accessors in your Xamarin.Mac application, you gain access to other macOS (formerly known as OS X) features such as key-value observing (KVO), data binding, Core Data, Cocoa bindings, and scriptability.
 
-By using key-value coding and data binding techniques in your Xamarin.Mac application, you can greatly decrease the amount of code that you have to write and maintain to populate and work with UI elements. You also have the benefit of further decoupling your backing data (_Data Model_) from your front end User Interface (_Model-View-Controller_), leading to easier to maintain, more flexible application design. 
+By using key-value coding and data binding techniques in your Xamarin.Mac application, you can greatly decrease the amount of code that you have to write and maintain to populate and work with UI elements. You also have the benefit of further decoupling your backing data (_Data Model_) from your front end User Interface (_Model-View-Controller_), leading to easier to maintain, more flexible application design.
 
 For example, let's look at the following class definition of a KVC compliant object:
 
@@ -41,37 +41,37 @@ using Foundation;
 
 namespace MacDatabinding
 {
-	[Register("PersonModel")]
-	public class PersonModel : NSObject
-	{
-		private string _name = "";
-		
-		[Export("Name")]
-		public string Name {
-			get { return _name; }
-			set {
-				WillChangeValue ("Name");
-				_name = value;
-				DidChangeValue ("Name");
-			}
-		}
-		
-		public PersonModel ()
-		{
-		}
-	}
+    [Register("PersonModel")]
+    public class PersonModel : NSObject
+    {
+        private string _name = "";
+
+        [Export("Name")]
+        public string Name {
+            get { return _name; }
+            set {
+                WillChangeValue ("Name");
+                _name = value;
+                DidChangeValue ("Name");
+            }
+        }
+
+        public PersonModel ()
+        {
+        }
+    }
 }
 ```
 
-First, the `[Register("PersonModel")]` attribute registers the class and exposes it to Objective-C. Then, the class needs to inherit from `NSObject` (or a subclass that inherits from `NSObject`), this adds several base method that allow to the class to be KVC compliant. Next, the `[Export("Name")]` attribute exposes the `Name` property and defines the Key value that will later be used to access the property through KVC and KVO techniques. 
+First, the `[Register("PersonModel")]` attribute registers the class and exposes it to Objective-C. Then, the class needs to inherit from `NSObject` (or a subclass that inherits from `NSObject`), this adds several base method that allow to the class to be KVC compliant. Next, the `[Export("Name")]` attribute exposes the `Name` property and defines the Key value that will later be used to access the property through KVC and KVO techniques.
 
 Finally, to be able to be Key-Value Observed changes to the property's value, the accessor must wrap changes to its value in `WillChangeValue` and `DidChangeValue` method calls (specifying the same Key as the `Export` attribute).  For example:
 
 ```csharp
 set {
-	WillChangeValue ("Name");
-	_name = value;
-	DidChangeValue ("Name");
+    WillChangeValue ("Name");
+    _name = value;
+    DidChangeValue ("Name");
 }
 ```
 
@@ -93,36 +93,36 @@ using Foundation;
 
 namespace MacDatabinding
 {
-	[Register("PersonModel")]
-	public class PersonModel : NSObject
-	{
-		private string _name = "";
-		private PersonModel _child = new PersonModel();
-		
-		[Export("Name")]
-		public string Name {
-			get { return _name; }
-			set {
-				WillChangeValue ("Name");
-				_name = value;
-				DidChangeValue ("Name");
-			}
-		}
-		
-		[Export("Child")]
-		public PersonModel Child {
-			get { return _child; }
-			set {
-				WillChangeValue ("Child");
-				_child = value;
-				DidChangeValue ("Child");
-			}
-		}
-		
-		public PersonModel ()
-		{
-		}
-	}
+    [Register("PersonModel")]
+    public class PersonModel : NSObject
+    {
+        private string _name = "";
+        private PersonModel _child = new PersonModel();
+
+        [Export("Name")]
+        public string Name {
+            get { return _name; }
+            set {
+                WillChangeValue ("Name");
+                _name = value;
+                DidChangeValue ("Name");
+            }
+        }
+
+        [Export("Child")]
+        public PersonModel Child {
+            get { return _child; }
+            set {
+                WillChangeValue ("Child");
+                _child = value;
+                DidChangeValue ("Child");
+            }
+        }
+
+        public PersonModel ()
+        {
+        }
+    }
 }
 ```
 
@@ -133,11 +133,11 @@ The Key Path to the child's name would be `self.Child.Name` or simply `Child.Nam
 The `ValueForKey` method returns the value for the specified Key (as a `NSString`), relative to the instance of the KVC class receiving the request. For example, if `Person` is an instance of the `PersonModel` class defined above:
 
 ```csharp
-// Read value 
+// Read value
 var name = Person.ValueForKey (new NSString("Name"));
 ```
 
-This would return the value of the `Name` property for that instance of `PersonModel`. 
+This would return the value of the `Name` property for that instance of `PersonModel`.
 
 ### Setting values using key-value coding
 
@@ -159,12 +159,12 @@ Using key-value observing (KVO), you can attach an observer to a specific Key of
 ```csharp
 // Watch for the name value changing
 Person.AddObserver ("Name", NSKeyValueObservingOptions.New, (sender) => {
-	// Inform caller of selection change
-	Console.WriteLine("New Name: {0}", Person.Name)
+    // Inform caller of selection change
+    Console.WriteLine("New Name: {0}", Person.Name)
 });
 ```
 
-Now, any time the `Name` property of the `Person` instance of the `PersonModel` class is modified, the new value is written out to the console. 
+Now, any time the `Name` property of the `Person` instance of the `PersonModel` class is modified, the new value is written out to the console.
 
 For more information, please see Apple's [Introduction to Key-Value Observing Programming Guide](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html#//apple_ref/doc/uid/10000177i).
 
@@ -187,128 +187,128 @@ using AppKit;
 
 namespace MacDatabinding
 {
-	[Register("PersonModel")]
-	public class PersonModel : NSObject
-	{
-		#region Private Variables
-		private string _name = "";
-		private string _occupation = "";
-		private bool _isManager = false;
-		private NSMutableArray _people = new NSMutableArray();
-		#endregion
+    [Register("PersonModel")]
+    public class PersonModel : NSObject
+    {
+        #region Private Variables
+        private string _name = "";
+        private string _occupation = "";
+        private bool _isManager = false;
+        private NSMutableArray _people = new NSMutableArray();
+        #endregion
 
-		#region Computed Properties
-		[Export("Name")]
-		public string Name {
-			get { return _name; }
-			set {
-				WillChangeValue ("Name");
-				_name = value;
-				DidChangeValue ("Name");
-			}
-		}
+        #region Computed Properties
+        [Export("Name")]
+        public string Name {
+            get { return _name; }
+            set {
+                WillChangeValue ("Name");
+                _name = value;
+                DidChangeValue ("Name");
+            }
+        }
 
-		[Export("Occupation")]
-		public string Occupation {
-			get { return _occupation; }
-			set {
-				WillChangeValue ("Occupation");
-				_occupation = value;
-				DidChangeValue ("Occupation");
-			}
-		}
+        [Export("Occupation")]
+        public string Occupation {
+            get { return _occupation; }
+            set {
+                WillChangeValue ("Occupation");
+                _occupation = value;
+                DidChangeValue ("Occupation");
+            }
+        }
 
-		[Export("isManager")]
-		public bool isManager {
-			get { return _isManager; }
-			set {
-				WillChangeValue ("isManager");
-				WillChangeValue ("Icon");
-				_isManager = value;
-				DidChangeValue ("isManager");
-				DidChangeValue ("Icon");
-			}
-		}
+        [Export("isManager")]
+        public bool isManager {
+            get { return _isManager; }
+            set {
+                WillChangeValue ("isManager");
+                WillChangeValue ("Icon");
+                _isManager = value;
+                DidChangeValue ("isManager");
+                DidChangeValue ("Icon");
+            }
+        }
 
-		[Export("isEmployee")]
-		public bool isEmployee {
-			get { return (NumberOfEmployees == 0); }
-		}
+        [Export("isEmployee")]
+        public bool isEmployee {
+            get { return (NumberOfEmployees == 0); }
+        }
 
-		[Export("Icon")]
-		public NSImage Icon {
-			get {
-				if (isManager) {
-					return NSImage.ImageNamed ("group.png");
-				} else {
-					return NSImage.ImageNamed ("user.png");
-				}
-			}
-		}
+        [Export("Icon")]
+        public NSImage Icon {
+            get {
+                if (isManager) {
+                    return NSImage.ImageNamed ("group.png");
+                } else {
+                    return NSImage.ImageNamed ("user.png");
+                }
+            }
+        }
 
-		[Export("personModelArray")]
-		public NSArray People {
-			get { return _people; }
-		}
+        [Export("personModelArray")]
+        public NSArray People {
+            get { return _people; }
+        }
 
-		[Export("NumberOfEmployees")]
-		public nint NumberOfEmployees {
-			get { return (nint)_people.Count; }
-		}
-		#endregion
+        [Export("NumberOfEmployees")]
+        public nint NumberOfEmployees {
+            get { return (nint)_people.Count; }
+        }
+        #endregion
 
-		#region Constructors
-		public PersonModel ()
-		{
-		}
+        #region Constructors
+        public PersonModel ()
+        {
+        }
 
-		public PersonModel (string name, string occupation)
-		{
-			// Initialize
-			this.Name = name;
-			this.Occupation = occupation;
-		}
+        public PersonModel (string name, string occupation)
+        {
+            // Initialize
+            this.Name = name;
+            this.Occupation = occupation;
+        }
 
-		public PersonModel (string name, string occupation, bool manager)
-		{
-			// Initialize
-			this.Name = name;
-			this.Occupation = occupation;
-			this.isManager = manager;
-		}
-		#endregion
+        public PersonModel (string name, string occupation, bool manager)
+        {
+            // Initialize
+            this.Name = name;
+            this.Occupation = occupation;
+            this.isManager = manager;
+        }
+        #endregion
 
-		#region Array Controller Methods
-		[Export("addObject:")]
-		public void AddPerson(PersonModel person) {
-			WillChangeValue ("personModelArray");
-			isManager = true;
-			_people.Add (person);
-			DidChangeValue ("personModelArray");
-		}
+        #region Array Controller Methods
+        [Export("addObject:")]
+        public void AddPerson(PersonModel person) {
+            WillChangeValue ("personModelArray");
+            isManager = true;
+            _people.Add (person);
+            DidChangeValue ("personModelArray");
+        }
 
-		[Export("insertObject:inPersonModelArrayAtIndex:")]
-		public void InsertPerson(PersonModel person, nint index) {
-			WillChangeValue ("personModelArray");
-			_people.Insert (person, index);
-			DidChangeValue ("personModelArray");
-		}
+        [Export("insertObject:inPersonModelArrayAtIndex:")]
+        public void InsertPerson(PersonModel person, nint index) {
+            WillChangeValue ("personModelArray");
+            _people.Insert (person, index);
+            DidChangeValue ("personModelArray");
+        }
 
-		[Export("removeObjectFromPersonModelArrayAtIndex:")]
-		public void RemovePerson(nint index) {
-			WillChangeValue ("personModelArray");
-			_people.RemoveObject (index);
-			DidChangeValue ("personModelArray");
-		}
+        [Export("removeObjectFromPersonModelArrayAtIndex:")]
+        public void RemovePerson(nint index) {
+            WillChangeValue ("personModelArray");
+            _people.RemoveObject (index);
+            DidChangeValue ("personModelArray");
+        }
 
-		[Export("setPersonModelArray:")]
-		public void SetPeople(NSMutableArray array) {
-			WillChangeValue ("personModelArray");
-			_people = array;
-			DidChangeValue ("personModelArray");
-		}
-		#endregion
-	}
+        [Export("setPersonModelArray:")]
+        public void SetPeople(NSMutableArray array) {
+            WillChangeValue ("personModelArray");
+            _people = array;
+            DidChangeValue ("personModelArray");
+        }
+        #endregion
+    }
 }
 ```
 
@@ -322,7 +322,7 @@ private NSMutableArray _people = new NSMutableArray();
 
 [Export("personModelArray")]
 public NSArray People {
-	get { return _people; }
+    get { return _people; }
 }
 ```
 
@@ -336,31 +336,31 @@ Next, we need to add some specially name public methods to support **Array Contr
 ```csharp
 [Export("addObject:")]
 public void AddPerson(PersonModel person) {
-	WillChangeValue ("personModelArray");
-	isManager = true;
-	_people.Add (person);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    isManager = true;
+    _people.Add (person);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("insertObject:inPersonModelArrayAtIndex:")]
 public void InsertPerson(PersonModel person, nint index) {
-	WillChangeValue ("personModelArray");
-	_people.Insert (person, index);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.Insert (person, index);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("removeObjectFromPersonModelArrayAtIndex:")]
 public void RemovePerson(nint index) {
-	WillChangeValue ("personModelArray");
-	_people.RemoveObject (index);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.RemoveObject (index);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("setPersonModelArray:")]
 public void SetPeople(NSMutableArray array) {
-	WillChangeValue ("personModelArray");
-	_people = array;
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people = array;
+    DidChangeValue ("personModelArray");
 }
 ```
 
@@ -378,29 +378,29 @@ Finally, since the `Icon` property relies on the value of the `isManager` proper
 ```csharp
 [Export("Icon")]
 public NSImage Icon {
-	get {
-		if (isManager) {
-			return NSImage.ImageNamed ("group.png");
-		} else {
-			return NSImage.ImageNamed ("user.png");
-		}
-	}
+    get {
+        if (isManager) {
+            return NSImage.ImageNamed ("group.png");
+        } else {
+            return NSImage.ImageNamed ("user.png");
+        }
+    }
 }
-``` 
+```
 
 To correct that, we use the following code:
 
 ```csharp
 [Export("isManager")]
 public bool isManager {
-	get { return _isManager; }
-	set {
-		WillChangeValue ("isManager");
-		WillChangeValue ("Icon");
-		_isManager = value;
-		DidChangeValue ("isManager");
-		DidChangeValue ("Icon");
-	}
+    get { return _isManager; }
+    set {
+        WillChangeValue ("isManager");
+        WillChangeValue ("Icon");
+        _isManager = value;
+        DidChangeValue ("isManager");
+        DidChangeValue ("Icon");
+    }
 }
 ```
 
@@ -414,7 +414,7 @@ We'll be using the `PersonModel` Data Model throughout the rest of this article.
 
 With our Data Model defined, let's look at a simple example of data binding in Xcode's Interface Builder. For example, let's add a form to our Xamarin.Mac application that can be used to edit the `PersonModel` that we defined above. We'll add a few Text Fields and a Check Box to display and edit properties of our model.
 
-First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `SimpleViewController`: 
+First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `SimpleViewController`:
 
 [![Adding a new view controller](databinding-images/simple01.png "Adding a new view controller")](databinding-images/simple01-large.png#lightbox)
 
@@ -426,12 +426,12 @@ private PersonModel _person = new PersonModel();
 
 [Export("Person")]
 public PersonModel Person {
-	get {return _person; }
-	set {
-		WillChangeValue ("Person");
-		_person = value;
-		DidChangeValue ("Person");
-	}
+    get {return _person; }
+    set {
+        WillChangeValue ("Person");
+        _person = value;
+        DidChangeValue ("Person");
+    }
 }
 ```
 
@@ -440,16 +440,16 @@ Next when the View is loaded, let's create an instance of our `PersonModel` and 
 ```csharp
 public override void ViewDidLoad ()
 {
-	base.AwakeFromNib ();
+    base.AwakeFromNib ();
 
-	// Set a default person
-	var Craig = new PersonModel ("Craig Dunn", "Documentation Manager");
-	Craig.AddPerson (new PersonModel ("Amy Burns", "Technical Writer"));
-	Craig.AddPerson (new PersonModel ("Joel Martinez", "Web & Infrastructure"));
-	Craig.AddPerson (new PersonModel ("Kevin Mullins", "Technical Writer"));
-	Craig.AddPerson (new PersonModel ("Mark McLemore", "Technical Writer"));
-	Craig.AddPerson (new PersonModel ("Tom Opgenorth", "Technical Writer"));
-	Person = Craig;
+    // Set a default person
+    var Craig = new PersonModel ("Craig Dunn", "Documentation Manager");
+    Craig.AddPerson (new PersonModel ("Amy Burns", "Technical Writer"));
+    Craig.AddPerson (new PersonModel ("Joel Martinez", "Web & Infrastructure"));
+    Craig.AddPerson (new PersonModel ("Kevin Mullins", "Technical Writer"));
+    Craig.AddPerson (new PersonModel ("Mark McLemore", "Technical Writer"));
+    Craig.AddPerson (new PersonModel ("Tom Opgenorth", "Technical Writer"));
+    Person = Craig;
 
 }
 ```
@@ -461,25 +461,25 @@ Now we need to create our form, double-click the **Main.storyboard** file to ope
 To Data Bind the form to the `PersonModel` that we exposed via the `Person` Key, do the following:
 
 1. Select the **Employee Name** Text Field and switch to the **Bindings Inspector**.
-2. Check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.Name` for the **Key Path**: 
+2. Check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.Name` for the **Key Path**:
 
-	[![Entering the key path](databinding-images/simple03.png "Entering the key path")](databinding-images/simple03-large.png#lightbox)
-3. Select the **Occupation** Text Field and check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.Occupation` for the **Key Path**:  
+    [![Entering the key path](databinding-images/simple03.png "Entering the key path")](databinding-images/simple03-large.png#lightbox)
+3. Select the **Occupation** Text Field and check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.Occupation` for the **Key Path**:
 
-	[![Entering the key path](databinding-images/simple04.png "Entering the key path")](databinding-images/simple04-large.png#lightbox)
-4. Select the **Employee is a Manager** Checkbox and check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.isManager` for the **Key Path**:  
+    [![Entering the key path](databinding-images/simple04.png "Entering the key path")](databinding-images/simple04-large.png#lightbox)
+4. Select the **Employee is a Manager** Checkbox and check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.isManager` for the **Key Path**:
 
-	[![Entering the key path](databinding-images/simple05.png "Entering the key path")](databinding-images/simple05-large.png#lightbox)
-5. Select the **Number of Employees Managed** Text Field and check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.NumberOfEmployees` for the **Key Path**:  
+    [![Entering the key path](databinding-images/simple05.png "Entering the key path")](databinding-images/simple05-large.png#lightbox)
+5. Select the **Number of Employees Managed** Text Field and check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.NumberOfEmployees` for the **Key Path**:
 
-	[![Entering the key path](databinding-images/simple06.png "Entering the key path")](databinding-images/simple06-large.png#lightbox)
+    [![Entering the key path](databinding-images/simple06.png "Entering the key path")](databinding-images/simple06-large.png#lightbox)
 6. If the employee is not a manager, we want to hide the Number of Employees Managed Label and Text Field.
-7. Select the **Number of Employees Managed** Label, expand the **Hidden** turndown and check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.isManager` for the **Key Path**:  
+7. Select the **Number of Employees Managed** Label, expand the **Hidden** turndown and check the **Bind to** box and select **Simple View Controller** from the dropdown. Next enter `self.Person.isManager` for the **Key Path**:
 
-	[![Entering the key path](databinding-images/simple07.png "Entering the key path")](databinding-images/simple07-large.png#lightbox)
-8. Select `NSNegateBoolean` from the **Value Transformer** dropdown:  
+    [![Entering the key path](databinding-images/simple07.png "Entering the key path")](databinding-images/simple07-large.png#lightbox)
+8. Select `NSNegateBoolean` from the **Value Transformer** dropdown:
 
-	![Selecting the NSNegateBoolean key transformation](databinding-images/simple08.png "Selecting the NSNegateBoolean key transformation")
+    ![Selecting the NSNegateBoolean key transformation](databinding-images/simple08.png "Selecting the NSNegateBoolean key transformation")
 9. This tells data binding that the label will be hidden if the value of the `isManager` property is `false`.
 10. Repeat steps 7 and 8 for the **Number of Employees Managed** Text Field.
 11. Save your changes and return to Visual Studio for Mac to sync with Xcode.
@@ -510,36 +510,36 @@ private NSMutableArray _people = new NSMutableArray();
 
 [Export("personModelArray")]
 public NSArray People {
-	get { return _people; }
+    get { return _people; }
 }
 ...
 
 [Export("addObject:")]
 public void AddPerson(PersonModel person) {
-	WillChangeValue ("personModelArray");
-	_people.Add (person);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.Add (person);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("insertObject:inPersonModelArrayAtIndex:")]
 public void InsertPerson(PersonModel person, nint index) {
-	WillChangeValue ("personModelArray");
-	_people.Insert (person, index);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.Insert (person, index);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("removeObjectFromPersonModelArrayAtIndex:")]
 public void RemovePerson(nint index) {
-	WillChangeValue ("personModelArray");
-	_people.RemoveObject (index);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.RemoveObject (index);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("setPersonModelArray:")]
 public void SetPeople(NSMutableArray array) {
-	WillChangeValue ("personModelArray");
-	_people = array;
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people = array;
+    DidChangeValue ("personModelArray");
 }
 ```
 
@@ -550,17 +550,17 @@ Next when the View is loaded, we need to populate our array with this code:
 ```csharp
 public override void AwakeFromNib ()
 {
-	base.AwakeFromNib ();
+    base.AwakeFromNib ();
 
-	// Build list of employees
-	AddPerson (new PersonModel ("Craig Dunn", "Documentation Manager", true));
-	AddPerson (new PersonModel ("Amy Burns", "Technical Writer"));
-	AddPerson (new PersonModel ("Joel Martinez", "Web & Infrastructure"));
-	AddPerson (new PersonModel ("Kevin Mullins", "Technical Writer"));
-	AddPerson (new PersonModel ("Mark McLemore", "Technical Writer"));
-	AddPerson (new PersonModel ("Tom Opgenorth", "Technical Writer"));
-	AddPerson (new PersonModel ("Larry O'Brien", "API Documentation Manager", true));
-	AddPerson (new PersonModel ("Mike Norman", "API Documenter"));
+    // Build list of employees
+    AddPerson (new PersonModel ("Craig Dunn", "Documentation Manager", true));
+    AddPerson (new PersonModel ("Amy Burns", "Technical Writer"));
+    AddPerson (new PersonModel ("Joel Martinez", "Web & Infrastructure"));
+    AddPerson (new PersonModel ("Kevin Mullins", "Technical Writer"));
+    AddPerson (new PersonModel ("Mark McLemore", "Technical Writer"));
+    AddPerson (new PersonModel ("Tom Opgenorth", "Technical Writer"));
+    AddPerson (new PersonModel ("Larry O'Brien", "API Documentation Manager", true));
+    AddPerson (new PersonModel ("Mike Norman", "API Documenter"));
 
 }
 ```
@@ -571,36 +571,36 @@ Now we need to create our Table View, double-click the **Main.storyboard** file 
 
 We need to add an **Array Controller** to provide bound data to our table, do the following:
 
-1. Drag an **Array Controller** from the **Library Inspector** onto the **Interface Editor**:  
+1. Drag an **Array Controller** from the **Library Inspector** onto the **Interface Editor**:
 
-	![Selecting an Array Controller from the Library](databinding-images/table03.png "Selecting an Array Controller from the Library")
-2. Select **Array Controller** in the **Interface Hierarchy** and switch to the **Attribute Inspector**:  
+    ![Selecting an Array Controller from the Library](databinding-images/table03.png "Selecting an Array Controller from the Library")
+2. Select **Array Controller** in the **Interface Hierarchy** and switch to the **Attribute Inspector**:
 
-	[![Selecting the Attributes Inspector](databinding-images/table04.png "Selecting the Attributes Inspector")](databinding-images/table04-large.png#lightbox)
-3. Enter `PersonModel` for the **Class Name**, click the **Plus** button and add three Keys. Name them `Name`, `Occupation` and `isManager`:  
+    [![Selecting the Attributes Inspector](databinding-images/table04.png "Selecting the Attributes Inspector")](databinding-images/table04-large.png#lightbox)
+3. Enter `PersonModel` for the **Class Name**, click the **Plus** button and add three Keys. Name them `Name`, `Occupation` and `isManager`:
 
-	![Adding the required key paths](databinding-images/table05.png "Adding the required key paths")
+    ![Adding the required key paths](databinding-images/table05.png "Adding the required key paths")
 4. This tells the Array Controller what it is managing an array of, and which properties it should expose (via Keys).
-5. Switch to the **Bindings Inspector** and under **Content Array** select **Bind to** and **Table View Controller**. Enter a **Model Key Path** of `self.personModelArray`:  
+5. Switch to the **Bindings Inspector** and under **Content Array** select **Bind to** and **Table View Controller**. Enter a **Model Key Path** of `self.personModelArray`:
 
-	![Entering a key path](databinding-images/table06.png "Entering a key path")
+    ![Entering a key path](databinding-images/table06.png "Entering a key path")
 6. This ties the Array Controller to the array of `PersonModels` that we exposed on our View Controller.
 
 Now we need to bind our Table View to the Array Controller, do the following:
 
-1. Select the Table View and the **Binding Inspector**:  
+1. Select the Table View and the **Binding Inspector**:
 
-	[![Selecting the Binding Inspector](databinding-images/table07.png "Selecting the Binding Inspector")](databinding-images/table07-large.png#lightbox)
-2. Under the **Table Contents** turndown, select **Bind to** and **Array Controller**. Enter `arrangedObjects` for the **Controller Key** field:  
+    [![Selecting the Binding Inspector](databinding-images/table07.png "Selecting the Binding Inspector")](databinding-images/table07-large.png#lightbox)
+2. Under the **Table Contents** turndown, select **Bind to** and **Array Controller**. Enter `arrangedObjects` for the **Controller Key** field:
 
-	![Defining the controller key](databinding-images/table08.png "Defining the controller key")
-3. Select the **Table View Cell** under the **Employee** column. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Table Cell View**. Enter `objectValue.Name` for the **Model Key Path**:  
+    ![Defining the controller key](databinding-images/table08.png "Defining the controller key")
+3. Select the **Table View Cell** under the **Employee** column. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Table Cell View**. Enter `objectValue.Name` for the **Model Key Path**:
 
-	[![Setting the model key path](databinding-images/table09.png "Setting the model key path")](databinding-images/table09-large.png#lightbox)
+    [![Setting the model key path](databinding-images/table09.png "Setting the model key path")](databinding-images/table09-large.png#lightbox)
 4. `objectValue` is the current `PersonModel` in the array being managed by the Array Controller.
-5. Select the **Table View Cell** under the **Occupation** column. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Table Cell View**. Enter `objectValue.Occupation` for the **Model Key Path**:  
+5. Select the **Table View Cell** under the **Occupation** column. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Table Cell View**. Enter `objectValue.Occupation` for the **Model Key Path**:
 
-	[![Setting the model key path](databinding-images/table10.png "Setting the model key path")](databinding-images/table10-large.png#lightbox)
+    [![Setting the model key path](databinding-images/table10.png "Setting the model key path")](databinding-images/table10-large.png#lightbox)
 6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 If we run the application, the table will be populated with our array of `PersonModels`:
@@ -613,7 +613,7 @@ If we run the application, the table will be populated with our array of `Person
 
 data binding against an Outline View is very similar to binding against a Table View. The key difference is that we'll be using a **Tree Controller** instead of an **Array Controller** to provide the bound data to the Outline View. For more information on working with Outline Views, please see our [Outline Views](~/mac/user-interface/outline-view.md) documentation.
 
-First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `OutlineViewController`: 
+First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `OutlineViewController`:
 
 [![Adding a new view controller](databinding-images/outline01.png "Adding a new view controller")](databinding-images/outline01-large.png#lightbox)
 
@@ -625,36 +625,36 @@ private NSMutableArray _people = new NSMutableArray();
 
 [Export("personModelArray")]
 public NSArray People {
-	get { return _people; }
+    get { return _people; }
 }
 ...
 
 [Export("addObject:")]
 public void AddPerson(PersonModel person) {
-	WillChangeValue ("personModelArray");
-	_people.Add (person);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.Add (person);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("insertObject:inPersonModelArrayAtIndex:")]
 public void InsertPerson(PersonModel person, nint index) {
-	WillChangeValue ("personModelArray");
-	_people.Insert (person, index);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.Insert (person, index);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("removeObjectFromPersonModelArrayAtIndex:")]
 public void RemovePerson(nint index) {
-	WillChangeValue ("personModelArray");
-	_people.RemoveObject (index);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.RemoveObject (index);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("setPersonModelArray:")]
 public void SetPeople(NSMutableArray array) {
-	WillChangeValue ("personModelArray");
-	_people = array;
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people = array;
+    DidChangeValue ("personModelArray");
 }
 ```
 
@@ -665,20 +665,20 @@ Next when the View is loaded, we need to populate our array with this code:
 ```csharp
 public override void AwakeFromNib ()
 {
-	base.AwakeFromNib ();
+    base.AwakeFromNib ();
 
-	// Build list of employees
-	var Craig = new PersonModel ("Craig Dunn", "Documentation Manager");
-	Craig.AddPerson (new PersonModel ("Amy Burns", "Technical Writer"));
-	Craig.AddPerson (new PersonModel ("Joel Martinez", "Web & Infrastructure"));
-	Craig.AddPerson (new PersonModel ("Kevin Mullins", "Technical Writer"));
-	Craig.AddPerson (new PersonModel ("Mark McLemore", "Technical Writer"));
-	Craig.AddPerson (new PersonModel ("Tom Opgenorth", "Technical Writer"));
-	AddPerson (Craig);
+    // Build list of employees
+    var Craig = new PersonModel ("Craig Dunn", "Documentation Manager");
+    Craig.AddPerson (new PersonModel ("Amy Burns", "Technical Writer"));
+    Craig.AddPerson (new PersonModel ("Joel Martinez", "Web & Infrastructure"));
+    Craig.AddPerson (new PersonModel ("Kevin Mullins", "Technical Writer"));
+    Craig.AddPerson (new PersonModel ("Mark McLemore", "Technical Writer"));
+    Craig.AddPerson (new PersonModel ("Tom Opgenorth", "Technical Writer"));
+    AddPerson (Craig);
 
-	var Larry = new PersonModel ("Larry O'Brien", "API Documentation Manager");
-	Larry.AddPerson (new PersonModel ("Mike Norman", "API Documenter"));
-	AddPerson (Larry);
+    var Larry = new PersonModel ("Larry O'Brien", "API Documentation Manager");
+    Larry.AddPerson (new PersonModel ("Mike Norman", "API Documenter"));
+    AddPerson (Larry);
 
 }
 ```
@@ -689,40 +689,40 @@ Now we need to create our Outline View, double-click the **Main.storyboard** fil
 
 We need to add an **Tree Controller** to provide bound data to our outline, do the following:
 
-1. Drag an **Tree Controller** from the **Library Inspector** onto the **Interface Editor**:  
+1. Drag an **Tree Controller** from the **Library Inspector** onto the **Interface Editor**:
 
-	![Selecting a Tree Controller from the Library](databinding-images/outline03.png "Selecting a Tree Controller from the Library")
-2. Select **Tree Controller** in the **Interface Hierarchy** and switch to the **Attribute Inspector**:  
+    ![Selecting a Tree Controller from the Library](databinding-images/outline03.png "Selecting a Tree Controller from the Library")
+2. Select **Tree Controller** in the **Interface Hierarchy** and switch to the **Attribute Inspector**:
 
-	[![Selecting the Attribute Inspector](databinding-images/outline04.png "Selecting the Attribute Inspector")](databinding-images/outline04-large.png#lightbox)
-3. Enter `PersonModel` for the **Class Name**, click the **Plus** button and add three Keys. Name them `Name`, `Occupation` and `isManager`:  
+    [![Selecting the Attribute Inspector](databinding-images/outline04.png "Selecting the Attribute Inspector")](databinding-images/outline04-large.png#lightbox)
+3. Enter `PersonModel` for the **Class Name**, click the **Plus** button and add three Keys. Name them `Name`, `Occupation` and `isManager`:
 
-	![Adding the required key paths](databinding-images/outline05.png "Adding the required key paths")
+    ![Adding the required key paths](databinding-images/outline05.png "Adding the required key paths")
 4. This tells the Tree Controller what it is managing an array of, and which properties it should expose (via Keys).
-5. Under the **Tree Controller** section, enter `personModelArray` for **Children**, enter `NumberOfEmployees` under the **Count** and enter `isEmployee` under **Leaf**:  
+5. Under the **Tree Controller** section, enter `personModelArray` for **Children**, enter `NumberOfEmployees` under the **Count** and enter `isEmployee` under **Leaf**:
 
-	![Setting the Tree Controller key paths](databinding-images/outline05.png "Setting the Tree Controller key paths")
+    ![Setting the Tree Controller key paths](databinding-images/outline05.png "Setting the Tree Controller key paths")
 6. This tells the Tree Controller where to find any child nodes, how many child nodes there are and if the current node has child nodes.
-7. Switch to the **Bindings Inspector** and under **Content Array** select **Bind to** and **File's Owner**. Enter a **Model Key Path** of `self.personModelArray`:  
+7. Switch to the **Bindings Inspector** and under **Content Array** select **Bind to** and **File's Owner**. Enter a **Model Key Path** of `self.personModelArray`:
 
-	![Editing the key path](databinding-images/outline06.png "Editing the key path")
+    ![Editing the key path](databinding-images/outline06.png "Editing the key path")
 8. This ties the Tree Controller to the array of `PersonModels` that we exposed on our View Controller.
 
 Now we need to bind our Outline View to the Tree Controller, do the following:
 
-1. Select the Outline View and in the **Binding Inspector** select :  
+1. Select the Outline View and in the **Binding Inspector** select :
 
-	[![Selecting the Binding Inspector](databinding-images/outline07.png "Selecting the Binding Inspector")](databinding-images/outline07-large.png#lightbox)
-2. Under the **Outline View Contents** turndown, select **Bind to** and **Tree Controller**. Enter `arrangedObjects` for the **Controller Key** field:  
+    [![Selecting the Binding Inspector](databinding-images/outline07.png "Selecting the Binding Inspector")](databinding-images/outline07-large.png#lightbox)
+2. Under the **Outline View Contents** turndown, select **Bind to** and **Tree Controller**. Enter `arrangedObjects` for the **Controller Key** field:
 
-	![Setting the controller key](databinding-images/outline08.png "Setting the controller key")
-3. Select the **Table View Cell** under the **Employee** column. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Table Cell View**. Enter `objectValue.Name` for the **Model Key Path**:  
+    ![Setting the controller key](databinding-images/outline08.png "Setting the controller key")
+3. Select the **Table View Cell** under the **Employee** column. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Table Cell View**. Enter `objectValue.Name` for the **Model Key Path**:
 
-	[![Entering the model key path](databinding-images/outline09.png "Entering the model key path")](databinding-images/outline09-large.png#lightbox)
+    [![Entering the model key path](databinding-images/outline09.png "Entering the model key path")](databinding-images/outline09-large.png#lightbox)
 4. `objectValue` is the current `PersonModel` in the array being managed by the Tree Controller.
-5. Select the **Table View Cell** under the **Occupation** column. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Table Cell View**. Enter `objectValue.Occupation` for the **Model Key Path**:  
+5. Select the **Table View Cell** under the **Occupation** column. In the **Bindings Inspector** under the **Value** turndown, select **Bind to** and **Table Cell View**. Enter `objectValue.Occupation` for the **Model Key Path**:
 
-	[![Entering the model key path](databinding-images/outline10.png "Entering the model key path")](databinding-images/outline10-large.png#lightbox)
+    [![Entering the model key path](databinding-images/outline10.png "Entering the model key path")](databinding-images/outline10-large.png#lightbox)
 6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
 If we run the application, the outline will be populated with our array of `PersonModels`:
@@ -738,7 +738,7 @@ Data binding with a Collection View is very much like binding with a Table View,
 
 <!--KKM 012/16/2015 - Once Apple fixes the issue with Xcode and Collection Views in Storyboards, we can uncomment this section.
 
-First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`: 
+First, let's add a new **View Controller** to our **Main.storyboard** file in Interface Builder and name its class `CollectionViewController`:
 
 ![](databinding-images/collection01.png)
 
@@ -750,36 +750,36 @@ private NSMutableArray _people = new NSMutableArray();
 
 [Export("personModelArray")]
 public NSArray People {
-	get { return _people; }
+    get { return _people; }
 }
 ...
 
 [Export("addObject:")]
 public void AddPerson(PersonModel person) {
-	WillChangeValue ("personModelArray");
-	_people.Add (person);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.Add (person);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("insertObject:inPersonModelArrayAtIndex:")]
 public void InsertPerson(PersonModel person, nint index) {
-	WillChangeValue ("personModelArray");
-	_people.Insert (person, index);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.Insert (person, index);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("removeObjectFromPersonModelArrayAtIndex:")]
 public void RemovePerson(nint index) {
-	WillChangeValue ("personModelArray");
-	_people.RemoveObject (index);
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people.RemoveObject (index);
+    DidChangeValue ("personModelArray");
 }
 
 [Export("setPersonModelArray:")]
 public void SetPeople(NSMutableArray array) {
-	WillChangeValue ("personModelArray");
-	_people = array;
-	DidChangeValue ("personModelArray");
+    WillChangeValue ("personModelArray");
+    _people = array;
+    DidChangeValue ("personModelArray");
 }
 ```
 
@@ -790,17 +790,17 @@ Next when the View is loaded, we need to populate our array with this code:
 ```csharp
 public override void AwakeFromNib ()
 {
-	base.AwakeFromNib ();
+    base.AwakeFromNib ();
 
-	// Build list of employees
-	AddPerson (new PersonModel ("Craig Dunn", "Documentation Manager", true));
-	AddPerson (new PersonModel ("Amy Burns", "Technical Writer"));
-	AddPerson (new PersonModel ("Joel Martinez", "Web & Infrastructure"));
-	AddPerson (new PersonModel ("Kevin Mullins", "Technical Writer"));
-	AddPerson (new PersonModel ("Mark McLemore", "Technical Writer"));
-	AddPerson (new PersonModel ("Tom Opgenorth", "Technical Writer"));
-	AddPerson (new PersonModel ("Larry O'Brien", "API Documentation Manager", true));
-	AddPerson (new PersonModel ("Mike Norman", "API Documenter"));
+    // Build list of employees
+    AddPerson (new PersonModel ("Craig Dunn", "Documentation Manager", true));
+    AddPerson (new PersonModel ("Amy Burns", "Technical Writer"));
+    AddPerson (new PersonModel ("Joel Martinez", "Web & Infrastructure"));
+    AddPerson (new PersonModel ("Kevin Mullins", "Technical Writer"));
+    AddPerson (new PersonModel ("Mark McLemore", "Technical Writer"));
+    AddPerson (new PersonModel ("Tom Opgenorth", "Technical Writer"));
+    AddPerson (new PersonModel ("Larry O'Brien", "API Documentation Manager", true));
+    AddPerson (new PersonModel ("Mike Norman", "API Documenter"));
 
 }
 ```
@@ -811,8 +811,8 @@ Now we need to create our Collection View, double-click the **Main.storyboard** 
 
 When you add a Collection View to a User Interface design, two extra elements are also added:
 
-1.  **Collection View Item** -  That manages a single instance of an item in the collection.
-2.  **View** - A custom view that provides the visual size and appearance of each item in the collection. This view is tied to and managed by the **Collection View Item**.
+1. **Collection View Item** -  That manages a single instance of an item in the collection.
+2. **View** - A custom view that provides the visual size and appearance of each item in the collection. This view is tied to and managed by the **Collection View Item**.
 
 Select the view and make it look like the following using an Image View and two Text Fields:
 
@@ -883,7 +883,6 @@ This line is telling us that the key `Title` doesn't exist on the object that we
 ## Summary
 
 This article has taken a detailed look at working with data binding and key-value coding in a Xamarin.Mac application. First, it looked at exposing a C# class to Objective-C by using key-value coding (KVC) and key-value observing (KVO). Next, it showed how to use a KVO compliant class and Data Bind it to UI elements in Xcode's Interface Builder. Finally, it showed complex data binding using **Array Controllers** and **Tree Controllers**.
-
 
 ## Related Links
 
