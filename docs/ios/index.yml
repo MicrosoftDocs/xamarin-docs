@@ -14,7 +14,7 @@ metadata:
   ms.date: 01/24/2020
 
 landingContent:
-  - title: Getting started
+  - title: Get started
     linkLists:
       - linkListType: concept
         links:
@@ -184,7 +184,7 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Getting started
+          - text: Get started
             url: ~/ios/watchos/get-started/index.md
           - text: Application fundamentals
             url: ~/ios/watchos/app-fundamentals/index.md
@@ -203,7 +203,7 @@ landingContent:
     linkLists:
       - linkListType: concept
         links:
-          - text: Getting started
+          - text: Get started
             url: ~/ios/tvos/get-started/index.md
           - text: Application fundamentals
             url: ~/ios/tvos/app-fundamentals/index.md
