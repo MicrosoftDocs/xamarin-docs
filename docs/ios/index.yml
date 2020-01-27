@@ -62,7 +62,7 @@ landingContent:
             url: ~/ios/user-interface/designer/index.md
           - text: Storyboards
             url: ~/ios/user-interface/storyboards/index.md
-          - text: User interfaces in iOS
+          - text: User interfaces
             url: ~/ios/user-interface/ios-ui/index.md
           - text: Controls
             url: ~/ios/user-interface/controls/index.md

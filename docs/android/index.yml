@@ -77,7 +77,7 @@ landingContent:
         links:
           - text: App linking
             url: ~/android/platform/app-linking.md
-          - text: Binding a Java library
+          - text: Bind a Java library
             url: ~/android/platform/binding-java-library/index.md
           - text: Content providers
             url: ~/android/platform/content-providers/index.md
@@ -132,7 +132,7 @@ landingContent:
         links:
           - text: App package size
             url: ~/android/deploy-test/app-package-size.md
-          - text: Building apps
+          - text: Build apps
             url: ~/android/deploy-test/building-apps/index.md
           - text: Linking
             url: ~/android/deploy-test/linker.md
@@ -142,11 +142,11 @@ landingContent:
             url: ~/android/deploy-test/performance.md
           - text: Profiling
             url: ~/android/deploy-test/profiling.md
-          - text: Preparing for release
+          - text: Prepare for release
             url: ~/android/deploy-test/release-prep/index.md
-          - text: Signing the APK
+          - text: Sign the APK
             url: ~/android/deploy-test/signing/index.md
-          - text: Publishing an app
+          - text: Publish an app
             url: ~/android/deploy-test/publishing/index.md
           - text: See more >
             url: ~/android/deploy-test/index.md
