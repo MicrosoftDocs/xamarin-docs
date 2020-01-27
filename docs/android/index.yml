@@ -137,7 +137,7 @@ landingContent:
           - text: Linking
             url: ~/android/deploy-test/linker.md
           - text: Multi-core devices
-            url: ~/android/deploy-test/multi-core-devices.md
+            url: ~/android/deploy-test/multicore-devices.md
           - text: Performance
             url: ~/android/deploy-test/performance.md
           - text: Profiling
@@ -156,15 +156,15 @@ landingContent:
       - linkListType: concept
         links:
           - text: Architecture
-            url: ~/android/wear/internals/architetcure.md
+            url: ~/android/internals/architecture.md
           - text: Available assemblies
             url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
           - text: API design
-            url: ~/android/wear/internals/api-design.md
+            url: ~/android/internals/api-design.md
           - text: Garbage collection
-            url: ~/android/wear/internals/garbage-collection.md
+            url: ~/android/internals/garbage-collection.md
           - text: Limitations
-            url: ~/android/wear/internals/limitations.md
+            url: ~/android/internals/limitations.md
 
   - title: Android wear
     linkLists:
