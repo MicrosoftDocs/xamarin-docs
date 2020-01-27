@@ -28,13 +28,13 @@ AndroidX is a replacement for the Support Library, which is no longer maintained
 
 Google created a migration process called the Jetifier with AndroidX. The Jetifier inspects the jar bytecode during the build process and remaps Support Library references, both in app code and in dependencies, to their AndroidX equivalent.
 
-In a Xamarin.Forms app, the jar dependencies must be migrated to AndroidX similar to an Android Java app. However, the Xamarin bindings must also be migrated to point to the correct, underlying jar files. Xamarin.Forms added support for automatic AndroidX migration in version 4.5.
+In a Xamarin.Forms app, just as in an Android Java app, the jar dependencies must be migrated to AndroidX. However, the Xamarin bindings must also be migrated to point to the correct, underlying jar files. Xamarin.Forms added support for automatic AndroidX migration in version 4.5.
 
 For more information about AndroidX, see [AndroidX overview](https://developer.android.com/jetpack/androidx) on developer.android.com.
 
-## Automatic Migration in Xamarin.Forms
+## Automatic migration in Xamarin.Forms
 
-To automatically migrate to AndroidX, your project must:
+To automatically migrate to AndroidX, a Xamarin.Forms project must:
 
 - Target Android API version 29 or greater.
 - Use Xamarin.Forms version 4.5 or greater.
@@ -44,7 +44,7 @@ Once you have confirmed these settings in your project, build the Android app in
 > [!NOTE]
 > You must keep the references to the Support Library in your project. These are used to compile the application before the migration process inspects the resulting IL and transforms the dependencies.
 
-If AndroidX dependencies are detected that are not part of the project, a build error is reported that indicates which AndroidX packages are missing. An example build error:
+If AndroidX dependencies are detected that are not part of the project, a build error is reported that indicates which AndroidX packages are missing. An example build error is shown below:
 
 ```
 Could not find 37 AndroidX assemblies, make sure to install the following NuGet packages:
@@ -59,9 +59,9 @@ You can also copy and paste the following snippit into your .csproj file:
  <PackageReference Include="Xamarin.AndroidX.Legacy.Support.V4" Version="1.0.0-rc1" />
 ```
 
-The missing NuGet packages can either be installed  via the NuGet Package Manager in Visual Studio 2019, or installed by editing your Android .csproj file to include the `PackageReference` XML items listed in the error.
+The missing NuGet packages can either be installed via the NuGet Package Manager in Visual Studio, or installed by editing your Android .csproj file to include the `PackageReference` XML items listed in the error.
 
-Once the missing packages are resolved, rebuilding the project loads the missing packages and your project is compiled using AndroidX instead of Support Library dependencies.
+Once the missing packages are resolved, rebuilding the project loads the missing packages and your project is compiled using AndroidX dependencies instead of Support Library dependencies.
 
 > [!NOTE]
 > If your project, and project dependencies, do not reference Android Support Libraries, the migration process does nothing and is not executed.
