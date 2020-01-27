@@ -42,7 +42,7 @@ The `LinearItemsLayout` class inherits from the [`ItemsLayout`](xref:Xamarin.For
 
 ## Horizontal layout
 
-By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) will display its items horizontally. Therefore, it's not necessary to set the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to use this layout:
+By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) will display its items horizontally. Therefore, it's not necessary to set the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout*) property to use this layout:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -82,7 +82,7 @@ By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) will display its i
 </CarouselView>
 ```
 
-Alternatively, this layout can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to a `LinearItemsLayout` object, specifying the `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
+Alternatively, this layout can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout*) property to a `LinearItemsLayout` object, specifying the `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -107,7 +107,7 @@ This results in a layout that grows horizontally as new items are added.
 
 ## Vertical layout
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) can display its items vertically by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to a `LinearItemsLayout` object, specifying the `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) can display its items vertically by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout*) property to a `LinearItemsLayout` object, specifying the `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -189,7 +189,7 @@ The result is that adjacent items are partially exposed on screen.
 
 By default, each item in a [`CarouselView`](xref:Xamarin.Forms.CarouselView) doesn't have any empty space around it. This behavior can be changed by setting properties on the items layout used by the `CarouselView`.
 
-When a [`CarouselView`](xref:Xamarin.Forms.CarouselView) sets its [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to a `LinearItemsLayout` object, the `LinearItemsLayout.ItemSpacing` property can be set to a `double` value that represents the empty space around each item:
+When a [`CarouselView`](xref:Xamarin.Forms.CarouselView) sets its [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout*) property to a `LinearItemsLayout` object, the `LinearItemsLayout.ItemSpacing` property can be set to a `double` value that represents the empty space around each item:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
