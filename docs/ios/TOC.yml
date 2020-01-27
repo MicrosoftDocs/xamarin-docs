@@ -140,6 +140,11 @@
       items: 
         - name: Overview
           href: user-interface/index.md
+        - name: Storyboards
+          href: user-interface/storyboards/index.md
+          items:
+            - name: Unified Storyboards
+              href: user-interface/storyboards/unified-storyboards.md
         - name: iOS Designer
           href: user-interface/designer/index.md
           items: 
@@ -151,11 +156,6 @@
               href: user-interface/designer/ios-designable-controls-walkthrough.md
             - name: Auto Layout with the iOS Designer
               href: user-interface/designer/designer-auto-layout.md
-        - name: Storyboards
-          href: user-interface/storyboards/index.md
-          items: 
-            - name: Unified Storyboards
-              href: user-interface/storyboards/unified-storyboards.md
         - name: User Interfaces in iOS
           href: user-interface/ios-ui/index.md
           items: 
