@@ -6,7 +6,7 @@ ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
+ms.date: 01/28/2020
 ---
 
 # Xamarin.Forms CarouselView Interaction
@@ -62,7 +62,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 carouselView.CurrentItemChanged += OnCurrentItemChanged;
 ```
 
-In this example, the `OnCurrentItemChanged` event handler is executed when the `CurrentItemChanged` event fires, with the event handler exposing the previous and current items:
+In this example, the `OnCurrentItemChanged` event handler is executed when the `CurrentItemChanged` event fires:
 
 ```csharp
 void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
@@ -71,6 +71,10 @@ void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
     Monkey currentItem = e.CurrentItem as Monkey;
 }
 ```
+
+In this example, the `OnCurrentItemChanged` event handler exposes the previous and current items:
+
+[![Screenshot of a CarouselView with previous and current items, on iOS and Android](interaction-images/current-item-events.png "CarouselView with current and previous items")](interaction-images/current-item-events-large.png#lightbox "CarouselView with current and previous items")
 
 ### Command
 
@@ -131,7 +135,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 carouselView.PositionChanged += OnPositionChanged;
 ```
 
-In this example, the `OnPositionChanged` event handler is executed when the `PositionChanged` event fires, with the event handler exposing the previous and current positions:
+In this example, the `OnPositionChanged` event handler is executed when the `PositionChanged` event fires:
 
 ```csharp
 void OnPositionChanged(object sender, PositionChangedEventArgs e)
@@ -140,6 +144,10 @@ void OnPositionChanged(object sender, PositionChangedEventArgs e)
     int currentItemPosition = e.CurrentPosition;
 }
 ```
+
+In this example, the `OnCurrentItemChanged` event handler exposes the previous and current positions:
+
+[![Screenshot of a CarouselView with previous and current positions, on iOS and Android](interaction-images/current-position-events.png "CarouselView with current and previous positions")](interaction-images/current-position-events-large.png#lightbox "CarouselView with current and previous positions")
 
 ### Command
 
@@ -196,7 +204,7 @@ carouselView.SetBinding(CarouselView.CurrentItemProperty, "CurrentItem");
 > [!NOTE]
 > The `CurrentItem` property has a default binding mode of `TwoWay`.
 
-The `CarouselView.CurrentItem` property data binds to the `CurrentItem` property of the connected view model, which is of type `Monkey`. By default, a `TwoWay` binding is used so that if the user changes the current item, the value of the `CurrentItem` property will be set to the current `Monkey` object. The `CurrentItem` property is defined in the `MonkeysViewModel` class, and is set to the fourth item in the `Monkeys` collection:
+The `CarouselView.CurrentItem` property data binds to the `CurrentItem` property of the connected view model, which is of type `Monkey`. By default, a `TwoWay` binding is used so that if the user changes the current item, the value of the `CurrentItem` property will be set to the current `Monkey` object. The `CurrentItem` property is defined in the `MonkeysViewModel` class:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -214,6 +222,10 @@ public class MonkeysViewModel : INotifyPropertyChanged
     }
 }
 ```
+
+In this example, the `CurrentItem` property is set to the fourth item in the `Monkeys` collection:
+
+[![Screenshot of a CarouselView with preset item, on iOS and Android](interaction-images/preset-item.png "CarouselView with preset item")](interaction-images/preset-item-large.png#lightbox "CarouselView with preset item")
 
 ## Preset the position
 
@@ -237,7 +249,7 @@ carouselView.SetBinding(CarouselView.PositionProperty, "Position");
 > [!NOTE]
 > The `Position` property has a default binding mode of `TwoWay`.
 
-The `CarouselView.Position` property data binds to the `Position` property of the connected view model, which is of type `int`. By default, a `TwoWay` binding is used so that if the user scrolls through the [`CarouselView`](xref:Xamarin.Forms.CarouselView), the value of the `Position` property will be set to the index of the displayed item. The `Position` property is defined in the `MonkeysViewModel` class, and is set to the fourth item in the `Monkeys` collection:
+The `CarouselView.Position` property data binds to the `Position` property of the connected view model, which is of type `int`. By default, a `TwoWay` binding is used so that if the user scrolls through the [`CarouselView`](xref:Xamarin.Forms.CarouselView), the value of the `Position` property will be set to the index of the displayed item. The `Position` property is defined in the `MonkeysViewModel` class:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -253,6 +265,10 @@ public class MonkeysViewModel : INotifyPropertyChanged
     }
 }
 ```
+
+In this example, the `Position` property is set to the fourth item in the `Monkeys` collection:
+
+[![Screenshot of a CarouselView with preset position, on iOS and Android](interaction-images/preset-position.png "CarouselView with preset position")](interaction-images/preset-position-large.png#lightbox "CarouselView with preset position")
 
 ## Clear the current item
 

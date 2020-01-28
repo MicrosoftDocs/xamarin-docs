@@ -6,7 +6,7 @@ ms.assetid: 92D7B618-07FA-4343-9D0F-212525E92C39
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
+ms.date: 01/28/2020
 ---
 
 # Xamarin.Forms CarouselView Scrolling
@@ -212,6 +212,10 @@ The [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeration defines th
 
 By default on a [`CarouselView`](xref:Xamarin.Forms.CarouselView), the [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) property is set to `SnapPointsType.MandatorySingle`, which ensures that scrolling only scrolls one item at a time.
 
+The following screenshots show a [`CarouselView`](xref:Xamarin.Forms.CarouselView) that is not snapping items:
+
+[![Screenshot of a CarouselView without snap points, on iOS and Android](scrolling-images/snappoints-none.png "CarouselView without snap points")](scrolling-images/snappoints-none-large.png#lightbox "CarouselView without snap points")
+
 ### Snap points alignment
 
 The [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment) enumeration defines `Start`, `Center`, and `End` members.
@@ -249,7 +253,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-When a user swipes to initiate a scroll in a horizontally scrolling [`CarouselView`](xref:Xamarin.Forms.CarouselView), the left item will be aligned with the left of the view.
+When a user swipes to initiate a scroll in a horizontally scrolling [`CarouselView`](xref:Xamarin.Forms.CarouselView), the left item will be aligned with the left of the view:
+
+[![Screenshot of a CarouselView with start snap points, on iOS and Android](scrolling-images/snappoints-start.png "CarouselView with start snap points")](scrolling-images/snappoints-start-large.png#lightbox "CarouselView with start snap points")
 
 #### Center
 
@@ -283,7 +289,9 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-When a user swipes to initiate a scroll in a horizontally scrolling [`CarouselView`](xref:Xamarin.Forms.CarouselView), the center item will be aligned with the center of the view.
+When a user swipes to initiate a scroll in a horizontally scrolling [`CarouselView`](xref:Xamarin.Forms.CarouselView), the center item will be aligned with the center of the view:
+
+[![Screenshot of a CarouselView with center snap points, on iOS and Android](scrolling-images/snappoints-center.png "CarouselView with center snap points")](scrolling-images/snappoints-center-large.png#lightbox "CarouselView with center snap points")
 
 #### End
 
@@ -316,6 +324,8 @@ CarouselView carouselView = new CarouselView
 ```
 
 When a user swipes to initiate a scroll in a horizontally scrolling [`CarouselView`](xref:Xamarin.Forms.CarouselView), the right item will be aligned with the right of the view.
+
+[![Screenshot of a CarouselView with end snap points, on iOS and Android](scrolling-images/snappoints-end.png "CarouselView with end snap points")](scrolling-images/snappoints-end-large.png#lightbox "CarouselView with end snap points")
 
 ## Related links
 
