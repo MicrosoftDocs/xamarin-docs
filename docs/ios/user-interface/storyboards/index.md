@@ -11,15 +11,15 @@ ms.date: 03/22/2017
 
 # Introduction to Storyboards in Xamarin.iOS
 
-In this guide we will explain what a Storyboard is and examine some of the key components – such as Segues. We'll look at how 
+In this guide we will explain what a Storyboard is and examine some of the key components – such as Segues. We'll look at how
 Storyboards can be created and used, and what advantages they  have for a developer.
 
-Before the Storyboard file format was introduced by Apple as a visual representation of the UI of an iOS application, developers 
-created XIB files for each view controller, and programmed the navigation between each view manually.  Using a Storyboard 
-lets the developer define both view controllers and the navigation between them on a design surface and offers WYSIWYG editing 
+Before the Storyboard file format was introduced by Apple as a visual representation of the UI of an iOS application, developers
+created XIB files for each view controller, and programmed the navigation between each view manually.  Using a Storyboard
+lets the developer define both view controllers and the navigation between them on a design surface and offers WYSIWYG editing
 of the application's user interface.
 
-A Storyboard can be created, opened and edited with the Xamarin iOS Designer. This guide will also walkthrough how to use the 
+A Storyboard can be created, opened and edited with the Xamarin iOS Designer. This guide will also walkthrough how to use the
 Designer to create your storyboards while using C# to program the navigation.
 
 ## Requirements
@@ -28,39 +28,39 @@ Storyboards can be used with Xcode, the iOS Designer in Visual Studio for Mac, a
 
 ## What is a Storyboard?
 
-A Storyboard is the visual representation of all the screens in an application. It contains a sequence of scenes, with each 
-scene representing a *View Controller* and its *Views*. These views may contain objects and 
-[controls](~/ios/user-interface/controls/index.md) that will allow your user to interact with your application. This collection 
-of views and controls (or *subviews*) is known as a *Content View Hierarchy*. Scenes are connected by segue objects, which 
-represent a transition between view controllers. This is normally achieved by creating a segue between an object on the 
+A Storyboard is the visual representation of all the screens in an application. It contains a sequence of scenes, with each
+scene representing a *View Controller* and its *Views*. These views may contain objects and
+[controls](~/ios/user-interface/controls/index.md) that will allow your user to interact with your application. This collection
+of views and controls (or *subviews*) is known as a *Content View Hierarchy*. Scenes are connected by segue objects, which
+represent a transition between view controllers. This is normally achieved by creating a segue between an object on the
 initial view, and the connecting view. The relationships on the design surface are illustrated in the image below:
 
  [![](images/storyboardsview.png "The relationships on the design surface are illustrated in this image")](images/storyboardsview.png#lightbox)
 
-As shown, the storyboard will lay out each of your scenes with content already rendered and illustrates the connections 
-between them.  It is worth noting at this point, that when we talk about scenes on an iPhone, it is safe to assume that 
+As shown, the storyboard will lay out each of your scenes with content already rendered and illustrates the connections
+between them.  It is worth noting at this point, that when we talk about scenes on an iPhone, it is safe to assume that
 one *scene* on the storyboard is equal to one *screen* of content on the device. However, with an iPad it is possible to have multiple scenes appear at once – for example, using a Popover view controller.
 
-There are many advantages to using storyboards to create your application's UI, especially when using Xamarin. Firstly, 
-it is a visual representation of the UI, as all objects – 
-including [custom controls](~/ios/user-interface/designer/ios-designable-controls-overview.md) – are rendered at design-time. 
-This means that before building or deploying your application you can visualize its appearance and flow. Take the above 
-image, for example. We can tell from a quick look at the design surface how many Scenes there are, the layout of each view 
+There are many advantages to using storyboards to create your application's UI, especially when using Xamarin. Firstly,
+it is a visual representation of the UI, as all objects –
+including [custom controls](~/ios/user-interface/designer/ios-designable-controls-overview.md) – are rendered at design-time.
+This means that before building or deploying your application you can visualize its appearance and flow. Take the above
+image, for example. We can tell from a quick look at the design surface how many Scenes there are, the layout of each view
 and how everything is related. This is what makes Storyboards so powerful.
 
 Events are more manageable with Storyboards, particularly when using the iOS Designer. Most UI controls will have a list of possible events in the Properties Pad. The event handler can be added here and completed in a partial method in the View Controllers class..
 
-The content of a storyboard is stored as an XML file. At build time, any `.storyboard` files are compiled into binary files 
+The content of a storyboard is stored as an XML file. At build time, any `.storyboard` files are compiled into binary files
 known as nibs. At runtime, these nibs are initialized and instantiated to create new views.
 
 ## Segues
 
-A *Segue*, or *Segue Object*, is used in iOS development to represent a transition between scenes. To create a segue, hold 
+A *Segue*, or *Segue Object*, is used in iOS development to represent a transition between scenes. To create a segue, hold
 down the **Ctrl** key and click-drag from one scene to another. As we drag our mouse, a blue connector appears, indicating where the segue will lead as demonstrated in the image below:
 
  [![](images/createsegue.png "A blue connector appears, indicating where the segue will lead as demonstrated in this image")](images/createsegue.png#lightbox)
 
-On mouse-up, a menu will appear letting us choose the action for our segue. It may look similar to the images below: 
+On mouse-up, a menu will appear letting us choose the action for our segue. It may look similar to the images below:
 
 **Pre-iOS 8 and Size Classes**:
 
@@ -72,39 +72,39 @@ On mouse-up, a menu will appear letting us choose the action for our segue. It m
 
 > [!IMPORTANT]
 > If you are using VMWare for your Windows Virtual Machine,  Ctrl-click is mapped as the _Right-Click_ mouse button by default. To create a Segue, edit your Keyboard preferences through **Preferences** > **Keyboard & Mouse** > **Mouse Shortcuts** and remap your **Secondary button** as illustrated below:
-> 
+>
 > [![](images/image22.png "Keyboard and Mouse preference settings")](images/image22.png#lightbox)
-> 
+>
 > You should now be able to add a segue between your View Controllers as normal.
 
-There are different types of transitions, each giving control over how a new view controller is presented to the user and how 
-it interacts with other view controllers in the Storyboard. These are explained below. It is also possible to subclass a segue 
+There are different types of transitions, each giving control over how a new view controller is presented to the user and how
+it interacts with other view controllers in the Storyboard. These are explained below. It is also possible to subclass a segue
 object to implement a custom transition:
 
-- **Show / Push** – A push segue adds the view controller to the navigation stack. It assumes the view controller originating the 
-push is part of the same navigation controller as the view controller that is being added to the stack. This does the same 
-thing as  `pushViewController` , and is generally used when there is some relationship between the data on the screens. Using the 
-push segue gives you the luxury of having a navigation bar with a back button and title added to each view on the stack, allowing 
+- **Show / Push** – A push segue adds the view controller to the navigation stack. It assumes the view controller originating the
+push is part of the same navigation controller as the view controller that is being added to the stack. This does the same
+thing as  `pushViewController` , and is generally used when there is some relationship between the data on the screens. Using the
+push segue gives you the luxury of having a navigation bar with a back button and title added to each view on the stack, allowing
 drill down navigation through the view hierarchy.
-- **Modal** – A modal segue create a relationship between any two view controllers in your project, with the option of an 
-animated transition being shown. The child view controller will completely obscure the parent view controller when brought into 
-view. Unlike a push segue, which adds a back button for us; when using a modal segue  `DismissViewController` must be used in 
+- **Modal** – A modal segue create a relationship between any two view controllers in your project, with the option of an
+animated transition being shown. The child view controller will completely obscure the parent view controller when brought into
+view. Unlike a push segue, which adds a back button for us; when using a modal segue  `DismissViewController` must be used in
 order to return to the previous view controller.
 - **Custom** – Any custom segue can be created as a subclass of `UIStoryboardSegue`.
-- **Unwind** – An unwind segue can be used to navigate back through a push or modal segue – for example, by dismissing the 
-modally-presented view controller. In addition to this, you can unwind through not only one, but a series of push and modal 
-segues and go back multiple steps in your navigation hierarchy with a single unwind action. To understand how to use an unwind 
+- **Unwind** – An unwind segue can be used to navigate back through a push or modal segue – for example, by dismissing the
+modally-presented view controller. In addition to this, you can unwind through not only one, but a series of push and modal
+segues and go back multiple steps in your navigation hierarchy with a single unwind action. To understand how to use an unwind
 segue in the iOS, read the  [Creating Unwind Segues](https://github.com/xamarin/recipes/tree/master/Recipes/ios/general/storyboard/unwind_segue) recipe.
-- **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the 
+- **Sourceless** – A sourceless segue indicates the scene containing the initial view controller and therefore which view the
 user will see first. It is represented by the segue shown below:  
 
     [![](images/sourcelesssegue.png "A sourceless segue")](images/sourcelesssegue.png#lightbox)
 
 ### Adaptive Segue Types
 
- iOS 8 introduced [Size Classes](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) to allow an iOS storyboard file to work with all available screen sizes, enabling developers to create one UI for all iOS devices. By default, all new Xamarin.iOS applications will use size classes. To use size classes from an older project, refer to the [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guide. 
+ iOS 8 introduced [Size Classes](~/ios/user-interface/storyboards/unified-storyboards.md#size-classes) to allow an iOS storyboard file to work with all available screen sizes, enabling developers to create one UI for all iOS devices. By default, all new Xamarin.iOS applications will use size classes. To use size classes from an older project, refer to the [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) guide.
 
-Any application using Size Classes will also use the new [*Adaptive Segues*](~/ios/user-interface/storyboards/unified-storyboards.md). When using size classes, remember that we aren't directly specifying wether we are using an iPhone or iPad. In other words we are creating one UI that will always look the same, regardless of how much real estate it has to work with. Adaptive Segues work by judging the environment, and determining how best to present content. The Adaptive Segues are shown below: 
+Any application using Size Classes will also use the new [*Adaptive Segues*](~/ios/user-interface/storyboards/unified-storyboards.md). When using size classes, remember that we aren't directly specifying wether we are using an iPhone or iPad. In other words we are creating one UI that will always look the same, regardless of how much real estate it has to work with. Adaptive Segues work by judging the environment, and determining how best to present content. The Adaptive Segues are shown below:
 
 [![](images/adaptivesegue.png "The Adaptive Segues dropdown")](images/adaptivesegue.png#lightbox)
 
@@ -117,15 +117,15 @@ Any application using Size Classes will also use the new [*Adaptive Segues*](~/i
 
 ### Transferring Data with Segues
 
-The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) sample, demonstrates this: 
+The benefits of a segue don't end with transitions. They can also be used to manage the transfer of data between view controllers. This is achieved by overriding the `PrepareForSegue` method on the initial view controller and handling the data ourselves. When the segue is triggered – for example, with a button press – the application will call this method, providing an opportunity to prepare the new view controller *before* any navigation occurs. The code below, from the [Phoneword](https://docs.microsoft.com/samples/xamarin/ios-samples/hello-ios) sample, demonstrates this:
 
 ```csharp
-public override void PrepareForSegue (UIStoryboardSegue segue, 
+public override void PrepareForSegue (UIStoryboardSegue segue,
 NSObject sender)
 {
     base.PrepareForSegue (segue, sender);
 
-    var callHistoryController = segue.DestinationViewController 
+    var callHistoryController = segue.DestinationViewController
                                   as CallHistoryController;
 
     if (callHistoryController != null) {
@@ -134,15 +134,15 @@ NSObject sender)
 }
 ```
 
-In this example, the `PrepareForSegue` method will be called when the segue is triggered by the user. We first have to create 
-an instance of the 'receiving' view controller and set this as the segue's destination View Controller. This is done by the 
+In this example, the `PrepareForSegue` method will be called when the segue is triggered by the user. We first have to create
+an instance of the 'receiving' view controller and set this as the segue's destination View Controller. This is done by the
 line of code below:
 
 ```csharp
 var callHistoryController = segue.DestinationViewController as CallHistoryController;
 ```
 
-The method now has the ability to set properties on the `DestinationViewController`. In this example we have taken advantage 
+The method now has the ability to set properties on the `DestinationViewController`. In this example we have taken advantage
 of this by passing a list called `PhoneNumbers` to the `CallHistoryController` and assigning it to an object of the same name:
 
 ```csharp
@@ -159,14 +159,14 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
 
 # [Visual Studio for Mac](#tab/macos)
 
-1. Create a new Storyboard file by browsing to **File > New File > iOS > Storyboard**, as illustrated below: 
-    
+1. Create a new Storyboard file by browsing to **File > New File > iOS > Storyboard**, as illustrated below:
+
     [![](images/new-storyboard-xs.png "The new file dialog")](images/new-storyboard-xs.png#lightbox)
 
 2. Add your Storyboard name to the **Main Interface** section of the **Info.plist**, as shown below:
-    
+
     [![](images/infoplist.png "The Info.plist editor")](images/infoplist.png#lightbox)
-    
+
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (See below), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window and then makes the window visible on the screen.
 
 3. In the `AppDelegate`, override the default `Window` method, with the following code to implement the window property:
@@ -180,14 +180,14 @@ On occasion you may need to add a Storyboard to a previously non-storyboard file
 
 # [Visual Studio](#tab/windows)
 
-1. Create a new Storyboard file by right-clicking on the project to **Add > New File > iOS > Empty Storyboard**, as illustrated below: 
-    
+1. Create a new Storyboard file by right-clicking on the project to **Add > New File > iOS > Empty Storyboard**, as illustrated below:
+
     [![](images/new-storyboard-vs.png "The new item dialog")](images/new-storyboard-vs.png#lightbox)
 
 2. Add your Storyboard name to the **Main Interface** section of the iOS Application, as shown below:
-    
+
     [![](images/ios-app.png "The Info.plist editor")](images/ios-app.png#lightbox)
-    
+
     This does the equivalent of instantiating the Initial View Controller in the `FinishedLaunching` method within the App Delegate. With this option set, the application instantiates a window (See below), loads the main storyboard, and assigns an instance of the storyboard's Initial View Controller (the one beside the sourceless Segue) as the `RootViewController` property of the window and then makes the window visible on the screen.
 
 3. In the `AppDelegate`, override the default `Window` method, with the following code to implement the window property:
@@ -208,12 +208,12 @@ A Storyboard can be created and modified using Xcode for use in your iOS apps de
 Storyboards totally replace individual XIB files in your project, however
 individual view controllers in a Storyboard can still be instantiated using `Storyboard.InstantiateViewController`.
 
-Sometimes applications have special requirements that can't be handled with the built-in storyboard transitions provided by the 
-Designer. For example, if we were to create an application that launches different screens from the same button, depending on 
-the current state of an application, we may want to instantiate the view controllers manually, and program the transition 
+Sometimes applications have special requirements that can't be handled with the built-in storyboard transitions provided by the
+Designer. For example, if we were to create an application that launches different screens from the same button, depending on
+the current state of an application, we may want to instantiate the view controllers manually, and program the transition
 ourselves.
 
-The screenshot below shows two view controllers on our design surface with no segue between them. The next section will walk 
+The screenshot below shows two view controllers on our design surface with no segue between them. The next section will walk
 through how that transition can be set up in code.
 
 1. Add an _Empty iPhone Storyboard_ to an existing project project:
@@ -222,7 +222,7 @@ through how that transition can be set up in code.
 
 2. Right-click the Storyboard file and select **Open With > Xcode Interface Builder** to open it in Xcode.
 
-3. In Xcode, open the Library (via **View > Show Library** or *Shift + Command + L*) to show a list of objects which can be added to the Storyboard. Add a `Navigation Controller` to the Storyboard by dragging the object from the list onto the Storyboard. By default, the `Navigation Controller` will provide two screens; the screen on the right is a `TableViewController` which we will be replacing with a simpler view, so it can be removed by clicking the view and pressing the Delete key. 
+3. In Xcode, open the Library (via **View > Show Library** or *Shift + Command + L*) to show a list of objects which can be added to the Storyboard. Add a `Navigation Controller` to the Storyboard by dragging the object from the list onto the Storyboard. By default, the `Navigation Controller` will provide two screens; the screen on the right is a `TableViewController` which we will be replacing with a simpler view, so it can be removed by clicking the view and pressing the Delete key.
 
     [![](images/add-navigation-controller.png "Adding a NavigationController from the Library")](images/add-navigation-controller.png#lightbox)
 
@@ -231,11 +231,11 @@ through how that transition can be set up in code.
     [![](images/identity-panel.png "Setting the MainViewController in the identity panel")](images/identity-panel.png#lightbox)
 
 5. Using the Library again, drag a View Controller onto the screen. This will be set as the root view controller. Holding the Control key, click and drag from the Navigation Controller on the left to the newly added View Controller on the right, and click *root view controller* in the menu.
-    
+
     [![](images/add-view-controller.png "Adding a NavigationController from the Library and setting the MainViewController as a Root View Controller")](images/add-view-controller.png#lightbox)
 
 6. This app will navigate to another view, so add one more view to the Storyboard, just as before. We will call this a `PinkViewController`, and those values can be set in the same manner as with the `MainViewController`.
-    
+
     [![](images/add-additional-view-controller.png "Adding an additional View Controller")](images/add-additional-view-controller.png#lightbox)
 
 7. Since View Controller will have a pink background, that property can be set in the attributes panel using the dropdown next to `Background`.
@@ -250,24 +250,23 @@ The storyboard is complete, but if we deploy the project now, we will get a blan
 
 ```csharp
 public partial class AppDelegate : UIApplicationDelegate
+{
+    UIWindow window;
+    public static UIStoryboard Storyboard = UIStoryboard.FromName ("MainStoryboard", null);
+    public static UIViewController initialViewController;
+
+    public override bool FinishedLaunching (UIApplication app, NSDictionary options)
     {
-        UIWindow window;
-        public static UIStoryboard Storyboard = UIStoryboard.FromName ("MainStoryboard", null);
-        public static UIViewController initialViewController;
+        window = new UIWindow (UIScreen.MainScreen.Bounds);
 
-        public override bool FinishedLaunching (UIApplication app, NSDictionary options)
-        {
-            window = new UIWindow (UIScreen.MainScreen.Bounds);
+        initialViewController = Storyboard.InstantiateInitialViewController () as UIViewController;
 
-            initialViewController = Storyboard.InstantiateInitialViewController () as UIViewController;
-
-            window.RootViewController = initialViewController;
-            window.AddSubview(initialViewController.View);
-            window.MakeKeyAndVisible ();
-            return true;
-        }
-
+        window.RootViewController = initialViewController;
+        window.AddSubview(initialViewController.View);
+        window.MakeKeyAndVisible ();
+        return true;
     }
+}
 ```
 
 That's a lot of code, but only a few lines are unfamiliar. First, we register our storyboard with the **AppDelegate** by passing in the storyboard's name, **MainStoryboard**. Next, we tell the application to instantiate an initial view controller from the storyboard by calling `InstantiateInitialViewController` on our storyboard, and we set that view controller as our application's root view controller. This method determines the first screen that the user sees, and creates a new instance of that View Controller.
@@ -275,7 +274,7 @@ That's a lot of code, but only a few lines are unfamiliar. First, we register ou
 Notice in the solution pane that the IDE has created a `MainViewcontroller.cs` class, and its `corresponding designer.cs` when we added the Class name to the Properties Pad in step 4. We can see this class created a special constructor that includes a base class:
 
 ```csharp
-public MainViewController (IntPtr handle) : base (handle) 
+public MainViewController (IntPtr handle) : base (handle)
 {
 }
 ```
@@ -286,11 +285,10 @@ When creating a Storyboard using Xcode, the IDE will automatically add the [[Reg
 [Register ("MainViewController")]
 public partial class MainViewController : UIViewController
 {
-public MainViewController (IntPtr handle) : base (handle) 
-{
-}
-
-...
+    public MainViewController (IntPtr handle) : base (handle)
+    {
+    }
+    //...
 }
 ```
 
@@ -305,32 +303,30 @@ public partial class MainViewController : UIViewController
 
     public MainViewController (IntPtr handle) : base (handle)
     {
-
     }
 
     public override void AwakeFromNib ()
     {
-    // Called when loaded from xib or storyboard.
-
-    this.Initialize ();
+        // Called when loaded from xib or storyboard.
+        this.Initialize ();
     }
 
-    public void Initialize(){
-
-    //Instantiating View Controller with Storyboard ID 'PinkViewController'
-    pinkViewController = Storyboard.InstantiateViewController ("PinkViewController") as PinkViewController;
+    public void Initialize()
+    {
+        //Instantiating View Controller with Storyboard ID 'PinkViewController'
+        pinkViewController = Storyboard.InstantiateViewController ("PinkViewController") as PinkViewController;
     }
 
     public override void ViewDidLoad ()
     {
-    base.ViewDidLoad ();
+        base.ViewDidLoad ();
 
-    //When we push the button, we will push the pinkViewController onto our current Navigation Stack
-    PinkButton.TouchUpInside += (o, e) =&gt; {
-        this.NavigationController.PushViewController (pinkViewController, true);
-    };
+        //When we push the button, we will push the pinkViewController onto our current Navigation Stack
+        PinkButton.TouchUpInside += (o, e) =&gt;
+        {
+            this.NavigationController.PushViewController (pinkViewController, true);
+        };
     }
-
 }
 ```
 
@@ -357,10 +353,10 @@ Before we begin, follow through steps 1 – 8 above. In these steps we create ou
         - Alignment: Center
         - Lines: 2
         - 'Hidden' checkbox checked    
-        
+
     [![](images/passwordvc.png "Center Lines")](images/passwordvc.png#lightbox)
-    
-2. Create a Segue between the Go To Pink button and the view controller by Ctrl-Dragging from the *PinkButton* to the *PinkViewController*, and selecting **Push** on mouse-up. 
+
+2. Create a Segue between the Go To Pink button and the view controller by Ctrl-Dragging from the *PinkButton* to the *PinkViewController*, and selecting **Push** on mouse-up.
 
 3. Click on the Segue and give it the *Identifier* `SegueToPink`:
 
@@ -371,7 +367,7 @@ Before we begin, follow through steps 1 – 8 above. In these steps we create ou
     ```csharp
     public override bool ShouldPerformSegue (string segueIdentifier, NSObject sender)
     {
-        
+
         if(segueIdentifier == "SegueToPink"){
             if (PasswordTextField.Text == "password") {
                 PasswordTextField.ResignFirstResponder ();
@@ -407,31 +403,31 @@ Additionally, a Storyboard Reference can provide an _anchor_ to another scene wi
 To add a reference to an external Storyboard, do the following:
 
 1. In the **Solution Explorer**, right-click on the Project Name and select **Add** > **New File...** > **iOS** > **Storyboard**. Enter a **Name** for the new Storyboard and click the **New** button:
-    
+
     [![](images/ref01.png "The New File Dialog")](images/ref01.png#lightbox)
-    
-2. Design the layout of the new Storyboard's scenes as you normally would and save your changes: 
-    
+
+2. Design the layout of the new Storyboard's scenes as you normally would and save your changes:
+
     [![](images/ref02.png "The layout of the new scene")](images/ref02.png#lightbox)
-    
+
 3. Open the Storyboard that you are going to be adding the reference to in the iOS Designer.
 
-4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
-    
+4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface:
+
     [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-    
-5. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** that you created above: 
+
+5. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** that you created above:
 
     [![](images/ref04.png "The Widget tab")](images/ref04.png#lightbox)
-    
-6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-    [![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox) 
-    
-7. From the popup menu select **Show** to complete the Segue: 
+6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created:
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-    
+    [![](images/ref05.png "Creating a segue")](images/ref05.png#lightbox)
+
+7. From the popup menu select **Show** to complete the Segue:
+
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+
 8. Save your changes to the Storyboard.
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Initial View Controller from the External Storyboard specified in the Storyboard Reference will be displayed.
@@ -444,32 +440,32 @@ To add a reference to a specific Scene an external Storyboard (and not the Initi
 
 1. In the **Solution Explorer**, double-click the external Storyboard to open it for editing.
 
-2. Add a new Scene and design its layout as you normally would: 
+2. Add a new Scene and design its layout as you normally would:
 
     [![](images/ref07.png "The new scene layout")](images/ref07.png#lightbox)
-    
-3. In the **Widget** tab of the **Properties Explorer**, enter a **Storyboard ID** for the new Scene's View Controller: 
+
+3. In the **Widget** tab of the **Properties Explorer**, enter a **Storyboard ID** for the new Scene's View Controller:
 
     [![](images/ref08.png "Enter a Storyboard ID for the new Scenes View Controller")](images/ref08.png#lightbox)
-    
+
 4. Open the Storyboard that you are going to be adding the reference to in the iOS Designer.
 
-5. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
+5. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface:
 
     [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-    
-6. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above: 
+
+6. In the **Widget** tab of the **Properties Explorer**, select the name of the **Storyboard** and the **Reference ID** (Storyboard ID) of the Scene that you created above:
 
     [![](images/ref09.png "The Widget tab ")](images/ref09.png#lightbox)
-    
-7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-    [![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox) 
-    
-8. From the popup menu select **Show** to complete the Segue: 
+7. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created:
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-    
+    [![](images/ref10.png "Creating a segue")](images/ref10.png#lightbox)
+
+8. From the popup menu select **Show** to complete the Segue:
+
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+
 9. Save your changes to the Storyboard.
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Scene with the given **Storyboard ID** from the External Storyboard specified in the Storyboard Reference will be displayed.
@@ -482,30 +478,30 @@ To add a reference to a specific Scene the same Storyboard, do the following:
 
 1. In the **Solution Explorer**, double-click the Storyboard to open it for editing.
 
-2. Add a new Scene and design its layout as you normally would: 
+2. Add a new Scene and design its layout as you normally would:
 
     [![](images/ref11.png "The new scene layout")](images/ref11.png#lightbox)
 
-3. In the **Widget** tab of the **Properties Explorer**, enter a **Storyboard ID** for the new Scene's View Controller: 
+3. In the **Widget** tab of the **Properties Explorer**, enter a **Storyboard ID** for the new Scene's View Controller:
 
     [![](images/ref12.png "The Widget tab")](images/ref12.png#lightbox)
-    
-4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface: 
+
+4. Drag a **Storyboard Reference** from the **Toolbox** onto the Design Surface:
 
    [![](images/ref03.png "A Storyboard Reference")](images/ref03.png#lightbox)
-    
-5. In the **Widget** tab of the **Properties Explorer**, select **Reference ID** (Storyboard ID) of the Scene that you created above: 
+
+5. In the **Widget** tab of the **Properties Explorer**, select **Reference ID** (Storyboard ID) of the Scene that you created above:
 
     [![](images/ref13.png "The Widget tab")](images/ref13.png#lightbox)
-    
-6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created: 
 
-    [![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox) 
-    
-7. From the popup menu select **Show** to complete the Segue: 
+6. Control-click on a UI Widget (like a Button) on an existing Scene and create a new Segue to the **Storyboard Reference** that you just created:
 
-    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox) 
-    
+    [![](images/ref14.png "Creating a segue")](images/ref14.png#lightbox)
+
+7. From the popup menu select **Show** to complete the Segue:
+
+    [![](images/ref06.png "Selecting Show to complete the Segue")](images/ref06.png#lightbox)
+
 8. Save your changes to the Storyboard.
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Scene with the given **Storyboard ID** in the same Storyboard specified in the Storyboard Reference will be displayed.
