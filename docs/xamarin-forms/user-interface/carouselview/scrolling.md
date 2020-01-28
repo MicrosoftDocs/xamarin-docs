@@ -212,7 +212,7 @@ The [`SnapPointsType`](xref:Xamarin.Forms.SnapPointsType) enumeration defines th
 
 By default on a [`CarouselView`](xref:Xamarin.Forms.CarouselView), the [`SnapPointsType`](xref:Xamarin.Forms.ItemsLayout.SnapPointsType) property is set to `SnapPointsType.MandatorySingle`, which ensures that scrolling only scrolls one item at a time.
 
-The following screenshots show a [`CarouselView`](xref:Xamarin.Forms.CarouselView) that is not snapping items:
+The following screenshots show a [`CarouselView`](xref:Xamarin.Forms.CarouselView) with snapping turned off:
 
 [![Screenshot of a CarouselView without snap points, on iOS and Android](scrolling-images/snappoints-none.png "CarouselView without snap points")](scrolling-images/snappoints-none-large.png#lightbox "CarouselView without snap points")
 
