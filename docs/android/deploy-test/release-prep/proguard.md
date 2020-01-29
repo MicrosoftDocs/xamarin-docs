@@ -52,7 +52,7 @@ steps.
 ## ProGuard in Xamarin.Android
 
 The Xamarin.Android ProGuard configuration does not obfuscate the 
-APK. In fact, is not possible to enable obfuscation through ProGuard 
+APK. In fact, it is not possible to enable obfuscation through ProGuard 
 (even through the use of custom configuration files). Thus, 
 Xamarin.Android's ProGuard performs only the **shrinking** and 
 **optimization** steps: 
