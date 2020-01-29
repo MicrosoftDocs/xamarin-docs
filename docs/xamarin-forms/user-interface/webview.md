@@ -102,7 +102,7 @@ browser.Source = htmlSource;
 
 ![WebView Displaying HTML String](webview-images/html-string.png)
 
-In the above code, `@` is used to mark the HTML as a string literal, meaning all the usual escape characters are ignored.
+In the above code, `@` is used to mark the HTML as a [verbatim string literal](https://docs.microsoft.com/dotnet/csharp/programming-guide/strings/#regular-and-verbatim-string-literals), meaning most escape characters are ignored.
 
 > [!NOTE]
 > It may be necessary to set the `WidthRequest` and `HeightRequest` properties of the [`WebView`](xref:Xamarin.Forms.WebView) to see the HTML content, depending upon the layout the `WebView` is a child of. For example, this is required in a [`StackLayout`](xref:Xamarin.Forms.StackLayout).
@@ -117,7 +117,7 @@ WebView can display content from HTML, CSS and Javascript embedded within the ap
     <title>Xamarin Forms</title>
   </head>
   <body>
-    <h1>Xamrin.Forms</h1>
+    <h1>Xamarin.Forms</h1>
     <p>This is an iOS web page.</p>
     <img src="XamarinLogo.png" />
   </body>
