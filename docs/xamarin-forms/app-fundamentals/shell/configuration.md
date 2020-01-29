@@ -87,7 +87,7 @@ By default, a small navigation animation occurs when a page is navigated to with
 
 - `NotAnimated` indicates that the page will be displayed without a navigation animation.
 - `Animated` indicates that the page will be displayed with a navigation animation. This is the default value of the `Shell.PresentationMode` attached property.
-- `Modal` indicates that the page will be be displayed as a modal page.
+- `Modal` indicates that the page will be displayed as a modal page.
 - `ModalAnimated` indicates that the page will be displayed as a modal page, with a navigation animation.
 - `ModalNotAnimated` indicates that the page will be displayed as a modal page, without a navigation animation.
 
