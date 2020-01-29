@@ -6,14 +6,14 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/17/2020
+ms.date: 01/29/2020
 ---
 
 # Xamarin.Forms Shell Page Configuration
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-The `Shell` class defines attached properties that can be used to configure the appearance of pages in Xamarin.Forms Shell applications. This includes setting page colors, disabling the navigation bar, disabling the tab bar, and displaying views in the navigation bar.
+The `Shell` class defines attached properties that can be used to configure the appearance of pages in Xamarin.Forms Shell applications. This includes setting page colors, setting the page presentation mode, disabling the navigation bar, disabling the tab bar, and displaying views in the navigation bar.
 
 ## Set page colors
 
@@ -80,6 +80,30 @@ Alternatively, the color properties can be set with a XAML style:
 ```
 
 For more information about XAML styles, see [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md).
+
+## Set page presentation mode
+
+By default, a small navigation animation occurs when a page is navigated to with the `GoToAsync` method. However, this behavior can be changed by setting the `Shell.PresentationMode` attached property on a [`ContentPage`](xref:Xamarin.Forms.ContentPage) to one of the `PresentationMode` enumeration members:
+
+- `NotAnimated` indicates that the page will be displayed without a navigation animation.
+- `Animated` indicates that the page will be displayed with a navigation animation. This is the default value of the `Shell.PresentationMode` attached property.
+- `Modal` indicates that the page will be be displayed as a modal page.
+- `ModalAnimated` indicates that the page will be displayed as a modal page, with a navigation animation.
+- `ModalNotAnimated` indicates that the page will be displayed as a modal page, without a navigation animation.
+
+> [!IMPORTANT]
+> The `PresentationMode` type is a flags enumeration. This means that a combination of enumeration members can be applied in code. However, for ease of use in XAML, the `ModalAnimated` member is a combination of the `Animated` and `Modal` members, and the `ModalNotAnimated` member is a combination of the `NotAnimated` and `Modal` members. For more information about flag enumerations, see [Enumeration types as bit flags](/dotnet/csharp/language-reference/builtin-types/enum#enumeration-types-as-bit-flags).
+
+The following XAML example sets the `Shell.PresentationMode` attached property on a [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.PresentationMode="Modal">
+    ...             
+</ContentPage>
+```
+
+In this example, the [`ContentPage`](xref:Xamarin.Forms.ContentPage) is set to be displayed as a modal page, when the page is navigated to with the `GoToAsync` method.
 
 ## Enable navigation bar shadow
 
