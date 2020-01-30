@@ -22,7 +22,7 @@ As an introduction to ViewModels, let’s first look at a program without one.
 Earlier you saw how to define a new XML namespace declaration to allow a XAML file to reference classes in other assemblies. Here’s a program that defines an XML namespace declaration for the `System` namespace:
 
 ```csharp
-xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:sys="clr-namespace:System;assembly=netstandard"
 ```
 
 The program can use `x:Static` to obtain the current date and time from the static `DateTime.Now` property and set that `DateTime` value to the `BindingContext` on a `StackLayout`:
@@ -38,7 +38,7 @@ In the **One-Shot DateTime** program, two of the children contain bindings to pr
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="XamlSamples.OneShotDateTimePage"
              Title="One-Shot DateTime Page">
 

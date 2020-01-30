@@ -55,7 +55,7 @@ The **x:Static Demo** page demonstrates several ways to use the `x:Static` marku
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              xmlns:local="clr-namespace:MarkupExtensions"
              x:Class="MarkupExtensions.StaticDemoPage"
              Title="x:Static Demo">
@@ -110,7 +110,7 @@ This is the most common form of the `x:Static` markup extension.
 The **Static Demo** page contains two other examples. The root tag of the XAML file contains an XML namespace declaration for the .NET `System` namespace:
 
 ```xaml
-xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:sys="clr-namespace:System;assembly=netstandard"
 ```
 
 This allows the `Label` font size to be set to the static field `Math.PI`. That results in rather small text, so the `Scale` property is set to `Math.E`:

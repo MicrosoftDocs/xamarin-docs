@@ -33,6 +33,8 @@ Xamarin.Forms Shell is fully available on iOS and Android, but only partially av
 global::Xamarin.Forms.Forms.SetFlags("Shell_UWP_Experimental");
 ```
 
+For information on how to add a UWP project to a Xamarin.Forms solution, see [Setup Windows Projects](~/xamarin-forms/platform/windows/installation/index.md).
+
 ## Shell navigation experience
 
 Shell provides an opinionated navigation experience, based on flyouts and tabs. The top level of navigation in a Shell application is either a flyout or a bottom tab bar, depending on the navigation requirements of the application. The following example shows an application where the top level of navigation is a flyout:
