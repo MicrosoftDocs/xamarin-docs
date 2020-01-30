@@ -13,7 +13,7 @@ ms.date: 09/09/2018
 
 Beginning with API level 26, the Android SDK allows fonts to be treated as resources, just like a layouts or drawables. The [Android Support Library 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) will backport the new font API's to those apps that target API level 14 or higher.
 
-After targetting API 26 or installing the Android Support Library v26, there are two ways to use fonts in an Android application:
+After targeting API 26 or installing the Android Support Library v26, there are two ways to use fonts in an Android application:
 
 1. **Package the font as an Android resource** &ndash; this ensures that the font is always available to the application, but will increase the size of the APK.
 2. **Download the fonts** &ndash; Android also supports downloading a font from a _font provider_. The font provider checks if the font is already on the device. If necessary, the font will be downloaded and cached on the device. This font can be shared between multiple applications.
