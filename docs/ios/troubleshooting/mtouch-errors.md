@@ -1613,7 +1613,7 @@ The root assembly could not be loaded. Please verify that the path in the error 
 
 ### MT202x: Binding Optimizer failed processing `...`.
 
-Something unexpected occured when trying to optimize generated binding code. The element causing the issue is named in the error message. To fix this issue the assembly named (or containing the type or method named) will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to optimize generated binding code. The element causing the issue is named in the error message. To fix this issue the assembly named (or containing the type or method named) will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 The last digit `x` will be:
 
@@ -1625,7 +1625,7 @@ The last digit `x` will be:
 
 ### MT2030: Remove User Resources failed processing `...`.
 
-Something unexpected occured when trying to remove user resources. The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to remove user resources. The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 User resources are files included inside assemblies (as resources) that needs to be extracted, at build time, to create the application bundle. This includes:
 
@@ -1636,37 +1636,37 @@ User resources are files included inside assemblies (as resources) that needs to
 
 ### MT2040: Default HttpMessageHandler setter failed processing `...`.
 
-Something unexpected occured when trying to set the default `HttpMessageHandler` for the application. Please file a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to set the default `HttpMessageHandler` for the application. Please file a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 <a name="MT2050" />
 
 ### MT2050: Code Remover failed processing `...`.
 
-Something unexpected occured when trying to remove code from BCL shipping with the application. Please file a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to remove code from BCL shipping with the application. Please file a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 <a name="MT2060" />
 
 ### MT2060: Sealer failed processing `...`.
 
-Something unexpected occured when trying to seal types or methods (final) or when devirtualizing some methods. The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to seal types or methods (final) or when devirtualizing some methods. The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 <a name="MT2070" />
 
 ### MT2070: Metadata Reducer failed processing `...`.
 
-Something unexpected occured when trying to reduce the metadata from the application. The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to reduce the metadata from the application. The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 <a name="MT2080" />
 
 ### MT2080: MarkNSObjects failed processing `...`.
 
-Something unexpected occured when trying to mark `NSObject` subclasses from the application. The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to mark `NSObject` subclasses from the application. The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 <a name="MT2090" />
 
 ### MT2090: Inliner failed processing `...`.
 
-Something unexpected occured when trying to inline code from the application. The assembly causing the issue is named in the error message. In order to fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to inline code from the application. The assembly causing the issue is named in the error message. In order to fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 <!-- MT21xx: more linker errors -->
 
@@ -1676,7 +1676,7 @@ Something unexpected occured when trying to inline code from the application. Th
 
 ### MT2100: Smart Enum Conversion Preserver failed processing `...`.
 
-Something unexpected occured when trying to mark the conversion methods for smart enums from the application. The assembly causing the issue is named in the error message. In order to fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
+Something unexpected occurred when trying to mark the conversion methods for smart enums from the application. The assembly causing the issue is named in the error message. In order to fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
 <a name="MT2101" />
 
@@ -1690,7 +1690,7 @@ The assembly causing the issue is named in the error message. To fix this issue 
 
 ### MT2102: Error processing the method '\*' in the assembly '\*': *
 
-Something unexpected occured when trying to mark the method mentioned in the error message.
+Something unexpected occurred when trying to mark the method mentioned in the error message.
 
 The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
@@ -1698,7 +1698,7 @@ The assembly causing the issue is named in the error message. To fix this issue 
 
 ### MT2103: Error processing assembly '\*': *
 
-An unexpected error occured when processing an assembly.
+An unexpected error occurred when processing an assembly.
 
 The assembly causing the issue is named in the error message. To fix this issue the assembly will need to be provided in a new issue on [github](https://github.com/xamarin/xamarin-macios/issues/new) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 
@@ -2407,7 +2407,7 @@ This error most likely indicates a bug in Xamarin.iOS. Please file a new issue o
 
 ### MT5217: Native linking possibly failed because the linker command line was too long (* characters).
 
-Native linking failed, and it's possible this occured because the linker
+Native linking failed, and it's possible this occurred because the linker
 command was too long.
 
 Xamarin.iOS projects will often reference native symbols dynamically, which
@@ -2546,7 +2546,7 @@ An error occurred when stripping managed code(removing the IL code) from the ass
 
 ### MT6003: [UnauthorizedAccessException message]
 
-A security error ocurred while stripping debugging symbols from the application.
+A security error occurred while stripping debugging symbols from the application.
 
 ## MT7xxx: MSBuild error messages
 

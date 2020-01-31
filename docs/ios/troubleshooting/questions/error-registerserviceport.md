@@ -12,7 +12,7 @@ ms.date: 04/03/2018
 # iOS Designer Error with RegisterServicePort
 
 ## Sample Error
-> System.AggregateException: One or more errors occured ---> System.SystemException: RegisterServicePort(com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Kernel returned: -308 (-308): (ipc/mig) server died
+> System.AggregateException: One or more errors occurred ---> System.SystemException: RegisterServicePort(com.xamarin.MTHosting.2a0b1, com.apple.PowerManagement.control): Kernel returned: -308 (-308): (ipc/mig) server died
 
 ## Explanation
 Errors with `RegisterServicePort` and similar error messages like above are commonly an issue with spyware/malware on the computer. Please consider the [comment on this bug report](https://bugzilla.xamarin.com/show_bug.cgi?id=21907#c4) for more information, along with the link to the [Apple forum discussion](https://discussions.apple.com/thread/5596008) on how to remove a possible infection. 

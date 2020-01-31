@@ -265,7 +265,7 @@ As a last-straw solution, use an older version of Xamarin.Mac that does not requ
 
 <a name="MM1406" />
 
-#### MM1406: Target framework '{0}' is invalid when targetting Xamarin.Mac 4.5 .NET framwork.
+#### MM1406: Target framework '{0}' is invalid when targeting Xamarin.Mac 4.5 .NET framwork.
 
 <a name="MM1407" />
 
@@ -377,7 +377,7 @@ As a last-straw solution, use an older version of Xamarin.Mac that does not requ
 
 #### MM2103: Error processing assembly '\*': *
 
-An unexpected error occured when processing an assembly.
+An unexpected error occurred when processing an assembly.
 
 The assembly causing the issue is named in the error message. In order to fix this issue the assembly will need to be provided in a [bug report](https://bugzilla.xamarin.com) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 

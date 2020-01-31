@@ -46,7 +46,7 @@ From this point on, our APIs will be surfaced in two ways:
 - **Classic API:** Limited to 32-bits (only) and exposed in the `monotouch.dll` and `XamMac.dll` assemblies.
 - **Unified API:** Support both 32 and 64 bit development with a single API available in the `Xamarin.iOS.dll` and  `Xamarin.Mac.dll` assemblies.
 
-This means that for Enterprise developers (not targetting the App Store),
+This means that for Enterprise developers (not targeting the App Store),
 you can continue using the existing Classic APIs, as we will keep
 maintaining them forever, or you can upgrade to the new APIs.
 
