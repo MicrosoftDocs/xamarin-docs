@@ -138,7 +138,7 @@ additionalContent:
       - title: Xamarin.Essentials
         summary: Cross-platform APIs for common device features.
         url: ~/essentials/index.md
-      - title: Access a RESTful web service
+      - title: Access a RESTf web service
         summary: Integrate and interact with web services using HTTP and JSON
         url: ~/xamarin-forms/data-cloud/web-services/rest.md
       - title: Deploy to Android & iOS devices
