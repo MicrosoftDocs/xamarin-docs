@@ -3,8 +3,8 @@ title: "General Frequently Asked Questions"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: C7E6E54D-3957-407D-BB87-22B095148C6B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/08/2018
 ---
 
@@ -28,7 +28,7 @@ NuGet updates, extensions, and add-ins can be found under the **Updates** tab in
 ### [How do I downgrade a NuGet package?](nuget-package-downgrade.md)
 Visual Studio for Mac & Visual Studio both have features for selecting older versions of packages and installing them automatically; similar to how updating packages works.
 
-### [Missing packages error after updating Nuget packages](nuget-packages-missing.md)
+### [Missing packages error after updating NuGet packages](nuget-packages-missing.md)
 This issue has mainly been reported on Xamarin.Forms sample app solutions, but the potential for this issue can happen on any project that uses NuGet packages.
 
 ### [Unifying Google Play Services Components and NuGet](gps-components-nuget.md)

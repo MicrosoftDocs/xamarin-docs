@@ -394,10 +394,10 @@ You’ll need additional XML namespace declarations to access other classes. Eac
 xmlns:local="clr-namespace:XamlSamples"
 ```
 
-You can also define XML namespace declarations for .NET namespaces in any assembly that the .NET Standard library references. For example, here’s a `sys` prefix for the standard .NET `System` namespace, which is in the **mscorlib** assembly, which once stood for "Microsoft Common Object Runtime Library," but now means "Multilanguage Standard Common Object Runtime Library." Because this is another assembly, you must also specify the assembly name, in this case **mscorlib**:
+You can also define XML namespace declarations for .NET namespaces in any assembly that the .NET Standard library references. For example, here’s a `sys` prefix for the standard .NET `System` namespace, which is in the **netstandard** assembly. Because this is another assembly, you must also specify the assembly name, in this case **netstandard**:
 
 ```csharp
-xmlns:sys="clr-namespace:System;assembly=mscorlib"
+xmlns:sys="clr-namespace:System;assembly=netstandard"
 ```
 
 Notice that the keyword `clr-namespace` is followed by a colon and then the .NET namespace name, followed by a semicolon, the keyword `assembly`, an equal sign, and the assembly name.
@@ -410,7 +410,7 @@ Both these namespace declarations are included in the **StaticConstantsPage** sa
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:XamlSamples"
-             xmlns:sys="clr-namespace:System;assembly=mscorlib"
+             xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="XamlSamples.StaticConstantsPage"
              Title="Static Constants Page"
              Padding="{x:Static local:AppConstants.PagePadding}">
@@ -442,8 +442,9 @@ Several markup extensions are intrinsic to XAML and supported in Xamarin.Forms X
 
 - If a property has a non- `null` value by default but you want to set it to  `null`, set it to the `{x:Null}` markup extension.
 - If a property is of type `Type`, you can assign it to a  `Type` object using the markup extension `{x:Type someClass}`.
-- You can define arrays in XAML using the  `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
+- You can define arrays in XAML using the `x:Array` markup extension. This markup extension has a required attribute named  `Type` that indicates the type of the elements in the array.
 - The `Binding` markup extension is discussed in [Part 4. Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
+- The `RelativeSource` markup extension is discussed in [Relative Bindings](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 ## The ConstraintExpression Markup Extension
 

@@ -4,15 +4,15 @@ description: "Guiding principles that were used to architect the Xamarin.iOS API
 ms.prod: xamarin
 ms.assetid: 322D2724-AF27-6FFE-BD21-AA1CFE8C0545
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
 # Xamarin.iOS API Design
 
 In addition to the core Base Class Libraries that are part of Mono,
-[Xamarin.iOS](http://www.xamarin.com/iOS) ships with bindings for
+[Xamarin.iOS](~/ios/index.yml) ships with bindings for
 various iOS APIs to allow developers to create native iOS
 applications with Mono.
 
@@ -20,7 +20,7 @@ At the core of Xamarin.iOS, there is an interop engine that bridges
 the C# world with the Objective-C world, as well as bindings for the
 iOS C-based APIs like CoreGraphics and [OpenGL ES](#opengles).
 
-The low-level runtime to communicate with Objective-C code is in 
+The low-level runtime to communicate with Objective-C code is in
 [MonoTouch.ObjCRuntime](#objcruntime). On top of this,
 bindings for [Foundation](#foundation), CoreFoundation, and
 [UIKit](#uikit) are provided.
@@ -111,15 +111,13 @@ for object oriented programming in Objective-C.
 
 Xamarin.iOS mirrors in C# the hierarchy of classes from
 Objective-C. For example, the Objective-C base class
-[NSObject](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSObject_Class/Reference/Reference.html)
-is usable from C# via
-[Foundation.NSObject](xref:Foundation.NSObject).
+NSObject is usable from C# via [Foundation.NSObject](xref:Foundation.NSObject).
 
 Although this namespace provides bindings for the underlying
 Objective-C Foundation types, in a few cases we have mapped the
 underlying types to .NET types. For example:
 
-- Instead of dealing with  [NSString](https://developer.apple.com/iphone/library/documentation/Cocoa/Reference/Foundation/Classes/NSString_Class/Reference/NSString.html) and  [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
+- Instead of dealing with NSString and [NSArray](https://developer.apple.com/library/ios/#documentation/Cocoa/Reference/Foundation/Classes/NSArray_Class/NSArray.html), the runtime exposes these as C#  [string](xref:System.String)s and strongly typed  [array](xref:System.Array)s throughout the API.
 
 - Various helper APIs are exposed here to allow developers to bind third party Objective-C APIs, other iOS APIs or APIs that are not currently bound by Xamarin.iOS.
 
@@ -266,7 +264,7 @@ C# delegates are provided for common operations. See the [delegates](#delegates)
 #### OpenGLES
 
 For OpenGLES, we distribute a [modified version](xref:OpenTK)
-of the [OpenTK](http://www.opentk.com/) API, an object-oriented
+of the [OpenTK](https://opentk.net/) API, an object-oriented
 binding to OpenGL that has been modified to use CoreGraphics data types and
 structures, as well as only exposing the functionality that is available on iOS.
 
@@ -368,10 +366,7 @@ delegates are offered:
 2. [Strongly typed via a `Delegate` property](#strongly-typed-via-a-delegate-property)
 3. [Loosely typed via a `WeakDelegate` property](#loosely-typed-via-the-weakdelegate-property)
 
-For example, consider the [UIWebView](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html)
-class. This dispatches to a [UIWebViewDelegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html)
-instance, which is assigned to the [delegate](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebView_Class/Reference/Reference.html#//apple_ref/occ/instp/UIWebView/delegate)
-property.
+For example, consider the UIWebView class. This dispatches to a UIWebViewDelegate instance, which is assigned to the delegate property.
 
 ##### Via Events
 
@@ -379,9 +374,9 @@ For many types, Xamarin.iOS will automatically create an appropriate delegate
 which will forward the `UIWebViewDelegate` calls onto C# events. For
 `UIWebView`:
 
-- The  [webViewDidStartLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidStartLoad:) method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
-- The  [webViewDidFinishLoad](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webViewDidFinishLoad:) method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
-- The  [webView:didFailLoadWithError](https://developer.apple.com/iphone/library/documentation/UIKit/Reference/UIWebViewDelegate_Protocol/Reference/Reference.html#//apple_ref/occ/intfm/UIWebViewDelegate/webView:didFailLoadWithError:) method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
+- The webViewDidStartLoad method is mapped to the  [UIWebView.LoadStarted](xref:UIKit.UIWebView.LoadStarted) event.
+- The webViewDidFinishLoad method is mapped to the  [UIWebView.LoadFinished](xref:UIKit.UIWebView.LoadFinished) event.
+- The webView:didFailLoadWithError method is mapped to the  [UIWebView.LoadError](xref:UIKit.UIWebView.LoadError) event.
 
 For example, this simple program records the start and end times when loading a web view:
 
@@ -843,9 +838,7 @@ public Foo (NSCoder coder)
 ```
 
 This constructor is provided for the cases where the object is being
-initialized from an NSCoding instance. For more information, see
-Apple's [Archives and Serialization Programming
-Guide.](https://developer.apple.com/mac/library/documentation/Cocoa/Conceptual/Archiving/index.html#//apple_ref/doc/uid/10000047i)
+initialized from an NSCoding instance.
 
 #### Exceptions
 

@@ -4,8 +4,8 @@ description: "This document discusses changes made to WebKit and the Safari Serv
 ms.prod: xamarin
 ms.assetid: C74B2E94-177C-43D4-8D6C-9B528773C120
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/12/2017
 ---
 
@@ -15,7 +15,7 @@ iOS 11 introduces a new version of the Safari web browser – Safari 11.0 – wh
 
 ## SafariServices
 
-`SFSafariViewController` was introduced in iOS 9 as an option for displaying web content or authenticating users from your app. More information on its features can be found in the [Web Views](~/ios/user-interface/controls/uiwebview.md#safariviewcontroller) guide.
+`SFSafariViewController` was introduced in iOS 9 as an option for displaying web content or authenticating users from your app. More information on its features can be found in the [Web Views](~/ios/user-interface/controls/webview.md#sfsafariviewcontroller) guide.
 
 iOS 11 has introduced style updates to the Safari View Controller, giving your users a more seamless experience between an app and the web. For example, the removal of the address bar now gives the Safari View Controller the feel of an in-app browser, rather than a mini-browser. You can also customize the color scheme to fit in with the color scheme of your app by setting the `preferredBarTintColor` and `PreferredControlTintColor` properties:
 
@@ -61,7 +61,7 @@ Apple has introduced three main improvements for `WKWebView` with iOS 11:
 
 - The ability to manage cookies
 - Content filtering
-- Custom resource loading. 
+- Custom resource loading
 
 Cookie management is done through the new [`WKHttpCookieStore`](https://developer.apple.com/documentation/webkit/wkhttpcookiestore) class, which allows you to add and delete cookies, to get all the cookies stored in a WKWebView, and to observe the cookie store for changes.
 

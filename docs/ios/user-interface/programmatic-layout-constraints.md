@@ -4,8 +4,8 @@ description: "This guide presents working with iOS Auto Layout constraints in C#
 ms.prod: xamarin
 ms.assetid: 119C8365-B470-4CD4-85F7-086F0A46DCBB
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 

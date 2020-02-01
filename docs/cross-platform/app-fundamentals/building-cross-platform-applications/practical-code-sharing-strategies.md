@@ -3,8 +3,8 @@ title: "Part 5 - Practical Code Sharing Strategies"
 description: "This document discusses practical code sharing strategies for scenarios such as databases, file access, network operations, and asynchronous code."
 ms.prod: xamarin
 ms.assetid: 328D042A-FF78-A7B6-1574-B5AF49A1AADB
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -24,7 +24,7 @@ Android, iOS and Mac.
 ### SQLite
 
 SQLite is an open-source database implementation. The source and
-documentation can be found at [SQLite.org](http://www.sqlite.org/). SQLite support is available on each mobile
+documentation can be found at [SQLite.org](https://www.sqlite.org/). SQLite support is available on each mobile
 platform:
 
 - **iOS** – Built in to the operating system.
@@ -188,7 +188,7 @@ string filePath = Path.Combine (
         Environment.GetFolderPath (Environment.SpecialFolder.Personal),
         "MyFile.txt");
 System.IO.File.WriteAllText (filePath, "Contents of text file");
-Console.WriteLine (System.IO.ReadAllText (filePath));
+Console.WriteLine (System.IO.File.ReadAllText (filePath));
 ```
 
 Refer to the Xamarin.iOS [Working with the File System](~/ios/app-fundamentals/file-system.md) document for more information on iOS-specific filesystem
@@ -233,7 +233,7 @@ The Isolated Storage APIs are not available in [Portable Class Libraries](~/cros
 
 ### Cross-platform file access in PCLs
 
-There is also a PCL-compatible Nuget – [PCLStorage](https://www.nuget.org/packages/PCLStorage/) –
+There is also a PCL-compatible NuGet – [PCLStorage](https://www.nuget.org/packages/PCLStorage/) –
 that facilities cross-platform file access for Xamarin-supported platforms and
 the latest Windows APIs.
 
@@ -253,7 +253,7 @@ The .NET Framework provides a few different classes for accessing network resour
 
 The `HttpClient` class in the `System.Net.Http` namespace is available in
 Xamarin.iOS, Xamarin.Android, and most Windows platforms. There is a
-[Microsoft HTTP Client Library Nuget](https://www.nuget.org/packages/Microsoft.Net.Http/)
+[Microsoft HTTP Client Library NuGet](https://www.nuget.org/packages/Microsoft.Net.Http/)
 that can be used to bring this API into Portable Class Libraries
 (and Windows Phone 8 Silverlight).
 
@@ -330,9 +330,6 @@ Actions a mobile app might take in these situations include:
 - If the connection is 3G, applications may behave differently (for example, Apple does not allow apps larger than 20Mb to be downloaded over 3G). Applications could use this information to warn the user about excessive download times when retrieving large files.
 - Even if the network is available, it is good practice to verify connectivity with the target server before initiating other requests. This will prevent the app’s network operations from timing out repeatedly and also allow a more informative error message to be displayed to the user.
 
-There is a [Xamarin.iOS sample](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) available (which is based on Apple’s [Reachability sample code](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html)
-) to help detect network availability.
-
 ## WebServices
 
 See our documentation on [Working with Web Services](~/cross-platform/data-cloud/web-services/index.md), which covers accessing REST, SOAP and WCF endpoints using
@@ -374,9 +371,6 @@ applications to access those services.
 The [ServiceStack website](http://servicestack.net/) explains the purpose of the project and links to document and code
 samples. The examples include a complete server-side implementation of a web
 service as well as various client-side applications that can access it.
-
-There is a [Xamarin.iOS example](http://www.servicestack.net/monotouch/remote-info/) on the ServiceStack website, and a code
-snippet in our [Web Services documentation](~/cross-platform/data-cloud/web-services/index.md).
 
 ### WCF
 
@@ -460,7 +454,7 @@ Both the iOS and Android syntax requires a ‘context’ class to be
 available which means the code needs to pass this object into any methods that
 require a callback on the UI thread.
 
-To make UI thread calls in shared code, follow the [IDispatchOnUIThread example](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (courtesy of [@follesoe](http://jonas.follesoe.no/)). Declare and program
+To make UI thread calls in shared code, follow the [IDispatchOnUIThread example](https://www.slideshare.net/follesoe/cross-platform-mobile-apps-using-net) (courtesy of [@follesoe](https://twitter.com/follesoe)). Declare and program
 to an `IDispatchOnUIThread` interface in the shared code and then
 implement the platform-specific classes as shown here:
 

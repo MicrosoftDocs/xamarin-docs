@@ -4,8 +4,8 @@ description: "HomeKit is Apple's framework for controlling home automation devic
 ms.prod: xamarin
 ms.assetid: 90C0C553-916B-46B1-AD52-1E7332792283
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 

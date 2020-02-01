@@ -4,8 +4,8 @@ description: "This document describes how to work with the file system in Xamari
 ms.prod: xamarin
 ms.assetid: 37DF2F38-901E-8F8E-269A-5EE0CCD28C08
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/12/2018
 ---
 # File system access in Xamarin.iOS
@@ -151,7 +151,7 @@ var filename = Path.Combine (documents, "account.json");
 File.WriteAllText(filename, json);
 ```
 
-For more information about working with json data in a .NET application, see Json.NET's [documentation](http://www.newtonsoft.com/json/help).
+For more information about working with json data in a .NET application, see Json.NET's [documentation](https://www.newtonsoft.com/json/help).
 
 ## Special considerations
 

@@ -4,8 +4,8 @@ description: "Even if you don't plan to add iOS 9 features to your app straight 
 ms.prod: xamarin
 ms.assetid: 69A05B0E-8A0A-489F-8165-B10AC46FAF3C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -21,9 +21,7 @@ _Even if you don't plan to add iOS 9 features to your app straight away, you sho
 > [introduction to iOS 9](~/ios/platform/introduction-to-ios9/index.md).
 
 When the first iOS 9 betas appeared, we identified two issues with older versions of
-Xamarin that manifested as older apps being unable to start on iOS 9.
-
-These two issues (as [detailed on our forums](http://forums.xamarin.com/discussion/comment/131529/#Comment_131529)) were:
+Xamarin that manifested as older apps being unable to start on iOS 9:
 
 - Apps build for iOS 8 or earlier not being able to start on 32-bit devices (including apps built with the [Unified API](~/cross-platform/macios/unified/index.md)).
 - P/Invoke failing with the full path is not specified.
@@ -52,9 +50,9 @@ Nugets you are using to address the two issues mentioned above.
 These issues are fixed simply by re-building your app with the
 latest Stable release of Xamarin.iOS.
 
-Similarly, Component vendors and Nuget authors are **not** required to submit
+Similarly, Component vendors and NuGet authors are **not** required to submit
 new builds just to fix the two issues mentioned above. However, if any a
-Component or Nuget uses `UICollectionView` or load views from **Xib** files, an update
+Component or NuGet uses `UICollectionView` or load views from **Xib** files, an update
 *may* be required to address the iOS 9 compatibility issues mentioned below.
 
 <a name="compat" />

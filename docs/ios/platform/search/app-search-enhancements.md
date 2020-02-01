@@ -4,8 +4,8 @@ description: "This article covers the enhancements Apple has made to App Search 
 ms.prod: xamarin
 ms.assetid: 30124DB6-6A02-4F66-A2D9-BBC8008E6B48
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
 ---
 
@@ -88,7 +88,7 @@ For more information on working with searches in a Xamarin.iOS app, please see o
 
 ## Visualization of Validation Results
 
-Apple's [App Search API Validation Tool](https://search.developer.apple.com/appsearch-validation-tool) now displays a visual representation of a website's markup and deep-linking (including markup such as defined at [Schema.org](http://schema.org/)) when preforming tests.
+Apple's [App Search API Validation Tool](https://search.developer.apple.com/appsearch-validation-tool) now displays a visual representation of a website's markup and deep-linking (including markup such as defined at [Schema.org](https://schema.org/)) when preforming tests.
 
 By using the Validation Tool, a developer can see the information that the Applebot Web Crawler has indexed for the site such as title, description, URL and any other supported elements.
 

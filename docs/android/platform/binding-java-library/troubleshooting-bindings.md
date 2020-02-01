@@ -4,8 +4,8 @@ description: "This article summarizes serveral common errors that may occur when
 ms.prod: xamarin
 ms.assetid: BB81FCCF-F7BF-4C78-884E-F02C49AA819A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -67,7 +67,7 @@ To decompile an Android library open the **.JAR** file with the Java
 decompiler. If the library is an **.AAR** file, it is necessary to
 extract the file **classes.jar** from the archive file. The following
 is a sample screenshot of using JD-GUI to analyze the
-[Picasso](http://square.github.io/picasso/) JAR:
+[Picasso](https://square.github.io/picasso/) JAR:
 
 ![Using the Java Decompiler to analyze picasso-2.5.2.jar](troubleshooting-bindings-images/troubleshoot-bindings-01.png)
 
@@ -116,7 +116,7 @@ that my occur when trying to bind an Android library.
 Sometimes types will not be generated or unexpected crashes may occur
 because you are using either a newer or older version of Java compared
 to what the library was compiled with. Recompile the Android library
-with the same version of the JDK that your Xamarin.Android project 
+with the same version of the JDK that your Xamarin.Android project
 is using.
 
 ### Problem: At least one Java library is required
@@ -156,7 +156,7 @@ missing types.
 
 This error may occur due to several reasons as listed below:
 
-- The library being bound may reference a second Java library. If 
+- The library being bound may reference a second Java library. If
   the public API for the bound library uses types from the second
   library, you must reference a managed binding for the second
   library as well.
@@ -257,9 +257,7 @@ public interface MediationInterstitialListener {
 
 This is by design so that lengthy names on event argument types are
 avoided. To avoid these conflicts, some metadata transformation is
-required. Edit
-[**Transforms\Metadata.xml**](https://github.com/xamarin/monodroid-samples/blob/master/AdMob/AdMob/Transforms/Metadata.xml)
-and add an `argsType` attribute on either of the interfaces (or on the
+required. Edit **Transforms\Metadata.xml** and add an `argsType` attribute on either of the interfaces (or on the
 interface method):
 
 ```xml
@@ -362,7 +360,7 @@ The fix for this is to manually load the **.so** library with a call to
 `Java.Lang.JavaSystem.LoadLibrary`. For example assuming that a
 Xamarin.Android project has shared library **libpocketsphinx_jni.so**
 included in the binding project with a build action of
-**EmbeddedNativeLibrary**, the following snippet (executed 
+**EmbeddedNativeLibrary**, the following snippet (executed
 before using the shared library) will load the **.so** library:
 
 ```csharp

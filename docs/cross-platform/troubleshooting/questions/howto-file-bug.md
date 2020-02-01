@@ -4,8 +4,8 @@ description: "This document describes when, where, and how to file a bug report.
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 8AD9CFBF-282A-4C1F-95E9-25F21141B052
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/01/2018
 ---
 

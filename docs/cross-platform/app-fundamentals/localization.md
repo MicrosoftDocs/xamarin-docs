@@ -3,8 +3,8 @@ title: "Application User Interface Localization"
 description: "This document describes the cross-platform concepts of internationalization and localization and examines how they impact application design."
 ms.prod: xamarin
 ms.assetid: CC6847B2-23FB-4EDE-9F7E-EF29DD46A5C5
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -281,7 +281,7 @@ To build translation features into your app, consider the [Azure Translator Text
 For testing purposes you could use one of the many online translation tools to include some localized text in your app during development:
 
 - [Bing Translator](https://www.bing.com/translator/)
-- [Google Translate](http://translate.google.com/)
+- [Google Translate](https://translate.google.com/)
 
 There are many others available. The quality of machine translation generally isn't considered good enough to release an application without first being reviewed and tested by professional translators or native speakers.
 
@@ -289,7 +289,7 @@ There are many others available. The quality of machine translation generally is
 
 There are also professional translation services that will take your strings and distribute them to their own translators, providing you with finished translations for a fee.
 
-One of the best-known services is [LionBridge](http://www.lionbridge.com/). Most professional services support all the common file types including strings, XML, RESX and POT/PO.
+One of the best-known services is [LionBridge](https://www.lionbridge.com/). Most professional services support all the common file types including strings, XML, RESX and POT/PO.
 
 ## Summary
 

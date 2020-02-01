@@ -4,8 +4,8 @@ description: "This article describes how to use Apple's Instruments tool to diag
 ms.prod: xamarin
 ms.assetid: 8f21db1d-7107-4158-8058-d47e417689a0
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -86,7 +86,7 @@ fixing the code:
 The improved code is available in the [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo) in the
 **after** solution in Visual Studio for Mac.
 
-This community blog about [Xamarin.iOS Garbage Collection](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+This community blog about [Xamarin.iOS Garbage Collection](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
 is a useful reference for dealing with memory issues with Xamarin.iOS.
 
 ## Summary
@@ -99,4 +99,4 @@ Finally, the application was re-examined to verify the problem was corrected.
 ## Related Links
 
 - [MemoryDemo Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/profiling-memorydemo)
-- [Xamarin.iOS Garbage Collection (blog post)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS Garbage Collection (blog post)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

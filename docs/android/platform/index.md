@@ -4,8 +4,8 @@ description: "Documents in this section cover features specific to Android. Here
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
 ---
 

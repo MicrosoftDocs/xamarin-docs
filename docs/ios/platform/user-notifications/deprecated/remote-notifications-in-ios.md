@@ -4,8 +4,8 @@ description: "This document describes how to work with push notifications in iOS
 ms.prod: xamarin
 ms.assetid: 64B3BE6A-A3E2-4B1B-95ED-02D27A8FDAAC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -202,5 +202,5 @@ This section introduce the key concepts surrounding push notifications in iOS. I
 
 - [Notifications - Demonstrating Local and remote notifications (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/notifications)
 - [Local and Push Notifications for Developers](https://developer.apple.com/notifications/)
-- [UIApplication](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIApplication)
-- [UIRemoteNotificationType](http://iosapi.xamarin.com/?link=T%3aMonoTouch.UIKit.UIRemoteNotificationType)
+- [UIApplication](https://docs.microsoft.com/dotnet/api/uikit.uiapplication)
+- [UIRemoteNotificationType](https://docs.microsoft.com/dotnet/api/uikit.UIRemoteNotificationType)

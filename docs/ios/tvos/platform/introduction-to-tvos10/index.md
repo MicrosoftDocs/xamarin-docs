@@ -4,8 +4,8 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: CB9C1EC8-6008-43AD-977E-976AE7C73DD8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 

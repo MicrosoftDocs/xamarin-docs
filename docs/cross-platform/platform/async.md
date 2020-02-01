@@ -3,8 +3,8 @@ title: "Async Support Overview"
 description: "This document describes programming with async and await, concepts introduced in C# 5 to make it easier to write asynchronous code."
 ms.prod: xamarin
 ms.assetid: F87BF587-AB64-4C60-84B1-184CAE36ED65
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -40,7 +40,7 @@ C# 5 features require Mono 3.0 that is included in Xamarin.iOS 6.4 and Xamarin.A
 
 The `async` keyword is placed in a method declaration (or on a lambda or anonymous method) to indicate that it contains code that can run asynchronously, ie. not block the caller’s thread.
 
-A method marked with `async` should contain at least one await expression or statement. If no `await`s are present in the method then it will run synchronously (the same as if there were no `async` modifier). This will also result in a compiler warning (but not an error).
+A method marked with `async` should contain at least one await expression or statement. If no `await` statements are present in the method then it will run synchronously (the same as if there were no `async` modifier). This will also result in a compiler warning (but not an error).
 
 ### Return Types
 
@@ -95,7 +95,7 @@ public async Task<int> DownloadHomepage()
 {
     var httpClient = new HttpClient(); // Xamarin supports HttpClient!
 
-    Task<string> contentsTask = httpClient.GetStringAsync("http://xamarin.com"); // async method!
+    Task<string> contentsTask = httpClient.GetStringAsync("https://visualstudio.microsoft.com/xamarin"); // async method!
 
     // await! control returns to the caller and the task continues to run on another thread
     string contents = await contentsTask;
@@ -175,7 +175,7 @@ async void HandleTouchUpInside (object sender, EventArgs e)
 Some important points:
 
 - The method is marked as  `async` but returns  `void` . This is typically only done for event handlers (otherwise you’d return a  `Task` or  `Task<TResult>` ).
-- The code  `await` s on the  `DownloadHomepage` method directly on an assignment to a variable ( `intResult` ) unlike the previous example where we used an intermediate  `Task<int>` variable to reference the task.  *This* is the location where control is returned to the caller until the asynchronous method has completed on another thread.
+- The `await` keyword on the  `DownloadHomepage` method directly assigns to a variable (`intResult`) unlike the previous example where we used an intermediate  `Task<int>` variable to reference the task.  *This* is the location where control is returned to the caller until the asynchronous method has completed on another thread.
 - When the asynchronous method completes and returns, execution resumes at the  `await` which means the integer result is returned and then rendered in a UI widget.
 
 ## Summary
@@ -196,4 +196,4 @@ This document has given an overview of the new language keywords and examples fo
 - [Await, and UI, and deadlocks! Oh my!](https://devblogs.microsoft.com/pfxteam/await-and-ui-and-deadlocks-oh-my/)
 - [Processing tasks as they complete)](https://devblogs.microsoft.com/pfxteam/processing-tasks-as-they-complete/)
 - [Task-based Asynchronous Pattern (TAP)](https://msdn.microsoft.com/library/hh873175.aspx)
-- [Asynchrony in C# 5 (Eric Lippert's blog) – about the introduction of the keywords](http://blogs.msdn.com/b/ericlippert/archive/2010/11/11/whither-async.aspx)
+- [Asynchrony in C# 5 (Eric Lippert's blog) – about the introduction of the keywords](https://blogs.msdn.microsoft.com/ericlippert/2010/11/11/asynchrony-in-c-5-part-six-whither-async/)

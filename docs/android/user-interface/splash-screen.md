@@ -4,8 +4,8 @@ description: "An Android app takes some time to start up, especially when the ap
 ms.prod: xamarin
 ms.assetid: 26480465-CE19-71CD-FC7D-69D0990D05DE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/02/2019
 ---
 
@@ -85,7 +85,7 @@ to center the splash screen image in the application as shown in the following x
 </layer-list>
 ```
 
-This `layer-list` centers the splash image on a background color specified by the `@color/splash_background` resource. The sample application defines this color in the **Resources/values/color.xml** file:
+This `layer-list` centers the splash image on a background color specified by the `@color/splash_background` resource. The sample application defines this color in the **Resources/values/colors.xml** file:
 
 ```xml
 <?xml version="1.0" encoding="utf-8"?>
@@ -109,7 +109,7 @@ with a `style` named **MyTheme.Splash**:
   <style name="MyTheme.Base" parent="Theme.AppCompat.Light">
   </style>
 
-    <style name="MyTheme" parent="MyTheme.Base">
+  <style name="MyTheme" parent="MyTheme.Base">
   </style>
 
   <style name="MyTheme.Splash" parent ="Theme.AppCompat.Light.NoActionBar">

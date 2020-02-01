@@ -5,12 +5,12 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/22/2018
 ---
 
-# Troubleshooting Tips for Xamarin.iOS 
+# Troubleshooting Tips for Xamarin.iOS
 
 ## Xamarin.iOS cannot resolve System.ValueTuple
 
@@ -187,7 +187,7 @@ Project Options->iPhone Application
 
 Ensure that you are using the latest version of Visual Studio for Mac and Xamarin.iOS
 
-If the issue is still present, please [file a bug](http://monodevelop.com/Developers#Reporting_Bugs), attaching the **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log** log files.
+If the issue is still present, please [file a bug](https://monodevelop.com/Developers#Reporting_Bugs), attaching the **~/Library/Logs/XamarinStudio-{VERSION}/Ide-{TIMESTAMP}.log**, **AndroidTools-{TIMESTAMP}.log**, and **Components-{TIMESTAMP}.log** log files.
 
 If all else fails, you can try removing the code completion cache so that it
 is regenerated:
@@ -494,7 +494,7 @@ This means that you have XCode 4 installed.   In XCode 4, the tool
 ibtool was removed, it is no longer possible to edit your XIB files with a
 standalone tool.
 
-If you want to use Interface Builder, install [XCode series 3](http://connect.apple.com/cgi-bin/WebObjects/MemberSite.woa/wa/getSoftware?bundleID=20792), available from Apple's web site.
+If you want to use Interface Builder, install XCode series 3, available from Apple's web site.
 
 ## "Can't create display binding for mime type: application/vnd.apple-interface-builder"
 
@@ -531,7 +531,7 @@ This can happen when application names include a '.' (dot) in their name.
 This is forbidden as the executable name in CFBundleExecutable - even if it can
 works in many other cases (like devices).
 
- *"The value should not include any extension on the name."- [https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf](https://developer.apple.com/library/mac/documentation/General/Reference/InfoPlistKeyReference/InfoPlistKeyReference.pdf)
+"The value should not include any extension on the name."
 
 ## Error: "Custom attribute type 0x43 is not supported" when double clicking .xib files
 

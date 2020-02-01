@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: E353DF14-51D7-98E3-59EA-16683C770C23
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ---
 # Using JSON to create a user interface in Xamarin.iOS
 

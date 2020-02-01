@@ -4,8 +4,8 @@ description: "This document links to various guides that describe how to get sta
 ms.prod: xamarin
 ms.assetid: BB938008-C013-4A1D-8229-FEEE94F83BBD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/13/2016
 ---
 

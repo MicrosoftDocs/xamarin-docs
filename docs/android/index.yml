@@ -3,8 +3,8 @@ documentType: LandingData
 title: Xamarin.Android
 metadata:
   description: Xamarin.Android exposes the complete Android SDK for .NET developers.
-  author: conceptdev
-  ms.author: crdun
+  author: davidortinau
+  ms.author: daortin
   ms.date: 07/27/2018
   ms.topic: landing-page
   ms.technology: xamarin-android
@@ -12,14 +12,14 @@ abstract:
   description: Xamarin.Android exposes the complete Android SDK for .NET developers. Build fully native Android apps using C# or F# in Visual Studio.
   menu:
     items:
-    - href: ~/android/samples/
+    - href: ~/android/samples/index.md
       text: Android Samples
     - href: https://docs.microsoft.com/xamarin/android/release-notes/
       text: Release Notes
     - href: https://developers.google.com/
       text: Googles's Developer Documentation
     - href: /visualstudio/
-      text: Visual Studio 
+      text: Visual Studio
 sections:
 - title: Get Started
   items:

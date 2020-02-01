@@ -4,8 +4,8 @@ description: "With iOS 8, Apple has provided a plethora of new frameworks and AP
 ms.prod: xamarin
 ms.assetid: 33AD66C0-3743-49FE-9DCE-88ED3A16BA63
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/14/2017
 ---
 
@@ -88,7 +88,7 @@ Firstly, it aids the existing Keychain services through the use of new Keychain 
 
 Secondly, LocalAuthentication provides two methods to authenticate your application locally. Developers should use `CanEvaluatePolicy` to determine if the device is capable of accepting Touch ID, and then `EvaluatePolicy` to start the authentication operation.
 
-For more information on Touch ID and to learn how to integrate it into a Xamarin.iOS application, refer to the [Introduction To TouchID](~/ios/platform/touchid.md) guides.
+For more information on Touch ID and to learn how to integrate it into a Xamarin.iOS application, see [Touch ID and Face ID in Xamarin.iOS](~/ios/platform/touch-id-face-id.md) guides.
 
 ### Document Picker
 
@@ -167,5 +167,5 @@ In this article we looked at some of the new features introduced by Apple in iOS
 - [Introduction to the Document Picker](~/ios/platform/document-picker.md)
 - [Introduction to HealthKit](~/ios/platform/healthkit.md)
 - [Introduction to Manual Camera Controls](~/ios/user-interface/controls/intro-to-manual-camera-controls.md)
-- [Introduction to TouchID](~/ios/platform/touchid.md)
+- [Touch ID and Face ID with Xamarin.iOS](~/ios/platform/touch-id-face-id.md)
 - [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md)

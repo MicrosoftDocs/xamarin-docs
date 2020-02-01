@@ -4,8 +4,8 @@ description: "This document describe's fastlane's sigh command, which is used to
 ms.prod: xamarin
 ms.assetid: CD17276F-2C8C-4A46-A54C-DD532EBD5720
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 

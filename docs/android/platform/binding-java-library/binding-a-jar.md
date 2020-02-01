@@ -4,8 +4,8 @@ description: "This walkthrough provides step-by-step instructions for creating a
 ms.prod: xamarin
 ms.assetid: 93F1D5C5-E2AF-46EA-8460-485A0860C176
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/11/2018
 ---
 
@@ -54,7 +54,7 @@ basic code example), see
 ## Walkthrough
 
 In the following walkthrough, we'll create a Bindings Library for 
-[Picasso](http://square.github.io/picasso/), a popular Android .JAR 
+[Picasso](https://square.github.io/picasso/), a popular Android .JAR 
 that provides image loading and caching functionality. We will use the 
 following steps to bind **picasso-2.x.x.jar** to create a new .NET 
 assembly that we can use in a Xamarin.Android project: 

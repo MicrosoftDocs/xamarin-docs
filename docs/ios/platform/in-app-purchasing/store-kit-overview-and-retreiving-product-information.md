@@ -4,8 +4,8 @@ description: "This document provides an overview of StoreKit. It describes class
 ms.prod: xamarin
 ms.assetid: FC21192E-6325-4389-C060-E92DBB5EBD87
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 

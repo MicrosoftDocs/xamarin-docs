@@ -3,8 +3,8 @@ title: "System Requirements"
 description: "This document lists the system requirements for building apps with Xamarin on both Mac and Windows computers. It also links to installation instructions."
 ms.prod: xamarin
 ms.assetid: dd344d57-18e2-42a5-8c15-3f5be4123c72
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/16/2019
 ---
 # System requirements
@@ -97,7 +97,7 @@ Specific [installation](~/get-started/installation/index.md) instructions for ea
 - [Xamarin.Mac](~/mac/get-started/installation.md)
 
 There's also additional information about
-[Xamarin.Forms requirements & supported platforms](~/get-started/requirements.md).
+[Xamarin.Forms supported platforms](~/get-started/supported-platforms.md).
 
 ## Related links
 

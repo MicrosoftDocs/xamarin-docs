@@ -4,8 +4,8 @@ description: "This article covers creating a Xamarin.Mac application's user inte
 ms.prod: xamarin
 ms.assetid: 02310F58-DCF1-4589-9F4A-065DF64FC0E1
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 

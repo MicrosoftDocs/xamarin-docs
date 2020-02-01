@@ -4,8 +4,8 @@ description: "This article covers working with alerts in a Xamarin.Mac applicati
 ms.prod: xamarin
 ms.assetid: F1DB93A1-7549-4540-AD5E-D7605CCD8435
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 

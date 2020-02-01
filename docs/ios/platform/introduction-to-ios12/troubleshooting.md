@@ -4,8 +4,8 @@ description: "This article describes resources that can be used for troubleshoot
 ms.prod: xamarin
 ms.assetid: 24397498-2688-4575-A572-F1B19B1B4EA5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/05/2018
 ---
 # Troubleshooting iOS 12 development with Xamarin
@@ -18,7 +18,6 @@ building iOS 12 apps with Xamarin.
 Check the following resources for known issues:
 
 - Release notes
-  - The [Xamarin Releases](http://releases.xamarin.com/) blog
   - Xamarin's [Release Notes](https://docs.microsoft.com/xamarin/ios/release-notes/) archive
   - Visual Studio for Mac ([stable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-mac-preview-relnotes))
   - Visual Studio 2017 ([stable](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-relnotes), [preview](https://docs.microsoft.com/visualstudio/releasenotes/vs2017-preview-relnotes))
@@ -40,5 +39,5 @@ or [Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/report-a-
 To discuss questions about how to implement specific iOS 12 features in
 Xamarin.iOS, take a look at:
 
-- The [Xamarin Forums](http://forums.xamarin.com/categories/ios)
+- The [Xamarin Forums](https://forums.xamarin.com/categories/ios)
 - [Stack Overflow](https://stackoverflow.com/search?tab=newest&q=xamarin)

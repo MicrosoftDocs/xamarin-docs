@@ -4,8 +4,8 @@ description: "iOS 6 introduces two changes to the Store Kit API: the ability to 
 ms.prod: xamarin
 ms.assetid: 253D37D7-44C7-D012-3641-E15DC41C2699
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -110,7 +110,7 @@ You can implement a version check to determine which code to run, as shown here:
 if (UIDevice.CurrentDevice.CheckSystemVersion (6,0)) {
     // do iOS6+ stuff, using SKStoreProductViewController as shown above
 } else {
-    // don't do stuff requiring iOS 6.0, use the old syntax 
+    // don't do stuff requiring iOS 6.0, use the old syntax
     // (which will take the user out of your app)
     var nsurl = new NSUrl("http://itunes.apple.com/us/app/angry-birds/id343200656?mt=8");
     UIApplication.SharedApplication.OpenUrl (nsurl);
@@ -151,7 +151,7 @@ For applications that you publish, it is easy to find the **Apple ID** in iTunes
 
 Apple provides a dynamic search API to query all the products in the App
 Store, iTunes, and the iBookstore. Information on how to access the search API
-can be found in [Apple's Affiliate Resources](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html), although the API is exposed to
+can be found in Apple's Affiliate Resources, although the API is exposed to
 anyone (not just registered affiliates). The resulting JSON can be parsed to
 discover the `trackId` that is the Apple ID to use with `SKStoreProductViewController`.
 
@@ -160,17 +160,17 @@ and artwork URLs that can be used to render the product in your app.
 
 Here are some examples:
 
-- **iBooks app** – [http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](http://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
-- **Dot and the Kangaroo iBook** – [http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us](http://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
+- **iBooks app** – [https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us](https://itunes.apple.com/search?term=ibooks&amp;entity=software&amp;country=us)
+- **Dot and the Kangaroo iBook** – [https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us](https://itunes.apple.com/search?term=dot+and+the+kangaroo&amp;entity=ebook&amp;country=us)
 
 ### Enterprise Partner Feed
 
 Apple provides approved partners with a complete data dump of all their
 products, in the form of downloadable database-ready flat files. If you qualify
-for access to the [Enterprise Partner Feed](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-enterprise-partner-feed.html),
+for access to the Enterprise Partner Feed,
 then the Apple ID for any product can be found in that dataset.
 
-Many users of the Enterprise Partner Feed are members of the [Affiliate Program](http://www.apple.com/itunes/affiliates) that allows commissions to be earned on product sales. `SKStoreProductViewController` does not support Affiliate IDs (at the
+Many users of the Enterprise Partner Feed are members of the [Affiliate Program](https://www.apple.com/itunes/affiliates) that allows commissions to be earned on product sales. `SKStoreProductViewController` does not support Affiliate IDs (at the
 time of writing).
 
 ### Direct Product Links
@@ -206,8 +206,8 @@ Consumable or Subscriptions). Advantages of using Apple’s hosting service
 include:
 
 - Save hosting & bandwidth costs.
-- Probably more scalable than whatever server host you are currently using. 
-- Less code to write, since you don’t have to build any server-side processing. 
+- Probably more scalable than whatever server host you are currently using.
+- Less code to write, since you don’t have to build any server-side processing.
 - Background downloading is implemented for you.
 
 Note: testing hosted in-app purchase content in iOS Simulator is not
@@ -352,7 +352,7 @@ the menu to begin:
 
 ![](changes-to-storekit-images/image13.png "Choose Archiven")
 
-The content package will then appear in the archive as shown below. 
+The content package will then appear in the archive as shown below.
 The archive type and icon show this line is an **In-App Purchase
 Content Archive**. Click **Validate…** to check our
 content package for errors without actually performing the upload.
@@ -588,7 +588,7 @@ public void SaveDownload (SKDownload download)
     // targetfolder will be "/Documents/com.xamarin.storekitdoc.montouchimages/" or something like that
     if (!System.IO.Directory.Exists (targetfolder))
         System.IO.Directory.CreateDirectory (targetfolder);
-    foreach (var file in System.IO.Directory.EnumerateFiles 
+    foreach (var file in System.IO.Directory.EnumerateFiles
              (System.IO.Path.Combine(download.ContentUrl.Path, "Contents"))) { // Contents directory is the default in .PKG files
         var fileName = file.Substring (file.LastIndexOf ("/") + 1);
         var newFilePath = System.IO.Path.Combine(targetfolder, fileName);
@@ -670,7 +670,6 @@ functionality.
 - [In-App Purchasing](~/ios/platform/in-app-purchasing/index.md)
 - [StoreKit Framework Reference](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/StoreKit_Collection/_index.html)
 - [SKStoreProductViewController Class Reference](https://developer.apple.com/library/ios/documentation/StoreKit/Reference/SKITunesProductViewController_Ref/SKStoreProductViewController.html)
-- [iTunes Search API Reference](http://www.apple.com/itunes/affiliates/resources/documentation/itunes-store-web-service-search-api.html)
 - [SKDownload](https://developer.apple.com/library/prerelease/ios/#documentation/StoreKit/Reference/SKDownload_Ref/Introduction/Introduction.html)
 - [SKPaymentQueue](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKPaymentQueue_Class/Reference/Reference.html#/apple_ref/occ/instm/SKPaymentQueue/cancelDownloads:)
 - [SKProduct](https://developer.apple.com/library/prerelease/ios/documentation/StoreKit/Reference/SKProduct_Reference/Reference/Reference.html#/apple_ref/occ/instp/SKProduct/downloadable)

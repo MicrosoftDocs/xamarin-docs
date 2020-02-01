@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 63B6E10C-098D-4C82-9253-07CA62EA85A5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -20,7 +20,7 @@ ms.date: 02/16/2018
 Xamarin only actively supports the current stable release of the
 Xamarin tools. The information below is provided "as-is" for older
 versions of the tools. For the latest information on Xamarin releases,
-please check [here](http://releases.xamarin.com/).
+please check the [release notes](https://docs.microsoft.com/xamarin/whats-new/#product-release-notes).
 
 ## "Missing android.jar for API Level 21" in Android L Preview
 

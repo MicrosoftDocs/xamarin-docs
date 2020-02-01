@@ -4,8 +4,8 @@ description: "Android 3.0 introduced Fragments, showing how to support more flex
 ms.prod: xamarin
 ms.assetid: 1AFB4242-A337-F8E0-83D9-B8D850D7F384
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
 ---
 
@@ -97,4 +97,3 @@ covered in more detail in the documents of this section.
 - [Honeycomb Gallery (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/honeycombgallery)
 - [Fragments](https://developer.android.com/guide/topics/fundamentals/fragments.html)
 - [Support Package](https://developer.android.com/sdk/compatibility-library.html)
-- [MOTODEV Webinar: Introducing Fragments](http://motodev.adobeconnect.com/p9h1aqk3ttn/)

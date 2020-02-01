@@ -3,8 +3,8 @@ title: "CheckBox"
 ms.prod: xamarin
 ms.assetid: A884AF10-D5EA-72CA-2301-B80CEC7FFBE7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -41,4 +41,4 @@ Run it.
 > [!TIP]
 > If you need to change the state yourself (such as when loading a saved [`CheckBoxPreference`](xref:Android.Preferences.CheckBoxPreference), use the [`Checked`](xref:Android.Widget.CompoundButton.Checked) property setter or [`Toggle()`](xref:Android.Widget.CompoundButton.Toggle) method.
 
-*Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the* [*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+*Portions of this page are modifications based on work created and shared by the Android Open Source Project and used according to terms described in the* [*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/).

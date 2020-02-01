@@ -3,8 +3,8 @@ title: "Garbage Collection"
 ms.prod: xamarin
 ms.assetid: 298139E2-194F-4A58-BC2D-1D22231066C4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
 ---
 
@@ -229,19 +229,22 @@ collect the data for benchmarking:
     bridge process. Sorting this information by size will provide hints 
     as to what is holding the largest amount of extra objects. 
 
-To specify which `GC_BRIDGE` option an application should us, pass 
+The default setting is **Tarjan**. If you find a regression, you 
+may find it necessary to set this option to **Old**. Also, you may 
+choose to use the more stable **Old** option if **Tarjan** does not 
+produce an improvement in performance.
+
+To specify which `GC_BRIDGE` option an application should use, pass 
 `bridge-implementation=old`, `bridge-implementation=new` or 
 `bridge-implementation=tarjan` to the `MONO_GC_PARAMS` environment 
-variable, for example: 
+variable. This is accomplished by adding a new file to your project 
+with a **Build action** of `AndroidEnvironment`. For example: 
 
 ```shell
 MONO_GC_PARAMS=bridge-implementation=tarjan
 ```
 
-The default setting is **Tarjan**. If you find a regression, you 
-may find it necessary to set this option to **Old**. Also, you may 
-choose to use the more stable **Old** option if **Tarjan** does not 
-produce an improvement in performance. 
+For more information, see [Configuration](#configuration).
 
 <a name="Helping_the_GC" />
 
@@ -276,7 +279,7 @@ object graph you may need to manually call
 to prompt a GC to release the Java-side memory, or you can explicitly 
 dispose of *Java.Lang.Object* subclasses, breaking the mapping between 
 the managed callable wrapper and the Java instance. For example, see 
-[Bug 1084](http://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
+[Bug 1084](https://bugzilla.xamarin.com/show_bug.cgi?id=1084#c6). 
 
 > [!NOTE]
 > You must be *extremely* careful when disposing of

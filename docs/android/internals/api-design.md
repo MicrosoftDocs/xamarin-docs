@@ -3,8 +3,8 @@ title: "Xamarin.Android API Design Principles"
 ms.prod: xamarin
 ms.assetid: 3E52D815-D95D-5510-0D8F-77DAC7E62EDE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 # Xamarin.Android API Design Principles
@@ -283,7 +283,7 @@ therefore be passed as runnables directly.
 ### Inner Classes
 
 Java has two different types of
-[nested classes](http://download.oracle.com/javase/tutorial/java/javaOO/nested.html):
+[nested classes](https://download.oracle.com/javase/tutorial/java/javaOO/nested.html):
 static nested classes and non-static classes.
 
 Java static nested classes are identical to C# nested types.

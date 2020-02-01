@@ -3,8 +3,8 @@ title: "How Content Providers Work"
 ms.prod: xamarin
 ms.assetid: B9E2EF89-7EBE-45F5-1ED9-7D2C70BE792C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 

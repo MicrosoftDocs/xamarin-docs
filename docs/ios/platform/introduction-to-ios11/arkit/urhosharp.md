@@ -4,8 +4,8 @@ description: "This document describes how to set up an ARKit app in Xamarin.iOS,
 ms.prod: xamarin
 ms.assetid: 877AF974-CC2E-48A2-8E1A-0EF9ABF2C92D
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/01/2017
 ---
 

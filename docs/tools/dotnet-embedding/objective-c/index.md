@@ -3,8 +3,8 @@ title: "Objective-C Support"
 description: "This document provides a description of the support for Objective-C in .NET Embedding. It discusses Automatic Reference Counting, NSString, Protocols, NSObject protocol, exceptions, and more."
 ms.prod: xamarin
 ms.assetid: 3367A4A4-EC88-4B75-96D0-51B1FCBCE614
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/14/2017
 ---
 
@@ -97,7 +97,7 @@ if ([intCollection [0] isEqual:@42])
 
 Depending on the type of your indexer, indexed or keyed subscripting will be generated where appropriate.
 
-This [article](http://nshipster.com/object-subscripting/) is a great introduction to subscripting.
+This [article](https://nshipster.com/object-subscripting/) is a great introduction to subscripting.
 
 ## Main differences with .NET
 

@@ -4,8 +4,8 @@ description: "This document describes additional framework changes introduced in
 ms.prod: xamarin
 ms.assetid: CFDE1FC4-9327-402B-95A0-581D4AA0E9D5
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -56,7 +56,6 @@ For more information, please see the following documents:
 - [Introduction to CloudKit](~/ios/data-cloud/intro-to-cloudkit.md) - Our introduction to using CloudKit in a Xamarin.iOS app.
 - [CloudKit Quick Start](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloudKitQuickStart/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014987) - Apple's introduction to CloudKit.
 - [CloudKit JS Reference](https://developer.apple.com/library/prerelease/ios/documentation/CloudKitJS/Reference/CloudKitJavaScriptReference/index.html#//apple_ref/doc/uid/TP40015359) - Apple's CloudKit JS documentation.
-- [CloudKit Web Services Reference](https://developer.apple.com/library/prerelease/ios/documentation/DataManagement/Conceptual/CloutKitWebServicesReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40015240) - Apple's reference that describes the HTTP interface to CloudKit.
 - [CloudKit Catalog: An Introduction to CloudKit (Cocoa and JavaScript)](https://developer.apple.com/library/prerelease/ios/samplecode/CloudAtlas/Introduction/Intro.html#//apple_ref/doc/uid/TP40014599) - Apple's sample app using CloudKit and CloudKit JS.
 
 > [!IMPORTANT]
@@ -114,7 +113,7 @@ if (NSProcessInfo.ProcessInfo.LowPowerModeEnabled) {
 Apple included the following changes to the [HealthKit](xref:HealthKit) framework in iOS 9:
 
 - Support for bulk deletion and deletion tracking of entries in the HealthKit database. See Apple's [HKDeletedObject](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKDeletedObject_ClassReference/index.html#//apple_ref/occ/cl/HKDeletedObject), [HKAnchoredObjectQuery](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKAnchoredObjectQuery_Class/index.html#//apple_ref/occ/cl/HKAnchoredObjectQuery) and [HKHealthStore Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HKHealthStore_Class/index.html#//apple_ref/doc/uid/TP40014708) for more information.
-- New tracking categories and characteristics have been added to the `HKQuantityTypeIdentifier` class (such as `UVExposure`) and to the `HKCategoryTypeIdentifier` class (such as `OvulationTestResult`). See Apple's [HealthKit Constants Reference](https://developer.apple.com/library/prerelease/ios/documentation/HealthKit/Reference/HealthKit_Constants/index.html#//apple_ref/doc/uid/TP40014710) for more information.
+- New tracking categories and characteristics have been added to the `HKQuantityTypeIdentifier` class (such as `UVExposure`) and to the `HKCategoryTypeIdentifier` class (such as `OvulationTestResult`). 
 
 Please see our [Introduction to HealthKit](~/ios/platform/healthkit.md) documentation for more information on working with HealthKit in Xamarin.iOS.
 
@@ -128,7 +127,7 @@ Apple included the following changes to the [Local Authentication](xref:LocalAut
 - The ability to use _Authentication Context_ in Keychain calls and support for evaluating Keychain Access control lists.
 - The ability to cancel a user prompt from code.
 
-Please see our [Introduction to Touch ID](~/ios/platform/touchid.md) documentation for more information on working with Touch ID in Xamarin.iOS.
+For more information, see [Touch ID and Face ID with Xamarin.iOS](~/ios/platform/touch-id-face-id.md).
 
 ### LAContext Changes
 

@@ -5,8 +5,8 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/27/2018
 ---
 
@@ -72,7 +72,6 @@ emulator, see
 
 ## Accelerating with Hyper-V
 
-Hyper-V is the recommended choice for accelerating the Android emulator.
 Before enabling Hyper-V, read the following section to verify
 that your computer supports Hyper-V.
 

@@ -4,8 +4,8 @@ description: "iOS 7 introduces a plethora of user interface changes. This articl
 ms.prod: xamarin
 ms.assetid: FADCEA7C-8968-42A1-9E9E-F4BBAB7BCF2C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 

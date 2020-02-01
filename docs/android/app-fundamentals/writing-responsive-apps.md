@@ -3,8 +3,8 @@ title: "Writing Responsive Applications"
 ms.prod: xamarin
 ms.assetid: 452DF940-6331-55F0-D130-002822BBED55
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
 ---
 

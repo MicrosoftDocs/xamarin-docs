@@ -6,7 +6,7 @@ ms.assetid: B0A5DB65-0585-4A00-B908-22CCC286E6B6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/17/2019
+ms.date: 12/04/2019
 ---
 
 # Authenticate Users with Azure Active Directory B2C
@@ -21,15 +21,17 @@ Azure Active Directory B2C (ADB2C) is an identity management service for consume
 
 The process for integrating the Azure Active Directory B2C identity management service into a mobile application is as follows:
 
-1. Create an Azure Active Directory B2C tenant
-1. Register your mobile application with the Azure Active Directory B2C tenant
-1. Create policies for sign-up and sign-in, and forgot password user flows
+1. Create an Azure Active Directory B2C tenant.
+1. Register your mobile application with the Azure Active Directory B2C tenant.
+1. Create policies for sign-up and sign-in, and forgot password user flows.
 1. Use the Microsoft Authentication Library (MSAL) to start an authentication workflow with your Azure Active Directory B2C tenant.
 
 > [!NOTE]
-> Azure Active Directory B2C supports multiple identity providers including Microsoft, GitHub, Facebook, Twitter and more. For more information on Azure Active Directory B2C capabilities, see [Azure Active Directory B2C Documentation](/azure/active-directory-b2c/).
->
-> Microsoft Authentication Library supports multiple application architectures and platforms. For information about MSAL capabilities, see [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) on GitHub.
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
+Azure Active Directory B2C supports multiple identity providers including Microsoft, GitHub, Facebook, Twitter and more. For more information on Azure Active Directory B2C capabilities, see [Azure Active Directory B2C Documentation](/azure/active-directory-b2c/).
+
+Microsoft Authentication Library supports multiple application architectures and platforms. For information about MSAL capabilities, see [Microsoft Authentication Library](https://github.com/AzureAD/microsoft-authentication-library-for-dotnet/wiki) on GitHub.
 
 ## Configure an Azure Active Directory B2C tenant
 
@@ -100,7 +102,7 @@ public static class Constants
 
 The Microsoft Authentication Library (MSAL) NuGet package must be added to the shared, .NET Standard project, and the platform projects in a Xamarin.Forms solution. MSAL includes a `PublicClientApplicationBuilder` class that constructs an object adhering to the `IPublicClientApplication` interface. MSAL utilizes `With` clauses to supply additional parameters to the constructor and authentication methods.
 
-In the sample project, the code behind for **App.xaml** defines static properties named `AuthenticationClient` and `UIParent`, and instantiates the `AuthenticationClient` object in the constructor. The `WithIosKeychainSecurityGroup` clause provides a security group name for iOS applications. The `WithB2CAuthority` clause provides the default **Authority**, or policy, that will be used to authenticate users. The following example demonstrates how to instantiate the `PublicClientApplication`:
+In the sample project, the code behind for **App.xaml** defines static properties named `AuthenticationClient` and `UIParent`, and instantiates the `AuthenticationClient` object in the constructor. The `WithIosKeychainSecurityGroup` clause provides a security group name for iOS applications. The `WithB2CAuthority` clause provides the default **Authority**, or policy, that will be used to authenticate users. The `WithRedirectUri` clause tells the Azure Notification Hubs instance which Redirect URI to use if multiple URIs are specified. The following example demonstrates how to instantiate the `PublicClientApplication`:
 
 ```csharp
 public partial class App : Application
@@ -116,6 +118,7 @@ public partial class App : Application
         AuthenticationClient = PublicClientApplicationBuilder.Create(Constants.ClientId)
             .WithIosKeychainSecurityGroup(Constants.IosKeychainSecurityGroups)
             .WithB2CAuthority(Constants.AuthoritySignin)
+            .WithRedirectUri($"msal{Constants.ClientId}://auth")
             .Build();
 
         MainPage = new NavigationPage(new LoginPage());
@@ -123,6 +126,9 @@ public partial class App : Application
 
     ...
 ```
+
+> [!NOTE]
+> If your Azure Notification Hubs instance only has one Redirect URI defined, the `AuthenticationClient` instance may work without specifying the Redirect URI with the `WithRedirectUri` clause. However, you should always specify this value in case your Azure configuration expands to support other clients or authentication methods.
 
 The `OnAppearing` event handler in the **LoginPage.xaml.cs** code behind calls `AcquireTokenSilentAsync` to refresh the authentication token for users that have logged in before. The authentication process redirects to the `LogoutPage` if successful and does nothing on failure. The following example shows the silent reauthentication process in `OnAppearing`:
 
@@ -172,7 +178,7 @@ public partial class LoginPage : ContentPage
                 .WithPrompt(Prompt.SelectAccount)
                 .WithParentActivityOrWindow(App.UIParent)
                 .ExecuteAsync();
-    
+
             await Navigation.PushAsync(new LogoutPage(result));
         }
         catch (MsalException ex)

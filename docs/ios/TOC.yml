@@ -140,6 +140,11 @@
       items: 
         - name: Overview
           href: user-interface/index.md
+        - name: Storyboards
+          href: user-interface/storyboards/index.md
+          items:
+            - name: Unified Storyboards
+              href: user-interface/storyboards/unified-storyboards.md
         - name: iOS Designer
           href: user-interface/designer/index.md
           items: 
@@ -151,11 +156,6 @@
               href: user-interface/designer/ios-designable-controls-walkthrough.md
             - name: Auto Layout with the iOS Designer
               href: user-interface/designer/designer-auto-layout.md
-        - name: Storyboards
-          href: user-interface/storyboards/index.md
-          items: 
-            - name: Unified Storyboards
-              href: user-interface/storyboards/unified-storyboards.md
         - name: User Interfaces in iOS
           href: user-interface/ios-ui/index.md
           items: 
@@ -226,7 +226,7 @@
             - name: Text Input
               href: user-interface/controls/text-input.md
             - name: Web Views
-              href: user-interface/controls/uiwebview.md
+              href: user-interface/controls/webview.md
         - name: Programmatic Layout Constraints
           href: user-interface/programmatic-layout-constraints.md
         - name: MonoTouch.Dialog
@@ -453,8 +453,8 @@
           href: platform/textkit.md
         - name: 3D Touch
           href: platform/3d-touch.md
-        - name: Touch ID
-          href: platform/touchid.md
+        - name: Touch ID and Face ID
+          href: platform/touch-id-face-id.md
         - name: User Notifications Framework
           items: 
             - name: Overview
@@ -612,23 +612,24 @@
       items: 
         - name: Overview
           href: deploy-test/index.md
-        - name: App Distribution
-          href: deploy-test/app-distribution/index.md
+        - name: App distribution
           items: 
-            - name: App Store Distribution
+            - name: Overview
+              href: deploy-test/app-distribution/index.md
+            - name: App Store distribution
               href: deploy-test/app-distribution/app-store-distribution/index.md
               items: 
-                - name: Configuring your App in iTunes Connect
+                - name: Configuring your app in iTunes Connect
                   href: deploy-test/app-distribution/app-store-distribution/itunesconnect.md
                 - name: Publishing to the App Store
                   href: deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md
-            - name: In-House (Enterprise) Distribution
+            - name: In-House (enterprise) distribution
               href: deploy-test/app-distribution/in-house-distribution.md
-            - name: Ad Hoc Distribution
+            - name: Ad-hoc distribution
               href: deploy-test/app-distribution/ad-hoc-distribution.md
-            - name: The iTunesMetadata.plist File
+            - name: The iTunesMetadata.plist file
               href: deploy-test/app-distribution/itunesmetadata.md
-            - name: IPA Support
+            - name: IPA support
               href: deploy-test/app-distribution/ipa-support.md
         - name: Code Signing and Provisioning
           href: deploy-test/provisioning/index.md
@@ -1112,4 +1113,4 @@
     - name: Release Notes
       href: https://docs.microsoft.com/xamarin/ios/release-notes/
     - name: Samples
-      href: samples/index.yml
+      href: samples/index.md

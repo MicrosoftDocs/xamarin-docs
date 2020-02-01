@@ -3,8 +3,8 @@ title: "Using Jenkins with Xamarin"
 description: "This document describes how to use Jenkins for continuous integration with Xamarin applications. It discusses how to install, configure, and use Jenkins."
 ms.prod: xamarin
 ms.assetid: 1E6825DF-1254-4FCB-B94D-ADD33D1B5309
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -383,7 +383,7 @@ Once all the build actions are in place, it is good practice to trigger a manual
 
 ### Submitting Tests to Test Cloud
 
-Automated tests can be submitted to Test Cloud using shell commands. For more information about setting up a Test Run in Xamarin Test Cloud, see this guide for using [Xamarin.UITest](/appcenter/test-cloud/preparing-for-upload/uitest/).
+Automated tests can be submitted to Test Cloud using shell commands. For more information about setting up a Test Run in Xamarin Test Cloud, see [Preparing Xamarin.Android Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) and [Preparing Xamarin.iOS Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ## Summary
 

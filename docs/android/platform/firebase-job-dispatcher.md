@@ -4,8 +4,8 @@ description: "This guide discusses how to schedule background work using the Fir
 ms.prod: xamarin
 ms.assetid: 3DB9C7A3-D351-481D-90C5-BEC25D1B9910
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2018
 ---
 

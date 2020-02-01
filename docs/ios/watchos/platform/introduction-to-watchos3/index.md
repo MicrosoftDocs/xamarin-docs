@@ -4,8 +4,8 @@ description: "This article introduces all of the new and modified APIs and featu
 ms.prod: xamarin
 ms.assetid: B8ABE1E1-8688-4262-BE66-A16813C2D671
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/07/2017
 ---
 
@@ -74,7 +74,7 @@ Additionally, Complications provide the following benefits:
 - The user can quickly launch the app by tapping on the Complication directly from a watch face.
 - Having one of the app's Complications on the watch face causes the system to keep the app in a ready-to-launch state where it attempts to launch the app in the background, keep it in memory and gives it extra time to update.
 - Complications are guaranteed at least 50 push updates per day.
-- When the app includes Complications, it will be featured in the Apple Watch Face Gallery (see Apple's [Adding Complications to the Gallery](https://developer.apple.com/documentation/clockkit/adding_complications_to_the_gallery) documentation for more information).
+- When the app includes Complications, it will be featured in the Apple Watch Face Gallery.
 
 In watchOS 3, the ClockKit framework now includes several new templates for extra large complications such as [CLKComplicationTemplateExtraLargeColumnsText](https://developer.apple.com/reference/clockkit/clkcomplicationtemplateextralargecolumnstext) and [CLKComplicationTemplateExtraLargeRingImage](https://developer.apple.com/reference/clockkit/clkcomplicationtemplateextralargeringimage). Additionally, to create localizable text, use new methods of the [CLKTextProvider](https://developer.apple.com/reference/clockkit/clktextprovider) class.
 

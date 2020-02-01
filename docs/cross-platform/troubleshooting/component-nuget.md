@@ -4,8 +4,8 @@ description: "This document describes how to replace your component references w
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 9E6C986F-3FBA-4599-8367-FB0C565C0ADE
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/18/2018
 ---
 
@@ -145,7 +145,7 @@ To update your solution, delete the **Component** entry from the solution:
 
 The NuGet package will remain listed in the **Packages** node and your
 app will compile and run as usual. In future, updates to this package
-will be performed via the **Nuget** update feature:
+will be performed via the **NuGet** update feature:
 
 ![Update NuGet package](component-nuget-images/nuget-update-sml.png)
 

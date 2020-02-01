@@ -4,8 +4,8 @@ description: "This article covers the new CallKit API that Apple released in iOS
 ms.prod: xamarin
 ms.assetid: 738A142D-FFD2-4738-B3ED-57C273179848
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2017
 ---
 # CallKit in Xamarin.iOS

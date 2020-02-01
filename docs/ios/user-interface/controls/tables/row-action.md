@@ -4,8 +4,8 @@ description: "This guide demonstrates how to create custom swipe actions for tab
 ms.prod: xamarin
 ms.assetid: 340FB633-0C46-40AA-9963-FF17D7CA6858
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
 ---
 
@@ -71,7 +71,7 @@ var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualActio
 leadingSwipe.PerformsFirstActionWithFullSwipe = false;
 ```
 
-It's important to note that the order in which your actions display is dependant on how they are passed into your array. For example, the code above for leading swipes displays the actions as so:
+It's important to note that the order in which your actions display is dependent on how they are passed into your array. For example, the code above for leading swipes displays the actions as so:
 
 ![leading swipe Actions displayed on a table row](row-action-images/action03.png)
 

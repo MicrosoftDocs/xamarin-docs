@@ -4,8 +4,8 @@ description: "The Toolbar is an action bar component that provides more flexibil
 ms.prod: xamarin
 ms.assetid: 22EE5FBD-3240-4308-AF76-EF45D72936DE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 

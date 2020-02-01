@@ -4,8 +4,8 @@ description: "How to obtain a Google Maps API key for adding maps functionality 
 ms.prod: xamarin
 ms.assetid: D5969C57-3444-465E-D6FF-249AEE62E127
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
 ---
 
@@ -44,7 +44,7 @@ Information about a keystore is obtained by running the `keytool`
 command from the JDK. This tool is typically found in the Java bin
 directory:
 
-**C:\\Program Files (x86)\\Java\\jdk[VERSION]\\bin\\keytool.exe**
+**C:\\Program Files\\Android\\jdk\\microsoft_dist_openjdk_[VERSION]\\bin\\keytool.exe**
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -212,4 +212,4 @@ Finally, add this API key to the **AndroidManifest.XML** file of your Xamarin.An
 
 - [Google APIs Console](https://code.google.com/apis/console/)
 - [The Google Maps API Key](https://developers.google.com/maps/documentation/android/start#the_google_maps_api_key)
-- [keytool](http://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html.)
+- [keytool](https://docs.oracle.com/javase/6/docs/technotes/tools/windows/keytool.html.)

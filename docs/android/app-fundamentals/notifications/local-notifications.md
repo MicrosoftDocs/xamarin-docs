@@ -4,8 +4,8 @@ description: "This section shows how to implement local notifications in Xamarin
 ms.prod: xamarin
 ms.assetid: 03E19D14-7C81-4D5C-88FC-C3A3A927DB46
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/16/2018
 ---
 # Local notifications on Android

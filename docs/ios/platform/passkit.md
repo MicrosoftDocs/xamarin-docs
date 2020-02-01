@@ -4,8 +4,8 @@ description: "The Wallet app allows iOS users to store digital passes on their d
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2018
 ---
 

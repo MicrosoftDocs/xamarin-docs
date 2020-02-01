@@ -4,8 +4,8 @@ description: "Generally, all components in an Android application will run in th
 ms.prod: xamarin
 ms.assetid: 27A2E972-A690-480B-B31D-5EF1F74F673C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -144,7 +144,7 @@ Once the `ServiceAttribute` has been set, the service needs to implement a `Hand
 
 ### Implementing a Handler
 
-To process client requests, the service must implement a `Handler` and override the `HandleMessage` methodThis is the method takes a `Message` instance which encapsulates the method call from the client and translates that call into some action or task that the service will perform. The `Message` object exposes a property called `What` which is an integer value, the meaning of which is shared between the client and the service and relates to some task that the service is to perform for the client.
+To process client requests, the service must implement a `Handler` and override the `HandleMessage` method. This is the method takes a `Message` instance which encapsulates the method call from the client and translates that call into some action or task that the service will perform. The `Message` object exposes a property called `What` which is an integer value, the meaning of which is shared between the client and the service and relates to some task that the service is to perform for the client.
 
 The following code snippet from the sample application shows one example of `HandleMessage`. In this example, there are two actions that a client can request of the service:
 
@@ -164,7 +164,7 @@ public class TimestampRequestHandler : Android.OS.Handler
         switch (messageType)
         {
             case Constants.SAY_HELLO_TO_TIMESTAMP_SERVICE:
-                // The client as sent a simple Hello, say in the Android Log.
+                // The client has sent a simple Hello, say in the Android Log.
                 break;
 
             case Constants.GET_UTC_TIMESTAMP:
@@ -257,7 +257,7 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
     {
         Log.Debug(TAG, $"OnServiceConnected {name.ClassName}");
 
-        IsConnected = service != null
+        IsConnected = service != null;
         Messenger = new Messenger(service);
 
         if (IsConnected)
@@ -285,8 +285,8 @@ public class TimestampServiceConnection : Java.Lang.Object, IServiceConnection
 Once the service connection and the intent are created, it is possible for the client to call `BindService` and initiate the binding process:
 
 ```csharp
-IServiceConnection serviceConnection = new TimestampServiceConnection(this);
-BindActivity(serviceToStart, serviceConnection, Bind.AutoCreate);
+var serviceConnection = new TimestampServiceConnection(this);
+BindService(serviceToStart, serviceConnection, Bind.AutoCreate);
 ```
 
 After the client has successfully bound to the service and the `Messenger` is available, it is possible for the client to send `Messages` to the service.

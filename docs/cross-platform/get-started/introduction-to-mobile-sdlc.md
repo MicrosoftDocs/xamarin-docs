@@ -3,8 +3,8 @@ title: "Mobile software development lifecycle"
 description: "This document describes the mobile software development lifecycle, taking a look at UX design, UI design, development, stabilization, distribution, and more."
 ms.prod: xamarin
 ms.assetid: 420c5fdf-4610-4e71-9db5-fe894c961924
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/22/2016
 ---
 
@@ -108,7 +108,7 @@ guidelines for the various platforms that the app will target. The app should "f
 1. **UWP** –  [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 For example, each app has a metaphor for switching between sections in an
-application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and UWP uses the [Pivot or tab](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot) view.
+application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and UWP uses the [Pivot or tab](/windows/uwp/design/controls-and-patterns/pivot) view.
 
 Additionally, the hardware itself also dictates UX decisions. For example,
 iOS devices have no physical *back* button, and therefore introduce the
@@ -221,10 +221,10 @@ This allows developers a potentially larger yet more complex distribution
 channel for their applications. [Google Play](https://play.google.com/store?hl=en) is Google’s official app store, but there are
 many others. A few popular ones are:
 
-1. [AppBrain](http://www.appbrain.com/)
-1. [Amazon App Store for Android](http://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
-1. [Handango](http://www.handango.com/)
-1. [GetJar](http://www.getjar.com/)
+1. [AppBrain](https://www.appbrain.com/)
+1. [Amazon App Store for Android](https://www.amazon.com/mobile-apps/b?ie=UTF8&amp;node=2350149011)
+1. [Handango](https://www.handango.com/)
+1. [GetJar](https://www.getjar.com/)
 
 #### UWP
 

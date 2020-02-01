@@ -4,8 +4,8 @@ description: "This article is a walkthrough of the Xamarin.Android Designer. It 
 ms.prod: xamarin
 ms.assetid: 70FF2F9A-71BD-317E-C881-A44D82DF1BD8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/25/2018
 ---
 

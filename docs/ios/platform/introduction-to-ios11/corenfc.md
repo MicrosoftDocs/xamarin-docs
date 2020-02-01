@@ -4,8 +4,8 @@ description: "This document describes how to read near field communication tags 
 ms.prod: xamarin
 ms.technology: xamarin-ios
 ms.assetid: 846B59D3-F66A-48F3-A78C-84217697194E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/25/2017
 ---
 
@@ -14,7 +14,7 @@ ms.date: 09/25/2017
 _Reading Near Field Communication (NFC) tags using iOS 11_
 
 CoreNFC is a new framework in iOS 11 that provides access to the
-_Near Field Communication_ (NFC) radio to read tags from within apps. It works on iPhone 7, 7 Plus, 8, 8 Plus, and X.
+_Near Field Communication_ (NFC) radio to read tags from within apps. CoreNFC works on iPhone 7, iPhone 7 Plus, iPhone 8, iPhone 8 Plus, iPhone X, iPhone XS, and iPhone 11 models (while iPhone 6 and iPhone 6 Plus models have NFC payment functionality, they do not support CoreNFC).
 
 The NFC tag reader in iOS devices supports all NFC tag types 1 through 5 that
 contain _NFC Data Exchange Format_ (NDEF) information.

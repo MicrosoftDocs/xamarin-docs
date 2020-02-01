@@ -3,8 +3,8 @@ title: "Updating Existing Xamarin.Forms Apps"
 description: "This document describes the steps that must be followed to update a Xamarin.Forms app from the Classic API to the Unified API."
 ms.prod: xamarin
 ms.assetid: C2F0D1D1-256D-44A4-AAC9-B06A0CB41E70
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -191,14 +191,14 @@ public partial class MainPage : global::Xamarin.Forms.Platform.WinPhone.FormsApp
 
 Occasionally you will see an error similar to this after updating the Xamarin.Forms NuGet package. It occurs when the NuGet updater does not completely remove references to older versions from your **csproj** files.
 
->YOUR\_PROJECT.csproj: Error: This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ../../packages/Xamarin.Forms.1.2.3.6257/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (YOUR\_PROJECT)
+>YOUR\_PROJECT.csproj: Error: This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see https://go.microsoft.com/fwlink/?LinkID=322105. The missing file is ../../packages/Xamarin.Forms.1.2.3.6257/build/portable-win+net45+wp80+MonoAndroid10+MonoTouch10/Xamarin.Forms.targets. (YOUR\_PROJECT)
 
 To fix these errors, open the **csproj** file in a text editor and look for `<Target` elements that refer to older versions of Xamarin.Forms, such as the element shown below. You should manually delete this entire element from the **csproj** file and save the changes.
 
 ```csharp
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see https://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
     </PropertyGroup>
     <Error Condition="!Exists('..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\..\packages\Xamarin.Forms.1.2.3.6257\build\portable-win+net45+wp80+MonoAndroid10+MonoTouch10\Xamarin.Forms.targets'))" />
   </Target>

@@ -4,8 +4,8 @@ description: "This document describes unified storyboards in Xamarin.iOS. Unifie
 ms.prod: xamarin
 ms.assetid: F6F70374-FC2A-4401-A712-A16D0F9B340F
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -757,6 +757,6 @@ Finally, this article covered the basics of creating Unified Storyboards with th
 - [Adaptive Photos (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-adaptivephotos)
 - [Dynamic Launch Screens (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-dynamiclaunchscreen)
 - [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)
-- [Dynamic Layouts in iOS8 - Evolve 2014 (video)](http://youtu.be/f3mMGlS-lM4)
+- [Dynamic Layouts in iOS8 - Evolve 2014 (video)](https://youtu.be/f3mMGlS-lM4)
 - [UIPresentationController](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIPresentationController_class/)
 - [UIImageAsset](https://developer.apple.com/library/prerelease/ios/documentation/UIKit/Reference/UIImageAsset_Ref/index.html#//apple_ref/occ/cl/UIImageAsset)

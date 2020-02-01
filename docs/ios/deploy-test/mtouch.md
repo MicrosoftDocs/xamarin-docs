@@ -4,8 +4,8 @@ description: "This document describes mtouch, a tool that drives many of the ste
 ms.prod: xamarin
 ms.assetid: BCA491DA-E4C1-8689-3EC9-E4C72495A798
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/05/2017
 ---
 
@@ -146,6 +146,3 @@ These steps are typically performed by Visual Studio for Mac.
 See the [mtouch(1)](http://docs.go-mono.com/?link=man%3amtouch(1)) manual page for details on the other command line
 options.
 
-## Related Links
-
-- [mtouch(1)](http://iosapi.xamarin.com/?link=man%3amtouch(1))

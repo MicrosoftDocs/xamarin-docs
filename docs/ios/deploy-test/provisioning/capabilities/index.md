@@ -4,8 +4,8 @@ description: "Adding capabilities to an application often requires additional pr
 ms.prod: xamarin
 ms.assetid: 98A4676F-992B-4593-8D38-6EEB2EB0801C
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/06/2018
 ---
 

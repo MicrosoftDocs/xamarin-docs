@@ -4,8 +4,8 @@ description: "This section discusses how to use a Broadcast Receiver."
 ms.prod: xamarin
 ms.assetid: B2727160-12F2-43EE-84B5-0B15C8FCF4BD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/20/2018
 ---
 
@@ -78,6 +78,9 @@ public class MyBootReceiver : BroadcastReceiver
 }
 ```
 
+> [!NOTE]
+> In Android 8.0 (API 26 and above), [Google placed limitations](https://developer.android.com/about/versions/oreo/background) on what apps can do while users aren't directly interacting with them. These limitations affect background services and implicit broadcast receivers such as `Android.Content.Intent.ActionBootCompleted`. Because of these limitations, you might have difficulties registering a `Boot Completed` broadcast receiver on newer versions of Android. If this is the case, note that these restrictions do not apply to foreground services, which can be called from your broadcast receiver.
+
 It is also possible to create an intent filter that will respond to custom intents. Consider the following example: 
 
 ```csharp
@@ -107,19 +110,19 @@ public class MainActivity: Activity
     protected override void OnCreate(Bundle savedInstanceState)
     {
         base.OnCreate(savedInstanceState);
-        receiver = new MySampleBroadcastReceiver()
+        receiver = new MySampleBroadcastReceiver();
 
         // Code omitted for clarity
     }
 
-    protected override OnResume() 
+    protected override void OnResume() 
     {
         base.OnResume();
         RegisterReceiver(receiver, new IntentFilter("com.xamarin.example.TEST"));
         // Code omitted for clarity
     }
 
-    protected override OnPause() 
+    protected override void OnPause() 
     {
         UnregisterReceiver(receiver);
         // Code omitted for clarity

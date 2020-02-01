@@ -4,8 +4,8 @@ description: "This topic describes how to handle device orientation changes in X
 ms.prod: xamarin
 ms.assetid: 6D33ADF7-ED81-0256-479D-D9E3787A76B0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -394,4 +394,4 @@ manually.
 - [Rotation Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/applicationfundamentals-rotationdemo)
 - [Activity Lifecycle](~/android/app-fundamentals/activity-lifecycle/index.md)
 - [Handling Runtime Changes](https://developer.android.com/guide/topics/resources/runtime-changes.html)
-- [Fast Screen Orientation Change](http://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)
+- [Fast Screen Orientation Change](https://android-developers.blogspot.com/2009/02/faster-screen-orientation-change.html)

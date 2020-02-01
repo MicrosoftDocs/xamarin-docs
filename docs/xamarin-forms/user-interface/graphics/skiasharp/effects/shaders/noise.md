@@ -19,7 +19,7 @@ Simple vector graphics tend to look unnatural. The straight lines, smooth curves
 
 As you can see, each pixel is not a random color value. The continuity from pixel to pixel results in random shapes.
 
-The support of Perlin noise in Skia is based on a W3C specification for CSS and SVG. Section 8.20 of [**Filter Effects Module Level 1**](http://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) includes the underlying Perlin noise algorithms in C code.
+The support of Perlin noise in Skia is based on a W3C specification for CSS and SVG. Section 8.20 of [**Filter Effects Module Level 1**](https://www.w3.org/TR/filter-effects-1/#feTurbulenceElement) includes the underlying Perlin noise algorithms in C code.
 
 ## Exploring Perlin noise
 

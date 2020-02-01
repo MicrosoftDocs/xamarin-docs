@@ -4,8 +4,8 @@ description: "This document describes the DataAccess_Adv sample, which demonstra
 ms.prod: xamarin
 ms.assetid: 2CB8150E-CD2C-4E97-8605-1EE8CBACFEEC
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/11/2016
 ---
 
@@ -104,7 +104,7 @@ accessing it. Because SQLite is a standard file format that is used on many plat
 there are a number of tools available to create an SQLite database file:
 
 - **SQLite Manager Firefox Extension** – Works on Mac and Windows and produces files that are compatible with iOS and Android.
-- **Command Line** – See  [www.sqlite.org/sqlite.html](http://www.sqlite.org/sqlite.html) .
+- **Command Line** – See  [www.sqlite.org/sqlite.html](https://www.sqlite.org/sqlite.html) .
 
 When creating a database file for distribution with your app, take care with the
 naming of tables and columns to ensure they match what your code expects, especially

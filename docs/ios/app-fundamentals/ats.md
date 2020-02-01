@@ -4,8 +4,8 @@ description: "App Transport Security (ATS) enforces secure connections between i
 ms.prod: xamarin
 ms.assetid: F8C5E444-2D05-4D9B-A2EF-EB052CD6F007
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2017
 ---
 
@@ -135,7 +135,7 @@ Cons:
 
 When attempting to connect to the internet, either directly or from a web view in iOS 9, you might get an error in the form:
 
-> App Transport Security has blocked a cleartext HTTP (http://www.-the-blocked-domain.com) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.
+> App Transport Security has blocked a cleartext HTTP (`http://www.-the-blocked-domain.com`) resource load since it is insecure. Temporary exceptions can be configured via your app's Info.plist file.
 
 In iOS9, App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and your app. Additionally, ATS requires communication using the `HTTPS` protocol and high-level API communication to be encrypted using TLS version 1.2 with forward secrecy.
 

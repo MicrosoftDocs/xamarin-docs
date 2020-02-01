@@ -3,8 +3,8 @@ title: "Cross-Platform App Case Study: Tasky"
 description: "This document describes how the Tasky Portable sample application was designed and built as a cross-platform mobile application. It discusses the app's requirements, interface, data model, core functionality, implementation, and more."
 ms.prod: xamarin
 ms.assetid: B581B2D0-9890-C383-C654-0B0E12DAD5A6
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -134,7 +134,7 @@ whether to a database, flat files or other mechanism. The Tasky data layer
 consists of two parts: the SQLite-NET library and the custom code added to wire
 it up.
 
-Tasky relies on the Sqlite-net nuget package (published by Frank Kreuger) to embed SQLite-NET code that provides an Object-Relational Mapping
+Tasky relies on the Sqlite-net NuGet package (published by Frank Kreuger) to embed SQLite-NET code that provides an Object-Relational Mapping
 (ORM) database interface. The `TaskItemDatabase` class inherits from `SQLiteConnection` and
 adds the required Create, Read, Update, Delete (CRUD) methods to read and write
 data to SQLite. It is a simple boilerplate implementation of generic CRUD

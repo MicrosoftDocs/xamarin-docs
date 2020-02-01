@@ -4,8 +4,8 @@ description: "This document links to various guides that describe features intro
 ms.prod: xamarin
 ms.assetid: 9F6A27E5-8A87-ADE2-D1EF-5684E7B8C999
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/25/2018
 ---
 # iOS platform features overview
@@ -120,9 +120,9 @@ Text Kit is a new API that offers powerful text layout and rendering features. I
 
 This article will provide and introduction to using the new 3D Touch APIs to add pressure sensitive gestures to your Xamarin.iOS apps that are running on the new iPhone 6s and iPhone 6s Plus devices.
 
-## [Touch ID](~/ios/platform/touchid.md)
+## [Touch ID and Face ID with Xamarin.iOS](~/ios/platform/touch-id-face-id.md)
 
-Touch ID was introduced in iOS 7 as a means of authenticating the user - similar to a passcode. However, it was limited to unlocking the device, using the App Store, using iTunes and authenticating the iCloud keychain only.
+Touch ID and Face ID are biometric authentication systems available since iOS 8. This article and sample describe how to use Touch ID and Face ID with Xamarin.iOS.
 
 ## [User notifications](~/ios/platform/user-notifications/index.md)
 

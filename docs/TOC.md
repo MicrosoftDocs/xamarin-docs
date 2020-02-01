@@ -4,4 +4,4 @@
 ## [Mac](mac/index.yml)
 ## [Xamarin.Forms](xamarin-forms/index.yml)
 ## [Cross-Platform](cross-platform/index.yml)
-## [Tools](tools/index.yml)
+## [Tools](tools/index.md)

@@ -22,6 +22,9 @@ _Get started building your first Azure Function that interacts with Xamarin.Form
 
 In addition to the video, you can follow these instructions to [build your first Function using Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 ## [Visual Studio 2017](#tab/win-vs2017)
 
 > [!Video https://channel9.msdn.com/Shows/XamarinShow/Creating-Cloud-Connected-Mobile-Apps-with-Azure-Functions-and-Visual-Studio-2017/player]
@@ -29,6 +32,9 @@ In addition to the video, you can follow these instructions to [build your first
 ## Step-by-step instructions
 
 In addition to the video, you can follow these instructions to [build your first Function using Visual Studio](https://docs.microsoft.com/azure/azure-functions/functions-create-your-first-function-visual-studio).
+
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
 
 ## [Visual Studio for Mac](#tab/macos)
 
@@ -38,6 +44,9 @@ In addition to the video, you can follow these instructions to [build your first
 
 In addition to this video, there is a [step-by-step tutorial](https://docs.microsoft.com/visualstudio/mac/azure-functions-lab)
 that shows how to create and debug Azure Functions within Visual Studio for Mac.
+
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
 
 -----
 

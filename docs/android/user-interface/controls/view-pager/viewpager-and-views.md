@@ -4,8 +4,8 @@ description: "ViewPager is a layout manager that lets you implement gestural nav
 ms.prod: xamarin
 ms.assetid: 42E5379F-B0F4-4B87-A314-BF3DE405B0C8
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -42,7 +42,7 @@ installing NuGet packages, see
 [Walkthrough: Including a NuGet in your project](https://docs.microsoft.com/visualstudio/mac/nuget-walkthrough)). 
 Find and install **Android Support Library v4**: 
 
-[![Screenshot of Support v4 Nuget selected in the NuGet Package Manager](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
+[![Screenshot of Support v4 NuGet selected in the NuGet Package Manager](viewpager-and-views-images/01-install-support-lib-sml.png)](viewpager-and-views-images/01-install-support-lib.png#lightbox)
 
 This will also install any additional packages reaquired by **Android Support Library v4**.
 
@@ -89,8 +89,8 @@ Open **Resources/layout/Main.axml** and replace its contents with the following 
     android:layout_height="match_parent" >
 
 </android.support.v4.view.ViewPager>
+```
 
-```csharp
 This XML defines a `ViewPager` that occupies the entire screen. Note that
 you must use the fully-qualified name **android.support.v4.view.ViewPager**
 because `ViewPager` is packaged in a support library. `ViewPager` is

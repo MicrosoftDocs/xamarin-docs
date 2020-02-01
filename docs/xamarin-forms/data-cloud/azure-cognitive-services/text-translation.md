@@ -24,6 +24,9 @@ The Translator API has two components:
 
 This article focuses on translating text from one language to another using the Translator Text API.
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 An API key must be obtained to use the Translator Text API. This can be obtained at [How to sign up for the Microsoft Translator Text API](/azure/cognitive-services/translator/translator-text-how-to-signup/).
 
 For more information about the Microsoft Translator Text API, see [Translator Text API Documentation](/azure/cognitive-services/translator/).
@@ -59,7 +62,7 @@ The access token must be specified in each Translator Text API call as an `Autho
 httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", bearerToken);
 ```
 
-For more information about the cognitive services token service, see [Authentication Token API](http://docs.microsofttranslator.com/oauth-token.html).
+For more information about the cognitive services token service, see [Authentication](/azure/cognitive-services/translator/reference/v3-0-reference#authentication).
 
 ## Performing Text Translation
 
@@ -79,7 +82,7 @@ public async Task<string> TranslateTextAsync(string text)
 
 The `TranslateTextAsync` method generates a request URI and retrieves an access token from the token service. The text translation request is then sent to the `translate` API, which returns an XML response containing the result. The XML response is parsed, and the translation result is returned to the calling method for display.
 
-For more information about the Text Translation REST APIs, see [Microsoft Translator Text API](http://docs.microsofttranslator.com/text-translate.html).
+For more information about the Text Translation REST APIs, see [Translator Text API](/azure/cognitive-services/translator/reference/v3-0-reference).
 
 ### Configuring Text Translation
 
@@ -120,7 +123,7 @@ async Task<string> SendRequestAsync(string url, string bearerToken)
 
 This method builds the GET request by adding the access token to the `Authorization` header, prefixed with the string `Bearer`. The GET request is then sent to the `translate` API, with the request URL specifying the text to be translated, and the language to translate the text to. The response is then read and returned to the calling method.
 
-The `translate` API will send HTTP status code 200 (OK) in the response, provided that the request is valid, which indicates that the request succeeded and that the requested information is in the response. For a list of possible error responses, see Response Messages at [GET Translate](http://docs.microsofttranslator.com/text-translate.html#!/default/get_Translate).
+The `translate` API will send HTTP status code 200 (OK) in the response, provided that the request is valid, which indicates that the request succeeded and that the requested information is in the response. For a list of possible error responses, see Response Messages at [GET Translate](/azure/cognitive-services/translator/reference/v3-0-translate).
 
 ### Processing the Response
 
@@ -140,7 +143,7 @@ This article explained how to use the Microsoft Translator Text API to translate
 
 ## Related Links
 
-- [Translator Text API Documentation](/azure/cognitive-services/translator/).
+- [Translator Text API Documentation](/azure/cognitive-services/translator/)
 - [Consume a RESTful Web Service](~/xamarin-forms/data-cloud/web-services/rest.md)
 - [Todo Cognitive Services (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todocognitiveservices)
-- [Microsoft Translator Text API](http://docs.microsofttranslator.com/text-translate.html).
+- [Translator Text API](/azure/cognitive-services/translator/reference/v3-0-reference)

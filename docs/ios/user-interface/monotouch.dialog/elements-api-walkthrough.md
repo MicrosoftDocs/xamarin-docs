@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: F1124734-DF44-F1F3-0832-46F52A788CDC
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ---
 
 # Creating a Xamarin.iOS application using the Elements API

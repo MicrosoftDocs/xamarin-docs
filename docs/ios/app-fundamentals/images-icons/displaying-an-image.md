@@ -4,8 +4,8 @@ description: "This article covers including an image asset in a Xamarin.iOS app 
 ms.prod: xamarin
 ms.assetid: 60288B12-49E3-4E87-8690-D04A5EC7A664
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/24/2018
 ---
 # Displaying an image in Xamarin.iOS

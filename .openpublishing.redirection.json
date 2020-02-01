@@ -1,6 +1,18 @@
 {
   "redirections": [
     {
+      "source_path": "docs/ios/platform/touchid.md",
+      "redirect_url": "/xamarin/ios/platform/touch-id-face-id"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/polygon-map-overlay.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/map/polygons"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/polyline-map-overlay.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/map/polygons"
+    },
+    {
       "source_path": "docs/cross-platform/get-started/introduction-to-mobile-development.md",
       "redirect_url": "/xamarin/get-started/what-is-xamarin"
     },
@@ -567,6 +579,42 @@
       "source_path": "docs/mac/get-started/installation.md",
       "redirect_url": "/visualstudio/mac/installation/",
       "redirect_document_id": false
+    },
+    {
+      "source_path": "docs/cross-platform/deploy-test/installing-nunit-using-nuget.md",
+      "redirect_url": "/xamarin/cross-platform/deploy-test/"
+    },
+    {
+      "source_path": "docs/android/troubleshooting/errors.md",
+      "redirect_url": "/xamarin/android/errors-and-warnings/"
+    },
+    {
+      "source_path": "docs/ios/user-interface/controls/uiwebview.md",
+      "redirect_url": "/xamarin/ios/user-interface/controls/webview/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/internals/net-standard.md",
+      "redirect_url": "/xamarin/cross-platform/app-fundamentals/net-standard/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/introduction.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/creating.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
+    },
+    {
+      "source_path": "docs/get-started/requirements.md",
+      "redirect_url": "/xamarin/get-started/supported-platforms/"
     }
   ]
 }

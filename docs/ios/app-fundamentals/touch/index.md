@@ -4,8 +4,8 @@ description: "This document links to guides that describe how to work with touch
 ms.prod: xamarin
 ms.assetid: E3904713-6018-4755-A315-EB045DFB3500
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/23/2017
 ---
 
@@ -34,6 +34,5 @@ This guide serves as introduction to Touch in iOS. For more information on using
 
 ## Related Links
 
-- [iOS Touch Start (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
 - [iOS Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)
 - [FingerPaint (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-fingerpaint)

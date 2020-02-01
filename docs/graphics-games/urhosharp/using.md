@@ -623,7 +623,7 @@ Resources include most things in UrhoSharp that are loaded from mass storage dur
 - `Image` - represents images stored in a variety of graphic formats
 - `Model` - 3D Models
 - `Material` - materials used to render Models.
-- `ParticleEffect`- [describes](http://urho3d.github.io/documentation/1.4/_particles.html) how a particle emitter works, see "[Particles](#particles)" below.
+- `ParticleEffect`- [describes](https://urho3d.github.io/documentation/1.4/_particles.html) how a particle emitter works, see "[Particles](#particles)" below.
 - `Shader` - custom shaders
 - `Sound` - sounds to playback, see "[Sound](#sound)" below.
 - `Technique` - material rendering techniques
@@ -664,7 +664,7 @@ Urho3D tries to use existing file formats whenever possible, and
 define custom file formats only when absolutely necessary such as for
 models (.mdl) and for animations (.ani). For these types of assets,
 Urho provides a converter -
-[AssetImporter](http://urho3d.github.io/documentation/1.4/_tools.html)
+[AssetImporter](https://urho3d.github.io/documentation/1.4/_tools.html)
 which can consume many popular 3D formats such as fbx, dae, 3ds, and
 obj, etc.
 

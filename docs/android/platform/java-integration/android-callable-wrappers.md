@@ -3,8 +3,8 @@ title: "Android Callable Wrappers for Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: C33E15FA-1E2B-819A-C656-CA588D611492
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/15/2018
 ---
 
@@ -14,7 +14,7 @@ Android Callable Wrappers (ACWs) are required whenever the Android
 runtime invokes managed code. These wrappers are required because there 
 is no way to register classes with ART (the Android runtime) at 
 runtime. (Specifically, the 
-[JNI DefineClass() function](http://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) 
+[JNI DefineClass() function](https://docs.oracle.com/javase/1.5.0/docs/guide/jni/spec/functions.html#wp15986) 
 is not supported by the Android runtime.} Android Callable 
 Wrappers thus make up for the lack of runtime type registration 
 support. 

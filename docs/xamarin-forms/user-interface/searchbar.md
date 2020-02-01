@@ -6,7 +6,7 @@ ms.assetId: F5EFEA72-CB23-4DD6-9545-D9BB755AF3CB
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/12/2019
+ms.date: 11/04/2019
 ---
 
 # Xamarin.Forms SearchBar
@@ -20,10 +20,12 @@ The Xamarin.Forms [`SearchBar`](xref:Xamarin.Forms.SearchBar) is a user input co
 The `SearchBar` class defines the following properties:
 
 * [`CancelButtonColor`](xref:Xamarin.Forms.SearchBar.CancelButtonColor) is a `Color` that defines the color of the cancel button.
+* `CharacterSpacing`, of type `double`, is the spacing between characters of the `SearchBar` text.
 * [`FontAttributes`](xref:Xamarin.Forms.SearchBar.FontAttributes) is a `FontAttributes` enum value that determines whether the `SearchBar` font is bold, italic, or neither.
 * [`FontFamily`](xref:Xamarin.Forms.SearchBar.FontFamily) is a `string` that determines the font family used by the `SearchBar`.
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) can be a `NamedSize` enum value or a `double` value that represents specific font sizes across platforms.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) is a `TextAlignment` enum value that defines the horizontal alignment of the query text.
+* `VerticalTextAlignment` is a `TextAlignment` enum value that defines the vertical alignment of the query text.
 * [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) is a `string` that defines the placeholder text, such as "Search...".
 * [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) is a `Color` that defines the color of the placeholder text.
 * [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) is an `ICommand` that allows binding user actions, such as finger taps or clicks, to commands defined on a viewmodel.
@@ -78,6 +80,9 @@ SearchBar searchBar = new SearchBar
 The following screenshot shows the resulting `SearchBar` control:
 
 [![Screenshot of customized SearchBar on iOS and Android](searchbar-images/device-searchbars-styled-cropped.png "Customized SearchBar on iOS and Android")](searchbar-images/device-searchbars-styled.png#lightbox "Customized SearchBar on iOS and Android")
+
+> [!NOTE]
+> On iOS, the `SearchBarRenderer` class contains an overridable `UpdateCancelButton` method. This method controls when the cancel button appears, and can be overridden in a custom renderer. For more information about custom renderers, see [Xamarin.Forms Custom Renderers](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
 
 ## Perform a search with event handlers
 

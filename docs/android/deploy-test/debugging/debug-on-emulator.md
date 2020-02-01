@@ -4,17 +4,15 @@ description: "This guide explains how to launch and debug apps in Visual Studio 
 ms.prod: xamarin
 ms.assetid: AEA165A4-D81A-411B-91DF-2DED2EED27B5
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/22/2018
 ---
 
-# Debugging on the Android Emulator
+# Debug on the Android Emulator
 
 _In this guide, you will learn how to launch a virtual device in the
 Android Emulator to debug and test your app._
-
-## Overview
 
 The Android Emulator (installed as part of the **Mobile development with
 .NET** workload), can be run in a variety of configurations to simulate

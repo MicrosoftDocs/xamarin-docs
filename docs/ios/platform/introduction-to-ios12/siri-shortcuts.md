@@ -4,8 +4,8 @@ description: "This document describes how to use Siri Shortcuts in iOS 12. It di
 ms.prod: xamarin
 ms.assetid: 86424F79-3A7D-436E-927D-9A3267DA333B
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/08/2018
 ---
 # Siri Shortcuts in Xamarin.iOS

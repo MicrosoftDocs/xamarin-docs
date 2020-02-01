@@ -3,8 +3,8 @@ title: "Scanning For Fingerprints"
 ms.prod: xamarin
 ms.assetid: 1CDDC096-77E0-47B3-BE0B-8953E2DDACD3
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/23/2016
 ---
 

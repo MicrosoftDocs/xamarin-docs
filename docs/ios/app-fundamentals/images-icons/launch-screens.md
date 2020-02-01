@@ -4,8 +4,8 @@ description: "This article explains how to create an app Launch Screen for all i
 ms.prod: xamarin
 ms.assetid: 31A489CA-756B-4B9B-B386-4BADF18EDD33
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2018
 ---
 
@@ -127,7 +127,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 12. Test other devices and orientations to verify that the design looks as
     intended in all scenarios. In cases where adjustments need to be made
     for a specific device or orientation, use the **Edit Traits** button to
-    add constaints for specific size classes:
+    add constraints for specific size classes:
 
     ![The Launch Screen rendered as an iPhone X using Landscape orientation](launch-screens-images/launch12.png)
 
@@ -247,7 +247,7 @@ In iOS 8 (and later), the developer can create a special Unified Storyboard to p
 15. Test other devices and orientations to verify that the design looks as
     intended in all scenarios. In cases where adjustments need to be made
     for a specific device or orientation, use the **Edit Traits** button to
-    add constaints for specific size classes:
+    add constraints for specific size classes:
 
     ![The Launch Screen rendered as an iPhone X using Landscape orientation](launch-screens-images/launch15-vs.png) 
 

@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: D3BC68C5-87C1-50AF-ED0A-55EBF07CBD8B
 ms.technology: xamarin-android
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 

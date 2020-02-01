@@ -3,8 +3,8 @@ title: "Building HTML views using Razor Templates"
 description: " Using a full-screen webpage to render HTML can be a simple and effective way to render complex formatting in a cross-platform way, especially if you already have the HTML, JavaScript and CSS from a website project."
 ms.prod: xamarin
 ms.assetid: D8B87C4F-178E-48D9-BE43-85066C46F05C
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/24/2018
 ---
 
@@ -36,7 +36,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadHtmlString(html, NSBundle.MainBundle.BundleUrl);
 ```
 
-See the [iOS UIWebView](http://docs.xamarin.com/recipes/ios/content_controls/web_view/) recipes for more details on using the UIWebView control.
+See the [iOS UIWebView](https://github.com/xamarin/docs-archive/tree/master/Recipes/ios/content_controls/web_view) recipes for more details on using the UIWebView control.
 
 ### Android
 
@@ -53,7 +53,7 @@ var html = "<html><h1>Hello</h1><p>World</p></html>";
 webView.LoadDataWithBaseURL("file:///android_asset/", html, "text/html", "UTF-8", null);
 ```
 
-See the [Android WebView](http://docs.xamarin.com/recipes/android/controls/webview/) recipes for more details on using the WebView control.
+See the [Android WebView](https://github.com/xamarin/docs-archive/tree/master/Recipes/android/controls/webview) recipes for more details on using the WebView control.
 
 ### Specifying the Base Directory
 
@@ -513,5 +513,5 @@ Finally it introduced the RazorTodo samples which demonstrate how to combine web
 ### Related Links
 
 - [RazorTodo Sample](https://github.com/xamarin/mobile-samples/tree/master/RazorTodo)
-- [MVC 3 - Razor View Engine (Microsoft)](http://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
-- [Introduction to ASP.NET Web Programming Using the Razor Syntax (Microsoft)](http://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)
+- [MVC 3 - Razor View Engine (Microsoft)](https://www.asp.net/mvc/videos/mvc-3/mvc-3-razor-view-engine)
+- [Introduction to ASP.NET Web Programming Using the Razor Syntax (Microsoft)](https://www.asp.net/web-pages/tutorials/basics/2-introduction-to-asp-net-web-programming-using-the-razor-syntax)

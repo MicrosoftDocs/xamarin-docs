@@ -4,8 +4,8 @@ description: "This article covers several tips, features and techniques a develo
 ms.prod: xamarin
 ms.assetid: F20EE590-246E-40EB-B309-D9D8C090C7F1
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 

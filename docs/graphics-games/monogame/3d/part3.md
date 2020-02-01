@@ -346,7 +346,7 @@ The final line of code combines the two matrices into one:
 Matrix combined = translationMatrix * rotationMatrix;
 ```
 
-This is referred to as matrix multiplication, which works slightly different than regular multiplication. The *commutative property of multiplication* states that the order of numbers in a multiplication operation does not change the result. That is, 3 * 4 is equivalent to 4 * 3. Matrix multiplication differs in that it is not commutative. That is, the above line can be read as "Apply the translationMatrix to move the model, then rotate everything by applying the rotationMatrix". We could visualize the way that the above line affects the position and rotation as follows:
+This is referred to as matrix multiplication, which works slightly different than regular multiplication. The *commutative property of multiplication* states that the order of numbers in a multiplication operation does not change the result. That is, 3 \* 4 is equivalent to 4 \* 3. Matrix multiplication differs in that it is not commutative. That is, the above line can be read as "Apply the translationMatrix to move the model, then rotate everything by applying the rotationMatrix". We could visualize the way that the above line affects the position and rotation as follows:
 
 ![](part3-images/image8.png "A visualization pf the way that the above line affects the position and rotation")
 

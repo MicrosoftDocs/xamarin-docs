@@ -4,8 +4,8 @@ description: "This article shows how to use Proactive Suggestions in the Xamarin
 ms.prod: xamarin
 ms.assetid: 8DDD084A-0D1E-4DF7-B686-6309DCEFF5D3
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 
@@ -36,7 +36,7 @@ In addition to setting the `Latitude` and `Longitude` of the address component p
 
 ## Web Markup Based Suggestions
 
-iOS 9 added to ability to include structured data markup in the website that enriches the content that users see in Spotlight and Safari search results (see [Search with Web Markup](~/ios/platform/search/web-markup.md)). iOS 10 adds the ability to include location-based markup (such as [PostalAddress](http://schema.org/PostalAddress) as defined by [Schema.org](http://schema.org/)) to further enhance the user's experience. For example, if a users views a location marked page on the website, the system can suggest the same location when they open Maps.
+iOS 9 added to ability to include structured data markup in the website that enriches the content that users see in Spotlight and Safari search results (see [Search with Web Markup](~/ios/platform/search/web-markup.md)). iOS 10 adds the ability to include location-based markup (such as [PostalAddress](https://schema.org/PostalAddress) as defined by [Schema.org](https://schema.org/)) to further enhance the user's experience. For example, if a users views a location marked page on the website, the system can suggest the same location when they open Maps.
 
 ## Text Based Suggestions
 
@@ -444,7 +444,7 @@ Some Schema.org background:
 - There are over 500 schemas representing various concepts available.
 - By implementing it on the website, the developer can acquire some of the benefits of using `NSUserActivity` in a native app.
 
-The schemas are arranged in a tree like structure, where specific types such as *Restaurant*, inherit from more generic types such as *Local Business*. For more information, please see [Schema.org](http://schema.org).
+The schemas are arranged in a tree like structure, where specific types such as *Restaurant*, inherit from more generic types such as *Local Business*. For more information, please see [Schema.org](https://schema.org).
 
 For example, if the web page included the following data:
 

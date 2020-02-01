@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: 52A35B24-C23B-8461-A8FF-5928A2128FB0
 ms.technology: xamarin-ios
 ms.date: 11/25/2015
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ---
 
 # Introduction to MonoTouch.Dialog for Xamarin.iOS
@@ -496,7 +496,7 @@ using (var reader = File.OpenRead ("json.sample"))
     return JsonElement.FromJson (JsonObject.Load (reader) as JsonObject, arg);
 ```
 
-For more information on using JSON with MT.D, see the [JSON Element Walkthrough](http://docs.xamarin.com/guides/ios/user_interface/monotouch.dialog/json_element_walkthrough) tutorial.
+For more information on using JSON with MT.D, see the [JSON Element Walkthrough](https://docs.microsoft.com/xamarin/ios/user-interface/monotouch.dialog/json-element-walkthrough) tutorial.
 
 ## Other Features
 

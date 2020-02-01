@@ -6,16 +6,14 @@ ms.assetid: 2ED719AF-33D2-434D-949A-B70B479C9BA5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/13/2019
+ms.date: 09/17/2019
 ---
 
 # Xamarin.Forms CollectionView Scrolling
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines two [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) methods, that scroll items into view. One of the overloads scrolls the item at the specified index into view, while the other scrolls the specified item into view. Both overloads have additional arguments that can be specified to indicate the exact position of the item after the scroll has completed, and whether to animate the scroll.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines two [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) methods, that scroll items into view. One of the overloads scrolls the item at the specified index into view, while the other scrolls the specified item into view. Both overloads have additional arguments that can be specified to indicate the group the item belongs to, the exact position of the item after the scroll has completed, and whether to animate the scroll.
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) event that is fired when one of the [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) methods is invoked. The [`ScrollToRequestedEventArgs`](xref:Xamarin.Forms.ScrollToRequestedEventArgs) object that accompanies the `ScrollToRequested` event has many properties, including `IsAnimated`, `Index`, `Item`, and `ScrollToPosition`. These properties are set from the arguments specified in the `ScrollTo` method calls.
 
@@ -59,7 +57,7 @@ void OnCollectionViewScrolled(object sender, ItemsViewScrolledEventArgs e)
 }
 ```
 
-The `OnCollectionViewScrolled` event handler outputs the values of the `ItemsViewScrolledEventArgs` object that accompanies the event.
+In this example, the `OnCollectionViewScrolled` event handler outputs the values of the `ItemsViewScrolledEventArgs` object that accompanies the event.
 
 > [!IMPORTANT]
 > The `Scrolled` event is fired for user initiated scrolls, and for programmatic scrolls.
@@ -72,12 +70,19 @@ The first [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) method overload s
 collectionView.ScrollTo(12);
 ```
 
+Alternatively, an item in grouped data can be scrolled into view by specifying the item and group indexes. The following example shows how to scroll the third item in the second group into view:
+
+```csharp
+// Items and groups are indexed from zero.
+collectionView.ScrollTo(2, 1);
+```
+
 > [!NOTE]
 > The [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) event is fired when the [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) method is invoked.
 
 ## Scroll an item into view
 
-The second [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) method overload scrolls the specified item into view. Given a [`CollectionView`](xref:Xamarin.Forms.CollectionView) object named `collectionView`, the following example shows how to scroll the specified item into view:
+The second [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) method overload scrolls the specified item into view. Given a [`CollectionView`](xref:Xamarin.Forms.CollectionView) object named `collectionView`, the following example shows how to scroll the Proboscis Monkey item into view:
 
 ```csharp
 MonkeysViewModel viewModel = BindingContext as MonkeysViewModel;
@@ -85,16 +90,25 @@ Monkey monkey = viewModel.Monkeys.FirstOrDefault(m => m.Name == "Proboscis Monke
 collectionView.ScrollTo(monkey);
 ```
 
+Alternatively, an item in grouped data can be scrolled into view by specifying the item and the group. The following example shows how to scroll the Proboscis Monkey item in the Monkeys group into view:
+
+```csharp
+GroupedAnimalsViewModel viewModel = BindingContext as GroupedAnimalsViewModel;
+AnimalGroup group = viewModel.Animals.FirstOrDefault(a => a.Name == "Monkeys");
+Animal monkey = group.FirstOrDefault(m => m.Name == "Proboscis Monkey");
+collectionView.ScrollTo(monkey, group);
+```
+
 > [!NOTE]
 > The [`ScrollToRequested`](xref:Xamarin.Forms.ItemsView.ScrollToRequested) event is fired when the [`ScrollTo`](xref:Xamarin.Forms.ItemsView.ScrollTo*) method is invoked.
 
-## Scroll bar visibility
+## Disable scroll animation
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties, which are backed by bindable properties. These properties get or set a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) enumeration value that represents when the horizontal, or vertical, scroll bar is visible. The `ScrollBarVisibility` enumeration defines the following members:
+A scrolling animation is displayed when scrolling an item into view. However, this animation can be disabled by setting the `animate` argument of the `ScrollTo` method to `false`:
 
-- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indicates the default scroll bar behavior for the platform, and is the default value for the `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties.
-- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will be visible, even when the content fits in the view.
-- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will not be visible, even if the content doesn't fit in the view.
+```csharp
+collectionView.ScrollTo(monkey, animate: false);
+```
 
 ## Control scroll position
 
@@ -151,14 +165,6 @@ This example code results in the item being scrolled to the end of the view:
 
 [![Screenshot of a CollectionView vertical list with an item scrolled into view, on iOS and Android](scrolling-images/scrolltoposition-end.png "CollectionView vertical list with scrolled item")](scrolling-images/scrolltoposition-end-large.png#lightbox "CollectionView vertical list with scrolled item")
 
-## Disable scroll animation
-
-A scrolling animation is displayed when scrolling an item into view. However, this animation can be disabled by setting the `animate` argument of the `ScrollTo` method to `false`:
-
-```csharp
-collectionView.ScrollTo(monkey, animate: false);
-```
-
 ## Control scroll position when new items are added
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a `ItemsUpdatingScrollMode` property, which is backed by a bindable property. This property gets or sets a `ItemsUpdatingScrollMode` enumeration value that represents the scrolling behavior of the `CollectionView` when new items are added to it. The `ItemsUpdatingScrollMode` enumeration defines the following members:
@@ -183,6 +189,14 @@ CollectionView collectionView = new CollectionView
     ItemsUpdatingScrollMode = ItemsUpdatingScrollMode.KeepLastItemInView
 };
 ```
+
+## Scroll bar visibility
+
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) defines `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties, which are backed by bindable properties. These properties get or set a [`ScrollBarVisibility`](xref:Xamarin.Forms.ScrollBarVisibility) enumeration value that represents when the horizontal, or vertical, scroll bar is visible. The `ScrollBarVisibility` enumeration defines the following members:
+
+- [`Default`](xref:Xamarin.Forms.ScrollBarVisibility) indicates the default scroll bar behavior for the platform, and is the default value for the `HorizontalScrollBarVisibility` and `VerticalScrollBarVisibility` properties.
+- [`Always`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will be visible, even when the content fits in the view.
+- [`Never`](xref:Xamarin.Forms.ScrollBarVisibility) indicates that scroll bars will not be visible, even if the content doesn't fit in the view.
 
 ## Snap points
 
@@ -222,21 +236,13 @@ The `SnapPointsAlignment.Start` member indicates that snap points are aligned wi
 By default, the [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment) property is set to `SnapPointsAlignment.Start`. However, for completeness, the following XAML example shows how to set this enumeration member:
 
 ```xaml
-<CollectionView x:Name="collectionView"
-                ItemsSource="{Binding Monkeys}">
+<CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout SnapPointsType="MandatorySingle"
-                         SnapPointsAlignment="Start">
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>
-            </x:Arguments>
-        </ListItemsLayout>
+        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="MandatorySingle"
+                           SnapPointsAlignment="Start" />
     </CollectionView.ItemsLayout>
-    <CollectionView.ItemTemplate>
-        <DataTemplate>
-            ...
-        </DataTemplate>
-    </CollectionView.ItemTemplate>
+    ...
 </CollectionView>
 ```
 
@@ -245,15 +251,12 @@ The equivalent C# code is:
 ```csharp
 CollectionView collectionView = new CollectionView
 {
-    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    ItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
     {
         SnapPointsType = SnapPointsType.MandatorySingle,
         SnapPointsAlignment = SnapPointsAlignment.Start
     },
-    ItemTemplate = new DataTemplate(() =>
-    {
-        return null;
-    })
+    // ...
 };
 ```
 
@@ -266,21 +269,13 @@ When a user swipes to initiate a scroll, the top item will be aligned with the t
 The `SnapPointsAlignment.Center` member indicates that snap points are aligned with the center of items. The following XAML example shows how to set this enumeration member:
 
 ```xaml
-<CollectionView x:Name="collectionView"
-                ItemsSource="{Binding Monkeys}">
+<CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout SnapPointsType="MandatorySingle"
-                         SnapPointsAlignment="Center">
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>
-            </x:Arguments>
-        </ListItemsLayout>
+        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="MandatorySingle"
+                           SnapPointsAlignment="Center" />
     </CollectionView.ItemsLayout>
-    <CollectionView.ItemTemplate>
-        <DataTemplate>
-            ...
-        </DataTemplate>
-    </CollectionView.ItemTemplate>
+    ...
 </CollectionView>
 ```
 
@@ -289,15 +284,12 @@ The equivalent C# code is:
 ```csharp
 CollectionView collectionView = new CollectionView
 {
-    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    ItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
     {
         SnapPointsType = SnapPointsType.MandatorySingle,
         SnapPointsAlignment = SnapPointsAlignment.Center
     },
-    ItemTemplate = new DataTemplate(() =>
-    {
-        return null;
-    })
+    // ...
 };
 ```
 
@@ -310,21 +302,13 @@ When a user swipes to initiate a scroll, the top item will be center aligned at 
 The `SnapPointsAlignment.End` member indicates that snap points are aligned with the trailing edge of items. The following XAML example shows how to set this enumeration member:
 
 ```xaml
-<CollectionView x:Name="collectionView"
-                ItemsSource="{Binding Monkeys}">
+<CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout SnapPointsType="MandatorySingle"
-                         SnapPointsAlignment="End">
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>
-            </x:Arguments>
-        </ListItemsLayout>
+        <LinearItemsLayout Orientation="Vertical"
+                           SnapPointsType="MandatorySingle"
+                           SnapPointsAlignment="End" />
     </CollectionView.ItemsLayout>
-    <CollectionView.ItemTemplate>
-        <DataTemplate>
-            ...
-        </DataTemplate>
-    </CollectionView.ItemTemplate>
+    ...
 </CollectionView>
 ```
 
@@ -333,15 +317,12 @@ The equivalent C# code is:
 ```csharp
 CollectionView collectionView = new CollectionView
 {
-    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    ItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
     {
         SnapPointsType = SnapPointsType.MandatorySingle,
         SnapPointsAlignment = SnapPointsAlignment.End
     },
-    ItemTemplate = new DataTemplate(() =>
-    {
-        return null;
-    })
+    // ...
 };
 ```
 

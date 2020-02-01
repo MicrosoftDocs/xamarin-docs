@@ -46,7 +46,7 @@ The [**ReflectedColors**](https://github.com/xamarin/xamarin-forms-book-samples/
 
 ## The Expands option
 
-When a `StackLayout` stacks its children, each child occupies a particular slot within the total height of the `StackLayout` that depends on the child's size and the settings of its `HorizontalOptions` and `VerticalOptions` properties. These properties are assigned values of type [`LayoutOptions`](http://developer.xamstage.com/api/type/Xamarin.Forms.LayoutOptions/).
+When a `StackLayout` stacks its children, each child occupies a particular slot within the total height of the `StackLayout` that depends on the child's size and the settings of its `HorizontalOptions` and `VerticalOptions` properties. These properties are assigned values of type [`LayoutOptions`](xref:Xamarin.Forms.LayoutOptions).
 
 The `LayoutOptions` structure defines two properties:
 

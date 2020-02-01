@@ -3,8 +3,8 @@ title: "Introduction to Web Services"
 description: "This guide demonstrates how to consume different web service technologies. Topics covered include communicating with REST services, SOAP services, and Windows Communication Foundation services."
 ms.prod: xamarin
 ms.assetid: 72627B90-586A-02B6-E231-F7CE015A1B97
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -72,7 +72,7 @@ For example, the following code retrieves data from the U.S. National Library of
 
 ```csharp
 var rxcui = "198440";
-var request = HttpWebRequest.Create(string.Format(@"http://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui));
+var request = HttpWebRequest.Create(string.Format(@"https://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui));
 request.ContentType = "application/json";
 request.Method = "GET";
 
@@ -125,7 +125,7 @@ The following code example shows how to call the U.S. National Library of Medici
 
 ```csharp
 var rxcui = "198440";
-var request = new NSMutableUrlRequest(new NSUrl(string.Format("http://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui)),
+var request = new NSMutableUrlRequest(new NSUrl(string.Format("https://rxnav.nlm.nih.gov/REST/RxTerms/rxcui/{0}/allinfo", rxcui)),
        NSUrlRequestCachePolicy.ReloadRevalidatingCacheData, 20);
 request["Accept"] = "application/json";
 
@@ -165,7 +165,7 @@ Generally, platform-specific classes for consuming web services should be limite
 
 ### ServiceStack
 
-Another option for calling web services is the [Service Stack](http://www.servicestack.net/) library. For example, the following code shows how to use Service Stack’s `IServiceClient.GetAsync` method to issue a service request:
+Another option for calling web services is the [Service Stack](https://servicestack.net) library. For example, the following code shows how to use Service Stack’s `IServiceClient.GetAsync` method to issue a service request:
 
 ```csharp
 client.GetAsync<CustomersResponse>("",
@@ -211,7 +211,7 @@ However, it’s important to be aware that the `System.Json` tools load the enti
 
 ### JSON.NET
 
-The [NewtonSoft JSON.NET library](http://www.newtonsoft.com/json) is a widely used library for serializing and deserializing JSON messages. The following
+The [NewtonSoft JSON.NET library](https://www.newtonsoft.com/json) is a widely used library for serializing and deserializing JSON messages. The following
 code example shows how to use JSON.NET to deserialize a JSON message into a C# object:
 
 ```csharp

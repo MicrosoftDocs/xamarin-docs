@@ -3,8 +3,8 @@ title: "How can I update NuGet?"
 ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 40DDE713-DE80-422F-BE34-A732E40C3F81
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
 ---
 

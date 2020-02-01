@@ -4,8 +4,8 @@ description: "This document describes the Xamarin.iOS linker, which is used to e
 ms.prod: xamarin
 ms.assetid: 3A4B2178-F264-0E93-16D1-8C63C940B2F9
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 

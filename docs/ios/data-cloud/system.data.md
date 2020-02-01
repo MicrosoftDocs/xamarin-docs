@@ -4,8 +4,8 @@ description: "This document describes how to use System.Data and Mono.Data.Sqlit
 ms.prod: xamarin
 ms.assetid: F10C0C57-7BDE-A3F3-B011-9839949D15C8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 11/25/2015
 ---
 

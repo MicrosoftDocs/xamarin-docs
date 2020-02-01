@@ -4,8 +4,8 @@ description: "The Social Framework provides a unified API for interacting with s
 ms.prod: xamarin
 ms.assetid: A1C28E66-AA20-1C13-23AF-5A8712E6C752
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -17,9 +17,6 @@ Using the Social Framework allows applications to interact with social
 networks from a single API without having to manage authentication. It includes
 a system provided view controller for composing posts as well as an abstraction
 that allows consuming each social network’s API over HTTP.
-
-> [!IMPORTANT]
-> For a cross-platform API to connect to various social networks, see the [Xamarin.Social](http://components.xamarin.com/view/xamarin.social/) component in the Xamarin Component Store.
 
 ## Connecting to Twitter
 

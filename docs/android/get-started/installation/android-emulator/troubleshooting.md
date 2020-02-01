@@ -5,8 +5,8 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 4F053CC9-9378-47CB-8002-978A6558C4D0
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/27/2018
 ---
 
@@ -381,7 +381,7 @@ If Device Guard is enabled, use the following steps to disable it:
 1. Ensure that **Hyper-V** is disabled (under **Turn Windows Features
    on or off**) as described in the previous section.
 
-2. In the Windows Search Box, enter **gpedit** and select the **Edit
+2. In the Windows Search Box, enter **gpedit.msc** and select the **Edit
    group policy** search result. These steps launch the **Local Group
    Policy Editor**.
 

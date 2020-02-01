@@ -4,8 +4,8 @@ description: "This guide discusses  Xamarin.Android services, which are Android 
 ms.prod: xamarin
 ms.assetid: BA371A59-6F7A-F62A-02FC-28253504ACC9
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2018
 ---
 

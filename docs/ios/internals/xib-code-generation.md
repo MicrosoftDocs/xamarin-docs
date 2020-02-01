@@ -4,8 +4,8 @@ description: "This document describes how Xamarin.iOS generates code to map .xib
 ms.prod: xamarin
 ms.assetid: 365991A8-E07A-0420-D28E-BC4D32065E1A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -136,7 +136,7 @@ languages.
 ## Cross-XIB Class Usage
 
 Sometimes, users wish to reference the same class from multiple **.xib** files, for
-example with tab controllers. This can be done by explictly referencing the
+example with tab controllers. This can be done by explicitly referencing the
 class definition from another **.xib** file, or by defining the same class name again
 in the second **.xib**.
 

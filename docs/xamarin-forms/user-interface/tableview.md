@@ -6,7 +6,7 @@ ms.assetid: D1619D19-A74F-40DF-8E53-B1B7DFF7A3FB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/14/2018
+ms.date: 09/25/2019
 ---
 
 # Xamarin.Forms TableView
@@ -114,7 +114,8 @@ All of these properties are bindable.
 - `LabelColor` – The color of the label text.
 - `Placeholder` – Text to display in the entry field when it is null or empty. This text disappears when text entry begins.
 - `Text` – The text in the entry field.
-- `HorizontalTextAlignment` – The horizontal alignment of the text. Can be center, left, or right aligned. [See the API docs](xref:Xamarin.Forms.TextAlignment).
+- `HorizontalTextAlignment` – The horizontal alignment of the text. Values are center, left, or right aligned. [See the API docs](xref:Xamarin.Forms.TextAlignment).
+- `VerticalTextAlignment` – The vertical alignment of the text. Values are `Start`, `Center`, or `End`.
 
 [`EntryCell`](xref:Xamarin.Forms.EntryCell) also exposes the `Completed` event, which is fired when the user hits the 'done' button on the keyboard while editing text.
 

@@ -4,8 +4,8 @@ description: "The guides in this section introduce Android Wear, describe how to
 ms.prod: xamarin
 ms.assetid: 8B9DC98A-773F-4E06-84A7-BA8208C4E864
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 12/18/2017
 ---
 

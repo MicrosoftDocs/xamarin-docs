@@ -4,8 +4,8 @@ description: "This article provides a supplemental guide to the iOS Configure yo
 ms.prod: xamarin
 ms.assetid: 86C7C5BD-C97D-4F1D-B611-A7694557BFDF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/16/2017
 ---
 

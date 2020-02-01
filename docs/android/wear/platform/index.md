@@ -4,8 +4,8 @@ description: "Key Components of the Wear OS Platform"
 ms.prod: xamarin
 ms.assetid: E86688B5-B2FE-476A-A2AA-F8CC26EA8D2B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/25/2018
 ---
 

@@ -5,8 +5,8 @@ ms.prod: xamarin
 ms.assetid: FA802CCF-3BA4-4F26-A7BF-FBB7D0AA889B
 ms.technology: xamarin-ios
 ms.custom: xamu-video
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 10/16/2019
 ---
 

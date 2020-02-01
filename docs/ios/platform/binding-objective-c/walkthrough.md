@@ -4,8 +4,8 @@ description: "This article provides a hands-on walkthrough of creating a Xamarin
 ms.prod: xamarin
 ms.assetid: D3F6FFA0-3C4B-4969-9B83-B6020B522F57
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/02/2017
 ---
 
@@ -181,7 +181,7 @@ Creating a fat binary is a three step process:
 
 While these three steps are rather straightforward, it may be necessary to repeat them in the future when the Objective-C library receives updates or if we require bug fixes. If you decide to automate these steps, it will simplify the future maintenance and support of the iOS binding project.
 
-There are many tools available to automate such tasks - a shell script, [rake](http://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), and [make](https://developer.apple.com/library/mac/documentation/Darwin/Reference/ManPages/man1/make.1.html). When the Xcode Command Line tools are installed, `make` is also installed, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for any library:
+There are many tools available to automate such tasks - a shell script, [rake](https://rake.rubyforge.org/), [xbuild](https://www.mono-project.com/docs/tools+libraries/tools/xbuild/), and make. When the Xcode Command Line tools are installed, `make` is also installed, so that is the build system that will be used for this walkthrough. Here is a **Makefile** that you can use to create a multi-architecture shared library that will work on an iOS device and the simulator for any library:
 
 <!--markdownlint-disable MD010 -->
 ```makefile
@@ -376,11 +376,12 @@ Options:
   -v, --versionShow version information
 
 Available Tools:
-
-  xcode    Get information about Xcode installations and available SDKs.
-
-  bind     Create a Xamarin C# binding to Objective-C APIs
-Europa:Resources kmullins$
+  xcode              Get information about Xcode installations and available SDKs.
+  pod                Create a Xamarin C# binding to Objective-C CocoaPods
+  bind               Create a Xamarin C# binding to Objective-C APIs
+  update             Update to the latest release of Objective Sharpie
+  verify-docs        Show cross reference documentation for [Verify] attributes
+  docs               Open the Objective Sharpie online documentation
 ```
 
 For the purpose of this walkthrough, we will be using the following Objective Sharpie tools:
@@ -395,11 +396,14 @@ Europa:Resources kmullins$ sharpie xcode -help
 usage: sharpie xcode [OPTIONS]+
 
 Options:
-  -h, --help                 Show detailed help
-  -v, --verbose              Be verbose with output
-      --sdks                 List all available Xcode SDKs. Pass -verbose for
-                               more details.
-Europa:Resources kmullins$
+  -h, -help           Show detailed help
+  -v, -verbose        Be verbose with output
+
+Xcode Options:
+  -sdks               List all available Xcode SDKs. Pass -verbose for more
+                        details.
+  -sdkpath SDK        Output the path of the SDK
+  -frameworks SDK     List all available framework directories in a given SDK.
 ```
 
 Before we can start the binding process, we need to get information about our current installed SDKs by entering the following command into the Terminal `sharpie xcode -sdks`:
@@ -713,7 +717,6 @@ This article walked through the process of creating and using a Xamarin.iOS bind
 
 ## Related Links
 
-- [Binding Example (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/infcolorpicker)
 - [Binding Objective-C Libraries](~/cross-platform/macios/binding/objective-c-libraries.md)
 - [Binding Details](~/cross-platform/macios/binding/overview.md)
 - [Binding Types Reference Guide](~/cross-platform/macios/binding/binding-types-reference.md)

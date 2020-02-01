@@ -4,8 +4,8 @@ description: "This guide links to instructions that describe how to install and 
 ms.prod: xamarin
 ms.assetid: 625A0933-47A5-6184-3AD5-7E1C8464AEBD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 

@@ -104,7 +104,7 @@ public class BasicSliderCodePage : ContentPage
 
 The `Slider` is initialized to have a `Maximum` property of 360. The `ValueChanged` handler of the `Slider` uses the `Value` property of the `slider` object to set the `Rotation` property of the first `Label` and uses the `String.Format` method with the `NewValue` property of the event arguments to set the `Text` property of the second `Label`. These two approaches to obtain the current value of the `Slider` are interchangeable.
 
-Here's the program running on iOS, Android, and Universal Windows Platform (UWP) devices:
+Here's the program running on iOS and Android devices:
 
 [![Basic Slider Code](slider-images/BasicSliderCode.png "Basic Slider Code")](slider-images/BasicSliderCode-Large.png#lightbox)
 

@@ -16,7 +16,7 @@ ms.custom: video
 
 _XAML resources are definitions of objects that can be shared and re-used throughout a Xamarin.Forms application. These resource objects are stored in a resource dictionary._
 
-A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) is a repository for resources that are used by a Xamarin.Forms application. Typical resources that are stored in a `ResourceDictionary` include [styles](~/xamarin-forms/user-interface/styles/index.md), [control templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md), [data templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), colors, and converters.
+A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) is a repository for resources that are used by a Xamarin.Forms application. Typical resources that are stored in a `ResourceDictionary` include [styles](~/xamarin-forms/user-interface/styles/index.md), [control templates](~/xamarin-forms/app-fundamentals/templates/control-template.md), [data templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), colors, and converters.
 
 In XAML, resources that are stored in a `ResourceDictionary` can then be retrieved and applied to elements by using the `StaticResource` markup extension. In C#, resources can also be defined in a `ResourceDictionary` and then retrieved and applied to elements by using a string-based indexer. However, there's little advantage to using a `ResourceDictionary` in C#, as shared objects can simply be stored as fields or properties, and accessed directly without having to first retrieve them from a dictionary.
 

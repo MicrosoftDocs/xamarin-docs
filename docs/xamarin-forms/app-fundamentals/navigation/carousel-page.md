@@ -15,6 +15,9 @@ ms.date: 12/01/2017
 
 _The Xamarin.Forms CarouselPage is a page that users can swipe from side to side to navigate through pages of content, like a gallery. This article demonstrates how to use a CarouselPage to navigate through a collection of pages._
 
+> [!IMPORTANT]
+> The [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) has been superseded by the [`CarouselView`](xref:Xamarin.Forms.CarouselView), which provides a scrollable layout where users can swipe to move through a collection of items. For more information about the `CarouselView`, see [Xamarin.Forms CarouselView](~/xamarin-forms/user-interface/carouselview/index.md).
+
 The following screenshots show a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) on each platform:
 
 ![](carousel-page-images/thirdpage.png "CarouselPage Third Item")
@@ -35,11 +38,6 @@ Swiping from right to left again moves to the third page, while swiping from lef
 If a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) is embedded into the [`Detail`](xref:Xamarin.Forms.MasterDetailPage.Detail) page of a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage), the [`MasterDetailPage.IsGestureEnabled`](xref:Xamarin.Forms.MasterDetailPage.IsGestureEnabledProperty) property should be set to `false` to prevent gesture conflicts between the `CarouselPage` and the `MasterDetailPage`.
 
 For more information about the [`CarouselPage`](xref:Xamarin.Forms.CarouselPage), see [Chapter 25](https://developer.xamarin.com/r/xamarin-forms/book/chapter25.pdf) of Charles Petzold's Xamarin.Forms book.
-
-<!--
-> [!NOTE]
-> The [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) has been deprecated, and will be removed from Xamarin.Forms in a future release. Instead, the [`CarouselView`](xref:Xamarin.Forms.CarouselView) should be used to provide a gallery-like view, where users can swipe from side to side to move through a collection of items.
--->
 
 ## Create a CarouselPage
 

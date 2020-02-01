@@ -4,8 +4,8 @@ description: "This article presents the new Speech API and shows how to implemen
 ms.prod: xamarin
 ms.assetid: 64FED50A-6A28-4833-BEAE-63CEC9A09010
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 

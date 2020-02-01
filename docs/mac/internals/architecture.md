@@ -4,8 +4,8 @@ description: "This guide explores Xamarin.Mac and its relationship to Objective-
 ms.prod: xamarin
 ms.assetid: 74D1FF57-4F2A-4646-8669-003DE99671D4
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/12/2017
 ---
 

@@ -4,8 +4,8 @@ description: "This document describes the various controls that are available fo
 ms.prod: xamarin
 ms.assetid: EDFAD203-02EA-4A74-9CE2-7B8513BC90E1
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/19/2016
 ---
 

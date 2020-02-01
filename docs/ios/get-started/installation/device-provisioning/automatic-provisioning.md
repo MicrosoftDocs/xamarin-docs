@@ -4,8 +4,8 @@ description: "Once Xamarin.iOS has been successfully installed, the next step in
 ms.prod: xamarin
 ms.assetid: 81FCB2ED-687C-40BC-ABF1-FB4303034D01
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.custom: video
 ms.date: 01/22/2019
 ---
@@ -34,7 +34,7 @@ You must also be paired to a Mac build host that has the following:
 
 ## Enabling Automatic Signing
 
-Before you start the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a the prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
+Before you start the automatic signing process, you should ensure that you have an Apple ID added in Visual Studio, as described in the [Apple Account Management](~/cross-platform/macios/apple-account-management.md) guide. Once you've added an Apple ID, you can use any associated _Team_. This allows certificates, profiles, and other IDs to be made against the team. The team ID is also used to create a prefix for an App ID that will be included in the provisioning profile. Having this allows Apple to verify that you are who you say you are.
 
 > [!IMPORTANT]
 > Before you begin, make sure to sign in to either [iTunes Connect](https://itunesconnect.apple.com/) or [appleid.apple.com](https://appleid.apple.com) to check that you have accepted the latest Apple account policies. If prompted, complete the steps to accept any new account agreements from Apple. If you don't accept the privacy agreement from May 2018, you'll see one of the following alerts when trying to provision your device:

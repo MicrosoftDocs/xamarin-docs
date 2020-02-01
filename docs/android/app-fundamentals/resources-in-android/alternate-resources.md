@@ -3,8 +3,8 @@ title: "Alternate Resources"
 ms.prod: xamarin
 ms.assetid: AE5A864E-192D-475E-C731-99249C2E7D9E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
 ---
 
@@ -73,9 +73,9 @@ The possible qualifiers are listed below for reference:
   qualifier of `fr` is used. To target French-Canadian locales, the
   `fr-rCA` would be used. For a complete list of language codes and
   region codes, see
-  [Codes for the Representation of Names Of Languages](http://www.loc.gov/standards/iso639-2/php/English_list.php)
+  [Codes for the Representation of Names Of Languages](https://www.loc.gov/standards/iso639-2/php/English_list.php)
   and
-  [Country names and code elements](http://www.iso.org/iso/country_codes/iso_3166_code_lists/country_names_and_code_elements.htm).
+  [Country names and code elements](https://www.iso.org/iso-3166-country-codes.html).
 
 - **Smallest Width** &ndash; Specifies the smallest screen width the
   application is meant to execute on. Covered in more detail in 

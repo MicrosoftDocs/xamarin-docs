@@ -27,7 +27,7 @@ Generally, you'll want to make the dash and gap lengths a multiple of the stroke
 
 However, the `StrokeCap` setting of the `SKPaint` object also affects these dots and dashes. As you'll see shortly, that has an impact on the elements of this array.
 
-Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [**DotsAndDashesPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml) file instantiates two `Picker` views, one for letting you select a stroke cap and the second to select a dash array:
+Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [**DotsAndDashesPage.xaml**](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/DotsAndDashesPage.xaml) file instantiates two `Picker` views, one for letting you select a stroke cap and the second to select a dash array:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -95,7 +95,7 @@ Dotted and dashed lines are demonstrated on the **Dots and Dashes** page. The [*
 
  The first three items in the `dashArrayPicker` assume that the stroke width is 10 pixels. The { 10, 10 } array is for a dotted line, { 30, 10 } is for a dashed line, and { 10, 10, 30, 10 } is for a dot-and-dash line. (The other three will be discussed shortly.)
 
-The [`DotsAndDashesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/LinesAndPaths/DotsAndDashesPage.xaml.cs) code-behind file contains the `PaintSurface` event handler and a couple of helper routines for accessing the `Picker` views:
+The [`DotsAndDashesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Paths/DotsAndDashesPage.xaml.cs) code-behind file contains the `PaintSurface` event handler and a couple of helper routines for accessing the `Picker` views:
 
 ```csharp
 void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
@@ -121,7 +121,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
     path.LineTo(0.2f * info.Width, 0.8f * info.Height);
     path.LineTo(0.8f * info.Width, 0.2f * info.Height);
 
-    canvas.DrawPath(path, paint); 
+    canvas.DrawPath(path, paint);
 }
 
 float[] GetPickerArray(Picker picker)
