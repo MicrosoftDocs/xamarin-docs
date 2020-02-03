@@ -240,7 +240,7 @@ This completes the code in `ViewDidLoad`. Now we need to implement our `MapDeleg
     }
     ```
 
-1. To hide the image when the user deselects the annotation by tapping anywhere else on the map, implement the `DidSelectAnnotationView` method as follows:
+1. To hide the image when the user deselects the annotation by tapping anywhere else on the map, implement the `DidDeselectAnnotationView` method as follows:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)
