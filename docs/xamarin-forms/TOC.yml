@@ -545,6 +545,9 @@
                   href: user-interface/styles/css/index.md
             - name: Theming
               href: user-interface/theming.md
+              items:
+              - name: Dark Mode
+                href: user-interface/dark-mode.md
             - name: Visual
               href: user-interface/visual/index.md
               items:
