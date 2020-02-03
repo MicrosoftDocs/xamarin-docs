@@ -75,7 +75,7 @@ Let's begin by creating a new **iOS Empty Project**, and giving it a relevant na
 
     ```
 
-1. Create a new instance of  `MapDelegate` and assign it to the `Delegate` of the `MKMapView`. Again, we'll implcodeent the `MapDelegate` shortly:
+1. Create a new instance of  `MapDelegate` and assign it to the `Delegate` of the `MKMapView`. Again, we'll implement the `MapDelegate` shortly:
 
     ```csharp
     mapDelegate = new MapDelegate ();
