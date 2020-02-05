@@ -35,13 +35,15 @@ A `PermissionException` is thrown if the required permission is not declared.
 
 ## Requesting Permissions
 
-To request a permission from the users, use the `RequestAsync` method along with the specific permission to request.
+To request a permission from the users, use the `RequestAsync` method along with the specific permission to request. If the user previously granted permission and has not revoked it, then this method will return `Granted` immediatelly and not display a dialog. 
 
 ```csharp
 var status = await Permissions.RequestAsync<Permissions.LocationWhenInUse>();
 ```
 
-A `PermissionException` is thrown if the required permission is not declared.
+A `PermissionException` is thrown if the required permission is not declared. 
+
+Note, that on some platforms a permission request can only be activated a single time. Further prompts must be handled by the developer to check if a permision is in the `Denied` state and ask the user to manually turn it on.
 
 ## Permission Status
 
@@ -59,29 +61,29 @@ Xamarin.Essentials attempts to abstract as many permissions as possible, however
 
 Icon Guide:
 
-* ✔ - Supported
-* ❌ - Not supported/required
+* ![Full Support](~/media/shared/yes.png "Full Support") - Supported
+* ![Not Supported](~/media/shared/no.png "Not supported or required") - Not supported/required
 
 | Permission | Android | iOS | UWP | watchOS | tvOS | Tizen |
 | --- | :---: | :---: | :---: | :---: | :---: | :---: | :---: |
-| CalendarRead   | ✔ | ✔ | ❌ | ✔ | ❌ | ❌ |
-| CalendarWrite | ✔ | ✔ | ❌ | ✔ | ❌ | ❌ |
-| Camera | ✔ | ✔ | ❌ | ❌ | ❌ | ✔ |
-| ContactsRead | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
-| ContactsWrite | ✔ | ✔ | ✔ | ❌ | ❌ | ❌ |
-| Flashlight | ✔ | ❌ | ❌ | ❌ | ❌ | ✔ |
-| LocationWhenInUse | ✔ | ✔ | ✔ | ✔ | ✔ | ✔ |
-| LocationAlways | ✔ | ✔ | ✔ | ✔ | ❌ | ✔ |
-| Media | ❌ | ✔ | ❌ | ❌ | ❌ | ❌ |
-| Microphone | ✔ | ✔ | ✔ | ❌ | ❌ | ✔ |
-| Phone | ✔ | ✔ | ❌ | ❌ | ❌ | ❌ |
-| Photos | ❌ | ✔ | ❌ | ❌ | ✔ | ❌ |
-| Reminders | ❌ | ✔ | ❌ | ✔ | ❌ | ❌ |
-| Sensors | ✔ | ✔ | ✔ | ✔ | ❌ | ❌ |
-| Sms | ✔ | ✔ | ❌ | ❌ | ❌ | ❌ |
-| Speech | ✔ | ✔ | ❌ | ❌ | ❌ | ❌ |
-| StorageRead | ✔ | ❌ | ❌ | ❌ | ❌ | ❌ |
-| StorageWrite | ✔ | ❌ | ❌ | ❌ | ❌ | ❌ |
+| CalendarRead   | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ✔ | ❌ | ❌ |
+| CalendarWrite | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ✔ | ❌ | ❌ |
+| Camera | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ❌ | ❌ | ✔ |
+| ContactsRead | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ✔ | ❌ | ❌ | ❌ |
+| ContactsWrite | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ✔ | ❌ | ❌ | ❌ |
+| Flashlight | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS not supported](~/media/shared/no.png "iOS not supported") | ❌ | ❌ | ❌ | ✔ |
+| LocationWhenInUse | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ✔ | ✔ | ✔ | ✔ |
+| LocationAlways | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ✔ | ✔ | ❌ | ✔ |
+| Media | ![Android not supported](~/media/shared/no.png "Android not supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ❌ | ❌ | ❌ |
+| Microphone | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ✔ | ❌ | ❌ | ✔ |
+| Phone | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ❌ | ❌ | ❌ |
+| Photos | ![Android not supported](~/media/shared/no.png "Android not supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ❌ | ✔ | ❌ |
+| Reminders | ![Android not supported](~/media/shared/no.png "Android not supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ✔ | ❌ | ❌ |
+| Sensors | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ✔ | ✔ | ❌ | ❌ |
+| Sms | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ❌ | ❌ | ❌ |
+| Speech | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS supported](~/media/shared/yes.png "iOS supported") | ❌ | ❌ | ❌ | ❌ |
+| StorageRead | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS not supported](~/media/shared/no.png "iOS not supported") | ❌ | ❌ | ❌ | ❌ |
+| StorageWrite | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS not supported](~/media/shared/no.png "iOS not supported") | ❌ | ❌ | ❌ | ❌ |
 
 If a permission is marked with a ❌ it will always return `Granted` when checked or requested.
 
