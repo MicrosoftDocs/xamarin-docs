@@ -47,7 +47,7 @@ Xamarin Hot Restart enables you to quickly test changes to your app during devel
 > Using automatic provisioning is recommended so additional iOS devices can be easily configured for deployment. However, you can disable it and continue using manual provisioning if the correct provisioning profiles are present.
 
 ## Use Xamarin Hot Restart
-After the initial setup, your connected device will appear in the debug target dropdown menu. To debug your app, select your device in the dropdown and click the **Run** button. You may need to manually launch the app on the device in order to start the debug session.
+After the initial setup, your connected device will appear in the debug target dropdown menu. To debug your app, select your device in the dropdown and click the **Run** button. You may see a message in Visual Studio asking you to manually launch the app on the device in order to start the debug session.
 
 You can make edits to your code files while debugging, then press the **Restart** button in the debug toolbar or use **Ctrl+Shift+F5** to restart the debug session with your new changes applied:
 
@@ -61,6 +61,7 @@ You can make edits to your code files while debugging, then press the **Restart*
 
 ## Troubleshoot
 - The setup wizard will not detect iTunes if it was installed via the Microsoft Store. You will need to uninstall that version first then download the [installer from Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
+- There is a known issue where having device-specific builds enabled prevents the app from entering debug mode. Workaround is to disable this under **Properties > iOS Build** and retry debugging. This will be fixed in a future release.
 - If the app is already present on the device, trying to deploy with Hot Restart may fail with a `AMDeviceStartHouseArrestService` error. The workaround is to uninstall the app on the device then deploy again.
 
 To report additional issues, please use the feedback tool at [Help > Send Feedback > Report a Problem](/visualstudio/ide/feedback-options?view=vs-2019#report-a-problem).
