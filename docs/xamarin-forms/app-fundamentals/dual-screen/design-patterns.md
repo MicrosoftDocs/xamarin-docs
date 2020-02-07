@@ -32,12 +32,12 @@ The extended canvas pattern treats both screens are one large canvas for display
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     x:Class="Xamarin.Duo.Forms.Samples.ExtendCanvas">
-	<ContentPage.Content>
-		<Grid>
-			<WebView x:Name="webView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
-			<SearchBar x:Name="searchBar" Placeholder="Find a place..." BackgroundColor="DarkGray" Opacity="0.8" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
-		</Grid>
-	</ContentPage.Content>
+    <ContentPage.Content>
+        <Grid>
+            <WebView x:Name="webView" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" />
+            <SearchBar x:Name="searchBar" Placeholder="Find a place..." BackgroundColor="DarkGray" Opacity="0.8" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+        </Grid>
+    </ContentPage.Content>
 </ContentPage>
 ```
 
