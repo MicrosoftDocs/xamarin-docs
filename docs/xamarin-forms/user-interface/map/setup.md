@@ -6,7 +6,7 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/06/2019
+ms.date: 02/07/2020
 ---
 
 # Xamarin.Forms Map Initialization and Configuration
@@ -229,6 +229,9 @@ The overall effect of this code is that when the application requests the user's
 ### Universal Windows Platform
 
 On UWP, your application must be authenticated before it can display a map and consume map services. To authenticate your application, you must specify a maps authentication key. For more information, see [Request a maps authentication key](/windows/uwp/maps-and-location/authentication-key). The authentication token should then be specified in the `FormsMaps.Init("AUTHORIZATION_TOKEN")` method call, to authenticate the application with Bing Maps.
+
+> [!IMPORTANT]
+> On UWP, to use map services such as geocoding you must also set the `MapService.ServiceToken` property to the authentication key value. This can be accomplished with the following line of code: `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";`.
 
 In addition, if your application needs to access the user's location, you must enable the location capability in the package manifest. This can be accomplished as follows:
 
