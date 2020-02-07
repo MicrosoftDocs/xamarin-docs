@@ -9,11 +9,11 @@ ms.author: daortin
 ms.date: 02/08/2020
 ---
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 # Xamarin.Forms dual-screen
 
-Surface Duo (Android) and Surface Neo (Windows 10X) introduce new patterns for touch applications. Xamarin.Forms introduces [`TwoPaneView`](xref:Xamarin.Forms.TwoPaneView) and [`DualScreenInfo`](xref:Xamarin.Forms.DualScreen) to empower you to take full advantage of these new experiences.
+![](~/media/shared/preview.png "This API is currently pre-release")
+
+Surface Duo (Android) and Surface Neo (Windows 10X) introduce new patterns for touch applications. Xamarin.Forms introduces `TwoPaneView` and `DualScreenInfo` to empower you to take full advantage of these new experiences.
 
 ## [Dual-Screen Patterns](design-patterns.md)
 
@@ -21,8 +21,8 @@ When considering how to best utilize multiple screens on a dual-screen device, r
 
 ## [TwoPaneView](twopaneview.md)
 
-Xamarin.Forms [`TwoPaneView`](xref:Xamarin.Forms.TwoPaneView) class, inspired by the UWP control of the same name, introduces a layout optimized for dual-screen devices in a cross-platform way.
+Xamarin.Forms `TwoPaneView` class, inspired by the UWP control of the same name, introduces a layout optimized for dual-screen devices in a cross-platform way.
 
 ## [DualScreenInfo](dual-screen-info.md)
 
-To get the most out of dual-screen devices, you may want to know which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more. [`DualScreenInfo`](xref:Xamarin.Forms.DualScreen) provides this information.
+To get the most out of dual-screen devices, you may want to know which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more. `DualScreenInfo` provides this information.

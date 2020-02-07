@@ -9,19 +9,20 @@ ms.author: daortin
 ms.date: 02/08/2020
 ---
 
-![](~/media/shared/preview.png "This API is currently pre-release")
 
 # Xamarin.Forms dual-screen design patterns
 
+![](~/media/shared/preview.png "This API is currently pre-release")
+
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/dual-screen/)
 
-This guide introduces our recommended design patterns with code and samples to assist you in creating interfaces that provide engaging and useful user experiences.
+This guide introduces our recommended design patterns for dual-screen devices with code and samples to assist you in creating interfaces that provide engaging and useful user experiences.
 
-## Extended Canvas
+## Extended canvas pattern
 
-The extended canvas pattern treats both screens are one large canvas for displaying a map, image, spreadsheet, or other such content that benefits from spreading to consume the maximum space.
+The extended canvas pattern treats both screens as one large canvas for displaying a map, image, spreadsheet, or other such content that benefits from spreading to consume the maximum space.
 
-![](~/dual-screen/android/sample-code/images/extended-canvas-sample.png)
+![](https://docs.microsoft.com/dual-screen/android/sample-code/images/extended-canvas-sample.png "Extended canvas sample")
 
 ```xaml
 <ContentPage
@@ -43,12 +44,11 @@ The extended canvas pattern treats both screens are one large canvas for display
 
 In this example. the `Grid` and inner content will expand to consume all of the screen available, whether displayed on a single screen, or spanned across two screens.
 
-
-## Master-detail
+## Master-detail pattern
 
 The master-detail pattern is when the master view, typically a list on the left, provides content from which a user selects to view details about that item on the right.
 
-![](~/dual-screen/android/sample-code/images/master-detail-sample.png)
+![](https://docs.microsoft.com/dual-screen/android/sample-code/images/master-detail-sample.png "Master detail sample")
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
@@ -69,13 +69,13 @@ The master-detail pattern is when the master view, typically a list on the left,
 </ContentPage>
 ```
 
-In this example, you can make use of [TwoPaneView](xref:Xamarin.Forms.TwoPaneView) to set a a list on one pane, and a detail view on the other.
+In this example, you can make use of `TwoPaneView` to set a a list on one pane, and a detail view on the other.
 
-## Two page
+## Two page pattern
 
-Two page is ideal for content that lends itself to a two-up layout, such as a document reader, notes, or an artboard.
+Two page is ideal for content that lends itself to a two-up layout, such as a document reader, notes, or an art-board.
 
-![](~/dual-screen/android/sample-code/images/two-page-sample.png)
+![](https://docs.microsoft.com/dual-screen/android/sample-code/images/two-page-sample.png "Two page sample")
 
 ```xaml
 <Grid x:Name="layout">
@@ -104,11 +104,11 @@ Two page is ideal for content that lends itself to a two-up layout, such as a do
 
 The [`CollectionView`](xref:Xamarin.Forms.CollectionView) with a grid layout that splits on the hinge width makes for an ideal way to deliver this dual-screen experience.
 
-## Dual view
+## Dual view pattern
 
 Dual view may look just like the "Two page" view, but the distinction is in the content and user scenario. In this pattern you are comparing content side-by-side, perhaps to edit a document or photo, to compare different restaurant menus, or to diff a merge conflict for code files.
 
-![](~/dual-screen/android/sample-code/images/dual-view-sample.png)
+![](https://docs.microsoft.com/dual-screen/android/sample-code/images/dual-view-sample.png "Dual view sample")
 
 ```xaml
 <ContentPage
@@ -140,11 +140,11 @@ Dual view may look just like the "Two page" view, but the distinction is in the 
 </ContentPage>
 ```
 
-## Companion
+## Companion pattern
 
 The companion pattern demonstrates how you might use the second screen to provide a 2nd level of content related to the primary view, like in the case of a drawing app, a game, or media editing.
 
-![](~/dual-screen/android/sample-code/images/companion-pane-sample.png)
+![](https://docs.microsoft.com/dual-screen/android/sample-code/images/companion-pane-sample.png "Companion pane sample")
 
 ```xaml
 <ContentPage
@@ -220,7 +220,7 @@ The companion pattern demonstrates how you might use the second screen to provid
 </ContentPage>
 ```
 
-## Related Links
+## Related links
 
 - [Dual Screen Samples (GitHub)]([~/dual-screen/android/sample-code/extended-canvas.md](https://github.com/xamarin/xamarin-forms-samples/dual-screen/))
 - [Create apps for dual screen devices](~/dual-screen)

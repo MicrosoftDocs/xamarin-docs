@@ -4,14 +4,14 @@ description: "This guide explains how to use Xamarin.Forms TwoPaneView to optimi
 ms.prod: xamarin
 ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
 ms.technology: xamarin-forms
-author: pureween
-ms.author: shneuvi
+author: davidortinau
+ms.author: daortin
 ms.date: 02/08/2020
 ---
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 # Xamarin.Forms TwoPaneView
+
+![](~/media/shared/preview.png "This API is currently pre-release")
 
 _Gesture recognizers can be used to detect user interaction with views in a Xamarin.Forms application._
 
