@@ -13,7 +13,7 @@ ms.date: 02/7/2020
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/mediaelement)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/WorkingWithMediaElement)
 
 `MediaElement` renders a media player for playback of video and audio. The operating system playback controls, referred to as transport controls, can be used, or you can hide those and provide your own controls to meet your design requirements.
 
@@ -126,4 +126,4 @@ Similar to [`Image`](xref:Xamarin.Forms.Image), the `MediaElement` control has `
 
 ## Related links
 
-- [MediaElement (sample)](https://github.com/xamarin/xamarin-forms-samples/mediaelement)
+- [MediaElement (sample)](https://github.com/xamarin/xamarin-forms-samples/WorkingWithMediaElement)
