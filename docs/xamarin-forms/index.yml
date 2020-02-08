@@ -85,6 +85,9 @@ conceptualContent:
         - text: DependencyService
           url: ~/xamarin-forms/app-fundamentals/dependency-service/index.md
           itemType: concept
+        - text: Dual-Screens
+          url: ~/xamarin-forms/app-fundamentals/dual-screen/index.md
+          itemType: concept
         - text: Navigation
           url: ~/xamarin-forms/app-fundamentals/navigation/index.md
           itemType: concept
