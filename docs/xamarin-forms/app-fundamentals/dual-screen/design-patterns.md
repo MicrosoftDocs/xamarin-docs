@@ -9,12 +9,11 @@ ms.author: daortin
 ms.date: 02/08/2020
 ---
 
-
 # Xamarin.Forms dual-screen design patterns
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/dual-screen/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreen/)
 
 This guide introduces our recommended design patterns for dual-screen devices with code and samples to assist you in creating interfaces that provide engaging and useful user experiences.
 
@@ -222,5 +221,5 @@ The companion pattern demonstrates how you might use the second screen to provid
 
 ## Related links
 
-- [Dual Screen Samples (GitHub)]([~/dual-screen/android/sample-code/extended-canvas.md](https://github.com/xamarin/xamarin-forms-samples/dual-screen/))
+- [Dual Screen Samples (GitHub)](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreen/)
 - [Create apps for dual screen devices](~/dual-screen)

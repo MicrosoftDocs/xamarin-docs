@@ -13,6 +13,8 @@ ms.date: 02/08/2020
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreen/)
+
 _Gesture recognizers can be used to detect user interaction with views in a Xamarin.Forms application._
 
 The Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) class supports tap, pinch, pan, and swipe gestures on [`View`](xref:Xamarin.Forms.View) instances.
