@@ -9,13 +9,13 @@ ms.author: daortin
 ms.date: 02/7/2020
 ---
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 # Xamarin.Forms MediaElement
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/mediaelement)
+![](~/media/shared/preview.png "This API is currently pre-release")
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) renders a media player for playback of video and audio. The operating system playback controls, referred to as transport controls, can be used, or you can hide those and provide your own controls to meet your design requirements.
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/mediaelement)
+
+`MediaElement` renders a media player for playback of video and audio. The operating system playback controls, referred to as transport controls, can be used, or you can hide those and provide your own controls to meet your design requirements.
 
 Before you can use this new preview control, you must opt-in to using it by setting the appropriate flag in your `App.xaml.xs`:
 
@@ -32,7 +32,7 @@ Platforms supported:
 - macOS
 - Tizen
 
-## Setting Media Source
+## Setting media source
 
 The `MediaElement` property `Source` can take a URI or local file path. Playback will begin immediately upon the media opening.
 
@@ -40,7 +40,7 @@ The `MediaElement` property `Source` can take a URI or local file path. Playback
 <MediaElement Source="http://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4" />
 ```
 
-![](mediaelement-images/mediaelement-android.png)
+![](mediaelement-images/mediaelement-android.png "MediaElement on Android")
 
 To set the source to a local asset from your platform project, use the "ms-appx" URI scheme. 
 
@@ -124,6 +124,6 @@ Similar to [`Image`](xref:Xamarin.Forms.Image), the `MediaElement` control has `
 - `VideoHeight`: height of the control
 - `KeepScreenOn`: if the device screen should stay on during playback 
 
-## Related Links
+## Related links
 
-- [MediaElement (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/mediaelement)
+- [MediaElement (sample)](https://github.com/xamarin/xamarin-forms-samples/mediaelement)
