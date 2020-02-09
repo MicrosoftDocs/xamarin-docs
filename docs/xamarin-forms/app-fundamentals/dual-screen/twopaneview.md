@@ -11,26 +11,25 @@ ms.date: 02/08/2020
 
 # Xamarin.Forms TwoPaneView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+Represents a container with two views that size and position content in the available space, either side-by-side or top-bottom.
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreen/)
+## Setting up TwoPaneView
 
-_Gesture recognizers can be used to detect user interaction with views in a Xamarin.Forms application._
+The `TwoPaneView` property `Source` can take a URI or local file path. Playback will begin immediately upon the media opening.
 
-The Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) class supports tap, pinch, pan, and swipe gestures on [`View`](xref:Xamarin.Forms.View) instances.
-
-## [Adding a tap gesture recognizer](tap.md)
-
-A tap gesture is used for tap detection and is recognized with the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) class.
-
-## [Adding a pinch gesture recognizer](pinch.md)
-
-A pinch gesture is used for performing interactive zoom and is recognized with the [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) class.
-
-## [Adding a pan gesture recognizer](pan.md)
-
-A pan gesture is used for detecting the movement of fingers around the screen and applying that movement to content, and is recognized with the [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) class.
-
-## [Adding a swipe gesture recognizer](swipe.md)
-
-A swipe gesture occurs when a finger is moved across the screen in a horizontal or vertical direction, and is often used to initiate navigation through content. Swipe gestures are recognized with the [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) class.
+```xaml
+<ContentPage xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen">
+    <dualScreen:TwoPaneView>
+        <dualScreen:TwoPaneView.Pane1>
+            <StackLayout>
+                <Label Text="Pane1 Content"></Label>
+            </StackLayout>
+        </dualScreen:TwoPaneView.Pane1>
+        <dualScreen:TwoPaneView.Pane2>
+            <StackLayout>
+                <Label Text="Pane2 Content"></Label>
+            </StackLayout>
+        </dualScreen:TwoPaneView.Pane2>
+    </dualScreen:TwoPaneView>
+</ContentPage>
+```
