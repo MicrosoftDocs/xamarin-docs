@@ -34,6 +34,8 @@ By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) selection is d
 - `PreviousSelection` – the list of items that were selected, before the selection changed.
 - `CurrentSelection` – the list of items that are selected, after the selection change.
 
+In addition, [`CollectionView`](xref:Xamarin.Forms.CollectionView) has a `UpdateSelectedItems` method that updates the [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) property with a list of selected items, while only firing a single change notification.
+
 ## Single selection
 
 When the [`SelectionMode`](xref:Xamarin.Forms.SelectableItemsView.SelectionMode) property is set to `Single`, a single item in the [`CollectionView`](xref:Xamarin.Forms.CollectionView) can be selected. When an item is selected, the [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) property will be set to the value of the selected item. When this property changes, the [`SelectionChangedCommand`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommand) is executed (with the value of the [`SelectionChangedCommandParameter`](xref:Xamarin.Forms.SelectableItemsView.SelectionChangedCommandParameter) being passed to the `ICommand`), and the [`SelectionChanged`](xref:Xamarin.Forms.SelectableItemsView.SelectionChanged) event fires.
