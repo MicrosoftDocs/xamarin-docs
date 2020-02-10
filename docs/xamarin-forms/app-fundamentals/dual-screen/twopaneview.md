@@ -11,11 +11,11 @@ ms.date: 02/08/2020
 
 # Xamarin.Forms TwoPaneView
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
 
 Represents a container with two views that size and position content in the available space, either side-by-side or top-bottom. TwoPaneView inherits from Grid so the easiest way to think about these properties is as if they are being applied to a grid
 
-## Setting up TwoPaneView
+## Set up TwoPaneView
 
 The `TwoPaneView` property `Source` can take a URI or local file path. Playback will begin immediately upon the media opening.
 
@@ -36,7 +36,7 @@ The `TwoPaneView` property `Source` can take a URI or local file path. Playback 
 </ContentPage>
 ```
 
-## Understanding TwoPaneView Modes
+## Understand TwoPaneView modes
 
 Only one of these modes can be active
 
@@ -44,8 +44,7 @@ Only one of these modes can be active
 - `Wide` the two panes are laid out horizontally. One pane is on the left and the other is on the right. When on two screens this is the mode when the device is portrait
 - `Tall` the two panes are laid out vertically. One pane is on top  and the other is on bottom. When on two screens this is the mode when the device is landscape
 
-
-## Controlling TwoPaneView when it's only on one screen
+## Control TwoPaneView when it's only on one screen
 
 The following properties are only relevant when the TwoPaneView is occupying a single screen. If the TwoPaneView is spanned across two screens these properties have no effect.
 
@@ -54,13 +53,12 @@ The following properties are only relevant when the TwoPaneView is occupying a s
 - `Pane1Length` sets the width of Pane1 in Wide mode, the height of Pane1 in Tall mode, and has no effect in SinglePane mode
 - `Pane2Length` sets the width of Pane2 in Wide mode, the height of Pane2 in Tall mode, and has no effect in SinglePane mode
 
-## Properties that apply when on one screen or two 
+## Properties that apply when on one screen or two
 
 - `TallModeConfiguration` when in tall mode this indicates the Left/Right arrangement or if you only want a single pane visible as defined by the TwoPaneViewPriority
 - `WideModeConfiguration` when in tall mode this indicates the Top/Bottom arrangement or if you only want a single pane visible as defined by the TwoPaneViewPriority
 - `PanePriority` whether to show Pane1 or Pane2 if in SinglePane mode
 
-
 ## Related links
 
-- [DualScreen (sample)](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
+- [DualScreen (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)

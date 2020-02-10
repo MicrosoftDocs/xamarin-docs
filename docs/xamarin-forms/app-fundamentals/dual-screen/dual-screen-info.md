@@ -11,7 +11,7 @@ ms.date: 02/08/2020
 
 # Xamarin.Forms DualScreenInfo
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
 
 _DualScreenInfo can be used to detect and inform about changes to and a layouts current relationship to dual screens._
 
@@ -30,9 +30,9 @@ You can use this property from a custom renderer.
 
 - `GetHingeAngleAsync` retrieves the current angle of the device hinge. When using the simulator the HingeAngle can be set by modifying the Pressure sensor.
 
-## Android Custom Renderer for polling Hinge Angle
+## Android custom renderer for polling hinge angle
 
-```C#
+```csharp
 public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer
 {
     System.Timers.Timer _hingeTimer;
@@ -84,9 +84,9 @@ public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRender
 }
 ```
 
-## Accessing DualScreenInfo for Application Window
+## Access DualScreenInfo for application window
 
-```c#
+```csharp
 DualScreenInfo currentWindow = DualScreenInfo.Current;
 
 // Retrieve absolute position of the hinge on the screen
@@ -112,10 +112,10 @@ else if(currentWindow.SpanMode == TwoPaneViewMode.Wide)
 currentWindow.PropertyChanged += OnDualScreenInfoChanged;
 ```
 
-## Applying DualScreenInfo to your own layouts
+## Apply DualScreenInfo to your own layouts
 
-DualScreenInfo has a constructor that can take a layout and will 
-give you information about the layout relative to the devices two 
+DualScreenInfo has a constructor that can take a layout and will
+give you information about the layout relative to the devices two
 screens.
 
 ```xaml
@@ -131,14 +131,14 @@ screens.
 </Grid>
 ```
 
-```C#
+```csharp
 public partial class GridUsingDualScreenInfo : ContentPage
 {
     public DualScreenInfo DualScreenInfo { get; }
     public double Column1Width { get; set; }
     public double Column2Width { get; set; }
     public double Column3Width { get; set; }
-    
+
     public GridUsingDualScreenInfo()
     {
         InitializeComponent();
@@ -195,9 +195,8 @@ public partial class GridUsingDualScreenInfo : ContentPage
 }
 ```
 
-![](../dual-screen-images/grid-on-two-screens.png "Positioning Grid on Two Screens")
-
+![](dual-screen-info-images/grid-on-two-screens.png "Positioning Grid on Two Screens")
 
 ## Related links
 
-- [DualScreen (sample)](https://github.com/xamarin/xamarin-forms-samples/DualScreenDemos)
+- [DualScreen (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)

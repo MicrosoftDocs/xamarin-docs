@@ -13,7 +13,7 @@ ms.date: 02/7/2020
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/WorkingWithMediaElement)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
 
 `MediaElement` renders a media player for playback of video and audio. The operating system playback controls, referred to as transport controls, can be used, or you can hide those and provide your own controls to meet your design requirements.
 
@@ -32,7 +32,7 @@ Platforms supported:
 - macOS
 - Tizen
 
-## Setting media source
+## Set media source
 
 The `MediaElement` property `Source` can take a URI or local file path. Playback will begin immediately upon the media opening.
 
@@ -42,7 +42,7 @@ The `MediaElement` property `Source` can take a URI or local file path. Playback
 
 ![](mediaelement-images/mediaelement-android.png "MediaElement on Android")
 
-To set the source to a local asset from your platform project, use the "ms-appx" URI scheme. 
+To set the source to a local asset from your platform project, use the "ms-appx" URI scheme.
 
 ```xaml
 <MediaElement Source="ms-appx://XamarinShow_mid.mp4" />
@@ -61,7 +61,7 @@ public class VideoSourceConverter : IValueConverter
         if (String.IsNullOrWhiteSpace(value.ToString()))
             return null;
 
-        if(Device.RuntimePlatform == Device.UWP)
+        if (Device.RuntimePlatform == Device.UWP)
             return new Uri($"ms-appx:///Assets/{value}");
         else
             return new Uri($"ms-appx:///{value}");
@@ -79,9 +79,9 @@ public class VideoSourceConverter : IValueConverter
     Source="{Binding VideoSource, Converter={StaticResource VideoSourceConverter}}" />
 ```
 
-## Controlling playback
+## Control playback
 
-By default the `MediaElement` will use the platforms native playback controls for play/pause, volume and mute, seeking, and time display. 
+By default the `MediaElement` will use the platforms native playback controls for play/pause, volume and mute, seeking, and time display.
 
 To override and implement your own controls, first disable the platform controls by setting `ShowsPlaybackControls="False"`. You can now use your own controls to reflect the playback status and control playback using the following properties, methods, and events:
 
@@ -93,7 +93,7 @@ To override and implement your own controls, first disable the platform controls
 - `IsLooping` property for repeating when playback completes
 - `StateRequested`, `PositionRequested`, `VolumeRequested` for handling UI updates
 
-### Handling additional media events
+### Handle additional media events
 
 You can respond to common media events such as the `MediaOpened`, `MediaEnded`, `MediaFailed`, and `CurrentStateChanged` events. It is good practice to always handle the MediaFailed event.
 CurrentStateChanged give information about the playback status. Using a value of the `MediaElementState` enum:
@@ -104,13 +104,13 @@ CurrentStateChanged give information about the playback status. Using a value of
   - Its `Position` does not advance during this state
   - If already playing video, it continues to display the last displayed frame
 - **Playing**: is playing the current media source
-- **Paused**: does not advance its `Position` 
+- **Paused**: does not advance its `Position`
   - If playing video, it continues to display the current frame
 - **Stopped**: contains media but is not playing or paused
   - Its `Position` is 0 and does not advance
   - If the loaded media is video, the `MediaElement` displays the first frame.
 
-## Controlling display
+## Control display
 
 Similar to [`Image`](xref:Xamarin.Forms.Image), the `MediaElement` control has `VideoHeight`, `VideoWidth`, and `Aspect`. Aspect takes three different options:
 
@@ -122,8 +122,8 @@ Similar to [`Image`](xref:Xamarin.Forms.Image), the `MediaElement` control has `
 
 - `VideoWidth`: width of the control
 - `VideoHeight`: height of the control
-- `KeepScreenOn`: if the device screen should stay on during playback 
+- `KeepScreenOn`: if the device screen should stay on during playback
 
 ## Related links
 
-- [MediaElement (sample)](https://github.com/xamarin/xamarin-forms-samples/WorkingWithMediaElement)
+- [MediaElement (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)

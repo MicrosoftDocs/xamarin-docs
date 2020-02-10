@@ -13,7 +13,7 @@ ms.date: 02/08/2020
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreen/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
 
 This guide introduces our recommended design patterns for dual-screen devices with code and samples to assist you in creating interfaces that provide engaging and useful user experiences.
 
@@ -21,11 +21,11 @@ This guide introduces our recommended design patterns for dual-screen devices wi
 
 The extended canvas pattern treats both screens as one large canvas for displaying a map, image, spreadsheet, or other such content that benefits from spreading to consume the maximum space.
 
-![](https://docs.microsoft.com/dual-screen/android/sample-code/images/extended-canvas-sample.png "Extended canvas sample")
+![](design-patterns-images/extended-canvas-sample.png "Extended canvas sample")
 
 ```xaml
 <ContentPage
-    xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples" 
+    xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:d="http://xamarin.com/schemas/2014/forms/design"
@@ -47,12 +47,12 @@ In this example. the `Grid` and inner content will expand to consume all of the 
 
 The master-detail pattern is when the master view, typically a list on the left, provides content from which a user selects to view details about that item on the right.
 
-![](https://docs.microsoft.com/dual-screen/android/sample-code/images/master-detail-sample.png "Master detail sample")
+![](design-patterns-images/master-detail-sample.png "Master detail sample")
 
 ```xaml
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage
-    xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples" 
+    xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen"
@@ -68,27 +68,27 @@ The master-detail pattern is when the master view, typically a list on the left,
 </ContentPage>
 ```
 
-In this example, you can make use of `TwoPaneView` to set a a list on one pane, and a detail view on the other.
+In this example, you can make use of `TwoPaneView` to set a list on one pane, and a detail view on the other.
 
 ## Two page pattern
 
 Two page is ideal for content that lends itself to a two-up layout, such as a document reader, notes, or an art-board.
 
-![](https://docs.microsoft.com/dual-screen/android/sample-code/images/two-page-sample.png "Two page sample")
+![](design-patterns-images/two-page-sample.png "Two page sample")
 
 ```xaml
 <Grid x:Name="layout">
     <CollectionView x:Name="cv" BackgroundColor="LightGray">
         <CollectionView.ItemsLayout>
-            <GridItemsLayout 
-                SnapPointsAlignment="Start" 
+            <GridItemsLayout
+                SnapPointsAlignment="Start"
                 SnapPointsType="MandatorySingle"
                 Orientation="Horizontal"
                 HorizontalItemSpacing="{Binding Source={x:Reference mainPage}, Path=HingeWidth}" />
         </CollectionView.ItemsLayout>
         <CollectionView.ItemTemplate>
             <DataTemplate>
-                <Frame BackgroundColor="LightGray" Padding="0" Margin="0" 
+                <Frame BackgroundColor="LightGray" Padding="0" Margin="0"
                         WidthRequest="{Binding Source={x:Reference mainPage}, Path=ContentWidth}"
                         HeightRequest="{Binding Source={x:Reference mainPage}, Path=ContentHeight}">
                     <Frame Margin="20" BackgroundColor="White">
@@ -105,13 +105,13 @@ The [`CollectionView`](xref:Xamarin.Forms.CollectionView) with a grid layout tha
 
 ## Dual view pattern
 
-Dual view may look just like the "Two page" view, but the distinction is in the content and user scenario. In this pattern you are comparing content side-by-side, perhaps to edit a document or photo, to compare different restaurant menus, or to diff a merge conflict for code files.
+Dual view may look just like the "Two page" view, but the distinction is in the content and user scenario. In this pattern, you are comparing content side by side, perhaps to edit a document or photo, to compare different restaurant menus, or to diff a merge conflict for code files.
 
-![](https://docs.microsoft.com/dual-screen/android/sample-code/images/dual-view-sample.png "Dual view sample")
+![](design-patterns-images/dual-view-sample.png "Dual view sample")
 
 ```xaml
 <ContentPage
-    xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples" 
+    xmlns:local="clr-namespace:Xamarin.Duo.Forms.Samples"
     xmlns="http://xamarin.com/schemas/2014/forms"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
     xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen"
@@ -141,9 +141,9 @@ Dual view may look just like the "Two page" view, but the distinction is in the 
 
 ## Companion pattern
 
-The companion pattern demonstrates how you might use the second screen to provide a 2nd level of content related to the primary view, like in the case of a drawing app, a game, or media editing.
+The companion pattern demonstrates how you might use the second screen to provide a second level of content related to the primary view, like in the case of a drawing app, a game, or media editing.
 
-![](https://docs.microsoft.com/dual-screen/android/sample-code/images/companion-pane-sample.png "Companion pane sample")
+![](design-patterns-images/companion-pane-sample.png "Companion pane sample")
 
 ```xaml
 <ContentPage
@@ -159,7 +159,7 @@ The companion pattern demonstrates how you might use the second screen to provid
             <CarouselView x:Name="cv" BackgroundColor="LightGray" IsScrollAnimated="False" >
                 <CarouselView.ItemTemplate>
                     <DataTemplate>
-                        <Frame BackgroundColor="LightGray" Padding="0" Margin="0" 
+                        <Frame BackgroundColor="LightGray" Padding="0" Margin="0"
                            WidthRequest="{Binding Source={x:Reference twoPaneView}, Path=Pane1.Width}"
                            HeightRequest="{Binding Source={x:Reference twoPaneView}, Path=Pane1.Height}">
                             <Frame Margin="20" BackgroundColor="White">
@@ -171,7 +171,7 @@ The companion pattern demonstrates how you might use the second screen to provid
             </CarouselView>
         </dualscreen:TwoPaneView.Pane1>
         <dualscreen:TwoPaneView.Pane2>
-            <CollectionView x:Name="indicators" 
+            <CollectionView x:Name="indicators"
             SelectionMode="Single"
             Margin="20, 20, 20, 20"
             BackgroundColor="LightGray"
@@ -221,5 +221,5 @@ The companion pattern demonstrates how you might use the second screen to provid
 
 ## Related links
 
-- [Dual Screen Samples (GitHub)](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreen/)
-- [Create apps for dual screen devices](~/dual-screen)
+- [Dual Screen Samples (GitHub)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/UserInterface/DualScreenDemos)
+- [Create apps for dual screen devices](index.md)

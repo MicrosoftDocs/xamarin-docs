@@ -65,7 +65,7 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 
 |     |     |
 | --- | --- |
-| [`MediaElement`](xref:Xamarin.Forms.MediaElement) displays a video or plays audio. Media can be downloaded over the Web, or embedded as resources in platform projects.<br /><br />[API Documentation](xref:Xamarin.Forms.MediaElement) / [Guide](~/xamarin-forms/user-interface/mediaelement.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/mediaelement) | |
+| `MediaElement` displays a video or plays audio. Media can be downloaded over the Web, or embedded as resources in platform projects.<br /><br />[Guide](~/xamarin-forms/user-interface/mediaelement.md) / [Sample](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement) | |
 |     |     |
 
 ## Views that initiate commands
