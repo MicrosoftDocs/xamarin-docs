@@ -71,7 +71,7 @@ var leadingSwipe = UISwipeActionsConfiguration.FromActions(new UIContextualActio
 leadingSwipe.PerformsFirstActionWithFullSwipe = false;
 ```
 
-It's important to note that the order in which your actions display is dependant on how they are passed into your array. For example, the code above for leading swipes displays the actions as so:
+It's important to note that the order in which your actions display is dependent on how they are passed into your array. For example, the code above for leading swipes displays the actions as so:
 
 ![leading swipe Actions displayed on a table row](row-action-images/action03.png)
 

@@ -255,5 +255,3 @@ to the layout we had earlier, with the button added to the bottom of the `GridLa
 ## Related Links
 
 - [GridLayoutDemo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/gridlayoutdemo)
-- [Introducing Ice Cream Sandwich](https://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

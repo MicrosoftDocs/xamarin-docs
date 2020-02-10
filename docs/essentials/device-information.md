@@ -76,7 +76,7 @@ var deviceType = DeviceInfo.DeviceType;
 
 # [iOS](#tab/ios)
 
-iOS does not expose an API for developers to get the name of the specific iOS device. Instead a hardware identifier is returned such as _iPhone10,6_ which refers to the iPhone X. A mapping of these identifers are not provided by Apple, but can be found on [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (a non-official source).
+iOS does not expose an API for developers to get the name of the specific iOS device. Instead a hardware identifier is returned such as _iPhone10,6_ which refers to the iPhone X. A mapping of these identifiers are not provided by Apple, but can be found on [The iPhone Wiki](https://www.theiphonewiki.com/wiki/Models) (a non-official source).
 
 --------------
 

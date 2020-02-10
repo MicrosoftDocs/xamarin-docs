@@ -11,7 +11,7 @@ ms.date: 12/11/2019
 
 # Android Platform Features
 
-Developing Xamarin.Forms applications for Android requires Visual Studio. The [requirements page](~/get-started/requirements.md) contains more information about the pre-requisites.
+Developing Xamarin.Forms applications for Android requires Visual Studio. The [supported platforms page](~/get-started/supported-platforms.md) contains more information about the pre-requisites.
 
 ## Platform-specifics
 

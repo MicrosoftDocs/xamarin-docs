@@ -53,8 +53,6 @@ ms.date: 10/11/2017
 
 ## 2.1.6 (March 17, 2015)
 
-[Download v2.1.6](https://download.xamarin.com/objective-sharpie/ObjectiveSharpie-2.1.6.pkg)
-
 * Fixed binary operator expression binding: the left-hand side of the expression was incorrectly swapped with the right-hand (e.g. `1 << 0` was incorrectly bound as `0 << 1`). Thanks to Adam Kemp for noticing this!
 * Fixed an issue with `NSInteger` and `NSUInteger` being bound as `int` and `uint` instead of `nint` and `nuint` on i386; `-DNS_BUILD_32_LIKE_64` is now passed to Clang to make parsing `objc/NSObjCRuntime.h` work as expected on i386.
 * The default architecture for Mac OS X SDKs (e.g. `-sdk macosx10.10`) is now x86_64 instead of i386, so `-arch` can be omitted unless overriding the default is desired.

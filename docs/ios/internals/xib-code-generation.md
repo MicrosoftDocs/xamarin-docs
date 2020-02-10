@@ -136,7 +136,7 @@ languages.
 ## Cross-XIB Class Usage
 
 Sometimes, users wish to reference the same class from multiple **.xib** files, for
-example with tab controllers. This can be done by explictly referencing the
+example with tab controllers. This can be done by explicitly referencing the
 class definition from another **.xib** file, or by defining the same class name again
 in the second **.xib**.
 

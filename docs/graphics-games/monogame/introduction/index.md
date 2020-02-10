@@ -37,8 +37,6 @@ Developers familiar with XNA will already be familiar with MonoGame’s syntax, 
 ## Related Links
 
 - [WalkingGame MonoGame Project (sample)](https://docs.microsoft.com/samples/xamarin/mobile-samples/walkinggamemg/)
-- [XNB Fonts iOS](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Content/fonts)
-- [XNB Fonts Android](https://github.com/mono/CocosSharp/tree/master/Samples/GameStarterKit/GameStarterKit/Assets/Content/fonts)
 - [MonoGame Android on NuGet](https://www.nuget.org/packages/MonoGame.Framework.Android/)
 - [MonoGame iOS on NuGet](https://www.nuget.org/packages/MonoGame.Framework.iOS/)
 - [MonoGame API Documentation](http://www.monogame.net/documentation/?page=main)

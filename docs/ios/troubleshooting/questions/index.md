@@ -82,7 +82,7 @@ This issue occurs when building for 32-bit architectures, such as ARMv7, when th
 There were some known issues in previous versions of Xamarin that could cause the IPA file on Windows to be 0 bytes.
 
 ### [IBTool Error: The operation couldn’t be completed.](error-ibtool.md)
-Apple [fixed](https://developer.apple.com/library/ios/releasenotes/DeveloperTools/RN-Xcode/Chapters/xc6_release_notes.html) this `ibtool` bug in Xcode 6.1.1, so upgrading to Xcode 6.1.1 or higher is the easiest fix.
+Apple fixed this `ibtool` bug in Xcode 6.1.1, so upgrading to Xcode 6.1.1 or higher is the easiest fix.
 
 ### [Error MT1009: Could not copy the assembly](error-mt1009.md)
 This affects users running Xamarin.iOS 7.2.6. This issue is due to file permissions needing higher privileges when Xamarin.iOS is installed with a different user account then the developer's main account.

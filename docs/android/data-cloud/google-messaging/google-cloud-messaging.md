@@ -42,16 +42,13 @@ server (for example, to receive remote notifications). Also, GCM makes
 it possible for client apps to send upstream messages back to the app
 server.
 
-For information about implementing an app server for GCM, see
-[About GCM Connection Server](https://developers.google.com/cloud-messaging/server).
-
 ## Google Cloud Messaging in Action
 
 When downstream messages are sent from an app server to a client app,
 the app server sends the message to a *GCM connection server*; the GCM
 connection server, in turn, forwards the message to a device that is
 running your client app. Messages can be sent over HTTP or
-[XMPP](https://developers.google.com/cloud-messaging/ccs) (Extensible
+[XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref) (Extensible
 Messaging and Presence Protocol). Because client apps are not always
 connected or running, the GCM connection server enqueues and stores
 messages, sending them to client apps as they reconnect and become
@@ -127,11 +124,6 @@ registration token. If the client app is receiving topic messages
 If the client app is uninstalled from a device, GCM detects this and
 automatically notifies the app server to delete the registration token.
 
-Google's [Registering Client Apps](https://developers.google.com/cloud-messaging/registration)
-explains the registration process in more detail; it explains
-unregistration and unsubscription, and it describes the process of
-unregistration when a client app is uninstalled.
-
 ### Downstream Messaging
 
 When the app server sends a downstream message to the client app, it
@@ -166,10 +158,7 @@ subscribe to a topic (such as a weather forecast). Topic messages can
 be up to 2KB in length, and topic messaging supports up to one million
 subscriptions per app. If GCM is being used only for topic messaging,
 the client app is not required to send a registration token to the app
-server. Google's
-[Implementing Topic Messaging](https://developers.google.com/cloud-messaging/topic-messaging)
-explains how to send messages from an app server to multiple devices
-that subscribe to a particular topic.
+server.
 
 #### Group Messaging
 
@@ -178,15 +167,12 @@ server sends a single message to multiple client app devices that
 belong to a group (for example, a group of devices that belong to a
 single user). Group messages can be up to 2KB in length for iOS
 devices, and up to 4KB in length for Android devices. A group is
-limited to a maximum of 20 members. Google's
-[Device Group Messaging](https://developers.google.com/cloud-messaging/notifications)
-explains how app servers can send a single message to multiple client
-app instances running on devices that belong to a group.
+limited to a maximum of 20 members.
 
 ### Upstream Messaging
 
 If your client app connects to a server that supports
-[XMPP](https://developers.google.com/cloud-messaging/ccs), it can send
+[XMPP](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref), it can send
 messages back to the app server as illustrated in the following
 diagram:
 
@@ -206,7 +192,7 @@ diagram:
 
 5. The app server processes the message.
 
-Google's [Upstream Messages](https://developers.google.com/cloud-messaging/ccs#upstream)
+Google's [Upstream Messages](https://firebase.google.com/docs/cloud-messaging/xmpp-server-ref#upstream)
 explains how to structure JSON-encoded messages and send them to app
 servers that run Google's XMPP-based Cloud Connection Server.
 
@@ -228,7 +214,7 @@ describe the steps required to complete this process:
 
     [![Creating XamarinGCM project](google-cloud-messaging-images/05-create-gcm-app-sml.png)](google-cloud-messaging-images/05-create-gcm-app.png#lightbox)
 
-2. Next, enter the package name for your app (in this example, 
+2. Next, enter the package name for your app (in this example,
     the package name is **com.xamarin.gcmexample**) and click **Continue to
     Choose and configure services**:
 
@@ -273,11 +259,6 @@ To view the **API key**, click **API Manager** and then click **Credentials**:
 [![Viewing the API key](google-cloud-messaging-images/11-view-credentials-sml.png)](google-cloud-messaging-images/11-view-credentials.png#lightbox)
 
 ## For Further Reading
-
-- Google's [Registering Client Apps](https://developers.google.com/cloud-messaging/registration)
-    describes the client registration process in more detail, and it
-    provides information about configuring automatic retry and keeping
-    the registration state in sync.
 
 - [RFC 6120](https://tools.ietf.org/html/rfc6120) and
     [RFC 6121](https://tools.ietf.org/html/rfc6121) explain and define

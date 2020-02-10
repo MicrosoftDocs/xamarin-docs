@@ -330,9 +330,6 @@ Actions a mobile app might take in these situations include:
 - If the connection is 3G, applications may behave differently (for example, Apple does not allow apps larger than 20Mb to be downloaded over 3G). Applications could use this information to warn the user about excessive download times when retrieving large files.
 - Even if the network is available, it is good practice to verify connectivity with the target server before initiating other requests. This will prevent the app’s network operations from timing out repeatedly and also allow a more informative error message to be displayed to the user.
 
-There is a [Xamarin.iOS sample](https://github.com/xamarin/monotouch-samples/tree/master/ReachabilitySample) available (which is based on Apple’s [Reachability sample code](https://developer.apple.com/library/ios/#samplecode/Reachability/Introduction/Intro.html)
-) to help detect network availability.
-
 ## WebServices
 
 See our documentation on [Working with Web Services](~/cross-platform/data-cloud/web-services/index.md), which covers accessing REST, SOAP and WCF endpoints using
@@ -374,9 +371,6 @@ applications to access those services.
 The [ServiceStack website](http://servicestack.net/) explains the purpose of the project and links to document and code
 samples. The examples include a complete server-side implementation of a web
 service as well as various client-side applications that can access it.
-
-There is a [Xamarin.iOS example](http://www.servicestack.net/monotouch/remote-info/) on the ServiceStack website, and a code
-snippet in our [Web Services documentation](~/cross-platform/data-cloud/web-services/index.md).
 
 ### WCF
 

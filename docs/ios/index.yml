@@ -12,7 +12,7 @@ abstract:
   description: Xamarin.iOS exposes the complete iOS SDK for .NET developers. Build fully native iOS apps using C# or F# in Visual Studio.
   menu:
     items:
-    - href: ~/ios/samples/index.yml
+    - href: ~/ios/samples/index.md
       text: iOS Samples
     - href: https://docs.microsoft.com/xamarin/ios/release-notes/
       text: Release Notes

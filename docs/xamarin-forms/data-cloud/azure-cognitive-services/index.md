@@ -17,7 +17,7 @@ Microsoft Cognitive Services are a set of APIs, SDKs, and services available to 
 
 ## [Speech Recognition](speech-recognition.md)
 
-The Microsoft Speech API is a cloud-based API that provides algorithms to process spoken language. This article explains how to use the Microsoft Speech Recognition REST API to convert audio to text in a Xamarin.Forms application.
+Azure Speech Service is a cloud-based API that provides algorithms to process spoken language. This article explains how to use the Azure Speech Service to transcribe speech to text in a Xamarin.Forms application.
 
 ## [Spell Check](spell-check.md)
 

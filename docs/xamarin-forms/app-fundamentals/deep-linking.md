@@ -75,6 +75,9 @@ AndroidAppLinks.Init(this);
 
 When **google-services.json** is added to the project (and the *GoogleServicesJson** build action is set), the build process extracts the client ID and API key and then adds these credentials to the generated manifest file.
 
+> [!NOTE]
+> In this article, the terms application links and deep links are often used interchangeably. However, on Android these terms have separate meanings. On Android, a deep link is an intent filter that allows users to directly enter a specific activity in the app. Clicking on a deep link might open a disambiguation dialog, which allows the user to select one of multiple apps that can handle the URL. An Android app link is a deep link based on your website URL, which has been verified to belong to your website. Clicking on an app link opens your app if it's installed, without opening a disambiguation dialog.
+
 For more information, see [Deep Link Content with Xamarin.Forms URL Navigation](https://blog.xamarin.com/deep-link-content-with-xamarin-forms-url-navigation/) on the Xamarin blog.
 
 ## Indexing a Page

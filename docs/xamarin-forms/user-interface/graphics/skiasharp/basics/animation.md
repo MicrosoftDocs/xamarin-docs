@@ -144,7 +144,7 @@ Notice that the `SKPaint` object is created in a `using` block. Like many SkiaSh
 
  A better solution in this particular case would be to create two `SKPaint` objects once and save them as fields.
 
-That's what the **Expanding Circles** animation does. The [`ExpandingCirclesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/skia-sharp-forms/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) class begins by defining several fields, including an `SKPaint` object:
+That's what the **Expanding Circles** animation does. The [`ExpandingCirclesPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Basics/ExpandingCirclesPage.cs) class begins by defining several fields, including an `SKPaint` object:
 
 ```csharp
 public class ExpandingCirclesPage : ContentPage

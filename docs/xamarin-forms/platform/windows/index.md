@@ -11,7 +11,7 @@ ms.date: 01/16/2020
 
 # Windows Platform Features
 
-Developing Xamarin.Forms applications for Windows platforms requires Visual Studio. The [requirements page](~/get-started/requirements.md) contains more information about the pre-requisites.
+Developing Xamarin.Forms applications for Windows platforms requires Visual Studio. The [supported platforms page](~/get-started/supported-platforms.md) contains more information about the pre-requisites.
 
 ![](images/allhanselman.png "Xamarin.Forms Applications Running on Windows")
 

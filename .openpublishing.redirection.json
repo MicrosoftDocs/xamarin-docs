@@ -611,6 +611,10 @@
     {
       "source_path": "docs/xamarin-forms/app-fundamentals/templates/control-templates/template-binding.md",
       "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/templates/control-template/"
+    },
+    {
+      "source_path": "docs/get-started/requirements.md",
+      "redirect_url": "/xamarin/get-started/supported-platforms/"
     }
   ]
 }

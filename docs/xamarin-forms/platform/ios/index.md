@@ -11,7 +11,7 @@ ms.date: 01/15/2020
 
 # iOS platform features in Xamarin.Forms
 
-Developing Xamarin.Forms applications for iOS requires Visual Studio. The [requirements page](~/get-started/requirements.md) contains more information about the pre-requisites.
+Developing Xamarin.Forms applications for iOS requires Visual Studio. The [supported platforms page](~/get-started/supported-platforms.md) contains more information about the pre-requisites.
 
 ## Platform-specifics
 

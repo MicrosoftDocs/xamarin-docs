@@ -14,7 +14,7 @@ ms.date: 03/29/2017
 
 This section covers a more advanced approach to binding, where we will use Apple's `xcodebuild` tool to first build the POP project, and then manually deduce input for Objective Sharpie. This essentially covers what Objective Sharpie is doing under the hood in the previous section.
 
-```
+```bash
  $ git clone https://github.com/facebook/pop.git
 Cloning into 'pop'...
    _(more git clone output)_
@@ -24,7 +24,7 @@ $ cd pop
 
 Because the POP library has an Xcode project (`pop.xcodeproj`), we can just use `xcodebuild` to build POP. This process may in turn generate header files that Objective Sharpie may need to parse. This is why building before binding is important. When building via `xcodebuild` ensure you pass the same SDK identifier and architecture that you intend to pass to Objective Sharpie (and remember, Objective Sharpie 3.0 can usually do this for you!):
 
-```
+```bash
 $ xcodebuild -sdk iphoneos9.0 -arch arm64
 
 Build settings from command line:
@@ -49,7 +49,7 @@ There will be a lot of build information output in the console as part of `xcode
 
 We are now ready to bind POP. We know that we want to build for SDK `iphoneos8.1` with the `arm64` architecture, and that the header files we care about are in `build/Headers` under the POP git checkout. If we look in the `build/Headers` directory, we'll see a number of header files:
 
-```
+```bash
 $ ls build/Headers/POP/
 POP.h                    POPAnimationTracer.h     POPDefines.h
 POPAnimatableProperty.h  POPAnimator.h            POPGeometry.h
@@ -61,7 +61,7 @@ POPAnimationPrivate.h    POPDecayAnimation.h
 
 If we look at `POP.h`, we can see it is the library's main top-level header file that `#import`s other files. Because of this, we only need to pass `POP.h` to Objective Sharpie, and clang will do the rest behind the scenes:
 
-```
+```bash
 $ sharpie bind -output Binding -sdk iphoneos8.1 \
     -scope build/Headers build/Headers/POP/POP.h \
     -c -Ibuild/Headers -arch arm64
