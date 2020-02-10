@@ -1,6 +1,6 @@
 ---
-title: "Xamarin.Forms TwoPaneView"
-description: "This guide explains how to use Xamarin.Forms TwoPaneView to optimize your app experience for dual-screen devices such as Surface Duo and Surface Neo."
+title: "Xamarin.Forms DualScreenInfo"
+description: "This guide explains how to use Xamarin.Forms DualScreenInfo to optimize your app experience for dual-screen devices such as Surface Duo and Surface Neo."
 ms.prod: xamarin
 ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
 ms.technology: xamarin-forms
@@ -9,26 +9,134 @@ ms.author: daortin
 ms.date: 02/08/2020
 ---
 
-# Xamarin.Forms TwoPaneView
+# Xamarin.Forms DualScreenInfo
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
 
-_Gesture recognizers can be used to detect user interaction with views in a Xamarin.Forms application._
+_DualScreenInfo can be used to detect and inform about changes to and a layouts current relationship to dual screens._
 
-The Xamarin.Forms [`GestureRecognizer`](xref:Xamarin.Forms.GestureRecognizer) class supports tap, pinch, pan, and swipe gestures on [`View`](xref:Xamarin.Forms.View) instances.
+## Properties
 
-## [Adding a tap gesture recognizer](tap.md)
+- `SpanningBounds` when spanned across two screens this will return two rectangles indicating the bounds of each visible area. If the window isn't spanned this will return an empty array.
+- `HingeBounds` position of the hinge on the screen.
+- `IsLandscape` indicates if the device is landscape. This is useful because native orientation apis don't report orientation correctly when application is spanned.
+- `PropertyChanged` fires when any properties change.
+- `SpanMode` indicates if the layout is in tall, wide, or single pane mode.
 
-A tap gesture is used for tap detection and is recognized with the [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) class.
+## Accessing DualScreenInfo for Application Window
 
-## [Adding a pinch gesture recognizer](pinch.md)
+```c#
+DualScreenInfo currentWindow = DualScreenInfo.Current;
 
-A pinch gesture is used for performing interactive zoom and is recognized with the [`PinchGestureRecognizer`](xref:Xamarin.Forms.PinchGestureRecognizer) class.
+// Retrieve absolute position of the hinge on the screen
+var hingeBounds = currentWindow.HingeBounds;
 
-## [Adding a pan gesture recognizer](pan.md)
+// check if app window is spanned across two screens
+if(currentWindow.SpanMode == TwoPaneViewMode.SinglePane)
+{
+    // window is only on one screen
+}
+else if(currentWindow.SpanMode == TwoPaneViewMode.Tall)
+{
+    // window is spanned across two screens and oriented as landscape
+}
+else if(currentWindow.SpanMode == TwoPaneViewMode.Wide)
+{
+    // window is spanned across two screens and oriented as portrait
+}
 
-A pan gesture is used for detecting the movement of fingers around the screen and applying that movement to content, and is recognized with the [`PanGestureRecognizer`](xref:Xamarin.Forms.PanGestureRecognizer) class.
+// Detect if any of the properties on DualScreenInfo change.
+// This is useful to detect if the app window gets spanned
+// across two screens or put on only one  
+currentWindow.PropertyChanged += OnDualScreenInfoChanged;
+```
 
-## [Adding a swipe gesture recognizer](swipe.md)
+## Applying DualScreenInfo to your own layouts
 
-A swipe gesture occurs when a finger is moved across the screen in a horizontal or vertical direction, and is often used to initiate navigation through content. Swipe gestures are recognized with the [`SwipeGestureRecognizer`](xref:Xamarin.Forms.SwipeGestureRecognizer) class.
+DualScreenInfo has a constructor that can take a layout and will 
+give you information about the layout relative to the devices two 
+screens.
+
+```xaml
+<Grid x:Name="grid" ColumnSpacing="0">
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="{Binding Column1Width}"></ColumnDefinition>
+        <ColumnDefinition Width="{Binding Column2Width}"></ColumnDefinition>
+        <ColumnDefinition Width="{Binding Column3Width}"></ColumnDefinition>
+    </Grid.ColumnDefinitions>
+
+    <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="End" Text="I should be on the left side of the hinge"></Label>
+    <Label FontSize="Large" VerticalOptions="Center" HorizontalOptions="Start" Grid.Column="2" Text="I should be on the right side of the hinge"></Label>
+</Grid>
+```
+
+```C#
+public partial class GridUsingDualScreenInfo : ContentPage
+{
+    public DualScreenInfo DualScreenInfo { get; }
+    public double Column1Width { get; set; }
+    public double Column2Width { get; set; }
+    public double Column3Width { get; set; }
+    
+    public GridUsingDualScreenInfo()
+    {
+        InitializeComponent();
+        DualScreenInfo = new DualScreenInfo(grid);
+        BindingContext = this;
+    }
+
+    protected override void OnAppearing()
+    {
+        base.OnAppearing();
+        DualScreenInfo.PropertyChanged += OnInfoPropertyChanged;
+        UpdateColumns();
+    }
+
+    protected override void OnDisappearing()
+    {
+        base.OnDisappearing();
+        DualScreenInfo.PropertyChanged -= OnInfoPropertyChanged;
+    }
+
+    void UpdateColumns()
+    {
+        // Check if grid is on two screens
+        if (DualScreenInfo.SpanningBounds.Length > 0)
+        {
+            // set the width of the first column to the width of the layout
+            // that's on the left screen
+            Column1Width = DualScreenInfo.SpanningBounds[0].Width;
+
+            // set the middle column to the width of the hinge
+            Column2Width = DualScreenInfo.HingeBounds.Width;
+
+            // set the width of the third column to the width of the layout
+            // that's on the right screen
+            Column3Width = DualScreenInfo.SpanningBounds[1].Width;
+        }
+        else
+        {
+            Column1Width = 100;
+            Column2Width = 0;
+            Column3Width = 100;
+        }
+
+        OnPropertyChanged(nameof(Column1Width));
+        OnPropertyChanged(nameof(Column2Width));
+        OnPropertyChanged(nameof(Column3Width));
+
+    }
+
+    void OnInfoPropertyChanged(object sender, System.ComponentModel.PropertyChangedEventArgs e)
+    {
+        UpdateColumns();
+    }
+}
+```
+
+![](../dual-screen-images/grid-on-two-screens.png "Positioning Grid on Two Screens")
+
+
+## Related links
+
+- [DualScreen (sample)](https://github.com/xamarin/xamarin-forms-samples/DualScreenDemos)
