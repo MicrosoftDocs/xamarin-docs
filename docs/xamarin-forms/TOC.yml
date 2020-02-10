@@ -259,6 +259,8 @@
               href: app-fundamentals/dual-screen/twopaneview.md
             - name: DualScreenInfo
               href: app-fundamentals/dual-screen/dual-screen-info.md
+            - name: DualScreenHelper
+              href: app-fundamentals/dual-screen/dual-screen-helper.md
         - name: Effects
           href: app-fundamentals/effects/index.md
           items:

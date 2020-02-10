@@ -26,3 +26,6 @@ Xamarin.Forms `TwoPaneView` class, inspired by the UWP control of the same name,
 ## [DualScreenInfo](dual-screen-info.md)
 
 To get the most out of dual-screen devices, you may want to know which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more. `DualScreenInfo` provides this information.
+
+## [DualScreenHelper](dual-screen-helper.md)
+DualScreenHelper let's you check if the platform supports opening a new window as Picture in Picture. For Neo, this allows you to open a window that will display in the Wonderbar when the device is in compose mode.
