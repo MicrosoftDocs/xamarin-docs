@@ -412,7 +412,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## Adaptive Trigger (PREVIEW)
 
-An `AdaptiveTrigger` are triggers made specifically for the purpose of helping you adapt your app UI to different conditions. An `AdaptiveTrigger` takes two possible properties:
+An `AdaptiveTrigger` triggers automatically when the window is a specified height or width. An `AdaptiveTrigger` takes two possible properties:
 
 - **MinWindowHeight**
 - **MinWindowWidth**
@@ -463,7 +463,7 @@ An `AdaptiveTrigger` are triggers made specifically for the purpose of helping y
 </Grid>
 ```
 
-This example shows how to modify the **BackgroundColor** of the **Grid** based on the status of the **CheckBox** **IsChecked** property. **StateTrigger** supports bindings which opens up many possibilities for comparing values not only of UI elements, but also from the **BindingContext**.
+This example shows how to modify the **BackgroundColor** of a **Grid** based on the status of the **CheckBox** **IsChecked** property. **StateTrigger** supports bindings which opens up many possibilities for comparing values not only of UI elements, but also from the **BindingContext**.
 
 <a name="device" />
 
