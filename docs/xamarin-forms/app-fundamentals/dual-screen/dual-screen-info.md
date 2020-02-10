@@ -23,6 +23,67 @@ _DualScreenInfo can be used to detect and inform about changes to and a layouts 
 - `PropertyChanged` fires when any properties change.
 - `SpanMode` indicates if the layout is in tall, wide, or single pane mode.
 
+## Android only property
+
+This property is only available when accessing DualScreenInfo from the Android platform project.
+You can use this property from a custom renderer.
+
+- `GetHingeAngleAsync` retrieves the current angle of the device hinge. When using the simulator the HingeAngle can be set by modifying the Pressure sensor.
+
+## Android Custom Renderer for polling Hinge Angle
+
+```C#
+public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer
+{
+    System.Timers.Timer _hingeTimer;
+    public HingeAngleLabelRenderer(Context context) : base(context)
+    {
+    }
+
+    async void OnTimerElapsed(object sender, System.Timers.ElapsedEventArgs e)
+    {
+        if (_hingeTimer == null)
+            return;
+
+        _hingeTimer.Stop();
+        var hingeAngle = await DualScreenInfo.Current.GetHingeAngleAsync();
+
+        Device.BeginInvokeOnMainThread(() =>
+        {
+            if (_hingeTimer != null)
+                Element.Text = hingeAngle.ToString();
+        });
+
+        if (_hingeTimer != null)
+            _hingeTimer.Start();
+    }
+
+    protected override void OnElementChanged(ElementChangedEventArgs<Label> e)
+    {
+        base.OnElementChanged(e);
+
+        if (_hingeTimer == null)
+        {
+            _hingeTimer = new System.Timers.Timer(100);
+            _hingeTimer.Elapsed += OnTimerElapsed;
+            _hingeTimer.Start();
+        }
+    }
+
+    protected override void Dispose(bool disposing)
+    {
+        if (_hingeTimer != null)
+        {
+            _hingeTimer.Elapsed -= OnTimerElapsed;
+            _hingeTimer.Stop();
+            _hingeTimer = null;
+        }
+
+        base.Dispose(disposing);
+    }
+}
+```
+
 ## Accessing DualScreenInfo for Application Window
 
 ```c#
