@@ -22,7 +22,7 @@ You can assign a trigger directly to a control, or add it to
     a page-level or app-level resource dictionary to be applied
     to multiple controls.
 
-There are four types of trigger:
+There are several types of trigger:
 
 - [Property Trigger](#property) - occurs when a property on a control
     is set to a particular value.
@@ -34,6 +34,20 @@ There are four types of trigger:
 
 - [Multi Trigger](#multi) - allows multiple trigger conditions to be
     set before an action occurs.
+
+- [Adaptive Trigger](#adaptive)(PREVIEW) - reacts to changes in the width and height of an application window.
+
+- [Compare Trigger](#compare)(PREVIEW) - occurs when two values are compared.
+
+- [Device Trigger](#device)(PREVIEW) - occurs when running on the specified device. 
+
+- [Orientation Trigger](#orientation)(PREVIEW) - occurs when the device orientation changes.
+
+In order to use PREVIEW triggers, make sure to enable them using the feature flag in your `App.xaml.cs`:
+
+```csharp
+Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
+```
 
 <a name="property" />
 
@@ -393,6 +407,141 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
     }
 }
 ```
+
+<a name="adaptive" />
+
+## Adaptive Trigger (PREVIEW)
+
+An `AdaptiveTrigger` triggers automatically when the window is a specified height or width. An `AdaptiveTrigger` takes two possible properties:
+
+- **MinWindowHeight**
+- **MinWindowWidth**
+
+<a name="compare"/>
+
+## Compare Trigger (PREVIEW)
+
+`CompareStateTrigger` is a very versatile `StateTrigger` that triggers if **Value** is equal to **Property**.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="Checked">
+                <VisualState.StateTriggers>
+                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="True" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Green" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="UnChecked">
+                <VisualState.StateTriggers>
+                    <CompareStateTrigger Property="{Binding IsChecked, Source={x:Reference CheckBox}}" Value="False" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>     
+    </VisualStateManager.VisualStateGroups>  
+    <Frame
+        HorizontalOptions="Center"
+        VerticalOptions="Center"
+        BackgroundColor="White"
+        Margin="24">
+        <StackLayout
+            Orientation="Horizontal">
+            <CheckBox 
+                x:Name="CheckBox"
+                VerticalOptions="Center"/>
+            <Label
+                Text="Checked/Uncheck the CheckBox to modify the Grid BackgroundColor"
+                VerticalOptions="Center"/>
+        </StackLayout>
+    </Frame>
+</Grid>
+```
+
+This example shows how to modify the **BackgroundColor** of a **Grid** based on the status of the **CheckBox** **IsChecked** property. **StateTrigger** supports bindings which opens up many possibilities for comparing values not only of UI elements, but also from the **BindingContext**.
+
+<a name="device" />
+
+## Device Trigger (PREVIEW)
+
+A `DeviceTrigger` let's you control how a state is applied when run on a specific device platform, similar to using `OnPlatform`.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState
+                x:Name="Android">
+                <VisualState.StateTriggers>
+                    <DeviceStateTrigger Device="Android" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState
+                x:Name="iOS">
+                <VisualState.StateTriggers>
+                    <DeviceStateTrigger Device="iOS" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>  
+    </VisualStateManager.VisualStateGroups>  
+    <Label
+        Text="This page changes the color based on the device where the App is running."
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+</Grid>
+```
+
+In the above example, the background color will be blue on an Android device, and red on an iOS device.
+
+<a name="orientation" />
+
+## Orientation Trigger (PREVIEW)
+
+An `OrientationTrigger` supports changing view state when the device changes between landscape and portrait orientations.
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState
+                x:Name="Landscape">
+                <VisualState.StateTriggers>
+                    <OrientationStateTrigger Orientation="Landscape" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Blue" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState
+                x:Name="Portrait">
+                <VisualState.StateTriggers>
+                    <OrientationStateTrigger Orientation="Portrait" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>  
+    <Label
+        Text="This Grid changes the color based on the orientation device where the App is running."
+        HorizontalOptions="Center"
+        VerticalOptions="Center"/>
+</Grid>
+```
+
+In the above example, the background is blue when the device is in the landscape orientation, and it's red when in the portrait orientation.
 
 ## Related Links
 
