@@ -82,7 +82,7 @@ conceptualContent:
         - text: Data Binding
           url: ~/xamarin-forms/app-fundamentals/data-binding/index.md
           itemType: concept
-        - text: Dual-Screens
+        - text: Dual-Screen
           url: ~/xamarin-forms/app-fundamentals/dual-screen/index.md
           itemType: concept
         - text: Navigation
