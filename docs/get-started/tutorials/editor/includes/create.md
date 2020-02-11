@@ -23,7 +23,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of an [`Editor`](xref:Xamarin.Forms.Editor) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) property specifies the placeholder text that's shown when the `Editor` is first displayed. In addition, the [`HeightRequest`](xref:Xamarin.Forms.VisualElement) property specifies the height of the `Editor` in device-independent units.
+    This code declaratively defines the user interface for the page, which consists of an [`Editor`](xref:Xamarin.Forms.Editor) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`Editor.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property specifies the placeholder text that's shown when the `Editor` is first displayed. In addition, the [`HeightRequest`](xref:Xamarin.Forms.VisualElement) property specifies the height of the `Editor` in device-independent units.
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
@@ -57,7 +57,7 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of an [`Editor`](xref:Xamarin.Forms.Editor) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`Editor.Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) property specifies the placeholder text that's shown when the `Editor` is first displayed. In addition, the [`HeightRequest`](xref:Xamarin.Forms.VisualElement) property specifies the height of the `Editor` in device-independent units.
+    This code declaratively defines the user interface for the page, which consists of an [`Editor`](xref:Xamarin.Forms.Editor) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`Editor.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property specifies the placeholder text that's shown when the `Editor` is first displayed. In addition, the [`HeightRequest`](xref:Xamarin.Forms.VisualElement) property specifies the height of the `Editor` in device-independent units.
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 
