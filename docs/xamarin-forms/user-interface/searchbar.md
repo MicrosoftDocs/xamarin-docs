@@ -26,12 +26,12 @@ The `SearchBar` class defines the following properties:
 * [`FontSize`](xref:Xamarin.Forms.SearchBar.FontSize) can be a `NamedSize` enum value or a `double` value that represents specific font sizes across platforms.
 * [`HorizontalTextAlignment`](xref:Xamarin.Forms.SearchBar.HorizontalTextAlignment) is a `TextAlignment` enum value that defines the horizontal alignment of the query text.
 * `VerticalTextAlignment` is a `TextAlignment` enum value that defines the vertical alignment of the query text.
-* [`Placeholder`](xref:Xamarin.Forms.SearchBar.Placeholder) is a `string` that defines the placeholder text, such as "Search...".
-* [`PlaceholderColor`](xref:Xamarin.Forms.SearchBar.PlaceholderColor) is a `Color` that defines the color of the placeholder text.
+* [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) is a `string` that defines the placeholder text, such as "Search...".
+* [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) is a `Color` that defines the color of the placeholder text.
 * [`SearchCommand`](xref:Xamarin.Forms.SearchBar.SearchCommand) is an `ICommand` that allows binding user actions, such as finger taps or clicks, to commands defined on a viewmodel.
 * [`SearchCommandParameter`](xref:Xamarin.Forms.SearchBar.SearchCommandParameter) is an `object` that specifies the parameter that should be passed to the `SearchCommand`.
-* [`Text`](xref:Xamarin.Forms.SearchBar.Text) is a `string` containing the query text in the `SearchBar`.
-* [`TextColor`](xref:Xamarin.Forms.SearchBar.TextColor) is a `Color` that defines the query text color.
+* [`Text`](xref:Xamarin.Forms.InputView.Text) is a `string` containing the query text in the `SearchBar`.
+* [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) is a `Color` that defines the query text color.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means the `SearchBar` can be customized and be the target of data bindings. Specifying font properties on the `SearchBar` is consistent with customizing text on other [Xamarin.Forms Text controls](~/xamarin-forms/user-interface/text/index.md). For more information, see [Fonts in Xamarin.Forms](~/xamarin-forms/user-interface/text/fonts.md).
 
@@ -89,7 +89,7 @@ The following screenshot shows the resulting `SearchBar` control:
 A search can be executed using the `SearchBar` control by attaching an event handler to one of the following events:
 
 * [`SearchButtonPressed`](xref:Xamarin.Forms.SearchBar.SearchButtonPressed) is called when the user either clicks the search button or presses the enter key.
-* [`TextChanged`](xref:Xamarin.Forms.SearchBar.TextChanged) is called anytime the text in the query box is changed.
+* [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) is called anytime the text in the query box is changed.
 
 The following example shows an event handler attached to the `TextChanged` event in XAML and uses a `ListView` to display search results:
 

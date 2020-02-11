@@ -75,7 +75,7 @@ public static class NumericValidationBehavior
 }
 ```
 
-The `NumericValidationBehavior` class contains an attached property named `AttachBehavior` with a `static` getter and setter, which controls the addition or removal of the behavior to the control to which it will be attached. This attached property registers the `OnAttachBehaviorChanged` method that will be executed when the value of the property changes. This method registers or de-registers an event handler for the [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) event, based on the value of the `AttachBehavior` attached property. The core functionality of the behavior is provided by the `OnEntryTextChanged` method, which parses the value entered into the [`Entry`](xref:Xamarin.Forms.Entry) by the user, and sets the `TextColor` property to red if the value isn't a `double`.
+The `NumericValidationBehavior` class contains an attached property named `AttachBehavior` with a `static` getter and setter, which controls the addition or removal of the behavior to the control to which it will be attached. This attached property registers the `OnAttachBehaviorChanged` method that will be executed when the value of the property changes. This method registers or de-registers an event handler for the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) event, based on the value of the `AttachBehavior` attached property. The core functionality of the behavior is provided by the `OnEntryTextChanged` method, which parses the value entered into the [`Entry`](xref:Xamarin.Forms.Entry) by the user, and sets the `TextColor` property to red if the value isn't a `double`.
 
 ## Consuming an Attached Behavior
 
@@ -118,7 +118,7 @@ var entry = new Entry { Placeholder = "Enter a System.Double" };
 NumericValidationBehavior.SetAttachBehavior (entry, false);
 ```
 
-At runtime, the `OnAttachBehaviorChanged` method will be executed when the value of the `AttachBehavior` attached property is set to `false`. The `OnAttachBehaviorChanged` method will then de-register the event handler for the [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) event, ensuring that the behavior isn't executed as the user interacts with the control.
+At runtime, the `OnAttachBehaviorChanged` method will be executed when the value of the `AttachBehavior` attached property is set to `false`. The `OnAttachBehaviorChanged` method will then de-register the event handler for the [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) event, ensuring that the behavior isn't executed as the user interacts with the control.
 
 ## Summary
 
