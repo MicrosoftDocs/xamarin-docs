@@ -44,7 +44,7 @@ var text = MyEditor.Text;
 
 ### Setting Placeholder Text
 
-The [`Editor`](xref:Xamarin.Forms.Editor) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Editor`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.Editor.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
+The [`Editor`](xref:Xamarin.Forms.Editor) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Editor`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
@@ -271,7 +271,7 @@ Make sure that the background and text colors you choose are usable on each plat
 
 `Editor` exposes two events:
 
-- [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; raised when the text changes in the editor. Provides the text before and after the change.
+- [TextChanged](xref:Xamarin.Forms.InputView.TextChanged) &ndash; raised when the text changes in the editor. Provides the text before and after the change.
 - [Completed](xref:Xamarin.Forms.Editor.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
 > [!NOTE]

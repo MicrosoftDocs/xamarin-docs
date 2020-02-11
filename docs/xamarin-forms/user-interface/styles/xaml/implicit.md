@@ -50,7 +50,7 @@ The [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) defines a sing
 
 [![Implicit Styles Example](implicit-images/implicit-styles.png)](implicit-images/implicit-styles-large.png#lightbox)
 
-In addition, the fourth [`Entry`](xref:Xamarin.Forms.Entry) overrides the [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) and [`TextColor`](xref:Xamarin.Forms.Entry.TextColor) properties of the implicit style to different `Color` values.
+In addition, the fourth [`Entry`](xref:Xamarin.Forms.Entry) overrides the [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) and [`TextColor`](xref:Xamarin.Forms.InputView.TextColor) properties of the implicit style to different `Color` values.
 
 ### Create an implicit style at the control level
 
