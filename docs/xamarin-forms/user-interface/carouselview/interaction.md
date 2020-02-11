@@ -6,7 +6,7 @@ ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/28/2020
+ms.date: 02/11/2020
 ---
 
 # Xamarin.Forms CarouselView Interaction
@@ -270,6 +270,75 @@ In this example, the `Position` property is set to the fourth item in the `Monke
 
 [![Screenshot of a CarouselView with preset position, on iOS and Android](interaction-images/preset-position.png "CarouselView with preset position")](interaction-images/preset-position-large.png#lightbox "CarouselView with preset position")
 
+## Visual states
+
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) defines four visual states:
+
+- `CurrentItem` represents the visual state of the currently displayed item.
+- `PreviousItem` represents the visual state of the previously displayed item.
+- `NextItem` represents the visual state of the next item.
+- `DefaultItem` represents the visual state of the remainder of the items/
+
+These visual states can be used to initiate visual changes to the items displayed by the [`CarouselView`](xref:Xamarin.Forms.CarouselView).
+
+The following XAML example shows how to define the `CurrentItem`, `PreviousItem`, `NextItem`, and `DefaultItem` visual states:
+
+```xaml
+<CarouselView ItemsSource="{Binding Monkeys}"
+              PeekAreaInsets="100">
+    <CarouselView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="CurrentItem">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value="1.1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="PreviousItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="NextItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="DefaultItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.25" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+                
+                <!-- Item template content -->
+                <Frame HasShadow="true">
+                    ...
+                </Frame>
+            </StackLayout>
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+</CarouselView>
+```
+
+> [!IMPORTANT]
+> Alternatively, the visual states can be defined in a [`Style`](xref:Xamarin.Forms.Style) that has a [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property value that's the type of the root element of the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which is set as the `ItemTemplate` property value.
+
+In this example, the `CurrentItem` visual state specifies that the current item displayed by the [`CarouselView`](xref:Xamarin.Forms.CarouselView) will have its [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property changed from its default value of 1 to 1.1. The `PreviousItem` and `NextItem` visual states specify that the items surrounding the current item will be displayed with an [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) value of 0.5. The `DefaultItem` visual state specifies that the remainder of the items displayed by the `CarouselView` will be displayed with an `Opacity` value of 0.25.
+
+The following screenshots show the `CurrentItem`, `PreviousItem`, and `NextItem` visual states:
+
+[![Screenshot of a CarouselView using visual states, on iOS and Android](interaction-images/visual-states.png "CarouselView visual states")](interaction-images/visual-states-large.png#lightbox "CarouselView visual states")
+
+For more information about visual states, see [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+
 ## Clear the current item
 
 The `CurrentItem` property can be cleared by setting it, or the object it binds to, to `null`.
@@ -285,3 +354,4 @@ By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) allows users to mo
 ## Related links
 
 - [CarouselView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

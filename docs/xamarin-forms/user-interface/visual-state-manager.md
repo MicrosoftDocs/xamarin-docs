@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/21/2020
+ms.date: 02/11/2020
 ---
 
 # Xamarin.Forms Visual State Manager
@@ -402,6 +402,7 @@ The following table lists the visual states that are defined in Xamarin.Forms:
 | Class | States | More Information |
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Button visual states](~/xamarin-forms/user-interface/button.md#button-visual-states) |
+| `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [CarouselView visual states](~/xamarin-forms/user-interface/carouselview/interaction.md#visual-states) |
 | `CollectionView` | `Selected` | [Change selected item color](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
 | `ImageButton` | `Pressed` | [ImageButton visual states](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused` | [Common states](#common-states) |
