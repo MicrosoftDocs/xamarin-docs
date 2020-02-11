@@ -178,10 +178,10 @@ The appearance of each `SwipeItem` is defined by a combination of the `Text`, `I
 
 [![Screenshot of SwipeView swipe items, on iOS and Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe items")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe items")
 
+When a `SwipeItem` is tapped, its `Invoked` event fires and is handled by its registered event handler. Alternatively, the `Command` property can be set to an `ICommand` implementation that will be executed when the `SwipeItem` is invoked.
+
 > [!NOTE]
 > When the appearance of a `SwipeItem` is defined only using the `Text` or `IconImageSource` properties, the content is always centered.
-
-When a `SwipeItem` is tapped, its `Invoked` event fires and is handled by its registered event handler. Alternatively, the `Command` property can be set to an `ICommand` implementation that will be executed when the `SwipeItem` is invoked.
 
 In addition to defining swipe items as `SwipeItem` objects, it's also possible to define custom swipe item views. For more information, see [Custom swipe items](#custom-swipe-items).
 
