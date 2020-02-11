@@ -329,7 +329,7 @@ The following XAML example shows how to define the `CurrentItem`, `PreviousItem`
 </CarouselView>
 ```
 
-> [!IMPORTANT]
+> [!NOTE]
 > Alternatively, the visual states can be defined in a [`Style`](xref:Xamarin.Forms.Style) that has a [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property value that's the type of the root element of the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which is set as the `ItemTemplate` property value.
 
 In this example, the `CurrentItem` visual state specifies that the current item displayed by the [`CarouselView`](xref:Xamarin.Forms.CarouselView) will have its [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property changed from its default value of 1 to 1.1. The `PreviousItem` and `NextItem` visual states specify that the items surrounding the current item will be displayed with an [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) value of 0.5. The `DefaultItem` visual state specifies that the remainder of the items displayed by the `CarouselView` will be displayed with an `Opacity` value of 0.25.
