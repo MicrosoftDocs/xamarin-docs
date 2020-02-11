@@ -35,7 +35,7 @@ productDirectory:
         - url: ~/get-started/installation/index.md
           text: Installation
         - url: ~/get-started/supported-platforms.md
-          text: Supported platforms         
+          text: Supported platforms
         - url: ~/get-started/first-app/index.md
           text: Build your first app
     - title: Follow tutorials
@@ -81,9 +81,6 @@ conceptualContent:
       links:
         - text: Data Binding
           url: ~/xamarin-forms/app-fundamentals/data-binding/index.md
-          itemType: concept
-        - text: DependencyService
-          url: ~/xamarin-forms/app-fundamentals/dependency-service/index.md
           itemType: concept
         - text: Dual-Screens
           url: ~/xamarin-forms/app-fundamentals/dual-screen/index.md
