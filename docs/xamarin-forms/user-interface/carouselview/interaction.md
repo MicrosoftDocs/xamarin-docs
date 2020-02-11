@@ -23,6 +23,7 @@ ms.date: 02/11/2020
 - `Position`, of type `int`, the index of the current item in the underlying collection. This property has a default binding mode of `TwoWay`, and has a 0 value when there isn't any data to display.
 - `PositionChangedCommand`, of type `ICommand`, which is executed when the position changes.
 - `PositionChangedCommandParameter`, of type `object`, which is the parameter that's passed to the `PositionChangedCommand`.
+- `VisibleViews`, of type `ObservableCollection<View>`, which is a read-only property that contains the objects for the items that are currently visible.
 
 All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
 
@@ -270,14 +271,14 @@ In this example, the `Position` property is set to the fourth item in the `Monke
 
 [![Screenshot of a CarouselView with preset position, on iOS and Android](interaction-images/preset-position.png "CarouselView with preset position")](interaction-images/preset-position-large.png#lightbox "CarouselView with preset position")
 
-## Visual states
+## Define visual states
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) defines four visual states:
 
-- `CurrentItem` represents the visual state of the currently displayed item.
-- `PreviousItem` represents the visual state of the previously displayed item.
-- `NextItem` represents the visual state of the next item.
-- `DefaultItem` represents the visual state of the remainder of the items/
+- `CurrentItem` represents the visual state for the currently displayed item.
+- `PreviousItem` represents the visual state for the previously displayed item.
+- `NextItem` represents the visual state for the next item.
+- `DefaultItem` represents the visual state for the remainder of the items.
 
 These visual states can be used to initiate visual changes to the items displayed by the [`CarouselView`](xref:Xamarin.Forms.CarouselView).
 
@@ -317,7 +318,7 @@ The following XAML example shows how to define the `CurrentItem`, `PreviousItem`
                         </VisualState>
                     </VisualStateGroup>
                 </VisualStateManager.VisualStateGroups>
-                
+
                 <!-- Item template content -->
                 <Frame HasShadow="true">
                     ...
