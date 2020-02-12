@@ -67,7 +67,7 @@ The first step is to build a native Kotlin library using Android Studio. The lib
 
 1. Update and synchronize the main **build.gradle** configuration file located at the root of the project folder:
 
-    - Set the Kotlin version to '1.3.10'
+    - Set the Kotlin version to 1.3.10
 
         ```gradle
         buildscript {
@@ -232,7 +232,7 @@ The next step is to create a Xamarin.Android binding project using the Visual St
 
     ![Visual Studio Native Reference](walkthrough-images/visual-studio-native-reference.png)
 
-1. Add a reference to the [Xamarin.Kotlin.StdLib nuget](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package. This package is a binding for Kotlin Standard Library. Without this package the binding will only work if the Kotlin library doesn't use any Kotlin specific types, otherwise all these members will not be exposed to C# and any app that tries to consume the binding will crash at runtime.
+1. Add a reference to the [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package. This package is a binding for Kotlin Standard Library. Without this package the binding will only work if the Kotlin library doesn't use any Kotlin specific types, otherwise all these members will not be exposed to C# and any app that tries to consume the binding will crash at runtime.
 
     **Note:** Due to a limitation of the Xamarin.Android binding tools only a single Android archive (AAR) can be added per binding project. If multiple AAR files need to be included, then multiple Xamarin.Android projects are required, one per each AAR. If this were the case for this walkthrough, then the previous four actions of this step would have to be repeated for each archive. As an alternative option, it is possible to manually merge multiple Android archives as a single archive and as a result you could use a single Xamarin.Android binding project.
 
@@ -250,9 +250,9 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
 
     ![Visual Studio Add Binding Reference.png](walkthrough-images/visual-studio-add-binding-reference.png)
 
-1. Add a reference to the [Xamarin.Kotlin.StdLib nuget](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package, that we added to the Xamarin.Android binding project earlier. It adds support to any Kotlin specific types that need handing in runtime.  Without this package the app can be compiled but will crash at runtime:
+1. Add a reference to the [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package, that we added to the Xamarin.Android binding project earlier. It adds support to any Kotlin specific types that need handing in runtime.  Without this package the app can be compiled but will crash at runtime:
 
-    ![Visual Studio Add StdLib Nuget](walkthrough-images/visual-studio-add-stdlib-nuget.png)
+    ![Visual Studio Add StdLib NuGet](walkthrough-images/visual-studio-add-stdlib-nuget.png)
 
 1. Add the BubblePicker control to the Android layout for MainActivity. Open **testBubblePicker/Resources/layout/content_main.xml** file and append the BubblePicker control node as the last element of the root RelativeLayout control:
 
@@ -352,5 +352,5 @@ We should now have a basic Xamarin.Android application that uses a native Kotlin
 - [Binding Java Library](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)
 - [XPath](https://www.w3.org/TR/xpath/)
 - [Java Binding Metadata](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata)
-- [Xamarin.Kotlin.StdLib nuget](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
+- [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
 - [Sample project repository](https://github.com/alexeystrakh/xamarin-binding-kotlin-framework)

@@ -56,5 +56,5 @@ The approach above outlines the high-level steps required to create a Kotlin Bin
 - [Binding Java Library](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/)
 - [XPath](https://www.w3.org/TR/xpath/)
 - [Java Binding Metadata](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata)
-- [Xamarin.Kotlin.StdLib nuget](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
+- [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/)
 - [Sample project repository](https://github.com/xamcat/xamarin-binding-kotlin-framework)
