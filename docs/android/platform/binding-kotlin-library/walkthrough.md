@@ -52,13 +52,13 @@ In order to complete this walk-through, you will need:
 
 The first step is to build a native Kotlin library using Android Studio. The library is usually provided by a 3d party developer or available at [the Google's Maven repository](https://maven.google.com/web/index.html) and other remote repositories. As an example, in this tutorial we are going to bind the Bubble Picker Kotlin Library available at GitHub.
 
-![](https://raw.githubusercontent.com/igalata/Bubble-Picker/develop/shot.gif)
+![github bubblepicker demo](walkthrough-images/github-bubblepicker-demo.gif)
 
 1. Download [the source code](https://github.com/igalata/Bubble-Picker/archive/develop.zip) from GitHub for the library and unpack it to a local folder Bubble-Picker.
 
 1. Launch the Android Studio and select **"Open an existing Android Studio project"** menu option choosing the Bubble-Picker local folder:
 
-    ![Android Studio Open Project](SolutionItems/android-studio-open-project.png)
+    ![Android Studio Open Project](walkthrough-images/android-studio-open-project.png)
 
 1. Verify that the Android Studio is up to date including Gradle. The source code can be successfully built on Android Studio v3.5.3, Gradle v5.4.1. Instructions on how to update Gradle to the latest Gradle version [could be found here](https://gradle.org/install/).
 
@@ -89,7 +89,7 @@ The first step is to build a native Kotlin library using Android Studio. The lib
 
     - Once the configuration file is updated, it's out of sync and Gradle shows the **"Sync Now"** button, press it and wait for the synchronization process to be completed:
 
-        ![Android Studio Gradle Sync Now](SolutionItems/android-studio-gradle-syncnow.png)
+        ![Android Studio Gradle Sync Now](walkthrough-images/android-studio-gradle-syncnow.png)
 
         **Note:** Gradle's dependency cache may be corrupt, this sometimes occurs after a network connection timeout. Re-download dependencies and sync project (requires network).
 
@@ -99,11 +99,11 @@ The first step is to build a native Kotlin library using Android Studio. The lib
 
 1. Open the Gradle menu on the right, navigate to the **bubblepicker -> Tasks** menu, execute the **"build"** task by double tapping on it, and wait for the build process to complete:
 
-    ![Android Studio Gradle Execute Task](SolutionItems/android-studio-gradle-execute-task.png)
+    ![Android Studio Gradle Execute Task](walkthrough-images/android-studio-gradle-execute-task.png)
 
 1. Open the root folder files browser and navigate to the build folder: **Bubble-Picker -> bubblepicker ->  build -> outputs -> aar**, save the **bubblepicker-release.aar** file as **bubblepicker-v1.0.aar**, this file will be used later in the binding process:
 
-    ![Android Studio AAR Output](SolutionItems/android-studio-aar-output.png)
+    ![Android Studio AAR Output](walkthrough-images/android-studio-aar-output.png)
 
 The .aar file is an Android archive which contains the compiled Kotlin source code and assets, required by Android to run an application using this SDK.  
 
@@ -125,7 +125,7 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
 
 - The native Kotlin library has two dependencies which we don't want to expose to C# world so we define two transformations to ignore them completely. Important to say, the native members won't be stripped from the resulting binary, only C# classes won't be generated. [Java Decompiler](http://java-decompiler.github.io/) can be used to identify the dependencies. Run the tool and open the .aar file created earlier, as a result the structure of the Android archive will be shown, reflecting all dependencies, values, resources, manifest, and classes:  
 
-    ![Java Decompiler Dependencies](SolutionItems/java-decompiler-dependencies.png)
+    ![Java Decompiler Dependencies](walkthrough-images/java-decompiler-dependencies.png)
 
     The transformations to skip processing these packages are defined using XPath instructions:
 
@@ -213,7 +213,7 @@ The next step is to create a Xamarin.Android binding project using the Visual St
 
 1. Open Visual Studio for Mac and create a new Xamarin.Android Binding Library project, give it a name, in our case testBubblePicker.Binding and complete the wizard. The Xamarin.Android binding template is located by the following path: Android -> Library -> Binding Library:
 
-    ![Visual Studio Create Binding](SolutionItems/visual-studio-create-binding.png)
+    ![Visual Studio Create Binding](walkthrough-images/visual-studio-create-binding.png)
 
     In the Transformations folder there are 3 main transformation files:
 
@@ -225,11 +225,11 @@ The next step is to create a Xamarin.Android binding project using the Visual St
 
 1. Replace the existing Transformations/Metadata.xml file with the Metadata.xml file created at the previous step. In the properties window verify that the file **"Build Action"** is set to **"TransformationFile"**
 
-    ![Visual Studio Metadata](SolutionItems/visual-studio-metadata.png)
+    ![Visual Studio Metadata](walkthrough-images/visual-studio-metadata.png)
 
 1. Add the **bubblepicker-v1.0.aar** file we built in Step 1 to the binding project as a native reference. To add native library references, open finder and navigate to the folder with the Android archive. Drag and drop the archive into the Jars folder in Solution Explorer. Alternatively, you can use the **"Add"** context menu option on the Jars folder and choose **"Existing Files…"**. Choose to copy the file to the directory for the purposes of this walkthrough. Be sure to verify that the **"Build Action"** is set to **"LibraryProjectZip"**.
 
-    ![Visual Studio Native Reference](SolutionItems/visual-studio-native-reference.png)
+    ![Visual Studio Native Reference](walkthrough-images/visual-studio-native-reference.png)
 
 1. Add a reference to the [Xamarin.Kotlin.StdLib nuget](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package. This package is a binding for Kotlin Standard Library. Without this package the binding will only work if the Kotlin library doesn't use any Kotlin specific types, otherwise all these members will not be exposed to C# and any app that tries to consume the binding will crash at runtime.
 
@@ -243,15 +243,15 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
 
 1. Create Xamarin.Android project. Use the Android -> App -> Android App as a starting point and select "Latest and Greatest" as you Target Platforms option to avoid compatibility issues. All the following steps target this project:
 
-    ![Visual Studio Create App](SolutionItems/visual-studio-create-app.png)
+    ![Visual Studio Create App](walkthrough-images/visual-studio-create-app.png)
 
 1. Add a project reference to the binding project or add a reference the .dll created previously::
 
-    ![Visual Studio Add Binding Reference.png](SolutionItems/visual-studio-add-binding-reference.png)
+    ![Visual Studio Add Binding Reference.png](walkthrough-images/visual-studio-add-binding-reference.png)
 
 1. Add a reference to the [Xamarin.Kotlin.StdLib nuget](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package, that we added to the Xamarin.Android binding project earlier. It adds support to any Kotlin specific types that need handing in runtime.  Without this package the app can be compiled but will crash at runtime:
 
-    ![Visual Studio Add StdLib Nuget](SolutionItems/visual-studio-add-stdlib-nuget.png)
+    ![Visual Studio Add StdLib Nuget](walkthrough-images/visual-studio-add-stdlib-nuget.png)
 
 1. Add the BubblePicker control to the Android layout for MainActivity. Open **testBubblePicker/Resources/layout/content_main.xml** file and append the BubblePicker control node as the last element of the root RelativeLayout control:
 
@@ -333,7 +333,7 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
 
 1. Run the app, which should render the Bubble Picker UI:
 
-    <img src="SolutionItems/bubble-picker-demo.gif" width="300px">
+    <img src="walkthrough-images/bubble-picker-demo.gif" width="300px">
 
     The sample requires additional code to render elements style and handle interactions but the BubblePicker control has been successfully created and activated.
 
