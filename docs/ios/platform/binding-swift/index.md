@@ -46,7 +46,7 @@ The following guide outlines these steps with additional details.
 
     The fourth and final step is to reference the binding library in a Xamarin.iOS application. It is sufficient to enable the use of the native library within Xamarin.iOS applications targeting iOS 12.2 and above. For those applications targeting a lower version, some additional steps are required:
 
-    - Add Swift dylib dependencies for runtime support. Starting from iOS 12.2 and Swift 5.1, the language became ABI (application binary interface) stable and compatible. That's why any application targeting a lower iOS version needs to include Swift dylibs dependencies used by the framework. Use the [SwiftRuntimeSupport Nuget package](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) to automatically include required dylib dependencies into the resulting application package.
+    - Add Swift dylib dependencies for runtime support. Starting from iOS 12.2 and Swift 5.1, the language became ABI (application binary interface) stable and compatible. That's why any application targeting a lower iOS version needs to include Swift dylibs dependencies used by the framework. Use the [SwiftRuntimeSupport NuGet package](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) to automatically include required dylib dependencies into the resulting application package.
 
     - Add `SwiftSupport` folder with signed dylibs, which is validated by the AppStore during uploading process. Using Xcode tools the package has to be signed and distributed to the AppStore connect, otherwise the package will be automatically rejected.
 
@@ -63,7 +63,7 @@ The approach above outlines the high-level steps required to create a Swift Bind
 - [Binding Objective-C Framework](https://docs.microsoft.com/xamarin/ios/platform/binding-objective-c/walkthrough)
 - [Gigya iOS SDK (Swift framework)](https://developers.gigya.com/display/GD/Swift+SDK)
 - [Swift 5.1 ABI Stability](https://swift.org/blog/swift-5-1-released/)
-- [SwiftRuntimeSupport nuget](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/)
+- [SwiftRuntimeSupport NuGet](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/)
 - [Xamarin UITest automation](https://docs.microsoft.com/appcenter/test-cloud/uitest/)
 - [Xamarin.iOS UITest configuration](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
 - [AppCenter Test Cloud](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest)
