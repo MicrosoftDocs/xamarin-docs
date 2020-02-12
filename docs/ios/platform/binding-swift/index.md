@@ -48,7 +48,7 @@ The following guide outlines these steps with additional details.
 
     - Add Swift dylib dependencies for runtime support. Starting from iOS 12.2 and Swift 5.1, the language became ABI (application binary interface) stable and compatible. That's why any application targeting a lower iOS version needs to include Swift dylibs dependencies used by the framework. Use the [SwiftRuntimeSupport NuGet package](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) to automatically include required dylib dependencies into the resulting application package.
 
-    - Add `SwiftSupport` folder with signed dylibs, which is validated by the AppStore during uploading process. Using Xcode tools the package has to be signed and distributed to the AppStore connect, otherwise the package will be automatically rejected.
+    - Add `SwiftSupport` folder with signed dylibs, which is validated by the AppStore during uploading process. The package should to be signed and distributed to the AppStore connect using Xcode tools, otherwise it will be automatically rejected.
 
 ## The Walkthrough
 
