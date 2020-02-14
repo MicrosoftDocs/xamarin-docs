@@ -16,7 +16,7 @@ For example, binding the [Adobe Creative SDK Framework](https://creativesdk.adob
 
 ```
 $ sharpie bind \
-    -framework AdobeCreativeSDKFoundation.framework \
+    -framework ./AdobeCreativeSDKFoundation.framework \
     -sdk iphoneos8.1
 ```
 
@@ -32,7 +32,7 @@ Of special importance is the `-F .` framework search path provided to clang
 ```
 $ sharpie bind \
     -sdk iphoneos8.1 \
-    AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
+    ./AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
     -scope AdobeCreativeSDKFoundation.framework/Headers \
     -c -F .
 ```
