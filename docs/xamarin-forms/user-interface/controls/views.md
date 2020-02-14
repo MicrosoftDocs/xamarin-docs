@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/13/2019
+ms.date: 02/14/2020
 ---
 
 # Xamarin.Forms Views
@@ -65,7 +65,7 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 
 |     |     |
 | --- | --- |
-| `MediaElement` displays a video or plays audio. Media can be downloaded over the Web, or embedded as resources in platform projects.<br /><br />[Guide](~/xamarin-forms/user-interface/mediaelement.md) / [Sample](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement) | |
+| [`MediaElement`](xref:Xamarin.Forms.MediaElements) plays video or audio. Media can be played from a URL or from local file, based on whether the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property is set to a [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource) or a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource).<br /><br />[API Documentation](xref:Xamarin.Forms.MediaElement) / [Guide](~/xamarin-forms/user-interface/mediaelement.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos) | [![MediaElement Example](views-images/MediaElement.png "MediaElement Example")](views-images/MediaElement-Large.png#lightbox "MediaElement Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MediaElementDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MediaElementDemoPage.xaml) |
 |     |     |
 
 ## Views that initiate commands
