@@ -56,7 +56,7 @@ The following properties are only relevant when the TwoPaneView is occupying a s
 ## Properties that apply when on one screen or two
 
 - `TallModeConfiguration` when in tall mode this indicates the Left/Right arrangement or if you only want a single pane visible as defined by the TwoPaneViewPriority
-- `WideModeConfiguration` when in tall mode this indicates the Top/Bottom arrangement or if you only want a single pane visible as defined by the TwoPaneViewPriority
+- `WideModeConfiguration` when in wide mode this indicates the Top/Bottom arrangement or if you only want a single pane visible as defined by the TwoPaneViewPriority
 - `PanePriority` whether to show Pane1 or Pane2 if in SinglePane mode
 
 ## Related links
