@@ -17,7 +17,7 @@ ms.date: 02/18/2020
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) is a view for playing video and audio. Media that's supported by the underlying platform can be played from the following sources:
 
-- The web, using a HTTP or HTTPS URI.
+- The web, using a URI (HTTP or HTTPS).
 - A resource embedded in the platform application, using the `ms-appx:///` URI scheme.
 - Files that come from the app's local and temporary data folders, using the `ms-appdata:///` URI scheme.
 - The device's library.
@@ -158,7 +158,7 @@ For more information about the ms-appx URI scheme, see [ms-appx and ms-appx-web]
 
 A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play local video or audio files that are copied into the app's local or temporary data folders, using the `ms-appdata:///` URI scheme.
 
-The following example shows the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property set to to a media file that's stored in the app's local data folder:
+The following example shows the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property set to a media file that's stored in the app's local data folder:
 
 ```xaml
 <MediaElement Source="ms-appdata:///local/XamarinVideo.mp4"
