@@ -299,7 +299,7 @@ The [`MediaSource`](xref:Xamarin.Forms.MediaSource) class also has two derived c
 > [!NOTE]
 > When a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) object is created in XAML, a type converter is invoked to return a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) instance from a `string`.
 
-## Examine MediaElement status
+## Determine MediaElement status
 
 The [`MediaElement`](xref:Xamarin.Forms.MediaElement) class defines a read-only bindable property named [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), of type [`MediaElementState`](xref:Xamarin.Forms.MediaElementState). This property indicates the current status of the control, such as whether the media is playing or paused, or if it's not yet ready to play the media.
 
