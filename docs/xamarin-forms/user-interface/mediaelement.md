@@ -22,6 +22,8 @@ ms.date: 02/18/2020
 - Files that come from the app's local and temporary data folders, using the `ms-appdata:///` URI scheme.
 - The device's library.
 
+For information about supported media formats on Android, see [Supported media formats](https://developer.android.com/guide/topics/media/media-formats) on developer.android.com. For information about supported media formats on the Universal Windows Platform (UWP), see [Supported codecs](/windows/uwp/audio-video-camera/supported-codecs).
+
 By default, the [`MediaElement`](xref:Xamarin.Forms.MediaElement) will use the platforms native playback controls, which are referred to as transport controls. However, they are disabled by default and can be replaced with your own transport controls. The following screenshots show `MediaElement` playing a video with the platform transport controls:
 
 [![Screenshot of a MediaElement playing a video, on iOS and Android](mediaelement-images/playback-controls.png "MediaElement playing a video")](mediaelement-images/playback-controls-large.png#lightbox "MediaElement playing a video")
@@ -37,20 +39,20 @@ Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) defines the following properties:
 
-- `Aspect`, of type [`Aspect`](xref:Xamarin.Forms.Aspect), determines how the media will be scaled to fit the display area. The default value of this property is `AspectFit`.
-- `AutoPlay`, of type `bool`, indicates whether media will begin playback automatically when the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property is set. The default value of this property is `true`.
-- `BufferingProgress`, of type `double`, indicates the current buffering progress. The default value of this property is 0.0.
-- `CanSeek`, of type `bool`, indicates whether media can be repositioned by setting the value of the [`Position`](xref:Xamarin.Forms.MediaElement.Position) property. This is a read-only property.
-- `CurrentState`, of type [`MediaElementState`](xref:Xamarin.Forms.MediaElementState), indicates the current status of the control. This is a read-only property, whose default value is `MediaElementState.Closed`.
-- `Duration`, of type `TimeSpan?`, indicates the duration of the currently opened media. This is a read-only property whose default value is `null`.
-- `IsLooping`, of type `bool`, describes whether the currently loaded media source should resume playback from the start after reaching its end. The default value of this property is `false`.
-- `KeepScreenOn`, of type `bool`, determines whether the device screen should stay on during media playback. The default value of this property is `false`.
-- `Position`, of type `TimeSpan`, describes the current position of progress through the media's playback time. The default value of this property is `TimeSpan.Zero`.
-- `ShowPlaybackControls`, of type `bool`, determines whether the standard transport controls are displayed. The default value of this property is `false`.
-- `Source`, of type [`MediaSource`](xref:Xamarin.Forms.MediaSource), determines the media being played.
-- `VideoHeight`, of type `int`, indicates the height of the control. This is a read-only property.
-- `VideoWidth`, of type `int`, indicates the width of the control. This is a read-only property.
-- `Volume`, of type `double`, determines the media's volume, which is represented on a linear scale between 0 and 1. This property uses a `TwoWay` binding, and its default value is 1.
+- [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect), of type [`Aspect`](xref:Xamarin.Forms.Aspect), determines how the media will be scaled to fit the display area. The default value of this property is `AspectFit`.
+- [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay), of type `bool`, indicates whether media will begin playback automatically when the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property is set. The default value of this property is `true`.
+- [`BufferingProgress`](xref:Xamarin.Forms.MediaElement.BufferingProgress), of type `double`, indicates the current buffering progress. The default value of this property is 0.0.
+- [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek), of type `bool`, indicates whether media can be repositioned by setting the value of the [`Position`](xref:Xamarin.Forms.MediaElement.Position) property. This is a read-only property.
+- [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), of type [`MediaElementState`](xref:Xamarin.Forms.MediaElementState), indicates the current status of the control. This is a read-only property, whose default value is `MediaElementState.Closed`.
+- [`Duration`](xref:Xamarin.Forms.MediaElement.Duration), of type `TimeSpan?`, indicates the duration of the currently opened media. This is a read-only property whose default value is `null`.
+- [`IsLooping`](xref:Xamarin.Forms.MediaElement.IsLooping), of type `bool`, describes whether the currently loaded media source should resume playback from the start after reaching its end. The default value of this property is `false`.
+- [`KeepScreenOn`](xref:Xamarin.Forms.MediaElement.KeepScreenOn), of type `bool`, determines whether the device screen should stay on during media playback. The default value of this property is `false`.
+- [`Position`](xref:Xamarin.Forms.MediaElement.Position), of type `TimeSpan`, describes the current position of progress through the media's playback time. The default value of this property is `TimeSpan.Zero`.
+- [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls), of type `bool`, determines whether the standard transport controls are displayed. The default value of this property is `false`.
+- [`Source`](xref:Xamarin.Forms.MediaElement.Source), of type [`MediaSource`](xref:Xamarin.Forms.MediaSource), determines the media being played.
+- [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight), of type `int`, indicates the height of the control. This is a read-only property.
+- [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth), of type `int`, indicates the width of the control. This is a read-only property.
+- [`Volume`](xref:Xamarin.Forms.MediaElement.Volume), of type `double`, determines the media's volume, which is represented on a linear scale between 0 and 1. This property uses a `TwoWay` binding, and its default value is 1.
 
 These properties, with the exception of the `CanSeek` property, are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
@@ -94,7 +96,7 @@ A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play remote video or aud
 
 By default, the media that is defined by the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property plays immediately after the media is opened. To suppress automatic media playback, set the [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay) property to `false`.
 
-Media playback controls are disabled by default, and can be enabled by setting the [`ShowPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowPlaybackControls) property to `true`. [`MediaElement`](xref:Xamarin.Forms.MediaElement) will then use the platforms native playback controls.
+Media playback controls are disabled by default, and can be enabled by setting the [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) property to `true`. [`MediaElement`](xref:Xamarin.Forms.MediaElement) will then use the platforms native playback controls.
 
 ## Play local media
 
@@ -230,7 +232,7 @@ public static async Task CopyVideoIfNotExists(string filename)
 ```
 
 > [!NOTE]
-> The code example above uses the `FileSystem` class included in Xamarin.Essentials. For more information, see [Xamarin.Essentials: File System Helpers](~/xamarin/essentials/file-system-helpers?context=xamarin%2Fxamarin-forms&tabs=android).
+> The code example above uses the `FileSystem` class included in Xamarin.Essentials. For more information, see [Xamarin.Essentials: File System Helpers](~/essentials/file-system-helpers?context=xamarin%2Fxamarin-forms&tabs=android).
 
 ### Play media from the device library
 

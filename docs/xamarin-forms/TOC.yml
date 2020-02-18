@@ -399,7 +399,7 @@
                 - name: Launch the Native Map App
                   href: user-interface/map/native-map-app.md
             - name: MediaElement
-              href: mediaelement.md
+              href: user-interface/mediaelement.md
             - name: WebView
               href: user-interface/webview.md
         - name: Initiate commands
