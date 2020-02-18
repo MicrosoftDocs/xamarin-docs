@@ -398,6 +398,8 @@
                   href: user-interface/map/geocoder.md
                 - name: Launch the Native Map App
                   href: user-interface/map/native-map-app.md
+            - name: MediaElement
+              href: mediaelement.md
             - name: WebView
               href: user-interface/webview.md
         - name: Initiate commands
