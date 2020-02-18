@@ -22,13 +22,11 @@ ms.date: 02/18/2020
 - Files that come from the app's local and temporary data folders, using the `ms-appdata:///` URI scheme.
 - The device's library.
 
-For information about supported media formats on Android, see [Supported media formats](https://developer.android.com/guide/topics/media/media-formats) on developer.android.com. For information about supported media formats on the Universal Windows Platform (UWP), see [Supported codecs](/windows/uwp/audio-video-camera/supported-codecs).
-
-By default, the [`MediaElement`](xref:Xamarin.Forms.MediaElement) will use the platforms native playback controls, which are referred to as transport controls. However, they are disabled by default and can be replaced with your own transport controls. The following screenshots show `MediaElement` playing a video with the platform transport controls:
+[`MediaElement`](xref:Xamarin.Forms.MediaElement) can use the platform playback controls, which are referred to as transport controls. However, they are disabled by default and can be replaced with your own transport controls. The following screenshots show `MediaElement` playing a video with the platform transport controls:
 
 [![Screenshot of a MediaElement playing a video, on iOS and Android](mediaelement-images/playback-controls.png "MediaElement playing a video")](mediaelement-images/playback-controls-large.png#lightbox "MediaElement playing a video")
 
-[`MediaElement`](xref:Xamarin.Forms.MediaElement) is available in Xamarin.Forms 4.5. However, it's currently experimental and can only be used by adding the following line of code to your *App.xaml.cs** file:
+[`MediaElement`](xref:Xamarin.Forms.MediaElement) is available in Xamarin.Forms 4.5. However, it's currently experimental and can only be used by adding the following line of code to your *App.xaml.cs* file:
 
 ```csharp
 Device.SetFlags(new string[]{ "MediaElement_Experimental" });
@@ -40,16 +38,16 @@ Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) defines the following properties:
 
 - [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect), of type [`Aspect`](xref:Xamarin.Forms.Aspect), determines how the media will be scaled to fit the display area. The default value of this property is `AspectFit`.
-- [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay), of type `bool`, indicates whether media will begin playback automatically when the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property is set. The default value of this property is `true`.
+- [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay), of type `bool`, indicates whether media playback will begin automatically when the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property is set. The default value of this property is `true`.
 - [`BufferingProgress`](xref:Xamarin.Forms.MediaElement.BufferingProgress), of type `double`, indicates the current buffering progress. The default value of this property is 0.0.
 - [`CanSeek`](xref:Xamarin.Forms.MediaElement.CanSeek), of type `bool`, indicates whether media can be repositioned by setting the value of the [`Position`](xref:Xamarin.Forms.MediaElement.Position) property. This is a read-only property.
 - [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), of type [`MediaElementState`](xref:Xamarin.Forms.MediaElementState), indicates the current status of the control. This is a read-only property, whose default value is `MediaElementState.Closed`.
 - [`Duration`](xref:Xamarin.Forms.MediaElement.Duration), of type `TimeSpan?`, indicates the duration of the currently opened media. This is a read-only property whose default value is `null`.
 - [`IsLooping`](xref:Xamarin.Forms.MediaElement.IsLooping), of type `bool`, describes whether the currently loaded media source should resume playback from the start after reaching its end. The default value of this property is `false`.
 - [`KeepScreenOn`](xref:Xamarin.Forms.MediaElement.KeepScreenOn), of type `bool`, determines whether the device screen should stay on during media playback. The default value of this property is `false`.
-- [`Position`](xref:Xamarin.Forms.MediaElement.Position), of type `TimeSpan`, describes the current position of progress through the media's playback time. The default value of this property is `TimeSpan.Zero`.
-- [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls), of type `bool`, determines whether the standard transport controls are displayed. The default value of this property is `false`.
-- [`Source`](xref:Xamarin.Forms.MediaElement.Source), of type [`MediaSource`](xref:Xamarin.Forms.MediaSource), determines the media being played.
+- [`Position`](xref:Xamarin.Forms.MediaElement.Position), of type `TimeSpan`, describes the current progress through the media's playback time. The default value of this property is `TimeSpan.Zero`.
+- [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls), of type `bool`, determines whether the platforms playback controls are displayed. The default value of this property is `false`.
+- [`Source`](xref:Xamarin.Forms.MediaElement.Source), of type [`MediaSource`](xref:Xamarin.Forms.MediaSource), indicates the source of the media loaded into the control.
 - [`VideoHeight`](xref:Xamarin.Forms.MediaElement.VideoHeight), of type `int`, indicates the height of the control. This is a read-only property.
 - [`VideoWidth`](xref:Xamarin.Forms.MediaElement.VideoWidth), of type `int`, indicates the width of the control. This is a read-only property.
 - [`Volume`](xref:Xamarin.Forms.MediaElement.Volume), of type `double`, determines the media's volume, which is represented on a linear scale between 0 and 1. This property uses a `TwoWay` binding, and its default value is 1.
@@ -58,36 +56,18 @@ These properties, with the exception of the `CanSeek` property, are backed by [`
 
 The [`MediaElement`](xref:Xamarin.Forms.MediaElement) class also defines four events:
 
-- [`MediaEnded`](xref:Xamarin.Forms.MediaElement.MediaEnded) is fired when the `MediaElement` finishes playing its media.
-- [`MediaFailed`](xref:Xamarin.Forms.MediaElement.MediaFailed) is fired when there's an error associated with the media source. It's a best practice to always handle this event, and take appropriate action.
 - [`MediaOpened`](xref:Xamarin.Forms.MediaElement.MediaOpened) is fired when the media stream has been validated and opened.
+- [`MediaEnded`](xref:Xamarin.Forms.MediaElement.MediaEnded) is fired when the `MediaElement` finishes playing its media.
+- [`MediaFailed`](xref:Xamarin.Forms.MediaElement.MediaFailed) is fired when there's an error associated with the media source.
 - [`SeekCompleted`](xref:Xamarin.Forms.MediaElement.SeekCompleted) is fired when the seek point of a requested seek operation is ready for playback.
 
 In addition, [`MediaElement`](xref:Xamarin.Forms.MediaElement) includes [`Play`](xref:Xamarin.Forms.MediaElement.Play), [`Pause`](xref:Xamarin.Forms.MediaElement.Pause), and [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) methods.
 
-## Set the media source
-
-A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play remote or local media files by setting its [`Source`](xref:Xamarin.Forms.MediaElement.Source) property. The `Source` property is of type [`MediaSource`](xref:Xamarin.Forms.MediaSource), and this class defines two static methods:
-
-- [`FromFile`](xref:Xamarin.Forms.MediaSource.FromFile*), returns a [`MediaSource`](xref:Xamarin.Forms.MediaSource) instance from a `string` argument.
-- [`FromUri`](xref:Xamarin.Forms.MediaSource.FromUri*), returns a [`MediaSource`](xref:Xamarin.Forms.MediaSource) instance from a `Uri` argument.
-
-In addition, the [`MediaSource`](xref:Xamarin.Forms.MediaSource) class also has implicit operators that return `MediaSource` instances from `string` and `Uri` arguments.
-
-> [!NOTE]
-> When the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property is set in XAML, a type converter is invoked to return a [`MediaSource`](xref:Xamarin.Forms.MediaSource) instance from a `string` or `Uri`.
-
-The [`MediaSource`](xref:Xamarin.Forms.MediaSource) class also has two derived classes:
-
-- [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource), which is used to specify a remote media file from a URI. This class has a [`Uri`](xref:Xamarin.Forms.UriMediaSource.Uri) property that can be set to a `Uri`.
-- [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource), which is used to specify a local media file from a `string`. This class has a [`File`](xref:Xamarin.Forms.FileMediaSource.File) property that can be set to a `string`. In addition, this class has implicit operators to convert a `string` to a `FileMediaSource` object, and a `FileMediaSource` object to a `string`.
-
-> [!NOTE]
-> When a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) object is created in XAML, a type converter is invoked to return a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) instance from a `string`.
+For information about supported media formats on Android, see [Supported media formats](https://developer.android.com/guide/topics/media/media-formats) on developer.android.com. For information about supported media formats on the Universal Windows Platform (UWP), see [Supported codecs](/windows/uwp/audio-video-camera/supported-codecs).
 
 ## Play remote media
 
-A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play remote video or audio files using the HTTP and HTTPS URI schemes. This is accomplished by setting the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property to the URI of the media file:
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play remote media files using the HTTP and HTTPS URI schemes. This is accomplished by setting the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property to the URI of the media file:
 
 ```xaml
 <MediaElement Source="https://sec.ch9.ms/ch9/5d93/a1eab4bf-3288-4faf-81c4-294402a85d93/XamarinShow_mid.mp4"
@@ -96,7 +76,7 @@ A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play remote video or aud
 
 By default, the media that is defined by the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property plays immediately after the media is opened. To suppress automatic media playback, set the [`AutoPlay`](xref:Xamarin.Forms.MediaElement.AutoPlay) property to `false`.
 
-Media playback controls are disabled by default, and can be enabled by setting the [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) property to `true`. [`MediaElement`](xref:Xamarin.Forms.MediaElement) will then use the platforms native playback controls.
+Media playback controls are disabled by default, and are enabled by setting the [`ShowsPlaybackControls`](xref:Xamarin.Forms.MediaElement.ShowsPlaybackControls) property to `true`. [`MediaElement`](xref:Xamarin.Forms.MediaElement) will then use the platform playback controls.
 
 ## Play local media
 
@@ -106,9 +86,11 @@ Local media can be played from the following sources:
 - Files that come from the app's local and temporary data folders, using the `ms-appdata:///` URI scheme.
 - The device's library.
 
+For more information about these URI schemes, see [URI schemes](/windows/uwp/app-resources/uri-schemes).
+
 ### Play media embedded in the app package
 
-A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play local video or audio files that are embedded in the app package, using the `ms-appx:///` URI scheme. Media files are embedded in the app package by placing them in the platform project.
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play media files that are embedded in the app package, using the `ms-appx:///` URI scheme. Media files are embedded in the app package by placing them in the platform project.
 
 Storing a media file in the platform project is different for each platform:
 
@@ -156,7 +138,7 @@ For more information about the ms-appx URI scheme, see [ms-appx and ms-appx-web]
 
 ### Play media from the app's local and temporary folders
 
-A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play local video or audio files that are copied into the app's local or temporary data folders, using the `ms-appdata:///` URI scheme.
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play media files that are copied into the app's local or temporary data folders, using the `ms-appdata:///` URI scheme.
 
 The following example shows the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property set to a media file that's stored in the app's local data folder:
 
@@ -259,7 +241,7 @@ The video picking dependency service is invoked by calling the `DependencyServic
 
 ## Change video aspect ratio
 
-The [`MediaElement.Aspect`](xref:Xamarin.Forms.MediaElement.Aspect) property determines how video media will be scaled to fit the display area. This property is set to one of the [`Aspect`](xref:Xamarin.Forms.Aspect) enumeration members:
+The [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect) property determines how video media will be scaled to fit the display area. By default, this property is set to the `AspectFit` enumeration member, but it can be set to any of the [`Aspect`](xref:Xamarin.Forms.Aspect) enumeration members:
 
 - `AspectFit` indicates that the video will be letterboxed, if required, to fit into the display area, while preserving the aspect ratio.
 - `AspectFill` indicates that the video will be clipped so that it fills the display area, while preserving the aspect ratio.
@@ -267,7 +249,7 @@ The [`MediaElement.Aspect`](xref:Xamarin.Forms.MediaElement.Aspect) property det
 
 ## Examine MediaElement status
 
-The [`MediaElement`](xref:Xamarin.Forms.MediaElement) class defines a read-only bindable property named [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) of type [`MediaElementState`](xref:Xamarin.Forms.MediaElementState). This property indicates the current status of the control, such as whether the media is playing or paused, or if it's not yet ready to play the media.
+The [`MediaElement`](xref:Xamarin.Forms.MediaElement) class defines a read-only bindable property named [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), of type [`MediaElementState`](xref:Xamarin.Forms.MediaElementState). This property indicates the current status of the control, such as whether the media is playing or paused, or if it's not yet ready to play the media.
 
 The [`MediaElementState`](xref:Xamarin.Forms.MediaElementState) enumeration defines the following members:
 
@@ -280,11 +262,11 @@ The [`MediaElementState`](xref:Xamarin.Forms.MediaElementState) enumeration defi
 
 It's generally not necessary to examine the [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) property when using the [`MediaElement`](xref:Xamarin.Forms.MediaElement) transport controls. However, this property becomes important when implementing your own transport controls.
 
-## Display Position data
+## Poll for Position data
 
 The property change notification for the [`Position`](xref:Xamarin.Forms.MediaElement.Position) bindable property only fires at key moments such as playback beginning and ending, and pause occurring. Therefore, data binding to the `Position` property will not yield accurate position data. Instead, you must setup a timer and poll the property.
 
-This can be achieved in the `OnAppearing` override for the page that wants to display position data as media is played:
+A good place to do this is in the `OnAppearing` override for the page that requires the position data as media is played:
 
 ```csharp
 bool polling = true;
@@ -293,11 +275,11 @@ protected override void OnAppearing()
 {
     base.OnAppearing();
 
-    Device.StartTimer(TimeSpan.FromMilliseconds(100), () =>
+    Device.StartTimer(TimeSpan.FromMilliseconds(1000), () =>
     {
         Device.BeginInvokeOnMainThread(() =>
         {
-            positionLabel.Text = mediaElement.Position.ToString("mm\\:ss\\.ff");
+            positionLabel.Text = mediaElement.Position.ToString("hh\\:mm\\:ss");
         });
         return polling;
     });
@@ -310,7 +292,27 @@ protected override void OnDisappearing()
 }
 ```
 
-In this example, the `OnAppearing` override starts a timer that updates `positionLabel` with the `Position` value every 100 milliseconds. The timer keeps running provided that the timer callback returns `true`. When page navigation occurs the `OnDisappearing` override is executed, which stops the timer.
+In this example, the `OnAppearing` override starts a timer that updates `positionLabel` with the `Position` value every second. The timer callback is invoked every second, until the callback returns `false`. When page navigation occurs the `OnDisappearing` override is executed, which stops the timer callback being invoked.
+
+## Understand MediaSource types
+
+A [`MediaElement`](xref:Xamarin.Forms.MediaElement) can play media by setting its [`Source`](xref:Xamarin.Forms.MediaElement.Source) property to a remote or local media file. The `Source` property is of type [`MediaSource`](xref:Xamarin.Forms.MediaSource), and this class defines two static methods:
+
+- [`FromFile`](xref:Xamarin.Forms.MediaSource.FromFile*), returns a [`MediaSource`](xref:Xamarin.Forms.MediaSource) instance from a `string` argument.
+- [`FromUri`](xref:Xamarin.Forms.MediaSource.FromUri*), returns a [`MediaSource`](xref:Xamarin.Forms.MediaSource) instance from a `Uri` argument.
+
+In addition, the [`MediaSource`](xref:Xamarin.Forms.MediaSource) class also has implicit operators that return `MediaSource` instances from `string` and `Uri` arguments.
+
+> [!NOTE]
+> When the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property is set in XAML, a type converter is invoked to return a [`MediaSource`](xref:Xamarin.Forms.MediaSource) instance from a `string` or `Uri`.
+
+The [`MediaSource`](xref:Xamarin.Forms.MediaSource) class also has two derived classes:
+
+- [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource), which is used to specify a remote media file from a URI. This class has a [`Uri`](xref:Xamarin.Forms.UriMediaSource.Uri) property that can be set to a `Uri`.
+- [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource), which is used to specify a local media file from a `string`. This class has a [`File`](xref:Xamarin.Forms.FileMediaSource.File) property that can be set to a `string`. In addition, this class has implicit operators to convert a `string` to a `FileMediaSource` object, and a `FileMediaSource` object to a `string`.
+
+> [!NOTE]
+> When a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) object is created in XAML, a type converter is invoked to return a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) instance from a `string`.
 
 ## Implement custom transport controls
 
@@ -318,7 +320,7 @@ The transport controls of a media player include the buttons that perform the fu
 
 By default, the [`MediaElement`](xref:Xamarin.Forms.MediaElement) playback controls are disabled. This enables you to control the `MediaElement` programmatically, or by supplying your own transport controls. In support of this, `MediaElement` includes [`Play`](xref:Xamarin.Forms.MediaElement.Play), [`Pause`](xref:Xamarin.Forms.MediaElement.Pause), and [`Stop`](xref:Xamarin.Forms.MediaElement.Stop) methods.
 
-The following XAML example shows a page that includes a [`MediaElement`](xref:Xamarin.Forms.MediaElement) and custom transport controls:
+The following XAML example shows a page that contains a [`MediaElement`](xref:Xamarin.Forms.MediaElement) and custom transport controls:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
@@ -342,7 +344,6 @@ The following XAML example shows a page that includes a [`MediaElement`](xref:Xa
                         <Setter Property="Text"
                                 Value="&#x23F8; Pause" />
                     </DataTrigger>
-
                     <DataTrigger TargetType="Button"
                                  Binding="{Binding CurrentState}"
                                  Value="{x:Static MediaElementState.Buffering}">
@@ -368,7 +369,7 @@ The following XAML example shows a page that includes a [`MediaElement`](xref:Xa
 </ContentPage>
 ```
 
-In this example, the custom transport controls are defined as [`Button`](xref:Xamarin.Forms.Button) objects. However, there are only two `Button` objects, with the first `Button` representing **Play** and **Pause** and the second `Button` representing `Stop`. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) objects are used to enable and disable the buttons, and to switch the first button between **Play** and **Pause**. For more information about data triggers, see [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
+In this example, the custom transport controls are defined as [`Button`](xref:Xamarin.Forms.Button) objects. However, there are only two `Button` objects, with the first `Button` representing **Play** and **Pause**, and the second `Button` representing **Stop**. [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) objects are used to enable and disable the buttons, and to switch the first button between **Play** and **Pause**. For more information about data triggers, see [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
 The code-behind file has the handlers for the [`Clicked`](xref:Xamarin.Forms.Button.Clicked) events:
 
@@ -392,7 +393,7 @@ void OnStopButtonClicked(object sender, EventArgs args)
 }
 ```
 
-The **Play** button can be pressed, when it becomes enabled, to begin playback:
+The **Play** button can be pressed, once it becomes enabled, to begin playback:
 
 [![Screenshot of a MediaElement with custom transport controls, on iOS and Android](mediaelement-images/custom-transport-playback.png "MediaElement playing a video")](mediaelement-images/custom-transport-playback-large.png#lightbox "MediaElement playing a video")
 
@@ -400,7 +401,7 @@ Pressing the **Pause** button results in playback pausing:
 
 [![Screenshot of a MediaElement with playback paused, on iOS and Android](mediaelement-images/custom-transport-paused.png "MediaElement with a paused video")](mediaelement-images/custom-transport-paused-large.png#lightbox "MediaElement with a paused video")
 
-Pressing the **Stop** button stops playback and returns the media file to the beginning.
+Pressing the **Stop** button stops playback and returns the position of the media file to the beginning.
 
 ## Implement a custom position bar
 
@@ -409,7 +410,7 @@ The transport controls implemented by each platform include a position bar. This
 Implementing a custom position bar requires knowing the duration of the media, and the current playback position. This data is available in the [`Duration`](xref:Xamarin.Forms.MediaElement.Duration) and [`Position`](xref:Xamarin.Forms.MediaElement.Position) properties.
 
 > [!IMPORTANT]
-> The [`Position`](xref:Xamarin.Forms.MediaElement.Position) must be polled to obtain accurate position data. For more information, see [Display Position data](#display-position-data).
+> The [`Position`](xref:Xamarin.Forms.MediaElement.Position) must be polled to obtain accurate position data. For more information, see [Poll for Position data](#poll-for-position-data).
 
 A custom position bar can be implemented using a [`Slider`](xref:Xamarin.Forms.Slider), as shown in the following example:
 
@@ -474,7 +475,7 @@ public class PositionSlider : Slider
 }
 ```
 
-The `PositionSlider` class defines its own `Duration` and `Position` bindable properties, of type `TimeSpan`, and a `TimeToEnd` bindable property, also of type `TimeSpan`. The property-changed handler for the `Duration` property sets the `Maximum` property of the [`Slider`](xref:Xamarin.Forms.Slider) to the `TotalSeconds` property of the `TimeSpan` value. The `TimeToEnd` property is calculated based on changes to the `Duration` and `Position` properties, and begins at the media's duration and decreases down to zero as playback proceeds.
+The `PositionSlider` class defines its own `Duration` and `Position` bindable properties, and a `TimeToEnd` bindable property. All three properties are of type `TimeSpan`. The property-changed handler for the `Duration` property sets the `Maximum` property of the [`Slider`](xref:Xamarin.Forms.Slider) to the `TotalSeconds` property of the `TimeSpan` value. The `TimeToEnd` property is calculated based on changes to the `Duration` and `Position` properties, and begins at the media's duration and decreases down to zero as playback proceeds.
 
 The `PositionSlider` is updated from the underlying [`Slider`](xref:Xamarin.Forms.Slider) when the `Slider` is moved to indicate that the media should be advanced or reversed to a new position. This is detected in the `PropertyChanged` handler in the `PositionSlider` constructor. The handler checks for a change in the `Value` property, and if it's different from the `Position` property, then the `Position` property is set from the `Value` property. For more information about using a [`Slider`](xref:Xamarin.Forms.Slider) see, [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)
 
@@ -522,7 +523,7 @@ A custom volume bar can be implemented using a [`Slider`](xref:Xamarin.Forms.Sli
 </StackLayout>
 ```
 
-In this example, the [`Slider`](xref:Xamarin.Forms.Slider) data-binds its `Value` property to the [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) property of the [`MediaElement`](xref:Xamarin.Forms.MediaElement). This is possible because the `Volume` property uses a `TwoWay` binding. Therefore, changing the `Value` property will result in the `Volume` property changing.
+In this example, the [`Slider`](xref:Xamarin.Forms.Slider) data binds its `Value` property to the [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) property of the [`MediaElement`](xref:Xamarin.Forms.MediaElement). This is possible because the `Volume` property uses a `TwoWay` binding. Therefore, changing the `Value` property will result in the `Volume` property changing.
 
 > [!NOTE]
 > The [`Volume`](xref:Xamarin.Forms.MediaElement.Volume) property has a vlidation callback that ensures that its value is greater than or equal to 0.0, and less than or equal to 1.0.
@@ -535,3 +536,5 @@ For more information about using a [`Slider`](xref:Xamarin.Forms.Slider) see, [X
 - [URI schemes](/windows/uwp/app-resources/uri-schemes)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)
+- [Android: Supported media formats](https://developer.android.com/guide/topics/media/media-formats)
+- [UWP: Supported codecs](/windows/uwp/audio-video-camera/supported-codecs)
