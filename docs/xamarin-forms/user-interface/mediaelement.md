@@ -247,21 +247,6 @@ The [`Aspect`](xref:Xamarin.Forms.MediaElement.Aspect) property determines how v
 - `AspectFill` indicates that the video will be clipped so that it fills the display area, while preserving the aspect ratio.
 - `Fill` indicates that the video will be stretched to fill the display area.
 
-## Examine MediaElement status
-
-The [`MediaElement`](xref:Xamarin.Forms.MediaElement) class defines a read-only bindable property named [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), of type [`MediaElementState`](xref:Xamarin.Forms.MediaElementState). This property indicates the current status of the control, such as whether the media is playing or paused, or if it's not yet ready to play the media.
-
-The [`MediaElementState`](xref:Xamarin.Forms.MediaElementState) enumeration defines the following members:
-
-- `Closed` indicates that the `MediaElement` contains no media.
-- `Opening` indicates that the `MediaElement` is validating and attempting to load the specified source.
-- `Buffering` indicates that the `MediaElement` is loading the media for playback. Its [`Position`](xref:Xamarin.Forms.MediaElement.Position) property does not advance during this state. If the `MediaElement` was playing video, it continues to display the last displayed frame.
-- `Playing` indicates that the `MediaElement` is playing the media source.
-- `Paused` indicates that the `MediaElement` does not advance its [`Position`](xref:Xamarin.Forms.MediaElement.Position) property. If the `MediaElement` was playing video, it continues to display the current frame.
-- `Stopped` indicates that the `MediaElement` contains media but it is not being played or paused. Its [`Position`](xref:Xamarin.Forms.MediaElement.Position) property is 0 and does not advance. If the loaded media is video, the `MediaElement` displays the first frame.
-
-It's generally not necessary to examine the [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) property when using the [`MediaElement`](xref:Xamarin.Forms.MediaElement) transport controls. However, this property becomes important when implementing your own transport controls.
-
 ## Poll for Position data
 
 The property change notification for the [`Position`](xref:Xamarin.Forms.MediaElement.Position) bindable property only fires at key moments such as playback beginning and ending, and pause occurring. Therefore, data binding to the `Position` property will not yield accurate position data. Instead, you must setup a timer and poll the property.
@@ -313,6 +298,21 @@ The [`MediaSource`](xref:Xamarin.Forms.MediaSource) class also has two derived c
 
 > [!NOTE]
 > When a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) object is created in XAML, a type converter is invoked to return a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource) instance from a `string`.
+
+## Examine MediaElement status
+
+The [`MediaElement`](xref:Xamarin.Forms.MediaElement) class defines a read-only bindable property named [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState), of type [`MediaElementState`](xref:Xamarin.Forms.MediaElementState). This property indicates the current status of the control, such as whether the media is playing or paused, or if it's not yet ready to play the media.
+
+The [`MediaElementState`](xref:Xamarin.Forms.MediaElementState) enumeration defines the following members:
+
+- `Closed` indicates that the `MediaElement` contains no media.
+- `Opening` indicates that the `MediaElement` is validating and attempting to load the specified source.
+- `Buffering` indicates that the `MediaElement` is loading the media for playback. Its [`Position`](xref:Xamarin.Forms.MediaElement.Position) property does not advance during this state. If the `MediaElement` was playing video, it continues to display the last displayed frame.
+- `Playing` indicates that the `MediaElement` is playing the media source.
+- `Paused` indicates that the `MediaElement` does not advance its [`Position`](xref:Xamarin.Forms.MediaElement.Position) property. If the `MediaElement` was playing video, it continues to display the current frame.
+- `Stopped` indicates that the `MediaElement` contains media but it is not being played or paused. Its [`Position`](xref:Xamarin.Forms.MediaElement.Position) property is 0 and does not advance. If the loaded media is video, the `MediaElement` displays the first frame.
+
+It's generally not necessary to examine the [`CurrentState`](xref:Xamarin.Forms.MediaElement.CurrentState) property when using the [`MediaElement`](xref:Xamarin.Forms.MediaElement) transport controls. However, this property becomes important when implementing your own transport controls.
 
 ## Implement custom transport controls
 
