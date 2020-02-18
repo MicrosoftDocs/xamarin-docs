@@ -505,7 +505,7 @@ In this example, the `Duration` property of the `PositionSlider` is data-bound t
 
 In addition, a [`DataTrigger`](xref:Xamarin.Forms.DataTrigger) object is used to disable the `PositionSlider` when the media is buffering. For more information about data triggers, see [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
-## Custom volume control
+## Implement a custom volume control
 
 Media playback controls implemented by each platform include a volume bar. This bar resembles a slider and shows the volume of the media. In addition, you can manipulate the volume bar to increase or decrease the volume.
 
