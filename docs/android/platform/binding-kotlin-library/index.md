@@ -44,7 +44,7 @@ The following guide outlines these steps with additional details.
 
 ## Walkthrough
 
-The approach above outlines the high-level steps required to create a Kotlin Binding for Xamarin. There are many lower-level steps involved and further details to consider when preparing these bindings in practice including adapting to changes in the native tools and languages. The intent is to help you to gain a deeper understanding of this concept and the high-level steps involved in this process. For a detailed step-by-step guide, refer to the [Xamarin Kotlin Binding](walkthrough.md) documentation.
+The approach above outlines the high-level steps required to create a Kotlin Binding for Xamarin. There are many lower-level steps involved and further details to consider when preparing these bindings in practice including adapting to changes in the native tools and languages. The intent is to help you to gain a deeper understanding of this concept and the high-level steps involved in this process. For a detailed step-by-step guide, refer to the [Xamarin Kotlin Binding Walkthrough](walkthrough.md) documentation.
 
 ## Related links
 
