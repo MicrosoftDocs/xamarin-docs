@@ -177,9 +177,11 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
     xcodebuild -sdk iphoneos13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
     ```
 
-    **Note**: If you have a workspace instead of project, build the workspace and specify the target as a required parameter. You also want to specify an output directory because for workspaces this directory will be different than for project builds.
+    > [!TIP]
+    > If you have a workspace instead of project, build the workspace and specify the target as a required parameter. You also want to specify an output directory because for workspaces this directory will be different than for project builds.
 
-    **Note:** You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
+    > [!TIP]
+    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
 
 1. Now we have two Swift frameworks, one for each platform, and we need to combine them as a single package to be embedded into a Xamarin.iOS binding project later. In order to create a fat framework which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
 
@@ -213,9 +215,11 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
         Architectures in the fat file: Release-fat/SwiftFrameworkProxy.framework/SwiftFrameworkProxy are: x86_64 arm64
         ```
 
-    **Note:** If you want to support just a single platform (for example, you are building an app, which can be run on a device only) you can skip the step to create the fat library and use the output framework from the device build earlier.
+    > [!TIP]
+    > If you want to support just a single platform (for example, you are building an app, which can be run on a device only) you can skip the step to create the fat library and use the output framework from the device build earlier.
 
-    **Note:** You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L16-L24) to create the fat framework, which automates all steps above.
+    > [!TIP]
+    > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L16-L24) to create the fat framework, which automates all steps above.
 
 ### Step 2. Prepare metadata
 
@@ -249,9 +253,11 @@ Now we have the framework with the Objective-C generated interface header ready 
     string InitForApiKey (string apiKey);
     ```
 
-    **Note:** The header file name could be different if you changed the default Xcode settings for the header name. By default it has the name of a project with the **-Swift** suffix. You can always check the file and its name by navigating to the headers folder of the framework package.
+    > [!TIP]
+    > The header file name could be different if you changed the default Xcode settings for the header name. By default it has the name of a project with the **-Swift** suffix. You can always check the file and its name by navigating to the headers folder of the framework package.
 
-    **Note:** As part of the automation process you can use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L35) to generate metadata automatically once the fat framework is created.
+    > [!TIP] 
+    > As part of the automation process you can use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L35) to generate metadata automatically once the fat framework is created.
 
 ### Step 3. Build a binding library
 
@@ -379,7 +385,8 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
         ![visual studio uitest new](walkthrough-images/visualstudio-uitest-new.png)
 
-        **Note:** You can find more information on how to create a UITest project and configure it for your app by [the following link](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
+        > [!TIP] 
+        > You can find more information on how to create a UITest project and configure it for your app by [the following link](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
     - Create a basic test to run the app and use some of the Swift SDK features. Our test activates the app, tries to log in and then presses the cancel button:
 
@@ -402,13 +409,15 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         }
         ```
 
-        **Note:** Read more about UITests framework and UI Automation by [the following link](https://docs.microsoft.com/appcenter/test-cloud/uitest/).
+        > [!TIP] 
+        > Read more about UITests framework and UI Automation by [the following link](https://docs.microsoft.com/appcenter/test-cloud/uitest/).
 
     - Create an iOS app in app center, create a new test run with a new device set to run the test:
 
         ![visual studio app center new](walkthrough-images/visualstudio-appcenter-new.png)
 
-        **Note:** Learn more about AppCenter Test Cloud by [the following link](https://docs.microsoft.com/appcenter/test-cloud/).
+        > [!TIP] 
+        > Learn more about AppCenter Test Cloud by [the following link](https://docs.microsoft.com/appcenter/test-cloud/).
 
     - Install the appcenter CLI
 
@@ -416,7 +425,8 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         npm install -g appcenter-cli
         ```
 
-        **Note:** make sure you have node v6.3 or later installed
+        > [!IMPORTANT]
+        > Make sure you have node v6.3 or later installed
 
     - Run the test using the following command. Also make sure your appcenter command line is currently logged in.
 
