@@ -45,7 +45,7 @@ Swift was initially introduced by Apple in 2014 and is now on version 5.1 with a
 
     - Add Swift dylib dependencies for runtime support. Starting from iOS 12.2 and Swift 5.1, the language became ABI (application binary interface) stable and compatible. Thus any application targeting a lower iOS version needs to include Swift dylibs dependencies used by the framework. Use the [SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) NuGet package to automatically include required dylib dependencies into the resulting application package.
 
-    - Add **SwiftSupport** folder with signed dylibs, which is validated by the AppStore during uploading process. The package should to be signed and distributed to the AppStore connect using Xcode tools, otherwise it will be automatically rejected.
+    - Add **SwiftSupport** folder with signed dylibs, which is validated by the AppStore during uploading process. The package should be signed and distributed to the AppStore connect using Xcode tools, otherwise it will be automatically rejected.
 
 ## The walkthrough
 
@@ -134,7 +134,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
     A few important notes on the code above:
 
     - Import Gigya module here from the original third-party Gigya SDK and now can access any member of the framework.
-    - Mark SwiftFrameworkProxy class with `@objc` attribute specifying the name, otherwise a unique unreadable name will be generated, such as `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`. The type name should be clearly defined because it will be used later by its name.
+    - Mark SwiftFrameworkProxy class with the `@objc` attribute specifying a name, otherwise a unique unreadable name will be generated, such as `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`. The type name should be clearly defined because it will be used later by its name.
     - Inherit the proxy class from `NSObject`, otherwise it won't be generated in the Objective-C header file.
     - Mark all the members to be exposed as `public`.
 
@@ -183,7 +183,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
     > [!TIP]
     > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
 
-1. There are two Swift frameworks, one for each platform, combine them as a single package to be embedded into a Xamarin.iOS binding project later. In order to create a fat framework which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
+1. There are two Swift frameworks, one for each platform, combine them as a single package to be embedded into a Xamarin.iOS binding project later. In order to create a fat framework, which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
 
     - Navigate to the build output folder with **Release-iphoneos** and **Release-iphonesimulator** subfolders and copy one of the frameworks as an initial version of the final output (fat framework).
 
@@ -363,7 +363,7 @@ The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS ap
 
 Congratulations! You have successfully created a Xamarin.iOS app and a binding library, which consumes a Swift framework. The application above will successfully run on iOS 12.2+ because starting from this iOS version [Apple introduced ABI stability](https://swift.org/blog/swift-5-1-released/) and every iOS starting 12.2+ includes Swift runtime libraries, which could be used to run your application compiled with Swift 5.1+. If you need to add support for earlier iOS versions, there are a few more steps to accomplish:
 
-1. In order to add support for iOS 12.1 and earlier you want to ship specific Swift dylibs used to compile your framework. In order to do that you need the [Xamarin.iOS.SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) NuGet package to process and copy required libs with your IPA. Add the NuGet reference to your target project and rebuild the application. No further steps are required, the NuGet package will install specific tasks which are executed with the build process, identify required Swift dylibs and package them with the final IPA.
+1. In order to add support for iOS 12.1 and earlier, you want to ship specific Swift dylibs used to compile your framework. Use the [Xamarin.iOS.SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) NuGet package to process and copy required libs with your IPA. Add the NuGet reference to your target project and rebuild the application. No further steps are required, the NuGet package will install specific tasks, which are executed with the build process, identify required Swift dylibs and package them with the final IPA.
 
 1. In order to submit the app to the app store you want to use Xcode and distribute option, which will update the IPA file and **SwiftSupport** folder dylibs so it will be accepted by the AppStore:
 
@@ -438,7 +438,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
         ![visual studio appcenter uitest result](walkthrough-images/visualstudio-appcenter-uitest-result.png)
 
-        From there select the desired test run and verify the result:
+        And select the desired test run and verify the result:
 
         ![visual studio appcenter uitest runs](walkthrough-images/visualstudio-appcenter-uitest-runs.png)
 
