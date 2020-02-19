@@ -265,19 +265,19 @@ Indicators, that represent the number of items and current position in a `Carous
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-In this example, the `IndicatorView` is rendered beneath the `CarouselView`, with an indicator for each item in the `CarouselView`. The `IndicatorView` is populated with data by setting the `ItemsSourceBy` property to the `CarouselView` object. Each indicator is a light gray circle, while the indicator that represents the current item in the `CarouselView` is dark gray:
+In this example, the `IndicatorView` is rendered beneath the `CarouselView`, with an indicator for each item in the `CarouselView`. The `IndicatorView` is populated with data by setting the `ItemsSourceBy` attached property to the `CarouselView` object. Each indicator is a light gray circle, while the indicator that represents the current item in the `CarouselView` is dark gray:
 
 [![Screenshot of a CarouselView and IndicatorView, on iOS and Android](populate-data-images/indicators.png "IndicatorView circles")](populate-data-images/indicators-large.png#lightbox "IndicatorView circles")
 
 > [!IMPORTANT]
-> Setting the `ItemsSourceBy` property results in the `IndicatorView.Position` property binding to the `CarouselView.Position` property, and the `IndicatorView.ItemsSource` property binding to the `CarouselView.ItemsSource` property.
+> Setting the `IndicatorView.ItemsSourceBy` attached property results in the `IndicatorView.Position` property binding to the `CarouselView.Position` property, and the `IndicatorView.ItemsSource` property binding to the `CarouselView.ItemsSource` property.
 
 For more information about indicators, see [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
 
