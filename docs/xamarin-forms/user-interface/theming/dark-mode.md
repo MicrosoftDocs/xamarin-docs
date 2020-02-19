@@ -6,14 +6,14 @@ ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
 ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
-ms.date: 02/01/2020
+ms.date: 02/19/2020
 ---
 
 # Dark mode in Xamarin.Forms applications
 
 Xamarin.Forms applications can respond to operating system theme changes by using the same strategy that enables you to support [theming](theming.md). The main difference is in how the change of theme is triggered. Dark mode refers to a broader set of appearance preferences that can be set at the operating system level, and which applications are expected to respect and respond to immediately.
 
-The minimum requirements for dark mode are:
+The minimum requirements for using dark mode in your Xamarin.Forms applications are:
 
 - iOS 13 or greater.
 - Android 9 or greater (Android 9 supports appearance modes that you can query).
@@ -21,7 +21,7 @@ The minimum requirements for dark mode are:
 - UWP v10.0.10240.0 or greater.
 - Xamarin.Forms (any version).
 
-The process of supporting appearance modes, including dark and light, is as follows:
+The process of supporting appearance modes, including light and dark, is as follows:
 
 1. Define resources shared by your entire application in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary).
 2. Define a resource dictionary theme for each appearance mode that provides overrides specific to each style you wish to change.
@@ -29,14 +29,14 @@ The process of supporting appearance modes, including dark and light, is as foll
 4. Style your application using the `DynamicResource` markup extension where you want styles to react when appearance modes change.
 5. Add code to listen for OS theme changes, and load your application's corresponding theme.
 
-The following screenshots show themed pages, one for dark mode and another for light mode:
+The following screenshots show themed pages, for light and dark mode:
 
 [![Screenshot of the main page of a themed app, on iOS and Android](theming-images/main-page-both-themes.png "Main page of themed app")](theming-images/main-page-both-themes-large.png#lightbox "Main page of themed app")
 [![Screenshot of the detail page of a themed app, on iOS and Android](theming-images/detail-page-both-themes.png "Detail page of themed app")](theming-images/detail-page-both-themes-large.png#lightbox "Detail page of themed app")
 
 ## Define themes
 
-Follow the[theming guide](theming.md) for step by step details about creating dark and light themes.
+Follow the [theming guide](theming.md) for step by step details about creating dark and light themes.
 
 ## React to appearance mode changes
 
