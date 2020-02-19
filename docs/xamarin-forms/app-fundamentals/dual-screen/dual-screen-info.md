@@ -20,8 +20,9 @@ The `DualScreenInfo` class enables you to determine which pane your view is on, 
 - `SpanningBounds` returns, when spanned across two screens, two rectangles indicating the bounds of each visible area. If the window isn't spanned this will return an empty array.
 - `HingeBounds` indicates the position of the hinge on the screen.
 - `IsLandscape` indicates if the device is landscape. This is useful because native orientation APIs don't report orientation correctly when an application is spanned.
-- `PropertyChanged` fires when any properties change.
 - `SpanMode` indicates if the layout is in tall, wide, or single pane mode.
+
+In addition, a `PropertyChanged` event fires when any properties change.
 
 ## Poll hinge angle on Android
 
@@ -100,11 +101,11 @@ if(currentWindow.SpanMode == TwoPaneViewMode.SinglePane)
 }
 else if(currentWindow.SpanMode == TwoPaneViewMode.Tall)
 {
-    // window is spanned across two screens and oriented as landscape
+    // window is spanned across two screens and oriented top-bottom
 }
 else if(currentWindow.SpanMode == TwoPaneViewMode.Wide)
 {
-    // window is spanned across two screens and oriented as portrait
+    // window is spanned across two screens and oriented side-by-side
 }
 
 // Detect if any of the properties on DualScreenInfo change.

@@ -34,10 +34,10 @@ Forms.SetFlags("IndicatorView_Experimental");
 - `IndicatorLayout`, of type `Layout<View>`, defines the layout class used to render the `IndicatorView`. This property is set by Xamarin.Forms, and does not typically need to be set by developers.
 - `IndicatorTemplate`, of type `DataTemplate`, the template that defines the appearance of each indicator.
 - `IndicatorsShape`, of type `IndicatorShape`, the shape of each indicator.
-- `ItemsSource`, of type `IEnumerable`, the collection that indicators will be displayed for. This property will automatically be set when the `ItemsSourceBy` property is set.
-- `ItemsSourceBy`, of type `VisualElement`, the `CarouselView` object to display indicators for.
+- `ItemsSource`, of type `IEnumerable`, the collection that indicators will be displayed for. This property will automatically be set when the `ItemsSourceBy` attached property is set.
+- `ItemsSourceBy`, of type `VisualElement`, the `CarouselView` object to display indicators for. This is an attached property.
 - `MaximumVisible`, of type `int`, the maximum number of visible indicators. The default value is `int.MaxValue`.
-- `Position`, of type `int`, the currently selected indicator index. This property uses a `TwoWay` binding. This property will automatically be set when the `ItemsSourceBy` property is set.
+- `Position`, of type `int`, the currently selected indicator index. This property uses a `TwoWay` binding. This property will automatically be set when the `ItemsSourceBy` attached property is set.
 - `SelectedIndicatorColor`, of type `Color`, the color of the indicator that represents the current item in the `CarouselView`.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
@@ -54,17 +54,17 @@ The following example shows how to instantiate an `IndicatorView` in XAML:
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="DarkGray"
                    HorizontalOptions="Center" />
 </StackLayout>
 ```
 
-In this example, the `IndicatorView` is rendered beneath the `CarouselView`, with an indicator for each item in the `CarouselView`. The `IndicatorView` is populated with data by setting the `ItemsSourceBy` property to the `CarouselView` object. Each indicator is a light gray circle, while the indicator that represents the current item in the `CarouselView` is dark gray.
+In this example, the `IndicatorView` is rendered beneath the `CarouselView`, with an indicator for each item in the `CarouselView`. The `IndicatorView` is populated with data by setting the `ItemsSourceBy` attached property to the `CarouselView` object. Each indicator is a light gray circle, while the indicator that represents the current item in the `CarouselView` is dark gray.
 
 > [!IMPORTANT]
-> Setting the `ItemsSourceBy` property results in the `Position` property binding to the `CarouselView.Position` property, and the `ItemsSource` property binding to the `CarouselView.ItemsSource` property.
+> Setting the `ItemsSourceBy` attached property results in the `Position` property binding to the `CarouselView.Position` property, and the `ItemsSource` property binding to the `CarouselView.ItemsSource` property.
 
 ## Change indicator shape
 
@@ -77,7 +77,7 @@ The following example shows an `IndicatorView` configured to use square indicato
 
 ```xaml
 <IndicatorView IndicatorsShape="Square"
-               ItemsSourceBy="carouselView"
+               IndicatorView.ItemsSourceBy="carouselView"
                IndicatorColor="LightGray"
                SelectedIndicatorColor="DarkGray" />
 ```
@@ -94,7 +94,7 @@ The appearance of each indicator can be defined by setting the `IndicatorView.In
             <!-- DataTemplate that defines item appearance -->
         </CarouselView.ItemTemplate>
     </CarouselView>
-    <IndicatorView ItemsSourceBy="carouselView"
+    <IndicatorView IndicatorView.ItemsSourceBy="carouselView"
                    IndicatorColor="LightGray"
                    SelectedIndicatorColor="Black"
                    HorizontalOptions="Center">
