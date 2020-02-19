@@ -11,7 +11,7 @@ ms.date: 02/18/2020
 
 # Theming a Xamarin.Forms Application
 
-## [Theming](theming.md)
+## [Theme an Application](theming.md)
 
 Theming can be implemented in Xamarin.Forms applications by creating a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for each theme, and then loading the resources with the `DynamicResource` markup extension.
 

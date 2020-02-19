@@ -1,5 +1,5 @@
 ---
-title: "Dark mode in Xamarin.Forms applications"
+title: "Detect dark mode in Xamarin.Forms applications"
 description: "Dark mode can be supported in any Xamarin.Forms application using a combination of ResourceDictionaries, DynamicResources, and platform knowledge."
 ms.prod: xamarin
 ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/19/2020
 ---
 
-# Dark mode in Xamarin.Forms applications
+# Detect dark mode in Xamarin.Forms applications
 
 Xamarin.Forms applications can respond to operating system theme changes by using the same strategy that enables you to support [theming](theming.md). The main difference is in how the change of theme is triggered. Dark mode refers to a broader set of appearance preferences that can be set at the operating system level, and which applications are expected to respect and respond to immediately.
 
