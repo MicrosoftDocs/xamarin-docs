@@ -67,9 +67,9 @@ This header exposes the public interfaces, which will be used to created Xamarin
 - Update the Swift source code to generate the header and mark the required members with `@objc` attribute
 - Build a proxy framework where you control the public interface and proxy all the calls to underlying framework
 
-In this tutorial, we are going to use the second approach as it has fewer dependencies on third-party source code, which is not always available. Another reason to avoid the first approach is the additional effort required to support future framework changes. Once you start adding changes to the third-party source code, you are responsible for supporting these changes and potentially merging them with every future update.
+In this tutorial, the second approach is described as it has fewer dependencies on third-party source code, which is not always available. Another reason to avoid the first approach is the additional effort required to support future framework changes. Once you start adding changes to the third-party source code, you are responsible for supporting these changes and potentially merging them with every future update.
 
-As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https://developers.gigya.com/display/GD/Swift+SDK).
+As an example, in this tutorial a binding for the [Gigya Swift SDK](https://developers.gigya.com/display/GD/Swift+SDK) is created.
 
 1. Open Xcode and create new Swift framework, which will be a proxy between Xamarin.iOS code and third-party Swift framework. Click **File > New > Project** and follow the wizard steps:
 
@@ -87,11 +87,11 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
 
     Verify that the Swift framework has been added to the project otherwise the following options won't be available.
 
-1. Ensure that the **Do Not Embed** option is selected as we are going to control it manually later:
+1. Ensure that the **Do Not Embed** option is selected, which will be later controlled manually:
 
     ![xcode donotembed option](walkthrough-images/xcode-donotembed-option.png)
 
-1. Ensure that the Build Settings option **Always Embed Swift Standard Libraries**, which includes Swift libraries with the framework is set to No. We are going to manually control which Swift dylibs are included into the final package:
+1. Ensure that the Build Settings option **Always Embed Swift Standard Libraries**, which includes Swift libraries with the framework is set to No. It will be later manually controlled, which Swift dylibs are included into the final package:
 
     ![xcode always embed false option](walkthrough-images/xcode-alwaysembedfalse-option.png)
 
@@ -111,7 +111,7 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
 
     ![xcode objectice-c header enabled option](walkthrough-images/xcode-objcheaderenabled-option.png)
 
-1. Expose desired methods and mark them with `@objc` attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. In our tutorial, we want to expose the initialization logic for the underlying Gigya Swift SDK. Let's create a new Swift file **SwiftFrameworkProxy.swift** and define the following code:
+1. Expose desired methods and mark them with `@objc` attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **SwiftFrameworkProxy.swift** and defining the following code:
 
     ```swift
     import Foundation
@@ -133,10 +133,10 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
 
     A few important notes on the code above:
 
-    - We import Gigya module here from the original third-party Gigya SDK and now can access any member of the framework.
-    - We mark SwiftFrameworkProxy class with `@objc` attribute specifying the name, otherwise a unique unreadable name will be generated, such as `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`. As long as we need to know the actual name of a class, we want it to be clearly defined.
-    - We inherit our new class from `NSObject`, otherwise it won't be generated in the Objective-C header file.
-    - We mark all the members to be exposed as `public`.
+    - Import Gigya module here from the original third-party Gigya SDK and now can access any member of the framework.
+    - Mark SwiftFrameworkProxy class with `@objc` attribute specifying the name, otherwise a unique unreadable name will be generated, such as `_TtC19SwiftFrameworkProxy19SwiftFrameworkProxy`. The type name should be clearly defined because it will be used later by its name.
+    - Inherit the proxy class from `NSObject`, otherwise it won't be generated in the Objective-C header file.
+    - Mark all the members to be exposed as `public`.
 
 1. Change the scheme build configuration from **Debug** to **Release**. In order to do that, open the **Xcode > Target > Edit Scheme** dialog and then set the Build Configuration option to Release:
 
@@ -144,7 +144,7 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
 
     ![xcode edit scheme release](walkthrough-images/xcode-edit-scheme-release.png)
 
-1. At this point, our Framework is ready to be created. We need to build the framework for both simulator and device architectures and then combine the outputs as a single framework package. We want to know installed SDK versions in order to build the source code using xcodebuild tool:
+1. At this point, the Framework is ready to be created. Build the framework for both simulator and device architectures and then combine the outputs as a single framework package. Identify installed SDK versions in order to build the source code using **xcodebuild** tool:
 
     ```bash
     xcodebuild -showsdks
@@ -170,7 +170,7 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
             Simulator - watchOS 6.1         -sdk watchsimulator6.1
     ```
 
-    Pick a desired iOS SDK and iOS Simulator SDK version, in our case version 13.2 and execute the build with the following command
+    Pick a desired iOS SDK and iOS Simulator SDK version, in this case version 13.2 and execute the build with the following command
 
     ```bash
     xcodebuild -sdk iphonesimulator13.2 -project "Swift/SwiftFrameworkProxy/SwiftFrameworkProxy.xcodeproj" -configuration Release
@@ -183,7 +183,7 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
     > [!TIP]
     > You can also use [the helper script](https://github.com/alexeystrakh/xamarin-binding-swift-framework/blob/master/Swift/Scripts/build.fat.sh#L3-L14) to build the framework for all applicable architectures or just build it from the Xcode switching Simulator and Device in the target selector.
 
-1. Now we have two Swift frameworks, one for each platform, and we need to combine them as a single package to be embedded into a Xamarin.iOS binding project later. In order to create a fat framework which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
+1. There are two Swift frameworks, one for each platform, combine them as a single package to be embedded into a Xamarin.iOS binding project later. In order to create a fat framework which combines both architectures, you need to do the following steps. The framework package is just a folder so you can do all types of operations, such as adding, removing, and replacing files:
 
     - Navigate to the build output folder with **Release-iphoneos** and **Release-iphonesimulator** subfolders and copy one of the frameworks as an initial version of the final output (fat framework).
 
@@ -223,7 +223,7 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
 
 ### Step 2. Prepare metadata
 
-Now we have the framework with the Objective-C generated interface header ready to be consumed by our Xamarin.iOS binding.  The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) tool and the generated header file. Let's use Sharpie to generate the metadata.
+At this time, you should have the framework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding.  The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) tool and the generated header file. Use Sharpie to generate the metadata.
 
 1. Download the latest [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) tool from the official downloads website and install it by following the wizard. Once the installation is completed, you can verify it by running the sharpie command:
 
@@ -237,7 +237,7 @@ Now we have the framework with the Objective-C generated interface header ready 
     sharpie bind --sdk=iphoneos13.2 --output="XamarinApiDef" --namespace="Binding" --scope="Release-fat/SwiftFrameworkProxy.framework/Headers/" "Release-fat/SwiftFrameworkProxy.framework/Headers/SwiftFrameworkProxy-Swift.h"
     ```
 
-    The output reflects the metadata files being generated: **ApiDefinitions.cs** and **StructsAndEnums.cs**. Save them for the next step, we are going to include these files into our Xamarin.iOS binding project along with the native references:
+    The output reflects the metadata files being generated: **ApiDefinitions.cs** and **StructsAndEnums.cs**. Save these files for the next step to include them into a Xamarin.iOS binding project along with the native references:
 
     ```bash
     Parsing 1 header files...
@@ -263,11 +263,11 @@ Now we have the framework with the Objective-C generated interface header ready 
 
 The next step is to create a Xamarin.iOS binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library.
 
-1. Open Visual Studio for Mac and create a new Xamarin.iOS binding library project, give it a name, in our case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: **iOS > Library > Binding Library**:
+1. Open Visual Studio for Mac and create a new Xamarin.iOS binding library project, give it a name, in this case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: **iOS > Library > Binding Library**:
 
     ![visual studio create binding library](walkthrough-images/visualstudio-create-binding-library.png)
 
-1. Delete existing metadata files **ApiDefinition.cs** and **Structs.cs** as we are going to replace them completely with the metadata generated by the Objective Sharpie tool.
+1. Delete existing metadata files **ApiDefinition.cs** and **Structs.cs** as they will be replaced completely with the metadata generated by the Objective Sharpie tool.
 1. Copy metadata generated by Sharpie at one of the previous steps, select the following Build Action in the properties window: **ObjBindingApiDefinition** for the **ApiDefinitions.cs** file and **ObjBindingCoreSource** for the **StructsAndEnums.cs** file:
 
     ![visual studio project structure metadata](walkthrough-images/visualstudio-project-structure-metadata.png)
@@ -287,7 +287,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
     Even though it's a valid C# code, it's not used as is but instead is used by Xamarin.iOS tools to generate C# classes based on this metadata definition. As a result, instead of the interface SwiftFrameworkProxy you get a C# class with the same name, which can be instantiated by your Xamarin.iOS code. This class gets methods, properties, and other members defined by your metadata, which you will call in a C# manner.
 
-1. Add native reference to the generated earlier fat framework, as well as each dependency of that framework. In our case, we should add both SwiftFrameworkProxy and Gigya framework native references to the binding project.
+1. Add native reference to the generated earlier fat framework, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and Gigya framework native references to the binding project.
 
     - To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them.
 
@@ -297,11 +297,11 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
         - Set Smart Link = true
         - Set Force Load = false
-        - Set list of Frameworks used to create the original frameworks. In our case each framework has only two dependencies: Foundation and UIKit. Set it to the Frameworks field:
+        - Set list of Frameworks used to create the original frameworks. In this case each framework has only two dependencies: Foundation and UIKit. Set it to the Frameworks field:
 
         ![visual studio nativeref proxy options](walkthrough-images/visualstudio-nativeref-proxy-options.png)
 
-        If you have any additional linker flags to specify, set them in the linker flags field. In our case, we keep it empty.
+        If you have any additional linker flags to specify, set them in the linker flags field. In this case, keep it empty.
 
     - Specify additional linker flags when needed. If the library you’re binding exposes only Objective-C APIs but internally is using Swift, then you might be seeing issues like:
 
@@ -319,11 +319,11 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
         The first two options (the `-L ...` ones) tell the native compiler where to find the swift libraries. The native compiler will ignore libraries that don't have the correct architecture, which means that it's possible to pass the location for both simulator libraries and device libraries at the same time, so that it works for both simulator and device builds (these paths are only correct for iOS; for tvOS and watchOS they have to be updated). One downside is that this approach requires that the correct Xcode is in /Application/Xcode.app, if the consumer of the binding library has Xcode in a different location, it won't work. The alternative solution is to add these options in the additional mtouch arguments in the executable project's iOS Build options (`--gcc_flags -L... -L...`). The third option makes the native linker store the location of the swift libraries in the executable, so that the OS can find them.
 
-1. The final action is to build the library and make sure you don't have any compilation errors. You will often find that bindings metadata produced by Objective Sharpie will be annotated with the `[Verify]` attribute. These attributes indicate that you should verify that Objective Sharpie did the correct thing by comparing the binding with the original Objective-C declaration (which will be provided in a comment above the bound declaration). You can learn more about members marked with the attribute by [the following link](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Once the project is built, it can be consumed by our Xamarin.iOS application.
+1. The final action is to build the library and make sure you don't have any compilation errors. You will often find that bindings metadata produced by Objective Sharpie will be annotated with the `[Verify]` attribute. These attributes indicate that you should verify that Objective Sharpie did the correct thing by comparing the binding with the original Objective-C declaration (which will be provided in a comment above the bound declaration). You can learn more about members marked with the attribute by [the following link](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/platform/verify). Once the project is built, it can be consumed by a Xamarin.iOS application.
 
 ### Step 4. Consume the binding library
 
-The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Let's create a new Xamarin.iOS project, add reference to the binding library, and activate Gigya Swift SDK.
+The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Create a new Xamarin.iOS project, add reference to the binding library, and activate Gigya Swift SDK.
 
 1. Create Xamarin.iOS project. You can use the **iOS > App > Single View App** as a starting point
 
@@ -388,7 +388,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         > [!TIP] 
         > You can find more information on how to create a UITest project and configure it for your app by [the following link](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
-    - Create a basic test to run the app and use some of the Swift SDK features. Our test activates the app, tries to log in and then presses the cancel button:
+    - Create a basic test to run the app and use some of the Swift SDK features. This test activates the app, tries to log in and then presses the cancel button:
 
         ```csharp
         [Test]
@@ -444,7 +444,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
 ## Wrapping up
 
-We should now have a basic Xamarin.iOS application that uses a native Swift framework via our Xamarin.iOS binding library. The example provides a simplistic way to use the selected framework and in real application you will be required to expose more APIs and prepare metadata for these APIs. The script to generate metadata will simplify the future changes to the framework APIs. Below you can find additional resources providing further reading around most of the key concepts touched upon here.
+You have developed a basic Xamarin.iOS application that uses a native Swift framework via a Xamarin.iOS binding library. The example provides a simplistic way to use the selected framework and in real application you will be required to expose more APIs and prepare metadata for these APIs. The script to generate metadata will simplify the future changes to the framework APIs. Below you can find additional resources providing further reading around most of the key concepts touched upon here.
 
 - [Xcode](https://apps.apple.com/us/app/xcode/id497799835)
 - [Visual Studio for Mac](https://visualstudio.microsoft.com/downloads)
