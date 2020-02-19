@@ -17,4 +17,4 @@ Theming can be implemented in Xamarin.Forms applications by creating a [`Resourc
 
 ## [Detect Dark Mode](dark-mode.md)
 
-Dark mode can be supported in any Xamarin.Forms application using a combination of [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) objects, dynamic resources, and platform knowledge.
+Dark mode can be supported in any Xamarin.Forms application by using a combination of [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) objects, dynamic resources, and platform knowledge.
