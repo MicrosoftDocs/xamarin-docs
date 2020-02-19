@@ -1,22 +1,25 @@
 ---
-title: "SUpporting Dark Mode in a Xamarin.Forms Application"
-description: "Dark Mode can easily be supporting in any Xamarin.Forms application using a combination of ResourceDictionaries, DynamicResources, and platform knowledge."
+title: "Dark mode in Xamarin.Forms applications"
+description: "Dark mode can be supported in any Xamarin.Forms application using a combination of ResourceDictionaries, DynamicResources, and platform knowledge."
+ms.prod: xamarin
+ms.assetid: D10506DD-BAA0-437F-A4AD-882D16E7B60D
+ms.technology: xamarin-forms
+author: davidortinau
+ms.author: daortin
 ms.date: 02/01/2020
 ---
 
-# Dark Mode in a Xamarin.Forms Application
+# Dark mode in Xamarin.Forms applications
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
+Xamarin.Forms applications can respond to operating system theme changes by using the same strategy that enables you to support [theming](theming.md). The main difference is in how the change of theme is triggered. Dark mode refers to a broader set of appearance preferences that can be set at the operating system level, and which applications are expected to respect and respond to immediately.
 
-Xamarin.Forms applications can respond to operating system theme changes by using the same strategy that enables you to support [theming](theming.md). The main difference is in how the change of theme is triggered. Dark Mode refers to a broader set of display appearance preferences that can be set at the operating system level, and which applications are expected to respect and respond to immediately. 
+The minimum requirements for dark mode are:
 
-Minimum Requirements:
-
-* iOS 13 or greater
-* Android 9 supports appearance modes that you can query
-* Android 10 notifies apps of mode changes
-* UWP v10.0.10240.0 or greater
-* Xamarin.Forms any version
+- iOS 13 or greater.
+- Android 9 or greater (Android 9 supports appearance modes that you can query).
+- Android 10 or greater (Android 10 notifies apps of mode changes).
+- UWP v10.0.10240.0 or greater.
+- Xamarin.Forms (any version).
 
 The process of supporting appearance modes, including dark and light, is as follows:
 
@@ -33,15 +36,15 @@ The following screenshots show themed pages, one for dark mode and another for l
 
 ## Define themes
 
-Follow our [theming guide](theming.md) for step by step details about creating dark and light themes.
+Follow the[theming guide](theming.md) for step by step details about creating dark and light themes.
 
-## Reacting to appearance mode changes
+## React to appearance mode changes
 
-The appearance mode on a device may change for a variety of reasons depending on how the user has configured their preferences including explicitly choosing a mode, time of day, or environmental factors such as low-light. To make sure you're application can react to those changes, you'll want to add a bit of platform code such as the following:
+The appearance mode on a device may change for a variety of reasons depending on how the user has configured their preferences including explicitly choosing a mode, time of day, or environmental factors such as low-light. You'll have to add platform code to ensure your application can react to these changes, and the following sections discuss this in more detail.
 
-# [Android](#tab/android)
+### Android
 
-Add `ConfigChanges.UiMode` to `ConfigurationChanges` in your application's **MainActivity.cs** so your app can be notified of changes.
+In your application's **MainActivity.cs** file, add the `ConfigChanges.UiMode` field to the `ConfigurationChanges` property in the `Activity` attribute, so that your app will be notified of UI mode changes:
 
 ```csharp
 [Activity(
@@ -49,7 +52,7 @@ Add `ConfigChanges.UiMode` to `ConfigurationChanges` in your application's **Mai
     ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation | ConfigChanges.UiMode)]
 ```
 
-In the same **MainActivity.cs** file, override the `OnConfigurationChanged` method.
+In the same **MainActivity.cs** file, override the `OnConfigurationChanged` method:
 
 ```csharp
 public override void OnConfigurationChanged(Configuration newConfig)
@@ -58,18 +61,20 @@ public override void OnConfigurationChanged(Configuration newConfig)
 
     if ((newConfig.UiMode & UiMode.NightNo) != 0)
     {
-        // change to light
+        // change to light theme
+        // e.g. App.Current.Resources = new YourLightTheme();
     }
     else
     {
-        // change to dark
+        // change to dark theme
+        // e.g. App.Current.Resources = new YourDarkTheme();
     }
 }
 ```
 
-# [iOS](#tab/ios)
+### iOS
 
-On iOS, appearance mode changes are notified on the UIViewController, which in Xamarin.Forms is the `ContentPage`. In order to override that method, create a custom renderer in your iOS project called `PageRenderer.cs`: 
+On iOS, appearance mode changes are notified on the UIViewController, which in Xamarin.Forms is the `ContentPage`. In order to override that method, create a custom renderer in your iOS project called `PageRenderer.cs`:
 
 ```csharp
 using System;
@@ -104,27 +109,25 @@ namespace YourApp.iOS.Renderers
         public override void TraitCollectionDidChange(UITraitCollection previousTraitCollection)
         {
             base.TraitCollectionDidChange(previousTraitCollection);
-            
+
             if(this.TraitCollection.UserInterfaceStyle != previousTraitCollection.UserInterfaceStyle)
             {
                 SetAppTheme();
             }
-
-            
         }
 
         void SetAppTheme()
         {
-            
             if (this.TraitCollection.UserInterfaceStyle == UIUserInterfaceStyle.Dark)
             {
-                // change to dark
+                // change to dark theme
+                // e.g. App.Current.Resources = new YourDarkTheme();
             }
             else
             {
-                // change to light
+                // change to light theme
+                // e.g. App.Current.Resources = new YourLightTheme();
             }
-        
         }
     }
 }
@@ -132,7 +135,7 @@ namespace YourApp.iOS.Renderers
 
 Overriding the `TraitCollectionDidChange` method enables you to act on a `UserInterfaceStyle` change.
 
-# [UWP](#tab/uwp)
+### UWP
 
 Add the following code to your application's **MainPage.xaml.cs** file:
 
@@ -160,24 +163,25 @@ public sealed partial class MainPage
         {
             Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
             {
-                // change to dark
+                // change to dark theme
+                // e.g. App.Current.Resources = new YourDarkTheme();
             });
-            
         }
         else
         {
             Xamarin.Essentials.MainThread.BeginInvokeOnMainThread(() =>
             {
-                // change to light
+                // change to light theme
+                // e.g. App.Current.Resources = new YourLightTheme();
             });
         }
     }
 }
 ```
 
-## Setting dark and light themes
+## Set dark and light themes
 
-After following the [theming](theming.md) guide, you can easily set a new theme for your application in the appropriate location of the platform code above. To load a new theme, simply replace the application's current resource dictionary like this:
+After following the [theming](theming.md) guide, you can easily set a new theme for your application in the appropriate location of the platform code above. To load a new theme, simply replace the application's current resource dictionary with a themed resource dictionary of your choice:
 
 ```csharp
 App.Current.Resources = new YourDarkTheme();
