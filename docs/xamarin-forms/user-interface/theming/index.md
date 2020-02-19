@@ -15,6 +15,6 @@ ms.date: 02/18/2020
 
 Theming can be implemented in Xamarin.Forms applications by creating a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for each theme, and then loading the resources with the `DynamicResource` markup extension.
 
-## [Dark Mode](dark-mode.md)
+## [Detect Dark Mode](dark-mode.md)
 
 Dark mode can be supported in any Xamarin.Forms application using a combination of [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) objects, dynamic resources, and platform knowledge.
