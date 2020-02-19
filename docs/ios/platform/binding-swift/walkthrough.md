@@ -61,15 +61,15 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 1. Ensure that the **Do Not Embed** option is selected, which will be later controlled manually:
 
-    ![xcode donotembed option](walkthrough-images/xcode-donotembed-option.png)
+    [![xcode donotembed option](walkthrough-images/xcode-donotembed-option.png)](walkthrough-images/xcode-donotembed-option.png#lightbox)
 
 1. Ensure that the Build Settings option **Always Embed Swift Standard Libraries**, which includes Swift libraries with the framework is set to No. It will be later manually controlled, which Swift dylibs are included into the final package:
 
-    ![xcode always embed false option](walkthrough-images/xcode-alwaysembedfalse-option.png)
+    [![xcode always embed false option](walkthrough-images/xcode-alwaysembedfalse-option.png)](walkthrough-images/xcode-alwaysembedfalse-option.png#lightbox)
 
 1. Ensure that the **Enable  Bitcode** option is set to **No**. As of right now Xamarin.iOS doesn't include Bitcode while Apple requires all libraries to support the same architectures:
 
-    ![xcode enable bitcode false option](walkthrough-images/xcode-enablebitcodefalse-option.png)
+    [![xcode enable bitcode false option](walkthrough-images/xcode-enablebitcodefalse-option.png)](walkthrough-images/xcode-enablebitcodefalse-option.png#lightbox)
 
     You can verify that the resulted framework has the Bitcode option disabled by running the following terminal command against the framework:
 
@@ -81,7 +81,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 1. Ensure that the **Objective-C Generated interface Header Name** option is enabled and specifies a header name. The default name is **\<FrameworkName>-Swift.h**:
 
-    ![xcode objectice-c header enabled option](walkthrough-images/xcode-objcheaderenabled-option.png)
+    [![xcode objectice-c header enabled option](walkthrough-images/xcode-objcheaderenabled-option.png)](walkthrough-images/xcode-objcheaderenabled-option.png#lightbox)
 
 1. Expose desired methods and mark them with `@objc` attribute and apply additional rules defined below. If you build the framework without this step, the generated Objective-C header will be empty and Xamarin.iOS won't be able to access the Swift framework members. Expose the initialization logic for the underlying Gigya Swift SDK by creating a new Swift file **SwiftFrameworkProxy.swift** and defining the following code:
 
@@ -331,7 +331,7 @@ The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS ap
 
 1. Run the app, in the debug output you should see the following line: `Gigya initialized with domain: us1.gigya.com`. Click the button to activate the authentication flow:
 
-    ![swift proxy result](walkthrough-images/swiftproxy-result.png)
+    [![swift proxy result](walkthrough-images/swiftproxy-result.png)](walkthrough-images/swiftproxy-result.png#lightbox)
 
 Congratulations! You have successfully created a Xamarin.iOS app and a binding library, which consumes a Swift framework. The application above will successfully run on iOS 12.2+ because starting from this iOS version [Apple introduced ABI stability](https://swift.org/blog/swift-5-1-released/) and every iOS starting 12.2+ includes Swift runtime libraries, which could be used to run your application compiled with Swift 5.1+. If you need to add support for earlier iOS versions, there are a few more steps to accomplish:
 
