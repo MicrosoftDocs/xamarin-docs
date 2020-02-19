@@ -137,7 +137,7 @@ Overriding the `TraitCollectionDidChange` method enables you to act on a `UserIn
 
 ### UWP
 
-Add the following code to your application's **MainPage.xaml.cs** file:
+On UWP, add the following code to your application's **MainPage.xaml.cs** file:
 
 ```csharp
 public sealed partial class MainPage
