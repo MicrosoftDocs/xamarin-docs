@@ -555,7 +555,12 @@
                 - name: Styling Xamarin.Forms Apps using Cascading Style Sheets (CSS)
                   href: user-interface/styles/css/index.md
             - name: Theming
-              href: user-interface/theming.md
+              href: user-interface/theming/index.md
+              items:
+              - name: Theme an Application
+                href: user-interface/theming/theming.md
+              - name: Detect Dark Mode
+                href: user-interface/theming/dark-mode.md
             - name: Visual
               href: user-interface/visual/index.md
               items:

@@ -1,5 +1,5 @@
 ---
-title: "Theming a Xamarin.Forms Application"
+title: "Theme a Xamarin.Forms Application"
 description: "Theming can be implemented in Xamarin.Forms applications by creating a ResourceDictionary for each theme, and then loading the resources with the DynamicResource markup extension."
 ms.prod: xamarin
 ms.assetId: B7B17F66-4E37-4B50-9A57-351B62BE4FED
@@ -9,7 +9,7 @@ ms.author: dabritch
 ms.date: 08/07/2019
 ---
 
-# Theming a Xamarin.Forms Application
+# Theme a Xamarin.Forms Application
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-theming/)
 
@@ -215,3 +215,4 @@ void OnPickerSelectionChanged(object sender, EventArgs e)
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Dynamic Styles in Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
 - [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md)
+- [Dark Mode](dark-mode.md)
