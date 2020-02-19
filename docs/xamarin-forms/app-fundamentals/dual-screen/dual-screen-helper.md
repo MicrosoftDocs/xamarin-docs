@@ -13,12 +13,12 @@ ms.date: 02/08/2020
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
 
-The `DualScreenHelper` class can be used to detect if a device supports Picture in Picture mode and then lets you open a `ContentPage` as a picture in picture window. If you're running on a Neo device this will open the page into the WonderBar when in compose mode.
+The `DualScreenHelper` class can be used to detect if a device supports Picture in Picture mode and then lets you open a `ContentPage` as a picture in picture window. If you're running on a Neo device, it will open the page into the WonderBar when in compose mode.
 
 ## Properties
 
 - `HasCompactModeSupport` is used to check if the platform supports opening a `ContentPage` in CompactMode.
-- `OpenCompactMode` if the platform supports it this will open a `ContentPage` in CompactMode.
+- `OpenCompactMode` opens a `ContentPage` in CompactMode, if supported by the platform.
 
 ## Example
 
