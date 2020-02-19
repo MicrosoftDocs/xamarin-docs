@@ -30,7 +30,7 @@ Xamarin.Forms is for developers with the following goals:
 
 Xamarin.Forms provides a consistent API for creating UI elements across platforms. This API can be implemented in either XAML or C# and supports databinding for patterns such as Model-View-ViewModel (MVVM).
 
-At runtime, Xamarin.Forms utilizes platform renderers to convert the cross-platform UI elements into native controls on Android, iOS and UWP. The allows developers to get native look, feel and performance while realizing the benefits of code sharing across platforms.
+At runtime, Xamarin.Forms utilizes platform renderers to convert the cross-platform UI elements into native controls on Android, iOS and UWP. This allows developers to get the native look, feel and performance while realizing the benefits of code sharing across platforms.
 
 Xamarin.Forms applications typically consist of a shared .NET Standard library and individual platform projects. The shared library contains the XAML or C# views and any business logic such as services, models or other code. The platform projects contain any platform-specific logic or packages the application requires.
 
