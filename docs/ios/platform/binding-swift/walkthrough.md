@@ -69,7 +69,7 @@ This header exposes the public interfaces, which will be used to created Xamarin
 
 In this tutorial, the second approach is described as it has fewer dependencies on third-party source code, which is not always available. Another reason to avoid the first approach is the additional effort required to support future framework changes. Once you start adding changes to the third-party source code, you are responsible for supporting these changes and potentially merging them with every future update.
 
-As an example, in this tutorial a binding for the [Gigya Swift SDK](https://developers.gigya.com/display/GD/Swift+SDK) is created.
+As an example, in this tutorial a binding for the [Gigya Swift SDK](https://developers.gigya.com/display/GD/Swift+SDK) is created:
 
 1. Open Xcode and create new Swift framework, which will be a proxy between Xamarin.iOS code and third-party Swift framework. Click **File > New > Project** and follow the wizard steps:
 
@@ -223,7 +223,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 ### Step 2. Prepare metadata
 
-At this time, you should have the framework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding.  The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) tool and the generated header file. Use Sharpie to generate the metadata.
+At this time, you should have the framework with the Objective-C generated interface header ready to be consumed by a Xamarin.iOS binding.  The next step is to prepare the API definition interfaces, which are used by a binding project to generate C# classes. These definitions could be created manually or automatically by the [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) tool and the generated header file. Use Sharpie to generate the metadata:
 
 1. Download the latest [Objective Sharpie](https://docs.microsoft.com/xamarin/cross-platform/macios/binding/objective-sharpie/) tool from the official downloads website and install it by following the wizard. Once the installation is completed, you can verify it by running the sharpie command:
 
@@ -261,7 +261,7 @@ At this time, you should have the framework with the Objective-C generated inter
 
 ### Step 3. Build a binding library
 
-The next step is to create a Xamarin.iOS binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library.
+The next step is to create a Xamarin.iOS binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library:
 
 1. Open Visual Studio for Mac and create a new Xamarin.iOS binding library project, give it a name, in this case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: **iOS > Library > Binding Library**:
 
@@ -287,13 +287,13 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
     Even though it's a valid C# code, it's not used as is but instead is used by Xamarin.iOS tools to generate C# classes based on this metadata definition. As a result, instead of the interface SwiftFrameworkProxy you get a C# class with the same name, which can be instantiated by your Xamarin.iOS code. This class gets methods, properties, and other members defined by your metadata, which you will call in a C# manner.
 
-1. Add native reference to the generated earlier fat framework, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and Gigya framework native references to the binding project.
+1. Add native reference to the generated earlier fat framework, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and Gigya framework native references to the binding project:
 
     - To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them.
 
     ![visual studio project structure native references](walkthrough-images/visualstudio-project-structure-nativerefs.png)
 
-    - Update properties of every native reference and check three important options
+    - Update properties of every native reference and check three important options:
 
         - Set Smart Link = true
         - Set Force Load = false
@@ -323,7 +323,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
 ### Step 4. Consume the binding library
 
-The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Create a new Xamarin.iOS project, add reference to the binding library, and activate Gigya Swift SDK.
+The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Create a new Xamarin.iOS project, add reference to the binding library, and activate Gigya Swift SDK:
 
 1. Create Xamarin.iOS project. You can use the **iOS > App > Single View App** as a starting point
 
@@ -361,7 +361,7 @@ The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS ap
 
     ![swift proxy result](walkthrough-images/swiftproxy-result.png)
 
-Congratulations! You have successfully created a Xamarin.iOS app and a binding library, which consumes a Swift framework. The application above will successfully run on iOS 12.2+ because starting from this iOS version [Apple introduced ABI stability](https://swift.org/blog/swift-5-1-released/) and every iOS starting 12.2+ includes Swift runtime libraries, which could be used to run your application compiled with Swift 5.1+. If you need to add support for earlier iOS versions, there are a few more steps to accomplish.
+Congratulations! You have successfully created a Xamarin.iOS app and a binding library, which consumes a Swift framework. The application above will successfully run on iOS 12.2+ because starting from this iOS version [Apple introduced ABI stability](https://swift.org/blog/swift-5-1-released/) and every iOS starting 12.2+ includes Swift runtime libraries, which could be used to run your application compiled with Swift 5.1+. If you need to add support for earlier iOS versions, there are a few more steps to accomplish:
 
 1. In order to add support for iOS 12.1 and earlier you want to ship specific Swift dylibs used to compile your framework. In order to do that you need the [Xamarin.iOS.SwiftRuntimeSupport](https://www.nuget.org/packages/Xamarin.iOS.SwiftRuntimeSupport/) NuGet package to process and copy required libs with your IPA. Add the NuGet reference to your target project and rebuild the application. No further steps are required, the NuGet package will install specific tasks which are executed with the build process, identify required Swift dylibs and package them with the final IPA.
 
@@ -379,7 +379,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
     Select the archive created at the previous step and click the Distribute App button. Follow the wizard to upload the application to the AppStore.
 
-1. This step is optional but it's important to verify that your app can run on iOS 12.1 and earlier as well as 12.2. You can do it with help of Test Cloud and UITest framework. Create a UITest project and a basic UI test, which runs the app.
+1. This step is optional but it's important to verify that your app can run on iOS 12.1 and earlier as well as 12.2. You can do it with help of Test Cloud and UITest framework. Create a UITest project and a basic UI test, which runs the app:
 
     - Create a UITest project and configure it for your Xamarin.iOS application
 
