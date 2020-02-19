@@ -71,7 +71,7 @@ In this tutorial, we are going to use the second approach as it has fewer depend
 
 As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https://developers.gigya.com/display/GD/Swift+SDK).
 
-1. Open Xcode and create new Swift Framework, which will be a proxy between Xamarin.iOS code and third-party Swift framework. Click File -> New -> Project and follow the wizard steps:
+1. Open Xcode and create new Swift Framework, which will be a proxy between Xamarin.iOS code and third-party Swift framework. Click **File > New > Project** and follow the wizard steps:
 
     ![xcode create framework project](walkthrough-images/xcode-create-framework-project.png)
 
@@ -138,7 +138,7 @@ As an example, in this tutorial we are going to bind the [Gigya Swift SDK](https
     - We inherit our new class from `NSObject`, otherwise it won't be generated in the Objective-C header file.
     - We mark all the members to be exposed as `public`.
 
-1. Change the scheme build configuration from **Debug** to **Release**. In order to do that, open the `Xcode -> Target -> Edit Scheme` dialog and then set the Build Configuration option to Release:
+1. Change the scheme build configuration from **Debug** to **Release**. In order to do that, open the **Xcode > Target > Edit Scheme** dialog and then set the Build Configuration option to Release:
 
     ![xcode edit scheme](walkthrough-images/xcode-edit-scheme.png)
 
@@ -257,7 +257,7 @@ Now we have the framework with the Objective-C generated interface header ready 
 
 The next step is to create a Xamarin.iOS binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library.
 
-1. Open Visual Studio for Mac and create a new Xamarin.iOS Binding Library project, give it a name, in our case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: iOS -> Library -> Binding Library:
+1. Open Visual Studio for Mac and create a new Xamarin.iOS Binding Library project, give it a name, in our case SwiftFrameworkProxy.Binding and complete the wizard. The Xamarin.iOS binding template is located by the following path: **iOS > Library > Binding Library**:
 
     ![visual studio create binding library](walkthrough-images/visualstudio-create-binding-library.png)
 
@@ -319,7 +319,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
 The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Let's create a new Xamarin.iOS project, add reference to the binding library, and activate Gigya Swift SDK.
 
-1. Create Xamarin.iOS project. You can use the iOS -> App -> Single View App as a starting point
+1. Create Xamarin.iOS project. You can use the **iOS > App > Single View App** as a starting point
 
     ![visual studio app new](walkthrough-images/visualstudio-app-new.png)
 
@@ -361,13 +361,13 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
 1. In order to submit the app to the app store you want to use Xcode and distribute option, which will update the IPA file and **SwiftSupport** folder dylibs so it will be accepted by the AppStore:
 
-    ○ Archive the app. From the Visual Studio for Mac menu select Build -> Archive for Publishing:
+    ○ Archive the app. From the Visual Studio for Mac menu select **Build > Archive for Publishing**:
 
     ![visual studio archive for publishing](walkthrough-images/visualstudio-archiveforpublishing.png)
 
     This action builds the project and achieves it to the Organizer, which is accessible by Xcode for distribution.
 
-    ○ Distribute via Xcode. Open Xcode and navigate to the Window -> Organizer menu option:
+    ○ Distribute via Xcode. Open Xcode and navigate to the **Window > Organizer** menu option:
 
     ![visual studio archives](walkthrough-images/visualstudio-archives.png)
 
@@ -424,7 +424,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         appcenter test run uitest --app "Mobile-Customer-Advisory-Team/SwiftBinding.iOS" --devices a7e7cb50 --app-path "Xamarin.SingleView.ipa" --test-series "master" --locale "en_US" --build-dir "Xamarin/Xamarin.SingleView.UITests/bin/Debug/"
         ```
 
-    - Verify the result. In the AppCenter portal, navigate to the App -> Test -> Test runs
+    - Verify the result. In the AppCenter portal, navigate to the **App > Test > Test runs**
 
          ![visual studio appcenter uitest result](walkthrough-images/visualstudio-appcenter-uitest-result.png)
 
