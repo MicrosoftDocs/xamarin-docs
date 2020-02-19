@@ -140,6 +140,10 @@ Binding Projects to create a C# binding to the native Objective-C libraries. The
 project uses the same tools that we use to bring the iOS APIs to C#. This
 document describes how to bind Objective-C APIs.
 
+## [Binding iOS Swift Libraries](binding-swift/index.md)
+
+This document describes how to create C# bindings to Swift code, making it possible to consume native libraries and CocoaPods in a Xamarin.iOS application.
+
 ## [Referencing native libraries](native-interop.md)
 
 Xamarin.iOS supports linking with both native C libraries and Objective-C
