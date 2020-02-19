@@ -45,6 +45,8 @@ landingContent:
             url: text/label.md
           - text: Map
             url: map/index.md
+          - text: MediaElement 
+            url: mediaelement.md
           - text: WebView
             url: webview.md
 
