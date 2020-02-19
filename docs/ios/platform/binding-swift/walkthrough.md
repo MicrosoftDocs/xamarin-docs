@@ -81,7 +81,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
 1. Select the **SwiftFrameworkProxy** from the project files explorer then select the General tab
 
-1. Drag and drop the **Gigya.framework** package to the Xcode Frameworks and Libraries list under the General tab check the **Copy items if needed** option while adding the framework.
+1. Drag and drop the **Gigya.framework** package to the Xcode Frameworks and Libraries list under the General tab check the **Copy items if needed** option while adding the framework:
 
     ![xcode copy framework](walkthrough-images/xcode-copy-framework.png)
 
@@ -107,7 +107,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
 
     The output should be empty otherwise you want to review the project settings for your specific configuration.
 
-1. Ensure that the **Objective-C Generated interface Header Name** option is enabled and specifies a header name. The default name is **\<FrameworkName>-Swift.h**
+1. Ensure that the **Objective-C Generated interface Header Name** option is enabled and specifies a header name. The default name is **\<FrameworkName>-Swift.h**:
 
     ![xcode objectice-c header enabled option](walkthrough-images/xcode-objcheaderenabled-option.png)
 
@@ -138,7 +138,7 @@ As an example, in this tutorial a binding for the [Gigya Swift SDK](https://deve
     - Inherit the proxy class from `NSObject`, otherwise it won't be generated in the Objective-C header file.
     - Mark all the members to be exposed as `public`.
 
-1. Change the scheme build configuration from **Debug** to **Release**. In order to do that, open the **Xcode > Target > Edit Scheme** dialog and then set the Build Configuration option to Release:
+1. Change the scheme build configuration from **Debug** to **Release**. In order to do that, open the **Xcode > Target > Edit Scheme** dialog and then set the **Build Configuration** option to **Release**:
 
     ![xcode edit scheme](walkthrough-images/xcode-edit-scheme.png)
 
@@ -289,7 +289,7 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
 1. Add native reference to the generated earlier fat framework, as well as each dependency of that framework. In this case, add both SwiftFrameworkProxy and Gigya framework native references to the binding project:
 
-    - To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them.
+    - To add native framework references, open finder and navigate to the folder with the frameworks. Drag and drop the frameworks under the Native References location in the Solution Explorer. Alternatively, you can use the context menu option on the Native References folder and click **Add Native Reference** to look up the frameworks and add them:
 
     ![visual studio project structure native references](walkthrough-images/visualstudio-project-structure-nativerefs.png)
 
@@ -325,11 +325,11 @@ The next step is to create a Xamarin.iOS binding project using the Visual Studio
 
 The final step is to consume the Xamarin.iOS binding library in a Xamarin.iOS application. Create a new Xamarin.iOS project, add reference to the binding library, and activate Gigya Swift SDK:
 
-1. Create Xamarin.iOS project. You can use the **iOS > App > Single View App** as a starting point
+1. Create Xamarin.iOS project. You can use the **iOS > App > Single View App** as a starting point:
 
     ![visual studio app new](walkthrough-images/visualstudio-app-new.png)
 
-1. Add a binding project reference to the target project or .dll created previously. Treat the binding library as a regular Xamarin.iOS library
+1. Add a binding project reference to the target project or .dll created previously. Treat the binding library as a regular Xamarin.iOS library:
 
     ![visual studio app refs](walkthrough-images/visualstudio-app-refs.png)
 
@@ -381,7 +381,7 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
 
 1. This step is optional but it's important to verify that your app can run on iOS 12.1 and earlier as well as 12.2. You can do it with help of Test Cloud and UITest framework. Create a UITest project and a basic UI test, which runs the app:
 
-    - Create a UITest project and configure it for your Xamarin.iOS application
+    - Create a UITest project and configure it for your Xamarin.iOS application:
 
         ![visual studio uitest new](walkthrough-images/visualstudio-uitest-new.png)
 
@@ -434,9 +434,9 @@ Congratulations! You have successfully created a Xamarin.iOS app and a binding l
         appcenter test run uitest --app "Mobile-Customer-Advisory-Team/SwiftBinding.iOS" --devices a7e7cb50 --app-path "Xamarin.SingleView.ipa" --test-series "master" --locale "en_US" --build-dir "Xamarin/Xamarin.SingleView.UITests/bin/Debug/"
         ```
 
-    - Verify the result. In the AppCenter portal, navigate to the **App > Test > Test runs**
+    - Verify the result. In the AppCenter portal, navigate to the **App > Test > Test runs**:
 
-         ![visual studio appcenter uitest result](walkthrough-images/visualstudio-appcenter-uitest-result.png)
+        ![visual studio appcenter uitest result](walkthrough-images/visualstudio-appcenter-uitest-result.png)
 
         From there select the desired test run and verify the result:
 
