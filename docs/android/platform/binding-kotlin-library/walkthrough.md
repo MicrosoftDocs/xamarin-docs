@@ -33,7 +33,7 @@ In order to complete this walkthrough, you will need:
 
 The first step is to build a native Kotlin library using Android Studio. The library is usually provided by a third-party developer or available at [the Google's Maven repository](https://maven.google.com/web/index.html) and other remote repositories. As an example, in this tutorial a binding for the Bubble Picker Kotlin Library is created:
 
-![GitHub BubblePicker demo](walkthrough-images/github-bubblepicker-demo.gif)
+![GitHub BubblePicker demo](walkthrough-images/github-bubblepicker-demo.png)
 
 1. Download [the source code](https://github.com/igalata/Bubble-Picker/archive/develop.zip) from GitHub for the library and unpack it to a local folder **Bubble-Picker**.
 
@@ -319,7 +319,7 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
 
 1. Run the app, which should render the Bubble Picker UI:
 
-    <img src="walkthrough-images/bubble-picker-demo.gif" width="300px">
+    ![BubblePicker demo](walkthrough-images/bubble-picker-demo.png)
 
     The sample requires additional code to render elements style and handle interactions but the `BubblePicker` control has been successfully created and activated.
 
