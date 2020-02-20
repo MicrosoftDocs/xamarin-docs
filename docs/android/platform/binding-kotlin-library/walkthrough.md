@@ -1,5 +1,5 @@
 ---
-title: "Walkthrough: Bind an Android Kotlin Library"
+title: "Walkthrough: Bind an Android Kotlin library"
 description: "This article provides a hands-on walkthrough of creating a Xamarin.Android binding for an existing Kotlin library, BubblePicker. It covers topics such as compiling a Kotlin library, binding it, and using the binding in a Xamarin.Android application."
 ms.prod: xamarin
 ms.assetid: 5E45451F-514F-4F2B-A6E8-599ED2EFDA2C
@@ -9,7 +9,7 @@ ms.author: alstrakh
 ms.date: 02/11/2020
 ---
 
-# Walkthrough: Bind an Android Kotlin Library
+# Walkthrough: Bind an Android Kotlin library
 
 Xamarin enables mobile developers to create cross-platform native mobile apps using Visual Studio and C#. You can use the Android platform SDK components out of the box but in many cases you also want to use third-party SDKs written for that platform and Xamarin allows you to do it via bindings. In order to incorporate a third-party Android framework into your Xamarin.Android application, you need to create a Xamarin.Android binding for it before you can use it in your applications.
 
