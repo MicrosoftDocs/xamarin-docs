@@ -31,7 +31,7 @@ In order to complete this walkthrough, you will need:
 
 ## Build a native library
 
-The first step is to build a native Kotlin library using Android Studio. The library is usually provided by a third-party developer or available at [the Google's Maven repository](https://maven.google.com/web/index.html) and other remote repositories. As an example, in this tutorial we are going to bind the Bubble Picker Kotlin Library available at GitHub:
+The first step is to build a native Kotlin library using Android Studio. The library is usually provided by a third-party developer or available at [the Google's Maven repository](https://maven.google.com/web/index.html) and other remote repositories. As an example, in this tutorial a binding for the Bubble Picker Kotlin Library is created:
 
 ![GitHub BubblePicker demo](walkthrough-images/github-bubblepicker-demo.gif)
 
@@ -107,7 +107,7 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
 
 1. Define xml transformations:
 
-- The native Kotlin library has two dependencies, which we don't want to expose to C# world so we define two transformations to ignore them completely. Important to say, the native members won't be stripped from the resulting binary, only C# classes won't be generated. [Java Decompiler](http://java-decompiler.github.io/) can be used to identify the dependencies. Run the tool and open the AAR file created earlier, as a result the structure of the Android archive will be shown, reflecting all dependencies, values, resources, manifest, and classes:  
+- The native Kotlin library has two dependencies, which you don't want to expose to C# world, define two transformations to ignore them completely. Important to say, the native members won't be stripped from the resulting binary, only C# classes won't be generated. [Java Decompiler](http://java-decompiler.github.io/) can be used to identify the dependencies. Run the tool and open the AAR file created earlier, as a result the structure of the Android archive will be shown, reflecting all dependencies, values, resources, manifest, and classes:  
 
     ![Java Decompiler Dependencies](walkthrough-images/java-decompiler-dependencies.png)
 
@@ -196,7 +196,7 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
 
 The next step is to create a Xamarin.Android binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library:
 
-1. Open Visual Studio for Mac and create a new Xamarin.Android Binding Library project, give it a name, in our case **testBubblePicker.Binding** and complete the wizard. The Xamarin.Android binding template is located by the following path: **Android > Library > Binding Library**:
+1. Open Visual Studio for Mac and create a new Xamarin.Android Binding Library project, give it a name, in this case **testBubblePicker.Binding** and complete the wizard. The Xamarin.Android binding template is located by the following path: **Android > Library > Binding Library**:
 
     ![Visual Studio Create Binding](walkthrough-images/visual-studio-create-binding.png)
 
@@ -206,13 +206,13 @@ The next step is to create a Xamarin.Android binding project using the Visual St
     - **EnumFields.xml** – Contains the mapping between Java int constants and C# enums.
     - **EnumMethods.xml** – Allows changing method parameters and return types from Java int constants to C# enums.
 
-    We will keep empty the **EnumFields.xml** and **EnumMethods.xml** files and update the Metadata.xml to define our transformations.
+    Keep empty the **EnumFields.xml** and **EnumMethods.xml** files and update the **Metadata.xml** to define your transformations.
 
 1. Replace the existing **Transformations/Metadata.xml** file with the **Metadata.xml** file created at the previous step. In the properties window, verify that the file **Build Action** is set to **TransformationFile**:
 
     ![Visual Studio Metadata](walkthrough-images/visual-studio-metadata.png)
 
-1. Add the **bubblepicker-v1.0.aar** file we built in Step 1 to the binding project as a native reference. To add native library references, open finder and navigate to the folder with the Android archive. Drag and drop the archive into the Jars folder in Solution Explorer. Alternatively, you can use the **Add** context menu option on the Jars folder and choose **Existing Files…**. Choose to copy the file to the directory for the purposes of this walkthrough. Be sure to verify that the **Build Action** is set to **LibraryProjectZip**:
+1. Add the **bubblepicker-v1.0.aar** file you built in Step 1 to the binding project as a native reference. To add native library references, open finder and navigate to the folder with the Android archive. Drag and drop the archive into the Jars folder in Solution Explorer. Alternatively, you can use the **Add** context menu option on the Jars folder and choose **Existing Files…**. Choose to copy the file to the directory for the purposes of this walkthrough. Be sure to verify that the **Build Action** is set to **LibraryProjectZip**:
 
     ![Visual Studio Native Reference](walkthrough-images/visual-studio-native-reference.png)
 
@@ -221,11 +221,11 @@ The next step is to create a Xamarin.Android binding project using the Visual St
     > [!TIP]
     > Due to a limitation of the Xamarin.Android, binding tools only a single Android archive (AAR) can be added per binding project. If multiple AAR files need to be included, then multiple Xamarin.Android projects are required, one per each AAR. If this were the case for this walkthrough, then the previous four actions of this step would have to be repeated for each archive. As an alternative option, it is possible to manually merge multiple Android archives as a single archive and as a result you could use a single Xamarin.Android binding project.
 
-1. The final action is to build the library and make don't have any compilation errors. In case of compilation errors, they can be addressed and handled using the Metadata.xml file, which we created earlier by adding xml transformation metadata, which will add, remove, or rename library members.
+1. The final action is to build the library and make don't have any compilation errors. In case of compilation errors, they can be addressed and handled using the Metadata.xml file, which you created earlier by adding xml transformation metadata, which will add, remove, or rename library members.
 
 ## Consume the binding library
 
-The final step is to consume the Xamarin.Android binding library in a Xamarin.Android application. Let's create a new Xamarin.Android project, add reference to the binding library and active render Bubble Picker UI:
+The final step is to consume the Xamarin.Android binding library in a Xamarin.Android application. Create a new Xamarin.Android project, add reference to the binding library and render Bubble Picker UI:
 
 1. Create Xamarin.Android project. Use the **Android > App > Android App** as a starting point and select **Latest and Greatest** as you Target Platforms option to avoid compatibility issues. All the following steps target this project:
 
@@ -235,7 +235,7 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
 
     ![Visual Studio Add Binding Reference.png](walkthrough-images/visual-studio-add-binding-reference.png)
 
-1. Add a reference to the [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package, that we added to the Xamarin.Android binding project earlier. It adds support to any Kotlin specific types that need handing in runtime.  Without this package the app can be compiled but will crash at runtime:
+1. Add a reference to the [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package, that you added to the Xamarin.Android binding project earlier. It adds support to any Kotlin specific types that need handing in runtime.  Without this package the app can be compiled but will crash at runtime:
 
     ![Visual Studio Add StdLib NuGet](walkthrough-images/visual-studio-add-stdlib-nuget.png)
 
