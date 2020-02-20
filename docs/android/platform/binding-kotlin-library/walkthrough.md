@@ -31,7 +31,7 @@ In order to complete this walkthrough, you will need:
 
 ## Build a native library
 
-The first step is to build a native Kotlin library using Android Studio. The library is usually provided by a third-party developer or available at [the Google's Maven repository](https://maven.google.com/web/index.html) and other remote repositories. As an example, in this tutorial we are going to bind the Bubble Picker Kotlin Library available at GitHub.
+The first step is to build a native Kotlin library using Android Studio. The library is usually provided by a third-party developer or available at [the Google's Maven repository](https://maven.google.com/web/index.html) and other remote repositories. As an example, in this tutorial we are going to bind the Bubble Picker Kotlin Library available at GitHub:
 
 ![GitHub BubblePicker demo](walkthrough-images/github-bubblepicker-demo.gif)
 
@@ -95,7 +95,7 @@ The AAR file is an Android archive, which contains the compiled Kotlin source co
 
 The second step is to prepare the metadata transformation file, which is used by Xamarin.Android to generate respective C# classes. A Xamarin.Android Binding Project will discover all native classes and members from a given Android archive subsequently generating an XML file with the appropriate metadata. The manually created metadata transformation file is then applied to the previously generated baseline to create the final XML definition file used to generate the C# code.
 
-The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by the Bindings Generator to influence the creation of the binding assembly. The [Java Binding Metadata](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata) article provides more information on transformations, which could be applied.
+The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by the Bindings Generator to influence the creation of the binding assembly. The [Java Binding Metadata](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata) article provides more information on transformations, which could be applied:
 
 1. Create an empty **Metadata.xml** file:
 
@@ -194,7 +194,7 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
 
 ## Build a binding library
 
-The next step is to create a Xamarin.Android binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library.
+The next step is to create a Xamarin.Android binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library:
 
 1. Open Visual Studio for Mac and create a new Xamarin.Android Binding Library project, give it a name, in our case **testBubblePicker.Binding** and complete the wizard. The Xamarin.Android binding template is located by the following path: **Android > Library > Binding Library**:
 
@@ -208,11 +208,11 @@ The next step is to create a Xamarin.Android binding project using the Visual St
 
     We will keep empty the **EnumFields.xml** and **EnumMethods.xml** files and update the Metadata.xml to define our transformations.
 
-1. Replace the existing **Transformations/Metadata.xml** file with the **Metadata.xml** file created at the previous step. In the properties window, verify that the file **Build Action** is set to **TransformationFile**
+1. Replace the existing **Transformations/Metadata.xml** file with the **Metadata.xml** file created at the previous step. In the properties window, verify that the file **Build Action** is set to **TransformationFile**:
 
     ![Visual Studio Metadata](walkthrough-images/visual-studio-metadata.png)
 
-1. Add the **bubblepicker-v1.0.aar** file we built in Step 1 to the binding project as a native reference. To add native library references, open finder and navigate to the folder with the Android archive. Drag and drop the archive into the Jars folder in Solution Explorer. Alternatively, you can use the **Add** context menu option on the Jars folder and choose **Existing Files…**. Choose to copy the file to the directory for the purposes of this walkthrough. Be sure to verify that the **Build Action** is set to **LibraryProjectZip**.
+1. Add the **bubblepicker-v1.0.aar** file we built in Step 1 to the binding project as a native reference. To add native library references, open finder and navigate to the folder with the Android archive. Drag and drop the archive into the Jars folder in Solution Explorer. Alternatively, you can use the **Add** context menu option on the Jars folder and choose **Existing Files…**. Choose to copy the file to the directory for the purposes of this walkthrough. Be sure to verify that the **Build Action** is set to **LibraryProjectZip**:
 
     ![Visual Studio Native Reference](walkthrough-images/visual-studio-native-reference.png)
 
@@ -225,7 +225,7 @@ The next step is to create a Xamarin.Android binding project using the Visual St
 
 ## Consume the binding library
 
-The final step is to consume the Xamarin.Android binding library in a Xamarin.Android application. Let's create a new Xamarin.Android project, add reference to the binding library and active render Bubble Picker UI.
+The final step is to consume the Xamarin.Android binding library in a Xamarin.Android application. Let's create a new Xamarin.Android project, add reference to the binding library and active render Bubble Picker UI:
 
 1. Create Xamarin.Android project. Use the **Android > App > Android App** as a starting point and select **Latest and Greatest** as you Target Platforms option to avoid compatibility issues. All the following steps target this project:
 
