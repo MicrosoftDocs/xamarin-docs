@@ -1,0 +1,89 @@
+---
+title: "AndroidX"
+description: "How to get started developing apps with AndroidX using Xamarin.Android."
+ms.assetid: CC21BD28-EF67-4132-8C0D-CF25B78BA78B
+author: JonDouglas
+ms.author: jodou
+ms.date: 02/20/2020
+---
+# AndroidX with Xamarin
+
+_How to get started developing apps with AndroidX using Xamarin.Android._
+
+The Android Support Library has had a long history of over the last 7 years providing backwards compatibility to Android framework APIs. Over the years, this library has grown in adoption as the majority of Android apps in the Google Play Store use the Support Library in some fashion today.
+
+However, it hasn’t always been straight-forward. As the Support Library grew in complexity, so did the inconsistencies regarding the naming convention of the library. Each library originally followed a naming convention that identifies the `minSdkVersion` your project must be greater than or 
+equal to in order to use. For example, seeing the mention such as **v7 appcompat**. That means this support library will be backwards compatible up until Android API 7. With time, however, this `minSdkVersio`n kept increasing to support modern Android devices. To which it, for example, increased 
+to Android API 14 which led to confusion for Android Developers everywhere as **v7 appcompat** no longer meant it supported backwards to Android API 7.
+
+![](AndroidXLogo.png)
+
+To clear up this confusion, the Android team decided to refactor the Support Library into a new set of extension libraries known as AndroidX. Which includes simplified package names to better reflect each package’s content and it’s supported API levels. This has also provided a clear separation 
+from what packages are bundled with the Android Operating System, and those that are an extension of it.
+
+## Requirements
+
+The following list is required to use AndroidX features in Xamarin-based apps:
+
+- **Visual Studio** - Visual Studio 2019 is recommended. On Windows update to Visual Studio 2019 version 16.4 or later. On macOS, update to Visual Studio 2019 for Mac version 8.4 or later.
+- **Xamarin.Android** - Xamarin.Android 10.0 or later must be installed with Visual Studio (Xamarin.Android is automatically installed as part of the **Mobile Development With .NET** workload on Windows and installed as part of the **Visual Studio for Mac Installer**)
+- **Java Developer Kit** - Xamarin.Android 10.0 development requires JDK 8. Microsoft's distribution of the OpenJDK is automatically installed as part of Visual Studio.
+- **Android SDK** - Android SDK API 28 or higher must be installed via the Android SDK Manager.
+
+## Get started
+
+You can get started with AndroidX by including any [AndroidX NuGet package](https://www.nuget.org/packages?q=Tags%3A%22AndroidX%22+Authors%3A%22Microsoft%22) inside of your Android project.
+
+## Behavior changes
+
+Because AndroidX is a redesign of the Android Support Library, it includes migration steps that will affect Android applications built with the Android Support Library.
+
+### Package Name Change
+The package names have been changed between the old and new packages. Below you can see an example of these changes:
+
+| Old                    | New                    |
+| ---------------------- | ---------------------- |
+| android.support.**     | androidx.@             |
+| android.design.**      | com.google.android.material.@ |
+| android.support.test.** | androidx.test.@       |
+| android.arch.**        | androidx.@             |
+| android.arch.persistence.room.** | androidx.room.@ |
+| android.arch.persistence.** | androidx.sqlite.@ |
+
+For more details on package naming, [see the following documentation](https://developer.android.com/jetpack/androidx/migrate#artifact_mappings).
+
+## Migration Tooling
+
+There are three migration steps that you'll want to be aware of for your application.
+
+1. If your application includes **Android Support Library namespaces and you'd like to migrate them to AndroidX namespaces**, you can use our `Migrate to AndroidX` IDE tooling to take care of most namespace scenarios. 
+
+First, enable the `AndroidX Migrator` via `Tools > Options > Xamarin > Android Settings`inside Visual Studio 2019 (You can skip this step on Visual Studio for Mac).
+
+    ![](EnableAndroidXMigrator.png)
+
+    Next, you can right-click your project and `Migrate to AndroidX`.
+
+    ![](MigrateToAndroidX.png)
+
+    **Note:** You will need to make some manual namespace changes for scenarios our tool doesn't cover. While we will map the correct package for you, we encourage you to take a look at the official [artifact mappings](https://developer.android.com/jetpack/androidx/migrate/artifact-mappings) and
+    [class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) to help your project migration.
+
+2. If your application includes **any dependencies that have not been migrated to the AndroidX namespace**, you'll have to use our handy-dandy [Android Support Library to AndroidX Migration package.](https://www.nuget.org/packages/Xamarin.AndroidX.Migration)
+3. If your application **does not include any dependencies that require AndroidX namespace migration**, you can use the [AndroidX libraries on NuGet today](https://www.nuget.org/packages?q=Tags%3A%22AndroidX%22+Authors%3A%22Microsoft%22).
+
+## Troubleshooting
+
+- It is currently known that certain architecture packages within AndroidX will conflict with the Support Library versions. To fix this, you should use the AndroidX version of these packages and remove the Support Library version.
+
+## Summary
+
+This article introduced AndroidX and explained how to install and configure the latest tools and packages for Xamarin.Android development with AndroidX. It provided an overview of what AndroidX is. It included links to API documentation and Android Developer topics to help you get started in 
+creating apps using AndroidX. It also highlighted the most important AndroidX behavior changes and troubleshooting topics that could impact existing apps.
+
+## Related links
+
+- [Introduction to AndroidX | The Xamarin Show](https://www.youtube.com/watch?v=M_l3RjTev5A)
+- [AndroidX](https://developer.android.com/jetpack/androidx)
+- [Xamarin AndroidX GitHub Repository](https://github.com/xamarin/AndroidX)
+- [Xamarin AndroidX Migration GitHub Repository](https://github.com/xamarin/XamarinAndroidXMigration)
