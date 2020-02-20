@@ -322,11 +322,11 @@
           items:
             - name: "Walkthrough – Binding an iOS Objective-C Library"
               href: platform/binding-objective-c/walkthrough.md
-        - name: Binding iOS Swift Libraries
+        - name: Bind iOS Swift Libraries
           href: platform/binding-swift/index.md
           items:
             - name: Walkthrough
-              href: platform/binding-swift/walkthrough.md    
+              href: platform/binding-swift/walkthrough.md
         - name: CallKit
           href: platform/callkit.md
         - name: Contacts and ContactsUI
