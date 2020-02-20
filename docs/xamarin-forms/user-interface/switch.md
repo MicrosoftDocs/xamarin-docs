@@ -19,7 +19,7 @@ The following screenshots show a `Switch` control in its **on** and **off** togg
 
 ![Screenshot of Switches in on and off states, on iOS and Android](switch-images/switch-states-default.png "Switches on iOS and Android")
 
-The `Switch` control defines two properties:
+The `Switch` control defines the following properties:
 
 * [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) is a `boolean` value that indicates whether the `Switch` is **on**.
 * [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) is a `Color` that affects how the `Switch` is rendered in the toggled, or **on**, state.
