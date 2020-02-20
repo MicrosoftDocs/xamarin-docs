@@ -16,7 +16,7 @@ However, it hasn’t always been straight-forward. As the Support Library grew i
 equal to in order to use. For example, seeing the mention such as **v7 appcompat**. That means this support library will be backwards compatible up until Android API 7. With time, however, this `minSdkVersio`n kept increasing to support modern Android devices. To which it, for example, increased 
 to Android API 14 which led to confusion for Android Developers everywhere as **v7 appcompat** no longer meant it supported backwards to Android API 7.
 
-![](AndroidXLogo.png)
+![AndroidX Logo](~/android/platform/androidx-images/AndroidXLogo.png)
 
 To clear up this confusion, the Android team decided to refactor the Support Library into a new set of extension libraries known as AndroidX. Which includes simplified package names to better reflect each package’s content and it’s supported API levels. This has also provided a clear separation 
 from what packages are bundled with the Android Operating System, and those that are an extension of it.
@@ -60,14 +60,14 @@ There are three migration steps that you'll want to be aware of for your applica
 
 First, enable the `AndroidX Migrator` via `Tools > Options > Xamarin > Android Settings`inside Visual Studio 2019 (You can skip this step on Visual Studio for Mac).
 
-    ![](EnableAndroidXMigrator.png)
+![Enable AndroidX Migrator](~/android/platform/androidx-images/EnableAndroidXMigrator.png)
 
-    Next, you can right-click your project and `Migrate to AndroidX`.
+Next, you can right-click your project and `Migrate to AndroidX`.
 
-    ![](MigrateToAndroidX.png)
+![Migrate To AndroidX](~/android/platform/androidx-images/MigrateToAndroidX.png)
 
-    **Note:** You will need to make some manual namespace changes for scenarios our tool doesn't cover. While we will map the correct package for you, we encourage you to take a look at the official [artifact mappings](https://developer.android.com/jetpack/androidx/migrate/artifact-mappings) and
-    [class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) to help your project migration.
+**Note:** You will need to make some manual namespace changes for scenarios our tool doesn't cover. While we will map the correct package for you, we encourage you to take a look at the official [artifact mappings](https://developer.android.com/jetpack/androidx/migrate/artifact-mappings) and
+[class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) to help your project migration.
 
 2. If your application includes **any dependencies that have not been migrated to the AndroidX namespace**, you'll have to use our handy-dandy [Android Support Library to AndroidX Migration package.](https://www.nuget.org/packages/Xamarin.AndroidX.Migration)
 3. If your application **does not include any dependencies that require AndroidX namespace migration**, you can use the [AndroidX libraries on NuGet today](https://www.nuget.org/packages?q=Tags%3A%22AndroidX%22+Authors%3A%22Microsoft%22).
