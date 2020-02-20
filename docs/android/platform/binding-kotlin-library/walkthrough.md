@@ -35,15 +35,15 @@ The first step is to build a native Kotlin library using Android Studio. The lib
 
 ![GitHub BubblePicker demo](walkthrough-images/github-bubblepicker-demo.gif)
 
-1. Download [the source code](https://github.com/igalata/Bubble-Picker/archive/develop.zip) from GitHub for the library and unpack it to a local folder Bubble-Picker.
+1. Download [the source code](https://github.com/igalata/Bubble-Picker/archive/develop.zip) from GitHub for the library and unpack it to a local folder **Bubble-Picker**.
 
-1. Launch the Android Studio and select **"Open an existing Android Studio project"** menu option choosing the Bubble-Picker local folder:
+1. Launch the Android Studio and select **Open an existing Android Studio project** menu option choosing the Bubble-Picker local folder:
 
     ![Android Studio Open Project](walkthrough-images/android-studio-open-project.png)
 
 1. Verify that the Android Studio is up to date including Gradle. The source code can be successfully built on Android Studio v3.5.3, Gradle v5.4.1. Instructions on how to update Gradle to the latest Gradle version [could be found here](https://gradle.org/install/).
 
-1. Verify that required Android SDK is installed. The source code requires Android SDK v25. Open **"Tools -> SDK Manager"** menu option to install SDK components.
+1. Verify that required Android SDK is installed. The source code requires Android SDK v25. Open **Tools > SDK Manager** menu option to install SDK components.
 
 1. Update and synchronize the main **build.gradle** configuration file located at the root of the project folder:
 
@@ -68,17 +68,20 @@ The first step is to build a native Kotlin library using Android Studio. The lib
         }
         ```
 
-    - Once the configuration file is updated, it's out of sync and Gradle shows the **"Sync Now"** button, press it and wait for the synchronization process to be completed:
+    - Once the configuration file is updated, it's out of sync and Gradle shows the **Sync Now** button, press it and wait for the synchronization process to be completed:
 
         ![Android Studio Gradle Sync Now](walkthrough-images/android-studio-gradle-syncnow.png)
 
-        **Note:** Gradle's dependency cache may be corrupt, this sometimes occurs after a network connection timeout. Redownload dependencies and sync project (requires network).
+        > [!TIP]
+        > Gradle's dependency cache may be corrupt, this sometimes occurs after a network connection timeout. Redownload dependencies and sync project (requires network).
 
-        **Note:** The state of a Gradle build process (daemon) may be corrupt. Stopping all Gradle daemons may solve this problem. Stop Gradle build processes (requires restart). In the case of corrupt Gradle processes, you can also try closing the IDE and then killing all Java processes.
+        > [!TIP]
+        > The state of a Gradle build process (daemon) may be corrupt. Stopping all Gradle daemons may solve this problem. Stop Gradle build processes (requires restart). In the case of corrupt Gradle processes, you can also try closing the IDE and then killing all Java processes.
 
-        **Note:** Your project may be using a third-party plugin, which is not compatible with the other plugins in the project or the version of Gradle requested by the project.
+        > [!TIP]
+        > Your project may be using a third-party plugin, which is not compatible with the other plugins in the project or the version of Gradle requested by the project.
 
-1. Open the Gradle menu on the right, navigate to the **bubblepicker -> Tasks** menu, execute the **"build"** task by double tapping on it, and wait for the build process to complete:
+1. Open the Gradle menu on the right, navigate to the **bubblepicker > Tasks** menu, execute the **build** task by double tapping on it, and wait for the build process to complete:
 
     ![Android Studio Gradle Execute Task](walkthrough-images/android-studio-gradle-execute-task.png)
 
@@ -94,7 +97,7 @@ The second step is to prepare the metadata transformation file, which is used by
 
 The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by the Bindings Generator to influence the creation of the binding assembly. The [Java Binding Metadata](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/customizing-bindings/java-bindings-metadata) article provides more information on transformations, which could be applied.
 
-1. Create an empty Metadata.xml file:
+1. Create an empty **Metadata.xml** file:
 
     ```xml
     <?xml version="1.0" encoding="UTF-8"?>
@@ -115,14 +118,14 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
     <remove-node path="/api/package[starts-with(@name,'org.slf4j')]" />
     ```
 
-- The native BubblePicker class has two methods getBackgroundColor and setBackgroundColor and the following transformation will change it into a C# BackgroundColor property:
+- The native `BubblePicker` class has two methods `getBackgroundColor` and `setBackgroundColor` and the following transformation will change it into a C# `BackgroundColor` property:
 
     ```xml
     <attr path="/api/package[@name='com.igalata.bubblepicker.rendering']/class[@name='BubblePicker']/method[@name='getBackground' and count(parameter)=0]" name="propertyName">BackgroundColor</attr>
     <attr path="/api/package[@name='com.igalata.bubblepicker.rendering']/class[@name='BubblePicker']/method[@name='setBackground' and count(parameter)=1 and parameter[1][@type='int']]" name="propertyName">BackgroundColor</attr>
     ```
 
-- Unsigned types UInt, UShort, ULong, UByte require special handling. For these types Kotlin changes method names and parameters types automatically, which is reflected in the generated code:
+- Unsigned types `UInt, UShort, ULong, UByte` require special handling. For these types Kotlin changes method names and parameters types automatically, which is reflected in the generated code:
 
     ```Kotlin
     public open fun fooUIntMethod(value: UInt) : String {
@@ -139,7 +142,7 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
     }
     ```
 
-    Moreover, related types such as UIntArray, UShortArray, ULongArray, UByteArray are also affected by Kotlin. The method name is changed to include an additional suffix and parameters are changed to an array of elements of signed versions of the same types. In the example below a parameter of type UIntArray is converted automatically into int[] and the method name is changed from fooUIntArrayMethod to fooUIntArrayMethod--ajY-9A. The latter is discovered by Xamarin.Android tools and generated as a valid method name:
+    Moreover, related types such as `UIntArray, UShortArray, ULongArray, UByteArray` are also affected by Kotlin. The method name is changed to include an additional suffix and parameters are changed to an array of elements of signed versions of the same types. In the example below a parameter of type `UIntArray` is converted automatically into `int[]` and the method name is changed from `fooUIntArrayMethod` to `fooUIntArrayMethod--ajY-9A`. The latter is discovered by Xamarin.Android tools and generated as a valid method name:
 
     ```Kotlin
     public open fun fooUIntArrayMethod(value: UIntArray) : String {
@@ -157,7 +160,7 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
     }
     ```
 
-    In order to give it a meaningful name, the following metadata can be added to the Metadata.xml, which will update the name back to originally defined in the Kotlin code:
+    In order to give it a meaningful name, the following metadata can be added to the **Metadata.xml**, which will update the name back to originally defined in the Kotlin code:
 
     ```xml
     <attr path="/api/package[@name='com.microsoft.simplekotlinlib']/class[@name='FooClass']/method[@name='fooUIntArrayMethod--ajY-9A']" name="managedName">fooUIntArrayMethod</attr>
@@ -165,7 +168,7 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
 
     In the BubblePicker sample, there are no members using unsigned types thus no additional changes are required.
 
-- Kotlin members with generic parameters by default transformed into parameters of Java.Lang.Object type. For example, a Kotlin method has a generic parameter \<T>:
+- Kotlin members with generic parameters by default transformed into parameters of Java.`Lang.Object` type. For example, a Kotlin method has a generic parameter \<T>:
 
     ```Kotlin
     public open fun <T>fooGenericMethod(value: T) : String {
@@ -186,35 +189,37 @@ The metadata uses [XPath](https://www.w3.org/TR/xpath/) syntax and is used by 
 
     Java and Kotlin generics are not supported by Xamarin.Android bindings, thus a generalized C# method to access the generic API is created. As a work-around you can create a wrapper Kotlin library and expose required APIs in a strong-typed manner without generics. Alternatively, you can create helpers on C# side to address the issue in the same way via strong-typed APIs.
 
-    **Note:** By transforming the metadata, any changes could be applied to the generated binding. The [Binding Java Library](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) article explains in details how the metadata is generated and processed.
+    > [!TIP]
+    > By transforming the metadata, any changes could be applied to the generated binding. The [Binding Java Library](https://docs.microsoft.com/xamarin/android/platform/binding-java-library/) article explains in details how the metadata is generated and processed.
 
 ## Build a binding library
 
 The next step is to create a Xamarin.Android binding project using the Visual Studio binding template, add required metadata, native references and then build the project to produce a consumable library.
 
-1. Open Visual Studio for Mac and create a new Xamarin.Android Binding Library project, give it a name, in our case testBubblePicker.Binding and complete the wizard. The Xamarin.Android binding template is located by the following path: Android -> Library -> Binding Library:
+1. Open Visual Studio for Mac and create a new Xamarin.Android Binding Library project, give it a name, in our case **testBubblePicker.Binding** and complete the wizard. The Xamarin.Android binding template is located by the following path: **Android > Library > Binding Library**:
 
     ![Visual Studio Create Binding](walkthrough-images/visual-studio-create-binding.png)
 
     In the Transformations folder there are three main transformation files:
 
-    - Metadata.xml – Allows changes to be made to the final API, such as changing the namespace of the generated binding.
-    - EnumFields.xml – Contains the mapping between Java int constants and C# enums.
-    - EnumMethods.xml – Allows changing method parameters and return types from Java int constants to C# enums.
+    - **Metadata.xml** – Allows changes to be made to the final API, such as changing the namespace of the generated binding.
+    - **EnumFields.xml** – Contains the mapping between Java int constants and C# enums.
+    - **EnumMethods.xml** – Allows changing method parameters and return types from Java int constants to C# enums.
 
-    We will keep empty the EnumFields.xml and EnumMethods.xml files and update the Metadata.xml to define our transformations.
+    We will keep empty the **EnumFields.xml** and **EnumMethods.xml** files and update the Metadata.xml to define our transformations.
 
-1. Replace the existing Transformations/Metadata.xml file with the Metadata.xml file created at the previous step. In the properties window, verify that the file **"Build Action"** is set to **"TransformationFile"**
+1. Replace the existing **Transformations/Metadata.xml** file with the **Metadata.xml** file created at the previous step. In the properties window, verify that the file **Build Action** is set to **TransformationFile**
 
     ![Visual Studio Metadata](walkthrough-images/visual-studio-metadata.png)
 
-1. Add the **bubblepicker-v1.0.aar** file we built in Step 1 to the binding project as a native reference. To add native library references, open finder and navigate to the folder with the Android archive. Drag and drop the archive into the Jars folder in Solution Explorer. Alternatively, you can use the **"Add"** context menu option on the Jars folder and choose **"Existing Files…"**. Choose to copy the file to the directory for the purposes of this walkthrough. Be sure to verify that the **"Build Action"** is set to **"LibraryProjectZip"**.
+1. Add the **bubblepicker-v1.0.aar** file we built in Step 1 to the binding project as a native reference. To add native library references, open finder and navigate to the folder with the Android archive. Drag and drop the archive into the Jars folder in Solution Explorer. Alternatively, you can use the **Add** context menu option on the Jars folder and choose **Existing Files…**. Choose to copy the file to the directory for the purposes of this walkthrough. Be sure to verify that the **Build Action** is set to **LibraryProjectZip**.
 
     ![Visual Studio Native Reference](walkthrough-images/visual-studio-native-reference.png)
 
 1. Add a reference to the [Xamarin.Kotlin.StdLib NuGet](https://www.nuget.org/packages/Xamarin.Kotlin.StdLib/) package. This package is a binding for Kotlin Standard Library. Without this package, the binding will only work if the Kotlin library doesn't use any Kotlin specific types, otherwise all these members will not be exposed to C# and any app that tries to consume the binding will crash at runtime.
 
-    **Note:** Due to a limitation of the Xamarin.Android, binding tools only a single Android archive (AAR) can be added per binding project. If multiple AAR files need to be included, then multiple Xamarin.Android projects are required, one per each AAR. If this were the case for this walkthrough, then the previous four actions of this step would have to be repeated for each archive. As an alternative option, it is possible to manually merge multiple Android archives as a single archive and as a result you could use a single Xamarin.Android binding project.
+    > [!TIP]
+    > Due to a limitation of the Xamarin.Android, binding tools only a single Android archive (AAR) can be added per binding project. If multiple AAR files need to be included, then multiple Xamarin.Android projects are required, one per each AAR. If this were the case for this walkthrough, then the previous four actions of this step would have to be repeated for each archive. As an alternative option, it is possible to manually merge multiple Android archives as a single archive and as a result you could use a single Xamarin.Android binding project.
 
 1. The final action is to build the library and make don't have any compilation errors. In case of compilation errors, they can be addressed and handled using the Metadata.xml file, which we created earlier by adding xml transformation metadata, which will add, remove, or rename library members.
 
@@ -222,7 +227,7 @@ The next step is to create a Xamarin.Android binding project using the Visual St
 
 The final step is to consume the Xamarin.Android binding library in a Xamarin.Android application. Let's create a new Xamarin.Android project, add reference to the binding library and active render Bubble Picker UI.
 
-1. Create Xamarin.Android project. Use the Android -> App -> Android App as a starting point and select "Latest and Greatest" as you Target Platforms option to avoid compatibility issues. All the following steps target this project:
+1. Create Xamarin.Android project. Use the **Android > App > Android App** as a starting point and select **Latest and Greatest** as you Target Platforms option to avoid compatibility issues. All the following steps target this project:
 
     ![Visual Studio Create App](walkthrough-images/visual-studio-create-app.png)
 
@@ -234,7 +239,7 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
 
     ![Visual Studio Add StdLib NuGet](walkthrough-images/visual-studio-add-stdlib-nuget.png)
 
-1. Add the BubblePicker control to the Android layout for MainActivity. Open **testBubblePicker/Resources/layout/content_main.xml** file and append the BubblePicker control node as the last element of the root RelativeLayout control:
+1. Add the `BubblePicker` control to the Android layout for `MainActivity`. Open **testBubblePicker/Resources/layout/content_main.xml** file and append the BubblePicker control node as the last element of the root RelativeLayout control:
 
     ```xml
     <?xml version="1.0" encoding="utf-8"?>
@@ -248,7 +253,7 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
     </RelativeLayout>
     ```
 
-1. Update the source code of the app and add the initialization logic to the MainActivity, which activates the Bubble Picker SDK:
+1. Update the source code of the app and add the initialization logic to the `MainActivity`, which activates the Bubble Picker SDK:
 
     ```csharp
     protected override void OnCreate(Bundle savedInstanceState)
@@ -262,7 +267,7 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
     }
     ```
 
-    BubblePickerAdapter and BubblePickerListener are two classes to be created from scratch, which handle the bubbles data and control interaction:
+    `BubblePickerAdapter` and `BubblePickerListener` are two classes to be created from scratch, which handle the bubbles data and control interaction:
 
     ```csharp
     public class BubblePickerAdapter : Java.Lang.Object, IBubblePickerAdapter
@@ -316,7 +321,7 @@ The final step is to consume the Xamarin.Android binding library in a Xamarin.An
 
     <img src="walkthrough-images/bubble-picker-demo.gif" width="300px">
 
-    The sample requires additional code to render elements style and handle interactions but the BubblePicker control has been successfully created and activated.
+    The sample requires additional code to render elements style and handle interactions but the `BubblePicker` control has been successfully created and activated.
 
 Congratulations! You have successfully created a Xamarin.Android app and a binding library, which consumes a Kotlin library.  
 
