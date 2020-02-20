@@ -20,10 +20,6 @@ screen:
 - [Custom Gesture Recognizer sample](#Custom_Gesture_Recognizer) – how to build a custom gesture recognizer.
 
 Each section contains instructions to write the code from scratch.
-The [starting sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
-already includes a complete storyboard and menu screen:
-
- [![](ios-touch-walkthrough-images/image3.png "The sample includes menu screen")](ios-touch-walkthrough-images/image3.png#lightbox)
 
 Follow the instructions below to add code to the storyboard, and learn about
 the different types of touch events available in iOS. Alternatively, open the
@@ -44,7 +40,7 @@ to add the code required to implement touch events:
 1. Edit the file **TouchViewController.cs** and add the following two
 instance variables to the class `TouchViewController`:
 
-    ```csharp 
+    ```csharp
     #region Private Variables
     private bool imageHighlighted = false;
     private bool touchStartedInside;
@@ -53,14 +49,14 @@ instance variables to the class `TouchViewController`:
 
 1. Implement the `TouchesBegan` method, as shown in the code below:
 
-    ```csharp 
+    ```csharp
     public override void TouchesBegan(NSSet touches, UIEvent evt)
     {
         base.TouchesBegan(touches, evt);
-    
+
         // If Multitouch is enabled, report the number of fingers down
         TouchStatus.Text = string.Format ("Number of fingers {0}", touches.Count);
-    
+
         // Get the current touch
         UITouch touch = touches.AnyObject as UITouch;
         if (touch != null)
@@ -93,7 +89,7 @@ instance variables to the class `TouchViewController`:
         }
     }
     ```
-    
+
     This method works by checking for a `UITouch` object, and if it exists perform some action based on where the touch occurred:
 
     - _Inside TouchImage_ – display the text `Touches Began` in a label and change the image.
@@ -104,7 +100,7 @@ instance variables to the class `TouchViewController`:
     is moving their finger on the screen. To respond to movement, implement `TouchesMoved`
     as shown in the code below:
 
-    ```csharp 
+    ```csharp
     public override void TouchesMoved(NSSet touches, UIEvent evt)
     {
         base.TouchesMoved(touches, evt);
@@ -131,7 +127,7 @@ instance variables to the class `TouchViewController`:
     }
     ```
 
-    This method gets a `UITouch` object, and then checks to see where the touch occurred. If the touch occurred in `TouchImage`, then the text Touches Moved is displayed on the screen. 
+    This method gets a `UITouch` object, and then checks to see where the touch occurred. If the touch occurred in `TouchImage`, then the text Touches Moved is displayed on the screen.
 
     If `touchStartedInside` is true, then we know that the user has their finger on `DragImage` and is moving it around. The code will move `DragImage` as the user moves their finger around the screen.
 
@@ -141,13 +137,13 @@ instance variables to the class `TouchViewController`:
     public override void TouchesCancelled(NSSet touches, UIEvent evt)
     {
         base.TouchesCancelled(touches, evt);
-    
+
         // reset our tracking flags
         touchStartedInside = false;
         TouchImage.Image = UIImage.FromBundle("TouchMe.png");
         TouchStatus.Text = "";
     }
-    
+
     public override void TouchesEnded(NSSet touches, UIEvent evt)
     {
         base.TouchesEnded(touches, evt);
@@ -172,7 +168,7 @@ instance variables to the class `TouchViewController`:
 1. At this point the Touch Samples screen is finished. Notice how the screen changes as you interact with each of the images, as shown in the following screenshot:
 
     [![](ios-touch-walkthrough-images/image4.png "The starting app screen")](ios-touch-walkthrough-images/image4.png#lightbox)
-    
+
     [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
 
 <a name="Gesture_Recognizer_Samples" />
@@ -184,11 +180,6 @@ In this section we will get rid of the touch events and show how to use the foll
 
 - The `UIPanGestureRecognizer` for dragging an image around the screen.
 - The `UITapGestureRecognizer` to respond to double taps on the screen.
-
-If you run the [starting sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
-and click on the **Gesture Recognizer Samples** button, you should see the following screen:
-
- [![](ios-touch-walkthrough-images/image6.png "Clicking on the Gesture Recognizer Samples button shows this screen")](ios-touch-walkthrough-images/image6.png#lightbox)
 
 Follow these steps to implement gesture recognizers:
 
@@ -212,10 +203,10 @@ calculate the offset required to redraw the image on the screen.
     {
         // Create a new tap gesture
         UIPanGestureRecognizer gesture = new UIPanGestureRecognizer();
-    
+
         // Wire up the event handler (have to use a selector)
         gesture.AddTarget(() => HandleDrag(gesture));  // to be defined
-    
+
         // Add the gesture recognizer to the view
         DragImage.AddGestureRecognizer(gesture);
     }
@@ -235,7 +226,7 @@ this method is provided in the next step.
         {
             originalImageFrame = DragImage.Frame;
         }
-    
+
         // Move the image if the gesture is valid
         if (recognizer.State != (UIGestureRecognizerState.Cancelled | UIGestureRecognizerState.Failed
             | UIGestureRecognizerState.Possible))
@@ -260,11 +251,11 @@ now support dragging the one image around the screen.
     {
         // Create a new tap gesture
         UITapGestureRecognizer tapGesture = null;
-    
+
         // Report touch
         Action action = () => {
             TouchStatus.Text = string.Format("Image touched at: {0}",tapGesture.LocationOfTouch(0, DoubleTouchImage));
-    
+
             // Toggle the image
             if (imageHighlighted)
             {
@@ -276,19 +267,19 @@ now support dragging the one image around the screen.
             }
             imageHighlighted = !imageHighlighted;
         };
-    
+
         tapGesture = new UITapGestureRecognizer(action);
-    
+
         // Configure it
         tapGesture.NumberOfTapsRequired = 2;
-    
+
         // Add the gesture recognizer to the view
         DoubleTouchImage.AddGestureRecognizer(tapGesture);
     }
     ```
 
     This code is very similar to the code for the `UIPanGestureRecognizer`
-but instead of using a delegate for a target we are using an `Action`. 
+but instead of using a delegate for a target we are using an `Action`.
 
 1. The final thing we need to do is modify `ViewDidLoad` so that it calls the methods we just added. Change ViewDidLoad so it resembles the following code:
 
@@ -296,12 +287,12 @@ but instead of using a delegate for a target we are using an `Action`.
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
-    
+
         Title = "Gesture Recognizers";
-    
+
         // Save initial state
         originalImageFrame = DragImage.Frame;
-    
+
         WireUpTapGestureRecognizer();
         WireUpDragGestureRecognizer();
     }
@@ -311,7 +302,7 @@ but instead of using a delegate for a target we are using an `Action`.
 
 1. Run the application, and interact with the two images.
 The following screenshot is one example of these interactions:
-    
+
     [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
 
 <a name="Custom_Gesture_Recognizer"/>
@@ -334,7 +325,7 @@ Follow these steps to create a custom gesture recognizer:
     using CoreGraphics;
     using Foundation;
     using UIKit;
-    
+
     namespace Touch
     {
         public class CheckmarkGestureRecognizer : UIGestureRecognizer
@@ -343,7 +334,7 @@ Follow these steps to create a custom gesture recognizer:
             private CGPoint midpoint = CGPoint.Empty;
             private bool strokeUp = false;
             #endregion
-    
+
             #region Override Methods
             /// <summary>
             ///   Called when the touches end or the recognizer state fails
@@ -351,27 +342,27 @@ Follow these steps to create a custom gesture recognizer:
             public override void Reset()
             {
                 base.Reset();
-    
+
                 strokeUp = false;
                 midpoint = CGPoint.Empty;
             }
-    
+
             /// <summary>
             ///   Is called when the fingers touch the screen.
             /// </summary>
             public override void TouchesBegan(NSSet touches, UIEvent evt)
             {
                 base.TouchesBegan(touches, evt);
-    
+
                 // we want one and only one finger
                 if (touches.Count != 1)
                 {
                     base.State = UIGestureRecognizerState.Failed;
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
-    
+
             /// <summary>
             ///   Called when the touches are cancelled due to a phone call, etc.
             /// </summary>
@@ -382,7 +373,7 @@ Follow these steps to create a custom gesture recognizer:
                 // if the application comes back into view
                 base.State = UIGestureRecognizerState.Failed;
             }
-    
+
             /// <summary>
             ///   Called when the fingers lift off the screen
             /// </summary>
@@ -394,24 +385,24 @@ Follow these steps to create a custom gesture recognizer:
                 {
                     base.State = UIGestureRecognizerState.Recognized;
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
-    
+
             /// <summary>
             ///   Called when the fingers move
             /// </summary>
             public override void TouchesMoved(NSSet touches, UIEvent evt)
             {
                 base.TouchesMoved(touches, evt);
-    
+
                 // if we haven't already failed
                 if (base.State != UIGestureRecognizerState.Failed)
                 {
                     // get the current and previous touch point
                     CGPoint newPoint = (touches.AnyObject as UITouch).LocationInView(View);
                     CGPoint previousPoint = (touches.AnyObject as UITouch).PreviousLocationInView(View);
-    
+
                     // if we're not already on the upstroke
                     if (!strokeUp)
                     {
@@ -434,7 +425,7 @@ Follow these steps to create a custom gesture recognizer:
                         }
                     }
                 }
-    
+
                 Console.WriteLine(base.State.ToString());
             }
             #endregion
@@ -463,7 +454,7 @@ the **CustomGestureViewController.cs** file and add the following two instance v
     {
         // Create the recognizer
         checkmarkGesture = new CheckmarkGestureRecognizer();
-    
+
         // Wire up the event handler
         checkmarkGesture.AddTarget(() => {
             if (checkmarkGesture.State == (UIGestureRecognizerState.Recognized | UIGestureRecognizerState.Ended))
@@ -479,7 +470,7 @@ the **CustomGestureViewController.cs** file and add the following two instance v
                 isChecked = !isChecked;
             }
         });
-    
+
         // Add the gesture recognizer to the view
         View.AddGestureRecognizer(checkmarkGesture);
     }
@@ -491,16 +482,16 @@ the **CustomGestureViewController.cs** file and add the following two instance v
     public override void ViewDidLoad()
     {
         base.ViewDidLoad();
-    
+
         // Wire up the gesture recognizer
         WireUpCheckmarkGestureRecognizer();
     }
     ```
 
 1. Run the application, and try drawing a “V” on the screen. You should see the image being displayed change, as shown in the following screenshots:
-    
+
     [![](ios-touch-walkthrough-images/image9.png "The button checked")](ios-touch-walkthrough-images/image9.png#lightbox)
-    
+
     [![](ios-touch-walkthrough-images/image10.png "The button unchecked")](ios-touch-walkthrough-images/image10.png#lightbox)
 
 The above three sections demonstrated different ways to respond to touch events in iOS: using
@@ -508,5 +499,4 @@ touch events, built-in gesture recognizers, or with a custom gesture recognizer.
 
 ## Related Links
 
-- [iOS Touch Start (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-start)
 - [iOS Touch Final (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final)

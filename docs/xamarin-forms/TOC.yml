@@ -6,22 +6,81 @@
       items:
         - name: What is Xamarin.Forms
           href: ~/get-started/what-is-xamarin-forms.md
-        - name: Requirements
-          href: ~/get-started/requirements.md
         - name: Installation
           href: ~/get-started/installation/index.md
-        - name: Build your first app
+          items:
+            - name: Installing Xamarin on Windows
+              href: ~/get-started/installation/windows.md
+              items:
+                - name: Installing Xamarin Previews (Windows)
+                  href: ~/get-started/installation/windows-preview.md
+                - name: Uninstalling Xamarin from Visual Studio
+                  href: ~/get-started/installation/uninstalling-xamarin.md
+            - name: Installing Visual Studio for Mac
+              href: /visualstudio/mac/installation/
+              items:
+                - name: Installing Xamarin Previews (Mac)
+                  href: /visualstudio/mac/update/
+                - name: Uninstalling Visual Studio for Mac
+                  href: /visualstudio/mac/uninstall
+            - name: Xamarin Firewall Configuration Instructions
+              href: ~/get-started/installation/firewall.md
+        - name: Supported platforms
+          href: ~/get-started/supported-platforms.md
+        - name: First App
           href: ~/get-started/first-app/index.md
-        - name: Single page quickstart
-          href: ~/get-started/quickstarts/single-page.md
-        - name: Multi-page quickstart
-          href: ~/get-started/quickstarts/multi-page.md
-        - name: Local database quickstart
-          href: ~/get-started/quickstarts/database.md
-        - name: Styling quickstart
-          href: ~/get-started/quickstarts/styling.md
-        - name: Deep dive
-          href: ~/get-started/quickstarts/deepdive.md
+        - name: Quickstarts
+          href: ~/get-started/quickstarts/index.md
+          items:
+            - name: File > New
+              href: ~/get-started/quickstarts/single-page.md
+            - name: Multipage
+              href: ~/get-started/quickstarts/multi-page.md
+            - name: Database
+              href: ~/get-started/quickstarts/database.md
+            - name: Styling
+              href: ~/get-started/quickstarts/styling.md
+            - name: Deep dive
+              href: ~/get-started/quickstarts/deepdive.md
+        - name: Tutorials
+          href: ~/get-started/tutorials/index.yml
+          items:
+            - name: Stack Layout
+              href: ~/get-started/tutorials/stacklayout/index.yml
+            - name: Label
+              href: ~/get-started/tutorials/label/index.yml
+            - name: Button
+              href: ~/get-started/tutorials/button/index.yml
+            - name: Text entry
+              href: ~/get-started/tutorials/entry/index.yml
+            - name: Text editor
+              href: ~/get-started/tutorials/editor/index.yml
+            - name: Images
+              href: ~/get-started/tutorials/image/index.yml
+            - name: Grid Layout
+              href: ~/get-started/tutorials/grid/index.yml
+            - name: Lists
+              href: ~/get-started/tutorials/listview/index.yml
+            - name: Pop-ups
+              href: ~/get-started/tutorials/pop-ups/index.yml
+            - name: App lifecycle
+              href: ~/get-started/tutorials/app-lifecycle/index.yml
+            - name: Local database
+              href: ~/get-started/tutorials/local-database/index.yml
+            - name: Web services
+              href: ~/get-started/tutorials/web-service/index.yml
+        - name: Learn about Xamarin
+          items:
+            - name: .NET developers
+              href: ~/cross-platform/desktop/index.md
+            - name: Java developers
+              href: ~/android/get-started/java-developers.md
+            - name: Objective-C developers
+              href: ~/ios/get-started/objective-c-developers/index.md
+            - name: Azure
+              href: ~/xamarin-forms/data-cloud/index.yml
+        - name: Development guidance
+          href: ~/cross-platform/index.yml
     - name: XAML
       items:
         - name: Overview
@@ -191,6 +250,17 @@
               href: app-fundamentals/dependency-service/registration-and-resolution.md
             - name: Picking from the Photo Library
               href: app-fundamentals/dependency-service/photo-picker.md
+        - name: Dual Screen
+          href: app-fundamentals/dual-screen/index.md
+          items:
+            - name: Dual-Screen Patterns
+              href: app-fundamentals/dual-screen/design-patterns.md
+            - name: TwoPaneView
+              href: app-fundamentals/dual-screen/twopaneview.md
+            - name: DualScreenInfo
+              href: app-fundamentals/dual-screen/dual-screen-info.md
+            - name: DualScreenHelper
+              href: app-fundamentals/dual-screen/dual-screen-helper.md
         - name: Effects
           href: app-fundamentals/effects/index.md
           items:
@@ -266,17 +336,11 @@
             - name: Custom Renderers
               href: app-fundamentals/shell/customrenderers.md
         - name: Templates
-          href: app-fundamentals/templates/index.md
           items:
+            - name: Overview
+              href: app-fundamentals/templates/index.md
             - name: Control Templates
-              href: app-fundamentals/templates/control-templates/index.md
-              items:
-                - name: Introduction
-                  href: app-fundamentals/templates/control-templates/introduction.md
-                - name: Control Template Creation
-                  href: app-fundamentals/templates/control-templates/creating.md
-                - name: Template Bindings
-                  href: app-fundamentals/templates/control-templates/template-binding.md
+              href: app-fundamentals/templates/control-template.md
             - name: Data Templates
               href: app-fundamentals/templates/data-templates/index.md
               items:
@@ -491,7 +555,12 @@
                 - name: Styling Xamarin.Forms Apps using Cascading Style Sheets (CSS)
                   href: user-interface/styles/css/index.md
             - name: Theming
-              href: user-interface/theming.md
+              href: user-interface/theming/index.md
+              items:
+              - name: Theme an Application
+                href: user-interface/theming/theming.md
+              - name: Detect Dark Mode
+                href: user-interface/theming/dark-mode.md
             - name: Visual
               href: user-interface/visual/index.md
               items:
@@ -851,6 +920,8 @@
           href: deploy-test/index.yml
         - name: Improve Performance
           href: deploy-test/performance.md
+        - name: Hot Restart
+          href: deploy-test/hot-restart.md
         - name: Automate Testing with Visual Studio App Center
           href: /appcenter/test-cloud/uitest/get-started-xamarin-forms
         - name: Publish iOS apps

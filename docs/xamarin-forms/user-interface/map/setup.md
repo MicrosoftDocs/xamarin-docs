@@ -6,7 +6,7 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/06/2019
+ms.date: 02/07/2020
 ---
 
 # Xamarin.Forms Map Initialization and Configuration
@@ -53,7 +53,7 @@ Displaying and interacting with a map on iOS doesn't require any additional conf
 
 - iOS 11 and later
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – for using location services when the application is in use
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) – for using location services at all times
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) – for using location services at all times
 - iOS 10 and earlier
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – for using location services when the application is in use
   - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – for using location services at all times    
@@ -229,6 +229,9 @@ The overall effect of this code is that when the application requests the user's
 ### Universal Windows Platform
 
 On UWP, your application must be authenticated before it can display a map and consume map services. To authenticate your application, you must specify a maps authentication key. For more information, see [Request a maps authentication key](/windows/uwp/maps-and-location/authentication-key). The authentication token should then be specified in the `FormsMaps.Init("AUTHORIZATION_TOKEN")` method call, to authenticate the application with Bing Maps.
+
+> [!NOTE]
+> On UWP, to use map services such as geocoding you must also set the `MapService.ServiceToken` property to the authentication key value. This can be accomplished with the following line of code: `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";`.
 
 In addition, if your application needs to access the user's location, you must enable the location capability in the package manifest. This can be accomplished as follows:
 

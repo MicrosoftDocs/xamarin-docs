@@ -19,6 +19,9 @@ Once a Xamarin.iOS app has been developed, the next step in the software develop
 > must have been built with the iOS 12.1 SDK or later, included in Xcode 10.1 or later.
 > Apps should also support the iPhone XS and 12.9" iPad Pro screen sizes.
 
+> [!IMPORTANT]
+> If you are looking for resources in regard to the `UIWebView` deprecation warning (ITMS-90809) while using Xamarin.Forms, please refer to the [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) documentation.
+
 Distributing an application – just as with developing an application – requires that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. They also contain information about what devices the app can be deployed to for the non-App Store distribution.
 
 > [!IMPORTANT]

@@ -32,7 +32,7 @@ however, there are some situations where you might want to use
 `ViewPager` without the added complexity of `Fragment`s.
 
 `ViewPager` uses an adapter pattern to provide it with the views to 
-display. The adapter used here is conceptually similiar to that used by 
+display. The adapter used here is conceptually similar to that used by 
 [RecyclerView](~/android/user-interface/layouts/recycler-view/index.md) &ndash; you 
 supply an implementation of `PagerAdapter` to generate the pages that 
 the `ViewPager` displays to the user. The pages displayed by 

@@ -11,7 +11,7 @@ ms.date: 03/07/2019
 
 # Android build error – The LinkAssemblies task failed unexpectedly
 
-You may see an error message `The "LinkAssemblies" task failed unexpectedly` when building a Xamarin.Android project that uses Forms. This happens when the linker is active (typically on a *Release* build to reduce the size of the app package); and it occurs because the Android targets aren't updated to the latest framework. (More information: [Xamarin.Forms for Android Requirements](~/get-started/requirements.md#android))
+You may see an error message `The "LinkAssemblies" task failed unexpectedly` when building a Xamarin.Android project that uses Forms. This happens when the linker is active (typically on a *Release* build to reduce the size of the app package); and it occurs because the Android targets aren't updated to the latest framework. (More information: [Xamarin.Forms supported platforms](~/get-started/supported-platforms.md#android-platform-support))
 
 The resolution to this issue is to make sure you have the latest supported Android SDK versions, and set the **Target Framework** to the latest installed platform. It's also recommended that you set the **Target Android Version** to the latest installed platform, and the **minimum Android version** to API 19 or higher. This is considered the supported configuration.
 

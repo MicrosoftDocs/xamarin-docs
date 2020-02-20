@@ -450,7 +450,7 @@ The following Xamarin.Forms Shell specific CSS properties are also supported (in
 
 The following `color` values are supported:
 
-- `X11` [colors](https://en.wikipedia.org/wiki/X11_color_names/), which match CSS colors, UWP pre-defined colors, and Xamarin.Forms colors. Note that these color values are case insensitive.
+- `X11` [colors](https://en.wikipedia.org/wiki/X11_color_names), which match CSS colors, UWP pre-defined colors, and Xamarin.Forms colors. Note that these color values are case insensitive.
 - hex colors: `#rgb`, `#argb`, `#rrggbb`, `#aarrggbb`
 - rgb colors: `rgb(255,0,0)`, `rgb(100%,0%,0%)`. Values are in the range 0-255, or 0%-100%.
 - rgba colors: `rgba(255, 0, 0, 0.8)`, `rgba(100%, 0%, 0%, 0.8)`. The opacity value is in the range 0.0-1.0.

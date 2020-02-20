@@ -112,7 +112,7 @@ namespace tvRemote
 }
 ```
 
-For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). Specifically the [Creating the User Interface](~/ios/tvos/get-started/hello-tvos.md#Creating-the-User-Interface) and [Writing the Code wtih outlets and actions](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) sections.
+For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). Specifically the [Creating the User Interface](~/ios/tvos/get-started/hello-tvos.md#Creating-the-User-Interface) and [Writing the Code with outlets and actions](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) sections.
 
 <a name="Gestures-and-Code" />
 

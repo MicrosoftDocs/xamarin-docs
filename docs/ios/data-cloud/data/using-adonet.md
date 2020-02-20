@@ -210,6 +210,17 @@ using (var contents = connection.CreateCommand ()) {
 
 The `ExecuteScalar` method’s return type is `object` – you should cast the result depending on the database query. The result could be an integer from a COUNT query or a string from a single column SELECT query. Note that this is different to other Execute methods that return a reader object or a count of the number of rows affected.
 
+## Microsoft.Data.Sqlite
+
+There is another library `Microsoft.Data.Sqlite`, which can be [installed from NuGet](https://www.nuget.org/packages/Microsoft.Data.Sqlite), that is functionally equivalent to `Mono.Data.Sqlite` and allows the same types of queries.
+
+There is a [comparison between the two libraries](https://docs.microsoft.com/dotnet/standard/data/sqlite/compare) and some [Xamarin-specific details](https://docs.microsoft.com/dotnet/standard/data/sqlite/xamarin). Most important for Xamarin.iOS apps, you must include an initialization call:
+
+```csharp
+// required for Xamarin.iOS
+SQLitePCL.Batteries_V2.Init();
+```
+
 ## Related Links
 
 - [DataAccess Basic (sample)](https://github.com/xamarin/mobile-samples/tree/master/DataAccess/Basic)

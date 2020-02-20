@@ -237,7 +237,10 @@ void SendLocalNotification(string body)
     var intent = new Intent(this, typeof(MainActivity));
     intent.AddFlags(ActivityFlags.ClearTop);
     intent.PutExtra("message", body);
-    var pendingIntent = PendingIntent.GetActivity(this, 0, intent, PendingIntentFlags.OneShot);
+    
+    //Unique request code to avoid PendingIntent collision.
+    var requestCode = new Random().Next();
+    var pendingIntent = PendingIntent.GetActivity(this, requestCode, intent, PendingIntentFlags.OneShot);
 
     var notificationBuilder = new NotificationCompat.Builder(this)
         .SetContentTitle("XamarinNotify Message")

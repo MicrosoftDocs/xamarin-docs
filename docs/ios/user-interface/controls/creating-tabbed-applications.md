@@ -32,7 +32,7 @@ The `UITabBarController` supports tabbed application development
 by the following:
 
 - Allowing multiple controllers to be added to it.
-- Providing a tabbed user interface, via the  `UITabBar` class, to allow a user to switch between controllers and their views. 
+- Providing a tabbed user interface, via the  `UITabBar` class, to allow a user to switch between controllers and their views.
 
 Controllers are added to the `UITabBarController` via its `ViewControllers` property, which is a `UIViewController`
 array. The `UITabBarController` itself handles loading the proper
@@ -80,9 +80,9 @@ appropriate view controller.
 To implement the `UITabBarController` we need to do the
 following:
 
-1. Set the base class of  `TabController` to  `UITabBarController` . 
-1. Create  `UIViewController` instances to add to the  `TabController` . 
-1. Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` . 
+1. Set the base class of  `TabController` to  `UITabBarController` .
+1. Create  `UIViewController` instances to add to the  `TabController` .
+1. Add the  `UIViewController` instances to an array assigned to the  `ViewControllers` property of the  `TabController` .
 
 Add the following code to the `TabController` class to achieve
 these steps:
@@ -141,16 +141,16 @@ public partial class AppDelegate : UIApplicationDelegate
 {
     UIWindow window;
     TabController tabController;
-    
+
     public override bool FinishedLaunching (UIApplication app, NSDictionary options)
     {
         window = new UIWindow (UIScreen.MainScreen.Bounds);
-        
+
         tabController = new TabController ();
         window.RootViewController = tabController;
-        
+
         window.MakeKeyAndVisible ();
-        
+
         return true;
     }
 }
@@ -257,7 +257,7 @@ In this example, a storyboard is used to lay out view controllers. To add a stor
 
 - When the New File dialog appears, navigate to **iOS > Empty iPhone Storyboard**.
 
-Let's call this new Storyboard **MainStoryboard** , as illustrated below: 
+Let's call this new Storyboard **MainStoryboard** , as illustrated below:
 
 [![](creating-tabbed-applications-images/new-file-dialog.png "Add a MainStoryboard file to the project")](creating-tabbed-applications-images/new-file-dialog.png#lightbox)
 
@@ -337,7 +337,7 @@ Delete these new View controllers by selecting the black bar at the bottom and p
 
 In our Storyboard, we can use Segues to handle the transitions between the TabBarController and our View Controllers. After interacting with the Initial View, we want to load it into the TabBarController presented to the user. Let's set this up in the designer.
 
-**Ctrl-Click** and **Drag** from the button to the TabBarController. On mouse-up, a context menu will appear. We want to use a modal segue. 
+**Ctrl-Click** and **Drag** from the button to the TabBarController. On mouse-up, a context menu will appear. We want to use a modal segue.
 
 To set up each of our tabs, **Ctrl-Click** from the TabBarController to each of our View Controllers in order from one to three, and select the Relationship **Tab** from the context menu, as illustrated below:
 
@@ -351,7 +351,7 @@ If we click on one of the tab bar items and explore the properties panel, you ca
 
 [![](creating-tabbed-applications-images/properties-panel.png "Setting the tab options in the Properties Explorer")](creating-tabbed-applications-images/properties-panel.png#lightbox)
 
-We can use this to edit certain attributes such as the badge, the title and the iOS [identifier](https://developer.apple.com/library/ios/documentation/userexperience/conceptual/UIKitUICatalog/TabBarItem.html), among others
+We can use this to edit certain attributes such as the badge, the title and the iOS identifier, among others.
 
 If we save and run the application now, we'll find that the button reappears when the ViewController1 instance is loaded into the TabBarController. Let's fix this by checking to see if the current View has a parent View Controller. If it does, we know we are inside the TabBarController, and therefore the button should be hidden. Let's add the code below to the ViewController1 class:
 

@@ -233,9 +233,6 @@ attributes reside in the `Java.Interop` namespace:
     on a method that works as a field initializer. This can be used with
     `android.os.Parcelable`.
 
-The [ExportAttribute](https://docs.microsoft.com/samples/xamarin/monodroid-samples/exportattribute) sample
-project illustrates how to use these attributes.
-
 #### Troubleshooting ExportAttribute and ExportFieldAttribute
 
 - Packaging fails due to missing **Mono.Android.Export.dll** &ndash;

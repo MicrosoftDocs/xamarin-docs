@@ -106,7 +106,7 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
 
 4. Enter your username and password.
 
-    - The first time you connect to any paticular Mac, you are
+    - The first time you connect to any particular Mac, you are
       prompted to enter your username and password for that machine:
 
       ![Entering a username and password for the Mac](images/auth.png "Entering a username and password for the Mac")

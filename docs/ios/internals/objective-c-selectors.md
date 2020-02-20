@@ -27,7 +27,7 @@ guide.
 
 ## Example
 
-Suppose you want to invoke the 
+Suppose you want to invoke the
 [`sizeWithFont:forWidth:lineBreakMode:`](https://developer.apple.com/documentation/foundation/nsstring/1619914-sizewithfont)
 selector on [`NSString`](https://developer.apple.com/documentation/foundation/nsstring).
 The declaration (from Apple's documentation) is:
@@ -50,10 +50,10 @@ Putting it all together, the `objc_msgSend` declaration should match:
 
 ```csharp
 CGSize objc_msgSend(
-    IntPtr target, 
-    IntPtr selector, 
-    IntPtr font, 
-    nfloat width, 
+    IntPtr target,
+    IntPtr selector,
+    IntPtr font,
+    nfloat width,
     UILineBreakMode mode
 );
 ```
@@ -63,7 +63,7 @@ Declare it as follows:
 ```csharp
 [DllImport (Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend")]
 static extern CGSize cgsize_objc_msgSend_IntPtr_float_int (
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -81,7 +81,7 @@ nfloat width = ...
 UILineBreakMode mode = ...
 
 CGSize size = cgsize_objc_msgSend_IntPtr_float_int(
-    target.Handle, 
+    target.Handle,
     selector.Handle,
     font == null ? IntPtr.Zero : font.Handle,
     width,
@@ -95,7 +95,7 @@ Had the returned value been a structure that was less than 8 bytes in size (like
 [DllImport (MonoTouch.Constants.ObjectiveCLibrary, EntryPoint="objc_msgSend_stret")]
 static extern void cgsize_objc_msgSend_stret_IntPtr_float_int (
     out CGSize retval,
-    IntPtr target, 
+    IntPtr target,
     IntPtr selector,
     IntPtr font,
     nfloat width,
@@ -116,7 +116,7 @@ CGSize size;
 
 if (Runtime.Arch == Arch.SIMULATOR)
     size = cgsize_objc_msgSend_IntPtr_float_int(
-        target.Handle, 
+        target.Handle,
         selector.Handle,
         font == null ? IntPtr.Zero : font.Handle,
         width,
@@ -174,10 +174,10 @@ types that are not an enumeration or any of the C built-in types (`char`,
 `short`, `int`, `long`, `float`, `double`). On x86 (the simulator), this
 method needs to be used for all structures larger than 8 bytes in size
 (`CGSize` is 8 bytes and doesn't use `objc_msgSend_stret` in the
-simulator). 
+simulator).
 - Use [`objc_msgSend_fpret`](https://developer.apple.com/documentation/objectivec/1456697-objc_msgsend_fpret?language=objc)
 for selectors that return a floating point value on x86 only. This
-function does not need to be used on ARM; instead, use `objc_msgSend`. 
+function does not need to be used on ARM; instead, use `objc_msgSend`.
 - The main
 [objc_msgSend](https://developer.apple.com/documentation/objectivec/1456712-objc_msgsend)
 function is used for all other selectors.
@@ -218,7 +218,7 @@ if (Runtime.Arch == Arch.DEVICE)
     PointF ret;
     Messaging.PointF_objc_msgSend_stret_PointF_IntPtr (out ret, myHandle, selector.Handle);
     return ret;
-} 
+}
 else
 {
     return Messaging.PointF_objc_msgSend_PointF_IntPtr (myHandle, selector.Handle);
@@ -241,7 +241,3 @@ and whose native size is larger than 8 bytes.
 ### Creating your own signatures
 
 The following [gist](https://gist.github.com/rolfbjarne/981b778a99425a6e630c) can be used to create your own signatures, if required.
-
-## Related links
-
-- [Objective-C Selectors](https://developer.xamarin.com/samples/mac-ios/Objective-C/) sample
