@@ -54,7 +54,7 @@ The important parts of the trigger's declaration are:
 - **EnterActions and ExitActions** (not shown) - are written in
     code and can be used in
     addition to (or instead of) `Setter` elements. They
-    are [described below](#enterexit).
+    are [described below](#enteractions-and-exitactions).
 
 ### Applying a trigger using a style
 
@@ -123,7 +123,7 @@ The example below uses the data binding syntax
 > won't work like you expect.
 
 In addition to specifying `Setter`s you can also provide
-    [`EnterActions` and `ExitActions`](#enterexit).
+    [`EnterActions` and `ExitActions`](#enteractions-and-exitactions).
 
 ## Event triggers
 
@@ -191,7 +191,7 @@ Be careful when sharing triggers in a `ResourceDictionary`,
     that is configured once will apply to them all.
 
 Note that event triggers do not support `EnterActions`
-    and `ExitActions`    [described below](#enterexit).
+    and `ExitActions`    [described below](#enteractions-and-exitactions).
 
 ## Multi triggers
 
@@ -579,14 +579,14 @@ The following XAML example shows a [`Style`](xref:Xamarin.Forms.Style) that incl
 
 In this example, the implicit [`Style`](xref:Xamarin.Forms.Style) targets [`Grid`](xref:Xamarin.Forms.Grid) objects. When the [`IsChecked`](xref:Xamarin.Forms.CheckBox.IsChecked) property of the [`CheckBox`](xref:Xamarin.Forms.CheckBox) is `false`, the background color of the `Grid` is set to white. When the `CheckBox.IsChecked` property becomes `true`, a [`VisualState`](xref:Xamarin.Forms.VisualState) change is triggered, and the background color of the `Grid` becomes black:
 
-[![Screenshot of a triggered visual state change, on iOS and Android](trigger-images/comparestatetrigger-unchecked.png "CompareStateTrigger example")](trigger-images/comparestatetrigger-unchecked-large.png#lightbox "CompareStateTrigger example")
-[![Screenshot of a triggered visual state change, on iOS and Android](trigger-images/comparestatetrigger-checked.png "CompareStateTrigger example")](trigger-images/comparestatetrigger-unchecked-large.png#lightbox "CompareStateTrigger example")
+[![Screenshot of a triggered visual state change, on iOS and Android](triggers-images/comparestatetrigger-unchecked.png "CompareStateTrigger example")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "CompareStateTrigger example")
+[![Screenshot of a triggered visual state change, on iOS and Android](triggers-images/comparestatetrigger-checked.png "CompareStateTrigger example")](triggers-images/comparestatetrigger-unchecked-large.png#lightbox "CompareStateTrigger example")
 
 ### Device state trigger
 
 The [`DeviceStateTrigger`](xref:Xamarin.Forms.DeviceStateTrigger) triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change based on the device platform the app is running on. This trigger has a single bindable property:
 
-- [`Device`](xref:Xamarin.Forms.DeviceTrigger.Device), of type `string`, which indicates the device platform on which the [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
+- [`Device`](xref:Xamarin.Forms.DeviceStateTrigger.Device), of type `string`, which indicates the device platform on which the [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
 
 > [!NOTE]
 > The [`DeviceStateTrigger`](xref:Xamarin.Forms.DeviceStateTrigger) derives from the [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) class and can therefore attach an event handler to the [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) event.
@@ -634,13 +634,13 @@ The following XAML example shows a [`Style`](xref:Xamarin.Forms.Style) that incl
 
 In this example, the explicit [`Style`](xref:Xamarin.Forms.Style) targets [`ContentPage`](xref:Xamarin.Forms.ContentPage) objects. `ContentPage` objects that consume the style set their background color to silver on iOS, to pale blue on Android, and to aquamarine on UWP. The following screenshots show the resulting pages on iOS and Android:
 
-[![Screenshot of a triggered visual state change, on iOS and Android](trigger-images/devicestatetrigger.png "DeviceStateTrigger example")](trigger-images/devicestatetrigger-large.png#lightbox "DeviceStateTrigger example")
+[![Screenshot of a triggered visual state change, on iOS and Android](triggers-images/devicestatetrigger.png "DeviceStateTrigger example")](triggers-images/devicestatetrigger-large.png#lightbox "DeviceStateTrigger example")
 
 ### Orientation state trigger
 
 The [`OrientationStateTrigger`](xref:Xamarin.Forms.OrientationStateTrigger) triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the device changes between orientations. This has a single bindable property:
 
-- [`Orientation`](xref:Xamarin.Forms.OrientationStateTrigger.Orientation), of type [`DeviceOrientation`](xref:Xamarin.Forms.DeviceOrientation), which indicates the orientation to which the [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
+- [`Orientation`](xref:Xamarin.Forms.OrientationStateTrigger.Orientation), of type [`DeviceOrientation`](xref:Xamarin.Forms.Internals.DeviceOrientation), which indicates the orientation to which the [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
 
 The following XAML example shows a [`Style`](xref:Xamarin.Forms.Style) that includes `OrientationStateTrigger` objects:
 
