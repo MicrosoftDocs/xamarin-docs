@@ -178,7 +178,7 @@ Read more on the [iOS Security and Privacy Features](https://docs.microsoft.com/
 
 # [UWP](#tab/uwp)
 
-Permissions must have matching 
+Permissions must have matching capabilities declared in the package manifest.
 
 Read more on the [App Capability Declaration](https://docs.microsoft.com/windows/uwp/packaging/app-capability-declarations) documentation.
 
