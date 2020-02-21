@@ -583,11 +583,11 @@ You might wonder: If the code-behind file must reference the object on the page 
 
 ## Visual state triggers
 
-Visual states support state triggers, which and are a specialized group of triggers that indicate the conditions under which a [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
+Visual states support state triggers, which are a specialized group of triggers that define the conditions under which a [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
 
-State triggers are added to the [`VisualState.StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) collection, and this collection can contain a single state trigger or multiple state triggers. A [`VisualState`](xref:Xamarin.Forms.VisualState) will be applied when any state triggers in a `StateTriggers` collection are active.
+State triggers are added to the [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) collection of a [`VisualState`](xref:Xamarin.Forms.VisualState). This collection can contain a single state trigger, or multiple state triggers. A [`VisualState`](xref:Xamarin.Forms.VisualState) will be applied when any state triggers in the collection are active.
 
-When using state triggers to control visual states, the Xamarin.Forms uses the following rules to determine which trigger, and corresponding [`VisualState`](xref:Xamarin.Forms.VisualState) will be active:
+When using state triggers to control visual states, Xamarin.Forms uses the following precedence rules to determine which trigger (and corresponding [`VisualState`](xref:Xamarin.Forms.VisualState)) will be active:
 
 1. Any trigger that derives from [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase).
 1. An [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) activated due to the [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowWidth) condition being met.
@@ -770,3 +770,4 @@ It may seem as if the code-behind file can handle orientation changes more direc
 ## Related links
 
 - [VsmDemos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-vsmdemos)
+- [State triggers](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers)
