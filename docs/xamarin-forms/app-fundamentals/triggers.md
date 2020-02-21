@@ -60,7 +60,7 @@ The important parts of the trigger's declaration are:
 
 Triggers can also be added to a `Style` declaration
     on a control, in a page, or an application `ResourceDictionary`. This
-    example declares an implicit style (ie. no `Key` is
+    example declares an implicit style (i.e. no `Key` is
     set) which means it will apply to all `Entry` controls
     on the page.
 
@@ -435,7 +435,7 @@ The following XAML example shows a [`Style`](xref:Xamarin.Forms.Style) that incl
 
 In this example, the implicit [`Style`](xref:Xamarin.Forms.Style) targets [`Grid`](xref:Xamarin.Forms.Grid) objects. When the `IsToggled` property of the object set as the `BindingContext` of the `Grid` the `Style` is applied to is `true`, the background color of the `Grid` is set to black. When the `IsToggled` property of the bound object becomes `false`, a [`VisualState`](xref:Xamarin.Forms.VisualState) change is triggered, and the background color of the `Grid` becomes white.
 
-In addition, every time a [`VisualState`](xref:Xamarin.Forms.VisualState) change occurs, the [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) event for the `VisualState` is fired. Each `VisualState` registers an event handler for this event, which are shown in the following example:
+In addition, every time a [`VisualState`](xref:Xamarin.Forms.VisualState) change occurs, the [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) event for the `VisualState` is fired. Each `VisualState` registers an event handler for the event, which are shown in the following example:
 
 ```csharp
 void OnCheckedStateIsActiveChanged(object sender, EventArgs e)
