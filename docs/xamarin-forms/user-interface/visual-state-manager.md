@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/11/2020
+ms.date: 02/21/2020
 ---
 
 # Xamarin.Forms Visual State Manager
@@ -22,11 +22,12 @@ The VSM introduces the concept of _visual states_. A Xamarin.Forms view such as 
 
 Visual states are collected in _visual state groups_. All the visual states within a visual state group are mutually exclusive. Both visual states and visual state groups are identified by simple text strings.
 
-The Xamarin.Forms Visual State Manager defines one visual state group named "CommonStates" with three visual states:
+The Xamarin.Forms Visual State Manager defines one visual state group named "CommonStates" with the following visual states:
 
 - "Normal"
 - "Disabled"
 - "Focused"
+- "Selected"
 
 This visual state group is supported for all classes that derive from [`VisualElement`](xref:Xamarin.Forms.VisualElement), which is the base class for [`View`](xref:Xamarin.Forms.View) and [`Page`](xref:Xamarin.Forms.Page).
 
@@ -405,7 +406,7 @@ The following table lists the visual states that are defined in Xamarin.Forms:
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [CarouselView visual states](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
 | `CollectionView` | `Selected` | [Change selected item color](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
 | `ImageButton` | `Pressed` | [ImageButton visual states](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
-| `VisualElement` | `Normal`, `Disabled`, `Focused` | [Common states](#common-states) |
+| `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Common states](#common-states) |
 
 Each of these states can be accessed through the visual state group named `CommonStates`.
 
@@ -579,6 +580,22 @@ Notice also that the `GoToState` method is called from the constructor to initia
 Notice that the code-behind file only needs to take account of the object on the page that defines the visual states, and to call `VisualStateManager.GoToState` for this object. This is because both visual states target multiple objects on the page.
 
 You might wonder: If the code-behind file must reference the object on the page that defines the visual states, why can't the code-behind file simply access this and other objects directly? It surely could. However, the advantage of using the VSM is that you can control how visual elements react to different state entirely in XAML, which keeps all of the UI design in one location. This avoids setting visual appearance by accessing visual elements directly from the code-behind.
+
+## Visual state triggers
+
+Visual states support state triggers, which and are a specialized group of triggers that indicate the conditions under which a [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
+
+State triggers are added to the [`VisualState.StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) collection, and this collection can contain a single state trigger or multiple state triggers. A [`VisualState`](xref:Xamarin.Forms.VisualState) will be applied when any state triggers in a `StateTriggers` collection are active.
+
+When using state triggers to control visual states, the Xamarin.Forms uses the following rules to determine which trigger, and corresponding [`VisualState`](xref:Xamarin.Forms.VisualState) will be active:
+
+1. Any trigger that derives from [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase).
+1. An [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) activated due to the [`MinWindowWidth`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowWidth) condition being met.
+1. An [`AdaptiveTrigger`](xref:Xamarin.Forms.AdaptiveTrigger) activated due to the [`MinWindowHeight`](xref:Xamarin.Forms.AdaptiveTrigger.MinWindowHeight) condition being met.
+
+If multiple triggers are simultaneously active (for example, two custom triggers) then the first trigger declared in the markup takes precedence.
+
+For more information about state triggers, see [State triggers](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
 
 <a name="adaptive-layout" />
 
