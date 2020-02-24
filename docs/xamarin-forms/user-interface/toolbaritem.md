@@ -97,6 +97,12 @@ void OnItemClicked(object sender, EventArgs e)
 
 `ToolbarItem` objects can also use the `Command` and `CommandParameter` properties to react to user input without event handlers. For more information about the `ICommand` interface and MVVM data-binding, see [Xamarin.Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
 
+## Enable or disable a ToolbarItem at runtime
+
+To enable of disable a `ToolbarItem` at runtime, bind its `Command` property to an `ICommand` implementation, and ensure that a `canExecute` delegate enables and disables the `ICommand` as appropriate.
+
+For more information, see [Enable or disable a MenuItem at runtime](menuitem.md#enable-or-disable-a-menuitem-at-runtime).
+
 ## Primary and secondary menus
 
 The `ToolbarItemOrder` enum has `Default`, `Primary`, and `Secondary` values.
@@ -111,49 +117,6 @@ When the `Order` property is set to `Secondary`, behavior varies across platform
 
 > [!WARNING]
 > Icon behavior in `ToolbarItem` objects that have their `Order` property set to `Secondary` is inconsistent across platforms. Avoid setting the `IconImageSource` property on items that appear in the secondary menu.
-
-## Enable or disable a ToolbarItem dynamically
-
-To dynamically manipulate whether a `ToolbarItem` can respond to user interaction, use the bound `Command` property's `canExecute` delegate to return `true` or `false`.
-
-For example, create a `ToolbarItem` on a `ContentPage` and bind its `Command` property in XAML:
-
-```xaml
-<ContentPage.ToolbarItems>
-    <ToolbarItem Command="{Binding ToolbarTappedCommand}" Icon="icon.png" />
-</ContentPage.ToolbarItems>
-```
-
-In the view model, when implementing the `Command`, set a delegate for its `canExecute` parameter to return a `bool` property indicating whether to enable (`true`) or disable (`false`) the `ToolbarItem`:
-
-```csharp
-public class ViewModel : INotifyPropertyChanged
-{
-//...
-    public ICommand ToolbarTappedCommand { get; set; }
-    
-    private bool _enabled;
-    public bool Enabled
-    {
-        get => _enabled;
-        set
-        {
-            _enabled = value;
-            ToolbarTappedCommand.ChangeCanExecute();
-        }
-    }
-    
-    public ViewModel()
-    {
-        ToolbarTappedCommand = new Command(() =>
-        {
-            // your command behavior here
-        }, () => Enabled);
-        // ...
-    }
-```
-
-In this example, the `Enabled` property's default return value of `false` will initially set the `ToolbarItem` as disabled. Setting it to an initial value of `true` will initially enable the `ToolbarItem`.
 
 ## Related links
 
