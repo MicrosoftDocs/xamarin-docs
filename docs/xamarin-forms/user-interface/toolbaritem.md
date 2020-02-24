@@ -97,6 +97,12 @@ void OnItemClicked(object sender, EventArgs e)
 
 `ToolbarItem` objects can also use the `Command` and `CommandParameter` properties to react to user input without event handlers. For more information about the `ICommand` interface and MVVM data-binding, see [Xamarin.Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
 
+## Enable or disable a ToolbarItem at runtime
+
+To enable of disable a `ToolbarItem` at runtime, bind its `Command` property to an `ICommand` implementation, and ensure that a `canExecute` delegate enables and disables the `ICommand` as appropriate.
+
+For more information, see [Enable or disable a MenuItem at runtime](menuitem.md#enable-or-disable-a-menuitem-at-runtime).
+
 ## Primary and secondary menus
 
 The `ToolbarItemOrder` enum has `Default`, `Primary`, and `Secondary` values.
