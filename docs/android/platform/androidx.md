@@ -20,9 +20,6 @@ AndroidX includes the following features:
 
 ![AndroidX Logo](~/android/platform/androidx-images/AndroidXLogo.png)
 
-To clear up this confusion, the Android team decided to refactor the Support Library into a new set of extension libraries known as AndroidX. Which includes simplified package names to better reflect each package’s content and it’s supported API levels. This has also provided a clear separation 
-from what packages are bundled with the Android Operating System, and those that are an extension of it.
-
 ## Requirements
 
 The following list is required to use AndroidX features in Xamarin-based apps:
