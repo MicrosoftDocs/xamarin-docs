@@ -66,8 +66,9 @@ Right-click your project and **Migrate to AndroidX**.
 
 ![Migrate To AndroidX](~/android/platform/androidx-images/MigrateToAndroidX.png)
 
-> [!NOTE] You will need to make some manual namespace changes for scenarios the tool doesn't cover. While we will map the correct package for you, it is encouraged that you to take a look at the official [artifact mappings](https://developer.android.com/jetpack/androidx/migrate/artifact-mappings) and
-[class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) to help your project migration.
+> [!NOTE] 
+> You will need to make some manual namespace changes for scenarios the tool doesn't cover. While we will map the correct package for you, it is encouraged that you to take a look at the official [artifact mappings]> (https://developer.android.com/jetpack/androidx/migrate/artifact-mappings) and
+> [class mappings](https://developer.android.com/jetpack/androidx/migrate/class-mappings) to help your project migration.
 
 2. If your application includes **any dependencies that have not been migrated to the AndroidX namespace**, you'll have to use the [Android Support Library to AndroidX Migration package.](https://www.nuget.org/packages/Xamarin.AndroidX.Migration)
 3. If your application **does not include any dependencies that require AndroidX namespace migration**, you can use the [AndroidX libraries on NuGet today](https://www.nuget.org/packages?q=Tags%3A%22AndroidX%22+Authors%3A%22Microsoft%22).
