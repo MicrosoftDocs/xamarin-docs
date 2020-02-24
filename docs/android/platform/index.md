@@ -149,6 +149,10 @@ interpretation of the text spoken to the device.
 This guide explains how to incorporate Java libraries into
 Xamarin.Android apps by creating a Bindings Library.
 
+## [Bind a Kotlin Library](binding-kotlin-library/index.md)
+
+This guide explains how to create C# bindings to Kotlin code, making it possible to consume native libraries in a Xamarin.Android application.
+
 ## [Java Integration](java-integration/index.md)
 
 This article provides an overview of the ways that developers can reuse
