@@ -192,6 +192,51 @@ public MenuItemXamlMvvmPage()
 
 For more information on using images in Xamarin.Forms, see [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
 
+## Enable or disable a MenuItem at runtime
+
+To enable of disable a `MenuItem` at runtime, bind its `Command` property to an `ICommand` implementation, and ensure that a `canExecute` delegate enables and disables the `ICommand` as appropriate.
+
+> [!IMPORTANT]
+> Do not bind the `IsEnabled` property to another property when using the `Command` property to enable or disable the `MenuItem`.
+
+The following example shows a `MenuItem` whose `Command` property binds to an `ICommand` named `MyCommand`:
+
+```xaml
+<MenuItem Text="My menu item"
+          Command="{Binding MyCommand}" />
+```
+
+The `ICommand` implementation requires a `canExecute` delegate that returns the value of a `bool` property to enable and disable the `MenuItem`:
+
+```csharp
+public class MyViewModel : INotifyPropertyChanged
+{
+    bool isMenuItemEnabled = false;
+    public bool IsMenuItemEnabled
+    {
+        get { return isMenuItemEnabled; }
+        set
+        {
+            isMenuItemEnabled = value;
+            MyCommand.ChangeCanExecute();
+        }
+    }
+
+    public Command MyCommand { get; private set; }
+
+    public ToolbarItemViewModel()
+    {
+        MyCommand = new Command(() =>
+        {
+            // Execute logic here
+        },
+        () => IsToolbarItemEnabled);
+    }
+}
+```
+
+In this example, the `MenuItem` is disabled until the `IsMenuItemEnabled` property is set. When this occurs, the `Command.ChangeCanExecute` method is called which causes the `canExecute` delegate for `MyCommand` to be re-evaluated.
+
 ## Cross-platform context menu behavior
 
 Context menus are accessed and displayed differently on each platform.
@@ -207,55 +252,6 @@ On iOS, the context menu is activated by swiping on a list item. The context men
 On UWP, the context menu is activated by right-clicking on a list item. The context menu is displayed near the cursor as a vertical list.
 
 !["Screenshot of context menu on UWP"](menuitem-images/menuitem-uwp.png "Screenshot of context menu on UWP")
-
-## Enable or disable a MenuItem dynamically
-
-To dynamically manipulate whether a `MenuItem` can respond to user interaction, use the bound `Command` property's `canExecute` delegate to return `true` or `false`.
-
-For example, for a `MenuItem` defined in XAML such as:
-
-```xaml
-<MenuItem Text="Add"
-          IconImageSource="icon.png"
-          Command="{Binding AddCommand}" />
-```
-
-Do not bind to the `IsEnabled` property if you are using the `Command` property to enable/disable the `MenuItem`, in order to ensure control of the state of the `MenuItem`.
-
-In the view model, implement the `AddCommand` with a `canExecute` delegate returning the value of a `bool` property called `Enabled`:
-
-```csharp
-public ViewModel : INotifyPropertyChanged
-{
-    public Command AddCommand { get; set; }
-    
-    // ...
-    
-    public ViewModel()
-    {
-        AddCommand = new Command(() =>
-            {
-                // your execute action code here
-            },
-            () => Enabled);
-    }
-    
-    // ...
-    
-    private bool _enabled; // default value is false, state will initially be disabled
-    public bool Enabled
-    {
-        get => _enabled;
-        set
-        {
-            _enabled = value;
-            AddCommand.ChangeCanExecute();
-        }
-    }
-}
-```
-
-To ensure that the menu item is enabled by default in this example, make sure that `Enabled` initially returns `true`. 
 
 ## Related links
 
