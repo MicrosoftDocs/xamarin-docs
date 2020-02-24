@@ -10,11 +10,13 @@ ms.date: 02/20/2020
 
 _How to get started developing apps with AndroidX using Xamarin.Android._
 
-The Android Support Library has had a long history of over the last 7 years providing backwards compatibility to Android framework APIs. Over the years, this library has grown in adoption as the majority of Android apps in the Google Play Store use the Support Library in some fashion today.
+AndroidX is a major improvement to the original Android Support Library, which is no longer maintained. **AndroidX** packages fully replace the Android Support Library by providing feature parity and new libraries you can use in your Android applications.
 
-However, it hasn’t always been straight-forward. As the Support Library grew in complexity, so did the inconsistencies regarding the naming convention of the library. Each library originally followed a naming convention that identifies the `minSdkVersion` your project must be greater than or 
-equal to in order to use. For example, seeing the mention such as **v7 appcompat** which means this support library will be backwards compatible up until Android API 7. With time, however, this `minSdkVersion` kept increasing to support modern Android devices. When the minimum would be increased for example
-to Android API 14, it led to confusion for Android Developers everywhere as **v7 appcompat** no longer meant it supported backwards to Android API 7.
+AndroidX includes the following features:
+
+- All packages inside AndroidX now have a consistent namespace starting with `androidx`. This means all Android Support Library packages map to a corresponding `androidx.*` package.
+- `androidx` packages are separately maintained and updated. This means that you can update AndroidX libraries independently of each other.
+- As of v28 of the Android Support Library, there will be no more releases. All development will be included in `androidx` instead.
 
 ![AndroidX Logo](~/android/platform/androidx-images/AndroidXLogo.png)
 
@@ -32,7 +34,7 @@ The following list is required to use AndroidX features in Xamarin-based apps:
 
 ## Get started
 
-You can get started with AndroidX by including any [AndroidX NuGet package](https://www.nuget.org/packages?q=Tags%3A%22AndroidX%22+Authors%3A%22Microsoft%22) inside of your Android project.
+You can get started with AndroidX by including any [AndroidX NuGet package](https://www.nuget.org/packages?q=Tags%3A%22AndroidX%22+Authors%3A%22Microsoft%22) inside of your Android project. Learn more about installing and using a package in [Visual Studio](https://docs.microsoft.com/nuget/quickstart/install-and-use-a-package-in-visual-studio) or [Visual Studio for Mac](https://docs.microsoft.com/nuget/quickstart/install-and-use-a-package-in-visual-studio-mac)
 
 ## Behavior changes
 
