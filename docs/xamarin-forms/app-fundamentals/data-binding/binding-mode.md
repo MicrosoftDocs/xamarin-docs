@@ -391,7 +391,7 @@ public class SampleSettingsViewModel : INotifyPropertyChanged
 
     bool SetProperty<T>(ref T storage, T value, [CallerMemberName] string propertyName = null)
     {
-        if (Object.Equals(storage, value))
+        if (object.Equals(storage, value))
             return false;
 
         storage = value;
