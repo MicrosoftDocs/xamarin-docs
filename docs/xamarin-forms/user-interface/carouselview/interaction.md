@@ -6,7 +6,7 @@ ms.assetid: 854D97E5-D119-4BE2-AE7C-BD428792C992
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/14/2019
+ms.date: 02/11/2020
 ---
 
 # Xamarin.Forms CarouselView Interaction
@@ -23,6 +23,7 @@ ms.date: 10/14/2019
 - `Position`, of type `int`, the index of the current item in the underlying collection. This property has a default binding mode of `TwoWay`, and has a 0 value when there isn't any data to display.
 - `PositionChangedCommand`, of type `ICommand`, which is executed when the position changes.
 - `PositionChangedCommandParameter`, of type `object`, which is the parameter that's passed to the `PositionChangedCommand`.
+- `VisibleViews`, of type `ObservableCollection<View>`, which is a read-only property that contains the objects for the items that are currently visible.
 
 All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
 
@@ -62,7 +63,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 carouselView.CurrentItemChanged += OnCurrentItemChanged;
 ```
 
-In this example, the `OnCurrentItemChanged` event handler is executed when the `CurrentItemChanged` event fires, with the event handler exposing the previous and current items:
+In this example, the `OnCurrentItemChanged` event handler is executed when the `CurrentItemChanged` event fires:
 
 ```csharp
 void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
@@ -71,6 +72,10 @@ void OnCurrentItemChanged(object sender, CurrentItemChangedEventArgs e)
     Monkey currentItem = e.CurrentItem as Monkey;
 }
 ```
+
+In this example, the `OnCurrentItemChanged` event handler exposes the previous and current items:
+
+[![Screenshot of a CarouselView with previous and current items, on iOS and Android](interaction-images/current-item-events.png "CarouselView with current and previous items")](interaction-images/current-item-events-large.png#lightbox "CarouselView with current and previous items")
 
 ### Command
 
@@ -131,7 +136,7 @@ carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 carouselView.PositionChanged += OnPositionChanged;
 ```
 
-In this example, the `OnPositionChanged` event handler is executed when the `PositionChanged` event fires, with the event handler exposing the previous and current positions:
+In this example, the `OnPositionChanged` event handler is executed when the `PositionChanged` event fires:
 
 ```csharp
 void OnPositionChanged(object sender, PositionChangedEventArgs e)
@@ -140,6 +145,10 @@ void OnPositionChanged(object sender, PositionChangedEventArgs e)
     int currentItemPosition = e.CurrentPosition;
 }
 ```
+
+In this example, the `OnCurrentItemChanged` event handler exposes the previous and current positions:
+
+[![Screenshot of a CarouselView with previous and current positions, on iOS and Android](interaction-images/current-position-events.png "CarouselView with current and previous positions")](interaction-images/current-position-events-large.png#lightbox "CarouselView with current and previous positions")
 
 ### Command
 
@@ -196,7 +205,7 @@ carouselView.SetBinding(CarouselView.CurrentItemProperty, "CurrentItem");
 > [!NOTE]
 > The `CurrentItem` property has a default binding mode of `TwoWay`.
 
-The `CarouselView.CurrentItem` property data binds to the `CurrentItem` property of the connected view model, which is of type `Monkey`. By default, a `TwoWay` binding is used so that if the user changes the current item, the value of the `CurrentItem` property will be set to the current `Monkey` object. The `CurrentItem` property is defined in the `MonkeysViewModel` class, and is set to the fourth item in the `Monkeys` collection:
+The `CarouselView.CurrentItem` property data binds to the `CurrentItem` property of the connected view model, which is of type `Monkey`. By default, a `TwoWay` binding is used so that if the user changes the current item, the value of the `CurrentItem` property will be set to the current `Monkey` object. The `CurrentItem` property is defined in the `MonkeysViewModel` class:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -214,6 +223,10 @@ public class MonkeysViewModel : INotifyPropertyChanged
     }
 }
 ```
+
+In this example, the `CurrentItem` property is set to the fourth item in the `Monkeys` collection:
+
+[![Screenshot of a CarouselView with preset item, on iOS and Android](interaction-images/preset-item.png "CarouselView with preset item")](interaction-images/preset-item-large.png#lightbox "CarouselView with preset item")
 
 ## Preset the position
 
@@ -237,7 +250,7 @@ carouselView.SetBinding(CarouselView.PositionProperty, "Position");
 > [!NOTE]
 > The `Position` property has a default binding mode of `TwoWay`.
 
-The `CarouselView.Position` property data binds to the `Position` property of the connected view model, which is of type `int`. By default, a `TwoWay` binding is used so that if the user scrolls through the [`CarouselView`](xref:Xamarin.Forms.CarouselView), the value of the `Position` property will be set to the index of the displayed item. The `Position` property is defined in the `MonkeysViewModel` class, and is set to the fourth item in the `Monkeys` collection:
+The `CarouselView.Position` property data binds to the `Position` property of the connected view model, which is of type `int`. By default, a `TwoWay` binding is used so that if the user scrolls through the [`CarouselView`](xref:Xamarin.Forms.CarouselView), the value of the `Position` property will be set to the index of the displayed item. The `Position` property is defined in the `MonkeysViewModel` class:
 
 ```csharp
 public class MonkeysViewModel : INotifyPropertyChanged
@@ -254,6 +267,79 @@ public class MonkeysViewModel : INotifyPropertyChanged
 }
 ```
 
+In this example, the `Position` property is set to the fourth item in the `Monkeys` collection:
+
+[![Screenshot of a CarouselView with preset position, on iOS and Android](interaction-images/preset-position.png "CarouselView with preset position")](interaction-images/preset-position-large.png#lightbox "CarouselView with preset position")
+
+## Define visual states
+
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) defines four visual states:
+
+- `CurrentItem` represents the visual state for the currently displayed item.
+- `PreviousItem` represents the visual state for the previously displayed item.
+- `NextItem` represents the visual state for the next item.
+- `DefaultItem` represents the visual state for the remainder of the items.
+
+These visual states can be used to initiate visual changes to the items displayed by the [`CarouselView`](xref:Xamarin.Forms.CarouselView).
+
+The following XAML example shows how to define the `CurrentItem`, `PreviousItem`, `NextItem`, and `DefaultItem` visual states:
+
+```xaml
+<CarouselView ItemsSource="{Binding Monkeys}"
+              PeekAreaInsets="100">
+    <CarouselView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout>
+                <VisualStateManager.VisualStateGroups>
+                    <VisualStateGroup x:Name="CommonStates">
+                        <VisualState x:Name="CurrentItem">
+                            <VisualState.Setters>
+                                <Setter Property="Scale"
+                                        Value="1.1" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="PreviousItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="NextItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.5" />
+                            </VisualState.Setters>
+                        </VisualState>
+                        <VisualState x:Name="DefaultItem">
+                            <VisualState.Setters>
+                                <Setter Property="Opacity"
+                                        Value="0.25" />
+                            </VisualState.Setters>
+                        </VisualState>
+                    </VisualStateGroup>
+                </VisualStateManager.VisualStateGroups>
+
+                <!-- Item template content -->
+                <Frame HasShadow="true">
+                    ...
+                </Frame>
+            </StackLayout>
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+</CarouselView>
+```
+
+In this example, the `CurrentItem` visual state specifies that the current item displayed by the [`CarouselView`](xref:Xamarin.Forms.CarouselView) will have its [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property changed from its default value of 1 to 1.1. The `PreviousItem` and `NextItem` visual states specify that the items surrounding the current item will be displayed with an [`Opacity`](xref:Xamarin.Forms.VisualElement.Opacity) value of 0.5. The `DefaultItem` visual state specifies that the remainder of the items displayed by the `CarouselView` will be displayed with an `Opacity` value of 0.25.
+
+> [!NOTE]
+> Alternatively, the visual states can be defined in a [`Style`](xref:Xamarin.Forms.Style) that has a [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property value that's the type of the root element of the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), which is set as the `ItemTemplate` property value.
+
+The following screenshots show the `CurrentItem`, `PreviousItem`, and `NextItem` visual states:
+
+[![Screenshot of a CarouselView using visual states, on iOS and Android](interaction-images/visual-states.png "CarouselView visual states")](interaction-images/visual-states-large.png#lightbox "CarouselView visual states")
+
+For more information about visual states, see [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+
 ## Clear the current item
 
 The `CurrentItem` property can be cleared by setting it, or the object it binds to, to `null`.
@@ -269,3 +355,4 @@ By default, [`CarouselView`](xref:Xamarin.Forms.CarouselView) allows users to mo
 ## Related links
 
 - [CarouselView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-carouselviewdemos/)
+- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

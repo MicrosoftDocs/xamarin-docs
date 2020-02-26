@@ -6,7 +6,7 @@ ms.assetid: F6EA9E49-FB3E-442F-AF13-B7AD0C80D11F
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/20/2019
+ms.date: 01/16/2020
 ---
 
 # Windows Platform Features
@@ -37,6 +37,10 @@ The following platform-specific functionality is provided for Xamarin.Forms page
 - Collapsing the [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) navigation bar. For more information, see [MasterDetailPage Navigation Bar on Windows](masterdetailpage-navigation-bar.md).
 - Setting toolbar placement options. For more information, see [Page Toolbar Placement on Windows](page-toolbar-placement.md).
 - Enabling page icons to be displayed on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) toolbar. For more information, see [TabbedPage Icons on Windows](tabbedpage-icons.md).
+
+The following platform-specific functionality is provided for the Xamarin.Forms [`Application`](xref:Xamarin.Forms.Application) class on UWP:
+
+- Specifying the directory in the project that image assets will be loaded from. For more information, see [Default Image Directory on Windows](default-image-directory.md).
 
 ## Platform support
 

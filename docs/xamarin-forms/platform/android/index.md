@@ -69,6 +69,10 @@ And this is the same code after upgrading the project to use `FormsAppCompatActi
 > [!NOTE]
 > When using `FormsAppCompatActivity`, the [base classes for some Android custom renderers](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) will be different.
 
+## AndroidX Migration
+
+AndroidX replaces the Android Support Library. To learn about AndroidX and how to migrate a Xamarin.Forms app to use AndroidX libraries, see [AndroidX migration in Xamarin.Forms](~/xamarin-forms/platform/android/androidx-migration.md).
+
 ## Related links
 
 - [Add Material Design Support](appcompat-material-design.md)

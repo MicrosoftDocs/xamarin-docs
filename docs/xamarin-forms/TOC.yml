@@ -398,6 +398,8 @@
                   href: user-interface/map/geocoder.md
                 - name: Launch the Native Map App
                   href: user-interface/map/native-map-app.md
+            - name: MediaElement
+              href: user-interface/mediaelement.md
             - name: WebView
               href: user-interface/webview.md
         - name: Initiate commands
@@ -620,6 +622,8 @@
           items:
             - name: Overview
               href: platform/android/index.md
+            - name: AndroidX Migration
+              href: platform/android/androidx-migration.md
             - name: AppCompat & Material Design
               href: platform/android/appcompat-material-design.md
             - name: Button Padding and Shadows
@@ -662,6 +666,8 @@
               href: platform/ios/named-font-size-scaling.md
             - name: Cell Background Color
               href: platform/ios/cell-background-color.md
+            - name: DatePicker Item Selection
+              href: platform/ios/datepicker-selection.md
             - name: Entry Cursor Color
               href: platform/ios/entry-cursor-color.md
             - name: Entry Font Size
@@ -702,16 +708,24 @@
               href: platform/ios/slider-thumb.md
             - name: SwipeView Swipe Transition Mode
               href: platform/ios/swipeview-swipetransitionmode.md
+            - name: TabbedPage Translucent TabBar
+              href: platform/ios/tabbedpage-translucent-tabbar.md
+            - name: TimePicker Item Selection
+              href: platform/ios/timepicker-selection.md
             - name: VisualElement Blur
               href: platform/ios/visualelement-blur.md
             - name: VisualElement Drop Shadows
               href: platform/ios/visualelement-drop-shadow.md
             - name: VisualElement Legacy Color Mode
               href: platform/ios/legacy-color-mode.md
+            - name: VisualElement First Responder
+              href: platform/ios/visualelement-first-responder.md
         - name: Windows
           items:
             - name: Overview
               href: platform/windows/index.md
+            - name: Default Image Directory
+              href: platform/windows/default-image-directory.md
             - name: InputView Reading Order
               href: platform/windows/inputview-reading-order.md
             - name: ListView SelectionMode

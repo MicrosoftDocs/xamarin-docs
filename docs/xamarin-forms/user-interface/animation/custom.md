@@ -6,7 +6,7 @@ ms.assetid: 03B2E3FC-E720-4D45-B9A0-711081FC1907
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/14/2016
+ms.date: 02/10/2019
 ---
 
 # Custom Animations in Xamarin.Forms
@@ -19,7 +19,9 @@ A number of parameters must be specified when creating an `Animation` object, in
 
 Running an animation created with the [`Animation`](xref:Xamarin.Forms.Animation) class, which may or may not include child animations, is achieved by calling the [`Commit`](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) method. This method specifies the duration of the animation, and amongst other items, a callback that controls whether to repeat the animation.
 
-## Creating an Animation
+In addition, the [`Animation`](xref:Xamarin.Forms.Animation) class has an `IsEnabled` property that can be examined to determine if animations have been disabled by the operating system, such as when power saving mode is activated.
+
+## Create an animation
 
 When creating an [`Animation`](xref:Xamarin.Forms.Animation) object, typically, a minimum of three parameters are required, as demonstrated in the following code example:
 
@@ -54,7 +56,7 @@ The overall effect is to create an animation that increases the [`Scale`](xref:X
 
 <a name="child" />
 
-### Child Animations
+### Child animations
 
 The [`Animation`](xref:Xamarin.Forms.Animation) class also supports child animations, which involves creating an `Animation` object to which other `Animation` objects are added. This enables a series of animations to be run and synchronized. The following code example demonstrates creating and running child animations:
 
@@ -93,7 +95,7 @@ There are a number of differences between an [`Animation`](xref:Xamarin.Forms.An
 
 The [`Animation`](xref:Xamarin.Forms.Animation) class also includes [`WithConcurrent`](xref:Xamarin.Forms.Animation.WithConcurrent(Xamarin.Forms.Animation,System.Double,System.Double)) methods that can be used to add child animations to a parent `Animation` object. However, their *begin* and *finish* argument values aren't restricted to 0 to 1, but only that part of the child animation that corresponds to a range of 0 to 1 will be active. For example, if a `WithConcurrent` method call defines a child animation that targets a [`Scale`](xref:Xamarin.Forms.VisualElement.Scale) property from 1 to 6, but with *begin* and *finish* values of -2 and 3, the *begin* value of -2 corresponds to a `Scale` value of 1, and the *finish* value of 3 corresponds to a `Scale` value of 6. Because values outside the range of 0 and 1 play no part in an animation, the `Scale` property will only be animated from 3 to 6.
 
-## Canceling an Animation
+## Cancel an animation
 
 An application can cancel an animation with a call to the [`AbortAnimation`](xref:Xamarin.Forms.AnimationExtensions.AbortAnimation(Xamarin.Forms.IAnimatable,System.String)) extension method, as demonstrated in the following code example:
 
@@ -103,7 +105,7 @@ this.AbortAnimation ("SimpleAnimation");
 
 Note that animations are uniquely identified by a combination of the animation owner, and the animation name. Therefore, the owner and name specified when running the animation must be specified to cancel the animation. Therefore, the code example will immediately cancel the animation named `SimpleAnimation` that's owned by the page.
 
-## Creating a Custom Animation
+## Create a custom animation
 
 The examples shown here so far have demonstrated animations that could equally be achieved with the methods in the [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class. However, the advantage of the [`Animation`](xref:Xamarin.Forms.Animation) class is that it has access to the callback method, which is executed when the animated value changes. This allows the callback to implement any desired animation. For example, the following code example animates the [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) property of a page by setting it to [`Color`](xref:Xamarin.Forms.Color) values created by the [`Color.FromHsla`](xref:Xamarin.Forms.Color.FromHsla(System.Double,System.Double,System.Double,System.Double)) method, with hue values ranging from 0 to 1:
 
@@ -117,7 +119,7 @@ The resulting animation provides the appearance of advancing the page background
 
 For more examples of creating complex animations, including a Bezier curve animation, see [Chapter 22](https://download.xamarin.com/developer/xamarin-forms-book/XamarinFormsBook-Ch22-Apr2016.pdf) of [Creating Mobile Apps with Xamarin.Forms](~/xamarin-forms/creating-mobile-apps-xamarin-forms/index.md).
 
-## Creating a Custom Animation Extension Method
+## Create a custom animation extension method
 
 The extension methods in the [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class animate a property from its current value to a specified value. This makes it difficult to create, for example, a `ColorTo` animation method that can be used to animate a color from one value to another, because:
 
@@ -171,12 +173,8 @@ await boxView.ColorTo(Color.Blue, Color.Red, c => boxView.Color = c, 4000);
 
 In this code example, the `ColorTo` method animates the [`TextColor`](xref:Xamarin.Forms.Label.TextColor) and [`BackgroundColor`](xref:Xamarin.Forms.VisualElement.BackgroundColor) properties of a [`Label`](xref:Xamarin.Forms.Label), the `BackgroundColor` property of a page, and the [`Color`](xref:Xamarin.Forms.BoxView.Color) property of a [`BoxView`](xref:Xamarin.Forms.BoxView).
 
-## Summary
-
-This article demonstrated how to use the [`Animation`](xref:Xamarin.Forms.Animation) class to create and cancel animations, synchronize multiple animations, and create custom animations that animate properties that aren't animated by the existing animation methods. The `Animation` class is the building block of all Xamarin.Forms animations.
-
-## Related Links
+## Related links
 
 - [Custom Animations (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-animation-custom)
-- [Animation](xref:Xamarin.Forms.Animation)
-- [AnimationExtensions](xref:Xamarin.Forms.AnimationExtensions)
+- [Animation API](xref:Xamarin.Forms.Animation)
+- [AnimationExtensions API](xref:Xamarin.Forms.AnimationExtensions)
