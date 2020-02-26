@@ -33,7 +33,7 @@ Material Visual currently supports the following controls:
 
 - [`ActivityIndicator`](xref:Xamarin.Forms.ActivityIndicator)
 - [`Button`](xref:Xamarin.Forms.Button)
-- `CheckBox`
+- [`CheckBox`](xref:Xamarin.Forms.CheckBox)
 - [`DatePicker`](xref:Xamarin.Forms.DatePicker)
 - [`Editor`](xref:Xamarin.Forms.Editor)
 - [`Entry`](xref:Xamarin.Forms.Entry)
