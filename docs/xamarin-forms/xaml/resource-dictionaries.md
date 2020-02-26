@@ -6,7 +6,7 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/15/2019
+ms.date: 02/26/2020
 ms.custom: video
 ---
 
@@ -259,6 +259,8 @@ This example shows an instance of `MyResourceDictionary`, which resides in the s
     ...
 </ContentPage>
 ```
+
+When placing a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) in an external assembly, ensure that its build action is set to **EmbeddedResource**. In addition, ensure that it has a code-behind file.
 
 > [!IMPORTANT]
 > There can be only one `MergedDictionaries` property-element tag in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), but you can put as many `ResourceDictionary` objects in there as you want.
