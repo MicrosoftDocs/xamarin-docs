@@ -277,7 +277,7 @@ In this example, the `IndicatorView` is rendered beneath the `CarouselView`, wit
 [![Screenshot of a CarouselView and IndicatorView, on iOS and Android](populate-data-images/indicators.png "IndicatorView circles")](populate-data-images/indicators-large.png#lightbox "IndicatorView circles")
 
 > [!IMPORTANT]
-> Setting the `CarouselView.IndicatorViewy` property results in the `IndicatorView.Position` property binding to the `CarouselView.Position` property, and the `IndicatorView.ItemsSource` property binding to the `CarouselView.ItemsSource` property.
+> Setting the `CarouselView.IndicatorView` property results in the `IndicatorView.Position` property binding to the `CarouselView.Position` property, and the `IndicatorView.ItemsSource` property binding to the `CarouselView.ItemsSource` property.
 
 For more information about indicators, see [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
 

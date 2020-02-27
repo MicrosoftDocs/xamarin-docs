@@ -63,7 +63,7 @@ The following example shows how to instantiate an `IndicatorView` in XAML:
 In this example, the `IndicatorView` is rendered beneath the `CarouselView`, with an indicator for each item in the `CarouselView`. The `IndicatorView` is populated with data by setting the `CarouselView.IndicatorView` property to the `IndicatorView` object. Each indicator is a light gray circle, while the indicator that represents the current item in the `CarouselView` is dark gray.
 
 > [!IMPORTANT]
-> Setting the `CarouselView.IndicatorView` property results in the `Position` property binding to the `CarouselView.Position` property, and the `ItemsSource` property binding to the `CarouselView.ItemsSource` property.
+> Setting the `CarouselView.IndicatorView` property results in the `IndicatorView.Position` property binding to the `CarouselView.Position` property, and the `IndicatorView.ItemsSource` property binding to the `CarouselView.ItemsSource` property.
 
 ## Change indicator shape
 
