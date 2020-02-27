@@ -534,7 +534,7 @@ Follow these steps for the linker to remove `UIWebView` references:
 
 1. **Open iOS project properties** &ndash; Right-click your iOS project and choose **Properties**.
 1. **Navigate to the iOS Build section** &ndash; Select the **iOS Build** section.
-1. **Update the Additional mtouch arguments** &ndash; In the **Additional mtouch arguments** add this flag `--optimize=experimental-xforms-product-type` (in addition to any value that might already be in there). Note: this only works correctly when **Linker Behavior** is set to **SDK Only** or **Link All**.
+1. **Update the Additional mtouch arguments** &ndash; In the **Additional mtouch arguments** add this flag `--optimize=experimental-xforms-product-type` (in addition to any value that might already be in there). Note: this flag works together with the **Linker Behavior** set to **SDK Only** or **Link All**. If, for any reason, you see errors when setting the Linker Behavior to All, this is most likely a problem within the app code or a third-party library that is not linker safe. For more information on the linker, please refer to [the docs](/xamarin/ios/deploy-test/linker).
 1. **Update all build configurations** &ndash; Use the **Configuration** and **Platform** lists at the top of the window to update all build configurations. The most important configuration to update is the **Release/iPhone** configuration, since that is typically used to create builds for App Store submission.
 
 You can see the window with the new flag in place in this screenshot:
@@ -547,7 +547,7 @@ Follow these steps for the linker to remove `UIWebView` references
 
 1. **Open iOS project options** &ndash; Right-click your iOS project and choose **Options**.
 1. **Navigate to the iOS Build section** &ndash; Select the **iOS Build** section.
-1. **Update the Additional _mtouch_ arguments** &ndash; iIn the **Additional _mtouch_ arguments** add this flag `--optimize=experimental-xforms-product-type` (in addition to any value that might already be in there). Note: this only works correctly when **Linker Behavior** is set to **SDK Only** or **Link All**.
+1. **Update the Additional _mtouch_ arguments** &ndash; In the **Additional _mtouch_ arguments** add this flag `--optimize=experimental-xforms-product-type` (in addition to any value that might already be in there). Note: this flag works together with the **Linker Behavior** set to **SDK Only** or **Link All**. If, for any reason, you see errors when setting the Linker Behavior to All, this is most likely a problem within the app code or a third-party library that is not linker safe. For more information on the linker, please refer to [the docs](/xamarin/ios/deploy-test/linker).
 1. **Update all build configurations** &ndash; Use the **Configuration** and **Platform** lists at the top of the window to update all build configurations. The most important configuration to update is the **Release/iPhone** configuration, since that is typically used to create builds for App Store submission.
 
 You can see the window with the new flag in place in this screenshot:
