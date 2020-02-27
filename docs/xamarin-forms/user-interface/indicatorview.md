@@ -67,7 +67,7 @@ In this example, the `IndicatorView` is rendered beneath the `CarouselView`, wit
 
 ## Change indicator shape
 
-The `IndicatorView` class has a `IndicatorsShape` property, which indicates the shape of the indicators. This property can be set to one of the `IndicatorShape` enumeration members:
+The `IndicatorView` class has an `IndicatorsShape` property, which determines the shape of the indicators. This property can be set to one of the `IndicatorShape` enumeration members:
 
 - `Circle` specifies that the indicator shapes will be circular. This is the default value of the `IndicatorView.IndicatorsShape` property.
 - `Square` indicates that the indicator shapes will be square.
@@ -79,6 +79,28 @@ The following example shows an `IndicatorView` configured to use square indicato
                IndicatorsShape="Square"
                IndicatorColor="LightGray"
                SelectedIndicatorColor="DarkGray" />
+```
+
+## Change indicator size
+
+The `IndicatorView` class has an `IndicatorSize` property, of type `double`, which determines the size of the indicators in device-independent units. The default value of this property is 6.0.
+
+The following example shows an `IndicatorView` configured to display larger indicators:
+
+```xaml
+<IndicatorView x:Name="indicatorView"
+               IndicatorSize="18" />
+```
+
+## Limit the number of indicators displayed
+
+The `IndicatorView` class has a `MaximumVisible` property, of type `int`, which determines the maximum number of visible indicators.
+
+The following example shows an `IndicatorView` configured to display a maximum of six indicators:
+
+```xaml
+<IndicatorView x:Name="indicatorView"
+               MaximumVisible="6" />
 ```
 
 ## Define indicator appearance
