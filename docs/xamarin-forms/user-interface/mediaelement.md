@@ -13,7 +13,7 @@ ms.date: 02/18/2020
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithMediaElement)
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) is a view for playing video and audio. Media that's supported by the underlying platform can be played from the following sources:
 
@@ -532,7 +532,7 @@ For more information about using a [`Slider`](xref:Xamarin.Forms.Slider) see, [X
 
 ## Related links
 
-- [MediaElementDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/pre-release/WorkingWithMediaElement)
+- [MediaElementDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/WorkingWithMediaElement)
 - [URI schemes](/windows/uwp/app-resources/uri-schemes)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Slider](~/xamarin-forms/user-interface/slider.md)

@@ -6,7 +6,7 @@ ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/17/2019
+ms.date: 02/27/2020
 ---
 
 # Xamarin.Forms IndicatorView
@@ -19,7 +19,7 @@ The `IndicatorView` is a control that displays indicators that represent the num
 
 [![Screenshot of a CarouselView and IndicatorView, on iOS and Android](indicatorview-images/circles.png "IndicatorView circles")](indicatorview-images/circles-large.png#lightbox "IndicatorView circles")
 
-`IndicatorView` is available in Xamarin.Forms 4.4 on the iOS and Android platforms. However, it's currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
+`IndicatorView` is available in Xamarin.Forms 4.4 on the iOS and Android platforms, and in 4.5 on the Universal Windows Platform. However, it's currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
 
 ```csharp
 Forms.SetFlags("IndicatorView_Experimental");
@@ -67,7 +67,7 @@ In this example, the `IndicatorView` is rendered beneath the `CarouselView`, wit
 
 ## Change indicator shape
 
-The `IndicatorView` class has a `IndicatorsShape` property, which indicates the shape of the indicators. This property can be set to one of the `IndicatorShape` enumeration members:
+The `IndicatorView` class has an `IndicatorsShape` property, which determines the shape of the indicators. This property can be set to one of the `IndicatorShape` enumeration members:
 
 - `Circle` specifies that the indicator shapes will be circular. This is the default value of the `IndicatorView.IndicatorsShape` property.
 - `Square` indicates that the indicator shapes will be square.
@@ -79,6 +79,28 @@ The following example shows an `IndicatorView` configured to use square indicato
                IndicatorsShape="Square"
                IndicatorColor="LightGray"
                SelectedIndicatorColor="DarkGray" />
+```
+
+## Change indicator size
+
+The `IndicatorView` class has an `IndicatorSize` property, of type `double`, which determines the size of the indicators in device-independent units. The default value of this property is 6.0.
+
+The following example shows an `IndicatorView` configured to display larger indicators:
+
+```xaml
+<IndicatorView x:Name="indicatorView"
+               IndicatorSize="18" />
+```
+
+## Limit the number of indicators displayed
+
+The `IndicatorView` class has a `MaximumVisible` property, of type `int`, which determines the maximum number of visible indicators.
+
+The following example shows an `IndicatorView` configured to display a maximum of six indicators:
+
+```xaml
+<IndicatorView x:Name="indicatorView"
+               MaximumVisible="6" />
 ```
 
 ## Define indicator appearance
