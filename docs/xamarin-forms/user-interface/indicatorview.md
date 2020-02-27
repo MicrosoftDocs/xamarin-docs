@@ -6,7 +6,7 @@ ms.assetId: BBCC223B-4B02-46B7-80BB-EE0E86A67CE2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/17/2019
+ms.date: 02/27/2020
 ---
 
 # Xamarin.Forms IndicatorView
@@ -19,7 +19,7 @@ The `IndicatorView` is a control that displays indicators that represent the num
 
 [![Screenshot of a CarouselView and IndicatorView, on iOS and Android](indicatorview-images/circles.png "IndicatorView circles")](indicatorview-images/circles-large.png#lightbox "IndicatorView circles")
 
-`IndicatorView` is available in Xamarin.Forms 4.4 on the iOS and Android platforms. However, it's currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
+`IndicatorView` is available in Xamarin.Forms 4.4 on the iOS and Android platforms, and in 4.5 on the Universal Windows Platform. However, it's currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
 
 ```csharp
 Forms.SetFlags("IndicatorView_Experimental");
