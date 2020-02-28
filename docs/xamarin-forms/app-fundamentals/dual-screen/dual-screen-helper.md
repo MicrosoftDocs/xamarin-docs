@@ -11,6 +11,8 @@ ms.date: 02/08/2020
 
 # Xamarin.Forms dual-screen platform helpers
 
+![](~/media/shared/preview.png "This API is currently pre-release")
+
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
 
 The `DualScreenHelper` class can be used to detect if a device supports Picture in Picture mode and then lets you open a `ContentPage` as a picture in picture window. If you're running on a Neo device, it will open the page into the WonderBar when in compose mode.

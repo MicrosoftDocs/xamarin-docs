@@ -33,7 +33,7 @@ Device.SetFlags(new string[]{ "MediaElement_Experimental" });
 ```
 
 > [!NOTE]
-> [`MediaElement`](xref:Xamarin.Forms.MediaElement) is available on iOS, Android, the Universal Windows Platform (UWP), and additional platforms.
+> [`MediaElement`](xref:Xamarin.Forms.MediaElement) is available on iOS, Android, the Universal Windows Platform (UWP), macOS, Windows Presentation Foundation, and Tizen.
 
 [`MediaElement`](xref:Xamarin.Forms.MediaElement) defines the following properties:
 
