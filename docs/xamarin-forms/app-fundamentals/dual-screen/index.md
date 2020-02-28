@@ -33,4 +33,4 @@ The `DualScreenHelper` class lets you check if the platform supports opening a n
 
 ## [Dual-screen triggers](triggers.md)
 
-The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes a state trigger that triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of a [`TwoPaneView`](xref:Xamarin.Forms.DualScreen.TwoPaneView) changes.
+The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes two state triggers that trigger a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of the attached layout, or window, changes.
