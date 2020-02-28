@@ -58,7 +58,7 @@ The following XAML example shows a [`Grid`](xref:Xamarin.Forms.Grid) that includ
 </Grid>
 ```
 
-In this example, visual states are set on a [`Grid`](xref:Xamarin.Forms.Grid) object. The background color of the `Grid` is green when only one pane is shown, is red when panes are shown side-by-side, and is purple when panes are shown top-bottom.
+In this example, visual states are set on a [`Grid`](xref:Xamarin.Forms.Grid) object. The background color of the `Grid` is green when only one pane is shown, is red when panes are shown side by side, and is purple when panes are shown top-bottom.
 
 ## Related links
 
