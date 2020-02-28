@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Forms DualScreenHelper"
+title: "Xamarin.Forms dual-screen platform helpers"
 description: "This guide explains how to use Xamarin.Forms DualScreenHelper class to optimize your app experience for dual-screen devices such as Surface Duo and Surface Neo."
 ms.prod: xamarin
 ms.assetid: 5aa184c2-5611-427d-85c7-1c56486c3e1b
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/08/2020
 ---
 
-# Xamarin.Forms DualScreenHelper
+# Xamarin.Forms dual-screen platform helpers
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/UserInterface/DualScreenDemos)
 
@@ -25,7 +25,7 @@ The `DualScreenHelper` class can be used to detect if a device supports Picture 
 ```csharp
 async void OpenCompactWindowClicked(object sender, EventArgs e)
 {
-    if(!DualScreenHelper.HasCompactModeSupport())
+    if (!DualScreenHelper.HasCompactModeSupport())
     {
         await DisplayAlert("Unsupported", "This platform doesn't support this feature", "Ok");
         return;
