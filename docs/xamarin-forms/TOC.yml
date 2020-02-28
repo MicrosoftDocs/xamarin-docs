@@ -250,7 +250,7 @@
               href: app-fundamentals/dependency-service/registration-and-resolution.md
             - name: Picking from the Photo Library
               href: app-fundamentals/dependency-service/photo-picker.md
-        - name: Dual screen
+        - name: Dual-screen
           href: app-fundamentals/dual-screen/index.md
           items:
             - name: Dual-screen patterns
