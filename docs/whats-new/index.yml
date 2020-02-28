@@ -11,13 +11,15 @@ metadata:
   ms.assetid: 7D34BF92-6326-40F5-B34B-18B03F293B34
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/20/2019
+  ms.date: 02/28/2020
 
 landingContent:
   - title: "What's new?"
     linkLists:
       - linkListType: whats-new
         links:
+          - text: February 2020
+            url: 2020-02.md
           - text: December 2019
             url: 2019-12.md
           - text: October 2019

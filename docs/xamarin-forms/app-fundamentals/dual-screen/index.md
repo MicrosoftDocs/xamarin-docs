@@ -15,7 +15,7 @@ ms.date: 02/08/2020
 
 Surface Duo (Android) and Surface Neo (Windows 10X) introduce new patterns for touch applications. Xamarin.Forms includes `TwoPaneView` and `DualScreenInfo` classes so you can develop apps for these devices.
 
-## [Dual-screen patterns](design-patterns.md)
+## [Dual-screen design patterns](design-patterns.md)
 
 When considering how to best utilize multiple screens on a dual-screen device, refer to this pattern guidance to find the best fit for your application interface.
 

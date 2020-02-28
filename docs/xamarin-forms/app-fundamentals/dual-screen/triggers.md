@@ -11,6 +11,8 @@ ms.date: 02/28/2020
 
 # Xamarin.Forms dual-screen triggers
 
+![](~/media/shared/preview.png "This API is currently pre-release")
+
 The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes a state trigger that triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of a [`TwoPaneView`](xref:Xamarin.Forms.DualScreen.TwoPaneView) changes. For more information about state triggers, see [State triggers](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
 
 ## Span mode state trigger

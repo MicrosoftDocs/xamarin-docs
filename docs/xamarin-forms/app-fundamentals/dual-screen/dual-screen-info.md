@@ -11,6 +11,8 @@ ms.date: 02/08/2020
 
 # Xamarin.Forms dual-screen device capabilities
 
+![](~/media/shared/preview.png "This API is currently pre-release")
+
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 
 The `DualScreenInfo` class enables you to determine which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more.
