@@ -13,11 +13,16 @@ ms.date: 02/28/2020
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes a state trigger that triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of a [`TwoPaneView`](xref:Xamarin.Forms.DualScreen.TwoPaneView) changes. For more information about state triggers, see [State triggers](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
+The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes two state triggers:
+
+- [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger) triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of the attached layout changes.
+- `WindowSpanModeStateTrigger` triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of the window changes.
+
+For more information about state triggers, see [State triggers](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
 
 ## Span mode state trigger
 
-A [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger) triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the span mode of a [`TwoPaneView`](xref:Xamarin.Forms.DualScreen.TwoPaneView) changes. This trigger has a single bindable property:
+A [`SpanModeStateTrigger`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger) triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the span mode of the attached layout changes. This trigger has a single bindable property:
 
 - [`SpanMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode), of type [`TwoPaneViewMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode), which indicates the span mode to which the [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
 
@@ -61,6 +66,53 @@ The following XAML example shows a [`Grid`](xref:Xamarin.Forms.Grid) that includ
 ```
 
 In this example, visual states are set on a [`Grid`](xref:Xamarin.Forms.Grid) object. The background color of the `Grid` is green when only one pane is shown, is red when panes are shown side by side, and is purple when panes are shown top-bottom.
+
+## Window span mode state trigger
+
+A `WindowSpanModeStateTrigger` triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the span mode of the window changes. This trigger has a single bindable property:
+
+- [`SpanMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode), of type [`TwoPaneViewMode`](xref:Xamarin.Forms.DualScreen.SpanModeStateTrigger.SpanMode), which indicates the span mode to which the [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied.
+
+> [!NOTE]
+> The `WindowSpanModeStateTrigger` derives from the [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) class and can therefore attach an event handler to the [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) event.
+
+The following XAML example shows a [`Grid`](xref:Xamarin.Forms.Grid) that includes `WindowSpanModeStateTrigger` objects:
+
+```xaml
+<Grid>
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup>
+            <VisualState x:Name="NotSpanned">
+                <VisualState.StateTriggers>
+                    <dualScreen:WindowSpanModeStateTrigger SpanMode="SinglePane"/>
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Spanned">
+                <VisualState.StateTriggers>
+                    <dualScreen:WindowSpanModeStateTrigger SpanMode="Wide" />
+                </VisualState.StateTriggers>
+                <VisualState.Setters>
+                    <Setter Property="BackgroundColor" Value="Green" />
+                </VisualState.Setters>
+            </VisualState>
+                <VisualState x:Name="Tall">
+                    <VisualState.StateTriggers>
+                        <dualScreen:WindowSpanModeStateTrigger SpanMode="Tall" />
+                    </VisualState.StateTriggers>
+                    <VisualState.Setters>
+                        <Setter Property="BackgroundColor" Value="Yellow" />
+                    </VisualState.Setters>
+                </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+    ...
+</Grid>    
+```
+
+In this example, visual states are set on a [`Grid`](xref:Xamarin.Forms.Grid) object. The background color of the `Grid` is red when only one pane is shown, is green when panes are shown side by side, and is yellow when panes are shown top-bottom.
 
 ## Related links
 
