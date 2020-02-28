@@ -15,18 +15,22 @@ ms.date: 02/08/2020
 
 Surface Duo (Android) and Surface Neo (Windows 10X) introduce new patterns for touch applications. Xamarin.Forms includes `TwoPaneView` and `DualScreenInfo` classes so you can develop apps for these devices.
 
-## [Dual-Screen Patterns](design-patterns.md)
+## [Dual-screen patterns](design-patterns.md)
 
 When considering how to best utilize multiple screens on a dual-screen device, refer to this pattern guidance to find the best fit for your application interface.
 
-## [TwoPaneView](twopaneview.md)
+## [Dual-screen layout](twopaneview.md)
 
 The Xamarin.Forms `TwoPaneView` class, inspired by the UWP control of the same name, is a cross-platform layout optimized for dual-screen devices.
 
-## [DualScreenInfo](dual-screen-info.md)
+## [Dual-screen device capabilities](dual-screen-info.md)
 
 The `DualScreenInfo` class enables you to determine which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more.
 
-## [DualScreenHelper](dual-screen-helper.md)
+## [Dual-screen platform helpers](dual-screen-helper.md)
 
 The `DualScreenHelper` class lets you check if the platform supports opening a new window as Picture in Picture. For Neo, this enables you to open a window that will display in the Wonderbar, when the device is in compose mode.
+
+## [Dual-screen triggers](triggers.md)
+
+The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes a state trigger that triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of a [`TwoPaneView`](xref:Xamarin.Forms.DualScreen.TwoPaneView) changes.

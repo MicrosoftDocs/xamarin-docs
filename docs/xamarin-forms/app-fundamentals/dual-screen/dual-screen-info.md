@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Forms DualScreenInfo"
+title: "Xamarin.Forms dual-screen device capabilities"
 description: "This guide explains how to use Xamarin.Forms DualScreenInfo class to optimize your app experience for dual-screen devices such as Surface Duo and Surface Neo."
 ms.prod: xamarin
 ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/08/2020
 ---
 
-# Xamarin.Forms DualScreenInfo
+# Xamarin.Forms dual-screen device capabilities
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 

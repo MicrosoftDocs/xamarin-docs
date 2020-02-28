@@ -250,17 +250,19 @@
               href: app-fundamentals/dependency-service/registration-and-resolution.md
             - name: Picking from the Photo Library
               href: app-fundamentals/dependency-service/photo-picker.md
-        - name: Dual Screen
+        - name: Dual-screen
           href: app-fundamentals/dual-screen/index.md
           items:
-            - name: Dual-Screen Patterns
+            - name: Dual-screen patterns
               href: app-fundamentals/dual-screen/design-patterns.md
-            - name: TwoPaneView
+            - name: Dual-screen layout
               href: app-fundamentals/dual-screen/twopaneview.md
-            - name: DualScreenInfo
+            - name: Dual-screen device capabilities
               href: app-fundamentals/dual-screen/dual-screen-info.md
-            - name: DualScreenHelper
+            - name: Dual-screen platform helpers
               href: app-fundamentals/dual-screen/dual-screen-helper.md
+            - name: Dual-screen triggers
+              href: app-fundamentals/dual-screen/triggers.md
         - name: Effects
           href: app-fundamentals/effects/index.md
           items:

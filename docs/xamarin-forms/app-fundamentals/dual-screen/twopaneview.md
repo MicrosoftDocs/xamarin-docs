@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Forms TwoPaneView"
+title: "Xamarin.Forms dual-screen layout"
 description: "This guide explains how to use Xamarin.Forms TwoPaneView to optimize your app experience for dual-screen devices such as Surface Duo and Surface Neo."
 ms.prod: xamarin
 ms.assetid: 17ee8afa-5e7c-4a4f-a9b6-2aca03f30fe3
@@ -9,7 +9,7 @@ ms.author: daortin
 ms.date: 02/08/2020
 ---
 
-# Xamarin.Forms TwoPaneView
+# Xamarin.Forms dual-screen layout
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/DualScreenDemos)
 
