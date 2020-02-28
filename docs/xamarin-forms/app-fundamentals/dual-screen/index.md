@@ -30,3 +30,7 @@ The `DualScreenInfo` class enables you to determine which pane your view is on, 
 ## [Dual-screen platform helpers](dual-screen-helper.md)
 
 The `DualScreenHelper` class lets you check if the platform supports opening a new window as Picture in Picture. For Neo, this enables you to open a window that will display in the Wonderbar, when the device is in compose mode.
+
+## [Dual-screen triggers](triggers.md)
+
+The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes a state trigger that triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of a [`TwoPaneView`](xref:Xamarin.Forms.DualScreen.TwoPaneView) changes.

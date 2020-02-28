@@ -261,6 +261,8 @@
               href: app-fundamentals/dual-screen/dual-screen-info.md
             - name: Dual-screen platform helpers
               href: app-fundamentals/dual-screen/dual-screen-helper.md
+            - name: Dual-screen triggers
+              href: app-fundamentals/dual-screen/triggers.md
         - name: Effects
           href: app-fundamentals/effects/index.md
           items:
