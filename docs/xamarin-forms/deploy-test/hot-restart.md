@@ -27,21 +27,23 @@ Xamarin Hot Restart enables you to quickly test changes to your app during devel
 
 ## Initial setup
 
-1. Ensure the iOS project is set as the startup project and the build configuration set to **Debug|iPhone**.
+1. As of Visaul Studio 2019 version 16.5 version 3, make sure you have enabled Xamarin Hot Restart under **Tools > Options... > Environment > Preview Features**.
 
-   1. If this is an existing project, go to **Build > Configuration Manager…** and ensure **Deploy** is enabled for the iOS project.
+2. Ensure the iOS project is set as the startup project and the build configuration set to **Debug|iPhone**.
 
-2. Select and click **Local Device** in the toolbar to launch the setup wizard:
+   2. If this is an existing project, go to **Build > Configuration Manager…** and ensure **Deploy** is enabled for the iOS project.
+
+3. Select and click **Local Device** in the toolbar to launch the setup wizard:
 
     [![](hot-restart-images/toolbar.png "Screenshot of the Visual Studio toolbar with local device set as the debug target.")](hot-restart-images/toolbar.png)
 
-3. If iTunes is not installed, click **Download iTunes** to download the installer. Click **Next** when the iTunes installation is complete.
+4. If iTunes is not installed, click **Download iTunes** to download the installer. Click **Next** when the iTunes installation is complete.
 
-4. Connect an iOS device to your machine. The device name will appear in the wizard once it is detected. Click **Next**.
+5. Connect an iOS device to your machine. The device name will appear in the wizard once it is detected. Click **Next**.
 
-5. Enter your Apple Developer account credentials and click **Next**.
+6. Enter your Apple Developer account credentials and click **Next**.
 
-6. Select a development team using the dropdown menu in order to enable [automatic provisioning](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) in the project. Click **Finish**.
+7. Select a development team using the dropdown menu in order to enable [automatic provisioning](~/ios/get-started/installation/device-provisioning/automatic-provisioning.md) in the project. Click **Finish**.
 
 > [!NOTE]
 > Using automatic provisioning is recommended so additional iOS devices can be easily configured for deployment. However, you can disable it and continue using manual provisioning if the correct provisioning profiles are present.
