@@ -88,7 +88,7 @@ On the Universal Windows Platform (UWP), supported orientations are set in the *
 
 ## Reacting to Changes in Orientation
 
-Xamarin.Forms does not offer any native events for notifying your app of orientation changes in shared code. The NuGet package [Xamarin.Essentials](https://docs.microsoft.com/en-us/xamarin/essentials) contains a class [`DeviceDisplay`] that provides notifications of orientation changes.
+Xamarin.Forms does not offer any native events for notifying your app of orientation changes in shared code. However,[Xamarin.Essentials](~/essentials/index.md) contains a [`DeviceDisplay`] class that provides notifications of orientation changes.
 
 To detect orientations without Xamarin.Essentials, monitor the `SizeChanged` event of the `Page`, which fires when either the width or height of the `Page` changes. When the width of the `Page` is greater than the height, the device is in landscape mode. For more information, see [Display an Image based on Screen Orientation](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
 
