@@ -404,11 +404,12 @@ The following table lists the visual states that are defined in Xamarin.Forms:
 | ----- | ------ | ---------------- |
 | `Button` | `Pressed` | [Button visual states](~/xamarin-forms/user-interface/button.md#button-visual-states) |
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [CarouselView visual states](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
-| `CollectionView` | `Selected` | [Change selected item color](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color) |
 | `ImageButton` | `Pressed` | [ImageButton visual states](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Common states](#common-states) |
 
 Each of these states can be accessed through the visual state group named `CommonStates`.
+
+In addition, the `CollectionView` implements the `Selected` state. For more information, see [Change selected item color](~/xamarin-forms/user-interface/collectionview/selection.md#change-selected-item-color).
 
 ## Set state on multiple elements
 
@@ -475,7 +476,7 @@ The "Pressed" `VisualState` specifies that when the `Button` is pressed, its `Sc
 
 ## Define your own visual states
 
-Every class that derives from `VisualElement` supports the three common states "Normal", "Focused", and "Disabled". Internally, the [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) class detects when it's becoming enabled or disabled, or focused or unfocused, and calls the static [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) method:
+Every class that derives from `VisualElement` supports the common states "Normal", "Focused", and "Disabled". In addition, the `CollectionView` class supports the "Selected" state. Internally, the [`VisualElement`](https://github.com/xamarin/Xamarin.Forms/blob/master/Xamarin.Forms.Core/VisualElement.cs) class detects when it's becoming enabled or disabled, or focused or unfocused, and calls the static [`VisualStateManager.GoToState`](xref:Xamarin.Forms.VisualStateManager.GoToState(Xamarin.Forms.VisualElement,System.String)) method:
 
 ```csharp
 VisualStateManager.GoToState(this, "Focused");
