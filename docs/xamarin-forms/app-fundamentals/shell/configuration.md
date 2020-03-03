@@ -107,7 +107,7 @@ In this example, the [`ContentPage`](xref:Xamarin.Forms.ContentPage) is set to b
 
 ## Enable navigation bar shadow
 
-The `Shell` class defines the `NavBarHasShadow` attached property, of type `bool`, that controls whether the navigation bar has a shadow. By default the value of the property is `false`.
+The `Shell` class defines the `NavBarHasShadow` attached property, of type `bool`, that controls whether the navigation bar has a shadow. By default the value of the property is `false` on iOS, and `true` on Android.
 
 While this property can be set on a subclassed `Shell` object, it can also be set on any pages that want to enable the navigation bar shadow. For example, the following XAML shows enabling the navigation bar shadow from a [`ContentPage`](xref:Xamarin.Forms.ContentPage):
 
