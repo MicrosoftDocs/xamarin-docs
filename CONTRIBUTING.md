@@ -57,6 +57,10 @@ The maintainers will then merge your PR once feedback has been applied and your 
 
 On a certain cadence, we push all commits from master branch into the live site and then you'll be able to see your contribution at https://docs.microsoft.com/xamarin/.
 
+### Contributing to International content
+
+Contributions for Machine Translated (MT) content are currently not accepted for now. In an effort to improve the quality of MT content, we've transitioned to a Neural MT engine. We accept and encourage contributions for Human Translated (HT) content, which is used to train the Neural MT engine. So over time, contributions to HT content will improve the quality of both HT and MT. MT topics will have a disclaimer stating that part of the topic may be MT, and the **Edit** button won't be displayed as it's disabled.
+
 ## DOs and DON'Ts
 
 Below is a short list of guiding rules that you should keep in mind when you are contributing to the .NET documentation.
