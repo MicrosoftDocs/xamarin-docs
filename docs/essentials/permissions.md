@@ -85,7 +85,7 @@ Icon Guide:
 | StorageRead | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS not supported](~/media/shared/no.png "iOS not supported") | ![UWP not supported](~/media/shared/no.png "UWP not supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen not supported](~/media/shared/no.png "Tizen not supported") |
 | StorageWrite | ![Android supported](~/media/shared/yes.png "Android supported") | ![iOS not supported](~/media/shared/no.png "iOS not supported") | ![UWP not supported](~/media/shared/no.png "UWP not supported") | ![watchOS not supported](~/media/shared/no.png "watchOS not supported") | ![tvOS not supported](~/media/shared/no.png "tvOS not supported") | ![Tizen not supported](~/media/shared/no.png "Tizen not supported") |
 
-If a permission is marked with a ![❌](~/media/shared/no.png "❌") it will always return `Granted` when checked or requested.
+If a permission is marked as ![not supported](~/media/shared/no.png "not supported") it will always return `Granted` when checked or requested.
 
 ## General Usage
 Here is a general usage patter for handling permissions.
