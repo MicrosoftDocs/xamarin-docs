@@ -938,7 +938,7 @@ The following MSBuild properties are used with
 
 - **AndroidCodegenTarget** &ndash; A string property which controls the code generation target ABI. Possible values include:
 
-  - **XamarinAndroid**: Uses the JNI binding API present in since
+  - **XamarinAndroid**: Uses the JNI binding API present since
     Mono for Android 1.0. Binding assemblies built with
     Xamarin.Android 5.0 or later can only run on Xamarin.Android 5.0
     or later (API/ABI additions), but the *source* is compatible with
