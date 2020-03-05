@@ -513,6 +513,7 @@ Azure Notification Hubs enable you to check that your application can receive te
 1. When testing that an application can receive push notifications, you must use a physical device. Android and iOS virtual devices may not be configured correctly to receive push notifications.
 1. The sample Android application registers its token and templates once when the Firebase token is issued. During testing you may need to request a new token and re-register with the Azure Notification Hub. The best way to force this is to clean your project, delete the `bin` and `obj` folders and uninstall the application from the device before rebuilding and deploying.
 1. Many parts of the push notification flow are executed asynchronously. This may result in breakpoints not being hit or being hit in an unexpected order. Use device or debug logging to trace execution without interrupting application flow. Filter the Android device log using the `DebugTag` specified in `Constants`.
+1. When debugging is stopped in Visual Studio, the app is force closed. Any message receivers or other services launched as part of the debugging process will be closed and will not respond to message events.
 
 ## Create a notification dispatcher
 
