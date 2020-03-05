@@ -4,8 +4,8 @@ description: "This article describes working with toolbars in a Xamarin.Mac appl
 ms.prod: xamarin
 ms.assetid: C8D228CE-C860-47E1-85FD-69864BF91F20
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 

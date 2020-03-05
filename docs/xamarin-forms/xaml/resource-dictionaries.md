@@ -6,7 +6,7 @@ ms.assetid: DF103686-4A92-40FA-9CF1-A9376293B13C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/15/2019
+ms.date: 02/26/2020
 ms.custom: video
 ---
 
@@ -16,7 +16,7 @@ ms.custom: video
 
 _XAML resources are definitions of objects that can be shared and re-used throughout a Xamarin.Forms application. These resource objects are stored in a resource dictionary._
 
-A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) is a repository for resources that are used by a Xamarin.Forms application. Typical resources that are stored in a `ResourceDictionary` include [styles](~/xamarin-forms/user-interface/styles/index.md), [control templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md), [data templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), colors, and converters.
+A [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) is a repository for resources that are used by a Xamarin.Forms application. Typical resources that are stored in a `ResourceDictionary` include [styles](~/xamarin-forms/user-interface/styles/index.md), [control templates](~/xamarin-forms/app-fundamentals/templates/control-template.md), [data templates](~/xamarin-forms/app-fundamentals/templates/data-templates/index.md), colors, and converters.
 
 In XAML, resources that are stored in a `ResourceDictionary` can then be retrieved and applied to elements by using the `StaticResource` markup extension. In C#, resources can also be defined in a `ResourceDictionary` and then retrieved and applied to elements by using a string-based indexer. However, there's little advantage to using a `ResourceDictionary` in C#, as shared objects can simply be stored as fields or properties, and accessed directly without having to first retrieve them from a dictionary.
 
@@ -259,6 +259,8 @@ This example shows an instance of `MyResourceDictionary`, which resides in the s
     ...
 </ContentPage>
 ```
+
+When placing a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) in an external assembly, ensure that its build action is set to **EmbeddedResource**. In addition, ensure that it has a code-behind file.
 
 > [!IMPORTANT]
 > There can be only one `MergedDictionaries` property-element tag in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), but you can put as many `ResourceDictionary` objects in there as you want.

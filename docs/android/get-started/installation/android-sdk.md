@@ -4,8 +4,8 @@ description: "Visual Studio includes an Android SDK Manager that you use to down
 ms.prod: xamarin
 ms.assetid: 9A857F52-2EC1-414F-8010-CEE67B60A4B4
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/09/2018
 ---
 
@@ -55,7 +55,7 @@ several JDK alternatives to choose from:
     if you are developing specifically for API level 23 or earlier.
 
 - If you are using Visual Studio 15.8 Preview 5 or later, you can try
-    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) (currently in preview) 
+    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) 
     rather than JDK 8.
 
 > [!IMPORTANT]
@@ -151,7 +151,7 @@ click **Apply Changes**:
 
 [![Example of adding Android 7.1 Nougat components to the Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
-To install only specfic components, click the box next to the platform
+To install only specific components, click the box next to the platform
 once. You can then select any individual components that you need:
 
 [![Example of adding some Android 7.1 components](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)
@@ -211,7 +211,7 @@ several JDK alternatives to choose from:
     if you are developing specifically for API level 23 or earlier.
 
 - If you are using Visual Studio for Mac 7.7 or later, you can try
-    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md) (currently in preview) 
+    using [Microsoft's Mobile OpenJDK Distribution](openjdk.md)
     rather than JDK 8.
 
 > [!IMPORTANT]

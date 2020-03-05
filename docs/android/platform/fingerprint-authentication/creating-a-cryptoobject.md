@@ -3,8 +3,8 @@ title: "Creating a CryptoObject"
 ms.prod: xamarin
 ms.assetid: 4D159B80-FFF4-4136-A7F0-F8A5C6B86838
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -52,7 +52,7 @@ public class CryptoObjectHelper
         Cipher cipher = Cipher.GetInstance(TRANSFORMATION);
         try
         {
-            cipher.Init(CipherMode.EncryptMode | CipherMode.DecryptMode, key);
+            cipher.Init(CipherMode.EncryptMode, key);
         } catch(KeyPermanentlyInvalidatedException e)
         {
             _keystore.DeleteEntry(KEY_NAME);

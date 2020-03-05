@@ -4,8 +4,8 @@ description: "This document describes how to use the debugger in Visual Studio f
 ms.prod: xamarin
 ms.assetid: 05460010-99E1-DC38-F855-2D691EF54484
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -14,10 +14,10 @@ ms.date: 03/19/2017
 _Xamarin.iOS applications can be debugged with the built-in debugger in Visual Studio for Mac or Visual Studio._
 
 Use Visual Studio for Mac's native debugging support for debugging C# and other managed
-languages code and use [LLDB](http://lldb.llvm.org/tutorial.html) when you need to debug C, C++ or Objective C codethat you might be linking with your Xamarin.iOS project.
+languages code and use [LLDB](https://lldb.llvm.org/tutorial.html) when you need to debug C, C++ or Objective C codethat you might be linking with your Xamarin.iOS project.
 
 > [!NOTE]
-> When you compile applications in Debug mode, Xamarin.iOS will generate 
+> When you compile applications in Debug mode, Xamarin.iOS will generate
 > slower and much larger applications as every line of code must be
 > instrumented. Before releasing, make sure that you do a Release build.
 
@@ -224,9 +224,8 @@ Crash logs and the output of the Console class will be sent to the iPhone
 console. You can access this console with Xcode using the "Organizer" and
 selecting your device from the organizer.
 
-Alternatively, if you do not want to start up Xcode, you can use the Apple's [iPhone Configuration Utility](http://www.apple.com/support/iphone/enterprise/) to directly access the console. This
-has the added bonus that you can access the console logs from a Windows machine
-if you are debugging a problem in the field.
+Alternatively, if you do not want to start up Xcode, you can use the Apple's iPhone Configuration Utility to directly access the console. This
+has the added bonus that you can access the console logs from a Windows machine if you are debugging a problem in the field.
 
 For Visual Studio users, there are a few logs available in the Output window, but you
 should switch over to your Mac for more thorough and detailed logs.

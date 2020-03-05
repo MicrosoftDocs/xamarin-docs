@@ -3,8 +3,8 @@ title: "Xamarin Inspector"
 description: "This document links to guides that describe how to install and use the Xamarin Inspector to explore and debug applications."
 ms.prod: xamarin
 ms.assetid: A5CCD63C-18E5-4D19-AFEA-301FE4F8538A
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/19/2018
 ---
 

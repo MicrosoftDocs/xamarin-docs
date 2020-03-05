@@ -4,8 +4,8 @@ description: "This document describes how to sell digital products and services 
 ms.prod: xamarin
 ms.assetid: B41929D8-47E4-466D-1F09-6CC3C09C83B2
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -71,7 +71,6 @@ Xamarin.iOS. It has covered:
 - [In-App Purchase Product Identifiers Q&A](https://developer.apple.com/library/ios/#qa/qa1329/_index.html)
 - [In-App Purchase Technical Note](https://developer.apple.com/library/ios/#technotes/tn2259/_index.html)
 - [Your First App Store Submission](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-- [App Store Resource Center](https://developer.apple.com/appstore/index.html)
 - [App Store Submission Tips](https://developer.apple.com/appstore/resources/submission/tips.html)
 - [App Store Review Guidelines](https://developer.apple.com/appstore/resources/approval/guidelines.html)
 - [Managing Your Apps](https://developer.apple.com/appstore/resources/managing/index.html)

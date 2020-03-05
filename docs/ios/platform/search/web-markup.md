@@ -4,8 +4,8 @@ description: "This document describes how to create web-based search results tha
 ms.prod: xamarin
 ms.assetid: 876315BA-2EF9-4275-AE33-A3A494BBF7FD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/20/2017
 ---
 
@@ -71,7 +71,7 @@ You can provide deep links to your app's content using a Twitter Card. For examp
 <meta name="twitter:app:url:iphone" content="AppNameURL">
 ```
 
-For more information, please see Twitter's [Twitter Card Protocol](http://dev.twitter.com/cards/mobile) documentation.
+For more information, please see Twitter's [Twitter Card Protocol](https://developer.twitter.com/en/docs/tweets/optimize-with-cards/overview/abouts-cards) documentation.
 
 ## Using Facebook App Links
 
@@ -83,7 +83,7 @@ You can provide deep links to your app's content using a Facebook App Link. For 
 <meta property="al:ios:url" content="AppNameURL">
 ```
 
-For more information, please see Facebook's [App Links](http://applinks.org) documentation.
+For more information, please see Facebook's [App Links](https://developers.facebook.com/docs/applinks) documentation.
 
 ## Opening Deep Links
 
@@ -129,7 +129,7 @@ One option for providing Structured Data Markup is by using Open Graph. For exam
 <meta property="og:video" content="http://company.com/appname/tutorial.mp4">
 ```
 
-For more information, please see the [Open Graph](http://ogp.me) website.
+For more information, please see the [Open Graph](https://ogp.me) website.
 
 Another common format for Structured Data Markup is schema.org's Microdata format. For example:
 
@@ -165,7 +165,7 @@ Apple currently supports the following schema types from schema.org:
 - Recipe
 - SearchAction
 
-For more information on these scheme types, please see [schema.org](http://schema.org).
+For more information on these scheme types, please see [schema.org](https://schema.org).
 
 ## Providing Actions with Structured Data
 

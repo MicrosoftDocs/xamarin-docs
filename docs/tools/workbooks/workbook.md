@@ -3,8 +3,8 @@ title: "Interactive Workbooks"
 description: "This document describes how to use Xamarin Workbooks to create live documents containing C# code for experimenting, teaching, training, or exploring."
 ms.prod: xamarin
 ms.assetid: B79E5DE9-5389-4691-9AA3-FF4336CE294E
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/30/2017
 ---
 
@@ -74,7 +74,7 @@ your CommonMark text may be reformatted.
 
 Please note that due to the CommonMark extension we use to enable YAML metadata in
 workbook files, `---` is reserved for that purpose. If you wish to create
-[thematic breaks](http://spec.commonmark.org/0.27/#thematic-break) in your text,
+[thematic breaks](https://spec.commonmark.org/0.27/#thematic-break) in your text,
 you should use `***` or `___` instead. Such breaks should be avoided in Workbooks 1.2
 and earlier due to a bug during save.
 

@@ -11,8 +11,6 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms CollectionView EmptyView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that can be used to provide user feedback when there's no data to display:
@@ -105,7 +103,7 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is filtered for the search term stored in the [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) property. If the filtering operation yields no data, the [`StackLayout`](xref:Xamarin.Forms.StackLayout) set as the [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property value is displayed:
+When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is filtered for the search term stored in the [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) property. If the filtering operation yields no data, the [`StackLayout`](xref:Xamarin.Forms.StackLayout) set as the [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property value is displayed:
 
 [![Screenshot of a CollectionView vertical list with custom empty view, on iOS and Android](emptyview-images/filter-multiple-views.png "CollectionView vertical list with custom empty view")](emptyview-images/filter-multiple-views-large.png#lightbox "CollectionView vertical list with custom empty view")
 
@@ -171,7 +169,7 @@ public class FilterData : BindableObject
 }
 ```
 
-The [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property is set to a `FilterData` object, and the `Filter` property data binds to the [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) property. When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is filtered for the search term stored in the `Filter` property. If the filtering operation yields no data, the [`Label`](xref:Xamarin.Forms.Label) defined in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), that's set as the [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) property value, is displayed:
+The [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property is set to a `FilterData` object, and the `Filter` property data binds to the [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) property. When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is filtered for the search term stored in the `Filter` property. If the filtering operation yields no data, the [`Label`](xref:Xamarin.Forms.Label) defined in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), that's set as the [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) property value, is displayed:
 
 [![Screenshot of a CollectionView vertical list with an empty view template, on iOS and Android](emptyview-images/emptyviewtemplate.png "CollectionView vertical list with empty view template")](emptyview-images/emptyviewtemplate-large.png#lightbox "CollectionView vertical list with empty view template")
 
@@ -183,7 +181,6 @@ The [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property is set to a `
 Views that will be displayed as an [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) when data is unavailable, can be defined as [`ContentView`](xref:Xamarin.Forms.ContentView) objects in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). The `EmptyView` property can then be set to a specific `ContentView`, based on some business logic, at runtime. The following XAML example shows an example of this scenario:
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollectionViewDemos.Views.EmptyViewSwapPage"
@@ -246,7 +243,7 @@ void ToggleEmptyView(bool isToggled)
 }
 ```
 
-The `ToggleEmptyView` method sets the [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property of the `collectionView` object to one of the two [`ContentView`](xref:Xamarin.Forms.ContentView) objects stored in the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), based on the value of the [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) property. When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is filtered for the search term stored in the [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) property. If the filtering operation yields no data, the `ContentView` object set as the `EmptyView` property is displayed:
+The `ToggleEmptyView` method sets the [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property of the `collectionView` object to one of the two [`ContentView`](xref:Xamarin.Forms.ContentView) objects stored in the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), based on the value of the [`Switch.IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) property. When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is filtered for the search term stored in the [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) property. If the filtering operation yields no data, the `ContentView` object set as the `EmptyView` property is displayed:
 
 [![Screenshot of a CollectionView vertical list with swapped empty views, on iOS and Android](emptyview-images/swap.png "CollectionView vertical list with swapped empty views")](emptyview-images/swap-large.png#lightbox "CollectionView vertical list with swapped empty views")
 
@@ -297,9 +294,9 @@ CollectionView collectionView = new CollectionView
 collectionView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
 ```
 
-The [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property is set to the [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) property, and the [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) property is set to a `SearchTermDataTemplateSelector` object.
+The [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property is set to the [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) property, and the [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) property is set to a `SearchTermDataTemplateSelector` object.
 
-When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is filtered for the search term stored in the [`SearchBar.Text`](xref:Xamarin.Forms.SearchBar.Text) property. If the filtering operation yields no data, the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) chosen by the `SearchTermDataTemplateSelector` object is set as the [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) property and displayed.
+When the [`SearchBar`](xref:Xamarin.Forms.SearchBar) executes the `FilterCommand`, the collection displayed by the [`CollectionView`](xref:Xamarin.Forms.CollectionView) is filtered for the search term stored in the [`SearchBar.Text`](xref:Xamarin.Forms.InputView.Text) property. If the filtering operation yields no data, the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) chosen by the `SearchTermDataTemplateSelector` object is set as the [`EmptyViewTemplate`](xref:Xamarin.Forms.ItemsView.EmptyViewTemplate) property and displayed.
 
 The following example shows the `SearchTermDataTemplateSelector` class:
 

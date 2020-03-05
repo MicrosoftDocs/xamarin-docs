@@ -3,8 +3,8 @@ title: "Fonts"
 ms.prod: xamarin
 ms.assetid: 3F543FC5-FDED-47F8-8D2C-481FCC98BFDA
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/09/2018
 ---
 # Fonts
@@ -13,7 +13,7 @@ ms.date: 09/09/2018
 
 Beginning with API level 26, the Android SDK allows fonts to be treated as resources, just like a layouts or drawables. The [Android Support Library 26 NuGet](https://www.nuget.org/packages/Xamarin.Android.Support.Compat/26.1.0.1) will backport the new font API's to those apps that target API level 14 or higher.
 
-After targetting API 26 or installing the Android Support Library v26, there are two ways to use fonts in an Android application:
+After targeting API 26 or installing the Android Support Library v26, there are two ways to use fonts in an Android application:
 
 1. **Package the font as an Android resource** &ndash; this ensures that the font is always available to the application, but will increase the size of the APK.
 2. **Download the fonts** &ndash; Android also supports downloading a font from a _font provider_. The font provider checks if the font is already on the device. If necessary, the font will be downloaded and cached on the device. This font can be shared between multiple applications.
@@ -149,7 +149,7 @@ textView1.Typeface = typeface;
 
 Instead of packaging fonts as an application resource, Android can download fonts from a remote source. This will have the desirable effect of reducing the size of the APK.
 
-Fonts are downloaded with the assistance of a  _font provider_. This is a specialized content provider that manages the downloading and caching of fonts to all applications on the device. Android 8.0 includes a font provider to download fonts from the [Google Font Repository](http://fonts.google.com). This default font provider is backported to API level 14 with the Android Support Library v26.
+Fonts are downloaded with the assistance of a  _font provider_. This is a specialized content provider that manages the downloading and caching of fonts to all applications on the device. Android 8.0 includes a font provider to download fonts from the [Google Font Repository](https://fonts.google.com). This default font provider is backported to API level 14 with the Android Support Library v26.
 
 When an app makes a request for a font, the font provider will first check to see if the font is already on the device. If not, it will then attempt to download the font. If the font cannot be downloaded, then Android will use the default system font. Once the font has been downloaded, it is available to all applications on the device, not just the app that made the initial request.
 

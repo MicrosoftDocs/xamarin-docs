@@ -4,8 +4,8 @@ description: "This document provides a high-level description of some iOS 13 API
 ms.prod: xamarin
 ms.assetid: AB486B2F-6E3B-4E0B-ABB8-58F5804D56D2
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/20/2019
 ---
 # Introduction to iOS 13

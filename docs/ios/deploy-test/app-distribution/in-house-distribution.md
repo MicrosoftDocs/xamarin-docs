@@ -4,8 +4,8 @@ description: "This document gives a brief overview of distribution of applicatio
 ms.prod: xamarin
 ms.assetid: 9466E51E-303E-466E-85D7-D0525E16BB37
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -133,7 +133,7 @@ You may have to quit Visual Studio and have Xcode (on the Build Host's Mac) refr
 
 ## Distributing your App In-House
 
-With the Apple Developer Enterprise Program, the licensee is the person responsible for distributing the application, and for adhering to the [guidelines](http://adcdownload.apple.com/Documentation/License_Agreements__Apple_Developer_Enterprise_Program/Apple_Developer_Program_Enterprise_Agreement_20150608.pdf) set by Apple.
+With the Apple Developer Enterprise Program, the licensee is the person responsible for distributing the application, and for adhering to the [guidelines](https://developer.apple.com/programs/enterprise/) set by Apple.
 
 Your app can be distributed securely using a variety of different means, such as:
 

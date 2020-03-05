@@ -45,7 +45,7 @@ The letters are commands that build an `SKPath` object: `M` indicates a `MoveTo`
 "M0-100L58.8 90.9-95.1-30.9 95.1-30.9-58.8 80.9Z"
 ```
 
-The syntax of SVG path data is formally documented in [Section 8.3 of the SVG specification](http://www.w3.org/TR/SVG11/paths.html#PathData). Here is a summary:
+The syntax of SVG path data is formally documented in [Section 8.3 of the SVG specification](https://www.w3.org/TR/SVG11/paths.html#PathData). Here is a summary:
 
 ## **MoveTo**
 

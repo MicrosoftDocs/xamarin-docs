@@ -3,15 +3,15 @@ title: "Android Beam"
 ms.prod: xamarin
 ms.assetid: 4172A798-89EC-444D-BC0C-0A7DD67EF98C
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/06/2017
 ---
 
 # Android Beam
 
-Android Beam is a Near Field Communication (NFC) technology introduced in 
-Android 4.0 that allows applications to share information over NFC when 
+Android Beam is a Near Field Communication (NFC) technology introduced in
+Android 4.0 that allows applications to share information over NFC when
 in close proximity.
 
 [![Diagram illustrating two devices in close proximity sharing information](android-beam-images/androidbeam.png)](android-beam-images/androidbeam.png#lightbox)
@@ -104,5 +104,3 @@ screenshot below, see the [Android Beam demo](https://docs.microsoft.com/samples
 ## Related Links
 
 - [Android Beam Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/androidbeamdemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

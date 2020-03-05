@@ -108,7 +108,7 @@ AutomationProperties.SetHelpText(button, "Tap to toggle the activity indicator")
 > [!NOTE]
 > Note that the [`SetValue`](xref:Xamarin.Forms.BindableObject.SetValue(Xamarin.Forms.BindableProperty,System.Object)) method can also be used to set the `AutomationProperties.HelpText` attached property – `button.SetValue(AutomationProperties.HelpTextProperty, "Tap to toggle the activity indicator");`
 
-On some platforms, for edit controls such as an [`Entry`](xref:Xamarin.Forms.Entry), the `HelpText` property can sometimes be omitted and replaced with placeholder text. For example, "Enter your name here" is a good candidate for the [`Entry.Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) property that places the text in the control prior to the user's actual input.
+On some platforms, for edit controls such as an [`Entry`](xref:Xamarin.Forms.Entry), the `HelpText` property can sometimes be omitted and replaced with placeholder text. For example, "Enter your name here" is a good candidate for the [`Entry.Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property that places the text in the control prior to the user's actual input.
 
 <a name="labeledby" />
 

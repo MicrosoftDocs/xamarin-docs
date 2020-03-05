@@ -4,8 +4,8 @@ description: "Building blocks for creating Xamarin.Android User Interfaces"
 ms.prod: xamarin
 ms.assetid: B7A82166-B920-4672-B7A2-20DD5E0B5AEF
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
 ---
 
@@ -111,7 +111,7 @@ A `RatingBar` is a UI element that displays a rating in stars.
 ## [Spinner](~/android/user-interface/controls/spinner.md)
 
 `Spinner` is a UI element that provides a quick way to select one
-value from a set. It is simmilar to a drop-down list. 
+value from a set. It is similar to a drop-down list. 
 
 ![Example Spinner](images/spinner.png)
 

@@ -3,8 +3,8 @@ title: "Part 6 - Testing and App Store Approvals"
 description: "This document describes how to test a cross-platform application on-device, manage test cases, automate tests, run unit tests, and work through the app submission process."
 ms.prod: xamarin
 ms.assetid: 46E0578A-7EB9-C105-ABB0-A043E501F36B
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 
@@ -41,8 +41,7 @@ this problem a number of services offer the ability to remotely control many
 different devices so that applications can be installed and tested without
 needing to directly invest in lots of hardware.
 
-[App Center Test](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest) offers an easy way
-to test iOS and Android applications on hundreds of different devices.
+App Center Test offers an easy way to test iOS and Android applications on hundreds of different devices. For more information, see [Preparing Xamarin.Android Apps](/appcenter/test-cloud/preparing-for-upload/xamarin-android-uitest) and [Preparing Xamarin.iOS apps](/appcenter/test-cloud/preparing-for-upload/xamarin-ios-uitest).
 
 ### Test Management
 
@@ -81,7 +80,7 @@ running Touch.Unit.
 
 There is an open-source equivalent of Touch.Unit for Android called
 Andr.Unit. You can download it from [github](https://github.com/spouliot/Andr.Unit) and read
-about the tool on [@spouliot's blog](http://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
+about the tool on [@spouliot's blog](https://spouliot.wordpress.com/2011/10/30/andr-unit-joins-the-family/).
 
 ## App Store Approvals
 

@@ -4,8 +4,8 @@ description: "This document describes how to work with CloudKit in Xamarin.iOS. 
 ms.prod: xamarin
 ms.assetid: 66B207F2-FAA0-4551-B43B-3DB9F620C397
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/11/2016
 ---
 
@@ -33,9 +33,9 @@ The following is required to complete the steps presented in this article:
 ## What is CloudKit?
 
 CloudKit is a way to give the developer access to the iCloud Servers. It provides the foundation for both iCloud Drive and
-iCloud Photo Library. CloudKit is supported on both Mac OS X and Apple iOS Devices.
+iCloud Photo Library. CloudKit is supported on both macOS and iOS devices.
 
- [![](intro-to-cloudkit-images/image1.png "How CloudKit is supported on both Mac OS X and Apple iOS Devices")](intro-to-cloudkit-images/image1.png#lightbox)
+[![How CloudKit is supported on both macOS and iOS devices](intro-to-cloudkit-images/image1.png)](intro-to-cloudkit-images/image1.png#lightbox)
 
 CloudKit uses the iCloud Account infrastructure. If there is a user logged into an iCloud Account on the device, CloudKit
 will use their ID to identify the user. If no account is available, then limited read-only access will be provided.
@@ -52,27 +52,29 @@ focus on other tasks.
 
 As of this writing, Apple is initially providing CloudKit for free with a high limit on both bandwidth and storage capacity. For larger projects or applications with a large user base, Apple has hinted that an affordable pricing scale will be provided.
 
-## Enabling CloudKit in a Xamarin Application
+## Enabling CloudKit in a Xamarin application
 
-Before a Xamarin application can utilize the CloudKit Framework, the application must be correctly provisioned as detailed in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) and [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guides
+Before a Xamarin application can utilize the CloudKit framework, the application must be correctly provisioned as detailed in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/icloud-capabilities.md) and [Working with Entitlements](~/ios/deploy-test/provisioning/entitlements.md) guides.
+
+To access CloudKit the **Entitlements.plist** file must include **Enable iCloud**, **Key-value storage**, and **CloudKit** permissions.
+
+### Sample app
+
+The [CloudKitAtlas sample](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas) demonstrates
+how to use CloudKit with Xamarin. The steps below show how to configure the sample – it requires additional settings beyond what's require for CloudKit alone:
 
 1. Open the project in Visual Studio for Mac or Visual Studio.
-2. In the **Solution Explorer**, open the **Info.plist** file and ensure the **Bundle Identifier** matches the one that was defined in **App ID** created as part of the provisioning set up:
-
-    [![](intro-to-cloudkit-images/image26a.png "Enter the Bundle Identifier")](intro-to-cloudkit-images/image26a-orig.png#lightbox "Info.plist file displaying Bundle Identifier")
-
-3. Scroll down to the bottom of the **Info.plist** file and select **Enabled Background Modes**, **Location Updates** and **Remote Notifications**:
-
-    [![](intro-to-cloudkit-images/image27a.png "Select Enabled Background Modes, Location Updates and Remote Notifications")](intro-to-cloudkit-images/image27a-orig.png#lightbox "Info.plist file displaying background modes")
+2. In the **Solution Explorer**, open the **Info.plist** file and ensure the **Bundle Identifier** matches the one that was defined in **App ID** created as part of the provisioning set up.
+3. Scroll down to the bottom of the **Info.plist** file and select **Enabled Background Modes**, **Location Updates**, and **Remote Notifications**.
 4. Right-click the iOS project in the solution and select **Options**.
 5. Select **iOS Bundle Signing**, select the **Developer Identity** and **Provisioning Profile** created above.
-6. Ensure the  **Entitlements.plist** includes  **Enable iCloud** ,  **Key-value storage** and  **CloudKit** .
-7. Ensure the **Ubiquity Container** exists for the application (as created above). Example: `iCloud.com.your-company.CloudKitAtlas`
+6. Ensure the **Entitlements.plist** includes **Enable iCloud**, **Key-value storage**, and **CloudKit**.
+7. Ensure the **Ubiquity Container** exists for the application. Example: `iCloud.com.your-company.CloudKitAtlas`
 8. Save the changes to the file.
 
-With these settings in place, the application is now ready to access the CloudKit Framework APIs.
+With these settings in place, the sample app is now ready to access the CloudKit Framework APIs as well as background, location, and notification services.
 
-## CloudKit API Overview
+## CloudKit API overview
 
 Before implementing CloudKit in a Xamarin iOS application, this article is going to cover the fundamentals of the CloudKit Framework, which will include the following topics:
 
@@ -106,11 +108,7 @@ The containerization of iCloud data also allows CloudKit to encapsulate user inf
 
 Containers are fully managed by the developer of the application via the WWDR portal. The namespace of the container is global across all Apple developers, so the container must not only be unique to a given developer's applications, but to all Apple developers and applications.
 
-Apple suggests using reverse DNS notation when creating the namespace for application Containers. Example:
-
-```csharp
-iCloud.com.company-name.application-name
-```
+Apple suggests using reverse DNS notation when creating the namespace for application containers. Example: `iCloud.com.company-name.application-name`
 
 While Containers are, by default, bound one-to-one to a given application, they can be shared across applications. So multiple applications can coordinate on a single Container. A single application can also talk to multiple Containers.
 
@@ -134,11 +132,11 @@ The Container is the initial entry point into CloudKit. The following code can b
 
 ```csharp
 using CloudKit;
-...
+//...
 
 public CKDatabase PublicDatabase { get; set; }
 public CKDatabase PrivateDatabase { get; set; }
-...
+//...
 
 // Get the default public and private databases for
 // the application
@@ -185,17 +183,17 @@ The following code can be used to create a new record and store it in a database
 
 ```csharp
 using CloudKit;
-...
+//...
 
 private const string ReferenceItemRecordName = "ReferenceItems";
-...
+//...
 
 var newRecord = new CKRecord (ReferenceItemRecordName);
 newRecord ["name"] = (NSString)nameTextField.Text;
 await CloudManager.SaveAsync (newRecord);
 ```
 
-### Record Zones
+### Record zones
 
 Records don't exist by themselves within a given database – groups of records exist together inside a Record Zone. Record Zones can be thought of as Tables in a traditional relational databases:
 
@@ -207,7 +205,7 @@ There can be multiple records within a given Record Zone and multiple Record Zon
 
 This is where records are stored by default. In addition, Custom Record Zones can be created. Record Zones represent the base granularity at which Atomic Commits and Change Tracking is done.
 
-## Record Identifiers
+## Record identifiers
 
 Record Identifiers are represented as a tuple, containing both a client provided Record Name and the zone in which the record exists. Record Identifiers have the following characteristics:
 
@@ -289,7 +287,7 @@ The Convenience API is usually the best choice for most iOS applications and App
 - Fetching a Record.
 - Updating a Record.
 
-### Common Setup Code
+### Common setup code
 
 Before getting started with the CloudKit Convenience API, there is some standard setup code required. Start by modifying the application's `AppDelegate.cs` file and make it look like the following:
 
@@ -306,13 +304,10 @@ namespace CloudKitAtlas
     [Register ("AppDelegate")]
     public partial class AppDelegate : UIApplicationDelegate
     {
-        #region Computed Properties
         public override UIWindow Window { get; set;}
         public CKDatabase PublicDatabase { get; set; }
         public CKDatabase PrivateDatabase { get; set; }
-        #endregion
 
-        #region Override Methods
         public override bool FinishedLaunching (UIApplication application, NSDictionary launchOptions)
         {
             application.RegisterForRemoteNotifications ();
@@ -339,7 +334,6 @@ namespace CloudKitAtlas
         {
             Console.WriteLine ("Push received");
         }
-        #endregion
     }
 }
 ```
@@ -350,20 +344,18 @@ Next, add the following code to any view or view container that will be using Cl
 
 ```csharp
 using CloudKit;
-...
+//...
 
-#region Computed Properties
 public AppDelegate ThisApp {
     get { return (AppDelegate)UIApplication.SharedApplication.Delegate; }
 }
-#endregion
 ```
 
 This adds a shortcut to get to the `AppDelegate` and access the public and private database shortcuts created above.
 
 With this code in place, let's take a look at implementing the CloudKit Convenience API in a Xamarin iOS 8 application.
 
-### Saving a Record
+### Saving a record
 
 Using the pattern presented above when discussing Records, the following code will create a new record and use the Convenience API to save it to the public database:
 
@@ -393,7 +385,7 @@ Three things to note about the above code:
 > [!NOTE]
 > Because of the “lossy” nature of mobile network communications, where connections are constantly being dropped or interrupted, one of the first considerations the developer must make when working with CloudKit is error handling.
 
-### Fetching a Record
+### Fetching a record
 
 With a Record created and successfully stored on the iCloud server, use the following code to retrieve the record:
 
@@ -410,7 +402,7 @@ ThisApp.PublicDatabase.FetchRecord(recordID, (record, err) => {
 
 Just as in saving the Record, the above code is asynchronous, simple and requires great error handling.
 
-### Updating a Record
+### Updating a record
 
 After a Record has been fetched from the iCloud servers, the following code can be used to modify the Record and save the changes back to the database:
 
@@ -440,11 +432,11 @@ The `FetchRecord` method of the `PublicDatabase` returns a `CKRecord` if the cal
 
 This section has shown the typical cycle that an application will use when working with the CloudKit Convenience API. The application will save Records to iCloud, retrieve those records from iCloud, modify the Records and save those changes back to iCloud.
 
-## Designing for Scalability
+## Designing for scalability
 
 So far this article has looked at storing and retrieving an application's entire object model from the iCloud servers, every time it is going to be worked with. While this approach works well with a small amount of data and a very small user base, it does not scale well when the amount of information and/or user base increases.
 
-### Big Data, Tiny Device
+### Big data, tiny device
 
 The more popular an application becomes, the more data in the database and the less feasible it is to have a cache of that entire data on the device. The following techniques can be used to solve this issue:
 
@@ -459,7 +451,7 @@ As stated above, queries allow the developer to select a small subset of the lar
 
 A query combines three different things: a Record Type ( `RecordType`), a Predicate ( `NSPredicate`) and, optionally, a Sort Descriptor ( `NSSortDescriptors`). CloudKit supports most of `NSPredicate`.
 
-#### Supported Predicates
+#### Supported predicates
 
 CloudKit supports the following types of `NSPredicates` when working with Queries:
 
@@ -500,7 +492,7 @@ CloudKit supports the following types of `NSPredicates` when working with Querie
     NSPredicate.FromFormat(string.Format("start > {0} AND name = '{1}'", (NSDate)date, recordName))
     ```
 
-#### Creating Queries
+#### Creating queries
 
 The following code can be used to create a `CKQuery` in a Xamarin iOS 8 application:
 
@@ -512,7 +504,7 @@ var query = new CKQuery("CloudRecords", predicate);
 
 First, it creates a Predicate to select only records that match a given name. Then it creates a query that will select Records of the given Record Type that match the Predicate.
 
-#### Performing a Query
+#### Performing a query
 
 Once a Query has been created, use the following code to perform the query and process the returned records:
 
@@ -553,7 +545,7 @@ Subscriptions are exposed in the CloudKit Framework via the `CKSubscription` cla
 > [!NOTE]
 > CloudKit pushes are slightly augmented as they contain a payload containing CloudKit specific information such as what caused the push to happen.
 
-#### How Subscriptions Work
+#### How subscriptions work
 
 Before implementing Subscription in C# code, let's take a quick overview of how subscriptions work:
 
@@ -569,7 +561,7 @@ The above graph shows the typical subscription process as follows:
 
 With this knowledge in place, let's look at creating Subscriptions in a Xamarin iOS 8 application.
 
-#### Creating Subscriptions
+#### Creating subscriptions
 
 The following code can be used to create a Subscription:
 
@@ -591,7 +583,7 @@ subscription.NotificationInfo = notificationInfo;
 
 First, it creates a Predicate that provides the condition to trigger the Subscription. Next, it creates the subscription against a specific Record Type and sets the option of when the trigger is tested. Finally, it defines the type of notification that will occur when the Subscription is triggered and attaches it the Subscription.
 
-### Saving Subscriptions
+### Saving subscriptions
 
 With the Subscription created, the following code will save it to the Database:
 
@@ -607,7 +599,7 @@ ThisApp.PublicDatabase.SaveSubscription(subscription, (s, err) => {
 
 Using the Convenience API, the call is asynchronous, simple, and provides easy error handling.
 
-#### Handling Push Notifications
+#### Handling push notifications
 
 If the developer has previously used Apple Push Notifications (APS), then the process of dealing with Notifications generated by CloudKit should be familiar.
 
@@ -635,7 +627,7 @@ The above code asks CloudKit to parse the userInfo into a CloudKit Notification.
 
 This section has shown how to answer the Big Data, Tiny Device problem presented above by using Queries and Subscriptions. The application will leave its large data in the cloud, and use these technologies to provide views into this dataset.
 
-## CloudKit User Accounts
+## CloudKit user accounts
 
 As noted at the start of this article, CloudKit is built on top of the existing iCloud infrastructure. The following section will cover, in detail, how accounts are exposed to a developer using the CloudKit API.
 
@@ -643,7 +635,7 @@ As noted at the start of this article, CloudKit is built on top of the existing 
 
 When dealing with user accounts, the first consideration is authentication. CloudKit supports authentication via the currently logged-in iCloud user on the device. Authentication takes place behind the scenes and is handled by iOS. In this way, developers never have to worry about the details of implementing authentication. They only test to see if a user is logged on.
 
-### User Account Information
+### User account information
 
 CloudKit provides the following user information to the developer:
 
@@ -754,7 +746,7 @@ The following code will discover information about the user currently logged int
 
 ```csharp
 public CKDiscoveredUserInfo UserInfo { get; set; }
-...
+//...
 
 // Get the user's metadata
 CKContainer.DefaultContainer.DiscoverUserInfo(UserID, (info, e) => {
@@ -788,7 +780,7 @@ CKContainer.DefaultContainer.DiscoverAllContactUserInfos((info, er) => {
 
 In this section we have covered the four major areas of access to a user's account that CloudKit can provide to an application. From getting the user's Identity and Metadata, to the Privacy policies that are built into CloudKit and finally, the ability to Discover other users of the application.
 
-## The Development and Production Environments
+## The development and production environments
 
 CloudKit provides separate Development and Production environments for an application's record types and data. The Development Environment is a more flexible environment that is available only to members of a development team. When an application adds a new field to a record and saves that record in the Development Environment, the server updates the schema information automatically.
 
@@ -799,7 +791,7 @@ Prior to deploying the application, the developer can migrate their schema and d
 > [!NOTE]
 > The iOS Simulator works only with the **Development Environment**. When the developer is ready to test an application in a **Production Environment**, a physical iOS device is required.
 
-## Shipping a CloudKit Enabled App
+## Shipping a CloudKit enabled app
 
 Before shipping an application that uses CloudKit, it will need to be configured to target the **Production CloudKit Environment** or the application will be rejected by Apple.
 
@@ -846,11 +838,11 @@ Do the following:
 
 The process is similar for submitting the application directly to iTunes Connect, just click the **Submit...** button instead of the Export... after selecting an Archive in the Organizer window.
 
-## When to Use CloudKit
+## When to use CloudKit
 
 As we have seen in this article, CloudKit provides an easy way for an application to store and retrieve information from the iCloud servers. That being said, CloudKit does not obsolete or deprecate any of the existing tools or frameworks.
 
-### Use Cases
+### Use cases
 
 The following use cases should help the developer decide when to use a specific iCloud framework or technology:
 
@@ -865,8 +857,8 @@ Keeping these use cases in mind, the developer should pick the correct iCloud te
 
 This article has covered a quick introduction to the CloudKit API. It has shown how to provision and configure a Xamarin iOS application to use CloudKit. It has covered the features of the CloudKit Convenience API. It has show how to design a CloudKit enabled application for scalability using Queries and Subscriptions. And finally it has shown the User Account information that is exposed to an application by CloudKit.
 
-## Related Links
+## Related links
 
+- [CloudKit (Apple)](https://developer.apple.com/icloud/cloudkit/)
 - [CloudKitAtlas (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/ios8-cloudkitatlas)
-- [Introduction to iOS 8](~/ios/platform/introduction-to-ios8.md)
 - [Creating a provisioning profile](~/ios/get-started/installation/device-provisioning/index.md)

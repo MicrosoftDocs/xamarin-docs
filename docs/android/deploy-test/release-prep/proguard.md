@@ -4,8 +4,8 @@ description: "Xamarin.Android ProGuard is a Java class file shrinker, optimizer,
 ms.prod: xamarin
 ms.assetid: 29C0E850-3A49-4618-9078-D59BE0284D5A
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -52,7 +52,7 @@ steps.
 ## ProGuard in Xamarin.Android
 
 The Xamarin.Android ProGuard configuration does not obfuscate the 
-APK. In fact, is not possible to enable obfuscation through ProGuard 
+APK. In fact, it is not possible to enable obfuscation through ProGuard 
 (even through the use of custom configuration files). Thus, 
 Xamarin.Android's ProGuard performs only the **shrinking** and 
 **optimization** steps: 
@@ -108,10 +108,9 @@ Use the following steps to enable ProGuard in your app project:
 
     [![Select Release configuration](proguard-images/02-set-release-sml.png)](proguard-images/02-set-release.png#lightbox)
    
-2. Enable ProGuard by checking the **Enable ProGuard** option under the 
-    **Packaging** tab of **Properties > Android Options**: 
+2. Choose **ProGuard** from the **Code shrinker** drop-down list on the **Properties > Android Options** window: 
 
-    [![Enable Proguard option selected](proguard-images/03-enable-proguard-sml.png)](proguard-images/03-enable-proguard.png#lightbox)
+    [![Proguard code shrinker selected](proguard-images/03-enable-proguard-shrinker-sml.png)](proguard-images/03-enable-proguard-shrinker.png#lightbox)
 
 For most Xamarin.Android apps, the default ProGuard configuration file 
 supplied by Xamarin.Android will be sufficient to remove all (and only)

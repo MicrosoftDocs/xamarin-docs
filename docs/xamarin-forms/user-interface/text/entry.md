@@ -6,7 +6,7 @@ ms.assetid: 9923C541-3C10-4D14-BAB5-C4D6C514FB1E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2018
+ms.date: 09/25/2019
 ---
 
 # Xamarin.Forms Entry
@@ -21,7 +21,7 @@ The Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) is used for single-line te
 
 ### Setting and Reading Text
 
-The `Entry`, like other text-presenting views, exposes the [`Text`](xref:Xamarin.Forms.Entry.Text) property. This property can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the `Text` property in XAML:
+The `Entry`, like other text-presenting views, exposes the [`Text`](xref:Xamarin.Forms.InputView.Text) property. This property can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the `Text` property in XAML:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -41,7 +41,7 @@ var text = MyEntry.Text;
 
 ### Setting Placeholder Text
 
-The [`Entry`](xref:Xamarin.Forms.Entry) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Entry`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.Entry.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
+The [`Entry`](xref:Xamarin.Forms.Entry) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Entry`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <Entry Placeholder="Username" PlaceholderColor="Olive" />
@@ -84,6 +84,26 @@ var entry = new Entry { ... MaxLength = 10 };
 
 A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Entry`](xref:Xamarin.Forms.Entry), indicates that there is no effective limit on the number of characters that may be entered.
 
+### Character spacing
+
+Character spacing can be applied to an [`Entry`](xref:Xamarin.Forms.Entry) by setting the `Entry.CharacterSpacing` property to a `double` value:
+
+```xaml
+<Entry ...
+       CharacterSpacing="10" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Entry entry = new Entry { CharacterSpacing = 10 };
+```
+
+The result is that characters in the text displayed by the [`Entry`](xref:Xamarin.Forms.Entry) are spaced `CharacterSpacing` device-independent units apart.
+
+> [!NOTE]
+> The `CharacterSpacing` property value is applied to the text displayed by the `Text` and `Placeholder` properties.
+
 ### Password Fields
 
 `Entry` provides the `IsPassword` property. When `IsPassword` is `true`, the contents of the field will be presented as black circles:
@@ -120,7 +140,7 @@ var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 
 ### Setting the Cursor Position and Text Selection Length
 
-The [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) property can be used to return or set the position at which the next character will be inserted into the string stored in the [`Text`](xref:Xamarin.Forms.Entry.Text) property:
+The [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) property can be used to return or set the position at which the next character will be inserted into the string stored in the [`Text`](xref:Xamarin.Forms.InputView.Text) property:
 
 ```xaml
 <Entry Text="Cursor position set" CursorPosition="5" />
@@ -143,6 +163,30 @@ var entry = new Entry { Text = "Cursor position and selection length set", Curso
 ```
 
 The default value of the [`SelectionLength`](xref:Xamarin.Forms.Entry.SelectionLength) property is 0, which indicates that no text is selected.
+
+### Displaying a Clear Button
+
+The `ClearButtonVisibility` property can be used to control whether an [`Entry`](xref:Xamarin.Forms.Entry) displays a clear button, which enables the user to clear the text. This property should be set to a `ClearButtonVisibility` enumeration member:
+
+- `Never` indicates that a clear button will never be displayed. This is the default value for the `Entry.ClearButtonVisibility` property.
+- `WhileEditing` indicates that a clear button will be displayed in the [`Entry`](xref:Xamarin.Forms.Entry), while it has focus and text.
+
+The following example shows setting the property in XAML:
+
+```xaml
+<Entry Text="Xamarin.Forms"
+       ClearButtonVisibility="WhileEditing" />
+```
+
+The equivalent C# code is:
+
+```csharp
+var entry = new Entry { Text = "Xamarin.Forms", ClearButtonVisibility = ClearButtonVisibility.WhileEditing };
+```
+
+The following screenshots show an [`Entry`](xref:Xamarin.Forms.Entry) with the clear button enabled:
+
+![Screenshot of an Entry with a clear button, on iOS and Android](entry-images/entry-clear-button.png)
 
 ### Customizing the Keyboard
 
@@ -314,7 +358,7 @@ Be careful to make sure that the background and text colors you choose are usabl
 
 Entry exposes two events:
 
-- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
+- [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
 > [!NOTE]

@@ -11,14 +11,12 @@ ms.date: 08/22/2019
 
 # Xamarin.Forms CollectionView Layout
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that control layout:
 
 - [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout), of type [`IItemsLayout`](xref:Xamarin.Forms.IItemsLayout), specifies the layout to be used.
-- [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemsView.ItemSizingStrategy), of type [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy), specifies the item measure strategy to be used.
+- [`ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy), of type [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy), specifies the item measure strategy to be used.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings.
 
@@ -29,7 +27,7 @@ By default, a [`CollectionView`](xref:Xamarin.Forms.CollectionView) will display
 - Vertical grid – a multi-column grid that grows vertically as new items are added.
 - Horizontal grid – a multi-row grid that grows horizontally as new items are added.
 
-These layouts can be specified by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to class that derives from the [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) class. This class defines the following properties:
+These layouts can be specified by setting the [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to class that derives from the [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) class. This class defines the following properties:
 
 - [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation), of type [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation), specifies the direction in which the [`CollectionView`](xref:Xamarin.Forms.CollectionView) expands as items are added.
 - [`SnapPointsAlignment`](xref:Xamarin.Forms.ItemsLayout.SnapPointsAlignment), of type [`SnapPointsAlignment`](xref:Xamarin.Forms.SnapPointsAlignment), specifies how snap points are aligned with items.
@@ -42,7 +40,7 @@ The [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumer
 - `Vertical` indicates that the [`CollectionView`](xref:Xamarin.Forms.CollectionView) will expand vertically as items are added.
 - `Horizontal` indicates that the [`CollectionView`](xref:Xamarin.Forms.CollectionView) will expand horizontally as items are added.
 
-The [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) class inherits from the [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) class, and defines an `ItemSpacing` property, of type `double`, that represents the empty space around each item. The default value of this property is 0, and its value must always be greater than or equal to 0. The `ListItemsLayout` class also defines static `Vertical` and `Horizontal` members. These members can be used to create vertical or horizontal lists, respectively. Alternatively, a `ListItemsLayout` object can be created, specifying an [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as an argument.
+The `LinearItemsLayout` class inherits from the [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) class, and defines an `ItemSpacing` property, of type `double`, that represents the empty space around each item. The default value of this property is 0, and its value must always be greater than or equal to 0. The `LinearItemsLayout` class also defines static `Vertical` and `Horizontal` members. These members can be used to create vertical or horizontal lists, respectively. Alternatively, a `LinearItemsLayout` object can be created, specifying an [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as an argument.
 
 The [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) class inherits from the [`ItemsLayout`](xref:Xamarin.Forms.ItemsLayout) class, and defines the following properties:
 
@@ -57,7 +55,7 @@ These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableP
 
 ## Vertical list
 
-By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) will display its items in a vertical list layout. Therefore, it's not necessary to set the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to use this layout:
+By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) will display its items in a vertical list layout. Therefore, it's not necessary to set the [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to use this layout:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -91,7 +89,7 @@ By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) will display i
 </CollectionView>
 ```
 
-However, for completeness, a [`CollectionView`](xref:Xamarin.Forms.CollectionView) can be set to display its items in a vertical list by setting its [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to `VerticalList`:
+However, for completeness, a [`CollectionView`](xref:Xamarin.Forms.CollectionView) can be set to display its items in a vertical list by setting its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to `VerticalList`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -100,12 +98,12 @@ However, for completeness, a [`CollectionView`](xref:Xamarin.Forms.CollectionVie
 </CollectionView>
 ```
 
-Alternatively, this can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to an object of the [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) class, specifying the `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
+Alternatively, this can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a `LinearItemsLayout` object, specifying the `Vertical` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout Orientation="Vertical" />
+        <LinearItemsLayout Orientation="Vertical" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
@@ -117,7 +115,7 @@ The equivalent C# code is:
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = ListItemsLayout.Vertical
+    ItemsLayout = LinearItemsLayout.Vertical
 };
 ```
 
@@ -127,7 +125,7 @@ This results in a single column list, which grows vertically as new items are ad
 
 ## Horizontal list
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) can display its items in a horizontal list by setting its [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to `HorizontalList`:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) can display its items in a horizontal list by setting its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to `HorizontalList`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}"
@@ -164,12 +162,12 @@ This results in a single column list, which grows vertically as new items are ad
 </CollectionView>
 ```
 
-Alternatively, this can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to an object of the [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) class, specifying the `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
+Alternatively, this layout can also be accomplished by setting the [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a `LinearItemsLayout` object, specifying the `Horizontal` [`ItemsLayoutOrientation`](xref:Xamarin.Forms.ItemsLayoutOrientation) enumeration member as the `Orientation` property value:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout Orientation="Horizontal" />
+        <LinearItemsLayout Orientation="Horizontal" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
@@ -181,7 +179,7 @@ The equivalent C# code is:
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = ListItemsLayout.Horizontal
+    ItemsLayout = LinearItemsLayout.Horizontal
 };
 ```
 
@@ -191,7 +189,7 @@ This results in a single row list, which grows horizontally as new items are add
 
 ## Vertical grid
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) can display its items in a vertical grid by setting its [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object whose [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) property is set to `Vertical`:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) can display its items in a vertical grid by setting its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object whose [`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) property is set to `Vertical`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -247,7 +245,7 @@ By default, a vertical [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) w
 
 ## Horizontal grid
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) can display its items in a horizontal grid by setting its [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object whose[`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) property is set to `Horizontal`:
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) can display its items in a horizontal grid by setting its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object whose[`Orientation`](xref:Xamarin.Forms.ItemsLayout.Orientation) property is set to `Horizontal`:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -455,23 +453,20 @@ This code results in the following screenshots, with the header shown in the iOS
 
 By default, each item in a [`CollectionView`](xref:Xamarin.Forms.CollectionView) doesn't have any empty space around it. This behavior can be changed by setting properties on the items layout used by the `CollectionView`.
 
-When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to a [`ListItemsLayout`](xref:Xamarin.Forms.ListItemsLayout) object, the `ListItemsLayout.ItemSpacing` property can be set to a `double` value that represents the empty space around each item:
+When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a `LinearItemsLayout` object, the `LinearItemsLayout.ItemSpacing` property can be set to a `double` value that represents the empty space around each item:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
     <CollectionView.ItemsLayout>
-        <ListItemsLayout ItemSpacing="20">
-            <x:Arguments>
-                <ItemsLayoutOrientation>Vertical</ItemsLayoutOrientation>    
-            </x:Arguments>
-        </ListItemsLayout>
+        <LinearItemsLayout Orientation="Vertical"
+                           ItemSpacing="20" />
     </CollectionView.ItemsLayout>
     ...
 </CollectionView>
 ```
 
 > [!NOTE]
-> The `ListItemsLayout.ItemSpacing` property has a validation callback set, which ensures that the value of the property is always greater than or equal to 0.
+> The `LinearItemsLayout.ItemSpacing` property has a validation callback set, which ensures that the value of the property is always greater than or equal to 0.
 
 The equivalent C# code is:
 
@@ -479,7 +474,7 @@ The equivalent C# code is:
 CollectionView collectionView = new CollectionView
 {
     ...
-    ItemsLayout = new ListItemsLayout(ItemsLayoutOrientation.Vertical)
+    ItemsLayout = new LinearItemsLayout(ItemsLayoutOrientation.Vertical)
     {
         ItemSpacing = 20
     }
@@ -490,7 +485,7 @@ This code results in a vertical single column list, that has a spacing of 20 aro
 
 [![Screenshot of a CollectionView with item spacing, on iOS and Android](layout-images/vertical-list-spacing.png "CollectionView item spacing")](layout-images/vertical-list-spacing-large.png#lightbox "CollectionView item spacing")
 
-When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.ItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object, the `GridItemsLayout.VerticalItemSpacing` and `GridItemsLayout.HorizontalItemSpacing` properties can be set to `double` values that represent the empty space vertically and horizontally around each item:
+When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object, the `GridItemsLayout.VerticalItemSpacing` and `GridItemsLayout.HorizontalItemSpacing` properties can be set to `double` values that represent the empty space vertically and horizontally around each item:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -527,7 +522,7 @@ This code results in a vertical two-column grid, that has a vertical spacing of 
 
 ## Item sizing
 
-By default, each item in a [`CollectionView`](xref:Xamarin.Forms.CollectionView) is individually measured and sized, provided that the UI elements in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) don't specify fixed sizes. This behavior, which can be changed, is specified by the [`CollectionView.ItemSizingStrategy`](xref:Xamarin.Forms.ItemsView.ItemSizingStrategy) property value. This property value can be set to one of the [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) enumeration members:
+By default, each item in a [`CollectionView`](xref:Xamarin.Forms.CollectionView) is individually measured and sized, provided that the UI elements in the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) don't specify fixed sizes. This behavior, which can be changed, is specified by the [`CollectionView.ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy) property value. This property value can be set to one of the [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemSizingStrategy) enumeration members:
 
 - `MeasureAllItems` – each item is individually measured. This is the default value.
 - `MeasureFirstItem` – only the first item is measured, with all subsequent items being given the same size as the first item.
@@ -535,7 +530,7 @@ By default, each item in a [`CollectionView`](xref:Xamarin.Forms.CollectionView)
 > [!IMPORTANT]
 > The `MeasureFirstItem` sizing strategy will result in increased performance when used in situations where the item size is intended to be uniform across all items.
 
-The following code example shows setting the [`ItemSizingStrategy`](xref:Xamarin.Forms.ItemsView.ItemSizingStrategy) property:
+The following code example shows setting the [`ItemSizingStrategy`](xref:Xamarin.Forms.StructuredItemsView.ItemSizingStrategy) property:
 
 ```xaml
 <CollectionView ...
@@ -575,7 +570,6 @@ The `OnImageTapped` event handler is executed in response to an [`Image`](xref:X
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) can layout its content in a right-to-left flow direction by setting its [`FlowDirection`](xref:Xamarin.Forms.VisualElement.FlowDirection) property to [`RightToLeft`](xref:Xamarin.Forms.FlowDirection.RightToLeft). However, the `FlowDirection` property should ideally be set on a page or root layout, which causes all the elements within the page, or root layout, to respond to the flow direction:
 
 ```xaml
-<?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CollectionViewDemos.Views.VerticalListFlowDirectionPage"

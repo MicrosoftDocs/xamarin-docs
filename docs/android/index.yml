@@ -1,118 +1,182 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
+
 title: Xamarin.Android
+summary: Xamarin.Android exposes the complete Android SDK for .NET developers. Build fully native Android apps using C# or F# in Visual Studio.
+
 metadata:
+  title: Xamarin.Android
   description: Xamarin.Android exposes the complete Android SDK for .NET developers.
-  author: conceptdev
-  ms.author: crdun
-  ms.date: 07/27/2018
   ms.topic: landing-page
+  ms.prod: xamarin
   ms.technology: xamarin-android
-abstract:
-  description: Xamarin.Android exposes the complete Android SDK for .NET developers. Build fully native Android apps using C# or F# in Visual Studio.
-  menu:
-    items:
-    - href: ~/android/samples/
-      text: Android Samples
-    - href: https://docs.microsoft.com/xamarin/android/release-notes/
-      text: Release Notes
-    - href: https://developers.google.com/
-      text: Googles's Developer Documentation
-    - href: /visualstudio/
-      text: Visual Studio 
-sections:
-- title: Get Started
-  items:
-  - type: paragraph
-    text: Learn how to build your first Android app with Xamarin and C#.
-  - type: list
-    style: icon48
-    items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: Setup
-      href: ~/android/get-started/installation/index.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Hello, Android
-      href: ~/android/get-started/hello-android/hello-android-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Multi-screen Apps
-      href: ~/android/get-started/hello-android-multiscreen/hello-android-multiscreen-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: Android 10
-      href: ~/android/platform/android-10.md
-- title: Guides
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: ~/android/get-started/index.md
-      html: Tutorials to get you up and running with Xamarin.Android. Make sure everything is installed correctly, and build your first Android apps.
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/android/get-started/index.md
-      title: Getting Started
-    - href: ~/android/app-fundamentals/index.md
-      html: Everything you need to know to build Android apps, such as working with files, images, databases, and more.
-      image:
-        src: ~/media/icons/i_app-build.svg
-        href: ~/android/app-fundamentals/index.md
-      title: Application Fundamentals
-    - href: ~/android/user-interface/index.md
-      html: Learn about the complete set of user interface control widgets available for Android.
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: ~/android/user-interface/index.md
-      title: User Interface
-    - href: ~/android/platform/index.md
-      html: Working with Android platform features, such as fingerprint authentication, and the newest features in Android 8.0 Oreo.
-      image:
-        src: ~/media/icons/i_platform.svg
-        href: ~/android/platform/index.md
-      title: Platform Features
-    - href: ~/essentials/index.md?context=xamarin/android
-      html: Cross-platform APIs for mobile applications.
-      image:
-        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
-        href: ~/essentials/index.md?context=xamarin/android
-      title: Xamarin.Essentials
-    - href: ~/android/data-cloud/index.md
-      html: Local and remote data storage and retrieval, and other cloud-based services.
-      image:
-        src: ~/media/icons/i_data-cloud.svg
-        href: ~/android/data-cloud/index.md
-      title: Data & Cloud Services
-    - href: ~/android/deploy-test/index.md
-      html: Instructions for building and deploying your apps to Google Play, and tips for testing them beforehand!
-      image:
-        src: ~/media/icons/i_deploy-test.svg
-        href: ~/android/deploy-test/index.md
-      title: Deployment and Testing
-    - href: ~/android/internals/index.md
-      html: Additional information about Xamarin.Android internals and assistance with features like localization and accessibility.
-      image:
-        src: https://docs.microsoft.com/media/common/i_advanced.svg
-        href: ~/android/internals/index.md
-      title: Advanced Concepts & Internals
-    - href: ~/android/wear/index.md
-      html: Building apps for Android Wear.
-      image:
-        src: ~/media/icons/i_android-wear.svg
-        href: ~/android/wear/index.md
-      title: Android Wear
-- title: Reference
-  items:
-  - type: list
-    style: cards
-    className: cardsD
-    items:
-    - title: API
-      href: https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9
-      html: <p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-android-sdk-9">Android API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinandroid-7.1">Base Class Library</a></p>
-    - title: Samples
-      href: https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android
-      html: <p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android">Android Samples</a></p>
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 01/27/2020
+
+landingContent:
+  - title: Get started
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Get started with Xamarin.Android
+            url: ~/android/get-started/index.md
+          - text: Setup and installation
+            url: ~/android/get-started/installation/index.md
+          - text: Build your first app
+            url: ~/android/get-started/hello-android/index.md
+          - text: Extend your first app
+            url: ~/android/get-started/hello-android-multiscreen/index.md
+          - text: Xamarin for Java developers
+            url: ~/android/get-started/java-developers.md
+
+  - title: Application fundamentals
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Accessibility
+            url: ~/android/app-fundamentals/accessibility.md
+          - text: Android API levels
+            url: ~/android/app-fundamentals/android-api-levels.md
+          - text: Activity lifecycle
+            url: ~/android/app-fundamentals/activity-lifecycle/index.md
+          - text: Broadcast receivers
+            url: ~/android/app-fundamentals/broadcast-receivers.md
+          - text: Graphics & animation
+            url: ~/android/app-fundamentals/graphics-and-animation.md
+          - text: Localization
+            url: ~/android/app-fundamentals/localization.md
+          - text: Notifications
+            url: ~/android/app-fundamentals/notifications/index.md
+          - text: Permissions
+            url: ~/android/app-fundamentals/permissions.md
+          - text: Touch & gestures
+            url: ~/android/app-fundamentals/touch/index.md
+          - text: See more >
+            url: ~/android/app-fundamentals/index.md
+
+  - title: User interface
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Android designer
+            url: ~/android/user-interface/android-designer/index.md
+          - text: Material theme
+            url: ~/android/user-interface/material-theme.md
+          - text: User profile
+            url: ~/android/user-interface/user-profile.md
+          - text: Splash screen
+            url: ~/android/user-interface/splash-screen.md
+          - text: Layouts
+            url: ~/android/user-interface/layouts/index.md
+          - text: Controls
+            url: ~/android/user-interface/controls/index.md
+
+  - title: Platform features
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: App linking
+            url: ~/android/platform/app-linking.md
+          - text: Bind a Java library
+            url: ~/android/platform/binding-java-library/index.md
+          - text: Content providers
+            url: ~/android/platform/content-providers/index.md
+          - text: File access
+            url: ~/android/platform/files/index.md
+          - text: Fingerprint authentication
+            url: ~/android/platform/fingerprint-authentication/index.md
+          - text: Fragments
+            url: ~/android/platform/fragments/index.md
+          - text: Java integration
+            url: ~/android/platform/java-integration/index.md
+          - text: Job scheduler
+            url: ~/android/platform/android-job-scheduler.md
+          - text: Maps and location
+            url: ~/android/platform/maps-and-location/index.md
+          - text: See more >
+            url: ~/android/platform/index.md
+
+  - title: Xamarin.Essentials
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: About
+            url: ~/essentials/index.md?context=xamarin/android
+          - text: Get started
+            url: ~/essentials/get-started.md?context=xamarin/android
+          - text: Platform & feature support
+            url: ~/essentials/platform-feature-support.md?context=xamarin/android
+          - text: Troubleshooting
+            url: ~/essentials/troubleshooting.md?context=xamarin/android
+          - text: Release notes
+            url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+
+  - title: Data & cloud services
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Azure Active Directory
+            url: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/android
+          - text: Azure Mobile Apps
+            url: ~/cross-platform/data-cloud/mobile-apps.md
+          - text: Data access
+            url: ~/android/data-cloud/data-access/index.md
+          - text: Google messaging
+            url: ~/android/data-cloud/google-messaging/index.md
+          - text: Introduction to web services
+            url: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/android
+
+  - title: Deployment & testing
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: App package size
+            url: ~/android/deploy-test/app-package-size.md
+          - text: Build apps
+            url: ~/android/deploy-test/building-apps/index.md
+          - text: Linking
+            url: ~/android/deploy-test/linker.md
+          - text: Multi-core devices
+            url: ~/android/deploy-test/multicore-devices.md
+          - text: Performance
+            url: ~/android/deploy-test/performance.md
+          - text: Profiling
+            url: ~/android/deploy-test/profiling.md
+          - text: Prepare for release
+            url: ~/android/deploy-test/release-prep/index.md
+          - text: Sign the APK
+            url: ~/android/deploy-test/signing/index.md
+          - text: Publish an app
+            url: ~/android/deploy-test/publishing/index.md
+          - text: See more >
+            url: ~/android/deploy-test/index.md
+
+  - title: Advanced concepts & internals
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Architecture
+            url: ~/android/internals/architecture.md
+          - text: Available assemblies
+            url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/android
+          - text: API design
+            url: ~/android/internals/api-design.md
+          - text: Garbage collection
+            url: ~/android/internals/garbage-collection.md
+          - text: Limitations
+            url: ~/android/internals/limitations.md
+
+  - title: Android wear
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Get started
+            url: ~/android/wear/get-started/index.md
+          - text: User interface
+            url: ~/android/wear/user-interface/index.md
+          - text: Platform features
+            url: ~/android/wear/platform/index.md
+          - text: Screen sizes
+            url: ~/android/wear/screen-sizes.md
+          - text: Deployment & testing
+            url: ~/android/wear/deploy-test/index.md

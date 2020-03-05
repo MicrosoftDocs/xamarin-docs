@@ -3,8 +3,8 @@ title: "Xamarin.Android Calendar"
 ms.prod: xamarin
 ms.assetid: 78666541-CA14-4CD8-A94A-A9621C57813E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -31,7 +31,7 @@ reading and/or writing calendar data.
 
 ## Using the Calendar Contract
 
-Once you set the permissions, you can interact with calendar data 
+Once you set the permissions, you can interact with calendar data
 by using the `CalendarContract` class. This class provides a data model
 that applications can use when they interact with the calendar
 provider. The `CalendarContract` allows applications to resolve the
@@ -350,5 +350,3 @@ calendar capabilities.
 ## Related Links
 
 - [Calendar Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/calendardemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

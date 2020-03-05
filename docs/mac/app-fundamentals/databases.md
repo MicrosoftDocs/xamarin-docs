@@ -4,8 +4,8 @@ description: "This article covers using key-value coding and key-value observing
 ms.prod: xamarin
 ms.assetid: 44FAFDA8-612A-4E0F-8BB4-5C92A3F4D552
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -20,7 +20,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 In this article we will be covering two ways to access SQLite data:
 
 1. **Direct Access** - By directly accessing a SQLite Database, we can use data from the database for key-value coding and data binding with UI elements created in Xcode's Interface Builder. By using key-value coding and data binding techniques in your Xamarin.Mac application, you can greatly decrease the amount of code that you have to write and maintain to populate and work with UI elements. You also have the benefit of further decoupling your backing data (_Data Model_) from your front end User Interface (_Model-View-Controller_), leading to easier to maintain, more flexible application design.
-2. **SQLite.NET ORM** - By using the open source [SQLite.NET](http://www.sqlite.org) Object Relationship Manager (ORM) we can greatly reduce the amount of code required to read and write data from a SQLite database. This data can then be used to populate a user interface item such as a Table View.
+2. **SQLite.NET ORM** - By using the open source [SQLite.NET](https://www.sqlite.org) Object Relationship Manager (ORM) we can greatly reduce the amount of code required to read and write data from a SQLite database. This data can then be used to populate a user interface item such as a Table View.
 
 [![An example of the running app](databases-images/intro01.png "An example of the running app")](databases-images/intro01-large.png#lightbox)
 
@@ -1905,7 +1905,7 @@ Person = new PersonModel (Conn, DataSource.IDForIndex(0));
 
 ## SQLite.NET ORM
 
-As stated above, by using the open source [SQLite.NET](http://www.sqlite.org) Object Relationship Manager (ORM) we can greatly reduce the amount of code required to read and write data from a SQLite database. This may not be the best route to take when binding data because of several of the requirements that key-value coding and data binding place on an object.
+As stated above, by using the open source [SQLite.NET](https://www.sqlite.org) Object Relationship Manager (ORM) we can greatly reduce the amount of code required to read and write data from a SQLite database. This may not be the best route to take when binding data because of several of the requirements that key-value coding and data binding place on an object.
 
 According to the SQLite.Net website, _"SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine. SQLite is the most widely deployed database engine in the world. The source code for SQLite is in the public domain."_
 

@@ -90,7 +90,7 @@ Second-level headings will generate the on-page TOC that appears in the "In this
 
 ## Text styling
 
-*Italics*
+_Italics_
  Use for files, folders, paths (for long items, split onto their own line) - new terms - URLs (unless rendered as links, which is the default).
 
 **Bold**

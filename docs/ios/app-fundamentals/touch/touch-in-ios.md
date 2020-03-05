@@ -4,8 +4,8 @@ description: "This document describes how to work with touch events, multi-touch
 ms.prod: xamarin
 ms.assetid: DA666DC9-446E-4CD1-B5A0-C6FFBC7E53AD
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -15,7 +15,7 @@ It is important to understand the touch events and touch APIs in an iOS applicat
 
 ## Enabling Touch
 
-Controls in `UIKit` – those subclassed from UIControl – are so dependant on user interaction that they have gestures built in to UIKit and therefore it is not necessary to enable Touch. It is already enabled.
+Controls in `UIKit` – those subclassed from UIControl – are so dependent on user interaction that they have gestures built in to UIKit and therefore it is not necessary to enable Touch. It is already enabled.
 
 However, many of the views in `UIKit` do not have touch enabled by default. There are two ways to enable touch on a control. The first way is to check the User Interaction Enabled checkbox in the Property Pad of the iOS Designer, as shown in the following screenshot:
 

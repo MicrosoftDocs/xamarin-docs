@@ -4,8 +4,8 @@ description: "This article covers the steps required to setup and maintain a Xam
 ms.prod: xamarin
 ms.assetid: 74587317-4b15-4904-9582-dcd914827cbc
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -316,7 +316,7 @@ Check this box if you want your application to be offered at a discount to educa
 
 An application that is set up as a **Custom Business to Business Application** will only be available to the **Volume Purchase Program** customers that you specify in iTunes Connect, and it will only be available in the applicable territories (for example, U.S. Volume Purchase Program customers must use the U.S. App Store Volume Purchase Program for Business).
 
-Custom Business to Business applications will not be available to educational institutions or general App Store customers. To learn more about the *App Store Volume Purchase Program for Business*, visit Apple's [Frequently Asked Questions](http://vpp.itunes.apple.com/faq) page. To learn more about how your customers can sign up for the **Volume Purchase Program**, visit Apple's [Deployment Programs](http://enroll.vpp.itunes.apple.com) page.
+Custom Business to Business applications will not be available to educational institutions or general App Store customers. To learn more about the *App Store Volume Purchase Program for Business*, visit Apple's [Frequently Asked Questions](https://vpp.itunes.apple.com/faq) page. To learn more about how your customers can sign up for the **Volume Purchase Program**, visit Apple's [Deployment Programs](https://enroll.vpp.itunes.apple.com) page.
 
 ### Editing Pricing Information in iTunes Connect
 

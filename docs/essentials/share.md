@@ -4,7 +4,7 @@ description: "The Share class in Xamarin.Essentials enables an application to sh
 ms.assetid: B7B01D55-0129-4C87-B515-89F8F4E94665
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/20/2019
+ms.date: 01/06/2020
 ms.custom: video
 ---
 
@@ -69,6 +69,21 @@ await Share.RequestAsync(new ShareFileRequest
 {
     Title = Title,
     File = new ShareFile(file)
+});
+```
+
+## Presentation Location
+
+When requesting a share on iPadOS you have the ability to present in a pop over control. You can specify the location using the `PresentationSourceBounds` property:
+
+```csharp
+await Share.RequestAsync(new ShareFileRequest
+{
+    Title = Title,
+    File = new ShareFile(file),
+    PresentationSourceBounds = DeviceInfo.Platform== DevicePlatform.iOS && DeviceInfo.Idiom == DeviceIdiom.Tablet
+                            ? new System.Drawing.Rectangle(0, 20, 0, 0)
+                            : System.Drawing.Rectangle.Empty
 });
 ```
 

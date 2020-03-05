@@ -4,7 +4,7 @@ description: "This document links to various guides that describe Xamarin.Essent
 ms.assetid: 4EDC9897-5FD1-44CA-A26D-2E5AB472C99A
 author: jamesmontemagno
 ms.author: jamont
-ms.date: 08/27/2019
+ms.date: 02/26/2020
 ---
 
 # Xamarin.Essentials
@@ -44,6 +44,7 @@ Follow the guides to integrate these Xamarin.Essentials features into your appli
 * [Maps](maps.md?content=xamarin/xamarin-forms) – Open the maps application to a specific location.
 * [Open Browser](open-browser.md?context=xamarin/xamarin-forms) – Quickly and easily open a browser to a specific website.
 * [Orientation Sensor](orientation-sensor.md?context=xamarin/xamarin-forms) – Retrieve the orientation of the device in three dimensional space.
+* [Permissions](permissions.md?context=xamarin/xamarin-forms) – Check and request permissions from users.
 * [Phone Dialer](phone-dialer.md?context=xamarin/xamarin-forms) – Open the phone dialer.
 * [Platform Extensions](platform-extensions.md?context=xamarin/xamarin-forms) – Helper methods for converting Rect, Size, and Point.
 * [Preferences](preferences.md?context=xamarin/xamarin-forms) – Quickly and easily add persistent preferences.

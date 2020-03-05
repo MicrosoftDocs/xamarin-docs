@@ -3,8 +3,8 @@ title: "Custom Linker Configuration"
 description: "This document describes an XML file that can be used to configure the linker, ensuring explicitly that needed code is not eliminated from the linked application."
 ms.prod: xamarin
 ms.assetid: F8A99E3F-2197-4399-AC81-F1DBAB5729C9
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -76,3 +76,4 @@ character `*` can be included multiple times within a "type fullname" pattern.
 
 - [Linking on iOS](~/ios/deploy-test/linker.md)
 - [Linking on Android](~/android/deploy-test/linker.md)
+- [Linker GitHub repo with examples](https://github.com/mono/linker)

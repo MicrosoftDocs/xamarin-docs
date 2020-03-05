@@ -4,8 +4,8 @@ description: "Android 4.4 (KitKat) comes loaded with a cornucopia of features fo
 ms.prod: xamarin
 ms.assetid: D3FDEA1C-F076-406F-BCC3-2A55D2C6ADEE
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -140,7 +140,7 @@ responsible for making the app selectable as the default messaging
 application, and behaving appropriately in code and in life if the
 application is not selected. For more information on transitioning your
 SMS app to KitKat, refer to the
-[Getting Your SMS Apps Ready for KitKat](http://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html)
+[Getting Your SMS Apps Ready for KitKat](https://android-developers.blogspot.com/2013/10/getting-your-sms-apps-ready-for-kitkat.html)
 guide from Google.
 
 ### WebView Apps
@@ -301,7 +301,7 @@ XML is as follows:
 
 The example above uses `merge` to make the view code shorter and
 simplify the view hierarchy. You can read more about `merge` layouts
-[here](http://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
+[here](https://android-developers.blogspot.com/2009/03/android-layout-tricks-3-optimize-by.html).
 
 A Scene is created by calling
 [`Scene.GetSceneForLayout`](xref:Android.Transitions.Scene.GetSceneForLayout*),

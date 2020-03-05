@@ -15,7 +15,7 @@ Xamarin.Forms doesn't currently support visual designers for XAML files. Because
 
 > "The file cannot be opened with the selected editor. Please choose another editor."
 
-This limitation is described in the [Overview](~/xamarin-forms/xaml/xaml-basics/index.md#Overview) section of the [Xamarin.Forms XAML Basics](~/xamarin-forms/xaml/xaml-basics/index.md) guide:
+This limitation is described in the [Xamarin.Forms XAML Basics](~/xamarin-forms/xaml/xaml-basics/index.md) guide:
 
 > "There is not yet a visual designer for generating XAML in Xamarin.Forms applications, so all XAML must be hand-written."
 

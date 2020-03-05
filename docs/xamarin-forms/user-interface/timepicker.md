@@ -23,6 +23,7 @@ The Xamarin.Forms [`TimePicker`](xref:Xamarin.Forms.TimePicker) invokes the plat
 - [`FontAttributes`](xref:Xamarin.Forms.TimePicker.FontAttributes) of type [`FontAttributes`](xref:Xamarin.Forms.FontAttributes), which defaults to [`FontAtributes.None`](xref:Xamarin.Forms.FontAttributes.None).
 - [`FontFamily`](xref:Xamarin.Forms.TimePicker.FontFamily) of type `string`, which defaults to `null`.
 - [`FontSize`](xref:Xamarin.Forms.TimePicker.FontSize) of type `double`, which defaults to -1.0.
+- `CharacterSpacing`, of type `double`, is the spacing between characters of the `TimePicker` text.
 
 All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be styled, and the properties can be targets of data bindings. The [`Time`](xref:Xamarin.Forms.TimePicker.Time) property has a default binding mode of [`BindingMode.TwoWay`](xref:Xamarin.Forms.BindingMode.TwoWay), which means that it can be a target of a data binding in an application that uses the [Model-View-ViewModel (MVVM)](~/xamarin-forms/enterprise-application-patterns/mvvm.md) architecture.
 

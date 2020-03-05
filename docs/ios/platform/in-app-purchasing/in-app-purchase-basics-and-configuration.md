@@ -4,8 +4,8 @@ description: "This document describes in-app purchases in Xamarin.iOS, discussin
 ms.prod: xamarin
 ms.assetid: 11FB7F02-41B3-2B34-5A4F-69F12897FE10
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/18/2017
 ---
 
@@ -63,7 +63,7 @@ different price tier in different markets.
 ## Configuration
 
 Before writing any in-app purchasing code you must do some set-up work in
-iTunes Connect ( [itunesconnect.apple.com](http://itunesconnect.apple.com)) and the iOS Provisioning Portal ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
+iTunes Connect ( [itunesconnect.apple.com](https://itunesconnect.apple.com)) and the iOS Provisioning Portal ( [developer.apple.com/iOS](https://developer.apple.com/iOS)).
 
 These three steps
 should be complete before writing any code:

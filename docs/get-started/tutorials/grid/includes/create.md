@@ -25,7 +25,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
     This code declaratively defines the user interface for the page, which consists of a [`Label`](xref:Xamarin.Forms.Label) in a [`Grid`](xref:Xamarin.Forms.Grid). By default, the `Grid` positions its child views in a single location. Therefore, a `Grid` that contains multiple children should specify columns and rows, which will be covered in the next exercise. In addition, the [`Margin`](xref:Xamarin.Forms.View.Margin) property indicates the rendering position of the `Grid` within the [`ContentPage`](xref:Xamarin.Forms.ContentPage).
 
     > [!NOTE]
-    > In addition to the [`Margin`](xref:Xamarin.Forms.View.Margin) property, the [`Padding`](xref:Xamarin.Forms.Layout.Padding) property can also be set on a [`Grid`](xref:Xamarin.Forms.Grid). The [`Padding`](xref:Xamarin.Forms.Layout.Padding) property value specifies the distance between views in the `Grid`. For more information, see [Margin and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
+    > In addition to the [`Margin`](xref:Xamarin.Forms.View.Margin) property, the [`Padding`](xref:Xamarin.Forms.Layout.Padding) property can also be set on a [`Grid`](xref:Xamarin.Forms.Grid). The [`Padding`](xref:Xamarin.Forms.Layout.Padding) property value specifies the distance between the bounds of the `Grid` and its children. For more information, see [Margin and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS remote simulator or Android emulator:
 

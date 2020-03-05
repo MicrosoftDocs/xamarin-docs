@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 0F0FDD2B-FFB1-476F-B674-81DB3A5E1CF3
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/29/2018
 ---
 
@@ -62,7 +62,7 @@ This guide covers methods when using the Android emulator.
 
 This guide covers steps for setting up an Android NUnit test project,
 _not_ a Xamarin.UITest project. Xamarin.UITest guides can be found
-[here](https://docs.microsoft.com/appcenter/test-cloud/preparing-for-upload/uitest).
+[here](/appcenter/test-cloud/preparing-for-upload).
 
 ### [Why can't my Android release build connect to the Internet?](android-internet.md)
 

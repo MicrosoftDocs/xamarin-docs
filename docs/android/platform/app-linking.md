@@ -4,8 +4,8 @@ description: "This guide will discuss how Android 6.0 supports app-linking, a te
 ms.prod: xamarin
 ms.assetid: 48174E39-19FD-43BC-B54C-9AF11D4B1F91
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -212,7 +212,6 @@ Android application.
 ## Related Links
 
 - [Finding your Keystore's MD5 or SHA1 Signature](~/android/deploy-test/signing/keystore-signature.md)
-- [Activities and Intents](https://university.xamarin.com/classes#4)
-- [AppLinks](http://applinks.org/)
+- [AppLinks](https://developers.facebook.com/docs/applinks)
 - [Google Digital Assets Links](https://developers.google.com/digital-asset-links/)
 - [Statement List Generator and Tester](https://developers.google.com/digital-asset-links/tools/generator)

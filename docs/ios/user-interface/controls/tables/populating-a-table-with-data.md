@@ -4,8 +4,8 @@ description: "This document describes how to populate a table with data in a Xam
 ms.prod: xamarin
 ms.assetid: 6FE64DDF-1029-EB9B-6EEC-1C7DFDFDF3AF
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/22/2017
 ---
 
@@ -58,9 +58,10 @@ public class TableSource : UITableViewSource {
             UITableViewCell cell = tableView.DequeueReusableCell (CellIdentifier);
             string item = TableItems[indexPath.Row];
 
-            //---- if there are no cells to reuse, create a new one
-            if (cell == null)
-            { cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); }
+            //if there are no cells to reuse, create a new one
+            if (cell == null){ 
+                cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); 
+            }
 
             cell.TextLabel.Text = item;
 

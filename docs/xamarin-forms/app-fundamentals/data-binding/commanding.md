@@ -274,7 +274,7 @@ Before examining the constructor of the `PersonCollectionViewModel` class, let's
 
 Here's how it works: The user first presses the **New** button. This enables the entry form but disables the **New** button. The user then enters a name, age, and skills. At any time during the editing, the user can press the **Cancel** button to start over. Only when a name and a valid age have been entered is the **Submit** button enabled. Pressing this **Submit** button transfers the person to the collection displayed by the `ListView`. After either the **Cancel** or **Submit** button is pressed, the entry form is cleared and the **New** button is enabled again.
 
-The iOS screen at the left shows the layout before a valid age is entered. The Android and UWP screens show the **Submit** button enabled after an age has been set:
+The iOS screen at the left shows the layout before a valid age is entered. The Android screen shows the **Submit** button enabled after an age has been set:
 
 [![Person Entry](commanding-images/personentry-small.png "Person Entry")](commanding-images/personentry-large.png#lightbox "Person Entry")
 

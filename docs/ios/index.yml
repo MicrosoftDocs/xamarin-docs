@@ -1,124 +1,221 @@
-### YamlMime:YamlDocument
-documentType: LandingData
+### YamlMime:Landing
+
 title: Xamarin.iOS
+summary: Xamarin.iOS exposes the complete iOS SDK for .NET developers. Build fully native iOS apps using C# or F# in Visual Studio.
+
 metadata:
+  title: Xamarin.iOS
   description: Xamarin.iOS exposes the complete iOS SDK for .NET developers.
-  author: conceptdev
-  ms.author: crdun
-  ms.date: 09/28/2018
   ms.topic: landing-page
-  ms.technology: xamarin-ios
-abstract:
-  description: Xamarin.iOS exposes the complete iOS SDK for .NET developers. Build fully native iOS apps using C# or F# in Visual Studio.
-  menu:
-    items:
-    - href: ~/ios/samples/index.yml
-      text: iOS Samples
-    - href: https://docs.microsoft.com/xamarin/ios/release-notes/
-      text: Release Notes
-    - href: https://developer.apple.com/documentation/
-      text: Apple's Developer Documentation
-    - href: /visualstudio/
-      text: Visual Studio
-sections:
-- title: Get Started
-  items:
-  - type: paragraph
-    text: Learn how to build your first iOS app with Xamarin and C#.
-  - type: list
-    style: icon48
-    items:
-    - image:
-        src: https://docs.microsoft.com/media/common/i_setup.svg
-      text: Setup
-      href: ~/ios/get-started/installation/index.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Hello, iOS
-      href: ~/ios/get-started/hello-ios/hello-ios-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobileapp.svg
-      text: Multi-screen Apps
-      href: ~/ios/get-started/hello-ios-multiscreen/hello-ios-multiscreen-quickstart.md
-    - image:
-        src: https://docs.microsoft.com/media/common/i_mobile-app-developement.svg
-      text: iOS 13
-      href: ~/ios/platform/ios13/index.md
-- title: Guides
-  items:
-  - type: list
-    style: cards
-    className: cardsB
-    items:
-    - href: ~/ios/get-started/index.md
-      html: Tutorials to get you up and running with Xamarin.iOS. Make sure everything is installed correctly, and build your first iOS apps.
-      image:
-        src: https://docs.microsoft.com/media/common/i_get-started.svg
-        href: ~/ios/get-started/index.md
-      title: Getting Started
-    - href: ~/ios/app-fundamentals/index.md
-      html: Everything you need to know to build iOS apps, such as working with files, images, databases, and more.
-      image:
-        src: ~/media/icons/i_app-build.svg
-        href: ~/ios/app-fundamentals/index.md
-      title: Application Fundamentals
-    - href: ~/ios/user-interface/index.md
-      html: Learn about the complete set of user interface controls available for iOS in UIKit.
-      image:
-        src: ~/media/icons/i_user-interface.svg
-        href: ~/ios/user-interface/index.md
-      title: User Interface
-    - href: ~/ios/platform/index.md
-      html: Working with iOS platform features, such as ARKit and CoreML, and the other new features in iOS 11.
-      image:
-        src: ~/media/icons/i_platform.svg
-        href: ~/ios/platform/index.md
-      title: Platform Features
-    - href: ~/essentials/index.md?context=xamarin/ios
-      html: Cross-platform APIs for mobile applications.
-      image:
-        src: https://docs.microsoft.com/media/common/i_multi-connect.svg
-        href: ~/essentials/index.md?context=xamarin/ios
-      title: Xamarin.Essentials
-    - href: ~/ios/data-cloud/index.md
-      html: Local and remote data storage and retrieval, and other cloud-based services.
-      image:
-        src: ~/media/icons/i_data-cloud.svg
-        href: ~/ios/data-cloud/index.md
-      title: Data & Cloud Services
-    - href: ~/ios/deploy-test/index.md
-      html: Instructions for building and deploying your apps to the App Store, and tips for testing them beforehand!
-      image:
-        src: ~/media/icons/i_deploy-test.svg
-        href: ~/ios/deploy-test/index.md
-      title: Deployment and Testing
-    - href: ~/ios/internals/index.md
-      html: Detailed information on how Xamarin.iOS works.
-      image:
-        src: https://docs.microsoft.com/media/common/i_config-tools.svg
-        href: ~/ios/internals/index.md
-      title: Advanced Concepts & Internals
-    - href: ~/ios/watchos/index.md
-      html: Build apps for Apple Watch!
-      image:
-        src: ~/media/icons/i_watchos.svg
-        href: ~/ios/watchos/index.md
-      title: watchOS
-    - href: ~/ios/tvos/index.md
-      html: Build apps for Apple TV!
-      image:
-        src: ~/media/icons/i_tvos.svg
-        href: ~/ios/tvos/index.md
-      title: tvOS
-- title: Reference
-  items:
-  - type: list
-    style: cards
-    className: cardsD
-    items:
-    - title: API
-      href: https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12
-      html: <p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarin-ios-sdk-12">iOS API docs</a></p><p><a href="https://docs.microsoft.com/dotnet/api/?view=xamarinios-10.8">Base Class Library</a></p>
-    - title: Samples
-      href: https://developer.xamarin.com/samples
-      html: <p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">iOS Samples</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">watchOS Samples</a></p><p><a href="https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.iOS">tvOS Samples</a></p>
+  ms.prod: xamarin
+  ms.assetid: 7DF889E9-23F6-408F-B836-E0FDF5F0FA9B
+  author: davidbritch
+  ms.author: dabritch
+  ms.date: 01/24/2020
+
+landingContent:
+  - title: Get started
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Get started with Xamarin.iOS
+            url: ~/ios/get-started/index.md
+          - text: Setup and installation
+            url: ~/ios/get-started/installation/index.md
+          - text: Build your first app
+            url: ~/ios/get-started/hello-ios/index.md
+          - text: Extend your first app
+            url: ~/ios/get-started/hello-ios-multiscreen/index.md
+          - text: Objective-C developers
+            url: ~/ios/get-started/objective-c-developers/index.md
+
+  - title: Application fundamentals
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Accessibility
+            url: ~/ios/app-fundamentals/accessibility.md
+          - text: Backgrounding
+            url: ~/ios/app-fundamentals/backgrounding/index.md
+          - text: Exception marshaling
+            url: ~/ios/platform/exception-marshaling.md
+          - text: Event, protocols and delegates
+            url: ~/ios/app-fundamentals/delegates-protocols-and-events.md
+          - text: File system
+            url: ~/ios/app-fundamentals/file-system.md
+          - text: Images & icons
+            url: ~/ios/app-fundamentals/images-icons/index.md
+          - text: Localization
+            url: ~/ios/app-fundamentals/localization/index.md
+          - text: Security & privacy
+            url: ~/ios/app-fundamentals/security-privacy.md
+          - text: Touch
+            url: ~/ios/app-fundamentals/touch/index.md
+          - text: See more >
+            url: ~/ios/app-fundamentals/index.md
+
+  - title: User interface
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: iOS designer
+            url: ~/ios/user-interface/designer/index.md
+          - text: Storyboards
+            url: ~/ios/user-interface/storyboards/index.md
+          - text: User interfaces
+            url: ~/ios/user-interface/ios-ui/index.md
+          - text: Controls
+            url: ~/ios/user-interface/controls/index.md
+          - text: Programmatic layout constraints
+            url: ~/ios/user-interface/programmatic-layout-constraints.md
+          - text: MonoTouch.Dialog
+            url: ~/ios/user-interface/monotouch.dialog/index.md
+
+  - title: Platform features
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Apple Pay
+            url: ~/ios/platform/apple-pay.md
+          - text: ARKit
+            url: ~/ios/platform/introduction-to-ios11/arkit/index.md
+          - text: Graphics and animation
+            url: ~/ios/platform/graphics-animation-ios/index.md
+          - text: PassKit
+            url: ~/ios/platform/passkit.md
+          - text: PhotoKit
+            url: ~/ios/platform/photokit.md
+          - text: Search
+            url: ~/ios/platform/search/index.md
+          - text: SiriKit
+            url: ~/ios/platform/sirikit/index.md
+          - text: 3D touch
+            url: ~/ios/platform/3d-touch.md
+          - text: Touch ID and Face ID
+            url: ~/ios/platform/touch-id-face-id.md
+          - text: See more >
+            url: ~/ios/platform/index.md
+
+  - title: Xamarin.Essentials
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: About
+            url: ~/essentials/index.md?context=xamarin/ios
+          - text: Get started
+            url: ~/essentials/get-started.md?context=xamarin/ios
+          - text: Platform & feature support
+            url: ~/essentials/platform-feature-support.md?context=xamarin/ios
+          - text: Troubleshooting
+            url: ~/essentials/troubleshooting.md?context=xamarin/ios
+          - text: Release notes
+            url: https://docs.microsoft.com/xamarin/essentials/release-notes/
+
+  - title: Data & cloud services
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Azure Active Directory
+            url: ~/cross-platform/data-cloud/active-directory/index.md?context=xamarin/ios
+          - text: Azure Mobile Apps
+            url: ~/cross-platform/data-cloud/mobile-apps.md
+          - text: Data Access
+            url: ~/ios/data-cloud/data/index.md
+          - text: System.Data
+            url: ~/ios/data-cloud/system.data.md
+          - text: iCloud
+            url: ~/ios/data-cloud/introduction-to-icloud.md
+          - text: CloudKit
+            url: ~/ios/data-cloud/intro-to-cloudkit.md
+          - text: Introduction to web services
+            url: ~/cross-platform/data-cloud/web-services/index.md?context=xamarin/ios
+
+  - title: Deployment & testing
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: App distribution
+            url: ~/ios/deploy-test/app-distribution/index.md
+          - text: Code signing and provisioning
+            url: ~/ios/deploy-test/provisioning/index.md
+          - text: Compiling for different devices
+            url: ~/ios/deploy-test/compiling-for-different-devices.md
+          - text: iOS build mechanics
+            url: ~/ios/deploy-test/ios-build-mechanics.md
+          - text: Linking Xamarin.iOS apps
+            url: ~/ios/deploy-test/linker.md
+          - text: Profiling
+            url: ~/ios/deploy-test/using-instruments-to-detect-native-leaks-using-markheap.md
+          - text: Performance
+            url: ~/ios/deploy-test/performance.md
+          - text: Unit testing
+            url: ~/ios/deploy-test/touch.unit.md
+          - text: Wireless deployment
+            url: ~/ios/deploy-test/wireless-deployment.md
+          - text: See more >
+            url: ~/ios/deploy-test/index.md
+
+  - title: Advanced concepts & internals
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: API
+            url: ~/ios/internals/api.md
+          - text: API design
+            url: ~/ios/internals/api-design/index.md
+          - text: Available assemblies
+            url: ~/cross-platform/internals/available-assemblies.md?context=xamarin/ios
+          - text: Floating point
+            url: ~/ios/internals/floating-point.md
+          - text: XIB code generation
+            url: ~/ios/internals/xib-code-generation.md
+          - text: iOS architecture
+            url: ~/ios/internals/architecture.md
+          - text: Limitations
+            url: ~/ios/internals/limitations.md
+          - text: New refcount
+            url: ~/ios/internals/newrefcount.md
+          - text: Objective-C selectors
+            url: ~/ios/internals/objective-c-selectors.md
+          - text: Registrar
+            url: ~/ios/internals/registrar.md
+
+  - title: watchOS
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Get started
+            url: ~/ios/watchos/get-started/index.md
+          - text: Application fundamentals
+            url: ~/ios/watchos/app-fundamentals/index.md
+          - text: User interface
+            url: ~/ios/watchos/user-interface/index.md
+          - text: Platform features
+            url: ~/ios/watchos/platform/index.md
+          - text: Xamarin.Essentials for watchOS
+            url: ~/essentials/index.md?context=xamarin/watchos
+          - text: Deployment & testing
+            url: ~/ios/watchos/deploy-test/index.md
+          - text: Troubleshooting
+            url: ~/ios/watchos/troubleshooting.md
+
+  - title: tvOS
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: Get started
+            url: ~/ios/tvos/get-started/index.md
+          - text: Application fundamentals
+            url: ~/ios/tvos/app-fundamentals/index.md
+          - text: User interface
+            url: ~/ios/tvos/user-interface/index.md
+          - text: Platform features
+            url: ~/ios/tvos/platform/index.md
+          - text: Xamarin.Essentials for tvOS
+            url: ~/essentials/index.md?context=xamarin/tvos
+          - text: Deployment & testing
+            url: ~/ios/tvos/deploy-test/index.md
+          - text: Internals
+            url: ~/ios/tvos/internals/index.md
+          - text: Troubleshooting
+            url: ~/ios/tvos/troubleshooting.md

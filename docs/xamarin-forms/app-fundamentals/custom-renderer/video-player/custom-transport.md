@@ -608,7 +608,7 @@ The **Custom Transport** page sets the **AreTransportControlsEnabled** property 
 </ContentPage>
 ```
 
-Data triggers are described in detail in the article [Data Triggers](~/xamarin-forms/app-fundamentals/triggers.md#data).
+Data triggers are described in detail in the article [Data Triggers](~/xamarin-forms/app-fundamentals/triggers.md#data-triggers).
 
 The code-behind file has the handlers for the button `Clicked` events:
 

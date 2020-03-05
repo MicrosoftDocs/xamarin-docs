@@ -1,31 +1,29 @@
 ---
 title: "Xamarin.Forms CarouselView Introduction"
-description: "The CarouselView is a view for presenting data in a carousel-like layout."
+description: "CarouselView is a view for presenting data in a scrollable layout, where users can swipe to move through a collection of items."
 ms.prod: xamarin
 ms.assetid: 2a96e4bd-c29b-4658-bb4c-ab00872b0f8f
 ms.technology: xamarin-forms
-author: pauldipietro
-ms.author: padipi
-ms.date: 09/09/2019
+author: davidbritch
+ms.author: dabritch
+ms.date: 10/08/2019
 ---
 
 # Xamarin.Forms CarouselView Introduction
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) is a view for presenting information in a carousel-like way.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) is a view for presenting data in a scrollable layout, where users can swipe to move through a collection of items. By default, `CarouselView` will display its items in a horizontal orientation. A single item will be displayed on screen, with swipe gestures resulting in forwards and backwards navigation through the collection of items. In addition, indicators can be displayed that represent each item in the `CarouselView`:
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) is available in Xamarin.Forms 4.3. However, it is currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
+[![Screenshot of a CarouselView and IndicatorView, on iOS and Android](populate-data-images/indicators.png "IndicatorView circles")](populate-data-images/indicators-large.png#lightbox "IndicatorView circles")
+
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) is available in Xamarin.Forms 4.3. However, it's currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
 
 ```csharp
-Forms.SetFlags("CollectionView_Experimental");
+Forms.SetFlags("CarouselView_Experimental");
 ```
-
-_Note: As of this writing, the CarouselView still uses the CollectionView flag to enable its functionality._
 
 > [!IMPORTANT]
 > [`CarouselView`](xref:Xamarin.Forms.CarouselView) is available on iOS and Android, but some functionality may only be partially available on the Universal Windows Platform.
 
-## When to use CarouselView
-
-While the CarouselView bases much of its implementation off of CollectionView, its purpose is more focused. While the use of CollectionView and CarouselView are at your discretion, carousels in apps are typically used to highlight information and are limited in the total number of items used.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) shares much of its implementation with [`CollectionView`](xref:Xamarin.Forms.CollectionView). However, the two controls have different use cases. `CollectionView` is typically used to present lists of data of any length, whereas `CarouselView` is typically used to highlight information in a list of limited length.

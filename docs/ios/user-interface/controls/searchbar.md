@@ -4,8 +4,8 @@ description: "This document describes how to use search bars in Xamarin.iOS. It 
 ms.prod: xamarin
 ms.assetid: 22A8249A-19C6-4734-8331-E49FE3170771
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/11/2017
 ---
 

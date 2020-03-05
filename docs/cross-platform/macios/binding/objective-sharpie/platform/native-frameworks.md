@@ -3,8 +3,8 @@ title: "Binding Native Frameworks"
 description: "This document describes how to use Objective Sharpie's -framework option to create a binding to a library distributed as a framework."
 ms.prod: xamarin
 ms.assetid: 91AE058A-3A1F-41A9-9DE4-4B96880A1869
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/15/2016
 ---
 
@@ -16,7 +16,7 @@ For example, binding the [Adobe Creative SDK Framework](https://creativesdk.adob
 
 ```
 $ sharpie bind \
-    -framework AdobeCreativeSDKFoundation.framework \
+    -framework ./AdobeCreativeSDKFoundation.framework \
     -sdk iphoneos8.1
 ```
 
@@ -32,7 +32,7 @@ Of special importance is the `-F .` framework search path provided to clang
 ```
 $ sharpie bind \
     -sdk iphoneos8.1 \
-    AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
+    ./AdobeCreativeSDKFoundation.framework/Headers/AdobeCreativeSDKFoundation.h \
     -scope AdobeCreativeSDKFoundation.framework/Headers \
     -c -F .
 ```

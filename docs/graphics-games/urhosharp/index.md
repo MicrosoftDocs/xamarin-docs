@@ -59,4 +59,4 @@ project and contains screenshots from the Cocos2D project.
 
 ## License
 
-The UrhoSharp license is available at the [http://download.xamarin.com/content/licenses/URHO.LICENSE](http://download.xamarin.com/content/licenses/URHO.LICENSE)
+The UrhoSharp license is available at the [https://github.com/xamarin/urho/blob/master/LICENSE](https://github.com/xamarin/urho/blob/master/LICENSE)

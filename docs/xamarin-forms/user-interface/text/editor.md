@@ -6,7 +6,7 @@ ms.assetid: 7074DB3A-30D2-4A6B-9A89-B029EEF20B07
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/26/2018
+ms.date: 09/26/2019
 ---
 
 # Xamarin.Forms Editor
@@ -44,7 +44,7 @@ var text = MyEditor.Text;
 
 ### Setting Placeholder Text
 
-The [`Editor`](xref:Xamarin.Forms.Editor) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.Editor.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Editor`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.Editor.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
+The [`Editor`](xref:Xamarin.Forms.Editor) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Editor`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <Editor Placeholder="Enter text here" PlaceholderColor="Olive" />
@@ -83,6 +83,26 @@ var editor = new Editor { ... MaxLength = 10 };
 ```
 
 A [`MaxLength`](xref:Xamarin.Forms.InputView.MaxLength) property value of 0 indicates that no input will be allowed, and a value of `int.MaxValue`, which is the default value for an [`Editor`](xref:Xamarin.Forms.Editor), indicates that there is no effective limit on the number of characters that may be entered.
+
+### Character spacing
+
+Character spacing can be applied to an [`Editor`](xref:Xamarin.Forms.Editor) by setting the `Editor.CharacterSpacing` property to a `double` value:
+
+```xaml
+<Editor ...
+        CharacterSpacing="10" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Editor editor = new editor { CharacterSpacing = 10 };
+```
+
+The result is that characters in the text displayed by the [`Editor`](xref:Xamarin.Forms.Editor) are spaced `CharacterSpacing` device-independent units apart.
+
+> [!NOTE]
+> The `CharacterSpacing` property value is applied to the text displayed by the `Text` and `Placeholder` properties.
 
 ### Auto-Sizing an Editor
 
@@ -251,7 +271,7 @@ Make sure that the background and text colors you choose are usable on each plat
 
 `Editor` exposes two events:
 
-- [TextChanged](xref:Xamarin.Forms.Editor.TextChanged) &ndash; raised when the text changes in the editor. Provides the text before and after the change.
+- [TextChanged](xref:Xamarin.Forms.InputView.TextChanged) &ndash; raised when the text changes in the editor. Provides the text before and after the change.
 - [Completed](xref:Xamarin.Forms.Editor.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
 > [!NOTE]

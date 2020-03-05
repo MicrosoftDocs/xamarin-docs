@@ -4,8 +4,8 @@ description: "Android provides a very rich and diverse framework for supporting 
 ms.prod: xamarin
 ms.assetid: 80086318-6FE4-4711-9A71-5C8F8C28C754
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -245,7 +245,7 @@ To see what this would look like, run the *AnimationsDemo* project and
 select the Shape Drawable item from the main menu. We should see
 something similar to the following screenshot:
 
-![Textview with a custom background, drawable with a gradient and rounded corners](graphics-and-animation-images/image1.png)
+[![Textview with a custom background, drawable with a gradient and rounded corners](graphics-and-animation-images/image2-sml.png)](graphics-and-animation-images/image2.png#lightbox)
 
 For more details about the XML elements and syntax of Drawable
 Resources, consult
@@ -305,7 +305,7 @@ instructions. For example:
 
 #### Drawing with the Canvas API
 
-Let's see an example of the Canvas API in action. The following code
+Here's an example of the Canvas API in action. The following code
 snippet shows how to draw a view:
 
 ```csharp
@@ -341,7 +341,7 @@ included with the source code for this article. By starting up the
 application and selecting the Drawing item from the main menu, we
 should a screen similar to the following:
 
-![Screen with red paint and green paint objects](graphics-and-animation-images/image3.png)
+[![Screen with red paint and green paint objects](graphics-and-animation-images/image3-sml.png)](graphics-and-animation-images/image3.png#lightbox)
 
 ## Animation
 
@@ -667,7 +667,7 @@ API's for creating animations in Android.
 
 - [Animation Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/animationdemo)
 - [Animation and Graphics](https://developer.android.com/guide/topics/graphics/index.html)
-- [Using Animations to Bring your Mobile Apps to Life](http://youtu.be/ikSk_ILg3d0)
+- [Using Animations to Bring your Mobile Apps to Life](https://youtu.be/ikSk_ILg3d0)
 - [AnimationDrawable](xref:Android.Graphics.Drawables.AnimationDrawable)
 - [Canvas](xref:Android.Graphics.Canvas)
 - [Object Animator](xref:Android.Animation.ObjectAnimator)

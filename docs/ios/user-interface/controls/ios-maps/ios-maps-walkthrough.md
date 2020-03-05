@@ -4,8 +4,8 @@ description: "This article presents a step-by-step walkthrough showing how to wo
 ms.prod: xamarin
 ms.assetid: 1BC4F7FC-AE3C-46D7-A4D3-18E142F55B8E
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -75,7 +75,7 @@ Let's begin by creating a new **iOS Empty Project**, and giving it a relevant na
 
     ```
 
-1. Create a new instance of  `MapDelegate` and assign it to the `Delegate` of the `MKMapView`. Again, we'll implcodeent the `MapDelegate` shortly:
+1. Create a new instance of  `MapDelegate` and assign it to the `Delegate` of the `MKMapView`. Again, we'll implement the `MapDelegate` shortly:
 
     ```csharp
     mapDelegate = new MapDelegate ();
@@ -240,7 +240,7 @@ This completes the code in `ViewDidLoad`. Now we need to implement our `MapDeleg
     }
     ```
 
-1. To hide the image when the user deselects the annotation by tapping anywhere else on the map, implement the `DidSelectAnnotationView` method as follows:
+1. To hide the image when the user deselects the annotation by tapping anywhere else on the map, implement the `DidDeselectAnnotationView` method as follows:
 
     ```csharp
     public override void DidDeselectAnnotationView (MKMapView mapView, MKAnnotationView view)

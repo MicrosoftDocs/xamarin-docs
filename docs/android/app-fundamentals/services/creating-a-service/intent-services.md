@@ -3,14 +3,12 @@ title: "Intent Services in Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: A5B86FE4-C8E2-4B0A-84CA-EF8F5119E31B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
 # Intent Services in Xamarin.Android
-
-## Intent Services Overview
 
 Both started and bound services run on the main thread, which means that to keep performance smooth, a service needs to perform the work asynchronously. One of the simplest ways to address this concern is with a _worker queue processor pattern_, where the work to be done is placed in a queue that is serviced by a single thread.
 
@@ -52,8 +50,7 @@ Work is sent to an `IntentService` by instantiating an `Intent` and then calling
 Intent downloadIntent = new Intent(this, typeof(DemoIntentService));
 
 // This is just one example of passing some values to an IntentService via the Intent:
-downloadIntent.Put
-("file_to_download", "http://www.somewhere.com/file/to/download.zip");
+downloadIntent.PutPutExtra("file_to_download", "http://www.somewhere.com/file/to/download.zip");
 
 StartService(downloadIntent);
 ```

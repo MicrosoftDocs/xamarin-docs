@@ -4,8 +4,8 @@ description: "This article provides an introduction to working with OpenTK in a 
 ms.prod: xamarin
 ms.assetid: BDE05645-7273-49D3-809B-8642347678D2
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -35,7 +35,7 @@ As stated above, OpenTK (The Open Toolkit) is an advanced, low-level C# library 
 
 OpenTK can be used for games, scientific applications or other projects that require 3D graphics, audio or computational functionality.
 
-For more information, please see [The Open Toolkit](http://www.opentk.com) website.
+For more information, please see [The Open Toolkit](https://opentk.net) website.
 
 <a name="OpenTK_Quickstart" />
 
@@ -324,6 +324,6 @@ This article has taken a quick look at working with OpenTK in a Xamarin.Mac appl
 - [MonoMacGameView (sample)](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow)
 - [Hello, Mac](~/mac/get-started/hello-mac.md)
 - [Working with Windows](~/mac/user-interface/window.md)
-- [The Open Toolkit](http://www.opentk.com)
+- [The Open Toolkit](https://opentk.net)
 - [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 - [Introduction to Windows](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/WinPanel/Introduction.html#//apple_ref/doc/uid/10000031-SW1)

@@ -3,8 +3,8 @@ title: "Unified API Overview"
 description: "Xamarin's Unified API makes it possible to share code between Mac and iOS and support 32 and 64-bit applications with the same binary."
 ms.prod: xamarin
 ms.assetid: 5F0CEC18-5EF6-4A99-9DCF-1A3B57EA157C
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/29/2017
 ---
 
@@ -15,13 +15,13 @@ and support 32 and 64-bit applications with the same binary. The Unified
 API is used by default in new Xamarin.iOS and Xamarin.Mac projects.
 
 > [!IMPORTANT]
-> The Xamarin Classic API, which preceded the Unified API, has been 
-> deprecated. 
+> The Xamarin Classic API, which preceded the Unified API, has been
+> deprecated.
 >
 > - The last version of Xamarin.iOS to support the Classic API
 >   (monotouch.dll) was Xamarin.iOS 9.10.
 > - Xamarin.Mac still supports the Classic API, but it is no longer
->   updated. Since it is deprecated, developers should move their 
+>   updated. Since it is deprecated, developers should move their
 >   applications to the Unified API.
 
 ## Updating Classic API-based Apps
@@ -46,7 +46,7 @@ From this point on, our APIs will be surfaced in two ways:
 - **Classic API:** Limited to 32-bits (only) and exposed in the `monotouch.dll` and `XamMac.dll` assemblies.
 - **Unified API:** Support both 32 and 64 bit development with a single API available in the `Xamarin.iOS.dll` and  `Xamarin.Mac.dll` assemblies.
 
-This means that for Enterprise developers (not targetting the App Store),
+This means that for Enterprise developers (not targeting the App Store),
 you can continue using the existing Classic APIs, as we will keep
 maintaining them forever, or you can upgrade to the new APIs.
 
@@ -376,17 +376,6 @@ Low Impact: In most cases this change won’t affect applications as
 Additional changes to be aware of are listed in the
   [tips for updating apps to the Unified API](~/cross-platform/macios/unified/updating-tips.md).
 
-## Sample Code
-
-As of July 31st, we have published ports of the iOS samples
-  to this new API on the `magic-types` branch
-  at [monotouch-samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
-
-For Mac, we are checking samples in both
-  the [mac-samples](https://github.com/xamarin/mac-samples)
-  repo (showing new APIs in Mavericks/Yosemite) as well as 32/64
-  bit samples in the magic-types
-  branch [mac-samples](https://github.com/xamarin/monotouch-samples/commits/magic-types).
 
 ## Related Links
 

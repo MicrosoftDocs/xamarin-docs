@@ -38,13 +38,15 @@ These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableP
 
 ## Create a ToolbarItem
 
-A `ToolbarItem` object can be instantiated in XAML. The `Text` and `IconImageSource` properties can be set to determine how the button is displayed in the navigation bar. The following example shows how to instantiate a `ToolbarItem` with some common properties set:
+A `ToolbarItem` object can be instantiated in XAML. The `Text` and `IconImageSource` properties can be set to determine how the button is displayed in the navigation bar. The following example shows how to instantiate a `ToolbarItem` with some common properties set, and add it to a `ContentPage`'s `ToolbarItems` collection:
 
 ```xaml
-<ToolbarItem Text="Example Item"
-             IconImageSource="example_icon.png"
-             Order="Primary"
-             Priority="0" />
+<ContentPage.ToolbarItems>
+    <ToolbarItem Text="Example Item"
+                 IconImageSource="example_icon.png"
+                 Order="Primary"
+                 Priority="0" />
+</ContentPage.ToolbarItems>
 ```
 
 This example will result in a `ToolbarItem` object that has text, an icon and appears first in the primary navigation bar area. A `ToolbarItem` can also be created in code and added to the `ToolbarItems` collection:
@@ -94,6 +96,12 @@ void OnItemClicked(object sender, EventArgs e)
 ```
 
 `ToolbarItem` objects can also use the `Command` and `CommandParameter` properties to react to user input without event handlers. For more information about the `ICommand` interface and MVVM data-binding, see [Xamarin.Forms MenuItem MVVM Behavior](~/xamarin-forms/user-interface/menuitem.md#define-menuitem-behavior-with-mvvm).
+
+## Enable or disable a ToolbarItem at runtime
+
+To enable of disable a `ToolbarItem` at runtime, bind its `Command` property to an `ICommand` implementation, and ensure that a `canExecute` delegate enables and disables the `ICommand` as appropriate.
+
+For more information, see [Enable or disable a MenuItem at runtime](menuitem.md#enable-or-disable-a-menuitem-at-runtime).
 
 ## Primary and secondary menus
 

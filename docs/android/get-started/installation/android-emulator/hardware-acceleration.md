@@ -5,8 +5,8 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/27/2018
 ---
 
@@ -47,9 +47,9 @@ accelerating the Android emulator:
 2. **Intel's Hardware Accelerated Execution Manager (HAXM)**.
    HAXM is a virtualization engine for computers running Intel CPUs.
 
-For the best experience on Windows, it is recommended that you use HAXM to
-accelerate the Android emulator. If HAXM is not available on your
-computer, then Windows Hypervisor Platform (WHPX) can be used. The Android emulator will
+For the best experience on Windows, it is recommended that you use WHPX to
+accelerate the Android emulator. If WHPX is not available on your
+computer, then HAXM can be used. The Android emulator will
 automatically make use of hardware acceleration if the following
 criteria are met:
 
@@ -72,7 +72,6 @@ emulator, see
 
 ## Accelerating with Hyper-V
 
-Hyper-V is the recommended choice for accelerating the Android emulator.
 Before enabling Hyper-V, read the following section to verify
 that your computer supports Hyper-V.
 
@@ -130,6 +129,12 @@ to accelerate the Android emulator with Hyper-V:
     [![Enabling Hyper-V and Windows Hypervisor Platform](hardware-acceleration-images/win/03-hyper-v-settings-w158-sml.png)](hardware-acceleration-images/win/03-hyper-v-settings-w158.png#lightbox)
 
    After making these changes, reboot your computer.
+   
+> [!IMPORTANT]
+>
+> On Windows 10 October 2018 Update (RS5) and higher, you
+> only need to enable Hyper-V, as it will use
+> Windows Hypervisor Platform (WHPX) automatically.
 
 2. **Install [Visual Studio 15.8 or later](https://visualstudio.microsoft.com/vs/)**
    (this version of Visual Studio provides IDE support for

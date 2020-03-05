@@ -4,8 +4,8 @@ description: "This walkthrough provides step-by-step instructions for creating a
 ms.prod: xamarin
 ms.assetid: 380413B8-6A99-4BB8-B64C-3EAF9F359C22
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/11/2018
 ---
 
@@ -29,7 +29,7 @@ in general (with a basic code example), see
 [Binding a Java Library](~/android/platform/binding-java-library/index.md).
 
 > [!IMPORTANT]
-> A binding project can only include one .AAR file. If the .AAR dependencies on other .AAR, then those dependencies should be contained in their own binding project and then referenced. See [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
+> A binding project can only include one .AAR file. If the .AAR depends on other .AAR, then those dependencies should be contained in their own binding project and then referenced. See [Bug 44573](https://bugzilla.xamarin.com/show_bug.cgi?id=44573).
 
 ## Walkthrough
 
@@ -347,7 +347,7 @@ it in our example app:
 
 Edit the **BindingTest** layout (**Main.axml**) and add an
 `ImageView` to the end of the `LinearLayout` container. This
-`ImageView` displays the image found at **@drawable/monkey**; this
+`ImageView` displays the image found at **\@drawable/monkey**; this
 image will be loaded from the resource section of
 **textanalyzer.aar**:
 

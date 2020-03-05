@@ -3,8 +3,8 @@ title: "Manually Signing the APK"
 ms.prod: xamarin
 ms.assetid: 08549E1C-7F04-4D20-9E7A-794B9D09FD12
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/16/2018
 ---
 
@@ -23,9 +23,9 @@ After the application has been built for release, the APK must be signed prior t
     a check at runtime, and will not allow the application to run if
     the APK has not been zipaligned.
 
-3. **Sign the APK** &ndash; This step involves using the **apksigner** utility from the Android SDK and signing the APK with the private key that was created in the previous step. Applications that are developed with older versions of the Android SDK build tools prior to v24.0.3 will use the **jarsigner** app from the JDK. Both of these tools will be discussed in more detail below. 
+3. **Sign the APK** &ndash; This step involves using the **apksigner** utility from the Android SDK and signing the APK with the private key that was created in the previous step. Applications that are developed with older versions of the Android SDK build tools prior to v24.0.3 will use the **jarsigner** app from the JDK. Both of these tools will be discussed in more detail below.
 
-The order of the steps is important and is dependent on which tool used to sign the APK. When using **apksigner**, it is important to first **zipalign** the application, and then to sign it with **apksigner**.  If it is necessary to use **jarsigner** to sign the APK, then it is important to first sign the APK and then run **zipalign**. 
+The order of the steps is important and is dependent on which tool used to sign the APK. When using **apksigner**, it is important to first **zipalign** the application, and then to sign it with **apksigner**.  If it is necessary to use **jarsigner** to sign the APK, then it is important to first sign the APK and then run **zipalign**.
 
 ## Prerequisites
 
@@ -34,12 +34,12 @@ tools, v24.0.3 or higher. It assumes that an APK has already been
 built.
 
 Applications that are built using an older version of the Android SDK
-Build Tools must use **jarsigner** as described in 
+Build Tools must use **jarsigner** as described in
 [Sign the APK with jarsigner](#Sign_the_APK_with_jarsigner) below.
 
 ## Create a Private Keystore
 
-A *keystore* is a database of security certificates that is created 
+A *keystore* is a database of security certificates that is created
 by using the program
 [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
 from the Java SDK. A keystore is critical to publishing a
@@ -160,7 +160,7 @@ See [Google's documentation](https://developer.android.com/studio/command-line/a
 > [!WARNING]
 > This section only applies if it is nececssary to sign the APK with the **jarsigner** utility. Developers are encouraged to use **apksigner** to sign the APK.
 
-This technique involves signing the APK file using the **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** command from the Java SDK.  The **jarsigner** tool is provided by the Java SDK. 
+This technique involves signing the APK file using the **[jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)** command from the Java SDK.  The **jarsigner** tool is provided by the Java SDK.
 
 The following shows how to sign an APK by using **jarsigner** and the key `publishingdoc` that is contained in a keystore file named **xample.keystore** :
 
@@ -174,7 +174,6 @@ $ jarsigner -verbose -sigalg SHA1withRSA -digestalg SHA1 -keystore xample.keysto
 ## Related Links
 
 - [Application Signing](https://source.android.com/security/apksigning/)
-- [Java JAR signing](https://docs.oracle.com/javase/8/docs/technotes~/jar/jar.html#Signed_JAR_File)
 - [jarsigner](https://docs.oracle.com/javase/8/docs/technotes/tools/windows/jarsigner.html)
 - [keytool](https://docs.oracle.com/javase/8/docs/technotes/tools/unix/keytool.html)
 - [zipalign](https://developer.android.com/studio/command-line/zipalign.html)

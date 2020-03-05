@@ -11,8 +11,6 @@ ms.date: 05/06/2019
 
 # Xamarin.Forms CollectionView Selection
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-collectionviewdemos/)
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties that control item selection:
@@ -35,6 +33,8 @@ By default, [`CollectionView`](xref:Xamarin.Forms.CollectionView) selection is d
 
 - `PreviousSelection` – the list of items that were selected, before the selection changed.
 - `CurrentSelection` – the list of items that are selected, after the selection change.
+
+In addition, [`CollectionView`](xref:Xamarin.Forms.CollectionView) has a `UpdateSelectedItems` method that updates the [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) property with a list of selected items, while only firing a single change notification.
 
 ## Single selection
 
@@ -253,7 +253,7 @@ Therefore, when the [`CollectionView`](xref:Xamarin.Forms.CollectionView) appear
 
 [![Screenshot of a CollectionView vertical list with multiple pre-selection, on iOS and Android](selection-images/multiple-pre-selection.png "CollectionView vertical list with multiple pre-selection")](selection-images/multiple-pre-selection-large.png#lightbox "CollectionView vertical list with multiple pre-selection")
 
-## Clearing selections
+## Clear selections
 
 The [`SelectedItem`](xref:Xamarin.Forms.SelectableItemsView.SelectedItem) and [`SelectedItems`](xref:Xamarin.Forms.SelectableItemsView.SelectedItems) properties can be cleared by setting them, or the objects they bind to, to `null`.
 

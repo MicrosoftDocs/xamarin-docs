@@ -4,8 +4,8 @@ description: "How to theme your Xamarin.Android app with Material Theme"
 ms.prod: xamarin
 ms.assetid: DC4CDBD0-3DF9-4B7E-B876-29128985E2A7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/01/2018
 ---
 
@@ -67,7 +67,7 @@ features in Xamarin-based apps:
    installed via the Android SDK Manager.
 
 - **Java JDK 1.8** &ndash; JDK 1.7 can be used if you are specifically 
-    targetting API level 23 and earlier. JDK 1.8 is available from 
+    targeting API level 23 and earlier. JDK 1.8 is available from 
    [Oracle](https://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html).
 
 To learn how to configure an Android 5.0 app project, 

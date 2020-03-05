@@ -5,8 +5,8 @@ ms.topic: quickstart
 ms.prod: xamarin
 ms.assetid: 37D0E9E6-979B-7069-B3BE-C5F0AF99BA72
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 09/02/2018
 ---
 
@@ -33,7 +33,7 @@ The following concepts will be covered:
 Xamarin.Mac application development requires:
 
 - A Mac computer running macOS High Sierra (10.13) or higher.
-- [Xcode 9 or higher](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
+- [Xcode 10 or higher](https://itunes.apple.com/us/app/xcode/id497799835?mt=12).
 - The latest version of [Xamarin.Mac and Visual Studio for Mac](https://docs.microsoft.com/visualstudio/mac/installation/).
 
 To run an application built with Xamarin.Mac, you will need:

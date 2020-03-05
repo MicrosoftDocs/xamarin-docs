@@ -6,14 +6,14 @@ ms.assetid: 3FC2FBD1-C30B-4408-97B2-B04E3A2E4F03
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/28/2019
+ms.date: 01/29/2020
 ---
 
 # Xamarin.Forms Shell Page Configuration
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
 
-The `Shell` class defines attached properties that can be used to configure the appearance of pages in Xamarin.Forms Shell applications. This includes setting page colors, disabling the navigation bar, disabling the tab bar, and displaying views in the navigation bar.
+The `Shell` class defines attached properties that can be used to configure the appearance of pages in Xamarin.Forms Shell applications. This includes setting page colors, setting the page presentation mode, disabling the navigation bar, disabling the tab bar, and displaying views in the navigation bar.
 
 ## Set page colors
 
@@ -25,7 +25,7 @@ The `Shell` class defines the following attached properties that can be used to 
 - `TitleColor`, of type `Color`, that defines the color used for the title of the current page.
 - `UnselectedColor`, of type `Color`, that defines the color used for unselected text and icons in the Shell chrome.
 
-All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that the properties can be targets of data bindings, and styled using XAML styles. In addition, the properties can be set using Cascading Style Sheets (CSS). For more information, see [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
+All of these properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which mean that the properties can be targets of data bindings, and styled using XAML styles. In addition, the properties can be set using Cascading Style Sheets (CSS). For more information, see [Xamarin.Forms Shell specific properties](~/xamarin-forms/user-interface/styles/css/index.md#xamarinforms-shell-specific-properties).
 
 > [!NOTE]
 > There are also properties that enable tab colors to be defined. For more information, see [Tab appearance](tabs.md#tab-appearance).
@@ -80,6 +80,45 @@ Alternatively, the color properties can be set with a XAML style:
 ```
 
 For more information about XAML styles, see [Styling Xamarin.Forms Apps using XAML Styles](~/xamarin-forms/user-interface/styles/xaml/index.md).
+
+## Set page presentation mode
+
+By default, a small navigation animation occurs when a page is navigated to with the `GoToAsync` method. However, this behavior can be changed by setting the `Shell.PresentationMode` attached property on a [`ContentPage`](xref:Xamarin.Forms.ContentPage) to one of the `PresentationMode` enumeration members:
+
+- `NotAnimated` indicates that the page will be displayed without a navigation animation.
+- `Animated` indicates that the page will be displayed with a navigation animation. This is the default value of the `Shell.PresentationMode` attached property.
+- `Modal` indicates that the page will be displayed as a modal page.
+- `ModalAnimated` indicates that the page will be displayed as a modal page, with a navigation animation.
+- `ModalNotAnimated` indicates that the page will be displayed as a modal page, without a navigation animation.
+
+> [!IMPORTANT]
+> The `PresentationMode` type is a flags enumeration. This means that a combination of enumeration members can be applied in code. However, for ease of use in XAML, the `ModalAnimated` member is a combination of the `Animated` and `Modal` members, and the `ModalNotAnimated` member is a combination of the `NotAnimated` and `Modal` members. For more information about flag enumerations, see [Enumeration types as bit flags](/dotnet/csharp/language-reference/builtin-types/enum#enumeration-types-as-bit-flags).
+
+The following XAML example sets the `Shell.PresentationMode` attached property on a [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.PresentationMode="Modal">
+    ...             
+</ContentPage>
+```
+
+In this example, the [`ContentPage`](xref:Xamarin.Forms.ContentPage) is set to be displayed as a modal page, when the page is navigated to with the `GoToAsync` method.
+
+## Enable navigation bar shadow
+
+The `Shell` class defines the `NavBarHasShadow` attached property, of type `bool`, that controls whether the navigation bar has a shadow. By default the value of the property is `false` on iOS, and `true` on Android.
+
+While this property can be set on a subclassed `Shell` object, it can also be set on any pages that want to enable the navigation bar shadow. For example, the following XAML shows enabling the navigation bar shadow from a [`ContentPage`](xref:Xamarin.Forms.ContentPage):
+
+```xaml
+<ContentPage ...
+             Shell.NavBarHasShadow="true">
+    ...
+</ContentPage>
+```
+
+This results in the navigation bar shadow being enabled.
 
 ## Disable the navigation bar
 
@@ -142,6 +181,10 @@ This results in an image being displayed in the navigation bar on the page:
 Many views won't appear in the navigation bar unless the size of the view is specified with the [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) properties, or the location of the view is specified with the [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties.
 
 Because the [`Layout`](xref:Xamarin.Forms.Layout) class derives from the [`View`](xref:Xamarin.Forms.View) class, the `TitleView` attached property can be set to display a layout class that contains multiple views. Similarly, because the [`ContentView`](xref:Xamarin.Forms.ContentView) class ultimately derives from the [`View`](xref:Xamarin.Forms.View) class, the `TitleView` attached property can be set to display a `ContentView` that contains a single view.
+
+## Page visibility
+
+Shell respects page visibility, set with the [`IsVisible`](xref:Xamarin.Forms.VisualElement.IsVisible) property. Therefore, when a page's `IsVisible` property is set to `false` it won't be visible in the Shell application and it won't be possible to navigate to it.
 
 ## Related links
 

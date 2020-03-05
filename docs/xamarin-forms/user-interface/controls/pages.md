@@ -64,7 +64,7 @@ Xamarin.Forms supports the following page types:
 
 |     |     |
 | --- | --- |
-| [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage) displays full-screen content with a control template, and is the base class for [`ContentPage`](#contentPage).<br /><br />[API Documentation](xref:Xamarin.Forms.TemplatedPage) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md) | [![TemplatedPage Example](pages-images/TemplatedPage.png "TemplatedPage Example")](pages-images/TemplatedPage.png "TemplatedPage Example") |
+| [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage) displays full-screen content with a control template, and is the base class for [`ContentPage`](#contentPage).<br /><br />[API Documentation](xref:Xamarin.Forms.TemplatedPage) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedPage Example](pages-images/TemplatedPage.png "TemplatedPage Example")](pages-images/TemplatedPage.png "TemplatedPage Example") |
 |     |     |
 
 ## Related Links

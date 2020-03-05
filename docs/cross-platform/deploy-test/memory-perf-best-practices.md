@@ -3,8 +3,8 @@ title: "Cross-Platform Performance"
 description: "This document describes various techniques that can be used to improve the performance of a mobile application. It discusses the Profiler, IDisposable resource, weak references, the SGen garbage collector, size reduction techniques, and more."
 ms.prod: xamarin
 ms.assetid: 9ce61f18-22ac-4b93-91be-5b499677d661
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/24/2017
 ---
 
@@ -329,7 +329,7 @@ The following steps can be used to further reduce the application executable siz
 
 Android apps can also be split into a separate APK for each ABI ("architecture").
 Learn more in this blog post:
-[How To Keep Your Android App Size Down](http://motzcod.es/post/112072508362/how-to-keep-your-android-app-size-down).
+[How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/).
 
 <a name="optimizeimages" />
 

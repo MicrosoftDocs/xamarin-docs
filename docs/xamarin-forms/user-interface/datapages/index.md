@@ -35,15 +35,15 @@ and easily consume a supported data source and render it using built-in
 UI scaffolding that can be customized with themes.
 
 DataPages are added to a Xamarin.Forms application by including
-the **Xamarin.Forms.Pages** Nuget package.
+the **Xamarin.Forms.Pages** NuGet package.
 
 ### Data Sources
 
 The Preview has some prebuilt data sources available for use:
 
 * **JsonDataSource**
-* **AzureDataSource** (separate Nuget)
-* **AzureEasyTableDataSource** (separate Nuget)
+* **AzureDataSource** (separate NuGet)
+* **AzureEasyTableDataSource** (separate NuGet)
 
 See the [getting started guide](get-started.md) for an example
 using a `JsonDataSource`.

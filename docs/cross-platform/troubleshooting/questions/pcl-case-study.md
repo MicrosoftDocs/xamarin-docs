@@ -4,8 +4,8 @@ description: "PCL case study: How can I resolve problems related to System.Diagn
 ms.prod: xamarin
 ms.assetid: 7986A556-382D-4D00-ACCF-3589B4029DE8
 ms.date: 04/17/2018
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ---
 # PCL case study: How can I resolve problems related to System.Diagnostics.Tracing for the Microsoft TPL Dataflow NuGet package?
 

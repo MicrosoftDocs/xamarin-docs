@@ -4,8 +4,8 @@ description: "Documents in this section cover features specific to Android. Here
 ms.prod: xamarin
 ms.assetid: DDE54082-6E2B-9ED9-05FB-D9C1D1B1258E
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/21/2018
 ---
 
@@ -148,6 +148,10 @@ interpretation of the text spoken to the device.
 
 This guide explains how to incorporate Java libraries into
 Xamarin.Android apps by creating a Bindings Library.
+
+## [Bind a Kotlin Library](binding-kotlin-library/index.md)
+
+This guide explains how to create C# bindings to Kotlin code, making it possible to consume native libraries in a Xamarin.Android application.
 
 ## [Java Integration](java-integration/index.md)
 

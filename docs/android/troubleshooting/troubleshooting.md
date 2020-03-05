@@ -4,8 +4,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 56137ACA-4811-B312-6860-E16D0FA123F7
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/15/2018
 ---
 
@@ -511,7 +511,7 @@ If so, there are two possible causes for this:
     For example, the .apk only contains armeabi-v7a binaries, and the
     target device only supports armeabi.
 
-2. An [Android bug](http://code.google.com/p/android/issues/detail?id=21670). If
+2. An [Android bug](https://code.google.com/p/android/issues/detail?id=21670). If
     this is the case, uninstall the app, cross your fingers, and
     reinstall the app.
 
@@ -828,9 +828,7 @@ the following:
 
 ```shell
 Assertion: should not be reached at /Users/.../external/mono/mono/mini/tramp-x86.c:124
-Fatal signal 6 (SIGABRT), code -6 in tid 4051 (amarin.bug56111)
+Fatal signal 6 (SIGABRT), code -6 in tid 4051 (Xamarin.bug56111)
 ```
 
-This is a known issue as reported in
-[56111](https://bugzilla.xamarin.com/show_bug.cgi?id=56111). The
-workaround is to disable LLVM.
+This is a known issue – the workaround is to disable LLVM.

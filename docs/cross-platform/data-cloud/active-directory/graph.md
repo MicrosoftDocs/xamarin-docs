@@ -3,8 +3,8 @@ title: "Accessing the Graph API"
 description: "This document describes how to add Azure Active Directory authentication to a mobile application built with Xamarin."
 ms.prod: xamarin
 ms.assetid: F94A9FF4-068E-4B71-81FE-46920745380D
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/23/2017
 ---
 

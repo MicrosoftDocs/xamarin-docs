@@ -6,12 +6,12 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/22/2019
+ms.date: 01/15/2020
 ---
 
 # iOS platform features in Xamarin.Forms
 
-Developing Xamarin.Forms applications for iOS requires Visual Studio. The [requirements page](~/get-started/requirements.md) contains more information about the pre-requisites.
+Developing Xamarin.Forms applications for iOS requires Visual Studio. The [supported platforms page](~/get-started/supported-platforms.md) contains more information about the pre-requisites.
 
 ## Platform-specifics
 
@@ -22,10 +22,12 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 - Blur support for any [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Blur on iOS](visualelement-blur.md).
 - Disabling legacy color mode on a supported [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Legacy Color Mode on iOS](legacy-color-mode.md).
 - Enabling a drop shadow on a [`VisualElement`](xref:Xamarin.Forms.VisualElement). For more information, see [VisualElement Drop Shadows on iOS](visualelement-drop-shadow.md).
+- Enabling a [`VisualElement`](xref:Xamarin.Forms.VisualElement) object to become the first responder to touch events. For more information, see [VisualElement First Responder](visualelement-first-responder.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms views on iOS:
 
 - Setting the [`Cell`](xref:Xamarin.Forms.Cell) background color. For more information, see [Cell Background Color on iOS](cell-background-color.md).
+- Controlling when item selection occurs in a [`DatePicker`](xref:Xamarin.Forms.DatePicker). For more information, see [DatePicker Item Selection on iOS](datepicker-selection.md).
 - Ensuring that inputted text fits into an [`Entry`](xref:Xamarin.Forms.Entry) by adjusting the font size. For more information, see [Entry Font Size on iOS](entry-font-size.md).
 - Setting the cursor color in a [`Entry`](xref:Xamarin.Forms.Entry). For more information, see [Entry Cursor Color on iOS](entry-cursor-color.md).
 - Controlling whether [`ListView`](xref:Xamarin.Forms.ListView) header cells float during scrolling. For more information, see [ListView Group Header Style on iOS](listview-group-header-style.md).
@@ -33,6 +35,8 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 - Setting the separator style on a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [ListView Separator Style on iOS](listview-separator-style.md).
 - Controlling when item selection occurs in a [`Picker`](xref:Xamarin.Forms.Picker). For more information, see [Picker Item Selection on iOS](picker-selection.md).
 - Enabling the [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) property to be set by tapping on a position on the [`Slider`](xref:Xamarin.Forms.Slider) bar, rather than by having to drag the `Slider` thumb. For more information, see [Slider Thumb Tap on iOS](slider-thumb.md).
+- Controlling the transition that's used when opening a `SwipeView`. For more information, see [SwipeView Swipe Transition Mode](swipeview-swipetransitionmode.md).
+- Controlling when item selection occurs in a [`TimePicker`](xref:Xamarin.Forms.TimePicker). For more information, see [TimePicker Item Selection on iOS](timepicker-selection.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms pages on iOS:
 
@@ -43,7 +47,8 @@ The following platform-specific functionality is provided for Xamarin.Forms page
 - Setting the visibility of the home indicator on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Home Indicator Visibility on iOS](page-home-indicator.md).
 - Setting the status bar visibility on a [`Page`](xref:Xamarin.Forms.Page). For more information, see [Page Status Bar Visibility on iOS](page-status-bar-visibility.md).
 - Ensuring that page content is positioned on an area of the screen that is safe for all iOS devices. For more information, see [Safe Area Layout Guide on iOS](page-safe-area-layout.md).
-- Setting the presentation style of modal pages on an iPad. For more information, see [iPad Modal Page Presentation Style](ipad-page-presentation-style.md).
+- Setting the presentation style of modal pages. For more information, see [Modal Page Presentation Style](page-presentation-style.md).
+- Setting the translucency mode of the tab bar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage). For more information, see [TabbedPage Translucent TabBar on iOS](tabbedpage-translucent-tabbar.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms layouts on iOS:
 

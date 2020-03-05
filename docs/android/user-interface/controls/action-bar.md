@@ -3,8 +3,8 @@ title: "ActionBar for Xamarin.Android"
 ms.prod: xamarin
 ms.assetid: 84A79F1F-9E73-4E3E-80FA-B72E5686900B
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -183,5 +183,3 @@ article contains the full source of this example, illustrating its use.
 
 - [Hello Tabs ICS (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/hellotabsics)
 - [ShareActionProvider Demo (sample)](https://docs.microsoft.com/samples/xamarin/monodroid-samples/shareactionproviderdemo)
-- [Introducing Ice Cream Sandwich](http://www.android.com/about/ice-cream-sandwich/)
-- [Android 4.0 Platform](https://developer.android.com/sdk/android-4.0.html)

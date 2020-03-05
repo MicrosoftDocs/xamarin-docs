@@ -4,8 +4,8 @@ description: "This document describes how to work with watchOS notifications in 
 ms.prod: xamarin
 ms.assetid: 0BC1306E-0713-4592-996E-7530CCF281E7
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -81,11 +81,10 @@ The dynamic view can display more data and provide
 
 ## Generating Notifications
 
-Notifications can come from a remote server ([Apple Push Notifications Service](https://developer.apple.com/library/ios/documentation/NetworkingInternet/Conceptual/RemoteNotificationsPG/Chapters/ApplePushService.html), or APNS)
-  or can be generated locally in the iOS app.
+Notifications can come from a remote server or can be generated locally in the iOS app.
 
 Refer to the [iOS Notifications walkthrough](~/ios/platform/user-notifications/deprecated/local-notifications-in-ios-walkthrough.md) for an example of how to generate
-  local notifications, and the [WatchNotifications sample](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications) for a working example.
+  local notifications.
 
 Local notifications must have the `AlertTitle` set to be displayed on the Apple Watch -
   the `AlertTitle` string is displayed in the Short-Look interface. Both the `AlertTitle`
@@ -93,7 +92,7 @@ Local notifications must have the `AlertTitle` set to be displayed on the Apple 
   in the Long-Look interface.
 
 This screenshot shows the `AlertTitle` being displayed in the notifications list, and the
-  `AlertBody` displayed in the Long-Look interface (using the [sample code](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)):
+  `AlertBody` displayed in the Long-Look interface:
 
 ![](notifications-images/watch-notificationslist-sml.png "This screenshot shows the AlertTitle being displayed in the notifications list") ![](notifications-images/watch-notificationcontroller-sml.png "The AlertBody displayed in the Long-Look interface")
 
@@ -197,6 +196,5 @@ In the [Watch Kit Catalog](https://docs.microsoft.com/samples/xamarin/ios-sample
 
 ## Related Links
 
-- [WatchNotifications (local notifications) (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchkit-watchnotifications)
 - [WatchKitCatalog (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/watchos-watchkitcatalog)
 - [Apple's Watch Kit Notifications docs](https://developer.apple.com/library/ios/documentation/General/Conceptual/WatchKitProgrammingGuide/BasicSupport.html)

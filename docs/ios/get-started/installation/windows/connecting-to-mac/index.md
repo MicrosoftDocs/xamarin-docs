@@ -4,8 +4,8 @@ description: "This guide describes how to use Pair to Mac to connect Visual Stud
 ms.prod: xamarin
 ms.assetid: 39DD7B3F-3E69-4E2A-B743-4C26AF613025
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/29/2018
 ---
 
@@ -106,7 +106,7 @@ Now that remote login is enabled, connect Visual Studio 2019 to the Mac.
 
 4. Enter your username and password.
 
-    - The first time you connect to any paticular Mac, you are
+    - The first time you connect to any particular Mac, you are
       prompted to enter your username and password for that machine:
 
       ![Entering a username and password for the Mac](images/auth.png "Entering a username and password for the Mac")
@@ -216,7 +216,7 @@ tools (but not Xcode itself).
 > - Automatic Mac provisioning requires 3GB of free space on the Mac to install Xamarin.iOS.
 
 Pair to Mac performs necessary software installations/updates when Visual
-Studio 2017 is [connecting to the
+Studio 2019 is [connecting to the
 Mac](#connect-to-the-mac-from-visual-studio-2019).
 
 ### Mono
@@ -285,7 +285,7 @@ The installation of these packages happens quickly and without a prompt.
 
 If you encounter any trouble using automatic Mac provisioning, take a look
 at the Visual Studio 2019 IDE logs, stored in
-**%LOCALAPPDATA%\Xamarin\Logs\15.0**. These logs may contain error messages
+**%LOCALAPPDATA%\Xamarin\Logs\16.0**. These logs may contain error messages
 to help you better diagnose the failure or get support.
 
 ## Build iOS apps from the Windows command-line
@@ -306,7 +306,7 @@ The parameters passed to `msbuild` in the above example are:
 
 > [!NOTE]
 > Visual Studio 2019 stores `msbuild` in the following directory:
-> **C:\Program Files (x86)\Microsoft Visual Studio\2017\\&lt;Version&gt;\MSBuild\15.0\Bin**
+> **C:\Program Files (x86)\Microsoft Visual Studio\2019\\&lt;Version&gt;\MSBuild\Current\Bin**
 
 The first time Pair to Mac logs in to a particular Mac build host from
 either Visual Studio 2019 or the command-line, it sets up SSH keys. With these

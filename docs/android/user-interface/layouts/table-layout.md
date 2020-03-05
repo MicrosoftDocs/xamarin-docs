@@ -3,8 +3,8 @@ title: "Xamarin.Android TableLayout"
 ms.prod: xamarin
 ms.assetid: 0C7B9C95-5E5F-A069-BA37-984E49F7DCAD
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -143,4 +143,4 @@ Run the application. You should see the following:
 
 _Portions of this page are modifications based on work created and shared by the
 Android Open Source Project and used according to terms described in the
-[Creative Commons 2.5 Attribution License](http://creativecommons.org/licenses/by/2.5/)._
+[Creative Commons 2.5 Attribution License](https://creativecommons.org/licenses/by/2.5/)._

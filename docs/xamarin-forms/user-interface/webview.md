@@ -6,14 +6,14 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/19/2019
+ms.date: 11/04/2019
 ---
 
 # Xamarin.Forms WebView
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 
-[`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app. Unlike `OpenUri`, which takes the user to the web browser on the device, `WebView` displays the HTML content inside your app.
+[`WebView`](xref:Xamarin.Forms.WebView) is a view for displaying web and HTML content in your app:
 
 ![In App Browser](webview-images/in-app-browser.png)
 
@@ -102,7 +102,7 @@ browser.Source = htmlSource;
 
 ![WebView Displaying HTML String](webview-images/html-string.png)
 
-In the above code, `@` is used to mark the HTML as a string literal, meaning all the usual escape characters are ignored.
+In the above code, `@` is used to mark the HTML as a [verbatim string literal](/dotnet/csharp/programming-guide/strings/#regular-and-verbatim-string-literals), meaning most escape characters are ignored.
 
 > [!NOTE]
 > It may be necessary to set the `WidthRequest` and `HeightRequest` properties of the [`WebView`](xref:Xamarin.Forms.WebView) to see the HTML content, depending upon the layout the `WebView` is a child of. For example, this is required in a [`StackLayout`](xref:Xamarin.Forms.StackLayout).
@@ -117,7 +117,7 @@ WebView can display content from HTML, CSS and Javascript embedded within the ap
     <title>Xamarin Forms</title>
   </head>
   <body>
-    <h1>Xamrin.Forms</h1>
+    <h1>Xamarin.Forms</h1>
     <p>This is an iOS web page.</p>
     <img src="XamarinLogo.png" />
   </body>
@@ -398,15 +398,17 @@ When the `Reload` method is invoked the `ReloadRequested` event is fired, indica
 
 ## Performance
 
-The popular web browsers now adopt technologies like hardware accelerated rendering and JavaScript compilation. On iOS, by default, the Xamarin.Forms `WebView` is implemented by the `UIWebView` class, and many of these technologies are unavailable in this implementation. However, an application can opt-in to using the iOS `WkWebView` class to implement the Xamarin.Forms `WebView`, which supports faster browsing. This can be achieved by adding the following code to the **AssemblyInfo.cs** file in the iOS platform project for the application:
-
-```csharp
-// Opt-in to using WkWebView instead of UIWebView.
-[assembly: ExportRenderer(typeof(WebView), typeof(Xamarin.Forms.Platform.iOS.WkWebViewRenderer))]
-```
+Popular web browsers adopt technologies like hardware accelerated rendering and JavaScript compilation. Prior to Xamarin.Forms 4.4, the Xamarin.Forms `WebView` was implemented on iOS by the `UIWebView` class. However, many of these technologies were unavailable in this implementation. Therefore, since Xamarin.Forms 4.4, the Xamarin.Forms `WebView` is implemented on iOS by the `WkWebView` class, which supports faster browsing.
 
 > [!NOTE]
 > On iOS, the `WkWebViewRenderer` has a constructor overload that accepts a `WkWebViewConfiguration` argument. This enables the renderer to be configured on creation.
+
+An application can return to using the iOS `UIWebView` class to implement the Xamarin.Forms `WebView`, for compatibility reasons. This can be achieved by adding the following code to the **AssemblyInfo.cs** file in the iOS platform project for the application:
+
+```csharp
+// Opt-in to using UIWebView instead of WkWebView.
+[assembly: ExportRenderer(typeof(Xamarin.Forms.WebView), typeof(Xamarin.Forms.Platform.iOS.WebViewRenderer))]
+```
 
 `WebView` on Android by default is about as fast as the built-in browser.
 
@@ -511,6 +513,50 @@ function factorial(num) {
 </body>
 </html>
 ```
+
+## UIWebView Deprecation and App Store Rejection (ITMS-90809)
+
+Starting in April 2020, [Apple will reject apps](https://developer.apple.com/news/?id=12232019b) that still use the deprecated `UIWebView` API. While Xamarin.Forms has switched to `WKWebView` as the default, there is still a reference to the older SDK in the Xamarin.Forms binaries. Current [iOS linker](~/ios/deploy-test/linker.md) behavior does not remove this, and as a result the deprecated `UIWebView` API will still appear to be referenced from your app when you submit to the App Store.
+
+A preview version of the linker is available to fix this issue. To enable the preview, you will need to supply an additional argument `--optimize=experimental-xforms-product-type` to the linker. 
+
+The prerequisites for this to work are:
+
+- **Xamarin.Forms 4.5 or higher** &ndash; Pre-release versions of Xamarin.Forms 4.5 can be used.
+- **Xamarin.iOS 13.10.0.17 or higher** &ndash; Check your Xamarin.iOS version [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). This version of Xamarin.iOS is included with Visual Studio for Mac 8.4.1 and Visual Studio 16.4.3.
+- **Remove references to `UIWebView`** &ndash; Your code should not have any references to `UIWebView` or any classes that make use of `UIWebView`.
+
+### Configure the linker preview
+
+# [Visual Studio](#tab/windows)
+
+Follow these steps for the linker to remove `UIWebView` references:
+
+1. **Open iOS project properties** &ndash; Right-click your iOS project and choose **Properties**.
+1. **Navigate to the iOS Build section** &ndash; Select the **iOS Build** section.
+1. **Update the Additional mtouch arguments** &ndash; In the **Additional mtouch arguments** add this flag `--optimize=experimental-xforms-product-type` (in addition to any value that might already be in there). Note: this flag works together with the **Linker Behavior** set to **SDK Only** or **Link All**. If, for any reason, you see errors when setting the Linker Behavior to All, this is most likely a problem within the app code or a third-party library that is not linker safe. For more information on the linker, see [Linking Xamarin.iOS Apps](~/ios/deploy-test/linker.md).
+1. **Update all build configurations** &ndash; Use the **Configuration** and **Platform** lists at the top of the window to update all build configurations. The most important configuration to update is the **Release/iPhone** configuration, since that is typically used to create builds for App Store submission.
+
+You can see the window with the new flag in place in this screenshot:
+
+[![Setting the flag in the iOS Build section](webview-images/iosbuildblade-vs-sml.png)](webview-images/iosbuildblade-vs.png#lightbox)
+
+# [Visual Studio for Mac](#tab/macos)
+
+Follow these steps for the linker to remove `UIWebView` references
+
+1. **Open iOS project options** &ndash; Right-click your iOS project and choose **Options**.
+1. **Navigate to the iOS Build section** &ndash; Select the **iOS Build** section.
+1. **Update the Additional _mtouch_ arguments** &ndash; In the **Additional _mtouch_ arguments** add this flag `--optimize=experimental-xforms-product-type` (in addition to any value that might already be in there). Note: this flag works together with the **Linker Behavior** set to **SDK Only** or **Link All**. If, for any reason, you see errors when setting the Linker Behavior to All, this is most likely a problem within the app code or a third-party library that is not linker safe. For more information on the linker, see [Linking Xamarin.iOS Apps](~/ios/deploy-test/linker.md).
+1. **Update all build configurations** &ndash; Use the **Configuration** and **Platform** lists at the top of the window to update all build configurations. The most important configuration to update is the **Release/iPhone** configuration, since that is typically used to create builds for App Store submission.
+
+You can see the window with the new flag in place in this screenshot:
+
+[![Setting the flag in the iOS Build section](webview-images/iosbuildblade-xs-sml.png)](webview-images/iosbuildblade-xs.png#lightbox)
+
+-----
+
+Now when you create a new (release) build and submit it to the App Store, there should be no warnings about the deprecated API.
 
 ## Related Links
 

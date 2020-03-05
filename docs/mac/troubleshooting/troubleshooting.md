@@ -5,8 +5,8 @@ ms.topic: troubleshooting
 ms.prod: xamarin
 ms.assetid: 5CBC6822-BCD7-4DAD-8468-6511250D41C4
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -107,7 +107,7 @@ Enter `Entitlements` for the name and click the **New** button. If your project 
 
 ## Community support on the forums
 
-The community of developers using Xamarin products is amazing and many visit our [Xamarin.Mac forums](http://forums.xamarin.com/categories/mac) to share experiences and their expertise. In addition, Xamarin engineers periodically visit the forum to help.
+The community of developers using Xamarin products is amazing and many visit our [Xamarin.Mac forums](https://forums.xamarin.com/categories/xamarin-mac) to share experiences and their expertise. In addition, Xamarin engineers periodically visit the forum to help.
 
 <a name="filing-a-bug"/>
 

@@ -4,8 +4,8 @@ description: "This document describes accessibility in iOS, discussing various p
 ms.prod: xamarin
 ms.assetid: 88D59B36-05A3-4356-AE29-EC2B69CE7162
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 05/18/2016
 ---
 
@@ -169,4 +169,4 @@ accessibility settings.
 
 - [Cross-platform Accessibility](~/cross-platform/app-fundamentals/accessibility.md)
 - [iOS Accessibility (Apple)](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/iPhoneAccessibility/Accessibility_on_iPhone/Accessibility_on_iPhone.html)
-- [iOS VoiceOver](http://www.apple.com/accessibility/ios/voiceover/)
+- [iOS VoiceOver](https://www.apple.com/accessibility/ios/voiceover/)

@@ -11,8 +11,6 @@ ms.date: 07/24/2019
 
 # Xamarin.Forms CollectionView
 
-![](~/media/shared/preview.png "This API is currently pre-release")
-
 ## [Introduction](introduction.md)
 
 The [`CollectionView`](xref:Xamarin.Forms.CollectionView) is a flexible and performant view for presenting lists of data using different layout specifications.

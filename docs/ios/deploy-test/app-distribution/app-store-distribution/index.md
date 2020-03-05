@@ -4,8 +4,8 @@ description: "This document describes how to distribute a Xamarin.iOS applicatio
 ms.prod: xamarin
 ms.assetid: B07E2C1F-A6DF-43CB-BFB0-0252A5558467
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 08/23/2017
 ---
 
@@ -18,6 +18,9 @@ Once a Xamarin.iOS app has been developed, the next step in the software develop
 > starting in March 2019, all apps and updates submitted to the App Store
 > must have been built with the iOS 12.1 SDK or later, included in Xcode 10.1 or later.
 > Apps should also support the iPhone XS and 12.9" iPad Pro screen sizes.
+
+> [!IMPORTANT]
+> If you are looking for resources in regard to the `UIWebView` deprecation warning (ITMS-90809) while using Xamarin.Forms, please refer to the [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) documentation.
 
 Distributing an application – just as with developing an application – requires that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. They also contain information about what devices the app can be deployed to for the non-App Store distribution.
 
@@ -85,7 +88,7 @@ As with any other Provisioning Profile you create, an App ID is required to iden
 3. The App prefix should be already set as your Team ID, and cannot be changed. Select either an Explicit or Wildcard App ID, and enter a Bundle ID in a reverse DNS format like:
     - **Explicit**: com.[DomainName].[AppName]
     - **Wildcard**:com.[DomainName].*
-4. Select any [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#appservices) that the app requires.
+4. Select any [App Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) that the app requires.
 5. Click the **Continue** button and following the on screen instructions to create the new App ID.
 
 ### Creating a Provisioning Profile

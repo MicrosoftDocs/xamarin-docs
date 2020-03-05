@@ -4,8 +4,8 @@ description: "The Java ecosystem includes a diverse and immense collection of co
 ms.prod: xamarin
 ms.assetid: 7B5B8695-1C49-19BF-AE99-948CDCBD2A20
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 01/18/2017
 ---
 
@@ -74,4 +74,4 @@ callable wrappers, and discussed options for porting Java code to C#.
 - [Binding a Java Library](~/android/platform/binding-java-library/index.md)
 - [Working with JNI](~/android/platform/java-integration/working-with-jni.md)
 - [Sharpen](https://github.com/slluis/sharpen)
-- [Java Native Interface](http://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)
+- [Java Native Interface](https://docs.oracle.com/javase/7/docs/technotes~/jni/index.html)

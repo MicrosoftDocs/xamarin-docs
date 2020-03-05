@@ -4,8 +4,8 @@ description: "An example app that demonstrates how to use RecyclerView."
 ms.prod: xamarin
 ms.assetid: A50520D2-1214-40E1-9B27-B0891FE11584
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 07/30/2018
 ---
 

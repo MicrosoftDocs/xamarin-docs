@@ -4,6 +4,7 @@ description: "This article examines the fundamentals of application development 
 zone_pivot_groups: platform
 ms.topic: quickstart
 ms.prod: xamarin
+ms.custom: video
 ms.assetid: 7B2340A1-6883-41D8-860C-0BB6C4E0C316
 ms.technology: xamarin-forms
 author: davidbritch
@@ -377,7 +378,7 @@ For more information about hierarchical navigation, see [Hierarchical Navigation
 
 Data binding is used to simplify how a Xamarin.Forms application displays and interacts with its data. It establishes a connection between the user interface and the underlying application. The [`BindableObject`](xref:Xamarin.Forms.BindableObject) class contains much of the infrastructure to support data binding.
 
-Data binding connects two objects, called the *source* and the *target*. The *source* object provides the data. The *target* object will consume (and often display) data from the source object. For example, an [`Editor`](xref:Xamarin.Forms.Editor) (*target* object) will commonly bind its [`Text`](xref:Xamarin.Forms.Editor.Text) property to a public `string` property in a *source* object. The following diagram illustrates the binding relationship:
+Data binding connects two objects, called the *source* and the *target*. The *source* object provides the data. The *target* object will consume (and often display) data from the source object. For example, an [`Editor`](xref:Xamarin.Forms.Editor) (*target* object) will commonly bind its [`Text`](xref:Xamarin.Forms.InputView.Text) property to a public `string` property in a *source* object. The following diagram illustrates the binding relationship:
 
 ![](deepdive-images/data-binding.png "Data Binding")
 
@@ -426,7 +427,7 @@ The [`Editor`](xref:Xamarin.Forms.Editor) in `NoteEntryPage` then binds to the `
         ... />
 ```
 
-A binding between the [`Editor.Text`](xref:Xamarin.Forms.Editor.Text) property and the `Text` property of the *source* object is established. Changes made in the `Editor` will automatically be propagated to the `Note` object. Similarly, if changes are made to the `Note.Text` property, the Xamarin.Forms binding engine will also update the contents of the `Editor`. This is known as a *two-way binding*.
+A binding between the [`Editor.Text`](xref:Xamarin.Forms.InputView.Text) property and the `Text` property of the *source* object is established. Changes made in the `Editor` will automatically be propagated to the `Note` object. Similarly, if changes are made to the `Note.Text` property, the Xamarin.Forms binding engine will also update the contents of the `Editor`. This is known as a *two-way binding*.
 
 For more information about data binding, see [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md).
 
@@ -535,3 +536,9 @@ Alternatively, [_Creating Mobile Apps with Xamarin.Forms_](~/xamarin-forms/creat
 - [Getting Started Samples](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Forms%20get%20started)
 - [Xamarin.Forms API reference](xref:Xamarin.Forms)
 - [Free Self-Guided Learning (video)](https://university.xamarin.com/self-guided/)
+
+## Related video
+
+> [!Video https://channel9.msdn.com/Series/Xamarin-101/Xamarin-Solution-Architecture-4-of-11/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

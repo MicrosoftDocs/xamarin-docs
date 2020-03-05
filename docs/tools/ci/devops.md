@@ -1,8 +1,8 @@
 ---
 title: "DevOps with Xamarin"
 ms.assetid: ff978cc2-5a25-46d6-921b-e51adaa65992
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 manager: crdun
 ms.workload:
   - "xamarin"
@@ -20,7 +20,7 @@ The following tables identify which DevOps features in Visual Studio you can exp
 
 ## Agile tools
 
-Reference link: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/overview?view=vsts)**
+Reference link: **[About Agile tools and Agile project management](/azure/devops/boards/backlogs/backlogs-overview?view=azure-devops)**
 
 General Comment: all planning and tracking features are independent of project type and coding languages.
 

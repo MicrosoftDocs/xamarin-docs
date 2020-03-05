@@ -4,8 +4,8 @@ description: "This document describes minor changes and enhancements to existing
 ms.prod: xamarin
 ms.assetid: CA701269-D11E-4DE3-89C1-58EF8993A482
 ms.technology: xamarin-mac
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/14/2017
 ---
 
@@ -96,7 +96,7 @@ For more information, please see Apple's [Foundation Release Notes for OS X v10.
 
 The following enhancement have been made to the GameKit Framework for macOS Sierra:
 
-- The **Game Center App** has been deprecated and removed from macOS. If the app uses GameKit, it _must_ present its own interface to display GameKit features such as leaderboards, etc. 
+- The **Game Center App** has been deprecated and removed from macOS. If the app uses GameKit, it _must_ present its own interface to display GameKit features such as leaderboards, etc.
 - A new iCloud-only account type has been implemented by the [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) class.
 - The new [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) class provides a generalized solution for managing persistent data storage on Game Center. `GKGameSession` maintains a list of players and the app is responsible form implementing how and when participant date is stored, retrieved or exchanged between players. In many instances Game Sessions can replace existing turn-based matches, real-time matches or persistent game save methods.
 
@@ -164,7 +164,7 @@ The following enhancement have been made to the SceneKit Framework for macOS Sie
 - SceneKit interprets color component values in a linear RGB color space for all shader types.
 - Since SceneKit reads and adjust for color profile information in texture images, use Asset Catalogs for all images to ensure this information is provided.
 - Both linear color space rendering and wide-color can be disabled by specifying the `SCNDisableLinearSpaceRendering` and `SCNDisableWideGamut` keys in the app's `Info.plist`.
-- Build arbitrary polygon primates (either loaded from files or generated programmatically) to specify geometry with the new [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/reference/scenekit/1772322-scenekit_enumerations/scngeometryprimitivetype/scngeometryprimitivetypepolygon) class.
+- Build arbitrary polygon primates (either loaded from files or generated programmatically) to specify geometry with the new [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon?language=objc) class.
 
 <a name="Security-Framework-Enhancements" />
 

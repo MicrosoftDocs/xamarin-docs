@@ -4,8 +4,8 @@ description: "This document describes how to deploy watchOS apps built with Xama
 ms.prod: xamarin
 ms.assetid: DBE16040-70D2-4F61-B5F3-C8D213DBC754
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/17/2017
 ---
 
@@ -211,9 +211,8 @@ Ensure you have the latest version of Visual Studio for Mac, and that your
 > [!IMPORTANT]
 > There is a known bug in Visual Studio for Mac's Watch icon support: it expects an 88x88 pixel image for the **29x29@3x** image (which should be 87x87 pixels).
 
-You
-cannot fix this in Visual Studio for Mac - either edit the image asset in Xcode or manually
-edit the **Contents.json** file (to match [this sample](https://github.com/xamarin/monotouch-samples/blob/master/WatchKit/WatchKitCatalog/WatchApp/Resources/Images.xcassets/AppIcons.appiconset/Contents.json#L126-L132)).
+You cannot fix this in Visual Studio for Mac - either edit the image asset in Xcode or manually
+edit the **Contents.json** file.
 
 ### Invalid WatchKit Support
 

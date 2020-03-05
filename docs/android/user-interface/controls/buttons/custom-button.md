@@ -3,8 +3,8 @@ title: "Custom Button"
 ms.prod: xamarin
 ms.assetid: C523D41E-5855-248D-079D-6B12B74B7617
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 02/06/2018
 ---
 
@@ -102,4 +102,4 @@ Now run the application.
 *Portions of this page are modifications based on work created and
 shared by the Android Open Source Project and used according to
 terms described in the*
-[*Creative Commons 2.5 Attribution License*](http://creativecommons.org/licenses/by/2.5/).
+[*Creative Commons 2.5 Attribution License*](https://creativecommons.org/licenses/by/2.5/).

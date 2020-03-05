@@ -4,8 +4,8 @@ description: "This document provides an overview of how to create a user interfa
 ms.prod: xamarin
 ms.assetid: 4D6B136C-744A-4936-8655-A77E62BA7A60
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/21/2017
 ---
 
@@ -125,7 +125,7 @@ When View Controllers are added to the Design Surface, two corresponding C# file
 
  [![](creating-ui-objects-images/image9b.png "ViewController partial class")](creating-ui-objects-images/image9b.png#lightbox)
 
-The `MainViewController.cs` file is intended for *your code*. This is where the `View` lifecycle methods such as
+The `ControlsViewController.cs` file is intended for *your code*. This is where the `View` lifecycle methods such as
 `ViewDidLoad` and `ViewWillAppear` are implemented and where you can add your own properties, fields and methods.
 
 The `ControlsViewController.designer.cs` is generated code containing a partial class. When you name a control on the design surface in Visual Studio for Mac, or create an outlet or action in Xcode, a corresponding property, or partial method, is added to the designer (designer.cs) file. The code below shows an example of code generated for two buttons and a text view,

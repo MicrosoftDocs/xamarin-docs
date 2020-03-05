@@ -22,6 +22,9 @@ The Bing Spell Check REST API has two operating modes, and a mode must be specif
 - `Spell` corrects short text (up to 9 words) without any casing changes.
 - `Proof` corrects long text, provides casing corrections and basic punctuation, and suppresses aggressive corrections.
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 An API key must be obtained to use the Bing Spell Check API. This can be obtained at [Try Cognitive Services](https://azure.microsoft.com/try/cognitive-services/)
 
 For a list of the languages supported by the Bing Spell Check API, see [Supported languages](/azure/cognitive-services/bing-spell-check/bing-spell-check-supported-languages/). For more information about the Bing Spell Check API, see [Bing Spell Check Documentation](/azure/cognitive-services/bing-spell-check/).

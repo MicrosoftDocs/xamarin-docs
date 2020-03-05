@@ -1,15 +1,15 @@
 ---
-title: "Xamarin for Java Developers"
+title: "Xamarin for Java developers"
 description: "If you are a Java developer, you are well on your way to leveraging your skills and existing code on the Xamarin platform while reaping the code reuse benefits of C#. You will find that C# syntax is very similar to Java syntax, and that both languages provide very similar features. In addition, you'll discover features unique to C# that will make your development life easier."
 ms.prod: xamarin
 ms.assetid: A3B6C041-4052-4E7D-999C-C4FA10BE3D67
 ms.technology: xamarin-android
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/13/2018
 ---
 
-# Xamarin for Java Developers
+# Xamarin for Java developers
 
 _If you are a Java developer, you are well on your way to leveraging your skills and existing code on the Xamarin platform while reaping the code reuse benefits of C#. You will find that C# syntax is very similar to Java syntax, and that both languages provide very similar features. In addition, you'll discover features unique to C# that will make your development life easier._
 
@@ -57,7 +57,7 @@ synchronization support.
 
 However, there are many differences between Java and C#. For example:
 
-- Java does not support implicitly-typed local variables (C#
+- Java (as used on Android) does not support implicitly-typed local variables (C#
     supports the `var` keyword).
 
 - In Java, you can pass parameters only by value, while in C# you can
@@ -137,15 +137,22 @@ libraries from C# by making use of Xamarin's automatic binding
 generators. To do this, you simply create a static library in Java and
 expose it to C# via a binding.
 
+> [!NOTE]
+> Android programming uses a specific version of the Java language
+> that supports all Java 7 features [and a subset of Java 8](https://developer.android.com/studio/write/java8-support.html).
+>
+> Some features mentioned on this page (such as the `var` keyword in C#) are
+> available in newer versions of Java (e.g. [`var` in Java 10](https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html)), but are still not available to Android developers.
+
 <a name="fundamentals" />
 
-## Going From Java to C# Development
+## Going from Java to C# development
 
 The following sections outline the basic "getting started" differences
 between C# and Java; a later section describes the object-oriented
 differences between these languages.
 
-### Libraries vs. Assemblies
+### Libraries vs. assemblies
 
 Java typically packages related classes in **.jar** files. In C# and
 .NET, however, reusable bits of precompiled code are packaged into
@@ -158,7 +165,7 @@ For more information about assemblies, see the
 [Assemblies and the Global Assembly Cache](https://docs.microsoft.com/dotnet/csharp/programming-guide/concepts/assemblies-gac/)
 topic.
 
-### Packages vs. Namespaces
+### Packages vs. namespaces
 
 C# uses the `namespace` keyword to group related types together; this
 is similar to Java's `package` keyword. Typically, a Xamarin.Android
@@ -172,7 +179,7 @@ namespace WeatherApp
     ...
 ```
 
-### Importing Types
+### Importing types
 
 When you make use of types defined in external namespaces, you import
 these types with a `using` statement (which is very similar to the Java
@@ -247,7 +254,7 @@ generic C# classes; for more information, see
 
 <a name="oopfeatures" />
 
-## Object-Oriented Programming Features
+## Object-oriented programming features
 
 Both Java and C# use very similar object-oriented programming idioms:
 
@@ -292,7 +299,7 @@ However, there are also some important differences:
     automatically call the base-class destructor &ndash; in contrast to
     Java where an explicit call to `super.finalize` is used.)
 
-### Class Inheritance
+### Class inheritance
 
 To extend a class in Java, you use the `extends` keyword. To extend a
 class in C#, you use a colon (`:`) to indicate derivation. For example,
@@ -332,8 +339,6 @@ class name with `final`.
 For more about C# class definitions, see the
 [Classes](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/classes) and
 [Inheritance](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/inheritance) topics.
-
-<a name="properties" />
 
 ### Properties
 
@@ -385,7 +390,7 @@ For more information about C# properties, see the
 [Properties](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/properties)
 topic.
 
-### Calling Base Class Methods
+### Calling base class methods
 
 To call a base-class constructor in C#, you use a colon (`:`) followed
 by the `base` keyword and an initializer list; this `base` constructor
@@ -431,7 +436,7 @@ In this case, the `OnCreate` method defined by the derived class
 (`MainActivity`) calls the `OnCreate` method of the base class
 (`Activity`).
 
-### Access Modifiers
+### Access modifiers
 
 Java and C# both support the `public`, `private`, and `protected`
 access modifiers. However, C# supports two additional access modifiers:
@@ -448,7 +453,7 @@ For more information about C# access modifiers, see the
 [Access Modifiers](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/access-modifiers)
 topic.
 
-### Virtual and Override Methods
+### Virtual and override methods
 
 Both Java and C# support *polymorphism*, the ability to treat related
 objects in the same manner. In both languages, you can use a base-class
@@ -479,7 +484,7 @@ topic.
 
 <a name="lambdas" />
 
-## Lambda Expressions
+## Lambda expressions
 
 C# makes it possible to create *closures*: inline, anonymous methods
 that can access the state of the method in which they are enclosed.
@@ -531,7 +536,7 @@ topic.
 
 <a name="events" />
 
-## Event Handling
+## Event handling
 
 An *event* is a way for an object to notify registered subscribers when
 something interesting happens to that object. Unlike in Java, where a
@@ -621,7 +626,7 @@ syntactical overhead.
 
 <a name="async" />
 
-## Asynchronous Programming
+## Asynchronous programming
 
 *Asynchronous programming* is a way to improve the overall
 responsiveness of your application. Asynchronous programming features
@@ -694,7 +699,7 @@ features, see
 
 <a name="keywords" />
 
-## Keyword Differences
+## Keyword differences
 
 Many language keywords used in Java are also used in C#. There are also
 a number of Java keywords that have an equivalent but differently-named
@@ -715,7 +720,7 @@ counterpart in C#, as listed in this table:
 |`synchronized`|[lock](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/lock-statement)|Wraps a critical section of code with lock acquisition and release.|
 
 Also, there are many keywords that are unique to C# and have no
-counterpart in Java. Xamarin.Android code often makes use of the
+counterpart in the Java used on Android. Xamarin.Android code often makes use of the
 following C# keywords (this table is useful to refer to when you
 are reading through Xamarin.Android
 [sample code](https://docs.microsoft.com/samples/browse/?products=xamarin&term=Xamarin.Android)):
@@ -748,7 +753,7 @@ are reading through Xamarin.Android
 
 <a name="interop" />
 
-## Interoperating with Existing Java Code
+## Interoperating with existing java code
 
 If you have existing Java functionality that you do not want to convert
 to C#, you can reuse your existing Java libraries in Xamarin.Android
@@ -766,7 +771,7 @@ applications via two techniques:
 For more information about these techniques, see
 [Java Integration Overview](~/android/platform/java-integration/index.md).
 
-## For Further Reading
+## Further reading
 
 The MSDN [C# Programming Guide](https://docs.microsoft.com/dotnet/csharp/programming-guide/) is a
 great way to get started in learning the C# programming language, and you can use
@@ -804,7 +809,7 @@ important C# keywords, explained how to interoperate with existing Java
 libraries, and provided links to related documentation for further
 study.
 
-## Related Links
+## Related links
 
 - [Java Integration Overview](~/android/platform/java-integration/index.md)
 - [C# Programming Guide](https://docs.microsoft.com/dotnet/csharp/programming-guide/)

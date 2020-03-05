@@ -3,14 +3,16 @@ title: "Visual Basic in Xamarin.Android and Xamarin.iOS"
 description: "This walkthrough demonstrates how to build native Xamarin.iOS and Xamarin.Android apps that use business logic written in Visual Basic.NET."
 ms.prod: xamarin
 ms.assetid: 455fda67-3879-4299-8036-b12840e6a498
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 04/24/2019
 ---
 
 # Visual Basic in Xamarin Android and iOS
 
-The [TaskyVB](https://github.com/xamarin/mobile-samples/tree/master/VisualBasic/TaskyVB) sample application demonstrates how Visual Basic code compiled into a .NET Standard library can be used with Xamarin. Here are some screenshots of the resulting apps running on Android and iOS:
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/)
+
+The [TaskyVB](https://docs.microsoft.com/samples/xamarin/mobile-samples/visualbasic-taskyvb/) sample application demonstrates how Visual Basic code compiled into a .NET Standard library can be used with Xamarin. Here are some screenshots of the resulting apps running on Android and iOS:
 
  [![Android and iOS running an app built with Visual Basic](native-apps-images/simulators-sml.png)](native-apps-images/simulators.png#lightbox)
 

@@ -4,8 +4,8 @@ description: "The Wallet app allows iOS users to store digital passes on their d
 ms.prod: xamarin
 ms.assetid: 74B9973B-C1E8-B727-3F6D-59C1F98BAB3A
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 06/13/2018
 ---
 
@@ -128,7 +128,7 @@ pieces of information in every pass are:
 There is a large number of other JSON keys in each Pass, an example of which
 is shown below:
 
-``` 
+```
 {
    "passTypeIdentifier":"com.xamarin.passkitdoc.banana",  //Type Identifier (iOS Provisioning Portal)
    "formatVersion":1,                                     //Always 1 (for now)
@@ -317,7 +317,7 @@ present:
 Open pass.json and edit the JSON. You must at least update the `passTypeIdentifier` and `teamIdentifer` to match your
 Apple Developer account.
 
-```csharp
+```json
 "passTypeIdentifier" : "pass.com.xamarin.coupon.banana",
 "teamIdentifier" : "?????????",
 ```
@@ -325,7 +325,7 @@ Apple Developer account.
 You must then calculate the hashes for each file and create the `manifest.json` file. It will look something like this when you’re
 done:
 
-```csharp
+```json
 {
   "icon@2x.png" : "30806547dcc6ee084a90210e2dc042d5d7d92a41",
   "icon.png" : "87e9ffb203beb2cce5de76113f8e9503aeab6ecc",
@@ -482,7 +482,7 @@ options.
 
 If you experience this error when deploying:
 
-```csharp
+```
 Installation failed: Your code signing/provisioning profiles are not correctly configured (error: 0xe8008016)
 ```
 

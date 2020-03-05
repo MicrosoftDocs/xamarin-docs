@@ -4,8 +4,8 @@ description: "This document describes how to use Apple's Instruments app to prof
 ms.prod: xamarin
 ms.assetid: 70A8CAC8-20C2-655B-37C3-ACF9EA7874D8
 ms.technology: xamarin-ios
-author: conceptdev
-ms.author: crdun
+author: davidortinau
+ms.author: daortin
 ms.date: 03/19/2017
 ---
 
@@ -65,4 +65,4 @@ This guide showed how to start Xcode Instruments to monitor an iOS app from with
 ## Related Links
 
 - [Instruments Walkthrough](~/ios/deploy-test/walkthrough-apples-instrument.md)
-- [Xamarin.iOS Garbage Collection (blog post)](http://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)
+- [Xamarin.iOS Garbage Collection (blog post)](https://c-sharx.net/2015-04-27-xamarin-ios-the-garbage-collector-and-me/)

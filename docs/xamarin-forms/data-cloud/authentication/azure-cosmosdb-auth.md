@@ -53,6 +53,9 @@ The process for integrating the resource token broker into a Xamarin.Forms appli
 1. Configure the Azure App Service to perform easy authentication with Facebook. For more information, see [Azure App Service Authentication Configuration](#app_service_authentication_configuration).
 1. Configure the Xamarin.Forms sample application to communicate with Azure App Service and Cosmos DB. For more information, see [Xamarin.Forms Application Configuration](#forms_application_configuration).
 
+> [!NOTE]
+> If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
+
 <a name="cosmosdb_configuration" />
 
 ### Azure Cosmos DB Configuration
