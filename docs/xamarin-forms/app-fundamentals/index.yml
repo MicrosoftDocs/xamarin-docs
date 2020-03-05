@@ -60,6 +60,8 @@ landingContent:
             url: accessibility/index.md
           - text: Application indexing and deep linking
             url: deep-linking.md
+          - text: Dual-Screen
+            url: dual-screen/index.md
           - text: Local notifications
             url: local-notifications.md
           - text: Localization

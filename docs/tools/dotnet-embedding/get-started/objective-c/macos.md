@@ -80,7 +80,7 @@ Open **ViewController.m**, and replace the contents with:
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+
     MyNSView *view = [[MyNSView alloc] init];
     view.frame = CGRectMake(0, 200, 200, 200);
     [self.view addSubview: view];
@@ -92,5 +92,3 @@ Open **ViewController.m**, and replace the contents with:
 Finally, run the Xcode project, and something like this will show up:
 
 ![Hello from C# sample running in the simulator](macos-images/hello-from-csharp-mac.png)
-
-A more complete and better-looking sample [is available here](https://github.com/mono/Embeddinator-4000/tree/objc/samples/mac/weather).

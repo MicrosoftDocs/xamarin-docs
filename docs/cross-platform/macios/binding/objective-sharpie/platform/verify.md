@@ -28,7 +28,7 @@ The hint argument supplied to the attribute can be cross referenced with documen
 
 |`[Verify]` Hint|Description|
 |---|---|
-|InferredFromPreceedingTypedef|The name of this declaration was inferred by common convention from the immediately preceeding `typedef` in the original native source code. Verify that the inferred name is correct as this convention is ambiguous.|
+|InferredFromPreceedingTypedef|The name of this declaration was inferred by common convention from the immediately preceding `typedef` in the original native source code. Verify that the inferred name is correct as this convention is ambiguous.|
 |ConstantsInterfaceAssociation|There's no fool-proof way to determine with which Objective-C interface an extern variable declaration may be associated. Instances of these are bound as `[Field]` properties in a partial interface into a near-by concrete interface to produce a more intuitive API, possibly eliminating the 'Constants' interface altogether.|
 |MethodToProperty|An Objective-C method was bound as a C# property due to convention such as taking no parameters and returning a value (non-void return). Often methods like these should be bound as properties to surface a nicer API, but sometimes false-positives can occur and the binding should actually be a method.|
 |StronglyTypedNSArray|A native `NSArray*` was bound as `NSObject[]`. It might be possible to more strongly type the array in the binding based on expectations set through API documentation (e.g. comments in the header file) or by examining the array contents through testing. For example, an NSArray* containing only NSNumber* instancescan be bound as `NSNumber[]` instead of `NSObject[]`.|

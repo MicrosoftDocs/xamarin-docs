@@ -151,7 +151,7 @@ click **Apply Changes**:
 
 [![Example of adding Android 7.1 Nougat components to the Android SDK](android-sdk-images/win/09-adding-a-platform-sml.png)](android-sdk-images/win/09-adding-a-platform.png#lightbox)
 
-To install only specfic components, click the box next to the platform
+To install only specific components, click the box next to the platform
 once. You can then select any individual components that you need:
 
 [![Example of adding some Android 7.1 components](android-sdk-images/win/10-adding-some-components-sml.png)](android-sdk-images/win/10-adding-some-components.png#lightbox)

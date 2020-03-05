@@ -199,11 +199,11 @@ The following screenshots show a standard `CardView` instance and `CardView` who
 
 [![CardView ControlTemplate screenshot](contentview-images/cardview-controltemplates-cropped.png)](contentview-images/cardview-controltemplates.png#lightbox)
 
-For more information about control templates, see [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+For more information about control templates, see [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## Related links
 
 * [ContentView sample application](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-contentviewdemos/)
 * [Xamarin.Forms Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
 * [Bindable Properties](~/xamarin-forms/xaml/bindable-properties.md).
-* [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md)
+* [Xamarin.Forms Control Templates](~/xamarin-forms/app-fundamentals/templates/control-template.md)

@@ -6,7 +6,7 @@ ms.assetid: 59CD1344-8248-406C-9144-0C8A67141E5B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/06/2019
+ms.date: 02/07/2020
 ---
 
 # Xamarin.Forms Map Initialization and Configuration
@@ -53,7 +53,7 @@ Displaying and interacting with a map on iOS doesn't require any additional conf
 
 - iOS 11 and later
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – for using location services when the application is in use
-  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/corelocation/choosing_the_authorization_level_for_location_services/requesting_always_authorization?language=objc) – for using location services at all times
+  - [`NSLocationAlwaysAndWhenInUseUsageDescription`](https://developer.apple.com/documentation/bundleresources/information_property_list/nslocationalwaysandwheninuseusagedescription) – for using location services at all times
 - iOS 10 and earlier
   - [`NSLocationWhenInUseUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW26) – for using location services when the application is in use
   - [`NSLocationAlwaysUsageDescription`](https://developer.apple.com/library/ios/documentation/General/Reference/InfoPlistKeyReference/Articles/CocoaKeys.html#//apple_ref/doc/uid/TP40009251-SW18) – for using location services at all times    
@@ -100,14 +100,16 @@ Once you've obtained an API key it must be added within the `<application>` elem
 
 ```xml
 <application ...>
-    <meta-data android:name="com.google.android.maps.v2.API_KEY" android:value="PASTE-YOUR-API-KEY-HERE" />
+    <meta-data android:name="com.google.android.geo.API_KEY" android:value="PASTE-YOUR-API-KEY-HERE" />
 </application>
 ```
 
 This embeds the API key into the manifest. Without a valid API key the [`Map`](xref:Xamarin.Forms.Maps.Map) control will display a blank grid.
 
 > [!NOTE]
-> Note that, in order for your APK to access Google Maps, you must include SHA-1 fingerprints and package names for every keystore (debug and release) that you use to sign your APK. For example, if you use one computer for debug and another computer for generating the release APK, you should include the SHA-1 certificate fingerprint from the debug keystore of the first computer and the SHA-1 certificate fingerprint from the release keystore of the second computer. Also remember to edit the key credentials if the app's **Package Name** changes. See [Obtaining a Google Maps API key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
+> `com.google.android.geo.API_KEY` is the recommended metadata name for the API key. For backwards compatibility, the `com.google.android.maps.v2.API_KEY` metadata name can be used, but only allows authentication to the Android Maps API v2.
+
+For your APK to access Google Maps, you must include SHA-1 fingerprints and package names for every keystore (debug and release) that you use to sign your APK. For example, if you use one computer for debug and another computer for generating the release APK, you should include the SHA-1 certificate fingerprint from the debug keystore of the first computer and the SHA-1 certificate fingerprint from the release keystore of the second computer. Also remember to edit the key credentials if the app's **Package Name** changes. See [Obtaining a Google Maps API key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
 #### Specify the Google Play services version number
 
@@ -229,6 +231,9 @@ The overall effect of this code is that when the application requests the user's
 ### Universal Windows Platform
 
 On UWP, your application must be authenticated before it can display a map and consume map services. To authenticate your application, you must specify a maps authentication key. For more information, see [Request a maps authentication key](/windows/uwp/maps-and-location/authentication-key). The authentication token should then be specified in the `FormsMaps.Init("AUTHORIZATION_TOKEN")` method call, to authenticate the application with Bing Maps.
+
+> [!NOTE]
+> On UWP, to use map services such as geocoding you must also set the `MapService.ServiceToken` property to the authentication key value. This can be accomplished with the following line of code: `Windows.Services.Maps.MapService.ServiceToken = "INSERT_AUTH_TOKEN_HERE";`.
 
 In addition, if your application needs to access the user's location, you must enable the location capability in the package manifest. This can be accomplished as follows:
 

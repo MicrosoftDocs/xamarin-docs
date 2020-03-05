@@ -89,8 +89,8 @@ Open **Resources/layout/Main.axml** and replace its contents with the following 
     android:layout_height="match_parent" >
 
 </android.support.v4.view.ViewPager>
+```
 
-```csharp
 This XML defines a `ViewPager` that occupies the entire screen. Note that
 you must use the fully-qualified name **android.support.v4.view.ViewPager**
 because `ViewPager` is packaged in a support library. `ViewPager` is

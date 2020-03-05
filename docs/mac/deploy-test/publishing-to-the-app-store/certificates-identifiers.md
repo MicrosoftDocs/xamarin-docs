@@ -151,7 +151,7 @@ unless the developer is implementing macOS features like iCloud and push notific
 
 To release an app on the App Store, you'll need two certificates:
 
-- **Mac App Distribution** certificate that will be used to sign the application; and 
+- **Mac App Distribution** certificate that will be used to sign the application; and
 - **Mac Installer Distribution** certificate, to sign the installer.
 
 > [!TIP]
@@ -184,7 +184,7 @@ First, create the installer certificate:
 
 To self-release a Xamarin.Mac application (not release via the Apple App Store), you'll need two certificates:
 
-- **Developer ID Installer** certificate that will be used to sign the application; and 
+- **Developer ID Installer** certificate that will be used to sign the application; and
 - **Developer ID Application** certificate, to sign the installer.
 
 > [!TIP]
@@ -199,4 +199,4 @@ Once you have created, downloaded, and installed certificates, they'll be visibl
 - [Installation](/visualstudio/mac/installation/)
 - [Hello, Mac sample](~/mac/get-started/hello-mac.md)
 - [Distribute your apps on the Mac App Store](https://developer.apple.com/devcenter/mac/checklist/)
-- [Developer ID and GateKeeper](https://developer.apple.com/resources/developer-id/)
+- [Developer ID and GateKeeper](https://developer.apple.com/developer-id/)

@@ -87,7 +87,7 @@ A database wrapper class abstracts the data access layer from the rest of the ap
 
 ### Lazy initialization
 
-The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it's first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information, see [Lazy&lt;T&gt; Class](https://docs.microsoft.com/dotnet/api/system.lazy-1).
+The `TodoItemDatabase` uses the .NET `Lazy` class to delay initialization of the database until it's first accessed. Using lazy initialization prevents the database loading process from delaying the app launch. For more information, see [Lazy&lt;T&gt; Class](xref:System.Lazy`1).
 
 ```csharp
 public class TodoItemDatabase
@@ -170,7 +170,7 @@ For more information, see [Task-based asynchronous pattern (TAP)](https://docs.m
 The `TodoItemDatabase` class includes methods for the four types of data manipulation: create, read, edit, and delete. The SQLite.NET library provides a simple Object Relational Map (ORM) that allows you to store and retrieve objects without writing SQL statements.
 
 ```csharp
-public static class TodoItemDatabase {
+public class TodoItemDatabase {
 
     // ...
 
@@ -284,4 +284,4 @@ For more information, see [File Handling in Xamarin.Forms](~/xamarin-forms/data-
 - [Using SQLite with Android](~/android/data-cloud/data-access/using-sqlite-orm.md)
 - [Using SQLite with iOS](~/ios/data-cloud/data/using-sqlite-orm.md)
 - [Task-based asynchronous pattern (TAP)](https://docs.microsoft.com/dotnet/standard/asynchronous-programming-patterns/task-based-asynchronous-pattern-tap)
-- [Lazy<T> Class](https://docs.microsoft.com//api/system.lazy-1)
+- [Lazy&lt;T&gt; Class](xref:System.Lazy`1)

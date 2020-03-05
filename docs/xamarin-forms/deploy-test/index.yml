@@ -11,7 +11,7 @@ metadata:
   ms.assetid: 705c9fa4-12ef-4ee0-ab3e-8319ee9944c5
   author: davidbritch
   ms.author: dabritch
-  ms.date: 01/03/2020
+  ms.date: 01/22/2020
 
 landingContent:
   - title: Testing
@@ -20,6 +20,8 @@ landingContent:
         links:
           - text: Improve app performance
             url: performance.md
+          - text: Hot restart
+            url: hot-restart.md
           - text: Automate testing with Visual Studio App Center
             url: /appcenter/test-cloud/
 

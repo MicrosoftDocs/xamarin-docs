@@ -381,7 +381,7 @@ If Device Guard is enabled, use the following steps to disable it:
 1. Ensure that **Hyper-V** is disabled (under **Turn Windows Features
    on or off**) as described in the previous section.
 
-2. In the Windows Search Box, enter **gpedit** and select the **Edit
+2. In the Windows Search Box, enter **gpedit.msc** and select the **Edit
    group policy** search result. These steps launch the **Local Group
    Policy Editor**.
 

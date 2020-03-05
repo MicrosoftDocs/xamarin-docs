@@ -181,9 +181,9 @@ var calendar = new NSCalendar(NSCalendarType.Gregorian);
 var currentDate = NSDate.Now;
 var components = new NSDateComponents();
 components.Year = -60;
-NSDate minDate = calendar.DateByAddingComponents(components, NSDate.Now, NSCalendarOptions.None);
+NSDate minDate = calendar.DateByAddingComponents(components, currentDate, NSCalendarOptions.None);
 datePickerView.MinimumDate = minDate;
-datePickerView.MaximumDate = NSDate.Now;
+datePickerView.MaximumDate = currentDate;
 ```
 
 > [!TIP]

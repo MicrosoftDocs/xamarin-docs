@@ -153,7 +153,7 @@ Xamarin.Mac requires the header files, from the SDK version specified in the err
 
 One potential, alternative solution, is to enable the managed linker. This will remove unused API including, in most cases, the new API where the header files are missing (or incomplete). However this will not work if your project uses API that was introduced in a newer SDK than the one your Xcode provides.
 
-A second potential, alternative solution, is use the dynamic registrar instead. This will impose a startup cost by dynamically registering types but remove the header file requirement. 
+A second potential, alternative solution, is use the dynamic registrar instead. This will impose a startup cost by dynamically registering types but remove the header file requirement.
 
 A last-straw solution would be to use an older version of Xamarin.Mac, one that supports the SDK your project requires.
 
@@ -205,7 +205,7 @@ The specified optimization was not recognized.
 
 The accepted format is `[+|-]optimization-name`, where `optimization-name` is one of the values listed in the error message.
 
-See [Build optimizations](https://developer.xamarin.com/guides/cross-platform/macios/build-optimizations) for a complete description of each optimization.
+See [Build optimizations](~/cross-platform/macios/optimizations.md) for a complete description of each optimization.
 
 <a name="MM0133" />
 
@@ -215,9 +215,9 @@ See [Build optimizations](https://developer.xamarin.com/guides/cross-platform/ma
 
 #### MM0134: 32-bit applications should be migrated to 64-bit.
 
-Apple has announced that it will not allow macOS App Store submissions of 32-bit apps (starting January 2018). 
+Apple has announced that it will not allow macOS App Store submissions of 32-bit apps (starting January 2018).
 
-In addition 32-bit applications will not run on the version of macOS after High Sierra "without compromises". 
+In addition 32-bit applications will not run on the version of macOS after High Sierra "without compromises".
 
 For more details: https://developer.apple.com/news/?id=06282017a
 
@@ -265,7 +265,7 @@ As a last-straw solution, use an older version of Xamarin.Mac that does not requ
 
 <a name="MM1406" />
 
-#### MM1406: Target framework '{0}' is invalid when targetting Xamarin.Mac 4.5 .NET framwork.
+#### MM1406: Target framework '{0}' is invalid when targeting Xamarin.Mac 4.5 .NET framwork.
 
 <a name="MM1407" />
 
@@ -377,7 +377,7 @@ As a last-straw solution, use an older version of Xamarin.Mac that does not requ
 
 #### MM2103: Error processing assembly '\*': *
 
-An unexpected error occured when processing an assembly.
+An unexpected error occurred when processing an assembly.
 
 The assembly causing the issue is named in the error message. In order to fix this issue the assembly will need to be provided in a [bug report](https://bugzilla.xamarin.com) along with a complete build log with verbosity enabled (i.e. `-v -v -v -v` in the **Additional mtouch arguments**).
 

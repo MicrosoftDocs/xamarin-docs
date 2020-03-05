@@ -21,7 +21,7 @@ The Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) is used for single-line te
 
 ### Setting and Reading Text
 
-The `Entry`, like other text-presenting views, exposes the [`Text`](xref:Xamarin.Forms.Entry.Text) property. This property can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the `Text` property in XAML:
+The `Entry`, like other text-presenting views, exposes the [`Text`](xref:Xamarin.Forms.InputView.Text) property. This property can be used to set and read the text presented by the `Entry`. The following example demonstrates setting the `Text` property in XAML:
 
 ```xaml
 <Entry Text="I am an Entry" />
@@ -41,7 +41,7 @@ var text = MyEntry.Text;
 
 ### Setting Placeholder Text
 
-The [`Entry`](xref:Xamarin.Forms.Entry) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.Entry.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Entry`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.Entry.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
+The [`Entry`](xref:Xamarin.Forms.Entry) can be set to show placeholder text when it is not storing user input. This is accomplished by setting the [`Placeholder`](xref:Xamarin.Forms.InputView.Placeholder) property to a `string`, and is often used to indicate the type of content that is appropriate for the `Entry`. In addition, the placeholder text color can be controlled by setting the [`PlaceholderColor`](xref:Xamarin.Forms.InputView.PlaceholderColor) property to a [`Color`](xref:Xamarin.Forms.Color):
 
 ```xaml
 <Entry Placeholder="Username" PlaceholderColor="Olive" />
@@ -140,7 +140,7 @@ var MyEntry = new Entry { IsPassword = true, Placeholder = "Password" };
 
 ### Setting the Cursor Position and Text Selection Length
 
-The [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) property can be used to return or set the position at which the next character will be inserted into the string stored in the [`Text`](xref:Xamarin.Forms.Entry.Text) property:
+The [`CursorPosition`](xref:Xamarin.Forms.Entry.CursorPosition) property can be used to return or set the position at which the next character will be inserted into the string stored in the [`Text`](xref:Xamarin.Forms.InputView.Text) property:
 
 ```xaml
 <Entry Text="Cursor position set" CursorPosition="5" />
@@ -358,7 +358,7 @@ Be careful to make sure that the background and text colors you choose are usabl
 
 Entry exposes two events:
 
-- [`TextChanged`](xref:Xamarin.Forms.Entry.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
+- [`TextChanged`](xref:Xamarin.Forms.InputView.TextChanged) &ndash; raised when the text changes in the entry. Provides the text before and after the change.
 - [`Completed`](xref:Xamarin.Forms.Entry.Completed) &ndash; raised when the user has ended input by pressing the return key on the keyboard.
 
 > [!NOTE]

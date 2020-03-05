@@ -108,7 +108,7 @@ guidelines for the various platforms that the app will target. The app should "f
 1. **UWP** –  [UWP Design basics](https://docs.microsoft.com/windows/uwp/design/basics/)
 
 For example, each app has a metaphor for switching between sections in an
-application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and UWP uses the [Pivot or tab](https://docs.microsoft.com/windows/uwp/design/controls-and-patterns/tabs-pivot) view.
+application. iOS uses a tab bar at the bottom of the screen, Android uses a tab bar at the top of the screen, and UWP uses the [Pivot or tab](/windows/uwp/design/controls-and-patterns/pivot) view.
 
 Additionally, the hardware itself also dictates UX decisions. For example,
 iOS devices have no physical *back* button, and therefore introduce the

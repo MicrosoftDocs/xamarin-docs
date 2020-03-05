@@ -25,7 +25,7 @@ The `MenuItem` class defines the following properties:
 * [`CommandParameter`](xref:Xamarin.Forms.MenuItem.CommandParameter) is an `object` that specifies the parameter that should be passed to the `Command`.
 * [`IconImageSource`](xref:Xamarin.Forms.MenuItem.IconImageSource) is an `ImageSource` value that defines the display icon.
 * [`IsDestructive`](xref:Xamarin.Forms.MenuItem.IsDestructive) is a `bool` value that indicates whether the `MenuItem` removes its associated UI element from the list.
-* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) is a `bool` value that determines whether this object responds to user input.
+* [`IsEnabled`](xref:Xamarin.Forms.MenuItem.IsEnabled) is a `bool` value that indicates whether this object responds to user input.
 * [`Text`](xref:Xamarin.Forms.MenuItem.Text) is a `string` value that specifies the display text.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects so the `MenuItem` instance can be the target of data bindings.
@@ -191,6 +191,51 @@ public MenuItemXamlMvvmPage()
 !["Screenshot of MenuItem icon on Android"](menuitem-images/menuitem-android-icon.png "Screenshot of MenuItem icon on Android")
 
 For more information on using images in Xamarin.Forms, see [Images in Xamarin.Forms](~/xamarin-forms/user-interface/images.md).
+
+## Enable or disable a MenuItem at runtime
+
+To enable of disable a `MenuItem` at runtime, bind its `Command` property to an `ICommand` implementation, and ensure that a `canExecute` delegate enables and disables the `ICommand` as appropriate.
+
+> [!IMPORTANT]
+> Do not bind the `IsEnabled` property to another property when using the `Command` property to enable or disable the `MenuItem`.
+
+The following example shows a `MenuItem` whose `Command` property binds to an `ICommand` named `MyCommand`:
+
+```xaml
+<MenuItem Text="My menu item"
+          Command="{Binding MyCommand}" />
+```
+
+The `ICommand` implementation requires a `canExecute` delegate that returns the value of a `bool` property to enable and disable the `MenuItem`:
+
+```csharp
+public class MyViewModel : INotifyPropertyChanged
+{
+    bool isMenuItemEnabled = false;
+    public bool IsMenuItemEnabled
+    {
+        get { return isMenuItemEnabled; }
+        set
+        {
+            isMenuItemEnabled = value;
+            MyCommand.ChangeCanExecute();
+        }
+    }
+
+    public Command MyCommand { get; private set; }
+
+    public ToolbarItemViewModel()
+    {
+        MyCommand = new Command(() =>
+        {
+            // Execute logic here
+        },
+        () => IsToolbarItemEnabled);
+    }
+}
+```
+
+In this example, the `MenuItem` is disabled until the `IsMenuItemEnabled` property is set. When this occurs, the `Command.ChangeCanExecute` method is called which causes the `canExecute` delegate for `MyCommand` to be re-evaluated.
 
 ## Cross-platform context menu behavior
 

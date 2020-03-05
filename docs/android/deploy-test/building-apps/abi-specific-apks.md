@@ -91,9 +91,9 @@ based on the `versionCode` and APK configuration. The APK with the
 highest version code will be delivered to the device. As an example, an
 application could have three APKs with the following version codes:
 
-- 11413456 - The ABI is  `armeabi` ; targetting API level 14; small to large screens; with a version number of 456.
-- 21423456 - The ABI is  `armeabi-v7a` ; targetting API level 14; normal &amp; large screens; with a version number of 456.
-- 61423456 - The ABI is  `x86` ; targetting API level 14; normal &amp; large screens; with a version number of 456.
+- 11413456 - The ABI is  `armeabi` ; targeting API level 14; small to large screens; with a version number of 456.
+- 21423456 - The ABI is  `armeabi-v7a` ; targeting API level 14; normal &amp; large screens; with a version number of 456.
+- 61423456 - The ABI is  `x86` ; targeting API level 14; normal &amp; large screens; with a version number of 456.
 
 To continue on with this example, imagine that a bug was fixed which
 was specific to `armeabi-v7a`. The app version increases to 457, and an
@@ -107,9 +107,9 @@ app. The new `versionCode` would change to 61923500 while the
 armeabi/armeabi-v7a remain unchanged. At this point in time, the
 version codes would be:
 
-- 11413456 - The ABI is  `armeabi` ; targetting API level 14; small to large screens; with a version name of 456.
-- 21423457 - The ABI is  `armeabi-v7a` ; targetting API level 14; normal &amp; large screens; with a version name of 457.
-- 61923500 - The ABI is  `x86` ; targetting API level 19; normal &amp; large screens; with a version name of 500.
+- 11413456 - The ABI is  `armeabi` ; targeting API level 14; small to large screens; with a version name of 456.
+- 21423457 - The ABI is  `armeabi-v7a` ; targeting API level 14; normal &amp; large screens; with a version name of 457.
+- 61923500 - The ABI is  `x86` ; targeting API level 19; normal &amp; large screens; with a version name of 500.
 
 Maintaining these version codes manually can be a significant burden on
 the developer. The process of calculating the correct

@@ -78,6 +78,9 @@ public class MyBootReceiver : BroadcastReceiver
 }
 ```
 
+> [!NOTE]
+> In Android 8.0 (API 26 and above), [Google placed limitations](https://developer.android.com/about/versions/oreo/background) on what apps can do while users aren't directly interacting with them. These limitations affect background services and implicit broadcast receivers such as `Android.Content.Intent.ActionBootCompleted`. Because of these limitations, you might have difficulties registering a `Boot Completed` broadcast receiver on newer versions of Android. If this is the case, note that these restrictions do not apply to foreground services, which can be called from your broadcast receiver.
+
 It is also possible to create an intent filter that will respond to custom intents. Consider the following example: 
 
 ```csharp

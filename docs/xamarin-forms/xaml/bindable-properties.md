@@ -6,7 +6,7 @@ ms.assetid: 1EE869D8-6FE1-45CA-A0AD-26EC7D032AD7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/02/2016
+ms.date: 01/16/2020
 ---
 
 # Xamarin.Forms Bindable Properties
@@ -32,7 +32,7 @@ The process for creating a bindable property is as follows:
 1. Create a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance with one of the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create*) method overloads.
 1. Define property accessors for the [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance.
 
-Note that all [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instances must be created on the UI thread. This means that only code that runs on the UI thread can get or set the value of a bindable property. However, `BindableProperty` instances can be accessed from other threads by marshaling to the UI thread with the [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method.
+All [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instances must be created on the UI thread. This means that only code that runs on the UI thread can get or set the value of a bindable property. However, `BindableProperty` instances can be accessed from other threads by marshaling to the UI thread with the [`Device.BeginInvokeOnMainThread`](xref:Xamarin.Forms.Device.BeginInvokeOnMainThread(System.Action)) method.
 
 ### Create a property
 
@@ -161,6 +161,9 @@ Validation callbacks are provided with a value, and should return `true` if the 
 
 A `static` coerce value callback method can be registered with a bindable property by specifying the `coerceValue` parameter for the [`BindableProperty.Create`](xref:Xamarin.Forms.BindableProperty.Create(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) method. The specified callback method will be invoked when the value of the bindable property changes.
 
+> [!IMPORTANT]
+> The `BindableObject` type has a `CoerceValue` method that can be called to force a reevaluation of the value of its `BindableProperty` argument, by invoking its coerce value callback.
+
 Coerce value callbacks are used to force a reevaluation of a bindable property when the value of the property changes. For example, a coerce value callback can be used to ensure that the value of one bindable property is not greater than the value of another bindable property.
 
 The following code example shows how the `Angle` bindable property registers the `CoerceAngle` method as a coerce value callback method:
@@ -169,7 +172,7 @@ The following code example shows how the `Angle` bindable property registers the
 public static readonly BindableProperty AngleProperty = BindableProperty.Create (
   "Angle", typeof(double), typeof(HomePage), 0.0, coerceValue: CoerceAngle);
 public static readonly BindableProperty MaximumAngleProperty = BindableProperty.Create (
-  "MaximumAngle", typeof(double), typeof(HomePage), 360.0);
+  "MaximumAngle", typeof(double), typeof(HomePage), 360.0, propertyChanged: ForceCoerceValue);
 ...
 
 static object CoerceAngle (BindableObject bindable, object value)
@@ -183,9 +186,14 @@ static object CoerceAngle (BindableObject bindable, object value)
   }
   return input;
 }
+
+static void ForceCoerceValue(BindableObject bindable, object oldValue, object newValue)
+{
+  bindable.CoerceValue(AngleProperty);
+}
 ```
 
-The `CoerceAngle` method checks the value of the `MaximumAngle` property, and if the `Angle` property value is greater than it, it coerces the value to the `MaximumAngle` property value.
+The `CoerceAngle` method checks the value of the `MaximumAngle` property, and if the `Angle` property value is greater than it, it coerces the value to the `MaximumAngle` property value. In addition, when the `MaximumAngle` property changes the coerce value callback is invoked on the `Angle` property by calling the `CoerceValue` method.
 
 ### Create a default value with a Func
 

@@ -111,7 +111,7 @@ A `RatingBar` is a UI element that displays a rating in stars.
 ## [Spinner](~/android/user-interface/controls/spinner.md)
 
 `Spinner` is a UI element that provides a quick way to select one
-value from a set. It is simmilar to a drop-down list. 
+value from a set. It is similar to a drop-down list. 
 
 ![Example Spinner](images/spinner.png)
 

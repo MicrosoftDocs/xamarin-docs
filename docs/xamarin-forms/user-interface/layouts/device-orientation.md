@@ -88,10 +88,9 @@ On the Universal Windows Platform (UWP), supported orientations are set in the *
 
 ## Reacting to Changes in Orientation
 
-Xamarin.Forms does not offer any native events for notifying your app of orientation changes in shared code. However, the `SizeChanged` event of the `Page` fires when either the width or height of the `Page` changes. When the width of the `Page` is greater than the height, the device is in landscape mode. For more information, see [Display an Image based on Screen Orientation](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
+Xamarin.Forms does not offer any native events for notifying your app of orientation changes in shared code. However,[Xamarin.Essentials](~/essentials/index.md) contains a [`DeviceDisplay`] class that provides notifications of orientation changes.
 
-> [!NOTE]
-> There is an existing, free NuGet package for receiving notifications of orientation changes in shared code. See the [GitHub repo](https://github.com/aliozgur/Xamarin.Plugins/tree/master/DeviceOrientation) for more information.
+To detect orientations without Xamarin.Essentials, monitor the `SizeChanged` event of the `Page`, which fires when either the width or height of the `Page` changes. When the width of the `Page` is greater than the height, the device is in landscape mode. For more information, see [Display an Image based on Screen Orientation](https://github.com/xamarin/recipes/tree/master/Recipes/xamarin-forms/Controls/screen-orientation).
 
 Alternatively, it's possible to override the [`OnSizeAllocated`](xref:Xamarin.Forms.Page.OnSizeAllocated*) method on a `Page`, inserting any layout change logic there. The `OnSizeAllocated` method is called whenever a `Page` is allocated a new size, which happens whenever the device is rotated. Note that the base implementation of `OnSizeAllocated` performs important layout functions, so it is important to call the base implementation in the override:
 

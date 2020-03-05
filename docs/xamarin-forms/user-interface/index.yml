@@ -45,6 +45,8 @@ landingContent:
             url: text/label.md
           - text: Map
             url: map/index.md
+          - text: MediaElement
+            url: mediaelement.md
           - text: WebView
             url: webview.md
 
@@ -143,7 +145,7 @@ landingContent:
           - text: Styles
             url: styles/index.md
           - text: Theming
-            url: theming.md
+            url: theming/index.md            
           - text: Visual
             url: visual/index.md
           - text: Visual State Manager

@@ -11,7 +11,7 @@ ms.date: 12/11/2019
 
 # Android Platform Features
 
-Developing Xamarin.Forms applications for Android requires Visual Studio. The [requirements page](~/get-started/requirements.md) contains more information about the pre-requisites.
+Developing Xamarin.Forms applications for Android requires Visual Studio. The [supported platforms page](~/get-started/supported-platforms.md) contains more information about the pre-requisites.
 
 ## Platform-specifics
 
@@ -68,6 +68,10 @@ And this is the same code after upgrading the project to use `FormsAppCompatActi
 
 > [!NOTE]
 > When using `FormsAppCompatActivity`, the [base classes for some Android custom renderers](~/xamarin-forms/app-fundamentals/custom-renderer/renderers.md) will be different.
+
+## AndroidX Migration
+
+AndroidX replaces the Android Support Library. To learn about AndroidX and how to migrate a Xamarin.Forms app to use AndroidX libraries, see [AndroidX migration in Xamarin.Forms](~/xamarin-forms/platform/android/androidx-migration.md).
 
 ## Related links
 

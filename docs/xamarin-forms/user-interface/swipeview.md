@@ -6,7 +6,7 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/11/2019
+ms.date: 02/11/2020
 ---
 
 # Xamarin.Forms SwipeView
@@ -79,6 +79,49 @@ The following example shows how to instantiate a `SwipeView` in XAML:
 </SwipeView>
 ```
 
+The equivalent C# code is:
+
+```csharp
+// SwipeItems
+SwipeItem favoriteSwipeItem = new SwipeItem
+{
+    Text = "Favorite",
+    IconImageSource = "favorite.png",
+    BackgroundColor = Color.LightGreen
+};
+favoriteSwipeItem.Invoked += OnFavoriteSwipeItemInvoked;
+
+SwipeItem deleteSwipeItem = new SwipeItem
+{
+    Text = "Delete",
+    IconImageSource = "delete.png",
+    BackgroundColor = Color.LightPink
+};
+deleteSwipeItem.Invoked += OnDeleteSwipeItemInvoked;
+
+List<SwipeItem> swipeItems = new List<SwipeItem>() { favoriteSwipeItem, deleteSwipeItem };
+
+// SwipeView content
+Grid grid = new Grid
+{
+    HeightRequest = 60,
+    WidthRequest = 300,
+    BackgroundColor = Color.LightGray
+};
+grid.Children.Add(new Label
+{
+    Text = "Swipe right",
+    HorizontalOptions = LayoutOptions.Center,
+    VerticalOptions = LayoutOptions.Center
+});
+
+SwipeView swipeView = new SwipeView
+{
+    LeftItems = new SwipeItems(swipeItems),
+    Content = grid
+};
+```
+
 In this example, the `SwipeView` content is a [`Grid`](xref:Xamarin.Forms.Grid) that contains a [`Label`](xref:Xamarin.Forms.Label):
 
 [![Screenshot of SwipeView content, on iOS and Android](swipeview-images/swipeview-content.png "SwipeView content")](swipeview-images/swipeview-content-large.png#lightbox "SwipeView content")
@@ -131,14 +174,16 @@ The following example shows two `SwipeItem` objects in the `LeftItems` collectio
 </SwipeView>
 ```
 
-The appearance of each `SwipeItem` is defined by the `Text`, `IconImageSource`, and `BackgroundColor` properties:
+The appearance of each `SwipeItem` is defined by a combination of the `Text`, `IconImageSource`, and `BackgroundColor` properties:
 
 [![Screenshot of SwipeView swipe items, on iOS and Android](swipeview-images/swipeview-swipeitems.png "SwipeView swipe items")](swipeview-images/swipeview-swipeitems-large.png#lightbox "SwipeView swipe items")
 
 When a `SwipeItem` is tapped, its `Invoked` event fires and is handled by its registered event handler. Alternatively, the `Command` property can be set to an `ICommand` implementation that will be executed when the `SwipeItem` is invoked.
 
 > [!NOTE]
-> In addition to defining swipe items as `SwipeItem` objects, it's also possible to define custom swipe item views. For more information, see [Custom swipe items](#custom-swipe-items).
+> When the appearance of a `SwipeItem` is defined only using the `Text` or `IconImageSource` properties, the content is always centered.
+
+In addition to defining swipe items as `SwipeItem` objects, it's also possible to define custom swipe item views. For more information, see [Custom swipe items](#custom-swipe-items).
 
 ## Swipe direction
 

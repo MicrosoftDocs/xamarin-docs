@@ -22,7 +22,7 @@ Common usages for this are things such as authentication dialogs, prompts and to
 3. `ContentPresenter`
 4. `TemplateBinding`
 
-But it's important to know that these are _not_ serving the same purpose in Xamarin.Forms. For more information on this feature, check out the [documentation page](~/xamarin-forms/app-fundamentals/templates/control-templates/index.md).
+But it's important to know that these are _not_ serving the same purpose in Xamarin.Forms. For more information on this feature, check out the [documentation page](~/xamarin-forms/app-fundamentals/templates/control-template.md).
 
 ## XAML
 
@@ -69,11 +69,11 @@ For a complete example, see [Bindable Properties in Xamarin.Forms](~/xamarin-for
 
 ### Attached properties
 
-Attached properties are a subset of the bindable property and they work the same way they do in WPF. The primary difference is that the property wrapper is ommitted in this case and replaced with a set of static get/set methods on the owning class. See [Attached Properties in Xamarin.Forms](~/xamarin-forms/xaml/attached-properties.md) for more information.
+Attached properties are a subset of the bindable property and they work the same way they do in WPF. The primary difference is that the property wrapper is omitted in this case and replaced with a set of static get/set methods on the owning class. See [Attached Properties in Xamarin.Forms](~/xamarin-forms/xaml/attached-properties.md) for more information.
 
 ### Using the binding engine
 
-The process for using the binding engine is the same as it is in WPF. It can be utilized in code-behind by creating a `Binding` object tied to a source object (any .NET type) and an optional property value (if ommitted, it treats the source object as the property itself - just like WPF). You can then use `SetBinding` on any `BindableObject` to associate the binding to a `BindableProperty`.
+The process for using the binding engine is the same as it is in WPF. It can be utilized in code-behind by creating a `Binding` object tied to a source object (any .NET type) and an optional property value (if omitted, it treats the source object as the property itself - just like WPF). You can then use `SetBinding` on any `BindableObject` to associate the binding to a `BindableProperty`.
 
 Alternatively, you can define the binding relationship in XAML using the `BindingExtension`. It has the same basic values as the extension in WPF.
 
