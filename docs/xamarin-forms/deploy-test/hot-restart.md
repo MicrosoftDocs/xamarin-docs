@@ -15,19 +15,22 @@ ms.date: 01/14/2020
 
 Xamarin Hot Restart enables you to quickly test changes to your app during development, including multi-file code edits, resources, and references. It pushes the new changes to the existing app bundle on the debug target which results in a much faster build and deploy cycle.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Xamarin Hot Restart is currently available in Visual Studio 2019 version 16.5 Preview and supports iOS apps using Xamarin.Forms. Support for Visual Studio for Mac and non-Xamarin.Forms apps is on the roadmap.
 
 ## Requirements
 
-- Visual Studio 2019 version 16.5 Preview 2 or newer
+- Visual Studio 2019 version 16.5 Preview 3
 - iTunes (64-bit)
 - Apple Developer account
 
 
 ## Initial setup
 
-1. Ensure the iOS project is set as the startup project and the build configuration set to **Debug|iPhone**.
+> [!NOTE]
+> Xamarin Hot Restart is disabled by default while it is in preview. You can enable it under **Tools > Options > Environment > Preview Features > Enable Xamarin Hot Restart**.
+
+1. Ensure the iOS project is set as the startup project and the build configuration is set to **Debug|iPhone**.
 
    1. If this is an existing project, go to **Build > Configuration Manager…** and ensure **Deploy** is enabled for the iOS project.
 
@@ -53,15 +56,18 @@ You can make edits to your code files while debugging, then press the **Restart*
 
 [![](hot-restart-images/restart.png "Screenshot of the debug toolbar with the restart button highlighted.")](hot-restart-images/toolbar.png)
 
+You can also use the `HOTRESTART` preprocessor symbol to prevent certain code from executing when debugging with Xamarin Hot Restart.
+
 ## Limitations
 - Only iOS apps built with Xamarin.Forms and iOS devices are currently supported.
-- Storyboard and XIB files are not supported and the app may crash if it attempts to load these at runtime. If you are using these in your app, please let us know as we are interested in this supporting this scenario in the future.
-- Static iOS libraries and frameworks are not supported. You may see runtime errors or crashes if your app attempts to load these. However, dynamic iOS libraries are supported.
+- Storyboard and XIB files are not supported and the app may crash if it attempts to load these at runtime. Use the `HOTRESTART` preprocessor symbol to prevent this code from executing.
+- Static iOS libraries and frameworks are not supported and you may see runtime errors or crashes if your app attempts to load these. Use the `HOTRESTART` preprocessor symbol to prevent this code from executing. Dynamic iOS libraries are supported.
 - You cannot use Xamarin Hot Restart to create app bundles for publishing. You will still need a Mac machine to do a full compilation, signing, and deployment for your application to production.
 
 ## Troubleshoot
 - The setup wizard will not detect iTunes if it was installed via the Microsoft Store. You will need to uninstall that version first then download the [installer from Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
 - There is a known issue where having device-specific builds enabled prevents the app from entering debug mode. Workaround is to disable this under **Properties > iOS Build** and retry debugging. This will be fixed in a future release.
 - If the app is already present on the device, trying to deploy with Hot Restart may fail with a `AMDeviceStartHouseArrestService` error. The workaround is to uninstall the app on the device then deploy again.
+- Entering an Apple ID that is not part of the Apple Developer Program will result in the following error: `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID`. You must have a valid Apple Developer account to use Xamarin Hot Restart on iOS devices. 
 
 To report additional issues, please use the feedback tool at [Help > Send Feedback > Report a Problem](/visualstudio/ide/feedback-options?view=vs-2019#report-a-problem).
