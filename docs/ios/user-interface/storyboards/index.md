@@ -388,6 +388,14 @@ We can apply this approach to any Segue on this view controller by checking the 
 
 Refer to the Storyboards.Conditional solution in the [Manual Storyboards sample](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) for a working example.
 
+<a name="Selecting-a-Preferred-Designer-Tool"/>
+
+### Setting A Preferred Designer Tool
+
+If you prefer to use the Xcode Interface builder by default, you can choose it in the Visual Studio for Mac preferences under **Projects > iOS**:
+
+[![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")](images/set-preferred-designer-tool.png#lightbox)
+
 <a name="Using-Storyboard-References" />
 
 ## Using Storyboard References
