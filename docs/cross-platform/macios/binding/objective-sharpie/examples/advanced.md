@@ -119,7 +119,13 @@ Done.
 
 You will notice that we passed a `-scope build/Headers` argument to Objective Sharpie. Because C and Objective-C libraries must `#import` or `#include` other header files that are implementation details of the library and not API you wish to bind, the `-scope` argument tells Objective Sharpie to ignore any API that is not defined in a file somewhere within the `-scope` directory.
 
-You will find the `-scope` argument is often optional for cleanly implemented libraries, however there is no harm in explicitly providing it.
+You will find the `-scope` argument is often optional for cleanly implemented libraries, however there is no harm in explicitly providing it. 
+
+> [!TIP]
+> If the library's headers import any iOS SDK headers, e.g. `#import <Foundation.h>`,
+> then you will need to set the scope otherwise Objective Sharpie will generate binding
+> definitions for the iOS SDK header that was imported, resulting in a huge binding that will 
+> likely generate errors when compiling the binding project. 
 
 Additionally, we specified `-c -Ibuild/headers`. Firstly, the `-c` argument tells Objective Sharpie to stop interpreting command line arguments and pass any subsequent arguments _directly to the clang compiler_. Therefore, `-Ibuild/Headers` is a clang compiler argument that instructs clang to search for includes under `build/Headers`, which is where the POP headers live. Without this argument, clang would not know where to locate the files that `POP.h` is `#import`ing. _Almost all "issues" with using Objective Sharpie boil down to figuring out what to pass to clang_.
 
