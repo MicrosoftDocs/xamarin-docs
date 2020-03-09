@@ -361,7 +361,7 @@ when packaging Release applications.
   This property is only relevant if `$(AndroidPackageFormat)` is set
   to `aab`.
 
-  Added in Xamarin.Android 10.2.
+  Added in Xamarin.Android 10.3.
 
   [bundle-config-format]: https://developer.android.com/studio/build/building-cmdline#bundleconfig
 
