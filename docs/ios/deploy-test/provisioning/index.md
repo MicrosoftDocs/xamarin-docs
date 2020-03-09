@@ -1,6 +1,6 @@
 ---
 title: "Code Signing and Provisioning for Xamarin.iOS Apps"
-description: "This document links to guides that describe device provisioning, working with capabilities, working with entitlements, the Info.plist file, and fastlane."
+description: "This document links to guides that describe device provisioning, working with capabilities, working with entitlements, and the Info.plist file."
 ms.prod: xamarin
 ms.assetid: 92B35AB1-7AB7-3D3B-DB31-CC971E0B43AE
 ms.technology: xamarin-ios
@@ -28,7 +28,3 @@ Entitlements are special app capabilities and security permissions granted to ap
 ## [Info.plist Reference](infoplist-reference.md)
 
 A reference guide for Info.plist keys.
-
-## [Introduction to Fastlane for iOS](~/ios/deploy-test/provisioning/fastlane/index.md)
-
-This guide introduces the various fastlane tools that can be used to code sign iOS applications.
