@@ -421,10 +421,18 @@ From the above, we can see that we have the `iphoneos9.3` SDK installed on our m
 Enter the following command in the Terminal app:
 
 ```bash
-sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
+sharpie bind --output=InfColorPicker --namespace=InfColorPicker --sdk=[iphone-os] -scope [full-path-to-project]/InfColorPicker/InfColorPicker [full-path-to-project]/InfColorPicker/InfColorPicker/*.h
 ```
 
-Where `[full-path-to-project]` is the full path to the directory where the **InfColorPicker** Xcode project file is located on our computer, and [iphone-os] is the iOS SDK that we have installed, as noted by the `sharpie xcode -sdks` command. Note that in this example we've passed **\*.h** as a parameter, which includes *all* the header files in this directory - normally you should NOT do this, but instead carefully read through the header files to find the top-level **.h** file that references all the other relevant files, and just pass that to Objective Sharpie.
+Where `[full-path-to-project]` is the full path to the directory where the **InfColorPicker** Xcode project file is located on our computer, and [iphone-os] is the iOS SDK that we have installed, as noted by the `sharpie xcode -sdks` command. Note that in this example we've passed **\*.h** as a parameter, which includes *all* the header files in this directory - normally you should NOT do this, but instead carefully read through the header files to find the top-level **.h** file that references all the other relevant files, and just pass that to Objective Sharpie. 
+
+> [!tip] 
+> For the `-scope` argument, pass in the folder that has the headers you want to bind. 
+> Without the `-scope` argument, Objective Sharpie will try tpo generate bindings for any 
+> iOS SDK headers that are imported, e.g. `#import <UIKit.h>`, resulting in a huge definitions 
+> file that will likely generate errors when compiling the binding project. With the `-scope` 
+> argument set, Objective Sharpie will not generate bindings for any headers outside of the 
+> scoped folder. 
 
 The following [output](walkthrough-images/os05.png) will be generated in the terminal:
 
