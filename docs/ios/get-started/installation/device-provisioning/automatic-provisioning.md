@@ -119,9 +119,3 @@ attempt to create an explicit (instead of a wildcard) App ID.
 - [App Distribution](~/ios/deploy-test/app-distribution/index.md)
 - [Troubleshooting](~/ios/deploy-test/troubleshooting.md)
 - [Apple - App Distribution Guide](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/Introduction/Introduction.html)
-
-## Related Video
-
-> [!Video https://channel9.msdn.com/Shows/XamarinShow/Snack-Pack-Simplified-iOS-Provisioning-in-Visual-Studio-with-fastlane/player]
-
-[!include[](~/essentials/includes/xamarin-show-essentials.md)]

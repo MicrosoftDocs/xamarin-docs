@@ -615,6 +615,22 @@
     {
       "source_path": "docs/get-started/requirements.md",
       "redirect_url": "/xamarin/get-started/supported-platforms/"
+    },
+    {
+      "source_path": "docs/ios/deploy-test/provisioning/fastlane/index.md",
+      "redirect_url": "/xamarin/ios/get-started/installation/device-provisioning/"
+    },
+    {
+      "source_path": "docs/ios/deploy-test/provisioning/fastlane/cert.md",
+      "redirect_url": "/xamarin/ios/get-started/installation/device-provisioning/"
+    },
+    {
+      "source_path": "docs/ios/deploy-test/provisioning/fastlane/sigh.md",
+      "redirect_url": "/xamarin/ios/get-started/installation/device-provisioning/"
+    },
+    {
+      "source_path": "docs/ios/deploy-test/provisioning/fastlane/match.md",
+      "redirect_url": "/xamarin/ios/get-started/installation/device-provisioning/"
     }
   ]
 }
