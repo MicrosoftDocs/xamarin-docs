@@ -204,13 +204,12 @@ will be sufficient.
 
 #### Mac
 
-There is not currently a built-in symbol for Xamarin.Mac, but you can
-add your own in the Mac app project **Options > Build > Compiler** in the
-**Define symbols** box, or edit the **.csproj** file and add there (for
-example `__MAC__`)
+Xamarin.Mac defines `__MACOS__` which you can use to compile for macOS only:
 
-```xml
-<PropertyGroup><DefineConstants>__MAC__;$(DefineConstants)</DefineConstants></PropertyGroup>
+```csharp
+#if __MACOS__
+// macOS-specific code
+#endif
 ```
 
 #### Universal Windows Platform (UWP)
