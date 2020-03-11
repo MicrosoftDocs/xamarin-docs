@@ -222,6 +222,10 @@ through how that transition can be set up in code.
 
 2. Right-click the Storyboard file and select **Open With > Xcode Interface Builder** to open it in Xcode.
 
+    *If you prefer to use the Xcode Interface builder by default, you can choose it in the Visual Studio for Mac preferences under **Projects > iOS**:*
+
+![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")
+
 3. In Xcode, open the Library (via **View > Show Library** or *Shift + Command + L*) to show a list of objects which can be added to the Storyboard. Add a `Navigation Controller` to the Storyboard by dragging the object from the list onto the Storyboard. By default, the `Navigation Controller` will provide two screens; the screen on the right is a `TableViewController` which we will be replacing with a simpler view, so it can be removed by clicking the view and pressing the Delete key.
 
     [![](images/add-navigation-controller.png "Adding a NavigationController from the Library")](images/add-navigation-controller.png#lightbox)
@@ -387,12 +391,6 @@ In this code we have matched the segueIdentifier to our `SegueToPink` segue, so 
 We can apply this approach to any Segue on this view controller by checking the segueIdentifier argument to the ShouldPerformSegue method. In this case we only have one Segue identifier – `SegueToPink`.
 
 Refer to the Storyboards.Conditional solution in the [Manual Storyboards sample](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) for a working example.
-
-### Set a preferred designer tool
-
-If you prefer to use the Xcode Interface builder by default, you can choose it in the Visual Studio for Mac preferences under **Projects > iOS**:
-
-![("Selecting the preferred designer tool")](images/set-preferred-designer-tool.png)
 
 <a name="Using-Storyboard-References" />
 
