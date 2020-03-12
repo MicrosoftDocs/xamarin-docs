@@ -9,7 +9,7 @@ ms.date: 01/06/2020
 
 # Xamarin.Essentials: App Theme
 
-The **RequestedTheme** API is part of the [AppInfo](/app-information.md) class and provides information as to what theme is requested for your running app by the system.
+The **RequestedTheme** API is part of the [`AppInfo`](app-information.md) class and provides information as to what theme is requested for your running app by the system.
 
 ## Get started
 
