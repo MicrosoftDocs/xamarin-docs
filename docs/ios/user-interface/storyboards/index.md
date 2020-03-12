@@ -222,6 +222,10 @@ through how that transition can be set up in code.
 
 2. Right-click the Storyboard file and select **Open With > Xcode Interface Builder** to open it in Xcode.
 
+    *If you prefer to use the Xcode Interface builder by default, you can choose it in the Visual Studio for Mac preferences under **Projects > iOS**:*
+
+![](images/set-preferred-designer-tool.png "Selecting the preferred designer tool")
+
 3. In Xcode, open the Library (via **View > Show Library** or *Shift + Command + L*) to show a list of objects which can be added to the Storyboard. Add a `Navigation Controller` to the Storyboard by dragging the object from the list onto the Storyboard. By default, the `Navigation Controller` will provide two screens; the screen on the right is a `TableViewController` which we will be replacing with a simpler view, so it can be removed by clicking the view and pressing the Delete key.
 
     [![](images/add-navigation-controller.png "Adding a NavigationController from the Library")](images/add-navigation-controller.png#lightbox)
