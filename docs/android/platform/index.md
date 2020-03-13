@@ -49,7 +49,7 @@ will discuss how to implement app-linking in an Android 6.0 application
 and how to configure a website to grant permissions to the mobile app
 to handle app-links for the domain.
 
-## [App-Linking](~/android/platform/androidx.md)
+## [AndroidX](~/android/platform/androidx.md)
 
 This article provides an outline of using AndroidX within your
 Xamarin.Android projects and provides links to documentation
