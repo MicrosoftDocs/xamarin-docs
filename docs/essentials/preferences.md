@@ -68,6 +68,18 @@ The following data types are supported in **Preferences**:
 - **string**
 - **DateTime**
 
+## Integrating with System Settings
+
+Preferences are store natively, which allows you to integrate your settings into the native system settings. Follow the platform documetnation and samples to integrate with the platform.
+
+### Apple Platforms
+* Apple: [Implementing an iOS Settings Bundle](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
+* [iOS Applicaton Preferences Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
+* [watchOS Settings](https://developer.xamarin.com/guides/ios/watch/working-with/settings/)
+
+### Android
+* Android: [Getting Started with Settings Screens](https://developer.android.com/guide/topics/ui/settings.html)
+
 ## Implementation Details
 
 Values of `DateTime` are stored in a 64-bit binary (long integer) format using two methods defined by the `DateTime` class: The [`ToBinary`](xref:System.DateTime.ToBinary) method is used to encode the `DateTime` value, and the [`FromBinary`](xref:System.DateTime.FromBinary(System.Int64)) method decodes the value. See the documentation of these methods for adjustments that might be made to decoded values when a `DateTime` is stored that is not a Coordinated Universal Time (UTC) value.
