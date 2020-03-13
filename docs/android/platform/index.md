@@ -49,6 +49,13 @@ will discuss how to implement app-linking in an Android 6.0 application
 and how to configure a website to grant permissions to the mobile app
 to handle app-links for the domain.
 
+## [AndroidX](~/android/platform/androidx.md)
+
+This article provides an outline of using AndroidX within your
+Xamarin.Android projects and provides links to documentation
+that illustrates how to migrate your application from the 
+Android Support Library to AndroidX.
+
 ## [Android 10](~/android/platform/android-10.md)
 
 This article provides an outline of the new features in Android 10,
