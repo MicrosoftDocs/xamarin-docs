@@ -16,11 +16,11 @@ ms.date: 03/16/2020
 Xamarin Hot Restart enables you to quickly test changes to your app during development, including multi-file code edits, resources, and references. It pushes the new changes to the existing app bundle on the debug target which results in a much faster build and deploy cycle.
 
 > [!IMPORTANT]
-> Xamarin Hot Restart is currently available in Visual Studio 2019 version 16.6 stable and supports iOS apps using Xamarin.Forms. Support for Visual Studio for Mac and non-Xamarin.Forms apps is on the roadmap.
+> Xamarin Hot Restart is currently available in Visual Studio 2019 version 16.5 stable and supports iOS apps using Xamarin.Forms. Support for Visual Studio for Mac and non-Xamarin.Forms apps is on the roadmap.
 
 ## Requirements
 
-- Visual Studio 2019 version 16.6
+- Visual Studio 2019 version 16.5
 - iTunes (64-bit)
 - Apple Developer account and paid [Apple Developer Program](https://developer.apple.com/programs) enrollment
 
