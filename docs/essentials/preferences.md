@@ -68,9 +68,9 @@ The following data types are supported in **Preferences**:
 - **string**
 - **DateTime**
 
-## Integrating with System Settings
+## Integrate with System Settings
 
-Preferences are store natively, which allows you to integrate your settings into the native system settings. Follow the platform documetnation and samples to integrate with the platform.
+Preferences are store natively, which allows you to integrate your settings into the native system settings. Follow the platform documetnation and samples to integrate with the platform:
 
 * Apple: [Implementing an iOS Settings Bundle](https://developer.apple.com/library/content/documentation/Cocoa/Conceptual/UserDefaults/Preferences/Preferences.html)
 * [iOS Applicaton Preferences Sample](https://docs.microsoft.com/samples/xamarin/ios-samples/appprefs/)
