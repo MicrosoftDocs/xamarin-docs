@@ -4,9 +4,9 @@ description: "This document describes how to setup and use Xamarin Hot Restart t
 ms.prod: xamarin
 ms.assetid: 6BC62A88-9368-41BB-8494-760F2A4805DB
 ms.technology: xamarin-forms
-author: jimmgarrido
-ms.author: jigarrid
-ms.date: 01/14/2020
+author: maddyleger1
+ms.author: maleger
+ms.date: 03/16/2020
 ---
 
 # Xamarin Hot Restart (Preview)
@@ -16,13 +16,13 @@ ms.date: 01/14/2020
 Xamarin Hot Restart enables you to quickly test changes to your app during development, including multi-file code edits, resources, and references. It pushes the new changes to the existing app bundle on the debug target which results in a much faster build and deploy cycle.
 
 > [!IMPORTANT]
-> Xamarin Hot Restart is currently available in Visual Studio 2019 version 16.5 Preview and supports iOS apps using Xamarin.Forms. Support for Visual Studio for Mac and non-Xamarin.Forms apps is on the roadmap.
+> Xamarin Hot Restart is currently available in Visual Studio 2019 version 16.6 stable and supports iOS apps using Xamarin.Forms. Support for Visual Studio for Mac and non-Xamarin.Forms apps is on the roadmap.
 
 ## Requirements
 
-- Visual Studio 2019 version 16.5 Preview 3
+- Visual Studio 2019 version 16.6
 - iTunes (64-bit)
-- Apple Developer account
+- Apple Developer account and paid [Apple Developer Program](https://developer.apple.com/programs) enrollment
 
 
 ## Initial setup
@@ -40,7 +40,7 @@ Xamarin Hot Restart enables you to quickly test changes to your app during devel
 
 3. If iTunes is not installed, click **Download iTunes** to download the installer. Click **Next** when the iTunes installation is complete.
 
-4. Connect an iOS device to your machine. The device name will appear in the wizard once it is detected. Click **Next**.
+4. Connect an iOS device to your machine. If a device was already plugged in, unplug then reconnect it. The device name will appear in the wizard once it is detected. Click **Next**.
 
 5. Enter your Apple Developer account credentials and click **Next**.
 
@@ -59,15 +59,18 @@ You can make edits to your code files while debugging, then press the **Restart*
 You can also use the `HOTRESTART` preprocessor symbol to prevent certain code from executing when debugging with Xamarin Hot Restart.
 
 ## Limitations
+
 - Only iOS apps built with Xamarin.Forms and iOS devices are currently supported.
+- Only 64-bit iOS devices are supported. As of iOS 11, Apple no longer allows running iOS apps on the 32-bit architecture (devices earlier than iPhone 5s).
 - Storyboard and XIB files are not supported and the app may crash if it attempts to load these at runtime. Use the `HOTRESTART` preprocessor symbol to prevent this code from executing.
 - Static iOS libraries and frameworks are not supported and you may see runtime errors or crashes if your app attempts to load these. Use the `HOTRESTART` preprocessor symbol to prevent this code from executing. Dynamic iOS libraries are supported.
 - You cannot use Xamarin Hot Restart to create app bundles for publishing. You will still need a Mac machine to do a full compilation, signing, and deployment for your application to production.
 
 ## Troubleshoot
+
 - The setup wizard will not detect iTunes if it was installed via the Microsoft Store. You will need to uninstall that version first then download the [installer from Apple](https://go.microsoft.com/fwlink/?linkid=2101014).
 - There is a known issue where having device-specific builds enabled prevents the app from entering debug mode. Workaround is to disable this under **Properties > iOS Build** and retry debugging. This will be fixed in a future release.
 - If the app is already present on the device, trying to deploy with Hot Restart may fail with a `AMDeviceStartHouseArrestService` error. The workaround is to uninstall the app on the device then deploy again.
-- Entering an Apple ID that is not part of the Apple Developer Program will result in the following error: `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID`. You must have a valid Apple Developer account to use Xamarin Hot Restart on iOS devices. 
+- Entering an Apple ID that is not part of the Apple Developer Program might result in the following error: `Authentication Error. Xcode 7.3 or later is required to continue developing with your Apple ID`. You must have a valid Apple Developer account to use Xamarin Hot Restart on iOS devices. 
 
 To report additional issues, please use the feedback tool at [Help > Send Feedback > Report a Problem](/visualstudio/ide/feedback-options?view=vs-2019#report-a-problem).
