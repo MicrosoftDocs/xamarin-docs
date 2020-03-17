@@ -213,6 +213,22 @@ double miles = Location.CalculateDistance(boston, sanFrancisco, DistanceUnits.Mi
 
 The `Location` constructor has latitude and longitude arguments in that order. Positive latitude values are north of the equator, and positive longitude values are east of the Prime Meridian. Use the final argument to `CalculateDistance` to specify miles or kilometers. The `UnitConverters` class also defines `KilometersToMiles` and `MilesToKilometers` methods for converting between the two units.
 
+## Platform Differences
+
+# [Android](#tab/android)
+
+Altitude is calculated different on each platform. On Android, [altitude](https://developer.android.com/reference/android/location/Location#getAltitude()) if available is returned in meters above the WGS 84 reference ellipsoid. If this location does not have an altitude then 0.0 is returned.
+
+# [iOS](#tab/ios)
+
+Altitude is calculated different on each platform. On iOS, [altitude](https://developer.apple.com/documentation/corelocation/cllocation/1423820-altitude) is measured in meters. Positive values indicate altitudes above sea level, while negative values indicate altitudes below sea level.
+
+# [UWP](#tab/uwp)
+
+Altitude is calculated different on each platform. On UWP, altitude is returned in meters, see the [AltitudeReferenceSystem](https://docs.microsoft.com/uwp/api/windows.devices.geolocation.geopoint.altitudereferencesystem#Windows_Devices_Geolocation_Geopoint_AltitudeReferenceSystem) documentation for more information.
+
+-----
+
 ## API
 
 - [Geolocation source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
