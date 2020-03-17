@@ -20,7 +20,7 @@ Automatic provisioning is available on Visual Studio for Mac, Visual Studio 2019
 
 > [!NOTE]
 > You must also have a paid Apple Developer account to use this feature. More information on Apple developer accounts is available in the [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) guide.
-> If you do not have a paid Apple developer account, see the [Free Provisioning for Xamarin.iOS guide] (https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/free-provisioning?tabs=macos).
+> If you do not have a paid Apple developer account, see the [Free Provisioning for Xamarin.iOS] (https://docs.microsoft.com/en-us/xamarin/ios/get-started/installation/device-provisioning/free-provisioning?tabs=macos) guide.
 
 > [!NOTE]
 > Before you begin, be sure to first accept any license agreements in either the [Apple Developer portal](https://developer.apple.com/account/) or [App Store Connect](https://appstoreconnect.apple.com/).
