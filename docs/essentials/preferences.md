@@ -39,7 +39,7 @@ var myValue = Preferences.Get("my_key", "default_value");
 To check if a given _key_ exists in preferences:
 
 ```csharp
-bool hasKey = Preferences.HasKey("my_key");
+bool hasKey = Preferences.ContainsKey("my_key");
 ```
 
 To remove the _key_ from preferences:
