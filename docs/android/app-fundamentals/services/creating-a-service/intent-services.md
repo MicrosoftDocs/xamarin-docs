@@ -50,7 +50,7 @@ Work is sent to an `IntentService` by instantiating an `Intent` and then calling
 Intent downloadIntent = new Intent(this, typeof(DemoIntentService));
 
 // This is just one example of passing some values to an IntentService via the Intent:
-downloadIntent.PutPutExtra("file_to_download", "http://www.somewhere.com/file/to/download.zip");
+downloadIntent.PutExtra("file_to_download", "http://www.somewhere.com/file/to/download.zip");
 
 StartService(downloadIntent);
 ```
