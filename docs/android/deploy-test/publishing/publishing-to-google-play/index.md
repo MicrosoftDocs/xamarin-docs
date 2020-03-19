@@ -52,7 +52,7 @@ publisher account. To sign up for a publisher account follow these steps:
 1. Confirm verification by e-mail.
 1. After the account has been created, it is possible to publish applications using Google Play.
 
-Google Play does not support all countries in the world. The most up to date
+Google Play does not support all countries in the world. The most up-to-date
 lists of countries can be found in the following links:
 
 1. [Supported Locations for Developer &amp; Merchant Registration](https://support.google.com/googleplay/android-developer/bin/answer.py?hl=en&amp;answer=150324) &ndash; This is a list of all countries where developers may register as merchants and sell paid applications.
@@ -110,13 +110,13 @@ The [Android Asset Studio](https://romannurik.github.io/AndroidAssetStudio/)
 is a helpful tool for creating suitable launcher icons and the
 high-resolution application icon.
 
-#### Screen Shots
+#### Screenshots
 
-Google play requires a minimum of two and a maximum of eight screen shots for
-an application. They will be displayed on an application’s details page in
+Google play requires a minimum of two and a maximum of eight screenshots for
+an application. They will be displayed on an application's details page in
 Google Play.
 
-The specs for screen shots are:
+The specs for screenshots are:
 
 1. 24 bit PNG or JPG with no alpha channel
 1. 320w x 480h or 480w x 800h or 480w x 854h. Landscaped images will be cropped.
@@ -174,8 +174,7 @@ In
 the **Distribution Channel** dialog presented two choices for
 distribution: **Ad Hoc** and **Google Play**. If the **Signing
 Identity** dialog is displayed instead, click **Back** to return to the
-**Distribution Channel** dialog. Select **Google Play** and click
-**Next**:
+**Distribution Channel** dialog. Select **Google Play**:
 
 [![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
 
@@ -217,7 +216,7 @@ Play:
 
 In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive),
 the **Sign and Distribute...** dialog presented two choices for
-distribution. Select **Google Play**and click **Next**:
+distribution. Select **Google Play** and click **Next**:
 
 [![Select Android Distribution dialog](images/xs/01-select-google-play-sml.png)](images/xs/01-select-google-play.png#lightbox)
 
@@ -241,21 +240,22 @@ Google Play Developer account, see [Get Started with
 Publishing](https://developer.android.com/distribute/googleplay/start.html).
 Also, the Google Play Developer API [Getting Started](https://developers.google.com/android-publisher/getting_started)
 explains how to use the Google Play Developer API. After you sign into
-the Google Play Developer Console, click **Settings**:
+the Google Play Developer Console, click **CREATE APPLICATION**:
 
-[![Settings icon](images/01-google-play-developer-console-sml.png)](images/01-google-play-developer-console.png#lightbox)
+[![Create new project button](images/01-create-new-project-sml.png)](images/01-create-new-project.png#lightbox)
 
-In the **SETTINGS** page, select **API access**and click the **Create new project** button:
-
-[![Create new project button](images/02-create-new-project-sml.png)](images/02-create-new-project.png#lightbox)
-
-After a minute or so, the new API project is automatically generated and
+After creating the new project, it will be
 linked to your Google Play Developer Console account.
 
 The next step is to create an OAuth Client for the app (if one has not
 already been created). When users request access to their private 
 data using your app, your OAuth Client ID is used to authenticate your app.
-Click **Create OAuth Client** to create a new OAuth client:
+
+Go to the **Settings** page.
+
+[![Settings icon](images/02-google-play-developer-console-sml.png)](images/02-google-play-developer-console.png#lightbox)
+
+In the **Settings** page, select **API access** and click **CREATE OAUTH CLIENT** to create a new OAuth client:
 
 [![Create OAuth Client button](images/03-create-oauth-client-sml.png)](images/03-create-oauth-client.png#lightbox)
 
@@ -276,7 +276,7 @@ OAuth Client name is changed to the name of the app, **MyApp**:
 
 [![Client ID and secret displayed](images/06-client-id-and-secret-sml.png)](images/06-client-id-and-secret.png#lightbox)
 
-Click **Save**to save changes. This returns to the **Credentials** page where to download the credentials by clicking on the  **Download JSON** icon :
+Click **Save** to save changes. This returns to the **Credentials** page where to download the credentials by clicking on the  **Download JSON** icon:
 
 [![Download JSON icon](images/07-download-json-sml.png)](images/07-download-json.png#lightbox)
 
@@ -309,24 +309,23 @@ code. Closing..._ and the app is added to the list of Google Play
 Accounts in Visual Studio. In the **Google Play Accounts** dialog,
 click **Continue**:
 
-[![Account added to Google Play Acccounts](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
+[![Account added to Google Play Accounts](images/vs/07-account-added-sml.png)](images/vs/07-account-added.png#lightbox)
 
 Next, the **Google Play Track** dialog is presented. Google Play offers
-four possible tracks for uploading your app:
+five possible tracks for uploading your app:
 
-- **Alpha** &ndash; Used for uploading a very early version of the app to a small list of testers.
-- **Beta** &ndash; Used for uploading an early version of the app to a larger list of testers.
-- **Rollout** &ndash; Allows a percentage of users to receive an updated version of the app; this makes it possible to slowly increase the percentage from say, 10% of users and increase it to 100% of users while you iron out bugs.
-- **Production** &ndash; Select this track when the app is ready for full distribution from the Google Play store.
+- **Internal** &ndash; Used for quickly distributing your app for internal testing and quality assurance checks.
+- **Alpha** &ndash; Used for uploading an early version of your app to a small list of testers.
+- **Beta** &ndash; Used for uploading an early version of your app to a larger list of testers.
+- **Production** &ndash; Used for full distribution to the Google Play store.
+- **Custom** &ndash; Used for testing pre-release versions of your app with specific users by creating a list of testers by email address.
 
-Choose which Google Play track will be used for uploading the app and
-click **Upload**. If you select **Rollout**, be sure to enter a
-percentage value:
+Choose which Google Play track will be used for uploading the app and click **Upload**.
 
-[![Select Alpha, Beta, Rollout, or Production](images/vs/08-google-play-track-sml.png)](images/vs/08-google-play-track.png#lightbox)
+[![Account added to Google Play Accounts](images/vs/08-google-play-track-sml.png)](images/vs/07-account-added.png#lightbox)
 
-For more information about Google Play testing and staged rollouts, see
-[Set up alpha/beta tests](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
+For more information about Google Play testing, see
+[Set up open/closed/internal tests](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
 
 Next, a dialog is presented to enter the password for the signing certificate.
 Enter the password and click **OK**:
@@ -344,6 +343,8 @@ left hand corner of Visual Studio:
 
 ### Troubleshooting
 
+If you do not see your custom track when selecting a Google Play track, make sure you have created a release for that track on the Google Play Developer Console. For instructions on how to create a release, see [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
+
 Note that one APK must have already been submitted to the Google Play
 store before the **Publish to Google Play** will work. If an APK is not
 already uploaded the Publishing Wizard will display the following error
@@ -351,7 +352,7 @@ in the **Errors** pane:
 
 [![You must manually upload your first APK for this app](images/vs/12-upload-error-sml.png)](images/vs/12-upload-error.png#lightbox)
 
-When this error occures, manually upload an APK (such as an Ad-Hoc build) via
+When this error occurs, manually upload an APK (such as an Ad Hoc build) via
 the Google Play Developer Console and use the **Distribution Channel**
 dialog for subsequent APK updates.  For more information, see
 [Manually Uploading the APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md). The version code of the APK must change with each upload, otherwise the following error will occur:
@@ -369,29 +370,27 @@ it possible to register more than one Google Play account and upload future APK'
 different Google Play accounts. Copy the Client ID and Client secret to this dialog
 and click **Register**:
 
-[![Authorize access dialog](images/xs/10-register-sml.png)](images/xs/10-register.png#lightbox)
+[![Authorize access dialog](images/xs/03-register-sml.png)](images/xs/03-register.png#lightbox)
 
 If the Client ID and Client secret are accepted, a **Registration
 Successful** message is displayed. Click **Next**:
 
-[![Registration Successful message](images/xs/11-registration-successful-sml.png)](images/xs/11-registration-successful.png#lightbox)
+[![Registration Successful message](images/xs/04-registration-successful-sml.png)](images/xs/04-registration-successful.png#lightbox)
 
 In the **Google Play Account** dialog, select a Google account and a track
 for uploading the application:
 
-[![Choose Google account dialog](images/xs/12-choose-google-account-sml.png)](images/xs/12-choose-google-account.png#lightbox)
+[![Choose Google account dialog](images/xs/05-choose-google-account-sml.png)](images/xs/05-choose-google-account.png#lightbox)
 
-Google Play offers four possible tracks for uploading your app:
+Google Play offers five possible tracks for uploading your app:
 
-- **Alpha** &ndash; Used for uploading a very early version of the app to a small list of testers.
+- **Internal** &ndash; Used for quickly distributing your app for internal testing and quality assurance checks.
+- **Alpha** &ndash; Used for uploading an early version of your app to a small list of testers.
+- **Beta** &ndash; Used for uploading an early version of your app to a larger list of testers.
+- **Production** &ndash; Used for full distribution to the Google Play store.
+- **Custom** &ndash; Used for testing pre-release versions of your app with specific users by creating a list of testers by email address.
 
-- **Beta** &ndash; Used for uploading an early version of the app to a larger list of testers.
-
-- **Rollout** &ndash; Allows a percentage of users to receive an updated version of the app; this makes it possible to slowly increase the percentage from say, 10% of users and increase it to 100% of users while you iron out bugs.
-
-- **Production** &ndash; Select this track when the app is ready for full distribution from the Google Play store.
-
-For more information about Google Play testing and staged rollouts, see [Set up
+For more information about Google Play testing, see [Set up
 alpha/beta tests](https://support.google.com/googleplay/android-developer/answer/3131213?hl=en).
 
 Next, choose a signing identity to that will be used to sign the app.
@@ -401,15 +400,18 @@ identity, otherwise consult the guide
 for information about creating a new key. After you have selected a
 certificate to sign the application, click **Next**:
 
-[![Android signing identity dialog](images/xs/13-android-signing-identity-sml.png)](images/xs/13-android-signing-identity.png#lightbox)
+[![Android signing identity dialog](images/xs/06-android-signing-identity-sml.png)](images/xs/06-android-signing-identity.png#lightbox)
 
 At this point the app can be uploaded to Google Play. The **Publish to Google Play** dialog summarizes information about your app &ndash; click **Publish** to publish your app to Google Play:
 
-[![Publish to Google Play dialog](images/xs/14-publish-to-google-play-sml.png)](images/xs/14-publish-to-google-play.png#lightbox)
+[![Publish to Google Play dialog](images/xs/07-publish-to-google-play-sml.png)](images/xs/07-publish-to-google-play.png#lightbox)
+
+### Troubleshooting
+
+If you do not see your custom track when selecting a Google Play track to upload your app to, make sure you have created a release for that track on the Google Play Developer Console. For instructions on how to create a release, see [Prepare & roll out releases](https://support.google.com/googleplay/android-developer/answer/7159011?hl=en).
 
 Note that one APK must have already been submitted to the Google Play
-store before the **Publish to Google Play** will work. If an APK is not
-uploaded the following error may occur:
+store before the **Publish to Google Play** will work. If an APK is not uploaded the following error may occur:
 
 > _Google Play requires you to manually upload your first APK for this app. You can use an ad-hoc APK for this._
 
@@ -417,7 +419,7 @@ or
 
 > _No application was found for the given package name. [404]_
 
-To resolve this error, manually upload an APK (such as an Ad-Hoc build) via the Google
+To resolve this error, manually upload an APK (such as an Ad Hoc build) via the Google
 Play Developer Console and use the **Publish to Google Play** dialog for
 subsequent APK updates. For information about how to manually upload an APK, see
 [Manually Uploading the APK](~/android/deploy-test/publishing/publishing-to-google-play/manually-uploading-the-apk.md).
