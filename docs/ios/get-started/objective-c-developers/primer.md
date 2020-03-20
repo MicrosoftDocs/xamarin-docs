@@ -80,7 +80,7 @@ Being a superset of C, Objective-C uses headers for public declarations that are
 For example, the following code includes the `UIKit` namespace, making every class in that namespace available to the implementation:
 
 ```csharp
-using UIKit
+using UIKit;
 namespace MyAppNamespace
 {
     // implementation of classes
