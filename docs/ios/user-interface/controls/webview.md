@@ -84,33 +84,73 @@ App Transport Security, or *ATS* was introduced by Apple in iOS 9 to ensure that
 
 For more information on ATS, including how to implement it in your app, refer to the [App Transport Security](~/ios/app-fundamentals/ats.md) guide.
 
-## UIWebView (deprecated)
-
-> [!IMPORTANT]
-> `UIWebView` is deprecated. Apps using this control will [not be accepted into the
-> App Store as of April 2020, and existing apps need to remove it by December 2020](https://developer.apple.com/news/?id=12232019b).
->
-> [Apple's `UIWebView` documentation](https://developer.apple.com/documentation/uikit/uiwebview) suggests apps should use [`WKWebView`](#wkwebview) instead.
-
-> [!IMPORTANT]
-> If you are looking for resources in regard to the `UIWebView` deprecation warning (ITMS-90809) while using Xamarin.Forms, please refer to the [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) documentation.
+## UIWebView deprecation
 
 `UIWebView` is Apple's legacy way of providing web content in your app. It was released in iOS 2.0, and has been deprecated as of 8.0.
 
-To add a UIWebView to your Xamarin.iOS app, use the following code:
+> [!IMPORTANT]
+> `UIWebView` is deprecated. New apps using this control will [not be accepted into the
+> App Store as of April 2020, and apps updates using this control will not be accepted by December 2020](https://developer.apple.com/news/?id=12232019b).
+>
+> [Apple's `UIWebView` documentation](https://developer.apple.com/documentation/uikit/uiwebview) suggests apps should use [`WKWebView`](#wkwebview) instead.
+>
+> If you are looking for resources in regard to the `UIWebView` deprecation warning (ITMS-90809) while using Xamarin.Forms, please refer to the [Xamarin.Forms WebView](~/xamarin-forms/user-interface/webview.md#uiwebview-deprecation-and-app-store-rejection-itms-90809) documentation.
 
-```csharp
-webView = new UIWebView (View.Bounds);
-View.AddSubview(webView);
+Developers who submitted iOS applications in the last six months (or so) might have received a warning from the App Store, about `UIWebView` being deprecated.
 
-var url = "https://docs.microsoft.com"; // NOTE: https secure request
-webView.LoadRequest(new NSUrlRequest(new NSUrl(url)));
-```
+Deprecations of APIs are common. Xamarin.iOS uses custom attributes to signal those APIs (and suggest replacements when available) back to the developers. What is different this time, and much less common, is that the deprecation **will be enforced** by Apple's App Store at submission time.
 
-This produces the following web view:
+Unfortunately, removing the `UIWebView` type from `Xamarin.iOS.dll` is a [binary breaking change](https://docs.microsoft.com/dotnet/core/compatibility/categories#binary-compatibility). This change will break existing 3rd party libraries, including some that might not be supported or even re-compilable anymore (for example, closed source). This will only create additional problems for developers. Therefore, we are not removing the type *yet*.
 
-[![The effect of ScalesPagesToFit](webview-images/webview.png)](webview-images/webview.png#lightbox)
+Starting with [Xamarin.iOS 13.16](https://docs.microsoft.com/xamarin/ios/release-notes/13/13.16) new detection and tools are available to help you migrate from `UIWebView`.
 
-## Related Links
+### Detection
+
+If you have'nt recently submitted an iOS application to the Apple App Store, you might wonder if this situation applies to your application(s).
+
+To find out, you can add `--warn-on-type-ref=UIKit.UIWebView` to your project's **Additional mtouch arguments.** This will warn of **any** reference to the deprecated `UIWebView` inside your application (and all its dependencies). Different warnings are used to report types **before** and **after** the managed linker has executed.
+
+The warnings, like others, can be turned into errors using `-warnaserror:`. This can be useful if you want to ensure a new dependency to `UIWebView` is not added after your verifications. For example:
+
+* `-warnaserror:1502` will report errors if any references are found in pre-linked assemblies.
+* `-warnaserror:1503` will report errors if any references are found in post-linked assemblies.
+
+You can also silence the warnings if either the pre/post linking results are not useful. For example:
+
+* `-nowarn:1502` will **not** report warnings if any references are found in pre-linked assemblies.
+* `-nowarn:1503` wo;; **not** report warnings if any references are found in post-linked assemblies.
+
+### Removal
+
+Every application is unique. Removing `UIWebView` from your application can require different steps depending on how and where it is used. The most common scenarios are as follows:
+
+- There is no use of `UIWebView` inside your application. Everything is fine. You should **not** have warnings when submitting to the AppStore. Nothing else is required from you.
+- Direct usage of `UIWebView` by your application. Start by removing your use of `UIWebView`, for example, replace it with the newer `WKWebView` (iOS 8) or `SFSafariViewController` (iOS 9) types. Once this is completed the managed linker should not see any reference to `UIWebView` and the final app binary will have no trace of it.
+- Indirect usage. `UIWebView` can be present in some third party libraries, either managed or native that is used by your application. Start by updating your external dependencies to their latest versions since this situation might already be solved in a newer release. If not, contact the maintainer(s) of the libraries and ask about their update plans.
+
+Alternatively, you could try the following approaches:
+
+1. If you're using **Xamarin.Forms**, then read this [blog post](https://devblogs.microsoft.com/xamarin/uiwebview-deprecation-xamarin-forms/).
+1. Enable the managed linker (on the whole project or, at least, on the dependency using `UIWebView`) so it *might* be removed, if not referenced. That will solve the problem but might required additional work to make your code linker-safe.
+1. If you are unable to change the managed linker settings, see the special cases below.
+
+#### Applications cannot use the linker (or change its settings)
+
+If for some reason you are **not** using the managed linker (for example, **Don't link**) then the `UIWebView` symbol will remain in the binary app you submit it to Apple and it might be rejected.
+
+A *forceful* solution is to add `--optimization=force-rejected-types-removal` to your project's **Additional mtouch arguments**. This will remove traces of `UIWebView` from the application. However, any code that refers to the type will **not** work properly (expect exceptions or crashes). This approach should be used only if you're sure that the code is not reachable at runtime (even if it was reachable through static analysis).
+
+#### Support for iOS 7.x (or earlier)
+
+`UIWebView` has been part of iOS since since v2.0. The most common replacements are `WKWebView` (iOS 8) and `SFSafariViewController` (iOS 9). If your application still supports older iOS versions you should consider the following options:
+
+* Make iOS 8 your minimum target version (a build time decision).
+* Only use `WKWebView` if the app is running on iOS 8+ (a runtime decision).
+
+#### Applications not submitted to Apple
+
+If your application isn't submitted to Apple, you should plan to move away from the deprecated API since it can be removed in future iOS releases. However, you can do this transition using your own timetable.
+
+## Related links
 
 - [WebViews (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/webview)
