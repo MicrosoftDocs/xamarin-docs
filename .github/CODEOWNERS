@@ -4,16 +4,16 @@ docs/get-started/ @davidbritch
 docs/whats-new/ @davidbritch
 
 # iOS & Mac
-docs/ios/ @conceptdev
-docs/mac/ @conceptdev
+docs/ios/ @davidortinau
+docs/mac/ @davidortinau
 
 # Android
-docs/android/ @conceptdev
+docs/android/ @davidortinau
 
 # Essentials
 docs/essentials/ @jamesmontemagno
 
 # Other stuff
-docs/graphics-games/ @conceptdev
-docs/tools/ @conceptdev
-docs/cross-platform/ @conceptdev
+docs/graphics-games/ @davidortinau
+docs/tools/ @davidortinau
+docs/cross-platform/ @davidortinau
