@@ -145,7 +145,7 @@ Here's another way to think about `ResourceDictionary` precedence: When the XAML
 
 ## Stand-alone resource dictionaries
 
-A class derived from `ResourceDictionary` can also be in a separate stand-alone file. (More precisely, a class derived from `ResourceDictionary` generally requires a _pair_ of files because the resources are defined in a XAML file but a code-behind file with an `InitializeComponent` call is also necessary.) The resultant file can then be shared among applications.
+A class derived from `ResourceDictionary` can also be in a separate stand-alone file. The resultant file can then be shared among applications.
 
 To create such a file, add a new **Content View** or **Content Page** item to the project (but not a **Content View** or **Content Page** with only a C# file). In both the XAML file and C# file, change the name of the base class from `ContentView` or `ContentPage` to `ResourceDictionary`. In the XAML file, the name of the base class is the top-level element.
 
@@ -210,7 +210,7 @@ A local [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) can be mer
 </ContentPage>
 ```
 
-This syntax does not instantiate the `MyResourceDictionary` class. Instead, it references the XAML file. For that reason, when setting the [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) property, the code-behind file (**MyResourceDictionary.xaml.cs**) isn't required, and the `x:Class` attribute can be removed from the root tag of the **MyResourceDictionary.xaml** file. In addition, when merging resource dictionaries using this approach, Xamarin.Forms will automatically instantiate the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), hence the outer `ResourceDictionary` tags are not required.
+This syntax does not instantiate the `MyResourceDictionary` class. Instead, it references the XAML file. For that reason, when setting the [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) property, a code-behind file isn't required, and the `x:Class` attribute can be removed from the root tag of the **MyResourceDictionary.xaml** file. In addition, when merging resource dictionaries using this approach, Xamarin.Forms will automatically instantiate the [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary), hence the outer `ResourceDictionary` tags are not required.
 
 > [!IMPORTANT]
 > The [`Source`](xref:Xamarin.Forms.ResourceDictionary.Source) property can only be set from XAML.
