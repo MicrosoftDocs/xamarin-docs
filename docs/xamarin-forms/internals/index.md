@@ -6,7 +6,7 @@ ms.assetid: 2273a31c-4022-42ba-befe-0d23ce2ff3b5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/06/2019
+ms.date: 03/20/2020
 ---
 
 # Xamarin.Forms advanced concepts & internals
@@ -20,6 +20,10 @@ Learn about the hierarchy of types used to create the user interface of a Xamari
 ## [Dependency resolution](dependency-resolution.md)
 
 Learn how to inject a dependency resolution method into Xamarin.Forms, so that an application has control over the creation and lifetime of custom renderers, effect, and `DependencyService` implementations.
+
+## [Experimental flags](experimental-flags.md)
+
+Xamarin.Forms experimental flags enable the engineering team to ship new features to users more quickly, while still being able to change feature APIs before they move to a stable release.
 
 ## [Fast renderers](fast-renderers.md)
 
