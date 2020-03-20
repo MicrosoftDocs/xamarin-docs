@@ -118,7 +118,7 @@ The warnings, like others, can be turned into errors using `-warnaserror:`. This
 You can also silence the warnings if either the pre/post linking results are not useful. For example:
 
 * `-nowarn:1502` will **not** report warnings if any references are found in pre-linked assemblies.
-* `-nowarn:1503` wo;; **not** report warnings if any references are found in post-linked assemblies.
+* `-nowarn:1503` will **not** report warnings if any references are found in post-linked assemblies.
 
 ### Removal
 
