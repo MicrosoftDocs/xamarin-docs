@@ -36,7 +36,7 @@ On<iOS>().SetTranslucencyMode(TranslucencyMode.Opaque);
 The `TabbedPage.On<iOS>` method specifies that this platform-specific will only run on iOS. The `TabbedPage.SetTranslucencyMode` method, in the [`Xamarin.Forms.PlatformConfiguration.iOSSpecific`](xref:Xamarin.Forms.PlatformConfiguration.iOSSpecific) namespace, is used to set the translucency mode of the tab bar on a [`TabbedPage`](xref:Xamarin.Forms.TabbedPage) by specifying one of the following `TranslucencyMode` enumeration values:
 
 - `Default`, which sets the tab bar to its default translucency mode. This is the default value of the `TabbedPage.TranslucencyMode` property.
-- `Transparent`, which sets the tab bar to be translucent.
+- `Translucent`, which sets the tab bar to be translucent.
 - `Opaque`, which sets the tab bar to be opaque.
 
 In addition, the `GetTranslucencyMode` method can be used to retrieve the current value of the `TranslucencyMode` enumeration that's applied to the [`TabbedPage`](xref:Xamarin.Forms.TabbedPage).
