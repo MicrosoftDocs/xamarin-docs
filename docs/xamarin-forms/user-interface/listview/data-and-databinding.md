@@ -6,7 +6,7 @@ ms.assetid: B5571660-1E82-4379-95C3-0725288CF5D9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/30/2018
+ms.date: 03/23/2020
 ---
 
 # ListView Data Sources
@@ -112,7 +112,7 @@ public EmployeeListPage()
 ```
 
 > [!WARNING]
-> `ObservableCollection` is not thread safe. Modifying an `ObservableCollection` causes UI updates to happen on the same thread that performed the modifications. If the thread is not the primary UI thread, it will cause an exception.
+> While a `ListView` will update in response to changes in its underlying `ObservableCollection`, a `ListView` will not update if a different `ObservableCollection` instance is assigned to the original `ObservableCollection` reference (e.g. `employees = otherObservableCollection;`).
 
 The following snippet demonstrates a `ListView` bound to a list of employees:
 
@@ -137,6 +137,9 @@ The following snippet demonstrates a `ListView` bound to a list of employees:
 This XAML example defines a `ContentPage` that contains a `ListView`. The data source of the `ListView` is set via the `ItemsSource` attribute. The layout of each row in the `ItemsSource` is defined within the `ListView.ItemTemplate` element. This results in the following screenshots:
 
 ![](data-and-databinding-images/bound-data.png "ListView using Data Binding")
+
+> [!WARNING]
+> `ObservableCollection` is not thread safe. Modifying an `ObservableCollection` causes UI updates to happen on the same thread that performed the modifications. If the thread is not the primary UI thread, it will cause an exception.
 
 ### Binding SelectedItem
 
