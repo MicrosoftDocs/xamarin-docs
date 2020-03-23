@@ -6,7 +6,7 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 09/27/2019
+ms.date: 03/23/2020
 ---
 
 # Xamarin.Forms Data Binding
@@ -23,7 +23,7 @@ To handle this job successfully, the program must be notified of changes in thes
 
 ## The Data Binding Solution
 
-Data binding automates this job, and renders the event handlers unnecessary. (The events are still necessary, however, because the data-binding infrastructure uses them.) Data bindings can be implemented either in code or in XAML, but they are much more common in XAML where they help to reduce the size of the code-behind file. By replacing procedural code in event handlers with declarative code or markup, the application is simplified and clarified.
+Data binding automates this job, and renders the event handlers unnecessary. Data bindings can be implemented either in code or in XAML, but they are much more common in XAML where they help to reduce the size of the code-behind file. By replacing procedural code in event handlers with declarative code or markup, the application is simplified and clarified.
 
 One of the two objects involved in a data binding is almost always an element that derives from `View` and forms part of the visual interface of a page. The other object is either:
 
