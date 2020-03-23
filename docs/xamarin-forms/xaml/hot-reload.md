@@ -54,7 +54,7 @@ XAML Hot Reload supports simultaneous debugging in Visual Studio and Visual Stud
 
 ## Known limitations
 
-* Other Xamarin.Forms targets, such as UWP and MacOS, are *not* yet supported. You can track the progress of UWP support [here](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html).
+* Other Xamarin.Forms targets, such as UWP and macOS, are *not* yet supported. You can track the progress of UWP support [here](https://developercommunity.visualstudio.com/idea/661682/xaml-hot-reload-for-xamarinforms-on-uwp.html).
 * You can't add, remove, or rename files or NuGet packages during a XAML Hot Reload session. If you add or remove a file or NuGet package, rebuild and redeploy your app to continue using XAML Hot Reload.
 * Set your linker to **Don't Link** or **Link None** for the best experience. The **Link SDK only** setting works most of the time, but it may fail in certain cases. Linker settings can be found in your Android and iOS build options.
 * Debugging on a physical iPhone requires the interpreter to use XAML Hot Reload. To do this, open the project settings, select the iOS Build tab, and ensure **Enable the Mono interpreter** setting is enabled. You may need to change the **Platform** option at the top of the property page to **iPhone**.
