@@ -22,6 +22,11 @@ application package and the associated strategies that can be used for
 efficient package deployment during debug and release stages of
 development.
 
+## [Apply Changes](apply-changes.md)
+
+This guide covers the Apply Changes feature which lets you push 
+resource changes to your running app without restarting your app.
+
 ## [Building Apps](building-apps/index.md)
 
 This section describes how the build process works and explains how to

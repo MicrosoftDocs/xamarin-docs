@@ -513,6 +513,8 @@
       items:
         - name: App Package Size
           href: deploy-test/app-package-size.md
+        - name: Apply Changes
+          href: deploy-test/apply-changes.md
         - name: Building Apps
           href: deploy-test/building-apps/index.md
           items:
