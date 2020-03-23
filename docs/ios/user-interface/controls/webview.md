@@ -142,7 +142,7 @@ A *forceful* solution is to add `--optimization=force-rejected-types-removal` to
 
 #### Support for iOS 7.x (or earlier)
 
-`UIWebView` has been part of iOS since since v2.0. The most common replacements are `WKWebView` (iOS 8) and `SFSafariViewController` (iOS 9). If your application still supports older iOS versions you should consider the following options:
+`UIWebView` has been part of iOS since v2.0. The most common replacements are `WKWebView` (iOS 8) and `SFSafariViewController` (iOS 9). If your application still supports older iOS versions you should consider the following options:
 
 * Make iOS 8 your minimum target version (a build time decision).
 * Only use `WKWebView` if the app is running on iOS 8+ (a runtime decision).
