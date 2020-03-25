@@ -40,7 +40,9 @@ Use the following steps to build the app for release:
 - **[Set Packaging Properties](#Set_Packaging_Properties)** &ndash;
     Packaging properties control the creation of the Android
     application package (APK). This step optimizes the APK, protects
-    its assets, and modularizes the packaging as needed.
+    its assets, and modularizes the packaging as needed. Additionally,
+    you can provide your users with an Android App Bundle that's optimized
+    for their devices.
 
 - **[Compile](#Compile)** &ndash; This step compiles the code and
     assets to verify that it builds in Release mode.
@@ -461,6 +463,16 @@ after using ProGuard.
 
 For more information about Multi-Dex, see
 [Configure Apps with Over 64K Methods](https://developer.android.com/tools/building/multidex.html).
+
+### Android App Bundles
+
+App bundles differ from APKs as they cannot be deployed directly to a device. Rather, it's a format that is intended to be uploaded with all of your compiled code and resources. After you upload your signed app bundle, Google Play will have everything it needs to build and sign your application's APKs and serve them to your users using Dynamic Delivery.
+
+To enable support for Android App Bundles, you'll need to opt-in to the `bundle` value of the **Android Package Format** property within your Android project options. Before you do this, ensure you change your project to a `Release` configuration as app bundles are intended for release packages only.
+
+You can now generate an app bundle by following the [Archive Flow](#archive). This will generate an app bundle for your application.
+
+For more information about Android App Bundles, see [Android App Bundles](https://developer.android.com/guide/app-bundle/).
 
 <a name="Compile" />
 
