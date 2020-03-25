@@ -53,6 +53,8 @@ explains the following:
 
  [Material Design Features](~/android/user-interface/android-designer/material-design-features.md)
 
+ [Android Layout Diagnostics](~/android/user-interface/android-designer/diagnostics.md)
+
 ## Summary
 
 This article discussed the feature set of the Xamarin.Android Designer.

@@ -141,6 +141,8 @@
               href: user-interface/android-designer/alternative-layout-views.md
             - name: Material Design Features
               href: user-interface/android-designer/material-design-features.md
+            - name: Android Layout Diagnostics
+              href: user-interface/android-designer/diagnostics.md
         - name: Material Theme
           href: user-interface/material-theme.md
         - name: User Profile
