@@ -6,7 +6,7 @@ ms.assetid: 7A856D31-B300-409E-9AEB-F8A4DB99B37E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/24/2016
+ms.date: 03/23/2019
 ---
 
 # Native Views in XAML
@@ -60,7 +60,7 @@ The following code example demonstrates consuming native views for each platform
 </ContentPage>
 ```
 
-As well as specifying the `clr-namespace` and `assembly` for a native view namespace, a `targetPlatform` must also be specified. This should be set to one of values of the [`TargetPlatform`](xref:Xamarin.Forms.TargetPlatform) enumeration, and will typically be set to `iOS`, `Android`, or `Windows`. At runtime, the XAML parser will ignore any XML namespace prefixes that have a `targetPlatform` that doesn't match the platform on which the application is running.
+As well as specifying the `clr-namespace` and `assembly` for a native view namespace, a `targetPlatform` must also be specified. This should be set to `iOS`, `Android`, `UWP`, `Windows` (which is equivalent to `UWP`), `macOS`, `GTK`, `Tizen`, or `WPF`. At runtime, the XAML parser will ignore any XML namespace prefixes that have a `targetPlatform` that doesn't match the platform on which the application is running.
 
 Each namespace declaration can be used to reference any class or structure from the specified namespace. For example, the `ios` namespace declaration can be used to reference any class or structure from the iOS `UIKit` namespace. Properties of the native view can be set through XAML, but the property and object types must match. For example, the `UILabel.TextColor` property is set to `UIColor.Red` using the `x:Static` markup extension and the `ios` namespace.
 
