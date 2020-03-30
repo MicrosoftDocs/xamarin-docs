@@ -15,10 +15,6 @@ ms.date: 06/27/2019
 
 HTTP supports the use of several authentication mechanisms to control access to resources. Basic authentication provides access to resources to only those clients that have the correct credentials. This article explains how to use basic authentication to protect access to RESTful web service resources.
 
-## [Authenticate Users with an Identity Provider](oauth.md)
-
-Xamarin.Auth is a cross-platform SDK for authenticating users and storing their accounts. It includes OAuth authenticators that provide support for consuming identity providers such as Google, Microsoft, Facebook, and Twitter. This article explains how to use Xamarin.Auth to manage the authentication process in a Xamarin.Forms application.
-
 ## [Authenticate Users with Azure Active Directory B2C](azure-ad-b2c.md)
 
 Azure Active Directory B2C is a cloud identity management solution for consumer-facing web and mobile applications. This article explains how to use Microsoft Authentication Library (MSAL) and Azure Active Directory B2C to integrate consumer identity management into a Xamarin.Forms application.

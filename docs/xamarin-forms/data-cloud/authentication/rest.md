@@ -67,8 +67,8 @@ public class RestService : IRestService
 
 Then when a request is made to a web service operation the request is signed with the `Authorization` header, indicating whether or not the user has permission to invoke the operation.
 
-> [!NOTE]
-> While this code stores credentials as constants, they should not be stored in an insecure format in a published application. The [Xamarith.Auth](https://www.nuget.org/packages/Xamarin.Auth/) NuGet provides functionality for securely storing credentials. For more information see [Storing and retrieving account information on devices](~/xamarin-forms/data-cloud/authentication/oauth.md).
+> [!IMPORTANT]
+> While this code stores credentials as constants, they should not be stored in an insecure format in a published application.
 
 ## Processing the Authorization Header Server Side
 

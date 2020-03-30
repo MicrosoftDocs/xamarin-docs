@@ -35,9 +35,7 @@ Configure your apps on the [Azure App Services portal](https://portal.azure.com/
 ## Active Directory Authentication
 
 [Azure Active Directory](~/cross-platform/data-cloud/active-directory/index.md)
-  can be used to login users in Xamarin apps via the
-  [Xamarin.Auth Component](https://www.nuget.org/packages/Xamarin.Auth/).
-  The apps can then access additional services like Office 365.
+  can be used to login users to Xamarin apps. The apps can then access additional services like Office 365.
 
 ## WebAPI
 

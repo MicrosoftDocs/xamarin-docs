@@ -631,6 +631,10 @@
     {
       "source_path": "docs/ios/deploy-test/provisioning/fastlane/match.md",
       "redirect_url": "/xamarin/ios/get-started/installation/device-provisioning/"
+    },
+    {
+      "source_path": "docs/xamarin-forms/data-cloud/authentication/oauth.md",
+      "redirect_url": "/xamarin/essentials/web-authenticator/"
     }
   ]
 }
