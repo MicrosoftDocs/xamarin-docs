@@ -574,6 +574,8 @@
           href: ~/essentials/version-tracking.md?context=xamarin/ios
         - name: Vibrate
           href: ~/essentials/vibrate.md?context=xamarin/ios
+        - name: Web Authenticator
+          href: ~/essentials/web-authenticator.md?context=xamarin/ios
         - name: Xamarin.Essentials release notes
           href: https://docs.microsoft.com/xamarin/essentials/release-notes/
         - name: Troubleshooting
