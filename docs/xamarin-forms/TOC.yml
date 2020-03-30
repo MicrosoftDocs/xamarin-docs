@@ -926,8 +926,6 @@
               href: data-cloud/authentication/index.md
             - name: REST
               href: data-cloud/authentication/rest.md
-            - name: OAuth
-              href: data-cloud/authentication/oauth.md
             - name: Azure Active Directory B2C
               href: data-cloud/authentication/azure-ad-b2c.md
             - name: Azure Cosmos DB Authentication

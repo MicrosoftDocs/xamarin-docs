@@ -136,7 +136,7 @@ The process for configuring the Xamarin.Forms sample application is as follows:
 
 ## Initiating Login
 
-The sample application initiates the login process by using Xamarin.Auth to redirect a browser to an identity provider URL, as demonstrated in the following example code:
+The sample application initiates the login process by redirecting a browser to an identity provider URL, as demonstrated in the following example code:
 
 ```csharp
 var auth = new Xamarin.Auth.WebRedirectAuthenticator(
@@ -149,8 +149,6 @@ This causes an OAuth authentication flow to be initiated between Azure App Servi
 ![](azure-cosmosdb-auth-images/login.png "Facebook Login")
 
 The login can be cancelled by pressing the **Cancel** button on iOS or by pressing the **Back** button on Android, in which case the user remains unauthenticated and the identity provider user interface is removed from the screen.
-
-For more information about Xamarin.Auth, see [Authenticating Users with an Identity Provider](~/xamarin-forms/data-cloud/authentication/oauth.md).
 
 ## Obtaining a Resource Token
 
