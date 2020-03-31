@@ -6,7 +6,7 @@ ms.assetid: 58DFFA52-4057-49A8-8682-50A58C7E842C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/23/2020
+ms.date: 03/31/2020
 ---
 
 # Customizing a WebView
@@ -331,7 +331,7 @@ namespace CustomRenderer.Droid
             }
             if (e.NewElement != null)
             {
-                Control.SetWebViewClient(new JavascriptWebViewClient($"javascript: {JavascriptFunction}"));
+                Control.SetWebViewClient(new JavascriptWebViewClient(this, $"javascript: {JavascriptFunction}"));
                 Control.AddJavascriptInterface(new JSBridge(this), "jsBridge");
                 Control.LoadUrl($"file:///android_asset/Content/{((HybridWebView)Element).Uri}");
             }
@@ -352,11 +352,11 @@ namespace CustomRenderer.Droid
 The `HybridWebViewRenderer` class loads the web page specified in the `HybridWebView.Uri` property into a native [`WebView`](xref:Android.Webkit.WebView) control, and the `invokeCSharpAction` JavaScript function is injected into the web page, after the web page has finished loading, with the `OnPageFinished` override in the `JavascriptWebViewClient` class:
 
 ```csharp
-public class JavascriptWebViewClient : WebViewClient
+public class JavascriptWebViewClient : FormsWebViewClient
 {
     string _javascript;
 
-    public JavascriptWebViewClient(string javascript)
+    public JavascriptWebViewClient(HybridWebViewRenderer renderer, string javascript) : base(renderer)
     {
         _javascript = javascript;
     }
