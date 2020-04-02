@@ -6,7 +6,7 @@ ms.assetid: 49DD2249-C575-41AE-AE06-08F890FD6031
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/20/2020
+ms.date: 04/01/2020
 ---
 
 # Fonts in Xamarin.Forms
@@ -216,14 +216,17 @@ You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#i
 Custom fonts can be added to your Xamarin.Forms shared project and consumed by platform projects without any additional work. The process for accomplishing this is as follows:
 
 1. Add the font to your Xamarin.Forms shared project as an embedded resource (**Build Action: EmbeddedResource**).
-1. Register the font file with the assembly, in a file such as **AssemblyInfo.cs**, using the `ExportFont` attribute.
+1. Register the font file with the assembly, in a file such as **AssemblyInfo.cs**, using the `ExportFont` attribute. An optional alias can also be specified.
 
-The following example shows the Lobster-Regular font being registered with the assembly:
+> [!NOTE]
+> Embedded fonts requires the use of Xamarin.Forms 4.5.0.530 or higher.
+
+The following example shows the Lobster-Regular font being registered with the assembly, along with an alias:
 
 ```csharp
 using Xamarin.Forms;
 
-[assembly: ExportFont("Lobster-Regular.ttf")]
+[assembly: ExportFont("Lobster-Regular.ttf", Alias = "Lobster")]
 ```
 
 > [!NOTE]
@@ -232,17 +235,34 @@ using Xamarin.Forms;
 The font can then be consumed on each platform by referencing its name, without the file extension:
 
 ```xaml
+<!-- Use font name -->
 <Label Text="Hello Xamarin.Forms"
        FontFamily="Lobster-Regular" />
+```
+
+Alternatively, it can be consumed on each platform by referencing its alias:
+
+```xaml
+<!-- Use font alias -->
+<Label Text="Hello Xamarin.Forms"
+       FontFamily="Lobster" />
 ```
 
 The equivalent C# code is:
 
 ```csharp
-Label label = new Label
+// Use font name
+Label label1 = new Label
 {
     Text = "Hello Xamarin.Forms!",
     FontFamily = "Lobster-Regular"
+};
+
+// Use font alias
+Label label2 = new Label
+{
+    Text = "Hello Xamarin.Forms!",
+    FontFamily = "Lobster"
 };
 ```
 
