@@ -36,7 +36,7 @@ The following screenshots show themed pages, for light and dark mode:
 
 ## Define themes
 
-Follow the [theming guide](theming.md) for step by step details about creating dark and light themes. 
+Follow the [theming guide](theming.md) for step by step details about creating dark and light themes.
 
 You can easily set a new theme for your application in the appropriate location of your platform code. To load a new theme, simply replace the application's current resource dictionary with a themed resource dictionary of your choice:
 
@@ -55,13 +55,13 @@ public partial class App : Application
     {
         if (AppInfo.RequestedTheme == AppTheme.Dark)
         {
-            // change to light theme
-            // e.g. App.Current.Resources = new YourLightTheme();
+            // Change to dark theme
+            // e.g. App.Current.Resources = new YourDarkTheme();
         }
         else
         {
-            // change to dark theme
-            // e.g. App.Current.Resources = new YourDarkTheme();
+            // Change to light theme
+            // e.g. App.Current.Resources = new YourLightTheme();
         }
     }
 }

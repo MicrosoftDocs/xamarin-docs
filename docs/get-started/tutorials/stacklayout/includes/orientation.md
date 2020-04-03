@@ -39,8 +39,3 @@
     [![Screenshot of a horizontally oriented child views in a StackLayout, on iOS and Android](../images/orientation.png "StackLayout containing horizontally oriented Label instances")](../images/orientation-large.png#lightbox "StackLayout containing horizontally oriented Label instances")
 
     Note that the [`Label`](xref:Xamarin.Forms.Label) instances within the [`StackLayout`](xref:Xamarin.Forms.StackLayout) are now aligned horizontally, instead of vertically.
-
------
-
-> [!div class="nextstepaction"]
-> [I ran into an issue](https://github.com/MicrosoftDocs/xamarin-docs/issues/new?title=StackLayout+Tutorial+Step+2+Feedback&template=tutorial_template.md)
