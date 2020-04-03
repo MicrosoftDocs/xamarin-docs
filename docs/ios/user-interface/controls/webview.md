@@ -138,7 +138,7 @@ Alternatively, you could try the following approaches:
 
 If for some reason you are **not** using the managed linker (for example, **Don't link**) then the `UIWebView` symbol will remain in the binary app you submit it to Apple and it might be rejected.
 
-A *forceful* solution is to add `--optimization=force-rejected-types-removal` to your project's **Additional mtouch arguments**. This will remove traces of `UIWebView` from the application. However, any code that refers to the type will **not** work properly (expect exceptions or crashes). This approach should be used only if you're sure that the code is not reachable at runtime (even if it was reachable through static analysis).
+A *forceful* solution is to add `--optimize=force-rejected-types-removal` to your project's **Additional mtouch arguments**. This will remove traces of `UIWebView` from the application. However, any code that refers to the type will **not** work properly (expect exceptions or crashes). This approach should be used only if you're sure that the code is not reachable at runtime (even if it was reachable through static analysis).
 
 #### Support for iOS 7.x (or earlier)
 
