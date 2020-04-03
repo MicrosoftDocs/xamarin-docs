@@ -46,7 +46,7 @@ const string CALLBACK_SCHEME = "myapp";
 
 [Activity(NoHistory = true, LaunchMode = LaunchMode.SingleTop)]
 [IntentFilter(new[] { Intent.ActionView },
-    Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable }, 
+    Categories = new[] { Intent.CategoryDefault, Intent.CategoryBrowsable },
     DataScheme = CALLBACK_SCHEME)]
 public class WebAuthenticationCallbackActivity : Xamarin.Essentials.WebAuthenticatorCallbackActivity
 {
@@ -66,7 +66,7 @@ protected override void OnResume()
 
 # [iOS](#tab/ios)
 
-On iOS you'll need to add your app's callback URI pattern to your Info.plist. 
+On iOS you'll need to add your app's callback URI pattern to your Info.plist.
 
 > [!NOTE]
 > You should consider using [Universal App Links](https://developer.apple.com/documentation/uikit/inter-process_communication/allowing_apps_and_websites_to_link_to_your_content) to register your app's callback URI as a best practice.
@@ -112,7 +112,7 @@ The API consists mainly of a single method `AuthenticateAsync` which takes two p
 The result is a `WebAuthenticatorResult` which includes any query parameters parsed from the callback URI:
 
 ```csharp
-var authResult = WebAuthenticator.AuthenticateAsync(
+var authResult = await WebAuthenticator.AuthenticateAsync(
         new Uri("https://mysite.com/mobileauth/Microsoft"),
         new Uri("myapp://"));
 
@@ -137,7 +137,7 @@ On iOS 12 or higher, `ASWebAuthenticationSession` is used.  On iOS 11, `SFAuthen
 
 # [UWP](#tab/uwp)
 
-On UWP, the `WebAuthenticationBroker` is used if supported, otherwise the system browser is used. 
+On UWP, the `WebAuthenticationBroker` is used if supported, otherwise the system browser is used.
 
 -----
 
@@ -201,7 +201,7 @@ To achieve this, use a custom API Controller:
 public class AuthController : ControllerBase
 {
     const string callbackScheme = "myapp";
-    
+
     [HttpGet("{scheme}")] // eg: Microsoft, Facebook, Apple, etc
     public async Task Get([FromRoute]string scheme)
     {
