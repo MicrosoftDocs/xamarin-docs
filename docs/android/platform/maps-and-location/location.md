@@ -122,7 +122,7 @@ properly in the application for the fused location provider API to
 work, and the device must have the Google Play Services APK installed.
 
 Before a Xamarin.Android application can use the fused location
-provider, it must add the **Xamarin.GooglePlayServices.Maps** package
+provider, it must add the **Xamarin.GooglePlayServices.Location** package
 to the project. In addition, the following `using` statements should be
 added to any source files that reference the classes described below:
 
