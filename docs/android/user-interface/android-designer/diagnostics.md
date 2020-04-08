@@ -47,7 +47,8 @@ The following sections outline the available features in Android layout diagnost
 
 ### Analyzers
 
-Analyzers are used to help detect issues in layout files. Some are ways to reduce hardcoded values, improve performance, and flag errors.
+Analyzers are used to help detect issues in layout files, reduce hardcoded values, improve performance, and flag errors. For a list of analyzers, see
+[Android designer diagnostic analyzers](diagnostic-analyzers.md)
 
 ### Diagnostic configuration
 

@@ -54,6 +54,8 @@ explains the following:
  [Material Design Features](~/android/user-interface/android-designer/material-design-features.md)
 
  [Android Layout Diagnostics](~/android/user-interface/android-designer/diagnostics.md)
+ 
+ [Android Designer Diagnostic Analyzers](~/android/user-interface/android-designer/diagnostic-analyzers.md)
 
 ## Summary
 
