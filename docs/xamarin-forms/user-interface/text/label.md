@@ -6,7 +6,7 @@ ms.assetid: 02E6C553-5670-49A0-8EE9-5153ED21EA91
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/28/2019
+ms.date: 04/09/2020
 ---
 
 # Xamarin.Forms Label
@@ -64,6 +64,34 @@ Label label = new Label { Text = "Character spaced text", CharacterSpacing = 10 
 ```
 
 The result is that characters in the text displayed by the [`Label`](xref:Xamarin.Forms.Label) are spaced `CharacterSpacing` device-independent units apart.
+
+## New lines
+
+There are two main techniques for forcing text in a [`Label`](xref:Xamarin.Forms.Label) onto a new line, from XAML:
+
+1. Use the unicode line feed character, which is "&#10;".
+1. Specify your text using *property element* syntax.
+
+The following code shows an example of both techniques:
+
+```xaml
+<!-- Unicode line feed character -->
+<Label Text="First line &#10; Second line" />
+
+<!-- Property element syntax -->
+<Label>
+    <Label.Text>
+        First line
+        Second line
+    </Label.Text>
+</Label>
+```
+
+In C#, text can be forced onto a new line with the "\n" character:
+
+```csharp
+Label label = new Label { Text = "First line\nSecond line" };
+```
 
 ## Colors
 
