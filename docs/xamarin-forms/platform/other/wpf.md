@@ -41,23 +41,21 @@ Follow these instructions to add a WPF app that will run on the Windows 7, 8, an
 
     Press OK to create the project.
 
-4. In the **Solution Explorer**, right click the new **BoxViewClock.WPF** project and select **Manage NuGet Packages**. Select the **Browse** tab, click the **Include prerelease** checkbox, and search for **Xamarin.Forms**.
+4. In the **Solution Explorer**, right click the new **BoxViewClock.WPF** project and select **Manage NuGet Packages**. Select the **Browse** tab, and search for **Xamarin.Forms.Platform.WPF**.
 
     ![Select the NuGet package](wpf-images/select-nuget-package.png "Select the NuGet package")
 
     Select that package and click the **Install** button.
 
-5. Now search for **Xamarin.Forms.Platform.WPF** package and install that one as well. Make sure the package is from Microsoft!
-
-6. Right click the solution name in the **Solution Explorer** and select **Manage NuGet Packages for Solution**. Select the **Update** tab and the **Xamarin.Forms** package. Select all the projects and update them to the same Xamarin.Forms version:
+5. Right click the solution name in the **Solution Explorer** and select **Manage NuGet Packages for Solution**. Select the **Update** tab and the **Xamarin.Forms** package. Select all the projects and update them to the same Xamarin.Forms version:
 
     ![Update the NuGet package](wpf-images/update-nuget-package.png "Update the NuGet package")
 
-7. In the WPF project, right-click on **References**. In the **Reference Manager** dialog, select **Projects** at the left, and check the checkbox adjacent to the **BoxViewClock** project:
+6. In the WPF project, right-click on **References**. In the **Reference Manager** dialog, select **Projects** at the left, and check the checkbox adjacent to the **BoxViewClock** project:
 
     ![Reference the shared project](wpf-images/reference-shared-project.png "Reference the shared project")
 
-8. Edit the **MainWindow.xaml** file of the WPF project. In the `Window` tag, add an XML namespace declaration for the **Xamarin.Forms.Platform.WPF** assembly and namespace:
+7. Edit the **MainWindow.xaml** file of the WPF project. In the `Window` tag, add an XML namespace declaration for the **Xamarin.Forms.Platform.WPF** assembly and namespace:
 
     ```xaml
     xmlns:wpf="clr-namespace:Xamarin.Forms.Platform.WPF;assembly=Xamarin.Forms.Platform.WPF"
@@ -81,7 +79,7 @@ Follow these instructions to add a WPF app that will run on the Windows 7, 8, an
     </wpf:FormsApplicationPage>
     ```
 
-9. Edit the **MainWindow.xaml.cs** file of the WPF project. Add two new `using` directives:
+8. Edit the **MainWindow.xaml.cs** file of the WPF project. Add two new `using` directives:
 
     ```csharp
     using Xamarin.Forms;
@@ -116,7 +114,7 @@ Follow these instructions to add a WPF app that will run on the Windows 7, 8, an
     }
     ```
 
-10. Right-click the WPF project in the **Solution Explorer** and select **Set as Startup Project**. Press F5 to run the program with the Visual Studio debugger on the Windows desktop:
+9. Right-click the WPF project in the **Solution Explorer** and select **Set as Startup Project**. Press F5 to run the program with the Visual Studio debugger on the Windows desktop:
 
     ![WPF BoxView Clock](wpf-images/wpf-boxviewclock.png "WPF BoxView Clock" )
 
