@@ -214,6 +214,7 @@ public class TodoItemDatabase {
 The Xamarin.Forms `App` class exposes an instance of the `TodoItemDatabase` class:
 
 ```csharp
+static TodoItemDatabase database;
 public static TodoItemDatabase Database
 {
     get
