@@ -13,7 +13,7 @@ ms.date: 04/01/2020
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
-This article describes how Xamarin.Forms lets you specify font attributes (including weight and size) on controls that display text. Font information can be [specified in code](#Setting_Font_in_Code) or [specified in XAML](#Setting_Font_in_Xaml). It's' also possible to use a [custom font](#Using_a_Custom_Font), and [display font icons](#display-font-icons).
+This article describes how Xamarin.Forms lets you specify font attributes (including weight and size) on controls that display text. Font information can be [specified in code](#Setting_Font_in_Code) or [specified in XAML](#Setting_Font_in_Xaml). It's' also possible to use a [custom font](#use-a-custom-font), and [display font icons](#display-font-icons).
 
 <a name="Setting_Font_in_Code" />
 
@@ -140,85 +140,14 @@ label.FontSize = Device.GetNamedSize(NamedSize.Small, typeof(Label));
 > [!NOTE]
 > On iOS and Android, named font sizes will autoscale based on operating system accessibility options. This behavior can be disabled on iOS with a platform-specific. For more information, see [Accessibility Scaling for Named Font Sizes on iOS](~/xamarin-forms/platform/ios/named-font-size-scaling.md).
 
-<a name="Using_a_Custom_Font" />
-
 ## Use a custom font
-
-Using a font other than the built-in typefaces requires some platform-specific coding. This screenshot shows the custom font **Lobster** from [Google's open-source fonts](https://www.google.com/fonts) rendered using Xamarin.Forms.
-
- [![Custom font on iOS and Android](fonts-images/custom-sml.png "Custom Fonts Example")](fonts-images/custom.png#lightbox "Custom Fonts Example")
-
-The steps required for each platform are outlined below. When including custom font files with an application, be sure to verify that the font's license allows for distribution.
-
-### iOS
-
-It is possible to display a custom font by first ensuring that it is loaded,
-then referring to it by name using the Xamarin.Forms `Font` methods.
-Follow the instructions in [this blog post](https://devblogs.microsoft.com/xamarin/custom-fonts-in-ios/):
-
-1. Add the font file with **Build Action: BundleResource**, and
-2. Update the **Info.plist** file (**Fonts provided by application**, or `UIAppFonts`, key), then
-3. Refer to it by name wherever you define a font in Xamarin.Forms!
-
-```csharp
-new Label
-{
-    Text = "Hello, Forms!",
-    FontFamily = Device.RuntimePlatform == Device.iOS ? "Lobster-Regular" : null // set only for iOS
-}
-```
-
-### Android
-
-Xamarin.Forms for Android can reference a custom font that has been added to the project by following a specific naming standard. First add the font file to the **Assets** folder in the application project and set *Build Action: AndroidAsset*. Then use the full path and *Font Name* separated by a hash (#) as the font name in Xamarin.Forms, as the code snippet below demonstrates:
-
-```csharp
-new Label
-{
-  Text = "Hello, Forms!",
-  FontFamily = Device.RuntimePlatform == Device.Android ? "Lobster-Regular.ttf#Lobster-Regular" : null // set only for Android
-}
-```
-
-### Windows
-
-Xamarin.Forms for Windows platforms can reference a custom font that has been added to the project by following a specific naming standard. First add the font file to the **/Assets/Fonts/** folder in the application project and set the **Build Action:Content**. Then use the full path and font filename, followed by a hash (#) and the **Font Name**, as the code snippet below demonstrates:
-
-```csharp
-new Label
-{
-    Text = "Hello, Forms!",
-    FontFamily = Device.RuntimePlatform == Device.UWP ? "Assets/Fonts/Lobster-Regular.ttf#Lobster" : null // set only for UWP apps
-}
-```
-
-> [!NOTE]
-> Note that the font file name and font name may be different. To discover the font name on Windows, right-click the .ttf file and select **Preview**. The font name can then be determined from the preview window.
-
-### XAML
-
-You can also use [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads) in XAML to render a custom font:
-
-```xaml
-<Label Text="Hello Forms with XAML">
-    <Label.FontFamily>
-        <OnPlatform x:TypeArguments="x:String">
-                <On Platform="iOS" Value="Lobster-Regular" />
-                <On Platform="Android" Value="Lobster-Regular.ttf#Lobster-Regular" />
-                <On Platform="UWP" Value="Assets/Fonts/Lobster-Regular.ttf#Lobster" />
-        </OnPlatform>
-    </Label.FontFamily>
-</Label>
-```
-
-## Use a custom font (PREVIEW)
 
 Custom fonts can be added to your Xamarin.Forms shared project and consumed by platform projects without any additional work. The process for accomplishing this is as follows:
 
 1. Add the font to your Xamarin.Forms shared project as an embedded resource (**Build Action: EmbeddedResource**).
 1. Register the font file with the assembly, in a file such as **AssemblyInfo.cs**, using the `ExportFont` attribute. An optional alias can also be specified.
 
-> [!NOTE]
+> [!IMPORTANT]
 > Embedded fonts requires the use of Xamarin.Forms 4.5.0.530 or higher.
 
 The following example shows the Lobster-Regular font being registered with the assembly, along with an alias:
@@ -269,6 +198,9 @@ Label label2 = new Label
 The following screenshots show the custom font:
 
 [![Custom font on iOS and Android](fonts-images/custom-sml.png "Custom Fonts Example")](fonts-images/custom.png#lightbox "Custom Fonts Example")
+
+> [!IMPORTANT]
+> On Windows, the font file name and font name may be different. To discover the font name on Windows, right-click the .ttf file and select **Preview**. The font name can then be determined from the preview window.
 
 ## Display font icons
 
