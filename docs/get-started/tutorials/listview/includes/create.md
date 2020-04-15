@@ -34,7 +34,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of a [`ListView`](xref:Xamarin.Forms.Image) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property specifies the items to display, which are defined in an array of strings.
+    This code declaratively defines the user interface for the page, which consists of a [`ListView`](xref:Xamarin.Forms.ListView) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property specifies the items to display, which are defined in an array of strings.
 
 1. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen remote iOS simulator or Android emulator:
 
@@ -76,7 +76,7 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
     </ContentPage>
     ```
 
-    This code declaratively defines the user interface for the page, which consists of a [`ListView`](xref:Xamarin.Forms.Image) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property specifies the items to display, which are defined in an array of strings.
+    This code declaratively defines the user interface for the page, which consists of a [`ListView`](xref:Xamarin.Forms.ListView) in a [`StackLayout`](xref:Xamarin.Forms.StackLayout). The [`ListView.ItemsSource`](xref:Xamarin.Forms.ItemsView`1.ItemsSource) property specifies the items to display, which are defined in an array of strings.
 
 1. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS simulator or Android emulator:
 

@@ -4,7 +4,7 @@ In this exercise, you will modify the **ListViewTutorial** project so that the [
 
 # [Visual Studio](#tab/vswin)
 
-1. In **MainPage.xaml**, modify the [`ListView`](xref:Xamarin.Forms.Image) declaration to customize the appearance of each row:
+1. In **MainPage.xaml**, modify the [`ListView`](xref:Xamarin.Forms.ListView) declaration to customize the appearance of each row:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}"
@@ -54,7 +54,7 @@ In this exercise, you will modify the **ListViewTutorial** project so that the [
 
 # [Visual Studio for Mac](#tab/vsmac)
 
-1. In **MainPage.xaml**, modify the [`ListView`](xref:Xamarin.Forms.Image) declaration to customize the appearance of each row:
+1. In **MainPage.xaml**, modify the [`ListView`](xref:Xamarin.Forms.ListView) declaration to customize the appearance of each row:
 
     ```xaml
     <ListView ItemsSource="{Binding Monkeys}"
