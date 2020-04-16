@@ -5,9 +5,9 @@ zone_pivot_groups: platform
 ms.prod: xamarin
 ms.assetid: 915874C3-2F0F-4D83-9C39-ED6B90BB2C8E
 ms.technology: xamarin-android
-author: davidortinau
-ms.author: daortin
-ms.date: 08/27/2018
+author: jondouglas
+ms.author: jodou
+ms.date: 02/13/2020
 ---
 
 # Hardware acceleration for emulator performance (Hyper-V & HAXM)
