@@ -109,7 +109,7 @@ The question was answered above: the reason all Android types need to
 implement `IJavaObject` is so that Xamarin.Android has an Android 
 callable wrapper to provide to Android, i.e. a Java proxy for the given 
 type. Since **monodroid.exe** only looks for `Java.Lang.Object` 
-subclasses, and `Java.Lang.Object` implements `IJavaObject,` the answer 
+subclasses, and `Java.Lang.Object` implements `IJavaObject`, the answer 
 is obvious: subclass `Java.Lang.Object`: 
 
 ```csharp
