@@ -158,7 +158,7 @@ if (scheme.Equals("Apple")
     && DeviceInfo.Version.Major >= 13)
 {
     // Use Native Apple Sign In API's
-    r = await AppleSignInAuthenticator AuthenticateAsync();
+    r = await AppleSignInAuthenticator.AuthenticateAsync();
 }
 else
 {
@@ -174,6 +174,7 @@ var accessToken = r?.AccessToken;
 
 > [!TIP]
 > For non-iOS 13 devices this will start the web authentication flow, which can also be used to enable Apple Sign In on your Android and UWP devices.
+> You can sign into your iCloud account on your iOS simulator to test Apple Sign In.
 
 -----
 
