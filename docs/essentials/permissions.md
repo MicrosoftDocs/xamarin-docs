@@ -91,7 +91,7 @@ If a permission is marked as ![not supported](~/media/shared/no.png "not support
 Here is a general usage patter for handling permissions.
 
 ```csharp
-public async Task<PermissionStatus> CheckAndRequestPermissionAsync<TPermission>()
+public async Task<PermissionStatus> CheckAndRequestLocationPermission()
 {
     var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>();
     if (status != PermissionStatus.Granted)
