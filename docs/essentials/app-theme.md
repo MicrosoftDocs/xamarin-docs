@@ -57,7 +57,7 @@ Unspecified will always be returned on versions of iOS older than 13.0
 
 # [UWP](#tab/uwp)
 
-By default your app runs using the theme set by the user in Windows settings (**Settings > Personalization > Colors > Choose your default app mode**). You can set the app's RequestedTheme property to override the user default and specify which theme is used.
+UWP applications will respect your setting in the UWP App.xaml under **RequestedTheme**. If it is set to a specific theme, Xamarin.Essentials will always return this setting. To use dynamic theme of the OS remove this node from your application and then when your app is run it will return the theme set by the user in Windows settings (**Settings > Personalization > Colors > Choose your default app mode**).
 
 You can read more on the [UWP Requested Theme Documentation](https://docs.microsoft.com/uwp/api/windows.ui.xaml.application.requestedtheme).
 
