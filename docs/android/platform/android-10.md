@@ -72,7 +72,7 @@ When you create an Android project, you must configure the version settings to t
 
 ### Configure a device or emulator
 
-If you are using a physical device such as a Pixel, you can download the Android 10 update by going to the `System` > `System update` > `Check for update` in your phone's settings. If you'd prefer to flash your device, please see the instructions on flashing a [Factory Image](https://developers.google.com/android/images) or [OTA Image](https://developers.google.com/android/ota) to your device.
+If you are using a physical device such as a Pixel, you can download the Android 10 update by going to the System > System update > Check for update in your phone's settings. If you'd prefer to flash your device, please see the instructions on flashing a [Factory Image](https://developers.google.com/android/images) or [OTA Image](https://developers.google.com/android/ota) to your device.
 
 If you are using an emulator, create a virtual device for API level 29 and select an x86-based image. For information about using the Android Device Manager to create and manage virtual devices, see [Managing Virtual Devices with the Android Device Manager.](https://docs.microsoft.com/xamarin/android/get-started/installation/android-emulator/device-manager) For information about using the Android Emulator for testing and debugging, see [Debugging on the Android Emulator.](https://docs.microsoft.com/xamarin/android/deploy-test/debugging/debug-on-emulator)
 
