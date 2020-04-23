@@ -17,7 +17,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="ImageTutorial.MainPage">
         <StackLayout Margin="20,35,20,20">
-            <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
                    HeightRequest="300" />
         </StackLayout>
     </ContentPage>
@@ -56,7 +56,7 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  x:Class="ImageTutorial.MainPage">
         <StackLayout Margin="20,35,20,20">
-            <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+            <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
                    HeightRequest="300" />
         </StackLayout>
     </ContentPage>

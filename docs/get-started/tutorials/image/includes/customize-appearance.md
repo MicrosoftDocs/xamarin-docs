@@ -3,7 +3,7 @@
 1. In **MainPage.xaml**, modify the [`Image`](xref:Xamarin.Forms.Image) declaration to customize its appearance:
 
     ```xaml
-    <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
            Aspect="Fill"
            HeightRequest="{OnPlatform iOS=300, Android=250}"
            WidthRequest="{OnPlatform iOS=300, Android=250}"
@@ -25,7 +25,7 @@
 1. In **MainPage.xaml**, modify the [`Image`](xref:Xamarin.Forms.Image) declaration to customize its appearance:
 
     ```xaml
-    <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+    <Image Source="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
            Aspect="Fill"
            HeightRequest="{OnPlatform iOS=300, Android=250}"
            WidthRequest="{OnPlatform iOS=300, Android=250}"

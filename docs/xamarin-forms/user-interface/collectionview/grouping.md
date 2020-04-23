@@ -110,21 +110,21 @@ Animals.Add(new AnimalGroup("Monkeys", new List<Animal>
         Name = "Baboon",
         Location = "Africa & Asia",
         Details = "Details about the monkey go here.",
-        ImageUrl = "http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
+        ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
     },
     new Animal
     {
         Name = "Capuchin Monkey",
         Location = "Central & South America",
         Details = "Details about the monkey go here.",
-        ImageUrl = "http://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Capuchin_Costa_Rica.jpg/200px-Capuchin_Costa_Rica.jpg"
+        ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/4/40/Capuchin_Costa_Rica.jpg/200px-Capuchin_Costa_Rica.jpg"
     },
     new Animal
     {
         Name = "Blue Monkey",
         Location = "Central and East Africa",
         Details = "Details about the monkey go here.",
-        ImageUrl = "http://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BlueMonkey.jpg/220px-BlueMonkey.jpg"
+        ImageUrl = "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/BlueMonkey.jpg/220px-BlueMonkey.jpg"
     },
     // ...
 }));
