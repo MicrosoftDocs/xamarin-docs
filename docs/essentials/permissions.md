@@ -88,7 +88,7 @@ Icon Guide:
 If a permission is marked as ![not supported](~/media/shared/no.png "not supported") it will always return `Granted` when checked or requested.
 
 ## General Usage
-Here is a general usage patter for handling permissions.
+Here is a general usage pattern for handling permissions.
 
 ```csharp
 public async Task<PermissionStatus> CheckAndRequestLocationPermission()
