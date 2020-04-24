@@ -150,6 +150,9 @@ CSS uses selectors to determine which elements to target. Styles with matching s
 
 CSS uses properties to style a selected element. Each property has a set of possible values, and some properties can affect any type of element, while others apply to groups of elements. For more information about supported properties, see [Property Reference](#property-reference).
 
+> [!IMPORTANT]
+> CSS variables are unsupported.
+
 ### Selecting elements by type
 
 Elements in the visual tree can be selected by type with the case insensitive `element` selector:

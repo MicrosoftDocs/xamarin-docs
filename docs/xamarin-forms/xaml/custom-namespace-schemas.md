@@ -17,7 +17,7 @@ Types in a library can be referenced in XAML by declaring a XAML namespace for t
 
 ```xaml
 <ContentPage ...
-             xmlns:controls="clr-namespace:MyCompany.Controls;assembly="MyCompany.Controls">
+             xmlns:controls="clr-namespace:MyCompany.Controls;assembly=MyCompany.Controls">
     ...
 </ContentPage>
 ```

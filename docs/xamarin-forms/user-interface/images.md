@@ -49,7 +49,7 @@ To use a single image across all apps, *the same filename must be used on every 
 
 - **iOS** - The preferred way to manage and support images since iOS 9 is to use **Asset Catalog Image Sets**, which should contain all of the versions of an image that are necessary to support various devices and scale factors for an application. For more information, see [Adding Images to an Asset Catalog Image Set](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
 - **Android** - Place images in the  **Resources/drawable** directory with **Build Action: AndroidResource**. High- and low-DPI versions of an image can also be supplied (in appropriately named **Resources** subdirectories such as **drawable-ldpi**, **drawable-hdpi**, and **drawable-xhdpi**).
-- **Universal Windows Platform (UWP)** - Place images in the application's root directory with **Build Action: Content**.
+- **Universal Windows Platform (UWP)** - By default, images should be placed in the application's root directory with **Build Action: Content**. Alternatively, images can be placed in a different directory which is then specified with a platform-specific. For more information, see [Default image directory on Windows](~/xamarin-forms/platform/windows/default-image-directory.md).
 
 > [!IMPORTANT]
 > Prior to iOS 9, images were typically placed in the **Resources** folder with **Build Action: BundleResource**. However, this method of working with images in an iOS app has been deprecated by Apple. For more information, see [Image Sizes and Filenames](~/ios/app-fundamentals/images-icons/displaying-an-image.md).
@@ -73,8 +73,8 @@ The following screenshots show the result of displaying a local image on each pl
 For more flexibility the `Device.RuntimePlatform` property can be used to select a different image file or path for some or all platforms, as shown in this code example:
 
 ```csharp
-image.Source = Device.RuntimePlatform == Device.Android 
-                ? ImageSource.FromFile("waterfront.jpg") 
+image.Source = Device.RuntimePlatform == Device.Android
+                ? ImageSource.FromFile("waterfront.jpg")
                 : ImageSource.FromFile("Images/waterfront.jpg");
 ```
 
@@ -152,9 +152,9 @@ If you place embedded images into folders within your project, the folder names 
 The code to load an embedded image simply passes the **Resource ID** to the [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) method as shown below:
 
 ```csharp
-var embeddedImage = new Image { 
+var embeddedImage = new Image {
       Source = ImageSource.FromResource(
-        "WorkingWithImages.beach.jpg", 
+        "WorkingWithImages.beach.jpg",
         typeof(EmbeddedImages).GetTypeInfo().Assembly
       ) };
 ```
@@ -236,7 +236,7 @@ By default, the `ImageSource.FromResource` method only looks for images in the s
 However, the source assembly being searched for an embedded image can be specified as an argument to the `ImageSource.FromResource` method:
 
 ```csharp
-var imageSource = ImageSource.FromResource("filename.png", 
+var imageSource = ImageSource.FromResource("filename.png",
             typeof(MyClass).GetTypeInfo().Assembly);
 ```
 
@@ -260,7 +260,7 @@ Images can be automatically downloaded for display, as shown in the following XA
 The equivalent C# code is as follows:
 
 ```csharp
-var webImage = new Image { 
+var webImage = new Image {
      Source = ImageSource.FromUri(
         new Uri("https://xamarin.com/content/images/pages/forms/example-app.png")
      ) };

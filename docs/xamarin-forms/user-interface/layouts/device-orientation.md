@@ -6,7 +6,7 @@ ms.assetid: 11A1D327-2DF3-4F3B-810D-6C95B71D27B2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/09/2015
+ms.date: 04/24/2020
 ---
 
 # Device Orientation
@@ -23,27 +23,23 @@ When using Xamarin.Forms, the supported method of controlling device orientation
 
 ### iOS
 
-On iOS, device orientation is configured for applications using the **Info.plist** file. This file will include orientation settings for iPhone & iPod, as well as settings for iPad if the app includes it as a target. The following are instructions specific to your IDE. Use the IDE options at the top of this document to select which instructions you'd like to see:
+On iOS, device orientation is configured for applications using the **Info.plist** file. Use the IDE options at the top of this document to select which instructions you'd like to see:
 
 # [Visual Studio](#tab/windows)
 
 In Visual Studio, open the iOS project and open **Info.plist**. The file will open into a configuration panel, starting with the iPhone Deployment Info tab:
 
-![iPhone Deployment Info in Visual Studio](device-orientation-images/orientation-vs-iphone.png)
-
-To configure iPad orientation, select the **iPad Deployment Info** tab at the top left of the panel, then select from the available orientations:
-
-![Supported Device Orientations in Visual Studio](device-orientation-images/orientation-vs-ipad.png)
+![iPhone Deployment Info in Visual Studio](device-orientation-images/orientation-vs.png)
 
 # [Visual Studio for Mac](#tab/macos)
 
 In Visual Studio for Mac, open the iOS project and open **Info.plist**. Under the **Application** tab, sections will be available to set orientation:
 
-![iPhone Deployment Info in Visual Studio for Mac](device-orientation-images/orientation-xam-ui.png)
+![iPhone Deployment Info in Visual Studio for Mac](device-orientation-images/orientation-vsmac.png)
 
 If you'd prefer to edit the values using a key-value editor interface, select the **Source**> tab at the bottom of the screen:
 
-![Supported Device Orientations in Visual Studio for Mac](device-orientation-images/orientation-xam-source.png)
+![Supported Device Orientations in Visual Studio for Mac](device-orientation-images/orientation-source-vsmac.png)
 
 -----
 
