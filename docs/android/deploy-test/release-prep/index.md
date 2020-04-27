@@ -355,8 +355,9 @@ build that is created.
 ### Bundle Assemblies into Native Code
 
 When this option is enabled, assemblies are bundled into a native
-shared library. This option keeps the code safe; it protects managed
-assemblies by embedding them in native binaries.
+shared library. This allows assemblies to be compressed, permitting
+smaller `.apk` files. Assembly compression also confers a *minimal*
+form of obfuscation; such obfuscation should not be relied upon.
 
 This option requires an Enterprise license and is only available when
 **Use Fast Deployment** is disabled. **Bundle assemblies into native
@@ -364,8 +365,7 @@ code** is disabled by default.
 
 Note that the **Bundle into Native Code** option does *not* mean that
 the assemblies are compiled into native code. It is not possible to use
-[**AOT Compilation**](#aot) to compile assemblies into native code
-(currently only an experimental feature, and not for production use).
+[**AOT Compilation**](#aot) to compile assemblies into native code.
 
 <a name="aot" />
 
