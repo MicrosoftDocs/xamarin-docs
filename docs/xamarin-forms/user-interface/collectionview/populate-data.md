@@ -6,7 +6,7 @@ ms.assetid: E1783E34-1C0F-401A-80D5-B2BE5508F5F8
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/11/2019
+ms.date: 04/29/2020
 ---
 
 # Xamarin.Forms CollectionView Data
@@ -23,7 +23,7 @@ These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableP
 > [!NOTE]
 > [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines a `ItemsUpdatingScrollMode` property that represents the scrolling behavior of the `CollectionView` when new items are added to it. For more information about this property, see [Control scroll position when new items are added](scrolling.md#control-scroll-position-when-new-items-are-added).
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) can also load data incrementally as the user scrolls. For more information, see [Load data incrementally](#load-data-incrementally).
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) supports incremental data virtualization as the user scrolls. For more information, see [Load data incrementally](#load-data-incrementally).
 
 ## Populate a CollectionView with data
 
@@ -366,7 +366,7 @@ For more information about `RefreshView`, see [Xamarin.Forms RefreshView](~/xama
 
 ## Load data incrementally
 
-[`CollectionView`](xref:Xamarin.Forms.CollectionView) supports loading data incrementally as users scroll through items. This enables scenarios such as asynchronously loading a page of data from a web service, as the user scrolls. In addition, the point at which more data is loaded is configurable so that users don't see blank space, or are stopped from scrolling.
+[`CollectionView`](xref:Xamarin.Forms.CollectionView) supports incremental data virtualization as the user scrolls. This enables scenarios such as asynchronously loading a page of data from a web service, as the user scrolls. In addition, the point at which more data is loaded is configurable so that users don't see blank space, or are stopped from scrolling.
 
 [`CollectionView`](xref:Xamarin.Forms.CollectionView) defines the following properties to control incremental loading of data:
 

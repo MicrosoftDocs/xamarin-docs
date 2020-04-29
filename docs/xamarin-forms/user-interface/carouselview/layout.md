@@ -193,9 +193,9 @@ The result is that adjacent items are partially exposed on screen:
 
 ## Item spacing
 
-By default, each item in a [`CarouselView`](xref:Xamarin.Forms.CarouselView) doesn't have any empty space around it. This behavior can be changed by setting properties on the items layout used by the `CarouselView`.
+By default, there is no space between each item in a [`CarouselView`](xref:Xamarin.Forms.CarouselView). This behavior can be changed by setting the `ItemSpacing` property on the items layout used by the `CarouselView`.
 
-When a [`CarouselView`](xref:Xamarin.Forms.CarouselView) sets its [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) property to a `LinearItemsLayout` object, the `LinearItemsLayout.ItemSpacing` property can be set to a `double` value that represents the empty space around each item:
+When a [`CarouselView`](xref:Xamarin.Forms.CarouselView) sets its [`ItemsLayout`](xref:Xamarin.Forms.CarouselView.ItemsLayout) property to a `LinearItemsLayout` object, the `LinearItemsLayout.ItemSpacing` property can be set to a `double` value that represents the space between items:
 
 ```xaml
 <CarouselView ItemsSource="{Binding Monkeys}">
@@ -223,7 +223,7 @@ CarouselView carouselView = new CarouselView
 };
 ```
 
-This code results in a vertical layout, that has a spacing of 20 around each item.
+This code results in a vertical layout, that has a spacing of 20 between items.
 
 ## Dynamic resizing of items
 

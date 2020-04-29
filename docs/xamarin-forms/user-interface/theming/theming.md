@@ -22,6 +22,9 @@ The process of implementing runtime theming in a Xamarin.Forms application is as
 1. Set a default theme in the application's **App.xaml** file.
 1. Add code to load a theme at runtime.
 
+> [!NOTE]
+> Changing a theme at runtime requires the use of XAML styles, and is not currently possible using CSS.
+
 The following screenshots show themed pages, with the iOS application using a light theme and the Android application using a dark theme:
 
 [![Screenshot of the main page of a themed app, on iOS and Android](theming-images/main-page-both-themes.png "Main page of themed app")](theming-images/main-page-both-themes-large.png#lightbox "Main page of themed app")

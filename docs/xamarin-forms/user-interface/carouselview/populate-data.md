@@ -6,7 +6,7 @@ ms.assetid: 20DB2C57-CE3A-4D91-80DC-73AE361A3CB0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/27/2019
+ms.date: 04/29/2020
 ---
 
 # Xamarin.Forms CarouselView Data
@@ -25,7 +25,7 @@ These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableP
 > [!NOTE]
 > [`CarouselView`](xref:Xamarin.Forms.CarouselView) defines a `ItemsUpdatingScrollMode` property that represents the scrolling behavior of the `CarouselView` when new items are added to it. For more information about this property, see [Control scroll position when new items are added](scrolling.md#control-scroll-position-when-new-items-are-added).
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) can also load data incrementally as the user scrolls. For more information, see [Load data incrementally](#load-data-incrementally).
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) supports incremental data virtualization as the user scrolls. For more information, see [Load data incrementally](#load-data-incrementally).
 
 ## Populate a CarouselView with data
 
@@ -322,7 +322,7 @@ For more information about `RefreshView`, see [Xamarin.Forms RefreshView](~/xama
 
 ## Load data incrementally
 
-[`CarouselView`](xref:Xamarin.Forms.CarouselView) supports loading data incrementally as users scroll through items. This enables scenarios such as asynchronously loading a page of data from a web service, as the user scrolls. In addition, the point at which more data is loaded is configurable so that users don't see blank space, or are stopped from scrolling.
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) supports incremental data virtualization as the user scrolls. This enables scenarios such as asynchronously loading a page of data from a web service, as the user scrolls. In addition, the point at which more data is loaded is configurable so that users don't see blank space, or are stopped from scrolling.
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) defines the following properties to control incremental loading of data:
 

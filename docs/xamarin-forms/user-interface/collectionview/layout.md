@@ -451,9 +451,9 @@ This code results in the following screenshots, with the header shown in the iOS
 
 ## Item spacing
 
-By default, each item in a [`CollectionView`](xref:Xamarin.Forms.CollectionView) doesn't have any empty space around it. This behavior can be changed by setting properties on the items layout used by the `CollectionView`.
+By default, there is no space between each item in a [`CollectionView`](xref:Xamarin.Forms.CollectionView). This behavior can be changed by setting properties on the items layout used by the `CollectionView`.
 
-When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a `LinearItemsLayout` object, the `LinearItemsLayout.ItemSpacing` property can be set to a `double` value that represents the empty space around each item:
+When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a `LinearItemsLayout` object, the `LinearItemsLayout.ItemSpacing` property can be set to a `double` value that represents the space between items:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -481,11 +481,11 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
-This code results in a vertical single column list, that has a spacing of 20 around each item:
+This code results in a vertical single column list, that has a spacing of 20 between items:
 
 [![Screenshot of a CollectionView with item spacing, on iOS and Android](layout-images/vertical-list-spacing.png "CollectionView item spacing")](layout-images/vertical-list-spacing-large.png#lightbox "CollectionView item spacing")
 
-When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object, the `GridItemsLayout.VerticalItemSpacing` and `GridItemsLayout.HorizontalItemSpacing` properties can be set to `double` values that represent the empty space vertically and horizontally around each item:
+When a [`CollectionView`](xref:Xamarin.Forms.CollectionView) sets its [`ItemsLayout`](xref:Xamarin.Forms.StructuredItemsView.ItemsLayout) property to a [`GridItemsLayout`](xref:Xamarin.Forms.GridItemsLayout) object, the `GridItemsLayout.VerticalItemSpacing` and `GridItemsLayout.HorizontalItemSpacing` properties can be set to `double` values that represent the empty space vertically and horizontally between items:
 
 ```xaml
 <CollectionView ItemsSource="{Binding Monkeys}">
@@ -516,7 +516,7 @@ CollectionView collectionView = new CollectionView
 };
 ```
 
-This code results in a vertical two-column grid, that has a vertical spacing of 20 around each item, and a horizontal spacing of 30 around each item:
+This code results in a vertical two-column grid, that has a vertical spacing of 20 between items, and a horizontal spacing of 30 between items:
 
 [![Screenshot of a CollectionView with item spacing, on Android](layout-images/vertical-grid-spacing.png "CollectionView item spacing")](layout-images/vertical-grid-spacing-large.png#lightbox "CollectionView item spacing")
 

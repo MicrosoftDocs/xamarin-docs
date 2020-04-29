@@ -87,6 +87,9 @@ The process for adding a style sheet to a solution is as follows:
 
 There are a number of approaches that can be used to load a style sheet.
 
+> [!NOTE]
+> It's not currently possible to change a style sheet at runtime and have the new style sheet applied.
+
 ### XAML
 
 A style sheet can be loaded and parsed with the [`StyleSheet`](xref:Xamarin.Forms.StyleSheets.StyleSheet) class before being added to a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary):
