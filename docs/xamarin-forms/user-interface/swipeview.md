@@ -6,7 +6,7 @@ ms.assetId: 602456B5-701B-4948-B454-B1F31283F1CF
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/11/2020
+ms.date: 03/26/2020
 ---
 
 # Xamarin.Forms SwipeView
@@ -43,7 +43,7 @@ The `SwipeView` class also defines four events:
 - `SwipeEnded` is fired when a swipe ends. The `SwipeEndedEventArgs` object that accompanies this event has a `SwipeDirection` property, of type `SwipeDirection`.
 - `CloseRequested` is fired when the swipe items are closed.
 
-In addition, `SwipeView` defines a `Close` method, which closes the swipe items.
+In addition, `SwipeView` includes `Open` and `Close` methods, which programmatically open and close the swipe items, respectively.
 
 > [!NOTE]
 > `SwipeView` has a platform-specific on iOS and Android, that controls the transition that's used when opening a `SwipeView`. For more information, see [SwipeView Swipe Transition Mode on iOS](~/xamarin-forms/platform/ios/swipeview-swipetransitionmode.md) and [SwipeView Swipe Transition Mode on Android](~/xamarin-forms/platform/android/swipeview-swipetransitionmode.md).
@@ -318,6 +318,32 @@ The following example shows a `SwipeItemView` object in the `LeftItems` collecti
 ```
 
 In this example, the `SwipeItemView` comprises a [`StackLayout`](xref:Xamarin.Forms.StackLayout) containing an [`Entry`](xref:Xamarin.Forms.Entry) and a [`Label`](xref:Xamarin.Forms.Label). After the user enters input into the `Entry`, the rest of the `SwipeViewItem` can be tapped which executes the `ICommand` defined by the `SwipeItemView.Command` property.
+
+## Open and close a SwipeView programmatically
+
+`SwipeView` includes `Open` and `Close` methods, which programmatically open and close the swipe items, respectively.
+
+The `Open` method requires an `OpenSwipeItem` argument, to specify the direction the `SwipeView` will be opened from. The `OpenSwipeItem` enumeration has four members:
+
+- `LeftItems`, which indicates that the `SwipeView` will be opened from the left, to reveal the the swipe items in the `LeftItems` collection.
+- `TopItems`, which indicates that the `SwipeView` will be opened from the top, to reveal the the swipe items in the `TopItems` collection.
+- `RightItems`, which indicates that the `SwipeView` will be opened from the right, to reveal the the swipe items in the `RightItems` collection.
+- `BottomItems`, which indicates that the `SwipeView` will be opened from the bottom, to reveal the the swipe items in the `BottomItems` collection.
+
+Given a `SwipeView` named `swipeView`, the following example shows how to open a `SwipeView` to reveal the swipe items in the `LeftItems` collection:
+
+```csharp
+swipeView.Open(OpenSwipeItem.LeftItems);
+```
+
+The `swipeView` can then be closed with the `Close` method:
+
+```csharp
+swipeView.Close();
+```
+
+> [!NOTE]
+> When the `Close` method is invoked, the `CloseRequested` event is fired.
 
 ## Disable a SwipeView
 

@@ -30,7 +30,7 @@ The rendering process can be taken advantage of to implement platform-specific c
 Each item will now be discussed in turn, to implement an [`Entry`](xref:Xamarin.Forms.Entry) control that has a different background color on each platform.
 
 > [!IMPORTANT]
-> This article explains how to create a simple custom renderer. However, it's not necessary to create a custom renderer to implement an `Entry` that has a different background color on each platform. This can be more easily accomplished by using the [`Device`](xref:Xamarin.Forms.Device) class, or the `OnPlatform` markup extension, to provide platform-specific values. For more information, see [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#providing-platform-specific-values) and [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
+> This article explains how to create a simple custom renderer. However, it's not necessary to create a custom renderer to implement an `Entry` that has a different background color on each platform. This can be more easily accomplished by using the [`Device`](xref:Xamarin.Forms.Device) class, or the `OnPlatform` markup extension, to provide platform-specific values. For more information, see [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#provide-platform-specific-values) and [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
 <a name="Creating_the_Custom_Entry_Control" />
 

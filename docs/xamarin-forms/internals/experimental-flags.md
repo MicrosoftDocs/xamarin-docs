@@ -6,7 +6,7 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/20/2020
+ms.date: 04/14/2020
 ---
 
 # Xamarin.Forms experimental flags
@@ -15,10 +15,13 @@ When a new Xamarin.Forms feature is implemented, it's sometimes put behind an ex
 
 Xamarin.Forms includes the following experimental flags:
 
+- `AppTheme_Experimental`
 - `CarouselView_Experimental`
+- `Expander_Experimental`
 - `IndicatorView_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
+- `RadioButton_Experimental`
 - `Shell_UWP_Experimental`
 - `StateTriggers_Experimental`
 - `SwipeView_Experimental`

@@ -6,7 +6,7 @@ ms.assetid: 22288ABF-57BE-47A9-ACC3-AC604D787C46
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 07/18/2019
+ms.date: 04/02/2020
 ---
 
 # Colors in Xamarin.Forms
@@ -17,14 +17,16 @@ _Xamarin.Forms provides a flexible cross-platform Color class._
 
 This article introduces the various ways the [`Color`](xref:Xamarin.Forms.Color) class can be used in Xamarin.Forms.
 
-The [`Color`](xref:Xamarin.Forms.Color) class provides a number of methods to build a color instance:
+The [`Color`](xref:Xamarin.Forms.Color) class provides a number of methods to build a `Color` instance:
 
 - **Named Colors** - a collection of common named-colors, including `Red`, `Green`, and `Blue`.
-- **FromHex** - string value similar to the syntax used in HTML, for example "00FF00". Alpha can optionally be specified as the first pair of characters ("CC00FF00").
-- **FromHsla** - Hue, saturation and luminosity  `double` values, with optional alpha value (0.0-1.0).
-- **FromRgb** - Red, green, and blue `int` values (0-255).
-- **FromRgba** - Red, green, blue, and alpha  `int` values (0-255).
-- **FromUint** - set a single `double` value representing **argb**.
+- `FromHex` - string value similar to the syntax used in HTML, for example "00FF00". Alpha can optionally be specified as the first pair of characters ("CC00FF00").
+- `FromHsla` - Hue, saturation and luminosity `double` values, with optional alpha value (0.0-1.0).
+- `FromHsv` - Hue, saturation, and value `int` or `double` values.
+- `FromHsva` - Hue, saturation, and value `int` or `double` values.
+- `FromRgb` - Red, green, and blue `int` values (0-255).
+- `FromRgba` - Red, green, blue, and alpha  `int` values (0-255).
+- `FromUint` - set a single `double` value representing **argb**.
 
 Here's some example colors, assigned to the `BackgroundColor` of some labels using different variations of the allowed syntax:
 
@@ -64,12 +66,12 @@ On iOS and Android this instance is set to a contrasting color that is visible o
 
 [`Color`](xref:Xamarin.Forms.Color) instances include the following additional methods:
 
-- **AddLuminosity** - returns a `Color` by modifying the luminosity by the supplied delta.
-- **MultiplyAlpha** - returns a `Color` by modifying the alpha, multiplying it by the supplied alpha value.
-- **ToHex** - returns a hexadecimal `string` representation of a `Color`.
-- **WithHue** - returns a `Color`, replacing the hue with the value supplied.
-- **WithLuminosity** - returns a `Color`, replacing the luminosity with the value supplied.
-- **WithSaturation** - returns a `Color`, replacing the saturation with the value supplied.
+- `AddLuminosity` - returns a `Color` by modifying the luminosity by the supplied delta.
+- `MultiplyAlpha` - returns a `Color` by modifying the alpha, multiplying it by the supplied alpha value.
+- `ToHex` - returns a hexadecimal `string` representation of a `Color`.
+- `WithHue` - returns a `Color`, replacing the hue with the value supplied.
+- `WithLuminosity` - returns a `Color`, replacing the luminosity with the value supplied.
+- `WithSaturation` - returns a `Color`, replacing the saturation with the value supplied.
 
 ## Implicit conversions
 
@@ -98,7 +100,7 @@ ActivityIndicator activityIndicator = new ActivityIndicator
 };
 ```
 
-## Using from XAML
+## Use from XAML
 
 Colors can also be referenced in XAML using the defined color names or the Hex representations shown here:
 

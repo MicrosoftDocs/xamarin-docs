@@ -6,7 +6,7 @@ ms.assetid: 46AB0D5E-0025-4A8A-9D00-3E66C3D0BA2E
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/17/2020
+ms.date: 03/10/2020
 ---
 
 # Display Pop-ups
@@ -101,9 +101,6 @@ string result = await DisplayPromptAsync("Question 2", "What's 5 + 5?", initialV
 This code displays a predefined response of 10, limits the number of characters that can be input to 2, and displays the numeric keyboard for user input:
 
 [![Screenshot of a modal prompt, on iOS and Android](pop-ups-images/keyboard-prompt.png "Modal prompt")](pop-ups-images/keyboard-prompt-large.png#lightbox "Modal prompt")
-
-> [!NOTE]
-> The `DisplayPromptAsync` method is currently only implemented on iOS and Android.
 
 ## Related links
 

@@ -201,7 +201,7 @@ In this example, the [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*)
 The behavior of a [`Map`](xref:Xamarin.Forms.Maps.Map) can be customized by setting some of its properties, and by handling the `MapClicked` event.
 
 > [!NOTE]
-> Additional map behavior customizatin can be achieved by creating a map custom renderer. For more information, see [Customizing a Xamarin.Forms Map](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md).
+> Additional map behavior customization can be achieved by creating a map custom renderer. For more information, see [Customizing a Xamarin.Forms Map](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md).
 
 ### Disable scroll
 
@@ -304,5 +304,5 @@ map.MapClicked += OnMapClicked;
 
 - [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Map Position and Distance](position-distance.md)
-- [Customizing a Xamarin.Forms Map](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
+- [Customizing a Xamarin.Forms Map](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)
 - [Passing Arguments in XAML](~/xamarin-forms/xaml/passing-arguments.md)

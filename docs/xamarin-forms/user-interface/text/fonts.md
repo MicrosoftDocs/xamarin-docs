@@ -98,7 +98,7 @@ There is a built-in converter for the `FontSize` property that allows all font s
 <Label Text="Use size 72" FontSize="72" />
 ```
 
-The [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#providing-platform-specific-values) property can also be used in XAML to render a different font on each platform. The example below uses different fonts on each platform:
+The [`Device.RuntimePlatform`](~/xamarin-forms/platform/device.md#provide-platform-specific-values) property can also be used in XAML to render a different font on each platform. The example below uses different fonts on each platform:
 
 ```xaml
 <Label Text="Hello Forms with XAML">

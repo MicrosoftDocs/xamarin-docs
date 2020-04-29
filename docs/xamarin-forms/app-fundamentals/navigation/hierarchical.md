@@ -6,7 +6,7 @@ ms.assetid: C8A5EEFF-5A3B-4163-838A-147EE3939FAA
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 08/14/2018
+ms.date: 03/10/2020
 ---
 
 # Hierarchical Navigation
@@ -39,7 +39,7 @@ The layout of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is depende
 - On Android, a navigation bar is present at the top of the page that displays a title, an icon, and a *Back* button that returns to the previous page. The icon is defined in the `[Activity]` attribute that decorates the `MainActivity` class in the Android platform-specific project.
 - On the Universal Windows Platform, a navigation bar is present at the top of the page that displays a title.
 
-On all the platforms, the value of the [`Page.Title`](xref:Xamarin.Forms.Page.Title) property will be displayed as the page title.
+On all the platforms, the value of the [`Page.Title`](xref:Xamarin.Forms.Page.Title) property will be displayed as the page title. In addition, the `IconColor` property can be set to a [`Color`](xref:Xamarin.Forms.Color) that's applied to the icon in the navigation bar.
 
 > [!NOTE]
 > It's recommended that a `NavigationPage` should be populated with `ContentPage` instances only.

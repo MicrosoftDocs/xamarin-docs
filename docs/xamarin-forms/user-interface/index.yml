@@ -11,7 +11,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 12/30/2019
+  ms.date: 03/19/2020
 
 landingContent:
   - title: Controls reference
@@ -33,12 +33,21 @@ landingContent:
           - text: Third-party controls
             url: controls/thirdparty.md
 
+  - title: Declarative UI in C#
+    linkLists:
+      - linkListType: concept
+        links:
+          - text: C# markup
+            url: csharp-markup.md
+
   - title: Views for presentation
     linkLists:
       - linkListType: concept
         links:
           - text: BoxView
             url: boxview.md
+          - text: Expander
+            url: expander.md
           - text: Image
             url: images.md
           - text: Label
@@ -58,6 +67,8 @@ landingContent:
             url: button.md
           - text: ImageButton
             url: imagebutton.md
+          - text: RadioButton
+            url: radiobutton.md
           - text: RefreshView
             url: refreshview.md
           - text: SearchBar
@@ -145,7 +156,7 @@ landingContent:
           - text: Styles
             url: styles/index.md
           - text: Theming
-            url: theming/index.md            
+            url: theming/index.md
           - text: Visual
             url: visual/index.md
           - text: Visual State Manager

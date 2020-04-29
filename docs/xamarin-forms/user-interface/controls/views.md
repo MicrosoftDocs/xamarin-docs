@@ -6,7 +6,7 @@ ms.assetid: AC070686-A423-4A98-8BB6-0B9F94C062CC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/14/2020
+ms.date: 04/16/2020
 ---
 
 # Xamarin.Forms Views
@@ -18,6 +18,20 @@ _Xamarin.Forms views are the building blocks of cross-platform mobile user inter
 Views are user-interface objects such as labels, buttons, and sliders that are commonly known as *controls* or *widgets* in other graphical programming environments. The views supported by Xamarin.Forms all derive from the [`View`](xref:Xamarin.Forms.View) class. They can be divided into several categories:
 
 ## Views for presentation
+
+### BoxView
+
+|     |    |
+| --- | ---|
+| [`BoxView`](xref:Xamarin.Forms.BoxView) displays a solid rectangle colored by the [`Color`](xref:Xamarin.Forms.BoxView.Color) property. `BoxView` has a default size request of 40x40. For other sizes, assign the [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) properties.<br /><br />[API Documentation](xref:Xamarin.Forms.BoxView) / [Guide](~/xamarin-forms/user-interface/boxview.md) / [Sample 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview), [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration), [3](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/), [4](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife), [5](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock), and [6](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) | [![BoxView Example](views-images/BoxView.png "BoxView Example")](views-images/BoxView-Large.png#lightbox "BoxView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) |
+|     |     |
+
+### Expander
+
+|     |     |
+| --- | --- |
+| `Expander` provides an expandable container to host any content, and is comprised of a header and content. Set the `Header` property to a [`View`](xref:Xamarin.Forms.View) that will be displayed as the header, and the `Content` property to a [`View`](xref:Xamarin.Forms.View) that will be displayed when the header is expanded by a tap.<br /><br />[Guide](~/xamarin-forms/user-interface/expander.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos) | [![Expander Example](views-images/Expander.png "Expander Example")](views-images/Expander-Large.png#lightbox "Expander Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ExpanderDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ExpanderDemoPage.xaml) |
+|     |     |
 
 ### Label
 
@@ -31,27 +45,6 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 |     |     |
 | --- | --- |
 | [`Image`](xref:Xamarin.Forms.Image) displays a bitmap. Bitmaps can be downloaded over the Web, embedded as resources in the common project or platform projects, or created using a .NET `Stream` object.<br /><br />[API Documentation](xref:Xamarin.Forms.Image) / [Guide](~/xamarin-forms/user-interface/images.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithimages) | [![Image Example](views-images/Image.png "Image Example")](views-images/Image-Large.png#lightbox "Image Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageDemoPage.xaml) |
-|     |     |
-
-### BoxView
-
-|     |    |
-| --- | ---|
-| [`BoxView`](xref:Xamarin.Forms.BoxView) displays a solid rectangle colored by the [`Color`](xref:Xamarin.Forms.BoxView.Color) property. `BoxView` has a default size request of 40x40. For other sizes, assign the [`WidthRequest`](xref:Xamarin.Forms.VisualElement.WidthRequest) and [`HeightRequest`](xref:Xamarin.Forms.VisualElement.HeightRequest) properties.<br /><br />[API Documentation](xref:Xamarin.Forms.BoxView) / [Guide](~/xamarin-forms/user-interface/boxview.md) / [Sample 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-basicboxview), [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-textdecoration), [3](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-listviewcolors/), [4](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-gameoflife), [5](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-dotmatrixclock), and [6](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/boxview-boxviewclock) | [![BoxView Example](views-images/BoxView.png "BoxView Example")](views-images/BoxView-Large.png#lightbox "BoxView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/BoxViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/BoxViewDemoPage.xaml) |
-|     |     |
-
-### WebView
-
-|     |     |
-| --- | --- |
-| [`WebView`](xref:Xamarin.Forms.WebView) displays Web pages or HTML content, based on whether the [`Source`](xref:Xamarin.Forms.WebView.Source) property is set to a [`UriWebViewSource`](xref:Xamarin.Forms.UrlWebViewSource) or an [`HtmlWebViewSource`](xref:Xamarin.Forms.HtmlWebViewSource) object.<br /><br />[API Documentation](xref:Xamarin.Forms.WebView) / [Guide](~/xamarin-forms/user-interface/webview.md) / [Sample 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview) and [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) | [![WebView Example](views-images/WebView.png "WebView Example")](views-images/WebView-Large.png#lightbox "WebView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/WebViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/WebViewDemoPage.xaml) |
-|     |     |
-
-### OpenGLView
-
-|     |     |
-| --- | --- |
-| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView) displays OpenGL graphics in iOS and Android projects. There is no support for the Universal Windows Platform. The iOS and Android projects require a reference to the **OpenTK-1.0** assembly or the **OpenTK** version 1.0.0.0 assembly. `OpenGLView` is easier to use in a Shared Project; if used in a .NET Standard library, then a Dependency Service will also be required (as shown in the sample code).<br /><br />This is the only graphics facility that is built into Xamarin.Forms, but a Xamarin.Forms application can also render graphics using [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), or [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[API Documentation](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![OpenGLView Example](views-images/OpenGLView.png "OpenGLView Example")](views-images/OpenGLView-Large.png#lightbox "OpenGLView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
 |     |     |
 
 ### Map
@@ -68,6 +61,20 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 | [`MediaElement`](xref:Xamarin.Forms.MediaElement) plays video or audio. Media can be played from a URL or from a local file, based on whether the [`Source`](xref:Xamarin.Forms.MediaElement.Source) property is set to a [`UriMediaSource`](xref:Xamarin.Forms.UriMediaSource) or a [`FileMediaSource`](xref:Xamarin.Forms.FileMediaSource).<br /><br />[API Documentation](xref:Xamarin.Forms.MediaElement) / [Guide](~/xamarin-forms/user-interface/mediaelement.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-mediaelementdemos) | [![MediaElement Example](views-images/MediaElement.png "MediaElement Example")](views-images/MediaElement-Large.png#lightbox "MediaElement Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/MediaElementDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/MediaElementDemoPage.xaml) |
 |     |     |
 
+### OpenGLView
+
+|     |     |
+| --- | --- |
+| [`OpenGLView`](xref:Xamarin.Forms.OpenGLView) displays OpenGL graphics in iOS and Android projects. There is no support for the Universal Windows Platform. The iOS and Android projects require a reference to the **OpenTK-1.0** assembly or the **OpenTK** version 1.0.0.0 assembly. `OpenGLView` is easier to use in a Shared Project; if used in a .NET Standard library, then a Dependency Service will also be required (as shown in the sample code).<br /><br />This is the only graphics facility that is built into Xamarin.Forms, but a Xamarin.Forms application can also render graphics using [`SkiaSharp`](~/xamarin-forms/user-interface/graphics/skiasharp/index.md), or [`UrhoSharp`](~/xamarin-forms/user-interface/graphics/urhosharp.md).<br /><br />[API Documentation](xref:Xamarin.Forms.OpenGLView)<br /><br /> | [![OpenGLView Example](views-images/OpenGLView.png "OpenGLView Example")](views-images/OpenGLView-Large.png#lightbox "OpenGLView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/OpenGLViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/OpenGLViewDemoPage.xaml.cs) |
+|     |     |
+
+### WebView
+
+|     |     |
+| --- | --- |
+| [`WebView`](xref:Xamarin.Forms.WebView) displays Web pages or HTML content, based on whether the [`Source`](xref:Xamarin.Forms.WebView.Source) property is set to a [`UriWebViewSource`](xref:Xamarin.Forms.UrlWebViewSource) or an [`HtmlWebViewSource`](xref:Xamarin.Forms.HtmlWebViewSource) object.<br /><br />[API Documentation](xref:Xamarin.Forms.WebView) / [Guide](~/xamarin-forms/user-interface/webview.md) / [Sample 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview) and [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview) | [![WebView Example](views-images/WebView.png "WebView Example")](views-images/WebView-Large.png#lightbox "WebView Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/WebViewDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/WebViewDemoPage.xaml) |
+|     |     |
+
 ## Views that initiate commands
 
 ### Button
@@ -82,6 +89,13 @@ Views are user-interface objects such as labels, buttons, and sliders that are c
 |     |     |
 | --- | --- |
 | `ImageButton` is a rectangular object that displays an image, and which fires a `Clicked` event when it's been pressed.<br /><br /> [Guide](~/xamarin-forms/user-interface/imagebutton.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/formsgallery) | [![ImageButton Example](views-images/ImageButton.png "ImageButton Example")](views-images/ImageButton-Large.png#lightbox "ImageButton Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageButtonDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageButtonDemoPage.xaml.cs) |
+|     |     |
+
+### RadioButton
+
+|     |     |
+| --- | --- |
+| `RadioButton` allows the selection of one option from a set, and fires a `CheckedChanged` event when selection occurs.<br /><br />[Guide](~/xamarin-forms/user-interface/radiobutton.md) / [Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/) | [![RadioButton Example](views-images/RadioButton.png "RadioButton Example")](views-images/RadioButton-Large.png#lightbox "RadioButton Example")<br /> [C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/RadioButtonDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml) with [code-behind](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/RadioButtonDemoPage.xaml.cs) |
 |     |     |
 
 ### RefreshView

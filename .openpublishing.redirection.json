@@ -633,8 +633,24 @@
       "redirect_url": "/xamarin/ios/get-started/installation/device-provisioning/"
     },
     {
+      "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/index.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/customized-pin.md",
+      "redirect_url": "/xamarin/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md"
+    },
+    {
+      "source_path": "docs/xamarin-forms/app-fundamentals/custom-renderer/map/circle-map-overlay.md",
+      "redirect_url": "/xamarin/xamarin-forms/user-interface/map/polygons"
+    },
+    {
       "source_path": "docs/xamarin-forms/data-cloud/authentication/oauth.md",
-      "redirect_url": "/xamarin/essentials/web-authenticator/"
+      "redirect_url": "/xamarin/essentials/web-authenticator/"      
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/theming/dark-mode.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/theming/system-theme-changes/"
     }
   ]
 }

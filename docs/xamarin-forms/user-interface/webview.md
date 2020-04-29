@@ -6,7 +6,7 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/04/2019
+ms.date: 03/11/2020
 ---
 
 # Xamarin.Forms WebView
@@ -109,7 +109,7 @@ In the above code, `@` is used to mark the HTML as a [verbatim string literal](/
 
 ### Local HTML Content
 
-WebView can display content from HTML, CSS and Javascript embedded within the app. For example:
+WebView can display content from HTML, CSS and JavaScript embedded within the app. For example:
 
 ```html
 <html>
@@ -514,11 +514,38 @@ function factorial(num) {
 </html>
 ```
 
+## Cookies
+
+Cookies can be set on a [`WebView`](xref:Xamarin.Forms.WebView), which are then sent with the web request to the specified URL. This is accomplished by adding `Cookie` objects to a `CookieContainer`, which is then set as the value of the `WebView.Cookies` bindable property. The following code shows an example of this:
+
+```csharp
+using System.Net;
+using Xamarin.Forms;
+// ...
+
+CookieContainer cookieContainer = new CookieContainer();
+Uri uri = new Uri("https://dotnet.microsoft.com/apps/xamarin", UriKind.RelativeOrAbsolute);
+
+Cookie cookie = new Cookie
+{
+    Name = "XamarinCookie",
+    Expires = DateTime.Now.AddDays(1),
+    Value = "My cookie",
+    Domain = uri.Host,
+    Path = "/"
+};
+cookieContainer.Add(uri, cookie);
+webView.Cookies = cookieContainer;
+webView.Source = new UrlWebViewSource { Url = uri.ToString() };
+```
+
+In this example, a single `Cookie` is added to the `CookieContainer` object, which is then set as the value of the `WebView.Cookies` property. When the  [`WebView`](xref:Xamarin.Forms.WebView) sends a web request to the specified URL, the cookie is sent with the request.
+
 ## UIWebView Deprecation and App Store Rejection (ITMS-90809)
 
 Starting in April 2020, [Apple will reject apps](https://developer.apple.com/news/?id=12232019b) that still use the deprecated `UIWebView` API. While Xamarin.Forms has switched to `WKWebView` as the default, there is still a reference to the older SDK in the Xamarin.Forms binaries. Current [iOS linker](~/ios/deploy-test/linker.md) behavior does not remove this, and as a result the deprecated `UIWebView` API will still appear to be referenced from your app when you submit to the App Store.
 
-A preview version of the linker is available to fix this issue. To enable the preview, you will need to supply an additional argument `--optimize=experimental-xforms-product-type` to the linker. 
+A preview version of the linker is available to fix this issue. To enable the preview, you will need to supply an additional argument `--optimize=experimental-xforms-product-type` to the linker.
 
 The prerequisites for this to work are:
 

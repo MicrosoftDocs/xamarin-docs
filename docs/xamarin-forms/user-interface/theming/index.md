@@ -6,15 +6,15 @@ ms.assetId: BF92AEDD-EF23-4D08-A972-B089066E75F9
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/18/2020
+ms.date: 04/22/2020
 ---
 
-# Theming a Xamarin.Forms Application
+# Theming a Xamarin.Forms application
 
-## [Theme an Application](theming.md)
+## [Theme an application](theming.md)
 
 Theming can be implemented in Xamarin.Forms applications by creating a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) for each theme, and then loading the resources with the `DynamicResource` markup extension.
 
-## [Detect Dark Mode](dark-mode.md)
+## [Respond to system theme changes](system-theme-changes.md)
 
-Dark mode can be supported in any Xamarin.Forms application by using a combination of [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary) objects, dynamic resources, and platform knowledge.
+Devices typically include light and dark themes, which each refer to a broad set of appearance preferences that can be set at the operating system level. Applications should respect these system themes, and respond immediately when the system theme changes.

@@ -27,9 +27,9 @@ The [`Position`](xref:Xamarin.Forms.Maps.Position) struct is typically used when
 
 The [`Map`](xref:Xamarin.Forms.Maps.Map) control allows locations to be marked with [`Pin`](xref:Xamarin.Forms.Maps.Pin) objects. A `Pin` is a map marker that opens an information window when tapped.
 
-## [Polygons and Polylines](polygons.md)
+## [Polygons, Polylines, and Circles](polygons.md)
 
-`Polygon` and `Polyline` elements allow you to highlight specific areas on a map. A `Polygon` is a fully enclosed shape that can have a stroke and fill color. A `Polyline` is a line that does not fully enclose an area.
+`Polygon`, `Polyline`, and `Circle` elements allow you to highlight specific areas on a map. A `Polygon` is a fully enclosed shape that can have a stroke and fill color. A `Polyline` is a line that does not fully enclose an area. A `Circle` highlights a circular area of the map.
 
 ## [Geocoding](geocoder.md)
 

@@ -6,7 +6,7 @@ ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/24/2018
+ms.date: 04/02/2020
 ---
 
 # Modal Page Presentation Style on iOS
@@ -44,12 +44,15 @@ The `Page.On<iOS>` method specifies that this platform-specific will only run on
 
 - `FullScreen`, which sets the modal presentation style to encompass the whole screen. By default, modal pages are displayed using this presentation style.
 - `FormSheet`, which sets the modal presentation style to be centered on and smaller than the screen.
+- `Automatic`, which sets the modal presentation style to the default chosen by the system. For most view controllers, `UIKit` maps this to `UIModalPresentationStyle.PageSheet`, but some system view controllers may map it to a different style.
+- `OverFullScreen`, which sets the modal presentation style to cover the screen.
+- `PageSheet`, which sets the modal presentation style to cover the underlying content.
 
 In addition, the `GetModalPresentationStyle` method can be used to retrieve the current value of the `UIModalPresentationStyle` enumeration that's applied to the [`Page`](xref:Xamarin.Forms.Page).
 
 The result is that the modal presentation style on a [`Page`](xref:Xamarin.Forms.Page) can be set:
 
-[![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles on an iPad")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles on an iPad")
+[![](page-presentation-style-images/modal-presentation-style-small.png "Modal Presentation Styles")](page-presentation-style-images/modal-presentation-style-large.png#lightbox "Modal Presentation Styles")
 
 > [!NOTE]
 > Pages that use this platform-specific to set the modal presentation style must use modal navigation. For more information, see [Xamarin.Forms Modal Pages](~/xamarin-forms/app-fundamentals/navigation/modal.md).

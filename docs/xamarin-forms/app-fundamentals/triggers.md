@@ -6,7 +6,7 @@ ms.assetid: 60460F57-63C6-4916-BBB5-A870F1DF53D7
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/21/2020
+ms.date: 04/17/2020
 ---
 
 # Xamarin.Forms Triggers
@@ -393,7 +393,7 @@ For more information about visual states, see [Xamarin.Forms Visual State Manage
 
 The [`StateTrigger`](xref:Xamarin.Forms.StateTrigger) class, which derives from the [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) class, has an [`IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) bindable property. A `StateTrigger` triggers a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the `IsActive` property changes value.
 
-The [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) class, which is the base class for all state triggers, has an [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) property and an [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) event. This event fires whenever a [`VisualState`](xref:Xamarin.Forms.VisualState) change occurs.
+The [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) class, which is the base class for all state triggers, has an [`IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) property and an [`IsActiveChanged`](xref:Xamarin.Forms.StateTriggerBase.IsActiveChanged) event. This event fires whenever a [`VisualState`](xref:Xamarin.Forms.VisualState) change occurs. In addition, the `StateTriggerBase` class has overridable `OnAttached` and `OnDetached` methods.
 
 > [!IMPORTANT]
 > The [`StateTrigger.IsActive`](xref:Xamarin.Forms.StateTrigger.IsActive) bindable property hides the inherited [`StateTriggerBase.IsActive`](xref:Xamarin.Forms.StateTriggerBase.IsActive) property.
@@ -457,7 +457,7 @@ Unchecked state active: True
 ```
 
 > [!NOTE]
-> Custom state triggers can be created by deriving from the [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) class.
+> Custom state triggers can be created by deriving from the [`StateTriggerBase`](xref:Xamarin.Forms.StateTriggerBase) class, and overriding the `OnAttached` and `OnDetached` methods to perform any required registrations and cleanup.
 
 ### Adaptive trigger
 

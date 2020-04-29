@@ -178,7 +178,7 @@ The [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) property is set to a `
 
 ## Choose an EmptyView at runtime
 
-Views that will be displayed as an [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) when data is unavailable, can be defined as [`ContentView`](xref:Xamarin.Forms.ContentView) objects in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). The `EmptyView` property can then be set to a specific `ContentView`, based on some business logic, at runtime. The following XAML example shows an example of this scenario:
+Views that will be displayed as an [`EmptyView`](xref:Xamarin.Forms.ItemsView.EmptyView) when data is unavailable, can be defined as [`ContentView`](xref:Xamarin.Forms.ContentView) objects in a [`ResourceDictionary`](xref:Xamarin.Forms.ResourceDictionary). The `EmptyView` property can then be set to a specific `ContentView`, based on some business logic, at runtime. The following XAML shows an example of this scenario:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"

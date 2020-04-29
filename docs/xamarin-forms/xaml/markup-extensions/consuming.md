@@ -6,7 +6,7 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 12/04/2019
+ms.date: 04/21/2020
 ---
 
 # Consuming XAML Markup Extensions
@@ -22,8 +22,9 @@ XAML markup extensions help enhance the power and flexibility of XAML by allowin
 - [`x:Null`](#null) – set an attribute to a `null` value.
 - [`OnPlatform`](#onplatform) – customize UI appearance on a per-platform basis.
 - [`OnIdiom`](#onidiom) – customize UI appearance based on the idiom of the device the application is running on.
-- [`DataTemplate`](#datatemplate-markup-extension) - converts a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
-- [`FontImage`](#fontimage-markup-extension) - display a font icon in any view that can display an `ImageSource`.
+- [`DataTemplate`](#datatemplate-markup-extension) – converts a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
+- [`FontImage`](#fontimage-markup-extension) – display a font icon in any view that can display an `ImageSource`.
+- [`OnAppTheme`](#onapptheme-markup-extension) – consume a resource based on the current system theme.
 
 Additional XAML markup extensions have historically been supported by other XAML implementations, and are also supported by Xamarin.Forms. These are described more fully in other articles:
 
@@ -327,7 +328,7 @@ The method that is executed when a `Button` is pressed creates a new instance of
 
 ## x:Array markup extension
 
-The `x:Array` markup extension allows you to define an array in markup. It is supported by the [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) class, which defines two properties:
+The `x:Array` markup extension enables you to define an array in markup. It is supported by the [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) class, which defines two properties:
 
 - `Type` of type `Type`, which indicates the type of the elements in the array.
 - `Items` of type `IList`, which is a collection of the items themselves. This is the content property of `ArrayExtension`.
@@ -459,7 +460,7 @@ Notice that four of the `Label` elements have a serif font, but the center `Labe
 
 ## OnPlatform markup extension
 
-The `OnPlatform` markup extension allows you to customize UI appearance on a per-platform basis. It provides the same functionality as the [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) and [`On`](xref:Xamarin.Forms.On) classes, but with a more concise representation.
+The `OnPlatform` markup extension enables you to customize UI appearance on a per-platform basis. It provides the same functionality as the [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) and [`On`](xref:Xamarin.Forms.On) classes, but with a more concise representation.
 
 The `OnPlatform` markup extension is supported by the [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) class, which defines the following properties:
 
@@ -471,8 +472,8 @@ The `OnPlatform` markup extension is supported by the [`OnPlatformExtension`](xr
 - `Tizen` of type `object`, that you set to a value to be applied on the Tizen platform.
 - `UWP` of type `object`, that you set to a value to be applied on the Universal Windows Platform.
 - `WPF` of type `object`, that you set to a value to be applied on the Windows Presentation Foundation platform.
-- `Converter` of type `IValueConverter`, that you set to an `IValueConverter` implementation.
-- `ConverterParameter` of type `object`, that you set to a value to pass to the `IValueConverter` implementation.
+- `Converter` of type `IValueConverter`, that can be set to an `IValueConverter` implementation.
+- `ConverterParameter` of type `object`, that can be set to a value to pass to the `IValueConverter` implementation.
 
 > [!NOTE]
 > The XAML parser allows the [`OnPlatformExtension`](xref:Xamarin.Forms.Xaml.OnPlatformExtension) class to be abbreviated as `OnPlatform`.
@@ -501,7 +502,7 @@ Here's the program running:
 
 ## OnIdiom markup extension
 
-The `OnIdiom` markup extension allows you to customize UI appearance based on the idiom of the device the application is running on. It's supported by the [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) class, which defines the following properties:
+The `OnIdiom` markup extension enables you to customize UI appearance based on the idiom of the device the application is running on. It's supported by the [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) class, which defines the following properties:
 
 - `Default` of type `object`, that you set to a default value to be applied to the properties that represent device idioms.
 - `Phone` of type `object`, that you set to a value to be applied on phones.
@@ -509,8 +510,8 @@ The `OnIdiom` markup extension allows you to customize UI appearance based on th
 - `Desktop` of type `object`, that you set to a value to be applied on desktop platforms.
 - `TV` of type `object`, that you set to a value to be applied on TV platforms.
 - `Watch` of type `object`, that you set to a value to be applied on Watch platforms.
-- `Converter` of type `IValueConverter`, that you set to an `IValueConverter` implementation.
-- `ConverterParameter` of type `object`, that you set to a value to pass to the `IValueConverter` implementation.
+- `Converter` of type `IValueConverter`, that can be set to an `IValueConverter` implementation.
+- `ConverterParameter` of type `object`, that can be set to a value to pass to the `IValueConverter` implementation.
 
 > [!NOTE]
 > The XAML parser allows the [`OnIdiomExtension`](xref:Xamarin.Forms.Xaml.OnIdiomExtension) class to be abbreviated as `OnIdiom`.
@@ -537,7 +538,7 @@ Here's the program running:
 
 ## DataTemplate markup extension
 
-The `DataTemplate` markup extension allows you to convert a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). It's supported by the `DataTemplateExtension` class, which defines a `TypeName` property, of type `string`, that is set to the name of the type to be converted into a `DataTemplate`. The `TypeName` property is the content property of `DataTemplateExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `TypeName=` part of the expression.
+The `DataTemplate` markup extension enables you to convert a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). It's supported by the `DataTemplateExtension` class, which defines a `TypeName` property, of type `string`, that is set to the name of the type to be converted into a `DataTemplate`. The `TypeName` property is the content property of `DataTemplateExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `TypeName=` part of the expression.
 
 > [!NOTE]
 > The XAML parser allows the `DataTemplateExtension` class to be abbreviated as `DataTemplate`.
@@ -556,7 +557,7 @@ For more information about Shell applications, see [Xamarin.Forms Shell](~/xamar
 
 ## FontImage markup extension
 
-The `FontImage` markup extension allows you to display a font icon in any view that can display an `ImageSource`. It provides the same functionality as the `FontImageSource` class, but with a more concise representation.
+The `FontImage` markup extension enables you to display a font icon in any view that can display an `ImageSource`. It provides the same functionality as the `FontImageSource` class, but with a more concise representation.
 
 The `FontImage` markup extension is supported by the `FontImageExtension` class, which defines the following properties:
 
@@ -585,15 +586,71 @@ Here's the program running:
 
 For information about displaying font icons by specifying the font icon data in a `FontImageSource` object, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
-## Define Your Own Markup Extensions
+## OnAppTheme markup extension
+
+The `OnAppTheme` markup extension enables you to specify a resource to be consumed, such as an image or color, based on the current system theme. It provides the same functionality as the `OnAppTheme<T>` class, but with a more concise representation.
+
+> [!IMPORTANT]
+> The `OnAppTheme` markup extension has minimum operating system requirements. For more information, see [Respond to system theme changes in Xamarin.Forms applications](~/xamarin-forms/user-interface/theming/system-theme-changes.md).
+
+The `OnAppTheme` markup extension is supported by the `OnAppThemeExtension` class, which defines the following properties:
+
+- `Default`, of type `object`, that you set to the resource to be used by default.
+- `Light`, of type `object`, that you set to the resource to be used when the device is using its light theme.
+- `Dark`, of type `object`, that you set to the resource to be used when the device is using its dark theme.
+- `Value`, of type `object`, that returns the resource that's currently being used by the markup extension.
+- `Converter` of type `IValueConverter`, that can be set to an `IValueConverter` implementation.
+- `ConverterParameter` of type `object`, that can be set to a value to pass to the `IValueConverter` implementation.
+
+> [!NOTE]
+> The XAML parser allows the `OnAppThemeExtension` class to be abbreviated as `OnAppTheme`.
+
+The `Default` property is the content property of `OnAppThemeExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `Default=` part of the expression provided that it's the first argument.
+
+The **OnAppTheme Demo** page shows how to use the `OnAppTheme` markup extension:
+
+```xaml
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MarkupExtensions.OnAppThemeDemoPage"
+             Title="OnAppTheme Demo">
+    <ContentPage.Resources>
+
+        <Style x:Key="labelStyle"
+               TargetType="Label">
+            <Setter Property="TextColor"
+                    Value="{OnAppTheme Black, Light=Blue, Dark=Teal}" />
+        </Style>
+
+    </ContentPage.Resources>
+    <StackLayout Margin="20">
+        <Label Text="This text is green in light mode, and red in dark mode."
+               TextColor="{OnAppTheme Light=Green, Dark=Red}" />
+        <Label Text="This text is black by default, blue in light mode, and teal in dark mode."
+               Style="{DynamicResource labelStyle}" />
+    </StackLayout>
+</ContentPage>
+```
+
+In this example, the text color of the first [`Label`](xref:Xamarin.Forms.Label) is set to green when the device is using its light theme, and is set to red when the device is using its dark theme. The second `Label` has its [`TextColor`](xref:Xamarin.Forms.Label.TextColor) property set through a [`Style`](xref:Xamarin.Forms.Style). This `Style` sets the text color of the `Label` to black by default, to blue when the device is using its light theme, and to teal when the device is using its dark theme.
+
+> [!NOTE]
+> A [`Style`](xref:Xamarin.Forms.Style) that consumes the `OnAppTheme` markup extension should be applied to a control with the `DynamicResource` markup extension, so that the app's UI is updated when the system theme changes.
+
+Here's the program running:
+
+![OnAppTheme Demo](consuming-images/onappthemedemo.png "OnAppTheme Demo")
+
+## Define markup extensions
 
 If you've encountered a need for a XAML markup extension that isn't available in Xamarin.Forms, you can [create your own](creating.md).
 
-## Related Links
+## Related links
 
 - [Markup Extensions (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-markupextensions)
 - [XAML markup extensions chapter from Xamarin.Forms book](~/xamarin-forms/creating-mobile-apps-xamarin-forms/summaries/chapter10.md)
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Dynamic Styles](~/xamarin-forms/user-interface/styles/dynamic.md)
 - [Data Binding](~/xamarin-forms/app-fundamentals/data-binding/index.md)
-- [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md).
+- [Xamarin.Forms Shell](~/xamarin-forms/app-fundamentals/shell/index.md)
+- [Respond to system theme changes in Xamarin.Forms applications](~/xamarin-forms/user-interface/theming/system-theme-changes.md)

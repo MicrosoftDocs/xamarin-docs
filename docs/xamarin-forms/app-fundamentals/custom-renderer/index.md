@@ -29,9 +29,9 @@ The Xamarin.Forms [`Entry`](xref:Xamarin.Forms.Entry) control allows a single li
 
 A [`ContentPage`](xref:Xamarin.Forms.ContentPage) is a visual element that displays a single view and occupies most of the screen. This article demonstrates how to create a custom renderer for the `ContentPage` page, enabling developers to override the default native rendering with their own platform-specific customization.
 
-## [Customizing a Map](map/index.md)
+## [Customizing a Map Pin](map-pin.md)
 
-Xamarin.Forms.Maps provides a cross-platform abstraction for displaying maps that use the native map APIs on each platform, to provide a fast and familiar map experience for users. This topic demonstrates how to create custom renderers for the `Map` control, enabling developers to override the default native rendering with their own platform-specific customization.
+Xamarin.Forms.Maps provides a cross-platform abstraction for displaying maps that use the native map APIs on each platform, to provide a fast and familiar map experience for users. This topic demonstrates how to a create custom renderer for the `Map` control, enabling developers to override the default native rendering with their own platform-specific customization.
 
 ## [Customizing a ListView](listview.md)
 

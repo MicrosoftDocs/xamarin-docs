@@ -6,7 +6,7 @@ ms.assetid: 634AB62E-68C8-454C-838B-F1CC4E4E21BC
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 01/15/2020
+ms.date: 03/05/2020
 ---
 
 # iOS platform features in Xamarin.Forms
@@ -34,12 +34,14 @@ The following platform-specific functionality is provided for Xamarin.Forms view
 - Controlling whether row animations are disabled when the [`ListView`](xref:Xamarin.Forms.ListView) items collection is being updated. For more information, see [ListView Row Animations on iOS](listview-row-animations.md).
 - Setting the separator style on a [`ListView`](xref:Xamarin.Forms.ListView). For more information, see [ListView Separator Style on iOS](listview-separator-style.md).
 - Controlling when item selection occurs in a [`Picker`](xref:Xamarin.Forms.Picker). For more information, see [Picker Item Selection on iOS](picker-selection.md).
+- Controlling whether a [`SearchBar`](xref:Xamarin.Forms.SearchBar) has a background. For more information, see [SearchBar style on iOS](searchbar-style.md).
 - Enabling the [`Slider.Value`](xref:Xamarin.Forms.Slider.Value) property to be set by tapping on a position on the [`Slider`](xref:Xamarin.Forms.Slider) bar, rather than by having to drag the `Slider` thumb. For more information, see [Slider Thumb Tap on iOS](slider-thumb.md).
 - Controlling the transition that's used when opening a `SwipeView`. For more information, see [SwipeView Swipe Transition Mode](swipeview-swipetransitionmode.md).
 - Controlling when item selection occurs in a [`TimePicker`](xref:Xamarin.Forms.TimePicker). For more information, see [TimePicker Item Selection on iOS](timepicker-selection.md).
 
 The following platform-specific functionality is provided for Xamarin.Forms pages on iOS:
 
+- Controlling whether the detail page of a [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) has shadow applied to it, when revealing the master page. For more information, see [MasterDetailPage Shadow](masterdetailpage-shadow.md).
 - Hiding the navigation bar separator on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage). For more information, see [NavigationPage Bar Separator on iOS](navigation-bar-separator.md).
 - Controlling whether the navigation bar is translucent. For more information, see [Navigation Bar Translucency on iOS](navigation-bar-translucent.md).
 - Controlling whether the status bar text color on a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is adjusted to match the luminosity of the navigation bar. For more information, see [NavigationPage Bar Text Color Mode on iOS](status-bar-text-color.md).

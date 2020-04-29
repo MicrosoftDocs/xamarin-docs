@@ -266,4 +266,4 @@ This code passes the assembly in which the `Xamarin.Forms.Maps.UWP.MapRenderer` 
 - [Maps Sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 - [Xamarin.Forms.Maps Pins](~/xamarin-forms/user-interface/map/pins.md).
 - [Maps API](xref:Xamarin.Forms.Maps)
-- [Map Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map/index.md)
+- [Map Custom Renderer](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md)

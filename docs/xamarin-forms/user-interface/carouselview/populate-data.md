@@ -281,6 +281,104 @@ In this example, the `IndicatorView` is rendered beneath the `CarouselView`, wit
 
 For more information about indicators, see [Xamarin.Forms IndicatorView](~/xamarin-forms/user-interface/indicatorview.md).
 
+## Context menus
+
+[`CarouselView`](xref:Xamarin.Forms.CarouselView) supports context menus for items of data through the `SwipeView`, which reveals the context menu with a swipe gesture. The `SwipeView` is a container control that wraps around an item of content, and provides context menu items for that item of content. Therefore, context menus are implemented for a `CarouselView` by creating a `SwipeView` that defines the content that the `SwipeView` wraps around, and the context menu items that are revealed by the swipe gesture. This is achieved by adding a `SwipeView` to the [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) that defines the appearance of each item of data in the `CarouselView`:
+
+```xaml
+<CarouselView x:Name="carouselView"
+              ItemsSource="{Binding Monkeys}">
+    <CarouselView.ItemTemplate>
+        <DataTemplate>
+            <StackLayout>
+                    <Frame HasShadow="True"
+                           BorderColor="DarkGray"
+                           CornerRadius="5"
+                           Margin="20"
+                           HeightRequest="300"
+                           HorizontalOptions="Center"
+                           VerticalOptions="CenterAndExpand">
+                        <SwipeView>
+                            <SwipeView.TopItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Favorite"
+                                               IconImageSource="favorite.png"
+                                               BackgroundColor="LightGreen"
+                                               Command="{Binding Source={x:Reference carouselView}, Path=BindingContext.FavoriteCommand}"
+                                               CommandParameter="{Binding}" />
+                                </SwipeItems>
+                            </SwipeView.TopItems>
+                            <SwipeView.BottomItems>
+                                <SwipeItems>
+                                    <SwipeItem Text="Delete"
+                                               IconImageSource="delete.png"
+                                               BackgroundColor="LightPink"
+                                               Command="{Binding Source={x:Reference carouselView}, Path=BindingContext.DeleteCommand}"
+                                               CommandParameter="{Binding}" />
+                                </SwipeItems>
+                            </SwipeView.BottomItems>
+                            <StackLayout>
+                                <!-- Define item appearance -->
+                            </StackLayout>
+                        </SwipeView>
+                    </Frame>
+            </StackLayout>
+        </DataTemplate>
+    </CarouselView.ItemTemplate>
+</CarouselView>
+```
+
+The equivalent C# code is:
+
+```csharp
+CarouselView carouselView = new CarouselView();
+carouselView.SetBinding(ItemsView.ItemsSourceProperty, "Monkeys");
+
+carouselView.ItemTemplate = new DataTemplate(() =>
+{
+    StackLayout stackLayout = new StackLayout();
+    Frame frame = new Frame { ... };
+
+    SwipeView swipeView = new SwipeView();
+    SwipeItem favoriteSwipeItem = new SwipeItem
+    {
+        Text = "Favorite",
+        IconImageSource = "favorite.png",
+        BackgroundColor = Color.LightGreen
+    };
+    favoriteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.FavoriteCommand", source: carouselView));
+    favoriteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    SwipeItem deleteSwipeItem = new SwipeItem
+    {
+        Text = "Delete",
+        IconImageSource = "delete.png",
+        BackgroundColor = Color.LightPink
+    };
+    deleteSwipeItem.SetBinding(MenuItem.CommandProperty, new Binding("BindingContext.DeleteCommand", source: carouselView));
+    deleteSwipeItem.SetBinding(MenuItem.CommandParameterProperty, ".");
+
+    swipeView.TopItems = new SwipeItems { favoriteSwipeItem };
+    swipeView.BottomItems = new SwipeItems { deleteSwipeItem };
+
+    StackLayout swipeViewStackLayout = new StackLayout { ... };
+    swipeView.Content = swipeViewStackLayout;
+    frame.Content = swipeView;
+    stackLayout.Children.Add(frame);
+
+    return stackLayout;
+});
+```
+
+In this example, the `SwipeView` content is a [`StackLayout`](xref:Xamarin.Forms.StackLayout) that defines the appearance of each item that's surrounded by a [`Frame`](xref:Xamarin.Forms.Frame) in the [`CarouselView`](xref:Xamarin.Forms.CarouselView). The swipe items are used to perform actions on the `SwipeView` content, and are revealed when the control is swiped from the top and from the bottom:
+
+[![Screenshot of CarouselView bottom context menu item, on iOS and Android](populate-data-images/swipeview-bottom.png "CarouselView with bottom SwipeView context menu item")](populate-data-images/swipeview-bottom-large.png#lightbox "CarouselView with bottom SwipeView context menu item")
+[![Screenshot of CarouselView top menu item, on iOS and Android](populate-data-images/swipeview-top.png "CarouselView with top SwipeView context menu item")](populate-data-images/swipeview-top-large.png#lightbox "CarouselView with top SwipeView context menu item")
+
+`SwipeView` supports four different swipe directions, with the swipe direction being defined by the directional `SwipeItems` collection the `SwipeItems` objects are added to. By default, a swipe item is executed when it's tapped by the user. In addition, once a swipe item has been executed the swipe items are hidden and the `SwipeView` content is re-displayed. However, these behaviors can be changed.
+
+For more information about the `SwipeView` control, see [Xamarin.Forms SwipeView](~/xamarin-forms/user-interface/swipeview.md).
+
 ## Pull to refresh
 
 [`CarouselView`](xref:Xamarin.Forms.CarouselView) supports pull to refresh functionality through the `RefreshView`, which enables the data being displayed to be refreshed by pulling down on the items. The `RefreshView` is a container control that provides pull to refresh functionality to its child, provided that the child supports scrollable content. Therefore, pull to refresh is implemented for a `CarouselView` by setting it as the child of a `RefreshView`:

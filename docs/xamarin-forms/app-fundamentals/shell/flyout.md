@@ -6,7 +6,7 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 11/05/2019
+ms.date: 04/22/2020
 ---
 
 # Xamarin.Forms Shell Flyout
@@ -345,64 +345,84 @@ This example displays the title of each `FlyoutItem` object in italics:
 
 [![Screenshot of templated FlyoutItem objects, on iOS and Android](flyout-images/flyoutitem-templated.png "Shell templated FlyoutItem objects")](flyout-images/flyoutitem-templated-large.png#lightbox "Shell templated FlyoutItem objects")
 
-
 Because `Shell.ItemTemplate` is an attached property, different templates can be attached to specific `FlyoutItem` objects.
 
 > [!NOTE]
 > Shell provides the `Title` and `FlyoutIcon` properties to the [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) of the `ItemTemplate`.
 
+In addition, Shell includes three style classes, which are automatically applied to `FlyoutItem` objects. For more information, see [FlyoutItem and MenuItem style classes](#flyoutitem-and-menuitem-style-classes).
 
-### Default Template for FlyoutItems and MenuItems
-Shell uses the following template internally for its default implementation. This is a great starting point if all you want to do is make small tweaks to the existing layouts. This also demonstrates the Visual State Manager features of the flyout items. This same template can also be used for MenuItems
+### Default template for FlyoutItems
+
+The default [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) used for each `FlyoutItem` is shown below:
 
 ```xaml
-<DataTemplate x:Key="FlyoutTemplates">
-    <Grid HeightRequest="{x:OnPlatform Android=50}">
+<DataTemplate x:Key="FlyoutTemplate">
+    <Grid x:Name="FlyoutItemLayout"
+          HeightRequest="{x:OnPlatform Android=50}"
+          ColumnSpacing="{x:OnPlatform UWP=0}"
+          RowSpacing="{x:OnPlatform UWP=0}">
         <VisualStateManager.VisualStateGroups>
             <VisualStateGroupList>
                 <VisualStateGroup x:Name="CommonStates">
-                    <VisualState x:Name="Normal">
-                    </VisualState>
+                    <VisualState x:Name="Normal" />
                     <VisualState x:Name="Selected">
                         <VisualState.Setters>
-                            <Setter Property="BackgroundColor" Value="#F2F2F2" />
+                            <Setter Property="BackgroundColor"
+                                    Value="{x:OnPlatform Android=#F2F2F2, iOS=#F2F2F2}" />
                         </VisualState.Setters>
                     </VisualState>
                 </VisualStateGroup>
             </VisualStateGroupList>
         </VisualStateManager.VisualStateGroups>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50}"></ColumnDefinition>
-            <ColumnDefinition Width="*"></ColumnDefinition>
+            <ColumnDefinition Width="{x:OnPlatform Android=54, iOS=50, UWP=Auto}" />
+            <ColumnDefinition Width="*" />
         </Grid.ColumnDefinitions>
-        <Image Source="{Binding FlyoutIcon}"
-            VerticalOptions="Center"
-            HorizontalOptions="Center"
-            HeightRequest="{x:OnPlatform Android=24, iOS=22}"
-            WidthRequest="{x:OnPlatform Android=24, iOS=22}">
+        <Image x:Name="FlyoutItemImage"
+               Source="{Binding FlyoutIcon}"
+               VerticalOptions="Center"
+               HorizontalOptions="{x:OnPlatform Default=Center, UWP=Start}"
+               HeightRequest="{x:OnPlatform Android=24, iOS=22, UWP=16}"
+               WidthRequest="{x:OnPlatform Android=24, iOS=22, UWP=16}">
+            <Image.Margin>
+                <OnPlatform x:TypeArguments="Thickness">
+                    <OnPlatform.Platforms>
+                        <On Platform="UWP"
+                            Value="12,0,12,0" />
+                    </OnPlatform.Platforms>
+                </OnPlatform>
+            </Image.Margin>
         </Image>
-        <Label VerticalOptions="Center"
-                Text="{Binding Title}"
-                FontSize="{x:OnPlatform Android=14, iOS=Small}"
-                FontAttributes="Bold" Grid.Column="1">
+        <Label x:Name="FlyoutItemLabel"
+               Grid.Column="1"
+               Text="{Binding Title}"
+               FontSize="{x:OnPlatform Android=14, iOS=Small}"
+               HorizontalOptions="{x:OnPlatform UWP=Start}"
+               HorizontalTextAlignment="{x:OnPlatform UWP=Start}"
+               FontAttributes="{x:OnPlatform iOS=Bold}"
+               VerticalTextAlignment="Center">
             <Label.TextColor>
                 <OnPlatform x:TypeArguments="Color">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="#D2000000" />
+                        <On Platform="Android"
+                            Value="#D2000000" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.TextColor>
             <Label.Margin>
                 <OnPlatform x:TypeArguments="Thickness">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="20, 0, 0, 0" />
+                        <On Platform="Android"
+                            Value="20, 0, 0, 0" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.Margin>
             <Label.FontFamily>
                 <OnPlatform x:TypeArguments="x:String">
                     <OnPlatform.Platforms>
-                        <On Platform="Android" Value="sans-serif-medium" />
+                        <On Platform="Android"
+                            Value="sans-serif-medium" />
                     </OnPlatform.Platforms>
                 </OnPlatform>
             </Label.FontFamily>
@@ -410,6 +430,13 @@ Shell uses the following template internally for its default implementation. Thi
     </Grid>
 </DataTemplate>
 ```
+
+This template can be used for as a basis for making alterations to the existing flyout layout, and also shows the visual states that are implemented for flyout items.
+
+In addition, the [`Grid`](xref:Xamarin.Forms.Grid), [`Image`](xref:Xamarin.Forms.Image), and [`Label`](xref:Xamarin.Forms.Label) elements all have `x:Name` values and so can be targeted with the Visual State Manager. For more information, see [Set state on multiple elements](~/xamarin-forms/user-interface/visual-state-manager.md#set-state-on-multiple-elements).
+
+> [!NOTE]
+> The same template can also be used for `MenuItem` objects.
 
 ## FlyoutItem tab order
 
@@ -564,12 +591,50 @@ Because `Shell.MenuItemTemplate` is an attached property, different templates ca
 </Shell>
 ```
 
+This example attaches the Shell-level `MenuItemTemplate` to the first `MenuItem` object, and attaches the inline `MenuItemTemplate` to the second `MenuItem`.
 
 > [!NOTE]
-> The same template used for [Flyout Items](#default-template-for-flyoutitems-and-menuitems) can also be used for Menu Items.
+> The default template for `FlyoutItem` objects can also be used for `MenuItem` objects. For more information, see [Default template for FlyoutItems](#default-template-for-flyoutitems).
 
-This example attaches the Shell-level `MenuItemTemplate` to the first `MenuItem` object, and attaches the inline `MenuItemTemplate` to the second `MenuItem`.
+## FlyoutItem and MenuItem style classes
+
+Shell includes three style classes, which are automatically applied to `FlyoutItem` and `MenuItem` objects. The style class names are:
+
+- `FlyoutItemLabelStyle`
+- `FlyoutItemImageStyle`
+- `FlyoutItemLayoutStyle`
+
+The following XAML shows an example of defining styles for these style classes:
+
+```xaml
+<Style TargetType="Label"
+       Class="FlyoutItemLabelStyle">
+    <Setter Property="TextColor"
+            Value="Black" />
+    <Setter Property="HeightRequest"
+            Value="100" />
+</Style>
+
+<Style TargetType="Image"
+       Class="FlyoutItemImageStyle">
+    <Setter Property="Aspect"
+            Value="Fill" />
+</Style>
+
+<Style TargetType="Layout"
+       Class="FlyoutItemLayoutStyle"
+       ApplyToDerivedTypes="True">
+    <Setter Property="BackgroundColor"
+            Value="Teal" />
+</Style>
+```
+
+These styles will automatically be applied to `FlyoutItem` and `MenuItem` objects, without having to set their [`StyleClass`](xref:Xamarin.Forms.NavigableElement.StyleClass) properties to the style class names.
+
+In addition, custom style classes can be defined and applied to `FlyoutItem` and `MenuItem` objects. For more information about style classes, see [Xamarin.Forms Style Classes](~/xamarin-forms/user-interface/styles/xaml/style-class.md).
 
 ## Related links
 
 - [Xaminals (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-xaminals/)
+- [Xamarin.Forms Style Classes](~/xamarin-forms/user-interface/styles/xaml/style-class.md)
+- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

@@ -1,34 +1,39 @@
 ---
-title: "Xamarin.Forms Map Polygons and Polylines"
-description: "This article explains how to create polygons and polylines on a Xamarin.Forms map instance."
+title: "Xamarin.Forms Map Polygons, Polylines, and Circles"
+description: "This article explains how to create polygons, polylines, and circles on a Xamarin.Forms map instance."
 ms.prod: xamarin
 ms.assetid: CDAF0B02-1AA8-4AD6-94A7-ABFC18006A2D
 ms.technology: xamarin-forms
-author: profexorgeek
-ms.author: jusjohns
-ms.date: 09/20/2019
+author: davidbritch
+ms.author: dabritch
+ms.date: 03/10/2020
 ---
 
 # Xamarin.Forms Map Polygons and Polylines
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithmaps)
 
-[!["Polygon and Polyline demo on iOS and Android"](polygons-images/polygon-app-cropped.png)](polygons-images/polygon-app.png#lightbox)
+`Polygon`, `Polyline`, and `Circle` elements allow you to highlight specific areas on a map. A `Polygon` is a fully enclosed shape that can have a stroke and fill color. A `Polyline` is a line that does not fully enclose an area. A `Circle` highlights a circular area of the map:
 
-`Polygon` and `Polyline` elements allow you to highlight specific areas on a map. A `Polygon` is a fully enclosed shape that can have a stroke and fill color. A `Polyline` is a line that does not fully enclose an area.
+[!["Screenshot of a map polygon and polyline, on iOS and Android"](polygons-images/polygon-polyline.png "Polygon and polyline on a map")](polygons-images/polygon-polyline-large.png#lightbox "Polygon and polyline on a map")
+[!["Screenshot of a map circle, on iOS and Android"](polygons-images/circle.png "Circle on a map")](polygons-images/circle-large.png#lightbox "Circle on a map")
 
-> [!NOTE]
-> Examples of `Polygon` and `Polyline` are found on the **PolygonsPage** in the sample project.
+The `Polygon`, `Polyline`, and `Circle` classes derive from the `MapElement` class, which exposes the following bindable properties:
 
-The `Polygon` and `Polyline` classes derive from `MapElement`, which exposes the following [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) properties:
+- `StrokeColor` is a `Color` object that determines the line color.
+- `StrokeWidth` is a `float` object that determines the line width.
 
-- `StrokeColor` is a `Color` property that determines the line color.
-- `StrokeWidth` is a `float` property that determines the line width.
-- `Geopath` is defined on both `Polygon` and `Polyline`, and is a list of [`Position`](xref:Xamarin.Forms.Maps.Position) objects that specify the points of the shape.
+The `Polygon` class defines an additional bindable property:
 
-The `Polygon` class defines an additional property:
+- `FillColor` is a `Color` object that determines the polygon's background color.
 
-- `FillColor` is a `Color` property that determines the polygon's background color.
+In addition, the `Polygon` and `Polyline` classes both define a `GeoPath` property, which is a list of [`Position`](xref:Xamarin.Forms.Maps.Position) objects that specify the points of the shape.
+
+The `Circle` class defines the following bindable properties:
+
+- `Center` is a [`Position`](xref:Xamarin.Forms.Maps.Position) object that defines the center of the circle, in latitude and longitude.
+- `Radius` is a [`Distance`](xref:Xamarin.Forms.Maps.Distance) object that defines the radius of the circle in meters, kilometers, or miles.
+- `FillColor` is a `Color` property that determines the color within the circle perimeter.
 
 > [!NOTE]
 > If the `StrokeColor` property is not specified the stroke will default to black. If the `FillColor` property is not specified, the fill will default to transparent. Therefore, if neither property is specified the shape will have a black outline with no fill.
@@ -157,6 +162,66 @@ map.MapElements.Add(polyline);
 ```
 
 The `StrokeColor` and `StrokeWidth` properties are specified to customize the line. The `GeoPath` property contains a list of `Position` objects defining the geographic coordinates of the polyline points. A `Polyline` object is rendered on the map once it has been added to the `MapElements` collection of the `Map`.
+
+## Create a circle
+
+A `Circle` object can be added to a map by instantiating it and adding it to the map's `MapElements` collection. This can be accomplished in XAML as follows:
+
+```xaml
+<ContentPage ...
+             xmlns:maps="clr-namespace:Xamarin.Forms.Maps;assembly=Xamarin.Forms.Maps">
+      <maps:Map>
+          <maps:Map.MapElements>
+              <maps:Circle StrokeColor="#88FF0000"
+                           StrokeWidth="8"
+                           FillColor="#88FFC0CB">
+                  <maps:Circle.Center>
+                      <maps:Position>
+                          <x:Arguments>
+                              <x:Double>37.79752</x:Double>
+                              <x:Double>-122.40183</x:Double>
+                          </x:Arguments>
+                      </maps:Position>
+                  </maps:Circle.Center>
+                  <maps:Circle.Radius>
+                      <maps:Distance>
+                          <x:Arguments>
+                              <x:Double>250</x:Double>
+                          </x:Arguments>
+                      </maps:Distance>
+                  </maps:Circle.Radius>
+              </maps:Circle>             
+          </maps:Map.MapElements>
+          ...
+      </maps:Map>
+</ContentPage>
+```
+
+The equivalent C# code is:
+
+```csharp
+using Xamarin.Forms.Maps;
+// ...
+Map map = new Map();
+
+// Instantiate a Circle
+Circle circle = new Circle
+{
+    Center = new Position(37.79752, -122.40183);,
+    Radius = new Distance(250),
+    StrokeColor = Color.FromHex("#88FF0000"),
+    StrokeWidth = 8,
+    FillColor = Color.FromHex("#88FFC0CB")
+};
+
+// Add the Circle to the map's MapElements collection
+map.MapElements.Add(circle);
+```
+
+The location of the `Circle` on the Map is determined by the value of the `Center` and `Radius` properties. The `Center` property defines the center of the circle, in latitude and longitude, while the `Radius` property defines the radius of the circle in meters. The `StrokeColor` and `StrokeWidth` properties are specified to customize the circle's outline. The `FillColor` property value specifies the color within the circle perimeter. Both of the color values specify an alpha channel, allowing the underlying map to be visible through the circle. The `Circle` object is rendered on the map once it has been added to the `MapElements` collection of the `Map`.
+
+> [!NOTE]
+> The `GeographyUtils` class has a `ToCircumferencePositions` extension method that converts a `Circle` object (that defines `Center` and `Radius` property values) to a list of `Position` objects that make up the latitude and longitude coordinates of the circle perimeter.
 
 ## Related links
 

@@ -67,7 +67,7 @@ void OnCheckBoxCheckedChanged(object sender, CheckedChangedEventArgs e)
 }
 ```
 
-The `sender` argument is the `CheckBox` responsible for this event. You can use this to access the `CheckBox` object, or to distinguish between multiple `CheckBox` objects sharing the same `CheckedChanged` event.
+The `sender` argument is the `CheckBox` responsible for this event. You can use this to access the `CheckBox` object, or to distinguish between multiple `CheckBox` objects sharing the same `CheckedChanged` event handler.
 
 Alternatively, an event handler for the `CheckedChanged` event can be registered in code:
 

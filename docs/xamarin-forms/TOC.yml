@@ -188,13 +188,8 @@
               href: app-fundamentals/custom-renderer/entry.md
             - name: Customizing a ContentPage
               href: app-fundamentals/custom-renderer/contentpage.md
-            - name: Customizing a Map
-              href: app-fundamentals/custom-renderer/map/index.md
-              items:
-                - name: Customizing a Map Pin
-                  href: app-fundamentals/custom-renderer/map/customized-pin.md
-                - name: Highlighting a Circular Area on a Map
-                  href: app-fundamentals/custom-renderer/map/circle-map-overlay.md
+            - name: Customizing a Map Pin
+              href: app-fundamentals/custom-renderer/map-pin.md
             - name: Customizing a ListView
               href: app-fundamentals/custom-renderer/listview.md
             - name: Customizing a ViewCell
@@ -358,6 +353,8 @@
       items:
         - name: Overview
           href: user-interface/index.yml
+        - name: C# markup
+          href: user-interface/csharp-markup.md
         - name: Controls reference
           items:
             - name: Overview
@@ -378,6 +375,8 @@
           items:
             - name: BoxView
               href: user-interface/boxview.md
+            - name: Expander
+              href: user-interface/expander.md
             - name: Image
               href: user-interface/images.md
             - name: Label
@@ -394,7 +393,7 @@
                   href: user-interface/map/position-distance.md
                 - name: Pins
                   href: user-interface/map/pins.md
-                - name: Polygons and Polylines
+                - name: Polygons, Polylines, and Circles
                   href: user-interface/map/polygons.md
                 - name: Geocoding
                   href: user-interface/map/geocoder.md
@@ -410,6 +409,8 @@
               href: user-interface/button.md
             - name: ImageButton
               href: user-interface/imagebutton.md
+            - name: RadioButton
+              href: user-interface/radiobutton.md
             - name: RefreshView
               href: user-interface/refreshview.md
             - name: SearchBar
@@ -563,8 +564,8 @@
               items:
               - name: Theme an Application
                 href: user-interface/theming/theming.md
-              - name: Detect Dark Mode
-                href: user-interface/theming/dark-mode.md
+              - name: Respond to System Theme Changes
+                href: user-interface/theming/system-theme-changes.md
             - name: Visual
               href: user-interface/visual/index.md
               items:
@@ -688,6 +689,8 @@
               href: platform/ios/listview-separator-style.md
             - name: Main Thread Control Updates
               href: platform/ios/main-thread-updates-ui.md
+            - name: MasterDetailPage Shadow
+              href: platform/ios/masterdetailpage-shadow.md
             - name: NavigationPage Bar Separator
               href: platform/ios/navigation-bar-separator.md
             - name: NavigationPage Bar Text Color Mode
@@ -704,6 +707,8 @@
               href: platform/ios/page-safe-area-layout.md
             - name: ScrollView Content Touches
               href: platform/ios/scrollview-content-touches.md
+            - name: SearchBar Style
+              href: platform/ios/searchbar-style.md
             - name: Simultaneous Pan Gesture Recognition
               href: platform/ios/application-pan-gesture.md
             - name: Slider Thumb Tap

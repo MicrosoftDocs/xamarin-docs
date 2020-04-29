@@ -6,7 +6,7 @@ ms.assetid: 57079D89-D1CB-48BD-9FEE-539CEC29EABB
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/06/2019
+ms.date: 04/02/2020
 ---
 
 # Xamarin.Forms Shell Navigation
@@ -168,6 +168,36 @@ bears
 ```
 
 When the registered page for the `monkeys` route is displayed, navigating to the `details` route will display the registered page for the `monkeys/details` route. Similarly, when the registered page for the `bears` route is displayed, navigating to the `details` route will display the registered page for the `bears/details` route. For information on how to register the routes in this example, see [Register page routes](#register-page-routes).
+
+### Backwards navigation
+
+Backwards navigation can be performed by specifying ".." as the argument to the `GotoAsync` method:
+
+```csharp
+await Shell.Current.GoToAsync("..");
+```
+
+Backwards navigation with ".." can also be combined with a route, as follows:
+
+```csharp
+await Shell.Current.GoToAsync("../route");
+```
+
+In this example, the overall effect is to navigate backwards, and then navigate to the specified route.
+
+> [!IMPORTANT]
+> Navigating backwards and into a specified route is only possible if the backwards navigation places you at the current location in the route hierarchy to navigate to the specified route.
+
+Similarly, it's possible to navigate backwards multiple times, and then navigate to a specified route:
+
+```csharp
+await Shell.Current.GoToAsync("../../route");
+```
+
+In this example, the overall effect is to navigate backwards twice, and then navigate to the specified route.
+
+> [!NOTE]
+> Data can also be passed when navigating with "..". For more information, see [Pass data](#pass-data).
 
 ### Invalid routes
 
