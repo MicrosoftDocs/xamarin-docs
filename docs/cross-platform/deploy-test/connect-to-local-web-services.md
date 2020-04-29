@@ -5,10 +5,10 @@ ms.prod: xamarin
 ms.assetid: FD8FE199-898B-4841-8041-CC9CA1A00917
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/16/2019
+ms.date: 04/29/2020
 ---
 
-# Connect to Local Web Services from iOS Simulators and Android Emulators
+# Connect to local web services from iOS simulators and Android emulators
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/webservices-todorest/)
 
@@ -55,9 +55,7 @@ Xamarin applications running on iOS and Android can specify which networking sta
 
 ### iOS
 
-Xamarin applications running on iOS can use the managed network stack, or the native `CFNetwork` or `NSUrlSession` network stacks. By default, new iOS platform projects use the `NSUrlSession` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size.
-
-However, when an application needs to connect to a secure web service running locally, for developer testing, it's easier to use the managed network stack. Therefore, it's recommended to set debug simulator build profiles to use the managed network stack, and release build profiles to use the `NSUrlSession` network stack. Each network stack can be set programmatically or via a selector in the project options. For more information, see [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md).
+Xamarin applications running on iOS can use the managed network stack, or the native `CFNetwork` or `NSUrlSession` network stacks. By default, new iOS platform projects use the `NSUrlSession` network stack, to support TLS 1.2, and use native APIs for better performance and smaller executable size. For more information, see [HttpClient and SSL/TLS implementation selector for iOS/macOS](~/cross-platform/macios/http-stack.md).
 
 ### Android
 
@@ -92,38 +90,14 @@ public static string TodoItemsUrl = $"{BaseAddress}/api/todoitems/";
 
 ## Bypass the certificate security check
 
-Attempting to invoke a local secure web service from an application running in the iOS simulator or Android emulator will result in a `HttpRequestException` being thrown, even when using the managed network stack on each platform. This is because the local HTTPS development certificate is self-signed, and self-signed certificates aren't trusted by iOS or Android.
-
-Therefore, it's necessary to ignore SSL errors when an application consumes a local secure web service. The mechanism for accomplishing this is currently different on iOS and Android.
-
-### iOS
-
-SSL errors can be ignored on iOS for local secure web services, when using the managed network stack, by setting the `ServicePointManager.ServerCertificateValidationCallback` property to a callback that ignores the result of the certificate security check for the local HTTPS development certificate:
+Attempting to invoke a local secure web service from an application running in the iOS simulator or Android emulator will result in a `HttpRequestException` being thrown, even when using the managed network stack on each platform. This is because the local HTTPS development certificate is self-signed, and self-signed certificates aren't trusted by iOS or Android. Therefore, it's necessary to ignore SSL errors when an application consumes a local secure web service. This can be accomplished when using both the managed and native network stacks on iOS and Android, by setting the `ServerCertificateCustomValidationCallback` property on a `HttpClientHandler` object to a callback that ignores the result of the certificate security check for the local HTTPS development certificate:
 
 ```csharp
-#if DEBUG
-    System.Net.ServicePointManager.ServerCertificateValidationCallback += (sender, certificate, chain, sslPolicyErrors) =>
-    {
-        if (certificate.Issuer.Equals("CN=localhost"))
-            return true;
-        return sslPolicyErrors == System.Net.Security.SslPolicyErrors.None;
-    };
-#endif
-```
-
-In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. This code should be added to the `AppDelegate.FinishedLaunching` method on iOS, prior to the `LoadApplication(new App())` method call.
-
-> [!NOTE]
-> The native network stacks on iOS don't hook into the `ServerCertificateValidationCallback`.
-
-### Android
-
-SSL errors can be ignored on Android for local secure web services, when using both the managed and native `AndroidClientHandler` network stacks, by setting the `ServerCertificateCustomValidationCallback` property on a `HttpClientHandler` object to a callback that ignores the result of the certificate security check for the local HTTPS development certificate:
-
-```csharp
+// This method must be in a class in a platform project, even if
+// the HttpClient object is constructed in a shared project.
 public HttpClientHandler GetInsecureHandler()
 {
-    var handler = new HttpClientHandler();
+    HttpClientHandler handler = new HttpClientHandler();
     handler.ServerCertificateCustomValidationCallback = (message, cert, chain, errors) =>
     {
         if (cert.Issuer.Equals("CN=localhost"))
