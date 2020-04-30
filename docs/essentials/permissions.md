@@ -33,6 +33,8 @@ var status = await Permissions.CheckStatusAsync<Permissions.LocationWhenInUse>()
 
 A `PermissionException` is thrown if the required permission is not declared.
 
+It is best to check the status of the permission before requesting it. Each operating system returns a different default state if the user has never been prompted. iOS returns `Unknown`, while others return `Denied`.
+
 ## Requesting Permissions
 
 To request a permission from the users, use the `RequestAsync` method along with the specific permission to request. If the user previously granted permission and has not revoked it, then this method will return `Granted` immediatelly and not display a dialog. 
