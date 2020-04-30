@@ -11,7 +11,7 @@ ms.date: 04/15/2020
 
 # Xamarin.Forms Expander
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ExpanderDemos)
 
 The Xamarin.Forms `Expander` control provides an expandable container to host any content. The control has a header and content, and the content is shown or hidden by tapping the `Expander` header. When only the `Expander` header is shown, the `Expander` is *collapsed*. When the `Expander` content is visible the `Expander` is *expanded*.
 
@@ -364,7 +364,7 @@ An application may enter a state where expanding an `Expander` is not a valid op
 
 ## Related links
 
-- [Expander Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-expanderdemos/)
+- [Expander Demos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ExpanderDemos)
 - [Xamarin.Forms Easing Functions](~/xamarin-forms/user-interface/animation/easing.md)
 - [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
 - [Xamarin.Forms Bindable Layouts](~/xamarin-forms/user-interface/layouts/bindable-layouts.md)

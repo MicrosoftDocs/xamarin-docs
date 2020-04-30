@@ -11,7 +11,7 @@ ms.date: 04/28/2020
 
 # Generics in Xamarin.Forms XAML
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/XAML/Generics)
 
 Xamarin.Forms XAML provides support for consuming generic CLR types by specifying the generic constraints as type arguments. This support is provided by the `x:TypeArguments` directive, which passes the constraining type arguments of a generic to the constructor of the generic type.
 
@@ -204,7 +204,7 @@ In this example, `GenericsDemo.Models` is defined as the `models` XAML namespace
 
 ## Related links
 
-- [Generics in XAML (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics)
+- [Generics in XAML (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/XAML/Generics)
 - [XAML 2009 Language Primitives](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)
 - [x:Type markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type)
 - [Passing constructor arguments](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments)
