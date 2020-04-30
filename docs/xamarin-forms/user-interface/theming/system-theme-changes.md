@@ -11,7 +11,7 @@ ms.date: 04/22/2020
 
 # Respond to system theme changes in Xamarin.Forms applications
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SystemThemesDemo)
 
 Devices typically include light and dark themes, which each refer to a broad set of appearance preferences that can be set at the operating system level. Applications should respect these system themes, and respond immediately when the system theme changes.
 
@@ -183,7 +183,7 @@ The `AppThemeChangedEventArgs` object, which accompanies the `RequestedThemeChan
 
 ## Related links
 
-- [SystemThemes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
+- [SystemThemes (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/SystemThemesDemo)
 - [OnAppTheme markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onapptheme-markup-extension)
 - [Resource Dictionaries](~/xamarin-forms/xaml/resource-dictionaries.md)
 - [Dynamic Styles in Xamarin.Forms](~/xamarin-forms/user-interface/styles/xaml/dynamic.md)
