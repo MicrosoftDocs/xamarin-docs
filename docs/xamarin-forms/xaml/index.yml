@@ -61,6 +61,8 @@ landingContent:
             url: resource-dictionaries.md
           - text: Passing arguments
             url: passing-arguments.md
+          - text: Generics
+            url: generics.md  
           - text: Field modifiers
             url: field-modifiers.md
           - text: Load XAML at runtime

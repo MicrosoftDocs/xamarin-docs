@@ -140,6 +140,8 @@
               href: xaml/resource-dictionaries.md
             - name: Passing Arguments
               href: xaml/passing-arguments.md
+            - name: Generics
+              href: xaml/generics.md
             - name: Field Modifiers
               href: xaml/field-modifiers.md
             - name: Loading XAML at Runtime

@@ -30,20 +30,20 @@ In addition, the `x:TypeArguments` attribute can be used to specify the generic 
 
 Arguments can be passed to a non-default constructor using the `x:Arguments` attribute. Each constructor argument must be delimited within an XML element that represents the type of the argument. Xamarin.Forms supports the following elements for basic types:
 
-- `x:Object`
+- `x:Array`
 - `x:Boolean`
 - `x:Byte`
+- `x:Char`
+- `x:DateTime`
+- `x:Decimal`
+- `x:Double`
 - `x:Int16`
 - `x:Int32`
 - `x:Int64`
+- `x:Object`
 - `x:Single`
-- `x:Double`
-- `x:Decimal`
-- `x:Char`
 - `x:String`
 - `x:TimeSpan`
-- `x:Array`
-- `x:DateTime`
 
 The following code example demonstrates using the `x:Arguments` attribute with three [`Color`](xref:Xamarin.Forms.Color) constructors:
 
@@ -160,12 +160,11 @@ Generic type arguments for the constructor of a generic type can be specified us
 
 The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class and must be instantiated with an `x:TypeArguments` attribute that matches the target type. In the [`On`](xref:Xamarin.Forms.On) class, the [`Platform`](xref:Xamarin.Forms.On.Platform) attribute can accept a single `string` value, or multiple comma-delimited `string` values. In this example, the [`StackLayout.Margin`](xref:Xamarin.Forms.View.Margin) property is set to a platform-specific [`Thickness`](xref:Xamarin.Forms.Thickness).
 
-## Summary
-
-This article demonstrated using the XAML attributes that can be used to pass arguments to non-default constructors, to call factory methods, and to specify the type of a generic argument.
+For more information about generic type arguments, see [Generics in Xamarin.Forms XAML](generics.md).
 
 ## Related Links
 
-- [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
 - [Passing Constructor Arguments (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-passingconstructorarguments)
 - [Calling Factory Methods (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-callingfactorymethods)
+- [XAML Namespaces](~/xamarin-forms/xaml/namespaces.md)
+- [Generics in Xamarin.Forms XAML](generics.md)
