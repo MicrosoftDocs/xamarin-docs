@@ -5,6 +5,8 @@
     - name: 2020
       expanded: true
       items:
+        - name: April
+          href: 2020-04.md
         - name: February
           href: 2020-02.md
     - name: 2019
