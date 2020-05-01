@@ -11,7 +11,7 @@ ms.date: 03/13/2020
 
 # Xamarin.Forms RadioButton
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/RadioButtonDemos)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 
 The Xamarin.Forms `RadioButton` is a type of button that allows users to select one option from a set. Each option is represented by one radio button, and you can only select one radio button in a group. The `RadioButton` class inherits from the [`Button`](xref:Xamarin.Forms.Button) class.
 
@@ -203,6 +203,6 @@ Sometimes an application enters a state where a `RadioButton` being checked is n
 
 ## Related links
 
-- [RadioButton Demos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/RadioButtonDemos)
+- [RadioButton Demos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-radiobuttondemos/)
 - [Xamarin.Forms Button](~/xamarin-forms/user-interface/button.md)
 - [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)
