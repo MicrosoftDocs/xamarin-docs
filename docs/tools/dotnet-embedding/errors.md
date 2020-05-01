@@ -22,59 +22,59 @@ E.g. parameters, environment
 
 An unexpected error condition occurred. Please [file an issue](https://github.com/mono/Embeddinator-4000/issues) with as much information as possible, including:
 
-* Full build logs, with maximum verbosity
+* Full build logs with maximum verbosity
 * A minimal test case that reproduce the error
-* All version informations
+* All version information
 
-The easiest way to get exact version information is to use the **Xamarin Studio** menu, **About Xamarin Studio** item, **Show Details** button and copy/paste the version informations (you can use the **Copy Information** button).
+The easiest way to get exact version information is to use the **Xamarin Studio** menu, **About Xamarin Studio** item, **Show Details** button and then copy/paste the version information (you can use the **Copy Information** button).
 
 <a name="EM0001" />
 
 ### EM0001: Could not create Output directory `X`
 
-The directory name specified by `-o=DIR` does not exists and could not be created. It might be an invalid name for the file system.
+The directory name specified by `-o=DIR` does not exist and could not be created. It might be an invalid name for the file system.
 
 <a name="EM0002" />
 
 ### EM0002: Option `X` is not supported
 
-The tool does not support the option `X`. It is possible that another version of the tool supports it or that it does not apply in this environment.
+The tool does not support the option `X`. It is possible that another version of the tool supports it or the `X` option does not apply in this environment.
 
 <a name="EM0003" />
 
 ### EM0003: The platform `X` is not valid.
 
-The tool does not support the platform `X`. It is possible that another version of the tool supports it or that it does not apply in this environment.
+The tool does not support the platform `X`. It is possible that another version of the tool supports it or the `X` platform does not apply in this environment.
 
 <a name="EM0004" />
 
 ### EM0004: The target `X` is not valid.
 
-The tool does not support the target `X`. It is possible that another version of the tool supports it or that it does not apply in this environment.
+The tool does not support the target `X`. It is possible that another version of the tool supports it or the `X` target does not apply in this environment.
 
 <a name="EM0005" />
 
 ### EM0005: The compilation target `X` is not valid.
 
-The tool does not support the compilation target `X`. It is possible that another version of the tool supports it or that it does not apply in this environment.
+The tool does not support the compilation target `X`. It is possible that another version of the tool supports it or the `X` compilation target does not apply in this environment.
 
 <a name="EM0006" />
 
 ### EM0006: Could not find the Xcode location.
 
-The tool could not find the currently selected Xcode location using the `xcode-select -p` command. Please verify that this command succeeds, and returns the correct Xcode location.
+The tool could not find the currently selected Xcode location using the `xcode-select -p` command. Please verify that you can successfully run this command and it returns the correct Xcode location.
 
 <a name="EM0007" />
 
 ### EM0007: Could not get the sdk version for '{sdk}'.
 
-The tool could not get the SDK version using the `xcrun --show-sdk-version --sdk {sdk}` command. Please verify that this command succeeds, and returns the SDK version.
+The tool could not get the SDK version using the `xcrun --show-sdk-version --sdk {sdk}` command. Please verify that you can successfully run this command and it returns the SDK version.
 
 <a name="EM0008" />
 
-### EM0008: The architecture '{arch}' is not valid for {platform}. Valid architectures for {platform} are: '{architectures}'.
+### EM0008: The architecture '{arch}' is not valid for '{platform}'. Valid architectures for '{platform}' are: '{architectures}'.
 
-The architecture in the error message is not valid for the targeted platform. Please verify that the --abi option is passed a valid architecture.
+The architecture in the error message is not valid for the targeted platform. Please verify that a valid architecture is passed for the `--abi` option.
 
 <a name="EM0009" />
 
@@ -86,7 +86,7 @@ This is a known issue that we intend to fix in a future release of the generator
 
 ### EM0010: Can't merge the frameworks '{simulatorFramework}' and '{deviceFramework}' because the file '{file}' exists in both.
 
-The tool could not merge the frameworks mentioned in the error message, because there's a common file between them.
+The tool could not merge the frameworks mentioned in the error message because there is a common file between them.
 
 This might indicate a bug in .NET Embedding; please file a bug report at [https://github.com/mono/Embeddinator-4000/issues](https://github.com/mono/Embeddinator-4000/issues) with a test case.
 
@@ -100,9 +100,9 @@ The tool could not find the assembly `X` specified in the arguments.
 
 ### EM0012: The assembly name `X` is not unique
 
-More than one assembly supplied have the same, internal name and it would not be possible to distinguish between them at runtime.
+More than one assembly supplied have the same internal name and it would not be possible to distinguish between them at runtime.
 
-The most likely cause is that an assembly is specified more than once on the command-line arguments. However a renamed assembly still keeps it's original name and multiple copies cannot coexists.
+The most likely cause is that an assembly is specified more than once in the command-line arguments. However, a renamed assembly keeps its original name and multiple copies cannot coexist.
 
 <a name="EM0013" />
 
@@ -120,7 +120,7 @@ The dependency mentioned in the error message could not be found on the system.
 
 ### EM0015: Could not find a valid version of {product} (found {version}, but at least {min_version} is required).
 
-The dependency mentioned in the error message was found on the system, but it's too old. Please update to a newer version.
+The dependency mentioned in the error message was found on the system but it's too old. Please update to a newer version.
 
 <a name="EM0016" />
 
@@ -132,7 +132,7 @@ Could not create the symlink mentioned in the error message.
 
 ### EM0026 Could not parse the command line argument 'A': *
 
-The syntax given for the command line option `A` could not be parsed by the tool. It is likely incorrect, please check with the documentation or help for the correct syntax.
+The syntax given for the command line option `A` could not be parsed by the tool. Please check the documentation for the correct syntax.
 
 <a name="EM0099" />
 
@@ -176,7 +176,7 @@ Note: Supported features will evolve with new versions of the tool.
 
 ### EM1021: Constructor `C` has default values for which no wrapper is generated.
 
-This is a **warning** that the default parameters of constructor `C` are not generating any extra code. The most common cause is that an existing method already has the same signature. E.g. in .net it's possible to have:
+This is a **warning** that the default parameters of constructor `C` are not generating any extra code. The most common cause is that an existing method already has the same signature. For example, in .NET it's possible to have:
 
 ```csharp
 public class MyType {
@@ -185,13 +185,13 @@ public class MyType {
 }
 ```
 
-In such cases only two generated `init` selectors will be created, both calling into Mono, but no wrapper for the later will exist.
+In such cases only two generated `init` selectors will be created, both calling into Mono, but no wrapper for the latter will exist.
 
 <a name="EM1030" />
 
 ### EM1030: Method `M` is not generated because return type `T` is not supported.
 
-This is a **warning** that the method `M` will be ignored (i.e. nothing will be generated) because it's return type `T` is not supported.
+This is a **warning** that the method `M` will be ignored (i.e. nothing will be generated) because its return type `T` is not supported.
 
 There should be an earlier warning giving more information why type `T` is not supported.
 
@@ -211,7 +211,7 @@ Note: Supported features will evolve with new versions of the tool.
 
 ### EM1032: Method `M` has default values for which no wrapper is generated.
 
-This is a **warning** that the default parameters of method `M` are not generating any extra code. The most common cause is that an existing method already has the same signature. E.g. in .net it's possible to have:
+This is a **warning** that the default parameters of method `M` are not generating any extra code. The most common cause is that an existing method already has the same signature. For example, in .NET it's possible to have:
 
 ```csharp
 public class MyType {
@@ -220,7 +220,7 @@ public class MyType {
 }
 ```
 
-In such cases only two generated `increment` selectors will be created, both calling into Mono, but no wrapper for the later will exist.
+In such cases only two generated `Increment` selectors will be created, both calling into Mono, but no wrapper for the latter will exist.
 
 <a name="EM1033" />
 
@@ -232,7 +232,7 @@ This is a **warning** that the method `M` is not generated because another metho
 
 ### EM1034: Extension method `M` is not generated inside a category because they cannot be created on primitive type `T`. A normal, static method was generated.
 
-This is a **warning** that an extension method on a primivite type (e.g. `System.Int32`) was found. In Objective-C it is not possible to create categories on primitive type. Instead the generator will be produce a normal, static method.
+This is a **warning** that an extension method on a primivite type (e.g. `System.Int32`) was found. In Objective-C it is not possible to create categories on a primitive type. Instead, the generator will produce a normal static method.
 
 <a name="EM1040" />
 
@@ -264,7 +264,7 @@ Note: Supported features will evolve with new versions of the tool.
 
 ### EM1051: Element `E` is generated instead as `F` because its name conflicts with an important objective-c selector.
 
-This is a **warning** that the element `E` will be generated instead as `F` because its name conflicts with an important objective-c selector.
+This is a **warning** that the element `E` will be generated as `F` because its name conflicts with an important objective-c selector.
 
 Selectors on the [NSObjectProtocol](https://developer.apple.com/reference/objectivec/1418956-nsobject?language=objc) have important meaning in objective-c and must be overridden carefully.
 
@@ -282,7 +282,7 @@ This is a **warning** that Element `E` is not generated as its name conflicts wi
 
 This is a **warning** that target `E` is considered unsupported for Xamarin.iOS and Xamarin.Mac use cases. 
 
-Consumption of static or dynamic .NET Embedding libraries may require additional work steps or tweaks, and should be avoided in most use cases.
+Consumption of static or dynamic .NET Embedding libraries may require additional work steps or tweaks and should be avoided in most use cases.
 
 Consider removing your `--target` parameter or pass `--target=framework` instead.
 
