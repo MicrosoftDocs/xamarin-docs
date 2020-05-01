@@ -66,13 +66,13 @@ The tool could not find the currently selected Xcode location using the `xcode-s
 
 <a name="EM0007" />
 
-### EM0007: Could not get the sdk version for `{sdk}`.
+### EM0007: Could not get the sdk version for '{sdk}'.
 
 The tool could not get the SDK version using the `xcrun --show-sdk-version --sdk {sdk}` command. Please verify that you can successfully run this command and it returns the SDK version.
 
 <a name="EM0008" />
 
-### EM0008: The architecture `{arch}` is not valid for `{platform}`. Valid architectures for `{platform}` are: `{architectures}`.
+### EM0008: The architecture '{arch}' is not valid for '{platform}'. Valid architectures for '{platform}' are: '{architectures}'.
 
 The architecture in the error message is not valid for the targeted platform. Please verify that a valid architecture is passed for the `--abi` option.
 
@@ -84,7 +84,7 @@ This is a known issue that we intend to fix in a future release of the generator
 
 <a name="EM0010" />
 
-### EM0010: Can't merge the frameworks `{simulatorFramework}` and `{deviceFramework}` because the file `{file}` exists in both.
+### EM0010: Can't merge the frameworks '{simulatorFramework}' and '{deviceFramework}' because the file '{file}' exists in both.
 
 The tool could not merge the frameworks mentioned in the error message because there is a common file between them.
 
@@ -106,31 +106,31 @@ The most likely cause is that an assembly is specified more than once in the com
 
 <a name="EM0013" />
 
-### EM0013: Can't find the assembly `X`, referenced by `Y`.
+### EM0013: Can't find the assembly 'X', referenced by 'Y'.
 
-The tool could not find the assembly `X`, referenced by the assembly `Y`. Please make sure all referenced assemblies are in the same directory as the assembly to be bound.
+The tool could not find the assembly 'X', referenced by the assembly 'Y'. Please make sure all referenced assemblies are in the same directory as the assembly to be bound.
 
 <a name="EM0014" />
 
-### EM0014: Could not find `{product}` (`{product}` `{min_version}` is required).
+### EM0014: Could not find {product} ({product} {min_version} is required).
 
 The dependency mentioned in the error message could not be found on the system.
 
 <a name="EM0015" />
 
-### EM0015: Could not find a valid version of `{product}` (found `{version}`, but at least `{min_version}` is required).
+### EM0015: Could not find a valid version of {product} (found {version}, but at least {min_version} is required).
 
 The dependency mentioned in the error message was found on the system but it's too old. Please update to a newer version.
 
 <a name="EM0016" />
 
-### EM0016: Could not create symlink `{file}` -> `{target}`: error `{number}`
+### EM0016: Could not create symlink '{file}' -> '{target}': error {number}
 
 Could not create the symlink mentioned in the error message.
 
 <a name="EM0026" />
 
-### EM0026 Could not parse the command line argument `A`: *
+### EM0026 Could not parse the command line argument 'A': *
 
 The syntax given for the command line option `A` could not be parsed by the tool. Please check the documentation for the correct syntax.
 
