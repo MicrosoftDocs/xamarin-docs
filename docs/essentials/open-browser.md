@@ -30,9 +30,9 @@ The Browser functionality works by calling the `OpenAsync` method with the `Uri`
 
 public class BrowserTest
 {
-    public async Task<bool> OpenBrowser(Uri uri)
+    public async Task OpenBrowser(Uri uri)
     {
-        return await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
+        await Browser.OpenAsync(uri, BrowserLaunchMode.SystemPreferred);
     }
 }
 ```
