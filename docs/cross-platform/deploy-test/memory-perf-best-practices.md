@@ -262,6 +262,8 @@ SGen utilizes one of three heaps to allocate space for objects:
 
 One of the advantages of SGen is that the time it takes to perform a minor garbage collection is proportional to the number of new live objects that were created since the last minor garbage collection. This will reduce the impact of garbage collection on the performance of an application, as these minor garbage collections will take less time than a major garbage collection. Major garbage collections will still occur, but less frequently.
 
+The SGen garbage collector is the default in Xamarin.iOS 9.2.1 and greater, and therefore it will be used automatically. Please note that the ability to change garbage collector has been removed from newer versions of Visual Studio. For more information, see [New Reference Counting System](~/ios/internals/newrefcount.md).
+
 ### Reducing Pressure on the Garbage Collector
 
 When SGen starts a garbage collection, it will stop the application’s threads while it reclaims memory. While memory is being reclaimed, the application may experience a brief pause or stutter in the UI. How perceptible this pause is depends on two factors:
