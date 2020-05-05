@@ -69,7 +69,7 @@ The result is that characters in the text displayed by the [`Label`](xref:Xamari
 
 There are two main techniques for forcing text in a [`Label`](xref:Xamarin.Forms.Label) onto a new line, from XAML:
 
-1. Use the unicode line feed character, which is "&#10;".
+1. Use the unicode line feed character, which is "&amp;#10;".
 1. Specify your text using *property element* syntax.
 
 The following code shows an example of both techniques:
