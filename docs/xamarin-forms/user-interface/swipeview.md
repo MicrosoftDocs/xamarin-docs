@@ -325,10 +325,10 @@ In this example, the `SwipeItemView` comprises a [`StackLayout`](xref:Xamarin.Fo
 
 The `Open` method requires an `OpenSwipeItem` argument, to specify the direction the `SwipeView` will be opened from. The `OpenSwipeItem` enumeration has four members:
 
-- `LeftItems`, which indicates that the `SwipeView` will be opened from the left, to reveal the the swipe items in the `LeftItems` collection.
-- `TopItems`, which indicates that the `SwipeView` will be opened from the top, to reveal the the swipe items in the `TopItems` collection.
-- `RightItems`, which indicates that the `SwipeView` will be opened from the right, to reveal the the swipe items in the `RightItems` collection.
-- `BottomItems`, which indicates that the `SwipeView` will be opened from the bottom, to reveal the the swipe items in the `BottomItems` collection.
+- `LeftItems`, which indicates that the `SwipeView` will be opened from the left, to reveal the swipe items in the `LeftItems` collection.
+- `TopItems`, which indicates that the `SwipeView` will be opened from the top, to reveal the swipe items in the `TopItems` collection.
+- `RightItems`, which indicates that the `SwipeView` will be opened from the right, to reveal the swipe items in the `RightItems` collection.
+- `BottomItems`, which indicates that the `SwipeView` will be opened from the bottom, to reveal the swipe items in the `BottomItems` collection.
 
 Given a `SwipeView` named `swipeView`, the following example shows how to open a `SwipeView` to reveal the swipe items in the `LeftItems` collection:
 
