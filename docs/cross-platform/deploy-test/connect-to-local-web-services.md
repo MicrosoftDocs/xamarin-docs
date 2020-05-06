@@ -108,7 +108,16 @@ public HttpClientHandler GetInsecureHandler()
 }
 ```
 
-In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. The resulting `HttpClientHandler` object should be passed as an argument to the `HttpClient` constructor.
+In this code example, the server certificate validation result is returned when the certificate that underwent validation is not the `localhost` certificate. For this certificate, the validation result is ignored and `true` is returned, indicating that the certificate is valid. The resulting `HttpClientHandler` object should be passed as an argument to the `HttpClient` constructor for debug builds:
+
+```csharp
+#if DEBUG
+    HttpClientHandler insecureHandler = GetInsecureHandler();
+    HttpClient client = new HttpClient(insecureHandler);
+#else
+    HttpClient client = new HttpClient();
+#endif
+```
 
 ## Related links
 

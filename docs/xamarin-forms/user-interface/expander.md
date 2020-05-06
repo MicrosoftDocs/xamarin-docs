@@ -21,6 +21,8 @@ The following screenshots show an `Expander` in its collapsed and expanded state
 
 > [!IMPORTANT]
 > `Expander` is currently experimental and can only be used by setting the `Expander_Experimental` flag. For more information, see [Experimental Flags](~/xamarin-forms/internals/experimental-flags.md).
+>
+> In addition, the `Expander` control is fully implemented in the `Xamarin.Forms` namespace. Therefore, it's available on all platforms supported by Xamarin.Forms.
 
 The `Expander` control defines the following properties:
 

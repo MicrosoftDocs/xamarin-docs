@@ -6,7 +6,7 @@ ms.assetid: E44F5D0F-DB8E-46C7-8789-114F1652A6C5
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/11/2020
+ms.date: 05/06/2020
 ---
 
 # Xamarin.Forms WebView
@@ -549,11 +549,13 @@ A preview version of the linker is available to fix this issue. To enable the pr
 
 The prerequisites for this to work are:
 
-- **Xamarin.Forms 4.5 or higher** &ndash; Pre-release versions of Xamarin.Forms 4.5 can be used.
-- **Xamarin.iOS 13.10.0.17 or higher** &ndash; Check your Xamarin.iOS version [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). This version of Xamarin.iOS is included with Visual Studio for Mac 8.4.1 and Visual Studio 16.4.3.
-- **Remove references to `UIWebView`** &ndash; Your code should not have any references to `UIWebView` or any classes that make use of `UIWebView`.
+- **Xamarin.Forms 4.5 or higher**. Xamarin.Forms 4.6, or higher, is required if your app uses Material Visual.
+- **Xamarin.iOS 13.10.0.17 or higher**. Check your Xamarin.iOS version [in Visual Studio](~/cross-platform/troubleshooting/questions/version-logs.md#version-information). This version of Xamarin.iOS is included with Visual Studio for Mac 8.4.1 and Visual Studio 16.4.3.
+- **Remove references to `UIWebView`**. Your code should not have any references to `UIWebView` or any classes that make use of `UIWebView`.
 
-### Configure the linker preview
+For more information about detecting and removing `UIWebView` references, see [UIWebView deprecation](~/ios/user-interface/controls/webview.md#uiwebview-deprecation).
+
+### Configure the linker
 
 # [Visual Studio](#tab/windows)
 
@@ -570,7 +572,7 @@ You can see the window with the new flag in place in this screenshot:
 
 # [Visual Studio for Mac](#tab/macos)
 
-Follow these steps for the linker to remove `UIWebView` references
+Follow these steps for the linker to remove `UIWebView` references:
 
 1. **Open iOS project options** &ndash; Right-click your iOS project and choose **Options**.
 1. **Navigate to the iOS Build section** &ndash; Select the **iOS Build** section.
@@ -589,3 +591,4 @@ Now when you create a new (release) build and submit it to the App Store, there 
 
 - [Working with WebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithwebview)
 - [WebView (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-webview)
+- [UIWebView deprecation](~/ios/user-interface/controls/webview.md#uiwebview-deprecation)

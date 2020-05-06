@@ -475,7 +475,13 @@ The `Shell` class has a bindable property named `CurrentItem`, of type `FlyoutIt
 
 This code sets the `ShellContent` object named `aboutItem` as the `CurrentItem` property, resulting in it being displayed. In this example, an implicit conversion is used to wrap the `ShellContent` object in a `Tab` object, which is wrapped in a `FlyoutItem` object.
 
-The equivalent C# code is:
+The equivalent C# code, given a `ShellContent` object named `aboutItem`, is:
+
+```csharp
+CurrentItem = aboutItem;
+```
+
+In this example, the `CurrentItem` property is set in the subclassed `Shell` class. Alternatively, the `CurrentItem` property can be set in any class through the `Shell.Current` static property:
 
 ```csharp
 Shell.Current.CurrentItem = aboutItem;
