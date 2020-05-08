@@ -65,7 +65,7 @@ The Launch Mode determines how the browser is launched:
 
 ## System Preferred
 
-[Chrome Custom Tabs](https://developer.chrome.com/multidevice/android/customtabs) will attempted to be used load the Uri and keep navigation awareness.
+[Custom Tabs](https://developer.chrome.com/multidevice/android/customtabs) will attempted to be used to load the Uri and keep navigation awareness.
 
 ## External
 
