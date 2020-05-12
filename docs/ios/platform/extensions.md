@@ -30,7 +30,7 @@ All Extensions are installed in conjunction with a Container app (with both elem
 |Share|Shares data with social networks, messaging services, etc.|`com.apple.share-services`|Any|
 |Today|“Widgets” that appear on the Today screen or Notification Center|`com.apple.widget-extensions`|Today and Notification Center|
 
-Additional extension points were added in [iOS 10](~/ios/platform/introduction-to-ios10/index.md#app-extensions) and [iOS 12](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios12/#notification-improvements). The complete table of all supported types you can find in the [iOS App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2).
+Additional extension points were added in [iOS 10](~/ios/platform/introduction-to-ios10/index.md#app-extensions) and [iOS 12](https://docs.microsoft.com/xamarin/ios/platform/introduction-to-ios12/#notification-improvements). The complete table of all supported types you can find in the [iOS App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2).
 
 ## Limitations
 
@@ -272,7 +272,7 @@ The example Today Extension you created above does not communicate with its host
 
 For Extensions that will receive data from their host apps, the data is in the form of an array of [NSExtensionItem](xref:Foundation.NSExtensionItem) objects stored in the [InputItems](xref:Foundation.NSExtensionContext.InputItems) property of the [ExtensionContext](xref:Foundation.NSExtensionContext) of the Extension's `UIViewController`.
 
-Other Extension, such as Photo Editing extensions, may distinguish between the user completing or cancelling usage. This will be signaled back to the host app via the [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) and [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) methods of [ExtensionContext](xref:Foundation.NSExtensionContext) property.
+Other Extension, such as Photo Editing extensions, may distinguish between the user completing or canceling usage. This will be signaled back to the host app via the [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) and [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) methods of [ExtensionContext](xref:Foundation.NSExtensionContext) property.
 
 For more information, please see Apple's [App Extension Programming Guide](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1).
 
