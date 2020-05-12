@@ -30,7 +30,7 @@ All Extensions are installed in conjunction with a Container app (with both elem
 |Share|Shares data with social networks, messaging services, etc.|`com.apple.share-services`|Any|
 |Today|“Widgets” that appear on the Today screen or Notification Center|`com.apple.widget-extensions`|Today and Notification Center|
 
-Additional extension points were added in [iOS 10](~/ios/platform/introduction-to-ios10/index.md#app-extensions), and [iOS 12](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios12/#notification-improvements). The complete table of all supported types you can find in the [iOS App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2) 
+Additional extension points were added in [iOS 10](~/ios/platform/introduction-to-ios10/index.md#app-extensions) and [iOS 12](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios12/#notification-improvements). The complete table of all supported types you can find in the [iOS App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2).
 
 ## Limitations
 
