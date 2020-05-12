@@ -30,7 +30,7 @@ All Extensions are installed in conjunction with a Container app (with both elem
 |Share|Shares data with social networks, messaging services, etc.|`com.apple.share-services`|Any|
 |Today|“Widgets” that appear on the Today screen or Notification Center|`com.apple.widget-extensions`|Today and Notification Center|
 
-[Additional extension points](~/ios/platform/introduction-to-ios10/index.md#app-extensions) were added in iOS 10.
+Additional extension points were added in [iOS 10](~/ios/platform/introduction-to-ios10/index.md#app-extensions), and [iOS 12](https://docs.microsoft.com/en-us/xamarin/ios/platform/introduction-to-ios12/#notification-improvements). The complete table of all supported types you can find in the [iOS App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2) 
 
 ## Limitations
 
@@ -56,6 +56,16 @@ Extensions are distributed from within a container app, which, in turn is submit
 The app in which the Extension is used (where the user encounters the Extension Point) is referred to as the **Host app**, since it is the app that hosts the Extension when it executes. The app that installs the Extension is the **Container app**, because it is the app that contained the Extension when it was installed.  
 
 Typically, the container app describes the extension and walks the user through the process of enabling it.
+
+## Debug and release versions of extensions
+
+Memory limits for running app extensions are significantly lower than the memory limits applied to a foreground app. Simulators running iOS have less restrictions applied to extensions and you can execute your extension without any issues while running the same extension on a device could lead to unexpected results, the extension can crash or can be aggressively terminated by the system. Make sure to build and test the extension on a device before shipping. Consider the following tips for the container application and its extensions:
+
+1. Build a application package in **Release** configuration.
+1. Set the **Linker behavior** option to **Link Framework SDKs Only** or **Link All** for the build configuration in the **iOS Build** project settings.
+1. Uncheck the **Enable debugging** and **Enable profiling** option for the build configuration in the **iOS Debug** project settings.
+
+Make sure that these settings applied for the container project and all referenced extensions.
 
 ## Extension lifecycle
 
@@ -458,3 +468,4 @@ This document has covered Extensions, what they are, the type of Extension Point
 
 - [ContainerApp (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/intro-to-extensions)
 - [Creating extensions in Xamarin.iOS (video)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)
+- [Optimize Efficiency and Performance of an iOS App Extension](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/ExtensionCreation.html#//apple_ref/doc/uid/TP40014214-CH5-SW7)
