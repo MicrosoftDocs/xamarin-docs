@@ -7,7 +7,7 @@ ms.technology: xamarin-ios
 ms.custom: xamu-video
 author: davidortinau
 ms.author: daortin
-ms.date: 03/22/2017
+ms.date: 05/12/2020
 ---
 # iOS extensions in Xamarin.iOS
 
@@ -30,7 +30,7 @@ All Extensions are installed in conjunction with a Container app (with both elem
 |Share|Shares data with social networks, messaging services, etc.|`com.apple.share-services`|Any|
 |Today|“Widgets” that appear on the Today screen or Notification Center|`com.apple.widget-extensions`|Today and Notification Center|
 
-[Additional extension points](~/ios/platform/introduction-to-ios10/index.md#app-extensions) were added in iOS 10.
+Additional extension points were added in [iOS 10](~/ios/platform/introduction-to-ios10/index.md#app-extensions) and [iOS 12](~/ios/platform/introduction-to-ios12/index.md#notification-improvements). You can find the complete table of all supported types in the [iOS App Extension Programming Guide](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW2).
 
 ## Limitations
 
@@ -56,6 +56,16 @@ Extensions are distributed from within a container app, which, in turn is submit
 The app in which the Extension is used (where the user encounters the Extension Point) is referred to as the **Host app**, since it is the app that hosts the Extension when it executes. The app that installs the Extension is the **Container app**, because it is the app that contained the Extension when it was installed.  
 
 Typically, the container app describes the extension and walks the user through the process of enabling it.
+
+## Debug and release versions of extensions
+
+Memory limits for running app extensions are significantly lower than the memory limits applied to a foreground app. Simulators running iOS have less restrictions applied to extensions, and you can execute your extension without any issues. However, running the same extension on a device can lead to unexpected results, including the extension crashing or being aggressively terminated by the system. Therefore, ensure you build and test the extension on a device before shipping it. 
+
+You should ensure that the following settings are applied to the container project and all referenced extensions:
+
+1. Build a application package in **Release** configuration.
+1. In the **iOS Build** project settings, set the **Linker behavior** option to **Link Framework SDKs Only** or **Link All**.
+1. In the **iOS Debug** project settings, uncheck the **Enable debugging** and **Enable profiling** option.
 
 ## Extension lifecycle
 
@@ -262,7 +272,7 @@ The example Today Extension you created above does not communicate with its host
 
 For Extensions that will receive data from their host apps, the data is in the form of an array of [NSExtensionItem](xref:Foundation.NSExtensionItem) objects stored in the [InputItems](xref:Foundation.NSExtensionContext.InputItems) property of the [ExtensionContext](xref:Foundation.NSExtensionContext) of the Extension's `UIViewController`.
 
-Other Extension, such as Photo Editing extensions, may distinguish between the user completing or cancelling usage. This will be signaled back to the host app via the [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) and [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) methods of [ExtensionContext](xref:Foundation.NSExtensionContext) property.
+Other Extensions, such as Photo Editing extensions, may distinguish between the user completing or canceling usage. This will be signaled back to the host app via the [CompleteRequest](xref:Foundation.NSExtensionContext.CompleteRequest*) and [CancelRequest](xref:Foundation.NSExtensionContext.CancelRequest*) methods of [ExtensionContext](xref:Foundation.NSExtensionContext) property.
 
 For more information, please see Apple's [App Extension Programming Guide](https://developer.apple.com/library/ios/documentation/General/Conceptual/ExtensibilityPG/index.html#//apple_ref/doc/uid/TP40014214-CH20-SW1).
 
@@ -458,3 +468,4 @@ This document has covered Extensions, what they are, the type of Extension Point
 
 - [ContainerApp (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/intro-to-extensions)
 - [Creating extensions in Xamarin.iOS (video)](https://university.xamarin.com/lightninglectures/creating-extensions-in-ios)
+- [Optimize Efficiency and Performance of an iOS App Extension](https://developer.apple.com/library/archive/documentation/General/Conceptual/ExtensibilityPG/ExtensionCreation.html#//apple_ref/doc/uid/TP40014214-CH5-SW7)
