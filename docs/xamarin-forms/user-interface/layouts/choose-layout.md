@@ -68,7 +68,7 @@ This is wasteful because unnecessary layout calculations are performed. Instead,
 > [!TIP]
 > When using a [`StackLayout`](xref:Xamarin.Forms.StackLayout), ensure that only one child element is set to [`LayoutOptions.Expands`](xref:Xamarin.Forms.LayoutOptions.Expands). This property ensures that the specified child will occupy the largest space that the `StackLayout` can give to it, and it is wasteful to perform these calculations more than once.
 
-For more information, see [Xamarin.Forms StackLayout](stack-layout.md).
+For more information, see [Xamarin.Forms StackLayout](stacklayout.md).
 
 ## Grid
 
@@ -244,7 +244,7 @@ In addition, page rendering performance can also be improved by using layout com
 
 - [Layout (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-layout)
 - [Xamarin.Forms Layouts (video)](https://youtu.be/4HlLjTZQzjM)
-- [Xamarin.Forms StackLayout](stack-layout.md)
+- [Xamarin.Forms StackLayout](stacklayout.md)
 - [Xamarin.Forms Grid](grid.md)
 - [Xamarin.Forms FlexLayout](flex-layout.md)
 - [Xamarin.Forms AbsoluteLayout](absolute-layout.md)

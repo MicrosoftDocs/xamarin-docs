@@ -261,7 +261,7 @@ By default the [`StackLayout`](xref:Xamarin.Forms.StackLayout) assumes a vertica
 > [!NOTE]
 > The size of views can be set through the `HeightRequest` and `WidthRequest` properties.
 
-For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout) class, see [StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
+For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout) class, see [StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).
 
 ### Responding to user interaction
 

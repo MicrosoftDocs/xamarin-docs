@@ -33,7 +33,7 @@ To complete this tutorial you should have Visual Studio 2019 (latest release), w
 
     [![Screenshot of child views in a StackLayout, on iOS and Android](../images/create-stacklayout.png "StackLayout containing Label instances")](../images/create-stacklayout-large.png#lightbox "StackLayout containing Label instances")
 
-    For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout), see [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
+    For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout), see [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -70,4 +70,4 @@ To complete this tutorial you should have Visual Studio for Mac (latest release)
 
     [![Screenshot of child views in a StackLayout, on iOS and Android](../images/create-stacklayout.png "StackLayout containing Label instances")](../images/create-stacklayout-large.png#lightbox "StackLayout containing Label instances")
 
-    For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout), see [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stack-layout.md).
+    For more information about the [`StackLayout`](xref:Xamarin.Forms.StackLayout), see [Xamarin.Forms StackLayout](~/xamarin-forms/user-interface/layouts/stacklayout.md).

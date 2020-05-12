@@ -651,6 +651,10 @@
     {
         "source_path": "docs/xamarin-forms/user-interface/theming/dark-mode.md",
         "redirect_url": "/xamarin/xamarin-forms/user-interface/theming/system-theme-changes/"
-    }
+    },
+    {
+        "source_path": "docs/xamarin-forms/user-interface/layouts/stack-layout.md",
+        "redirect_url": "/xamarin/xamarin-forms/user-interface/layouts/stacklayout.md"
+    },
   ]
 }

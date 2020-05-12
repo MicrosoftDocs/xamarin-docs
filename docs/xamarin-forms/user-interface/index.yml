@@ -183,7 +183,7 @@ landingContent:
           - text: ScrollView
             url: layouts/scroll-view.md
           - text: StackLayout
-            url: layouts/stack-layout.md
+            url: layouts/stacklayout.md
 
   - title: Layout concepts
     linkLists:

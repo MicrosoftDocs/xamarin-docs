@@ -594,7 +594,7 @@
                 - name: RelativeLayout
                   href: user-interface/layouts/relative-layout.md
                 - name: StackLayout
-                  href: user-interface/layouts/stack-layout.md
+                  href: user-interface/layouts/stacklayout.md
             - name: Additional layouts
               items:
                 - name: ContentView

@@ -16,7 +16,7 @@ To learn more about the basics of creating mobile applications with Xamarin.Form
 ## Related links
 
 - [StackLayoutTutorial (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/getstarted-tutorials-stacklayouttutorial/)
-- [Xamarin.Forms StackLayout (guide)](~/xamarin-forms/user-interface/layouts/stack-layout.md)
+- [Xamarin.Forms StackLayout (guide)](~/xamarin-forms/user-interface/layouts/stacklayout.md)
 - [Margin and Padding (guide)](~/xamarin-forms/user-interface/layouts/margin-and-padding.md)
 - [Layout Options in Xamarin.Forms (guide)](~/xamarin-forms/user-interface/layouts/layout-options.md)
 - [StackLayout API](xref:Xamarin.Forms.StackLayout)

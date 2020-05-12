@@ -29,7 +29,7 @@ landingContent:
           - text: RelativeLayout
             url: relative-layout.md
           - text: StackLayout
-            url: stack-layout.md
+            url: stacklayout.md
 
   - title: Additional layouts
     linkLists:
