@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: App Theme"
 description: "This document describes the Requested App Theme API in Xamarin.Essentials, which provides information as to what theme style is requested for the running app."
 ms.assetid: F6F6D496-A8A9-4B9A-AF1A-370D937E5073
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 01/06/2020
 ---
@@ -69,3 +70,9 @@ You can read more on the [UWP Requested Theme Documentation](https://docs.micros
 
 - [AppInfo source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/AppInfo)
 - [AppInfo API documentation](xref:Xamarin.Essentials.AppInfo)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Theme-Detection-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

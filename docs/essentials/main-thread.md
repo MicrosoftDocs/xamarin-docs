@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: MainThread"
 description: "The MainThread class allows applications to run code on the main execution thread."
 ms.assetid: CD6D51E7-D933-4FE7-A7F7-392EF27812E1
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 08/20/2019
 ---
@@ -110,3 +111,9 @@ The `MainThread` class includes the following additional `static` methods that c
 
 - [MainThread source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/MainThread)
 - [MainThread API documentation](xref:Xamarin.Essentials.MainThread)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Main-Thread-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

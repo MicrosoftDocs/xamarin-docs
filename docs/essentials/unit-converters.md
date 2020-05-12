@@ -3,6 +3,7 @@ title: "Xamarin.Essentials Unit Converters"
 description: "The UnitConverters class in Xamarin.Essentials provides several unit converters to help developers when using Xamarin.Essentials."
 ms.assetid: 35DE2704-E730-4337-9476-66CD53376943
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 01/06/2020
 ---
@@ -65,3 +66,9 @@ Here is a list of available conversions:
 
 - [Unit Converters source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/UnitConverters.shared.cs)
 - [Unit Converters API documentation](xref:Xamarin.Essentials.UnitConverters)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Unit-Conversion-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

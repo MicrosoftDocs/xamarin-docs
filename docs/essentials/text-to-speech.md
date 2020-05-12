@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: Text-to-Speech"
 description: "The TextToSpeech class in Xamarin.Essentials enables an application utilize the built in text-to-speech engines to speak back text from the device and also to query available languages that the engine can support."
 ms.assetid: AEEF03AE-A047-4DF0-B0E8-CC8D9A7B8351
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
 ---
@@ -145,3 +146,9 @@ public async Task SpeakNow()
 
 - [TextToSpeech source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/TextToSpeech)
 - [TextToSpeech API documentation](xref:Xamarin.Essentials.TextToSpeech)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Text-to-Speech-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

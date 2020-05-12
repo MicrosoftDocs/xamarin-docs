@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: File System Helpers"
 description: "The FileSystem class in Xamarin.Essentials contains a series of helpers to find the application's cache and data directories and open files inside of the app package."
 ms.assetid: B3EC2DE0-EFC0-410C-AF71-7410AE84CF84
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
 ---
@@ -76,3 +77,9 @@ Add any file into the root in the UWP project and mark the Build Action as **Con
 
 - [File System Helpers source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/FileSystem)
 - [File System API documentation](xref:Xamarin.Essentials.FileSystem)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/File-System-Helpers-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

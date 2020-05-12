@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: Phone Dialer"
 description: "The PhoneDialer class in Xamarin.Essentials enables an application to open a phone number in the dialer"
 ms.assetid: E7457942-4D7B-4195-A2FF-417919B9537F
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 07/02/2019
 ---
@@ -54,3 +55,9 @@ public class PhoneDialerTest
 
 - [Phone Dialer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
 - [Phone Dialer API documentation](xref:Xamarin.Essentials.PhoneDialer)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Phone-Dialer-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: Device Display Information"
 description: "This document describes the DeviceDisplay class in Xamarin.Essentials, which provides screen metrics for the device on which the application is running."
 ms.assetid: 2821C908-C613-490D-8E8C-1BD3269FCEEA
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
 ---
@@ -98,3 +99,9 @@ No differences.
 
 - [DeviceDisplay source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
 - [DeviceDisplay API documentation](xref:Xamarin.Essentials.DeviceDisplay)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Device-Display-Information-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: Geolocation"
 description: "This document describes the Geolocation class in Xamarin.Essentials, which provides APIs to retrieve the device's current geolocation coordinates."
 ms.assetid: 8F66092C-13F0-4FEE-8AA5-901D5F79B357
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 03/13/2019
 ---
@@ -44,6 +45,8 @@ Open the **AndroidManifest.xml** file under the **Properties** folder and add th
 ```
 
 Or right-click on the Android project and open the project's properties. Under **Android Manifest** find the **Required permissions:** area and check the **ACCESS_COARSE_LOCATION** and **ACCESS_FINE_LOCATION** permissions. This will automatically update the **AndroidManifest.xml** file.
+
+[!include[](~/essentials/includes/android-permissions.md)]
 
 # [iOS](#tab/ios)
 
@@ -235,3 +238,9 @@ On UWP, altitude is returned in meters. See the [AltitudeReferenceSystem](https:
 
 - [Geolocation source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Geolocation)
 - [Geolocation API documentation](xref:Xamarin.Essentials.Geolocation)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Geolocation-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

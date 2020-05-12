@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: Device Information"
 description: "This document describes the DeviceInfo class in Xamarin.Essentials, which provides information about the device the application is running on."
 ms.assetid: A1AC5373-926A-4FB6-8D7D-4B87EB8EB522
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
 ---
@@ -84,3 +85,9 @@ iOS does not expose an API for developers to get the model of the specific iOS d
 
 - [DeviceInfo source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceInfo)
 - [DeviceInfo API documentation](xref:Xamarin.Essentials.DeviceInfo)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Device-Information-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]

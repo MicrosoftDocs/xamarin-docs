@@ -3,6 +3,7 @@ title: "Xamarin.Essentials: Email"
 description: "The Email class in Xamarin.Essentials enables an application to open the default email application with a specified information including subject, body, and recipients (TO, CC, BCC)."
 ms.assetid: 5FBB6FF0-0E7B-4C29-8F06-91642AF12629
 author: jamesmontemagno
+ms.custom: video
 ms.author: jamont
 ms.date: 08/20/2019
 ---
@@ -59,7 +60,7 @@ public class EmailTest
 
 ## File Attachments
 
-This features enables an app to emails files in email clients on the device. Xamarin.Essentials will automatically detect the file type (MIME) and request the file to be added as an attachment. Every email client is different a may only support specific file extensions or none at all.
+This feature enables an app to email files in email clients on the device. Xamarin.Essentials will automatically detect the file type (MIME) and request the file to be added as an attachment. Every email client is different and may only support specific file extensions, or none at all.
 
 Here is a sample of writing text to disk and adding it as an email attachment:
 
@@ -101,3 +102,9 @@ Not all email clients support sending attachments. See [documentation](https://d
 
 - [Email source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
 - [Email API documentation](xref:Xamarin.Essentials.Email)
+
+## Related Video
+
+> [!Video https://channel9.msdn.com/Shows/XamarinShow/Email-XamarinEssentials-API-of-the-Week/player]
+
+[!include[](~/essentials/includes/xamarin-show-essentials.md)]
