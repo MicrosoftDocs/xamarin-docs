@@ -252,7 +252,7 @@ If the desired behavior is for the first `BoxView` instance to scale down with n
 
 ### Minimum and absolute property values
 
-Behavior is undefined when the minimum value is greater than the absolute value. For example, if `MinimumWidthRequest` is set to 100, the `WidthRequest` property should never exceed 100. When specifying a minimum property value, you should always specify an absolute value to ensure the absolute value is greater than the minimum value.
+The behavior is undefined when the minimum value is greater than the absolute value. For example, if `WidthRequest` is set to 100, the `MinimumWidthRequest` property should never exceed 100. When specifying a minimum property value, you should always specify an absolute value to ensure the absolute value is greater than the minimum value.
 
 ### Minimum properties within a Grid
 

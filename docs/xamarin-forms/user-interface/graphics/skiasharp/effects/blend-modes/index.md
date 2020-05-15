@@ -19,7 +19,7 @@ The `BlendMode` property determines what happens when a graphical object (often 
 
 ## The SKBlendModes enumeration
 
-The SkiaSharp blend modes correspond closely to those described in the W3C [**Compositing and Blending Level 1**](https://www.w3.org/TR/compositing-1/) specification. The Skia [**SkBlendMode Reference**](https://skia.org/user/api/SkBlendMode_Reference) also provides helpful background information. For a general introduction to blend modes, the [**Blend modes**](https://en.wikipedia.org/wiki/Blend_modes) article in Wikipedia is a good start. Blend modes are supported in Adobe Photoshop, so there is much additional online information about blend modes in that context.
+The SkiaSharp blend modes correspond closely to those described in the W3C [**Compositing and Blending Level 1**](https://www.w3.org/TR/compositing-1/) specification. The Skia [**SkBlendMode Overview**](https://skia.org/user/api/SkBlendMode_Overview) also provides helpful background information. For a general introduction to blend modes, the [**Blend modes**](https://en.wikipedia.org/wiki/Blend_modes) article in Wikipedia is a good start. Blend modes are supported in Adobe Photoshop, so there is much additional online information about blend modes in that context.
 
 The 29 members of the `SKBlendMode` enumeration can be divided into three categories:
 
@@ -71,7 +71,7 @@ BackgroundColor = Color.Red;
 
 You'll see this red background behind your SkiaSharp graphics because the SkiaSharp canvas itself is transparent.
 
-The article [**SkiaSharp Transparency**](../../basics/transparency.md) showed some basic techniques in using transparency to arrange multiple graphics in a composite image. The blend modes go beyond that, but transparency remains crucial to the blend modes. 
+The article [**SkiaSharp Transparency**](../../basics/transparency.md) showed some basic techniques in using transparency to arrange multiple graphics in a composite image. The blend modes go beyond that, but transparency remains crucial to the blend modes.
 
 ## [SkiaSharp Porter-Duff blend modes](porter-duff.md)
 

@@ -6,7 +6,7 @@ ms.assetid: D41B9DCD-5C34-4C2F-B177-FC082AB2E9E0
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/25/2020
+ms.date: 05/15/2020
 ---
 
 # Xamarin.Forms C# markup
@@ -30,9 +30,14 @@ Device.SetFlags(new string[]{ "Markup_Experimental" });
 
 ## Basic example
 
-The following example shows creating an [`Entry`](xref:Xamarin.Forms.Entry) object in C#:
+The following example shows setting the page content to a new [`Grid`](xref:Xamarin.Forms.Grid) containing a [`Label`](xref:Xamarin.Forms.Label) and an [`Entry`](xref:Xamarin.Forms.Entry), in C#:
 
 ```csharp
+Grid grid = new Grid();
+
+Label label = new Label { Text = "Code: " };
+grid.Children.Add(label, 0, 1);
+
 Entry entry = new Entry
 {
     Placeholder = "Enter number",
@@ -43,12 +48,14 @@ Entry entry = new Entry
     HeightRequest = 44,
     Margin = fieldMargin
 };
-entry.SetBinding(Entry.TextProperty, new Binding("RegistrationCode", BindingMode.TwoWay));
 grid.Children.Add(entry, 0, 2);
 Grid.SetColumnSpan(entry, 2);
+entry.SetBinding(Entry.TextProperty, new Binding("RegistrationCode"));
+
+Content = grid;
 ```
 
-This example creates an [`Entry`](xref:Xamarin.Forms.Entry) object that data binds to the `RegistrationCode` property of the viewmodel, using a `TwoWay` binding. It's set to appear in a specific row in a [`Grid`](xref:Xamarin.Forms.Grid), and span all the columns in the `Grid`. In addition, the height of the `Entry` is set, along with the font size of its text, and its `Margin`.
+This example creates a [`Grid`](xref:Xamarin.Forms.Grid) object, with child [`Label`](xref:Xamarin.Forms.Label) and [`Entry`](xref:Xamarin.Forms.Entry) objects. The `Label` displays text, and the `Entry` data binds to the `RegistrationCode` property of the viewmodel. Each child view is set to appear in a specific row in the `Grid`, and the `Entry` spans all the columns in the `Grid`. In addition, the height of the `Entry` is set, along with its keyboard, colors, the font size of its text, and its `Margin`. Finally, the `Page.Content` property is set to the `Grid` object.
 
 C# markup enables this code to be re-written using its fluent API:
 
@@ -56,9 +63,18 @@ C# markup enables this code to be re-written using its fluent API:
 using Xamarin.Forms.Markup;
 using static Xamarin.Forms.Markup.GridRowsColumns;
 
-Entry entry = new Entry { Placeholder = "Enter number", Keyboard = Keyboard.Numeric, BackgroundColor = Color.AliceBlue, TextColor = Color.Black } .Font (15)
-                         .Row (BodyRow.CodeEntry) .ColumnSpan (All<BodyCol>()) .Margin (fieldMargin) .Height (44)
-                         .Bind (nameof(vm.RegistrationCode), BindingMode.TwoWay);
+Content = new Grid
+{
+  Children =
+  {
+    new Label { Text = "Code:" }
+               .Row (BodyRow.CodeHeader) .Column (BodyCol.Header),
+
+    new Entry { Placeholder = "Enter number", Keyboard = Keyboard.Numeric, BackgroundColor = Color.AliceBlue, TextColor = Color.Black } .Font (15)
+               .Row (BodyRow.CodeEntry) .ColumnSpan (All<BodyCol>()) .Margin (fieldMargin) .Height (44)
+               .Bind (nameof(vm.RegistrationCode))
+  }
+}};
 ```
 
 This example is identical to the previous example, but the C# markup fluent API simplifies the process of building the UI in C#.

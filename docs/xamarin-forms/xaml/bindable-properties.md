@@ -23,7 +23,7 @@ Properties should be implemented as bindable properties to support one or more o
 - Validating the value of the property.
 - Monitoring property changes.
 
-Examples of Xamarin.Forms bindable properties include [`Label.Text`](xref:Xamarin.Forms.Label.Text), [`Button.BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius), and [`StackLayout.Orientation`](xref:Xamarin.Forms.StackLayout.Orientation). Each bindable property has a corresponding `public static readonly` property of type [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) that is exposed on the same class and that is the identifier of the bindable property. For example, the corresponding bindable property identifier for the `Label.Text` property is [`Label.TextProperty`](xref:Xamarin.Forms.Label.TextProperty).
+Examples of Xamarin.Forms bindable properties include [`Label.Text`](xref:Xamarin.Forms.Label.Text), [`Button.BorderRadius`](xref:Xamarin.Forms.Button.BorderRadius), and [`StackLayout.Orientation`](xref:Xamarin.Forms.StackLayout.Orientation). Each bindable property has a corresponding `public static readonly` field of type [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) that is exposed on the same class and that is the identifier of the bindable property. For example, the corresponding bindable property identifier for the `Label.Text` property is [`Label.TextProperty`](xref:Xamarin.Forms.Label.TextProperty).
 
 ## Create a bindable property
 

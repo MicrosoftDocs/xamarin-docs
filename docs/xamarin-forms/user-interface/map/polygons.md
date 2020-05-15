@@ -207,7 +207,7 @@ Map map = new Map();
 // Instantiate a Circle
 Circle circle = new Circle
 {
-    Center = new Position(37.79752, -122.40183);,
+    Center = new Position(37.79752, -122.40183),
     Radius = new Distance(250),
     StrokeColor = Color.FromHex("#88FF0000"),
     StrokeWidth = 8,
