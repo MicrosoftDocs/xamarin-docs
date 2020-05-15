@@ -27,7 +27,7 @@
 
     [![Screenshot of a Grid that has content that spans multiple columns and rows, on iOS and Android](../images/span-columns-rows.png "Grid with content spanning columns and rows")](../images/span-columns-rows-large.png#lightbox "Grid with content spanning columns and rows")
 
-    For more information about spanning columns and rows, see [Spans](~/xamarin-forms/user-interface/layouts/grid.md#spans) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
+    For more information about spanning columns and rows, see [Rows and columns](~/xamarin-forms/user-interface/layouts/grid.md#rows-and-columns) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
 
 # [Visual Studio for Mac](#tab/vsmac)
 
@@ -58,4 +58,4 @@
 
     [![Screenshot of a Grid that has content that spans multiple columns and rows, on iOS and Android](../images/span-columns-rows.png "Grid with content spanning columns and rows")](../images/span-columns-rows-large.png#lightbox "Grid with content spanning columns and rows")
 
-    For more information about spanning columns and rows, see [Spans](~/xamarin-forms/user-interface/layouts/grid.md#spans) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.
+    For more information about spanning columns and rows, see [Rows and columns](~/xamarin-forms/user-interface/layouts/grid.md#rows-and-columns) in the [Xamarin.Forms Grid](~/xamarin-forms/user-interface/layouts/grid.md) guide.

@@ -393,7 +393,7 @@ In this example, the parent [`StackLayout`](xref:Xamarin.Forms.StackLayout) cont
 [![Screenshot of nested StackLayout objects](stacklayout-images/combined.png "Nested StackLayouts")](stacklayout-images/combined-large.png#lightbox "Nested StackLayouts")
 
 > [!IMPORTANT]
-> Nesting too many `StackLayout` objects can result in a non-performant page, due to the amount of layout calculations that are required. For more information, see [Choose the correct layout](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).
+> The deeper you nest [`StackLayout`](xref:Xamarin.Forms.StackLayout) objects and other layouts, the more the nested layouts will impact performance. For more information, see [Choose the correct layout](~/xamarin-forms/deploy-test/performance.md#choose-the-correct-layout).
 
 The equivalent C# code is:
 
