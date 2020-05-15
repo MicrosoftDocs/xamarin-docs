@@ -31,7 +31,7 @@ each cell view populated with data.
 There are only two mandatory methods required to make a table display data:
 
 - **RowsInSection** – return an  [`nint`](~/cross-platform/macios/nativetypes.md) count of the total number of rows of data the table should display.
-- **GetCell** – return a  `UITableCellView` populated with data for the corresponding row index passed to the method.
+- **GetCell** – return a  `UITableViewCell` populated with data for the corresponding row index passed to the method.
 
 The BasicTable sample file **TableSource.cs** has the simplest possible
 implementation of `UITableViewSource`. You can see in code snippet below that it accepts an array of strings to display in the table and returns a default cell style containing each
@@ -59,7 +59,8 @@ public class TableSource : UITableViewSource {
             string item = TableItems[indexPath.Row];
 
             //if there are no cells to reuse, create a new one
-            if (cell == null){ 
+            if (cell == null)
+            { 
                 cell = new UITableViewCell (UITableViewCellStyle.Default, CellIdentifier); 
             }
 
