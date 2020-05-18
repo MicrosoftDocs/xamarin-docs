@@ -1,6 +1,6 @@
 ---
 title: "Modal Page Presentation Style on iOS"
-description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific sets the presentation style of a modal page."
+description: "Platform-specifics allow you to consume functionality that's only available on a specific platform, without implementing custom renderers or effects. This article explains how to consume the iOS platform-specific that sets the presentation style of a modal page."
 ms.prod: xamarin
 ms.assetid: C791F7CF-330A-44BA-987A-4CFCCBB9278B
 ms.technology: xamarin-forms
@@ -13,12 +13,12 @@ ms.date: 04/02/2020
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-platformspecifics)
 
-This iOS platform-specific is used to set the presentation style of a modal page. It's consumed in XAML by setting the `Page.ModalPresentationStyle` bindable property to a `UIModalPresentationStyle` enumeration value:
+This iOS platform-specific is used to set the presentation style of a modal page, and in addition can be used to display modal pages that have transparent backgrounds. It's consumed in XAML by setting the `Page.ModalPresentationStyle` bindable property to a `UIModalPresentationStyle` enumeration value:
 
 ```xaml
 <ContentPage ...
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
-             ios:Page.ModalPresentationStyle="FormSheet">
+             ios:Page.ModalPresentationStyle="OverFullScreen">
     ...
 </ContentPage>
 ```
@@ -34,7 +34,7 @@ public class iOSModalFormSheetPageCS : ContentPage
 {
     public iOSModalFormSheetPageCS()
     {
-        On<iOS>().SetModalPresentationStyle(UIModalPresentationStyle.FormSheet);
+        On<iOS>().SetModalPresentationStyle(UIModalPresentationStyle.OverFullScreen);
         ...
     }
 }
