@@ -140,7 +140,7 @@ The following sections describe the intricacies of setting accessibility values 
 
 ### NavigationPage
 
-On Android, to set the text that screen readers will read for the back arrow in the action bar in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), set the `AutomationProperties.Name` and `AutomationProperties.HelpText` properties on a [`Page`](xref:Xamarin.Forms.Page). However, note that this will not have an effect on OS back buttons.
+On Android, to set the text that screen readers will read for the back arrow in the action bar in a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage), set the `AutomationProperties.Name` and `AutomationProperties.HelpText` properties on a [`Page`](xref:Xamarin.Forms.Page). However, note that this will not have an effect on iOS back buttons.
 
 ### MasterDetailPage
 
