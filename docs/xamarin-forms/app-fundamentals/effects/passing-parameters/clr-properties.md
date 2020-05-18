@@ -126,7 +126,7 @@ namespace EffectsDemo.iOS
             try {
                 var effect = (ShadowEffect)Element.Effects.FirstOrDefault (e => e is ShadowEffect);
                 if (effect != null) {
-                    Control.Layer.CornerRadius = effect.Radius;
+                    Control.Layer.ShadowRadius = effect.Radius;
                     Control.Layer.ShadowColor = effect.Color.ToCGColor ();
                     Control.Layer.ShadowOffset = new CGSize (effect.DistanceX, effect.DistanceY);
                     Control.Layer.ShadowOpacity = 1.0f;

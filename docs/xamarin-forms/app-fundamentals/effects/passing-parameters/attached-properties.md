@@ -211,7 +211,7 @@ namespace EffectsDemo.iOS
 
         void UpdateRadius ()
         {
-            Control.Layer.CornerRadius = (nfloat)ShadowEffect.GetRadius (Element);
+            Control.Layer.ShadowRadius = (nfloat)ShadowEffect.GetRadius (Element);
         }
 
         void UpdateColor ()
