@@ -97,6 +97,9 @@ this.InitializeComponent();
 LoadApplication(new YOUR_NAMESPACE.App());
 ```
 
+> [!NOTE]
+> The argument to the `LoadApplication` method is the `Xamarin.Forms.Application` instance defined in your .NET standard project.
+
 <!--
 11 . Double-click **Package.appxmanifest** to set these capabilities
   that are often required:
