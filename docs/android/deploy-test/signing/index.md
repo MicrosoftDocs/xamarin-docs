@@ -12,7 +12,7 @@ ms.date: 07/02/2018
 # Signing the Android Application Package
 
 In [Preparing an App for Release](~/android/deploy-test/release-prep/index.md)
-the **Archive Manager** was used to build the app and place it in an archive for
+the **Archive Manager** can be used to build the app and place it in an archive for
 signing and publishing. This section explains how to create an Android
 signing identity, create a new signing certificate for Android
 applications, and publish the archived app *ad hoc* to disk. The
@@ -22,7 +22,7 @@ through an app store.
 # [Visual Studio](#tab/windows)
 
 In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive),
-the **Distribution Channel** dialog presented two choices for
+the **Distribution Channel** dialog presents two choices for
 distribution. Select **Ad-Hoc**:
 
 [![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
@@ -57,7 +57,7 @@ An existing certificate can be used by clicking the **Import** button and then p
 [![Ad Hoc signing identity](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
 The **Create Android Key Store** dialog is displayed; use this dialog
-to create a new signing certificate that can use for signing
+to create a new signing certificate that can be used for signing
 Android applications. Enter the required information (outlined in red)
 as shown in this dialog:
 
@@ -75,6 +75,9 @@ For example, using **chimp** as the alias, the above steps would create a new si
 key in the following location:
 
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
+> [!NOTE]
+> The AppData folder is hidden by default. You may need to unhide it to access it. To unhide hidden folders in file explorer 
+> select *View*, and in the *Show/Hide* section check the box for *File name extensions*.
 
 > [!NOTE]
 > Be sure to back up the resulting keystore file and password in a
