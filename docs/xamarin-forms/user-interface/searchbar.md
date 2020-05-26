@@ -173,7 +173,7 @@ The following XAML shows how to bind a `SearchBar` to the example viewmodel, wit
                    SearchCommandParameter="{Binding Text, Source={x:Reference searchBar}}"/>
         <ListView x:Name="searchResults"
                   ...
-                  ItemsSource="{Binding SearchResults} />
+                  ItemsSource="{Binding SearchResults}" />
     </StackLayout>
 </ContentPage>
 ```
