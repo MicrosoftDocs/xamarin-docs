@@ -5,6 +5,7 @@ ms.assetid: 3D95371E-5D59-440E-8D31-F3C04E493DC1
 author: redth
 ms.author: jodick
 ms.date: 03/26/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Web Authenticator

@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 05/11/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Get Started with Xamarin.Essentials

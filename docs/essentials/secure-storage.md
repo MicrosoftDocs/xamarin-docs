@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.date: 04/02/2019
 ms.custom: video
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Secure Storage
@@ -58,7 +59,7 @@ Auto Backup can be configured to disable specific content from backing up. You c
 
 # [iOS](#tab/ios)
 
-When developing on the **iOS simulator**, enable the **Keychain** entitlement and add a keychain access group for the application's bundle identifier. 
+When developing on the **iOS simulator**, enable the **Keychain** entitlement and add a keychain access group for the application's bundle identifier.
 
 Open the **Entitlements.plist** in the iOS project and find the **Keychain** entitlement and enable it. This will automatically add the application's identifier as a group.
 
@@ -157,7 +158,7 @@ Encrypted values are stored in `ApplicationData.Current.LocalSettings`, inside a
 
 ## Limitations
 
-This API is intended to store small amounts of text.  Performance may be slow if you try to use it to store large amounts of text. 
+This API is intended to store small amounts of text.  Performance may be slow if you try to use it to store large amounts of text.
 
 ## API
 

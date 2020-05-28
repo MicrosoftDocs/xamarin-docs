@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.custom: video
 ms.author: jamont
 ms.date: 11/04/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Flashlight
@@ -104,7 +105,7 @@ On newer API levels, [Torch Mode](https://developer.android.com/reference/androi
 
 #### API Level 22 and Lower
 
-A camera surface texture is created to turn on or off the `FlashMode` of the camera unit. 
+A camera surface texture is created to turn on or off the `FlashMode` of the camera unit.
 
 ### [iOS](#tab/ios)
 

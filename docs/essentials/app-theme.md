@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.custom: video
 ms.author: jamont
 ms.date: 01/06/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: App Theme
@@ -53,7 +54,7 @@ You can read more on the official [Android documentation for Dark Theme](https:/
 
 # [iOS](#tab/ios)
 
-Unspecified will always be returned on versions of iOS older than 13.0 
+Unspecified will always be returned on versions of iOS older than 13.0
 
 
 # [UWP](#tab/uwp)

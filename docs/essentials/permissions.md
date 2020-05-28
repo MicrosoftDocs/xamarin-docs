@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.author: jamont
 ms.custom: video
 ms.date: 01/06/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Permissions

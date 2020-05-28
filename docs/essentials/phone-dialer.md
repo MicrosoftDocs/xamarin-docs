@@ -6,6 +6,7 @@ author: jamesmontemagno
 ms.custom: video
 ms.author: jamont
 ms.date: 07/02/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Essentials: Phone Dialer
