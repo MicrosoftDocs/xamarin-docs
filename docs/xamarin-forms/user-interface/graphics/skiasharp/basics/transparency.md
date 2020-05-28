@@ -7,6 +7,7 @@ ms.assetid: B62F9487-C30E-4C63-BAB1-4C091FF50378
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp transparency

@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/01/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Graphics in Xamarin.Forms

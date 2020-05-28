@@ -12,7 +12,8 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/27/2019
-
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
+  
 landingContent:
   - title: Local data storage
     linkLists:

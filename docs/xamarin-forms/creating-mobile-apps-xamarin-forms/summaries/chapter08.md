@@ -7,6 +7,7 @@ ms.assetid: 5970DEEB-1FC9-4F78-B4F6-D403E16D22ED
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/19/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 8. Code and XAML in harmony

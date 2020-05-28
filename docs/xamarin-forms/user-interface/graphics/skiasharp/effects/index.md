@@ -7,6 +7,7 @@ ms.assetid: B3E06572-8E2A-49FA-90D1-444C394CD516
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/22/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp effects

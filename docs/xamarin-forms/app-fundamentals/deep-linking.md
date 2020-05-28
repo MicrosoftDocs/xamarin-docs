@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/28/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Application Indexing and Deep Linking

@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 01/22/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # AndroidX migration in Xamarin.Forms

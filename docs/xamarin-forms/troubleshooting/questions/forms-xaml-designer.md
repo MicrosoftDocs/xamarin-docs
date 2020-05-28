@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/25/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Why doesn't the Visual Studio XAML designer work for Xamarin.Forms XAML files?

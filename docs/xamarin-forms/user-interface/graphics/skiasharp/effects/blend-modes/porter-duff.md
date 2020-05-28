@@ -7,6 +7,7 @@ ms.assetid: 57F172F8-BA03-43EC-A215-ED6B78696BB5
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Porter-Duff blend modes

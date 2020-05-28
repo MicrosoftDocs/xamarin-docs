@@ -7,6 +7,7 @@ ms.assetid: 54A43F3D-9DA8-44A7-9AE4-7E3025129A0B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # The Scale Transform

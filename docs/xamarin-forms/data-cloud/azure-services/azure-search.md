@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/05/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Search Data with Azure Search and Xamarin.Forms

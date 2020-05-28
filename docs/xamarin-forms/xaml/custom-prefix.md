@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/28/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # XAML Namespace Recommended Prefixes in Xamarin.Forms

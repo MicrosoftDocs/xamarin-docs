@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/15/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # DatePicker item selection on iOS

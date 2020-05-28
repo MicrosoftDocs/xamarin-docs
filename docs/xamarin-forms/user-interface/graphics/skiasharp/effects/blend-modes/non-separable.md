@@ -7,6 +7,7 @@ ms.assetid: 97FA2730-87C0-4914-8C9F-C64A02CF9EEF
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/23/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # The non-separable blend modes

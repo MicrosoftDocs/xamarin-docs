@@ -7,6 +7,7 @@ ms.assetid: 781937AA-AA1C-469C-AA92-D42D08B58635
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp Curves and Paths

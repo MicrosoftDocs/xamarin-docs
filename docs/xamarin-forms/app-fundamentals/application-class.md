@@ -8,6 +8,7 @@ ms.custom: video
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/19/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms App Class

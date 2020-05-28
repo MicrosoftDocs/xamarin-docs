@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/20/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # RefreshView Pull Direction on Windows

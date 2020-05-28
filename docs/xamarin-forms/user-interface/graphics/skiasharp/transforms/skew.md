@@ -7,6 +7,7 @@ ms.assetid: FDD16186-E3B7-4FF6-9BC2-8A2974BFF616
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/20/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # The Skew Transform

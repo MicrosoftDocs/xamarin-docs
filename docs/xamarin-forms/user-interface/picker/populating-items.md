@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/26/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Adding Data to a Picker's Items Collection

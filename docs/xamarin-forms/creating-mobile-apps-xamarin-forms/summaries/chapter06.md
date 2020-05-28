@@ -7,6 +7,7 @@ ms.assetid: D4F9C429-A6CF-40FA-AC68-3F149307A5F9
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/18/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Summary of Chapter 6. Button clicks

@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/02/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # XAML Field Modifiers in Xamarin.Forms

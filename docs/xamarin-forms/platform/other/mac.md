@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Mac Platform Setup

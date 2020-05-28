@@ -7,6 +7,7 @@ ms.assetid: 95167D1F-A718-405A-AFCC-90E596D422F3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/29/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Path Effects in SkiaSharp

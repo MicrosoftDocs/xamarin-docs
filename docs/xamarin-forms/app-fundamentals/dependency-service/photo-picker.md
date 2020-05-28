@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/06/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Picking a Photo from the Picture Library

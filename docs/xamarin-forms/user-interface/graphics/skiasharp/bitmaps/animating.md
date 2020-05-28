@@ -7,6 +7,7 @@ ms.assetid: 97142ADC-E2FD-418C-8A09-9C561AEE5BFD
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/12/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Animating SkiaSharp bitmaps

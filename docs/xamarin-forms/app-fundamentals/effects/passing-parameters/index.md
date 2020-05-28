@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/06/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Passing Parameters to an Effect

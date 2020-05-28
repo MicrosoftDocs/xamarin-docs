@@ -8,6 +8,7 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/16/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # XAML Previewer for Xamarin.Forms

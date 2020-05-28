@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
 ms.date: 09/10/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Setup Sign In with Apple for Xamarin.Forms

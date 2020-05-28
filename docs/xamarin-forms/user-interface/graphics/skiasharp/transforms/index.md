@@ -7,6 +7,7 @@ ms.assetid: E9BE322E-ECB3-4395-AFE4-4474A0F25551
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp Transforms

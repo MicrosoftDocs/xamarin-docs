@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/27/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Render Custom Controls in the XAML Previewer

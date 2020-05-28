@@ -7,6 +7,7 @@ ms.assetid: 32C95DFF-9065-42D7-966C-D3DBD16906B3
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Bitmap Basics in SkiaSharp

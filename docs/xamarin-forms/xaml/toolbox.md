@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: conceptdev
 ms.author: crdun
 ms.date: 08/29/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Xamarin.Forms XAML Toolbox
 

@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/24/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # ListView Group Header Style on iOS

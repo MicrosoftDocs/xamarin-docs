@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/04/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Authenticate Users with Azure Active Directory B2C

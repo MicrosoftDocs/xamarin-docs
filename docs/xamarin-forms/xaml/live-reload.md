@@ -8,6 +8,7 @@ author: pierceboggan
 ms.author: piboggan
 robots: noindex
 ms.date: 10/26/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin Live Reload (Preview)

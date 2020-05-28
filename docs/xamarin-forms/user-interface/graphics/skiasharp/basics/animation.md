@@ -7,6 +7,7 @@ ms.assetid: 31C96FD6-07E4-4473-A551-24753A5118C3
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Basic Animation in SkiaSharp

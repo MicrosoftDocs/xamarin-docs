@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/21/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # File Handling in Xamarin.Forms

@@ -7,6 +7,7 @@ ms.assetid: E3A4E373-F65D-45C8-8E77-577A804AC3F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Drawing a Simple Circle in SkiaSharp

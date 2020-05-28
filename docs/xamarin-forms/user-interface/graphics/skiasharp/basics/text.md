@@ -7,6 +7,7 @@ ms.assetid: A0B5AC82-7736-4AD8-AA16-FE43E18D203C
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Integrating Text and Graphics

@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/12/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Accessing the device's video library

@@ -7,6 +7,7 @@ ms.assetid: 56929D74-8F2C-44C6-90E6-3FBABCDC0A4B
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/05/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Finger Painting in SkiaSharp

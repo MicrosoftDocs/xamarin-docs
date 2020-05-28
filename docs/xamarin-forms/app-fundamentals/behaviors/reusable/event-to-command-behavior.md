@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/09/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Reusable EventToCommandBehavior

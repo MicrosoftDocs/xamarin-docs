@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/12/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Create a Xamarin.Forms Visual Renderer

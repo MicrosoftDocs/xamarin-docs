@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/30/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Styling Xamarin.Forms Apps using XAML Styles

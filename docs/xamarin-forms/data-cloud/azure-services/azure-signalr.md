@@ -6,6 +6,7 @@ ms.assetid: 1B9A69EF-C200-41BF-B098-D978D7F9CD8F
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 06/07/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Azure SignalR Service with Xamarin.Forms

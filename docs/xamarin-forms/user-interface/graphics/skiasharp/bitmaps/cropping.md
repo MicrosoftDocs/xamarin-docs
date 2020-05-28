@@ -7,6 +7,7 @@ ms.assetid: 0A79AB27-C69F-4376-8FFE-FF46E4783F30
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Cropping SkiaSharp bitmaps

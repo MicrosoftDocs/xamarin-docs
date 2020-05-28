@@ -7,6 +7,7 @@ ms.assetid: 9EDED6A0-F0BF-4471-A9EF-E0D6C5954AE4
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/12/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Matrix Transforms in SkiaSharp

@@ -7,6 +7,7 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Path Information and Enumeration

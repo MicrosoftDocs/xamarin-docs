@@ -7,6 +7,7 @@ ms.assetid: 785F4D13-7430-492E-B24E-3B45C560E9F1
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Non-Affine Transforms

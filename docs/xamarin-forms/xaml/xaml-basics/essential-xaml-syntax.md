@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/25/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Part 2. Essential XAML Syntax

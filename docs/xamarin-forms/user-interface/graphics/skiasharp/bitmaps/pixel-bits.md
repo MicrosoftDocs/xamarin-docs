@@ -7,6 +7,7 @@ ms.assetid: DBB58522-F816-4A8C-96A5-E0236F16A5C6
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/11/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Accessing SkiaSharp bitmap pixel bits

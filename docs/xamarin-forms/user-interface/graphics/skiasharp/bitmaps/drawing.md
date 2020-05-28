@@ -7,6 +7,7 @@ ms.assetid: 79BD3266-D457-4E50-BDDF-33450035FA0F
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Creating and drawing on SkiaSharp bitmaps

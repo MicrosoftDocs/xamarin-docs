@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/08/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Text Translation Using the Translator API

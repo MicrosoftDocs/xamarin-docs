@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/28/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Store and Access Data in Azure Storage from Xamarin.Forms

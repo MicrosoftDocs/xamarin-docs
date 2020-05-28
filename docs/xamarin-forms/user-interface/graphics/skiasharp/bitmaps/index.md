@@ -7,6 +7,7 @@ ms.assetid: 70C19370-157A-4B1B-9532-F77E32AC21BC
 author: davidbritch
 ms.author: dabritch
 ms.date: 07/17/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp bitmaps

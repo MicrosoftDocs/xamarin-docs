@@ -7,6 +7,7 @@ ms.assetid: 25141E3E-D22E-44B1-A647-7E6FA0C9737B
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/10/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SkiaSharp Drawing Basics

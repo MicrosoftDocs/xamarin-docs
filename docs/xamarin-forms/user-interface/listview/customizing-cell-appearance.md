@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/12/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Customizing ListView Cell Appearance

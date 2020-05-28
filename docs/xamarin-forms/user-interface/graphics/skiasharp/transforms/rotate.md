@@ -7,6 +7,7 @@ ms.assetid: CBB3CD72-4377-4EA3-A768-0C4228229FC2
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/23/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # The Rotate Transform

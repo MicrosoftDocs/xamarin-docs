@@ -7,6 +7,7 @@ ms.assetid: 1D53067B-3502-4D74-B89D-7EC496901AE2
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/24/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SVG Path Data in SkiaSharp

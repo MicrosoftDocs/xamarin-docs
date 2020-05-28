@@ -7,6 +7,7 @@ ms.assetid: B5894EA0-C415-41F9-93A4-BBF6EC72AFB9
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/14/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # 3D Rotations in SkiaSharp

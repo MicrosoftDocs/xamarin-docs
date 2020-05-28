@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/21/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Adding a pinch gesture recognizer

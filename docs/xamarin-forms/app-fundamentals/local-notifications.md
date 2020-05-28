@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 10/10/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Local notifications in Xamarin.Forms

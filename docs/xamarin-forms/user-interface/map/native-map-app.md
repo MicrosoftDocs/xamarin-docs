@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/30/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Launch the Native Map App from Xamarin.Forms

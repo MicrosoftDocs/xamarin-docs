@@ -9,7 +9,8 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 11/06/2019
-
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
+  
 highlightedContent:
   items:
   - title: What is Xamarin.Forms?

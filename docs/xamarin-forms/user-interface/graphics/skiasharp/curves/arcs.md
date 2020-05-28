@@ -7,6 +7,7 @@ ms.assetid: F1DA55E4-0182-4388-863C-5C340213BF3C
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/10/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Three Ways to Draw an Arc

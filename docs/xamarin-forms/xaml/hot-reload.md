@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: maddyleger1
 ms.author: maleger
 ms.date: 03/14/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # XAML Hot Reload for Xamarin.Forms

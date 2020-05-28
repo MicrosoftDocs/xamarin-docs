@@ -12,7 +12,8 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 01/22/2020
-
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
+  
 landingContent:
   - title: Testing
     linkLists:

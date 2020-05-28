@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/28/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Consume a Windows Communication Foundation (WCF) Web Service

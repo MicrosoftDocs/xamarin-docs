@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 03/08/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Introduction to Effects

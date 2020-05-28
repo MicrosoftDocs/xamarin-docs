@@ -7,6 +7,7 @@ ms.assetid: A0B8DD2D-7392-4EC5-BFB0-6209407AD650
 author: davidbritch
 ms.author: dabritch
 ms.date: 09/14/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Touch Manipulations

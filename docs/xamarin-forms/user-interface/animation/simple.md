@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 11/05/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Simple Animations in Xamarin.Forms

@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/07/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Right-to-left localization

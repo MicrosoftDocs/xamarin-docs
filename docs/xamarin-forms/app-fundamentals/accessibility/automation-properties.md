@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/18/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Automation Properties in Xamarin.Forms

@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Authenticate Users with an Azure Cosmos DB Document Database and Xamarin.Forms

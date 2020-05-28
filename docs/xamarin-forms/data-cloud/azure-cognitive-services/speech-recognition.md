@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 01/14/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Speech recognition using Azure Speech Service

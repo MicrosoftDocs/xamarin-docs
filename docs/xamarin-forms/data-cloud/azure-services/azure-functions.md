@@ -7,6 +7,7 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 04/02/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Get started with Azure Functions
 

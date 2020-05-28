@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 12/11/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # SwipeView Swipe Transition Mode on Android

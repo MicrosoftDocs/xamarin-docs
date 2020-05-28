@@ -8,6 +8,7 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/26/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Source Link with Xamarin.Forms

@@ -7,6 +7,7 @@ ms.assetid: 288224F1-7AEE-4148-A88D-A70C03F83D7A
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/09/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Integrating with Xamarin.Forms

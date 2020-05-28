@@ -7,6 +7,7 @@ ms.assetid: 8022FBF9-2208-43DB-94D8-0A4E9A5DA07F
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Clipping with Paths and Regions

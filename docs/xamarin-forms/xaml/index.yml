@@ -12,7 +12,8 @@ metadata:
   author: davidbritch
   ms.author: dabritch
   ms.date: 12/27/2019
-
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
+  
 landingContent:
   - title: Get started
     linkLists:
@@ -62,7 +63,7 @@ landingContent:
           - text: Passing arguments
             url: passing-arguments.md
           - text: Generics
-            url: generics.md  
+            url: generics.md
           - text: Field modifiers
             url: field-modifiers.md
           - text: Load XAML at runtime

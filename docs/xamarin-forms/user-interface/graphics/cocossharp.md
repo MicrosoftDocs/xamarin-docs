@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/03/2016
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Using CocosSharp in Xamarin.Forms

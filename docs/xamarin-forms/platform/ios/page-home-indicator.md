@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 05/09/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Home Indicator Visibility on iOS

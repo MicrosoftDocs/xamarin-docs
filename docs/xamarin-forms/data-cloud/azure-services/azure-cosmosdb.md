@@ -8,6 +8,7 @@ ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
 ms.date: 06/16/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Consume an Azure Cosmos DB Document Database in Xamarin.Forms

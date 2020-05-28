@@ -7,6 +7,7 @@ ms.technology: xamarin-skiasharp
 author: davidbritch
 ms.author: dabritch
 ms.date: 08/01/2017
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Paths and Text in SkiaSharp

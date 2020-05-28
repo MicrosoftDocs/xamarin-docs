@@ -7,6 +7,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 10/26/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Text in Xamarin.Forms
