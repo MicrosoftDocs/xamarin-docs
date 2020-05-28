@@ -7,6 +7,7 @@ ms.assetid: 3318B8F8-3B24-489E-8E7B-28FA948796F8
 author: davidbritch
 ms.author: dabritch
 ms.date: 01/06/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin.Forms quickstarts

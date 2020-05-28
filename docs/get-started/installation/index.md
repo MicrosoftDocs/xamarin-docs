@@ -8,6 +8,7 @@ author: conceptdev
 ms.author: crdun
 ms.custom: video
 ms.date: 05/23/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Installing Xamarin
 

@@ -6,6 +6,7 @@ ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/18/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # What is Xamarin.Forms?

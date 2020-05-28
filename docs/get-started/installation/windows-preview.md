@@ -6,6 +6,7 @@ ms.assetid: 9F730444-06E8-4B3F-8A19-CA95CD484FFA
 author: conceptdev
 ms.author: crdun
 ms.date: 03/20/2018
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Installing Xamarin Preview on Windows

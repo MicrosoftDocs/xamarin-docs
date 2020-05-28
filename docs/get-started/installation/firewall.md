@@ -6,6 +6,7 @@ ms.assetid: 658f699b-8cca-48f7-ae54-fa956384b6d6
 author: conceptdev
 ms.author: crdun
 ms.date: 07/17/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Xamarin firewall configuration instructions

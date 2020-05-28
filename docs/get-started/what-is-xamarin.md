@@ -7,6 +7,7 @@ ms.custom: video
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 09/16/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # What is Xamarin?

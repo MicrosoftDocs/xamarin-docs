@@ -9,6 +9,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 02/07/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Style a Cross-Platform Xamarin.Forms Application

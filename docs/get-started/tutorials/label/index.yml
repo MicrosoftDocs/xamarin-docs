@@ -9,6 +9,7 @@ metadata:
   ms.date: 01/31/2019
   author: davidbritch
   ms.author: dabritch
+  no-loc: [Xamarin.Forms, Xamarin.Essentials]
 items:
 - durationInMinutes: 1
   content: |

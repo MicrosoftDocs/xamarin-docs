@@ -9,6 +9,7 @@ ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
 ms.date: 04/01/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Perform Navigation in a Multi-Page Xamarin.Forms Application

@@ -6,6 +6,7 @@ ms.assetid: b83a85ec-842a-444c-8f82-c2464eda099b
 author: conceptdev
 ms.author: crdun
 ms.date: 01/22/2020
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
 # Uninstall Xamarin from Visual Studio

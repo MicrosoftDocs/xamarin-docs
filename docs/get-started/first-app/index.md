@@ -9,6 +9,7 @@ ms.custom: video
 author: conceptdev
 ms.author: crdun
 ms.date: 05/23/2019
+no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Build your first Xamarin.Forms App
 
