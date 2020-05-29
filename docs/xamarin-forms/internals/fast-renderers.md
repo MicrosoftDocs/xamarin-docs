@@ -6,7 +6,7 @@ ms.assetid: 097f87f2-d891-4f3c-be02-fb7d195a481a
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/09/2019
+ms.date: 05/28/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -24,9 +24,10 @@ Fast renderers reduce the inflation and rendering costs of a Xamarin.Forms contr
 Fast renderers are available for the following controls in Xamarin.Forms on Android:
 
 - [`Button`](xref:Xamarin.Forms.Button)
+- [`Frame`](xref:Xamarin.Forms.Frame)
 - [`Image`](xref:Xamarin.Forms.Image)
 - [`Label`](xref:Xamarin.Forms.Label)
-- [`Frame`](xref:Xamarin.Forms.Frame)
+- [`MediaElement`](xref:Xamarin.Forms.MediaElement)
 
 Functionally, these fast renderers are no different to the legacy renderers. From Xamarin.Forms 4.0 onwards, all applications targeting `FormsAppCompatActivity` will use these fast renderers by default. Renderers for all new controls, including [`ImageButton`](xref:Xamarin.Forms.ImageButton) and [`CollectionView`](xref:Xamarin.Forms.CollectionView), use the fast renderer approach.
 

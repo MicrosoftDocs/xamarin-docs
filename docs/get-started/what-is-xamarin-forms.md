@@ -5,7 +5,7 @@ ms.prod: xamarin
 ms.assetid: C1E24DB9-3099-4F79-BB88-10AABF7D4614
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 09/18/2019
+ms.date: 05/28/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Screenshots of example Xamarin.Forms application in iOS and Android](what-is-xamarin-forms-images/xamarin-forms-app-cropped.png)](what-is-xamarin-forms-images/xamarin-forms-app.png#lightbox)
 
-Xamarin.Forms is an open-source UI framework. Xamarin.Forms allows developers to build Android, iOS, and Windows applications from a single shared codebase.
+Xamarin.Forms is an open-source UI framework. Xamarin.Forms allows developers to build Xamarin.Android, Xamarin.iOS, and Windows applications from a single shared codebase.
 
 Xamarin.Forms allows developers to create user interfaces in XAML with code-behind in C#. These interfaces are rendered as performant native controls on each platform.
 
@@ -31,15 +31,15 @@ Xamarin.Forms is for developers with the following goals:
 
 Xamarin.Forms provides a consistent API for creating UI elements across platforms. This API can be implemented in either XAML or C# and supports databinding for patterns such as Model-View-ViewModel (MVVM).
 
-At runtime, Xamarin.Forms utilizes platform renderers to convert the cross-platform UI elements into native controls on Android, iOS and UWP. This allows developers to get the native look, feel and performance while realizing the benefits of code sharing across platforms.
+At runtime, Xamarin.Forms utilizes platform renderers to convert the cross-platform UI elements into native controls on Xamarin.Android, Xamarin.iOS and UWP. This allows developers to get the native look, feel and performance while realizing the benefits of code sharing across platforms.
 
 Xamarin.Forms applications typically consist of a shared .NET Standard library and individual platform projects. The shared library contains the XAML or C# views and any business logic such as services, models or other code. The platform projects contain any platform-specific logic or packages the application requires.
 
-Xamarin.Forms uses Xamarin to run .NET applications natively across platforms. For more information about Xamarin, see [What is Xamarin?](~/get-started/what-is-xamarin.md).
+Xamarin.Forms uses the Xamarin platform to run .NET applications natively across platforms. For more information about the Xamarin platform, see [What is Xamarin?](~/get-started/what-is-xamarin.md).
 
-## Additional tools
+## Additional functionality
 
-Xamarin.Forms has a large ecosystem of NuGet packages that add diverse functionality to applications. This section describes a few commonly-used NuGet packages.
+Xamarin.Forms has a large ecosystem of libraries that add diverse functionality to applications. This section describes some of this additional functionality.
 
 ### Xamarin.Essentials
 

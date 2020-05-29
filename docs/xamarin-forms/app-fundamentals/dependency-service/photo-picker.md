@@ -65,7 +65,7 @@ namespace DependencyServiceDemos.iOS
             // Present UIImagePickerController;
             UIWindow window = UIApplication.SharedApplication.KeyWindow;
             var viewController = window.RootViewController;
-            viewController.PresentModalViewController(imagePicker, true);
+            viewController.PresentViewController(imagePicker, true, null);
 
             // Return Task object
             taskCompletionSource = new TaskCompletionSource<Stream>();
@@ -77,7 +77,7 @@ namespace DependencyServiceDemos.iOS
 
 ```
 
-The `GetImageStreamAsync` method creates a `UIImagePickerController` and initializes it to select images from the photo library. Two event handlers are required: One for when the user selects a photo and the other for when the user cancels the display of the photo library. The `PresentModalViewController` then displays the photo library to the user.
+The `GetImageStreamAsync` method creates a `UIImagePickerController` and initializes it to select images from the photo library. Two event handlers are required: One for when the user selects a photo and the other for when the user cancels the display of the photo library. The `PresentViewController` method then displays the photo library to the user.
 
 At this point, the `GetImageStreamAsync` method must return a `Task<Stream>` object to the code that's calling it. This task is completed only when the user has finished interacting with the photo library and one of the event handlers is called. For situations like this, the [`TaskCompletionSource`](https://msdn.microsoft.com/library/dd449174(v=vs.110).aspx) class is essential. The class provides a `Task` object of the proper generic type to return from the `GetImageStreamAsync` method, and the class can later be signaled when the task is completed.
 
@@ -156,7 +156,7 @@ public class MainActivity : FormsAppCompatActivity
 
     protected override void OnCreate(Bundle savedInstanceState)
     {
-        // ... 
+        // ...
         Instance = this;
     }
     // ...

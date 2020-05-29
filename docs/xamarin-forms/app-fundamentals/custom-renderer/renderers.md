@@ -19,7 +19,10 @@ With the exception of the `MapRenderer` class, the platform-specific renderers c
 - **iOS** – Xamarin.Forms.Platform.iOS
 - **Android** – Xamarin.Forms.Platform.Android
 - **Android (AppCompat)** – Xamarin.Forms.Platform.Android.AppCompat
+- **Android (FastRenderers)** - Xamarin.Forms.Platform.Android.FastRenderers
 - **Universal Windows Platform (UWP)** – Xamarin.Forms.Platform.UWP
+
+For more information about fast renderers, see [Xamarin.Forms Fast Renderers](~/xamarin-forms/internals/fast-renderers.md).
 
 The `MapRenderer` class can be found in the following namespaces:
 
@@ -47,18 +50,18 @@ The following table lists the renderer and native control classes that implement
 
 The following table lists the renderer and native control classes that implement each Xamarin.Forms [Layout](~/xamarin-forms/user-interface/controls/layouts.md) type:
 
-|Layout|Renderer|iOS|Android|UWP|
+|Layout|Renderer|iOS|Android|Android (AppCompat)|UWP|
 |--- |--- |--- |--- |--- |
-|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|View|FrameworkElement|
-|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|View|FrameworkElement|
-|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|View|FrameworkElement|
-|[`Frame`](xref:Xamarin.Forms.Frame)|FrameRenderer|UIView|ViewGroup|Border|
-|[`ScrollView`](xref:Xamarin.Forms.ScrollView)|ScrollViewRenderer|UIScrollView|ScrollView|ScrollViewer|
-|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|View|FrameworkElement|
-|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|View|FrameworkElement|
-|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|View|FrameworkElement|
-|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|View|FrameworkElement|
-|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|View|FrameworkElement|
+|[`ContentPresenter`](xref:Xamarin.Forms.ContentPresenter)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`ContentView`](xref:Xamarin.Forms.ContentView)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`FlexLayout`](xref:Xamarin.Forms.FlexLayout)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`Frame`](xref:Xamarin.Forms.Frame)|FrameRenderer|UIView|ViewGroup|CardView|Border|
+|[`ScrollView`](xref:Xamarin.Forms.ScrollView)|ScrollViewRenderer|UIScrollView|ScrollView|ScrollView|ScrollViewer|
+|[`TemplatedView`](xref:Xamarin.Forms.TemplatedView)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`AbsoluteLayout`](xref:Xamarin.Forms.AbsoluteLayout)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`Grid`](xref:Xamarin.Forms.Grid)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout)|ViewRenderer|UIView|View|View|FrameworkElement|
+|[`StackLayout`](xref:Xamarin.Forms.StackLayout)|ViewRenderer|UIView|View|View|FrameworkElement|
 
 ## Views
 
@@ -110,6 +113,7 @@ The following table lists the renderer and native control classes that implement
 |[`ImageCell`](xref:Xamarin.Forms.ImageCell)|ImageCellRenderer|UITableViewCell with a UIImage|LinearLayout with two TextViews and an ImageView|DataTemplate with a Grid containing an Image and two TextBlocks|
 |[`ViewCell`](xref:Xamarin.Forms.ViewCell)|[ViewCellRenderer](~/xamarin-forms/app-fundamentals/custom-renderer/viewcell.md)|UITableViewCell|View|DataTemplate with a ContentPresenter|
 
-## Summary
+## Related links
 
-This article has listed the renderer and native control classes that implement each Xamarin.Forms page, layout, view, and cell. Every Xamarin.Forms control has an accompanying renderer for each platform that creates an instance of a native control.
+- [Xamarin.Forms Fast Renderers](~/xamarin-forms/internals/fast-renderers.md)
+- [Xamarin.Forms Shell Custom Renderers](~/xamarin-forms/app-fundamentals/shell/customrenderers.md)

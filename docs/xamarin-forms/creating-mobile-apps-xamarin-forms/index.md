@@ -23,7 +23,7 @@ The book was published in the spring of 2016, and has not been updated since the
 
 Download your preferred eBook format from Microsoft Virtual Academy:
 
-- [**PDF (56Mb)**](https://aka.ms/xamebook)
+- [**PDF (56Mb)**](https://aka.ms/xamformsebook)
 
 - [**ePub (151Mb)**](https://aka.ms/xamebook/epub)
 

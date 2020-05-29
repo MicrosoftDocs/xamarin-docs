@@ -1,12 +1,12 @@
 ---
 title: "What is Xamarin?"
-description: "This article introduces Xamarin and related libraries."
+description: "This article introduces the Xamarin platform and related libraries."
 ms.prod: xamarin
 ms.assetid: 33C83E13-F3E5-17B4-6512-207F3D3C5AB6
 ms.custom: video
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 09/16/2019
+ms.date: 05/28/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -36,7 +36,7 @@ Xamarin is for developers with the following goals:
 
 The diagram shows the overall architecture of a cross-platform Xamarin application. Xamarin allows you to create native UI on each platform and write business logic in C# that is shared across platforms. In most cases, 80% of application code is sharable using Xamarin.
 
-Xamarin is built on top of **Mono**, an open-source version of the .NET Framework based on the .NET ECMA standards. Mono has existed for almost as long as the .NET Framework itself, and runs on most platforms including Linux, Unix, FreeBSD, and macOS. The Mono execution environment automatically handles tasks such as memory allocation, garbage collection and interoperability with underlying platforms.
+Xamarin is built on top of .NET, which automatically handles tasks such as memory allocation, garbage collection and interoperability with underlying platforms.
 
 For more information about platform-specific architecture, see [Xamarin.Android](#xamarinandroid) and [Xamarin.iOS](#xamarinios).
 
@@ -82,7 +82,7 @@ For more information, see [Xamarin.Essentials](~/essentials/index.md).
 
 ### Xamarin.Forms
 
-Xamarin.Forms is an open-source UI framework. Xamarin.Forms allows developers to build iOS, Android and Windows applications from a single shared codebase. Xamarin.Forms allows developers to create user interfaces in XAML with code-behind in C#. These user interfaces are rendered as performant native controls on each platform. Some examples of features provided by Xamarin.Forms include:
+Xamarin.Forms is an open-source UI framework. Xamarin.Forms allows developers to build Xamarin.iOS, Xamarin.Android, and Windows applications from a single shared codebase. Xamarin.Forms allows developers to create user interfaces in XAML with code-behind in C#. These user interfaces are rendered as performant native controls on each platform. Some examples of features provided by Xamarin.Forms include:
 
 - XAML user-interface language
 - Databinding

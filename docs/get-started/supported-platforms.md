@@ -30,7 +30,7 @@ Xamarin.Forms apps for iOS and Android can be built in Visual Studio for Mac. Fo
 Xamarin.Forms supports additional platforms beyond iOS, Android, and Windows:
 
 - Samsung Tizen
-- macOS
+- macOS 10.13 or higher
 - GTK#
 - WPF
 
