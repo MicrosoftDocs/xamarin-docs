@@ -182,7 +182,7 @@ landingContent:
           - text: RelativeLayout
             url: layouts/relative-layout.md
           - text: ScrollView
-            url: layouts/scroll-view.md
+            url: layouts/scrollview.md
           - text: StackLayout
             url: layouts/stacklayout.md
 
