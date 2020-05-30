@@ -63,6 +63,7 @@ Add any file into the **Assets** folder in the Android project and mark the Buil
 - **CacheDirectory** – Returns the [Library/Caches](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) directory.
 - **AppDataDirectory** – Returns the [Library](https://developer.apple.com/library/content/documentation/FileManagement/Conceptual/FileSystemProgrammingGuide/FileSystemOverview/FileSystemOverview.html) directory that is backed up by iTunes and iCloud.
 
+In iOS Simulator, Application ID (which is part of the directory name) changes on every build so you have to retrieve the correct one each time you build your application in simulator.
 Add any file into the **Resources** folder in the iOS project and mark the Build Action as **BundledResource** to use it with `OpenAppPackageFileAsync`.
 
 # [UWP](#tab/uwp)
