@@ -46,8 +46,6 @@ Debug package to be smaller.
 The shared runtime may be disabled in Debug builds by setting the
 `$(AndroidUseSharedRuntime)` property to `False`.
 
-<a name="Fast_Deployment" />
-
 ### Fast Deployment
 
 *Fast deployment* works in concert with the shared runtime to further
@@ -78,8 +76,6 @@ the build process is customizable by editing the project file directly.
 This page documents only the Xamarin.Android-specific features and
 customizations &ndash; many more things are possible with the normal
 MSBuild items, properties and targets.
-
-<a name="Build_Targets" />
 
 ## Build Targets
 
