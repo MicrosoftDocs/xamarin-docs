@@ -22,7 +22,7 @@ Xamarin.Forms code runs on multiple platforms - each of which has its own filesy
 
 For information on handling image files, refer to the [Working with Images](~/xamarin-forms/user-interface/images.md) page.
 
-<a name="Loading_and_Saving_Files" />
+<!--a name="Loading_and_Saving_Files" /-->
 
 ## Saving and Loading Files
 
@@ -56,7 +56,7 @@ These operations are demonstrated in the sample app, which includes a page that 
 
 [![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App")](files-images/saveandload.png#lightbox "Saving and Loading Files in App")
 
-<a name="Loading_Files_Embedded_as_Resources" />
+<!--a name="Loading_Files_Embedded_as_Resources" /-->
 
 ## Loading Files Embedded as Resources
 
@@ -104,7 +104,7 @@ listView.ItemsSource = monkeys;
 
  [![Xml file embedded in .NET standard library, displayed in ListView](files-images/pclxml-sml.png "Embedded XML File in .NET standard library Displayed in ListView")](files-images/pclxml.png#lightbox "Embedded XML File in .NET standard library Displayed in ListView")
 
-<a name="Embedding_in_Shared_Projects" />
+<!--a name="Embedding_in_Shared_Projects" /-->
 
 ## Embedding in Shared Projects
 
@@ -132,7 +132,7 @@ Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
 
-<a name="Organizing_Resources" />
+<!--a name="Organizing_Resources" /-->
 
 ### Organizing Resources
 
@@ -140,7 +140,7 @@ The above examples assume that the file is embedded in the root of the .NET Stan
 
 It is possible to organize embedded resources in folders. When an embedded resource is placed in a folder, the folder name becomes part of the resource ID (separated by periods), so that the resource ID format becomes **Namespace.Folder.Filename.Extension**. Placing the files used in the sample app into a folder **MyFolder** would make the corresponding resource IDs `WorkingWithFiles.MyFolder.LibTextResource.txt` and `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
 
-<a name="Debugging_Embedded_Resources" />
+<!--a name="Debugging_Embedded_Resources" /-->
 
 ### Debugging Embedded Resources
 
