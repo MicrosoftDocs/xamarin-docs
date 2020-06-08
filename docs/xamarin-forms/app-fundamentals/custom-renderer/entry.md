@@ -33,7 +33,7 @@ Each item will now be discussed in turn, to implement an [`Entry`](xref:Xamarin.
 > [!IMPORTANT]
 > This article explains how to create a simple custom renderer. However, it's not necessary to create a custom renderer to implement an `Entry` that has a different background color on each platform. This can be more easily accomplished by using the [`Device`](xref:Xamarin.Forms.Device) class, or the `OnPlatform` markup extension, to provide platform-specific values. For more information, see [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#provide-platform-specific-values) and [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
-<a name="Creating_the_Custom_Entry_Control" />
+<a name="Creating_the_Custom_Entry_Control"></a>
 
 ## Creating the Custom Entry Control
 
@@ -47,7 +47,7 @@ public class MyEntry : Entry
 
 The `MyEntry` control is created in the .NET Standard library project and is simply an [`Entry`](xref:Xamarin.Forms.Entry) control. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `MyEntry` control.
 
-<a name="Consuming_the_Custom_Control" />
+<a name="Consuming_the_Custom_Control"></a>
 
 ## Consuming the Custom Control
 
@@ -92,7 +92,7 @@ This code instantiates a new [`ContentPage`](xref:Xamarin.Forms.ContentPage) obj
 
 A custom renderer can now be added to each application project to customize the control's appearance on each platform.
 
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
+<a name="Creating_the_Custom_Renderer_on_each_Platform"></a>
 
 ## Creating the Custom Renderer on each Platform
 
