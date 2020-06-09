@@ -14,9 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/workingwithfonts)
 
-This article describes how Xamarin.Forms lets you specify font attributes (including weight and size) on controls that display text. Font information can be [specified in code](#Setting_Font_in_Code) or [specified in XAML](#Setting_Font_in_Xaml). It's' also possible to use a [custom font](#use-a-custom-font), and [display font icons](#display-font-icons).
-
-<a name="Setting_Font_in_Code" />
+This article describes how Xamarin.Forms lets you specify font attributes (including weight and size) on controls that display text. Font information can be [specified in code](#set-the-font-in-code) or [specified in XAML](#set-the-font-in-xaml). It's' also possible to use a [custom font](#use-a-custom-font), and [display font icons](#display-font-icons).
 
 ## Set the font in code
 
@@ -37,8 +35,6 @@ var about = new Label
 };
 ```
 
-<a name="FontSize" />
-
 ### Font size
 
 The `FontSize` property can be set to a double value, for instance:
@@ -50,8 +46,6 @@ label.FontSize = 24;
 The size value is measured in device-independent units. For more information, see [Units of Measurement](~/xamarin-forms/user-interface/controls/common-properties.md#units-of-measurement).
 
 Xamarin.Forms also defines fields in the [`NamedSize`](xref:Xamarin.Forms.NamedSize) enumeration that represent specific font sizes. For more information about named font sizes, see [Named font sizes](#named-font-sizes).
-
-<a name="FontAttributes" />
 
 ### Font attributes
 
@@ -79,8 +73,6 @@ label.FontSize = Device.RuntimePlatform == Device.iOS ? 24 :
 ```
 
 A good source of font information for iOS is [iosfonts.com](http://iosfonts.com).
-
-<a name="Setting_Font_in_Xaml" />
 
 ## Set the font in XAML
 

@@ -601,8 +601,6 @@ If multiple triggers are simultaneously active (for example, two custom triggers
 
 For more information about state triggers, see [State triggers](~/xamarin-forms/app-fundamentals/triggers.md#state-triggers).
 
-<a name="adaptive-layout" />
-
 ## Use the Visual State Manager for adaptive layout
 
 A Xamarin.Forms application running on a phone can usually be viewed in a portrait or landscape aspect ratio, and a Xamarin.Forms program running on the desktop can be resized to assume many different sizes and aspect ratios. A well-designed application might display its content differently for these various page or window form factors.

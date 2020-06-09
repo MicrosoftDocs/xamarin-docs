@@ -32,7 +32,7 @@ The most common request to Azure Search is to execute a query. There are two typ
 
 Search queries and filter queries can be used separately or together. When used together, the filter query is applied first to the entire index, and then the search query is performed on the results of the filter query.
 
-Azure Search also supports retrieving suggestions based on search input. For more information, see [Suggestion Queries](#suggestions).
+Azure Search also supports retrieving suggestions based on search input. For more information, see [Suggestion Queries](#suggestion-queries).
 
 > [!NOTE]
 > If you don't have an [Azure subscription](/azure/guides/developer/azure-developer-guide#understanding-accounts-subscriptions-and-billing), create a [free account](https://aka.ms/azfree-docs-mobileapps) before you begin.
@@ -218,8 +218,6 @@ The `SearchAsync` method returns a `DocumentSearchResult` object that contains t
 ![](azure-search-images/search.png "Search Results")
 
 For more information about searching and filtering, see [Query your Azure Search index using the .NET SDK](/azure/search/search-query-dotnet/).
-
-<a name="suggestions" />
 
 ### Suggestion Queries
 

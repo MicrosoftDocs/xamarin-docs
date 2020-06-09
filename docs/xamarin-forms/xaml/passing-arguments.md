@@ -20,12 +20,10 @@ _This article demonstrates using the XAML attributes that can be used to pass ar
 
 It's often necessary to instantiate objects with constructors that require arguments, or by calling a static creation method. This can be achieved in XAML by using the `x:Arguments` and `x:FactoryMethod` attributes:
 
-- The `x:Arguments` attribute is used to specify constructor arguments for a non-default constructor, or for a factory method object declaration. For more information, see [Passing Constructor Arguments](#constructor_arguments).
-- The `x:FactoryMethod` attribute is used to specify a factory method that can be used to initialize an object. For more information, see [Calling Factory Methods](#factory_methods).
+- The `x:Arguments` attribute is used to specify constructor arguments for a non-default constructor, or for a factory method object declaration. For more information, see [Passing Constructor Arguments](#passing-constructor-arguments).
+- The `x:FactoryMethod` attribute is used to specify a factory method that can be used to initialize an object. For more information, see [Calling Factory Methods](#calling-factory-methods).
 
-In addition, the `x:TypeArguments` attribute can be used to specify the generic type arguments to the constructor of a generic type. For more information, see [Specifying a Generic Type Argument](#generic_type_arguments).
-
-<a name="constructor_arguments" />
+In addition, the `x:TypeArguments` attribute can be used to specify the generic type arguments to the constructor of a generic type. For more information, see [Specifying a Generic Type Argument](#specifying-a-generic-type-argument).
 
 ## Passing Constructor Arguments
 
@@ -89,8 +87,6 @@ The following screenshots show the result of calling each [`Color`](xref:Xamarin
 
 ![BoxView.Color specified with x:Arguments](passing-arguments-images/passing-arguments.png)
 
-<a name="factory_methods" />
-
 ## Calling Factory Methods
 
 Factory methods can be called in XAML by specifying the method's name using the `x:FactoryMethod` attribute, and its arguments using the `x:Arguments` attribute. A factory method is a `public static` method that returns objects or values of the same type as the class or structure that defines the methods.
@@ -138,8 +134,6 @@ The number of elements within the `x:Arguments` tag, and the types of these elem
 The following screenshots show the result of calling each [`Color`](xref:Xamarin.Forms.Color) factory method with the specified argument values:
 
 ![BoxView.Color specified with x:FactoryMethod and x:Arguments](passing-arguments-images/factory-methods.png)
-
-<a name="generic_type_arguments" />
 
 ## Specifying a Generic Type Argument
 

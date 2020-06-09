@@ -16,13 +16,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 XAML markup extensions help enhance the power and flexibility of XAML by allowing element attributes to be set from a variety of sources. Several XAML markup extensions are part of the XAML 2009 specification. These appear in XAML files with the customary `x` namespace prefix, and are commonly referred to with this prefix. This article discusses the following markup extensions:
 
-- [`x:Static`](#static) – reference static properties, fields, or enumeration members.
-- [`x:Reference`](#reference) – reference named elements on the page.
-- [`x:Type`](#type) – set an attribute to a `System.Type` object.
-- [`x:Array`](#array) – construct an array of objects of a particular type.
-- [`x:Null`](#null) – set an attribute to a `null` value.
-- [`OnPlatform`](#onplatform) – customize UI appearance on a per-platform basis.
-- [`OnIdiom`](#onidiom) – customize UI appearance based on the idiom of the device the application is running on.
+- [`x:Static`](#xstatic-markup-extension) – reference static properties, fields, or enumeration members.
+- [`x:Reference`](#xreference-markup-extension) – reference named elements on the page.
+- [`x:Type`](#xtype-markup-extension) – set an attribute to a `System.Type` object.
+- [`x:Array`](#xarray-markup-extension) – construct an array of objects of a particular type.
+- [`x:Null`](#xnull-markup-extension) – set an attribute to a `null` value.
+- [`OnPlatform`](#onplatform-markup-extension) – customize UI appearance on a per-platform basis.
+- [`OnIdiom`](#onidiom-markup-extension) – customize UI appearance based on the idiom of the device the application is running on.
 - [`DataTemplate`](#datatemplate-markup-extension) – converts a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
 - [`FontImage`](#fontimage-markup-extension) – display a font icon in any view that can display an `ImageSource`.
 - [`OnAppTheme`](#onapptheme-markup-extension) – consume a resource based on the current system theme.
@@ -36,8 +36,6 @@ Additional XAML markup extensions have historically been supported by other XAML
 - `RelativeSource` - sets the binding source relative to the position of the binding target, as discussed in the article [Relative Bindings](~/xamarin-forms/app-fundamentals/data-binding/relative-bindings.md).
 
 The [`RelativeLayout`](xref:Xamarin.Forms.RelativeLayout) layout makes use of the custom markup extension [`ConstraintExpression`](xref:Xamarin.Forms.ConstraintExpression). This markup extension is described in the article [**RelativeLayout**](~/xamarin-forms/user-interface/layouts/relative-layout.md).
-
-<a name="static" />
 
 ## x:Static markup extension
 
@@ -143,8 +141,6 @@ Here's the sample running:
 
 [![x:Static Demo](consuming-images/staticdemo-small.png "x:Static Demo")](consuming-images/staticdemo-large.png#lightbox "x:Static Demo")
 
-<a name="reference" />
-
 ## x:Reference markup extension
 
 The `x:Reference` markup extension is supported by the [`ReferenceExtension`](xref:Xamarin.Forms.Xaml.ReferenceExtension) class. The class has a single property named [`Name`](xref:Xamarin.Forms.Xaml.ReferenceExtension.Name) of type `string` that you set to the name of an element on the page that has been given a name with `x:Name`. This `Name` property is the content property of `ReferenceExtension`, so `Name=` is not required when `x:Reference` appears in curly braces.
@@ -187,15 +183,13 @@ Both `x:Reference` expressions use the abbreviated version of the `ReferenceExte
 
 [![x:Reference Demo](consuming-images/referencedemo-small.png "x:Reference Demo")](consuming-images/referencedemo-large.png#lightbox "x:Reference Demo")
 
-<a name="type" />
-
 ## x:Type markup extension
 
 The `x:Type` markup extension is the XAML equivalent of the C# [`typeof`](/dotnet/csharp/language-reference/keywords/typeof/) keyword. It is supported by the [`TypeExtension`](xref:Xamarin.Forms.Xaml.TypeExtension) class, which defines one property named [`TypeName`](xref:Xamarin.Forms.Xaml.TypeExtension.TypeName) of type `string` that is set to a class or structure name. The `x:Type` markup extension returns the [`System.Type`](xref:System.Type) object of that class or structure. `TypeName` is the content property of `TypeExtension`, so `TypeName=` is not required when `x:Type` appears with curly braces.
 
-Within Xamarin.Forms, there are several properties that have arguments of type `Type`. Examples include the [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property of `Style`, and the [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#generic_type_arguments) attribute used to specify arguments in generic classes. However, the XAML parser performs the `typeof` operation automatically, and the `x:Type` markup extension is not used in these cases.
+Within Xamarin.Forms, there are several properties that have arguments of type `Type`. Examples include the [`TargetType`](xref:Xamarin.Forms.Style.TargetType) property of `Style`, and the [x:TypeArguments](~/xamarin-forms/xaml/passing-arguments.md#specifying-a-generic-type-argument) attribute used to specify arguments in generic classes. However, the XAML parser performs the `typeof` operation automatically, and the `x:Type` markup extension is not used in these cases.
 
-One place where `x:Type` *is* required is with the `x:Array` markup extension, which is described in the [next section](#array).
+One place where `x:Type` *is* required is with the `x:Array` markup extension, which is described in the [next section](#xarray-markup-extension).
 
 The `x:Type` markup extension is also useful when constructing a menu where each menu item corresponds to an object of a particular type. You can associate a `Type` object with each menu item, and then instantiate the object when the menu item is selected.
 
@@ -325,8 +319,6 @@ The method that is executed when a `Button` is pressed creates a new instance of
 
 [![x:Type Demo](consuming-images/typedemo-small.png "x:Type Demo")](consuming-images/typedemo-large.png#lightbox "x:Type Demo")
 
-<a name="array" />
-
 ## x:Array markup extension
 
 The `x:Array` markup extension enables you to define an array in markup. It is supported by the [`ArrayExtension`](xref:Xamarin.Forms.Xaml.ArrayExtension) class, which defines two properties:
@@ -400,9 +392,7 @@ Towards the end of this article, you'll see a custom XAML markup extension that 
 <local:HslColor H="0.5" S="1.0" L="0.5" />
 ```
 
-When defining arrays of common types like strings or numbers, use the tags listed in the [**Passing Constructor Arguments**](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) article to delimit the values.
-
-<a name="null" />
+When defining arrays of common types like strings or numbers, use the tags listed in the [**Passing Constructor Arguments**](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments) article to delimit the values.
 
 ## x:Null markup extension
 
@@ -457,8 +447,6 @@ Here's the program running:
 
 Notice that four of the `Label` elements have a serif font, but the center `Label` has the  default sans-serif font.
 
-<a name="onplatform" />
-
 ## OnPlatform markup extension
 
 The `OnPlatform` markup extension enables you to customize UI appearance on a per-platform basis. It provides the same functionality as the [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) and [`On`](xref:Xamarin.Forms.On) classes, but with a more concise representation.
@@ -498,8 +486,6 @@ In this example, all three `OnPlatform` expressions use the abbreviated version 
 Here's the program running:
 
 [![OnPlatform Demo](consuming-images/onplatformdemo-small.png "OnPlatform Demo")](consuming-images/onplatformdemo-large.png#lightbox "OnPlatform Demo")
-
-<a name="onidiom" />
 
 ## OnIdiom markup extension
 

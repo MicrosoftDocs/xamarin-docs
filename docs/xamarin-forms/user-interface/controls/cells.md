@@ -24,8 +24,6 @@ A *cell* is a specialized element used for items in a table and describes how ea
 
 Xamarin.Forms supports the following cell types:
 
-<a name="textCell" />
-
 ### TextCell
 
 |     |     |
@@ -37,7 +35,7 @@ Xamarin.Forms supports the following cell types:
 
 |     |     |
 | --- | --- |
-| The [`ImageCell`](xref:Xamarin.Forms.ImageCell) displays the same information as [`TextCell`](#textCell) but includes a bitmap that you set with the [`Source`](xref:Xamarin.Forms.Image.Source) property.<br /><br />[API Documentation](xref:Xamarin.Forms.ImageCell) / [Guide](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) | [![ImageCell Example](cells-images/ImageCell.png "ImageCell Example")](cells-images/ImageCell-Large.png#lightbox "ImageCell Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
+| The [`ImageCell`](xref:Xamarin.Forms.ImageCell) displays the same information as [`TextCell`](#textcell) but includes a bitmap that you set with the [`Source`](xref:Xamarin.Forms.Image.Source) property.<br /><br />[API Documentation](xref:Xamarin.Forms.ImageCell) / [Guide](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md#imagecell) | [![ImageCell Example](cells-images/ImageCell.png "ImageCell Example")](cells-images/ImageCell-Large.png#lightbox "ImageCell Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ImageCellDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ImageCellDemoPage.xaml) |
 |     |     |
 
 ### SwitchCell

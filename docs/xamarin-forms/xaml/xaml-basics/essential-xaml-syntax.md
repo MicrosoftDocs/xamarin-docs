@@ -519,7 +519,7 @@ This is the standard way to set a platform-dependent `Padding` property in XAML.
 ```
 
 > [!NOTE]
-> The `OnPlatform` markup extension can also be used in XAML to customize UI appearance on a per-platform basis. It provides the same functionality as the `OnPlatform` and `On` classes, but with a more concise representation. For more information, see [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+> The `OnPlatform` markup extension can also be used in XAML to customize UI appearance on a per-platform basis. It provides the same functionality as the `OnPlatform` and `On` classes, but with a more concise representation. For more information, see [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
 ## Summary
 

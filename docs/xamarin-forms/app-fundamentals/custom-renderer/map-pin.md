@@ -24,16 +24,14 @@ The following diagram illustrates the relationship between the [`Map`](xref:Xama
 
 The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`Map`](xref:Xamarin.Forms.Maps.Map) on each platform. The process for doing this is as follows:
 
-1. [Create](#Creating_the_Custom_Map) a Xamarin.Forms custom map.
-1. [Consume](#Consuming_the_Custom_Map) the custom map from Xamarin.Forms.
-1. [Create](#Creating_the_Custom_Renderer_on_each_Platform) the custom renderer for the map on each platform.
+1. [Create](#creating-the-custom-map) a Xamarin.Forms custom map.
+1. [Consume](#consuming-the-custom-map) the custom map from Xamarin.Forms.
+1. [Create](#creating-the-custom-renderer-on-each-platform) the custom renderer for the map on each platform.
 
 Each item will now be discussed in turn, to implement a `CustomMap` renderer that displays a native map with a customized pin and a customized view of the pin data on each platform.
 
 > [!NOTE]
 > [`Xamarin.Forms.Maps`](xref:Xamarin.Forms.Maps) must be initialized and configured before use. For more information, see [`Maps Control`](~/xamarin-forms/user-interface/map/index.md).
-
-<a name="Creating_the_Custom_Map" />
 
 ## Creating the Custom Map
 
@@ -57,8 +55,6 @@ public class CustomPin : Pin
 ```
 
 This class defines a `CustomPin` as inheriting the properties of the [`Pin`](xref:Xamarin.Forms.Maps.Pin) class, and adding `Name` and `Url` properties.
-
-<a name="Consuming_the_Custom_Map" />
 
 ## Consuming the Custom Map
 
@@ -118,8 +114,6 @@ public MapPage()
 This initialization adds a custom pin and positions the map's view with the [`MoveToRegion`](xref:Xamarin.Forms.Maps.Map.MoveToRegion*) method, which changes the position and zoom level of the map by creating a [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan) from a [`Position`](xref:Xamarin.Forms.Maps.Position) and a [`Distance`](xref:Xamarin.Forms.Maps.Distance).
 
 A custom renderer can now be added to each application project to customize the native map controls.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 
@@ -224,10 +218,8 @@ namespace CustomRenderer.iOS
 
 The `OnElementChanged` method performs the following configuration of the [`MKMapView`](xref:MapKit.MKMapView) instance, provided that the custom renderer is attached to a new Xamarin.Forms element:
 
-- The [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) property is set to the `GetViewForAnnotation` method. This method is called when the [location of the annotation becomes visible on the map](#Displaying_the_Annotation), and is used to customize the annotation prior to display.
-- Event handlers for the `CalloutAccessoryControlTapped`, `DidSelectAnnotationView`, and `DidDeselectAnnotationView` events are registered. These events fire when the user [taps the right accessory in the callout](#Tapping_on_the_Right_Callout_Accessory_View), and when the user [selects](#Selecting_the_Annotation) and [deselects](#Deselecting_the_Annotation) the annotation, respectively. The events are unsubscribed from only when the element the renderer is attached to changes.
-
-<a name="Displaying_the_Annotation" />
+- The [`GetViewForAnnotation`](xref:MapKit.MKMapView.GetViewForAnnotation*) property is set to the `GetViewForAnnotation` method. This method is called when the [location of the annotation becomes visible on the map](#displaying-the-annotation), and is used to customize the annotation prior to display.
+- Event handlers for the `CalloutAccessoryControlTapped`, `DidSelectAnnotationView`, and `DidDeselectAnnotationView` events are registered. These events fire when the user [taps the right accessory in the callout](#tapping-on-the-right-callout-accessory-view), and when the user [selects](#selecting-the-annotation) and [deselects](#deselecting-the-annotation) the annotation, respectively. The events are unsubscribed from only when the element the renderer is attached to changes.
 
 #### Displaying the Annotation
 
@@ -278,12 +270,10 @@ This method ensures that the annotation will be displayed as a custom image, rat
     - The `CustomMKAnnotationView.CalloutOffset` property is set to a `CGPoint` that specifies that the callout will be centered above the annotation.
     - The `CustomMKAnnotationView.LeftCalloutAccessoryView` property is set to an image of a monkey that will appear to the left of the annotation title and address.
     - The `CustomMKAnnotationView.RightCalloutAccessoryView` property is set to an *Information* button that will appear to the right of the annotation title and address.
-    - The `CustomMKAnnotationView.Name` property is set to the `CustomPin.Name` property returned by the `GetCustomPin` method. This enables the annotation to be identified so that it's [callout can be further customized](#Selecting_the_Annotation), if desired.
-    - The `CustomMKAnnotationView.Url` property is set to the `CustomPin.Url` property returned by the `GetCustomPin` method. The URL will be navigated to when the user [taps the button displayed in the right callout accessory view](#Tapping_on_the_Right_Callout_Accessory_View).
+    - The `CustomMKAnnotationView.Name` property is set to the `CustomPin.Name` property returned by the `GetCustomPin` method. This enables the annotation to be identified so that it's [callout can be further customized](#selecting-the-annotation), if desired.
+    - The `CustomMKAnnotationView.Url` property is set to the `CustomPin.Url` property returned by the `GetCustomPin` method. The URL will be navigated to when the user [taps the button displayed in the right callout accessory view](#tapping-on-the-right-callout-accessory-view).
 1. The [`MKAnnotationView.CanShowCallout`](xref:MapKit.MKAnnotationView.CanShowCallout*) property is set to `true` so that the callout is displayed when the annotation is tapped.
 1. The annotation is returned for display on the map.
-
-<a name="Selecting_the_Annotation" />
 
 #### Selecting the Annotation
 
@@ -309,8 +299,6 @@ void OnDidSelectAnnotationView(object sender, MKAnnotationViewEventArgs e)
 
 This method extends the existing callout (that contains left and right accessory views) by adding a `UIView` instance to it that contains an image of the Xamarin logo, provided that the selected annotation has its `Name` property set to `Xamarin`. This allows for scenarios where different callouts can be displayed for different annotations. The `UIView` instance will be displayed centered above the existing callout.
 
-<a name="Tapping_on_the_Right_Callout_Accessory_View" />
-
 #### Tapping on the Right Callout Accessory View
 
 When the user taps on the *Information* button in the right callout accessory view, the `CalloutAccessoryControlTapped` event fires, which in turn executes the `OnCalloutAccessoryControlTapped` method:
@@ -327,8 +315,6 @@ void OnCalloutAccessoryControlTapped(object sender, MKMapViewAccessoryTappedEven
 ```
 
 This method opens a web browser and navigates to the address stored in the `CustomMKAnnotationView.Url` property. Note that the address was defined when creating the `CustomPin` collection in the .NET Standard library project.
-
-<a name="Deselecting_the_Annotation" />
 
 #### Deselecting the Annotation
 
@@ -400,9 +386,9 @@ namespace CustomRenderer.Droid
 }
 ```
 
-Provided that the custom renderer is attached to a new Xamarin.Forms element, the `OnElementChanged` method retrieves the list of custom pins from the control. Once the `GoogleMap` instance is available, the `OnMapReady` override will be invoked. This method registers an event handler for the `InfoWindowClick` event, which fires when the [info window is clicked](#Clicking_on_the_Info_Window), and is unsubscribed from only when the element the renderer is attached to changes. The `OnMapReady` override also calls the `SetInfoWindowAdapter` method to specify that the `CustomMapRenderer` class instance will provide the methods to customize the info window.
+Provided that the custom renderer is attached to a new Xamarin.Forms element, the `OnElementChanged` method retrieves the list of custom pins from the control. Once the `GoogleMap` instance is available, the `OnMapReady` override will be invoked. This method registers an event handler for the `InfoWindowClick` event, which fires when the [info window is clicked](#clicking-on-the-info-window), and is unsubscribed from only when the element the renderer is attached to changes. The `OnMapReady` override also calls the `SetInfoWindowAdapter` method to specify that the `CustomMapRenderer` class instance will provide the methods to customize the info window.
 
-The `CustomMapRenderer` class implements the `GoogleMap.IInfoWindowAdapter` interface to [customize the info window](#Customizing_the_Info_Window). This interface specifies that the following methods must be implemented:
+The `CustomMapRenderer` class implements the `GoogleMap.IInfoWindowAdapter` interface to [customize the info window](#customizing-the-info-window). This interface specifies that the following methods must be implemented:
 
 - `public Android.Views.View GetInfoWindow(Marker marker)` – This method is called to return a custom info window for a marker. If it returns `null`, then the default window rendering will be used. If it returns a `View`, then that `View` will be placed inside the info window frame.
 - `public Android.Views.View GetInfoContents(Marker marker)` – This method is called to return a `View` containing the content of the info window, and will only be called if the `GetInfoWindow` method returns `null`. If it returns `null`, then the default rendering of the info window content will be used.
@@ -429,8 +415,6 @@ This method creates a new `MarkerOption` instance for each `Pin` instance. After
 
 > [!NOTE]
 > If required, the `GetMarkerForPin` method can be invoked in your map renderer to retrieve a `Marker` from a `Pin`.
-
-<a name="Customizing_the_Info_Window" />
 
 #### Customizing the Info Window
 
@@ -487,8 +471,6 @@ This method returns a `View` containing the contents of the info window. This is
 
 > [!NOTE]
 > An info window is not a live `View`. Instead, Android will convert the `View` to a static bitmap and display that as an image. This means that while an info window can respond to a click event, it cannot respond to any touch events or gestures, and the individual controls in the info window cannot respond to their own click events.
-
-<a name="Clicking_on_the_Info_Window" />
 
 #### Clicking on the Info Window
 

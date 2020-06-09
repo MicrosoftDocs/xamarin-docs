@@ -47,7 +47,7 @@ The following screenshots show the `TextDecorations` enumeration members applied
 ![Labels with Text Decorations](label-images/label-textdecorations.png)
 
 > [!NOTE]
-> Text decorations can also be applied to [`Span`](xref:Xamarin.Forms.Span) instances. For more information about the `Span` class, see [Formatted Text](#Formatted_Text).
+> Text decorations can also be applied to [`Span`](xref:Xamarin.Forms.Span) instances. For more information about the `Span` class, see [Formatted Text](#formatted-text).
 
 ## Character spacing
 
@@ -140,8 +140,6 @@ For more information about colors, see [Colors](~/xamarin-forms/user-interface/c
 
 For more information about specifying fonts on a `Label`, see [Fonts](~/xamarin-forms/user-interface/text/fonts.md).
 
-<a name="Truncation_and_Wrapping" />
-
 ## Truncation and wrapping
 
 Labels can be set to handle text that can't fit on one line in one of several ways, exposed by the `LineBreakMode` property. [`LineBreakMode`](xref:Xamarin.Forms.LineBreakMode) is an enumeration with the following values:
@@ -228,8 +226,6 @@ The following screenshots show a [`Label`](xref:Xamarin.Forms.Label) displaying 
 
 > [!IMPORTANT]
 > Displaying HTML in a [`Label`](xref:Xamarin.Forms.Label) is limited to the HTML tags that are supported by the underlying platform.
-
-<a name="Formatted_Text" />
 
 ## Formatted text
 

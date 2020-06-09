@@ -118,8 +118,6 @@ The programmatic construction and assignment of the view model within the view's
 
 A view can be defined as a data template and associated with a view model type. Data templates can be defined as resources, or they can be defined inline within the control that will display the view model. The content of the control is the view model instance, and the data template is used to visually represent it. This technique is an example of a situation in which the view model is instantiated first, followed by the creation of the view.
 
-<a name="automatically_creating_a_view_model_with_a_view_model_locator" />
-
 ### Automatically Creating a View Model with a View Model Locator
 
 A view model locator is a custom class that manages the instantiation of view models and their association to views. In the eShopOnContainers mobile app, the `ViewModelLocator` class has an attached property, `AutoWireViewModel`, that's used to associate view models with views. In the view's XAML, this attached property is set to true to indicate that the view model should be automatically connected to the view, as shown in the following code example:
@@ -272,13 +270,11 @@ The following code example shows how a [`Grid`](xref:Xamarin.Forms.Grid) in the 
 
 A command parameter can also be optionally defined using the [`CommandParameter`](xref:Xamarin.Forms.TapGestureRecognizer.CommandParameter) property. The type of the expected argument is specified in the `Execute` and `CanExecute` target methods. The [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) will automatically invoke the target command when the user interacts with the attached control. The command parameter, if provided, will be passed as the argument to the command's `Execute` delegate.
 
-<a name="implementing_behaviors" />
-
 ### Implementing Behaviors
 
 Behaviors allow functionality to be added to UI controls without having to subclass them. Instead, the functionality is implemented in a behavior class and attached to the control as if it was part of the control itself. Behaviors enable you to implement code that you would normally have to write as code-behind, because it directly interacts with the API of the control, in such a way that it can be concisely attached to the control, and packaged for reuse across more than one view or app. In the context of MVVM, behaviors are a useful approach for connecting controls to commands.
 
-A behavior that's attached to a control through attached properties is known as an *attached behavior*. The behavior can then use the exposed API of the element to which it is attached to add functionality to that control, or other controls, in the visual tree of the view. The eShopOnContainers mobile app contains the `LineColorBehavior` class, which is an attached behavior. For more information about this behavior, see [Displaying Validation Errors](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying_validation_errors).
+A behavior that's attached to a control through attached properties is known as an *attached behavior*. The behavior can then use the exposed API of the element to which it is attached to add functionality to that control, or other controls, in the visual tree of the view. The eShopOnContainers mobile app contains the `LineColorBehavior` class, which is an attached behavior. For more information about this behavior, see [Displaying Validation Errors](~/xamarin-forms/enterprise-application-patterns/validation.md#displaying-validation-errors).
 
 A Xamarin.Forms behavior is a class that derives from the [`Behavior`](xref:Xamarin.Forms.Behavior) or [`Behavior<T>`](xref:Xamarin.Forms.Behavior`1) class, where `T` is the type of the control to which the behavior should apply. These classes provide `OnAttachedTo` and `OnDetachingFrom` methods, which should be overridden to provide logic that will be executed when the behavior is attached to and detached from controls.
 

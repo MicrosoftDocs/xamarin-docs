@@ -24,16 +24,14 @@ The following diagram illustrates the relationship between the [`Entry`](xref:Xa
 
 The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for the [`Entry`](xref:Xamarin.Forms.Entry) control on each platform. The process for doing this is as follows:
 
-1. [Create](#Creating_the_Custom_Entry_Control) a Xamarin.Forms custom control.
-1. [Consume](#Consuming_the_Custom_Control) the custom control from Xamarin.Forms.
-1. [Create](#Creating_the_Custom_Renderer_on_each_Platform) the custom renderer for the control on each platform.
+1. [Create](#creating-the-custom-entry-control) a Xamarin.Forms custom control.
+1. [Consume](#consuming-the-custom-control) the custom control from Xamarin.Forms.
+1. [Create](#creating-the-custom-renderer-on-each-platform) the custom renderer for the control on each platform.
 
 Each item will now be discussed in turn, to implement an [`Entry`](xref:Xamarin.Forms.Entry) control that has a different background color on each platform.
 
 > [!IMPORTANT]
 > This article explains how to create a simple custom renderer. However, it's not necessary to create a custom renderer to implement an `Entry` that has a different background color on each platform. This can be more easily accomplished by using the [`Device`](xref:Xamarin.Forms.Device) class, or the `OnPlatform` markup extension, to provide platform-specific values. For more information, see [Providing Platform-Specific Values](~/xamarin-forms/platform/device.md#provide-platform-specific-values) and [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
-
-<a name="Creating_the_Custom_Entry_Control"></a>
 
 ## Creating the Custom Entry Control
 
@@ -46,8 +44,6 @@ public class MyEntry : Entry
 ```
 
 The `MyEntry` control is created in the .NET Standard library project and is simply an [`Entry`](xref:Xamarin.Forms.Entry) control. Customization of the control will be carried out in the custom renderer, so no additional implementation is required in the `MyEntry` control.
-
-<a name="Consuming_the_Custom_Control"></a>
 
 ## Consuming the Custom Control
 
@@ -91,8 +87,6 @@ public class MainPage : ContentPage
 This code instantiates a new [`ContentPage`](xref:Xamarin.Forms.ContentPage) object that will display a [`Label`](xref:Xamarin.Forms.Label) and `MyEntry` control centered both vertically and horizontally on the page.
 
 A custom renderer can now be added to each application project to customize the control's appearance on each platform.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform"></a>
 
 ## Creating the Custom Renderer on each Platform
 

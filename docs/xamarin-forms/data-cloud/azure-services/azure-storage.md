@@ -64,10 +64,8 @@ The process for integrating an Azure Storage account into a Xamarin.Forms applic
 
 1. Create a storage account. For more information, see [Create a storage account](https://azure.microsoft.com/documentation/articles/storage-create-storage-account/#create-a-storage-account).
 1. Add the [Azure Storage Client Library](https://www.nuget.org/packages/WindowsAzure.Storage/) to the Xamarin.Forms application.
-1. Configure the storage connection string. For more information, see [Connecting to Azure Storage](#connecting).
+1. Configure the storage connection string. For more information, see [Connecting to Azure Storage](#connecting-to-azure-storage).
 1. Add `using` directives for the `Microsoft.WindowsAzure.Storage` and `Microsoft.WindowsAzure.Storage.Blob` namespaces to classes that will access Azure Storage.
-
-<a name="connecting" />
 
 ## Connecting to Azure Storage
 

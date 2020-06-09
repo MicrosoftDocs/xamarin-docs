@@ -21,10 +21,8 @@ so in addition to phones, apps can also run on:
 
 This page briefly discusses:
 
-- the supported [device types](#Device_Types), and
-- how to [optimize](#optimize) layouts for tablets versus phones.
-
-<a name="Device_Types" />
+- the supported [device types](#device-types), and
+- how to [optimize](#optimize-for-tablet-and-desktop) layouts for tablets versus phones.
 
 ## Device Types
 
@@ -77,9 +75,7 @@ dimensions in addition to running full-screen.
 
 [![](tablet-images/splitscreen-sml.png "Windows Split Screen Example")](tablet-images/splitscreen.png#lightbox "Windows Split Screen Example")
 
-<a name="optimize" />
-
-## Optimizing for Tablet and Desktop
+## Optimize for Tablet and Desktop
 
 You can adjust your Xamarin.Forms user interface depending on whether
 a phone or tablet/desktop device is being used. This means you can optimize
@@ -104,7 +100,7 @@ if (Device.Idiom == TargetIdiom.Phone)
 This approach can be expanded to make significant changes to individual
 page layouts, or even to render entirely different pages on larger screens.
 
-### Leveraging MasterDetailPage
+### Leverage MasterDetailPage
 
 The [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage)
 is ideal for larger screens, especially on the iPad

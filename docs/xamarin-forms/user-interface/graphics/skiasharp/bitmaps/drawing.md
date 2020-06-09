@@ -334,8 +334,6 @@ The constructor concludes by creating an `SKCanvasView` to display the result:
 
 [![Pixelize Image](drawing-images/PixelizeImage.png "Pixelize Image")](drawing-images/PixelizeImage-Large.png#lightbox)
 
-<a name="rotating-bitmaps" />
-
 ## Rotating bitmaps
 
 Another common task is rotating bitmaps. This is particularly useful when retrieving bitmaps from an iPhone or iPad photo library. Unless the device was held in a particular orientation when the photo was taken, the picture is likely to be upside-down or sideways.
@@ -381,7 +379,7 @@ using (SKCanvas canvas = new SKCanvas(rotatedBitmap))
 }
 ```
 
-These two methods are used in the **Photo Puzzle** pages described in the article [**Cropping SkiaSharp Bitmaps**](cropping.md#tile-division).
+These two methods are used in the **Photo Puzzle** pages described in the article [**Cropping SkiaSharp Bitmaps**](cropping.md#cropping-skiasharp-bitmaps).
 
 A program that allows the user to rotate a bitmap in 90-degree increments needs only implement one function for rotating by 90 degrees. The user can then rotate in any increment of 90 degrees by repeated execution of this one function.
 

@@ -18,8 +18,8 @@ _Xamarin.Forms provides support for modal pages. A modal page encourages users t
 
 This article discusses the following topics:
 
-- [Performing navigation](#Performing_Navigation) – pushing pages to the modal stack, popping pages from the modal stack, disabling the back button, and animating page transitions.
-- [Passing data when navigating](#Passing_Data_when_Navigating) – passing data through a page constructor, and through a `BindingContext`.
+- [Performing navigation](#performing-navigation) – pushing pages to the modal stack, popping pages from the modal stack, disabling the back button, and animating page transitions.
+- [Passing data when navigating](#passing-data-when-navigating) – passing data through a page constructor, and through a `BindingContext`.
 
 ## Overview
 
@@ -31,18 +31,14 @@ To return to the previous page the application will pop the current page from th
 
 ![](modal-images/popping.png "Popping a Page from the Modal Stack")
 
-<a name="Performing_Navigation" />
-
 ## Performing Navigation
 
-Modal navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to [push modal pages](#Pushing_Pages_to_the_Modal_Stack) onto the modal stack, and [pop modal pages](#Popping_Pages_from_the_Modal_Stack) from the modal stack.
+Modal navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to [push modal pages](#pushing-pages-to-the-modal-stack) onto the modal stack, and [pop modal pages](#popping-pages-from-the-modal-stack) from the modal stack.
 
 The [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property also exposes a [`ModalStack`](xref:Xamarin.Forms.INavigation.ModalStack) property from which the modal pages in the modal stack can be obtained. However, there is no concept of performing modal stack manipulation, or popping to the root page in modal navigation. This is because these operations are not universally supported on the underlying platforms.
 
 > [!NOTE]
 > A [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance is not required for performing modal page navigation.
-
-<a name="Pushing_Pages_to_the_Modal_Stack" />
 
 ### Pushing Pages to the Modal Stack
 
@@ -73,8 +69,6 @@ However, the precise order that these events occur is platform dependent. For mo
 
 > [!NOTE]
 > Calls to the [`OnDisappearing`](xref:Xamarin.Forms.Page.OnDisappearing) and [`OnAppearing`](xref:Xamarin.Forms.Page.OnAppearing) overrides cannot be treated as guaranteed indications of page navigation. For example, on iOS, the `OnDisappearing` override is called on the active page when the application terminates.
-
-<a name="Popping_Pages_from_the_Modal_Stack" />
 
 ### Popping Pages from the Modal Stack
 
@@ -120,8 +114,6 @@ async void OnDismissButtonClicked (object sender, EventArgs args)
 ```
 
 Setting the `boolean` parameter to `false` disables the page-transition animation, while setting the parameter to `true` enables the page-transition animation, provided that it is supported by the underlying platform. However, the push and pop methods that lack this parameter enable the animation by default.
-
-<a name="Passing_Data_when_Navigating" />
 
 ## Passing Data when Navigating
 

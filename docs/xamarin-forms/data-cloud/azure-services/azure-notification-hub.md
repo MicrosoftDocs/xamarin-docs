@@ -7,8 +7,7 @@ ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
 ms.date: 11/27/2019
-no-loc: [Xamarin.Forms, Xamarin.Essentials]
-no-loc: [Firebase]
+no-loc: [Xamarin.Forms, Xamarin.Essentials, Firebase]
 ---
 
 # Send and receive push notifications with Azure Notification Hubs and Xamarin.Forms

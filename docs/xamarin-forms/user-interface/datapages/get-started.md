@@ -51,7 +51,7 @@ and ensure the theme is merged into the application's resource dictionary:
 ```
 
 > [!IMPORTANT]
-> You should also follow the steps to [load theme assemblies (below)](#loadtheme)
+> You should also follow the steps to [load theme assemblies (below)](#troubleshooting)
 > by adding some boilerplate code to the iOS `AppDelegate` and Android `MainActivity`. This will
 > be improved in a future preview release.
 
@@ -199,8 +199,6 @@ SetBinding (TitleProperty, new DataSourceBinding ("title"));
 It's a little more work to create themes from scratch but future preview releases will make this easier to do.
 
 ## Troubleshooting
-
-<a name="loadtheme" />
 
 ## Could not load file or assembly 'Xamarin.Forms.Theme.Light' or one of its dependencies
 

@@ -46,8 +46,6 @@ The `StartAndExpand`, `CenterAndExpand`, `EndAndExpand`, and `FillAndExpand` val
 > [!NOTE]
 > The default value of a view's [`HorizontalOptions`](xref:Xamarin.Forms.View.HorizontalOptions) and [`VerticalOptions`](xref:Xamarin.Forms.View.VerticalOptions) properties is [`LayoutOptions.Fill`](xref:Xamarin.Forms.LayoutOptions.Fill).
 
-<a name="alignment" />
-
 ## Alignment
 
 Alignment controls how a view is positioned within its parent layout when the parent layout contains unused space (that is, the parent layout is larger than the combined size of all its children).
@@ -90,8 +88,6 @@ Content = new StackLayout
 The code results in the layout shown in the following screenshots:
 
 [![](layout-options-images/alignment.png "Alignment Layout Options")](layout-options-images/alignment-large.png#lightbox "Alignment Layout Options")
-
-<a name="expansion" />
 
 ## Expansion
 

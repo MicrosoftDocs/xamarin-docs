@@ -149,8 +149,6 @@ This removes the [`AppLinkEntry`](xref:Xamarin.Forms.AppLinkEntry) instance from
 > [!NOTE]
 > On Android it's not possible to remove indexed content from search results.
 
-<a name="responding" />
-
 ## Responding to a Deep Link
 
 When indexed content appears in search results and is selected by a user, the `App` class for the application will receive a request to handle the `Uri` contained in the indexed content. This request can be processed in the [`OnAppLinkRequestReceived`](xref:Xamarin.Forms.Application.OnAppLinkRequestReceived(System.Uri)) override, as demonstrated in the following code example:

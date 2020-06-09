@@ -81,7 +81,7 @@ progress2.TrackTintColor = UIColor.FromRGB (197,255,132);
 ## Using UIAppearance in Xamarin.Forms
 
 The Appearance API can be useful when
-[styling the iOS app](~/xamarin-forms/platform/ios/formatting.md#uiappearance)
+[styling the iOS app](~/xamarin-forms/platform/ios/formatting.md#uiappearance-api)
 in Xamarin.Forms solutions. A few lines in the `AppDelegate` class can help
 to implement a specific color scheme without having to create a
 [custom renderer](~/xamarin-forms/app-fundamentals/custom-renderer/index.md).
@@ -130,4 +130,4 @@ Refer to the [Introduction to the Appearance API](~/ios/user-interface/ios-ui/in
 
 - [Appearance (sample)](https://docs.microsoft.com/samples/xamarin/ios-samples/appearance)
 - [UIAppearance Protocol Reference](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIAppearance_Protocol/)
-- [Appearance in Xamarin.Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance)
+- [Appearance in Xamarin.Forms](~/xamarin-forms/platform/ios/formatting.md#uiappearance-api)

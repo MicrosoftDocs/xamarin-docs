@@ -202,9 +202,7 @@ Validation can also be triggered whenever a bound property changes. For example,
 
 The [`Entry`](xref:Xamarin.Forms.Entry) control binds to the `UserName.Value` property of the `ValidatableObject<T>` instance, and the control's `Behaviors` collection has an `EventToCommandBehavior` instance added to it. This behavior executes the `ValidateUserNameCommand` in response to the [`TextChanged`] event firing on the `Entry`, which is raised when the text in the `Entry` changes. In turn, the `ValidateUserNameCommand` delegate executes the `ValidateUserName` method, which executes the `Validate` method on the `ValidatableObject<T>` instance. Therefore, every time the user enters a character in the `Entry` control for the username, validation of the entered data is performed.
 
-For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
-
-<a name="displaying_validation_errors" />
+For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors).
 
 ## Displaying Validation Errors
 
@@ -279,7 +277,7 @@ public static class LineColorBehavior
 }
 ```
 
-The parameters for this method provide the instance of the control that the behavior is attached to, and the old and new values of the `ApplyLineColor` attached property. The `EntryLineColorEffect` class is added to the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection if the `ApplyLineColor` attached property is `true`, otherwise it's removed from the control's `Effects` collection. For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing_behaviors).
+The parameters for this method provide the instance of the control that the behavior is attached to, and the old and new values of the `ApplyLineColor` attached property. The `EntryLineColorEffect` class is added to the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection if the `ApplyLineColor` attached property is `true`, otherwise it's removed from the control's `Effects` collection. For more information about behaviors, see [Implementing Behaviors](~/xamarin-forms/enterprise-application-patterns/mvvm.md#implementing-behaviors).
 
 The `EntryLineColorEffect` subclasses the [`RoutingEffect`](xref:Xamarin.Forms.RoutingEffect) class, and is shown in the following code example:
 

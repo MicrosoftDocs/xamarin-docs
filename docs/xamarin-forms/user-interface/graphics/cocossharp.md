@@ -24,13 +24,7 @@ _CocosSharp can be used to add precise shape, image, and text rendering to an ap
 
 CocosSharp is a flexible, powerful technology for displaying graphics, reading
 touch input, playing audio, and managing content. This guide explains how to add
-CocosSharp to a Xamarin.Forms application. It covers the following:
-
-- [What is CocosSharp?](#what)
-- [Adding the CocosSharp NuGet packages](#nuget)
-- [Walkthrough: Adding CocosSharp to a Xamarin.Forms app](#add)
-
-<a name="what" />
+CocosSharp to a Xamarin.Forms application.
 
 ## What is CocosSharp?
 
@@ -49,8 +43,6 @@ CocosSharp’s primary focus is to simplify the creation of cross-platform 2D ga
 Xamarin.Forms is built upon native, platform-specific UI systems. For example, [`Button`s](xref:Xamarin.Forms.Button) appear differently on iOS and Android, and may even differ by operating system version. By contrast, CocosSharp does not use any platform-specific visual objects, so all visual objects appear identical on all platforms. Of course, resolution and aspect ratio differ between devices, and this can impact how CocosSharp renders its visuals. These details will be discussed later in this guide.
 
 More detailed information can be found in the [CocosSharp section](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md).
-
-<a name="nuget" />
 
 ## Adding the CocosSharp NuGet packages
 
@@ -74,23 +66,19 @@ Both **CocosSharp** and **CocosSharp.Forms** NuGet packages will be added to the
 
 Repeat the above steps for platform-specific projects (such as iOS and Android).
 
-<a name="add" />
-
 ## Walkthrough: Adding CocosSharp to a Xamarin.Forms app
 
 Follow these steps to add a simple CocosSharp view to a Xamarin.Forms app:
 
-1. [Creating a Xamarin Forms Page](#1)
-1. [Adding a CocosSharpView](#2)
-1. [Creating the GameScene](#3)
-1. [Adding a Circle](#4)
-1. [Interacting with CocosSharp](#5)
+1. [Creating a Xamarin Forms Page](#1-creating-a-xamarin-forms-page)
+1. [Adding a CocosSharpView](#2-adding-a-cocossharpview)
+1. [Creating the GameScene](#3-creating-the-gamescene)
+1. [Adding a Circle](#4-adding-a-circle)
+1. [Interacting with CocosSharp](#5-interacting-with-cocossharp)
 
 Once you've successfully added a CocosSharp view to a Xamarin.Forms app, visit the
 [CocosSharp documentation](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/index.md)
 to learn more about creating content with CocosSharp.
-
-<a name="1" />
 
 ### 1. Creating a Xamarin Forms Page
 
@@ -146,8 +134,6 @@ On iOS, the `HomePage` appears as shown in the following image:
 
 ![](cocossharp-images/image3.png "HomePage Screenshot")
 
-<a name="2" />
-
 ### 2. Adding a CocosSharpView
 
 The `CocosSharpView` class is used to embed CocosSharp into a Xamarin.Forms app. Since `CocosSharpView` inherits from the [Xamarin.Forms.View](xref:Xamarin.Forms.View) class, it provides a familiar interface for layout, and it can be used within layout containers such as [Xamarin.Forms.Grid](xref:Xamarin.Forms.Grid). Add a new `CocosSharpView` to the project by completing the `CreateTopHalf` method:
@@ -190,8 +176,6 @@ The `HandleViewCreated` method has two important details that we’ll be looking
 
 The second important detail is the `DesignResolution` property, which defines the game’s visible area for CocosSharp objects. The `DesignResolution` property will be looked at after creating `GameScene`.
 
-<a name="3" />
-
 ### 3. Creating the GameScene
 
 The `GameScene` class inherits from CocosSharp’s `CCScene`. `GameScene` is the first point where we deal purely with CocosSharp. Code contained in `GameScene` will function in any CocosSharp app, whether it is housed within a Xamarin.Forms project or not.
@@ -227,8 +211,6 @@ GameScene gameScene;
 We can now compile our project and run it to see CocosSharp running. We haven’t added anything to our `GameScene,` so the top half of our page is black – the default color of a CocosSharp scene:
 
 ![](cocossharp-images/image5.png "Blank GameScene")
-
-<a name="4" />
 
 ### 4. Adding a Circle
 
@@ -279,8 +261,6 @@ The diagram above displays pixel dimensions on the outside of the screen in blac
 #### CCDrawNode Details
 
 Our simple app uses the `CCDrawNode` class to draw a circle. This class can be very useful for business apps since it provides vector-based geometry rendering – a feature missing from Xamarin.Forms. In addition to circles, the `CCDrawNode` class can be used to draw rectangles, splines, lines, and custom polygons. `CCDrawNode` is also easy to use since it does not require the use of image files (such as .png). A more detailed discussion of CCDrawNode can be found in the [Drawing Geometry with CCDrawNode guide](https://github.com/xamarin/docs-archive/blob/master/Docs/CocosSharp/ccdrawnode.md).
-
-<a name="5" />
 
 ### 5. Interacting with CocosSharp
 

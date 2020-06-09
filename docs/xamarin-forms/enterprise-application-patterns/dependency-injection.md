@@ -18,8 +18,6 @@ By specifying dependencies as interface types, dependency injection enables deco
 
 There are also other types of dependency injection, such as *property setter injection*, and *method call injection*, but they are less commonly seen. Therefore, this chapter will focus solely on performing constructor injection with a dependency injection container.
 
-<a name="introduction_to_dependency_injection" />
-
 ## Introduction to Dependency Injection
 
 Dependency injection is a specialized version of the Inversion of Control (IoC) pattern, where the concern being inverted is the process of obtaining the required dependency. With dependency injection, another class is responsible for injecting dependencies into an object at runtime. The following code example shows how the `ProfileViewModel` class is structured when using dependency injection:
@@ -111,8 +109,6 @@ _container.Register<ProfileViewModel>();
 
 By default, each concrete class registration is configured as a multi-instance so that every dependent object receives a new instance. Therefore, when the `ProfileViewModel` is resolved, a new instance will be created and the container will inject its required dependencies.
 
-<a name="resolution" />
-
 ## Resolution
 
 After a type is registered, it can be resolved or injected as a dependency. When a type is being resolved and the container needs to create a new instance, it injects any dependencies into the instance.
@@ -129,7 +125,7 @@ The following code example shows how the `RequestProvider` type that was previou
 var requestProvider = _container.Resolve<IRequestProvider>();
 ```
 
-In this example, TinyIoC is asked to resolve the concrete type for the `IRequestProvider` type, along with any dependencies. Typically, the `Resolve` method is called when an instance of a specific type is required. For information about controlling the lifetime of resolved objects, see [Managing the Lifetime of Resolved Objects](#managing_the_lifetime_of_resolved_objects).
+In this example, TinyIoC is asked to resolve the concrete type for the `IRequestProvider` type, along with any dependencies. Typically, the `Resolve` method is called when an instance of a specific type is required. For information about controlling the lifetime of resolved objects, see [Managing the Lifetime of Resolved Objects](#managing-the-lifetime-of-resolved-objects).
 
 The following code example shows how the eShopOnContainers mobile app instantiates view model types and their dependencies:
 
@@ -137,12 +133,10 @@ The following code example shows how the eShopOnContainers mobile app instantiat
 var viewModel = _container.Resolve(viewModelType);
 ```
 
-In this example, TinyIoC is asked to resolve the view model type for a requested view model, and the container will also resolve any dependencies. When resolving the `ProfileViewModel` type, the dependencies to resolve are an `ISettingsService` object and an `IOrderService` object. Because interface registrations were used when registering the `SettingsService` and `OrderService` classes, TinyIoC returns singleton instances for the `SettingsService` and `OrderService` classes and then passes them to the constructor of the `ProfileViewModel` class. For more information about how the eShopOnContainers mobile app constructs view models and associates them to views, see [Automatically Creating a View Model with a View Model Locator](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+In this example, TinyIoC is asked to resolve the view model type for a requested view model, and the container will also resolve any dependencies. When resolving the `ProfileViewModel` type, the dependencies to resolve are an `ISettingsService` object and an `IOrderService` object. Because interface registrations were used when registering the `SettingsService` and `OrderService` classes, TinyIoC returns singleton instances for the `SettingsService` and `OrderService` classes and then passes them to the constructor of the `ProfileViewModel` class. For more information about how the eShopOnContainers mobile app constructs view models and associates them to views, see [Automatically Creating a View Model with a View Model Locator](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator).
 
 > [!NOTE]
 > Registering and resolving types with a container has a performance cost because of the container's use of reflection for creating each type, especially if dependencies are being reconstructed for each page navigation in the app. If there are many or deep dependencies, the cost of creation can increase significantly.
-
-<a name="managing_the_lifetime_of_resolved_objects" />
 
 ## Managing the Lifetime of Resolved Objects
 

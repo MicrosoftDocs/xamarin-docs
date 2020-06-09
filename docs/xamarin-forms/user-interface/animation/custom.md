@@ -16,7 +16,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 _The Animation class is the building block of all Xamarin.Forms animations, with the extension methods in the ViewExtensions class creating one or more Animation objects. This article demonstrates how to use the Animation class to create and cancel animations, synchronize multiple animations, and create custom animations that animate properties that aren't animated by the existing animation methods._
 
-A number of parameters must be specified when creating an `Animation` object, including start and end values of the property being animated, and a callback that changes the value of the property. An `Animation` object can also maintain a collection of child animations that can be run and synchronized. For more information, see [Child Animations](#child).
+A number of parameters must be specified when creating an `Animation` object, including start and end values of the property being animated, and a callback that changes the value of the property. An `Animation` object can also maintain a collection of child animations that can be run and synchronized. For more information, see [Child Animations](#child-animations).
 
 Running an animation created with the [`Animation`](xref:Xamarin.Forms.Animation) class, which may or may not include child animations, is achieved by calling the [`Commit`](xref:Xamarin.Forms.Animation.Commit(Xamarin.Forms.IAnimatable,System.String,System.UInt32,System.UInt32,Xamarin.Forms.Easing,System.Action{System.Double,System.Boolean},System.Func{System.Boolean})) method. This method specifies the duration of the animation, and amongst other items, a callback that controls whether to repeat the animation.
 
@@ -54,8 +54,6 @@ The overall effect is to create an animation that increases the [`Scale`](xref:X
 
 > [!NOTE]
 > Concurrent animations, that run independently of each other can be constructed by creating an `Animation` object for each animation, and then calling the `Commit` method on each animation.
-
-<a name="child" />
 
 ### Child animations
 

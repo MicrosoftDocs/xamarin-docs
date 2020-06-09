@@ -407,8 +407,6 @@ The result is that the `Label` only rotates while a finger is in contact with th
 
 This kind of behavior has applications for games: A finger held on a `Button` might make an on-screen object move in a particular direction.
 
-<a name="button-appearance" />
-
 ## Button appearance
 
 The `Button` inherits or defines several properties that affect its appearance:
@@ -426,7 +424,7 @@ The `Button` inherits or defines several properties that affect its appearance:
 > [!NOTE]
 > The `Button` class also has [`Margin`](xref:Xamarin.Forms.View.Margin) and [`Padding`](xref:Xamarin.Forms.Button.Padding) properties that control the layout behavior of the `Button`. For more information, see [Margin and Padding](~/xamarin-forms/user-interface/layouts/margin-and-padding.md).
 
-The effects of six of these properties (excluding `FontFamily` and `FontAttributes`) are demonstrated in the **Button Appearance** page. Another property, [`Image`](xref:Xamarin.Forms.Button.ImageSource), is discussed in the section [**Using bitmaps with button**](#image-button).
+The effects of six of these properties (excluding `FontFamily` and `FontAttributes`) are demonstrated in the **Button Appearance** page. Another property, [`Image`](xref:Xamarin.Forms.Button.ImageSource), is discussed in the section [**Using bitmaps with button**](#using-bitmaps-with-buttons).
 
 All of the views and data bindings in the **Button Appearance** page are defined in the XAML file:
 
@@ -741,8 +739,6 @@ public partial class ToggleButtonDemoPage : ContentPage
 Here's the program running on iOS, Android, and the UWP:
 
 [![Toggle Button Demo](button-images/ToggleButtonDemo.png "Toggle Button Demo")](button-images/ToggleButtonDemo-Large.png#lightbox)
-
-<a name="image-button" />
 
 ## Using bitmaps with buttons
 

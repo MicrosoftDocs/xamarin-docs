@@ -120,7 +120,7 @@ The fourth `Label` does something similar but for the culture associated with Fr
 </Label>
 ```
 
-See [Passing Constructor Arguments](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments) for more details on specifying constructor arguments in XAML.
+See [Passing Constructor Arguments](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments) for more details on specifying constructor arguments in XAML.
 
 Finally, the last example is similar to the second, except that it references one of the children of the `StackLayout`:
 

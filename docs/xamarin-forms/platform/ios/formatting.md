@@ -18,12 +18,10 @@ and set platform-specific styles and colors for each platform.
 
 Other options to control the way your Xamarin.Forms iOS app's appearance include:
 
-- Configuring display options in [**Info.plist**](#info-plist)
-- Setting control styles via the [`UIAppearance` API](#uiappearance)
+- Configuring display options in [**Info.plist**](#customizing-infoplist)
+- Setting control styles via the [`UIAppearance` API](#uiappearance-api)
 
 These alternatives are discussed below.
-
-<a name="info-plist"/>
 
 ## Customizing Info.plist
 
@@ -66,8 +64,6 @@ Now when the app is run, the navigation bar is green and its text is white
 thanks to iOS-specific configuration:
 
 ![](theme-images/status-white-sml.png "iOS Theming")
-
-<a name="uiappearance"/>
 
 ## UIAppearance API
 

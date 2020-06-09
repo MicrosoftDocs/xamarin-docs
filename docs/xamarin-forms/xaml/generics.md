@@ -24,7 +24,7 @@ Type arguments are specified as a string, and are typically prefixed, such as `s
 Multiple type arguments can be specified by using a comma delimiter. In addition, if a generic constraint uses generic types, the nested constraint type arguments should be contained in parentheses.
 
 > [!NOTE]
-> The `x:Type` markup extension supplies a CLR type reference for a generic type, and has a similar function to the `typeof` operator in C#. For more information, see [x:Type markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type).
+> The `x:Type` markup extension supplies a CLR type reference for a generic type, and has a similar function to the `typeof` operator in C#. For more information, see [x:Type markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension).
 
 ## Single primitive type argument
 
@@ -201,11 +201,11 @@ Multiple type arguments can be specified as prefixed string arguments, delimited
 </ContentPage    
 ```
 
-In this example, `GenericsDemo.Models` is defined as the `models` XAML namespace, and `System.Collections.Generic` is defined as the `scg` XAML namespace. The `CollectionView.ItemsSource` property is set to a `List<T>` that's instantiated with a `KeyValuePair<TKey, TValue>` constraint, with the inner constraint type arguments `string` and `Monkey`. The `List<KeyValuePair<string,Monkey>>` collection is initialized with multiple `KeyValuePair` items, using the non-default `KeyValuePair` constructor, and a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) that defines the appearance of each `Monkey` object is set as the `ItemTemplate` of the [`CollectionView`](xref:Xamarin.Forms.CollectionView). For information on passing arguments to a non-default constructor, see [Passing constructor arguments](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments).
+In this example, `GenericsDemo.Models` is defined as the `models` XAML namespace, and `System.Collections.Generic` is defined as the `scg` XAML namespace. The `CollectionView.ItemsSource` property is set to a `List<T>` that's instantiated with a `KeyValuePair<TKey, TValue>` constraint, with the inner constraint type arguments `string` and `Monkey`. The `List<KeyValuePair<string,Monkey>>` collection is initialized with multiple `KeyValuePair` items, using the non-default `KeyValuePair` constructor, and a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) that defines the appearance of each `Monkey` object is set as the `ItemTemplate` of the [`CollectionView`](xref:Xamarin.Forms.CollectionView). For information on passing arguments to a non-default constructor, see [Passing constructor arguments](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments).
 
 ## Related links
 
 - [Generics in XAML (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/xaml-generics/)
 - [XAML 2009 Language Primitives](/dotnet/desktop-wpf/xaml-services/types-for-primitives#xaml-2009-language-primitives)
-- [x:Type markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#type)
-- [Passing constructor arguments](~/xamarin-forms/xaml/passing-arguments.md#constructor_arguments)
+- [x:Type markup extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#xtype-markup-extension)
+- [Passing constructor arguments](~/xamarin-forms/xaml/passing-arguments.md#passing-constructor-arguments)

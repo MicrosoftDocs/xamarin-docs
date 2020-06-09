@@ -26,8 +26,6 @@ To return back to the previous page, the application will pop the current page f
 
 Navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to push pages onto the navigation stack, to pop pages from the navigation stack, and to perform stack manipulation.
 
-<a name="Performing_Navigation" />
-
 ## Performing Navigation
 
 In hierarchical navigation, the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class is used to navigate through a stack of [`ContentPage`](xref:Xamarin.Forms.ContentPage) objects. The following screenshots show the main components of the `NavigationPage` on each platform:
@@ -147,8 +145,6 @@ async void OnRootPageButtonClicked (object sender, EventArgs e)
 
 Setting the `boolean` parameter to `false` disables the page-transition animation, while setting the parameter to `true` enables the page-transition animation, provided that it is supported by the underlying platform. However, the push and pop methods that lack this parameter enable the animation by default.
 
-<a name="Passing_Data_when_Navigating" />
-
 ## Passing Data when Navigating
 
 Sometimes it's necessary for a page to pass data to another page during navigation. Two techniques for accomplishing this are passing data through a page constructor, and by setting the new page's [`BindingContext`](xref:Xamarin.Forms.BindableObject.BindingContext) to the data. Each will now be discussed in turn.
@@ -267,8 +263,6 @@ The data is then displayed on the page by a series of [`Label`](xref:Xamarin.For
 ![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
 
 For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-<a name="Manipulating_the_Navigation_Stack" />
 
 ## Manipulating the Navigation Stack
 

@@ -115,8 +115,6 @@ LoadApplication(new YOUR_NAMESPACE.App());
 
 ## Troubleshooting
 
-<a name="target-invocation-exception" />
-
 ### "Target Invocation Exception" when using "Compile with .NET Native tool chain"
 
 If your UWP app is referencing multiple assemblies (for example third party control libraries,
