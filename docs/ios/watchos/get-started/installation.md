@@ -84,7 +84,7 @@ You cannot create a new "Watch Solution"... rather you can add
 
 ## Creating the Watch User Interface
 
-<a name="designer" />
+<a name="designer"></a>
 
 ### Using the Xamarin iOS Designer
 
@@ -212,7 +212,7 @@ Refer to [Apple's forums](https://forums.developer.apple.com/thread/7783)
 for instructions on configuring the simulators, if the defaults do not
 work.
 
-<a name="xcode6" />
+<a name="xcode6"></a>
 
 ### Xcode 6 and watchOS 1
 
@@ -234,7 +234,7 @@ When using Xcode 6, only the iPhone 5, iPhone 5S, iPhone 6, and iPhone 6 Plus
 > automatically appear in the iOS Simulator when using Xcode 6.
 > Use the **Hardware > External Displays** menu to show the watch screen.
 
-<a name="custommodes" />
+<a name="custommodes"></a>
 
 ## Launching Notification Mode
 

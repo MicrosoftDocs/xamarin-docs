@@ -215,7 +215,7 @@ await FileIO.WriteTextAsync(storageFile, "Contents of text file");
 
 Refer to the [book chapter](https://developer.xamarin.com/r/xamarin-forms/book/chapter20.pdf) for more details.
 
-<a name="Isolated_Storage" />
+<a name="Isolated_Storage"></a>
 
 ### Isolated Storage on Windows Phone 7 & 8 (Silverlight)
 
@@ -287,7 +287,7 @@ webClient.DownloadStringAsync (new Uri ("http://some-server.com/file.xml"));
 
  `WebClient` also has `DownloadFileCompleted` and `DownloadFileAsync` for retrieving binary data.
 
-<a name="HttpWebRequest" />
+<a name="HttpWebRequest"></a>
 
 ### HttpWebRequest
 
@@ -314,7 +314,7 @@ using (HttpWebResponse response = request.GetResponse() as HttpWebResponse)
 
 There is an example in our [Web Services documentation](~/cross-platform/data-cloud/web-services/index.md).
 
- <a name="Reachability" />
+ <a name="Reachability"></a>
 
 ### Reachability
 
@@ -360,7 +360,7 @@ RestSharp provides Xamarin.iOS and Xamarin.Android examples on [github](https://
 
 There is also a Xamarin.iOS code snippet in our [Web Services documentation](~/cross-platform/data-cloud/web-services/index.md).
 
- <a name="ServiceStack" />
+ <a name="ServiceStack"></a>
 
 ### ServiceStack
 
@@ -385,7 +385,7 @@ future service implementations that will fall outside of the scope supported by
 Xamarin’s client-subset domain. In addition, WCF support requires the use of
 tools only available in a Windows environment to generate the proxy.
 
- <a name="Threading" />
+ <a name="Threading"></a>
 
 ## Threading
 
@@ -403,7 +403,7 @@ perform background operations. Executing background tasks requires the use of
 threads, which means the background tasks needs a way to communicate back to the
 main thread to indicate progress or when they have completed.
 
- <a name="Parallel_Task_Library" />
+ <a name="Parallel_Task_Library"></a>
 
 ### Parallel Task Library
 
@@ -438,7 +438,7 @@ it:
 static Context uiContext = TaskScheduler.FromCurrentSynchronizationContext();
 ```
 
- <a name="Invoking_on_the_UI_Thread" />
+ <a name="Invoking_on_the_UI_Thread"></a>
 
 ### Invoking on the UI Thread
 
@@ -494,7 +494,7 @@ public class DispatchAdapter : IDispatchOnUIThread {
 Xamarin.Forms developers should use [`Device.BeginInvokeOnMainThread`](~/xamarin-forms/platform/device.md#interact-with-the-ui-from-background-threads)
 in common code (Shared Projects or PCL).
 
- <a name="Platform_and_Device_Capabilities_and_Degradation" />
+ <a name="Platform_and_Device_Capabilities_and_Degradation"></a>
 
 ## Platform and Device Capabilities and Degradation
 

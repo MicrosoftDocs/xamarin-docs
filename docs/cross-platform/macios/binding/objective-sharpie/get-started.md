@@ -17,7 +17,7 @@ ms.date: 10/11/2017
 > knowledge of how to build the native library on the command line (and a
 > good understanding of how the native library works).
 
-<a name="installing" />
+<a name="installing"></a>
 
 ## Installing Objective Sharpie
 

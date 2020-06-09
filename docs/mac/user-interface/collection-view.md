@@ -23,7 +23,7 @@ This article covers the basics of working with Collection Views in a Xamarin.Mac
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` commands used to wire-up your C# classes to Objective-C objects and UI Elements.
 
-<a name="About_Collection_Views"/>
+<a name="About_Collection_Views"></a>
 
 ## About Collection Views
 
@@ -33,7 +33,7 @@ The Collection View has no standard, built-in Collection View Item (like an Outl
 
 Because the developer is responsible for the look and feel of a Collection View Item, the Collection View has no built-in support for highlighting a selected item in the grid. Implementing this feature will be covered in this article.
 
-<a name="Defining_your_Data_Model"/>
+<a name="Defining_your_Data_Model"></a>
 
 ## Defining the Data Model
 
@@ -180,13 +180,13 @@ namespace MacDatabinding
 
 The `PersonModel` Data Model will be used throughout the rest of this article.
 
-<a name="Working_with_a_Collection_View"/>
+<a name="Working_with_a_Collection_View"></a>
 
 ## Working with a Collection View
 
 Data Binding with a Collection View is very much like binding with a Table View, as `NSCollectionViewDataSource` is used to provide data for the collection. Since the collection view doesn't have a preset display format, more work is required to provide user interaction feedback and to track user selection.
 
-<a name="Creating-the-Cell-Prototype"/>
+<a name="Creating-the-Cell-Prototype"></a>
 
 ### Creating the Cell Prototype
 
@@ -364,7 +364,7 @@ public override bool Selected
 }
 ```
 
-<a name="Creating-the-Collection-View-Data-Source"/>
+<a name="Creating-the-Collection-View-Data-Source"></a>
 
 ### Creating the Collection View Data Source
 
@@ -483,7 +483,7 @@ EmployeeCollection.RegisterClassForItem(typeof(EmployeeItemController), "Employe
 
 The **Identifier** (`EmployeeCell`) used in the `MakeItem` call _must_ match the name of the View Controller that was registered with the Collection View. This step will be covered in detail below.
 
-<a name="Handling-Item-Selection"/>
+<a name="Handling-Item-Selection"></a>
 
 ### Handling Item Selection
 
@@ -562,7 +562,7 @@ namespace MacCollectionNew
 
 The `ItemsSelected` and `ItemsDeselected` methods are overridden and used to set or clear the `PersonSelected` property of the View Controller that is handling the Collection View when the user selects or deselects an item. This will be shown in detail below.
 
-<a name="Creating-the-Collection-View-in-Interface-Builder"/>
+<a name="Creating-the-Collection-View-in-Interface-Builder"></a>
 
 ### Creating the Collection View in Interface Builder
 
@@ -582,7 +582,7 @@ Do the following:
     ![Adding constraints](collection-view-images/collection03.png)
 5. Save the changes and return to Visual Studio to sync.
 
-<a name="Bringing-it-all-Together"/>
+<a name="Bringing-it-all-Together"></a>
 
 ## Bringing it all Together
 
@@ -804,7 +804,7 @@ public override void ViewDidLoad()
 }
 ```
 
-<a name="Summary"/>
+<a name="Summary"></a>
 
 ## Summary
 

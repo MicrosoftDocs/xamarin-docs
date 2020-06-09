@@ -64,7 +64,7 @@ connectivity, use the following steps:
 If the message **An MMIO access error has occurred** is displayed,
 restart the emulator.
 
-<a name="gps-win" />
+<a name="gps-win"></a>
 
 ## Missing Google Play Services
 
@@ -86,7 +86,7 @@ For example, this virtual device will include Google Play Services and Google Pl
 > Google Play Store images are available only for some base device types such 
 > as Pixel, Pixel 2, Nexus 5, and Nexus 5X.
 
-<a name="perf-win" />
+<a name="perf-win"></a>
 
 ## Performance issues
 
@@ -120,7 +120,7 @@ be sure to select an x86-based system image:
 
 [![Selecting an x86 system image for a virtual device](troubleshooting-images/win/02-x86-virtual-device-w158-sml.png)](troubleshooting-images/win/02-x86-virtual-device-w158.png#lightbox)
 
-<a name="accel-issues-win" />
+<a name="accel-issues-win"></a>
 
 ## Hardware acceleration issues
 
@@ -282,7 +282,7 @@ SERVICE_NAME: intelhaxm
 If `STATE` is not set to `RUNNING`, see
 [How to Use the Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/how-to-use-the-intel-hardware-accelerated-execution-manager-intel-haxm-android-emulator) to resolve the problem.
 
-<a name="virt-conflicts" />
+<a name="virt-conflicts"></a>
 
 #### HAXM virtualization conflicts
 
@@ -318,7 +318,7 @@ To correct this error, boot the computer into the BIOS, enable both
 VT-x and SLAT (Second-Level Address Translation), then restart the
 computer back into Windows.
 
-<a name="disable-hyperv" />
+<a name="disable-hyperv"></a>
 
 #### Disabling Hyper-V
 
@@ -357,7 +357,7 @@ unable to disable Hyper-V (or it seems to be disabled but HAXM
 installation still fails), use the steps in the next section to disable
 Device Guard and Credential Guard.
 
-<a name="disable-devguard" />
+<a name="disable-devguard"></a>
 
 #### Disabling Device Guard
 
@@ -528,7 +528,7 @@ the following steps:
 If **An MMIO access error has occurred** is displayed,
 restart the emulator.
 
-<a name="gps-mac" />
+<a name="gps-mac"></a>
 
 ## Missing Google Play Services
 
@@ -550,7 +550,7 @@ For example, this virtual device will include Google Play Services and Google Pl
 > Google Play Store images are available only for some base device types such 
 > as Pixel, Pixel 2, Nexus 5, and Nexus 5X.
 
-<a name="perf-mac" />
+<a name="perf-mac"></a>
 
 ## Performance issues
 
@@ -581,7 +581,7 @@ be sure to select an x86-based system image:
 
 [![Selecting an x86 system image for a virtual device](troubleshooting-images/mac/02-x86-virtual-device-m75-sml.png)](troubleshooting-images/mac/02-x86-virtual-device-m75.png#lightbox)
 
-<a name="accel-issues-mac" />
+<a name="accel-issues-mac"></a>
 
 ## Hardware acceleration issues
 
@@ -590,7 +590,7 @@ acceleration of the emulator, you may run into problems caused by
 installation issues or an out-of-date version of macOS. The following
 sections can help you resolve this issue.
 
-<a name="hypervisor-issues" />
+<a name="hypervisor-issues"></a>
 
 ### Hypervisor Framework issues
 

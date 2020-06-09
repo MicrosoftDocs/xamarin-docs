@@ -48,7 +48,7 @@ From here you can:
 
 Again, this information _must_ be properly set up, in place, and up-to-date before an iOS application can be submitted to iTunes Connect for review and release. For more information, please see Apple's [Managing Agreements, Tax and Banking](https://developer.apple.com/library/ios/documentation/LanguagesUtilities/Conceptual/iTunesConnect_Guide/Chapters/ManagingContractsandBanking.html#//apple_ref/doc/uid/TP40011225-CH21-SW1) documentation.
 
-<a name="creating" />
+<a name="creating"></a>
 
 ## Creating an iTunes Connect Record
 
@@ -77,7 +77,7 @@ The new application will be created in iTunes Connect and will be ready for you 
 
 [![](itunesconnect-images/add04.png "The new application will be created in iTunes Connect")](itunesconnect-images/add04.png#lightbox)
 
-<a name="managing" />
+<a name="managing"></a>
 
 ## Managing App Videos and Screenshots
 
@@ -116,7 +116,7 @@ Do the following in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 > [!NOTE]
 > Note: Apple will reject your submission if the screenshots or App Preview Video do not match the current functionality in your application.
 
-<a name="metadata" />
+<a name="metadata"></a>
 
 ## Managing Name, Description, What's New, Keywords and URLs
 
@@ -188,7 +188,7 @@ Do the following in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 > [!IMPORTANT]
 > Note: Apple will reject your submission if the Name, Description, What's New, Keywords or URLs do not match the current functionality in your application.
 
-<a name="general" />
+<a name="general"></a>
 
 ## Maintaining General App Information
 
@@ -256,7 +256,7 @@ Do the following in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 > [!NOTE]
 > Note: Apple will reject your submission if the Categories or Ratings do not match the current functionality in your application.
 
-<a name="game-center" />
+<a name="game-center"></a>
 
 ## Maintaining Game Center Information
 
@@ -333,7 +333,7 @@ Do the following in [iTunes Connect](https://itunesconnect.apple.com/WebObjects/
 7. Optionally define the application as a **Custom Business to Business Application**.
 8. Click the **Save** button to save your changes.
 
-<a name="iap" />
+<a name="iap"></a>
 
 ## Maintaining In-App Purchase Information
 

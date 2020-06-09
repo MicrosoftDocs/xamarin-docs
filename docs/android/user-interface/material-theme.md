@@ -132,7 +132,7 @@ an activity with `Theme.Material.Light`:
 Other activities in this app will use the default `Theme.Material` dark
 color scheme (or, if configured, the application theme setting).
 
-<a name="customtheme" />
+<a name="customtheme"></a>
 
 ## Using Custom Themes
 
@@ -253,7 +253,7 @@ for the background color, status bar, and text colors, but it changes the
 color of the app bar to `my_blue` and sets the color of the radio button 
 to `my_purple`.
 
-<a name="customview" />
+<a name="customview"></a>
 
 ### Creating a Custom View Style
 

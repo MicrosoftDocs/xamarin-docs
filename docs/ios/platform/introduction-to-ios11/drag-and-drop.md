@@ -42,7 +42,7 @@ to enable dragging multiple items at once.
 `UITextView` and `UITextField` automatically support dragging selected
 text out, and dropping text content in.
 
-<a name="uitableview" />
+<a name="uitableview"></a>
 
 ## Drag and Drop with UITableView
 

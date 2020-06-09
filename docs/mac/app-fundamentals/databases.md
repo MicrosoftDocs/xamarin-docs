@@ -1007,7 +1007,7 @@ _conn.Close ();
 
 The only real difference in the in SQL statement (which loads only managers `command.CommandText = "SELECT ID FROM [People] WHERE isManager = 1"`) but works the same as the section above otherwise.
 
-<a name="Databases-and-ComboBoxes" />
+<a name="Databases-and-ComboBoxes"></a>
 
 ### Databases and comboboxes
 

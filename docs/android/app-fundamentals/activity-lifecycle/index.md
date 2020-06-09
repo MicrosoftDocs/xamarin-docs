@@ -341,7 +341,7 @@ Activity. In contrast, when the user clicks the Home button the
 activity is merely placed into the background &ndash; Android will not kill
 the activity.
 
-<a name="Managing_State_Throughout_the_Lifecycle" />
+<a name="Managing_State_Throughout_the_Lifecycle"></a>
 
 ## Managing State Throughout the Lifecycle
 

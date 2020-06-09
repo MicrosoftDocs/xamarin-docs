@@ -11,7 +11,7 @@ ms.date: 03/16/2017
 
 # Providing Haptic Feedback in Xamarin.iOS
 
-<a name="Overview" />
+<a name="Overview"></a>
 
 ## Overview
 
@@ -24,7 +24,7 @@ The following topics will be covered in detail:
 - [UINotificationFeedbackGenerator](#UINotificationFeedbackGenerator)
 - [UISelectionFeedbackGenerator](#UISelectionFeedbackGenerator)
 
-<a name="About-Haptic-Feedback" />
+<a name="About-Haptic-Feedback"></a>
 
 ## About Haptic Feedback
 
@@ -36,7 +36,7 @@ The developer can use one of the following `UIFeedbackGenerator` subclasses to p
 - `UINotificationFeedbackGenerator` - Use this feedback generator for notifications such as an action completing, failing or any other type of warning.
 - `UISelectionFeedbackGenerator` - Use this feedback generator for a selection actively changing such as picking an item from a list.
 
-<a name="UIImpactFeedbackGenerator" />
+<a name="UIImpactFeedbackGenerator"></a>
 
 ### UIImpactFeedbackGenerator
 
@@ -66,7 +66,7 @@ The `Prepare` method of the `UIImpactFeedbackGenerator` is called to inform the 
 
 The `ImpactOccurred` method then triggers haptic feedback.
 
-<a name="UINotificationFeedbackGenerator" />
+<a name="UINotificationFeedbackGenerator"></a>
 
 ### UINotificationFeedbackGenerator
 
@@ -94,7 +94,7 @@ The `NotificationOccurred` is called to trigger haptic feedback with a given `UI
 - `Warning`
 - `Error`
 
-<a name="UISelectionFeedbackGenerator" />
+<a name="UISelectionFeedbackGenerator"></a>
 
 ### UISelectionFeedbackGenerator
 

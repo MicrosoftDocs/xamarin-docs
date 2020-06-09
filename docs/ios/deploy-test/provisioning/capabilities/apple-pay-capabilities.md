@@ -23,7 +23,7 @@ When provisioning a new app through the developer center, there are three steps 
 
 The steps below will guide you through creating the above items:
 
-<a name="merchantid" />
+<a name="merchantid"></a>
 
 ## Create Merchant ID
 
@@ -43,7 +43,7 @@ A Merchant ID is used to let Apple Pay know that you can accept payments, and is
 
     ![Merchant ID confirmation](apple-pay-capabilities-images/image59.png)
 
-<a name="appid" />
+<a name="appid"></a>
 
 ## Create an App ID with the Apple Pay capability that includes the Merchant ID
 
@@ -86,7 +86,7 @@ A Merchant ID is used to let Apple Pay know that you can accept payments, and is
 
 This App ID can now be used to generate, or to re-generate, a new provisioning profile, as described in the [Working with Capabilities](~/ios/deploy-test/provisioning/capabilities/index.md) guide.
 
-<a name="certificate" />
+<a name="certificate"></a>
 
 ## Create a Certificate for your Merchant ID
 

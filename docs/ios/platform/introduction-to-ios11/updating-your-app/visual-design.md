@@ -65,7 +65,7 @@ View.LayoutMargins = UIEdgeInsets.Zero;
 
 ![Image showing margin with zero inset in ios 11](visual-design-images/image9.png)
 
-<a name="fullscreen" />
+<a name="fullscreen"></a>
 
 ## Full Screen Content
 

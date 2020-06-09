@@ -55,7 +55,7 @@ new builds just to fix the two issues mentioned above. However, if any a
 Component or NuGet uses `UICollectionView` or load views from **Xib** files, an update
 *may* be required to address the iOS 9 compatibility issues mentioned below.
 
-<a name="compat" />
+<a name="compat"></a>
 
 ## Improving Compatibility in Your Code
 

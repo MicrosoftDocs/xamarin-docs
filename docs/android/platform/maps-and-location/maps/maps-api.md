@@ -39,14 +39,14 @@ Several steps need to be taken before you can use the Maps API, including:
 - [Specify the required permissions](#declare-permissions)
 - [Optionally, Create an emulator with the Google APIs](#create-emulator-with-google-api)
 
-### <a name="obtain-maps-key" />Obtain a Google Maps API Key
+### <a name="obtain-maps-key"></a>Obtain a Google Maps API Key
 
 The first step is to get a Google Maps API key (note that you cannot
 reuse an API key from the legacy Google Maps v1 API). For information about
 how to obtain and use the API key with Xamarin.Android, see
 [Obtaining A Google Maps API Key](~/android/platform/maps-and-location/maps/obtaining-a-google-maps-api-key.md).
 
-### <a name="install-gps-sdk" /> Install the Google Play Services SDK
+### <a name="install-gps-sdk"></a> Install the Google Play Services SDK
 
 Google Play Services is a technology from Google that allows Android
 applications to take advantage of various Google features such as
@@ -75,7 +75,7 @@ services client can be found:
 > that may not be present on all devices. If it is not installed, then
 > Google Maps will not work on the device.
 
-### <a name="install-gpsmaps-nuget" /> Install the Xamarin.GooglePlayServices.Maps package from NuGet
+### <a name="install-gpsmaps-nuget"></a> Install the Xamarin.GooglePlayServices.Maps package from NuGet
 
 The [Xamarin.GooglePlayServices.Maps package](https://www.nuget.org/packages/Xamarin.GooglePlayServices.Maps) contains the Xamarin.Android bindings for the Google Play Services Maps API.
 To add the Google Play Services Map package, right-click the
@@ -97,7 +97,7 @@ Notice that the following dependency packages are also installed:
 - **Xamarin.GooglePlayServices.Basement**
 - **Xamarin.GooglePlayServices.Tasks**
 
-### <a name="declare-permissions" /> Specify the required permissions
+### <a name="declare-permissions"></a> Specify the required permissions
 
 Apps must identify the hardware and permission requirements in order to use the Google Maps API.  Some permissions are automatically granted by the Google Play Services SDK, and it is not necessary for a developer to explicitly add them to **AndroidManfest.XML**:
 
@@ -180,7 +180,7 @@ The following snippet is an example of the settings that must be added to **Andr
 
 In addition to requesting the permissions **AndroidManifest.XML**, an app must also perform runtime permission checks for the  `ACCESS_COARSE_LOCATION` and the `ACCESS_FINE_LOCATION` permissions. See the [Xamarin.Android Permissions](~/android/app-fundamentals/permissions.md) guide for more information about performing run-time permission checks.
 
-### <a name="create-emulator-with-google-api" />Create an Emulator with Google APIs
+### <a name="create-emulator-with-google-api"></a>Create an Emulator with Google APIs
 
 In the event that a physical Android device with Google Play services is not installed, it is possible to create an emulator image for development. For more information see the [Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
@@ -317,7 +317,7 @@ public void OnMapReady(GoogleMap map)
 }
 ```
 
-### <a name="googlemap_object" />GoogleMap properties
+### <a name="googlemap_object"></a>GoogleMap properties
 
 `GoogleMap` defines several properties that can control the functionality
 and the appearance of the map. One way to configure the initial state

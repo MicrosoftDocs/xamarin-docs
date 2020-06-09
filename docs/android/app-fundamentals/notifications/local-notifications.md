@@ -643,7 +643,7 @@ app.
 For more information about creating pending intents, see
 [PendingIntent](xref:Android.App.PendingIntent).
 
-<a name="beyond-the-basic-notification" />
+<a name="beyond-the-basic-notification"></a>
 
 ## Beyond the basic notification
 
@@ -653,7 +653,7 @@ you can enhance this basic format by making additional
 learn how to add a large photo icon to your notification, and you'll
 see examples of how to create expanded layout notifications.
 
-<a name="large-icon-format" />
+<a name="large-icon-format"></a>
 
 ### Large icon format
 

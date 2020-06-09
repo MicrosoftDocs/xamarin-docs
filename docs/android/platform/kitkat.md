@@ -49,7 +49,7 @@ screenshot:
 
 [![Selecting Android 4.4 in the Android SDK Manager](kitkat-images/api19.png)](kitkat-images/api19.png#lightbox)
 
-<a name="Migrating_Your_App_to_KitKat" />
+<a name="Migrating_Your_App_to_KitKat"></a>
 
 ## Migrating Your App to KitKat
 
@@ -155,7 +155,7 @@ about affected WebView APIs refer to the Android
 4.4](https://developer.android.com/guide/webapps/migrating.html)
 documentation.
 
-<a name="user_experience" />
+<a name="user_experience"></a>
 
 ## User Experience
 
@@ -424,7 +424,7 @@ navigation bars:
 
 [![Example screenshot of app with translucent status and navigation bars](kitkat-images/theme.png)](kitkat-images/theme.png#lightbox)
 
-<a name="user_content" />
+<a name="user_content"></a>
 
 ## User Content
 
@@ -701,7 +701,7 @@ content to a PDF, as illustrated by the screenshots below:
 
 [![Screenshot of PrintHtmlActivity displaying the Save as PDF menu](kitkat-images/print2.png)](kitkat-images/print2.png#lightbox)
 
-<a name="hardware" />
+<a name="hardware"></a>
 
 ## Hardware
 
@@ -902,7 +902,7 @@ state of the device.
 > or check to ensure the returned value of `GetDefaultSensor` isn't
 > `null`.
 
-<a name="developer_tools" />
+<a name="developer_tools"></a>
 
 ## Developer Tools
 

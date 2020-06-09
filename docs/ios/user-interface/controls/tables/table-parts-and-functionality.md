@@ -26,28 +26,28 @@ These screenshots show how section rows, headers, footers, edit controls and the
 
 These parts are described in more detail below:
 
-<a name="Section_Header" />
+<a name="Section_Header"></a>
 
 ## Section Header
 
 Cells can optionally be grouped into sections, labeled with a custom header, and/or labeled with a footer. The header can be set with a string value or a custom view can be
 supplied to allow for a different layout or style.
 
-<a name="Cells" />
+<a name="Cells"></a>
 
 ## Cells
 
 Cells are the main user interface element for a table. When implemented
 correctly, cells are re-used for memory efficiency. There are four built-in cell styles, and you can create your own custom cells – either in code, or in the Designer when using Storyboards.
 
-<a name="Section_Footer"/>
+<a name="Section_Footer"></a>
 
 ## Section Footer
 
 The optional section footer can be set with a string value, or a custom view can be supplied to allow for a different layout or style. Section headers and footers
 can be set independently.
 
-<a name="Index" />
+<a name="Index"></a>
 
 ## Index
 
@@ -56,7 +56,7 @@ Touching or dragging on the index accelerates scrolling to that part of the
 table. An index is optional but is recommended to help navigate long lists. An
 index is not usually used with the Grouped style.
 
-<a name="Edit_Features" />
+<a name="Edit_Features"></a>
 
 ## Editing Mode
 

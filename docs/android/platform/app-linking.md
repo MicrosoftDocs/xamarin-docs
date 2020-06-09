@@ -44,7 +44,7 @@ Setting up app-links in Android 6.0 involves two major steps:
 1. **Adding one or more intent-filters for the website URI's** &ndash; the intent filters guide Android in how to handle a URL click in a mobile browser.
 2. **Publishing a *Digital Asset Links JSON* file on the website** &ndash; this is a file that is uploaded to a website and is used by Android to verify the relationship between the mobile app and the domain of the website. Without this,  Android cannot install the app as the default handle for URI's; the user must do so manually.
 
-<a name="configure-intent-filter" />
+<a name="configure-intent-filter"></a>
 
 ### Configuring the Intent Filter
 

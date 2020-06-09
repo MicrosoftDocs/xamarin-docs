@@ -17,7 +17,7 @@ runtime.
 
 These are the Xamarin.iOS limitations compared to desktop Mono:
 
- <a name="Limited_Generics_Support" />
+ <a name="Limited_Generics_Support"></a>
 
 ## Limited Generics Support
 
@@ -34,7 +34,7 @@ compiler like Xamarin.iOS.
 
 Some of the common problems that developers run into, include:
 
- <a name="Generic_Subclasses_of_NSObjects_are_limited" />
+ <a name="Generic_Subclasses_of_NSObjects_are_limited"></a>
 
 ### Generic Subclasses of NSObjects are limited
 
@@ -50,7 +50,7 @@ class Foo<T> : UIView {
 > [!NOTE]
 > While generic subclasses of NSObjects are possible, there are a few limitations. Read the [Generic subclasses of NSObject](~/ios/internals/api-design/nsobject-generics.md) document for more information
 
- <a name="No_Dynamic_Code_Generation" />
+ <a name="No_Dynamic_Code_Generation"></a>
 
 ## No Dynamic Code Generation
 
@@ -63,7 +63,7 @@ generation. These include:
 - No support for creating types dynamically (no Type.GetType ("MyType`1")), although looking up existing types (Type.GetType ("System.String") for example, works just fine).
 - Reverse callbacks must be registered with the runtime at compile time.
 
- <a name="System.Reflection.Emit" />
+ <a name="System.Reflection.Emit"></a>
 
 ### System.Reflection.Emit
 
@@ -101,7 +101,7 @@ error such as:
 System.ExecutionEngineException: Attempting to JIT compile method '(wrapper managed-to-native) YourClass/YourDelegate:wrapper_aot_native(object,intptr,intptr)' while running in aot-only mode.
 ```
 
- <a name="Reverse_Callbacks" />
+ <a name="Reverse_Callbacks"></a>
 
 ### Reverse Callbacks
 
@@ -120,13 +120,13 @@ point:
   [MonoPInvokeCallbackAttribute](xref:ObjCRuntime.MonoPInvokeCallbackAttribute)
 - The methods have to be static methods, there is no support for instance methods.
 
-<a name="No_Remoting" />
+<a name="No_Remoting"></a>
 
 ## No Remoting
 
 The Remoting stack is not available on Xamarin.iOS.
 
- <a name="Runtime_Disabled_Features" />
+ <a name="Runtime_Disabled_Features"></a>
 
 ## Runtime Disabled Features
 
@@ -140,7 +140,7 @@ Runtime:
 - The JIT engine
 - Metadata verifier (since there is no JIT)
 
- <a name=".NET_API_Limitations" />
+ <a name=".NET_API_Limitations"></a>
 
 ## .NET API Limitations
 

@@ -26,13 +26,13 @@ It is also important to note that the Enterprise Program:
 
 All apps still need to be signed by Apple.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## Testing your Application
 
 Testing your application is carried out by using Ad Hoc distribution. For more information about testing, follow the steps in the [Ad-Hoc Distribution](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md) guide. Be aware that you can only test on up to a maximum of 100 devices.
 
-<a name="setup" />
+<a name="setup"></a>
 
 ## Getting Set Up for Distribution
 
@@ -42,7 +42,7 @@ Apple Developer Enterprise Program certificates will last for three years, and p
 
 It is important to note that expired certificates cannot be renewed, and instead, you will have to replace the expired certificate with a new one, as detailed [below](#certificate).
 
-<a name="certificate" />
+<a name="certificate"></a>
 
 ## Creating a Distribution Certificate
 
@@ -79,11 +79,11 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 
    [![](in-house-distribution-images/selectcert.png "Select iOS App Store")](in-house-distribution-images/selectcert.png#lightbox)
 
-<a name="profile" />
+<a name="profile"></a>
 
 ## Creating a Distribution Provisioning Profile
 
-<a name="appid" />
+<a name="appid"></a>
 
 ### Creating an App ID
 
@@ -129,7 +129,7 @@ You may have to quit Visual Studio and have Xcode (on the Build Host's Mac) refr
 
 -----
 
-<a name="inhouse" />
+<a name="inhouse"></a>
 
 ## Distributing your App In-House
 

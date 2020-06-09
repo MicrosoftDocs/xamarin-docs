@@ -26,7 +26,7 @@ Designer to add an Image View and a Label to the Storyboard, to set
 constraints on those views, and to verify that the Storyboard looks correct
 for various devices and orientations.
 
-<a name="storyboard" />
+<a name="storyboard"></a>
 
 ## Managing Launch Screens with Storyboards
 

@@ -15,7 +15,7 @@ Storyboards are a WYSIWYG way to create iOS applications, and are supported insi
 
 When configuring properties of a table view in the iOS Designer, there are two types of cell content you can choose from: **Dynamic** or **Static** Prototype Content.
 
-<a name="Prototype_Content" />
+<a name="Prototype_Content"></a>
 
 ## Dynamic Prototype Content
 
@@ -24,13 +24,13 @@ of data where the prototype cell (or cells, as you can define more than one) are
 re-used for each item in the list. The cells don’t need to be instantiated,
 they are obtained in the `GetView` method by calling the `DequeueReusableCell` method of its `UITableViewSource`.
 
- <a name="Static_Content" />
+ <a name="Static_Content"></a>
 
 ## Static Content
 
 `UITableView`s with static content allow tables to be designed right on the design surface. Cells can be dragged into the table and customized by changing properties and adding controls.
 
- <a name="Creating_a_Storyboard-driven_app" />
+ <a name="Creating_a_Storyboard-driven_app"></a>
 
 ## Creating a Storyboard-Driven App
 
@@ -53,7 +53,7 @@ Create a new solution in Visual Studio using **(Create) New Project… > Single 
 
 The solution will open with some C# files and a `Main.storyboard` file already created. Double-click the `Main.storyboard` file to open it in the iOS Designer.
 
-<a name="Modifying_the_Storyboard" />
+<a name="Modifying_the_Storyboard"></a>
 
 ## Modifying the Storyboard
 
@@ -65,7 +65,7 @@ The storyboard will be edited in three steps:
 
 Once the storyboard is complete, code can be added to make everything work.
 
-<a name="Layout_The_View_Controllers" />
+<a name="Layout_The_View_Controllers"></a>
 
 ### Layout The View Controllers
 
@@ -97,7 +97,7 @@ has been changed to “Chore Board”):
 
     [![Design surface](creating-tables-in-a-storyboard-images/image20a-sml.png)](creating-tables-in-a-storyboard-images/image20a.png#lightbox)  
 
-<a name="Create_the_UI" />
+<a name="Create_the_UI"></a>
 
 ### Create the UI
 
@@ -167,7 +167,7 @@ There are a few final steps in creating our Storyboard. First we must give each 
 - **Delete UIButton** : _DeleteButton_
 - **Save UIButton** : _SaveButton_
 
-<a name="Adding_Code" />
+<a name="Adding_Code"></a>
 
 ## Adding Code
 

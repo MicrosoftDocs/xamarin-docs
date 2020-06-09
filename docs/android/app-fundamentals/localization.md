@@ -57,7 +57,7 @@ attribute on the activity, like this:
     ConfigurationChanges = ConfigChanges.Locale | ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
 ```
 
-<a name="basics" />
+<a name="basics"></a>
 
 ## Internationalization Basics in Android
 

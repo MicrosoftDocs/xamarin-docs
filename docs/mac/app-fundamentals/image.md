@@ -41,7 +41,7 @@ When adding an image for use in a Xamarin.Mac application, there are several pla
 - **Custom Folder or Subfolder [deprecated]** - The developer can add a custom folder to the projects source tree and store the images there. The location where the file is added can be nested in a subfolder to further help organize the project. For example, if the Developer added a `Card` folder to the project and a sub folder of `Hearts` to that folder, then store an image **Jack.png** in the `Hearts` folder, `NSImage.ImageNamed("Card/Hearts/Jack.png")` would load the image at runtime.
 - **Asset Catalog Image Sets [preferred]** - Added in OS X El Capitan, **Asset Catalogs Image Sets** contain all the versions or representations of an image that are necessary to support various devices and scale factors for your application. Instead of relying on the image assets filename (**@1x**, **@2x**).
 
-<a name="asset-catalogs" />
+<a name="asset-catalogs"></a>
 
 ### Adding images to an asset catalog image set
 
@@ -80,7 +80,7 @@ When using an **Image Set** in Xcode's Interface Builder, you can simply select 
 
 ![Selecting an image set in Xcode's Interface Builder](image-images/imageset06.png "Selecting an image set in Xcode's Interface Builder")
 
-<a name="Adding-new-Assets-Collections"/>
+<a name="Adding-new-Assets-Collections"></a>
 
 ### Adding new assets collections
 
@@ -187,7 +187,7 @@ To load images outside of the application's bundle (from the Mac file system), u
 NSImage image = new NSImage("/Users/KMullins/Documents/photo.jpg")
 ```
 
-<a name="Working-with-Template-Images"/>
+<a name="Working-with-Template-Images"></a>
 
 ## Working with template images
 
@@ -234,7 +234,7 @@ Finally, to tint a Template Image, call this function against the image to color
 MyIcon.Image = ImageTintedWithColor (MyIcon.Image, NSColor.Red);
 ```
 
-<a name="Using_Images_with_Table_Views" />
+<a name="Using_Images_with_Table_Views"></a>
 
 ## Using images with table views
 
@@ -332,7 +332,7 @@ Example output:
 
 For more information on working with Table Views, please see our [Table Views](~/mac/user-interface/table-view.md) documentation.
 
-<a name="Using_Images_with_Outline_Views" />
+<a name="Using_Images_with_Outline_Views"></a>
 
 ## Using images with outline views
 

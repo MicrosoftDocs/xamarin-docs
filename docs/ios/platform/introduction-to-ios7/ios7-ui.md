@@ -129,7 +129,7 @@ In addition to the changes in UIKit, iOS 7 introduces a variety of visual change
 - Bar Appearance
 - Tint Color
 
-<a name="fullscreen" />
+<a name="fullscreen"></a>
 
 ### Full-Screen Content
 

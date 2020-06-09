@@ -41,7 +41,7 @@ ms.date: 03/17/2017
 
 Read specific tips related to these items below. See the [Troubleshooting](#troubleshooting) section if you have problems.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## Distribution Provisioning Profiles
 
@@ -72,7 +72,7 @@ The **Provisioning Profile** list will show all matching
 
 ![](appstore-images/options-selectprofile-sml.png "The iOS Bundle Signing dialog")
 
-<a name="iTunes_Connect"/>
+<a name="iTunes_Connect"></a>
 
 ## iTunes Connect
 
@@ -94,7 +94,7 @@ At least one screenshot is required, up to five may be submitted.
   They should be 312x390 pixels and demonstrate your Watch App in action.
   You can use the 42mm watch simulator to take screenshots at this size.
 
-<a name="xamarin_studio" />
+<a name="xamarin_studio"></a>
 
 ## Visual Studio for Mac
 
@@ -116,7 +116,7 @@ You can also choose the **View > Archives...** menu item to
 
   ![](appstore-images/xs-archives-sml.png "The Archives view")
 
-<a name="xcode" />
+<a name="xcode"></a>
 
 ## Xcode
 

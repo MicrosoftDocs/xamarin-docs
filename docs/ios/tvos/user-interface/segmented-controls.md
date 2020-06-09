@@ -23,7 +23,7 @@ Apple has the following suggestions for working with Segmented Controls:
 - **Use Consistent Segment Content Size** - All Segments have the same width and, if possible, you should try to keep the content in each segment the same size. This not only makes the Segment Controls more visually pleasing, but makes it easier to read at a glance.
 - **Avoid Mixing Icons and Text** - Each individual Segment can contain either an icon or text, but not both. While it is possible to mix both icons and text in the same Segmented Control, this should be avoided.
 
-<a name="About-Segment-Icons" />
+<a name="About-Segment-Icons"></a>
 
 ## About Segment Icons
 
@@ -31,7 +31,7 @@ Apple suggests using simple, recognizable images for Segment icons, such as a ma
 
 You cannot mix both text and icons on a given Segment and you should avoid mixing icons and text in a single Segmented Control. It should be either all icons or all text.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Segment Text
 
@@ -43,7 +43,7 @@ Apple makes the following suggestions for working with Segment Text:
 
 Again, you cannot mix both text and icons on a given Segment and you should avoid mixing icons and text in a single Segmented Control.
 
-<a name="Segment-Controls-and-Storyboards" />
+<a name="Segment-Controls-and-Storyboards"></a>
 
 ## Segment Controls and Storyboards
 
@@ -85,7 +85,7 @@ The easiest way to work with Segment Controls in a Xamarin.tvOS app is to add th
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
 
-<a name="Working-with-Segmented-Controls" />
+<a name="Working-with-Segmented-Controls"></a>
 
 ## Working with Segmented Controls
 
@@ -93,7 +93,7 @@ As stated above, s Segmented Control provides a set of linear elements, each of 
 
 There are several different ways that you can work with Segmented Controls in your Xamarin.tvOS app.
 
-<a name="Exposed-as-Outlets-and-Actions" />
+<a name="Exposed-as-Outlets-and-Actions"></a>
 
 ## Exposed as Names and Events
 
@@ -124,7 +124,7 @@ In the case of the example above, the Segment Control was exposed as a `PlayerCo
 
 The `SelectedSegment` property gets or sets the currently selected segment as a zero (0) based index. So if you have five (5) Segments, the first Segment will have an index of zero (0) and the last an index of four (4).
 
-<a name="Modifying-Segments" />
+<a name="Modifying-Segments"></a>
 
 ## Modifying Segments
 
@@ -189,7 +189,7 @@ And to **Enable/Disable** a given Segment, use the following:
 SegmentedControl.SetEnabled(false, 0);
 ```
 
-<a name="Modifying-the-Segmented-Controls-Appearance" />
+<a name="Modifying-the-Segmented-Controls-Appearance"></a>
 
 ## Modifying the Segmented Control's Appearance
 
@@ -222,7 +222,7 @@ SegmentedControl.SetDividerImage (UIImage.FromFile("divider.png"), UIControlStat
 
 Where the first `UIControlState` specifies the state of the Segment to the left of the divider and the second `UIControlState` specifies the state of the Segment to the right.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

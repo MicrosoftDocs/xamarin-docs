@@ -19,7 +19,7 @@ In this article, we'll cover the basics of OpenTK in a Xamarin.Mac application. 
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` commands used to wire-up your C# classes to Objective-C objects and UI Elements.
 
-<a name="About_OpenTK" />
+<a name="About_OpenTK"></a>
 
 ## About OpenTK
 
@@ -37,13 +37,13 @@ OpenTK can be used for games, scientific applications or other projects that req
 
 For more information, please see [The Open Toolkit](https://opentk.net) website.
 
-<a name="OpenTK_Quickstart" />
+<a name="OpenTK_Quickstart"></a>
 
 ## OpenTK Quickstart
 
 As a quick introduction to using OpenTK in a Xamarin.Mac app, we are going to create a simple application that opens a Game View, renders a simple triangle in that view and attachs the Game View to the Mac app's Main Window to display the triangle to the user.
 
-<a name="Starting_a_New_Project" />
+<a name="Starting_a_New_Project"></a>
 
 ### Starting a New Project
 
@@ -57,7 +57,7 @@ Enter `MacOpenTK` for the **Project Name**:
 
 Click the **Create** button to build the new project.
 
-<a name="Including_OpenTK" />
+<a name="Including_OpenTK"></a>
 
 ### Including OpenTK
 
@@ -67,7 +67,7 @@ Place a check by `OpenTK` and click the **OK** button:
 
 [![](opentk-images/sample03.png "Editing the project references")](opentk-images/sample03.png#lightbox)
 
-<a name="Using_OpenTK" />
+<a name="Using_OpenTK"></a>
 
 ### Using OpenTK
 
@@ -159,7 +159,7 @@ namespace MacOpenTK
 
 Let's go over this code in detail below.
 
-<a name="Required_APIs" />
+<a name="Required_APIs"></a>
 
 ### Required APIs
 
@@ -178,7 +178,7 @@ using CoreGraphics;
 
 This minimal set will be required for any class using OpenTK.
 
-<a name="Adding_the_Game_View" />
+<a name="Adding_the_Game_View"></a>
 
 ### Adding the Game View
 
@@ -195,13 +195,13 @@ ContentView = Game;
 
 Here we've made the Game View the same size as our Main Mac Window and replaced the Content View of the window with the new `MonoMacGameView`. Because we replaced the existing window content, our Gave View will be automatically resized when the Main Windows is resized.
 
-<a name="Responding_to_Events" />
+<a name="Responding_to_Events"></a>
 
 ### Responding to Events
 
 There are several default events that each Game View should respond to. In this section will cover the main events required.
 
-<a name="The_Load_Event" />
+<a name="The_Load_Event"></a>
 
 ### The Load Event
 
@@ -214,7 +214,7 @@ Game.Load += (sender, e) =>
 };
 ```
 
-<a name="The_Resize_Event" />
+<a name="The_Resize_Event"></a>
 
 ### The Resize Event
 
@@ -228,7 +228,7 @@ Game.Resize += (sender, e) =>
 };
 ```
 
-<a name="The_UpdateFrame_Event" />
+<a name="The_UpdateFrame_Event"></a>
 
 ### The UpdateFrame Event
 
@@ -244,7 +244,7 @@ Game.UpdateFrame += (sender, e) =>
 > [!IMPORTANT]
 > The Xamarin.Mac implementation of OpenTK does not include the `Input API`, so you will need to use the Apple provided APIs to add keyboard and Mouse support. Optionally you can create a custom instance of the `MonoMacGameView` and override the `KeyDown` and `KeyUp` methods.
 
-<a name="The_RenderFrame_Event" />
+<a name="The_RenderFrame_Event"></a>
 
 ### The RenderFrame Event
 
@@ -277,7 +277,7 @@ Typically the render code will being with a call to `GL.Clear` to remove any exi
 > [!IMPORTANT]
 > For the Xamarin.Mac version of OpenTK **do not** call the `SwapBuffers` method of your `MonoMacGameView` instance at the end of your rendering code. Doing so will cause the Game View to strobe rapidly instead of displaying your rendered view.
 
-<a name="Running_the_Game_View" />
+<a name="Running_the_Game_View"></a>
 
 ### Running the Game View
 
@@ -296,7 +296,7 @@ Let's run our app and see the output:
 
 If we resize our window, the Game View will also be reside and the triangle will be resized and updated real-time as well.
 
-<a name="Where_to_Next" />
+<a name="Where_to_Next"></a>
 
 ### Where to Next?
 
@@ -312,7 +312,7 @@ For more examples, please see the [OpenTK Samples GitHub](https://github.com/ope
 
 For a more complex Xamarin.Mac example of an OpenTK implementation, please see our [MonoMacGameView](https://docs.microsoft.com/samples/xamarin/mac-samples/monomacgamewindow) sample.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

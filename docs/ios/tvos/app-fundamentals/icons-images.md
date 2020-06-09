@@ -23,7 +23,7 @@ Creating captivating icons and imagery are a critical part of developing an imme
 > [!IMPORTANT]
 > All images on the Apple TV are at the 1x resolution (`@1x`) and you should _only_ use images of this size. Including larger, higher-resolution graphics not only take time to download and use more memory and storage, but they have to be dynamically rescaled at runtime and will negatively affect drawing performance.
 
-<a name="Launch-Image" />
+<a name="Launch-Image"></a>
 
 ## Launch Image
 
@@ -44,7 +44,7 @@ Apple makes the following suggestions for designing your app's Launch Image:
 - **Downplay Launch** - Because Apple TV users frequently switch apps, you shouldn't draw attention to the app launch process.
 - **No Ads or Branding** - Your Launch Image should not be used as an About screen or include any branding unless it is static part of your app's first screen. Ads are strictly prohibited.
 
-<a name="Setting-the-Launch-Image" />
+<a name="Setting-the-Launch-Image"></a>
 
 ### Setting the Launch Image
 
@@ -61,7 +61,7 @@ To set the Launch Image for your tvOS project, please do the following:
     [![](icons-images-images/asset03.png "Select a Launch Image")](icons-images-images/asset03.png#lightbox)
 4. Save your changes.
 
-<a name="Layered-Images" />
+<a name="Layered-Images"></a>
 
 ## Layered Images
 
@@ -85,7 +85,7 @@ Apple makes the following suggestions for designing your Layered Images:
 
 Whenever possible, you should always use the built-in `UIKit` controls to display your Layered Images, as they will automatically get the Parallax Effect when they come into focus.
 
-<a name="Sizing-Image-Layers" />
+<a name="Sizing-Image-Layers"></a>
 
 ### Sizing Image Layers
 
@@ -93,7 +93,7 @@ It is important to remember to include a _Safe Zone_ border into each layer that
 
 [![](icons-images-images/layered02.png "35 pixel border")](icons-images-images/layered02.png#lightbox)
 
-<a name="Creating-Layered-Images" />
+<a name="Creating-Layered-Images"></a>
 
 ### Creating Layered Images
 
@@ -104,7 +104,7 @@ tvOS works with Layered Images in the following formats:
 - **Assets.xcassets** - From two (2) to five (5) standard `.png` formatted images included in an Asset Catalog that will be compiled into a CAR or LSR formatted Layered Image at compile time.
 - **LCR Files** - This is a proprietary file format created by Apple. LCR files are intended to be used as additional content downloaded from one of your content servers. LCR file should never be included in your app bundle. LCR files are generated from LSR or Photoshop files using the `layerutil` command line tool included with Xcode.
 
-<a name="The-Parallax-Previewer" />
+<a name="The-Parallax-Previewer"></a>
 
 ### The Parallax Previewer
 
@@ -118,7 +118,7 @@ When creating a new Layered Image, it can be exported in the LSR format and incl
 
 For more information on creating and previewing Layered Images, please see Apple's [Creating Parallax Artwork](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/CreatingParallaxArtwork.html#//apple_ref/doc/uid/TP40015241-CH19-SW1) section of the [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/).
 
-<a name="App-Icons" />
+<a name="App-Icons"></a>
 
 ## App Icons
 
@@ -149,7 +149,7 @@ Apple provides the following suggestions for creating your App Icons:
 - **Use Gradients and Shadows Carefully** – Gradients and shadows can clash with the Parallax Effect so they should be used carefully. Simple top-to-bottom, light-to-dark gradient styles work best. Shadows normally work best as sharp, hard-edged tints.
 - **Vary Layer Transparency** – Use varying levels of transparency on the upper levels of your App Icon to increase the 3D effect. The background layer must be opaque or it will result in an error.
 
-<a name="Setting-the-App-Icons" />
+<a name="Setting-the-App-Icons"></a>
 
 ### Setting the App Icons
 
@@ -172,7 +172,7 @@ To set the App Icons required for your tvOS project, please do the following:
 7. Then repeat the same steps to define the `App Icon - Large` asset.
 8. Save your changes.
 
-<a name="Top-Shelf-Image" />
+<a name="Top-Shelf-Image"></a>
 
 ## Top Shelf Image
 
@@ -210,13 +210,13 @@ To set the Top Shelf Image required for your tvOS project, please do the followi
 4. Click on the **1x Apple TV entry** and select an image file.
 5. Save your changes.
 
-<a name="Dynamic-Top-Shelf-Content" />
+<a name="Dynamic-Top-Shelf-Content"></a>
 
 ### Dynamic Top Shelf Content
 
 Instead of displaying a static Top Shelf Image, the Top Shelf can contain a dynamic row of [Focusable Items](~/ios/tvos/app-fundamentals/navigation-focus.md#Focus-and-Selection) or a dynamic set of scrolling banners. Both of these dynamic style allow you to highlight the content provided by your app or jump into its most used features.
 
-<a name="Sectioned-Content-Row" />
+<a name="Sectioned-Content-Row"></a>
 
 #### Sectioned Content Row
 
@@ -238,7 +238,7 @@ Apple provides the following suggestions for the Sectioned Content Row:
 - **Complete the Row** – You should provide enough content to span the full width of the screen.
 - **Scaling Mixed Images** – The Sectioned Content Row was designed to hold a mix of image sizes (from the list provided above). If you do mix image sizes however, be aware that additional scaling will be applied to normalize the content display.
 
-<a name="Scrolling-Inset-Banners" />
+<a name="Scrolling-Inset-Banners"></a>
 
 #### Scrolling Inset Banners
 
@@ -264,7 +264,7 @@ Apple provides the following suggestions for the Scrolling Inset Banners:
 
 Please see Apple's [TVServices Framework Reference](https://developer.apple.com/library/prerelease/tvos/documentation/TVServices/Reference/TVServices_Ref/index.html#//apple_ref/doc/uid/TP40016412) for more information on adding a Top Shelf Extension to your app to provide dynamic Top Shelf content.
 
-<a name="Game-Center-Images" />
+<a name="Game-Center-Images"></a>
 
 ## Game Center Images
 
@@ -284,13 +284,13 @@ If your Xamarin.tvOS app is a game and you've included Game Center support, seve
 
 For more information about working with Game Center, please see Apple's [Game Center Programming Guide](https://developer.apple.com/library/prerelease/tvos/documentation/NetworkingInternet/Conceptual/GameKit_Guide/Introduction/Introduction.html).
 
-<a name="Working-with-Images" />
+<a name="Working-with-Images"></a>
 
 ## Working with Images
 
 Since tvOS 9 is a subset of iOS 9, the same techniques used to include and display images in a Xamarin.iOS app, also work for a Xamarin.tvOS app. Please see our [Displaying an Image](~/ios/app-fundamentals/images-icons/displaying-an-image.md) documentation for more information.
 
-<a name="Setting-Xamarin.tvOS-Project-Images" />
+<a name="Setting-Xamarin.tvOS-Project-Images"></a>
 
 ## Setting Xamarin.tvOS Project Images
 
@@ -307,7 +307,7 @@ Do the following:
 3. Next, select the Assets Catalog (configured above in the [Setting the Launch Image](#Setting-the-Launch-Image) section) for the **Launch Images**.
 4. Save your changes.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

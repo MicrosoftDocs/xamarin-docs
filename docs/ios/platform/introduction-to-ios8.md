@@ -127,7 +127,7 @@ For more information, please see our [PhotoKit](~/ios/platform/photokit.md) guid
 
 ## Games
 
-<a name="scenekit" />
+<a name="scenekit"></a>
 
 ### Scene Kit
 
@@ -135,7 +135,7 @@ Scene Kit is a 3D scene graph API that simplifies working with 3D graphics. It w
 
 For more information, please see our [SceneKit](~/ios/platform/gaming/scenekit.md) documentation.
 
-<a name="spritekit" />
+<a name="spritekit"></a>
 
 ### Sprite Kit
 

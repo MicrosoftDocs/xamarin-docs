@@ -435,7 +435,7 @@ and non-final methods) or implemented (for interface methods). The
 [Supporting Inheritance, Interfaces](#_Supporting_Inheritance,_Interfaces_1) section covers the
 complexities of supporting virtual methods and interface methods.
 
-<a name="_Static_Methods_1" />
+<a name="_Static_Methods_1"></a>
 
 #### Static Methods
 
@@ -628,7 +628,7 @@ methods are helpers to perform a `JNIEnv.FindClass`,
 `JNIEnv.DeleteGlobalReference` on the value returned from
 `JNIEnv.FindClass`. See the next section for details.
 
-<a name="_Supporting_Inheritance,_Interfaces_1" />
+<a name="_Supporting_Inheritance,_Interfaces_1"></a>
 
 ### Supporting Inheritance, Interfaces
 
@@ -1530,7 +1530,7 @@ IntPtr lrefString = JNIEnv.CallObjectMethod(instance, methodID);
 Java.Lang.String value = Java.Lang.Object.GetObject<Java.Lang.String>( lrefString, JniHandleOwnership.TransferLocalRef);
 ```
 
-<a name="_Looking_up_Java_Types" />
+<a name="_Looking_up_Java_Types"></a>
 
 ## Looking up Java Types
 
@@ -1546,7 +1546,7 @@ Note: Unlike every other `JNIEnv` method which returns object
 instances, `FindClass` returns a global reference, not a local
 reference.
 
-<a name="_Instance_Fields" />
+<a name="_Instance_Fields"></a>
 
 ## Instance Fields
 
@@ -1644,7 +1644,7 @@ where *Type* is the type of the field:
 - [JNIEnv.SetField](xref:Android.Runtime.JNIEnv.SetField*))
     &ndash; Write the value of `double` instance fields.
 
-<a name="_Static_Fields" />
+<a name="_Static_Fields"></a>
 
 ## Static Fields
 
@@ -1740,7 +1740,7 @@ where *Type* is the type of the field:
 - [JNIEnv.SetStaticField](xref:Android.Runtime.JNIEnv.SetStaticField*))
     &ndash; Write the value of `double` static fields.
 
-<a name="_Instance_Methods" />
+<a name="_Instance_Methods"></a>
 
 ## Instance Methods
 
@@ -1843,7 +1843,7 @@ invocation is usually used to invoke the base method of a virtual method.
 - [JNIEnv.CallNonvirtualDoubleMethod](xref:Android.Runtime.JNIEnv.CallNonvirtualDoubleMethod*)
     &ndash; Non-virtually invoke a method which returns a `double` value.
 
-<a name="_Static_Methods" />
+<a name="_Static_Methods"></a>
 
 ## Static Methods
 
@@ -1894,7 +1894,7 @@ where `*` is the return type of the method.
 - [JNIEnv.CallStaticDoubleMethod](xref:Android.Runtime.JNIEnv.CallStaticDoubleMethod*)
     &ndash; Invoke a static method which returns a `double` value.
 
-<a name="JNI_Type_Signatures" />
+<a name="JNI_Type_Signatures"></a>
 
 ## JNI Type Signatures
 
@@ -1927,7 +1927,7 @@ Type Signature of the
 method is "()[Ljava/lang/Thread$State;". Watch out for the trailing
 semicolons; those *are* part of the JNI type signature.
 
-<a name="_JNI_Type_References" />
+<a name="_JNI_Type_References"></a>
 
 ## JNI Type References
 
@@ -1956,7 +1956,7 @@ value types. The mapping is as follows:
 - `"Z"` for  `bool` .
 - `"V"` for  `void` method return types.
 
-<a name="_Simplified_Type_References_1" />
+<a name="_Simplified_Type_References_1"></a>
 
 ### Simplified Type References
 

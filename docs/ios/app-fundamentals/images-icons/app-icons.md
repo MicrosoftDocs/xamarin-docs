@@ -17,7 +17,7 @@ The following topics will be covered in detail:
 - [Managing Icons with Asset Catalogs](#managing) - Managing application icons using Asset Catalogs.
 - [iTunes Artwork](#itunes) - Supplying the required iTunes Artwork for the Ad-Hoc method of delivering your application.
 
-<a name="icon-types" />
+<a name="icon-types"></a>
 
 ## Application, Spotlight, and Settings Icons
 
@@ -96,7 +96,7 @@ The following image asset sizes and resolutions will be needed to support all of
 
  For more information about icons, please see Apple's [Icon and Image Sizes](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/IconMatrix.html#//apple_ref/doc/uid/TP40006556-CH27-SW1) documentation.
 
-<a name="managing" />
+<a name="managing"></a>
 
 ## Managing Icons with Asset Catalogs
 
@@ -153,7 +153,7 @@ To use an Asset Catalog, follow these steps:
 
 This is the preferred method of including and managing image assets that will be used to provide Application, Spotlight and Settings icons for an app.
 
-<a name="itunes" />
+<a name="itunes"></a>
 
 ## iTunes Artwork
 

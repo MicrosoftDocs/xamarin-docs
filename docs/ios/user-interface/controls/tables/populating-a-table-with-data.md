@@ -21,7 +21,7 @@ This guide covers:
 - Adding an Index
 - Adding Headers and Footers
 
-<a name="Subclassing_UITableViewSource" />
+<a name="Subclassing_UITableViewSource"></a>
 
 ## Subclassing UITableViewSource
 
@@ -224,7 +224,7 @@ public class MyCell : UITableViewCell
 
 You can see examples of the topics explained above in the **BasicTable** sample linked to this article.
 
-<a name="Adding_an_Index" />
+<a name="Adding_an_Index"></a>
 
 ## Adding an Index
 
@@ -279,7 +279,7 @@ public override string[] SectionIndexTitles (UITableView tableView)
 
 Indexes are generally only used with the Plain table style.
 
-<a name="Adding_Headers_and_Footers" />
+<a name="Adding_Headers_and_Footers"></a>
 
 ## Adding Headers and Footers
 

@@ -195,7 +195,7 @@ There are five types of in-app purchase product you can offer:
 
  *This document currently covers only the first two product types (Consumable and Non-Consumable).*
 
- <a name="Price_Tiers" />
+ <a name="Price_Tiers"></a>
 
 ### Price Tiers
 

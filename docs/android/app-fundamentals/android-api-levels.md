@@ -197,7 +197,7 @@ installed, and you can use it to add any new API levels that you need
 for your app. If you are not familiar with how to install API levels,
 see [Android SDK Setup](~/android/get-started/installation/android-sdk.md).
 
-<a name="framework" />
+<a name="framework"></a>
 
 ### Target Framework
 
@@ -251,7 +251,7 @@ menu to the right of **Target framework** as shown above.
 
 -----
 
-<a name="minimum" />
+<a name="minimum"></a>
 
 ### Minimum Android Version
 
@@ -308,7 +308,7 @@ setting.
 
 -----
 
-<a name="target" />
+<a name="target"></a>
 
 ### Target Android Version
 
@@ -371,7 +371,7 @@ For more information about SDK levels, see the Android Developer
 [uses-sdk](https://developer.android.com/guide/topics/manifest/uses-sdk-element.html)
 documentation.
 
-<a name="runtimechecks" />
+<a name="runtimechecks"></a>
 
 ## Runtime checks for Android versions
 
@@ -450,7 +450,7 @@ implement alternate functionality for when
 `Android.OS.Build.VERSION.SdkInt` is detected to be less than the API
 level that your app needs to present its optimum experience.
 
-<a name="libraries" />
+<a name="libraries"></a>
 
 ## API levels and libraries
 

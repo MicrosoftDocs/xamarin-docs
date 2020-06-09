@@ -84,7 +84,7 @@ In this particular case, we are using the "iPhone Developer: Miguel de Icaza"
 certificate to sign the application. This step is very important, or the
 physical device will refuse to load the application.
 
- <a name="Running_your_Application" />
+ <a name="Running_your_Application"></a>
 
 ## Running your Application
 

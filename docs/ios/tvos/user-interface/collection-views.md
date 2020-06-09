@@ -17,7 +17,7 @@ Collection Views allow for a group of content to be displayed using arbitrary la
 
 The Collection View maintains a collection of items using both a Delegate  and a Data Source to provide user interaction and the content of the collection. Since the Collection View is based on a Layout Subsystem that is independent of the view itself, providing a different Layout can easily change the presentation of the Collection View's data on-the-fly.
 
-<a name="About-Collection-Views" />
+<a name="About-Collection-Views"></a>
 
 ## About Collection Views
 
@@ -31,7 +31,7 @@ Optionally, Supplementary Views can be added to the Collection View's presentati
 
 The Collection View can respond to user interaction using a Delegate (`UICollectionViewDelegate`). This delegate is also responsible for determining if a given cell can get focus, if a cell has been highlighted or if one has been selected. In some cases, the Delegate determines the size of the individual cells.
 
-<a name="Collection-View-Layouts" />
+<a name="Collection-View-Layouts"></a>
 
 ## Collection View Layouts
 
@@ -43,7 +43,7 @@ The Collection View Layout is normally provided when the Collection View is crea
 
 The Collection View Layout provides several methods that can be used to animate the transition between two different layouts (by default no animation is done). Additionally, Collection View Layouts can work with Gesture Recognizers to further animate user interaction that results in a change in layout.
 
-<a name="Creating-Cells-and-Supplementary-Views" />
+<a name="Creating-Cells-and-Supplementary-Views"></a>
 
 ## Creating Cells and Supplementary Views
 
@@ -69,7 +69,7 @@ Where `typeof(CityCollectionViewCell)` provides the class that supports the view
 
 After the cell is dequeued, you configure it with the data for the item it is representing and return to the Collection View for display.
 
-<a name="About-Collection-View-Controllers" />
+<a name="About-Collection-View-Controllers"></a>
 
 ## About Collection View Controllers
 
@@ -82,7 +82,7 @@ first displayed, and reloads and clear the select on each subsequent display.
 
 Additionally, the Collection View Controller provides overridable methods that can be used to manage the lifecycle of the Collection View such as `AwakeFromNib` and `ViewWillDisplay`.
 
-<a name="Collection-Views-and-Storyboards" />
+<a name="Collection-Views-and-Storyboards"></a>
 
 ## Collection Views and Storyboards
 
@@ -170,13 +170,13 @@ If we had chosen `Custom` for the Collection View's **Layout**, we could have sp
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Providing-Data-for-the-Collection-View" />
+<a name="Providing-Data-for-the-Collection-View"></a>
 
 ## Providing Data for the Collection View
 
 Now that we have our Collection View (and Collection View Controller) added to our Storyboard, we need to provide the data for the collection. 
 
-<a name="The-Data-Model" />
+<a name="The-Data-Model"></a>
 
 ### The Data Model
 
@@ -279,7 +279,7 @@ CityView.AdjustsImageWhenAncestorFocused = true;
 
 For more information on Navigation and Focus, please see our [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) and [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) documentation.
 
-<a name="The-Collection-View-Data-Provider" />
+<a name="The-Collection-View-Data-Provider"></a>
 
 ### The Collection View Data Provider
 
@@ -437,13 +437,13 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 After we get a Collection View Cell of our `CityCollectionViewCell` type, we populate it with the given item.
 
-<a name="Responding-to-User-Events" />
+<a name="Responding-to-User-Events"></a>
 
 ## Responding to User Events
 
 Because we want the user to be able to select an item from our collection, we need to provide a Collection View Delegate to handle this interaction. And we need to provide a way to let our calling view know what item the user has selected.
 
-<a name="The-App-Delegate" />
+<a name="The-App-Delegate"></a>
 
 ### The App Delegate
 
@@ -455,7 +455,7 @@ public CityInfo SelectedCity { get; set;} = new CityInfo("City02.jpg", "Turning 
 
 This defines the property and sets the default city that will initially be shown. Later, we'll consume this property to display the user's selection and allow the select to be changed.
 
-<a name="The-Collection-View-Delegate" />
+<a name="The-Collection-View-Delegate"></a>
 
 ### The Collection View Delegate
 
@@ -555,7 +555,7 @@ public override void ItemSelected (UICollectionView collectionView, NSIndexPath 
 
 Here we set the `SelectedCity` property of our `AppDelegate` to the item that the user selected and we close the Collection View Controller, returning to the view that called us. We haven't defined the `ParentController` property of our Collection View yet, we'll do that next.
 
-<a name="Configuring-the-Collection-View" />
+<a name="Configuring-the-Collection-View"></a>
 
 ## Configuring the Collection View
 
@@ -787,7 +787,7 @@ public override void ViewWillAppear (bool animated)
 }
 ```
 
-<a name="Testing-the-app" />
+<a name="Testing-the-app"></a>
 
 ## Testing the app
 
@@ -805,7 +805,7 @@ When the user clicks a select image, the Collection View is closed and the main 
 
 [![](collection-views-images/run03.png "A new image on the home screen")](collection-views-images/run03.png#lightbox)
 
-<a name="Creating-Custom-Layout-and-Reordering-Items" />
+<a name="Creating-Custom-Layout-and-Reordering-Items"></a>
 
 ## Creating Custom Layout and Reordering Items
 
@@ -813,7 +813,7 @@ One of the key features of using a Collection View is the ability to create cust
 
 Recently added to Collection Views for iOS 9 was the ability to easily allow the reordering of items in the collection. Again, since tvOS 9 is a subset of iOS 9, this is done them same way. Please see our [Collection View Changes](~/ios/user-interface/controls/uicollectionview.md) document for more details.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

@@ -33,7 +33,7 @@ There are a number of techniques for increasing the performance, and perceived p
 > [!NOTE]
 > Before reading this article you should first read [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md), which discusses non-platform specific techniques to improve the memory usage and performance of applications built using the Xamarin platform.
 
-<a name="optimizelayout" />
+<a name="optimizelayout"></a>
 
 ## Optimize Layout Hierarchies
 
@@ -114,7 +114,7 @@ This layout is 3-levels deep, and is wasteful when inflated for each [`ListView`
 
 The previous 3-level hierarchy has been reduced to a 2-level hierarchy, and a single [`RelativeLayout`](xref:Android.Widget.RelativeLayout) has replaced two [`LinearLayout`](xref:Android.Widget.LinearLayout) instances. A significant performance increase will be gained when inflating the layout for each [`ListView`](xref:Android.Widget.ListView) row.
 
-<a name="optimizelistviews" />
+<a name="optimizelistviews"></a>
 
 ## Optimize List Views
 
@@ -127,7 +127,7 @@ Users expect smooth scrolling and fast load times for [`ListView`](xref:Android.
 
 Collectively these techniques can help to keep [`ListView`](xref:Android.Widget.ListView) instances scrolling smoothly.
 
-<a name="reuserowviews" />
+<a name="reuserowviews"></a>
 
 ### Reuse Row Views
 
@@ -152,7 +152,7 @@ As the user scrolls, the [`ListView`](xref:Android.Widget.ListView) calls the `G
 
 For more information, see [Row View Re-Use](~/android/user-interface/layouts/list-view/populating.md#row-view-re-use) in [Populating a ListView with Data](~/android/user-interface/layouts/list-view/populating.md).
 
-<a name="removeeventhandlers" />
+<a name="removeeventhandlers"></a>
 
 ## Remove Event Handlers in Activities
 
@@ -181,7 +181,7 @@ When the activity exits the running state, `OnPause` is called. In the `OnPause`
 App.Current.Service1.Updated -= service1UpdateHandler;
 ```
 
-<a name="limitservices" />
+<a name="limitservices"></a>
 
 ## Limit the Lifespan of Services
 
@@ -189,7 +189,7 @@ When a service starts, Android keeps the service process running. This makes the
 
 The lifespan of a service can be limited by using an `IntentService`, which terminates itself once it's handled the intent that started it.
 
-<a name="releaseresources" />
+<a name="releaseresources"></a>
 
 ## Release Resources when Notified
 
@@ -207,7 +207,7 @@ In addition, when the application process is cached, the following memory level 
 
 Notifications should be responded to by releasing resources based on the received level.
 
-<a name="releaseresourcesuihidden" />
+<a name="releaseresourcesuihidden"></a>
 
 ## Release Resources when the User Interface is Hidden
 
@@ -215,7 +215,7 @@ Release any resources used by the app's user interface when the user navigates t
 
 To receive a notification when the user exits the UI, implement the [`OnTrimMemory`](xref:Android.App.Activity.OnTrimMemory*) callback in `Activity` classes and listen for the [`TrimMemoryUiHidden`](xref:Android.Content.ComponentCallbacks2.TrimMemoryUiHidden) level, which indicates that the UI is hidden from view. This notification will be received only when *all* the UI components of the application become hidden from the user. Releasing UI resources when this notification is received ensures that if the user navigates back from another activity in the app, the UI resources are still available to quickly resume the activity.
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## Optimize Image Resources
 
@@ -223,7 +223,7 @@ Images are some of the most expensive resources that applications use, and are o
 
 For more information, see [Optimize Image Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#optimizeimages) in the [Cross-Platform Performance](~/cross-platform/deploy-test/memory-perf-best-practices.md) guide.
 
-<a name="disposeimages" />
+<a name="disposeimages"></a>
 
 ## Dispose of Unused Image Resources
 
@@ -250,7 +250,7 @@ using (Bitmap smallPic = BitmapFactory.DecodeByteArray(smallImageByte, 0, smallI
 For more information about releasing disposable resources, see
 [Release IDisposable Resources](~/cross-platform/deploy-test/memory-perf-best-practices.md#idisposable).  
 
-<a name="avoidfloats" />
+<a name="avoidfloats"></a>
 
 ## Avoid Floating-Point Arithmetic
 
@@ -259,7 +259,7 @@ On Android devices, floating-point arithmetic is about 2x slower than integer ar
 > [!NOTE]
 > Even for integer arithmetic, some CPUs lack hardware divide capabilities. Therefore, integer division and modulus operations are often performed in software.
 
-<a name="dismissdialogs" />
+<a name="dismissdialogs"></a>
 
 ## Dismiss Dialogs
 

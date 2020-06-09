@@ -61,7 +61,7 @@ Packaging a font into an Android APK ensures that it is always available to the 
 
 When there are many similar font files (for example, the same font with different weights or styles) it is possible to group them into a font family.
 
-<a name="font_families" />
+<a name="font_families"></a>
 
 ### Font Families
 

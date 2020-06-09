@@ -27,7 +27,7 @@ Distributing an application – just as with developing an application – requi
 > [!IMPORTANT]
 > To use iTunes Connect, and therefore publish an app to the App Store, you **must** be part of either an individual or organizational Apple Developer Program. You will not be able to follow the steps on this page if you are a member of an Apple Developer **Enterprise** Program.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## Provisioning an App for App Store Distribution
 
@@ -41,7 +41,7 @@ You can select the same **App ID** and **Devices** that you used for your develo
 > [!NOTE]
 > Only Team Agents and Admins can create Distribution Certificates and Provisioning Profiles.
 
-<a name="creatingcertificate" />
+<a name="creatingcertificate"></a>
 
 ## Creating a Distribution Certificate
 
@@ -73,11 +73,11 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 3. Depending on your team privileges, the signing identity will be generated, as shown below, or you may have to wait until a team agent or admin approves it:
     [![](images/generated.png "The signing identity will be generated and a dialog displayed")](images/generated.png#lightbox)
 
-<a name="creatingprofile" />
+<a name="creatingprofile"></a>
 
 ## Creating a Distribution Profile
 
-<a name="creatingappid" />
+<a name="creatingappid"></a>
 
 ### Creating an App ID
 
@@ -131,7 +131,7 @@ Once you have the required components needed for creating a Distribution Profile
 
 -----
 
-<a name="selectprofile" />
+<a name="selectprofile"></a>
 
 ## Selecting a Distribution Profile in a Xamarin.iOS Project
 
@@ -171,7 +171,7 @@ When you are ready to do a final build of a Xamarin.iOS application for sale in 
 
 -----
 
-<a name="itunesconnect" />
+<a name="itunesconnect"></a>
 
 ## Configuring your Application in iTunes Connect
 
@@ -181,7 +181,7 @@ Your Xamarin.iOS application will need to be properly setup and configured in iT
 
 For more details, please see our [Configuring an App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) documentation.
 
-<a name="submitting" />
+<a name="submitting"></a>
 
 ## Submitting an App to iTunes Connect
 
@@ -189,7 +189,7 @@ Once the application is signed using the Distribution Provisioning Profile and t
 
 For more information on publishing applications to the App Store, see [Publishing to the App Store](~/ios/deploy-test/app-distribution/app-store-distribution/publishing-to-the-app-store.md).
 
-<a name="windows" />
+<a name="windows"></a>
 
 ## Automatically copy .app bundles back to Windows
 

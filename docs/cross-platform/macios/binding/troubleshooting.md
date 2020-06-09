@@ -33,7 +33,7 @@ If you run into a case where passing in `null` throws an `ArgumentNullException`
 3. Can you work around the bug? If you can avoid calling the API with `null`, a simple null check around the calls can be a easy work around.
 4. However, some APIs require passing in null to turn off or disable some features. In these cases, you can work around the issue by bringing up the assembly browser (see [Finding the C# member for a given selector](~/mac/app-fundamentals/mac-apis.md#finding_selector)), copying the binding, and removing the null check. Please make sure to file a bug (step 2) if you do this, as your copied binding won't receive updates and fixes that we make in Xamarin.Mac, and this should be considered a short term work around.
 
-<a name="reporting-bugs"/>
+<a name="reporting-bugs"></a>
 
 ## Reporting bugs
 

@@ -23,7 +23,7 @@ In this article, we'll cover the basics of working with Table Views in a Xamarin
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` commands used to wire-up your C# classes to Objective-C objects and UI Elements.
 
-<a name="Introduction_to_Table_Views" />
+<a name="Introduction_to_Table_Views"></a>
 
 ## Introduction to Table Views
 
@@ -40,7 +40,7 @@ When creating Table Views, Apple suggests the following:
 
 For more information, please see the [Content Views](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsView.html#//apple_ref/doc/uid/20000957-CH52-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
-<a name="Creating-and-Maintaining-Table-Views-in-Xcode" />
+<a name="Creating-and-Maintaining-Table-Views-in-Xcode"></a>
 
 ## Creating and Maintaining Table Views in Xcode
 
@@ -140,7 +140,7 @@ Select the Table Cell View (`NSTableFieldCell`) at the bottom of a Table Column 
 
 This allows you to edit the Table Cell View used as the base _Pattern_ for all cells created for the given column.
 
-<a name="Adding_Actions_and_Outlets" />
+<a name="Adding_Actions_and_Outlets"></a>
 
 ### Adding Actions and Outlets
 
@@ -162,7 +162,7 @@ The process is the same for any Table View element that we want to expose:
 
 Next, we'll write the code display some data for the table when the application is run.
 
-<a name="Populating_the_Table_View" />
+<a name="Populating_the_Table_View"></a>
 
 ## Populating the Table View
 
@@ -330,7 +330,7 @@ If we run the application, the following is displayed:
 
 [![](table-view-images/populate02.png "A sample app run")](table-view-images/populate02.png#lightbox)
 
-<a name="Sorting_by_Column" />
+<a name="Sorting_by_Column"></a>
 
 ## Sorting by Column
 
@@ -392,7 +392,7 @@ If we run the application and click in the Column Headers, the rows will be sort
 
 [![](table-view-images/sort03.png "An example app run")](table-view-images/sort03.png#lightbox)
 
-<a name="Row_Selection" />
+<a name="Row_Selection"></a>
 
 ## Row Selection
 
@@ -420,7 +420,7 @@ The Table View (`NSTableView`) contains the following methods for working with r
 - `SelectedRow` - Returns the current row selected in the table.
 - `IsRowSelected(nint)` - Returns `true` if the given row is selected.
 
-<a name="Multiple_Row_Selection" />
+<a name="Multiple_Row_Selection"></a>
 
 ## Multiple Row Selection
 
@@ -453,7 +453,7 @@ The Table View (`NSTableView`) contains the following methods for working with r
 - `SelectedRowCount` - Returns the number of selected rows.
 - `IsRowSelected(nint)` - Returns `true` if the given row is selected.
 
-<a name="Type_to_Select_Row" />
+<a name="Type_to_Select_Row"></a>
 
 ## Type to Select Row
 
@@ -487,7 +487,7 @@ If we run the application and type a character, a row is selected:
 
 [![](table-view-images/type02.png "A sample app run")](table-view-images/type02.png#lightbox)
 
-<a name="Reordering_Columns" />
+<a name="Reordering_Columns"></a>
 
 ## Reordering Columns
 
@@ -514,7 +514,7 @@ If we run the application, we can drag Column Headers around to reorder our colu
 
 [![](table-view-images/reorder02.png "An example of the reordered columns")](table-view-images/reorder02.png#lightbox)
 
-<a name="Editing_Cells" />
+<a name="Editing_Cells"></a>
 
 ## Editing Cells
 
@@ -570,7 +570,7 @@ Now if we run the application, the user can edit the cells in the Table View:
 
 [![](table-view-images/editing01.png "An example of editing a cell")](table-view-images/editing01.png#lightbox)
 
-<a name="Using_Images_in_Table_Views" />
+<a name="Using_Images_in_Table_Views"></a>
 
 ## Using Images in Table Views
 
@@ -635,7 +635,7 @@ public override NSView GetViewForItem (NSTableView tableView, NSTableColumn tabl
 
 For more information, please see the [Using Images with Table Views](~/mac/app-fundamentals/image.md) section of our [Working with Image](~/mac/app-fundamentals/image.md) documentation.
 
-<a name="Adding-a-Delete-Button-to-a-Row" />
+<a name="Adding-a-Delete-Button-to-a-Row"></a>
 
 ## Adding a Delete Button to a Row
 
@@ -900,7 +900,7 @@ If the user chooses delete, the row will be removed and the table will be redraw
 
 [![](table-view-images/delete04.png "The table after the row is deleted")](table-view-images/delete04.png#lightbox)
 
-<a name="Data_Binding_Table_Views" />
+<a name="Data_Binding_Table_Views"></a>
 
 ## Data Binding Table Views
 
@@ -910,7 +910,7 @@ Key-Value Coding (KVC) is a mechanism for accessing an object’s properties ind
 
 For more information, please see the [Table View Data Binding](~/mac/app-fundamentals/databinding.md#Table_View_Data_Binding) section of our [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md) documentation.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

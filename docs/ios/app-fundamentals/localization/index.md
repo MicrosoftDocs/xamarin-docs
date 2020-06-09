@@ -312,7 +312,7 @@ Medium,None: 7/8/2015
 Refer to the Apple [Date Formatters](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/DataFormatting/Articles/dfDateFormatting10_4.html) documentation for more information. When testing locale-sensitive
 date and time formatting, check both **iPhone Language** and **Region** settings.
 
-<a name="rtl" />
+<a name="rtl"></a>
 
 ### Right-to-Left (RTL) layout
 
@@ -339,7 +339,7 @@ are placed inside `UIStackView` or aligned with Auto-Layout.
 RTL text is localized using **.strings** files in the same
 way as LTR text.
 
-<a name="code"/>
+<a name="code"></a>
 
 ## Localizing the UI in code
 
@@ -383,7 +383,7 @@ var localizedString = NSBundle.MainBundle.GetLocalizedString ("key", "optional")
 someControl.Text = localizedString;
 ```
 
-<a name="storyboard"/>
+<a name="storyboard"></a>
 
 ## Localizing storyboard UIs
 
@@ -452,7 +452,7 @@ property; and `UIButton`s default text is set using `normalTitle`:
 >
 > ![](images/xs-dup-strings.png "Strings files")
 
-<a name="appstore" />
+<a name="appstore"></a>
 
 ## App Store listing
 

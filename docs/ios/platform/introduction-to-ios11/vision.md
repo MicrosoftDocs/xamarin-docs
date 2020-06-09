@@ -27,7 +27,7 @@ including:
 
 Rectangle Detection and Face Detection are discussed in more detail below.
 
-<a name="rectangles" />
+<a name="rectangles"></a>
 
 ## Rectangle Detection
 
@@ -104,7 +104,7 @@ Rectangle detection is often just the first step in a chain of operations,
 such as with [this CoreMLVision example](~/ios/platform/introduction-to-ios11/coreml.md#coremlvision),
 where the rectangles are passed to a CoreML model to parse handwritten digits.
 
-<a name="faces" />
+<a name="faces"></a>
 
 ## Face Detection
 

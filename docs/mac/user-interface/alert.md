@@ -21,7 +21,7 @@ An alert is a special type of dialog that appears when a serious problem occurs 
 
 In this article, we'll cover the basics of working with Alerts in a Xamarin.Mac application. 
 
-<a name="Introduction_to_Alerts" />
+<a name="Introduction_to_Alerts"></a>
 
 ## Introduction to Alerts
 
@@ -38,7 +38,7 @@ Apple suggest the following guidelines:
 
 For more information, see the [Alerts](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowAlerts.html#//apple_ref/doc/uid/20000957-CH44-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
-<a name="Anatomy_of_an_Alert" />
+<a name="Anatomy_of_an_Alert"></a>
 
 ## Anatomy of an Alert
 
@@ -71,7 +71,7 @@ Apple provides several properties that can be used to customize an alert:
 - **ShowsSuppressionButton** - If `true` displays a checkbox that the user can use to suppress the alert for subsequent occurrences of the event that triggered it.
 - **AccessoryView** - Allows you to attach another subview to the alert to provide extra information, such as adding a **Text Field** for data entry. If you set a new **AccessoryView** or modify an existing one, you need to call the `Layout()` method to adjust the visible layout of the alert.
 
-<a name="Displaying_an_Alert" />
+<a name="Displaying_an_Alert"></a>
 
 ## Displaying an Alert
 
@@ -105,7 +105,7 @@ If this code is run, the following will be displayed:
 
 [![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
 
-<a name="Working_with_Alert_Buttons" />
+<a name="Working_with_Alert_Buttons"></a>
 
 ## Working with Alert Buttons
 
@@ -156,7 +156,7 @@ If this code is run, the following will be displayed:
 > [!IMPORTANT]
 > You should never add more than three buttons to an alert.
 
-<a name="Showing_the_Suppress_Button" />
+<a name="Showing_the_Suppress_Button"></a>
 
 ## Showing the Suppress Button
 
@@ -203,7 +203,7 @@ If this code is run, the following will be displayed:
 
 [![](alert-images/alert07.png "An alert with a suppress button display as a sheet")](alert-images/alert07.png#lightbox)
 
-<a name="Adding_a_Custom_SubView" />
+<a name="Adding_a_Custom_SubView"></a>
 
 ## Adding a Custom SubView
 
@@ -258,7 +258,7 @@ If we run this code, the following will be displayed:
 
 [![](alert-images/alert09.png "An alert with a custom view")](alert-images/alert09.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

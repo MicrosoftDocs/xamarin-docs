@@ -37,9 +37,9 @@ distribution. Select **Ad-Hoc** and click **Next**:
 
 -----
 
-<a name="newcertvs" />
-<a name="newcert" />
-<a name="newcertxs" />
+<a name="newcertvs"></a>
+<a name="newcert"></a>
+<a name="newcertxs"></a>
 
 ## Create a New Certificate
 

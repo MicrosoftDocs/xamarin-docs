@@ -33,7 +33,7 @@ While debugging Xamarin.iOS applications, an error will be thrown if your code a
 
  ![](ui-thread-images/image10.png "UI Thread Execution")
 
- <a name="Background_Thread_Example" />
+ <a name="Background_Thread_Example"></a>
 
 ## Background Thread Example
 
@@ -57,7 +57,7 @@ new System.Threading.Thread(new System.Threading.ThreadStart(() => {
 
 You won’t need to use this for the remainder of the examples in this document, but it is an important concept to remember when your app makes network requests, uses the notification center or other methods that require a completion-handler that will run on another thread.
 
- <a name="Async_Await_Example" />
+ <a name="Async_Await_Example"></a>
 
 ## Async/Await Example
 

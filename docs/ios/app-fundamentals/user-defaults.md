@@ -17,7 +17,7 @@ The `NSUserDefaults` class provides a way for iOS Apps and Extensions to program
 
 When used with App Groups, `NSUserDefaults` also provides a way to communicate between apps (or Extensions) within a given group.
 
-<a name="About-User-Defaults" />
+<a name="About-User-Defaults"></a>
 
 ## About User Defaults
 
@@ -30,7 +30,7 @@ When your app first executes, `NSUserDefaults` reads the keys and values from th
 
 The `NSUserDefaults` class contains several convenience methods for reading and writing preference values for common data types such as: string, integer, float, boolean and URLs. Other types of data can be archived using `NSData`, then read from or written to the User Defaults Database. For more information, please see Apple's [Preferences and Settings Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/UserDefaults/Introduction/Introduction.html#//apple_ref/doc/uid/10000059i).
 
-<a name="Accessing-the-Shared-NSUserDefaults-Instance" />
+<a name="Accessing-the-Shared-NSUserDefaults-Instance"></a>
 
 ## Accessing the Shared NSUserDefaults Instance 
 
@@ -49,7 +49,7 @@ To access the Shared User Defaults Instance, use the following code:
 var plist = NSUserDefaults.StandardUserDefaults;
 ```
 
-<a name="Accessing-an-App-Group-NSUserDefaults-Instance" />
+<a name="Accessing-an-App-Group-NSUserDefaults-Instance"></a>
 
 ## Accessing an App Group NSUserDefaults Instance
 
@@ -66,7 +66,7 @@ var plist = new NSUserDefaults ("group.com.xamarin.todaysharing", NSUserDefaults
 
 Where `group.com.xamarin.todaysharing` is the App Group created in **Certificates, Identifiers & Profiles** that you want to access. For more information, please see the [App Group Capabilities](~/ios/deploy-test/provisioning/capabilities/app-groups-capabilities.md) documentation.
 
-<a name="Reading-Default-Values" />
+<a name="Reading-Default-Values"></a>
 
 ## Reading Default Values
 
@@ -95,7 +95,7 @@ var useHeader = plist.BoolForKey("UseHeader");
 
 ```
 
-<a name="Writing-Default-Values" />
+<a name="Writing-Default-Values"></a>
 
 ## Writing Default Values
 
@@ -123,7 +123,7 @@ plist.SetBool(useHeader, "UseHeader");
 > [!IMPORTANT]
 > When your App first executes, `NSUserDefaults` reads the keys and values from the app's User Defaults Database and caches them to memory to avoid opening and reading the database each time a value is required.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

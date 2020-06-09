@@ -26,7 +26,7 @@ the different types of touch events available in iOS. Alternatively, open the
 [finished sample](https://docs.microsoft.com/samples/xamarin/ios-samples/applicationfundamentals-touch-final) to
 see everything working.
 
-<a name="Touch_Samples"/>
+<a name="Touch_Samples"></a>
 
 ## Touch Samples
 
@@ -171,7 +171,7 @@ instance variables to the class `TouchViewController`:
 
     [![](ios-touch-walkthrough-images/image5.png "The screen after the user drags a button")](ios-touch-walkthrough-images/image5.png#lightbox)
 
-<a name="Gesture_Recognizer_Samples" />
+<a name="Gesture_Recognizer_Samples"></a>
 
 ## Gesture Recognizer Samples
 
@@ -305,7 +305,7 @@ The following screenshot is one example of these interactions:
 
     [![](ios-touch-walkthrough-images/image7.png "This screenshot shows a drag interaction")](ios-touch-walkthrough-images/image7.png#lightbox)
 
-<a name="Custom_Gesture_Recognizer"/>
+<a name="Custom_Gesture_Recognizer"></a>
 
 ## Custom Gesture Recognizer
 

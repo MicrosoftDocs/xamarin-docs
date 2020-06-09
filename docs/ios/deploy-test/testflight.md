@@ -160,7 +160,7 @@ Under **Test Information**, you can provide testers with significant information
 
 Note that this metadata **is not** required for internal testers, but **is** required for external testers.
 
-<a name="beta-testing" />
+<a name="beta-testing"></a>
 
 ### Enable Beta Testing
 

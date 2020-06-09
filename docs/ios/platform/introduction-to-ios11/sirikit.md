@@ -32,7 +32,7 @@ Other new features include:
 
 Some of these features are explained below. For more details on the others, refer to [Apple's SiriKit documentation](https://developer.apple.com/documentation/sirikit).
 
-<a name="listsnotes" />
+<a name="listsnotes"></a>
 
 ## Lists and Notes
 
@@ -230,7 +230,7 @@ The following test phrases should work in the sample app:
 > If testing on real devices, don't forget to configure your App ID and
 > provisioning profiles for SiriKit support.
 
-<a name="alternativenames" />
+<a name="alternativenames"></a>
 
 ## Alternative Names
 

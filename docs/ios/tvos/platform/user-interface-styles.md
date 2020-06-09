@@ -15,7 +15,7 @@ _This article covers the Light and Dark UI Themes that Apple has added to tvOS 1
 
 tvOS 10 now supports both a Dark and Light User Interface theme that all of the build-in UIKit controls will automatically adapt to, based on the user's preferences. Additionally, the developer can manually adjust UI elements based on the theme that the user has selected and can override a given theme.
 
-<a name="About-the-New-User-Interface-Styles" />
+<a name="About-the-New-User-Interface-Styles"></a>
 
 ## About the New User Interface Styles
 
@@ -33,7 +33,7 @@ The user has the option to switch the theme at any time and might do so based on
 
 The Light UI Theme is the default theme, and any existing tvOS apps will still use the Light theme, regardless of the user's preferences, unless they are modified for tvOS 10 to take advantage of the Dark theme. A tvOS 10 app also has the ability to override the current theme and always use either the Light or Dark theme for some or all of its UI.
 
-<a name="Adopting-the-Light-and-Dark-Themes" />
+<a name="Adopting-the-Light-and-Dark-Themes"></a>
 
 ## Adopting the Light and Dark Themes
 
@@ -57,7 +57,7 @@ There are three possible values for the `UIUserInterfaceStyle` key:
 - **Dark** - Forces the tvOS app's UI to always use the Dark theme.
 - **Automatic** - Switches between the Light and Dark theme based on the user's preferences in Settings. This is the preferred setting.
 
-<a name="UIKit-Theme-Support" />
+<a name="UIKit-Theme-Support"></a>
 
 ### UIKit Theme Support
 
@@ -70,7 +70,7 @@ Additionally, `UILabel` and `UITextView` will automatically change their color b
 
 If the developer ever changes the text color manually (either in the Storyboard or code), they will be responsible for handling color changes based on the UI theme.
 
-<a name="New-Blur-Effects" />
+<a name="New-Blur-Effects"></a>
 
 ### New Blur Effects
 
@@ -79,7 +79,7 @@ For supporting the Light and Dark themes in a tvOS 10 app, Apple has added two n
 - `UIBlurEffectStyleRegular` - Uses a light blur in the Light theme and a dark blur in the Dark theme.
 - `UIBlurEffectStyleProminent` - Uses an extra-light blur in the Light theme and an extra-dark blur in the Dark theme.
 
-<a name="Working-with-Trait-Collections" />
+<a name="Working-with-Trait-Collections"></a>
 
 ## Working with Trait Collections
 
@@ -97,7 +97,7 @@ Additionally, Trait Collections have the following features in tvOS 10:
 > [!IMPORTANT]
 > The Xamarin.tvOS Early Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection` yet. Full support will be added in a future release.
 
-<a name="Customizing-Appearance-Based-on-Theme" />
+<a name="Customizing-Appearance-Based-on-Theme"></a>
 
 ### Customizing Appearance Based on Theme
 
@@ -117,7 +117,7 @@ button.ForTraitCollection(dark).SetTitleColor (UIColor.White, UIControlState.Nor
 > [!IMPORTANT]
 > Unfortunately, the Xamarin.tvOS Preview for tvOS 10 doesn't fully support `UIUserInterfaceStyle` for `UITraitCollection`, so this type of customization is not yet available. Full support will be added in a future release.
 
-<a name="Responding-to-Theme-Changes-Directly" />
+<a name="Responding-to-Theme-Changes-Directly"></a>
 
 ### Responding to Theme Changes Directly
 
@@ -135,7 +135,7 @@ public override void TraitCollectionDidChange (UITraitCollection previousTraitCo
 }
 ```
 
-<a name="Responding-to-Theme-Changes-Directly" />
+<a name="Responding-to-Theme-Changes-Directly"></a>
 
 ### Overriding a Trait Collection
 
@@ -154,7 +154,7 @@ SetOverrideTraitCollection (trait, this);
 
 For more information, please see the [Traits](~/ios/user-interface/storyboards/unified-storyboards.md) and [Overriding Traits](~/ios/user-interface/storyboards/unified-storyboards.md) sections of our [Introduction to Unified Storyboards](~/ios/user-interface/storyboards/unified-storyboards.md) documentation.
 
-<a name="Trait-Collections-and-Storyboards" />
+<a name="Trait-Collections-and-Storyboards"></a>
 
 ### Trait Collections and Storyboards
 
@@ -196,7 +196,7 @@ Apple has added the following abilities when editing tvOS Storyboards in Interfa
 
 Additionally, the tvOS Simulator now has a keyboard shortcut to allow the developer to quickly switch between the Light and Dark themes when debugging a tvOS app. Use the **Command-Shift-D** keyboard sequence to toggle between Light and Dark.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

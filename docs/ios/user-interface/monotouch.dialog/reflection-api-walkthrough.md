@@ -162,7 +162,7 @@ rows corresponding to the enumeration, as shown below:
 
  [![](reflection-api-walkthrough-images/04-set-category.png "Selecting the row results in the application navigating to a new screen with rows corresponding to the enumeration")](reflection-api-walkthrough-images/04-set-category.png#lightbox)
 
- <a name="Summary" />
+ <a name="Summary"></a>
 
 ## Summary
 

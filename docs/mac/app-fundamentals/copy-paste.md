@@ -678,7 +678,7 @@ If you are creating a custom data type (for example, a drawing object in a vecto
 
 When an app prepares to paste data copied from a pasteboard, it must find the representation that best fits its abilities (if any exists). Typically this will be the richest type available (for example formatted text for a word processing app), falling back to the simplest forms available as required (plain text for a simple text editor).
 
-<a name="Promised_Data" />
+<a name="Promised_Data"></a>
 
 ### Promised data
 
@@ -792,7 +792,7 @@ public bool ImageAvailableOnPasteboard {
 
 Based on the function of a given Xamarin.Mac app, it may be required to read URLs from a pasteboard, but only if they meet a given set of criteria (such as pointing to files or URLs of a specific data type). In this situation, you can specify additional search criteria using the second parameter of the `CanReadObjectForClasses` or `ReadObjectsForClasses` methods.
 
-<a name="Custom_Data_Types" />
+<a name="Custom_Data_Types"></a>
 
 ## Custom data types
 

@@ -392,7 +392,7 @@ We can apply this approach to any Segue on this view controller by checking the 
 
 Refer to the Storyboards.Conditional solution in the [Manual Storyboards sample](https://docs.microsoft.com/samples/xamarin/ios-samples/manualstoryboard) for a working example.
 
-<a name="Using-Storyboard-References" />
+<a name="Using-Storyboard-References"></a>
 
 ## Using Storyboard References
 
@@ -400,7 +400,7 @@ A Storyboard Reference allows you to take a large, complex Storyboard design and
 
 Additionally, a Storyboard Reference can provide an _anchor_ to another scene within the same Storyboard or a specific scene on a different one.
 
-<a name="Referencing-an-External-Storyboard" />
+<a name="Referencing-an-External-Storyboard"></a>
 
 ### Referencing an External Storyboard
 
@@ -436,7 +436,7 @@ To add a reference to an external Storyboard, do the following:
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Initial View Controller from the External Storyboard specified in the Storyboard Reference will be displayed.
 
-<a name="Referencing-a-Specific-Scene-in-an-External-Storyboard" />
+<a name="Referencing-a-Specific-Scene-in-an-External-Storyboard"></a>
 
 ### Referencing a Specific Scene in an External Storyboard
 
@@ -474,7 +474,7 @@ To add a reference to a specific Scene an external Storyboard (and not the Initi
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Scene with the given **Storyboard ID** from the External Storyboard specified in the Storyboard Reference will be displayed.
 
-<a name="Referencing-a-Specific-Scene-in-the-Same-Storyboard" />
+<a name="Referencing-a-Specific-Scene-in-the-Same-Storyboard"></a>
 
 ### Referencing a Specific Scene in the Same Storyboard
 

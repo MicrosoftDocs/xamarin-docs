@@ -46,7 +46,7 @@ you can still use the C# string data type, but you must use the
 attribute to inform the binding generator that this string
 should not be marshaled as an `NSString`, but instead as a C string.
 
- <a name="Exceptions_to_the_Rule" />
+ <a name="Exceptions_to_the_Rule"></a>
 
 ## Exceptions to the Rule
 

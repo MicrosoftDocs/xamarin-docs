@@ -59,7 +59,7 @@ This screenshot shows the contents of a PCL-based NuGet – only a single PCL as
 
 ![](single-codebase-images/nuget-output.png "Files contained in the NuGet package")
 
-<a name="add-platforms" />
+<a name="add-platforms"></a>
 
 ## Adding Platform-Specific Code
 

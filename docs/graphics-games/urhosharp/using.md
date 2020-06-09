@@ -15,7 +15,7 @@ the basics: how to setup your scene, how to load resources (this
 contains your artwork) and how to create simple interactions for your
 game.
 
-<a name="scenenodescomponentsandcameras"/>
+<a name="scenenodescomponentsandcameras"></a>
 
 ## Scenes, nodes, components, and cameras
 
@@ -704,7 +704,7 @@ Finally the maximum time (in milliseconds) spent each frame on
 finishing background loaded resources can be configured by setting the
 `FinishBackgroundResourcesMs` property on the `ResourceCache`.
 
-<a name="sound"/>
+<a name="sound"></a>
 
 ## Sound
 
@@ -726,7 +726,7 @@ soundSource.Gain = 0.5f;
 soundSource.AutoRemove = true;
 ```
 
-<a name="particles"/>
+<a name="particles"></a>
 
 ## Particles
 

@@ -51,7 +51,7 @@ Health Kit apps require:
 
 To find out more about provisioning an iOS app, the [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) article in Xamarin’s **Getting Started** series describes the relationship between Developer Certificates, App IDs, Provisioning Profiles, and App Entitlements.
 
-<a name="explicit-appid" />
+<a name="explicit-appid"></a>
 
 ### Explicit App ID and Provisioning Profile
 
@@ -77,7 +77,7 @@ Click **Generate** and await the creation of your profile. Download the file and
 
 [![](healthkit-images/image05.png "Viewing the profile in Xcode")](healthkit-images/image05.png#lightbox)
 
-<a name="associating-appid" />
+<a name="associating-appid"></a>
 
 ### Associating the App ID and Provisioning Profile With Your Xamarin.iOS App
 
@@ -126,7 +126,7 @@ Similarly, the `Info.plist` for the app must have a value of `healthkit` associa
 
 The sample application provided with this article includes a preconfigured `Entitlements.plist` that includes all of the required keys.
 
-<a name="programming" />
+<a name="programming"></a>
 
 ## Programming Health Kit
 
@@ -144,7 +144,7 @@ The types storable in the Health Kit datastore are all subclasses of `HKObjectTy
 
 `HKQuantityType` types range from `HKQuantityTypeIdentifier.ActiveEnergyBurned` to `HKQuantityTypeIdentifier.StepCount`. 
 
-<a name="requesting-permission" />
+<a name="requesting-permission"></a>
 
 ### Requesting Permission From the User
 

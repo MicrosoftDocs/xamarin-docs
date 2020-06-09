@@ -125,7 +125,7 @@ public void DidInvalidate(NFCNdefReaderSession session, NSError error)
 Once a session has been invalidated, a new session object must
 be created to scan again.
 
-<a name="step2" />
+<a name="step2"></a>
 
 ### 2. Start an `NFCNdefReaderSession`
 

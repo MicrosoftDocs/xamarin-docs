@@ -38,7 +38,7 @@ Since ATS is enabled by default in apps built for iOS 9 and OS X 10.11 (El Capit
 
 To find out more about ATS, please see our [App Transport Security](~/ios/app-fundamentals/ats.md) guide.
 
-<a name="multitasking" />
+<a name="multitasking"></a>
 
 ## Multitasking for iPad
 

@@ -10,7 +10,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Installing Xamarin in Visual Studio 2019
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 Check the [system requirements](~/cross-platform/get-started/requirements.md) before you begin.
 

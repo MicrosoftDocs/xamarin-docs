@@ -20,7 +20,7 @@ In addition to releasing an application for sale through the iTunes App Store, i
 
 In either case, an IPA package (a special type of zip file) must be created and digitally signed with the correct Distribution Provisioning Profile. This article covers the steps required to build the IPA package and install the package on an iOS device using iTunes on a Mac or Windows PC.
 
-<a name="iTunesMetadata" />
+<a name="iTunesMetadata"></a>
 
 ## The iTunesMetadata.plist File
 
@@ -30,7 +30,7 @@ iOS applications that are delivered either via Ad Hoc or In-House distribution, 
 
 A custom **iTunesMetadata.plist** can also be created to supply the additional information to a distribution. To find out more about the content of this file and how to create it, please see our [The iTunesMetadata.plist Contents](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_contents) and [Creating an iTunesMetadata.plist File](~/ios/deploy-test/app-distribution/itunesmetadata.md#iTunesMetadata_creating) documentation.
 
-<a name="iTunesArtwork" />
+<a name="iTunesArtwork"></a>
 
 ## iTunes Artwork
 
@@ -45,7 +45,7 @@ To specify the iTunes Artwork, do the following:
 
 Please see the [iTunes Artwork](~/ios/app-fundamentals/images-icons/app-icons.md) documentation for more details.
 
-<a name="createipa" />
+<a name="createipa"></a>
 
 ## Creating an IPA
 
@@ -160,7 +160,7 @@ Once the provisioning profile has been created and selected, the optional **iTun
 
 -----
 
-<a name="Customizing-the-IPA-Location" />
+<a name="Customizing-the-IPA-Location"></a>
 
 ## Customizing the IPA Location
 
@@ -216,7 +216,7 @@ Or the following on Mac:
 msbuild /p:Configuration="Release" /p:Platform="iPhone" /p:IpaPackageDir="$HOME/Builds" /t:Build SingleViewIphone1.sln
 ```
 
-<a name="installipa" />
+<a name="installipa"></a>
 
 ## Installing an IPA using iTunes
 
@@ -236,7 +236,7 @@ The new iOS application will be shown in the **My Apps** section, where you can 
 
 The user can now sync iTunes with their device to install the new iOS application.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

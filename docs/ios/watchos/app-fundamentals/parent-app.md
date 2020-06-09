@@ -54,7 +54,7 @@ shared.Synchronize ();
 var count = shared.IntForKey ("count");
 ```
 
-<a name="files" />
+<a name="files"></a>
 
 ### Files
 

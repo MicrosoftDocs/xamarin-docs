@@ -41,7 +41,7 @@ ATS will enforce the following requirements for all internet connections:
 
 Again, since ATS is enabled by default in iOS 9, any attempt to make a connection that doesn't meet these requirements will result in an exception being thrown.
 
-<a name="ATS-Compatible-Ciphers" />
+<a name="ATS-Compatible-Ciphers"></a>
 
 ### ATS Compatible Ciphers
 
@@ -61,7 +61,7 @@ The following forward secrecy cipher type are accepted by ATS secured internet c
 
 For more information about working with iOS internet communication classes, please see Apple's [NSURLConnection Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/Cocoa/Reference/Foundation/Classes/NSURLConnection_Class/index.html#//apple_ref/doc/uid/TP40003755), [CFURL Reference](https://developer.apple.com/library/prerelease/ios/documentation/CoreFoundation/Reference/CFURLRef/index.html#//apple_ref/doc/uid/20001206) or [NSURLSession Class Reference](https://developer.apple.com/library/prerelease/ios/documentation/Foundation/Reference/NSURLSession_class/index.html#//apple_ref/doc/uid/TP40013435).
 
-<a name="xamarinsupport" />
+<a name="xamarinsupport"></a>
 
 ## Supporting ATS in Xamarin.iOS
 
@@ -143,7 +143,7 @@ Since ATS is enabled by default in apps built for iOS 9 and OS X 10.11 (El Capit
 
 Apple also provides the [TLSTool Sample App](https://developer.apple.com/library/mac/samplecode/sc1236/Introduction/Intro.html#//apple_ref/doc/uid/DTS40014927-Intro-DontLinkElementID_2) that can be compiled (or optionally transcoded to Xamarin and C#) and used to diagnose ATS/TLS issues. Please see the [Opting-Out of ATS](#optout) section below for information on how to solve this issue.
 
-<a name="config" />
+<a name="config"></a>
 
 ## Configuring ATS Options
 
@@ -183,7 +183,7 @@ Each key has the following type and meaning:
 - **NSThirdPartyExceptionRequiresForwardSecrecy** (`Boolean`) - If `YES` a 3rd party domain requires forward secrecy.
 - **NSThirdPartyExceptionAllowsInsecureHTTPLoads** (`Boolean`) - If `YES` the ATS will allow non-secure communication with 3rd party domains.
 
-<a name="optout" />
+<a name="optout"></a>
 
 ### Opting-Out of ATS
 
@@ -244,7 +244,7 @@ Inside Visual Studio for Mac, double-click the `Info.plist` file in the **Soluti
 
 Again, disabling ATS should _only_ be used as a last resort, if switching to secure connections is either unavailable or impractical.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

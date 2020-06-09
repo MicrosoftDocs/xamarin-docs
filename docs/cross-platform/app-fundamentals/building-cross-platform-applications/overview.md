@@ -65,7 +65,7 @@ components that provide common services across all these systems such as:
 
 Some of these components are implemented in the *Tasky* case study.
 
- <a name="Separate_Reusable_Code_into_a_Core_Library" />
+ <a name="Separate_Reusable_Code_into_a_Core_Library"></a>
 
 ## Separate Reusable Code into a Core Library
 
@@ -73,7 +73,7 @@ By following the principle of separation of responsibility by layering your appl
 
  ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
 
- <a name="Case_Studies" />
+ <a name="Case_Studies"></a>
 
 ## Case Studies
 

@@ -19,7 +19,7 @@ If you need to get the attention of the tvOS user or ask permission to perform a
 
 If addition to displaying a message, you can add buttons and text fields to an alert to allow the user to respond to actions and provide feedback.
 
-<a name="About-Alerts" />
+<a name="About-Alerts"></a>
 
 ## About Alerts
 
@@ -32,7 +32,7 @@ Apple has the following suggestions for working with Alerts:
 - **Use Alerts Sparingly** - Alerts disrupt the user's flow with the app and interrupt the user experience and as such, should only be used for important situations such as error notifications, In-App Purchases and destructive actions.
 - **Provides Useful Choices** - If the Alert presents options to the user, your should ensure that each option offers critical information and provides useful actions for the user to take.
 
-<a name="Alert-Titles-and-Messages" />
+<a name="Alert-Titles-and-Messages"></a>
 
 ### Alert Titles and Messages
 
@@ -42,7 +42,7 @@ Apple has the following suggestions for presenting an Alert's Title and optional
 - **Use Descriptive Titles that do not Require a Message** - Wherever possible, consider making the Alert's title descriptive enough that the optional Message text is not required.
 - **Make the Message a Short, Complete Sentence** - If the optional Message is required to get the point of the Alert across, keep it as simple as possible and make it a complete sentence with proper capitalization and punctuation.
 
-<a name="Alert-Buttons" />
+<a name="Alert-Buttons"></a>
 
 ### Alert Buttons
 
@@ -52,7 +52,7 @@ Apple has the following suggestion for adding Buttons to an Alert:
 - **Use Succinct, Logical Button Titles** - Simple one to two word Button titles that clearly describe the Button's action work best. For more information, see our [Working with Buttons](~/ios/tvos/user-interface/buttons.md) documentation.
 - **Clearly Mark Destructive Buttons** - For Buttons that perform a destructive action (such as deleting a file) clearly mark them with the `UIAlertActionStyle.Destructive` style.
 
-<a name="Displaying-an-Alert" />
+<a name="Displaying-an-Alert"></a>
 
 ## Displaying an Alert
 
@@ -106,7 +106,7 @@ The `UIAlertActionStyle` enum allow you to set the style of the button as one of
 
 The `AddAction` method adds the given action to the `UIAlertViewController` and finally the `PresentViewController (alertController, true, null)` method displays the given alert to the user.
 
-<a name="Adding-Text-Fields" />
+<a name="Adding-Text-Fields"></a>
 
 ## Adding Text Fields
 
@@ -183,7 +183,7 @@ alert.AddTextField ((textField) => {
 
 After the user has entered a value in the Text Field, we can use the `field` variable to access that value.
 
-<a name="Alert-View-Controller-Helper-Class" />
+<a name="Alert-View-Controller-Helper-Class"></a>
 
 ## Alert View Controller Helper Class
 
@@ -356,7 +356,7 @@ partial void DisplayTextInputAlert (Foundation.NSObject sender) {
 #endregion
 ```
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

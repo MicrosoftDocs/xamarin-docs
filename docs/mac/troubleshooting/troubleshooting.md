@@ -109,7 +109,7 @@ Enter `Entitlements` for the name and click the **New** button. If your project 
 
 The community of developers using Xamarin products is amazing and many visit our [Xamarin.Mac forums](https://forums.xamarin.com/categories/xamarin-mac) to share experiences and their expertise. In addition, Xamarin engineers periodically visit the forum to help.
 
-<a name="filing-a-bug"/>
+<a name="filing-a-bug"></a>
 
 ## Filing a bug
 

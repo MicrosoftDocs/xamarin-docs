@@ -19,7 +19,7 @@ Xamarin.iOS 8.10 adds support for [System.Data](xref:System.Data), including the
 - `Mono.Data.Tds.dll`
 - `Mono.Data.Sqlite.dll`
 
-<a name="Example" />
+<a name="Example"></a>
 
 ## Example
 
@@ -128,13 +128,13 @@ using (var addCmd = conn.CreateCommand ()) {
 }
 ```
 
-<a name="Missing_Functionality" />
+<a name="Missing_Functionality"></a>
 
 ## Missing Functionality
 
 Both **System.Data** and **Mono.Data.Sqlite** are missing some functionality.
 
-<a name="System.Data" />
+<a name="System.Data"></a>
 
 ### System.Data
 
@@ -147,7 +147,7 @@ Functionality missing from **System.Data.dll** consists of:
 - [System.Data.Odbc](xref:System.Data.Odbc)
 - The  `System.EnterpriseServices.dll` dependency was  *removed* from  `System.Data.dll` , resulting in the removal of the  [SqlConnection.EnlistDistributedTransaction(ITransaction)](xref:System.Data.SqlClient.SqlConnection.EnlistDistributedTransaction*) method.
 
-<a name="Mono.Data.Sqlite" />
+<a name="Mono.Data.Sqlite"></a>
 
 ### Mono.Data.Sqlite
 
@@ -163,7 +163,7 @@ Older version of iOS ship with the following versions of SQLite:
 The most common issues appear to be related to database schema querying, e.g. determining at runtime which columns exist on a given table, such as `Mono.Data.Sqlite.SqliteConnection.GetSchema` (overriding [DbConnection.GetSchema](xref:System.Data.Common.DbConnection.GetSchema) and `Mono.Data.Sqlite.SqliteDataReader.GetSchemaTable` (overriding [DbDataReader.GetSchemaTable](xref:System.Data.Common.DbDataReader.GetSchemaTable). In short, it seems that
 anything using [DataTable](xref:System.Data.DataTable) is unlikely to work.
 
-<a name="Data_Binding" />
+<a name="Data_Binding"></a>
 
 ## Data Binding
 

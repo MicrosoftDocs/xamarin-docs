@@ -33,7 +33,7 @@ You can select one of these:
 - west: Latin languages, Easter and Western European
 - all
 
- <a name="cjk" />
+ <a name="cjk"></a>
 
 ## cjk
 
@@ -44,7 +44,7 @@ You can select one of these:
 - CP950
 - CP54936
 
- <a name="mideast" />
+ <a name="mideast"></a>
 
 ## mideast
 
@@ -56,7 +56,7 @@ You can select one of these:
 - CP28599
 - CP38598
 
- <a name="other" />
+ <a name="other"></a>
 
 ## other
 
@@ -70,7 +70,7 @@ You can select one of these:
 - CP57002
 - CP874
 
- <a name="rare" />
+ <a name="rare"></a>
 
 ## rare
 
@@ -112,7 +112,7 @@ You can select one of these:
 - CP870
 - CP875
 
- <a name="west" />
+ <a name="west"></a>
 
 ## west
 

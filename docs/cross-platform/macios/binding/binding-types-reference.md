@@ -198,7 +198,7 @@ attribute that directs the generator to return the value of the specified
 parameter in the call or the [`[NoDefaultValue]`](#NoDefaultValueAttribute) 
 parameter that instructs the generator that there is no default value.
 
-<a name="BaseTypeAttribute" />
+<a name="BaseTypeAttribute"></a>
 
 ### BaseTypeAttribute
 
@@ -300,7 +300,7 @@ public interface UIActionSheetDelegate {
 }
 ```
 
-<a name="DesignatedDefaultCtorAttribute" />
+<a name="DesignatedDefaultCtorAttribute"></a>
 
 ### DesignatedDefaultCtorAttribute
 
@@ -308,7 +308,7 @@ When this attribute is applied to the interface definition it will generate
 a `[DesignatedInitializer]` attribute on the default (generated) constructor,
 which maps to the `init` selector.
 
-<a name="DisableDefaultCtorAttribute" />
+<a name="DisableDefaultCtorAttribute"></a>
 
 ### DisableDefaultCtorAttribute
 
@@ -318,7 +318,7 @@ the generator from producing the default constructor.
 Use this attribute when you need the object to be initialized with one of the
 other constructors in the class.
 
-<a name="PrivateDefaultCtorAttribute" />
+<a name="PrivateDefaultCtorAttribute"></a>
 
 ### PrivateDefaultCtorAttribute
 
@@ -327,7 +327,7 @@ default constructor as private. This means that you can still instantiate object
 of this class internally from your extension file, but it just wont be
 accessible to users of your class.
 
-<a name="CategoryAttribute" />
+<a name="CategoryAttribute"></a>
 
 ### CategoryAttribute
 
@@ -421,7 +421,7 @@ interface FooObject {
 
 We will issue a warning (BI1117) whenever we find a [`[Static]`](#StaticAttribute) member inside a [`[Category]`](#CategoryAttribute) definition. If you really want to have [`[Static]`](#StaticAttribute) members inside your [`[Category]`](#CategoryAttribute) definitions you can silence the warning by using `[Category (allowStaticMembers: true)]` or by decorating either your member or [`[Category]`](#CategoryAttribute) interface definition with [`[Internal]`](#InternalAttribute).
 
-<a name="StaticAttribute_Class" />
+<a name="StaticAttribute_Class"></a>
 
 ### StaticAttribute
 
@@ -460,7 +460,7 @@ the base method.   Calling that method will throw an
 exception, you are supposed to implement the entire behavior
 on your subclass for any methods you override.
 
-<a name="AbstractAttribute" />
+<a name="AbstractAttribute"></a>
 
 ### AbstractAttribute
 
@@ -487,7 +487,7 @@ public interface UITableViewDataSource {
 }
 ```
 
-<a name="DefaultValueAttribute" />
+<a name="DefaultValueAttribute"></a>
 
 ### DefaultValueAttribute
 
@@ -529,7 +529,7 @@ camera.ShouldUploadToServer = (camera, action) => return SomeDecision ();
 
 See also: [`[NoDefaultValue]`](#NoDefaultValueAttribute), [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute).
 
-<a name="DefaultValueFromArgumentAttribute" />
+<a name="DefaultValueFromArgumentAttribute"></a>
 
 ### DefaultValueFromArgumentAttribute
 
@@ -633,7 +633,7 @@ declaration in the host class:
 public Func<NSAnimation, float, float> ComputeAnimationCurve { get; set; }
 ```
 
-<a name="EventArgsAttribute" />
+<a name="EventArgsAttribute"></a>
 
 ### EventArgsAttribute
 
@@ -694,7 +694,7 @@ var webView = new UIWebView (...);
 webView.LoadFinished += delegate { Console.WriteLine ("done!"); }
 ```
 
-<a name="ModelAttribute" />
+<a name="ModelAttribute"></a>
 
 ### ModelAttribute
 
@@ -704,7 +704,7 @@ methods in the class if the user has overwritten a method in the class. This
 attribute is typically applied to all APIs that wrap an Objective-C delegate
 class.
 
-<a name="NoDefaultValueAttribute" />
+<a name="NoDefaultValueAttribute"></a>
 
 ### NoDefaultValueAttribute
 
@@ -726,7 +726,7 @@ interface CameraDelegate {
 
 See also: [`[DefaultValue]`](#DefaultValueAttribute), [`[DefaultValueFromArgument]`](#DefaultValueFromArgumentAttribute)  
 
-<a name="ProtocolAttribute" />
+<a name="ProtocolAttribute"></a>
 
 ## Protocols
 
@@ -997,7 +997,7 @@ for **Core Foundation** objects.
 The `[ForcedTypeAttribute]` is only valid on parameters, properties, 
 and return value.
 
-<a name="BindAsAttribute" />
+<a name="BindAsAttribute"></a>
 
 ### BindAsAttribute
 
@@ -1108,7 +1108,7 @@ CAScroll? [] GetScrollModes (CGRect [] rects) { ... }
 
 The `rects` parameter will be encapsulated into a `NSArray` that contains an `NSValue` for each `CGRect` and in return you will get an array of `CAScroll?` which has been created using the values of the returned `NSArray` containing `NSStrings`.
 
-<a name="BindAttribute" />
+<a name="BindAttribute"></a>
 
 ### BindAttribute
 
@@ -1152,7 +1152,7 @@ bool Active { get; set; }
 bool Visible { [Bind ("isVisible")] get; set; }
 ```
 
-<a name="AsyncAttribute" />
+<a name="AsyncAttribute"></a>
 
 ### AsyncAttribute
 
@@ -1241,7 +1241,7 @@ Use this property to customize the name of the generated
 async methods.   The default is to use the name of the method
 and append the text "Async", you can use this to change this default.
 
-<a name="DesignatedInitializerAttribute" />
+<a name="DesignatedInitializerAttribute"></a>
 
 ### DesignatedInitializerAttribute
 
@@ -1251,7 +1251,7 @@ the IDE indicate which constructor should be used in subclasses.
 
 This should map to Objective-C/clang use of `__attribute__((objc_designated_initializer))`.
 
-<a name="DisableZeroCopyAttribute" />
+<a name="DisableZeroCopyAttribute"></a>
 
 ### DisableZeroCopyAttribute
 
@@ -1278,7 +1278,7 @@ The following shows two such properties in Objective-C:
 @property(nonatomic,assign) NSString *name2;
 ```
 
-<a name="DisposeAttribute" />
+<a name="DisposeAttribute"></a>
 
 ### DisposeAttribute
 
@@ -1298,7 +1298,7 @@ interface DatabaseConnection {
 }
 ```
 
-<a name="ExportAttribute" />
+<a name="ExportAttribute"></a>
 
 ### ExportAttribute
 
@@ -1332,7 +1332,7 @@ being bound.
 
 #### ExportAttribute.ArgumentSemantic
 
-<a name="FieldAttribute" />
+<a name="FieldAttribute"></a>
 
 ### FieldAttribute
 
@@ -1386,7 +1386,7 @@ interface CameraEffects {
 }
 ```
 
-<a name="InternalAttribute" />
+<a name="InternalAttribute"></a>
 
 ### InternalAttribute
 
@@ -1427,7 +1427,7 @@ public NSObject this [NSObject idx] {
 }
 ```
 
-<a name="IsThreadStaticAttribute" />
+<a name="IsThreadStaticAttribute"></a>
 
 ### IsThreadStaticAttribute
 
@@ -1455,7 +1455,7 @@ generate the `new` keyword in front of the declaration.
 It is used to avoid compiler warnings when the same method or property name
 is introduced in a subclass that already existed in a base class.
 
-<a name="NotificationAttribute" />
+<a name="NotificationAttribute"></a>
 
 ### NotificationAttribute
 
@@ -1599,7 +1599,7 @@ interface MyClass {
 }
 ```
 
-<a name="NullAllowedAttribute" />
+<a name="NullAllowedAttribute"></a>
 
 ### NullAllowedAttribute
 
@@ -1627,7 +1627,7 @@ UIImage IconFile { get; set; }
 void SetImage ([NullAllowed] UIImage image, State forState);
 ```
 
-<a name="OverrideAttribute" />
+<a name="OverrideAttribute"></a>
 
 ### OverrideAttribute
 
@@ -1763,7 +1763,7 @@ attribute is not specified, the default is to generate a virtual method (either
 a virtual method, an abstract method or an override depending on how other
 attributes are used).
 
-<a name="StaticAttribute" />
+<a name="StaticAttribute"></a>
 
 ### StaticAttribute
 
@@ -1779,7 +1779,7 @@ attribute is applied to a property, the generator does not create a backing
 field for this property, which means that the managed class does not keep a
 reference to the object.
 
-<a name="WrapAttribute" />
+<a name="WrapAttribute"></a>
 
 ### WrapAttribute
 
@@ -1923,7 +1923,7 @@ This section describes the attributes that you can apply to the parameters in
 a method definition as well as the `[NullAttribute]` that applies to a property as a
 whole.
 
-<a name="BlockCallback" />
+<a name="BlockCallback"></a>
 
 ### BlockCallback
 
@@ -1941,7 +1941,7 @@ typedef returnType (^SomeTypeDefinition) (int parameter1, NSString *parameter2);
 
 See also: [CCallback](#CCallback).
 
-<a name="CCallback" />
+<a name="CCallback"></a>
 
 ### CCallback
 
@@ -1983,7 +1983,7 @@ foo.LoadFiles (new NSUrl (url1), new NSUrl (url2), new NSUrl (url3));
 This has the added advantage that it does not require users
 to create an array purely for passing elements.
 
-<a name="plainstring" />
+<a name="plainstring"></a>
 
 ### PlainString
 
@@ -2091,7 +2091,7 @@ the forced dispose does not take place.
 
 ## Property attributes
 
-<a name="NotImplementedAttribute" />
+<a name="NotImplementedAttribute"></a>
 
 ### NotImplementedAttribute
 
@@ -2131,7 +2131,7 @@ interface MyMutableString {
 }
 ```
 
-<a name="enum-attributes" />
+<a name="enum-attributes"></a>
 
 ## Enum attributes
 
@@ -2238,7 +2238,7 @@ like the [`[LinkWithAttribute]`](#LinkWithAttribute) or can be used anywhere,
 like the [`[Lion]`](#SinceAndLionAttributes) and [`[Since]`](#SinceAndLionAttributes) 
 attributes.
 
-<a name="LinkWithAttribute" />
+<a name="LinkWithAttribute"></a>
 
 ### LinkWithAttribute
 
@@ -2391,7 +2391,7 @@ Good candidates for weak linking would be `Frameworks` like Accounts,
 `CoreBluetooth`, `CoreImage`, `GLKit`, `NewsstandKit` and `Twitter` since they are only
 available in iOS 5.
 
-<a name="SinceAndLionAttributes" />
+<a name="SinceAndLionAttributes"></a>
 
 ### SinceAttribute (iOS) and LionAttribute (macOS)
 
@@ -2518,7 +2518,7 @@ data type together with a manual API, it is now a lot simpler to do
 this.  For more information, see [Surfacing Strong
 Types](~/cross-platform/macios/binding/objective-c-libraries.md#Surfacing_Strong_Types).
 
-<a name="StrongDictionary" />
+<a name="StrongDictionary"></a>
 
 ### StrongDictionary
 

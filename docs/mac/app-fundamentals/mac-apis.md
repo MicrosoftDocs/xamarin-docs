@@ -42,7 +42,7 @@ This selector invocation can be read the same way:
 - The instance `v` is having its `canDragRowsWithIndexes:atPoint` selector called with two parameters, `set` and `point`, passed in.
 - In C#, The method invocation looks like this: `x.CanDragRows (set, point);`
 
-<a name="finding_selector" />
+<a name="finding_selector"></a>
 
 ## Finding the C# member for a given selector
 

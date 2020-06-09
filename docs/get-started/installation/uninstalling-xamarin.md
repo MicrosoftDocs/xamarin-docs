@@ -13,7 +13,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 This guide explains how to remove Xamarin from Visual Studio on Windows.
 
-<a name="uninstallvs2017" />
+<a name="uninstallvs2017"></a>
 
 ## Visual Studio 2019 and Visual Studio 2017
 

@@ -25,7 +25,7 @@ Ad hoc distribution requires that applications be provisioned using an Ad Hoc *p
 
 This guide will provide information on Provisioning for Ad Hoc distribution, and information on how to distribute a Xamarin.iOS app.
 
-<a name="setup" />
+<a name="setup"></a>
 
 ## Setting Up for Distribution
 
@@ -36,7 +36,7 @@ The next section will describe how to get set up with a Distribution Certificate
 > [!NOTE]
 > Only Team Agents and Admins can create Distribution Certificates and Provisioning Profiles.
 
-<a name="createcertificate" />
+<a name="createcertificate"></a>
 
 ## Create a Distribution Certificate
 
@@ -67,11 +67,11 @@ Alternatively, it is possible to request a Certificate via the Preferences dialo
 2. Next, click the **plus (+)** button and select **iOS App Store**:
     [![Selecting iOS App Store](ad-hoc-distribution-images/selectcert.png)](ad-hoc-distribution-images/selectcert.png#lightbox)
 
-<a name="createprofile" />
+<a name="createprofile"></a>
 
 ## Create a Distribution Provisioning Profile
 
-<a name="createappid" />
+<a name="createappid"></a>
 
 ### Create an App ID
 As with any other Provisioning Profile you create, an App ID will be required to identify the App that will be distributed to the user's device. If you haven't already created this, follow the steps below to create one:
@@ -117,7 +117,7 @@ You may have to quit Visual Studio and have Xcode (on the Build Host's Mac) refr
 
 -----
 
-<a name="selectprofile" />
+<a name="selectprofile"></a>
 
 ## Selecting a Distribution Profile in a Xamarin.iOS Project
 
@@ -156,7 +156,7 @@ When you are ready to do a final build of a Xamarin.iOS application, select the 
 
 -----
 
-<a name="adhoc" />
+<a name="adhoc"></a>
 
 ## Ad Hoc Distribution
 
@@ -164,7 +164,7 @@ While [TestFlight](~/ios/deploy-test/testflight.md) is a popular means of beta t
 
 Ad Hoc Distribution allows developers to beta test apps on a wide range of devices when iTunes connect is not an option. Ad-Hoc works in a similar way to In-House Distribution, and requires an IPA to be created, which can then be distributed either over-the-air, or manually via iTunes.
 
-<a name="IPA_Creation" />
+<a name="IPA_Creation"></a>
 
 ### IPA Support for Ad Hoc Deployment
 

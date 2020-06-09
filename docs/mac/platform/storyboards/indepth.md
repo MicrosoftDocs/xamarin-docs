@@ -19,7 +19,7 @@ The storyboard is a resource file (with the extensions of `.storyboard`) that ge
 
 [![The Info.plist editor](indepth-images/sb01.png)](indepth-images/sb01.png#lightbox)
 
-<a name="Loading-from-Code" />
+<a name="Loading-from-Code"></a>
 
 ## Loading from Code
 
@@ -44,13 +44,13 @@ Optionally, you can use the `InstantiateInitialController` method to load the Vi
 
 It's marked by the **Storyboard Entry Point** and the open ended arrow above.
 
-<a name="View-Controllers" />
+<a name="View-Controllers"></a>
 
 ## View Controllers
 
 View Controllers define the relationships between a given View of information within a Mac app and the data model that provides that information. Each top level scene in the Storyboard represents one View Controller in the Xamarin.Mac app's code.
 
-<a name="The-View-Controller-Lifecycle" />
+<a name="The-View-Controller-Lifecycle"></a>
 
 ### The View Controller Lifecycle
 
@@ -65,7 +65,7 @@ Several new methods have been added to the `NSViewController` class to support S
 - `ViewWillLayout` - This method is called just before the subviews of this view are laid out on screen.
 - `ViewDidLayout` - This method is called directly after the subviews of view are laid out on screen.
 
-<a name="The-Responder-Chain" />
+<a name="The-Responder-Chain"></a>
 
 ### The Responder Chain
 
@@ -75,7 +75,7 @@ Additionally, `NSViewControllers` are now part of the Window's _Responder Chain_
 
 And as such they are wired-up to receive and respond to events such as Cut, Copy and Paste menu item selections. This automatic View Controller wire-up only occurs on apps running on macOS Sierra (10.12) and greater.
 
-<a name="Containment" />
+<a name="Containment"></a>
 
 ### Containment
 
@@ -91,7 +91,7 @@ All Container View Controllers built into macOS have a specific layout which App
 
 The Collection View Controller contains an array of Collection View Items, each of which contain one or more View Controllers that contain their own Views.
 
-<a name="Segues" />
+<a name="Segues"></a>
 
 ## Segues
 
@@ -99,7 +99,7 @@ Segues provide the relationships between all of the Scenes that define your app'
 
 In macOS, most apps tend to group their views together within the same window using UI elements such as Split Views and Tabs. Unlike iOS, where views need to be transitioned on and off screen, due to limited physical display space.
 
-<a name="Presentation-Segues" />
+<a name="Presentation-Segues"></a>
 
 ### Presentation Segues
 
@@ -113,7 +113,7 @@ Given macOS's tendencies towards containment, there are situations where _Presen
 
 When using Presentation Segues, you can override the `PrepareForSegue` method of the parent View Controller for presentation to initialize and variables and provide any data to the View Controller being presented.
 
-<a name="Triggered-Segues" />
+<a name="Triggered-Segues"></a>
 
 ### Triggered Segues
 
@@ -147,7 +147,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 Optionally, you can override the `ShouldPerformSegue` method and control whether or not the Segue is actually executed via C# code. For manually presented View Controllers, call their `DismissController` method to remove them from display when they are no longer needed.
 
-<a name="Creating-Custom-Segues" />
+<a name="Creating-Custom-Segues"></a>
 
 ### Creating Custom Segues
 
@@ -212,7 +212,7 @@ To use this new Segue type in Xcode's Interface Builder, we need to compile the 
 
 [![Setting the Segue class](indepth-images/sg01.png)](indepth-images/sg01.png#lightbox)
 
-<a name="Triggered-Segues" />
+<a name="Triggered-Segues"></a>
 
 ## Window Controllers
 
@@ -230,7 +230,7 @@ Window Controller are responsible for the following features of a macOS app:
 - They manage the Window's Title Bar and Toolbar (if available).
 - They manage the Content View Controller to display the contents of the Window.
 
-<a name="Gesture-Recognizers" />
+<a name="Gesture-Recognizers"></a>
 
 ## Gesture Recognizers
 
@@ -250,7 +250,7 @@ The following Gesture Recognizers are available in macOS:
 - `NSMagnificationGestureRecognizer` - Registers a magnification event from trackpad hardware.
 - `NSRotationGestureRecognizer` - Registers a rotation event from trackpad hardware.
 
-<a name="Using-Storyboard-References" />
+<a name="Using-Storyboard-References"></a>
 
 ## Using Storyboard References
 
@@ -258,7 +258,7 @@ A Storyboard Reference allows you to take a large, complex Storyboard design and
 
 Additionally, a Storyboard Reference can provide an _anchor_ to another scene within the same Storyboard or a specific scene on a different one.
 
-<a name="Referencing-an-External-Storyboard" />
+<a name="Referencing-an-External-Storyboard"></a>
 
 ### Referencing an External Storyboard
 
@@ -286,7 +286,7 @@ To add a reference to an external Storyboard, do the following:
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Initial Window Controller from the External Storyboard specified in the Storyboard Reference will be displayed.
 
-<a name="Referencing-a-Specific-Scene-in-an-External-Storyboard" />
+<a name="Referencing-a-Specific-Scene-in-an-External-Storyboard"></a>
 
 ### Referencing a Specific Scene in an External Storyboard
 
@@ -314,7 +314,7 @@ To add a reference to a specific Scene an external Storyboard (and not the Initi
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Scene with the given **Storyboard ID** from the External Storyboard specified in the Storyboard Reference will be displayed.
 
-<a name="Referencing-a-Specific-Scene-in-the-Same-Storyboard" />
+<a name="Referencing-a-Specific-Scene-in-the-Same-Storyboard"></a>
 
 ### Referencing a Specific Scene in the Same Storyboard
 
@@ -341,7 +341,7 @@ To add a reference to a specific Scene the same Storyboard, do the following:
 
 When the app is run and the user clicks on the UI element that you created the Segue from, the Scene with the given **Storyboard ID** in the same Storyboard specified in the Storyboard Reference will be displayed.
 
-<a name="Complex-Storyboard-Example" />
+<a name="Complex-Storyboard-Example"></a>
 
 ## Complex Storyboard Example
 

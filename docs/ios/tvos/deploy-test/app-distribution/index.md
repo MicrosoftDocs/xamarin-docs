@@ -25,7 +25,7 @@ Apple provides the following ways to distribute a tvOS app, which are supported 
 
 All these scenarios require that applications be provisioned using the appropriate *provisioning profile*. Provisioning profiles are files that contain code signing information, as well as the identity of the application and the intended distribution mechanism. For the non-App Store distribution they also contain information about what devices the app can be deployed to.
 
-<a name="Apple-TV-App-Store-Distribution" />
+<a name="Apple-TV-App-Store-Distribution"></a>
 
 ## Apple TV App Store Distribution
 
@@ -54,7 +54,7 @@ If you are having issues submitting your Xamarin.tvOS app to the Apple TV App St
 
 For more information, please visit the [Publishing to the Apple TV App Store](~/ios/tvos/deploy-test/app-distribution/app-store-publishing.md) guide.
 
-<a name="In-House-Distribution" />
+<a name="In-House-Distribution"></a>
 
 ## In-House Distribution
 
@@ -62,7 +62,7 @@ Sometimes called *Enterprise Distribution*, in-house distribution allows members
 
 For more information on getting set-up and how to distribute your application In-House, please refer to the [In-House Distribution guide](~/ios/deploy-test/app-distribution/in-house-distribution.md). This document is specific to iOS but the same techniques are used for tvOS apps.
 
-<a name="Ad_Hoc_Distribution"/>
+<a name="Ad_Hoc_Distribution"></a>
 
 ## Ad Hoc Distribution
 
@@ -70,7 +70,7 @@ Xamarin.tvOS apps can be user-tested via ad hoc distribution, which is available
 
 For more information on getting set-up and how to distribute your app In-House, please refer to the [Ad Hoc Distribution guide](~/ios/deploy-test/app-distribution/ad-hoc-distribution.md). Again, this document is specific to iOS but the same techniques are used for tvOS apps.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

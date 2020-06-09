@@ -19,13 +19,13 @@ Storyboards allow you to develop a User Interface for your Xamarin.Mac app that 
 
 This article will provide an introduction to using Storyboards to define a Xamarin.Mac app's user Interface.
 
-<a name="What-are-Storyboards" />
+<a name="What-are-Storyboards"></a>
 
 ## What are Storyboards?
 
 By using Storyboards, all of a Xamarin.Mac app's UI can be defined in a single location with all of the navigation between its individual elements and user interfaces. Storyboards for Xamarin.Mac, work in a very similar fashion to Storyboards for Xamarin.iOS. However, they contain a different set of _Segue Types_ because of the different interface idioms.
 
-<a name="Working-with-Scenes" />
+<a name="Working-with-Scenes"></a>
 
 ### Working with Scenes
 
@@ -39,7 +39,7 @@ Each Scene represents a given View and View Controller Pair with a set of lines 
 
 The most important thing to note is that each Segue represents the flow of some form of data between the given element of the app's UI.
 
-<a name="Working-with-View-Controllers" />
+<a name="Working-with-View-Controllers"></a>
 
 ### Working with View Controllers
 
@@ -55,7 +55,7 @@ Within a given Scene, you can do all of the things that would normally have been
 - Define element positions and auto layout constraints.
 - Wire-up Actions and Outlets to expose UI elements to code.
 
-<a name="Working-with-Segues" />
+<a name="Working-with-Segues"></a>
 
 ### Working with Segues
 
@@ -67,7 +67,7 @@ Given macOS's tendencies towards containment, there are situations where _Presen
 
 When using Presentation Segues, you can override the `PrepareForSegue` method of the parent View Controller for presentation to initialize and variables and provide any data to the View Controller being presented.
 
-<a name="Design-and-Run-Times" />
+<a name="Design-and-Run-Times"></a>
 
 ### Design and Run Times
 
@@ -81,19 +81,19 @@ At Design time (when layout out the UI in Xcode's Interface Builder), each eleme
 
 By defining each element in this way, it allows for the lazy-loading of each element only as it is needed during runtime. In macOS, the entire process was designed to allow the developer to create complex, flexible User Interfaces that require a bare minimum of backing code to make them work, all while being as efficient with system resources as possible.
 
-<a name="Storyboard-Quick-Start" />
+<a name="Storyboard-Quick-Start"></a>
 
 ## Storyboard Quick Start
 
 In the [Storyboard Quick Start](~/mac/platform/storyboards/quickstart.md) guide, we'll create a simple Xamarin.Mac app that introduces the key concepts of working with storyboards to create a User Interface. The sample app will consist of a Spilt View containing a _Content Area_ and an _Inspector Area_ and it will present a simple Preferences Dialog window. We'll be using Segues to tie all of the User Interface elements together.
 
-<a name="Working-with-Storyboards" />
+<a name="Working-with-Storyboards"></a>
 
 ## Working with Storyboards
 
 This section covers the in-depth details of [Working with Storyboards](~/mac/platform/storyboards/indepth.md) in a Xamarin.Mac app. We take an in-depth look at Scenes and how they are composed of View Controllers and View. Then, we'll take a look at how Scenes are tied together with Segues. Finally, we'll take a look at working with custom Segue types. 
 
-<a name="Complex-Storyboard-Example" />
+<a name="Complex-Storyboard-Example"></a>
 
 ## Complex Storyboard Example
 
@@ -101,7 +101,7 @@ For an example of a complex example of working with Storyboards in a Xamarin.Mac
 
 The SourceWriter code has been fully commented and, where available, links have be provided from key technologies or methods to relevant information in the Xamarin.Mac Guides Documentation.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

@@ -56,7 +56,7 @@ be used to refer to user interface elements via the UIAutomation API.
 The value of `AccessibilityIdentifier` is never spoken or displayed
 to the user.
 
-<a name="postnotification" />
+<a name="postnotification"></a>
 
 ## PostNotification
 
@@ -129,7 +129,7 @@ notesText.AccessibilityHint = NSBundle.MainBundle.LocalizedString ("Provide more
 Refer to the [iOS localization guide](~/ios/app-fundamentals/localization/index.md)
 for more details on localizing content.
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## Testing Accessibility
 

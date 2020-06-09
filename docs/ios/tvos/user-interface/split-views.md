@@ -15,7 +15,7 @@ A Split View Controller presents and manages a Master and Detail View Controller
 
 [![](split-views-images/intro01.png "Sample Split View")](split-views-images/intro01.png#lightbox)
 
-<a name="About-Split-View-Controllers" />
+<a name="About-Split-View-Controllers"></a>
 
 ## About Split View Controllers
 
@@ -35,7 +35,7 @@ Apple has the following suggestions for working with Split View Controllers:
 - **Persist the Main Selection** - While the content on the Detail View can change is response to a user's selection in the Master View, the Master View content should be fixed. Additionally, you should clearly show the currently selected item in the Master View.
 - **Use a Single, Unified Title** - Typically, you'll want to use a single, centered title in the Detail View, instead of a Title in both the Detail and the Master View.
 
-<a name="Split-View-Controllers-and-Storyboards" />
+<a name="Split-View-Controllers-and-Storyboards"></a>
 
 ## Split View Controllers and Storyboards
 
@@ -85,13 +85,13 @@ The easiest way to work with Split View Controllers in a Xamarin.tvOS app is to 
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Working-with-Split-View-Controllers" />
+<a name="Working-with-Split-View-Controllers"></a>
 
 ## Working with Split View Controllers
 
 As stated above, a Split View Controller is often used in situations where you are displaying filtered content to the user. The main categories are displayed on the left in the Master View, and the filtered results on the right in the Detail View based on the user's selection.
 
-<a name="Accessing-Master-and-Detail" />
+<a name="Accessing-Master-and-Detail"></a>
 
 ### Accessing Master and Detail
 
@@ -105,7 +105,7 @@ var detailController = ViewControllers [1] as DetailViewController;
 
 It is presented as an array, where the first element (0) in the Master View Controller and the second element (1) is the Detail.
 
-<a name="Accessing-Detail-from-Master" />
+<a name="Accessing-Detail-from-Master"></a>
 
 ### Accessing Detail from Master
 
@@ -137,7 +137,7 @@ public override void ViewDidLoad ()
 
 You can expose properties and methods on your Detail View Controller that the Master can use to present new data as required.
 
-<a name="Showing-and-Hiding-Master" />
+<a name="Showing-and-Hiding-Master"></a>
 
 ### Showing and Hiding Master
 
@@ -161,7 +161,7 @@ The `UISplitViewControllerDisplayMode` enum defines how the Master View Controll
 
 To get the current presentation state, use the `DisplayMode` property of the Split View Controller.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

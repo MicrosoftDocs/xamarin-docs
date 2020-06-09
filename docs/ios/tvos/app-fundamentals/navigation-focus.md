@@ -21,7 +21,7 @@ Next, we'll take a look at how Focus can be used with [Parallax](#Focus-and-Para
 
 Finally, we'll look at working with [Focus](#Working-with-Focus), [Focus Updates](#Working-with-Focus-Updates), [Focus Guides](#Working-with-Focus-Guides), [Focus in Collections](#Working-with-Focus-in-Collections) and [Enabling Parallax](#enabling-parallax) on Image Views in your Xamarin.tvOS apps.
 
-<a name="Navigation" />
+<a name="Navigation"></a>
 
 ## Navigation
 
@@ -46,7 +46,7 @@ Apple suggests keeping the following in mind when designing the navigation for y
 - **Use Standard Controls for Navigation** - Again, to create an easy and familiar user experience, wherever possible, use built-in `UIKit` controls such as Page Controls, Tab Bars, Segmented Controls, Table Views, Collection Views and Split Views for your app's navigation. Since user are already familiar with these elements, they will intuitively be able to navigate your app.
 - **Favor Horizontal Content Navigation** - Because of the nature of the Apple TV, swiping left to right on the Siri Remote is more natural than up and down. Consider this option when designing content layouts for your app.
 
-<a name="Focus-and-Selection" />
+<a name="Focus-and-Selection"></a>
 
 ## Focus and Selection
 
@@ -71,7 +71,7 @@ Apple has the following suggestions for working with Focus and Selection:
 - **Represent Focus Changes Fluidly** - Use animation to smoothly fade between an items **Focused** and **Unfocused** state to keep transitions from being jarring.
 - **Don't Display a Cursor** - Users expect to navigate your app's UI using Focus and not by moving a cursor around the screen. Your User Interface should always use the Focus Model to present a consistent user experience.
 
-<a name="Working-with-Focus" />
+<a name="Working-with-Focus"></a>
 
 ### Working with Focus
 
@@ -103,7 +103,7 @@ While you cannot directly move focus to another UI element via code, you can spe
 playButton.PreferredFocusedView = true;
 ```
 
-<a name="Working-with-Focus-Updates" />
+<a name="Working-with-Focus-Updates"></a>
 
 ### Working with Focus Updates 
 
@@ -119,7 +119,7 @@ To request that the Focus Engine moves focus back to the `PreferredFocusedView` 
 > [!IMPORTANT]
 > Calling `SetNeedsUpdateFocus` only has effect if the View Controller it is being called against contains the View that currently has focus.
 
-<a name="Working-with-Focus-Guides" />
+<a name="Working-with-Focus-Guides"></a>
 
 ### Working with Focus Guides
 
@@ -213,7 +213,7 @@ In the event that neither button is the source of the Focus shift, the `Preferre
 FocusGuide.PreferredFocusedView = null;
 ```
 
-<a name="Working-with-Focus-in-Collections" />
+<a name="Working-with-Focus-in-Collections"></a>
 
 ### Working with Focus in Collections
 
@@ -239,7 +239,7 @@ The `CanFocusItem` method returns `true` if the current item can be in focus, el
 
 If you want a `UICollectionView` or a `UITableView` to remember and restore focus to the last item when it loses and regains focus, set the `RemembersLastFocusedIndexPath` property to `true`.
 
-<a name="Focus-and-Parallax" />
+<a name="Focus-and-Parallax"></a>
 
 ## Focus and Parallax
 
@@ -263,7 +263,7 @@ myImageView.AdjustsImageWhenAncestorFocused = true;
 
 With this property set to `true`, the Image View will automatically get the Parallax Effect when it is selected by the user and in focus.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

@@ -17,7 +17,7 @@ When an iOS application is created in iTune Connect (either for sale or free rel
 
 To supply the missing information to an Ad Hoc distribution, an optional `iTunesMetadata.plist` file can be created and included in the applications IPA file. This plist file is a specially formatted XML file (see Apple's [Property List Programming Guide](https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/PropertyLists/Introduction/Introduction.html) for more information) that contains key/value pairs defining information about a given iOS application.
 
-<a name="iTunesMetadata_contents" />
+<a name="iTunesMetadata_contents"></a>
 
 ## The iTunesMetadata.plist Contents
 
@@ -275,7 +275,7 @@ The following keys are included in all `iTunesMetadata.plist` files for iOS appl
 <integer>16843008</integer>
 ```
 
-<a name="iTunesMetadata_creating" />
+<a name="iTunesMetadata_creating"></a>
 
 ## Creating an iTunesMetadata.plist File
 

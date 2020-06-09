@@ -13,7 +13,7 @@ ms.date: 03/14/2017
 
 _This article covers several tips, features and techniques a developer can use to build a modern macOS app in Xamarin.Mac._
 
-<a name="Building-Modern-Looks-with-Modern-Views" />
+<a name="Building-Modern-Looks-with-Modern-Views"></a>
 
 ## Building Modern Looks with Modern Views
 
@@ -21,7 +21,7 @@ A modern look will include a modern Window and Toolbar appearance such as the ex
 
 [![](modern-cocoa-apps-images/content08.png "An example of a modern Mac app UI")](modern-cocoa-apps-images/content08.png#lightbox)
 
-<a name="Enabling-Full-Sized-Content-Views" />
+<a name="Enabling-Full-Sized-Content-Views"></a>
 
 ### Enabling Full Sized Content Views
 
@@ -134,7 +134,7 @@ topConstraint = topAnchor.ConstraintEqualToAnchor (topAnchor, 20);
 topConstraint.Active = true;
 ```
 
-<a name="Enabling-Streamlined-Toolbars" />
+<a name="Enabling-Streamlined-Toolbars"></a>
 
 ### Enabling Streamlined Toolbars
 
@@ -160,7 +160,7 @@ public override void ViewWillAppear ()
 
 This effect is typically used for _Shoebox Applications_ (one window apps) like Maps, Calendar, Notes and System Preferences. 
 
-<a name="Using-Accessory-View-Controllers" />
+<a name="Using-Accessory-View-Controllers"></a>
 
 ### Using Accessory View Controllers
 
@@ -237,7 +237,7 @@ accessoryView.LayoutAttribute = NSLayoutAttribute.Bottom;
 
 Because macOS is now fully localized, the `Left` and `Right` `NSLayoutAttribute` properties have been deprecated and should be replaced with `Leading` and `Trailing`.
 
-<a name="Using-Tabbed-Windows" />
+<a name="Using-Tabbed-Windows"></a>
 
 ### Using Tabbed Windows
 
@@ -404,7 +404,7 @@ public override void GetNewWindowForTab (NSObject sender)
 }
 ```
 
-<a name="Using-Core-Animation" />
+<a name="Using-Core-Animation"></a>
 
 ### Using Core Animation
 
@@ -427,7 +427,7 @@ Layer Backing can be enabled by setting the `WantsLayer` of a `NSView` to `true`
 
 [![](modern-cocoa-apps-images/content09.png "The View Effects Inspector")](modern-cocoa-apps-images/content09.png#lightbox)
 
-<a name="Redrawing-Views-with-Layers" />
+<a name="Redrawing-Views-with-Layers"></a>
 
 #### Redrawing Views with Layers
 
@@ -499,7 +499,7 @@ namespace MacModern
 }
 ```
 
-<a name="Using-Modern-Drag-and-Drop" />
+<a name="Using-Modern-Drag-and-Drop"></a>
 
 ## Using Modern Drag and Drop
 
@@ -581,7 +581,7 @@ When working with `NSCollectionViews`, again use the `PasteboardWriterForItemAt`
 
 The developer should always avoid putting large files on the pasteboard. New to macOS Sierra, _File Promises_ allow the developer to place references to given files on the pasteboard that will later be fulfilled when the user finishes the Drop operation using the new `NSFilePromiseProvider` and `NSFilePromiseReceiver` classes.
 
-<a name="Using-Modern-Event-Tracking" />
+<a name="Using-Modern-Event-Tracking"></a>
 
 ## Using Modern Event Tracking
 
@@ -622,13 +622,13 @@ Calling the `PerformWindowDrag` method of the `NSWindow` class provides the foll
 - The Spaces Bar will be displayed as normal.
 - Window snapping and alignment work as normal.
 
-<a name="Using-Modern-Container-View-Controls" />
+<a name="Using-Modern-Container-View-Controls"></a>
 
 ## Using Modern Container View Controls
 
 macOS Sierra provides many modern improvements to the existing Container View Controls available in previous version of the OS.
 
-<a name="Table View Enhancements" />
+<a name="Table View Enhancements"></a>
 
 ## Table View Enhancements
 
@@ -726,7 +726,7 @@ The static `NSTableViewRowAction.FromStyle` is used to create a new Table Row Ac
 - `Regular` - Performs a standard non-destructive action such as edit the row's contents.
 - `Destructive` - Performs a destructive action such as delete the row from the table. These actions will be rendered with a red background.
 
-<a name="Scroll-View-Enhancements" />
+<a name="Scroll-View-Enhancements"></a>
 
 ## Scroll View Enhancements 
 
@@ -745,7 +745,7 @@ By using the `ContentInsets` the developer can adjust the start of the Scroll Vi
 - A Search Field.
 - A Refresh or Update button.
 
-<a name="Auto-Layout-and-Localization-in-Modern-Apps" />
+<a name="Auto-Layout-and-Localization-in-Modern-Apps"></a>
 
 ## Auto Layout and Localization in Modern Apps
 
@@ -753,7 +753,7 @@ Apple has included several technologies in Xcode that allow the developer to eas
 
 For more information, please see Apple's [Internationalization and Localization Guide](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/InternationalizingYourUserInterface/InternationalizingYourUserInterface.html).
 
-<a name="Implementing-Base-Internationalization" />
+<a name="Implementing-Base-Internationalization"></a>
 
 ### Implementing Base Internationalization 
 
@@ -765,7 +765,7 @@ Next, the developer can export localizations and the Base Internationalization s
 
 Later, these localizations can be imported and Xcode will generate the language-specific string files for the Storyboard.
 
-<a name="Implementing-Auto-Layout-to-Support-Localization" />
+<a name="Implementing-Auto-Layout-to-Support-Localization"></a>
 
 ### Implementing Auto Layout to Support Localization
 
@@ -781,7 +781,7 @@ Apple suggest doing the following:
 - **Test Layout Changes Constantly** - During development at app should be tested constantly in different languages. See Apple's [Testing Your Internationalized app](https://developer.apple.com/library/content/documentation/MacOSX/Conceptual/BPInternational/TestingYourInternationalApp/TestingYourInternationalApp.html#//apple_ref/doc/uid/10000171i-CH7-SW1) documentation for more details.
 - **Use NSStackViews to Pin Views Together** - `NSStackViews` allows their contents to shift and grow in predictable ways and the content change size based on the language selected.
 
-<a name="Localizing-in-Xcodes-Interface-Builder" />
+<a name="Localizing-in-Xcodes-Interface-Builder"></a>
 
 ### Localizing in Xcode's Interface Builder
 
@@ -840,7 +840,7 @@ var button2 = NSButton.CreateButton (myTitle, myImage, () => {
 });
 ```
 
-<a name="Using-System-Appearances" />
+<a name="Using-System-Appearances"></a>
 
 ## Using System Appearances
 
@@ -885,7 +885,7 @@ Apple has the following suggestions for using System Appearances:
 
 A macOS app that uses the System Appearances will automatically work correctly for users that have enabled Accessibility features from the System Preferences app. As a result, Apple suggests that the developer should always use System Appearances in their macOS apps.
 
-<a name="Designing-UIs-with-Storyboards" />
+<a name="Designing-UIs-with-Storyboards"></a>
 
 ## Designing UIs with Storyboards
 
@@ -922,7 +922,7 @@ public override void PrepareForSegue (NSStoryboardSegue segue, NSObject sender)
 
 For more information, please see our [Segues](~/mac/platform/storyboards/indepth.md#Segues) documentation.
 
-<a name="Propagating-Actions" />
+<a name="Propagating-Actions"></a>
 
 ## Propagating Actions
 
@@ -930,7 +930,7 @@ Based on the design of the macOS app, there might be times when the best handler
 
 To handle this situation, the developer can create a Custom Action and pass the Action up the responder chain. For more information please see our [Working with Custom Window Actions](~/mac/user-interface/menu.md) documentation.
 
-<a name="Modern-Mac-Features" />
+<a name="Modern-Mac-Features"></a>
 
 ## Modern Mac Features
 
@@ -941,7 +941,7 @@ Apple has included several user-facing features in macOS Sierra that allow the d
 - **State Restoration** - When the user quits an app on macOS and then later relaunches it, the app will automatically be returned to its previous state. The developer can use the State Restoration API to encode and restore transient UI states before the User Interface is displayed to the user. If the app is `NSDocument` based, State Restoration is handled automatically. To enable State Restoration for non-`NSDocument` based apps, set the `Restorable` of the `NSWindow` class to `true`.
 - **Documents in the Cloud** - Prior to macOS Sierra, an app had to explicitly opt-in to working with documents in the user's iCloud Drive. In macOS Sierra the user's **Desktop** and **Documents** folders may be synced with their iCloud Drive automatically by the system. As a result, local copies of documents may be deleted to free up space on the user's machine. `NSDocument` based apps will automatically handle this change. All other app types will need to use a `NSFileCoordinator` to sync reading and writing of documents.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

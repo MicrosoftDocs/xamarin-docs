@@ -117,7 +117,7 @@ Call `StopAnimating` on the image control to
 animatedImage.StopAnimating ();
 ```
 
-<a name="cache" />
+<a name="cache"></a>
 
 ## Appendix: Caching Images (watchOS 1)
 

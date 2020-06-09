@@ -23,7 +23,7 @@ In this article, we'll cover the basics of working with Outline Views in a Xamar
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` commands used to wire-up your C# classes to Objective-C objects and UI Elements.
 
-<a name="Introduction_to_Outline_Views" />
+<a name="Introduction_to_Outline_Views"></a>
 
 ## Introduction to Outline Views
 
@@ -39,7 +39,7 @@ An Outline View's behavior can be customized by providing a subclass of the Outl
 
 Since an Outline View shares much of it's behavior and functionality with a Table View, you might want to go through our [Table Views](~/mac/user-interface/table-view.md) documentation before continuing with this article.
 
-<a name="Creating_and_Maintaining_Outline_Views_in_Xcode" />
+<a name="Creating_and_Maintaining_Outline_Views_in_Xcode"></a>
 
 ## Creating and Maintaining Outline Views in Xcode
 
@@ -144,7 +144,7 @@ Select the Table Cell View (`NSTableFieldCell`) at the bottom of a Table Column 
 
 This allows you to edit the Table Cell View used as the base _Pattern_ for all cells created for the given column.
 
-<a name="Adding_Actions_and_Outlets" />
+<a name="Adding_Actions_and_Outlets"></a>
 
 ### Adding Actions and Outlets
 
@@ -166,7 +166,7 @@ The process is the same for any Outline View element that we want to expose:
 
 Next, we'll write the code display some data for the outline when the application is run.
 
-<a name="Populating_the_Table_View" />
+<a name="Populating_the_Table_View"></a>
 
 ## Populating the Outline View
 
@@ -391,7 +391,7 @@ If we expand a node in the Outline View, it will look like the following:
 
 [![](outline-view-images/populate03.png "The expanded view")](outline-view-images/populate03.png#lightbox)
 
-<a name="Sorting_by_Column" />
+<a name="Sorting_by_Column"></a>
 
 ## Sorting by Column
 
@@ -432,7 +432,7 @@ If we run the application and click in the Column Headers, the rows will be sort
 
 [![](outline-view-images/sort02.png "Example of sorted output")](outline-view-images/sort02.png#lightbox)
 
-<a name="Row_Selection" />
+<a name="Row_Selection"></a>
 
 ## Row Selection
 
@@ -454,7 +454,7 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 
 This will allow the user to select any single row in the Outline View. Return `false` for the `ShouldSelectItem` for any item that you don't want the user to be able to select or `false` for every item if you don't want the user to be able to select any items.
 
-<a name="Multiple_Row_Selection" />
+<a name="Multiple_Row_Selection"></a>
 
 ## Multiple Row Selection
 
@@ -476,7 +476,7 @@ public override bool ShouldSelectItem (NSOutlineView outlineView, NSObject item)
 
 This will allow the user to select any single row in the Outline View. Return `false` for the `ShouldSelectRow` for any item that you don't want the user to be able to select or `false` for every item if you don't want the user to be able to select any items.
 
-<a name="Type_to_Select_Row" />
+<a name="Type_to_Select_Row"></a>
 
 ## Type to Select Row
 
@@ -504,7 +504,7 @@ public override NSObject GetNextTypeSelectMatch (NSOutlineView outlineView, NSOb
 
 The `GetNextTypeSelectMatch` method takes the given `searchString` and returns the item of the first `Product` that has that string in it's `Title`.
 
-<a name="Reordering_Columns" />
+<a name="Reordering_Columns"></a>
 
 ## Reordering Columns
 
@@ -531,7 +531,7 @@ If we run the application, we can drag Column Headers around to reorder our colu
 
 [![](outline-view-images/reorder02.png "Example of reordering columns")](outline-view-images/reorder02.png#lightbox)
 
-<a name="Editing_Cells" />
+<a name="Editing_Cells"></a>
 
 ## Editing Cells
 
@@ -593,7 +593,7 @@ Now if we run the application, the user can edit the cells in the Table View:
 
 [![](outline-view-images/editing01.png "An example of editing cells")](outline-view-images/editing01.png#lightbox)
 
-<a name="Using_Images_in_Outline_Views" />
+<a name="Using_Images_in_Outline_Views"></a>
 
 ## Using Images in Outline Views
 
@@ -663,7 +663,7 @@ public override NSView GetView (NSOutlineView outlineView, NSTableColumn tableCo
 
 For more information, please see the [Using Images with Outline Views](~/mac/app-fundamentals/image.md) section of our [Working with Image](~/mac/app-fundamentals/image.md) documentation.
 
-<a name="Data_Binding_Outline_Views" />
+<a name="Data_Binding_Outline_Views"></a>
 
 ## Data Binding Outline Views
 
@@ -673,7 +673,7 @@ Key-Value Coding (KVC) is a mechanism for accessing an object’s properties ind
 
 For more information, please see the [Outline View Data Binding](~/mac/app-fundamentals/databinding.md#Outline_View_Data_Binding) section of our [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md) documentation.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

@@ -45,7 +45,7 @@ The following properties can be adjusted on the properties pad:
 
 For information on using the line breaks in iOS, refer to the [Truncate and Wrap text](https://github.com/xamarin/recipes/tree/master/Recipes/ios/standard_controls/labels/uilabel-truncate-wrap-text) recipe.
 
-<a name="Formatting_Text_and_Label"/>
+<a name="Formatting_Text_and_Label"></a>
 
 ## Formatting Text and Label
 

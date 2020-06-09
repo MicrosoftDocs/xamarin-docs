@@ -42,7 +42,7 @@ Visual Studio for Mac features a graphical interface for editing common `Info.pl
 
 These are described in more detail in the next sections.
 
- <a name="iOS_Application_Target" />
+ <a name="iOS_Application_Target"></a>
 
 ### iOS Application Target
 
@@ -74,7 +74,7 @@ The **Status Bar Styles** section is a graphical interface for editing an applic
 
  [![](property-lists-images/status.png "Status Bar Styles")](property-lists-images/status.png#lightbox)
 
- <a name="Icons" />
+ <a name="Icons"></a>
 
 ### Icons, Launch Images, and iTunes Artwork
 
@@ -98,7 +98,7 @@ The advanced panel controls the document types and URL schemes that the applicat
 
  [![](property-lists-images/image34.png "Advanced Panel")](property-lists-images/image34.png#lightbox)
 
- <a name="Document_Types" />
+ <a name="Document_Types"></a>
 
 ## Document Types
 
@@ -145,7 +145,7 @@ Visual Studio for Mac also detects the Property Type, as shown:
 
 Review Apple’s [App Related Resources](https://developer.apple.com/library/ios/#DOCUMENTATION/iPhone/Conceptual/iPhoneOSProgrammingGuide/App-RelatedResources/App-RelatedResources.html) links for additional information on optional properties.
 
- <a name="Entitlements" />
+ <a name="Entitlements"></a>
 
 ## Summary
 

@@ -20,7 +20,7 @@ In addition to the Title (that is displayed in the center), Navigation Bars can 
 > [!IMPORTANT]
 > Navigation Bars are totally transparent by default. Care should be taken to ensure that the content of the Navigation Bar stays readable over the content underneath it. For example, when content in a Table View or Collection scrolls under it.
 
-<a name="Navigation-Bars-and-Storyboards" />
+<a name="Navigation-Bars-and-Storyboards"></a>
 
 ## Navigation Bars and Storyboards
 
@@ -120,7 +120,7 @@ As long as a button's `Enabled` property is `true` and it is not covered by anot
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

@@ -115,7 +115,7 @@ double.Parse("1 999,99", CultureInfo.CreateSpecificCulture("fr-FR"));
 
 See the [Parsing Numeric Strings](https://msdn.microsoft.com/library/xbtzcc4w(v=vs.110).aspx) and [Parsing Date and Time Strings](https://msdn.microsoft.com/library/2h3syy57(v=vs.110).aspx) MSDN articles for additional information.
 
-<a name="rtl" />
+<a name="rtl"></a>
 
 ### Right-to-left (RTL) Languages
 

@@ -85,7 +85,7 @@ The reason for this is the need for flexibility. For example, multiple CodeBehin
 
 It is conventional to put these in a **{0}.xib.cs** file beside the **{0}.xib.designer.cs** designer file.
 
-<a name="generated" />
+<a name="generated"></a>
 
 ## Generated Actions and Outlets
 

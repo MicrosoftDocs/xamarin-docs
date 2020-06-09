@@ -79,7 +79,7 @@ Why is this important? In the next section will see how these automatically-defi
 
 Later we'll be using these built-in actions to enable and disable items from code and provide our own functionality when they are selected.
 
-<a name="Built-In_Menu_Functionality" />
+<a name="Built-In_Menu_Functionality"></a>
 
 ### Built-in menu functionality
 
@@ -414,7 +414,7 @@ viewController.View.Window.RepresentedUrl = url;
 NSDocumentController.SharedDocumentController.NoteNewRecentDocumentURL(url);
 ```
 
-<a name="Working-with-Custom-Window-Actions" />
+<a name="Working-with-Custom-Window-Actions"></a>
 
 ### Working with custom window actions
 
@@ -450,7 +450,7 @@ Save the changes to the storyboard and return to Visual Studio for Mac to sync t
 
 [![Testing the new action](menu-images/action05.png "Testing the new action")](menu-images/action05-large.png#lightbox)
 
-<a name="Adding,_Editing_and_Deleting_Menus" />
+<a name="Adding,_Editing_and_Deleting_Menus"></a>
 
 ### Adding, editing, and deleting menus
 
@@ -882,7 +882,7 @@ public void UnpopulateFormattingMenu(NSMenu menu) {
 
 In the case of the code above, the first four menu items are created in Xcode's Interface Builder and aways available in the app, so they are not removed dynamically.
 
-<a name="Contextual_Menus" />
+<a name="Contextual_Menus"></a>
 
 ## Contextual menus
 
@@ -1035,7 +1035,7 @@ Now if we run our application and right-click on its icon in the Dock, our new m
 
 If we select one of the custom items from the menu, the text in our text view will be modified.
 
-<a name="Pop-up_Menus_and_Pull-Down_Lists" />
+<a name="Pop-up_Menus_and_Pull-Down_Lists"></a>
 
 ## Pop-up button and pull-down lists
 

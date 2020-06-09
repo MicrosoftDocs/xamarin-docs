@@ -117,7 +117,7 @@ If you are using a component that does not appear to have an
 equivalent NuGet package, read the
 [components without a NuGet migration path](#require-update) section below.
 
-<a name="contain" />
+<a name="contain"></a>
 
 ## Components that contain NuGet packages
 
@@ -149,7 +149,7 @@ will be performed via the **NuGet** update feature:
 
 ![Update NuGet package](component-nuget-images/nuget-update-sml.png)
 
-<a name="replace" />
+<a name="replace"></a>
 
 ## Components with NuGet replacements
 
@@ -199,7 +199,7 @@ The NuGet package will be added to your project, along with any dependencies.
 This should fix the build. If the build continues to fail, investigate each
 error to see if there were API differences between the component and the NuGet package.
 
-<a name="require-update" />
+<a name="require-update"></a>
 
 ## Components without a NuGet migration path
 

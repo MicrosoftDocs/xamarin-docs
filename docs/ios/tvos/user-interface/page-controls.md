@@ -22,7 +22,7 @@ Apple has the following suggestions when using a Page Control:
 - **Use on Full Collections Only** - Page Controls work best in a full screen environment to display multiple pages that exist in a single collection.
 - **Limit the Number of Pages** - Page Controls work best for ten (10) or fewer pages, and a maximum of twenty (20) pages. For more than twenty pages, consider using a [Collection View](~/ios/tvos/user-interface/collection-views.md) and displaying the pages in a grid.
 
-<a name="Page-Controls-and-Storyboards" />
+<a name="Page-Controls-and-Storyboards"></a>
 
 ## Page Controls and Storyboards
 
@@ -153,7 +153,7 @@ The `CurrentPage` property is zero (0) based, so the first page will be zero and
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

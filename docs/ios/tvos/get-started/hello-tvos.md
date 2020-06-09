@@ -240,7 +240,7 @@ We aren’t usually concerned with designer files, as they’re just automatical
 
 Now that we have created our Xamarin.tvOS app and we have a basic understanding of its components, let’s look at creating the UI.
 
-<a name="Creating-the-User-Interface" />
+<a name="Creating-the-User-Interface"></a>
 
 ## Creating the User Interface
 
@@ -373,7 +373,7 @@ Exposing the UI elements in this way, allows you to access them in the View Cont
 
 You normally will never need to open the `ViewController.designer.cs` yourself, it was presented here for educational purposes only.
 
-<a name="Writing-the-Code" />
+<a name="Writing-the-Code"></a>
 
 ## Writing the Code
 

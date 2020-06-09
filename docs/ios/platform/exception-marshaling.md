@@ -388,7 +388,7 @@ Runtime.MarshalObjectiveCException += (object sender, MarshalObjectiveCException
 };
 ```
 
-<a name="build_time_flags" />
+<a name="build_time_flags"></a>
 
 ## Build-Time Flags
 

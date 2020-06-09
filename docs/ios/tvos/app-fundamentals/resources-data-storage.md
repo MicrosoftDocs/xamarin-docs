@@ -13,7 +13,7 @@ ms.date: 03/16/2017
 
 _This article covers working with resources and persistent data storage in a Xamarin.tvOS app._
 
-<a name="tvOS-Resource-Limitations" />
+<a name="tvOS-Resource-Limitations"></a>
 
 ## tvOS Resource Limitations
 
@@ -21,7 +21,7 @@ Unlike iOS devices, the new Apple TV provides extremely limited persistent, loca
 
 Additionally, tvOS limits the size of an Apple TV app to 200MB. If your app requires resources beyond this size, they will need to be packaged and loaded using [On-Demand Resources](#On-Demand-Resources) (up to an additional 2GB). Given these limitations, it is critical that you correctly time the downloading of additional assets to provide the best experience for your app's users. For more information, please see Apple's [On-Demand Resources Guide](https://developer.apple.com/library/prerelease/tvos/documentation/FileManagement/Conceptual/On_Demand_Resources_Guide/index.html#//apple_ref/doc/uid/TP40015083).
 
-<a name="Non-Persistent-Downloads" />
+<a name="Non-Persistent-Downloads"></a>
 
 ## Non-Persistent Downloads
 
@@ -32,13 +32,13 @@ As a result, your app cannot rely on previously downloaded content being availab
 > [!IMPORTANT]
 > While you have the ability to download other assets and resources as required, Apple warns against consuming all of the space in your app's cache, as it can lead to unpredictable results.
 
-<a name="Managing-Resources" />
+<a name="Managing-Resources"></a>
 
 ## Managing Resources
 
 As stated above, because of the limited, non-persistent storage of information available to tvOS apps, these restrictions require careful planning to create a great user experience for your Xamarin.tvOS app.
 
-<a name="iCloud-Data-Storage" />
+<a name="iCloud-Data-Storage"></a>
 
 ### iCloud Data Storage
 
@@ -54,7 +54,7 @@ As a result, your Xamarin.tvOS app must store any user data in an iCloud Data St
 > to help developers properly handle the European Union's General Data 
 > Protection Regulation (GDPR).
 
-<a name="On-Demand-Resources" />
+<a name="On-Demand-Resources"></a>
 
 ### On-Demand Resources
 
@@ -69,7 +69,7 @@ You use Xcode to create bundles of related content (such as all assets for game 
 > [!IMPORTANT]
 > Care should be taken to strike the right balance between the number of times the app has to download On-Demand Resources and the size of the individual downloads. User may become frustrated with your app if gameplay is interrupted constantly to download new content or if a single download takes too much time.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

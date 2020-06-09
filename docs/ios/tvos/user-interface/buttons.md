@@ -17,7 +17,7 @@ Use an instance of the `UIButton` class to create a focusable, selectable button
 
 For more information on working with Focus and navigating with the Siri Remote, please see our [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) and [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) documentation.
 
-<a name="About-Buttons" />
+<a name="About-Buttons"></a>
 
 ## About Buttons
 
@@ -33,13 +33,13 @@ Apple has the following suggestions for working with Buttons:
 
 For more information on working with Focus and Navigation, please see our [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) documentation.
 
-<a name="Button-Icons" />
+<a name="Button-Icons"></a>
 
 ### Button Icons
 
 Apple suggests that you use simple, highly recognizable images for your Button icons. Overly complex icons are hard to recognize on a TV screen across the room on a couch, so try to use the simplest representation possible to get the idea across. Whenever possible, use standard, well-know images for icons (such as a magnifying glass for search).
 
-<a name="Button-Titles" />
+<a name="Button-Titles"></a>
 
 ### Button Titles
 
@@ -50,7 +50,7 @@ Apple has the following suggestions when creating the titles for your Buttons:
 - **Use Title-Style Capitalization** - With the exception of articles, conjunctions or prepositions (four letters or less), every word of the Button's title should be capitalized.
 - **Use a Short, To-The-Point Title** - Use the shortest possible verbiage to describe the Button's action.
 
-<a name="Buttons-and-Storyboards" />
+<a name="Buttons-and-Storyboards"></a>
 
 ## Buttons and Storyboards
 
@@ -121,7 +121,7 @@ As long as a button's `Enabled` property is `true` and it is not covered by anot
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md).
 
-<a name="Buttons-and-Code" />
+<a name="Buttons-and-Code"></a>
 
 ## Buttons and Code
 
@@ -177,13 +177,13 @@ View.AddSubview (button);
 > [!IMPORTANT]
 > While it is possible to assign actions such as `TouchUpInside` to a `UIButton`, it will never be called because Apple TV doesn't have a touch screen or support touch events. You should always use events such as **AllEvents** or **PrimaryActionTriggered**.
 
-<a name="Styling-a-Button" />
+<a name="Styling-a-Button"></a>
 
 ## Styling a Button
 
 tvOS provides several properties of a `UIButton` that can be used to provide its title and style it with things like background color and images.
 
-<a name="Button-Titles" />
+<a name="Button-Titles"></a>
 
 ### Button Titles
 
@@ -241,7 +241,7 @@ button.SetImage(UIImage.FromFile("my image.png"), UIControlState.Normal);
 
 Use the `TintColor` property to set a color tint that is applied to both the title and the button's image. For buttons of the `Custom` type, this property has no effect, you must implement the `TintColor` behavior yourself.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

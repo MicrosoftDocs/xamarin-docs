@@ -48,7 +48,7 @@ In order to deploy and debug wirelessly on your device, you must pair your iOS d
 
 The following pairing process should only need to happen once per device. Xcode will retain the connection settings.
 
-<a name="pair" />
+<a name="pair"></a>
 
 ### Pairing an iOS device with Xcode
 

@@ -82,7 +82,7 @@ to allow Android to call into managed code.
   [Java Integration Overview](~/android/platform/java-integration/index.md)
   doc for more.
 
-<a name="Managed_Callable_Wrappers" />
+<a name="Managed_Callable_Wrappers"></a>
 
 ## Managed Callable Wrappers
 
@@ -253,7 +253,7 @@ Order of events:
     System.MissingMethodException](xref:System.MissingMethodException)
     will be thrown.
 
-<a name="Premature_Dispose_Calls" />
+<a name="Premature_Dispose_Calls"></a>
 
 ### Premature Dispose() Calls
 

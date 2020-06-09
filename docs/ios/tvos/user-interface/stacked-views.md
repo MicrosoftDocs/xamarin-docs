@@ -36,7 +36,7 @@ Typically you will use a Stack View to arrange a small number of subviews. More 
 
 You can further fine-tune the UIs appearance by adding additional constraints to the subviews (for example to control the Height or Width). However, care should be taken not to include conflicting constraints to those introduced by the Stack View itself.
 
-<a name="Auto-Layout-and-Size-Classes" />
+<a name="Auto-Layout-and-Size-Classes"></a>
 
 ## Auto Layout and Size Classes
 
@@ -48,7 +48,7 @@ The Stack View uses the subview's `IntrinsicContentSize` property when calculati
 
 With the exception of the `Fill Alignment`, the Stack View uses the subview's `IntrinsicContentSize` property for calculating the view's size perpendicular to the given `Axis`. For the `Fill Alignment`, all subviews are sized so that they fill the Stack View perpendicular to the given `Axis`.
 
-<a name="Positioning-and-Sizing-the-Stack-View" />
+<a name="Positioning-and-Sizing-the-Stack-View"></a>
 
 ## Positioning and Sizing the Stack View
 
@@ -70,7 +70,7 @@ If the `BaselineRelativeArrangement` property is `true`, the subviews will be la
 > [!IMPORTANT]
 > Baseline Alignment does not work on stretched or compressed subview sizes as the baseline will be calculated to the wrong position. For Baseline Alignment, ensure that the subview's **Height** matches the Intrinsic Content View's **Height**.
 
-<a name="Common-Stack-View-Uses" />
+<a name="Common-Stack-View-Uses"></a>
 
 ## Common Stack View Uses
 
@@ -81,7 +81,7 @@ There are several layout types that work well with Stack View controls. Accordin
 - **Define the Size and Position of the Stack** – By pinning all four edges of the Stack View to the parent view, the Stack View arranges the subviews based on the space defined within the Stack View.
 - **Define the Size Perpendicular the Axis** – By pinning both edges perpendicular to the Stack View's `Axis` and one of the edges along the axis to set the position, the Stack view will grow perpendicular to the axis to fit the space defined by its subviews.
 
-<a name="Stack-Views-and-Storyboards" />
+<a name="Stack-Views-and-Storyboards"></a>
 
 ## Stack Views and Storyboards
 
@@ -185,7 +185,7 @@ If the number of players is decreased, the unused views are hidden and the Stack
 
 [![](stacked-views-images/layout07.png "If the number of players is decreased, the unused views are hidden and the Stack View adjust the layout to fit")](stacked-views-images/layout07.png#lightbox)
 
-<a name="Populate-a-Stack-View-from-Code" />
+<a name="Populate-a-Stack-View-from-Code"></a>
 
 ### Populate a Stack View from Code
 
@@ -278,7 +278,7 @@ icon.RemoveFromSuperview();
 
 Removing a subview from just the `ArrangedSubviews` collection takes it out of the Stack View's control, but does not remove it from the screen.
 
-<a name="Dynamically-Changing-Content" />
+<a name="Dynamically-Changing-Content"></a>
 
 ## Dynamically Changing Content
 
@@ -296,7 +296,7 @@ UIView.Animate(0.25, ()=>{
 
 Many of the Stack View's properties can be specified using Size Classes within a Storyboard. These properties will be automatically animated is response to size or orientation changes.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 
