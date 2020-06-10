@@ -7,7 +7,7 @@ ms.assetid: B50FE9BD-9E01-AE88-B178-10061E3986DA
 ms.technology: xamarin-ios
 author: davidortinau
 ms.author: daortin
-ms.date: 05/22/2018
+ms.date: 06/10/2020
 ---
 
 # Troubleshooting Tips for Xamarin.iOS
@@ -206,7 +206,7 @@ list Visual Studio for Mac as a process they should not interfere with.
 ## Visual Studio for Mac complains about Mono 2.4 required
 
 If you updated Visual Studio for Mac due to a recent update, and when you try to start
-it again it complains about Mono 2.4 not being present, all you have to do is [upgrade your Mono 2.4 installation](http://www.go-mono.com/mono-downloads/download.html).  
+it again it complains about Mono 2.4 not being present, all you have to do is [upgrade your Mono 2.4 installation](http://www.go-mono.com/mono-downloads/download.html).
 
 Mono 2.4.2.3_6 fixes some important problems that prevented Visual Studio for Mac from
 running reliably, sometimes hung Visual Studio for Mac at startup or prevented the code
@@ -276,7 +276,7 @@ built in release mode are a fraction of the size.
 
 As of Xamarin.iOS 1.3 the debug builds included debugging support for every
 single component of Mono (every method in every class of the
-frameworks).  
+frameworks).
 
 With Xamarin.iOS 1.4 we will introduce a finer grained method for debugging,
 the default will be to only provide debugging instrumentation for your code and
@@ -480,7 +480,7 @@ trace that looks like this:
 application directory. Such assemblies may exists since Apple iOS simulator
 adds and updates files but never deletes them. If this happens then the easiest
 solution is to select "Reset and Content and Settings..." from the simulator
-menu.   
+menu.
 
 > [!WARNING]
 > This will remove all files, applications
@@ -516,3 +516,18 @@ To check the build action, right click on the .xib file and choose **Build Actio
 When including 3rd party libraries in your Xamarin.iOS app, you might get an error in the form "System.NotSupportedException: No data is available for encoding 437" when trying to compile and run the app. For example, libraries, such as `Ionic.Zip.ZipFile`, may throw this exception during operation.
 
 This can be solved by opening the options for the Xamarin.iOS project, going to **iOS Build** > **Internationalization** and checking the **West** internationalization.
+
+## Could not launch Xamarin.Launcher Could not find the executable 'mlaunch.exe'
+
+In some cases anti-virus software can incorrectly flag the Xamarin.iOS SDK as malware and remove required files, corrupting the SDK. This will result in errors such as "Could not launch Xamarin.Launcher Could not find the executable 'mlaunch.exe'".
+
+If you have been affected, exclude mlaunch.exe from your antivirus scanner to prevent re-occurrence. For more information, see [How to create an application exception in the Symantex Endpoint Protection Manager](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) for Symantec, and [Exclude files and folders from Norton Auto-Protect, SONAR, and Download Intelligence scans](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) for Norton. In addition, consider reporting a false positive to [Symantec](https://symsubmit.symantec.com) or [Norton](https://submit.norton.com/?type=FP).
+
+Once you have added an exclusion for mlaunch.exe, a re-installation will be required to restore the missing files. The simplest approach to do this is to switch channels in the updater:
+
+- **Visual Studio** menu > **Check for updates**.
+- Select a different update channel in the dropdown and press the **Switch channel** button.
+- Wait for updates to download.
+- Switch back to original channel and install updates.
+
+If these instructions don't resolve your issue, please add a comment to the following GitHub issue: [8736](https://github.com/xamarin/xamarin-macios/issues/8736).
