@@ -292,43 +292,6 @@ Snow Leopard if the iPhone Simulator is running at installation time.
 
 Make sure you quit the iPhone simulator and retry the installation.
 
-<a name="trampolines"></a>
-
-## Ran out of trampolines of type 0
-
-If you get this message while running device,  You can create more type
-0 trampolines (type SPECIFIC) by modifying your project options "iPhone Build"
-section.  You want to add extra arguments for the Device build targets:
-
- `-aot "ntrampolines=2048"`
-
-The default number of trampolines is 1024. Try increasing this number
-until you have enough for your application.
-
-## Ran out of trampolines of type 1
-
-If you make heavy use of recursive generics, you may get this message on
-device.  You can create more type 1 trampolines (type RGCTX) by modifying
-your project options "iPhone Build" section.  You want to add extra
-arguments for the Device build targets:
-
- `-aot "nrgctx-trampolines=2048"`
-
-The default number of trampolines is 1024. Try increasing this number
-until you have enough for your usage of generics.
-
-## Ran out of trampolines of type 2
-
-If you make heavy use interfaces, you may get this message on device.
- You can create more type 2 trampolines (type IMT Thunks) by modifying your
-project options "iPhone Build" section.  You want to add extra arguments
-for the Device build targets:
-
- `-aot "nimt-trampolines=512"`
-
-The default number of IMT Thunk trampolines is 128. Try increasing this
-number until you have enough for your usage of interfaces.
-
 ## Debugger is unable to connect with the device
 
 When you start debugging a device configuration, you will see the debugger

@@ -440,8 +440,6 @@ client.ClientCredentials.UserName.UserName = @"foo";
 client.ClientCredentials.UserName.Password = @"mrsnuggles";
 ```
 
-In the example above, if you get the message “Ran out of trampolines of type 0” you can increase the number of type 0 trampolines by adding the `–aot “trampolines={number of trampolines}”` argument to the build. For more information, see [Troubleshooting](~/ios/troubleshooting/troubleshooting.md#trampolines).
-
 For more information about HTTP basic authentication, although in the context of a REST web service, see [Authenticating a RESTful Web Service](~/xamarin-forms/data-cloud/authentication/rest.md).
 
 ## Related Links
