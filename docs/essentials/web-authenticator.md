@@ -124,7 +124,7 @@ The `WebAuthenticator` API takes care of launching the url in the browser and wa
 
 ![Typical Web Authentication Flow](images/web-authenticator.png)
 
-If the user cancels the flow at any point, a `null` result is returned.
+If the user cancels the flow at any point, a `TaskCanceledException` is thrown.
 
 ## Platform differences
 
