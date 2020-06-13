@@ -20,7 +20,7 @@ iOS simulator displayed in Windows alongside Visual Studio 2019 and Visual Studi
 The Remoted iOS Simulator for Windows is installed automatically as part
 of Xamarin in Visual Studio 2019 and Visual Studio 2017. To use it, follow these steps:
 
-1. [Pair Visual 2019 to a Mac Build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
+1. [Pair Visual Studio 2019 to a Mac Build host](~/ios/get-started/installation/windows/connecting-to-mac/index.md).
 2. In Visual Studio, start debugging an iOS or tvOS project. The
 Remoted iOS Simulator for Windows will appear on your Windows machine.
 
