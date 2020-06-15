@@ -190,11 +190,11 @@ steps in the next section to install HAXM.
 ### Installing HAXM
 
 HAXM install packages for Windows are available from the
-[Intel Hardware Accelerated Execution Manager](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager)
+[Intel Hardware Accelerated Execution Manager](https://github.com/intel/haxm/releases) GitHub releases
 page. Use the following steps to download and install HAXM:
 
 1. From the Intel website, download the latest
-   [HAXM virtualization engine](https://software.intel.com/android/articles/intel-hardware-accelerated-execution-manager/)
+   [HAXM virtualization engine](https://github.com/intel/haxm/releases)
    installer for Windows. The advantage of downloading the HAXM
    installer directly from the Intel website is that you can be assured
    of using the latest version.
