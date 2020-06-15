@@ -523,6 +523,9 @@ In some cases anti-virus software can incorrectly flag the Xamarin.iOS SDK as ma
 
 If you have been affected, exclude mlaunch.exe from your antivirus scanner to prevent re-occurrence. For more information, see [How to create an application exception in the Symantex Endpoint Protection Manager](https://knowledge.broadcom.com/external/article/180778/how-to-create-an-application-exception-i.html) for Symantec, and [Exclude files and folders from Norton Auto-Protect, SONAR, and Download Intelligence scans](https://support.norton.com/sp/en/uk/home/current/solutions/v3672136) for Norton. In addition, consider reporting a false positive to [Symantec](https://symsubmit.symantec.com) or [Norton](https://submit.norton.com/?type=FP).
 
+> [!IMPORTANT]
+> For Norton users, community members have also reported that you may need to disable idle scan as discussed here: [Windows](https://community.norton.com/en/comment/5179683#comment-5179683), [Mac](https://github.com/xamarin/xamarin-macios/issues/8736#issuecomment-642874505).
+
 Once you have added an exclusion for mlaunch.exe, a re-installation will be required to restore the missing files. The simplest approach to do this is to switch channels in the updater:
 
 - **Visual Studio** menu > **Check for updates**.
