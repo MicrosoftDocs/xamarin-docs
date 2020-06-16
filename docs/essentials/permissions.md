@@ -220,7 +220,7 @@ Read more on the [App Capability Declaration](https://docs.microsoft.com/windows
 
 ## API
 
-- [Permissions source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Permissions)
+- [Permissions source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Permissions)
 - [Permissions API documentation](xref:Xamarin.Essentials.Permissions)
 
 

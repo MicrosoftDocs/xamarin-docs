@@ -73,5 +73,5 @@ All data is returned in µT (microteslas).
 
 ## API
 
-- [Magnetometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Magnetometer)
+- [Magnetometer source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Magnetometer)
 - [Magnetometer API documentation](xref:Xamarin.Essentials.Magnetometer)

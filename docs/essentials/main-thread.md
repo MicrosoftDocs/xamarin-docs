@@ -110,7 +110,7 @@ The `MainThread` class includes the following additional `static` methods that c
 
 ## API
 
-- [MainThread source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/MainThread)
+- [MainThread source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/MainThread)
 - [MainThread API documentation](xref:Xamarin.Essentials.MainThread)
 
 ## Related Video

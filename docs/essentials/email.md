@@ -101,7 +101,7 @@ Not all email clients support sending attachments. See [documentation](https://d
 
 ## API
 
-- [Email source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Email)
+- [Email source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Email)
 - [Email API documentation](xref:Xamarin.Essentials.Email)
 
 ## Related Video

@@ -54,7 +54,7 @@ public class PhoneDialerTest
 
 ## API
 
-- [Phone Dialer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/PhoneDialer)
+- [Phone Dialer source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/PhoneDialer)
 - [Phone Dialer API documentation](xref:Xamarin.Essentials.PhoneDialer)
 
 ## Related Video

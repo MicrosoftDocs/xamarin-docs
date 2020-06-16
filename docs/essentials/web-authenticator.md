@@ -225,6 +225,6 @@ Check out the [full controller sample](https://github.com/xamarin/Essentials/blo
 -----
 ## API
 
-- [WebAuthenticator source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/WebAuthenticator)
+- [WebAuthenticator source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/WebAuthenticator)
 - [WebAuthenticator API documentation](xref:Xamarin.Essentials.WebAuthenticator)
 - [ASP.NET Core Server Sample](https://github.com/xamarin/Essentials/blob/develop/Samples/Sample.Server.WebAuthenticator/)

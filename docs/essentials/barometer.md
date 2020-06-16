@@ -89,5 +89,5 @@ No platform-specific implementation details.
 
 ## API
 
-- [Barometer source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Barometer)
+- [Barometer source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Barometer)
 - [Barometer API documentation](xref:Xamarin.Essentials.Barometer)
