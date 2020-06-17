@@ -6,7 +6,7 @@ ms.assetid: CE686893-609C-4EC3-9225-6C68D2A9F79C
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/21/2020
+ms.date: 06/17/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -25,7 +25,7 @@ XAML markup extensions help enhance the power and flexibility of XAML by allowin
 - [`OnIdiom`](#onidiom-markup-extension) – customize UI appearance based on the idiom of the device the application is running on.
 - [`DataTemplate`](#datatemplate-markup-extension) – converts a type into a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate).
 - [`FontImage`](#fontimage-markup-extension) – display a font icon in any view that can display an `ImageSource`.
-- [`OnAppTheme`](#onapptheme-markup-extension) – consume a resource based on the current system theme.
+- [`AppThemeBinding`](#appthemebinding-markup-extension) – consume a resource based on the current system theme.
 
 Additional XAML markup extensions have historically been supported by other XAML implementations, and are also supported by Xamarin.Forms. These are described more fully in other articles:
 
@@ -573,60 +573,55 @@ Here's the program running:
 
 For information about displaying font icons by specifying the font icon data in a `FontImageSource` object, see [Display font icons](~/xamarin-forms/user-interface/text/fonts.md#display-font-icons).
 
-## OnAppTheme markup extension
+## AppThemeBinding markup extension
 
-The `OnAppTheme` markup extension enables you to specify a resource to be consumed, such as an image or color, based on the current system theme. It provides the same functionality as the `OnAppTheme<T>` class, but with a more concise representation.
+The `AppThemeBinding` markup extension enables you to specify a resource to be consumed, such as an image or color, based on the current system theme.
 
 > [!IMPORTANT]
-> The `OnAppTheme` markup extension has minimum operating system requirements. For more information, see [Respond to system theme changes in Xamarin.Forms applications](~/xamarin-forms/user-interface/theming/system-theme-changes.md).
+> The `AppThemeBinding` markup extension has minimum operating system requirements. For more information, see [Respond to system theme changes in Xamarin.Forms applications](~/xamarin-forms/user-interface/theming/system-theme-changes.md).
 
-The `OnAppTheme` markup extension is supported by the `OnAppThemeExtension` class, which defines the following properties:
+The `AppThemeBinding` markup extension is supported by the `AppThemeBindingExtension` class, which defines the following properties:
 
 - `Default`, of type `object`, that you set to the resource to be used by default.
 - `Light`, of type `object`, that you set to the resource to be used when the device is using its light theme.
 - `Dark`, of type `object`, that you set to the resource to be used when the device is using its dark theme.
 - `Value`, of type `object`, that returns the resource that's currently being used by the markup extension.
-- `Converter` of type `IValueConverter`, that can be set to an `IValueConverter` implementation.
-- `ConverterParameter` of type `object`, that can be set to a value to pass to the `IValueConverter` implementation.
 
 > [!NOTE]
-> The XAML parser allows the `OnAppThemeExtension` class to be abbreviated as `OnAppTheme`.
+> The XAML parser allows the `AppThemeBindingExtension` class to be abbreviated as `AppBindingTheme`.
 
-The `Default` property is the content property of `OnAppThemeExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `Default=` part of the expression provided that it's the first argument.
+The `Default` property is the content property of `AppThemeBindingExtension`. Therefore, for XAML markup expressions expressed with curly braces, you can eliminate the `Default=` part of the expression provided that it's the first argument.
 
-The **OnAppTheme Demo** page shows how to use the `OnAppTheme` markup extension:
+The **AppThemeBinding Demo** page shows how to use the `AppThemeBinding` markup extension:
 
 ```xaml
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="MarkupExtensions.OnAppThemeDemoPage"
-             Title="OnAppTheme Demo">
+             x:Class="MarkupExtensions.AppThemeBindingDemoPage"
+             Title="AppThemeBinding Demo">
     <ContentPage.Resources>
 
         <Style x:Key="labelStyle"
                TargetType="Label">
             <Setter Property="TextColor"
-                    Value="{OnAppTheme Black, Light=Blue, Dark=Teal}" />
+                    Value="{AppThemeBinding Black, Light=Blue, Dark=Teal}" />
         </Style>
 
     </ContentPage.Resources>
     <StackLayout Margin="20">
         <Label Text="This text is green in light mode, and red in dark mode."
-               TextColor="{OnAppTheme Light=Green, Dark=Red}" />
+               TextColor="{AppThemeBinding Light=Green, Dark=Red}" />
         <Label Text="This text is black by default, blue in light mode, and teal in dark mode."
-               Style="{DynamicResource labelStyle}" />
+               Style="{StaticResource labelStyle}" />
     </StackLayout>
 </ContentPage>
 ```
 
 In this example, the text color of the first [`Label`](xref:Xamarin.Forms.Label) is set to green when the device is using its light theme, and is set to red when the device is using its dark theme. The second `Label` has its [`TextColor`](xref:Xamarin.Forms.Label.TextColor) property set through a [`Style`](xref:Xamarin.Forms.Style). This `Style` sets the text color of the `Label` to black by default, to blue when the device is using its light theme, and to teal when the device is using its dark theme.
 
-> [!NOTE]
-> A [`Style`](xref:Xamarin.Forms.Style) that consumes the `OnAppTheme` markup extension should be applied to a control with the `DynamicResource` markup extension, so that the app's UI is updated when the system theme changes.
-
 Here's the program running:
 
-![OnAppTheme Demo](consuming-images/onappthemedemo.png "OnAppTheme Demo")
+![AppThemeBinding Demo](consuming-images/appthemebindingdemo.png "AppThemeBinding Demo")
 
 ## Define markup extensions
 
