@@ -6,7 +6,7 @@ ms.assetid: 762B1802-D185-494C-B643-74EED55882FE
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 05/15/2020
+ms.date: 06/15/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -281,6 +281,21 @@ grid.Children.Add(bottomRight, 1, 2, 1, 2); // second column, second row
 
 > [!NOTE]
 > In addition, child views can be added to a [`Grid`](xref:Xamarin.Forms.Grid) with the [`AddHorizontal`](xref:Xamarin.Forms.Grid.IGridList`1.AddHorizontal*) and [`AddVertical`](xref:Xamarin.Forms.Grid.IGridList`1.AddVertical*) methods, which add children to a single row or single column `Grid`. The `Grid` then expands in rows or columns as these calls are made, as well as automatically positioning children in the correct cells.
+
+### Simplify row and column definitions
+
+In XAML, the row and column characteristics of a [`Grid`](xref:Xamarin.Forms.Grid) can be specified using a simplified syntax that avoids having to define [`RowDefinition`](xref:Xamarin.Forms.RowDefinition) and [`ColumnDefinition`](xref:Xamarin.Forms.ColumnDefinition) objects for each row and column. Instead, the [`RowDefinitions`](xref:Xamarin.Forms.Grid.RowDefinitions) and [`ColumnDefinitions`](xref:Xamarin.Forms.Grid.ColumnDefinitions) properties can be set to strings containing comma-delimited [`GridUnitType`](xref:Xamarin.Forms.GridUnitType) values, from which type converters built into Xamarin.Forms create `RowDefinition` and `ColumnDefinition` objects:
+
+```xaml
+<Grid RowDefinitions="1*, Auto, 25, 14, 20"
+      ColumnDefinitions="*, 2*, Auto, 300">
+    ...
+</Grid>
+```
+
+In this example, the [`Grid`](xref:Xamarin.Forms.Grid) has five rows and four columns. The third, forth, and fifth rows are set to absolute heights, with the second row auto-sizing to its content. The remaining height is then allocated to the first row.
+
+The forth column is set to an absolute width, with the third column auto-sizing to its content. The remaining width is allocated proportionally between the first and second columns based on the number before the star. In this example, the width of the second column is twice that of the first column (because `*` is identical to `1*`).
 
 ## Space between rows and columns
 

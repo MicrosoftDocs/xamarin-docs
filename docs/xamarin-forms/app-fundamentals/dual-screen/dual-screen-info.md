@@ -6,7 +6,7 @@ ms.assetid: dd5eb074-f4cb-4ab4-b47d-76f862ac7cfa
 ms.technology: xamarin-forms
 author: davidortinau
 ms.author: daortin
-ms.date: 02/08/2020
+ms.date: 05/19/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -25,15 +25,15 @@ The `DualScreenInfo` class enables you to determine which pane your view is on, 
 - `IsLandscape` indicates if the device is landscape. This is useful because native orientation APIs don't report orientation correctly when an application is spanned.
 - `SpanMode` indicates if the layout is in tall, wide, or single pane mode.
 
-In addition, a `PropertyChanged` event fires when any properties change.
+In addition, the `PropertyChanged` event fires when any properties change, and the `HingeAngleChanged` event fires when the hinge angle changes.
 
-## Poll hinge angle on Android
+## Poll hinge angle on Android and UWP
 
-The following property is available when accessing `DualScreenInfo` from the Android platform project:
+The following method is available when accessing `DualScreenInfo` from Android and UWP platform projects:
 
 - `GetHingeAngleAsync` retrieves the current angle of the device hinge. When using the simulator the HingeAngle can be set by modifying the Pressure sensor.
 
-This property can be used from an Android custom renderer:
+This method can be invoked from custom renderers on Android and UWP. The following code shows an Android custom renderer example:
 
 ```csharp
 public class HingeAngleLabelRenderer : Xamarin.Forms.Platform.Android.FastRenderers.LabelRenderer

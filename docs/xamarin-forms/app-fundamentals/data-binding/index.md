@@ -6,7 +6,7 @@ ms.assetid: 938E85C8-521D-43B9-92CB-D591A06D98A6
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 03/23/2020
+ms.date: 05/21/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -62,6 +62,10 @@ Use relative bindings to set the binding source relative to the position of the 
 ## [Binding Fallbacks](binding-fallbacks.md)
 
 Make data bindings more robust by defining fallback values to use if the binding process fails.
+
+## [Multi-Bindings](multibinding.md)
+
+Attach a collection of [`Binding`](xref:Xamarin.Forms.Binding) objects to a single binding target property.
 
 ## [The Command Interface](commanding.md)
 

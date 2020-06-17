@@ -20,12 +20,6 @@ The `IndicatorView` is a control that displays indicators that represent the num
 
 [![Screenshot of a CarouselView and IndicatorView, on iOS and Android](indicatorview-images/circles.png "IndicatorView circles")](indicatorview-images/circles-large.png#lightbox "IndicatorView circles")
 
-`IndicatorView` is available in Xamarin.Forms 4.4 on the iOS and Android platforms, and in 4.5 on the Universal Windows Platform. However, it's currently experimental and can only be used by adding the following line of code to your `AppDelegate` class on iOS, or to your `MainActivity` class on Android, before calling `Forms.Init`:
-
-```csharp
-Forms.SetFlags("IndicatorView_Experimental");
-```
-
 `IndicatorView` defines the following properties:
 
 - `Count`, of type `int`, the number of indicators.

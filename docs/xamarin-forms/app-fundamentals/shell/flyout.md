@@ -6,7 +6,7 @@ ms.assetid: FEDE51EB-577E-4B3E-9890-B7C1A5E52516
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/22/2020
+ms.date: 06/10/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 

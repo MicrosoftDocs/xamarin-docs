@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 02/21/2020
+ms.date: 05/19/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -408,6 +408,7 @@ The following table lists the visual states that are defined in Xamarin.Forms:
 | `CarouselView` | `DefaultItem`, `CurrentItem`, `PreviousItem`, `NextItem` | [CarouselView visual states](~/xamarin-forms/user-interface/carouselview/interaction.md#define-visual-states) |
 | `ImageButton` | `Pressed` | [ImageButton visual states](~/xamarin-forms/user-interface/imagebutton.md#imagebutton-visual-states) |
 | `RadioButton` | `IsChecked` | [RadioButton visual states](~/xamarin-forms/user-interface/radiobutton.md#radiobutton-visual-states) |
+| `Switch` | `On`, `Off` | [Switch visual states](~/xamarin-forms/user-interface/switch.md#switch-visual-states) |
 | `VisualElement` | `Normal`, `Disabled`, `Focused`, `Selected` | [Common states](#common-states) |
 
 Each of these states can be accessed through the visual state group named `CommonStates`.
