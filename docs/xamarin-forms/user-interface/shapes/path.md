@@ -84,7 +84,7 @@ For more information about geometries, see [Xamarin.Forms Geometries](geometries
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapedemos/)
+- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
 - [Xamarin.Forms Shape Geometries](geometries.md)
 - [Xamarin.Forms Path Transforms](path-transforms.md)

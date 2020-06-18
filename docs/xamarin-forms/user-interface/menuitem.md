@@ -231,7 +231,7 @@ public class MyViewModel : INotifyPropertyChanged
         {
             // Execute logic here
         },
-        () => IsToolbarItemEnabled);
+        () => IsMenuItemEnabled);
     }
 }
 ```

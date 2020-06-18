@@ -38,4 +38,4 @@ Xamarin.Forms defines a number of objects that derive from the `Shape` class. Th
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapedemos/)
+- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
