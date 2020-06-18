@@ -26,8 +26,6 @@ Xamarin.Forms uses the [`Image`](xref:Xamarin.Forms.Image) view to display image
 
 - [`Source`](xref:Xamarin.Forms.Image.Source) - An [`ImageSource`](xref:Xamarin.Forms.ImageSource) instance, either File, Uri or Resource, which sets the image to display.
 - [`Aspect`](xref:Xamarin.Forms.Image.Aspect) - How to size the image within the bounds it is being displayed within (whether to stretch, crop or letterbox).
-- `ErrorPlaceholder` - An `ImageSource` instance, which sets the local image to display if the image specified in the `Source` property can't be loaded.
-- `LoadingPlaceholder` - An `ImageSource` instance, which sets the local image to display while the image specified in the `Source` property is loading.
 
 [`ImageSource`](xref:Xamarin.Forms.ImageSource) instances can be obtained using static methods for each type of image source:
 
@@ -305,34 +303,6 @@ webImage.Source = new UriImageSource
 ```
 
 Built-in caching makes it very easy to support scenarios like scrolling lists of images, where you can set (or bind) an image in each cell and let the built-in cache take care of re-loading the image when the cell is scrolled back into view.
-
-## Error and loading placeholder images
-
-Sometimes image loading fails, when displaying a remote image, because the image can't be resolved. While this scenario can be handled with value converters, or other additional code, remote image handling can be made more robust by defining a fallback value to display while the remote image is being downloaded, and by defining a fallback image to use if image loading fails. This can be accomplished by defining the optional `ErrorPlaceholder` and `LoadingPlaceholder` properties of an [`Image`](xref:Xamarin.Forms.Image).
-
-The `ErrorPlaceholder` property, of type `ImageSource`, specifies a local image to be displayed if the image specified in the `Source` property can't be loaded. Similarly, the `LoadingPlaceholder` property, of type `ImageSource`, specifies a local image to be displayed while the image specified in the `Source` property is loading.
-
-> [!IMPORTANT]
-> The `ErrorPlaceholder` and `LoadingPlaceholder` properties can only be set to local image files. Attempting to set either property to an embedded image, or a remote image, will result in an `InvalidOperationException` being thrown.
-
-The following XAML shows an example of setting both properties:
-
-```xaml
-<Image Source="https://aka.ms/campus.jpg"
-       LoadingPlaceholder="loading.png"
-       ErrorPlaceholder="error.png" />
-```
-
-The equivalent C# code is:
-
-```csharp
-Image image = new Image
-{
-    Source = ImageSource.FromUri(new Uri("https://aka.ms/campus.jpg")),
-    LoadingPlaceholder = "loading.png",
-    ErrorPlaceholder = "error.png"
-};
-```
 
 ## Animated GIFs
 
