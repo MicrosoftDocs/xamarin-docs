@@ -225,7 +225,7 @@ public class MyViewModel : INotifyPropertyChanged
 
     public Command MyCommand { get; private set; }
 
-    public ToolbarItemViewModel()
+    public MyViewModel()
     {
         MyCommand = new Command(() =>
         {
