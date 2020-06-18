@@ -38,7 +38,6 @@ The `Expander` control defines the following properties:
 - `ForceUpdateSizeCommand`, of type `ICommand`, which defines the command that's executed when the size of the `Expander` is force updated. This property uses the `OneWayToSource` binding mode.
 - `Header`, of type [`View`](xref:Xamarin.Forms.View), which defines the header content.
 - `IsExpanded`, of type `bool`, which determines if the `Expander` is expanded . This property uses the `TwoWay` binding mode, and has a default value of `false`.
-- `Spacing`, of type `double`, which represents the space between the header and its content. The default value of this property is 0.
 - `State`, of type `ExpanderState`, which represents the state of the `Expander`. This property uses the `OneWayToSource` binding mode.
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
@@ -217,51 +216,18 @@ The `IsExpanded` property becomes `true` when the `Expander` header is tapped, w
 
 For more information about triggers, see [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
-## Define the space between header and content
-
-By default, the content in an `Expander` appears directly beneath its header. However, this behavior can be changed by setting the `Spacing` property to a `double` value that represents the empty space between the content and its header:
-
-```xaml
-<Expander Spacing="50"
-          IsExpanded="true">
-    <Expander.Header>
-        <Label Text="Baboon"
-               FontAttributes="Bold"
-               FontSize="Medium" />
-    </Expander.Header>
-    <Grid Padding="10">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="Auto" />
-            <ColumnDefinition Width="Auto" />
-        </Grid.ColumnDefinitions>
-        <Image Source="http://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Papio_anubis_%28Serengeti%2C_2009%29.jpg/200px-Papio_anubis_%28Serengeti%2C_2009%29.jpg"
-               Aspect="AspectFill"
-               HeightRequest="120"
-               WidthRequest="120" />
-        <Label Grid.Column="1"
-               Text="Baboons are African and Arabian Old World monkeys belonging to the genus Papio, part of the subfamily Cercopithecinae."
-               FontAttributes="Italic" />
-    </Grid>
-</Expander>
-```
-
-In this example, the `Expander` content appears 50 device-independent units beneath its header:
-
-![Screenshot of an Expander with Spacing set, on iOS and Android](expander-images/expander-spacing.png "Expander with Spacing set on iOS and Android")
-
 ## Embed an Expander in an Expander
 
 The content of an `Expander` can be set to another `Expander` control, to enable multiple levels of expansion. The following XAML shows an `Expander` whose content is another `Expander` object:
 
 ```xaml
-<Expander Spacing="10">
+<Expander>
     <Expander.Header>
         <Label Text="{Binding Name}"
                FontAttributes="Bold"
                FontSize="Medium" />
     </Expander.Header>
-    <Expander Padding="10"
-              Spacing="10">
+    <Expander Padding="10">
         <Expander.Header>
             <Label Text="{Binding Location}"
                    FontSize="Medium" />
