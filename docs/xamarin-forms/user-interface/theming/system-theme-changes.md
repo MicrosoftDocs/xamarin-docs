@@ -128,13 +128,16 @@ The `RequestedTheme` property returns an `OSAppTheme` enumeration member. The `O
 
 ## Set the current user theme
 
-The theme used by the application can be set with the `Application.UserTheme` property, which is of type `OSAppTheme`:
+The theme used by the application can be set with the `Application.UserAppTheme` property, which is of type `OSAppTheme`, regardless of which system theme is currently operational:
 
 ```csharp
 Application.Current.UserAppTheme = OSAppTheme.Dark;
 ```
 
-In this example, the application is set to use the theme defined for the system dark mode.
+In this example, the application is set to use the theme defined for the system dark mode, regardless of which system theme is currently operational.
+
+> [!NOTE]
+> Set the `UserAppTheme` property to `OSAppTheme.Unspecified` to default to the operational system theme.
 
 ## React to theme changes
 
