@@ -22,7 +22,7 @@ Apple has added several enhancements to iOS 10.3 that allow an app to manage its
 
 ![](alternate-app-icons-images/icons04.png "A sample alert when an app changes its icon")
 
-<a name="Adding-Alternate-Icons" />
+<a name="Adding-Alternate-Icons"></a>
 
 ## Adding Alternate Icons to a Xamarin.iOS Project
 
@@ -42,7 +42,7 @@ Do the following:
 
     ![](alternate-app-icons-images/icons01.png "The Resources folder should look like this")
 
-<a name="Modifying-the-Info.plist-File" />
+<a name="Modifying-the-Info.plist-File"></a>
 
 ## Modifying the Info.plist File
 
@@ -100,7 +100,7 @@ Or like this if opened in a text editor:
 </dict>
 ```
 
-<a name="Managing-the-Apps-Icon" />
+<a name="Managing-the-Apps-Icon"></a>
 
 ## Managing the App's Icon 
 
@@ -159,7 +159,7 @@ If the user switches back to the primary icon, an alert like the following will 
 
 ![](alternate-app-icons-images/icons05.png "A sample alert when an app changes to the primary icon")
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

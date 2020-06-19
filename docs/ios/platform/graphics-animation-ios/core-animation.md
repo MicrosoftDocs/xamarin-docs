@@ -18,7 +18,7 @@ All of the ultra-smooth animations in iOS such as scrolling of tables and swipin
 
 The Core Animation and Core Graphics frameworks can work together to create beautiful, animated 2D graphics. In fact Core Animation can even transform 2D graphics in 3D space, creating amazing, cinematic experiences. However, to create true 3D graphics, you would need to use something like OpenGL ES, or for games turn to an API such as MonoGame, although 3D is beyond the scope of this article.
 
-<a name="Using_Core_Animation" />
+<a name="Using_Core_Animation"></a>
 
 ## Core Animation
 
@@ -27,7 +27,7 @@ iOS uses the Core Animation framework to create animation effects such as transi
 - [Via UIKit](#Using_UIKit_Animation), which includes view-based animations as well as animated transitions between controllers.
 - [Via Core Animation](#Using_Core_Animation), which layers directly, allowing for finer-grained control.
 
-<a name="Using_UIKit_Animation" />
+<a name="Using_UIKit_Animation"></a>
 
 ## Using UIKit Animation
 

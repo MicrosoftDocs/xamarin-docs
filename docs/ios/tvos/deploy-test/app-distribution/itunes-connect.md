@@ -15,7 +15,7 @@ _This article provides a supplemental guide to the iOS Configure your App in iTu
 
 In addition to the configurations and setting that you will need to make by following the iOS [Configure your App in iTunes Connect](~/ios/deploy-test/app-distribution/app-store-distribution/itunesconnect.md) guide, this document covers the specific configurations that will be required to release a Xamarin.tvOS app in the Apple TV App Store.
 
-<a name="Adding-a-tvOS-Release-Version" />
+<a name="Adding-a-tvOS-Release-Version"></a>
 
 ## Adding a tvOS Release Version
 
@@ -39,7 +39,7 @@ The tvOS specific information screens will then be available for the given iTune
 
 [![](itunes-connect-images/connect02.png "The tvOS specific information screen")](itunes-connect-images/connect02.png#lightbox)
 
-<a name="tvOS-Version-Information" />
+<a name="tvOS-Version-Information"></a>
 
 ## tvOS Version Information
 
@@ -59,7 +59,7 @@ Once you have entered the required information, click the **Save** button in the
 
 [![](itunes-connect-images/connect04.png "tvOS Version Information ready for submission")](itunes-connect-images/connect04.png#lightbox)
 
-<a name="Submitting-for-Review" />
+<a name="Submitting-for-Review"></a>
 
 ## Preparing to Submit for Review
 
@@ -67,7 +67,7 @@ When you are finally ready to submit your Xamarin.tvOS app to the Apple TV App S
 
 [![](itunes-connect-images/connect05.png "Submit for Review")](itunes-connect-images/connect05.png#lightbox)
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

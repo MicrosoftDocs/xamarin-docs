@@ -75,7 +75,7 @@ The `INavigationService` interface is resolved in the `ViewModelBase` class cons
 NavigationService = ViewModelLocator.Resolve<INavigationService>();
 ```
 
-This returns a reference to the `NavigationService` object that's stored in the Autofac dependency injection container, which is created by the `InitNavigation` method in the `App` class. For more information, see [Navigating When the App is Launched](#navigating_when_the_app_is_launched).
+This returns a reference to the `NavigationService` object that's stored in the Autofac dependency injection container, which is created by the `InitNavigation` method in the `App` class. For more information, see [Navigating When the App is Launched](#navigating-when-the-app-is-launched).
 
 The `ViewModelBase` class stores the `NavigationService` instance in a `NavigationService` property, of type `INavigationService`. Therefore, all view model classes, which derive from the `ViewModelBase` class, can use the `NavigationService` property to access the methods specified by the `INavigationService` interface. This avoids the overhead of injecting the `NavigationService` object from the Autofac dependency injection container into each view model class.
 
@@ -122,7 +122,7 @@ public Task NavigateToAsync<TViewModel>(object parameter) where TViewModel�
 }
 ```
 
-Each method allows any view model class that derives from the `ViewModelBase` class to perform hierarchical navigation by invoking the `InternalNavigateToAsync` method. In addition, the second `NavigateToAsync` method enables navigation data to be specified as an argument that's passed to the view model being navigated to, where it's typically used to perform initialization. For more information, see [Passing Parameters During Navigation](#passing_parameters_during_navigation).
+Each method allows any view model class that derives from the `ViewModelBase` class to perform hierarchical navigation by invoking the `InternalNavigateToAsync` method. In addition, the second `NavigateToAsync` method enables navigation data to be specified as an argument that's passed to the view model being navigated to, where it's typically used to perform initialization. For more information, see [Passing Parameters During Navigation](#passing-parameters-during-navigation).
 
 The `InternalNavigateToAsync` method executes the navigation request, and is shown in the following code example:
 
@@ -181,16 +181,14 @@ The `InternalNavigateToAsync` method performs navigation to a view model by firs
 - View models are in a .ViewModels child namespace.
 - View names correspond to view model names, with "Model" removed.
 
-When a view is instantiated, it's associated with its corresponding view model. For more information about how this occurs, see [Automatically Creating a View Model with a View Model Locator](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically_creating_a_view_model_with_a_view_model_locator).
+When a view is instantiated, it's associated with its corresponding view model. For more information about how this occurs, see [Automatically Creating a View Model with a View Model Locator](~/xamarin-forms/enterprise-application-patterns/mvvm.md#automatically-creating-a-view-model-with-a-view-model-locator).
 
 If the view being created is a `LoginView`, it's wrapped inside a new instance of the `CustomNavigationView` class and assigned to the [`Application.Current.MainPage`](xref:Xamarin.Forms.Application.MainPage) property. Otherwise, the `CustomNavigationView` instance is retrieved, and provided that it isn't null, the [`PushAsync`](xref:Xamarin.Forms.NavigationPage) method is invoked to push the view being created onto the navigation stack. However, If the retrieved `CustomNavigationView` instance is `null`, the view being created is wrapped inside a new instance of the `CustomNavigationView` class and assigned to the `Application.Current.MainPage` property. This mechanism ensures that during navigation, pages are added correctly to the navigation stack both when it's empty, and when it contains data.
 
 > [!TIP]
 > Consider caching pages. Page caching results in memory consumption for views that are not currently displayed. However, without page caching it does mean that XAML parsing and construction of the page and its view model will occur every time a new page is navigated to, which can have a performance impact for a complex page. For a well-designed page that does not use an excessive number of controls, the performance should be sufficient. However, page caching might help if slow page loading times are encountered.
 
-After the view is created and navigated to, the `InitializeAsync` method of the view's associated view model is executed. For more information, see [Passing Parameters During Navigation](#passing_parameters_during_navigation).
-
-<a name="navigating_when_the_app_is_launched" />
+After the view is created and navigated to, the `InitializeAsync` method of the view's associated view model is executed. For more information, see [Passing Parameters During Navigation](#passing-parameters-during-navigation).
 
 ### Navigating When the App is Launched
 
@@ -223,9 +221,7 @@ public Task InitializeAsync()
 
 The `MainView` is navigated to if the app has a cached access token, which is used for authentication. Otherwise, the `LoginView` is navigated to.
 
-For more information about the Autofac dependency injection container, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction_to_dependency_injection).
-
-<a name="passing_parameters_during_navigation" />
+For more information about the Autofac dependency injection container, see [Introduction to Dependency Injection](~/xamarin-forms/enterprise-application-patterns/dependency-injection.md#introduction-to-dependency-injection).
 
 ### Passing Parameters During Navigation
 
@@ -258,8 +254,6 @@ public override async Task InitializeAsync(object navigationData)
 ```
 
 This method retrieves the `Order` instance that was passed into the view model during the navigation operation, and uses it to retrieve the full order details from the `OrderService` instance.
-
-<a name="invoking_navigation_using_behaviors" />
 
 ### Invoking Navigation using Behaviors
 

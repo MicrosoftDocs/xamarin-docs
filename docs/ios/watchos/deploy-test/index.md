@@ -32,7 +32,7 @@ Whether you are deploying to a test Watch, or uploading to the App Store,
   - [Deploy to an Apple Watch for testing](~/ios/watchos/deploy-test/device.md), or
   - [Upload to the App Store](~/ios/watchos/deploy-test/appstore.md).
 
-<a name="App_IDs"/>
+<a name="App_IDs"></a>
 
 ## App IDs
 
@@ -73,7 +73,7 @@ Note that some features cannot be used with a wildcard
 For distribution, you'll only need to create one
   Distribution Provisioning Profile for the wildcard App ID.
 
-<a name="App_Groups" />
+<a name="App_Groups"></a>
 
 ## App Groups
 

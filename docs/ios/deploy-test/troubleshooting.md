@@ -55,7 +55,7 @@ Sometimes, testing doesn’t go quite as smoothly as planned.  The following ste
 
 - Only two builds can be submitted for review each day. Since changing the version forces a review, this means that version numbers can only be changed twice per day.
 
-<a name="Automatically_copy_app_bundles_back_to_Windows" />
+<a name="Automatically_copy_app_bundles_back_to_Windows"></a>
 
 ## Automatically copy .app bundles back to Windows
 

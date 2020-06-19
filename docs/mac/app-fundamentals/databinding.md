@@ -25,7 +25,7 @@ In this article, we'll cover the basics of working with key-value coding and dat
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` attributes used to wire up your C# classes to Objective-C objects and UI elements.
 
-<a name="What_is_Key-Value_Coding" />
+<a name="What_is_Key-Value_Coding"></a>
 
 ## What is key-value coding
 
@@ -150,7 +150,7 @@ Person.SetValueForKey(new NSString("Jane Doe"), new NSString("Name"));
 
 Would change the value of the `Name` property to `Jane Doe`.
 
-<a name="Observing_Value_Changes" />
+<a name="Observing_Value_Changes"></a>
 
 ### Observing value changes
 
@@ -172,7 +172,7 @@ For more information, please see Apple's [Introduction to Key-Value Observing Pr
 
 The following sections will show how you can use a key-value coding and key-value observing compliant class to bind data to UI elements in Xcode's Interface Builder, instead of reading and writing values using C# code. In this way you separate your _Data Model_ from the views that are used to display them, making the Xamarin.Mac application more flexible and easier to maintain. You also greatly decrease the amount of code that has to be written.
 
-<a name="Defining_your_Data_Model" />
+<a name="Defining_your_Data_Model"></a>
 
 ### Defining your data model
 
@@ -408,7 +408,7 @@ Note that in addition to its own Key, the `isManager` accessor is also sending t
 
 We'll be using the `PersonModel` Data Model throughout the rest of this article.
 
-<a name="Simple_Data_Binding" />
+<a name="Simple_Data_Binding"></a>
 
 ### Simple data binding
 
@@ -492,7 +492,7 @@ Any changes that the users makes to the form will be written back to the `Person
 
 [![Hiding the number of employees for non-managers](databinding-images/simple10.png "Hiding the number of employees for non-managers")](databinding-images/simple10-large.png#lightbox)
 
-<a name="Table_View_Data_Binding" />
+<a name="Table_View_Data_Binding"></a>
 
 ### Table view data binding
 
@@ -607,7 +607,7 @@ If we run the application, the table will be populated with our array of `Person
 
 [![Running the application](databinding-images/table11.png "Running the application")](databinding-images/table11-large.png#lightbox)
 
-<a name="Outline_View_Data_Binding" />
+<a name="Outline_View_Data_Binding"></a>
 
 ### Outline view data binding
 

@@ -1,13 +1,13 @@
 ---
 title: "WPF Platform Setup"
-description: "Xamarin.Forms now has preview support for the WPF platform"
+description: "Xamarin.Forms has preview support for the WPF platform."
 ms.prod: xamarin
 ms.assetid: 650723F2-4279-4B7B-B0A1-D7F8FF26BF1E
 ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/09/2020
+ms.date: 05/20/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -15,7 +15,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![Preview](~/media/shared/preview.png)
 
-Xamarin.Forms now has preview support for the Windows Presentation Foundation (WPF). This article demonstrates how to add a WPF project to a Xamarin.Forms solution.
+Xamarin.Forms has preview support for the Windows Presentation Foundation (WPF), on .NET Framework and on .NET Core 3. This article demonstrates how to add a WPF project that targets .NET Framework, to a Xamarin.Forms solution.
 
 > [!IMPORTANT]
 > Xamarin.Forms support for WPF is provided by the community. For more information, see [Xamarin.Forms Platform Support](https://github.com/xamarin/Xamarin.Forms/wiki/Platform-Support).
@@ -33,6 +33,9 @@ Follow these instructions to add a WPF application that will run on the Windows 
     ![Add a new WPF project](wpf-images/add-project.png "Add a new WPF project")
 
     Press the **Next** button.
+
+    > [!NOTE]
+    > Xamarin.Forms 4.7 includes support for WPF apps that run on .NET Core 3.
 
 3. In the **Configure your new project** window, type a name for the project with a **WPF** extension, for example, **BoxViewClock.WPF**. Click the **Browse** button, select the **BoxViewClock** folder, and press **Select Folder** to put the WPF project in the same directory as the other projects in the solution:
 

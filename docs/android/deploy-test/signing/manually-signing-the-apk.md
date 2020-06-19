@@ -153,7 +153,7 @@ See [Google's documentation](https://developer.android.com/studio/command-line/a
 > [!NOTE]
 > According to [Google issue 62696222](https://issuetracker.google.com/issues/62696222), **apksigner** is "missing" from the Android SDK. The workaround for this is to install the Android SDK build tools v25.0.3 and use that version of **apksigner**.  
 
-<a name="Sign_the_APK_with_jarsigner" />
+<a name="Sign_the_APK_with_jarsigner"></a>
 
 ### Sign the APK with jarsigner
 

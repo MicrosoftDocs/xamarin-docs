@@ -13,7 +13,7 @@ ms.date: 06/07/2016
 
 _This section presents the most common tasks and concepts that developers need to be aware of when writing Xamarin.tvOS apps._
 
-<a name="Xamarin.tvOS-Application-Fundamentals" />
+<a name="Xamarin.tvOS-Application-Fundamentals"></a>
 
 ## Xamarin.tvOS Application Fundamentals
 
@@ -21,25 +21,25 @@ The documents in this section provide working knowledge of the fundamental conce
 
 It is highly suggested that you work through the [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md) first, as it covers key concepts and techniques that we'll be using in every article.
 
-<a name="Working-with-Icons-and-Images" />
+<a name="Working-with-Icons-and-Images"></a>
 
 ### [Working with Icons and Images](~/ios/tvos/app-fundamentals/icons-images.md)
 
 This article covers designing and working with icons and images inside of a Xamarin.tvOS app.
 
-<a name="Working-with-Navigation-and-Focus" />
+<a name="Working-with-Navigation-and-Focus"></a>
 
 ### [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md)
 
 This article covers the concept of Focus and how it is used to present and handle Navigation inside of a Xamarin.tvOS app.
 
-<a name="Resources-and-Data-Storage" />
+<a name="Resources-and-Data-Storage"></a>
 
 ### [Resources and Data Storage](~/ios/tvos/app-fundamentals/resources-data-storage.md)
 
 Unlike iOS devices, the new Apple TV does not provide persistent, local storage for tvOS apps. This article covers working with resources and persistent data storage in a Xamarin.tvOS app.
 
-<a name="Playing-Sound-with-AVAudioPlayer" />
+<a name="Playing-Sound-with-AVAudioPlayer"></a>
 
 ### [Playing Sound with AVAudioPlayer](~/ios/tvos/app-fundamentals/sounds.md)
 

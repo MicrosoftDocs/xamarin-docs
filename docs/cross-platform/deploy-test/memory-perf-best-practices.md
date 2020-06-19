@@ -12,7 +12,7 @@ ms.date: 03/24/2017
 
 Poor application performance presents itself in many ways. It can make an application seem unresponsive, can cause slow scrolling, and can reduce battery life. However, optimizing performance involves more than just implementing efficient code. The user's experience of application performance must also be considered. For example, ensuring that operations execute without blocking the user from performing other activities can help to improve the user's experience.
 
-<a name="profiler" />
+<a name="profiler"></a>
 
 ## Use the Profiler
 
@@ -26,7 +26,7 @@ The following best practices are recommended when profiling an app:
 - Ideally, profiling should be performed on a variety of devices, as taking performance measurements on one device won't always show the performance characteristics of other devices. However, at a minimum, profiling should be performed on a device that has the lowest anticipated specification.
 - Close all other applications to ensure that the full impact of the application being profiled is being measured, rather than the other applications.
 
-<a name="idisposable" />
+<a name="idisposable"></a>
 
 ## Release IDisposable Resources
 
@@ -84,7 +84,7 @@ The `StreamReader` class implements `IDisposable`, and the `finally` block calls
 
 For more information, see [IDisposable Interface](xref:System.IDisposable).
 
-<a name="events" />
+<a name="events"></a>
 
 ## Unsubscribe from Events
 
@@ -155,7 +155,7 @@ public class Subscriber : IDisposable
 
 The `handler` field maintains the reference to the anonymous method, and is used for event subscription and unsubscribe.
 
-<a name="weakreferences" />
+<a name="weakreferences"></a>
 
 ## Use Weak References to Prevent Immortal Objects
 
@@ -164,7 +164,7 @@ The `handler` field maintains the reference to the anonymous method, and is used
 > [avoiding circular references in iOS](~/ios/deploy-test/performance.md#avoid-strong-circular-references)
 > to ensure their apps use memory efficiently.
 
-<a name="lazy" />
+<a name="lazy"></a>
 
 ## Delay the Cost of Creating Objects
 
@@ -206,7 +206,7 @@ Lazy initialization occurs the first time the `Lazy<T>.Value` property is access
 
 For more information about lazy initialization, see [Lazy Initialization](https://msdn.microsoft.com/library/dd997286(v=vs.110).aspx).
 
-<a name="async" />
+<a name="async"></a>
 
 ## Implement Asynchronous Operations
 
@@ -245,7 +245,7 @@ Long running operations should also support cancellation. For example, continuin
 
 For more information, see [Async Support Overview](~/cross-platform/platform/async.md).
 
-<a name="sgen" />
+<a name="sgen"></a>
 
 ## Use the SGen Garbage Collector
 
@@ -279,7 +279,7 @@ To reduce pressure on the garbage collector, follow these guidelines:
 - Explicitly release resources such as streams, network connections, large blocks of memory, and files once they are no longer required. For more information, see [Release IDisposable Resources](#idisposable).
 - De-register event handlers once they are no longer required, to make objects collectable. For more information, see [Unsubscribe from Events](#events).
 
-<a name="linker" />
+<a name="linker"></a>
 
 ## Reduce the Size of the Application
 
@@ -333,7 +333,7 @@ Android apps can also be split into a separate APK for each ABI ("architecture")
 Learn more in this blog post:
 [How To Keep Your Android App Size Down](https://montemagno.com/how-to-keep-your-android-app-size-down/).
 
-<a name="optimizeimages" />
+<a name="optimizeimages"></a>
 
 ## Optimize Image Resources
 
@@ -341,7 +341,7 @@ Images are some of the most expensive resources that applications use, and are o
 
 Regardless of the image resolution, displaying image resources can greatly increase the app's memory footprint. Therefore, they should only be created when required and should be released as soon as the application no longer requires them.
 
-<a name="activationperiod" />
+<a name="activationperiod"></a>
 
 ## Reduce the Application Activation Period
 
@@ -351,7 +351,7 @@ Before an application displays its initial UI, it should provide a splash screen
 
 During the activation period, applications execute activation logic, which often includes the loading and processing of resources. The activation period can be reduced by ensuring that required resources are packaged within the app, instead of being retrieved remotely. For example, in some circumstances it may be appropriate during the activation period to load locally stored placeholder data. Then, once the initial UI is displayed, and the user is able to interact with the app, the placeholder data can be progressively replaced from a remote source. In addition, the app's activation logic should only perform work that's required to let the user start using the application. This can help if it delays loading additional assemblies, as assemblies are loaded the first time they are used.
 
-<a name="webservicecommunication" />
+<a name="webservicecommunication"></a>
 
 ## Reduce Web Service Communication
 

@@ -7,7 +7,7 @@ ms.technology: xamarin-forms
 ms.custom: xamu-video
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/17/2020
+ms.date: 05/20/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 # Styling Xamarin.Forms apps using Cascading Style Sheets (CSS)
@@ -153,6 +153,12 @@ The argument to the `StyleSheet.FromReader` method is the `TextReader` that has 
 CSS uses selectors to determine which elements to target. Styles with matching selectors are applied consecutively, in definition order. Styles defined on a specific item are always applied last. For more information about supported selectors, see [Selector Reference](#selector-reference).
 
 CSS uses properties to style a selected element. Each property has a set of possible values, and some properties can affect any type of element, while others apply to groups of elements. For more information about supported properties, see [Property Reference](#property-reference).
+
+Child stylesheets always override parent stylesheets if they set the same properties. Therefore, the following precedence rules are followed when applying styles that set the same properties:
+
+- A style defined in the application resources will be overwritten by a style defined in the page resources, if they set the same properties.
+- A style defined in page resources will be overwritten by a style defined in the control resources, if they set the same properties.
+- A style defined in the application resources will be overwritten by a style defined in the control resources, if they set the same properties.
 
 > [!IMPORTANT]
 > CSS variables are unsupported.

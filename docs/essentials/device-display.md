@@ -98,7 +98,7 @@ No differences.
 
 ## API
 
-- [DeviceDisplay source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/DeviceDisplay)
+- [DeviceDisplay source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/DeviceDisplay)
 - [DeviceDisplay API documentation](xref:Xamarin.Essentials.DeviceDisplay)
 
 ## Related Video

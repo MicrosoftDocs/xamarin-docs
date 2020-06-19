@@ -196,7 +196,7 @@ Google's [Upstream Messages](https://firebase.google.com/docs/cloud-messaging/xm
 explains how to structure JSON-encoded messages and send them to app
 servers that run Google's XMPP-based Cloud Connection Server.
 
-<a name="settingup" />
+<a name="settingup"></a>
 
 ## Setting Up Google Cloud Messaging
 

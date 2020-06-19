@@ -16,8 +16,6 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 It is important to consider how your application will be used and how landscape orientation can be incorporated to improve the user experience. Individual layouts can be designed to accommodate multiple orientations and best use the available space. At the application level, rotation can be disabled or enabled.
 
-<a name="Controlling_Orientation" />
-
 ## Controlling Orientation
 
 When using Xamarin.Forms, the supported method of controlling device orientation is to use the settings for each individual project.
@@ -81,8 +79,6 @@ Note that the native Android APIs provide a lot of control over how orientation 
 
 On the Universal Windows Platform (UWP), supported orientations are set in the **Package.appxmanifest** file. Opening the manifest will reveal a configuration panel where supported orientations can be selected.
 
-<a name="Reacting_to_Changes_in_Orientation" />
-
 ## Reacting to Changes in Orientation
 
 Xamarin.Forms does not offer any native events for notifying your app of orientation changes in shared code. However,[Xamarin.Essentials](~/essentials/index.md) contains a [`DeviceDisplay`] class that provides notifications of orientation changes.
@@ -127,8 +123,6 @@ and landscape:
 ![](device-orientation-images/calculator-landscape.png "Calculator Application in Landscape")
 
 Notice that the apps take advantage of the available space by adding more functionality in landscape.
-
-<a name="Responsive_Layout" />
 
 ## Responsive Layout
 

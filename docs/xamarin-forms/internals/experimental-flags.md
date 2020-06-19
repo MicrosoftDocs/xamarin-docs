@@ -6,7 +6,7 @@ ms.assetid: AF4BDD27-89F6-48AE-A8CD-D7E4DDA2CCA2
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 04/14/2020
+ms.date: 06/15/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -19,10 +19,10 @@ Xamarin.Forms includes the following experimental flags:
 - `AppTheme_Experimental`
 - `CarouselView_Experimental`
 - `Expander_Experimental`
-- `IndicatorView_Experimental`
 - `Markup_Experimental`
 - `MediaElement_Experimental`
 - `RadioButton_Experimental`
+- `Shapes_Experimental`
 - `Shell_UWP_Experimental`
 - `StateTriggers_Experimental`
 - `SwipeView_Experimental`
@@ -51,7 +51,7 @@ The `SetFlags` method should be invoked in your `AppDelegate` class on iOS, in y
 The `Xamarin.Forms.Forms.SetFlags` method accepts a `string` array argument, which makes it possible to enable multiple experimental flags in a single method call:
 
 ```csharp
-Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "IndicatorView_Experimental", "SwipeView_Experimental" });
+Xamarin.Forms.Forms.SetFlags(new string[] { "CarouselView_Experimental", "MediaElement_Experimental", "SwipeView_Experimental" });
 ```
 
 > [!WARNING]

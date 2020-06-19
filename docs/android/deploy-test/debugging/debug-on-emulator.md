@@ -94,7 +94,7 @@ emulator. (If you are not yet familiar with Android API levels, see
 To modify virtual devices (or to create new ones), you must use the
 [Android Device Manager](~/android/get-started/installation/android-emulator/device-manager.md).
 
-<a name="launching" />
+<a name="launching"></a>
 
 ## Launching the Emulator
 
@@ -135,7 +135,7 @@ the first Xamarin.Android app is deployed to the emulator &ndash;
 subsequent deployments are faster because only the app is copied to the
 emulator.
 
-<a name="quick-boot" />
+<a name="quick-boot"></a>
 
 ## Quick Boot
 

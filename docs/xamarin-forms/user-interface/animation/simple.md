@@ -36,9 +36,9 @@ The [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class also includes a 
 > [!NOTE]
 > The [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class provides a [`LayoutTo`](xref:Xamarin.Forms.ViewExtensions.LayoutTo(Xamarin.Forms.VisualElement,Xamarin.Forms.Rectangle,System.UInt32,Xamarin.Forms.Easing)) extension method. However, this method is intended to be used by layouts to animate transitions between layout states that contain size and position changes. Therefore, it should only be used by [`Layout`](xref:Xamarin.Forms.Layout) subclasses.
 
-The animation extension methods in the [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class are all asynchronous and return a `Task<bool>` object. The return value is `false` if the animation completes, and `true` if the animation is cancelled. Therefore, the animation methods should typically be used with the `await` operator, which makes it possible to easily determine when an animation has completed. In addition, it then becomes possible to create sequential animations with subsequent animation methods executing after the previous method has completed. For more information, see [Compound Animations](#compound).
+The animation extension methods in the [`ViewExtensions`](xref:Xamarin.Forms.ViewExtensions) class are all asynchronous and return a `Task<bool>` object. The return value is `false` if the animation completes, and `true` if the animation is cancelled. Therefore, the animation methods should typically be used with the `await` operator, which makes it possible to easily determine when an animation has completed. In addition, it then becomes possible to create sequential animations with subsequent animation methods executing after the previous method has completed. For more information, see [Compound Animations](#compound-animations).
 
-If there's a requirement to let an animation complete in the background, then the `await` operator can be omitted. In this scenario, the animation extension methods will quickly return after initiating the animation, with the animation occurring in the background. This operation can be taken advantage of when creating composite animations. For more information, see [Composite Animations](#composite).
+If there's a requirement to let an animation complete in the background, then the `await` operator can be omitted. In this scenario, the animation extension methods will quickly return after initiating the animation, with the animation occurring in the background. This operation can be taken advantage of when creating composite animations. For more information, see [Composite Animations](#composite-animations).
 
 For more information about the `await` operator, see [Async Support Overview](~/cross-platform/platform/async.md).
 
@@ -153,8 +153,6 @@ The following screenshots show the fade in progress on each platform:
 
 ![](simple-images/fadeto.png "Fading Animation")
 
-<a name="compound" />
-
 ## Compound Animations
 
 A compound animation is a sequential combination of animations, and can be created with the `await` operator, as demonstrated in the following code example:
@@ -168,8 +166,6 @@ await image.TranslateTo (0, 0, 1000);       // Move image up
 ```
 
 In this example, the [`Image`](xref:Xamarin.Forms.Image) is translated over 6 seconds (6000 milliseconds). The translation of the `Image` uses five animations, with the `await` operator indicating that each animation executes sequentially. Therefore, subsequent animation methods execute after the previous method has completed.
-
-<a name="composite" />
 
 ## Composite Animations
 

@@ -20,7 +20,7 @@ Binding an Objective-C library for use with Xamarin takes of three steps:
    (see this [simple example](~/cross-platform/macios/binding/objective-c-libraries.md#Binding_an_API)).
 
 2. Once you have written the "API definition" in C#, you compile it
-   to produce a "binding" assembly. This can be done on the [**command line**](#commandline) or
+   to produce a "binding" assembly. This can be done on the [**command line**](#command-line-bindings) or
    using a [**binding project**](#bindingproject) in Visual Studio for Mac or Visual Studio.
 
 3. That "binding" assembly is then added to your Xamarin application project,
@@ -37,8 +37,6 @@ Binding an Objective-C library for use with Xamarin takes of three steps:
 
 You can also read more technical details of [how it works](#howitworks), which will
 help you to write your bindings.
-
-<a name="Command_Line_Bindings" /><a name="commandline" />
 
 ## Command Line Bindings
 
@@ -65,7 +63,7 @@ directory, and it will contain the fully bound library that you can use in your
 project. This is the tool that Visual Studio for Mac uses to create your bindings if you use a
 binding project (described [below](#bindingproject)).
 
-<a name="bindingproject" />
+<a name="bindingproject"></a>
 
 ## Binding Project
 
@@ -76,7 +74,7 @@ definitions for binding (versus using the command line).
 Follow this [getting started guide](~/cross-platform/macios/binding/objective-c-libraries.md#Getting_Started)
 to see how to create and use a binding project to produce a binding.
 
-<a name="objectivesharpie" />
+<a name="objectivesharpie"></a>
 
 ## Objective Sharpie
 
@@ -89,7 +87,7 @@ Read the [Objective Sharpie docs](~/cross-platform/macios/binding/objective-shar
 to learn how to parse native libraries, native frameworks, and CocoaPods into
 API defintions that can be built into bindings.
 
-<a name="howitworks" />
+<a name="howitworks"></a>
 
 ## How Binding Works
 

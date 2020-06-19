@@ -22,7 +22,7 @@ Adding the iCloud capability to an application is slightly more difficult than o
 > to help developers properly handle the European Union's General Data 
 > Protection Regulation (GDPR).
 
-<a name="icloud-developer-center" />
+<a name="icloud-developer-center"></a>
 
 ## Developer Center
 

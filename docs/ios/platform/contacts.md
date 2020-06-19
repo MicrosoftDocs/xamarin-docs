@@ -32,13 +32,13 @@ The two new frameworks contain the following functionality:
 In the following sections, we'll take a look at these new frameworks and how to
 implement them in a Xamarin.iOS app.
 
-<a name="contacts" />
+<a name="contacts"></a>
 
 ## The Contacts Framework
 
 The Contacts Framework provides Xamarin.iOS access to the user's contact information. Because most apps only require read-only access, this framework has been optimized for thread safe, read-only access.
 
-<a name="Contact_Objects" />
+<a name="Contact_Objects"></a>
 
 ### Contact Objects
 
@@ -262,7 +262,7 @@ Some Containers allow for Contacts to be arranged into one or more _Groups_ or _
 
 [![](contacts-images/containers02.png "Overlap within Containers and Groups")](contacts-images/containers02.png#lightbox)
 
-<a name="contactsui" />
+<a name="contactsui"></a>
 
 ## The ContactsUI Framework
 

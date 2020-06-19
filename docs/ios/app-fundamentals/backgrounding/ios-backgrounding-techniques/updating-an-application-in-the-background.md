@@ -30,7 +30,7 @@ An application does not need the location `UIBackgroundMode` to use these locati
 
 Apps using location monitoring for background processing expose a flaw in iOS 6: if an application's needs don't fit into a background-necessary category, it has limited backgrounding options. With the introduction of two new APIs, *Background Fetch* and *Remote Notifications*, iOS 7 (and greater) provides backgrounding opportunities to more applications. The next two sections introduce these new APIs.
 
-<a name="background_fetch" />
+<a name="background_fetch"></a>
 
 ## Background Fetch (iOS 7 and Greater)
 
@@ -86,7 +86,7 @@ Both `BackgroundFetchIntervalMinimum` and `BackgroundFetchIntervalCustom` rely o
 
 Background Fetch should be used for applications that update frequently with non-critical content. For applications with critical updates, Remote Notifications should be used. Remote Notifications are based on Background Fetch, and share the same completion handler. We'll dive into Remote Notifications next.
 
- <a name="remote_notifications" />
+ <a name="remote_notifications"></a>
 
 ## Remote Notifications (iOS 7 and Greater)
 

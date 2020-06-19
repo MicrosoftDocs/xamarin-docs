@@ -26,7 +26,7 @@ code in each layer be physically separate (either in directories or even
 separate projects for very large applications) as well as logically separate
 (using namespaces).
 
- <a name="Typical_Application_Layers" />
+ <a name="Typical_Application_Layers"></a>
 
 ## Typical Application Layers
 
@@ -45,7 +45,7 @@ Service Access Layer would not exist in an application that does not access
 network resources. A very simple application might merge the Data Layer and Data
 Access Layer because the operations are extremely basic.
 
- <a name="Common_Mobile_Software_Patterns" />
+ <a name="Common_Mobile_Software_Patterns"></a>
 
 ## Common Mobile Software Patterns
 

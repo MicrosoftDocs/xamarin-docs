@@ -33,14 +33,12 @@ for example see the `xmlns:pages` declaration below:
 
 The examples below include `DynamicResource` references which would need
 to exist in the project's resources dictionary to work. There is
-also an example of how to build a [custom control](#custom)
+also an example of how to build a [custom control](#custom-control-example).
 
 ## Built-in Controls
 
 * [HeroImage](#heroimage)
 * [ListItem](#listitem)
-
-<a name="heroimage" />
 
 ### HeroImage
 
@@ -66,8 +64,6 @@ The `HeroImage` control has four properties:
 **iOS**
 
 ![](controls-images/heroimage-light-ios.png "HeroImage Control on iOS") ![](controls-images/heroimage-dark-ios.png "HeroImage Control on iOS")
-
-<a name="listitem" />
 
 ### ListItem
 
@@ -137,19 +133,15 @@ to the built-in Light and Dark themes:
 
 ![](controls-images/cardview-light-ios.png "CardView Custom Control on iOS") ![](controls-images/cardview-dark-ios.png "CardView Custom Control on iOS")
 
-<a name="custom" />
-
 ### Building the Custom CardView
 
-1. [DataView subclass](#1)
-2. [Define Font, Layout, and Margins](#2)
-3. [Create Styles for the Control's Children](#3)
-4. [Create the Control Layout Template](#4)
-5. [Add the Theme-specific Resources](#5)
-6. [Set the ControlTemplate for the CardView class](#6)
-7. [Add the Control to a Page](#7)
-
-<a name="1" />
+1. [DataView subclass](#1-dataview-subclass)
+2. [Define Font, Layout, and Margins](#2-define-font-layout-and-margins)
+3. [Create Styles for the Control's Children](#3-create-styles-for-the-controls-children)
+4. [Create the Control Layout Template](#4-create-the-control-layout-template)
+5. [Add the Theme-specific Resources](#5-add-the-theme-specific-resources)
+6. [Set the ControlTemplate for the CardView class](#6-set-the-controltemplate-for-the-cardview-class)
+7. [Add the Control to a Page](#7-add-the-control-to-a-page)
 
 #### 1. DataView Subclass
 
@@ -191,8 +183,6 @@ public class CardView : DataView
 }
 ```
 
-<a name="2" />
-
 #### 2. Define Font, Layout, and Margins
 
 The control designer would figure out these values as part of the
@@ -200,7 +190,7 @@ user-interface design for the custom control. Where platform-specific
 specifications are required, the `OnPlatform` element is used.
 
 Note that some values refer to `StaticResource`s – these will be defined
-in [step 5](#5).
+in [step 5](#5-add-the-theme-specific-resources).
 
 ```xml
 <!-- CARDVIEW FONT SIZES -->
@@ -252,8 +242,6 @@ in [step 5](#5).
 </OnPlatform>
 ```
 
-<a name="3" />
-
 #### 3. Create Styles for the Control's Children
 
 Reference all the elements defined about to create the children that
@@ -284,8 +272,6 @@ will be used in the custom control:
     <Setter Property="HeightRequest" Value="165"/>
 </Style>
 ```
-
-<a name="4" />
 
 #### 4. Create the Control Layout Template
 
@@ -329,8 +315,6 @@ template, using the resources defined above:
 </ControlTemplate>
 ```
 
-<a name="5" />
-
 #### 5. Add the Theme-specific Resources
 
 Because this is a custom control, add the resources that match
@@ -363,12 +347,10 @@ the theme you are using the resource dictionary:
             <Color x:Key="iOSCardViewDetailTextColor">#B5B4B9</Color>
 ```
 
-<a name="6" />
-
 #### 6. Set the ControlTemplate for the CardView class
 
-Finally, ensure the C# class created in [step 1](#1) uses the control template
-defined in [step 4](#4) using a `Style` `Setter` element
+Finally, ensure the C# class created in [step 1](#1-dataview-subclass) uses the control template
+defined in [step 4](#4-create-the-control-layout-template) using a `Style` `Setter` element
 
 ```xml
 <Style TargetType="local:CardView">
@@ -377,8 +359,6 @@ defined in [step 4](#4) using a `Style` `Setter` element
   <Setter Property="BackgroundColor" Value="{ StaticResource CardViewBackgroundColor }" />
 </Style>
 ```
-
-<a name="7" />
 
 #### 7. Add the Control to a Page
 

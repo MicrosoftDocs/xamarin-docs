@@ -21,7 +21,7 @@ If you are familiar with Xamarin.iOS development, you should find the transition
 
 This guide will give an introduction to all of the new and modified APIs and features available in tvOS 9 for Xamarin.tvOS developers. For more information on tvOS, please see Apple's [Developing for the new Apple TV](https://developer.apple.com/tvos/) documentation.
 
-<a name="Supported-and-Unsupported-Capabilities" />
+<a name="Supported-and-Unsupported-Capabilities"></a>
 
 ## Supported and Unsupported Capabilities
 
@@ -52,7 +52,7 @@ The following features and capabilities are not supported:
 
 Please see our [Supported Assemblies](~/ios/tvos/internals/assemblies.md) and [Supported Frameworks](~/ios/tvos/internals/frameworks.md) documentation for more information.
 
-<a name="Apple-TV-Hardware" />
+<a name="Apple-TV-Hardware"></a>
 
 ## Apple TV Hardware
 
@@ -89,7 +89,7 @@ All other countries will receive the Apple TV Remote that replaces the Siri butt
 
 For more information, please see our [Siri Remote and Bluetooth Controllers](~/ios/tvos/platform/remote-bluetooth.md) documentation.
 
-<a name="Apple-TV-Provisioning" />
+<a name="Apple-TV-Provisioning"></a>
 
 ## Apple TV Provisioning
 
@@ -99,13 +99,13 @@ Proper provisioning is also necessary to access tvOS features such as iCloud KVS
 
 Provisioning Profiles are created and installed the same way as working with Xamarin.iOS apps. As such, please see our iOS [Device Provisioning](~/ios/get-started/installation/device-provisioning/index.md) documentation for more details.
 
-<a name="Apple-TV-Apps" />
+<a name="Apple-TV-Apps"></a>
 
 ## Apple TV Apps
 
 The new Apple TV hardware and tvOS 9 supports two types of apps: traditional and client-server apps.
 
-<a name="Traditional-Apps" />
+<a name="Traditional-Apps"></a>
 
 ### Traditional Apps
 
@@ -115,7 +115,7 @@ Apple TV apps have a maximum size of 200MB and can download an additional 2GB of
 
 See our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md) to familiarize yourself with the tools and concepts required to develop tvOS apps using Xamarin.tvOS.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ### Client-Server Apps
 
@@ -123,7 +123,7 @@ In Addition to installed traditional apps, Apple TV makes it easy to create web-
 
 For more information, please see Apple's [Apple TV Markup Language Reference](https://developer.apple.com/library/prerelease/tvos/documentation/LanguagesUtilities/Conceptual/ATV_Template_Guide/index.html#//apple_ref/doc/uid/TP40015064), [TVJS Framework Reference](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLJS/Reference/TVJSFrameworkReference/index.html#//apple_ref/doc/uid/TP40016076), [TVMLKit Framework Reference](https://developer.apple.com/library/prerelease/tvos/documentation/TVMLKit/Reference/TVMLKit_Collection/index.html#//apple_ref/doc/uid/TP40016429), [About HTTP Live Streaming](https://developer.apple.com/library/prerelease/tvos/referencelibrary/GettingStarted/AboutHTTPLiveStreaming/about/about.html#//apple_ref/doc/uid/TP40013978) and [HLS Authoring Specification for Apple TV](https://developer.apple.com/services-account/download?path=/Documentation/HLS_Authoring_Specification_for_Apple_TV/HLS_Authoring_Specification_for_Apple_TV.pdf) documentation.
 
-<a name="User-Interface-Challenges" />
+<a name="User-Interface-Challenges"></a>
 
 ## User Interface Challenges
 
@@ -131,7 +131,7 @@ Unlike iOS or OS X, the Apple TV does not have a touchscreen or mouse that allow
 
 Additionally, the overall user experience is drastically different than iOS or Mac apps that tend to be single user experiences. With the Apple TV, user experiences tend to be more social in nature, where several people may be sitting on the couch interacting with a single app and each other. To design a successful Apple TV app experience (either a new app or porting an existing one), these changes must be taken into consideration. 
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ### Working with Focus and Parallax Images
 
@@ -143,7 +143,7 @@ If the user makes a slow, circular gesture on the Siri Remote, the Focused Item 
 
 For more information, please see our [Working with Navigation and Focus](~/ios/tvos/app-fundamentals/navigation-focus.md) and [Working with Icons and Images](~/ios/tvos/app-fundamentals/icons-images.md) documentation.
 
-<a name="The-Home-Screen" />
+<a name="The-Home-Screen"></a>
 
 ### The Home Screen
 
@@ -157,7 +157,7 @@ Every app must supply both a small and a large version of its App Icon. The smal
 
 For more information, please see our [Working with Icons and Images](~/ios/tvos/app-fundamentals/icons-images.md) documentation.
 
-<a name="The-Top-Shelf" />
+<a name="The-Top-Shelf"></a>
 
 ### The Top Shelf
 

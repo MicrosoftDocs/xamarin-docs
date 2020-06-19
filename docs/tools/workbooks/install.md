@@ -10,7 +10,7 @@ ms.date: 06/19/2018
 
 # Workbooks Installation and Requirements
 
-<a name="install" />
+<a name="install"></a>
 
 ## Download and Install
 
@@ -142,7 +142,7 @@ Control Panel on older versions of Windows.
 **You should still follow the procedure for the Visual Studio Installer to make
 sure Workbooks does not get reinstalled without your knowledge.**
 
-<a name="uninstall-macos" />
+<a name="uninstall-macos"></a>
 
 ### macOS
 

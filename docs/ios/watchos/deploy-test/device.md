@@ -19,7 +19,7 @@ After you've followed the [deployment steps](~/ios/watchos/deploy-test/index.md)
 - [Create Development Provisioning Profiles](#profiles), then
 - [Deploy and test](#testing) on an Apple Watch.
 
-<a name="devices" />
+<a name="devices"></a>
 
 ## Devices
 
@@ -50,7 +50,7 @@ Once the Watch device has been added, ensure it is selected
 Don't forget if you edit an existing provisioning profile
   to download and re-install it!
 
-<a name="profiles" />
+<a name="profiles"></a>
 
 ## Development Provisioning Profiles
 
@@ -80,7 +80,7 @@ The **Provisioning Profile** list will show all matching
 
 ![](device-images/options-selectprofile.png "The Provisioning Profile list")
 
-<a name="testing" />
+<a name="testing"></a>
 
 ## Testing on a Watch device
 

@@ -33,7 +33,7 @@ this guide provides a detailed list of `CardView` attributes that you
 can change, including attributes to help you use `CardView` on versions
 of Android earlier than Android 5.0 Lollipop.
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 ## Requirements
 

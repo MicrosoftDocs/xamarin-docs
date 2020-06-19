@@ -162,7 +162,7 @@ This API is intended to store small amounts of text.  Performance may be slow if
 
 ## API
 
-- [SecureStorage source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/SecureStorage)
+- [SecureStorage source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/SecureStorage)
 - [SecureStorage API documentation](xref:Xamarin.Essentials.SecureStorage)
 
 ## Related Video

@@ -21,7 +21,7 @@ You can optionally provide keyword search ability of the app's content using a S
 
 This document will cover the details of working with Text and Search Fields in a Xamarin.tvOS app.
 
-<a name="About-Text-and-Search-Fields" />
+<a name="About-Text-and-Search-Fields"></a>
 
 ## About Text and Search Fields
 
@@ -29,7 +29,7 @@ As stated above, if required, your Xamarin.tvOS can present one or more Text Fie
 
 Additionally, if your app presents large amounts of content to the user (such as a music, movies or a picture collection), you might want to include a Search Field that allows the user to enter a small amount of text to filter the list of available items.
 
-<a name="Text-Fields" />
+<a name="Text-Fields"></a>
 
 ## Text Fields
 
@@ -46,7 +46,7 @@ Apple has the following suggestions for working with Text Fields:
 - **Select the Appropriate Default Keyboard Type** - tvOS provides several different, purpose built keyboard types that you can specify for your Text Field. For example, the Email Address Keyboard can ease entry by allowing the user to select from a list of recently entered addresses.
 - **When Appropriate, use Secure Text Fields** - A Secure Text Field presents the characters entered as dots (instead of the real letters). Always use a Secure Text Field when gathering sensitive information such as passwords.
 
-<a name="Keyboards" />
+<a name="Keyboards"></a>
 
 ## Keyboards
 
@@ -65,7 +65,7 @@ Apple has the following suggestions for working with on-screen keyboards:
 
 For more information about working with the on-screen keyboard, please see Apple's [UIKeyboardType](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UITextInputTraits_Protocol/index.html#//apple_ref/c/tdef/UIKeyboardType), [Managing the Keyboard](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/KeyboardManagement/KeyboardManagement.html#//apple_ref/doc/uid/TP40009542-CH5-SW1), [Custom Views for Data Input](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/InputViews/InputViews.html#//apple_ref/doc/uid/TP40009542-CH12-SW1) and [Text Programming Guide to iOS](https://developer.apple.com/library/tvos/documentation/StringsTextFonts/Conceptual/TextAndWebiPhoneOS/Introduction/Introduction.html) documentation.
 
-<a name="Search" />
+<a name="Search"></a>
 
 ## Search
 
@@ -83,7 +83,7 @@ Apple has the following suggestions for working with Search Fields:
 
 For more information, please see Apple's [UISearchController Class Reference](https://developer.apple.com/library/tvos/documentation/UIKit/Reference/UISearchController/index.html).
 
-<a name="Working-with-Text-Fields" />
+<a name="Working-with-Text-Fields"></a>
 
 ## Working with Text Fields
 
@@ -137,7 +137,7 @@ Console.WriteLine ("User ID {0} and Password {1}", UserId.Text, Password.Text);
 
 You can optionally use the `Started` and `Ended` Text Field events to respond to text entry starting and ending.
 
-<a name="Working-with-Search-Fields" />
+<a name="Working-with-Search-Fields"></a>
 
 ## Working with Search Fields
 
@@ -183,7 +183,7 @@ Do the following:
 
 -----
 
-<a name="Provide-a-Data-Model" />
+<a name="Provide-a-Data-Model"></a>
 
 ### Provide a Data Model
 
@@ -230,7 +230,7 @@ namespace tvText
 }
 ```
 
-<a name="The-Collection-View-Cell" />
+<a name="The-Collection-View-Cell"></a>
 
 ### The Collection View Cell
 
@@ -290,7 +290,7 @@ namespace tvText
 
 The `UpdateUI` method will be used to display individual fields of the **PictureInformation** items (the `PictureInfo` property) in the named UI elements each time the property is updated. For example, the Image and Title associated with the Picture.
 
-<a name="The-Collection-View-Controller" />
+<a name="The-Collection-View-Controller"></a>
 
 ### The Collection View Controller
 
@@ -606,7 +606,7 @@ If the Search Field was presented as a modal dialog view (over the top of the vi
 
 For more information on Collection Views, please see our [Working with Collection Views](~/ios/tvos/user-interface/collection-views.md) documentation.
 
-<a name="Presenting the Search Field" />
+<a name="Presenting the Search Field"></a>
 
 ### Presenting the Search Field
 
@@ -773,7 +773,7 @@ As the user begins to enter a search term, the list of results will be filtered 
 
 At any time, the user can switch Focus to an item in the search results and click the Touch Surface of the Siri Remote to select it.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

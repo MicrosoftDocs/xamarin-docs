@@ -71,5 +71,5 @@ public class GyroscopeTest
 
 ## API
 
-- [Gyroscope source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Gyroscope)
+- [Gyroscope source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Gyroscope)
 - [Gyroscope API documentation](xref:Xamarin.Essentials.Gyroscope)

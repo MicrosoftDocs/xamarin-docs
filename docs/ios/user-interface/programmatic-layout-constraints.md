@@ -19,7 +19,7 @@ Typically when working with Auto Layout in iOS, you'll use the iOS Designer to g
 
 This guide will show you how to create and work with constraints using C# code instead of creating them graphically in the iOS Designer.
 
-<a name="Creating-Constraints-Programmatically" />
+<a name="Creating-Constraints-Programmatically"></a>
 
 ## Creating Constraints Programmatically
 
@@ -31,7 +31,7 @@ As stated above, typically you'll be working with Auto Layout Constraints in the
 
 The following sections will go over each option in detail.
 
-<a name="Layout-Anchors" />
+<a name="Layout-Anchors"></a>
 
 ### Layout Anchors
 
@@ -86,7 +86,7 @@ Where the parts of the C# code correspond to the given parts of the equation as 
 
 In addition to providing only the parameters that are required to solve a given layout constraint equation, each of the Layout Anchor methods enforce the type safety of the parameters passed to them. So horizontal constraint anchors such as `LeadingAnchor` or `TrailingAnchor` can only be used with other horizontal anchor types and multipliers are only provided to size constraints.
 
-<a name="Layout-Constraints" />
+<a name="Layout-Constraints"></a>
 
 ### Layout Constraints
 
@@ -107,7 +107,7 @@ Where the `NSLayoutAttribute` enum defines the value for the view's margins and 
 
 Unlike with the Layout Anchor API, the `NSLayoutConstraint` creation methods do not highlight the important aspects of a particular constraint and there are no compile time checks performed on the constraint. As a result, it is easy to construct an invalid constraint that will throw an exception at runtime.
 
-<a name="Visual-Format-Language" />
+<a name="Visual-Format-Language"></a>
 
 ### Visual Format Language
 
@@ -148,7 +148,7 @@ For more complex UI designs, such as multiple child views on a single line, the 
 
 See Apple's [Visual Format Language Appendix](https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/AutolayoutPG/VisualFormatLanguage.html#//apple_ref/doc/uid/TP40010853-CH27-SW1) for some examples of specifying common constraints and the Visual Format String Grammar.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

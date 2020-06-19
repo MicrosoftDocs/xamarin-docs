@@ -44,15 +44,13 @@ For more information about the [`CarouselPage`](xref:Xamarin.Forms.CarouselPage)
 
 Two approaches can be used to create a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage):
 
-- [Populate](#Populating_a_CarouselPage_with_a_Page_Collection) the `CarouselPage` with a collection of child [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances.
-- [Assign](#Populating_a_CarouselPage_with_a_Template) a collection to the [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) property and assign a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) to the [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) property to return [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances for objects in the collection.
+- [Populate](#populate-a-carouselpage-with-a-page-collection) the `CarouselPage` with a collection of child [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances.
+- [Assign](#populate-a-carouselpage-with-a-template) a collection to the [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) property and assign a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) to the [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) property to return [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances for objects in the collection.
 
 With both approaches, the `CarouselPage` will then display each page in turn, with a swipe interaction moving to the next page to be displayed.
 
 > [!NOTE]
 > A [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) can only be populated with [`ContentPage`](xref:Xamarin.Forms.ContentPage) instances, or `ContentPage` derivatives.
-
-<a name="Populating_a_CarouselPage_with_a_Page_Collection" />
 
 ### Populate a CarouselPage with a Page collection
 
@@ -141,8 +139,6 @@ public class MainPageCS : CarouselPage
 ```
 
 Each [`ContentPage`](xref:Xamarin.Forms.ContentPage) simply displays a [`Label`](xref:Xamarin.Forms.Label) for a particular color and a [`BoxView`](xref:Xamarin.Forms.BoxView) of that color.
-
-<a name="Populating_a_CarouselPage_with_a_Template" />
 
 ### Populate a CarouselPage with a template
 

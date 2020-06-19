@@ -115,7 +115,7 @@ Use the following steps to connect your Wear device to your Phone:
 
 At this point, you can deploy your app to the Wear device.
 
-<a name="screenshots" />
+<a name="screenshots"></a>
 
 ### Taking screenshots
 

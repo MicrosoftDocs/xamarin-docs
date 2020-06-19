@@ -90,7 +90,7 @@ public class AnimalCell : UICollectionViewCell
 }
 ```
 
- <a name="Supplementary_Views" />
+ <a name="Supplementary_Views"></a>
 
 ## Supplementary Views
 
@@ -127,7 +127,7 @@ Supplementary Views are more generic than just headers and footers.
 They can be positioned anywhere in the collection view and can be comprised of
 any views, making their appearance fully customizable.
 
- <a name="Decoration_Views" />
+ <a name="Decoration_Views"></a>
 
 ## Decoration Views
 
@@ -210,7 +210,7 @@ create a new `AnimalCell` internally and return it when a call to
 de-queue a cell is made, after which it is configured with the image contained
 in the animal class and returned for display to the `UICollectionView`.
 
- <a name="Delegate" />
+ <a name="Delegate"></a>
 
 ### Delegate
 
@@ -223,7 +223,7 @@ The `UICollectionView` class uses a delegate of type `UICollectionViewDelegate` 
 As with the data source, the `UICollectionViewController` is
 configured by default to be the delegate for the `UICollectionView`.
 
- <a name="Cell_HighLighting" />
+ <a name="Cell_HighLighting"></a>
 
 #### Cell HighLighting
 
@@ -251,7 +251,7 @@ public override void ItemUnhighlighted (UICollectionView collectionView, NSIndex
 }
 ```
 
- <a name="Disabling_Selection" />
+ <a name="Disabling_Selection"></a>
 
 #### Disabling Selection
 
@@ -277,7 +277,7 @@ also allows highlighting without selection, if `ShouldHighlightItem`
 is implemented and returns true, while `ShouldSelectItem` returns
 false.
 
- <a name="Cell_Menus" />
+ <a name="Cell_Menus"></a>
 
 #### Cell Menus
 
@@ -293,7 +293,7 @@ The following screenshot show the menu when a cell is long pressed:
 
  [![](uicollectionview-images/04a-menu.png "This screenshot show the menu when a cell is long pressed")](uicollectionview-images/04a-menu.png#lightbox)
 
- <a name="Layout" />
+ <a name="Layout"></a>
 
 ## Layout
 
@@ -304,7 +304,7 @@ Using the layout system, an application can support layouts such as the
 grid-like one we’ve seen in this article, as well as provide custom
 layouts.
 
- <a name="Layout_Basics" />
+ <a name="Layout_Basics"></a>
 
 ### Layout Basics
 
@@ -315,7 +315,7 @@ responsible for creating the layout attributes for every item in the `UICollecti
 - Use the built-in  `UICollectionViewFlowLayout` .
 - Provide a custom layout by inheriting from  `UICollectionViewLayout` .
 
- <a name="Flow_Layout" />
+ <a name="Flow_Layout"></a>
 
 ### Flow Layout
 
@@ -343,7 +343,7 @@ rearranging the content appropriately, as shown below:
 
  [![](uicollectionview-images/05-layout-orientation.png "Example of the orientation changes")](uicollectionview-images/05-layout-orientation.png#lightbox)
 
- <a name="Section_Inset" />
+ <a name="Section_Inset"></a>
 
 #### Section Inset
 
@@ -361,7 +361,7 @@ This results in spacing around the section as shown below:
 
  [![](uicollectionview-images/06-sectioninset.png "Spacing around the section as shown here")](uicollectionview-images/06-sectioninset.png#lightbox)
 
- <a name="Subclassing_UICollectionViewFlowLayout" />
+ <a name="Subclassing_UICollectionViewFlowLayout"></a>
 
 #### Subclassing UICollectionViewFlowLayout
 
@@ -450,7 +450,7 @@ namespace SimpleCollectionView
 }
 ```
 
- <a name="Custom_Layout" />
+ <a name="Custom_Layout"></a>
 
 ### Custom Layout
 
@@ -492,7 +492,7 @@ application as well as some of the other changes iOS 9 has made to the collectio
   - [Custom Layouts and Reordering](#Custom-Layouts-and-Reording)
 - [Collection View Changes](#collection-view-changes)
 
-<a name="Easy-Reordering-of-Items" />
+<a name="Easy-Reordering-of-Items"></a>
 
 ## Reordering of Items
 
@@ -510,7 +510,7 @@ public override void MoveItem (UICollectionView collectionView, NSIndexPath sour
 }
 ```
 
-<a name="Simple-Reordering-Example" />
+<a name="Simple-Reordering-Example"></a>
 
 ### Simple Reordering Example
 
@@ -750,7 +750,7 @@ When the user drops the item in a new location, it will stick to that location. 
 
 [![](uicollectionview-images/intro01.png "An example of dragging an item to a new location")](uicollectionview-images/intro01.png#lightbox)
 
-<a name="Using-a-Custom-Gesture-Recognizer" />
+<a name="Using-a-Custom-Gesture-Recognizer"></a>
 
 ### Using a Custom Gesture Recognizer
 
@@ -800,7 +800,7 @@ Here we are using several new methods added to the collection view to implement 
 When the application is run, the drag operation will work exactly like the default
 drag gesture recognizer that comes with the collection view.
 
-<a name="Custom-Layouts-and-Reording" />
+<a name="Custom-Layouts-and-Reording"></a>
 
 ### Custom Layouts and Reordering
 

@@ -16,7 +16,7 @@ libraries. This document discusses how to link your native C libraries with your
 Xamarin.iOS project. For information on doing the same for Objective-C libraries,
 see our [Binding Objective-C Types](~/ios/platform/binding-objective-c/index.md) document.
 
-<a name="building_native" />
+<a name="building_native"></a>
 
 ## Building Universal Native Libraries (i386, ARMv7, and ARM64)
 
@@ -130,7 +130,7 @@ C++ the previous options would look like:
 -cxx -gcc_flags "-L${ProjectDir} -lMylibrary -lSystemLibrary -framework CFNetwork -force_load ${ProjectDir}/libMyLibrary.a"
 ```
 
-<a name="Accessing_C_Methods_from_C#" />
+<a name="Accessing_C_Methods_from_C#"></a>
 
 ## Accessing C Methods from C&#35;
 
@@ -171,7 +171,7 @@ The Constants.UIKitLibrary is merely a constant defined as
 specify optionally the external name (UIRectFramUsingBlendMode) while exposing a
 different name in C#, the shorter RectFrameUsingBlendMode.
 
-<a name="Accessing_C_Dylibs" />
+<a name="Accessing_C_Dylibs"></a>
 
 ### Accessing C Dylibs
 
@@ -199,7 +199,7 @@ Where `/full/path/to/` is the full path to the Dylib being consumed. With this c
 public static extern double AnimalLibraryVersion();
 ```
 
-<a name="Static_Libraries" />
+<a name="Static_Libraries"></a>
 
 ### Static Libraries
 

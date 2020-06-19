@@ -86,11 +86,9 @@ The eShopOnContainers reference application uses Docker to host four containeriz
 
 The architecture of the back-end services in the reference application is decomposed into multiple autonomous sub-systems in the form of collaborating microservices and containers. Each microservice provides a single area of functionality: an identity service, a catalog service, an ordering service, and a basket service.
 
-Each microservice has its own database, allowing it to be fully decoupled from the other microservices. Where necessary, consistency between databases from different microservices is achieved using application-level events. For more information, see [Communication Between Microservices](#communication_between_microservices).
+Each microservice has its own database, allowing it to be fully decoupled from the other microservices. Where necessary, consistency between databases from different microservices is achieved using application-level events. For more information, see [Communication Between Microservices](#communication-between-microservices).
 
 For more information about the reference application, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
-
-<a name="communication_between_client_and_microservices" />
 
 ## Communication Between Client and Microservices
 
@@ -104,8 +102,6 @@ With direct client-to-microservice communication, the mobile app makes requests 
 
 > [!TIP]
 > Consider using API gateway communication. Direct client-to-microservice communication can have drawbacks when building a large and complex microservice based application, but it's more than adequate for a small application. When designing a large microservice based application with tens of microservices, consider using API gateway communication. For more information, see [.NET Microservices: Architecture for Containerized .NET Applications](https://aka.ms/microservicesebook).
-
-<a name="communication_between_microservices" />
 
 ## Communication Between Microservices
 

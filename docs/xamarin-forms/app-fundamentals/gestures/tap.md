@@ -34,8 +34,6 @@ tapGestureRecognizer.NumberOfTapsRequired = 2; // double-tap
 
 When [`NumberOfTapsRequired`](xref:Xamarin.Forms.TapGestureRecognizer.NumberOfTapsRequired) is set above one, the event handler will only be executed if the taps occur within a set period of time (this period is not configurable). If the second (or subsequent) taps do not occur within that period they are effectively ignored and the 'tap count' restarts.
 
-<a name="Using_Xaml" />
-
 ## Using Xaml
 
 A gesture recognizer can be added to a control in Xaml using attached properties. The syntax to add a [`TapGestureRecognizer`](xref:Xamarin.Forms.TapGestureRecognizer) to an image is shown below (in this case defining a *double tap* event):

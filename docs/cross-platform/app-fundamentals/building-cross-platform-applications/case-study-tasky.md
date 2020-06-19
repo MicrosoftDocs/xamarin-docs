@@ -15,7 +15,7 @@ discusses how it was designed and built, following the guidance of the [Building
 document. The discussion covers the following
 areas:
 
-<a name="Design_Process" />
+<a name="Design_Process"></a>
 
 ## Design Process
 
@@ -25,7 +25,7 @@ building functionality that will be exposed in multiple ways. Starting with a cl
 you're building saves time and effort later in the development
 cycle.
 
- <a name="Requirements" />
+ <a name="Requirements"></a>
 
 ### Requirements
 
@@ -38,7 +38,7 @@ The first step in designing an application is to identify desired features. Thes
 You should consider your use of platform-specific features.  Can Tasky take advantage of iOS geofencing or Windows
 Phone Live Tiles? Even if you don't use platform-specific features in the first version, you should plan ahead to make sure your business & data layers can accommodate them.
 
- <a name="User_Interface_Design" />
+ <a name="User_Interface_Design"></a>
 
 ### User Interface Design
 
@@ -48,7 +48,7 @@ Draw the screen-flow using the tool of your choice (paper works).
 
  [![](case-study-tasky-images/taskydesign.png "Draw the screen-flow using the tool of your choice paper works")](case-study-tasky-images/taskydesign.png#lightbox)
 
- <a name="Data_Model" />
+ <a name="Data_Model"></a>
 
 ### Data Model
 
@@ -62,7 +62,7 @@ each 'TaskItem':
 - **Notes** – String
 - **Done** – Boolean
 
- <a name="Core_Functionality" />
+ <a name="Core_Functionality"></a>
 
 ### Core Functionality
 
@@ -77,7 +77,7 @@ meet the requirements. A to-do list requires the following functions:
 
 To achieve code reuse, this API should be implemented once in the *Portable Class Library*.
 
- <a name="Implementation" />
+ <a name="Implementation"></a>
 
 ### Implementation
 
@@ -93,7 +93,7 @@ application code should be broken down into the following parts:
 
 These two parts are described in the following sections.
 
- <a name="Common_(PCL)_Code" />
+ <a name="Common_(PCL)_Code"></a>
 
 ## Common (PCL) Code
 
@@ -115,7 +115,7 @@ Using namespaces to separate the layers helps to manage references between
 each layer. The platform-specific projects should only need to include a `using` statement for the Business Layer. The Data Access Layer and
 Data Layer should be encapsulated by the API that is exposed by `TaskItemManager` in the Business Layer.
 
- <a name="References" />
+ <a name="References"></a>
 
 ### References
 
@@ -125,7 +125,7 @@ Note: You'll see that your projects reference framework libraries that you haven
 even though `System.Xml` has been referenced, it will not be included
 in the final application because we are not using any Xml functions.
 
- <a name="Data_Layer_(DL)" />
+ <a name="Data_Layer_(DL)"></a>
 
 ### Data Layer (DL)
 
@@ -144,7 +144,7 @@ The `TaskItemDatabase` is a singleton, ensuring that all access occurs
 against the same instance. A lock is used to prevent concurrent access from
 multiple threads.
 
- <a name="SQLite_on_WIndows_Phone" />
+ <a name="SQLite_on_WIndows_Phone"></a>
 
 #### SQLite on Windows Phone
 
@@ -153,7 +153,7 @@ Windows Phone does not include a compatible database engine. To share
 code across all three platforms a Windows phone-native version of SQLite is
 required. See [Working with a Local Database](~/xamarin-forms/data-cloud/data/databases.md) for more information about setting up your Windows Phone project for Sqlite.
 
- <a name="Using_an_Interface_to_Generalize_Data_Access" />
+ <a name="Using_an_Interface_to_Generalize_Data_Access"></a>
 
 #### Using an Interface to Generalize Data Access
 
@@ -194,7 +194,7 @@ public T GetItem<T> (int id) where T : BL.Contracts.IBusinessEntity, new ()
 }
 ```
 
- <a name="Locking_to_prevent_Concurrent_Access" />
+ <a name="Locking_to_prevent_Concurrent_Access"></a>
 
 #### Locking to prevent Concurrent Access
 
@@ -224,7 +224,7 @@ Most of the Data Layer code could be re-used in other projects. The only
 application-specific code in the layer is the `CreateTable<TaskItem>` call in the `TaskItemDatabase`
 constructor.
 
- <a name="Data_Access_Layer_(DAL)" />
+ <a name="Data_Access_Layer_(DAL)"></a>
 
 ### Data Access Layer (DAL)
 
@@ -232,7 +232,7 @@ The `TaskItemRepository` class encapsulates the data storage mechanism
 with a strongly-typed API that allows `TaskItem` objects to be created,
 deleted, retrieved and updated.
 
- <a name="Using_Conditional_Compilation" />
+ <a name="Using_Conditional_Compilation"></a>
 
 #### Using Conditional Compilation
 
@@ -276,7 +276,7 @@ The Business Layer implements the Model classes and a Façade to manage them.
 In Tasky the Model is the `TaskItem` class and `TaskItemManager` implements the Façade pattern to provide an API for
 managing `TaskItems`.
 
- <a name="Façade" />
+ <a name="Façade"></a>
 
 #### Façade
 
@@ -286,7 +286,7 @@ and Delete methods that will be referenced by the Application and UI Layers.
 Business rules and logic would be placed here if required – for example any
 validation rules that must be satisfied before an object is saved.
 
- <a name="API_for_Platform-Specific_Code" />
+ <a name="API_for_Platform-Specific_Code"></a>
 
 ### API for Platform-Specific Code
 
@@ -306,7 +306,7 @@ project. This is important because each platform handles images differently, usi
 The remaining sections discuss the platform-specific implementation details
 of the Tasky UI.
 
- <a name="iOS_App" />
+ <a name="iOS_App"></a>
 
 ## iOS App
 
@@ -320,7 +320,7 @@ The classes are shown in this diagram, grouped into layers.
 
  [![](case-study-tasky-images/classdiagram-android.png "The classes are shown in this diagram, grouped into layers")](case-study-tasky-images/classdiagram-android.png#lightbox)
 
- <a name="References" />
+ <a name="References"></a>
 
 ### References
 
@@ -335,7 +335,7 @@ The references list is shown here:
 The Application Layer and User Interface Layer are implemented in this
 project using these references.
 
- <a name="Application_Layer_(AL)" />
+ <a name="Application_Layer_(AL)"></a>
 
 ### Application Layer (AL)
 
@@ -376,7 +376,7 @@ public class TaskDialog {
 Notice the `OnTap` attributes require a method name – these
 methods must exist in the class where the `MonoTouch.Dialog.BindingContext` is created (in this case, the `HomeScreen` class discussed in the next section).
 
- <a name="User_Interface_Layer_(UI)" />
+ <a name="User_Interface_Layer_(UI)"></a>
 
 ### User Interface Layer (UI)
 
@@ -386,7 +386,7 @@ The User Interface Layer consists of the following classes:
 2. **Screens** –  subclasses of `UIViewController` that define each screen and its behavior. Screens tie together the UI with Application Layer classes and the common API ( `TaskItemManager` ). In this example the screens are created in code, but they could have been designed using Xcode’s Interface Builder or the storyboard designer.
 3. **Images** – Visual elements are an important part of every application. Tasky has splash screen and icon images, which for iOS must be supplied in regular and Retina resolution.
 
- <a name="Home_Screen" />
+ <a name="Home_Screen"></a>
 
 #### Home Screen
 
@@ -402,7 +402,7 @@ are:
 1. **PopulateTable** – Uses the Business Layer’s  `TaskManager.GetTasks` method to retrieve a collection of  `TaskItem` objects to display.
 2. **Selected** – When a row is touched, displays the task in a new screen.
 
- <a name="Task_Details_Screen" />
+ <a name="Task_Details_Screen"></a>
 
 #### Task Details Screen
 
@@ -426,7 +426,7 @@ screen:
 2. **SaveTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It is called when  **Save** is pressed, and uses a  `MonoTouch.Dialog.BindingContext` to retrieve the user-entered data before saving the changes using  `TaskItemManager` .
 3. **DeleteTask** – This method is referenced in the  `TaskDialog` class via an  `OnTap` attribute. It uses  `TaskItemManager` to delete the data using the primary key (ID property).
 
- <a name="Android_App" />
+ <a name="Android_App"></a>
 
 ## Android App
 
@@ -438,7 +438,7 @@ The class diagram, with classes grouped by layer:
 
  [![](case-study-tasky-images/classdiagram-android.png "The class diagram, with classes grouped by layer")](case-study-tasky-images/classdiagram-android.png#lightbox)
 
- <a name="References" />
+ <a name="References"></a>
 
 ### References
 
@@ -450,7 +450,7 @@ access the common data and business layer code.
 
  ![](case-study-tasky-images/taskyandroid-references.png "TaskyPortableLibrary to access the common data and business layer code")
 
- <a name="Application_Layer_(AL)" />
+ <a name="Application_Layer_(AL)"></a>
 
 ### Application Layer (AL)
 
@@ -463,7 +463,7 @@ we need to implement an adapter to display custom
 objects in a `ListView`. The adapter controls which layout is used for each item
 in the list – in this case the code uses an Android built-in layout `SimpleListItemChecked`.
 
- <a name="User_Interface_(UI)" />
+ <a name="User_Interface_(UI)"></a>
 
 ### User Interface (UI)
 
@@ -474,7 +474,7 @@ markup.
 - **Resources/Drawable** – images (icons) and custom button.
 - **Screens** – Activity subclasses that define each screen and its behavior. Ties together the UI with Application Layer classes and the common API (`TaskItemManager`).
 
- <a name="Home_Screen" />
+ <a name="Home_Screen"></a>
 
 #### Home Screen
 
@@ -489,7 +489,7 @@ clicking items in the list, as well as populating the list in the `OnResume` met
 Details Screen). Data is loaded using the Business Layer’s `TaskItemManager` and the `TaskListAdapter` from the
 Application Layer.
 
- <a name="Task_Details_Screen" />
+ <a name="Task_Details_Screen"></a>
 
 #### Task Details Screen
 
@@ -501,7 +501,7 @@ class defines the behavior to load and save `TaskItem` objects.
 
 All references to the PCL library are through the `TaskItemManager` class.
 
- <a name="Windows_Phone_App" />
+ <a name="Windows_Phone_App"></a>
 
 ## Windows Phone App
 The complete Windows Phone project:
@@ -512,7 +512,7 @@ The diagram below presents the classes grouped into layers:
 
  [![](case-study-tasky-images/classdiagram-wp7.png "This diagram presents the classes grouped into layers")](case-study-tasky-images/classdiagram-wp7.png#lightbox)
 
- <a name="References" />
+ <a name="References"></a>
 
 ### References
 
@@ -525,14 +525,14 @@ utilize the `TaskItem` class and database.
 
  ![](case-study-tasky-images/taskywp7-references.png "TaskyPortableLibrary to utilize the TaskItem class and database")
 
- <a name="Application_Layer_(AL)" />
+ <a name="Application_Layer_(AL)"></a>
 
 ### Application Layer (AL)
 
 Again, as with the iOS and Android versions, the application layer consists
 of the non-visual elements that help to bind data to the user interface.
 
- <a name="ViewModels" />
+ <a name="ViewModels"></a>
 
 #### ViewModels
 
@@ -541,7 +541,7 @@ in way that can be consumed by Silverlight/XAML data binding. This is an example
 of platform-specific behavior (as discussed in the Cross-Platform Applications
 document).
 
- <a name="User_Interface_(UI)" />
+ <a name="User_Interface_(UI)"></a>
 
 ### User Interface (UI)
 
@@ -551,7 +551,7 @@ reduce the amount of code required to display objects:
 1. **Pages** – XAML files and their codebehind define the user interface and reference the ViewModels and the PCL project to display and collect data.
 2. **Images** – Splash screen, background and icon images are a key part of the user interface.
 
- <a name="MainPage" />
+ <a name="MainPage"></a>
 
 #### MainPage
 
@@ -560,20 +560,20 @@ using XAML’s data-binding features. The page’s `DataContext` is
 set to the view model, which is populated asynchronously. The `{Binding}` syntax in the XAML determines how the data is
 displayed.
 
- <a name="TaskDetailsPage" />
+ <a name="TaskDetailsPage"></a>
 
 #### TaskDetailsPage
 
 Each task is displayed by binding the `TaskViewModel` to the XAML
 defined in the TaskDetailsPage.xaml. The task data is retrieved via the `TaskItemManager` in the Business Layer.
 
- <a name="Results" />
+ <a name="Results"></a>
 
 ## Results
 
 The resulting applications look like this on each platform:
 
- <a name="iOS" />
+ <a name="iOS"></a>
 
 ### iOS
 
@@ -584,7 +584,7 @@ The application uses iOS-standard user interface design, such as the
 
  [![](case-study-tasky-images/ios-taskylist.png "It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table")](case-study-tasky-images/ios-taskylist.png#lightbox) [![](case-study-tasky-images/ios-taskylist.png "It also uses the default UINavigationController back button behavior and supports swipe-to-delete in the table")](case-study-tasky-images/ios-taskylist.png#lightbox)
 
- <a name="Android" />
+ <a name="Android"></a>
 
 ### Android
 
@@ -594,7 +594,7 @@ supported in addition to an on-screen back button.
 
  [![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)[![](case-study-tasky-images/android-taskylist.png "The hardware/system back behavior is supported in addition to an on-screen back button")](case-study-tasky-images/android-taskylist.png#lightbox)
 
- <a name="Windows_Phone" />
+ <a name="Windows_Phone"></a>
 
 ### Windows Phone
 
@@ -603,7 +603,7 @@ of the screen instead of a nav bar at the top.
 
  [![](case-study-tasky-images/wp-taskylist.png "The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top")](case-study-tasky-images/wp-taskylist.png#lightbox) [![](case-study-tasky-images/wp-taskylist.png "The Windows Phone app uses the standard layout, populating the app bar at the bottom of the screen instead of a nav bar at the top")](case-study-tasky-images/wp-taskylist.png#lightbox)
 
- <a name="Summary" />
+ <a name="Summary"></a>
 
 ## Summary
 

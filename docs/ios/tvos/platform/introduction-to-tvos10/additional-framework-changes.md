@@ -13,7 +13,7 @@ ms.date: 03/16/2017
 
 In addition to the major changes to tvOS, Apple has made modifications and improvements to several existing frameworks in tvOS 10.
 
-<a name="AV-Foundation-Framework" />
+<a name="AV-Foundation-Framework"></a>
 
 ## AVFoundation Framework Additions
 
@@ -22,7 +22,7 @@ The AVFoundation framework includes the following enhancements:
 - In tvOS 10, the app no longer implements different [AVPlayerItem](https://developer.apple.com/reference/avfoundation/avplayeritem) behaviors based on content type. Simply set the `Rate` property and AVFoundation will determine when enough content is available for playback without stalling.
 - The new `AVPlayerLooper` class makes it easier to loop a given piece of media during playback.
 
-<a name="AVKit-Framework-Enhancements" />
+<a name="AVKit-Framework-Enhancements"></a>
 
 ## AVKit Framework Enhancements
 
@@ -30,7 +30,7 @@ The AVKit framework includes the following enhancements:
 
 - The app now has control over the skipping behavior of the [AVPlayerViewController](https://developer.apple.com/reference/avkit/avplayerviewcontroller) so a skipping gesture might move to the next item in the playlist or advance within the current item.
 
-<a name="Core-Data-Enhancements" />
+<a name="Core-Data-Enhancements"></a>
 
 ## Core Data Enhancements
 
@@ -44,7 +44,7 @@ tvOS 10 includes the following enhancements to the Core Data framework:
 
 For more information, please see Apple's [Core Data Framework Reference](https://developer.apple.com/reference/coredata).
 
-<a name="Core-Graphics-Enhancements" />
+<a name="Core-Graphics-Enhancements"></a>
 
 ## Core Graphics Enhancements
 
@@ -52,7 +52,7 @@ tvOS 10 includes the following enhancements to the Core graphics framework:
 
 - The new CGColorConverterRef class can be used to perform a series of color conversions.
 
-<a name="Core-Image-Enhancements" />
+<a name="Core-Image-Enhancements"></a>
 
 ## Core Image Enhancements
 
@@ -72,7 +72,7 @@ Additionally, the following new Core Image filters have been added:
 - `CIEdgePreserveUpsampleFilter`
 - `CIClamp`
 
-<a name="Foundation-Enhancements" />
+<a name="Foundation-Enhancements"></a>
 
 ## Foundation Enhancements
 
@@ -84,7 +84,7 @@ The following enhancements have been made to the Foundation framework for tvOS 1
 - Use the new [NSMeasurementFormatter](https://developer.apple.com/reference/foundation/nsmeasurementformatter) class to format localized measurements for displaying to the end user.
 - Use the new [NSUnit](https://developer.apple.com/reference/foundation/nsunit) and [NSDimension](https://developer.apple.com/reference/foundation/nsdimension) classes for representing specific UOMs.
 
-<a name="GameKit-Enhancements" />
+<a name="GameKit-Enhancements"></a>
 
 ## GameKit Enhancements
 
@@ -93,7 +93,7 @@ The following enhancements have been made to the GameKit framework in tvOS 10:
 - A new iCloud-only account type has been implemented by the [GKCloudPlayer](https://developer.apple.com/reference/gamekit/gkcloudplayer) class.
 - The new [GKGameSession](https://developer.apple.com/reference/gamekit/gkgamesession) class provides a generalized solution for managing persistent data storage on Game Center. `GKGameSession` maintains a list of players and the app is responsible form implementing how and when participant date is stored, retrieved or exchanged between players. In many instances Game Sessions can replace existing turn-based matches, real-time matches or persistent game save methods.
 
-<a name="GameplayKit-Enhancements" />
+<a name="GameplayKit-Enhancements"></a>
 
 ## GameplayKit Enhancements
 
@@ -107,7 +107,7 @@ The following enhancements have been made to the GameplayKit framework in tvOS 1
 - Use the new [GKMeshGraph](https://developer.apple.com/reference/gameplaykit/gkmeshgraph) class to provide high-performance, natural-looking paths.
 - The new [GKScene](https://developer.apple.com/reference/gameplaykit/gkscene) and [GKSKNodeComponent](https://developer.apple.com/reference/gameplaykit/gksknodecomponent) classes make combining GameplayKit and SpriteKit easier than ever.
 
-<a name="Metal-Enhancements" />
+<a name="Metal-Enhancements"></a>
 
 ## Metal Enhancements
 
@@ -119,7 +119,7 @@ The following enhancements have been made to the Metal framework in tvOS 10:
 
 To learn more, please see Apple's [Metal Programming Guide](https://developer.apple.com/library/prerelease/content/documentation/Miscellaneous/Conceptual/MetalProgrammingGuide/Introduction/Introduction.html#//apple_ref/doc/uid/TP40014221).
 
-<a name="Metal-Performance-Shaders-Enhancements" />
+<a name="Metal-Performance-Shaders-Enhancements"></a>
 
 ## Metal Performance Shaders Enhancements
 
@@ -127,7 +127,7 @@ The following enhancements have been made to the Metal Performance Shaders frame
 
 - Many new kernels have been added to the Metal Performance Shaders framework to allow the app to take advantage of high-optimized, data-parallel computations such as color space conversions and neural network operations.
 
-<a name="ModelIO-Enhancements" />
+<a name="ModelIO-Enhancements"></a>
 
 ## ModelIO Enhancements
 
@@ -138,7 +138,7 @@ The following enhancements have been made to the ModelIO framework in tvOS 10:
 - Signed Distance Field support has been added to the [MDLVoxelArray](https://developer.apple.com/reference/modelio/mdlvoxelarray) class.
 - Use the new `MDLLightProbeIrradianceDataSource` class to assist in Light Probe placement.
 
-<a name="SceneKit-Enhancements" />
+<a name="SceneKit-Enhancements"></a>
 
 ## SceneKit Enhancements
 
@@ -156,7 +156,7 @@ The following enhancements have been made to the SceneKit framework in tvOS 10:
 - Both linear color space rendering and wide-color can be disabled by specifying the `SCNDisableLinearSpaceRendering` and `SCNDisableWideGamut` keys in the app's `Info.plist`.
 - Build arbitrary polygon primates (either loaded from files or generated programmatically) to specify geometry with the new [SCNGeometryPrimitiveTypePolygon](https://developer.apple.com/documentation/scenekit/scngeometryprimitivetype/scngeometryprimitivetypepolygon) class.
 
-<a name="SpriteKit-Enhancements" />
+<a name="SpriteKit-Enhancements"></a>
 
 ## SpriteKit Enhancements
 
@@ -167,7 +167,7 @@ The following enhancements have been made to the SpriteKit framework in tvOS 10:
 - Custom shaders can provide attributes (`SKAttribute`) that can be configured separately by each node that uses the shader by supplying an Attribute Value (`SKAttributeValue`).
 - The [SKView](https://developer.apple.com/reference/spritekit/skview) class provides several new methods to give fine-grained control over when and how a scene is rendered.
 
-<a name="UIKit-Enhancements" />
+<a name="UIKit-Enhancements"></a>
 
 ## UIKit Enhancements
 

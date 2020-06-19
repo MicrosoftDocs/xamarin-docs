@@ -26,7 +26,7 @@ On Windows these are saved to `%appdata%Local//Xamarin/Log/Xamarin.Profiler/Prof
 
 We’re adding more logging as we go, so this output should grow and become more useful over time.
 
-<a name="gen_mlpd" />
+<a name="gen_mlpd"></a>
 
 ### Generating .mlpd Files
 

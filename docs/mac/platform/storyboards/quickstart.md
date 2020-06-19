@@ -67,7 +67,7 @@ If we return to Visual Studio for Mac and run the project now, notice that the r
 
 [![](quickstart-images/qs13.png "An example of the app running")](quickstart-images/qs13.png#lightbox)
 
-<a name="Defining-a-Presentation-Segue" />
+<a name="Defining-a-Presentation-Segue"></a>
 
 ## Defining a Presentation Segue
 
@@ -89,7 +89,7 @@ If we return to Visual Studio for Mac, run the app and click on the **None** but
 
 [![](quickstart-images/qs17.png "An example of the segue running")](quickstart-images/qs17.png#lightbox)
 
-<a name="Creating-App-Preferences" />
+<a name="Creating-App-Preferences"></a>
 
 ## Creating App Preferences
 

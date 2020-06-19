@@ -66,7 +66,7 @@ public class ClipboardTest
 
 ## API
 
-- [Clipboard source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Clipboard)
+- [Clipboard source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Clipboard)
 - [Clipboard API documentation](xref:Xamarin.Essentials.Clipboard)
 
 ## Related Video

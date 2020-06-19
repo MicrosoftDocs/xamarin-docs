@@ -6,7 +6,7 @@ ms.assetid: 22C99029-0B16-43A6-BF58-26B48C4AED38
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 10/29/2019
+ms.date: 05/20/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -30,6 +30,7 @@ The [`Map`](xref:Xamarin.Forms.Maps.Map) class defines the following properties 
 - [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType), of type [`MapType`](xref:Xamarin.Forms.Maps.Map.MapType), indicates the display style of the map.
 - `MoveToLastRegionOnLayoutChange`, of type `bool`, controls whether the displayed map region will move from its current region to its previously set region when a layout change occurs.
 - [`Pins`](xref:Xamarin.Forms.Maps.Map.Pins), of type `IList<Pin>`, represents the list of pins on the map.
+- `TrafficEnabled`, of type `bool`, indicates whether traffic data is overlaid on the map.
 - [`VisibleRegion`](xref:Xamarin.Forms.Maps.Map.VisibleRegion), of type [`MapSpan`](xref:Xamarin.Forms.Maps.MapSpan), returns the currently displayed region of the map.
 
 These properties, with the exception of the `MapElements`, `Pins`, and `VisibleRegion` properties, are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which mean they can be targets of data bindings.
@@ -203,6 +204,23 @@ The behavior of a [`Map`](xref:Xamarin.Forms.Maps.Map) can be customized by sett
 
 > [!NOTE]
 > Additional map behavior customization can be achieved by creating a map custom renderer. For more information, see [Customizing a Xamarin.Forms Map](~/xamarin-forms/app-fundamentals/custom-renderer/map-pin.md).
+
+### Show traffic data
+
+The [`Map`](xref:Xamarin.Forms.Maps.Map) class defines a `TrafficEnabled` property of type `bool`. By default this property is `false`, which indicates that traffic data won't be overlaid on the map. When this property is set to `true`, traffic data is overlaid on the map. The following example shows setting this property:
+
+```xaml
+<maps:Map TrafficEnabled="true" />
+```
+
+The equivalent C# code is:
+
+```csharp
+Map map = new Map
+{
+    TrafficEnabled = true
+};
+```
 
 ### Disable scroll
 

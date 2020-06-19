@@ -116,7 +116,7 @@ No platform differences.
 
 ## API
 
-- [Vibration source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Vibration)
+- [Vibration source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Vibration)
 - [Vibration API documentation](xref:Xamarin.Essentials.Vibration)
 
 ## Related Video

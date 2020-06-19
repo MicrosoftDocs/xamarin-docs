@@ -17,25 +17,25 @@ Since iOS 8.0 it’s been possible to create an embedded framework to share code
 > [!IMPORTANT]
 > It will not be possible to create embedded frameworks from any type of Xamarin.iOS or Xamarin.Mac projects, Native References only allow for the consumption of existing native (Objective-C) frameworks.
 
-<a name="Terminology" />
+<a name="Terminology"></a>
 
 ## Terminology
 
 In iOS 8 (and later), **Embedded Frameworks** can be both embedded statically linked and dynamically linked Frameworks. To properly distribute them, you must make them into "fat" Frameworks that included all of their _Slices_ for each device architecture that you want to support with your app.
 
-<a name="Static-vs-Dynamic-Frameworks" />
+<a name="Static-vs-Dynamic-Frameworks"></a>
 
 ### Static vs. Dynamic Frameworks
 
 **Static Frameworks** are linked at compile time where **Dynamic Frameworks** are linked at runtime and therefor can be modified without re-linking. If you have used any 3rd-party Framework prior to iOS 8, you were using a **Static Framework** that was compiled into your app. See Apple's [Dynamic Library Programming](https://developer.apple.com/library/mac/documentation/DeveloperTools/Conceptual/DynamicLibraries/100-Articles/OverviewOfDynamicLibraries.html#//apple_ref/doc/uid/TP40001873-SW1) documentation for more details.
 
-<a name="Embedded-vs-System-Frameworks" />
+<a name="Embedded-vs-System-Frameworks"></a>
 
 ### Embedded vs. System Frameworks
 
 **Embedded Frameworks** are included in your apps bundle and are only accessible to your specific app via its sandbox. **System Frameworks** are stored at the Operating System Level and are available to all apps on the device. Currently, only Apple has the ability to create Operating System Level Frameworks.
 
-<a name="Thin-vs-Fat-Frameworks" />
+<a name="Thin-vs-Fat-Frameworks"></a>
 
 ### Thin vs. Fat Frameworks
 
@@ -43,13 +43,13 @@ In iOS 8 (and later), **Embedded Frameworks** can be both embedded statically li
 
 If you tried to distribute this sample Framework with your app, it would run correctly on the Simulator, but fail on the device since the Framework does not contain any code-specific Slices for an iOS device. To ensure that a Framework will work in all instances, it would also need to include device-specific Slices such as arm64, armv7 and armv7s.
 
-<a name="Working-with-Embedded-Frameworks" />
+<a name="Working-with-Embedded-Frameworks"></a>
 
 ## Working with Embedded Frameworks
 
 There are two steps that must be completed to work with Embedded Frameworks in a Xamarin.iOS or Xamarin.Mac app: Creating a Fat Framework and Embedding the Framework.
 
-<a name="Overview" />
+<a name="Overview"></a>
 
 ### Creating a Fat Framework
 
@@ -59,7 +59,7 @@ When the Framework and the consuming app are in the same Xcode project, this is 
 
 To solve this issue, the `lipo` command line tool can be used to merge two or more Frameworks into one Fat Framework containing all of the necessary Slices. For more information on working with the `lipo` command, please see our [Linking Native Libraries](~/ios/platform/native-interop.md) documentation.
 
-<a name="Embedding-a-Framework" />
+<a name="Embedding-a-Framework"></a>
 
 ### Embedding a Framework
 
@@ -78,7 +78,7 @@ The follow step are required to embed a framework in a Xamarin.iOS or Xamarin.Ma
 
 When the project is compiled, the Native Framework will be embedded in the App's bundle.
 
-<a name="App-Extensions-and-Embedded-Frameworks" />
+<a name="App-Extensions-and-Embedded-Frameworks"></a>
 
 ## App Extensions and Embedded Frameworks
 
@@ -88,7 +88,7 @@ Extensions will link with the Mono runtime as a framework, because all extension
 
 Apps that don’t have extensions and apps that target iOS 
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

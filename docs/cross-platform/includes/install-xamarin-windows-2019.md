@@ -29,7 +29,7 @@ Xamarin can be installed as part of a _new_ Visual Studio 2019 installation, wit
 
     ![Location of Launch button](~/get-started/installation/windows-images/vs2019-launch.png)
 
-<a name="vs2019" />
+<a name="vs2019"></a>
 
 ### Adding Xamarin to Visual Studio 2019
 

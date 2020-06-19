@@ -24,13 +24,11 @@ All the page types that are described below derive from the Xamarin.Forms [`Page
 
 Xamarin.Forms supports the following page types:
 
-<a name="contentPage" />
-
 ### ContentPage
 
 |     |     |
 | --- | --- |
-| [`ContentPage`](xref:Xamarin.Forms.ContentPage) is the simplest and most common type of page. Set the [`Content`](xref:Xamarin.Forms.ContentPage.Content) property to a single [`View`](views.md) object, which is most often a [`Layout`](layouts.md) such as [`StackLayout`](layouts.md#stackLayout), [`Grid`](layouts.md#grid), or [`ScrollView`](layouts.md#scrollView).<br /><br />[API Documentation](xref:Xamarin.Forms.ContentPage) | [![ContentPage Example](pages-images/ContentPage.png "ContentPage Example")](pages-images/ContentPage-Large.png#lightbox "ContentPage Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
+| [`ContentPage`](xref:Xamarin.Forms.ContentPage) is the simplest and most common type of page. Set the [`Content`](xref:Xamarin.Forms.ContentPage.Content) property to a single [`View`](views.md) object, which is most often a [`Layout`](layouts.md) such as [`StackLayout`](layouts.md#stacklayout), [`Grid`](layouts.md#grid), or [`ScrollView`](layouts.md#scrollview).<br /><br />[API Documentation](xref:Xamarin.Forms.ContentPage) | [![ContentPage Example](pages-images/ContentPage.png "ContentPage Example")](pages-images/ContentPage-Large.png#lightbox "ContentPage Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/ContentPageDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/ContentPageDemoPage.xaml) |
 |     |     |
 
 ### MasterDetailPage
@@ -58,14 +56,14 @@ Xamarin.Forms supports the following page types:
 
 |     |     |
 | --- | --- |
-| [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) derives from the abstract [`MultiPage`](xref:Xamarin.Forms.MultiPage`1) class and allows navigation among child pages through finger swiping. Set the [`Children`](xref:Xamarin.Forms.MultiPage`1.Children) property to a collection of [`ContentPage`](#contentPage) objects, or set the [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) property to a collection of data objects and the [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) describing how each object is to be visually represented.<br /><br />[API Documentation](xref:Xamarin.Forms.CarouselPage) / [Guide](~/xamarin-forms/app-fundamentals/navigation/carousel-page.md) / [Sample 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage) and [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate) | [![CarouselPage Example](pages-images/CarouselPage.png "CarouselPage Example")](pages-images/CarouselPage-Large.png#lightbox "CarouselPage Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselPageDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselPageDemoPage.xaml) |
+| [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) derives from the abstract [`MultiPage`](xref:Xamarin.Forms.MultiPage`1) class and allows navigation among child pages through finger swiping. Set the [`Children`](xref:Xamarin.Forms.MultiPage`1.Children) property to a collection of [`ContentPage`](#contentpage) objects, or set the [`ItemsSource`](xref:Xamarin.Forms.MultiPage`1.ItemsSource) property to a collection of data objects and the [`ItemTemplate`](xref:Xamarin.Forms.MultiPage`1.ItemTemplate) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) describing how each object is to be visually represented.<br /><br />[API Documentation](xref:Xamarin.Forms.CarouselPage) / [Guide](~/xamarin-forms/app-fundamentals/navigation/carousel-page.md) / [Sample 1](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpage) and [2](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/navigation-carouselpagetemplate) | [![CarouselPage Example](pages-images/CarouselPage.png "CarouselPage Example")](pages-images/CarouselPage-Large.png#lightbox "CarouselPage Example")<br />[C# code for this page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/CodeExamples/CarouselPageDemoPage.cs) / [XAML page](https://github.com/xamarin/xamarin-forms-samples/blob/master/FormsGallery/FormsGallery/FormsGallery/XamlExamples/CarouselPageDemoPage.xaml) |
 |     |     |
 
 ### TemplatedPage
 
 |     |     |
 | --- | --- |
-| [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage) displays full-screen content with a control template, and is the base class for [`ContentPage`](#contentPage).<br /><br />[API Documentation](xref:Xamarin.Forms.TemplatedPage) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedPage Example](pages-images/TemplatedPage.png "TemplatedPage Example")](pages-images/TemplatedPage.png "TemplatedPage Example") |
+| [`TemplatedPage`](xref:Xamarin.Forms.TemplatedPage) displays full-screen content with a control template, and is the base class for [`ContentPage`](#contentpage).<br /><br />[API Documentation](xref:Xamarin.Forms.TemplatedPage) / [Guide](~/xamarin-forms/app-fundamentals/templates/control-template.md) | [![TemplatedPage Example](pages-images/TemplatedPage.png "TemplatedPage Example")](pages-images/TemplatedPage.png "TemplatedPage Example") |
 |     |     |
 
 ## Related Links

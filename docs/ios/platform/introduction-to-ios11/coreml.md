@@ -20,7 +20,7 @@ This introduction covers the following:
 - [Getting Started with CoreML](#coreml)
 - [Using CoreML with the Vision framework](#coremlvision)
 
-<a name="coreml" />
+<a name="coreml"></a>
 
 ## Getting Started with CoreML
 
@@ -85,7 +85,7 @@ accessed using `GetFeatureValue` with the name of each output parameter (such as
 var result = outFeatures.GetFeatureValue("theResult").DoubleValue; // eg. 6227020800
 ```
 
-<a name="coremlvision" />
+<a name="coremlvision"></a>
 
 ## Using CoreML with the Vision Framework
 

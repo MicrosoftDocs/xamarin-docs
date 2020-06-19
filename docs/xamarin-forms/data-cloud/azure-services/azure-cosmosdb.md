@@ -113,8 +113,6 @@ Optionally, the `CreateDocumentCollectionIfNotExistsAsync` method can also speci
 > [!IMPORTANT]
 > Note that the `CreateDocumentCollectionIfNotExistsAsync` method will create a new collection with a reserved throughput, which has pricing implications.
 
-<a name="document_query" />
-
 ### Retrieving Document Collection Documents
 
 The contents of a document collection can be retrieved by creating and executing a document query. A document query is created with the `DocumentClient.CreateDocumentQuery` method:
@@ -153,8 +151,6 @@ var query = client.CreateDocumentQuery<TodoItem>(collectionLink)
 
 This query retrieves all documents from the collection whose `Done` property is equal to `false`.
 
-<a name="inserting_document" />
-
 ### Inserting a Document into a Document Collection
 
 Documents are user defined JSON content, and can be inserted into a document collection with the `DocumentClient.CreateDocumentAsync` method:
@@ -184,8 +180,6 @@ public async Task SaveTodoItemAsync(TodoItem item, bool isNewItem = false)
 ```
 
 The `ReplaceDocumentAsync` method specifies a `Uri` argument that represents the document in the collection that should be replaced, and an `object` argument that represents the updated document data.
-
-<a name="deleting_document" />
 
 ### Deleting a Document from a Document Collection
 

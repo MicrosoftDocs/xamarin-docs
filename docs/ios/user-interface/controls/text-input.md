@@ -21,7 +21,7 @@ The screenshots below show the icons for these controls, located in the Toolbox 
 
 Once you have named the outlet and saved the Storyboard file, Visual Studio for Mac will update the `.designer.cs` partial class and you can add C# code that references the control to your class file. Each control has its own unique properties and events that can be accessed in your C# code.
 
- <a name="UITextField" />
+ <a name="UITextField"></a>
 
 ## UITextField
 
@@ -63,7 +63,7 @@ textfield1 = new UITextField(frame);
 View.Add(textfield1);
 ```
 
- <a name="UITextView" />
+ <a name="UITextView"></a>
 
 ## UITextView
 

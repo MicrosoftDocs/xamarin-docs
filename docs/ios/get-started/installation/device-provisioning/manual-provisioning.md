@@ -48,13 +48,13 @@ The Developer Profile contains certificates, their associated keys, and any prov
 > [!WARNING]
 > Losing the certificate and associated keys can be incredibly disruptive, as it will require revoking existing certificates and re-provisioning any associated devices, including those registered for ad-hoc deployment. After successfully setting up  Development Certificates, export a backup copy and store them in a safe place. For more information on how to do this, refer to the Exporting and Importing Certificates and Profiles section of the [Maintaining Certificates](https://developer.apple.com/library/ios/documentation/IDEs/Conceptual/AppDistributionGuide/MaintainingCertificates/MaintainingCertificates.html) guide in Apple's docs.
 
-<a name="provisioning" />
+<a name="provisioning"></a>
 
 ## Provision an iOS device for development
 
 Now that you've established your identity with Apple and have a development certificate, you must set up a provisioning profile and the required entities so it is possible to deploy an app to an Apple device. The device must be running a version of iOS that is supported by Xcode — it may be necessary to update the device, Xcode or both.
 
-<a name="adddevice" />
+<a name="adddevice"></a>
 
 ## Add a device
 
@@ -80,7 +80,7 @@ When creating a provisioning profile for development, we must state which device
 
 Repeat the above steps for any iOS device that will be used to test or debug a Xamarin.iOS application.
 
-<a name="provisioningprofile" />
+<a name="provisioningprofile"></a>
 
 ## Create a development provisioning profile
 
@@ -119,7 +119,7 @@ To manually create a provisioning profile for development, do the following:
 
 7. You can optionally click **Download** on the next page to download the provisioning profile onto the Mac.
 
-<a name="download" />
+<a name="download"></a>
 
 ## Download provisioning profiles in Visual Studio
 

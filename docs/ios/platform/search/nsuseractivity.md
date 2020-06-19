@@ -52,7 +52,7 @@ Follow these instructions to implement a searchable `NSUserActivity` in your app
 There are some [additional benefits](#benefits) to using `NSUserActivity`
 to make your content searchable.
 
-<a name="creatingtypeid" />
+<a name="creatingtypeid"></a>
 
 ## Creating Activity Type Identifiers
 
@@ -68,7 +68,7 @@ To create the required Activity Type Identifiers to support this behavior, edit 
 
 In the above example, we created one new Activity Type Identifier for the search activity (`com.xamarin.platform`). When creating your own apps, replace the contents of the `NSUserActivityTypes` array with the Activity Type Identifiers specific to the activities your app supports.
 
-<a name="createactivity" />
+<a name="createactivity"></a>
 
 ## Creating an Activity
 
@@ -97,7 +97,7 @@ We could add further details by setting the `ContentAttributeSet` property of ou
 
 By using a `ContentAttributeSet` you can create rich search results that entice the end user to interact with them.
 
-<a name="respondactivity" />
+<a name="respondactivity"></a>
 
 ## Responding to an Activity
 
@@ -122,7 +122,7 @@ Note that this is the same method override used to respond to Handoff requests. 
 
 [![](nsuseractivity-images/apphistory03.png "Restore Previous State from Search")](nsuseractivity-images/apphistory03.png#lightbox)
 
-<a name="indexing" />
+<a name="indexing"></a>
 
 ## Public Search Indexing
 
@@ -161,7 +161,7 @@ Just because an activity has been set for public indexing by setting `EligibleFo
 1. It must appear in search results and be selected by many users. The results remain private until an activity engagement threshold has been met.
 2. App provisioning prevents any user-specific data from being indexed and made public.
 
-<a name="benefits" />
+<a name="benefits"></a>
 
 ## Additional Benefits
 

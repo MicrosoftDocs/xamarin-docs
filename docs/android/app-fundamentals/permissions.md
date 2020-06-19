@@ -44,7 +44,7 @@ This document will discuss how to add permissions to a Xamarin.Android applicati
 > [!NOTE]
 > It is possible that permissions for hardware may affect how the app is filtered by Google Play. For example, if the app requires permission for the camera, then Google Play will not show the app in the Google Play Store on a device that does not have a camera installed.
 
-<a name="requirements" />
+<a name="requirements"></a>
 
 ## Requirements
 

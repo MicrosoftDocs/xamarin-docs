@@ -91,7 +91,7 @@ classes; for more information about these classes, see
 and
 [RecyclerView.ItemAnimator](https://developer.android.com/reference/android/support/v7/widget/RecyclerView.ItemAnimator.html).
 
-<a name="recycling" />
+<a name="recycling"></a>
 
 ## How View Recycling Works
 

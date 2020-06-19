@@ -25,7 +25,7 @@ With HomeKit, you can create a Xamarin.iOS app that controls any HomeKit enabled
 
 In addition to serving devices in the Home Configuration Database to HomeKit enabled apps, HomeKit provides access to Siri voice commands. Given an appropriately configured HomeKit setup, the user can issue voice commands such as "Siri, turn on the lights in the living room."
 
-<a name="Home-Configuration-Database" />
+<a name="Home-Configuration-Database"></a>
 
 ## The Home Configuration Database
 
@@ -39,7 +39,7 @@ The Home Collection is stored in a Home Configuration Database that will automat
 - `HMService` - Represents a service provided by a given `HMAccessory`, such as the on/off state of a light or its color (if color changing is supported). Each `HMAccessory` can have more than one service, such as a garage door opener that also includes a light. Additionally, an given `HMAccessory` might have services, such as firmware update, that are outside of user control.
 - `HMZone` - Allows the user to group a collection of `HMRoom` objects into logical zones, such as Upstairs, Downstairs or Basement. While optional, this allows for interactions like asking Siri to turn all of the light downstairs off.
 
-<a name="Provisioning-a-HomeKit-App" />
+<a name="Provisioning-a-HomeKit-App"></a>
 
 ## Provisioning a HomeKit App
 
@@ -368,7 +368,7 @@ You should always should check the `Reachable` property of a `HMAccessory` befor
 
 Once a service has been selected, the user can view or modify one or more characteristics of that service to monitor or control a given home automation device.
 
-<a name="Working-with-Characteristics" />
+<a name="Working-with-Characteristics"></a>
 
 ## Working with Characteristics
 

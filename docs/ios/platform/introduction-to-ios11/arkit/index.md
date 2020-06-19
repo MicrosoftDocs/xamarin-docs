@@ -18,7 +18,7 @@ ARKit enables a wide variety of augmented reality applications and games. This s
 - [Getting Started with ARKit](#gettingstarted)
 - [Using ARKit with UrhoSharp](urhosharp.md)
 
-<a name="gettingstarted" />
+<a name="gettingstarted"></a>
 
 ## Getting Started with ARKit
 

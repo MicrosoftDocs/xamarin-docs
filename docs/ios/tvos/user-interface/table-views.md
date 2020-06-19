@@ -19,7 +19,7 @@ Table Views are typically displayed in one side of a [Split View](~/ios/tvos/use
 
 [![](table-views-images/intro01.png "Sample table view")](table-views-images/intro01.png#lightbox)
 
-<a name="About-Table-Views" />
+<a name="About-Table-Views"></a>
 
 ## About Table Views
 
@@ -33,7 +33,7 @@ Apple has the following suggestions for working with tables:
 - **Show Table Contents Quickly** - For large lists of data, lazy-load the content and start showing information as soon as the table is presented to the user. If the table takes to long to load, the user might lose interest in your app or think it is locked up.
 - **Inform User of Long Content Loads** - If a long table load time is unavoidable, present a [Progress Bar or Activity Indicator](~/ios/tvos/user-interface/progress-indicators.md) so that they know the app hasn't locked up.
 
-<a name="Table-Cell-Types" />
+<a name="Table-Cell-Types"></a>
 
 ## Table View Cell Types
 
@@ -55,7 +55,7 @@ Apple has the following suggestions for working with Table View Cells:
 - **Use Editable Tables Sparingly** - Moving or deleting Table Rows is more time consuming on tvOS than iOS. You need to decide carefully if this feature will add or distract from your tvOS app.
 - **Create Custom Cell Types Where Appropriate** - While the built-in Table View Cell Types are great for many situations, consider creating Custom Cell Types for non-standard information to provide greater control and better present the information to the user.
 
-<a name="Working-With-Table-Views" />
+<a name="Working-With-Table-Views"></a>
 
 ## Working With Table Views
 
@@ -151,7 +151,7 @@ To get started, do the following:
 
 -----
 
-<a name="Designing-a-Data-Model" />
+<a name="Designing-a-Data-Model"></a>
 
 ## Designing a Data Model
 
@@ -275,7 +275,7 @@ namespace tvTable
 
 This class holds all of the information about a destination **City**, a collection of **Attractions** for that city and provides two helper methods (`AddAttraction`) to make it easier to add attractions to the city.
 
-<a name="The-Table-Data-Source" />
+<a name="The-Table-Data-Source"></a>
 
 ## The Table View Data Source
 
@@ -467,7 +467,7 @@ public override UITableViewCell GetCell (UITableView tableView, Foundation.NSInd
 
 For more information on working with a `UITableViewDatasource`, please see Apple's [UITableViewDatasource](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDataSource_Protocol/index.html#//apple_ref/doc/uid/TP40006941) documentation.
 
-<a name="The-Table-View-Delegate" />
+<a name="The-Table-View-Delegate"></a>
 
 ## The Table View Delegate
 
@@ -581,7 +581,7 @@ The `CanFocusRow` method is called for each Row that is about to get Focus in th
 
 For more information on working with a `UITableViewDelegate`, please see Apple's [UITableViewDelegate](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewDelegate_Protocol/index.html#//apple_ref/doc/uid/TP40006942) documentation.
 
-<a name="The-Table-View-Cell" />
+<a name="The-Table-View-Cell"></a>
 
 ## The Table View Cell
 
@@ -668,7 +668,7 @@ private void UpdateUI ()
 
 For more information on working with a `UITableViewCell`, please see Apple's [UITableViewCell](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewCell_Class/index.html#//apple_ref/doc/uid/TP40006938) documentation.
 
-<a name="The-Table-View-Controller" />
+<a name="The-Table-View-Controller"></a>
 
 ## The Table View Controller
 
@@ -722,7 +722,7 @@ Finally, when the Table View is loaded into memory, we create instances of the `
 
 For more information on working with a `UITableViewController`, please see Apple's [UITableViewController](https://developer.apple.com/library/prerelease/tvos/documentation/UIKit/Reference/UITableViewController_Class/index.html#//apple_ref/doc/uid/TP40007523) documentation.
 
-<a name="Pulling-it-All-Together" />
+<a name="Pulling-it-All-Together"></a>
 
 ## Pulling it All Together
 
@@ -732,7 +732,7 @@ As stated at the start of this document, Table Views are typically displayed in 
 
 Since this is a standard pattern in tvOS, let's look at the final steps to bring everything together and have the left and right sides of the Split View interact with each other.
 
-<a name="The-Detail-View" />
+<a name="The-Detail-View"></a>
 
 ### The Detail View
 
@@ -845,7 +845,7 @@ We have also defined a shortcut back to the Split View Controller (`SplitView`) 
 
 Finally, custom Actions (events) were added to the three `UIButton` instances created in the Interface Designer, that allow the user to mark an attraction as a _Favorite_, get _Directions_ to an attraction and _Book a Flight_ to a given city.
 
-<a name="The-Navigation-View-Controller" />
+<a name="The-Navigation-View-Controller"></a>
 
 ### The Navigation View Controller
 
@@ -881,7 +881,7 @@ Again, this class just defines a few shortcuts to make it easier to communicate 
 - `SplitView` - Is a link to the Split View Controller (`MainSpiltViewController`) that the Navigation View Controller belongs to.
 - `TableController` - Gets the Table View Controller (`AttractionTableViewController`) that is presented as the Top View in the Navigation View Controller.
 
-<a name="The-Split-View-Controller" />
+<a name="The-Split-View-Controller"></a>
 
 ### The Split View Controller
 
@@ -942,7 +942,7 @@ Please see the [tvTables](https://docs.microsoft.com/samples/xamarin/ios-samples
 
 Since tvOS is based off of iOS, Table Views and Table View Controllers are designed and behave in a similar fashion. For more detailed information on working with Table View in a Xamarin app, please see our iOS [Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md) documentation.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

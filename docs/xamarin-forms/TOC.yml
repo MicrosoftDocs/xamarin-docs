@@ -234,6 +234,8 @@
               href: app-fundamentals/data-binding/relative-bindings.md
             - name: Binding Fallbacks
               href: app-fundamentals/data-binding/binding-fallbacks.md
+            - name: Multi-Bindings
+              href: app-fundamentals/data-binding/multibinding.md
             - name: The Command Interface
               href: app-fundamentals/data-binding/commanding.md
             - name: Compiled Bindings
@@ -535,6 +537,30 @@
               href: user-interface/text/fonts.md
             - name: Graphics with SkiaSharp
               href: user-interface/graphics/skiasharp/index.md
+            - name: Shapes
+              items:
+                - name: Overview
+                  href: user-interface/shapes/index.md
+                - name: Ellipse
+                  href: user-interface/shapes/ellipse.md
+                - name: Line
+                  href: user-interface/shapes/line.md
+                - name: Paths
+                  items:
+                  - name: Path
+                    href: user-interface/shapes/path.md
+                  - name: Path geometries
+                    href: user-interface/shapes/path-geometries.md
+                  - name: Path markup syntax
+                    href: user-interface/shapes/path-markup-syntax.md
+                  - name: Path transforms
+                    href: user-interface/shapes/path-transforms.md
+                - name: Polygon
+                  href: user-interface/shapes/polygon.md
+                - name: Polyline
+                  href: user-interface/shapes/polyline.md
+                - name: Rectangle
+                  href: user-interface/shapes/rectangle.md
             - name: Splash screen
               href: user-interface/splashscreen.md
             - name: Styles

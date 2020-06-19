@@ -168,7 +168,7 @@ It is possible to customize a job. Examples of how a job may be customized inclu
 
 Each of these topics will be discussed more in the following sections.
 
-<a name="Passing_Parameters_to_a_Job" />
+<a name="Passing_Parameters_to_a_Job"></a>
 
 #### Passing parameters to a job
 
@@ -196,7 +196,7 @@ public override bool OnStartJob(IJobParameters jobParameters)
 } 
 ```
 
-<a name="Setting_Constraints" />
+<a name="Setting_Constraints"></a>
 
 #### Setting constraints
 
@@ -215,7 +215,7 @@ Job myJob = dispatcher.NewJobBuilder()
                       .Build();
 ```
 
-<a name="Setting_Job_Triggers" />
+<a name="Setting_Job_Triggers"></a>
 
 The `JobTrigger` provides guidance to the operating system about when the job should start. A `JobTrigger` has an _executing window_ that defines a scheduled time for when the `Job` should run. The execution window has a _start window_ value and an _end window_ value. The start window is the number of seconds that the device should wait before running the job and the end window value is the maximum number of seconds to wait before running the `Job`. 
 
@@ -231,7 +231,7 @@ Job myJob = dispatcher.NewJobBuilder()
 
 The default `JobTrigger` for a job is represented by the value `Trigger.Now`, which specifies that a job be run as soon as possible after being scheduled..
 
-<a name="Setting_a_RetryStrategy" />
+<a name="Setting_a_RetryStrategy"></a>
 
 #### Setting a RetryStrategy
 

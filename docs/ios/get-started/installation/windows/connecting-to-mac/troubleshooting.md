@@ -77,7 +77,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
     ssh amyb@10.1.8.95
     ```
 
-    <a name="stepnine" />
+    <a name="stepnine"></a>
 
 9. If **step 8 succeeds**, you can try running a simple command like `ls` over the connection:
 
@@ -107,7 +107,7 @@ The Xamarin Build Host from older versions of Xamarin.iOS is no longer required.
 
 12. If step 8 fails and **step 10 fails**, then the problem is likely that the SSH server process on the Mac is not running or is not configured to allow the current user to log in. In this case be sure to double-check the Remote Login settings from step 2 before you investigate any more complicated possibilities.
 
-<a name="knownissues" />
+<a name="knownissues"></a>
 
 ### Known Issues and Limitations
 
@@ -130,7 +130,7 @@ Known cause:
 
 - **Bug [#52264](https://bugzilla.xamarin.com/show_bug.cgi?id=52264)** – This problem can happen on Xamarin 4.1 if the **Login shell** in the **Advanced Options** context menu for the Mac user in **System Preferences &gt; Users &amp; Groups** is set to a value other than **/bin/bash**. (Starting with Xamarin 4.2, this scenario instead leads to the "Couldn't connect" error message.) **Workaround**: Change the **Login shell** back to the original default of **/bin/bash**.
 
-<a name="tryagain" />
+<a name="tryagain"></a>
 
 #### "Couldn't connect to MacBuildHost.local. Please try again."
 
@@ -174,7 +174,7 @@ Reported causes:
 
     8. Disable and re-enable **Remote Login** under **System Preferences &gt; Sharing &gt; Remote Login** to restart the SSH server.
 
-<a name="clearing" />
+<a name="clearing"></a>
 
 #### Clearing the Broker, IDB, Build, and Designer Agents on the Mac
 
@@ -255,7 +255,7 @@ If the Output window does not include enough information to diagnose the problem
 
     [![](troubleshooting-images/troubleshooting-image14.png "Click the Layout Mode drop-down menu and select Thread")](troubleshooting-images/troubleshooting-image14.png#lightbox)
 
-<a name="verboselogs" />
+<a name="verboselogs"></a>
 
 #### Verbose Log Files
 
@@ -338,7 +338,7 @@ This issue may happen when Visual Studio fails to refresh the MEF component cach
 
 This will clear the Visual Studio MEF component cache to fix issues with cache corruption.
 
-<a name="errors" />
+<a name="errors"></a>
 
 ### Errors due to existing Build Host Processes on the Mac
 

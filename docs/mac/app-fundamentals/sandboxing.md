@@ -96,7 +96,7 @@ Run you application and ensure that the Apple Website is displayed in the window
 
 [![Showing an example app run](sandboxing-images/sample06.png "Showing an example app run")](sandboxing-images/sample06-large.png#lightbox)
 
-<a name="Signing_and_Provisioning_the_App" />
+<a name="Signing_and_Provisioning_the_App"></a>
 
 ### Signing and provisioning the app
 

@@ -46,7 +46,7 @@ Debug package to be smaller.
 The shared runtime may be disabled in Debug builds by setting the
 `$(AndroidUseSharedRuntime)` property to `False`.
 
-<a name="Fast_Deployment" />
+<a name="Fast_Deployment"></a>
 
 ### Fast Deployment
 
@@ -79,7 +79,7 @@ This page documents only the Xamarin.Android-specific features and
 customizations &ndash; many more things are possible with the normal
 MSBuild items, properties and targets.
 
-<a name="Build_Targets" />
+<a name="Build_Targets"></a>
 
 ## Build Targets
 
@@ -1194,7 +1194,7 @@ resources.
   The default value is `Resources`. Change this to `res` for the
   Java project structure.
 
-<a name="Signing_Properties" />
+<a name="Signing_Properties"></a>
 
 ### Signing Properties
 
@@ -1360,7 +1360,7 @@ To use the keystore generated above, use the property group:
 </PropertyGroup>
 ```
 
-<a name="Build_Actions" />
+<a name="Build_Actions"></a>
 
 ## Build Actions
 
@@ -1391,7 +1391,7 @@ with layout files:
 <AndroidBoundLayout Include="Resources\layout\Main.axml" />
 ```
 
-<a name="AndroidEnvironment" />
+<a name="AndroidEnvironment"></a>
 
 ### AndroidEnvironment
 
@@ -1532,7 +1532,7 @@ Build action will result in a `XA0101` warning.
 Files with a *LinkDescription* build action are used to
 [control linker behavior](~/cross-platform/deploy-test/linker.md).
 
-<a name="ProguardConfiguration" />
+<a name="ProguardConfiguration"></a>
 
 ### ProguardConfiguration
 

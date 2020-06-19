@@ -100,7 +100,7 @@ Task.Factory.StartNew( () => {
 
 While expiration handlers are not required for the code to run, you should always use an expiration handler with a background task.
 
- <a name="background_tasks_in_iOS_7" />
+ <a name="background_tasks_in_iOS_7"></a>
 
 ## Background Tasks in iOS 7+
 
@@ -116,7 +116,7 @@ iOS 7 background processing is optimized for longer battery life. In iOS 7, back
 
 Because the task run time is not longer continuous, tasks that perform network transfers must be handled differently in iOS 7. Developers are encouraged to use the `NSURlSession` API to handle network transfers. The next section is an overview of background transfers.
 
- <a name="background-transfers" />
+ <a name="background-transfers"></a>
 
 ## Background Transfers
 

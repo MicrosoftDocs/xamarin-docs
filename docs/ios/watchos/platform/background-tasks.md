@@ -81,7 +81,7 @@ When the app has finished the given Task, it returns it to the system by marking
 
 [![](background-tasks-images/update03.png "The Task returns to the system by marking it completed")](background-tasks-images/update03.png#lightbox)
 
-<a name="New-Background-Tasks" />
+<a name="New-Background-Tasks"></a>
 
 ## New Background Tasks
 
@@ -94,7 +94,7 @@ watchOS 3 introduces several background tasks that an app can use to update its 
 
 These Tasks will be covered in detail in the sections below.
 
-<a name="WKApplicationRefreshBackgroundTask" />
+<a name="WKApplicationRefreshBackgroundTask"></a>
 
 ### WKApplicationRefreshBackgroundTask
 
@@ -104,7 +104,7 @@ The `WKApplicationRefreshBackgroundTask` is a generic Task that can be scheduled
 
 Within the runtime of the Task, the app can do any kind of local processing such as update a Complication timeline or fetch some required data with a `NSUrlSession`.
 
-<a name="WKURLSessionRefreshBackgroundTask" />
+<a name="WKURLSessionRefreshBackgroundTask"></a>
 
 ### WKURLSessionRefreshBackgroundTask
 
@@ -114,7 +114,7 @@ The system will send a `WKURLSessionRefreshBackgroundTask` when the data has fin
 
 An app is not left running while data is downloading in the background. Instead, the app schedules the request for data, then it is suspended and the system handles the downloading of the data, only reawakening the app when the download is complete.
 
-<a name="WKSnapshotRefreshBackgroundTask" />
+<a name="WKSnapshotRefreshBackgroundTask"></a>
 
 ### WKSnapshotRefreshBackgroundTask
 
@@ -145,7 +145,7 @@ If it has been more than one hour since the user has interacted with a watchOS a
 
 <!--TODO - Possibly link to Apple's Designing Great Apple Watch Experiences video or add our own version here...-->
 
-<a name="WKWatchConnectivityRefreshBackgroundTask" />
+<a name="WKWatchConnectivityRefreshBackgroundTask"></a>
 
 ### WKWatchConnectivityRefreshBackgroundTask
 
@@ -163,7 +163,7 @@ When the watch app is woken via a `WKWatchConnectivityRefreshBackgroundTask` it 
 2. Monitor the new `HasContentPending` property as long as the value is `true`, the app still has data to process. As before, the app should hold onto the Task until it has finished processing all data.
 3. When there is no more data to be processed (`HasContentPending = false`), mark the Task completed to return it to the system. Failing to do this will exhaust the app's allotted background runtime resulting in a crash report.
 
-<a name="The-Background-API-Lifecycle" />
+<a name="The-Background-API-Lifecycle"></a>
 
 ## The Background API Lifecycle
 
@@ -177,7 +177,7 @@ Placing all of the pieces of the new Background Tasks API together, a typical se
 4. As a result of processing the Task, the app may need to schedule more background Tasks to complete more work in the future, such as downloading more content using a `NSUrlSession`.
 5. The app marks the Task completed and returns it to the system.
 
-<a name="Using-Resources-Responsibly" />
+<a name="Using-Resources-Responsibly"></a>
 
 ## Using Resources Responsibly
 
@@ -194,7 +194,7 @@ Take a look at the following scenario:
 
 While every app is different, Apple suggests finding patterns of usage, like those shown above, to help conserve system resources.
 
-<a name="Implementing-Background-Tasks" />
+<a name="Implementing-Background-Tasks"></a>
 
 ## Implementing Background Tasks
 
@@ -212,7 +212,7 @@ The user's favorite soccer team is playing a big match from 7:00 PM to 9:00 PM s
 4. The same process repeats again.
 5. The last background Task is received and the app again updates its data and UI. Since this is the final score it doesn't schedule for a new background refresh. 
 
-<a name="Scheduling-for-Background-Update" />
+<a name="Scheduling-for-Background-Update"></a>
 
 ## Scheduling for Background Update
 
@@ -245,7 +245,7 @@ It creates a new `NSDate` 30 minutes into the future when the app wants to be aw
 
 The system will return a `NSError` if it was unable to schedule the requested Task.
 
-<a name="Processing-the-Update" />
+<a name="Processing-the-Update"></a>
 
 ## Processing the Update
 
@@ -259,7 +259,7 @@ Next, take a closer look at the 5 minute window showing the steps required to up
 4. The app saves the updated information and marks the Task completed. The developer may be tempted to update the app's User Interface at this time, however Apple suggests scheduling a Snapshot Task to handle that process. See [Scheduling a Snapshot Update](#Scheduling-a-Snapshot-Update) below.
 5. The app receives the Snapshot Task, updates its User Interface and marks the Task completed. See [Handling a Snapshot Update](#Handling-a-Snapshot-Update) below.
 
-<a name="Scheduling-a-NSUrlSession" />
+<a name="Scheduling-a-NSUrlSession"></a>
 
 ## Scheduling a NSUrlSession
 
@@ -282,7 +282,7 @@ private void ScheduleURLUpdateSession ()
 
 It configures and creates a new `NSUrlSession`, then uses that session to create a new download Task using the `CreateDownloadTask` method. It calls the `Resume` method of the download Task to start the session.
 
-<a name="Handling-Background-Tasks" />
+<a name="Handling-Background-Tasks"></a>
 
 ## Handling Background Tasks
 
@@ -370,7 +370,7 @@ if (urlTask != null) {
 }
 ```
 
-<a name="Handling-the-Download-Completing" />
+<a name="Handling-the-Download-Completing"></a>
 
 ## Handling the Download Completing
 
@@ -417,7 +417,7 @@ namespace MonkeySoccer.MonkeySoccerExtension
 
 When initialized, it keeps a handle to both the `ExtensionDelegate` and the `WKRefreshBackgroundTask` that spawned it. It overrides the `DidFinishDownloading` method to handle the download completing. Then uses the `CompleteTask` method of the `ExtensionDelegate` to inform the Task that it has completed and remove it from the collection of pending tasks. See [Handling Background Tasks](#Handling-Background-Tasks) above.
 
-<a name="Scheduling-a-Snapshot-Update" />
+<a name="Scheduling-a-Snapshot-Update"></a>
 
 ## Scheduling a Snapshot Update
 
@@ -450,7 +450,7 @@ Just like `ScheduleURLUpdateSession` method above, it creates a new `NSDate` for
 
 The system will return a `NSError` if it was unable to schedule the requested Task.
 
-<a name="Handling-a-Snapshot-Update" />
+<a name="Handling-a-Snapshot-Update"></a>
 
 ## Handling a Snapshot Update
 
@@ -512,7 +512,7 @@ snapshotTask.SetTaskCompleted (false, expirationDate, userInfo);
 
 Additionally, it also tells the Snapshot Task that the app is not returning to the Default State (in the first parameter). Apps that have no concept of a Default State should always set this property to `true`.
 
-<a name="Working-Efficiently" />
+<a name="Working-Efficiently"></a>
 
 ## Working Efficiently
 
@@ -522,7 +522,7 @@ As seen in the above example of the five minute window that the MonkeySoccer app
 
 This lowers the impact that the app will have on both available Apple Watch resources and battery life and also allows the app to work better with other apps running on the watch.
 
-<a name="How-Scheduling-Works" />
+<a name="How-Scheduling-Works"></a>
 
 ## How Scheduling Works
 
@@ -538,7 +538,7 @@ While an app is in the background, the system imposes several limits on it:
   - **Time** - 0xc51bad02
 - The system will impose different limits based on the type of Background Task it has asked the app to perform. For example, `WKApplicationRefreshBackgroundTask` and `WKURLSessionRefreshBackgroundTask` Tasks are given slightly longer runtimes over other types of Background Tasks.
 
-<a name="Complications-and-App-Updates" />
+<a name="Complications-and-App-Updates"></a>
 
 ### Complications and App Updates
 
@@ -600,7 +600,7 @@ private void UpdateComplication ()
 
 It uses the `RemainingComplicationUserInfoTransfers` property of the `WCSession` to see how many high priority transfers the app has left for the day and then takes action based on that number. If the app begins to run low on transfers, it can hold off on sending minor updates and only send information when there is a significant change.
 
-<a name="Scheduling-and-Dock" />
+<a name="Scheduling-and-Dock"></a>
 
 ### Scheduling and the Dock
 
@@ -631,7 +631,7 @@ There might be times when the system decides it needs a fresh Snapshot of the ap
 - After one hour of being in the Background state, so the app can return to the Default State.
 - When watchOS first boots.
 
-<a name="Best-Practices" />
+<a name="Best-Practices"></a>
 
 ## Best Practices 
 
@@ -650,7 +650,7 @@ Apple suggests the following best practices when working with Background Tasks:
   - Known time transitions.
   - Triggering Complication updates.
 
-<a name="Snapshot-Best-Practices" />
+<a name="Snapshot-Best-Practices"></a>
 
 ## Snapshot Best Practices
 
@@ -659,7 +659,7 @@ When working with Snapshot updates, Apple makes the following suggestions:
 - Invalidate Snapshots only when required, for example, when there is a significant content change.
 - Avoid high-frequency Snapshot invalidation. For example, a timer app shouldn't update the Snapshot every second, it should only be done when the timer has ended.
 
-<a name="App-Data-Flow" />
+<a name="App-Data-Flow"></a>
 
 ## App Data Flow
 
@@ -669,7 +669,7 @@ Apple suggest the following for working with data flow:
 
 An external event (such as Watch Connectivity) wakes the app. This forces the app to update its Data Model (that represents the apps current state). As a result of the Data Model change the app will need to update its Complications, request a new Snapshot, possibly start a background `NSURLSession` to pull more data and schedule further background refreshes.
 
-<a name="The-App-Lifecycle" />
+<a name="The-App-Lifecycle"></a>
 
 ## The App Lifecycle
 
@@ -686,7 +686,7 @@ Apple has the following suggestions:
 - Verify that all app Tasks are being completed.
 - Vary the number of apps that are pinned in the Dock to test both the best and worst case scenarios.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

@@ -23,7 +23,7 @@ In this article, we'll cover the basics of working with AppKit Controls in a Xam
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` commands used to wire-up your C# classes to Objective-C objects and UI Elements.
 
-<a name="Introduction_to_Controls_and_Views" />
+<a name="Introduction_to_Controls_and_Views"></a>
 
 ## Introduction to Controls and Views
 
@@ -40,7 +40,7 @@ Apple suggest the following guidelines when working with AppKit Controls:
 
 For more information, pleas see the [About Controls and Views](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsAll.html#//apple_ref/doc/uid/20000957-CH46-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
-<a name="Using_Controls_in_a_Window_Frame" />
+<a name="Using_Controls_in_a_Window_Frame"></a>
 
 ### Using Controls in a Window Frame
 
@@ -62,7 +62,7 @@ Apple suggest the following guidelines when working with AppKit Controls in a Wi
 
 For more information, pleas see the [About Controls and Views](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/ControlsAll.html#//apple_ref/doc/uid/20000957-CH46-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/).
 
-<a name="Creating_a_User_Interface_in_Interface_Builder" />
+<a name="Creating_a_User_Interface_in_Interface_Builder"></a>
 
 ## Creating a User Interface in Interface Builder
 
@@ -80,7 +80,7 @@ To create your User Interface, you'll drag UI Elements (AppKit Controls) from th
 
 For more information on creating a User Interface in Interface Builder, please see our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentation.
 
-<a name="Sizing_and_Positioning" />
+<a name="Sizing_and_Positioning"></a>
 
 ### Sizing and Positioning
 
@@ -105,7 +105,7 @@ You can also control the alignment of elements with constraints using the **Alig
 > [!IMPORTANT]
 > Unlike iOS where (0,0) is the upper left hand corner of the screen, in macOS (0,0) is the lower left hand corner. This is because macOS uses a mathematical coordinate system with the number values increasing in value upward and to the right. You need to take this into consideration when placing AppKit controls on a User Interface.
 
-<a name="Setting_a_Custom_Class" />
+<a name="Setting_a_Custom_Class"></a>
 
 ### Setting a Custom Class
 
@@ -194,7 +194,7 @@ With the above code in place, you can drag an AppKit Control, of the base type t
 
 [![](standard-controls-images/edit10.png "Setting a custom class in Xcode")](standard-controls-images/edit10.png#lightbox)
 
-<a name="Exposing_Outlets_and_Actions" />
+<a name="Exposing_Outlets_and_Actions"></a>
 
 ### Exposing Outlets and Actions
 
@@ -212,7 +212,7 @@ Select the type of exposure to create and give the **Outlet** or **Action** a **
 
 For more information on working with **Outlets** and **Actions**, please see the [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) section of our [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) documentation.
 
-<a name="Synchronizing_Changes_with_Xcode" />
+<a name="Synchronizing_Changes_with_Xcode"></a>
 
 ### Synchronizing Changes with Xcode
 
@@ -258,7 +258,7 @@ You normally will never need to open the `SplitViewController.designer.cs` yours
 > [!IMPORTANT]
 > In most situations, Visual Studio for Mac will automatically see any changes made in Xcode and sync them to your Xamarin.Mac project. In the off occurrence that synchronization doesn't automatically happen, switch back to Xcode and them back to Visual Studio for Mac again. This will normally kick off a synchronization cycle.
 
-<a name="Working_with_Buttons" />
+<a name="Working_with_Buttons"></a>
 
 ## Working with Buttons
 
@@ -297,7 +297,7 @@ Where `NSCellStateValue` can be:
 - **Off** - The button is not pushed or the control is not selected.
 - **Mixed** - A mixture of **On** and **Off** states.
 
-<a name="Mark-a-Button-as-Default-and-Set-Key-Equivalent" />
+<a name="Mark-a-Button-as-Default-and-Set-Key-Equivalent"></a>
 
 ### Mark a Button as Default and Set Key Equivalent
 
@@ -311,7 +311,7 @@ Equally, you can assign any key sequence that can be used to activate the button
 
 When the app is run and the Window with the Button is Key and Focused, if the user presses Command-C, the Action for the button will be activated (as-if the user had clicked on the button).
 
-<a name="Working_with_Checkboxes_and_Radio_Buttons" />
+<a name="Working_with_Checkboxes_and_Radio_Buttons"></a>
 
 ## Working with Checkboxes and Radio Buttons
 
@@ -362,7 +362,7 @@ partial void NumberChanged(Foundation.NSObject sender)
 
 You can use the `Tag` property to see which radio button was selected.
 
-<a name="Working_with_Menu_Controls" />
+<a name="Working_with_Menu_Controls"></a>
 
 ## Working with Menu Controls
 
@@ -370,13 +370,13 @@ AppKit provides several types of Menu Controls that can be used in your User Int
 
 [![](standard-controls-images/menu01.png "Example menu controls")](standard-controls-images/menu01.png#lightbox)
 
-<a name="Providing-Menu-Control-Data" />
+<a name="Providing-Menu-Control-Data"></a>
 
 ### Providing Menu Control Data
 
 The Menu Controls available to macOS can be set to populate the dropdown list either from an internal list (that can be pre-defined in Interface Builder or populated via code) or by providing your own custom, external data source.
 
-<a name="Working-with-Internal-Data" />
+<a name="Working-with-Internal-Data"></a>
 
 #### Working with Internal Data
 
@@ -394,7 +394,7 @@ In addition to defining items in Interface Builder, Menu Controls (such as `NSCo
 > [!IMPORTANT]
 > If you are using an Extern Data Source (`UsesDataSource = true`), calling any of the above methods will throw an exception.
 
-<a name="Working-with-an-External-Data-Source" />
+<a name="Working-with-an-External-Data-Source"></a>
 
 #### Working with an External Data Source
 
@@ -409,7 +409,7 @@ To work with an External Data Source, you'll create an instance of the Menu Cont
 
 Please see the [Databases and ComboBoxes](~/mac/app-fundamentals/databases.md#Databases-and-ComboBoxes) section of the [Working with Databases](~/mac/app-fundamentals/databases.md) document for more details.
 
-<a name="Adjusting-the-Lists-Appearance" />
+<a name="Adjusting-the-Lists-Appearance"></a>
 
 ### Adjusting the List's Appearance
 
@@ -430,7 +430,7 @@ To change the title, expose this item as an **Outlet** and use code like the fol
 DropDownSelected.Title = "Item 1";
 ```
 
-<a name="Manipulating-the-Selected-Items" />
+<a name="Manipulating-the-Selected-Items"></a>
 
 ### Manipulating the Selected Items
 
@@ -444,7 +444,7 @@ The following methods and properties allow you to manipulate the selected items 
 
 Use the `ScrollItemAtIndexToTop` to present the item at the given index at the top of the list and the `ScrollItemAtIndexToVisible` to scroll to list until the item at the given index is visible.
 
-<a name="Responding to Events" />
+<a name="Responding to Events"></a>
 
 ### Responding to Events
 
@@ -468,7 +468,7 @@ partial void ItemOne (Foundation.NSObject sender) {
 
 For more information on working with Menus and Menu Controls, please see our [Menus](~/mac/user-interface/menu.md) and [Pop-up Button and Pull-Down Lists](~/mac/user-interface/menu.md) documentation.
 
-<a name="Working_with_Selection_Controls" />
+<a name="Working_with_Selection_Controls"></a>
 
 ## Working with Selection Controls
 
@@ -513,7 +513,7 @@ The `NSDatePicker` has the following properties for working directly with Date a
 - **TimeInterval** - The time value as a `Double`.
 - **TimeZone** - The user's time zone as a `NSTimeZone`.
 
-<a name="Working_with_Indicator_Controls" />
+<a name="Working_with_Indicator_Controls"></a>
 
 ## Working with Indicator Controls
 
@@ -544,7 +544,7 @@ AsyncProgress.StartAnimation (this);
 
 Calling the `StopAnimation` method will stop the animation.
 
-<a name="Working_with_Text_Controls" />
+<a name="Working_with_Text_Controls"></a>
 
 ## Working with Text Controls
 
@@ -576,7 +576,7 @@ For an example of a complex example of working with Text Views in a Xamarin.Mac 
 
 The SourceWriter code has been fully commented and, where available, links have be provided from key technologies or methods to relevant information in the Xamarin.Mac Guides Documentation.
 
-<a name="Working_with_Content_Views" />
+<a name="Working_with_Content_Views"></a>
 
 ## Working with Content Views
 
@@ -584,7 +584,7 @@ AppKit provides several types of Content Views that can be used in your User Int
 
 [![](standard-controls-images/content01.png "An example content view")](standard-controls-images/content01.png#lightbox)
 
-<a name="Popovers" />
+<a name="Popovers"></a>
 
 ### Popovers
 
@@ -607,7 +607,7 @@ To create a popover, do the following:
     [![](standard-controls-images/content06.png "Setting the segue type")](standard-controls-images/content06.png#lightbox)
 6. Save your changes and return to Visual Studio for Mac to sync with Xcode.
 
-<a name="Tab_Views" />
+<a name="Tab_Views"></a>
 
 ### Tab Views
 
@@ -621,7 +621,7 @@ Select each Tab in the **Interface Hierarchy** to set its **Title** and add UI E
 
 [![](standard-controls-images/content09.png "Editing the tabs in Xcode")](standard-controls-images/content09.png#lightbox)
 
-<a name="Data_Binding_AppKit_Controls" />
+<a name="Data_Binding_AppKit_Controls"></a>
 
 ## Data Binding AppKit Controls
 
@@ -631,7 +631,7 @@ Key-Value Coding (KVC) is a mechanism for accessing an object’s properties ind
 
 For more information, please see the [Simple Data Binding](~/mac/app-fundamentals/databinding.md#Simple_Data_Binding) section of our [Data Binding and Key-Value Coding](~/mac/app-fundamentals/databinding.md) documentation.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

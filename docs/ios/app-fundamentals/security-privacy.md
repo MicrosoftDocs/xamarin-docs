@@ -15,7 +15,7 @@ _This article covers working with security and privacy in iOS and how they affec
 
 Apple has made several enhancements to both security and privacy in iOS 10 (and greater) that will help the developer improve the security of their apps and ensure the end user's privacy. This article will cover implementing these features in a Xamarin.iOS app.
 
-<a name="General-Enhancements" />
+<a name="General-Enhancements"></a>
 
 ## General Enhancements
 
@@ -26,7 +26,7 @@ The following general changes have been made to Security and Privacy in iOS 10:
 - Because the new Clipboard in iOS 10 and macOS Sierra allows the user to copy and paste between devices, the API has been expanded to allow a clipboard to be limited to a specific device and be timestamped to be cleared automatically at a given point. Additionally, named pasteboards are no longer persisted and should be replaced with the shared pasteboard containers.
 - For all SSL/TLS connections, the RC4 symmetric cipher is now disabled by default. Additionally, the Secure Transport API no longer supports SSLv3 and it is recommended that the developer stop using SHA-1 and 3DES cryptography as soon as possible.
 
-<a name="Accessing-Private-User-Data" />
+<a name="Accessing-Private-User-Data"></a>
 
 ## Accessing Private User Data
 
@@ -59,7 +59,7 @@ The following Privacy related keys are available:
 
 For more information on working with **Info.plist** keys, please see Apple's [Information Property List Key Reference](https://developer.apple.com/library/content/documentation/General/Reference/InfoPlistKeyReference/Introduction/Introduction.html#//apple_ref/doc/uid/TP40009248-SW1).
 
-<a name="Setting-Privacy-Keys" />
+<a name="Setting-Privacy-Keys"></a>
 
 ## Setting Privacy Keys
 
@@ -105,7 +105,7 @@ To set any of the Privacy keys, do the following:
 > [!IMPORTANT]
 > In the example given above, failure to set the `NSHomeKitUsageDescription` key in the **Info.plist** file would result in the app _silently failing_ (being closed by the system at runtime) without error when run in iOS 10 (or greater).
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

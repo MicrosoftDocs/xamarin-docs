@@ -21,7 +21,7 @@ You also have the option of creating some or all of your Xamarin.Mac application
 
 [![The Visual Studio for Mac code editor](xibless-ui-images/intro01.png "The Visual Studio for Mac code editor")](xibless-ui-images/intro01-large.png#lightbox)
 
-<a name="Switching_a_Window_to_use_Code" />
+<a name="Switching_a_Window_to_use_Code"></a>
 
 ## Switching a window to use code
 

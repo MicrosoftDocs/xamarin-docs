@@ -194,7 +194,7 @@ As [explained by Apple](https://developer.apple.com/reference/watchkit/wkinterfa
 the table navigation must use segues for the paging feature to work. Re-write
 any existing code that uses `PushController` to use segues instead.
 
-<a name="add_row_controller" />
+<a name="add_row_controller"></a>
 
 ## Appendix: Row Controller Code Example
 

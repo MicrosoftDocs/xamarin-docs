@@ -65,7 +65,7 @@ Here is a list of available conversions:
 
 ## API
 
-- [Unit Converters source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Types/UnitConverters.shared.cs)
+- [Unit Converters source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Types/UnitConverters.shared.cs)
 - [Unit Converters API documentation](xref:Xamarin.Essentials.UnitConverters)
 
 ## Related Video

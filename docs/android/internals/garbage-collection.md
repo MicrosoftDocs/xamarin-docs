@@ -246,7 +246,7 @@ MONO_GC_PARAMS=bridge-implementation=tarjan
 
 For more information, see [Configuration](#configuration).
 
-<a name="Helping_the_GC" />
+<a name="Helping_the_GC"></a>
 
 ## Helping the GC
 

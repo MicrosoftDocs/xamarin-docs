@@ -30,13 +30,13 @@ This document will cover the following topics:
 - [Additional Framework Changes](#Additional-Framework-Changes) have been made throughout watchOS 3.
 - [Deprecated APIs](#Deprecated-APIs) in watchOS 3.
 
-<a name="Whats-New-in-watchOS-3" />
+<a name="Whats-New-in-watchOS-3"></a>
 
 ## What's New in watchOS 3
 
 Apple has added several new APIs and services in watchOS 3 along with many enhancements to existing features, including:
 
-<a name="Apple-Pay-Enhancements" />
+<a name="Apple-Pay-Enhancements"></a>
 
 ## Apple Pay Enhancements
 
@@ -46,7 +46,7 @@ Use the new [PKPaymentAuthorizationController](https://developer.apple.com/refer
 
 To find out more, please see our [Apple Pay Enhancements](~/ios/watchos/platform/apple-pay.md) guide.
 
-<a name="Background-Tasks" />
+<a name="Background-Tasks"></a>
 
 ## Background Tasks
 
@@ -61,7 +61,7 @@ The following new background tasks are available:
 
 To find out more, please see our [Background Tasks](~/ios/watchos/platform/background-tasks.md) guide.
 
-<a name="Complications-Enhancements" />
+<a name="Complications-Enhancements"></a>
 
 ## Complications Enhancements
 
@@ -80,7 +80,7 @@ In watchOS 3, the ClockKit framework now includes several new templates for extr
 
 To find out more, please see our [Quick Interaction Techniques for watchOS 3](~/ios/watchos/platform/quick-interaction-techniques.md) guide.
 
-<a name="Newly-Available-Frameworks" />
+<a name="Newly-Available-Frameworks"></a>
 
 ## Newly Available Frameworks
 
@@ -93,7 +93,7 @@ watchOS 3 includes several existing Apple frameworks that were previously unavai
 - **Core Audio** - To manage data types for representing audio streams, complex buffers and time values.
 - **GameKit** - To create social games.
 
-<a name="Proactive-Suggestions" />
+<a name="Proactive-Suggestions"></a>
 
 ## Proactive Suggestions
 
@@ -101,7 +101,7 @@ watchOS 3 allows the app to proactively present information to the user within g
 
 To find out more, please see our [Introduction to Proactive Suggestions](~/ios/watchos/platform/proactive-suggestions.md) guide.
 
-<a name="Security-and-Privacy-Enhancements" />
+<a name="Security-and-Privacy-Enhancements"></a>
 
 ## Security and Privacy Enhancements
 
@@ -111,7 +111,7 @@ As a result, apps running on watchOS 3 (or later) must statically declare their 
 
 Since watchOS 3 shares these changes with iOS 10, please see our iOS 10 [Security and Privacy Enhancements](~/ios/app-fundamentals/security-privacy.md) guide for more information.
 
-<a name="Snapshots-and-Dock" />
+<a name="Snapshots-and-Dock"></a>
 
 ## Snapshots and Dock
 
@@ -121,7 +121,7 @@ The system periodically takes snapshots of the app's UI and uses those snapshots
 
 For more information, please see our [Background Tasks](~/ios/watchos/platform/background-tasks.md) guide and Apple's [WKSnapshotRefreshBackgroundTask Reference](https://developer.apple.com/reference/watchkit/wksnapshotrefreshbackgroundtask) .
 
-<a name="User-Notifications" />
+<a name="User-Notifications"></a>
 
 ## User Notifications
 
@@ -129,7 +129,7 @@ The User Notification framework introduced in watchOS 3 supports the delivery of
 
 To find out more, please see our [Quick Interaction Techniques for watchOS 3](~/ios/watchos/platform/quick-interaction-techniques.md) guide.
 
-<a name="Watch-Connectivity-Framework-Enhancements" />
+<a name="Watch-Connectivity-Framework-Enhancements"></a>
 
 ## Watch Connectivity Framework Enhancements
 
@@ -137,7 +137,7 @@ The new `HasContentPending` property of the [WCSession](https://developer.apple.
 
 To find out more, please see our [Background Tasks](~/ios/watchos/platform/background-tasks.md) guide.
 
-<a name="WatchKit-Framework-Enhancements" />
+<a name="WatchKit-Framework-Enhancements"></a>
 
 ## WatchKit Framework Enhancements
 
@@ -155,7 +155,7 @@ watchOS 3 includes several enhancements to the WatchKit framework including the 
 
 To find out more, please see our [Quick Interaction Techniques for watchOS 3](~/ios/watchos/platform/quick-interaction-techniques.md) guide.
 
-<a name="Workout-App-Enhancements" />
+<a name="Workout-App-Enhancements"></a>
 
 ## Workout App Enhancements
 
@@ -165,7 +165,7 @@ Additionally, the developer now has the ability to launch the watchOS workout ap
 
 To find out more, please see our [Workout App Enhancements](~/ios/watchos/platform/workout-apps.md) guide.
 
-<a name="Additional-Framework-Changes" />
+<a name="Additional-Framework-Changes"></a>
 
 ## Additional Framework Changes
 
@@ -173,7 +173,7 @@ In addition to the major framework changes and additions listed above, Apple has
 
 To find out more, please see our [Additional Framework Changes](~/ios/watchos/platform/introduction-to-watchos3/additional-framework-changes.md) guide.
 
-<a name="Deprecated-APIs" />
+<a name="Deprecated-APIs"></a>
 
 ## Deprecated APIs
 

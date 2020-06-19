@@ -122,7 +122,7 @@ guide.
 
 ::: zone-end
 
-<a name="anatomy" />
+<a name="anatomy"></a>
 
 ## Anatomy of a Xamarin.Android application
 

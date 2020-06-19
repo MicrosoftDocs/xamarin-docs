@@ -23,7 +23,7 @@ In this article, we'll cover the basics of working with Dialogs and Modal Window
 
 You may want to take a look at the [Exposing C# classes / methods to Objective-C](~/mac/internals/how-it-works.md) section of the [Xamarin.Mac Internals](~/mac/internals/how-it-works.md) document as well, it explains the `Register` and `Export` commands used to wire-up your C# classes to Objective-C objects and UI Elements.
 
-<a name="Introduction_to_Dialogs" />
+<a name="Introduction_to_Dialogs"></a>
 
 ## Introduction to Dialogs
 
@@ -99,7 +99,7 @@ As can the **Expanded** Save Dialog:
 
 For more information, see the [Dialogs](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/WindowDialogs.html#//apple_ref/doc/uid/20000957-CH43-SW1) section of Apple's [OS X Human Interface Guidelines](https://developer.apple.com/library/mac/documentation/UserExperience/Conceptual/OSXHIGuidelines/)
 
-<a name="Adding_a_Modal_Window_to_a_Project" />
+<a name="Adding_a_Modal_Window_to_a_Project"></a>
 
 ## Adding a Modal Window to a Project
 
@@ -247,7 +247,7 @@ We can run our application and display the custom dialog:
 
 For more information about using windows in a Xamarin.Mac application, please see our [Working with Windows](~/mac/user-interface/window.md) documentation.
 
-<a name="Creating_a_Custom_Sheet" />
+<a name="Creating_a_Custom_Sheet"></a>
 
 ## Creating a Custom Sheet
 
@@ -403,7 +403,7 @@ If we run our application and open the Sheet, it will be attached to the window:
 
 [![](dialog-images/sheet08.png "An example sheet")](dialog-images/sheet08.png#lightbox)
 
-<a name="Creating_a_Preferences_Dialog" />
+<a name="Creating_a_Preferences_Dialog"></a>
 
 ## Creating a Preferences Dialog
 
@@ -508,7 +508,7 @@ If we run the code and select the **Preferences...** from the **Application Menu
 
 For more information on working with Windows and Toolbars, please see our [Windows](~/mac/user-interface/window.md) and [Toolbars](~/mac/user-interface/toolbar.md) documentation.
 
-<a name="Saving-and-Loading-Preferences" />
+<a name="Saving-and-Loading-Preferences"></a>
 
 ### Saving and Loading Preferences
 
@@ -707,7 +707,7 @@ namespace SourceWriter
         ...
 ```
 
-<a name="Wiring-Preferences-to-Preference-Views" />
+<a name="Wiring-Preferences-to-Preference-Views"></a>
 
 ### Wiring Preferences to Preference Views
 
@@ -756,7 +756,7 @@ Next, double click the Storyboard file to re-open it in Interface Builder (and s
 
 Repeat the above steps for all of the panels (View Controllers) and Preference Properties required.
 
-<a name="Applying-Preference-Changes-to-All-Open-Windows" />
+<a name="Applying-Preference-Changes-to-All-Open-Windows"></a>
 
 ### Applying Preference Changes to All Open Windows
 
@@ -899,7 +899,7 @@ With all these changes in place, if the user edits the App's Preferences and clo
 
 [![](dialog-images/prefs14.png "An example preferences window")](dialog-images/prefs14.png#lightbox)
 
-<a name="The_Open_Dialog" />
+<a name="The_Open_Dialog"></a>
 
 ## The Open Dialog
 
@@ -950,7 +950,7 @@ If we run the program and select the **Open...** item from the **File** menu, th
 
 [![](dialog-images/dialog03.png "An open dialog box")](dialog-images/dialog03.png#lightbox)
 
-<a name="The_Print_and_Page_Setup_Dialogs" />
+<a name="The_Print_and_Page_Setup_Dialogs"></a>
 
 ## The Print and Page Setup Dialogs
 
@@ -1024,7 +1024,7 @@ If set the `ShowPrintAsSheet` property to `true`, run the application and displa
 
 For more information about working with the Print and Page Setup Dialogs, please see Apple's [NSPrintPanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPrintPanel_Class/index.html#//apple_ref/doc/uid/TP40004092) and [NSPageLayout](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSPageLayout_Class/index.html#//apple_ref/doc/uid/TP40004080) documentation.
 
-<a name="The_Save_Dialog" />
+<a name="The_Save_Dialog"></a>
 
 ## The Save Dialog
 
@@ -1086,7 +1086,7 @@ The user can expand the dialog:
 
 For more information on working with the Save Dialog, please see Apple's [NSSavePanel](https://developer.apple.com/library/mac/documentation/Cocoa/Reference/ApplicationKit/Classes/NSSavePanel_Class/index.html#//apple_ref/doc/uid/TP40004098) documentation.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

@@ -22,13 +22,13 @@ This page contains additional information and workarounds for issues you may enc
 
 - [Launching the WatchApp from the Command Line](#command_line).
 
-<a name="knownissues" />
+<a name="knownissues"></a>
 
 ## Known Issues
 
 ### General
 
-<a name="deploy" />
+<a name="deploy"></a>
 
 - Earlier releases of Visual Studio for Mac incorrectly show one of the
     **AppleCompanionSettings** icons as being 88x88 pixels; which results in a
@@ -73,7 +73,7 @@ The iOS Designer support for Watch Kit *requires* the solution
     set (see [how to set references](~/ios/watchos/get-started/project-references.md))
     then the design surface will not work correctly.
 
-<a name="noalpha" />
+<a name="noalpha"></a>
 
 ## Removing the Alpha Channel from Icon Images
 
@@ -101,7 +101,7 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 
 4. The icon image should now pass Apple's validation checks.
 
-<a name="add" />
+<a name="add"></a>
 
 ## Manually Adding Interface Controller Files
 
@@ -259,7 +259,7 @@ It's easy to remove the alpha channel on Mac OS X using the **Preview** app:
 You can now reference the control (or implement the action)
 in C#!
 
-<a name="command_line" />
+<a name="command_line"></a>
 
 ## Launching the Watch App from the Command Line
 

@@ -145,7 +145,7 @@ For applications that you publish, it is easy to find the **Apple ID** in iTunes
 
 [![](changes-to-storekit-images/image3.png "Finding the Apple ID in iTunes Connect")](changes-to-storekit-images/image3.png#lightbox)
 
- <a name="Search_API" />
+ <a name="Search_API"></a>
 
 ### Search API
 

@@ -20,14 +20,12 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 This article will cover:
 
-- **[Purpose](#Purpose)** &ndash; common uses for `AbsoluteLayout`.
-- **[Usage](#Usage)** &ndash; how to use `AbsoluteLayout` to achieve your desired design.
-  - **[Proportional Layouts](#Proportional_Layouts)** &ndash; understand how proportional values work in an `AbsoluteLayout`.
-  - **[Specifying Values](#Specifying_Values)** &ndash; understand how proportional and absolute values are specified.
-  - **[Proportional Values](#Proportional_Values)** &ndash; understand how proportional values work.
-    - **[Absolute Values](#Absolute_Values)** &ndash; understand how absolute values work.
-
-<a name="Purpose" />
+- **[Purpose](#purpose)** &ndash; common uses for `AbsoluteLayout`.
+- **[Usage](#usage)** &ndash; how to use `AbsoluteLayout` to achieve your desired design.
+  - **[Proportional Layouts](#proportional-layouts)** &ndash; understand how proportional values work in an `AbsoluteLayout`.
+  - **[Specifying Values](#specifying-values)** &ndash; understand how proportional and absolute values are specified.
+  - **[Proportional Values](#proportional-values)** &ndash; understand how proportional values work.
+    - **[Absolute Values](#absolute-values)** &ndash; understand how absolute values work.
 
 ## Purpose
 
@@ -35,11 +33,7 @@ Because of the positioning model of `AbsoluteLayout`, the layout makes it relati
 
 `AbsoluteLayout` could be used anywhere elements need to be positioned within a view and is especially useful when aligning elements to edges.
 
-<a name="Usage" />
-
 ## Usage
-
-<a name="Proportional_Layouts" />
 
 ### Proportional Layouts
 
@@ -56,8 +50,6 @@ Note in the following screenshot, the anchor of the box is a white dot. Notice t
 ![](absolute-layout-images/anchor-center.png "Anchor at Center")
 ![](absolute-layout-images/anchor-end.png "Anchor at End")
 
-<a name="Specifying_Values" />
-
 ### Specifying Values
 
 Views within an `AbsoluteLayout` are positioned using four values:
@@ -67,7 +59,7 @@ Views within an `AbsoluteLayout` are positioned using four values:
 - **Width** &ndash; the width of the view
 - **Height** &ndash; the height of the view
 
-Each of those values can be set as a [proportional](#Proportional_Values) value or an [absolute](#Absolute_Values) value.
+Each of those values can be set as a [proportional](#proportional-values) value or an [absolute](#absolute-values) value.
 
 Values are specified as a combination of bounds and a flag. `LayoutBounds` is a [`Rectangle`](xref:Xamarin.Forms.Rectangle) consisting of four values: `x`, `y`, `width`, `height`.
 
@@ -162,8 +154,6 @@ public class AbsoluteLayoutExplorationCode : ContentPage
 }
 ```
 
-<a name="Proportional_Values" />
-
 ### Proportional Values
 
 Proportional values define a relationship between a layout and a view. This relationship defines a child view's position or scale value as a proportion of the corresponding value of the parent layout. These values are expressed as `double`s with values between 0 and 1.
@@ -186,8 +176,6 @@ var label = new Label {Text = "I'm bottom center on every device."};
 AbsoluteLayout.SetLayoutBounds(label, new Rectangle(.5,1,.5,.1));
 AbsoluteLayout.SetLayoutFlags(label, AbsoluteLayoutFlags.All);
 ```
-
-<a name="Absolute_Values" />
 
 ### Absolute Values
 

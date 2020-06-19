@@ -6,7 +6,7 @@ ms.assetId: B2F9CC65-481B-4323-8E77-C6BE29C90DE9
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 07/18/2019
+ms.date: 05/19/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -22,9 +22,9 @@ The following screenshots show a `Switch` control in its **on** and **off** togg
 
 The `Switch` control defines the following properties:
 
-* [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) is a `boolean` value that indicates whether the `Switch` is **on**.
-* [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) is a `Color` that affects how the `Switch` is rendered in the toggled, or **on**, state.
-* `ThumbColor` is the `Color` of the switch thumb.
+- [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) is a `boolean` value that indicates whether the `Switch` is **on**.
+- [`OnColor`](xref:Xamarin.Forms.Switch.OnColor) is a `Color` that affects how the `Switch` is rendered in the toggled, or **on**, state.
+- `ThumbColor` is the `Color` of the switch thumb.
 
 These properties are backed by a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) object, which means the `Switch` can be styled and be the target of data bindings.
 
@@ -116,11 +116,46 @@ In this example, the [`Label`](xref:Xamarin.Forms.Label) uses a binding expressi
 
 For information about triggers, see [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md).
 
+## Switch visual states
+
+[`Switch`](xref:Xamarin.Forms.Switch) has `On` and `Off` visual states that can be used to initiate a visual change when the [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) property changes.
+
+The following XAML example shows how to define visual states for the `On` and `Off` states:
+
+```xaml
+<Switch IsToggled="True">
+    <VisualStateManager.VisualStateGroups>
+        <VisualStateGroup x:Name="CommonStates">
+            <VisualState x:Name="On">
+                <VisualState.Setters>
+                    <Setter Property="ThumbColor"
+                            Value="MediumSpringGreen" />
+                </VisualState.Setters>
+            </VisualState>
+            <VisualState x:Name="Off">
+                <VisualState.Setters>
+                    <Setter Property="ThumbColor"
+                            Value="Red" />
+                </VisualState.Setters>
+            </VisualState>
+        </VisualStateGroup>
+    </VisualStateManager.VisualStateGroups>
+</Switch>
+```
+
+In this example, the `On` [`VisualState`](xref:Xamarin.Forms.VisualState) specifies that when the [`IsToggled`](xref:Xamarin.Forms.Switch.IsToggled) property is `true`, the `ThumbColor` property will be set to medium spring green. The `Off` `VisualState` specifies that when the `IsToggled` property is `false`, the `ThumbColor` property will be set to red. Therefore, the overall effect is that when the `Switch` is in an off position its thumb is red, and its thumb is medium spring green when the `Switch` is in an on position:
+
+![Screenshot of Switch on VisualState, on iOS and Android](switch-images/on-visualstate.png "Switch on VisualState")
+![Screenshot of Switch off VisualState, on iOS and Android](switch-images/off-visualstate.png "Switch off VisualState")
+
+For more information about visual states, see [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md).
+
 ## Disable a Switch
 
 An application may enter a state where the `Switch` being toggled is not a valid operation. In such cases, the `Switch` can be disabled by setting its `IsEnabled` property to `false`. This will prevent users from being able to manipulate the `Switch`.
 
 ## Related links
 
-* [Switch Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
-* [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Switch Demos](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-switchdemos/)
+- [Xamarin.Forms Triggers](~/xamarin-forms/app-fundamentals/triggers.md)
+- [Xamarin.Forms Visual State Manager](~/xamarin-forms/user-interface/visual-state-manager.md)

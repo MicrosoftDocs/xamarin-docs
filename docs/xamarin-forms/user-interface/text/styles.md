@@ -19,8 +19,6 @@ _Styling text in Xamarin.Forms_
 Styles can be used to adjust the appearance of labels, entries, and editors. Styles can be defined once and used by many views, but a style can only be used with views of one type.
 Styles can be given a `Key` and applied selectively using a specific control's `Style` property.
 
-<a name="Built-In_Styles" />
-
 ## Built-In Styles
 
 Xamarin.Forms includes several [built-in](xref:Xamarin.Forms.Device.Styles) styles for common scenarios:
@@ -45,8 +43,6 @@ label.Style = Device.Styles.TitleStyle;
 ```
 
 ![Device Styles Example](styles-images/builtinstyles.png)
-
-<a name="Custom_Styles" />
 
 ## Custom Styles
 
@@ -87,8 +83,6 @@ In XAML:
 Note that resources (including all styles) are defined within `ContentPage.Resources`, which is a sibling of the more familiar `ContentPage.Content` element.
 
 ![Custom Styles Example](styles-images/customstyle.png)
-
-<a name="Applying_Styles" />
 
 ## Applying Styles
 

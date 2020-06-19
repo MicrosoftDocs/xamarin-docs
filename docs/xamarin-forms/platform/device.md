@@ -61,7 +61,7 @@ The [`OnPlatform`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class tha
 > [!IMPORTANT]
 > Providing an incorrect `Platform` attribute value in the `On` class will not result in an error. Instead, the code will execute without the platform-specific value being applied.
 
-Alternatively, the `OnPlatform` markup extension can be used in XAML to customize UI appearance on a per-platform basis. For more information, see [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform).
+Alternatively, the `OnPlatform` markup extension can be used in XAML to customize UI appearance on a per-platform basis. For more information, see [OnPlatform Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onplatform-markup-extension).
 
 ## Device.Idiom
 
@@ -103,7 +103,7 @@ The [`OnIdiom`](xref:Xamarin.Forms.OnIdiom`1) class provides the same functional
 
 The [`OnIdiom`](xref:Xamarin.Forms.OnPlatform`1) class is a generic class that must be instantiated with an `x:TypeArguments` attribute that matches the target type.
 
-Alternatively, the `OnIdiom` markup extension can be used in XAML to customize UI appearance based on the idiom of the device the application is running on. For more information, see [OnIdiom Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom).
+Alternatively, the `OnIdiom` markup extension can be used in XAML to customize UI appearance based on the idiom of the device the application is running on. For more information, see [OnIdiom Markup Extension](~/xamarin-forms/xaml/markup-extensions/consuming.md#onidiom-markup-extension).
 
 ## Device.FlowDirection
 

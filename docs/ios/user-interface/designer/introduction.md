@@ -21,7 +21,7 @@ The iOS Designer is available in Visual Studio for Mac and Visual Studio 2017 an
 
 This guide assumes a familiarity with the contents covered in the [Getting Started guides](~/ios/get-started/index.md).
 
-<a name="how-it-works" />
+<a name="how-it-works"></a>
 
 ## How the iOS Designer works
 
@@ -154,7 +154,7 @@ Most Xamarin.iOS projects created with Visual Studio include a storyboard. To vi
 
 -----
 
-<a name="iOS_Designer_features"/>
+<a name="iOS_Designer_features"></a>
 
 ### iOS Designer features
 

@@ -23,9 +23,7 @@ The Xamarin.Forms [`FlexLayout`](xref:Xamarin.Forms.FlexLayout) is new in Xamari
 
 `FlexLayout` derives from [`Layout<View>`](xref:Xamarin.Forms.Layout`1) and inherits a [`Children`](xref:Xamarin.Forms.Layout`1.Children) property of type `IList<View>`.
 
-`FlexLayout` defines six public bindable properties and five attached bindable properties that affect the size, orientation, and alignment of its child elements. (If you're not familiar with attached bindable properties, see the article **[Attached properties](~/xamarin-forms/xaml/attached-properties.md)**.) These properties are described in detail in the sections below on **[The bindable properties in detail](#bindable-properties)** and **[The attached bindable properties in detail](#attached-properties)**. However, this article begins with a section on some **[Common usage scenarios](#common-scenarios)** of `FlexLayout` that describes many of these properties more informally. Towards the end of the article, you'll see how to combine `FlexLayout` with [CSS style sheets](~/xamarin-forms/user-interface/styles/css/index.md).
-
-<a name="common-scenarios" />
+`FlexLayout` defines six public bindable properties and five attached bindable properties that affect the size, orientation, and alignment of its child elements. (If you're not familiar with attached bindable properties, see the article **[Attached properties](~/xamarin-forms/xaml/attached-properties.md)**.) These properties are described in detail in the sections below on **[The bindable properties in detail](#the-bindable-properties-in-detail)** and **[The attached bindable properties in detail](#the-attached-bindable-properties-in-detail)**. However, this article begins with a section on some **[Common usage scenarios](#common-usage-scenarios)** of `FlexLayout` that describes many of these properties more informally. Towards the end of the article, you'll see how to combine `FlexLayout` with [CSS style sheets](~/xamarin-forms/user-interface/styles/css/index.md).
 
 ## Common usage scenarios
 
@@ -84,7 +82,7 @@ Three properties of `FlexLayout` are shown in the **SimpleStackPage.xaml** file:
 
     If you were using a `StackLayout`, you would need to assign the `VerticalOptions` property of each item to `CenterAndExpand` to achieve a similar effect. But the `CenterAndExpand` option would allocate twice as much space between each item than before the first item and after the last item. You can mimic the `CenterAndExpand` option of `VerticalOptions` by setting the `JustifyContent` property of `FlexLayout` to `SpaceAround`.
 
-These `FlexLayout` properties are discussed in more detail in the section **[The bindable properties in detail](#bindable-properties)** below.
+These `FlexLayout` properties are discussed in more detail in the section **[The bindable properties in detail](#the-bindable-properties-in-detail)** below.
 
 ### Using FlexLayout for wrapping items
 
@@ -373,8 +371,6 @@ The `Order` setting of &ndash;1 causes the `Image` element to be displayed first
 
 Within each of the three `FlexLayout` views, a blank `Label` precedes the `Button`, but it has a `Grow` setting of 1. This means that all the extra vertical space is allocated to this blank `Label`, which effectively pushes the `Button` to the bottom.
 
-<a name="bindable-properties" />
-
 ## The bindable properties in detail
 
 Now that you've seen some common applications of `FlexLayout`, the properties of `FlexLayout` can be explored in more detail.
@@ -387,8 +383,6 @@ When the program starts up, five `Picker` views display the default values of th
 [![The Experiment Page: Default](flex-layout-images/ExperimentDefault.png "The Experiment Page - Default")](flex-layout-images/ExperimentDefault-Large.png#lightbox)
 
 Each of the `Label` views has a gray background that shows the space allocated to that `Label` within the `FlexLayout`. The background of the `FlexLayout` itself is Alice Blue. It occupies the entire bottom area of the page except for a little margin at the left and right.
-
-<a name="direction" />
 
 ### The Direction property
 
@@ -407,8 +401,6 @@ Here's the **Experiment** page showing (from left to right), the `Row` direction
 
 Notice that for the `Reverse` options, the items start at the right or bottom.
 
-<a name="wrap" />
-
 ### The Wrap property
 
 The [`Wrap`](xref:Xamarin.Forms.FlexLayout.Wrap) property is of type [`FlexWrap`](xref:Xamarin.Forms.FlexWrap), an enumeration with three members:
@@ -421,9 +413,7 @@ From left to right, these screens show the `NoWrap`, `Wrap` and `Reverse` option
 
 [![The Experiment Page: Wrap](flex-layout-images/ExperimentWrap.png "The Experiment Page - Wrap")](flex-layout-images/ExperimentWrap-Large.png#lightbox)
 
-When the `Wrap` property is set to `NoWrap` and the main axis is constrained (as in this program), and the main axis is not wide or tall enough to fit all the children, the `FlexLayout` attempts to make the items smaller, as the iOS screenshot demonstrates. You can control the shrinkness of the items with the [`Shrink`](#shrink) attached bindable property.
-
-<a name="justify-content" />
+When the `Wrap` property is set to `NoWrap` and the main axis is constrained (as in this program), and the main axis is not wide or tall enough to fit all the children, the `FlexLayout` attempts to make the items smaller, as the iOS screenshot demonstrates. You can control the shrinkness of the items with the [`Shrink`](#the-shrink-property) attached bindable property.
 
 ### The JustifyContent property
 
@@ -442,8 +432,6 @@ This property specifies how the items are spaced on the main axis, which is the 
 
 In all three screenshots, the `Wrap` property is set to `Wrap`. The `Start` default is shown in the previous Android screenshot. The iOS screenshot here shows the `Center` option: all the items are moved to the center. The three other options beginning with the word `Space` allocate the extra space not occupied by the items. `SpaceBetween` allocates the space equally between the items; `SpaceAround` puts equal space around each item, while `SpaceEvenly` puts equal space between each item, and before the first item and after the last item on the row.
 
-<a name="align-items" />
-
 ### The AlignItems property
 
 The [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) property is of type [`FlexAlignItems`](xref:Xamarin.Forms.FlexAlignItems), an enumeration with four members:
@@ -453,15 +441,13 @@ The [`AlignItems`](xref:Xamarin.Forms.FlexLayout.AlignItems) property is of type
 - `Start` (or "flex-start" in XAML)
 - `End` (or "flex-end" in XAML)
 
-This is one of two properties (the other being [`AlignContent`](#align-content)) that indicates how children are aligned on the cross axis. Within each row, the children are stretched (as shown in the previous screenshot), or aligned on the start, center, or end of each item, as shown in the following three screenshots:
+This is one of two properties (the other being [`AlignContent`](#the-aligncontent-property)) that indicates how children are aligned on the cross axis. Within each row, the children are stretched (as shown in the previous screenshot), or aligned on the start, center, or end of each item, as shown in the following three screenshots:
 
 [![The Experiment Page: Align Items](flex-layout-images/ExperimentAlignItems.png "The Experiment Page - Align Items")](flex-layout-images/ExperimentAlignItems-Large.png#lightbox)
 
 In the iOS screenshot, the tops of all the children are aligned. In the Android screenshots, the items are vertically centered based on the tallest child. In the UWP screenshot, the bottoms of all the items are aligned.
 
-For any individual item, the `AlignItems` setting can be overridden with the [`AlignSelf`](#align-self) attached bindable property.
-
-<a name="align-content" />
+For any individual item, the `AlignItems` setting can be overridden with the [`AlignSelf`](#the-alignself-property) attached bindable property.
 
 ### The AlignContent property
 
@@ -485,13 +471,9 @@ In the iOS screenshot, both rows are at the top; in the Android screenshot they'
 
 The `AlignContent` has no effect when there is only one row or column.
 
-<a name="attached-properties" />
-
 ## The attached bindable properties in detail
 
 `FlexLayout` defines five attached bindable properties. These properties are set on children of the `FlexLayout` and pertain only to that particular child.
-
-<a name="align-self" />
 
 ### The AlignSelf Property
 
@@ -503,7 +485,7 @@ The [`AlignSelf`](xref:Xamarin.Forms.FlexLayout.AlignSelfProperty) attached bind
 - `Start` (or "flex-start" in XAML)
 - `End` (or "flex-end" in XAML)
 
-For any individual child of the `FlexLayout`, this property setting overrides the [`AlignItems`](#align-items) property set on the `FlexLayout` itself. The default setting of `Auto` means to use the `AlignItems` setting.
+For any individual child of the `FlexLayout`, this property setting overrides the [`AlignItems`](#the-alignitems-property) property set on the `FlexLayout` itself. The default setting of `Auto` means to use the `AlignItems` setting.
 
 For a `Label` element named `label` (or example), you can set the `AlignSelf` property in code like this:
 
@@ -586,8 +568,6 @@ In the **Grow Experiment** page, five `Label` elements of alternating colors are
 If any one child is given a positive `Grow` value, then that child takes up all the remaining space, as the Android screenshot demonstrates. This space can also be allocated among two or more children. In the UWP screenshot, the `Grow` property of the second `Label` is set to 0.5, while the `Grow` property of the fourth `Label` is 1.5, which gives the fourth `Label` three times as much of the leftover space as the second `Label`.
 
 How the child view uses that space depends on the particular type of child. For a `Label`, the text can be positioned within the total space of the `Label` using the properties `HorizontalTextAlignment` and `VerticalTextAlignment`.
-
-<a name="shrink" />
 
 ### The Shrink Property
 

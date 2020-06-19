@@ -101,7 +101,7 @@ to your Xamarin.Android project as explained in
 The following sections explain how these credentials are used when
 client apps communicate with app servers through FCM.
 
-<a name="registration" />
+<a name="registration"></a>
 
 ### Registration with FCM
 
@@ -191,7 +191,7 @@ obtains a registration token as explained earlier):
 For more information about Firebase topic messaging, see Google's
 [Topic Messaging on Android](https://firebase.google.com/docs/cloud-messaging/android/topic-messaging).
 
-<a name="setup_fcm" />
+<a name="setup_fcm"></a>
 
 ## Setting up Firebase Cloud Messaging
 

@@ -20,7 +20,7 @@ These include:
 2. Device deployment logs.
 3. Android Debug Log Output.
 
-<a name="Diagnostic_MSBuild_Output" />
+<a name="Diagnostic_MSBuild_Output"></a>
 
 ## Diagnostic MSBuild Output
 

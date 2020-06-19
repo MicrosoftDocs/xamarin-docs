@@ -32,7 +32,7 @@ by each platform:
 - [**OS X Accessibility**](~/mac/app-fundamentals/accessibility.md)
 - [**Xamarin.Forms**](~/xamarin-forms/app-fundamentals/accessibility/index.md)
 
-<a name="checklist" />
+<a name="checklist"></a>
 
 ## Accessibility Checklist
 

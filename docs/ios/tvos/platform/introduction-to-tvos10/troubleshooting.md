@@ -21,7 +21,7 @@ The following sections list some known issues that can occur when using tvOS 10 
 - [NSUserActivity](#NSUserActivity)
 - [UIKit](#UIKit)
 
-<a name="App-Store" />
+<a name="App-Store"></a>
 
 ## App Store
 
@@ -30,7 +30,7 @@ Known Issues:
 - When testing In-App Purchases in the sandbox environment, the authentication dialog may appear twice.
 - When testing In-App Purchases with hosted content in the sandbox environment, the password dialog will appear every time the app is brought to the foreground until the content download completes.
 
-<a name="Binary-Compatibility" />
+<a name="Binary-Compatibility"></a>
 
 ## Binary Compatibility
 
@@ -42,31 +42,31 @@ Known Issues:
 - Apps can hang if they modify a superview's geometry in either the `ViewWillLayoutSubviews` or `LayoutSubviews` methods.
 - For all SSL/TLS connections, the RC4 symmetric cipher is now disabled by default. Additionally, the Secure Transport API no longer supports SSLv3 and it is recommended that the app stop using SHA-1 and 3DES cryptography as soon as possible.
 
-<a name="CFNetwork-HTTP-Protocol" />
+<a name="CFNetwork-HTTP-Protocol"></a>
 
 ## CFNetwork HTTP Protocol
 
 The `HTTPBodyStream` property of the `NSMutableURLRequest` class must be set to an unopened stream since `NSURLConnection` and `NSURLSession` now strictly enforce this requirement.
 
-<a name="CloudKit" />
+<a name="CloudKit"></a>
 
 ## CloudKit
 
 Long running operations will return a _"You don't have permission to save the file."_ error.
 
-<a name="CoreImage" />
+<a name="CoreImage"></a>
 
 ## Core Image
 
 The `CIImageProcessor` API now supports an arbitrary input image count. `CIImageProcessor` API that was included in tvOS 10 beta 1 will be removed.
 
-<a name="NSUserActivity" />
+<a name="NSUserActivity"></a>
 
 ## NSUserActivity
 
 After a Handoff operation, the `UserInfo` property of a `NSUserActivity` object might be empty. Explicitly call `BecomeCurrent` NSUserActivity` object as a current workaround.
 
-<a name="UIKit" />
+<a name="UIKit"></a>
 
 ## UIKit
 

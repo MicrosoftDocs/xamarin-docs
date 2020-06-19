@@ -22,7 +22,7 @@ The process of submitting an application to the Apple TV App Store involves:
 
 In this article we will cover all the steps needed to provision, build, and submit an app for Apple TV App Store distribution.
 
-<a name="Before_you_Submit" />
+<a name="Before_you_Submit"></a>
 
 ## Before You Submit an Application
 
@@ -36,7 +36,7 @@ A couple of things to watch out for when submitting an app are:
 
 Apple also maintains a list of Apple TV App Store submission tips. You can read these at [Distributing on the App Store](https://developer.apple.com/appstore/resources/submission/tips.html).
 
-<a name="Configuring_your_Application_in_iTunes_Connect" />
+<a name="Configuring_your_Application_in_iTunes_Connect"></a>
 
 ## Configuring your Application in iTunes Connect
 
@@ -56,13 +56,13 @@ Do the following:
 
 For more details, please see our [Configure your tvOS App in iTunes Connect](~/ios/tvos/deploy-test/app-distribution/itunes-connect.md) documentation.
 
-<a name="Preparing_for_App_Store_Distribution" />
+<a name="Preparing_for_App_Store_Distribution"></a>
 
 ## Preparing for App Store Distribution
 
 To publish an app to the Apple TV App Store, you first need to build it for distribution, which involves many steps. The following sections covers everything required to prepare a Xamarin.tvOS app for publication so that it can be built and submit it to the Apple TV App Store for review and release.
 
-<a name="Provisioning_for_Application_Services" />
+<a name="Provisioning_for_Application_Services"></a>
 
 ### Provisioning for Application Services
 
@@ -88,7 +88,7 @@ Do the following in Visual Studio for Mac:
 
 For detailed instructions, please see our [Provisioning for Application Services](~/ios/get-started/installation/device-provisioning/manual-provisioning.md#provisioning-for-application-services) documentation. While this document was written for iOS, the same steps are used to provision a Xamarin.tvOS app.
 
-<a name="Setting_the_Apps_Icons_and_Launch_Screens" />
+<a name="Setting_the_Apps_Icons_and_Launch_Screens"></a>
 
 ### Setting the Apps Icons, Launch Image and Top Shelf Image
 
@@ -96,7 +96,7 @@ For an tvOS app to be accepted by Apple for inclusion in the Apple TV App Store,
 
 For detailed instructions, please see our [Working with Icons and Images](~/ios/tvos/app-fundamentals/icons-images.md) documentation.
 
-<a name="Creating_and_Installing_a_Distribution_Profile" />
+<a name="Creating_and_Installing_a_Distribution_Profile"></a>
 
 ### Creating and Installing a Distribution Profile
 
@@ -115,7 +115,7 @@ Provisioning involves the following steps using Apple's web based iOS Provisioni
 
 For detailed instructions, please see the [Creating a Distribution Profile](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#creatingprofile) and [Selecting a Distribution Profile in a Xamarin.iOS Project](~/ios/deploy-test/app-distribution/app-store-distribution/index.md#selectprofile). Again, both of these documents are specific to iOS but the same technique is used for tvOS apps.
 
-<a name="Setting_the_Build_Configuration_for_your_Application" />
+<a name="Setting_the_Build_Configuration_for_your_Application"></a>
 
 ### Setting the Build Configuration for your Application
 
@@ -131,7 +131,7 @@ Do the following:
 6. The **Optimize PNG image files for iOS** checkbox should be checked as this will help to further decrease your app's deliverable size.
 7. Debugging should *not* be enabled as it will make the build unnecessarily larger.
 
-<a name="Building_and_Submitting_the_Distributable" />
+<a name="Building_and_Submitting_the_Distributable"></a>
 
 ## Building and Submitting the Distributable
 
@@ -175,7 +175,7 @@ To sign your app and prepare it for distribution:
 
 With your distribution build created and archived, you are now ready to submit your application to iTunes Connect.
 
-<a name="Submitting_Your_App_to_Apple" />
+<a name="Submitting_Your_App_to_Apple"></a>
 
 ## Submitting Your App to Apple
 
@@ -197,7 +197,7 @@ The archive workflow in Visual Studio for Mac will open Application Loader autom
 5. Click the **Send** button to send the application to Apple for review.
 6. The Application Loader will inform you when the file has been successfully uploaded.
 
-<a name="iTunes_Connect_Status" />
+<a name="iTunes_Connect_Status"></a>
 
 ### iTunes Connect Status
 
@@ -205,13 +205,13 @@ If you log back into iTunes Connect and select your app from the list of availab
 
 [![](app-store-publishing-images/image21.png "The status in iTunes Connect showing Waiting for Review")](app-store-publishing-images/image21.png#lightbox)
 
-<a name="Troubleshooting" />
+<a name="Troubleshooting"></a>
 
 ## Troubleshooting
 
 If you are having issues submitting your Xamarin.tvOS app to the Apple TV App Store, please see our [Troubleshooting](~/ios/tvos/troubleshooting.md) guide. It contains several known issues that you might encounter and how to solve them in the Xamarin.tvOS.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

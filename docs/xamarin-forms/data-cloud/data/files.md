@@ -22,8 +22,6 @@ Xamarin.Forms code runs on multiple platforms - each of which has its own filesy
 
 For information on handling image files, refer to the [Working with Images](~/xamarin-forms/user-interface/images.md) page.
 
-<a name="Loading_and_Saving_Files" />
-
 ## Saving and Loading Files
 
 The `System.IO` classes can be used to access the file system on each platform. The `File` class lets you create, delete, and read files, and the `Directory` class allows you to create, delete, or enumerate the contents of directories. You can also use the `Stream` subclasses, which can provide a greater degree of control over file operations (such as compression or position search within a file).
@@ -55,8 +53,6 @@ string fileName = Path.Combine(Environment.GetFolderPath(Environment.SpecialFold
 These operations are demonstrated in the sample app, which includes a page that saves and loads text:
 
 [![Saving and loading text](files-images/saveandload-sml.png "Saving and Loading Files in App")](files-images/saveandload.png#lightbox "Saving and Loading Files in App")
-
-<a name="Loading_Files_Embedded_as_Resources" />
 
 ## Loading Files Embedded as Resources
 
@@ -104,8 +100,6 @@ listView.ItemsSource = monkeys;
 
  [![Xml file embedded in .NET standard library, displayed in ListView](files-images/pclxml-sml.png "Embedded XML File in .NET standard library Displayed in ListView")](files-images/pclxml.png#lightbox "Embedded XML File in .NET standard library Displayed in ListView")
 
-<a name="Embedding_in_Shared_Projects" />
-
 ## Embedding in Shared Projects
 
 Shared Projects can also contain files as embedded resources, however because the contents of a Shared Project are compiled into the referencing projects, the prefix used for embedded file resource IDs can change. This means the resource ID for each embedded file may be different for each platform.
@@ -132,15 +126,11 @@ Stream stream = assembly.GetManifestResourceStream
     (resourcePrefix + "SharedTextResource.txt");
 ```
 
-<a name="Organizing_Resources" />
-
 ### Organizing Resources
 
 The above examples assume that the file is embedded in the root of the .NET Standard library project, in which case the resource ID is of the form **Namespace.Filename.Extension**, such as `WorkingWithFiles.LibTextResource.txt` and `WorkingWithFiles.iOS.SharedTextResource.txt`.
 
 It is possible to organize embedded resources in folders. When an embedded resource is placed in a folder, the folder name becomes part of the resource ID (separated by periods), so that the resource ID format becomes **Namespace.Folder.Filename.Extension**. Placing the files used in the sample app into a folder **MyFolder** would make the corresponding resource IDs `WorkingWithFiles.MyFolder.LibTextResource.txt` and `WorkingWithFiles.iOS.MyFolder.SharedTextResource.txt`.
-
-<a name="Debugging_Embedded_Resources" />
 
 ### Debugging Embedded Resources
 

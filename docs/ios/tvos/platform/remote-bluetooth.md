@@ -19,7 +19,7 @@ If your app is a game, you can optionally build in support for 3rd party, Made F
 
 This article describes the [Siri Remote](#The-Siri-Remote), [Touch Surface Gestures](#Touch-Surface-Gestures) and [Siri Remote Buttons](#Siri-Remote-Buttons) and shows how to work with them via [Gestures and Storyboards](#Gestures-and-Storyboards), [Gestures and Code](#Gestures-and-Code) and [Low-Level Event Handling](#Low-Level-Event-Handling). Finally, it discusses [Working with Game Controllers](#Working-with-Game-Controllers) in a Xamarin.tvOS app.
 
-<a name="The-Siri-Remote" />
+<a name="The-Siri-Remote"></a>
 
 ## The Siri Remote
 
@@ -40,7 +40,7 @@ The Siri Remote has the following features and expected usages within your tvOS 
 |**Home**<br />Press to return to the Home screen, double-click to display running apps, press and hold to sleep device.|n/a|n/a|
 |**Volume**<br />Controls attached audio/video equipment volume.|n/a|n/a|
 
-<a name="Touch-Surface-Gestures" />
+<a name="Touch-Surface-Gestures"></a>
 
 ## Touch Surface Gestures
 
@@ -58,7 +58,7 @@ Apple provides the following suggestions for working with Touch Surface gestures
 - **Define New Gestures Sparingly** - Again, the user has an expectation that specific gestures will perform specific actions. You should avoid defining custom gestures to perform standard actions. And again, games are the most usual exception where custom gestures can add fun, immersive play to the game.
 - **If Appropriate, Respond to D-Pad Taps** - Lightly tapping on the corner edges of the Touch Surface will react like a D-Pad on a game controller moving focus or direction up, down, left or right. If appropriate, you should respond to these gestures in your app or game.
 
-<a name="Siri-Remote-Buttons" />
+<a name="Siri-Remote-Buttons"></a>
 
 ## Siri Remote Buttons
 
@@ -69,7 +69,7 @@ Additionally, menu button presses can be detected using a Gesture Recognizer wit
 > [!IMPORTANT]
 > You should **always** assign a function to the Play/Pause button on the remote. Having a non-functional button can make your app look broken to the end user. If you don't have a valid function for this button, assign the same function as the primary button (Touch Surface Click).
 
-<a name="Gestures-and-Storyboards" />
+<a name="Gestures-and-Storyboards"></a>
 
 ## Gestures and Storyboards
 
@@ -114,7 +114,7 @@ namespace tvRemote
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). Specifically the [Creating the User Interface](~/ios/tvos/get-started/hello-tvos.md#Creating-the-User-Interface) and [Writing the Code with outlets and actions](~/ios/tvos/get-started/hello-tvos.md#Writing-the-Code) sections.
 
-<a name="Gestures-and-Code" />
+<a name="Gestures-and-Code"></a>
 
 ## Gestures and Code
 
@@ -177,7 +177,7 @@ namespace tvRemote
 }
 ```
 
-<a name="Low-Level-Event-Handling" />
+<a name="Low-Level-Event-Handling"></a>
 
 ## Low-Level Event Handling
 
@@ -260,7 +260,7 @@ namespace tvRemote
 
 As with `UITouch` events, if you need to implement any of the `UIPress` event overrides, you should implement all four.
 
-<a name="Bluetooth-Game-Controllers" />
+<a name="Bluetooth-Game-Controllers"></a>
 
 ## Bluetooth Game Controllers
 
@@ -296,7 +296,7 @@ Apple provides the following suggestions for working with Game Controllers:
 - **Ensure Your App Works on both Siri Remote and Game Controllers** - Don't require users to switch between the Siri Remote and a Game Controller to use your app. Test your app often with both types of controllers ensuring that everything is easy to navigate and works as expected.
 - **Provide a Way Back** - Pressing the Menu button should always return to the previous screen. If the user is at the main app screen, the Menu button should return them to the Apple TV Home screen. During gameplay, the Menu button should display an alert giving the user the ability to pause/resume gameplay or return to the main menu.
 
-<a name="Working-with-Game-Controllers" />
+<a name="Working-with-Game-Controllers"></a>
 
 ## Working with Game Controllers
 
@@ -307,7 +307,7 @@ If your app required low-level controller input, you can uses Apple's [Game Cont
 - The Micro Game Controller profile (`GCMicroGamepad`) has been added to target the Siri Remote.
 - The new `GCEventViewController` class can be used to route game controller events through your app. See the [Determining Game Controller Input](#determining-game-controller-input) section below for more details.
 
-<a name="Game-Controller-Support-Requirements" />
+<a name="Game-Controller-Support-Requirements"></a>
 
 ### Game Controller Support Requirements
 
@@ -318,7 +318,7 @@ Apple has several specific requirements that must be met if your Xamarin.tvOS ap
 - **Games Must be Playable with Stand-Alone Controllers** - If your app supports an Extended Game Controller, it must be playable solely with that Game Controller.
 - **You Must Support the Play/Pause Button** - During gameplay, if the user presses the Play/Pause button, you should display an alert giving the user the ability to pause/resume gameplay or return to the main menu.
 
-<a name="Enabling-Game-Controller-Support" />
+<a name="Enabling-Game-Controller-Support"></a>
 
 ### Enabling Game Controller Support
 
@@ -328,7 +328,7 @@ To enable Game Controller support in your Xamarin.tvOS app, double-click the `In
 
 Under the **Game Controller** section, place a check by **Enable Game Controllers**, then check all of the Game Controller types that will be supported by the app.
 
-<a name="Using-the-Siri-Remote-as-a-Game-Controller" />
+<a name="Using-the-Siri-Remote-as-a-Game-Controller"></a>
 
 ### Using the Siri Remote as a Game Controller
 
@@ -342,7 +342,7 @@ The Siri Remote has the following characteristics when being used as a Game Cont
 - The Play/Pause button acts like button **X** on a Game Controller.
 - The Menu button should display an alert giving the user the ability to pause/resume gameplay or return to the main menu.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ### Determining Game Controller Input
 
@@ -354,7 +354,7 @@ You can use the `UserInteractionEnabled` property of the `GCEventViewController`
 
 For information about implementing Game Controller support, please see Apple's [Working with Game Controllers](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/WorkingwithGameControllers.html) section in the [App Programming Guide for tvOS](https://developer.apple.com/library/prerelease/tvos/documentation/General/Conceptual/AppleTV_PG/index.html) and [Game Controller Programming Guide](https://developer.apple.com/library/prerelease/tvos/documentation/ServicesDiscovery/Conceptual/GameControllerPG/Introduction/Introduction.html).
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

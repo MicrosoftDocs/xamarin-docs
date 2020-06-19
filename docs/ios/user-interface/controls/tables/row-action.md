@@ -59,7 +59,7 @@ public override UISwipeActionsConfiguration GetLeadingSwipeActionsConfiguration(
 }
 ```
 
-<a name="create-uiswipeactionsconfigurations" />
+<a name="create-uiswipeactionsconfigurations"></a>
 
 ### 2. Instantiate a `UISwipeActionsConfiguration`
 
@@ -81,7 +81,7 @@ For trailing swipes, the actions will be displayed as illustrated in the followi
 
 This code snippet also makes use of the new `PerformsFirstActionWithFullSwipe` property. By default, this property is set to true, meaning that the first action in the array will happen when a user swipes fully on a row. If you have an action that is not destructive (for example "Delete", this might not be ideal behavior and you should therefore set it to `false`.
 
-<a name="create-uicontextualaction" />
+<a name="create-uicontextualaction"></a>
 
 ### Create a `UIContextualAction`
 

@@ -144,7 +144,7 @@ expose it to C# via a binding.
 > Some features mentioned on this page (such as the `var` keyword in C#) are
 > available in newer versions of Java (e.g. [`var` in Java 10](https://developer.oracle.com/java/jdk-10-local-variable-type-inference.html)), but are still not available to Android developers.
 
-<a name="fundamentals" />
+<a name="fundamentals"></a>
 
 ## Going from Java to C# development
 
@@ -252,7 +252,7 @@ Note that there are some limitations in Xamarin.Android support for
 generic C# classes; for more information, see
 [Limitations](~/android/internals/limitations.md).
 
-<a name="oopfeatures" />
+<a name="oopfeatures"></a>
 
 ## Object-oriented programming features
 
@@ -482,7 +482,7 @@ For more information about C#'s support for polymorphism, see the
 [Polymorphism](https://docs.microsoft.com/dotnet/csharp/programming-guide/classes-and-structs/polymorphism)
 topic.
 
-<a name="lambdas" />
+<a name="lambdas"></a>
 
 ## Lambda expressions
 
@@ -534,7 +534,7 @@ For more information about C# and lambda expressions, see the
 [Lambda Expressions](https://docs.microsoft.com/dotnet/csharp/programming-guide/statements-expressions-operators/lambda-expressions)
 topic.
 
-<a name="events" />
+<a name="events"></a>
 
 ## Event handling
 
@@ -624,7 +624,7 @@ Xamarin.Android code), and you spend more time thinking about the
 business logic of your application and less time wading through
 syntactical overhead.
 
-<a name="async" />
+<a name="async"></a>
 
 ## Asynchronous programming
 
@@ -697,7 +697,7 @@ For more information about Xamarin support of asynchronous programming
 features, see
 [Async Support Overview](~/cross-platform/platform/async.md).
 
-<a name="keywords" />
+<a name="keywords"></a>
 
 ## Keyword differences
 
@@ -751,7 +751,7 @@ are reading through Xamarin.Android
 |[value](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/value)|References the value that client code wants to assign to a property.|
 |[virtual](https://docs.microsoft.com/dotnet/csharp/language-reference/keywords/virtual)|Allows a method to be overridden in a derived class.|
 
-<a name="interop" />
+<a name="interop"></a>
 
 ## Interoperating with existing java code
 

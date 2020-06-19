@@ -105,5 +105,5 @@ Examples:
 
 ## API
 
-- [OrientationSensor source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/OrientationSensor)
+- [OrientationSensor source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/OrientationSensor)
 - [OrientationSensor API documentation](xref:Xamarin.Essentials.OrientationSensor)

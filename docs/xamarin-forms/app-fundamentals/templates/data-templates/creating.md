@@ -18,15 +18,13 @@ _Data templates can be created inline, in a ResourceDictionary, or from a custom
 
 A common usage scenario for a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is displaying data from a collection of objects in a [`ListView`](xref:Xamarin.Forms.ListView). The appearance of the data for each cell in the [`ListView`](xref:Xamarin.Forms.ListView) can be managed by setting the [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1) property to a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate). There are a number of techniques that can be used to accomplish this:
 
-- [Creating an Inline DataTemplate](#inline).
-- [Creating a DataTemplate with a Type](#type).
-- [Creating a DataTemplate as a Resource](#resource).
+- [Creating an Inline DataTemplate](#creating-an-inline-datatemplate).
+- [Creating a DataTemplate with a Type](#creating-a-datatemplate-with-a-type).
+- [Creating a DataTemplate as a Resource](#creating-a-datatemplate-as-a-resource).
 
 Regardless of the technique being used, the result is that the appearance of each cell in the [`ListView`](xref:Xamarin.Forms.ListView) is defined by a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), as shown in the following screenshots:
 
 ![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
-
-<a name="inline" />
 
 ## Creating an Inline DataTemplate
 
@@ -107,8 +105,6 @@ public class WithDataTemplatePageCS : ContentPage
 ```
 
 In C#, the inline [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) is created using a constructor overload that specifies a `Func` argument.
-
-<a name="type" />
 
 ## Creating a DataTemplate with a Type
 
@@ -213,8 +209,6 @@ public class PersonCellCS : ViewCell
 
 > [!NOTE]
 > Note that Xamarin.Forms also includes cell types that can be used to display simple data in [`ListView`](xref:Xamarin.Forms.ListView) cells. For more information, see [Cell Appearance](~/xamarin-forms/user-interface/listview/customizing-cell-appearance.md).
-
-<a name="resource" />
 
 ## Creating a DataTemplate as a Resource
 

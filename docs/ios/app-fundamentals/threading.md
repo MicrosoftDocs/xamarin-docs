@@ -34,7 +34,7 @@ Typically developers use threads when they need to create
 responsive applications and they do not want to block the main
 UI run loop.
 
- <a name="Developing_Responsive_Applications" />
+ <a name="Developing_Responsive_Applications"></a>
 
 ## Developing Responsive Applications
 
@@ -62,7 +62,7 @@ The above invokes the code inside the delegate in the
 context of the main thread, without causing any race
 conditions that could potentially crash your application.
 
- <a name="Threading_and_Garbage_Collection" />
+ <a name="Threading_and_Garbage_Collection"></a>
 
 ## Threading and Garbage Collection
 

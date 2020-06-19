@@ -68,7 +68,7 @@ For information about launching and debugging with the Android
 emulator, see
 [Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
-<a name="hyper-v-win" />
+<a name="hyper-v-win"></a>
 
 ## Accelerating with Hyper-V
 
@@ -185,7 +185,7 @@ following steps:
 If your computer can support HAXM but HAXM is not installed, use the
 steps in the next section to install HAXM.
 
-<a name="install-haxm-win" />
+<a name="install-haxm-win"></a>
 
 ### Installing HAXM
 
@@ -256,7 +256,7 @@ For information about launching and debugging with the Android
 emulator, see
 [Debugging on the Android Emulator](~/android/deploy-test/debugging/debug-on-emulator.md).
 
-<a name="hypervisor" />
+<a name="hypervisor"></a>
 
 ## Accelerating with the Hypervisor Framework
 
@@ -276,7 +276,7 @@ guide for ways to verify that your Mac supports Hypervisor.
 If the Hypervisor Framework is not supported by your Mac, you can use
 HAXM to accelerate the Android emulator (described next).
 
-<a name="haxm-mac" />
+<a name="haxm-mac"></a>
 
 ## Accelerating with HAXM
 
@@ -323,7 +323,7 @@ the following steps:
 If HAXM is not installed, use the steps in the next section to
 install HAXM.
 
-<a name="install-haxm-mac" />
+<a name="install-haxm-mac"></a>
 
 ### Installing HAXM
 

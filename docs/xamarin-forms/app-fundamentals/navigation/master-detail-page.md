@@ -44,11 +44,11 @@ The behavior of the navigation experience between master and detail pages is pla
 
 - On iOS, the detail page *slides* to the right as the master page slides from the left, and the left part of the detail page is still visible.
 - On Android, the detail and master pages are *overlaid* on each other.
-- On UWP, the master page slides from the left over part of the detail page, provided that the [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) property is set to `Popover`. For more information, see [Controlling the Detail Page Display Behavior](#Controlling_the_Detail_Page_Display_Behavior).
+- On UWP, the master page slides from the left over part of the detail page, provided that the [`MasterBehavior`](xref:Xamarin.Forms.MasterDetailPage.MasterBehavior) property is set to `Popover`. For more information, see [Controlling the Detail Page Display Behavior](#controlling-the-detail-page-display-behavior).
 
 Similar behavior will be observed in landscape mode, except that the master page on iOS and Android has a similar width as the master page in portrait mode, so more of the detail page will be visible.
 
-For information about controlling the navigation behavior, see [Controlling the Detail Page Display Behavior](#Controlling_the_Detail_Page_Display_Behavior).
+For information about controlling the navigation behavior, see [Controlling the Detail Page Display Behavior](#controlling-the-detail-page-display-behavior).
 
 ## Creating a MasterDetailPage
 
@@ -242,8 +242,6 @@ The `OnItemSelected` method performs the following actions:
 The following screenshots show the `ContactPage` detail page, which is shown after it's been selected on the master page:
 
 ![](master-detail-page-images/detailpage.png "Detail Page Example")
-
-<a name="Controlling_the_Detail_Page_Display_Behavior" />
 
 ### Controlling the Detail Page Display Behavior
 

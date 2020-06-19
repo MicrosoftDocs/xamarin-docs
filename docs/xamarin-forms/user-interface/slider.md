@@ -109,7 +109,7 @@ Here's the program running on iOS and Android devices:
 
 [![Basic Slider Code](slider-images/BasicSliderCode.png "Basic Slider Code")](slider-images/BasicSliderCode-Large.png#lightbox)
 
-The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which causes the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for each platform. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#implementations).
+The second `Label` displays the text "(uninitialized)" until the `Slider` is manipulated, which causes the first `ValueChanged` event to be fired. Notice that the number of decimal places that are displayed is different for each platform. These differences are related to the platform implementations of the `Slider` and are discussed later in this article in the section [Platform implementation differences](#platform-implementation-differences).
 
 ### Creating a Slider in XAML
 
@@ -203,8 +203,6 @@ The **Basic Slider Bindings** page shows how to write a nearly equivalent progra
 
 The `Rotation` property of the first `Label` is bound to the `Value` property of the `Slider`, as is the `Text` property of the second `Label` with a `StringFormat` specification. The **Basic Slider Bindings** page functions a little differently from the two previous pages: When the page first appears, the second `Label` displays the text string with the value. This is a benefit of using data binding. To display text without data binding, you'd need to specifically initialize the `Text` property of the `Label` or simulate a firing of the `ValueChanged` event by calling the event handler from the class constructor.
 
-<a name="precautions" />
-
 ## Precautions
 
 The value of the `Minimum` property must always be less than the value of the `Maximum` property. The following code snippet causes the `Slider` to raise an exception:
@@ -276,8 +274,6 @@ If a `ValueChanged` event handler has been attached at the time that the `Value`
 ```
 
 When `Minimum` is set to 10, `Value` is also set to 10, and the `ValueChanged` event is fired. This might occur before the rest of the page has been constructed, and the handler might attempt to reference other elements on the page that have not yet been created. You might want to add some code to the `ValueChanged` handler that checks for `null` values of other elements on the page. Or, you can set the `ValueChanged` event handler after the `Slider` values have been initialized.
-
-<a name="implementations" />
 
 ## Platform implementation differences
 
@@ -501,7 +497,7 @@ As the `Slider` elements are manipulated, the `BoxView` and `Label` elements are
 
 [![HSL Color Sliders](slider-images/HslColorSliders.png "HSL Color Sliders")](slider-images/HslColorSliders-Large.png#lightbox)
 
-The `StringFormat` component of the `Binding` markup extension is set for a format of "F2" to display two decimal places. (String formatting in data bindings is discussed in the article [String Formatting](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md).) However, the UWP version of the program is limited to values of 0, 0.1, 0.2, ... 0.9, and 1.0. This is a direct result of the implementation of the UWP `Slider` as described above in the section [Platform implementation differences](#implementations).
+The `StringFormat` component of the `Binding` markup extension is set for a format of "F2" to display two decimal places. (String formatting in data bindings is discussed in the article [String Formatting](~/xamarin-forms/app-fundamentals/data-binding/string-formatting.md).) However, the UWP version of the program is limited to values of 0, 0.1, 0.2, ... 0.9, and 1.0. This is a direct result of the implementation of the UWP `Slider` as described above in the section [Platform implementation differences](#platform-implementation-differences).
 
 ## Related Links
 

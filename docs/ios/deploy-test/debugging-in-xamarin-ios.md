@@ -186,7 +186,7 @@ If there is an error setting up the debugger, you can enable detailed
 diagnostics by adding "-v -v -v" to the additional mtouch arguments in your Project Options. This will
 print detailed error information to the device console.
 
- <a name="WiFi_Debugging" />
+ <a name="WiFi_Debugging"></a>
 
 ## Wireless Debugging
 
@@ -198,7 +198,7 @@ network.
 
 For more information on Wireless Deployment and Debugging, refer to the [Wireless Deployment](~/ios/deploy-test/wireless-deployment.md) guide.
 
-<a name="Technical_Details" />
+<a name="Technical_Details"></a>
 
 ## Technical Details
 
@@ -216,7 +216,7 @@ the device. This means that your binary builds when debugging will be larger as
 the code is instrumented to contain extra code at every sequence point to
 support debugging.
 
-<a name="Accessing_the_Console" />
+<a name="Accessing_the_Console"></a>
 
 ## Accessing the Console
 
@@ -232,7 +232,7 @@ should switch over to your Mac for more thorough and detailed logs.
 
 -----
 
-<a name="Debugging_Mono's_Class_Libraries" />
+<a name="Debugging_Mono's_Class_Libraries"></a>
 
 ## Debugging Mono's Class Libraries
 

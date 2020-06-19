@@ -124,7 +124,7 @@ For more information about the Android Emulator, Hyper-V, and HAXM, please see [
 > On versions of Windows prior to Windows 10 April 2018 Update, HAXM is not compatible with Hyper-V. In this scenario it is necessary 
 to either [disable Hyper-V](~/android/get-started/installation/android-emulator/troubleshooting.md#disable-hyperv) or to use the slower emulator images that do not have the x86 optimizations.
 
-<a name="device" />
+<a name="device"></a>
 
 ### Android Device
 

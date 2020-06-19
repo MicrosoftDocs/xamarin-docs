@@ -117,7 +117,7 @@ public override void ViewDidLoad () {
 }
 ```
 
-<a name="partial_classes" />
+<a name="partial_classes"></a>
 
 ## Using C# and Storyboards
 

@@ -111,7 +111,7 @@ It is important to note that it is possible that `Internet` is reported by `Netw
 
 ## API
 
-* [Connectivity source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Connectivity)
+* [Connectivity source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Connectivity)
 * [Connectivity API documentation](xref:Xamarin.Essentials.Connectivity)
 
 ## Related Video

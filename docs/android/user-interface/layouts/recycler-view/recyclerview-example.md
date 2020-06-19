@@ -154,7 +154,7 @@ through the collection of photos. Later in this guide, you will see an
 example of how to modify the layout by swapping in a different layout
 manager.
 
-<a name="view-holder" />
+<a name="view-holder"></a>
 
 ### View Holder
 

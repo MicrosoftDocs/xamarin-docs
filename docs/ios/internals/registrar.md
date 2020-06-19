@@ -243,7 +243,7 @@ The old registration system has the following drawbacks:
 - The set of methods that was exported was slightly different between dynamic and static builds.
 - It does not work properly when exporting generic classes (which exact generic implementation executed at runtime would be random, effectively resulting in undetermined behavior).
 
-<a name="required-modifications" />
+<a name="required-modifications"></a>
 
 ## New registrar: required changes to bindings
 

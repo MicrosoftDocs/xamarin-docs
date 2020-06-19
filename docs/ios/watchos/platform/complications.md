@@ -29,7 +29,7 @@ Apps can implement just one style, or all five, depending on the data being disp
 You can also support Time Travel, providing values
 for past and/or future times as the user turns the Digital Crown.
 
-<a name="adding" />
+<a name="adding"></a>
 
 ## Adding a Complication
 
@@ -56,7 +56,7 @@ To add a complication to an existing project:
 
 These steps are described in more detail below.
 
-<a name="clkcomplicationcontroller" />
+<a name="clkcomplicationcontroller"></a>
 
 ### CLKComplicationDataSource Class
 
@@ -140,7 +140,7 @@ must implement the following methods
 - `GetTimelineEntriesBeforeDate`
 - `GetTimelineEntriesAfterDate`
 
-<a name="writing" />
+<a name="writing"></a>
 
 ## Writing a Complication
 
@@ -203,7 +203,7 @@ public class ComplicationController : CLKComplicationDataSource
 }
 ```
 
-<a name="templates" />
+<a name="templates"></a>
 
 ## Complication Templates
 

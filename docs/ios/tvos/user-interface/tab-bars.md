@@ -17,7 +17,7 @@ For many types of tvOS apps, primary navigation is presented as a Tab Bar runnin
 
 The Tab Bar is translucent by default and always appears at the top of the screen. When in focus, a Tab Bar will cover the top 140 pixels of the screen but will quickly slide away when focus shifts to the content area below.
 
-<a name="Tab-Bars-in-tvOS" />
+<a name="Tab-Bars-in-tvOS"></a>
 
 ## Tab Bars in tvOS
 
@@ -38,7 +38,7 @@ Apple has the following suggestions for working with Tab Bars:
 - **Limit the Number of Categories** - To reduce complexity and keep you app manageable, don't overload your Tab Bar with Categories and ensure that all of the Categories are visible and not crowded. Simple, short titles work best.
 - **Don't Disable a Category** - All Tabs (Categories) should always be visible and enabled at all times. If a given Tab has no content, provide an explanation to the user why. For example, the Purchases Tab will be empty if the user has made no purchases.
 
-<a name="Tab-Bar-Items" />
+<a name="Tab-Bar-Items"></a>
 
 ## Tab Bar Items
 
@@ -47,7 +47,7 @@ Each Category (Tab) in the Tab Bar is represented by a Tab Bar Item (`UITabBarIt
 - **Use Text Based Tabs** - While the Tab Bar Item is able to be represented as an icon, Apple suggests using text only because a concise title is easier to interpret than an icon.
 - **Use Short, Meaningful Nouns or Verbs** - A Tab Bar Item should clearly relay the content that it contains and works best when it is a simple noun (such as Photos, Movies or Music) or verbs (such as Search or Play).
 
-<a name="Tab-Bars-and-Storyboards" />
+<a name="Tab-Bars-and-Storyboards"></a>
 
 ## Tab Bars and Storyboards
 
@@ -110,13 +110,13 @@ The easiest way to work with Tab Bars in a Xamarin.tvOS app is to add them to th
 
 For more information on working with Storyboards, please see our [Hello, tvOS Quick Start Guide](~/ios/tvos/get-started/hello-tvos.md). 
 
-<a name="Working-with-Tab-Bars" />
+<a name="Working-with-Tab-Bars"></a>
 
 ## Working with Tab Bars
 
 Use the `Items` property of the `UITabBar` to access the collection of `UITabBarItems` it contains as a zero (0) indexed array. The `SelectedItem` property will return the currently selected Tab (Category) as a `UITabBarItem`.
 
-<a name="Working-with-Tab-Bar-Items" />
+<a name="Working-with-Tab-Bar-Items"></a>
 
 ## Working with Tab Bar Items
 
@@ -133,7 +133,7 @@ Which would produce the following results when run:
 
 Use the `Title` property of the `UITabBarItem` to change the title and the `Image` property to change the icon.
 
-<a name="Summary" />
+<a name="Summary"></a>
 
 ## Summary
 

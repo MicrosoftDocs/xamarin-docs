@@ -207,7 +207,7 @@ example:
     name="managedName">NewName</attr>
 ```
 
-<a name="Renaming_EventArg_Wrapper_Classes" />
+<a name="Renaming_EventArg_Wrapper_Classes"></a>
 
 #### Renaming `EventArg` Wrapper Classes
 

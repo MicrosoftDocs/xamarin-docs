@@ -93,7 +93,7 @@ This is only applied on the Android platform, and the parameter is ignored on iO
 
 ## API
 
-- [Compass source code](https://github.com/xamarin/Essentials/tree/master/Xamarin.Essentials/Compass)
+- [Compass source code](https://github.com/xamarin/Essentials/tree/main/Xamarin.Essentials/Compass)
 - [Compass API documentation](xref:Xamarin.Essentials.Compass)
 
 ## Related Video

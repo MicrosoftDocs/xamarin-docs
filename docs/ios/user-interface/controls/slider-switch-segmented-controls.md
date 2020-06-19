@@ -11,7 +11,7 @@ ms.date: 03/21/2017
 
 # Sliders, Switches, and Segmented Controls in Xamarin.iOS
 
-<a name="Sliders" />
+<a name="Sliders"></a>
 
 ## Sliders
 
@@ -55,7 +55,7 @@ workaround. [[Source](https://stackoverflow.com/a/21396794)]:
 > 
 > You can use any image, as it will be overridden, but make sure it is placed _in_ the Resources directory and is called in your code.
 
-<a name="Switch" />
+<a name="Switch"></a>
 
 ## Switch
 
@@ -76,7 +76,7 @@ value of `On`:
 switch1.On = true;
 ```
 
- <a name="Segmented_Controls" />
+ <a name="Segmented_Controls"></a>
 
 ## Segmented Controls
 

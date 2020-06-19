@@ -24,13 +24,11 @@ The following diagram illustrates the relationship between the [`ViewCell`](xref
 
 The rendering process can be taken advantage of to implement platform-specific customizations by creating a custom renderer for a [`ViewCell`](xref:Xamarin.Forms.ViewCell) on each platform. The process for doing this is as follows:
 
-1. [Create](#Creating_the_Custom_Cell) a Xamarin.Forms custom cell.
-1. [Consume](#Consuming_the_Custom_Cell) the custom cell from Xamarin.Forms.
-1. [Create](#Creating_the_Custom_Renderer_on_each_Platform) the custom renderer for the cell on each platform.
+1. [Create](#creating-the-custom-cell) a Xamarin.Forms custom cell.
+1. [Consume](#consuming-the-custom-cell) the custom cell from Xamarin.Forms.
+1. [Create](#creating-the-custom-renderer-on-each-platform) the custom renderer for the cell on each platform.
 
 Each item will now be discussed in turn, to implement a `NativeCell` renderer that takes advantage of a platform-specific layout for each cell hosted inside a Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control. This stops the Xamarin.Forms layout calculations from being repeatedly called during `ListView` scrolling.
-
-<a name="Creating_the_Custom_Cell" />
 
 ## Creating the Custom Cell
 
@@ -66,8 +64,6 @@ public class NativeCell : ViewCell
 ```
 
 The `NativeCell` class is created in the .NET Standard library project and defines the API for the custom cell. The custom cell exposes `Name`, `Category`, and `ImageFilename` properties that can be displayed through data binding. For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
-
-<a name="Consuming_the_Custom_Cell" />
 
 ## Consuming the Custom Cell
 
@@ -147,8 +143,6 @@ A Xamarin.Forms [`ListView`](xref:Xamarin.Forms.ListView) control is used to dis
 Each row in the list contains three items of data – a name, a category, and an image filename. The layout of each row in the list is defined by the `DataTemplate` that's referenced through the [`ListView.ItemTemplate`](xref:Xamarin.Forms.ItemsView`1.ItemTemplate) bindable property. The `DataTemplate` defines that each row of data in the list will be a `NativeCell` that displays its `Name`, `Category`, and `ImageFilename` properties through data binding. For more information about the `ListView` control, see [ListView](~/xamarin-forms/user-interface/listview/index.md).
 
 A custom renderer can now be added to each application project to customize the platform-specific layout for each cell.
-
-<a name="Creating_the_Custom_Renderer_on_each_Platform" />
 
 ## Creating the Custom Renderer on each Platform
 

@@ -28,7 +28,7 @@ There are three ways to use `gdb`:
 When things go wrong, please see the
 [Troubleshooting](#Troubleshooting) section.
 
-<a name="Debug_Builds_with_Fast_Deployment" />
+<a name="Debug_Builds_with_Fast_Deployment"></a>
 
 ### Debug Builds with Fast Deployment
 
@@ -82,7 +82,7 @@ GNU gdb (GDB) 7.3.1-gg2
 (gdb) c
 ```
 
-<a name="Debug_Builds_without_Fast_Deployment" />
+<a name="Debug_Builds_without_Fast_Deployment"></a>
 
 ## Debug Builds without Fast Deployment
 
@@ -151,7 +151,7 @@ GNU gdb (GDB) 7.3.1-gg2
 (gdb) c
 ```
 
-<a name="Release_Builds" />
+<a name="Release_Builds"></a>
 
 ## Release Builds
 
@@ -182,7 +182,7 @@ An accessible `gdbserver` may be provided by following the
 One wrinkle: The `_Gdb` MSBuild target will kill any previously running
 app instances. This will not work on pre-Android v4.0 targets.
 
-<a name="Troubleshooting" />
+<a name="Troubleshooting"></a>
 
 ## Troubleshooting
 

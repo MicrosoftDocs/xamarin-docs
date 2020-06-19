@@ -505,7 +505,7 @@ The additional options menu contains the following items:
 
 -----
 
-<a name="troubleshooting" />
+<a name="troubleshooting"></a>
 
 ## Troubleshooting
 

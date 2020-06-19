@@ -18,13 +18,11 @@ _Using Xamarin.Forms to enter or display text._
 
 Xamarin.Forms has three primary views for working with text:
 
-- **[Label](#Label)** &mdash; for presenting single or multi-line text. Can show text with multiple formatting options in the same line.
-- **[Entry](#Entry)** &mdash; for entering text that is only one line. Entry has a password mode.
-- **[Editor](#Editor)** &mdash; for entering text that could take more than one line.
+- **[Label](#label)** &mdash; for presenting single or multi-line text. Can show text with multiple formatting options in the same line.
+- **[Entry](#entry)** &mdash; for entering text that is only one line. Entry has a password mode.
+- **[Editor](#editor)** &mdash; for entering text that could take more than one line.
 
-Text appearance can be changed using built-in or custom [styles](#Styles) and some controls support custom [fonts](#Fonts).
-
-<a name="Label" />
+Text appearance can be changed using built-in or custom [styles](#styles) and some controls support custom [fonts](#fonts).
 
 ## [Label](label.md)
 
@@ -36,8 +34,6 @@ See the [Label](label.md) article for more detailed information.
 
 For information on customizing the font used in a label, see [Fonts](fonts.md).
 
-<a name="Entry" />
-
 ## [Entry](entry.md)
 
 `Entry` is used to accept single-line text input. `Entry` offers control over colors and fonts. `Entry` has a password mode and can show placeholder text until text is entered.
@@ -48,8 +44,6 @@ See the [Entry](entry.md) article for more information.
 
 Note that, unlike `Label`, `Entry` cannot have custom font settings.
 
-<a name="Editor" />
-
 ## [Editor](editor.md)
 
 `Editor` is used to accept multi-line text input. `Editor` offers control over colors and fonts.
@@ -58,13 +52,9 @@ Note that, unlike `Label`, `Entry` cannot have custom font settings.
 
 See the [Editor](editor.md) article for more information.
 
-<a name="Fonts" />
-
 ## [Fonts](fonts.md)
 
 Many controls support different font settings using the built-in fonts on each platform, or custom fonts included with your app. See the [Fonts](fonts.md) article for more detailed information.
-
-<a name="Styles" />
 
 ## [Styles](styles.md)
 

@@ -15,7 +15,7 @@ iOS 8 includes a new, simpler-to-use mechanism for creating the user interface â
 
 As the developer no longer needs to create a separate and specific storyboard for iPhone and iPad devices, they have the flexibility to design applications with a common interface and then customize that interface for different size classes. In this way, an application can be adapted to the strengths of each form factor and each user interface can be tuned to provide the best experience.
 
-<a name="size-classes" />
+<a name="size-classes"></a>
 
 ## Size Classes
 
@@ -67,7 +67,7 @@ UIImage icon = UIImage.FromFile("MonkeyImage.png");
 
 Or if they assign the image to a UI element using the iOS Designer as `MonkeyIcon.png`, the `MonkeyIcon@3x.png` will be used, again automatically, on the iPhone 6 Plus.
 
-<a name="dynamic-launch-screens" />
+<a name="dynamic-launch-screens"></a>
 
 ### Dynamic Launch Screens
 
@@ -273,7 +273,7 @@ When the developer presents a View Controller using the `PresentViewController` 
 
 With a custom presentation style, developers have the option to use a custom Presentation Controller. This custom controller can be used to modify the appearance and behavior of the View it is allied to.
 
-<a name="size-classes"/>
+<a name="size-classes"></a>
 
 ## Working with Size Classes
 
@@ -553,7 +553,7 @@ The key benefits of Unified Storyboards are:
 
 This feature is fully supported in Visual Studio for Mac
 
-<a name="enabling-size-classes" />
+<a name="enabling-size-classes"></a>
 
 ### Enabling Size Classes
 

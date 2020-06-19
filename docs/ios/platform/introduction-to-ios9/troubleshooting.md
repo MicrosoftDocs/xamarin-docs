@@ -82,7 +82,7 @@ Please see the [Opting-Out of ATS](~/ios/app-fundamentals/ats.md) section of our
 See our [iOS 9 compatibility information](~/ios/platform/introduction-to-ios9/ios9.md) for instructions
 on re-building and re-deploying your existing apps to run on iOS 9.
 
-<a name="UICollectionViewCell.ContentView-is-null-in-constructors" />
+<a name="UICollectionViewCell.ContentView-is-null-in-constructors"></a>
 
 ## UICollectionViewCell.ContentView is Null in Constructors
 
@@ -100,7 +100,7 @@ public YourCellClassName (CGRect frame) : base (frame)
 
 Related samples: [MotionGraph](https://github.com/xamarin/monotouch-samples/commit/3c1b7a4170c001e7290db9babb2b7a6dddeb8bcb), [TextKitDemo](https://github.com/xamarin/monotouch-samples/commit/23ea01b37326963b5ebf68bbcc1edd51c66a28d6)
 
-<a name="UIView-fails-to-Init-with-Coder-when-Loading-a-View-from-a-Xib/Nib" />
+<a name="UIView-fails-to-Init-with-Coder-when-Loading-a-View-from-a-Xib/Nib"></a>
 
 ## UIView fails to Init with Coder when Loading a View from a Xib/Nib
 

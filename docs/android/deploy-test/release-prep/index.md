@@ -52,7 +52,7 @@ Use the following steps to build the app for release:
 
 Each of these steps is described below in more detail.
 
-<a name="Specify_the_Application_Icon" />
+<a name="Specify_the_Application_Icon"></a>
 
 ## Specify the Application Icon
 
@@ -97,7 +97,7 @@ Normally, `using Android.App` is declared at the top of
 `Android.App`); however, you may need to add this `using` statement if
 it is not already present.
 
-<a name="Versioning" />
+<a name="Versioning"></a>
 
 ## Version the Application
 
@@ -141,7 +141,7 @@ of **Project Options** as shown in the following screenshot:
 
 -----
 
-<a name="shrink_apk" />
+<a name="shrink_apk"></a>
 
 ## Shrink the APK
 
@@ -262,11 +262,11 @@ configuration files. If you wish to use obfuscation, please see
 For more detailed information about using the ProGuard tool, see
 [ProGuard](~/android/deploy-test/release-prep/proguard.md).
 
-<a name="protect_app" />
+<a name="protect_app"></a>
 
 ## Protect the Application
 
-<a name="Disable_Debugging" />
+<a name="Disable_Debugging"></a>
 
 ### Disable Debugging
 
@@ -307,7 +307,7 @@ enabled this permission in the **Required permissions**
 list as described in 
 [Permissions](~/android/app-fundamentals/permissions.md). 
 
-<a name="dotfuscator" id="dotfuscator" />
+<a name="dotfuscator" id="dotfuscator"></a>
 
 ### Application Protection with Dotfuscator
 
@@ -350,7 +350,7 @@ build that is created.
 
 -----
 
-<a name="bundle" />
+<a name="bundle"></a>
 
 ### Bundle Assemblies into Native Code
 
@@ -367,7 +367,7 @@ Note that the **Bundle into Native Code** option does *not* mean that
 the assemblies are compiled into native code. It is not possible to use
 [**AOT Compilation**](#aot) to compile assemblies into native code.
 
-<a name="aot" />
+<a name="aot"></a>
 
 ### AOT Compilation
 
@@ -398,7 +398,7 @@ first be enabled (on the
 > [!NOTE]
 > The **LLVM Optimizing Compiler** option requires an Enterprise license.  
 
-<a name="Set_Packaging_Properties" />
+<a name="Set_Packaging_Properties"></a>
 
 ## Set Packaging Properties
 
@@ -474,7 +474,7 @@ You can now generate an app bundle by following the [Archive Flow](#archive). Th
 
 For more information about Android App Bundles, see [Android App Bundles](https://developer.android.com/guide/app-bundle/).
 
-<a name="Compile" />
+<a name="Compile"></a>
 
 ## Compile
 
@@ -495,7 +495,7 @@ in Release mode. Note that this step does not yet produce an APK.
 
 -----
 
-<a name="archive" />
+<a name="archive"></a>
 
 ## Archive for Publishing
 

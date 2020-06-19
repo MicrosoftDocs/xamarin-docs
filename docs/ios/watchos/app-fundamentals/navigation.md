@@ -21,7 +21,7 @@ For multi-scene watch apps there are two navigation paradigms
 - [Hierarchical Navigation](#Hierarchical_Navigation)
 - [Page-based Interfaces](#Page-Based_Interfaces)
 
-<a name="modal"/>
+<a name="modal"></a>
 
 ## Modal Interfaces
 
@@ -47,7 +47,7 @@ DismissController();
 Modal screens can be either a single scene or use a
   page-based layout.
 
-<a name="Hierarchical_Navigation"/>
+<a name="Hierarchical_Navigation"></a>
 
 ## Hierarchical Navigation
 
@@ -110,7 +110,7 @@ public override NSObject GetContextForSegue (string segueIdentifier)
 }
 ```
 
-<a name="Page-Based_Interfaces"/>
+<a name="Page-Based_Interfaces"></a>
 
 ## Page-Based Interfaces
 

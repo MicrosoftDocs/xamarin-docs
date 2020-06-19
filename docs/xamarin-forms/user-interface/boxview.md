@@ -20,17 +20,6 @@ Because Xamarin.Forms does not have a built-in vector graphics system, the `BoxV
 
 Although `BoxView` can mimic simple graphics, you might want to investigate [Using SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md) for more sophisticated graphics requirements.
 
-This article discusses the following topics:
-
-- **[Setting BoxView Color and Size](#colorandsize)** &ndash; set the `BoxView` properties.
-- **[Rendering Text Decorations](#textdecorations)** &ndash; use a `BoxView` for rendering lines.
-- **[Listing Colors with BoxView](#listingcolors)** &ndash; display all the system colors in a `ListView`.
-- **[Playing the Game of Life by Subclassing BoxView](#subclassing)** &ndash; implement a famous cellular automaton.
-- **[Creating a Digital Clock](#digitalclock)** &ndash; simulate a dot-matrix display.
-- **[Creating an Analog Clock](#analogclock)** &ndash; transform and animate `BoxView` elements.
-
-<a name="colorandsize" />
-
 ## Setting BoxView Color and Size
 
 Typically you'll set the following properties of `BoxView`:
@@ -77,8 +66,6 @@ If the `VerticalOptions` and `HorizontalOptions` properties are removed from the
 A `BoxView` can also be a child of an `AbsoluteLayout`. In that case, both the location and size of the `BoxView` are set using the `LayoutBounds` attached bindable property. The `AbsoluteLayout` is discussed in the article [**AbsoluteLayout**](~/xamarin-forms/user-interface/layouts/absolute-layout.md).
 
 You'll see examples of all these cases in the sample programs that follow.
-
-<a name="textdecorations" />
 
 ## Rendering Text Decorations
 
@@ -164,8 +151,6 @@ Finally, you can draw a vertical line on one side of a paragraph of text by encl
     </Label>
 </StackLayout>
 ```
-
-<a name="listingcolors" />
 
 ## Listing Colors with BoxView
 
@@ -298,8 +283,6 @@ The program visuals are described in the XAML file. The `ItemsSource` property o
 
 The `NamedColor` objects are formatted by the `ViewCell` object that is set as the data template of the `ListView`. This template includes a `BoxView` whose `Color` property is bound to the `Color` property of the `NamedColor` object.
 
-<a name="subclassing" />
-
 ## Playing the Game of Life by Subclassing BoxView
 
 The Game of Life is a cellular automaton invented by mathematician John Conway and popularized in the pages of *Scientific American* in the 1970s. A good introduction is provided by the Wikipedia article [Conway's Game of Life](https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life).
@@ -354,8 +337,6 @@ class LifeCell : BoxView
 The **GameOfLife** program also includes a `LifeGrid` class that encapsulates much of the logic of the game, and a `MainPage` class that handles the program's visuals. These include an overlay that describes the rules of the game. Here is the program in action showing a couple hundred `LifeCell` objects on the page:
 
 [![Game of Life](boxview-images/gameoflife-small.png "Game of Life")](boxview-images/gameoflife-large.png#lightbox "Game of Life")
-
-<a name="digitalclock" />
 
 ## Creating a Digital Clock
 
@@ -592,8 +573,6 @@ public partial class MainPage : ContentPage
 }
 ```
 
-<a name="analogclock" />
-
 ## Creating an Analog Clock
 
 A dot-matrix clock might seem to be an obvious application of `BoxView`, but `BoxView` elements are also capable of realizing an analog clock:
@@ -775,10 +754,6 @@ public partial class MainPage : ContentPage
 ```
 
 The second hand is treated a little differently: An animation easing function is applied to make the movement seem mechanical rather than smooth. On each tick, the second hand pulls back a little and then overshoots its destination. This little bit of code adds a lot to the realism of the movement.
-
-## Conclusion
-
-The `BoxView` might seem simple at first, but as you've seen, it can be quite versatile, and can almost reproduce visuals that are normally possible only with vector graphics. For more sophisticated graphics, consult [Using SkiaSharp in Xamarin.Forms](~/xamarin-forms/user-interface/graphics/skiasharp/index.md).
 
 ## Related Links
 

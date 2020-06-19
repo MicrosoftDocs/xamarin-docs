@@ -21,7 +21,7 @@ This section shows how to implement local and push notifications
 
 ## Sections
 
-<a name="Local Notifications In iOS" />
+<a name="Local Notifications In iOS"></a>
 
 ## [Local Notifications in iOS](local-notifications-in-ios.md)
 
@@ -29,7 +29,7 @@ This section will discuss how to implement local notifications in Xamarin.iOS. I
     explain the various
     UI elements of an iOS notification and discuss the API's involved with creating and displaying a notification.
 
-<a name="Local Notifications Walkthrough" />
+<a name="Local Notifications Walkthrough"></a>
 
 ## [Walkthrough - Using Local Notifications in Xamarin.iOS](local-notifications-in-ios-walkthrough.md)
 
@@ -38,7 +38,7 @@ In this section we'll walk through how to use local notifications in a
     demonstrate the basics of creating and publishing a notification that will pop
     up an alert when received by the app.
 
-<a name="Remote Notifications In iOS" />
+<a name="Remote Notifications In iOS"></a>
 
 ## [Remote Notifications in iOS](remote-notifications-in-ios.md)
 
