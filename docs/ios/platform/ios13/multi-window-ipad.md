@@ -81,7 +81,7 @@ In the code above, the `selectedPhoto` model object has a method to return an `N
 From the `UIApplication` you can start a new `UISceneSession` by calling `RequestSceneSessionActivation`. If an existing scene already exists, you should use that. By default a new scene will be created for you.
 
 ```csharp
-pubic void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
+public void ItemSelected(UICollectionView collectionView, NSIndexPath indexPath)
 {
     var userActivity = selectedPhoto.OpenDetailUserActivity ();
 
