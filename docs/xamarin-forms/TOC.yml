@@ -543,14 +543,18 @@
                   href: user-interface/shapes/index.md
                 - name: Ellipse
                   href: user-interface/shapes/ellipse.md
-                - name: Geometries
-                  href: user-interface/shapes/geometries.md
                 - name: Line
                   href: user-interface/shapes/line.md
-                - name: Path
-                  href: user-interface/shapes/path.md
-                - name: Path Transforms
-                  href: user-interface/shapes/path-transforms.md                  
+                - name: Paths
+                  items:
+                  - name: Path
+                    href: user-interface/shapes/path.md
+                  - name: Path geometries
+                    href: user-interface/shapes/path-geometries.md
+                  - name: Path markup syntax
+                    href: user-interface/shapes/path-markup-syntax.md
+                  - name: Path transforms
+                    href: user-interface/shapes/path-transforms.md
                 - name: Polygon
                   href: user-interface/shapes/polygon.md
                 - name: Polyline

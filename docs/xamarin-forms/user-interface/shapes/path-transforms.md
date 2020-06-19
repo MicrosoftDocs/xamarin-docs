@@ -1,5 +1,5 @@
 ---
-title: "Xamarin.Forms Shapes: Path Transforms"
+title: "Xamarin.Forms Shapes: Path transforms"
 description: "A Xamarin.Forms transform defines how to transform a Path object from one coordinate space to another coordinate space."
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
@@ -10,11 +10,11 @@ ms.date: 06/16/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Xamarin.Forms Shapes: Path Transforms
+# Xamarin.Forms Shapes: Path transforms
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 
 A `Transform` defines how to transform a `Path` object from one coordinate space to another coordinate space. This mapping is described by a transformation `Matrix`, which is a collection of three rows with three columns of `double` values.
 
@@ -345,5 +345,5 @@ In this example, the `Matrix` property is specified as a comma-delimited string 
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.Forms Shapes](index.md)

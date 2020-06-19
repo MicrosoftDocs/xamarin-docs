@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 
 The `Rectangle` class derives from the `Shape` class, and can be used to draw rectangles. For information on the properties that the `Rectangle` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -44,5 +44,5 @@ The following XAML example shows how to draw a filled rectangle, with rounded co
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.Forms Shapes](index.md)

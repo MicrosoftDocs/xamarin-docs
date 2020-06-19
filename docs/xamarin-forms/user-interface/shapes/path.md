@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 
 The `Path` class derives from the `Shape` class, and can be used to draw curves and complex shapes. These curves and shapes are often described using `Geometry` objects. For information on the properties that the `Path` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -29,7 +29,7 @@ For more information about transforms, see [Xamarin.Forms Path Transforms](path-
 
 ## Create a Path
 
-The following XAML example shows how to draw a polygon using a special abbreviated syntax:
+The following XAML example shows how to draw a polygon using a special abbreviated syntax known as path markup syntax:
 
 ```xaml
 <Path Data="M 10,50 L 200,70"
@@ -41,7 +41,12 @@ The following XAML example shows how to draw a polygon using a special abbreviat
       WidthRequest="100" />
 ```
 
-The `Data` string begins with the "moveto" command, indicated by `M`, which establishes a start point for the path. Path data parameters are case-sensitive. The capital `M` indicates an absolute location for the start point. A lowercase `m` would indicate relative coordinates. `L` is the line command, which creates a straight line from the start point to the specified end point.
+The `Data` string begins with the "moveto" command, indicated by `M`, which establishes a start point for the path. `L` is the line command, which creates a straight line from the start point to the specified end point.
+
+> [!NOTE]
+> Path markup syntax is only available in XAML.
+
+For more information about path markup syntax, see [Xamarin.Forms Path markup syntax](path-markup-syntax.md).
 
 ## Path geometry
 
@@ -80,11 +85,12 @@ In the following example, a `Path` is used to draw a triangle:
 </Path>
 ```
 
-For more information about geometries, see [Xamarin.Forms Geometries](geometries.md).
+For more information about geometries, see [Xamarin.Forms Path geometries](path-geometries.md).
 
 ## Related links
 
-- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
+- [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.Forms Shapes](index.md)
-- [Xamarin.Forms Shape Geometries](geometries.md)
-- [Xamarin.Forms Path Transforms](path-transforms.md)
+- [Xamarin.Forms Path geometries](path-geometries.md)
+- [Xamarin.Forms Path markup syntax](path-markup-syntax.md)
+- [Xamarin.Forms Path transforms](path-transforms.md)
