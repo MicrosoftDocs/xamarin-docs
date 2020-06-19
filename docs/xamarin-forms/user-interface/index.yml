@@ -164,12 +164,12 @@ landingContent:
             url:  shapes/index.md
           - text: Ellipse
             url: shapes/ellipse.md
+          - text: Geometries
+            url: shapes/geometries.md            
           - text: Line
             url: shapes/line.md
           - text: Path
             url: shapes/path.md
-          - text: Path geometries
-            url: shapes/path-geometries.md
           - text: Path markup syntax
             url: shapes/path-markup-syntax.md
           - text: Path transforms

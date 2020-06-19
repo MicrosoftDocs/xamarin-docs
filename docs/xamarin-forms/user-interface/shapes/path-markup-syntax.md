@@ -33,8 +33,10 @@ In this syntax:
 
 In the example above, the path markup syntax specifies a start point using the move command (`M`), a series of straight lines using the line command (`L`), and closes the path with the close command (`Z`).
 
-> [!NOTE]
-> In path markup syntax, spaces are not required before or after commands. In addition, two numbers don't have to be separated by a comma or white space, but this can only be achieved when the string is unambiguous.
+In path markup syntax, spaces are not required before or after commands. In addition, two numbers don't have to be separated by a comma or white space, but this can only be achieved when the string is unambiguous.
+
+> [!TIP]
+> Path markup language uses a syntax that's compatible with Scalable Vector Graphics (SVG) image path definitions, and so it can be useful for porting graphics from SVG format.
 
 ## Move command
 
@@ -162,4 +164,4 @@ In addition, you may also use case-insensitive scientific notation. Therefore, `
 ## Related links
 
 - [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
-- [Xamarin.Forms Path geometries](path-geometries.md)
+- [Xamarin.Forms Geometries](geometries.md)

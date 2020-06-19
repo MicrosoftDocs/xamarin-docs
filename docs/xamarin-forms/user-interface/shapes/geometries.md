@@ -1,6 +1,6 @@
 ---
-title: "Xamarin.Forms Shapes: Path geometries"
-description: "Xamarin.Forms Path geometry classes enable you to describe the geometry of a 2D shape."
+title: "Xamarin.Forms Shapes: Geometries"
+description: "Xamarin.Forms geometry classes enable you to describe the geometry of a 2D shape."
 ms.prod: xamarin
 ms.assetid: 07DE3D66-1820-4642-BDDF-84146D40C99D
 ms.technology: xamarin-forms
@@ -10,7 +10,7 @@ ms.date: 06/16/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Xamarin.Forms Shapes: Path geometries
+# Xamarin.Forms Shapes: Geometries
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -182,6 +182,29 @@ The following example shows how to combine geometries in a `GeometryGroup`:
 ```
 
 In this example, four `EllipseGeometry` objects with identical x-radius and y-radius coordinates, but with different center coordinates, are combined. This creates four overlapping circles, whose interiors are filled orange with the `EvenOdd` fill rule.
+
+## Clip geometries
+
+The [`VisualElement`](xref:Xamarin.Forms.VisualElement) class has a `Clip` property, of type `Geometry`, that defines the outline of the contents of an element. When the `Clip` property is set to a `Geometry` object, only the area that is within the region of the `Geometry` will be visible.
+
+The following example shows how to use a `Geometry` object as the clip region for an [`Image`](xref:Xamarin.Forms.Image):
+
+```xaml
+<Image Source="monkeyface.png">
+    <Image.Clip>
+        <EllipseGeometry RadiusX="100"
+                         RadiusY="100"
+                         Center="180,180" />
+    </Image.Clip>
+</Image>
+```
+
+In this example, an `EllipseGeometry` with `RadiusX` and `RadiusY` values of 100, and a `Center` value of (180,180) is set to the `Clip` property of an [`Image`](xref:Xamarin.Forms.Image). Only the part of the image that is within the area of the ellipse will be displayed:
+
+![Clip an Image with an EllipseGeometry](geometries-images/clip-ellipsegeometry.png "Clip an Image with an EllipseGeometry")
+
+> [!NOTE]
+> Simple geometries, path geometries, and composite geometries can all be used to clip [`VisualElement`](xref:Xamarin.Forms.VisualElement) objects.
 
 ## Other features
 

@@ -85,12 +85,12 @@ In the following example, a `Path` is used to draw a triangle:
 </Path>
 ```
 
-For more information about geometries, see [Xamarin.Forms Path geometries](path-geometries.md).
+For more information about geometries, see [Xamarin.Forms Geometries](geometries.md).
 
 ## Related links
 
 - [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
 - [Xamarin.Forms Shapes](index.md)
-- [Xamarin.Forms Path geometries](path-geometries.md)
+- [Xamarin.Forms Geometries](geometries.md)
 - [Xamarin.Forms Path markup syntax](path-markup-syntax.md)
 - [Xamarin.Forms Path transforms](path-transforms.md)

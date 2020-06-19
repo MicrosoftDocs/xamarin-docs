@@ -6,7 +6,7 @@ ms.assetId: 85A0CCF5-C1D8-40BB-927F-A4D944E5534D
 ms.technology: xamarin-forms
 author: profexorgeek
 ms.author: jusjohns
-ms.date: 08/21/2019
+ms.date: 06/19/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -16,7 +16,7 @@ The Xamarin.Forms `VisualElement` class is the base class for most of the contro
 
 ## Properties
 
-The following properties are available on `VisualElement` instances. For a complete list, see the [VisualElement API Properties](xref:Xamarin.Forms.VisualElement#properties).
+The following properties are available on [`VisualElement`](xref:Xamarin.Forms.VisualElement) objects.
 
 ### [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX)
 
@@ -37,6 +37,10 @@ The `Behaviors` property is a `List` of `Behavior` objects. Behaviors enable you
 ### [`Bounds`](xref:Xamarin.Forms.VisualElement.Bounds)
 
 The `Bounds` property is a read-only `Rectangle` object that represents the space occupied by the control. The `Bounds` property value is assigned during the layout cycle. The `Rectangle` `struct` contains useful properties and methods for testing intersection and containment of rectangles. For more information, see the [Xamarin.Forms Rectangle API](xref:Xamarin.Forms.Rectangle).
+
+### `Clip`
+
+The `Clip` property is a `Geometry` object that defines the outline of the contents of an element. To define a clip, use a `Geometry` object such as `EllipseGeometry` to set the element's `Clip` property. Only the area that is within the region of the geometry will be visible. For more information, see [Clip geometries](~/xamarin-forms/user-interface/shapes/geometries.md#clip-geometries).
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 
@@ -261,4 +265,4 @@ The behavior is undefined when the minimum value is greater than the absolute va
 
 ## Related links
 
-* [VisualElement API Documentation](xref:Xamarin.Forms.VisualElement)
+- [VisualElement API](xref:Xamarin.Forms.VisualElement)
