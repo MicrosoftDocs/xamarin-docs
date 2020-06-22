@@ -6,7 +6,7 @@ ms.assetid: 5BF81E25-12E5-49F0-A40C-0CF4C5D63B9B
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
+ms.date: 06/20/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -18,9 +18,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 The `Ellipse` class derives from the `Shape` class, and can be used to draw ellipses and circles. For information on the properties that the `Ellipse` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
-The `Ellipse` class sets the `Aspect` property, inherited from the `Shape` class, to `Stretch.Fill`.
+The `Ellipse` class sets the `Aspect` property, inherited from the `Shape` class, to `Stretch.Fill`. For more information about the `Aspect` property, see [Stretch shapes](index.md#stretch-shapes).
 
 ## Create an Ellipse
+
+To draw an ellipse, create an `Ellipse` object and set its `WidthRequest` and `HeightRequest` properties. Use its `Fill` property to specify the [`Color`](xref:Xamarin.Forms.Color) that is used to paint the interior of the ellipse. Use its `Stroke` property to specify the `Color` that is used to paint the outline of the ellipse. The `StrokeThickness` property specifies the thickness of the ellipse outline.
+
+To draw a circle, make the `WidthRequest` and `HeightRequest` properties of the `Ellipse` object equal.
 
 The following XAML example shows how to draw a filled ellipse:
 
@@ -31,6 +35,10 @@ The following XAML example shows how to draw a filled ellipse:
          HorizontalOptions="Start" />
 ```
 
+In this example, a red filled ellipse with dimensions 150x50 (device-independent units) is drawn:
+
+![Filled ellipse](ellipse-images/filled.png "Filled ellipse")
+
 The following XAML example shows how to draw a circle:
 
 ```xaml
@@ -40,6 +48,10 @@ The following XAML example shows how to draw a circle:
          HeightRequest="150"
          HorizontalOptions="Start" />
 ```
+
+In this example, a red circle with dimensions 150x150 (device-independent units) is drawn:
+
+![Circle](ellipse-images/circle.png "Circle")
 
 ## Related links
 

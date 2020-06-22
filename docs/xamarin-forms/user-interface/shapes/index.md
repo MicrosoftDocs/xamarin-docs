@@ -60,7 +60,7 @@ For more information about valid [`Color`](xref:Xamarin.Forms.Color) values, see
 
 ## Stretch shapes
 
-`Shape` objects have an `Aspect` property, of type `Stretch`. This property determines how a `Shape` object's contents is stretched to fill the `Shape` object's layout space. A `Shape` object's layout space is the amount of space the `Shape` is allocated by the Xamarin.Forms layout system, because of either an explicit `HeightRequest` and `WidthRequest` setting or because of its `HorizontalOptions` and `VerticalOptions` settings.
+`Shape` objects have an `Aspect` property, of type `Stretch`. This property determines how a `Shape` object's contents is stretched to fill the `Shape` object's layout space. A `Shape` object's layout space is the amount of space the `Shape` is allocated by the Xamarin.Forms layout system, because of either an explicit `WidthRequest` and `HeightRequest` setting or because of its `HorizontalOptions` and `VerticalOptions` settings.
 
 The `Stretch` enumeration defines the following members:
 
@@ -86,7 +86,7 @@ The following XAML shows how to set the `Aspect` property:
 </Path>      
 ```
 
-In this example, a `Path` object draws a heart. The `Path` object's `HeightRequest` and `WidthRequest` properties are set to 100, and its `Aspect` property is set to `Uniform`. As a result, the object's contents are resized to fit the destination dimensions, while preserving the aspect ratio:
+In this example, a `Path` object draws a heart. The `Path` object's `WidthRequest` and `HeightRequest` properties are set to 100 device-independent units, and its `Aspect` property is set to `Uniform`. As a result, the object's contents are resized to fit the destination dimensions, while preserving the aspect ratio:
 
 ![Stretch shapes](images/aspect.png "Stretch shapes")
 
