@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Ellipse` class derives from the `Shape` class, and can be used to draw ellipses and circles. For information on the properties that the `Ellipse` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -22,7 +22,7 @@ The `Ellipse` class sets the `Aspect` property, inherited from the `Shape` class
 
 ## Create an Ellipse
 
-To draw an ellipse, create an `Ellipse` object and set its `WidthRequest` and `HeightRequest` properties. Use its `Fill` property to specify the [`Color`](xref:Xamarin.Forms.Color) that is used to paint the interior of the ellipse. Use its `Stroke` property to specify the `Color` that is used to paint the outline of the ellipse. The `StrokeThickness` property specifies the thickness of the ellipse outline.
+To draw an ellipse, create an `Ellipse` object and set its `WidthRequest` and `HeightRequest` properties. To paint the inside of the ellipse, set its `Fill` property to a [`Color`](xref:Xamarin.Forms.Color). To give the ellipse an outline, set its `Stroke` property to a [`Color`](xref:Xamarin.Forms.Color). The `StrokeThickness` property specifies the thickness of the ellipse outline.
 
 To draw a circle, make the `WidthRequest` and `HeightRequest` properties of the `Ellipse` object equal.
 
@@ -53,7 +53,9 @@ In this example, a red circle with dimensions 150x150 (device-independent units)
 
 ![Circle](ellipse-images/circle.png "Circle")
 
+For information about drawing a dashed ellipse, see [Dashed shapes](index.md#dashed-shapes).
+
 ## Related links
 
-- [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)

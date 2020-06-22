@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 Xamarin.Forms path markup syntax enables you to compactly specify path geometries in XAML. The syntax is specified as a string value to the `Path.Data` property:
 
@@ -163,5 +163,5 @@ In addition, you may also use case-insensitive scientific notation. Therefore, `
 
 ## Related links
 
-- [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Geometries](geometries.md)

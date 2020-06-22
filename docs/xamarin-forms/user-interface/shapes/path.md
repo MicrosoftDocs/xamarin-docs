@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Path` class derives from the `Shape` class, and can be used to draw curves and complex shapes. These curves and shapes are often described using `Geometry` objects. For information on the properties that the `Path` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
@@ -89,7 +89,7 @@ For more information about geometries, see [Xamarin.Forms Geometries](geometries
 
 ## Related links
 
-- [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
 - [Xamarin.Forms Geometries](geometries.md)
 - [Xamarin.Forms Path markup syntax](path-markup-syntax.md)

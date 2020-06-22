@@ -28,7 +28,7 @@ Xamarin.Forms Shapes is available in the `Xamarin.Forms.Shapes` namespace on iOS
 - `Stroke`, of type [`Color`](xref:Xamarin.Forms.Color), indicates the color used to paint the shape's outline.
 - `StrokeDashArray`, of type `DoubleCollection`, which represents a collection of `double` values that indicate the pattern of dashes and gaps that are used to outline a shape.
 - `StrokeDashOffset`, of type `double`, specifies the distance within the dash pattern where a dash begins. The default value of this property is 0.0.
-- `StrokeLineCap`, of type `PenLineCap`, describes the shape at the beginning and end of a line or segment. The default value of this property is `PenLineCap.Flat`.
+- `StrokeLineCap`, of type `PenLineCap`, describes the shape at the start and end of a line or segment. The default value of this property is `PenLineCap.Flat`.
 - `StrokeLineJoin`, of type `PenLineJoin`, specifies the type of join that is used at the vertices of a shape. The default value of this property is `PenLineJoin.Miter`.
 - `StrokeThickness`, of type `double`, indicates the width of the shape outline. The default value of this property is 1.0.
 
@@ -90,7 +90,82 @@ In this example, a `Path` object draws a heart. The `Path` object's `WidthReques
 
 ![Stretch shapes](images/aspect.png "Stretch shapes")
 
+## Dashed shapes
+
+`Shape` objects have a `StrokeDashArray` property, of type `DoubleCollection`. This property represents a collection of `double` values that indicate the pattern of dashes and gaps that are used to outline a shape. A `DoubleCollection` is an `ObservableCollection` of `double` values. Each `double` in the collection specifies the length of a dash or gap. The first item in the collection, which is located at index 0, specifies the length of a dash. The second item in the collection, which is located at index 1, specifies the length of a gap. Therefore, objects with an even index value specify dashes, while objects with an odd index value specify gaps.
+
+`Shape` objects also have a `StrokeDashOffset` property , of type `double`, which specifies the distance within the dash pattern where a dash begins. Failure to set this property will result in the `Shape` having a solid outline.
+
+Dashed shapes can be drawn by setting both the `StrokeDashArray` and `StrokeDashOffset` properties. The `StrokeDashArray` property should be set to one or more `double` values, with each pair delimited by a single comma and/or one or more spaces. For example, "0.5 1.0" and "0.5,1.0" are both valid.
+
+The following XAML example shows how to draw a dashed rectangle:
+
+```xaml
+<Rectangle Fill="DarkBlue"
+           Stroke="Red"
+           StrokeThickness="4"
+           StrokeDashArray="1,1"
+           StrokeDashOffset="6"
+           WidthRequest="150"
+           HeightRequest="50"
+           HorizontalOptions="Start" />
+```
+
+In this example, a filled rectangle with a dashed stroke is drawn:
+
+![Dashed rectangle](images/dashed-rectangle.png "Dashed line")
+
+## Line ends
+
+A line has three parts: start cap, line body, and end cap. The start and end caps describe the shape at the start and end of a line, or segment.
+
+`Shape` objects have a `StrokeLineCap` property, of type `PenLineCap`, that describes the shape at the start and end of a line, or segment. The `PenLineCap` enumeration defines the following members:
+
+- `Flat`, which represents a cap that doesn't extend past the last point of the line. This is comparable to no line cap, and is the default value of the `StrokeLineCap` property.
+- `Square`, which represents a rectangle that has a height equal to the line thickness and a length equal to half the line thickness.
+- `Round`, which represents a semicircle that has a diameter equal to the line thickness.
+
+> [!IMPORTANT]
+> The `StrokeLineCap` property has no effect if you set it on a shape that has no start or end points. For example, this property has no effect if you set it on an `Ellipse`, or `Rectangle`.
+
+The following XAML shows how to set the `StrokeLineCap` property:
+
+```xaml
+<Line X1="0"
+      Y1="20"
+      X2="300"
+      Y2="20"
+      StrokeLineCap="Round"
+      Stroke="Red"
+      StrokeThickness="12" />
+```
+
+In this example, the red line is rounded at the start and end of the line:
+
+![Line caps](images/linecap.png "Line caps")
+
+## Line joins
+
+`Shape` objects have a `StrokeLineJoin` property, of type `PenLineJoin`, that specifies the type of join that is used at the vertices of the shape. The `PenLineJoin` enumeration defines the following members:
+
+- `Miter`, which represents regular angular vertices. This is the default value of the `StrokeLineJoin` property.
+- `Bevel`, which represents beveled vertices.
+- `Round`, which represents rounded vertices.
+
+The following XAML shows how to set the `StrokeLineJoin` property:
+
+```xaml
+<Polyline Points="20 20,250 50,20 120"
+          Stroke="DarkBlue"
+          StrokeThickness="20"
+          StrokeLineJoin="Round" />
+```
+
+In this example, the dark blue polyline has rounded joins at its vertices:
+
+![Line joins](images/linejoin.png "Line joins")
+
 ## Related links
 
-- [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Colors in Xamarin.Forms](~/xamarin-forms/user-interface/colors.md)

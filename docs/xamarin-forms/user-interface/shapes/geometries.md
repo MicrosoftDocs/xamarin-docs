@@ -14,7 +14,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-[![Download Sample](~/media/shared/download.png) Download the sample](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+[![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
 The `Geometry` class, and the classes that derive from it, enable you to describe the geometry of a 2D shape. `Geometry` objects can be simple, such as rectangles and circles, or composite, created from two or more geometry objects. More complex geometries can be created by using the `PathGeometry` class, which enables you to describe arcs and curves.
 
@@ -217,5 +217,5 @@ The `GeometryHelper` class provides the following helper methods:
 
 ## Related links
 
-- [ShapeDemos (sample)](https://github.com/xamarin/xamarin-forms-samples/tree/master/UserInterface/ShapesDemos/)
+- [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
