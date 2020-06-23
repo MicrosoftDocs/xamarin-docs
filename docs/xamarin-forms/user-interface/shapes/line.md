@@ -27,7 +27,7 @@ The `Line` class derives from the `Shape` class, and can be used to draw lines. 
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
-For information about controlling how line ends are drawn, see [Line ends](index.md#line-ends).
+For information about controlling how line ends are drawn, see [Control line ends](index.md#control-line-ends).
 
 ## Create a Line
 
@@ -75,7 +75,7 @@ In this example, a dark blue dashed diagonal line is drawn from (40,0) to (0,120
 
 ![Dashed line](line-images/dashed-line.png "Dashed line")
 
-For more information about drawing a dashed line, see [Dashed shapes](index.md#dashed-shapes).
+For more information about drawing a dashed line, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 
 ## Related links
 

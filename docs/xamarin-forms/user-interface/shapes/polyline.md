@@ -6,7 +6,7 @@ ms.assetid: 15D02690-AC03-457E-8815-8E4C17E4D642
 ms.technology: xamarin-forms
 author: davidbritch
 ms.author: dabritch
-ms.date: 06/16/2020
+ms.date: 06/21/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
@@ -16,7 +16,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 
-The `Polyline` class derives from the `Shape` class, and can be used to draw a series of connected straight lines. For information on the properties that the `Polyline` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
+The `Polyline` class derives from the `Shape` class, and can be used to draw a series of connected straight lines. A polyline is similar to a polygon, except the last point in a polyline is not connected to the first point. For information on the properties that the `Polyline` class inherits from the `Shape` class, see [Xamarin.Forms Shapes](index.md).
 
 `Polyline` defines the following properties:
 
@@ -25,16 +25,73 @@ The `Polyline` class derives from the `Shape` class, and can be used to draw a s
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
+The `PointsCollection` type is an `ObservableCollection` of [`Point`](xref:Xamarin.Forms.Point) objects. The `Point` structure defines `X` and `Y` properties, of type `double`, that represent an x- and y-coordinate pair in 2D space. Therefore, the `Points` property should be set to a list of x-coordinate and y-coordinate pairs that describe the polyline vertex points, delimited by a single comma and/or one or more spaces. For example, "40,10 70,80" and "40 10, 70 80" are both valid.
+
+The `FillRule` enumeration defines the following members:
+
+- `EvenOdd` represents a rule that determines whether a point is in the fill region of the polyline. It draws a ray from the point to infinity in any direction and counts the number of segments within the shape that the ray crosses. If this number is odd, the point is inside. If this number is even, the point is outside.
+- `Nonzero` represents a rule that determines whether a point is in the fill region of the polyline. It draws a ray from the point to infinity in any direction and then examines the places where a segment of the shape crosses the ray. Starting with a count of zero, the count is incremented each time a segment crosses the ray from left to right and decremented each time a segment crosses the ray from right to left. After counting the crossings, if the result is zero then the point is outside the polyline. Otherwise, it's inside.
+
 ## Create a Polyline
 
-The following XAML example shows how to draw a polygon:
+To draw a polyline, create a `Polyline` object and set its `Points` property to the vertices of a shape. To give the polyline an outline, set its `Stroke` property to a [`Color`](xref:Xamarin.Forms.Color). The `StrokeThickness` property specifies the thickness of the polyline outline.
+
+> [!IMPORTANT]
+> If you set the `Fill` property of a `Polyline` to a [`Color`](xref:Xamarin.Forms.Color), the interior space of the polyline is painted, even if the start point and end point do not intersect.
+
+The following XAML example shows how to draw a polyline:
+
+```xaml
+<Polyline Points="0,0 10,30, 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
+          Stroke="Red" />
+```
+
+In this example, a red polyline is drawn:
+
+![Polyline](polyline-images/stroke.png "Polyline")
+
+The following XAML example shows how to draw a dashed polyline:
 
 ```xaml
 <Polyline Points="0,0 10,30, 15,0 18,60 23,30 35,30 40,0 43,60 48,30 100,30"
           Stroke="Red"
-          HeightRequest="100"
-          WidthRequest="500" />
+          StrokeThickness="2"
+          StrokeDashArray="1,1"
+          StrokeDashOffset="6" />
 ```
+
+In this example, the polyline is dashed:
+
+![Dashed polyline](polyline-images/dashed.png "Dashed polyline")
+
+For more information about drawing a dashed polyline, see [Draw dashed shapes](index.md#draw-dashed-shapes).
+
+The following XAML example shows a polyline that uses the default fill rule:
+
+```xaml
+<Polyline Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96, 50 96, 48 192, 150 200 144 48"
+          Fill="Blue"
+          Stroke="Red"
+          StrokeThickness="3" />
+```
+
+In this example, the fill behavior of the polyline is determined using the `EvenOdd` fill rule.
+
+![EvenOdd polyline](polyline-images/evenodd.png "EvenOdd polyine")
+
+The following XAML example shows a polyline that uses the `Nonzero` fill rule:
+
+```xaml
+<Polyline Points="0 48, 0 144, 96 150, 100 0, 192 0, 192 96, 50 96, 48 192, 150 200 144 48"
+          Fill="Black"
+          FillRule="Nonzero"
+          Stroke="Yellow"
+          StrokeThickness="3" />
+```
+
+![Nonzero polyline](polyline-images/nonzero.png "Nonzero polyline")
+
+In this example, the fill behavior of the polyline is determined using the `Nonzero` fill rule.
 
 ## Related links
 

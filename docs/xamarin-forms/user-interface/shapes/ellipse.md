@@ -53,7 +53,7 @@ In this example, a red circle with dimensions 150x150 (device-independent units)
 
 ![Circle](ellipse-images/circle.png "Circle")
 
-For information about drawing a dashed ellipse, see [Dashed shapes](index.md#dashed-shapes).
+For information about drawing a dashed ellipse, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 
 ## Related links
 

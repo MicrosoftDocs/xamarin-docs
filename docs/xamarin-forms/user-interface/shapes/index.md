@@ -90,7 +90,7 @@ In this example, a `Path` object draws a heart. The `Path` object's `WidthReques
 
 ![Stretch shapes](images/aspect.png "Stretch shapes")
 
-## Dashed shapes
+## Draw dashed shapes
 
 `Shape` objects have a `StrokeDashArray` property, of type `DoubleCollection`. This property represents a collection of `double` values that indicate the pattern of dashes and gaps that are used to outline a shape. A `DoubleCollection` is an `ObservableCollection` of `double` values. Each `double` in the collection specifies the length of a dash or gap. The first item in the collection, which is located at index 0, specifies the length of a dash. The second item in the collection, which is located at index 1, specifies the length of a gap. Therefore, objects with an even index value specify dashes, while objects with an odd index value specify gaps.
 
@@ -115,7 +115,7 @@ In this example, a filled rectangle with a dashed stroke is drawn:
 
 ![Dashed rectangle](images/dashed-rectangle.png "Dashed line")
 
-## Line ends
+## Control line ends
 
 A line has three parts: start cap, line body, and end cap. The start and end caps describe the shape at the start and end of a line, or segment.
 
@@ -144,7 +144,7 @@ In this example, the red line is rounded at the start and end of the line:
 
 ![Line caps](images/linecap.png "Line caps")
 
-## Line joins
+## Control line joins
 
 `Shape` objects have a `StrokeLineJoin` property, of type `PenLineJoin`, that specifies the type of join that is used at the vertices of the shape. The `PenLineJoin` enumeration defines the following members:
 

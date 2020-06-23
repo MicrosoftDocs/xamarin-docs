@@ -65,7 +65,7 @@ In this example, a blue filled rectangle with rounded corners is drawn:
 
 ![Rectangle with rounded corners](rectangle-images/rounded.png "Rectangle with rounded corners")
 
-For information about drawing a dashed rectangle, see [Dashed shapes](index.md#dashed-shapes).
+For information about drawing a dashed rectangle, see [Draw dashed shapes](index.md#draw-dashed-shapes).
 
 ## Related links
 
