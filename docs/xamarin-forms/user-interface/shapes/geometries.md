@@ -117,6 +117,8 @@ The `PathGeometry` class defines the following properties:
 
 These properties are backed by [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) objects, which means that they can be targets of data bindings, and styled.
 
+For more information about the `FillRule` enumeration, see [Xamarin.Forms Shapes: Fill rules](fillrules.md).
+
 A `PathGeometry` is made up of a collection of `PathFigure` objects, with each `PathFigure` describing a shape in the geometry. Each `PathFigure` is itself comprised of one or more `PathSegment` objects, each of which describes a segment of the shape. There are many types of segments:
 
 - `ArcSegment`, which creates an elliptical arc between two points.
@@ -219,3 +221,4 @@ The `GeometryHelper` class provides the following helper methods:
 
 - [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Shapes](index.md)
+- [Xamarin.Forms Shapes: Fill rules](fillrules.md)

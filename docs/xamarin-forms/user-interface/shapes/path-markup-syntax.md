@@ -28,7 +28,7 @@ Path markup syntax is composed of an optional `FillRule` value, and one or more 
 
 In this syntax:
 
-- *fillRule* is an optional `Xamarin.Forms.Shapes.FillRule` that specifies whether the geometry should use the `EvenOdd` or `Nonzero` `FillRule`. `F0` specifies the `EvenOdd` fill rule, while `F1` specifies the `Nonzero` fill rule.
+- *fillRule* is an optional `Xamarin.Forms.Shapes.FillRule` that specifies whether the geometry should use the `EvenOdd` or `Nonzero` `FillRule`. `F0` specifies the `EvenOdd` fill rule, while `F1` specifies the `Nonzero` fill rule. For more information about fill rules, see [Xamarin.Forms Shapes: Fill rules](fillrules.md).
 -  *figureDescription* represents a figure composed of a move command, draw commands, and an optional close command. A move command specifies the start point of the figure. Draw commands describe the figure's contents, and the optional close command closes the figure.
 
 In the example above, the path markup syntax specifies a start point using the move command (`M`), a series of straight lines using the line command (`L`), and closes the path with the close command (`Z`).
@@ -165,3 +165,4 @@ In addition, you may also use case-insensitive scientific notation. Therefore, `
 
 - [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
 - [Xamarin.Forms Geometries](geometries.md)
+- [Xamarin.Forms Shapes: Fill rules](fillrules.md)
