@@ -150,6 +150,9 @@ await Shell.Current.GoToAsync("monkeydetails");
 
 This example navigates to the page for the `monkeydetails` route.
 
+> [!NOTE]
+> Relative routes do not support passing data within the URI. A error will be thrown. For more information, see [Pass data](#pass-data).
+
 In addition, the following relative route formats are supported:
 
 | Format | Description |
@@ -321,6 +324,9 @@ The first argument for the `QueryPropertyAttribute` specifies the name of the pr
 
 > [!NOTE]
 > A class can be decorated with multiple `QueryPropertyAttribute` objects.
+
+> [!NOTE]
+> Relative routes do not support passing data within the URI. A error will be thrown. For more information, see [Relative routes](#Relative-routes).
 
 ## Back button behavior
 
