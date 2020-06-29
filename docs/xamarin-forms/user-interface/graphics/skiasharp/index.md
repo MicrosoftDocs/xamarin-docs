@@ -27,7 +27,7 @@ This guide assumes that you are familiar with Xamarin.Forms programming.
 
 SkiaSharp for Xamarin.Forms is packaged as a NuGet package. After you've created a Xamarin.Forms solution in Visual Studio or Visual Studio for Mac, you can use the NuGet package manager to search for the **SkiaSharp.Views.Forms** package and add it to your solution. If you check the **References** section of each project after adding SkiaSharp, you can see that various **SkiaSharp** libraries have been added to each of the projects in the solution.
 
-If your Xamarin.Forms application targets iOS, use the project properties page to change the minimum deployment target to iOS 8.0.
+If your Xamarin.Forms application targets iOS, use the `info.plist` file to change the minimum deployment target to iOS 8.0.
 
 In any C# page that uses SkiaSharp you'll want to include a `using` directive for the [`SkiaSharp`](xref:SkiaSharp) namespace, which encompasses all the SkiaSharp classes, structures, and enumerations that you'll use in your graphics programming. You'll also want a `using` directive for the [`SkiaSharp.Views.Forms`](xref:SkiaSharp.Views.Forms) namespace for the classes specific to Xamarin.Forms. This is a much smaller namespace, with the most important class being [`SKCanvasView`](xref:SkiaSharp.Views.Forms.SKCanvasView). This class derives from the Xamarin.Forms `View` class and hosts your SkiaSharp graphics output.
 
