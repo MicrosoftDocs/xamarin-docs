@@ -40,7 +40,7 @@ The `Bounds` property is a read-only `Rectangle` object that represents the spac
 
 ### `Clip`
 
-The `Clip` property is a `Geometry` object that defines the outline of the contents of an element. To define a clip, use a `Geometry` object such as `EllipseGeometry` to set the element's `Clip` property. Only the area that is within the region of the geometry will be visible. For more information, see [Clip geometries](~/xamarin-forms/user-interface/shapes/geometries.md#clip-geometries).
+The `Clip` property is a `Geometry` object that defines the outline of the contents of an element. To define a clip, use a `Geometry` object such as `EllipseGeometry` to set the element's `Clip` property. Only the area that is within the region of the geometry will be visible. For more information, see [Clip with a Geometry](~/xamarin-forms/user-interface/shapes/geometries.md#clip-with-a-geometry).
 
 ### [`Effects`](xref:Xamarin.Forms.Element.Effects)
 

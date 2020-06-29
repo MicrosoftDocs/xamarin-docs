@@ -31,7 +31,6 @@ The following XAML example creates and renders a composite shape, with the `Fill
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Fill="#CCCCFF"
       Aspect="Uniform"
       HorizontalOptions="Start">
@@ -73,7 +72,6 @@ The following XAML example creates and renders a composite shape, with the `Fill
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Fill="#CCCCFF"
       Aspect="Uniform"
       HorizontalOptions="Start">
@@ -110,7 +108,6 @@ A more complex shape with segments running in different directions is required t
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Fill="#CCCCFF">
      <Path.Data>
          <GeometryGroup FillRule="Nonzero">

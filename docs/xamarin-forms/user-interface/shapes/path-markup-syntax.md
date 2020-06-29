@@ -20,7 +20,6 @@ Xamarin.Forms path markup syntax enables you to compactly specify path geometrie
 
 ```xaml
 <Path Stroke="Black"
-      StrokeThickness="1"
       Data="M13.908992,16.207977 L32.000049,16.207977 32.000049,31.999985 13.908992,30.109983Z" />
 ```
 
@@ -28,8 +27,8 @@ Path markup syntax is composed of an optional `FillRule` value, and one or more 
 
 In this syntax:
 
-- *fillRule* is an optional `Xamarin.Forms.Shapes.FillRule` that specifies whether the geometry should use the `EvenOdd` or `Nonzero` `FillRule`. `F0` specifies the `EvenOdd` fill rule, while `F1` specifies the `Nonzero` fill rule. For more information about fill rules, see [Xamarin.Forms Shapes: Fill rules](fillrules.md).
--  *figureDescription* represents a figure composed of a move command, draw commands, and an optional close command. A move command specifies the start point of the figure. Draw commands describe the figure's contents, and the optional close command closes the figure.
+- *fillRule* is an optional `Xamarin.Forms.Shapes.FillRule` that specifies whether the geometry should use the `EvenOdd` or `Nonzero` `FillRule`. `F0` is used to specify the `EvenOdd` fill rule, while `F1` is used to specify the `Nonzero` fill rule. For more information about fill rules, see [Xamarin.Forms Shapes: Fill rules](fillrules.md).
+- *figureDescription* represents a figure composed of a move command, draw commands, and an optional close command. A move command specifies the start point of the figure. Draw commands describe the figure's contents, and the optional close command closes the figure.
 
 In the example above, the path markup syntax specifies a start point using the move command (`M`), a series of straight lines using the line command (`L`), and closes the path with the close command (`Z`).
 
@@ -59,7 +58,7 @@ A draw command can consist of several shape commands. The following draw command
 - Smooth quadratic Bezier curve (`T` or `t`).
 - Elliptical arc (`A` or `a`).
 
-Each draw command is specified with an uppercase or lowercase letter. When sequentially entering more than one command of the same type, you can omit the duplicate command entry. For example `L 100,200 300,400` is equivalent to `L 100, 200 L 300,400`.
+Each draw command is specified with a case-insensitive letter. When sequentially entering more than one command of the same type, you can omit the duplicate command entry. For example `L 100,200 300,400` is equivalent to `L 100,200 L 300,400`.
 
 ### Line command
 
@@ -143,7 +142,7 @@ In this syntax:
 - `sweepDirectionFlag` should be set to 1 if the arc is drawn in a positive-angle direction, otherwise set it to 0.
 - `endPoint` is a [`Point`](xref:Xamarin.Forms.Point) to which the arc is drawn.
 
-`A150,150 0 1,0 150,-150` is an example of a valid elliptical arc command.
+`A 150,150 0 1,0 150,-150` is an example of a valid elliptical arc command.
 
 ## Close command
 
@@ -164,5 +163,5 @@ In addition, you may also use case-insensitive scientific notation. Therefore, `
 ## Related links
 
 - [ShapeDemos (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-shapesdemos/)
-- [Xamarin.Forms Geometries](geometries.md)
+- [Xamarin.Forms Shapes: Geometries](geometries.md)
 - [Xamarin.Forms Shapes: Fill rules](fillrules.md)
