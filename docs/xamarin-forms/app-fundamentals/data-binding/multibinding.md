@@ -39,7 +39,7 @@ The value of the `Mode` property determines the functionality of the `MultiBindi
 
 ## Define a IMultiValueConverter
 
-The `IMultiValueConverter` interface enables custom logic to be applied to a `MultiBinding`. To associate a converter with a `MultiBinding`, create a class that implements the `IValueConverter` interface, and then implement the `Convert` and `ConvertBack` methods:
+The `IMultiValueConverter` interface enables custom logic to be applied to a `MultiBinding`. To associate a converter with a `MultiBinding`, create a class that implements the `IMultiValueConverter` interface, and then implement the `Convert` and `ConvertBack` methods:
 
 ```csharp
 public class AllTrueMultiConverter : IMultiValueConverter
