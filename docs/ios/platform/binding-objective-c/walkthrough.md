@@ -8,6 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 05/02/2017
 ---
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
+
+<br>
 
 # Walkthrough: Binding an iOS Objective-C Library
 

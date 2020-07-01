@@ -8,6 +8,10 @@ author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
 ---
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
+
+<br>
 
 # Bind Android Kotlin libraries
 

@@ -8,6 +8,10 @@ author: davidortinau
 ms.author: daortin
 ms.date: 03/01/2018
 ---
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
+
+<br>
 
 # Troubleshooting Bindings
 
