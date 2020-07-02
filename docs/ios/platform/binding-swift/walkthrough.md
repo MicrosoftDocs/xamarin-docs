@@ -11,6 +11,9 @@ ms.date: 02/11/2020
 
 # Walkthrough: Bind an iOS Swift library
 
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
+
 Xamarin enables mobile developers to create cross-platform native mobile experiences using Visual Studio and C#. You can use the iOS platform SDK components out of the box. But in many cases, you also want to use third-party SDKs developed for that platform, which Xamarin allows you to do via bindings. In order to incorporate a third-party Objective-C framework into your Xamarin.iOS application, you need to create a Xamarin.iOS binding for it before you can use it in your applications.
 
 The iOS platform, along with its native languages and tooling, are constantly evolving and Swift is one of the most dynamic areas in the iOS development world right now. There are a number of third-party SDKs, which have already been migrated from Objective-C to Swift and it presents us with new challenges. Even though the Swift binding process is similar to Objective-C, it requires additional steps and configuration settings to successfully build and run a Xamarin.iOS application that is acceptable to the AppStore.

@@ -11,6 +11,9 @@ ms.date: 06/20/2017
 
 # Naming Parameters With Javadoc
 
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
+
 _This article explains how to recover parameter names in an Java Binding Project by using Javadoc generated from the Java project._
 
 ## Overview

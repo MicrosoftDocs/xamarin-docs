@@ -11,6 +11,9 @@ ms.date: 05/02/2017
 
 # Walkthrough: Binding an iOS Objective-C Library
 
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
+
 _This article provides a hands-on walkthrough of creating a Xamarin.iOS binding for an existing Objective-C library, InfColorPicker. It covers topics such as compiling a static Objective-C library, binding it, and using the binding in a Xamarin.iOS application._
 
 When working on iOS, you might encounter cases where you want to consume a third-party Objective-C library. In those situations, you can use a Xamarin.iOS _Binding Project_ to create a [C# binding](~/cross-platform/macios/binding/overview.md) that will allow you to consume the library in your Xamarin.iOS applications.

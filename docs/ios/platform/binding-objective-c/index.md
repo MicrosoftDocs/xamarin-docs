@@ -12,6 +12,9 @@ ms.date: 03/18/2017
 
 # Binding iOS Libraries
 
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
+
 Follow these links to learn about binding Objective-C libraries and CocoaPods
 for Xamarin.iOS and Xamarin.Mac:
 

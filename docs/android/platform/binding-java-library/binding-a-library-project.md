@@ -11,6 +11,9 @@ ms.date: 03/01/2018
 
 # Binding an Eclipse Library Project
 
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
+
 _This walkthrough explains how to use Xamarin.Android project templates to bind an Eclipse Android library project._
 
 ## Overview
