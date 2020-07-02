@@ -8,12 +8,11 @@ author: davidortinau
 ms.author: daortin
 ms.date: 04/11/2018
 ---
-> [!IMPORTANT]
-> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
-
-<br>
 
 # Binding a .JAR
+
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
 
 _This walkthrough provides step-by-step instructions for creating a Xamarin.Android Java Bindings Library from an Android .JAR file._
 
