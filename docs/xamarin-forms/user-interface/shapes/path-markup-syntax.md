@@ -52,11 +52,11 @@ A draw command can consist of several shape commands. The following draw command
 - Line (`L` or `l`).
 - Horizontal line (`H` or `h`).
 - Vertical line (`V` or `v`).
+- Elliptical arc (`A` or `a`).
 - Cubic Bezier curve (`C` or `c`).
 - Quadratic Bezier curve (`Q` or `q`).
 - Smooth cubic Bezier curve (`S` or `s`).
 - Smooth quadratic Bezier curve (`T` or `t`).
-- Elliptical arc (`A` or `a`).
 
 Each draw command is specified with a case-insensitive letter. When sequentially entering more than one command of the same type, you can omit the duplicate command entry. For example `L 100,200 300,400` is equivalent to `L 100,200 L 300,400`.
 
@@ -67,6 +67,8 @@ The line command creates a straight line between the current point and the speci
 In this syntax, *endPoint* is a [`Point`](xref:Xamarin.Forms.Point) that represents the end point of the line.
 
 `L 20,30` and `L 20 30` are examples of valid line commands.
+
+For information about creating a straight line as a `PathGeometry` object, see [Create a LineSegment](geometries.md#create-a-linesegment).
 
 ### Horizontal line command
 
@@ -84,6 +86,22 @@ In this syntax, *y* is a `double` that represents the y-coordinate of the end po
 
 `V 90` is an example of a valid vertical line command.
 
+### Elliptical arc command
+
+The elliptical arc command creates an elliptical arc between the current point and the specified end point. The syntax for this command is: `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* or `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint*.
+
+In this syntax:
+
+- `size` is a [`Size`](xref:Xamarin.Forms.Size) that represents the x- and y-radius of the arc.
+- `rotationAngle` is a `double` that represents the rotation of the ellipse, in degrees.
+- `isLargeArcFlag` should be set to 1 if the angle of the arc should be 180 degrees or greater, otherwise set it to 0.
+- `sweepDirectionFlag` should be set to 1 if the arc is drawn in a positive-angle direction, otherwise set it to 0.
+- `endPoint` is a [`Point`](xref:Xamarin.Forms.Point) to which the arc is drawn.
+
+`A 150,150 0 1,0 150,-150` is an example of a valid elliptical arc command.
+
+For information about creating an elliptical arc as a `PathGeometry` object, see [Create an ArcSegment](geometries.md#create-an-arcsegment).
+
 ### Cubic Bezier curve command
 
 The cubic Bezier curve command creates a cubic Bezier curve between the current point and the specified end point by using the two specified control point. The syntax for this command is: `C` *controlPoint1* *controlPoint2* *endPoint* or `c` *controlPoint1* *controlPoint2* *endPoint*.
@@ -96,6 +114,8 @@ In this syntax:
 
 `C 100,200 200,400 300,200` is an example of a valid cubic Bezier curve command.
 
+For information about creating a cubic Bezier curve as a `PathGeometry` object, see [Create a BezierSegment](geometries.md#create-a-beziersegment).
+
 ### Quadratic Bezier curve command
 
 The quadratic Bezier curve command creates a quadratic Bezier curve between the current point and the specified end point by using the specified control point. The syntax for this command is: `Q` *controlPoint* *endPoint* or `q` *controlPoint* *endPoint*.
@@ -106,6 +126,8 @@ In this syntax:
 - *endPoint* is a [`Point`](xref:Xamarin.Forms.Point) that represents the point to which the curve is drawn.
 
 `Q 100,200 300,200` is an example of a valid quadratic Bezier curve command.
+
+For information about creating a quadratic Bezier curve as a `PathGeometry` object, see [Create a QuadraticBezierSegment](geometries.md#create-a-quadraticbeziersegment).
 
 ### Smooth cubic Bezier curve command
 
@@ -129,20 +151,6 @@ In this syntax, *endPoint* is a [`Point`](xref:Xamarin.Forms.Point) that represe
 The control point is assumed to be the reflection of the control point of the previous command relative to the current point. If there is no previous command or if the previous command was not a quadratic Bezier curve or a smooth quadratic Bezier curve command, the control point is assumed to be coincident with the current point.
 
 `T 100,30` is an example of a valid smooth quadratic cubic Bezier curve command.
-
-### Elliptical arc command
-
-The elliptical arc command creates an elliptical arc between the current point and the specified end point. The syntax for this command is: `A` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint* or `a` *size* *rotationAngle* *isLargeArcFlag* *sweepDirectionFlag* *endPoint*.
-
-In this syntax:
-
-- `size` is a [`Size`](xref:Xamarin.Forms.Size) that represents the x- and y-radius of the arc.
-- `rotationAngle` is a `double` that represents the rotation of the ellipse, in degrees.
-- `isLargeArcFlag` should be set to 1 if the angle of the arc should be 180 degrees or greater, otherwise set it to 0.
-- `sweepDirectionFlag` should be set to 1 if the arc is drawn in a positive-angle direction, otherwise set it to 0.
-- `endPoint` is a [`Point`](xref:Xamarin.Forms.Point) to which the arc is drawn.
-
-`A 150,150 0 1,0 150,-150` is an example of a valid elliptical arc command.
 
 ## Close command
 
