@@ -24,7 +24,6 @@ Xamarin.Forms includes the following experimental flags:
 - `RadioButton_Experimental`
 - `Shapes_Experimental`
 - `Shell_UWP_Experimental`
-- `StateTriggers_Experimental`
 - `SwipeView_Experimental`
 
 Using functionality that's behind an experimental flag requires you to enable the flag, or flags, in your application. There are two approaches for enabling experimental flags:

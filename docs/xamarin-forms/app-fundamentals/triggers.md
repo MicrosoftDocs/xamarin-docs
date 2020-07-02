@@ -369,11 +369,7 @@ public class FadeTriggerAction : TriggerAction<VisualElement>
 
 ## State triggers
 
-State triggers have been introduced in Xamarin.Forms 4.5, and are a specialized group of triggers that define the conditions under which a [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied. However, they are currently experimental and can only be used by adding the following line of code to your *App.xaml.cs* file:
-
-```csharp
-Device.SetFlags(new string[]{ "StateTriggers_Experimental" });
-```
+State triggers are a specialized group of triggers that define the conditions under which a [`VisualState`](xref:Xamarin.Forms.VisualState) should be applied. 
 
 State triggers are added to the [`StateTriggers`](xref:Xamarin.Forms.VisualState.StateTriggers) collection of a [`VisualState`](xref:Xamarin.Forms.VisualState). This collection can contain a single state trigger, or multiple state triggers. A [`VisualState`](xref:Xamarin.Forms.VisualState) will be applied when any state triggers in the collection are active.
 
