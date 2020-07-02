@@ -8,12 +8,11 @@ author: alexeystrakh
 ms.author: alstrakh
 ms.date: 02/11/2020
 ---
-> [!IMPORTANT]
-> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
-
-<br>
 
 # Walkthrough: Bind an Android Kotlin library
+
+> [!IMPORTANT]
+> We're currently investigating custom binding usage on the Xamarin platform. Please take [**this survey**](https://www.surveymonkey.com/r/KKBHNLT) to inform future development efforts.
 
 Xamarin enables mobile developers to create cross-platform native mobile apps using Visual Studio and C#. You can use the Android platform SDK components out of the box but in many cases you also want to use third-party SDKs written for that platform and Xamarin allows you to do it via bindings. In order to incorporate a third-party Android framework into your Xamarin.Android application, you need to create a Xamarin.Android binding for it before you can use it in your applications.
 
