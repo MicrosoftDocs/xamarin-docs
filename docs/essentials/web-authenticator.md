@@ -185,7 +185,7 @@ It's possible to use the `WebAuthenticator` API with any web back end service.  
 
 1. Setup your desired [external social authentication providers](https://docs.microsoft.com/aspnet/core/security/authentication/social/?view=aspnetcore-3.1&tabs=visual-studio) in an ASP.NET Core web app.
 2. Set the Default Authentication Scheme to `CookieAuthenticationDefaults.AuthenticationScheme` in your `.AddAuthentication()` call.
-3. Use `.AddCookies()` in your Startup.cs `.AddAuthentication()` call.
+3. Use `.AddCookie()` in your Startup.cs `.AddAuthentication()` call.
 4. All providers must be configured with `.SaveTokens = true;`.
 
 > [!TIP]
