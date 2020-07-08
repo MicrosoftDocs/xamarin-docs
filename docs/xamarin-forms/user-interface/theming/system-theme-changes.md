@@ -152,6 +152,9 @@ Application.Current.RequestedThemeChanged += (s, a) =>
 
 The `AppThemeChangedEventArgs` object, which accompanies the `RequestedThemeChanged` event, has a single property named `RequestedTheme`, of type `OSAppTheme`. This property can be examined to detect the requested system theme.
 
+> [!IMPORTANT]
+> To respond to theme changes on Android you must include the `ConfigChanges.UiMode` flag in the `Activity` attribute of your `MainActivity` class.
+
 ## Related links
 
 - [SystemThemes (sample)](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-systemthemesdemo/)
