@@ -405,6 +405,32 @@
                   href: user-interface/map/native-map-app.md
             - name: MediaElement
               href: user-interface/mediaelement.md
+            - name: Shapes
+              items:
+                - name: Overview
+                  href: user-interface/shapes/index.md
+                - name: Ellipse
+                  href: user-interface/shapes/ellipse.md
+                - name: Fill rules
+                  href: user-interface/shapes/fillrules.md
+                - name: Geometries
+                  href: user-interface/shapes/geometries.md
+                - name: Line
+                  href: user-interface/shapes/line.md
+                - name: Paths
+                  items:
+                  - name: Path
+                    href: user-interface/shapes/path.md
+                  - name: Path markup syntax
+                    href: user-interface/shapes/path-markup-syntax.md
+                  - name: Path transforms
+                    href: user-interface/shapes/path-transforms.md
+                - name: Polygon
+                  href: user-interface/shapes/polygon.md
+                - name: Polyline
+                  href: user-interface/shapes/polyline.md
+                - name: Rectangle
+                  href: user-interface/shapes/rectangle.md              
             - name: WebView
               href: user-interface/webview.md
         - name: Initiate commands
@@ -537,32 +563,6 @@
               href: user-interface/text/fonts.md
             - name: Graphics with SkiaSharp
               href: user-interface/graphics/skiasharp/index.md
-            - name: Shapes
-              items:
-                - name: Overview
-                  href: user-interface/shapes/index.md
-                - name: Ellipse
-                  href: user-interface/shapes/ellipse.md
-                - name: Fill rules
-                  href: user-interface/shapes/fillrules.md
-                - name: Geometries
-                  href: user-interface/shapes/geometries.md
-                - name: Line
-                  href: user-interface/shapes/line.md
-                - name: Paths
-                  items:
-                  - name: Path
-                    href: user-interface/shapes/path.md
-                  - name: Path markup syntax
-                    href: user-interface/shapes/path-markup-syntax.md
-                  - name: Path transforms
-                    href: user-interface/shapes/path-transforms.md
-                - name: Polygon
-                  href: user-interface/shapes/polygon.md
-                - name: Polyline
-                  href: user-interface/shapes/polyline.md
-                - name: Rectangle
-                  href: user-interface/shapes/rectangle.md
             - name: Splash screen
               href: user-interface/splashscreen.md
             - name: Styles

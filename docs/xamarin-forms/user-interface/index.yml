@@ -11,7 +11,7 @@ metadata:
   ms.assetid: 391B4A77-7CAC-42D2-9E77-BD8E170E9BE6
   author: davidbritch
   ms.author: dabritch
-  ms.date: 06/16/2020
+  ms.date: 07/08/2020
   no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 landingContent:
@@ -50,6 +50,8 @@ landingContent:
             url: map/index.md
           - text: MediaElement
             url: mediaelement.md
+          - text: Shapes
+            url: shapes/index.md
           - text: WebView
             url: webview.md
 
@@ -155,29 +157,6 @@ landingContent:
             url: visual/index.md
           - text: Visual State Manager
             url: visual-state-manager.md
-
-  - title: Shapes
-    linkLists:
-      - linkListType: concept
-        links:
-          - text: Overview
-            url:  shapes/index.md
-          - text: Ellipse
-            url: shapes/ellipse.md
-          - text: Fill rules
-            url: shapes/fillrules.md
-          - text: Geometries
-            url: shapes/geometries.md
-          - text: Line
-            url: shapes/line.md
-          - text: Path
-            url: shapes/path.md
-          - text: Polygon
-            url: shapes/polygon.md
-          - text: Polyline
-            url: shapes/polyline.md
-          - text: Rectangle
-            url: shapes/rectangle.md
 
   - title: Layouts
     linkLists:
