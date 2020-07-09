@@ -35,6 +35,7 @@ There are a number of NuGet packages with similar names. The correct package has
 - **Created by:** Frank A. Krueger (praeclarum)
 - **ID:** sqlite-net-pcl
 - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
+- **Authors:** SQLite-net
 
 > [!NOTE]
 > Despite the package name, use the **sqlite-net-pcl** NuGet package even in .NET Standard projects.
