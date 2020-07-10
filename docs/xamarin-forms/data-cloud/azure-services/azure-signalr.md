@@ -303,7 +303,7 @@ Once these steps are completed and the application is run, clicking the **Connec
 
 ## Related links
 
-* [Crafting real-time mobile apps with Xamarin and SignalR](https://mybuild.techcommunity.microsoft.com/sessions/77333/)
+* [Crafting real-time mobile apps with Xamarin and SignalR](https://www.youtube.com/watch?v=AlqZ1LpUXeg)
 * [Introduction to SignalR](/aspnet/signalr/overview/getting-started/introduction-to-signalr)
 * [Introduction to Azure Functions](/azure/azure-functions/functions-overview)
 * [Azure Functions documentation](/azure/azure-functions/)
