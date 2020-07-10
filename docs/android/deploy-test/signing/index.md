@@ -22,7 +22,7 @@ through an app store.
 # [Visual Studio](#tab/windows)
 
 In [Archive for Publishing](~/android/deploy-test/release-prep/index.md#archive),
-the **Distribution Channel** dialog presented two choices for
+the **Distribution Channel** dialog presents two choices for
 distribution. Select **Ad-Hoc**:
 
 [![Distribution Channel dialog](images/vs/01-distribution-channel-sml.png)](images/vs/01-distribution-channel.png#lightbox)
@@ -57,7 +57,7 @@ An existing certificate can be used by clicking the **Import** button and then p
 [![Ad Hoc signing identity](images/vs/02-ad-hoc-signing-identity-vs-sml.png)](images/vs/02-ad-hoc-signing-identity-vs.png#lightbox)
 
 The **Create Android Key Store** dialog is displayed; use this dialog
-to create a new signing certificate that can use for signing
+to create a new signing certificate that can be used for signing
 Android applications. Enter the required information (outlined in red)
 as shown in this dialog:
 
@@ -76,8 +76,10 @@ key in the following location:
 
 **C:\\Users\\*USERNAME*\\AppData\\Local\\Xamarin\\Mono for Android\\Keystore\\chimp\\chimp.keystore**
 
-> [!NOTE]
-> Be sure to back up the resulting keystore file and password in a
+> [!IMPORTANT]
+> The AppData folder is hidden by default and you may need to unhide it to access it.
+>
+> In addition, be sure to back up the resulting keystore file and password in a
 > safe place &ndash; it is not included in the Solution. If you lose your
 > keystore file (for example, because you moved to another computer or
 > reinstalled Windows), you will be unable to
