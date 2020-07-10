@@ -12,7 +12,7 @@ ms.date: 07/02/2018
 # Signing the Android Application Package
 
 In [Preparing an App for Release](~/android/deploy-test/release-prep/index.md)
-the **Archive Manager** can be used to build the app and place it in an archive for
+the **Archive Manager** was used to build the app and place it in an archive for
 signing and publishing. This section explains how to create an Android
 signing identity, create a new signing certificate for Android
 applications, and publish the archived app *ad hoc* to disk. The
