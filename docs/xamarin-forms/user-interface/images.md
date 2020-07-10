@@ -153,11 +153,10 @@ If you place embedded images into folders within your project, the folder names 
 The code to load an embedded image simply passes the **Resource ID** to the [`ImageSource.FromResource`](xref:Xamarin.Forms.ImageSource.FromResource*) method as shown below:
 
 ```csharp
-var embeddedImage = new Image {
-      Source = ImageSource.FromResource(
-        "WorkingWithImages.beach.jpg",
-        typeof(EmbeddedImages).GetTypeInfo().Assembly
-      ) };
+Image embeddedImage = new Image
+{
+    Source = ImageSource.FromResource("WorkingWithImages.beach.jpg", typeof(MyClass).GetTypeInfo().Assembly)
+};
 ```
 
 > [!NOTE]
@@ -223,7 +222,7 @@ Because it is sometimes difficult to understand why a particular image resource 
 using System.Reflection;
 // ...
 // NOTE: use for debugging, not in released app code!
-var assembly = typeof(EmbeddedImages).GetTypeInfo().Assembly;
+var assembly = typeof(MyClass).GetTypeInfo().Assembly;
 foreach (var res in assembly.GetManifestResourceNames())
 {
     System.Diagnostics.Debug.WriteLine("found resource: " + res);
