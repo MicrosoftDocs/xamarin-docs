@@ -32,8 +32,10 @@ Use the NuGet package manager to search for **sqlite-net-pcl** and add the lates
 
 There are a number of NuGet packages with similar names. The correct package has these attributes:
 
-- **Created by:** Frank A. Krueger (praeclarum)
 - **ID:** sqlite-net-pcl
+- **Author(s):** SQLite-net
+- **Owner(s):** praeclarum
+- **Project URL:** https://github.com/praeclarum/sqlite-net
 - **NuGet link:** [sqlite-net-pcl](https://www.nuget.org/packages/sqlite-net-pcl/)
 
 > [!NOTE]

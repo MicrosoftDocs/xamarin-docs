@@ -37,6 +37,9 @@ When creating an attached property for use on other types, the class where the p
 
 An attached property can be created by declaring a `public static readonly` property of type [`BindableProperty`](xref:Xamarin.Forms.BindableProperty). The bindable property should be set to the returned value of one of the [`BindableProperty.CreateAttached`](xref:Xamarin.Forms.BindableProperty.CreateAttached(System.String,System.Type,System.Type,System.Object,Xamarin.Forms.BindingMode,Xamarin.Forms.BindableProperty.ValidateValueDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangedDelegate,Xamarin.Forms.BindableProperty.BindingPropertyChangingDelegate,Xamarin.Forms.BindableProperty.CoerceValueDelegate,Xamarin.Forms.BindableProperty.CreateDefaultValueDelegate)) method overloads. The declaration should be within the body of the owning class, but outside of any member definitions.
 
+> [!IMPORTANT]
+> The naming convention for attached properties is that the attached property identifier must match the property name specified in the `CreateAttached` method, with "Property" appended to it.
+
 The following code shows an example of an attached property:
 
 ```csharp
@@ -44,7 +47,7 @@ public static readonly BindableProperty HasShadowProperty =
   BindableProperty.CreateAttached ("HasShadow", typeof(bool), typeof(ShadowEffect), false);
 ```
 
-This creates an attached property named `HasShadow`, of type `bool`. The property is owned by the `ShadowEffect` class, and has a default value of `false`. The naming convention for attached properties is that the attached property identifier must match the property name specified in the `CreateAttached` method, with "Property" appended to it. Therefore, in the example above, the attached property identifier is `HasShadowProperty`.
+This creates an attached property named `HasShadowProperty`, of type `bool`. The property is owned by the `ShadowEffect` class, and has a default value of `false`.
 
 For more information about creating bindable properties, including parameters that can be specified during creation, see [Create a bindable property](~/xamarin-forms/xaml/bindable-properties.md#consume-a-bindable-property).
 

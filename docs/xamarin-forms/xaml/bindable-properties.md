@@ -48,6 +48,9 @@ At a minimum, an identifier must be specified when creating a [`BindableProperty
 - The type of the owning object.
 - The default value for the property. This ensures that the property always returns a particular default value when it is unset, and it can be different from the default value for the type of the property. The default value will be restored when the [`ClearValue`](xref:Xamarin.Forms.BindableObject.ClearValue(Xamarin.Forms.BindableProperty)) method is called on the bindable property.
 
+> [!IMPORTANT]
+> The naming convention for bindable properties is that the bindable property identifier must match the property name specified in the `Create` method, with "Property" appended to it. 
+
 The following code shows an example of a bindable property, with an identifier and values for the four required parameters:
 
 ```csharp
@@ -55,7 +58,7 @@ public static readonly BindableProperty EventNameProperty =
   BindableProperty.Create ("EventName", typeof(string), typeof(EventToCommandBehavior), null);
 ```
 
-This creates a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance named `EventName`, of type `string`. The property is owned by the `EventToCommandBehavior` class, and has a default value of `null`. The naming convention for bindable properties is that the bindable property identifier must match the property name specified in the `Create` method, with "Property" appended to it. Therefore, in the example above, the bindable property identifier is `EventNameProperty`.
+This creates a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance named `EventNameProperty`, of type `string`. The property is owned by the `EventToCommandBehavior` class, and has a default value of `null`.
 
 Optionally, when creating a [`BindableProperty`](xref:Xamarin.Forms.BindableProperty) instance, the following parameters can be specified:
 
