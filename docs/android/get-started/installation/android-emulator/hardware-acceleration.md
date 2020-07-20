@@ -61,7 +61,7 @@ criteria are met:
 
 > [!IMPORTANT]
 > You can't run a VM-accelerated emulator inside another VM, such as
-> a VM hosted by VirtualBox, VMWare, or Docker. You must run the Android
+> a VM hosted by VirtualBox, VMware, or Docker. You must run the Android
 > emulator [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
 For information about launching and debugging with the Android
@@ -248,7 +248,7 @@ if the following criteria are met:
 > [!IMPORTANT]
 >
 > You can't run a  VM-accelerated emulator inside another VM,
-> such as a VM  hosted by VirtualBox, VMWare, or Docker. You
+> such as a VM  hosted by VirtualBox, VMware, or Docker. You
 > must run the Android emulator
 > [directly on your system hardware](https://developer.android.com/studio/run/emulator-acceleration.html#extensions).
 
