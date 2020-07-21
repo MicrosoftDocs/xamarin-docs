@@ -1,4 +1,3 @@
-- name: Xamarin.Forms
   href: index.yml
   items:
     - name: Get Started
@@ -250,16 +249,15 @@
             - name: Picking from the Photo Library
               href: app-fundamentals/dependency-service/photo-picker.md
         - name: Dual-screen
-          href: app-fundamentals/dual-screen/index.md
           items:
+            - name: Get started
+              href: app-fundamentals/dual-screen/index.md
             - name: Dual-screen patterns
               href: app-fundamentals/dual-screen/design-patterns.md
-            - name: Dual-screen layout
+            - name: TwoPaneView layout
               href: app-fundamentals/dual-screen/twopaneview.md
-            - name: Dual-screen device capabilities
+            - name: DualScreenInfo helper class
               href: app-fundamentals/dual-screen/dual-screen-info.md
-            - name: Dual-screen platform helpers
-              href: app-fundamentals/dual-screen/dual-screen-helper.md
             - name: Dual-screen triggers
               href: app-fundamentals/dual-screen/triggers.md
         - name: Effects

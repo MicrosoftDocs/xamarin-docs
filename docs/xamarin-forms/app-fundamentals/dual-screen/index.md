@@ -14,24 +14,45 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
-Surface Duo (Android) and Surface Neo (Windows 10X) introduce new patterns for touch applications. Xamarin.Forms includes `TwoPaneView` and `DualScreenInfo` classes so you can develop apps for these devices.
+Dual-screen devices like the Microsoft Surface Duo facilitate new user-experience possibilities for your applications. Xamarin.Forms includes `TwoPaneView` and `DualScreenInfo` classes so you can develop apps for dual-screen devices.
 
-## [Dual-screen design patterns](design-patterns.md)
+## Get started
 
-When considering how to best utilize multiple screens on a dual-screen device, refer to this pattern guidance to find the best fit for your application interface.
+Follow these steps to add dual-screen capabilities to a Xamarin.Forms app:
 
-## [Dual-screen layout](twopaneview.md)
+1. Open the **NuGet Package Manager** dialog for your solution.
+2. Under the **Browse** tab, search for `Xamarin.Forms.DualScreen`.
+3. Install the `Xamarin.Forms.DualScreen` package to your solution.
+4. Add the following initialization method call to the Android project's `MainActivity` class, in the `OnCreate` event:
 
-The Xamarin.Forms `TwoPaneView` class, inspired by the UWP control of the same name, is a cross-platform layout optimized for dual-screen devices.
+    ```csharp
+    Xamarin.Forms.DualScreen.DualScreenService.Init(this);
+    ```
 
-## [Dual-screen device capabilities](dual-screen-info.md)
+    This method is required for the app to be able to detect changes in the app's state, such as being spanned across two screens.
 
-The `DualScreenInfo` class enables you to determine which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more.
+5. Update the `Activity` attribute on the Android project's `MainActivity` class, so that it includes _all_ these `ConfigurationChanges` options:
 
-## [Dual-screen platform helpers](dual-screen-helper.md)
+    ```@csharp
+    ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation 
+        | ConfigChanges.ScreenLayout | ConfigChanges.SmallestScreenSize | ConfigChanges.UiMode
+    ```
 
-The `DualScreenHelper` class lets you check if the platform supports opening a new window as Picture in Picture. For Neo, this enables you to open a window that will display in the Wonderbar, when the device is in compose mode.
+    These values are required so that configuration changes and span state can be more reliably reported. By default only two are added to Xamarin.Forms projects, so remember to add the rest for reliable dual-screen support.
 
-## [Dual-screen triggers](triggers.md)
+## Troubleshooting
 
-The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes two state triggers that trigger a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of the attached layout, or window, changes.
+If the `DualScreenInfo` class or `TwoPaneView` layout aren't working as expected, double-check the set-up instructions on this page. Omitting or misconfiguring the `Init` method or the `ConfigurationChanges` attribute values are common causes of errors.
+
+Review the [Xamarin.Forms dual-screen samples](https://docs.microsoft.com/dual-screen/xamarin/samples) for additional guidance and reference implementation.
+
+## Next steps
+
+Once you've added the NuGet, add dual-screen features to your app with the following guidance:
+
+- [Dual-screen design patterns](design-patterns.md) - When considering how to best utilize multiple screens on a dual-screen device, refer to this pattern guidance to find the best fit for your application interface.
+- [TwoPaneView layout](twopaneview.md) - The Xamarin.Forms `TwoPaneView` class, inspired by the UWP control of the same name, is a cross-platform layout optimized for dual-screen devices.
+- [DualScreenInfo helper class](dual-screen-info.md) - The `DualScreenInfo` class enables you to determine which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more.
+- [Dual-screen triggers](triggers.md) - The [`Xamarin.Forms.DualScreen`](xref:Xamarin.Forms.DualScreen) namespace includes two state triggers that trigger a [`VisualState`](xref:Xamarin.Forms.VisualState) change when the view mode of the attached layout, or window, changes.
+
+Visit the [dual-screen developer docs](https://docs.microsoft.com/dual-screen/) for more information.

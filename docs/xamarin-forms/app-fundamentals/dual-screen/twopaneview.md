@@ -10,7 +10,7 @@ ms.date: 02/08/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Xamarin.Forms dual-screen layout
+# Xamarin.Forms TwoPaneView layout
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
@@ -20,24 +20,31 @@ The `TwoPaneView` class represents a container with two views that size and posi
 
 ## Set up TwoPaneView
 
-The `TwoPaneView.Source` property can take a URI or local file path. Playback will begin immediately upon the media opening:
+Follow these instructions to create a dual-screen layout in your app:
 
-```xaml
-<ContentPage xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen">
-    <dualScreen:TwoPaneView>
-        <dualScreen:TwoPaneView.Pane1>
-            <StackLayout>
-                <Label Text="Pane1 Content" />
-            </StackLayout>
-        </dualScreen:TwoPaneView.Pane1>
-        <dualScreen:TwoPaneView.Pane2>
-            <StackLayout>
-                <Label Text="Pane2 Content" />
-            </StackLayout>
-        </dualScreen:TwoPaneView.Pane2>
-    </dualScreen:TwoPaneView>
-</ContentPage>
-```
+1. Follow the [get started](index.md) instructions to add the NuGet and configure the Android `MainActivity` class.
+1. Start with a basic `TwoPaneView` using the following XAML:
+
+    ```xaml
+    <ContentPage 
+        xmlns:dualScreen="clr-namespace:Xamarin.Forms.DualScreen;assembly=Xamarin.Forms.DualScreen">
+        <dualScreen:TwoPaneView>
+            <dualScreen:TwoPaneView.Pane1>
+                <StackLayout>
+                    <Label Text="Pane1 Content" />
+                </StackLayout>
+            </dualScreen:TwoPaneView.Pane1>
+            <dualScreen:TwoPaneView.Pane2>
+                <StackLayout>
+                    <Label Text="Pane2 Content" />
+                </StackLayout>
+            </dualScreen:TwoPaneView.Pane2>
+        </dualScreen:TwoPaneView>
+    </ContentPage>
+    ```
+
+> [!TIP]
+> The above XAML omits many common attributes from the `ContentPage` element. When adding a `TwoPaneView` to your app, remember to declare the `xmlns:dualScreen` namespace as shown.
 
 ## Understand TwoPaneView modes
 

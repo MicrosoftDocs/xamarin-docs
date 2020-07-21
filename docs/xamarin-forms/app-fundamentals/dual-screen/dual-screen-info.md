@@ -10,13 +10,21 @@ ms.date: 05/19/2020
 no-loc: [Xamarin.Forms, Xamarin.Essentials]
 ---
 
-# Xamarin.Forms dual-screen device capabilities
+# Xamarin.Forms DualScreenInfo helper class
 
 ![](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
 The `DualScreenInfo` class enables you to determine which pane your view is on, how big it is, what posture the device is in, the angle of the hinge, and more.
+
+## Configure DualScreenInfo
+
+Follow these instructions to create a dual-screen layout in your app:
+
+1. Follow the [get started](index.md) instructions to add the NuGet and configure the Android `MainActivity` class.
+1. Add `using Xamarin.Forms.DualScreen;` to your class file.
+1. Use the `DualScreenInfo.Current` class in your app.
 
 ## Properties
 
