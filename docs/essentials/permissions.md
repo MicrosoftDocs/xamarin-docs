@@ -141,7 +141,7 @@ public async Task<PermissionStatus> CheckAndRequestPermissionAsync<T>(T permissi
 
 ## Extending Permissions
 
-The Permissions API was created to be flexible and extensible for applications that require additional validation or permissions that aren't included in Xamarin.Essentials. Create a new class that inherits from `BasePermission` and implement the required abstract methods. Then
+The Permissions API was created to be flexible and extensible for applications that require additional validation or permissions that aren't included in Xamarin.Essentials. Create a new class that inherits from `BasePermission` and implement the required abstract methods.
 
 ```csharp
 public class MyPermission : BasePermission
@@ -166,21 +166,10 @@ public class MyPermission : BasePermission
 }
 ```
 
-When implementing a permission in a specific platform, the `BasePlatformPermission` class can be inherited from. This provides additional platform helper methods to automatically check the declarations. This can help when creating custom permissions to do grouping. For example, you can request both Read and Write access to storage on Android using the following custom permission.
-
-Create a new permission in your project that you're calling permissions from.
+When implementing a permission in a specific platform, the `BasePlatformPermission` class can be inherited from. This provides additional platform helper methods to automatically check the declarations. This can help when creating custom permissions that do groupings. For example, you can request both Read and Write access to storage on Android using the following custom permission.
 
 ```csharp
-public partial class ReadWriteStoragePermission  : Xamarin.Essentials.Permissions.BasePlatformPermission
-{
-
-}
-```
-
-In your Android project, extend the permission with permissions you would like to request.
-
-```csharp
-public partial class ReadWriteStoragePermission : Xamarin.Essentials.Permissions.BasePlatformPermission
+public class ReadWriteStoragePermission : Xamarin.Essentials.Permissions.BasePlatformPermission
 {
     public override (string androidPermission, bool isRuntime)[] RequiredPermissions => new List<(string androidPermission, bool isRuntime)>
     {
@@ -190,10 +179,49 @@ public partial class ReadWriteStoragePermission : Xamarin.Essentials.Permissions
 }
 ```
 
-Then you can call your new permission from shared logic.
+Then you can call your new permission from Android project.
 
 ```csharp
 await Permissions.RequestAsync<ReadWriteStoragePermission>();
+```
+
+If you wanted to call this API from your shared code you could create an interface and use a [dependency service](https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/dependency-service/) to register and get the implementation.
+
+```csharp
+public interface IReadWritePermission
+{        
+    Task<PermissionStatus> CheckStatusAsync();
+    Task<PermissionStatus> RequestAsync();
+}
+```
+
+Then implement the interface in your platform project:
+
+```csharp
+public class ReadWriteStoragePermission : Xamarin.Essentials.Permissions.BasePlatformPermission, IReadWritePermission
+{
+    public override (string androidPermission, bool isRuntime)[] RequiredPermissions => new List<(string androidPermission, bool isRuntime)>
+    {
+        (Android.Manifest.Permission.ReadExternalStorage, true),
+        (Android.Manifest.Permission.WriteExternalStorage, true)
+    }.ToArray();
+}
+```
+
+You can then register the specific implementation:
+
+```csharp
+DependencyService.Register<IReadWritePermission, ReadWriteStoragePermission>();
+```
+Then from your shared project you can resolve and use it:
+
+```csharp
+var readWritePermission = DependencyService.Get<IReadWritePermission>();
+var status = await readWritePermission.CheckStatusAsync();
+if (status != PermissionStatus.Granted)
+{
+    status = await readWritePermission.RequestAsync();
+}
 ```
 
 ## Platform Implementation Specifics
