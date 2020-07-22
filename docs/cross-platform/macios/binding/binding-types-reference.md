@@ -31,7 +31,7 @@ interface MyType : [Protocol1, Protocol2] {
 ```
 
 Every interface in your contract definition that has the 
-[`[BaseType]`](#BaseTypeAttribute) attribute that declares the base type for 
+[`[BaseType]`](#BaseTypeAttribute) attribute declares the base type for 
 the generated object. In the above declaration a `MyType` class C# type will 
 be generated that binds to an Objective-C type called `MyType`.
 
@@ -456,8 +456,8 @@ Otherwise, the method will not be registered.
 
 This in general means that when you subclass a class that
 has been flagged with the `ModelAttribute`, you should not call
-the base method.   Calling that method will throw an
-exception, you are supposed to implement the entire behavior
+the base method.   Calling that method will throw the following
+exception: Foundation.You_Should_Not_Call_base_In_This_Method. You are supposed to implement the entire behavior
 on your subclass for any methods you override.
 
 <a name="AbstractAttribute"></a>
