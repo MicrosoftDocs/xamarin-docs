@@ -71,7 +71,7 @@ Some of these components are implemented in the *Tasky* case study.
 
 By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms, as the figure below illustrates:
 
- ![](overview-images/layers2.png "By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms")
+ ![By following the principle of separation of responsibility by layering your application architecture and then moving core functionality that is platform agnostic into a reusable core library, you can maximize code sharing across platforms](overview-images/layers2.png)
 
  <a name="Case_Studies"></a>
 

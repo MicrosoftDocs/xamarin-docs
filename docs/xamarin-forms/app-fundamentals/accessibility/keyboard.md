@@ -49,7 +49,7 @@ By default, the tab order of controls is the same order in which they are listed
 
 The following screenshot shows the default tab order for this code example:
 
-![](keyboard-images/default-tab-order.png "Default Row-based Tab Order")
+![Default Row-based Tab Order](keyboard-images/default-tab-order.png)
 
 The tab order here is row-based, and is the order the controls are listed in the XAML. Therefore, pressing the Tab key navigates through forename [`Entry`](xref:Xamarin.Forms.Entry) instances, followed by surname `Entry` instances. However, a more intuitive experience would be to use a column-first tab navigation, so that pressing the Tab key navigates through forename-surname pairs. This can be achieved by specifying the tab order of the input controls.
 
@@ -106,7 +106,7 @@ The following XAML example shows the `TabIndex` property set on input controls t
 
 The following screenshot shows the tab order for this code example:
 
-![](keyboard-images/correct-tab-order.png "Column-based Tab Order")
+![Column-based Tab Order](keyboard-images/correct-tab-order.png)
 
 The tab order here is column-based. Therefore, pressing the Tab key navigates through forename-surname [`Entry`](xref:Xamarin.Forms.Entry) pairs.
 

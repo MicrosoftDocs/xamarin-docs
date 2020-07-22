@@ -51,7 +51,7 @@ Both Siri and Maps manage all of the user's interactions and display results usi
 
 This section will present an overview of how SiriKit allows the user to interact with the app using Siri. For the sake of this example, we'll be using the fake MonkeyChat app:
 
-[![](understanding-sirikit-images/monkeychat01.png "The MonkeyChat icon")](understanding-sirikit-images/monkeychat01.png#lightbox)
+[![The MonkeyChat icon](understanding-sirikit-images/monkeychat01.png)](understanding-sirikit-images/monkeychat01.png#lightbox)
 
 MonkeyChat keeps its own contact book of the user's friends, each associated with a screen name (like Bobo for example), and allows the user to send text chats to each friend by their screen name.
 
@@ -98,7 +98,7 @@ No matter how a request is made or how Siri responds to the request, Siri handle
 
 When the user makes a verbal request of Siri, these are the steps that Siri will follow:
 
-[![](understanding-sirikit-images/monkeychat02.png "The steps that Siri will follow")](understanding-sirikit-images/monkeychat02.png#lightbox)
+[![The steps that Siri will follow](understanding-sirikit-images/monkeychat02.png)](understanding-sirikit-images/monkeychat02.png#lightbox)
 
 1. First, Siri takes the audio of the user's **Speech** and converts it into text.
 2. Next, the text is converted into an **Intent**, a structured representation of the user's request.
@@ -107,7 +107,7 @@ When the user makes a verbal request of Siri, these are the steps that Siri will
 
 There are three main ways that the app can take part in the user's conversation with Siri:
 
-[![](understanding-sirikit-images/monkeychat03.png "The three main ways that the app can take part in the users conversation with Siri")](understanding-sirikit-images/monkeychat03.png#lightbox)
+[![The three main ways that the app can take part in the users conversation with Siri](understanding-sirikit-images/monkeychat03.png)](understanding-sirikit-images/monkeychat03.png#lightbox)
 
 1. **Vocabulary** - This is how the app tells Siri the words it needs to know to interact with it.
 2. **App Logic** - These are the actions and responses that the app will take based on given Intents.
@@ -123,7 +123,7 @@ _User: Please send more bananas._<br />
 
 The first role that the app takes in the conversation is to help Siri understand the user's speech:
 
-[![](understanding-sirikit-images/monkeychat04.png "Helping Siri understand the users speech")](understanding-sirikit-images/monkeychat04.png#lightbox)
+[![Helping Siri understand the users speech](understanding-sirikit-images/monkeychat04.png)](understanding-sirikit-images/monkeychat04.png#lightbox)
 
 Siri doesn't have the name "Bobo" in its database, but the app does and has shared this information with Siri via its Vocabulary. The app also helps Siri recognize that Bobo is a recipient, since it specified them to Siri as a *Contact*.
 
@@ -152,7 +152,7 @@ Siri will automatically build an appropriate `NSUserActivity` to start the app a
 
 After the app has processed the Intent and returned a response to Siri, it then presents the results to the user (both verbally and visually):
 
-[![](understanding-sirikit-images/monkeychat06.png "The results presented to the user both verbally and visually")](understanding-sirikit-images/monkeychat06.png#lightbox)
+[![The results presented to the user both verbally and visually](understanding-sirikit-images/monkeychat06.png)](understanding-sirikit-images/monkeychat06.png#lightbox)
 
 Siri has several built-in response User Interfaces for each of the domains available to the app. However, since MonkeyChat has provided an optional Intent UI Extension, it is used to present the results of the conversation to the user in the above example.
 
@@ -160,7 +160,7 @@ Siri has several built-in response User Interfaces for each of the domains avail
 
 There are three main tasks that the App Extension will need to perform when dealing with Intents:
 
-[![](understanding-sirikit-images/monkeychat07.png "The Intent Lifecycle")](understanding-sirikit-images/monkeychat07.png#lightbox)
+[![The Intent Lifecycle](understanding-sirikit-images/monkeychat07.png)](understanding-sirikit-images/monkeychat07.png#lightbox)
 
 1. The app must **Resolve** every parameter on an event. As a result, the app will call Resolve multiple times (once per each parameter), and sometimes multiple times on the same parameter until the app and the user agree on what is being requested.
 2. The app must **Confirm** that it can handle the requested Intent and tell Siri about the expected outcome.
@@ -233,7 +233,7 @@ There is also an API to provide words and phrases to Siri to aid in recognition 
 
 The Intents Extension is responsible for handling the main interactions between the app and Siri as follows:
 
-[![](understanding-sirikit-images/intents01.png "The Intents Extension")](understanding-sirikit-images/intents01.png#lightbox)
+[![The Intents Extension](understanding-sirikit-images/intents01.png)](understanding-sirikit-images/intents01.png#lightbox)
 
 The Intent Extension can support one or more Intents, it is up to the developer to decide how they wish to implement SiriKit in the app. The developer could also add a separate Intent Extension for each Intent needing to be handled.  That said, Apple requests that the developer limit the number of Intent Extensions so that Siri doesn't have multiple processes open against the app, which require more memory and time to handle.
 
@@ -259,7 +259,7 @@ One of the common things that users will do is to "verbify" the app's name, in o
 
 The Intents UI Extension presents the opportunity to bring the app's UI and branding into the Siri experience and make the users feel connected to the app. With this extension, the app can bring the brand as well as visual and other information into the transcript.
 
-[![](understanding-sirikit-images/intents02.png "Example Intents UI Extension output")](understanding-sirikit-images/intents02.png#lightbox)
+[![Example Intents UI Extension output](understanding-sirikit-images/intents02.png)](understanding-sirikit-images/intents02.png#lightbox)
 
 The Intents UI Extension will always return a `UIViewController` and the app can add anything it likes inside of the view controller such as showing additional information that goes beyond the initial response. The Intents UI can also update the user with the status of a long running event, such as how much longer it will take a ride sharing car to reach their location.
 

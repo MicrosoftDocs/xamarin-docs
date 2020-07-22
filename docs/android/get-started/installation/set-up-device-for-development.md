@@ -83,7 +83,7 @@ You will receive a prompt to trust the computer on your device if you have
 not used it for debugging before. You can also check **Always allow from this 
 computer** to prevent requiring this prompt each time you connect the device.
 
-![](set-up-device-for-development-images/trust-computer-for-usb-debugging.png "Google USB")
+![Google USB](set-up-device-for-development-images/trust-computer-for-usb-debugging.png)
 
 ## Alternate connection via Wifi
 
@@ -182,7 +182,7 @@ Install the **Google USB Driver** package by starting the Android SDK
 Manager, and expanding the **Extras** folder, as can be seen in the
 follow screenshot:
 
-![](set-up-device-for-development-images/google-usb-driver.png "Google USB driver selected")
+![Google USB driver selected](set-up-device-for-development-images/google-usb-driver.png)
 
 Check the **Google USB Driver** box, and click the **Apply Changes** button.
 The driver files are downloaded to the following location:

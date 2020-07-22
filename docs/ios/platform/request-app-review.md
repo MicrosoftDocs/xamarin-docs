@@ -15,7 +15,7 @@ _This article covers the RequestReview method that Apple added to iOS 10 and how
 
 New to iOS 10.3, the `RequestReview()` method allows an iOS app to ask the user to rate or review it. When this method is called in a shipping app that the user has installed from the App Store, iOS 10 will handle the entire rating and review process for the developer. Because this process is governed by App Store policy, an alert may or may not be displayed.
 
-![](request-app-review-images/review01.png "A sample Review Request alert")
+![A sample Review Request alert](request-app-review-images/review01.png)
 
 ## Requesting a Rating or Review
 

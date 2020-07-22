@@ -24,8 +24,8 @@ In this quickstart, you will learn how to:
 
 The quickstart walks through how to turn a single page cross-platform Xamarin.Forms application, capable of storing a single note, into a multi-page application, capable of storing multiple notes. The final application is shown below:
 
-[![](multi-page-images/screenshots1-sml.png "Notes Page")](multi-page-images/screenshots1.png#lightbox "Notes Page")
-[![](multi-page-images/screenshots2-sml.png "Note Entry Page")](multi-page-images/screenshots2.png#lightbox "Note Entry Page")
+[![Notes Page](multi-page-images/screenshots1-sml.png)](multi-page-images/screenshots1.png#lightbox "Notes Page")
+[![Note Entry Page](multi-page-images/screenshots2-sml.png)](multi-page-images/screenshots2.png#lightbox "Note Entry Page")
 
 ### Prerequisites
 
@@ -37,23 +37,23 @@ You should successfully complete the [previous quickstart](single-page.md) befor
 
 1. Launch Visual Studio. In the start window, click the **Notes** solution in the recent projects/solutions list, or click **Open a project or solution**, and in the **Open Project/Solution** dialog select the solution file for the Notes project:
 
-    ![](multi-page-images/vs/open-solution.png "Open Project")
+    ![Open Project](multi-page-images/vs/open-solution.png)
 
 2. In **Solution Explorer**, right-click on the **Notes** project and select **Add > New Folder**:
 
-    ![](multi-page-images/vs/add-new-item.png "Add New Item")
+    ![Add New Item](multi-page-images/vs/add-new-item.png)
 
 3. In **Solution Explorer**, name the new folder **Models**:
 
-    ![](multi-page-images/vs/name-folder.png "Models Folder")
+    ![Models Folder](multi-page-images/vs/name-folder.png)
 
 4. In **Solution Explorer**, select the **Models** folder, right-click, and select **Add > New Item...**:
 
-    ![](multi-page-images/vs/add-new-models-file.png "Add New File")
+    ![Add New File](multi-page-images/vs/add-new-models-file.png)
 
 5. In the **Add New Item** dialog, select **Visual C# Items > Class**, name the new file **Note**, and click the **Add** button:
 
-    ![](multi-page-images/vs/add-note-class.png "Add Note Class")
+    ![Add Note Class](multi-page-images/vs/add-note-class.png)
 
     This will add a class named **Note** to the **Models** folder of the **Notes** project.
 
@@ -79,7 +79,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
 
 7. In **Solution Explorer**, right-click on the **Notes** project and select **Add > New Item..**. In the **Add New Item** dialog, select **Visual C# Items > Xamarin.Forms > Content Page**, name the new file **NoteEntryPage**, and click the **Add** button:
 
-    ![](multi-page-images/vs/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
+    ![Add Xamarin.Forms ContentPage](multi-page-images/vs/add-note-entry-page.png)
 
     This will add a new page named **NoteEntryPage** to the root folder of the project. This page will be the second page in the application.
 
@@ -320,23 +320,23 @@ You should successfully complete the [previous quickstart](single-page.md) befor
 
 1. Launch Visual Studio for Mac. In the start window click **Open**, and in the dialog select the solution file for the Notes project:
 
-    ![](multi-page-images/vsmac/open-solution.png "Open Solution")
+    ![Open Solution](multi-page-images/vsmac/open-solution.png)
 
 2. In the **Solution Pad**, select the **Notes** project, right-click, and select **Add > New Folder**:
 
-    ![](multi-page-images/vsmac/add-new-folder.png "Add New Folder")
+    ![Add New Folder](multi-page-images/vsmac/add-new-folder.png)
 
 3. In the **Solution Pad**, name the new folder **Models**:
 
-    ![](multi-page-images/vsmac/name-folder.png "Models Folder")
+    ![Models Folder](multi-page-images/vsmac/name-folder.png)
 
 4. In the **Solution Pad**, select the **Models** folder, right-click, and select **Add > New File...**:
 
-    ![](multi-page-images/vsmac/add-new-models-file.png "Add New File")
+    ![Add New File](multi-page-images/vsmac/add-new-models-file.png)
 
 5. In the **New File** dialog, select **General > Empty Class**, name the new file **Note**, and click the **New** button:
 
-    ![](multi-page-images/vsmac/add-note-class.png "Add Note Class")
+    ![Add Note Class](multi-page-images/vsmac/add-note-class.png)
 
     This will add a class named **Note** to the **Models** folder of the **Notes** project.
 
@@ -362,7 +362,7 @@ You should successfully complete the [previous quickstart](single-page.md) befor
 
 7. In the **Solution Pad**, select the **Notes** project, right-click, and select **Add > New File...**. In the **New File** dialog, select **Forms > Forms ContentPage XAML**, name the new file **NoteEntryPage**, and click the **New** button:
 
-    ![](multi-page-images/vsmac/add-note-entry-page.png "Add Xamarin.Forms ContentPage")
+    ![Add Xamarin.Forms ContentPage](multi-page-images/vsmac/add-note-entry-page.png)
 
     This will add a new page named **NoteEntryPage** to the root folder of the project. This page will be the second page in the application.
 

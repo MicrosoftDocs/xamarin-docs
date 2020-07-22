@@ -20,7 +20,7 @@ Every Xamarin.Forms view has an accompanying renderer for each platform that cre
 
 The following diagram illustrates the relationship between the [`Map`](xref:Xamarin.Forms.Maps.Map) and the corresponding native controls that implement it:
 
-![](map-pin-images/map-classes.png "Relationship Between the Map Control and the Implementing Native Controls")
+![Relationship Between the Map Control and the Implementing Native Controls](map-pin-images/map-classes.png)
 
 The rendering process can be used to implement platform-specific customizations by creating a custom renderer for a [`Map`](xref:Xamarin.Forms.Maps.Map) on each platform. The process for doing this is as follows:
 
@@ -128,11 +128,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![](map-pin-images/solution-structure.png "CustomMap Custom Renderer Project Responsibilities")
+![CustomMap Custom Renderer Project Responsibilities](map-pin-images/solution-structure.png)
 
 The `CustomMap` control is rendered by platform-specific renderer classes, which derive from the `MapRenderer` class for each platform. This results in each `CustomMap` control being rendered with platform-specific controls, as shown in the following screenshots:
 
-![](map-pin-images/screenshots.png "CustomMap on each Platform")
+![CustomMap on each Platform](map-pin-images/screenshots.png)
 
 The `MapRenderer` class exposes the `OnElementChanged` method, which is called when the Xamarin.Forms custom map is created to render the corresponding native control. This method takes an `ElementChangedEventArgs` parameter that contains `OldElement` and `NewElement` properties. These properties represent the Xamarin.Forms element that the renderer *was* attached to, and the Xamarin.Forms element that the renderer *is* attached to, respectively. In the sample application the `OldElement` property will be `null` and the `NewElement` property will contain a reference to the `CustomMap` instance.
 
@@ -167,7 +167,7 @@ The following sections discuss the implementation of each platform-specific cust
 
 The following screenshots show the map, before and after customization:
 
-![](map-pin-images/map-layout-ios.png "Map Control Before and After Customization")
+![Map Control Before and After Customization](map-pin-images/map-layout-ios.png)
 
 On iOS the pin is called an *annotation*, and can be either a custom image or a system-defined pin of various colors. Annotations can optionally show a *callout*, which is displayed in response to the user selecting the annotation. The callout displays the `Label` and `Address` properties of the `Pin` instance, with optional left and right accessory views. In the screenshot above, the left accessory view is the image of a monkey, with the right accessory view being the *Information* button.
 
@@ -340,7 +340,7 @@ For more information about customizing a `MKMapView` instance, see [iOS Maps](~/
 
 The following screenshots show the map, before and after customization:
 
-![](map-pin-images/map-layout-android.png "Map Control Before and After Customization")
+![Map Control Before and After Customization](map-pin-images/map-layout-android.png)
 
 On Android the pin is called a *marker*, and can either be a custom image or a system-defined marker of various colors. Markers can show an *info window*, which is displayed in response to the user tapping on the marker. The info window displays the `Label` and `Address` properties of the `Pin` instance, and can be customized to include other content. However, only one info window can be shown at once.
 
@@ -503,7 +503,7 @@ For more information about customizing a `MapView` instance, see [Maps API](~/an
 
 The following screenshots show the map, before and after customization:
 
-![](map-pin-images/map-layout-uwp.png "Map Control Before and After Customization")
+![Map Control Before and After Customization](map-pin-images/map-layout-uwp.png)
 
 On UWP the pin is called a *map icon*, and can either be a custom image or the system-defined default image. A map icon can show a `UserControl`, which is displayed in response to the user tapping on the map icon. The `UserControl` can display any content, including the `Label` and `Address` properties of the `Pin` instance.
 

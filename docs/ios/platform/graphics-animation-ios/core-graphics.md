@@ -128,7 +128,7 @@ Once the path is created, it's added to the graphics context so that calling `Ad
 
 The resulting view is shown below:
 
- ![](core-graphics-images/00-bluetriangle.png "The sample output triangle")
+ ![The sample output triangle](core-graphics-images/00-bluetriangle.png)
 
 ## Creating Gradient Fills
 
@@ -162,7 +162,7 @@ Setting the current path as the clipping path constrains all subsequent drawing 
 
 These changes produce a gradient fill as shown below:
 
- ![](core-graphics-images/01-gradient-fill.png "The example with a gradient fill")
+ ![The example with a gradient fill](core-graphics-images/01-gradient-fill.png)
 
 ## Modifying Line Patterns
 
@@ -175,7 +175,7 @@ g.SetLineDash (0, new nfloat[] { 10, 4 * (nfloat)Math.PI });
 
 Adding this code before any drawing operations results in dashed strokes 10 units long, with 4 units of spacing between dashes, as shown below:
 
- ![](core-graphics-images/02-dashed-stroke.png "Adding this code before any drawing operations results in dashed strokes")
+ ![Adding this code before any drawing operations results in dashed strokes](core-graphics-images/02-dashed-stroke.png)
 
 Note that when using the Unified API in Xamarin.iOS, the array type needs to be an `nfloat`, and also needs to be explicitly cast to Math.PI.
 
@@ -198,7 +198,7 @@ public override void Draw (CGRect rect)
 
 However, this produces an image drawn upside down, as shown below:
 
- ![](core-graphics-images/03-upside-down-monkey.png "An image drawn upside down")
+ ![An image drawn upside down](core-graphics-images/03-upside-down-monkey.png)
 
 The reason for this is Core Graphics origin for image drawing is in the lower left, while the view has its origin in the upper left. Therefore, to display the image correctly, the origin needs to be modified, which can be accomplished by modifying the *Current Transformation Matrix* *(CTM)*. The CTM defines where points live, also known as *user space*. Inverting the CTM in the y direction and shifting it by the bounds’ height in the negative y direction can flip the image.
 
@@ -220,7 +220,7 @@ public override void Draw (CGRect rect)
 
 The resulting image is then displayed upright:
 
- ![](core-graphics-images/04-upright-monkey.png "The sample image displayed upright")
+ ![The sample image displayed upright](core-graphics-images/04-upright-monkey.png)
 
 > [!IMPORTANT]
 > Changes to the graphics context apply to all subsequent drawing operations. Therefore, when the CTM is transformed, it will affect any additional drawing. For example, if you drew the triangle after the CTM transformation, it would appear upside down.
@@ -259,7 +259,7 @@ As you can see, setting the graphics state for text drawing is similar to drawin
 
 The resulting text is displayed with the image as shown below:
 
- ![](core-graphics-images/05-text-on-image.png "The resulting text is displayed with the image")
+ ![The resulting text is displayed with the image](core-graphics-images/05-text-on-image.png)
 
 ## Memory-Backed Images
 

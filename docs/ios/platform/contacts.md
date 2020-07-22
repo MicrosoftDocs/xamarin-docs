@@ -24,7 +24,7 @@ The two new frameworks contain the following functionality:
 - [**ContactsUI**](#contactsui) - Provides Xamarin.iOS UI elements to display, edit, select
   and create contacts on iOS devices.
 
-[![](contacts-images/add01.png "An example Contact Sheet on an iOS device")](contacts-images/add01.png#lightbox)
+[![An example Contact Sheet on an iOS device](contacts-images/add01.png)](contacts-images/add01.png#lightbox)
 
 > [!IMPORTANT]
 > The existing `AddressBook` and `AddressBookUI` frameworks use by iOS 8 (and prior) have been deprecated in iOS 9 and should be replaced with the new `Contacts` and `ContactsUI` frameworks as soon as possible for any existing Xamarin.iOS app. New apps should be written against the new frameworks.
@@ -44,7 +44,7 @@ The Contacts Framework provides Xamarin.iOS access to the user's contact informa
 
 The `CNContact` class provides thread safe, read-only access to a contact's properties such as Name, Address or Phone Numbers. `CNContact` functions like a `NSDictionary` and contains multiple, read-only collections of properties (such as addresses or phone numbers):
 
-[![](contacts-images/contactobjects.png "Contact Object overview")](contacts-images/contactobjects.png#lightbox)
+[![Contact Object overview](contacts-images/contactobjects.png)](contacts-images/contactobjects.png#lightbox)
 
 For any property that can have multiple values (such as email address or phone numbers), they will be represented as an array of `NSLabeledValue` objects. `NSLabeledValue` is a thread safe tuple consisting of a read-only set of labels and values where the label defines the value to the user (for example Home or Work email). The Contacts framework provides a selection of predefined labels (via the `CNLabelKey`  and `CNLabelPhoneNumberKey` static classes) that you can use in your app or you have the option of defining custom labels for your needs.
 
@@ -191,7 +191,7 @@ if (!contact.IsKeyAvailable(CNContactOption.PostalAddresses)) {
 
 A user might have different sources of contact information for a single person in their contact database (like iCloud, Facebook or Google Mail). In iOS and OS X apps, this contact information will automatically be linked together and displayed to the user as a single, _Unified Contact_:
 
-[![](contacts-images/unified01.png "Unified Contacts overview")](contacts-images/unified01.png#lightbox)
+[![Unified Contacts overview](contacts-images/unified01.png)](contacts-images/unified01.png#lightbox)
 
 This Unified Contact is a temporary, in-memory view of the link contact information that will be given its own unique identifier (which should be used to refetch the contact if required). By default, the Contacts framework will return a Unified Contact whenever possible.
 
@@ -256,11 +256,11 @@ Whenever a contact is modified, the Contact Store posts a `CNContactStoreDidChan
 
 A user's contacts can exist either locally on the user's device or as contacts synced to the device from one or more server accounts (like Facebook or Google). Each pool of contacts has its own _Container_ and a given Contact can only exist in one container.
 
-[![](contacts-images/containers01.png "Containers and Groups overview")](contacts-images/containers01.png#lightbox)
+[![Containers and Groups overview](contacts-images/containers01.png)](contacts-images/containers01.png#lightbox)
 
 Some Containers allow for Contacts to be arranged into one or more _Groups_ or _Sub-Groups_. This behavior is dependent on the backing store for a given Container. For example, iCloud has only one Container but can have many Groups (but no Sub-Groups). Microsoft Exchange on the other hand, does not support groups but can have multiple Containers (one for each Exchange Folder).
 
-[![](contacts-images/containers02.png "Overlap within Containers and Groups")](contacts-images/containers02.png#lightbox)
+[![Overlap within Containers and Groups](contacts-images/containers02.png)](contacts-images/containers02.png#lightbox)
 
 <a name="contactsui"></a>
 

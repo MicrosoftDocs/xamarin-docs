@@ -23,7 +23,7 @@ Before we dive into the code for background processing in iOS, we need to unders
 
 The iOS application lifecycle is a collection of application states and methods for moving between them. An application transitions between states based on the behavior of the user and the backgrounding requirements of the application. The movement is illustrated by the following diagram:
 
- [![](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png "Application States and Application Delegate Methods diagram")](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
+ [![Application States and Application Delegate Methods diagram](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png)](introduction-to-backgrounding-in-ios-images/applicationlifecycle-.png#lightbox)
 
 - **Not Running** - The application has not yet been launched on the device.
 - **Running/Active** - The application is on the screen, and is executing code in the foreground.
@@ -46,7 +46,7 @@ When an app changes state, iOS notifies the application through event methods in
 
 The following diagram illustrates how the application states and lifecycle methods fit together:
 
- [![](introduction-to-backgrounding-in-ios-images/image2.png "This diagram illustrates how the application states and lifecycle methods fit together")](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
+ [![This diagram illustrates how the application states and lifecycle methods fit together](introduction-to-backgrounding-in-ios-images/image2.png)](introduction-to-backgrounding-in-ios-images/image2.png#lightbox)
 
 ## User Controls for Backgrounding in iOS
 
@@ -56,7 +56,7 @@ iOS 7 introduced several features to give users more control over an application
 
 The App Switcher is an important control feature introduced in iOS 7. It is launched by double-tapping the **Home** button, and shows the applications whose processes are alive:
 
- [![](introduction-to-backgrounding-in-ios-images/app-switcher-.png "Moving between apps using the App Switcher")](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
+ [![Moving between apps using the App Switcher](introduction-to-backgrounding-in-ios-images/app-switcher-.png)](introduction-to-backgrounding-in-ios-images/app-switcher-.png#lightbox)
 
 Using the App Switcher, users can scroll through snapshots of all backgrounded and suspended applications. Tapping an application launches it into the foreground. Swiping up removes the application from the background, terminating its process. We will take a closer look at the App Switcher in the [iOS Application Lifecycle Demo](~/ios/app-fundamentals/backgrounding/application-lifecycle-demo.md) in the next section.
 
@@ -69,7 +69,7 @@ iOS 7 increases user control over the Application Lifecycle by allowing users to
 
 Users can change this setting by navigating to **Settings > General > Background App Refresh** and editing the backgrounding privileges for a selected application. If Background App Refresh is set to off, the application will be suspended immediately upon entering the background, and prevented from doing any background processing:
 
- [![](introduction-to-backgrounding-in-ios-images/settings-.png "Background App Refresh Settings")](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
+ [![Background App Refresh Settings](introduction-to-backgrounding-in-ios-images/settings-.png)](introduction-to-backgrounding-in-ios-images/settings-.png#lightbox)
 
 Developers can check the Background Refresh Application status with the `BackgroundRefreshStatus` API. For an example, refer to the [Check Background Refresh Setting recipe](https://github.com/xamarin/recipes/tree/master/Recipes/ios/multitasking/check_background_refresh_setting).
 

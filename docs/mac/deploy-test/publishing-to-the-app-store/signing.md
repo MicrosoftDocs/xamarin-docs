@@ -22,25 +22,25 @@ website.
 To build an app for deployment directly to users (NOT via the Mac App
 Store) set the **Signing Settings** to use the **Developer ID**. Ensure to edit the **Release** configuration.
 
- [![](signing-images/config02.png "The Mac Signing options")](signing-images/config02.png#lightbox)
+ [![The Mac Signing options](signing-images/config02.png)](signing-images/config02.png#lightbox)
 
 ## Build
 
 Before building, ensure to selected the correct configuration and select to create an install package in the **Mac Build** settings:
 
-[![](signing-images/config03.png "The build options")](signing-images/config03.png#lightbox)
+[![The build options](signing-images/config03.png)](signing-images/config03.png#lightbox)
 
 When building the app, the developer will be prompted to use both certificates:
 
- [![](signing-images/image57.png "Allowing keychain access")](signing-images/image57.png#lightbox)
+ [![Allowing keychain access](signing-images/image57.png)](signing-images/image57.png#lightbox)
 
- [![](signing-images/image58.png "Allowing keychain access")](signing-images/image58.png#lightbox)
+ [![Allowing keychain access](signing-images/image58.png)](signing-images/image58.png#lightbox)
 
 After the application has been built, the developer can right-click on the project and choose **Open Containing Folder** to find the package file (in the `bin/Release` directory). This package file includes an
 installer for the application, so it can be distributed to any macOS user
 for installation.
 
- [![](signing-images/image59.png "Selecting the app package in Finder")](signing-images/image59.png#lightbox)
+ [![Selecting the app package in Finder](signing-images/image59.png)](signing-images/image59.png#lightbox)
 
 ## Related links
 

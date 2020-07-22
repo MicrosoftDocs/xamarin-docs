@@ -28,7 +28,7 @@ In certain situations, the Xamarin installer might automatically un-check the in
 
 4. Make sure the **Xamarin for Visual Studio 2013** option is set to install:
 
-    ![](missing-vs-extensions-images/installer.png "Enable Xamarin for Visual Studio 2013 installation option")
+    ![Enable Xamarin for Visual Studio 2013 installation option](missing-vs-extensions-images/installer.png)
 
 5. Proceed through the rest of the installer wizard.
 

@@ -93,7 +93,7 @@ switch (On<iOS>().LargeTitleDisplay())
 
 The result is that a specified `LargeTitleDisplayMode` is applied to the [`Page`](xref:Xamarin.Forms.Page), which controls the large title behavior:
 
-![](page-large-title-images/large-title.png "Blur Effect Platform-Specific")
+![Blur Effect Platform-Specific](page-large-title-images/large-title.png)
 
 ## Related links
 

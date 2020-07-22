@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms Shapes
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![Pre-release API](~/media/shared/preview.png "This API is currently pre-release")
 
 A `Shape` is a type of [`View`](xref:Xamarin.Forms.View) that enables you to draw a shape to the screen. `Shape` objects can be used inside layout classes and most controls, because the `Shape` class derives from the `View` class.
 

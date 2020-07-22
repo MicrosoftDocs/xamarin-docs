@@ -25,7 +25,7 @@ that allows consuming each social network’s API over HTTP.
 To connect to Twitter using the Social Framework, an account needs to be
 configured in the device settings as shown below:
 
- [![](social-framework-images/twitter01.png "Twitter Account Settings")](social-framework-images/twitter01.png#lightbox)
+ [![Twitter Account Settings](social-framework-images/twitter01.png)](social-framework-images/twitter01.png#lightbox)
 
 Once an account has been entered and verified with Twitter, any application
 on the device that uses the Social Framework classes to access Twitter will use
@@ -37,7 +37,7 @@ The Social Framework includes a controller called `SLComposeViewController` that
 editing and sending a tweet. The following screenshot shows an example of this
 view:
 
- [![](social-framework-images/twitter02.png "This screenshot shows an example of the SLComposeViewController")](social-framework-images/twitter02.png#lightbox)
+ [![This screenshot shows an example of the SLComposeViewController](social-framework-images/twitter02.png)](social-framework-images/twitter02.png#lightbox)
 
 To use an `SLComposeViewController` with Twitter, an instance of
 the controller must be created by calling the `FromService` method
@@ -295,7 +295,7 @@ request.PerformRequest ((data, response, error) => {
 
 If the data was successfully loaded, the raw JSON data will be displayed (as in the example output below):
 
-[![](social-framework-images/twitter03.png "An example of the raw JSON data display")](social-framework-images/twitter03.png#lightbox)
+[![An example of the raw JSON data display](social-framework-images/twitter03.png)](social-framework-images/twitter03.png#lightbox)
 
 In a real app, the JSON results could then be parsed as normal and the results presented to the user. See [Introduction Web Services](~/cross-platform/data-cloud/web-services/index.md) for information on how to parse JSON.
 
@@ -307,7 +307,7 @@ Connecting to Facebook with the Social Framework is nearly identical to the
 process used for Twitter shown above. A Facebook user account must be configured
 in the device settings as shown below:
 
-[![](social-framework-images/facebook01.png "Facebook Account Settings")](social-framework-images/facebook01.png#lightbox)
+[![Facebook Account Settings](social-framework-images/facebook01.png)](social-framework-images/facebook01.png#lightbox)
 
 Once configured, any application on the device that uses the Social Framework
 will use this account to connect to Facebook.
@@ -386,7 +386,7 @@ namespace SocialFrameworkDemo
 When used with Facebook, the `SLComposeViewController` displays a
 view that looks nearly identical to the Twitter example, showing **Facebook** as the title in this case:
 
-[![](social-framework-images/facebook02.png "The SLComposeViewController display")](social-framework-images/facebook02.png#lightbox)
+[![The SLComposeViewController display](social-framework-images/facebook02.png)](social-framework-images/facebook02.png#lightbox)
 
 ### Calling Facebook Graph API
 

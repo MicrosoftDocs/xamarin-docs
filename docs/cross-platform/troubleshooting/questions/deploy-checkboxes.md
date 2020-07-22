@@ -18,4 +18,4 @@ Because of this, the **Deploy** checkboxes are intentionally disabled in the Vis
 
 This change eliminates an error that could appear in older versions of Xamarin (version 3.3 and earlier) when the Xamarin.iOS app project was not set to deploy:
 
-![](deploy-checkboxes-images/error.png "Error dialog: The project iPhoneApp1 needs to be deployed before it can be started. Verify the project is selected to be deployed in the Solution Configuration Manager.")
+![Error dialog: The project iPhoneApp1 needs to be deployed before it can be started. Verify the project is selected to be deployed in the Solution Configuration Manager.](deploy-checkboxes-images/error.png)

@@ -307,7 +307,7 @@ These screenshots show the difference between the two multi
     In the bottom part of the screens, the **Login** button
     remains inactive until both fields contain data.
 
-![](triggers-images/multi-requireall.png "MultiTrigger Examples")
+![MultiTrigger Examples](triggers-images/multi-requireall.png)
 
 ## EnterActions and ExitActions
 

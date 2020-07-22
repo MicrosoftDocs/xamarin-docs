@@ -24,7 +24,7 @@ A common usage scenario for a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) 
 
 Regardless of the technique being used, the result is that the appearance of each cell in the [`ListView`](xref:Xamarin.Forms.ListView) is defined by a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate), as shown in the following screenshots:
 
-![](creating-images/data-template-appearance.png "ListView with a DataTemplate")
+![ListView with a DataTemplate](creating-images/data-template-appearance.png)
 
 ## Creating an Inline DataTemplate
 

@@ -59,7 +59,7 @@ This code animates the [`Image`](xref:Xamarin.Forms.Image) instance by rotating 
 
 The following screenshots show the rotation in progress on each platform:
 
-![](simple-images/rotateto.png "Rotation Animation")
+![Rotation Animation](simple-images/rotateto.png)
 
 > [!NOTE]
 > In addition to the [`RotateTo`](xref:Xamarin.Forms.ViewExtensions.RotateTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) method, there are also [`RotateXTo`](xref:Xamarin.Forms.ViewExtensions.RotateXTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) and [`RotateYTo`](xref:Xamarin.Forms.ViewExtensions.RotateYTo(Xamarin.Forms.VisualElement,System.Double,System.UInt32,Xamarin.Forms.Easing)) methods that animate the [`RotationX`](xref:Xamarin.Forms.VisualElement.RotationX) and [`RotationY`](xref:Xamarin.Forms.VisualElement.RotationY) properties, respectively.
@@ -76,7 +76,7 @@ This code animates the [`Image`](xref:Xamarin.Forms.Image) instance by rotating 
 
 The following screenshots show the relative rotation in progress on each platform:
 
-![](simple-images/relrotateto.png "Relative Rotation Animation")
+![Relative Rotation Animation](simple-images/relrotateto.png)
 
 ### Scaling
 
@@ -90,7 +90,7 @@ This code animates the [`Image`](xref:Xamarin.Forms.Image) instance by scaling u
 
 The following screenshots show the scaling in progress on each platform:
 
-![](simple-images/scaleto.png "Scaling Animation")
+![Scaling Animation](simple-images/scaleto.png)
 
 > [!NOTE]
 > In addition to the [`ScaleTo`](xref:Xamarin.Forms.ViewExtensions.ScaleTo*) method, there are also `ScaleXTo` and `ScaleYTo` methods that animate the [`ScaleX`](xref:Xamarin.Forms.VisualElement.ScaleX) and [`ScaleY`](xref:Xamarin.Forms.VisualElement.ScaleY) properties, respectively.
@@ -119,7 +119,7 @@ await image.RotateTo(360, 2000);
 
 To rotate the [`Image`](xref:Xamarin.Forms.Image) instance around the center of the layout, the [`AnchorX`](xref:Xamarin.Forms.VisualElement.AnchorX) and [`AnchorY`](xref:Xamarin.Forms.VisualElement.AnchorY) properties must be set to values that are relative to the width and height of the `Image`. In this example, the center of the `Image` is defined to be at the center of the layout, and so the default `AnchorX` value of 0.5 does not require changing. However, the `AnchorY` property is redefined to be a value from the top of the `Image` to the center point of the layout. This ensures that the `Image` makes a full rotation of 360 degrees around the center point of the layout, as shown in the following screenshots:
 
-![](simple-images/rotate-anchors.png "Rotation Animation with Anchors")
+![Rotation Animation with Anchors](simple-images/rotate-anchors.png)
 
 ### Translation
 
@@ -133,7 +133,7 @@ This code animates the [`Image`](xref:Xamarin.Forms.Image) instance by translati
 
 The following screenshots show the translation in progress on each platform:
 
-![](simple-images/translateto.png "Translation Animation")
+![Translation Animation](simple-images/translateto.png)
 
 > [!NOTE]
 > If an element is initially laid out off screen and then translated onto the screen, after translation the element's input layout remains off screen and the user can't interact with it. Therefore, it's recommended that a view should be laid out in its final position, and then any required translations performed.
@@ -151,7 +151,7 @@ This code animates the [`Image`](xref:Xamarin.Forms.Image) instance by fading it
 
 The following screenshots show the fade in progress on each platform:
 
-![](simple-images/fadeto.png "Fading Animation")
+![Fading Animation](simple-images/fadeto.png)
 
 ## Compound Animations
 
@@ -211,7 +211,7 @@ In this example, the `Task.WhenAll` method call contains three tasks, each of wh
 
 The following screenshots show the multiple rotations in progress on each platform:
 
-![](simple-images/multiple-rotations.png "Composite Animation")
+![Composite Animation](simple-images/multiple-rotations.png)
 
 ## Canceling Animations
 

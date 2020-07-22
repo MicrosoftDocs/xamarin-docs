@@ -27,7 +27,7 @@ SOAP can operate over many transport protocols, including HTTP, SMTP, TCP, and U
 
 This sample includes the mobile applications that run on physical or emulated devices, and an ASMX service that provides methods to get, add, edit, and delete data. When the mobile applications are run, they connect to the locally-hosted ASMX service as shown in the following screenshot:
 
-![](asmx-images/portal.png "Sample Application")
+![Sample Application](asmx-images/portal.png)
 
 > [!NOTE]
 > In iOS 9 and greater, App Transport Security (ATS) enforces secure connections between internet resources (such as the app's back-end server) and the app, thereby preventing accidental disclosure of sensitive information. Since ATS is enabled by default in apps built for iOS 9, all connections will be subject to ATS security requirements. If connections do not meet these requirements, they will fail with an exception.

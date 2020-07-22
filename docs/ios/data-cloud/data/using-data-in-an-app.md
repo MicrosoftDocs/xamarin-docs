@@ -15,13 +15,13 @@ The **DataAccess_Adv** sample shows a working application that allows user input
 
 After adding some data the application screens look like this on iOS:
 
- ![](using-data-in-an-app-images/image9.png "iOS sample list")
+ ![iOS sample list](using-data-in-an-app-images/image9.png)
 
- ![](using-data-in-an-app-images/image10.png "iOS sample detail")
+ ![iOS sample detail](using-data-in-an-app-images/image10.png)
 
 The iOS Project is shown below – the code shown in this section is contained within the **Orm** directory:
 
- ![](using-data-in-an-app-images/image13.png "iOS project tree")
+ ![iOS project tree](using-data-in-an-app-images/image13.png)
 
 The native UI code for the ViewControllers in iOS  is out of scope for this document.
 Refer to the [iOS Working with Tables and Cells](~/ios/user-interface/controls/tables/index.md)

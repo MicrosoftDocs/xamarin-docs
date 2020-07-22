@@ -69,7 +69,7 @@ The `ImageButton.On<Android>` method specifies that this platform-specific will 
 
 The result is that a drop shadow can be enabled on a `ImageButton`:
 
-![](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png "ImageButton with drop shadow")
+![ImageButton with drop shadow](imagebutton-drop-shadow-images/imagebutton-drop-shadow.png)
 
 ## Related links
 

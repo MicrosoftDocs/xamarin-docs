@@ -19,7 +19,7 @@ Controls in `UIKit` – those subclassed from UIControl – are so dependent on 
 
 However, many of the views in `UIKit` do not have touch enabled by default. There are two ways to enable touch on a control. The first way is to check the User Interaction Enabled checkbox in the Property Pad of the iOS Designer, as shown in the following screenshot:
 
- [![](touch-in-ios-images/image1.png "Check the User Interaction Enabled checkbox in the Property Pad of the iOS Designer")](touch-in-ios-images/image1.png#lightbox)
+ [![Check the User Interaction Enabled checkbox in the Property Pad of the iOS Designer](touch-in-ios-images/image1.png)](touch-in-ios-images/image1.png#lightbox)
 
 We can also use a controller to set the `UserInteractionEnabled` property to true on a `UIView` class. This is required if the UI is created in code.
 
@@ -76,7 +76,7 @@ public override void TouchesBegan (NSSet touches, UIEvent evt)
 
 Multi-touch is not enabled by default on controls. Multi-touch can be enabled in the iOS Designer, as illustrated by the following screenshot:
 
- [![](touch-in-ios-images/image2.png "Multi-touch enabled in the iOS Designer")](touch-in-ios-images/image2.png#lightbox)
+ [![Multi-touch enabled in the iOS Designer](touch-in-ios-images/image2.png)](touch-in-ios-images/image2.png#lightbox)
 
 It is also possible to set multi-touch programmatically by setting the `MultipleTouchEnabled` property as shown in the following line of code:
 

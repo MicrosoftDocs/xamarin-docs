@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms DualScreenInfo helper class
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![Pre-release API](~/media/shared/preview.png "This API is currently pre-release")
 
 [![Download Sample](~/media/shared/download.png) Download the sample](https://docs.microsoft.com/samples/xamarin/xamarin-forms-samples/userinterface-dualscreendemos/)
 
@@ -214,7 +214,7 @@ public partial class GridUsingDualScreenInfo : ContentPage
 
 The following screenshot shows the resulting layout:
 
-![](dual-screen-info-images/grid-on-two-screens.png "Positioning Grid on Two Screens")
+![Positioning Grid on Two Screens](dual-screen-info-images/grid-on-two-screens.png)
 
 ## Related links
 

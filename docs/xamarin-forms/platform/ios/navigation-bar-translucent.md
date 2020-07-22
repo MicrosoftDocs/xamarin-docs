@@ -46,7 +46,7 @@ The `NavigationPage.On<iOS>` method specifies that this platform-specific will o
 
 The result is that the transparency of the navigation bar can be changed:
 
-![](navigation-bar-translucent-images/translucent-navigation-bar.png "Translucent Navigation Bar Platform-Specific")
+![Translucent Navigation Bar Platform-Specific](navigation-bar-translucent-images/translucent-navigation-bar.png)
 
 ## Related links
 

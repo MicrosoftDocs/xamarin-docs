@@ -67,7 +67,7 @@ The `VisualElement.On<iOS>` method specifies that this platform-specific will on
 
 The result is that a drop shadow can be enabled on a [`VisualElement`](xref:Xamarin.Forms.VisualElement):
 
-![](drop-shadow-images/drop-shadow.png "Drop shadow enabled")
+![Drop shadow enabled](drop-shadow-images/drop-shadow.png)
 
 ## Related links
 

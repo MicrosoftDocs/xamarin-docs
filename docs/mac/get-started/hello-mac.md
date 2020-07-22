@@ -18,7 +18,7 @@ Additionally, since Xamarin.Mac applications are written in C# and .NET, code ca
 
 This article will introduce the key concepts needed to create a Mac app using Xamarin.Mac, Visual Studio for Mac and Xcode's Interface Builder by walking through the process of building a simple **Hello, Mac** app that counts the number of times a button has been clicked:
 
-[![](hello-mac-images/run02-sml.png "Example of the Hello, Mac app running")](hello-mac-images/run02.png#lightbox)
+[![Example of the Hello, Mac app running](hello-mac-images/run02-sml.png)](hello-mac-images/run02.png#lightbox)
 
 The following concepts will be covered:
 
@@ -55,25 +55,25 @@ To get started, do the following steps:
 
 1. Start Visual Studio for Mac:
 
-    [![](hello-mac-images/setup01-sml.png "The main Visual Studio for Mac interface")](hello-mac-images/setup01.png#lightbox)
+    [![The main Visual Studio for Mac interface](hello-mac-images/setup01-sml.png)](hello-mac-images/setup01.png#lightbox)
 
 2. Click on the **New Project...** button to open the **New Project** dialog box, then select **Mac** > **App** > **Cocoa App** and click the **Next** button:
 
-    [![](hello-mac-images/setup02-sml.png "Selecting a Cocoa App")](hello-mac-images/setup02.png#lightbox)
+    [![Selecting a Cocoa App](hello-mac-images/setup02-sml.png)](hello-mac-images/setup02.png#lightbox)
 
 3. Enter `Hello_Mac` for the **App Name**, and keep everything else as default. Click **Next**:
 
-    [![](hello-mac-images/setup03-sml.png "Setting the name of the app")](hello-mac-images/setup03.png#lightbox)
+    [![Setting the name of the app](hello-mac-images/setup03-sml.png)](hello-mac-images/setup03.png#lightbox)
 
 4. Confirm the location of the new project on your computer:
 
-    [![](hello-mac-images/setup04-sml.png "Verifying the new solution details")](hello-mac-images/setup04.png#lightbox)
+    [![Verifying the new solution details](hello-mac-images/setup04-sml.png)](hello-mac-images/setup04.png#lightbox)
 
 5. Click the **Create** button.
 
 Visual Studio for Mac will create the new Xamarin.Mac app and display the default files that get added to the app's solution:
 
-[![](hello-mac-images/project01-sml.png "The new solution default view")](hello-mac-images/project01.png#lightbox)
+[![The new solution default view](hello-mac-images/project01-sml.png)](hello-mac-images/project01.png#lightbox)
 
 Visual Studio for Mac uses the same **Solution** and **Project** structure as Visual Studio 2019. A solution is a container that can hold one or more projects; projects can include applications, supporting libraries, test applications, etc. The **File > New Project** template creates a solution and an application project automatically.
 
@@ -226,7 +226,7 @@ With the Xamarin.Mac app project created and a basic understanding of its compon
 
 The `Info.plist` file contains information about the Xamarin.Mac app such as its **Name** and **Bundle Identifier**:
 
-[![](hello-mac-images/infoplist01.png "The Visual Studio for Mac plist editor")](hello-mac-images/infoplist01.png#lightbox)
+[![The Visual Studio for Mac plist editor](hello-mac-images/infoplist01.png)](hello-mac-images/infoplist01.png#lightbox)
 
 It also defines the _Storyboard_ that will be used to display the user interface for the Xamarin.Mac app under the **Main Interface** dropdown. In example above, `Main` in the dropdown relates to the `Main.storyboard` in the project's source tree in the **Solution Explorer**. It also defines the app's icons by specifying the *Asset Catalog* that contains them (**AppIcon** in this case).
 
@@ -234,7 +234,7 @@ It also defines the _Storyboard_ that will be used to display the user interface
 
 The app's `Entitlements.plist` file controls entitlements that the Xamarin.Mac app has such as **Sandboxing** and **iCloud**:
 
-[![](hello-mac-images/entitlements01.png "The Visual Studio for Mac entitlements editor")](hello-mac-images/entitlements01.png#lightbox)
+[![The Visual Studio for Mac entitlements editor](hello-mac-images/entitlements01.png)](hello-mac-images/entitlements01.png#lightbox)
 
 For the Hello World example, no entitlements will be required. The next section shows how to use Xcode's Interface Builder to edit the **Main.storyboard** file and define the Xamarin.Mac app's UI.
 
@@ -244,11 +244,11 @@ As part of Xcode, Apple has created a tool called Interface Builder, which allow
 
 To get started, double-click the `Main.storyboard` file in the **Solution Explorer** to open it for editing in Xcode and Interface Builder:
 
-[![](hello-mac-images/xcode01.png "The Main.storyboard file in the Solution Explorer")](hello-mac-images/xcode01.png#lightbox)
+[![The Main.storyboard file in the Solution Explorer](hello-mac-images/xcode01.png)](hello-mac-images/xcode01.png#lightbox)
 
 This should launch Xcode and look like this screenshot:
 
-[![](hello-mac-images/xcode02.png "The default Xcode Interface Builder view")](hello-mac-images/xcode02.png#lightbox)
+[![The default Xcode Interface Builder view](hello-mac-images/xcode02.png)](hello-mac-images/xcode02.png#lightbox)
 
 Before starting to design the interface, take a quick overview of Xcode to orient with the main features that will be used.
 
@@ -259,7 +259,7 @@ Before starting to design the interface, take a quick overview of Xcode to orien
 
 When opening a **.storyboard** file in Xcode from Visual Studio for Mac, it opens with a **Project Navigator** on the left, the **Interface Hierarchy** and **Interface Editor** in the middle, and a **Properties & Utilities** section on the right:
 
-[![](hello-mac-images/xcode03.png "The various sections of Interface Builder in Xcode")](hello-mac-images/xcode03.png#lightbox)
+[![The various sections of Interface Builder in Xcode](hello-mac-images/xcode03.png)](hello-mac-images/xcode03.png#lightbox)
 
 The following sections take a look at what each of these Xcode features do and how to use them to create the interface for a Xamarin.Mac app.
 
@@ -281,13 +281,13 @@ The **Interface Editor** section provides the surface on which the user interfac
 
 The **Properties & Utilities** section is divided into two main sections, **Properties** (also called Inspectors) and the **Library**:
 
-[![](hello-mac-images/xcode04.png "The Properties Inspector")](hello-mac-images/xcode04.png#lightbox)
+[![The Properties Inspector](hello-mac-images/xcode04.png)](hello-mac-images/xcode04.png#lightbox)
 
 Initially this section is almost empty, however if the developer selects an element in the **Interface Editor** or **Interface Hierarchy**, the **Properties** section will be populated with information about the given element and properties that they can adjust.
 
 Within the **Properties** section, there are eight different *Inspector Tabs*, as shown in the following illustration:
 
-[![](hello-mac-images/xcode05.png "An overview of all Inspectors")](hello-mac-images/xcode05.png#lightbox)
+[![An overview of all Inspectors](hello-mac-images/xcode05.png)](hello-mac-images/xcode05.png#lightbox)
 
 ### Properties & Utility Types
 
@@ -304,7 +304,7 @@ From left-to-right, these tabs are:
 
 Use the **Library** section to find controls and objects to place into the designer to graphically build the user interface:
 
-[![](hello-mac-images/xcode06.png "The Xcode Library Inspector")](hello-mac-images/xcode06.png#lightbox)
+[![The Xcode Library Inspector](hello-mac-images/xcode06.png)](hello-mac-images/xcode06.png#lightbox)
 
 ## Creating the Interface
 
@@ -314,11 +314,11 @@ Follow these steps to use Interface Builder:
 
 1. In Xcode, drag a **Push Button** from the **Library Section**:
 
-    [![](hello-mac-images/xcode07.png "Selecting a NSButton from the Library Inspector")](hello-mac-images/xcode07.png#lightbox)
+    [![Selecting a NSButton from the Library Inspector](hello-mac-images/xcode07.png)](hello-mac-images/xcode07.png#lightbox)
 
 2. Drop the button onto the **View** (under the **Window Controller**) in the **Interface Editor**:
 
-    [![](hello-mac-images/xcode08.png "Adding a Button to the interface design")](hello-mac-images/xcode08.png#lightbox)
+    [![Adding a Button to the interface design](hello-mac-images/xcode08.png)](hello-mac-images/xcode08.png#lightbox)
 
 3. Click on the **Title** property in the **Attribute Inspector** and change the button's title to **Click Me**:
 
@@ -326,19 +326,19 @@ Follow these steps to use Interface Builder:
 
 4. Drag a **Label** from the **Library Section**:
 
-    [![](hello-mac-images/xcode10.png "Selecting a Label from the Library Inspector")](hello-mac-images/xcode10.png#lightbox)
+    [![Selecting a Label from the Library Inspector](hello-mac-images/xcode10.png)](hello-mac-images/xcode10.png#lightbox)
 
 5. Drop the label onto the **Window** beside the button in the **Interface Editor**:
 
-    [![](hello-mac-images/xcode11.png "Adding a Label to the Interface Design")](hello-mac-images/xcode11.png#lightbox)
+    [![Adding a Label to the Interface Design](hello-mac-images/xcode11.png)](hello-mac-images/xcode11.png#lightbox)
 
 6. Grab the right handle on the label and drag it until it is near the edge of the window:
 
-    [![](hello-mac-images/xcode12.png "Resizing the Label")](hello-mac-images/xcode12.png#lightbox)
+    [![Resizing the Label](hello-mac-images/xcode12.png)](hello-mac-images/xcode12.png#lightbox)
 
 7. Select the Button just added in the **Interface Editor**, and click the **Constraints Editor** icon at the bottom of the window:
 
-    [![](hello-mac-images/xcode13.png "Adding constraints to the button")](hello-mac-images/xcode13.png#lightbox)
+    [![Adding constraints to the button](hello-mac-images/xcode13.png)](hello-mac-images/xcode13.png#lightbox)
 
 8. At the top of the editor, click the **Red I-Beams** at the top and left. As the window is resized, this will keep the button in the same location at the top left corner of the screen.
 
@@ -348,7 +348,7 @@ Follow these steps to use Interface Builder:
 
 11. Select the label and click the **Constraints Editor** icon again:
 
-    [![](hello-mac-images/xcode14.png "Adding constraints to the label")](hello-mac-images/xcode14.png#lightbox)
+    [![Adding constraints to the label](hello-mac-images/xcode14.png)](hello-mac-images/xcode14.png#lightbox)
 
 12. By clicking **Red I-Beams** at the top, right and left of the **Constraints Editor**, tells the label to be stuck to its given X and Y locations and to grow and shrink as the window is resized in the running application.
 
@@ -360,7 +360,7 @@ While resizing and moving controls around, notice that Interface Builder gives h
 
 Look in the **Interface Hierarchy** section to see how the layout and hierarchy of the elements that make up the user interface are shown:
 
-[![](hello-mac-images/xcode15.png "Selecting an element in the Interface Hierarchy")](hello-mac-images/xcode15.png#lightbox)
+[![Selecting an element in the Interface Hierarchy](hello-mac-images/xcode15.png)](hello-mac-images/xcode15.png#lightbox)
 
 From here the developer can select items to edit or drag to reorder UI elements if needed. For example, if a UI element was being covered by another element, they could drag it to the bottom of the list to make it the top-most item on the window.
 
@@ -377,7 +377,7 @@ In Xcode, **Outlets** and **Actions** are added directly in code via *Control-dr
 
 For Xamarin.Mac developers, this means that the developer will drag into the Objective-C stub files that correspond to the C# file where they want to create the **Outlet** or **Action**. Visual Studio for Mac created a file called `ViewController.h` as part of the shim Xcode Project it generated to use Interface Builder:
 
-[![](hello-mac-images/xcode16-sml.png "Viewing source in Xcode")](hello-mac-images/xcode16.png#lightbox)
+[![Viewing source in Xcode](hello-mac-images/xcode16-sml.png)](hello-mac-images/xcode16.png#lightbox)
 
 This stub `.h` file mirrors the `ViewController.designer.cs` that is automatically added to a Xamarin.Mac project when a new `NSWindow` is created. This file will be used to synchronize the changes made by Interface Builder and is where the **Outlets** and **Actions** are created so that UI elements are exposed to C# code.
 
@@ -389,7 +389,7 @@ Do the following:
 
 1. In Xcode at the far right top-hand corner of the screen, click the **Double Circle** button to open the **Assistant Editor**:
 
-    [![](hello-mac-images/outlet01.png "Displaying the Assistant Editor")](hello-mac-images/outlet01.png#lightbox)
+    [![Displaying the Assistant Editor](hello-mac-images/outlet01.png)](hello-mac-images/outlet01.png#lightbox)
 
 2. The Xcode will switch to a split-view mode with the **Interface Editor** on one side and a **Code Editor** on the other.
 
@@ -397,25 +397,25 @@ Do the following:
 
 4. At the top of the **Code Editor** click on the **Automatic Link** and select the `ViewController.h` file:
 
-    [![](hello-mac-images/outlet02.png "Selecting the correct file")](hello-mac-images/outlet02.png#lightbox)
+    [![Selecting the correct file](hello-mac-images/outlet02.png)](hello-mac-images/outlet02.png#lightbox)
 
 5. Xcode should now have the correct file selected:
 
-    [![](hello-mac-images/outlet03.png "Viewing the ViewController.h file")](hello-mac-images/outlet03.png#lightbox)
+    [![Viewing the ViewController.h file](hello-mac-images/outlet03.png)](hello-mac-images/outlet03.png#lightbox)
 
 6. **The last step was very important!**: if you didn't have the correct file selected, you won't be able to create **Outlets** and **Actions**, or they will be exposed to the wrong class in C#!
 
 7. In the **Interface Editor**, hold down the **Control** key on the keyboard and click-drag the label created above onto the code editor just below the `@interface ViewController : NSViewController {}` code:
 
-    [![](hello-mac-images/outlet04.png "Dragging to create an Outlet")](hello-mac-images/outlet04.png#lightbox)
+    [![Dragging to create an Outlet](hello-mac-images/outlet04.png)](hello-mac-images/outlet04.png#lightbox)
 
 8. A dialog box will be displayed. Leave the **Connection** set to **Outlet** and enter `ClickedLabel` for the **Name**:
 
-    [![](hello-mac-images/outlet05.png "Defining the Outlet")](hello-mac-images/outlet05.png#lightbox)
+    [![Defining the Outlet](hello-mac-images/outlet05.png)](hello-mac-images/outlet05.png#lightbox)
 
 9. Click the **Connect** button to create the **Outlet**:
 
-    [![](hello-mac-images/outlet06.png "Viewing the final Outlet")](hello-mac-images/outlet06.png#lightbox)
+    [![Viewing the final Outlet](hello-mac-images/outlet06.png)](hello-mac-images/outlet06.png#lightbox)
 
 10. Save the changes to the file.
 
@@ -429,19 +429,19 @@ Do the following:
 
 2. In the **Interface Editor**, hold down the **Control** key on the keyboard and click-drag the button created above onto the code editor just below the `@property (assign) IBOutlet NSTextField *ClickedLabel;` code:
 
-    [![](hello-mac-images/action01.png "Dragging to create an Action")](hello-mac-images/action01.png#lightbox)
+    [![Dragging to create an Action](hello-mac-images/action01.png)](hello-mac-images/action01.png#lightbox)
 
 3. Change the **Connection** type to **Action**:
 
-    [![](hello-mac-images/action02.png "Defining the Action")](hello-mac-images/action02.png#lightbox)
+    [![Defining the Action](hello-mac-images/action02.png)](hello-mac-images/action02.png#lightbox)
 
 4. Enter `ClickedButton` as the **Name**:
 
-    [![](hello-mac-images/action03.png "Naming the new Action")](hello-mac-images/action03.png#lightbox)
+    [![Naming the new Action](hello-mac-images/action03.png)](hello-mac-images/action03.png#lightbox)
 
 5. Click the **Connect** button to create **Action**:
 
-    [![](hello-mac-images/action04.png "Viewing the final Action")](hello-mac-images/action04.png#lightbox)
+    [![Viewing the final Action](hello-mac-images/action04.png)](hello-mac-images/action04.png#lightbox)
 
 6. Save the changes to the file.
 
@@ -456,7 +456,7 @@ When the developer switches back to Visual Studio for Mac from Xcode, any change
 
 Select the **ViewController.designer.cs** in the **Solution Explorer** to see how the **Outlet** and **Action** have been wired up in the C# code:
 
-[![](hello-mac-images/sync01-sml.png "Synchronizing changes with Xcode")](hello-mac-images/sync01.png#lightbox)
+[![Synchronizing changes with Xcode](hello-mac-images/sync01-sml.png)](hello-mac-images/sync01.png#lightbox)
 
 Notice how the two definitions in the **ViewController.designer.cs** file:
 
@@ -488,7 +488,7 @@ With the user interface created and its UI elements exposed to code via **Outlet
 
 For this sample app, every time the first button is clicked, the label will be updated to show how many times the button has been clicked. To accomplish this, open the `ViewController.cs` file for editing by double-clicking it in the **Solution Explorer**:
 
-[![](hello-mac-images/code01-sml.png "Viewing the ViewController.cs file in Visual Studio for Mac")](hello-mac-images/code01.png#lightbox)
+[![Viewing the ViewController.cs file in Visual Studio for Mac](hello-mac-images/code01-sml.png)](hello-mac-images/code01.png#lightbox)
 
 First, create a class-level variable in the `ViewController` class to track the number of clicks that have happened. Edit the class definition and make it look like the following:
 
@@ -538,7 +538,7 @@ Whenever an app is built, the developer can choose what kind of build they want:
 
 The developer can select the type of build from the **Configuration Selector** at the upper left-hand corner of the Visual Studio for Mac screen:
 
-[![](hello-mac-images/run01-sml.png "Selecting a Debug build")](hello-mac-images/run01.png#lightbox)
+[![Selecting a Debug build](hello-mac-images/run01-sml.png)](hello-mac-images/run01.png#lightbox)
 
 ## Building the Application
 
@@ -556,11 +556,11 @@ There are three ways to run the app:
 
 The app will build (if it hasn’t been built already), start in debug mode and display its main interface window:
 
-[![](hello-mac-images/run02-sml.png "Running the application")](hello-mac-images/run02.png#lightbox)
+[![Running the application](hello-mac-images/run02-sml.png)](hello-mac-images/run02.png#lightbox)
 
 If the button is clicked a few times, the label should be updated with the count:
 
-[![](hello-mac-images/run03-sml.png "Showing the results of clicking the button")](hello-mac-images/run03.png#lightbox)
+[![Showing the results of clicking the button](hello-mac-images/run03-sml.png)](hello-mac-images/run03.png#lightbox)
 
 ## Where to Next
 

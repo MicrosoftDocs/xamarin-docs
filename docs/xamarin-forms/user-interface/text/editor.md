@@ -264,7 +264,7 @@ In XAML:
 </ContentPage>
 ```
 
-![](editor-images/textbackgroundcolor.png "Editor with BackgroundColor Example")
+![Editor with BackgroundColor Example](editor-images/textbackgroundcolor.png)
 
 Make sure that the background and text colors you choose are usable on each platform and don't obscure any placeholder text.
 

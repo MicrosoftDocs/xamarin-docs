@@ -41,7 +41,7 @@ When an item has been selected and the [`SelectionMode`](xref:Xamarin.Forms.List
 
 The following screenshots show a [`ListView`](xref:Xamarin.Forms.ListView) with the default selection mode:
 
-![](interactivity-images/selection-default.png "ListView with Selection Enabled")
+![ListView with Selection Enabled](interactivity-images/selection-default.png)
 
 ### Disable selection
 
@@ -59,7 +59,7 @@ var listView = new ListView { ... SelectionMode = ListViewSelectionMode.None };
 
 Often, users will want to take action on an item in a `ListView`. For example, consider a list of emails in the Mail app. On iOS, you can swipe to delete a message:
 
-![](interactivity-images/context-default.png "ListView with Context Actions")
+![ListView with Context Actions](interactivity-images/context-default.png)
 
 Context actions can be implemented in C# and XAML. Below you'll find specific guides for both, but first let's take a look at some key implementation details for both.
 
@@ -174,11 +174,11 @@ listView.RefreshControlColor = Color.Red;
 
 The following screenshots show pull-to-refresh as the user is pulling:
 
-![](interactivity-images/refresh-start.png "ListView Pull to Refresh In-Progress")
+![ListView Pull to Refresh In-Progress](interactivity-images/refresh-start.png)
 
 The following screenshots show pull-to-refresh after the user has released the pull, with the spinner being shown while the [`ListView`](xref:Xamarin.Forms.ListView) is updating:
 
-![](interactivity-images/refresh-in-progress.png "ListView Pull to Refresh Complete")
+![ListView Pull to Refresh Complete](interactivity-images/refresh-in-progress.png)
 
 [`ListView`](xref:Xamarin.Forms.ListView) fires the [`Refreshing`](xref:Xamarin.Forms.ListView.Refreshing) event to initiate the refresh, and the [`IsRefreshing`](xref:Xamarin.Forms.ListView.IsRefreshing) property will be set to `true`. Whatever code is required to refresh the contents of the `ListView` should then be executed by the event handler for the `Refreshing` event, or by the method executed by the [`RefreshCommand`](xref:Xamarin.Forms.ListView.RefreshCommand). Once the `ListView` is refreshed, the `IsRefreshing` property should be set to `false`, or the [`EndRefresh`](xref:Xamarin.Forms.ListView.EndRefresh) method should be called, to indicate that the refresh is complete.
 

@@ -21,15 +21,15 @@ _The Xamarin.Forms CarouselPage is a page that users can swipe from side to side
 
 The following screenshots show a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) on each platform:
 
-![](carousel-page-images/thirdpage.png "CarouselPage Third Item")
+![CarouselPage Third Item](carousel-page-images/thirdpage.png)
 
 The layout of a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) is identical on each platform. Pages can be navigated through by swiping right to left to navigate forwards through the collection, and by swiping left to right to navigate backwards through the collection. The following screenshots show the first page in a [`CarouselPage`](xref:Xamarin.Forms.CarouselPage) instance:
 
-![](carousel-page-images/firstpage.png "CarouselPage First Item")
+![CarouselPage First Item](carousel-page-images/firstpage.png)
 
 Swiping from right to left moves to the second page, as shown in the following screenshots:
 
-![](carousel-page-images/secondpage.png "CarouselPage Second Item")
+![CarouselPage Second Item](carousel-page-images/secondpage.png)
 
 Swiping from right to left again moves to the third page, while swiping from left to right returns to the previous page.
 

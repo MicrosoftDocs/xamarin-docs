@@ -30,7 +30,7 @@ The [`SwitchCell`](~/xamarin-forms/user-interface/tableview.md#switchcell) and [
 
 [`TextCell`](xref:Xamarin.Forms.TextCell) is a cell for displaying text, optionally with a second line as detail text. The following screenshot shows `TextCell` items on iOS and Android:
 
-![](customizing-cell-appearance-images/text-cell-default.png "Default TextCell Example")
+![Default TextCell Example](customizing-cell-appearance-images/text-cell-default.png)
 
 TextCells are rendered as native controls at runtime, so performance is very good compared to a custom `ViewCell`. TextCells are customizable, allowing you to set the following properties:
 
@@ -41,7 +41,7 @@ TextCells are rendered as native controls at runtime, so performance is very goo
 
 The following screenshot shows `TextCell` items with customized color properties:
 
-![](customizing-cell-appearance-images/text-cell-custom.png "Custom TextCell Example")
+![Custom TextCell Example](customizing-cell-appearance-images/text-cell-custom.png)
 
 ### ImageCell
 

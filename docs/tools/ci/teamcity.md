@@ -60,7 +60,7 @@ A crucial step in configuring a build server is to install all of the necessary 
 
 The following diagram illustrates all of these components:
 
-![](teamcity-images/image1.png "This diagram illustrates all of these components")
+![This diagram illustrates all of these components](teamcity-images/image1.png)
 
 Once all of the software is installed, log in to the user account and confirm that all of the software is properly installed and working. This should involve compiling the solution and submitting the application to App Center Test. This can be simplified by running the build script, as described in the next section.
 

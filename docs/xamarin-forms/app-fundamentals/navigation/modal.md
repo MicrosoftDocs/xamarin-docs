@@ -25,11 +25,11 @@ This article discusses the following topics:
 
 A modal page can be any of the [Page](~/xamarin-forms/user-interface/controls/pages.md) types supported by Xamarin.Forms. To display a modal page the application will push it onto the modal stack, where it will become the active page, as shown in the following diagram:
 
-![](modal-images/pushing.png "Pushing a Page to the Modal Stack")
+![Pushing a Page to the Modal Stack](modal-images/pushing.png)
 
 To return to the previous page the application will pop the current page from the modal stack, and the new topmost page becomes the active page, as shown in the following diagram:
 
-![](modal-images/popping.png "Popping a Page from the Modal Stack")
+![Popping a Page from the Modal Stack](modal-images/popping.png)
 
 ## Performing Navigation
 
@@ -57,7 +57,7 @@ async void OnItemSelected (object sender, SelectedItemChangedEventArgs e)
 
 This causes the `ModalPage` instance to be pushed onto the modal stack, where it becomes the active page, provided that an item has been selected in the [`ListView`](xref:Xamarin.Forms.ListView) on the `MainPage` instance. The `ModalPage` instance is shown in the following screenshots:
 
-![](modal-images/modalpage.png "Modal Page Example")
+![Modal Page Example](modal-images/modalpage.png)
 
 When [`PushModalAsync`](xref:Xamarin.Forms.INavigation.PushModalAsync*) is invoked, the following events occur:
 

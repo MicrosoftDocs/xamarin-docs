@@ -18,7 +18,7 @@ _Explore the effects and animations possible with the SkiaSharp rotate transform
 
 With the rotate transform, SkiaSharp graphics objects break free of the constraint of alignment with the horizontal and vertical axes:
 
-![](rotate-images/rotateexample.png "Text rotated around a center")
+![Text rotated around a center](rotate-images/rotateexample.png)
 
 For rotating a graphical object around the point (0, 0), SkiaSharp supports both a [`RotateDegrees`](xref:SkiaSharp.SKCanvas.RotateDegrees(System.Single)) method and a [`RotateRadians`](xref:SkiaSharp.SKCanvas.RotateRadians(System.Single)) method:
 
@@ -56,7 +56,7 @@ using (SKPaint textPaint = new SKPaint
 
 Because rotation is centered around the upper-left corner of the canvas, for most angles set in this program, the text is rotated off the screen:
 
-[![](rotate-images/basicrotate-small.png "Triple screenshot of the Basic Rotate page")](rotate-images/basicrotate-large.png#lightbox "Triple screenshot of the Basic Rotate page")
+[![Triple screenshot of the Basic Rotate page](rotate-images/basicrotate-small.png)](rotate-images/basicrotate-large.png#lightbox "Triple screenshot of the Basic Rotate page")
 
 Very often you'll want to rotate something centered around a specified pivot point using these versions of the [`RotateDegrees`](xref:SkiaSharp.SKCanvas.RotateDegrees(System.Single,System.Single,System.Single)) and [`RotateRadians`](xref:SkiaSharp.SKCanvas.RotateRadians(System.Single,System.Single,System.Single)) methods:
 
@@ -84,7 +84,7 @@ using (SKPaint textPaint = new SKPaint
 
 Now the text rotates around the point used to position the text, which is the horizontal center of the text's baseline:
 
-[![](rotate-images/centeredrotate-small.png "Triple screenshot of the Centered Rotate page")](rotate-images/centeredrotate-large.png#lightbox "Triple screenshot of the Centered Rotate page")
+[![Triple screenshot of the Centered Rotate page](rotate-images/centeredrotate-small.png)](rotate-images/centeredrotate-large.png#lightbox "Triple screenshot of the Centered Rotate page")
 
 As with the centered version of the `Scale` method, the centered version of the `RotateDegrees` call is a shortcut. Here's the method:
 
@@ -138,7 +138,7 @@ Conceptually, the two transforms are applied in the order opposite to how they a
 
 There are usually several ways to combine rotation and translation. The **Rotated Text** page creates the following display:
 
-[![](rotate-images/rotatedtext-small.png "Triple screenshot of the Rotated Text page")](rotate-images/rotatedtext-large.png#lightbox "Triple screenshot of the Rotated Text page")
+[![Triple screenshot of the Rotated Text page](rotate-images/rotatedtext-small.png)](rotate-images/rotatedtext-large.png#lightbox "Triple screenshot of the Rotated Text page")
 
 Here's the `PaintSurface` handler of the [`RotatedTextPage`](https://github.com/xamarin/xamarin-forms-samples/blob/master/SkiaSharpForms/Demos/Demos/SkiaSharpFormsDemos/Transforms/RotatedTextPage.cs) class:
 
@@ -362,7 +362,7 @@ void OnCanvasViewPaintSurface(object sender, SKPaintSurfaceEventArgs args)
 
 The clock is certainly functional although the hands are rather crude:
 
-[![](rotate-images/uglyanalogclock-small.png "Triple screenshot of the Ugly Analog Clock Text page")](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
+[![Triple screenshot of the Ugly Analog Clock Text page](rotate-images/uglyanalogclock-small.png)](rotate-images/uglyanalogclock-large.png#lightbox "Triple screenshot of the Ugly Analog page")
 
 For a more attractive clock, see the article [**SVG Path Data in SkiaSharp**](../curves/path-data.md).
 

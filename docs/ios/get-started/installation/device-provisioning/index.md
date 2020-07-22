@@ -14,7 +14,7 @@ While developing a Xamarin.iOS application it is essential to test it by deployi
 
 The highlighted sections in the image below show the steps required to get set up for iOS provisioning:
 
-[![](images/provisioningdiagram.png "The highlighted sections in this image show the steps required to get set up for iOS provisioning")](images/provisioningdiagram.png#lightbox)
+[![The highlighted sections in this image show the steps required to get set up for iOS provisioning](images/provisioningdiagram.png)](images/provisioningdiagram.png#lightbox)
 
 After this, the next step is to distribute the application. For more information on deployment, visit the [App Distribution](~/ios/deploy-test/app-distribution/index.md) guides.
 

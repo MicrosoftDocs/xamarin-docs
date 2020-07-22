@@ -57,7 +57,7 @@ public override UICollectionViewCell GetCell (UICollectionView collectionView, N
 
 This results in a grid of images as shown below:
 
-![](photokit-images/image4.png "The running app displaying a grid of images")
+![The running app displaying a grid of images](photokit-images/image4.png)
 
 ## Saving Changes to the Photo Library
 

@@ -37,13 +37,13 @@ There are two ways to consume frameworks in Xamarin.iOS:
 
 Right-click on Project and Browse to Add Native References
 
-![](embedded-frameworks-images/xam-native-refs.png "Select Add native references in Visual Studio for Mac")
+![Select Add native references in Visual Studio for Mac](embedded-frameworks-images/xam-native-refs.png)
 
 # [Visual Studio](#tab/windows)
 
 Right-click on Project and Browse to Add Native References
 
-![](embedded-frameworks-images/vs-native-refs.png "Select Add native references in Visual Studio")
+![Select Add native references in Visual Studio](embedded-frameworks-images/vs-native-refs.png)
 
 -----
 

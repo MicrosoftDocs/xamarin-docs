@@ -33,7 +33,7 @@ You are now ready to begin defining your game's classes. At a minimum, you will 
 
 Your project structure should now look like:
 
-![](fsharp-images/solutionpane.png "The project structure should now look like")
+![The project structure should now look like](fsharp-images/solutionpane.png)
 
 Define your newly-created class as a subtype of `Urho.Application` and override its `Start` method:
 

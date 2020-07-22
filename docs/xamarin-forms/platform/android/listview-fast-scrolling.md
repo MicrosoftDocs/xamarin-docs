@@ -52,7 +52,7 @@ listView.On<Android>().SetIsFastScrollEnabled(!listView.On<Android>().IsFastScro
 
 The result is that fast scrolling through data in a [`ListView`](xref:Xamarin.Forms.ListView) can be enabled, which changes the size of the scroll thumb:
 
-[![](listview-fast-scrolling-images/fastscroll.png "ListView FastScroll Platform-Specific")](listview-fast-scrolling-images/fastscroll-large.png#lightbox "ListView FastScroll Platform-Specific")
+[![ListView FastScroll Platform-Specific](listview-fast-scrolling-images/fastscroll.png)](listview-fast-scrolling-images/fastscroll-large.png#lightbox "ListView FastScroll Platform-Specific")
 
 ## Related links
 

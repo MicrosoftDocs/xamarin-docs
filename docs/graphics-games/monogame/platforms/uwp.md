@@ -36,18 +36,18 @@ Once all required resources have been installed and developer mode has been enab
 1. Select **File** > **New** > **Project...**
 1. Select the **Installed** > **Templates** > **Visual C#** > **MonoGame** category:
 
-    ![](uwp-images/image1.png "MonoGame category")
+    ![MonoGame category](uwp-images/image1.png)
 
 1. Select the **MonoGame Windows 10 Universal Project** option:
 
-    ![](uwp-images/image2.png "Select the MonoGame Windows 10 Universal Project option")
+    ![Select the MonoGame Windows 10 Universal Project option](uwp-images/image2.png)
 
 1. Enter a name for the new project and click **OK**.
 If Visual Studio displays any errors after clicking OK, verify that Windows 10 tools are installed and that the device is in developer mode.
 
 Once Visual Studio finishes creating the template, we can run it to see the empty project running:
 
-![](uwp-images/image3.png "Once Visual Studio finishes creating the template, run it to see the empty project running")
+![Once Visual Studio finishes creating the template, run it to see the empty project running](uwp-images/image3.png)
 
 The numbers in the corners provide diagnostic information. This information can be removed  by deleting the code in `App.xaml.cs` in the `DEBUG` block in the `OnLaunched` method:
 
@@ -67,11 +67,11 @@ protected override void OnLaunched(LaunchActivatedEventArgs e)
 
 UWP projects can deploy to any Windows 10 device from the same project. After setting up the Windows 10 development machine and the Xbox One, UWP apps can be deployed by switching the target to Remote Machine and entering the Xbox One's IP address:
 
-![](uwp-images/remote.png "UWP apps can be deployed by switching the target to Remote Machine and entering the Xbox Ones IP address")
+![UWP apps can be deployed by switching the target to Remote Machine and entering the Xbox Ones IP address](uwp-images/remote.png)
 
 On Xbox One, the white border represents the non-safe area for TVs. For more information, see the [safe area section](#safe-area-on-xbox-one).
 
-![](uwp-images/safearea.png "On Xbox One, the white border represents the non-safe area for TVs")
+![On Xbox One, the white border represents the non-safe area for TVs](uwp-images/safearea.png)
 
 ### Safe Area on Xbox One
 
@@ -79,7 +79,7 @@ Developing games for consoles requires considering the safe area, which is an ar
 
 The MonoGame template for Xbox One considers the safe area and renders it as a white border. This area is also reflected at runtime in the game's `Window.ClientBounds` property as shown in this image of the watch window in Visual Studio. Notice that the height of the client bounds is 1016, despite 1920x1080 display resolution:
 
-![](uwp-images/clientbounds.png "Notice that the height of the client bounds is 1016, despite 1920x1080 display resolution")
+![Notice that the height of the client bounds is 1016, despite 1920x1080 display resolution](uwp-images/clientbounds.png)
 
 ## Referencing Content in UWP Projects
 

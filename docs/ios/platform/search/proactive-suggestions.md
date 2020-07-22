@@ -90,7 +90,7 @@ All of these features have one thing in common, they all use `NSUserActivity` in
 
 As stated above, `NSUserActivity` helps the system understand what information the user is currently working with on screen. `NSUserActivity` is a light-weight state caching mechanism to capture the user's activity as they navigate through the app. For example, looking at a restaurant app:
 
-[![](proactive-suggestions-images/activity02.png "The NSUserActivity light-weight state caching mechanism")](proactive-suggestions-images/activity02.png#lightbox)
+[![The NSUserActivity light-weight state caching mechanism](proactive-suggestions-images/activity02.png)](proactive-suggestions-images/activity02.png#lightbox)
 
 With the following interactions:
 
@@ -100,7 +100,7 @@ With the following interactions:
 
 Take a closer look at the last screen:
 
-[![](proactive-suggestions-images/activity03.png "The NSUserActivity details")](proactive-suggestions-images/activity03.png#lightbox)
+[![The NSUserActivity details](proactive-suggestions-images/activity03.png)](proactive-suggestions-images/activity03.png#lightbox)
 
 Here the app is creating a `NSUserActivity` and it has been populated with information to recreate the state later. The app has also included some metadata such as the location's name and address. With this activity created, the app lets iOS know that it represents the user's current state.
 
@@ -319,7 +319,7 @@ Contact Interactions are implemented in the app using `NSUserActivity` and the n
 
 Take a look at how the app can donate interactions:
 
-[![](proactive-suggestions-images/activity04.png "Donating Interactions overview")](proactive-suggestions-images/activity04.png#lightbox)
+[![Donating Interactions overview](proactive-suggestions-images/activity04.png)](proactive-suggestions-images/activity04.png#lightbox)
 
 The app creates an `INInteraction` object that contains an  **Intent** (`INIntent`), **Participants** and **Metadata**. The **Intent** represents a user action such as making a video call or sending a text message. The **Participants** include the people receiving the communication. The **Metadata** defines addition information such as successfully sending the message, etc.
 
@@ -329,7 +329,7 @@ Once the interaction is fully populated, call the `DonateInteraction` method to 
 
 When the user interacts with the app from the Contact card, the interaction gets bundled with a `NSUserActivity`, which is then used to launch the app:
 
-[![](proactive-suggestions-images/activity05.png "The interaction gets bundled with a NSUserActivity that is used to launch the app")](proactive-suggestions-images/activity05.png#lightbox)
+[![The interaction gets bundled with a NSUserActivity that is used to launch the app](proactive-suggestions-images/activity05.png)](proactive-suggestions-images/activity05.png#lightbox)
 
 Take a look at the following example of a Send Message Intent:
 

@@ -34,14 +34,14 @@ Select the device and run the Instruments app:
 
 Instruments will now open and display the following dialog:
 
- [![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png "Choosing a profiling template")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
+ [![Choosing a profiling template](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments1.png#lightbox)
 
 Click to select the **Allocations** template. The other templates are valid, however this article only discusses
 the **Allocations** profile template.
 
 Next, select the device and application using the menu at the top of the window:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png "Select the device and application")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
+[![Select the device and application](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments2.png#lightbox)
 
 The iOS device should selected in the menu at the top of the window and
 the application to be profiled should be selected next to it (**MemoryDemo** in the screenshot above).
@@ -50,13 +50,13 @@ If the device is not listed under in the menu, check the **Console** in Visual S
 
 Click **Choose** button and the next screen should appear:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png "The profiling interface")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
+[![The profiling interface](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments3.png#lightbox)
 
 Click the record button (red circle at the top-left) to start profiling.
 
 The following screenshot shows an example of profiling using **Instruments**:
 
-[![](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png "An example of profiling using Instruments")](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
+[![An example of profiling using Instruments](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png)](using-instruments-to-detect-native-leaks-using-markheap-images/instruments4.png#lightbox)
 
 ## Summary
 

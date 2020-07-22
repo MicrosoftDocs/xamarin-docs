@@ -15,7 +15,7 @@ Xamarin offers a path for developers targeting iOS to move their non-user interf
 
 Additionally, Xamarin allows you to leverage existing Objective-C assets via a technology know as bindings. You simply create a static library in Objective-C and expose it to C# via a binding, as illustrated in the following diagram:
 
- [![](images/01-bindings.png "A static library in Objective-C exposed to C# via a binding")](images/01-bindings.png#lightbox)
+ [![A static library in Objective-C exposed to C# via a binding](images/01-bindings.png)](images/01-bindings.png#lightbox)
 
 This doesn't need to be limited to non-UI code. Bindings can expose user interface code developed in Objective-C as well.
 

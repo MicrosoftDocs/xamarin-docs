@@ -136,7 +136,7 @@ The API response is returned in XML format. The following XML data shows a typic
 
 In the sample application, the XML response is parsed into a `XDocument` instance, with the XML root value being returned to the calling method for display as shown in the following screenshots:
 
-![](text-translation-images/text-translation.png "Text Translation to German")
+![Text Translation to German](text-translation-images/text-translation.png)
 
 ## Summary
 

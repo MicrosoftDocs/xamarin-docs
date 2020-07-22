@@ -15,7 +15,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 While macOS provides a wealth of built-in User Controls, there might be times that you need to create a custom control to provide functionality not provided out-of-the-box or to match a custom UI theme (such as a game interface).
 
-[![](custom-controls-images/intro01.png "Example of a custom UI control")](custom-controls-images/intro01.png#lightbox)
+[![Example of a custom UI control](custom-controls-images/intro01.png)](custom-controls-images/intro01.png#lightbox)
 
 In this article, we'll cover the basics of creating a reusable Custom User Interface Control in a Xamarin.Mac application. It is highly suggested that you work through the [Hello, Mac](~/mac/get-started/hello-mac.md) article first, specifically the [Introduction to Xcode and Interface Builder](~/mac/get-started/hello-mac.md#introduction-to-xcode-and-interface-builder) and [Outlets and Actions](~/mac/get-started/hello-mac.md#outlets-and-actions) sections, as it covers key concepts and techniques that we'll be using in this article.
 
@@ -43,7 +43,7 @@ Since the custom control we are creating will be responding to user input (left 
 
 In Visual Studio for Mac, open the Xamarin.Mac project that you want to create a Custom User Interface Control for (or create a new one). Add a new class and call it `NSFlipSwitch`:
 
-[![](custom-controls-images/custom01.png "Adding a new class")](custom-controls-images/custom01.png#lightbox)
+[![Adding a new class](custom-controls-images/custom01.png)](custom-controls-images/custom01.png#lightbox)
 
 Next, edit the `NSFlipSwitch.cs` class and make it look like the following:
 
@@ -329,11 +329,11 @@ With our custom control fully defined, we can either add it to our Xamarin.Mac a
 
 To add the control using Interface Builder, first do a clean build of the Xamarin.Mac project, then double-click the `Main.storyboard` file to open it in Interface Builder for edit:
 
-[![](custom-controls-images/custom02.png "Editing the storyboard in Xcode")](custom-controls-images/custom02.png#lightbox)
+[![Editing the storyboard in Xcode](custom-controls-images/custom02.png)](custom-controls-images/custom02.png#lightbox)
 
 Next, drag a `Custom View` into the User Interface design:
 
-[![](custom-controls-images/custom03.png "Selecting a Custom View from the Library")](custom-controls-images/custom03.png#lightbox)
+[![Selecting a Custom View from the Library](custom-controls-images/custom03.png)](custom-controls-images/custom03.png#lightbox)
 
 With the Custom View still selected, switch to the **Identity Inspector** and change the view's **Class** to `NSFlipSwitch`:
 
@@ -341,7 +341,7 @@ With the Custom View still selected, switch to the **Identity Inspector** and ch
 
 Switch to the **Assistant Editor** and create an **Outlet** for the custom control (making sure to bind it in the `ViewController.h` file and not the `.m` file):
 
-[![](custom-controls-images/custom05.png "Configuring a new Outlet")](custom-controls-images/custom05.png#lightbox)
+[![Configuring a new Outlet](custom-controls-images/custom05.png)](custom-controls-images/custom05.png#lightbox)
 
 Save your changes, return to Visual Studio for Mac and allow the changes to sync. Edit the `ViewController.cs` file and make the `ViewDidLoad` method look like the following:
 
@@ -362,7 +362,7 @@ Here, we respond to the `ValueChanged` event we defined above on the `NSFlipSwit
 
 Optionally, we could return to Interface Builder and define an **Action** on the control:
 
-[![](custom-controls-images/custom06.png "Configuring a new Action")](custom-controls-images/custom06.png#lightbox)
+[![Configuring a new Action](custom-controls-images/custom06.png)](custom-controls-images/custom06.png#lightbox)
 
 Again, edit the `ViewController.cs` file and add the following method:
 

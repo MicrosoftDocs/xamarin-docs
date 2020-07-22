@@ -697,7 +697,7 @@ files to find the selector, the types of the arguments, or the mapping to C#, an
 > [!IMPORTANT]
 > This section explains the IDE integration with outlets when using XIB files. When using the Xamarin Designer for iOS, this is all replaced by entering a name under **Identity > Name** in the Properties section of your IDE, as shown below:
 >
-> [![](images/designeroutlet.png "Entering an item Name in the iOS Designer")](images/designeroutlet.png#lightbox)
+> [![Entering an item Name in the iOS Designer](images/designeroutlet.png)](images/designeroutlet.png#lightbox)
 >
 >For more information on the iOS Designer, please review the [Introduction to the iOS Designer](~/ios/user-interface/designer/introduction.md#how-it-works) document.
 

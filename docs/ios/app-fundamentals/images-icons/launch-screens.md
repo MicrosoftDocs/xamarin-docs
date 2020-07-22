@@ -272,34 +272,34 @@ guide.
 
 When updating an existing app to use Storyboards for its Launch Screens, right click the **Project Name** in the **Solution Explorer** and select **Add** > **New File...**. Select **iOS** > **Launch Screen** and click the **New** button:
 
-![](launch-screens-images/storyboard02.png "Select an iOS Launch Screen")
+![Select an iOS Launch Screen](launch-screens-images/storyboard02.png)
 
 Next, double-click the `Info.plist` file in the **Solution Explorer** to open it for editing. Under **Launch Screen**, select the new Storyboard file created above.
 
-![](launch-screens-images/storyboard09.png "Select the new Storyboard file created above")
+![Select the new Storyboard file created above](launch-screens-images/storyboard09.png)
 
 To use the new Storyboard as a launch screen, do the following:
 
 1. Double-click the `Info.plist` file in the **Solution Explorer** to open it for editing.
 2. Scroll to the **Universal Launch Images** section of the editor, open the **Launch Screen** dropdown and select the name of the storyboard created above: 
 
-    ![](launch-screens-images/storyboard08.png "Setting the launch screen to the storyboard")
+    ![Setting the launch screen to the storyboard](launch-screens-images/storyboard08.png)
 
 # [Visual Studio](#tab/windows)
 
 1. Right-click on the project name in the **Solution Explorer** and select **Add** > **New File...**: 
 
-    ![](launch-screens-images/image012.png "Add new file")
+    ![Add new file](launch-screens-images/image012.png)
 2. Enter a name for the launch screen and click the **Add** button: 
 
-    ![](launch-screens-images/image013.png "Enter a name for the launch screen")
+    ![Enter a name for the launch screen](launch-screens-images/image013.png)
 3. In the **Solution Explorer**, double-click the newly created storyboard file to open it for editing.
 4. Ensure that the **Size Class** is set to **any:any** and the **View As** is **Generic**: 
 
-    ![](launch-screens-images/image016.png "Ensure that the Size Class is set to any:any and the View As is Generic")
+    ![Ensure that the Size Class is set to any:any and the View As is Generic](launch-screens-images/image016.png)
 5. Assembly the launch screen from Size Classes, simple UI elements (such as `UIImageView`) and images that you have included in the application's bundle: 
 
-    ![](launch-screens-images/image017.png "Assembly the launch screen in the iOS Designer")
+    ![Assembly the launch screen in the iOS Designer](launch-screens-images/image017.png)
 6. Save the changes to the Storyboard.
 
 -----

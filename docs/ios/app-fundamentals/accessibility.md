@@ -35,7 +35,7 @@ text input or an image that is purely decorative) – the
 The **Properties Pad** contains an accessibility section that allows these
 settings to be edited when a control is selected in the iOS UI Designer:
 
-![](accessibility-images/ios-designer-sml.png "Accessibility Settings")
+![Accessibility Settings](accessibility-images/ios-designer-sml.png)
 
 **C#**
 
@@ -136,7 +136,7 @@ for more details on localizing content.
 VoiceOver is enabled in the **Settings** app by navigating to
 **General > Accessibility > VoiceOver**:
 
-![](accessibility-images/settings-sml.png "Setting the speaking rate")
+![Setting the speaking rate](accessibility-images/settings-sml.png)
 
 The **Accessibility** screen also provides settings for zoom,
 text size, color & contrast options, speech settings, and
@@ -152,14 +152,14 @@ is available to help verify accessibility properties and events are
 correctly configured. Turn on the inspector
 in the **Settings** app by navigating to **General > Accessibility > Accessibility Inspector**:
 
-![](accessibility-images/settings-inspector-sml.png "Enable Accessibility Inspector")
+![Enable Accessibility Inspector](accessibility-images/settings-inspector-sml.png)
 
 Once enabled, the inspector window hovers over the iOS screen at all times.
 Here is an example of the output when a table view row is selected – notice
 the **Label** contains a sentence that gives the content of the row and
 also that it is "done" (ie. the tick is visible):
 
-![](accessibility-images/tableview-a11y-sml.png "Using Accessibility Inspector")
+![Using Accessibility Inspector](accessibility-images/tableview-a11y-sml.png)
 
 While the inspector is visible, use the "X" icon at the top-left
 to temporarily show and hide the overlay and enable/disable

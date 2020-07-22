@@ -158,7 +158,7 @@ Each platform has a different method for visually laying out screens:
 These screenshots show the visual screen designers available on each
 platform:
 
- [![](understanding-the-xamarin-mobile-platform-images/designer-all1.png "These screenshots show the visual screen designers available on each platform")](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
+ [![These screenshots show the visual screen designers available on each platform](understanding-the-xamarin-mobile-platform-images/designer-all1.png)](understanding-the-xamarin-mobile-platform-images/designer-all1.png#lightbox)
 
 In all cases the elements that you create visually can be referenced in your
 code.

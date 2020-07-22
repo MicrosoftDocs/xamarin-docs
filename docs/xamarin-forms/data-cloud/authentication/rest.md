@@ -24,11 +24,11 @@ Basic authentication is the simplest authentication mechanism supported by HTTP,
 
 - If a web service receives a request for a protected resource, it rejects the request with an HTTP status code 401 (access denied) and sets the WWW-Authenticate response header, as shown in the following diagram:
 
-![](rest-images/basic-authentication-fail.png "Basic Authentication Failing")
+![Basic Authentication Failing](rest-images/basic-authentication-fail.png)
 
 - If a web service receives a request for a protected resource, with the `Authorization` header correctly set, the web service responds with an HTTP status code 200, which indicates that the request succeeded and that the requested information is in the response. This scenario is shown in the following diagram:
 
-![](rest-images/basic-authentication-success.png "Basic Authentication Succeeding")
+![Basic Authentication Succeeding](rest-images/basic-authentication-success.png)
 
 > [!NOTE]
 > Basic authentication should only be used over an HTTPS connection. When used over an HTTP connection, the `Authorization` header can easily be decoded if the HTTP traffic is captured by an attacker.

@@ -171,7 +171,7 @@ detailsLabel.SetBinding(Label.TextProperty, "SelectedMonkey.Details");
 
 The [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) property data binds to the `SelectedMonkey` property of the connected view model, which is of type `Monkey`. Therefore, when the user selects an item in the [`Picker`](xref:Xamarin.Forms.Picker), the `SelectedMonkey` property will be set to the selected `Monkey` object. The `SelectedMonkey` object data is displayed in the user interface by [`Label`](xref:Xamarin.Forms.Label) and [`Image`](xref:Xamarin.Forms.Image) views:
 
-![](populating-itemssource-images/monkeys.png "Picker Item Selection")
+![Picker Item Selection](populating-itemssource-images/monkeys.png)
 
 > [!NOTE]
 > Note that the [`SelectedItem`](xref:Xamarin.Forms.Picker.SelectedItem) and [`SelectedIndex`](xref:Xamarin.Forms.Picker.SelectedIndex) properties both support two-way bindings by default.

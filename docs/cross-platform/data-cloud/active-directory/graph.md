@@ -29,7 +29,7 @@ In your application, add a reference to **Azure Active Directory
 and there may be breaking changes before the final version
 is released. 
 
-![](graph-images/06.-adal-nuget-package.jpg "Add a reference to Azure Active Directory Authentication Library (Azure ADAL)")
+![Add a reference to Azure Active Directory Authentication Library (Azure ADAL)](graph-images/06.-adal-nuget-package.jpg)
 
 In your application, you will now need to add the following
   class level variables that are required for the authentication flow.
@@ -127,7 +127,7 @@ Now if you run the application, you should see an authentication dialog.
   Upon successful authentication, it will ask your permissions to
   access the resources (in our case Graph API):
 
-![](graph-images/08.-authentication-flow.jpg "Upon successful authentication, it will ask your permissions to access the resources in our case Graph API")
+![Upon successful authentication, it will ask your permissions to access the resources in our case Graph API](graph-images/08.-authentication-flow.jpg)
 
 If authentication is successful and you’ve authorized the
   app to access the resources, you should get an `AccessToken`
@@ -135,7 +135,7 @@ If authentication is successful and you’ve authorized the
   required for further API calls and for authorization
   with Azure Active Directory behind the scenes.
 
-![](graph-images/07.-access-token-for-authentication.jpg "These tokens are   required for further API calls and for authorization with Azure Active Directory behind the scenes")
+![These tokens are   required for further API calls and for authorization with Azure Active Directory behind the scenes](graph-images/07.-access-token-for-authentication.jpg)
 
 For example, the code below allows you to get a user list from Active Directory. You can replace the Web API URL with your Web API which is protected by Azure AD.
 

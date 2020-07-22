@@ -153,7 +153,7 @@ The `Group` and `Name` properties of the behavior are set to the values of the [
 
 At runtime, when the behavior is attached to the [`Label`](xref:Xamarin.Forms.Label) control, the `Xamarin.LabelShadowEffect` will be added to the control's [`Effects`](xref:Xamarin.Forms.Element.Effects) collection. This results in a shadow being added to the text displayed by the `Label` control, as shown in the following screenshots:
 
-![](effect-behavior-images/screenshots.png "Sample Application with EffectsBehavior")
+![Sample Application with EffectsBehavior](effect-behavior-images/screenshots.png)
 
 The advantage of using this behavior to add and remove effects from controls is that boiler-plate effect-handling code can be removed from code-behind files.
 

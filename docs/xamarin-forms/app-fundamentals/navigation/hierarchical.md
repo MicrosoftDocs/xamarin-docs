@@ -18,11 +18,11 @@ _The NavigationPage class provides a hierarchical navigation experience where th
 
 To move from one page to another, an application will push a new page onto the navigation stack, where it will become the active page, as shown in the following diagram:
 
-![](hierarchical-images/pushing.png "Pushing a Page to the Navigation Stack")
+![Pushing a Page to the Navigation Stack](hierarchical-images/pushing.png)
 
 To return back to the previous page, the application will pop the current page from the navigation stack, and the new topmost page becomes the active page, as shown in the following diagram:
 
-![](hierarchical-images/popping.png "Popping a Page from the Navigation Stack")
+![Popping a Page from the Navigation Stack](hierarchical-images/popping.png)
 
 Navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property on any [`Page`](xref:Xamarin.Forms.Page) derived types. These methods provide the ability to push pages onto the navigation stack, to pop pages from the navigation stack, and to perform stack manipulation.
 
@@ -30,7 +30,7 @@ Navigation methods are exposed by the [`Navigation`](xref:Xamarin.Forms.Navigabl
 
 In hierarchical navigation, the [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) class is used to navigate through a stack of [`ContentPage`](xref:Xamarin.Forms.ContentPage) objects. The following screenshots show the main components of the `NavigationPage` on each platform:
 
-![](hierarchical-images/navigationpage-components.png "NavigationPage Components")
+![NavigationPage Components](hierarchical-images/navigationpage-components.png)
 
 The layout of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) is dependent on the platform:
 
@@ -56,7 +56,7 @@ public App ()
 
 This causes the `Page1Xaml` [`ContentPage`](xref:Xamarin.Forms.ContentPage) instance to be pushed onto the navigation stack, where it becomes the active page and the root page of the application. This is shown in the following screenshots:
 
-![](hierarchical-images/mainpage.png "Root Page of Navigation Stack")
+![Root Page of Navigation Stack](hierarchical-images/mainpage.png)
 
 > [!NOTE]
 > The [`RootPage`](xref:Xamarin.Forms.NavigationPage.RootPage) property of a [`NavigationPage`](xref:Xamarin.Forms.NavigationPage) instance provides access to the first page in the navigation stack.
@@ -74,7 +74,7 @@ async void OnNextPageButtonClicked (object sender, EventArgs e)
 
 This causes the `Page2Xaml` instance to be pushed onto the navigation stack, where it becomes the active page. This is shown in the following screenshots:
 
-![](hierarchical-images/secondpage.png "Page Pushed onto Navigation Stack")
+![Page Pushed onto Navigation Stack](hierarchical-images/secondpage.png)
 
 When the [`PushAsync`](xref:Xamarin.Forms.NavigationPage.PushAsync*) method is invoked, the following events occur:
 
@@ -174,7 +174,7 @@ public MainPage (string date)
 
 The data is then displayed on the page by setting the [`Label.Text`](xref:Xamarin.Forms.Label.Text) property, as shown in the following screenshots:
 
-![](hierarchical-images/passing-data-constructor.png "Data Passed Through a Page Constructor")
+![Data Passed Through a Page Constructor](hierarchical-images/passing-data-constructor.png)
 
 ### Passing Data through a BindingContext
 
@@ -260,7 +260,7 @@ public class SecondPageCS : ContentPage
 
 The data is then displayed on the page by a series of [`Label`](xref:Xamarin.Forms.Label) controls, as shown in the following screenshots:
 
-![](hierarchical-images/passing-data-bindingcontext.png "Data Passed Through a BindingContext")
+![Data Passed Through a BindingContext](hierarchical-images/passing-data-bindingcontext.png)
 
 For more information about data binding, see [Data Binding Basics](~/xamarin-forms/xaml/xaml-basics/data-binding-basics.md).
 
@@ -270,11 +270,11 @@ The [`Navigation`](xref:Xamarin.Forms.NavigableElement.Navigation) property expo
 
 The [`InsertPageBefore`](xref:Xamarin.Forms.INavigation.InsertPageBefore*) method inserts a specified page in the navigation stack before an existing specified page, as shown in the following diagram:
 
-![](hierarchical-images/insert-page-before.png "Inserting a Page in the Navigation Stack")
+![Inserting a Page in the Navigation Stack](hierarchical-images/insert-page-before.png)
 
 The [`RemovePage`](xref:Xamarin.Forms.INavigation.RemovePage*) method removes the specified page from the navigation stack, as shown in the following diagram:
 
-![](hierarchical-images/remove-page.png "Removing a Page from the Navigation Stack")
+![Removing a Page from the Navigation Stack](hierarchical-images/remove-page.png)
 
 These methods enable a custom navigation experience, such as replacing a login page with a new page, following a successful login. The following code example demonstrates this scenario:
 

@@ -85,7 +85,7 @@ To some extent both disadvantages can be circumvented using the Provider pattern
 
 This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features:
 
-[![](pcl-images/image1.png "This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features")](pcl-images/image1.png#lightbox)
+[![This diagram shows the architecture of a cross-platform application using a Portable Class Library to share code, but also using Dependency Injection to pass in platform-dependent features](pcl-images/image1.png)](pcl-images/image1.png#lightbox)
 
 # [Visual Studio for Mac](#tab/macos)
 
@@ -217,14 +217,14 @@ The [TaskyPortable](https://docs.microsoft.com/samples/xamarin/mobile-samples/ta
 sample application demonstrates how a Portable Class Library can be used with Xamarin.
 Here are some screenshots of the resulting apps running on iOS and Android:
 
-[![](pcl-images/image18.png "Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone")](pcl-images/image18.png#lightbox)
+[![Here are some screenshots of the resulting apps running on iOS, Android and Windows Phone](pcl-images/image18.png)](pcl-images/image18.png#lightbox)
 
 It shares a number of data and logic classes that are purely portable code, and it also demonstrates how to
   incorporate platform-specific requirements using Dependency Injection for the SQLite database implementation.
 
 The solution structure is shown below (in Visual Studio for Mac and Visual Studio respectively):
 
-[![](pcl-images/image19.png "The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively")](pcl-images/image19.png#lightbox)
+[![The solution structure is shown here in Visual Studio for Mac and Visual Studio respectively](pcl-images/image19.png)](pcl-images/image19.png#lightbox)
 
 Because the SQLite-NET code has platform-specific pieces (to work with the SQLite implementations on each different operating system) for demonstration purposes it has been refactored into an abstract class that can be compiled into a Portable Class Library, and the actual code implemented as subclasses in the iOS and Android projects.
 

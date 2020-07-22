@@ -26,11 +26,11 @@ Before you update your existing code to the Unified API, it is highly recommende
 
 Once the warnings have been fixed, select an existing Mac project in Visual Studio for Mac or Visual Studio and choose **Migrate to Xamarin.Mac Unified API** from the **Project** menu. For example:
 
-![](updating-mac-apps-images/beta-tool1.png "Choose Migrate to Xamarin.Mac Unified API from the Project menu")
+![Choose Migrate to Xamarin.Mac Unified API from the Project menu](updating-mac-apps-images/beta-tool1.png)
 
 You'll need to agree to this warning before the automated migration will run (obviously you should ensure you have backups/source control before embarking on this adventure):
 
-![](updating-mac-apps-images/migrate01.png "Agree to this warning before the automated migration will run")
+![Agree to this warning before the automated migration will run](updating-mac-apps-images/migrate01.png)
 
 There are two supported Target Framework types that can be selected when using the Unified API in a Xamarin.Mac application:
 
@@ -49,11 +49,11 @@ Again, once the warnings have been fixed, follow these steps to manually update 
 
 Change the project flavor in your **csproj** files from `42C0BBD9-55CE-4FC1-8D90-A7348ABAFB23` to `A3F8F2AB-B479-4A4A-A458-A89E7DC349F1`. Edit the **csproj** file in a text editor, replacing the first item in the `<ProjectTypeGuids>` element as shown:
 
-![](updating-mac-apps-images/csproj.png "Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown")
+![Edit the csproj file in a text editor, replacing the first item in the ProjectTypeGuids element as shown](updating-mac-apps-images/csproj.png)
 
 Change the **Import** element that contains `Xamarin.Mac.targets` to `Xamarin.Mac.CSharp.targets` as shown:
 
-![](updating-mac-apps-images/csproj2.png "Change the Import element that contains Xamarin.Mac.targets to Xamarin.Mac.CSharp.targets as shown")
+![Change the Import element that contains Xamarin.Mac.targets to Xamarin.Mac.CSharp.targets as shown](updating-mac-apps-images/csproj2.png)
 
 Add the following lines of code after the `<AssemblyName>` element:
 
@@ -71,13 +71,13 @@ Example:
 
 Expand the Mac application project's **References** node. It will initially show a *broken- **XamMac** reference similar to this screenshot (because we just changed the project type):
 
-![](updating-mac-apps-images/references.png "It will initially show a broken- XamMac reference similar to this screenshot")
+![It will initially show a broken- XamMac reference similar to this screenshot](updating-mac-apps-images/references.png)
 
 Click the **Gear Icon** beside the **XamMac** entry and select **Delete** to remove the broken reference.
 
 Next, right-click on the **References** folder in the **Solution Explorer** and select **Edit References**. Scroll to the bottom of the list of references and place a check besides **Xamarin.Mac**.
 
-![](updating-mac-apps-images/references2.png "Scroll to the bottom of the list of references and place a check besides Xamarin.Mac")
+![Scroll to the bottom of the list of references and place a check besides Xamarin.Mac](updating-mac-apps-images/references2.png)
 
 Press **OK** to save the project references changes.
 

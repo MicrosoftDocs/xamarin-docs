@@ -43,7 +43,7 @@ Part of the migration requires upgrading Xamarin.Forms to version 1.3, which sup
 
 Click on the iOS project so that it's selected, then choose **Project > Migrate to Xamarin.iOS Unified API...** and agree to the warning message that appears.
 
-![](updating-xamarin-forms-apps-images/beta-tool1.png "Choose Project > Migrate to Xamarin.iOS Unified API... and agree to the warning message that appears")
+![Choose Project > Migrate to Xamarin.iOS Unified API... and agree to the warning message that appears](updating-xamarin-forms-apps-images/beta-tool1.png)
 
 This will automatically:
 

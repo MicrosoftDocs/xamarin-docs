@@ -16,13 +16,13 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 `RelativeLayout` is used to position and size views relative to properties of the layout or sibling views. Unlike `AbsoluteLayout`, `RelativeLayout` does not have the concept of the moving anchor and does not have facilities for positioning elements relative to the bottom or right edges of the layout. `RelativeLayout` does support positioning elements outside of its own bounds.
 
-[![](relative-layout-images/layouts-sml.png "Xamarin.Forms Layouts")](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
+[![Xamarin.Forms Layouts](relative-layout-images/layouts-sml.png)](relative-layout-images/layouts.png#lightbox "Xamarin.Forms Layouts")
 
 ## Purpose
 
 `RelativeLayout` can be used to position views on screen relative to the overall layout or to other views.
 
-![](relative-layout-images/flag.png "RelativeLayout Exploration")
+![RelativeLayout Exploration](relative-layout-images/flag.png)
 
 ## Usage
 
@@ -126,7 +126,7 @@ layout.Children.Add (blueBox, Constraint.RelativeToView (redBox, (Parent, siblin
 
 This produces the following output, with the blue box's position determined _relative_ to the position of the red box:
 
-![](relative-layout-images/red-blue-box.png "RelativeLayout with Red and Blue BoxViews")
+![RelativeLayout with Red and Blue BoxViews](relative-layout-images/red-blue-box.png)
 
 ### Sizing
 
@@ -219,7 +219,7 @@ Title="RelativeLayout">
 
 The above code results in the following layout:
 
-![](relative-layout-images/relative.png "Complex RelativeLayout")
+![Complex RelativeLayout](relative-layout-images/relative.png)
 
 Notice that `RelativeLayouts`s are nested, because in some cases nesting layouts can be easier than presenting all elements within the same layout. Also notice that some elements are `RelativeToView`, because that allows for easier and more intuitive layout when the relationships between views guide positioning.
 

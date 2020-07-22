@@ -24,7 +24,7 @@ Visual Studio for Mac is a free, open-source IDE that combines features from Vis
 
 Visual Studio for Mac follows the Visual Studio practice of organizing code into *solutions* and *projects*. A solution is a container that can hold one or more projects. A project can be an application (such as iOS or Android), a supporting library, a test application, and more. In the Phoneword app, a new iPhone project was added using the **Single View Application** template. The initial solution looked like this:
 
-![](hello-ios-deepdive-images/image30.png "A screenshot of the initial solution")
+![A screenshot of the initial solution](hello-ios-deepdive-images/image30.png)
 
 ::: zone-end
 ::: zone pivot="windows"
@@ -35,7 +35,7 @@ Visual Studio is a powerful IDE from Microsoft. It features a fully integrated v
 
 Visual Studio organizes code into solutions and projects. A solution is a container that can hold one or more projects. A project can be an application (such as iOS or Android), a supporting library, a test application, and more. In the Phoneword app, a new iPhone project was added using the **Single View Application** template. The initial solution looked like this:
 
-![](hello-ios-deepdive-images/vs-image30.png "A screenshot of the initial solution")
+![A screenshot of the initial solution](hello-ios-deepdive-images/vs-image30.png)
 
 ::: zone-end
 
@@ -45,14 +45,14 @@ Visual Studio organizes code into solutions and projects. A solution is a contai
 
 On the left is the **solution Pad**, which contains the directory structure and all the files associated with the solution:
 
-![](hello-ios-deepdive-images/image31.png "The solution Pad, which contains the directory structure and all the files associated with the solution")
+![The solution Pad, which contains the directory structure and all the files associated with the solution](hello-ios-deepdive-images/image31.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
 On the right is the **solution Pane**, which contains the directory structure and all the files associated with the solution:
 
-![](hello-ios-deepdive-images/vs-image31.png "The solution Pane, which contains the directory structure and all the files associated with the solution")
+![The solution Pane, which contains the directory structure and all the files associated with the solution](hello-ios-deepdive-images/vs-image31.png)
 
 ::: zone-end
 
@@ -75,7 +75,7 @@ Before an iOS application can load a user interface, two things need to be in pl
 
 This section studies the relationships illustrated in the following diagram:
 
-[![](hello-ios-deepdive-images/image32.png "The Architecture and App Fundamentals relationships are illustrated in this diagram")](hello-ios-deepdive-images/image32.png#lightbox)
+[![The Architecture and App Fundamentals relationships are illustrated in this diagram](hello-ios-deepdive-images/image32.png)](hello-ios-deepdive-images/image32.png#lightbox)
 
 ### Main method
 
@@ -140,28 +140,28 @@ The iOS Designer is a visual tool for building user interfaces in Xamarin. The D
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image33.png "iOS Designer Interface")
+![iOS Designer Interface](hello-ios-deepdive-images/image33.png)
 
 A *Storyboard* is a file that contains the visual designs of our application’s screens as well as the transitions and relationships between the screens. The representation of an application’s screen in a Storyboard is called a _Scene_. Each Scene represents a view controller and the stack of Views that it manages (Content View Hierarchy). When a new **Single View Application** project is created from a template, Visual Studio for Mac automatically generates a Storyboard file called `Main.storyboard` and populates it with a single Scene, as illustrated by the screenshot below:
 
-![](hello-ios-deepdive-images/image34.png "Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
+![Visual Studio for Mac automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene](hello-ios-deepdive-images/image34.png)
 
 The black bar at the bottom of the Storyboard screen can be selected to choose the view controller for the Scene. The view controller is an instance of the `UIViewController` class that contains the backing code for the Content View Hierarchy. Properties on this view controller can be viewed and set inside the **Properties Pad**, as illustrated by the screenshot below:
 
-![](hello-ios-deepdive-images/image35.png "The Properties Pane")
+![The Properties Pane](hello-ios-deepdive-images/image35.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image33.png "iOS Designer Interface")
+![iOS Designer Interface](hello-ios-deepdive-images/vs-image33.png)
 
 A *Storyboard* is a file that contains the visual designs of our application’s screens as well as the transitions and relationships between the screens. The representation of an application’s screen in a Storyboard is called a _Scene_. Each Scene represents a view controller and the stack of Views that it manages (Content View Hierarchy). When a new **Single View Application** project is created from a template, Visual Studio automatically generates a Storyboard file called `Main.storyboard` and populates it with a single Scene, as illustrated by the screenshot below:
 
-![](hello-ios-deepdive-images/vs-image34.png "Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene")
+![Visual Studio automatically generates a Storyboard file called Main.storyboard and populates it with a single Scene](hello-ios-deepdive-images/vs-image34.png)
 
 The bar at the bottom of the Storyboard screen can be selected to choose the view controller for the Scene. The view controller is an instance of the `UIViewController` class that contains the backing code for the Content View Hierarchy. Properties on this view controller can be viewed and set inside the **Properties Pane**, as illustrated by the screenshot below:
 
-![](hello-ios-deepdive-images/vs-image35.png "The Properties Pane")
+![The Properties Pane](hello-ios-deepdive-images/vs-image35.png)
 
 ::: zone-end
 
@@ -169,7 +169,7 @@ The _View_ can be selected by clicking inside the white part of the Scene. The V
 
 To the left of the Scene is a gray arrow with a flag icon, as illustrated by the screenshot below:
 
- [![](hello-ios-deepdive-images/image37.png "A gray arrow with a flag icon")](hello-ios-deepdive-images/image37.png#lightbox)
+ [![A gray arrow with a flag icon](hello-ios-deepdive-images/image37.png)](hello-ios-deepdive-images/image37.png#lightbox)
 
 The gray arrow represents a storyboard transition called a *Segue* (pronounced “seg-way”). Since this segue has no origin, it is called a *Sourceless Segue*. A sourceless segue points to the first scene whose views get loaded into the application's window at application startup. The scene and the views inside it will be the first thing that the user sees when the app loads.
 
@@ -177,12 +177,12 @@ When building a user interface, additional Views can be dragged from the **Toolb
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
+![Additional Views can be dragged from the Toolbox onto the main View on the design surface](hello-ios-deepdive-images/image38.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image38.png "Additional Views can be dragged from the Toolbox onto the main View on the design surface")
+![Additional Views can be dragged from the Toolbox onto the main View on the design surface](hello-ios-deepdive-images/vs-image38.png)
 
 ::: zone-end
 
@@ -190,12 +190,12 @@ These additional Views are called *Subviews*. Together, the root view and subvie
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image39.png "The Document Outline pad")
+![The Document Outline pad](hello-ios-deepdive-images/image39.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image39.png "The Document Outline pad")
+![The Document Outline pad](hello-ios-deepdive-images/vs-image39.png)
 
 ::: zone-end
 
@@ -203,12 +203,12 @@ The Subviews are highlighted in the diagram below:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image40.png "The Subviews are highlighted in the diagram")
+![The Subviews are highlighted in the diagram](hello-ios-deepdive-images/image40.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image40.png "The Subviews are highlighted in the diagram")
+![The Subviews are highlighted in the diagram](hello-ios-deepdive-images/vs-image40.png)
 
 ::: zone-end
 
@@ -218,24 +218,24 @@ The next section breaks down the Content View Hierarchy represented by this Scen
 
 A _Content View Hierarchy_ is a stack of Views and Subviews managed by a single view controller, as illustrated by the diagram below:
 
- [![](hello-ios-deepdive-images/image41.png "The Content View Hierarchy")](hello-ios-deepdive-images/image41.png#lightbox)
+ [![The Content View Hierarchy](hello-ios-deepdive-images/image41.png)](hello-ios-deepdive-images/image41.png#lightbox)
 
 We can make the Content View Hierarchy of our `ViewController` easier to see by temporarily changing the background color of the root View to yellow in the View section of the **Properties Pad**, as illustrated by the screenshot below:
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
+![Changing the background color of the root View to yellow in the View section of the Properties Pad](hello-ios-deepdive-images/image42.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image42.png "Changing the background color of the root View to yellow in the View section of the Properties Pad")
+![Changing the background color of the root View to yellow in the View section of the Properties Pad](hello-ios-deepdive-images/vs-image42.png)
 
 ::: zone-end
 
 The diagram below illustrates the relationships between the Window, Views, Subviews, and view controller that bring the user interface to the device screen:
 
-[![](hello-ios-deepdive-images/image43.png "The relationships between the Window, Views, Subviews, and view controller")](hello-ios-deepdive-images/image43.png#lightbox)
+[![The relationships between the Window, Views, Subviews, and view controller](hello-ios-deepdive-images/image43.png)](hello-ios-deepdive-images/image43.png#lightbox)
 
 In the next section discusses how to work with Views in code and learn to program for user interaction using view controllers and the View lifecycle.
 
@@ -249,22 +249,22 @@ Every Content View Hierarchy has a corresponding view controller to power user i
 
 The view controller is represented in a Storyboard as a bar at the bottom of the Scene. Selecting the view controller brings up its properties in the **Properties Pad**:
 
-![](hello-ios-deepdive-images/image44.png "Selecting the view controller brings up its properties in the Properties Pane")
+![Selecting the view controller brings up its properties in the Properties Pane](hello-ios-deepdive-images/image44.png)
 
 A custom view controller class for the Content View Hierarchy represented by this Scene can be set by editing the **Class** property in the **Identity** section of the **Properties Pad**. For example, our **Phoneword** application sets the `ViewController` as the view controller for our first screen, as illustrated by the screenshot below:
 
-![](hello-ios-deepdive-images/image45new.png "The Phoneword application sets the ViewController as the view controller")
+![The Phoneword application sets the ViewController as the view controller](hello-ios-deepdive-images/image45new.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
 The view controller is represented in a Storyboard as a bar at the bottom of the Scene. Selecting the view controller brings up its properties in the **Properties Pane**:
 
-![](hello-ios-deepdive-images/vs-image44.png "Selecting the view controller brings up its properties in the Properties Pane")
+![Selecting the view controller brings up its properties in the Properties Pane](hello-ios-deepdive-images/vs-image44.png)
 
 A custom view controller class for the Content View Hierarchy represented by this Scene can be set by editing the **Class** property in the **Identity** section of the **Properties Pane**. For example, our **Phoneword** application sets the `ViewController` as the view controller for our first screen, as illustrated by the screenshot below:
 
-![](hello-ios-deepdive-images/vs-image45.png "The Phoneword application sets the ViewController as the view controller")
+![The Phoneword application sets the ViewController as the view controller](hello-ios-deepdive-images/vs-image45.png)
 
 ::: zone-end
 
@@ -307,7 +307,7 @@ The most important role of the view controller is responding to user interaction
 Let's explore how this works.
 In the `Phoneword_iOS` project, a button was added called `TranslateButton` to the Content View Hierarchy:
 
-[![](hello-ios-deepdive-images/image1.png "A button was added called TranslateButton to the Content View Hierarchy")](hello-ios-deepdive-images/image1.png#lightbox)
+[![A button was added called TranslateButton to the Content View Hierarchy](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
 When a **Name** is assigned to the **Button** control in the **Properties Pad**, the iOS designer automatically mapped it to a control in the **ViewController.designer.cs**, making the `TranslateButton` available inside the `ViewController` class. Controls first become available in the `ViewDidLoad` stage of the View lifecycle, so this lifecycle method is used to respond to the user's touch:
 
@@ -414,18 +414,18 @@ Once the device is provisioned, you can deploy to it by plugging it in, changing
 
 ::: zone pivot="macos"
 
-![](hello-ios-deepdive-images/image46new.png "Pressing Start/Play")
+![Pressing Start/Play](hello-ios-deepdive-images/image46new.png)
 
 ::: zone-end
 ::: zone pivot="windows"
 
-![](hello-ios-deepdive-images/vs-image46.png "Pressing Start/Play")
+![Pressing Start/Play](hello-ios-deepdive-images/vs-image46.png)
 
 ::: zone-end
 
 The app will deploy to the iOS device:
 
-[![](hello-ios-deepdive-images/image1.png "The app will deploy to the iOS device and run")](hello-ios-deepdive-images/image1.png#lightbox)
+[![The app will deploy to the iOS device and run](hello-ios-deepdive-images/image1.png)](hello-ios-deepdive-images/image1.png#lightbox)
 
 ### Generate custom icons and launch images
 

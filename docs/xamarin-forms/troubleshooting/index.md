@@ -37,7 +37,7 @@ for the Xamarin.Forms NuGet packge *and all its dependencies*. In Xamarin
 Studio, the solution's **Packages** node might look like this (the version
 numbers might be different):
 
-![](images/updates-available.png "Android Project Packages Folder")
+![Android Project Packages Folder](images/updates-available.png)
 
 This error may occur if you attempt to update _all_ the packages.
 

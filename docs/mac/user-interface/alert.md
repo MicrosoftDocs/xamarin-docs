@@ -17,7 +17,7 @@ When working with C# and .NET in a Xamarin.Mac application, you have access to t
 
 An alert is a special type of dialog that appears when a serious problem occurs (such as an error) or as a warning (such as preparing to delete a file). Because an alert is a dialog, it also requires a user response before it can be closed.
 
-[![](alert-images/alert06.png "An example alert")](alert-images/alert06.png#lightbox)
+[![An example alert](alert-images/alert06.png)](alert-images/alert06.png#lightbox)
 
 In this article, we'll cover the basics of working with Alerts in a Xamarin.Mac application. 
 
@@ -55,7 +55,7 @@ alert.RunModal ();
 
 The code above displays an alert with the applications icon superimposed on the warning icon, a title, a warning message and a single **OK** button:
 
-[![](alert-images/alert01.png "An alert with a OK button")](alert-images/alert01.png#lightbox)
+[![An alert with a OK button](alert-images/alert01.png)](alert-images/alert01.png#lightbox)
 
 Apple provides several properties that can be used to customize an alert:
 
@@ -88,7 +88,7 @@ alert.RunModal ();
 
 If this code is run, the following is displayed:
 
-[![](alert-images/alert02.png "A simple alert")](alert-images/alert02.png#lightbox)
+[![A simple alert](alert-images/alert02.png)](alert-images/alert02.png#lightbox)
 
 The following code displays the same alert as a Sheet:
 
@@ -103,7 +103,7 @@ alert.BeginSheet (this);
 
 If this code is run, the following will be displayed:
 
-[![](alert-images/alert03.png "An alert displayed as a sheet")](alert-images/alert03.png#lightbox)
+[![An alert displayed as a sheet](alert-images/alert03.png)](alert-images/alert03.png#lightbox)
 
 <a name="Working_with_Alert_Buttons"></a>
 
@@ -131,7 +131,7 @@ The very first button added will be the _Default Button_ that will be activated 
 
 If we run the code , the following will be displayed:
 
-[![](alert-images/alert04.png "An alert with three button options")](alert-images/alert04.png#lightbox)
+[![An alert with three button options](alert-images/alert04.png)](alert-images/alert04.png#lightbox)
 
 Here is the code for the same alert as a Sheet:
 
@@ -151,7 +151,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 If this code is run, the following will be displayed:
 
-[![](alert-images/alert05.png "A three button alert displayed as a sheet")](alert-images/alert05.png#lightbox)
+[![A three button alert displayed as a sheet](alert-images/alert05.png)](alert-images/alert05.png#lightbox)
 
 > [!IMPORTANT]
 > You should never add more than three buttons to an alert.
@@ -180,7 +180,7 @@ If the value of the `alert.SuppressionButton.State` is `NSCellStateValue.On`, th
 
 If the code is run, the following will be displayed:
 
-[![](alert-images/alert06.png "An alert with a suppress button")](alert-images/alert06.png#lightbox)
+[![An alert with a suppress button](alert-images/alert06.png)](alert-images/alert06.png#lightbox)
 
 Here is the code for the same alert as a Sheet:
 
@@ -201,7 +201,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 If this code is run, the following will be displayed:
 
-[![](alert-images/alert07.png "An alert with a suppress button display as a sheet")](alert-images/alert07.png#lightbox)
+[![An alert with a suppress button display as a sheet](alert-images/alert07.png)](alert-images/alert07.png#lightbox)
 
 <a name="Adding_a_Custom_SubView"></a>
 
@@ -231,7 +231,7 @@ The key lines here are `var input = new NSTextField (new CGRect (0, 0, 300, 20))
 
 If we run the code, the following will be displayed:
 
-[![](alert-images/alert08.png "If we run the code, the following will be displayed")](alert-images/alert08.png#lightbox)
+[![If we run the code, the following will be displayed](alert-images/alert08.png)](alert-images/alert08.png#lightbox)
 
 Here is the same alert as a sheet:
 
@@ -256,7 +256,7 @@ alert.BeginSheetForResponse (this, (result) => {
 
 If we run this code, the following will be displayed:
 
-[![](alert-images/alert09.png "An alert with a custom view")](alert-images/alert09.png#lightbox)
+[![An alert with a custom view](alert-images/alert09.png)](alert-images/alert09.png#lightbox)
 
 <a name="Summary"></a>
 

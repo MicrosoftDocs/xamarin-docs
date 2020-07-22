@@ -33,7 +33,7 @@ Xamarin.iOS 7.2.1 and above features a enhanced preview of our new reference cou
 
 To enable this new Reference Counting System, check the **Use the reference counting extension** checkbox found in the **Advanced** tab of your project's **iOS Build options**, as shown below: 
 
-[![](newrefcount-images/image1.png "Enable the new Reference Counting System")](newrefcount-images/image1.png#lightbox)
+[![Enable the new Reference Counting System](newrefcount-images/image1.png)](newrefcount-images/image1.png#lightbox)
 
 Note that these options have been removed in newer versions of Visual Studio for Mac.
 

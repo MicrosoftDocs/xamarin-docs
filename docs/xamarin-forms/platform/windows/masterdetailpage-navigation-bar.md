@@ -40,7 +40,7 @@ The `MasterDetailPage.On<Windows>` method specifies that this platform-specific 
 
 The result is that a specified [`CollapseStyle`](xref:Xamarin.Forms.PlatformConfiguration.WindowsSpecific.CollapseStyle) is applied to the [`MasterDetailPage`](xref:Xamarin.Forms.MasterDetailPage) instance, with the width also being specified:
 
-[![](masterdetailpage-navigation-bar-images/collapsed-navigation-bar.png "Collapsed Navigation Bar Platform-Specific")](masterdetailpage-navigation-bar-images/collapsed-navigation-bar-large.png#lightbox "Collapsed Navigation Bar Platform-Specific")
+[![Collapsed Navigation Bar Platform-Specific](masterdetailpage-navigation-bar-images/collapsed-navigation-bar.png)](masterdetailpage-navigation-bar-images/collapsed-navigation-bar-large.png#lightbox "Collapsed Navigation Bar Platform-Specific")
 
 ## Related links
 

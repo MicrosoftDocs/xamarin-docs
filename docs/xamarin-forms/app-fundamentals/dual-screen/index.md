@@ -12,7 +12,7 @@ no-loc: [Xamarin.Forms, Xamarin.Essentials]
 
 # Xamarin.Forms dual-screen
 
-![](~/media/shared/preview.png "This API is currently pre-release")
+![Pre-release API](~/media/shared/preview.png "This API is currently pre-release")
 
 Dual-screen devices like the Microsoft Surface Duo facilitate new user-experience possibilities for your applications. Xamarin.Forms includes `TwoPaneView` and `DualScreenInfo` classes so you can develop apps for dual-screen devices.
 

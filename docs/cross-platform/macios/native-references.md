@@ -68,13 +68,13 @@ The follow step are required to embed a framework in a Xamarin.iOS or Xamarin.Ma
 1. Create a new or open an existing Xamarin.iOS, Xamarin.Mac or Binding project.
 2. In the **Solution Explorer**, right-click on the project name and select **Add** > **Add Native Reference**: 
 
-    [![](native-references-images/ref01.png "In the Solution Explorer, right-click on the project name and select Add Native Reference")](native-references-images/ref01.png#lightbox)
+    [![In the Solution Explorer, right-click on the project name and select Add Native Reference](native-references-images/ref01.png)](native-references-images/ref01.png#lightbox)
 3. From the **Open** dialog box, select the name of the Native Framework that you want to embed and click the **Open** button: 
 
-    [![](native-references-images/ref02.png "Select the name of the Native Framework to embed and click the Open button")](native-references-images/ref02.png#lightbox)
+    [![Select the name of the Native Framework to embed and click the Open button](native-references-images/ref02.png)](native-references-images/ref02.png#lightbox)
 4. The framework will be added to the project's tree: 
 
-    [![](native-references-images/ref03.png "The framework will be added to the projects tree")](native-references-images/ref03.png#lightbox)
+    [![The framework will be added to the projects tree](native-references-images/ref03.png)](native-references-images/ref03.png#lightbox)
 
 When the project is compiled, the Native Framework will be embedded in the App's bundle.
 

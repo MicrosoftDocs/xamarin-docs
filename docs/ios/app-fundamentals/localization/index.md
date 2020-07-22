@@ -330,9 +330,9 @@ The following screenshots show the
 [localized Tasky sample](https://github.com/conceptdev/xamarin-samples/tree/master/TaskyL10n)
 in Arabic and Hebrew (although English has been entered in the fields):
 
-[![](images/rtl-ar-sml.png "Localization in Arabic")](images/rtl-ar.png#lightbox "Arabic")
+[![Localization in Arabic](images/rtl-ar-sml.png)](images/rtl-ar.png#lightbox "Arabic")
 
-[![](images/rtl-he-sml.png "Localization in Hebrew")](images/rtl-he.png#lightbox "Hebrew")
+[![Localization in Hebrew](images/rtl-he-sml.png)](images/rtl-he.png#lightbox "Hebrew")
 
 iOS automatically reverses the `UINavigationController`, and the other controls
 are placed inside `UIStackView` or aligned with Auto-Layout.
@@ -349,7 +349,7 @@ built in code (rather than XIBs or storyboards).
 
 ### Project Structure
 
-![](images/solution-code.png "Resources tree")
+![Resources tree](images/solution-code.png)
 
 ### Localizable.strings file
 
@@ -399,7 +399,7 @@ The other language directories contain a **Localizable.strings** file for any
 string resources referenced in code, as well as a **MainStoryboard.strings** file
 that contains translations for text in the storyboard.
 
-![](images/solution-storyboard.png "Resources tree")
+![Resources tree](images/solution-storyboard.png)
 
 The language directories should contain a copy of any images that
 have been localized, to override the one present in **Base.lproj**.
@@ -415,7 +415,7 @@ and check the ID to use for localization:
 This string value often has a form such as "NF3-h8-xmR", as shown in the
 following screenshot:
 
-![](images/xs-designer-localization-id.png "Xcode view of Storyboard localization")
+![Xcode view of Storyboard localization](images/xs-designer-localization-id.png)
 
 This value is used in the **.strings** file to assign translated text automatically
 to each control.
@@ -450,7 +450,7 @@ property; and `UIButton`s default text is set using `normalTitle`:
 > **MainStoryboard~iphone.strings** and **MainStoryboard~ipad.strings**, as
 > shown in the following screenshot:
 >
-> ![](images/xs-dup-strings.png "Strings files")
+> ![Strings files](images/xs-dup-strings.png)
 
 <a name="appstore"></a>
 

@@ -24,7 +24,7 @@ In this quickstart, you will learn how to:
 
 The quickstart walks through how to create a cross-platform Xamarin.Forms application, which enables you to enter a note and persist it to device storage. The final application is shown below:
 
-[![](single-page-images/screenshots-sml.png "Notes Application")](single-page-images/screenshots.png#lightbox "Notes Application")
+[![Notes Application](single-page-images/screenshots-sml.png)](single-page-images/screenshots.png#lightbox "Notes Application")
 
 ::: zone pivot="windows"
 
@@ -40,28 +40,28 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 1. Launch Visual Studio 2019, and in the start window click **Create a new project** to create a new project:
 
-    ![](single-page-images/vs/new-solution-2019.png "New Project")
+    ![New Project](single-page-images/vs/new-solution-2019.png)
 
 2. In the **Create a new project** window, select **Mobile** in the **Project type** drop down, select the **Mobile App (Xamarin.Forms)** template, and click the **Next** button:
 
-    ![](single-page-images/vs/new-project-2019.png "Cross-Platform Project Templates")
+    ![Cross-Platform Project Templates](single-page-images/vs/new-project-2019.png)
 
 3. In the **Configure your new project** window, set the **Project name** to **Notes**, choose a suitable location for the project, and click the **Create** button:
 
-    ![](single-page-images/vs/configure-project.png "Configure your Project")
+    ![Configure your Project](single-page-images/vs/configure-project.png)
 
     > [!IMPORTANT]
     > The C# and XAML snippets in this quickstart requires that the solution is named **Notes**. Using a different name will result in build errors when you copy code from this quickstart into the solution.
 
 4. In the **New Cross Platform App** dialog, click **Blank App**, and click the **OK** button:
 
-    ![](single-page-images/vs/new-app-2019.png "New Cross-Platform App")
+    ![New Cross-Platform App](single-page-images/vs/new-app-2019.png)
 
     For more information about the .NET Standard library that gets created, see [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
 5. In **Solution Explorer**, in the **Notes** project, double-click **MainPage.xaml** to open it:
 
-    ![](single-page-images/vs/open-mainpage-xaml-2019.png "Open MainPage.xaml")
+    ![Open MainPage.xaml](single-page-images/vs/open-mainpage-xaml-2019.png)
 
 6. In **MainPage.xaml**, remove all of the template code and replace it with the following code:
 
@@ -98,7 +98,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 7. In **Solution Explorer**, in the **Notes** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it:
 
-    ![](single-page-images/vs/open-mainpage-codebehind-2019.png "Open MainPage.xaml.cs")
+    ![Open MainPage.xaml.cs](single-page-images/vs/open-mainpage-codebehind-2019.png)
 
 8. In **MainPage.xaml.cs**, remove all of the template code and replace it with the following code:
 
@@ -148,15 +148,15 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 1. In Visual Studio, select the **Build > Build Solution** menu item (or press F6). The solution will build and a success message will appear in the Visual Studio status bar:
 
-      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
+      ![Build Succeeded](single-page-images/vs/build-succeeded.png)
 
     If there are errors, repeat the previous steps and correct any mistakes until the solution builds successfully.
 
 2. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application in your chosen Android emulator:
 
-    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
+    ![Visual Studio Android Toolbar](single-page-images/vs/android-start.png)
 
-    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![Notes in the Android Emulator](single-page-images/vs/notes-android.png)](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Enter a note and press the **Save** button.
 
@@ -167,13 +167,13 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 3. In the Visual Studio toolbar, right-click on the **Notes.iOS** project, and select **Set as StartUp Project**.
 
-      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
+      ![Set iOS as Startup Project](single-page-images/vs/set-as-startup-project-ios.png)
 
 4. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application in your chosen [iOS remote simulator](~/tools/ios-simulator/index.md):
 
-    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
+    ![Visual Studio iOS Toolbar](single-page-images/vs/ios-start.png)
 
-    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+    [![Notes in the iOS Simulator](single-page-images/vs/notes-ios.png)](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
 
     Enter a note and press the **Save** button.
 
@@ -194,24 +194,24 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 1. Launch Visual Studio 2017, and on the start page click **Create new project...** to create a new project:
 
-    ![](single-page-images/vs/new-solution.png "New Project")
+    ![New Project](single-page-images/vs/new-solution.png)
 
 2. In the **New Project** dialog, click **Cross-Platform**, select the **Mobile App (Xamarin.Forms)** template, set the Name to **Notes**, choose a suitable location for the project and click the **OK** button:
 
-    ![](single-page-images/vs/new-project.png "Cross-Platform Project Templates")
+    ![Cross-Platform Project Templates](single-page-images/vs/new-project.png)
 
     > [!IMPORTANT]
     > The C# and XAML snippets in this quickstart requires that the solution is named **Notes**. Using a different name will result in build errors when you copy code from this quickstart into the solution.
 
 3. In the **New Cross Platform App** dialog, click **Blank App**, select **.NET Standard** as the Code Sharing Strategy, and click the **OK** button:
 
-    ![](single-page-images/vs/new-app.png "New Cross-Platform App")
+    ![New Cross-Platform App](single-page-images/vs/new-app.png)
 
     For more information about the .NET Standard library that gets created, see [Anatomy of a Xamarin.Forms application](deepdive.md#anatomy-of-a-xamarinforms-application) in the [Xamarin.Forms Quickstart Deep Dive](deepdive.md).
 
 4. In **Solution Explorer**, in the **Notes** project, double-click **MainPage.xaml** to open it:
 
-    ![](single-page-images/vs/open-mainpage-xaml.png "Open MainPage.xaml")
+    ![Open MainPage.xaml](single-page-images/vs/open-mainpage-xaml.png)
 
 5. In **MainPage.xaml**, remove all of the template code and replace it with the following code:
 
@@ -248,7 +248,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 6. In **Solution Explorer**, in the **Notes** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it:
 
-    ![](single-page-images/vs/open-mainpage-codebehind.png "Open MainPage.xaml.cs")
+    ![Open MainPage.xaml.cs](single-page-images/vs/open-mainpage-codebehind.png)
 
 7. In **MainPage.xaml.cs**, remove all of the template code and replace it with the following code:
 
@@ -298,15 +298,15 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 1. In Visual Studio, select the **Build > Build Solution** menu item (or press F6). The solution will build and a success message will appear in the Visual Studio status bar:
 
-      ![](single-page-images/vs/build-succeeded.png "Build Succeeded")
+      ![Build Succeeded](single-page-images/vs/build-succeeded.png)
 
     If there are errors, repeat the previous steps and correct any mistakes until the solution builds successfully.
 
 2. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application in your chosen Android emulator:
 
-    ![](single-page-images/vs/android-start.png "Visual Studio Android Toolbar")
+    ![Visual Studio Android Toolbar](single-page-images/vs/android-start.png)
 
-    [![](single-page-images/vs/notes-android.png "Notes in the Android Emulator")](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
+    [![Notes in the Android Emulator](single-page-images/vs/notes-android.png)](single-page-images/vs/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Enter a note and press the **Save** button.
 
@@ -317,13 +317,13 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 3. In the Visual Studio toolbar, right-click on the **Notes.iOS** project, and select **Set as StartUp Project**.
 
-      ![](single-page-images/vs/set-as-startup-project-ios.png "Set iOS as Startup Project")
+      ![Set iOS as Startup Project](single-page-images/vs/set-as-startup-project-ios.png)
 
 4. In the Visual Studio toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application in your chosen [iOS remote simulator](~/tools/ios-simulator/index.md):
 
-    ![](single-page-images/vs/ios-start.png "Visual Studio iOS Toolbar")
+    ![Visual Studio iOS Toolbar](single-page-images/vs/ios-start.png)
 
-    [![](single-page-images/vs/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+    [![Notes in the iOS Simulator](single-page-images/vs/notes-ios.png)](single-page-images/vs/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
 
     Enter a note and press the **Save** button.
 
@@ -344,19 +344,19 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 1. Launch Visual Studio for Mac, and in the start window click **New** to create a new project:
 
-    ![](single-page-images/vsmac/new-project.png "New Solution")
+    ![New Solution](single-page-images/vsmac/new-project.png)
 
 2. In the **Choose a template for your new project** dialog, click **Multiplatform > App**, select the **Blank Forms App** template, and click the **Next** button:
 
-    ![](single-page-images/vsmac/choose-template.png "Choose a Template")
+    ![Choose a Template](single-page-images/vsmac/choose-template.png)
 
 3. In the **Configure your Blank Forms app** dialog, name the new app **Notes**, ensure that the **Use .NET Standard** radio button is selected, and click the **Next** button:    
 
-    ![](single-page-images/vsmac/configure-app.png "Configure the Forms Application")
+    ![Configure the Forms Application](single-page-images/vsmac/configure-app.png)
 
 4. In the **Configure your new Blank Forms app** dialog, leave the Solution and Project names set to **Notes**, choose a suitable location for the project, and click the **Create** button to create the project:
 
-    ![](single-page-images/vsmac/configure-project.png "Configure the Forms Project")
+    ![Configure the Forms Project](single-page-images/vsmac/configure-project.png)
 
     > [!IMPORTANT]
     > The C# and XAML snippets in this quickstart requires that the solution and project are both named **Notes**. Using a different name will result in build errors when you copy code from this quickstart into the project.
@@ -365,7 +365,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 5. In the **Solution Pad**, in the **Notes** project, double-click **MainPage.xaml** to open it:
 
-    ![](single-page-images/vsmac/mainpage-xaml.png "MainPage.xaml")
+    ![MainPage.xaml](single-page-images/vsmac/mainpage-xaml.png)
 
 6. In **MainPage.xaml**, remove all of the template code and replace it with the following code:
 
@@ -402,7 +402,7 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 7. In the **Solution Pad**, in the **Notes** project, expand **MainPage.xaml** and double-click **MainPage.xaml.cs** to open it:
 
-    ![](single-page-images/vsmac/mainpage-xaml-cs.png "MainPage.xaml.cs")
+    ![MainPage.xaml.cs](single-page-images/vsmac/mainpage-xaml-cs.png)
 
 8. In **MainPage.xaml.cs**, remove all of the template code and replace it with the following code:
 
@@ -452,19 +452,19 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 1. In Visual Studio for Mac, select the **Build > Build All** menu item (or press **&#8984; + B**). The projects will build and a success message will appear in the Visual Studio for Mac toolbar.
 
-      ![](single-page-images/vsmac/build-successful.png "Build Successful")
+      ![Build Successful](single-page-images/vsmac/build-successful.png)
 
     If there are errors, repeat the previous steps and correct any mistakes until the projects build successfully.
 
 2. In the **Solution Pad**, select the **Notes.iOS** project, right-click, and select **Set As Startup Project**:
 
-      ![](single-page-images/vsmac/set-startup-project-ios.png "Set iOS as Startup Project")
+      ![Set iOS as Startup Project](single-page-images/vsmac/set-startup-project-ios.png)
 
 3. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen iOS Simulator:
 
-      ![](single-page-images/vsmac/start.png "Visual Studio for Mac Toolbar")
+      ![Visual Studio for Mac Toolbar](single-page-images/vsmac/start.png)
 
-      [![](single-page-images/vsmac/notes-ios.png "Notes in the iOS Simulator")](single-page-images/vsmac/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
+      [![Notes in the iOS Simulator](single-page-images/vsmac/notes-ios.png)](single-page-images/vsmac/notes-ios-large.png#lightbox "Notes in the iOS Simulator")
 
     Enter a note and press the **Save** button.
 
@@ -472,11 +472,11 @@ For more information about these prerequisites, see [Installing Xamarin](~/get-s
 
 4. In the **Solution Pad**, select the **Notes.Droid** project, right-click, and select **Set As Startup Project**:
 
-      ![](single-page-images/vsmac/set-startup-project-android.png "Set Android as Startup Project")
+      ![Set Android as Startup Project](single-page-images/vsmac/set-startup-project-android.png)
 
 5. In the Visual Studio for Mac toolbar, press the **Start** button (the triangular button that resembles a Play button) to launch the application inside your chosen Android emulator:
 
-      [![](single-page-images/vsmac/notes-android.png "Notes in the Android Emulator")](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
+      [![Notes in the Android Emulator](single-page-images/vsmac/notes-android.png)](single-page-images/vsmac/notes-android-large.png#lightbox "Notes in the Android Simulator")
 
     Enter a note and press the **Save** button.
 

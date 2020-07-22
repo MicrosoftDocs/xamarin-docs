@@ -25,7 +25,7 @@ This walkthrough explains some key backgrounding concepts, including registering
 
     In Visual Studio for Mac, it will look like something like this:
 
-    [![](location-walkthrough-images/image7.png "Place a check by both the Enable Background Modes and the Location Updates checkboxes")](location-walkthrough-images/image7.png#lightbox)
+    [![Place a check by both the Enable Background Modes and the Location Updates checkboxes](location-walkthrough-images/image7.png)](location-walkthrough-images/image7.png#lightbox)
 
     In Visual Studio, **Info.plist** needs to be updated manually by adding the following key/value pair:
 
@@ -134,7 +134,7 @@ public class LocationUpdatedEventArgs : EventArgs
 
     The layout should resemble the following:
 
-    ![](location-walkthrough-images/image8.png "An example UI layout in the iOS Designer")
+    ![An example UI layout in the iOS Designer](location-walkthrough-images/image8.png)
 
 1. In the Solution Pad, double-click the `ViewController.cs` file and edit it to create a new instance of the LocationManager and call `StartLocationUpdates`on it.
   Change the code to look like the following:
@@ -197,7 +197,7 @@ public override void ViewDidLoad ()
 
 Now, when the application is run, it should look something like this:
 
-[![](location-walkthrough-images/image5.png "An example app run")](location-walkthrough-images/image5.png#lightbox)
+[![An example app run](location-walkthrough-images/image5.png)](location-walkthrough-images/image5.png#lightbox)
 
 ## Handling Active and Background states
 
@@ -253,7 +253,7 @@ Now, when the application is run, it should look something like this:
 
     When the app is running, the output will look something like this:
 
-    ![](location-walkthrough-images/image6.png "Example of the location output in the console")
+    ![Example of the location output in the console](location-walkthrough-images/image6.png)
 
 1. The application prints location updates to the screen when operating in the foreground, and continues to print data to the application output window while operating in the background.
 

@@ -20,7 +20,7 @@ Every Xamarin.Forms view has an accompanying renderer for each platform that cre
 
 The following diagram illustrates the relationship between the [`View`](xref:Xamarin.Forms.View) and the corresponding native controls that implement it:
 
-![](hybridwebview-images/webview-classes.png "Relationship Between the WebView Class and its Implementing Native Classes")
+![Relationship Between the WebView Class and its Implementing Native Classes](hybridwebview-images/webview-classes.png)
 
 The rendering process can be used to implement platform customizations by creating a custom renderer for a [`WebView`](xref:Xamarin.Forms.WebView) on each platform. The process for doing this is as follows:
 
@@ -148,11 +148,11 @@ The process for creating the custom renderer class is as follows:
 
 The following diagram illustrates the responsibilities of each project in the sample application, along with the relationships between them:
 
-![](hybridwebview-images/solution-structure.png "HybridWebView Custom Renderer Project Responsibilities")
+![HybridWebView Custom Renderer Project Responsibilities](hybridwebview-images/solution-structure.png)
 
 The `HybridWebView` custom control is rendered by platform renderer classes, which derive from the `WkWebViewRenderer` class on iOS, and from the `WebViewRenderer` class on Android and UWP. This results in each `HybridWebView` custom control being rendered with native web controls, as shown in the following screenshots:
 
-![](hybridwebview-images/screenshots.png "HybridWebView on each Platform")
+![HybridWebView on each Platform](hybridwebview-images/screenshots.png)
 
 The `WkWebViewRenderer` and `WebViewRenderer` classes expose the `OnElementChanged` method, which is called when the Xamarin.Forms custom control is created to render the corresponding native web control. This method takes a `VisualElementChangedEventArgs` parameter that contains `OldElement` and `NewElement` properties. These properties represent the Xamarin.Forms element that the renderer *was* attached to, and the Xamarin.Forms element that the renderer *is* attached to, respectively. In the sample application the `OldElement` property will be `null` and the `NewElement` property will contain a reference to the `HybridWebView` instance.
 

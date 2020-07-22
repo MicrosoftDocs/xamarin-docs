@@ -86,7 +86,7 @@ public WithoutDataTemplatePageCS()
 
 The [`ListView`](xref:Xamarin.Forms.ListView) calls `ToString` when displaying the objects in the collection. Because there is no `Person.ToString` override, `ToString` returns the type name of each object, as shown in the following screenshots:
 
-![](introduction-images/no-data-template.png "ListView without a Data Template")
+![ListView without a Data Template](introduction-images/no-data-template.png)
 
 The `Person` object can override the `ToString` method to display meaningful data, as shown in the following code example:
 
@@ -103,7 +103,7 @@ public class Person
 
 This results in the [`ListView`](xref:Xamarin.Forms.ListView) displaying the `Person.Name` property value for each object in the collection, as shown in the following screenshots:
 
-![](introduction-images/override-tostring.png "ListView with a Data Template")
+![ListView with a Data Template](introduction-images/override-tostring.png)
 
 The `Person.ToString` override could return a formatted string consisting of the `Name`, `Age`, and `Location` properties. However, this approach offers only a limited control over the appearance of each item of data. For more flexibility, a [`DataTemplate`](xref:Xamarin.Forms.DataTemplate) can be created that defines the appearance of the data.
 

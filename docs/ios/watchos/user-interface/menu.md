@@ -14,7 +14,7 @@ ms.date: 03/17/2017
 Watch Kit provides a Force Touch gesture that triggers a menu
 when implemented on a watch app screen.
 
-![](menu-images/menu.png "Apple Watch showing a menu")
+![Apple Watch showing a menu](menu-images/menu.png)
 <!-- watch image courtesy of http://infinitapps.com/bezel/ -->
 
 ## Responding to Force Touch
@@ -37,7 +37,7 @@ at design time. When a menu control is dragged onto an interface
 controller there is no visual indication on the storyboard preview
 but the **Menu** appears in the **Document Outline** pad:
 
-![](menu-images/menu-action.png "Editing a menu at design time")
+![Editing a menu at design time](menu-images/menu-action.png)
 
 Up to four menu items can be added to the menu control. They can
 be configured in the **Properties** pad. The following

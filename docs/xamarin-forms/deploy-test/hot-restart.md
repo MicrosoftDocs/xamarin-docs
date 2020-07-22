@@ -37,7 +37,7 @@ Xamarin Hot Restart enables you to quickly test changes to your app during devel
 
 2. Select and click **Local Device** in the toolbar to launch the setup wizard:
 
-    [![](hot-restart-images/toolbar.png "Screenshot of the Visual Studio toolbar with local device set as the debug target.")](hot-restart-images/toolbar.png)
+    [![Screenshot of the Visual Studio toolbar with local device set as the debug target.](hot-restart-images/toolbar.png)](hot-restart-images/toolbar.png)
 
 3. If iTunes is not installed, click **Download iTunes** to download the installer. Click **Next** when the iTunes installation is complete.
 
@@ -55,7 +55,7 @@ After the initial setup, your connected device will appear in the debug target d
 
 You can make edits to your code files while debugging, then press the **Restart** button in the debug toolbar or use **Ctrl+Shift+F5** to restart the debug session with your new changes applied:
 
-[![](hot-restart-images/restart.png "Screenshot of the debug toolbar with the restart button highlighted.")](hot-restart-images/toolbar.png)
+[![Screenshot of the debug toolbar with the restart button highlighted.](hot-restart-images/restart.png)](hot-restart-images/toolbar.png)
 
 You can also use the `HOTRESTART` preprocessor symbol to prevent certain code from executing when debugging with Xamarin Hot Restart.
 

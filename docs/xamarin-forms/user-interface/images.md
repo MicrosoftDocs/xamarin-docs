@@ -132,7 +132,7 @@ for this project with the filename, using a period (.) between each value.
 
 # [Visual Studio for Mac](#tab/macos)
 
-![](images-images/xs-buildaction.png "Set Build Action: EmbeddedResource")
+![Set Build Action: EmbeddedResource](images-images/xs-buildaction.png)
 
 **Build Action** can also be viewed and changed in the
 **Properties** pad for a file.
